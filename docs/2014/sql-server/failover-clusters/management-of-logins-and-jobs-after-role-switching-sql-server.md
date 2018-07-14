@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 14fcc2b2c1e257f9b77e9f4d485dc25d1dbbaef4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2d489ef9df3d6b1d54e34ccfc3ec1a9d190f816b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251390"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>角色切換後針對登入和作業進行管理 (SQL Server)
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫部署高可用性或災害復原解決方案時，為該資料庫儲存的相關資訊務必完整重現於 **master** 或 **msdb** 資料庫中。 這類相關資訊通常包括主要/主體資料庫的各項作業，以及需要連接到該資料庫的使用者或處理序的登入。 您應將此資訊複寫於裝載次要/鏡像資料庫的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。 可能的話，最好在角色切換之後，以程式設計方式在新的主要/主體資料庫上重現此資訊。  

@@ -1,5 +1,5 @@
 ---
-title: KeyColumn 元素 (ASSL) |Microsoft 文件
+title: KeyColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyColumn element
 ms.assetid: 7b03eeb3-d478-4c38-822e-8cdfcc485039
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7594a92eb8c2eb4cdb423c7298bc3929dc49dc32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e27744d2c8e2d54d44318ceac7b79dc4e4e10e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247758"
 ---
 # <a name="keycolumn-element-assl"></a>KeyColumn 元素 (ASSL)
   包含屬於屬性索引鍵或其中一部分之資料行的定義。  
@@ -60,7 +60,7 @@ ms.locfileid: "36032406"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`DataItem`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件和屬性的資料表`DataItem`類型，請參閱[DataItem 資料類型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
+ 如需詳細資訊`DataItem`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件和屬性的資料表`DataItem`類型，請參閱[DataItem 資料類型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `KeyColumns` 集合父系的元素是 <xref:Microsoft.AnalysisServices.AggregationInstanceAttribute>、<xref:Microsoft.AnalysisServices.DimensionAttribute>、<xref:Microsoft.AnalysisServices.MeasureGroupAttribute> 和 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   

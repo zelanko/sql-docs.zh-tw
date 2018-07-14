@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 06f20a19801b43a25f3622424aa8ce76d2c34df2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: a5d6efd6aa45886aa87fdd5db5f51ae3682e45ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273084"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>適用於 Microsoft Excel 的 Master Data Services 增益集
-  與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以將參考資料的主要清單散發給您組織內使用 Excel 的每個人。 安全性會決定使用者可檢視和更新的資料。  
+  具有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，可以將參考資料的主要清單散發給您組織內使用 Excel 的每個人。 安全性會決定使用者可檢視和更新的資料。  
   
  您可以將資料的篩選清單從 MDS 載入 Excel 中，以便將它當做任何其他資料使用。 完成之後，您可以將資料發行回 MDS，以便進行集中儲存。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36034806"
  在 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以使用 Data Quality Services (DQS)，在將資料載入 MDS 之前比對資料。 這樣有助於防止 MDS 中的資料重複。  
   
 > [!IMPORTANT]  
->  您可以繼續使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Master Data Services 和 Data Quality Services，若要在升級後的 SP1 版的 Master Data Services-增益適用於 Excel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 您可以下載[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版的 Master Data Services-增益適用於 Excel[這裡](http://go.microsoft.com/fwlink/?LinkId=328664)。  
+>  您可以繼續使用[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Master Data Services 和 Data Quality Services，若要在升級後的 SP1 版的 Master Data Services 增益集適用於 Excel [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2。 不過，在升級為 SQL Server 2014 CTP2 之後，任何舊版適用於 Excel 的 Master Data Services 增益集將無法運作。 您可以下載[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SP1 版的 Master Data Services 增益集適用於 Excel[這裡](http://go.microsoft.com/fwlink/?LinkId=328664)。  
   
 ## <a name="terms"></a>詞彙  
  使用此增益集時，您可能會遇到下列詞彙。  
@@ -53,12 +53,12 @@ ms.locfileid: "36034806"
 |工作描述|主題|  
 |----------------------|-----------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 建立  儲存機制的連接。|[連接到 MDS 存放庫 &#40;適用於 Excel 的 MDS 增益集&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|將 MDS 管理的資料載入 Excel 中。|[從 MDS 載入 Excel 資料](export-data-to-excel-from-master-data-services.md)|  
+|將 MDS 管理的資料載入 Excel 中。|[將資料從 MDS 載入 Excel 中](export-data-to-excel-from-master-data-services.md)|  
 |儲存捷徑查詢，讓您日後可以用來開啟目前顯示之 MDS 管理的資料。|[儲存捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |與其他人共用捷徑。|[以電子郵件傳送捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
 |檢視已經對成員進行的所有變更。|[檢視成員的所有註解或交易 &#40;適用於 Excel 的 MDS 增益集&#41;](view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md)|  
 |發行新資料之前，了解是否有重複。|[比對相似資料 &#40;適用於 Excel 的 MDS 增益集&#41;](match-similar-data-mds-add-in-for-excel.md)|  
-|將資料從工作表發行到 MDS 儲存機制。|[將資料從 Excel 到 MDS 發行&#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|將資料從工作表發行到 MDS 儲存機制。|[從 Excel 發行資料給 MDS &#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
 |使用工作表中的資料來建立新的實體。 (僅限管理員)|[建立實體 &#40;適用於 Excel 的 MDS 增益集&#41;](create-an-entity-mds-add-in-for-excel.md)|  
 |建立網域屬性，也稱為受條件約束的清單。 (僅限管理員)|[建立網域屬性 &#40;適用於 Excel 的 MDS 增益集&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)|  
 |設定在適用於 Excel 的 Master Data Services 增益集中載入與發行資料的屬性。 (僅限管理員)|[設定適用於 Excel 之 Master Data Services 增益集的屬性](setting-properties-for-master-data-services-add-in-for-excel.md)|  

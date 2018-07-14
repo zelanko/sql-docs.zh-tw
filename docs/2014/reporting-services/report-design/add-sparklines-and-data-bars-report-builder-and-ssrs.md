@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e95e9543cb3eb1efdc0f7a1589133f5691a9fd33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d14a2887abde2ace4e7ecb05eb9c6f4fb1b7fe75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219058"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>加入走勢圖和資料橫條 (報表產生器及 SSRS)
   走勢圖和資料橫條很小，也就是以少量的外來細節傳達許多資訊的精簡圖表。 如需詳細資訊，請參閱[走勢圖和資料橫條 &#40;報表產生器和 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)。  
@@ -54,6 +54,6 @@ ms.locfileid: "36036961"
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [在資料表或矩陣的圖表資料對齊&#40;報表產生器和 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [在資料表或矩陣的圖表資料對齊&#40;報表產生器及 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   

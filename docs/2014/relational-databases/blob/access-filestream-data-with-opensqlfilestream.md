@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - OpenSqlFilestream
 api_location:
@@ -17,20 +16,20 @@ helpviewer_keywords:
 - OpenSqlFilestream
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81dab09c293fff8ad4d47df63a7069e48f63d638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ee7c3745466565a5baf8262fe6cc20dc80c0a3d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034621"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250338"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>使用 OpenSqlFilestream 存取 FILESTREAM 資料
-  OpenSqlFilestream API 取得的 FILESTREAM 二進位大型物件 (BLOB) 儲存在檔案系統中的 Win32 相容的檔案控制代碼。 此控制代碼可傳遞給下列任何 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](http://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
+  OpenSqlFilestream API 會取得 Win32 相容的檔案控制代碼的 FILESTREAM 二進位大型物件 (BLOB) 儲存在檔案系統中。 此控制代碼可傳遞給下列任何 Win32 API： [ReadFile](http://go.microsoft.com/fwlink/?LinkId=86422)、 [WriteFile](http://go.microsoft.com/fwlink/?LinkId=86423)、 [TransmitFile](http://go.microsoft.com/fwlink/?LinkId=86424)、 [SetFilePointer](http://go.microsoft.com/fwlink/?LinkId=86425)、 [SetEndOfFile](http://go.microsoft.com/fwlink/?LinkId=86426)或 [FlushFileBuffers](http://go.microsoft.com/fwlink/?LinkId=86427)。 如果您將此控制代碼傳遞給其他任何 Win32 API，將會傳回錯誤 ERROR_ACCESS_DENIED。 在認可或回復交易之前，必須將此控制代碼傳遞給 Win32 的 [CloseHandle API](http://go.microsoft.com/fwlink/?LinkId=86428) 來關閉此控制代碼。 如果無法關閉此控制代碼，將會導致伺服器端資源洩露。  
   
- 必須執行所有的 FILESTREAM 資料容器存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]交易。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式也可在同一交易中執行。 以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
+ 必須在執行所有的 FILESTREAM 資料容器存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]交易。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式也可在同一交易中執行。 以維護 SQL 資料與 FILESTREAM 資料之間的一致性。  
   
  若要使用 Win32 存取 FILESTREAM BLOB，必須啟用 [Windows 授權](../security/choose-an-authentication-mode.md) 。  
   
@@ -52,15 +51,15 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>參數  
  *FilestreamPath*  
- [in]是`nvarchar(max)`所傳回的路徑[PathName](/sql/relational-databases/system-functions/pathname-transact-sql)函式。 PathName 必須從具有 FILESTREAM 資料表與資料行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 或 UPDATE 權限的帳戶內容中呼叫。  
+ [in]已`nvarchar(max)`所傳回的路徑[PathName](/sql/relational-databases/system-functions/pathname-transact-sql)函式。 PathName 必須從具有 FILESTREAM 資料表與資料行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT 或 UPDATE 權限的帳戶內容中呼叫。  
   
  *DesiredAccess*  
  [in] 設定用來存取 FILESTREAM BLOB 資料的模式。 此值會傳遞給 [DeviceIoControl 函式](http://go.microsoft.com/fwlink/?LinkId=105527)。  
   
-|[屬性]|ReplTest1|意義|  
+|名稱|值|意義|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_READ|0|資料可以從檔案讀取。|  
-|SQL_FILESTREAM_WRITE|@shouldalert|資料可以寫入檔案。|  
+|SQL_FILESTREAM_WRITE|1|資料可以寫入檔案。|  
 |SQL_FILESTREAM_READWRITE|2|資料可以寫入檔案和從檔案讀取。|  
   
 > [!NOTE]  
@@ -69,7 +68,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
  *OpenOptions*  
  [in] 檔案屬性和旗標。 這個參數也可以包含下列旗標的任意組合。  
   
-|旗標|ReplTest1|意義|  
+|旗標|值|意義|  
 |----------|-----------|-------------|  
 |SQL_FILESTREAM_OPEN_NONE|0x00000000:|開啟或建立這個檔案時，不搭配任何特殊選項。|  
 |SQL_FILESTREAM_OPEN_FLAG_ASYNC|0x00000001L|開啟或建立這個檔案是為了非同步 I/O。|  

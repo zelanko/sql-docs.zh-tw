@@ -1,5 +1,5 @@
 ---
-title: Name 元素 (Parameter) (XMLA) |Microsoft 文件
+title: Name 元素 (Parameter) (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Name element
 ms.assetid: 180e3b4d-058e-4deb-843d-ec60949edab0
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 426e02aa9b0d005085422bba55d3bae6a598f540
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b2f5bdd209d6f84d22253c1c47ee430db2facc81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226338"
 ---
 # <a name="name-element-parameter-xmla"></a>Name 元素 (Parameter) (XMLA)
   包含所代表之參數的名稱[參數](parameter-element-xmla.md)項目。  

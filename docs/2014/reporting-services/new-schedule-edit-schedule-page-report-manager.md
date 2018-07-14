@@ -1,5 +1,5 @@
 ---
-title: 新的排程： 編輯排程頁面 （報表管理員） |Microsoft 文件
+title: 新的排程： 編輯排程頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 019cb1a12e25ac3c347d1dbdb72296c2f2a888f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2772db639b664724ee6d594d061f6c9ccdc847cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262004"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>新的排程： 編輯排程頁面 （報表管理員）
   使用 [新增排程 / 編輯排程] 頁面，即可建立報表的排程。 排程可用於訂閱、重新整理快取報表，以及建立將快照集建立成獨立項目，或建立在報表歷程記錄中。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
- 您只能為可以自動執行的報表建立排程。 您必須將報表資料來源認證儲存在報表伺服器資料庫中，才能自動執行報表。 如需詳細資訊，請參閱[資料來源 屬性頁&#40;報表管理員&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)。  
+ 您只能為可以自動執行的報表建立排程。 您必須將報表資料來源認證儲存在報表伺服器資料庫中，才能自動執行報表。 如需詳細資訊，請參閱 <<c0> [ 資料來源屬性頁面&#40;報表管理員&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)。</c0>  
   
  單一排程中無法支援所有的頻率組合。 例如，若要在每星期五下午 12:00 到下午 4:00。 就必須建立指定星期五為執行日期的兩個每日排程，一個開始時間為下午 12:00， 另一個開始時間為下午 4:00。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36033608"
   
 -   **[小時]** 會定義以每小時間隔執行的排程。 使用 **[開始和結束日期]** 區段，即可指定要執行排程的日期。  
   
--   **[天]** 會定義在您所選取日子之特定時間執行的排程。 您可以下列方式指定日子： 每個\<*天*>、 每個工作天和每\<*數目*> 天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
+-   **[天]** 會定義在您所選取日子之特定時間執行的排程。 您可以透過下列方式指定日子： 每隔\<*天*>、 每個工作天和每\<*數目*> 天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
   
 -   **[週]** 會定義在每週間隔之特定時間執行的排程。 此間隔可以是整週 (例如每兩週) 或是其中的日期。  
   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forced service [SQL Server]
 - database mirroring [SQL Server], forcing service
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b015efb6079c1f02c18c9c648b8731f1fde60a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7312e93b61a4e4fca12f237b5eda073767b135ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222238"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>在資料庫鏡像工作階段中強制服務 (Transact-SQL)
   在高效能模式與不含自動容錯移轉的高安全性模式中，若主體伺服器失敗而鏡像伺服器可用，則資料庫擁有者就可以強制將服務容錯移轉到鏡像資料庫 (有遺失資料的可能)，讓資料庫成為可用。 只在下列所有狀況成立時才可使用此選項：  

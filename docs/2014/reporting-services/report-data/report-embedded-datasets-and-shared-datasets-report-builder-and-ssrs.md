@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 78da740dfbdaa9976b2a518cbb5b12146e1371f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7ba4bd70c21072d77f4972870fbbee7e27b18b18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218928"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>報表內嵌資料集和共用資料集 (報表產生器及 SSRS)
   資料集會從資料連接指定您要使用的資料。 資料集是以報表中儲存為內嵌資料來源或報表伺服器上共用資料來源參考的資料連接為基礎。 資料集包含指定一組欄位的查詢。 當您將這些欄位拖曳至設計介面時，您可以建立報表執行時評估為實際資料的運算式。  
@@ -50,7 +50,7 @@ ms.locfileid: "36036757"
   
 7.  **來自結構描述的中繼資料** ：資料提供者會將結構描述查詢命令與查詢分開執行，以擷取資料集欄位集合的中繼資料。 例如， [!INCLUDE[tsql](../../../includes/tsql-md.md)] `SELECT`陳述式會傳回資料庫資料表的資料行名稱。 使用 [報表資料] 窗格展開資料集，即可檢視資料集欄位集合。  
   
- 資料也可以使用預先定義的共用資料集和報表組件併入報表中。 這些項目已經有您所需的資料連接資訊。 如需詳細資訊，請參閱[加入至報表的資料&#40;報表產生器及 SSRS&#41; ](report-datasets-ssrs.md)和[報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)。  
+ 資料也可以使用預先定義的共用資料集和報表組件併入報表中。 這些項目已經有您所需的資料連接資訊。 如需詳細資訊，請參閱 <<c0> [ 將資料加入至報表&#40;報表產生器及 SSRS&#41; ](report-datasets-ssrs.md)並[報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)。</c0>  
   
  如需內建資料來源類型和資料延伸模組的詳細資訊，請參閱[從外部資料來源加入資料 &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36036757"
   
  當報表在執行階段處理時，針對查詢傳回的實際結果集可能擁有零或多個資料列。 在查詢中定義的資料行也可能從資料來源遺失。 從資料來源的 null 值會對應到[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]值`System.DBNull.Value`。  
   
- 如需有關資料集欄位的詳細資訊，請參閱[資料集欄位集合&#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)。  
+ 如需有關資料集欄位的詳細資訊，請參閱 <<c0> [ 資料集欄位集合&#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)。</c0>  
   
 ### <a name="dataset-query"></a>資料集查詢  
  當您在設計階段，於查詢設計工具中執行資料集查詢時，您會從資料來源看到一個顯示範例資料的資料列集。 當使用者在執行階段檢視報表時，資料集查詢可能會產生不同的值，因為資料來源上的資料已變更。 每次處理報表時，新的資料可能就會出現。  
@@ -110,7 +110,7 @@ ms.locfileid: "36036757"
   
 -   根據資料集欄位建立新的自訂欄位，並提供自訂格式。  
   
- 如需詳細資訊，請參閱[資料集欄位集合&#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料集欄位集合&#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)。</c0>  
   
 ### <a name="importing-existing-queries-for-a-dataset"></a>匯入資料集的現有查詢  
  建立資料集時，您可以建立新的查詢，也可以從檔案或其他報表匯入現有的查詢。 從其他報表匯入查詢時，您可以選擇要從報表中資料集之清單匯入的查詢。  
@@ -209,7 +209,7 @@ ms.locfileid: "36036757"
   
 -   您可以使用個別的資料區域顯示每個資料集中的資料。 如需詳細資訊，請參閱[資料區及地圖 &#40;報表產生器及 SSRS&#41;](../report-design/data-regions-and-maps-report-builder-and-ssrs.md)。  
   
--   您可以將一個以上的資料區域連結至一個資料集，並提供相同資料的多個檢視。 如需詳細資訊，請參閱[至相同的資料集連結多個資料區域&#40;報表產生器及 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
+-   您可以將一個以上的資料區域連結至一個資料集，並提供相同資料的多個檢視。 如需詳細資訊，請參閱 <<c0> [ 多個資料區連結至相同的資料集&#40;報表產生器及 SSRS&#41;](../report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。</c0>  
   
 -   您可以使用資料集提供可用值的下拉式清單，或報表參數的預設值。 如需詳細資訊，請參閱[報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)。  
   
@@ -226,6 +226,6 @@ ms.locfileid: "36036757"
 ## <a name="see-also"></a>另請參閱  
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [資料連接、 資料來源和報表產生器中的連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)  
   
   

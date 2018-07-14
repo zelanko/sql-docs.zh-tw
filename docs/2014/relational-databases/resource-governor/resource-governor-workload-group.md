@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, workload group
 - workload groups [SQL Server]
 - workload groups [SQL Server], overview
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 579e3b82953b5c567f78078e0aec2b9efe75e890
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e54c687271deedf0be489221b4db81111c73be8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221068"
 ---
 # <a name="resource-governor-workload-group"></a>資源管理員工作負載群組
   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員中，工作負載群組會當做有類似分類準則之工作階段要求的容器。 工作負載允許對工作階段進行彙總監視，並定義工作階段的原則。 每個工作負載群組都位於資源集區中，資源集區代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體的實體資源子集。 在工作階段啟動時，資源管理員分類會將此工作階段指派給特定的工作負載群組，並且此工作階段必須使用指派給該工作負載群組的原則以及為資源集區所定義的資源來執行。  

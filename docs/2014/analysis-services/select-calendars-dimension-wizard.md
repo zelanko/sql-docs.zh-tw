@@ -1,5 +1,5 @@
 ---
-title: 選取日曆 （維度精靈） |Microsoft 文件
+title: 選取日曆 （維度精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6796c7c3064adc65982b1d5aaec005249e224cae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245588"
 ---
 # <a name="select-calendars-dimension-wizard"></a>選取日曆 (維度精靈)
   使用 [選取日曆] 頁面來建立其他階層，其中代表時間維度的會計日曆、報表日曆、製造日曆或國際標準組織 (ISO) 8601 日曆。  
@@ -62,7 +62,7 @@ ms.locfileid: "36033962"
   
  下表列出月份週別模式可用的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**週 445**|該季的第一個月有 4 週，該季的第二個月有 4 週，而該季的第三個月有 5 週。|  
 |**週 454**|該季的第一個月有 4 週，該季的第二個月有 5 週，而該季的第三個月有 4 週。|  

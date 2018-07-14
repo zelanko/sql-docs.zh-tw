@@ -1,5 +1,5 @@
 ---
-title: 文字方塊屬性對話方塊、 對齊 （報表產生器及 SSRS） |Microsoft 文件
+title: 文字方塊屬性對話方塊、 對齊 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 caps.latest.revision: 9
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bf6aec0a4375c495f49d4ad0484c1893ef4ccdc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c981605bf2f7473fdd24ba10e167f970c1aac8b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214648"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>文字方塊屬性對話方塊、對齊 (報表產生器及 SSRS)
   選取 **[文字方塊屬性]** 對話方塊上的 **[對齊]** ，可以定位所選資料格或資料區域內的值。  
@@ -34,7 +34,7 @@ ms.locfileid: "36032719"
  **垂直**  
  指定在選取之資料格或資料區域內於何處垂直定位值。 依預設，會選取 **[預設值]** 。 預設值為 **[靠上]**。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。  
   
- **左**  
+ **左邊**  
  指定在資料格的左邊緣與資料格內顯示的值之間有多少填補或空格。 預設為 2 點。 請按一下 **運算式** (*fx*) 按鈕來編輯運算式。  
   
  **權限**  

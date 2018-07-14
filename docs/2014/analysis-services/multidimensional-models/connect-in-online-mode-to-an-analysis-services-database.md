@@ -1,5 +1,5 @@
 ---
-title: 連接到 Analysis Services 資料庫的線上模式中的 |Microsoft 文件
+title: 連接到 Analysis Services 資料庫的線上模式中的 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, connecting
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4233f9d50cb64bb3827e4dec49251e382ca3c4b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 74aaef89542270af7be03d4e391a538d3ee33d09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286124"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>在連線模式下連接至 Analysis Services 資料庫
   您可以直接連接到現有的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫，並直接修改該資料庫中的物件。 當您直接連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫時，對物件的變更會立即發生，而且 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中不會建立任何 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]專案。  

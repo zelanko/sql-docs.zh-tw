@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.LOGIN.SERVERROLES.F1
 - sql12.swb.login.databaseaccess.f1
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 27f80c34522042794bae5fee9a99bfd95bb15d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 01ea98feb38ee8fcfdf7a021f9663bd8001ff941
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274664"
 ---
 # <a name="create-a-login"></a>建立登入
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立登入。 登入是連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的人員或程序的識別。  
@@ -58,7 +57,7 @@ ms.locfileid: "36031223"
 > [!NOTE]  
 >  若要使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證，[!INCLUDE[ssDE](../../../includes/ssde-md.md)] 必須使用混合模式驗證。 如需詳細資訊，請參閱[選擇驗證模式](../choose-an-authentication-mode.md)。  
   
- 登入做為安全性主體時，可以將權限授與登入。 登入的範圍是整個 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。 整個執行個體範圍的權限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](例如，`CREATE ENDPOINT`權限) 可以授與登入。  
+ 登入做為安全性主體時，可以將權限授與登入。 登入的範圍是整個 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 若要連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上的特定資料庫，則登入必須對應到資料庫使用者。 資料庫內的權限是對資料庫使用者授與或拒絕，而不是登入。 整個執行個體範圍的權限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](例如`CREATE ENDPOINT`權限) 可以授與登入。  
   
 ##  <a name="Security"></a> 安全性  
   
@@ -114,7 +113,8 @@ ms.locfileid: "36031223"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]** 和 **[狀態]**。  
+ 
+  **[登入 - 新增]** 對話方塊也在其他四個頁面上提供選項： **[伺服器角色]**、 **[使用者對應]**、 **[安全性實體]** 和 **[狀態]**。  
   
 ### <a name="server-roles"></a>[伺服器角色]  
  **[伺服器角色]** 頁面列出所有可指派給新登入的可能角色。 下列是可以使用的選項：  
@@ -183,7 +183,7 @@ ms.locfileid: "36031223"
 2.  在 [新增物件] 對話方塊中，選取下列其中一個選項：[特定物件…]、[下列類型的所有物件…] 或 [伺服器] *server_name*。 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  選取 **伺服器 * * * server_name*使用的所有該伺服器的安全物件自動填滿上方格。  
+    >  選取 **伺服器 * server_name*使用的所有該伺服器的安全物件自動填滿上層方格。  
   
 3.  如果您選取 **[特定物件]**：  
   

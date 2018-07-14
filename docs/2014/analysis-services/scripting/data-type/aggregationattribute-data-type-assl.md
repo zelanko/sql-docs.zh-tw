@@ -1,5 +1,5 @@
 ---
-title: AggregationAttribute 資料類型 (ASSL) |Microsoft 文件
+title: AggregationAttribute 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationAttribute data type
 ms.assetid: 636827c7-938d-4b7d-9827-46da3bc60d9a
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 388bd739938a7b756157659ce34c0a215710a034
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71da4468ab4edece07744ae73a13243eefd1dfed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243418"
 ---
 # <a name="aggregationattribute-data-type-assl"></a>AggregationAttribute 資料類型 (ASSL)
   定義代表之間的關聯的基本資料類型[彙總](../objects/aggregation-element-assl.md)元素和屬性。  
@@ -58,7 +58,7 @@ ms.locfileid: "36033964"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[AttributeID](../properties/id-element-assl.md)，[註解](../collections/annotations-element-assl.md)|  
-|衍生的元素|[屬性](../objects/attribute-element-assl.md)([屬性](../collections/attributes-element-assl.md)集合[AggregationDimension](dimension-data-type-assl.md))|  
+|衍生的元素|[屬性](../objects/attribute-element-assl.md)([屬性](../collections/attributes-element-assl.md)的集合[AggregationDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>備註  
  在「分析管理物件」(AMO) 物件模型中的對應類別是 <xref:Microsoft.AnalysisServices.AggregationAttribute>。  

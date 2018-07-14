@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6fd6fc1-3569-42a5-b6cb-87a921c88f3b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22d9e7f6a9d78093287c146f007a9a722343baea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5bc369f74b77db20a9f7766f8bce0bc93e510bc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242858"
 ---
 # <a name="match-similar-data-mds-add-in-for-excel"></a>比對相似資料 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，使用 Data Quality Services (DQS) 功能來尋找資料中的相似度。  
@@ -30,9 +30,9 @@ ms.locfileid: "36032149"
   
 -   建立您自己的自訂 DQS 知識庫和比對原則。 如需相關資訊，請參閱 [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
--   您必須擁有包含 MDS 管理之資料的工作表。 如需詳細資訊，請參閱[從 excel 的 MDS 資料載入](export-data-to-excel-from-master-data-services.md)。  
+-   您必須擁有包含 MDS 管理之資料的工作表。 如需詳細資訊，請參閱 <<c0> [ 將資料從 MDS 載入 Excel 中的載入](export-data-to-excel-from-master-data-services.md)。  
   
 -   選擇性。 檢查相似度之前，您可以將其他資料與 MDS 管理的資料結合。 如需詳細資訊，請參閱[結合資料 &#40;適用於 Excel 的 MDS 增益集&#41;](combine-data-mds-add-in-for-excel.md)。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36032149"
 -   檢視其他資訊來判斷哪些資料是相似。 如需詳細資訊，請參閱[資料品質比對資料行 &#40;適用於 Excel 的 MDS 增益集&#41;](data-quality-matching-columns-mds-add-in-for-excel.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料品質比對中的 MDS 增益集的 Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [比對的 MDS 增益集適用於 Excel 的資料品質](data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [資料比對](../../data-quality-services/data-matching.md)  
   
   

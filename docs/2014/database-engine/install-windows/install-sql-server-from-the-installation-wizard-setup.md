@@ -1,5 +1,5 @@
 ---
-title: 從安裝精靈 （安裝程式） 安裝 SQL Server 2014 |Microsoft 文件
+title: 從安裝精靈 （安裝程式） 安裝 SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,39 +8,39 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing SQL Server, steps
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 caps.latest.revision: 79
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 684a9d837fa08beaf8917a7193edff622aea4cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6ff8c854a7f2004b30caa11c48423de0995d4652
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250618"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>從安裝精靈安裝 SQL Server 2014 (安裝程式)
-  本主題提供使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式的安裝精靈安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新執行個體的逐步程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需有關可安裝各種元件的詳細資訊，請參閱[安裝 SQL Server 2014](installation-for-sql-server.md)。  如需有關如何安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件個別，請參閱[安裝 SQL Server 2014](install-sql-server.md)。  
+  本主題提供使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝程式的安裝精靈安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之新執行個體的逐步程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈會針對所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的安裝提供單一功能樹狀目錄，所以您不需要個別予以安裝。 如需有關可安裝的各種元件的詳細資訊，請參閱[安裝 SQL Server 2014](installation-for-sql-server.md)。  如需有關如何安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件個別，請參閱 <<c2> [ 安裝 SQL Server 2014](install-sql-server.md)。  
   
  這些額外的主題列出了安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的其他方式：  
   
 -   [從命令提示字元安裝 SQL Server 2014](install-sql-server-from-the-command-prompt.md)。  
   
--   [安裝 SQL Server 2014 使用組態檔](install-sql-server-using-a-configuration-file.md)  
+-   [使用設定檔安裝 SQL Server 2014](install-sql-server-using-a-configuration-file.md)  
   
--   [SysPrep 安裝 SQL Server 2014 使用](install-sql-server-using-sysprep.md)  
+-   [使用 SysPrep 安裝 SQL Server 2014](install-sql-server-using-sysprep.md)  
   
--   [建立新的 SQL Server 容錯移轉叢集&#40;安裝&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。  
+-   [建立新的 SQL Server 容錯移轉叢集&#40;安裝程式&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)。  
   
--   [升級為 SQL Server 2014 使用安裝精靈&#40;安裝&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
+-   [升級為 SQL Server 2014 使用安裝精靈&#40;安裝程式&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  在安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前，請檢閱 [規劃 SQL Server 安裝](../../sql-server/install/planning-a-sql-server-installation.md)中的主題。  
   
 > [!NOTE]  
@@ -52,7 +52,7 @@ ms.locfileid: "36032169"
   
 2.  安裝精靈會執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的新安裝，請在左側導覽區域中，按一下 **[安裝]**，然後按一下 **新增 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝或將功能加入到現有安裝**。  
   
-3.  在 [產品金鑰] 頁面上，選取選項，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，或具有 PID 金鑰之產品的產品版本。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
+3.  在 [產品金鑰] 頁面上，選取選項，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本，或具有 PID 金鑰之產品的產品版本。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
      若要繼續進行，請按 **[下一步]**。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36032169"
   
 9. 在 [安裝程式角色] 頁面上，選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [功能安裝]，然後按 [下一步] 繼續前往 [特徵選取] 頁面。  
   
-10. 在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述]  窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+10. 在 [特徵選取] 頁面上，選取要安裝的元件。 當您選取功能名稱之後，每一個元件群組的描述就會出現在 [功能描述]  窗格中。 您可以選取核取方塊的任何組合。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
      [選取之功能的必要元件]  窗格會顯示選取功能的必要元件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將會在這個程序稍後說明的安裝步驟期間安裝尚未安裝的必要條件。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "36032169"
   
     -   安全性模式 - 為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體選取 Windows 驗證或混合模式驗證。 如果您選取混合模式驗證，就必須為內建 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統管理員帳戶提供增強式密碼。  
   
-         當裝置與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱[Database Engine 組態-帳戶提供](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
+         當裝置與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立成功的連接之後，Windows 驗證和混合模式的安全性機制是相同的。 如需詳細資訊，請參閱 < [Database Engine 組態-帳戶佈建](../../sql-server/install/database-engine-configuration-account-provisioning.md)。  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理員 - 您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上至少必須指定一個系統管理員。 若要加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式執行所用的帳戶，請按一下 **[加入目前使用者]**。 若要從系統管理員清單中加入或移除帳戶，請按一下 **[加入]** 或 **[移除]**，然後編輯在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體中將會有管理員權限的使用者、群組或電腦清單。  
   

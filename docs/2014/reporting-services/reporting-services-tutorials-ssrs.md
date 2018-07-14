@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
 caps.latest.revision: 35
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ed753691683719dae20802f80e4ae635a79c4338
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b6e44a34ed1262d6e7e5a9db67e3fc61ab7ba998
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032026"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268414"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services 教學課程 (SSRS)
   此章節包含的教學課程[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
@@ -33,10 +33,10 @@ ms.locfileid: "36032026"
  請遵循這個教學課程中的步驟來學習如何建立您的第一份報表。 這個教學課程會為您示範如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 來建立資料連接 (資料來源)、定義簡單查詢 (資料集)，以及設定資料區以包含您的資料。  
   
  [存取報表伺服器 Web 服務使用 Visual Basic 或 Visual C&#35; &#40;SSRS 教學課程&#41;](../tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
- 若要了解如何存取本教學課程中遵循的步驟[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]Web 服務以建立應用程式從[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]或[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]。  
+ 遵循此教學課程，以了解如何存取中的步驟[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]Web 服務，從建立應用程式[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]或是[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)]。  
   
  [使用從 RDL 結構描述產生的類別更新報表&#40;SSRS 教學課程&#41;](../tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
- 遵循此教學課程以了解如何使用 XML 結構描述定義工具 (Xsd.exe) 來產生類別，可讓您在序列化和還原序列化報表定義檔案 （.rdl 和.rdlc） 與[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。  
+ 遵循此教學課程，以了解如何使用 XML 結構描述定義工具 (Xsd.exe) 來產生類別可讓您序列化和還原序列化報表定義檔案 （.rdl 和.rdlc） 的步驟並[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]。  
   
  [建立鑽研&#40;RDLC&#41;參數使用 ReportViewer 報表&#40;SSRS 教學課程&#41;](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
  請遵循此教學課程中的步驟，以了解如何使用 ReportViewer 控制項建立包含參數和篩選的鑽研報表。  

@@ -1,5 +1,5 @@
 ---
-title: 'Reportserver: Service 和 reportserversharepoint: Service 效能物件的效能計數器 |Microsoft 文件'
+title: 'Reportserver: Service 和 reportserversharepoint: Service 效能物件的效能計數器 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 43e051ae17b406021092af68767ff3b196c2f250
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0573346427258d9b79188852c8d6e13af1cb8d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238388"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器
   本主題描述下列 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 效能物件的效能計數器：  
@@ -46,11 +46,11 @@ ms.locfileid: "36031797"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式 |原生模式。  
   
 ##  <a name="bkmk_ReportServer"></a> ReportServer:Service 效能計數器 (原生模式報表伺服器)  
- `ReportServer:Service` 效能物件包含一組計數器集合，用來追蹤報表伺服器執行個體的 HTTP 相關事件和記憶體相關事件。 此效能物件會出現一次[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]執行個體上的電腦，而且您可以新增或移除計數器的效能物件，每個執行個體中。 預設執行個體的計數器會以 `ReportServer:Service` 格式顯示。 計數器會以具名執行個體出現在格式`ReportServer$<` *instance_name*`>:Service`。  
+ `ReportServer:Service` 效能物件包含一組計數器集合，用來追蹤報表伺服器執行個體的 HTTP 相關事件和記憶體相關事件。 此效能物件會出現一次，每個[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]執行個體的電腦，然後您可以新增或移除每個執行個體的效能物件計數器。 預設執行個體的計數器會以 `ReportServer:Service` 格式顯示。 計數器會以具名執行個體出現在格式`ReportServer$<` *instance_name*`>:Service`。  
   
- `ReportServer:Service`效能物件的新[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，並提供與網際網路資訊服務 (IIS) 中包含的計數器子集和[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]在舊版的[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 這些新的計數器是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 此外，這個效能物件包含可追蹤記憶體管理事件的計數器。  
+ `ReportServer:Service`效能物件的新功能[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]，並提供已使用網際網路資訊服務 (IIS) 中包含的計數器子集並[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]在舊版的[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。 這些新的計數器是 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特有的，而且它們會追蹤報表伺服器的 HTTP 相關事件，例如要求、連接和登入嘗試。 此外，這個效能物件包含可追蹤記憶體管理事件的計數器。  
   
- 下表列出包含在計數器`ReportServer:Service`效能物件。  
+ 下表列出中包含的計數器`ReportServer:Service`效能物件。  
   
  ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容") 以下 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36031797"
 |`Tasks Queued`|等候執行緒成為可用於處理的工作數目。 對報表伺服器提出的每一要求會對應到一個或多個工作。 這個計數器只表示準備進行處理的工作數目，並不包括目前執行中的工作數目。|  
   
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (SharePoint 模式報表伺服器)  
- `ReportServerSharePoint:Service`效能物件已加入[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
+ `ReportServerSharePoint:Service`效能物件中已新增[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
   
  ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容") 以下 Windows PowerShell 指令碼將會傳回 CounterSetName 的效能計數器清單。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36031797"
   
 ## <a name="see-also"></a>另請參閱  
  [監視報表伺服器效能](monitoring-report-server-performance.md)   
- [MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件效能計數器&#40;原生模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
- [MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件效能計數器&#40;SharePoint 模式&#41;].../ performance-counters-msrs-2011-sharepoint-mode-performance-objects.md）  
+ [MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件的效能計數器&#40;原生模式&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [效能計數器 MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件&#40;SharePoint 模式&#41;].../ performance-counters-msrs-2011-sharepoint-mode-performance-objects.md）  
   
   

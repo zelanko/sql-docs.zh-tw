@@ -1,5 +1,5 @@
 ---
-title: 升級為 SQL Server 2014 使用安裝精靈 （安裝程式） |Microsoft 文件
+title: 升級為 SQL Server 2014 使用安裝精靈 （安裝程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading Database Engine
 - Database Engine [SQL Server], upgrading
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 62
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b56fc3323fcd29b19f43d63c054a9cd844944bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71f2683e42e6a1af7c971b3e192ad534847896ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219788"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>使用安裝精靈升級為 SQL Server 2014 (安裝程式)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈提供了升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的單一功能樹狀目錄。 您也可以將 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 與舊版並存安裝，或是從舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉現有的資料庫和組態設定，然後將它們套用至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的執行個體。  
@@ -40,16 +40,16 @@ ms.locfileid: "36036647"
 -   [使用複製資料庫精靈](../../relational-databases/databases/use-the-copy-database-wizard.md)  
   
 > [!NOTE]  
->  在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 的電腦上，不支援將舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升級為 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]。 如需 Server Core 安裝的詳細資訊，請參閱[在 Server Core 上安裝 SQL Server 2014](install-sql-server-on-server-core.md)。  
+>  在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Core SP1 的電腦上，不支援將舊版 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 升級為 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]。 如需有關 Server Core 安裝的詳細資訊，請參閱[在 Server Core 上安裝 SQL Server 2014](install-sql-server-on-server-core.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  您必須以系統管理員身分執行安裝程式。 如果您是從遠端共用位置安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，則必須使用對遠端共用位置具有讀取和執行權限並且為本機系統管理員的網域帳戶。  
   
  在升級 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 之前，請檢閱下列主題：  
   
 -   [升級到 SQL Server 2014](upgrade-sql-server.md)  
   
--   [硬體 and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+-   [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 -   [檢查 System Configuration Checker 的參數](check-parameters-for-the-system-configuration-checker.md)  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36036647"
   
 2.  安裝精靈會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝中心。 若要升級現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，請按一下左側導覽區域中的 [安裝]，然後再按一下 [從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 升級]。  
   
-3.  在 [產品金鑰] 頁面上，按一下選項，指出您要升級為免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，還是您擁有產品之產品版本的 PID 金鑰。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
+3.  在 [產品金鑰] 頁面上，按一下選項，指出您要升級為免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，還是您擁有產品之產品版本的 PID 金鑰。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[Supported Version and Edition Upgrades](supported-version-and-edition-upgrades.md)。  
   
 4.  在 [授權條款] 頁面上，檢閱授權合約，並在同意時，選取 [我接受授權條款]  核取方塊，然後按 [下一步] 。 若要協助提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36036647"
 -   **設定新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝**：為了減少系統的可攻擊介面區，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會選擇性地安裝及啟用主要服務和功能。 如需有關介面區組態的詳細資訊，請參閱這一版的讀我檔案。  
   
 ## <a name="see-also"></a>另請參閱  
- [升級為 SQL Server 2014](upgrade-sql-server.md)   
+ [升級到 SQL Server 2014](upgrade-sql-server.md)   
  [回溯相容性](../../getting-started/backward-compatibility.md)  
   
   

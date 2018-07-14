@@ -1,5 +1,5 @@
 ---
-title: 包含多個資料範圍的數列顯示在圖表 （報表產生器及 SSRS） |Microsoft 文件
+title: 包含多個資料範圍的數列顯示在圖表 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: deba57aaef05f5859f7a241fee0a3ca17c8362c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 647aef9c4cc3f06e9482d507791ff4c4fcc23a38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251290"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>將包含多個資料範圍的數列顯示在圖表上 (報表產生器及 SSRS)
   圖表將會使用數列的最小值和最大值來計算軸刻度。 當圖表上的數列包含一個以上的資料範圍時，資料點可能會變得模糊，而圖表上只能清楚看到幾個資料點。 例如，假設您的報表顯示 30 天的期間內每天的銷售總額。  
@@ -65,11 +65,11 @@ ms.locfileid: "36034311"
  具有刻度斷層的圖表範例可從範例報表取得。 如需下載這個範例報表及其他項目的詳細資訊，請參閱 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][報表產生器與報表設計師範例報表](http://go.microsoft.com/fwlink/?LinkId=198283)：  
   
 ## <a name="see-also"></a>另請參閱  
- [在圖表上的多個數列&#40;報表產生器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [在圖表上的多個數列&#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [3D、 浮凸和其他圖表中的效果&#40;報表產生器和 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
+ [3D、 浮凸和其他效果的圖表&#40;報表產生器及 SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
- [收集圓形圖小配量&#40;報表產生器和 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [收集圓形圖上的小配量&#40;報表產生器及 SSRS&#41;](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   

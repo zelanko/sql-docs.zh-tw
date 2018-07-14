@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - members [Master Data Services], permissions
 - permissions [Master Data Services], members
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e5ac17b8e72209a25c1e8e213d775012e800ca35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 762006e2e5e6292fc17519894d74e6ca8f250472
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239098"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層成員權限 (Master Data Services)
   階層成員權限為選擇性，而且只有當您希望使用者擁有特定成員的受限存取權時，才應該使用。 如果您未在 [階層成員] 索引標籤上指派權限，則使用者的權限完全是根據 [模型] 索引標籤上指派的權限。  
@@ -34,13 +34,13 @@ ms.locfileid: "36034804"
 > [!NOTE]  
 >  當您指派權限給階層中的節點時，相同層級或更高層級的其他節點中的所有成員都會以隱含方式遭到拒絕。  
   
- 在總管中，成員權限會套用到顯示成員的每一個地方。 例如，一個具有成員**唯讀**權限是唯讀，在其所屬任何實體、 階層和集合。  
+ 在總管中，成員權限會套用到顯示成員的每一個地方。 例如，具有成員**唯讀**權限為唯讀，而與其所屬任何實體、 階層和集合中。  
   
  階層成員權限會套用到您指派的模型版本以及該版本的任何將來複本。 它們不會套用到早於您所指派的版本。  
   
 |權限|描述|  
 |----------------|-----------------|  
-|**唯讀**|顯示成員，但是使用者無法變更成員。 使用者也無法在任何明確階層或成員所屬的集合中移動成員。<br /><br /> 注意： 如果您指派**唯讀**權限**根**，之下的成員**根**是唯讀的; 不過，在明確階層和集合，可讓使用者移成員**根**，可以將新成員加入**根**。|  
+|**唯讀**|顯示成員，但是使用者無法變更成員。 使用者也無法在任何明確階層或成員所屬的集合中移動成員。<br /><br /> 注意： 如果您指派**唯讀**權限**根**，之下的成員**根**是唯讀的; 不過，在明確階層和集合，則使用者可以移動成員**根**，可以將新成員加入**根**。|  
 |**Update**|顯示成員，而且使用者可加以變更。 使用者也可以在任何明確階層或成員所屬的集合中移動成員。|  
 |**拒絕**|不顯示成員。|  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36034804"
 ### <a name="when-a-member-belongs-to-multiple-hierarchies"></a>當成員屬於多個階層  
  兩個或多個階層可以包含相同的成員。  
   
--   如果一個階層節點被指派**更新**指派權限，另一個**唯讀**，則該節點中的成員必須**唯讀**。  
+-   如果一個階層節點被指派**更新**指派權限，而另一個**唯讀**，則該節點中的成員**唯讀**。  
   
--   如果一個階層節點被指派**更新**或**唯讀**權限，另一個節點被指派**拒絕**，則不會顯示該節點中的成員。  
+-   如果一個階層節點被指派**更新**或是**唯讀**權限，另一個節點被指派**拒絕**，則不會顯示該節點中的成員。  
   
 ## <a name="see-also"></a>另請參閱  
  [指派階層成員權限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

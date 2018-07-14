@@ -1,5 +1,5 @@
 ---
-title: TabularBinding 資料類型 (ASSL) |Microsoft 文件
+title: TabularBinding 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TabularBinding data type
 ms.assetid: 24587e34-20be-4693-81d8-038a6fc4e8ee
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 59206b9dd0d9f61ee0915076cd76fc36bdab9322
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5771c76262719264ad2f0a869c92c5d3ce011ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285964"
 ---
 # <a name="tabularbinding-data-type-assl"></a>TabularBinding 資料類型 (ASSL)
   定義代表表格式項目 (例如資料表或 Cube 維度) 之繫結的抽象衍生資料類型。  
@@ -60,11 +60,11 @@ ms.locfileid: "36032870"
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層架構的`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md)。  
+ 如需詳細資訊`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md)。  
   
- 如需 ASSL 中資料繫結的概觀，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需 ASSL 中資料繫結的概觀，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.TabularBinding>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.TabularBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

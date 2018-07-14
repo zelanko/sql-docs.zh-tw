@@ -1,5 +1,5 @@
 ---
-title: 安裝 Analysis services 多維度模型化教學課程的 Sample Data and Projects |Microsoft 文件
+title: 安裝 Analysis services 多維度模型化教學課程的範例資料和專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2d1aca34ac45c88452b83444c7287595c22bb453
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218268"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>安裝 Analysis Services 多維度模型化教學課程的範例資料和專案
   使用本主題中提供的指示與連結，安裝 Analysis Services 教學課程中所使用的所有資料和專案檔案。  
   
 ## <a name="step-1-install-sql-server-software"></a>步驟 1：安裝 SQL Server 軟體  
- 本教學課程中的課程假設您已安裝下列軟體。 下列所有軟體都是使用 SQL Server 安裝媒體進行安裝。 為簡化部署，您可以在一台電腦上安裝所有功能。 若要安裝這些功能，請執行 SQL Server 安裝程式，並從 [特徵選取] 頁面中選取這些功能。 如需詳細資訊，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+ 本教學課程中的課程假設您已安裝下列軟體。 下列所有軟體都是使用 SQL Server 安裝媒體進行安裝。 為簡化部署，您可以在一台電腦上安裝所有功能。 若要安裝這些功能，請執行 SQL Server 安裝程式，並從 [特徵選取] 頁面中選取這些功能。 如需詳細資訊，請參閱 <<c0> [ 從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。</c0>  
   
 -   Database Engine  
   

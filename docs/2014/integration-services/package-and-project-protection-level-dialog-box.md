@@ -1,5 +1,5 @@
 ---
-title: 封裝與專案保護等級對話方塊 |Microsoft 文件
+title: 封裝與專案保護等級對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.packageprotectionlevel.f1
 - sql12.ssis.bids.projectprotectionlevel.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Package Protection Level dialog box
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b6e1f6bea2a13e223aa1466e43c600a83e32544f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 038c4b3f03b2dca9b0c6fd9676d21f7c16747a47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248828"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>封裝與專案保護等級對話方塊
   使用 **[封裝保護等級]** 對話方塊，即可更新封裝的保護等級。 保護等級會決定保護方法、密碼或使用者金鑰，以及封裝保護的範圍。 保護可包括所有資料或只包括機密資料。  

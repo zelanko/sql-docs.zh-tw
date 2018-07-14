@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identity values [SQL Server replication]
 - merge replication [SQL Server replication], identity range management
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4e19df4f08dd16a7d2af602d317e2e6c52884e33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 190f9c32cea30f4b91af207a88f4c0195c6fccdd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236758"
 ---
 # <a name="manage-identity-columns"></a>管理識別欄位
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中管理識別欄位。 當訂閱者插入複寫回發行者時，必須管理識別欄位，以免在訂閱者和發行者上指派相同的識別值。 複寫可以自動管理識別範圍，或者您可以選擇手動處理識別範圍管理。  如需複寫提供之識別範圍管理選項的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)。  
@@ -60,7 +60,7 @@ ms.locfileid: "36033906"
   
 5.  如果在步驟 4 中選取了 **[自動]** 或 **[True]** ，請在下表中輸入選項的值。 如需如何使用這些設定的詳細資訊，請參閱[複寫識別欄位](replicate-identity-columns.md)中的＜指派識別範圍＞一節。  
   
-    |選項|ReplTest1|描述|  
+    |選項|值|描述|  
     |------------|-----------|-----------------|  
     |**發行者範圍大小**|範圍大小的整數值 (例如 20000)。|請參閱[複寫識別欄位](replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  
     |**訂閱者範圍大小**|範圍大小的整數值 (例如 10000)。|請參閱[複寫識別欄位](replicate-identity-columns.md)中的＜指派識別範圍＞一節。|  

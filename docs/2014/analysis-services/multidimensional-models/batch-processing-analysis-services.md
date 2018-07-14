@@ -1,5 +1,5 @@
 ---
-title: 批次處理 (Analysis Services) |Microsoft 文件
+title: 批次處理 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - batches [Analysis Services]
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66cc1d67c589d1794e2beabb03b680e1b1015254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 744c769b7d9627142f7eaa0ddf23590e2e3bd44b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218198"
 ---
 # <a name="batch-processing-analysis-services"></a>批次處理 (Analysis Services)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，您可以使用 [批次] 命令，以單一要求將多個處理命令傳送至伺服器。 批次處理讓您可以控制要處理的物件和處理順序。 此外，批次可以當做一系列獨立的作業來執行，或是做為交易執行，其中若有一個處理序失敗，就會造成整個批次全部回復。  

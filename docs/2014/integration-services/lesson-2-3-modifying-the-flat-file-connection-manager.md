@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 caps.latest.revision: 20
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9fd2bed99316f5863ca2ce132e8fb3c9f23f73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: af8438b3efef093b2704de4c02a7bdc44c5b9058
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221688"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>步驟 3：修改一般檔案連接管理員
   在這項工作中，您將會修改您在第 1 課建立及設定的一般檔案連接管理員。 一開始建立時，已設定一般檔案連接管理員來以靜態方式載入單一檔案。 若要讓一般檔案連線管理員反覆載入檔案，您必須修改連線管理員的 ConnectionString 屬性來接受使用者定義變數 `User:varFileName`，這個變數包含在執行階段要載入的檔案路徑。  
@@ -32,7 +32,7 @@ ms.locfileid: "36033048"
   
 2.  在 [屬性] 視窗的 **[運算式]** 中，按一下空白資料格，然後按一下省略符號按鈕 **(...)**。  
   
-3.  在**屬性運算式編輯器**對話方塊中，於**屬性**資料行，輸入或選取`ConnectionString`。  
+3.  在 **屬性運算式編輯器**對話方塊中，於**屬性**資料行，輸入或選取`ConnectionString`。  
   
 4.  在 **[運算式]** 資料行中，按一下省略符號按鈕 **(…)** 來開啟 **[運算式產生器]** 對話方塊。  
   

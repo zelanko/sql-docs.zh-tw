@@ -1,5 +1,5 @@
 ---
-title: SAP BW 連接管理員編輯器 |Microsoft 文件
+title: SAP BW 連接管理員編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1aa5052eb720fd212426bda989ada2f26993364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbfeaf04ca7eb8a07637c295a5aa80cc02bedd58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231455"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 連接管理員編輯器
   使用 [SAP BW 連線管理員編輯器] 可以指定要用來連接到 SAP Netweaver BW 版本 7 系統的屬性。  

@@ -1,5 +1,5 @@
 ---
-title: StandardAction 資料類型 (ASSL) |Microsoft 文件
+title: StandardAction 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StandardAction data type
 ms.assetid: 81b574d5-06c1-4587-8bd2-0e5c5e3b1d99
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bdf3282c6f75cc762ae67a9fab9fc641f25fa3a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57116b91719dec65efef9be50926456e33109b4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267544"
 ---
 # <a name="standardaction-data-type-assl"></a>StandardAction 資料類型 (ASSL)
-  定義衍生的資料類型，它代表任何[動作](../objects/action-element-assl.md)以外的項目[DrillThroughAction](action-data-type-assl.md)項目或[ReportAction](reportaction-data-type-assl.md)項目。  
+  定義代表任何的衍生的資料類型[動作](../objects/action-element-assl.md)以外的項目[DrillThroughAction](action-data-type-assl.md)項目或有[ReportAction](reportaction-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,10 +58,10 @@ ms.locfileid: "36031512"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[運算式](../properties/expression-element-assl.md)|  
-|衍生的元素|[動作](../objects/action-element-assl.md)([動作](../collections/actions-element-assl.md)集合[Cube](../objects/cube-element-assl.md)或[觀點來看](../objects/perspective-element-assl.md))|  
+|衍生的元素|[動作](../objects/action-element-assl.md)([動作](../collections/actions-element-assl.md)的集合[Cube](../objects/cube-element-assl.md)或是[觀點來看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.StandardAction>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.StandardAction>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

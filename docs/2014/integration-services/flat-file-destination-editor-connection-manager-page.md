@@ -1,5 +1,5 @@
 ---
-title: 一般檔案目的地編輯器 （連接管理員頁面） |Microsoft 文件
+title: 一般檔案目的地編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.connection.f1
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80b8fd44d23734c625421d1cfd9273a6f44cabd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 264311beb234f4fcfc815f9b2bf5b21eace779ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032806"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260948"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>一般檔案目的地編輯器 (連接管理員頁面)
   使用 [一般檔案目的地編輯器] 對話方塊的 [連線管理員] 頁面，來選取目的地的一般檔案連接，以及指定是否要覆寫或附加至現有的目的地檔案。 一般檔案目的地會將資料寫入文字檔。 此文字檔的格式可以是分隔、固定寬度、固定寬度且具有資料列分隔符號或不齊右格式。  
@@ -52,6 +52,6 @@ ms.locfileid: "36032806"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案目的地編輯器&#40;[對應] 頁面&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+ [一般檔案目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

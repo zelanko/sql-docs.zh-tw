@@ -1,5 +1,5 @@
 ---
-title: CalendarStartDate 元素 (ASSL) |Microsoft 文件
+title: CalendarStartDate 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalendarStartDate element
 ms.assetid: f6204107-9123-41f0-acbd-52134fe36e37
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e0fd15c7fa6336c1fb1ea245eb400079e95e76d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 650ccdab8099ec80b6a526671bb01f0ad2d5ea32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249378"
 ---
 # <a name="calendarstartdate-element-assl"></a>CalendarStartDate 元素 (ASSL)
-  定義的之日曆週期的開始日期[TimeBinding](../data-type/binding-data-type-assl.md)項目。  
+  定義之日曆週期的開始日期[TimeBinding](../data-type/binding-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36032409"
 ## <a name="remarks"></a>備註  
  `CalendarEndDate` 必須落在 `CalendarStartDate` 之後。  
   
- 對應目的父代的項目`CalendarStartDate`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 對應至父系的元素`CalendarStartDate`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

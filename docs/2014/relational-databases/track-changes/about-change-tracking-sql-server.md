@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data changes [SQL Server]
 - tracking data changes [SQL Server]
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - data [SQL Server], changing
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62309ba34829657eee57398c48df90a232ae4f11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 8953f24d60b3007ab2fee218507cdd77c69561ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032501"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276144"
 ---
 # <a name="about-change-tracking-sql-server"></a>關於變更追蹤 (SQL Server)
-  變更追蹤是為應用程式提供高效率變更追蹤機制的輕量型方案。 一般而言，若要讓應用程式查詢對資料庫中之資料所做的變更並且存取與這些變更有關的資訊，應用程式開發人員就必須實作自訂變更追蹤機制。 建立這些機制通常需要進行大量工作而且經常涉及使用觸發程序的組合`timestamp`資料行、 新的資料表來儲存追蹤資訊和自訂清除程序。  
+  變更追蹤是為應用程式提供高效率變更追蹤機制的輕量型方案。 一般而言，若要讓應用程式查詢對資料庫中之資料所做的變更並且存取與這些變更有關的資訊，應用程式開發人員就必須實作自訂變更追蹤機制。 建立這些機制通常需要進行大量工作而且經常涉及使用觸發程序的組合`timestamp`資料行、 儲存追蹤資訊和自訂清除程序的新資料表。  
   
  對於有關變更的所需資訊量，不同的應用程式類型具有不同的需求。 應用程式可以使用變更追蹤來回答下列有關已經對使用者資料表所做變更的問題：  
   

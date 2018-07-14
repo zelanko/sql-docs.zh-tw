@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 88edb881309b66cd84f953d8166a47b9e4eeb472
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a746b087259d5159f693198a3cf60a1ce98ce6e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257064"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>設定 user options 伺服器組態選項
   此主題描述如何使用 **或** ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]伺服器組態選項。 **user options** 選項指定所有使用者的全域預設值。 會為使用者工作階段的持續時間建立預設查詢處理選項的清單。 **user options** 選項允許您變更 SET 選項的預設值 (如果伺服器的預設值不適當)。  
@@ -52,9 +52,9 @@ ms.locfileid: "36034215"
   
 -   下表列出及描述 **user options**的組態值。 不是所有組態值都彼此相容。 例如，不能同時設定 ANSI_NULL_DFLT_ON 與 ANSI_NULL_DFLT_OFF。  
   
-    |ReplTest1|組態|描述|  
+    |值|組態|描述|  
     |-----------|-------------------|-----------------|  
-    |@shouldalert|DISABLE_DEF_CNST_CHK|控制暫時的或延遲的條件約束檢查。|  
+    |1|DISABLE_DEF_CNST_CHK|控制暫時的或延遲的條件約束檢查。|  
     |2|IMPLICIT_TRANSACTIONS|如果是 dblib 網路程式庫連接，則控制執行陳述式時是否隱含地啟動交易。 IMPLICIT_TRANSACTIONS 設定在 ODBC 或 OLEDB 連接上無效。|  
     |4|CURSOR_CLOSE_ON_COMMIT|控制執行認可作業後資料指標的行為。|  
     |8|ANSI_WARNINGS|控制彙總警告中的截斷與 NULL。|  

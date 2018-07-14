@@ -1,5 +1,5 @@
 ---
-title: 核心 SQLXML 安全性考量 |Microsoft 文件
+title: 核心 SQLXML 的安全性考量 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - security [SQLXML], about security
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7b89745551ba3f4d82272387149bca21466e9813
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 972ece66513dcc8784ed40e9757ec6114684f10e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255960"
 ---
 # <a name="core-sqlxml-security-considerations"></a>SQLXML 的核心安全性考量
   下面是使用 SQLXML 進行資料存取的安全性指導方針。  
   
--   SQLXMLOLEDB 提供者公開 `StreamFlags` 屬性，這個屬性可以讓您設定旗標，指出每個特定的執行個體應該啟用或停用什麼 SQLXML 功能。 您可以使用這個屬性來自訂 SQLXML 的使用，並確定只有您所要的元件啟用。 如需詳細資訊，請參閱[SQLXMLOLEDB 提供者&#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)。  
+-   SQLXMLOLEDB 提供者公開 `StreamFlags` 屬性，這個屬性可以讓您設定旗標，指出每個特定的執行個體應該啟用或停用什麼 SQLXML 功能。 您可以使用這個屬性來自訂 SQLXML 的使用，並確定只有您所要的元件啟用。 如需詳細資訊，請參閱 < [SQLXMLOLEDB 提供者&#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md)。  
   
 -   當 SQLXML 錯誤發生且傳回時，可能會包含有關資料表名稱、資料行名稱或類型資訊之類的資料庫結構描述的資訊。 在處理這些錯誤時應該要小心，以免有關您的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝的資訊在非預期或不必要的情況下被使用者輕易地找到。  
   

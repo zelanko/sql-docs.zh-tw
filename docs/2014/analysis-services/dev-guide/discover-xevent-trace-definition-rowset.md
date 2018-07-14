@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_XEVENT_TRACE_DEFINITION 資料列集 |Microsoft 文件
+title: DISCOVER_XEVENT_TRACE_DEFINITION 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2994ce526ff0f8035d16485bf99b146e2366389e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26bfb6747562f5f0c64d77aaceec1baa4f1bd6d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237688"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 資料列集
   提供有關伺服器上目前使用中 XEvent 追蹤的資訊。  
@@ -41,14 +41,14 @@ ms.locfileid: "36034472"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## <a name="see-also"></a>另請參閱  
  [XML for Analysis 結構描述資料列集](../schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)   
- [使用 SQL Server 擴充事件&#40;XEvents&#41;監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
- [使用動態管理檢視&#40;Dmv&#41;監視 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用 SQL Server 擴充事件&#40;XEvents&#41;若要監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
+ [使用動態管理檢視&#40;Dmv&#41;若要監視 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

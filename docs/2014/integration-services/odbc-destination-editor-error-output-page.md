@@ -1,5 +1,5 @@
 ---
-title: ODBC 目的地編輯器 （錯誤輸出頁面） |Microsoft 文件
+title: ODBC 目的地編輯器 （錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a064b82360706ad943deb816ed54c32e34e568cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7906ba748e55b238cfc5ca074190d687be5f96bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256784"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>ODBC 目的地編輯器 (錯誤輸出頁面)
   使用 **[ODBC 目的地編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，即可選取錯誤處理選項。  
@@ -74,7 +74,7 @@ ms.locfileid: "36033046"
  導致錯誤或截斷的資料列會導向至 ODBC 目的地的錯誤輸出。 如需詳細資訊，請參閱＜ODBC 目的地＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 目的地編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 目的地編輯器&#40;[對應] 頁面&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
+ [ODBC 目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   
   

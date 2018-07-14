@@ -1,5 +1,5 @@
 ---
-title: 指令碼轉換編輯器 （輸入資料行頁面） |Microsoft 文件
+title: 指令碼轉換編輯器 （輸入資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.inputcolumn.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 456f1abba1045da01c162dfb23738bcb989a9341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a08f02fec89079e50842de83ec79061e31d83f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256764"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>指令碼轉換編輯器 (輸入資料行頁面)
   使用 [指令碼轉換編輯器] 對話方塊的 [輸入資料行] 頁面，對輸入資料行設定屬性。  
@@ -51,10 +51,10 @@ ms.locfileid: "36035015"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [選取指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
+ [選取 指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
  [指令碼轉換編輯器&#40;輸入及輸出頁面&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [指令碼轉換編輯器&#40;指令碼 頁面&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [指令碼轉換編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [指令碼轉換編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [其他指令碼元件範例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

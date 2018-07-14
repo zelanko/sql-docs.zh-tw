@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mixed types [SQL Server]
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b95d877eb7873a12f65cf492f9e67e8f6968fa14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e4aeec997ee728081f74028538c6939ff60a410a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268594"
 ---
 # <a name="mixed-type-and-simple-content"></a>混合的類型與簡單的內容
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援將混合類型限制為簡單內容。  

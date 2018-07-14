@@ -1,5 +1,5 @@
 ---
-title: 瀏覽已部署的 Cube |Microsoft 文件
+title: 瀏覽已部署的 Cube |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b804f31df461225d5325de63568b303bdc475e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96480e0303dbb3176ea9fd17b14536e84d9006c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034475"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253400"
 ---
 # <a name="browsing-the-deployed-cube"></a>瀏覽已部署的 Cube
   在下列工作中，您將瀏覽 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube。 我們的分析會跨多個維度比較量值，因此您將使用 Excel 樞紐分析表瀏覽資料。 使用樞紐分析表可讓您將客戶、日期和產品資訊放在不同的軸上，讓您可以看到跨特定時間週期、客戶人口統計資料和產品線檢視時，[網際網路銷售] 如何變更。  
@@ -46,7 +46,7 @@ ms.locfileid: "36034475"
   
      此時會出現按區域的網際網路銷售量和 2006 年 2 月的當月產品線，如下圖所示。  
   
-     ![依區域和產品線的網際網路銷售額](../../2014/tutorials/media/l3-cube-browser-finish.gif "依地區和產品線的網際網路銷售額")  
+     ![依區域和產品線的網際網路銷售額](../../2014/tutorials/media/l3-cube-browser-finish.gif "依區域和產品線的網際網路銷售額")  
   
 ## <a name="next-lesson"></a>下一課  
  [第 4 課：定義進階屬性和維度屬性](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  

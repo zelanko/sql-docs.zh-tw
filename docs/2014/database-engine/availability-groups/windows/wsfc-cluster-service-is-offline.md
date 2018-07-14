@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.agp1WSFCquorum.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: ff8eee20242724487f600e7002a4c9fb3ac291b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2fecbc2e451b4da4cf1d8ee6d28ea1f1307b9190
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275154"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC 叢集服務離線
     

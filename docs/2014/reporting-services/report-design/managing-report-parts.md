@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7c74ae6ba5a8f69a0fef8f5fce9f4a18828867c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b8b08d19493528f1c93cea4752f548040fb47322
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286694"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
-  開頭為[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，報表組件可以發行至報表伺服器與重複使用在其他報表和其他使用者有適當的權限。  
+  開頭[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，報表組件可以發行至報表伺服器，並重複使用在其他報表和其他使用者有適當的權限。  
   
  報表組件可以由多個使用者重複使用，也可以在多個報表中重複使用。 使用者可以搜尋伺服器上的報表組件，並將其加入至報表中。  使用者也可以收到伺服器上報表組件更新的通知，然後重新發行新版本的報表組件。 這些報表撰寫動作可能會受報表服務安全性權限影響及控制。  本主題會檢閱報表組件位於伺服器上之後的屬性和行為。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36035599"
   
 |屬性|描述|報表組件<br /><br /> 組件庫搜尋準則|  
 |--------------|-----------------|---------------------------------------------|  
-|[屬性]|這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
+|名稱|這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
 |描述|您可能會想要使用某種方式來組織報表組件名稱，讓使用者更容易在組件庫中找到組件。 例如，您可以搜尋以「銷售>>」開頭的描述，以尋找與銷售相關資料和簡報有關的所有報表組件。|是|  
 |CreatedBy|將報表組件加入報表伺服器資料庫的使用者識別碼。 確切的格式視驗證方法而定。 例如，某些驗證方法會導致在 [CreatedBy] 和 [ModifiedBy] 欄位中顯示完整的網域\使用者名稱。|是|  
 |CreationDate|原先建立報表組件的日期。<br /><br /> 這是使用者可以在報表組件庫中搜尋的其中一個準則。|是|  
@@ -99,7 +99,7 @@ ms.locfileid: "36035599"
  [一般屬性頁面、 報表組件&#40;報表管理員&#41;](../general-properties-page-report-parts-report-manager.md)   
  [移動項目頁面&#40;報表管理員&#41;](../move-items-page-report-manager.md)   
  [報表伺服器內容管理&#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [疑難排解報表組件&#40;報表產生器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [報表設計師中的報表組件 &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md)  
   
   

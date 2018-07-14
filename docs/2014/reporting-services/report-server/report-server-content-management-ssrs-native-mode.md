@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - published reports [Reporting Services], managing
@@ -18,13 +18,13 @@ ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3428d1e16bf2531c0c339835ed083d2cce272490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2878a1f12978bfab6f9cd7d0c0d04787ceccfd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212358"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>報表伺服器內容管理 (SSRS 原生模式)
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中，內容管理是指管理報表伺服器項目。 所有項目都可以透過屬性和安全性設定單獨進行管理， 而任何一個項目都可以移至報表伺服器資料夾命名空間內的不同位置。 若要有效管理項目，您必須了解內容管理員所執行的工作。  
@@ -129,7 +129,7 @@ ms.locfileid: "36035164"
   
 |作業|檔案類型|  
 |---------------|---------------|  
-|上傳|若要上傳資源，您必須使用報表管理員 (如果報表伺服器以原生模式執行的話) 或 SharePoint 網站上的應用程式頁面 (如果伺服器以 SharePoint 整合模式執行的話)。 如需詳細資訊，請參閱[上傳檔案或報表&#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)或 [上傳至 SharePoint 文件庫的文件&#40;Reporting Services SharePoint 模式&#41;].../ upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md）。|  
+|上傳|若要上傳資源，您必須使用報表管理員 (如果報表伺服器以原生模式執行的話) 或 SharePoint 網站上的應用程式頁面 (如果伺服器以 SharePoint 整合模式執行的話)。 如需詳細資訊，請參閱 <<c0> [ 上傳檔案或報表&#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)或 [上傳至 SharePoint 文件庫的文件&#40;以 SharePoint 模式的 Reporting Services&#41;].../ upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md）。</c0>|  
 |發行|專案中不是報表、報表組件、資料來源或資料集的所有檔案都會當做資源上傳。 若要發行資源，請在報表設計師中，將現有的項目加入至專案，然後將此專案發行至報表伺服器。|  
   
  所有資源都會先在檔案系統上以檔案的形式產生，然後再上傳至報表伺服器。 除了 ASP.NET 所加諸的 4 MB 預設檔案大小限制以外，您可以上傳的檔案類型沒有任何限制。 不過，以資源發行至報表伺服器時，具有對等 MIME 類型之檔案類型的效能會優於其他類型。 例如，當使用者按一下資源時，以 HTML 和 JPG 檔為基礎的資源將在瀏覽器視窗中開啟，HTML 將轉譯成網頁，JPG 將轉譯成影像，供使用者檢視。 反之，沒有對等 MIME 類型的資源 (例如桌上型電腦應用程式檔案) 可能就無法在瀏覽器視窗中轉譯。  

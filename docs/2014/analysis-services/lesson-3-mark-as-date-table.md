@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 標記為日期資料表 |Microsoft 文件
+title: 第 4 課： 標記為日期資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a283b56c215e51dbdb0df90b9c51c21e232df2f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a2a6ce44a66fbb1e9045116580acc726f648df9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265744"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>第 4 課：標記為日期資料表
   在「第 2 課：加入資料」中，您已匯入了名為 DimDate 的維度資料表。 接著您在「第 3 課：重新命名資料行」中，將 DimDate 資料表重新命名為簡化的 Date。 當模型中的此資料表已命名為 Date 時，也可以稱作「日期資料表」，並會在其中包含日期及時間資料。  
@@ -30,7 +30,7 @@ ms.locfileid: "36033978"
   
  完成本課程的估計時間： **3 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 3 課：重新命名資料行](rename-columns.md)。  
   
 ### <a name="to-set-mark-as-date-table"></a>設定標記為日期資料表  

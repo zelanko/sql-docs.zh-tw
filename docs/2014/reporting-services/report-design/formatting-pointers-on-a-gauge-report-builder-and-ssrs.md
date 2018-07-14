@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7aa25d7a3d09fbf3d85b64a43e8caf04759a4336
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: cc0d66393fc649df0720406c40bd07faee93c6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034724"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238468"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>格式化量測計上的指標 (報表產生器及 SSRS)
   量測計指標會指出量測計目前的值。 根據預設，加入欄位時，包含在欄位中的值會彙總為量測計上之指標顯示的一個值。 您可以將多個指標加入到量測計中以便在相同的標尺上指出多個值，或者針對您已經加入的每個標尺加入多個標尺和一個指標。 將欄位加入到量測計之後，您必須在對應的標尺上設定最大值與最小值，以便將內容提供給指標值。 您也可以選擇在顯示標尺重要區域的範圍上，設定最小值與最大值。  
@@ -36,7 +36,7 @@ ms.locfileid: "36034724"
 ##  <a name="HowPointer"></a> 如何將指標連接到資料  
  根據預設，加入量測計時，它包含沒有關聯欄位的一個指標。 這就是所謂的空指標。 在欄位加入到資料窗格之前，它將會顯示零。 當您將欄位加入至資料窗格時，該指標會連接到該欄位。 如果您從資料窗格刪除某個欄位，也會一併刪除與該欄位相關聯的指標。  
   
- 新增資料之後，當您以滑鼠右鍵按一下指標時，將會出現 [清除指標] 和 [刪除指標] 選項。 **[清除指標值]** 選項將會移除附加到量測計的欄位，但是指標仍然會出現在量測計上。 **[刪除指標]** 選項將會從量測計刪除欄位，並從檢視刪除指標。 如果您將欄位重新加入到量測計中，預設指標將會重新出現。 當您將指標的**隱藏**屬性`True`、 指標不會隱藏設計介面上，但是會在執行階段隱藏。  
+ 新增資料之後，當您以滑鼠右鍵按一下指標時，將會出現 [清除指標] 和 [刪除指標] 選項。 **[清除指標值]** 選項將會移除附加到量測計的欄位，但是指標仍然會出現在量測計上。 **[刪除指標]** 選項將會從量測計刪除欄位，並從檢視刪除指標。 如果您將欄位重新加入到量測計中，預設指標將會重新出現。 當您將指標**Hidden**屬性設`True`，不會在設計介面上隱藏指標，但會在執行階段隱藏。  
   
   
 ##  <a name="DisplayingMultiple"></a> 在量測計上顯示多個指標  
@@ -50,18 +50,18 @@ ms.locfileid: "36034724"
   
   
 ##  <a name="SettingSnappingInterval"></a> 設定貼齊間隔  
- 貼齊間隔會定義捨入值的倍數。 根據預設，量測計將指向您在資料窗格中指定之欄位的確切值。 不過，您可以向上或向下捨入確切值，以便讓指標貼齊預設的間隔。 例如，如果量測計的值為 34.2，而且您將貼齊間隔指定為 5，則量測計指標將會指向 35。 如果量測計的值為 31.2，而且您將貼齊間隔指定為 5，則量測計指標將會指向 30。 如需詳細資訊，請參閱[設定量測計的貼齊間隔&#40;報表產生器及 SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)。  
+ 貼齊間隔會定義捨入值的倍數。 根據預設，量測計將指向您在資料窗格中指定之欄位的確切值。 不過，您可以向上或向下捨入確切值，以便讓指標貼齊預設的間隔。 例如，如果量測計的值為 34.2，而且您將貼齊間隔指定為 5，則量測計指標將會指向 35。 如果量測計的值為 31.2，而且您將貼齊間隔指定為 5，則量測計指標將會指向 30。 如需詳細資訊，請參閱 <<c0> [ 設定為量測計的貼齊的間隔&#40;報表產生器及 SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)。</c0>  
   
   
 ##  <a name="SpecifyingImage"></a> 將影像指定為星形量測計的指標  
  除了指標樣式的內建清單之外，您也可以將影像指定為指標。 這在使用影像取代現有的指針指標樣式時是最有效果的。 影像會附加在指標上，但是所有指標功能都適用。 當影像用於指標時，色彩與漸層選項則不適用。  
   
- 如果指標影像為不規則的形狀，您應該將色彩定義為透明的，以便隱藏不應該出現在量測計上的影像區域。 當您定義透明色彩時，量測計會調換現有指標頂端的影像並修剪影像，這樣就可以只顯示指標的形狀。 量測計會重新調整影像以符合您指標的大小。 當您指定指標的影像時，加入到量測計頂端的任何後續指標都會繪製在影像的下方。 因此，如果量測計上有多個指標，最好不要為指標指定影像。 如需詳細資訊，請參閱[將影像指定為量測計的指標&#40;報表產生器及 SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)。  
+ 如果指標影像為不規則的形狀，您應該將色彩定義為透明的，以便隱藏不應該出現在量測計上的影像區域。 當您定義透明色彩時，量測計會調換現有指標頂端的影像並修剪影像，這樣就可以只顯示指標的形狀。 量測計會重新調整影像以符合您指標的大小。 當您指定指標的影像時，加入到量測計頂端的任何後續指標都會繪製在影像的下方。 因此，如果量測計上有多個指標，最好不要為指標指定影像。 如需詳細資訊，請參閱 <<c0> [ 將影像指定為量測計的指標&#40;報表產生器及 SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)。</c0>  
   
   
 ## <a name="see-also"></a>另請參閱  
  [格式化量測計上的標尺 &#40;報表產生器及 SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [格式化量測計上的範圍&#40;報表產生器和 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [格式化量測計上的範圍&#40;報表產生器及 SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [量測計 &#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

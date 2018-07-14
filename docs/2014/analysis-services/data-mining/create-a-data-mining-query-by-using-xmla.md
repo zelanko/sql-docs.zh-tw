@@ -1,5 +1,5 @@
 ---
-title: 使用 XMLA 建立資料採礦查詢 |Microsoft 文件
+title: 使用 XMLA 建立資料採礦查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2421d501ea5040a177cb1d52aea1c3a56b59e107
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 220d9b284175e9427a28a886e46ffe91b277fe3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226596"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>使用 XMLA 建立資料採礦查詢
   您可以使用 AMO、DMX 或 XML/A 來針對資料採礦物件建立各種查詢。  
@@ -48,9 +48,9 @@ ms.locfileid: "36032671"
   
      在 [結果] 窗格中會傳回結構描述資料列集的清單，其中包含目前執行個體提供之所有資料列集的資料列集名稱和資料列集資料行。  
   
-2.  在**查詢** 窗格中，放置游標之後**\<限制清單 >** 按下 ENTER 即可加入新的一行。  
+2.  在 **查詢**窗格中，將游標放在後的**\<限制清單 >** 按下 ENTER 即可加入新的一行。  
   
-3.  將游標置於空白行和型別 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  將游標置於類型與空白行 **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
   
      完整的限制區段應顯示如下：  
   

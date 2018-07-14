@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a3345a4306427a5b85db2e4cc9e5866b67b36e98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9a81fe13f39d2c586338cfe33452a552aa1c7e12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270404"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>摘要：將資料表轉換為階層式結構
   `hierarchyid` 資料類型可以用簡單、精簡的格式，儲存階層式關聯性。 適當的索引可以按照階層的層級、階層的子樹，或傳統的單一查閱，有效傳回資料。  

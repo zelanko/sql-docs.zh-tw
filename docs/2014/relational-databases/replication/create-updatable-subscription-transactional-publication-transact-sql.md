@@ -1,5 +1,5 @@
 ---
-title: Create an Updatable Subscription to a Transactional Publication 使用 TRANSACT-SQL |Microsoft 文件
+title: Create an Updatable Subscription to a Transactional Publication，使用 TRANSACT-SQL |Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 670e1ea0-ffda-4d84-b4cd-f15a331035b9
 caps.latest.revision: 3
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5d773ebed7df043c75accf8f17ed32865097633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b619da1f8beb0dd23d18625b6ffebb46f807bfdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230848"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-using-transact-sql"></a>使用 Transact-SQL 建立交易式發行集的可更新訂閱
 

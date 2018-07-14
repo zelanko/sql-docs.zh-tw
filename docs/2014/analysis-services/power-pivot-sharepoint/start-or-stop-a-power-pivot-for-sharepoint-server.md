@@ -1,5 +1,5 @@
 ---
-title: 啟動或停止 PowerPivot for SharePoint 伺服器 |Microsoft 文件
+title: 啟動或停止 PowerPivot for SharePoint 伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6039a0181cfce993e0c1970a5db68deb9d3c17c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: df2305d3efa7896d8646be33a5f95ade8c4e7c00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247388"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>啟動或停止 PowerPivot for SharePoint 伺服器
-  PowerPivot 系統服務和[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體上一起運作，相同的本機應用程式伺服器，以支援 SharePoint 伺服陣列中協調的要求和資料處理。  
+  PowerPivot 系統服務和[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]執行個體一起運作，以支援 SharePoint 伺服陣列中的協調的要求和資料處理相同的本機應用程式伺服器上。  
   
  本主題包含下列幾節：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36033779"
   
  您無法同時啟動或停止在伺服陣列的所有實體服務。 您必須選取每部伺服器，然後啟動或停止特定服務。  
   
- 您無法啟動、暫停或停止特定 Web 應用程式的 PowerPivot 系統服務，但是您可以從預設連接清單移除服務，使其無法使用。 如需詳細資訊，請參閱[PowerPivot 服務應用程式連接到 SharePoint Web 應用程式，在 [管理中心]](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
+ 您無法啟動、暫停或停止特定 Web 應用程式的 PowerPivot 系統服務，但是您可以從預設連接清單移除服務，使其無法使用。 如需詳細資訊，請參閱 < [PowerPivot 服務應用程式連接到 SharePoint Web 應用程式，在 [管理中心]](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
 1.  在管理中心的 [系統設定] 中，按一下 [管理伺服器上的服務]。  
   

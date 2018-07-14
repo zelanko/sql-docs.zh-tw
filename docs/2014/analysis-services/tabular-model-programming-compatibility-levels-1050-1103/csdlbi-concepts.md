@@ -1,5 +1,5 @@
 ---
-title: CSDLBI 概念 |Microsoft 文件
+title: CSDLBI 概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,22 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 caps.latest.revision: 28
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 150ebbbf646f8c51a226f25f9b4799463608f823
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf610ad76b4ccc4e30e5f1e4f55c5dcd293a8bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257304"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 概念
   具有 BI 註解的概念結構定義語言 (CSDLBI) 是以實體資料架構為基礎，這是一種用於表示資料摘要，以便用程式設計方式存取、查詢或匯出不同的資料集。 CSDLBI 可用來表示使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料模型，因為它支援豐富的資料驅動報表和應用程式。  
   
  本節將說明 CSDLBI 表示法如何對應 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料模型 (包含表格式與多維度)，以及每個模型類型的範例。  
   
- 用來說明這些概念的範例都取自 AdventureWorks 範例資料庫 (可在 Codeplex 上取得)。 如需這些範例的詳細資訊，請參閱[SQL Server 的 Adventure Works 範例](http://go.microsoft.com/fwlink/?linkID=220093)。  
+ 用來說明這些概念的範例都取自 AdventureWorks 範例資料庫 (可在 Codeplex 上取得)。 如需有關範例的詳細資訊，請參閱 < [SQL Server 的 Adventure Works 範例](http://go.microsoft.com/fwlink/?linkID=220093)。  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>CSDLBI 中表格式模型的結構  
  描述報表模型及其資料的 CSDLBI 文件會以 xsd 陳述式為開頭，後面接著模型的定義。  
@@ -88,11 +88,11 @@ ms.locfileid: "36034237"
  為了限制產生的 CSDLBI 文件大小，在實體中出現一次以上的屬性會由現有屬性的參考指定，因此只需要針對 `EntityType` 列出該屬性一次即可。 用戶端應用程式可以尋找符合 `EntityType` 的 `OriginEntityType`，藉以取得屬性的值。  
   
 ### <a name="relationships"></a>關聯性  
- 在 實體資料架構中，關聯性會定義為*關聯*實體之間。  
+ 在 實體資料架構中，關聯性定義為*關聯*實體之間。  
   
- 關聯永遠只有兩端，每一端都指向資料表中的欄位或資料行。 因此，如果關聯性具有不同的端點，兩個資料表之間就可能會存在多個關聯性。 角色名稱會指派給關聯的端點，表示關聯如何用於資料模型的內容。 角色名稱的範例可能是**ShipTo**，當套用至 Orders 資料表中的客戶識別碼相關的客戶識別碼。  
+ 關聯永遠只有兩端，每一端都指向資料表中的欄位或資料行。 因此，如果關聯性具有不同的端點，兩個資料表之間就可能會存在多個關聯性。 角色名稱會指派給關聯的端點，表示關聯如何用於資料模型的內容。 角色名稱的範例可能是**ShipTo**，當套用至在 Orders 資料表中的客戶識別碼相關的客戶識別碼。  
   
- 模型的 CSDLBI 表示法也包含關聯的屬性，以決定如何將實體對應到彼此的*多重性*關聯。 多重性會指出位於資料表之間關聯性端點的屬性或資料行是位於關聯性的一端，還是多端。 一對一關聯性沒有個別的值。 CSDLBI 註解支援多重性 0 (表示實體並未與任何項目產生關聯) 或 0..1 (表示一對一關聯性或一對多關聯性)。  
+ 模型的 CSDLBI 表示法也包含決定如何將實體對應到彼此的關聯上屬性*多重性*的關聯。 多重性會指出位於資料表之間關聯性端點的屬性或資料行是位於關聯性的一端，還是多端。 一對一關聯性沒有個別的值。 CSDLBI 註解支援多重性 0 (表示實體並未與任何項目產生關聯) 或 0..1 (表示一對一關聯性或一對多關聯性)。  
   
  下列範例表示 Date 與 ProductInventory 資料表之間關聯性的 CSDLBI 輸出，其中這兩個資料表都在 DateAlternateKey 資料行上聯結。 請注意，根據預設，`AssociationSet` 的名稱是關聯性中相關資料行的完整名稱。 不過，當您設計模型時，可以將此行為變更成使用不同的命名格式。  
   
@@ -132,21 +132,21 @@ ms.locfileid: "36034237"
   
  另外，Cube 的表示法非常類似表格式模型資料庫的表示法。 Cube 名稱和 Cube 會對應表格式資料庫名稱和資料庫識別碼。  
   
- **維度：** 維度會以 CSDLBI 表示為實體 （資料表） 的資料行和屬性。 請注意，即使未包含在檢視方塊內，包含在模型中的維度仍將以 CSDL 輸出表示，並標示為 `Hidden`。  
+ **維度：** 維度會以 CSDLBI 表示為實體 （資料表） 資料行和屬性。 請注意，即使未包含在檢視方塊內，包含在模型中的維度仍將以 CSDL 輸出表示，並標示為 `Hidden`。  
   
- **檢視方塊：** 用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱[DISCOVER_CSDL_METADATA 資料列集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
+ **檢視方塊：** 用戶端可以要求個別檢視方塊的 CSDL。 如需詳細資訊，請參閱 < [DISCOVER_CSDL_METADATA 資料列集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
   
- **階層：** 支援階層，並且以 CSDLBI 表示為一組層級。  
+ **階層：** 支援且以 CSDLBI 表示為一組層級的階層。  
   
  **成員：** 的支援已新增的預設成員，預設值會自動加入 CSDLBI 輸出。  
   
- **導出成員：** 多維度模型支援導出的成員的子系**所有**含單一真實成員。  
+ **導出成員：** 多維度模型支援導出的成員之子系**所有**含單一真實成員。  
   
- **維度屬性：** CSDLBI 輸出中，維度屬性都支援，而且會自動標記為非彙總。  
+ **維度屬性：** CSDLBI 輸出中，維度屬性都支援，而且會自動標示為非彙總。  
   
  **Kpi:** CSDLBI 1.1 版中支援 Kpi，但表示法已變更。 KPI 之前是量值的屬性。 在 1.1 版中，KPI 元素可以加入至量值  
   
- **新屬性：** 已加入以支援 DirectQuery 模型的其他屬性。  
+ **新的屬性：** 已加入其他屬性，以支援 DirectQuery 模型。  
   
  **限制：** 不支援資料格安全性。  
   

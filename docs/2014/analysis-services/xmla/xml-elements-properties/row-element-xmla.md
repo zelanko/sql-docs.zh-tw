@@ -1,5 +1,5 @@
 ---
-title: 資料列元素 (XMLA) |Microsoft 文件
+title: row 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: de6460bc6d51c4205752b7db186412e420438145
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223988"
 ---
 # <a name="row-element-xmla"></a>row 元素 (XMLA)
-  包含單一資料列之資料的[根](root-element-xmla.md)包含所傳回的表格式資料的項目[探索](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法呼叫。  
+  包含單一資料列的資料[根](root-element-xmla.md)元素，其中包含所傳回的表格式資料[Discover](../xml-elements-methods-discover.md)或是[Execute](../xml-elements-methods-execute.md)方法呼叫。  
   
 ## <a name="syntax"></a>語法  
   

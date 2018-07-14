@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c99b17d6c3b88f7dacdc99437ece36f0d242166f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 16f66dceaa4ff44658d86319d28a7bf068a2ff64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227160"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>檢查 Employee 資料表的目前結構
-  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫在 **HumanResources** 結構描述中包含一個 **Employee** 資料表。 為避免變更原始資料表，此步驟會製作一個名為 **EmployeeDemo** 的 **Employee**資料表複本。 若要簡化範例，您僅能從原始資料表複製五個資料行。 然後，您查詢**HumanResources.EmployeeDemo**資料表，檢閱如何組織資料的資料表中不使用`hierarchyid`資料型別。  
+  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例資料庫在 **HumanResources** 結構描述中包含一個 **Employee** 資料表。 為避免變更原始資料表，此步驟會製作一個名為 **EmployeeDemo** 的 **Employee**資料表複本。 若要簡化範例，您僅能從原始資料表複製五個資料行。 然後，您可以查詢**HumanResources.EmployeeDemo**資料表，檢閱如何將資料結構化資料表中不使用`hierarchyid`資料型別。  
   
 ### <a name="to-copy-the-employee-table"></a>複製 Employee 資料表  
   

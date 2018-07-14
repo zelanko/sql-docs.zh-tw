@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - states [SQL Server], database mirroring
 - database mirroring [SQL Server], states
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ec5f60fb16e9e4b654045bcb65b8ea6d9c6937e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 32f5a582207ac86cb42696fddff9511bded30b61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252830"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>檢視鏡像資料庫的狀態 (SQL Server Management Studio)
   在資料庫鏡像工作階段中，您可以在 [資料庫屬性] 對話方塊的 [鏡像] 頁面上檢視狀態。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 4537b00b59bec4459f7740e49c93a19da0ab08dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2da5ccaf0fe846a26959970bd9bf3e939b5a2558
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256257"
 ---
 # <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>從圓形圖頂端開始繪製圓形圖值 (報表產生器及 SSRS)
   根據預設，在圓形圖中，資料集的第一個值是從 90 度開始 (從圓形圖頂端算起)。 您可能希望第一個值是從頂端開始繪製。  
@@ -41,6 +41,6 @@ ms.locfileid: "36035149"
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [圓形圖&#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [圓形圖&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

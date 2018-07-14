@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5a341b5aa6ced85e6d96a886cfe5944c4b32f960
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 43e08fb5675fc5b393d5346564a1241288cda055
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256447"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 擴充事件封裝
   封裝是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擴充事件物件的容器。 有三種擴充事件封裝，包括以下項目：  

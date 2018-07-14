@@ -1,5 +1,5 @@
 ---
-title: Azure 功能套件 |Microsoft 文件
+title: Azure Feature Pack |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
@@ -16,13 +16,13 @@ ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43ddc105e442e510b54a70ed22ef27336f1497bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5c2e496c8fb9aebff66d998f742d8604558112e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281734"
 ---
 # <a name="azure-feature-pack"></a>Azure 功能套件
 SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模組，可提供此頁面上所列的元件，以便讓 SSIS 連接到 Azure 服務、在 Azure 和內部部署資料來源之間轉送資料，以及處理儲存在 Azure 中的資料。
@@ -69,15 +69,15 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure 是一個延伸模
     
     -   [Azure Data Lake Store 目的地](../../2014/integration-services/azure-data-lake-store-destination.md)
   
--   Azure Blob 列舉程式和 ADLS 檔案列舉值。 請參閱 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
+-   Azure Blob 列舉值與 ADLS 檔案列舉值。 請參閱 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
   
  
 ## <a name="download-the-feature-pack"></a>下載功能套件  
 下載 SQL Server Integration Services (SSIS) Feature Pack for Azure。  
   
--   [Microsoft SQL Server 2014 Integration Services 功能 Azure 的套件](https://www.microsoft.com/download/details.aspx?id=47366)  
+-   [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
 您必須先安裝下列必要條件，再安裝這個功能套件。  
   
 -   SQL Server Integration Services  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine]
 - ports [SQL Server], connecting to
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f4515b47b9ed009c5b142fb068e57f6b633829a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c778918b89e374881a97555b817ef0de036f0cec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263804"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>使用 TCP IP 建立有效的連接字串
   若要使用 TCP/IP 建立有效的連接字串，您必須：  

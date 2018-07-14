@@ -1,5 +1,5 @@
 ---
-title: 內容元素 (ASSL) |Microsoft 文件
+title: 內容元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98d2de4a0ce93e857a63ebd9fe79dd18d0f9a86e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267474"
 ---
 # <a name="content-element-assl"></a>Content 元素 (ASSL)
-  說明內容中的資料行的[MiningStructure](../objects/miningstructure-element-assl.md)項目。  
+  說明中的資料行的內容[MiningStructure](../objects/miningstructure-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,27 +66,27 @@ ms.locfileid: "36031304"
   
  下表所列的值通常受到所有採礦演算法提供者支援。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|*離散*|此資料行包含離散值。|  
+|*不連續*|此資料行包含離散值。|  
 |*連續*|此資料行的值會定義一組連續的數值資料。|  
 |*離散化*|此資料行的值代表衍生自連續資料行之值的群組 (或值區)。|  
 |*排序*|此資料行的值會定義已排序集合。|  
 |*循環*|此資料行的值會定義循環的已排序集合。|  
-|*機率*|資料行的值指定資料行中包含機率[ClassifiedColumns](../collections/columns-element-assl.md)父元素之`ScalarMiningStructureColumn`。|  
+|*機率*|資料行的值指定資料行中包含機率[ClassifiedColumns](../collections/columns-element-assl.md)項目之父代`ScalarMiningStructureColumn`。|  
 |*Variance*|此資料行的值會針對包含在父 `ClassifiedColumns` 之 `ScalarMiningStructureColumn` 元素中的資料行指定變異數。|  
-|*標準差*|此資料行的值會針對包含在父 `ClassifiedColumns` 之 `ScalarMiningStructureColumn` 元素中的資料行指定標準差。|  
+|*StdDev*|此資料行的值會針對包含在父 `ClassifiedColumns` 之 `ScalarMiningStructureColumn` 元素中的資料行指定標準差。|  
 |*ProbabilityVariance*|此資料行的值會針對包含在父 `ClassifiedColumns` 之 `ScalarMiningStructureColumn` 元素中的資料行指定機率變異數。|  
 |*ProbabilityStdDev*|此資料行的值會針對包含在父 `ClassifiedColumns` 之 `ScalarMiningStructureColumn` 元素中的資料行指定機率標準差。|  
-|*支援*|此資料行的值會針對包含在父 `ClassifiedColumns` 之 `ScalarMiningStructureColumn` 元素中的資料行指定支援資訊。 **注意：** 這個資料行提供標準的一部分為協力廠商採礦演算法提供者。 **注意：** Microsoft 提供的演算法沒有任何使用此資料行。 <br /><br /> 執行個體時提供 SQL Server 登入。|  
-|*索引鍵*|此資料行為索引鍵資料行。 **注意：** 此內容類型是僅適用於索引鍵資料行，其中`IsKey`元素設定為`True`。|  
+|*支援*|此資料行的值會針對包含在父 `ClassifiedColumns` 之 `ScalarMiningStructureColumn` 元素中的資料行指定支援資訊。 **注意：** 本專欄的協力廠商採礦演算法提供者時，可作為標準的一部分。 **注意：** Microsoft 提供的演算法並沒有任何使用此資料行。 <br /><br /> 執行個體時提供 SQL Server 登入。|  
+|*索引鍵*|此資料行為索引鍵資料行。 **注意︰** 這個內容類型是僅適用於索引鍵資料行，其中`IsKey`元素設定為`True`。|  
   
- 除了這些標準值時，採礦演算法提供者隨附[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下表中的值。  
+ 除了這些標準值，採礦演算法提供者隨附[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]支援下表中的值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|*索引鍵的順序*|此資料行為索引鍵資料行，而且資料行的值代表事件序列。 **注意：** 此內容類型是僅適用於索引鍵資料行，其中`IsKey`元素設定為`True`。|  
-|*Key Time*|此資料行為索引鍵資料行，而且資料行的值代表時間測量單位。 **注意：** 此內容類型是僅適用於索引鍵資料行，其中`IsKey`元素設定為`True`。|  
+|*索引鍵的順序*|此資料行為索引鍵資料行，而且資料行的值代表事件序列。 **注意︰** 這個內容類型是僅適用於索引鍵資料行，其中`IsKey`元素設定為`True`。|  
+|*Key Time*|此資料行為索引鍵資料行，而且資料行的值代表時間測量單位。 **注意︰** 這個內容類型是僅適用於索引鍵資料行，其中`IsKey`元素設定為`True`。|  
 |*序列*|此資料行的值代表事件序列。|  
 |*Time*|此資料行的值代表時間測量單位。|  
   

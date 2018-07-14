@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookuptrans.f1
 helpviewer_keywords:
@@ -23,13 +23,13 @@ ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 546acdba2996b4264e946b052af18cf6574868a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b98ce551e69f64a515f58d2b4a0588dabc742ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225828"
 ---
 # <a name="term-lookup-transformation"></a>詞彙查閱轉換
   「詞彙查閱」轉換會比對從轉換輸入資料行的文字中擷取的詞彙，以及參考資料表中的詞彙。 然後，它會計算查閱資料表中的詞彙在輸入資料集中出現的次數，並將計數與參考資料表的詞彙一起寫入轉換輸出中的資料行。 此轉換包括單字頻率統計資料，對基於輸入文字建立自訂單字清單很有用處。  
@@ -60,7 +60,7 @@ ms.locfileid: "36032592"
   
  當查閱項目在參考集中包含重疊的詞彙 (即，在一個以上參考記錄中找到子詞彙) 時，「詞彙查閱」轉換只會傳回一個查閱結果。 下列範例顯示查閱項目包含重疊子詞彙時的結果。 此處的重疊子詞彙為 *Windows*，其在兩個參考詞彙中均有找到。 但轉換不會傳回兩個結果，而只會傳回單一參考詞彙 *Windows*。 第二個參考詞彙 *Windows 7 Professional*不會傳回。  
   
-|項目|ReplTest1|  
+|項目|值|  
 |----------|-----------|  
 |輸入詞彙|Windows 7 Professional|  
 |參考詞彙|Windows、Windows 7 Professional|  
@@ -82,7 +82,7 @@ ms.locfileid: "36032592"
   
  InputColumnType 屬性設為 0 或 2 的轉換輸出資料行包含資料行的 CustomLineageID 屬性，其包含上游資料流程元件指派給該資料行的歷程識別碼。  
   
- 詞彙查閱 」 轉換會將兩個資料行加入至轉換輸出，預設名稱為`Term`和`Frequency`。 `Term` 包含了查閱資料表中的詞彙，而 `Frequency` 包含了參考資料表中的詞彙發生在輸入資料集內的次數。 這些資料行不包含 CustomLineageID 屬性。  
+ 「 詞彙查閱 」 轉換會將兩個資料行加入至轉換輸出，預設名稱為`Term`和`Frequency`。 `Term` 包含了查閱資料表中的詞彙，而 `Frequency` 包含了參考資料表中的詞彙發生在輸入資料集內的次數。 這些資料行不包含 CustomLineageID 屬性。  
   
  查閱資料表必須是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 Access 資料庫中的資料表。 如果將「詞彙擷取」轉換的輸出儲存為資料表，不僅可將此資料表用為參考資料表，也可以使用其他資料表。 在您可以使用「詞彙查閱」轉換之前，一般檔案、Excel 活頁簿或其他來源中的文字必須匯入至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫或 Access 資料庫。  
   

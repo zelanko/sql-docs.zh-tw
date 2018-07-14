@@ -1,5 +1,5 @@
 ---
-title: 相依性網路圖表逐步解說 （資料採礦增益集） |Microsoft 文件
+title: 相依性網路圖表逐步解說 （資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
 - shapes, data mining
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 855c66124c5084e58432f605d38a4cbb53832c74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3efc5633a31af6d26fa7ae4abc5ce5b97f8542b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218458"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>相依性網路圖表逐步解說 (資料採礦增益集)
-  許多不同類型的資料採礦模型都會使用網路圖形做為探索資料關聯性的方式。 您可以匯入這些模型使用 Visio**相依性網路**圖形，然後繼續自訂並增強配置。 **適用於 Visio 的資料採礦圖形**包含使用相依性網路圖表的下列自訂控制項：  
+  許多不同類型的資料採礦模型都會使用網路圖形做為探索資料關聯性的方式。 您可以匯入這些模型使用 Visio**相依性網路**圖形，然後繼續自訂並增強配置。 **適用於 Visio 的資料採礦圖形**包含下列自訂控制項，用於處理相依性網路圖表：  
   
 -   網路圖形的轉譯控制項  
   
@@ -45,19 +45,19 @@ ms.locfileid: "36036702"
   
 #### <a name="use-the-dependency-net-visio-shape-wizard"></a>使用相依性網路 Visio 圖形精靈  
   
-1.  如果您沒有看到**Microsoft 資料採礦圖形**中**圖形**清單中，按一下**更圖形**，選取**開啟樣板**，並開啟從預設安裝位置的範本。  
+1.  如果您看不見**Microsoft 資料採礦圖形**中**圖形**清單中，按一下**其他圖形**，選取**開啟樣板**，並開啟從預設安裝位置的範本。  
   
-     \<磁碟機 >: \Program files (x85) \Microsoft SQL Server 2012 DM Add-ins  
+     \<磁碟機 >: \Program 檔案 (x85) \Microsoft SQL Server 2012 DM Add-ins  
   
-2.  拖曳**相依性網路**圖形放入來啟動精靈頁面。 按 [下一步] 。  
+2.  拖曳**相依性網路**圖形放入以啟動精靈頁面。 按 [下一步] 。  
   
-3.  在 歡迎使用 頁面上的**相依性網路 Visio 圖形精靈**，按一下 **下一步**。  
+3.  在 歡迎使用 頁面上**相依性網路 Visio 圖形精靈**，按一下**下一步**。  
   
-4.  在**選取資料來源**頁面**相依性網路 Visio 圖形精靈**，選擇要連接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要視覺化具有模型的伺服器。  
+4.  上**Zdroj Dat**頁面**相依性網路 Visio 圖形精靈**，選擇要連接[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]您想要視覺化具有模型的伺服器。  
   
 5.  選取適當的採礦模型，然後按一下**下一步**。  
   
-     若要選取適當模型，您可以檢閱名稱、 描述、 資料行，與中的資料類型**屬性**窗格。  
+     若要選取適當模型，您可以檢閱的名稱、 描述、 資料行和中的資料類型**屬性**窗格。  
   
      此圖形支援使用下列演算法所建立的模型：  
   
@@ -69,11 +69,11 @@ ms.locfileid: "36036702"
   
 6.  在頁面上，**選取要轉譯的節點**、 自訂圖形的大小，以及選擇性地篩選為僅包含特定節點。  
   
-     大型資料集，與相依性圖形變得很大，並包含許多相關的物件，表示為*節點*。 您可以使用此對話方塊來建立僅包含感興趣節點的自訂網路圖形。  
+     使用大型資料集，相依性圖形可以變得很大，且包含許多相關的物件，表示為*節點*。 您可以使用此對話方塊來建立僅包含感興趣節點的自訂網路圖形。  
   
      [圖案預留位置]  
   
-     **要提取的節點數目**  
+     **要擷取的節點數目**  
      如果模型包含的節點少於指定的節點數目，這個設定沒有作用。 如果模型包含的節點超過指定的數目，則只會顯示關聯性最強的節點。  
   
      **名稱包含**  
@@ -83,9 +83,9 @@ ms.locfileid: "36036702"
   
      您可以使用範例資料建立的大部分模型都不會太大，因此在此範例中，請將節點的數目提高至 10，然後按一下綠色箭頭以執行查詢並取得所有節點的清單。  
   
-7.  按一下**進階**設定圖形的陰影和圖案選項。  
+7.  按一下 **進階**設定圖形的陰影和圖案選項。  
   
-8.  按一下**關閉**結束**進階**選項 對話方塊，然後按一下**完成**建立圖形。  
+8.  按一下 [**關閉**以結束**進階**選項] 對話方塊，然後按一下**完成**建立圖形。  
   
 ## <a name="explore-and-modify-the-finished-diagram"></a>探索和修改完成的圖表  
  在 Visio 建立相依性網路圖形之後，您就可以繼續使用 Visio 中的功能來修改並增強圖形。  
@@ -94,11 +94,11 @@ ms.locfileid: "36036702"
   
  [圖案預留位置]  
   
-1.  使用**取景位置調整及縮放**控制，請在**工作窗格**區域 Visio**檢視**功能區中，焦點放在圖表的區段，並在圖表中四處移動。  
+1.  使用**取景位置調整及縮放**控制項，在**工作窗格**區域中的 Visio**檢視**功能區中，以專注於一段圖形和圖表中四處移動。  
   
-2.  試驗 Visio 所提供的不同圖形配置**重新配置頁面**選項。  
+2.  試驗 Visio 所提供的不同圖形配置**重新進行版面配置頁面**選項。  
   
-3.  按一下**增益集**功能區，然後顯示用於處理資料採礦圖表的自訂工具列的其中一個：  
+3.  按一下 **增益集**功能區，然後將其中一個用於處理資料採礦圖表的自訂工具列顯示：  
   
      **版面配置**  
      最佳化頁面上的節點配置及變更檢視，以便顯示所有節點。  
@@ -116,8 +116,8 @@ ms.locfileid: "36036702"
   
      若要增加圖形中的節點數目，請將滑動軸向下移。  
   
-     **加入項目**  
-     開啟**選取要轉譯的節點**對話方塊，讓您可以選取要加入到圖表的新節點。  
+     **新增項目**  
+     會開啟**選取要轉譯的節點**對話方塊，讓您可以選取新的節點加入圖形。  
   
 4.  您可以視需要將圖形變得簡單或詳細，並且加入註解，同時維持模型的連接。  
   

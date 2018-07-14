@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce4d9ab308f67a2f9629b4b6142ad3145ddbcf2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: eb9fb3e45cbe3adda1c3800a7b74b54c97d9c42c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271354"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>重新排序資料行 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您可以在載入之前篩選清單，藉以重新排序資料行。  
   
  當您重新排序 **[篩選]** 對話方塊中的屬性時，會使用新的順序，將資料載入至 Excel。 不過，下次您篩選屬性資料時，此順序將會回復到原始設計的順序。 若要永久變更順序，管理員應該在主資料管理員的 **[系統管理]** 區域中變更順序。 如需相關資訊，請參閱 [Change the Order of Attributes](../change-the-order-of-attributes.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  

@@ -1,5 +1,5 @@
 ---
-title: TrendGraphic 元素 (ASSL) |Microsoft 文件
+title: TrendGraphic 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TrendGraphic element
 ms.assetid: 7448fd80-3072-4d85-b3a0-6606d1d20885
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d4030a0936eee85fd32cfc87a4d5b441ef63b74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c42a75f2dcb09b88008ea2776d215153ec7c557b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228158"
 ---
 # <a name="trendgraphic-element-assl"></a>TrendGraphic 元素 (ASSL)
-  包含之趨勢的建議圖形表示[Kpi](../objects/kpi-element-assl.md)項目。  
+  包含的趨勢的建議圖形表示法[Kpi](../objects/kpi-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,14 +64,14 @@ ms.locfileid: "36035756"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*標準箭頭*|標準箭頭|  
 |*狀態箭頭-遞增*|狀態箭頭|  
 |*狀態箭頭-遞減*|反向狀態箭頭|  
 |*笑臉*|臉|  
   
- 對應目的父代的項目`TrendGraphic`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Kpi>。  
+ 對應至父系的元素`TrendGraphic`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Kpi>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

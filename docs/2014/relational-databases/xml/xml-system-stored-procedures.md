@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system stored procedures [SQL Server], XML
 - sp_xml_removedocument
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML [SQL Server], system stored procedures
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6baa451df5a2e341b20130d163607d6bdcc5e924
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7673efc55f780f0ebd99da740c54ea4787b40260
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215188"
 ---
 # <a name="xml-system-stored-procedures"></a>XML 系統預存程序
   SQL Server 提供以下系統預存程序，可與 OPENXML 一起使用：  

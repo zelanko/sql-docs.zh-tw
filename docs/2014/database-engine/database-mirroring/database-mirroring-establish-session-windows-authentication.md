@@ -1,28 +1,27 @@
 ---
-title: 建立資料庫鏡像工作階段使用 Windows 驗證 (TRANSACT-SQL) |Microsoft 文件
+title: 建立資料庫鏡像工作階段使用 Windows 驗證 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 caps.latest.revision: 74
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07452bdf27bec54e927d43416e35b9ec3451200d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 65d308cbc742aaa7fe6413d291f5ebd93b1f3f84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216038"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>使用 Windows 驗證建立資料庫鏡像工作階段 (Transact-SQL)
     
@@ -35,7 +34,7 @@ ms.locfileid: "36035961"
 >  我們建議您將資料庫鏡像作業排定在離峰時間執行，因為設定鏡像會影響效能。  
   
 > [!NOTE]  
->  給定的伺服器執行個體可參與具有相同或不同夥伴的多個並行資料庫鏡像工作階段。 伺服器執行個體可以在某些工作階段中是夥伴，在其他工作階段中是見證。 鏡像伺服器執行個體必須執行與主體伺服器執行個體相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 此外，我們強烈建議您在可比較而且可以處理相同工作負載的系統上執行這些伺服器執行個體。  
+>  給定的伺服器執行個體可參與具有相同或不同夥伴的多個並行資料庫鏡像工作階段。 伺服器執行個體可以在某些工作階段中是夥伴，在其他工作階段中是見證。 鏡像伺服器執行個體必須執行與主體伺服器執行個體相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 並非所有 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 此外，我們強烈建議您在可比較而且可以處理相同工作負載的系統上執行這些伺服器執行個體。  
   
 ### <a name="to-establish-a-database-mirroring-session"></a>建立資料庫鏡像工作階段  
   
@@ -46,7 +45,7 @@ ms.locfileid: "36035961"
      資料庫鏡像工作階段中的每個伺服器執行個體都需要一個資料庫鏡像端點。 如果端點不存在，您就必須自行建立。  
   
     > [!NOTE]  
-    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 資料庫鏡像可用的兩種傳輸安全性類型為：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱[資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
+    >  伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 資料庫鏡像可用的兩種傳輸安全性類型為：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性，資料庫鏡像和 AlwaysOn 可用性群組&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。</c0>  
   
      確定在每個夥伴伺服器上，資料庫鏡像都有端點可供使用。 不論要支援的鏡像工作階段數有多少，伺服器執行個體只能有一個資料庫鏡像端點。 若要讓資料庫鏡像工作階段的夥伴獨佔使用此伺服器執行個體，您可以將夥伴的角色指派給端點 (ROLE**=** PARTNER)。 如果您也想讓其他資料庫鏡像工作階段的見證使用此伺服器，請將端點的角色指派為 ALL。  
   

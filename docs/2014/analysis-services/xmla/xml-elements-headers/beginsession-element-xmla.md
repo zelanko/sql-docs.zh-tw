@@ -1,5 +1,5 @@
 ---
-title: BeginSession 元素 (XMLA) |Microsoft 文件
+title: BeginSession 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - BeginSession element
 ms.assetid: 49873a97-58d7-42a9-ab7f-e045e2856737
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2982709512433e5a6b87929f3a4efba4f77138b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cf272ae8221b66f7ac8390fab900d22d6b8aaf87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034848"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285824"
 ---
 # <a name="beginsession-element-xmla"></a>BeginSession 元素 (XMLA)
-  用於 SOAP 標頭在 SOAP 要求訊息中的執行個體上啟動新的工作階段[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  在 SOAP 要求訊息中使用 SOAP 標頭，以啟動新的工作階段的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
- **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
+ **命名空間**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-分析  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,12 +74,12 @@ ms.locfileid: "36034848"
 ## <a name="remarks"></a>備註  
  `BeginSession` 標頭元素屬於傳送給 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體之 SOAP 要求的一部分，而且它會在該執行個體上明確啟動新的工作階段。 SOAP 回應所傳回的 SOAP 標頭包含[工作階段](session-element-xmla.md)項目會識別新的工作階段。 這個新工作階段識別碼將使用 `Session` 標頭元素在後續的 SOAP 要求中儲存並傳送。  
   
- 如果沒有傳送 `BeginSession` 標頭元素，就不會明確啟動工作階段。 如果沒有明確啟動工作階段，就無法管理該工作階段上的交易。 換句話說，您無法使用下列 XML for Analysis (XMLA) 命令： [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md)， [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md)，和[RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md)。 所有在明確啟動之執行個體上執行的 XMLA 方法和命令都會被視為不可部分完成的交易。  
+ 如果沒有傳送 `BeginSession` 標頭元素，就不會明確啟動工作階段。 如果沒有明確啟動工作階段，就無法管理該工作階段上的交易。 換句話說，您無法使用下列 XML for Analysis (XMLA) 命令： [BeginTransaction](../xml-elements-commands/begintransaction-element-xmla.md)， [CommitTransaction](../xml-elements-commands/committransaction-element-xmla.md)，並[RollbackTransaction](../xml-elements-commands/rollbacktransaction-element-xmla.md)。 所有在明確啟動之執行個體上執行的 XMLA 方法和命令都會被視為不可部分完成的交易。  
   
 ## <a name="see-also"></a>另請參閱  
  [EndSession 元素&#40;XMLA&#41;](endsession-element-xmla.md)   
  [工作階段項目&#40;XMLA&#41;](session-element-xmla.md)   
- [管理連接與工作階段&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [管理連接和工作階段&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [標頭&#40;XMLA&#41;](xml-elements-headers.md)  
   
   

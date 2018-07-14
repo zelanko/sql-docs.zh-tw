@@ -1,5 +1,5 @@
 ---
-title: OptimizedState 元素 (ASSL) |Microsoft 文件
+title: OptimizedState 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - OptimizedState element
 ms.assetid: 120dcc4c-8fe8-4471-bbd6-99ad534364f0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 665d84185ceab6b907a7acdd3bfc9f600baaaf89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 932ef541a0e9613ad46a032be5c218eccd5276ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224068"
 ---
 # <a name="optimizedstate-element-assl"></a>OptimizedState 元素 (ASSL)
   決定套用至階層的最佳化層級。  
@@ -64,7 +64,7 @@ ms.locfileid: "36036882"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*FullyOptimized*|執行個體會建立階層的索引，以增進查詢效能。|  
 |*NotOptimized*|執行個體不會建立其他索引。|  

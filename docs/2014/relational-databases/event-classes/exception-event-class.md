@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Exception event class
 ms.assetid: 5a45dfa7-51fc-420c-96f6-ce2a1f61b684
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a4c60fcbc636e704ff24c42664a09edd3a4218cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 900ec1d791adcef7a35f4d454e986b5c43efbabc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248638"
 ---
 # <a name="exception-event-class"></a>Exception 事件類別
   Exception 事件類別是指 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中發生了例外狀況。  
@@ -53,7 +53,7 @@ ms.locfileid: "36031885"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
 |State|`int`|伺服器狀態。|30|是|  
-|TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

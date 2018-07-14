@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.matchingproject.matching.f1
 - sql12.dqs.matchingproject.export.f1
@@ -17,20 +17,20 @@ ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7ed4cddfce4d32e160386bb0cfd6a8236049cc6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79bba6ab7f6823d27dd396413d45aedf788a3d72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032402"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263274"
 ---
 # <a name="run-a-matching-project"></a>執行比對專案
   此主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中執行資料比對。 比對程序會根據比對原則中的比對規則來識別比對記錄叢集、根據存活規則將每一個叢集中的一筆記錄指定為存活者，然後匯出結果。 DQS 會在電腦輔助的程序中執行比對程序 (也稱為刪除重複作業)，但是您可以互動方式建立比對規則，而且您會從數個選擇中選取存活規則，好讓您控制比對程序。  
   
  比對作業會在三個階段執行：識別資料來源並將定義域對應至資料來源的對應程序、執行比對分析的比對程序，以及指定存活規則並匯出比對結果的生存與匯出程序。 以上每一個程序都是在比對活動精靈的個別頁面中執行，好讓您來回移到不同的頁面、重新執行此程序，並退出特定比對程序，然後返回該程序的相同階段。 DQS 會提供有關來源資料、比對規則和比對結果的統計資料，好讓您做出有關比對的明智決定，並精簡比對程序。  
   
- 您必須做好比對的準備，方法是建立包含一個或多個比對規則的比對原則，並針對取樣資料執行此原則。 比對專案程序與比對原則程序不同，而且不會使用取自比對專案的相符知識來擴展知識庫。 如需有關建立比對原則的詳細資訊，請參閱[Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)。  
+ 您必須做好比對的準備，方法是建立包含一個或多個比對規則的比對原則，並針對取樣資料執行此原則。 比對專案程序與比對原則程序不同，而且不會使用取自比對專案的相符知識來擴展知識庫。 如需建立比對原則的詳細資訊，請參閱 < [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md)。  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   

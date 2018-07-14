@@ -1,5 +1,5 @@
 ---
-title: 尋找資料表對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 尋找資料表對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.findtabledialog.f1
 helpviewer_keywords:
 - Find Table dialog box
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e3386756ade73e6e04391debdae8415b9b00c75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 489f85e874c6cb8ba2c9d9ca457626e52db89cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243668"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>尋找資料表對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [尋找資料表] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可尋找與維度、Cube 或採礦結構相關聯之資料來源檢視中的資料表。 您可以藉由下列方式在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中顯示此對話方塊：  
@@ -46,7 +46,7 @@ ms.locfileid: "36032181"
  鍵入篩選以限制列出的物件，然後按一下按鈕來篩選 [從資料來源檢視中選取資料表] 列出的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [組件屬性對話方塊&#40;Analysis Services-多維度資料&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
+ [組件 [屬性] 對話方塊&#40;Analysis Services-多維度資料&#41;](assembly-properties-dialog-box-analysis-services-multidimensional-data.md)   
  [資料來源檢視&#40;維度結構索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [資料來源檢視&#40;Cube 結構索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  
   

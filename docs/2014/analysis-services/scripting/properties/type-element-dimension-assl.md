@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (Dimension) (ASSL) |Microsoft 文件
+title: 輸入元素 (Dimension) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 582d5b2052f2681630c5f0cd86facacd5e7cfc91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6afa3b273200630a4d36e0c4df679c58efb6bd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283944"
 ---
 # <a name="type-element-dimension-assl"></a>Type 元素 (Dimension) (ASSL)
   提供有關維度內容的資訊。  
@@ -62,11 +62,11 @@ ms.locfileid: "36033102"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 某些值`Type`，例如*帳戶*，判斷特定行為。  
+ 某些值`Type`，例如*帳戶*，決定特定行為。  
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*規則*|此維度是一般維度。|  
 |*Time*|此維度是時間維度。 **注意：** 這個值表示此維度支援時間維度特有的功能。|  
@@ -80,13 +80,13 @@ ms.locfileid: "36033102"
 |*量化*|此維度包含數量的屬性。|  
 |*公用程式*|此維度包含公用程式屬性。|  
 |*貨幣*|此維度包含貨幣屬性。|  
-|*速率*|此維度包含匯率屬性。|  
+|*費率*|此維度包含匯率屬性。|  
 |*通路*|此維度包含通道屬性。|  
 |*升級*|此維度包含促銷相關的屬性。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `Type` 允許值的列舉是 <xref:Microsoft.AnalysisServices.DimensionType>。  
   
- 對應目的父代的項目`Type`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Dimension>。  
+ 對應至父系的元素`Type`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

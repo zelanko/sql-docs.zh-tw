@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10440"
 - "10426"
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 64398eaa537e6413f5a55bedb0aa683143047aac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 435709e17b917c1b741e1bc619bb1dca106dbd4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244378"
 ---
 # <a name="report-design-view-report-builder"></a>報表設計檢視 (報表產生器)
   [報表產生器] 視窗的設計目的是要協助您輕鬆地組織報表資源和快速地建立所需的報表。 其設計介面位於視窗的中央、[功能區] 位於上方，而 [報表資料]、[群組] 和 [屬性] 窗格以及 [報表組件庫] 分別位於左側、下方和右側。 設計介面是您可以加入和組織報表項目的位置。 [功能區] 會將傳統的功能表項目組織成可讓您輕鬆地找到並使用的類別目錄。 這些窗格會協助您加入、選取並組織報表資源，以及變更報表項目屬性。  
@@ -42,15 +42,15 @@ ms.locfileid: "36032721"
   
  在報表設計檢視中，[功能區] 會分成下列索引標籤：[首頁]、[插入] 和 [檢視]。 如果您在 [功能區] 上找不到工作，某些 [功能區] 群組具有相關的對話方塊，而且您可以按一下群組右下角的箭號來開啟對話方塊。 不過，您無法最小化或刪除 [功能區]，或將它取代成工具列和功能表。  
   
- 在執行模式中，功能區有只有一個索引標籤，**執行**。  
+ 在執行模式中，功能區都有一個索引標籤上，**執行**。  
   
 ### <a name="home-tab"></a>首頁索引標籤  
- [首頁] 索引標籤是著重於報表內部之項目外觀的常用命令集合。 在 [首頁] 索引標籤中，您可以存取 [執行]、[字型]、[段落]、[框線]、[數值] 和 [配置] 命令。 當您按一下索引標籤上的項目時，設計介面上的選取項目就會變更。 當您按一下**執行**，讓您能夠查看發行時，會顯示報表的內容的方式，報表會以 HTML 轉譯，您會看到 [執行] 索引標籤，而非 [首頁] 索引標籤。[首頁] 索引標籤是您第一次建立報表時顯示的預設索引標籤。  
+ [首頁] 索引標籤是著重於報表內部之項目外觀的常用命令集合。 在 [首頁] 索引標籤中，您可以存取 [執行]、[字型]、[段落]、[框線]、[數值] 和 [配置] 命令。 當您按一下索引標籤上的項目時，設計介面上的選取項目就會變更。 當您按一下 **執行**，讓您可以查看發佈時，如何顯示報表的內容以 HTML 轉譯報表，您會看到 執行 索引標籤，而不是 首頁 索引標籤。首頁 索引標籤是您第一次建立報表時顯示的預設索引標籤。  
   
 ### <a name="insert-tab"></a>插入索引標籤  
  [插入] 索引標籤是將報表項目加入至報表的常用命令集合。 在 [插入] 索引標籤中，您可以使用精靈來加入資料表、矩陣、圖表或地圖。 您也可以在不使用精靈的情況下加入這些項目，以及加入其他報表項目，例如走勢圖、指標、文字方塊、影像、矩形、子報表和報表頁首與頁尾。  
   
- 按一下**報表組件**上 [插入] 索引標籤會開啟報表組件庫。 您可以搜尋儲存至報表伺服器的報表組件。 如需詳細資訊，請參閱 [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)。  
+ 按一下 **報表組件**上 插入 索引標籤隨即開啟 報表組件庫。 您可以搜尋儲存至報表伺服器的報表組件。 如需詳細資訊，請參閱 [報表組件 &#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)。  
   
  在您插入項目之後，報表產生器就會自動切換回 [首頁] 索引標籤。  
   
@@ -58,11 +58,11 @@ ms.locfileid: "36032721"
  [檢視] 索引標籤是控制 [報表產生器] 視窗內部顯示項目的命令集合。 您可以針對尺規以及 [群組]、[報表資料] 和 [屬性] 窗格變更顯示選項。  
   
 ### <a name="run-tab"></a>執行索引標籤  
- 當您按一下**執行**首頁索引標籤上，您必須執行的報表預覽 HTML 檢視器中，您會看到 [執行] 索引標籤，而非 [首頁] 索引標籤。  
+ 當您按一下 **執行**首頁 索引標籤中，您必須執行的報表預覽 HTML 檢視器中，您看到 執行 索引標籤，而不是 首頁 索引標籤。  
   
- [執行] 索引標籤包含轉譯報表之後可用的命令集合。 您可以列印報表、逐一導覽報表頁面、將報表匯出成其他檔案格式、檢視文件引導模式或參數 (若報表具有這些項目)，以及找出報表中的項目。 如需詳細資訊，請參閱[預覽報表在執行模式中](#RunMode)。  
+ [執行] 索引標籤包含轉譯報表之後可用的命令集合。 您可以列印報表、逐一導覽報表頁面、將報表匯出成其他檔案格式、檢視文件引導模式或參數 (若報表具有這些項目)，以及找出報表中的項目。 如需詳細資訊，請參閱 <<c0> [ 預覽報表在執行模式中](#RunMode)。  
   
- 若要回到報表設計檢視中，在**執行**索引標籤上，按一下 **設計**。  
+ 若要回到報表設計檢視中，於**執行**索引標籤上，按一下**設計**。  
   
   
 ##  <a name="RptDesignSurface"></a> 報表設計介面  
@@ -104,11 +104,11 @@ ms.locfileid: "36032721"
   
  如需有關 [報表資料] 窗格中項目的詳細資訊，請參閱下列主題：  
   
--   [內建的 Globals and Users References&#40;報表產生器和 SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+-   [Built-in Globals and Users References&#40;報表產生器及 SSRS&#41;](../report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
 -   [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [映像&#40;報表產生器和 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
+-   [映像&#40;報表產生器及 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)  
   
 -   [報表產生器中的資料連接、資料來源及連接字串](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   

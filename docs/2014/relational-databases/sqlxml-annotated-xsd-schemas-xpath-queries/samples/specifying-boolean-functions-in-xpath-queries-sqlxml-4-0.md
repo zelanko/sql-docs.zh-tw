@@ -1,5 +1,5 @@
 ---
-title: XPath 查詢 (SQLXML 4.0) 中指定布林函數 |Microsoft 文件
+title: 在 XPath 查詢 (SQLXML 4.0) 中指定布林函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06b35c5a8e2e7e6e03c0fd943572b25b30bf017e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 86a05a23577eefa1231a4a5f4bdf8447e4f6b285
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232998"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定布林函數 (SQLXML 4.0)
-  下列範例顯示如何在 XPath 查詢中指定布林函數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述的 XPath 範例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  下列範例顯示如何在 XPath 查詢中指定布林函數。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述 XPath 範例的&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. 指定 not() 布林函數  
- 此查詢會傳回所有**\<客戶 >** 內容節點的子項目沒有**\<順序 >** 子項目：  
+ 此查詢會傳回所有**\<客戶 >** 的內容節點的子項目沒有**\<順序 >** 子項目：  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -48,7 +48,7 @@ ms.locfileid: "36033896"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (BooleanFunctionsA.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36033896"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的部分結果集：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36033896"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. 指定 true() 和 false() 布林函數  
- 此查詢會傳回所有**\<客戶 >** 元素子系內容節點沒有**\<順序 >** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
+ 此查詢會傳回所有**\<客戶 >** 項目子系內容節點沒有**\<順序 >** 子項目。 在關聯式詞彙中，此查詢會傳回尚未下任何訂單的所有客戶。  
   
 ```  
 /child::Customer[child::Order=false()]  
@@ -114,7 +114,7 @@ ms.locfileid: "36033896"
   
 #### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (BooleanFunctionsB.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36033896"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的部分結果集：  
   

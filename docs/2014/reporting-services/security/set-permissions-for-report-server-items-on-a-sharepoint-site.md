@@ -1,5 +1,5 @@
 ---
-title: 設定報表伺服器項目的權限在 SharePoint 網站 (SharePoint 整合模式的 Reporting Services) |Microsoft 文件
+title: 設定報表伺服器項目的權限在 SharePoint 網站 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -16,13 +16,13 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6d66fc292fe1af7f20e55eee6b8d1fdf9e6151a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a0f1e98fc1837acbf995a2a68376cd4dd8bd02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033182"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282604"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>設定 SharePoint 網站上報表伺服器項目的權限 (SharePoint 整合模式的 Reporting Services)
   如果預設安全性設定無法提供所需的存取層級，您可以建立新的權限等級，以便提供特定報表伺服器項目或作業的存取權。 如果您想要限制特定報表的存取權，自訂安全性設定就很有用。  
@@ -78,7 +78,7 @@ ms.locfileid: "36033182"
 ## <a name="see-also"></a>另請參閱  
  [在報表伺服器項目的 Windows SharePoint Services 中使用內建安全性](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [設定 SharePoint Web 應用程式中報表伺服器作業的權限](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Reporting Services to SharePoint Groups and Permissions 中比較角色和工作](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [比較 Reporting Services 與 SharePoint 群組和權限中的 角色和工作](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint 網站和清單權限參考報表伺服器項目](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [授與 SharePoint 網站上報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

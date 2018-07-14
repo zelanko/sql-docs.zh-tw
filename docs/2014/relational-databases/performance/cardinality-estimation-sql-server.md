@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - cardinality estimator
 - CE (cardinality estimator)
 - estimating cardinality
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 caps.latest.revision: 8
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 5a81849f65e5b71acf233febb61e7725ec1e804e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 81f9d8c849622a622631bc8153dc7d4cffc7d258
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251880"
 ---
 # <a name="cardinality-estimation-sql-server"></a>基數估計 (SQL Server)
   基數估計邏輯，稱為基數估計工具經過重新設計中[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]來改善查詢計畫品質，因此若要改善查詢效能。 新的基數估計工具併入了可搭配新型 OLTP 和資料倉儲工作負載完善運作的假設和演算法。 這項發展乃是憑藉著我們針對新型工作負載進行深入的基數估計研究，以及過去 15 年來改進 SQL Server 基數估計工具的經驗。 由客戶的意見反應得知，儘管無論變更與否都能讓大多數的查詢獲益，但與舊版基數估計工具相比，少數的查詢可能會顯現效能退化。  
@@ -40,9 +40,9 @@ ms.locfileid: "36031843"
   
 2.  搭配新的基數估計工具執行您的測試工作負載，然後依照您目前疑難排解效能問題的相同方式，疑難排解任何新的效能問題。  
   
-3.  一旦您的工作負載以執行新的基數估計工具 （資料庫相容性層級 120 (SQL Server 2014)），而特定查詢具有迴歸，您可以使用追蹤旗標 9481 使用中使用的基數估計工具版本來執行查詢[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更早版本。 若要使用追蹤旗標執行查詢，請參閱知識庫文件＜ [啟用會影響計劃而可在特定的查詢層級透過不同的追蹤旗標加以控制的 SQL Server 查詢最佳化工具行為](http://support.microsoft.com/kb/2801413)＞(機器翻譯)。  
+3.  一旦您的工作負載正在使用新的基數估計工具 （資料庫相容性層級 120 (SQL Server 2014)），並有特定的查詢已迴歸，您可以執行查詢追蹤旗標 9481中所使用的基數估計工具版本，將[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]及更早版本。 若要使用追蹤旗標執行查詢，請參閱知識庫文件＜ [啟用會影響計劃而可在特定的查詢層級透過不同的追蹤旗標加以控制的 SQL Server 查詢最佳化工具行為](http://support.microsoft.com/kb/2801413)＞(機器翻譯)。  
   
-4.  如果您不能變更所有資料庫，一次，以便使用新的基數估計工具，您可以使用的所有資料庫使用原先的基數估計工具[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)至設定資料庫相容性層級為 110。  
+4.  如果您不能變更所有資料庫，一次，以使用新的基數估計工具，您可以使用的所有資料庫使用先前的基數估計工具[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)至設定資料庫相容性層級為 110。  
   
 5.  如果您是以資料庫相容性層級 110 執行工作負載，而想要搭配新的基數估計工具來測試或執行特定的查詢，請用追蹤旗標 2312 執行查詢，即可使用 SQL Server 2014 版本的基數估計工具。  若要使用追蹤旗標執行查詢，請參閱知識庫文件＜ [啟用會影響計劃而可在特定的查詢層級透過不同的追蹤旗標加以控制的 SQL Server 查詢最佳化工具行為](http://support.microsoft.com/kb/2801413)＞(機器翻譯)。  
   
@@ -71,15 +71,15 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
  此行為已經變更。 現在，即使統計資料尚未更新到自從統計資料上次更新後最近加入的遞增資料，新的基數估計工具也將假設其值存在，並且使用資料行內每個值的平均基數做為基數估計值。  
   
 ### <a name="example-b-new-cardinality-estimates-assume-filtered-predicates-on-the-same-table-have-some-correlation"></a>範例 B：新的基數估計值會假設相同資料表上的篩選述詞具有若干相互關聯性  
- 此範例假設 Cars 資料表有 1000 個資料列，其中 Make (品牌) 符合 'Honda' 者為 200 列，Model (車款) 符合 'Civic' 者為 50 列，而且所有的 Civic 車款都是 Honda 品牌。 因此，Make 資料行的值有 20% 為 'Honda'，Model 資料行的值有 5% 為 'Civic'，而且 Honda Civic 的實際數目是 50。 原本的基數估計值假設 Make 和 Model 資料行的值彼此獨立。 舊版查詢最佳化工具估計的結果為 10 部 Honda Civic (.05 *.20 \* 1000 個資料列 = 10 個資料列)。  
+ 此範例假設 Cars 資料表有 1000 個資料列，其中 Make (品牌) 符合 'Honda' 者為 200 列，Model (車款) 符合 'Civic' 者為 50 列，而且所有的 Civic 車款都是 Honda 品牌。 因此，Make 資料行的值有 20% 為 'Honda'，Model 資料行的值有 5% 為 'Civic'，而且 Honda Civic 的實際數目是 50。 原本的基數估計值假設 Make 和 Model 資料行的值彼此獨立。 先前的查詢最佳化工具估計的結果為 10 部 Honda Civic (.05 *.20 \* 1000 個資料列 = 10 個資料列)。  
   
 ```  
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
 ```  
   
- 此行為已經變更。 現在，新的基數估計值會假設 Make 和 Model 資料行具有「若干」  相互關聯性。 查詢最佳化工具會為估計方程式加入指數元件，以估計出較高的基數。 查詢最佳化工具現在估計，22.36 個資料列 (.05 * SQRT(.20) \* 1000 個資料列 = 22.36 個資料列) 符合述詞。 就此案例和具體資料分佈來看，22.36 個資料列更趨近於查詢將會傳回的實際數目 50 個資料列。  
+ 此行為已經變更。 現在，新的基數估計值會假設 Make 和 Model 資料行具有「若干」  相互關聯性。 查詢最佳化工具會為估計方程式加入指數元件，以估計出較高的基數。 現在，查詢最佳化工具估計，22.36 個資料列 (.05 * SQRT(.20) \* 1000 個資料列 = 22.36 個資料列) 符合述詞。 就此案例和具體資料分佈來看，22.36 個資料列更趨近於查詢將會傳回的實際數目 50 個資料列。  
   
- 請注意，新的基數估計工具邏輯會對述詞選擇性排序並增加指數乘冪。 例如，若述詞選擇性是.05、.20 和.25，基數估計值即為 (.05 * SQRT(.20) \* .25)。  
+ 請注意，新的基數估計工具邏輯會對述詞選擇性排序並增加指數乘冪。 例如，若述詞選擇性是.05、.20 和.25，基數估計值會是 (.05 * SQRT(.20) \* SQRT(SQRT(.25)。  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>範例 C：新的基數估計值會假設不同資料表上的篩選述詞彼此無關  
  就此範例而言，舊版基數估計工具假設述詞篩選 s.type 和 r.date 相互關聯。 不過，對新型工作負載測試的結果顯示，不同資料表中各資料行的述詞篩選通常並非彼此相互關聯。  

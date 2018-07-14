@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 caps.latest.revision: 65
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 77b0bb18dde4c6f6bc8a1ff22bf3fda11b6f414f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6427878b5c032e0560859ab7ba68af8d06fb40e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276544"
 ---
 # <a name="memory-optimized-tables"></a>記憶體最佳化的資料表
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體中 OLTP 可透過有效率的記憶體最佳化資料存取、商務邏輯的原生編譯以及不需鎖定與閂鎖的演算法，協助提升 OLTP 應用程式的效能。 記憶體中 OLTP 功能包括記憶體最佳化資料表和資料表類型，以及 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序的原生編譯，能夠有效率地存取這些資料表。  
@@ -38,7 +38,7 @@ ms.locfileid: "36033916"
   
      升級記憶體最佳化資料表的方針 (包含變更資料行、索引及 bucket_count)。  
   
--   [了解記憶體最佳化資料表上的交易](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+-   [了解經記憶體最佳化的資料表上的交易](../../database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
      本節提供數個有關對記憶體最佳化資料表執行交易的主題，包含交易隔離等級，以及跨容器的交易。  
   

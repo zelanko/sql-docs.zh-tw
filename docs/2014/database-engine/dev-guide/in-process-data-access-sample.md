@@ -1,5 +1,5 @@
 ---
-title: 同處理序資料存取範例 |Microsoft 文件
+title: 同處理序資料存取範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6f90e5ba1dd6c90f5d941dfcb2ccaa42c8d9c07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f74adfc254b0606fb62a93b72b2c8b5a038f2a7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285794"
 ---
 # <a name="in-process-data-access-sample"></a>同處理序資料存取範例
   `InProcessDataAccess` 範例包含許多簡單的函數，這些函數會示範 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 同處理序資料存取提供者的各種功能。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -57,7 +57,7 @@ ms.locfileid: "36033694"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是系統管理員的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您所使用的執行個體，您必須擁有系統管理員授與您**CreateAssembly**權限，才能完成安裝。  
+-   如果您不是系統管理員[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您所使用的執行個體，您必須擁有授與您的系統管理員**CreateAssembly**完成安裝程序的權限。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -360,7 +360,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`)，藉以的預存程序和函式，此範例中定義測試的範例。  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)](`test.sql`)，藉以在此範例中定義的函式與預存程序測試的範例。  
   
 ```  
 USE AdventureWorks;  

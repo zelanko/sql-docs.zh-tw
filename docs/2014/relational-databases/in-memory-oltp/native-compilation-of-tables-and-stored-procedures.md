@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: d0e96880f661a05f150785c53c24afbfbf66d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4130e24dc67fd174130ed0e45e145242e79b86d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217348"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>資料表和預存程序的原生編譯
   記憶體中 OLTP 導入了原生編譯的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可原生編譯用來存取記憶體最佳化資料表的預存程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以透過原生方式編譯記憶體最佳化資料表。 與解譯的 (傳統) [!INCLUDE[tsql](../../includes/tsql-md.md)]相較之下，原生編譯可提供更快速的資料存取並且更有效率地執行查詢。 資料表和預存程序的原生編譯會產生 DLL。  
   
- 另外也支援記憶體最佳化資料表類型的原生編譯。 如需詳細資訊，請參閱[記憶體最佳化資料表變數](../../database-engine/memory-optimized-table-variables.md)。  
+ 另外也支援記憶體最佳化資料表類型的原生編譯。 如需詳細資訊，請參閱 <<c0> [ 記憶體最佳化資料表變數](../../database-engine/memory-optimized-table-variables.md)。  
   
  原生編譯是指將程式設計結構轉換成原生程式碼的程序，包含處理器指令，而不需再進一步編譯或解譯。  
   
@@ -119,12 +119,12 @@ go
  資料表和預存程序的原生編譯使用記憶體中 OLTP 編譯器。 此編譯器會產生寫入磁碟並載入記憶體中的檔案。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用下列機制限制這些檔案的存取權。  
   
 ### <a name="native-compiler"></a>原生編譯器  
- 原生編譯所需的編譯器可執行檔以及二進位和標頭檔案已在 MSSQL\Binn\Xtp 資料夾之下，安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的一部分。 因此，如果預設執行個體已安裝在 C:\Program Files 之下，編譯器檔案即安裝在 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\。MSSQLSERVER\MSSQL\Binn\Xtp。  
+ 原生編譯所需的編譯器可執行檔以及二進位和標頭檔案已在 MSSQL\Binn\Xtp 資料夾之下，安裝為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的一部分。 因此，如果預設執行個體安裝在 C:\Program Files 之下，編譯器檔案即安裝在 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。MSSQLSERVER\MSSQL\Binn\Xtp。  
   
  若要限制編譯器的存取權， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用存取控制清單 (ACL) 限制二進位檔案的存取。 所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 二進位皆受到保護，以防止其遭到修改或透過 ACL 竄改。 原生編譯器的 ACL 也限制編譯器的使用權，僅 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶和系統管理員擁有原生編譯器檔案的讀取和執行權限。  
   
 ### <a name="files-generated-by-a-native-compilation"></a>原生編譯產生的檔案  
- 當資料表或預存程序進行編譯時，所產生的檔案會包含 DLL 以及中繼檔案，而中繼檔案含有下列附檔名：.c、.obj、.xml 和 .pdb。 產生的檔案會儲存在預設資料夾的子資料夾中。 這個子資料夾名為 Xtp。 當使用預設資料夾安裝預設執行個體，產生的檔案會放在 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\。MSSQLSERVER\MSSQL\DATA\Xtp。  
+ 當資料表或預存程序進行編譯時，所產生的檔案會包含 DLL 以及中繼檔案，而中繼檔案含有下列附檔名：.c、.obj、.xml 和 .pdb。 產生的檔案會儲存在預設資料夾的子資料夾中。 這個子資料夾名為 Xtp。 當使用預設資料夾安裝預設執行個體，產生的檔案會放置於 C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。MSSQLSERVER\MSSQL\DATA\Xtp。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用三種方式防止產生的 DLL 遭竄改：  
   

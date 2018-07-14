@@ -1,5 +1,5 @@
 ---
-title: Description 屬性 （SqlService 類別） |Microsoft 文件
+title: Description 屬性 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Description property
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f806cc7233d14013b307496084d4bfbeb8e4121
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 37bce92c0bb12c6e2b2efccd1d0822ad5bf4369c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280744"
 ---
 # <a name="description-property-sqlservice-class"></a>Description 屬性 (SqlService 類別)
   取得參考之服務的描述。  

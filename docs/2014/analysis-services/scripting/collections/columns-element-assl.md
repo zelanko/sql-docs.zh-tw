@@ -1,5 +1,5 @@
 ---
-title: Columns 元素 (ASSL) |Microsoft 文件
+title: Columns 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Columns element
 ms.assetid: 14011eed-6f10-4120-b256-d599d59bde80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e635738dddc7eabda62f0c35df860db3d9a10b60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ad5104e3b0fc0b6b34c7b0a4aa3eed9b18336aab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231908"
 ---
 # <a name="columns-element-assl"></a>Columns 元素 (ASSL)
   包含與父元素相關聯之資料行的集合。  
@@ -80,9 +80,9 @@ ms.locfileid: "36035078"
 |[MiningStructure](../objects/miningstructure-element-assl.md)， [TableMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 如`DrillThroughAction`項目，`Columns`集合會識別包含資料時執行這個動作時要傳回的資料行。  
+ 針對`DrillThroughAction`項目，`Columns`集合會識別包含資料時執行這個動作時即將傳回的資料行。  
   
- 如`TableMiningStructureColumn`項目，`Columns`集合允許單一遞迴層級。 換句話說，任何`TableMiningStructureColumn`此集合中包含的項目不能包含任何`TableMiningStructureColumn`中的項目及其`Columns`集合。  
+ 針對`TableMiningStructureColumn`項目，`Columns`集合允許只有一個遞迴層級。 換句話說，任何`TableMiningStructureColumn`包含在這個集合的項目不能包含任何`TableMiningStructureColumn`中的項目及其`Columns`集合。  
   
  在「分析管理物件」(AMO) 物件模型中的某些對應元素是 <xref:Microsoft.AnalysisServices.TraceColumnCollection>、<xref:Microsoft.AnalysisServices.MiningModelColumnCollection> 和 <xref:Microsoft.AnalysisServices.MiningStructureColumnCollection>。  
   

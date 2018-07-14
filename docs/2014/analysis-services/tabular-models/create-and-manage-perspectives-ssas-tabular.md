@@ -1,5 +1,5 @@
 ---
-title: 建立及管理檢視方塊 (SSAS 表格式) |Microsoft 文件
+title: 建立及管理檢視方塊 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.perspectivedb.f1
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3d49d87c3cd5ff2b4ae68e485cfa9cc5afe31d6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 799e225a852f0eb1b4a35861df64fbe437af6a91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032390"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254830"
 ---
 # <a name="create-and-manage-perspectives-ssas-tabular"></a>建立及管理檢視方塊 (SSAS 表格式)
   檢視方塊會定義可檢視之模型子集，對模型提供具體的商務特有或應用程式特有視點。 本主題中的工作會描述如何使用模型設計師中的 **[檢視方塊]** 對話方塊，建立及管理檢視方塊。  

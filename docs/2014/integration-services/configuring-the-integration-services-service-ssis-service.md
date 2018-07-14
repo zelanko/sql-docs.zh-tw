@@ -1,5 +1,5 @@
 ---
-title: 設定 Integration Services 服務 （SSIS 服務） |Microsoft 文件
+title: 設定 Integration Services （SSIS 服務） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
 - configuration files [Integration Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 caps.latest.revision: 70
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4d934191b491d4e8d348b7bd91004afc8f8f9545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71a0436edf57e820b7e6b559814f65823d4390eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283674"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>設定 Integration Services 服務 (SSIS 服務)
     
 > [!IMPORTANT]  
 >  本主題會討論 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 回溯相容。 從 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會仰賴組態檔進行設定。 根據預設，此組態檔的名稱為 MsDtsSrvr.ini.xml，而且此檔案位於 %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn 資料夾。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會仰賴組態檔進行設定。 根據預設，此組態檔的名稱為 MsDtsSrvr.ini.xml，而且檔案位於 %ProgramFiles%\Microsoft SQL Server\120\DTS\Binn 資料夾中。  
   
  一般來說，您不必為這個組態檔做任何變更，也不必變更此檔案的預設位置。 但是，如果您的封裝儲存在 [!INCLUDE[ssDE](../includes/ssde-md.md)]的具名執行個體或遠端執行個體中，或是儲存在多個 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體中，您就必須修改此組態檔。 另外，如果您將此組態檔移到預設位置以外的位置，就必須修改指定其檔案位置的登錄機碼。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36035739"
   
 -   要在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的 [物件總管] 中顯示的 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 根資料夾為 [MSDB] 和 [檔案系統] 資料夾。  
   
--   檔案系統中的封裝，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]管理服務位於 %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages。  
+-   在檔案系統中的封裝，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服務管理位於 %ProgramFiles%\Microsoft SQL Server\120\DTS\Packages。  
   
  此組態檔也會指定哪一個 msdb 資料庫包含 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務將會管理的封裝。 根據預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為可管理 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體之 msdb 資料庫中的封裝，該執行個體與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]同時安裝。 如果 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體並未同時安裝， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務會設定為可管理本機預設 [!INCLUDE[ssDE](../includes/ssde-md.md)]執行個體之 msdb 資料庫中的封裝。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36035739"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>組態檔位置的修改  
-登錄機碼**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile**指定的位置和名稱的組態檔[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服務所使用。 登錄機碼的預設值是**C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**。 您可以更新此登錄機碼的值，以便針對組態檔使用不同的名稱和位置。 請注意，在路徑中的版本號碼 (SQL Server 的 120 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) 會根據 SQL Server 版本而有所不同。 
+登錄機碼**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\SSIS\ServiceConfigFile**指定的位置和名稱的組態檔[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]服務所使用。 登錄機碼的預設值是**C:\Program Files\Microsoft SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**。 您可以更新此登錄機碼的值，以便針對組態檔使用不同的名稱和位置。 請注意，在路徑中的版本號碼 (120 適用於 SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]) 將 SQL Server 版本而有所不同。 
   
   
 > [!CAUTION]  

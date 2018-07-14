@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], performance counters
 - performance counters [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 62
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bdc7ec8be368cdb6bd361e17fde9fcf2c8711879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 25ce27eae1909535a8dbddc642d032df1ddd5c32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245008"
 ---
 # <a name="performance-counters"></a>效能計數器
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會安裝一組您可以用於監視資料流程引擎效能的效能計數器。 例如,，您可以監看 "Buffers spooled" 計數器以判斷是否要在封裝執行時，暫時將資料緩衝區寫入到磁碟中。 這種交換會降低效能，並指出電腦的記憶體不足。  

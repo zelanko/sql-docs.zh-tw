@@ -1,5 +1,5 @@
 ---
-title: 將設定的 SQL Server 執行個體自動啟動 （SQL Server 組態管理員） |Microsoft 文件
+title: 將設定的 SQL Server 執行個體自動啟動 （SQL Server 組態管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic SQL Server startup
 - SQL Server, automatic startup
 - starting SQL Server, automatically
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4b34f2831a39de5dea2353a6114f2ae36388bd7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: fdb191490353e6260467b50c26f94892ff6ce83b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254690"
 ---
 # <a name="set-an-instance-of-sql-server-to-start-automatically-sql-server-configuration-manager"></a>將 SQL Server 執行個體設定為自動啟動 (SQL Server 組態管理員)
   此主題描述如何使用 SQL Server 組態管理員，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中設定 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體自動啟動。 在安裝期間， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 通常會設定為自動啟動。 如果沒有這樣執行，您隨時都可以變更該設定。  
@@ -38,9 +38,9 @@ ms.locfileid: "36035052"
     >  由於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 程式的嵌入式管理單元，而不是獨立的程式，因此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員在較新版本的 Windows 中不會作為應用程式出現。  
     >   
     >  -   **Windows 10**：  
-    >          若要開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager 上**起始頁**，輸入 SQLServerManager12.msc (如[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 針對先前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以較小的數字取代 12。 按一下 SQLServerManager12.msc 會開啟 Configuration Manager。 組態管理員釘選到起始頁或工作列，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**開啟檔案位置**。 在 [Windows 檔案總管] 中，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**釘選到開始**或**釘選到工作列**。  
+    >          若要開啟  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，請在**起始頁**，輸入 SQLServerManager12.msc (如[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 針對先前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以較小的數字取代 12。 按一下 SQLServerManager12.msc 開啟 Configuration Manager。 組態管理員釘選到起始頁或工作列，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**開啟檔案位置**。 在 Windows 檔案總管 中，SQLServerManager12.msc，以滑鼠右鍵按一下，然後按一下**釘選到開始**或是**釘選到工作列**。  
     > -   **Windows 8**：  
-    >          若要開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager，請在**搜尋**快速鍵**應用程式**，型別**Sqlservermanager<\<版本 >.msc**例如`SQLServerManager12.msc`，然後按下**Enter**。  
+    >          若要開啟  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager，請在**搜尋**快速鍵**應用程式**，型別**SQLServerManager\<版本 >.msc**例如`SQLServerManager12.msc`，然後按下**Enter**。  
   
 2.  在 **[SQL Server 組態管理員]** 中展開 **[服務]**，然後按一下 **[SQL Server]**。  
   

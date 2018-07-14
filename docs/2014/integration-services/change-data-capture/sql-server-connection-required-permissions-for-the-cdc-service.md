@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9e968f9-180c-4fa0-a849-98f2b1942330
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 42b83eb19c448621bf31ccbc005523f6fc726d9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5b4f338fa39435cfca0659f628d511d18f75a94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213488"
 ---
 # <a name="sql-server-connection-required-permissions-for-the-cdc-service"></a>SQL Server 連接所需的 CDC 服務權限
   CDC 服務組態主控台需要與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之間的連接資訊，才能執行其工作。 本主題描述可以在 [連接到 SQL Server] 對話方塊中提供的資訊，以便設定與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的連接。  
@@ -37,7 +37,7 @@ ms.locfileid: "36032815"
 |刪除 Oracle CDC 服務登入，以供在 MSXDBCDC 中更新服務註冊使用。|`db_datareader` 和 `db_datawriter` 角色|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 連接](connection-to-sql-server.md)   
+ [SQL Server 連線](connection-to-sql-server.md)   
  [連接到 SQL Server 以進行刪除作業](connection-to-sql-server-for-delete.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 分類矩陣 (Analysis Services-資料採礦) |Microsoft 文件
+title: 分類矩陣 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], validating
 - validating data mining models
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8f403c4945a3b31c1cfda3439ddb1452c043c9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: adcbb1472464bbad29125eead495cd0408d723d8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216078"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類矩陣 (Analysis Services - 資料採礦)
   「分類矩陣」會透過判斷預測值是否符合實際值，將模型中的所有案例分類到不同的類別目錄。 每個類別目錄中的所有案例都會計算在內，而且總數會顯示在矩陣中。 分類矩陣是統計模型評估的標準工具，有時稱為「混淆矩陣」。  
@@ -67,7 +67,7 @@ ms.locfileid: "36032437"
 |預測的|0 (實際值)|1 (實際值)|2 (實際值)|  
 |---------------|------------------|------------------|------------------|  
 |0|111|3|5|  
-|@shouldalert|2|123|17|  
+|1|2|123|17|  
 |2|19|0|20|  
   
  雖然加入多個資料行會讓報表看起來更為複雜，但是當您想要評估做出錯誤預測的累計成本時，其他詳細資料可能會非常實用。 若要建立對角線上的總和或是比較不同資料列組合的結果，您可以按一下 [分類矩陣] 索引標籤上提供的 [複製] 按鈕，並將報表貼到 Excel。 或者，您可以使用類似適用於 Excel 的資料採礦用戶端的用戶端 (它支援 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 和更新版本)，直接在 Excel 中建立包含計數和百分比的分類報表。 如需詳細資訊，請參閱 [SQL Server Data Mining](http://go.microsoft.com/fwlink/?LinkID=77733)(SQL Server 資料採礦)。  

@@ -1,5 +1,5 @@
 ---
-title: 內嵌和共用資料連接或資料來源 （報表產生器及 SSRS） |Microsoft 文件
+title: 內嵌和共用資料連接或資料來源 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - embedded data sources
 - shared data sources
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 caps.latest.revision: 28
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c75ca2d608e54df537ec5bc37f7f84312d5955c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f83f7b150fb709e4b6716f8a49d802949a62e9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282634"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>內嵌和共用資料連接或資料來源 (報表產生器及 SSRS)
   查詢執行或處理報表時，報表會使用資料連接擷取報表的資料。 您可以從內建的資料連接類型清單，選擇連接到關聯式資料庫、多維度資料庫、Web 服務或其他資料來源的類型。 下列項目可在描述資料連接時使用。  
@@ -48,7 +48,7 @@ ms.locfileid: "36034102"
 ## <a name="shared-data-sources"></a>共用資料來源  
  如果資料來源使用頻率很高，則共用資料來源很有用。 建議您盡量使用共用資料來源。 它們會簡化報表和報表存取的管理，而且有助於提升報表和報表所存取之資料來源的安全性。 如果您需要共用資料來源，請要求系統管理員為您建立一個。  
   
- 在報表產生器中，您無法建立共用資料來源。 您可以從報表伺服器瀏覽並選取共用資料來源。 如需詳細資訊，請參閱[資料連接、 資料來源和報表產生器中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
+ 在報表產生器中，您無法建立共用資料來源。 您可以從報表伺服器瀏覽並選取共用資料來源。 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和報表產生器中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)。  
   
  在報表設計師中，您無法瀏覽至報表伺服器上的共用資料來源。 您可以在 [方案總管] 中建立共用資料來源做為專案的一部分，並且選擇是否將它們部署到報表伺服器。 您可能因為電腦所需的認證和報表伺服器所需的認證不同，而選擇只在本機上使用這些共用資料來源。 如需詳細資訊，請參閱 [Reporting Services 中的資料連接、資料來源及連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
@@ -69,13 +69,13 @@ ms.locfileid: "36034102"
 |元件所需||![可用](media/greencheck.gif "可用")|  
   
 ## <a name="data-source-credentials"></a>資料來源認證  
- 認證用於建立內嵌資料來源、執行查詢，或是在處理報表時擷取資料。 資料來源連線的擁有者會決定您必須用於存取資料的認證類型。 認證會與報表伺服器、SharePoint 網站或報表撰寫環境中本機電腦上的資料連接分開管理。 根據資料來源的類型而定，認證可加以儲存並避免提示，或者設定為提示每一位使用者。 您需要的認證可能會依據您從電腦或是報表伺服器連接到資料來源而有所不同。 如需詳細資訊，請參閱[指定的認證，在報表產生器](../../2014/reporting-services/specify-credentials-in-report-builder.md)和[資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+ 認證用於建立內嵌資料來源、執行查詢，或是在處理報表時擷取資料。 資料來源連線的擁有者會決定您必須用於存取資料的認證類型。 認證會與報表伺服器、SharePoint 網站或報表撰寫環境中本機電腦上的資料連接分開管理。 根據資料來源的類型而定，認證可加以儲存並避免提示，或者設定為提示每一位使用者。 您需要的認證可能會依據您從電腦或是報表伺服器連接到資料來源而有所不同。 如需詳細資訊，請參閱 <<c0> [ 在報表產生器中指定認證](../../2014/reporting-services/specify-credentials-in-report-builder.md)並[資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [報表撰寫概念&#40;報表產生器和 SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [報表撰寫概念&#40;報表產生器及 SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Reporting Services 所支援的資料來源&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [加入及驗證資料連接或資料來源&#40;報表產生器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

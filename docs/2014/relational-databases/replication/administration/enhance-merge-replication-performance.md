@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4fd41d63d0086ac582cf0ca033453bf0d9bc7776
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 78221050ed5832f76843a57d20ed3a518b1ebea9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256327"
 ---
 # <a name="enhance-merge-replication-performance"></a>增強合併式複寫效能
   除了考慮＜ [增強一般複寫效能](enhance-general-replication-performance.md)＞中所述的一般效能提示之外，還要考慮合併式複寫特定的以下幾個其他方面。  
@@ -45,7 +45,7 @@ ms.locfileid: "36035198"
   
 -   考慮包括大型物件 (LOB) 資料類型的過度正規化資料表。  
   
-     發生同步處理時，「合併代理程式」可能需要從「發行者」或「訂閱者」讀取及傳送整個資料列。 如果資料列包含使用 LOB 的資料行，則上述處理可能需要額外的記憶體配置，且即使這些資料行並未更新仍會對效能造成負面影響。 為了降低這一效能影響的可能性，請考慮將 LOB 資料行置於另一個資料表，對資料列資料的其餘部分使用一對一關聯性。 資料型別`text`， `ntext`，和`image`已被取代。 如果您包含 Lob，建議您使用的資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分別。  
+     發生同步處理時，「合併代理程式」可能需要從「發行者」或「訂閱者」讀取及傳送整個資料列。 如果資料列包含使用 LOB 的資料行，則上述處理可能需要額外的記憶體配置，且即使這些資料行並未更新仍會對效能造成負面影響。 為了降低這一效能影響的可能性，請考慮將 LOB 資料行置於另一個資料表，對資料列資料的其餘部分使用一對一關聯性。 資料型別`text`， `ntext`，和`image`已被取代。 若您納入 Lob，建議您使用的資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分別。  
   
 ## <a name="publication-design"></a>發行集設計  
   

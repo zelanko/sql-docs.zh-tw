@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
 - table creation [SQL Server], Make Table query
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39adb0d3729ac171c10d3faf4d3a5956cd1c0429
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 00c474619fe1eb16249ce0c0b034bf160fe1e857
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261884"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>建立製成資料表查詢 (Visual Database Tools)
   您可以使用製成資料表查詢 (Make Table Query)，將資料列複製到新的資料表中；這種方法非常適合用來建立要使用的資料子集，或是將資料表的內容從其中一個資料庫複製到另一個資料庫。 製成資料表查詢與插入結果查詢相似，但前者會建立用來複製資料列的新資料表。  
@@ -69,7 +69,7 @@ WHERE country = 'UK'
   
      若要在其他資料庫中建立目的資料表，請指定完整的資料表名稱，包括目標資料庫名稱、擁有人 (如有需要) 和資料表的名稱。  
   
-4.  指定並將要複製的資料行加入至查詢中。 如需詳細資訊，請參閱[將資料行新增至查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。 只有加入查詢中的資料行才會複製。 若要複製整個資料列，選擇   **\* （所有資料行）**。  
+4.  指定並將要複製的資料行加入至查詢中。 如需詳細資訊，請參閱[將資料行新增至查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。 只有加入查詢中的資料行才會複製。 若要複製整個資料列，選擇 **\* （所有資料行）**。  
   
      查詢和檢視表設計工具會將您選擇的資料行新增至 [準則] 窗格的 [資料行] 資料行。  
   

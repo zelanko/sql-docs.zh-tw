@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f6bd0852599c969b2d675af1d75a473fc0d46007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ac10ea59e329f89630510fa6529e54ff2417efd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215418"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>範圍圖表 (報表產生器及 SSRS)
   範圍圖表類型會顯示一組資料點，每個點都是由相同類別的多個值所定義。 這些值會以值軸所測量的標記高度來表示。 類別標籤會顯示在類別軸上。 一般範圍圖表會針對每個資料點，填滿上界值和下界值之間的區域。  
@@ -58,6 +58,6 @@ ms.locfileid: "36034088"
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
- [格式化圖表&#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [格式化圖表&#40;報表產生器及 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

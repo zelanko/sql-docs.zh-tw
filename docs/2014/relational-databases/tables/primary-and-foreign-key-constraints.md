@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - foreign keys [SQL Server], cascading referential integrity
 - FOREIGN KEY constraints
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - foreign keys [SQL Server], about foreign key constraints
 ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 30a0d2f23c814c9ff1c963c1a5d430cb6d711cbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95825200426f9fc2f5989a2667b5504f6c4d6f3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268814"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主要與外部索引鍵條件約束
   主索引鍵和外部索引鍵是兩種類型的條件約束，可用以強制執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中的資料完整性。 這些都是重要的資料庫物件。  
@@ -82,7 +82,7 @@ ms.locfileid: "36033627"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會引發錯誤，而且會回復對父資料表中資料列的刪除或更新動作。  
   
  CASCADE  
- 更新或刪除父資料表中的對應資料列時，也會更新或刪除參考資料表中的該資料列。 如果無法指定 CASCADE`timestamp`資料行是外部索引鍵或被參考索引鍵的一部分。 如果資料表有 INSTEAD OF DELETE 觸發程序，則不能指定 ON DELETE CASCADE。 如果資料表有 INSTEAD OF UPDATE 觸發程序，則不能指定 ON UPDATE CASCADE。  
+ 更新或刪除父資料表中的對應資料列時，也會更新或刪除參考資料表中的該資料列。 無法指定 CASCADE，如果`timestamp`資料行是外部索引鍵或參考的索引鍵的一部分。 如果資料表有 INSTEAD OF DELETE 觸發程序，則不能指定 ON DELETE CASCADE。 如果資料表有 INSTEAD OF UPDATE 觸發程序，則不能指定 ON UPDATE CASCADE。  
   
  SET NULL  
  更新或刪除父資料表中的對應資料列時，所有組成外部索引鍵的值都會設定為 NULL。 若要執行這個條件約束，外部索引鍵資料行必須可為 Null。 如果資料表有 INSTEAD OF UPDATE 觸發程序，則不能予以指定。  

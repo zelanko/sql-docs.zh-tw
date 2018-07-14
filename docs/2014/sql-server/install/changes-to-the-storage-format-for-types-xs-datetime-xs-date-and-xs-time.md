@@ -1,5 +1,5 @@
 ---
-title: '變更儲存格式類型 xs: datetime、 xs: date 和 xs: time |Microsoft 文件'
+title: '變更儲存格式類型 xs: datetime、 xs: date 和 xs: time |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
 - xs:time
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DateTime
 ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56342ff7c7754fb8ef1619fdb1b71e37600192b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1acc25889e693a69e55adc4f5da5ece616bc41a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222518"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>針對 xs:dateTime、xs:date 和 xs:time 類型之儲存格式所做的變更
   XMLDATETIME 規則會識別您的資料庫是否包含升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後將成為無效的具類型 XML 資料。  
@@ -33,7 +33,7 @@ ms.locfileid: "36036509"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>描述  
- 中的儲存體格式[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]類型 xs: datetime、 xs: date 和 xs: time 已變更為支援含或不含時區資訊的值而且允許保留時區。  
+ 中的儲存體格式[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]類型 xs: datetime、 xs: date 和 xs: time 已經變更為支援含或不含時區資訊的值而且允許保留的時區。  
   
  如果 XML 結構描述集合參考其中一種類型，在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，與此集合相關聯之所有資料行的 XML 索引都將停用。 您將能夠使用 SELECT 及/或 XQUERIES 來查詢它們，但是無法使用 XML 索引。 如果遇到負的年份值，將產生執行階段錯誤。  
   
@@ -190,6 +190,6 @@ EXECUTE DateTimeInvestigation 1;
  若要在升級之後於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中使用 XML 索引，您必須針對使用 xs:date、xs:time 或 xs:dateTime 的資料行重建 XML 索引或重新設定 XML 資料行的類型。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
+ [資料庫引擎升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)  
   
   

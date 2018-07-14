@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 96eb376791d1b30fb73d834733de07df8a46c64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a3f19a5c197eb519aa9e78a0d99d7e88132da123
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035463"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231428"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>管理完成索引標籤 (SQL Server PowerShell)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 嵌入式管理單元引進三個變數 (`$SqlServerMaximumTabCompletion`， `$SqlServerMaximumChildItems`，和`$SqlServerIncludeSystemObjects`) 來控制 Windows PowerShell tab 鍵自動完成。 Tab-Completion 透過傳回其名稱開頭為所輸入字串的項目表，來減少必須輸入的資料量。  

@@ -1,5 +1,5 @@
 ---
-title: 重要的 MDX (Analysis Services) 中的概念 |Microsoft 文件
+title: 重要的概念在 MDX (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
 - dimensional modeling [MDX]
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 060ad452001605ee0df4d0c84381044cb38e6493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5d6e59827b0b816b898322adf729d2299540e38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032887"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272014"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX 的關鍵概念 (Analysis Services)
   在您使用多維度運算式 (MDX) 查詢 Cube 中的多維度資料，或在 Cube 中建立 MDX 運算式之前，先了解多維度的概念與詞彙會相當有助益。  
   
  最好先從您已經知道的資料摘要開始著手，然後觀察 MDX 如何與此資料摘要相關聯。 以下是在 Excel 中建立的樞紐分析表，其中已填入了 Analysis Services 範例 Cube 的資料。  
   
- ![樞紐分析表與量值和維度叫出](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "具有量值和維度叫出樞紐分析表")  
+ ![量值和維度所呼叫的樞紐分析表](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "具有量值和維度叫出樞紐分析表")  
   
 ## <a name="measures-and-dimensions"></a>量值與維度  
  Analysis Services Cube 包含量值、維度以及維度屬性，這些在樞紐分析表範例中都很容易看見。  
@@ -65,11 +65,11 @@ ms.locfileid: "36032887"
   
  類似的彙總會與先計算並預先儲存，這就是 Analysis Services 為何具有查詢效能快速的秘密之一。  
   
- ![標註的所有成員的樞紐分析表](../media/ssas-keyconcepts-pivot2-allmember.png "標註的所有成員的樞紐分析表")  
+ ![與所呼叫的所有成員的樞紐分析表](../media/ssas-keyconcepts-pivot2-allmember.png "標註的所有成員的樞紐分析表")  
   
  展開階層，最後您會來到最底層。 這稱為 **分葉成員**。 分葉成員是階層中沒有子系的成員。@@@ 在此範例中，Australia 為分葉成員。  
   
- ![分葉成員被呼叫端標註具有樞紐分析表](../media/ssas-keyconcepts-pivot3-leafparent.PNG "分葉成員被呼叫端標註具有樞紐分析表")  
+ ![樞紐分析表與標註-成員分葉](../media/ssas-keyconcepts-pivot3-leafparent.PNG "具有標註-成員分葉樞紐分析表")  
   
  而其上層的所有項目均稱為 **父成員**。 Pacific 是 Australia 的父系。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "36032887"
   
 |||  
 |-|-|  
-|![標註對稱階層的樞紐分析表](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "標註對稱階層的樞紐分析表")|**對稱的階層** 是最上層和任何分葉成員之間存在有相同層級數目的階層。<br /><br /> **自然階層** 是從基礎資料自然轉換出的階層。 常見的範例是國家 (地區)-地區-省市，或年-月-日期，或類別目錄-子類別目錄-模型，且其中每個從屬層級會如預期般從父系跑出來。<br /><br /> 在多維度模型中，多數階層均為對稱的階層，且其中也有許多都是自然階層。<br /><br /> 另一個相關的模型化詞彙是`user-defined hierarchy`，通常用於和屬性階層的對比。 相對於當您定義屬性時由 Analysis Services 所自動產生的屬性階層，該階層為 BI 開發人員所建立的階層。|  
+|![標註對稱階層的樞紐分析表](../media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "標註對稱階層的樞紐分析表")|**對稱的階層** 是最上層和任何分葉成員之間存在有相同層級數目的階層。<br /><br /> **自然階層** 是從基礎資料自然轉換出的階層。 常見的範例是國家 (地區)-地區-省市，或年-月-日期，或類別目錄-子類別目錄-模型，且其中每個從屬層級會如預期般從父系跑出來。<br /><br /> 在多維度模型中，多數階層均為對稱的階層，且其中也有許多都是自然階層。<br /><br /> 另一個相關的模型化詞彙是`user-defined hierarchy`，通常用於和屬性階層進行比較。 相對於當您定義屬性時由 Analysis Services 所自動產生的屬性階層，該階層為 BI 開發人員所建立的階層。|  
   
  **不對稱的階層**  
   
 |||  
 |-|-|  
-|![標註不完全階層的樞紐分析表](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "標註不完全階層的樞紐分析表")|**不完全階層** 或 **不對稱的階層** 是最上層成員和分葉成員之間存在有不同層級數目的階層。 這也是由 BI 開發人員所建立的階層，但在此情況中，資料中具有間距。<br /><br /> 在 AdventureWorks 範例模型中，[銷售領域] 維度就是不完全階層的示範，因為 United States 具有此範例中的其他國家 (地區) 所沒有的額外層級 (地區)。<br /><br /> 若用戶端應用程式不是以適當的方式處理不完全階層，則不完全階層對 BI 開發人員而言是項挑戰。 在 Analysis Services 模型中，您可以建立明確定義多層級資料間的關聯性的 **父子式階層** ，並排除某個層級如何與下一個層級相關聯中所有的模稜兩可。 請參閱[父子式階層](parent-child-dimension.md)如需詳細資訊。|  
+|![樞紐分析表與標註不完全階層](../media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "標註不完全階層的樞紐分析表")|**不完全階層** 或 **不對稱的階層** 是最上層成員和分葉成員之間存在有不同層級數目的階層。 這也是由 BI 開發人員所建立的階層，但在此情況中，資料中具有間距。<br /><br /> 在 AdventureWorks 範例模型中，[銷售領域] 維度就是不完全階層的示範，因為 United States 具有此範例中的其他國家 (地區) 所沒有的額外層級 (地區)。<br /><br /> 若用戶端應用程式不是以適當的方式處理不完全階層，則不完全階層對 BI 開發人員而言是項挑戰。 在 Analysis Services 模型中，您可以建立明確定義多層級資料間的關聯性的 **父子式階層** ，並排除某個層級如何與下一個層級相關聯中所有的模稜兩可。 請參閱[父子式階層](parent-child-dimension.md)如需詳細資訊。|  
   
 ## <a name="key-attributes"></a>索引鍵屬性  
  模型是相關物件的集合，且這些相關物件是依賴索引鍵和索引來建立關聯。 Analysis Services 模型也一樣。 每個維度 (請記得它相當於關聯式模型中的資料表) 都有一個索引鍵屬性。 **索引鍵屬性** 用於事實資料表 (量值群組) 的外部索引鍵關聯性。 維度中所有非索引鍵屬性均會連結至 (直接或間接) 索引鍵屬性。  
@@ -112,7 +112,7 @@ ms.locfileid: "36032887"
   
  若要設定資料粒度屬性，可使用 SQL Server Data Tools 中 Cube 設計師的 [維度使用方式] 索引標籤。 在 AdventureWorks 範例模型中，[日期] 維度的索引鍵屬性是 [日期] 索引鍵。 對於 [銷售訂單階層]，資料粒度屬性相當於索引鍵屬性。 對於 [銷售目標]，資料粒度層級為每季，所以資料粒度屬性便據此設為 [日曆季]。  
   
- ![顯示資料粒度屬性的模型](../media/ssas-keyconcepts-granularityattrib.png "模型顯示資料粒度屬性")  
+ ![建立顯示資料粒度屬性的模型](../media/ssas-keyconcepts-granularityattrib.png "模型顯示資料粒度屬性")  
   
 > [!NOTE]  
 >  若資料粒度屬性和索引鍵屬性不同，則必須將非索引鍵屬性直接或間接連結至資料粒度屬性。 在 Cube 內，資料粒度屬性會定義維度的資料粒度。  

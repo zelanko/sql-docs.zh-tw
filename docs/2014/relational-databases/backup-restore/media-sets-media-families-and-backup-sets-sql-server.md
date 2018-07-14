@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - media sets [SQL Server], about media sets
 - backup media [SQL Server], about backup media
@@ -24,21 +23,21 @@ helpviewer_keywords:
 - backup sets [SQL Server]
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 caps.latest.revision: 58
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06ebab2fa2db5be88f30b228d209318469788ff4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b787ab534cc5c38413a7415e8333911590e7647f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231418"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>媒體集、媒體家族與備份組 (SQL Server)
   本主題介紹 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份和還原的基本備份媒體詞彙，適合供初次使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的使用者閱讀。 此主題描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用於備份媒體的格式、備份媒體與備份裝置之間的對應、備份在備份媒體上的組織，以及媒體集和媒體家族的數個考量。 此主題也描述第一次使用備份媒體，或將舊媒體集取代為新媒體集之前初始化或格式化備份媒體的步驟、如何覆寫媒體集中舊備份組的步驟，以及如何將新備份組附加至媒體集的步驟。  
   
 > [!NOTE]  
->  如需有關 SQL Server 備份至 Windows Azure Blob 儲存體服務，請參閱， [SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+>  如需有關 SQL Server 備份至 Windows Azure Blob 儲存體服務、 查看，請[SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
   
 ##  <a name="TermsAndDefinitions"></a> 詞彙和定義  
@@ -93,7 +92,7 @@ ms.locfileid: "36035732"
 -   媒體描述是否包含 MTF 媒體標籤或媒體描述。  
   
     > [!NOTE]  
-    >  備份或還原作業所用的所有媒體都使用標準備份格式稱為[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]會保留另一個應用程式所寫入的任何 MTF 媒體標籤，但是不會寫入 MTF 媒體標籤。  
+    >  用於備份或還原作業的所有媒體都使用標準的備份格式，稱為[!INCLUDE[msCoName](../../includes/ssnoversion-md.md)]保留另一個應用程式寫入的任何 MTF 媒體標籤，但不會寫入 MTF 媒體標籤。  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Tape Format 媒體標籤或媒體描述 (自由形式文字)。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "36035732"
 ### <a name="backup-sets"></a>備份組  
  成功的備份作業會將一個 *「備份組」* (Backup set) 加入至媒體集。 這個備份組是根據備份所屬的媒體集加以描述。 如果備份媒體僅由一個媒體家族組成，則該家族就包含整個備份組。 如果備份媒體由多個媒體家族組成，則備份組會分散於其中。 在每個媒體上，備份組都會包含描述該備份組的標頭。  
   
- 下列範例所示[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式所建立的媒體集呼叫`MyAdvWorks_MediaSet_1`如[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫使用三個磁帶機做為備份裝置：  
+ 下列範例所示[!INCLUDE[tsql](../../includes/tsql-md.md)]建立的媒體集呼叫的陳述式`MyAdvWorks_MediaSet_1`如[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]資料庫使用三個磁帶機做為備份裝置：  
   
 ```  
 BACKUP DATABASE AdventureWorks2012  
@@ -170,7 +169,7 @@ GO
   
 -   備份組數量  
   
-##  <a name="ConsiderationsForMediaSetFamilies"></a> 使用媒體集與家族  
+##  <a name="ConsiderationsForMediaSetFamilies"></a> 使用媒體集和家族  
  本節討論使用媒體集與媒體家族的一些考量。  
   
   
@@ -185,7 +184,7 @@ GO
 2.  在每個備份裝置的備份媒體 (磁帶或磁碟檔案) 上寫入新的媒體標頭。  
   
   
-###  <a name="UseExistingMediaSet"></a> 備份至現有的媒體集  
+###  <a name="UseExistingMediaSet"></a> 備份至現有媒體集  
  備份至現有的媒體集時，您有下列兩個選項：  
   
 -   附加至現有的媒體集。  
@@ -223,7 +222,7 @@ GO
  針對磁帶標頭，適當地保留標頭有其意義。 對於磁碟備份媒體而言，只有備份作業中指定的備份裝置所用的檔案會被覆寫，磁碟上的其他檔案則不受影響。 覆寫備份時會保留任何現有的媒體標頭，而新的備份會建立為備份裝置上的第一個備份。 如果沒有現有的媒體標頭，則會自動寫入含相關媒體名稱與媒體描述的有效媒體標頭。 如果現有的媒體標頭無效，備份作業會終止。 若為空白媒體，則會以給定的 MEDIANAME、MEDIAPASSWORD 與 MEDIADESCRIPTION (若有的話) 來產生新的媒體標頭。  
   
 > [!IMPORTANT]  
->  開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，MEDIAPASSWORD 選項已停用建立備份。 不過，您還是可以還原以密碼建立的備份。  
+>  開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，MEDIAPASSWORD 選項已停止用於建立備份。 不過，您還是可以還原以密碼建立的備份。  
   
  若發生下列其中一種情況，就不會覆寫備份媒體：  
   
@@ -283,7 +282,7 @@ GO
   
 -   [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql) (INIT 選項)  
   
- **若要設定的到期日**  
+ **若要設定到期日**  
   
 -   [設定備份的到期日 &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   

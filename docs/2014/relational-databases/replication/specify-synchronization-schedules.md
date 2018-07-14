@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [SQL Server replication], synchronizing
 - scheduling synchronization [SQL Server replication]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 444277abadee330f410e0b1e7db4042acc5fcccf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5b0c837ec8abafa79f6ed27303a69fad62e1c36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215358"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步處理排程
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定同步處理排程。 當您建立訂閱時，可以定義一個同步排程，以控制訂閱的複寫代理程式將於何時執行。 如果不指定排程參數，訂閱將使用預設排程。  
@@ -82,7 +82,7 @@ ms.locfileid: "36033653"
   
 3.  以滑鼠右鍵按一下訂閱，然後按一下 **[檢視詳細資料]**。  
   
-4.  在**訂用帳戶\<訂用帳戶名稱 >** 視窗中，按一下 **動作**，然後按一下  **\<代理 > 作業屬性**。  
+4.  在 **訂用帳戶\<SubscriptionName >**  視窗中，按一下**動作**，然後按一下  **\<代理程式名稱 > 作業屬性**。  
   
 5.  在 [作業屬性 - \<工作名稱>] 對話方塊的 [排程] 頁面，按一下 [編輯]。  
   

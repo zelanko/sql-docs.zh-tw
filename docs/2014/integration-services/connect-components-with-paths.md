@@ -1,5 +1,5 @@
 ---
-title: 以路徑連接元件 |Microsoft 文件
+title: 以路徑連接元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], connections
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5152147f82d1d413806eeb8f9644e70af9a04828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a14ec2a4fe8e13d7e2adb2e79d290361540c7b8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243078"
 ---
 # <a name="connect-components-with-paths"></a>以路徑連接元件
   您可以在 **設計師中** [資料流程] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤的設計介面上，建構封裝中的資料流程。 如果資料流程包含兩個資料流程元件，將來源或轉換的輸出連接到轉換或目的地的輸入，便可以連接這兩個元件。 兩個資料流程元件之間的連接子稱為路徑。  
   
  下圖顯示的範例資料流程中，包含一個來源元件、兩個轉換、一個目的地元件，以及連接元件的路徑。  
   
- ![資料流程](media/mw-dts-08.gif "資料流程")  
+ ![資料流](media/mw-dts-08.gif "資料流程")  
   
  在連接兩個元件之後，您可以在 **[資料流程路徑編輯器]** 中，檢視經由路徑移動的資料之中繼資料，以及路徑的屬性。 如需詳細資訊，請參閱 [Integration Services Paths](data-flow/integration-services-paths.md)。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "36032371"
   
 ### <a name="to-view-path-metadata"></a>若要檢視路徑中繼資料  
   
--   [檢視路徑中繼資料在資料流程路徑編輯器](../../2014/integration-services/view-path-metadata-in-the-data-flow-path-editor.md)  
+-   [在資料流程路徑編輯器中檢視路徑中繼資料](../../2014/integration-services/view-path-metadata-in-the-data-flow-path-editor.md)  
   
 ### <a name="to-view-path-metadata"></a>若要檢視路徑中繼資料  
   
--   [將資料檢視器加入資料流程](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
+-   [將資料檢視器新增到資料流程](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料流程工作](control-flow/data-flow-task.md)   

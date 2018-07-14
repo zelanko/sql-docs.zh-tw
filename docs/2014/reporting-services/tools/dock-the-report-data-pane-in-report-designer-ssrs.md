@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
 ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0792825135920bff993088c00bf5eec1694a342d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e3d682f7018261e967729a26db201bef5a3b6e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035368"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220718"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>停駐報表設計師中的報表資料窗格 (SSRS)
-  報表設計師中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，[報表資料] 窗格會顯示您可以使用的資料物件的階層式檢視在報表中，包括資料來源、 資料集、 欄位、 參數和影像。 此檢視中的資料來源可以內嵌，或參考 [方案總管] 內顯示的共用資料來源。  
+  報表設計師中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，[報表資料] 窗格會顯示報表，包括資料來源、 資料集、 欄位、 參數和映像，您可以使用資料物件的階層式檢視。 此檢視中的資料來源可以內嵌，或參考 [方案總管] 內顯示的共用資料來源。  
   
 ### <a name="to-display-the-report-data-pane"></a>顯示報表資料窗格  
   
--   在設計檢視上**檢視**功能表上，選取**報表資料**。  
+-   在 [設計] 檢視中，在**檢視**功能表上，選取**報表資料**。  
   
 ### <a name="to-dock-the-report-data-pane"></a>停駐報表資料窗格  
   

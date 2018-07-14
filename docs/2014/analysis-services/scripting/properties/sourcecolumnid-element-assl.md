@@ -1,5 +1,5 @@
 ---
-title: SourceColumnID 元素 (ASSL) |Microsoft 文件
+title: SourceColumnID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceColumnID element
 ms.assetid: 715c0be7-aa07-4dff-a909-9738224941ec
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d1ad5aecbf77103ae3e06b932dd0da678fbaa83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 523977b881e9e8357b32cd606252d0a758d3b46a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281774"
 ---
 # <a name="sourcecolumnid-element-assl"></a>SourceColumnID 元素 (ASSL)
   包含上階中來源採礦結構資料行的識別碼 (ID) [MiningStructure](../objects/miningstructure-element-assl.md)項目。  
@@ -64,7 +64,7 @@ ms.locfileid: "36033699"
 ## <a name="remarks"></a>備註  
  值`SourceColumnID`項目符合識別項中的採礦結構資料行[資料行](../collections/columns-element-assl.md)集合之父代`MiningStructure`。  
   
- 對應目的父代的項目`SourceColumnID`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MiningModelColumn>。  
+ 對應至父系的元素`SourceColumnID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.MiningModelColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

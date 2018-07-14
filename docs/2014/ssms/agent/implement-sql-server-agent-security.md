@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, security
 - security [SQL Server Agent], about security
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - security [SQL Server], SQL Server Agent
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a291112a8c6113d479ef46632cafa374340fd0c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b0a965834f326c3d29f2f3e1b03f91227aa08798
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249718"
 ---
 # <a name="implement-sql-server-agent-security"></a>實作 SQL Server Agent 安全性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 讓資料庫管理員可以在只具有執行作業步驟所需權限的安全內容中執行每個作業步驟，此權限由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Proxy 決定。 若要設定特定作業步驟的權限，請建立具有必要權限的 Proxy，然後將該 Proxy 指派給作業步驟。 您可以將 Proxy 指派給多個作業步驟。 對於要求相同權限的作業步驟，可以使用相同的 Proxy。  
@@ -80,7 +80,7 @@ ms.locfileid: "36035132"
 ## <a name="see-also"></a>另請參閱  
  [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)   
- [sp_droprolemember &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
+ [sp_droprolemember &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)   
  [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

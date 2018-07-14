@@ -1,5 +1,5 @@
 ---
-title: ServiceName 屬性 （SqlService 類別） |Microsoft 文件
+title: ServiceName 屬性 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ServiceName property
 ms.assetid: 8ac7387b-c3ae-4e45-b2cc-ebab3f83bfb2
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f136ea0db1aa5a932a5f51b800a48432f4e5d9cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 002a81d7142d3ef44066d16bcae2ce3c2746433f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283044"
 ---
 # <a name="servicename-property-sqlservice-class"></a>ServiceName 屬性 (SqlService 類別)
   取得服務的名稱。  

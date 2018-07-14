@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointrans.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d59d600d78aaf70a601382df1cacdea560db1073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: add8f27df3830fb474f849aa54e21fc4963ab115
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235258"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
   合併聯結轉換提供藉由使用 FULL、LEFT 或 INNER 聯結，來聯結兩個已排序資料集所產生的輸出。 例如，您可以使用 LEFT 聯結來聯結包含產品資訊的資料表，以及列出製造產品的國家/地區的資料表。 此結果為列出所有產品及其原產國家/地區的資料表。  

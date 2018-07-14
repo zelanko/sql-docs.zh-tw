@@ -1,27 +1,26 @@
 ---
-title: 新全文檢索停用字詞表 （一般頁面） |Microsoft 文件
+title: 新全文檢索停用字詞表 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5217bd995855ff33e6b21b883c854cb3db474e03
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221968"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>新增全文檢索停用字詞表 (一般頁面)
   使用這個對話方塊，即可建立全文檢索停用字詞表。 *「停用字詞表」* (Stoplist) 是指一組稱為 *「停用字詞」*(Stopword) 的常用字，而使用該停用字詞表之資料表的全文檢索索引會省略這些字。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../relational-databases/search/full-text-search.md)。  

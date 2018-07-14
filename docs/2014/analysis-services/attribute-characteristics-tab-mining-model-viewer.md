@@ -1,5 +1,5 @@
 ---
-title: 屬性特性索引標籤 （採礦模型檢視器） |Microsoft 文件
+title: 屬性特性索引標籤 （採礦模型檢視器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.characteristics.f1
 ms.assetid: f0c3350d-84c0-4ab8-9fb8-1527c2647299
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a2e67e05ac9129bd667f50bc4b6acbe673d8729
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc627e45bdf57b956dd55795b48dde642eed4bf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234258"
 ---
 # <a name="attribute-characteristics-tab-mining-model-viewer"></a>屬性特性索引標籤 (採礦模型檢視器)
   可以使用 [屬性特性] 窗格，瀏覽貝氏機率分類模型中結果和輸入屬性之間的關聯性。 可以選擇目標屬性的值，然後查看對結果造成最大影響的輸入屬性的清單。  
@@ -47,7 +47,7 @@ ms.locfileid: "36034486"
  **特性\<可預測的狀態 >**  
  圖形包含下列資料行，其中描述輸入屬性的狀態與選取之可預測屬性狀態如何相關。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**變數**|列出採礦模型中的輸入屬性。|  
 |**值**|列出 [變數] 中輸入屬性的每個狀態。|  

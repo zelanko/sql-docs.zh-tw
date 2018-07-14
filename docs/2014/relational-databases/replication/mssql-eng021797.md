@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021797 error
 ms.assetid: 54d83a1e-43fd-449c-a2b2-fdda2609a534
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7cd600a0213a22d7eb074cd7e7c8539b773c1f1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e399cf0b18499dde678b70a48053c08993df6a9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234818"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     

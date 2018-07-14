@@ -1,5 +1,5 @@
 ---
-title: 原始檔控制基本概念 |Microsoft 文件
+title: 原始檔控制基本概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], providers
 - source controls [SQL Server Management Studio]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - source controls [SQL Server Management Studio], clients
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5da8bd18f4ae5e62e5b9177a3ba76ac446bc1a6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1c70c039fd32643dc69c12e76109f5a7fc900379
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217848"
 ---
 # <a name="source-control-basics"></a>原始檔控制基本概念
   「原始檔控制」是指利用一段中央伺服器軟體來儲存和追蹤檔案版本及控制檔案存取動作的系統。 典型的原始檔控制系統包括一個原始檔控制提供者及兩個或更多原始檔控制用戶端。  

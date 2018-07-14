@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 指令碼專案，在 SQL Server Management Studio |Microsoft 文件
+title: Analysis Services 指令碼專案，在 SQL Server Management Studio |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Analysis Services]
 - scripts [Analysis Services], projects
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - items [Analysis Services]
 ms.assetid: c4f5a06b-e2e4-4660-a3a8-6fd356742c02
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2fb85f3620a24b75d25b4e44f36b8385fcc1c12e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8aac556b6547656303d4baefb591c2e9f3f13fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033794"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216408"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 指令碼專案
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立 Analysis Server 指令碼專案，將相關的指令碼組合在一起，以供開發、管理和原始檔控制使用。 如果 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中目前未載入方案，則建立新的 Analysis Server 指令碼專案會自動建立新方案。 否則，可以將新的 Analysis Server 指令碼專案加入到現有的方案，或是在新的方案中建立。  

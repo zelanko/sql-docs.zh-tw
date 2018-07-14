@@ -1,5 +1,5 @@
 ---
-title: 教學課程 （報表產生器） |Microsoft 文件
+title: 教學課程 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92d54d4e6f0db25605bf3d59ac7de59953d43d71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: d5c422eded8ac3ffb54306790c88a80b0f841736
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266154"
 ---
 # <a name="tutorials-report-builder"></a>教學課程 (報表產生器)
   使用下列報表產生器教學課程，了解如何建立基本報表。  
@@ -29,7 +29,7 @@ ms.locfileid: "36033190"
   
  如需這些必要條件的說明，請連絡報表伺服器管理員。  
   
- [取得資料連接的替代方式&#40;報表產生器&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
+ [若要取得資料連接的替代方式&#40;報表產生器&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  大部分這些教學課程都是使用內嵌資料來源。 如果您具有共用資料來源的存取權，就可以改用該類的資料來源。 這個主題提供關於使用共用資料來源的步驟。  
   
  [教學課程： 建立基本資料表報表&#40;報表產生器&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "36033190"
  [教學課程：格式化文字 &#40;報表產生器&#41;](tutorial-format-text-report-builder.md)  
  請遵循此教學課程中的步驟，了解可讓您格式化報表內的文字之眾多方式的其中幾種。  
   
- [教學課程： 將直條圖加入至報表&#40;報表產生器&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [教學課程： 將直條圖新增至您的報表&#40;報表產生器&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  請遵循這個教學課程中的步驟來學習如何將含有移動平均的直條圖加入至報表。  
   
  [教學課程： 將圓形圖加入至報表&#40;報表產生器&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b28c191bb07ca9898c594de82dee6b27592786f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e35294a2a98d71c67553791732520cb8c710c29e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032356"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246893"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>步驟 1：建立工作資料夾和環境變數
   在這項工作中，您將建立工作資料夾 (C:\DeploymentTutorial) 和新的系統環境變數 (`DataTransfer` 與 `LoadXMLData`)，並稍後在教學課程工作中使用。  
@@ -52,11 +52,11 @@ ms.locfileid: "36032356"
   
 4.  在 [環境變數] 對話方塊的 [系統變數] 框架中，按一下 [新增]。  
   
-5.  在**新增系統變數** 對話方塊中，輸入`DataTransfer`中**變數名稱** 方塊中，和`C:\DeploymentTutorial\datatransferconfig.dtsconfig`中**變數值**方塊。  
+5.  在**新增系統變數** 對話方塊中，輸入`DataTransfer`中**變數的名稱** 方塊中，並`C:\DeploymentTutorial\datatransferconfig.dtsconfig`中**變數值** 方塊中。  
   
 6.  按一下 [確定] 。  
   
-7.  按一下**新增**同樣地，然後輸入`LoadXMLData`中**變數名稱** 方塊中，和`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`中**變數值**方塊。  
+7.  按一下 **新增**同樣地，並輸入`LoadXMLData`中**變數名稱** 方塊中，和`C:\DeploymentTutorial\loadxmldataconfig.dtsconfig`中**變數值** 方塊中。  
   
 8.  按一下 [確定]，結束 [環境變數] 對話方塊。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "36032356"
   
 4.  在 [環境變數] 對話方塊的 [系統變數] 框架中，按一下 [新增]。  
   
-5.  在**新增系統變數** 對話方塊中，輸入`DataTransfer`中**變數名稱** 方塊中，和`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig`中**變數值**方塊。  
+5.  在**新的系統變數** 對話方塊中，輸入`DataTransfer`中**變數的名稱** 方塊中，和`C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig`中**變數值** 方塊中。  
   
 6.  按一下 [確定] 。  
   
-7.  按一下**新增**同樣地，然後輸入`LoadXMLData`中**變數名稱** 方塊中，和`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`中**變數值**方塊。  
+7.  按一下 **新增**同樣地，並輸入`LoadXMLData`中**變數名稱** 方塊中，和`C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig`中**變數值** 方塊中。  
   
 8.  按一下 [確定]，結束 [環境變數] 對話方塊。  
   
@@ -89,6 +89,6 @@ ms.locfileid: "36032356"
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [步驟 2：建立部署專案](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
   

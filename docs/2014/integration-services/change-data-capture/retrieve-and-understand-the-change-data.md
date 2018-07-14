@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],retrieving data
 ms.assetid: af366697-6942-42bb-aea5-18fdef018965
 caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6c988753a95649e196e6c3bc02de3a4958985ce2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef5b69cd42f5809d2f14bf7d09c256c05ec15d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235298"
 ---
 # <a name="retrieve-and-understand-the-change-data"></a>擷取與了解變更資料
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中，第一個工作是執行可擷取變更資料的查詢。 您可以在「資料流程」工作的來源元件內部執行這個查詢。 然後，您可以使用下游轉換和目的地，將變更資料套用到您的目的地。  

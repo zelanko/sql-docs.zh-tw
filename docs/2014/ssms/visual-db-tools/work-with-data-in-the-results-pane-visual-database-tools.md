@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - queries [Visual Database Tools]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 65172c670d13b1cf38f3017d3477c5a3888014fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 56c05c3d2b67c7e468fbf66930b3321de742c90e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249508"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>使用結果窗格中的資料 (Visual Database Tools)
   在您執行查詢或檢視後，結果會顯示在 [結果] 窗格中。 接著您就可以使用這些結果。 例如，您可以加入與刪除資料列，輸入或變更資料，並且輕易地巡覽大筆的結果集。  
@@ -119,9 +119,9 @@ ms.locfileid: "36034077"
 ### <a name="what-can-not-be-represented-fully"></a>何者無法完整表示  
  從資料庫傳回 [結果] 窗格的資料，大部份是由您所使用之資料來源的提供者控制。 [結果] 窗格未必能轉譯來自所有資料庫管理系統之資料。 此處的範例即有這種情形。  
   
--   通常二進位資料類型對於在 [結果] 窗格中工作的人不太有用，而且下載要花費很長的時間。 讓這些原則由*\<二進位資料 >* 或*Null*。  
+-   通常二進位資料類型對於在 [結果] 窗格中工作的人不太有用，而且下載要花費很長的時間。 因此它們都由*\<二進位資料 >* 或是*Null*。  
   
--   有效位數與小數位數未必會被保留。 例如，[結果] 窗格支援 27 位數的有效位數。 如果具有較高的精確度的資料類型的資料，資料可能會被截斷，或可能由*\<無法讀取資料 >*。  
+-   有效位數與小數位數未必會被保留。 例如，[結果] 窗格支援 27 位數的有效位數。 若資料具有較高的有效位數的資料類型，資料可能會被截斷，或可能由*\<無法讀取資料 >*。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行基本查詢作業&#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

@@ -1,5 +1,5 @@
 ---
-title: EntityContainer 元素 (CSDLBI) |Microsoft 文件
+title: EntityContainer 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e328558e-16b0-4d4a-a79a-fdd3c9493595
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 3c357a61a238c10244dd9f1941cdaa9483ef9d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3e7b477c8f972f277db921c7adb6f9511efb065c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275204"
 ---
 # <a name="entitycontainer-element-csdlbi"></a>EntityContainer 元素 (CSDLBI)
   EntityContainer 元素是以 CSDL 類型 EntityContainer 為基礎的複雜類型，會定義單一資料模型中實體的集合。 在商業智慧應用程式中，EntityContainer 所代表的資料模型可能包含多個以關聯性連結資料行的資料表，以及計算、量值和 KPI。 它在概念上與資料庫或資料來源類似。  
@@ -32,20 +32,20 @@ ms.locfileid: "36031518"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表描述定義 EntityContainer 的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
-|[屬性]|是|資料模型的名稱。|  
+|名稱|是|資料模型的名稱。|  
 |Caption|否|資料庫或資料模型的描述。|  
 |Culture|是|包含要求 LCID 的字串。|  
 |CompareOptions|是|模型的語言特有排序和字串比較選項。|  
 |DirectQueryMode|否|列舉，指出模型使用 DirectQuery 模式時的查詢模式。|  
-|EntitySet 元素|是|[EntitySet 元素&#40;CSDLBI&#41;](entityset-element-csdlbi.md)|  
-|AssociationSet 元素|否|[AssociationSet 元素&#40;CSDLBI&#41;](associationset-element-csdlbi.md)|  
+|EntitySet 元素|是|[EntitySet 項目&#40;CSDLBI&#41;](entityset-element-csdlbi.md)|  
+|AssociationSet 元素|否|[AssociationSet 項目&#40;CSDLBI&#41;](associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>CompareOptions 元素  
  CompareOptions 屬性 (Attribute) 會定義套用至資料模型的定序屬性 (Property)。 CompareOptions 所定義的屬性衍生自模型設計階段在 Analysis Services 資料庫中設定之排序次序、區分假名和區分大小寫的設定。 下表描述了當做 CompareOptions 屬性一部分加入的值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |IgnoreCase|布林值，指出字串比較是否應忽略大小寫。|  
 |IgnoreNonSpace|布林值，指出字串比較是否應忽略不佔空間的合併字元，例如變音符號。|  
@@ -53,11 +53,11 @@ ms.locfileid: "36031518"
 |IgnoreWidth|布林值，指出字串比較是否應忽略字元寬度。|  
   
 ## <a name="directquerymode"></a>DirectQueryMode  
- **DirectQueryMode**  
+ **Directquery 模式**  
   
  簡單類型 DirectQueryMode 會定義模型可直接從關聯式資料來源接收資料時，預設使用的查詢類型。 此屬性只適用於以 DirectQuery 模式執行的表格式模型。 下表列出 DirectQuery 模式列舉的可能值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |InMemory|指出對照模型的查詢將使用快取中的資料。|  
 |InMemoryWithDirectQuery|指出對照模型的查詢預設將使用來自關聯式資料來源的資料。|  
@@ -115,6 +115,6 @@ ms.locfileid: "36031518"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [EntitySet 元素&#40;CSDLBI&#41;](entityset-element-csdlbi.md)  
+ [EntitySet 項目&#40;CSDLBI&#41;](entityset-element-csdlbi.md)  
   
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reordering output columns [SQL Server]
 - output columns [SQL Server]
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bfceaa1acaa61bb58399a528cfda03a7da80e8a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: aef4c693b0b90d7d288fc13825b1b18e0d3ad8ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212438"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>重新排列輸出資料行順序 (Visual Database Tools)
   資料行加入選取查詢中的順序，決定資料行出現在結果中的順序。 第一個加入的資料行會出現在結果的最左側，接著是第二個資料行，依此類推。  

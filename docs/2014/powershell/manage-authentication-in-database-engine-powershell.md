@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: d444739180c4326dd68af08be0a382c0e0ff6cb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f7ec9327a35e9ba110dd9d93db53c50b5c130f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227808"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>管理 Database Engine PowerShell 中的驗證
-  依預設，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體時， [!INCLUDE[ssDE](../includes/ssde-md.md)]PowerShell 元件會使用 Windows 驗證。 您可以使用 SQL Server 驗證，藉由定義 PowerShell 虛擬磁碟機，或藉由指定`–Username`和`–Password`參數`Invoke-Sqlcmd`。  
+  依預設，連接至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體時， [!INCLUDE[ssDE](../includes/ssde-md.md)]PowerShell 元件會使用 Windows 驗證。 您可以使用 SQL Server 驗證，藉由定義 PowerShell 虛擬磁碟機，或藉由指定`–Username`並`–Password`參數`Invoke-Sqlcmd`。  
   
 1.  **Before you begin:**  [Permissions](#Permissions)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36035721"
 ##  <a name="Permissions"></a> 權限  
  您在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的執行個體中可執行的所有動作，都是透過授與用來連接至執行個體之驗證認證的權限所控制。 依預設， [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者和 Cmdlet 會使用用來建立 [!INCLUDE[ssDE](../includes/ssde-md.md)]之 Windows 驗證連接的 Windows 帳戶。  
   
- 若要進行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接，您必須提供 SQL Server 驗證登入識別碼和密碼。 當使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供者，您必須使[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入認證與虛擬磁碟機，然後使用變更目錄命令 (`cd`) 連接到該磁碟機。 在 Windows PowerShell 中，安全性認證只能與虛擬磁碟機產生關聯。  
+ 若要進行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證連接，您必須提供 SQL Server 驗證登入識別碼和密碼。 使用時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]提供者，您必須將產生關聯[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]登入認證與虛擬磁碟機，然後使用變更目錄命令 (`cd`) 連接到該磁碟機。 在 Windows PowerShell 中，安全性認證只能與虛擬磁碟機產生關聯。  
   
 ##  <a name="SQLAuthVirtDrv"></a> 使用虛擬磁碟機的 SQL Server 驗證  
  **建立與 SQL Server 驗證登入相關聯的虛擬磁碟機**  
@@ -51,7 +51,7 @@ ms.locfileid: "36035721"
 ### <a name="example-virtual-drive"></a>範例 (虛擬磁碟機)  
  此範例會建立名為 **sqldrive** 的函數，可讓您用來建立與指定之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 驗證登入和執行個體相關聯的虛擬磁碟機。  
   
- **sqldrive** 函數會提示您輸入登入的密碼，並且在您輸入時遮罩密碼。 然後，每當您使用變更目錄命令 (`cd`) 若要使用虛擬磁碟機名稱連接至的路徑，所有作業都都是透過使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]時建立磁碟機時所提供的驗證登入認證。  
+ **sqldrive** 函數會提示您輸入登入的密碼，並且在您輸入時遮罩密碼。 然後，每當您使用變更目錄命令 (`cd`) 來使用虛擬磁碟機名稱，以連接到路徑，所有作業都都由使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]時建立磁碟機時所提供的驗證登入認證。  
   
 ```  
 ## Create a function that specifies the login and prompts for the password.  

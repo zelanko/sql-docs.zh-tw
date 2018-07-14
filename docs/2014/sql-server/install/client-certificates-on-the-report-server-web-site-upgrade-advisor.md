@@ -1,5 +1,5 @@
 ---
-title: 報表伺服器的網站 (Upgrade Advisor) 的用戶端憑證 |Microsoft 文件
+title: 用戶端憑證，在報表伺服器網站上 (Upgrade Advisor) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], upgrade issues
 ms.assetid: 5ecce26b-99df-4109-8e51-d150d369dff7
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 4d08cf58e6908aa8aba187e1e192a05b85b95c96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 93128f60320fbcf82a3368d6008fe647497fa4dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270284"
 ---
 # <a name="client-certificates-on-the-report-server-web-site-upgrade-advisor"></a>報表伺服器網站上的用戶端憑證 (Upgrade Advisor)
   Upgrade Advisor 在主控報表伺服器或報表管理員虛擬目錄的 IIS 網站上偵測到一或多個用戶端憑證。  

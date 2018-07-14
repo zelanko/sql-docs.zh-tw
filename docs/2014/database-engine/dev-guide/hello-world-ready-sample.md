@@ -1,5 +1,5 @@
 ---
-title: Hello World Ready 範例 |Microsoft 文件
+title: Hello World Ready 範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e4fed72859ff91a9a0056529893c7f5664fe6254
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7d94ed99238f6e4a38b92059ad7cd5571abd47e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235598"
 ---
 # <a name="hello-world-ready-sample"></a>Hello World Ready 範例
   Hello World Ready 範例示範涉及建立、部署及測試以簡單全球化整備 Common Language Runtime (CLR) 整合為基礎之預存程序的基本作業。 全球化整備元件可以輕鬆地當地語系化成全世界不同市場的不同語言，而不變更元件的原始程式碼。 此範例還示範如何透過輸出參數，以及透過由預存程序動態建構及傳回至用戶端的記錄來傳回資料。此範例與 Hello World 範例幾乎相同，但它可更容易、更安全地當地語系化此應用程式。 若要變更當地語系化文字，需要依照以下進行：  
   
-1.  變更 XML 檔案 (。`resx` 檔案） 的資源目錄中的特定文化特性  
+1.  變更 XML 檔案 (。`resx` 在 [資源] 目錄中的特定文化特性的檔案）  
   
 2.  使用 `resgen` 建立文化資源檔  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36032622"
   
  CLR 預存程序本身的原始程式碼和組件不會變更。 系統會提供 `build.cmd` 指令碼，其示範如何編譯及連結資源組件。雖然應用程式的原始程式碼會根據目前正在執行的組件建立資源管理員，但是您不一定要在包含預存程序的 DLL 中內嵌文化特性中性的資源。 `System.Resources.NeutralResourcesLanguage attribute` 允許文化特性中性的資源存在於附屬 DLL 中。 為此最好使用個別的 DLL，如此一來，當需要加入或變更當地語系化文字時，就無須變更包含 CLR 預存程序的主要 DLL。 這對 CLR 使用者定義型別特別有用，這些型別可能含有資料行及其他相依性，而使得型別難以卸除及重新加入。通常，附屬 DLL 版本必須與主組件版本相同。 不過，您也可以使用 `SatelliteContractVersion` 屬性來允許主組件更新，而不更新附屬組件。 如需詳細資訊，請參閱 Microsoft .NET 文件集中的 `ResourceManager` 類別。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  此範例僅適用於 SQL Server 2005 和更新版本。  
   
  若要建立並執行這個專案，您必須安裝下列軟體：  
@@ -83,7 +83,7 @@ ms.locfileid: "36032622"
   
 4.  在 c:\MySample 中，建立 `messages.resx` 檔案並將範例程式碼複製到此檔案中。  
   
-5.  在 c:\MySample，建立檔案`messages.de.resx`來儲存檔案`messages.resx`為`messages.de.resx`之後變更的行  
+5.  在 c:\MySample，建立檔案`messages.de.resx`存檔以`messages.resx`做為`messages.de.resx`之後變更的行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36032622"
   
     -   `<value xml:space="preserve">Hallo Welt!</value>`  
   
-6.  在 c:\MySample，建立檔案`messages.es.resx`來儲存檔案`messages.resx`為`messages.es.resx`之後變更的行  
+6.  在 c:\MySample，建立檔案`messages.es.resx`存檔以`messages.resx`做為`messages.es.resx`之後變更的行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36032622"
   
     -   `<value xml:space="preserve">Hola a todos</value>`  
   
-7.  在 c:\MySample，建立檔案`messages.fr.resx`來儲存檔案`messages.resx`為`messages.fr.resx`之後變更的行  
+7.  在 c:\MySample，建立檔案`messages.fr.resx`存檔以`messages.resx`做為`messages.fr.resx`之後變更的行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36032622"
   
     -   `<value xml:space="preserve">BonjourÂ !</value>`  
   
-8.  在 c:\MySample，建立檔案`messages.fr-FR.resx`來儲存檔案`messages.resx`為`messages.fr-FR.resx`之後變更的行  
+8.  在 c:\MySample，建立檔案`messages.fr-FR.resx`存檔以`messages.resx`做為`messages.fr-FR.resx`之後變更的行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36032622"
   
     -   `<value xml:space="preserve">Bonjour de France!</value>`  
   
-9. 在 c:\MySample，建立檔案`messages.it.resx`來儲存檔案`messages.resx`為`messages.it.resx`之後變更的行  
+9. 在 c:\MySample，建立檔案`messages.it.resx`存檔以`messages.resx`做為`messages.it.resx`之後變更的行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36032622"
   
     -   `<value xml:space="preserve">Buongiorno</value>`  
   
-10. 在 c:\MySample，建立檔案`messages.ja.resx`來儲存檔案`messages.resx`為`messages.ja.resx`之後變更的行  
+10. 在 c:\MySample，建立檔案`messages.ja.resx`存檔以`messages.resx`做為`messages.ja.resx`之後變更的行  
   
     -   `<value xml:space="preserve">Hello, World!</value>`  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36032622"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-16. 複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存成`test.sql`範例目錄中。  
+16. 複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存為`test.sql`範例目錄中。  
   
 17. 使用下列命令來執行測試指令碼  
   

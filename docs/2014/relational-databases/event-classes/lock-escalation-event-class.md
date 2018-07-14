@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - lock escalation [SQL Server], event class
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a94bcf40a3a87571d0d79584585a5c9945ca51b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8ad2b7025a97d4f5d3ec585531b786c437b8e453
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280164"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation 事件類別
   **Lock:Escalation** 事件類別指出細粒鎖定已經轉換成粗粒鎖定；例如，轉換成物件鎖定的資料列鎖定。 擴大事件類別是事件識別碼 60。  
@@ -60,7 +60,7 @@ ms.locfileid: "36034146"
 |**SessionLoginName**|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|`ntext`|導致鎖定擴大之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。|@shouldalert|是|  
+|**TextData**|`ntext`|導致鎖定擴大之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。|1|是|  
 |**TransactionID**|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |**型別**|`int`|鎖定擴大資料粒度：<br /><br /> 1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT (資料表層級)<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=HOBT<br /><br /> 13=ALLOCATION_UNIT|57|是|  
   

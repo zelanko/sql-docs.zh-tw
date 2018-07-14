@@ -1,5 +1,5 @@
 ---
-title: 啟用加密的連接到 Database Engine （SQL Server 組態管理員） |Microsoft 文件
+title: 啟用加密的連接到 Database Engine （SQL Server 組態管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], encrypted
 - SSL [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87550bc2c29485eaa1f4ad10e6ca82b79af19724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6a75c1657624475467df1a367e1830145ac561a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034843"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275444"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>啟用 Database Engine 的加密連接 (SQL Server 組態管理員)
   此主題描述如何使用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 組態管理員指定 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的憑證，以啟用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的加密連接。 伺服器電腦必須提供憑證，且用戶端機器必須設定為信任該憑證的根授權單位。 提供是安裝憑證的處理序，方法是將它匯入 Windows。  
@@ -53,7 +53,7 @@ ms.locfileid: "36034843"
   
      [設定伺服器接受加密的連接](#ConfigureServerConnections)  
   
-     [設定用戶端要求加密的連接](#ConfigureClientConnections)  
+     [設定用戶端要求加密的連線](#ConfigureClientConnections)  
   
      [從 SQL Server Management Studio 加密連接](#EncryptConnection)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36034843"
   
 ###  <a name="Provision"></a> 若要在伺服器上提供 (安裝) 憑證  
   
-1.  上**啟動**功能表上，按一下**執行**，然後在**開啟**方塊中，輸入`MMC`按一下**確定**。  
+1.  上**開始**功能表上，按一下**執行**，然後在**開啟**方塊中，輸入`MMC`，按一下 **確定**。  
   
 2.  在 MMC 主控台的 [檔案] 功能表上，按一下 [新增/移除嵌入式管理單元]。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36034843"
   
 1.  在 [SQL Server 組態管理員] 中，展開 [SQL Server 網路組態]，並以滑鼠右鍵按一下 [\<伺服器執行個體> 的通訊協定]，然後選取 [屬性]。  
   
-2.  在 **通訊協定 * * *\<執行個體名稱 >* **屬性**對話方塊**憑證**索引標籤上，清單中選取所需的憑證，從下拉式清單如**憑證**方塊，然後再按一下**確定**。  
+2.  在 **通訊協定 * * *\<執行個體名稱 >* **屬性**對話方塊中，於**憑證**索引標籤上，清單中選取所需的憑證，從下拉式清單針對**憑證**方塊，然後再按一下**確定**。  
   
 3.  在 **[旗標]** 索引標籤的 **[ForceEncryption]** 方塊中選取 **[是]**，然後按一下 **[確定]** 以關閉對話方塊。  
   

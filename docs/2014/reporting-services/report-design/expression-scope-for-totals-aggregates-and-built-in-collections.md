@@ -1,5 +1,5 @@
 ---
-title: Expression Scope for Totals，Aggregates，and Built-in Collections (Report Builder and SSRS) |Microsoft 文件
+title: Expression Scope for Totals，Aggregates，and Built-in Collections （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7d5121675cb7448ae939b0442752b33af19dde5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b3347d17fd115e0d9eb8b8d71e672a63f4c0fa5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253510"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>總計、彙總與內建集合的運算式範圍 (報表產生器及 SSRS)
   撰寫運算式時，您會發現 *「範圍」* (Scope) 一詞用於多個內容。 範圍可以指定要用於評估運算式的資料、轉譯頁面上的文字方塊集合、可以根據切換顯示或隱藏之報表項目的集合。 您將會在與運算式評估、彙總函式語法、條件式可用性相關的主題中，以及與這些領域相關的錯誤訊息中看 *「範圍」* (Scope) 一詞。 使用下列描述來協助區分 *「範圍」* (Scope) 適用的意義：  
@@ -166,15 +166,15 @@ ms.locfileid: "36035169"
   
   
 ##  <a name="Nulls"></a> 在資料格中隱藏 Null 或零值  
- 對於許多報表而言，群組範圍的計算可能會建立許多值為零 (0) 或 Null 的資料格。 為減少報表中混亂的情形，加入一個運算式，以便在彙總值為 0 時，傳回空白。 如需詳細資訊，請參閱 「 範例隱藏 Null 或零值的 「 中[運算式範例&#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
+ 對於許多報表而言，群組範圍的計算可能會建立許多值為零 (0) 或 Null 的資料格。 為減少報表中混亂的情形，加入一個運算式，以便在彙總值為 0 時，傳回空白。 詳細資訊，請參閱 「 範例隱藏 Null 或零值的"，在[運算式範例&#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)。  
   
   
   
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)   
- [建立遞迴階層群組&#40;報表產生器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [建立遞迴階層群組&#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [格式化文字和預留位置&#40;報表產生器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

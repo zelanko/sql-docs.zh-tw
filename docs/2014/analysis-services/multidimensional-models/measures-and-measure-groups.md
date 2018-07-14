@@ -1,5 +1,5 @@
 ---
-title: 量值和量值群組 |Microsoft 文件
+title: 量值和量值群組 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
 - measures [Analysis Services], about measures
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fact tables [Analysis Services]
 ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 74904af589aee642d0c83524f3a6dd71b3390371
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba5a5c5b9ebf6bf7dcbf3b5340db941c7f662cf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255630"
 ---
 # <a name="measures-and-measure-groups"></a>量值和量值群組
   Cube 包含「量值群組」中的「量值」、商務邏輯，以及可以在求取量值所提供之數值資料的值時提供內容的維度集合。 量值和量值群組均為 Cube 的重要元件。 Cube 的存在至少須具備其中一項元件。  
@@ -50,11 +50,11 @@ ms.locfileid: "36034874"
   
  每個 Cube 至少須有一個量值，但大部分 Cube 都有許多量值，有時數量可達數百。 從結構來說，量值通常會對應到事實資料表中的來源資料行，再由資料行提供用以載入量值的值。 或者，您也可以使用 MDX 定義量值。  
   
- 量值取決於內容，並會在查詢中所含之維度成員所指定的內容中，對數值資料作業。 例如，計算的量值**轉售商銷售**由`Sum`運算子，它會將銷售數量之查詢中包含每個維度成員。 無論查詢指定個別的產品、彙總成一個類別，或是依時間或地理位置切割，量值所衍生的作業對查詢中所含的維度而言，都必須有效。  
+ 量值取決於內容，並會在查詢中所含之維度成員所指定的內容中，對數值資料作業。 例如，計算的量值**轉售商銷售**由`Sum`運算子，將每個維度成員包含在查詢中加入的銷售金額。 無論查詢指定個別的產品、彙總成一個類別，或是依時間或地理位置切割，量值所衍生的作業對查詢中所含的維度而言，都必須有效。  
   
  在此範例中，「轉售商銷售」會彙總成「銷售領域」階層的各種層級。  
   
- ![樞紐分析表與量值和維度叫出](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "具有量值和維度叫出樞紐分析表")  
+ ![量值和維度所呼叫的樞紐分析表](../media/ssas-keyconcepts-pivot1-measures-dimensions.png "具有量值和維度叫出樞紐分析表")  
   
  當事實資料表中所含的數值來源資料，也包含查詢中所用之維度資料表的指標時，量值會產生有效的結果。 在轉售商銷售的範例中，每個資料列除了儲存銷售金額之外，也會儲存對產品資料表、日期資料表中或銷售領域資料表的指標，如此才能正確地解析包含這些維度成員的查詢。  
   

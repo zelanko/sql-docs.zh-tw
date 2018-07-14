@@ -1,5 +1,5 @@
 ---
-title: 屬性元素 (CSDLBI) |Microsoft 文件
+title: Property 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: f0770c5e-6420-4d0c-a5bf-b94eaf6877ca
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: a4d1ab0082c4b5475e0fc54127e7b80f63a9b983
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e056baf1edf447b0ed321406af12f9260dfcdd12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280034"
 ---
 # <a name="property-element-csdlbi"></a>Property 元素 (CSDLBI)
   CSDLBI 中的 Property 元素是複雜類型，它為 CSDL Property 元素提供了新增功能，以支援商業智慧資料模型。  
@@ -28,7 +28,7 @@ ms.locfileid: "36035317"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 CSDLBI Property 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |目錄|否|包含要求 LCID 的字串。|  
 |DefaultAggregationFunction|是|字串，指定對屬性執行計算且未指定其他函數時，應使用的彙總函式。<br /><br /> 如果未指定，則會使用模型的預設彙總，通常是 SUM。|  
@@ -39,7 +39,7 @@ ms.locfileid: "36035317"
 ## <a name="groupingbehavior"></a>GroupingBehavior  
  下表列出 GroupingBehavior 簡單類型的值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |GroupOnValue|依 xthe 屬性的值分組。|  
 |GroupOnEntityKey|依實體索引鍵分組。|  
@@ -53,7 +53,7 @@ ms.locfileid: "36035317"
 ## <a name="stability"></a>Stability  
  下表列出 `Stability` 簡單類型的值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |Stable|屬性在重新整理作業之間會維持不變。|  
 |RowNumber|屬性包含資料列號碼。|  

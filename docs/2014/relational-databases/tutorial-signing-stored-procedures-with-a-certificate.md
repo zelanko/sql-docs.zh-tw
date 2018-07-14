@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3d566f1d2b4bc741a748f4e355c54cbc30ced815
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: fc43b135ce263a187009fbc0f7e42a45d6d049b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270614"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>教學課程：使用憑證簽署預存程序
   這個教學課程說明如何使用由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]產生的憑證來簽署預存程序。  
@@ -196,7 +196,7 @@ GO
   
  如需 REVERT 陳述式的詳細資訊，請參閱 [REVERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/revert-transact-sql)。  
   
-##  <a name="CompleteExample"></a> 完整範例  
+##  <a name="CompleteExample"></a> 完整的範例  
  本節顯示完整的範例程式碼。  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: RootMemberIf 元素 (ASSL) |Microsoft 文件
+title: RootMemberIf 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RootMemberIf element
 ms.assetid: b695e271-c748-4abc-a09f-acb1014f768f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a923b08efc636d2635d60b00f85c42dc00a312e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7ac45d2111b8d3631160ce78f131f98d53230e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280294"
 ---
 # <a name="rootmemberif-element-assl"></a>RootMemberIf 元素 (ASSL)
   決定如何識別父屬性的根成員。  
@@ -62,14 +62,14 @@ ms.locfileid: "36032396"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 值`RootMemberIf`項目僅供父屬性 (換言之的值[使用量](usage-element-dimensionattribute-assl.md)元素`DimensionAttribute`父項目設定為*父*) 來判斷根 （父子式階層最上層） 成員。  
+ 值`RootMemberIf`項目僅供父屬性 (亦即的值[使用量](usage-element-dimensionattribute-assl.md)項目`DimensionAttribute`父項目設定為*父*) 來判斷根 （父子式階層最上層） 成員。  
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|*ParentIsBlankSelfOrMissing*|只有符合一或多個如所述條件的成員*ParentIsBlank*， *ParentIsSelf*，或*ParentIsMissing*會被視為根成員。|  
-|*ParentIsBlank*|只有具有 null、 零或空字串索引鍵所代表的資料行成員[KeyColumns](../collections/columns-element-assl.md)集合`DimensionAttribute`會被視為根成員。|  
+|*ParentIsBlankSelfOrMissing*|只有符合下列其中一或多個如所述條件的成員才*ParentIsBlank*， *ParentIsSelf*，或*ParentIsMissing*會被視為根成員。|  
+|*ParentIsBlank*|只有具有 null、 零或空字串索引鍵所代表的資料行的成員，才[KeyColumns](../collections/columns-element-assl.md)的集合`DimensionAttribute`會被視為根成員。|  
 |*ParentIsSelf*|只有本身是父系的成員會被視為根成員。|  
 |*ParentIsMissing*|只有找不到父系的成員會被視為根成員。|  
   

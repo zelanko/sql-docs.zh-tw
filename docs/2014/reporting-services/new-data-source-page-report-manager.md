@@ -1,5 +1,5 @@
 ---
-title: 新增資料來源頁面 （報表管理員） |Microsoft 文件
+title: 新增資料來源頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
 caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4c951f5dbf663d7a6f55b493aeac86cd32c0f72a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57c22c0f39b411510fb70c5a5068ce4930674555
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280384"
 ---
 # <a name="new-data-source-page-report-manager"></a>新增資料來源頁面 (報表管理員)
   使用 [新增資料來源] 頁面來建立共用資料來源項目。 共用資料來源定義外部資料來源的連接。 您可以利用共用資料來源來建立和維護資料來源連接的設定，與使用該資料來源的報表、模型和資料驅動訂閱分開處理。  
@@ -47,20 +47,20 @@ ms.locfileid: "36035382"
  選取以啟用或停用共用資料來源。 您可以停用共用資料來源，以避免報表處理參考該項目的所有報表和模型。  
   
  **資料來源類型**  
- 指定用來處理資料來源之資料的資料處理延伸模組。 報表伺服器包含資料處理延伸模組[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 Oracle、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、 SAP、 XML、 ODBC 和 OLE DB。 其他的資料處理延伸模組可向協力廠商索取。  
+ 指定用來處理資料來源之資料的資料處理延伸模組。 報表伺服器包括資料處理延伸模組[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，Oracle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]、 SAP、 XML、 ODBC 和 OLE DB。 其他的資料處理延伸模組可向協力廠商索取。  
   
- 如需有關遠端和非 SQL 資料來源支援的詳細資訊，請參閱[支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(超連結"http://go.microsoft.com/fwlink/?linkid=232473"http://go.microsoft.com/fwlink/?linkid=232473)和[支援的報表資料來源服務&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
+ 如需有關遠端及非 SQL 資料來源支援的詳細資訊，請參閱[支援的 SQL Server 2012 版本的功能](http://go.microsoft.com/fwlink/?linkid=232473)(超連結"http://go.microsoft.com/fwlink/?linkid=232473"http://go.microsoft.com/fwlink/?linkid=232473)和[支援的報表資料來源服務&#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
  **連接字串**  
  指定報表伺服器用來連接至資料來源的連接字串。 連接類型決定您應該使用的語法。 例如，XML 資料處理延伸模組的連接字串是 XML 文件的 URL。 在大部分狀況下，一般連接字串會指定資料庫伺服器和資料檔案。  
   
- 下列範例說明用來連接到連接字串[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]資料庫：  
+ 下列範例說明用來連接的連接字串[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)]資料庫：  
   
 ```  
 data source=<a SQL Server instance>;initial catalog=AdventureWorks2012  
 ```  
   
- 如需範例和不同的方式指定連接字串的相關資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+ 如需範例和不同的方式，來指定連接字串的相關資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
  **使用連線**  
  指定決定如何取得認證的選項。  
@@ -71,14 +71,14 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **執行報表 （使用下列方式連接） 的使用者所提供的認證**  
  系統會提示每一位使用者輸入使用者名稱和密碼，以存取資料來源。 您可以定義要求使用者認證的提示文字。 預設的文字字串是「請輸入使用者名稱和密碼以存取資料來源」。  
   
- 如果使用者提供的認證是 Windows 驗證認證，請選取 [連接到資料來源時作為 Windows 認證]  。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
+ 如果使用者提供的認證是 Windows 驗證認證，請選取 [連接到資料來源時作為 Windows 認證]  。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
   
  **認證安全地儲存在報表伺服器 （使用下列方式連接）**  
  在報表伺服器資料庫中儲存加密的使用者名稱和密碼。 選擇此選項即可自動執行報表 (例如，由排程或事件啟動而不是由使用者動作啟動的報表)。 如果您要使用預設安全性，使用者名稱就必須是 Windows 網域帳戶。 以此格式指定帳戶：\<網域 >\\< 使用者名稱\>。 您所指定的帳戶必須在主控報表所使用之資料來源的電腦上擁有本機登入權限。  
   
- 如果認證是 Windows 驗證認證，請選取 **[連接到資料來源時作為 Windows 認證]** 。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
+ 如果認證是 Windows 驗證認證，請選取 **[連接到資料來源時作為 Windows 認證]** 。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
   
- 如果您要使用資料庫驗證，請選取 **[連接到資料來源後，模擬已驗證的使用者]** 以便允許資料庫認證的委派，但是只有在資料庫伺服器支援模擬時才應該選取此選項。 如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，此選項會設定 SETUSER 函數。  
+ 如果您要使用資料庫驗證，請選取 **[連接到資料來源後，模擬已驗證的使用者]** 以便允許資料庫認證的委派，但是只有在資料庫伺服器支援模擬時才應該選取此選項。 針對[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，此選項會設定 SETUSER 函數。  
   
  **Windows 整合式的安全性 （使用下列方式連接）**  
  使用目前使用者的 Windows 認證來存取資料來源。 當用來存取資料來源的認證與用來登入網路網域的認證相同時，請選擇此選項。 在針對網域啟用 Kerberos 驗證時，或者資料來源與報表伺服器是在同一部電腦上時，此選項具有最佳的效能。 如果未啟用 Kerberos 驗證，Windows 認證可以傳遞至一部其他電腦。 如果需要其他電腦連線，您會收到錯誤而不是預期的資料。  
@@ -90,7 +90,7 @@ data source=<a SQL Server instance>;initial catalog=AdventureWorks2012
  **不需要認證 （使用連接）**  
  指定不需要認證就可以存取資料來源。 請注意，如果資料來源需要使用者登入，則選擇此選項將沒有作用。 只有當資料來源連接不需要使用者認證時，才應該選擇此選項。  
   
- 若要使用這個選項，您先前必須已針對報表伺服器部署設定了自動執行帳戶。 當認證的其他來源無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。 如需有關此帳戶的詳細資訊，請參閱[設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 若要使用這個選項，您先前必須已針對報表伺服器部署設定了自動執行帳戶。 當認證的其他來源無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。 如需有關此帳戶的詳細資訊，請參閱 <<c0> [ 設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。</c0>  
   
  **確定**  
  按一下即可儲存您的變更。  

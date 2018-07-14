@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 14
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6d9f0a4fd663cfcd6bf3e3bad827429bc2f0133b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 38a2dbeed7220f0300015ba8741795603856f898
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034137"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279394"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>備份含有記憶體最佳化資料表的資料庫
   記憶體最佳化資料表會當做正常資料庫備份的一部分進行備份。 如果是磁碟資料表，資料庫備份作業會驗證資料的 CHECKSUM 和差異檔案組，以便偵測是否有儲存體損毀。  
@@ -43,7 +43,7 @@ ms.locfileid: "36034137"
 |正在轉換為標記|僅限檔案中繼資料|  
 |標記|僅限檔案中繼資料|  
   
- 包含一個或多個記憶體最佳化資料表之資料庫備份的大小通常超過它在記憶體中的大小，但是小於磁碟儲存空間。 額外的大小將取決於已刪除的資料列數目以及處於「合併來源」和「備份/高可用性所需」狀態之檢查點檔案組的數目 (間接取決於工作負載)。 如需檢查點檔案組狀態的描述，請參閱[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
+ 包含一個或多個記憶體最佳化資料表之資料庫備份的大小通常超過它在記憶體中的大小，但是小於磁碟儲存空間。 額外的大小將取決於已刪除的資料列數目以及處於「合併來源」和「備份/高可用性所需」狀態之檢查點檔案組的數目 (間接取決於工作負載)。 如需檢查點檔案組狀態的描述，請參閱 < [sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql)。  
   
 ### <a name="estimating-size-of-full-database-backup"></a>估計完整資料庫備份的大小  
   

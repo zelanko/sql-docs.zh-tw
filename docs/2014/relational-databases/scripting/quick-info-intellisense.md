@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Quick Info option [IntelliSense]
 - declarations [IntelliSense]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - identifier declarations [IntelliSense]
 ms.assetid: 3c8b59f4-1922-4bde-844f-5f2306514d96
 caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a0ebfe062b9f1d1ad837dd1cf5506c4610bb25a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d0af05ebbf7e44bcf5106bbde9ae393a6efbab3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031645"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225318"
 ---
 # <a name="quick-info-intellisense"></a>快速資訊 (IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 的 **[快速資訊]** 選項會顯示程式碼中之任何識別碼的完整宣告。 當您將滑鼠指標移到識別碼上方時，系統就會在黃色的快顯視窗中顯示它的宣告。 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，資料庫引擎和 XML 查詢編輯器中會提供 **[快速諮詢]** 。  

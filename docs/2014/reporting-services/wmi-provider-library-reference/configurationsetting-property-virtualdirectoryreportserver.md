@@ -1,5 +1,5 @@
 ---
-title: VirtualDirectoryReportServer 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件
+title: VirtualDirectoryReportServer 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportServer property
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8a66c12a8c336e4981065a6d276128f054df20fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: da7229651be1a0bc1ae9801619f5c1c76729cd07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268024"
 ---
 # <a name="virtualdirectoryreportserver-property-wmi-msreportserverconfigurationsetting"></a>VirtualDirectoryReportServer 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回報表伺服器應用程式的虛擬目錄。 唯讀。  

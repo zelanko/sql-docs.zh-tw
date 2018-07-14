@@ -1,5 +1,5 @@
 ---
-title: MergePartitions 元素 (XMLA) |Microsoft 文件
+title: MergePartitions 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MergePartitions command
 ms.assetid: cf538189-0629-49b3-8e01-32afba7b020d
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 80f94365da716e08c50a2b3e0ce8df82132ea99e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64d6352cd0c5a0cb7a408722b501dd62a0d47e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226378"
 ---
 # <a name="mergepartitions-element-xmla"></a>MergePartitions 元素 (XMLA)
   將一個或多個來源資料分割的資料合併至目標資料分割中，然後刪除來源資料分割。  

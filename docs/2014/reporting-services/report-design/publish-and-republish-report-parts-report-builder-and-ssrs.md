@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28c5f5063aa7e1c6e6fabe68405eb08a31feaad4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c9bf84f3d8cd8e0c1b00c4a2e891d6a727b9b91a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035589"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220790"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>發行與重新發行報表組件 (報表產生器及 SSRS)
   您可以使用預設值在預設位置發行報表組件，或者您可以編輯報表組件中繼資料 (例如名稱和描述)，並將其儲存在報表伺服器的其他位置。 如果您有正確的權限，也可以將其儲存到與報表伺服器整合的 SharePoint 網站。  
@@ -61,10 +61,10 @@ ms.locfileid: "36035589"
 >  如果您將其發行為新的報表組件，它將會擁有一個新的唯一識別碼。 如果原始報表組件變更，它不會再接收更新。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表組件&#40;報表產生器和 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [報表組件&#40;報表產生器及 SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [報表組件和報表產生器中的資料集](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [疑難排解報表組件&#40;報表產生器和 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [檢查更新或關閉更新&#40;報表產生器和 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [瀏覽報表組件及設定預設資料夾&#40;報表產生器和 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [檢查更新或關閉更新&#40;報表產生器及 SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [瀏覽報表組件及設定預設資料夾&#40;報表產生器及 SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   

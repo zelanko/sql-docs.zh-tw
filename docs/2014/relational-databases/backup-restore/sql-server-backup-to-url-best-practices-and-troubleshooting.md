@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b4da3c1af787d41c7b1b49ba3edc6b2a191d3ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f2c7a2cc478659dc3ba50a650a15168b37644619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277074"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server 備份至 URL 的最佳作法和疑難排解
   本主題包含從 SQL Server 備份及還原至 Windows Azure Blob 服務的最佳作法和疑難排解提示。  
@@ -45,20 +44,20 @@ ms.locfileid: "36034167"
   
 ## <a name="handling-large-files"></a>處理大型檔案  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業會使用多個執行緒來最佳化 Windows Azure Blob 儲存體服務的資料傳輸。  不過，其效能取決於各種因素，例如 ISV 頻寬和資料庫的大小。 如果您計畫要備份內部部署 SQL Server 資料庫中的大型資料庫或檔案群組，建議您先進行一些輸送量測試。 [Windows Azure 儲存體 SLA](http://go.microsoft.com/fwlink/?LinkId=271619)有最大的 blob，您可以納入考量的處理時間。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份作業會使用多個執行緒來最佳化 Windows Azure Blob 儲存體服務的資料傳輸。  不過，其效能取決於各種因素，例如 ISV 頻寬和資料庫的大小。 如果您計畫要備份內部部署 SQL Server 資料庫中的大型資料庫或檔案群組，建議您先進行一些輸送量測試。 [Windows Azure 儲存體 SLA 的](http://go.microsoft.com/fwlink/?LinkId=271619)有最大的處理時間，您可以納入考量的 blob。  
   
 -   備份大型檔案時，務必遵循**管理備份**一節中的建議使用 `WITH COMPRESSION` 選項。  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>疑難排解備份至 URL 或從中還原  
  以下是一些快速疑難排解備份至 Windows Azure Blob 儲存體服務或從中還原時發生之錯誤的方法。  
   
- 若要避免由於不支援的選項或限制而錯誤，檢閱限制的清單，以及支援 BACKUP 和 RESTORE 命令的資訊中[SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)發行項。  
+ 若要避免由於不支援的選項或限制而導致錯誤，檢閱清單的限制，以及支援 BACKUP 和 RESTORE 命令中的資訊[SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)文章。  
   
  **驗證錯誤：**  
   
 -   WITH CREDENTIAL 是新的選項，而且必須在備份至 Windows Azure Blob 儲存體服務或從中還原時使用。 與認證有關的失敗可能包括：  
   
-     中指定的認證`BACKUP`或`RESTORE`不存在的命令。 若要避免此問題，您可以在 Backup 陳述式中加入 T-SQL 陳述式來建立認證 (如果認證不存在的話)。 以下是您可以使用的範例：  
+     中指定的認證`BACKUP`或`RESTORE`命令不存在。 若要避免此問題，您可以在 Backup 陳述式中加入 T-SQL 陳述式來建立認證 (如果認證不存在的話)。 以下是您可以使用的範例：  
   
     ```  
     IF NOT EXISTS  
@@ -98,7 +97,7 @@ ms.locfileid: "36034167"
 -   從壓縮備份還原時，您可能會看見下列錯誤：  
   
     -   **發生 SqlException 3284。嚴重性: 16 狀態: 5**  
-        **在裝置上訊息： 尚未調 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 未對齊。請以建立備份組所使用的相同區塊大小來重新發出 Restore 陳述式: '65536' 類似可能值。**  
+        **訊息在裝置上的檔案標記 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' 未對齊。請以建立備份組所使用的相同區塊大小來重新發出 Restore 陳述式: '65536' 類似可能值。**  
   
          若要解決此錯誤，請重新發出指定 `BACKUP` 的 `BLOCKSIZE = 65536` 陳述式。  
   
@@ -155,12 +154,12 @@ ms.locfileid: "36034167"
   
     ```  
   
-2.  將組態檔放在 SQL Server 執行個體的 Binn 資料夾。 例如，如果我的 SQL Server 安裝在 C 磁碟機的電腦上，在這裡放在組態檔： *C:\Program Files\Microsoft SQL Server\MSSQL12。\<執行個體名稱 > \MSSQL\Binn*。  
+2.  將組態檔放在 SQL Server 執行個體的 Binn 資料夾。 例如，如果我的 SQL Server 安裝在電腦的 C 磁碟機上，在此放置組態檔： *C:\Program Files\Microsoft SQL Server\MSSQL12。\<執行個體名稱 > \MSSQL\Binn*。  
   
 ## <a name="troubleshooting-sql-server-managed-backup-to-windows-azure"></a>SQL Server Managed Backup 到 Windows Azure 的疑難排解  
  因為 SQL Server Managed Backup 會建置在「備份至 URL」之上，所以稍早章節所述的疑難排解提示適用於使用 SQL Server Managed Backup 的資料庫或執行個體。  疑難排解 SQL Server Managed Backup to Windows Azure 的相關資訊，請參閱詳細[疑難排解 SQL Server Managed Backup to Windows Azure](sql-server-managed-backup-to-microsoft-azure.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [從 Windows Azure 中儲存的備份還原](restoring-from-backups-stored-in-microsoft-azure.md)  
+ [從儲存在 Windows Azure 的備份還原](restoring-from-backups-stored-in-microsoft-azure.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.newaglistener.general.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 caps.latest.revision: 50
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2594ecdb53df53413f3851203ae110c1de754dd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ae14ea283a7558b854481f435d6c9a62e5b51e52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225898"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
   本主題描述如何使用 *、* 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 PowerShell，建立或設定 AlwaysOn 可用性群組的單一 [!INCLUDE[tsql](../../../includes/tsql-md.md)]「可用性群組接聽程式」 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](Availability Group Listener)。  
@@ -164,7 +163,7 @@ ms.locfileid: "36032633"
      `New-SqlAvailabilityGroupListener`  
      建立新的可用性群組接聽程式，並將其附加至現有的可用性群組。  
   
-     例如，下列`New-SqlAvailabilityGroupListener`命令會建立名為可用性群組接聽程式`MyListener`可用性群組`MyAg`。 此接聽程式會使用傳遞給的 IPv4 位址`-StaticIp`參數做為其虛擬 IP 位址。  
+     例如，下列`New-SqlAvailabilityGroupListener`命令會建立名為可用性群組接聽程式`MyListener`可用性群組`MyAg`。 此接聽程式會使用傳遞至的 IPv4 位址`-StaticIp`參數做為其虛擬 IP 位址。  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -207,14 +206,14 @@ ms.locfileid: "36032633"
 ###  <a name="ADQuotas"></a> 由於 Active Directory 配額而無法建立可用性群組接聽程式  
  新可用性群組接聽程式的建立作業可能會在建立時失敗，因為您已達到參與叢集節點電腦帳戶的 Active Directory 配額。  如需詳細資訊，請參閱下列文件：  
   
--   [超連結"http://support.microsoft.com/kb/307532「 如何疑難排解叢集服務帳戶修改電腦物件時](http://support.microsoft.com/kb/307532)  
+-   [超連結"http://support.microsoft.com/kb/307532"如何排解叢集服務帳戶修改電腦物件時](http://support.microsoft.com/kb/307532)  
   
 -   [超連結"http://technet.microsoft.com/library/cc904295(WS.10).aspx「 Active Directory 配額](http://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="FollowUp"></a> 後續操作：建立可用性群組接聽程式之後  
   
 ###  <a name="MultiSubnetFailover"></a> MultiSubnetFailover 關鍵字和相關聯的功能  
- `MultiSubnetFailover` 新的連接字串關鍵字用來啟用 AlwaysOn 可用性群組和 AlwaysOn 容錯移轉叢集執行個體的 SQL Server 2012 中的更快容錯移轉。 當您在連接字串中設定 `MultiSubnetFailover=True` 時，就會啟用下列三項子功能：  
+ `MultiSubnetFailover` 用來加快容錯移轉 AlwaysOn 可用性群組和 AlwaysOn 容錯移轉叢集執行個體，SQL Server 2012 中新的連接字串關鍵字。 當您在連接字串中設定 `MultiSubnetFailover=True` 時，就會啟用下列三項子功能：  
   
 -   將多重子網路快速容錯移轉至 AlwaysOn 可用性群組或容錯移轉叢集執行個體的多重子網路接聽程式。  
   
@@ -242,10 +241,10 @@ ms.locfileid: "36032633"
   
      **優點** ：您不需要增加用戶端連接逾時值。  
   
-     **缺點：** 如果發生跨子網路容錯移轉，用戶端復原時間可能是 15 分鐘或以上，取決於您`HostRecordTTL`設定和跨網站 DNS/AD 複寫排程的設定。  
+     **缺點：** 如果發生跨子網路容錯移轉，用戶端復原時間可能是 15 分鐘或更久，取決於您`HostRecordTTL`設定和跨網站 DNS/AD 複寫排程的設定。  
   
 ###  <a name="RegisterAllProvidersIP"></a> RegisterAllProvidersIP 設定  
- 當您使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或 PowerShell 建立可用性群組接聽程式，用戶端存取點會在 WSFC 中建立`RegisterAllProvidersIP`屬性設定為 1 (true)。 這個屬性值的影響取決於用戶端連接字串，如下所示：  
+ 當您使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或在 WSFC 中建立 PowerShell 建立可用性群組接聽程式，用戶端存取點`RegisterAllProvidersIP`屬性設定為 1 (true)。 這個屬性值的影響取決於用戶端連接字串，如下所示：  
   
 -   將 `MultiSubnetFailover` 設為 true 的連接字串  
   
@@ -265,10 +264,10 @@ ms.locfileid: "36032633"
      `RegisterAllProvidersIP = 1`時，連接字串未使用 `MultiSubnetFailover = True`的任何用戶端將經歷嚴重的連線延遲。 這是因為這些用戶端嘗試循序連接到所有 IP。 相反地，如果 `RegisterAllProvidersIP` 變更為 0，則使用中 IP 位址會在 WSFC 叢集的用戶端存取點中註冊，因而減少舊版用戶端的延遲。 因此，如果您擁有需要連接到可用性群組接聽程式，而且無法使用 `MultiSubnetFailover` 屬性的舊版用戶端，建議您將 `RegisterAllProvidersIP` 變更為 0。  
   
     > [!IMPORTANT]  
-    >  當您建立可用性群組接聽程式 WSFC 叢集 (容錯移轉叢集管理員 GUI)，透過`RegisterAllProvidersIP`會預設為 0 (false)。  
+    >  當您建立可用性群組接聽程式透過 WSFC 叢集 (容錯移轉叢集管理員 GUI)`RegisterAllProvidersIP`會預設為 0 (false)。  
   
 ###  <a name="HostRecordTTL"></a> HostRecordTTL 設定  
- 根據預設，用戶端會快取叢集 DNS 記錄 20 分鐘。  藉由減少`HostRecordTTL`，時間 (TTL)，快取的記錄，舊版用戶端可能會更快速地重新連接。  不過，減少`HostRecordTTL`設定也可能導致傳輸至 DN 伺服器的流量增加。  
+ 根據預設，用戶端會快取叢集 DNS 記錄 20 分鐘。  藉由減少`HostRecordTTL`，時間 (TTL)，快取的資料錄，舊版用戶端可能會更快速地重新連接。  不過，減少`HostRecordTTL`設定也可能導致傳輸至 DN 伺服器的流量增加。  
   
 ###  <a name="SampleScript"></a> 停用 RegisterAllProvidersIP 和減少 TTL 的範例 PowerShell 指令碼  
  下列 PowerShell 範例示範如何設定兩者`RegisterAllProvidersIP`和`HostRecordTTL`叢集接聽程式資源參數。  DNS 記錄將會快取 5 分鐘，而不是預設的 20 分鐘。  對於無法使用 `MultiSubnetFailover` 參數的舊版用戶端而言，修改這兩個叢集參數可能會減少容錯移轉之後連接至正確 IP 位址的時間。  將 `yourListenerName` 取代為您要變更的接聽程式名稱。  

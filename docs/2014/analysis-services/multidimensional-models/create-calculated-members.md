@@ -1,5 +1,5 @@
 ---
-title: 建立導出的成員 |Microsoft 文件
+title: 建立導出的成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated members [Analysis Services]
 - custom measures [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d12f7ef55272960d8e120fd46dec4039ca036cbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b55ab5f489ce9a8b24f6ad39dde643f30c3712f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228358"
 ---
 # <a name="create-calculated-members"></a>建立導出成員
   您可以結合 Cube 資料、算術運算子、數字和函數，來建立自訂的量值或維度成員，稱為導出成員。 例如，您可以建立一個名為 Euros 的導出成員，藉由將現有的美金量值乘以轉換比率，來將美金轉換為歐元。 然後可以在另一個資料列或資料行中，向一般使用者顯示歐元。  

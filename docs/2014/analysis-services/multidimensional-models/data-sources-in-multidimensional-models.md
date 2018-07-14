@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的資料來源 |Microsoft 文件
+title: 多維度模型中的資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
 - Analysis Services objects, data sources
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - storage [Analysis Services], data sources
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fb84aceb83b3dfd0ac5e1e36d884b41df2850769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 962e4cf17f53db60f3f766e1bd4432b1bd07df69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267634"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>多維度模型中的資料來源
   您匯入或載入多維度模型的所有資料都源自於外部資料來源。 一般來說，來源資料來自於針對報表用途所設計的資料倉儲，但是也可能來自於透過中繼者直接或間接存取的任何關聯式資料庫，例如 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝。  
@@ -60,7 +60,7 @@ ms.locfileid: "36031733"
 |-----------|-----------------|  
 |[支援的資料來源&#40;SSAS 多維度&#41;](supported-data-sources-ssas-multidimensional.md)|描述可在多維度模型中使用的資料來源類型。|  
 |[建立資料來源&#40;SSAS 多維度&#41;](create-a-data-source-ssas-multidimensional.md)|說明如何將資料來源物件加入至多維度模型。|  
-|[刪除方案總管 中的資料來源&#40;SSAS 多維度&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此程序從多維度模型中刪除資料來源物件。|  
+|[刪除資料來源，在 [方案總管] &#40;SSAS 多維度&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|使用此程序從多維度模型中刪除資料來源物件。|  
 |[設定資料來源屬性&#40;SSAS 多維度&#41;](set-data-source-properties-ssas-multidimensional.md)|描述每個屬性，並說明如何設定每個屬性。|  
 |[設定模擬選項&#40;SSAS-多維度&#41;](set-impersonation-options-ssas-multidimensional.md)|說明如何設定 [模擬資訊] 對話方塊中的選項。|  
   

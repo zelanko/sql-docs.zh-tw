@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f92d638c07d28f424c0e6338f953cd716205f48b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e120229a41ae80490ab1950113c4de6f37b70c9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270334"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>使用列印控制項從瀏覽器列印報表 (報表產生器及 SSRS)
   雖然瀏覽器是最常用來檢視報表的用戶端應用程式，但瀏覽器的列印功能在列印報表時並不理想。 瀏覽器的列印功能是為了列印網頁而設計的。 通常，您從瀏覽器列印的頁面會包括網頁上的所有視覺化元素，以及識別網頁或網站的頁首和頁尾資訊。 從瀏覽器列印時會列印現行視窗的內容。 若為多頁報表．瀏覽器最多只會列印第一頁，如果報表頁面延伸到列印頁面範圍之外，則列印出來的可能更少。  
   
  若要改善您在瀏覽器中檢視之報表的列印品質並列印多個頁面，您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中提供的用戶端列印功能。 用戶端列印功能提供標準的 **[列印]** 對話方塊，可以用來選取印表機、指定頁面和邊界，以及在列印之前先預覽報表。 用戶端列印功能就是要用來代替瀏覽器 **[檔案]** 功能表上的 **[列印]** 命令。 使用用戶端列印功能時，報表會像原來設計那樣列印出來，而不會有您在網頁輸出中所看到的多餘元素。  
   
- 若要使用用戶端列印功能，您必須安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控制項。 如需詳細資訊，請參閱[啟用和停用 Client-side Printing for Reporting](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
+ 若要使用用戶端列印功能，您必須安裝 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 控制項。 如需詳細資訊，請參閱 <<c0> [ 啟用和停用 Client-side Printing for Reporting](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -45,6 +45,6 @@ ms.locfileid: "36034721"
   
 ## <a name="see-also"></a>另請參閱  
  [列印報表 &#40;報表產生器及 SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
- [列印報表&#40;報表產生器和 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [列印報表&#40;報表產生器及 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
   
   

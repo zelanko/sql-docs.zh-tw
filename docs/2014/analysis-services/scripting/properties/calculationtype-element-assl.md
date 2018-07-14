@@ -1,5 +1,5 @@
 ---
-title: CalculationType 元素 (ASSL) |Microsoft 文件
+title: CalculationType 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CalculationType element
 ms.assetid: b974b3d3-fbf7-4d77-8f6e-4e05a258fe84
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 434d0151009119a5e05d49180c6a9d1eb9519d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24e8f95af2ab7eb8be754eb2d1c7de96fee91ea7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275934"
 ---
 # <a name="calculationtype-element-assl"></a>CalculationType 元素 (ASSL)
-  描述中相關聯定義的計算類型[CalculationProperty](../objects/calculationproperty-element-assl.md)項目。  
+  描述類型定義在相關聯的計算[CalculationProperty](../objects/calculationproperty-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36033355"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*成員*|此計算屬性會套用至導出成員定義。|  
 |*設定*|此計算屬性會套用至命名集定義。|  

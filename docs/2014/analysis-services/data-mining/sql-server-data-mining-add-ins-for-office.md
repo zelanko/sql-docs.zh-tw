@@ -1,5 +1,5 @@
 ---
-title: SQL Server 資料採礦增益集，適用於 Office |Microsoft 文件
+title: SQL Server 資料採礦增益集適用於 Office |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66865664b7713f869ef1f007ba5b35f04218e8f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d8897cdb41d1d72806bf93335b13bf8c683cc31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273894"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>適用於 Office 的 SQL Server 資料採礦增益集
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 適用於 Office 的資料採礦增益集是一組輕量型的預測分析工具，可讓您使用 Excel 中的資料建立用於預測、建議或探索的分析模型。  
@@ -65,7 +65,7 @@ ms.locfileid: "36034275"
   
 -   [適用於 Visio 的資料採礦圖形](../data-mining-shapes-for-visio.md)  
   
--   [連接到資料採礦伺服器](../connect-to-a-data-mining-server.md)  
+-   [連線至資料採礦伺服器](../connect-to-a-data-mining-server.md)  
   
 ## <a name="support-and-requirements"></a>支援與需求  
  適用於 Office 的 SQL Server 資料採礦增益集是免費下載的軟體。 您必須已安裝下列其中一個 Office 版本，才能使用這些工具：  
@@ -87,6 +87,6 @@ ms.locfileid: "36034275"
   
  根據您連接的 SQL Server Analysis Services 版本而定，某些進階演算法可能會無法使用。 如需詳細資訊，請參閱＜ [SQL Server 2014 版本支援的功能](https://msdn.microsoft.com/en-us/library/cc645993.aspx)＞。  
   
- 其他安裝的說明，請參閱下載中心上的此頁面： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
+ 如需其他安裝的詳細說明，請參閱此頁面下載中心： [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   
   

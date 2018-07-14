@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.action
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cf86b5b19ba678a5820b92fc603ab7fda3900bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c9a6008ad889ec774cb82b48ff43457921d67bfd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215178"
 ---
 # <a name="specify-a-breakpoint-action"></a>指定中斷點動作
   中斷點 [叫用時] 動作指定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具針對中斷點所執行的自訂工作。 如果已到達指定的叫用計數而且滿足任何指定的中斷點條件時，偵錯工具就會執行為中斷點指定的動作。  

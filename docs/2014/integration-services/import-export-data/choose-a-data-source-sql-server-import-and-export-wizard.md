@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c814b8d89686c635fd0479576eeda982a8b7b957
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 9a1696168c72bf65c3a1771c0a54c51d9080d091
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266834"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>選擇資料來源 (SQL Server 匯入和匯出精靈)
-  使用**選擇資料來源**頁面，指定您要複製的資料來源。  
+  使用**選擇資料來源**頁面，即可指定您想要複製的資料來源。  
   
- 若要深入了解這個精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要了解啟動精靈，選項和權限，才能成功執行精靈，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要深入了解此精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，選項和相關的權限，才能成功執行精靈，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
   
- 目的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈 」 會將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ 目的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈是將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="options"></a>選項。  
  **資料來源**  
- 選擇符合來源之資料儲存格式的資料提供者。 您的資料來源可能有一個以上的提供者可用。 例如，與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、.NET Framework Data Provider for SQL Server 或 Microsoft OLE DB Provider for SQL Server。  
+ 選擇符合來源之資料儲存格式的資料提供者。 您的資料來源可能有一個以上的提供者可用。 例如，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、.NET Framework Data Provider for SQL Server 或 Microsoft OLE DB Provider for SQL Server。  
   
- **資料來源**屬性有數目可變的選項，這取決於電腦上安裝的提供者。 下表列出一些經常使用之目的地的選項。 若為其他提供者，請參閱提供者特定文件集。  
+ **資料來源**屬性有不同數目的選項，而這取決於電腦上安裝的提供者。 下表列出一些經常使用之目的地的選項。 若為其他提供者，請參閱提供者特定文件集。  
   
 ## <a name="dynamic-options"></a>動態選項  
  下列章節顯示數個資料來源可用的選項。 此處並未列出 [資料來源] 下拉式清單中所有可用的資料來源。  
@@ -71,7 +71,7 @@ ms.locfileid: "36324612"
  輸入來源資料庫的名稱。  
   
  **整合式安全性**  
- 指定`True`連接使用 Windows 整合式的驗證，建議使用，或`False`使用連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 如果您指定 `False`，則必須輸入使用者識別碼和密碼。 預設值是 `False`。  
+ 指定`True`來連接使用 Windows 整合式的驗證，建議使用，或`False`利用連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。 如果您指定 `False`，則必須輸入使用者識別碼和密碼。 預設值是 `False`。  
   
  **使用者識別碼**  
  指定資料庫連接的使用者名稱，當您使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
@@ -79,15 +79,15 @@ ms.locfileid: "36324612"
  **密碼**  
  使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證時，請提供資料庫連接的密碼。  
   
- 選取此提供者時所列出的其他選項並非必要的，即可成功連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源資料庫。 如需這些選項的說明，請參閱文件[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]軟體開發套件。  
+ 選取此提供者時所列出的其他選項並非必要的，即可成功連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來源資料庫。 如需其他選項的說明，請參閱文件[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]Data Provider for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]軟體開發套件。  
   
 ### <a name="data-source--microsoft-excel"></a>資料來源 = Microsoft Excel  
   
 > [!NOTE]  
->  選取**Microsoft Excel**只有當您想要連接到資料來源使用 Excel 2003 或更早版本。 若要連接至使用 Excel 2007 的資料來源，請選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**，按一下 [**屬性**，然後在**所有**] 索引標籤**資料連結屬性**對話方塊方塊中，輸入`Excel 12.0`做為值**擴充屬性**。  
+>  選取  **Microsoft Excel**只有當您想要連接到資料來源使用 Excel 2003 或更早版本。 若要連接至使用 Excel 2007 資料來源，請選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**，按一下**屬性**，然後在**所有** 索引標籤**資料連結屬性**對話方塊方塊中，輸入`Excel 12.0`做為值**擴充屬性**。  
   
  **Excel 檔案路徑**  
- 指定要從中匯入資料之試算表的路徑和檔案名稱。 例如， **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**。 或按一下 [瀏覽]。  
+ 指定要從中匯入資料之試算表的路徑和檔案名稱。 例如， **C:\MyData.xls， \\\Sales\Database\Northwind.xls**。 或按一下 [瀏覽]。  
   
  **瀏覽**  
  使用 [開啟] 對話方塊來找出試算表。  
@@ -101,7 +101,7 @@ ms.locfileid: "36324612"
 ### <a name="data-source--microsoft-access"></a>資料來源 = Microsoft Access  
   
 > [!NOTE]  
->  選取**Microsoft Access**只有當您想要連接到資料庫使用 Access 2003 或更早版本。 若要連接至使用 Access 2007 的資料庫，選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**改為。  
+>  選取  **Microsoft Access**只有當您想要連接至使用 Access 2003 資料庫或更早版本。 若要連線至使用 Access 2007 資料庫，選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**改。  
   
  **檔案名稱**  
  指定要從中匯入資料之資料庫檔案的路徑和檔案名稱。 例如 **C:\MyData.mdb, \\\Sales\Database\Northwind.mdb**。 或按一下 [瀏覽]。  
@@ -113,10 +113,10 @@ ms.locfileid: "36324612"
  當工作群組資訊檔案與資料庫相關聯時，請指定該資料庫連接的有效使用者名稱。  
   
  **密碼**  
- 當工作群組資訊檔案與資料庫相關聯時，請提供該資料庫連接的使用者密碼。 不過，如果受保護資料庫的所有使用者的單一密碼，您必須提供這個值**資料連結屬性**對話方塊，即可存取**進階**。  
+ 當工作群組資訊檔案與資料庫相關聯時，請提供該資料庫連接的使用者密碼。 不過，如果所有使用者的單一密碼保護資料庫，您必須提供此值**資料連結屬性**對話方塊，即可存取**進階**。  
   
  **進階**  
- 您可能想要指定進階的選項，例如資料庫密碼或非預設的工作群組資訊檔案，使用**資料連結屬性** 對話方塊。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的資料存取區段[MSDN library](http://go.microsoft.com/fwlink/?linkid=62553)。  
+ 您可能想要指定進階的選項，例如資料庫密碼或非預設的工作群組資訊檔案中，使用**資料連結屬性** 對話方塊。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的 [資料存取] 區段[MSDN library](http://go.microsoft.com/fwlink/?linkid=62553)。  
   
 ### <a name="data-source--flat-file-source"></a>資料來源 = 一般檔案來源  
  如需有關一般檔案資料來源之選項的資訊，請參閱下列主題。  

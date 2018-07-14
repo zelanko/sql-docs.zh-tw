@@ -1,5 +1,5 @@
 ---
-title: Database Engine 組態-使用者執行個體 |Microsoft 文件
+title: Database Engine 組態-使用者執行個體 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - database engine configuration
 - database engine configuration, user instance
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00ce0b457fcb64c8568662ce4a64b8929c29e5ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fdba96d79e842f568ba3077c7da0254483b81d60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274344"
 ---
 # <a name="database-engine-configuration---user-instance"></a>資料庫引擎組態 - 使用者執行個體
   使用 **[使用者執行個體]** 頁面，即可為不具管理員權限的使用者產生個別的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，並將使用者加入至管理員角色。  

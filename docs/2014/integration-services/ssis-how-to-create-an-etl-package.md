@@ -1,5 +1,5 @@
 ---
-title: SSIS 教學課程： 建立簡易 ETL 封裝 |Microsoft 文件
+title: SSIS 教學課程： 建立簡易 ETL 套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -20,16 +20,16 @@ ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d5a3522e857f7cb053f181a46e17cb44288a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b2e8b7f78e7dc64bc3649270e279b740b041abb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263154"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS 教學課程：建立簡易 ETL 封裝
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是資料整合方案，包括擷取、 轉換和載入 (ETL) 封裝資料倉儲建立高效能的平台。 SSIS 包含建立和偵錯封裝的圖形工具及精靈；執行工作流程功能 (例如 FTP 作業、執行 SQL 陳述式和傳送電子郵件訊息) 的工作；擷取和載入資料的資料來源和目的地；清除、彙總、合併和複製資料的轉換；管理封裝執行和儲存的管理服務 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ；以及設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型之程式的應用程式開發介面 (API)。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) 是用於建立高效能資料整合方案，包括擷取、 轉換和載入 (ETL) 封裝的資料倉儲的平台。 SSIS 包含建立和偵錯封裝的圖形工具及精靈；執行工作流程功能 (例如 FTP 作業、執行 SQL 陳述式和傳送電子郵件訊息) 的工作；擷取和載入資料的資料來源和目的地；清除、彙總、合併和複製資料的轉換；管理封裝執行和儲存的管理服務 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ；以及設計 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 物件模型之程式的應用程式開發介面 (API)。  
   
  在此教學課程中，您將學會如何使用 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師來建立簡單的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝。 您建立的封裝會從一般檔案取用資料，重新格式化資料，然後將重新格式化之後的資料插入到事實資料表中。 在下列課程中，將會擴充封裝來示範迴圈、封裝組態、記錄和錯誤流程。  
   
@@ -59,19 +59,19 @@ ms.locfileid: "36034814"
     3.  按一下 SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip 檔案。  
   
 ## <a name="lessons-in-this-tutorial"></a>本教學課程中的課程  
- [第 1 課： 建立專案和基本封裝](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+ [第 1 課：建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  在這一課，您將建立一個從單個一般檔案擷取資料的簡易 ETL 封裝，使用查閱轉換元件來轉換資料，最後將結果載入至事實資料表目的地。  
   
- [第 2 課： 加入迴圈](lesson-2-adding-looping-with-ssis.md)  
+ [第 2 課：新增迴圈](lesson-2-adding-looping-with-ssis.md)  
  在這一課，您將擴充在第 1 課建立的封裝，利用新的迴圈功能，將多個一般檔案擷取到單一資料流程處理序中。  
   
- [第 3 課： 加入記錄](lesson-3-add-logging-with-ssis.md)  
+ [第 3 課：新增記錄](lesson-3-add-logging-with-ssis.md)  
  在這一課，您將擴充在第 2 課建立的封裝，來利用新的記錄功能。  
   
- [第 4 課： 加入錯誤流程重新導向](lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [課程 4：新增錯誤流程重新導向](lesson-4-add-error-flow-redirection-with-ssis.md)  
  在這一課，您將擴充在第 3 課建立的封裝，來利用新的錯誤輸出組態。  
   
- [第 5 課： 加入封裝部署模型的封裝組態](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+ [第 5 課：新增套件部署模型的套件設定](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
  在這一課，您將擴充在第 4 課建立的封裝，來利用新的封裝組態選項。  
   
  [課程 6：搭配專案部屬模型使用參數](lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

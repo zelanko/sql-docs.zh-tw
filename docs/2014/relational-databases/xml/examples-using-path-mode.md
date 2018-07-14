@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bf9d4775b776c0766e05b39d8cd271bff9fccbd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: acc07be98a39a302cb4d20f9d18ed11c0f85869b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274624"
 ---
 # <a name="examples-using-path-mode"></a>範例：使用 PATH 模式
   以下範例說明使用 PATH 模式從 SELECT 查詢產生 XML。 這些查詢中有許多是針對自行車製造指示的 XML 文件所指定，這些文件是儲存在 ProductModel 資料表的 Instructions 資料行中。  
@@ -190,7 +190,7 @@ GO
   
  `</Root>`  
   
- 除了產品型號識別碼與名稱之外，下列查詢還會擷取該產品型號的製造指示位置。 由於 Instructions 資料行屬於`xml`型別，`query()`方法`xml`指定資料類型來擷取位置。  
+ 除了產品型號識別碼與名稱之外，下列查詢還會擷取該產品型號的製造指示位置。 由於 Instructions 資料行屬於`xml`型別`query()`方法`xml`資料型別會指定要擷取的位置。  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -248,7 +248,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- 請注意， `MI` 前置詞在 `WITH XMLNAMESPACES`中也有定義。 如此一來，`query()`方法`xml`指定的類型未定義在查詢初構中的前置詞。 以下是結果：  
+ 請注意， `MI` 前置詞在 `WITH XMLNAMESPACES`中也有定義。 如此一來，`query()`方法的`xml`指定型別不會定義查詢初構中的前置詞。 以下是結果：  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   

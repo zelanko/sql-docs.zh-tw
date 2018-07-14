@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Change Audit event class
 ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb94391f1e991b612c2b19a3e6c7f50ce06031d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 71e90f9b20603601e96981ac8aab37e615ad9d1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233398"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit 事件類別
   每次修改稽核追蹤時，就會發生 **Audit Change Audit** 事件類別。  
@@ -55,7 +55,7 @@ ms.locfileid: "36033018"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
-|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   
 ## <a name="see-also"></a>另請參閱  

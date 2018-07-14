@@ -1,5 +1,5 @@
 ---
-title: 快照集選項屬性頁面 （報表管理員） |Microsoft 文件
+title: 快照集選項屬性頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b89de53a1e17413f8ebe6869122ea9d4b61af6dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218868"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>快照集選項屬性頁面 (報表管理員)
   使用 [快照集選項] 屬性頁面可以排程要加入至報表記錄的報表快照集，以及設定報表記錄中儲存之報表快照集的數目限制。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[其他資料庫服務](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 額外的資料庫服務](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices)。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -50,7 +50,7 @@ ms.locfileid: "36035594"
  **使用下列排程將快照集加入至報表記錄**  
  選取此核取方塊，即可根據排程將快照集加入報表記錄中。 您可以建立專用於此目的的排程，或者當某個預先定義的共用排程包含您要的排程資訊，可以選擇預先定義的共用排程。  
   
- **選取要保留快照集數目**  
+ **選取要保留的快照集數目**  
  選取下列選項來控制報表記錄中保留的報表數目。 報表記錄設定可以隨每一個報表而改變。  
   
 -   選取 **[使用預設值]** 即可保留預設值。 報表伺服器管理員控制報表記錄儲存的主要設定。 若您選擇此選項，則可由此主要設定中取得保留的快照集數目。  
@@ -65,9 +65,9 @@ ms.locfileid: "36035594"
  按一下即可儲存您的變更。  
   
 ## <a name="see-also"></a>另請參閱  
- [將加入報表記錄快照集&#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [將快照集加入報表記錄&#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [建立、 修改和刪除報表記錄中的快照集](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [建立、 修改及刪除報表記錄中的快照集](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

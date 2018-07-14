@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services, migrating
 - migrating packages [Integration Services]
 ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 caps.latest.revision: 50
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d975c0ee5764ca0e7038b51392309b52bf17641
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 39f07febdc8c5c9bc8e63b61d42b0a7ff5927ee0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233438"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝
-  當您升級的執行個體[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]至目前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，現有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]封裝並不會自動升級成目前版本的封裝格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會使用。 您必須選取升級方法並手動升級您的封裝。  
+  當您升級的執行個體[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]目前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，現有[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]封裝並不會自動升級成目前版本的封裝格式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]會使用。 您必須選取升級方法並手動升級您的封裝。  
   
  當您升級 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 套件時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會將任何指令碼工作和指令碼元件中的指令碼移轉到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)。 在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中，指令碼工作或指令碼元件中的指令碼會使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] for Applications (VSA)。 如需您可能必須在移轉之前對指令碼進行的變更以及指令碼轉換失敗的詳細資訊，請參閱[將指令碼移轉到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36032151"
 ## <a name="custom-applications-and-custom-components"></a>自訂應用程式和自訂元件  
  [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 自訂元件無法搭配目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]版本使用。  
   
- 您可以使用目前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]工具來執行和管理封裝包含[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]自訂元件。 我們在下列檔案中加入四個繫結重新導向規則，協助將執行階段元件從 10.0.0.0 版 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) 重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ 您可以使用最新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]工具來執行和管理套件，包括[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]並[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssIS](../../includes/ssis-md.md)]自訂元件。 我們在下列檔案中加入四個繫結重新導向規則，協助將執行階段元件從 10.0.0.0 版 ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]) 重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
   
 -   DTExec.exe.config  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36032151"
   
 -   DTExecUI.exe.config  
   
- 若要使用[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]為了設計封裝，包括[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]和[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]自訂元件，您需要修改 devenv.exe.config 檔案則位於*\<磁碟機 >*: files\Microsoft Visual Studio 10.0\Common7\IDE。  
+ 若要使用[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]為了設計封裝，包括[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]並[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]自訂元件，您需要修改 devenv.exe.config 檔案則位於*\<磁碟機 >*: files\Microsoft Visual Studio 10.0\Common7\IDE。  
   
  如果要使用這些封裝搭配 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]版本執行階段所建置的應用程式，必須在可執行檔的 *.exe.config 檔案的組態區段中包含重新導向規則。 規則會將執行階段組件重新導向至 11.0.0.0 版 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。 如需組件版本重新導向的詳細資訊，請參閱 [\<runtime> 的 \<assemblyBinding> 元素](http://msdn.microsoft.com/library/twy1dw1e.aspx)。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36032151"
 |元件或功能|升級結果|  
 |--------------------------|---------------------|  
 |連接字串|對於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 及 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 封裝，某些提供者的名稱已有所變更，需要在連接字串中使用不同的值。 若要更新連接字串，請使用下列其中一個程序：<br /><br /> -使用 [[!INCLUDE[ssIS](../../includes/ssis-md.md)] 套件升級精靈] 來升級套件，然後選取 [更新連接字串以使用新的提供者名稱] 選項。<br /><br /> 在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [選項] 對話方塊的 [一般] 頁面上，選取 [更新連接字串以使用新的提供者名稱] 選項。 如需這個選項的詳細資訊，請參閱[一般頁面](../general-page-of-integration-services-designers-options.md)。<br /><br /> -在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中，開啟套件並手動變更 ConnectionString 屬性的文字。<br /><br /> 注意： 您無法使用先前的程序更新連接字串，當連接字串儲存在組態檔或資料來源檔案，或當運算式設定`ConnectionString`屬性。 在這些情況下，若要更新連接字串，您必須手動更新檔案或運算式。<br /><br /> 如需資料來源的詳細資訊，請參閱[資料來源](../connection-manager/data-sources.md)。|  
-|查閱轉換|如[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]封裝，升級程序會自動升級 「 查閱 」 轉換至目前版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 但目前版本中的此元件另有一些功能可以供您使用。<br /><br /> 如需相關資訊，請參閱 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)。|  
+|查閱轉換|針對[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]封裝，升級程序會自動將查閱轉換升級至目前的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 但目前版本中的此元件另有一些功能可以供您使用。<br /><br /> 如需相關資訊，請參閱 [Lookup Transformation](../data-flow/transformations/lookup-transformation.md)。|  
 |指令碼工作和指令碼元件|針對 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 封裝，升級程序會自動將指令碼工作和指令碼元件中的指令碼，從 VSA 移轉到 VSTA。<br /><br /> 如需您可能必須在移轉之前對指令碼進行的變更以及指令碼轉換失敗的詳細資訊，請參閱[將指令碼移轉到 VSTA](../../sql-server/install/migrate-scripts-to-vsta.md)。|  
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>以 ADODB.dll 為基礎的指令碼  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - ErrorLog event class
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 80c2931cb1d41efaa1c07cabfd3d222211aaf0be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: efb0f103d5b84775d1e03ba8934fef23cdfd5bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236618"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog 事件類別
   ErrorLog 事件類別指出已將訊息記錄在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中。  
@@ -51,7 +51,7 @@ ms.locfileid: "36035218"
 |Severity|`int`|例外狀況的嚴重性層級。|20|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|錯誤訊息內文。|@shouldalert|是|  
+|TextData|`ntext`|錯誤訊息內文。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

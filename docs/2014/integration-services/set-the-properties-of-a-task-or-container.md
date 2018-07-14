@@ -1,5 +1,5 @@
 ---
-title: 設定工作或容器的屬性 |Microsoft 文件
+title: 設定工作或容器的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], properties
 ms.assetid: 52d47ca4-fb8c-493d-8b2b-48bb269f859b
 caps.latest.revision: 48
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 08133206f867492f52c5d89d67819d8f928eb8ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa8b85c3b5c92b38f50bbfac850d4a69ed2d4c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264894"
 ---
 # <a name="set-the-properties-of-a-task-or-container"></a>設定工作或容器的屬性
   您可以使用 [屬性] 視窗來設定工作和容器的大部分屬性。 例外的是工作集合的屬性，以及因太複雜而無法使用 [屬性] 視窗設定的屬性。 例如，您無法在 [屬性] 視窗中設定「Foreach 迴圈」容器所使用的列舉值。 您必須使用工作或容器編輯器來設定這些複雜屬性。 大部分工作和容器編輯器都具有多個節點，而且每個節點都包含相關的屬性。 節點的名稱表示此節點所包含之屬性的主旨。  

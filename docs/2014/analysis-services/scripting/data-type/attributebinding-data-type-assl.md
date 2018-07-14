@@ -1,5 +1,5 @@
 ---
-title: AttributeBinding 資料類型 (ASSL) |Microsoft 文件
+title: AttributeBinding 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeBinding data type
 ms.assetid: 24d511a9-d0eb-4150-9f78-541e03963d67
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796e20c3047914ca65e7d48be26fbc951695e583
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e475cb0ecb867daec6864fb5d078835e8fe95688
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279744"
 ---
 # <a name="attributebinding-data-type-assl"></a>AttributeBinding 資料類型 (ASSL)
   定義衍生的資料類型表示的繫結[屬性](../objects/attribute-element-assl.md)項目。  
@@ -62,11 +62,11 @@ ms.locfileid: "36033113"
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`Binding`資料類型，包括資料表的 Analysis Services 指令碼語言 (ASSL) 物件衍生自`Binding`資料類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md)。  
+ 如需詳細資訊`Binding`資料類型，包括資料表的 Analysis Services 指令碼語言 (ASSL) 物件衍生自`Binding`資料類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md)。  
   
- 如需 ASSL 中資料繫結的概觀，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需 ASSL 中資料繫結的概觀，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AttributeBinding>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.AttributeBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

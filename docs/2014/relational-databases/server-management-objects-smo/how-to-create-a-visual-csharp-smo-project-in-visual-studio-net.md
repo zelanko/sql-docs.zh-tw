@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio.NET 中建立 Visual C# SMO 專案 |Microsoft 文件
+title: Visual Studio.NET 中建立 Visual C# SMO 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Visual C# [SMO]
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b96b2f52b1d993c02536b70e39ba7d1868643a04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c63f02cc9496a09744f403eaac9ec8dd84cc38b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270664"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>在 Visual Studio .NET 中建立 Visual C# SMO 專案
   本節描述如何建立簡單的 SMO 主控台應用程式。  
@@ -35,15 +35,15 @@ ms.locfileid: "36034533"
   
 2.  在 [檔案] 功能表上，按一下 [新增專案]。 [新增專案]  對話方塊隨即出現。  
   
-3.  在**專案類型**對話方塊中，選取**Visual C#**，然後選取**Windows**。 在[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安裝的範本窗格中，選取**Windows 應用程式**。  
+3.  在 **專案類型**對話方塊中，選取**Visual C#**，然後選取**Windows**。 在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]已安裝的範本窗格中，選取**Windows 應用程式**。  
   
-4.  （選擇性）在**名稱**欄位中，輸入新的應用程式的名稱  
+4.  （選擇性）在 **名稱**欄位中，輸入新的應用程式名稱  
   
 5.  選取 Visual C# 應用程式類型。 如需範例，請依照下列中，選取**主控台應用程式**。  
   
 6.  在 [專案] 功能表上，選取 [新增參考]。 [新增參考] 對話方塊隨即出現。  
   
-7.  按一下**瀏覽**，SMO 組件中的找出[!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]資料夾，然後再選取下列檔案。 以下是建立 SMO 應用程式所需最少的檔案：  
+7.  按一下 **瀏覽**，找到 SMO 組件中的[!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]資料夾，然後再選取下列檔案。 以下是建立 SMO 應用程式所需最少的檔案：  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36034533"
   
 9. 按一下 **[開啟]**。  
   
-10. 在**檢視**功能表上，按一下 **程式碼**。-或者-選取 Program1.cs [設計] 視窗，然後按兩下 windows form 來顯示程式碼視窗。  
+10. 在 **檢視**功能表上，按一下**程式碼**。-或者-選取 Program1.cs [設計] Windows，然後按兩下 windows form 來顯示程式碼視窗。  
   
 11. 在程式碼的命名空間陳述式之前，輸入下列 `using` 陳述式來限定 SMO 命名空間中的類型：  
   

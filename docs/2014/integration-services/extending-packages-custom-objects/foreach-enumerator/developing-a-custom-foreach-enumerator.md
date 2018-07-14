@@ -18,13 +18,13 @@ ms.assetid: bffe26e0-1b9a-47ad-bae6-6b708cb4cf4f
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eb3fb74525f98ffc919694b59235da2f0da90e91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b055244216ef6bc84f0a7448ba3938c1cb1c3bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213378"
 ---
 # <a name="developing-a-custom-foreach-enumerator"></a>開發自訂 ForEach 列舉值
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 會使用 Foreach 列舉值在集合中反覆運算項目，並為每個元素執行相同的工作。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括各種 Foreach 列舉值，可以支援最常使用的集合，例如在資料夾中的所有檔案、資料庫中的所有資料表，或是儲存在封裝變數中的清單之所有元素。 如果提供的 Foreach 列舉值與集合並未完全符合您的需求，可以建立自訂 Foreach 列舉值。  
@@ -72,6 +72,6 @@ ms.locfileid: "36032590"
  [開發自訂資料流程元件](../data-flow/developing-a-custom-data-flow-component.md)  
  討論如何進行自訂資料流程來源、轉換和目的地的程式設計。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
   

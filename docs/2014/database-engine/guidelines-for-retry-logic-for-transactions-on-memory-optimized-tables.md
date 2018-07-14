@@ -1,5 +1,5 @@
 ---
-title: 記憶體最佳化資料表交易的重試邏輯方針 |Microsoft 文件
+title: 記憶體最佳化資料表交易的重試邏輯的指導方針 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3949860a76801061a8ff01f73a417c32c5056dc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b7d4a0799a70a91c99297c3c077100235852cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243138"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>記憶體最佳化資料表交易的重試邏輯方針
   存取記憶體最佳化資料表的交易會產生一些錯誤狀況。  
@@ -34,7 +34,7 @@ ms.locfileid: "36033951"
   
  這些錯誤的常見原因是同時執行中交易之間的干擾。 常見的更正動作是重試交易。  
   
- 如需有關這些錯誤狀況的詳細資訊，請參閱衝突偵測、 驗證和認可相依性檢查中[記憶體最佳化資料表中的交易](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如需有關這些錯誤狀況的詳細資訊，請參閱衝突偵測、 驗證和認可相依性檢查在[Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
  記憶體最佳化的資料表不能發生死結 (錯誤碼 1205)。 鎖定未用於記憶體最佳化的資料表。 不過，如果應用程式已經包含死結的重試邏輯，現有邏輯可擴充成包含新的錯誤碼。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36033951"
 ### <a name="considerations-for-read-only-transactions-and-cross-container-transactions"></a>唯讀交易和跨容器交易的考量  
  唯讀跨容器交易是在原生編譯預存程序的內容之外開始，如果記憶體最佳化的資料表都是在 SNAPSHOT 隔離下存取，這類交易不會執行驗證。 不過，當記憶體最佳化的資料表是在 REPEATABLE READ 或 SERIALIZABLE 隔離下存取時，在認可時會執行驗證。 在此情況下，可能需要重試邏輯。  
   
- 如需詳細資訊，請參閱的章節中的跨容器交易[交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md)。  
+ 如需詳細資訊，請參閱一節上中的跨容器交易[交易隔離等級](../../2014/database-engine/transaction-isolation-levels.md)。  
   
 ## <a name="implementing-retry-logic"></a>實作重試邏輯  
  如同存取記憶體最佳化資料表的所有交易，您必須考慮重試邏輯以處理潛在的失敗，例如寫入衝突 (錯誤碼 41302) 或相依性失敗 (錯誤碼 41301)。 在多數應用程式中的失敗率都很低，不過仍然必須透過重試交易處理失敗。 兩個實作重試邏輯的建議方式如下：  
@@ -75,7 +75,7 @@ ms.locfileid: "36033951"
   
 -   用戶端應用程式有其他錯誤碼 (例如 1205) 的重試邏輯，這些錯誤碼是可擴充的。  
   
--   衝突很少，而使用備妥的執行，減少端對端延遲很重要。 如需執行原生編譯預存程序的直接，請參閱[Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
+-   衝突很少，而使用備妥的執行，減少端對端延遲很重要。 如需有關原生執行直接編譯預存程序，請參閱 < [Natively Compiled Stored Procedures](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)。  
   
  下列範例示範解譯的 [!INCLUDE[tsql](../includes/tsql-md.md)] 預存程序中的重試邏輯，該預存程序包含原生編譯預存程序或跨容器交易的呼叫。  
   
@@ -132,6 +132,6 @@ END
 ## <a name="see-also"></a>另請參閱  
  [了解記憶體最佳化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [記憶體最佳化資料表中的交易](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
- [具有記憶體最佳化資料表交易隔離等級的指導方針](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
+ [搭配經記憶體最佳化的資料表使用交易隔離等級的方針](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  
   
   

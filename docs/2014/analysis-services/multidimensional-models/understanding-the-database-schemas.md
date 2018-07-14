@@ -1,5 +1,5 @@
 ---
-title: 了解資料庫結構描述 |Microsoft 文件
+title: 了解資料庫結構描述 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
 - database schema [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf611a2ae8e2c2275fc59d3abc124d8fa202d388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282244"
 ---
 # <a name="understanding-the-database-schemas"></a>了解資料庫結構描述
   結構描述產生精靈會根據 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]裡的維度和量值群組，產生主題領域資料庫反正規化關聯式結構描述。 此精靈會針對每一個維度產生關聯式資料表 (稱為維度資料表)，以便儲存維度資料，也會針對每一個量值群組產生關聯式資料表 (稱為事實資料表)，以便儲存事實資料。 精靈產生這些關聯式資料表時，會忽略連結維度、連結量值群組和伺服器時間維度。  
@@ -48,7 +48,7 @@ ms.locfileid: "36035324"
  針對每個維度，結構描述產生精靈會產生要包含在主題領域資料庫裡的維度資料表。 維度資料表的結構，取決於設計資料表所依據之維度時的選擇。  
   
  [資料行]  
- 精靈會產生一個資料行中的維度資料表依據的維度，例如繫結的每個屬性的相關聯繫結`KeyColumns`， `NameColumn`， `ValueColumn`， `CustomRollupColumn`， `CustomRollupPropertiesColumn`，和`UnaryOperatorColumn`的每個屬性的屬性。  
+ 精靈會產生一個資料行中的維度資料表依據的維度，例如的繫結每個屬性的相關聯繫結`KeyColumns`， `NameColumn`， `ValueColumn`， `CustomRollupColumn`， `CustomRollupPropertiesColumn`，和`UnaryOperatorColumn`的每個屬性的屬性。  
   
  關聯性  
  針對每個父屬性的資料行和維度資料表的主索引鍵，精靈會產生兩者之間的關聯性。  
@@ -68,7 +68,7 @@ ms.locfileid: "36035324"
  針對 Cube 中的每個量值群組，結構描述產生精靈會產生要包含在主題領域資料庫裡的一個事實資料表。 事實資料表的結構，取決於設計資料表所依據之量值群組時的選擇，以及在量值群組與任何內含維度之間建立的關聯性。  
   
  [資料行]  
- 精靈會產生一個資料行的每個量值，但使用的量值除外`Count`彙總函式。 這些量值在事實資料表中不需要有對應的資料行。  
+ 精靈會產生一個資料行，請在每個量值，但使用的量值除外`Count`彙總函式。 這些量值在事實資料表中不需要有對應的資料行。  
   
  精靈也會在量值群組上，針對每個一般維度關聯性的每個資料粒度屬性資料行，產生一個資料行；也會針對與此資料表做為基礎的量值群組，有事實維度關聯性的維度之每個屬性的相關聯繫結，產生一或多個資料行 (如果適用的話)。  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36035324"
  針對量值群組中需要翻譯資料行的任何屬性，精靈會產生另一個資料表來保存已翻譯值。 精靈也會為每一種必要的語言，建立個別資料行。  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>資料類型轉換和預設長度  
- 結構描述產生精靈會忽略資料類型，在所有情況下使用的資料行除外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`wchar`資料型別。 `wchar`資料大小會直接翻譯成`nvarchar`資料型別。 但是，如果使用 `wchar` 大小指定的資料行長度大於 4000 個位元組，結構描述產生精靈就會產生錯誤。  
+ 結構描述產生精靈會忽略資料類型，在所有情況下使用的資料行除外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`wchar`資料型別。 `wchar`的資料大小會直接轉譯成`nvarchar`資料型別。 但是，如果使用 `wchar` 大小指定的資料行長度大於 4000 個位元組，結構描述產生精靈就會產生錯誤。  
   
  如果資料項目 (例如屬性的繫結) 沒有指定的長度，則會針對資料行使用下表中所列的預設長度。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36035324"
 |NameColumn|50|  
 |CustomRollupColumn|3000|  
 |CustomRollupPropertiesColumn|500|  
-|UnaryOperatorColumn|@shouldalert|  
+|UnaryOperatorColumn|1|  
   
 ## <a name="see-also"></a>另請參閱  
  [了解累加式產生](understanding-incremental-generation.md)   

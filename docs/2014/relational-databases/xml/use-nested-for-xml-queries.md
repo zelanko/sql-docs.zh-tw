@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e8ce91a3ee069562a6a4d3f9d6aa3c02999e4dff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: cf9e0d63af7283dfbb36a12d34224a6c379c111f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249658"
 ---
 # <a name="use-nested-for-xml-queries"></a>使用巢狀 FOR XML 查詢
-  `xml`資料型別和[FOR XML 查詢中的 TYPE 指示詞](type-directive-in-for-xml-queries.md)讓 FOR XML 查詢所傳回的 XML，在伺服器上，以及在用戶端上進行處理。  
+  `xml`資料類型和[FOR XML 查詢中的 TYPE 指示詞](type-directive-in-for-xml-queries.md)讓 FOR XML 查詢所傳回的 XML 在伺服器上，以及在用戶端上進行處理。  
   
 ## <a name="processing-with-xml-type-variables"></a>處理 xml 類型變數  
  您可以將 FOR XML 查詢結果指派給 `xml` 類型變數，或是使用 XQuery 以查詢結果，然後將該結果指派給 `xml` 類型變數以進行其他處理。  
@@ -70,7 +70,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 因為結果會是`xml`類型，您可以指定其中一個`xml`資料類型方法，直接對此 XML，如下列查詢所示。 在查詢中，會使用 [query() 方法 (xml 資料類型)](/sql/t-sql/xml/query-method-xml-data-type) 來擷取 <`myRoot`> 元素的第一個 <`row`> 元素子項。  
+ 因為結果屬於`xml`類型，您可以指定其中一個`xml`資料類型方法，直接對此 XML，如下列查詢所示。 在查詢中，會使用 [query() 方法 (xml 資料類型)](/sql/t-sql/xml/query-method-xml-data-type) 來擷取 <`myRoot`> 元素的第一個 <`row`> 元素子項。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -87,7 +87,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>將內部 FOR XML 查詢結果當做 xml 類型執行個體傳回給外部查詢  
- 您可以撰寫巢狀`FOR XML`查詢其中的內部查詢結果會傳回做為`xml`給外部查詢的類型。 例如：  
+ 您可以撰寫巢狀`FOR XML`查詢的內部查詢結果傳回做為位置`xml`給外部查詢的型別。 例如：  
   
 ```  
 SELECT Col1,   

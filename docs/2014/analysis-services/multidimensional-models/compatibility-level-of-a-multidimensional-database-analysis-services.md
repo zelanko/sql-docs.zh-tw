@@ -1,5 +1,5 @@
 ---
-title: 設定的相容性層級的多維度資料庫 (Analysis Services) |Microsoft 文件
+title: 設定的相容性層級的多維度資料庫 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c781f8e2a8b93653354bd5e39244a56e68c2bbab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76f3369760bd03019221d296d958f2a74191aac2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241774"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>設定多維度資料庫的相容性層級 (Analysis Services)
-  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料庫相容性層級屬性會決定資料庫的功能層級。 每個模型類型都有唯一的相容性層級。 例如，相容性層級`1100`具有不同的意義視資料庫是否為多維度或表格式而定。  
+  在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料庫相容性層級屬性會決定資料庫的功能層級。 每個模型類型都有唯一的相容性層級。 例如，相容性層級`1100`的意義會根據資料庫是否為多維度或表格式。  
   
- 本主題描述只適用於多維度資料庫的相容性層級。 如需有關表格式解決方案的詳細資訊，請參閱[相容性層級&#40;SSAS 表格式 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。  
+ 本主題描述只適用於多維度資料庫的相容性層級。 如需有關表格式解決方案的詳細資訊，請參閱 <<c0> [ 相容性層級&#40;SSAS 表格式 SP1&#41;](../tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。</c0>  
   
 > [!NOTE]  
->  表格式模型具有另外的資料庫相容性層級，並不適用於多維度模型。 相容性層級`1103`不存在的多維度模型。 請參閱[中 SQL Server 2012 SP1 和相容性層級的表格式模型中的新](http://go.microsoft.com/fwlink/?LinkId=301727)如需有關`1103`表格式解決方案。  
+>  表格式模型具有另外的資料庫相容性層級，並不適用於多維度模型。 相容性層級`1103`的多維度模型不存在。 請參閱[表格式模型 SQL Server 2012 SP1 和相容性層級中最新消息](http://go.microsoft.com/fwlink/?LinkId=301727)如需詳細資訊`1103`適用於表格式方案。  
   
  **多維度資料庫的相容性層級**  
   
@@ -38,12 +38,12 @@ ms.locfileid: "36033791"
 |設定|描述|  
 |-------------|-----------------|  
 |`1050`|在指令碼或工具中並不會看見這個值，但它對應至在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]中所建立的資料庫。 所有未明確設定 `CompatibilityLevel` 的資料庫都是隱含地在 `1050` 層級執行。|  
-|`1100`|這是您在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中建立之新資料庫的預設值。 您也可以針對使用舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料庫指定這個值，以啟用僅在此相容性層級支援的功能 (亦即，維度屬性的增加字串儲存體或包含字串資料的相異計數量值)。<br /><br /> 具有資料庫`CompatibilityLevel`設`1100`取得額外的屬性`StringStoresCompatibilityLevel`，可讓您選擇分割區和維度的替代字串儲存體。|  
+|`1100`|這是您在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中建立之新資料庫的預設值。 您也可以針對使用舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料庫指定這個值，以啟用僅在此相容性層級支援的功能 (亦即，維度屬性的增加字串儲存體或包含字串資料的相異計數量值)。<br /><br /> 具有資料庫`CompatibilityLevel`設定為`1100`取得額外的屬性， `StringStoresCompatibilityLevel`，可讓您選擇分割區和維度的替代字串儲存體。|  
   
 > [!WARNING]  
->  將資料庫相容性設為更高的層級將無法回復。 增加相容性層級之後`1100`，您必須繼續在較新的伺服器上執行資料庫。 您無法回復到`1050`。 您無法附加或還原`1100`之前的伺服器版本上的資料庫[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+>  將資料庫相容性設為更高的層級將無法回復。 增加相容性層級之後`1100`，您必須繼續在較新的伺服器上執行的資料庫。 您無法回復到`1050`。 您無法附加或還原`1100`早於的伺服器版本上的資料庫[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]或[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  資料庫相容性層級是在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中引進。 您必須有 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或更新版本，才能檢視或設定資料庫相容性層級。  
   
  資料庫不可為本機 Cube。 本機 Cube 不支援 `CompatibilityLevel` 屬性。  
@@ -53,7 +53,7 @@ ms.locfileid: "36033791"
 ## <a name="determine-the-existing-database-compatibility-level-for-a-multidimensional-database"></a>判斷多維度資料庫的現有資料庫相容性層級  
  檢視或修改資料庫相容性層級的唯一方式是透過 XMLA。 您可以在 SQL Server Management Studio 中檢視或修改指定資料庫的 XMLA 指令碼。  
   
- 如果您的搜尋屬性是資料庫的 XMLA 定義`CompatibilityLevel`不存在，您最有可能的資料庫時`1050`層級。  
+ 如果您的搜尋屬性的資料庫的 XMLA 定義`CompatibilityLevel`並不存在，您很有可能該資料庫是位於`1050`層級。  
   
  下一節中會提供檢視及修改 XMLA 指令碼的指示。  
   
@@ -88,12 +88,12 @@ ms.locfileid: "36033791"
   
 1.  只有在兩個資料庫共用相同的相容性層級時，才支援從不同資料庫合併磁碟分割。  
   
-2.  從其他資料庫使用連結的維度需要相同的相容性層級。 例如，如果您想要使用連結的維度從[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]資料庫中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]資料庫，您必須將移植[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]資料庫[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]伺服器並將相容性層級設`1100`。  
+2.  從其他資料庫使用連結的維度需要相同的相容性層級。 例如，如果您想要使用連結的維度，從[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]資料庫中[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]資料庫中，您必須移植[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]資料庫[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]伺服器，並將相容性層級設`1100`。  
   
 3.  只有共用相同版本與資料庫相容性層級的伺服器，才支援同步處理伺服器。  
   
 ## <a name="next-steps"></a>後續步驟  
- 增加資料庫相容性層級之後，您可以設定`StringStoresCompatibilityLevel`屬性[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。 這樣做會增加量值和維度的字串儲存體。 如需這項功能的詳細資訊，請參閱 [設定維度及資料分割的字串存放區](configure-string-storage-for-dimensions-and-partitions.md)。  
+ 提高資料庫相容性層級之後，您可以設定`StringStoresCompatibilityLevel`屬性中的[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。 這樣做會增加量值和維度的字串儲存體。 如需這項功能的詳細資訊，請參閱 [設定維度及資料分割的字串存放區](configure-string-storage-for-dimensions-and-partitions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [備份、 還原和同步處理資料庫&#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  

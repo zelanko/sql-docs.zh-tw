@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG020598 error
 ms.assetid: 1c3032f2-23d1-4ead-94ee-16ac4d75cd0c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 04c63e0883b0aec3186842085c7752a32c6435e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bbeb23e9cae5d3d44e85514e96de77914d7a55b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284904"
 ---
 # <a name="mssqleng020598"></a>MSSQL_ENG020598
     

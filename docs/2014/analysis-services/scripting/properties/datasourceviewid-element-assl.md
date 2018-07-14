@@ -1,5 +1,5 @@
 ---
-title: DataSourceViewID 元素 (ASSL) |Microsoft 文件
+title: DataSourceViewID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceViewID element
 ms.assetid: dcf617fe-0bf6-4767-af35-07c0c7fd96e5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c1789393052688657dcd2d05e2e03d4a04b9986
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5f74aa1a747dedce0d3b9beae8b8aa9886bb681
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031500"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271544"
 ---
 # <a name="datasourceviewid-element-assl"></a>DataSourceViewID 元素 (ASSL)
-  識別[DataSourceView](../objects/datasourceview-element-assl.md)元素相關聯[繫結](../data-type/binding-data-type-assl.md)父項目。  
+  識別[DataSourceView](../objects/datasourceview-element-assl.md)相關聯的項目[繫結](../data-type/binding-data-type-assl.md)父項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36031500"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`DataSourceViewID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DataSourceViewBinding>和<xref:Microsoft.AnalysisServices.DSVTableBinding>。  
+ 對應至父系的元素`DataSourceViewID`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.DataSourceViewBinding>和<xref:Microsoft.AnalysisServices.DSVTableBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (Action) (ASSL) |Microsoft 文件
+title: 輸入元素 (Action) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d71abdd26cea5fa03c8e70f882f893878a70969a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249079"
 ---
 # <a name="type-element-action-assl"></a>Type 元素 (Action) (ASSL)
   包含的型別[動作](../objects/action-element-assl.md)項目。  
@@ -64,19 +64,19 @@ ms.locfileid: "36035066"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*Url*|在網際網路瀏覽器中顯示變數網頁。|  
 |*Html*|在網際網路瀏覽器中執行 HTML 指令碼。|  
 |*陳述式*|執行 OLE DB 命令。|  
-|*鑽研*|擷取鑽研的資料列集。<br /><br /> 此值就等於*資料列集*而且會識別鑽研動作。 它只能用在動作上其[TargetType](targettype-element-assl.md)值設定為*資料格*。|  
+|*鑽研*|擷取鑽研的資料列集。<br /><br /> 這個值等於*資料列集*而且會識別鑽研動作。 它只能用在動作上其[TargetType](targettype-element-assl.md)值設定為*資料格*。|  
 |*資料集*|擷取資料集。|  
 |*Rowset*|擷取資料列集。|  
 |*命令列*|在命令提示字元中執行命令。|  
 |*專屬*|使用不同於先前此表列出的介面來執行作業。|  
-|*報表*|在網際網路瀏覽器中顯示變數網頁。<br /><br /> 此值就等於*Url*而且會識別報表動作。|  
+|*報表*|在網際網路瀏覽器中顯示變數網頁。<br /><br /> 這個值等於*Url*而且會識別報表動作。|  
   
- 對應目的父代的項目`Type`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Action>。  
+ 對應至父系的元素`Type`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>另請參閱  
  [DrillThroughAction 資料類型&#40;ASSL&#41;](../data-type/action-data-type-assl.md)   

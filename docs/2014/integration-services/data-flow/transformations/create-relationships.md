@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ebcf3e48cdb2648556c5066c96258cda58e5c51c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2ca9f48a5f5cc545f89b226b869291ecef54907
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269394"
 ---
 # <a name="create-relationships"></a>建立關聯性
   使用 **[建立關聯性]** 對話方塊，即可編輯來源資料行與查閱資料表資料行之間的對應，而這些資料行是在模糊查閱轉換編輯器、查閱轉換編輯器和詞彙查閱轉換編輯器中進行設定。  

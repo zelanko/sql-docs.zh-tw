@@ -1,5 +1,5 @@
 ---
-title: CDC 控制工作編輯器 |Microsoft 文件
+title: CDC 控制工作編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 caps.latest.revision: 9
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 498c46942b397f48fbaded6d4e98cb088d3c2dd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f6ce35e58b34e44690de9992f5e0296edbe4589f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256954"
 ---
 # <a name="cdc-control-task-editor"></a>CDC 控制工作編輯器
   使用 **[CDC 控制工作編輯器]** 對話方塊，即可設定 CDC 控制工作。 CDC 控制工作組態包括定義 CDC 資料庫的連接、CDC 工作作業，以及狀態管理資訊。  

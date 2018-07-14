@@ -1,5 +1,5 @@
 ---
-title: 使用 sp_rename 來重新命名重複的索引名稱 |Microsoft 文件
+title: 使用 sp_rename 重新命名重複的索引名稱 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table names [SQL Server]
 - duplicate table names
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - duplicate index names
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b47cb1000c4b427f8780c8a3f3ba57ef73fef9bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 522fcd712882d031a5febe4766946a31d5696859
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232508"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>使用 sp_rename 重新命名重複的索引名稱
   Upgrade Advisor 偵測到重複的資料表或檢視表索引名稱。 升級之前，請先重新命名索引以移除重複項目。  
@@ -62,10 +62,10 @@ ms.locfileid: "36032922"
     WHERE i.id = OBJECT_ID('table_or_view_name')  
     ```  
   
-4.  如果有必要，請使用**sp_rename**再次來更正索引名稱。  
+4.  如有必要，使用**sp_rename**再次來更正索引名稱。  
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

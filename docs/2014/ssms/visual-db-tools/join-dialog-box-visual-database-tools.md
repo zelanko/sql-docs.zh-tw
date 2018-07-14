@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.ppg.joinline
 - vdtsql.chm:69638
 ms.assetid: 0d9516bb-4ad3-4fcf-bb77-93474dea698f
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6adb9f0f9ee0d265124e0c3648279516018eb92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57490e0592f11e78ffddf44f0d3c3f60d90925a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238168"
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>聯結對話方塊 (Visual Database Tools)
   使用此對話方塊可指定聯結資料表的選項。 若要存取此對話方塊，請在 [設計] 窗格中選取聯結線 (Join Line)。 然後，在 [屬性] 視窗中按一下 [聯結條件及類型]，並按一下顯示在屬性右邊的省略符號 (**…**)。  
@@ -38,10 +38,10 @@ ms.locfileid: "36035808"
 |**Table**|聯結中相關資料表或資料表值物件的名稱。 不能在這裡變更資料表的名稱 — 此資訊只用於顯示資訊。|  
 |**資料行**|用於聯結資料表的資料行名稱。 運算子清單中的運算子會指定各資料行中資料之間的關係。 不能在這裡變更資料行的名稱 — 此資訊只用於顯示資訊。|  
 |**[運算子]**|指定用於關聯聯結資料行的運算子。 若要指定等於 (=) 之外的運算子，請從清單中選取。 關閉屬性頁時，您選取的運算子會出現在聯結線的菱形圖中，如下所示：<br /><br /> ![Visual Database Tools 圖示](../../database-engine/media//dv3wbii.gif "Visual Database Tools 圖示")|  
-|**從所有資料列\<table1 >**|指定輸出中顯示左邊資料表裡全部的資料列，即使右邊資料表中沒有對應的符合也一樣。 右邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 LEFT OUTER JOIN。|  
-|**從所有資料列\<table2 >**|指定輸出中顯示右邊資料表裡全部的資料列，即使左邊資料表中沒有對應的符合也一樣。 左邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 RIGHT OUTER JOIN。|  
+|**中的所有資料列\<table1 >**|指定輸出中顯示左邊資料表裡全部的資料列，即使右邊資料表中沒有對應的符合也一樣。 右邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 LEFT OUTER JOIN。|  
+|**中的所有資料列\<table2 >**|指定輸出中顯示右邊資料表裡全部的資料列，即使左邊資料表中沒有對應的符合也一樣。 左邊資料表中沒有符合資料的資料行會顯示為 null。 選擇此選項就等於在 SQL 陳述式中指定 RIGHT OUTER JOIN。|  
   
- 同時選取**資料列從\<table1 >** 和**的所有資料列\<table2 >** 相當於 SQL 陳述式中指定 FULL OUTER JOIN。  
+ 同時選取**中的資料列\<table1 >** 並**中的所有資料列\<table2 >** 相當於指定的 SQL 陳述式中的 FULL OUTER JOIN。  
   
  選取某個選項建立外部聯結時，聯結線中的菱形圖就會改變，以指示聯結為左邊外部、右邊外部或完整外部聯結。  
   

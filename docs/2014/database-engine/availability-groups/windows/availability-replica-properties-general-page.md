@@ -5,23 +5,22 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 13
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: f31c40f012c72d87e932032a80ee00bb1f0afe75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 29b53d91b1d60752a9e7ecea5d9d020ab6ab3d70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237408"
 ---
 # <a name="availability-replica-properties-general-page"></a>可用性複本屬性 (一般頁面)
   使用此對話方塊來檢視可用性複本的屬性。  
@@ -59,7 +58,7 @@ ms.locfileid: "36032854"
  **同步認可**  
  主要複本會等候認可給定交易，直到次要複本將交易寫入磁碟為止。  
   
- 如需詳細資訊，請參閱[可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
   
  **Failover mode**  
  複本的容錯移轉模式，下列其中一項：  
@@ -91,7 +90,7 @@ ms.locfileid: "36032854"
  **是**  
  允許與這個複本的次要資料庫之間的所有連接，但只供讀取存取。 可以讀取所有次要資料庫。  
   
- 如需詳細資訊，請參閱[使用中次要： 可讀取次要複本 （AlwaysOn 可用性群組）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 使用中次要： 可讀取次要複本 （AlwaysOn 可用性群組）](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  **工作階段逾時 (秒)**  
  逾時期間 (以秒為單位)。 逾時期間是將主要複本與次要複本之間的連接視為失敗之前，複本等待接收另一個複本之訊息的時間上限。 工作階段逾時會偵測次要複本是否連接到主要複本。 一旦偵測到與次要複本之間的連接失敗時，主要複本會將次要複本視為 NOT_SYNCHRONIZED。 一旦偵測到與主要複本之間的連接失敗時，次要複本只會嘗試重新連接。  

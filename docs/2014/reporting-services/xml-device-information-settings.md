@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML [Reporting Services], rendering
 - device information settings [Reporting Services], PDF rendering
 ms.assetid: a32e83fe-c10e-4ebd-8975-5be7dcc422e7
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b60e0abfbd6a0487fbc264a824c80ae8a5db60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 27fce37572bdfcc8afce8c88c80baa8e8065dc1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268124"
 ---
 # <a name="xml-device-information-settings"></a>XML 裝置資訊設定
   下表列出以 XML 格式轉譯的裝置資訊設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |`XSLT`|要套用至 XML 檔案之 XSLT 的報表伺服器命名空間中的路徑，例如，`/Transforms/myxslt`。 xsl 檔案必須是報表伺服器上已發行的資源，而且您必須透過報表伺服器項目路徑存取它。 在報表中指定任何 XSLT 之後，會套用此設定的值。 如果套用 `XSLT` 設定，則會忽略 `OmitSchema` 設定。|  
 |**MIMEType**|XML 檔案的多用途網際網路郵件延伸標準 (MIME) 類型。|  

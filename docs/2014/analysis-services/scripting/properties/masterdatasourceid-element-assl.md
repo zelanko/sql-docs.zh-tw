@@ -1,5 +1,5 @@
 ---
-title: MasterDatasourceID 元素 (ASSL) |Microsoft 文件
+title: MasterDatasourceID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MasterDatasourceID element
 ms.assetid: a9cbd3a9-581f-4a08-93d8-e1eea8757ce9
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35f3090a10dd175d507dec4a109f04d36644cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 70258c84b128c879406a8c0cdda837d9f0475789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034456"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228458"
 ---
 # <a name="masterdatasourceid-element-assl"></a>MasterDatasourceID 元素 (ASSL)
   包含主要資料來源識別碼 (ID)[資料庫](../objects/database-element-assl.md)項目。  
@@ -62,9 +62,9 @@ ms.locfileid: "36034456"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 遠端執行個體上資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ，包含遠端資料分割，`MasterDatasourceID`項目包含用來識別的主要執行個體識別碼的資料來源的資料來源[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，管理遠端資料分割。  
+ 遠端執行個體上的資料庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]包含遠端資料分割`MasterDatasourceID`項目包含資料來源的資料來源的識別碼，用以識別的主要執行個體[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]管理遠端資料分割。  
   
- 對應目的父代的項目`MasterDatasourceID`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Database>。  
+ 對應至父系的元素`MasterDatasourceID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Database>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

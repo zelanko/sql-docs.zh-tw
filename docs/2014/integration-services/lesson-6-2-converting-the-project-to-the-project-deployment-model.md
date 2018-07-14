@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
 caps.latest.revision: 3
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 903b68ba22842d05ceca29467f4a6c523a82f4db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aea3e9e297f4440ccb73805b87e73bca4cb6a30d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245018"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>步驟 2：將專案轉換成專案部署模型
   在這個工作中，您將使用 Integration Services 專案轉換精靈，將專案轉換為專案部署模型。  
@@ -55,6 +55,6 @@ ms.locfileid: "36033929"
 13. 按一下 [參數] 索引標籤，並確認封裝現在包含 VarFolderName 參數，而值的路徑同於從第 5 課組態檔的新範例資料資料夾所指定的路徑。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 3： 測試第 6 課封裝](lesson-6-3-testing-the-lesson-6-package.md)  
+ [步驟 3：測試第 6 課的套件](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

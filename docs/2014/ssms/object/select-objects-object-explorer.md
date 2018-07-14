@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ffeac246442f3ee291975902bcacd12104e77f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd13264cfe88799c50eec23bab8e06d52feb399f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265674"
 ---
 # <a name="select-objects-object-explorer"></a>選取物件 (物件總管)
   使用 [選取物件] 對話方塊，即可將物件新增至另一個對話方塊中的清單。 對話方塊中可用的對話方塊標題和選項，會視其如何開啟而定。 只有可用的選項會出現；例如，當您選取新物件的擁有者時，只可以使用登入。  

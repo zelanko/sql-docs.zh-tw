@@ -1,5 +1,5 @@
 ---
-title: 選取來源位置 （SSIS 封裝升級精靈） |Microsoft 文件
+title: 選取來源位置 （SSIS 封裝升級精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72e37065325a80f2f487101a1b8f936bb903dc04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2794712f3817b3cf4d63aac7451a817cf55338b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266924"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>選取來源位置 (SSIS 封裝升級精靈)
   使用 **[選取來源位置]** 頁面，指定升級封裝的來源。  
@@ -37,7 +37,7 @@ ms.locfileid: "36032578"
  **封裝來源**  
  選取包含要升級之封裝的儲存位置。 這個選項的值列於下表中。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**[File System]**|指示要升級的封裝位於本機電腦的資料夾中。<br /><br /> 若要讓精靈在升級這些封裝之前先備份原始封裝，原始封裝必須儲存在檔案系統中。 如需詳細資訊，請參閱「如何」主題。|  
 |**SSIS 封裝存放區**|指示要升級的封裝位於封裝存放區中。 此封裝存放區是由 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務所管理的檔案系統資料夾集合所組成。 如需詳細資訊，請參閱 [AllMembers &#40;MDX&#41;](service/package-management-ssis-service.md)。<br /><br /> 選取這個值會顯示對應的 **[封裝來源]** 動態選項。|  

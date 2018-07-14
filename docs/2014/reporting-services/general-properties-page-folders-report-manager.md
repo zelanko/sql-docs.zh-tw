@@ -1,5 +1,5 @@
 ---
-title: 一般屬性頁面，資料夾 （報表管理員） |Microsoft 文件
+title: 一般屬性頁面，資料夾 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69330b9a1a65ed147d716d47d9a2cc68e34bab6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255820"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>一般屬性頁面，資料夾 (報表管理員)
   使用資料夾的 [一般] 屬性頁面來檢視和設定您建立之資料夾的屬性。 有關誰建立和修改資料夾及何時修改資料夾的資訊顯示會在 [一般] 屬性頁面上方。  
   
- 資料夾屬性也包含安全性設定。 如需有關資料夾安全性的詳細資訊，請參閱[安全資料夾](security/secure-folders.md)。  
+ 資料夾屬性也包含安全性設定。 如需有關資料夾安全性的詳細資訊，請參閱 <<c0> [ 保護資料夾的](security/secure-folders.md)。  
   
  不可以在報表伺服器命名空間內重新命名或移動特殊用途的資料夾 (例如，[主資料夾]、[我的報表] 和 [使用者] 資料夾)。 [一般] 屬性頁不適用於這些資料夾中。  
   

@@ -1,5 +1,5 @@
 ---
-title: 指定軸 (SQLXML 4.0) |Microsoft 文件
+title: 指定軸 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f3b9f58369cea876bc345300a945f85260b4326a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: b97dc99b7de5d8829f88faad6a6df282e9cecd5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234778"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
     
@@ -38,7 +38,7 @@ ms.locfileid: "36031841"
   
      包含內容節點的子系。  
   
-     下列的 XPath 運算式 （位置路徑） 從目前所有的內容節點選取**\<客戶 >** 子系：  
+     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取**\<客戶 >** 子系：  
   
     ```  
     child::Customer  
@@ -72,7 +72,7 @@ ms.locfileid: "36031841"
   
      包含內容節點本身。  
   
-     下列 XPath 運算式選取目前的節點，如果它是**\<順序 >** 節點：  
+     下列 XPath 運算式會選取目前的節點才**\<順序 >** 節點：  
   
     ```  
     self::Order  

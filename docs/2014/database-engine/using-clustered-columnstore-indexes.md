@@ -1,30 +1,29 @@
 ---
-title: 使用叢集資料行存放區索引 |Microsoft 文件
+title: 使用叢集資料行存放區索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 caps.latest.revision: 6
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 527905bc0b0be07c178c873ae22fd06a0166b963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a439826920b98098d1ed8a30540c39509b7083d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254600"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>使用叢集資料行存放區索引
   在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中使用叢集資料行存放區索引的工作。  
   
- 如需資料行存放區索引的概觀，請參閱[Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
+ 如需資料行存放區索引的概觀，請參閱 < [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)。  
   
  叢集資料行存放區索引的相關資訊，請參閱[Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md)。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "36032615"
 -   [重新組織叢集資料行存放區索引](#reorganize)  
   
 ##  <a name="create"></a> 建立叢集資料行存放區索引  
- 若要建立非叢集資料行存放區索引，先建立資料列存放區資料表做為堆積或叢集的索引，，然後使用[建立叢集資料行存放區索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)陳述式，將資料表轉換成叢集資料行存放區索引。 如果您要讓叢集資料行存放區索引使用與叢集索引相同的名稱，請使用 DROP_EXISTING 選項。  
+ 若要建立非叢集資料行存放區索引，第一次將資料列存放區資料表建立為堆積或叢集的索引，並用[建立叢集資料行存放區索引&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)陳述式，將資料表轉換成叢集資料行存放區索引。 如果您要讓叢集資料行存放區索引使用與叢集索引相同的名稱，請使用 DROP_EXISTING 選項。  
   
  此範例會建立資料表做為堆積，然後將它轉換成名為 cci_Simple 的叢集資料行存放區索引。 這會將整個資料表的儲存體從資料列存放區變更為資料行存放區。  
   
@@ -61,7 +60,7 @@ GO
  如需其他範例，請參閱 < 範例 > 一節中的[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql)。  
   
 ##  <a name="drop"></a> 卸除叢集資料行存放區索引  
- 使用[DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)陳述式來卸除叢集資料行存放區索引。 此作業將卸除索引並將資料行存放區資料表轉換成資料列存放區堆積。  
+ 使用[DROP INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/drop-index-transact-sql)卸除叢集資料行存放區索引的陳述式。 此作業將卸除索引並將資料行存放區資料表轉換成資料列存放區堆積。  
   
 ##  <a name="load"></a> 將資料載入叢集資料行存放區索引  
  您可以利用任何一種標準的載入方法，將資料加入至現有的叢集資料行存放區索引中。  例如，bcp 大量載入工具、Integration Services 和 INSERT... SELECT 都可以將資料載入叢集資料行存放區索引中。  
@@ -88,7 +87,7 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 資料列群組大小：145,000|0|  
-|1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576。|@shouldalert|  
+|1,048,577|1,048,576<br /><br /> 資料列群組大小：1,048,576。|1|  
 |2,252,152|2,252,152<br /><br /> 資料列群組大小：1,048,576、1,048,576、155,000|0|  
   
  下列範例顯示將 1,048,577 個資料列載入分割區的結果。 結果顯示，資料行存放區中有一個 COMPRESSED 資料列群組 (壓縮的資料行區段)，而差異存放區中有 1 個資料列。  
@@ -119,7 +118,7 @@ SELECT * FROM sys.column_store_row_groups
 -   如果資料列位於差異存放區中，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會更新差異存放區中的該資料列。  
   
 ##  <a name="rebuild"></a> 重建叢集資料行存放區索引  
- 使用[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)或[ALTER INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-index-transact-sql)執行完整重建現有的叢集資料行存放區索引。 此外，您可以使用 ALTER INDEX... REBUILD 重建特定分割區。  
+ 使用[CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql)或[ALTER INDEX &#40;-&#41; ](/sql/t-sql/statements/alter-index-transact-sql)完整重建現有的叢集資料行存放區索引。 此外，您可以使用 ALTER INDEX... REBUILD 重建特定分割區。  
   
 ### <a name="rebuild-process"></a>重建程序  
  為了重建叢集資料行存放區索引，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會進行以下作業：  
@@ -150,7 +149,7 @@ SELECT * FROM sys.column_store_row_groups
      如此可確保所有資料都儲存在資料行存放區中。 如果同時進行多項載入，每個分割區最後可能會有多個差異存放區。 重建會將所有差異存放區資料列移至資料行存放區。  
   
 ##  <a name="reorganize"></a> 重新組織叢集資料行存放區索引  
- 重新組織叢集資料行存放區索引會將所有 CLOSED 資料列群組移到資料行存放區中。 若要執行重新組織，使用[ALTER INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)與 REORGANIZE 選項。  
+ 重新組織叢集資料行存放區索引會將所有 CLOSED 資料列群組移到資料行存放區中。 若要執行重新組織，使用[ALTER INDEX &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)了 REORGANIZE 選項。  
   
  不需要進行重新組織，也能將 CLOSED 資料列群組移到資料行存放區中。 Tuple 移動處理序最後會找到所有 CLOSED 資料列群組並加以移動。 不過，Tuple 移動是單一執行緒，而且移動資料列群組的速度對於您的工作負載可能不夠快。  
   

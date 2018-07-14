@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ba3c4911b8590e0f0deb1c6ad9564aa17e366eff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eea7cee81892b7ffb5ce35d747c54b413ceb1d62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252620"
 ---
 # <a name="look-up-rfc-destination"></a>查閱 RFC 目的地
   使用 [查閱 RFC 目的地] 對話方塊可以查閱 SAP Netweaver BW 系統中定義的 RFC 目的地。 出現可用的 RFC 目的地清單時，請選取您要的目的地，然後此元件就會將必要的值填入相關聯的選項。  
@@ -49,14 +49,14 @@ ms.locfileid: "36033941"
  檢視閘道器主機的伺服器名稱或 IP 位址。 此名稱或 IP 位址通常與 SAP 應用程式伺服器相同。  
   
  **閘道器服務**  
- 以格式檢視閘道服務的名稱`sapgwNN`，其中`NN`是系統編號。  
+ 檢視閘道服務的名稱格式`sapgwNN`，其中`NN`是系統編號。  
   
  **程式識別碼**  
  檢視與 RFC 目的地相關聯的程式識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [SAP BW 來源編輯器&#40;連接管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 目的地編輯器&#40;連接管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 來源編輯器&#40;連線管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器&#40;連線管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 說明](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

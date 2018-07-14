@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65556
 - vdt.dlgbox.validationwarnings
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 524344212a1f81c07835bf9f967ff34bfeade928
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 202881aef2ae0fc8aa5daa4f01d625a9e2a26860
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214308"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>驗證警告對話方塊 (Visual Database Tools)
   如果您嘗試儲存可能具有損壞性副作用 (Side Effect) 的修改，或是資料庫認可操作可能失敗時，便會出現此對話方塊。 此會對話方塊指出有哪些可能的副作用，或是認可操作可能失敗的原因。 它可讓您選擇繼續執行修改或取消操作。  

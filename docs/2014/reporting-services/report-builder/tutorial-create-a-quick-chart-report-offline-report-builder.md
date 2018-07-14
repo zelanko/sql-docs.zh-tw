@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports, creating
 - tutorials, getting started
 - creating reports
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 caps.latest.revision: 25
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03ec9b9f8f953f0c4947e3f39cd125e54d6d7272
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216808"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
   在此教學課程中，您將使用精靈來建立圓形圖，然後稍微進行修改，以便了解可行的作業。 您可以採用兩種不同的方式進行此教學課程。 這兩種方法結果都一樣，會是如下圖所示的圓形圖：  
   
- ![檢視 「 我第一個圓形圖 」 中執行](../media/rs-my1stpierunview.gif 「 「 我的第一個圓形圖 」 中執行檢視 」）  
+ ![檢視 「 我第一個圓形圖 」 在執行中](../media/rs-my1stpierunview.gif 「 「 我的第一個圓形圖 」 回合中檢視 」）  
   
-## <a name="prerequisites"></a>必要條件  
- 不論您使用的是 XML 資料或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢，都需要具備 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 報表產生器的存取權。 您可以執行單機版，或者報表管理員或 SharePoint 網站提供的 ClickOnce 版本。 只有第一個步驟「如何開啟報表產生器」與 ClickOnce 版本不同。 如需詳細資訊，請參閱[安裝、 解除安裝，以及報表產生器支援](../install-uninstall-and-report-builder-support.md)。  
+## <a name="prerequisites"></a>先決條件  
+ 不論您使用的是 XML 資料或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢，都需要具備 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 報表產生器的存取權。 您可以執行單機版，或者報表管理員或 SharePoint 網站提供的 ClickOnce 版本。 只有第一個步驟「如何開啟報表產生器」與 ClickOnce 版本不同。 如需詳細資訊，請參閱 <<c0> [ 安裝、 解除安裝，以及報表產生器支援](../install-uninstall-and-report-builder-support.md)。  
   
 ##  <a name="TwoWays"></a> 進行此教學課程的兩種方式  
   
@@ -45,18 +45,18 @@ ms.locfileid: "36036327"
  [使用 XML 資料建立圓形圖](#CreatePieChartXML)  
   
 ### <a name="using-a-transact-sql-query-that-contains-data-for-this-tutorial"></a>在此教學課程中使用包含資料的 Transact-SQL 查詢  
- 您可以從本主題複製包含資料的查詢，並將它貼入精靈中。 您需要的執行個體名稱[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]以及能夠以唯讀方式存取任何資料庫認證。 教學課程中的資料集查詢會使用常值資料，但是查詢必須經過 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體處理，才能傳回報表資料集所需的中繼資料。  
+ 您可以從本主題複製包含資料的查詢，並將它貼入精靈中。 您需要的執行個體名稱[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]和能夠以唯讀方式存取任何資料庫的認證。 教學課程中的資料集查詢會使用常值資料，但是查詢必須經過 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 執行個體處理，才能傳回報表資料集所需的中繼資料。  
   
  使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢的優點在於，所有其他報表產生器教學課程都使用相同的方法，因此當您進行其他教學課程時，已經知道要執行哪些作業。  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢需要其他幾個先決條件。 如需詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../report-builder-tutorials.md)。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢需要其他幾項必要條件。 如需詳細資訊，請參閱[教學課程的必要條件 &#40;報表產生器&#41;](../report-builder-tutorials.md)。  
   
  [建立含資料之 Transact-SQL 查詢的圓形圖](#CreatePieQueryData)  
   
 ## <a name="also-in-this-article"></a>本文相關內容  
  [當您執行精靈之後](#AfterWizard)  
   
- [後續步驟](#WhatsNext)  
+ [什麼是下一步](#WhatsNext)  
   
 ##  <a name="CreatePieChartXML"></a> 使用 XML 資料建立圓形圖  
   
@@ -81,13 +81,13 @@ ms.locfileid: "36036327"
   
 6.  您可以將資料來源命名為任何想要的名稱。 在 [名稱] 方塊中，鍵入 **MyPieChart**。  
   
-7.  在**選取連接類型**方塊中，按一下**XML。**  
+7.  在 **選取連線類型**方塊中，按一下**XML。**  
   
-8.  按一下 認證 索引標籤，並選取 **使用目前的 Windows 使用者。可能需要 Kerberos 委派**，然後按一下 **確定**。  
+8.  按一下 認證 索引標籤，並選取 **使用目前的 Windows 使用者。可能需要 Kerberos 委派**，然後按一下**確定**。  
   
 9. 在 [選擇與資料來源的連線] 頁面中，按一下 [MyPieChart]，然後按一下 [下一步]。  
   
-10. 複製下列文字，並將它貼入中央的大型方塊中**設計查詢**頁面。  
+10. 複製下列文字，並將它貼在大型方塊中的中央**設計查詢**頁面。  
   
     ```  
     <Query>  
@@ -126,7 +126,7 @@ ms.locfileid: "36036327"
   
 15. 將 **FullName** 欄位從 [可用的欄位] 方塊拖曳至 [類別目錄] 方塊中 (或是按兩下該欄位，就會移至 [類別目錄] 方塊)，然後按一下 [下一步]。  
   
-16. 在**選擇樣式** 頁面上， **Ocean**預設會選取。 按一下其他樣式來查看其外觀。  
+16. 在 **選擇樣式**頁面上， **Ocean**預設會選取。 按一下其他樣式來查看其外觀。  
   
 17. 按一下 **[完成]**。  
   
@@ -136,13 +136,13 @@ ms.locfileid: "36036327"
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#TwoWays)  
   
-##  <a name="CreatePieQueryData"></a> 建立具有圓形圖[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢  
+##  <a name="CreatePieQueryData"></a> 建立圓形圖[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢  
   
 #### <a name="to-create-the-pie-chart-with-a-includetsqlincludestsql-mdmd-query-that-contains-data"></a>若要建立含資料之 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢的圓形圖  
   
 1.  按一下 **[開始]**、依序指向 **[程式集]** 和 **[Microsoft SQL Server 2012 報表產生器]**，然後按一下 **[報表產生器]**。  
   
-2.  在**新報表或資料集**對話方塊方塊中，確認**報表**選取左窗格中。  
+2.  在 **新的報表或資料集**對話方塊方塊中，確認**報表**左窗格中選取。  
   
 3.  在右窗格中按一下 [圖表精靈]，然後按一下 [建立]。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "36036327"
   
 12. 將 **FullName** 欄位從 [可用的欄位] 方塊拖曳至 [類別目錄] 方塊中 (或是按兩下該欄位，就會移至 [類別目錄] 方塊)，然後按一下 [下一步]。  
   
-13. 在**選擇樣式**海洋 頁面，預設會選取。 按一下其他樣式來查看其外觀。  
+13. 在 [**選擇樣式**預設會選取] 頁面上，海洋。 按一下其他樣式來查看其外觀。  
   
 14. 按一下 **[完成]**。  
   
@@ -204,22 +204,22 @@ ms.locfileid: "36036327"
   
 2.  以滑鼠右鍵按一下標籤，然後選取**數列標籤屬性**。 [數列標籤屬性] 對話方塊便會出現。  
   
-3.  型別`#PERCENT{P0}`如**標示資料**選項。  
+3.  型別`#PERCENT{P0}`for**標籤資料**選項。  
   
-     `{P0}`提供您沒有小數位數的百分比。 如果您只輸入`#PERCENT`，您的數字會有兩個小數位數。 `#PERCENT` 是為您; 執行計算或函數的關鍵字還有許多其他。  
+     `{P0}`提供您沒有小數位數的百分比。 如果您只輸入`#PERCENT`，數字將具有兩個小數位數。 `#PERCENT` 為您; 執行計算或函式的關鍵字有許多其他項目。  
   
  如需自訂圖表標籤和圖例的詳細資訊，請參閱 [在圓形圖上顯示百分比值 &#40;報表產生器及 SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) 和[變更圖例項目的文字 &#40;報表產生器及 SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md)。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#TwoWays)  
   
 ##  <a name="WhatsNext"></a> 下一步  
- 既然您已經在報表產生器中建立第一份報表，可以準備嘗試進行其他教學課程，並且根據自己的資料開始建立報表。 若要執行報表產生器，您需要權限以存取資料來源，例如資料庫、*連接字串*，這實際上會將您連接到資料來源。 系統管理員會提供這項資訊而且可能會為您設定。  
+ 既然您已經在報表產生器中建立第一份報表，可以準備嘗試進行其他教學課程，並且根據自己的資料開始建立報表。 若要執行報表產生器，您需要存取您的資料來源，例如資料庫、 與的權限*連接字串*，這會您實際連接到資料來源。 系統管理員會提供這項資訊而且可能會為您設定。  
   
- 若要進行其他教學課程，您需要的執行個體的名稱[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]以及能夠以唯讀方式存取任何資料庫認證。 系統管理員可能也會為您進行該設定。  
+ 若要進行其他教學課程，您需要的執行個體的名稱[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]和能夠以唯讀方式存取任何資料庫的認證。 系統管理員可能也會為您進行該設定。  
   
  最後，若要將報表儲存至報表伺服器或與報表伺服器整合的 SharePoint 網站，您將需要 URL 和權限。 雖然您可以直接從電腦執行任何已建立的報表，不過從報表伺服器或 SharePoint 網站執行時，報表會提供更多功能。 您需要權限才能從發行報表的報表伺服器或 SharePoint 網站執行您的報表或其他報表。 請連絡系統管理員以取得存取權。  
   
- 開始之前，閱讀一些概念和詞彙的相關資訊可能會有所協助。 如需詳細資訊，請參閱[報表撰寫概念&#40;報表產生器及 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)。 此外，在您建立第一份報表之前，請花點時間規劃一下。 這是值得花費的時間。 如需詳細資訊，請參閱[規劃報表&#40;報表產生器&#41;](../report-design/planning-a-report-report-builder.md)。  
+ 開始之前，閱讀一些概念和詞彙的相關資訊可能會有所協助。 如需詳細資訊，請參閱 <<c0> [ 報表撰寫概念&#40;報表產生器及 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)。</c0> 此外，在您建立第一份報表之前，請花點時間規劃一下。 這是值得花費的時間。 如需詳細資訊，請參閱 <<c0> [ 規劃報表&#40;報表產生器&#41;](../report-design/planning-a-report-report-builder.md)。</c0>  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#TwoWays)  
   

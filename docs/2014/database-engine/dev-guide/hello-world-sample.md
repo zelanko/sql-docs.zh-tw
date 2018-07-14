@@ -1,5 +1,5 @@
 ---
-title: Hello World 範例 |Microsoft 文件
+title: Hello World 範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,22 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 05ac9594d985766e48fbd5757dca48bdd47c2aa1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 75ac8eafd490dc3a9b7501f7c653bc8aaf99cde4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269924"
 ---
 # <a name="hello-world-sample"></a>Hello World 範例
   這個 Hello World 範例會示範建立、部署和測試以簡單 Common Language Runtime (CLR) 整合為基礎的預存程序過程中所涉及的基本作業。 此範例還示範如何透過由預存程序動態建構及傳回至呼叫端的記錄來傳回資料。  
   
  `HelloWorld`預存程序會傳回字串"Hello world ！" 中的結果集包含單一資料列。 此範例說明類別的部分用法[Microsoft.SqlServer.Server.SqlMetaData](http://go.microsoft.com/fwlink/?LinkID=193572)， [Microsoft.SqlServer.Server.SqlDataRecord](http://go.microsoft.com/fwlink/?LinkID=193573)和[Microsoft.SqlServer.Server.Pipe](http://go.microsoft.com/fwlink/?LinkID=193571)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -59,7 +59,7 @@ ms.locfileid: "36033950"
   
 -   AdventureWorks 資料庫必須安裝在您所使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上。  
   
--   如果您不是系統管理員的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您所使用的執行個體，您必須擁有系統管理員授與您**CreateAssembly**權限，才能完成安裝。  
+-   如果您不是系統管理員[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您所使用的執行個體，您必須擁有授與您的系統管理員**CreateAssembly**完成安裝程序的權限。  
   
 ## <a name="building-the-sample"></a>建立範例  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36033950"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存成`test.sql`範例目錄中。  
+7.  複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存為`test.sql`範例目錄中。  
   
 8.  使用下列命令來執行測試指令碼  
   

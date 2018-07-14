@@ -1,5 +1,5 @@
 ---
-title: 查詢設計工具的報表設計工具的 SQL Server Data Tools (SSRS) |Microsoft 文件
+title: 查詢設計工具的報表設計工具的 SQL Server Data Tools (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - graphical query designer [Reporting Services]
 - MDX query designer [Reporting Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ad3b9109d78523f8a273ce44e32ceab163bdf869
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4721d0df4f1c6d8f5a0dda8c70d90b0134c62fbc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264214"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中報表設計師的查詢設計工具 (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供各種查詢設計工具，您可以在報表設計師中利用這些工具來建立資料集查詢。 您使用的資料來源類型會決定特定查詢設計工具的可用性。 此外，某些查詢設計工具還提供替代模式，讓您能夠選擇使用視覺化模式或直接使用查詢語言。 本主題簡介每個工具，並描述每個工具支援的資料來源類型。 本主題將描述下列工具：  
@@ -99,7 +99,7 @@ ms.locfileid: "36033888"
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 工具](../tools/reporting-services-tools.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)   
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)   
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [Reporting Services 所支援的資料來源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   

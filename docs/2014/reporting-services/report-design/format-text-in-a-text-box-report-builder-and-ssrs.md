@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f04955a2c39d7c8517d923fdbfdcb36e7f77b9a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9bf82225a67c82cfd83690f8eff14de760e3745
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034518"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272504"
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>格式化文字方塊中的文字 (報表產生器及 SSRS)
   您可以在文件方塊中，單獨地對文字任何一部分進行格式化，並且在同一個文字方塊中，混合使用預留文字與靜態文字。 混合格式與加入預留位置文字的功能可以讓您針對報表中的文字建立合併列印或範本。 您可以使用預留位置來個別定義和格式化任何運算式。  
@@ -70,13 +70,13 @@ ms.locfileid: "36034518"
  清單會針對欄位中每一個值重複一次，而且 *FieldName* 預留位置每次都會由資料集中該欄位的值取代。  
   
 ## <a name="see-also"></a>另請參閱  
- [文字方塊&#40;報表產生器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
- [格式化文字和預留位置&#40;報表產生器和 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [文字方塊&#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [將 HTML 新增至報表 &#40;報表產生器及 SSRS&#41;](add-html-into-a-report-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [格式化數字和日期&#40;報表產生器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [格式化數字和日期&#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)  
   
   

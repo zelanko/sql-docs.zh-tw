@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 57d218bdba57a1960340f63cca9c77f619183481
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd65ca13fa3ba99e55a640bf1f3e210747f978fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223648"
 ---
 # <a name="map-columns-to-composite-domains"></a>將資料行對應到複合定義域
   複合定義域是由兩個以上的單一定義域所組成。 您可以將多個資料行對應到定義域，也可將具有分隔值的單一資料行對應到定義域。  

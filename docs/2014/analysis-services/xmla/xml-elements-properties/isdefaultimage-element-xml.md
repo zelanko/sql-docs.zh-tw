@@ -1,5 +1,5 @@
 ---
-title: IsDefaultImage 元素 (XML) |Microsoft 文件
+title: IsDefaultImage 元素 (XML) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e29cd137-af82-4753-a681-0d3e705513f3
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c4d15ea9048c83b1579b688f6848e48deb1dffe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b5dac54773d432b01045c2b3aceca61c39fdfab0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235708"
 ---
 # <a name="isdefaultimage-element-xml"></a>IsDefaultImage 元素 (XML)
   表示可以透過此關聯性導覽至另一個資料表以及提取具有屬性 IsDefaultImage 的成員，取得此實體的預設影像。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
 - "10256"
@@ -21,18 +21,18 @@ f1_keywords:
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd6084c7d426693abbaa29c60aa2c5ad0b0011ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 33e11e05c4678fbbde7c97175498f94e092ffe43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280474"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>圖表 (報表產生器及 SSRS)
-  當您想要以視覺格式摘要列出資料時，請使用圖表資料區。 圖表能讓您一次就能展示大量的彙總資訊。 在建立圖表之前，務必仔細準備及了解資料，因為這樣將協助您快速有效地設計圖表。 如需詳細資訊，請參閱[將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要立即開始使用圖表，請參閱列、 資料行、 走勢圖和圓形圖教學課程中的[教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)列和圓形圖教學課程中的或[Reporting Services 教學課程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
+  當您想要以視覺格式摘要列出資料時，請使用圖表資料區。 圖表能讓您一次就能展示大量的彙總資訊。 在建立圖表之前，務必仔細準備及了解資料，因為這樣將協助您快速有效地設計圖表。 如需詳細資訊，請參閱[將圖表加入至報表 &#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)。 若要立即開始使用圖表，請參閱列、 資料行、 走勢圖和圓形圖教學課程[教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)或列和圓形圖教學課程[Reporting Services 教學課程&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)。  
   
  下圖顯示圖表中使用的許多不同元素。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36033184"
   
   
 ##  <a name="AggregateValues"></a> 從圖表的資料欄位彙總值  
- 根據預設，當欄位加入到圖表的 [值] 區域時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會計算該欄位的彙總。 如果您將某個欄位拖曳到圖表上，而不將該欄位放到特定的區域中，該圖表將會根據欄位的資料類型，判斷此欄位屬於類別目錄 (x) 軸或值 (y) 軸。 放在 [值] 區域的數值欄位會使用 SUM 函數進行彙總。 如果值欄位的資料類型在 [值] 區域中為字串，即使欄位中有數字，圖表也無法顯示數值，因此圖表會顯示 COUNT 函數。 若要避免發生這個問題，請確定您使用的欄位具有數值資料類型，而不是包含格式化數字的字串。 您可以使用 Visual Basic 運算式，將字串值轉換為數值資料類型使用`CDbl`或`CInt`常數。 例如，下列複雜運算式會轉換包含格式化為字串之數值的 `MyField` 欄位。  
+ 根據預設，當欄位加入到圖表的 [值] 區域時， [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會計算該欄位的彙總。 如果您將某個欄位拖曳到圖表上，而不將該欄位放到特定的區域中，該圖表將會根據欄位的資料類型，判斷此欄位屬於類別目錄 (x) 軸或值 (y) 軸。 放在 [值] 區域的數值欄位會使用 SUM 函數進行彙總。 如果值欄位的資料類型在 [值] 區域中為字串，即使欄位中有數字，圖表也無法顯示數值，因此圖表會顯示 COUNT 函數。 若要避免發生這個問題，請確定您使用的欄位具有數值資料類型，而不是包含格式化數字的字串。 您可以使用 Visual Basic 運算式，將字串值轉換為數值資料類型，使用`CDbl`或`CInt`常數。 例如，下列複雜運算式會轉換包含格式化為字串之數值的 `MyField` 欄位。  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -121,38 +121,38 @@ ms.locfileid: "36033184"
   
   
 ##  <a name="InThisSection"></a> 本節內容  
- [將圖表加入至報表&#40;報表產生器和 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [將圖表加入至報表&#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  描述將圖表加入至報表的第一個步驟。  
   
- [圖表類型&#40;報表產生器和 SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
+ [圖表類型&#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
  描述 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供的所有圖表類型及圖表子類型，包括使用各種圖表類型時的考量及最佳作法。  
   
- [格式化圖表&#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
+ [格式化圖表&#40;報表產生器及 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  使用來改善整體外觀，並反白顯示圖表的關鍵資料點。  
   
- [空白和 Null 資料點在圖表中的&#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [空白和 Null 資料點在圖表中的&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
  描述根據包含空白或 Null 值使用圖表時的考量。  
   
- [包含多個資料範圍的數列顯示在圖表上&#40;報表產生器和 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [包含多個資料範圍的數列顯示在圖表上&#40;報表產生器及 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
  描述如何將刻度分欄加入到包含一個以上資料範圍的數列中。  
   
- [在圖表上的多個數列&#40;報表產生器和 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
+ [在圖表上的多個數列&#40;報表產生器及 SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)  
  描述在相同圖表上顯示多個數列的數個方法，包括結合圖表類型、使用副座標軸、指定不同的圖表類型，以及使用多個圖表區域。  
   
- [將多個資料區域連結至相同的資料集&#40;報表產生器和 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [將多個資料區域連結至相同的資料集&#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
  提供相同報表資料集的不同資料檢視。  
   
- [加入或刪除圖表中的群組&#40;報表產生器和 SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [加入或刪除圖表中的群組&#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
  描述將群組和巢狀群組加入至圖表。  
   
- [將移動平均加入至圖表&#40;報表產生器和 SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [將移動平均加入至圖表&#40;報表產生器及 SSRS&#41;](add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
  描述如何使用 [移動平均] 公式計算數列中資料的平均值。  
   
- [疑難排解圖表&#40;報表產生器和 SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
+ [疑難排解圖表&#40;報表產生器及 SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  描述使用圖表的秘訣。  
   
 ## <a name="see-also"></a>另請參閱  
- [影像、 文字方塊、 矩形和線條&#40;報表產生器和 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [影像、 文字方塊、 矩形和線條&#40;報表產生器及 SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [教學課程：將直條圖新增至報表 &#40;報表產生器&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   

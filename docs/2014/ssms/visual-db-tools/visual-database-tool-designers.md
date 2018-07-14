@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [SQL Server]
 - View Designer
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a2913a032f6013678042901dc7fdff6954522da7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: afd7f3ca3f39d2c416eeb0e4f05b9dac28a99b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269854"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tool 設計工具
   Visual Database Tools 是設計組合工具，可用來使用資料來源。 您可以使用這些工具來建立查詢、設計或修改資料庫結構，或是更新資料。 這些工具包括資料庫圖表設計工具、資料表設計師以及查詢和檢視設計師。  

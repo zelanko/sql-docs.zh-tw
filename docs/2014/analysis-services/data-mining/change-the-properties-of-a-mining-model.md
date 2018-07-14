@@ -1,5 +1,5 @@
 ---
-title: 變更採礦模型的屬性 |Microsoft 文件
+title: 變更採礦模型的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - properties [data mining]
 ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28e417708981a7184caa62ae74fe681397411d78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed77c0d87fc6fb62497cc68c52dd3fabeb50d2ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279807"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>變更採礦模型的屬性
-  有些採礦模型屬性可套用至整個模型，有些模型屬性只套用至個別資料行。 套用至整個模型屬性的範例是`Drillthrough`屬性，指定是否應該可用於查詢案例資料，而`Description`屬性。 套用至資料行的屬性包含 `Usage` 和 `ModelingFlags`，它們控制資料行中的資料在模型內的使用方式。  
+  有些採礦模型屬性可套用至整個模型，有些模型屬性只套用至個別資料行。 屬性可套用至整個模型的範例包括`Drillthrough`屬性，指定是否應該可供查詢案例資料，而`Description`屬性。 套用至資料行的屬性包含 `Usage` 和 `ModelingFlags`，它們控制資料行中的資料在模型內的使用方式。  
   
  下列模型屬性具有可用於建立運算式或設定複雜模型屬性的進階編輯器。 下列屬性提供：  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36034068"
 2.  在畫面右側的 [屬性] 視窗中，反白顯示對應到您要變更之屬性的值，然後輸入新值。  
   
     > [!NOTE]  
-    >  如果資料行使用方式設為`Ignore`、**屬性**視窗資料行是空白。  
+    >  如果資料行使用方式設為`Ignore`，則**屬性**資料行的視窗為空白。  
   
      您在設計師中選取其他元素時，新值就會生效。  
   

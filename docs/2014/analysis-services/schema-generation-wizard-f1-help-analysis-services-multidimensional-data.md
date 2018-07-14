@@ -1,5 +1,5 @@
 ---
-title: 結構描述產生精靈 F1 說明 (Analysis Services-多維度資料) |Microsoft 文件
+title: 結構描述產生精靈 F1 說明 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 52536b8132a0c42b67439a45e6a808a7674b008b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca4ce364da49d35e7f9e901937196f3dbad63af7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033114"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218168"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>結構描述產生精靈 F1 說明 (Analysis Services - 多維度資料)
   使用結構描述產生精靈，為依據現有 Cube 和維度的主題領域資料庫自動產生關聯式結構描述。 此外，您可以擴展精靈為時間維度所產生的資料表，以及管理主題領域資料庫的命名慣例和選項。  
@@ -40,13 +40,13 @@ ms.locfileid: "36033114"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [指定目標&#40;結構描述產生精靈&#41; &#40;Analysis Services-多維度資料&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [指定的目標&#40;結構描述產生精靈&#41; &#40;Analysis Services-多維度資料&#41;](specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
--   [主題領域資料庫結構描述選項&#40;結構描述產生精靈&#41; &#40;Analysis Services-多維度資料&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
+-   [主旨區域資料庫結構描述選項&#40;結構描述產生精靈&#41; &#40;Analysis Services-多維度資料&#41;](subject-area-database-schema-options-analysis-services-multidimensional-data.md)  
   
 -   [指定命名慣例&#40;結構描述產生精靈&#41; &#40;Analysis Services-多維度資料&#41;](specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md)  
   
--   [正在完成精靈&#40;結構描述產生精靈&#41; &#40;Analysis Services-多維度資料&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
+-   [完成精靈&#40;結構描述產生精靈&#41; &#40;Analysis Services-多維度資料&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  

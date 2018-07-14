@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, connections
 - SSIS packages, connections
@@ -23,13 +23,13 @@ ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 caps.latest.revision: 90
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa0a870cd1a5e48849b81d392f3d34bdeb7d308e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a226221234b6668a50f6feef2e61e3b5a38f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273284"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) 連接
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝會使用連接來執行不同的工作以及實作 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 功能：  

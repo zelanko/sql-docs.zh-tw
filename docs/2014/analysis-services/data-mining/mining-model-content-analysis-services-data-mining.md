@@ -1,5 +1,5 @@
 ---
-title: 採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - standard deviation
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 418b4eb1e4e3d6dcc188a139ad3552fba5038e1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a701907535b7c0f5103cf1e98276f5573e9678f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282424"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Mining Model Content (Analysis Services - Data Mining)
   當您已經使用基礎採礦結構中的資料來設計及處理採礦模型之後，該採礦模型會是完整的，並包含 *「採礦模型內容」*(Mining Model Content)。 您可以使用此內容來進行預測或分析資料。  
@@ -80,7 +80,7 @@ ms.locfileid: "36032439"
   
 |NODE_TYPE 識別碼|節點標籤|節點內容|  
 |-------------------|----------------|-------------------|  
-|@shouldalert|[模型]|中繼資料和根內容節點。 適用於所有模型類型。|  
+|1|[模型]|中繼資料和根內容節點。 適用於所有模型類型。|  
 |2|trEE|分類樹狀結構的根節點。 適用於決策樹模型。|  
 |3|Interior|樹狀結構內的內部分割節點。 適用於決策樹模型。|  
 |4|Distribution|樹狀結構的終端節點。 適用於決策樹模型。|  
@@ -163,9 +163,9 @@ ms.locfileid: "36032439"
   
  如果此屬性名稱是資料行，則在最直接的案例中，ATTRIBUTE_VALUE 會包含該資料行的其中一個離散值。  
   
- 根據演算法如何處理的值，ATTRIBUTE_VALUE 也可以包含一個旗標，告訴您屬性的值是否存在 (`Existing`)，或者值是否為 null (`Missing`)。  
+ 根據如何演算法處理值，ATTRIBUTE_VALUE 也可以包含一個旗標，告訴您是否有值存在的屬性 (`Existing`)，或者該值是否為 null (`Missing`)。  
   
- 比方說，如果設定您的模型來尋找客戶已購買特定項目至少一次，則 ATTRIBUTE_NAME 資料行可能會包含屬性值配對來定義感興趣的項目，例如`Model = 'Water bottle'`，和 ATTRIBUTE_VALUE 資料行將只包含關鍵字`Existing`或`Missing`。  
+ 例如，如果設定您的模型來尋找已購買特定項目至少一次的客戶，則 ATTRIBUTE_NAME 資料行可能包含屬性值配對來定義感興趣的項目，例如`Model = 'Water bottle'`，和 ATTRIBUTE_VALUE 資料行將只包含關鍵字`Existing`或`Missing`。  
   
  SUPPORT  
  具有這個屬性-值配對或是包含此項目集或規則的案例數。  
@@ -217,7 +217,7 @@ ms.locfileid: "36032439"
   
 |VALUE_TYPE 識別碼|值標籤|值類型名稱|  
 |--------------------|-----------------|---------------------|  
-|@shouldalert|Missing|表示案例資料不包含這個屬性的值。 `Missing`狀態從具有值的屬性分開計算。|  
+|1|Missing|表示案例資料不包含這個屬性的值。 `Missing`狀態個別計算值的屬性。|  
 |2|Existing|表示案例資料包含這個屬性的值。|  
 |3|Continuous|表示屬性值是一個連續數值，因此可以由平均值連同變異數和標準差來表示。|  
 |4|Discrete|表示一個視為離散的值 (數值或文字)。<br /><br /> **注意** ：Discrete 值也可以是 missing 值；但是在計算時會以不同方式處理這兩個值。 如需相關資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。|  
@@ -256,7 +256,7 @@ ms.locfileid: "36032439"
   
 |節點/屬性的等級和值|臨界機率|節點機率|  
 |----------------------------------------|--------------------------|----------------------|  
-|模型根<br /><br /> 所有目標客戶|@shouldalert|@shouldalert|  
+|模型根<br /><br /> 所有目標客戶|1|1|  
 |依性別分割的目標客戶|.5|.5|  
 |依性別分割，然後再依收入分成三等級的目標客戶。|.33|.5 * .33 = .165|  
   
@@ -304,7 +304,7 @@ SELECT * FROM [<mining model name>].CONTENT
   
  您也可以使用資料採礦結構描述資料列集來查詢採礦模型內容。 結構描述資料列集是一種標準結構，用戶端可用它來探索、瀏覽及查詢有關採礦結構和模型的資訊。 您也可以使用 XMLA、Transact-SQL 或 DMX 陳述式來查詢結構描述資料列集。  
   
- 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您也可以存取資料採礦結構描述資料列集中的資訊，其方式是開啟 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連接及查詢系統資料表。 如需詳細資訊，請參閱[查詢資料採礦結構描述資料列&#40;Analysis Services-Data Mining&#41;](data-mining-schema-rowsets-ssas.md)。  
+ 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，您也可以存取資料採礦結構描述資料列集中的資訊，其方式是開啟 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連接及查詢系統資料表。 如需詳細資訊，請參閱 <<c0> [ 查詢資料採礦結構描述資料列&#40;Analysis Services-Data Mining&#41;](data-mining-schema-rowsets-ssas.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 一般內容樹狀檢視器&#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   

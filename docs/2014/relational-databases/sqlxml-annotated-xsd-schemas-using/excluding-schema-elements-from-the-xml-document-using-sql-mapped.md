@@ -1,5 +1,5 @@
 ---
-title: 產生 XML 文件使用的 sql 中排除結構描述項目： 對應 (SQLXML 4.0) |Microsoft 文件
+title: 結構描述元素排除產生 XML 文件使用 sql： 對應 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], excluding schema elements
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e7061a1cb6fac88223f41875b7a1c45f7dfb7e9a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 266f53a202906b05421b113a10e5853946810612
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244558"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>使用 sql:mapped 從產生的 XML 文件排除結構描述元素 (SQLXML 4.0)
   XSD 結構描述中的每個元素和屬性都會因為預設對應，而對應到資料庫資料表/檢視表和資料行。 如果您要在 XSD 結構中建立沒有對應到任何資料庫資料表 (檢視表) 或資料行，而且沒有出現在 XML 中的元素，您可以指定 `sql:mapped` 註解。  
@@ -42,14 +42,14 @@ ms.locfileid: "36032523"
  `sql:mapped` 註解接受布林值 (0 = false，1 = true)。 可接受的值為 0、1、true 和 false。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. 指定 sql:mapped 註解  
- 假設您有來自其他來源的 XSD 結構描述。 此 XSD 結構描述包含 **\<Person.Contact >** 具有項目**ContactID**， **FirstName**， **LastName**，和**HomeAddress**屬性。  
+ 假設您有來自其他來源的 XSD 結構描述。 此 XSD 結構描述組成 **\<Person.Contact >** 項目**ContactID**， **FirstName**， **LastName**，和**HomeAddress**屬性。  
   
  此 XSD 結構描述對應至 AdventureWorks 資料庫中的 Person.Contact 資料表中`sql:mapped`上指定**HomeAddress**屬性，因為 Employees 資料表不會儲存員工的住家地址。 因此，根據對應結構描述指定 XPath 查詢時，此屬性不會對應到資料庫，而且不會在產生的 XML 文件中傳回。  
   
- 預設的對應發生於其餘的結構描述。 **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中相同名稱的資料行。  
+ 預設的對應發生於其餘的結構描述。 **\<Person.Contact >** 元素會對應至 Person.Contact 資料表中，而所有屬性都會都對應到 Person.Contact 資料表中的相同名稱的資料行。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -88,7 +88,7 @@ ms.locfileid: "36032523"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 < [Ba6e326154d2"&gt;using ADO to Execute SQLXML Queries&lt](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  結果集如下：  
   
