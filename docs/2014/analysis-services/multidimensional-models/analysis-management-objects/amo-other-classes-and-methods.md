@@ -1,5 +1,5 @@
 ---
-title: AMO 其他類別和方法 |Microsoft 文件
+title: AMO 其他類別和方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 60ed5cfa-3a03-4161-8271-0a71a3ae363b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15c90d9b5c11f22af27332467d3501030a9ce7d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ff888c133491bfca9569daf08dc76e54e14d6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030649"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180875"
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他類別和方法
-  本節包含一般類別不是 OLAP 或資料採礦特有以及屬於管理或管理中的物件時很有幫助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這些類別涵蓋如預存程序、追蹤、例外狀況以及備份與還原等功能。  
+  此章節包含通用的類別，而且非屬 OLAP 或資料採礦特有所管理，或管理中的物件時很有幫助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這些類別涵蓋如預存程序、追蹤、例外狀況以及備份與還原等功能。  
   
  本主題包含下列幾節：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36030649"
   
  若要移除 <xref:Microsoft.AnalysisServices.Assembly> 物件，必須使用 <xref:Microsoft.AnalysisServices.Assembly> 物件的 Drop 方法來卸除它。 從資料庫的組件集合移除 <xref:Microsoft.AnalysisServices.Assembly> 物件並不會卸除組件，它只會讓您無法在應用程式中看到組件，直到下次執行應用程式為止。  
   
- 如需有關可用方法和屬性的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.Assembly>中<xref:Microsoft.AnalysisServices>。  
+ 如需有關可用方法和屬性的詳細資訊，請參閱 <<c0> <xref:Microsoft.AnalysisServices.Assembly> 在<xref:Microsoft.AnalysisServices>。  
   
 > [!IMPORTANT]  
 >  COM 組件可能會造成安全性風險。 由於這項風險和其他考量，COM 組件在 [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]中已經被取代。 在未來的版本中，可能不再支援 COM 組件。  
@@ -153,11 +153,11 @@ ms.locfileid: "36030649"
 6.  繼續執行您的應用程式。  
   
 ##  <a name="CaptureLog"></a>CaptureLog 類別和 CaptureXML 屬性  
- AMO 執行的所有動作都會當做 XMLA 訊息傳送到伺服器。 AMO 提供不需 SOAP 標頭即可擷取所有這些訊息的方法。 如需詳細資訊，請參閱[簡介 AMO 類別](amo-classes-introduction.md)。 CaptureLog 是 AMO 中用以編寫物件與作業之指令碼的機制，將會使用 XMLA 來編寫物件與作業的指令碼。  
+ AMO 執行的所有動作都會當做 XMLA 訊息傳送到伺服器。 AMO 提供不需 SOAP 標頭即可擷取所有這些訊息的方法。 如需詳細資訊，請參閱 <<c0> [ 介紹 AMO 類別](amo-classes-introduction.md)。 CaptureLog 是 AMO 中用以編寫物件與作業之指令碼的機制，將會使用 XMLA 來編寫物件與作業的指令碼。  
   
  若要開始擷取 XML，需要將 CaptureXML 伺服器物件屬性設定為 `true`。 接著所有要傳送到伺服器的動作都會在 CaptureLog 類別中開始擷取，而不必將動作傳送到伺服器。 CaptureLog 被視為類別，因為它有 Clear 這個可用來清除擷取記錄的方法。  
   
- 若要讀取記錄，請取得字串集合並開始對字串反覆運算。 另外，您可以使用伺服器物件方法 ConcatenateCaptureLog，將所有的記錄串連成一個字串。 ConcatenateCaptureLog 有三個參數，其中有兩個是必要的。 必要的參數*異動*，是布林類型，和*平行*，是布林類型。 如果*異動*設`true`，它會指出因為在單一交易，而不是每個命令視為個別交易，將建立的 XML 批次檔。 如果*平行*設`true`，它會指出以並行執行，而不是依序將記錄的批次檔中的所有命令，為都記錄。  
+ 若要讀取記錄，請取得字串集合並開始對字串反覆運算。 另外，您可以使用伺服器物件方法 ConcatenateCaptureLog，將所有的記錄串連成一個字串。 ConcatenateCaptureLog 有三個參數，其中有兩個是必要的。 必要的參數*異動*，屬於布林類型，並*平行*，屬於布林類型。 如果*異動*設定為`true`，表示為單一交易，而不是每個命令視為個別交易，將會建立 XML 批次檔。 如果*平行*設定為`true`，它會指出並行執行，而不是依序將記錄的批次檔中的所有命令，為都記錄。  
   
 ##  <a name="AMO"></a>AMOException 例外狀況類別  
  您可以使用 AMOException 例外狀況類別，輕鬆地擷取應用程式中由 AMO 擲回的例外狀況。  

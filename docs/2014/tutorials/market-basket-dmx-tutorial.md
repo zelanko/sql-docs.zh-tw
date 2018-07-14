@@ -1,5 +1,5 @@
 ---
-title: 購物籃 DMX 教學課程 |Microsoft 文件
+title: 購物籃 DMX 教學課程 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
@@ -21,13 +21,13 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a8806eceb5c16354d6581c8fcdd4e664619d2d2a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: b73a618c5318d88ec6ee09751e09327687d865f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220578"
 ---
 # <a name="market-basket-dmx-tutorial"></a>購物籃 DMX 教學課程
   您將在此教學課程中學會如何使用資料採礦延伸模組 (DMX) 查詢語言，來建立、定型和探索採礦模型。 您將使用這些採礦模型來建立預測，說明哪些產品有可能同時被購買。  
@@ -52,7 +52,7 @@ ms.locfileid: "36312926"
  **如需詳細資訊：** [資料採礦方案](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>採礦結構和採礦模型  
- 開始建立 DMX 陳述式之前，一定要先了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用來建立採礦模型的主要物件。 *採礦結構*是一種資料結構定義從中建立採礦模型的資料網域。 單一採礦結構可以包含多個*採礦模型*，共用相同網域。 採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。  
+ 開始建立 DMX 陳述式之前，一定要先了解 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用來建立採礦模型的主要物件。 *採礦結構*是定義從中建立採礦模型的資料網域的資料結構。 單一採礦結構可以包含多個*採礦模型*，共用相同的網域。 採礦模型會將採礦模型演算法套用至以採礦結構表示的資料。  
   
  採礦結構的建置組塊是採礦結構資料行，它們會描述資料來源包含的資料。 這些資料行包含如資料類型、內容類型和資料散發方式等資訊。  
   
@@ -90,16 +90,16 @@ ms.locfileid: "36312926"
 ## <a name="what-you-will-learn"></a>學習內容  
  這個教學課程分成下列課程：  
   
- [第 1 課： 建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
+ [第 1 課：建立購物籃採礦結構](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md)  
  在這一課，您將學會如何使用 `CREATE` 陳述式來建立採礦結構。  
   
- [第 2 課： 將採礦模型加入購物籃採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [第 2 課：將採礦模型新增至購物籃採礦結構中](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
  在這一課，您將學會如何使用 `ALTER` 陳述式將採礦模型加入至採礦結構。  
   
- [第 3 課： 處理購物籃採礦結構](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [第 3 課：處理購物籃採礦結構](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
  在這一課，您將學會如何使用 `INSERT INTO` 陳述式來處理採礦結構及其相關聯的採礦模型。  
   
- [第 4 課： 執行購物籃預測](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
+ [第 4 課：執行購物籃預測](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  在這一課，您將學會如何使用 `PREDICTION JOIN` 陳述式來建立採礦模型的預測。  
   
 ## <a name="requirements"></a>需求  
@@ -111,10 +111,10 @@ ms.locfileid: "36312926"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 資料庫  
   
- 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請移至[ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server Samples and Community Projects 首頁上，Microsoft SQL Server Product Samples 區段中。 按一下**資料庫**，然後按一下 **版本**索引標籤上，選取您想要的資料庫。  
+ 為了加強安全性，系統預設不會安裝範例資料庫。 若要安裝的正式範例資料庫[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請前往[ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417)或在 Microsoft SQL Server Samples and Community Projects 首頁上，在 [Microsoft SQL Server Product Samples] 區段。 按一下 **資料庫**，然後按一下**版本**索引標籤，然後選取您想要的資料庫。  
   
 > [!NOTE]  
->  當檢閱教學課程時，我們建議您將加入**下一個主題**和**上一個主題**文件檢視器工具列的按鈕。  
+>  當檢閱教學課程時，我們建議您將新增**下一個主題**並**上一個主題**文件檢視器工具列的按鈕。  
   
 ## <a name="see-also"></a>另請參閱  
  [Bike Buyer DMX 教學課程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   

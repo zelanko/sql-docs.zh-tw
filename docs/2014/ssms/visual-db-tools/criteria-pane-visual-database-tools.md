@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], Criteria pane
 - View Designer, Criteria pane
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b690cc4fd041673e0d46ecfc4afe123063305c45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d14127f643e1e5bf496fd012ca58290e7671e2cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177105"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>準則窗格 (Visual Database Tools)
   只要將您的選擇輸入於類似工作表的方格，[準則] 窗格便可以讓您指定查詢選項，例如，要顯示的資料行、如何排序結果，以及要選取的資料列。 您可以在 [準則窗格] 中指定下列項目：  
@@ -76,7 +76,7 @@ ms.locfileid: "36030192"
 ## <a name="see-also"></a>另請參閱  
  [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [圖表 窗格&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [值的輸入規則中搜尋&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
+ [輸入規則值中搜尋&#40;Visual Database Tools&#41;](rules-for-entering-search-values-visual-database-tools.md)   
  [排序及群組查詢結果&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [結果窗格&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [SQL 窗格 &#40;Visual Database Tools&#41;](sql-pane-visual-database-tools.md)  

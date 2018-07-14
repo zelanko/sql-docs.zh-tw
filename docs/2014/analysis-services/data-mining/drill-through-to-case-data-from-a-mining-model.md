@@ -1,5 +1,5 @@
 ---
-title: 從採礦模型鑽研到案例資料 |Microsoft 文件
+title: 從採礦模型鑽研到案例資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86a8cc832572d7a1c2e296c72d9bcd9a0a4d1969
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3ce4a5aea740048a53ab40db8b40d0a83d40e19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272164"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>鑽研採礦模型的案例資料
   如果採礦模型已經設定為讓您鑽研模型案例，當您瀏覽此模型時，可以擷取有關用來建立模型之案例的詳細資訊。 此外，如果基礎採礦結構已經設定為允許鑽研結構案例，而且您擁有適當的權限，就可以從採礦結構傳回資訊。 這可能包括沒有包含在採礦模型中的資料行。  
@@ -35,7 +35,7 @@ ms.locfileid: "36024090"
   
 |檢視器名稱|窗格或索引標籤名稱|選取節點|  
 |-----------------|----------------------|-----------------|  
-|**Microsoft 樹狀檢視器**|**決策樹** 索引標籤|按一下樹狀節點。<br /><br /> **請注意**避免上使用鑽研`All` 節點，因為它可能需要很長的時間，以傳回結果。|  
+|**Microsoft 樹狀檢視器**|**決策樹** 索引標籤|按一下樹狀節點。<br /><br /> **附註**避免上使用鑽研`All` 節點，因為它可能需要很長的時間才能傳回結果。|  
 |**Microsoft 叢集檢視器**|**群集圖表**|按一下叢集節點。|  
 |**Microsoft 叢集檢視器**|**叢集設定檔**|按一下群集資料行中的任何位置。|  
 |**Microsoft 關聯檢視器**|**規則** 索引標籤|按一下包含一組規則的資料列。|  

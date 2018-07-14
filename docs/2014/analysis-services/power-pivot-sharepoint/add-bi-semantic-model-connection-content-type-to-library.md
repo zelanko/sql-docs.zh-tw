@@ -1,5 +1,5 @@
 ---
-title: 將 BI 語意模型連接內容類型加入至文件庫 (PowerPivot for SharePoint) |Microsoft 文件
+title: 將 BI 語意模型連接內容類型新增至程式庫 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 145505ed-50bc-4528-912b-2a5cd2566011
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7b8f2877994e87a9a7199812348f84415d1e1810
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15537b159f34df3e69c3b415a8a00845ff2fe79f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284104"
 ---
 # <a name="add-a-bi-semantic-model-connection-content-type-to-a-library-powerpivot-for-sharepoint"></a>將 BI 語意模型連接內容類型加入至文件庫 (PowerPivot for SharePoint)
   BI 語意模型連接是在 SharePoint 中所建立，它會重新導向至網路伺服器上 PowerPivot 活頁簿或 Analysis Services 表格式模型資料庫內的商業智慧語意模型資料。 在 SharePoint 中建立 BI 語意模型連接之前，您必須擴充文件庫以允許建立 .bism 檔。 針對每個文件庫，僅需要執行一次這個步驟，但是您將需要針對您要建立 .bism 檔的任何來源文件庫重複該步驟。 最佳做法建議您建立集中式文件庫來儲存 .bism 檔，讓您可以在一個地方管理權限。  
@@ -30,7 +30,7 @@ ms.locfileid: "36022275"
 ##  <a name="bkmk_addtype"></a> 將內容類型加入至文件庫  
  您必須至少有「管理清單」權限，才能加入並設定內容類型。 此權限內建在「設計」權限等級以上 (含)。  
   
- 包含文件庫的網站必須啟用 PowerPivot for SharePoint 的功能。 如需詳細資訊，請參閱[在管理中心為網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
+ 包含文件庫的網站必須啟用 PowerPivot for SharePoint 的功能。 如需詳細資訊，請參閱 <<c0> [ 在管理中心為網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
 1.  開啟要啟用 BI 語意模型連接內容類型的文件庫。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36022275"
   
  在您為文件庫啟用 BI 語意模型連接內容類型之後，您可以建立連接來重新導向至可由 Excel 或 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 報表使用的商業語意模型資料。 從下列連結進行選擇，以深入了解下一個步驟：  
   
- [建立 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [建立與 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
  [C建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   

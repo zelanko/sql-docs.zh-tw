@@ -1,5 +1,5 @@
 ---
-title: 第 7 課： 建立量值 |Microsoft 文件
+title: 第 7 課： 建立量值 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: e96525c0e50e560e255156f7dd1bb731398df679
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5c6b18e88a4fbff18c06c9a10a06fe5d2f1e803
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030183"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222848"
 ---
 # <a name="lesson-7-create-measures"></a>第 7 課：建立量值
   在這一課，您將建立要包含在模型中的量值。 量值與您在上一課建立的導出資料行相似，基本上是使用 DAX 公式建立的計算。 不過，與導出資料行不同的是，量值是根據使用者選取的「篩選」進行評估；例如，加入樞紐分析表之 [資料列標籤] 欄位中的特殊資料行或交叉分析篩選器。   然後套用的量值就會計算篩選中每個資料格的值。 量值是功能強大且彈性的計算，您會希望將它包含在幾乎所有表格式模型中，以便在數值資料上執行動態計算。 如需詳細資訊，請參閱[量值 &#40;SSAS 表格式&#41;](tabular-models/measures-ssas-tabular.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "36030183"
   
  完成本課程的估計時間：**30 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 6 課：建立導出資料行](lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>建立量值  
@@ -51,9 +51,9 @@ ms.locfileid: "36030183"
   
      完成建立公式時，按 ENTER。  
   
-     請注意左上資料格現在包含量值名稱，**量值 1**，後面接著結果**30**。 公式列中的公式前面也會有量值名稱。  
+     請注意左上方資料格現在包含量值名稱**量值 1**，後面接著結果**30**。 公式列中的公式前面也會有量值名稱。  
   
-5.  若要重新命名量值公式列中的反白顯示的名稱，**量值 1**，然後輸入`Days Current Quarter to Date`，然後按 ENTER 鍵。  
+5.  若要重新命名量值，在公式列中，反白顯示的名稱，**量值 1**，然後輸入`Days Current Quarter to Date`，然後按 ENTER 鍵。  
   
     > [!TIP]  
     >  在公式列中輸入公式時，您也可以先輸入量值名稱，後面接著冒號 (:)，再接著一個空格，最後是公式。 使用這個方法就不需要重新命名量值。  

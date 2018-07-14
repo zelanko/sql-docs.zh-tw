@@ -1,5 +1,5 @@
 ---
-title: 應用程式元素 (ASSL) |Microsoft 文件
+title: Application 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 363f72b39a48e1606861168461abc3e19cb8b5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279494"
 ---
 # <a name="application-element-assl"></a>Application 元素 (ASSL)
-  識別應用程式相關聯[動作](../objects/action-element-assl.md)項目。  
+  識別與相關聯的應用程式[動作](../objects/action-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,10 +64,10 @@ ms.locfileid: "36023005"
 ## <a name="remarks"></a>備註  
  用戶端應用程式可以使用 `Application` 元素來決定哪些動作適用於給定的用戶端應用程式。 用戶端應用程式會負責評估這個元素的值。  
   
- 對應目的父代的項目`Application`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Action>。  
+ 對應至父系的元素`Application`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Actions 元素&#40;ASSL&#41;](../collections/actions-element-assl.md)   
+ [動作項目&#40;ASSL&#41;](../collections/actions-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

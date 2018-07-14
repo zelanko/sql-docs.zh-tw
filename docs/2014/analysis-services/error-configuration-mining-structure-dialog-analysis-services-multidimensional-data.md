@@ -1,5 +1,5 @@
 ---
-title: 錯誤組態 （採礦結構對話方塊） (Analysis Services-多維度資料) |Microsoft 文件
+title: 錯誤組態 （採礦結構對話方塊） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.miningstructuredialog.general.f1
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95f347b876673bd178f2059136bbbf6e79d8df5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 73c3627f3861b978a9e539943bcb65777b2f36b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257404"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>錯誤組態 (採礦結構對話方塊) (Analysis Services - 多維度資料)
   在 **SQL Server Management Studio** 中，使用 **[採礦結構屬性]** 對話方塊的 **[錯誤組態]** 頁面，即可設定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫中採礦結構的錯誤組態屬性。  
@@ -93,7 +93,7 @@ ms.locfileid: "36022510"
  輸入錯誤記錄檔的完整路徑和檔案名稱。  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦結構屬性對話方塊&#40;Analysis Services-資料採礦&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
+ [採礦結構屬性 對話方塊&#40;Analysis Services-資料採礦&#41;](mining-structure-properties-dialog-analysis-services-data-mining.md)   
  [一般&#40;採礦結構對話方塊&#41; &#40;Analysis Services-資料採礦&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   
   

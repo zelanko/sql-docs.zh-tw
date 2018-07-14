@@ -1,5 +1,5 @@
 ---
-title: 同步處理 Analysis Services 資料庫 |Microsoft 文件
+title: 同步處理 Analysis Services 資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
 - deploying [Analysis Services], Synchronize Database Wizard
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 193368b32f32941c5da99b134ce02b00b0b4c7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b7bf8e598c6f9db0d2c0db12b63c84dad20daf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216198"
 ---
 # <a name="synchronize-analysis-services-databases"></a>同步處理 Analysis Services 資料庫
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包含資料庫同步處理功能，此功能藉由將來源伺服器上資料庫的資料和中繼資料複製到目的地伺服器上的資料庫，讓兩個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫相等。 使用同步處理資料庫功能可完成下列任何一項工作：  
@@ -46,12 +46,12 @@ ms.locfileid: "36030386"
 > [!NOTE]  
 >  以下針對舊版 Analysis Services 所撰寫的技術白皮書依然適用於使用 SQL Server 2012 所建立的可擴充式多維度方案。 如需詳細資訊，請參閱 [使用 Analysis Services 向外延展查詢](http://go.microsoft.com/fwlink/?LinkId=253136) 和 [使用唯讀資料庫向外延展查詢 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>必要條件  
- 在您起始資料庫同步處理的目的地 (或目標) 伺服器上，您必須是 Analysis Services 伺服器管理員角色的成員。 在來源伺服器上，您的 Windows 使用者帳戶必須擁有來源資料庫的完整控制權限。 如果您以互動方式同步處理資料庫，請記得同步處理是在 Windows 使用者識別的安全性內容之下執行。 如果系統拒絕您的帳戶存取特定物件，這些物件將會從作業中排除。 如需伺服器管理員角色和資料庫權限的詳細資訊，請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授與資料庫權限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)。  
+## <a name="prerequisites"></a>先決條件  
+ 在您起始資料庫同步處理的目的地 (或目標) 伺服器上，您必須是 Analysis Services 伺服器管理員角色的成員。 在來源伺服器上，您的 Windows 使用者帳戶必須擁有來源資料庫的完整控制權限。 如果您以互動方式同步處理資料庫，請記得同步處理是在 Windows 使用者識別的安全性內容之下執行。 如果系統拒絕您的帳戶存取特定物件，這些物件將會從作業中排除。 如需有關伺服器管理員角色和資料庫權限的詳細資訊，請參閱 <<c0> [ 授與伺服器系統管理員權限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)並[授與資料庫權限&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)。</c0>  
   
  TCP 通訊埠 2383 必須已在兩部伺服器上開啟，好讓預設執行個體之間能夠進行遠端連接。 如需在 Windows 防火牆中建立例外狀況的詳細資訊，請參閱[設定 Windows 防火牆以允許 Analysis Services 存取](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
- 來源和目的地伺服器必須是相同版本和 service pack。 因為模型中繼資料也會同步處理，以確保相容性建置這兩部伺服器的數目應相同。 每個安裝的版本都必須支援資料庫同步處理。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，Enterprise、Developer 和 Business Intelligence 版都支援資料庫同步處理。 如需每一版的功能的詳細資訊，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 在來源和目的地伺服器必須是相同的版本和 service pack。 因為模型中繼資料也會同步處理，以確保相容性建置這兩部伺服器的數目應該相同。 每個安裝的版本都必須支援資料庫同步處理。 在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中，Enterprise、Developer 和 Business Intelligence 版都支援資料庫同步處理。 如需每版功能的詳細資訊，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  每部伺服器上的伺服器部署模式都必須相同。 如果您要同步處理的資料庫是多維度資料庫，則來源和目的地伺服器必須設定多維度伺服器模式。 如需部署模式的詳細資訊，請參閱[判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   

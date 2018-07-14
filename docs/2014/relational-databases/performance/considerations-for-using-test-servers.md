@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
 - tuning overhead [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 810ad8d5d3d977d49469e441efff0b5189c0e4f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: a22c2d234ca855d7de9f9dad81d0be4c6b014199
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177729"
 ---
 # <a name="considerations-for-using-test-servers"></a>使用測試伺服器的考量
   使用測試伺服器微調實際伺服器上的資料庫，是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 的重要優點。 您可利用這項功能，在不需將實際資料從實際伺服器複製到測試伺服器的情況下，將微調負擔卸載到測試伺服器上。  
@@ -42,7 +42,7 @@ ms.locfileid: "36030509"
   
 -   要使用測試伺服器對實際伺服器上的資料庫進行微調的使用者，必須同時位於兩部伺服器上，否則此案例將會失敗。  
   
--   必須啟用擴充預存程序 **xp_msver**，才能使用測試伺服器/實際伺服器案例。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會使用此擴充預存程序來提取在微調測試伺服器時實際伺服器上可使用的處理器數量與記憶體數量。 若未啟用 **xp_msver** ， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 即會採用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 執行所在電腦的硬體特性。 如果無法取得執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 所在電腦的硬體特性，將會假設 1 個處理器和 1024 MB 的記憶體。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，預設會開啟擴充預存程序。 如需詳細資訊，請參閱[介面區組態](../security/surface-area-configuration.md)和 [xp_msver &#40;TRANSACT-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md。  
+-   必須啟用擴充預存程序 **xp_msver**，才能使用測試伺服器/實際伺服器案例。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 會使用此擴充預存程序來提取在微調測試伺服器時實際伺服器上可使用的處理器數量與記憶體數量。 若未啟用 **xp_msver** ， [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 即會採用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 執行所在電腦的硬體特性。 如果無法取得執行 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 所在電腦的硬體特性，將會假設 1 個處理器和 1024 MB 的記憶體。 安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，預設會開啟擴充預存程序。 如需詳細資訊，請參閱 <<c0> [ 介面區組態](../security/surface-area-configuration.md)和 [xp_msver &#40;TRANSACT-SQL&#41;] (~ / relational-databases/system-stored-procedures/xp-msver-transact-sql.md。</c0>  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor 預期測試伺服器和實際伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必須相同。 如果有兩種不同的版本，將優先採用測試伺服器上的版本。 例如，如果測試伺服器執行的是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard，即使實際伺服器執行的是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Enterprise， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tuning Advisor 也不會在其建議中包含索引檢視表、資料分割和線上作業。  
   

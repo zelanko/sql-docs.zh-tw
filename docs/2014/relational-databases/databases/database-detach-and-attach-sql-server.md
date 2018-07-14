@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - databases [SQL Server], detaching
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 caps.latest.revision: 96
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 421c743456b6a0a2303b2ec0407af566c77ab39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 11f01f4fe44284d94aa0cfb4d3c008c758a930a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022867"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227738"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>資料庫卸離與附加 (SQL Server)
   您可以將資料庫的資料和交易記錄檔卸離，然後再重新附加至相同或不同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 若要將資料庫變更至同一台電腦上的不同 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或要移動資料庫，卸離和附加資料庫相當有用。  
@@ -89,14 +89,14 @@ ms.locfileid: "36022867"
 3.  再次卸離資料庫。  
   
 ##  <a name="AttachDb"></a> 附加資料庫  
- 您可以附加複製的或卸離的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 當您連接[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]伺服器執行個體，附加這些目錄檔案會從先前的位置以及其他資料庫檔案中的相同[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 如需詳細資訊，請參閱 [升級全文檢索搜尋](../search/upgrade-full-text-search.md)。  
+ 您可以附加複製的或卸離的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。 當您附加[!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)]伺服器執行個體，附加這些目錄檔案會從先前的位置以及其他資料庫檔案，相同[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。 如需詳細資訊，請參閱 [升級全文檢索搜尋](../search/upgrade-full-text-search.md)。  
   
  當您附加資料庫時，所有的資料檔 (MDF 和 NDF 檔案) 都必須可供使用。 如果資料檔案的路徑與資料庫第一次建立或最後一次附加時的路徑不同，您必須指定檔案的目前路徑。  
   
 > [!NOTE]  
 >  如果附加的主要資料檔是唯讀的，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會假設該資料庫也是唯讀的。  
   
- 當加密的資料庫第一次連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，資料庫擁有者必須執行下列陳述式來開啟資料庫主要金鑰： OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. 建議您執行下列陳述式來啟用主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 如需詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)。  
+ 當加密的資料庫是第一次附加的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，資料庫擁有者必須執行下列陳述式來開啟資料庫主要金鑰： OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`*'**. 建議您執行下列陳述式來啟用主要金鑰的自動解密：ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 如需詳細資訊，請參閱 [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 和 [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)。  
   
  要不要附加記錄檔，其需求有一部分視資料庫是可讀寫或唯讀而定，如下所示：  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36022867"
   
      如果讀寫資料庫具有單一記錄檔，而您未指定新位置給該記錄檔，附加作業就會在舊位置尋找該檔案。 如果找到，就會使用舊的記錄檔，不論資料庫是否完全關閉。 不過，如果找不到舊記錄檔，且資料庫已完全關閉而無使用中的記錄鏈結，附加作業便會嘗試為該資料庫建立新的記錄檔。  
   
--   如果附加的主要資料檔是唯讀的[!INCLUDE[ssDE](../../includes/ssnoversion-md.md)]無法更新儲存在主要檔案中的記錄檔位置。  
+-   如果所附加的主要資料檔案是唯讀的[!INCLUDE[ssDE](../../includes/ssnoversion-md.md)]無法更新主要檔案中儲存的記錄檔位置。  
   
   
   

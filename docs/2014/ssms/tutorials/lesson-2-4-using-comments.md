@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e9e6eab-0343-4840-9690-1736552ce371
-caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb1b0b4f6bfdcc2569352a6880f0ed94385e57e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 30c866f193da8492d0c379f0de4ac748cab76c8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255610"
 ---
 # <a name="using-comments"></a>使用註解
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可讓您輕易地將部分指令碼註解化。  

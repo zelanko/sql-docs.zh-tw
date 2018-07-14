@@ -1,5 +1,5 @@
 ---
-title: SQL Server 參數 |Microsoft 文件
+title: SQL Server 參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine analysis [Upgrade Advisor]
 - SQL Server Upgrade Advisor, Database Engine
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], Database Engine
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a0c7676aa40d78967f6ff97a6ac91cdef4f0844
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f6c34842d1a157629b123b813779a7c3fd3ee142
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022541"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261914"
 ---
 # <a name="sql-server-parameters"></a>SQL Server 參數
   在這個頁面上，您可以設定分析器將用於 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 分析的參數。 您可以分析一個、許多個或所有資料庫、分析使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 所建立的追蹤檔案，以及分析 SQL 批次檔。  
@@ -34,7 +34,7 @@ ms.locfileid: "36022541"
   
 ## <a name="options"></a>選項。  
  **要分析的資料庫**  
- 若要分析所有資料庫，選取**所有資料庫**核取方塊。 若要分析資料庫的選取範圍，請選取要包括在掃描中之每個資料庫旁的核取方塊。  
+ 若要分析所有資料庫，請選取**所有資料庫**核取方塊。 若要分析資料庫的選取範圍，請選取要包括在掃描中之每個資料庫旁的核取方塊。  
   
  **分析追蹤檔案**  
  選取此核取方塊可以在檔案系統中分析追蹤檔案。  
@@ -50,7 +50,7 @@ ms.locfileid: "36022541"
  **路徑[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]批次檔**  
  您可以分析一個或多個批次檔。 您可以瀏覽至某個位置並選取多個檔案，也可以輸入多個檔案名稱。 請使用每個檔案的完整路徑名稱、加入檔案名稱，然後使用縱線字元 (|) 來分隔項目。  
   
- 如果您啟用**分析 SQL 批次檔**、**下一步**按鈕已停用，直到您輸入的路徑名稱和檔案名稱。  
+ 如果您啟用**分析 SQL 批次檔**，則**下一步**按鈕已停用，直到您輸入的路徑名稱和檔案名稱。  
   
  **SQL 批次分隔符號**  
  用來分隔 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式批次的文字。 預設值是**移**。  

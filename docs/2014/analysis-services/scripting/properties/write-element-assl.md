@@ -1,5 +1,5 @@
 ---
-title: Write 元素 (ASSL) |Microsoft 文件
+title: Write 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Write element
 ms.assetid: d8f7a367-d7bf-4b40-acb4-19c8bc8c6c20
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fcc05df0f670deb737b70e0de276e698501c85b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0f275ecb6ca20d22cedb1aed214fb2d0f78479b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176185"
 ---
 # <a name="write-element-assl"></a>Write 元素 (ASSL)
-  判斷是否可寫入資料或中繼資料的指定[CubeDimensionPermission](../data-type/permission-data-type-assl.md)或[權限](../data-type/permission-data-type-assl.md)項目。  
+  判斷是否可寫入資料或中繼資料的給定[CubeDimensionPermission](../data-type/permission-data-type-assl.md)或是[權限](../data-type/permission-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,17 +62,17 @@ ms.locfileid: "36023200"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*無*|不允許存取父物件的資料或中繼資料。|  
 |*允許*|允許寫入父物件的資料和中繼資料。|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`Write`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CubeDimensionPermission>和<xref:Microsoft.AnalysisServices.Permission>。  
+ 對應至父系的元素`Write`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.CubeDimensionPermission>和<xref:Microsoft.AnalysisServices.Permission>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 元素&#40;ASSL&#41;](../objects/cube-element-assl.md)   
- [維度元素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [維度項目&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

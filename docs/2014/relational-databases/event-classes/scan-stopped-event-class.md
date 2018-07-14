@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Scan:Stopped event class
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bc03880b3f66b2e3f60480c2ad9aaa76bb28276c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5605ca8614bd4d8c77e9bd411fb1d341409f94e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272784"
 ---
 # <a name="scanstopped-event-class"></a>Scan:Stopped 事件類別
   當資料表或索引掃描停止時，會發生 Scan:Stopped 事件類別。  

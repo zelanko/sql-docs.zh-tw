@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 569e88c7fbf844494276948690c583f69737ff14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bf93e552732ea0a5659211fbc11c2d3751a326a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188485"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>複寫至記憶體最佳化資料表訂閱者
   做為異動複寫訂閱者的資料表 (不包括點對點異動複寫) 可以設定為記憶體最佳化資料表。 其他複寫組態與記憶體最佳化資料表不相容。  
@@ -27,7 +27,7 @@ ms.locfileid: "36031204"
 ## <a name="configuring-a-memory-optimized-table-as-a-subscriber"></a>將記憶體最佳化資料表設定為訂閱者  
  若要設定記憶體最佳化資料表做為訂閱者，請執行下列步驟。  
   
- **建立和啟用發行集**  
+ **建立並啟用發行集**  
   
 1.  建立發行集。  
   
@@ -230,7 +230,7 @@ ms.locfileid: "36031204"
     go  
     ```  
   
-5.  建立訂閱者資料庫**提高權限至快照集隔離**選項，然後將預設定序設定為 Latin1_General_CS_AS_KS_WS，以防使用非 Unicode 字元資料類型。  
+5.  建立訂閱者資料庫**提升為快照隔離**選項，然後將預設定序設定為 Latin1_General_CS_AS_KS_WS，以防使用非 Unicode 字元資料類型。  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -297,15 +297,15 @@ GO
   
  在訂閱者端，異動複寫中包含的資料表可以設定為記憶體最佳化資料表，但是訂閱者資料表必須符合記憶體最佳化資料表的需求。 需求的限制如下。  
   
--   若要在異動複寫訂閱者上建立記憶體最佳化資料表，必須手動修改用來建立記憶體最佳化資料表的快照集結構描述檔案。 如需詳細資訊，請參閱[修改結構描述檔案](#Schema)。  
+-   若要在異動複寫訂閱者上建立記憶體最佳化資料表，必須手動修改用來建立記憶體最佳化資料表的快照集結構描述檔案。 如需詳細資訊，請參閱 <<c0> [ 修改結構描述檔案](#Schema)。  
   
 -   複寫至訂閱者端記憶體最佳化資料表的資料表限制，會是記憶體最佳化資料表每一個資料列限制的 8060 個位元組。  
   
--   複寫至訂閱者端記憶體最佳化資料表的資料表限制，則為記憶體最佳化資料表中允許的資料類型。 如需詳細資訊，請參閱[Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。  
+-   複寫至訂閱者端記憶體最佳化資料表的資料表限制，則為記憶體最佳化資料表中允許的資料類型。 如需詳細資訊，請參閱 < [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)。  
   
--   對於更新複寫至訂閱者端之記憶體最佳化資料表的資料表主索引鍵也有些限制。 如需詳細資訊，請參閱[變更複寫到主索引鍵](#PrimaryKey)。  
+-   對於更新複寫至訂閱者端之記憶體最佳化資料表的資料表主索引鍵也有些限制。 如需詳細資訊，請參閱 <<c0> [ 將變更複寫至主索引鍵](#PrimaryKey)。  
   
--   記憶體最佳化資料表中不支援外部索引鍵、唯一條件約束、觸發程序、結構描述修改、ROWGUIDCOL、計算資料行、資料壓縮、別名資料類型、版本設定及鎖定。 請參閱[記憶體內部 OLTP 不支援 TRANSACT-SQL 建構](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)資訊。  
+-   記憶體最佳化資料表中不支援外部索引鍵、唯一條件約束、觸發程序、結構描述修改、ROWGUIDCOL、計算資料行、資料壓縮、別名資料類型、版本設定及鎖定。 請參閱[記憶體內部 OLTP 不支援 TRANSACT-SQL 建構](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)的資訊。  
   
 ##  <a name="Schema"></a> 修改結構描述檔案  
   
@@ -317,7 +317,7 @@ GO
   
 -   ANSI_PADDING 必須為 ON。  
   
-##  <a name="PrimaryKey"></a> 將變更複寫到主索引鍵  
+##  <a name="PrimaryKey"></a> 將變更複寫至主索引鍵  
  記憶體最佳化資料表的主索引鍵無法更新。 若要複寫訂閱者端的主索引鍵更新，請修改更新預存程序，將更新做為刪除和插入組傳遞。  
   
 ## <a name="see-also"></a>另請參閱  

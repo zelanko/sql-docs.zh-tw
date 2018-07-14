@@ -1,5 +1,5 @@
 ---
-title: 資料來源屬性頁面 （報表管理員） |Microsoft 文件
+title: 資料來源屬性頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 68279fffed6d42fd60ce6a3665eeaf3b0590aae6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e826f27b2ce6bbb75d4aabc9d8537d0f867a0cce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179555"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>資料來源屬性頁面 (報表管理員)
   使用 [資料來源] 屬性頁，即可定義目前的報表如何連接到外部資料來源。 您可以覆寫原先隨同報表發行的資料來源連線資訊。 如果報表使用多重資料來源，則每一個資料來源在屬性頁中各有它自己的區段。 資料來源依其報表中定義的排序來列示。  
@@ -41,10 +41,10 @@ ms.locfileid: "36029996"
   
 ## <a name="options"></a>選項。  
  **共用的資料來源**  
- 指定報表使用的共用資料來源。 如需有關如何建立新的資料來源的詳細資訊，請參閱[建立、 刪除或修改共用資料來源&#40;報表管理員&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)。  
+ 指定報表使用的共用資料來源。 如需建立新的資料來源的詳細資訊，請參閱 <<c0> [ 建立、 刪除或修改共用資料來源&#40;報表管理員&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md)。</c0>  
   
  **瀏覽**  
- 按一下 **[瀏覽]** ，即可開啟 [資料來源選取] 頁面，此頁面是用來選取共用資料來源。 如需詳細資訊，請參閱[資料來源選取頁面&#40;報表管理員&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md)。  
+ 按一下 **[瀏覽]** ，即可開啟 [資料來源選取] 頁面，此頁面是用來選取共用資料來源。 如需詳細資訊，請參閱 <<c0> [ 資料來源選擇頁面&#40;報表管理員&#41;](../../2014/reporting-services/data-source-selection-page-report-manager.md)。</c0>  
   
  **自訂資料來源**  
  指定報表與資料來源的連接方式。  
@@ -70,17 +70,17 @@ ms.locfileid: "36029996"
  **執行報表的使用者所提供的認證**  
  每一位使用者都必須輸入使用者名稱和密碼，才可以存取資料來源。 您可以定義要求使用者認證的提示文字。 預設的文字字串是「請輸入使用者名稱和密碼以存取資料來源」。  
   
- 如果使用者提供的認證是 Windows 驗證認證，請選取 [連接到資料來源時作為 Windows 認證]  。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
+ 如果使用者提供的認證是 Windows 驗證認證，請選取 [連接到資料來源時作為 Windows 認證]  。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
   
- **認證安全地儲存在報表伺服器**  
+ **安全地儲存在報表伺服器的認證**  
  在報表伺服器資料庫中儲存加密的使用者名稱和密碼。 選取此選項即可自動執行報表 (例如，由排程或事件起始而不是由使用者的動作起始的報表)。 如果您要使用預設安全性，使用者名稱就必須是 Windows 網域帳戶。 以此格式指定帳戶：\<網域 >\\< 使用者名稱\>。 您所指定的帳戶必須在主控報表所使用之資料來源的電腦上擁有本機登入權限。  
   
- 如果認證是 Windows 驗證認證，請選取 **[連接到資料來源時作為 Windows 認證]** 。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
+ 如果認證是 Windows 驗證認證，請選取 **[連接到資料來源時作為 Windows 認證]** 。 如果您使用資料庫驗證，請勿選取此核取方塊 (例如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]驗證)。  
   
- 請選取 **[連接到資料來源後，模擬已驗證的使用者]** 以便允許認證的委派，但是只有在資料來源支援模擬時才應該選取此選項。 如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，此選項會設定 SETUSER 函數。  
+ 請選取 **[連接到資料來源後，模擬已驗證的使用者]** 以便允許認證的委派，但是只有在資料來源支援模擬時才應該選取此選項。 針對[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，此選項會設定 SETUSER 函數。  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]只支援 Windows 帳戶認證。 這兩種選項 」 作為 Windows 認證連接到資料來源時 「 而且 」 後，模擬已驗證的使用者已連接到資料來源 」 的因此選取[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源。  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]只支援 Windows 帳戶認證。 選項"作為 Windows 認證連接到資料來源時"和"後，模擬已驗證的使用者已連接到資料來源 」 的同時，因此選取[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]資料來源。  
   
  **Windows 整合式的安全性**  
  使用目前使用者的 Windows 認證來存取資料來源。 當用來存取資料來源的認證與用來登入網路網域的認證相同時，請選取此選項。 在針對網域啟用 Kerberos 驗證時，或者資料來源與報表伺服器是在同一部電腦上時，此選項具有最佳的效能。 若未啟用 Kerberos，Windows 認證可以傳送至其他電腦。 如果需要其他電腦連線，您會收到錯誤而不是預期的資料。  
@@ -92,7 +92,7 @@ ms.locfileid: "36029996"
  **不需要認證**  
  指定不需要認證就可以存取資料來源。 請注意，如果資料來源需要使用者登入，則選擇此選項將沒有作用。 只有當資料來源連接不需要使用者認證時，才應該選擇此選項。  
   
- 若要使用這個選項，您先前必須已針對報表伺服器部署設定了自動執行帳戶。 當認證的其他來源無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。  如需有關此帳戶的詳細資訊，請參閱[設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。  
+ 若要使用這個選項，您先前必須已針對報表伺服器部署設定了自動執行帳戶。 當認證的其他來源無法使用時，自動執行帳戶就會用來連接至外部資料來源。 如果您指定了這個選項，但是沒有設定帳戶，報表資料來源的連接將會失敗，而且報表處理將不會進行。  如需有關此帳戶的詳細資訊，請參閱 <<c0> [ 設定自動執行帳戶&#40;SSRS 組態管理員&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)。</c0>  
   
  **套用**  
  按一下即可儲存您的變更。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3d0cc02fa47d4c3ba17f8140298a124f61ab070d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7add0dfafff9661b5a1c2db27ac4625373f127b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280274"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在報表上加入鑽研動作 (報表產生器及 SSRS)
   當您按一下主報表中的連結所開啟的報表稱為 *「鑽研報表」*(Drillthrough Report)。 此鑽研連結會啟用一個鑽研動作。  
@@ -64,8 +64,8 @@ ms.locfileid: "36021744"
 7.  若要測試連結，請執行報表，然後按一下這個連結設定所在的報表項目。  
   
 ## <a name="see-also"></a>另請參閱  
- [動作屬性對話方塊&#40;報表產生器和 SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
- [格式化圖表上的資料點&#40;報表產生器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [動作屬性對話方塊&#40;報表產生器及 SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
+ [格式化圖表上的資料點&#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, publications
 ms.assetid: ad66aa34-3e37-401e-a6a1-fc1514eb6d50
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 11e9e6ffafe62c66684470b4b04e2e0b67cc868b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 88941deda14053fdf2eac1e1600b4ef02253b401
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181895"
 ---
 # <a name="publication-types-for-transactional-replication"></a>異動複寫的發行集類型
   異動複寫提供三種發行集類型：  

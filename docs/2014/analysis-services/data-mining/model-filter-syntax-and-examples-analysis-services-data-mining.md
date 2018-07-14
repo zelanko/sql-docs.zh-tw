@@ -1,5 +1,5 @@
 ---
-title: 模型篩選語法和範例 (Analysis Services-資料採礦) |Microsoft 文件
+title: 模型篩選語法和範例 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filter syntax [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 881b62a2e013d9e01a21272d3adeaf6819b2abb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 252af15e8afcf42d407176c4ff72f0076053b52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236338"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>模型篩選語法和範例 (Analysis Services - 資料採礦)
   本節提供了有關模型篩選語法的詳細資訊，以及範例運算式。  
@@ -77,7 +77,7 @@ ms.locfileid: "36022751"
 -   **\<=** (小於或等於)  
   
 > [!NOTE]  
->  不論資料類型，這些運算子不能套用至具有類型的資料行`Discrete`， `Discretized`，或`Key`。  
+>  不論資料類型，這些運算子無法套用至具有類型的資料行`Discrete`， `Discretized`，或`Key`。  
   
  使用下列任何運算子的運算式可以套用至連續、離散、離散化或索引鍵資料行：  
   
@@ -242,9 +242,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="bkmk_Ex7"></a> 範例 7：複雜的篩選組合  
- 這個模型的狀況與範例 4 的狀況很相似，但是更為複雜。 巢狀的資料表， **ProductsOnSale**，具有篩選條件`(OnSale)`表示的值**OnSale**必須`true`中所列產品**ProductName**. 其中， **OnSale** 是結構資料行。  
+ 這個模型的狀況與範例 4 的狀況很相似，但是更為複雜。 巢狀的資料表中， **ProductsOnSale**，具有篩選條件`(OnSale)`表示的值**OnSale**必須是`true`中所列產品**ProductName**. 其中， **OnSale** 是結構資料行。  
   
- 篩選器，第二個部分的**ProductsNotOnSale**，會重複此語法，但是它會篩選產品的值**OnSale**是`not true``(!OnSale)`。  
+ 第二個部分的篩選器，如**ProductsNotOnSale**，會重複此語法，但是它會篩選產品的值**OnSale**是`not true``(!OnSale)`。  
   
  最後，這些條件會組合並在案例資料表中加入一項額外的限制。 其結果是針對年齡超過 25 歲的所有客戶，根據 **ProductsOnSale** 清單中包含的案例來預測 **ProductsOnSale** 清單中的購買產品。  
   
@@ -296,9 +296,9 @@ FILTER (EXISTS (Products))
  `=[DateCopy] > '12:31:2003:00:00:00'`  
   
 > [!NOTE]  
->  請注意，您加入至模型的額外資料行可能會影響結果。 因此，如果您不想要在序列計算中使用資料行，應該只將資料行加入至採礦結構，而不是加入至模型。 您也可以設定模型旗標資料行上`PredictOnly`或`Ignore`。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
+>  請注意，您加入至模型的額外資料行可能會影響結果。 因此，如果您不想要在序列計算中使用資料行，應該只將資料行加入至採礦結構，而不是加入至模型。 您也可以設定模型旗標資料行，即可`PredictOnly`或`Ignore`。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  
   
- 對於其他模型類型，日期可以當做輸入準則或篩選準則，就如同任何其他資料行一樣。 不過，如果您需要使用特定的未受支援的資料粒度層級`Continuous`資料類型，您可以建立衍生的值的資料來源中使用運算式擷取要用於篩選和分析的單位。  
+ 對於其他模型類型，日期可以當做輸入準則或篩選準則，就如同任何其他資料行一樣。 不過，如果您要使用不支援的資料粒度的特定層級`Continuous`資料類型，您可以建立衍生的值的資料來源中使用運算式擷取要用於篩選和分析的單位。  
   
 > [!WARNING]  
 >  當您指定日期作為篩選準則時，不論目前作業系統的日期格式為何，都必須使用下列格式： `mm/dd/yyyy`。 任何其他格式都會產生錯誤。  

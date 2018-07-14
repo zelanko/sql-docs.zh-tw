@@ -1,5 +1,5 @@
 ---
-title: 資料集篩選器或模型篩選器對話方塊 |Microsoft 文件
+title: 資料集篩選器或模型篩選器對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 85986f7f73a96ce0fc2286ad8f9377df1d53845c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34cb8f45c8380cffdfd58c99078f05fd5c8bd2e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030179"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187315"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>資料集篩選器或模型篩選器對話方塊
   這個對話方塊可協助您建立能套用至資料集的篩選器。  資料集可以是用於字串的外部資料集，或採礦模型的案例資料。 對話方塊的名稱會根據篩選器是用於外部資料集或採礦模型而變更。  
@@ -41,7 +41,7 @@ ms.locfileid: "36030179"
  **條件**  
  顯示資料表名稱，後面跟著資料行名稱及條件。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**及/或**|選擇運算子來聯結多個條件。|  
 |**採礦結構資料行**|按一下以選取資料來源，然後再按一下方格中的連續行來從資料來源新增資料行。<br /><br /> 方格中的第一行會指定資料來源檢視。 在選取資料來源檢視之後，[採礦結構資料行] 會顯示資料表圖示，而 [值] 欄位則顯示已為此資料來源所定義之所有準則的組合。<br /><br /> 在選取資料來源之後，[採礦結構資料行] 方塊會提供資料來源中個別資料行的下拉式清單。|  

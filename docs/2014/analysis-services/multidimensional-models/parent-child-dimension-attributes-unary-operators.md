@@ -1,5 +1,5 @@
 ---
-title: 父子式維度中的一元運算子 |Microsoft 文件
+title: 父子式維度中的一元運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UnaryOperatorColumn property
 - attributes [Analysis Services], unary operators
 - unary operators
 ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c5837a9c1c19b6bf571948ca7d30a862ce41f9d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28f7a181eb19caf06ba98c7d61812ba3571e08e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022280"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226458"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>父子式維度中的一元運算子
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以於包含父子式關聯性的維度內指定一元 (或自訂積存) 運算子資料行，以決定父屬性之所有非導出成員的自訂積存。 只要評估父成員的值時，就會將一元運算子套用至成員。 父屬性 ( **Usage** =Parent) 上的**UnaryOperatorColumn**，會在包含一元運算子的資料來源檢視中指定資料表的資料行。 儲存在此資料行之自訂積存運算子的值，會套用到屬性的每個成員。  
@@ -50,7 +50,7 @@ ms.locfileid: "36022280"
   
 ## <a name="see-also"></a>另請參閱  
  [維度屬性 （Property） 參考](dimension-attribute-properties-reference.md)   
- [父子式維度中的自訂 Rollup 運算子](parent-child-dimension-attributes-custom-rollup-operators.md)   
- [在 維度設計師啟動商業智慧精靈](database-dimensions-bi-wizard-in-dimension-designer.md)  
+ [父子式維度中的自訂積存運算子](parent-child-dimension-attributes-custom-rollup-operators.md)   
+ [在維度設計工具中啟動商業智慧精靈](database-dimensions-bi-wizard-in-dimension-designer.md)  
   
   

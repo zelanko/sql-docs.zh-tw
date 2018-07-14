@@ -1,5 +1,5 @@
 ---
-title: 主題領域資料庫結構描述選項 （結構描述產生精靈） (Analysis Services-多維度資料) |Microsoft 文件
+title: 主旨區域資料庫結構描述選項 （結構描述產生精靈） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.subjectareaschemaopts.f1
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ce756687e73e628d1b66a797e19711a3d6889eec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb617bca3a906162f372ce482269d3fca386acec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235588"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>主題領域資料庫結構描述選項 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[主題領域資料庫結構描述選項]** 頁面來控制如何產生結構描述，以及定義如何保留資料。  
@@ -30,7 +30,7 @@ ms.locfileid: "36022710"
  **主控結構描述**  
  指定新主題領域資料庫內之結構描述的名稱。  
   
- **維度資料表上建立主索引鍵**  
+ **在維度資料表上建立主索引鍵**  
  在產生的結構描述中，於維度資料表上建立主索引鍵。 如果您沒有選取此選項，將不會產生任何索引。  
   
 > [!NOTE]  
@@ -51,7 +51,7 @@ ms.locfileid: "36022710"
 > [!NOTE]  
 >  只有在專案模式中使用 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ，從 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 專案中呼叫結構描述產生精靈時，才能啟用此選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |擴展|已擴展主題領域時間資料表。|  
 |不要擴展|不擴展主題領域時間資料表。|  

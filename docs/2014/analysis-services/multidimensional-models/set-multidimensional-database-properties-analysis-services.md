@@ -1,5 +1,5 @@
 ---
-title: 設定多維度資料庫屬性 (Analysis Services) |Microsoft 文件
+title: 設定多維度資料庫屬性 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], databases
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2ec653606418e1c3dea32b04cb1e923b54c98e45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1de79fd7eb257364069dfaa15146036dd617bdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023893"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200228"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>設定多維度資料庫屬性 (Analysis Services)
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫設計工具中設定許多 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫屬性。  
@@ -32,7 +32,7 @@ ms.locfileid: "36023893"
   
 -   您可以提供可呈現給使用者之資料庫的描述； 您也可以檢視此資料庫的名稱，但是無法加以變更。 若要變更此資料庫名稱，您必須編輯專案的屬性。  
   
--   您可以針對一種或多種語言提供資料庫名稱和描述的翻譯。 如需詳細資訊，請參閱[Cube 翻譯](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)，[維度翻譯](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)，和[翻譯&#40;Analysis Services&#41;](../translations-analysis-services.md)。  
+-   您可以針對一種或多種語言提供資料庫名稱和描述的翻譯。 如需詳細資訊，請參閱 < [Cube 翻譯](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)，[維度翻譯](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)，並[翻譯&#40;Analysis Services&#41;](../translations-analysis-services.md)。  
   
 -   您可以檢視及修改預設的帳戶類型對應。 當一個或多個量值使用 *ByAccount* 彙總函式時，會使用帳戶類型對應。 您可以針對每一個帳戶類型指定別名，以及修改與此帳戶類型有關的預設彙總函式。 如需修改預設彙總的詳細資訊，請參閱 [定義局部加總行為](define-semiadditive-behavior.md)。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36023893"
 |MasterDataSource ID|與遠端資料分割一起使用。 如需詳細資訊，請參閱 [遠端資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料庫屬性 對話方塊&#40;SSAS-多維度&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
+ [資料庫屬性 對話方塊中&#40;SSAS-多維度&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
  [設定 Analysis Services 專案屬性&#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)  
   
   

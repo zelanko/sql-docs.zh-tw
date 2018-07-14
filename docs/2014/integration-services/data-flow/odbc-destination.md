@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 648e743d67b308e7dae75106165d65183fd735c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f19732c1287b1c915f8a49adc9f12938ebb9a744
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273354"
 ---
 # <a name="odbc-destination"></a>ODBC 目的地
   ODBC 目的地會將資料大量載入到 ODBC 支援的資料庫資料表。 ODBC 目的地使用 ODBC 連接管理員來連接到資料來源。  
@@ -63,9 +63,9 @@ ms.locfileid: "36022445"
   
  如需詳細資訊，請參閱下列其中一個主題：  
   
--   [ODBC 目的地編輯器&#40;連接管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目的地編輯器&#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
--   [ODBC 目的地編輯器&#40;[對應] 頁面&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目的地編輯器&#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)  
   
 -   [ODBC 目的地編輯器&#40;錯誤輸出頁面&#41;](../odbc-destination-editor-error-output-page.md)  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36022445"
   
 -   [ODBC 目的地編輯器&#40;錯誤輸出頁面&#41;](../odbc-destination-editor-error-output-page.md)  
   
--   [ODBC 目的地編輯器&#40;[對應] 頁面&#41;](../odbc-destination-editor-mappings-page.md)  
+-   [ODBC 目的地編輯器&#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)  
   
--   [ODBC 目的地編輯器&#40;連接管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)  
+-   [ODBC 目的地編輯器&#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)  
   
 -   [使用 ODBC 目的地來載入資料](odbc-destination.md)  
   

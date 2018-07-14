@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
 - row counts [SQL Server]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 41a1b6010d0a1542811d9bbbec9a3e94ac4d943f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d55f9112a4015ead999ca88f7b3b55555fabf324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269954"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>計算資料表中的資料列 (Visual Database Tools)
   您可以計算資料表中的資料列，以判斷：  
@@ -47,7 +47,7 @@ ms.locfileid: "36023033"
   
 2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]。 [查詢和檢視表設計工具](visual-database-tools.md)會將 [群組依據] 資料行新增至 [準則] 窗格的方格中。  
   
-3.  選取 **\* （所有資料行）** 代表資料表值物件的矩形中。  
+3.  選取   **\* （所有資料行）** 代表資料表值物件的矩形中。  
   
      查詢和檢視表設計工具會自動將 [計數] 一詞填入至 [準則] 窗格的 [群組依據] 資料行，並且將資料行別名指定至您所摘要的資料行。 您可以使用較有意義的別名取代這個自動產生的別名。 如需詳細資訊，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36023033"
   
 2.  在 [圖表] 窗格的背景上按一下滑鼠右鍵，然後從快速鍵功能表中選擇 [新增群組依據]。 查詢和檢視表設計工具會將 [群組依據] 資料行新增至 [準則] 窗格的方格中。  
   
-3.  選取 **\*（所有資料行）** 代表資料表或表格化物件的矩形中。  
+3.  選取   **\*（所有資料行）** 代表資料表或表格化物件的矩形中。  
   
      查詢和檢視表設計工具會自動將 [計數] 一詞填入至 [準則] 窗格的 [群組依據] 資料行，並且將資料行別名指定至您所摘要的資料行。 若要在查詢輸出中建立更有用的資料行標題，請參閱[建立資料行別名 &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md)。  
   

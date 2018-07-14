@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
 - viewing operators
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - displaying operators
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cdabd9ef6382066fad31154dad126e30ced0d8d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2a66bc4a276b425d8ec0ffeebf260dafcef7ff0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220792"
 ---
 # <a name="view-information-about-an-operator"></a>檢視關於操作員的資訊
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 操作員的詳細資訊。  
@@ -72,9 +72,9 @@ ms.locfileid: "36023020"
   
      如需 [<操作員名稱> 屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
   
-    -   [操作員屬性和新的運算子&#40;[一般] 頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [操作員屬性和新的運算子&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [操作員屬性： 新增操作員&#40;通知 頁面&#41;](operator-properties-new-operator-notifications-page.md)  
+    -   [運算子屬性： New 運算子&#40;通知頁面&#41;](operator-properties-new-operator-notifications-page.md)  
   
     -   [操作員屬性 &#40;記錄頁面&#41;](operator-properties-history-page.md)  
   
@@ -101,6 +101,6 @@ ms.locfileid: "36023020"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_help_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_help_operator &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-operator-transact-sql)。  
   
   

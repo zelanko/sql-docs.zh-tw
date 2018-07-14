@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], tracking attribute changes
 - change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d27195abb30fe68b0fe515da479849dbc2019021
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2f66a7e91bcb475fe72d6abbe9f6007c8b9d668b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275534"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>根據屬性值變更來起始動作 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，以根據屬性值變更來起始動作， 例如，當特定的屬性值變更時，您可能想要變更值、傳送通知，或啟動外部工作流程。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -58,7 +58,7 @@ ms.locfileid: "36021967"
   
 10. 將 [數值比較] 節點底下的 [已變更] 拖曳至 [IF] 窗格的 [條件] 標籤。  
   
-11. 在**屬性** 窗格中，按一下屬性，並將它拖曳至**編輯條件**窗格的**Select 屬性**標籤。 此屬性對規則沒有作用，因此請選取任何可用屬性。  
+11. 在 **屬性**窗格中，按一下屬性，並將它拖曳至**編輯條件**窗格的**選取屬性**標籤。 此屬性對規則沒有作用，因此請選取任何可用屬性。  
   
 12. 在 [編輯條件] 窗格的 [變更追蹤群組] 方塊中，輸入已指派為必要條件的變更追蹤群組編號。  
   

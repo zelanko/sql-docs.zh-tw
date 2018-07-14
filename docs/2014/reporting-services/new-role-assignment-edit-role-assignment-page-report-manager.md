@@ -1,5 +1,5 @@
 ---
-title: 新增角色指派： 編輯角色指派頁面 （報表管理員） |Microsoft 文件
+title: 新增角色指派： 編輯角色指派頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4c60917a0b4107b52d6573e87932eab9bab63799
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179645"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>新增角色指派：編輯角色指派頁面 (報表管理員)
   您可以使用 [新增角色指派] 或 [編輯角色指派] 頁面來授與報表伺服器項目和作業的權限。 每位需要存取報表伺服器的使用者至少都必須具有一個定義存取層級的角色指派。 您可以在根節點，或在特定的報表、模型、資料夾、資源或共用資料來源上，建立角色指派。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 透過您套用至項目的角色指派，可以強制執行安全性。 角色指派使群組或使用者符合角色定義，其中每一個角色定義識別群組或使用者可對特定項目執行的工作。  
@@ -44,13 +44,13 @@ ms.locfileid: "36023728"
   
 ## <a name="options"></a>選項。  
  **群組或使用者名稱**  
- 輸入要建立其角色指派的群組或使用者帳戶的名稱。 群組或使用者名稱必須是有效的 Windows 網域帳戶。 以此格式輸入帳戶：\<網域 >\\< 帳戶\>。  
+ 輸入要建立其角色指派的群組或使用者帳戶的名稱。 群組或使用者名稱必須是有效的 Windows 網域帳戶。 這種格式來輸入帳戶：\<網域 >\\< 帳戶\>。  
   
 > [!NOTE]  
 >  這個方塊只有 [新增角色指派] 頁面才有提供。  
   
  **角色**  
- 顯示報表伺服器中定義的全部角色，可用來定義項目的安全性。 在建立或變更報表或資料夾的角色指派時，請選取一或多個角色，直到結合的工作集描述使用者獲准執行的動作為止。 若要檢視的每一個角色支援的工作集，請使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 您無法在報表管理員中檢視、建立、修改或刪除角色。 如需指示，請參閱[建立、 刪除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。  
+ 顯示報表伺服器中定義的全部角色，可用來定義項目的安全性。 在建立或變更報表或資料夾的角色指派時，請選取一或多個角色，直到結合的工作集描述使用者獲准執行的動作為止。 若要檢視的每一個角色支援的工作集，請使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 您無法在報表管理員中檢視、建立、修改或刪除角色。 如需相關指示，請參閱 <<c0> [ 建立、 刪除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。</c0>  
   
  **說明**  
  顯示有關角色的其他資訊。 針對預先定義的角色，例如 **[瀏覽器]** 或 **[內容管理員]**，描述會摘要每個角色支援的工作。  

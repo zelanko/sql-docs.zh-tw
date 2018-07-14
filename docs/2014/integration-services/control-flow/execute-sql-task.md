@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 caps.latest.revision: 113
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fcddb47c254b897403cb784810703a1c7b20437a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77db86a684089c0696d499499bc52c816f35c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231548"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
   「執行 SQL」工作會執行封裝中的 SQL 陳述式或預存程序。 工作可以包含逐次執行的單一 SQL 陳述式或多重 SQL 陳述式。 您可將執行 SQL 工作用於下列用途：  
@@ -84,7 +84,7 @@ ms.locfileid: "36022201"
 -   如果工作使用參數繫結，則批次中所有查詢的參數數目和類型都必須相同。  
   
 ## <a name="running-parameterized-sql-commands"></a>執行參數化的 SQL 命令  
- SQL 陳述式和預存程序經常使用輸入參數、輸出參數以及傳回碼。 「 執行 SQL 」 工作支援`Input`， `Output`，和`ReturnValue`參數型別。 您使用`Input`類型當做輸入參數，`Output`輸出參數和`ReturnValue`的傳回碼。  
+ SQL 陳述式和預存程序經常使用輸入參數、輸出參數以及傳回碼。 「 執行 SQL 」 工作支援`Input`， `Output`，和`ReturnValue`參數型別。 您使用`Input`類型當做輸入參數，`Output`當做輸出參數，和`ReturnValue`當做傳回碼。  
   
 > [!NOTE]  
 >  只有在資料提供者支援參數時，您才能在執行 SQL 工作中使用參數。  
@@ -99,7 +99,7 @@ ms.locfileid: "36022201"
 ## <a name="troubleshooting-the-execute-sql-task"></a>疑難排解執行 SQL 工作  
  您可以記錄執行 SQL 工作對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解執行 SQL 工作所執行的 SQL 命令。 若要記錄「執行 SQL」工作對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
   
- 有時 SQL 命令或預存程序會傳回多個結果集。 這些結果集包含不只是結果資料列集`SELECT`查詢中，但單一值之錯誤的結果`RAISERROR`或`PRINT`陳述式。 工作是否忽略發生在第一個結果集之後之結果集中的錯誤，將取決於所使用的連接管理員類型：  
+ 有時 SQL 命令或預存程序會傳回多個結果集。 這些結果集包含不只是結果的資料列集`SELECT`查詢，但單一值之錯誤的結果`RAISERROR`或`PRINT`陳述式。 工作是否忽略發生在第一個結果集之後之結果集中的錯誤，將取決於所使用的連接管理員類型：  
   
 -   使用 OLE DB 和 ADO 連接管理員時，工作會忽略發生在第一個結果集之後的結果集。 因此，使用這些連接管理員時，如果錯誤不屬於第一個結果集的一部分，便會忽略 SQL 命令或預存程序所傳回的錯誤。  
   
@@ -125,13 +125,13 @@ ms.locfileid: "36022201"
   
 -   指示工作是否要略過 SQL 陳述式的準備階段。  
   
--   如果使用 ADO 連接類型，您必須指出 SQL 陳述式是否為預存程序。 對於其他連線類型，這個屬性是唯讀，且其值永遠為`false`。  
+-   如果使用 ADO 連接類型，您必須指出 SQL 陳述式是否為預存程序。 對於其他連線類型，這個屬性是唯讀，且其值一律為`false`。  
   
  您可以程式設計方式或透過「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」設定屬性。  
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [執行 SQL 工作編輯器&#40;[一般] 頁面&#41;](../execute-sql-task-editor-general-page.md)  
+-   [執行 SQL 工作編輯器&#40;一般頁面&#41;](../execute-sql-task-editor-general-page.md)  
   
 -   [執行 SQL 工作編輯器&#40;參數對應頁面&#41;](../execute-sql-task-editor-parameter-mapping-page.md)  
   
@@ -150,15 +150,15 @@ ms.locfileid: "36022201"
   
 ## <a name="related-tasks"></a>相關工作  
   
--   [將查詢參數對應至變數，在執行 SQL 工作](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
+-   [在執行 SQL 工作中將查詢參數對應至變數](../map-query-parameters-to-variables-in-an-execute-sql-task.md)  
   
--   [結果集對應至變數，在執行 SQL 工作](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
+-   [在執行 SQL 工作中將結果集對應至變數](../map-result-sets-to-variables-in-an-execute-sql-task.md)  
   
 ## <a name="related-content"></a>相關內容  
   
--   [參數和傳回碼在執行 SQL 工作](execute-sql-task.md)  
+-   [執行 SQL 工作中的參數和傳回碼](execute-sql-task.md)  
   
--   [中的結果集執行 SQL 工作](../result-sets-in-the-execute-sql-task.md)  
+-   [執行 SQL 工作中的結果集](../result-sets-in-the-execute-sql-task.md)  
   
 -   [Transact-SQL 參考 &#40;Database Engine&#41;](/sql/t-sql/language-reference)  
   

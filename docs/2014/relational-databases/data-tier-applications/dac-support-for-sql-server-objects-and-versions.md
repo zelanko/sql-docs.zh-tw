@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], supported objects
 - objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a7b77ccd5d7fdae2ef81b3a19ae557ef6e662d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c7af236b8e48b76787e77baa0e0720153ee8489f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244988"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 物件與版本的 DAC 支援
   資料層應用程式 (DAC) 支援最常用的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 物件。  
@@ -111,7 +111,7 @@ ms.locfileid: "36023365"
 ##  <a name="Considerations"></a> 部署動作的其他考量  
  請注意，DAC Framework 資料部署動作有下列考量：  
   
--   **擷取/匯出** - 使用 DAC Framework 從資料庫建立封裝的動作 – 例如，擷取 .dacpac 檔案、匯出 .bacpac 檔案 - 這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到以下摘要訊息：**這些限制不會影響 DAC Framework 所建立之 DAC 封裝中儲存之資料類型和值的精確度，而只適用於將 DAC 封裝部署到資料庫所產生的資料類型和值。如需受影響的資料，以及如何解決這個限制的詳細資訊，請參閱**[本主題](http://go.microsoft.com/fwlink/?LinkId=267086)。  
+-   **擷取/匯出** - 使用 DAC Framework 從資料庫建立封裝的動作 – 例如，擷取 .dacpac 檔案、匯出 .bacpac 檔案 - 這些限制都不適用。 封裝中的資料為來源資料庫中資料的不失真表示法。 如果封裝中有上述的任一情況，則擷取/匯出記錄將會透過上述的訊息包含問題摘要。 這是為了警告使用者，他們所建立的封裝中可能會發生資料部署問題。 使用者也會在記錄中看到以下摘要訊息：**這些限制不會影響 DAC Framework 所建立之 DAC 封裝中儲存之資料類型和值的精確度，而只適用於將 DAC 封裝部署到資料庫所產生的資料類型和值。如需有關受影響的資料，以及如何解決這項限制的詳細資訊，請參閱**[本主題](http://go.microsoft.com/fwlink/?LinkId=267086)。  
   
 -   **部署/發行/匯入** - 使用 DAC Framework 將封裝部署到資料庫的動作，例如部署或發行 .dacpac 檔案以及匯入 .bacpac 檔案，這些限制都適用。 目標資料庫中產生的資料可能不包含封裝中資料的不失真表示法。 部署/匯入記錄將會在每個執行個體遇到問題時包含一則訊息 (如上所述)。 錯誤將封鎖此作業 – 請參閱上面的類別目錄 3 - 但是在其他警告的情況下將會繼續。  
   

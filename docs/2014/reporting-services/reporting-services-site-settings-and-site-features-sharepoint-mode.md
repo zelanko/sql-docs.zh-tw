@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 網站設定和網站功能 （SharePoint 模式） |Microsoft 文件
+title: Reporting Services 網站設定和網站功能 （SharePoint 模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1128105b7334fc5bf81fd72b9e178c15634a1cab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7d059719b88abec5f3e89793baa7727ec66a962
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175411"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Reporting Services 網站設定和網站功能 (SharePoint 模式)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 模式有幾個網站層級自訂功能和網站功能，這些功能可以從 SharePoint [網站設定] 頁面進行管理。 這些設定適用於整個網站，而且會影響所有 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。 您必須擁有「內容管理員」和「系統管理員」權限才能檢視此頁面。  
@@ -32,9 +32,9 @@ ms.locfileid: "36021747"
   
 ## <a name="to-open-the-reporting-services-site-settings-page"></a>若要開啟 Reporting Services 網站設定頁面  
   
-1.  從 SharePoint 網站**網站動作**功能表上，按一下**站台設定**。  
+1.  從 SharePoint 站台**站台動作**功能表上，按一下**站台設定**。  
   
-2.  在**Reporting Services**區段中，按一下**Reporting Services 網站設定**。  
+2.  在  **Reporting Services**區段中，按一下**Reporting Services 網站設定**。  
   
 ## <a name="options-for-reporting-services-site-settings"></a>Reporting Services 網站設定的選項  
   

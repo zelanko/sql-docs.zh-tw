@@ -1,5 +1,5 @@
 ---
-title: MeasureGroup 元素 (ASSL) |Microsoft 文件
+title: MeasureGroup 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroup element
 ms.assetid: 7aa099db-5dc7-4cac-b437-f73fc0921b24
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f66d555ed09410985622fd2f5edb5d021b9d26c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee73b594fde5e3a9e915615d1a343296ce846d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163369"
 ---
 # <a name="measuregroup-element-assl"></a>MeasureGroup 元素 (ASSL)
   定義位於相同資料粒度層級的一組量值。  
@@ -93,12 +93,12 @@ ms.locfileid: "36023641"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[量值群組](../collections/groups-element-assl.md)|  
+|父元素|[MeasureGroups](../collections/groups-element-assl.md)|  
 |子元素||  
   
 |上階或父系|子元素|  
 |------------------------|--------------------|  
-|[Cube](../collections/aggregationdesigns-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DataAggregation](aggregation-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ErrorConfiguration](errorconfiguration-element-assl.md), [EstimatedRows](../properties/estimatedrows-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [IgnoreUnrelatedDimensions](../properties/ignoreunrelateddimensions-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MeasureQualification](../properties/measurequalificaton-element-assl.md), [Measures](../collections/measures-element-assl.md), [Name](../properties/name-element-assl.md), [Partitions](../collections/partitions-element-assl.md), [ProactiveCaching](proactivecaching-element-assl.md), [ProcessingMode](../properties/processingmode-element-assl.md), [ProcessingPriority](../properties/processingpriority-element-assl.md), [Source](../properties/source-element-measure-assl.md), [State](../properties/state-element-assl.md), [StorageLocation](../properties/storagelocation-element-assl.md), [StorageMode](../properties/storagemode-element-assl.md), [Translations](../collections/translations-element-assl.md), [Type](../properties/type-element-measuregroup-assl.md)|  
+|[Cube](../collections/aggregationdesigns-element-assl.md)， [AggregationPrefix](../properties/aggregationprefix-element-assl.md)，[註解](../collections/annotations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [DataAggregation](aggregation-element-assl.md)， [描述](../properties/description-element-assl.md)，[維度](../collections/dimensions-element-assl.md)， [ErrorConfiguration](errorconfiguration-element-assl.md)， [EstimatedRows](../properties/estimatedrows-element-assl.md)， [EstimatedSize](../properties/estimatedsize-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [IgnoreUnrelatedDimensions](../properties/ignoreunrelateddimensions-element-assl.md)， [LastProcessed](../properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [MeasureQualification](../properties/measurequalificaton-element-assl.md)，[量值](../collections/measures-element-assl.md)，[名稱](../properties/name-element-assl.md)，[分割](../collections/partitions-element-assl.md)， [ProactiveCaching](proactivecaching-element-assl.md)， [ProcessingMode](../properties/processingmode-element-assl.md)， [ProcessingPriority](../properties/processingpriority-element-assl.md)，[來源](../properties/source-element-measure-assl.md)，[狀態](../properties/state-element-assl.md)， [StorageLocation](../properties/storagelocation-element-assl.md)， [StorageMode](../properties/storagemode-element-assl.md)，[翻譯](../collections/translations-element-assl.md)，[類型](../properties/type-element-measuregroup-assl.md)|  
 |[CubeBinding](../data-type/cubebinding-data-type-out-of-line-assl.md)|無|  
 |[檢視方塊](perspective-element-assl.md)|無|  
   

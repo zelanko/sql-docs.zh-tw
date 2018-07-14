@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvconnect.f1
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 090fb178f00965044eaf32a3f5152d1a45c02581
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 3fcec4c67e6c942e8f2a5f09a057696779f30106
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195588"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>連接到 Master Data Services 資料庫對話方塊
   使用 [連接到 Master Data Services 資料庫] 對話方塊來選取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  
@@ -46,6 +46,6 @@ ms.locfileid: "36023370"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫組態頁面 &#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [設定 Master Data Services 資料庫與網站](set-up-the-database-and-website-for-master-data-services.md)  
+ [設定 Master Data Services 的資料庫與網站](set-up-the-database-and-website-for-master-data-services.md)  
   
   

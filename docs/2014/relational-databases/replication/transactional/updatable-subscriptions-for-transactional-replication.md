@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, updatable subscriptions
 - updatable subscriptions, about updatable subscriptions
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - updatable subscriptions
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 caps.latest.revision: 57
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3a7af7b2b8da4c51b72e05a7225a4a18224b377a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 38e7b5970295bec4170c8658c254214f40d250ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268664"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "36023075"
   
 -   不支援重新發行資料。  
   
--   複寫將 **msrepl_tran_version** 資料行加入已發行的資料表中，用來進行追蹤。 此額外的資料行，因為所有`INSERT`陳述式應該包含資料行清單。  
+-   複寫將 **msrepl_tran_version** 資料行加入已發行的資料表中，用來進行追蹤。 此額外的資料行，因為所有`INSERT`陳述式均應包含資料行清單。  
   
 -   若要在支援更新訂閱的發行集之資料表中進行結構描述變更，則必須停止「發行者」和「訂閱者」上所有資料表的活動，且暫止資料變更必須在進行任何結構描述變更前傳播至所有節點。 這會確保未處理完畢的交易不與暫止結構描述變更發生衝突。 結構描述變更傳播至所有節點之後，可於已發行的資料表上繼續進行活動。 如需詳細資訊，請參閱[停止複寫拓撲 &#40;複寫 Transact-SQL 程式設計&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)。  
   
@@ -80,11 +80,11 @@ ms.locfileid: "36023075"
   
 -   即使訂閱已過期或為非使用中，訂閱者端的更新也會傳播至發行者。 請確定所有此類訂閱都已卸除或重新初始化。  
   
--   如果`TIMESTAMP`或`IDENTITY`資料行是，且複寫為其基底資料型別，這些資料行中的值不應更新訂閱者端。  
+-   如果`TIMESTAMP`或`IDENTITY`資料行，且複寫為其基底資料型別，這些資料行中的值不應更新訂閱者端。  
   
--   「 訂閱者 」 無法更新或插入`text`，`ntext`或`image`值，因為它不可能從複寫變更追蹤觸發程序內插入或刪除資料表中讀取。 同樣地，「 訂閱者 」 無法更新或插入`text`或`image`使用值`WRITETEXT`或`UPDATETEXT`因為發行者所覆寫的資料。 相反地，您可以分割`text`和`image`到不同的資料行的資料表，並修改在交易內的兩個資料表。  
+-   訂閱者無法更新或插入`text`，`ntext`或`image`值，因為它不可能從複寫變更追蹤觸發程序內插入或刪除資料表中讀取。 同樣地，「 訂閱者 」 無法更新或插入`text`或是`image`使用值`WRITETEXT`或`UPDATETEXT`因為發行者所覆寫的資料。 相反地，您可以將分割`text`和`image`到不同的資料行的資料表，並修改在交易內的兩個資料表。  
   
-     若要更新訂閱者端的大型物件，使用 資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`而不是`text`， `ntext`，和`image`資料類型，分別。  
+     若要更新的訂閱者端的大型物件，請使用 資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`而非`text`， `ntext`，和`image`資料類型，分別。  
   
 -   若更新專用索引鍵 (包含主索引鍵) 會造成重複 (例如更新格式 `UPDATE <column> SET <column> =<column>+1` )，將無法執行此作業，而且會因為違反不重複原則而遭到拒絕。 這是因為訂閱者端進行的設定更新會透過複寫方式個別傳播`UPDATE`陳述式中的每個資料列受到影響。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36023075"
   
 -   若應用程式在訂閱者需要觸發器，便應使用 `NOT FOR REPLICATION` 選項同時在發行者與訂閱者定義觸發器。 這會確保觸發器僅為原始資料變更而引發，而不會在複寫變更時引發。  
   
-     請確保複寫觸發器更新資料表時不會引發使用者自訂的觸發器。 這會透過呼叫程序`sp_check_for_sync_trigger`使用者定義的觸發程序主體中。 如需詳細資訊，請參閱 [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)。  
+     請確保複寫觸發器更新資料表時不會引發使用者自訂的觸發器。 這可以藉由呼叫程序`sp_check_for_sync_trigger`的使用者定義的觸發程序主體中。 如需詳細資訊，請參閱 [sp_check_for_sync_trigger &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-check-for-sync-trigger-transact-sql)。  
   
 ### <a name="immediate-updating"></a>立即更新  
   
@@ -110,11 +110,11 @@ ms.locfileid: "36023075"
   
 -   在使用佇立更新時，不建議更新主索引鍵資料行，這是因為主索引鍵是所有查詢的記錄定位器。 若衝突解決原則是設為「訂閱者優先」，則應在更新主索引鍵時多加注意。 若「發行者」與「訂閱者」的主索引鍵均更新，則結果將會是有著不同主索引鍵的兩資料列。  
   
--   資料類型的資料行`SQL_VARIANT`： 當插入或更新訂閱者資料，它會以下列方式佇列讀取器代理程式時對應從 「 訂閱者 」 複製到佇列：  
+-   資料類型的資料行`SQL_VARIANT`： 當資料插入或更新訂閱者，它會對應以下列方式由佇列讀取器代理程式從 「 訂閱者 」 複製到佇列時：  
   
-    -   `BIGINT``DECIMAL`， `NUMERIC`， `MONEY`，和`SMALLMONEY`對應至`NUMERIC`。  
+    -   `BIGINT``DECIMAL`， `NUMERIC`， `MONEY`，以及`SMALLMONEY`會對應至`NUMERIC`。  
   
-    -   `BINARY` 和`VARBINARY`對應至`VARBINARY`資料。  
+    -   `BINARY` 並`VARBINARY`對應至`VARBINARY`資料。  
   
 ### <a name="conflict-detection-and-resolution"></a>衝突偵測與解決方案  
   

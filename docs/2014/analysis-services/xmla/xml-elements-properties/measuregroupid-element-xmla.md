@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupID 元素 (XMLA) |Microsoft 文件
+title: MeasureGroupID 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - MeasureGroupID element
 ms.assetid: ff55777e-54ea-42b9-a084-2e12e0a10988
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ee7a4c63f1ab71ad7f15e69a6288793378de5316
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0aebf67d4c61e6249ac38969b33db60f26237e31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023611"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200018"
 ---
 # <a name="measuregroupid-element-xmla"></a>MeasureGroupID 元素 (XMLA)
   識別父元素中包含物件參考的量值群組。  

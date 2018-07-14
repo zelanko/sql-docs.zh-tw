@@ -1,5 +1,5 @@
 ---
-title: 多維度資料來源建立 Power View 報表 |Microsoft 文件
+title: 建立具有多維度資料來源的 Power View 報表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b9b6f4c9-7e1f-4f61-b657-8986e39a6af2
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 736048d9cb6c8c2054c9d86bd3c8a8a0e2411daf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0edc1c2b45707afe65325e484ff2e772a224895a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220308"
 ---
 # <a name="create-a-power-view-report-with-a-multidimensional-data-source"></a>建立具有多維度資料來源的 Power View 報表
   根據多維度模型建立 Power View 報表與根據 PowerPivot 活頁簿或 Analysis Services 表格式模型建立報表並無不同之處。 Power View 報表是從 SharePoint 文件庫的報表資料來源連接檔案 (.rsds) 建立。 如需如何建立 .rsds 的詳細資訊，請參閱 [建立報表資料來源](create-a-report-data-source.md)。  

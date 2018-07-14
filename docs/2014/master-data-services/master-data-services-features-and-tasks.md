@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68e220c2f80260359234fb80869844c531744bfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f26531b3b4e783c70e1a3b060e803908cbf275b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023591"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191928"
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 功能及工作
   了解如何使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 來管理您組織的主資料。 了解如何建立與操作屬於資料容器的模型物件。 了解如何組織和維護主資料本身。 了解如何匯入和匯出主資料，以及在測試與實際執行環境之間共用模型。 最後，了解如何開發存取 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web 服務的自訂應用程式。  
@@ -38,13 +38,13 @@ ms.locfileid: "36023591"
   
 ## <a name="maintain-master-data"></a>維護主要資料  
   
--   [Master Data Services 增益集的 Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services 增益集適用於 Microsoft Excel](microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
 -   [成員&#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
 -   [交易 &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   
--   [註解&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+-   [附註&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
 -   [階層&#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
   
@@ -66,13 +66,13 @@ ms.locfileid: "36023591"
   
 -   [資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
--   [匯出資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
 -   [部署模型&#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
 ## <a name="develop-a-custom-application"></a>開發自訂應用程式  
   
--   [開發人員手冊 》 &#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
+-   [開發人員指南&#40;Master Data Services&#41;](develop/master-data-services-developer-documentation.md)  
   
 -   <xref:Microsoft.MasterDataServices>  
   

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_DATASOURCES 資料列集 |Microsoft 文件
+title: DISCOVER_DATASOURCES 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,25 +18,25 @@ helpviewer_keywords:
 - DISCOVER_DATASOURCES rowset
 ms.assetid: f3ff26ab-a447-416b-ba54-1716df2283de
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 32e7aa7327cce301cc8415f45635fda651d861f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e319b05d1d9aec74b01b73b671f613a2703d900f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185255"
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 資料列集
   傳回可用於伺服器或 Web 服務的 XML for Analysis (XMLA) 提供者資料來源清單。 從應用程式 Web 伺服器的 URL 傳回發行的資料來源。 用戶端可以連接至此清單中的其中一個資料來源。  
   
- 如果您呼叫[探索](../../xmla/xml-elements-methods-discover.md)方法`DISCOVER_DATASOURCES`中的列舉值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)項目，`Discover`方法會傳回`DISCOVER_DATASOURCES`資料列集。  
+ 如果您呼叫[Discover](../../xmla/xml-elements-methods-discover.md)方法`DISCOVER_DATASOURCES`中的列舉值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)項目`Discover`方法會傳回`DISCOVER_DATASOURCES`資料列集。  
   
  **適用於：** 表格式模型、 多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
- 用戶端會選取資料來源藉由設定`DataSourceInfo`屬性[屬性](../../xmla/xml-elements-properties/properties-element-xmla.md)連同傳送的項目[命令](../../xmla/xml-elements-properties/command-element-xmla.md)元素[Execute](../../xmla/xml-elements-methods-execute.md)方法。 用戶端不應該建構要傳送至伺服器的 `DataSourceInfo` 屬性內容。 用戶端應該改用 `Discover` 方法，來尋找提供者支援的資料來源。 然後，用戶端會針對它從 `DataSourceInfo` 資料列集中擷取的 `DISCOVER_DATASOURCES` 屬性，傳回相同的值。  
+ 用戶端設定中選取資料來源`DataSourceInfo`中的屬性[屬性](../../xmla/xml-elements-properties/properties-element-xmla.md)項目，會連同[命令](../../xmla/xml-elements-properties/command-element-xmla.md)項目[Execute](../../xmla/xml-elements-methods-execute.md)方法。 用戶端不應該建構要傳送至伺服器的 `DataSourceInfo` 屬性內容。 用戶端應該改用 `Discover` 方法，來尋找提供者支援的資料來源。 然後，用戶端會針對它從 `DataSourceInfo` 資料列集中擷取的 `DISCOVER_DATASOURCES` 屬性，傳回相同的值。  
   
  `DISCOVER_DATASOURCES`資料列集包含下列資料行。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36023885"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|06c03d41-f66d-49f3-b1b8-987f7af4cf18|  
 |ADOMDNAME|DataSources|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - published reports [Reporting Services], data source connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data sources [Reporting Services], managing
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 caps.latest.revision: 51
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8be62bb127d6d3fed0f3156f1dc58fc276e51431
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 0c49a666894fd4811de2405f22da111298b019b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244308"
 ---
 # <a name="manage-report-data-sources"></a>管理報表資料來源
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，報表、報表模型和資料驅動訂閱都會從外部資料來源擷取資料。 為了連接到外部資料來源，報表伺服器會使用在報表、模型或訂閱中定義，或者從其中參考的資料來源連接資訊。 資料來源連接屬性一定會在建立報表或模型時，使用報表或模型來定義，但是當報表或模型發行到報表伺服器之後，可以獨立管理這些屬性。  
@@ -56,9 +56,9 @@ ms.locfileid: "36023512"
  如果您要發行在報表中有內嵌資料來源屬性的報表，請考慮切換成共用資料來源屬性。 共用資料來源比較容易管理，因為您可以在一個頁面中更新認證和連接字串。 所有使用該資料來源的報表、模型和資料驅動訂閱都會立即收取變更。 您也可以讓共用資料來源離線，有效地暫停報表或訂閱讓它不要執行，同時針對發生的任何問題進行調查或疑難排解。  
   
 ## <a name="controlling-access-data-source-properties"></a>控制存取資料來源屬性  
- 根據預設，任何有權管理報表的人都可以在報表上設定任何屬性，其中包括決定資料來源類型的屬性、連接字串、認證，以及此報表是要從內嵌還是共用資料來源取得連接資訊。 有關哪一個工作和權限控制存取原生模式報表伺服器上的資料來源屬性的詳細資訊，請參閱[保護共用資料來源項目](../security/secure-shared-data-source-items.md)和[保護報表和資源](../security/secure-reports-and-resources.md)。  
+ 根據預設，任何有權管理報表的人都可以在報表上設定任何屬性，其中包括決定資料來源類型的屬性、連接字串、認證，以及此報表是要從內嵌還是共用資料來源取得連接資訊。 如需哪一個工作和權限控制存取原生模式報表伺服器上的資料來源屬性的詳細資訊，請參閱[保護共用資料來源項目的](../security/secure-shared-data-source-items.md)並[保護報表和資源](../security/secure-reports-and-resources.md)。  
   
- 檢視及編輯 SharePoint 文件庫內項目屬性的權限是由網站管理員所決定。 哪些權限控制存取資料來源連接屬性的詳細資訊，請參閱[SharePoint 網站和清單權限參考報表伺服器項目的](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)。  
+ 檢視及編輯 SharePoint 文件庫內項目屬性的權限是由網站管理員所決定。 如需哪一個權限控制存取資料來源連接屬性的詳細資訊，請參閱[SharePoint 網站和清單權限參考報表伺服器項目的](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)。  
   
 ## <a name="how-to-work-with-data-source-properties-on-a-report-server"></a>如何在報表伺服器上處理資料來源屬性  
  您可以使用各種工具來建立及修改資料來源屬性。 下表摘要列出方法和工具，並提供其他指示的連結。  
@@ -74,7 +74,7 @@ ms.locfileid: "36023512"
 |將認證儲存為建立訂閱或報表快照集的必要元件。|報表管理員|[在 Reporting Services 資料來源中儲存認證](store-credentials-in-a-reporting-services-data-source.md)|  
 |在已發行的報表上編輯資料來源連接屬性。|報表管理員|[設定報表的資料來源屬性&#40;報表管理員&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |在報表伺服器上建立共用資料來源項目。|SharePoint 網站|[建立和管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
-|搭配報表使用現有的 .odc 連接資訊。|SharePoint 網站|[使用 Office 資料連線&#40;.odc&#41;報表&#40;的 Reporting Services SharePoint 整合模式&#41;](use-an-office-data-connection-odc-with-reports.md)|  
+|搭配報表使用現有的 .odc 連接資訊。|SharePoint 網站|[使用 Office 資料連線&#40;.odc&#41;報表&#40;Reporting Services SharePoint 整合模式&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
 >  管理報表資料來源的資料來源連接，和管理報表伺服器資料庫的報表伺服器連接不同。 如需報表伺服器連線與其內部資料存放區的詳細資訊，請參閱[設定報表伺服器資料庫連線 &#40;SSRS 設定管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  

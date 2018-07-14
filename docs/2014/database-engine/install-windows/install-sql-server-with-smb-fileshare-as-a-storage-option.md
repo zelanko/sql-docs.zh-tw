@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e83b4a29d1fae74c5b20f3290be8431045f1f38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3aef5a22131fd26d72ccbe569a2adb73d045dfa3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200028"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
-  啟動[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，系統資料庫 （Master、 模型、 MSDB 和 TempDB） 與[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用者資料庫，可以使用伺服器訊息區塊 (SMB) 檔案伺服器做為儲存選項一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
+  啟動[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，系統資料庫 （Master、 模型、 MSDB 和 TempDB） 與[!INCLUDE[ssDE](../../includes/ssde-md.md)]使用者資料庫可以與伺服器訊息區塊 (SMB) 檔案伺服器做為儲存選項一起安裝。 這同時適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 獨立安裝和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝 (FCI)。  
   
 > [!NOTE]  
 >  SMB 檔案共用目前不支援檔案資料流。  
@@ -36,7 +36,7 @@ ms.locfileid: "36023851"
   
 -   \\\ServerName\ShareName  
   
- 如需有關通用命名慣例的詳細資訊，請參閱[UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)。  
+ 如需有關通用命名慣例的詳細資訊，請參閱 < [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)。  
   
  不建議使用回送 UNC 路徑 (伺服器名稱為 localhost (127.0.0.1) 的 UNC 路徑，或是本機電腦名稱)。 使用檔案伺服器叢集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (裝載於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行的相同節點上) 也不受支援，這是特殊案例。 為了避免這個狀況發生，建議將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和檔案伺服器叢集建立在不同的 Windows 叢集上。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36023851"
     setup.exe /q /ACTION=InstallFailoverCluster /InstanceName=MSSQLSERVER /INDICATEPROGRESS /ASSYSADMINACCOUNTS="<DomainName\UserName>" /ASDATADIR=<Drive>:\OLAP\Data /ASLOGDIR=<Drive>:\OLAP\Log /ASBACKUPDIR=<Drive>:\OLAP\Backup /ASCONFIGDIR=<Drive>:\OLAP\Config /ASTEMPDIR=<Drive>:\OLAP\Temp /FAILOVERCLUSTERDISKS="<Cluster Disk Resource Name - for example, 'Disk S:'" /FAILOVERCLUSTERNETWORKNAME="<Insert Network Name>" /FAILOVERCLUSTERIPADDRESSES="IPv4;xx.xxx.xx.xx;Cluster Network;xxx.xxx.xxx.x" /FAILOVERCLUSTERGROUP="MSSQLSERVER" /Features=AS,SQL /ASSVCACCOUNT="<DomainName\UserName>" /ASSVCPASSWORD="xxxxxxxxxxx" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="xxxxxxxxxxx" /INSTALLSQLDATADIR="\\FileServer\Share1\" /SQLCOLLATION="SQL_Latin1_General_CP1_CS_AS" /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx" /SQLSYSADMINACCOUNTS="<DomainName\UserName> /IACCEPTSQLSERVERLICENSETERMS  
     ```  
   
-     如需使用方式中的各種命令列參數選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
+     如需使用方式中的各種命令列參數選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱 <<c2> [ 從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   
 ## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>作業系統考量 (SMB 通訊協定與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  不同的 Windows 作業系統有不同的 SMB 通訊協定版本，而且 SMB 通訊協定版本對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]而言是透明的。 您可以找到不同 SMB 通訊協定版本相對於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的優點。  
@@ -102,7 +102,7 @@ ms.locfileid: "36023851"
     > [!NOTE]  
     >  SMB 共用資料夾的 FULL CONTROL 共用權限及 NTFS 權限僅限於： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務帳戶以及具有管理伺服器角色的 Windows 使用者。  
   
-     建議使用網域帳戶當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 如果使用系統帳戶當做服務帳戶，授與格式的機器帳戶的權限: * < 網域名稱 >***\\***< 電腦名稱 > ***$**。  
+     建議使用網域帳戶當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 如果系統帳戶做為服務帳戶，授與格式的電腦帳戶的權限: * < 網域名稱 >***\\***< 電腦名稱 > ***$**。  
   
     > [!NOTE]  
     >  -   在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間，如果將 SMB 檔案共用指定為儲存選項，則必須將網域帳戶指定為服務帳戶。 在 SMB 檔案共用中，系統帳戶只能指定為服務帳戶後續 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝。  
@@ -116,7 +116,7 @@ ms.locfileid: "36023851"
   
 -   在您卸離位於連接網路之儲存裝置上的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫之後，當您嘗試重新附加 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫時，可能會遇到資料庫權限問題。 [這篇知識庫文章](http://go.microsoft.com/fwlink/?LinkId=237321) (http://go.microsoft.com/fwlink/?LinkId=237321) 有此問題的定義。 若要暫時解決此問題，請參閱此知識庫文件中的＜ **其他相關資訊** ＞。  
   
--   有些協力廠商 (像是 NetApp 裝置) 未支援所有 SQL Server API 呼叫。 進行這些動作可能會收到：   
+-   有些協力廠商 (像是 NetApp 裝置) 未支援所有 SQL Server API 呼叫。 進行這些動作，您可能會看到：   
     2015-06-04 13:14:19.97 spid9s 錯誤： 17053，Severity: 16，狀態： 1。  
     2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult()： 發生作業系統錯誤 1 （不正確函式。）。  
   

@@ -1,5 +1,5 @@
 ---
-title: 選項 (查詢執行： SQL Server： 進階頁面) |Microsoft 文件
+title: 選項 (查詢執行： SQL Server︰ 進階頁面) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAdvanced
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 679c6d8f5a6abf931eb28d0f2f8116ac9f551d91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 179cddf3670cc29cbb298b53c442c30b80dd202f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187235"
 ---
-# <a name="options-query-executionsql-serveradvanced-page"></a>選項 (查詢執行： SQL Server： 進階頁面)
+# <a name="options-query-executionsql-serveradvanced-page"></a>選項 (查詢執行： SQL Server︰ 進階頁面)
   使用 SET 命令有許多選項可用。 使用此頁面來指定 **設定** 選項，以在 SQL Server 查詢編輯器中執行 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 它們對於其他程式碼編輯器沒有影響。 這些選項的變更僅適用於新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 **[查詢]** 功能表上的 **[查詢選項]** ，或按一下 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗的快速鍵功能表。 在 **[執行]** 下，按一下 **[進階]**。 如需上述各項目的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》。  
   
 ## <a name="options"></a>選項。  
@@ -68,7 +68,7 @@ GO
  **SET QUERY_GOVERNOR_COST_LIMIT**  
  使用 **QUERY_GOVERNOR_COST_LIMIT** 選項，即可指定查詢執行的時間上限。 查詢成本代表在特定的硬體組態上，預估完成查詢所需的時間 (以秒為單位)。 預設值為 0 表示查詢執行沒有時間長度的限制。  
   
- **抑制提供者訊息標頭**  
+ **隱藏提供者訊息標頭**  
  選取此核取方塊時，不會顯示來自提供者 (例如 SQLClient 提供者) 的狀態訊息。 依預設，這個核取方塊為已選取。 當疑難排解查詢於提供者層級失敗時，清除此核取方塊即可查看提供者訊息。  
   
  **查詢執行後中斷連接**  

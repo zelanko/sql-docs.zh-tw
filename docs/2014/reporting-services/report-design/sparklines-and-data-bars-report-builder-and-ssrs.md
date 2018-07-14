@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0fdbe801bc58296f0cbfa116056615c341ec3e1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: beeecbb80ff375bdb13f2a91bff84dbb34a9a4f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030232"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181631"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>走勢圖和資料橫條 (報表產生器和 SSRS)
   走勢圖和資料橫條是簡單的小圖表，在極小空間中傳達大量資訊，通常內嵌於文字。 走勢圖和資料橫條經常用於資料表和矩陣中。 其效用在於同時檢視多個走勢圖，能夠一個跟上一個快速地進行比較，而不是單獨檢視各個圖表。 可輕鬆查看極端值，也就是執行時跟其他資料列不相同的資料列。 圖雖然很小，通常每個走勢圖都代表一段時間的多個資料點。 資料橫條可以代表多個資料點，但通常只顯示一個。 每個走勢圖通常都會呈現單一數列。 您不能將走勢圖加入資料表的詳細資料群組中。 因為走勢圖會顯示彙總的資料，必須放在與群組相關聯的儲存格中。 走勢圖和資料橫條有相同的基本圖表元素：類別、數列和值，但是沒有圖例、座標軸線、標籤或刻度標記。  
@@ -88,35 +88,35 @@ ms.locfileid: "36030232"
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="HowTo"></a> 如何主題  
- [加入走勢圖和資料橫條&#40;報表產生器和 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [加入走勢圖和資料橫條&#40;報表產生器及 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
- [在資料表或矩陣的圖表資料對齊&#40;報表產生器和 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [在資料表或矩陣的圖表資料對齊&#40;報表產生器及 SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
 ### <a name="other-how-to-topics-for-charts"></a>圖表的其他如何主題  
  走勢圖和資料橫條都是一種圖表的類型，因此，您可能也會發現下列用於圖表的如何主題相當實用而且有關聯：  
   
- [將圖表加入至報表&#40;報表產生器和 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [將圖表加入至報表&#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
- [將空點加入圖表&#40;報表產生器和 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
+ [將空點加入圖表&#40;報表產生器及 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
- [新增或移除圖表中的邊界&#40;報表產生器和 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
+ [新增或移除圖表中的邊界&#40;報表產生器及 SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [變更圖表類型&#40;報表產生器和 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [變更圖表類型&#40;報表產生器及 SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
   
- [使用調色盤圖表上定義色彩&#40;報表產生器和 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
+ [使用調色盤的圖表上定義色彩&#40;報表產生器及 SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
  [在數列上顯示工具提示 &#40;報表產生器和 SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
- [指定對數刻度&#40;報表產生器和 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [指定對數刻度&#40;報表產生器及 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
- [指定軸間隔&#40;報表產生器和 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [指定軸間隔&#40;報表產生器及 SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [跨多個形狀圖指定一致的色彩 &#40;報表產生器及 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [教學課程： 將走勢圖加入至報表&#40;報表產生器&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
+ [教學課程： 將走勢圖加入至您的報表&#40;報表產生器&#41;](../tutorial-add-a-sparkline-to-your-report-report-builder.md)   
  [走勢圖、 橫條圖與指標在報表產生器 （影片）](http://technet.microsoft.com/bi/video/ff877165)   
- [如何： 建立走勢圖中的資料表 （影片）](http://go.microsoft.com/fwlink/?LinkId=197092)  
+ [如何： 建立資料表 （影片） 中的走勢圖](http://go.microsoft.com/fwlink/?LinkId=197092)  
   
   

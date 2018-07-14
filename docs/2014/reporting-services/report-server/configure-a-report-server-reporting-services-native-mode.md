@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
@@ -16,13 +16,13 @@ ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0ec1501c32505b760fba2ec88e21140de1cf0211
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7f7e1231111f795383748438730f2652ac8d9056
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200788"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>設定報表伺服器 (Reporting Services 原生模式)
   根據您在安裝期間選取的選項而定，報表伺服器可能需要其他組態設定才能使用。 報表伺服器組態至少要包含以下項目：  
@@ -37,7 +37,7 @@ ms.locfileid: "36023281"
   
  報表管理員是適用於原生模式報表伺服器的選擇性功能，但是建議您設定報表管理員，讓您可以授與使用者對報表伺服器的存取權，並管理報表伺服器內容。 如果您在 SharePoint 整合模式中部署報表伺服器，請使用 SharePoint 伺服器的 Web 前端來授與存取權。  
   
- 也可以視需要設定其他功能，例如報表伺服器電子郵件和自動執行帳戶。 如需詳細資訊，請參閱[管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)。  
+ 也可以視需要設定其他功能，例如報表伺服器電子郵件和自動執行帳戶。 如需詳細資訊，請參閱 <<c0> [ 管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)。  
   
  若要設定報表伺服器，請使用 Reporting Services 組態工具。  
   
@@ -56,11 +56,11 @@ ms.locfileid: "36023281"
 ## <a name="next-steps"></a>後續步驟  
  若要完成部署，您應該設定報表管理員或 SharePoint 整合。 如需詳細資訊，請參閱[設定報表管理員 &#40;原生模式&#41;](configure-web-portal.md)。  
   
- 如果開啟了 Windows 防火牆，則設定報表伺服器使用的通訊埠很可能已關閉。 當您嘗試從遠端用戶端電腦開啟報表管理員時出現空白頁面，即表示通訊埠可能已關閉。 如需設定防火牆的資訊，請參閱[Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)。  
+ 如果開啟了 Windows 防火牆，則設定報表伺服器使用的通訊埠很可能已關閉。 當您嘗試從遠端用戶端電腦開啟報表管理員時出現空白頁面，即表示通訊埠可能已關閉。 如需設定防火牆的詳細資訊，請參閱[設定供報表伺服器存取的防火牆](configure-a-firewall-for-report-server-access.md)。  
   
  如果您正在使用 Windows Vista 或 Windows Server 2008，需要進行其他步驟，才能在本機開啟報表管理員。 如需詳細資訊，請參閱[設定原生模式報表伺服器進行本機管理 &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
   
- 建立資料夾、上傳項目及執行報表來確認您的安裝。 請依照下列中的指示[Verify a Reporting Services Installation](../install-windows/verify-a-reporting-services-installation.md)來確認您的安裝。  
+ 建立資料夾、上傳項目及執行報表來確認您的安裝。 請依照下列中的指示[Verify a Reporting Services Installation](../install-windows/verify-a-reporting-services-installation.md)來確認安裝。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)   

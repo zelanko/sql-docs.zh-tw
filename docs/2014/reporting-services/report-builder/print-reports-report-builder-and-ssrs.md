@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f673ebfb9034511dc6023cc34d9c3670237d35d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 5859430b9a928b79697e53873ef549173963a90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022582"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268514"
 ---
 # <a name="print-reports-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
   將報表儲存至報表伺服器之後，您就可以從瀏覽器、報表管理員或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
@@ -37,25 +37,25 @@ ms.locfileid: "36022582"
 3.  就大部分的匯出報表而言，報表列印輸出會包括報表上顯示的所有內容，如使用者在電腦螢幕上看到的一樣。 系統會保留報表設計介面中的空白。 若要以水平方式加入或移除額外的空白頁面，請變更報表頁面寬度。  
   
 > [!NOTE]  
->  如果您使用瀏覽器的 [列印] 命令，則 HTML 報表列印輸出可能只會包含第一頁的內容。 如果您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用戶端列印功能來列印 HTML 報表，可以獲得較好的結果。 如需詳細資訊，請參閱[從列印控制項的瀏覽器列印報表&#40;報表產生器及 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)。  
+>  如果您使用瀏覽器的 [列印] 命令，則 HTML 報表列印輸出可能只會包含第一頁的內容。 如果您使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用戶端列印功能來列印 HTML 報表，可以獲得較好的結果。 如需詳細資訊，請參閱 <<c0> [ 從列印控制項的瀏覽器列印報表&#40;報表產生器及 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)。</c0>  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>本節內容  
- [從列印控制項的瀏覽器列印報表&#40;報表產生器和 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
+ [從列印控制項的瀏覽器列印報表&#40;報表產生器及 SSRS&#41;](print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
  描述如何使用用戶端列印功能，從網頁瀏覽器或報表管理員進行報表的列印。  
   
- [從其他應用程式列印報表&#40;報表產生器和 SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
+ [從其他應用程式列印報表&#40;報表產生器及 SSRS&#41;](print-reports-from-other-applications-report-builder-and-ssrs.md)  
  描述如何列印已匯出至另一個應用程式的報表。  
   
- [列印報表&#40;報表產生器和 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
+ [列印報表&#40;報表產生器及 SSRS&#41;](print-a-report-report-builder-and-ssrs.md)  
  提供逐步指示，說明如何列印報表、如何控制頁面邊界，以及如何針對手動分頁轉譯器 (PDF、影像或列印) 所轉譯的報表指定紙張大小。  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表匯出&#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
- [頁首和頁尾&#40;報表產生器和 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [映像&#40;報表產生器和 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
+ [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [頁首和頁尾&#40;報表產生器及 SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [映像&#40;報表產生器及 SSRS&#41;](../report-design/images-report-builder-and-ssrs.md)   
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)  
   
   

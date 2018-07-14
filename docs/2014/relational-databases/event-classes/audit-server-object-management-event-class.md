@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Object Management event class
 ms.assetid: 106ffe8d-da60-4b1f-8866-6cef6a5931ad
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 667c731512fdff0c0061faf084de5c038ac42ca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e220e7ba3fdb21ff7a3d816d8ea59d4bcbc92fec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242778"
 ---
 # <a name="audit-server-object-management-event-class"></a>Audit Server Object Management 事件類別
   **Audit Server Object Management** 事件類別會在 CREATE、ALTER 或 DROP 伺服器物件時發生。  

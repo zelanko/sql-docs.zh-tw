@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding components
 - components [Integration Services], data flow
@@ -16,13 +16,13 @@ ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8c5dc268bb6f1e2278006586eca561d5d1a5da17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6711fc57b2eb819709cf1c168a0da765ab144bd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216068"
 ---
 # <a name="add-or-delete-a-component-in-a-data-flow"></a>在資料流程中加入或刪除元件
   資料流程元件指資料流程中的來源、目的地和轉換。 封裝中的控制流程必須包含「資料流程」工作，您才能將元件加入到資料流程中。  
@@ -57,7 +57,7 @@ ms.locfileid: "36030117"
   
 ## <a name="see-also"></a>另請參閱  
  [連接資料流程中的元件](data-flow.md)   
- [在資料流程元件中設定錯誤輸出](../configure-an-error-output-in-a-data-flow-component.md)   
+ [資料流程元件中設定錯誤輸出](../configure-an-error-output-in-a-data-flow-component.md)   
  [資料流程](data-flow.md)  
   
   

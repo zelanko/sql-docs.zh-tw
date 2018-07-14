@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Missing Join Predicate event class
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d1ffe48a0c2ce259305c982a61462258334afbb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: febb116be8f127d16ff1cdc6cb03bca68d61e0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227678"
 ---
 # <a name="missing-join-predicate-event-class"></a>遺失聯結述詞事件類別
   「遺失聯結述詞」事件類別指示要執行的查詢沒有聯結述詞。 這可能造成長時間執行的查詢。 如需聯結述詞的詳細資訊，請參閱[述詞 &#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates)。  

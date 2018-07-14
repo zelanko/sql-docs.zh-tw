@@ -8,53 +8,53 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 50
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c71c785f6d5cd5130223335830f53cc0fa8bf6f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c411b3780f1e3f5b91d00d08093f281a5daa286f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023262"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218878"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
   將群組和總計加入至報表以組織和摘要資料。  
   
- 中加入報表的相關資訊，請參閱此 curah.microsoft.com，計算的：[將總計加入到 Reporting Services (SSRS) 報表](http://go.microsoft.com/fwlink/p/?LinkId=403698)。  
+ 如需中加入報表，請參閱 curah.microsoft.com 的： [Reporting Services (SSRS) 報表中加入總計](http://go.microsoft.com/fwlink/p/?LinkId=403698)。  
   
  **本主題內容：**  
   
--   [若要在報表中分組資料](#bkmk_groupdata)  
+-   [在報表中的群組資料](#bkmk_groupdata)  
   
--   [若要將總計加入至報表](#bkmk_addtotals)  
+-   [若要在報表中加入總計](#bkmk_addtotals)  
   
--   [若要加入至報表的每日總計](#bkmk_adddailytotal)  
+-   [若要加入報表中的每日總計](#bkmk_adddailytotal)  
   
 -   [將總計加入到報表](#bkmk_addgrandtotal)  
   
 -   [將報表發行至報表伺服器 （選擇性）](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a> 若要在報表中分組資料  
+##  <a name="bkmk_groupdata"></a> 在報表中的群組資料  
   
 1.  按一下 **[設計]** 索引標籤。  
   
-2.  如果您沒有看到**資料列群組**窗格中以滑鼠右鍵按一下設計介面，然後按一下**檢視**，然後按一下 **分組**。  
+2.  如果您看不見**資料列群組**窗格中以滑鼠右鍵按一下設計介面，然後按一下**檢視**，然後按一下 **分組**。  
   
-3.  從**報表資料**窗格拖曳`Date`欄位設為**資料列群組**窗格。 將它放在稱為 [(詳細資料)] 之資料列的上方。  
+3.  從**報表資料**窗格拖曳到`Date`欄位設為**資料列群組**窗格。 將它放在稱為 [(詳細資料)] 之資料列的上方。  
   
      請注意，資料列控制代碼中現在具有一個用來顯示群組的方括號。 資料表現在也具有兩個 [日期] 資料行 – 垂直虛線兩側各有一個。  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  從**報表資料**窗格拖曳`Order`欄位設為**資料列群組**窗格。 將它放在 [日期] 下方和 [(詳細資料)] 上方。  
+4.  從**報表資料**窗格拖曳到`Order`欄位設為**資料列群組**窗格。 將它放在 [日期] 下方和 [(詳細資料)] 上方。  
   
      請注意，資料列控制代碼中現在具有兩個方括號，用來顯示兩個群組。 資料表現在有兩個`Order`資料行太。  
   
-5.  原始的日期和訂單資料行，以刪除**右**雙線。 這樣會移除這個個別記錄值，所以只有群組值會顯示。 選取這兩個資料行的資料行控制代碼，並按一下滑鼠右鍵，然後按一下 [刪除資料行]。  
+5.  刪除原始的日期和訂單資料行，以**右**雙線。 這樣會移除這個個別記錄值，所以只有群組值會顯示。 選取這兩個資料行的資料行控制代碼，並按一下滑鼠右鍵，然後按一下 [刪除資料行]。  
   
      ![選取要刪除的資料行](../../2014/tutorials/media/rs-basictablegroupsdeletecols.gif "選取要刪除的資料行")  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36023262"
   
      ![依日期和訂單分組的資料表](../../2014/tutorials/media/rs-basictablegroupspreview.gif "依日期和訂單分組的資料表")  
   
-##  <a name="bkmk_addtotals"></a> 若要將總計加入至報表  
+##  <a name="bkmk_addtotals"></a> 若要在報表中加入總計  
   
 1.  切換至 [設計] 檢視。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "36023262"
   
      ![設計檢視：具有訂單總計的基本資料表](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "設計檢視：具有訂單總計的基本資料表")  
   
-##  <a name="bkmk_adddailytotal"></a> 若要加入至報表的每日總計  
+##  <a name="bkmk_adddailytotal"></a> 若要加入報表中的每日總計  
   
 1.  以滑鼠右鍵按一下 [訂單] 資料格，指向**加入總計**，然後按一下**之後**。  
   
-     這會將新的資料列包含的數量和金額總和的每日和標籤"**總**」 中排序資料行。  
+     這會將新增新的資料列包含的數量和金額總和的每一天，而標籤 」**總**」 中排序資料行。  
   
 2.  在同一資料格的 **總計** 一詞之前，輸入 **每日** 一詞，使其讀為 **[每日總計]**。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36023262"
   
 1.  以滑鼠右鍵按一下 [日期] 資料格，並指向 [加入總計]，然後按一下 [之後]。  
   
-     這樣會加入含有整個報表的數量和金額金額的總和的新資料列和**總**中加上標籤`Date`資料行。  
+     這會將新增新的資料列包含總和的數量和金額的整份報表，而**總**標記中`Date`資料行。  
   
 2.  在同一資料格的 **總計** 一詞之前，輸入 **全部** 一詞，使其讀為 **[全部總計]**。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36023262"
   
 2.  在工具列上，按一下 **[專案]** ，然後按一下 **[Tutorial 屬性]**。  
   
-3.  在**TargetServerURL**輸入您的報表伺服器的名稱，例如**http://\<伺服器名稱 > / reportserver**  
+3.  在  **TargetServerURL**輸入您的報表伺服器的名稱，例如**http://\<伺服器名稱 > / reportserver**  
   
 4.  按一下 **[確定]**。  
   
@@ -132,13 +132,13 @@ ms.locfileid: "36023262"
   
      如果您在輸出視窗中看見類似下面的訊息，就表示部署成功。  
   
-    > ------ 已經開始建立: 專案: 教學課程，組態: 偵錯 ------ 正在略過 'Sales Orders.rdl'。 項目是最新狀態。建置完成--0 個錯誤，0 個警告---開始部署： 專案： 教學課程，組態： 偵錯---將部署至 http://\<伺服器名稱 > / /tutorial/sales 報表 ' / 教學課程/Sales Orders'。部署完成--0 個錯誤，0 個警告 === 建置： 1 的成功或最新狀態、 0 失敗、 0 略過 === 部署： 1 成功、 0 失敗、 0 略過 ===  
+    > ------ 已經開始建立: 專案: 教學課程，組態: 偵錯 ------ 正在略過 'Sales Orders.rdl'。 項目是最新狀態。建置完成--0 個錯誤，0 個警告---開始部署： 專案： tutorial，組態： 偵錯---部署至 http://\<伺服器名稱 > / 正在回報 ' / 教學課程/Sales Orders'。部署完成--0 個錯誤，0 個警告 === 建置： 1 個成功或最新狀態、 0 失敗，0 個略過 === 部署： 1 成功、 0 失敗、 0 略過 ===  
   
      如果您看見類似下面的錯誤訊息，請確認自己擁有報表伺服器的權限，而且已經以系統管理員權限啟動 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 。  
   
-    > 「 授與使用者的權限 'XXXXXXXX\\< 您的使用者名稱\>' 不足，無法執行此作業 」  
+    > 」 的權限授與使用者 'XXXXXXXX\\< 您的使用者名稱\>' 不足，無法執行此作業 」  
   
-6.  例如，以系統管理員權限啟動報表管理員，以滑鼠右鍵按一下 Internet explorer 的圖示，按一下 **系統管理員身分執行**。  
+6.  比方說，系統管理員權限，啟動報表管理員，以滑鼠右鍵按一下 Internet explorer 的圖示，按一下 **系統管理員身分執行**。  
   
      瀏覽至報表管理員 URL，例如： `http://<server name>/reports`。  
   
@@ -148,6 +148,6 @@ ms.locfileid: "36023262"
  您已成功完成「建立基本資料表報表」教學課程。  
   
 ## <a name="see-also"></a>另請參閱  
- [篩選、 分組和排序資料&#40;報表產生器和 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [篩選、 分組和排序資料&#40;報表產生器及 SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

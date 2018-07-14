@@ -1,5 +1,5 @@
 ---
-title: 使用者階層屬性 |Microsoft 文件
+title: 使用者階層屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f128972a6878eb5104f07d4aa9ac3bee2517f526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8234cf83073565f3c88d9f63aa923d7564a21c7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257724"
 ---
 # <a name="user-hierarchy-properties"></a>使用者階層屬性
   下表描述使用者自訂階層的屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "36022504"
 |DisplayFolder|指定列出使用者階層的資料夾。|  
 |ID|包含階層的唯一識別碼 (ID)。|  
 |MemberNamesUnique|決定階層中的成員名稱是否必須為唯一的。 值為 True 與 False。 預設值為 False。|  
-|[屬性]|包含階層的名稱。|  
+|名稱|包含階層的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
  [使用者階層](user-hierarchies.md)   

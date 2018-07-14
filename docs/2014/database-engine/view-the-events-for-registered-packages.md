@@ -1,5 +1,5 @@
 ---
-title: 檢視已註冊之封裝的事件 |Microsoft 文件
+title: 檢視已註冊之封裝的事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing events
 - extended events [SQL Server], viewing events
 ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 42f24aaa6867cfe972a64b473ee590fcdec2a49e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0610697d8e5b743729985d4a7fe3dbec5a2743f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213368"
 ---
 # <a name="view-the-events-for-registered-packages"></a>檢視已註冊之封裝的事件
   在您建立 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 擴充的事件工作階段之前，找出註冊之封裝中可用的事件會非常有用。 如需詳細資訊，請參閱＜ [SQL Server Extended Events Packages](../relational-databases/extended-events/sql-server-extended-events-packages.md)＞。  
@@ -75,7 +75,7 @@ ms.locfileid: "36023382"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 擴充的事件封裝](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
+ [SQL Server 擴充事件封裝](../relational-databases/extended-events/sql-server-extended-events-packages.md)   
  [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   

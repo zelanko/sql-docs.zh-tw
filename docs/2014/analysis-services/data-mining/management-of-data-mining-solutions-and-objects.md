@@ -1,5 +1,5 @@
 ---
-title: 資料採礦方案與物件的管理 |Microsoft 文件
+title: 資料採礦方案與物件的管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], managing
 - managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6ea150e4f35eaa1e9251f17894c7f0cf665439ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f20cc2fe28f5d798f3521a36aebcfe346aa643d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218298"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>資料採礦方案與物件的管理
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 提供可用於管理現有採礦結構和採礦模型的用戶端工具。 本節說明可以利用每種環境執行的管理作業。  
@@ -39,13 +39,14 @@ ms.locfileid: "36030672"
 ## <a name="location-of-data-mining-objects"></a>資料採礦物件的位置  
  已經處理的採礦結構和模型會儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體中。  
   
- 如果您建立的連接[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫`Immediate`模式時開發資料採礦物件，您所建立的任何物件會立即新增到伺服器工作。 不過，如果在 **[離線]** 模式 (也就是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中作業時的預設值) 中設計資料採礦物件，則您建立的採礦物件在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體之前，都只是中繼資料容器。 因此，只要您對物件進行變更，就必須將物件重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 如需資料採礦架構的詳細資訊，請參閱[實體架構 &#40;Analysis Services - 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)。  
+ 如果您建立的連線[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫中`Immediate`模式時開發資料採礦物件，您所建立的任何物件會立即新增到伺服器工作。 不過，如果在 **[離線]** 模式 (也就是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中作業時的預設值) 中設計資料採礦物件，則您建立的採礦物件在部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體之前，都只是中繼資料容器。 因此，只要您對物件進行變更，就必須將物件重新部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 如需資料採礦架構的詳細資訊，請參閱[實體架構 &#40;Analysis Services - 資料採礦&#41;](physical-architecture-analysis-services-data-mining.md)。  
   
 > [!NOTE]  
 >  有些用戶端 (例如適用於 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007 的資料採礦增益集) 也可讓您建立工作階段採礦模型和採礦結構，這些用戶端會使用執行個體的連接，但只會將採礦結構和模型儲存在工作階段持續時間的伺服器中。 您仍可以透過用戶端管理這些模型，方法與您管理儲存在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的結構和模型相同，但是在您中斷與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的連接之後，並不會保存這些物件。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>使用 SQL Server 資料工具管理資料採礦物件  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供一些功能，使資料採礦物件的建立、瀏覽和編輯都更為簡易。  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供一些功能，使資料採礦物件的建立、瀏覽和編輯都更為簡易。  
   
  以下連結提供有關如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]修改資料採礦物件的資訊：  
   
@@ -66,7 +67,7 @@ ms.locfileid: "36030672"
 > [!WARNING]  
 >  採礦結構或採礦模型的所有變更 (包括類似名稱或描述等中繼資料的變更) 都需要重新處理結構或模型。  
   
- 如果您沒有用來建立資料採礦專案或物件的方案檔，您可以使用 Analysis Services 匯入精靈從伺服器匯入現有的專案中，對物件進行修改並重新部署使用`Incremental`選項。 如需詳細資訊，請參閱 [使用 Analysis Services 匯入精靈匯入資料採礦專案](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
+ 如果您沒有用來建立物件的資料採礦專案的方案檔，您可以使用 Analysis Services 匯入精靈 從伺服器匯入現有的專案，進行修改物件，並再重新部署使用`Incremental`選項。 如需詳細資訊，請參閱 [使用 Analysis Services 匯入精靈匯入資料採礦專案](import-a-data-mining-project-using-the-analysis-services-import-wizard.md)。  
   
 ## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>使用 SQL Server Management Studio 管理資料採礦物件  
  您可以在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中撰寫指令碼、處理或刪除採礦結構及採礦模型。 您只能使用物件總管檢視有限的屬性集；不過，您可以藉由開啟 **[DMX 查詢]** 視窗並選取採礦結構，以檢視有關採礦模型的其他中繼資料。  
@@ -98,6 +99,6 @@ ms.locfileid: "36030672"
  **限制** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會產生一些僅支援內部使用而不能用於 XMLA DDL 指令碼的 XML 陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
- [開發人員手冊 》 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
+ [開發人員指南&#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)  
   
   

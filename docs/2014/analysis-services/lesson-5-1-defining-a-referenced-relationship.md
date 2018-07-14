@@ -1,5 +1,5 @@
 ---
-title: 定義參考的關聯性 |Microsoft 文件
+title: 定義參考關聯性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 50be0ad05e579d21095e6446b8e84d39cbef1f20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f49d90e05c7d76129b5c2385ed1af05fc6e3731a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200378"
 ---
 # <a name="defining-a-referenced-relationship"></a>定義參考關聯性
   本教學課程最特別要注意的事就是，您定義的每一個 Cube 維度所依據的資料表，是透過主索引鍵對外部索引鍵的關聯性，直接連結到量值群組的事實資料表。 在本主題的工作中，您會透過 [轉售商] 維度 (稱為「參考維度」)，將 [地理位置] 維度連結到事實資料表。 這樣可讓使用者按地理位置建立轉售商銷售的維度。 如需詳細資訊，請參閱 [定義參考的關聯性及參考的關聯性屬性](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)。  
@@ -34,7 +34,7 @@ ms.locfileid: "36022741"
   
      請注意，[區域] 階層中的 [國家地區] 屬性成員未正確設定 [轉售商銷售 - 銷售量] 量值的維度。 針對每個 [國家地區] 屬性成員，[轉售商銷售 - 銷售量] 的值會重複。  
   
-     ![建立轉售商銷售-銷售量的量值維度](../../2014/tutorials/media/l5-referencedrelationship-1.gif "建立維度 Reseller Sales-sales Amount 量值")  
+     ![建立維度的轉售商銷售-銷售量 量值](../../2014/tutorials/media/l5-referencedrelationship-1.gif "建立維度 Reseller Sales-sales Amount 量值")  
   
 4.  請針對 **Adventure Works DW 2012** 資料來源檢視，開啟資料來源檢視設計師。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36022741"
   
      下圖顯示 [定義關聯性] 對話方塊，其中在 [DimCustomer] 維度資料表和 [FactInternetSales] 量值群組資料表之間有一般關聯性。  
   
-     ![定義關聯性對話方塊](../../2014/tutorials/media/l5-referencedrelationship-4.gif "定義關聯性對話方塊")  
+     ![定義關聯性 對話方塊](../../2014/tutorials/media/l5-referencedrelationship-4.gif "定義關聯性對話方塊")  
   
 9. 按一下 [取消]。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "36022741"
   
 9. 在 [維度使用方式] 索引標籤的 [維度] 清單中，以滑鼠右鍵按一下 [地理位置]，然後按一下 [重新命名]。  
   
-10. 變更這個 cube 維度名稱`Reseller Geography`。  
+10. 變更至這個 cube 維度名稱`Reseller Geography`。  
   
      由於這個 Cube 維度現在是連結到 [轉售商銷售] 量值群組，所以使用者可在 Cube 中明確定義其使用方式，如此可避免產生可能的誤解。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36022741"
   
      請注意，[地理位置] 使用者定義階層的 [國家地區] 屬性現在已正確設定 [轉售商銷售 - 銷售量] 量值的維度，如下圖所示。  
   
-     ![定義關聯性對話方塊](../../2014/tutorials/media/l5-referencedrelationship-5.gif "定義關聯性對話方塊")  
+     ![定義關聯性 對話方塊](../../2014/tutorials/media/l5-referencedrelationship-5.gif "定義關聯性對話方塊")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [定義事實關聯性](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  

@@ -1,5 +1,5 @@
 ---
-title: 中繼資料 （瀏覽器索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 中繼資料 （瀏覽器索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
 ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8469a144844e7b4bb7c02ea7fa5255a04654a34c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3d3c2c707e42204fe3ae3eb75ea90b28525f2b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241688"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>中繼資料 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中之 [瀏覽器] 索引標籤的 [中繼資料] 窗格瀏覽 Cube 的結構，以查看相關的量值，並檢視與建立維度。 您可以向下鑽研階層、檢視可用量值與 KPI 的清單，以及複製物件的完整名稱。  
@@ -49,7 +49,7 @@ ms.locfileid: "36023433"
   
 |選項|描述|  
 |------------|-----------------|  
-|**將加入至查詢**|按一下可將選取的物件加入至查詢建立區域的下方窗格中。|  
+|**加入查詢**|按一下可將選取的物件加入至查詢建立區域的下方窗格中。|  
 |**加入篩選器**|按一下可將選取的維度、屬性、階層或層級加入 [瀏覽器] 的篩選區域。<br /><br /> 注意：只有選取維度、屬性、階層或層級時，才會啟用此選項。|  
 |**複製**|按一下即可將選取的項目加入至剪貼簿。<br /><br /> 注意：此選項會複製物件的完整名稱。|  
   
@@ -57,6 +57,6 @@ ms.locfileid: "36023433"
  [工具列&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [在 Excel 中分析&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)   
  [查詢和篩選&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)   
- [瀏覽器&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
+ [瀏覽器&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)  
   
   

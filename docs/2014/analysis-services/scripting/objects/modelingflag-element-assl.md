@@ -1,5 +1,5 @@
 ---
-title: ModelingFlag 元素 (ASSL) |Microsoft 文件
+title: ModelingFlag 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ModelingFlag element
 ms.assetid: c9af1b9a-506f-4cc1-acd7-e57698cb672c
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe0dcb73d3d053edfe29059970c0d5c8ba0d0268
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 611a93a27e5f668c9b367eb35d5df9eb454743b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275434"
 ---
 # <a name="modelingflag-element-assl"></a>ModelingFlag 元素 (ASSL)
   包含採礦結構或採礦模型中某個資料行的模型旗標。  

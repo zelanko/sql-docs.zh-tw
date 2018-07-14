@@ -1,5 +1,5 @@
 ---
-title: 資料分割處理目的地編輯器 （連接管理員頁面） |Microsoft 文件
+title: 資料分割處理目的地編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.connection.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cf99c71785b362f185b5ce4b6b317fb7369a3666
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 383b28d86ca87457d26446e1bc881ddcda1084f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162969"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>資料分割處理目的地編輯器 (連接管理員頁面)
   使用 **[資料分割處理目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的連接或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之執行個體的連接。  
@@ -46,7 +46,7 @@ ms.locfileid: "36022681"
  **處理方法**  
  選取處理方法。 此選項的預設值是 **[完整]**。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |加入 (累加)|執行資料分割的累加處理。|  
 |完整|執行資料分割的完整處理。|  
@@ -54,7 +54,7 @@ ms.locfileid: "36022681"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [資料分割處理目的地編輯器&#40;[對應] 頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [資料分割處理目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
  [資料分割處理目的地編輯器&#40;進階頁面&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

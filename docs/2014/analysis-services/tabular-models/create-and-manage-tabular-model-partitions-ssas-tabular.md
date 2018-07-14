@@ -1,5 +1,5 @@
 ---
-title: 建立及管理表格式模型資料分割 (SSAS 表格式) |Microsoft 文件
+title: 建立及管理表格式模型資料分割 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cd7eb0621d95d11c29db213cfcff654da3f1240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fbe478866d3e333893c4a01c78df53590e7fe0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228268"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>建立及管理表格式模型資料分割 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 模型撰寫期間，在已部署的模型中有重複定義的模型資料分割。 部署之後，即可使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的 [資料分割] 對話方塊或指令碼，管理這些資料分割。 此主題提供的工作描述如何為已部署的模型建立及管理資料分割。  
@@ -57,7 +57,7 @@ ms.locfileid: "36022230"
   
 ###  <a name="bkmk_merge"></a> 合併兩個或兩個以上的資料分割  
   
--   在**資料分割**對話方塊中，於**資料分割**清單，使用 Ctrl + 按一下以選取您想要合併的資料分割，然後按一下**合併** 按鈕。  
+-   中**資料分割**對話方塊中，於**分割區**清單中，使用 Ctrl + 按一下以選取您想要合併的資料分割，然後按一下**合併** 按鈕。  
   
 > [!IMPORTANT]  
 >  合併資料分割並不會更新資料分割中繼資料。 管理員必須針對產生的資料分割改變 SQL 陳述式，以確保處理作業會處理合併之資料分割中的所有資料。  

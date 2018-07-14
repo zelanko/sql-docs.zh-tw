@@ -1,5 +1,5 @@
 ---
-title: 定義計算 （商業智慧精靈） 範圍 |Microsoft 文件
+title: 定義範圍的計算 （商業智慧精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.timeintelligence.selecttimehierarchy.f1
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5329be878ed1353acb4fbed5f4fc6a21367065c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1a0d6af0d7f643ae312015479a31cae4b04f1d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198218"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>定義計算範圍 (商業智慧精靈)
   使用 **[定義計算範圍]** 頁面，即可建立新時間計算和個別量值之間的關聯性。  

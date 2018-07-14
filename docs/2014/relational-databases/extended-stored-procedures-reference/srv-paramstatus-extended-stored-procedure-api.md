@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paramstatus
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a160d82d6bbc64e0665b6f62064be3ffc43f39f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 01dc9aa7608cacfabb980803b79a27c9f55f8ce3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195318"
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (擴充預存程序 API)
     

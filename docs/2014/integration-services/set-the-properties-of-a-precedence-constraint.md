@@ -1,5 +1,5 @@
 ---
-title: 設定優先順序條件約束屬性 |Microsoft 文件
+title: 設定優先順序條件約束的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 344dbadc0aeabbce3b2a554d4ff15370eeadd1fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38e20290eb9499191307c7afb146e9242603c3ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271344"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>設定優先順序條件約束的屬性
   若要設定優先順序條件約束的屬性，您可以使用下列其中一項工具：  
@@ -47,14 +47,14 @@ ms.locfileid: "36022928"
   
 5.  在 [評估作業] 下拉式清單中，選取評估作業。  
   
-6.  在`Value`下拉式清單中，選取優先順序可執行檔的執行結果。  
+6.  在 `Value`下拉式清單中，選取優先順序可執行檔的執行結果。  
   
-7.  如果評估作業中使用運算式，`Expression`方塊中輸入運算式，然後按一下**測試**用於評估的運算式。  
+7.  如果評估作業使用運算式，在`Expression`方塊中輸入運算式，然後按一下**測試**用於評估的運算式。  
   
     > [!NOTE]  
     >  變數名稱會區分大小寫。  
   
-8.  如果多個工作或容器連線到受條件約束的可執行檔中，選取**邏輯和**以指定所有先前的可執行檔的執行結果必須評估為`true`。 選取**邏輯 OR**以指定只有一個執行結果必須評估為`true`。  
+8.  如果多個工作或容器連接到受條件約束的可執行檔中，選取**邏輯與**以指定所有先前的可執行檔的執行結果必須評估為`true`。 選取 **邏輯 OR**以指定只有一個執行結果必須評估為`true`。  
   
 9. 按一下 [確定]，以關閉 [優先順序條件約束編輯器]。  
   
@@ -73,12 +73,12 @@ ms.locfileid: "36022928"
     |讀取/寫入屬性|組態動作|  
     |--------------------------|--------------------------|  
     |描述|提供描述。|  
-    |EvalOp|選取評估作業。 如果`Expression`， **ExpressionAndConstant**，或**expressionorconstant**選取作業，您可以指定的運算式。|  
+    |EvalOp|選取評估作業。 如果`Expression`， **[expressionandconstant]**，或**ExpressionOrConstant**選取作業，您可以指定的運算式。|  
     |運算式|如果評估作業包含運算式，請提供一個運算式。 運算式必須評估為布林。 如需運算式語言的詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)。|  
-    |LogicalAnd|設定`LogicalAnd`來指定多個可執行檔之前，且已連結到受條件約束的可執行檔時，是否要優先順序條件約束評估中其他優先順序條件約束，|  
-    |[屬性]|更新優先順序條件約束的名稱。|  
+    |LogicalAnd|設定`LogicalAnd`，指定當多個可執行檔優先於並連結到受條件約束的可執行檔時，是否要優先順序條件約束評估中配合其他優先順序條件約束|  
+    |名稱|更新優先順序條件約束的名稱。|  
     |ShowAnnotation|指定要使用之註解的類型。 選擇 [Never] 以停用註解，選擇 [AsNeeded] 以視需要啟用註解，選擇 [ConstraintName] 以使用 Name 屬性的值來自動註解，選擇 [ConstraintDescription] 以使用 Description 屬性的值來自動註解，以及選擇 [ConstraintOptions] 以使用 Value 和 Expression 屬性的值來自動註解。|  
-    |ReplTest1|如果 EvalOP 屬性中指定的評估作業包含條件約束，請選取具有條件約束之可執行檔的執行結果。|  
+    |值|如果 EvalOP 屬性中指定的評估作業包含條件約束，請選取具有條件約束之可執行檔的執行結果。|  
   
 5.  關閉 [屬性] 視窗。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36022928"
 ## <a name="see-also"></a>另請參閱  
  [優先順序條件約束](control-flow/precedence-constraints.md)   
  [使用預設的優先順序條件約束來連線工作和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [使用快速鍵功能表設定優先順序條件約束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
- [優先順序條件約束中使用運算式](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
+ [使用快顯功能表設定優先順序條件約束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [在優先順序條件約束中使用運算式](../../2014/integration-services/use-an-expression-in-a-precedence-constraint.md)  
   
   

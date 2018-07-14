@@ -1,5 +1,5 @@
 ---
-title: Goal 元素 (ASSL) |Microsoft 文件
+title: Goal 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Goal element
 ms.assetid: 75fa5b57-418e-43ad-8704-764e4f0a40cf
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b408e73bd8cb376afe0b8cf36157628be908780
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 81a85c6bec79add033825311bb790ba6e39349bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250908"
 ---
 # <a name="goal-element-assl"></a>Goal 元素 (ASSL)
-  識別所需的目標中[Kpi](../objects/kpi-element-assl.md)項目。  
+  識別中所需的目標[Kpi](../objects/kpi-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,12 +64,12 @@ ms.locfileid: "36023004"
 ## <a name="remarks"></a>備註  
  `Goal` 元素會包含多維度運算式 (MDX) 運算式。  
   
- 對應目的父代的項目`Goal`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Kpi>。  
+ 對應至父系的元素`Goal`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Kpi>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Status 元素&#40;ASSL&#41;](status-element-assl.md)   
- [趨勢元素&#40;ASSL&#41;](trend-element-assl.md)   
- [值的項目&#40;ASSL&#41;](value-element-assl.md)   
+ [狀態項目&#40;ASSL&#41;](status-element-assl.md)   
+ [Trend 元素&#40;ASSL&#41;](trend-element-assl.md)   
+ [值項目&#40;ASSL&#41;](value-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

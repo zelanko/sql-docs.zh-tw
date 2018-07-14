@@ -1,5 +1,5 @@
 ---
-title: 將報表檢視器 Web 組件加入至網頁 (SharePoint 整合模式的 Reporting Services) |Microsoft 文件
+title: 將報表檢視器 Web 組件新增至網頁 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1c6e7c2900595c99518f5ea43aa298a37f3bc363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c351c37c9666c3b0f5723fa8ea049efe788e6a02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172049"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>將報表檢視器 Web 組件加入至網頁 (SharePoint 整合模式的 Reporting Services)
   您可以使用報表檢視器 Web 組件來檢視在設定為以 SharePoint 整合模式執行之報表伺服器上執行的報表。 您可以使用 Web 組件顯示在報表產生器或報表設計師中建立，並且上傳至文件庫的報表定義 (.rdl) 檔案。  
@@ -42,7 +42,7 @@ ms.locfileid: "36023508"
   
 2.  在 [網站動作] 中，按一下 [編輯頁面]。  
   
-3.  按一下**新增網頁組件**。  
+3.  按一下 **新增網頁組件**。  
   
 4.  在網頁組件類別目錄的清單中，選取 [其他] 類別目錄，然後選取 [SQL Server Reporting Services 報表檢視器]。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36023508"
 ## <a name="see-also"></a>另請參閱  
  [在 SharePoint 網站上的報表檢視器 Web 組件](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [自訂報表檢視器 Web 組件](../customize-the-report-viewer-web-part.md)   
- [授與權限在 SharePoint 網站上的報表伺服器項目](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [安裝或解除安裝 Reporting Services 增益集，sharepoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [授與 SharePoint 網站上的報表伺服器項目的權限](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [安裝或解除安裝 Reporting Services 增益集，適用於 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

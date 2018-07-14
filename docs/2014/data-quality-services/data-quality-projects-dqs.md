@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 635632db245b37e068b7d9f16a1b352be1cc1d4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e83826d17c1e7ac7ad5840626d3d61aa5224a60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192608"
 ---
 # <a name="data-quality-projects-dqs"></a>資料品質專案 (DQS)
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的資料品質專案是使用知識庫改善來源資料品質的一種工具，其方式是執行 *資料清理* 和 *資料比對* 活動，然後將產生的資料匯出到 SQL Server 資料庫或 .csv 檔案。 您可以建立資料品質專案當做清理專案或比對專案，以執行各自的活動。 清理專案和比對專案可以使用相同的知識庫執行，因為用於資料清理和比對的知識可以內建到相同的知識庫中。  
@@ -60,7 +60,7 @@ ms.locfileid: "36031092"
 |工作描述|主題|  
 |----------------------|-----------|  
 |描述如何建立資料品質專案。|[建立資料品質專案](../../2014/data-quality-services/create-a-data-quality-project.md)|  
-|描述如何管理 (開啟、解除鎖定、重新命名和刪除) 資料品質專案。|[管理&#40;開啟、 解除鎖定、 重新命名和刪除&#41;資料品質專案](../../2014/data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)|  
+|描述如何管理 (開啟、解除鎖定、重新命名和刪除) 資料品質專案。|[管理&#40;開啟、 解除鎖定、 重新命名和刪除&#41;的資料品質專案](../../2014/data-quality-services/manage-open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |描述如何在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]中開啟 Integration Services 專案。|[在 Data Quality Client 中開啟 Integration Services 專案](../../2014/data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## <a name="see-also"></a>另請參閱  

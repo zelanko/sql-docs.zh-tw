@@ -1,5 +1,5 @@
 ---
-title: 點選連結報表頁面 （報表管理員） |Microsoft 文件
+title: 點選連結報表頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0e9deeb0187814b89a4445ae13edaf9e1e5a5a16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20c212e7829a04e1c6261a8818cebf7534d2529a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244348"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>點選連結報表頁面 (報表管理員)
   當您按一下報表中包含的互動式資料時，點選連結報表就會顯示相關資料的資料表。 這些報表是報表伺服器根據您用來建立報表之模型中包含的資訊所產生的。 如果您不想要使用報表伺服器所產生的點選連結報表，可以建立自訂報表，以便將它們發行至報表伺服器並對應至模型中定義的互動式資料點。 您必須根據相同的模型在報表產生器中建立這些自訂報表，然後將它們發行至報表伺服器。 若要將自訂報表對應至模型中的項目，請使用報表管理員中的 [點選連結報表] 頁面。  
@@ -35,7 +35,7 @@ ms.locfileid: "36022343"
  雖然您可以選取任何能夠存取的報表，請只選取特別針對您正在設定之模型所建立的報表。  
   
 > [!NOTE]  
->  並非每個版本都可使用點選連結報表[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果您不確定您組織執行的是哪個版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
+>  點選連結報表不是每個版本都可使用[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 如果您不確定您組織執行的是哪個版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ，請連絡資料庫管理員。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -61,6 +61,6 @@ ms.locfileid: "36022343"
  指定當使用者導覽需要多重執行個體資料的檢視時，要使用的自訂報表。 按一下瀏覽按鈕，即可選取您要使用的報表。  
   
 ## <a name="see-also"></a>另請參閱  
- [發行報表](../../2014/reporting-services/publish-reports.md)  
+ [發佈報表](../../2014/reporting-services/publish-reports.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: FirstDayOfWeek 元素 (ASSL) |Microsoft 文件
+title: FirstDayOfWeek 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - FirstDayOfWeek element
 ms.assetid: d3c92fa3-b293-43b5-806e-cd1c146a3a7c
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c17e6e589e10cb27316f60e92b2dc17ab292f60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0b24ce90da622a95543df5213e62aeacb2368598
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224012"
 ---
 # <a name="firstdayofweek-element-assl"></a>FirstDayOfWeek 元素 (ASSL)
   定義之當週的第一天[TimeBinding](../data-type/binding-data-type-assl.md)項目。  
@@ -62,7 +62,7 @@ ms.locfileid: "36023202"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`FirstDayOfWeek`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TimeBinding>。  
+ 對應至父系的元素`FirstDayOfWeek`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.TimeBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

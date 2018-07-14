@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], schema changes
 - snapshot replication [SQL Server], replicating schema changes
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 71
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c5fdf15e3038f865bb123f3dd79321d036813281
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4c84487775fb5eb3839910fd800489927edcc77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172729"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>對發行集資料庫進行結構描述變更
   複寫支援對已發行物件進行大範圍的結構描述變更。 當您在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 發行者端針對適當已發行物件，進行下列任何一種結構描述變更時，該變更也預設傳播到所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者：  
@@ -61,7 +61,7 @@ ms.locfileid: "36021941"
   
 -   結構描述變更必須遵從由 [!INCLUDE[tsql](../../../includes/tsql-md.md)]規定的任何條件約束。 例如，ALTER TABLE 不允許對主索引鍵資料行執行 ALTER。  
   
--   資料類型對應只會針對初始快照集執行。 結構描述變更並不會對應到舊版的資料類型。 例如，如果陳述式`ALTER TABLE ADD datetime2 column`用於[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，資料類型不會轉譯成`nvarchar`如[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]「 訂閱者 」。 在某些案例中，發行者上會封鎖結構描述變更。  
+-   資料類型對應只會針對初始快照集執行。 結構描述變更並不會對應到舊版的資料類型。 比方說，如果陳述式`ALTER TABLE ADD datetime2 column`用於[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，資料類型不會轉譯成`nvarchar`如[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]訂閱者。 在某些案例中，發行者上會封鎖結構描述變更。  
   
 -   如果發行集設定為允許傳播結構描述變更，則不論發行集中發行項的相關結構描述選項如何設定，結構描述都會傳播。 例如，如果選取不對資料表發行項的外部索引鍵條件約束進行複寫，但是接著發出 ALTER TABLE 命令，將外部索引鍵新增至「發行者」端的資料表，則外部索引鍵會新增至「訂閱者」端的資料表。 若要防止發生這種情況，則在發出 ALTER TABLE 命令前停用結構描述變更的傳播。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36021941"
         |`filestream`|允許變更|封鎖變更|封鎖變更|  
         |`date`、`time`、`datetime2` 和 `datetimeoffset`|允許變更|允許變更<sup>1</sup>|封鎖變更|  
   
-         <sup>1</sup> SQL Server Compact 訂閱者上轉換這些訂閱者端的資料類型。  
+         <sup>1</sup> SQL Server Compact 訂閱者上轉換這些資料類型，在訂閱者。  
   
 -   如果套用結構描述變更時發生錯誤 (例如，因為新增參考了「訂閱者」端上不可用之資料表的外部索引鍵而發生的錯誤)，則同步處理會失敗且必須重新初始化訂閱)。  
   

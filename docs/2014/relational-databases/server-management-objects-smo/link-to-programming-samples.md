@@ -1,5 +1,5 @@
 ---
-title: 程式設計範例連結 |Microsoft 文件
+title: 程式設計範例連結 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Management Objects, samples
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: df2b9636b3edb5ebb9ef45530204db543e204312
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c516bfd0f4086f9ec91974205e546e686612d2f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215008"
 ---
 # <a name="link-to-programming-samples"></a>程式設計範例連結
   下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Programmability\SMO 目錄所提供的 [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)] 管理物件 (SMO) 程式設計範例。 這些範例都可以在[!INCLUDE[csprcs](../../includes/csprcs-md.md)]和[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].NET。  
@@ -39,7 +39,7 @@ ms.locfileid: "36022841"
 |DatabaseSearch|顯示資料庫中的所有物件。|  
 |DependencyExplorer|實作相依性樹狀目錄和屬性顯示視窗。|  
 |IndexSizes|顯示選取之資料庫的索引名稱和大小。|  
-|LoadRegAssembly|示範如何載入及註冊[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET 組件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 UtilityConversion 組件。|  
+|LoadRegAssembly|示範如何載入及註冊[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET 組件載入[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 使用 UtilityConversion 組件。|  
 |ManageDatabases|示範如何建立、改變和卸除資料庫， 包括加入新的檔案群組和記錄檔。|  
 |ManageDatabaseUsers|示範如何加入、修改和移除使用者。|  
 |ManageTables|示範如何建立、改變和卸除資料表。|  

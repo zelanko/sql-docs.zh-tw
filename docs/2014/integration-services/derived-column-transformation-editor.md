@@ -1,5 +1,5 @@
 ---
-title: 衍生資料行轉換編輯器 |Microsoft 文件
+title: 衍生資料行轉換編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.derivedcolumntransformation.f1
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 caps.latest.revision: 32
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 55260f465c69c69f3cdebca0f9e9eae048530376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22d05a24cda6ac608fd747b325dc8038cfea6089
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193888"
 ---
 # <a name="derived-column-transformation-editor"></a>衍生的資料行轉換編輯器
   使用 [衍生的資料行轉換編輯器] 對話方塊，即可建立會擴展新的資料行或取代資料行的運算式。  

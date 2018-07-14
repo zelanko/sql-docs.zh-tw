@@ -1,5 +1,5 @@
 ---
-title: SSIS 教學課程： 部署封裝 |Microsoft 文件
+title: SSIS 教學課程： 部署套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -23,13 +23,13 @@ ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f01cb3f126267a5ebef2cf0d4862440732bb1766
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68a9e0c00bc51d7bee4c083a8ccc4f65b85d4880
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023380"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213428"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS 教學課程：部署封裝
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供數個工具，可讓您輕鬆地將套件部署到另一部電腦。 部署工具也可以用來管理任何相依性，例如封裝所需的組態和檔案。 在這個教學課程中，您會學到如何使用這些工具，將封裝及其相依性安裝到目標電腦上。  
@@ -50,7 +50,7 @@ ms.locfileid: "36023380"
  要熟悉 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 所提供的新工具、控制項和功能，最好的方法就是使用它們。 這個教學課程會逐步解說各個步驟，教您建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後將封裝和其他必要檔案加入至專案中。 當專案完成之後，您還要建立部署配套、將部署配套複製到目的地電腦，然後將封裝安裝到目的地電腦上。  
   
 ## <a name="requirements"></a>需求  
- 這個教學課程的主要對象是已經熟悉基本檔案系統作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新功能較為陌生的使用者。 若要深入了解基本[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]您要將它放在本教學課程中使用的概念，您可能會發現先完成下列[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教學課程：[執行 SQL Server 匯入和匯出精靈](import-export-data/start-the-sql-server-import-and-export-wizard.md)和[SSIS 教學課程： 建立簡易 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。  
+ 這個教學課程的主要對象是已經熟悉基本檔案系統作業，但對於 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]可用的新功能較為陌生的使用者。 若要深入了解基本[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]您要將它放在本教學課程中使用的概念，您可能會覺得很有用，若能先完成下列[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]教學課程：[執行 SQL Server 匯入和匯出精靈](import-export-data/start-the-sql-server-import-and-export-wizard.md)和[SSIS 教學課程： 建立簡易 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)。  
   
  **來源電腦。** 要用來建立部署配套的電腦必須安裝下列元件：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36023380"
   
 -   您必須具有在 AdventureWorks 中建立和卸除資料表以及在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中執行封裝的權限。  
   
--   您必須擁有讀取和寫入權限在 msdb 中的 sysssispackages 資料表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系統資料庫。  
+-   您必須擁有讀取和寫入權限，在 msdb 中的 sysssispackages 資料表[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系統資料庫。  
   
  如果您計畫將封裝部署到建立部署配套時所使用的同一部電腦，則該部電腦必須同時符合來源電腦和目的地電腦的需求。  
   
@@ -82,12 +82,12 @@ ms.locfileid: "36023380"
  [課程 1：準備建立部署套件組合](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  在這一課中，您會建立一個新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，並且將封裝和其他必要檔案加入至專案中，以開始部署 ETL 方案。  
   
- [第 2 課： 建立部署配套](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [第 2 課：建立部署配套](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  在這一課中，您會建立部署公用程式，並且確認部署配套包含所有必要的檔案。  
   
- [第 3 課： 安裝封裝](../integration-services/lesson-3-install-ssis-package.md)  
+ [第 3 課：安裝套件](../integration-services/lesson-3-install-ssis-package.md)  
  在這一課中，您會將部署配套複製到目標電腦上、安裝封裝，然後執行封裝。  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
   

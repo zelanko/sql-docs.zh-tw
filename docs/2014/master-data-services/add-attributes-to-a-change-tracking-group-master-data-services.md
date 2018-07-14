@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change tracking groups [Master Data Services]
 - attributes [Master Data Services], change tracking groups
 - change tracking groups [Master Data Services], adding attributes
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 77a151fe4238c7ed99282436a9668a94d85e2b35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1ae8616c44e6ba58c254989c718eb53ea53a197f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235178"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>將屬性加入至變更追蹤群組 (Master Data Services)
   當您想要追蹤屬性值變更時，可以在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中將屬性新增至變更追蹤群組。  
@@ -31,7 +31,7 @@ ms.locfileid: "36023564"
 > [!NOTE]  
 >  將屬性加入至變更追蹤群組之後，當屬性值變更時， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的屬性會標示為已變更。 建立商務規則，以根據變更來執行動作。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -44,7 +44,7 @@ ms.locfileid: "36023564"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在**模型總管** 頁面上，從功能表列指向**管理**按一下**實體**。  
+2.  在上**模型總管**頁面上，從功能表列指向**管理**，按一下 **實體**。  
   
 3.  在 **[實體維護]** 頁面上，選取 **[模型]** 清單中的模型。  
   
@@ -54,11 +54,11 @@ ms.locfileid: "36023564"
   
 6.  在 **[編輯實體]** 頁面上：  
   
-    -   如果屬性是在分葉成員、**分葉屬性**] 窗格中，選取屬性，然後按一下 [**編輯分葉屬性**。  
+    -   如果屬性是在分葉成員**屬性的分葉**窗格中，選取屬性，然後按一下**編輯分葉屬性**。  
   
-    -   如果是合併成員屬性，在**合併屬性**] 窗格中，選取屬性，然後按一下 [**編輯合併屬性**。  
+    -   如果屬性是合併成員，在**合併屬性**窗格中，選取屬性，然後按一下**編輯合併屬性**。  
   
-    -   如果屬性是集合，在**集合屬性**] 窗格中，選取屬性，然後按一下 [**編輯集合屬性**。  
+    -   如果屬性是集合，在**集合屬性**窗格中，選取屬性，然後按一下**編輯集合屬性**。  
   
 7.  選取 [啟用變更追蹤] 核取方塊。  
   

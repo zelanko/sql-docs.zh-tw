@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 caps.latest.revision: 74
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 811f80385261b9e688c76c6d7b472db210b7cb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 109ba047a24211c5a41aebf96ccb373a546c26c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023731"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218948"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>使用報表設計師設計報表 (SSRS)
   使用報表設計師建立完整功能的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和報表方案。 報表設計師提供一個圖形介面，您可以在此介面中定義資料來源、資料集與查詢、資料區域與欄位的報表配置位置，以及定義互動式功能，例如搭配使用的參數和報表集。  
@@ -42,7 +42,7 @@ ms.locfileid: "36023731"
 ##  <a name="bkmk_SharedDataSources"></a> Shared Data Sources  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 定義及部署報表方案的共用資料來源。 透過使用 **OverwriteDataSources** 和 **TargetDataSourceFolder** 屬性，即可從專案中的其他項目獨立部署共用資料來源。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)。  
   
- 在報表設計師中，可在 [報表資料] 窗格和 [方案總管] 中工作，以定義用於報表的資料來源。 如需詳細資訊，請參閱 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 您無法使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 開啟已發行至報表伺服器或 SharePoint 網站的資料來源，但不包含在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 方案中。 針對該功能，使用[報表產生器&#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)。  
+ 在報表設計師中，可在 [報表資料] 窗格和 [方案總管] 中工作，以定義用於報表的資料來源。 如需詳細資訊，請參閱 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 您無法使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 開啟已發行至報表伺服器或 SharePoint 網站的資料來源，但不包含在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 方案中。 針對該功能，請使用[報表產生器&#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md)。  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一個用戶端工具。 您可以本機測試電腦上的報表方案，將其部署至測試環境以測試伺服器方案，然後將其部署至實際執行環境。 部署後，請確認資料來源處理延伸模組和資料來源認證已針對報表伺服器環境進行設定。 您可以使用組態管理員，以協助您管理不同部署的屬性。 如需詳細資訊，請參閱 [SQL Server Data Tools &#40;SSDT&#41; 中的 Reporting Services](reporting-services-in-sql-server-data-tools-ssdt.md)。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "36023731"
 ##  <a name="bkmk_SharedDatasets"></a> 共用資料集  
  使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 定義及部署報表方案的共用資料集。 透過使用 **OverwriteDatasets** 和 **TargetDatasetFolder** 屬性，即可從專案中的其他項目獨立部署共用資料集。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)。  
   
- 在報表設計師中，可在 [報表資料] 窗格和 [方案總管] 中工作，以定義用於報表的共用資料集。 如需詳細資訊，請參閱 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 您無法使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 從報表伺服器或 SharePoint 網站直接開啟已發行的資料集。 針對該功能，使用[報表產生器&#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md)中共用資料集模式。  
+ 在報表設計師中，可在 [報表資料] 窗格和 [方案總管] 中工作，以定義用於報表的共用資料集。 如需詳細資訊，請參閱 [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane)。 您無法使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 從報表伺服器或 SharePoint 網站直接開啟已發行的資料集。 針對該功能，請使用[報表產生器&#40;SSRS&#41; ](report-builder-authoring-environment-ssrs.md)共用資料集模式中。  
   
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一個用戶端工具。 您可以使用查詢設計工具以協助本機建立及測試預覽中的查詢結果。 部署後，您可以從共用資料來源和所根據的報表獨立管理共用資料集。 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集&#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)，[報表設計工具 SQL Server Data Tools 中的查詢設計工具&#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md)，和[管理共用資料集](../report-data/manage-shared-datasets.md)。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 是一個用戶端工具。 您可以使用查詢設計工具以協助本機建立及測試預覽中的查詢結果。 部署後，您可以從共用資料來源和所根據的報表獨立管理共用資料集。 如需詳細資訊，請參閱 <<c0> [ 報表內嵌資料集和共用資料集&#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)，[報表設計工具 SQL Server Data Tools 中的查詢設計工具&#40;SSRS&#41; ](../report-data/query-design-tools-ssrs.md)，並[管理共用資料集](../report-data/manage-shared-datasets.md)。</c0>  
   
   
 ##  <a name="bkmk_Reports"></a> 報表  
@@ -121,7 +121,7 @@ ms.locfileid: "36023731"
   
     -   按下 F5。  
   
-     如果您使用的專案組態，建立報表但是未部署，報表中所指定`StartItem`個別的預覽視窗中開啟目前的組態屬性。  
+     如果您使用的專案組態，建立報表但是未部署，報表中所指定`StartItem`另一個預覽視窗中開啟的目前組態的屬性。  
   
     > [!NOTE]  
     >  若要使用偵錯模式，您必須設定啟動項目。 在 [方案總管] 中，以滑鼠右鍵按一下報表專案中，按一下**屬性**，然後在`StartItem`，選取要顯示報表的名稱。  
@@ -166,7 +166,7 @@ ms.locfileid: "36023731"
  從 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中，您可以將報表或其他專案項目部署至 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器的多個版本。 使用專案組態可控制升級至與目標伺服器相容之結構描述版本的報表定義。 由專案組態所控制的屬性包括目標報表伺服器、建立期間用來暫時儲存用於預覽和部署之報表定義的資料夾，以及錯誤等級。 如需詳細資訊，請參閱[組態和部署屬性](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties)和[設定部署屬性 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)。  
   
 ### <a name="export-a-report-to-a-different-file-format"></a>將報表匯出至不同的檔案格式。  
- 報表可以匯出為各種格式，而且這些格式會影響隨選報表配置與互動式功能如何運作。 如需有關各種輸出格式的設計考量的詳細資訊，請參閱[匯出報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 報表可以匯出為各種格式，而且這些格式會影響隨選報表配置與互動式功能如何運作。 如需有關各種輸出格式的設計考量的詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
   
   
 ##  <a name="bkmk_ReportValidationandErrorLevels"></a> 報表驗證和錯誤等級  
@@ -181,7 +181,7 @@ ms.locfileid: "36023731"
 |錯誤層級|描述|  
 |-----------------|-----------------|  
 |0|最嚴重而且無法避免的建立問題，這些問題會導致無法預覽和部署報表。|  
-|@shouldalert|嚴重的建立問題，這些問題會徹底變更報表配置。|  
+|1|嚴重的建立問題，這些問題會徹底變更報表配置。|  
 |2|較不嚴重的建立問題，這些問題會大幅變更報表配置。|  
 |3|輕微的建立問題，這些問題會以可能不會注意到的次要方式變更報表配置。|  
 |4|僅用於發行警告。|  
@@ -191,7 +191,7 @@ ms.locfileid: "36023731"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Data Tools 中的 reporting Services &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
- [查詢設計工具的報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
+ [查詢設計工具，在報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
  [SQL Server 資料工具中的部署和版本支援 &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

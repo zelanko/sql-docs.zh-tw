@@ -1,5 +1,5 @@
 ---
-title: XML 來源編輯器 （連接管理員頁面） |Microsoft 文件
+title: XML 來源編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.connectionmanager.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 caps.latest.revision: 19
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48193a85232443ea8a5fbc618582a2503e32f84b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88bbe341af005344a6c7e8984b2fa668291973fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262844"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>XML 來源編輯器 (連接管理員頁面)
   使用 **[XML 來源編輯器]** 的 **[連接管理員]** 頁面，來指定 XML 檔案和轉換 XML 資料的 XSD。  
@@ -34,7 +34,7 @@ ms.locfileid: "36023803"
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |XML 檔案位置|從 XML 檔案擷取資料。|  
 |來自變數的 XML 檔案|指定變數中的 XML 檔案名稱。<br /><br /> **相關資訊：**[在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)|  

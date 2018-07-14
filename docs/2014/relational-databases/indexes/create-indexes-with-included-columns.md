@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index size [SQL Server]
 - index keys [SQL Server]
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c05f2575c1c3d49c76024e50e6defdff12185b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b36575e6dbd197db0617ba258e93ae337027db2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197238"
 ---
 # <a name="create-indexes-with-included-columns"></a>建立內含資料行的索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中加入內含 (或非索引鍵) 資料行，以擴充非叢集索引的功能。 藉由加入非索引鍵資料行，您可以建立涵蓋更多查詢的非叢集索引。 這是因為非索引鍵之索引資料行有下列好處：  
@@ -71,7 +70,7 @@ ms.locfileid: "36029822"
   
 -   非索引鍵資料行只能在非叢集索引上定義。  
   
--   以外的所有資料類型`text`， `ntext`，和`image`可以用做非索引鍵的資料行。  
+-   以外的所有資料類型`text`， `ntext`，和`image`可用來當做非索引鍵資料行。  
   
 -   具決定性之精確或非精確的計算資料行都可以當做非索引鍵資料行。 如需詳細資訊，請參閱 [計算資料行的索引](indexes-on-computed-columns.md)。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "36029822"
   
     -   將資料行的 Null 屬性從 NOT NULL 變更為 NULL。  
   
-    -   增加的長度`varchar`， `nvarchar`，或`varbinary`資料行。  
+    -   長度增加`varchar`， `nvarchar`，或`varbinary`資料行。  
   
 ###  <a name="Security"></a> 安全性  
   

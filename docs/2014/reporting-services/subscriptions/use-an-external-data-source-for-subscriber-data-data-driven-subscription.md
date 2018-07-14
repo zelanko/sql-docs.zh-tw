@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriber data sources [Reporting Services]
 - subscriptions [Reporting Services], external data sources
@@ -20,13 +20,13 @@ ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 15d1bfd8489a8150fb0773708fa7f62b6a659cbe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b81ef71db369b8ede4b85043c860edc73763252
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255530"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部資料來源以取得訂閱者資料 (資料驅動訂閱)
   在資料驅動訂閱中，動態訂閱資料是由從外部資料來源擷取資料的查詢或命令所提供。 訂閱資料可以從任何支援的資料來源 (符合資料驅動訂閱處理的需求) 中擷取。 查詢或命令語法必須對安裝在您報表伺服器上的資料處理延伸模組有效。  
@@ -64,7 +64,7 @@ ms.locfileid: "36023934"
 -   報表伺服器將在結果集內為每一個資料列建立報表傳遞。 如果結果集是由三百個資料列組成，則報表伺服器將會嘗試傳遞三百個報表。  
   
 ## <a name="setting-delivery-options-using-variable-data-from-a-subscriber-database"></a>使用訂閱者資料庫的變數資料建立傳遞選項  
- 您可以使用訂閱者資料庫中的資料，自訂每一個收件者的傳遞選項。 所使用的傳遞延伸模組種類會決定可用的選項。 如果您使用報表伺服器電子郵件傳遞延伸模組，則查詢應包含每一個訂閱者的電子郵件別名。 如果您使用檔案共用傳遞，訂閱者資料應包含可用來建立訂閱者特定報表檔案或提供傳遞目的地的值。 如需詳細資訊，請參閱[File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)和[Reporting Services 中的電子郵件傳遞](e-mail-delivery-in-reporting-services.md)。  
+ 您可以使用訂閱者資料庫中的資料，自訂每一個收件者的傳遞選項。 所使用的傳遞延伸模組種類會決定可用的選項。 如果您使用報表伺服器電子郵件傳遞延伸模組，則查詢應包含每一個訂閱者的電子郵件別名。 如果您使用檔案共用傳遞，訂閱者資料應包含可用來建立訂閱者特定報表檔案或提供傳遞目的地的值。 如需詳細資訊，請參閱 < [File Share Delivery in Reporting Services](file-share-delivery-in-reporting-services.md)並[Reporting Services 中的電子郵件傳遞](e-mail-delivery-in-reporting-services.md)。  
   
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>將參數值從訂閱者資料庫傳遞到報表  
  如果正在建立參數化報表的資料驅動訂閱，則可以使用可變個數參數值來自訂每份報表的輸出。 例如，訂閱者資料庫可能包含可用來篩選報表資料的員工識別碼、雇用日期、職稱和辦公室位置資訊。 如果報表接受以這些或其他可用的資料行資料為基礎的參數，您就可以將參數對應到適當的資料行。  

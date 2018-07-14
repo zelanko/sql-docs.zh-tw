@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replicationutilities.administrativepassword.f1
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ce072951db7d254fd9b8a8e923c6646915b30aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7f9a2406425ee0bf3673f4f3e21e01b977fcf39d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212798"
 ---
 # <a name="administrative-password"></a>管理密碼
   如果在此精靈的 **[散發者]** 頁面上為此發行者選取了遠端散發者，您就必須為複寫用於在發行者與散發者之間進行連接的 **distributor_admin** 登入輸入密碼。 密碼必須符合設定散發精靈的 **[散發者密碼]** 頁面上指定的密碼，或是在 **[散發者屬性]** 對話方塊的 **[發行者]** 頁面上指定的密碼。  

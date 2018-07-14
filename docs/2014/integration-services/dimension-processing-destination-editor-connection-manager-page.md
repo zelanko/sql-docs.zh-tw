@@ -1,5 +1,5 @@
 ---
-title: 維度處理目的地編輯器 （連接管理員頁面） |Microsoft 文件
+title: 維度處理目的地編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.connection.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 360810664d34244b95a6a36b20bc5c0a7098bfd3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c5ab0291e4ca99c81c2f5c0c626bab120e9b36e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022192"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275584"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>維度處理目的地編輯器 (連接管理員頁面)
   使用 **[維度處理目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，來指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 計畫的連接或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]之執行個體的連接。  
@@ -43,7 +43,7 @@ ms.locfileid: "36022192"
  **處理方法**  
  選取要套用至清單中選取之維度的處理方法。 此選項的預設值是 **[完整]**。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**加入 (累加)**|執行維度的累加處理。|  
 |**[完整]**|執行維度的完整處理。|  
@@ -51,7 +51,7 @@ ms.locfileid: "36022192"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [維度處理目的地編輯器&#40;[對應] 頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
+ [維度處理目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)   
  [維度處理目的地編輯器&#40;進階頁面&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Condition 元素 (ASSL) |Microsoft 文件
+title: Condition 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Condition element
 ms.assetid: 9c3cb31c-4aa1-49e4-aeb2-6cab54db0be3
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2edc8a241e92987c4cde54c58576c60abb257c3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0b4b15f7b354b858ba1dfd91fff18963b288615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212328"
 ---
 # <a name="condition-element-assl"></a>Condition 元素 (ASSL)
-  包含多維度運算式 (MDX) 運算式，可決定是否[動作](../objects/action-element-assl.md)父項目套用至目標。  
+  包含多維度運算式 (MDX) 運算式，可判斷是否[動作](../objects/action-element-assl.md)父項目套用至目標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36023618"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `Condition` 元素包含評估為布林值的 MDX 運算式。 如果運算式傳回`True`，然後在`Action`中指定的目標適用於[目標](target-element-assl.md)項目。 否則，`Action` 便不適用。  
+ `Condition` 元素包含評估為布林值的 MDX 運算式。 如果運算式會傳回`True`，則`Action`中指定的目標適用於[目標](target-element-assl.md)項目。 否則，`Action` 便不適用。  
   
- 對應目的父代的項目`Condition`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Action>。  
+ 對應至父系的元素`Condition`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  
