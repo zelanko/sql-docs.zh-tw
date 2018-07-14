@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 17
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9a1ab61e55491d8ff7ddb06ff92f45bbee1b18f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 84274a1c09dd38ada58b45d4242e2599d6704dcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032796"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271334"
 ---
 # <a name="deploying-models-master-data-services"></a>部署模型 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中的套件是一個 XML 檔案，其中包含可部署的模型結構，以及模型中的資料 (選擇性)。 使用模型封裝將模型的副本從一個 MDS 環境移到另一個 MDS 環境，或在現有的 MDS 環境中建立新的模型。  
@@ -33,11 +33,11 @@ ms.locfileid: "36032796"
 ## <a name="tools-for-deploying-models"></a>部署模型的工具  
  若要使用模型封裝，您可以使用以下三個工具之一，端視您的需要而定。  
   
--   **MDSModelDeploy 工具**：若要建立與部署模型物件和資料，請使用 MDSModelDeploy.exe 工具。 如果您在安裝 MDS 時選擇預設路徑，此工具位於*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration。  
+-   **MDSModelDeploy 工具**：若要建立與部署模型物件和資料，請使用 MDSModelDeploy.exe 工具。 如果您在安裝 MDS 時選取的預設路徑，此工具位於*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration。  
   
 -   **模型部署精靈：** 若只要建立與部署模型結構的套件，請使用 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中的精靈。 您無法使用此精靈來部署資料。  
   
--   **模型套件編輯器**：若要編輯模型套件，請使用 ModelPackageEditor.exe 以啟動模型套件編輯器精靈。 您可以使用此精靈編輯 MDSModelDeploy 工具或「模型部署」精靈所建立的封裝。 如果您在安裝 MDS 時選擇預設路徑，此工具位於*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration。  
+-   **模型套件編輯器**：若要編輯模型套件，請使用 ModelPackageEditor.exe 以啟動模型套件編輯器精靈。 您可以使用此精靈編輯 MDSModelDeploy 工具或「模型部署」精靈所建立的封裝。 如果您在安裝 MDS 時選取的預設路徑，此工具位於*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data services\configuration。  
   
 > [!IMPORTANT]  
 >  您可以使用 MDSDeployModel 來建立新模型、建立模型的複製或更新現有模型及其資料。 如果您使用 MDSModelDeploy 工具來更新現有模型及其資料，而且封裝不包含存在目的地模型中的實體、屬性或成員，MDSModelDeploy 就不會從模型中刪除該實體、屬性或成員。  

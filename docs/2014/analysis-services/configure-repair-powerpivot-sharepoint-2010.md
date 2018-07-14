@@ -1,5 +1,5 @@
 ---
-title: 設定或修復 PowerPivot for SharePoint 2010 （PowerPivot 組態工具） |Microsoft 文件
+title: 設定或修復 PowerPivot for SharePoint 2010 （PowerPivot 組態工具） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3aad2530c6f8506dd3da6224c9d91f5ae46f9f27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6cf032b8f36d9329cd3e5ae480ea5d667da2d36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284264"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)
-  若要設定或修復 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安裝，請使用 PowerPivot 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。 本主題描述適用於 SharePoint 2010 的 PowerPivot 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱[設定或修復 PowerPivot for SharePoint 2013 &#40;PowerPivot 組態工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。  
+  若要設定或修復 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 的安裝，請使用 PowerPivot 組態工具。 此組態工具一開始先掃描系統，然後傳回完成或修復安裝所需的動作清單。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 安裝精靈會安裝適用於 SharePoint 2010 的 PowerPivot 組態工具，以及適用於 SharePoint 2013 的 PowerPivot 組態工具。 本主題描述適用於 SharePoint 2010 的 PowerPivot 組態工具。 如需有關 SharePoint 2010 的詳細資訊，請參閱 <<c0> [ 設定或修復 PowerPivot for SharePoint 2013 &#40;PowerPivot 組態工具&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)。</c0>  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]**  SharePoint 2010  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36033446"
  此工具的第一頁提供用於設定 SharePoint 伺服器陣列的輸入值摘要。 除了您提供的輸入值之外，也會使用預設值來設定系統。 預設名稱用於服務應用程式、服務應用程式資料庫和服務應用程式屬性。  
   
 > [!TIP]  
->  如果 PowerPivot 組態工具掃描電腦並於左側窗格傳回空白的工作清單，表示不需要設定任何功能或進行設定。 若要修改 SharePoint 或 PowerPivot 組態，請使用 Windows PowerShell 或 SharePoint 管理中心的管理頁面。 如需詳細資訊，請參閱[管理中心的 PowerPivot 伺服器管理和組態](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
+>  如果 PowerPivot 組態工具掃描電腦並於左側窗格傳回空白的工作清單，表示不需要設定任何功能或進行設定。 若要修改 SharePoint 或 PowerPivot 組態，請使用 Windows PowerShell 或 SharePoint 管理中心的管理頁面。 如需詳細資訊，請參閱 <<c0> [ 管理中心的 PowerPivot 伺服器管理和組態](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)。  
   
  服務帳戶的值可用於多個服務。 例如，PowerPivot 組態工具使用第一頁上的預設帳戶來設定所有應用程式集區識別。 您可以稍後透過在管理中心修改服務應用程式屬性，變更這些帳戶。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36033446"
 ##  <a name="bkmk_steps"></a> 組態步驟  
  只有在本機伺服器上安裝了 PowerPivot for SharePoint 2010 時，才看得見組態工具的連結。  
   
-1.  上**啟動**功能表上，指向**所有程式**，按一下  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，按一下 **組態工具**，然後按一下  **PowerPivot 組態工具**.  
+1.  在上**開始**功能表上，指向**所有程式**，按一下  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]，按一下**組態工具**，然後按一下  **PowerPivot 組態工具**.  
   
 2.  按一下 **[設定或修復 PowerPivot for SharePoint]**。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36033446"
 ||Web 應用程式資料庫伺服器|預設值 (如果需要)|將預先選取預設資料庫執行個體以儲存應用程式資料庫，但您可以在此工具中指定不同的 SQL Server 執行個體。|  
 ||Web 應用程式資料庫名稱|預設值 (如果需要)|資料庫名稱以 SharePoint 的檔案命名慣例為基礎，但您可以選擇其他名稱。|  
 |**部署 Web 應用程式方案**|URL|預設值 (如果需要)|[預設 URL] 是來自預設 Web 應用程式。|  
-||檔案大小上限 (MB)|預設值 (如果需要)|預設值是 2047。 SharePoint 文件庫也有大小上限，而 PowerPivot 設定不應超過文件庫設定。 如需詳細資訊，請參閱[設定檔案上傳大小上限&#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。|  
+||檔案大小上限 (MB)|預設值 (如果需要)|預設值是 2047。 SharePoint 文件庫也有大小上限，而 PowerPivot 設定不應超過文件庫設定。 如需詳細資訊，請參閱 <<c0> [ 設定最大檔案上傳大小 &#40;PowerPivot for SharePoint&#41;](power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint.md)。</c0>|  
 |**建立網站集合**|網站管理員|預設值 (如果需要)|此工具使用預設帳戶。 您可以在 **[建立網站集合]** 頁面中覆寫預設帳戶。|  
 ||連絡人電子郵件|預設值 (如果需要)|如果伺服器上設定了 Microsoft Outlook，此工具會使用目前使用者的電子郵件地址， 否則會使用預留位置值。|  
 ||網站 URL|預設值 (如果需要)|此工具會使用與 SharePoint 相同的 URL 命名慣例來建立網站 URL。|  
@@ -173,22 +173,22 @@ ms.locfileid: "36033446"
 3.  按一下該連結，並執行安裝程式來安裝服務。  
   
 ### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>安裝資料重新整理中使用的資料提供者並檢查使用者權限  
- 伺服器端資料重新整理可讓使用者以自動安裝模式將更新的資料重新匯入其活頁簿中。 為了讓資料重新整理成功，伺服器必須擁有原先用來匯入資料的同一個資料提供者。 此外，用來執行資料重新整理的使用者帳戶經常會需要外部資料來源的讀取權限。 請您務必檢查啟用和設定資料重新整理的需求，以確保獲得成功的結果。 如需詳細資訊，請參閱[PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)。  
+ 伺服器端資料重新整理可讓使用者以自動安裝模式將更新的資料重新匯入其活頁簿中。 為了讓資料重新整理成功，伺服器必須擁有原先用來匯入資料的同一個資料提供者。 此外，用來執行資料重新整理的使用者帳戶經常會需要外部資料來源的讀取權限。 請您務必檢查啟用和設定資料重新整理的需求，以確保獲得成功的結果。 如需詳細資訊，請參閱 < [PowerPivot Data Refresh with SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)。  
   
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>在 SharePoint 中變更應用程式集區和服務識別  
- PowerPivot 組態工具會提供在單一帳戶之下執行的伺服器陣列功能、應用程式和服務。 這樣會簡化安裝，但是不會產生一個符合 SharePoint 伺服陣列安全性需求的部署。 若要建立更強固的部署，請變更應用程式集區和服務識別，使其在安裝完成之後於不同的帳戶之下執行。 如需詳細資訊，請參閱[設定 PowerPivot 服務帳戶](power-pivot-sharepoint/configure-power-pivot-service-accounts.md)。  
+ PowerPivot 組態工具會提供在單一帳戶之下執行的伺服器陣列功能、應用程式和服務。 這樣會簡化安裝，但是不會產生一個符合 SharePoint 伺服陣列安全性需求的部署。 若要建立更強固的部署，請變更應用程式集區和服務識別，使其在安裝完成之後於不同的帳戶之下執行。 如需詳細資訊，請參閱 <<c0> [ 設定 PowerPivot 服務帳戶](power-pivot-sharepoint/configure-power-pivot-service-accounts.md)。  
   
 ### <a name="create-additional-trusted-sites-in-excel-services"></a>在 Excel Services 中建立其他信任的網站  
  您可以在 Excel Services 中加入信任的網站，以便在提供 Excel 活頁簿和 PowerPivot 資料的網站上變更權限和組態設定。 如需相關資訊，請參閱 [Create a trusted location for PowerPivot sites in Central Administration](power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)。  
   
 ### <a name="add-servers-or-applications"></a>加入伺服器或應用程式  
- 一段時間之後，如果您判斷需要額外的資料儲存和處理功能，您可以將另一個 PowerPivot for SharePoint 伺服器執行個體加入到伺服器陣列中。 如需指示，請參閱[部署檢查清單： 將 PowerPivot 伺服器加入至 SharePoint 2010 伺服陣列的向外](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
+ 一段時間之後，如果您判斷需要額外的資料儲存和處理功能，您可以將另一個 PowerPivot for SharePoint 伺服器執行個體加入到伺服器陣列中。 如需相關指示，請參閱 <<c0> [ 部署檢查清單： PowerPivot 伺服器加入 SharePoint 2010 伺服陣列的向外](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)。  
   
 ## <a name="additional-resources"></a>其他資源  
- ![SharePoint 設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見和連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 組態工具](power-pivot-sharepoint/power-pivot-configuration-tools.md)   
- [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

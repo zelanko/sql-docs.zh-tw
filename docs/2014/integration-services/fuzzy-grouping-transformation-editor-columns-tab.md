@@ -1,5 +1,5 @@
 ---
-title: 模糊群組轉換編輯器 （資料行索引標籤） |Microsoft 文件
+title: 模糊群組轉換編輯器 （資料行索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.columns.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9557b9e2b4da35540fad923152532c506513f69
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b393e0a2807a002f1805b5c2664f9ae2b3e527a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172989"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>模糊群組轉換編輯器 (資料行索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[資料行]** 索引標籤，即可指定用於將具有重複值之資料列分組的資料行。  
@@ -61,7 +61,7 @@ ms.locfileid: "36033052"
  **數字**  
  指定比較資料行資料時，開頭和尾端數字的顯著性。 例如，假設開頭數字屬於顯著，則 "123 Main Street" 和 "456 Main Street" 將不會被分到相同的群組中。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**兩者皆非**|開頭和尾端數字皆屬於不顯著。|  
 |**開頭**|僅開頭數字屬於顯著。|  

@@ -1,5 +1,5 @@
 ---
-title: 報表產生器選項對話方塊、 設定 （報表產生器） |Microsoft 文件
+title: 報表產生器選項 對話方塊中，設定 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7ae2490cf5dcdc241120c683994e7f46bcf0b6c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 49449391408701c16b7b6da9106913a24d084d66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218838"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>報表產生器選項對話方塊、設定 (報表產生器)
-  按一下**報表產生器**按鈕，然後按一下**選項**設定選項，以顯示最新的檔案和連接。 您也可以變更預設報表伺服器，或加入報表伺服器 (如果沒有預設值的話)。  
+  按一下 **報表產生器**按鈕，然後按一下**選項**設定選項，以顯示最近使用的檔案和連線。 您也可以變更預設報表伺服器，或加入報表伺服器 (如果沒有預設值的話)。  
   
 ## <a name="uielement-list"></a>UIElement 清單  
  **預設使用此報表伺服器或 SharePoint 網站**  

@@ -1,5 +1,5 @@
 ---
-title: 將列舉加入控制流程 |Microsoft 文件
+title: 將列舉加入控制流程 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding enumerations
 - Foreach Loop containers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - enumerations [Integration Services]
 ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 10d30541be42331b544882f8a8b85f75db7f230d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 039b9a1cd94b3baa207c5d738dc8ed2455bb9d74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223723"
 ---
 # <a name="add-enumeration-to-a-control-flow"></a>將列舉加入控制流程
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包括 Foreach 迴圈容器，該容器為控制流程項目，可簡化在套件的控制流程中包括列舉檔案及物件的迴圈建構。 如需詳細資訊，請參閱 [Foreach Loop Container](control-flow/foreach-loop-container.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "36034421"
 4.  設定「Foreach 迴圈」容器。 如需詳細資訊，請參閱 [設定 Foreach 迴圈容器](../../2014/integration-services/configure-a-foreach-loop-container.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [加入或刪除工作或容器中的控制流程](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [新增或刪除工作或容器，以控制流程中](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [群組或取消群組的元件](group-or-ungroup-components.md)   
  [優先順序條件約束](control-flow/precedence-constraints.md)   
  [將反覆運算加入控制流程](add-iteration-to-a-control-flow.md)   

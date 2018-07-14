@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Key Management
 - Extensible Key Management
 - EKM, described
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 02590440104caba60d6e102ece0844f9424595ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: c0537173f3b3750c56ef7e4ef2b582df162f54df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288664"
 ---
 # <a name="extensible-key-management-ekm"></a>可延伸金鑰管理 (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會針對加密和金鑰產生使用「Microsoft 密碼編譯 API」(MSCAPI) 提供者，藉以提供加密功能以及「可延伸金鑰管理」(EKM)。 用於資料和金鑰加密的加密金鑰會建立於暫時性金鑰容器中，而且您必須先從提供者中匯出這些金鑰，然後再將它們儲存於資料庫中。 這個方法會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
@@ -39,7 +38,7 @@ ms.locfileid: "36033905"
  在 Azure VM 中執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可以使用儲存在 [Azure 金鑰保存庫](http://go.microsoft.com/fwlink/?LinkId=521401)中的金鑰。 如需詳細資訊，請參閱 [使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)處理金鑰管理 (包括加密金鑰階層和金鑰備份)。  
   
 ## <a name="ekm-configuration"></a>EKM 組態  
- 並非每一個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用可延伸金鑰管理。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 並非每一個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]版本都可使用可延伸金鑰管理。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  根據預設，可延伸金鑰管理處於關閉狀態。 若要啟用這項功能，請使用具有下列選項和值的 sp_configure 命令，如下列範例所示：  
   

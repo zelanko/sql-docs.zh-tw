@@ -1,5 +1,5 @@
 ---
-title: TCP IP 內容 （IP 位址索引標籤） |Microsoft 文件
+title: TCP IP 屬性 （IP 位址索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8325999f00f7b5b84bc01d1de188802c27dba7b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb09573cd77f74044647925bd43310223c4ce67e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187587"
 ---
-# <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP IP 內容 （IP 位址索引標籤）
+# <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP IP 屬性 （IP 位址索引標籤）
   您可以使用 **[TCP/IP 屬性 (IP 位址索引標籤)]** 對話方塊，設定特定 IP 位址的 TCP/IP 通訊協定選項。 您只能透過選取 **[IPAll]** ，一次設定所有位址的 **[TCP 動態通訊埠]** 和 **[TCP 通訊埠]**。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 重新啟動後，變更就會生效。 如需有關啟動與停止 SQL Server Browser 服務的詳細資訊，請參閱線上叢書中的＜如何：啟動與停止 SQL Server Browser 服務＞。  
@@ -58,7 +58,7 @@ ms.locfileid: "36034285"
  若要設定單一 IP 位址接聽多個通訊埠，還必須在 **[TCP/IP 屬性]** 對話方塊的 **[通訊協定]** 索引標籤上，將 **[全部接聽]** 參數設為 **[否]** 。 如需詳細資訊，請參閱 SQL Server 線上叢書的＜如何：設定 Database Engine 以在＜ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online＞接聽多個 TCP 通訊埠的。  
   
 ## <a name="adding-or-removing-ip-addresses"></a>新增或移除 IP 位址  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 顯示時所使用的 IP 位址[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安裝。 加入或移除網路卡時、動態指派的 IP 位址過期時、重新設定網路結構時，或是電腦的實際位置有變化時 (例如，膝上型電腦在不同的大樓連接到網路)，可用的 IP 位址都會有變動。 若要變更 IP 位址，請編輯 **[IP 位址]** 方塊，然後重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager 會顯示當時可用的 IP 位址[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已安裝。 加入或移除網路卡時、動態指派的 IP 位址過期時、重新設定網路結構時，或是電腦的實際位置有變化時 (例如，膝上型電腦在不同的大樓連接到網路)，可用的 IP 位址都會有變動。 若要變更 IP 位址，請編輯 **[IP 位址]** 方塊，然後重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   

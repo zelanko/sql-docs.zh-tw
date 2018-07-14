@@ -1,5 +1,5 @@
 ---
-title: 選項 （查詢結果 SQL 伺服器多伺服器） |Microsoft 文件
+title: 選項 (查詢結果-SQL Server-多-Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.multiserverresultssettings
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLMultiServerResults
@@ -16,15 +16,15 @@ ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 caps.latest.revision: 9
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a1465defc783d0fde352a29648af61c0bb99ff59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3088e2e265ef44a7d490001b9a7060186ba2c3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032617"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271794"
 ---
-# <a name="options-query-results-sql-server-multi-server"></a>選項 （查詢結果 SQL 伺服器多伺服器）
+# <a name="options-query-results-sql-server-multi-server"></a>選項 (查詢結果-SQL Server-多-Server)
   當您同時查詢多部伺服器時，使用這個頁面可指定用來顯示結果集的選項。 合併結果會將所有伺服器的結果集結合到單一結果集內。 合併結果時，要回應的第一部伺服器會設定結果集的結構描述。 若要合併結果集，此查詢必須傳回每一部伺服器中具有相同資料行名稱的相同資料行數。 當合併結果時，會針對不符合結構描述 (資料行計數和資料行名稱) 的每一部伺服器顯示一則訊息 (該結構描述是由第一部傳回結果的伺服器所傳回)。  
   
  當您不要合併結果時，第一部伺服器中的結果集將會顯示在它自己的方格中，而且有它自己的結構描述。  

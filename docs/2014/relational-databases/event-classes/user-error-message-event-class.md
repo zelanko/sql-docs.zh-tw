@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User Error Message event class
 ms.assetid: d7594261-ccd9-487c-9678-11875ba57fb7
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fe0ce79236df71a14e914b0de004bf27d8aacf92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ddc5834ba3db783740b2325816d392dfd2a949a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170879"
 ---
 # <a name="user-error-message-event-class"></a>User Error Message 事件類別
   User Error Message 事件類別顯示發生錯誤或例外狀況時，使用者看見的錯誤訊息。 錯誤訊息文字會顯示在 TextData 欄位。  
@@ -53,7 +53,7 @@ ms.locfileid: "36034142"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
 |State|`int`|相當於錯誤狀態碼。|30|是|  
-|TextData|`ntext`|錯誤訊息或例外狀況的文字。|@shouldalert|是|  
+|TextData|`ntext`|錯誤訊息或例外狀況的文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

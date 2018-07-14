@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET 伺服器功能 |Microsoft 文件
+title: ADOMD.NET 伺服器功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: b74c6957-3f64-4e09-aa09-d06ee93f82fa
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 622a7c51bfd6c2a8a9defba70a412967a48dee50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8463ec4804e1ba7ada8ea4e781a34495f5a0d94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269914"
 ---
 # <a name="adomdnet-server-functionality"></a>ADOMD.NET 伺服器功能
   所有的 ADOMD.NET 伺服器物件，都可用唯讀方式存取伺服器上的資料與中繼資料。 若要擷取資料與中繼資料，使用 ADOMD.NET 伺服器物件模型做為伺服器物件模型，並不支援結構描述資料列集。  
@@ -53,7 +53,7 @@ FROM SalesModel
 ## <a name="what-is-a-stored-procedure"></a>何謂預存程序？  
  A*預存程序*是一種方法具有下列特性：  
   
--   您呼叫預存程序上使用 MDX 自己[呼叫](/sql/mdx/mdx-data-manipulation-call)陳述式。  
+-   您呼叫預存程序的使用 MDX[呼叫](/sql/mdx/mdx-data-manipulation-call)陳述式。  
   
 -   預存程序可以使用任何數目的參數。  
   

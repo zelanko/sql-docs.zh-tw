@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_senddone
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7ed324a068b81c2226a0b520d403f688a6ede7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 10d5f559d37b713064761dd2715038431f99817c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283164"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (擴充預存程序 API)
     

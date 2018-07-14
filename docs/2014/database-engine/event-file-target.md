@@ -1,5 +1,5 @@
 ---
-title: 事件檔案目標 |Microsoft 文件
+title: 事件檔案目標 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event file target
 - file target [SQL Server extended events]
 - targets [SQL Server extended events], file target
 ms.assetid: 4f0ee6ec-a0a8-4c38-aa61-8293ab6ac7fd
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d943983e7cf8f5246aa6ef07449dc0b459a8f4b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d60253eafa67b7d7922da6890a8dbb6fbe3536a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203908"
 ---
 # <a name="event-file-target"></a>Event File Target
   事件檔案目標是將完整緩衝區寫入磁碟的目標。  
@@ -63,7 +63,7 @@ FROM sys.fn_xe_file_target_read_file('file_name*.xel', NULL, NULL, NULL)
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 擴充的事件目標](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.fn_xe_file_target_read_file &#40;Transact SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
+ [sys.fn_xe_file_target_read_file &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   

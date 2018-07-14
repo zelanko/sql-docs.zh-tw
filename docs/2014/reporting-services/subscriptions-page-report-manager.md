@@ -1,5 +1,5 @@
 ---
-title: 訂閱頁面 （報表管理員） |Microsoft 文件
+title: 訂用帳戶 頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6b6a3befb6794327af0fd5fa2ef92a48b67529a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4dce7384470251bf9334e8cd1ed218142161b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181575"
 ---
 # <a name="subscriptions-page-report-manager"></a>訂閱頁面 (報表管理員)
   使用 [訂閱] 頁面即可列出目前報表或共用資料來源的全部訂閱。 如果您擁有足夠的權限 (如同「管理所有訂閱」工作所表示)，就可以檢視所有使用者的訂閱。 否則，此頁面只會顯示您擁有的訂閱。  
   
 > [!NOTE]  
->  其他頁面也會包含訂閱資訊。 如需詳細資訊，請參閱[我的訂閱頁面&#40;報表管理員&#41;](../../2014/reporting-services/my-subscriptions-page-report-manager.md)存取同一個位置的全部訂閱或[新增訂閱或編輯訂閱頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)來建立或編輯訂閱。  
+>  其他頁面也會包含訂閱資訊。 如需詳細資訊，請參閱[我的訂用帳戶頁面&#40;報表管理員&#41;](../../2014/reporting-services/my-subscriptions-page-report-manager.md)來存取集中所有訂用帳戶或[新訂用帳戶或編輯訂閱頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)建立或編輯訂用帳戶。  
   
  有些選項只會在有現有的訂閱可用時才看得見。 如果未定義任何訂閱，而且您是從報表中存取此頁面，頁面上就只會有 **[新增訂閱]** 和 **[新增資料驅動訂閱]** 選項。  
   
- 建立新訂閱之前，您必須確認報表資料來源是否使用預存認證。 使用 [資料來源屬性] 頁面即可儲存認證。 如需詳細資訊，請參閱[資料來源 屬性頁&#40;報表管理員&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)。  
+ 建立新訂閱之前，您必須確認報表資料來源是否使用預存認證。 使用 [資料來源屬性] 頁面即可儲存認證。 如需詳細資訊，請參閱 <<c0> [ 資料來源屬性頁面&#40;報表管理員&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)。</c0>  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -84,7 +84,7 @@ ms.locfileid: "36034511"
   
 ## <a name="see-also"></a>另請參閱  
  [報表管理員&#40;SSRS 原生模式&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [建立、 修改及刪除標準訂閱&#40;Reporting Services 原生模式&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
+ [建立、 修改及刪除標準訂用帳戶&#40;Reporting Services 原生模式&#41;](subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [建立、修改和刪除共用排程](subscriptions/create-modify-and-delete-schedules.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   

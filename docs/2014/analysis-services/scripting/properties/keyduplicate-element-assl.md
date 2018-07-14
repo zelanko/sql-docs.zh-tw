@@ -1,5 +1,5 @@
 ---
-title: KeyDuplicate 元素 (ASSL) |Microsoft 文件
+title: KeyDuplicate 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 353c8d1eac5803db6f76014519d1c812813f535d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192440"
 ---
 # <a name="keyduplicate-element-assl"></a>KeyDuplicate 元素 (ASSL)
   決定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]處理在處理期間遇到重複的索引鍵錯誤。  
@@ -66,7 +66,7 @@ ms.locfileid: "36035760"
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*IgnoreError*|處理時應該忽略錯誤並繼續。|  
 |*ReportAndContinue*|處理時應該報告錯誤並繼續。|  

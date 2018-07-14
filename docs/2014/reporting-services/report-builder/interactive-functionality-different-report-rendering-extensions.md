@@ -1,5 +1,5 @@
 ---
-title: 不同報表轉譯延伸模組 （報表產生器及 SSRS） 的互動式功能 |Microsoft 文件
+title: 不同報表轉譯延伸模組 （報表產生器及 SSRS） 的互動式功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 12aba044c373c9a75c9be3754ece6703eae0e5a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a61442deaf2ca75bd3fb85f5eb8c83f6f58c4fee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238489"
 ---
 # <a name="interactive-functionality-for-different-report-rendering-extensions-report-builder-and-ssrs"></a>不同報表轉譯延伸模組的互動式功能 (報表產生器及 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供互動式報表功能，可讓您在執行階段處理報表。 並非所有報表轉譯格式都支援互動式功能的完整範圍。 您可以利用下表來了解每個互動式功能在特定格式中的運作方式。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供互動式報表功能，可讓您在執行階段使用的報表。 並非所有報表轉譯格式都支援互動式功能的完整範圍。 您可以利用下表來了解每個互動式功能在特定格式中的運作方式。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -113,10 +113,10 @@ ms.locfileid: "36031587"
 |其他|報表伺服器會利用目前報表中的篩選資料，將報表匯出至其他格式。|  
   
 ## <a name="see-also"></a>另請參閱  
- [將報表匯出&#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](../report-design/create-a-matrix-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器和 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+ [圖表&#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
   

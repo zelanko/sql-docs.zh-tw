@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
 - sql12.swb.managepartition.selectoutput.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 58fb07069d831020fac201e9a63b12f316105c62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0d07d35db7a6604c98646cc15a9d892bb230407b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035210"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197558"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>管理資料分割精靈 F1 說明
   使用 [管理資料分割精靈]，即可透過資料分割切換或滑動視窗案例的實作，管理和修改現有的資料分割資料表。 這個精靈可以讓資料分割的管理更方便，並且簡化將資料移轉入和移轉出資料表的一般作業。  

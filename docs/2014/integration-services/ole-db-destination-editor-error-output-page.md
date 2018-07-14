@@ -1,5 +1,5 @@
 ---
-title: OLE DB 目的地編輯器 （錯誤輸出頁面） |Microsoft 文件
+title: OLE DB 目的地編輯器 （錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.errorhandling.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 684c16cfa2456d811f1866d2c6e2b805e30362b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac164885aaa3e5d96716946bda912a48181d52d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190714"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>OLE DB 目的地編輯器 (錯誤輸出頁面)
   使用 **[OLE DB 目的地編輯器]** 對話方塊的 **[錯誤輸出]** 頁面，來指定錯誤處理選項。  
@@ -56,8 +56,8 @@ ms.locfileid: "36035016"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 目的地編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [OLE DB 目的地編輯器&#40;[對應] 頁面&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [OLE DB 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [使用 OLE DB 目的地來載入資料](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

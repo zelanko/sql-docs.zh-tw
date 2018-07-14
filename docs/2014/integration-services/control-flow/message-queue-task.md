@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.messagequeuetask.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3be2c48f2a3b2dc552d3f9c89bf2caf57b0e0bf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 176e1798f453771f17aa197e122521bb3852bbc4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269664"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   「訊息佇列」工作可讓您使用 Message Queuing (又稱為 MSMQ) 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝之間傳送和接收訊息，或將訊息傳送至由自訂應用程式處理的應用程式佇列。 這些訊息可採用簡單文字、檔案或變數及其值的形式。  
@@ -55,7 +55,7 @@ ms.locfileid: "36032369"
   
 -   `String` 訊息指定訊息為字串。 接收訊息時，您可以設定工作，以比較接收到的字串與使用者自訂字串，並根據比較結果採取行動。 字串比較可以為完全相符、區分大小寫或不區分大小寫，或者使用子字串。  
   
--   `String message to variable` 指定的來源訊息做為傳送到目的地變數的字串。 您可以設定工作使用完全相符、不區分大小寫或子字串比較，來比較接收到的字串與使用者自訂的字串。 只有當工作接收訊息時此訊息類型才可用。  
+-   `String message to variable` 指定來源訊息傳送至的目的地變數的字串。 您可以設定工作使用完全相符、不區分大小寫或子字串比較，來比較接收到的字串與使用者自訂的字串。 只有當工作接收訊息時此訊息類型才可用。  
   
 -   `Variable` 指定訊息將包含一或多個變數。 您可以設定工作，以指定訊息中包含的變數名稱。 接收訊息時您可以設定工作，以指定可從中接收訊息的封裝，以及做為訊息目的地的變數。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36032369"
 ## <a name="configuration-of-the-message-queue-task"></a>訊息佇列工作的組態  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。 如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [訊息佇列工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [訊息佇列工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [訊息佇列工作編輯器&#40;接收頁面&#41;](../message-queue-task-editor-receive-page.md)  
   

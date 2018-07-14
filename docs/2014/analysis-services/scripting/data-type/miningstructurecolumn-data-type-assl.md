@@ -1,5 +1,5 @@
 ---
-title: MiningStructureColumn 資料類型 (ASSL) |Microsoft 文件
+title: MiningStructureColumn 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningStructureColumn data type
 ms.assetid: b6d6e7a5-9c48-40c4-b147-8fcd5e429ae3
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1b1fc3d4f25bb5aa261179904939a271774de446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f30ccbc909db5197423c680e1e27b4ec55b97b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272074"
 ---
 # <a name="miningstructurecolumn-data-type-assl"></a>MiningStructureColumn 資料類型 (ASSL)
   定義代表資料行中的相關資訊的抽象基本資料類型[MiningStructure](../objects/miningstructure-element-assl.md)項目。  
@@ -60,11 +60,11 @@ ms.locfileid: "36032412"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)，[名稱](../properties/name-element-assl.md)，[類型](../properties/type-element-miningstructurecolumn-assl.md)|  
-|衍生的元素|[資料行](../objects/column-element-assl.md)([資料行](../collections/columns-element-assl.md)集合[MiningStructure](../objects/miningstructure-element-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)，[名稱](../properties/name-element-assl.md)，[類型](../properties/type-element-miningstructurecolumn-assl.md)|  
+|衍生的元素|[資料行](../objects/column-element-assl.md)([資料行](../collections/columns-element-assl.md)的集合[MiningStructure](../objects/miningstructure-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MiningStructureColumn>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MiningStructureColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

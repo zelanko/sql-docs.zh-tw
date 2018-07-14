@@ -1,5 +1,5 @@
 ---
-title: 儲存追蹤及追蹤範本 |Microsoft 文件
+title: 儲存追蹤及追蹤範本 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dacc7508addfd5486e4c242a936c172e64f66bde
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 46806b60627ad5f7631bb23d565dc1e36d0ef3b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255830"
 ---
 # <a name="save-traces-and-trace-templates"></a>儲存追蹤及追蹤範本
   區分儲存追蹤檔案與儲存追蹤範本是很重要的。 儲存追蹤檔案牽涉到將擷取的事件資料儲存到指定的位置上。 儲存追蹤範本則牽涉到儲存追蹤的定義，例如指定的資料行、事件類別或篩選等。  

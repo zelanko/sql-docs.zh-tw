@@ -1,5 +1,5 @@
 ---
-title: 企業資訊管理教學課程 |Microsoft 文件
+title: 企業資訊管理教學課程 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bf0662a624fac18b83c1bb0d41e4c532d15ad00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2dc3dae5fa4bd7bb0186c325f65cccc2030fe7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032442"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202108"
 ---
 # <a name="enterprise-information-management-tutorials"></a>企業資訊管理教學課程
   本章節包含的教學課程是有關使用 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 中所包含的企業資訊管理 (EIM) 技術來管理企業中的資訊。 企業資訊管理 (EIM) 提供一套解決方案組合，可讓組織信任其資料的可信度和一致性，以便他們做出重要的商業決策。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 具有以下技術，可協助您在企業中實作 EIM 解決方案。  

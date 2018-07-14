@@ -1,5 +1,5 @@
 ---
-title: ClrAssembly 資料類型 (ASSL) |Microsoft 文件
+title: ClrAssembly 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ClrAssembly data type
 ms.assetid: 3f5dc5a1-ebd6-41b8-ac04-91d4de137eb4
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e17992a5d15113ec0de5dd75978f932cb83d11c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63809f3dd903878baf5eabf1642430fbe0d9aa8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033362"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235578"
 ---
 # <a name="clrassembly-data-type-assl"></a>ClrAssembly 資料類型 (ASSL)
-  定義衍生的資料類型，表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]與相關聯的組件[資料庫](../objects/database-element-assl.md)或[伺服器](../objects/server-element-assl.md)項目  
+  定義衍生的資料類型，表示[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]相關聯的組件[資料庫](../objects/database-element-assl.md)或是[Server](../objects/server-element-assl.md)項目  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,13 +58,13 @@ ms.locfileid: "36033362"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無 (抽象類型)|  
-|子元素|[檔案](../collections/files-element-assl.md)，[使用權限集合](../properties/permissionset-element-assl.md)|  
-|衍生的元素|請參閱[組件](../objects/assembly-element-assl.md)([組件](../collections/assemblies-element-assl.md)集合[資料庫](../objects/database-element-assl.md)或[伺服器](../objects/server-element-assl.md))|  
+|子元素|[檔案](../collections/files-element-assl.md)， [PermissionSet](../properties/permissionset-element-assl.md)|  
+|衍生的元素|請參閱[組件](../objects/assembly-element-assl.md)([組件](../collections/assemblies-element-assl.md)集合[資料庫](../objects/database-element-assl.md)或是[Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- `ClrAssembly`元素包含重新建立所需的檔案[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]組件，相關聯的執行個體與[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]或具有特定資料庫執行個體上[!INCLUDE[ssAS](../../../includes/ssas-md.md)]，以及執行組件所需的權限。  
+ `ClrAssembly`項目包含重新建立所需的檔案[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]組件，相關聯的執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]或與特定資料庫的執行個體上[!INCLUDE[ssAS](../../../includes/ssas-md.md)]，以及執行組件所需的權限。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ClrAssembly>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.ClrAssembly>。  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案項目&#40;ASSL&#41;](../objects/file-element-assl.md)   

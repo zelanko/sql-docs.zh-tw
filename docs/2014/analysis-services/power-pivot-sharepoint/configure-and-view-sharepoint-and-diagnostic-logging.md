@@ -1,5 +1,5 @@
 ---
-title: 設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint) |Microsoft 文件
+title: 設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d78836a24938511939c65e127425439aa59f1fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c32447beac0d531f053e6945769b6eba12be23ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033441"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255840"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>設定及檢視 SharePoint 記錄檔與診斷記錄 (PowerPivot for SharePoint)
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業、 事件和訊息會記錄在 SharePoint 記錄檔。 使用本主題的資訊來設定記錄層級及檢視記錄檔資訊。 您可以控制要記錄到檔案中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器事件。 您也可以控制所記錄之訊息的嚴重性。 如需詳細資訊，請參閱[設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器作業、 事件和訊息記錄在 SharePoint 記錄檔中。 使用本主題的資訊來設定記錄層級及檢視記錄檔資訊。 您可以控制要記錄到檔案中的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器事件。 您也可以控制所記錄之訊息的嚴重性。 如需詳細資訊，請參閱 <<c0> [ 設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。</c0>  
   
  本主題內容：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36033441"
   
 4.  展開類別目錄，然後選取個別的類別目錄。  
   
-     **應用程式頁面要求**指定尋找時，服務應用程式所觸發的事件[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]以載入 PowerPivot 資料來源以及和伺服陣列中的其他伺服器通訊。  
+     **應用程式頁面要求**指定尋找時，服務應用程式所觸發的事件[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]載入 PowerPivot 資料來源，以及伺服器陣列中的其他伺服器通訊。  
   
      **[要求處理]** 會指定針對位於伺服器陣列中伺服器上所載入的 PowerPivot 資料庫，由查詢要求所觸發的事件。  
   

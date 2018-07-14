@@ -1,5 +1,5 @@
 ---
-title: 設定模擬選項 (SSAS-多維度) |Microsoft 文件
+title: 設定模擬選項 (SSAS-多維度) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
 helpviewer_keywords:
 - Impersonation Information dialog box
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58fa3381106f354d810ccbf6b6253ebb20bb55bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c41bd2f5f17ac90053f397b6bfd73cf4b346fd6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035083"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176985"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>設定模擬選項 (SSAS - 多維度)
   在 Analysis Services 模型中建立 `data source` 物件時，您必須進行的其中一項設定就是模擬選項。 此選項會決定當執行與連接有關的本機作業時，Analysis Services 是否採用特定 Windows 使用者帳戶的識別，例如在支援漫遊設定檔的環境中載入 OLE DB 資料提供者或解析使用者設定檔資訊。  
@@ -53,7 +53,7 @@ ms.locfileid: "36035083"
  對話方塊中的所有選項都可以使用，但並非所有選項都適合所有案例。 請使用下列資訊來確定最適合您案例的選項。  
   
  **使用特定的使用者名稱和密碼**  
- 選取此選項即可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件使用依照以下格式指定 Windows 使用者帳戶的安全性認證： *\<網域名稱 >***\\***\<使用者帳戶名稱 >*。  
+ 選取此選項可讓[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件使用依照以下格式指定的 Windows 使用者帳戶的安全性認證： *\<網域名稱 >***\\***\<使用者帳戶名稱 >*。  
   
  選擇此選項，即可使用您專為資料存取目的所建立的專用最低權限 Windows 使用者識別。 例如，如果您習慣建立一般用途帳戶來擷取報表中使用的資料，則可以在此指定該帳戶。  
   

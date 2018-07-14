@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
@@ -17,13 +17,13 @@ ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d61801a6eda3250a23d7e9904bf6a372ddf6c8a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71fc9ae4563515bdfebf79af4a41e9379502d872
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256210"
 ---
 # <a name="secure-shared-data-source-items"></a>保護共用資料來源項目的安全
   您可以在共用資料來源項目上設定安全性，以啟用或停用它的存取權。  

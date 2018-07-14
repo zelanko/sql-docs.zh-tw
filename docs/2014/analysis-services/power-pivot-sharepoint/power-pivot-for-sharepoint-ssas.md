@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint (SSAS) |Microsoft 文件
+title: PowerPivot for SharePoint (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1caed8888e1307950971914f48887facac409741
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 11ee7e6690c0937477374337d80a4b239bdb7f3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224848"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot for SharePoint (SSAS)
   PowerPivot for SharePoint 是以 SharePoint 模式執行的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。 PowerPivot for SharePoint 提供將 PowerPivot 資料裝載於 SharePoint 伺服器陣列的功能。 PowerPivot 資料是您使用下列其中一個項目建立的分析資料模型：  
@@ -58,11 +58,11 @@ ms.locfileid: "36035080"
  SharePoint 整合模式的 Analysis Service 伺服器執行個體會完成部署。 它會載入、查詢和卸載資料。 如果活頁簿設定為使用 PowerPivot 資料重新整理，它也會處理資料。  每個執行個體會與相同安裝中的本機 PowerPivot 系統服務緊密結合在一起。  
   
 ##  <a name="bkmk_RelatedContent"></a> 本節內容  
- [管理中心的 PowerPivot 伺服器管理和組態](power-pivot-server-administration-and-configuration-in-central-administration.md)  
+ [管理中心的 PowerPivot 伺服器管理和設定](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [使用 Windows PowerShell 的 PowerPivot 組態](power-pivot-configuration-using-windows-powershell.md)  
+ [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot 組態工具](power-pivot-configuration-tools.md)  
+ [PowerPivot 設定工具](power-pivot-configuration-tools.md)  
   
  [PowerPivot 驗證及授權](power-pivot-authentication-and-authorization.md)  
   
@@ -87,12 +87,12 @@ ms.locfileid: "36035080"
   
  [PowerPivot for SharePoint 2013 安裝](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
- [PowerPivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
+ [Powerpivot for SharePoint 的 PowerShell 參考](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   
  [授權拓撲和成本範例 SQL Server 2014 自助商業智慧](../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [PowerPivot 規劃和部署](http://go.microsoft.com/fwlink/?linkID=220972)   
+ [PowerPivot 規劃與部署](http://go.microsoft.com/fwlink/?linkID=220972)   
  [Powerpivot for SharePoint 災害復原](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

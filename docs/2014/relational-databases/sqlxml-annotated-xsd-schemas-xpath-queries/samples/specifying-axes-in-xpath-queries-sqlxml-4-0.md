@@ -1,5 +1,5 @@
 ---
-title: 在 XPath 查詢 (SQLXML 4.0) 中指定軸 |Microsoft 文件
+title: 在 XPath 查詢 (SQLXML 4.0) 中指定軸 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45d10dfcde5726b37be701a3e1862294c9e21e49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: dd45523b14c63def0b7dbe4281097ebf21592267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242378"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定軸 (SQLXML 4.0)
   下列範例顯示如何在 XPath 查詢中指定軸。  
   
- 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述的 XPath 範例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+ 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述 XPath 範例的&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36032732"
 /child::Contact  
 ```  
   
- 在查詢中，`child`是軸和`Contact`是節點測試 (TRUE 如果`Contact`是**\<項目 >**  節點，因為\<項目 > 是主要節點類型相關聯的`child`軸)。  
+ 在查詢中，`child`是軸和`Contact`為節點測試 (TRUE 如果`Contact`是**\<項目 >**  節點，因為\<項目 > 主要節點類型相關聯`child`軸)。  
   
  `child` 軸是預設值。 因此，此查詢可以撰寫為：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36032732"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (XPathAxesSampleA.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36032732"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的部分結果集：  
   
@@ -89,13 +89,13 @@ ms.locfileid: "36032732"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. 擷取內容節點的孫系  
- 下列 XPath 查詢會選取所有**\<順序 >** 元素子系**\<客戶 >** 內容節點的項目子系：  
+ 下列 XPath 查詢會選取所有**\<順序 >** 的項目子系**\<客戶 >** 內容節點的項目子系：  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- 在查詢中，`child`是軸和`Customer`和`Order`是節點測試 (這些節點測試為 TRUE，如果 Customer 和 Order 則**\<項目 >** 節點，因為 **\<項目 >** 節點是主要節點`child`軸)。 每個節點符合**\<客戶 >**、 比對節點**\<訂單 >** 會加入至結果。 只有**\<順序 >** 傳回結果集內。  
+ 在查詢中，`child`是軸並`Customer`並`Order`是節點測試 (這些節點測試為 TRUE，如果 Customer 和 Order **\<項目 >** 節點，因為 **\<項目 >**  節點是主要節點`child`軸)。 每個節點比對**\<客戶 >**、 比對的節點**\<訂單 >** 會新增至結果。 只有**\<順序 >** 傳回結果集內。  
   
  `child` 軸是預設值。 因此，此查詢可以指定為：  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36032732"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (XPathAxesSampleB.xml)，並將其儲存在目錄中，其中：  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36032732"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的部分結果集：  
   
@@ -164,10 +164,10 @@ ms.locfileid: "36032732"
 </ROOT>  
 ```  
   
- 如果 XPath 查詢指定為`Customer/Order/OrderDetail`，從每個節點符合**\<客戶 >** 查詢巡覽至其**\<順序 >** 項目。 與每個節點符合**\<順序 >**，查詢會將節點加入 **\<OrderDetail >** 設為該結果。 只有 **\<OrderDetail >** 傳回結果集內。  
+ 如果 XPath 查詢會指定為`Customer/Order/OrderDetail`，從每個節點比對**\<客戶 >** 查詢瀏覽至其**\<順序 >** 項目。 與每個節點比對**\<順序 >**，查詢會將節點新增 **\<OrderDetail >** 設為該結果。 只有 **\<OrderDetail >** 傳回結果集內。  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. 使用 . 指定父軸  
- 下列查詢會擷取所有**\<順序 >** 與父項目**\<客戶 >** 具有項目**CustomerID**屬性值為 1。 此查詢會使用`child`尋找父系的述詞中的軸**\<順序 >** 項目。  
+ 下列查詢會擷取所有**\<順序 >** 項目與父代**\<客戶 >** 項目**CustomerID**屬性值為 1。 此查詢會使用`child`找不到父的述詞中的軸**\<順序 >** 項目。  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -186,11 +186,11 @@ ms.locfileid: "36032732"
 ```  
   
 > [!NOTE]  
->  XPath 查詢`/Order[../@CustomerID="1"]`會傳回錯誤，因為沒有父代的**\<順序 >**。 雖然可能會有對應的結構描述中包含的項目**\<順序 >**，XPath 的開頭不在任何語言; 因此， **\<順序 >** 會被視為文件中的最上層項目類型。  
+>  XPath 查詢`/Order[../@CustomerID="1"]`會傳回錯誤，因為沒有父代**\<順序 >**。 雖然可能會有對應的結構描述中包含的項目**\<順序 >**，XPath 的開頭不能在任何這些項目; 因此， **\<順序 >** 會被視為文件中的最上層項目類型。  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (XPathAxesSampleC.xml)，並將其儲存在目錄中，其中：  
   
@@ -210,7 +210,7 @@ ms.locfileid: "36032732"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的部分結果集：  
   
@@ -251,13 +251,13 @@ ms.locfileid: "36032732"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. 指定屬性軸  
- 下列 XPath 查詢會選取所有**\<客戶 >** 的內容節點的子項目**CustomerID**屬性值為 1:  
+ 下列 XPath 查詢會選取所有**\<客戶 >** 的內容節點的子項目**CustomerID**屬性為 1 的值：  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- 述詞中`attribute::CustomerID`，`attribute`是軸和`CustomerID`是節點測試 (如果`CustomerID`是的屬性節點測試為 TRUE，因為**\<屬性 >** 節點是主要節點`attribute`軸)。  
+ 述詞中`attribute::CustomerID`，`attribute`是軸並`CustomerID`是節點測試 (如果`CustomerID`是節點測試為 TRUE 時，屬性，因為**\<屬性 >** 節點是主要節點`attribute`軸)。  
   
  您可以指定 `attribute` 軸的快速鍵 (@)，而且因為 `child` 是預設軸，因此可從查詢省略：  
   
@@ -267,7 +267,7 @@ ms.locfileid: "36032732"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (XPathAxesSampleD.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -287,7 +287,7 @@ ms.locfileid: "36032732"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的部分結果集：  
   

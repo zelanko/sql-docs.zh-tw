@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2fb7c6b3fe5444fe9d0cdd7bd618c10a3b349fc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a91244c7e4ef93c9a5e34b7edb74eeb94bf75370
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288974"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 建立 **Audit Database Mirroring Login** 事件來報告與資料庫鏡像傳輸安全性有關的稽核訊息。  
@@ -61,7 +61,7 @@ ms.locfileid: "36033667"
   
 |ID|子類別|描述|  
 |--------|--------------|-----------------|  
-|@shouldalert|Login Success|Login Success 事件會報告鄰近之資料庫鏡像登入程序已成功完成。|  
+|1|Login Success|Login Success 事件會報告鄰近之資料庫鏡像登入程序已成功完成。|  
 |2|Login Protocol Error|Login Protocol Error 事件會報告資料庫鏡像登入收到格式完整，但對於登入程序之目前狀態而言無效的訊息。 此訊息可能已遺失或未按照順序送出。|  
 |3|Message Format Error|Message Format Error 事件會報告資料庫鏡像登入已收到不符合預期格式的訊息。 訊息可能已損壞，或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外的程式正將訊息傳送到資料庫鏡像使用的通訊埠。|  
 |4|Negotiate Failure|Negotiate Failure 事件會報告本機資料庫鏡像端點與遠端資料庫鏡像端點支援互斥層級的驗證。|  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Conversation event class
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d0e58a9d4e8711a24da97b73c47d48b281d8ae72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 18b73246733a64d7250cf42c3814ba3f492e6bd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275284"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Conversation** 事件以報告 Service Broker 交談的進度。  
@@ -52,14 +52,14 @@ ms.locfileid: "36032339"
 |**Severity**|`int`|如果此事件報告錯誤，即為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤嚴重性。|29|否|  
 |**SPID**|`int`|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端相關之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|`ntext`|交談的目前狀態。 它有下列幾種：<br /><br /> **SO**。 已開始傳出。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已處理此交談的 BEGIN CONVERSATION，但尚未傳送任何訊息。<br /><br /> **SI**。 已起始傳入。 另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體啟動了與目前執行個體的新交談，但是目前的執行個體尚未完成第一個訊息的接收動作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果第一個訊息被分割或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到訊息的順序不正確，就可能會建立處於此狀態的交談。 然而，如果收到交談的第一次傳輸包含完整的第一則訊息，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會建立 CO 狀態的交談。<br /><br /> **CO**。 正在交談。 已建立交談，且交談兩端可以傳送訊息。 一般服務的大部分通訊都發生在這個狀態的交談中。<br /><br /> **DI**。 已中斷傳入。 交談的遠端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的本機端發出 END CONVERSATION 為止。 應用程式仍可接收交談的訊息。 由於交談的遠端已經結束交談，所以應用程式無法在此交談中傳送訊息。 當應用程式發出 END CONVERSATION 時，交談會移到已關閉 (CD) 狀態。<br /><br /> **DO**。 已中斷傳出。 交談的本機端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的遠端收到 END CONVERSATION 為止。 應用程式無法傳送或接收交談的訊息。 當交談的遠端收到 END CONVERSATION 時，交談會移到已關閉 (CD) 狀態。<br /><br /> **ER**。 錯誤。 這個端點發生錯誤。 錯誤、嚴重性和狀態資料行包含有關發生之特定錯誤的資訊。<br /><br /> **CD**。 已關閉。 交談端點已不在使用中。|@shouldalert|是|  
+|**TextData**|`ntext`|交談的目前狀態。 它有下列幾種：<br /><br /> **SO**。 已開始傳出。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 已處理此交談的 BEGIN CONVERSATION，但尚未傳送任何訊息。<br /><br /> **SI**。 已起始傳入。 另一個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體啟動了與目前執行個體的新交談，但是目前的執行個體尚未完成第一個訊息的接收動作。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果第一個訊息被分割或者 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 收到訊息的順序不正確，就可能會建立處於此狀態的交談。 然而，如果收到交談的第一次傳輸包含完整的第一則訊息，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可能會建立 CO 狀態的交談。<br /><br /> **CO**。 正在交談。 已建立交談，且交談兩端可以傳送訊息。 一般服務的大部分通訊都發生在這個狀態的交談中。<br /><br /> **DI**。 已中斷傳入。 交談的遠端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的本機端發出 END CONVERSATION 為止。 應用程式仍可接收交談的訊息。 由於交談的遠端已經結束交談，所以應用程式無法在此交談中傳送訊息。 當應用程式發出 END CONVERSATION 時，交談會移到已關閉 (CD) 狀態。<br /><br /> **DO**。 已中斷傳出。 交談的本機端發出了 END CONVERSATION。 交談會保留在這個狀態中，直到交談的遠端收到 END CONVERSATION 為止。 應用程式無法傳送或接收交談的訊息。 當交談的遠端收到 END CONVERSATION 時，交談會移到已關閉 (CD) 狀態。<br /><br /> **ER**。 錯誤。 這個端點發生錯誤。 錯誤、嚴重性和狀態資料行包含有關發生之特定錯誤的資訊。<br /><br /> **CD**。 已關閉。 交談端點已不在使用中。|1|是|  
 |**Transaction ID**|`bigint`|系統指派的交易識別碼。|4|否|  
   
  下表列出此事件類別的子類別值。  
   
 |ID|子類別|描述|  
 |--------|--------------|-----------------|  
-|@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行 SEND 陳述式時，會產生** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
+|1|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行 SEND 陳述式時，會產生** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行未包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |3|END CONVERSATION WITH ERROR|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION WITH ERROR [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |4|Broker Initiated Error|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 每當 **建立錯誤訊息時，會產生** Broker Initiated Error [!INCLUDE[ssSB](../../includes/sssb-md.md)] 事件。 例如，當 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 未能成功地路由傳送對話的訊息時，Broker 會針對該對話建立一個錯誤訊息，並產生此事件。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 如果應用程式結束交談時發生錯誤，不會產生此事件。|  

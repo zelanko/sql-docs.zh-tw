@@ -1,5 +1,5 @@
 ---
-title: 修改或刪除 Analysis Services 資料庫 |Microsoft 文件
+title: 修改或刪除 Analysis Services 資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], modifying
 - removing databases
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - modifying databases
 ms.assetid: e48e3988-c091-4379-aabc-4da62f709a7e
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b13c74449b5a56d956d6043736801a86a7ce5c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 949767979720880225431bb2e0c928623822ee23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206288"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>修改或刪除 Analysis Services 資料庫
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的部署之前和在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署之後，您可以變更 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]資料庫的名稱和描述。 您也可以調整 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的其他設定，視環境而定。  

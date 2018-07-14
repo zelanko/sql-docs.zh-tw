@@ -1,14 +1,13 @@
 ---
-title: 還原資料庫備份 (SQL Server Management Studio) |Microsoft 文件
+title: 還原資料庫備份 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.locatebackupfileazure.f1
 - sql12.swb.specifybackup.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - restoring databases [SQL Server], full backups
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 caps.latest.revision: 73
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa6388416e41fac400d6b77ad603a305fad50e21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d765859981e2390c408a33b1a77965804519a587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184745"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>還原資料庫備份 (SQL Server Management Studio)
   本主題說明如何還原完整資料庫備份。  
@@ -44,7 +43,7 @@ ms.locfileid: "36033045"
   
 2.  展開 [資料庫]。 視資料庫而定，選取使用者資料庫，或者展開 [系統資料庫] ，再選取系統資料庫。  
   
-3.  以滑鼠右鍵按一下資料庫，指向**工作**，指向 **還原**，然後按一下 **資料庫**，這會開啟**Restore Database**對話方塊。  
+3.  以滑鼠右鍵按一下資料庫，指向**任務**，指向**還原**，然後按一下 [**資料庫**，這會開啟**Restore Database**] 對話方塊。  
   
 4.  在 **[一般]** 頁面上，使用 **[來源]** 區段指定要還原之備份組的來源和位置。 選取下列其中一個選項：  
   
@@ -67,7 +66,7 @@ ms.locfileid: "36033045"
         >  這份清單只能在選取 **[裝置]** 時使用。 只有在所選取裝置上有備份的資料庫才可供使用。  
   
          **備份媒體**  
-         選取還原作業的媒體：**檔案**，**磁帶**， **URL**或**Backup Device**。 只有在電腦上有掛載磁帶機時才會出現 **[磁帶]** 選項，而只有在至少有一個備份裝置時才會出現 **[備份裝置]** 選項。  
+         選取還原作業的媒體：**檔案**，**磁帶**， **URL**或是**Backup Device**。 只有在電腦上有掛載磁帶機時才會出現 **[磁帶]** 選項，而只有在至少有一個備份裝置時才會出現 **[備份裝置]** 選項。  
   
          **備份位置**  
          檢視、加入或移除還原作業的媒體。 清單最多可以包含 64 個檔案、磁帶或備份裝置。  
@@ -80,7 +79,7 @@ ms.locfileid: "36033045"
         |**檔案**|**尋找備份檔案**|在這個對話方塊中，您可以從樹狀目錄中選取本機檔案，或是使用完整的通用命名慣例 (UNC) 名稱指定遠端檔案。 如需詳細資訊，請參閱 [備份裝置 &#40;SQL Server&#41;](backup-devices-sql-server.md)執行個體上建立資料庫備份，就需要這個選項。|  
         |**裝置**|**選取備份裝置**|在這個對話方塊中，您可以從伺服器執行個體上所定義的邏輯備份裝置清單中選取裝置。|  
         |**Tape**|**選取備份磁帶**|在這個對話方塊中，您可以從實際連接到執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之電腦的磁帶機清單中選取磁帶。|  
-        |**URL**|這會依下列順序啟動兩個對話方塊：<br /><br /> 1)**連接至 Windows Azure 儲存體**<br /><br /> 2) **Windows Azure 中尋找備份檔案**|在 **[連接至 Windows Azure 儲存體]**  對話方塊中，選取儲存 Windows Azure 儲存體帳戶名稱和存取金鑰資訊的現有 SQL 認證，或指定儲存體帳戶名稱和儲存體存取金鑰資訊，以建立新的 SQL 認證。 如需詳細資訊，請參閱[連接到 Windows Azure 儲存體&#40;還原&#41;](connect-to-microsoft-azure-storage-restore.md)。<br /><br /> 在 **[尋找備份檔案]** 對話方塊中，您可以從左框架所顯示的容器清單中選取檔案。|  
+        |**URL**|這會依下列順序啟動兩個對話方塊：<br /><br /> 1)**連接至 Windows Azure 儲存體**<br /><br /> 2) **Windows Azure 中尋找備份檔案**|在 **[連接至 Windows Azure 儲存體]**  對話方塊中，選取儲存 Windows Azure 儲存體帳戶名稱和存取金鑰資訊的現有 SQL 認證，或指定儲存體帳戶名稱和儲存體存取金鑰資訊，以建立新的 SQL 認證。 如需詳細資訊，請參閱 <<c0> [ 連線至 Windows Azure 儲存體&#40;還原&#41;](connect-to-microsoft-azure-storage-restore.md)。</c0><br /><br /> 在 **[尋找備份檔案]** 對話方塊中，您可以從左框架所顯示的容器清單中選取檔案。|  
   
          如果清單已滿， **[加入]** 按鈕就無法使用。  
   

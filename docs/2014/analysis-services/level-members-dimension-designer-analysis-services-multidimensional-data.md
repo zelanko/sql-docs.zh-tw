@@ -1,5 +1,5 @@
 ---
-title: 層級和成員 （瀏覽器索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 層級和成員 （瀏覽器索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb9a6361159c67c24b8254939f3353a2a0063c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e30aae23fda8e929b3348ef09d20265ae1d9784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193968"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>層級和成員 (瀏覽器索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此頁面來瀏覽目前選取之階段和語言的成員。 若要選取要瀏覽的階層或語言，請使用 **[工具列]** 窗格上的 **[階層]** 和 **[語言]** 選項。 如需有關工具列窗格的詳細資訊，請參閱[工具列&#40;瀏覽器索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)。  
   
 ## <a name="writeback-mode"></a>回寫模式  
- 如果啟用回寫模式，此窗格的功能就會變更。 選取的維度必須是啟用寫入 (亦即，`WriteEnabled`維度的屬性必須設定為 true) 和維度必須先部署至[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體，以啟用回寫模式。  
+ 如果啟用回寫模式，此窗格的功能就會變更。 選取的維度必須是可寫入 (亦即`WriteEnabled`維度的屬性必須設定為 true)，必須將維度部署至[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體，以啟用回寫模式。  
   
  若要啟用回寫模式，您可以從 [工具列] 窗格中選取 [回寫]，或以滑鼠右鍵按一下 [層級和成員] 窗格，然後從內容功能表中選取 [回寫]。  
   
@@ -128,6 +128,6 @@ ms.locfileid: "36035330"
   
 ## <a name="see-also"></a>另請參閱  
  [工具列&#40;瀏覽器索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
- [瀏覽器&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [瀏覽器&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: FormatString 元素 (ASSL) |Microsoft 文件
+title: FormatString 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - FormatString element
 ms.assetid: 7b996221-936e-4f36-a3a8-676eb9869c55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0760432767a8f7fb1dcdec99c2ca7d76722ddb38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a61057708dd430fa6879101cda0dd315bbc82298
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032637"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273194"
 ---
 # <a name="formatstring-element-assl"></a>FormatString 元素 (ASSL)
-  說明的顯示格式[CalculationProperty](../objects/calculationproperty-element-assl.md)項目或[量值](../objects/measure-element-assl.md)項目。  
+  說明的顯示格式[CalculationProperty](../objects/calculationproperty-element-assl.md)項目或有[量值](../objects/measure-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36032637"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `FormatString` 屬性會包含多維度運算式 (MDX) 運算式。 如果是`CalculationProperty`項目，它會套用至項目[CalculationType](calculationtype-element-assl.md)的*成員*或*儲存格*。  
+ `FormatString` 屬性會包含多維度運算式 (MDX) 運算式。 若是`CalculationProperty`項目，它適用於具有項目[CalculationType](calculationtype-element-assl.md)的*成員*或*儲存格*。  
   
- 對應至父系的項目`FormatString`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
+ 對應至父系的元素`FormatString`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
   
 ## <a name="see-also"></a>另請參閱  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

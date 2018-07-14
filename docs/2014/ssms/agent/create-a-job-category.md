@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, categories
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d4ab1a7fdd56bf4586d3009c9c45bb29ecac0497
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4a855a78a6c37fa2327a88e0a052adbbc4ce85b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179105"
 ---
 # <a name="create-a-job-category"></a>建立作業類別目錄
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 管理物件，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立作業類別目錄。  
@@ -62,7 +62,7 @@ ms.locfileid: "36034293"
   
 8.  在 [管理作業類別目錄 <伺服器名稱>] 對話方塊中，按一下 [重新整理]，以確定新作業類別目錄為作用中。 如果一切如預期，關閉此對話方塊。  
   
- 如需有關這些對話方塊的詳細資訊，請參閱[作業類別目錄： 管理作業類別目錄](job-categories-manage-job-categories.md)和[作業類別目錄的屬性和新作業類別目錄](job-categories-properties-new-job-category.md)。  
+ 如需有關這些對話方塊的詳細資訊，請參閱 <<c0> [ 作業類別目錄： 管理作業類別目錄](job-categories-manage-job-categories.md)並[作業類別目錄屬性和新增作業類別目錄](job-categories-properties-new-job-category.md)。  
   
  
   
@@ -87,14 +87,14 @@ ms.locfileid: "36034293"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_add_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_add_category &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-category-transact-sql)。  
   
 
   
 ##  <a name="SMO"></a> 使用 SQL Server 管理物件  
  **若要建立作業類別目錄**  
   
- 呼叫`JobCategory`使用您選擇，例如 Visual Basic、 Visual C# 或 PowerShell 的程式語言的類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
+ 呼叫`JobCategory`藉由使用您選擇，例如 Visual Basic、 Visual C# 或 PowerShell 的程式語言的類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](sql-server-agent.md)。  
   
  
   

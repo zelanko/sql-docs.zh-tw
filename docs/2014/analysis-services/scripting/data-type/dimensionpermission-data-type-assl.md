@@ -1,5 +1,5 @@
 ---
-title: DimensionPermission 資料類型 (ASSL) |Microsoft 文件
+title: DimensionPermission 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DimensionPermission data type
 ms.assetid: 066405ff-903f-467a-b0d5-e58653952c52
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c614d2fd30f7bd3b831c571cc4d3de0cf26e365
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 740479b334195b36ac7f8d04446575917da04d02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035077"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178835"
 ---
 # <a name="dimensionpermission-data-type-assl"></a>DimensionPermission 資料類型 (ASSL)
   定義代表指派給資料庫維度之權限的衍生資料類型。  
@@ -62,13 +62,13 @@ ms.locfileid: "36035077"
 ## <a name="remarks"></a>備註  
  此元素在 DeploymentMode 值 2 (表格式伺服器模式) 下，擁有下列驗證。  
   
--   *AttributePermission*屬性必須是空的或發生錯誤。  
+-   *AttributePermission*屬性必須為空白或發生錯誤。  
   
  此元素在 DeploymentMode 值 0 (OLAP) 下，擁有下列驗證。  
   
--   *AllowedRowsExpression*屬性必須是空的或發生錯誤。  
+-   *AllowedRowsExpression*屬性必須為空白或發生錯誤。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DimensionPermission>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DimensionPermission>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

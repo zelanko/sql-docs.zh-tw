@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL statements, tutorials
 - Transact-SQL tutorials
 - tutorials [Transact-SQL]
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffe24c3b61e745817296486de511d5a2e59b6ff0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 0334281467eea3d1324732a0c2ec1978aaadf60b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241698"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>教學課程：撰寫國際性通用的 Transact-SQL 陳述式
   歡迎使用「撰寫 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式」教學課程。 本教學課程的主要對象是撰寫 SQL 陳述式的新手， 會透過檢閱一些建立資料表及插入資料的基本陳述式，協助新手上路。 本教學課程採用 [!INCLUDE[tsql](../includes/tsql-md.md)]，是 SQL 標準的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 實作。 本教學課程的目的是用來概述 [!INCLUDE[tsql](../includes/tsql-md.md)] 語言，而非用來取代 [!INCLUDE[tsql](../includes/tsql-md.md)] 類別。 在本教學課程中的陳述式是有意經過簡化的，並無意呈現一般實際資料庫中所遇到的複雜問題。  
@@ -60,6 +60,6 @@ ms.locfileid: "36031760"
 -   Internet Explorer 6 或更新版本。  
   
 > [!NOTE]  
->  當檢閱教學課程時，我們建議您將加入**下一步**和**上一步**文件檢視器工具列的按鈕。  
+>  當檢閱教學課程時，我們建議您新增**下一步**並**Previous**文件檢視器工具列的按鈕。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 選取色彩對話方塊 （報表產生器及 SSRS） |Microsoft 文件
+title: 選取色彩對話方塊 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
 - "10090"
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1829f9d5b598f42b54be3d6d08cb7a78ea5e11f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185771"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>選取色彩對話方塊 (報表產生器及 SSRS)
   使用 **Select Color** 對話方塊，可以指定資料區或文字方塊內，單一資料格或多個資料格的背景色彩選項或圖表色彩選項。  
@@ -50,7 +50,7 @@ ms.locfileid: "36033604"
  挑選色彩時，正方形的中心會決定色彩。 使用色彩滑動軸來變更所選色彩的範圍。 X 和 Y 座標代表其他兩種色彩。 例如，如果您挑選綠色，滑動軸會顯示綠色值的範圍，而 X 和 Y 座標則分別代表紅色和藍色值。  
   
  **標準的調色盤色彩**  
- 使用的命名色彩[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]`KnownColor`列舉型別。  
+ 用於命名色彩[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]`KnownColor`列舉型別。  
   
  **色彩系統**  
  指定 RGB 或 HSB 色彩。 此選項會將顯示變更為顯示 RGB 或 HSB 值，這些值會在您將色彩圓形或色彩正方形用於 **[色彩選取器]** 時，以互動方式更新。  
@@ -83,6 +83,6 @@ ms.locfileid: "36033604"
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式化文字和預留位置&#40;報表產生器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

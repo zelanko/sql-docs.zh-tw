@@ -1,5 +1,5 @@
 ---
-title: 授與處理權限 (Analysis Services) |Microsoft 文件
+title: 授與處理權限 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1024a8dfbd7bd84db7e452018829b506565badf2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b718fab80ad85ee52cadcc9547c11848de0ee9a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187285"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>授與處理權限 (Analysis Services)
   身為管理員，您可以建立專用於 Analysis Services 處理作業的角色，讓您能夠將該特殊工作委派給其他使用者，或委派給用於自動排程處理的應用程式。 處理權限可在資料庫、Cube、維度和採礦結構層級上授與。 除非您正在使用一個非常大的 Cube 或表格式資料庫，否則建議在資料層級授與處理權限，內含所有物件，包含彼此間具有相依性的物件。  
@@ -32,7 +32,7 @@ ms.locfileid: "36034471"
 > [!IMPORTANT]  
 >  角色僅擁有 [處理] 權限的使用者將無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及處理物件。 這些工具需要`Read Definition`存取物件中繼資料的權限。 如果無法使用這些工具，就必須使用 XMLA 指令碼來執行處理作業。  
 >   
->  我們建議您也授與`Read Definition`基於測試目的權限。 使用者擁有`Read Definition`和`Process Database`權限可以處理中的物件[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 以互動方式。 如需詳細資訊，請參閱 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
+>  我們建議您也授與`Read Definition`基於測試目的的權限。 擁有使用者`Read Definition`並`Process Database`權限可以處理中的物件[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 以互動方式。 如需詳細資訊，請參閱 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 。  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>設定資料庫層級的處理權限  
  本節說明如何針對資料庫中的所有 Cube、維度、採礦結構及採礦模型，由非管理員的使用者來啟用處理。  
@@ -41,7 +41,7 @@ ms.locfileid: "36034471"
   
 2.  以滑鼠右鍵按一下**角色** | **新角色**。 輸入名稱和描述。  
   
-3.  在**一般**窗格中，選取`Process Database`核取方塊。 此外，選取 `Read Definition`啟用互動式處理透過其中一個 SQL Server 工具中，例如[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
+3.  在 **一般**窗格中，選取`Process Database`核取方塊。 此外，選取`Read Definition`，也會啟用互動式處理透過其中一種 SQL Server 工具，例如[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 4.  在 [成員資格] 窗格中，新增擁有可處理這個資料庫中任何物件之權限的 Windows 使用者和群組帳戶。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36034471"
   
 2.  以滑鼠右鍵按一下**角色** | **新角色**。 輸入名稱和描述。  
   
-3.  在**一般**窗格中，清除`Process Database`核取方塊。 資料庫權限會藉由將角色選項變成灰色或無法選取狀態，來覆寫設定較低層級物件之權限的能力。  
+3.  在 **一般**窗格中，清除`Process Database`核取方塊。 資料庫權限會藉由將角色選項變成灰色或無法選取狀態，來覆寫設定較低層級物件之權限的能力。  
   
-     技術上來說，專屬的處理角色不需要任何資料庫權限。 但是，如果沒有`Read Definition`資料庫層級，您無法檢視中的資料庫[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，讓測試更為困難。  
+     技術上來說，專屬的處理角色不需要任何資料庫權限。 但是，如果沒有`Read Definition`在資料庫層級中，您無法檢視中的資料庫[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，讓測試更為困難。  
   
 4.  選取要處理的個別物件：  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36034471"
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>設定資料採礦結構的處理權限  
  您可以建立角色，授與權限來處理資料採礦結構。 其中包括處理所有採礦模型。  
   
- **鑽研**和`Read Definition`可用來瀏覽採礦模型和結構的權限是不可部分完成，可加入至相同的角色，或分成不同的角色。  
+ **鑽研**和`Read Definition`可用來瀏覽採礦模型和結構的權限是不可部分完成而且可以新增到相同的角色，或者分離到不同的角色。  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體、開啟 [資料庫] 資料夾，然後選取資料庫。  
   

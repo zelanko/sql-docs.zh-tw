@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XSD schemas [SQL Server]
 - XMLSCHEMA option
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8cc6009563ca46e47e40e61c054fbe732ccc401a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e629d7c6e23f5e609f0d6734774d58bbc16f83f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194775"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>產生內嵌 XSD 結構描述
   在 FOR XML 子句中，您可以要求您的查詢將內嵌結構描述連同查詢結果一起傳回。 如果您要的是 XDR 結構描述，請在 FOR XML 子句中使用 XMLDATA 關鍵字。 而如果您要的是 XSD 結構描述，則請使用 XMLSCHEMA 關鍵字。  
@@ -36,7 +36,7 @@ ms.locfileid: "36035176"
   
 -   您只能在 RAW 和 AUTO 模式中指定 XMLSCHEMA，但不能在 EXPLICIT 模式中指定。  
   
--   如果巢狀的 FOR XML 查詢指定了 TYPE 指示詞，查詢結果會是`xml`類型，但此結果視為不具類型的 XML 資料的執行個體。 如需詳細資訊，請參閱 [XML 資料 &#40;SQL Server&#41;](xml-data-sql-server.md)。  
+-   如果巢狀的 FOR XML 查詢指定了 TYPE 指示詞，查詢結果會是`xml`類型，但這個結果視為不具類型的 XML 資料的執行個體。 如需詳細資訊，請參閱 [XML 資料 &#40;SQL Server&#41;](xml-data-sql-server.md)。  
   
  當您在 FOR XML 查詢中指定 XMLSCHEMA 時，會同時收到結構描述和 XML 資料做為查詢結果。 此資料的每一個最上層元素使用預設命名空間宣告來參考上一個結構描述，此宣告再參考內嵌結構描述的目標命名空間。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36035176"
   
 -   另一份結構描述文件描述 FOR XML 查詢結果的外觀。  
   
- 此外，如果任何具類型`xml`資料類型包含在查詢結果中，與這些具類型相關聯的結構描述`xml`還是包含資料類型。  
+ 此外，如果任何具類型`xml`資料類型包含在查詢結果中，與這些具類型相關聯的結構描述`xml`資料型別都包含在內。  
   
  在描述 FOR XML 結果外觀的結構描述文件中，目標命名空間包含固定部分，以及會自動遞增的數值部分。 此命名空間的格式如下所示，其中 *n* 是正整數。 例如，在上一個查詢中，urn:schemas-microsoft-com:sql:SqlRowSet1 就是目標命名空間。  
   

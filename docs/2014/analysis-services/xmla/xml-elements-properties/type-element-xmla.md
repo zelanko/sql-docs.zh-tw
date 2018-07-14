@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (XMLA) |Microsoft 文件
+title: 輸入元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 5d898123-a635-402a-be86-8249d7304fa4
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 38b4442afe95f06d9a6f437e906c01b7386d91ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 336266b8290f1a4eb10d200d8c1c31bf00f96879
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035065"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193778"
 ---
 # <a name="type-element-xmla"></a>Type 元素 (XMLA)
   決定要執行的處理類型[程序](../xml-elements-commands/process-element-xmla.md)項目。  
@@ -68,7 +68,7 @@ ms.locfileid: "36035065"
   
  `Type` 元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*ProcessFull*|卸除受影響物件中的所有資料，然後處理受影響的物件。|  
 |*ProcessAdd*|將新的資料加入至受影響的物件。|  

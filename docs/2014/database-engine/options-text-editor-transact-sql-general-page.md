@@ -1,5 +1,5 @@
 ---
-title: 選項 （文字編輯器的 Transact SQL 一般頁面） |Microsoft 文件
+title: 選項 （文字編輯器-Transact SQL 一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.SQL.General
 dev_langs:
@@ -17,15 +17,15 @@ ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d25699b25ec9bcde2a2df2bc1115a1e3f752c035
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3732baa8de28448b578673ead90e9cbfa62abba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257204"
 ---
-# <a name="options-text-editor---transact-sql--general-page"></a>選項 （文字編輯器的 Transact SQL 一般頁面）
+# <a name="options-text-editor---transact-sql--general-page"></a>選項 （文字編輯器-Transact SQL 一般頁面）
   使用 **[一般]** 選項對話方塊可以變更 [!INCLUDE[ssDE](../includes/ssde-md.md)] 查詢編輯器的一般編輯行為，這個編輯器會用來編輯 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼。 若要顯示這些設定，請在 [工具] 功能表上按一下 [選項]，展開 [Transact-SQL] 子資料夾，然後按一下 [一般]。  
   
 ## <a name="setting-options-in-multiple-locations"></a>在多個位置設定選項  
@@ -35,7 +35,7 @@ ms.locfileid: "36032827"
  **自動列出成員**  
  選取此核取方塊時，當您在編輯器中輸入時將會顯示可用的資料庫和結構描述物件、資料行、資料表值函式或函數的清單。 從快顯清單擇取任何項目，以將其插入程式碼。  
   
- **隱藏進階的成員**  
+ **隱藏進階成員**  
  無法使用此核取方塊。  
   
  **參數資訊**  
@@ -70,7 +70,7 @@ ms.locfileid: "36032827"
  **啟用按一下方式的 URL 導覽**  
  如果選取此核取方塊，當游標在編輯器中的 URL 上方時會變成手指符號。 按一下 URL 即可在 Web 瀏覽器中顯示該頁面。  
   
- **瀏覽列**  
+ **導覽列**  
  無法使用此核取方塊。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: LogFileSize 元素 (ASSL) |Microsoft 文件
+title: LogFileSize 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - LogFileSize element
 ms.assetid: d2135e68-57a9-4144-8403-9627041f2a58
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c75505e9953d1f3c954885c8238c575011d2438b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b88c531eb40c1b46e9cbbba22d857ab2b05dc8e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237328"
 ---
 # <a name="logfilesize-element-assl"></a>LogFileSize 元素 (ASSL)
   指定最大記錄檔大小 (以 MB 為單位)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36033778"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`LogFileSize`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Trace>。  
+ 對應至父系的元素`LogFileSize`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>另請參閱  
  [追蹤項目&#40;ASSL&#41;](../collections/traces-element-assl.md)   

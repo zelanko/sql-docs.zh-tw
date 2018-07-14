@@ -1,5 +1,5 @@
 ---
-title: 帳戶元素 (ImpersonationInfo) (ASSL) |Microsoft 文件
+title: 帳戶元素 (ImpersonationInfo) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Account element
 ms.assetid: aa3a1281-e42a-4926-875b-e6b81f4599c3
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 454e46b3515ebd6b5ad8e8193edbc2a9aea14562
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4382d0e252fe7c44e7de12832e5a8a8c599e6515
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033105"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237528"
 ---
 # <a name="account-element-impersonationinfo-assl"></a>Account 元素 (ImpersonationInfo) (ASSL)
   包含的使用者帳戶名稱[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)資料型別。  

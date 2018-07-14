@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 回溯相容性 |Microsoft 文件
+title: Analysis Services 回溯相容性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
 - backward compatibility [Analysis Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4598abb9b290d73c23ceee027a734b52d2dfe9f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ed422c1db365ffecbdd405e400c521605d1cf9cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261944"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services Backward Compatibility
   本節中的主題描述  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]版本之間的行為變更。  
@@ -42,7 +42,7 @@ ms.locfileid: "36033378"
 |[SQL Server 2014 中 Analysis Services 行為變更](behavior-changes-to-analysis-services-features-in-sql-server-2014.md)|描述在此版本 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]中行為不同的現有功能。 常見的例子包括將預設變更為新值或不同的值，而導致先前允許的作業或設定無法使用，或者必須手動修改或取代在升級期間遺漏的設定。<br /> 執行個體時提供 SQL Server 登入。|  
   
 ## <a name="see-also"></a>另請參閱  
- [新功能 Analysis Services 和 Business Intelligence](what-s-new-in-analysis-services.md)   
+ [新 Analysis Services 和 Business Intelligence 功能](what-s-new-in-analysis-services.md)   
  [升級 Analysis Services](../database-engine/install-windows/upgrade-analysis-services.md)  
   
   

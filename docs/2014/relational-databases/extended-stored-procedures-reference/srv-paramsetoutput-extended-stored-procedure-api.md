@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paramsetoutput
 ms.assetid: f2810e19-e513-458b-8925-5756b6ee1313
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 182fc8b68a6b3b4673317a3524c1c92f51898342
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 3d1ea832995c65a0b0b07fc4f666523fbdf07b31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190418"
 ---
 # <a name="srvparamsetoutput-extended-stored-procedure-api"></a>srv_paramsetoutput (擴充預存程序 API)
     

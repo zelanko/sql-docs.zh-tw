@@ -1,5 +1,5 @@
 ---
-title: 工具列 （維度結構索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 工具列 （維度結構索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c0a2269df759769c6b0c22cbfab5a3193b4fdc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32bc1568a2e12b8e48978857f169a58f7dffef41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033335"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187215"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (維度結構索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用此工具列，即可在 **[維度設計師]** 的 **[維度結構]** 頁面內執行一般作業。  

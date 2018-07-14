@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fab64e66ea1a38131c4edf7e14f4ea7fb1a0fd62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1b5899d62f5d9293a21c875a2ae9de5016a2efb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033641"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280984"
 ---
 # <a name="specify-a-merge-article-resolver"></a>指定合併發行項解析程式
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中指定合併發行項解析程式。  
@@ -91,7 +91,7 @@ ms.locfileid: "36033641"
   
 2.  若要判斷是否已經註冊想要的解決程式，請在任何資料庫的發行者端執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)。 這樣會顯示自訂解決器的描述以及在散發者上註冊之每一個以 COM 為基礎之解決器的類別識別碼 (CLSID)，或是在散發者上註冊之每一個商務邏輯處理常式的 Managed 組件相關資訊。  
   
-3.  如果尚未註冊所要的自訂解析程式，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)。 針對 **@article_resolver**指定解決器名稱；對於商務邏輯處理常式而言，這是組件的易記名稱。 以 COM 為基礎的解析程式指定的 DLL 的 CLSID **@resolver_clsid**，和商務邏輯處理常式中，為指定值的`true`如**@is_dotnet_assembly**，組件名稱**@dotnet_assembly_name**，並會覆寫類別的完整限定名稱<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>如**@dotnet_class_name**。  
+3.  如果尚未註冊所要的自訂解析程式，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)。 針對 **@article_resolver**指定解決器名稱；對於商務邏輯處理常式而言，這是組件的易記名稱。 以 COM 為基礎的解決器，指定的 dll 的 CLSID **@resolver_clsid**，和商務邏輯處理常式中，指定其值為`true`for **@is_dotnet_assembly**，組件的名稱**@dotnet_assembly_name**，和完整類別的名稱會覆寫<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>for **@dotnet_class_name**。  
   
     > [!NOTE]  
     >  如果商務邏輯處理常式組件未部署在與合併代理程式可執行檔相同的目錄中、與同步啟動合併代理程式之應用程式相同的目錄中，或是全域組件快取 (GAC) 中，您就必須將 **@dotnet_assembly_name**中指定合併發行項解析程式。  

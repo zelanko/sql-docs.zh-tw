@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5febecdb07be72a154605b7e66bce8f4d9ad87f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7f8c761a052bc3c82789087bb955c760e9a1b49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034699"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181235"
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>連接到伺服器 (登入頁面) Database Engine
   使用此索引標籤來檢視或指定連接到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 時的選項。  
   
 > [!NOTE]  
->  若要連結 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，必須以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證模式設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需有關如何判斷驗證模式，以及如何變更驗證模式的詳細資訊，請參閱[變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
+>  若要連結 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，必須以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證模式設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需有關如何判斷驗證模式，以及如何變更驗證模式的詳細資訊，請參閱 <<c0> [ 變更伺服器驗證模式](../../database-engine/configure-windows/change-server-authentication-mode.md)。  
   
 ## <a name="options"></a>選項。  
  **伺服器類型**  

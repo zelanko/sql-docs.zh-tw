@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Access Methods object
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b0c0381c5155e2cb019a3b936ca4b65dc1e53d93
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b15cba7c4da79d1b50aaf3340f31a3638eddc411
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179745"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server 的 Access Methods 物件
   **的** Access Methods [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件會提供計數器，可監視資料庫內的邏輯資料如何存取。 您可以使用 **Buffer Manager** 計數器來監視實體存取磁碟內的資料庫頁面。 監視用來存取資料庫內儲存之資料的方法，可協助您判定增加或修改索引、新增或移動分割、新增檔案或檔案群組、重組索引或重新撰寫查詢，能否改善查詢效能。 **Access Methods** 計數器也可用來監視資料庫內的資料、索引和可用空間，藉以指出每個伺服器執行個體的資料量和片段。 索引片段過多會影響到效能。  

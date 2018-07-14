@@ -1,5 +1,5 @@
 ---
-title: 選取量值群組維度 （加入新的巢狀的資料表精靈） |Microsoft 文件
+title: 選取量值群組維度 （加入新的巢狀的資料表精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.addnestedtable.selectmeasuregroup.f1
 ms.assetid: 66194214-be3b-4df2-a676-216b986c8838
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c395a0404ad2b93b6d07790ae3680ed62bdf2b1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db17b98cf37ffa14ef819415b23afe05fc97da13
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033338"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261424"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>選取量值群組維度 (加入新的巢狀資料表精靈)
   使用 [選取量值群組維度] 頁面，即可在量值群組中選取要作為巢狀資料表的維度。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [SQL Server replication]
 - walkthroughs [SQL Server replication]
 - replication [SQL Server], tutorials
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 976f1ee9539731da6036990da754dc1f894ced8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8d489965584903f10b613a40a073357c51b1b9aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217358"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
   複寫課程包含可用來學習如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]設定及執行複寫拓撲的教學課程。  
@@ -31,7 +31,7 @@ ms.locfileid: "36034110"
  在複寫教學課程中，「發行者」是指包含所要複寫之來源資料的伺服器，而「訂閱者」則是指目的地伺服器。 發行者和訂閱者可以共用相同的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，但這不是必要條件。 如需詳細資訊，請參閱 [複寫發行模型概觀](publish/replication-publishing-model-overview.md)。  
   
 > [!NOTE]  
->  這些教學課程所示範的大部分工作都可以透過程式設計的方式來執行。 如需詳細資訊，請參閱[開發人員手冊 》&#40;複寫&#41;](concepts/replication-developer-documentation.md)。  
+>  這些教學課程所示範的大部分工作都可以透過程式設計的方式來執行。 如需詳細資訊，請參閱 <<c0> [ 開發人員指南&#40;複寫&#41;](concepts/replication-developer-documentation.md)。</c0>  
   
 ## <a name="replication-tutorials"></a>複寫教學課程  
  [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)  

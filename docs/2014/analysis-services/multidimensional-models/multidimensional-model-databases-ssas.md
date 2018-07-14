@@ -1,5 +1,5 @@
 ---
-title: 多維度模型資料庫 (SSAS) |Microsoft 文件
+title: 多維度模型資料庫 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
 - SQL Server Analysis Services, databases
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 caps.latest.revision: 55
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 97d7364cd9a0fe7901e2357f916d8683dc3b147c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08a5d383d9c46b01c52e1fc888c8d692470fd619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241678"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多維度模型資料庫 (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫是資料來源、資料來源檢視、Cube、維度及角色的集合。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫也可以包含資料採礦結構，以及提供您方法將使用者定義函數加入至資料庫的自訂組件。  
@@ -55,7 +55,7 @@ ms.locfileid: "36032665"
   
  [重新命名多維度資料庫&#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
   
- [設定的相容性層級的多維度資料庫&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
+ [設定的相容性層級的多維度資料庫的&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
  [設定多維度資料庫屬性&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   

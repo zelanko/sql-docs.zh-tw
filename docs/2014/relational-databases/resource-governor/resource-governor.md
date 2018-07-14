@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b146aa6a44f99002c9cd1d67e748b5c3e5b7a47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 91023c40feeae880db3afd20603645ea0fecadb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166982"
 ---
 # <a name="resource-governor"></a>[資源管理員]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源管理員是一項功能，可讓您用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 工作負載和系統資源耗用量。 資源管理員可讓您針對內送應用程式要求可用的 CPU、實體 IO 和記憶體數量指定限制。  

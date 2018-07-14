@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 caps.latest.revision: 32
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 615077f70490ba330d002bb4290c8c910af248dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97da2e6f299541173246dae96af1055c7df44810
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166739"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>步驟 1：複製第 1 課的套件
   在這項工作中，您將為第 1 課所建立的 Lesson 1.dtsx 套件建立複本。 如果您並未完成第 1 課，可以將此教學課程中隨附之已完成的第 1 課封裝加入至專案中，然後改為複製該封裝。 在第 2 課其餘的課程中，您將使用這個新的複本。  
@@ -40,9 +40,9 @@ ms.locfileid: "36034411"
   
 6.  以滑鼠右鍵按一下 [控制流程] 設計介面背景的任何位置，然後按一下 [屬性]。  
   
-7.  在 [屬性] 視窗中，更新`Name`屬性`Lesson 2`。  
+7.  在 [屬性] 視窗中，更新`Name`屬性設`Lesson 2`。  
   
-8.  按一下方塊**識別碼**屬性中，按一下下拉箭號，然後按一下**\<產生新的識別碼 >**。  
+8.  按一下方塊**識別碼** 屬性中，按一下下拉箭頭，然後按一下**\<產生新的識別碼 >**。  
   
 ### <a name="to-add-the-completed-lesson-1-package"></a>新增已完成的第 1 課套件  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36034411"
 5.  複製並貼上第 1 課套件，如上一個程序的步驟 3-8 所述。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2： 加入和設定 Foreach 迴圈容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+ [步驟 2：新增和設定 Foreach 迴圈容器](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
   

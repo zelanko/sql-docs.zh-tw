@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bd5da35233834eb0f57482e7f7faef11f977debe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f13a9693615fd55d1cd9fed60398ab78374963e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282764"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>設定報表伺服器服務帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會實作成單一服務，其中包含報表伺服器 Web 服務、報表管理員，以及用於排程報表處理和訂閱傳遞的背景處理應用程式。 本主題將說明如何在一開始設定服務帳戶，以及如何使用 Reporting Services 組態工具來修改此帳戶或密碼。  
   
 ## <a name="initial-configuration"></a>初始組態  
- 報表伺服器服務帳戶是在安裝期間所定義。 您可以執行此服務的網域使用者帳戶或內建這類`NetworkService`帳戶。 沒有預設帳戶;您在中指定任何帳戶[伺服器組態-服務帳戶](../../sql-server/install/server-configuration-service-accounts.md)安裝精靈頁面都會成為報表伺服器服務的初始帳戶。  
+ 報表伺服器服務帳戶是在安裝期間所定義。 您可以執行底下的網域使用者帳戶或內建的服務，例如`NetworkService`帳戶。 沒有預設帳戶;您在中指定任何帳戶[伺服器組態-服務帳戶](../../sql-server/install/server-configuration-service-accounts.md)安裝精靈的頁面都會成為報表伺服器服務的初始帳戶。  
   
 > [!IMPORTANT]  
->  雖然報表伺服器 Web 服務和報表管理員是[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]應用程式，它們無法執行下[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]帳戶。 單一服務架構會在相同的報表伺服器處理序識別內執行這兩個 ASP.NET 應用程式， 這是與舊版不同的重大變更，在舊版中，報表伺服器 Web 服務和報表管理員都是在 IIS 內指定的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 工作處理序識別內執行。  
+>  雖然報表伺服器 Web 服務和報表管理員是[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]應用程式，他們無法執行下[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]帳戶。 單一服務架構會在相同的報表伺服器處理序識別內執行這兩個 ASP.NET 應用程式， 這是與舊版不同的重大變更，在舊版中，報表伺服器 Web 服務和報表管理員都是在 IIS 內指定的 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 工作處理序識別內執行。  
   
 ## <a name="changing-the-service-account"></a>變更服務帳戶  
  若要檢視及重新設定服務帳戶資訊，請務必使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。 服務識別資訊會儲存在內部的多個位置。 使用此工具可確保每當您變更帳戶或密碼時，所有的參考也會隨著更新。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具會執行下列其他步驟，以確保報表伺服器保持可用：  
@@ -46,7 +46,7 @@ ms.locfileid: "36033620"
     > [!NOTE]  
     >  如果報表伺服器是向外延展部署的一部分，則只有您更新的報表伺服器會受到影響。 部署中其他報表伺服器的加密金鑰，不會受到服務帳戶變更的影響。  
   
- 如需如何設定帳戶的指示，請參閱[設定服務帳戶&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)。  
+ 如需有關如何設定帳戶的指示，請參閱 <<c0> [ 設定的服務帳戶&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)。</c0>  
   
 ## <a name="choosing-an-account"></a>選擇帳戶  
  您可以將報表伺服器服務設定為在以下任何一種帳戶類型下執行：  
@@ -59,7 +59,7 @@ ms.locfileid: "36033620"
   
 -   LocalService  
   
- 在選擇帳戶類型時，並沒有單一的最佳方法。 每個帳戶都有您必須考量的優點和缺點。 如果您要部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在實際執行伺服器上，最佳做法建議您設定服務的網域使用者帳戶下執行，因此如果惡意使用者危害共用的帳戶，可以避免損害擴大。 此外，您也可以更輕鬆地為此帳戶稽核登入活動。 若要使用 Windows 使用者帳戶的一項取捨考量是，如果您要部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在網路中使用 Kerberos 驗證，您必須使用的使用者帳戶註冊服務。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
+ 在選擇帳戶類型時，並沒有單一的最佳方法。 每個帳戶都有您必須考量的優點和缺點。 如果您要部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在實際執行伺服器上，最佳做法建議您設定要在網域使用者帳戶下執行，好讓您可以避免損害擴大，如果共用的帳戶遭到惡意使用者入侵的服務。 此外，您也可以更輕鬆地為此帳戶稽核登入活動。 若要使用 Windows 使用者帳戶的取捨的是，如果您要部署[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在網路中使用 Kerberos 驗證，您必須向該服務的使用者帳戶。 如需詳細資訊，請參閱[為報表伺服器註冊服務主體名稱 &#40;SPN&#41;](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)。  
   
  本節中的下列指導方針和連結可以協助您決定最適合用於您的部署的方法。  
   

@@ -1,5 +1,5 @@
 ---
-title: Visibility 元素 (ASSL) |Microsoft 文件
+title: Visibility 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Visibility element
 ms.assetid: 59372ebf-af52-4d60-bf9b-bb1644ae9865
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a434fe35437c049f5ec16c474695a67cfb102ffd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9e4580071cefc21035ba36c645019b4c768e4a1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034453"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185195"
 ---
 # <a name="visibility-element-assl"></a>Visibility 元素 (ASSL)
-  定義的可視性[註解](../objects/annotation-element-assl.md)項目。  
+  定義的可視性[註釋](../objects/annotation-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,15 +58,15 @@ ms.locfileid: "36034453"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[註解](../objects/annotation-element-assl.md)|  
+|父元素|[註釋](../objects/annotation-element-assl.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|*SchemaRowset*|註解會在結構描述資料列集中顯示。|  
+|*W*|註解會在結構描述資料列集中顯示。|  
 |*無*|註解不會顯示出來。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `Visibility` 允許值的列舉是 <xref:Microsoft.AnalysisServices.Annotation>。  

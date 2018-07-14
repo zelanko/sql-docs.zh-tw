@@ -5,10 +5,9 @@ ms.date: 05/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b7f1393d97323a201022b4bd65066ed4cf3a49bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f4cf9c51abaaadff50a0dcc9b856eea0f6e76a57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201498"
 ---
 # <a name="control-transaction-durability"></a>控制交易持久性
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易認可可能是完全持久 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設值) 或延遲的持久 (也稱為延遲認可)。  
@@ -69,13 +68,13 @@ ms.locfileid: "36033650"
  **您可以容忍部分資料遺失。**  
  如果您可以容忍部分資料遺失 (只要擁有大部分資料即可，個別記錄並不重要)，延遲的持久性就值得考慮使用。 如果您無法容忍任何資料遺失，請勿使用延遲的交易持久性。  
   
- **您在交易記錄寫入時遇到瓶頸。**  
+ **您會在交易記錄寫入時遇到瓶頸。**  
  如果您的效能問題是由於交易記錄寫入的延遲所造成，則使用延遲的交易持久性可能會讓您的應用程式從中獲益。  
   
  **您的工作負載具有很高的競爭率。**  
  如果您的系統具有高競爭層級的工作負載，就表示花很多時間在等候釋放鎖定。 延遲的交易持久性會減少認可時間並加快釋放鎖定的速度，因而提高輸送量。  
   
- **延遲的交易持久性保證**  
+ **延遲交易持久性保證**  
   
 -   一旦交易認可成功之後，系統中的其他交易就可以看到該筆交易所進行的變更。  
   
@@ -191,7 +190,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **容錯移轉叢集**  
  某些延遲的持久交易寫入可能會遺失。  
   
- **交易複寫**  
+ **異動複寫**  
  異動複寫不支援延遲的持久交易。  
   
  **記錄傳送**  
@@ -211,6 +210,6 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 ## <a name="see-also"></a>另請參閱  
  [交易隔離等級](../../database-engine/transaction-isolation-levels.md)   
- [具有記憶體最佳化資料表交易隔離等級的指導方針](../in-memory-oltp/memory-optimized-tables.md)  
+ [搭配經記憶體最佳化的資料表使用交易隔離等級的方針](../in-memory-oltp/memory-optimized-tables.md)  
   
   
