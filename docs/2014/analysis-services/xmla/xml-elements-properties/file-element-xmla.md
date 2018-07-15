@@ -1,5 +1,5 @@
 ---
-title: 檔案元素 (XMLA) |Microsoft 文件
+title: 檔案元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - File element
 ms.assetid: 3dfd0e9b-746b-4ce5-8a95-610d2e573739
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 644e08e68ef38338d5b93c5abc7afe211c04c935
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75a261f4a86d5a227e1018ad96a40d91db7b6c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319218"
 ---
 # <a name="file-element-xmla"></a>File 元素 (XMLA)
-  識別要父系所使用的檔案[備份](../xml-elements-commands/backup-element-xmla.md)或[還原](../xml-elements-commands/restore-element-xmla.md)命令，或父系[位置](location-element-xmla.md)項目。  
+  識別父元素所要使用的檔案[備份](../xml-elements-commands/backup-element-xmla.md)或是[還原](../xml-elements-commands/restore-element-xmla.md)命令，或是由父代[位置](location-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36135010"
   
  若為 `Restore` 命令，`File` 元素就會決定要由 `Restore` 命令還原之備份檔案的名稱。  
   
- 若為 `Location` 元素，`File` 元素會針對包含遠端資料分割的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體描述遠端備份檔案。 如需有關備份和還原遠端資料分割的詳細資訊，請參閱[備份、 還原及同步處理資料庫&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 若為 `Location` 元素，`File` 元素會針對包含遠端資料分割的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體描述遠端備份檔案。 如需有關備份和還原遠端資料分割的詳細資訊，請參閱 <<c0> [ 備份、 還原和同步處理資料庫&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [AllowOverwrite 元素&#40;XMLA&#41;](allowoverwrite-element-xmla.md)   

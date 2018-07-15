@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f6d3eb993b999d17fa4d9c7ac547d30e4489afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd72de564b67b9130f2cf4d8175a190f8d76a302
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300578"
 ---
 # <a name="sap-bw-destination"></a>SAP BW 目的地
   SAP BW 目的地是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的目的地元件。 因此，SAP BW 目的地會將 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中資料流程的資料載入 SAP Netweaver BW 版本 7 系統中。  
@@ -92,9 +92,9 @@ ms.locfileid: "36135004"
 ### <a name="using-the-ssis-designer-to-configure-the-destination"></a>使用 SSIS 設計師設定目的地  
  如需有關可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之 SAP BW 目的地屬性的詳細資訊，請按下列其中一個主題：  
   
--   [SAP BW 目的地編輯器&#40;連接管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目的地編輯器&#40;連線管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目的地編輯器&#40;[對應] 頁面&#41;](sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目的地編輯器&#40;對應頁面&#41;](sap-bw-destination-editor-mappings-page.md)  
   
 -   [SAP BW 目的地編輯器&#40;錯誤輸出頁面&#41;](sap-bw-destination-editor-error-output-page.md)  
   

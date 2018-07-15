@@ -1,5 +1,5 @@
 ---
-title: 處理 SMO 例外狀況 |Microsoft 文件
+title: 處理 SMO 例外狀況 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inner exceptions [SMO]
 ms.assetid: 4c725ff2-6588-44ca-b86a-87979e164153
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 329cc87a9a82545708f71202f15de4eb219463e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2d8e121a9fdc76073a016041f102fa36e6685f72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299838"
 ---
 # <a name="handling-smo-exceptions"></a>處理 SMO 例外狀況
   在 Managed 程式碼中發生錯誤時會擲回例外狀況。 SMO 方法和屬性不會在傳回值中報告成功或失敗， 而是由例外處理常式攔截和處理例外狀況。  
@@ -35,20 +35,20 @@ ms.locfileid: "36132845"
  例外狀況處理陳述式會依程式語言而定。 例如，在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 中是 `Catch` 陳述式。  
   
 ## <a name="inner-exceptions"></a>內部例外狀況  
- 例外狀況可以是一般或特定的。 一般例外狀況包含一組特定的例外狀況。 數個`Catch`陳述式可用來處理預期的錯誤，而讓剩餘的錯誤透過以留待一般例外狀況處理程式碼。 例外狀況通常是以串聯式序列發生。 SMO 例外狀況經常是由 SQL 例外狀況所導致。 若要偵測此方法是使用`InnerException`屬性連續來判斷導致最後一個最上層的例外狀況的原始例外狀況。  
+ 例外狀況可以是一般或特定的。 一般例外狀況包含一組特定的例外狀況。 數個`Catch`陳述式可以用來處理預期的錯誤，而讓剩餘的錯誤透過以留待一般例外狀況處理程式碼。 例外狀況通常是以串聯式序列發生。 SMO 例外狀況經常是由 SQL 例外狀況所導致。 偵測此方式是使用`InnerException`連續來判斷導致最後之最上層例外狀況的原始例外狀況的屬性。  
   
 > [!NOTE]  
 >  `SQLException`例外狀況會在宣告**System.Data.SqlClient**命名空間。  
   
- ![此圖顯示的層級 excp](../../../database-engine/dev-guide/media/exception-flow.gif "的圖表，顯示的層級 excp")  
+ ![此圖顯示等級的 excp](../../../database-engine/dev-guide/media/exception-flow.gif "的圖表，顯示的層級 excp")  
   
  此圖顯示應用程式層級中的例外狀況流程。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)或[Visual Studio.NET 中建立 Visual Basic SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)或是[Visual Studio.NET 中建立 Visual Basic SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中攔截例外狀況  
- 這個程式碼範例示範如何使用`Try…Catch…Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]陳述式來攔截 SMO 例外狀況。 所有的 SMO 例外狀況都具有 SmoException 類型，而且會列於 SMO 參考中。 內部例外狀況的順序會顯示，以指出錯誤的根源所在。 如需詳細資訊，請參閱[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].NET 文件集。  
+ 此程式碼範例示範如何使用`Try…Catch…Finally`[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]陳述式來攔截 SMO 例外狀況。 所有的 SMO 例外狀況都具有 SmoException 類型，而且會列於 SMO 參考中。 內部例外狀況的順序會顯示，以指出錯誤的根源所在。 如需詳細資訊，請參閱[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].NET 文件。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBExceptions1](SMO How to#SMO_VBExceptions1)]  -->  
   

@@ -1,5 +1,5 @@
 ---
-title: AttributeName 元素 (XMLA) |Microsoft 文件
+title: AttributeName 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - AttributeName element
 ms.assetid: 4dc8260b-522e-46d9-9bd8-22a5a0068982
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1251de0a3f81a0b3a25d44de5bfbe2e41fa0f90a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 528bd232e9b49bfab5376b6dee16d22c6e6677d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306143"
 ---
 # <a name="attributename-element-xmla"></a>AttributeName 元素 (XMLA)
-  包含父代所代表之屬性的名稱[屬性](attribute-element-xmla.md)項目。  
+  包含父元素所代表之屬性名稱[屬性](attribute-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36037094"
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱  
- [Drop 元素&#40;XMLA&#41;](../xml-elements-commands/drop-element-xmla.md)   
+ [卸除項目&#40;XMLA&#41;](../xml-elements-commands/drop-element-xmla.md)   
  [插入項目&#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   
  [更新項目&#40;XMLA&#41;](../xml-elements-commands/update-element-xmla.md)   
  [其中的項目&#40;XMLA&#41;](where-element-xmla.md)   

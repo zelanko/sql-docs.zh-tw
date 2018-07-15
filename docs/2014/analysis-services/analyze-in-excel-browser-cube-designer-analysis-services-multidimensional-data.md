@@ -1,5 +1,5 @@
 ---
-title: 分析的 Excel （瀏覽器索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 分析的 Excel （瀏覽器索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6e20d95fc7d1a097f50eb5cca4937cc62580ef3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196698"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>在 Excel 中進行分析 (瀏覽器索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   **[在 Excel 中進行分析]** 提供 Cube 開發人員一種方式，可快速檢閱使用者所看到的專案外觀。 **[在 Excel 中進行分析]** 功能可開啟 Microsoft Excel、建立工作空間資料庫的資料來源連接，以及自動將樞紐分析表加入工作表。 此功能取代舊版 [瀏覽器] 索引標籤中提供內嵌樞紐分析表的 Office Web 元件。  
@@ -55,7 +55,7 @@ ms.locfileid: "36132118"
  [瀏覽 Cube 中的資料和中繼資料](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [瀏覽器&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
+ [瀏覽器&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [中繼資料&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [查詢和篩選&#40;瀏覽器索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)  

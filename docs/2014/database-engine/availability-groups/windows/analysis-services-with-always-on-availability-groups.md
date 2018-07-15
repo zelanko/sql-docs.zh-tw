@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 13
-author: HeidiSteen
-ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 12a3b3cb6bc31060857a86481a7a952cc19679b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fa5c34ec3c794cf87b96feefbf15c323fbc43e27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261366"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services 與 AlwaysOn 可用性群組
   AlwaysOn 可用性群組是預先定義的 SQL Server 關聯式資料庫集合，會在條件觸發任何一個資料庫的容錯移轉時一起容錯移轉，將要求重新導向至相同可用性群組中其他執行個體上的鏡像資料庫。 如果使用可用性群組做為高可用性解決方案，則可以使用該群組中的資料庫做為 Analysis Services 表格式或多維度解決方案的資料來源。 使用可用性資料庫時，下列所有 Analysis Services 作業都會如預期般運作：處理或匯入資料、直接查詢關聯式資料 (使用 ROLAP 儲存或 DirectQuery 模式)，以及回寫。  
@@ -159,7 +158,7 @@ ms.locfileid: "36036661"
   
 1.  啟動 SQL Server Profiler 並連接至裝載次要複本的 SQL Server 執行個體。  
   
-     執行追蹤時，`SQL:BatchStarting`和`SQL:BatchCompleting`事件會顯示從資料庫引擎執行個體執行的 Analysis Services 所發出的查詢。 預設會選取這些事件，因此您只需要啟動追蹤。  
+     執行追蹤時，則`SQL:BatchStarting`和`SQL:BatchCompleting`事件會顯示資料庫引擎執行個體執行的 Analysis Services 發出的查詢。 預設會選取這些事件，因此您只需要啟動追蹤。  
   
 2.  在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]中，開啟包含您要測試之資料來源連接的 Analysis Services 專案或解決方案。 確定資料來源指定可用性群組接聽程式，而不是群組中的執行個體。  
   
@@ -222,7 +221,7 @@ ms.locfileid: "36036661"
   
 ## <a name="see-also"></a>另請參閱  
  [可用性群組接聽程式、用戶端連接性及應用程式容錯移轉 &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [使用中次要： 可讀取次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [使用中次要： 可讀取的次要複本&#40;AlwaysOn 可用性群組&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn 可用性群組操作問題適用的 AlwaysOn 原則&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [建立資料來源 &#40;SSAS 多維度&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [啟用維度回寫](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

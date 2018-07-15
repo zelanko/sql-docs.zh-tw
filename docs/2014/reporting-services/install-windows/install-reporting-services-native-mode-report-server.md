@@ -1,5 +1,5 @@
 ---
-title: 安裝 Reporting Services 原生模式報表伺服器 |Microsoft 文件
+title: 安裝 Reporting Services 原生模式報表伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
@@ -17,13 +17,13 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: 58
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 090432d75605eb1678eacc77fafe1c213825d5ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0260982df5dff6640a4a273916c8e4455bd18621
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329438"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>安裝 Reporting Services 原生模式報表伺服器
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式報表伺服器可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令列安裝。 在安裝精靈中，您也可以選擇 1) 安裝檔案並以預設值設定伺服器，或 2) 僅安裝檔案但不要由安裝精靈設定伺服器。 本主題檢閱 *「原生模式的預設組態」* (Default Configuration for Native Mode)，其中安裝程式會安裝及設定報表伺服器執行個體。 當安裝程式完成之後，報表伺服器會執行及備妥使用。 原生模式報表伺服器會當做獨立的應用程式伺服器來執行。 原生模式為預設伺服器模式。  
@@ -55,7 +55,7 @@ ms.locfileid: "36132144"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 命令列公用程式 (rsconfig.exe、rskeymgmt.exe 及 rs.exe)  
   
- 此選項不適用於共用功能例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，必須指定如果您想要將它們安裝為個別項目。  
+ 此選項不適用於共用功能這類[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]或[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，必須指定如果您想要將它們安裝為個別項目。  
   
  安裝程式會針對原生模式報表伺服器安裝設定以下項目：  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36132144"
   
  如果您的電腦未能滿足預設安裝的所有需求，就必須在僅限檔案模式中安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，然後在安裝程式完成之後使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來進行設定。  
   
- 不要只是為了讓預設安裝能夠繼續就嘗試重新設定電腦， 這樣做可能需要好幾個小時的工作，讓原本可從安裝選項獲得的省時優點消失殆盡。 最好的解決方案是安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]僅限檔案模式中，然後設定報表伺服器來使用特定值。  
+ 不要只是為了讓預設安裝能夠繼續就嘗試重新設定電腦， 這樣做可能需要好幾個小時的工作，讓原本可從安裝選項獲得的省時優點消失殆盡。 最佳的解決方法是安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]僅限檔案模式中，然後設定報表伺服器使用特定的值。  
   
 ##  <a name="bkmk_defaultURLreservations"></a> 預設 URL 保留項目  
  URL 保留項目是由前置詞、主機名稱、通訊埠和虛擬目錄所組成：  
@@ -103,7 +103,7 @@ ms.locfileid: "36132144"
 |Prefix|預設前置詞是 HTTP。 如果您之前安裝了安全通訊端層 (SSL) 憑證，安裝程式將會嘗試建立使用 HTTPS 前置詞的 URL 保留項目。|  
 |主機名稱|預設主機名稱是強式萬用字元 (+)， 它會指定報表伺服器會接受任何主機名稱解析為電腦，包括 http:// 來指定連接埠上的任何 HTTP 要求\<電腦名稱 > / reportserver， http://localhost/reportserver，或 http://\<IPAddress > /reportserver。|  
 |通訊埠|預設連接埠是 80。 請注意，如果您使用通訊埠 80 以外的任何通訊埠，當您在瀏覽器視窗中開啟 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 應用程式時，就必須明確將此通訊埠加入 URL 中。|  
-|虛擬目錄|根據預設，系統會使用 reportserver_< 格式建立虛擬目錄\<*instance_name*> 針對報表伺服器 Web 服務和 reports_<\<*instance_name*>報表管理員。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是報表管理員，預設虛擬目錄則為 **reports**。|  
+|虛擬目錄|根據預設，系統會使用 Reportserver_< 格式建立虛擬目錄\<*instance_name*> 針對報表伺服器 Web 服務和 reports_<\<*instance_name*>報表管理員。 如果是報表伺服器 Web 服務，預設虛擬目錄會是 **reportserver**。 如果是報表管理員，預設虛擬目錄則為 **reports**。|  
   
  完整 URL 字串可能出現的範例如下：  
   
@@ -128,7 +128,7 @@ ms.locfileid: "36132144"
   
      ![特徵選取中的 SSRS 原生模式選取](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "特徵選取中的 SSRS 原生模式選取")  
   
-3.  如果您打算使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]訂閱功能，然後在**伺服器組態** 頁面上，您想要確認 SQL Server Agent 是否設定為**自動**啟動類型。  
+3.  如果您打算使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]訂用帳戶功能，然後在**伺服器組態**頁面上，您想要確認 SQL Server Agent 是否設定為**自動**啟動類型。  
   
 4.  在 **[Reporting Services 組態]** 頁面上選取 **[安裝和設定]**。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36132144"
   
     -   以系統管理權限開啟瀏覽器，並連接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表管理員，例如 `http://loclahost/Reports`。  
   
-    -   以系統管理權限開啟瀏覽器，並連接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器頁面。 例如，  `http://loclahost/ReportServer`  
+    -   以系統管理權限開啟瀏覽器，並連接到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器頁面。 比方說，  `http://loclahost/ReportServer`  
   
  如需詳細資訊，請參閱下列兩個主題的＜原生＞一節：  
   
@@ -157,7 +157,7 @@ setup /q /ACTION=install /FEATURES=SQL,RS,TOOLS /INSTANCENAME=MSSQLSERVER /SQLSY
 SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"  
 ```  
   
- 如需詳細資訊和範例，請參閱[命令提示字元安裝的 Reporting Services SharePoint 模式和原生模式](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)和[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+ 如需詳細資訊和範例，請參閱 <<c0> [ 命令提示字元安裝的 Reporting Services SharePoint 模式和原生模式](../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md)和[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [疑難排解 Reporting Services 安裝](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
@@ -167,9 +167,9 @@ SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"
  [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [僅限檔案安裝 &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
  [將報表伺服器初始化 &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [原生模式報表伺服器上設定 SSL 連接](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+ [在原生模式報表伺服器上設定 SSL 連線](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [設定報表伺服器 URL &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [快速入門的 SQL Server 2014 安裝](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [SQL Server 2014 快速入門安裝](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

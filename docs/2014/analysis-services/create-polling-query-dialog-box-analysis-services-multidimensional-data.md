@@ -1,5 +1,5 @@
 ---
-title: 建立輪詢查詢對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 建立輪詢查詢對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createpollingquerydialog.f1
 ms.assetid: 0f2902b5-796a-4eb0-be03-01514dc01b9a
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d7f46fbd895f1b9e9bce29674999a3e710a1a33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c7ca8d5c2594668283887c23f7d976a1fc3359
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236228"
 ---
 # <a name="create-polling-query-dialog-box-analysis-services---multidimensional-data"></a>建立輪詢查詢對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [建立輪詢查詢] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可在 **[儲存選項]** 對話方塊的 **[通知]** 索引標籤上建立輪詢查詢。 輪詢查詢通常為單一查詢，可傳回一個值，供 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 用來判斷資料表或其他關聯式物件是否已變更。 您可以在 [儲存選項] 對話方塊之 [通知] 索引標籤上的 [排程輪詢] 選項中，於方格的 [輪詢查詢] 資料行上，按一下省略符號按鈕 (**...**)，以顯示 [建立輪詢查詢] 對話方塊。 如需 [儲存選項] 對話方塊之 [通知] 索引標籤的詳細資訊，請參閱 [Notifications &#40;Storage Options Dialog Box&#41; &#40;Analysis Services - Multidimensional Data&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md) (通知 ([儲存選項] 對話方塊) (Analysis Services - 多維度資料))。  
@@ -61,7 +61,7 @@ ms.locfileid: "36133575"
  **工具列**  
  使用工具列即可管理資料集、選取要顯示的窗格和控制各種查詢功能。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**切換到一般查詢產生器**|選取即可只顯示一般查詢產生器檢視可用的選項。 僅會顯示下列選項：<br /><br /> **SQL 窗格**<br /><br /> **結果窗格**<br /><br /> **工具列**，只包含 **[切換到 VDT 查詢產生器]** 和 **[執行]**<br /><br /> <br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器]  才會顯示此選項。|  
 |**切換到 VDT 查詢產生器**|選取即可顯示 Visual Database Tools (VDT) 查詢產生器檢視可用的所有選項。<br /><br /> 注意：唯有選取 [切換到一般查詢產生器]  才會顯示此選項。|  
@@ -90,7 +90,7 @@ ms.locfileid: "36133575"
 > [!IMPORTANT]  
 >  此對話方塊不支援變更查詢類型。  
   
- **在方格窗格**  
+ **方格窗格**  
  以方格的方式顯示查詢所參考的物件。 您可以使用此方格，在查詢中加入和移除資料行，以及變更每一個資料行的設定。  
   
 > [!NOTE]  

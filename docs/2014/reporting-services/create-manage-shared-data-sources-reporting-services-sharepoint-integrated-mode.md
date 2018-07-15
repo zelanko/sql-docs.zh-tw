@@ -1,5 +1,5 @@
 ---
-title: 建立和管理共用的資料來源 (SharePoint 整合模式的 Reporting Services) |Microsoft 文件
+title: 建立和管理共用的資料來源 (SharePoint 整合模式的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cab3d9ce31bff00af668a5a10567919bdd106b36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d75ac29d1136106d88022bb8c5e3fd66e62124c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194769"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>建立及管理共用資料來源 (SharePoint 整合模式的 Reporting Services)
   當您從 SharePoint 文件庫執行報表時，可以在報表內部或連結到報表的外部檔案中定義連接資訊。 如果連接資訊內嵌於報表中，它就稱為自訂資料來源。 如果連接資訊定義於外部檔案中，它就稱為共用資料來源。 外部檔案可以是報表伺服器資料來源 (.rsds) 檔案或 Office 資料連線 (.odc) 檔案。  
@@ -40,13 +40,13 @@ ms.locfileid: "36131665"
 2.  在 [新增文件] 功能表上，按一下 [報表資料來源]  
   
     > [!NOTE]  
-    >  如果您沒有在功能表上看見 [報表資料來源] 項目，表示報表資料來源內容類型尚未啟用。 如需詳細資訊，請參閱[將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。  
+    >  如果您沒有在功能表上看見 [報表資料來源] 項目，表示報表資料來源內容類型尚未啟用。 如需詳細資訊，請參閱 <<c0> [ 將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)。</c0>  
   
 3.  在 [名稱] 中，輸入 .rsds 檔的描述性名稱。  
   
 4.  在 [資料來源類型] 的清單中，選取資料來源的類型。 如需詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
-5.  在 [連接字串] 中，指定資料來源的指標以及其他建立外部資料來源連線必要的任何設定。 您所使用的資料來源類型會決定連接字串的語法。 如需詳細資訊和範例，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
+5.  在 [連接字串] 中，指定資料來源的指標以及其他建立外部資料來源連線必要的任何設定。 您所使用的資料來源類型會決定連接字串的語法。 如需詳細資訊和範例，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)。  
   
 6.  在 [認證] 中，指定報表伺服器取得認證來存取外部資料來源的方式。 認證可以針對自動報表處理而儲存、提示、整合或設定。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36131665"
   
     -   如果您希望使用者在每次執行報表時輸入自己的認證，請選取 [提示認證]。 如果您想要排程這個報表的訂閱或資料處理，請勿選取這個選項。  
   
-    -   如果您想要使用單一認證集來存取這個資料，請選取 [預存認證]。 認證會先經過加密，然後再儲存。 您可以選取決定預存認證之驗證方式的選項。 如果預存認證屬於 Windows 使用者帳戶，請選取 [當做 Windows 認證使用]。 如果您想在資料庫伺服器上設定執行內容，請選取 [設定執行內容到這個帳戶]。 如[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，此選項會設定 SETUSER 函數。 如需詳細資訊，請參閱 [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)。  
+    -   如果您想要使用單一認證集來存取這個資料，請選取 [預存認證]。 認證會先經過加密，然後再儲存。 您可以選取決定預存認證之驗證方式的選項。 如果預存認證屬於 Windows 使用者帳戶，請選取 [當做 Windows 認證使用]。 如果您想在資料庫伺服器上設定執行內容，請選取 [設定執行內容到這個帳戶]。 針對[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫，此選項會設定 SETUSER 函數。 如需詳細資訊，請參閱 [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql)。  
   
     -   如果您想要在連接字串中指定認證，或是想要使用報表伺服器上設定的最低權限帳戶來執行報表，請選取 [不需要認證]。 如果這個帳戶並未在報表伺服器上設定，系統就會提示使用者輸入認證，而且您針對該報表定義的所有排程作業將不會執行。  
   

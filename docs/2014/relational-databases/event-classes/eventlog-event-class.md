@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - EventLog event class
 ms.assetid: ba4b4e15-b923-4fab-987e-6bede2e73f53
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 75e5834923ca173bdda8f1011245a4adb3428fea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1ebc86cca5e9c0f42e158f38f494ff462c3ee700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316508"
 ---
 # <a name="eventlog-event-class"></a>EventLog 事件類別
   EventLog 事件類別指出已將事件記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 事件記錄檔中。  
@@ -52,7 +52,7 @@ ms.locfileid: "36135188"
 |Severity|`int`|例外狀況的嚴重性層級。|20|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|錯誤訊息的文字 (如果有的話)。|@shouldalert|是|  
+|TextData|`ntext`|錯誤訊息的文字 (如果有的話)。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

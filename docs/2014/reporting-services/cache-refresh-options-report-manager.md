@@ -1,5 +1,5 @@
 ---
-title: 快取重新整理選項 （報表管理員） |Microsoft 文件
+title: 快取重新整理選項 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5d5a2bd4683e70523275c8da191bc74cd4de28d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734bad595344741ee47503352b440a8db320912
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282694"
 ---
 # <a name="cache-refresh-options-report-manager"></a>快取重新整理選項 (報表管理員)
   使用 [快取重新整理] 選項頁面來建立排程，以供預先載入含報表或共用資料集資料暫存副本的快取。 重新整理計劃包括排程和選項，可指定或覆寫參數的值。 您不能針對共用資料集，覆寫標示為唯讀的參數值。 您可以建立並使用多個重新整理計劃做為重新整理選項頁面的一部分。  
@@ -27,7 +27,7 @@ ms.locfileid: "36132142"
  可讓您加入、刪除、變更及檢視快取重新整理計劃之相關報表和共用資料集的預設角色指派有：[內容管理員]、[我的報表] 和 [發行者]。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="to-open-the-cache-refresh-plan-properties-page-for-a-report-or-shared-dataset"></a>開啟報表或共用資料集的快取重新整理計劃屬性頁  
   
@@ -69,12 +69,12 @@ ms.locfileid: "36132142"
  **設定**  
  按一下即可開啟 [排程] 頁面，可用來指定頻率資訊。  
   
- 如需詳細資訊，請參閱[新的排程： 編輯排程頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 新的排程： 編輯排程頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)。</c0>  
   
  **共用的排程**  
  選取此選項，可選取現有的排程。  
   
- 如需詳細資訊，請參閱[Create，Modify，and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)。  
+ 如需詳細資訊，請參閱 < [Create，Modify，and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)。  
   
  **@\<** *參數* **>**  
  指定參數值的其中一個組合。 此區段只有在目前的資料集或報表具有參數時才會出現。  
@@ -106,14 +106,14 @@ ms.locfileid: "36132142"
   
  如果共用資料集定義為參數指定 **[從查詢中忽略]** 選項，就不需要提供預設值。 這個旗標表示查詢中不使用該資料集參數。 例如，參數顯示在共用資料集定義中，因為該參數是只用於資料集篩選中的報表參數。  
   
- 若要檢視或變更資料集參數選項，您必須編輯共用資料集定義。 如需詳細資訊，請參閱[管理共用資料集](report-data/manage-shared-datasets.md)。  
+ 若要檢視或變更資料集參數選項，您必須編輯共用資料集定義。 如需詳細資訊，請參閱 <<c0> [ 管理共用資料集](report-data/manage-shared-datasets.md)。  
   
 ### <a name="report-parameters"></a>報表參數  
  依報表來說，每個參數值都必須有效，才能順利建立快取重新整理計劃。 您必須為每個報表參數輸入或選取預設值。 您所設定的值會覆寫在報表伺服器上為報表參數定義的預設值。  
   
  參數必須符合報表伺服器上參數屬性中指定的需求。 比方說，如果屬性 AllowBlank 是為報表參數，則為 false，空字串不是有效的值。  
   
- 若要檢視或變更報表參數選項，必須在報表中編輯報表參數，或是另外在報表伺服器上獨立編輯。 如需詳細資訊，請參閱[報表參數概念&#40;報表產生器及 SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  
+ 若要檢視或變更報表參數選項，必須在報表中編輯報表參數，或是另外在報表伺服器上獨立編輯。 如需詳細資訊，請參閱 <<c0> [ 報表參數概念&#40;報表產生器及 SSRS&#41;](report-design/report-parameters-concepts-report-builder-and-ssrs.md)。</c0>  
   
 ## <a name="conditions-that-cause-a-cache-refresh-plan-to-be-inactive"></a>導致快取重新整理計劃成為非使用狀態的條件  
  下列條件可能會導致共用資料集或報表快取重新整理計畫變成非使用狀態。  

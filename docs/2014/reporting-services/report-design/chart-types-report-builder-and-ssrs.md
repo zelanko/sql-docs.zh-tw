@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f69c4a6dd5f2593650067be51eae3b63e49dcd96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c305f6a4b4188e05f67bc8ac8ffd8cd66cdbb5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328981"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>圖表類型 (報表產生器及 SSRS)
-  針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這可以決定以圖表形式放入資料時可以解譯資料的程度。 例如，如果您的資料集包含多個相對於圖表大小的資料點，最好使用區域、線條或散佈圖呈現。 如需有關如何準備您的資料，視選取的圖表類型而定的討論，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這可以決定以圖表形式放入資料時可以解譯資料的程度。 例如，如果您的資料集包含多個相對於圖表大小的資料點，最好使用區域、線條或散佈圖呈現。 如需有關如何根據選取的圖表類型準備資料的討論，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -38,22 +38,22 @@ ms.locfileid: "36023494"
   
 |圖表類型|顯示比例資料|顯示庫存資料|顯示線性資料|顯示多重值資料|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[區域圖&#40;報表產生器和 SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
-|[橫條圖&#40;報表產生器和 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
+|[區域圖&#40;報表產生器及 SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
+|[橫條圖&#40;報表產生器及 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
 |[資料橫條](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
-|[直條圖&#40;報表產生器和 SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
-|[折線圖&#40;報表產生器和 SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
-|[圓形圖&#40;報表產生器和 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")||||  
-|[極座標圖&#40;報表產生器和 SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")||||  
-|[範圍圖表&#40;報表產生器和 SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")|![可用](../media/greencheck.gif "可用")|  
-|[散佈圖&#40;報表產生器和 SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")||![可用](../media/greencheck.gif "可用")||  
-|[形狀&#40;報表產生器和 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")||||  
+|[直條圖&#40;報表產生器及 SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
+|[折線圖&#40;報表產生器及 SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")||  
+|[圓形圖&#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")||||  
+|[極座標圖&#40;報表產生器及 SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")||||  
+|[範圍圖表&#40;報表產生器及 SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![可用](../media/greencheck.gif "可用")|![可用](../media/greencheck.gif "可用")|  
+|[散佈圖&#40;報表產生器及 SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")||![可用](../media/greencheck.gif "可用")||  
+|[形狀圖&#40;報表產生器及 SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")||||  
 |[走勢圖](sparklines-and-data-bars-report-builder-and-ssrs.md)|![可用](../media/greencheck.gif "可用")|![可用](../media/greencheck.gif "可用")|![可用](../media/greencheck.gif "可用")|![可用](../media/greencheck.gif "可用")|  
-|[股票圖表&#40;報表產生器和 SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![可用](../media/greencheck.gif "可用")||![可用](../media/greencheck.gif "可用")|  
+|[股票圖&#40;報表產生器及 SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![可用](../media/greencheck.gif "可用")||![可用](../media/greencheck.gif "可用")|  
   
 ## <a name="see-also"></a>另請參閱  
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [將圖表加入至報表&#40;報表產生器和 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
+ [將圖表加入至報表&#40;報表產生器及 SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

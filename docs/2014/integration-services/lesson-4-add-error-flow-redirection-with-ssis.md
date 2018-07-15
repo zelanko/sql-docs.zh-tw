@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 加入錯誤流程重新導向 |Microsoft 文件
+title: 第 4 課： 加入錯誤流程重新導向 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2b09bfa4b9ac8c0c6a35c57dab535fc8d1263e3f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 230294eb45aec198ba5fd0cde396749bd0897b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295088"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>「課程 4：加入錯誤流程重新導向
   為了處理發生在轉換處理序中的錯誤， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一項功能，讓您能夠決定每一個元件和每一個資料行要如何處理無法轉換的資料。 您可以選擇忽略特定資料行的失敗、將整個失敗的資料列重新導向，或僅使該元件失敗。 依預設， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的所有元件都設定為發生錯誤時失敗。 使元件失敗會造成封裝失敗及所有後續處理停止。  
@@ -38,17 +38,17 @@ ms.locfileid: "36134662"
 ## <a name="tasks-in-lesson"></a>本課程的工作  
  這一課包含下列工作：  
   
--   [步驟 1： 複製第 3 課封裝](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [步驟 1：複製第 3 課的套件](lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [步驟 2： 建立損毀的檔案](lesson-4-2-creating-a-corrupted-file.md)  
+-   [步驟 2：建立損毀檔案](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [步驟 3： 加入錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
+-   [步驟 3：新增錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [步驟 4： 加入一般檔案目的地](lesson-4-4-adding-a-flat-file-destination.md)  
+-   [步驟 4：新增一般檔案目的地](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [步驟 5： 測試第 4 課的教學課程封裝](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [步驟 5：測試第 4 課的教學課程套件](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>開始課程  
- [步驟 1： 複製第 3 課封裝](lesson-4-1-copying-the-lesson-3-package.md)  
+ [步驟 1：複製第 3 課的套件](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

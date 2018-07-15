@@ -1,5 +1,5 @@
 ---
-title: 增益圖 (Analysis Services-資料採礦) |Microsoft 文件
+title: 增益圖 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - accuracy, charting
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 53
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a18f752d0435a3ba840e484ff00bf42efb523b79
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a90b1bf1103627b95a1b289c1dced1257e523580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301248"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>增益圖 (Analysis Services - 資料採礦)
-  A**增益圖**以圖形方式表示採礦模型與隨機猜測，提供相較的改進和量值的變更*提起*分數。 藉由比較資料集各部分與不同模型的增益分數，您可以決定最佳的模型，以及資料集中可從套用模型預測受益的案例百分比。  
+  A**增益圖**以圖形表示與隨機猜測，採礦模型提供相較之下的改進，並測量的變更*提起*分數。 藉由比較資料集各部分與不同模型的增益分數，您可以決定最佳的模型，以及資料集中可從套用模型預測受益的案例百分比。  
   
  透過增益圖，您可以比較多個具有相同可預測屬性之模型的預測精確度。 您也可以評估單一結果 (可預測屬性的單一值) 或所有結果 (指定屬性的所有值) 的預測精確度。  
   

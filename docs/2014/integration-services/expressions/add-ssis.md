@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - + (add)
 - add operator (+)
@@ -17,13 +17,13 @@ ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b96a6e5c659925ea5eed876e1f7505997ea02b71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b7b971521991be68d69efd2519b423958ef4fbf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248858"
 ---
 # <a name="-add-ssis"></a>+ (加) (SSIS)
   加入兩個數值運算式。  

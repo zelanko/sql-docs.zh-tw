@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 caps.latest.revision: 17
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4cfd164c250f60aa2e6fe2a3c74487a90eeb3e4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1adf7606b40f4665aae9e264c30d17038da0193a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296778"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>步驟 8：使第 1 課的封裝更容易了解
   現在您已完成第 1 課封裝的組態，不妨整理一下封裝配置。 如果控制流程配置和資料流程配置中的形狀是隨機大小，或形狀沒有對齊或分組，則封裝功能可能更難以了解。  
@@ -55,6 +55,6 @@ ms.locfileid: "36134446"
      如果您沒有將文字加入註解方塊中，則您在方塊之外按一下時，它就會消失不見。  
   
 ## <a name="next-steps"></a>後續步驟  
- [步驟 9：測試第 1 課的教學課程封裝](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+ [步驟 9：測試第 1 課的教學課程套件](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

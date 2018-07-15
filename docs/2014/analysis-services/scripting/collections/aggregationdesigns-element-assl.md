@@ -1,5 +1,5 @@
 ---
-title: AggregationDesigns 元素 (ASSL) |Microsoft 文件
+title: AggregationDesigns 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationDesigns element
 ms.assetid: 7291956a-9c53-41fe-af2e-2418e26956c5
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6dfddae8284e32f08edc4cf1e0868c7c71c97db2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 89140d57aafd7a74b5d1ad8082e8feba075c33bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279594"
 ---
 # <a name="aggregationdesigns-element-assl"></a>AggregationDesigns 元素 (ASSL)
   包含可在資料庫中多個資料分割之間共用之彙總設計的集合。  
@@ -60,11 +60,11 @@ ms.locfileid: "36146825"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[量值群組](../objects/group-element-assl.md)|  
+|父元素|[MeasureGroup](../objects/group-element-assl.md)|  
 |子元素|[AggregationDesign](../objects/aggregationdesign-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AggregationDesignCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.AggregationDesignCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [分割項目&#40;ASSL&#41;](../objects/partition-element-assl.md)   

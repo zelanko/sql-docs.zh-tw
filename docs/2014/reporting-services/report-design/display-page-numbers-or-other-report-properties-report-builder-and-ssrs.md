@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 77e87dc08897954cb210b9e785dc4d6e266a3ea3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8a8b6cc94bf769be46bf3a2fc101731ba28d2021
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134870"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321868"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>顯示頁碼或其他報表屬性 (報表產生器及 SSRS)
   您可以輕鬆地將頁碼、報表標題、檔案名稱和其他報表屬性加入至報表的頁首或頁尾。 在 [報表資料] 窗格的 [內建欄位] 資料夾中，這些屬性會儲存成欄位：  
@@ -68,7 +68,7 @@ ms.locfileid: "36134870"
   
      [設定運算式對象: 值] 文字方塊包含運算式 =Globals!PageNumber。  
   
-2.  將游標置於類型 = 符號後`"Page " &`。  
+2.  將游標放在類型與 = 符號之後`"Page " &`。  
   
      運算式現在是 ="Page "&Globals!PageNumber  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36134870"
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [頁首和頁尾&#40;報表產生器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [在文字方塊中格式化文字&#40;報表產生器和 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [頁首和頁尾&#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [格式化文字方塊中的文字&#40;報表產生器及 SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
   

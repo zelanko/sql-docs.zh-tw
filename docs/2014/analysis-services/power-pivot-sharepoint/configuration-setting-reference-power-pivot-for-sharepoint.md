@@ -1,5 +1,5 @@
 ---
-title: 組態設定參考 (PowerPivot for SharePoint) |Microsoft 文件
+title: 組態設定參考 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 340800620360ed34ab8bcc2aaee7d71118e451df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c819c7bfee1d028d9eb2795620ec9aa4bdf02150
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173559"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>組態設定參考 (PowerPivot for SharePoint)
   本主題提供 SharePoint 伺服器陣列中 PowerPivot 服務應用程式所使用的組態設定參考文件。 如果您使用 PowerShell 指令碼來設定伺服器，或者，如果想查閱特定設定的資訊，本主題中的資訊提供詳細的說明。  
@@ -40,12 +40,12 @@ ms.locfileid: "36131816"
   
  [使用量資料收集](#UsageData)  
   
- 如需有關如何建立 PowerPivot 服務應用程式的指示，請參閱[建立及設定 PowerPivot 服務應用程式，在 [管理中心]](create-and-configure-power-pivot-service-application-in-ca.md)。  
+ 如需有關如何建立 PowerPivot 服務應用程式的指示，請參閱 <<c0> [ 建立及設定 PowerPivot 服務應用程式，在 [管理中心]](create-and-configure-power-pivot-service-application-in-ca.md)。  
   
 ##  <a name="LoadingData"></a> 資料載入逾時  
  PowerPivot 資料是由在伺服陣列中的 Analysis Services 伺服器執行個體擷取及載入。 依上次存取資料的時間與方式而定，會從內容庫或本機檔案快取載入。 只要接到查詢或處理要求，資料就會載入記憶體中。 為了提供最大的整體伺服器可用性，如果無法在配置的時間內完成，您可以設定逾時值，指示伺服器停止載入資料要求。  
   
-|[屬性]|預設|有效的值|描述|  
+|名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
 |資料載入逾時|1800 (秒)|1 到 3600|指定 PowerPivot 服務應用程式等候特定 Analysis Services 伺服器執行個體回應的時間。<br /><br /> 在預設情況下，服務應用程式會在將特定要求轉送給 Engine 後等待 30 分鐘，讓 Engine 服務執行個體傳來資料裝載。<br /><br /> 如果 PowerPivot 資料來源無法在這段時間內載入，執行緒將會停止，並啟動新的執行緒。|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36131816"
   
  每一種連接集區都有您可以設定的上限，確保以最佳方式使用系統記憶體來管理連接。  
   
-|[屬性]|預設|有效的值|描述|  
+|名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
 |連接集區逾時|1800 (秒)|1 到 3600。|此設定會套用至資料連接集區。<br /><br /> 它會指定閒置的連接在移除之前，可以保留在連接集區中的時間。<br /><br /> 在預設情況下，如果連接閒置超過五分鐘，服務應用程式就會移除連接。|  
 |最大使用者連接集區大小|1000|-1、0 或 1 到 10000。<br /><br /> -1 指定無限數目的閒置連接。<br /><br /> 0 表示不保留閒置的連接。 每次都必須建立新的 PowerPivot 資料來源連接。|此設定會套用至為特定 PowerPivot 服務應用程式執行個體建立之所有資料連接集區中的閒置連接數。<br /><br /> 個別連接集區是針對 SharePoint 使用者、PowerPivot 資料和服務執行個體之獨特組合所建立。 如果您有許多使用者存取各種不同的 PowerPivot 資料來源，伺服器的效能可能會因連接集區大小增加而受益。<br /><br /> 如果有超過 100 個閒置的 PowerPivot 服務執行個體連接，則新閒置的連接會中斷連接，而不會再傳回集區。|  
@@ -69,25 +69,25 @@ ms.locfileid: "36131816"
 ##  <a name="AllocationScheme"></a> 負載平衡  
  PowerPivot 服務執行的其中一項功能是，判斷在可用 PowerPivot 服務執行個體中，Analysis Services 資料將載入的位置。 `AllocationMethod`設定會指定針對選取的服務執行個體的準則。  
   
-|[屬性]|預設|有效的值|描述|  
+|名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
 |配置方法|循環配置資源|循環配置資源<br /><br /> 依據健全狀態|在兩個或多個 Analysis Services 伺服器執行個體中，配置載入要求的方案。<br /><br /> 根據預設，PowerPivot 服務將會根據伺服器健全狀況替代要求。 依據健全狀況則根據可用的記憶體和 CPU 使用率，配置要求給具有最多可用系統資源的伺服器。<br /><br /> 循環配置資源會依照順序在可用伺服器之間輪流配置要求，而不考慮目前的負載或伺服器健全狀況。|  
   
 ##  <a name="DataRefresh"></a> 資料重新整理  
  指定時間範圍定義您組織中正常或一般工作日。 這些組態設定會決定下班後資料處理進行資料重新整理作業的時間。 下班後處理可以從工作日結束時間開始。 文件擁有者若想要利用在正常上班時間內所產生的交易資料重新整理 PowerPivot 資料來源，下班後處理就是這些文件擁有者的排程選項。  
   
-|[屬性]|預設|有效的值|描述|  
+|名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
 |開始時間|上午 04:00|1 至 12 小時，其中的值是該範圍內的有效整數。<br /><br /> 類型是 Time。|設定上班時間範圍的下限。|  
 |結束時間|下午 08:00|1 至 12 小時，其中的值是該範圍內的有效整數。<br /><br /> 類型是 Time。|設定上班時間範圍的上限。|  
-|PowerPivot 自動資料重新整理帳戶|無|目標應用程式識別碼|此帳戶用來代表排程擁有者執行資料重新整理作業。<br /><br /> 自動資料重新整理必須事先加以定義，才能在服務應用程式組態頁面參考。 如需詳細資訊，請參閱[設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。|  
-|允許使用者輸入自訂的 Windows 認證|已啟用|布林|決定排程的資料重新整理組態頁面是否顯示允許排程擁有者指定 Windows 使用者帳戶與密碼來執行資料重新整理作業的選項。<br /><br /> 您必須啟用 Secure Store Service，此選項才能運作。 如需詳細資訊，請參閱[設定預存認證 PowerPivot 資料重新整理&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
-|最大處理記錄長度|365|1 到 5000 天|決定資料重新整理記錄要保留在 PowerPivot 服務應用程式資料庫中的時間長度。 如需詳細資訊，請參閱[PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)。|  
+|PowerPivot 自動資料重新整理帳戶|無|目標應用程式識別碼|此帳戶用來代表排程擁有者執行資料重新整理作業。<br /><br /> 自動資料重新整理必須事先加以定義，才能在服務應用程式組態頁面參考。 如需詳細資訊，請參閱 <<c0> [ 設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。</c0>|  
+|允許使用者輸入自訂的 Windows 認證|已啟用|布林|決定排程的資料重新整理組態頁面是否顯示允許排程擁有者指定 Windows 使用者帳戶與密碼來執行資料重新整理作業的選項。<br /><br /> 您必須啟用 Secure Store Service，此選項才能運作。 如需詳細資訊，請參閱 < [PowerPivot 資料重新整理設定的預存認證&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。|  
+|最大處理記錄長度|365|1 到 5000 天|決定資料重新整理記錄要保留在 PowerPivot 服務應用程式資料庫中的時間長度。 如需詳細資訊，請參閱 < [PowerPivot 使用量資料收集](power-pivot-usage-data-collection.md)。|  
   
 ##  <a name="UsageData"></a> 使用量資料收集  
  出現在 PowerPivot 管理儀表板中的使用方式報表可以提供有關如何使用啟用 PowerPivot 功能之活頁簿的重要資訊用。 下列組態設定會控制 (呈現於後續使用方式或活動報表中) PowerPivot 伺服器事件的使用量資料收集層面。  
   
-|[屬性]|預設|有效的值|描述|  
+|名稱|預設|有效的值|描述|  
 |----------|-------------|------------------|-----------------|  
 |查詢報告間隔|300 (以秒為單位)|1 到 n 秒，其中 n 是任何有效的整數。|為了確保使用量資料收集不會耗用太多伺服陣列的資料傳輸容量，查詢統計資料是在每個連接上收集，並報告為單一事件。 「查詢報告間隔」會決定報告事件的頻率。 在預設情況下，查詢統計資料會每隔 5 分鐘報告一次。<br /><br /> 由於連接是一傳送要求就立即關閉，所以即使是單一使用者存取單一 PowerPivot 資料來源，系統也會為該使用者產生大量的連接。 因此，連接集區會針對每個使用者和 PowerPivot 資料來源而建立，以便在建立連接後，讓相同的使用者能夠對相同的資料重複使用該連接。 PowerPivot 服務應用程式會依透過此組態設定指定的間隔，定期報告連接集區中每個連接的使用量資料。<br /><br /> 提高報告時間間隔值會使得記錄的事件較少。 但是，如果設得太高，當伺服器重新啟動或連接關閉時，就會有遺失事件資料的風險。<br /><br /> 降低此值則造成以較高頻率記錄更多事件，而將更多 PowerPivot 相關使用量資料加入至 SharePoint 使用量資料庫的資料收集系統中。<br /><br /> 一般來說，除非您嘗試要解決特定問題 (例如，由於 PowerPivot 使用量資料的結果，讓使用量資料庫成長太快)，否則不要變更此設定。|  
 |使用量資料記錄|365 (以天為單位)|0 或 1 到 n 天，其中 n 是任何有效的整數。<br /><br /> 0 表示永遠保留記錄，而且永遠不刪除。|在預設情況下，使用量資料會在 PowerPivot 服務應用程式資料庫中保留一年。 超過一年的記錄會從資料庫卸除。<br /><br /> Microsoft SharePoint Foundation 使用量資料處理作業執行時，會每天檢查過期的記錄資料。 計時器作業會讀取此設定，並觸發 PowerPivot 服務應用程式資料庫中過期記錄的資料刪除命令。|  

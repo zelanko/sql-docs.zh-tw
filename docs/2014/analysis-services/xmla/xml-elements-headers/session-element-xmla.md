@@ -1,5 +1,5 @@
 ---
-title: Session 元素 (XMLA) |Microsoft 文件
+title: Session 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 4be4778be16da0271e2f46643a165864d679e8ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 74ce499ba167c7c0d439fba4e4099638f4e98db6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310368"
 ---
 # <a name="session-element-xmla"></a>Session 元素 (XMLA)
-  在 SOAP 要求訊息中使用 SOAP 標頭，來識別現有的明確工作階段的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  在 SOAP 要求訊息中使用 SOAP 標頭，以識別現有的明確工作階段的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
- **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
+ **命名空間**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-分析  
   
 ## <a name="syntax"></a>語法  
   
@@ -81,9 +81,9 @@ ms.locfileid: "36036438"
 ## <a name="remarks"></a>備註  
  `Session` 標頭元素會在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上識別現有且明確啟動的工作階段。 `Session` 元素屬於下列訊息類型中 SOAP 標頭的一部分：  
   
--   SOAP 回應，其中包含[BeginSession](session-element-xmla.md) SOAP 標頭項目。  
+-   包含的 SOAP 回應[BeginSession](session-element-xmla.md) SOAP 標頭項目。  
   
--   識別要執行的工作階段的 SOAP 要求[探索](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法。  
+-   SOAP 要求，識別要執行的工作階段[Discover](../xml-elements-methods-discover.md)或是[Execute](../xml-elements-methods-execute.md)方法。  
   
  工作階段識別碼並不保證工作階段會維持有效狀態。 在 `Session` 元素中指定的工作階段可能會過期。 例如，如果工作階段逾時或是與工作階段有關的連接中斷，則此工作階段可能會過期。 如果此工作階段過期而不再有效，則 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會結束此工作階段，並回復目前進行中的任何交易。 與不再有效的工作階段識別碼一起傳送的任何 SOAP 訊息都會失敗，而且會出現一個 SOAP 錯誤，表示找不到指定的工作階段。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36036438"
   
 ## <a name="see-also"></a>另請參閱  
  [EndSession 元素&#40;XMLA&#41;](endsession-element-xmla.md)   
- [管理連接與工作階段&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [管理連接和工作階段&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
  [標頭&#40;XMLA&#41;](xml-elements-headers.md)  
   
   

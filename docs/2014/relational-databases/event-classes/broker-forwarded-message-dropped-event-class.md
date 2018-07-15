@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c0bacb57910040a81b25e54a84ac2f1aefa0dc94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97302aee00e4f41f683a4a72b4e4b95185fa2e3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035930"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326108"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 Service Broker 卸除計畫轉寄的訊息時，會產生 Broker:Forwarded Message Dropped 事件。  
@@ -61,7 +61,7 @@ ms.locfileid: "36035930"
 |成功|`int`|訊息已經存留的時間量。 當此值大於或等於存留時間時，就會卸除訊息。|23|否|  
 |TargetLoginName|`nvarchar`|將轉寄訊息的目的網路位址。|42|否|  
 |TargetUserName|`nvarchar`|訊息的起始端服務名稱。|39|否|  
-|TextData|`ntext`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。|@shouldalert|是|  
+|TextData|`ntext`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。|1|是|  
 |Transaction ID|`bigint`|系統指派的交易識別碼。|4|否|  
   
  此事件的 TextData 資料行包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 卸除訊息的原因描述。  

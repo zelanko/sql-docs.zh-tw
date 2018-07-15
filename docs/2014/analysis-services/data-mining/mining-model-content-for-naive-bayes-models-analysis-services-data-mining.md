@@ -1,5 +1,5 @@
 ---
-title: 貝氏機率分類模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 貝氏機率分類模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - Bayesian classifiers
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b6c53452892eb928267b3f04078633274905633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14aa876539bafb265ddac5514d25519b003e646d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216118"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>貝氏機率分類模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝式機率分類演算法之模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱 [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
@@ -37,7 +37,7 @@ ms.locfileid: "36132113"
 > [!NOTE]  
 >  由於貝式機率分類模型不允許使用連續資料類型，因此會將輸入資料行的所有值都視為離散或離散化的值。 您可以指定將值離散化的方式。 如需詳細資訊，請參閱 [變更採礦模型中的資料行離散化](change-the-discretization-of-a-column-in-a-mining-model.md)。  
   
- ![貝氏機率分類模型內容結構](../media/modelcontentstructure-nb.gif "的貝氏機率分類模型內容結構")  
+ ![貝氏機率分類模型內容的結構](../media/modelcontentstructure-nb.gif "的貝氏機率分類模型內容結構")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>貝式機率分類模型的模型內容  
  本節僅針對採礦模型內容中與貝式機率分類模型具有特定相關的資料行，提供詳細資料和範例。  
@@ -263,9 +263,9 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
 |NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|@shouldalert|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|@shouldalert|4216|0.527065883|4|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
  在這些結果中，SUPPORT 資料行的值會顯示購買自行車之客戶的計數，以及指定的婚姻狀況。 PROBABILITY 資料行包含每個屬性值的機率 (僅針對此節點計算)。 如需 NODE_DISTRIBUTION 資料表所用詞彙的一般定義，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
@@ -274,22 +274,22 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|Missing|0|0|0|@shouldalert|  
+|Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|@shouldalert|8615|0.492736216|0|4|  
-|Marital Status|Missing|0|0|0|@shouldalert|  
+|Bike Buyer|1|8615|0.492736216|0|4|  
+|Marital Status|Missing|0|0|0|1|  
 |Marital Status|S|7999|0.457504004|0|4|  
 |Marital Status|M|9485|0.542495996|0|4|  
-|Total Children|Missing|0|0|0|@shouldalert|  
+|Total Children|Missing|0|0|0|1|  
 |Total Children|0|4865|0.278254404|0|4|  
 |Total Children|3|2093|0.119709449|0|4|  
-|Total Children|@shouldalert|3406|0.19480668|0|4|  
+|Total Children|1|3406|0.19480668|0|4|  
   
  包含 `Bike Buyer` 資料行，因為臨界統計資料節點永遠包含可預測屬性及其可能值的描述。 列出的其他所有資料行代表輸入屬性，以及模型中所使用的值。 值只能是遺失、離散或離散化。  
   
  在貝式機率分類模型中，可能沒有連續屬性，因此，所有數值資料都會以離散 (VALUE_TYPE = 4) 或離散化 (VALUE_TYPE = 5) 代表。  
   
- A`Missing`值 (VALUE_TYPE = 1) 加入至每個輸入和輸出的屬性，以表示定型資料中所沒有的可能值。 您必須仔細區別字串和預設值為 「 遺失 」`Missing`值。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
+ A`Missing`值 (VALUE_TYPE = 1) 會加入到每個輸入和輸出的屬性，以代表原本不在定型資料中的可能值。 您必須仔細區別 「 遺失 」 字串和預設`Missing`值。 如需詳細資訊，請參閱[遺漏值 &#40;Analysis Services - 資料採礦&#41;](missing-values-analysis-services-data-mining.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)   

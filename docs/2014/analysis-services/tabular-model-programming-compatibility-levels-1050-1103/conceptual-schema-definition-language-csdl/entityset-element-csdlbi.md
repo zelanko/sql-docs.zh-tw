@@ -1,5 +1,5 @@
 ---
-title: EntitySet 元素 (CSDLBI) |Microsoft 文件
+title: EntitySet 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d4703c9e-5594-472e-a85b-0f5bd0d73d6f
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 243dd308d996f82c9a51c8ae9f7f44cfd473dcb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d8b1e7438714807260b4e317e9367ff77f9916df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314568"
 ---
 # <a name="entityset-element-csdlbi"></a>EntitySet 元素 (CSDLBI)
   EntitySet 元素會定義 CSDLBI 資料模型中特殊類型的實體集合。  

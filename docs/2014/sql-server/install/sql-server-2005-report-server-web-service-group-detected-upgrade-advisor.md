@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2005 報表伺服器 Web 服務群組偵測到 (Upgrade Advisor) |Microsoft 文件
+title: 偵測的 SQL Server 2005 報表伺服器 Web 服務群組 (Upgrade Advisor) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deployment [Reporting Services]
 ms.assetid: 699d24eb-7756-4b41-9294-ef1a94b2f267
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 7d3affeac1976b82ba269c4d86eac94cdc04335f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83f19122e9c6846de6465fba84226076ce7fec9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265704"
 ---
 # <a name="sql-server-2005-report-server-web-service-group-detected-upgrade-advisor"></a>偵測到 SQL Server 2005 報表伺服器 Web 服務群組 (Upgrade Advisor)
   Upgrade Advisor 偵測到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體相關聯[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]報表伺服器 Web 服務群組。  

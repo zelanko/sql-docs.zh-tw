@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c4c8b956ab0874bc89b23d72953c9268276a29da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f57d3477c2dcede6b168dea569dcdcecf25d8c49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304078"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion 事件類別
   **CursorImplicitConversion** 事件類別描述應用程式開發介面 (API) 或 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料指標中所發生的資料指標隱含轉換事件。 當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行的 Transact-SQL 陳述式不被所要求的伺服器資料指標類型支援時，就會發生資料指標隱含轉換事件。 此時 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回一個錯誤訊息，指出資料指標類型已經變更。  

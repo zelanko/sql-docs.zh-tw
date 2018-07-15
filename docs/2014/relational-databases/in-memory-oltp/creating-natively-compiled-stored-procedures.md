@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 caps.latest.revision: 13
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 639202717573abdbd0ec6424c92039e37c042875
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c89d7c7baf7422ba3bc6a457509ea7e8ac37a001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331720"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>建立原生編譯的預存程序
-  原生編譯預存程序不會實作完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可程式性和查詢介面區。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構無法在原生編譯的預存程序內使用。 如需詳細資訊，請參閱[原生編譯預存程序中支援的建構](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md)。  
+  原生編譯預存程序不會實作完整 [!INCLUDE[tsql](../../includes/tsql-md.md)] 可程式性和查詢介面區。 某些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 建構無法在原生編譯的預存程序內使用。 如需詳細資訊，請參閱 <<c0> [ 原生編譯預存程序中支援的建構](..\in-memory-oltp\supported-features-for-natively-compiled-t-sql-modules.md)。  
   
  但有幾個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 功能只可供原生編譯的預存程序使用：  
   
@@ -55,11 +55,11 @@ end
 go  
 ```  
   
- 在程式碼範例中，`NATIVE_COMPILATION`指出此[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序是原生編譯的預存程序。 以下是必要的選項：  
+ 在程式碼範例中，`NATIVE_COMPILATION`表示這個[!INCLUDE[tsql](../../includes/tsql-md.md)]預存程序是原生編譯的預存程序。 以下是必要的選項：  
   
 |選項|描述|  
 |------------|-----------------|  
-|`SCHEMABINDING`|原生編譯的預存程序必須繫結至其所參考之物件的結構描述。 這表示，此程序所參考的資料表將無法卸除。 程序中參考的資料表必須包含其結構描述名稱和萬用字元 (\*) 不允許在查詢中。 `SCHEMABINDING` 僅適用於原生編譯的預存程序，在這個版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
+|`SCHEMABINDING`|原生編譯的預存程序必須繫結至其所參考之物件的結構描述。 這表示，此程序所參考的資料表將無法卸除。 程序中參考的資料表必須包含其結構描述名稱和萬用字元 (\*) 查詢中不允許。 `SCHEMABINDING` 僅適用於原生編譯的預存程序，在這個版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
 |`EXECUTE AS`|原生編譯的預存程序不支援 `EXECUTE AS CALLER` (預設執行內容)。 因此，需要指定執行內容。 選項`EXECUTE AS OWNER`， `EXECUTE AS`*使用者*，和`EXECUTE AS SELF`支援。|  
 |`BEGIN ATOMIC`|原生編譯的預存程序主體必須剛好由一個不可部分完成的區塊所組成。 不可部分完成的區塊保證會以不可部分完成的方式執行預存程序。 如果此程序在使用中交易的內容之外叫用，它將會開始新的交易，該交易會在不可部分完成的區塊結尾認可。 原生編譯預存程序中不可部分完成的區塊有兩個必要選項：<br /><br /> `TRANSACTION ISOLATION LEVEL`。 請參閱[交易隔離等級](../../database-engine/transaction-isolation-levels.md)針對支援的隔離等級。<br /><br /> `LANGUAGE`。 預存程序的語言必須設定為其中一個可用語言或語言別名。|  
   
@@ -73,7 +73,7 @@ go
   
 -   使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證。  
   
- 建立原生編譯預存程序時，您可能也會看到錯誤 15517。 如需詳細資訊，請參閱[MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md)。  
+ 建立原生編譯預存程序時，您可能也會看到錯誤 15517。 如需詳細資訊，請參閱 < [MSSQLSERVER_15517](../errors-events/mssqlserver-15517-database-engine-error.md)。  
   
 ## <a name="updating-a-natively-compiled-stored-procedure"></a>更新原生編譯預存程序  
  不支援對原生編譯的預存程序執行變更作業。 修改原生編譯預存程序的方法之一，是先卸除再重新建立預存程序︰  

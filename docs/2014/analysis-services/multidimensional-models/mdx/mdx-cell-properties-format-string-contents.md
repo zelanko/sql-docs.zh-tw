@@ -1,5 +1,5 @@
 ---
-title: FORMAT_STRING 內容 (MDX) |Microsoft 文件
+title: FORMAT_STRING 內容 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
 - VALUE property
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f017cd8b6f3e47e5c99e563babbfa3904dbd6f2e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145505"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293588"
 ---
 # <a name="formatstring-contents-mdx"></a>FORMAT_STRING 內容 (MDX)
-  `FORMAT_STRING`資料格屬性可格式化`VALUE`資料格屬性，建立的值`FORMATTED_VALUE`資料格屬性。 `FORMAT_STRING`資料格屬性能處理字串及原始數值，套用格式運算式的值，傳回數值的格式化的值`FORMATTED_VALUE`資料格屬性。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
+  `FORMAT_STRING`資料格屬性可格式化`VALUE`資料格屬性，建立值`FORMATTED_VALUE`資料格屬性。 `FORMAT_STRING`資料格屬性能處理字串及原始數值，套用格式運算式，並傳回數值的格式化的值的值對`FORMATTED_VALUE`資料格屬性。 下列資料表詳述了用來處理字串和數值的語法和格式字元。  
   
 ## <a name="string-values"></a>字串值  
  字串的格式運算式可以有一個區段或以分號 (;) 分隔的兩個區段。  

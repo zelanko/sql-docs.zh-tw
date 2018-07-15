@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 caps.latest.revision: 4
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bde345380c4fbf8531a74005d307d0b319183760
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 03edb5eb94194afecb4974604101b1ebaae26be8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204878"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>準備要在 Tablix 資料區中顯示的資料 (報表產生器及 SSRS)
   Tablix 資料區域會顯示資料集中的資料。 您可以檢視針對資料集擷取的所有資料，或者您可以建立篩選，讓您僅能看到資料的子集。 您也可以加入條件式運算式來填入 Null 值，或修改資料集的查詢來包含定義現有資料行之排序次序的資料行。  
@@ -28,7 +28,7 @@ ms.locfileid: "36132134"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="working-with-nulls-and-blanks-in-field-values"></a>在欄位值中使用 Null 和空白  
- 資料集中欄位集合的資料包含在執行階段從資料來源擷取的所有值，包括 Null 值和空白。 Null 值和空白通常無法分辨。 在大部分的情況下，這是所要的行為。 數值彙總函式，例如喜歡[總和](report-builder-functions-sum-function.md)和[Avg](report-builder-functions-avg-function.md)忽略 null 值。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)。  
+ 資料集中欄位集合的資料包含在執行階段從資料來源擷取的所有值，包括 Null 值和空白。 Null 值和空白通常無法分辨。 在大部分的情況下，這是所要的行為。 比方說，等數字的彙總函式[總和](report-builder-functions-sum-function.md)並[Avg](report-builder-functions-avg-function.md)忽略 null 值。 如需詳細資訊，請參閱 [彙總函式參考 &#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)。  
   
  如果您不想要以不同的方式處理 Null 值，可以使用條件式運算式或自訂程式碼，將自訂值取代為 Null 值。 例如，下列運算式會在 `Null` 欄位中出現 Null 值的每個位置，取代文字 `[Size]`。  
   
@@ -61,6 +61,6 @@ FROM Production.Product p
 ## <a name="see-also"></a>另請參閱  
  [資料集欄位集合 &#40;報表產生器及 SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [篩選、 分組和排序資料&#40;報表產生器和 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [篩選、 分組和排序資料&#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO (SQLXML 4.0) 執行 DiffGram |Microsoft 文件
+title: 使用 ADO (SQLXML 4.0) 中執行 DiffGram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], ADO
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6e0d7913e492f911c3303db7af2343bdef1ed940
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f236820719768cb6c04a19b6237bd71f8d8a620b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319958"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 DiffGram (SQLXML 4.0)
   這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 DiffGram。 在此應用程式中，DiffGram 和 XSD 結構描述會儲存在一個檔案中。 應用程式會從指定的檔案載入 DiffGram。 您可以使用任何 DiffGrams （及相關聯的 XSD 結構描述） 中所述[DiffGram 範例](diffgram-examples-sqlxml-4-0.md)。  
@@ -41,9 +41,9 @@ ms.locfileid: "36145321"
   
 -   DiffGram 會複製到命令資料流 (**strmIn**) 檔案。  
   
--   命令的輸出資料流設**StrmOut**物件 (**ADODB。資料流**) 才能接受任何傳回的資料。  
+-   命令的輸出資料流設定為**StrmOut**物件 (**ADODB。Stream**) 才能接受任何傳回的資料。  
   
--   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要搭配 SQLOLEDB 提供者使用 Sqlxml4.dll **SQLXML Version**屬性必須設定為**SQLXML.4.0** SQLOLEDB 提供者上**連接**物件。  
+-   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要搭配 SQLOLEDB 提供者使用 Sqlxml4.dll **SQLXML Version**屬性必須設為**SQLXML.4.0** SQLOLEDB 提供者**連接**物件。  
   
 -   執行命令 (DiffGram)。  
   
@@ -99,7 +99,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  在工具箱中，按一下  **CommandButton**，然後在表單上繪製一個按鈕。  
+4.  在 [工具箱] 中，按一下**CommandButton**，然後在表單上繪製一個按鈕。  
   
 5.  按兩下該按鈕來編輯程式碼，然後加入主題中提供之應用程式的程式碼。  
   

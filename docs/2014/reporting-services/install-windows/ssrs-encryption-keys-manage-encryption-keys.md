@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
 - private keys [Reporting Services]
@@ -20,13 +20,13 @@ ms.assetid: 58e61636-88a2-4338-ae5f-3dd210aee887
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: bea136573490ba06fba1ce5f8ca7c7a47a17d3f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 95ba14d23db8c606e66db48b5be5b865879de7c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187975"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>設定和管理加密金鑰 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用加密金鑰來保護儲存於報表伺服器資料庫中之認證和連線資訊的安全。 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，可透過用於保護敏感性資料的公開、私密和對稱金鑰組合來支援加密。 當您安裝或設定報表伺服器時，對稱金鑰會在報表伺服器起始設定期間建立，供報表伺服器用來對儲存於報表伺服器中之機密資料進行加密。 公開金鑰和私密金鑰是由作業系統所建立，可用來保護對稱金鑰。 針對負責儲存報表伺服器資料庫中之機密資料的每一個報表伺服器執行個體，建立一組公開金鑰和私密金鑰。  
@@ -49,7 +49,7 @@ ms.locfileid: "36135116"
 -   在向外延展部署中加入或移除報表伺服器執行個體，其中多個報表伺服器共用單一報表伺服器資料庫和能加解密該資料庫的對稱金鑰。  
   
 ## <a name="in-this-section"></a>本節內容  
- [將報表伺服器初始化&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [初始化報表伺服器&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
  說明如何建立加密金鑰。  
   
  [備份與還原 Reporting Services 加密金鑰](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
@@ -61,7 +61,7 @@ ms.locfileid: "36135116"
  [刪除並重新建立加密金鑰&#40;SSRS 組態管理員&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
  說明如何以新版本取代對稱金鑰，以及如果無法驗證對稱金鑰，應如何重新建立。  
   
- [加入和移除向外延展部署的加密金鑰&#40;SSRS 組態管理員&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
+ [新增和移除向外延展部署的加密金鑰&#40;SSRS 組態管理員&#41;](add-and-remove-encryption-keys-for-scale-out-deployment.md)  
  說明如何加入和移除加密金鑰，以控制哪些報表伺服器屬於向外延展部署的一部分。  
   
 ## <a name="see-also"></a>另請參閱  

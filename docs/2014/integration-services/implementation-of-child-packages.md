@@ -1,5 +1,5 @@
 ---
-title: 子封裝的實作 |Microsoft 文件
+title: 子封裝的實作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 caps.latest.revision: 38
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85a9e6c93f0b1c3157f9814508ee4fb9263cd444
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbf5d3d4142c543f5bd0ab3cebae72eeea3bb432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287584"
 ---
 # <a name="implementation-of-child-packages"></a>子封裝的實作
   使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]實作負載平衡時，其他伺服器上會安裝子封裝，以充分利用可用的 CPU 或伺服器時間。 建立及執行子封裝需要下列步驟：  
@@ -45,7 +45,7 @@ ms.locfileid: "36146800"
   
 -   使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來匯出封裝。  
   
--   為包含想要部署之封裝的專案建立部署公用程式，然後執行「封裝安裝精靈」，將封裝安裝到檔案系統或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體，以部署封裝。 如需詳細資訊，請參閱[封裝部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。  
+-   為包含想要部署之封裝的專案建立部署公用程式，然後執行「封裝安裝精靈」，將封裝安裝到檔案系統或 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體，以部署封裝。 如需詳細資訊，請參閱 <<c0> [ 封裝部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。</c0>  
   
  您必須重複部署到想要使用的每一部遠端伺服器。  
   
@@ -71,8 +71,8 @@ ms.locfileid: "36146800"
   
 ## <a name="related-content"></a>相關內容  
   
--   部落格文章： [SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS： 存取父封裝中的變數](http://go.microsoft.com/fwlink/?LinkId=257729)，consultingblogs.emc.com 上。  
   
--   部落格文章： [SSIS： 應執行子封裝中處理程序或跨處理序嗎？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
+-   部落格文章[SSIS： 應執行同處理序或跨處理序的子封裝？](http://go.microsoft.com/fwlink/?LinkId=220819)，consultingblogs.emc.com 上。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 維度類型 |Microsoft 文件
+title: 維度類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -29,23 +29,23 @@ helpviewer_keywords:
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1fe0311a992f0f8c067ba6e7096698f96f8bc4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fe72ba73f73d2c2d87672642e403c5ed0e4f541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131596"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189045"
 ---
 # <a name="dimension-types"></a>維度類型
-  `Type` 屬性設定會提供關於維度內容的資訊給伺服器和用戶端應用程式。 在某些情況下，`Type` 設定只會提供用戶端應用程式的指導，而且是選擇性的。 在其他情況下 (例如 `Accounts` 或 `Time` 維度)，維度的 `Type` 屬性 (Property) 設定及其屬性 (Attribute) 會決定特定的伺服器型行為，且在 Cube 中實作某些行為時可能會需要用到。 例如，維度的 `Type` 屬性可設定為 `Accounts`，對用戶端應用程式指出標準維度包含帳戶屬性。 如需有關時間、 帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[建立父子式類型維度的財務帳戶](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[建立貨幣輸入維度](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
+  `Type` 屬性設定會提供關於維度內容的資訊給伺服器和用戶端應用程式。 在某些情況下，`Type` 設定只會提供用戶端應用程式的指導，而且是選擇性的。 在其他情況下 (例如 `Accounts` 或 `Time` 維度)，維度的 `Type` 屬性 (Property) 設定及其屬性 (Attribute) 會決定特定的伺服器型行為，且在 Cube 中實作某些行為時可能會需要用到。 例如，維度的 `Type` 屬性可設定為 `Accounts`，對用戶端應用程式指出標準維度包含帳戶屬性。 如需時間、 帳戶和貨幣維度的詳細資訊，請參閱[建立日期類型維度](../multidimensional-models/database-dimensions-create-a-date-type-dimension.md)，[建立的父子式類型維度的財務帳戶](../multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md)，和[建立貨幣輸入維度](../multidimensional-models/database-dimensions-create-a-currency-type-dimension.md)。  
   
  維度類型的預設值是 `Regular`，亦即不會對維度的內容進行假設。 除非您在使用維度精靈定義維度時指定 `Time`，否則當您初始定義維度時，這就是所有維度的預設值。 如果維度精靈未列出維度類型的適當類型，則您也應將 `Regular` 保留為維度類型。  
   
 ## <a name="available-dimension-types"></a>可用的維度類型  
- 下表描述中可用的維度類型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+ 下表描述可用的維度類型[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
 |維度類型|描述|  
 |--------------------|-----------------|  

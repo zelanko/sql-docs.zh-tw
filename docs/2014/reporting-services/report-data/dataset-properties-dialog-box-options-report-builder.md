@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10020"
 ms.assetid: 43e50133-45ef-47a2-b575-34dfcc28ec98
 caps.latest.revision: 15
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b0d5e7c55b8040496e0714acd98bb81d37c602bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e0fc786c5cf35dda0beec0800b1515c9e0a44ca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255790"
 ---
 # <a name="dataset-properties-dialog-box-options-report-builder"></a>資料集屬性對話方塊、選項 (報表產生器)
   選取 [資料集屬性] 對話方塊上的 [選項] 來變更查詢的資料選項，例如定序選項以及將小計視為詳細資料。 如需定序的詳細資訊，請參閱《 [SQL Server 線上叢書](../../relational-databases/collations/collation-and-unicode-support.md) 》中的 [定序與 Unicode 支援](http://go.microsoft.com/fwlink/?linkid=98335)。  
@@ -49,7 +49,7 @@ ms.locfileid: "36131657"
  選取決定區分全半形的值。 此選項指出資料是否區分全半形，而且可以設定為 **True**、 **False**或 **Auto**。預設值 [Auto] 指出報表伺服器應該在報表執行時，嘗試從資料提供者衍生此值。 如果資料提供者不支援區分全半形類型，報表會以該值為 **[False]** 來執行。 如果您知道值，而且知道系統支援該值，選擇 **[True]**。  
   
  **將小計當做詳細資料列**  
- 選取一個值，指出您是否要讓小計資料列當做詳細資料列而非彙總資料列。 預設值為**自動**，表示將小計資料列應視為詳細資料列是否報表不使用`Aggregate`（） 函數來存取資料集中的任何欄位。 如果您要讓小計資料列當做彙總資料列，選擇 **[False]**。 如果您想要解譯成詳細資料列的小計資料列，而且您知道，它們不會使用`Aggregate`（) 函式中，選擇**True**。  
+ 選取一個值，指出您是否要讓小計資料列當做詳細資料列而非彙總資料列。 預設值**自動**，表示將小計資料列應視為詳細資料列是否報表不使用`Aggregate`（） 函式，來存取資料集中的任何欄位。 如果您要讓小計資料列當做彙總資料列，選擇 **[False]**。 如果您想解譯為詳細資料列的小計資料列，而且您知道它們不使用`Aggregate`（) 函式中，選擇 **，則為 True**。  
   
 ## <a name="see-also"></a>另請參閱  
  [對話方塊、窗格和精靈的報表產生器說明](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   

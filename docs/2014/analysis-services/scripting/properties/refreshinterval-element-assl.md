@@ -1,5 +1,5 @@
 ---
-title: RefreshInterval 元素 (ASSL) |Microsoft 文件
+title: RefreshInterval 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RefreshInterval element
 ms.assetid: 2761d26a-5fb0-452c-9a89-12f8dc658c33
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60dbb6d89483305d971488209b8e13f85e7c2840
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3fecbe3eef6eb68af256dfcc0a94ddef1ba3aee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315048"
 ---
 # <a name="refreshinterval-element-assl"></a>RefreshInterval 元素 (ASSL)
   指定重新整理與父元素相關聯之繫結資料的間隔。  
@@ -52,8 +52,8 @@ ms.locfileid: "36037104"
 |--------------------|-----------------|  
 |資料類型和長度|XML 持續時間|  
 |基數|0-1：只能出現一次的選擇性元素。|  
-|預設值|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md)或[ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) = PT 1s|  
-|預設值|其他所有項目 = PT1m|  
+|預設值|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md)或是[ProactiveCachingQueryBinding](../data-type/querybinding-data-type-assl.md) = 太平洋時間 1|  
+|預設值|所有其他 = PT1m|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

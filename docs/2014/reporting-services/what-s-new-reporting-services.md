@@ -1,5 +1,5 @@
 ---
-title: 什麼&#39;s 新 (Reporting Services) |Microsoft 文件
+title: 什麼&#39;s 新 (Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [Reporting Services]
 - Reporting Services, what's new
@@ -18,24 +18,24 @@ ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 caps.latest.revision: 143
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 84cd5432d9f4b9808a5a16521410902129b8dbf5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d25e63c996c0b5d80bfcf44b22e219906328a2b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323638"
 ---
 # <a name="what39s-new-reporting-services"></a>什麼&#39;s 新 (Reporting Services)
   
   
 ||  
 |-|  
-|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本增加了 Google Chrome 瀏覽器的支援。 如需有關支援的瀏覽器的詳細資訊，請參閱[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 版本增加了 Google Chrome 瀏覽器的支援。 如需有關支援的瀏覽器的詳細資訊，請參閱 <<c0> [ 規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。</c0>|  
   
  如需其他資訊[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]產品和技術，請參閱[What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)。  
   
- 如需詳細資訊相關之變更[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]商業智慧，請參閱[What's New in Analysis Services 和 Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)。  
+ 如需有關變更的相關[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]商業智慧，請參閱 < [What's New in Analysis Services 和 Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 回溯相容性](reporting-services-backward-compatibility.md)   

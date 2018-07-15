@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a90757714b06ed29a4cd742a4d39bc83e80a294d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2a0a3f41c30293d8befc14efa9fb331e611da74
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300498"
 ---
 # <a name="delete-packages"></a>刪除封裝
   在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，您可以刪除已儲存至檔案系統的封裝。 如果您刪除封裝，它將會永久刪除，並且無法還原到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  

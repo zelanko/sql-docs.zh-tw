@@ -1,13 +1,11 @@
 ---
-title: Common Language Runtime (CLR) 整合程式設計概念 |Microsoft 文件
+title: Common Language Runtime (CLR) 整合程式設計概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - .NET Framework [SQL Server]
 ms.assetid: 951bf851-3e6e-4361-ae6a-2bcd5b837ebd
 caps.latest.revision: 56
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f508cdada9905c2a8ec322319df58cb5504af14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b4b2ee2815f89770d3c9af182237fb7d888424bc
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134195"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350090"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Common Language Runtime (CLR) 整合程式設計概念
   從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 具備 .NET Framework for [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 的 Common Language Runtime (CLR) 元件整合功能。 這表示您現在可以使用任何 .NET Framework 語言 (包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic .NET 及 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#)，撰寫預存程序、觸發程序、使用者定義型別、使用者定義函數、使用者定義彙總及資料流資料表值函數。  
@@ -38,7 +36,7 @@ ms.locfileid: "36134195"
   
  下表列出本節的主題。  
   
- [Common Language Runtime &#40;CLR&#41;整合概觀](common-language-runtime-integration-overview.md)  
+ [通用語言執行平台&#40;CLR&#41;整合概觀](common-language-runtime-integration-overview.md)  
  提供 CLR 的簡短概觀，並描述在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用此技術的方法和原因。 描述使用 CLR 建立資料庫物件的優點。  
   
  [組件 &#40;Database Engine&#41](assemblies-database-engine.md)  

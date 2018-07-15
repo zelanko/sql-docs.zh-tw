@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
 caps.latest.revision: 26
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a22a848b30e33689cd02b8ea6ce3651539501e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 031c82bb3ebdb3843eb3f9a540728a00cd8cc903
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329498"
 ---
 # <a name="step-1-copying-the-lesson-3-package"></a>步驟 1：複製第 3 課的套件
   在這項工作中，您將為第 3 課所建立的 Lesson 3.dtsx 套件建立複本。 另外，如果您並未完成第 3 課，可以將此教學課程中隨附之已完成的第 3 課封裝加入至專案中，然後建立該封裝的複本來使用。 在第 4 課的其餘課程中，您將使用這個新的複本。  
@@ -40,7 +40,7 @@ ms.locfileid: "36135433"
   
 6.  以滑鼠右鍵按一下 [控制流程] 索引標籤背景的任何位置，然後按一下 [屬性]。  
   
-7.  在 [屬性] 視窗中，更新`Name`屬性`Lesson 4`。  
+7.  在 [屬性] 視窗中，更新`Name`屬性設`Lesson 4`。  
   
 8.  按一下方塊**識別碼**屬性，然後在清單中，按一下**\<產生新的識別碼 >**。  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36135433"
 5.  複製並貼上第 3 課中的套件，如上一個程序的步驟 3-8 所述。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2： 建立損毀的檔案](lesson-4-2-creating-a-corrupted-file.md)  
+ [步驟 2：建立損毀檔案](lesson-4-2-creating-a-corrupted-file.md)  
   
   

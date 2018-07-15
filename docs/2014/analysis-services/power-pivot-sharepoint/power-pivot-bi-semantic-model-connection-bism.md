@@ -1,5 +1,5 @@
 ---
-title: PowerPivot BI 語意模型連接 (.bism) |Microsoft 文件
+title: PowerPivot BI 語意模型連接 (.bism) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac5edd8e03f7094bec05298057f081053ef13640
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b8f10f53f09848971eee5773d2875d238b0033c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253010"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI 語意模型連接 (.bism)
-  BI 語意模型連接 (.bism) 是可攜式連接，連接的 Excel 或[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]回報給[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格式模型資料庫或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多維度模式中的執行個體。 如果您熟悉 Office 資料連接 (.odc) 檔案，您會注意到定義和使用 .bism 連接檔案之方式的相似性。  
+  BI 語意模型連接 (.bism) 是可攜式連接，連接 Excel 或[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]上司[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]表格式模型資料庫或[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]多維度模式的執行個體。 如果您熟悉 Office 資料連接 (.odc) 檔案，您會注意到定義和使用 .bism 連接檔案之方式的相似性。  
   
- BI 語意模型連接是透過 SharePoint 來建立和存取。 建立 BI 語意模型連接會針對程式庫中的 BI 語意模型連接啟用命令。 快速啟動命令會開啟新的 Excel 活頁簿或是編輯連接檔案的選項。 如果[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]已安裝，您也會看到命令，以建立[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]報表。  
+ BI 語意模型連接是透過 SharePoint 來建立和存取。 建立 BI 語意模型連接會針對程式庫中的 BI 語意模型連接啟用命令。 快速啟動命令會開啟新的 Excel 活頁簿或是編輯連接檔案的選項。 如果[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]已安裝，您也會看到建立的命令[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]報表。  
   
  ![螢幕擷取畫面的 BISM 快速啟動命令](../media/ssas-bism-quicklaunch.gif "螢幕擷取畫面的 BISM 快速啟動命令")  
   
@@ -58,15 +58,15 @@ ms.locfileid: "36146833"
   
  Power View 和表格式模型資料庫之間的連接依循雙躍點驗證順序，其中使用者識別會從用戶端流向 SharePoint，然後再從 SharePoint 流向伺服器陣列外部執行的後端 Analysis Services 表格式模型資料庫。 處理連接要求的 ADOMD.NET 用戶端程式庫在初次嘗試時一定會嘗試 Kerberos。 如果設定 Kerberos，表格式模型資料庫的連接上會模擬使用者識別，而且連接會成功。  
   
- 如果未設定 Kerberos，而且要求失敗，Reporting Services 會進行第二次嘗試。 在這種情況下，用戶端程式庫會使用 Reporting Services 服務識別和 NTLM 驗證連接到 Analysis Services。 Power View 使用者的身分識別傳遞連接字串使用`effectiveusername`參數。  
+ 如果未設定 Kerberos，而且要求失敗，Reporting Services 會進行第二次嘗試。 在這種情況下，用戶端程式庫會使用 Reporting Services 服務識別和 NTLM 驗證連接到 Analysis Services。 Power View 使用者的身分識別會傳遞連接字串使用`effectiveusername`參數。  
   
  僅 Analysis Services 執行個體的系統管理員角色成員有權使用 `effectiveusername` 參數建立連接以及模擬伺服器執行個體上的另一個使用者。 因此，Reporting Services 共用服務的執行帳戶必須有 Analysis Services 執行個體的管理權限。  [建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)主題中提供有關授與管理權限給服務帳戶的指示。  
   
- 下圖顯示每個連接都使用相同 Windows 使用者識別的連接順序。 最後一個連接上 Analysis Services，連接是 Reporting Services 服務應用程式識別，傳遞 Windows 使用者識別使用`effectiveusername`。  
+ 下圖顯示每個連接都使用相同 Windows 使用者識別的連接順序。 在最後一個 Analysis Services 連接，連接是 Reporting Services 服務應用程式識別，並傳遞 Windows 使用者身分識別使用`effectiveusername`。  
   
  ![表格式資料庫之間的模擬連接](../media/ssas-powerpivotbismconnection-2.gif "表格式資料庫之間的模擬連接")  
   
- **從 Power View 連接到 SharePoint 中 PowerPivot 資料**  
+ **從 Power View 連接到 SharePoint 中的 PowerPivot 資料**  
   
  當 SharePoint 使用者按一下 BI 語意連接，而解析為相同伺服器陣列中的 PowerPivot 活頁簿時，該連接會在 SharePoint 環境的內容中發生。 PowerPivot 服務應用程式會處理連接要求，將它轉送到同一部電腦上的 Analysis Services 執行個體。 Analysis Services 執行個體會從活頁簿擷取並載入 PowerPivot 資料。 所有後續連接都是由伺服器陣列中的 PowerPivot 服務應用程式管理。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36146833"
 ##  <a name="bkmk_rel"></a> 相關工作  
  [將 BI 語意模型連接內容類型加入至文件庫&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
- [建立 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [建立與 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
  [C建立與表格式模型資料庫的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   

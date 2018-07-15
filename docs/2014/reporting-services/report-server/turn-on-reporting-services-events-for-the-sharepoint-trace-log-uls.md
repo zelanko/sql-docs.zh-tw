@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7cf717edbf16f8f151bbf278d8bd69aa997c141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b278a5e71b3954e8d296fd9dc7644b33b99aae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131924"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244328"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
   從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 伺服器可以將 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 事件寫入 SharePoint 統一記錄服務 (ULS) 追蹤記錄。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 特定類別目錄。  
@@ -105,7 +105,7 @@ Get-SPDiagnosticConfig
 |本機模式轉譯||  
 |SOAP 用戶端 Proxy||  
 |UI 頁面||  
-|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]的一項功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]增益集[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 “SQL Server Reporting Services” 的 **類別目錄** 和 “Power View” 的 **區域** 之下。<br /><br /> 使用 “Power View” 的區域所記錄的項目內容是由用戶端應用程式所決定。|  
+|Power View|已寫入 **LogClientTraceEvents** API 中的記錄項目。 這些項目來自於用戶端應用程式，包括[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]，一項功能[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]增益集[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition。<br /><br /> 所有來自於 LogClientTraceEvents API 的記錄項目都會記錄在 “SQL Server Reporting Services” 的 **類別目錄** 和 “Power View” 的 **區域** 之下。<br /><br /> 使用 “Power View” 的區域所記錄的項目內容是由用戶端應用程式所決定。|  
 |報表伺服器警示執行階段||  
 |報表伺服器應用程式定義域管理員||  
 |報表伺服器緩衝回應||  

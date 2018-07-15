@@ -1,5 +1,5 @@
 ---
-title: StopTime 元素 (ASSL) |Microsoft 文件
+title: StopTime 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StopTime element
 ms.assetid: 6f863d53-033b-46e0-9837-e891e739b4b0
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8de76230ef19e04d921c93ce54d368e55424c230
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0a646cf736afbf78b656a2e891b6dafbcfead5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132957"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302668"
 ---
 # <a name="stoptime-element-assl"></a>StopTime 元素 (ASSL)
   指定的日期和時間[追蹤](../objects/trace-element-assl.md)元素應該停止。  
@@ -61,7 +61,7 @@ ms.locfileid: "36132957"
 |父元素|[追蹤](../objects/trace-element-assl.md)|  
 |子元素|無|  
   
- 對應目的父代的項目`StopTime`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Trace>。  
+ 對應至父系的元素`StopTime`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>另請參閱  
  [追蹤項目&#40;ASSL&#41;](../collections/traces-element-assl.md)   

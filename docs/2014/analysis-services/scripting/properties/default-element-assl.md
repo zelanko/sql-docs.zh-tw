@@ -1,5 +1,5 @@
 ---
-title: Default 元素 (ASSL) |Microsoft 文件
+title: Default 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Default element
 ms.assetid: 02c1844c-51fb-44fe-aafb-001e53ad293c
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e63263397420c1350ea8a0eef681e158b101637a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9003b574d2fd38e39eff0dc9e32ea3015d0fa99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304178"
 ---
 # <a name="default-element-assl"></a>Default 元素 (ASSL)
-  決定是否[DrillThroughAction](../data-type/action-data-type-assl.md)為預設鑽研動作。  
+  決定是否[DrillThroughAction](../data-type/action-data-type-assl.md)是預設的鑽研動作。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36132974"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`Default`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DrillThroughAction>。  
+ 對應至父系的元素`Default`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DrillThroughAction>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

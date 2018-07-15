@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Bitmap Warning event class
 ms.assetid: 5bf9b4e3-0eba-4e67-8ba9-30ca4b48e1d4
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4989b77f9d551c9c6afacb5e76986c3356a83ee7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cd1026d355e2459e93b1f76d35092db7aa7ec3bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275264"
 ---
 # <a name="bitmap-warning-event-class"></a>點陣圖警告事件類別
   **點陣圖警告** 事件類別可用來監視查詢中的點陣圖篩選使用情況。 此事件子類別可用來報告何時已經在查詢中停用點陣圖篩選。  

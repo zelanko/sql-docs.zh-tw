@@ -1,5 +1,5 @@
 ---
-title: MdxScript 元素 (ASSL) |Microsoft 文件
+title: MdxScript 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MdxScript element
 ms.assetid: 0c59a550-dc95-4d50-948a-bb99348bdd86
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81d83e2d179e5a16d17cc6988b209f348dbc2572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3aa8d72073f5459a7e260a81ca4bf5c67ad3209b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169470"
 ---
 # <a name="mdxscript-element-assl"></a>MdxScript 元素 (ASSL)
   包含相關聯的多維度運算式 (MDX) 指令碼的相關資訊[Cube](cube-element-assl.md)項目。  
@@ -67,12 +67,12 @@ ms.locfileid: "36133543"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MdxScripts](../collections/mdxscripts-element-assl.md)|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [CalculationProperties](../collections/calculationproperties-element-assl.md)，[命令](../collections/commands-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [DefaultScript](../properties/defaultscript-element-assl.md)， [描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)，[名稱](../properties/name-element-assl.md)|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [CalculationProperties](../collections/calculationproperties-element-assl.md)，[命令](../collections/commands-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [DefaultScript](../properties/defaultscript-element-assl.md)， [描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)，[名稱](../properties/name-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
  根據預設，指令碼的 `DefaultScript` 元素會設定為 `True`。 將特定指令碼的 `DefaultScript` 設定為 `True` 就會將所有其他指令碼的 `DefaultScript` 設定為 `False`。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MdxScript>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MdxScript>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

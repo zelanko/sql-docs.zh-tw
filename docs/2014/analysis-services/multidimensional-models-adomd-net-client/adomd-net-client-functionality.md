@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET 用戶端功能 |Microsoft 文件
+title: ADOMD.NET 用戶端功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,33 +15,33 @@ helpviewer_keywords:
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5fa854ebf8a67878d17b6e01b5cf8e70fe869d88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 85e9ff2d42c61b97822e4715af7b8be3f87b7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261534"
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 用戶端功能
   ADOMD.NET 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 資料提供者一樣，可做為應用程式與資料來源之間的橋樑。 不過，ADOMD.NET 與其他 .NET Framework 資料提供者不同的是，ADOMD.NET 可處理分析資料。 為了處理分析資料，ADOMD.NET 支援與其他 .NET Framework 資料提供者非常不一樣的功能。 ADOMD.NET 不僅可讓您擷取資料，還可以擷取中繼資料並變更分析資料存放區的結構：  
   
  **擷取中繼資料**  
- 應用程式可以進一步了解使用結構描述資料列集或是物件模型，透過中繼資料擷取從資料來源擷取的資料。 每個可用的關鍵效能指標 (KPI) 類型、在 Cube 中的維度以及採礦模型所需的參數等資訊全部都是可探索的。 中繼資料，是最重要*動態*需要使用者輸入，以決定要擷取類型、 深度和資料範圍的應用程式。 範例包括 Query Analyzer、Microsoft Excel 及其他查詢工具。 中繼資料是較不重要*靜態*執行一組預先定義的動作的應用程式。  
+ 應用程式可以進一步了解使用結構描述資料列集或是物件模型，透過中繼資料擷取從資料來源擷取的資料。 每個可用的關鍵效能指標 (KPI) 類型、在 Cube 中的維度以及採礦模型所需的參數等資訊全部都是可探索的。 中繼資料是最重要*動態*需要使用者輸入，以決定要擷取的類型、 深度和資料範圍的應用程式。 範例包括 Query Analyzer、Microsoft Excel 及其他查詢工具。 中繼資料是較不重要*靜態*執行一組預先定義的動作的應用程式。  
   
- 如需詳細資訊：[從分析資料來源擷取的中繼資料](retrieving-metadata-from-an-analytical-data-source.md)。  
+ 如需詳細資訊：[擷取從分析資料來源的中繼資料](retrieving-metadata-from-an-analytical-data-source.md)。  
   
  **擷取資料**  
  資料擷取是實際擷取儲存在資料來源中的資訊。 資料擷取是「靜態」應用程式的主要功能，這些應用程式知道資料來源的結構。 資料擷取也是「動態」應用程式的最終結果。 當天給定時間點上的 KPI 值、每家店前一個小時內所銷售的腳踏車數目，以及決定員工年度績效的因素，全部都是可以擷取的資料範例。 擷取資料對於任何查詢應用程式都是非常重要的。  
   
- 如需詳細資訊：[從分析資料來源擷取的資料](retrieving-data-from-an-analytical-data-source.md)。  
+ 如需詳細資訊：[分析資料來源擷取的資料](retrieving-data-from-an-analytical-data-source.md)。  
   
  **變更分析資料的結構**  
  ADOMD.NET 也可用以實際變更分析資料存放區的結構。 雖然這通常是透過「分析管理物件」(AMO) 物件模型來完成，不過，您可以使用 ADOMD.NET 傳送「Analysis Services 指令碼語言」(ASSL) 命令，來建立、修改或是刪除伺服器上的物件。  
   
- 如需詳細資訊：[執行命令對分析資料來源](executing-commands-against-an-analytical-data-source.md)，[使用分析管理物件開發&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)， [Analysis Services 指令碼語言&#40;ASSL&#41;參考](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ 如需詳細資訊：[執行命令對分析資料來源](executing-commands-against-an-analytical-data-source.md)，[開發使用分析管理物件&#40;AMO&#41;](../multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)， [Analysis Services 指令碼語言&#40;ASSL&#41;參考](../scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
  擷取中繼資料、擷取資料以及變更資料結構，每個都發生在一般 ADOMD.NET 應用程式工作流程中的某個特定點。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36146836"
   
 3.  應用程式接著會針對伺服器執行命令。 這個命令可能是為了擷取其他中繼資料、擷取資料或修改資料庫結構等目的。 對於這些工作的任何一個，應用程式都可以使用先前決定的查詢，或是利用新擷取的中繼資料以建立其他查詢。  
   
-     如需詳細資訊：[從分析資料來源擷取的中繼資料](retrieving-metadata-from-an-analytical-data-source.md)，[從分析資料來源擷取的資料](retrieving-data-from-an-analytical-data-source.md)，[執行命令對分析資料來源](executing-commands-against-an-analytical-data-source.md)  
+     如需詳細資訊：[擷取從分析資料來源的中繼資料](retrieving-metadata-from-an-analytical-data-source.md)，[擷取的資料，從分析資料來源](retrieving-data-from-an-analytical-data-source.md)，[執行命令對分析資料來源](executing-commands-against-an-analytical-data-source.md)  
   
 4.  一旦將命令傳送到伺服器，伺服器會開始將中繼資料或是資料傳回用戶端。 這項資訊可使用 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 物件、<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件或是 `System.XmlReader` 物件來檢視。  
   

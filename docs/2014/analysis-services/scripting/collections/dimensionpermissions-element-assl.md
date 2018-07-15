@@ -1,5 +1,5 @@
 ---
-title: DimensionPermissions 元素 (ASSL) |Microsoft 文件
+title: DimensionPermissions 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DimensionPermissions element
 ms.assetid: cb9fdfbf-2118-423b-ba02-fa36813dbea0
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0ce5b6f55d8ed8d14b192de800c62237629195e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 605f5055d4fc3939cb8b30f123281e3d920db6fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246324"
 ---
 # <a name="dimensionpermissions-element-assl"></a>DimensionPermissions 元素 (ASSL)
-  包含適用於權限集合[維度](../objects/dimension-element-assl.md)項目或[CubePermission](../objects/cubepermission-element-assl.md)項目。  
+  包含適用於權限的集合[維度](../objects/dimension-element-assl.md)項目或有[CubePermission](../objects/cubepermission-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36145488"
 ## <a name="remarks"></a>備註  
  若為 `CubePermission` 元素，這個集合中的 `DimensionPermission` 元素會覆寫明確參考之每個維度的 `DimensionPermissions` 集合中指定的權限。 如果這個集合沒有參考某個維度，`CubePermission` 元素就會繼承該維度之 `DimensionPermissions` 集合中指定的權限。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DimensionPermissionCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DimensionPermissionCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

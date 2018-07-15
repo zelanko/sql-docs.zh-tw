@@ -1,5 +1,5 @@
 ---
-title: 匯入從資料摘要 (SSAS 表格式) |Microsoft 文件
+title: 匯入從資料摘要 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7869e07a67e7e3a74ee93ebef495eaba26d55317
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325138"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>從資料摘要匯入 (SSAS 表格式)
   資料摘要是從線上資料來源產生並串流至目的地文件或應用程式的一個或多個 XML 資料流。 您可以使用 [資料表匯入精靈]，將資料從資料摘要匯入模型。  
@@ -126,7 +126,7 @@ ms.locfileid: "36136975"
   
 3.  在 **[連接到資料摘要]** 頁面中，輸入所要存取之摘要的描述性名稱。 如果您要匯入多個摘要或資料來源，使用連接描述性名稱可能有助於記住連接的使用方式。  
   
-4.  在資料摘要 URL 輸入至清單資料服務的位址取代\<伺服器名稱 > 與 SharePoint 伺服器的實際名稱：  
+4.  在資料摘要 URL 輸入至清單資料服務的位址取代\<伺服器名稱 > 的 SharePoint 伺服器的實際名稱：  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -195,7 +195,7 @@ ms.locfileid: "36136975"
   
 ## <a name="see-also"></a>另請參閱  
  [支援的資料來源&#40;SSAS 表格式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [支援的資料型別&#40;SSAS 表格式&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [支援的資料類型&#40;SSAS 表格式&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
  [模擬&#40;SSAS 表格式&#41;](tabular-models/impersonation-ssas-tabular.md)   
  [處理資料&#40;SSAS 表格式&#41;](process-data-ssas-tabular.md)   
  [匯入資料&#40;SSAS 表格式&#41;](import-data-ssas-tabular.md)  

@@ -1,28 +1,25 @@
 ---
-title: 開發人員&#39;人員指南 (Master Data Services) |Microsoft 文件
+title: 開發人員&#39;指南 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- docset-sql-devref
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2a97da74004fb5f40d63cfac67cca253ef3f5e3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d16e4e431a7df73cd775b635ad6ebd8efb1e1e75
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145877"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349500"
 ---
-# <a name="developer39s-guide-master-data-services"></a>開發人員&#39;人員指南 (Master Data Services)
+# <a name="developer39s-guide-master-data-services"></a>開發人員&#39;指南 (Master Data Services)
   尋找有關如何撰寫程式碼以自訂您和您的使用者與 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 互動之方式的資訊。 了解如何：  
   
 -   撰寫存取 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服務的程式。 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web 服務是一個 Windows Communication Foundation (WCF) 服務，開發人員會使用這個服務，透過程式碼控制 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 功能。  

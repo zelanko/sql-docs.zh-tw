@@ -1,5 +1,5 @@
 ---
-title: 移動項目頁面 （報表管理員） |Microsoft 文件
+title: 移動項目頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8de86adb899b08cf37151524f2b451b6c54723b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5914bd0020a2d82e9f38ed4f5b60f0c880aaeb66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290274"
 ---
 # <a name="move-items-page-report-manager"></a>移動項目頁面 (報表管理員)
   您可以使用 [移動項目] 頁面，將報表、資料夾或其他項目移至報表伺服器上的新位置。 您可以輸入新位置的路徑，或使用樹狀檢視以導覽到報表伺服器命名空間中的新位置。 您只能移動您有權移動並儲存在目前報表伺服器上的項目。  

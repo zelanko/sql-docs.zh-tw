@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - HierarchyID
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c513aa5fb2c1f42b0eb2fa6c82deaac96c49d3ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 86aebcd1b6545782fed51991e3fe25e645c2e6c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321888"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>使用階層式方法擴展階層式資料表
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 行銷部門有 8 名員工。 員工層級如下：  
@@ -68,7 +68,7 @@ ms.locfileid: "36035845"
   
 ### <a name="to-insert-a-subordinate-employee"></a>插入從屬員工  
   
-1.  **David** 管理 **Sariya**。 若要插入**Sariya**  節點，您必須先建立適當**OrgNode**資料型別的值`hierarchyid`。 下列程式碼會建立 `hierarchyid` 資料類型的變數，並使用資料表的 OrgNode 根目錄值擴展。 然後，搭配 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法使用該變數來插入從屬節點的資料列。 `GetDescendant` 會採用兩個引數。 檢閱下列引數值的選項：  
+1.  **David** 管理 **Sariya**。 若要插入**Sariya**節點，您必須建立適當**OrgNode**資料類型的值`hierarchyid`。 下列程式碼會建立 `hierarchyid` 資料類型的變數，並使用資料表的 OrgNode 根目錄值擴展。 然後，搭配 [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) 方法使用該變數來插入從屬節點的資料列。 `GetDescendant` 會採用兩個引數。 檢閱下列引數值的選項：  
   
     -   如果父系為 NULL， `GetDescendant` 會傳回 NULL。  
   

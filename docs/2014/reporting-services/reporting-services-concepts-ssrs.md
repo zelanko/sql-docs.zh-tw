@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 37f778e52088df89a12b46b636aa1948623b9ac9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5f3ad348ebfc89706eb57dea34f91342550189b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133399"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236298"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 概念 (SSRS)
   本主題提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 概念的簡短摘要。  
@@ -34,17 +34,17 @@ ms.locfileid: "36133399"
   
 -   [報表和相關項目概念](#bkmk_ReportsandRelatedItemConcepts)  
   
--   [報表類型](#bkmk_TypesofReports)  
+-   [類型的報表](#bkmk_TypesofReports)  
   
 -   [報表開發階段](#bkmk_StagesofReports)  
   
 ##  <a name="bkmk_ReportServerConcepts"></a> 報表伺服器概念  
  報表伺服器是其上安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 執行個體的電腦。 報表伺服器會在內部儲存報表、報表相關項目以及資源、排程和訂閱這類項目。 報表伺服器可以設定為獨立單一伺服器或向外延展伺服器陣列，也可以與 SharePoint Server 整合。 與報表伺服器項目的互動方式是透過 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Web 服務、WMI 提供者、URL 存取或透過指令碼進行程式設計。 與報表伺服器的互動方式則取決於部署拓撲和組態。  
   
- **原生模式報表伺服器**  
+ **在原生模式報表伺服器**  
  以原生模式設定的報表伺服器是其上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 且設定為獨立伺服器的電腦。 與報表伺服器、報表和報表相關項目的互動方式，是搭配使用瀏覽器與報表管理員或 URL 存取命令、SQL Server Management Studio 或透過指令碼進行程式設計。 如需詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](report-server/reporting-services-report-server-native-mode.md)。  
   
- **SharePoint 模式報表伺服器**  
+ **在 SharePoint 模式報表伺服器**  
  與 SharePoint 整合的報表伺服器有兩種可能的組態。 在 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]中， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是與做為 SharePoint 共用服務的 SharePoint 伺服器一起安裝。 在舊版本中，報表伺服器會透過安裝 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 增益集與 SharePoint Server 的整合。 在這兩種情況下，與報表伺服器、報表和報表相關項目的互動是在 SharePoint 網站上使用應用程式頁面。 您可以使用 SharePoint 文件庫以及其他您建立用以儲存報表相關內容類型的文件庫。 如需詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)。  
   
  **報表伺服器項目**  
@@ -61,7 +61,7 @@ ms.locfileid: "36133399"
  在 SharePoint 網站上，請使用 SharePoint 網站管理員頁面以管理報表及報表相關網站內容的存取權。  
   
  **排程**  
- 在原生報表伺服器上，您可以排程報表、共用資料集及訂閱，以便在特定時間或離峰時段擷取資料及傳遞報表與資料集查詢。 排程可以執行一次，或以小時、天、週或月為週期連續執行。 如需詳細資訊，請參閱[排程](subscriptions/schedules.md)。  
+ 在原生報表伺服器上，您可以排程報表、共用資料集及訂閱，以便在特定時間或離峰時段擷取資料及傳遞報表與資料集查詢。 排程可以執行一次，或以小時、天、週或月為週期連續執行。 如需詳細資訊，請參閱 <<c0> [ 排程](subscriptions/schedules.md)。  
   
  **訂閱與傳遞**  
  訂閱是要在特定時間或回應事件時傳遞報表的永久性要求，並採用您在訂閱中指定的應用程式檔案格式。 訂閱會提供視需要執行報表的替代方案。 視需要報表會要求您在每次檢視報表時，主動選取報表。 反之，訂閱可用於排程然後自動傳遞報表。 您可以將報表傳遞至電子郵件收件匣或檔案共用。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
@@ -70,7 +70,7 @@ ms.locfileid: "36133399"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供可用以自訂報表方案的可延伸架構。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。 如需詳細資訊，請參閱[延伸模組 &#40;SSRS&#41;](extensions-ssrs.md)。  
   
  **報表存取**  
- 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用報表管理員中， [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件、 SharePoint 文件庫時[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]安裝在 SharePoint 整合的模式、 內嵌的 ReportViewer 控制項或使用 URL 的瀏覽器存取權。 如需視需要存取報表的詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+ 視需要存取可讓使用者從報表檢視工具選取報表。 根據報表伺服器組態，您可以使用報表管理員中， [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 Web 組件、 SharePoint 文件庫時[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]會安裝在 SharePoint 整合的模式、 內嵌的 ReportViewer 控制項或使用 URL 的瀏覽器存取權。 如需視需要存取報表的詳細資訊，請參閱[尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
  訂閱會提供視需要執行報表的替代方案。 如需詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)。  
   
@@ -131,9 +131,9 @@ ms.locfileid: "36133399"
   
 -   **資料表。** 資料表是逐一呈現資料列的資料區域。 資料表資料行是靜態的：您可以在設計報表時決定資料行的數目。 資料表資料列是動態的：它們會向下展開以容納資料。 您可以將群組加入至資料表，然後資料表就會依據選取的欄位或運算式組織資料。 如需詳細資訊，請參閱[資料表 &#40;報表產生器及 SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)。  
   
--   **矩陣。** 「矩陣」(Matrix) 也稱為交叉資料表。 矩陣資料區域同時包含動態資料行和資料列：它們會展開以容納資料。 矩陣可以有動態資料行和資料列，以及靜態資料行和資料列。 資料行或資料列可以包含其他資料行或資料列，而且可用來分組資料。 如需詳細資訊，請參閱[矩陣&#40;報表產生器及 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)。  
+-   **矩陣。** 「矩陣」(Matrix) 也稱為交叉資料表。 矩陣資料區域同時包含動態資料行和資料列：它們會展開以容納資料。 矩陣可以有動態資料行和資料列，以及靜態資料行和資料列。 資料行或資料列可以包含其他資料行或資料列，而且可用來分組資料。 如需詳細資訊，請參閱 <<c0> [ 矩陣&#40;報表產生器及 SSRS&#41;](report-design/create-a-matrix-report-builder-and-ssrs.md)。</c0>  
   
--   **清單。** 「清單」(List) 是呈現依自由形式來安排之資料的資料區域。 您可以安排報表項目來建立一份表單，將文字方塊、影像和其他資料區域放在清單內的任何位置。 如需詳細資訊，請參閱[列出&#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。  
+-   **清單。** 「清單」(List) 是呈現依自由形式來安排之資料的資料區域。 您可以安排報表項目來建立一份表單，將文字方塊、影像和其他資料區域放在清單內的任何位置。 如需詳細資訊，請參閱 <<c0> [ 列出&#40;報表產生器及 SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)。</c0>  
   
 -   **圖表。** 圖表會以圖形方式來呈現資料。 橫條圖、圓形圖和折線圖都是圖表的範例，但另外還有許多其他支援的樣式。 如需詳細資訊，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36133399"
  **資料警示**  
  資料警示是儲存在警示資料庫內部的項目。 資料警示定義包含要從現有報表資料摘要中使用的資料、要符合的條件、排程，以及警示的收件者。 只有發行至報表伺服器的報表才提供資料警示，而報表伺服器是與 SharePoint 伺服器整合。 原生報表伺服器安裝上未提供資料警示。 如需詳細資訊，請參閱 [Reporting Services 資料警示](../ssms/agent/alerts.md)。  
   
-##  <a name="bkmk_TypesofReports"></a> 報表類型  
+##  <a name="bkmk_TypesofReports"></a> 類型的報表  
  在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中， *「報表」* (Report) 這個詞彙可以套用至特定類型的報表伺服器項目、配置設計或方案設計。 單一報表可以具有一種以上類型的特性，例如，報表可以同時是獨立報表、主報表所參考的子報表、不同主報表中鑽研報表的目標及連結報表。  
   
  **向下鑽研報表**  
@@ -162,7 +162,7 @@ ms.locfileid: "36133399"
  **子報表**  
  子報表是以配置元素形式加入至報表的報表項目。 子報表會指向不同的報表，而且會在主報表的主體內顯示為子報表執行個體。 子報表可以使用與主報表不同的資料來源。 雖然可以使用參數在每個子報表執行個體中篩選資料，以在資料區中重複子報表，不過子報表通常是與主報表搭配使用，做為簡報書籍或是可以容納相關報表集合的容器。 每個子報表執行個體都會切換主報表與子報表之間的報表處理內容。 若為使用多個子報表執行個體的報表，請考慮改用鑽研報表。 如需詳細資訊，請參閱[子報表 &#40;報表產生器及 SSRS&#41;](report-design/subreports-report-builder-and-ssrs.md)。  
   
- **主/詳細資料報表及鑽研報表**  
+ **主/詳細資料報表和鑽研報表**  
  主/詳細資料報表方案所含的主報表會顯示摘要資訊，而摘要資訊具有一個或多個可顯示詳細資訊之報表的超連結。  只有在報告讀取器按一下詳細資料報表的連結時，才會執行詳細資料報表。 鑽研報表是個別從主報表中開啟。 超連結可以定義在任何具有 Action 屬性的報表項目上，例如文字方塊、預留位置文字或圖表數列。 如需詳細資訊，請參閱[鑽研報表 &#40;報表產生器及 SSRS&#41;](report-design/drillthrough-reports-report-builder-and-ssrs.md)。  
   
  **連結的報表**  
@@ -170,7 +170,7 @@ ms.locfileid: "36133399"
   
  如需詳細資訊，請參閱 [建立連結報表](reports/create-a-linked-report.md)。  
   
- **歷程記錄報表**  
+ **歷程記錄報告**  
  報表記錄是報表快照集的集合。 您可以使用報表記錄，以維護報表經過一段時間的記錄。 報表記錄不適用於包含機密或個人資料的報表。 因此，報表記錄只會包含使用單一認證組以查詢資料來源的報表。 您也可以定義排程及訂閱，將具有已匯出檔案格式的報表傳遞至檔案共用，以建立報表的記錄。 如需詳細資訊，請參閱[效能、快照集、快取 &#40;Reporting Services&#41;](report-server/performance-snapshots-caching-reporting-services.md)。  
   
  **快取的報表**  
@@ -186,9 +186,9 @@ ms.locfileid: "36133399"
   
 -   **點選連結報表。** ：點選連結報表是一種報表，會在您按一下以模型為基礎的報表中所包含的互動式資料時顯示報表模型中的相關資料。 點選連結報表會自動產生。 如需詳細資訊，請參閱[點選連結報表 &#40;SSRS&#41;](reports/clickthrough-reports-ssrs.md)。  
   
- 如需有關 SMDL 模型的詳細資訊，請參閱[中 SQL Server Reporting Services SQL Server 2014 中的重大變更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
+ 如需有關 SMDL 模型的詳細資訊，請參閱 < [SQL Server Reporting Services SQL Server 2014 中的重大變更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)。  
   
- **已儲存的報表**  
+ **儲存的報表**  
  儲存的報表是報表定義 (.rdl) 檔案。 報表定義可以儲存在本機，也可以上傳至報表伺服器。 若您上傳報表定義，而不是發行報表定義，則不會進行版本驗證或運算式驗證。 在執行報表之前，看不到任何錯誤。 如需詳細資訊，請參閱 [Save and Deploy](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md#bkmk_SaveandDeploy)。  
   
  **已發行的報表**  
@@ -212,14 +212,14 @@ ms.locfileid: "36133399"
  **快照集或報表記錄**  
  快照集是特定時間點的一組報表資料，再加上含有報表配置資訊的中繼格式。 如需詳細資訊，請參閱[效能、快照集、快取 &#40;Reporting Services&#41;](report-server/performance-snapshots-caching-reporting-services.md)。  
   
- **處理過的報表**  
+ **處理的報表**  
  同時含有資料及配置資訊之完整處理過的報表。  
   
  **轉譯的報表**  
  完整處理過的報表會傳送至報表轉譯器，以結合每個具有目標轉譯格式之頁面上的資料及配置。 您可以自訂及擴充轉譯延伸模組。 報表的預設轉譯格式為 HTML 4.0。 如需詳細資訊，請參閱[頁面配置和轉譯 &#40;報表產生器及 SSRS&#41;](report-design/page-layout-and-rendering-report-builder-and-ssrs.md) 和[延伸模組 &#40;SSRS&#41;](extensions-ssrs.md)。  
   
  **匯出的報表**  
- 匯出的報表是以特定檔案格式儲存的完整分頁報表。 匯出格式取決於已安裝的轉譯延伸模組，而且可以進行自訂。 匯出格式預設會包含 Excel、Word、XML、PDF、TIFF 及 CSV。 如需詳細資訊，請參閱[匯出報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。  
+ 匯出的報表是以特定檔案格式儲存的完整分頁報表。 匯出格式取決於已安裝的轉譯延伸模組，而且可以進行自訂。 匯出格式預設會包含 Excel、Word、XML、PDF、TIFF 及 CSV。 如需詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 功能及工作&#40;SSRS&#41;](reporting-services-features-and-tasks-ssrs.md)   

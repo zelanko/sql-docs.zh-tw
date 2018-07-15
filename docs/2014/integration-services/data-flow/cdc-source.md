@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f81e48f4466bf4f5765273df7c4fa58fbb447f8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff8eccaf0e1c13c63d73eff20e7415c6872c967b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269514"
 ---
 # <a name="cdc-source"></a>CDC 來源
   CDC 來源會從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 變更資料表中讀取變更資料的範圍，並將這些變更向下游傳遞至其他 SSIS 元件。  
@@ -32,7 +32,7 @@ ms.locfileid: "36035260"
   
  CDC 來源使用下列組態：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 連接管理員，用以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 資料庫。 如需有關設定 CDC 來源連接的詳細資訊，請參閱[CDC 來源編輯器&#40;連接管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ADO.NET 連接管理員，用以存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC 資料庫。 如需有關設定 CDC 來源連接的詳細資訊，請參閱 < [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)。  
   
 -   啟用 CDC 的資料表。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36035260"
   
 -   **錯誤資料列資料行**：造成錯誤的記錄資料。  
   
- 根據錯誤行為設定，CDC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱[CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)。  
+ 根據錯誤行為設定，CDC 來源支援在錯誤輸出中傳回擷取程序期間發生的錯誤 (資料轉換、截斷)。 如需詳細資訊，請參閱 < [CDC 來源編輯器&#40;錯誤輸出頁面&#41;](../cdc-source-editor-error-output-page.md)。  
   
 ## <a name="data-type-support"></a>資料類型支援  
  Microsoft 的 CDC 來源元件支援所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，這些資料類型都會對應至正確的 SSIS 資料類型。  
@@ -101,7 +101,7 @@ use <cdc-enabled-database-name>
   
  如需詳細資訊，請參閱下列其中一個主題：  
   
--   [CDC 來源編輯器&#40;連接管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
   
 -   [CDC 來源編輯器&#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
   
@@ -117,7 +117,7 @@ use <cdc-enabled-database-name>
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [CDC 來源編輯器&#40;連接管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
+-   [CDC 來源編輯器&#40;連線管理員頁面&#41;](../cdc-source-editor-connection-manager-page.md)  
   
 -   [CDC 來源編輯器&#40;資料行頁面&#41;](../cdc-source-editor-columns-page.md)  
   

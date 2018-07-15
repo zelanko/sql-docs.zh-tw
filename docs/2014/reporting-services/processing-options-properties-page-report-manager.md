@@ -1,5 +1,5 @@
 ---
-title: 處理選項屬性頁面 （報表管理員） |Microsoft 文件
+title: 處理選項屬性頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17db40e24318fad194ec21ca30e6394f3fe607e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036721"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288384"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>處理選項屬性頁面 (報表管理員)
   使用 [處理選項] 屬性頁面可以設定目前選取之報表的報表執行屬性。 這些選項會決定何時進行報表的資料處理。 您可以設定這些選項，以便在離峰時段擷取報表資料。 如果您的報表經常被存取，當多位使用者彼此會在短時間內存取相同的報表時，您就可以暫時快取副本，以避免等待時間。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供報表記錄、執行快照集和快取功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供報表記錄、執行快照集和快取功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -41,7 +41,7 @@ ms.locfileid: "36036721"
 4.  選取 **[處理選項]** 索引標籤。  
   
 ## <a name="options"></a>選項。  
- **永遠以最新的資料執行此報表**  
+ **永遠使用最新的資料執行此報表**  
  如果您要在使用者選取報表時擷取報表資料，請使用此選項。 當使用者選取報表時，如果報表有快取副本，則傳回給使用者，否則會執行資料擷取和轉譯。  
   
  選取 **[不要快取此報表的暫存副本]** 就會永遠以最新的資料來執行報表。 開啟報表的每一位使用者都會觸發對資料來源的查詢，這些資料來源包含報表中使用的資料。  

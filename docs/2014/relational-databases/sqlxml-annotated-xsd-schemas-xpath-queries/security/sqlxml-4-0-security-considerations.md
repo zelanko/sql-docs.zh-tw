@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 安全性考量 |Microsoft 文件
+title: SQLXML 4.0 安全性考量 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [SQLXML]
 ms.assetid: 7281bdbd-cf1d-4d73-9fe7-ee8b2b946696
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 238f581b636acbd8a659e67b100c911449bfff90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e2f19a8ea2efce2d7f5aee1cea3c5e4514cfd926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036747"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270814"
 ---
 # <a name="sqlxml-40-security-considerations"></a>SQLXML 4.0 安全性考量
   本節提供與 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 之安全性相關考量的資訊。  
@@ -35,7 +35,7 @@ ms.locfileid: "36036747"
  [Updategram 安全性考量&#40;SQLXML 4.0&#41;](updategram-security-considerations-sqlxml-4-0.md)  
  提供搭配 SQLXML 4.0 使用 Updategrams 的安全性指導方針。  
   
- [註解式結構描述的安全性考量&#40;SQLXML 4.0&#41;](annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [註解式結構描述安全性考量&#40;SQLXML 4.0&#41;](annotated-schema-security-considerations-sqlxml-4-0.md)  
  提供搭配 SQLXML 4.0 使用註解式結構描述的安全性指導方針。  
   
  [FOR XML 安全性考量&#40;SQLXML 4.0&#41;](for-xml-security-considerations-sqlxml-4-0.md)  

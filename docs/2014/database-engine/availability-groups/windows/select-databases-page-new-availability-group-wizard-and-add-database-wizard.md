@@ -1,30 +1,29 @@
 ---
-title: 選取資料庫頁面 （新增可用性群組精靈加入資料庫精靈） |Microsoft 文件
+title: 選取資料庫頁面 （新增可用性群組精靈 / 加入資料庫精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.selectdatabases.f1
 - sql12.swb.newagwizard.selectdatabases.f1
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 caps.latest.revision: 12
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 304ce826a45debaf4d18a63e9d68061ef393705b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc83c051c75887ee58230e2a1276b8eb408c6830
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320928"
 ---
-# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>選取資料庫頁面 （新增可用性群組精靈加入資料庫精靈）
+# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>選取資料庫頁面 （新增可用性群組精靈 / 加入資料庫精靈）
   本說明主題描述 **[指定資料庫]** 頁面的選項。 此主題適用於 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 的 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 和 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]。  
   
 ##  <a name="PageOptions"></a> 選取資料庫選項  
@@ -52,6 +51,6 @@ ms.locfileid: "36133312"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

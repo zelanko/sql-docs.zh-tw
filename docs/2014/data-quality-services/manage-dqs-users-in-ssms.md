@@ -1,5 +1,5 @@
 ---
-title: 管理 DQS 使用者，在 SSMS 中的 |Microsoft 文件
+title: 管理 DQS 使用者，在 SSMS 中的 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955af01d-00da-4c51-9311-f3848749df54
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a6115b9b28b4c27c6b3cddccd1f83ec1aef02ab3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 949c86f3a83856a474a388bf94f224d5a6273174
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145465"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306058"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>在 SSMS 中管理 DQS 使用者
   此主題描述如何使用 SQL Server Management Studio 在 SQL Server 執行個體中建立其他使用者，並為其授與 DQS_MAIN 資料庫的適當 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 角色。  
@@ -31,7 +31,7 @@ ms.locfileid: "36145465"
 ####  <a name="Permissions"></a> 權限  
  您的 Windows 使用者帳戶必須是適當固定伺服器角色 (例如 securityadmin、serveradmin 或 sysadmin) 的成員，才能建立 SQL 登入並授與適當的 DQS 角色。  
   
-##  <a name="GrantRoles"></a> 建立 SQL 登入及授與 DQS 角色  
+##  <a name="GrantRoles"></a> 建立 SQL 登入並授與 DQS 角色  
   
 1.  啟動 Microsoft SQL Server Management Studio。  
   

@@ -1,5 +1,5 @@
 ---
-title: WritebackTableCreation 元素 (XMLA) |Microsoft 文件
+title: WritebackTableCreation 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - WritebackTableCreation element
 ms.assetid: e9579d63-e28c-4d4e-9f4a-21c5da24c276
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 95b9639b34002aa69366f87cac48427624f7d0dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 9908cf615ef5f767b72e639023b0444f02e71f7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319208"
 ---
 # <a name="writebacktablecreation-element-xmla"></a>WritebackTableCreation 元素 (XMLA)
   決定是否要將回寫資料表建立期間[程序](../xml-elements-commands/process-element-xmla.md)作業。  
@@ -64,11 +64,11 @@ ms.locfileid: "36131988"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- Analysis Services 執行個體上物件可用處理選項的相關資訊，請參閱[多維度模型物件處理](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
+ Analysis Services 執行個體物件可用處理選項的相關資訊，請參閱[多維度模型物件處理](../../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
  `WritebackTableCreation` 元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*建立*|建立新的回寫資料表 (如果回寫資料表不存在的話)。 如果回寫資料表已經存在，就會發生錯誤。|  
 |*[Createalways]*|建立新的回寫資料表，並覆寫任何現有的回寫資料表。|  

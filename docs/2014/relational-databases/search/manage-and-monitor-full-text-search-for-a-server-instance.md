@@ -5,24 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0631b46f507fa7cd3d106a28df686728055a94bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8b9ca3983da961da7e6d0c72708bfc5dbc02bd6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227388"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>管理及監視伺服器執行個體的全文檢索搜尋
   伺服器執行個體的全文檢索管理包括：  
@@ -66,7 +65,7 @@ ms.locfileid: "36133412"
          **重設**  
          重設全文檢索目錄。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄檔案會遭到移除，但是全文檢索目錄和全文檢索索引的中繼資料則會保留。 在升級之後，所有的全文檢索索引都會停用變更追蹤，而且不會自動啟動搜耙。 當您在升級完成之後手動發出完整母體擴展之前，此目錄將會維持空白狀態。  
   
-         如需選擇全文檢索升級選項的資訊，請參閱[升級全文檢索搜尋](upgrade-full-text-search.md)。  
+         如需選擇全文檢索升級選項的相關資訊，請參閱 <<c0> [ 升級全文檢索搜尋](upgrade-full-text-search.md)。  
   
         > [!NOTE]  
         >  也可以使用 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)**upgrade_option** 動作來設定全文檢索升級選項。  

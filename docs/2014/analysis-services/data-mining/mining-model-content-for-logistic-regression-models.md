@@ -1,5 +1,5 @@
 ---
-title: 羅吉斯迴歸模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 羅吉斯迴歸模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9846361e76eac9f4ad61edde10c0fda20f4f546
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328930"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>羅吉斯迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題描述使用 Microsoft 羅吉斯迴歸演算法的模型專用的採礦模型內容。 如需如何解譯所有模型類型共用的統計資料與結構的說明，以及與採礦模型內容相關的一般詞彙說明，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "36022298"
   
  不過，在羅吉斯迴歸模型中，代表隱藏層的節點是空的，而且沒有子系。 因此，此模型包含代表個別輸出 (NODE_TYPE = 23) 與個別輸入 (NODE_TYPE = 21) 的節點，但是不包含個別的隱藏節點。  
   
- ![羅吉斯迴歸模型內容結構](../media/skt-modelcontentstructure-logregc.gif "的羅吉斯迴歸模型內容結構")  
+ ![內容，羅吉斯迴歸模型的結構](../media/skt-modelcontentstructure-logregc.gif "的羅吉斯迴歸模型內容結構")  
   
  根據預設，羅吉斯迴歸模型顯示在 **[Microsoft 類神經網路檢視器]** 中。 您可以利用這個自訂的檢視器，篩選輸入屬性及其值，並以圖形方式查看這些屬性和值如何影響輸出。 檢視器中的工具提示會顯示與每個成對輸入和輸出值相關聯的機率與增益。 如需詳細資訊，請參閱 [使用 Microsoft 類神經網路檢視器瀏覽模型](browse-a-model-using-the-microsoft-neural-network-viewer.md)。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36022298"
   
 |節點類型識別碼|描述|  
 |------------------|-----------------|  
-|@shouldalert|模型。|  
+|1|模型。|  
 |17|子網路的組合管理節點。|  
 |18|輸入層的組合管理節點。|  
 |19|隱藏層的組合管理節點。 隱藏層是空的。|  
@@ -144,7 +144,7 @@ ms.locfileid: "36022298"
  從父節點到達節點的機率。 若是羅吉斯迴歸模型，永遠為 0。  
   
  NODE_DISTRIBUTION  
- 包含節點之統計資訊的巢狀資料表。 每個節點類型這個資料表內容的相關詳細資訊，請參閱 > 一節，了解 NODE_DISTRIBUTION 資料表，在[Model Content for Neural Network Models &#40;Analysis Services-Data Mining&#41; ](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ 包含節點之統計資訊的巢狀資料表。 每個節點類型這個資料表的內容的相關詳細資訊，請參閱區段中，了解 NODE_DISTRIBUTION 資料表，在[Mining Model Content for Neural Network Models &#40;Analysis Services-Data Mining&#41; ](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
   
  NODE_SUPPORT  
  若是羅吉斯迴歸模型，永遠為 0。  

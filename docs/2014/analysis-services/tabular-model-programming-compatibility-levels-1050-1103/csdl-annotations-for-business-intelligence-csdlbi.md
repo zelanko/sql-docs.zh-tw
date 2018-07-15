@@ -1,5 +1,5 @@
 ---
-title: CSDL 註解，商業智慧 (CSDLBI) |Microsoft 文件
+title: Business Intelligence (CSDLBI) 的 CSDL 註解 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: bf6f372a-bc67-45ea-a771-b2dc5b0527e5
 caps.latest.revision: 19
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 0e545667bd907460b695f63cbe9f2f537c9be62d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 45f29343fe3fb3bd95e8f9753438e90214f18c80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36024060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328428"
 ---
 # <a name="csdl-annotations-for-business-intelligence-csdlbi"></a>商業智慧的 CSDL 註解 (CSDLBI)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援 XML 格式中稱為「概念結構定義語言商業智慧註解」(CSDLBI) 的表格式模型定義表示法。  
@@ -47,7 +47,7 @@ ms.locfileid: "36024060"
   
  您無法直接修改這些物件，而必須使用專為表格式模型處理所提供的用戶端工具和應用程式開發介面 (API)。  
   
- 您可以將 DISCOVER 要求傳送到裝載模型的伺服器，藉以取得模型的 CSDL。 此要求必須透過指定伺服器和模型，以及選擇性地指定檢視或檢視方塊來限定。 傳回的訊息是 XML 字串。 某些元素和語言相關，而且會根據目前連接的語言，傳回不同的值。 如需詳細資訊，請參閱[DISCOVER_CSDL_METADATA 資料列集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
+ 您可以將 DISCOVER 要求傳送到裝載模型的伺服器，藉以取得模型的 CSDL。 此要求必須透過指定伺服器和模型，以及選擇性地指定檢視或檢視方塊來限定。 傳回的訊息是 XML 字串。 某些元素和語言相關，而且會根據目前連接的語言，傳回不同的值。 如需詳細資訊，請參閱 < [DISCOVER_CSDL_METADATA 資料列集](../schema-rowsets/xml/discover-csdl-metadata-rowset.md)。  
   
 ### <a name="csdlbi-versions"></a>CSDLBI 版本  
  原始 CSDL 規格 (來自實體資料架構) 會針對需要支援模型的多數實體和屬性提供。 BI 註解支援表格式模型的特殊需求、用戶端 (例如 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]) 所需的報表屬性，以及多維度模型所需的其他中繼資料。 本節描述每個版本中的更新。  
@@ -76,7 +76,7 @@ ms.locfileid: "36024060"
   
 -   支援檢視方塊。  
   
- 如需 CSDLBI 註解中個別項目的詳細資訊，請參閱[csdl 之 BI 註解的技術參考](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)。 如需有關核心 CSDL 規格的詳細資訊，請參閱[CSDL v3 規格](https://msdn.microsoft.com/en-us/data/jj652004)MSDN 上。  
+ 如需在 CSDLBI 註解中的個別元素的詳細資訊，請參閱[csdl 之 BI 註解的技術參考](conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)。 如需有關核心 CSDL 規格的詳細資訊，請參閱[CSDL v3 規格](https://msdn.microsoft.com/en-us/data/jj652004)MSDN 上。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解表格式物件模型](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)   

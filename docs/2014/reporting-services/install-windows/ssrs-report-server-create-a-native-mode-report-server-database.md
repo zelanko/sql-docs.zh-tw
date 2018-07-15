@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
@@ -16,13 +16,13 @@ ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2690d8684bd244ecc671168d9648832a5a2ca9eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ff6878b05138bb1ad4c23e57699dd896ab7b441
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198820"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>建立原生模式報表伺服器資料庫 (SSRS 組態管理員)
   原生模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫進行內部儲存。 資料庫是必要元件，它是用來儲存已發行的報表、模型、共用資料來源、工作階段資料、資源和伺服器中繼資料。  
@@ -36,7 +36,7 @@ ms.locfileid: "36131925"
 ## <a name="when-to-create-or-configure-the-report-server-databases"></a>何時建立或設定報表伺服器資料庫  
  如果您在僅限檔案模式中安裝了報表伺服器，您就必須建立及設定報表伺服器資料庫。  
   
- 如果您已安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設組態中的原生模式，報表伺服器資料庫已自動建立並設定報表伺服器執行個體安裝時。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來檢視或修改安裝程式為您進行的設定。  
+ 如果您已安裝[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]預設組態中的原生模式，報表伺服器資料庫建立和安裝報表伺服器執行個體時自動設定。 您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員來檢視或修改安裝程式為您進行的設定。  
   
 ##  <a name="rsdbrequirements"></a> 開始之前  
  建立或設定報表伺服器資料庫是多重步驟的程序。 在您建立報表伺服器資料庫之前，請考慮您要如何指定以下項目：  
@@ -119,7 +119,7 @@ ms.locfileid: "36131925"
   
 7.  檢閱 [摘要] 頁面上的資訊，以確認設定都正確無誤，然後按 **[下一步]**。  
   
-8.  按一下報表伺服器 URL 頁面或報表管理員 URL 頁面上的 URL 來確認連接。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連接有效，您將會在瀏覽器視窗中看到報表伺服器資料夾階層或報表管理員。 如需詳細資訊，請參閱[Verify a Reporting Services Installation](verify-a-reporting-services-installation.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+8.  按一下報表伺服器 URL 頁面或報表管理員 URL 頁面上的 URL 來確認連接。 必須有定義 URL，這項測試才有效。 如果報表伺服器資料庫連接有效，您將會在瀏覽器視窗中看到報表伺服器資料夾階層或報表管理員。 如需詳細資訊，請參閱 < [Verify a Reporting Services Installation](verify-a-reporting-services-installation.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表伺服器資料庫連接&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

@@ -1,5 +1,5 @@
 ---
-title: Aliases 元素 (ASSL) |Microsoft 文件
+title: Aliases 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aliases element
 ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60673c26bf4a430c842da0fb61c98de7242ccd1c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 677434b5ea6383e5905a703225edb5e56e3fb4e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267684"
 ---
 # <a name="aliases-element-assl"></a>Aliases 元素 (ASSL)
-  包含集合[別名](../properties/alias-element-assl.md)與相關聯的項目[帳戶](../objects/account-element-assl.md)項目  
+  包含的集合[別名](../properties/alias-element-assl.md)相關聯的項目[帳戶](../objects/account-element-assl.md)項目  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36132296"
 |子元素|[別名](../properties/alias-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`Aliases`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Account>。  
+ 對應的父代的項目`Aliases`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Account>。  
   
 ## <a name="see-also"></a>另請參閱  
  [帳戶項目&#40;ASSL&#41;](accounts-element-assl.md)   
- [Database 元素&#40;ASSL&#41;](../objects/database-element-assl.md)   
+ [資料庫項目&#40;ASSL&#41;](../objects/database-element-assl.md)   
  [集合&#40;ASSL&#41;](collections-assl.md)  
   
   

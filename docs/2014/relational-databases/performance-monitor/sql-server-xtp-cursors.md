@@ -1,5 +1,5 @@
 ---
-title: XTP 資料指標 |Microsoft 文件
+title: XTP 資料指標 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 84bf4654-3ef7-4d7f-a269-c8bb4ed4acad
 caps.latest.revision: 4
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b404b5d425fe6116087821a4c51e1f5dd552dd7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c5eab11a0ee57a8545a2d19f8a7472392635e690
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147142"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206978"
 ---
 # <a name="xtp-cursors"></a>XTP 資料指標
-  XTP 資料指標效能物件包含與內部 XTP 引擎資料指標相關的計數器。 資料指標是的低階建置組塊 XTP 引擎用來處理[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 因此，您通常不會有這些指標的直接控制權。  
+  XTP 資料指標效能物件包含與內部 XTP 引擎資料指標相關的計數器。 低層級的建置組塊 XTP 引擎用來處理資料指標是[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 因此，您通常不會有這些指標的直接控制權。  
   
  下表描述**XTP 資料指標**計數器。  
   

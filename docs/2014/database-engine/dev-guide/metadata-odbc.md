@@ -1,5 +1,5 @@
 ---
-title: 中繼資料 (ODBC) |Microsoft 文件
+title: 中繼資料 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,27 +15,27 @@ helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3414b90224037338fe618d54387700a493c95867
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 430a1b1e67bf2ce64a8cbf30bdd1c1807efb8c62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146139"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295198"
 ---
 # <a name="metadata-odbc"></a>中繼資料 (ODBC)
   本節討論參數、資料行結果，以及目錄中繼資料。  
   
 ## <a name="in-this-section"></a>本節內容  
- [參數和結果中繼資料。](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)  
+ [參數和結果中繼資料](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)  
  描述在 IPD 和 IRD 欄位中針對日期和時間資料類型所傳回的資料。  
   
  [目錄中繼資料](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)  
  描述 `SQLColumns` 和 `SQLProcedureColumns` 所傳回的資料行中繼資料，以及 `SQLGetTypeInfo` 所傳回的資料類型中繼資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

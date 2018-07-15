@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 82b27a6c90694626a5afc1f2256f1b10868f723f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2c6bcbf4ce4a3bb3121bd55b8df95070de817f93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232688"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>匯出至 CSV 檔案 (報表產生器及 SSRS)
   逗號分隔值 (CSV) 轉譯延伸模組會將報表從多數應用程式都可輕易讀取與交換的標準化純文字格式報表，轉譯為扁平化表示的資料。  
   
- CSV 轉譯延伸模組使用字串字元分隔符號來分隔欄位和資料列，可將此字串字元分隔符號設定為非逗號字元。 所產生的檔案可以使用試算表程式 (例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ) 開啟，或當做其他程式的匯入格式使用。 匯出的報表會變成.csv 檔案，並傳回類型的 MIME `text/csv`。  
+ CSV 轉譯延伸模組使用字串字元分隔符號來分隔欄位和資料列，可將此字串字元分隔符號設定為非逗號字元。 所產生的檔案可以使用試算表程式 (例如 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ) 開啟，或當做其他程式的匯入格式使用。 匯出的報表會變成.csv 檔案，並傳回 MIME 類型的`text/csv`。  
   
  如果您要使用與 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]中的圖表、資料橫條、走勢圖、量測計和指標相關的資料，請將報表匯出為 CSV 檔，然後在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 中開啟檔案。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36146899"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - data viewers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 05cd35ed1dcb6c819f2833eff81226e102d86c81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fe70b27d885f3c94039f79b49c961e526fddec1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307998"
 ---
 # <a name="debugging-data-flow"></a>偵錯資料流程
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 和「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供許多功能和工具，讓您用來疑難排解 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料流程。  
@@ -53,7 +53,7 @@ ms.locfileid: "36137115"
   
 #### <a name="to-add-a-data-viewer"></a>若要加入資料檢視器  
   
--   [將資料檢視器加入資料流程](../add-a-data-viewer-to-a-data-flow.md)  
+-   [將資料檢視器新增到資料流程](../add-a-data-viewer-to-a-data-flow.md)  
   
 ## <a name="row-counts"></a>資料列計數  
  經過某個路徑傳送的資料列數目，會顯示在「 **設計師」中** [資料流程] [!INCLUDE[ssIS](../../includes/ssis-md.md)] 索引標籤之設計介面上的該路徑旁邊。 隨著資料不斷經由路徑移動，該數目會定期更新。  

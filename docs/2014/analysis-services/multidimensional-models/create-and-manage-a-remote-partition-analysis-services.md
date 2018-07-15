@@ -1,5 +1,5 @@
 ---
-title: 建立及管理遠端資料分割 (Analysis Services) |Microsoft 文件
+title: 建立和管理遠端資料分割 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10dc1d65f147c070a740b1e6adbe4b681af667bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315038"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>建立及管理遠端分割區 (Analysis Services)
   分割量值群組時，您可以在遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上設定次要資料庫作為分割區儲存。  
@@ -31,7 +31,7 @@ ms.locfileid: "36131594"
   
  專用次要資料庫會針對唯一的 master 資料庫儲存遠端資料分割，但是 master 資料庫可以使用多個次要資料庫，只要所有次要資料庫都在相同的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]遠端執行個體上即可。 資料庫中專屬於遠端分割區的維度會建立為連結維度。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  建立遠端分割區之前，必須先符合下列條件：  
   
 -   您必須具有次要 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和專用資料庫以儲存資料分割。 次要資料庫的用途只有一個，那就是為 master 資料庫提供遠端分割區儲存。  

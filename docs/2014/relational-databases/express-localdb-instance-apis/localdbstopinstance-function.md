@@ -1,5 +1,5 @@
 ---
-title: LocalDBStopInstance 函數 |Microsoft 文件
+title: LocalDBStopInstance 函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d17ccc37d7e181e32ee5dde7706bae73fe9c847
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c18afbf238fde8b7a713cb8830a89b6193b6aa2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037238"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302298"
 ---
 # <a name="localdbstopinstance-function"></a>LocalDBStopInstance 函數
   停止執行指定的 SQL Server Express LocalDB 執行個體。  
@@ -107,7 +107,7 @@ HRESULT LocalDBStopInstance(
  發生意外的錯誤。 請參閱事件記錄檔，以取得詳細資料。  
   
 ## <a name="remarks"></a>備註  
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../sql-server-express-localdb-reference.md)。  
+ 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](sql-server-express-localdb-header-and-version-information.md)  

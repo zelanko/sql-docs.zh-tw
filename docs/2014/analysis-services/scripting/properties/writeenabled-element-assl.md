@@ -1,5 +1,5 @@
 ---
-title: WriteEnabled 元素 (ASSL) |Microsoft 文件
+title: WriteEnabled 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - WriteEnabled element
 ms.assetid: 681290b3-ae8f-4659-9b17-a26d401a3fb0
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f78be490a8d171dbdbbf6fddbd9ffb1d4289f050
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 900aa5be98245eeaef4b40cb9e8492182604499d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243618"
 ---
 # <a name="writeenabled-element-assl"></a>WriteEnabled 元素 (ASSL)
   指出是否可以使用維度回寫 (受限於安全性權限)。  
@@ -62,7 +62,7 @@ ms.locfileid: "36036888"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`WriteEnabled`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Dimension>。  
+ 對應至父系的元素`WriteEnabled`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

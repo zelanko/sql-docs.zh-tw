@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_rpcname
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab357fd57d16f822d9490f52d2e57852bf7f8bb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4415c7cd4ed79426403d73650d4502edace44fd8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324268"
 ---
 # <a name="srvrpcname-extended-stored-procedure-api"></a>srv_rpcname (擴充預存程序 API)
     

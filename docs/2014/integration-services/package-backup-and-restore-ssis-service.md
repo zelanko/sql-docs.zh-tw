@@ -1,5 +1,5 @@
 ---
-title: 封裝備份和還原 （SSIS 服務） |Microsoft 文件
+title: 封裝備份和還原 （SSIS 服務） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, backup and restore
 - backing up packages [Integration Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Integration Services packages, backup and restore
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0effe7b8c6b18967d9d783f082614b9f039066d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aab0068df8906640acb5b8282f1b80d5e966c2b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322588"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>封裝備份和還原 (SSIS 服務)
     
@@ -41,7 +41,7 @@ ms.locfileid: "36134447"
   
 -   [系統資料庫的備份與還原 &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含**dtutil**命令提示字元公用程式 (dtutil.exec) 可用來管理封裝。 如需詳細資訊，請參閱 [dtutil Utility](dtutil-utility.md)。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 包含**dtutil**命令提示字元可用來管理封裝的公用程式 (dtutil.exec)。 如需詳細資訊，請參閱 [dtutil Utility](dtutil-utility.md)。  
   
 ## <a name="configuration-files"></a>組態檔  
  封存包含的所有組態檔都儲存在檔案系統中。 備份 msdb 資料庫時並不會備份這些檔案；因此，作為儲存至 msdb 之封裝保護計畫的一部份，您應確保定期備份組態檔。 若要在 msdb 資料庫的備份中包含組態，應考慮使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態類型而不是以檔案為基礎的組態。  

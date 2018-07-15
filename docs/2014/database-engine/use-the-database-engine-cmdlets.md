@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cmdlets [SQL Server], Encode-Sqlname
 - Encode-Sqlname cmdlet
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 720aa982-09ae-41a3-b603-a91004cfbe3e
 caps.latest.revision: 24
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 845b99288bc000d1bf6adf5f48c6ad5d3099c415
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e06c46020f0e3e04e81b3f46fada587ab55f7b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267124"
 ---
 # <a name="use-the-database-engine-cmdlets"></a>使用 Database Engine Cmdlet
   Windows PowerShell Cmdlet 是單一功能的命令，通常具有動詞-名詞命名慣例，例如 **Get-Help** 或 **Set-MachineName**。 適用於 Windows PowerShell 的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者會提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]特有的指令程式。  
@@ -59,12 +59,12 @@ Invoke-Sqlcmd -Query "SELECT @@VERSION;" -QueryT 3
 |----------------------|-----------|  
 |描述如何使用 **Invoke-Sqlcmd** 來執行包含 **或 XQuery 陳述式的** sqlcmd [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼或命令。 它可接受 **sqlcmd** 輸入作為字元字串輸入參數，或作為要開啟的指令碼檔案名稱。|[Invoke-Sqlcmd Cmdlet](../../2014/database-engine/invoke-sqlcmd-cmdlet.md)|  
 |描述如何使用 **Invoke-PolicyEvaluation** 報告 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的目標集是否符合在原則式管理原則中定義的條件。 您可以選擇性地使用此指令程式，在目標物件中重新設定任何不符合原則條件的可設定選項。|[Invoke-PolicyEvaluation 指令程式](../../2014/database-engine/invoke-policyevaluation-cmdlet.md)|  
-|描述如何使用`Encode-Sqlname`和`Decode-Sqlname`處理含有 Windows PowerShell 路徑中不支援字元的 SQL Server 識別碼。|[編碼及解碼 SQL Server 識別碼](../powershell/encode-and-decode-sql-server-identifiers.md)|  
-|描述如何使用`Convert-UrnToPath`將 SQL Server 管理能力物件統一資源名稱 (URN) 轉換為對等 SQL Server 提供者路徑。|[將 URN 轉換成 SQL Server 提供者路徑](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
+|描述如何使用`Encode-Sqlname`和`Decode-Sqlname`來處理含有 Windows PowerShell 路徑中不支援的字元的 SQL Server 識別碼。|[編碼及解碼 SQL Server 識別碼](../powershell/encode-and-decode-sql-server-identifiers.md)|  
+|描述如何使用`Convert-UrnToPath`若要將 SQL Server 管理能力物件統一資源名稱 (URN) 轉換為對等的 SQL Server 提供者路徑。|[將 URN 轉換成 SQL Server 提供者路徑](../../2014/database-engine/convert-urns-to-sql-server-provider-paths.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server PowerShell 提供者](../powershell/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../powershell/sql-server-powershell.md)   
- [AlwaysOn 可用性群組的 PowerShell cmdlet 概觀&#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
+ [AlwaysOn 可用性群組的 PowerShell Cmdlet 概觀&#40;SQL Server&#41;](availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   

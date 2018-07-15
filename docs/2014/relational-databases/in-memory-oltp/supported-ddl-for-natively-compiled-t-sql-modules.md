@@ -1,5 +1,5 @@
 ---
-title: 支援原生編譯的預存程序建構 |Microsoft 文件
+title: 支援原生編譯的預存程序建構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6b21f47e-bceb-4054-8b3c-9d39bb9583c0
 caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: c54f811f2257adcb5c08f1741018be3211c1e874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c6cdd5c7d154f1841aa5c90e110a596d8684a535
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146284"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233268"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>原生編譯的預存程序上支援的建構
   本主題列出原生編譯預存程序所支援的建構。  

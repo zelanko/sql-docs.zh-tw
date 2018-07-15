@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
 - Reporting Services, RDL
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - reports [Reporting Services], definitions
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb0ac41fef9a28a5023e122963f59fa6d9720a19
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 93fa1ac42172b4750db5e5dd385925f657fdfdd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262044"
 ---
 # <a name="report-definition-language-ssrs"></a>報表定義語言 (SSRS)
   報表定義語言 (RDL) 是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義的 XML 表示法。 報表定義包含報表的資料擷取和配置資訊。 RDL 是由符合針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]所建立之 XML 文法的 XML 元素所組成。 您可以加入自訂函數，藉由存取報表定義檔案中的程式碼組件來控制報表項目值、樣式和格式。  
@@ -47,7 +47,7 @@ ms.locfileid: "36133876"
 ##  <a name="bkmk_RDL_XML_Schema_Definition"></a> RDL XML 結構描述定義  
  A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表定義語言 (RDL) 檔案是藉由使用 XML 結構描述定義 (XSD) 檔案來驗證。 結構描述定義 RDL 元素可在 .rdl 檔案中何處發生的規則。 元素包括其資料類型和基數，也就是所允許的發生數目。 元素可能很簡單或很複雜。 簡單的元素沒有子元素或屬性 (Attribute)， 複雜的元素則具有子元素或屬性。  
   
- 例如，結構描述包含 RDL 元素`ReportParameters`，這是複雜類型`ReportParametersType`。 依照慣例，複雜類型的項目是項目後續這個字的名稱`Type`。 A`ReportParameters`項目可以包含之`Report`元素 （複雜類型），而且只能包含`ReportParameter`項目。 `ReportParameterType` 是簡單類型，只能是下列其中一個值：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 如需 XML 結構描述資料類型的詳細資訊，請參閱 [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)(XML 結構描述第 2 部分：資料類型第二版)。  
+ 例如，結構描述包含 RDL 元素`ReportParameters`，這是複雜類型`ReportParametersType`。 依照慣例，元素的複雜類型會是名稱的項目後面`Type`。 A`ReportParameters`元素可以包含`Report`元素 （複雜類型），而且可以包含`ReportParameter`項目。 `ReportParameterType` 是簡單類型，只能是下列其中一個值：`Boolean`、`DateTime`、`Integer`、`Float` 或 `String`。 如需 XML 結構描述資料類型的詳細資訊，請參閱 [XML Schema Part 2: Datatypes Second Edition](http://go.microsoft.com/fwlink/?linkid=4871)(XML 結構描述第 2 部分：資料類型第二版)。  
   
  RDL XSD 是在 ReportDefinition.xsd 檔案中提供的，這個檔案位於產品 CD-ROM 的 Extras 資料夾中， 也會透過下列 URL 提供在報表伺服器：http://servername/reportserver/reportdefinition.xsd。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36133876"
 |Type|描述|  
 |----------|-----------------|  
 |`Binary`|具有 Base-64 編碼二進位值的屬性。|  
-|`Boolean`|具有 `true` 或 `false` 物件值的屬性。 除非另行指定，省略選擇性的布林值物件的值是`False`。|  
+|`Boolean`|具有 `true` 或 `false` 物件值的屬性。 除非另有指定，省略的選擇性布林物件的值是`False`。|  
 |`Date`|具有 ISO8601 日期格式所指定之完整指定日期或日期時間值的屬性：YYYY-MM-DD[THH:MM[:SS[.S]]]。|  
 |`Enum`|具有字串文字值的屬性，此文字值必須是指定值清單中的一個值。|  
 |`Float`|具有浮點值的屬性。 使用句點 (.) 當做選擇性小數分隔符號。|  
@@ -92,7 +92,7 @@ ms.locfileid: "36133876"
   
 ## <a name="see-also"></a>另請參閱  
  [尋找報表定義結構描述版本&#40;SSRS&#41;](find-the-report-definition-schema-version-ssrs.md)   
- [報表中使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [與報表搭配使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [自訂報表項目](../custom-report-items/custom-report-items.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 大量插入工作編輯器 （選項頁面） |Microsoft 文件
+title: 大量插入工作編輯器 （選項頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.bulkinserttask.options.f1
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 caps.latest.revision: 31
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a1a958108c8b6975c3aa362ba6512b995759ff99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b878f48473e70d61f6de2a02c9268eb4fc91f0ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326208"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>大量插入工作編輯器 (選項頁面)
   使用 **[大量插入工作編輯器]** 對話方塊的 **[選項]** 頁面，即可設定大量插入作業的屬性。 大量插入工作會將大量資料複製至 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表或檢視表。  
@@ -66,7 +66,7 @@ ms.locfileid: "36147217"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [大量插入工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [大量插入工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [大量插入工作編輯器&#40;連接頁面&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [控制流程](control-flow/control-flow.md)  

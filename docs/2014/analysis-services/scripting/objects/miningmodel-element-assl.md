@@ -1,5 +1,5 @@
 ---
-title: MiningModel 元素 (ASSL) |Microsoft 文件
+title: MiningModel 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MiningModel element
 ms.assetid: a61d935f-c8f6-457d-ad0c-44f58bb286f5
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 593421993631e4cffee671a92b343ee9b4b7e30c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ba98443b953f4107b209dd06af74349a81bb2a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224538"
 ---
 # <a name="miningmodel-element-assl"></a>MiningModel 元素 (ASSL)
   定義單一資料採礦模型。  
@@ -75,12 +75,12 @@ ms.locfileid: "36133324"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[MiningModels](../collections/miningmodels-element-assl.md)|  
-|子元素|[Algorithm](../properties/algorithm-element-assl.md), [AlgorithmParameters](algorithmparameter-element-assl.md), [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Collation](../properties/collation-element-assl.md), [Columns](../collections/columns-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MiningModelPermissions](../collections/miningmodelpermissions-element-assl.md), [Name](../properties/name-element-assl.md), [State](../properties/state-element-assl.md), [Translations](../collections/translations-element-assl.md),<br /><br /> [FoldingParameters](../properties/foldingparameters-element-assl.md)|  
+|子元素|[演算法](../properties/algorithm-element-assl.md)， [AlgorithmParameters](algorithmparameter-element-assl.md)， [AllowDrillThrough](../properties/allowdrillthrough-element-assl.md)，[註解](../collections/annotations-element-assl.md)，[定序](../properties/collation-element-assl.md)， [資料行](../collections/columns-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)，[描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)，[語言](../properties/language-element-assl.md)， [LastProcessed](../properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [MiningModelPermissions](../collections/miningmodelpermissions-element-assl.md)，[名稱](../properties/name-element-assl.md)，[狀態](../properties/state-element-assl.md)， [翻譯](../collections/translations-element-assl.md)，<br /><br /> [FoldingParameters](../properties/foldingparameters-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
  採礦模型的 `FoldingParameters` 元素供伺服器內部使用，不支援用於 DDL 陳述式。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MiningModel>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MiningModel>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

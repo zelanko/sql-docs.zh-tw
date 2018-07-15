@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit App Role Change Password event class
 ms.assetid: 28a76c12-e997-48bb-bb0e-9624237a188e
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 44913329c0ca28113c6a936b3bdb4b1bcfa8ce5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2646de3b006d75af543a204d1627d760e95fb913
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281844"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Audit App Role Change Password 事件類別
   每當應用程式角色的密碼有所變更時，就會發生 **Audit App Role Change Password** 事件類別。  

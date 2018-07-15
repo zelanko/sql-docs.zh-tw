@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - arguments [SQL Server Management Studio]
 - external tools [SQL Server Management Studio]
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a568423d865e9ffea07f4e4487ea6d3680e2b417
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2693c20a4b1e26730085e9f84fcf3f920cf50314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310908"
 ---
 # <a name="arguments-for-external-tools"></a>外部工具的引數
   引數是 Studio 環境提供的變數，適用於從 [工具] 功能表中啟動外部工具之時。 您可以使用 [外部工具] 對話方塊，將 [記事本] 之類的外部工具加入 [工具] 功能表中。  
   
  下表列出外部工具的引數。  
   
-|[屬性]|引數|描述|  
+|名稱|引數|描述|  
 |----------|--------------|-----------------|  
 |**項目路徑**|$(ItemPath)|目前來源的完整檔案名稱 (定義為磁碟機 + 路徑 + 檔案名稱)；如果非來源窗格在作用中，便是空白。|  
 |**項目目錄**|$(ItemDir)|目前來源的目錄 (定義為磁碟機 + 路徑)；如果非來源窗格在作用中，便是空白。|  
@@ -47,7 +47,7 @@ ms.locfileid: "36134088"
 |**方案目錄**|$(SolutionDir)|目前方案的目錄 (定義為磁碟機 + 路徑)。|  
 |**方案檔案名稱**|$(SolutionFileName)|目標方案的檔案名稱 (定義為磁碟機 + 路徑 + 檔案名稱)。|  
   
- <sup>1</sup>目前這一行、 目前的資料行或目前的文字為基礎游標的位置，在文字編輯器中 [狀態] 列中所示。  
+ <sup>1</sup>目前這一行、 目前的資料行或目前的文字為基礎的資料指標的位置，在文字編輯器中 [狀態] 列中所示。  
   
 ## <a name="see-also"></a>另請參閱  
  [外部工具對話方塊](external-tools-dialog-box.md)   

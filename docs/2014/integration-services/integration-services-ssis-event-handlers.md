@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
 - run-time [Integration Services]
@@ -24,13 +24,13 @@ ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 23a2004083f5d5c5ce2262e5ca1c1286c9cfb2cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0df91ac6e5742a5326b98238ec81b31fddc62854
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227798"
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services (SSIS) 事件處理常式
   在執行階段，可執行檔 (封裝和「Foreach 迴圈」、「For 迴圈」、「時序」，以及工作主機容器) 會引發事件。 例如，當發生錯誤時，會引發 OnError 事件。 您可以建立這些事件的自訂事件處理常式，以擴充封裝功能，並使封裝在執行階段易於管理。 事件處理常式可以執行下列工作：  
@@ -49,7 +49,7 @@ ms.locfileid: "36037279"
   
  ![套件、For 迴圈、工作主機和執行 SQL 工作](media/mw-dts-eventhandlerpkg.gif "套件、For 迴圈、工作主機和執行 SQL 工作")  
   
- 針對其 `OnError` 事件，僅封裝具有事件處理常式。 如果 「 執行 SQL 」 工作執行時，發生錯誤`OnError`執行封裝的事件處理常式。 下圖顯示會導致執行的呼叫順序`OnError`封裝執行的事件處理常式。  
+ 針對其 `OnError` 事件，僅封裝具有事件處理常式。 如果 「 執行 SQL 」 工作執行時，發生錯誤`OnError`執行封裝的事件處理常式。 下圖顯示的呼叫順序，顯示會導致`OnError`封裝執行的事件處理常式。  
   
  ![事件處理常式流程](media/mw-dts-eventhandlers.gif "事件處理常式流程")  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36037279"
 -   指定事件處理常式使用的記錄模式。  
   
 ## <a name="event-handler-content"></a>事件處理常式內容  
- 建立事件處理常式與建立封裝相似；事件處理常式具有工作和容器，它們會循序進入控制流程，並且事件處理常式還可以包含資料流程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師包含 [事件處理常式] 索引標籤，用以建立自訂事件處理常式。 如需詳細資訊，請參閱[SSIS 封裝事件處理常式](integration-services-ssis-event-handlers.md)。  
+ 建立事件處理常式與建立封裝相似；事件處理常式具有工作和容器，它們會循序進入控制流程，並且事件處理常式還可以包含資料流程。 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師包含 [事件處理常式] 索引標籤，用以建立自訂事件處理常式。 如需詳細資訊，請參閱 < [SSIS 封裝事件處理常式](integration-services-ssis-event-handlers.md)。  
   
  您還可以程式設計方式建立事件處理常式。 如需詳細資訊，請參閱[以程式設計方式處理事件](building-packages-programmatically/handling-events-programmatically.md)。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36037279"
   
 |事件處理常式|事件|  
 |-------------------|-----------|  
-|`OnError`|事件處理常式`OnError`事件。 當發生錯誤時，可執行檔會引發此事件。|  
+|`OnError`|事件處理常式，如`OnError`事件。 當發生錯誤時，可執行檔會引發此事件。|  
 |**OnExecStatusChanged**|**OnExecStatusChanged** 事件的事件處理常式。 當可執行檔的執行狀態變更時，它會引發此事件。|  
 |**OnInformation**|**OnInformation** 事件的事件處理常式。 在驗證和執行可執行檔以報告資訊期間，會引發此事件。 此事件僅傳遞資訊，而不傳遞錯誤或警告。|  
 |**OnPostExecute**|**OnPostExecute** 事件的事件處理常式。 可執行檔完成執行後，它會立即引發此事件。|  
@@ -87,7 +87,7 @@ ms.locfileid: "36037279"
 |**OnProgress**|**OnProgress** 事件的事件處理常式。 可執行檔的進度可測量時，它會引發此事件。|  
 |**OnQueryCancel**|**OnQueryCancel** 事件的事件處理常式。 可執行檔會引發此事件，以判斷其是否應停止執行。|  
 |**OnTaskFailed**|**OnTaskFailed** 事件的事件處理常式。 工作失敗時，它引發此事件。|  
-|**OnVariableValueChanged**|**OnVariableValueChanged** 事件的事件處理常式。 當變數變更時，可執行檔會引發此事件。 定義變數所在的可執行檔會引發此事件。 如果您將不會引發這個事件**RaiseChangeEvent**該變數的屬性`False`。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。|  
+|**OnVariableValueChanged**|**OnVariableValueChanged** 事件的事件處理常式。 當變數變更時，可執行檔會引發此事件。 定義變數所在的可執行檔會引發此事件。 如果您將不會引發這個事件**RaiseChangeEvent**屬性，該變數`False`。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)。|  
 |**OnWarning**|**OnWarning** 事件的事件處理常式。 當發生警告時，可執行檔會引發此事件。|  
   
 ## <a name="configuration-of-an-event-handler"></a>設定事件處理常式  

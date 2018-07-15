@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 551ba484eb8cebe4278c5a39910d062292caf57f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28bcbf4e05302ca7b3d5deda1fb9a49ad4ba25a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324662"
 ---
 # <a name="create-new-infoobject"></a>建立新的 InfoObject
   使用 **[建立新的 InfoObject]** 對話方塊可以在 SAP Netweaver BW 系統中建立新的 InfoObject。  
@@ -133,7 +133,7 @@ ms.locfileid: "36022206"
  **InfoObject 類型**  
  檢視 InfoObject 的類型。 下表列出類型的可能值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |CHA|特性|  
 |KYF|關鍵數據|  

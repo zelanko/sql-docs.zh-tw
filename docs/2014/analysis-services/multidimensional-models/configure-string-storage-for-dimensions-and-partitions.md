@@ -1,5 +1,5 @@
 ---
-title: 設定維度和分割區的字串儲存體 |Microsoft 文件
+title: 設定字串存放區的維度和資料分割 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3874e787b6e6923568a9d72277249e949aa31550
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ae16d1e77e5e7dd16113bd8ee4ed4a0d5234668
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275704"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>設定維度及分割區的字串存放區
   您可以重新設定字串存放區，在超出字串存放區之 4 GB 檔案大小限制的維度屬性或分割區中容納非常大的字串。 如果您的維度或資料分割包含此大小的字串存放區，您可以在維度或資料分割層級，變更本機及連結 (本機或遠端) 物件的 **StringStoresCompatibilityLevel** 屬性來解決檔案大小限制。  
@@ -28,7 +28,7 @@ ms.locfileid: "36146835"
   
  這個屬性的有效值包括：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**1050**|指定每個存放區 4 GB 檔案大小上限的預設字串存放區架構。|  
 |**1100**|指定較大的字串存放區，每個存放區最多支援 40 億個唯一字串。|  
@@ -63,7 +63,7 @@ ms.locfileid: "36146835"
   
  維度和分割區必須使用 MOLAP 儲存。  
   
- 資料庫相容性層級必須設定為 1100。 如果您使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更新版的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立或部署資料庫，則資料庫相容性層級已經設定為 1100。 如果您將使用舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料庫移到 ssSQL11 或更新版本，必須更新相容性層級。 如果是移動但未重新部署的資料庫，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定相容性層級。 如需詳細資訊，請參閱[設定多維度資料庫的相容性層級&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。  
+ 資料庫相容性層級必須設定為 1100。 如果您使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或更新版的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]建立或部署資料庫，則資料庫相容性層級已經設定為 1100。 如果您將使用舊版 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立的資料庫移到 ssSQL11 或更新版本，必須更新相容性層級。 如果是移動但未重新部署的資料庫，您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 設定相容性層級。 如需詳細資訊，請參閱 <<c0> [ 設定多維度資料庫的相容性層級&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)。</c0>  
   
 ##  <a name="bkmk_step1"></a> 步驟 1：在 SQL Server Data Tools 中設定 StringStoreCompatiblityLevel 屬性  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36146835"
  您必須針對即將使用新字串存放架構的每個物件，使用 [完整處理] 選項。 在處理之前，請務必針對維度執行影響分析，以確認相依物件是否也需要處理。  
   
 ## <a name="see-also"></a>另請參閱  
- [處理的工具和方式&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [工具和方式處理&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [處理選項和設定&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
  [資料分割儲存模式及處理](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [維度儲存](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  

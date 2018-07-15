@@ -1,5 +1,5 @@
 ---
-title: 報表產生器中 SQL Server 2014 |Microsoft 文件
+title: SQL Server 2014 報表產生器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10428"
 helpviewer_keywords:
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ab3d87e730ee8788f010f776899d3d494887ed96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 911b88bc7b707e837bbd042814a2f8e84a61daa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035836"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261924"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>SQL Server 2014 中的報表產生器
-  報表產生器是一種報表撰寫環境的商務使用者想要使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office 環境。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在報表產生器中預覽報表，也可以將報表發行至報表伺服器或處於 SharePoint 整合模式的報表伺服器，讓其他人執行報表。  
+  報表產生器是一種報表撰寫環境的商務使用者想要工作[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office 環境。 當您設計報表時，可以指定要取得資料的位置、要取得的資料，以及要顯示資料的方式。 當您執行報表時，報表處理器會採用已指定的所有資訊、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在報表產生器中預覽報表，也可以將報表發行至報表伺服器或處於 SharePoint 整合模式的報表伺服器，讓其他人執行報表。  
   
  下圖中的報表提供一個矩陣，內含資料列和資料行群組、走勢圖、指標以及位於邊角資料格的摘要圓形圖，並附有一份地圖，地圖中具有兩組以色彩和圓形大小呈現的地理資料。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "36035836"
   
 ##  <a name="JumpStartReptCreation"></a> 開始建立報表  
   
--   **啟動您的報表 withreport 組件**小組的其他人所建立。 報表組件是已個別發行至報表伺服器或與報表伺服器整合之 SharePoint 網站上的報表項目。 報表組件可以在其他報表中重複使用。 諸如資料表、矩陣、圖表和影像等報表項目都可以發行為報表組件。  
+-   **啟動報表 withreport 組件**小組的其他人建立的。 報表組件是已個別發行至報表伺服器或與報表伺服器整合之 SharePoint 網站上的報表項目。 報表組件可以在其他報表中重複使用。 諸如資料表、矩陣、圖表和影像等報表項目都可以發行為報表組件。  
   
--   **共用資料集開始**小組的其他人所建立。 共用資料集是以儲存到報表伺服器或與報表伺服器整合之 SharePoint 網站上之共用資料來源做為基礎的查詢。  
+-   **共用資料集開始**小組的其他人建立的。 共用資料集是以儲存到報表伺服器或與報表伺服器整合之 SharePoint 網站上之共用資料來源做為基礎的查詢。  
   
 -   **從資料表、矩陣或圖表精靈開始**。 您可以選擇資料來源連接、拖放欄位以建立資料集查詢、選取配置和樣式，以及自訂報表。  
   
--   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.) 的空間資料。(ESRI) 形狀檔。 您也可以加入[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Bing 地圖底圖背景。  
+-   **從地圖精靈開始** ，以建立根據地理或幾何背景顯示彙總資料的報表。 地圖資料可能是來自 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或環境系統研究協會 (Environmental Systems Research Institute, Inc.) 的空間資料。(ESRI) 形狀檔。 您也可以新增[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Bing 地圖底圖背景。  
   
 
   
@@ -79,7 +79,7 @@ ms.locfileid: "36035836"
 
   
 ##  <a name="InThisSection"></a> 本節內容  
- [在報表產生器，SQL Server 2014 的最新消息](../what-s-new-in-report-builder-for-sql-server-2014.md)  
+ [SQL Server 2014 報表產生器的新功能](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  描述此版本報表產生器的新功能，包括地圖。  
   
  [教學課程： 建立快速圖表報表離線](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
@@ -88,7 +88,7 @@ ms.locfileid: "36035836"
  [規劃報表&#40;報表產生器&#41;](../report-design/planning-a-report-report-builder.md)  
  提供有關開始建立報表之前應該考量之事項的資訊。  
   
- [報表撰寫概念&#40;報表產生器和 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [報表撰寫概念&#40;報表產生器及 SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
  定義整個報表產生器文件集中使用的重要概念。  
   
  [報表設計檢視&#40;報表產生器&#41;](report-design-view-report-builder.md)  

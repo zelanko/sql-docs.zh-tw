@@ -1,5 +1,5 @@
 ---
-title: 資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理： PowerPivot 資料 |Microsoft 文件
+title: 資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理： PowerPivot 資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7598685ddb6cd92ad3bcddd1bd307f976db88f55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b9cdc773ef42536be619d8d8c0edac1d6d1dcb92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319378"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理：PowerPivot 資料
   如果是包含 PowerPivot 資料的 Excel 活頁簿，Excel Services 會在無法連接到 SharePoint 中的 PowerPivot 伺服器執行個體時傳回這個錯誤。  

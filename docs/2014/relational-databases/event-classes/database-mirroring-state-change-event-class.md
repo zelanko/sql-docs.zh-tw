@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Database Mirroring State Change event class
 ms.assetid: f936a99e-2a81-4768-8177-5c969bbe2e04
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 26a5bfd42e42fabcd6199336229dd42a1fd22e73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e635ff34d280affd22d5f0d7854b3c8d7f1a717d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257336"
 ---
 # <a name="database-mirroring-state-change-event-class"></a>Database Mirroring State Change 事件類別
   **Database Mirroring State Change** 事件類別指出鏡像資料庫狀態的變更。 請在監視鏡像資料庫狀況的追蹤中包含此事件類別。  
@@ -49,7 +49,7 @@ ms.locfileid: "36146353"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**整數**|新鏡像作業的狀態識別碼：<br /><br /> 0 = Null 通知<br /><br /> 1 = 已同步處理主體伺服器，有見證伺服器監督<br /><br /> 2 = 已同步處理主體伺服器，沒有見證伺服器監督<br /><br /> 3 = 已同步處理鏡像伺服器，有見證伺服器監督<br /><br /> 4 = 已同步處理鏡像伺服器，沒有見證伺服器監督<br /><br /> 5 = 主體伺服器連接中斷<br /><br /> 6 = 鏡像伺服器連接中斷<br /><br /> 7 = 手動容錯移轉<br /><br /> 8 = 自動容錯移轉<br /><br /> 9 = 鏡像作業暫停<br /><br /> 10 = 無仲裁伺服器<br /><br /> 11 = 正在同步處理鏡像伺服器<br /><br /> 12 = 執行中的主體伺服器已公開|30|是|  
-|**TextData**|**ntext**|狀態變更描述。|@shouldalert|是|  
+|**TextData**|**ntext**|狀態變更描述。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

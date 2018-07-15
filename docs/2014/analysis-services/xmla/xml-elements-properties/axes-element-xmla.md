@@ -1,5 +1,5 @@
 ---
-title: 座標軸會元素 (XMLA) |Microsoft 文件
+title: 軸元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -25,18 +25,18 @@ helpviewer_keywords:
 - Axes element
 ms.assetid: 2005d06a-f8a2-4b4f-8c0d-2f7f73eb6f5c
 caps.latest.revision: 21
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f508a92ca7ab8aca224c299723adddf3654c167c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b8ac4baded4dd516e12c31ffd701e1c4668d769e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237398"
 ---
 # <a name="axes-element-xmla"></a>Axes 元素 (XMLA)
-  包含集合[軸](axis-element-xmla.md)項目代表所包含的軸資料[根](root-element-xmla.md)項目，會使用[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)資料型別。  
+  包含的集合[軸](axis-element-xmla.md)項目代表所包含的軸資料[根](root-element-xmla.md)使用的項目[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)資料型別。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36131572"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[根](root-element-xmla.md)|  
+|父元素|[根目錄](root-element-xmla.md)|  
 |子元素|[Axis](axis-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- 在 `Axes` 元素底下，`Axis` 元素會按照它們出現在資料集中的順序列出，從零開始。 `AxisFormat` XMLA 屬性設定會決定如何格式化 `Axis` 元素。 如需有關`AxisFormat`屬性，請參閱[支援 XMLA 屬性&#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)。  
+ 在 `Axes` 元素底下，`Axis` 元素會按照它們出現在資料集中的順序列出，從零開始。 `AxisFormat` XMLA 屬性設定會決定如何格式化 `Axis` 元素。 如需詳細資訊`AxisFormat`屬性，請參閱 <<c2> [ 支援的 XMLA 屬性&#40;XMLA&#41;](propertylist-element-supported-xmla-properties.md)。</c2>  
   
  軸代表 Tuple 集合，而且集合中的所有 Tuple 都具有相同的維度性。 您可以使用不同的方式來表示集合，而且會產生不同的優點。 例如，下列四個 Tuple 的集合可以表示成二維 Tuple 的集合或兩個一維集合的笛卡兒乘積。  
   

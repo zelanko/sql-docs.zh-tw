@@ -1,5 +1,5 @@
 ---
-title: Slice 元素 (ASSL) |Microsoft 文件
+title: Slice 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Slice element
 ms.assetid: 2c8c4107-c641-4724-bfa5-0c47e0ec8888
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b1f693eddeebc0b4ad88e629eeeac9f76ca1083
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 299f84167ec64c4bdd795c56a608e76f61d348b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133792"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178885"
 ---
 # <a name="slice-element-assl"></a>Slice 元素 (ASSL)
   包含定義資料分割中包含之配量的多維度運算式 (MDX) 運算式。  
@@ -62,9 +62,9 @@ ms.locfileid: "36133792"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `Slice` 元素包含 MDX Tuple 運算式或集合運算式，可識別資料分割儲存資訊的 Cube 部分。 MDX 運算式是類似於[StrToSet](/sql/mdx/strtoset-mdx) MDX 函數與含有 CONSTRAINED 關鍵字，因為此運算式無法包含 MDX 或使用者定義函數。  
+ `Slice` 元素包含 MDX Tuple 運算式或集合運算式，可識別資料分割儲存資訊的 Cube 部分。 MDX 運算式是類似[StrToSet](/sql/mdx/strtoset-mdx) MDX 函數含有 CONSTRAINED 關鍵字，在於此運算式無法包含 MDX 或使用者定義函式。  
   
- 對應目的父代的項目`Slice`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Partition>。  
+ 對應至父系的元素`Slice`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Partition>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

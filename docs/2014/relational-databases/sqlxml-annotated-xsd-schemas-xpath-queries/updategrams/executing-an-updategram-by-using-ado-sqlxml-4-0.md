@@ -1,5 +1,5 @@
 ---
-title: 執行 Updategram 使用 ADO (SQLXML 4.0) |Microsoft 文件
+title: 執行 Updategram 使用 ADO (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - executing updategrams [SQLXML]
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37a8cb3f06152ac2bc7dc682ae8d06e54d33ef6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ad4ed1723cc8ad49ed18304c106b0849e6bc2fb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135130"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319968"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 Updategram (SQLXML 4.0)
   這個 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式會使用 ADO 來建立 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接，然後執行 updategram。 updategram 會更新特定員工的姓氏。 這個範例會使用 AdventureWorks 範例資料庫。  
   
  在此範例應用程式中：  
   
--   **Conn**物件 (**ADODB。連接**) 建立的執行個體的連線[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定伺服器電腦上。  
+-   **Conn**物件 (**ADODB。連接**) 建立與執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定伺服器電腦上。  
   
 -   **Cmd**物件 (**ADODB.Command**) 建立的連接上執行。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36135130"
   
 -   Updategram 會複製到命令資料流 (**strmIn**)。  
   
--   命令的輸出資料流設**StrmOut**物件 (**ADODB。資料流**) 才能接受任何傳回的資料。  
+-   命令的輸出資料流設定為**StrmOut**物件 (**ADODB。Stream**) 才能接受任何傳回的資料。  
   
 -   最後，系統會擲行命令 (updategram)。  
   
@@ -187,7 +187,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>傳遞參數  
- 在先前提供的 Visual Basic 應用程式中，系統不會傳遞參數。 在此應用程式， **ContactID**和**MiddleName**值會傳遞做為參數化輸入到 updategram。  
+ 在先前提供的 Visual Basic 應用程式中，系統不會傳遞參數。 在此應用程式中， **ContactID**並**MiddleName**值會傳遞為參數化的輸入到 updategram。  
   
 ```vb  
 Private Sub Form_Load()  

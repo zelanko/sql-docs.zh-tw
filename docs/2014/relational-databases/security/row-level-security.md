@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - row level security described
 - row level security
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 61e4d5339822a134981f7fd9708de6791d4549ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: eefc0764be46d8356dc1ac8e04b8025bf6119afd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311277"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
   資料列層級安全性可讓客戶能夠控制存取的使用者執行查詢 (例如，群組成員資格或執行內容) 的特性為基礎的資料庫資料表中的資料列。 資料列層級安全性現已推出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2016年。 如需這項功能的目前描述，請參閱目前文件中的 [資料列層級安全性](https://msdn.microsoft.com/library/dn765131.aspx) 。  

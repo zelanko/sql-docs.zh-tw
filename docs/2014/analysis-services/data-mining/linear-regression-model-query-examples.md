@@ -1,5 +1,5 @@
 ---
-title: 線性迴歸模型查詢範例 |Microsoft 文件
+title: 線性迴歸模型查詢範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - linear regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: fd3cf312-57a1-44b6-b772-fce6fc1c26d7
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dafee7e0aa5a95076c00f6aff9043014066c5da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 481774670258050b111820e88333a8354cfb14ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303178"
 ---
 # <a name="linear-regression-model-query-examples"></a>線性迴歸模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，內容查詢可能會提供有關迴歸公式的其他詳細資料，而預測查詢則會告訴您新資料點是否符合模型。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -89,7 +89,7 @@ FROM LR_PredictIncome.CONTENT
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  
@@ -116,7 +116,7 @@ FROM LR_PredictIncome.CONTENT
 |9 (統計資料)|  
 |11 (截距)|  
   
- 每個迴歸模型中的實值類型的意義的相關資訊，請參閱[Model Content for Linear Regression Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 迴歸模型每個值類型的意義的相關資訊，請參閱[Mining Model Content for Linear Regression Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
  [回頁首](#bkmk_top)  
   
@@ -150,7 +150,7 @@ FROM LR_PredictIncome.CONTENT
  [回頁首](#bkmk_top)  
   
 ###  <a name="bkmk_Query4"></a> 範例查詢 4：使用單一查詢預測收入  
- 在迴歸模型上建立單一查詢最簡單的方式是使用 **[單一查詢輸入]** 對話方塊。 比方說，您可以建立下列 DMX 查詢選取適當的迴歸模型中，選擇**單一查詢**，然後輸入`20`做為值**年齡**。  
+ 在迴歸模型上建立單一查詢最簡單的方式是使用 **[單一查詢輸入]** 對話方塊。 例如，您可以建置下列 DMX 查詢，藉由選取適當的迴歸模型中，選擇**單一查詢**，然後輸入`20`做為值**年齡**。  
   
 ```  
 SELECT [LR_PredictIncome].[Yearly Income]  

@@ -1,5 +1,5 @@
 ---
-title: CLR 整合安全性中的連結 |Microsoft 文件
+title: CLR 整合安全性中的連結 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - gated links [CLR integration]
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: edd8600e3c8e577ef020d732cce3924252393ce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 58f1d4ada74d7d64b9a5c44060f0cdd0fce8fcce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145905"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243098"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 整合安全性中的連結
   本節將描述使用者程式碼片段如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或其中一種 Managed 語言在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中彼此呼叫。 這些物件之間的關聯性稱為連結。  
@@ -37,7 +37,7 @@ ms.locfileid: "36145905"
  資料表存取連結會對應至擷取或修改資料表、檢視表或資料表值函式中的值。 它們與引動過程連結類似，但它們在 SELECT、INSERT、UPDATE 及 DELETE 權限方面具有更精細的存取控制。  
   
 ## <a name="gated-links"></a>閘門守護式連結  
- 閘門守護式連結表示在執行期間，一旦建立了物件關聯性，就不會檢查該物件關聯性兩端的權限。 當兩個物件之間的閘門守護式的連結 (例如，物件**x**和物件**y**)，物件的權限**y**和從物件存取其他物件**y**只檢查物件的建立時間**x**。 在物件的建立時間**x**，`REFERENCE`上檢查權限**y**的擁有者針對**x**。 在執行階段 (例如，當某人呼叫物件**x**)，根據檢查沒有權限**y**或它以靜態方式參考其他物件。 在執行時，將適當的權限檢查物件**x**本身。  
+ 閘門守護式連結表示在執行期間，一旦建立了物件關聯性，就不會檢查該物件關聯性兩端的權限。 兩個物件之間的閘門守護式的連結時 (例如，物件**x**和物件**y**)，物件的權限**y**和其他物件從物件存取**y**只檢查物件的建立時間**x**。 在物件的建立時間**x**，`REFERENCE`上檢查權限**y**的擁有者對**x**。 在執行階段 (例如，當某人呼叫物件**x**)，根據檢查沒有權限**y**或它以靜態方式參考其他物件。 在執行時，將適當的權限檢查對物件**x**本身。  
   
  閘門守護式連結一定會搭配兩個物件之間的中繼資料相依性使用。 這個中繼資料相依性就是在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目錄中建立的關聯性，只要其他相依的物件存在，就可防止物件被卸除。  
   

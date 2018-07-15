@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
 - security [SQL Server Agent], enabling alert job step tokens
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ae207d1b4568a9d2eb567821511e411f92360e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c23214b2ce0fccf5b96934cab3b4561d224ff677
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246168"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 可讓您在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業步驟指令碼中使用 Token。 撰寫作業步驟時使用 Token，所賦予您的彈性與撰寫軟體程式時使用的變數一樣。 在作業步驟指令碼中插入 Token 後， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 就會先在執行階段取代此 Token，然後再由 [!INCLUDE[tsql](../../includes/tsql-md.md)] 子系統執行作業步驟。  
@@ -38,7 +38,7 @@ ms.locfileid: "36145764"
 ## <a name="understanding-using-tokens"></a>了解如何使用 Token  
   
 > [!IMPORTANT]  
->  對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 token 包括： **A-DBN**， **A-SVR**， **A-ERR**， **A-SEV**， **A-MSG**。，並**WMI (*`property`*)**. 請注意在此版本中，Token 的使用擴充到所有警示。  
+>  對 Windows 事件記錄檔具有寫入權限的任何 Windows 使用者，都可以存取由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示或 WMI 警示啟動的作業步驟。 為了避免此安全性風險，依預設會停用在警示啟動的作業中可以使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Token。 這些 token 包括： **A-DBN**， **A-SVR**， **A-ERR**， **A-SEV**， **A-MSG**。，和**WMI (*`property`*)**. 請注意在此版本中，Token 的使用擴充到所有警示。  
 >   
 >  如果需要使用這些 Token，請先確定只有受信任的 Windows 安全性群組的成員 (例如 Administrators 群組) 才對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所在電腦的事件記錄檔具有寫入權限。 然後以滑鼠右鍵按一下物件總管中的 [SQL Server Agent]、選取 [屬性]，然後在 [警示系統] 頁面上選取 [取代回應警示之所有作業的 Token]，以啟用這些 Token。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36145764"
   
 |Token 語法|警示 Token 取代開啟|警示 Token 取代關閉|  
 |------------------|--------------------------------|---------------------------------|  
-|使用 ESCAPE 巨集|作業中的所有 Token 都會順利被取代。|由警示啟動的 Token 不會被取代。 這些 token 包括**A-DBN**， **A-SVR**， **A-ERR**， **A-SEV**， **A-MSG**，和**WMI (*`property`*)**. 其他靜態 Token 則會順利被取代。|  
+|使用 ESCAPE 巨集|作業中的所有 Token 都會順利被取代。|由警示啟動的 Token 不會被取代。 這些 token 包括**A-DBN**， **A-SVR**， **A-ERR**， **A-SEV**， **A-MSG**，以及**WMI (*`property`*)**. 其他靜態 Token 則會順利被取代。|  
 |不使用 ESCAPE 巨集|所有包含 Token 的作業都會失敗。|所有包含 Token 的作業都會失敗。|  
   
 ## <a name="token-syntax-update-examples"></a>Token 語法更新範例  

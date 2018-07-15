@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - full-text search [SQL Server], properties
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3aec36dc9ba7771cd83cea8ddc1deafe3bf1a648
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f107485b73df58e8d2da53f111cb522e1d3846bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035650"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292298"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>使用搜索屬性清單搜索文件屬性
   文件屬性的內容與文件本文的內容之間原本無法區別。 這項限制會將全文檢索查詢限制為整個文件的一般搜尋。 不過，現在您可以針對 `varbinary`、`varbinary(max)` (包括 `FILESTREAM`) 或 `image` 二進位資料行中支援的文件類型設定全文檢索索引，以便支援特定屬性 (例如 Author 和 Title) 的屬性範圍搜尋作業。 這種搜尋形式稱為「屬性搜尋」。  
@@ -65,7 +64,7 @@ ms.locfileid: "36035650"
 ##  <a name="impact"></a> 啟用屬性搜索的影響  
  如果您設定全文檢索索引來支援一個或多個屬性的搜尋，就會根據您在搜尋屬性清單中指定的屬性數目以及每個屬性的內容，稍微增加索引的大小。  
   
- 在測試 Microsoft Word 的一般主體<sup>®</sup>，Excel<sup>®</sup>，和 PowerPoint<sup>®</sup>文件中，我們設定了全文檢索索引要索引的一般搜尋屬性。 建立這些屬性的索引大約增加了 5% 的全文檢索索引大小。 我們預期大部分文件主體的這個近似大小增加量應該相同。 不過，此大小增加量最終將取決於給定文件主體中的屬性資料量相對於整體資料量。  
+ 在測試 Microsoft word 的一般主體<sup>®</sup>，Excel<sup>®</sup>，和 PowerPoint<sup>®</sup>文件中，我們設定全文檢索索引來建立一般搜尋屬性。 建立這些屬性的索引大約增加了 5% 的全文檢索索引大小。 我們預期大部分文件主體的這個近似大小增加量應該相同。 不過，此大小增加量最終將取決於給定文件主體中的屬性資料量相對於整體資料量。  
   
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - RPC:Starting event class
 ms.assetid: 1d5c3e53-0104-41f7-ab8b-732462d859f8
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3eec8a082f8737f51e6c37003710020ee32d78fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2c57b2a229940f949740a82a193e4c666443b3f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294838"
 ---
 # <a name="rpcstarting-event-class"></a>RPC:Starting 事件類別
   RPC:Starting 事件類別表示已經啟動遠端程序呼叫。  
@@ -52,7 +52,7 @@ ms.locfileid: "36136855"
 |SessionLoginName|`nvarchar`|引發工作階段的使用者登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 的身分執行陳述式，SessionLoginName 會顯示 Login1，而 LoginName 會顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|遠端程序呼叫的文字。|@shouldalert|是|  
+|TextData|`ntext`|遠端程序呼叫的文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-編輯篩選器 |Microsoft 文件
+title: SQL Server Profiler-編輯篩選 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.editfilter.f1
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a63c2bbfc6440cb6df36791c3e8fc26308ac2970
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dbf2067f6eb74798a8f1c9690c65b6e49132b6b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135444"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320758"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - 編輯篩選
   使用 **[編輯篩選]** 對話方塊來建立和修改追蹤中的資料行篩選。 按一下清單中的資料行名稱，該資料行可用的篩選準則就會顯示在相鄰的窗格中。 輸入篩選準則，然後按一下 **[確定]** ，以套用至選取的資料行。 如果篩選圖示出現在清單中之資料行名稱的左邊，表示已經設定該資料行的篩選。  

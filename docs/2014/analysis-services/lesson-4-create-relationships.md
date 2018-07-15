@@ -1,5 +1,5 @@
 ---
-title: 第 5 課： 建立關聯性 |Microsoft 文件
+title: 第 5 課： 建立關聯性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: d9428908b712fcda9a016af0825602c62548a691
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f0c32363cd3af495ef17d689bbf8c704e8ba21d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204499"
 ---
 # <a name="lesson-5-create-relationships"></a>第 5 課：建立關聯性
   在這一課，您將驗證匯入資料時自動建立的關聯性，以及在不同資料表之間加入新的關聯性。 關聯性是在兩個資料表之間的一種連接，這種連接會建立這兩個資料表中資料相互關聯的方式。 例如，[產品] 資料表和 [產品子類別目錄] 資料表的關聯性是以每個產品都屬於某個子類別目錄為基礎。 如需詳細資訊，請參閱[關聯性 &#40;SSAS 表格式&#41;](tabular-models/relationships-ssas-tabular.md)。  
   
  完成本課程的估計時間： **10 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課： [第 3 課：重新命名資料行](rename-columns.md)。  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>檢閱現有的關聯性並加入新的關聯性  

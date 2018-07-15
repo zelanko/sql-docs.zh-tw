@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Shared Service
 - SharePoint Mode [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 0db289199d555a722686de07688199c0b4a9119c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 910bd13ffca5ceec7e31d7c27079c48ffe249b04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297918"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS 服務應用程式的佈建訂閱及警示
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱和資料警示需要 SQL Server Agent，並且需要 SQL Server Agent 的權限組態。 如果您看到錯誤訊息指出需要 SQL Server Agent，而您已確認 SQL Server Agent 正在執行，則請更新或驗證權限。 本主題的範圍是 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，且本主題說明三種可以用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱來更新 SQL Server Agent 權限的方法。 在本主題中用來執行步驟的認證必須要有足夠的權限，才能針對服務應用程式、msdb 和 master 資料庫中的物件授與 RSExecRole 的執行權限。  
@@ -81,7 +81,7 @@ ms.locfileid: "36133684"
   
 2.  在 [開始] 功能表上，按一下 [所有程式]。  
   
-3.  展開**Microsoft SharePoint 2010 產品**按一下**SharePoint 2010 管理命令介面**。  
+3.  依序展開**Microsoft SharePoint 2010 產品**然後按一下**SharePoint 2010 管理命令介面**。  
   
 4.  透過取代報表伺服器資料庫的名稱、應用程式集區帳戶及陳述式的路徑，來更新下列 PowerShell Cmdlet。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36133684"
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中載入 Transact-SQL 指令碼  
   
-1.  若要開啟 SQL Server Management Studio，在**啟動**功能表上，按一下  **Microsoft SQL Server 2012**按一下**SQL Server Management Studio**。  
+1.  若要開啟 SQL Server Management Studio，在**開始**功能表上，按一下**Microsoft SQL Server 2012**然後按一下**SQL Server Management Studio**。  
   
 2.  在 [連接到伺服器] 對話方塊上，設定下列選項：  
   

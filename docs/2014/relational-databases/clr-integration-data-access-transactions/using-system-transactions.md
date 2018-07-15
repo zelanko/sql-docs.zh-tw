@@ -1,13 +1,11 @@
 ---
-title: 使用 System.Transactions |Microsoft 文件
+title: 使用 System.Transactions |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - System.Transactions namespace
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 44054210ce7bf889bdc6e38f181cf8b16e638215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: cf0f57f84e4b1838b9fd2da9838891640782266b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035718"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350060"
 ---
 # <a name="using-systemtransactions"></a>使用 System.Transactions
   `System.Transactions` 命名空間會提供與 ADO.NET 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Common Language Runtime (CLR) 整合完全整合的交易架構。 `System.Transactions.TransactionScope` 類別可藉由在分散式交易中隱含地編列連接，讓程式碼區塊可進行交易。 您必須呼叫 `Complete` 所標示之程式碼區塊結尾的 `TransactionScope` 方法。 當程式執行離開程式碼區塊時，會叫用 `Dispose` 方法，如果不呼叫 `Complete` 方法，則會讓交易停止。 如果已擲回造成程式碼離開範圍的例外狀況，則會將交易視為停止。  

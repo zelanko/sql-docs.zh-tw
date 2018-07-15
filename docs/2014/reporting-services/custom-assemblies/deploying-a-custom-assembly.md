@@ -17,15 +17,15 @@ helpviewer_keywords:
 - updating custom assemblies
 ms.assetid: c6674cd8-0de7-4a5a-9e7c-12ffa49f6fd2
 caps.latest.revision: 46
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db9a7f2660306b5a938041cc967d1daccc9bc97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 72edfdc6070140f2b9d72c1a4ba50c05cfda8d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313248"
 ---
 # <a name="deploying-a-custom-assembly"></a>部署自訂組件
   若要在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中部署自訂組件，請在報表設計師與報表伺服器的應用程式資料夾中放置組件。 依預設，會授與自訂組件在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 `Execution` 權限。 若要授與執行權限以外的自訂組件權限，您必須編輯報表伺服器的 rssrvpolicy.config 設定檔，以及報表設計師預覽視窗的 rspreviewpolicy.config 設定檔。 或者，您可以在全域組件快取 (GAC) 中安裝自訂組件。  
@@ -67,7 +67,7 @@ ms.locfileid: "36137255"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [報表中使用自訂組件](using-custom-assemblies-with-reports.md)   
+ [與報表搭配使用自訂組件](using-custom-assemblies-with-reports.md)   
  [使用組件和全域組件快取](http://go.microsoft.com/fwlink/?LinkId=63912)  
   
   

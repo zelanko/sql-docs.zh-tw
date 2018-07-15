@@ -1,5 +1,5 @@
 ---
-title: 資料表屬性 |Microsoft 文件
+title: 資料表屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
 - sql12.SWB.SELECTCOLUMNS.F1
@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.swb.tableproperties.changetracking.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e5b9ecfeafbb989f5baae832225475e65137a9ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 858be4ef2443a92f2a2999535714084fe60a67f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181765"
 ---
 # <a name="table-properties"></a>資料表屬性
   本主題描述在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]之 [資料表屬性] 對話方塊中顯示的資料表屬性。 如需如何顯示這些屬性的詳細資訊，請參閱 [檢視資料表定義](view-the-table-definition.md)。  
@@ -145,7 +145,7 @@ ms.locfileid: "36134568"
   
 ### <a name="general"></a>一般  
  **Vardecimal 儲存格式已啟用**  
- 當`True`，這個唯讀值表示`decimal`和`numeric`資料型別會使用 vardecimal 儲存格式儲存。 若要變更此選項，請使用`vardecimal storage format`選項[sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)。 Vardecimal 儲存格式已被取代。 請改用資料列壓縮。  
+ 當`True`，這個唯讀值表示`decimal`和`numeric`資料型別會使用 vardecimal 儲存格式儲存。 若要變更此選項，請使用`vardecimal storage format`的選項[sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)。 Vardecimal 儲存格式已被取代。 請改用資料列壓縮。  
   
  **索引空間**  
  顯示索引在資料表中所佔的空間量 (以 MB 表示)。 這個值不包括資料表的 XML 索引空間使用量。 如果 XML 索引屬於此資料表，請改用 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) 。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - template databases [SQL Server]
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 caps.latest.revision: 47
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3f8fd67f968701440b06274bbd40600be94c00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 729c2d4ea6f89a8b97917d6b22ca885342618018
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035226"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242878"
 ---
 # <a name="model-database"></a>Model 資料庫
   **model** 資料庫可做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體上建立之所有資料庫的範本。 因為每次 **啟動時，都會建立** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，所以 **model** 資料庫一定要存在於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統中。 **model** 資料庫的完整內容 (包括資料庫選項) 都會複製到新的資料庫。 在啟動期間， **model** 的某些設定也會用於建立新的 **tempdb** ，所以 **model** 資料庫必須一直存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統上。  
@@ -39,7 +39,7 @@ ms.locfileid: "36035226"
  如果您修改 **model** 資料庫，則此後建立的所有資料庫都會繼承那些變更。 例如，您可以設定權限或資料庫選項，或是加入資料表、函數、預存程序之類的物件。 **model** 資料庫的檔案屬性是例外狀況，且已加以忽略 (資料檔案的初始大小除外)。  
   
 ## <a name="physical-properties-of-model"></a>model 的實體屬性  
- 下表列出 **model** 資料檔和記錄檔的初始組態值。 這些檔案的大小可以各不相同稍有不同版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 下表列出 **model** 資料檔和記錄檔的初始組態值。 這些檔案的大小可能稍有不同版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 |檔案|邏輯名稱|實體名稱|檔案成長|  
 |----------|------------------|-------------------|-----------------|  
@@ -82,7 +82,7 @@ ms.locfileid: "36035226"
 |Service Broker 選項|DISABLE_BROKER|否|  
 |TRUSTWORTHY|OFF|否|  
   
- <sup>1</sup>若要確認資料庫的目前復原模式，請參閱[檢視或變更資料庫的復原模式&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)或[sys.databases &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
+ <sup>1</sup>若要確認目前的資料庫的復原模式，請參閱[檢視或變更資料庫的復原模式&#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)或是[sys.databases &#40;-&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   
  如需這些資料庫選項的描述，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   

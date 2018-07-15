@@ -1,5 +1,5 @@
 ---
-title: MeasureID 元素 (ASSL) |Microsoft 文件
+title: MeasureID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MeasureID element
 ms.assetid: 8457aebc-8fdd-4683-8640-baaf9d89b2a2
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70b7695644f2aa0da85050bb9db96ac277ede298
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7a1ff1e817ae78307f8da134e88e742295892ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326528"
 ---
 # <a name="measureid-element-assl"></a>MeasureID 元素 (ASSL)
-  將[量值](../objects/measure-element-assl.md)元素與父元素。  
+  將產生關聯[量值](../objects/measure-element-assl.md)與父元素的項目。  
   
 ## <a name="syntax"></a>語法  
   
