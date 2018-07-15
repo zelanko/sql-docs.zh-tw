@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f17620dc2fc58b033bef928035b4f5f40816214e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 37bbe195179a13d00961f3f33149e3d25b9476e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137230"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188035"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services 中的分頁 (報表產生器與 SSRS)
-  分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 中的分頁[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]會根據您用來檢視和傳遞報表的轉譯延伸模組而有所不同。 當您在報表伺服器上執行報表時，報表會使用 HTML 轉譯器。 HTML 會遵循特定的一組分頁規則。 例如，如果您將相同的報表匯出至 PDF，系統就會使用 PDF 轉譯器，並套用另一組不同的規則，因此，報表的分頁就會不同。 若要成功設計容易閱讀的報表為您的使用者，並針對您打算用來傳遞報表的轉譯器最佳化，您必須了解用於控制中的之分頁的規則[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
+  分頁指的是報表內的頁數，以及如何在這些頁面上排列報表項目。 中的分頁[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]會根據您用來檢視和傳遞報表的轉譯延伸模組而有所不同。 當您在報表伺服器上執行報表時，報表會使用 HTML 轉譯器。 HTML 會遵循特定的一組分頁規則。 例如，如果您將相同的報表匯出至 PDF，系統就會使用 PDF 轉譯器，並套用另一組不同的規則，因此，報表的分頁就會不同。 若要成功設計容易閱讀的報表為您的使用者，適用於您計劃將傳遞報表的轉譯器，您需要了解用來控制中的之分頁的規則[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]。  
   
  本主題討論實體頁面大小與報表配置，對手動分頁符號轉譯器轉譯報表的影響。 您可以使用 **[報表屬性]** 窗格、 **[屬性]** 窗格或 **[版面設定]** 對話方塊來設定屬性，藉此修改實際頁面大小和邊界，並且將報表分為資料行。 按一下報表主體外面的藍色區域即可存取 **[報表屬性]** 。 按一下 [主資料夾] 索引標籤上的 **[執行]** ，然後按一下 [執行] 索引標籤上的 **[版面設定]** ，即可存取 **[版面設定]** 對話方塊。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36137230"
   
  您可以使用常數和簡單或複雜的運算式來設定 Disabled 和 ResetPageNumber 屬性的值。 不過，您無法搭配 BreakLocation 屬性使用運算式。 如需撰寫和使用運算式的詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   
- 在您的報表中，您可以撰寫使用參考目前頁面名稱或頁碼的運算式`Globals`集合。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
+ 在報表中，您可以撰寫使用參考目前頁面名稱或頁碼的運算式`Globals`集合。 如需詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)。  
   
 ### <a name="naming-excel-worksheet-tabs"></a>命名 Excel 工作表頁籤  
  當您將報表匯出至 Excel 活頁簿時，這些屬性相當實用。 當您匯出報表時，使用 InitialPage 屬性來指定工作表索引標籤名稱的預設名稱，並使用分頁和 PageName 屬性，為每個工作表提供不同的名稱。 由分頁所定義的每個新的報表頁面都會匯出至由 PageName 屬性的值所命名的不同工作表。 如果 PageName 是空白的，但是報表有一個初始頁面名稱，則 Excel 活頁簿中的所有工作表都會使用相同的名稱，也就是初始頁面名稱。  
@@ -87,6 +87,6 @@ ms.locfileid: "36137230"
  如需報表匯出至 Excel 時，這些屬性如何運作的詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [頁面配置和轉譯&#40;報表產生器和 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [頁面配置和轉譯&#40;報表產生器及 SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

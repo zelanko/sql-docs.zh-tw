@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
@@ -16,20 +16,20 @@ ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d8c509675ed604582fe83ce7ddf539b0e7be717e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7184a0a5aa72ea7fe4ff681103044f2791bdf33
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227081"
 ---
 # <a name="access-report-server-items-using-url-access"></a>使用 URL 存取權存取報表伺服器項目
   本主題描述如何使用 *rs:Command*=*Value*，來存取報表伺服器資料庫或 SharePoint 網站中不同類型的目錄項目。  
   
  您不需要加入此參數字串。 如果您省略此參數字串，報表伺服器會評估項目類型並自動選取適當的參數值。 不過，在 URL 中使用 *rs:Command*=*Value* 字串可改善報表伺服器的效能。  
   
- 請注意下列範例中的 `_vti_bin` Proxy 語法。 如需有關使用 proxy 語法的詳細資訊，請參閱[URL 存取參數參考](url-access-parameter-reference.md)。  
+ 請注意下列範例中的 `_vti_bin` Proxy 語法。 如需使用 proxy 語法的詳細資訊，請參閱[URL 存取參數參考](url-access-parameter-reference.md)。  
   
 ## <a name="access-a-report"></a>存取報表  
  若要在瀏覽器中檢視報表，請使用 *rs:Command*=*Render* 參數。 例如：  
@@ -69,7 +69,7 @@ ms.locfileid: "36135579"
 </DataSourceDefinition>  
 ```  
   
- 根據報表伺服器的 **SecureConnectionLevel** 設定傳回連接字串。 如需有關**SecureConnectionLevel**設定，請參閱[使用安全的 Web 服務方法](report-server-web-service/net-framework/using-secure-web-service-methods.md)。  
+ 根據報表伺服器的 **SecureConnectionLevel** 設定傳回連接字串。 如需詳細資訊**SecureConnectionLevel**設定，請參閱[使用安全的 Web 服務方法](report-server-web-service/net-framework/using-secure-web-service-methods.md)。  
   
 ## <a name="access-the-contents-of-a-folder"></a>存取資料夾的內容  
  若要存取資料夾的內容，請使用 *rs:Command*=*GetChildren* 參數。 隨即會傳回一般資料夾巡覽頁面，其中包含在要求資料夾中所含的子資料夾、報表、資料來源與資源的連結。 例如：  

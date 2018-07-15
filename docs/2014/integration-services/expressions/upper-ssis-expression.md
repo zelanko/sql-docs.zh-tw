@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UPPER function
 - converting lowercase to uppercase
@@ -18,13 +18,13 @@ ms.assetid: d33985f7-1048-4023-83e4-274090acda78
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc7b01b83ad0fac1f5da68fcd99ab082cebe89ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3208bd294197a77345a762f8fe08de42678cd585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248528"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 運算式)
   傳回小寫字元轉換為大寫字元之後的字元運算式。  

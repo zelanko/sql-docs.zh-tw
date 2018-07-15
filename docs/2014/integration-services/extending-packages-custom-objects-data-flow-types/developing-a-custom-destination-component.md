@@ -24,13 +24,13 @@ ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4bb79a456a7dbee3453250eb2342e107be786ece
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 972c1816a62fc7a3759d7a67a96b162d6cadfde0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223628"
 ---
 # <a name="developing-a-custom-destination-component"></a>開發自訂目的地元件
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 讓開發人員能夠撰寫可連線至任何自訂資料來源並在其中儲存資料的自訂目的地元件。 當您必須連接至無法使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 隨附的其中一個現有來源元件所存取的資料來源時，自訂目的地元件就很有用。  
@@ -486,7 +486,7 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [開發自訂來源元件](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   

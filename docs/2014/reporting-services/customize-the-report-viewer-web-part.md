@@ -1,5 +1,5 @@
 ---
-title: 自訂報表檢視器 Web 組件 |Microsoft 文件
+title: 自訂報表檢視器 Web 組件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d59a29eef3b45596a99ffeb9dd2bb45d6761357e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a56fdc024d15a24463fb0a7cf593ad23ca85aa34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146708"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162249"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自訂報表檢視器 Web 組件
   您可以使用報表檢視器 Web 組件來檢視在設定為 SharePoint 整合之報表伺服器上執行的報表。 可顯示的報表包括報表定義 (.rdl) 檔案和報表產生器報表。 報表會自動在新網頁中於報表檢視器 Web 組件中開啟，但如果您希望特定報表總是顯示在某現有網頁或網站上，您也可以將報表檢視器 Web 組件加入至該網頁上。  
@@ -79,7 +79,7 @@ ms.locfileid: "36146708"
 |顯示縮放控制項|顯示或隱藏工具列上的縮放控制項。|  
 |顯示 ATOM 摘要按鈕|顯示或隱藏工具列上的 ATOM 摘要按鈕。<br /><br /> ![htmlviewer_datafeed](media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|  
 |工具列位置|判斷工具列在報表檢視器中的位置。 有效值包括`Top`和`Bottom`。|  
-|提示區域|有效值包括`Displayed`， `Collapsed`，和`Hidden`。 `Displayed` 顯示的報表，包括參數化的值，以及需要使用者輸入才會執行報表的 [參數] 區域。 使用`Hidden`如果已指定所有報表參數，而不想讓使用者看見參數區域。|  
+|提示區域|有效值包括`Displayed`， `Collapsed`，和`Hidden`。 `Displayed` 顯示針對的報表，包括參數化的值，以及執行報表之前需要使用者輸入的 [參數] 區域。 使用`Hidden`如果已指定所有報表參數，而不想讓使用者看見參數區域。|  
 |參數區域寬度|您可以選擇度量單位和值。 預設值是 200 像素。 此屬性的唯一需求為大於零。|  
 |文件引導模式|在報表中定義的報表導覽控制項，用來提供報表特定區段的單鍵存取。 此模式於 HTML 報表中提供。 文件引導模式會在報表檢視區域旁的可摺疊區域中顯示。 有效值包括`Displayed`， `Collapsed`，和`Hidden`。 如果已定義報表的文件引導模式，除非在網頁組件屬性中標記為隱藏或摺疊，否則此區域會根據預設展開。 如果文件引導模式為摺疊，則可以按一下箭號將它展開。|  
 |文件引導模式區域寬度|您可以選擇度量單位和值。 預設值是 200 像素。 此屬性的唯一需求為大於零。|  
@@ -97,6 +97,6 @@ ms.locfileid: "36146708"
   
 ## <a name="see-also"></a>另請參閱  
  [在 SharePoint 網站上的報表檢視器 Web 組件](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
- [將報表檢視器 Web 組件加入至網頁&#40;的 Reporting Services SharePoint 整合模式&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+ [將報表檢視器 Web 組件新增至網頁&#40;Reporting Services SharePoint 整合模式&#41;](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
   

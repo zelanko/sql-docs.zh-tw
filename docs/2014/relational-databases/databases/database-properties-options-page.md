@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 65
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6747eb3df75a585236e85de6bc0103241f5b6d8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 30a0bf869529c81b86e05a9bf6a8be8b43573705
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187015"
 ---
 # <a name="database-properties-options-page"></a>資料庫屬性 (選項頁面)
-  使用此頁面來檢視或修改選取之資料庫的選項。 在此頁面上可用選項的相關資訊，請參閱[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+  使用此頁面來檢視或修改選取之資料庫的選項。 在此頁面上的可用選項的相關資訊，請參閱[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
 ## <a name="page-header"></a>頁首  
  **定序**  
@@ -59,11 +59,11 @@ ms.locfileid: "36137367"
  指定資料庫是否自動更新過時的最佳化統計資料。 可能的值是 `True` 和 `False`。 當它是 `True` 時，在最佳化期間，會自動建置查詢最佳化所需要的任何過期統計資料。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
  **自動非同步更新統計資料**  
- 當`True`，初始化自動更新過期統計資料的查詢不會等待在編譯之前更新統計資料。 當有可用的更新統計資料時，後續的查詢會使用這些統計資料。  
+ 當`True`，初始化自動更新過期統計資料的查詢將不會等待在編譯之前更新統計資料。 當有可用的更新統計資料時，後續的查詢會使用這些統計資料。  
   
- 當`False`，更新的統計資料可以用在查詢最佳化計畫中等候初始化自動更新過期的統計資料的查詢。  
+ 當`False`，初始化自動更新過期的統計資料的查詢等候，直到更新的統計資料可以用在查詢最佳化計畫中。  
   
- 此選項設為`True`沒有任何作用，除非**自動更新統計資料**也會設為`True`。  
+ 將此選項設定為`True`沒有任何作用，除非**自動 Update Statistics**也會設定為`True`。  
   
 ## <a name="containment"></a>Containment  
  在自主資料庫中，通常在伺服器層級設定的某些設定可在資料庫層級進行設定。  
@@ -101,16 +101,16 @@ ms.locfileid: "36137367"
   
 ## <a name="miscellaneous"></a>其他  
  **ANSI NULL 預設值**  
- 允許 null 值的所有使用者定義資料類型或資料行未明確定義為`NOT NULL`期間`CREATE TABLE`或`ALTER TABLE`陳述式 （預設狀態）。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 和 [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)。  
+ 允許 null 值的所有使用者定義資料類型或為未明確定義的資料行`NOT NULL`期間`CREATE TABLE`或`ALTER TABLE`陳述式 （預設狀態）。 如需詳細資訊，請參閱 [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) 和 [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql)。  
   
  **ANSI NULLS 已啟用**  
- 使用 Null 值時，指定等於 (`=`) 和不等於 (`<>`) 比較運算子的行為。 可能的值為`True`（開啟） 和`False`（關閉）。 當它是 `True` 時，所有對於 Null 值的比較都會得出 UNKNOWN。 當`False`，非 UNICODE 值與 null 值的比較都會評估為`True`如果這兩個值都是 NULL。 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)。  
+ 使用 Null 值時，指定等於 (`=`) 和不等於 (`<>`) 比較運算子的行為。 可能的值為`True`（開啟） 和`False`（關閉）。 當它是 `True` 時，所有對於 Null 值的比較都會得出 UNKNOWN。 當`False`，非 UNICODE 值與 null 值的比較都會得出`True`如果這兩個值都是 NULL。 如需詳細資訊，請參閱 [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)。  
   
  **ANSI 填補已啟用**  
  指定開啟或關閉 ANSI 填補。 允許的值為`True`（開啟） 和`False`（關閉）。 如需詳細資訊，請參閱 [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)。  
   
  **ANSI 警告已啟用**  
- 針對數個錯誤狀況指定 ISO 標準行為。 當`True`，如果 null 值出現在彙總函式 （例如 SUM、 AVG、 MAX、 MIN、 STDEV、 STDEVP、 VAR、 VARP 或計數），就會產生一則警告訊息。 當`False`，不會發出警告。 如需詳細資訊，請參閱 [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)。  
+ 針對數個錯誤狀況指定 ISO 標準行為。 當`True`，如果 null 值出現在彙總函式 （例如總和、 AVG、 MAX、 MIN、 STDEV、 STDEVP、 VAR、 VARP 或計數），就會產生一則警告訊息。 當`False`，不會發出警告。 如需詳細資訊，請參閱 [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)。  
   
  **算術中止已啟用**  
  指定是否啟用資料庫選項算術中止。 可能的值是 `True` 和 `False`。 當它是 `True` 時，溢位或除以零的錯誤會終止查詢或批次。 如果交易發生這個錯誤，就會回復交易。 當它是 `False` 時，會顯示警告訊息，但查詢、批次或交易會繼續進行，如同未發生任何錯誤一樣。 如需詳細資訊，請參閱 [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)。  
@@ -122,7 +122,7 @@ ms.locfileid: "36137367"
  這個唯讀值指出是否已啟用跨資料庫擁有權鏈結。 當`True`，資料庫可以是來源或目標的跨資料庫擁有權鏈結。 使用 ALTER DATABASE 陳述式設定這個屬性。  
   
  **已啟用日期相互關聯的最佳化**  
- 當`True`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]維護資料庫中由 FOREIGN KEY 條件約束所連結且具有任何兩個資料表之間的相互關聯統計資料`datetime`資料行。  
+ 當`True`，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]維護資料庫中 FOREIGN KEY 條件約束所連結且具有任何兩個資料表之間的相互關聯統計資料`datetime`資料行。  
   
  當`False`，不會維護交互關聯統計資料。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36137367"
  指定其他觸發程序是否可以引發觸發程序。 可能的值是 `True` 和 `False`。 當設定為`True`，就會啟用觸發程序的遞迴引發。 當設定為`False`，則只會避免直接遞迴。 若要停用間接遞迴，請使用 sp_configure 將巢狀觸發程序伺服器選項設定為 0。 如需相關資訊，請參閱 [建立巢狀觸發程序](../triggers/create-nested-triggers.md)。  
   
  `Trustworthy`  
- 在顯示時`True`，這個唯讀選項指出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可讓您存取資料庫外部的資源在資料庫內建立模擬內容。 在資料庫模組上使用 EXECUTE AS 使用者陳述式或 EXECUTE AS 子句，即可在資料庫內建立模擬內容。  
+ 顯示時`True`，這個唯讀選項指出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可讓您存取資料庫外部的資源在資料庫內建立模擬內容。 在資料庫模組上使用 EXECUTE AS 使用者陳述式或 EXECUTE AS 子句，即可在資料庫內建立模擬內容。  
   
  若要擁有存取權，資料庫的擁有者也需要具有伺服器層級的 AUTHENTICATE SERVER 權限。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "36137367"
  若要設定此屬性，請使用 ALTER DATABASE 陳述式。  
   
  **VarDecimal 儲存格式已啟用**  
- 這個選項是唯讀的開頭[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本中，所有資料庫都會啟用 vardecimal 儲存格式。 這個選項會使用 [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)。  
+ 此選項是唯讀的開頭為[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]及更新版本中，所有資料庫都會啟用 vardecimal 儲存格式。 這個選項會使用 [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql)。  
   
 ## <a name="recovery"></a>復原  
  **頁面確認**  

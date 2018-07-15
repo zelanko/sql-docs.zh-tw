@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d90a6d3162c90ce80281d53d8fe73c8ce2da4a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 243f5f15535a785e544c6b4e081d3404fb7ad26c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137218"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187615"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>變更 SQL Server Agent 主要作業的步驟
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中變更 SQL Server Agent 主要作業的步驟。  
@@ -62,7 +62,7 @@ ms.locfileid: "36137218"
   
 5.  在 [作業屬性 - <作業名稱>] 對話方塊的 [選取頁面] 底下，選取 [步驟]。  
   
-6.  按一下 [編輯] 開啟 [作業步驟屬性 - <作業步驟名稱>] 對話方塊。 在此對話方塊可用之選項的詳細資訊，請參閱[作業步驟屬性： 新增作業步驟&#40;[一般] 頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)和[作業步驟屬性： 新增作業步驟&#40;進階頁面&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  按一下 [編輯] 開啟 [作業步驟屬性 - <作業步驟名稱>] 對話方塊。 如需有關此對話方塊中可用之選項的詳細資訊，請參閱[作業步驟屬性： 新增作業步驟&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)並[作業步驟屬性： 新增作業步驟&#40;進階頁面&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  完成後，請按一下 **[確定]**。  
   
@@ -91,6 +91,6 @@ ms.locfileid: "36137218"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_update_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_update_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql)。  
   
   

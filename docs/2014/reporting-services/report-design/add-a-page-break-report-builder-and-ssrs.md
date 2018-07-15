@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9566d96747bc08636127f3bf350b4b9a121b847
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ef49e2d14953aabd281484fe4f19d814fc8c9793
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266254"
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>加入分頁符號 (報表產生器及 SSRS)
   您可以在資料區內的矩形、資料區或群組中加入分頁符號，以控制每頁的資料量。 加入分頁符號可以改善已發行報表的效能，因為在檢視報表時，只有每個頁面上的項目需要進行處理。 當整個報表只有單一頁面時，必須先將所有的項目進行處理，才能檢視報表。  
@@ -67,6 +67,6 @@ ms.locfileid: "36136357"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [頁首和頁尾&#40;報表產生器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
+ [頁首和頁尾&#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
   
   

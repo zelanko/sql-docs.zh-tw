@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.recordsetdest.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bedd18c7aa79420c23c935058e4b23d584b6fa1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c42208733182a3347c243a0bf538b5b3e2f6d1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304338"
 ---
 # <a name="recordset-destination"></a>資料錄集目的地
   資料錄集目的地可建立和擴展記憶體中的 ADO 資料錄集。 資料錄集的形狀，是由設計階段時對「資料錄集」目的地的輸入所定義。  

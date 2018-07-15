@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partners [SQL Server], connecting clients to
 - database mirroring [SQL Server], connecting clients to
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 caps.latest.revision: 92
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2af439599d16904cf7b66fa78882692ab87c05f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 482b72fac9416918bdee38b74fbc483027b4b345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204040"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>將用戶端連接至資料庫鏡像工作階段 (SQL Server)
   若要連接至資料庫鏡像工作階段，用戶端可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 或 .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 針對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 資料庫設定之後，這兩個資料存取提供者就會完全支援資料庫鏡像。 如需使用鏡像資料庫之程式設計考量的詳細資訊，請參閱＜ [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)＞。 此外，目前的主體伺服器執行個體必須可以使用，而且必須在此伺服器執行個體上建立用戶端的登入。 如需詳細資訊，請參閱[孤立的使用者疑難排解 &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)。 資料庫鏡像工作階段的用戶端連接不會涉及見證伺服器執行個體 (如果此執行個體存在的話)。  
@@ -102,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  如果連接字串指定了具名執行個體的名稱而非通訊埠，SQL Server Browser 查詢就是必要項目。  
   
- 若要指定 IP 位址和連接埠，`Server`屬性會採用下列格式， `Server=` *< p 位址 >*`,`*\<連接埠 >*，例如：  
+ 若要指定 IP 位址和連接埠`Server`屬性會採用下列格式， `Server=` *< p 位址 >*`,`*\<連接埠 >*，例如：  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -122,7 +121,7 @@ Server=123.34.45.56,4724;
 >  此字串省略了驗證資訊。  
   
 > [!IMPORTANT]  
->  結合在一起使用的通訊協定前置詞`Server`屬性 (`Server=tcp:`*\<servername >*) 與不相容**網路**屬性，並指定中的通訊協定這兩個位置可能會導致錯誤。 因此，我們建議連接字串，指定通訊協定使用**網路**屬性，僅指定伺服器名稱中的`Server`屬性 (`"Network=dbmssocn; Server=`*\<servername>*`"`)。  
+>  統合通訊協定前置詞和`Server`屬性 (`Server=tcp:`*\<伺服器名稱 >*) 與不相容**網路**屬性，並指定中的通訊協定這兩個位置可能會導致錯誤。 因此，我們建議連接字串，指定通訊協定使用**網路**屬性，指定只有中的伺服器名稱`Server`屬性 (`"Network=dbmssocn; Server=`*\<servername>*`"`)。  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner 屬性  
  除了初始夥伴名稱以外，用戶端也可以指定容錯移轉夥伴名稱 (應該可識別目前的鏡像伺服器執行個體)。 容錯移轉夥伴是由 Failover Partner 屬性的其中一個關鍵字指定的。 這個屬性的關鍵字會因您所使用的 API 而不同。 下表將列出這些關鍵字：  
@@ -141,7 +140,7 @@ Server=123.34.45.56,4724;
 >  只有提供初始夥伴名稱時，除了重新連接的相關動作或程式碼以外，應用程式開發人員不需要採取任何動作或寫入任何程式碼。  
   
 > [!NOTE]  
->  Managed 程式碼應用程式開發人員提供容錯移轉夥伴名稱中的`ConnectionString`的`SqlConnection`物件。 如需使用此連接字串的詳細資訊，請參閱 ADO.NET 文件中的＜.NET Framework Data Provider 對於 SQL Server 的資料庫鏡像支援＞，其是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 的一部份。  
+>  Managed 程式碼應用程式開發人員提供容錯移轉夥伴名稱`ConnectionString`的`SqlConnection`物件。 如需使用此連接字串的詳細資訊，請參閱 ADO.NET 文件中的＜.NET Framework Data Provider 對於 SQL Server 的資料庫鏡像支援＞，其是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK 的一部份。  
   
 #### <a name="example-connection-string"></a>連接字串範例  
  例如，為了使用 TCP/IP 明確連接到 Partner_A 或 Partner_B 的 **AdventureWorks** 資料庫，使用 ODBC 驅動程式的用戶端應用程式可能會提供下列連接字串：  
@@ -178,7 +177,7 @@ Server=123.34.45.56,4724;
   
 |捨入|*RetryTime* 計算|每次嘗試的重試時間|  
 |-----------|-----------------------------|----------------------------|  
-|@shouldalert|0 **+(** 0.08 **\*** 15 **)**|1.2 秒|  
+|1|0 **+(** 0.08 **\*** 15 **)**|1.2 秒|  
 |2|1.2 **+(** 0.08 **\*** 15 **)**|2.4 秒|  
 |3|2.4 **+(** 0.08 **\*** 15 **)**|3.6 秒|  
 |4|3.6 **+(** 0.08 **\*** 15 **)**|4.8 秒|  

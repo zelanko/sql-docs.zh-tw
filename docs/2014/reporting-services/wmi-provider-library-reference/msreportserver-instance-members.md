@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_Instance Members
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 caps.latest.revision: 22
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1141280966412a322f2f2f6a5213c73e36ef964b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f57921d7868f8f02666eaf53e92bc8a365fc9c8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313218"
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance 成員
   MSReportServer_Instance 類別提供用戶端所需的基本資訊，以連接至安裝的報表伺服器。  

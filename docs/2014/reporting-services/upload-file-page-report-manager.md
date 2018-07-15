@@ -1,5 +1,5 @@
 ---
-title: 上傳檔案頁面 （報表管理員） |Microsoft 文件
+title: 上傳檔案頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5cdc35c029b40489e43e8e8b5715846cdab1fa6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272314"
 ---
 # <a name="upload-file-page-report-manager"></a>上傳檔案頁面 (報表管理員)
   您可以使用 [上傳檔案] 頁面，將檔案從檔案系統發行至報表伺服器資料庫。 在報表伺服器資料夾階層中，上傳的檔案會以項目來表示。  
@@ -35,7 +35,7 @@ ms.locfileid: "36136113"
  上傳項目時，它會放置於目前的資料夾中。 完成上傳之後，您就可以將項目移至不同位置。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -56,7 +56,7 @@ ms.locfileid: "36136113"
  **名稱**  
  輸入檔案名稱，此名稱將顯示在報表伺服器命名空間中。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : @ & = +，$ * \< > |"或 / 來指定項目名稱。  
   
- **如果它存在項目覆寫**  
+ **如果它存在於項目覆寫**  
  若要以新版本取代現有的項目，請選取此核取方塊。 若要覆寫現有的版本，新項目的名稱與現有項目的名稱必須完全相符。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7ae6615491a300a5e5270f417522e9613914319
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e5e75f62bc6d0b5d8da6a0ce244dfde1939155e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188335"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
   在 SQL 追蹤中，如果事件是列在追蹤定義中之事件類別的執行個體，這些事件就會被蒐集起來。 您可將這些事件篩選掉，也可以放入分配目的地的佇列中。 目的地可以是檔案或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO)，後者會在用於管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]的應用程式中使用這些追蹤資訊。  
@@ -39,7 +39,7 @@ ms.locfileid: "36145811"
  下列詞彙說明 SQL 追蹤的主要概念。  
   
  **事件**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]執行個體內所發生的動作。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]執行個體內所發生的動作。  
   
  **資料行**  
  事件的屬性。  
@@ -77,8 +77,8 @@ ms.locfileid: "36145811"
 |資料行|資料行編號|描述|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName** <sup>1</sup>|10|建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的名稱。|  
-|**BigintData1**|52|值 (`bigint`資料型別)，會視追蹤指定的事件類別。|  
-|**BigintData2**|53|值 (`bigint`資料型別)，會視追蹤指定的事件類別。|  
+|**BigintData1**|52|值 (`bigint`資料類型)，會視追蹤指定的事件類別。|  
+|**BigintData2**|53|值 (`bigint`資料類型)，會視追蹤指定的事件類別。|  
 |**Binary Data**|2|二進位值，依據在追蹤中所擷取的事件類別而定。|  
 |**ClientProcessID** <sup>1</sup>|9|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|  
 |**ColumnPermissions**|44|指出是否設定資料行權限。 您可以剖析陳述式文字，以判斷資料行所套用的權限。|  
@@ -135,15 +135,15 @@ ms.locfileid: "36145811"
 |**TargetLoginName**|42|對於目標為登入的動作，這是目標登入的名稱；例如，要加入新登入。|  
 |**TargetLoginSid**|43|對於目標為登入的動作，這是目標登入的 SID；例如，要加入新登入。|  
 |**TargetUserName**|39|對於目標為資料庫使用者的動作，這是該使用者的名稱；例如，要授與使用者權限。|  
-|**TextData**|@shouldalert|文字值，依據在追蹤中所擷取的事件類別而定。 但是，如果是追蹤參數化查詢， **TextData** 資料行就不會顯示變數與資料值。|  
+|**TextData**|1|文字值，依據在追蹤中所擷取的事件類別而定。 但是，如果是追蹤參數化查詢， **TextData** 資料行就不會顯示變數與資料值。|  
 |**Transaction ID**|4|系統指派的交易識別碼。|  
 |**型別**|57|相依於追蹤所擷取之事件類別的整數值。|  
 |**Writes**|17|伺服器代表事件所執行的實體磁碟寫入作業次數。|  
 |**XactSequence**|50|用來描述目前交易的 Token。|  
   
- <sup>1</sup>會擴展這些資料行，依預設，所有事件。  
+ <sup>1</sup>會擴展這些資料行，依預設，所有的事件。  
   
- <sup>2</sup>如需有關**ObjectType**資料行中，請參閱[ObjectType 追蹤事件資料行](../event-classes/objecttype-trace-event-column.md)。  
+ <sup>2</sup>如需詳細資訊**ObjectType**資料行中，請參閱[ObjectType 追蹤事件資料行](../event-classes/objecttype-trace-event-column.md)。  
   
 ## <a name="sql-trace-tasks"></a>SQL 追蹤工作  
   

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services MDX 查詢設計工具 (SSAS) |Microsoft 文件
+title: Analysis Services MDX 查詢設計工具 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.asmdxquerydes.f1
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 252c4623149c4a96ccab9ded6ff76788e436d544
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1bbe57da905e12d644de39eff98216bd2d0f1218
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282220"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Analysis Services MDX 查詢設計工具 (SSAS)
   Analysis Services 多維度運算式 (MDX) 查詢設計工具提供圖形化使用者介面，可協助您針對 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源建立 MDX 查詢。 MDX 圖形化查詢設計工具有兩種模式：設計模式和查詢模式。 每一種模式都會提供 [中繼資料] 窗格，您可以在這個窗格中，從選取的 Cube 中拖曳成員，以建立 MDX 查詢，擷取您要使用的資料。  
@@ -74,7 +74,7 @@ ms.locfileid: "36136976"
 |**匯入**|從檔案系統上的報表定義 (.rdl) 檔案匯入現有的查詢。|  
 |![變更為 MDX 查詢檢視](media/rsqdicon-commandtypemdx.gif "變更為 MDX 查詢檢視")|切換到命令類型 MDX。|  
 |![重新整理結果資料](media/rsqdicon-refresh.gif "重新整理結果資料")|重新整理資料來源中的中繼資料。|  
-|![加入導出的成員](media/rsqdicon-addcalculatedmember.gif "加入導出的成員")|顯示 **[導出成員產生器]** 對話方塊。|  
+|![新增導出的成員](media/rsqdicon-addcalculatedmember.gif "新增導出的成員")|顯示 **[導出成員產生器]** 對話方塊。|  
 |![切換以顯示空的資料格](media/rsqdicon-showemptycells.gif "切換以顯示空的資料格")|在顯示或隱藏 [資料] 窗格中的空白資料格之間切換 (這相當於使用 MDX 中的 NON EMPTY 子句)。|  
 |![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")|每次進行變更時，自動執行查詢並顯示結果。 結果會顯示在 [資料] 窗格中。|  
 |![顯示彙總按鈕](media/rsqdicon-showaggregations.gif "顯示彙總按鈕")|將彙總顯示在 [資料] 窗格中。|  

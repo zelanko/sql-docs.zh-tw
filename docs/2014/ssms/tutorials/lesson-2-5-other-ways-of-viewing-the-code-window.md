@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b0aa601a45cadcd6568e38094c9d3ae530a26206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8d55d182bac7908a17ec6ffe241b46d3c8c5cf2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286594"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>程式碼視窗的其他檢視方式
   您可以利用多種方式，將 [程式碼] 視窗設定成會顯示多個程式碼視窗。  

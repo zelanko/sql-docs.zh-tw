@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
@@ -16,13 +16,13 @@ ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44ffe15525667ad907e282efda510a63d347c30e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cccc4857558d90f25b9b246391a66fdd81d46bdb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199618"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>使用 SSIS 封裝升級精靈來升級 Integration Services 封裝
   您可以升級以舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所建立的封裝，至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所使用的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 格式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 [ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈] 協助完成此程序。 因為您可以將精靈設定成備份原始封裝，所以如果您遇到升級問題，就可以繼續使用原始封裝。  
@@ -90,7 +90,7 @@ ms.locfileid: "36144964"
 2.  在此精靈的 [選取封裝管理選項] 頁面上，選取 [備份原始封裝] 選項。  
   
     > [!WARNING]  
-    >  **備份原始封裝**選項不會顯示當您開啟[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]或[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]專案中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，而是會自動啟動精靈。  
+    >  **備份原始封裝**當您開啟時，不會顯示選項[!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]或是[!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]專案中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，而是會自動啟動精靈。  
   
 3.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，執行 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝升級精靈。  
   

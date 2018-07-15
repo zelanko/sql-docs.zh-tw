@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - Integration Services packages, performance
@@ -26,13 +26,13 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e812b0f249749c51e482bd27760fa1d5fb7f882f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ef48d82f71441381fca8f8bb2e3d52fee8ea8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136904"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287660"
 ---
 # <a name="data-flow-performance-features"></a>資料流程效能的功能
   本主題提供有關如何設計 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝以避免常見效能問題的建議。 本主題同時也提供有關您可以用於疑難排解封裝效能之功能與工具的資訊。  
@@ -76,15 +76,15 @@ ms.locfileid: "36136904"
  請勿增加發生分頁至磁碟之起始點的緩衝區大小。 分頁至磁碟所妨礙的效能超過尚未經過最佳化的緩衝區大小。 若要判斷是否發生分頁，請在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 的效能嵌入式管理單元中監視 "Buffers spooled" 效能計數器。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>設定平行執行的封裝  
- 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 若要在封裝中，支援平行執行不同工作[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用兩種屬性：`MaxConcurrentExecutables`和`EngineThreads`。  
+ 平行執行會改善具有多個實體或邏輯處理器之電腦的效能。 若要在封裝中，支援平行執行不同的工作[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]使用兩個屬性：`MaxConcurrentExecutables`和`EngineThreads`。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables 屬性  
  `MaxConcurrentExecutables`屬性是封裝本身的屬性。 此屬性會定義可以同時執行多少工作。 預設值為 -1，表示實體或邏輯處理器的數目加上 2。  
   
- 若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 如果您設定`MaxConcurrentExecutables`為 3，全部三個資料流程工作可以同時執行。 不過，這是假設每個「資料流程」工作都有 10 的來源到目的地的執行樹狀結構。 將 `MaxConcurrentExecutables` 設定為 3 不能確保每個「資料流程」工作內的執行樹狀結構都可以平行執行。  
+ 若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 如果您將設定`MaxConcurrentExecutables`為 3，全部三個資料流程工作可以同時執行。 不過，這是假設每個「資料流程」工作都有 10 的來源到目的地的執行樹狀結構。 將 `MaxConcurrentExecutables` 設定為 3 不能確保每個「資料流程」工作內的執行樹狀結構都可以平行執行。  
   
 #### <a name="the-enginethreads-property"></a>EngineThreads 屬性  
- `EngineThreads` 屬性是每個「資料流程」工作的屬性。 此屬性會定義資料流程引擎可以平行建立並執行多少執行緒。 `EngineThreads`屬性同樣適用於這兩個來源執行緒，資料流程引擎會建立來源和引擎針對轉換和目的地所建立的工作者執行緒。 因此，將 `EngineThreads` 設定為 10 表示引擎最多可以建立 10 個來源執行緒與 10 個工作者執行緒。  
+ `EngineThreads` 屬性是每個「資料流程」工作的屬性。 此屬性會定義資料流程引擎可以平行建立並執行多少執行緒。 `EngineThreads`屬性同樣適用於這兩個來源執行緒，資料流程引擎會建立來源以及該引擎針對轉換和目的地所建立的工作者執行緒。 因此，將 `EngineThreads` 設定為 10 表示引擎最多可以建立 10 個來源執行緒與 10 個工作者執行緒。  
   
  若要了解此屬性的運作方式，請考慮具有三個「資料流程」工作的範例封裝。 每個「資料流程」工作都包含 10 的來源到目的地的執行樹狀結構。 如果您將「資料流程」工作上的 EngineThreads 設定為 10，全部 30 個執行樹狀結構可能會同時執行。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36136904"
   
  有時候來源資料在由下游元件使用前，就已經經過排序。 這種預先排序會在 SELECT 查詢使用 ORDER BY 子句時，或在將資料以排序的順序插入來源時發生。 對於這種預先排序的來源資料，您可以提供資料已排序的提示，因而避免使用「排序」轉換來滿足某些下游轉換的排序需求 (例如，「合併」和「合併聯結」轉換需要已排序的輸入)。若要提供資料已排序的提示，您必須執行下列工作：  
   
--   設定`IsSorted`上游資料流程元件的輸出上的屬性`True`。  
+-   設定`IsSorted`上游資料流程元件的輸出屬性`True`。  
   
 -   指定排序資料所依據的排序索引鍵資料行。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36136904"
  使用本節中的建議來改善「彙總」、「模糊查閱」、「模糊群組」、「查閱」、「合併聯結」與「緩時變維度」轉換的效能。  
   
 #### <a name="aggregate-transformation"></a>彙總轉換  
- 「彙總」轉換包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 屬性。 這些屬性會提升效能，其方式是讓轉換針對轉換所快取的資料來預先配置所需的記憶體數量。 如果您知道預期要從群組的精確或大約數目**分組**作業時，設定`Keys`和`KeysScale`屬性，分別。 如果您知道預期要從的相異值的精確或大約數目**相異計數量**作業時，設定`CountDistinctKeys`和`CountDistinctScale`屬性，分別。  
+ 「彙總」轉換包括 `Keys`、`KeysScale`、`CountDistinctKeys` 和 `CountDistinctScale` 屬性。 這些屬性會提升效能，其方式是讓轉換針對轉換所快取的資料來預先配置所需的記憶體數量。 如果您知道預期要從群組的精確或大約數目**分組**作業時，設定`Keys`和`KeysScale`屬性，分別。 如果您知道預期要從的相異值的精確或大約數目**相異計數**作業時，設定`CountDistinctKeys`和`CountDistinctScale`屬性，分別。  
   
  如果必須在資料流程中建立多個彙總，您應考慮使用一個「彙總」轉換來建立多個彙總，而不是建立多個轉換。 當一個彙總就是其他彙總的子集時，這個方法能夠改善效能，因為轉換可以最佳化內部儲存體，並且只會掃描一次傳入的資料。 例如，如果彙總使用 GROUP BY 子句和 AVG 彙總，則將它們組合成一個轉換可以改進效能。 不過，在一個「彙總」轉換內執行多個彙總會序列化彙總作業，因此，當多個彙總必須個別計算時，可能不會改善效能。  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36136904"
 -   technet.microsoft.com 上的影片： [平衡型資料散發者](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解封裝開發工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [疑難排解封裝開發的工具](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [套件執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
   

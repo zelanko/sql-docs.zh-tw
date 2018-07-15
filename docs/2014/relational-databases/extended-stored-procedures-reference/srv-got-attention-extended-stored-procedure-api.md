@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_got_attention
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9553592c01e318de3e090900d2f6b4260301146f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d7d6f026b9c851c7fb8636442cfda27a870be861
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201398"
 ---
 # <a name="srvgotattention-extended-stored-procedure-api"></a>srv_got_attention (擴充預存程序 API)
     

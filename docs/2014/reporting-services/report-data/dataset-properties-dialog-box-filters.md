@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10170"
 - sql12.rtp.rptdesigner.datasetproperties.filters.f1
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b5dcb40980612d0198c6407e19bcc0986c06609
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e6bff1d3c5d9a687fd01ccd179c86dddde9a8e1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135745"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280234"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>資料集屬性對話方塊、篩選
   選取 **[資料集屬性]** 對話方塊上的 **[篩選]** ，即可建立資料集的篩選。  
@@ -54,6 +54,6 @@ ms.locfileid: "36135745"
   
 ## <a name="see-also"></a>另請參閱  
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-datasets-ssrs.md)  
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-datasets-ssrs.md)  
   
   

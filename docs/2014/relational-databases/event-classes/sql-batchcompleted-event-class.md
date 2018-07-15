@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:BatchCompleted event class
 ms.assetid: 1be023e8-7a98-4400-b9e7-b24f6a3fc5ca
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c66a2e16370ac3ca55dea32a2409b79c4b5aceb3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a990cf4223e77e68fd62d7d8e98bca420520d4cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318430"
 ---
 # <a name="sqlbatchcompleted-event-class"></a>SQL:BatchCompleted 事件類別
   SQL:BatchCompleted 事件類別代表已完成 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次。  
@@ -56,7 +56,7 @@ ms.locfileid: "36023341"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|批次的文字。|@shouldalert|是|  
+|TextData|`ntext`|批次的文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |Writes|`bigint`|批次造成的分頁寫入 I/O 數。|17|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  

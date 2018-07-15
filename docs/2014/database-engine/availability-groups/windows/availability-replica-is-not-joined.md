@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.arp4joined.issues.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 caps.latest.revision: 12
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 48a27680dafba1f0dfc26e8027da41c4988e2623
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5233c25448a10ba7673078d36fc37c464e839d67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224448"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性複本未聯結
     

@@ -5,10 +5,9 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - database mirroring [SQL Server], endpoint
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 060ab17ca1f86e2b5b1da0c900bd7e49a7103ab0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e9250860dbdc750bda53e28e52a31bcbe0e038b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137135"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185166"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>資料庫鏡像端點 (SQL Server)
   若要參與 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或資料庫鏡像，伺服器執行個體就需要有自己專用的 *「資料庫鏡像端點」*(Database Mirroring Endpoint)。 這個端點是特殊目的之端點，專門用來接收其他伺服器執行個體的連接。 在給定的伺服器執行個體上，任何其他伺服器執行個體的每個 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 或資料庫鏡像連接都需要一個資料庫鏡像端點。  
@@ -51,7 +50,7 @@ ms.locfileid: "36137135"
 > [!IMPORTANT]  
 >  如果執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦具有防火牆，此防火牆的組態必須允許端點中所指定的通訊埠同時使用內送和外送連接。  
   
- 對於資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，會在端點上設定驗證與加密。 如需詳細資訊，請參閱[資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
+ 對於資料庫鏡像和 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]，會在端點上設定驗證與加密。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性，資料庫鏡像和 AlwaysOn 可用性群組&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。</c0>  
   
 > [!IMPORTANT]  
 >  請不要重新設定使用中資料庫鏡像端點。 伺服器執行個體會使用彼此的端點來了解其他系統的狀態。 如果端點重新設定，它可能會重新啟動，而這對其他伺服器執行個體可能會是一項錯誤。 對於自動容錯移轉模式，這點尤其重要，因為在這種模式中重新設定夥伴上的端點，可能會導致發生容錯移轉。  
@@ -71,7 +70,7 @@ ms.locfileid: "36137135"
   
 -   如果有任何伺服器執行個體在內建帳戶之下執行 (例如本機系統、本機服務或網路服務，或是非網域帳戶)，您必須將憑證用於端點驗證。 如果您要針對資料庫鏡像端點使用憑證，您的系統管理員必須設定每一個伺服器執行個體同時在傳出和傳入的連接上使用憑證。  
   
-     沒有任何自動的方法可以設定使用憑證的資料庫鏡像安全性。 您必須使用 CREATE ENDPOINT[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或`New-SqlHadrEndpoint`PowerShell cmdlet。 如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)的相關資訊。 啟用伺服器執行個體上的憑證驗證的相關資訊，請參閱[資料庫鏡像端點使用憑證&#40;TRANSACT-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
+     沒有任何自動的方法可以設定使用憑證的資料庫鏡像安全性。 您必須使用 CREATE ENDPOINT[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或`New-SqlHadrEndpoint`PowerShell cmdlet。 如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)的相關資訊。 如需啟用的伺服器執行個體上的憑證驗證的資訊，請參閱[資料庫鏡像端點使用憑證&#40;TRANSACT-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
   
 ##  <a name="RelatedTasks"></a> 相關工作  
@@ -99,7 +98,7 @@ ms.locfileid: "36137135"
 ## <a name="see-also"></a>另請參閱  
  [資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [為資料庫鏡像組態進行疑難排解 &#40;SQL Server&#41; &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [sys.dm_hadr_availability_replica_states &#40;Transact SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [sys.dm_db_mirroring_connections &#40;Transact SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_hadr_availability_replica_states &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
   
   

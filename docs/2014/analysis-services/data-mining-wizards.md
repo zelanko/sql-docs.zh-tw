@@ -1,5 +1,5 @@
 ---
-title: 資料採礦精靈 |Microsoft 文件
+title: 資料採礦精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Wizard
 - Analysis Services Data Mining Wizard
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 442e77491d2254c230c60c99c8f1ede91117d171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d309e9ce8d0ccfd48402be1bf6ce8f3f2ff2c3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263824"
 ---
 # <a name="data-mining-wizards"></a>資料採礦精靈
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供精靈，以用於[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供精靈以用於[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]和[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
  下表描述可用來建立資料採礦來源、檢視和物件的精靈。  
   

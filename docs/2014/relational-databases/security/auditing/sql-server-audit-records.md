@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f62cf2b44af1b34b87ce5f08e993135d1447ed59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: a55513bbe857d1d3ea48371d1e147d54ce8d3326
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253776"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 功能可讓您稽核伺服器層級和資料庫層級的事件群組和事件。 如需詳細資訊，請參閱 [SQL Server Audit &#40;Database Engine&#41;](sql-server-audit-database-engine.md)。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
@@ -35,7 +34,7 @@ ms.locfileid: "36135590"
 |**action_id**|動作的識別碼<br /><br /> 提示：若要使用 **action_id** 作為述詞，您必須將它從字元字串轉換為數值。 如需詳細資訊，請參閱 [針對 action_id/class_type 述詞篩選 SQL Server Audit](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)。|`varchar(4)`|是|  
 |**succeeded**|指示觸發此事件的動作是否成功|`bit` – 1 = 成功，0 = 失敗|是|  
 |**permission_bitmask**|當適用時，顯示已授與、拒絕或撤銷的權限|`bigint`|否|  
-|**is_column_permission**|指出資料行層級權限的旗標|`bit` – 1 = true，0 = False|否|  
+|**is_column_permission**|指出資料行層級權限的旗標|`bit` – 1 = true,0 = False|否|  
 |**session_id**|事件發生所在之工作階段的識別碼。|`int`|是|  
 |**server_principal_id**|動作執行所在之登入環境的識別碼。|`int`|是|  
 |**database_principal_id**|動作執行所在之資料庫使用者環境的識別碼。|`int`|否|  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_convert
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cafa894f97ea2a049dac90a659ab01c37ab27443
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6b3324bfef3d9c00cd32d6616971127c5ef80c03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285224"
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (擴充預存程序 API)
     

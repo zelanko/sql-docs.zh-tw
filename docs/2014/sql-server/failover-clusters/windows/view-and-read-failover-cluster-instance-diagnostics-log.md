@@ -5,21 +5,20 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 21
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 93471f74f608febd0f6920b0b93646eac394eb35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a72521b1d2c40eb50954ea16676e17ec40d7d07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317518"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
   SQL Server 資源 DLL 的所有重大錯誤和警告事件都會寫入 Windows 事件記錄檔。 SQL Server 的特定診斷資訊執行記錄檔是由 [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) 系統預存程序所擷取，並且會寫入 SQL Server 容錯移轉叢集診斷 (也稱為 *SQLDIAG* 記錄) 記錄檔。  
@@ -97,7 +96,7 @@ ORDER BY Time;
 > [!NOTE]  
 >  如需這個程序的範例，請參閱本節稍後的 [範例 &#40;Transact-SQL&#41;](#TsqlExample)。  
   
- 使用資料定義語言 (DDL) 陳述式， `ALTER SERVER CONFIGURATION`，您可以啟動或停止記錄診斷資料擷取[sp_server_diagnostics &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)程序，並設定 SQLDIAG 記錄檔組態參數，例如記錄檔換用計數、 記錄檔大小和檔案位置。 如需語法的詳細資料，請參閱 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)。  
+ 使用資料定義語言 (DDL) 陳述式`ALTER SERVER CONFIGURATION`，您可以啟動或停止記錄診斷資料擷取[sp_server_diagnostics &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)程序，並設定 SQLDIAG 記錄檔組態參數，例如記錄檔換用計數、 記錄檔大小和檔案位置。 如需語法的詳細資料，請參閱 [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic)。  
   
 ###  <a name="ConfigTsqlExample"></a> 範例 (Transact-SQL)  
   

@@ -1,5 +1,5 @@
 ---
-title: Cube 元素 (ASSL) |Microsoft 文件
+title: Cube 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Cubes element
 ms.assetid: 0eaaaf3f-0c78-4eb4-bc3a-d266579eca56
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07fb51c5c02a8931ce582f9115ab82b922ba5709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d63af6605e1633f310f6c7089fc4e6ffaa481ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194268"
 ---
 # <a name="cubes-element-assl"></a>Cubes 元素 (ASSL)
-  包含集合[Cube](../objects/cube-element-assl.md)與相關聯的項目[資料庫](../objects/database-element-assl.md)項目。  
+  包含的集合[Cube](../objects/cube-element-assl.md)相關聯的項目[資料庫](../objects/database-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36145040"
 |子元素|[Cube](../objects/cube-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CubeCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.CubeCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

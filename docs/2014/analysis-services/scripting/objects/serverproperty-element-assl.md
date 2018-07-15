@@ -1,5 +1,5 @@
 ---
-title: ServerProperty 元素 (ASSL) |Microsoft 文件
+title: ServerProperty 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ServerProperty element
 ms.assetid: f152a1b5-0972-40d8-907f-f131c2a108bb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6cb62681b0c25c83d54076a67a37addc764102da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c6af3d46fac2b6ed02ff4cd261a8f5361d466ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300928"
 ---
 # <a name="serverproperty-element-assl"></a>ServerProperty 元素 (ASSL)
-  定義相關聯的伺服器屬性[伺服器](server-element-assl.md)項目。  
+  定義相關聯的伺服器屬性[Server](server-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,12 +67,12 @@ ms.locfileid: "36029895"
 |子元素|[DefaultValue](../properties/value-element-assl.md)， [DisplayFlag](../properties/displayflag-element-assl.md)，[名稱](../properties/name-element-assl.md)， [PendingValue](../properties/pendingvalue-element-assl.md)， [RequiresRestart](../properties/requiresrestart-element-assl.md)，[值](../properties/value-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- `ServerProperty`元素描述的資料和中繼資料的執行個體相關聯之伺服器屬性[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 與「Analysis Services 指令碼語言」(ASSL) 中其他集合所包含的元素不同之處在於，`ServerProperty` 元素會使用名稱/值組 (而非明確命名元素) 來描述伺服器屬性。 名稱/值組可提供彈性和擴充性。  
+ `ServerProperty`項目描述的資料和相關聯的執行個體之伺服器屬性的中繼資料[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 與「Analysis Services 指令碼語言」(ASSL) 中其他集合所包含的元素不同之處在於，`ServerProperty` 元素會使用名稱/值組 (而非明確命名元素) 來描述伺服器屬性。 名稱/值組可提供彈性和擴充性。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ServerProperty>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.ServerProperty>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Server 元素&#40;ASSL&#41;](server-element-assl.md)   
+ [伺服器項目&#40;ASSL&#41;](server-element-assl.md)   
  [物件&#40;ASSL&#41;](objects-assl.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
 - Merge Agent, parameter reference
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bacb2a50002dedd449d7060e0335d064645f8572
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8234986c27b6bffc593d8eb7cc6c21c8988d7d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287144"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   「複寫合併代理程式」是一個公用程式可執行檔，它會將資料庫資料表中保存的初始快照集套用至「訂閱者」。 此外，它也會合併建立初始快照集之後在「發行者」端發生的累加資料變更，並根據您設定的規則或使用您建立的自訂解析程式來調解衝突。  
@@ -177,7 +177,7 @@ ms.locfileid: "36135807"
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 若要限制上傳，請使用`@subscriber_upload_options`的`sp_addmergearticle`改為。  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 若要限制上傳，請使用`@subscriber_upload_options`的`sp_addmergearticle`改。  
   
  指定同步處理期間資料交換的類型，它可以是下列其中一個值：  
   

@@ -1,12 +1,11 @@
 ---
-title: 從 CLR 資料庫物件的資料存取 |Microsoft 文件
+title: 從 CLR 資料庫物件的資料存取 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], data access
@@ -26,16 +25,16 @@ caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1ff4b57fc7557fd2fd339e08b1529605d505cd44
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 590c5ec05efbb59c59cf307d98e589b42d69da47
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701839"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357670"
 ---
 # <a name="data-access-from-clr-database-objects"></a>從 CLR 資料庫物件進行資料存取
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Common language runtime (CLR) 常式可以輕鬆存取資料的執行個體中儲存[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中，以及儲存在遠端執行個體中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 從 CLR 資料庫物件中的資料存取使用.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，也稱為**SqlClient**。 這與開發人員從 Managed 用戶端與中間層應用程式存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料所使用的提供者相同。 因為這個緣故，您可以利用 ADO.NET 的知識和**SqlClient**用戶端和中介層應用程式中。  
+  Common language runtime (CLR) 常式可以輕鬆存取的執行個體中儲存的資料[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中執行，以及儲存在遠端執行個體中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 存取資料從 CLR 資料庫物件中的使用.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，也稱為**SqlClient**。 這與開發人員從 Managed 用戶端與中間層應用程式存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料所使用的提供者相同。 基於這個原因，您可以利用 ADO.NET 的知識並**SqlClient**在用戶端和中介層應用程式。  
   
 > [!NOTE]  
 >  根據預設，執行資料存取不允許使用使用者定義型別方法與使用者定義函數。 您必須設定**DataAccess**屬性**SqlMethodAttribute**或**SqlFunctionAttribute**至**DataAccessKind.Read**啟用從使用者定義型別 (UDT) 方法或使用者定義函式的唯讀資料存取。 資料修改作業無法從 UDT 或使用者定義函數進行，如果嘗試進行，則會在執行階段擲回例外狀況。  
@@ -51,12 +50,12 @@ ms.locfileid: "35701839"
  描述模擬連接以及連接認證。  
   
  [ADO.NET 的 SQL Server 同處理序特定延伸模組](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
- 討論同處理序特定**SqlPipe**， **SqlContext**， **SqlTriggerContext**，和**SqlDataRecord**物件。  
+ 討論同處理序特定**SqlPipe**， **SqlContext**， **SqlTriggerContext**，以及**SqlDataRecord**物件。  
   
  [CLR 整合和交易](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  描述 System.Transactions 命名空間中提供的新交易架構如何整合 ADO.NET 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 整合。  
   
- [從 CLR 資料庫物件的 XML 序列化](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
+ [從 CLR 資料庫物件進行 XML 序列化](http://msdn.microsoft.com/library/ac84339b-9384-4710-bebc-01607864a344)  
  說明如何在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中啟用 CLR 資料庫物件的 XML 序列化案例。  
   
   

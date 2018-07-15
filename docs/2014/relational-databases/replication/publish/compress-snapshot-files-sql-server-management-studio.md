@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], compressed
 - snapshot replication [SQL Server], compressed snapshots
 ms.assetid: 174ade3e-74a1-4e67-a6da-b874be3ff50f
 caps.latest.revision: 34
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 70b8ec331bcc1d14174a4efb9d9808820ad62c04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8bede91816cff3c6b2c25535142c89b9f03e052b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194939"
 ---
 # <a name="compress-snapshot-files-sql-server-management-studio"></a>壓縮快照集檔案 (SQL Server Management Studio)
   在 [發行集屬性 - \<發行集>] 對話方塊的 [快照集] 頁面上，指定要壓縮檔案。 如需有關存取這個對話方塊的詳細資訊，請參閱＜ [View and Modify Publication Properties](view-and-modify-publication-properties.md)＞。  

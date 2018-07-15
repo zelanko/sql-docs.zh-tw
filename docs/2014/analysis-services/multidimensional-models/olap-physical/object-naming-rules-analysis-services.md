@@ -1,5 +1,5 @@
 ---
-title: 物件命名規則 (Analysis Services) |Microsoft 文件
+title: 物件命名規則 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 029d851c7ad8048fab574cc6ae3122719d857378
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145231"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202078"
 ---
 # <a name="object-naming-rules-analysis-services"></a>物件命名規則 (Analysis Services)
   本主題將描述物件命名慣例以及任何物件名稱 (以 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中的程式碼或指令碼形式) 中無法使用的保留字和字元。  
@@ -79,7 +79,7 @@ ms.locfileid: "36145231"
 |`Dimension` 或 `Hierarchy`|執行個體時提供 SQL Server 登入。 , ; ' ` : / \ * &#124; ? " & % $ ! + = （) [] {} \<，>|  
 |所有其他物件|執行個體時提供 SQL Server 登入。 , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
   
- **允許例外狀況： 當保留的字元**  
+ **例外狀況： 當允許保留的字元是**  
   
  如前所述，具有特定模式和相容性層級的資料庫可以擁有包含保留字元的物件名稱。 如果是允許使用擴充字元的表格式資料庫 (1103 或更高層級)，維度屬性、階層、層級、量值和 KPI 物件名稱可以包含保留字元：  
   

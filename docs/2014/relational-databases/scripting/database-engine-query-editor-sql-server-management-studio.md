@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tsqlquery.f1
 dev_langs:
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 92e4911ff45436d5ac62491fca4761036e9f3a61
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 726ed1d79919752744a6b9246081d9c333e1e816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181885"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Database Engine 查詢編輯器 (SQL Server Management Studio)
   使用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器，建立及執行包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的指令碼。 此編輯器也支援執行包含 **sqlcmd** 命令的指令碼。  

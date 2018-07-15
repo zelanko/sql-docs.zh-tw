@@ -1,5 +1,5 @@
 ---
-title: Integration Services 服務設定為叢集資源 |Microsoft 文件
+title: 將 Integration Services 服務設定為叢集資源 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8455d0a43e478cdb05f945269a3999b72fc581ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b524b2c570b3fac16403565716aaea36a31a7f24
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223768"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>將 Integration Services 服務設定為叢集資源
   本節針對認為將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為叢集資源的優點多於缺點的客戶，提供必要的設定指示。 不過， [!INCLUDE[msCoName](../includes/msconame-md.md)] 並不建議將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務設定為叢集資源。  
@@ -106,7 +106,7 @@ ms.locfileid: "36145679"
   
 3.  在共用磁碟上，在文字或 XML 編輯器中開啟組態檔。 值變更`ServerName`的虛擬名稱的項目[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]位於相同的資源群組。  
   
-4.  值變更`StorePath`的完整路徑的項目**封裝**上一個步驟中共用磁碟上建立資料夾。  
+4.  值變更`StorePath`的完整路徑的項目**封裝**在上一個步驟中的共用磁碟上建立資料夾。  
   
 5.  將登錄中的 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** 值，更新為共用磁碟上之服務組態檔的完整路徑和檔案名稱。  
   

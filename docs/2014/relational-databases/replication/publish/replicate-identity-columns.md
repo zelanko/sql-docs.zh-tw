@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - identities [SQL Server replication]
 - identity values [SQL Server replication]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - identity columns [SQL Server], replication
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc8039ed5ea331609e14fc5b1b9cb9dae77f9aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65d72e4cb94a4085829805278b59512a1a0a2801
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271024"
 ---
 # <a name="replicate-identity-columns"></a>複寫識別欄位
   將 IDENTITY 屬性指派給資料行時， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會自動為含有識別欄位之資料表的新資料列產生序號。 如需詳細資訊，請參閱 [IDENTITY &#40;屬性&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)。 由於識別欄位可能會做為主索引鍵的一部分，因此請務必避免在識別欄位中重複值。 若要在具有多個節點更新的複寫拓撲裡使用識別欄位，複寫拓撲中的每個節點必須使用不同的識別值範圍，以免出現重複。  
@@ -55,12 +55,12 @@ ms.locfileid: "36144706"
 ## <a name="assigning-identity-ranges"></a>指派識別範圍  
  合併式複寫與異動複寫使用不同的方法指派範圍；這些方法在本節中均有描述。  
   
- 複寫識別欄位時要考慮兩種範圍：指派至「發行者」與「訂閱者」的範圍，以及資料行中資料類型的範圍。 下表顯示識別欄位中通常使用之資料類型可用的範圍。 範圍用於拓撲中的所有節點。 例如，如果您使用`smallint`從 1 開始遞增為 1，插入的最大數目為 32767 的 「 發行者 」 與所有訂閱者。 插入的實際數目取決於使用的值中是否有間距，以及是否使用臨界值。 如需臨界值的詳細資訊，請參閱下列的「合併式複寫」和「具有佇列更新訂閱的異動複寫」各節。  
+ 複寫識別欄位時要考慮兩種範圍：指派至「發行者」與「訂閱者」的範圍，以及資料行中資料類型的範圍。 下表顯示識別欄位中通常使用之資料類型可用的範圍。 範圍用於拓撲中的所有節點。 例如，如果您使用`smallint`從 1 開始，遞增值為 1，插入的最大數目為 32767 的 「 發行者 」 與所有訂閱者。 插入的實際數目取決於使用的值中是否有間距，以及是否使用臨界值。 如需臨界值的詳細資訊，請參閱下列的「合併式複寫」和「具有佇列更新訂閱的異動複寫」各節。  
   
  如果「發行者」在插入之後用盡了其識別範圍，則在 **db_owner** 固定資料庫角色的成員執行插入時，可自動指派新範圍。 如果執行插入的使用者並非該角色，則「記錄讀取器代理程式」、「合併代理程式」或屬於 **db_owner** 角色成員的使用者必須執行 [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)。 對於異動複寫，「記錄讀取器代理程式」必須執行才能自動配置新範圍 (預設要求該代理程式連續執行)。  
   
 > [!WARNING]  
->  在大型批次插入期間，複寫觸發程序只會引發一次，而不會針對插入的每個資料列引發。 這可能會導致 insert 陳述式失敗如果識別範圍期間用盡大型插入，例如`INSERT INTO`陳述式。  
+>  在大型批次插入期間，複寫觸發程序只會引發一次，而不會針對插入的每個資料列引發。 這可能會導致 insert 陳述式失敗的識別範圍期間用盡大型插入，例如如果`INSERT INTO`陳述式。  
   
 |資料類型|範圍|  
 |---------------|-----------|  

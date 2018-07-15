@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
@@ -16,13 +16,13 @@ ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8e9333ffac363c12176057ab4da006881ce4cbe8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d03b080b757fc8cdc8ffdc52d4ac7c0734cdbfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250548"
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (大於) (SSIS 運算式)
   執行比較來決定第一個運算式是否大於第二個運算式。 運算式評估工具會在執行比較之前，自動轉換許多資料類型。  

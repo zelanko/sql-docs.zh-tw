@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], managing
 - semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 366a8e3047cdba872fa9cb004c2a1d8a1892d22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4dc25a584e7e883ce07040e0d5d0d567995533f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311458"
 ---
 # <a name="manage-and-monitor-semantic-search"></a>管理及監視語意搜尋
   描述語意索引的程序，以及與管理及監視索引相關的工作。  
@@ -76,7 +75,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **全文檢索索引與語意索引的全文檢索目錄中建立了多少項目？**  
+ **多少個項目中的全文檢索目錄的全文檢索和語意索引編製索引？**  
  查詢 [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql) 中繼資料函數的 **ItemCount** 屬性。  
   
 ```tsql  
@@ -123,7 +122,7 @@ ALTER FULLTEXT INDEX ON table_name ENABLE
 GO  
 ```  
   
-##  <a name="SemanticIndexing"></a> 語義索引的階段  
+##  <a name="SemanticIndexing"></a> 語意索引的階段  
  語意搜尋會針對其啟用所在的每一個資料行，建立兩種資料的索引：  
   
 1.  **主要片語**  
@@ -138,10 +137,10 @@ GO
   
 ##  <a name="BestPracticeUnderstand"></a>   
 ##  <a name="ProblemNotPopulated"></a> 問題： 未擴展語意索引  
- **是否已擴展相關聯的全文檢索索引？**  
+ **會填入相關聯的全文檢索索引嗎？**  
  因為語意索引會依據全文檢索索引，所以只有當關聯的全文檢索索引已擴展時，才會擴展語意索引。  
   
- **全文檢索搜尋和已正確安裝及設定語意搜尋？**  
+ **全文檢索搜尋和語意搜尋正確安裝並設定？**  
  如需詳細資訊，請參閱 [安裝及設定語意搜尋](install-and-configure-semantic-search.md)。  
   
  **FDHOST 服務無法使用，或是否有另一個狀況導致全文檢索索引失敗？**  

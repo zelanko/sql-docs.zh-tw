@@ -25,13 +25,13 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5a964501cd247007b2b7de6cd277977701bc0539
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 821d47f8a112efb3c2f70a094c139fdc7936ab32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144972"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203988"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>指令碼元件的程式碼撰寫和偵錯
   在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中，指令碼元件有中繼資料設計與程式碼設計兩種模式。 當您開啟 [指令碼轉換編輯器] 時，元件就會進入中繼資料設計模式，您可在其中設定中繼資料及元件屬性。 在您於中繼資料設計模式設定好指令碼元件的屬性和輸入及輸出後，就可以切換到程式碼設計模式編寫自訂的指令碼。 如需中繼資料設計模式和程式碼設計模式的詳細資訊，請參閱[在指令碼元件編輯器中設定指令碼元件](configuring-the-script-component-in-the-script-component-editor.md)。  
@@ -64,11 +64,11 @@ ms.locfileid: "36144972"
   
     -   `Connections` 集合類別，這個類別包含 [指令碼轉換編輯器] 的 [連接管理員] 頁面上所選取連接的參考。  
   
-    -   A`Variables`包含參考中所輸入變數的集合類別`ReadOnlyVariable`和`ReadWriteVariables`屬性**指令碼**頁面**指令碼轉換編輯器**.  
+    -   A`Variables`包含參考中所輸入變數的集合類別`ReadOnlyVariable`並`ReadWriteVariables`上的屬性**指令碼**頁面**指令碼轉換編輯器**.  
   
 -   `BufferWrapper`專案項目包含的類別，繼承自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>每個輸入和輸出上設定**輸入和輸出**頁面**指令碼轉換編輯器**。 這其中每個類別所包含的類型存取子屬性，都與設定的輸入和輸出資料行以及包含這些資料行的資料流緩衝區相對應。  
   
- 如需如何使用這些物件、 方法和屬性資訊，請參閱 [了解指令碼元件物件 Model]((understanding-the-script-component-object-model.md)。 如需如何在特定的指令碼元件類型中使用這些類別的方法和屬性的資訊，請參閱[其他指令碼元件範例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。 範例主題也包含完整的程式碼範例。  
+ 如需如何使用這些物件、 方法和屬性的詳細資訊，請參閱 [了解指令碼元件物件 Model]((understanding-the-script-component-object-model.md)。 如需如何在特定的指令碼元件類型中使用這些類別的方法和屬性的資訊，請參閱[其他指令碼元件範例](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)。 範例主題也包含完整的程式碼範例。  
   
  當您將指令碼元件設定為轉換時，`ScriptMain` 專案項目會包含下列自動產生的程式碼。 程式碼範本也會提供指令碼元件的概觀，以及有關如何擷取與操作 SSIS 物件 (例如變數、事件與連接) 的其他資訊。  
   
@@ -175,7 +175,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|  
 |變數|使用 `Variables` 專案項目的 `ComponentWrapper` 集合類別中的具名和類型存取子屬性，這些屬性是透過 `Variables` 類別的 `ScriptMain` 屬性而公開。<br /><br /> `PreExecute` 方法只能存取唯讀變數。 `PostExecute` 方法可以存取唯讀和讀/寫變數。|  
 |連接|使用 `Connections` 專案項目的 `ComponentWrapper` 集合類別中的具名和類型存取子屬性，這些屬性是透過 `Connections` 類別的 `ScriptMain` 屬性而公開。|  
-|事件|引發事件使用<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>屬性`ScriptMain`類別和**引發\<X >** 方法<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>介面。|  
+|事件|藉由引發事件<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>的屬性`ScriptMain`類別和**引發\<X >** 方法<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>介面。|  
 |記錄|使用 `ScriptMain` 類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> 方法來執行記錄。|  
   
 ## <a name="debugging-the-script-component"></a>偵錯指令碼元件  
@@ -189,7 +189,7 @@ public class ScriptMain : UserComponent
   
  您也可以使用下列方法來監視指令碼元件的執行：  
   
--   中斷執行，並顯示強制回應訊息使用`MessageBox.Show`方法中的**System.Windows.Forms**命名空間。 (請在完成偵錯程序之後移除此程式碼)。  
+-   中斷執行，並使用顯示強制回應的訊息`MessageBox.Show`方法中的**System.Windows.Forms**命名空間。 (請在完成偵錯程序之後移除此程式碼)。  
   
 -   引發資訊訊息、警告和錯誤的事件。 FireInformation、FireWarning 和 FireError 方法會在 Visual Studio [輸出] 視窗中顯示事件描述。 不過，FireProgress 方法、Console.Write 方法和 Console.WriteLine 方法不會在 [輸出] 視窗中顯示任何資訊。 FireProgress 事件的訊息會顯示在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師的 [進度] 索引標籤上。 如需詳細資訊，請參閱[在指令碼元件中引發事件](../../data-flow/transformations/script-component.md)。  
   
@@ -213,7 +213,7 @@ public class ScriptMain : UserComponent
   
 -   blogs.msdn.com 上的部落格文章：[VSTA setup and configuration troubles for SSIS 2008 and R2 installations](http://go.microsoft.com/fwlink/?LinkId=215661) (SSIS 2008 和 R2 安裝的 VSTA 安裝與設定問題)。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [在指令碼元件編輯器中設定指令碼元件](configuring-the-script-component-in-the-script-component-editor.md)  

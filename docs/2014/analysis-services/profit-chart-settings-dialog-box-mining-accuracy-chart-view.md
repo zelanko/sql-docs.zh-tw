@@ -1,5 +1,5 @@
 ---
-title: 收益圖表設定對話方塊 （採礦精確度圖表檢視） |Microsoft 文件
+title: 收益圖表設定對話方塊 （採礦精確度圖表檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.profitcostdialog.f1
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e662f4db0a812253a8113779347457871ce1d2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44e18791656240d2f6253d325d2151e49f5b890f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187275"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>收益圖表設定對話方塊 (採礦精確度圖表檢視)
   使用 **[收益圖設定]** 對話方塊，即可設定用於產生收益圖的設定。 如需收益圖的詳細資訊，請參閱[增益圖 &#40;Analysis Services - 資料採礦&#41;](data-mining/lift-chart-analysis-services-data-mining.md)。  

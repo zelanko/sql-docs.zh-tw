@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
 - data sources [Reporting Services], shared
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c0de2ef2ced3822f3895fd25a98d97e40b4365cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1845c0e47462d2788f58d36914ad29d7f56318ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253870"
 ---
 # <a name="bind-a-report-or-model-to-a-shared-data-source-ssrs"></a>將報表或模型繫結至共用資料來源 (SSRS)
   在某些情況下 (例如，將報表或模型從測試伺服器移到實際伺服器時)，您可能想先將檔案儲存在本機電腦，然後再上傳到不同報表伺服器。 當您將報表或模型上傳到新伺服器時，您必須將它重新繫結至新報表伺服器上儲存的共用資料來源。 如果不重新繫結報表或模型，從新報表伺服器存取該報表或模型時將無法正常運作。  
@@ -71,7 +71,7 @@ ms.locfileid: "36135570"
 ## <a name="see-also"></a>另請參閱  
  [上傳檔案或報表&#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)   
  [將文件上傳到 SharePoint 文件庫 &#40;SharePoint 模式的 Reporting Services&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [建立和管理共用的資料來源&#40;的 Reporting Services SharePoint 整合模式&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [建立和管理共用的資料來源&#40;Reporting Services SharePoint 整合模式&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [建立、 刪除或修改共用的資料來源&#40;報表管理員&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Reporting Services 所支援的資料來源&#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  

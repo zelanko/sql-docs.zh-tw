@@ -5,23 +5,22 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], FILESTREAM-enabled databases
 ms.assetid: 0fc16356-76f7-44b8-a58b-f0b7c43694ec
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea0ab6c8c418b3ea2e3d286f38b382c7e73794eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5470eb34e5084c86763b4baf360349cfd405bd83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227768"
 ---
 # <a name="create-a-filestream-enabled-database"></a>建立啟用 FILESTREAM 的資料庫
   此主題說明如何建立支援 FILESTREAM 的資料庫。 因為 FILESTREAM 使用特殊類型的檔案群組，所以當您在建立資料庫時，至少必須針對一個檔案群組指定 CONTAINS FILESTREAM 子句。  

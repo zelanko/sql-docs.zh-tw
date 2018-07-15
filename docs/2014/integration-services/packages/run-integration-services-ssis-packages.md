@@ -1,5 +1,5 @@
 ---
-title: 執行專案和封裝 |Microsoft 文件
+title: 執行專案和套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
 - SSIS packages, running
@@ -21,20 +21,20 @@ ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21c4bff7eb74b556aa41e27430b23e9eb2e2d061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc9e292b67bd282351bdea60068a58a39ecb0aad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135841"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287604"
 ---
 # <a name="execution-of-projects-and-packages"></a>執行專案和封裝
   若要執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，您可以根據這些封裝的儲存位置使用數種工具的其中一種。 工具會列在下表中。  
   
  若要將封裝儲存於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，您可使用專案部署模型將專案部署到伺服器上。 如需相關資訊，請參閱 [將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
   
- 若要將封裝儲存在 SSIS 封裝存放區、msdb 資料庫或是檔案系統中，您可使用封裝部署模型。 如需詳細資訊，請參閱[封裝部署&#40;SSIS&#41;](legacy-package-deployment-ssis.md)。  
+ 若要將封裝儲存在 SSIS 封裝存放區、msdb 資料庫或是檔案系統中，您可使用封裝部署模型。 如需詳細資訊，請參閱 <<c0> [ 封裝部署&#40;SSIS&#41;](legacy-package-deployment-ssis.md)。</c0>  
   
 |工具|儲存在 Integration Services 伺服器上的封裝|儲存在 SSIS 封裝存放區或是 msdb 資料庫中的封裝|儲存在檔案系統中，但不在 SSIS 封裝存放區中的封裝|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  

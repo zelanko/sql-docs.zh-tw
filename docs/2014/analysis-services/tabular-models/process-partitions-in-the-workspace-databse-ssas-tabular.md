@@ -1,5 +1,5 @@
 ---
-title: 處理資料分割，在工作空間資料庫 (SSAS 表格式) |Microsoft 文件
+title: 處理工作空間資料庫 (SSAS 表格式) 中的資料分割 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7341335847d28c8940d361632afaa94d42e21d36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c838f3cac0c9fb1f665abd696c4881202a5aab4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195438"
 ---
 # <a name="process-partitions-in-the-workspace-databse-ssas-tabular"></a>在工作空間資料庫中處理資料分割 (SSAS 表格式)
   分割區會將一個資料表分割成多個邏輯部分。 接著，每個分割區可以不受其他分割區的影響，單獨處理 (重新整理)。 本主題中的工作說明如何使用 **中的** [處理資料分割] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]對話方塊，處理模型工作空間資料庫中的資料分割。  

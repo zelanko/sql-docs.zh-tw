@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DeleteEncryptionKey method
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5b60239888c8f40e82e84fa3ae2171809cb20d70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ca310cc7360a969068acd31273719b890fad5be6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303528"
 ---
 # <a name="deleteencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>DeleteEncryptionKey 方法 (WMI MSReportServer_ConfigurationSetting)
   從報表伺服器資料庫中刪除加密金鑰。  

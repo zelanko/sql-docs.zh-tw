@@ -1,5 +1,5 @@
 ---
-title: 使用 AdomdDataReader 擷取資料 |Microsoft 文件
+title: 使用 AdomdDataReader 擷取資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - data retrieval [ADOMD.NET], AdomdDataReader object
 ms.assetid: 8ed7ea26-b5f8-4852-80fc-75dd62df5b3a
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ed47d13aab29ea47c5f1d041705029844e359e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5631238b78804bb593e8db90f910aec0ddebb933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321228"
 ---
 # <a name="retrieving-data-using-the-adomddatareader"></a>使用 AdomdDataReader 擷取資料
   擷取分析資料時，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件可提供負擔與互動性的良好平衡。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件會從分析資料來源擷取唯讀、順向且扁平化的資料流。 這個未緩衝的資料流可讓程序邏輯有效且循序地處理來自分析資料來源的結果。 當擷取大量資料以供顯示之用時，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 是不錯的選擇，因為資料不會快取至記憶體。  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 也可以增加應用程式效能，方法是一旦資料變成可用時便擷取它，而不是等待傳回查詢的完整結果。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 也可降低系統負擔，因為依預設，這個讀取器在記憶體中一次只會儲存一個資料列。  
   
- 最佳化效能的權衡取捨在於 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件所提供的擷取資料資訊比其他資料擷取方法少。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件並不支援代表資料或是中繼資料的大型物件模型，這個物件模型也不允許像資料格回寫等較複雜的分析功能。 不過，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件確實提供一組強型別方法以擷取資料格集資料，以及一個擷取表格式格式之資料格集中繼資料的方法。 此外，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>實作**IDbDataReader**介面來支援資料繫結和擷取資料使用`SelectCommand`方法，從**System.Data**的命名空間Microsoft.NET Framework 類別庫。  
+ 最佳化效能的權衡取捨在於 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件所提供的擷取資料資訊比其他資料擷取方法少。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件並不支援代表資料或是中繼資料的大型物件模型，這個物件模型也不允許像資料格回寫等較複雜的分析功能。 不過，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件確實提供一組強型別方法以擷取資料格集資料，以及一個擷取表格式格式之資料格集中繼資料的方法。 此外，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>會實作**IDbDataReader**介面，可以支援資料繫結，以及使用擷取的資料`SelectCommand`方法，從**System.Data**的命名空間Microsoft.NET Framework 類別庫。  
   
 ## <a name="retrieving-data-from-the-adomddatareader"></a>從 AdomdDataReader 擷取資料  
  若要使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件擷取資料，請遵循以下步驟：  
@@ -88,7 +88,7 @@ objReader.Close();
 ```  
   
 ## <a name="retrieving-metadata-from-the-adomddatareader"></a>從 AdomdDataReader 擷取中繼資料  
- 當 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件的執行個體處於開啟狀態時，您可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A> 方法擷取有關目前資料錄集的結構描述資訊或中繼資料。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>傳回`DataTable`目前資料錄集的結構描述資訊擴展物件。 `DataTable` 將會為資料錄集的每個資料行包含一個資料列。 結構描述資料表資料列的每個資料行會對應至資料格集內所傳回的資料行屬性，其中 `ColumnName` 是屬性名稱，而資料行值就是屬性的值。  
+ 當 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件的執行個體處於開啟狀態時，您可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A> 方法擷取有關目前資料錄集的結構描述資訊或中繼資料。 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader.GetSchemaTable%2A>傳回`DataTable`會填入目前資料錄集的結構描述資訊的物件。 `DataTable` 將會為資料錄集的每個資料行包含一個資料列。 結構描述資料表資料列的每個資料行會對應至資料格集內所傳回的資料行屬性，其中 `ColumnName` 是屬性名稱，而資料行值就是屬性的值。  
   
 ### <a name="example-of-retrieving-metadata-from-the-adomddatareader"></a>從 AdomdDataReader 擷取中繼資料的範例  
  下列程式碼範例會寫出 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件的結構描述資訊。  
@@ -122,7 +122,7 @@ foreach (DataRow objRow in schemaTable.Rows)
   
 ## <a name="see-also"></a>另請參閱  
  [從分析資料來源擷取資料](retrieving-data-from-an-analytical-data-source.md)   
- [使用資料格集擷取資料](retrieving-data-using-the-cellset.md)   
+ [使用 CellSet 擷取資料](retrieving-data-using-the-cellset.md)   
  [使用 XmlReader 擷取資料](retrieving-data-using-the-xmlreader.md)  
   
   

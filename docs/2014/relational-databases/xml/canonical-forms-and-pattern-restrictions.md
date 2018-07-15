@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 731fce4f107240da52dbba01d95ce50b88fea5e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d5fb6b52893b4bd79220b1fb6ec5096350f387a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249698"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>標準格式與模式限制
   XSD 模式 Facet 允許簡單類型的語彙空間限制。 當在有一個以上的可能語彙表示法之類型上設置模式限制時，有些值可能會在驗證時造成非預期的行為。  

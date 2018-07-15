@@ -1,5 +1,5 @@
 ---
-title: 定型和測試資料集 |Microsoft 文件
+title: 定型和測試資料集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing mining models
 - holdout [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0789d5f5ae4c141e8b7e53f7cab9938fae488a87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 770a5446b640cb3a2c5f5ce61f222e200f85ae3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173549"
 ---
 # <a name="training-and-testing-data-sets"></a>定型和測試資料集
   將資料分成定型集和測試集是評估資料採礦模型中的一個重要部分。 一般來說，當您將資料集分成定型集和測試集時，大多數的資料會用於定型，小部分的資料會用於測試。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會隨機取樣資料，以確保測試集和定型集類似。 您可以透過針對定型和測試使用相同的資料，盡可能減少資料不一致的影響並有效了解模型的特性。  
@@ -47,7 +47,7 @@ ms.locfileid: "36146208"
   
  此外，您可以設定精靈以便設定定型案例的最大數目，也可以結合限制以便允許案例的最大百分比 (最高達指定的最大案例數目)。 當您同時指定案例的最大百分比和案例的最大數目時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用這兩個限制中的較小者當做測試集的大小。 例如，如果您針對測試案例指定 30% 鑑效組，而且測試案例的最大數目為 1000，則測試集的大小絕對不會超過 1000 個案例。 如果您想要確保測試集的大小維持一致 (即使有更多定型資料加入至模型)，這可能會很有用。  
   
- 如果您針對不同的採礦結構使用相同的資料來源檢視，並想確保所有採礦結構及其模型使用大致相同的方式分割資料，您應該指定用來初始化隨機取樣的種子。 當您指定的值`HoldoutSeed`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]會使用該值來開始取樣。 否則，取樣會針對採礦結構的名稱使用雜湊演算法來建立初始值。  
+ 如果您針對不同的採礦結構使用相同的資料來源檢視，並想確保所有採礦結構及其模型使用大致相同的方式分割資料，您應該指定用來初始化隨機取樣的種子。 當您指定的值`HoldoutSeed`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]將會使用該值來開始取樣。 否則，取樣會針對採礦結構的名稱使用雜湊演算法來建立初始值。  
   
 > [!NOTE]  
 >  如果使用 `EXPORT` 和 `IMPORT` 陳述式建立採礦結構的複本，由於匯出程序建立新識別碼但使用相同名稱，因此新採礦結構會有相同的定型和測試資料集。 不過，如果兩個採礦結構使用相同的基礎資料來源，但具有不同的名稱，則針對每個採礦結構所建立的集合將會不同。  
@@ -91,7 +91,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 ## <a name="limitations-on-the-use-of-holdout-data"></a>使用鑑效組資料的限制  
   
--   若要使用鑑效組，採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性必須設定為預設值 `KeepTrainingCases`。 如果您變更`CacheMode`屬性`ClearAfterProcessing`，然後重新處理採礦結構，資料分割將會遺失。  
+-   若要使用鑑效組，採礦結構的 <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> 屬性必須設定為預設值 `KeepTrainingCases`。 如果您變更`CacheMode`屬性設`ClearAfterProcessing`，然後重新處理採礦結構，資料分割將會遺失。  
   
 -   您無法從時間序列模型中移除資料；因此，您無法將來源資料分成定型集和測試集。 如果您開始建立採礦結構和模型，並選擇 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法，即會停用建立鑑效組資料集的選項。 如果採礦結構在案例或巢狀資料表層級包含 KEY TIME 資料行，也會停用鑑效組資料。  
   

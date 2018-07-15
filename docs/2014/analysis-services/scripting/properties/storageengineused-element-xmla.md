@@ -1,5 +1,5 @@
 ---
-title: StorageEngineUsed 元素 (XMLA) |Microsoft 文件
+title: StorageEngineUsed 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: 98895c10-f3c2-4d8a-be94-6128c828561d
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 608ebcbb1252b4fafa44bf242a83418cc6b3d053
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6c8f7cdca7fb8134a27c8d1319385861294893a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203958"
 ---
 # <a name="storageengineused-element-xmla"></a>StorageEngineUsed 元素 (XMLA)
   包含描述目前資料庫類型的唯讀值。  
@@ -85,7 +85,7 @@ ms.locfileid: "36145029"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*傳統*|資料庫模型對應於 MOLAP、ROLAP 或 HOLAP 儲存模式。|  
 |*InMemory*|資料庫模型對應於 IMBI 儲存模式。|  

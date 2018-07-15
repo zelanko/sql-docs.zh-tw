@@ -1,5 +1,5 @@
 ---
-title: 第 9 課： 從 Windows Azure 儲存體還原資料庫 |Microsoft 文件
+title: 第 9 課： 從 Windows Azure 儲存體還原資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b8ff5ec90f80262aae76abfb01ef6c737d13369c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 380ceeabb5a91dffafe0624e073856a837a99f14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175915"
 ---
 # <a name="lesson-9-restore-a-database-from-windows-azure-storage"></a>第 9 課： 從 Windows Azure 儲存體還原資料庫
   在這一課，您將學習如何從 Windows Azure 儲存體將資料庫備份檔案還原到位於內部部署或 Windows Azure 中虛擬機器上的資料庫。 進行這一課並不需要完成第 4、5、6、7 和 8 課。  
@@ -28,7 +28,7 @@ ms.locfileid: "36146524"
   
 -   您已在來源電腦上建立資料庫。  
   
--   您已建立的備份 (.bak) 資料庫的 Windows Azure 儲存體使用[SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)功能。 請注意，您將需要在這個步驟中建立另一個 SQL Server 認證。 這個認證會使用儲存體帳戶金鑰。  
+-   您也已使用 Windows Azure 儲存體中建立您的資料庫 (.bak) 的備份[SQL Server 備份及還原與 Windows Azure Blob 儲存體服務](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)功能。 請注意，您將需要在這個步驟中建立另一個 SQL Server 認證。 這個認證會使用儲存體帳戶金鑰。  
   
 -   您擁有 Windows Azure 儲存體帳戶。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "36146524"
   
 1.  啟動 SQL Server Management Studio。 連接到預設執行個體。  
   
-2.  按一下**新查詢**標準工具列上。  
+2.  按一下 [**新的查詢**標準] 工具列上。  
   
 3.  將下列完整指令碼複製並貼入查詢視窗中。 視需要修改指令碼。  
   
-     **注意：** 執行`RESTORE`陳述式，以在 Windows Azure 儲存體還原資料庫備份 (.bak)，另一部電腦的資料庫執行個體。  
+     **注意︰** 完`RESTORE`陳述式，以在 Windows Azure 儲存體還原資料庫備份 (.bak)，另一部電腦的資料庫執行個體。  
   
     ```tsql  
   

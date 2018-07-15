@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Connection event class
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: af6b8fe9969e4b8d145f631b6d596486918f2fc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: af532b41286f058ce1323bb2e7520091aab9dc5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135398"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233318"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生 **Broker:Connection** 事件以報告 Service Broker 所管理的傳輸連線狀態。  
@@ -50,7 +50,7 @@ ms.locfileid: "36135398"
 |**ServerName**|`nvarchar`|正在追蹤之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。|26|否|  
 |**SPID**|`int`|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|`ntext`|與此事件相關的錯誤訊息文字。 對於未報告錯誤的事件，此欄位是空白的。 錯誤訊息有可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息或是 Windows 錯誤訊息。|@shouldalert|是|  
+|**TextData**|`ntext`|與此事件相關的錯誤訊息文字。 對於未報告錯誤的事件，此欄位是空白的。 錯誤訊息有可能是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤訊息或是 Windows 錯誤訊息。|1|是|  
 |**TransactionID**|`bigint`|系統指派的交易識別碼。|4|否|  
   
 ## <a name="see-also"></a>另請參閱  

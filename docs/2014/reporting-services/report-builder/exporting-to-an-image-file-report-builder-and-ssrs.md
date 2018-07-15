@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 020d8ea2-de07-4212-a2bb-2ed0df2c8db8
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e89c4b2b2026be6e90d02f38453f6e7ddd367226
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 1d4ea909ce3682498755ab45fd3336e2586e539b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299788"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>匯出至影像檔 (報表產生器及 SSRS)
   影像轉譯延伸模組會將報表轉譯成點陣圖或中繼檔。 依預設，影像轉譯延伸模組會產生報表的 TIFF 檔，可在多個頁面中檢視。 當用戶端接收到影像時，可以在影像檢視器中顯示和列印影像。 本主題提供影像轉譯器的特定資訊並描述轉譯延伸模組的例外狀況。  
@@ -72,7 +72,7 @@ ms.locfileid: "36030236"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

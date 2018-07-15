@@ -1,5 +1,5 @@
 ---
-title: 採礦模型檢視器工作和使用說明 |Microsoft 文件
+title: 採礦模型檢視器工作和使用說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], viewing
 - displaying mining models
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Mining Model Viewer [Analysis Services]
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6249d4a1c63b58135a1b7585c706496712bf80e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2b463cd9a5cb58c1286d66ce88ab749e408d852
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200388"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>採礦模型檢視器工作和使用說明
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的資料採礦設計師包含數個工具，您可以用來瀏覽採礦模型。 下列主題提供逐步指示，教您如何完成在設計師中使用 [採礦模型檢視器] 索引標籤的特定工作。  

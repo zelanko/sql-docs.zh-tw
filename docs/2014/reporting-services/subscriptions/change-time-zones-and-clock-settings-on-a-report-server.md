@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time zones [Reporting Services]
 - clocks [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 14709fc242b39ff8363f7190639d46adaae55239
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5157a079ec42264ef3f688e42b6ac294f2e54ef3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175146"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>變更報表伺服器上的時區和時鐘設定
   報表伺服器會永遠使用所安裝之電腦的本地時間。 您無法設定使用不同時區。 如果用戶端應用程式指向不同時區的報表伺服器，就會使用該報表伺服器的時區來執行排程作業。 在報表管理員和 SharePoint 管理頁面中，每個排程頁面都會顯示時區設定，好讓您確實知道已排程作業將發生的時候。 例如，用來建立自訂排程的頁面將會標示「時間是以 (UTC-08:00) 太平洋時間 (美國和加拿大) 格式表示」。  

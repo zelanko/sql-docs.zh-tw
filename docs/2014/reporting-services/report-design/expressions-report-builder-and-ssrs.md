@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c57c783be7740e6cfb9223b70bbb49d4eadbebe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 669b5d6a8514dce55a2f5fadc0d1c239b5b3ab61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268584"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>運算式 (報表產生器及 SSRS)
-  報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 許多報表項目屬性都可以設定為運算式。 運算式可協助您控制報表的內容、設計與互動性。 運算式撰寫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]、 儲存在報表定義，以及當您執行報表時報表處理器評估。  
+  報表中從頭到尾都廣泛利用運算式來擷取、計算、顯示、分組、排序、篩選、參數化及格式化資料。 許多報表項目屬性都可以設定為運算式。 運算式可協助您控制報表的內容、設計與互動性。 運算式以[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]、 儲存在報表定義中，然後在您執行報表時，報表處理器評估。  
   
- 有別於應用程式，例如[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office Excel 使用直接在工作表中的資料在報表中，您使用資料預留位置的運算式。 若要從評估的運算式查看實際資料，您必須預覽報表。 當您執行報表時，報表處理器會評估每個運算式，因為它會結合資料與報表配置元素，例如資料表和圖表。  
+ 不同於應用程式，例如[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Office Excel 使用直接在工作表中的資料在報表中，您使用資料預留位置的運算式。 若要從評估的運算式查看實際資料，您必須預覽報表。 當您執行報表時，報表處理器會評估每個運算式，因為它會結合資料與報表配置元素，例如資料表和圖表。  
   
  當您設計報表時，系統會為您設定許多報表項目的運算式。 例如，當您將欄位從資料窗格拖曳到報表設計介面上的資料表資料格時，文字方塊值會設定為欄位的簡單運算式。 在下圖中，[報表資料] 窗格會顯示 ID、Name、SalesTerritory、Code 和 Sales 資料集欄位。 有三個欄位已加入資料表中：[Name]、[Code] 和 [Sales]。 設計介面上的標記 [Name] 代表基礎運算式 `=Fields!Name.Value`。  
   
@@ -36,13 +36,13 @@ ms.locfileid: "36144671"
   
  如需詳細資訊和範例，請參閱下列主題：  
   
--   [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+-   [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
 -   [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [篩選方程式範例&#40;報表產生器和 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [篩選方程式範例&#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
--   [群組運算式範例&#40;報表產生器和 SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
+-   [群組運算式範例&#40;報表產生器及 SSRS&#41;](group-expression-examples-report-builder-and-ssrs.md)  
   
 -   [教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)  
   
@@ -103,17 +103,17 @@ ms.locfileid: "36144671"
  運算式可以包含函數、運算子、常數、欄位、參數、內建集合的項目，以及內嵌自訂程式碼或自訂組件的參考。  
   
 > [!NOTE]  
->  若要開發複雜運算式或使用自訂程式碼或自訂組件的運算式，我們建議您使用報表設計師中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
+>  若要開發複雜運算式或使用自訂程式碼或自訂組件的運算式，我們建議您使用中的報表設計師[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
   
  下表列出可以包含在運算式中的參考種類：  
   
 |參考|描述|範例|  
 |----------------|-----------------|-------------|  
 |[常數](expressions-report-builder-and-ssrs.md)|描述可透過互動方式針對需要常數值的屬性而存取的常數，例如字型色彩。|`="Blue"`|  
-|[運算子](operators-in-expressions-report-builder-and-ssrs.md)|描述您可以用來結合運算式中參考的運算子。 例如，`&`運算子用於串連字串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  
+|[運算子](operators-in-expressions-report-builder-and-ssrs.md)|描述您可以用來結合運算式中參考的運算子。 比方說，`&`運算子用於串連字串。|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[內建集合](built-in-collections-in-expressions-report-builder.md)|描述可以包含在運算式中的內建集合，例如， `Fields`、 `Parameters`和 `Variables`。|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[內建報表和彙總函式](report-builder-functions-aggregate-functions-reference.md)|描述可以從運算式存取的內建函數，例如， `Sum` 或 `Previous`。|`=Previous(Sum(Fields!Sales.Value))`|  
-|[自訂程式碼和組件 References in Expressions in Report Designer &#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|描述如何存取內建的 CLR 類別 <xref:System.Math> 和 <xref:System.Convert>、其他的 CLR 類別、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 執行階段程式庫函數，或來自外部組件的方法。<br /><br /> 描述如何存取內嵌於報表，或在編譯後安裝在報表用戶端和報表伺服器上做為自訂組件的自訂程式碼。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[自訂程式碼及組件 References in Expressions in 報表設計工具&#40;SSRS&#41;](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|描述如何存取內建的 CLR 類別 <xref:System.Math> 和 <xref:System.Convert>、其他的 CLR 類別、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 執行階段程式庫函數，或來自外部組件的方法。<br /><br /> 描述如何存取內嵌於報表，或在編譯後安裝在報表用戶端和報表伺服器上做為自訂組件的自訂程式碼。|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
   
 
   
@@ -133,11 +133,11 @@ ms.locfileid: "36144671"
 ##  <a name="Section"></a> 本節內容  
  [加入運算式 &#40;報表產生器及 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)  
   
- [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [運算式參考&#40;報表產生器和 SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
+ [運算式參考&#40;報表產生器及 SSRS&#41;](expression-reference-report-builder-and-ssrs.md)  
   
 
   

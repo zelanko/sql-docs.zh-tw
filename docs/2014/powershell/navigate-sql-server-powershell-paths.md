@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: a737eb351e6de2160ddf3385dbd3e5448bc2a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fd5d59a76ae4a9b6ec2bfb7cc811a23037f720ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242758"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>導覽 SQL Server PowerShell 路徑
   [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell 提供者會公開一組物件，而這組物件位在類似於檔案路徑之結構的 SQL Server 執行個體中。 您可以使用 Windows PowerShell 指令程式導覽提供者路徑，以及建立自訂磁碟機來縮短必須輸入的路徑。  

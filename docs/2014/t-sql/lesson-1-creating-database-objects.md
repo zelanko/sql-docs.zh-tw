@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4ed1e12e60f7c738d81412ab306f66ba0f64d1ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 2a5d2a0984403c5aeec611dd2555a3b3f9736f6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253390"
 ---
 # <a name="lesson-1-creating-database-objects"></a>第 1 課：建立資料庫物件
   這一課會示範如何建立資料庫、在資料庫中建立資料表，然後在資料表中存取和變更資料。 因為這一課是使用 [!INCLUDE[tsql](../includes/tsql-md.md)]的簡介，所以並不會使用或描述這些陳述式所能使用的許多選項。  
@@ -46,7 +46,7 @@ ms.locfileid: "36144643"
   
 -   [讀取資料表中的資料&#40;教學課程&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
   
--   [摘要： 建立資料庫物件](lesson-1-5-summary-creating-database-objects.md)  
+-   [摘要：建立資料庫物件](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [建立資料庫&#40;教學課程&#41;](lesson-1-1-creating-a-database.md)  

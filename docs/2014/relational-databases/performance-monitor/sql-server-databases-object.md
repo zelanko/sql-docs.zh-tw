@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - Databases object
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 94f2795b084a7e55db3cf09f3e5f7729460be264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b96163a102c57c238a4b6e4ce4574dfcb46a54ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318408"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases 物件
   SQL Server 中的 **SQLServer:Databases** 物件提供計數器，可用來監視大量複製作業、備份和還原輸送量以及交易記錄活動。 監視交易和交易記錄檔，可以判斷資料庫中有多少使用者活動，以及交易記錄檔有多滿。 使用者活動量可用來判斷資料庫的效能，並且會影響記錄檔大小、鎖定和複寫。 監視低階記錄檔活動，則可量測使用者活動和資源使用量，以協助您找出效能瓶頸。  

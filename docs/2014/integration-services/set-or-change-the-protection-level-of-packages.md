@@ -1,5 +1,5 @@
 ---
-title: 設定或變更封裝的保護等級 |Microsoft 文件
+title: 設定或變更封裝的保護層級 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
 - packages [Integration Services],security
@@ -16,29 +16,29 @@ helpviewer_keywords:
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 695667f3ba50b6cde3d2b9629e7116fecf7c4b16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94d29f4e488e68c5fda2549b793a26770480e30a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135837"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201648"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>設定或變更封裝的保護等級
   若要控制封裝內容以及其中包含之機密值 (例如密碼) 的存取權，請設定 `ProtectionLevel` 屬性的值 包含在專案中的封裝需要有和專案相同的保護層級，才能建立專案。 如果您變更專案上的 `ProtectionLevel` 屬性設定，就需要手動更新封裝的屬性設定。  
   
- 如需如何判斷`ProtectionLevel`中的設定適用於您封裝的不同階段封裝生命週期中，請參閱[封裝中的機密資料的存取控制](security/access-control-for-sensitive-data-in-packages.md)。 如需 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 安全性功能的概觀，請參閱[安全性概觀 &#40;Integration Services&#41;](security/security-overview-integration-services.md)。  
+ 如需如何判斷`ProtectionLevel`中的設定適用於您的套件不同階段封裝生命週期中，請參閱[套件中敏感性資料的存取控制](security/access-control-for-sensitive-data-in-packages.md)。 如需 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 安全性功能的概觀，請參閱[安全性概觀 &#40;Integration Services&#41;](security/security-overview-integration-services.md)。  
   
  本主題中的程序描述如何使用[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]或 dtutil 命令提示字元公用程式來變更`ProtectionLevel`屬性。  
   
 > [!NOTE]  
->  除了本主題中的程序，您可以設定或變更`ProtectionLevel`屬性，當您匯入或匯出封裝的封裝。 您也可以在使用 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈] 來儲存封裝時，變更封裝的 `ProtectionLevel` 屬性。  
+>  除了本主題中的程序，您可以一般設定或變更`ProtectionLevel`屬性，當您匯入或匯出封裝的封裝。 您也可以在使用 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈] 來儲存封裝時，變更封裝的 `ProtectionLevel` 屬性。  
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>若要在 SQL Server 資料工具中設定或變更封裝的保護等級  
   
-1.  檢閱可用的值`ProtectionLevel`主題中的屬性[設定封裝保護等級](security/access-control-for-sensitive-data-in-packages.md)，並判斷您的套件的適當值。  
+1.  檢閱可用的值`ProtectionLevel`主題中的屬性[設定封裝的保護層級](security/access-control-for-sensitive-data-in-packages.md)，並決定適當的值，為您的封裝。  
   
 2.  在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中，開啟包含封裝的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36135837"
   
 4.  如果 [屬性] 視窗並未顯示封裝屬性，請按一下設計介面。  
   
-5.  在 [屬性] 視窗中**安全性**群組中，選取適當的值給`ProtectionLevel`屬性。  
+5.  在 [屬性] 視窗中，在**安全性**群組中，選取適當的值`ProtectionLevel`屬性。  
   
      如果您選取了需要密碼的保護等級，請輸入密碼作為 **PackagePassword** 屬性的值。  
   
@@ -54,19 +54,19 @@ ms.locfileid: "36135837"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示字元設定或變更封裝的保護等級  
   
-1.  檢閱可用的值`ProtectionLevel`主題中的屬性[設定封裝保護等級](security/access-control-for-sensitive-data-in-packages.md)，並判斷您的套件的適當值。  
+1.  檢閱可用的值`ProtectionLevel`主題中的屬性[設定封裝的保護層級](security/access-control-for-sensitive-data-in-packages.md)，並決定適當的值，為您的封裝。  
   
-2.  檢閱的對應`Encrypt`主題中的選項[dtutil Utility](dtutil-utility.md)，並判斷要做為選定值的適當整數`ProtectionLevel`屬性。  
+2.  檢閱的對應`Encrypt`主題中的選項[dtutil Utility](dtutil-utility.md)，並決定適當的整數，用做為所選的值`ProtectionLevel`屬性。  
   
 3.  開啟 [命令提示字元] 視窗。  
   
-4.  在命令提示字元中，瀏覽至包含您要設定的封裝的資料夾`ProtectionLevel`屬性。  
+4.  在命令提示字元中，瀏覽至包含您要設定的封裝資料夾`ProtectionLevel`屬性。  
   
      下列步驟所示的語法範例假設此資料夾為目前的資料夾。  
   
 5.  使用類似於下列其中一個範例的命令，設定或變更封裝的保護等級：  
   
-    -   下列命令`ProtectionLevel`，層級 2 」 加密機密資料以密碼"，"strongpassword"密碼與檔案系統中個別封裝的屬性：  
+    -   下列命令`ProtectionLevel`層級 2 「 加密機密資料以密碼 」，並且密碼設為"strongpassword"檔案系統中個別封裝的屬性：  
   
          `dtutil.exe /file "C:\Package.dtsx" /encrypt file;"C:\Package.dtsx";2;strongpassword`  
   

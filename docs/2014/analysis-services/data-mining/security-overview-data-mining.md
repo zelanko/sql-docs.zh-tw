@@ -1,5 +1,5 @@
 ---
-title: 安全性概觀 （資料採礦） |Microsoft 文件
+title: 安全性概觀 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a20982584b08256cf02d0ca1bb6a3fb3012190b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d7432450357e77875695983f65661f0e645c7a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137191"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177015"
 ---
 # <a name="security-overview-data-mining"></a>安全性概觀 (資料採礦)
   保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 之安全的程序發生在多個層級上。 您必須保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的每一個執行個體及其資料來源的安全，以確定只有獲得授權的使用者對於選取的維度、採礦模型和資料來源，具有讀取或讀取/寫入權限。 您也必須保護基礎資料來源的安全，以防止未經授權的使用者惡意破壞機密商業資訊。 下列主題描述保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之安全的程序。  
@@ -35,7 +35,7 @@ ms.locfileid: "36137191"
   
 -   [設定服務帳戶&#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
   
--   [物件和作業存取權授權&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授與物件和作業存取權&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> 設定 Analysis Services 的登入帳戶  
  您必須為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 選取適當的登入帳戶，並指定此帳戶的權限。 您必須確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 登入帳戶只具有執行必要工作所必須的權限，包括基礎資料來源的適當權限。  

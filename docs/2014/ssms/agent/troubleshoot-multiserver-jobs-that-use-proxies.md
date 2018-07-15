@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - proxies [SQL Server Agent], multiserver jobs
 - jobs [SQL Server Agent], multiserver jobs using proxies
 ms.assetid: fc579bd3-010c-4f72-8b5c-d0cc18a1f280
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c55ff4c050c1df0418d4add5c5b84dec4e609d44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 765198145f6278635ffdf299a3aef1540aa0bdc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224710"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>針對使用 Proxy 的多伺服器作業進行疑難排解
   這是在目標伺服器上，於 Proxy 帳戶的環境下執行 Proxy 之相關聯步驟的散發式作業。 如果使用 Proxy 帳戶從主要伺服器下載的作業步驟失敗，請在 **msdb** 資料庫的 **sysdownloadlist** 資料表中，檢查 **error_message** 資料行，以了解下列錯誤訊息：  
   
 -   「作業步驟需要 Proxy 帳戶，不過目標伺服器上已停用 Proxy 比對。」  
   
-     若要解決此錯誤，請將 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.***\<n*>** \SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 登錄子機碼設定為 **1 (true)**。 根據預設，這個子機碼設定為**0** (`false`)。 **MSSQL.**\<*n*> 的值是執行個體名稱，例如 **MSSQL.1** 或 **MSSQL.3**。  
+     若要解決此錯誤，請將 **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.***\<n*>** \SQLServerAgent\AllowDownloadedJobsToMatchProxyName** 登錄子機碼設定為 **1 (true)**。 根據預設，這個子機碼設為**0** (`false`)。 **MSSQL.**\<*n*> 的值是執行個體名稱，例如 **MSSQL.1** 或 **MSSQL.3**。  
   
 -   「找不到 Proxy。」  
   

@@ -1,5 +1,5 @@
 ---
-title: StatusGraphic 元素 (ASSL) |Microsoft 文件
+title: StatusGraphic 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - StatusGraphic element
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c551e084d833dff17b7d6c1ab46b398cf6f62313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12d175d20c562fd9c0df30941ded999988fed976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215958"
 ---
 # <a name="statusgraphic-element-assl"></a>StatusGraphic 元素 (ASSL)
-  包含狀態的建議圖形表示[Kpi](../objects/kpi-element-assl.md)項目。  
+  包含的狀態的建議圖形表示法[Kpi](../objects/kpi-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,18 +64,18 @@ ms.locfileid: "36136711"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*號誌燈-單一*|號誌燈 (單一)|  
 |*號誌燈-多個*|號誌燈 (多個)|  
 |*道路標誌*|道路標誌|  
 |*量測計-遞增*|量測計|  
-|*量測計的遞減*|反向量測計|  
+|*量測計-遞減*|反向量測計|  
 |*溫度計*|溫度計|  
 |*磁柱*|圓柱|  
 |*笑臉*|臉|  
   
- 對應目的父代的項目`StatusGraphic`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Kpi>。  
+ 對應至父系的元素`StatusGraphic`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Kpi>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

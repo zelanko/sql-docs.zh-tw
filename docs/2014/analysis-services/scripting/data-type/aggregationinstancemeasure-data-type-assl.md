@@ -1,5 +1,5 @@
 ---
-title: AggregationInstanceMeasure 資料類型 (ASSL) |Microsoft 文件
+title: AggregationInstanceMeasure 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstanceMeasure data type
 ms.assetid: 3250970a-a67d-486c-b205-038f1bd1770f
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c6fa3111688504996bd885be501799256bcc70d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8cd25248eac6ed347011db8377085cc4cd2bdd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263614"
 ---
 # <a name="aggregationinstancemeasure-data-type-assl"></a>AggregationInstanceMeasure 資料類型 (ASSL)
   定義代表彙總執行個體所使用之量值相關資訊的基本資料類型。  
@@ -59,7 +59,7 @@ ms.locfileid: "36136951"
 |衍生的元素|[量值](../objects/measure-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AggregationInstanceMeasure>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.AggregationInstanceMeasure>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170759"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
   您可以使用任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或 DML 作業 (SELECT、INSERT、UPDATE 或 DELETE)、特定批次以及 SQL 模組 (例如預存程序、資料表值函數、觸發程序和檢視表) 來存取記憶體最佳化的資料表，僅有一些例外狀況。  
@@ -57,7 +57,7 @@ ms.locfileid: "36144936"
 |READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
 |TABLOCKXX|UPDLOCK|XLOCK||  
   
- 當您使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 從明確或隱含交易存取記憶體最佳化的資料表時，您必須包括隔離等級的資料表提示，例如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE，或者，您可以使用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT。 如需詳細資訊，請參閱[指導方針與記憶體最佳化資料表交易隔離等級](memory-optimized-tables.md)和[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
+ 當您使用解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 從明確或隱含交易存取記憶體最佳化的資料表時，您必須包括隔離等級的資料表提示，例如 SNAPSHOT、REPEATABLEREAD 或 SERIALIZABLE，或者，您可以使用 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT。 如需詳細資訊，請參閱[與記憶體最佳化資料表的交易隔離等級的指導方針](memory-optimized-tables.md)並[ALTER DATABASE SET 選項&#40;-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
 > [!NOTE]  
 >  在自動認可模式下執行之查詢所存取的記憶體最佳化的資料表不需要隔離等級資料表提示。  

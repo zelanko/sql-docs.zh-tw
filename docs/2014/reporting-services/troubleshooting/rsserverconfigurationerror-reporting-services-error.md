@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 49183fb1ff712ee3d0be8cd76d99492fcc9a93d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86394a3e44d1dab34bc451eee19410083bc676e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238198"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Reporting Services 錯誤
     
@@ -51,7 +51,7 @@ ms.locfileid: "36144669"
 ## <a name="user-action"></a>使用者動作  
  如果當您在手動編輯組態檔之後開始發生這個錯誤，請移除您的變更並輸入之前的值，或者如果您有備份則還原舊版。  
   
- 若要檢閱伴隨其他錯誤訊息資訊`rsServerConfiguration`錯誤，請檢閱位於 \Microsoft SQL Server\MSRS12 報表伺服器追蹤記錄檔。\<執行個體名稱 > services\logfiles。 如需詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
+ 若要檢閱伴隨著其他錯誤訊息資訊`rsServerConfiguration`錯誤，請檢閱位於 \Microsoft SQL Server\MSRS12 報表伺服器追蹤記錄檔。\<執行個體名稱 > services\logfiles。 如需詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../report-server/reporting-services-log-files-and-sources.md)。  
   
 ## <a name="internal-only"></a>僅供內部使用  
   

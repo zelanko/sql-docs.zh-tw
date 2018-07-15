@@ -1,5 +1,5 @@
 ---
-title: 執行包含 SQL 查詢 （SQLXMLOLEDB 提供者） 的範本 |Microsoft 文件
+title: 執行包含 SQL 查詢 （SQLXMLOLEDB 提供者） 的範本 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,27 +18,27 @@ helpviewer_keywords:
 - SQL queries [SQLXML]
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: affea1983c83dbf3cd0a8f5ab82292f88f1cae65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7d20d2a5bf5c465c26fcb1736386932b87d1d0a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294558"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>執行包含 SQL 查詢的範本 (SQLXMLOLEDB 提供者)
-  此範例說明使用 SQLXMLOLEDB 提供者專屬屬性 ClientSideXML。 在此用戶端 ADO 範例應用程式中，由 SQL 查詢所組成的 XML 範本會在伺服器上執行。  
+  此範例說明如何使用 SQLXMLOLEDB 提供者特有的屬性 ClientSideXML。 在此用戶端 ADO 範例應用程式中，由 SQL 查詢所組成的 XML 範本會在伺服器上執行。  
   
- ClientSideXML 屬性設定為 True，因為未使用 FOR XML 子句的 SELECT 陳述式會傳送到伺服器。 伺服器會執行查詢，並將資料列集傳回給用戶端。 用戶端接著會將 FOR XML 轉換套用至資料列集，並產生 XML 文件。  
+ ClientSideXML 屬性設定為 True，因為沒有 FOR XML 子句的 SELECT 陳述式會傳送到伺服器。 伺服器會執行查詢，並將資料列集傳回給用戶端。 用戶端接著會將 FOR XML 轉換套用至資料列集，並產生 XML 文件。  
   
- XML 範本會提供單一最上層的根項目 (\<根目錄 >)，產生的 XML 文件; 因此，未提供的 xml 根屬性。  
+ XML 範本會提供單一最上層的根項目 (\<根 >)，會產生 XML 文件; 因此，不提供 xml 根屬性。  
   
  若要執行 XML 範本，必須指定 Dialect {5d531cb2-e6ed-11d2-b252-00c04f681b71}。  
   
 > [!NOTE]  
->  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱[SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 < [SQL Server Native Client 的系統需求](../../native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

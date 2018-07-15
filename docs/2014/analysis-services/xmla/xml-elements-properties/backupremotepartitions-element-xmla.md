@@ -1,5 +1,5 @@
 ---
-title: BackupRemotePartitions 元素 (XMLA) |Microsoft 文件
+title: BackupRemotePartitions 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - BackupRemotePartitions element
 ms.assetid: bd68bcf9-b324-4fa8-b6e5-1f5531f9992c
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c32fd50514e96fee8de289666d8e559a78fe985b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: d7cc7ccb441995d1c4aa3b22cccefcdc5224e486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200068"
 ---
 # <a name="backupremotepartitions-element-xmla"></a>BackupRemotePartitions 元素 (XMLA)
-  決定是否父[備份](../xml-elements-commands/backup-element-xmla.md)命令會備份與物件相關聯的遠端資料分割。  
+  決定是否父系[備份](../xml-elements-commands/backup-element-xmla.md)命令備份與物件相關聯的遠端資料分割。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36145928"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如果 `BackupRemotePartitions` 設定為 `True`，包含一個或多個 `Locations` 元素的 `Location` 元素就必須包含在 `Backup` 命令中，否則會發生錯誤。 如需有關備份和還原遠端資料分割的詳細資訊，請參閱[備份、 還原及同步處理資料庫&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 如果 `BackupRemotePartitions` 設定為 `True`，包含一個或多個 `Locations` 元素的 `Location` 元素就必須包含在 `Backup` 命令中，否則會發生錯誤。 如需有關備份和還原遠端資料分割的詳細資訊，請參閱 <<c0> [ 備份、 還原和同步處理資料庫&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [Locations 元素&#40;XMLA&#41;](locations-element-xmla.md)   
- [Location 元素&#40;XMLA&#41;](location-element-xmla.md)   
+ [Location 項目&#40;XMLA&#41;](location-element-xmla.md)   
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  
   
   

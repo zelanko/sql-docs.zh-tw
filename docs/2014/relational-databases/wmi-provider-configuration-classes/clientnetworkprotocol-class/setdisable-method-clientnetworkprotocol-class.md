@@ -1,5 +1,5 @@
 ---
-title: SetDisable 方法 （ClientNetworkProtocol 類別） |Microsoft 文件
+title: SetDisable 方法 （ClientNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDisable method
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d25b92c4c88750662a895bac607d26230e6dc602
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 08d291f0272e602538f1a6cceef92e5f26bc6858
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186105"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>SetDisable 方法 (ClientNetworkProtocol 類別)
-  停用由所指定的用戶端網路通訊協定[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  
+  停用所指定的用戶端網路通訊協定[Configure Client Protocols](http://technet.microsoft.com/library/ms181035.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -44,7 +44,7 @@ object
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件，代表所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ A [ClientNetworkProtocol 類別](clientnetworkprotocol-class.md)物件，表示所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  `uint32` 值，如果已成功修改此服務為 0，如果不支援要求則為 1，以及其他指示錯誤的任何數字。  

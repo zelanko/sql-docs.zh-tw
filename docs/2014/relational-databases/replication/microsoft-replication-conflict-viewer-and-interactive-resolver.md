@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication conflict viewer [SQL Server]
 - interactive resolver [SQL Server replication]
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb89accafca512c1b0a6b9b855c874a53074e161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5def26de81876562924bb388a2aeab7b524de905
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193078"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Microsoft 複寫衝突檢視器和互動解析程式
   此章節包含合併式複寫和異動複寫之複寫衝突檢視器的相關資訊，以及合併式複寫之互動解析程式的相關資訊：  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: c4ceab3fcf30c6709a5cfd4138c717d4c3153a05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: e93ade38a2c90edba1551f1128571f0a7d5533aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260804"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>記憶體最佳化資料表的還原與復原
   復原或還原使用記憶體最佳化資料表之資料庫的基本機制，與僅使用磁碟資料表的資料庫類似。 但是與磁碟資料表不同之處在於，記憶體最佳化資料表必須載入記憶體中，資料庫才能供使用者存取。 這會在資料庫復原中加入一個新步驟。 資料庫復原中修改的步驟變更如下：  

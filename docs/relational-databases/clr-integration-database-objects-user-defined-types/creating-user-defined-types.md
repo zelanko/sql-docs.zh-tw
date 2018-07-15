@@ -1,11 +1,11 @@
 ---
-title: 建立使用者定義型別 |Microsoft 文件
+title: 建立使用者定義型別 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -18,12 +18,12 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 62bcb175cebbfa4848bbc49ac21710d58bfafcc8
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702609"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349480"
 ---
 # <a name="creating-user-defined-types"></a>建立使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,11 @@ Reconfigure
  [使用者定義型別需求](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
  說明撰寫使用者定義型別之程式碼的需求。  
   
- [使用者定義型別撰寫程式碼](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
+ [編碼使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)  
  示範建立使用者定義型別所涉及的程式碼撰寫技巧。  
   
 ## <a name="example"></a>範例  
- 下列程式碼清單會定義 Point UDT，詳細資料中所述[撰寫類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
+ 下列程式碼清單會定義 Point UDT，詳細資料中所述[< 類型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)。  
   
  藉由安裝 CLR 範例，可取得本節所討論之其他範例的完整程式碼清單。 如需有關安裝這些範例的指示，請參閱[SQL Server Database Engine 範例](http://msftengprodsamples.codeplex.com/)。  
   

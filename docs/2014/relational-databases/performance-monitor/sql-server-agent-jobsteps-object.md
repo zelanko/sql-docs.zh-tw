@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - JobSteps object
 - SQLAgent:JobSteps
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 36fd1f3af30a3b9637df64ca5e118b6381e3bd06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 03fb2016e60c3494b61fd6df9fcb183035ac2e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269004"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent、JobSteps 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的 **JobSteps** 效能物件包含可報告 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟相關資訊的效能計數器。 下表列出這個物件包含的計數器。  
   
  下表包含 **SQLAgent:JobSteps** 計數器。  
   
-|[屬性]|描述|  
+|名稱|描述|  
 |----------|-----------------|  
 |**Active steps**|此計數器會報告目前在執行中的作業步驟數目。|  
 |**Queued steps**|此計數器會報告準備供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行，但尚未開始執行的作業步驟數目。|  

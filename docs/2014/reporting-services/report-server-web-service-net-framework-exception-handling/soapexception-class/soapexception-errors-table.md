@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
 caps.latest.revision: 31
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9c7b436618a036e59c5ddbf6f2f435092d01111
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fcb2e8e6b515fceedf106fd7cbf9ce3773e0c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280514"
 ---
 # <a name="soapexception-errors-table"></a>SoapException 錯誤資料表
   報表伺服器會根據在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中發生的錯誤，在 SOAP 例外狀況中產生錯誤與錯誤訊息。 下表顯示透過報表伺服器 Web 服務中的 **SoapException**，可從方法存取的錯誤。 這張表格是依照擲回例外狀況的方法加以組織。  

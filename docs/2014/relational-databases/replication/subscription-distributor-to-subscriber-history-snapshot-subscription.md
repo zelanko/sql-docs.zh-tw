@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.pubtodist.snapshot.f1
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5ac8e2904e478b929b3ccb7f3b52494a2743cc16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ed9444d28f05ac4b9fa01ab42b72452af9b61d6e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303698"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>訂閱，散發者到訂閱者記錄 (快照式訂閱)
   **[散發者到訂閱者記錄]** 索引標籤會顯示散發代理程式的詳細資訊，包括狀態、記錄、參考訊息和錯誤訊息。  

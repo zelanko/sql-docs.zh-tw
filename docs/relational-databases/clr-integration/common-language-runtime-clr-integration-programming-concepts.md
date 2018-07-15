@@ -1,12 +1,11 @@
 ---
-title: Common Language Runtime (CLR) 整合程式設計概念 |Microsoft 文件
+title: Common Language Runtime (CLR) 整合程式設計概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - CLR [SQL Server] See common language runtime [SQL Server]
@@ -19,12 +18,12 @@ caps.latest.revision: 59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 13eac9448c0cd0d5f5dd208b75c9fc5bed089262
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: df157328c0718a55dae569503e1e5f6bd424131e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703319"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357030"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Common Language Runtime (CLR) 整合程式設計概念
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "35703319"
 >  根據預設，.NET Framework 會與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一起安裝，但是 .NET Framework SDK 則不會。 如果 SDK 未安裝在電腦上，也不包含在線上叢書集合中，本節中的 SDK 內容連結將不會有任何作用。 請安裝 .NET Framework SDK。 安裝之後，將 SDK 加入至線上叢書集合和目錄中的指示[安裝.NET Framework SDK](http://technet.microsoft.com/library/bb686823\(v=SQL.105\).aspx)。  
   
 > [!NOTE]  
->  CLR 功能，例如 CLR 使用者函式，是*不*Azure SQL Database 支援。  
+>  CLR 功能，例如 CLR 使用者函式，都*不*支援 Azure SQL Database。  
   
  下表列出本節的主題。  
   
- [Common Language Runtime &#40;CLR&#41;整合概觀](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
+ [通用語言執行平台&#40;CLR&#41;整合概觀](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
  提供 CLR 的簡短概觀，並描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用此技術的方法和原因。 描述使用 CLR 建立資料庫物件的優點。  
   
  [組件 &#40;Database Engine&#41](../../relational-databases/clr-integration/assemblies-database-engine.md)  

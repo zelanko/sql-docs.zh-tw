@@ -1,5 +1,5 @@
 ---
-title: 檔案和版本號碼 |Microsoft 文件
+title: 檔案和版本號碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 63602af6a7d798086c3e41d3796b20a2f71d6950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dfd73cbcb236c30f9a88a236ee87bf5cedecc7f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169034"
 ---
 # <a name="files-and-version-numbers"></a>檔案和版本號碼
-  所有必要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO) 元件會安裝執行個體的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端或伺服器。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
+  所有必要[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) 元件都會安裝為執行個體的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端或伺服器。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
   
 |目錄|檔案|描述|  
 |---------------|----------|-----------------|  

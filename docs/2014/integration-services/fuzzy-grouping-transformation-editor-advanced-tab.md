@@ -1,5 +1,5 @@
 ---
-title: 模糊群組轉換編輯器 （進階索引標籤） |Microsoft 文件
+title: 模糊群組轉換編輯器 （進階索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b1696734810b1b3fd4ceccb624139358cea0dcaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7e8c12ad683e46838a88359170ea970f20c02828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231518"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>模糊群組轉換編輯器 (進階索引標籤)
   使用 **[模糊群組轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可指定輸入和輸出資料行、設定類似度臨界值，以及定義分隔符號。  
   
 > [!NOTE]  
->  `Exhaustive`和`MaxMemoryUsage`模糊群組轉換的屬性不適用於**模糊群組轉換編輯器**，但是可以透過設定**進階編輯器**. 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)＞的「模糊群組轉換」一節。  
+>  `Exhaustive`而`MaxMemoryUsage`模糊群組轉換的屬性不適用於**模糊群組轉換編輯器**，但可以透過設定**進階編輯器**. 如需有關這些屬性的詳細資訊，請參閱＜ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)＞的「模糊群組轉換」一節。  
   
  若要深入了解模糊群組轉換，請參閱＜ [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md)＞。  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Workload Group Stats object
 - 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 98dfc36dc69f8b913b9b1b5939522429d585854b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 47f6ec268f40ab409a2c4438e6faa029ae10fe2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270774"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 物件
   SQLServer:Workload Group Stats 物件包含效能計數器，可報告資源管理員工作負載群組統計資料的相關資訊。  

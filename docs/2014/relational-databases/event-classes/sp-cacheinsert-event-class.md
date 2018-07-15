@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheInsert event class
 ms.assetid: 37fb9bec-b462-4563-8e50-ec84d5407e20
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cd83deecf5ef1960cb67ca120babb0326ae34d24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2f05853aa4f7bd62db5037555a4f1879a95328d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244768"
 ---
 # <a name="spcacheinsert-event-class"></a>SP:CacheInsert 事件類別
   SP:CacheInsert 事件類別指出已將預存程序插入至程序快取。  
@@ -52,7 +52,7 @@ ms.locfileid: "36135166"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 這個資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|所快取之 SQL 程式碼的文字。|@shouldalert|是|  
+|TextData|`ntext`|所快取之 SQL 程式碼的文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

@@ -1,5 +1,5 @@
 ---
-title: 多維度分析的 UI 精靈 |Microsoft 文件
+title: 多維度分析的 UI 精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cbb8dc6a4d538944bd22ac69bf13d85435dd0dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccdd4a66b4b34cae9295cc553b795f0cda256a53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316068"
 ---
 # <a name="ui-wizards-for-multidimensional-analysis"></a>多維度分析的 UI 精靈
 
@@ -27,5 +27,5 @@ ms.locfileid: "36023405"
 
 ## <a name="next-steps"></a>後續步驟
 
-- [Analysis Services 精靈 （多維度）](../analysis-services-wizards-multidimensional-data.md)
+- [Analysis Services 精靈 (多維度)](../analysis-services-wizards-multidimensional-data.md)
 

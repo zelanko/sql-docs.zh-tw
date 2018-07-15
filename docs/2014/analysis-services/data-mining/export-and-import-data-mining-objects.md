@@ -1,5 +1,5 @@
 ---
-title: 匯出和匯入資料採礦物件 |Microsoft 文件
+title: 匯出和匯入資料採礦物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [Analysis Services]
 - exporting mining models
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - mining models [Analysis Services], migration
 ms.assetid: 10a83b13-2640-4ff5-80c8-a35e1d692908
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9285699bf57637327bc56368a87680f20de81f23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4145ca6834a27b1159a0d2311f620085491343cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145254"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173599"
 ---
 # <a name="export-and-import-data-mining-objects"></a>匯出及匯入資料採礦物件
   除了在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中針對備份、還原和移轉方案提供的功能之外，SQL Server 資料採礦還可以使用資料採礦延伸模組 (DMX)，在不同的伺服器之間快速傳送資料採礦結構和模型。  
   
- 如果您的資料採礦方案使用關聯式資料，而不是多維度資料庫，請使用傳送模型`EXPORT`和`IMPORT`更為快速而且更容易比使用資料庫還原或部署整個方案。  
+ 如果您的資料採礦方案使用關聯式資料，而不是多維度資料庫，請使用傳送模型`EXPORT`和`IMPORT`更為快速而且容易使用資料庫還原或部署整個方案。  
   
  本節提供如何使用 DMX 陳述式傳送資料採礦結構與模型的概觀。 如需語法及範例的詳細資訊，請參閱 [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx) 和 [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36145254"
 ## <a name="exporting-data-mining-structures"></a>匯出資料採礦結構  
  當您匯出採礦結構時，EXPORT 陳述式會自動匯出所有關聯的模型。 如果您要控制匯出的物件，必須依名稱指定每個物件。  
   
- 當您匯出採礦結構時，如果採礦結構已經過處理，而且結果已經經過快取 (這是預設行為)，定義則包含結構所依據之資料的摘要。 若要移除此摘要，您必須清除執行相關聯的採礦結構快取`Process Clear Structure`作業。 如需詳細資訊，請參閱 [處理採礦結構](process-a-mining-structure.md)。  
+ 當您匯出採礦結構時，如果採礦結構已經過處理，而且結果已經經過快取 (這是預設行為)，定義則包含結構所依據之資料的摘要。 若要移除此摘要，您必須清除快取執行相關聯的採礦結構`Process Clear Structure`作業。 如需詳細資訊，請參閱 [處理採礦結構](process-a-mining-structure.md)。  
   
 ### <a name="exporting-data-mining-models"></a>匯出資料採礦模型  
  您可以使用`WITH DEPENDENCIES`關鍵字匯出資料來源與資料來源檢視定義，以及採礦模型及其結構。  

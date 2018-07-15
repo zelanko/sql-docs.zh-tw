@@ -1,12 +1,11 @@
 ---
-title: Common Language Runtime (CLR) 整合概觀 |Microsoft 文件
+title: Common Language Runtime (CLR) 整合概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - managed code [SQL Server]
@@ -21,12 +20,12 @@ caps.latest.revision: 64
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ebc2a886b525d356dadaa665e0d1815fb6e97d91
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: d79fe5e7d56e58e48ae92a6f934b11f8b3b42b67
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701699"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352650"
 ---
 # <a name="common-language-runtime-integration-overview"></a>Common Language Runtime 整合概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +45,14 @@ ms.locfileid: "35701699"
   
 -   **透過標準化環境簡化的開發。** 資料庫開發會整合到後續版本的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio .NET 開發環境中。 開發人員用來開發與偵錯資料庫物件和指令碼的工具，與他們用來撰寫中介層或用戶層的 .NET Framework 元件和服務的工具是一樣的。  
   
--   **為了改善的效能和延展性的可能性。** 在許多情況下，.NET Framework 語言編譯和執行模型會透過 Transact-SQL 提供改善的效能。  
+-   **更佳的效能和延展性的可能性。** 在許多情況下，.NET Framework 語言編譯和執行模型會透過 Transact-SQL 提供改善的效能。  
   
  下表列出本節中的主題。  
   
  [CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)  
  描述可以使用 CLR 整合建立的物件種類，並檢閱使用 CLR 整合建立資料庫物件的需求。  
   
- [新功能 CLR 整合](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
+ [CLR 整合的新功能](../../relational-databases/clr-integration/clr-integration-what-s-new.md)  
  描述這個版本的新功能。  
   
  [CLR 整合的架構](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)  

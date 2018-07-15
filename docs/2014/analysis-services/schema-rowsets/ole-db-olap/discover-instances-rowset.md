@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_INSTANCES 資料列集 |Microsoft 文件
+title: DISCOVER_INSTANCES 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DISCOVER_INSTANCES rowset
 ms.assetid: e0842e63-089d-468d-869f-634da343d9fb
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f3118b5de343a28dd26d3507d56c8e98fc09d512
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5d949861a9208b60788e0085de2340bdd26f4700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200128"
 ---
 # <a name="discoverinstances-rowset"></a>DISCOVER_INSTANCES 資料列集
   描述伺服器上的執行個體。  

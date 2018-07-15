@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
 - overriding default startup options
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: 75
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 66aa5a32ddc527ccde99fcf990eb73046123d65f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136480"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219828"
 ---
 # <a name="database-engine-service-startup-options"></a>Database Engine 服務啟動選項
   啟動選項指定啟動期間所需的特定檔案位置，並指定一些整個伺服器範圍的條件。 除非您疑難排解 [!INCLUDE[ssDE](../../includes/ssde-md.md)] ，或是發生異常問題而「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 客戶支援」指示您使用啟動選項，否則大部分使用者都不需要指定啟動選項。  

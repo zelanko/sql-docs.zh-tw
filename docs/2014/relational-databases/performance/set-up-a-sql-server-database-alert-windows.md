@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5dabe7735f8e91b74c95d04b75739c1a54f91b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8ae0709b9135bba9c5a71ba02de9a2d0b2f8a223
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283124"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>設定 SQL Server 資料庫警示 (Windows)
   您可以使用「系統監視器」來建立警示，在達到「系統監視器」計數器的臨界值時引發警示。 為了回應此警示，「系統監視器」可啟動某個應用程式，諸如可處理此警示狀況的自訂應用程式。 例如，您可以建立在死結數目超出特定值時引發的警示。  

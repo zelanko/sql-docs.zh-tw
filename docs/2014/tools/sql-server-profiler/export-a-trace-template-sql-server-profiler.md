@@ -1,5 +1,5 @@
 ---
-title: 匯出追蹤範本 (SQL Server Profiler) |Microsoft 文件
+title: 匯出追蹤範本 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 386a640cbb9345b1f91f189629bb2f8172dc1aa3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 32ac4eba8c474cd004c3a21656ef77641676f31a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249708"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>匯出追蹤範本 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來匯出現有的追蹤範本，並且另存為範本檔 (.tdf)。 當您匯出追蹤範本，並且另存成檔案，即可以另一個 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]的執行個體來使用該範本。  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d29c76541d87e950c973fd6dc7d57482c6d2b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 3ae25be65e0fdf0cf88bf8dec6cf5c3f59f9c9e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311400"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   A`MultiPolygon`執行個體是零或多個集合`Polygon`執行個體。  
@@ -39,11 +39,11 @@ ms.locfileid: "36023950"
 -   圖 2 是具有兩個 `MultiPolygon` 元素的 `Polygon` 執行個體。 界限是由兩個外部環形和三個內部環形所定義。 這兩個 `Polygon` 元素會在正切點相交。  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- A`MultiPolygon`還是可接受下列條件符合。  
+ A`MultiPolygon`還是可接受下列條件之一成立。  
   
 -   它是空`MultiPolygon`執行個體。  
   
--   所有執行個體組成`MultiPolygon`執行個體所接受`Polygon`執行個體。 如需有關接受`Polygon`執行個體，請參閱[多邊形](../spatial/polygon.md)。  
+-   所有的執行個體組成`MultiPolygon`執行個體所接受`Polygon`執行個體。 如需有關已接受`Polygon`執行個體，請參閱[多邊形](../spatial/polygon.md)。  
   
  下列範例會顯示可接受的 `MultiPolygon` 執行個體。  
   
@@ -77,7 +77,7 @@ DECLARE @g3 geometry = 'MULTIPOLYGON(((2 2, 2 -2, -2 -2, -2 2, 2 2)),((1 1, 3 1,
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g2` 無效，因為這兩個`Polygon`執行個體只在正切點接觸。 `@g3` 不是有效因為兩個內部`Polygon`執行個體互相重疊。  
+ `@g2` 無效，因為這兩個`Polygon`執行個體只在一個相切點接觸。 `@g3` 不是有效因為這兩個`Polygon`執行個體彼此重疊。  
   
 ## <a name="examples"></a>範例  
  下列範例示範 `geometry``MultiPolygon` 執行個體的建立作業，並傳回第二個元件的 Well-Known Text (WKT)。  

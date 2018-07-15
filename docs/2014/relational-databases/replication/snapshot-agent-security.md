@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.security.SSA.f1
 helpviewer_keywords:
 - Snapshot Agent Security dialog box
 ms.assetid: 64e84c67-acc6-4906-98d4-3451767363fe
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8601934205196a3534556cf35d49d393e2cb843d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: dc8da9eb8c223ea7a8cc1dd6b9a2a7dd35a9fdee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315518"
 ---
 # <a name="snapshot-agent-security"></a>快照集代理程式安全性
   **[快照集代理程式安全性]** 對話方塊可讓您指定：  

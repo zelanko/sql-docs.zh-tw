@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnlist
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6bc71e5ae300a75ef92449b61d8d9cfb7c333b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ac1923bdfc931dc13cf730c296d29497fc4c5bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185685"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>資料行清單對話方塊 (Visual Database Tools)
   撰寫查詢時，如果能夠看到您在資料表值物件中選取的可用資料行清單會相當有用。  

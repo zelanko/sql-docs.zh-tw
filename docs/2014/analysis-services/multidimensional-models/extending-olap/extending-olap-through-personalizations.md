@@ -1,5 +1,5 @@
 ---
-title: 通過個人化擴充 OLAP |Microsoft 文件
+title: 透過個人化擴充 OLAP |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Analysis Services, extensibility
 ms.assetid: 348e49fc-4390-43c1-9b6c-61b386ff4373
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d2c1bdea4c59a047f613033ae0e8aa8515c8232f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf7785c3acd3815f78e656951e8ae3f05e125245
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280354"
 ---
 # <a name="extending-olap-through-personalizations"></a>通過個人化擴充 OLAP
   Microsoft [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 提供許多的內建函數，可搭配多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言使用。 這些函數是設計用來進行標準統計計算與階層中周遊成員間等工作。 不過，就如同其他複雜且功能強大的產品一樣，總是有進一步擴充產品功能的需求。  

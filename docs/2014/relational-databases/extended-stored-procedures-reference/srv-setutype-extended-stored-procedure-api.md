@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_setutype
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47b545b7000dcd0ba500ef56cc844dc32e50f888
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 44d61cd675c1d1236cc6359a99d285d1995fdd1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023318"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311528"
 ---
 # <a name="srvsetutype-extended-stored-procedure-api"></a>srv_setutype (擴充預存程序 API)
     

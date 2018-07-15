@@ -1,12 +1,11 @@
 ---
-title: 組件 (Database Engine) |Microsoft 文件
+title: 組件 (Database Engine) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
@@ -17,12 +16,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5429ae69dfabd8d978e3dff6a2a29ff3f4ba56fe
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 02b9011a567eb3a91bf36dfc7d2450dfa9498a60
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697109"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359390"
 ---
 # <a name="assemblies-database-engine"></a>組件 (Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +31,15 @@ ms.locfileid: "35697109"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的組件是會參考 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime 中所建立 Managed 應用程式模組 (.dll 檔案) 的物件。 組件包含類別中繼資料及 Managed 程式碼。 將組件上傳到 SQL Server 的執行個體是建立下列任何一個資料庫物件的首要步驟：  
   
--   CLR 函數。 如需詳細資訊，請參閱[建立 CLR 函數](../../relational-databases/user-defined-functions/create-clr-functions.md)。  
+-   CLR 函數。 如需詳細資訊，請參閱 <<c0> [ 建立 CLR 函數](../../relational-databases/user-defined-functions/create-clr-functions.md)。  
   
--   CLR 預存程序。 如需詳細資訊，請參閱[CLR 預存程序](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)。  
+-   CLR 預存程序。 如需詳細資訊，請參閱 < [CLR 預存程序](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)。  
   
--   CLR 觸發程序。 如需詳細資訊，請參閱[建立 CLR 觸發程序](../../relational-databases/triggers/create-clr-triggers.md)。  
+-   CLR 觸發程序。 如需詳細資訊，請參閱 <<c0> [ 建立 CLR 觸發程序](../../relational-databases/triggers/create-clr-triggers.md)。  
   
--   使用者自訂彙總函式。 如需詳細資訊，請參閱[建立使用者定義彙總](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)。  
+-   使用者自訂彙總函式。 如需詳細資訊，請參閱 <<c0> [ 建立使用者定義彙總](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)。  
   
--   使用者定義型別。 如需詳細資訊，請參閱[Using User-Defined 類型](../../relational-databases/native-client/features/using-user-defined-types.md)。  
+-   使用者定義型別。 如需詳細資訊，請參閱 < [Using User-Defined 類型](../../relational-databases/native-client/features/using-user-defined-types.md)。  
   
  組件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中會執行下列功能：  
   
@@ -57,7 +56,7 @@ ms.locfileid: "35697109"
 |主題|描述|  
 |-----------|-----------------|  
 |[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)|解釋在建立組件之前，您必須考慮的項目。 包括封裝組件、程式碼存取權限，以及其他的限制。|  
-|[實作的組件](../../relational-databases/clr-integration/assemblies-implementing.md)|解釋如何建立和卸除組件、如何修改組件和修改組件的時機，以及如何擷取關於組件的中繼資料。|  
+|[實作組件](../../relational-databases/clr-integration/assemblies-implementing.md)|解釋如何建立和卸除組件、如何修改組件和修改組件的時機，以及如何擷取關於組件的中繼資料。|  
 |[取得組件的相關資訊](../../relational-databases/clr-integration/assemblies-getting-information.md)|列出可用來查詢組件相關中繼資料的目錄檢視和函數。|  
   
 ## <a name="see-also"></a>另請參閱  

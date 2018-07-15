@@ -1,5 +1,5 @@
 ---
-title: Cube 設計工具 (Analysis Services-多維度資料) |Microsoft 文件
+title: Cube 設計師 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 00720caa0c9bcae9e04cc542864ab99e14eb0f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246278"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube 設計師 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [Cube 設計師] 來編輯現有 Cube 的各種屬性，包括量值群組與量值、Cube 維度與維度關聯性、計算、關鍵效能指標 (KPI)、動作、資料分割、檢視方塊以及 Cube 包含的翻譯，還可以瀏覽 Cube 包含的資料。 您可依下列方式顯示 **[Cube 設計師]** 對話方塊：  

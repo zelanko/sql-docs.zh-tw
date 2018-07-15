@@ -1,5 +1,5 @@
 ---
-title: 事件配對目標 |Microsoft 文件
+title: 事件配對目標 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pairing target [SQL Server extended events]
 - event pairing target
 - targets [SQL Server extended events], pairing target
 ms.assetid: 3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2b2bff842462e0ab77ecd30373df00746260cea5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9e67507452104e8bef8d82d86e78c0ebbdf80609
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291334"
 ---
 # <a name="event-pairing-target"></a>事件配對目標
   事件配對目標會使用每個事件中存在之一個或多個資料行來比對兩個事件。 許多事件都是以成對的形式出現，例如鎖定取得和鎖定釋放。 當事件序列配對之後，會捨棄這兩個事件。 捨棄相符的事件組可讓您輕鬆偵測尚未釋放的鎖定取得。  
@@ -47,7 +47,7 @@ ms.locfileid: "36023396"
   
  所有與事件有關的資料都會擷取，並儲存起來供將來配對。 此外，也會收集動作所加入的資料。 收集的事件資料會儲存在記憶體中，因此會有有限度的限制。 這個限制是以系統容量和活動為根據。 所使用的記憶體數量將會根據可用的系統資源而定，而不會將最大記憶體數量當做參數使用。 當無法使用這些項目時，將會卸除已經保留且未配對的事件。 如果事件尚未配對且遭到卸除，則相符的事件將會以未配對事件的形式出現。  
   
- 配對目標會將未配對的事件序列化成 XML 格式， 這個格式不符合任何結構描述。 此格式只包含兩個元素類型。 **\<未配對 >** 元素是根元素，後面接著一個。 **\<事件 >** 目前正在追蹤的每一個未配對事件的項目。 **\<事件 >** 元素包含一個屬性，其中包含了未配對事件的名稱。  
+ 配對目標會將未配對的事件序列化成 XML 格式， 這個格式不符合任何結構描述。 此格式只包含兩個元素類型。 **\<成對 >** 元素是根元素，後面接著一個。 **\<事件 >** 目前正在追蹤的每一個未配對事件的項目。 **\<事件 >** 元素包含一個屬性，其中包含了未配對事件的名稱。  
   
 ## <a name="adding-the-target-to-a-session"></a>將目標加入至工作階段  
  若要將配對比對目標加入至擴充事件工作階段，您必須在建立或更改事件工作階段時，加入下列陳述式：  

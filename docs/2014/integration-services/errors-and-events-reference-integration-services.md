@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, events
 - events [Integration Services]
@@ -18,13 +18,13 @@ ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5aea7cea08e6cec678b436c7ea22d653b09d3ac2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f5bf3e8bd5c7ebe56838ed9ebe8f8b91d7e87ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178395"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>錯誤和事件參考 (Integration Services)
   文件集中的這一節包含一些與 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]相關之錯誤和事件的資訊， 包含錯誤訊息的原因和解決方案資訊。  

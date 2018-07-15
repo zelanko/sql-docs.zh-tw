@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 54ed1dcca5d1e690990953cd2c02d4ad4e1b7879
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9e18fe47a84785d7450a481c1eb6f1173b8bcf9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292128"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>變更圖例項目的文字 (報表產生器及 SSRS)
   將欄位放在圖表的 [值] 區域中時，系統會自動產生包含此欄位名稱的圖例項目。 每個圖例項目都會連接到報表上的個別數列，但是形狀圖例外 (其圖例會連接到個別資料點而非個別數列)。  
@@ -58,7 +58,7 @@ ms.locfileid: "36029777"
 2.  按一下 [圖例]，然後在 [自訂圖例文字] 方塊中鍵入圖例標籤。 數列會隨著您的文字更新。  
   
 ## <a name="see-also"></a>另請參閱  
- [在圖表上格式化圖例&#40;報表產生器和 SSRS&#41;](chart-legend-formatting-report-builder.md)   
+ [在圖表上格式化圖例&#40;報表產生器及 SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [隱藏圖表上的圖例項目 &#40;報表產生器及 SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   

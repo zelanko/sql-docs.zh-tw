@@ -1,9 +1,8 @@
 ---
-title: 取得組件的相關資訊 |Microsoft 文件
+title: 取得組件的相關資訊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
@@ -19,12 +18,12 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7cbf238a71c25d8cc24b106007db6acba73698b
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7b01592ad65a6db4acc8dee1c7f417096c6a6265
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697459"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352620"
 ---
 # <a name="assemblies---getting-information"></a>組件-取得資訊
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,25 +33,25 @@ ms.locfileid: "35697459"
   
 -   [ASSEMBLYPROPERTY &#40;Transact SQL&#41;](../../t-sql/functions/assemblyproperty-transact-sql.md)  
   
- **若要取得資料庫中的所有組件的資訊**  
+ **若要取得資料庫中的所有組件的相關資訊**  
   
 -   [sys.assemblies &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   
- **若要取得組件資訊檔案，包括組件二進位、 原始程式檔，及偵錯檔案**  
+ **若要取得組件檔案，包括組件的二進位檔的資訊來源檔案及偵錯檔案**  
   
--   [sys.assembly_files &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
+-   [sys.assembly_files &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)  
   
  **若要取得跨組件參考的相關資訊**  
   
--   [sys.assembly_references &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
+-   [sys.assembly_references &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)  
   
  **若要取得使用者定義類型的組件資訊**  
   
--   [sys.assembly_types &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
+-   [sys.assembly_types &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)  
   
 -   [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
- **若要取得組件資訊 common language runtime (CLR) 預存程序、 觸發程序和函式**  
+ **取得組件資訊 common language runtime (CLR) 預存程序、 觸發程序和函式**  
   
 -   [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)  
   
@@ -63,6 +62,6 @@ ms.locfileid: "35697459"
 ## <a name="see-also"></a>另請參閱  
  [組件&#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [設計組件](../../relational-databases/clr-integration/assemblies-designing.md)   
- [實作的組件](../../relational-databases/clr-integration/assemblies-implementing.md)  
+ [實作組件](../../relational-databases/clr-integration/assemblies-implementing.md)  
   
   

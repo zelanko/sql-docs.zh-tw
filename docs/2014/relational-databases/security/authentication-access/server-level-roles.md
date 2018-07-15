@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.Security.BUILTIN.administrators
 - sql12.Security.NT_AUTHORITY.SYSTEM
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ffccb6ce3fcf80441a953f86fc74ec71aac9ab40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8c2878ee1142dfb7069febb652dac6a3aceaba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029798"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301898"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會提供伺服器層級角色來協助您管理伺服器的權限。 這些角色是將其他主體組成群組的安全性主體。 伺服器層級角色的權限範圍為整個伺服器  (「角色」就像是 Windows 作業系統中的「群組」)。  
@@ -49,7 +48,7 @@ ms.locfileid: "36029798"
 |------------------------------|-----------------|  
 |sysadmin|系統管理員 (sysadmin) 固定伺服器角色的成員可以執行伺服器中的所有活動。|  
 |serveradmin|伺服器管理員 (serveradmin) 固定伺服器角色的成員可以變更整個伺服器的組態選項及關閉伺服器。|  
-|securityadmin|安全性管理員 (securityadmin) 固定伺服器角色的成員可以管理登入及其屬性。 他們可以 GRANT、DENY 及 REVOKE 伺服器層級權限。 如果他們擁有資料庫的存取權，也可以 GRANT、DENY 和 REVOKE 資料庫層級權限。 此外，他們可以重設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入的密碼。<br /><br /> **\*\* 安全性注意事項 \*\*** 安全性管理員可使用授與 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 存取權和設定使用者權限的功能，來指派大部分的伺服器權限。 `securityadmin`角色應該視為相當於`sysadmin`角色。|  
+|securityadmin|安全性管理員 (securityadmin) 固定伺服器角色的成員可以管理登入及其屬性。 他們可以 GRANT、DENY 及 REVOKE 伺服器層級權限。 如果他們擁有資料庫的存取權，也可以 GRANT、DENY 和 REVOKE 資料庫層級權限。 此外，他們可以重設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入的密碼。<br /><br /> **\*\* 安全性注意事項 \*\*** 安全性管理員可使用授與 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 存取權和設定使用者權限的功能，來指派大部分的伺服器權限。 `securityadmin`角色應視為相當於`sysadmin`角色。|  
 |processadmin|處理序管理員 (processadmin) 固定伺服器角色的成員可以結束在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體中執行的處理序。|  
 |setupadmin|setupadmin 固定伺服器角色的成員可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式加入和移除連結的伺服器 (使用 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]時需要系統管理員成員資格)。|  
 |bulkadmin|大量管理員 (bulkadmin) 固定伺服器角色的成員可以執行 BULK INSERT 陳述式。|  
@@ -61,7 +60,7 @@ ms.locfileid: "36029798"
  每個固定伺服器角色都擁有指派給它的特定權限。 如需指派給伺服器角色之權限的圖表，請參閱 [Database Engine Fixed Server and Fixed Database Roles](http://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx)(資料庫引擎固定伺服器與固定資料庫角色)。  
   
 > [!IMPORTANT]  
->  `CONTROL SERVER`權限是類似，但不是完全相同`sysadmin`固定的伺服器角色。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， `CONTROL SERVER` 不代表 `sysadmin` 固定伺服器角色中的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 `DBCC` 命令與許多系統程序都需要 `sysadmin` 固定伺服器角色中的成員資格。 取得一份 171 個系統預存程序需要`sysadmin`成員資格，請參閱以下由 Andreas Wolter 張貼的部落格[CONTROL SERVER vs.sysadmin/sa： 權限、 系統程序、 DBCC、 自動結構描述建立和權限escalation-警告](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
+>  `CONTROL SERVER`類似，但不是完全相同的權限`sysadmin`固定的伺服器角色。 權限不代表角色成員資格，角色成員資格也不會授與權限。 (例如， `CONTROL SERVER` 不代表 `sysadmin` 固定伺服器角色中的成員資格)。不過，角色與相等權限之間有時候可以互相模擬。 大部分 `DBCC` 命令與許多系統程序都需要 `sysadmin` 固定伺服器角色中的成員資格。 取得一份 171 個系統預存程序，需要`sysadmin`成員資格，請參閱以下由 Andreas Wolter 張貼的部落格[CONTROL SERVER vs.sysadmin/sa： 權限、 系統程序、 DBCC、 自動結構描述建立和權限escalation-警告](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)。  
   
 ## <a name="server-level-permissions"></a>伺服器層級權限  
  只有伺服器層級權限可加入至使用者定義伺服器角色。 若要列出伺服器層級權限，請執行以下陳述式。 伺服器層級權限為：  
