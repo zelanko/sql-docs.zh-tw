@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 caps.latest.revision: 15
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b57ae0faef29326a510dddbbfe049c1c9b4a9b3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253980"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md) 。  

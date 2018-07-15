@@ -1,5 +1,5 @@
 ---
-title: 建立資料驅動訂閱頁面 （報表管理員） |Microsoft 文件
+title: 建立資料驅動訂閱頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
 caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bc1a54e462b3f3219c70aa94caf7fc238942d240
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145329"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223218"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>建立資料驅動訂閱頁面 (報表管理員)
   您可以使用 [建立資料驅動訂閱] 頁面來建立或修改每次訂閱執行時在訂閱者資料庫中查詢訂閱資訊的訂閱。 資料驅動訂閱會使用查詢結果來判斷訂閱者收件者、傳遞設定和報表參數值。 在執行時期，報表伺服器執行查詢來取得訂閱設定所用的值。 您可以使用 [建立資料驅動訂閱] 頁面來定義查詢並將查詢值指派至訂閱設定。 您為資料驅動訂閱指定的值和選項可分為數個頁面，類似於精靈。 全部總共有七個頁面。  
@@ -29,7 +29,7 @@ ms.locfileid: "36145329"
  此頁面可供具有進階權限的使用者使用。 如果您要使用預設的安全性，資料驅動訂閱就不可以用於 [我的報表] 資料夾中的報表。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -68,7 +68,7 @@ ms.locfileid: "36145329"
 ## <a name="specify-a-connection-page-2"></a>指定連接 (第 2 頁)  
  如果指定共用資料來源，請使用此頁面來選取共用資料來源項目。 您可以使用樹狀目錄控制項來瀏覽和選取項目。 如果您正在為此訂閱定義連接，請使用此頁面來指定下列選項。  
   
- **連接類型**  
+ **連線類型**  
  選擇資料來源使用的資料處理延伸模組。  
   
  **連接字串**  
@@ -113,7 +113,7 @@ ms.locfileid: "36145329"
  指定報表的檔案名稱。 檔案共用傳遞延伸模組會將報表當做靜態應用程式檔案傳遞至共用資料夾。 在大部分情況下，您應該使用資料庫的值來建立檔案名稱。 根據您設定寫入模式的方式而定，使用靜態值將會導致每個新傳遞覆寫先前的傳遞。  
   
  **路徑**  
- 指定可透過網路連接存取的共用資料夾。 若要確認可以存取該資料夾，按一下**執行**[開始] 功能表上，並以此格式輸入資料夾路徑： \\ \\< 電腦名稱\>\\< \\<computername>\\>.  
+ 指定可透過網路連接存取的共用資料夾。 若要確認資料夾是否可存取，請按一下**執行**[開始] 功能表並以下列格式輸入資料夾路徑： \\ \\< 電腦名稱\>\\< sharedfoldername&gt\>.  
   
  **轉譯格式**  
  指定檔案的輸出格式。 報表伺服器可以使用報表伺服器上安裝之轉譯延伸模組的應用程式格式來寫入檔案。  
@@ -144,9 +144,9 @@ ms.locfileid: "36145329"
   
 |選項|以進行此動作|  
 |-----------------|----------------|  
-|**當報表伺服器上更新報表資料時**|如果報表設定為當做執行快照集執行，您就可以指定在重新整理快照集時執行訂閱。|  
+|**在報表伺服器上更新報表資料時**|如果報表設定為當做執行快照集執行，您就可以指定在重新整理快照集時執行訂閱。|  
 |**為此訂用帳戶建立的排程上**|在指定的日期和時間執行訂閱。|  
-|**共用排程上**|使用共用排程提供的排程資訊來執行訂閱。|  
+|**在共用排程上**|使用共用排程提供的排程資訊來執行訂閱。|  
   
 ## <a name="schedule-a-subscription-page-7"></a>排程訂閱 (第 7 頁)  
  若要排程訂閱，您必須指定傳遞報表的頻率。 第一組選項指定頻率的類別 (每小時、每日、每週等)。 顯示的第二組選項以您的初始選擇為基礎。  
@@ -155,7 +155,7 @@ ms.locfileid: "36145329"
  定義以每小時間隔執行的排程。  
   
  **每日**  
- 定義在所指定日期之特定時間執行的排程。 您可以下列方式指定日子： 每個*\<天 >*、 每個工作天和每*\<數字 >* 一天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
+ 定義在所指定日期之特定時間執行的排程。 您可以透過下列方式指定日子： 每隔*\<天 >*、 每個工作天和每*\<數目 >* 天。 選擇一種方式就會使其他方式失效，即使其他日子看似已經選取也一樣。  
   
  **每週**  
  定義在每週間隔的指定時間執行的排程。 此間隔可以是整週 (例如每兩週) 或是其中的日期。  

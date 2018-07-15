@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - full-text search [SQL Server], stemmers
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - word breakers [full-text search]
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 caps.latest.revision: 88
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4c3bfb07ca9730b8c03cb56f07464355c392bda6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 754e9097026fdf1e7a9be5bba6b6115db674a143
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221108"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>設定及管理搜尋的斷詞工具與字幹分析器
   斷詞工具及字幹分析器，會在所有全文檢索索引資料上執行語文分析。 語文分析包括找出文字分界 (斷詞) 以及動詞變化 (字根處理)。 斷詞工具與字幹分析器是語言特有的工具，而且語言分析的規則會因不同的語言而有所差異。 對於給定的語言而言， *「斷詞工具」* (Word Breaker) 會根據語言的語彙規則，判斷文字分界存在的位置，藉以識別個別單字。 每個單字 (也稱為 *Token*) 都會使用壓縮表示來插入全文檢索索引中，以便減少其大小。 *「字幹分析器」* (Stemmer) 會根據該語言的規則來產生特定單字的字形變化 (例如，"running"、"ran" 和 "runner" 是 "run" 單字的不同形態)。  
@@ -44,7 +43,7 @@ ms.locfileid: "36146916"
  如果您加入、移除或更改了斷詞工具，就必須重新整理支援全文檢索索引和查詢的 Microsoft Windows 地區設定識別碼 (LCID) 清單。 如需詳細資訊，請參閱 [檢視或變更已註冊的篩選與斷詞工具](view-or-change-registered-filters-and-word-breakers.md)。  
   
 ##  <a name="default"></a> 設定 Default Full-text Language 選項  
- 當地語系化版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定集`default full-text language`選項設定為伺服器的語言是否有適當的相符項目。 非當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、`default full-text language`選項會是英文。  
+ 如需當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定集`default full-text language`選項設定為伺服器的語言有適當的相符項目。 如需非當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則`default full-text language`選項會是英文。  
   
  建立或更改全文檢索索引時，您可以為每個全文檢索索引資料行指定不同的語言。 若沒有為資料行指定語言，則預設值會是組態選項 `default full-text language` 的值。  
   
@@ -66,12 +65,12 @@ ms.locfileid: "36146916"
     SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;  
     ```  
   
-##  <a name="info"></a> 取得斷詞工具的相關資訊  
+##  <a name="info"></a> 取得有關斷詞工具的資訊  
  **檢視斷詞工具、 同義字和停用字詞表組合的 token 化結果**  
   
 -   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
- **傳回已註冊的斷詞工具的相關資訊**  
+ **若要傳回的已註冊的斷詞工具的相關資訊**  
   
 -   [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql)  
   
@@ -81,7 +80,7 @@ ms.locfileid: "36146916"
 ##  <a name="impact"></a> 了解新斷詞工具的影響  
  每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本一般都會包含新的斷詞工具，其語言規則比舊版斷詞工具更好而且更正確。 新斷詞工具的行為可能會與全文檢索索引內斷詞工具的行為稍有不同，而全文檢索索引是從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入。 如果全文檢索目錄是在將資料庫升級為目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本時匯入，則這點就很明顯。 全文檢索目錄中全文檢索索引所使用的一種或多種語言現在可能會與新的斷詞工具相關聯。 如需詳細資訊，請參閱 [升級全文檢索搜尋](upgrade-full-text-search.md)。  
   
- 如需所有斷詞工具的完整清單，請參閱[sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
+ 如需所有斷詞工具的完整清單，請參閱 < [sys.fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   

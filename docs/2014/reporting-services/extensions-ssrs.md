@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2bb0fdca-1837-49f5-b542-61826bab0b46
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 17b923177aed9583b3757baadce00b6a1aa01038
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d9f51af9131329a37be6772310dd2817e4f62fd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282934"
 ---
 # <a name="extensions-ssrs"></a>延伸模組 (SSRS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 中的報表伺服器會使用延伸模組，以模塊化其接受用於驗證、資料處理、報表轉譯及報表傳遞的輸入或輸出類型。 這可讓現有的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝輕鬆地利用產業中的新軟體標準，例如新驗證結構，或是自訂資料來源類型。 報表伺服器支援自訂驗證延伸模組、資料處理延伸模組、報表處理延伸模組、轉譯延伸模組和傳遞延伸模組，以及在 RSReportServer.config 組態檔中適用於使用者的可設定延伸模組。 例如，您可以限制報表檢視器允許使用的匯出格式。 報表伺服器至少需要一個驗證延伸模組、資料處理延伸模組和轉譯延伸模組。 傳遞與報表處理延伸模組是選擇性的，但是您若要支援報表散發或自訂控制項，則是必要的。  
@@ -59,7 +59,7 @@ ms.locfileid: "36145568"
 ## <a name="rendering-extensions"></a>轉譯延伸模組  
  轉譯延伸模組會將報表處理器的資料與配置資訊轉換成裝置特定格式。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包含七個轉譯延伸模組：HTML、Excel、CSV、XML、Image、PDF 和 [!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
--   **HTML 轉譯延伸模組** ：當您透過網頁瀏覽器向報表伺服器要求報表時，報表伺服器就會使用 HTML 轉譯延伸模組來轉譯報表。 HTML 轉譯延伸模組會使用 UTF-8 編碼來產生所有 HTML。 如需詳細資訊，請參閱[轉譯為 HTML&#40;報表產生器及 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)和[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
+-   **HTML 轉譯延伸模組** ：當您透過網頁瀏覽器向報表伺服器要求報表時，報表伺服器就會使用 HTML 轉譯延伸模組來轉譯報表。 HTML 轉譯延伸模組會使用 UTF-8 編碼來產生所有 HTML。 如需詳細資訊，請參閱 <<c0> [ 轉譯為 HTML&#40;報表產生器及 SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)並[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).</c0>  
   
 -   **Excel 轉譯延伸模組** ：Excel 轉譯延伸模組會轉譯可在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 或更新版本中檢視和修改的報表。 這個轉譯延伸模組會以二進位交換檔案格式 (BIFF) 建立檔案。 BIFF 是 Excel 資料的原生檔案格式。 在 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 中轉譯的報表支援任何試算表的所有可用功能。 如需詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   

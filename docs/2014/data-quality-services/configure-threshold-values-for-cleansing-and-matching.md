@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.admin.config.general.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 19425baf1fcf1f3fef0a4cf630242d8b16a35f9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8aa471d5353221a9d1bca06f36c15ca2b6b258a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293258"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>設定清理和比對的臨界值
   此主題描述如何設定臨界值，該值將會在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的電腦輔助的清理和比對活動期間使用。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], modifying
 - jobs [SQL Server Agent], viewing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - displaying jobs
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 43ceb49e01a2241ea2bd9b75bcf686c68399275b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ad5dffcda091aac4d349e1883eba705abeb92ebb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303168"
 ---
 # <a name="view-or-modify-jobs"></a>檢視或修改作業
   您可檢視您所建立的任何作業。 在執行作業之後，您也可以檢視其記錄。 檢視作業的記錄可讓您了解作業執行的時間、整體作業的狀態，以及作業中每個作業步驟的狀態。 您可以了解作業過去是否曾經失敗、作業最後一次順利完成的時間，以及作業每次執行時所建立的輸出。 無論擁有者是誰， **系統管理員** 固定伺服器角色的成員一律可以檢視或修改作業。  
@@ -55,7 +55,7 @@ ms.locfileid: "36032685"
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
- 如需詳細資訊，請參閱[sp_purge_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_purge_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)。  
   
  **系統管理員** 固定伺服器角色的成員不僅可以檢視所有作業的定義或記錄，也可修改任何作業。  
   

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index online operations [SQL Server]
 - online index operations
 - ONLINE option
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9469a8f0d1129fcab3affc7e44722403c0337072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f4c1fc84f62116dfd5c9c77da0bc8e140bb90931
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244598"
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中線上建立、重建或卸除索引。 在這些索引作業期間，ONLINE 選項可讓並行使用者存取基礎資料表或叢集索引資料，以及任何關聯的非叢集索引。 例如，當某個使用者正在重建叢集索引時，此使用者和其他人可以繼續更新和查詢基礎資料。 當您離線執行資料定義語言 (DDL) 作業 (例如建立或重建叢集索引) 時，這些作業會保有基礎資料和關聯索引的獨佔鎖定。 這可避免在索引作業完成之前對基礎資料進行修改和查詢。  

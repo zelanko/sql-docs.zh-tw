@@ -1,5 +1,5 @@
 ---
-title: 在封裝中使用變數 |Microsoft 文件
+title: 在封裝中使用變數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 81678b498e9c4eca48a0d9de2b5f7070693e7d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b0cc23cf94eef3998e1079a09be5978e4c594ca9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285414"
 ---
 # <a name="use-variables-in-packages"></a>在封裝中使用變數
   變數是 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝之有用的彈性附加項目，可提供在封裝的物件間和父子封裝之間的通訊。 變數還可用於運算式和指令碼。  
@@ -57,7 +57,7 @@ ms.locfileid: "36136445"
   
 ### <a name="to-add-modify-and-delete-user-defined-variables"></a>若要加入、修改和刪除使用者自訂變數  
   
--   [加入、 刪除、 變更封裝中的使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
+-   [新增、刪除、變更套件中使用者定義變數的範圍](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
 -   [設定使用者定義變數的屬性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)  
   

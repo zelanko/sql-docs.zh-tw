@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tasks [Integration Services], precedence constraints
 - control flow [Integration Services], precedence constraints
@@ -20,13 +20,13 @@ ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd1a3a39045330283b12aa74acbce64b1420c6ba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52729044444db0668870cc9878ee3184f17b49b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163039"
 ---
 # <a name="precedence-constraints"></a>優先順序條件約束
   優先順序條件約束可在控制流程中，連結封裝中的可執行檔、容器和工作，並指定判斷可執行檔是否執行的條件。 可執行檔可以是「For 迴圈」容器、「Foreach 迴圈」容器、「時序」容器、工作或事件處理常式。 事件處理常式也可使用優先順序條件約束，以將其可執行檔連結至控制流程。  
@@ -64,7 +64,7 @@ ms.locfileid: "36146569"
   
 -   運算式或條件約束，此條件約束會使用優先順序可執行檔的執行結果或評估運算式的傳回結果。  
   
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具會使用色彩識別優先順序條件約束的類型。 「成功」條件約束為綠色，「失敗」條件約束為紅色，而「完成」條件約束則為藍色。 若要在顯示條件約束類型的 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中顯示文字標籤，則必須設定 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的協助工具功能。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師使用色彩識別優先順序條件約束的類型。 「成功」條件約束為綠色，「失敗」條件約束為紅色，而「完成」條件約束則為藍色。 若要在顯示條件約束類型的 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 中顯示文字標籤，則必須設定 [[!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師] 的協助工具功能。  
   
  運算式必須為有效的 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 運算式，並且它可以包括函數、運算子、系統和自訂變數。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 運算式](../expressions/integration-services-ssis-expressions.md)和 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36146569"
 -   失敗，要求優先順序可執行檔失敗時，才可執行條件約束可執行檔。  
   
 > [!NOTE]  
->  只有成員相同的優先順序條件約束`Precedence Constraint`集合可以組成邏輯的 AND 條件。 例如，您無法結合來自兩個「Foreach 迴圈」容器的優先順序條件約束。  
+>  只有成員相同的優先順序條件約束`Precedence Constraint`集合可以分組邏輯的 AND 條件。 例如，您無法結合來自兩個「Foreach 迴圈」容器的優先順序條件約束。  
   
 ## <a name="configuration-of-the-precedence-constraint"></a>優先順序條件約束的組態  
  您可以透過 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
@@ -92,7 +92,7 @@ ms.locfileid: "36146569"
   
 -   [設定優先順序條件約束的屬性](../set-the-properties-of-a-precedence-constraint.md)  
   
--   [使用快速鍵功能表設定優先順序條件約束的值](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
+-   [使用捷徑功能表來設定優先順序條件約束的值](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)  
   
 -   [使用預設的優先順序條件約束來連接工作和容器](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)  
   

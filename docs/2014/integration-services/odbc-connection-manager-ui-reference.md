@@ -1,5 +1,5 @@
 ---
-title: ODBC 連接管理員 UI 參考 |Microsoft 文件
+title: ODBC 連接管理員 UI 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.odbcconnection.f1
 helpviewer_keywords:
 - Configure ODBC Connection Manager dialog box
 ms.assetid: a596eeaf-68b2-4560-b77d-d2f72ddba926
 caps.latest.revision: 17
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6089763b0c05b22613d0531c0c2f8b944e54d00b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6530fdb788bd00bb117cb56ffdab43c615bd42cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032354"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295108"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>ODBC 連接管理員 UI 參考
   使用 **[設定 ODBC 連接管理員]** 對話方塊，將連接加入 ODBC 資料來源。  

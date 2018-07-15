@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - optimizing tables
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 549ebbb55faa6debf772c654dd3c51fcf6beadf1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0146a68973f7a80c6166e1dd91a0a4852d40f35c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236558"
 ---
 # <a name="optimizing-the-neworg-table"></a>最佳化 NewOrg 資料表
-  **NewOrd**您在中建立資料表[使用現有的階層式資料填入資料表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作包含所有員工資訊，並使用代表階層式結構`hierarchyid`資料型別。 此工作會加入新索引以支援在 `hierarchyid` 資料行上進行搜尋。  
+  **NewOrd**中所建立的資料表[使用現有的階層式資料填入資料表](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md)工作包含所有員工資訊，並使用代表階層結構`hierarchyid`資料類型。 此工作會加入新索引以支援在 `hierarchyid` 資料行上進行搜尋。  
   
 ## <a name="clustered-index"></a>叢集索引  
- `hierarchyid`資料行 (**OrgNode**) 的主索引鍵的**NewOrg**資料表。 建立資料表時，它包含名為 **PK_NewOrg_OrgNode** 的叢集索引以強制 **OrgNode** 資料行的唯一性。 此叢集索引也支援深度優先的資料表搜尋。  
+ `hierarchyid`資料行 (**OrgNode**) 是主索引鍵**NewOrg**資料表。 建立資料表時，它包含名為 **PK_NewOrg_OrgNode** 的叢集索引以強制 **OrgNode** 資料行的唯一性。 此叢集索引也支援深度優先的資料表搜尋。  
   
 ## <a name="nonclustered-index"></a>非叢集索引  
  此步驟會建立兩個非叢集索引來支援一般搜尋。  

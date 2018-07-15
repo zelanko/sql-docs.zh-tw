@@ -1,5 +1,5 @@
 ---
-title: 多維度模型資料存取 (Analysis Services-多維度資料) |Microsoft 文件
+title: 多維度模型資料存取 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, data access interfaces
 - objects [Analysis Services], data access interfaces
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Analysis Services data access interfaces, about data access interfaces
 ms.assetid: 46388efb-3c78-47a2-b5c9-5a69ff394d03
 caps.latest.revision: 46
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac594d938497d90acd87e047aa8370144f8e8ad2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9d979cbe0a870060d8435a4867afbed1667597e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023029"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291724"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>多維度模型資料存取 (Analysis Services - 多維度資料)
   使用本主題中的資訊了解如何使用程式設計方法、指令碼或用戶端應用程式 (其中包含的內建支援可連接至網路上的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器) 存取 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料。  
@@ -73,7 +73,7 @@ ms.locfileid: "36023029"
   
  [使用 MDX 查詢多維度資料](querying-multidimensional-data-with-mdx.md)  
   
- [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
  [MDX 查詢基礎觀念&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   

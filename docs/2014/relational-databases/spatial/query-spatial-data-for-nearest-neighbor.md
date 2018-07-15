@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 46d2c75b69d283d6122255ec9ac4a41c4ccdbc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 361c4e6fe070170163b5e14f1b061467bab96186
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137031"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227134"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>查詢最接近像素的空間資料
   最接近像素查詢是搭配空間資料使用的常見查詢。 最接近像素查詢是用來尋找最接近特定空間物件的空間物件。 例如，網站的商店定位器通常必須尋找最接近客戶位置的商店位置。  
@@ -55,7 +55,7 @@ SELECT TOP ( number )
 ```  
   
 ## <a name="nearest-neighbor-query-and-spatial-indexes"></a>最接近像素查詢和空間索引  
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，`TOP` 及 `ORDER BY` 子句是用來針對空間資料資料行執行最接近像素查詢。 `ORDER BY`子句包含呼叫`STDistance()`空間資料行資料類型的方法。 `TOP`子句會指出要針對查詢傳回的物件數目。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，`TOP` 及 `ORDER BY` 子句是用來針對空間資料資料行執行最接近像素查詢。 `ORDER BY`子句會包含呼叫`STDistance()`空間資料行資料類型的方法。 `TOP`子句會指出要針對查詢傳回的物件數目。  
   
  若要讓最接近像素查詢使用空間索引，您必須符合下列需求：  
   
@@ -65,7 +65,7 @@ SELECT TOP ( number )
   
 3.  `WHERE` 子句必須包含 `STDistance()` 方法。  
   
-4.  如果 `WHERE` 子句中存在多個述詞，則包含 `STDistance()` 方法的述詞就必須透過 `AND` 結合連接至其他述詞。 `STDistance()`方法不能在選擇性部分`WHERE`子句。  
+4.  如果 `WHERE` 子句中存在多個述詞，則包含 `STDistance()` 方法的述詞就必須透過 `AND` 結合連接至其他述詞。 `STDistance()`方法不能在選擇性的一部分`WHERE`子句。  
   
 5.  `ORDER BY` 子句中的第一個運算式必須使用 `STDistance()` 方法。  
   
@@ -105,7 +105,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
 ```  
   
- 這個查詢缺少按照`WHERE`子句使用`STDistance()`語法區段中指定，因此這個查詢無法使用空間索引之格式。  
+ 這個查詢缺少按照`WHERE`子句使用`STDistance()`語法區段中指定，因此這個查詢無法使用空間索引的形式。  
   
 ## <a name="see-also"></a>另請參閱  
  [空間資料 &#40;SQL Server&#41;](spatial-data-sql-server.md)  

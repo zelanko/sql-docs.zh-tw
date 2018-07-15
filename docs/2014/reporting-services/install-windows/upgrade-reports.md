@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], upgrading
 - published reports [Reporting Services], upgrades
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - .rdl files
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 caps.latest.revision: 65
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d3c6611c05fc90afcdbeae689f650bf476b2019b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 1ba06e961245cf1fe9ae5802abc26b575fe7683c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144683"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244508"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
   報表定義 (.rdl) 檔案會藉由下列方式自動升級：  
@@ -41,7 +41,7 @@ ms.locfileid: "36144683"
   
  在本機或報表伺服器上升級報表之後，您可能會發現其他錯誤、警告和訊息。 這是內部報表物件模型的變更和處理元件的結果，造成偵測到報表中的根本問題時出現訊息。 如需詳細資訊，請參閱 [Reporting Services Backward Compatibility](../reporting-services-backward-compatibility.md)。  
   
- 如需有關新功能[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，請參閱[What's New &#40;Reporting Services&#41;](../what-s-new-reporting-services.md)。  
+ 如需有關新功能[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，請參閱 <<c2> [ 的新&#40;Reporting Services&#41;](../what-s-new-reporting-services.md)。</c2>  
   
  本主題內容：  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36144683"
  在初次使用時，報表伺服器會嘗試將現有已發行的報表和報表快照集升級到新的報表定義結構描述，您不需要執行任何特定動作。 當使用者檢視報表或報表快照集，或是報表伺服器處理訂閱時，就會嘗試進行升級。 報表定義不會被取代，而是繼續儲存在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器上的原始結構描述中。 如果無法升級報表，則會使用回溯相容性模式來執行報表。  
   
 ##  <a name="bkmk_backcompat"></a> 回溯相容性模式  
- 已成功升級的報表會由 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表處理器所處理。 無法升級的報表處理的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表處理器在回溯相容性模式。 不能同時使用這兩種報表處理器來處理報表。 初次使用時會成功升級報表，或是將報表標示為可提供回溯相容性。  
+ 已成功升級的報表會由 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表處理器所處理。 會處理無法升級報表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表處理器在回溯相容性模式。 不能同時使用這兩種報表處理器來處理報表。 初次使用時會成功升級報表，或是將報表標示為可提供回溯相容性。  
   
  只有 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 報表器才支援新功能。 如果無法升級報表，您仍然可以檢視轉譯的報表，但是無法使用新的功能。 若要充分利用新的功能，則必須成功升級報表。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36144683"
  如需針對報表伺服器、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或報表識別目前 RDL 命名空間的資訊，請參閱[尋找報表定義結構描述版本 &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md)。  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>升級報表伺服器上的報表  
- 第一次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表已經升級為報表伺服器上執行[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]報表伺服器，報表會自動升級為目前報表伺服器所支援的報表定義命名空間。 報表可能已經存在於之前升級，在報表伺服器上，或者報表可以已經透過報表管理員上傳或發行至報表伺服器從報表設計師中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
+ 第一次[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表會在已升級為報表伺服器執行[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]報表伺服器，報表會自動升級為目前報表伺服器所支援的報表定義命名空間。 報表可能已經存在於報表伺服器之前升級，或報表可能已透過報表管理員上傳或發行至報表伺服器中從報表設計師[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]。  
   
  下表列出報表伺服器針對報表中特定類型的 CRI 所執行的升級動作。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "36144683"
 |具有不支援之功能的 Dundas 2005 量測計 CRI|未執行升級。<br /><br /> 由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表處理器所處理。|  
   
 ###  <a name="OpeningaReport"></a> 使用報表設計師開啟具有 CRI 的報表  
- 當您開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]具有報表設計師中的 Cri [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，報表將會升級為新的報表定義結構描述。 根據報表中所包含的 CRI 而異，將會發生以下其中一個動作：  
+ 當您開啟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]具有報表設計師中的 Cri [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，報表會升級到新的報表定義結構描述。 根據報表中所包含的 CRI 而異，將會發生以下其中一個動作：  
   
 -   偵測到協力廠商 CRI。 如果安裝於報表撰寫電腦上的 CRI 版本與新的 RDL 結構描述不相容，則設計介面會顯示一個有紅色 X 的文字方塊。您必須聯繫系統管理員，才能安裝協力廠商所提供而且與新 RDL 結構描述相容的新版 CRI。  
   
@@ -193,11 +193,11 @@ ms.locfileid: "36144683"
  此報表包含自訂報表項目 (CRI) 與不支援的功能。 CRI 是報表定義語言 (RDL) 的延伸模組，支援在報表中顯示資料的自訂物件。 CRI 包括軟體協力廠商所提供的設計階段和執行階段元件。  
   
 > [!NOTE]  
->  選擇在報表伺服器上支援自訂報表項目是由系統管理員所做的決定。 若要檢視報表中的 CRI，必須在報表撰寫用戶端上安裝 CRI 元件才能預覽報表，並在報表伺服器上檢視已發行或已上傳的報表。 如需詳細資訊，請參閱[自訂報表項目](../custom-report-items/custom-report-items.md)和協力廠商軟體廠商的文件。  
+>  選擇在報表伺服器上支援自訂報表項目是由系統管理員所做的決定。 若要檢視報表中的 CRI，必須在報表撰寫用戶端上安裝 CRI 元件才能預覽報表，並在報表伺服器上檢視已發行或已上傳的報表。 如需詳細資訊，請參閱 <<c0> [ 自訂報表項目](../custom-report-items/custom-report-items.md)和協力廠商軟體廠商的文件。  
   
- 某些 CRI 可以轉換成新報表定義格式的報表項目。 如需可以轉換之 Cri 清單，請參閱[升級報表](upgrade-reports.md)。 利用下列清單，決定是否轉換此報表中的 CRI。  
+ 某些 CRI 可以轉換成新報表定義格式的報表項目。 如需可以轉換的 Cri 清單，請參閱[Upgrading Reports](upgrade-reports.md)。 利用下列清單，決定是否轉換此報表中的 CRI。  
   
--   **是** ：選擇 **[是]** ，在可能的情況下轉換報表中的所有 CRI。 在 CRI 中不支援的功能無法升級，而且會從報表定義檔案中移除。 不支援的功能清單，請參閱[升級報表](upgrade-reports.md)。 檢視報表時，您可能會看到 CRI 在報表中顯示的方式有些差異。  
+-   **是** ：選擇 **[是]** ，在可能的情況下轉換報表中的所有 CRI。 在 CRI 中不支援的功能無法升級，而且會從報表定義檔案中移除。 不支援的功能清單，請參閱[Upgrading Reports](upgrade-reports.md)。 檢視報表時，您可能會看到 CRI 在報表中顯示的方式有些差異。  
   
 -   **否** ：當您不要轉換報表中的 CRI 時，選擇 **[否]** 。 這些 CRI 無法透過報表處理器顯示在其目前的版本中。 如果您的系統管理員打算安裝軟體協力廠商所提供，而且與新報表定義格式相容的新版 CRI，您應該選擇 **[否]**。 在新版本提供之前，CRI 會在報表中顯示為一個有紅色 X 的空文字方塊。  
   

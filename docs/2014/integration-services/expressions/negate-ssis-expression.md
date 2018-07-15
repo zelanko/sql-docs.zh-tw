@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
@@ -16,13 +16,13 @@ ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
 caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6bbdbea2ccc69cbbcf6c35fe14254d2b9e0a4b2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aceb64965279799f8e682b070752b25bec0eb37b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215608"
 ---
 # <a name="--negate-ssis-expression"></a>- (負) (SSIS 運算式)
   執行數值運算式的否定運算。  

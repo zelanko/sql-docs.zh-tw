@@ -1,5 +1,5 @@
 ---
-title: PerspectiveKpi 資料類型 (ASSL) |Microsoft 文件
+title: PerspectiveKpi 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveKpi data type
 ms.assetid: e8d19ec8-70d3-4947-904a-fb81fcac9afd
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e4e6c512b0cab76a87b0d39428bfc570680fa42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca2bc8d765e7ffe5a0111a22d8b2e5977a17f010
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145241"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215918"
 ---
 # <a name="perspectivekpi-data-type-assl"></a>PerspectiveKpi 資料類型 (ASSL)
   定義代表關鍵效能指標 (KPI) 的相關資訊的基本資料類型中[觀點來看](../objects/perspective-element-assl.md)項目。  
@@ -57,11 +57,11 @@ ms.locfileid: "36145241"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [KpiID](../properties/id-element-assl.md)|  
-|衍生的元素|[Kpi](../objects/kpi-element-assl.md) ([Kpi](../collections/kpis-element-assl.md)集合[觀點來看](../objects/perspective-element-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [KpiID](../properties/id-element-assl.md)|  
+|衍生的元素|[Kpi](../objects/kpi-element-assl.md) ([Kpi](../collections/kpis-element-assl.md)的集合[觀點來看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveKpi>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveKpi>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: FeatureSet 元素 (DTA) |Microsoft 文件
+title: FeatureSet 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1a3da0184ab2cbb6c94d94429dc4e9640a597fe3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb596ca38310bce4b9be6f1061952ebc2756fc73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145524"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226508"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
   包含在分析期間，Database Engine Tuning Advisor 所要使用的實體設計結構 (索引或索引檢視)。  

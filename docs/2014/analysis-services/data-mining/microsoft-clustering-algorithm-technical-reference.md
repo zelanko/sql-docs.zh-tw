@@ -1,5 +1,5 @@
 ---
-title: Microsoft 群集演算法技術參考 |Microsoft 文件
+title: Microsoft 群集演算法技術參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -24,22 +24,22 @@ helpviewer_keywords:
 - CLUSTER_COUNT parameter
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b217484efbaf10356005187eb494065299f7ba07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1d3ff592e05d2d8ee0b7e055a095de736d61902
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306598"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft 群集演算法技術參考
   本節說明 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 叢集演算法的實作，包括可用來控制群集模型行為的參數。 本章節也提供在建立及處理叢集模型時如何改善效能的指南。  
   
  如需有關如何使用叢集模型的詳細資訊，請參閱下列主題：  
   
--   [群集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [叢集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [群集模型查詢範例](clustering-model-query-examples.md)  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36023019"
   
 |ID|方法|  
 |--------|------------|  
-|@shouldalert|可擴充的 EM|  
+|1|可擴充的 EM|  
 |2|不可擴充的 EM (Non-scalable EM)|  
 |3|可擴充的 K-means|  
 |4|不可擴充的 K-means|  
@@ -184,7 +184,7 @@ ms.locfileid: "36023019"
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft 群集演算法](microsoft-clustering-algorithm.md)   
- [群集模型查詢範例](clustering-model-query-examples.md)   
- [群集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [叢集模型查詢範例](clustering-model-query-examples.md)   
+ [叢集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

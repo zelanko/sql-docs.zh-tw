@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpoints
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0951aafb5c60d27c85002fee17401160b0791eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 659859db2a967f3d849329c986f76a20eec5bcb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137035"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238698"
 ---
 # <a name="breakpoints-window"></a>中斷點視窗
   [中斷點] 視窗會列出目前 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中設定的所有中斷點。 若要管理中斷點，請使用 [中斷點] 視窗內的工具列。 中斷點是偵錯模式下暫停執行的程式碼位置，好讓您可以檢視偵錯資料。  

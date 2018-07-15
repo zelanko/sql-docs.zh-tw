@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef7fbe1be575d2f9e3d1c5d63e6d5c6bb57601e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eac21ed54a9a66d8e4ca0fe4dbee13fd5c0984b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146782"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209488"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>如何編輯 CDC 執行個體屬性
   此程序描述如何使用 CDC 設計工具主控台來編輯 CDC 執行個體的組態屬性。  

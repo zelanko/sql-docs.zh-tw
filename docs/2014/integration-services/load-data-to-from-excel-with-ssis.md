@@ -1,11 +1,11 @@
 ---
 title: 使用 SSIS 從 Excel 匯入或匯出至 Excel | Microsoft Docs
-description: 了解如何匯入或匯出 Excel 的資料與 SQL Server Integration Services (SSIS)，以及必要條件、 已知的問題和限制。
+description: 了解如何使用 SQL Server Integration Services (SSIS) 匯入或匯出 Excel 資料，以及必要條件、已知問題和限制。
 ms.date: 04/10/2018
-ms.prod: sql
+ms.prod: sql-server-2014
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
+ms.suite: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d028e3aa679e91ca15f3a738f948b127517c112f
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 88615f87b31b1c95cd9afc9dc8d915df2995267c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197528"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], GETUTCDATE
 - current date
@@ -18,13 +18,13 @@ ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 091063acbaea65d155e578ff6a4c21c95d941a39
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbca67b78be052e50e5e554be194f2fea440b3de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296818"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS 運算式)
   使用 DT_DBTIMESTAMP 格式，傳回 UTC 時間格式 (世界標準時間或格林威治標準時間) 的系統目前日期。 GETUTCDATE 函數不接受引數。  

@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 多維度的全球化案例 |Microsoft 文件
+title: Analysis Services 多維度的全球化案例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple language support [Analysis Services]
 - languages [Analysis Services]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d45b44c6536a7fc95543bebdbc9468c61fdf75b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c8aeb19e6773b3f772ae0a62e7d72f647ee365e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146850"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185395"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多維度的全球化案例
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 儲存及操作多國語言資料和表格式和多維度資料模型中的中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
@@ -42,13 +42,13 @@ ms.locfileid: "36146850"
   
      標題和屬性成員可以翻譯表示 (僅限多維度模型)。 您可以定義一個或多個翻譯，然後再使用地區設定識別碼來決定要傳回用戶端的翻譯。 如需詳細資訊，請參閱下面的 [功能](#bkmk_features) 。  
   
--   錯誤、 警告和參考用訊息，從傳回[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]引擎 (msmdsrv) 會當地語系化成 Office 和 Office 365 支援的 43 種語言。 取得特定語言的訊息不需要進行設定。 用戶端應用程式的地區設定會決定要傳回的字串。  
+-   錯誤、 警告和參考用訊息，從傳回[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]引擎 (msmdsrv) 已當地語系化為 Office 和 Office 365 所支援的 43 種語言。 取得特定語言的訊息不需要進行設定。 用戶端應用程式的地區設定會決定要傳回的字串。  
   
 -   組態檔 (msmdsrv.ini) 和 AMO PowerShell 只有英文版。  
   
 -   記錄檔會包含英文和當地語系化訊息的混合 (假設您在 Analysis Services 執行所在的 Windows Server 上已安裝語言套件)。  
   
--   [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 與 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]等文件與工具已翻譯成下列語言：簡體中文、繁體中文、法文、德文、義大利文、日文、韓文、葡萄牙文 (巴西)、俄文與西班牙文。 若要使用特定語言版本的工具，安裝 SQL Server 的特定語言版本 （例如，安裝德文版的 SQL Server Management Studio 取得德文） 或執行獨立安裝程式以目標語言[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]。  
+-   [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 與 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]等文件與工具已翻譯成下列語言：簡體中文、繁體中文、法文、德文、義大利文、日文、韓文、葡萄牙文 (巴西)、俄文與西班牙文。 若要使用的特定語言版本的工具，安裝 SQL Server 的特定語言版本 （例如，安裝德文版的 SQL Server 以取得德文的 Management Studio） 或執行的獨立安裝程式，以目標語言[!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)]。  
   
  Analysis Services 可讓您在整個物件階層中獨立設定語言、定序和翻譯。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36146850"
   
  在用戶端層級，全球化應用程式使用或操作[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]多維度資料可以使用中的多語系和多重文化功能[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]:  
   
--   [翻譯&#40;Analysis Services&#41; ](translations-analysis-services.md)可用來內嵌多個標題單一物件，其中每個翻譯的字串可以其他翻譯並存。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，為 Cube、量值、維度和屬性，定義標題、描述和帳戶類型的翻譯。 連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體時，您可以提供地區設定識別碼，從已定義翻譯的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件中擷取資料和中繼資料。  
+-   [翻譯&#40;Analysis Services&#41; ](translations-analysis-services.md)用來內嵌多個標題的單一物件，其中每個翻譯的字串可以其他翻譯並存。 您可以使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]，為 Cube、量值、維度和屬性，定義標題、描述和帳戶類型的翻譯。 連接到 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體時，您可以提供地區設定識別碼，從已定義翻譯的 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件中擷取資料和中繼資料。  
   
      您可以在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程的[第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)中，找到如何使用這項功能的課程。  
   
--   [貨幣轉換&#40;Analysis Services&#41; ](currency-conversions-analysis-services.md)是透過特製化的 MDX 指令碼，來轉換含有貨幣資料的量值。 您可以使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的 [商業智慧精靈] 來產生 MDX 指令碼，該指令碼使用維度、屬性和量值群組中的資料和中繼資料組合，來轉換含有貨幣資料的量值。  
+-   [貨幣轉換&#40;Analysis Services&#41; ](currency-conversions-analysis-services.md)是透過特製化轉換含有貨幣資料的量值的 MDX 指令碼。 您可以使用 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] 中的 [商業智慧精靈] 來產生 MDX 指令碼，該指令碼使用維度、屬性和量值群組中的資料和中繼資料組合，來轉換含有貨幣資料的量值。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -82,6 +82,6 @@ ms.locfileid: "36146850"
  [Windows 應用程式的國際化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
  [Go Global 開發人員中心](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [使用地區設定為基礎的自動調整設計撰寫 Windows 市集應用程式](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [開發通用 Windows 應用程式與 C# 和 XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [開發通用 Windows 應用程式使用 C# 和 XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

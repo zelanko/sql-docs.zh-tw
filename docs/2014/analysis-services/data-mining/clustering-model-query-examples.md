@@ -1,5 +1,5 @@
 ---
-title: 叢集模型查詢範例 |Microsoft 文件
+title: 叢集模型查詢範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [Data Mining]
 - content queries [DMX]
 - clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cee82332d6098544df5db02a223efc23b19d8820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6420e75c9961a094691a7be05e6e2b26fad45933
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200628"
 ---
 # <a name="clustering-model-query-examples"></a>叢集模型查詢範例
   當您根據資料採礦模型建立查詢時，可以擷取有關模型的中繼資料或建立內容查詢，以提供有關在分析中所發現之模式的詳細資料。 或者，您可以建立預測查詢，這會使用模型中的模式對新資料進行預測。 每種查詢都會提供不同的資訊。 例如，內容查詢可能會提供有關所找到群集的詳細資料，預測查詢則會告訴您最可能包含新資料點的群集。  
@@ -167,13 +167,13 @@ WHERE NODE_TYPE = 5
 |NODE_NAME|T.ATTRIBUTE_VALUE|T.PROBABILITY|  
 |----------------|------------------------|-------------------|  
 |001|2|0.829207754|  
-|001|@shouldalert|0.109354156|  
+|001|1|0.109354156|  
 |001|3|0.034481552|  
 |001|4|0.013503302|  
 |001|0|0.013453236|  
 |001|Missing|0|  
 |002|0|0.576980023|  
-|002|@shouldalert|0.406623939|  
+|002|1|0.406623939|  
 |002|2|0.016380082|  
 |002|3|1.60E-05|  
 |002|4|0|  
@@ -261,7 +261,7 @@ WHERE IsInNode('001')
  [回頁首](#bkmk_top2)  
   
 ###  <a name="bkmk_Query8"></a> 範例查詢 8：叢集模型的預測結果  
- 如果您建立的叢集模型包含可預測屬性，則您可以使用模型來建立有關結果的預測。 然而，模型會以不同的方式視您是否設定可預測資料行與可預測屬性的處理`Predict`或`PredictOnly`。 如果您設定的資料行的使用方式`Predict`，該屬性的值加入至群集模型，而且會顯示為完成的模型中的屬性。 不過，如果將資料行的使用方式設定為 `PredictOnly`，則值不會用來建立群集。 相反地，在模式完成後，群集演算法建立新的值`PredictOnly`屬性會根據每個案例所屬的群集。  
+ 如果您建立的叢集模型包含可預測屬性，則您可以使用模型來建立有關結果的預測。 不過，模型會以不同的方式是根據可預測資料行設定為可預測屬性的處理`Predict`或`PredictOnly`。 如果您要的資料行使用方式設定`Predict`，該屬性的值加入至群集模型，並顯示為完成的模型中的屬性。 不過，如果將資料行的使用方式設定為 `PredictOnly`，則值不會用來建立群集。 相反地，在模式完成後，群集演算法建立新的值`PredictOnly`屬性會根據每個案例所屬的叢集。  
   
  下列查詢會為模型提供單一的新案例，其中與案例有關的唯一資訊是年齡和性別。 SELECT 陳述式指定您有興趣的可預測屬性/值配對，而 [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) 函數則告訴您具有這些屬性的案例擁有目標結果的機率。  
   
@@ -275,19 +275,19 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- 使用方式設定為時的結果範例`Predict`:  
+ 使用設定時的結果範例`Predict`:  
   
 |Bike Buyer|運算式|  
 |----------------|----------------|  
-|@shouldalert|0.592924735740338|  
+|1|0.592924735740338|  
   
  當使用方式設定為 `PredictOnly` 並重新處理模型時的結果範例：  
   
 |Bike Buyer|運算式|  
 |----------------|----------------|  
-|@shouldalert|0.55843544003102|  
+|1|0.55843544003102|  
   
- 在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。 [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
+ 在此範例中，模型中的差異並不大。 不過，有時候偵測值的實際散發和模型所預測的情況之間的差異可能很重要。  [PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx) 函數在此案例中很有用，因為它會告訴您在模型已知時的案例可能性。  
   
  PredictCaseLikelihood 函數傳回的數字是機率，因此一定會介於 0 和 1 之間，.5 的值則代表隨機結果。 因此，小於 .5 的分數代表預測的案例在模型已知時不太可能發生，而超過 .5 的分數則代表預測的案例較符合模型的預測。  
   
@@ -332,7 +332,7 @@ NATURAL PREDICTION JOIN
 |--------------|----------------|  
 |群集 2|0.397918596951617|  
   
- **請注意**根據預設，`ClusterProbability`函式會傳回最可能群集的機率。 不過，您可以使用 `ClusterProbability('cluster name')`語法來指定不同的叢集。 如果要這麼做，請注意每個預測函數的結果都與其他結果無關。 因此，第二個資料行中的機率分數所參考的群集可以與命名於第一個資料行中的群集不同。  
+ **附註**根據預設，`ClusterProbability`函式會傳回最可能之群集的機率。 不過，您可以使用 `ClusterProbability('cluster name')`語法來指定不同的叢集。 如果要這麼做，請注意每個預測函數的結果都與其他結果無關。 因此，第二個資料行中的機率分數所參考的群集可以與命名於第一個資料行中的群集不同。  
   
  [回頁首](#bkmk_top2)  
   
@@ -360,7 +360,7 @@ NATURAL PREDICTION JOIN
 |叢集 7|0.979081275926724|0.0209187240732763|  
 |叢集 1|0.999169044818624|0.000830955181376364|  
 |叢集 9|0.999831227795894|0.000168772204105754|  
-|叢集 8|@shouldalert|0|  
+|叢集 8|1|0|  
   
  根據預設值，結果是依機率排序。 結果會告訴您，即使 Cluster 2 的機率相當低，Cluster 2 仍是新資料點的最適合項目。  
   
@@ -380,11 +380,11 @@ NATURAL PREDICTION JOIN
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
+|[[Predictassociation] &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
 |[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|傳回輸入案例符合現有模型的可能性。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回與目前預測值相關之值的資料表。|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
+|[[Predictprobability] &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回指定之資料行的預測標準差。|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回指定之資料行的變異數。|  

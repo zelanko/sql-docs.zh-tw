@@ -1,5 +1,5 @@
 ---
-title: RequiresRestart 元素 (ASSL) |Microsoft 文件
+title: RequiresRestart 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cde3c22439c06e254191a2a732e7030fab36cc7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023607"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295418"
 ---
 # <a name="requiresrestart-element-assl"></a>RequiresRestart 元素 (ASSL)
-  包含相關聯的唯讀值[ServerProperty](../objects/serverproperty-element-assl.md)項目可決定是否變更伺服器屬性的值需要執行個體，重新啟動，變更才會生效。  
+  包含唯讀的值，與相關聯[ServerProperty](../objects/serverproperty-element-assl.md)可決定是否變更伺服器屬性的值才會生效的變更重新啟動執行個體需要的項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36023607"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`RequiresRestart`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ServerProperty>。  
+ 對應至父系的元素`RequiresRestart`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ServerProperty>。  
   
 ## <a name="see-also"></a>另請參閱  
  [ServerProperties 元素&#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [Server 元素&#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [伺服器項目&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

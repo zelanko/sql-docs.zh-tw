@@ -1,5 +1,5 @@
 ---
-title: 使用 PowerPivot 圖庫 |Microsoft 文件
+title: 使用 PowerPivot 圖庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17ae0f4d1c8fea1e5e320ea0131575c01bf44008
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321258"
 ---
 # <a name="use-powerpivot-gallery"></a>使用 PowerPivot 圖庫
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫是一種特殊用途的 SharePoint 文件庫，針對包含 PowerPivot 資料的已發行 Excel 活頁簿和 Reporting Services 報表，提供豐富的預覽與文件管理功能。  
@@ -55,7 +55,7 @@ ms.locfileid: "36023017"
 > 若要變更預設檢視，請按一下 [程式庫]  索引標籤，然後按一下 [修改檢視]。 按一下 [設定為預設檢視]，然後按一下 [確定] 以儲存預設檢視。  
 >  如需 Edge 支援項目的詳細資訊，請參閱 Windows 部落格 [揮別以往，第 2 部分：和 ActiveX、VBScript... 說再見](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
   
- 如需必要條件的完整清單，請參閱[Create and Customize PowerPivot](create-and-customize-power-pivot-gallery.md)。  
+ 如必要條件的完整清單，請參閱 <<c0> [ 建立及自訂 PowerPivot 圖庫](create-and-customize-power-pivot-gallery.md)。  
   
 ##  <a name="icons"></a> PowerPivot 圖庫中的圖示  
  圖示會提供有關內容可用性和狀態的視覺指標。  
@@ -127,7 +127,7 @@ ms.locfileid: "36023017"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|按一下 [管理資料重新整理] 按鈕以建立或檢視排程，從連接的資料來源擷取更新的資料。 如需有關如何建立排程的指示，請參閱[排程資料重新整理&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)。|  
+|![GMNI_btn_NewDataRefreshReportGallery](../media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|按一下 [管理資料重新整理] 按鈕以建立或檢視排程，從連接的資料來源擷取更新的資料。 如需有關如何建立排程的指示，請參閱 <<c0> [ 排程資料重新整理&#40;PowerPivot for SharePoint&#41;](../schedule-a-data-refresh-powerpivot-for-sharepoint.md)。</c0>|  
   
 ##  <a name="delete"></a> 刪除活頁簿或 PowerPivot 圖庫中的報表  
  若要從文件庫中刪除文件，請先切換至 [所有文件] 檢視。  

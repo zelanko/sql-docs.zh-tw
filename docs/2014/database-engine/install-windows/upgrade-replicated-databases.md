@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
 - replication [SQL Server], upgrading
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58c7b1de8c75c9cb5d9f57e1df498921de16a6d7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ce7d9e9a67a11e7df2d2322e2c3c9bda17f3d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233808"
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級複寫資料庫。升級節點時，不需要停止其他節點上的活動。 請確定您遵守有關拓撲中支援之版本的規則：  
@@ -84,7 +84,7 @@ ms.locfileid: "36145454"
  在使用合併式複寫的拓撲中升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後，如果您想要使用新功能，請變更任何發行集的發行集相容性層級。  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>升級至 Standard、Workgroup 或 Express Edition  
- 從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一個版本升級到另一個版本之前，請確認您目前使用的功能在您想要升級後的版本中受到支援。 如需詳細資訊，請參閱的章節中的複寫[支援的 SQL Server 2014 的版本功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 從 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的一個版本升級到另一個版本之前，請確認您目前使用的功能在您想要升級後的版本中受到支援。 如需詳細資訊，請參閱一節中的複寫上[支援的 SQL Server 2014 的版本功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="web-synchronization-for-merge-replication"></a>合併式複寫的 Web 同步處理  
  合併式複寫的 Web 同步處理選項要求，必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication Listener (replisapi.dll) 複製到用於同步處理之 Internet Information Services (IIS) 伺服器上的虛擬目錄。 當您設定 Web 同步處理時，「設定 Web 同步處理精靈」會將檔案複製到虛擬目錄。 如果您升級安裝在 IIS 伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，就必須將 replisapi.dll 從 COM 目錄手動複製到 IIS 伺服器上的虛擬目錄。 如需設定 Web 同步處理的詳細資訊，請參閱 [設定 Web 同步處理](../../../2014/relational-databases/replication/configure-web-synchronization.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 選項 （設計人員維護計畫頁面） |Microsoft 文件
+title: 選項 （設計工具-維護計畫頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.MaintenancePlans
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8ab6ddd2d43d7055d458ac475ed5eb775b61c5b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4bacbb1b5b4ef708055affe400b12ac9604dbabc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249518"
 ---
-# <a name="options-designers-maintenance-plans-page"></a>選項 （設計人員維護計畫頁面）
+# <a name="options-designers-maintenance-plans-page"></a>選項 （設計工具-維護計畫頁面）
   使用 [選項] 對話方塊以決定將新形狀新增至設計介面時，設計工具的預設行為。 在 [工具] 功能表上按一下 [選項]，展開 [設計工具]，然後選取 [維護計畫]。  
   
 ## <a name="uielement-list"></a>UIElement 清單  

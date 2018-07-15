@@ -1,5 +1,5 @@
 ---
-title: 檢視或變更資料和記錄檔 (SQL Server Management Studio) 的預設位置 |Microsoft 文件
+title: 檢視或變更預設位置，資料和記錄檔 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], changing default location
 - data files [SQL Server], changing default location
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 46bab09c5115781d85fdb3e7c8fc73e6428322fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b62c6264686efe2b117ca755fc291c784308fe9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032386"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320778"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files-sql-server-management-studio"></a>檢視或變更資料及記錄檔的預設位置 (SQL Server Management Studio)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中檢視及變更新資料和記錄檔的預設位置。 預設路徑是從登錄取得。 在變更位置之後，如果未指定不同的位置， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中建立的所有新資料庫都會使用該位置。  
@@ -33,7 +33,7 @@ ms.locfileid: "36032386"
   
      [建議](#Recommendations)  
   
--   **若要檢視或變更資料和記錄檔的預設位置，使用：**  
+-   **若要檢視或變更資料和記錄檔的預設位置使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   

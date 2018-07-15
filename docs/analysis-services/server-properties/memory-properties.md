@@ -1,5 +1,5 @@
 ---
-title: 記憶體屬性 |Microsoft 文件
+title: 記憶體屬性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,27 +9,27 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 57a40130b9cf8ddf2b2f9d3c43d464436a0f4730
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
-ms.translationtype: MT
+ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239113"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854350"
 ---
 # <a name="memory-properties"></a>記憶體屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] preallocates 數量較少的記憶體，在啟動時，以便可以立即處理要求。 隨著查詢和處理工作負載的增加，會配置額外的記憶體。 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會預先配置適度在啟動時的記憶體數量，以便立即處理要求。 隨著查詢和處理工作負載的增加，會配置額外的記憶體。 
   
   指定組態設定，即可控制釋放記憶體的臨界值。 例如， **HardMemoryLimit** 設定可指定自行強加的記憶體不足狀況 (依預設，未啟用此臨界值)；其中，變得需要更多資源時，就會立即拒絕新的要求。
 
-若要深入了解最大記憶體過低的每個 Analysis Services 執行個體的版本，請參閱[版本和支援的 SQL Server 功能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)。
+若要深入了解使用每個 Analysis Services 執行個體版本的最大記憶體，請參閱[版本及支援的功能的 SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)。
   
- 除非另有說明否則下列設定會套用這兩種表格式和多維度伺服器模式。  
+ 除非另有指示，下列設定會套用至這兩個表格式和多維度伺服器模式。  
  
 ## <a name="default-memory-configuration"></a>預設記憶體組態
 
-根據預設設定，每個 Analysis Services 執行個體配置少量的 RAM (40 MB 到 50 MB) 在啟動時，即使執行個體已閒置。 
+根據預設設定，每個 Analysis Services 執行個體配置少量 RAM (40 MB 到 50 MB) 在啟動時，即使執行個體處於閒置狀態。 
 
 請記住，預設組態是根據執行個體而定。 如果您是在相同硬體上執行多個 Analysis Services 執行個體 (例如表格式和多維度執行個體)，則每個執行個體都會配置它自己的記憶體，而這與其他執行個體無關。
 
@@ -49,16 +49,16 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
  1 - 100 之間的值代表 **實體記憶體總計** 或 **虛擬位址空間**的百分比，以較少者為準。 超過 100 的值代表記憶體限制 (位元組)。
   
  **LowMemoryLimit**  
- 帶正負號的 64 位元雙精確度浮點數屬性，定義第一個 Analysis Services 開始釋放低優先權的物件，例如不常使用的快取記憶體的閾值。 配置記憶體之後，伺服器就不會在低於此限制時釋出記憶體。 預設值 65，表示記憶體下限為實體記憶體或虛擬位址空間的 65%，以較少者為準。  
+ 帶正負號的 64 位元雙精確度浮點數屬性，定義 Analysis Services 開始釋出記憶體供低優先順序的物件，例如不常使用的快取的第一個臨界值。 配置記憶體之後，伺服器就不會在低於此限制時釋出記憶體。 預設值 65，表示記憶體下限為實體記憶體或虛擬位址空間的 65%，以較少者為準。  
   
  **TotalMemoryLimit**  
  定義臨界值，並在達到此臨界值時，讓伺服器取消配置記憶體，以清出空間供其他要求使用。 達到此限制時，執行個體將會開始關閉到期的工作階段並卸載未使用的計算，藉以緩慢地將記憶體清出快取。 預設值 80% 的實體記憶體或虛擬位址空間的 65%，以較少者為準。 **TotalMemoryLimit**永遠必須小於**HardMemoryLimit**  
   
  **HardMemoryLimit**  
- 指定記憶體閾值，超過此閥值後，執行個體會積極地終止使用中的使用者工作階段以減少記憶體的使用量。 所有終止的工作階段都會收到錯誤記憶體不足的壓力會取消。 預設值零 (0)，代表 **HardMemoryLimit** 會設定為 **TotalMemoryLimit** 和系統總實體記憶體之間的中間值；若系統的實體記憶體大於處理序的虛擬位址空間，則會改用虛擬位址空間來計算 **HardMemoryLimit**。  
+ 指定記憶體閾值，超過此閥值後，執行個體會積極地終止使用中的使用者工作階段以減少記憶體的使用量。 所有終止的工作階段都會收到關於記憶體不足的壓力所取消的錯誤。 預設值零 (0)，代表 **HardMemoryLimit** 會設定為 **TotalMemoryLimit** 和系統總實體記憶體之間的中間值；若系統的實體記憶體大於處理序的虛擬位址空間，則會改用虛擬位址空間來計算 **HardMemoryLimit**。  
 
 **QueryMemoryLimit**   
-僅 azure Analysis Services。 進階的屬性來控制在查詢期間的暫存結果可以使用的記憶體數量。 僅適用於 DAX 量值和查詢。 針對多維度模式伺服器的 MDX 查詢不會使用這項限制。 它並不考慮查詢所使用的一般記憶體配置。 指定以百分比表示。 0 指定無限制，則表示預設值。
+只有 azure Analysis Services。 進階的屬性，即可控制多少記憶體可供暫存結果查詢期間。 僅適用於 DAX 量值和查詢。 多維度模式伺服器的 MDX 查詢不會使用這項限制。 它並不考慮查詢所使用的一般記憶體配置。 在指定的百分比。 0 指定無限制，則表示預設值。
 
  **VirtualMemoryLimit**  
   此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
@@ -75,7 +75,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
   
 設為 1 時，處理比較不可能因為記憶體限制而失敗，因為伺服器將會嘗試使用您指定的方法，在磁碟中分頁。 設定 **VertiPaqPagingPolicy** 屬性並不能保證記憶體錯誤永遠不會發生。 在下列狀況下，記憶體不足錯誤仍然可能發生：  
   
--   記憶體不足以供所有字典使用。 在處理期間，伺服器，請鎖定在記憶體中的每個資料行字典，所有這些字典不可大於指定的值**VertiPaqMemoryLimit**。  
+-   記憶體不足以供所有字典使用。 在處理期間，伺服器，請鎖定記憶體中的每個資料行字典，所有這些字典不可大於指定的值**VertiPaqMemoryLimit**。  
   
 -   虛擬位址空間不足以容納處理序。  
   
@@ -95,7 +95,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
 **-1** | (預設值) Automatic。 引擎將決定要使用哪一個。
 **1** | Analysis Services 堆積。
 **2** | Windows LFH。
-**5** | 混合式配置器。 此配置器會使用針對 Windows LFH \<= 16 KB 的配置和 AS 堆積 > 16 KB 的配置。 
+**5** | 混合式配置器。 此配置器會使用針對 Windows LFH \<= 16KB 的配置和 AS 堆積針對 > 16KB 的配置。 
 **6** | Intel TBB 配置器。 適用於 SQL Server 2016 SP1 (和更新版) Analysis Services 中。
   
   
@@ -104,6 +104,7 @@ HardMemoryLimit | Analysis Services 因記憶體壓力而立即開始拒絕要�
   
    設定 | 描述
 --------|------------
+**-1** | (預設值) Automatic。 引擎將決定要使用哪一個。
 **0** | Windows LFH 堆積。
 **1** | Analysis Services 位置配置器。
 **3** | 每個物件都有自己的 Analysis Services 堆積。

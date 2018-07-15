@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.file.close.f1
 - VS.SaveChangesDlg
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: be1e2b2c16a6f8902aa704be47395a8de7b6df46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2710f0e979f5ffff86ad6c5877a53c2714b791cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146651"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216428"
 ---
 # <a name="save-changes"></a>儲存變更
   警告您除非按一下 [是]，否則不會儲存所列出之項目的變更。  

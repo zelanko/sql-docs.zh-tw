@@ -1,5 +1,5 @@
 ---
-title: 瀏覽類神經網路模型 |Microsoft 文件
+title: 瀏覽類神經網路模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
 - mining models, viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - dependency network
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1eecb17419c6b0f89f9049bf7d9269b2d1ec32c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ddfa179c57082eec38e14f0693cd707922f0812a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136514"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286364"
 ---
 # <a name="browsing-a-neural-network-model"></a>瀏覽類神經網路模型
   當您使用 [瀏覽] 開啟類神經網路或羅吉斯迴歸模型時，該模型會在類似於 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 類神經網路檢視器的互動式檢視器中顯示。 此檢視器可協助您探索相互關聯，以及取得有關模型和基礎資料之模式的資訊。  
@@ -46,7 +46,7 @@ ms.locfileid: "36136514"
   
  在判斷客戶比較可能屬於自行車購買者類別目錄或非購買者類別目錄時，您可以使用此檢視器來探索最重要的因數。  
   
- ![測試對選取屬性結果的影響](media/dm13-neuralnet-agebuyer1.gif "測試對選取屬性結果的影響")  
+ ![測試結果的已選取的屬性會影響](media/dm13-neuralnet-agebuyer1.gif "測試對選取屬性結果的影響")  
   
 ##### <a name="explore-variables"></a>探索變數  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36136514"
   
      就 Income 而言，此資料行已經細分為群組，例如 78.4-154.06 (代表最高收入範圍)。  
   
-     ![若要檢視如何變數分類收納排序](media/dm13-nn-bucketing-variables.gif "排序以檢視如何變數分類收納")  
+     ![若要檢視如何變數分類收納的排序](media/dm13-nn-bucketing-variables.gif "排序以檢視如何變數分類收納")  
   
      如果您想要不同的群組，就應該使用[重定標籤 &#40;SQL Server 資料採礦增益集&#41;](relabel-sql-server-data-mining-add-ins.md) 工具或 Excel 函數來建立新的收入類別目錄，然後再建立模型。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36136514"
   
 1.  假設您想要鎖定特定群組，並且查看最能影響該群組之購買行為的因數。  
   
-     在**輸入**] 窗格中，按一下 [ **\<所有 >** 下儲存格**屬性**，然後選取**年齡**。  
+     在**輸入**窗格中，按一下**\<所有 >** 下儲存格**屬性**，然後選取**年齡**。  
   
      針對 [值]，選取最年輕的年齡類別目錄。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36136514"
   
      例如，針對輸入屬性，新增 [性別]，並且選取 [女性] 作為值。  
   
-     ![測試對選取屬性結果的影響](media/dm13-neuralnet-agebuyer2.gif "測試對選取屬性結果的影響")  
+     ![測試結果的已選取的屬性會影響](media/dm13-neuralnet-agebuyer2.gif "測試對選取屬性結果的影響")  
   
      請注意變數的清單如何變更。 現在，[收入] 是預測目標結果的最重要變數。  
   

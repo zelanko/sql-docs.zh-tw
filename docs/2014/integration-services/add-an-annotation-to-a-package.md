@@ -1,5 +1,5 @@
 ---
-title: 將註解加入封裝 |Microsoft 文件
+title: 將註解加入封裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - self-documenting packages
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 8db31e78-e03b-44e6-a307-a1349f52b0c6
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aff98d1a1c3124f7847232dbe421927c12d41578
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4ac793b4292a5e614f8f9cc8b68a44d824fe2ae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310298"
 ---
 # <a name="add-an-annotation-to-a-package"></a>將註解加入封裝
   此程序描述如何將註解加入封裝。  

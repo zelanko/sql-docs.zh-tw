@@ -1,5 +1,5 @@
 ---
-title: 採礦模型的篩選 (Analysis Services-資料採礦) |Microsoft 文件
+title: 採礦模型的篩選 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: feefadeab6d4cde4a202b767223939edac63106f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312708"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>採礦模型的篩選 (Analysis Services - 資料採礦)
   以資料為基礎的模型篩選可協助您建立使用採礦結構中之資料子集的採礦模型。 當您設計採礦結構和資料來源時，篩選可提供彈性，因為您可以根據完整的資料來源檢視來建立單一採礦結構。 然後，您可以建立篩選來單獨使用其中一部分資料進行各種模型的定型和測試，而非針對每個資料子集建立不同的結構和相關模型。  
@@ -54,7 +54,7 @@ ms.locfileid: "36034069"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>使用資料採礦設計師來建立模型篩選  
  您可以變更採礦模型的 `Filter` 屬性，藉以在資料採礦設計師中篩選模型。 您可以直接在 **[屬性]** 窗格中輸入篩選運算式，也可以開啟篩選對話方塊來建立條件。  
   
- 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以連結多個條件使用`AND` / `OR`運算子。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，包含連續值，您可以使用`greater than`和`less than`運算子。 不過，如果包含離散值，您就只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 運算子。  
+ 目前提供了兩個篩選對話方塊。 第一個對話方塊可讓您建立套用至案例資料表的條件。 如果資料來源包含多份資料表，您首先要選取一份資料表，然後選取資料行並指定套用至該資料行的運算子與條件。 您可以使用來連結多個條件`AND` / `OR`運算子。 可用來定義值的運算子會因資料行包含離散值或連續值而不同。 例如，包含連續值，您可以使用`greater than`和`less than`運算子。 不過，如果包含離散值，您就只能使用 `= (equal to)`、`!= (not equal to)` 和 `is null` 運算子。  
   
 > [!NOTE]  
 >  `LIKE`不支援關鍵字。 如果您想要加入多個離散屬性，就必須建立不同的條件，然後使用 `OR` 運算子來連結它們。  
@@ -66,7 +66,7 @@ ms.locfileid: "36034069"
   
  例如，如果您的案例資料表與客戶有關，而且巢狀資料表顯示某位客戶已經購買的產品，您就可以在巢狀資料表篩選中使用下列語法，藉以針對已經購買特定項目的客戶建立篩選： `[ProductName]=’Water Bottle’ OR ProductName=’Water Bottle Cage'`。  
   
- 您也可以篩選巢狀資料表中的特定值是否存在使用`EXISTS`或`NOT EXISTS`關鍵字和子查詢。 這可讓您建立 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`等條件。 如果巢狀資料表至少有一個資料列包含 `EXISTS SELECT(<subquery>)` 值，`Water Bottle` 就會傳回 `true`。  
+ 您也可以篩選巢狀資料表中的特定值是否存在利用`EXISTS`或`NOT EXISTS`關鍵字和子查詢。 這可讓您建立 `EXISTS (SELECT * FROM Products WHERE ProductName=’Water Bottle’)`等條件。 如果巢狀資料表至少有一個資料列包含 `EXISTS SELECT(<subquery>)` 值，`Water Bottle` 就會傳回 `true`。  
   
  您可以結合案例資料表的條件與巢狀資料表的條件。 例如，下列語法包含案例資料表的條件 (`Age > 30` )、巢狀資料表的子查詢 (`EXISTS (SELECT * FROM Products)`)，以及巢狀資料表的多項條件 (`WHERE ProductName=’Milk’  AND Quantity>2`) )。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36034069"
 -   將已排除的值摺疊到類別目錄中，當做採礦結構定義的一部分。  
   
 ## <a name="related-resources"></a>相關資源  
- 如需有關篩選語法和範例篩選條件運算式的詳細資訊，請參閱[模型篩選語法和範例&#40;Analysis Services-Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)。  
+ 如需有關篩選語法和範例篩選條件運算式的詳細資訊，請參閱 <<c0> [ 模型篩選語法和範例&#40;Analysis Services-Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)。</c0>  
   
  如需在測試採礦模型時如何使用模型篩選的資訊，請參閱 [Choose an Accuracy Chart Type and Set Chart Options](choose-an-accuracy-chart-type-and-set-chart-options.md)(選擇精確度圖表類型及設定圖表選項)。  
   

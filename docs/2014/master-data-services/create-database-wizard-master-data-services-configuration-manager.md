@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createdbwiz.f1
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef3d71e52b29895111378ad26973f819bcf14076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c020e8c27a7e4e2e7d22eb5a89308ddab5b8112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296688"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>建立資料庫精靈 (Master Data Services 組態管理員)
   使用 [建立資料庫精靈] 可建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫。  
@@ -50,7 +50,7 @@ ms.locfileid: "36031668"
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
-|**使用者名稱**|指定網域使用者帳戶作為[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系統管理員。 所有[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]此資料庫，此使用者相關聯的 Web 應用程式可以更新所有模型和所有功能區域中的所有資料。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。|  
+|**使用者名稱**|指定網域使用者帳戶是[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系統管理員。 所有[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]與此資料庫，此使用者相關聯的 Web 應用程式可以更新所有模型和所有功能區域中的所有資料。 如需詳細資訊，請參閱 [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md) (管理員 (Master Data Services))。|  
   
 ## <a name="summary"></a>摘要  
  顯示選取之選項的摘要。 檢閱您的選擇，然後按一下 [下一步]，開始使用指定的設定建立資料庫。  
@@ -60,7 +60,7 @@ ms.locfileid: "36031668"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫組態頁面 &#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [設定 Master Data Services 資料庫與網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [資料庫需求&#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

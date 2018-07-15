@@ -1,5 +1,5 @@
 ---
-title: 線性迴歸模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 線性迴歸模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linear regression algorithms [Analysis Services]
 - mining model content, linear regression models
 - regression algorithms [Analysis Services]
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 09285ab4c675417c2d00be13cfee771bd31d8faa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 289c9a68e6abce019324945cafd9baed544802a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198248"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線性迴歸模型的採礦模型內容 (Analysis Services - 資料採礦)
-  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法的模型專用的採礦模型內容。 採礦模型內容的所有模型類型的一般說明，請參閱[採礦模型內容&#40;Analysis Services-資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
+  本主題描述使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法的模型專用的採礦模型內容。 所有模型類型採礦模型內容的一般說明，請參閱 <<c0> [ 採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)。</c0>  
   
 ## <a name="understanding-the-structure-of-a-linear-regression-model"></a>了解線性迴歸模型的結構  
  線性迴歸模型的結構相當簡單。 每個模型都擁有代表模型及其中繼資料的單一父節點，以及包含每個可預測屬性之迴歸公式的迴歸樹模式 (NODE_TYPE = 25)。  
@@ -40,7 +40,7 @@ ms.locfileid: "36146860"
 ## <a name="model-content-for-a-linear-regression-model"></a>線性迴歸模型的模型內容  
  本節僅針對採礦模型內容中與線性迴歸具有特定相關的資料行，提供詳細資料和範例。  
   
- 結構描述資料列集中一般用途資料行的相關資訊，請參閱[採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)。  
+ 如需結構描述資料列集中一般用途資料行資訊，請參閱[採礦模型內容&#40;Analysis Services-Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)。  
   
  MODEL_CATALOG  
  模型儲存位置所在資料庫的名稱。  
@@ -154,7 +154,7 @@ ms.locfileid: "36146860"
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 |Age|471.687717702463|0|0|126.969442359327|7|  
 |Age|234.680904692439|0|0|0|8|  

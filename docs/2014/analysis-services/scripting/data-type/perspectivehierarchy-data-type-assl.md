@@ -1,5 +1,5 @@
 ---
-title: PerspectiveHierarchy 資料類型 (ASSL) |Microsoft 文件
+title: PerspectiveHierarchy 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveHierarchy data type
 ms.assetid: 30366bd0-ee1c-4940-8c1f-ca5e0dd5fe4b
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dddceea6ee82d02ef1a68953bd16d6fc728537ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 134b49fe8aa942dee63feae717a1ff1aa89a06dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208058"
 ---
 # <a name="perspectivehierarchy-data-type-assl"></a>PerspectiveHierarchy 資料類型 (ASSL)
   定義代表某個階層中之相關資訊的基本資料類型[PerspectiveDimension](dimension-data-type-assl.md)項目。  
@@ -57,11 +57,11 @@ ms.locfileid: "36146832"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [HierarchyID](../properties/id-element-assl.md)|  
-|衍生的元素|[階層](../objects/hierarchy-element-assl.md)([階層](../collections/hierarchies-element-assl.md)集合[PerspectiveDimension](dimension-data-type-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [HierarchyID](../properties/id-element-assl.md)|  
+|衍生的元素|[階層](../objects/hierarchy-element-assl.md)([階層](../collections/hierarchies-element-assl.md)的集合[PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveHierarchy>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveHierarchy>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

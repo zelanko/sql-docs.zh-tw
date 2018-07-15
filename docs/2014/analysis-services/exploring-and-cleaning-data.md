@@ -1,5 +1,5 @@
 ---
-title: 瀏覽和清除資料 |Microsoft 文件
+title: 瀏覽和清除資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c39eaa58152fd1a75eeaefdc79bae93ccd36b98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0200bb66afa6728f3bd5587774dc9f80fb10c5fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304718"
 ---
 # <a name="exploring-and-cleaning-data"></a>瀏覽和清除資料
   資料準備不只是進行資料清理而已。 務必記得，準備資料的方式也會影響最後解譯結果的方式。 資料準備包含下列工作：  
@@ -36,13 +36,13 @@ ms.locfileid: "36023245"
   
 -   視需要轉換資料類型或將值分類以進行分析。  
   
- 如果您不熟悉資料模型化，我們建議您閱讀相關的主題: <<c0> [ 檢查清單的資料採礦準備](checklist-of-preparation-for-data-mining.md)。  
+ 如果您不熟悉資料模型化，我們建議您閱讀相關的主題: <<c0> [ 檢查清單的 Preparation for Data Mining](checklist-of-preparation-for-data-mining.md)。  
   
 ## <a name="data-preparation-tools"></a>資料準備工具  
  適用於 Office 的資料採礦增益集包括了可用於資料清理和準備的以下工具：  
   
 ### <a name="explore-data"></a>瀏覽資料  
- 使用**瀏覽資料**精靈進行這些資料準備工作：  
+ 使用**瀏覽資料**精靈來進行以下這些資料準備工作：  
   
 -   預覽資料並識別出必須在分析之前修正的錯誤。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36023245"
  [瀏覽資料&#40;SQL Server 資料採礦增益集&#41;](explore-data-sql-server-data-mining-add-ins.md)。  
   
 ### <a name="detect-and-handle-outliers"></a>偵測及處理極端值  
- **極端值**精靈圖形中值分佈的資料，並幫助您移除極端值。 使用**極端值**工具進行下列資料準備工作：  
+ **極端值**精靈圖形資料中值的分佈，並幫助您移除極端值。 使用**極端值**工具進行下列的資料準備工作：  
   
 -   根據在資料中找到的模式來判斷個別值是否可靠。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36023245"
   
 -   您可以建立代表數量範圍的群組，來分類收納資料。  
   
-     比方說，您可能想要收入 資料行的數字取代標籤例如**收入 – 中度**和**收入-高**。  
+     比方說，您可能想要這類取代標籤的數字 [收入] 資料行**收入-中度**並**收入-高**。  
   
 -   將離散值摺疊成類別目錄。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36023245"
 ### <a name="sample-data"></a>取樣資料  
  取樣資料精靈提供兩種方法，可用來建立定型模型和測試模型的對稱資料集。  
   
--   **隨機取樣。** 使用這個選項即可從較大資料集擷取代表性資料集，以用於定型或測試。 資料採礦增益集使用*分層取樣*以確保組平衡的值取得每個取樣的變數。  
+-   **隨機取樣。** 使用這個選項即可從較大資料集擷取代表性資料集，以用於定型或測試。 使用資料採礦增益集*分層取樣*以確保，就會為每個取樣的變數取得一組平衡的值。  
   
 -   **超取樣。** 當您的資料比目標結果所需的資料少，而必須提高資料的加權時，請使用這個選項。 例如，詐欺可能相當罕見，不過您可以超取樣與詐欺相關的案例，為模型取得足夠的資料。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36023245"
   
 ## <a name="see-also"></a>另請參閱  
  [建立資料採礦模型](creating-a-data-mining-model.md)   
- [驗證模型及使用模型進行預測&#40;資料採礦 excel 增益集&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
- [部署及調整採礦模型&#40;資料採礦 excel 增益集&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
+ [驗證模型及使用模型進行預測&#40;資料採礦適用於 Excel 的增益集&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
+ [部署及調整採礦模型&#40;資料採礦適用於 Excel 的增益集&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  
   
   

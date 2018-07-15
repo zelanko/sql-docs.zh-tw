@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - restore sequences [SQL Server], planning for
 - full recovery model [SQL Server], planning restore sequences
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e442efddac21794f200d48267b1e6c4e25301830
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0e697caee867c78da3c9e3e02bf6e2ee149a6a7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146087"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209218"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>規劃和執行還原順序 (完整復原模式)
   此主題說明如何針對一般使用完整復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，規劃及執行還原順序。 「還原順序」是一或多個 [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) 陳述式的順序。 還原順序通常會初始化所還原之資料庫、檔案及/或頁面的內容 (資料複製階段)、向前復原記錄的交易 (重做階段)，再回復未認可的交易 (恢復階段)。  

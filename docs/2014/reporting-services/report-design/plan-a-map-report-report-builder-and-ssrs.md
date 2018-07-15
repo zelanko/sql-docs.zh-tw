@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 025d087a662fbf641d60e42314a7116df4632bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031808"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309418"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>規劃地圖報表 (報表產生器及 SSRS)
   良好的報表會呈現具備行動力或洞察能力的資訊。 若要針對地理背景呈現分析資料 (例如銷售總計或人口統計)，您可以將地圖加入至報表中。 一個地圖可以包含多個圖層，而每個圖層都會顯示由特定類型之空間資料所定義的地圖元素：表示位置的點、表示路線的線條，或表示區域的多邊形。 您可以讓您的分析資料與每個圖層上的地圖元素產生關聯。  
@@ -168,6 +168,6 @@ ms.locfileid: "36031808"
  [自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [教學課程：地圖報表 &#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [報表疑難排解： 地圖報表&#40;報表產生器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

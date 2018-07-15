@@ -3,31 +3,29 @@ title: 重新編譯預存程序 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sp_recompile
 - WITH RECOMPILE clause
 - recompiling stored procedures
 - stored procedures [SQL Server], recompiling
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
-caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0b535169d3a0c8db074b5c582777517f743588d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 73fffe17fac4c26ca8c9951306d4a7e3c489bcd3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172139"
 ---
 # <a name="recompile-a-stored-procedure"></a>重新編譯預存程序
-  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。 若要這樣做的三種方式：`WITH RECOMPILE`選項程序定義中，或呼叫程序時，`RECOMPILE`個別陳述式，或使用查詢提示`sp_recompile`系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 重新編譯 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的預存程序。 若要這樣做的三種方式：`WITH RECOMPILE`選項中的程序定義，或呼叫程序時，`RECOMPILE`查詢提示，在個別的陳述式，或使用`sp_recompile`系統預存程序。 本主題描述在建立程序定義及執行現有程序時使用 WITH RECOMPILE 選項。 另外還會描述使用 sp_recompile 系統預存程序重新編譯現有的程序。  
   
  **本主題內容**  
   

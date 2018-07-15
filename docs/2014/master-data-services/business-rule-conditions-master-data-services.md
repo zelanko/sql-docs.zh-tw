@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ad203a50e5ec274b0445b260d24a03fc32ff33eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1cc49e0138d71fcbb59e995bd69a9baf12ae655c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316018"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>商務規則條件 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，商務規則條件會確定條件必須為 true，才可以採取一個或多個動作。  

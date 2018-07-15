@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
 - "10403"
@@ -20,15 +20,15 @@ f1_keywords:
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c6e738ae473636e3fdd0c9d7efa1512a6b5b68f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ba8d34b6f56bec66ce2fc1a8f0d4024e4a45493
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256347"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>篩選、分組和排序資料 (報表產生器及 SSRS)
   在報表中，運算式可用於協助您控制、組織和排序報表資料。 依預設，在您建立資料集與設計報表配置時，報表項目的屬性會依據資料集欄位、參數和 [報表資料] 窗格中出現的其他項目，自動設定為運算式。 您也可以將互動式排序按鈕加入至資料表或矩陣資料格，讓使用者以互動方式變更群組或群組內資料列的資料列排序順序。  
@@ -45,9 +45,9 @@ ms.locfileid: "36145559"
   
  如需詳細資訊和範例，請參閱下列主題：  
   
--   [群組運算式範例&#40;報表產生器和 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [群組運算式範例&#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
--   [篩選方程式範例&#40;報表產生器和 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [篩選方程式範例&#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36145559"
   
  如果可能，請建立只會傳回需要顯示在報表中之資料的資料集查詢。 您可透過減少必須擷取和處理的資料量，協助增進報表效能。 如需詳細資訊，請參閱 [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)。  
   
- 從外部資料來源擷取資料之後，您可以將篩選加入至資料集、資料區和資料區群組，包括詳細資料群組。 篩選會在執行階段先套用至資料集、套用至資料區，然後套用至群組 (按照群組階層的由上而下順序)。 在資料表、矩陣或清單中，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表中，系統會針對類別目錄群組和數列群組獨立套用篩選。 如需詳細資訊，請參閱[加入資料集篩選、 資料區域篩選和群組篩選&#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。  
+ 從外部資料來源擷取資料之後，您可以將篩選加入至資料集、資料區和資料區群組，包括詳細資料群組。 篩選會在執行階段先套用至資料集、套用至資料區，然後套用至群組 (按照群組階層的由上而下順序)。 在資料表、矩陣或清單中，系統會針對資料列群組、資料行群組和相鄰群組獨立套用篩選。 在圖表中，系統會針對類別目錄群組和數列群組獨立套用篩選。 如需詳細資訊，請參閱 <<c0> [ 新增資料集篩選、 資料區域篩選和群組篩選&#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)。</c0>  
   
  針對每個篩選，您會指定一個 *「篩選方程式」*(Filter Equation)。 篩選方程式包含一個指定所要篩選之資料的資料集欄位或運算式、一個運算子和一個要比較的值。 在處理項目時，只會包含符合篩選條件的資料值。  
   
@@ -101,10 +101,10 @@ ms.locfileid: "36145559"
 ### <a name="defining-group-variables"></a>定義群組變數  
  當您定義群組時，可以建立群組變數，以便在以群組為範圍並可從巢狀群組存取的運算式中使用。 群組變數會針對每個群組執行個體計算一次，而且可以從子群組中的運算式存取。 例如，如果資料是依區域和子區域分組，您可以計算每個區域的稅額，並在子區域群組的計算中使用該稅額。  
   
- 如需詳細資訊，請參閱[報表和群組變數集合參考&#40;報表產生器及 SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md)和[Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 報表和群組變數集合參考&#40;報表產生器及 SSRS&#41; ](built-in-collections-report-and-group-variables-references-report-builder.md)並[Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。</c0>  
   
 ### <a name="groups-and-scope-in-data-regions"></a>資料區中的群組和範圍  
- 您可以為每個資料區指定相同的群組運算式，以提供相同資料集內資料的多個檢視。 例如，您可以顯示分類資料，以在資料表中顯示所有詳細資料，並在圖形圖中顯示彙總，同時協助您以相對於整個資料集的方式視覺化每個類別目錄。 如需詳細資訊，請參閱[至相同的資料集連結多個資料區域&#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。  
+ 您可以為每個資料區指定相同的群組運算式，以提供相同資料集內資料的多個檢視。 例如，您可以顯示分類資料，以在資料表中顯示所有詳細資料，並在圖形圖中顯示彙總，同時協助您以相對於整個資料集的方式視覺化每個類別目錄。 如需詳細資訊，請參閱 <<c0> [ 多個資料區連結至相同的資料集&#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)。</c0>  
   
  當您在資料表、矩陣或清單的資料格中建立巢狀資料區時，您會自動將資料的範圍設定成該資料格的最內層群組成員資格。 例如，假設您將圖表加入到同時位於資料列群組和資料行群組的資料格中。 可用於該圖表的資料範圍在執行階段便為最內層的資料列群組執行個體與最內層的資料行群組執行個體。 如需詳細資訊，請參閱 [總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36145559"
 ### <a name="sorting-data-in-a-dataset-query"></a>排序資料集查詢中的資料  
  將資料集查詢中的排序次序加入到預先排序資料，然後再針對報表進行擷取。 透過排序查詢中的資料，排序工作將由資料來源而非報表處理器完成。  
   
- 如[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源類型，您可以將 ORDER BY 子句加入至資料集查詢。 例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢會從 SalesOrders 資料表，以遞減的順序排序 Sales 和 Region by Sales 資料行：`SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。 如需詳細資訊，請參閱《 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=98335)》中的＜使用 ORDER BY 排序資料列＞。  
+ 針對[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源類型，您可以加入資料集查詢中的 ORDER BY 子句。 例如，下列 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢會從 SalesOrders 資料表，以遞減的順序排序 Sales 和 Region by Sales 資料行：`SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`。 如需詳細資訊，請參閱《 [SQL Server 線上叢書](http://go.microsoft.com/fwlink/?linkid=98335)》中的＜使用 ORDER BY 排序資料列＞。  
   
 > [!NOTE]  
 >  並非所有資料來源都支援在查詢中指定排序次序的能力。  
@@ -175,43 +175,43 @@ FROM Production.Product
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
 ##  <a name="HowTo"></a> 如何主題  
- [報表中捲動時保持標題可見&#40;報表產生器和 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+ [標頭保持可見的報表中捲動時&#40;報表產生器及 SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
- [顯示頁首和頁尾與群組&#40;報表產生器和 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [顯示頁首和頁尾與群組&#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [將互動式排序加入至資料表或矩陣&#40;報表產生器和 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
+ [將互動式排序加入資料表或矩陣&#40;報表產生器及 SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [資料區域中設定沒有資料的訊息&#40;報表產生器和 SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [資料區域中設定沒有資料的訊息&#40;報表產生器及 SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [建立遞迴階層群組&#40;報表產生器和 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [建立遞迴階層群組&#40;報表產生器及 SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
- [加入或刪除資料區域中的群組&#40;報表產生器和 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
+ [加入或刪除資料區域中的群組&#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
- [顯示頁首和頁尾與群組&#40;報表產生器和 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
+ [顯示頁首和頁尾與群組&#40;報表產生器及 SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
- [加入或刪除圖表中的群組&#40;報表產生器和 SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
+ [加入或刪除圖表中的群組&#40;報表產生器及 SSRS&#41;](add-or-delete-a-group-in-a-chart-report-builder-and-ssrs.md)  
   
- [將總計加入到群組或 Tablix 資料區&#40;報表產生器和 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
+ [將總計加入到群組或 Tablix 資料區域&#40;報表產生器及 SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> 本節內容  
- [群組運算式範例&#40;報表產生器和 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [群組運算式範例&#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
- [篩選方程式範例&#40;報表產生器和 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [篩選方程式範例&#40;報表產生器及 SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
- [加入資料集篩選，資料區域篩選和群組篩選&#40;報表產生器和 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
+ [新增資料集篩選、 資料區域篩選和群組篩選&#40;報表產生器及 SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
 ##  <a name="Related"></a> 相關章節  
- [了解群組&#40;報表產生器和 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
+ [了解群組&#40;報表產生器及 SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
- [建立遞迴階層群組&#40;報表產生器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
+ [建立遞迴階層群組&#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
- [報表和群組變數集合參考&#40;報表產生器和 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [報表和群組變數集合參考&#40;報表產生器及 SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [包含多個資料範圍的數列顯示在圖表上&#40;報表產生器和 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
+ [包含多個資料範圍的數列顯示在圖表上&#40;報表產生器及 SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
   
- [將多個資料區域連結至相同的資料集&#40;報表產生器和 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ [將多個資料區域連結至相同的資料集&#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
@@ -219,7 +219,7 @@ FROM Production.Product
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [走勢圖和資料橫條 &#40;報表產生器及 SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [量測計&#40;報表產生器和 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
+ [量測計&#40;報表產生器及 SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [指標 &#40;報表產生器及 SSRS&#41;](indicators-report-builder-and-ssrs.md)  
   
   

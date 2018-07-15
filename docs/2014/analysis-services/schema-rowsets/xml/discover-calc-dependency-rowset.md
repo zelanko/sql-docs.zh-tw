@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_CALC_DEPENDENCY 資料列集 |Microsoft 文件
+title: DISCOVER_CALC_DEPENDENCY 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fff5a7975d19ca53ea9cca780f792a2d5c6057e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297238"
 ---
 # <a name="discovercalcdependency-rowset"></a>DISCOVER_CALC_DEPENDENCY 資料列集
   報告計算之間的相依性和這些計算中所參考的物件。 您可以在用戶端應用程式中使用此資訊，針對複雜公式的問題進行報告，或在相關物件遭到刪除或修改時發出警告。 您還可以使用資料列集來擷取量值或導出資料行中使用的 DAX 運算式。  
@@ -34,8 +34,8 @@ ms.locfileid: "36033784"
   
 |資料行名稱|類型指標|限制|描述|  
 |-----------------|--------------------|-----------------|-----------------|  
-|`DATABASE_NAME`|`DBTYPE_WSTR`|是|指定包含要求其相依性分析之物件的資料庫名稱。 如果省略，就會使用目前的資料庫。<br /><br /> `DISCOVER_DEPENDENCY_CALC`資料列集可能會限制使用此資料行。|  
-|`OBJECT_TYPE`|`DBTYPE_WSTR`|是|表示要求其相依性分析之物件的類型。 物件必須是下列其中一種類型：<br /><br /> -   `ACTIVE_RELATIONSHIP`： 作用中的關聯性<br />-   `CALC_COLUMN`： 導出資料行<br />-   `HIERARCHY`： 階層<br />-   `MEASURE`： 量值<br />-   `RELATIONSHIP`： 關聯性<br />-   `KPI`: KPI （關鍵效能指標）<br /><br /> `DISCOVER_DEPENDENCY_CALC`資料列集可能會限制使用此資料行。|  
+|`DATABASE_NAME`|`DBTYPE_WSTR`|是|指定包含要求其相依性分析之物件的資料庫名稱。 如果省略，就會使用目前的資料庫。<br /><br /> `DISCOVER_DEPENDENCY_CALC`使用此資料行也可以限制資料列集。|  
+|`OBJECT_TYPE`|`DBTYPE_WSTR`|是|表示要求其相依性分析之物件的類型。 物件必須是下列其中一種類型：<br /><br /> -   `ACTIVE_RELATIONSHIP`： 作用中的關聯性<br />-   `CALC_COLUMN`： 導出資料行<br />-   `HIERARCHY`： 階層<br />-   `MEASURE`： 量值<br />-   `RELATIONSHIP`： 關聯性<br />-   `KPI`: KPI （關鍵效能指標）<br /><br /> `DISCOVER_DEPENDENCY_CALC`使用此資料行也可以限制資料列集。|  
 |`QUERY`|`DBTYPE_WSTR`|是|如果是在 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 中建立的表格式模型，您可以包含 DAX 查詢或運算式，以顯示該查詢或運算式的相依性圖表。 QUERY 限制會提供用戶端應用程式一個方式來判斷 DAX 查詢使用哪些物件。<br /><br /> `QUERY` 限制可以在 XMLA 或 DMV 查詢的 WHERE 子句中指定。 如需詳細資訊，請參閱＜範例＞一節。|  
 |`TABLE`|`DBTYPE_WSTR`||包含產生其相依性資訊之物件的資料表名稱。|  
 |`OBJECT`|`DBTYPE_WSTR`||產生其相依性資訊之物件的名稱。 如果物件是量值或導出資料行，請使用量值的名稱。 如果物件是關聯性，則是包含參與關聯性之資料行的資料表 (或 Cube 維度) 名稱。|  
@@ -91,7 +91,7 @@ SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE OBJECT_TYPE = 'MEASURE' OR 
  第一個查詢會針對包含空格的物件名稱示範如何指定 QUERY 限制。 取自 [經由 OLE DB 和 ADOMD.NET 執行 DAX 查詢](http://go.microsoft.com/fwlink/?LinkId=254329)的第二個查詢是比較複雜的查詢，其中包含多個資料表的物件。  
   
 > [!NOTE]  
->  雖然查詢似乎使用雙引號，但實際上只使用單引號。 有一對單引號括住 ' Evaluate\<表格名稱 >'，而且需要成對使用加以逸出單引號括住資料表名稱使用。 只有包含空格的資料表名稱才需要資料表名稱周圍的單引號。  
+>  雖然查詢似乎使用雙引號，但實際上只使用單引號。 一對單引號括住 ' Evaluate\<資料表名稱 >'，而且需要成對使用加以逸出單引號括住資料表名稱使用。 只有包含空格的資料表名稱才需要資料表名稱周圍的單引號。  
   
 ```  
 SELECT * From $SYSTEM.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE ''Reseller Sales'''  
@@ -123,13 +123,13 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd46-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|DependencyGraph|  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 結構描述資料列集](../analysis-services-schema-rowsets.md)   
- [使用動態管理檢視&#40;Dmv&#41;監視 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用動態管理檢視&#40;Dmv&#41;若要監視 Analysis Services](../../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 caps.latest.revision: 5
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 41681e604a7346f7b675e86692a8809b9417b7ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c51fd3286fe45ca6a8ead6bc269ad0f85c6e9dfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206758"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>設定編輯器 (SQL Server Management Studio)
   您可以設定各個 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 編輯器的選項，以自訂其作業。  

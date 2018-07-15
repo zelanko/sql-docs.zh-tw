@@ -1,5 +1,5 @@
 ---
-title: 啟用維度回寫 |Microsoft 文件
+title: 啟用維度回寫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
 - writeback [Analysis Services], setting up
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a05010b2f102170b64df13e4eb079dde8fbe325
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e7ee13d4fdfa021e050c4357dc8796289a3cd4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247428"
 ---
 # <a name="enable-dimension-writeback"></a>[啟用維度回寫]
   加入維度回寫增強功能至 Cube 或維度，以允許使用者手動修改維度結構和成員。 可寫入維度的更新會直接記錄在維度資料表中。 這項增強功能會變更維度的 `WriteEnabled` 屬性設定。  
@@ -45,7 +45,7 @@ ms.locfileid: "36145059"
  在精靈的第二個 [啟用維度回寫] 頁面上，您可實際設定 [在維度中啟用回寫] 選項。 選取此選項會自動設定`WriteEnabled`屬性的維度`True`。 清除此選項會自動將屬性設定為`False`。  
   
 ## <a name="remarks"></a>備註  
- 建立新的成員時，您必須包含維度中的每個屬性。 您不能插入成員時不指定維度之索引鍵屬性的值。 因此，建立成員時要受到維度資料表上之已定義的任何條件約束 (例如非 Null 索引鍵值)。 您也應該考慮依維度內容，選擇性地指定資料行，例如資料行中指定`CustomRollupColumn`，`CustomRollupPropertiesColumn`或`UnaryOperatorColumn`維度屬性。  
+ 建立新的成員時，您必須包含維度中的每個屬性。 您不能插入成員時不指定維度之索引鍵屬性的值。 因此，建立成員時要受到維度資料表上之已定義的任何條件約束 (例如非 Null 索引鍵值)。 您也應該考慮以維度屬性選擇性指定的資料行，例如資料行中指定`CustomRollupColumn`，`CustomRollupPropertiesColumn`或`UnaryOperatorColumn`維度屬性。  
   
 > [!WARNING]  
 >  如果您使用 SQL Azure 做為執行回寫至 Analysis Services 資料庫中的資料來源，作業會失敗。 這是設計所限，因為預設不會開啟可啟用 Multiple Active Result Sets (MARS) 的提供者選項。  

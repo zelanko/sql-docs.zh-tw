@@ -1,5 +1,5 @@
 ---
-title: 探索伺服器狀態事件類別目錄 |Microsoft 文件
+title: 探索伺服器狀態事件類別目錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Discover Server State event category
 - server state events [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - event classes [Analysis Services], discover server state
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1e1ae268d3263fb672a8d0bda85b23774aca4ad2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c55d16650e9ef04ae951a9eb0d7f60fbc6c472a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197848"
 ---
 # <a name="discover-server-state-event-category"></a>探索伺服器狀態事件類別目錄
   探索伺服器狀態事件類別目錄具有下表所描述的事件類別。  

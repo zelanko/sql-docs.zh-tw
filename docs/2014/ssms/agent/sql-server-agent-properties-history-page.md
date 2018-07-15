@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.agent.history.f1
 ms.assetid: dc73734c-b3c3-407f-bbd1-8714b4fa47b0
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e882745886a3a9a2c2575461d96d24355e2139bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 117f58bb418f5fa4239d811885abe1be9ea58d50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032458"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311258"
 ---
 # <a name="sql-server-agent-properties-history-page"></a>SQL Server Agent 屬性 (記錄頁面)
   使用此頁面來檢視和修改管理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務記錄的設定。  

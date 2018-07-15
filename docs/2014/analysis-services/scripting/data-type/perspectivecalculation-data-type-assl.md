@@ -1,5 +1,5 @@
 ---
-title: PerspectiveCalculation 資料類型 (ASSL) |Microsoft 文件
+title: PerspectiveCalculation 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveCalculation data type
 ms.assetid: 5a5173d2-c96d-4a55-a35c-0cbfd5b0e599
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1214bc349c09f02f522569b26dd48e82d5e42b99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bec56d06fe2e2957f9409a43be3502b4e0196427
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147041"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185145"
 ---
 # <a name="perspectivecalculation-data-type-assl"></a>PerspectiveCalculation 資料類型 (ASSL)
   定義代表計算之間的關聯性的基本資料類型和[觀點來看](../objects/perspective-element-assl.md)項目。  
@@ -58,11 +58,11 @@ ms.locfileid: "36147041"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)，[名稱](../properties/name-element-assl.md)，[類型](../properties/type-element-perspectivecalculation-assl.md)|  
-|衍生的元素|[計算](../objects/calculation-element-assl.md)([計算](../collections/calculations-element-assl.md)集合[觀點來看](../objects/perspective-element-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)，[名稱](../properties/name-element-assl.md)，[類型](../properties/type-element-perspectivecalculation-assl.md)|  
+|衍生的元素|[計算](../objects/calculation-element-assl.md)([計算](../collections/calculations-element-assl.md)的集合[觀點來看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveCalculation>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveCalculation>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -1,5 +1,5 @@
 ---
-title: 遠端處理 (Analysis Services) |Microsoft 文件
+title: 遠端處理 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e89e3be5679f9e4152eed81ee77d4a5e6bc89628
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eddc902acb9d3e1d2339f9d8efe2c62a9c07ad54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274144"
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
   您可以執行遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的排程處理或自動處理，其只會處理某電腦所發出的要求，但會在同一網路中的另一部電腦上執行。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
 -   您的每部電腦上若各自執行不同版本的 SQL Server，則用戶端程式庫的版本與處理此模型之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的版本必須相符。 例如，若處理在 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 執行個體上進行，則發出要求的電腦便須擁有和 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]相同的用戶端程式庫。 請參閱[用於 Analysis Services 連接的資料提供者](../instances/data-providers-used-for-analysis-services-connections.md)。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36144623"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 元件](../../ssms/agent/sql-server-agent.md#Components)   
  [使用 SQL Server Agent 排程 SSAS 管理工作](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [批次處理&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [批次方式處理&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)   
  [處理物件&#40;XMLA&#41;](../xmla/xml-elements-objects.md)  
   

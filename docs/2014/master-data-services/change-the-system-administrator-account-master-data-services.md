@@ -1,5 +1,5 @@
 ---
-title: 變更系統管理員帳戶 (Master Data Services) |Microsoft 文件
+title: 變更系統管理員帳戶 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a0e9a79120b4f184fb7acf07eeaf46101740a173
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6d15bf7b140445ca80f23fe22e058a78d6fdce0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298608"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>變更系統管理員帳戶 (Master Data Services)
   您可以變更使用者帳戶指定為[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]系統管理員。  
@@ -29,10 +29,10 @@ ms.locfileid: "36033662"
 > [!WARNING]  
 >  當您完成這個程序時，先前的系統管理員使用者帳戶會遭到刪除。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
--   您必須將新的系統管理員使用者名稱加入 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者清單。 如需詳細資訊，請參閱[將使用者新增&#40;Master Data Services&#41;](add-a-user-master-data-services.md)。  
+-   您必須將新的系統管理員使用者名稱加入 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 使用者清單。 如需詳細資訊，請參閱 <<c0> [ 將使用者加入&#40;Master Data Services&#41;](add-a-user-master-data-services.md)。</c0>  
   
 -   您必須在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中擁有檢視 mdm.tblUser 及執行 mdm.udpSecurityMemberProcessRebuildModel 預存程序的權限。 如需詳細資訊，請參閱[資料庫物件安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/database-object-security-master-data-services.md)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36033662"
   
 3.  建立新的查詢。  
   
-4.  輸入下列文字，取代*DOMAIN\user_name*與新的系統管理員使用者名稱和*SID*與您在步驟 2 複製的值。  
+4.  輸入下列文字，取代*DOMAIN\user_name*新的系統管理員使用者名稱並*SID*與您在步驟 2 複製的值。  
   
     ```  
     EXEC [mdm].[udpSecuritySetAdministrator] @UserName='DOMAIN\user_name', @SID = 'SID', @PromoteNonAdmin = 1  

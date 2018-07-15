@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unique indexes
 - designing indexes [SQL Server], unique
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 073907fd3b43f0664d89405de0b2f6161eff8d64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: feca3023253c950b49b76d51eac7a18bc004b2ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032561"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300388"
 ---
 # <a name="create-unique-indexes"></a>建立唯一索引
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料表建立唯一索引。 唯一索引可保證索引鍵不包含重複值，因此資料表中的每一個資料列在某方面來說是唯一的。 建立 UNIQUE 條件約束與建立獨立於條件約束之外的唯一索引，兩者並無明顯差異。 資料驗證的方式相同，而且查詢最佳化工具不會區分由條件約束建立或由手動建立的唯一索引。 不過，在資料行上建立 UNIQUE 條件約束，會使索引目標更明確。 如需有關 UNIQUE 條件約束的詳細資訊，請參閱＜ [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)＞。  

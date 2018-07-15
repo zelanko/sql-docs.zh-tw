@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e002bdd169d03e0db1cd972ac6e1c52adc19946c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b806d01c3cecd4063fdc2ccc3d7095fb3070b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190798"
 ---
 # <a name="create-infocube-for-transaction-data"></a>建立交易資料的 InfoCube
   使用 [建立交易資料的 InfoCube] 對話方塊可以在 SAP Netweaver BW 系統中建立交易資料的新 InfoCube。  
@@ -64,7 +64,7 @@ ms.locfileid: "36147221"
  **型別**  
  顯示與資料流程資料行相關聯的 InfoObject 類型。 下表列出類型的可能值。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |CHA|特性|  
 |UNI|單位|  

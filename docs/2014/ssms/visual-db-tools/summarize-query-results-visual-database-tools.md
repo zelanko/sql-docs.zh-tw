@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - queries [SQL Server], results
 - aggregate queries [SQL Server]
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d447d321d89da666d6db044ef9adac8b523d5656
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5684e2f5e75d37dfbcce3a2a19ed49d63ead6032
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145522"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198358"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>摘要查詢結果 (Visual Database Tools)
   當您建立彙總查詢時，可以套用某些邏輯原則。 例如，您無法顯示摘要查詢中的個別資料列內容。 查詢和檢視設計工具可協助您依據 [圖表窗格](visual-database-tools.md) 與 [準則窗格](criteria-pane-visual-database-tools.md) 的運作模式來符合這些原則。  

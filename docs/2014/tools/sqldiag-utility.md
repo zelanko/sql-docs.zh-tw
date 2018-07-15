@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], SQLdiag
 - stopping diagnostic collection
@@ -30,15 +30,15 @@ helpviewer_keywords:
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 775ad67ee25e67d894cf3aff88efe3d71f175011
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fa5904d3244cbd19642ce84bebce414f4c7f0c30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145994"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272424"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
   **SQLdiag** 公用程式是一種可當做主控台應用程式或服務加以執行的一般用途診斷集合公用程式。 您可以使用 **SQLdiag** ，從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 和其他類型的伺服器收集記錄檔案和資料檔案，並使用其監視一段時間的伺服器，或對伺服器的特定問題進行疑難排解。 **SQLdiag** 的用途是為了加速及簡化 [!INCLUDE[msCoName](../includes/msconame-md.md)] 客戶支援服務的診斷資訊收集工作。  

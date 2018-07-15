@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.results.f1
 - sql12.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c83b2a6c13e3d45e61a7ac44d141941b9bdc4409
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6d46e235af0b2fb7ca47c53b50edd156e9e24553
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031845"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313408"
 ---
 # <a name="results-detailed-view-dialog-box"></a>結果詳細檢視對話方塊
   當您使用 **[評估原則]** 對話方塊來執行原則並按一下 **[評估]** 之後，此對話方塊會顯示原則評估的結果。 此對話方塊是唯讀的，而且可幫助您了解哪一個部分的屬性運算式可能失敗。  

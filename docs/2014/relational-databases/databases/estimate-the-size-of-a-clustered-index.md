@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b270dc2485be2c5c9a9fd2b491db8a9278cce43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b9293859eeef13f497c79989a546d527d5fb317a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305978"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>估計叢集索引的大小
   您可以使用下列步驟，估計在叢集索引中儲存資料所需的空間量：  
@@ -178,7 +178,7 @@ ms.locfileid: "36033287"
   
 7.  計算索引中的層級數目：  
   
-     ***非 l*** = 1 + 記錄 Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Non-leaf_levels&lt*** = 1 + 記錄 Index_Rows_Per_Page (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
   
      將這個值無條件向上進位到最近的整數。 此值不包含叢集索引的分葉層級。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36033287"
   
      ***Non-leaf_levels*** = 1 + log25 (1000年 / 25) = 3  
   
-     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，這是範例中所描述的頁數。  
+     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，這是此範例中所述的頁數。  
   
 9. 計算索引的大小 (每個分頁共有 8192 個位元組)：  
   

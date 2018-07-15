@@ -1,28 +1,27 @@
 ---
-title: 資料庫快照集與 AlwaysOn 可用性群組 (SQL Server) |Microsoft 文件
+title: 資料庫快照集與 AlwaysOn 可用性群組 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 caps.latest.revision: 5
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a9db739495dc8f11c77d518815fe46d1b7f03e01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c4281fa10fc94c2608e903b2492ef83efb46d324
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022988"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308198"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>資料庫快照集與 AlwaysOn 可用性群組 (SQL Server)
   您可以在可用性群組的主要或次要資料庫上建立資料庫快照集。 複本角色必須是不在 RESOLVING 狀態的 PRIMARY 或 SECONDARY。  

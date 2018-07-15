@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data flow [Integration Services], transformations
 - transformations [Integration Services], about transformations
@@ -17,20 +17,20 @@ ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4f0776649cebbbacc950df9c95e56db6c433f633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0fa789dbb0ce784b9660bb2ebe2257167dc828ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273094"
 ---
 # <a name="transform-data-with-transformations"></a>使用轉換來轉換資料
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包含三種類型的資料流程元件：來源、轉換與目的地。  
   
  下圖顯示包含一個來源、兩個轉換及一個目的地的簡單資料流程。  
   
- ![資料流程](../../media/mw-dts-08.gif "資料流程")  
+ ![資料流](../../media/mw-dts-08.gif "資料流程")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 轉換提供下列功能：  
   

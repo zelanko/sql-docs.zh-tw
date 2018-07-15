@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
 caps.latest.revision: 3
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ea5879f9aa7cc3ddce608e39d221dcef743f556
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77fa6d4f000f58322524b7a32917ed7e29144b8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271144"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>步驟 3：測試第 6 課的套件
   在執行階段，您的封裝會從 VarFolderName 參數取得目錄屬性的值。  
@@ -35,7 +35,7 @@ ms.locfileid: "36145421"
   
  **資料流程**  
   
- ![資料流程](../../2014/tutorials/media/task3lesson6data.jpg "資料流程")  
+ ![資料流](../../2014/tutorials/media/task3lesson6data.jpg "資料流程")  
   
 ### <a name="to-test-the-lesson-6-tutorial-package"></a>若要測試第 6 課的教學課程封裝  
   

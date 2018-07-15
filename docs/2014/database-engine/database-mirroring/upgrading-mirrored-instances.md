@@ -1,35 +1,34 @@
 ---
-title: 升級伺服器執行個體時，鏡像資料庫的盡可能縮短停機時間 |Microsoft 文件
+title: 升級伺服器執行個體時，縮短停機時間的鏡像資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server, rolling upgrade of mirrored databases
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fc5bea207d824c860d197ca75eff788f6794ecc0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: ba14393c7b8281ae5a9e3a141e7a3e9bd28d0399
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300818"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少
-  升級伺服器執行個體時[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您可以針對每個鏡像資料庫的停機時間執行減少至只有單一手動容錯移轉的循序升級，又稱為*輪流升級*。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當做鏡像伺服器的伺服器執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體伺服器，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之伺服器執行個體上執行的鏡像工作階段數目和配置而定。  
+  升級伺服器執行個體時[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，您也可以執行的循序升級，只有單一手動容錯移轉來減少每個鏡像資料庫的停機時間稱為*輪流升級*。 輪流升級是一種多階段程序，其最簡單的形式包括升級目前在鏡像工作階段中當做鏡像伺服器的伺服器執行個體，然後手動容錯移轉鏡像資料庫、升級之前的主體伺服器，以及繼續進行鏡像。 實際上，確切的程序會取決於作業模式以及在您要升級之伺服器執行個體上執行的鏡像工作階段數目和配置而定。  
   
 > [!NOTE]  
->  執行輪流升級來安裝 service pack 或 hotfix 的相關資訊，請參閱[Service Pack 在系統上安裝 with Minimal Downtime for Mirrored](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  
+>  執行輪流升級，以安裝 service pack 或 hotfix 的詳細資訊，請參閱[上安裝 Service Pack 系統 with Minimal Downtime for Mirrored](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)。  
   
  **建議的準備事項 （最佳做法）**  
   
@@ -149,7 +148,7 @@ ms.locfileid: "36022981"
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [檢視鏡像資料庫的狀態 &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [最少停機時間的系統上安裝 Service Pack，為鏡像資料庫](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
+ [在最短停機時間的系統上安裝 Service Pack，為鏡像資料庫](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
  [資料庫鏡像工作階段期間的角色切換 &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [在資料庫鏡像工作階段中強制服務 &#40;Transact-SQL&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
  [啟動資料庫鏡像監視器 &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   

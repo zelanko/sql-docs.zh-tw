@@ -1,5 +1,5 @@
 ---
-title: ConnectionString 元素 (XMLA) |Microsoft 文件
+title: ConnectionString 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: 3b0575aa-79ed-4f14-ae7e-dd587af4cdb1
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 12d69bfe2b8dc8bda91bc873167bb3208203d728
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e7345d2a35d80a2ce4d72875c4afb082b57ec1a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293208"
 ---
 # <a name="connectionstring-element-xmla"></a>ConnectionString 元素 (XMLA)
-  包含父系所使用的連接字串[位置](location-element-xmla.md)或[來源](source-element-xmla.md)項目。  
+  包含父元素所使用的連接字串[位置](location-element-xmla.md)或是[來源](source-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36023868"
   
  若為 `Source` 元素，`ConnectionString` 元素會包含 `Synchronize` 命令用來連接至來源執行個體的連接字串。  
   
- 如需有關備份和還原物件的詳細資訊，請參閱[備份、 還原及同步處理資料庫&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 如需有關備份和還原物件的詳細資訊，請參閱 <<c0> [ 備份、 還原和同步處理資料庫&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [Restore 元素&#40;XMLA&#41;](../xml-elements-commands/restore-element-xmla.md)   

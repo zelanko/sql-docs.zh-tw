@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_PARTITION_STAT 資料列集 |Microsoft 文件
+title: DISCOVER_PARTITION_STAT 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 20d339e2-f47f-437f-94d5-5b00b400356a
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 98db8d43f86cc9acaf612da8180498d22e01d037
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6711aa9d7a98fa635694cc76e98cc89507d524ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197808"
 ---
 # <a name="discoverpartitionstat-rowset"></a>DISCOVER_PARTITION_STAT 資料列集
   傳回特定資料分割中彙總的相關統計資料。  
@@ -46,7 +46,7 @@ ms.locfileid: "36145717"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd8f-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionStat|  

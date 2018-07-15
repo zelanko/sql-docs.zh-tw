@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014164 error
 ms.assetid: cd81b601-2ec3-4358-ad58-c2655496e6a1
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53bfffe70f8316d522f04a92e516da3c9a8ea196
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 95f888533b790134c918620c956949221044cd0b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251870"
 ---
 # <a name="mssqleng014164"></a>MSSQL_ENG014164
     

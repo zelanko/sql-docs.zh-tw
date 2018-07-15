@@ -1,5 +1,5 @@
 ---
-title: 報表精靈說明 |Microsoft 文件
+title: 報表精靈說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.rptwizardhelp.f1
 helpviewer_keywords:
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
 caps.latest.revision: 33
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 315091a829fc7294bb08be76d5231a43afb2fa20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cda8c213e8f14da1d36eeb3b71ad913762703f92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309358"
 ---
 # <a name="report-wizard-help"></a>報表精靈說明
   此章節提供報表精靈的 F1 說明。 報表精靈會自動化建立表格式報表和矩陣報表的程序。 下表描述此章節的主題。  
   
- 若要開啟 報表精靈 中，在**專案**功能表上，按一下 **加入新項目**。  
+ 若要開啟 [報表精靈] 中，在**專案**功能表上，按一下**加入新項目**。  
   
 ## <a name="in-this-section"></a>本節內容  
   

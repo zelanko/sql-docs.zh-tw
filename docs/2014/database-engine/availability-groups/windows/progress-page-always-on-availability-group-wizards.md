@@ -1,14 +1,13 @@
 ---
-title: 進度頁面 （AlwaysOn 可用性群組精靈） |Microsoft 文件
+title: 進度頁面 （AlwaysOn 可用性群組精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.progress.f1
 - sql12.swb.newagwizard.progress.f1
@@ -20,15 +19,15 @@ f1_keywords:
 - sql12.swb.failoverwixard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 caps.latest.revision: 11
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 92a1adb3921b8daf0a2692ad840bf30af6561cf8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: de5c8d19326015da6371cc3796c752d9f80f5842
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144999"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217888"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>進度頁面 (AlwaysOn 可用性群組精靈)
   使用此對話方塊可以檢視您在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中執行之 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]精靈的進度。 進度列會指出精靈所執行之步驟的相對進度。  

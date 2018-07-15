@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:StmtCompleted event class
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7740a0cd341a10e01865b5dcfb747143bbed4793
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 44191b710b96e5339649a783efbd7f9d27f7a09a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217378"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted 事件類別
   SP:StmtCompleted 事件類別指出已完成預存程序內的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
@@ -64,7 +64,7 @@ ms.locfileid: "36146526"
 |SourceDatabaseID|`int`|物件所在的資料庫識別碼。|62|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|TextData|`ntext`|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |Writes|`bigint`|伺服器代表事件執行的實體磁碟寫入數。|17|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  

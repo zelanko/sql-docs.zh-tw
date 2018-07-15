@@ -15,15 +15,15 @@ helpviewer_keywords:
 - methods [Reporting Services], linked reports
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5647550f76112a66077e772a0987b9330adadc23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5fc37006fe58eaf48326409e290a7818e3079648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022822"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290234"
 ---
 # <a name="linked-reports-methods"></a>連結報表方法
   您可以使用這些方法來建立及管理連結項目。  

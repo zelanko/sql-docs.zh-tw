@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 11d97017f27634c5c6f3f913cd41447780b68199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29da6dedad91566c0d111acfeb18b3778d2da4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308118"
 ---
 # <a name="step-4-adding-package-configurations"></a>步驟 4：加入封裝組態
   在這項工作中，您會為每個封裝加入組態。 組態會在執行階段更新封裝屬性和封裝物件的值。  
@@ -46,7 +46,7 @@ ms.locfileid: "36031674"
   
 5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]。  
   
-6.  在 選取組態類型 頁面上，選取  **XML 組態檔**中**組態類型**清單中，選取**組態位置儲存在環境變數**選項，然後輸入`DataTransfer,`或選取**DataTransfer**清單中的環境變數。  
+6.  在 [選取組態類型] 頁面中，選取**XML 組態檔**中**組態類型**清單中，選取**組態位置儲存在環境變數**選項，然後輸入`DataTransfer,`或選取**DataTransfer**清單中的環境變數。  
   
     > [!NOTE]  
     >  若要在清單中提供環境變數，可能必須在加入變數之後重新啟動電腦。 如果不想要重新啟動電腦，可以輸入環境變數的名稱。  
@@ -97,7 +97,7 @@ ms.locfileid: "36031674"
   
 5.  在 [封裝組態精靈] 的歡迎使用頁面上，按一下 [下一步]。  
   
-6.  在 選取組態類型 頁面上，選取  **XML 組態檔**中**組態類型**清單中，選取**組態位置儲存在環境變數**選項，請輸入`LoadXMLData`或選取`LoadXMLData`清單中的環境變數。  
+6.  在 [選取組態類型] 頁面中，選取**XML 組態檔**中**組態類型**清單中，選取**組態位置儲存在環境變數**選項，然後輸入`LoadXMLData`或選取`LoadXMLData`清單中的環境變數。  
   
     > [!NOTE]  
     >  若要在清單中提供環境變數，可能必須在加入變數之後重新啟動電腦。  
@@ -133,13 +133,13 @@ ms.locfileid: "36031674"
 12. 在 [Package Configuration Organizer (封裝組態組合管理)] 對話方塊中，確認第一個列出的是「LoadXMLData 環境變數組態」，第二個列出的是「LoadXMLData 組態」，然後按一下 [關閉]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 5：測試更新的封裝](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+ [步驟 5：測試更新的套件](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [封裝組態](../../2014/integration-services/package-configurations.md)   
  [建立封裝組態](../../2014/integration-services/create-package-configurations.md)   
- [封裝所使用之檔案的存取權](../../2014/integration-services/access-to-files-used-by-packages.md)  
+ [套件所用檔案的存取](../../2014/integration-services/access-to-files-used-by-packages.md)  
   
   

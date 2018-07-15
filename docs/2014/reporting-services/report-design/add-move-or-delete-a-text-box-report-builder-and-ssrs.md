@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2023c9a066d2a9f0e9507fe0c06dcab4fbcc66a9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e8f8a614c15ed52465bcfb378749e10acb480c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270624"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>加入、移動或刪除文字方塊 (報表產生器及 SSRS)
   文字方塊是報表中最常使用的報表項目。 您可以將文字方塊加入至報表主體，以便顯示標題、參數選擇、內建欄位和日期等資訊。  
@@ -77,7 +77,7 @@ ms.locfileid: "36137234"
     >  如果您在文字方塊中按一下並且處於編輯模式，請按下 ESC 來選取文字方塊。  
   
 ## <a name="see-also"></a>另請參閱  
- [文字方塊&#40;報表產生器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [文字方塊&#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [鍵盤快速鍵&#40;報表產生器&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
   

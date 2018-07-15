@@ -17,15 +17,15 @@ helpviewer_keywords:
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 caps.latest.revision: 30
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0c1f08f222fa1d902232373051e8d584b673ba5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5c8d0419dc923fc8fc7e6f2cb58d74ee70d46f68
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145481"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181555"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>在自訂應用程式中使用 RSClientPrint 控制項
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX 控制項 **RSPrintClient** 提供在 HTML 檢視器中檢視的報表之用戶端列印。 它提供 [列印] 對話方塊，讓使用者能夠起始列印工作、預覽報表、指定要列印的頁面，以及變更邊界。 在用戶端列印作業期間，報表伺服器會在影像 (EMF) 轉譯延伸模組中轉譯報表，然後使用作業系統的列印功能來建立列印工作，並將它傳送到印表機。  
@@ -78,7 +78,7 @@ ms.locfileid: "36145481"
 |MarginBottom|Double|RW|報表設定|取得或設定下邊界。 如果開發人員未設定或報表中未指定，則預設值為 12.2 公釐。|  
 |PageWidth|Double|RW|報表設定|取得或設定頁寬。 如果開發人員未設定或是報表定義為 215.9 公釐，則為預設值。|  
 |PageHeight|Double|RW|報表設定|取得或設定頁高。 如果開發人員未設定或是報表定義為 279.4 公釐，則為預設值。|  
-|Culture|Int32|RW|瀏覽器地區設定|指定地區設定識別碼 (LCID)。 此值會決定使用者輸入的度量單位。 例如，如果使用者類型`3`，將會以公釐為單位測量值，如果語言為法文或英吋如果語言是英文 （美國）。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
+|Culture|Int32|RW|瀏覽器地區設定|指定地區設定識別碼 (LCID)。 此值會決定使用者輸入的度量單位。 例如，如果使用者輸入`3`，值的度量單位是公釐，若語言為法文，或如果語言是英文 （美國） 英吋。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |UICulture|String|RW|用戶端文化特性|指定對話方塊的字串當地語系化。 [列印] 對話方塊中的文字會採用下列語言的當地語系化：簡體中文、繁體中文、英文、法文、德文、義大利文、日文、韓文和西班牙文。 有效值包括：1028、1031、1033、1036、1040、1041、1042、2052、3082。|  
 |Authenticate|布林|RW|False|指定控制項是否對報表伺服器發出 GET 命令，以起始連接來執行工作階段外的列印。|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36145481"
   
 |引數|I/O|類型|描述|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|指定報表伺服器虛擬目錄 (例如， https://adventure-works/reportserver)。|  
+|ServerPath|In|String|指定報表伺服器虛擬目錄 (例如https://adventure-works/reportserver)。|  
 |ReportPathParameters|In|String|在報表伺服器資料夾命名空間內指定報表的全名，包括參數在內。 報表是透過 URL 存取來擷取。 例如："/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|In|String|報表的簡短名稱 (在上述範例中，簡短名稱為 Employee Sales Summary)。 它會出現在 [列印] 對話方塊及列印佇列中。|  
   

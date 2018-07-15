@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data capture [SQL Server], monitoring
 - change data capture [SQL Server], administering
 - change data capture [SQL Server], jobs
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc5accd969ae0a19d99610edca0023337321f657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ebc75d5750d77ac4166375f47b1301d7686f1a99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244568"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>管理和監視異動資料擷取 (SQL Server)
   此主題描述如何管理及監視異動資料擷取。  
   
 ##  <a name="Capture"></a> 擷取作業  
- 擷取作業是透過執行無參數的預存程序 `sp_MScdc_capture_job` 起始的。 這個預存程序一開始會從 msdb.dbo.cdc_jobs 中擷取作業之 *maxtrans*、 *maxscans*、 *continuous*和 *pollinginterval* 的設定值。 這些設定值接著會做為參數傳遞至預存程序`sp_cdc_scan`。 這用來叫用`sp_replcmds`執行記錄檔掃描。  
+ 擷取作業是透過執行無參數的預存程序 `sp_MScdc_capture_job` 起始的。 這個預存程序一開始會從 msdb.dbo.cdc_jobs 中擷取作業之 *maxtrans*、 *maxscans*、 *continuous*和 *pollinginterval* 的設定值。 這些設定值接著會做為參數傳遞給預存程序`sp_cdc_scan`。 這用來叫用`sp_replcmds`執行記錄檔掃描。  
   
 ### <a name="capture-job-parameters"></a>擷取作業參數  
  若要了解擷取作業行為，您必須了解 `sp_cdc_scan` 如何使用可設定的參數。  
@@ -41,10 +41,10 @@ ms.locfileid: "36137265"
  *maxscans* 參數會指定傳回 (continuous = 0) 或執行 Waitfor (continuous = 1) 之前嘗試清空記錄檔的最大掃描循環數目。  
   
 #### <a name="continous-parameter"></a>continous 參數  
- *連續*參數會控制是否`sp_cdc_scan`清空記錄檔或執行最大數目的掃描循環 （一次模式） 之後讓出控制權。 它也會控制是否`sp_cdc_scan`會繼續執行，直到明確停止 （連續模式）。  
+ *連續*參數會控制是否`sp_cdc_scan`清空記錄檔或執行掃描循環 （一次模式） 的最大數目之後讓出控制權。 它也會控制是否`sp_cdc_scan`會繼續執行，直到明確停止 （連續模式）。  
   
 ##### <a name="one-shot-mode"></a>一次模式  
- 在一次模式中，擷取作業會要求`sp_cdc_scan`執行最多*maxtrans*以便嘗試清空記錄檔，並傳回掃描。 存在記錄檔中 *maxtrans* 以外的任何交易將在後續掃描中處理。  
+ 在一次的模式，擷取作業會要求`sp_cdc_scan`執行最多*maxtrans*次掃描，以便嘗試清空記錄檔，並傳回。 存在記錄檔中 *maxtrans* 以外的任何交易將在後續掃描中處理。  
   
  一次模式會用於受到控制的測試中，因為已知要處理的交易數量，而且作業完成時自動關閉具有一些優點。 不建議您在實際執行環境中使用一次模式。 這是因為它會仰賴作業排程來管理執行掃描循環的頻率。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "36137265"
  如果您使用一次模式來管理記錄檔掃描，記錄檔處理之間的秒數就必須受到作業排程的管制。 需要這種行為時，在連續模式中執行擷取作業是管理重新排程記錄檔掃描的較佳方式。  
   
 ##### <a name="continuous-mode-and-the-polling-interval"></a>連續模式和輪詢間隔  
- 在連續模式中，擷取作業會要求`sp_cdc_scan`連續執行。 這會透過提供 maxtrans 和 maxscans，以及記錄檔處理之間秒數的值 (輪詢間隔)，讓此預存程序管理自己的等候迴圈。 在此模式中執行，擷取作業會維持作用中，執行`WAITFOR`記錄檔掃描之間。  
+ 在連續模式中，擷取作業會要求`sp_cdc_scan`持續執行。 這會透過提供 maxtrans 和 maxscans，以及記錄檔處理之間秒數的值 (輪詢間隔)，讓此預存程序管理自己的等候迴圈。 在此模式中執行，擷取作業會維持作用中，執行`WAITFOR`記錄檔掃描之間。  
   
 > [!NOTE]  
 >  當輪詢間隔的值大於 0 時，重複執行一次作業之輸送量的相同上限也會套用至連續模式中的作業。 也就是說，(*maxtrans* \* *maxscans*) 除以非零的輪詢間隔會針對擷取作業可以處理的平均交易數目放置上限。  
@@ -71,7 +71,7 @@ ms.locfileid: "36137265"
 ### <a name="structure-of-the-cleanup-job"></a>清除作業的結構  
  異動資料擷取會使用保留性清除策略來管理變更資料表大小。 此清除機制包含啟用第一個資料庫資料表時建立的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent [!INCLUDE[tsql](../../includes/tsql-md.md)] 作業。 單一清除作業會處理所有資料庫變更資料表的清除，並且將相同的保留值套用至所有定義的擷取執行個體。  
   
- 清除作業是透過執行無參數的預存程序 `sp_MScdc_cleanup_job` 起始的。 這個預存程序會啟動擷取清除作業，從設定的保留和臨界值`msdb.dbo.cdc_jobs`。 此保留值會用來計算變更資料表的新下限標準。 指定的分鐘數會從最大值中的減去*tran_end_time*值`cdc.lsn_time_mapping`資料表，以取得新下限標準表示成日期時間值。 然後，使用 CDC.lsn_time_mapping 資料表來將這個日期時間值轉換成對應的 `lsn` 值。 如果相同的認可時間資料表中的多個項目共用`lsn`對應至具有最小的項目`lsn`會被選為新的下限標準。 這個 `lsn` 值會傳遞給 `sp_cdc_cleanup_change_tables`，以便從資料庫變更資料表中移除變更資料表項目。  
+ 清除作業是透過執行無參數的預存程序 `sp_MScdc_cleanup_job` 起始的。 這個預存程序啟動清除作業，從設定的保留和臨界值`msdb.dbo.cdc_jobs`。 此保留值會用來計算變更資料表的新下限標準。 指定的分鐘數會從最大值中的減去*tran_end_time*值從`cdc.lsn_time_mapping`資料表，以取得新下限標準表示成日期時間值。 然後，使用 CDC.lsn_time_mapping 資料表來將這個日期時間值轉換成對應的 `lsn` 值。 如果相同的認可時間，會在資料表中，共用的多個項目`lsn`對應至具有最小的項目`lsn`會被選為新的下限標準。 這個 `lsn` 值會傳遞給 `sp_cdc_cleanup_change_tables`，以便從資料庫變更資料表中移除變更資料表項目。  
   
 > [!NOTE]  
 >  使用最近交易之認可時間當做計算新下限標準之基礎的優點在於，它會在指定的時間內讓變更保留在變更資料表中。 即使擷取處理序正在後方執行，也會發生這種情況。 具有相同認可時間當做目前下限標準的所有項目會繼續在變更資料表內部表示的最小選擇`lsn`具有實際下限標準之共用的認可時間。  
@@ -79,7 +79,7 @@ ms.locfileid: "36137265"
  執行清除時，所有擷取執行個體的下限標準一開始是在單一交易中更新。 然後，它會嘗試從變更資料表和 cdc.lsn_time_mapping 資料表中移除已過時的項目。 可設定的臨界值會限制在任何單一陳述式中刪除的項目數。 如果無法針對任何個別的資料表執行刪除，將無法防止針對其餘資料表嘗試進行此作業。  
   
 ### <a name="cleanup-job-customization"></a>清除作業自訂  
- 對於清除作業而言，自訂的可能性在於用來決定哪些變更資料表項目要捨棄的策略。 在傳遞的清除作業中，唯一支援的策略是以時間為基礎的策略。 在該情況下，新下限標準的計算方式是從上次處理之交易的認可時間中減去允許的保留週期。 由於基礎清除程序會根據`lsn`而不是時間，任何數目的策略可以用來判斷最小`lsn`来保留變更資料表中。 其中只有某些策略是嚴格地以時間為基礎。 例如，如果需要存取變更資料表的下游處理序無法執行，用戶端的相關知識就可用來提供保全。 此外，雖然預設策略會套用相同`lsn`來清除所有資料庫的變更資料表，基礎清除程序中，也可以呼叫在擷取執行個體層級進行清除。  
+ 對於清除作業而言，自訂的可能性在於用來決定哪些變更資料表項目要捨棄的策略。 在傳遞的清除作業中，唯一支援的策略是以時間為基礎的策略。 在該情況下，新下限標準的計算方式是從上次處理之交易的認可時間中減去允許的保留週期。 由於基礎清除程序會根據`lsn`而不是時間，可以使用任何數目的策略來判斷最小`lsn`保留在變更資料表中。 其中只有某些策略是嚴格地以時間為基礎。 例如，如果需要存取變更資料表的下游處理序無法執行，用戶端的相關知識就可用來提供保全。 此外，雖然預設策略會套用相同`lsn`來清除所有資料庫的變更資料表，基礎的清除程序，也可以呼叫在擷取執行個體層級進行清除。  
   
 ##  <a name="Monitor"></a> 監視異動資料擷取程序  
  監視異動資料擷取程序可讓您判斷變更是否正確地並且以合理的延遲寫入變更資料表。 監視也可以協助您識別可能發生的任何錯誤。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含兩個動態管理檢視，可協助您監視異動資料擷取： [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) 和 [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)。  

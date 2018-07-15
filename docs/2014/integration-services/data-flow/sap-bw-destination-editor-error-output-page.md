@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 65e3a1254c03d76be77319cf2b1ff677e72f80c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5636675827c5dd6751994b163cc20029023bf604
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316838"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 目的地編輯器 (錯誤輸出頁面)
   使用 [SAP BW 目的地編輯器] 的 [錯誤輸出] 頁面可以指定錯誤處理選項。  
@@ -64,8 +64,8 @@ ms.locfileid: "36023167"
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [SAP BW 目的地編輯器&#40;連接管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)   
- [SAP BW 目的地編輯器&#40;[對應] 頁面&#41;](sap-bw-destination-editor-mappings-page.md)   
+ [SAP BW 目的地編輯器&#40;連線管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器&#40;對應頁面&#41;](sap-bw-destination-editor-mappings-page.md)   
  [SAP BW 目的地編輯器 &#40;進階頁面&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 說明](../microsoft-connector-for-sap-bw-f1-help.md)  
   

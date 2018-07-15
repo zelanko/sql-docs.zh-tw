@@ -1,5 +1,5 @@
 ---
-title: 建立新的 OLAP 採礦結構 |Microsoft 文件
+title: 建立新的 OLAP 採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], OLAP
 - mining structures [Analysis Services], creating
 - OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5f39fe05cef96739205c06ecc00cf4481e141b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc5138c448aa0f149916bc61be35a0ce5d75e8c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297438"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>建立新的 OLAP 採礦結構
   您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的資料採礦精靈，建立使用多維度模型資料的採礦結構。 以 OLAP Cube 為基礎的採礦模型可以使用事實資料表、維度和量值群組中的資料行和值做為分析屬性。  
@@ -84,7 +84,7 @@ ms.locfileid: "36033140"
   
         -   如果您想要將資料行包含在模型中做為其中一個可預測屬性，請選取 **[預測]**。  
   
-        -   任何項目，包含在結構，但未指定做為輸入或可預測的屬性加入至結構中時會標示`Ignore`; 這表示當您建立模型，但不是用於分析，並僅供 dr 處理的資料illthrough。 如果您想要包含詳細資料 (例如客戶名稱)，但不想在分析中使用這些資訊時，此功能可能很方便。  
+        -   任何項目，包含在結構，但未指定做為輸入或可預測的屬性加入至旗標結構`Ignore`; 這表示當您建立模型，但不是會用於分析，並只適用於 dr，就處理資料illthrough。 如果您想要包含詳細資料 (例如客戶名稱)，但不想在分析中使用這些資訊時，此功能可能很方便。  
   
      按一下 **[完成]** 關閉處理巢狀資料表的精靈部分。 您可以重複此程序，新增多個巢狀資料行。  
   

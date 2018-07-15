@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying Registered Servers
 - viewing Registered Servers
 - Registered Servers [SQL Server], viewing
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4d2481ad932286a8d2b0bfce261b2b2e816c23d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: c94cb1bcf8e254df2b38392c0875c93ea2243936
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289914"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>在 SQL Server Management Studio 中檢視已註冊的伺服器
   本主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中檢視已註冊的伺服器。  

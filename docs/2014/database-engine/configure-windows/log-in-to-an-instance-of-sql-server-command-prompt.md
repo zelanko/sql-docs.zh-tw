@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server], named instance of SQL Server
 - log ins [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - logging in [SQL Server]
 ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 266da633926e1d79236fb0a9f6045b45790c8e49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 496f9c15e344577918045fe8cabca6f901019a3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282054"
 ---
 # <a name="log-in-to-an-instance-of-sql-server-command-prompt"></a>登入 SQL Server 的執行個體 (命令提示字元)
   本主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sqlcmd **公用程式測試** 執行個體的連線。  

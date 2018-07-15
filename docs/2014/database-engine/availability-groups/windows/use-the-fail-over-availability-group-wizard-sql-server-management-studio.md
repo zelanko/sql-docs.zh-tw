@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.progress.f1
 - sql12.swb.failoverwizard.f1
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 caps.latest.revision: 25
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 351c09770b0e0e35c0ab4d039d8f4c9b5c76abe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4e760ac9e1c806ef742c84f0725b94c204dc8345
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314530"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>使用容錯移轉可用性群組精靈 (SQL Server Management Studio)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 PowerShell，針對 AlwaysOn 可用性群組執行規劃的手動容錯移轉或強制手動容錯移轉 (強制容錯移轉)。 可用性群組會在可用性複本層級容錯移轉。 如果您容錯移轉至處於 SYNCHRONIZED 狀態的次要複本，此精靈就會執行規劃的手動容錯移轉 (不會遺失資料)。 如果您容錯移轉至處於 UNSYNCHRONIZED 或 NOT SYNCHRONIZING 狀態的次要複本，此精靈就會執行強制手動容錯移轉，也稱為「強制容錯移轉」  (可能會遺失資料)。 這兩種手動容錯移轉形式都會將您所連接的次要複本轉換成主要角色。 規劃的手動容錯移轉目前會將先前的主要複本會轉換成次要角色。 強制容錯移轉之後，當先前的主要複本上線時，它就會轉換成次要角色。  
@@ -125,7 +124,7 @@ ms.locfileid: "36032855"
  **仲裁狀態**  
  顯示可用性複本的 WSFC 仲裁狀態，它有下列幾種：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**一般仲裁**|叢集已經使用一般仲裁來啟動。|  
 |**強制仲裁**|叢集已經使用強制仲裁來啟動。|  
@@ -143,17 +142,17 @@ ms.locfileid: "36032855"
  **可用性模式**  
  顯示伺服器執行個體的可用性模式，它有下列幾種：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**同步認可**|在同步認可模式下認可交易之前，同步認可主要複本會等候同步認可次要複本確認它已完成強行寫入記錄。 同步認可模式可確定，一旦給定次要資料庫與主要資料庫同步處理之後，認可的交易就會受到完整保護。|  
 |**非同步認可**|在非同步認可模式下，主要複本會認可交易，而不等候確認非同步認可次要複本已經強行寫入記錄。 非同步認可模式會將次要資料庫上的交易延遲降至最低，但允許這些資料庫落後主要資料庫，因此可能會發生資料遺失。|  
   
- 如需詳細資訊，請參閱[可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
   
  **容錯移轉模式**  
  顯示伺服器執行個體的容錯移轉模式，它有下列幾種：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**Automatic**|每當次要複本與主要複本同步處理時，設定為自動容錯移轉的次要複本也支援規劃的手動容錯移轉。|  
 |**Manual**|手動容錯移轉的類型有兩種：規劃 (不會遺失資料) 和強制 (可能會遺失資料)。 給定的次要複本會根據次要複本的可用性模式和同步處理狀態 (同步認可模式)，僅支援其中一種類型。 若要判斷給定次要複本目前支援的手動容錯移轉形式，請查看此方格的 **[容錯移轉整備]** 資料行。|  
@@ -163,7 +162,7 @@ ms.locfileid: "36032855"
  **[容錯移轉整備]**  
  顯示次要複本的容錯移轉整備，它有下列幾種：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**[無資料遺失]**|這個次要複本目前支援規劃的容錯移轉。 只有當同步認可模式的次要複本目前與主要複本同步處理時，才會出現此值。|  
 |**資料遺失，警告(** *#* **)**|這個次要複本目前支援強制容錯移轉 (可能會遺失資料)。 每當次要複本並未與主要複本同步處理時，就會出現此值。 如需有關可能遺失資料的詳細資訊，請按一下資料遺失警告連結。|  

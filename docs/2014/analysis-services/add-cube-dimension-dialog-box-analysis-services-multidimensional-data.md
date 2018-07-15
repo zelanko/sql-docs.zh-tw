@@ -1,5 +1,5 @@
 ---
-title: 加入 Cube 維度對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 加入 Cube 維度對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.addcubedimensiondialog.f1
 helpviewer_keywords:
 - Add Cube Dimension dialog box
 ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff89f880df12126f173f1f5ad47d1841e532262d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ab3e91d2571c4186ad6eeb1e858a6fe5f3f2d53
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232418"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>加入 Cube 維度對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [加入 Cube 維度] 對話方塊，即可將資料庫維度的參考加入 Cube。 您可以執行下列其中一個動作，來顯示 [加入 Cube 維度] 對話方塊：  

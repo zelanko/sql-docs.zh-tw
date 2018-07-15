@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - auditing [SQL Server]
 - Database Mail [SQL Server], auditing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], logging
 ms.assetid: 846589ee-5fe5-4ab3-b335-0c253e569f99
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aa41082daa7b0a80e613158b83c7dddb313502a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 437e1875de9e3dd95431a0bd0e104850e3d7c0d0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294768"
 ---
 # <a name="database-mail-log-and-audits"></a>Database Mail 記錄與稽核
   Database Mail 記錄功能的設計目的是要提供方法來隔離並更正問題。 Database Mail 會將記錄資訊儲存至 **msdb** 資料庫。 Database Mail 電子郵件內容、電子郵件狀態和任何收到之訊息 (例如錯誤) 的相關資訊，是透過 Database Mail 進行記錄，而且可用於進行疑難排解和稽核。  

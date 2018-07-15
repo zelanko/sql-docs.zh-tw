@@ -1,5 +1,5 @@
 ---
-title: 作業類別目錄： 管理作業類別目錄 |Microsoft 文件
+title: 作業類別目錄： 管理作業類別目錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.job.categories.f1
 helpviewer_keywords:
 - Job Categories dialog box
 ms.assetid: 38276438-40b1-43ce-9aae-6805be6d9332
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 996593dc8d6a74b3a328dc61af0359c01e3dac60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d3db326c0097a57997133ae93173d9da8c791844
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299588"
 ---
 # <a name="job-categories-manage-job-categories"></a>作業類別目錄： 管理作業類別目錄
   使用 [作業類別目錄] 對話方塊以加入或刪除作業類別目錄。 無法刪除內建作業類別目錄。  

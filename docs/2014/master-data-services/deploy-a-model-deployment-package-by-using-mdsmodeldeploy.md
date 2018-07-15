@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e99859dcdfcc2061622e955399b6d7bdac8bcbf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e15f7e75f8967fb49b33b6b8a8eb6720b92131d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295018"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>使用 MDSModelDeploy 部署模型部署封裝
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，使用 MDSModelDeploy 工具來部署封裝，其中包含下列其中一項：  
@@ -33,7 +33,7 @@ ms.locfileid: "36023805"
 > [!IMPORTANT]  
 >  封裝只能部署到之前建立封裝所使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本。 這表示，在 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中建立的套件無法部署到 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 或更高版本。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   在目標 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境中，您必須擁有存取 [系統管理] 功能區域的權限。  
@@ -50,7 +50,7 @@ ms.locfileid: "36023805"
   
 2.  開啟命令提示字元，並導覽至 MDSModelDeploy.exe。  
   
-    -   如果 MDS 已安裝在預設位置，此工具會在*磁碟機*: \Program Files\Microsoft SQL Server\120\Master 資料 Services\Configuration\MDSModelDeploy.exe  
+    -   如果 MDS 已安裝在預設位置，此工具會位於*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
   
     -   如果 MDS 未安裝在預設位置，請搜尋本機電腦中的 MDSModelDeploy.exe。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36023805"
   
  **注意：**  
   
--   如果封裝中的訂閱檢視現有模型中的訂閱檢視同名，檢視會建立為*modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
+-   如果封裝中的訂用帳戶檢視現有模型中的訂閱檢視同名，要將檢視建立為*modelname.subscriptionviewname*。 如果此名稱已在使用中，則不會建立訂閱檢視。  
   
 -   部署程序有四個步驟：  
   

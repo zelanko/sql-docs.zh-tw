@@ -1,5 +1,5 @@
 ---
-title: 支援的資料類型 (SSAS 表格式) |Microsoft 文件
+title: 支援的資料類型 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee05d2f7d3526aafd180e9eda5372668f164cb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57bf1633f05f9692c3e5cc132bce6585734830a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237628"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>支援的資料類型 (SSAS 表格式)
   本文描述可用於表格式模型中的資料類型，並討論在 Data Analysis Expressions (DAX) 公式中計算或使用資料時，隱含的資料類型轉換。  
@@ -54,13 +54,13 @@ ms.locfileid: "36145484"
   
  <sup>2</sup>如果您嘗試匯入有極大數值資料，匯入可能會失敗，發生下列錯誤：  
   
- 記憶體中資料庫錯誤： '\<資料行名稱 >' 的資料行'\<資料表名稱 >' 資料表包含的值 ' 1.7976931348623157 e + 308'，但不支援。 作業已取消。  
+ 記憶體中資料庫錯誤： '\<資料行名稱 >' 的資料行'\<資料表名稱 >' 資料表包含的值 ' 1.7976931348623157 e + 308'，但並不支援。 作業已取消。  
   
  這項錯誤發生的原因是，模型設計師使用該值來代表 Null。 下列清單中的值是前述 Null 值的同義字：  
   
 ||  
 |-|  
-|ReplTest1|  
+|值|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1.7976931348623158e+308|  
@@ -152,11 +152,11 @@ ms.locfileid: "36145484"
   
  下列 DAX 運算式說明這項行為：  
   
- `=IF(FALSE()>"true","Expression is true", "Expression is false")`傳回 `"Expression is true"`  
+ `=IF(FALSE()>"true","Expression is true", "Expression is false")`會傳回 `"Expression is true"`  
   
- `=IF("12">12,"Expression is true", "Expression is false")`傳回 `"Expression is true"`  
+ `=IF("12">12,"Expression is true", "Expression is false")`會傳回 `"Expression is true"`  
   
- `=IF("12"=12,"Expression is true", "Expression is false")`傳回 `"Expression is false"`  
+ `=IF("12"=12,"Expression is true", "Expression is false")`會傳回 `"Expression is false"`  
   
  針對數值或日期/時間類型所執行的隱含轉換如下表所述：  
   

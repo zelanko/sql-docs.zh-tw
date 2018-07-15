@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - articles [SQL Server replication], adding
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a79bf8b05c53a7988726a7244945a31a3b87e8c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1b110e9f73dd774a3a30b8545d19dc432a9ec59c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189925"
 ---
 # <a name="define-an-article"></a>定義發行項
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義發行項。  
@@ -52,7 +52,7 @@ ms.locfileid: "36145590"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   發行項名稱不能包含下列任何字元：% , * , [ , ] , | , : , " , ? '，\，/， \< ，>。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於物件名稱的發行項名稱。  
+-   發行項名稱不能包含下列任何字元：% , * , [ , ] , | , : , " , ? '、 \、 /、 \< ，>。 如果資料庫中的物件包含這些字元的任何一個，而且您要複寫它們，則必須指定一個不同於物件名稱的發行項名稱。  
   
 ##  <a name="Security"></a> 安全性  
  可能的話，會在執行階段提示使用者輸入安全性認證。 如果您必須儲存認證，請使用 [Windows .NET Framework 提供的](http://go.microsoft.com/fwlink/?LinkId=34733) 密碼編譯服務 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a840b5b3cc60e10a95f1cf7b2c4a473ee8fd0c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 7232850d053d238b81b8db9ef6f5eaeec581ab72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299818"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>地圖精靈與地圖圖層精靈 (報表產生器及 SSRS)
   地圖精靈與地圖圖層精靈會將建立地圖、加入地圖圖層，或變更現有圖層上之地圖圖層選項的程序自動化。  
@@ -33,7 +33,7 @@ ms.locfileid: "36022835"
   
  在您將地圖加入至報表，或將地圖圖層加入至地圖之前，您必須擁有下列資訊：  
   
--   **空間資料來源：** 位置或連線到來源，提供空間資料，例如，名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體和資料庫，其中包含空間資料或 Environmental Systems Research Institute，Inc.(ESRI) 形狀檔的名稱。  
+-   **空間資料來源：** 位置或連接至來源提供空間資料，例如，名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體和包含空間資料或 Environmental Systems Research Institute，Inc.(ESRI) 形狀檔名稱的資料庫。  
   
 -   **空間資料：** 來自空間資料來源，包含指定位置之座標位置組的欄位。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36022835"
   
  在您加入地圖或地圖圖層並預覽報表之後，可以變更您在精靈中設定的地圖和地圖圖層選項。 如需詳細資訊，請參閱[自訂地圖或地圖圖層的資料和顯示 &#40;報表產生器及 SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   
- 如需地圖的詳細資訊，請參閱[對應&#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。 如需將地圖加入報表中的逐步指示，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)。  
+ 如需有關地圖的詳細資訊，請參閱[對應&#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。 如需將地圖加入報表中的逐步指示，請參閱[教學課程：地圖報表 &#40;報表產生器&#41;](../tutorial-map-report-report-builder.md)。  
   
  ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示") [回到頁首](#BackToTop)  
   
@@ -201,7 +201,7 @@ ms.locfileid: "36022835"
   
  如需有關圖格的詳細資訊，請參閱＜ [Bing 地圖底圖系統](http://go.microsoft.com/fwlink/?LinkId=147315)＞。 如需有關在報表中使用 Bing 地圖底圖的詳細資訊，請參閱 [其他使用規定](http://go.microsoft.com/fwlink/?LinkId=151371) 和 [隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=151372)。  
   
- 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱[疑難排解報表： 地圖報表&#40;報表產生器及 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和 < 規劃地圖 」 中在[Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書中.  
+ 若要在設計檢視下查看圖格背景，您必須能夠存取網際網路。 若要從報表伺服器上的報表查看預覽中的圖格背景，則必須將報表伺服器設定為支援 Bing 地圖底圖。 如需詳細資訊，請參閱 <<c0> [ 報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41; ](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)和 < 規劃地圖 」 中的[Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312)SQL Server 線上叢書 》 中.</c0>  
   
  如需自訂圖格圖層之其他方式的詳細資訊，請參閱[加入、變更或刪除地圖或地圖圖層 &#40;報表產生器及 SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)。  
   

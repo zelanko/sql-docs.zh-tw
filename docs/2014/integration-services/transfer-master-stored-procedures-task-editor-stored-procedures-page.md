@@ -1,5 +1,5 @@
 ---
-title: 傳送主要預存程序工作編輯器 （預存程序頁面） |Microsoft 文件
+title: 傳送主要預存程序工作編輯器 （預存程序頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferstoredprocedurestask.storedprocedures.f1
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ee8337cfdf090e77c9161600a44d8d6d58d04f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6906f8558f58f119f2408d7c3c854c28576e573
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197458"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>傳送主要預存程序工作編輯器 (預存程序頁面)
   使用 [傳送主要預存程序工作編輯器] 對話方塊的 [預存程序] 頁面，即可指定屬性，以將一個或多個使用者定義預存程序從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體之某個執行個體的 **master** 資料庫，複製到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 之另一個執行個體的 **master** 資料庫中。 如需這項工作的詳細資訊，請參閱[傳送主要預存程序工作](control-flow/transfer-master-stored-procedures-task.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "36145658"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**FailTask**|如果目的地伺服器上的 **master** 資料庫中已經存在有相同名稱的預存程序，則工作失敗。|  
 |**Overwrite**|工作會覆寫目的地伺服器上的 **master** 資料庫中有相同名稱的預存程序。|  
@@ -52,7 +52,7 @@ ms.locfileid: "36145658"
  **TransferAllStoredProcedures**  
  選取是否應將來源伺服器上之 **master** 資料庫中的所有使用者定義預存程序，複製到目的地伺服器。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|複製 **master** 資料庫中的所有使用者定義預存程序。|  
 |**False**|只複製指定的預存程序。|  
@@ -63,7 +63,7 @@ ms.locfileid: "36145658"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [傳送主要預存程序工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送主要預存程序工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [SMO 連線管理員](connection-manager/smo-connection-manager.md)  
   

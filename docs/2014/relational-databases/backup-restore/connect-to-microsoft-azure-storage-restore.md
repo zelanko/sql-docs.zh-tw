@@ -1,27 +1,26 @@
 ---
-title: 連接至 Windows Azure 儲存體 （還原） |Microsoft 文件
+title: 連接至 Windows Azure 儲存體 （還原） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restore.connectstorage.f1
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 64e03f278465d79df789f5e9b79d95eb0ad4a7c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 63f7f0e06a94d9d6a05995e9c19f24f0b8d46047
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146088"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172899"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>連接到 Windows Azure 儲存體 (還原)
   此對話方塊可讓您指定 Windows Azure 儲存體帳戶資訊的連接，以擷取儲存在 Windows Azure 儲存體帳戶中的檔案。 指定必要資訊之後，按一下 [連接] 建立 Windows Azure 儲存體的連接。  

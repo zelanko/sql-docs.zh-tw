@@ -1,5 +1,5 @@
 ---
-title: 伺服器組態-服務帳戶 |Microsoft 文件
+title: 伺服器組態-服務帳戶 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e390c18563b092fd0460da5b9aed90828921d10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137222"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212368"
 ---
 # <a name="server-configuration---service-accounts"></a>伺服器組態 - 服務帳戶
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [伺服器組態] 頁面，即可為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務指派登入帳戶。 設定在這個頁面上的實際服務隨著您選取要安裝的功能而不同。  
   
- 用來啟動並執行的啟動帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以是超連結"ms help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm"\l"Domain_User"的網域使用者帳戶、 本機使用者帳戶、 受管理的服務帳戶虛擬帳戶或內建系統帳戶。  
+ 用來啟動並執行的啟動帳戶[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以是超連結"ms help://SQL11_I1033/s11sq_GetStart_I/html/309b9dac-0b3a-4617-85ef-c4519ce9d014.htm"\l"Domain_User 「 網域使用者帳戶、 本機使用者帳戶、 受管理的服務帳戶虛擬帳戶或內建系統帳戶。  
   
 ## <a name="options"></a>選項。  
  您可以將相同登入帳戶指派給所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務，或個別設定每一個服務帳戶。 此外，您也可以指定要自動啟動服務、手動啟動服務或停用服務。 大部分安裝都建議使用預設帳戶。  
@@ -50,7 +50,7 @@ ms.locfileid: "36137222"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|用於 Distributed Replay Client 服務的服務帳戶。<br /><br /> 提供用以執行 Distributed Replay Client 服務的帳戶。 這個帳戶應該與您用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶不同。<br /><br /> 預設啟動類型為 [手動]。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|用於 Distributed Replay Controller 服務的服務帳戶。<br /><br /> 提供用以執行 Distributed Replay Controller 服務的帳戶。 這個帳戶應該與您用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶不同。<br /><br /> 預設啟動類型為 [手動]。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 全文檢索篩選背景程式啟動器|建立 fdhost.exe 處理序的服務。 這是主控處理全文檢索索引之文字資料的斷詞工具與篩選的必要項目。<br /><br /> 如果您提供了用以執行 FDHOST 啟動器服務的網域帳戶，我們強烈建議您使用低權限帳戶。 這個帳戶應該與您用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的帳戶不同。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器是提供的名稱解析服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接資訊給用戶端電腦。 這項服務會在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體之間共用。 預設登入帳戶為 NT Authority\Local service，而且無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間加以變更。 您可以在安裝完成之後變更此帳戶。 如果沒有在安裝期間指定啟動類型，系統就會依照下列方式決定啟動類型：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器設定為自動並在下面所述的安裝狀況中執行：<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體<br />-<br />                            啟用 TCP 或 NP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體<br />-<br />                            Analysis Server 的具名執行個體而且未建立叢集<br /><br /> 如果上述狀況都不適用，而且已經安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser，就會維持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的目前狀態。<br /><br /> 啟動類型設定為 [停用]，而且如果在安裝之前，沒有舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體存在，就會停止。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 是提供的名稱解析服務[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連接資訊給用戶端電腦。 這項服務會在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體之間共用。 預設登入帳戶為 NT Authority\Local service，而且無法在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間加以變更。 您可以在安裝完成之後變更此帳戶。 如果沒有在安裝期間指定啟動類型，系統就會依照下列方式決定啟動類型：<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 瀏覽器會設定為自動並執行以下所述的安裝案例：<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體<br />-<br />                            啟用 TCP 或 NP 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具名執行個體<br />-<br />                            Analysis Server 的具名執行個體而且未建立叢集<br /><br /> 如果上述狀況都不適用，而且已經安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser，就會維持 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的目前狀態。<br /><br /> 啟動類型設定為 [停用]，而且如果在安裝之前，沒有舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體存在，就會停止。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 安裝的安全性考量](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

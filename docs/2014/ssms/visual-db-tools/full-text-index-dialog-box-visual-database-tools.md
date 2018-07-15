@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3c3b8e9d67aa21db8aaef3992f484b10caa64e78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ccb9c98771128e7793eac25e11e3de851fa6dce2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315077"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>全文檢索索引對話方塊 (Visual Database Tools)
   這個對話方塊可讓您建立全文檢索索引，以便在資料庫資料表的文字資料行上進行全文檢索搜尋。 全文檢索索引必須藉助一般索引，因此您必須先建立一般索引。 您必須在單一、非 Null 的資料行上建立一般索引，而且最好選擇值較小的資料行，而不要選擇包含大數值的資料行。  
@@ -30,7 +30,7 @@ ms.locfileid: "36033146"
 >  若要建立全文檢索索引，您必須先對使用外部工具的資料庫建立全文檢索，例如 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Enterprise Manager。  
   
 > [!NOTE]  
->  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用全文檢索索引功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非每個 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本都可使用全文檢索索引功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="options"></a>選項。  
  **選取的全文檢索索引**  

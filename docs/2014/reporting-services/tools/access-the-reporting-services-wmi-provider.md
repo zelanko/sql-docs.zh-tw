@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - Reporting Services WMI Provider
 api_location:
@@ -22,13 +22,13 @@ ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
 caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 6c3c4bb9cc188e08ad38de73c2be4949e4c6afab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4938b39c182258ac4a764fc71defa21c6fa0d05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317858"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>存取 Reporting Services WMI 提供者
   Reporting Services WMI 提供者會公開兩個 WMI 類別，可透過指令碼管理原生模式報表伺服器執行個體：  
@@ -93,6 +93,6 @@ PS C:\windows\system32> $rsconfig.GetAdminSiteUrl()
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services WMI 提供者程式庫參考&#40;SSRS&#41;](../wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)   
- [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer 設定檔](../report-server/rsreportserver-config-configuration-file.md)  
   
   

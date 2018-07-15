@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_PROVIDER_TYPES 資料列集 |Microsoft 文件
+title: DBSCHEMA_PROVIDER_TYPES 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c26c713f7032038b3cb969ff7681dc23c7deea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7bca2527b77df65dede59878e91ef88ec5f933e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136084"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250948"
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>DBSCHEMA_PROVIDER_TYPES 資料列集
   識別資料提供者所支援的 (基底) 資料類型。  
@@ -44,7 +44,7 @@ ms.locfileid: "36136084"
 |`CREATE_PARAMS`|`DBTYPE_WSTR`||建立此資料類型的資料行時，取用者所指定的建立參數。 例如，SQL 資料類型 `DECIMAL,` 需要有效位數及小數位數。 在此情況下，建立參數可能為字串 "precision,scale"。 在有效位數為 10，小數位數為 2 且用於建立 `DECIMAL` 資料行的文字命令中，`TYPE_NAME` 資料行的值可能為 `DECIMAL()`，完整的類型規格則為 `DECIMAL(10,2)`。<br /><br /> 建立參數會顯示為以逗號分隔的值清單，按提供時的順序列出且不放在括號中。 如果建立參數為長度、最大長度、有效位數、小數位數、種子或增量，請分別使用 "length"、"max length"、"precision"、"scale"、"seed" 和 "increment"。 如果建立參數為其他某值，則提供者會決定要使用什麼文字來描述建立參數。<br /><br /> 如果資料類型需要建立參數，則類型名稱通常會顯示 "()"。 這代表要插入建立參數的位置。 如果類型名稱不包含 "()"，則建立參數會包含在引號中並附加到資料類型名稱。|  
 |`IS_NULLABLE`|`DBTYPE_BOOL`||布林值，指出資料類型是否可為 Null。<br /><br /> `VARIANT_TRUE` 指出資料類型可為 Null。<br /><br /> `VARIANT_FALSE` 指出資料類型不可為 null。<br /><br /> `NULL`— 指出不知道資料類型是否可為 Null。|  
 |`CASE_SENSITIVE`|`DBTYPE_BOOL`||布林值，指出資料類型是否為字元類型且區分大小寫。<br /><br /> `VARIANT_TRUE` 指出資料類型為字元類型且區分大小寫。<br /><br /> `VARIANT_FALSE` 指出資料類型並非字元類型且不區分大小寫。|  
-|`SEARCHABLE`|`DBTYPE_UI4`||整數，指出如果提供者支援 `ICommandText`，如何在搜尋中使用資料類型；否則為 `NULL`。<br /><br /> 此資料行可以有下列的值：<br /><br /> -   `DB_UNSEARCHABLE` 表示資料型別無法在使用`WHERE`子句。<br />-   `DB_LIKE_ONLY` 表示資料型別可以在中使用`WHERE`子句只能搭配`LIKE`述詞。<br />-   `DB_ALL_EXCEPT_LIKE` 表示資料型別可以在中使用`WHERE`子句以外的所有比較運算子搭配`LIKE`。<br />-   `DB_SEARCHABLE` 表示資料型別可以在中使用`WHERE`子句搭配任何比較運算子。|  
+|`SEARCHABLE`|`DBTYPE_UI4`||整數，指出如果提供者支援 `ICommandText`，如何在搜尋中使用資料類型；否則為 `NULL`。<br /><br /> 此資料行可以有下列的值：<br /><br /> -   `DB_UNSEARCHABLE` 表示資料型別不能使用在`WHERE`子句。<br />-   `DB_LIKE_ONLY` 表示可以在使用的資料型別`WHERE`子句只能搭配`LIKE`述詞。<br />-   `DB_ALL_EXCEPT_LIKE` 表示可以在使用的資料型別`WHERE`子句以外的所有比較運算子搭配`LIKE`。<br />-   `DB_SEARCHABLE` 指出資料類型，可用在`WHERE`搭配任何比較運算子的子句。|  
 |`UNSIGNED_ATTRIBUTE`|`DBTYPE_BOOL`||布林值，指出資料類型是否不帶正負號。<br /><br /> `VARIANT_TRUE` 指出資料類型不帶正負號。<br /><br /> `VARIANT_FALSE` 指出資料類型帶正負號。<br /><br /> `NULL` 指出這不適用於資料類型。|  
 |`FIXED_PREC_SCALE`|`DBTYPE_BOOL`||布林值，指出資料類型是否具有固定的有效位數和小數位數。<br /><br /> `VARIANT_TRUE` 指出資料類型具有固定的有效位數和小數位數。<br /><br /> `VARIANT_FALSE` 指出資料類型沒有固定的有效位數和小數位數。|  
 |`AUTO_UNIQUE_VALUE`|`DBTYPE_BOOL`||布林值，指出資料類型是否會自動遞增。<br /><br /> `VARIANT_TRUE` 指出這個類型的值可以自動遞增。<br /><br /> `VARIANT_FALSE` 指出這個類型的值不能自動遞增。<br /><br /> 如果這個值為 `VARIANT_TRUE`，則這個類型的資料行是否一定會自動遞增，取決於提供者的 `DBPROP_COL_AUTOINCREMENT` 資料行屬性。 如果 `DBPROP_COL_AUTOINCREMENT` 是可讀取/寫入的屬性，這個類型的資料行是否會自動遞增就取決於 `DBPROP_COL_AUTOINCREMENT` 屬性的設定。 如果 `DBPROP_COL_AUTOINCREMENT` 是唯讀屬性，則這個類別的資料行全部都會自動遞增或全部不會自動遞增。|  

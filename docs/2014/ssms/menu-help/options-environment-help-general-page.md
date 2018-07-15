@@ -1,5 +1,5 @@
 ---
-title: 選項 （環境說明一般頁面） |Microsoft 文件
+title: 選項 （環境-說明-一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b471acfdbaa82005bbfb0b70b68a78a62498a7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e0f67935fd46e27ad107221de96d8816e056e421
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294078"
 ---
-# <a name="options-environment-help-general-page"></a>選項 （環境說明一般頁面）
+# <a name="options-environment-help-general-page"></a>選項 （環境-說明-一般頁面）
   使用 [選項] 對話方塊來選擇文件集，並決定是否要在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中顯示主題，或是在不同的視窗中顯示。 若要存取此對話方塊，請按一下 [工具] 功能表上的 [選項]，展開 [環境] 節點中的 [說明]，然後按一下 [一般]。  
   
 > [!NOTE]  

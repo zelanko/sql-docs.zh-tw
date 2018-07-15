@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f4698ba7b7c80339632ba56cec30075d8e8c5921
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6b0b08a1435a007c38511d4e93db1c2783dfa956
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296328"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>取得資料連接的替代方式 (報表產生器)
   資料連接包含連接至外部資料來源的資訊，例如 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫。 通常您會向資料來源擁有者取得連接資訊以及要使用的認證類型。  
@@ -76,7 +76,7 @@ ms.locfileid: "36023504"
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [教學課程&#40;報表產生器&#41;](report-builder-tutorials.md)  
   
   

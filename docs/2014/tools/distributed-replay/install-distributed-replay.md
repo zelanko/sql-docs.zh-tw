@@ -1,5 +1,5 @@
 ---
-title: 從命令提示字元安裝 Distributed 的 Replay |Microsoft 文件
+title: 從命令提示字元安裝 Distributed 的 Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac0e2f55a599741e087c338de01e96ee148b463a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1cc56f35b44636493fe022b7adbc2270bf121e55
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310838"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>從命令提示字元處安裝 Distributed Replay
   在命令提示字元處安裝 Distributed Replay 的新執行個體，讓您可以指定安裝功能及應如何設定。 命令提示字元安裝支援安裝、修復、升級及解除 Distributed Replay 元件。 透過命令提示字元安裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 /Q 參數進行完整無訊息模式。  

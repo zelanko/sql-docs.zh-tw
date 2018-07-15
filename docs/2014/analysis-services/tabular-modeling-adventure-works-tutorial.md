@@ -1,5 +1,5 @@
 ---
-title: 表格式模型化 （Adventure Works 教學課程） |Microsoft 文件
+title: 表格式模型化 （Adventure Works 教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3d8b4a492a5da9ae0f709c0ab98189e74ed21269
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 69522d087dffcebf88b011f27797cafc6c0f947e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247368"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>表格式模型化 (Adventure Works 教學課程)
   本教學課程提供如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 表格式模型的課程。  
@@ -55,7 +55,7 @@ ms.locfileid: "36136078"
 > [!NOTE]  
 >  本教學課程並未提供下列相關課程或資訊：使用 SQL Server Management Studio 管理部署的表格式模型資料庫，或使用報表用戶端應用程式連接到部署的模型以瀏覽模型資料。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  您必須安裝下列必要條件，才能完成本教學課程：  
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services 執行個體 (以表格式模式執行)。  
@@ -73,18 +73,18 @@ ms.locfileid: "36136078"
 |------------|--------------------------------|  
 |[課程 1：建立新的表格式模型專案](lesson-1-create-a-new-tabular-model-project.md)|10 分鐘|  
 |[課程 2：新增資料](lesson-2-add-data.md)|20 分鐘|  
-|[第 3 課： 重新命名資料行](rename-columns.md)|20 分鐘|  
-|[第 4 課： 標記為日期資料表](lesson-3-mark-as-date-table.md)|3 分鐘|  
-|[第 5 課： 建立關聯性](lesson-4-create-relationships.md)|10 分鐘|  
-|[第 6 課： 建立導出資料行](lesson-5-create-calculated-columns.md)|15 分鐘|  
-|[第 7 課： 建立量值](lesson-6-create-measures.md)|30 分鐘|  
-|[第 8 課： 建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)|15 分鐘|  
-|[第 9 課： 建立檢視方塊](lesson-8-create-perspectives.md)|5 分鐘|  
-|[第 10 課： 建立階層](lesson-9-create-hierarchies.md)|20 分鐘|  
-|[第 11 課： 建立資料分割](lesson-10-create-partitions.md)|15 分鐘|  
-|[第 12 課： 建立角色](lesson-11-create-roles.md)|15 分鐘|  
-|[第 13 課： 在 Excel 中進行分析](lesson-12-analyze-in-excel.md)|20 分鐘|  
-|[第 14 課： 部署](lesson-13-deploy.md)|5 分鐘|  
+|[第 3 課：重新命名資料行](rename-columns.md)|20 分鐘|  
+|[第 4 課：標記為日期資料表](lesson-3-mark-as-date-table.md)|3 分鐘|  
+|[第 5 課：建立關聯性](lesson-4-create-relationships.md)|10 分鐘|  
+|[第 6 課：建立計算結果欄](lesson-5-create-calculated-columns.md)|15 分鐘|  
+|[第 7 課：建立量值](lesson-6-create-measures.md)|30 分鐘|  
+|[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)|15 分鐘|  
+|[第 9 課：建立檢視方塊](lesson-8-create-perspectives.md)|5 分鐘|  
+|[第 10 課：建立階層](lesson-9-create-hierarchies.md)|20 分鐘|  
+|[第 11 課：建立資料分割](lesson-10-create-partitions.md)|15 分鐘|  
+|[第 12 課：建立角色](lesson-11-create-roles.md)|15 分鐘|  
+|[第 13 課：在 Excel 中進行分析](lesson-12-analyze-in-excel.md)|20 分鐘|  
+|[第 14 課：部署](lesson-13-deploy.md)|5 分鐘|  
   
 ## <a name="supplemental-lessons"></a>補充課程  
  本教學課程也包含[補充課程](../tutorials/supplemental-lessons.md)。 本節中的主題並非完成教學課程所必須，但是能幫助您更了解進階表格式模型撰寫功能。  
@@ -93,7 +93,7 @@ ms.locfileid: "36136078"
   
 |課程|估計完成時間|  
 |------------|--------------------------------|  
-|[使用資料列篩選實作動態安全性](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 分鐘|  
+|[使用資料列篩選器實作動態安全性](../tutorials/implement-dynamic-security-by-using-row-filters.md)|30 分鐘|  
 |[設定 Power View 報表的報表屬性](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)設定 Power View 報表的報表屬性|30 分鐘|  
   
 ## <a name="next-step"></a>下一個步驟  

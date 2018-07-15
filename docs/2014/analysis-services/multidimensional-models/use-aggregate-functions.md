@@ -1,5 +1,5 @@
 ---
-title: 使用彙總函式 |Microsoft 文件
+title: 使用彙總函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - aggregate functions [Analysis Services]
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9520426cdb177b8851f0766448f637563b125693
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68ec0250382ad6ec865ff37adcb847ba6afec978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257544"
 ---
 # <a name="use-aggregate-functions"></a>使用彙總函式
   當維度用於配量量值時，量值會與該維度所含的階層一起彙總。 而總和行為則視指定給量值的彙總函式而定 對於大多數包含數值資料的量值而言，彙總函式是 `Sum`。 量值的值會依據所使用的階層層級而加總為不同的數量。  
   
- 在 Analysis Services 中，您建立的每個量值都有一個彙總函數可以決定量值的作業。 預先定義的彙總類型包括`Sum`， `Min`， `Max`， `Count`，**相異計數量**，和數個其他更具特製化函式。 或者，您如需透過複雜或自訂的公式執行彙總，可以建置 MDX 計算，而不使用預先建置的彙總函數。 例如，若您要定義百分比值的量值，可以在 MDX 中使用導出量值。 請參閱 [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)。  
+ 在 Analysis Services 中，您建立的每個量值都有一個彙總函數可以決定量值的作業。 預先定義的彙總類型包括`Sum`， `Min`， `Max`， `Count`，**相異計數量**，及其他更特殊的函數。 或者，您如需透過複雜或自訂的公式執行彙總，可以建置 MDX 計算，而不使用預先建置的彙總函數。 例如，若您要定義百分比值的量值，可以在 MDX 中使用導出量值。 請參閱 [CREATE MEMBER 陳述式 &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)。  
   
- 由 [Cube 精靈] 建立的量值，會在定義量值時，為其指派彙總類型。 彙總類型一律為`Sum`，來源資料行包含數值資料。 `Sum` 會指派而來源資料行的資料類型。 例如，若是使用 [Cube 精靈] 建立量值，並將其從事實資料表提取到所有資料行，則即使來源為日期時間資料行，所得量值的彙總類型都會是 `Sum`。 對於精靈所建立的量值，請務必檢查預先指派的彙總方法，以確認彙總函數的適用性。  
+ 由 [Cube 精靈] 建立的量值，會在定義量值時，為其指派彙總類型。 彙總類型一律為`Sum`，來源資料行包含數值資料。 `Sum` 無論來源資料行的資料類型指派。 例如，若是使用 [Cube 精靈] 建立量值，並將其從事實資料表提取到所有資料行，則即使來源為日期時間資料行，所得量值的彙總類型都會是 `Sum`。 對於精靈所建立的量值，請務必檢查預先指派的彙總方法，以確認彙總函數的適用性。  
   
  您可以使用 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 或 MDX 指派或變更任一個 Cube 定義的彙總方法。 如需進一步指示，請參閱[在多維度模型中建立量值和量值群組](create-measures-and-measure-groups-in-multidimensional-models.md)或 [Aggregate &#40;MDX&#41;](/sql/mdx/aggregate-mdx)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36145722"
 |`Max`|局部加總|擷取所有子成員的最高值。|  
 |`DistinctCount`|非加法|擷取所有唯一子成員的計數。 如需詳細資訊，請參閱下一節中的 [About Distinct Count measure](use-aggregate-functions.md#bkmk_distinct) (關於相異計數量值)。|  
 |`None`|非加法|不執行彙總，而且針對包含該量值的量值群組，直接從事實資料表提供維度中分葉與非分葉成員的所有值。 如果無法從成員的事實資料表讀取任何值，該成員的值就會設定為 Null。|  
-|`ByAccount`|局部加總|針對帳戶維度中的成員，依據指派給帳戶類型的彙總函式來計算彙總。 如果沒有帳戶類型維度的量值群組中，視為`None`彙總函式。<br /><br /> 如需帳戶維度的詳細資訊，請參閱 [建立父子式類型維度的財務帳戶](database-dimensions-finance-account-of-parent-child-type.md)。|  
+|`ByAccount`|局部加總|針對帳戶維度中的成員，依據指派給帳戶類型的彙總函式來計算彙總。 如果量值群組中沒有的帳戶類型維度，則視為`None`彙總函式。<br /><br /> 如需帳戶維度的詳細資訊，請參閱 [建立父子式類型維度的財務帳戶](database-dimensions-finance-account-of-parent-child-type.md)。|  
 |`AverageOfChildren`|局部加總|針對所有非空白的子成員，計算值的平均。|  
 |`FirstChild`|局部加總|擷取第一個子成員的值。|  
 |`LastChild`|局部加總|擷取最後一個子成員的值。|  

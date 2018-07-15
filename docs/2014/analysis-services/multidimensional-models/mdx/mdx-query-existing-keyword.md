@@ -1,5 +1,5 @@
 ---
-title: EXISTING 關鍵字 (MDX) |Microsoft 文件
+title: EXISTING 關鍵字 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - EXISTING
 helpviewer_keywords:
 - Existing keyword
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7205cad36bbeb5adee16ca10bd881280b59d98f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a781fb58f45c478b6a3611132a210b14012ffb72
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228388"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING 關鍵字 (MDX)
   強制在目前內容內評估指定的集合。  
@@ -43,7 +43,7 @@ Existing Set_Expression
  根據預設，會在包含集合成員的 Cube 內容內評估集合。 `Existing`關鍵字會強制改為評估目前內容中指定的集合。  
   
 ## <a name="example"></a>範例  
- 下列範例會根據使用 `Aggregate` 函數評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 但是 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 和 [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 函數是用來傳回 Product 維度中產品類別目錄的衰退銷售值。 `Existing`關鍵字強制中設定的`Filter`State-province 屬性階層的 Washington 和 Oregon 成員目前內容中-也就是要評估的函式。  
+ 下列範例會根據使用 `Aggregate` 函數評估之使用者選取的 State-Province 成員值，傳回上一個時間週期銷售值衰退的轉售商計數。 但是 [Hierarchize &#40;MDX&#41;](/sql/mdx/hierarchize-mdx) 和 [DrilldownLevel (MDX)](/sql/mdx/drilldownlevel-mdx) 函數是用來傳回 Product 維度中產品類別目錄的衰退銷售值。 `Existing`關鍵字會強制中設定的`Filter`State-province 屬性階層的 Washington 和 Oregon 成員目前內容中-也就是要評估的函式。  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  

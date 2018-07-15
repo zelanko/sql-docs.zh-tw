@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb4e03d2fe9d653c0641262c068e997a8537970a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: c82afb6602b141c4561fba9a5c8b13793550cad5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284814"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>在兩部伺服器上建立相同的對稱金鑰
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中於兩部不同的伺服器上建立相同的對稱金鑰 若要解密加密文字，您就需要用來加密的金鑰。 在單一資料庫中同時進行加密和解密時，此金鑰會儲存在資料庫中，然後根據權限提供金鑰，以便進行加密和解密。 但是，在不同的資料庫或不同的伺服器上進行加密和解密時，儲存在某個資料庫中的金鑰將無法在第二個資料庫上使用。  

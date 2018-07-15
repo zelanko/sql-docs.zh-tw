@@ -1,5 +1,5 @@
 ---
-title: 工作 11： 發行知識庫 |Microsoft 文件
+title: 工作 11： 發行知識庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,25 +10,25 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d83e55bf66f6d8f15a79e687467936b60eb3679a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90a030f55e1fc21ef43caa27e6ad6389e48b4b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136981"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232468"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>工作 11：發行知識庫
   在這項工作中，您會發行知識庫。 已發行的知識庫可用於清理或比對資料品質專案中的活動。  
   
-1.  按一下**完成**在視窗底部的按鈕。  
+1.  按一下 [**完成**底部的視窗] 按鈕。  
   
-2.  按一下**發行**中**SQL Server Data Quality Services**  對話方塊。  
+2.  按一下 [**發佈**中**SQL Server Data Quality Services** ] 對話方塊。  
   
 3.  按一下 [確定] 關閉訊息方塊。  
   

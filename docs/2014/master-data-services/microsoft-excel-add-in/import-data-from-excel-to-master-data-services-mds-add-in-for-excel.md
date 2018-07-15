@@ -1,5 +1,5 @@
 ---
-title: 發行從 Excel 的資料至 MDS （MDS 增益集的 Excel） |Microsoft 文件
+title: 發行至 MDS （MDS 增益集適用於 Excel） 從 Excel 資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f32226602413b1d2a7851d9f66ed0f8395f82e95
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b80221892fe4f55866e5197f76038057205b06ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180045"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>將資料從 Excel 發行至 MDS (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，若您已結束使用 Excel 且想要儲存變更，以讓其他使用者能夠存取，請將資料發行至 MDS 儲存機制。  
@@ -28,7 +28,7 @@ ms.locfileid: "36146980"
 >  -   當您發行變更時，系統會刪除 MDS 管理之資料格的註解。  
 > -   MDS 管理的資料格中不支援公式。 MDS 管理之資料格中的公式會處理為文字值。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  

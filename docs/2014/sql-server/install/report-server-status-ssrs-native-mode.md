@@ -1,5 +1,5 @@
 ---
-title: 報表伺服器狀態 （SSRS 原生模式） |Microsoft 文件
+title: 報表伺服器狀態 （SSRS 原生模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serverstatus.F1
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 914b5ffb0d7cbdfa2368966e110fe4d7ecf278ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8cf6558824461b0de36323f1788933a0cd01815c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292218"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>報表伺服器狀態 (SSRS 原生模式)
   使用此頁面可檢視目前所連接之報表伺服器執行個體的相關資訊。 此頁面是報表伺服器組態的起始頁面。 其他頁面可用於設定 URL、服務帳戶、報表伺服器資料庫、報表伺服器電子郵件傳遞、向外延展部署和加密金鑰。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式。  
   
- 若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到報表伺服器執行個體。 如需詳細資訊，請參閱[Reporting Services 組態管理員&#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)。  
+ 若要開啟此頁面，請啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員，並連接到報表伺服器執行個體。 如需詳細資訊，請參閱 < [Reporting Services 組態管理員&#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)。  
   
 > [!TIP]  
 >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態管理員 (RSConfigTool.exe) 使用"highestAvailable"權限層級安裝。 這是依據設計的行為。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態管理員需要與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI API 進行通訊。 某些 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI 通訊需要更高層級或系統管理權限。  
@@ -37,13 +37,13 @@ ms.locfileid: "36032706"
   
 ## <a name="options"></a>選項。  
  **SQL Server 執行個體**  
- 顯示目前所連接報表伺服器執行個體的相關資訊。 報表伺服器執行個體名稱根據[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具名執行個體。 預設執行個體為 MSSQLSERVER。 具名執行個體將會是您在安裝期間所指定的值。 如需有關執行個體的詳細資訊，請參閱[使用多個版本和 SQL Server 執行個體](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+ 顯示目前所連接報表伺服器執行個體的相關資訊。 報表伺服器執行個體名稱根據[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]具名執行個體。 預設執行個體為 MSSQLSERVER。 具名執行個體將會是您在安裝期間所指定的值。 如需有關執行個體的詳細資訊，請參閱[使用多個版本和 SQL Server 執行個體](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 > [!NOTE]  
 >  在 SQL Server Express with Advanced Services 中，預設執行個體為 SQLExpress。  
   
  **執行個體識別碼**  
- 對應至檔案系統上儲存您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的程式檔案的資料夾。 **執行個體識別碼**值由安裝程式指派格式*元件*。*執行個體*，其中*元件*是一個值，表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件和*執行個體*是執行個體名稱。 預設執行個體名稱是 MSSQLSERVER。 例如，如果您安裝的預設執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]對應的資料夾名稱的元件，如下所示：  
+ 對應至檔案系統上儲存您所連接之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的程式檔案的資料夾。 **執行個體識別碼**安裝程式會指派值格式*元件*。*執行個體*，其中*元件*是一個值，表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]元件並*執行個體*是執行個體名稱。 預設執行個體名稱是 MSSQLSERVER。 例如，如果您安裝的預設執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]元件，對應的資料夾名稱如下所示：  
   
 -   MSSQL12.MSSQLSERVER  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36032706"
   
 -   MSRS12.MSSQLSERVER  
   
- 如果您安裝的元件，您已經安裝，這類的第二個執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]，而且您將執行個體 Contoso，**執行個體識別碼**是 MSSQL12。Contoso。  
+ 如果您安裝第二個元件的執行個體，您已安裝，這類[!INCLUDE[ssDE](../../includes/ssde-md.md)]，而且您將執行個體 Contoso**執行個體識別碼**是 MSSQL12。Contoso。  
   
  **版本(Edition)**  
  顯示版本資訊。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本支援的功能清單，請參閱 [SQL Server 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473)。  
@@ -72,7 +72,7 @@ ms.locfileid: "36032706"
  啟動報表伺服器服務。 在某些組態變更之後，就必須重新啟動此服務 (例如，在變更電腦名稱之後重新設定報表伺服器時)。 如果您重新設定 URL 保留項目，此服務將會自動重新啟動。 在挑選變更時，需要重新啟動。  
   
  **停止**  
- 停止報表伺服器服務。 停止此服務會造成報表伺服器停止運作。 如需詳細資訊，請參閱[啟動和停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
+ 停止報表伺服器服務。 停止此服務會造成報表伺服器停止運作。 如需詳細資訊，請參閱 <<c0> [ 啟動和停止報表伺服器服務](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員 F1 說明主題&#40;SSRS 原生模式&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

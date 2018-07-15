@@ -1,5 +1,5 @@
 ---
-title: IsKey 元素 (ASSL) |Microsoft 文件
+title: IsKey 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IsKey element
 ms.assetid: 523b26c8-5cce-415d-a360-9a0d8724b872
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ecf2b45a6cc6b7963a894bea8316f5080676fef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 755d401f304b04e675f343911ef127050552b789
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288024"
 ---
 # <a name="iskey-element-assl"></a>IsKey 元素 (ASSL)
   指出資料行是否提供的案例中的索引鍵[MiningStructure](../objects/miningstructure-element-assl.md)項目。  
@@ -64,7 +64,7 @@ ms.locfileid: "36145247"
 ## <a name="remarks"></a>備註  
  您可以針對巢狀資料表結構的每個層級指定一個或多個資料行當做索引鍵資料行。  
   
- 對應目的父代的項目`IsKey`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 對應至父系的元素`IsKey`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

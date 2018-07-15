@@ -1,5 +1,5 @@
 ---
-title: 什麼&#39;適用於 SQL Server 2014 報表產生器中的新 s |Microsoft 文件
+title: 什麼&#39;適用於 SQL Server 2014 報表產生器的新功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8223c19b-4b0d-4b1d-a042-9a726c18e708
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf08740110d2b7517a692e0c7a7f53351767d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8825385596c14121d0e6e13a7ecdbccbafb26a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146004"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224898"
 ---
-# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>什麼&#39;s 新功能適用於 SQL Server 2014 報表產生器
+# <a name="what39s-new-in-report-builder-for-sql-server-2014"></a>什麼&#39;適用於 SQL Server 2014 報表產生器的新功能
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 導入了許多 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 功能。  
   
- 如需有關此版本的其他功能的資訊[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]產品和技術，請參閱[What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)。  
+ 如需功能在此版本中的其他資訊[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]產品和技術，請參閱[What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)。  
   
 > [!TIP]  
->  最新的資訊和此版本中的新功能相關的資源，請參閱[需在 SQL Server Reporting Services (SSRS) 的新功能的其他資訊](http://go.microsoft.com/fwlink/?LinkId=207147)。  
+>  如最新的資訊以及有關此版本中的新功能的資源，請參閱[在 SQL Server Reporting Services (SSRS) 的新功能的其他資訊](http://go.microsoft.com/fwlink/?LinkId=207147)。  
   
-##  <a name="ExcelRenderer"></a> 適用於 Microsoft Excel 2007-2010年和 Microsoft Excel 2003 的 excel 轉譯器  
+##  <a name="ExcelRenderer"></a> 適用於 Microsoft Excel 2007-2010 和 Microsoft Excel 2003 的 excel 轉譯器  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Excel 轉譯延伸模組是 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 新功能，它會將報表轉譯為相容於 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2007-2010 以及已安裝 Microsoft Office Word、Excel 和 PowerPoint 相容性套件的 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 2003 的 Excel 文件。 此格式為 Office Open XML，其副檔名為 .xlsx。  
   
  此 Excel 轉譯延伸模組移除了舊版的限制，可與 Excel 2003 相容。 以下列出轉譯延伸模組中的改進功能：  
@@ -44,7 +44,7 @@ ms.locfileid: "36146004"
   
  如需詳細資訊，請參閱[匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)。  
   
-##  <a name="WordRenderer"></a> 適用於 Microsoft Word 2007-2010年和 Microsoft Word 2003 的 Word 轉譯器  
+##  <a name="WordRenderer"></a> Microsoft Word 2007-2010 和 Microsoft Word 2003 的 Word 轉譯器  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Word 轉譯延伸模組是 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的新功能，它會將報表轉譯為相容於 [!INCLUDE[ofprword](../includes/ofprword-md.md)] 2007-2010 以及已安裝 [!INCLUDE[ofprword](../includes/ofprword-md.md)] Office Word、Excel 和 PowerPoint 相容性套件的 [!INCLUDE[msCoName](../includes/msconame-md.md)] 2003 的 Word 文件。 此格式為 Office Open XML，其副檔名為 docx。  
   
  除了讓 Word 2007-2010 新功能用於匯出的報表之外，匯出的報表 *.docx 檔案通常較小。 使用 Word 轉譯器所匯出的報表通常比使用 Word 2003 轉譯器所匯出的相同報表小得多。  

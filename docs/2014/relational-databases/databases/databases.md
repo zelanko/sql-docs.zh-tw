@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data warehouse [SQL Server]
 - OLTP databases [SQL Server]
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: de7f79af288674b5bf2dbb53979071dea505428c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2d95b8a11ba3d1772bbb108435317e2e55e3c89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250238"
 ---
 # <a name="databases"></a>資料庫
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫是由資料表集合所組成，該集合內儲存了一組特定的結構資料。 而資料表中則包含資料列集合 (也稱為記錄或 Tuple) 和資料行 (也稱為屬性) 集合。 資料表中的每個資料行都是為了儲存某類型資訊而設計，例如，日期、名稱、金額和數字。  
@@ -46,7 +46,7 @@ ms.locfileid: "36136163"
 |-|-|  
 |[系統資料庫](system-databases.md)|[刪除資料庫的資料或記錄檔](delete-data-or-log-files-from-a-database.md)|  
 |[自主資料庫](contained-databases.md)|[顯示資料庫的資料和記錄空間資訊](display-data-and-log-space-information-for-a-database.md)|  
-|[在 Windows Azure 中的 SQL Server 資料檔案](sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](increase-the-size-of-a-database.md)|  
+|[Windows Azure 中的 SQL Server 資料檔案](sql-server-data-files-in-microsoft-azure.md)|[增加資料庫的大小](increase-the-size-of-a-database.md)|  
 |[資料庫檔案與檔案群組](database-files-and-filegroups.md)|[重新命名資料庫](rename-a-database.md)|  
 |[資料庫狀態](database-states.md)|[將資料庫設定為單一使用者模式](set-a-database-to-single-user-mode.md)|  
 |[檔案狀態](file-states.md)|[壓縮資料庫](shrink-a-database.md)|  

@@ -1,5 +1,5 @@
 ---
-title: 基本 MDX 指令碼 (MDX) |Microsoft 文件
+title: 基本 MDX 指令碼 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default MDX scripts
 - statements [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [MDX], about scripts
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 501268fe4537e261b21af317fd90da32efb0e917
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fcdb7be7a4e3a9ab29dc93f899f3035cf68264c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032424"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303098"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本 MDX 指令碼 (MDX)
   多維度運算式 (MDX) 指令碼可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中定義 Cube 的計算處理序。 MDX 指令碼有以下兩種類型：  

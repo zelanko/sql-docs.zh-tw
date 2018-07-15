@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 787c9bac7f1eb1f07b22df3296a61afd1c10f70f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0b910c73b09b2ebb5018c762fdd44c9da17c7924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212178"
 ---
 # <a name="viewing-tuning-reports"></a>檢視微調報表
   在這個課程的上一個練習中，您檢視了在 MySession 微調工作階段所產生的 Database Engine Tuning Advisor 建議中建立或卸除資料庫物件的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼。 MySession 微調工作階段是先前在 [微調工作負載](lesson-1-1-tuning-a-workload.md)中所建立的。  

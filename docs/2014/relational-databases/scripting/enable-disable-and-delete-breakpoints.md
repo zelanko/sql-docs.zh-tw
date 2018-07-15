@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 286537ff8e186d76b6bfe46c24a54f54a1d1191b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 28bdf53011affc00e8753cc76487a064bd941873
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276174"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>啟用、停用以及刪除中斷點
   若要檢視和管理所有已開啟的中斷點，您可以使用 **[中斷點]** 視窗。 這個視窗可用以檢視中斷點資訊，以及採取刪除、停用或啟用中斷點的這類動作。  

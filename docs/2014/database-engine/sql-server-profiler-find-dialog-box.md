@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-尋找對話方塊 |Microsoft 文件
+title: SQL Server Profiler-尋找對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.find.f1
 helpviewer_keywords:
 - Find dialog box
 ms.assetid: dfaeec04-93d3-4214-9fc1-38b80179b36b
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 12c2fce80877fd14412558b673fa94662b712dba
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 311d248acae2b64d106c57f5c7f92024c4174e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199988"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>SQL Server Profiler - 尋找對話方塊
   使用 [尋找] 對話方塊，即可針對追蹤搜尋特定字元或文字。 若要取消進行中的搜尋，請按下 ESC 鍵。  
@@ -50,7 +50,7 @@ ms.locfileid: "36147003"
  在追蹤中向後搜尋，以尋找 [尋找目標] 方塊中之字元的上一個範例。  
   
 ## <a name="see-also"></a>另請參閱  
- [尋找值或資料行在追蹤時&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
+ [尋找值或在追蹤時的資料行&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
  [建立追蹤&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [開啟追蹤資料表 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [開啟追蹤檔案 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   

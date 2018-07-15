@@ -1,5 +1,5 @@
 ---
-title: 檢視 Integration Services 封裝在 SQL Server Management Studio （SSIS 服務） |Microsoft 文件
+title: 檢視 Integration Services 封裝，在 SQL Server Management Studio （SSIS 服務） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing packages
 - connections [Integration Services], packages
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8b3f72ed86e681447e373ed682831e2ef86852e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57d7a86bea2082875139c84c2f3759e40f92341e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032577"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290866"
 ---
 # <a name="view-integration-services-packages-in-sql-server-management-studio-ssis-service"></a>在 SQL Server Management Studio 中檢視 Integration Services 封裝 (SSIS 服務)
     

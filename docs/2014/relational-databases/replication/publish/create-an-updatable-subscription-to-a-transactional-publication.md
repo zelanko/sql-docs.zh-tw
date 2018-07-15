@@ -1,5 +1,5 @@
 ---
-title: Create an Updatable Subscription to a Transactional Publication (Management Studio) |Microsoft 文件
+title: Create an Updatable Subscription to a Transactional Publication (Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - updateable transactional subscriptions, SSMS
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f7eaf65c28de437c1340d1c3a1f90c18d1816e37
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1b6a3e276eb1250938e882316f84cf61f49a5b7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022847"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290464"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>建立交易式發行集的可更新訂閱 (Management Studio)
 

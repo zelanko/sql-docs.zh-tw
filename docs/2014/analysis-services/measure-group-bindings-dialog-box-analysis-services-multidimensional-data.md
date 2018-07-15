@@ -1,5 +1,5 @@
 ---
-title: 量值群組繫結對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 量值群組繫結對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1
 helpviewer_keywords:
 - Measure Group Bindings dialog box
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1508624a9d0e5a9f36c8ec7c15093f56b37977ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c306ba41e8ebb6fe2615be0bec8f3cebd560e65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226408"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>量值群組繫結對話方塊 (Analysis Services - 多維度資料)
   使用 [量值群組繫結] 對話方塊，即可針對一般維度關聯性，建立及修改 Cube 維度中之非資料粒度屬性，與量值群組中之資料行之間的直接關聯性；以及從 [定義關聯性] 對話方塊中，指定 Cube 維度中之任何屬性的 Null 處理選項。  

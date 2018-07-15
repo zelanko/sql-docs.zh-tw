@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3136f7ae-b3f1-4932-a5da-95175907671c
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ad476af3353a960c43e66fff1377ebbf386e2fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 32af696d4d0f107a0aa145aa28abcd0cb485ce99
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253700"
 ---
 # <a name="sql-server-integration-services-100-sql-server-configuration-manager"></a>SQL Server Integration Services 10.0 (SQL Server 組態管理員)
   這是支援 [!INCLUDE[ssIS](../../includes/ssis-md.md)]的服務。 若要檢視服務的屬性，請以滑鼠右鍵按一下詳細資料窗格中的服務，然後按一下 **[屬性]**。  

@@ -1,5 +1,5 @@
 ---
-title: ResumeService 方法 （SqlService 類別） |Microsoft 文件
+title: ResumeService 方法 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ResumeService method
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 954e3277c9a0ca93854f507778287a4763c5c383
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0cf92d7c4342cba1dd601e5e927c93e78aae6784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032245"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319748"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 方法 (SqlService 類別)
   嘗試將此服務置於繼續狀態。  

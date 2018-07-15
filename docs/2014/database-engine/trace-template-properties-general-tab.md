@@ -1,5 +1,5 @@
 ---
-title: 追蹤範本屬性 （一般索引標籤） |Microsoft 文件
+title: 追蹤範本屬性 （一般索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.general.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab029ce62fde3ec410208582884890e1ff92b47b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6e740d4866797c8d64b8798cd41dea9159f262ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184755"
 ---
 # <a name="trace-template-properties-general-tab"></a>追蹤範本屬性 (一般索引標籤)
   使用 **[追蹤範本屬性]** 對話方塊的 **[一般]** 索引標籤，以使用下列選項來建立新的追蹤範本。 若要存取此對話方塊，請在 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[檔案]** 功能表上，指向 **[範本]**，然後按一下 **[新增範本]**。  

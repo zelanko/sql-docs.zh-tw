@@ -1,5 +1,5 @@
 ---
-title: IncrementalProcessingNotification 元素 (ASSL) |Microsoft 文件
+title: IncrementalProcessingNotification 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IncrementalProcessingNotification element
 ms.assetid: bfc9b0a4-4043-4aaf-82d9-67e7f1d1eb81
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ab48f74b38484d10b1142188e8a87f585495860f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd7e2a8defb588e722ac714d3fa07b22a581bf0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147039"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189005"
 ---
 # <a name="incrementalprocessingnotification-element-assl"></a>IncrementalProcessingNotification 元素 (ASSL)
   包含的資訊[ProactiveCaching](proactivecaching-element-assl.md)有關判斷累加式處理進度所執行之查詢的項目。  
@@ -58,11 +58,11 @@ ms.locfileid: "36147039"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>。  
   
 ## <a name="see-also"></a>另請參閱  
  [ProactiveCachingQueryBinding 資料類型&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   
- [ProactiveCaching 元素&#40;ASSL&#41;](proactivecaching-element-assl.md)   
+ [ProactiveCaching 項目&#40;ASSL&#41;](proactivecaching-element-assl.md)   
  [物件&#40;ASSL&#41;](objects-assl.md)  
   
   

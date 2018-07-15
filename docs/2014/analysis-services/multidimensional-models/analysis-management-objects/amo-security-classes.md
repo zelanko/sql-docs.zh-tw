@@ -1,5 +1,5 @@
 ---
-title: AMO 安全性類別 |Microsoft 文件
+title: AMO 安全性類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: e3d5012a-8121-40de-9244-1fc824228693
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9562c7aab750f4114ef59c1a7c17f44c8e3b05e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de0adbcc122e87ef95a349b357f0cfd173bd98a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220288"
 ---
 # <a name="amo-security-classes"></a>AMO 安全性類別
   

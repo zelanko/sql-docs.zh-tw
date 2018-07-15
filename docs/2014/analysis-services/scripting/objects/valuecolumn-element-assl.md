@@ -1,5 +1,5 @@
 ---
-title: ValueColumn 元素 (ASSL) |Microsoft 文件
+title: ValueColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ValueColumn element
 ms.assetid: 6c2d6822-8ecc-46df-9fa9-bb92ac716c36
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cac1df12074e26cc375835a98231a79e101f0d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7279cb1f8f9bc5a7dc8c9e564081a227edc32f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231898"
 ---
 # <a name="valuecolumn-element-assl"></a>ValueColumn 元素 (ASSL)
   識別提供父元素之值的資料行。  
@@ -60,11 +60,11 @@ ms.locfileid: "36145718"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如果[NameColumn](namecolumn-element-assl.md)元素`DimensionAttribute`指定，則相同`DataItem`值做為預設值`ValueColumn`項目。 如果`NameColumn`元素`DimensionAttribute`未指定和[KeyColumns](../collections/keycolumns-element-assl.md)集合`DimensionAttribute`包含單一[KeyColumn](keycolumn-element-assl.md)代表字串的索引鍵資料行項目資料型別相同`DataItem`值做為預設值`ValueColumn`項目。  
+ 如果[NameColumn](namecolumn-element-assl.md)項目`DimensionAttribute`指定，則相同`DataItem`值做為預設值`ValueColumn`項目。 如果`NameColumn`項目`DimensionAttribute`未指定並[KeyColumns](../collections/keycolumns-element-assl.md)集合`DimensionAttribute`包含單一[KeyColumn](keycolumn-element-assl.md)代表具有字串索引鍵資料行的項目相同的資料類型`DataItem`值做為預設值`ValueColumn`項目。  
   
- 如需有關`DataItem`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件和屬性的資料表`DataItem`類型，請參閱[DataItem 資料類型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
+ 如需詳細資訊`DataItem`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件和屬性的資料表`DataItem`類型，請參閱[DataItem 資料類型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 對應至父系的項目`NameColumn`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>和<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 對應至父系的元素`NameColumn`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.DimensionAttribute>和<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

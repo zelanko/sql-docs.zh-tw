@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database performance [SQL Server], alerts
 - alerts [SQL Server], creating
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - server performance [SQL Server], alerts
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 caps.latest.revision: 21
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 65010625f31434a28f74701de21500742a7db292
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 15de81eda0aac3e2f441aade557d8f7730a3f22f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283074"
 ---
 # <a name="create-a-sql-server-database-alert"></a>建立 SQL Server 資料庫警示
   您可以使用「系統監視器」來建立警示，讓它在達到「系統監視器」計數器的臨界值時引發。 為了回應此警示，「系統監視器」可啟動某個應用程式，諸如撰寫來處理此警示條件的自訂應用程式。 例如，您可以建立一個警示，讓它在死結 (Deadlock) 個數超過特定數值時引發。  

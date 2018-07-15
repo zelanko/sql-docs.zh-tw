@@ -1,5 +1,5 @@
 ---
-title: DefaultMeasure 元素 (ASSL) |Microsoft 文件
+title: DefaultMeasure 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DefaultMeasure element
 ms.assetid: ceac8b3d-ebae-463f-9e8c-506281d42792
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 72585d3d1bbce32fd3af4bedbf60e660f8b197f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6650ad99a21a4c2628e94e483c4cd2947d240bc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032865"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314638"
 ---
 # <a name="defaultmeasure-element-assl"></a>DefaultMeasure 元素 (ASSL)
-  包含定義的預設量值的多維度運算式 (MDX) 運算式[Cube](../objects/cube-element-assl.md)或[觀點來看](../objects/perspective-element-assl.md)項目。  
+  包含定義之預設量值的多維度運算式 (MDX) 運算式[Cube](../objects/cube-element-assl.md)或是[觀點來看](../objects/perspective-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36032865"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`DefaultMeasure`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Cube>和<xref:Microsoft.AnalysisServices.Perspective>。  
+ 對應至父系的元素`DefaultMeasure`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.Cube>和<xref:Microsoft.AnalysisServices.Perspective>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

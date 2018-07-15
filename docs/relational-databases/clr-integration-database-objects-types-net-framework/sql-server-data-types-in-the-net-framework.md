@@ -1,11 +1,11 @@
 ---
-title: .NET Framework 中的 SQL Server 資料類型 |Microsoft 文件
+title: .NET Framework 中的 SQL Server 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,16 +22,16 @@ caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fe3a5c99e2c1e9bf569ecdbb1ab31d683d340206
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ed5a1608807d1a05638ee1854ff6676c4cdc7db6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702049"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350190"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 的 SQL Server 資料類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **SqlTypes**程式庫是基底類別庫的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題說明新的語意，以.NET Framework 程式設計人員，並介紹中所實作的型別**System.Data.SqlTypes**命名空間中隨附**System.Data**程式庫。  
+  **SqlTypes**程式庫是基底類別庫的一部分[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題將告訴您新的語意，以.NET Framework 程式設計人員，並介紹中實作的類型**System.Data.SqlTypes**中所包含的命名空間**System.Data**程式庫。  
   
  下表列出本節中的主題。  
   

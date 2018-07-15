@@ -1,5 +1,5 @@
 ---
-title: 設計查詢 |Microsoft 文件
+title: 設計查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 caps.latest.revision: 39
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2ca850de7e8f09f704434910ccf0fa45cbfca726
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: be1faf198c38ee9445602aa0e0bcc8ae66b5461a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270304"
 ---
 # <a name="design-the-query"></a>設計查詢
   使用報表精靈的這個頁面，即可透過手動輸入查詢、使用查詢產生器以互動方式建立查詢或從其他報表匯入查詢，藉以建立查詢。  
@@ -38,7 +38,7 @@ ms.locfileid: "36137022"
  如需有關查詢設計工具的詳細資訊，請參閱＜ [Reporting Services Query Designers](../../2014/reporting-services/reporting-services-query-designers.md)＞。  
   
 ## <a name="example"></a>範例  
- 資料來源類型**Microsoft SQL Server**，下列查詢會擷取最後一個名稱，從清單[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫`Person`資料表。  
+ 資料來源類型**Microsoft SQL Server**，下列查詢會擷取最後一個名稱，從一份[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫`Person`資料表。  
   
 ```  
 SELECT LastName FROM Person.Person;  
@@ -53,6 +53,6 @@ EXEC uspgetEmployeeManagers '1';
 ## <a name="see-also"></a>另請參閱  
  [報表精靈說明](../../2014/reporting-services/report-wizard-help.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

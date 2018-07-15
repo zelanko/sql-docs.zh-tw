@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_MEMBERS 資料列集 |Microsoft 文件
+title: MDSCHEMA_MEMBERS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_MEMBERS rowset
 ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2473797ef34c0fd204c878da8c6044a307cc1ee3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d36a065ea73f249ce5c4d9dc37cc047ac864cb84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280014"
 ---
 # <a name="mdschemamembers-rowset"></a>MDSCHEMA_MEMBERS 資料列集
   描述資料庫內的成員。  
@@ -46,7 +46,7 @@ ms.locfileid: "36145049"
 |`MEMBER_ORDINAL`|`DBTYPE_UI4`||(已被取代) 永遠傳回 `0`。|  
 |`MEMBER_NAME`|`DBTYPE_WSTR`||成員的名稱。|  
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`||成員的唯一名稱。|  
-|`MEMBER_TYPE`|`DBTYPE_I4`||成員的類型：<br /><br /> -   `MDMEMBER_TYPE_REGULAR` (`1`)<br />-   `MDMEMBER_TYPE_ALL` (`2`)<br />-   `MDMEMBER_TYPE_MEASURE` (`3`)<br />-   `MDMEMBER_TYPE_FORMULA` (`4`)<br />-   `MDMEMBER_TYPE_UNKNOWN` (`0`)<br />-   `MDMEMBER_TYPE_FORMULA` 優先順序高於`MDMEMBER_TYPE_MEASURE`。 例如，如果 Measures 維度有一個公式 (導出) 成員，會將該成員列為 `MDMEMBER_TYPE_FORMULA`。|  
+|`MEMBER_TYPE`|`DBTYPE_I4`||成員的類型：<br /><br /> -   `MDMEMBER_TYPE_REGULAR` (`1`)<br />-   `MDMEMBER_TYPE_ALL` (`2`)<br />-   `MDMEMBER_TYPE_MEASURE` (`3`)<br />-   `MDMEMBER_TYPE_FORMULA` (`4`)<br />-   `MDMEMBER_TYPE_UNKNOWN` (`0`)<br />-   `MDMEMBER_TYPE_FORMULA` 會優先於`MDMEMBER_TYPE_MEASURE`。 例如，如果 Measures 維度有一個公式 (導出) 成員，會將該成員列為 `MDMEMBER_TYPE_FORMULA`。|  
 |`MEMBER_GUID`|`DBTYPE_GUID`||成員的 GUID。 如果 GUID 不存在，則為 `NULL`。|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`||與該成員關聯的標籤或標題。 主要用於顯示用途。 如果標題不存在，就會傳回 `MEMBER_NAME`。|  
 |`CHILDREN_CARDINALITY`|`DBTYPE_UI4`||成員擁有的子系數目。 這可能只是一個估計值，因此取用者不應該依賴此值做為確實計數。 提供者應會傳回最佳的可能估計值。|  
@@ -79,7 +79,7 @@ ms.locfileid: "36145049"
 |`MEMBER_UNIQUE_NAME`|`DBTYPE_WSTR`|選擇性。|  
 |`MEMBER_CAPTION`|`DBTYPE_WSTR`|選擇性。|  
 |`MEMBER_TYPE`|`DBTYPE_I4`|選擇性。|  
-|`TREE_OP`|`DBTYPE_I4`|(選擇性) 只適用於單一成員：<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) 會傳回所有上階。<br />-   `MDTREEOP_CHILDREN` (`0x01`) 傳回直屬子系。<br />-   `MDTREEOP_SIBLINGS` (`0x02`) 在相同層級傳回成員。<br />-   `MDTREEOP_PARENT` (`0x04`) 傳回的直屬父代。<br />-   `MDTREEOP_SELF` (`0x08`) 傳回本身傳回的資料列的清單中。<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) 會傳回所有下階。|  
+|`TREE_OP`|`DBTYPE_I4`|(選擇性) 只適用於單一成員：<br /><br /> -   `MDTREEOP_ANCESTORS` (`0x20`) 會傳回所有上階。<br />-   `MDTREEOP_CHILDREN` (`0x01`) 傳回的直接子系。<br />-   `MDTREEOP_SIBLINGS` (`0x02`) 傳回相同的層級的成員。<br />-   `MDTREEOP_PARENT` (`0x04`) 傳回直屬父代。<br />-   `MDTREEOP_SELF` (`0x08`) 傳回本身傳回的資料列的清單中。<br />-   `MDTREEOP_DESCENDANTS` (`0x10`) 會傳回所有子系。|  
 |`CUBE_SOURCE`|`DBTYPE_UI2`|(選擇性) 具有下列其中一個有效值的點陣圖：<br /><br /> -1 的 CUBE<br />-2 的維度<br /><br /> 預設限制為值 1。|  
   
 ## <a name="see-also"></a>另請參閱  

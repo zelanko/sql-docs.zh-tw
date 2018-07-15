@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], solutions
 - projects [SQL Server Management Studio], about projects
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - items [SQL Server]
 ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 79c59077bf93110bc92f36a0d52307929c850534
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 57c7271167585be8cc3bd2f863c99f5e03e3d25d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032915"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297678"
 ---
 # <a name="solution-explorer"></a>方案總管
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管] 窗格提供稱為專案的容器，可用來管理資料庫指令碼、查詢、資料連接和檔案等項目。 一個或多個彼此相關的專案會合併到稱為方案的容器。  
   
  方案包括一個或多個專案，加上有助於將方案當做一個整體來定義的檔案和中繼資料。 專案是一組檔案，加上連接資訊等相關的中繼資料。 方案和專案包含代表建立資料庫方案時所需要之指令碼、查詢、連接資訊和檔案的項目。  
   

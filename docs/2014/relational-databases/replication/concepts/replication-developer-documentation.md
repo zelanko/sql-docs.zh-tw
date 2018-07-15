@@ -1,5 +1,5 @@
 ---
-title: 開發人員&#39;人員指南 （複寫） |Microsoft 文件
+title: 開發人員&#39;指南 （複寫） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - replication [SQL Server], development
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb0ffaba9b07a24c6d3ae27e442c4b4e41d8f255
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8726fd8595c769513fa56203f33fd2a3ee58b0e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320268"
 ---
-# <a name="developer39s-guide-replication"></a>開發人員&#39;人員指南 （複寫）
+# <a name="developer39s-guide-replication"></a>開發人員&#39;指南 （複寫）
   以程式設計的方式設定、維護和監視複寫拓撲的能力，可讓您同時簡化重複的複寫工作，並改善複寫為主的應用程式之使用者經驗。 透過設計複寫的程式，一般使用者即可使用自訂的複寫功能，而不須熟悉複寫預存程序和複寫代理程式可執行檔，或是不須使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 實作的複寫使用者介面。  
   
  以下是您的應用程式可能從用程式存取複寫服務獲益的狀況：  

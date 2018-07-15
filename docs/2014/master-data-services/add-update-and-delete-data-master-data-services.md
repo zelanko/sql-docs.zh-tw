@@ -1,5 +1,5 @@
 ---
-title: 加入、 更新及刪除資料 (Master Data Services) |Microsoft 文件
+title: 加入、 更新及刪除資料 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 caps.latest.revision: 6
-author: douglaslM
+author: leolimsft
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 665925f4d9298b3bfaf1dcc5841b78993978a94e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd14b50e3b883a92aa611b13553a6ecc5647f32c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311988"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>加入、更新及刪除資料 (Master Data Services)
   您可以將大量資料加入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]的模型中，也可對模型中的資料進行大量變更。  
@@ -36,7 +36,7 @@ ms.locfileid: "36033937"
   
  **在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中加入、更新及刪除資料**  
   
-1.  準備要匯入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之適當暫存資料表中的成員，這包括為必要欄位提供值。 如需暫存資料表的概觀，請參閱[資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
+1.  準備要匯入 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫之適當暫存資料表中的成員，這包括為必要欄位提供值。 如需暫存資料表的概觀，請參閱 <<c0> [ 匯入資料&#40;Master Data Services&#41;</c0>](overview-importing-data-from-tables-master-data-services.md)  
   
     -   對於分葉成員，資料表為 stg.\<名稱>_Leaf，其中 \<名稱> 是指對應的實體。 如需必要欄位的資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
@@ -44,11 +44,11 @@ ms.locfileid: "36033937"
   
     -   對於要移動明確階層中的成員位置，資料表是 stg.\<名稱>_Relationship。 如需必要欄位的資訊，請參閱[合併成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)。  
   
-         如需在明確階層中移動成員的概觀，請參閱[資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
+         如需在明確階層中移動成員的概觀，請參閱 <<c0> [ 匯入資料&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。</c0>  
   
     -   使用 **ImportType** 欄位值，指定您要建立新成員、停用成員或刪除成員。 如需這些值的詳細資訊，請參閱[分葉成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md) 和[合併成員暫存資料表 &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)。  
   
-         如需停用及刪除成員的概觀，請參閱[資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
+         如需停用及刪除成員的概觀，請參閱 <<c0> [ 匯入資料&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。</c0>  
   
 2.  開啟 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 並連接到您 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Engine 執行個體。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36033937"
   
     -   執行對應到資料所要移往之暫存資料表的暫存預存程序。  
   
-         如需暫存預存程序與暫存資料表的概觀，請參閱[資料匯入&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。 如需暫存預存程序之參數及程式碼範例的詳細資訊，請參閱[暫存預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)。  
+         如需暫存預存程序和暫存資料表的概觀，請參閱 <<c0> [ 匯入資料&#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。</c0> 如需暫存預存程序之參數及程式碼範例的詳細資訊，請參閱[暫存預存程序 &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md)。  
   
     -   使用主資料管理的 **整合管理** 功能。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36033937"
   
          暫存程序的啟動間隔，由 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中的 [暫存批次間隔] 設定決定。 如需詳細資訊，請參閱 [系統設定 &#40;Master Data Services&#41;](../../2014/master-data-services/system-settings-master-data-services.md)。  
   
-5.  檢視暫存期間發生的錯誤。 如需詳細資訊，請參閱[檢視暫存處理序期間所發生的錯誤&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)和[暫存處理序錯誤&#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)。  
+5.  檢視暫存期間發生的錯誤。 如需詳細資訊，請參閱 <<c0> [ 檢視暫存處理序期間所發生的錯誤&#40;Master Data Services&#41; ](view-errors-that-occur-during-staging-master-data-services.md)並[暫存處理序錯誤&#40;Master Data Services&#41;](../../2014/master-data-services/staging-process-errors-master-data-services.md)。</c0>  
   
 6.  依據商務規則驗證資料。  
   

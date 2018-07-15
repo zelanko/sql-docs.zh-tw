@@ -1,5 +1,5 @@
 ---
-title: 隱藏及停用屬性階層 |Microsoft 文件
+title: 隱藏及停用屬性階層 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0e83f548ebefd90b3bb990629980f95620e30ad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d980e87255d24d754e19d8358b423ba38440d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271954"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>隱藏及停用屬性階層
   根據預設，系統會在維度中建立每個屬性的屬性階層，而且每個階層都可用來建立事實資料的維度。 這個階層是由「全部」層級和詳細資料層級 (含階層的所有成員) 所組成。 如同您已學到的，您可以將屬性組織成使用者自訂階層，在 Cube 中提供導覽路徑。 在某些情況下，您可以停用或隱藏某些屬性及其階層。 例如，某些屬性如保險號碼或身分證號碼、薪水、出生日期和登入資訊等，使用者不能利用這些屬性來建立 Cube 資訊的維度。 相反地，這項資訊通常只是做為特定屬性成員的詳細資料來檢視。 您可以隱藏這些屬性階層，讓屬性只顯示成特定屬性的成員屬性。 您也可以讓其他屬性的成員 (例如客戶名稱或郵遞區號) 只透過使用者階層而非透過獨立屬性階層來檢視。 這麼做的原因是為了顯示屬性階層中的全部相異成員。 最後，為了增進處理效能，您應該將使用者不再用來瀏覽的屬性階層停用。  

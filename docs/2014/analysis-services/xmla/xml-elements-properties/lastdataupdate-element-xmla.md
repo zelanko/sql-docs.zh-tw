@@ -1,5 +1,5 @@
 ---
-title: LastDataUpdate 元素 (XMLA) |Microsoft 文件
+title: LastDataUpdate 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - LastDataUpdate element
 ms.assetid: 66e43b17-844f-4ec2-bd1d-35608e7b6524
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fb67f459f49a39c75147d9313f8b18ba7b30f538
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 63c596e522b3429209626d1c033b982b750d38e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185155"
 ---
 # <a name="lastdataupdate-element-xmla"></a>LastDataUpdate 元素 (XMLA)
-  包含父系所代表的資料 cube 的時間與日期[Cube](cube-element-olapinfo-xmla.md)上次更新項目。  
+  包含父元素所代表的資料 cube 的時間與日期[Cube](cube-element-olapinfo-xmla.md)上次更新項目。  
   
 ## <a name="syntax"></a>語法  
   

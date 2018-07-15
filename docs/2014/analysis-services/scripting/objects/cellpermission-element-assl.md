@@ -1,5 +1,5 @@
 ---
-title: CellPermission 元素 (ASSL) |Microsoft 文件
+title: CellPermission 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CellPermission element
 ms.assetid: 54a6afc0-1fcb-4b24-851a-6d81e1fe0efc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f8fcf84072db28684b2cdda195bf2f31ccb2d1e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f763ee90f4812ef86cae0cd24e96e5fb02b05087
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293368"
 ---
 # <a name="cellpermission-element-assl"></a>CellPermission 元素 (ASSL)
   描述的權限的成員[角色](role-element-assl.md)元素內部個別資料格有[Cube](cube-element-assl.md)項目。  
@@ -62,10 +62,10 @@ ms.locfileid: "36023208"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[CellPermissions](../collections/cellpermissions-element-assl.md)|  
-|子元素|[存取](../properties/access-element-assl.md)，[註解](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)，[運算式](../properties/expression-element-assl.md)|  
+|子元素|[存取權](../properties/access-element-assl.md)，[註解](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)，[運算式](../properties/expression-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CellPermission>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.CellPermission>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

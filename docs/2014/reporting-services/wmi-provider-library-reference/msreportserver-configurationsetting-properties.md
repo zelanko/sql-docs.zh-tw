@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Properties
 api_location:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: e75fe1e5-197b-4c65-859b-370821cad003
 caps.latest.revision: 45
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 31cd941eb88aca8f0c8d0bedf247426e80d2f779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d79503c958729d95fe9ee223accb709e8369cf9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313300"
 ---
 # <a name="msreportserverconfigurationsetting-properties"></a>MSReportServer_ConfigurationSetting 屬性
   MSReportServer_ConfigurationSetting 類別代表報表伺服器執行個體的安裝與執行階段參數。 這些設定儲存在 RSReportServer.config 組態檔中。  

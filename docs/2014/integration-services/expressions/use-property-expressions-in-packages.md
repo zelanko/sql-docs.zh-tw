@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], expressions
 - Integration Services packages, expressions
@@ -22,13 +22,13 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9cb824a3e2c0321b8fcb782d8f7827e395afc2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b4d8718e8a30fdc55da6601ad24e54923d9ae526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032364"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289374"
 ---
 # <a name="use-property-expressions-in-packages"></a>在封裝中使用屬性運算式
   屬性運算式是指派給屬性的運算式，用於在執行階段啟用該屬性的動態更新。 例如，屬性運算式可更新「收件者」欄位，傳送郵件工作透過插入儲存在變數中的電子郵件地址來使用該欄位。  
@@ -56,10 +56,10 @@ ms.locfileid: "36032364"
   
  屬性只可使用一個屬性運算式，而屬性運算式只可套用至一個屬性。 不過，您可以建立多個相同的屬性運算式，並將它們指派給不同的屬性。  
   
- 部分屬性是使用於自列舉值的值加以設定。 在屬性運算式中參考列舉值成員時，您必須使用相當於列舉值成員之易記名稱的數值。 例如，如果屬性運算式設定`LoggingMode`屬性，使用來自值`DTSLoggingMode`列舉型別，屬性運算式必須使用 0、 1 或 2 而不是易記的名稱`Enabled`， `Disabled`，或`UseParentSetting`。 如需詳細資訊，請參閱 [屬性運算式中的列舉常數](enumerated-constants-in-property-expressions.md)。  
+ 部分屬性是使用於自列舉值的值加以設定。 在屬性運算式中參考列舉值成員時，您必須使用相當於列舉值成員之易記名稱的數值。 例如，如果屬性運算式設定`LoggingMode`屬性，它會使用值`DTSLoggingMode`列舉型別，屬性運算式必須使用 0、 1 或 2 取代易記名稱`Enabled`， `Disabled`，或`UseParentSetting`。 如需詳細資訊，請參閱 [屬性運算式中的列舉常數](enumerated-constants-in-property-expressions.md)。  
   
 ## <a name="property-expression-user-interface"></a>屬性運算式使用者介面  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組工具來建立及管理屬性運算式。  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組工具，可建置與管理屬性運算式。  
   
 -   [運算式] 頁面，位於工作的自訂編輯器、For 迴圈容器和 Foreach 容器中。 該 [運算式] 頁面可讓您編輯運算式，以及檢視工作、Foreach 迴圈或 For 迴圈所使用的屬性運算式清單。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36032364"
  屬性運算式會在載入封裝組態之後載入。 例如，變數會先由其組態進行更新，然後再評估並載入使用這些變數的屬性運算式。 這表示屬性運算式永遠都會使用組態所設定的變數值。  
   
 > [!NOTE]  
->  您無法使用`Set`選項**dtexec**公用程式來擴展屬性運算式。  
+>  您無法使用`Set`的選項**dtexec**公用程式來擴展屬性運算式。  
   
  下表摘要說明評估與載入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 之屬性運算式的時機。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "36032364"
 |Foreach 列舉值|載入組態後<br /><br /> 驗證前<br /><br /> 執行前<br /><br /> 每次列舉迴圈前|  
   
 ## <a name="using-property-expressions-in-the-foreach-loop"></a>在 Foreach 迴圈中使用屬性運算式  
- 實作屬性運算式通常非常適合用於設定「Foreach 迴圈」容器內所使用之連接管理員的 `ConnectionString` 屬性值。 列舉值將對應的變數，迴圈的每個反覆運算上目前的值之後，屬性運算式可以使用這個變數的值來更新值`ConnectionString`屬性以動態方式。  
+ 實作屬性運算式通常非常適合用於設定「Foreach 迴圈」容器內所使用之連接管理員的 `ConnectionString` 屬性值。 列舉值將其目前的值對應到迴圈的每個反覆運算上的變數之後，屬性運算式可以使用這個變數的值來更新的值`ConnectionString`屬性以動態方式。  
   
- 如果想要將屬性運算式用於「Foreach 迴圈」使用之檔案、多個檔案、一般檔案和多個一般檔案連接管理員的 `ConnectionString` 屬性，您必須考慮幾件事。 可以將 `MaxConcurrentExecutables` 屬性設定為大於 1 或等於 -1 的值，以便將封裝設定為並行執行多個可執行檔。 -1 的值表示允許同時執行的最大可執行檔數目等於處理器數目再加 2。 為了避免平行執行可執行檔的負面結果，`MaxConcurrentExecutables` 值應該設定為 1。 如果`MaxConcurrentExecutables`未設定為 1，則會將值的`ConnectionString`屬性不能保證，而結果無法預期。  
+ 如果想要將屬性運算式用於「Foreach 迴圈」使用之檔案、多個檔案、一般檔案和多個一般檔案連接管理員的 `ConnectionString` 屬性，您必須考慮幾件事。 可以將 `MaxConcurrentExecutables` 屬性設定為大於 1 或等於 -1 的值，以便將封裝設定為並行執行多個可執行檔。 -1 的值表示允許同時執行的最大可執行檔數目等於處理器數目再加 2。 為了避免平行執行可執行檔的負面結果，`MaxConcurrentExecutables` 值應該設定為 1。 如果`MaxConcurrentExecutables`未設為 1，則會將值的`ConnectionString`屬性不能保證，而且結果會無法預測。  
   
  例如，可考慮使用「Foreach 迴圈」列舉資料夾中的檔案、擷取檔案名稱，然後使用執行 SQL 工作將每一個檔案名稱插入資料表中。 如果 `MaxConcurrentExecutables` 未設為 1，而執行 SQL 工作的兩個執行個體又試圖同時寫入資料表，就可能發生寫入衝突。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36032364"
  下列範例運算式顯示如何在屬性運算式中使用系統變數、運算子、函數和字串常值。  
   
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>封裝之 LoggingMode 屬性的屬性運算式  
- 下列屬性運算式可用以設定封裝的 LoggingMode 屬性。 此運算式使用 DAY 和 GETDATE 函數來取得代表日期之日 (Day) 部分的整數。 如果日期是 1 日或 15 日，記錄功能將會啟用，否則便會停用記錄功能。 值 1 是整數 LoggingMode 列舉值成員的對等`Enabled`，2 這個值是整數和對等成員的`Disabled`。 您必須在運算式中使用數值代替列舉值成員名稱。  
+ 下列屬性運算式可用以設定封裝的 LoggingMode 屬性。 此運算式使用 DAY 和 GETDATE 函數來取得代表日期之日 (Day) 部分的整數。 如果日期是 1 日或 15 日，記錄功能將會啟用，否則便會停用記錄功能。 值 1 是整數相等的 LoggingMode 列舉值成員`Enabled`，和 2 的值是 2 的整數對等成員的`Disabled`。 您必須在運算式中使用數值代替列舉值成員名稱。  
   
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`  
   
@@ -176,6 +176,6 @@ ms.locfileid: "36032364"
 -   social.technet.microsoft.com 上的技術文件： [SSIS 運算式範例](http://go.microsoft.com/fwlink/?LinkId=220761)  
   
 ## <a name="see-also"></a>另請參閱  
- [在封裝中使用變數](../use-variables-in-packages.md)  
+ [在套件中使用變數](../use-variables-in-packages.md)  
   
   

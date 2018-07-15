@@ -1,5 +1,5 @@
 ---
-title: 選取轉換類型 （商業智慧精靈） |Microsoft 文件
+title: 選取轉換類型 （商業智慧精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.conversiontype.f1
 ms.assetid: 2c664138-e8a1-4c47-8e7d-ee01c57e4692
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba4018a6ce30e4e7de4e0ca3e79ae07007015650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34fab6780a6c10601b3f5bf31fbb7cffee3fd888
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267344"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>選取轉換類型 (商業智慧精靈)
   使用 **[選取轉換類型]** 頁面，即可針對以多種貨幣儲存的交易，定義本地貨幣和報表貨幣之間的關聯性。 本地貨幣為 **[選取量值]** 頁面中，選取之量值用於儲存交易的貨幣。 報表貨幣是用於轉換 **[選取量值]** 頁面中所選取交易的貨幣。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -17,20 +17,20 @@ ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 44b07e26877a4d53d87cabb2ce48894f067a2802
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a94c611a8c200f5b7b8211b6a1d69b3f147b7a37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195658"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 連接管理員
   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員可讓封裝使用 .NET 提供者來存取資料來源。 此連線管理員通常用於存取 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]這類的資料來源，以及透過自訂工作 (使用如 C# 這類語言以 Managed 程式碼撰寫) 中之 OLE DB 和 XML 公開的資料來源。  
   
- 當您將加入[!INCLUDE[vstecado](../../includes/vstecado-md.md)]連接管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員會被解析為[!INCLUDE[vstecado](../../includes/vstecado-md.md)]執行階段的連線設定的連接管理員屬性，並將連接管理員，加入`Connections`封裝上的集合。  
+ 當您將加入[!INCLUDE[vstecado](../../includes/vstecado-md.md)]連接管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員會被解析為[!INCLUDE[vstecado](../../includes/vstecado-md.md)]連接在執行階段，設定連接管理員屬性，並將連接管理員加入`Connections`封裝上的集合。  
   
- `ConnectionManagerType`連接管理員的屬性設定為`ADO.NET`。 值`ConnectionManagerType`是限定包含連接管理員使用.NET 提供者的名稱。  
+ `ConnectionManagerType`連接管理員屬性設定為`ADO.NET`。 值`ConnectionManagerType`會限定包含連接管理員使用.NET 提供者的名稱。  
   
 ## <a name="adonet-connection-manager-troubleshooting"></a>ADO.NET 連接管理員疑難排解  
  您可以記錄 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員對外部資料提供者執行的呼叫。 您可以使用這項記錄功能，疑難排解 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接管理員對外部資料來源執行的連接。 若要記錄 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員對外部資料提供者執行的呼叫，請啟用封裝記錄，然後在封裝層級選取 [診斷] 事件。 如需詳細資訊，請參閱[封裝執行的疑難排解工具](../troubleshooting/troubleshooting-tools-for-package-execution.md)。  
@@ -62,9 +62,9 @@ ms.locfileid: "36147227"
   
  如需可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [設定 ADO.NET 連接管理員](../configure-ado-net-connection-manager.md)  
+-   [設定 ADO.NET 連線管理員](../configure-ado-net-connection-manager.md)  
   
- 如需以程式設計方式設定連接管理員資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[新增連線以程式設計方式](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 以程式設計方式設定連接管理員的相關資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>並[連線以程式設計方式加入](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41;連線](integration-services-ssis-connections.md)  

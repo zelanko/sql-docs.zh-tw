@@ -1,5 +1,5 @@
 ---
-title: 具名管道內容 |Microsoft 文件
+title: 具名管道屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - configmgr-client
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pipes [SQL Server]
 - listening [SQL Server], pipes
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Named Pipes [SQL Server], listening on pipes
 ms.assetid: a5fd5b8e-f889-485b-89e3-d4010ec4c6ec
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2eb32e8d751a152fed9eebd8b9994005d597dd42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 706345a7d0860f217ac23a7359c8afe83fb2c484
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220558"
 ---
 # <a name="named-pipes-properties"></a>具名管道屬性
   使用具名管道通訊協定時，可使用 [具名管道內容] 對話方塊上的 [通訊協定] 頁面，來檢視或變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接聽的具名管道。  
@@ -49,6 +49,6 @@ ms.locfileid: "36146866"
 ## <a name="see-also"></a>另請參閱  
  [啟用或停用伺服器網路通訊協定](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [選擇網路通訊協定](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [建立有效的連接字串使用具名的管道](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
+ [使用具名管道建立有效的連接字串](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
   
   

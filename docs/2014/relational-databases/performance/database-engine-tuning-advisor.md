@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dc51cc2f2211238213ed6f25e18b907d16b08f10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9c64c9382e760374c0870e6ec1ef1b4d0dd2b607
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303778"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Database Engine Tuning Advisor (DTA) 會分析資料庫，並提出可用來最佳化查詢效能的建議。 Database Engine Tuning Advisor 在您尚未深入了解資料庫結構或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]本質內容之前，就能夠選取及建立一組最佳的索引、索引檢視或資料表資料分割。 您可以使用 DTA 來執行下列工作。  
@@ -97,7 +97,7 @@ ms.locfileid: "36032752"
   
     2.  建議的索引在目前的實體資料庫設計下，無法對查詢效能提供足夠的改善。  
   
-    3.  執行 Database Engine Tuning Advisor 的使用者不是成員的`db_owner`資料庫角色或`sysadmin`固定的伺服器角色。 工作負載中的查詢，會在執行 Database Engine Tuning Advisor 之使用者的安全性內容中進行分析， 使用者必須是 `db_owner` 資料庫角色的成員。  
+    3.  執行 Database Engine Tuning Advisor 的使用者不屬於`db_owner`資料庫角色或`sysadmin`固定的伺服器角色。 工作負載中的查詢，會在執行 Database Engine Tuning Advisor 之使用者的安全性內容中進行分析， 使用者必須是 `db_owner` 資料庫角色的成員。  
   
 -   Database Engine Tuning Advisor 會在 `msdb` 資料庫中儲存微調工作階段資料及其他資訊。 若變更 `msdb` 資料庫，則可能會有遺失微調工作階段資料的風險。 為降低此風險，請實作 `msdb` 資料庫的適當備份策略。  
   

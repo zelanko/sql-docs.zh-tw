@@ -1,5 +1,5 @@
 ---
-title: ASSL XML 慣例 |Microsoft 文件
+title: ASSL XML 慣例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - inherited defaults [Analysis Services Scripting Language]
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0411903c72aba9b0122beb4c0e46e9f172f4f4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d248cc39e20869752deb67c0c84c8b0aca6aafd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279894"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 慣例
   Analysis Services 指令碼語言 (ASSL) 將物件階層以一組元素類型來表示，每個元素類型都定義了它們可以包含的子系元素。  
@@ -43,7 +43,7 @@ ms.locfileid: "36145497"
   
 -   所有的物件與屬性都是以元素來表示，但 ‘xml:lang’ 等標準 XML 屬性例外。  
   
--   項目名稱及列舉值的 Microsoft.NET Framework 命名慣例 pascal 命名法的大小寫有沒有底線。  
+-   元素名稱與列舉值的 Microsoft.NET Framework 命名慣例的 pascal 命名法大小寫不使用底線。  
   
 -   所有值的大小寫都會保留。 列舉值也會區分大小寫。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36145497"
   
 -   保留內部空白字元。  
   
- `Name` 與 `ID` 屬性對於字串元素中的有效字元具有特殊限制。 如需有關`Name`和`ID`慣例，請參閱[ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
+ `Name` 與 `ID` 屬性對於字串元素中的有效字元具有特殊限制。 如需詳細資訊`Name`並`ID`慣例，請參閱[ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
   
  `DateTime`  
  A`DateTime`從.NET Framework 的結構。 `DateTime` 值不可以是 NULL。 `DataTime` 資料類型支援的最低日期是 1601 年 1 月 1 日，可供程式設計人員做為 `DateTime.MinValue` 來使用。 出現支援的最低日期即表示您遺漏了 `DateTime` 值。  
@@ -183,6 +183,6 @@ ms.locfileid: "36145497"
   
  `</Dimension>`  
   
- 如需有關繼承的預設值的詳細資訊，請參閱[ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
+ 如需有關繼承的預設值的詳細資訊，請參閱 < [ASSL 物件和物件特性](assl-objects-and-object-characteristics.md)。  
   
   

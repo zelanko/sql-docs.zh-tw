@@ -1,5 +1,5 @@
 ---
-title: 表格式模型設計師 (SSAS 表格式) |Microsoft 文件
+title: 表格式模型設計師 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
 ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7d0fc5ae763542c5f46bdcdb474a71f71250733c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 20beaf68692cfecbdc047752ff873921cce6a740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263344"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>表格式模型設計師 (SSAS 表格式)
-  表格式模型設計師屬於[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、 整合與 Microsoft [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010年或更新版本，具有特別用來開發專業表格式模型方案的額外專案類型範本。  
+  表格式模型設計師屬於[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]與 Microsoft 整合式[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010年或更新版本，具有特別用來開發專業表格式模型方案的額外專案類型範本。  
   
  本主題的章節：  
   
@@ -32,7 +32,7 @@ ms.locfileid: "36145938"
   
 -   [專案範本](#bkmk_proj_temp)  
   
--   [視窗和功能表](#bkmk_wind_men)  
+-   [Windows 和功能表](#bkmk_wind_men)  
   
 -   [Visual Studio 整合](#bkmk_vsint)  
   

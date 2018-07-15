@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent
 - agents [SQL Server replication]
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Snapshot Agent
 ms.assetid: a35ecd7d-f130-483c-87e3-ddc8927bb91b
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 22d569b99b4e6010251e5f68c7338a6220caddfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4fe3b25fb570d305ba176d89f2f21413c19665e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270764"
 ---
 # <a name="replication-agents-overview"></a>複寫代理程式概觀
   複寫使用了許多名為代理程式的獨立程式，以執行與追蹤變更和散發資料有關的工作。 依預設，複寫代理程式作為在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 中排定的作業來執行，且必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 方可執行這些作業。 複寫代理程式也可以從命令列執行，或透過使用 Replication Management Objects (RMO) 的應用程式執行。 複寫代理程式可以透過「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]進行管理。  

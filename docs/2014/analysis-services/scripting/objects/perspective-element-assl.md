@@ -1,5 +1,5 @@
 ---
-title: Perspective 元素 (ASSL) |Microsoft 文件
+title: Perspective 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Perspective element
 ms.assetid: 0442334c-8b00-4451-ad81-02e58c735e8f
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 395aa7ab1495614a380436311fa73836aa8c2316
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b006d7d48c072cb98a68e42c04cf75c4aaa9e04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297398"
 ---
 # <a name="perspective-element-assl"></a>Perspective 元素 (ASSL)
   定義檢視方塊的詳細資料[Cube](cube-element-assl.md)項目。  
@@ -71,12 +71,12 @@ ms.locfileid: "36032174"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[檢視方塊](../collections/perspectives-element-assl.md)|  
-|子元素|[Actions](../collections/actions-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Calculations](../collections/calculations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DefaultMeasure](measure-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [ID](../properties/id-element-assl.md), [Kpis](../collections/kpis-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [MeasureGroups](../collections/groups-element-assl.md), [Name](../properties/name-element-assl.md), [Translations](../collections/translations-element-assl.md)|  
+|子元素|[動作](../collections/actions-element-assl.md)，[註解](../collections/annotations-element-assl.md)，[計算](../collections/calculations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [DefaultMeasure](measure-element-assl.md)， [描述](../properties/description-element-assl.md)，[維度](../collections/dimensions-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [Kpi](../collections/kpis-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [MeasureGroups](../collections/groups-element-assl.md)，[名稱](../properties/name-element-assl.md)，[翻譯](../collections/translations-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
  檢視方塊會提供 Cube 的子集，以便選取要包含的維度、階層、屬性和其他詳細資料，以及定義要包含的資料配量。 檢視方塊是由單一 Cube 所擁有。 您無法在檢視方塊內部覆寫或加入物件。所有維度、階層和其他詳細資料都必須存在基礎 Cube 中。 此外，您也無法加入物件並將它們標示為不顯示。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Perspective>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Perspective>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

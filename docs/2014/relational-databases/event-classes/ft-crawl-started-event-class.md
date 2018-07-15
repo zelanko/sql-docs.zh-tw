@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Crawl Started event class
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2f70a461848b979400b4538a606edb0595ff1400
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f3dbeb20c800813af1f029b09e5f3972cbf6a026
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137309"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266715"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started 事件類別
   **FT:Crawl Started** 事件類別指出全文檢索搜耙 (母體擴展) 已啟動。 使用此事件類別來檢查是否真由工作者工作來挑選搜耙要求。  
@@ -40,7 +40,7 @@ ms.locfileid: "36137309"
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 這個資料行會同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|**ntext**|全文檢索搜耙類型。 值可以是「完整」、「累加」、「手動」或「自動」。|@shouldalert|是|  
+|**TextData**|**ntext**|全文檢索搜耙類型。 值可以是「完整」、「累加」、「手動」或「自動」。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disk space [SQL Server], indexes
 - index disk space [SQL Server]
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3d8cd697dd202ee3ba72598c6915488ea052bee4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c072db7fc8fc282c53ff177a63bdfa0e1f208105
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248538"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
   當您建立、重建或卸除索引時，磁碟空間是一個重要的考量。 不足的磁碟空間會降低效能，甚至導致索引作業失敗。 此主題提供了一般資訊，可協助您判斷索引資料定義語言 (DDL) 作業所需的磁碟空間數量。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a82a52b230564b81261cece8f61ea56cdb21da8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c4144787ac5085c4713781569d7e6d364ff7951
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172169"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
   遞迴階層群組會組織包含多個階層層級之單一報表資料集內的資料，例如組織階層內經理-員工關聯性的報告結構。  
@@ -54,22 +54,22 @@ ms.locfileid: "36146012"
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請按一下 [檢視] 索引標籤上的 [屬性]。  
   
-2.  在 [屬性] 窗格中，依序展開`Padding`] 節點，按一下 [**左**，然後從下拉式清單中，選取**\<運算式...>**。  
+2.  在 [屬性] 窗格中，依序展開`Padding`節點中，按一下**左**，然後從下拉式清單中，選取**\<運算式...> >**。  
   
 3.  在 [運算式] 窗格中，輸入下列運算式：  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Padding 屬性全都需要 *nnyy*格式的字串，其中 *nn* 是數字，而 *yy* 是測量單位。 範例運算式會建立使用的字串`Level`函式來增加填補大小根據遞迴層級。 例如，層級 1 的資料列會產生 (2 + (1\*10))=12pt 的填補，層級 3 的資料列會產生 (2 + (3\*10))=32pt 的填補。 如需有關資訊`Level`函式，請參閱[層級](report-builder-functions-level-function.md)。  
+     Padding 屬性全都需要 *nnyy*格式的字串，其中 *nn* 是數字，而 *yy* 是測量單位。 此範例運算式會建立使用的字串`Level`來增加填補大小的函式，根據遞迴層級。 例如，層級 1 的資料列會產生 (2 + (1\*10))=12pt 的填補，層級 3 的資料列會產生 (2 + (3\*10))=32pt 的填補。 如需`Level`函式，請參閱 <<c2> [ 層級](report-builder-functions-level-function.md)。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      執行報表。 報表會以階層檢視來顯示分組的資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立遞迴階層群組&#40;報表產生器和 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [建立遞迴階層群組&#40;報表產生器及 SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [彙總函式參考&#40;報表產生器和 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
+ [彙總函式參考&#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
  [清單 &#40;報表產生器及 SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

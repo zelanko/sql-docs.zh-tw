@@ -1,5 +1,5 @@
 ---
-title: 指令碼 |Microsoft 文件
+title: 指令碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - scripts [SMO]
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1bf854648bc4180ca87d004d43002feb3c1baaac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 375a8f90c4864c8f1f3db12c56db1bf0eda3b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262274"
 ---
 # <a name="scripting"></a>指令碼
-  在 SMO 中，指令碼是由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件控制，或是由個別物件的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件會控制從物件的執行個體上的相依性關聯性對應[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  在 SMO 中，指令碼是由 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件控制，或是由個別物件的 `Script` 方法控制。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件可控制從相依性關聯性物件的執行個體上的對應[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件所進行的進階指令碼作業是三階段的程序：  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36145580"
  在第三個也就是最後階段時，會產生具有指定清單和指令碼選項的指令碼。 結果會以 <xref:System.Collections.Specialized.StringCollection> 系統物件傳回。 接下來在這個階段中會從 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件的 Items 集合以及 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> 之類的屬性擷取相依物件的名稱。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[建立 Visual C&#35; SMO Project in Visual Studio](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
  這個程式碼範例需要針對 System.Collections.Specialized 命名空間使用 `Imports` 陳述式。 請在應用程式中，將這個陳述式與其他的 Imports 陳述式一同插入任何宣告之前。  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - organizing trace columns displayed [SQL Server]
 - arranging trace columns displayed
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4f247a5cbbdcbeb723c0fa9bc0abd1265c516459
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0aefc0500cd57bedc266401a7a987ea979b7c99c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032460"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301268"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>組織追蹤內顯示的資料行 (SQL Server Profiler)
   您可以在追蹤資料表或在 [追蹤檔案屬性] 對話方塊中選取 [組織資料行]，以將追蹤內的資料行加以群組；在定義追蹤時，也可以進行群組。 群組資料行可讓您以更佳的方式分析 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 追蹤輸出。 如需詳細資訊，請參閱[使用 SQL Server Profiler 檢視和分析追蹤](view-and-analyze-traces-with-sql-server-profiler.md)。  
@@ -36,7 +36,7 @@ ms.locfileid: "36032460"
 |--------------|---------------|----------------|---------------------|  
 ||12/12/2006 3:16:43 PM|SQL:StmtStarting|2124|  
 |0|12/12/2006 5:39:23 PM|稽核登入|648|  
-|@shouldalert|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
+|1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
 -   只選擇一個資料行來進行群組，則可群組並彙總追蹤事件。 當您只選擇一個資料行來進行群組時，追蹤視窗會根據該資料行的值來群組並顯示事件，並將其下的所有事件都摺疊起來。 在您選擇用來進行群組的資料行中，事件左邊會出現一個加號 (**+**)，而其下已摺疊的事件數目，則會顯示在事件右邊的括弧內。 下列範例顯示如果只選擇 **EventClass** 資料行來進行群組，追蹤視窗方格將如何顯示。 請注意，所有事件都會組識在 **EventClass** 資料行之下。 若要檢視所有事件，請按一下加號，展開並顯示該類型的所有事件類別。  

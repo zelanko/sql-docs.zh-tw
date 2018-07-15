@@ -1,5 +1,5 @@
 ---
-title: 選取父成員對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 選取父成員對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.saveparentmemberdilaog.f1
 helpviewer_keywords:
 - Select Parent Member dialog box
 ms.assetid: d3fea023-3334-493f-97ce-5c9829e7ce71
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5cf6bc82a1b56d83a92bae3023a9fc09142ce6c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b61d285a7e08c5e91a0f9b215fd6ecd18951515
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224158"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>選取父成員對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [選取父成員] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可選取導出成員的父成員。 在 Cube 設計師中，於 **[計算]** 索引標籤上按一下 **[導出成員表單編輯器]** 窗格中的 **[變更]** ，即可顯示 **[選取父成員]** 對話方塊。  

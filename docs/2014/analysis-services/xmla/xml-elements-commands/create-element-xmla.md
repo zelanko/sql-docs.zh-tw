@@ -1,5 +1,5 @@
 ---
-title: Create 元素 (XMLA) |Microsoft 文件
+title: Create 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Create command (XMLA)
 ms.assetid: a623d362-a1ac-40e4-8816-65fac89cb391
 caps.latest.revision: 17
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 19e7673c63d7e305d706efb910222f8ba0da7215
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a3679fd48885b3538996b38286709e14b665bef0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247729"
 ---
 # <a name="create-element-xmla"></a>Create 元素 (XMLA)
-  包含所使用的 Analysis Services 指令碼語言 (ASSL) 元素`Execute`上建立物件的方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
+  包含由所使用的 Analysis Services 指令碼語言 (ASSL) 元素`Execute`上建立物件的方法[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36136074"
 |attribute|描述|  
 |---------------|-----------------|  
 |AllowOverwrite|選擇性`Boolean`屬性。 如果設定為 True，`ObjectDefinition` 元素中定義的物件就可以覆寫 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上的現有物件。 如果這個屬性被省略或設定為 False，現有物件的存在就會產生錯誤。|  
-|範圍。|選擇性`Enum`屬性。 定義 `ObjectDefinition` 元素中定義之物件的持續時間。 如果這屬性被省略，`ObjectDefinition` 元素中定義的物件就會保存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上。 有下列可用的值：<br /><br /> -   *工作階段*<br />     `ObjectDefinition` 元素中定義的物件只會在 XML for Analysis (XMLA) 工作階段的持續時間內存在。 **注意：** 時使用*工作階段*設定，`ObjectDefinition`元素只能包含[維度](../../scripting/objects/dimension-element-assl.md)， [Cube](../../scripting/objects/cube-element-assl.md)，或[MiningModel](../../scripting/objects/miningmodel-element-assl.md) ASSL 元素。|  
+|範圍。|選擇性`Enum`屬性。 定義 `ObjectDefinition` 元素中定義之物件的持續時間。 如果這屬性被省略，`ObjectDefinition` 元素中定義的物件就會保存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體上。 有下列可用的值：<br /><br /> -   *工作階段*<br />     `ObjectDefinition` 元素中定義的物件只會在 XML for Analysis (XMLA) 工作階段的持續時間內存在。 **注意︰** 使用時*工作階段*設定，請`ObjectDefinition`元素只能包含[維度](../../scripting/objects/dimension-element-assl.md)， [Cube](../../scripting/objects/cube-element-assl.md)，或[MiningModel](../../scripting/objects/miningmodel-element-assl.md) ASSL 元素。|  
   
 ## <a name="remarks"></a>備註  
  每項 `Create` 作業都會在 `ParentObject` 元素提供的父系底下建立一個主要物件。 如果您了省略父物件，它就會被假設為目的地 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 如果主要物件的父系不是目的地執行個體，這樣做就會產生錯誤。  

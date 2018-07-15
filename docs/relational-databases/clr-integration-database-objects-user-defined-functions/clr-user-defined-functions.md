@@ -1,11 +1,11 @@
 ---
-title: CLR 使用者定義函數 |Microsoft 文件
+title: CLR 使用者定義函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ caps.latest.revision: 46
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3696f621801e493cbcaacfd10fd6d60445fd1a06
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 15e5ab9bf993150d7ecb9c1439ee75dfeccb5302
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702079"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349680"
 ---
 # <a name="clr-user-defined-functions"></a>CLR 使用者定義函數
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

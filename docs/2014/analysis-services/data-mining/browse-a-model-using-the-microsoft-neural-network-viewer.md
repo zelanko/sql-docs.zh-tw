@@ -1,5 +1,5 @@
 ---
-title: 瀏覽模型，使用 Microsoft 類神經網路檢視器 |Microsoft 文件
+title: 瀏覽模型，使用 Microsoft 類神經網路檢視器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
 - classification mining model [Analysis Services]
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - neural network model [Analysis Services]
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f577d98082953bc565a6c14fc8fdafce2a6711fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45561d4e2b5463e6525d9def3cf0d508fddd592f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196668"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>使用 Microsoft 類神經網路檢視器瀏覽模型
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 類神經網路檢視器，會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立可分析多個輸入和輸出的分類和迴歸採礦模型，對於開放式分析和瀏覽十分有用。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)＞。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 類神經網路檢視器，會顯示以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立的採礦模型。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建立可分析多個輸入和輸出的分類和迴歸採礦模型，對於開放式分析和瀏覽十分有用。 如需有關這個演算法的詳細資訊，請參閱＜ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)＞。  
   
  在您使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路檢視器瀏覽模型時，通常會選擇某個目標屬性和狀態，然後使用該檢視器來查看輸入屬性是如何影響結果。  
   

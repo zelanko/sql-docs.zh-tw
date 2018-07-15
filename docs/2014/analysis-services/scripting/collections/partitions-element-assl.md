@@ -1,5 +1,5 @@
 ---
-title: 資料分割元素 (ASSL) |Microsoft 文件
+title: 資料分割元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Partitions element
 ms.assetid: e41c97ca-da44-48e9-a454-d25ee74209fd
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 39e719c6ae4e04e1a05abc42f4290bbf0746e55b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f54cab2990fcd5f3679da1c83c997921a59e67ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185206"
 ---
 # <a name="partitions-element-assl"></a>Partitions 元素 (ASSL)
-  包含集合[分割](../objects/partition-element-assl.md)元素所使用[MeasureGroup](../objects/group-element-assl.md)項目或組成的行外的資料分割繫結的集合[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)項目。  
+  包含的集合[資料分割](../objects/partition-element-assl.md)所使用的項目[MeasureGroup](../objects/group-element-assl.md)項目或組成的列外的資料分割繫結的集合[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,11 +66,11 @@ ms.locfileid: "36145714"
   
 |上階或父系|子元素|  
 |------------------------|-------------------|  
-|[量值群組](../objects/group-element-assl.md)|[資料分割](../objects/partition-element-assl.md)|  
+|[MeasureGroup](../objects/group-element-assl.md)|[資料分割](../objects/partition-element-assl.md)|  
 |[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-out-of-line-assl.md)|[資料分割](../objects/partition-element-assl.md)型別的[PartitionBinding](../data-type/binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PartitionCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.PartitionCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

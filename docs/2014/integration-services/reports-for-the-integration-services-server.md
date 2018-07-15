@@ -1,5 +1,5 @@
 ---
-title: Integration Services 伺服器的報表 |Microsoft 文件
+title: Integration Services 伺服器的報表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 caps.latest.revision: 14
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9809de19a363c94365c0da88655d4e54b81b80cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180295"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Integration Services 伺服器的報表
-  在目前版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，都可使用標準報表[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]可協助您監視[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]專案部署至[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]伺服器。 這些報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別封裝執行失敗的原因。  
+  在目前版本中的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，都可使用標準報表[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]可協助您監視[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]專案的已部署至[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]伺服器。 這些報表可協助您檢視封裝狀態及記錄，如有必要，也可協助您識別封裝執行失敗的原因。  
   
  在每個報表頁面上方，上一步圖示可前往檢視的上一頁，重新整理圖示會重新整理頁面上顯示的資訊，而列印圖示可讓您列印目前頁面。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "36145662"
  如需如何建立和加入自訂報表的指示，請參閱[將自訂報表加入 Management Studio](../ssms/object/add-a-custom-report-to-management-studio.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
- [檢視 Integration Services 伺服器的報告](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
+ [檢視 Integration Services 伺服器的報表](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>相關內容  
- [監視封裝執行和其他作業](performance/monitor-running-packages-and-other-operations.md)  
+ [監視套件執行和其他作業](performance/monitor-running-packages-and-other-operations.md)  
   
   

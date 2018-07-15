@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stretch cluster
 - Availability Groups [SQL Server], WSFC clusters
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b2238da7a6eae3e4374f899d8f7c667bc163f1e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65f8cb55f16372e5b0d70298fc3b3d5bb52ce2a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023714"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317548"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server 多重子網路叢集 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 多重子網路容錯移轉叢集是一個組態，當中每個容錯移轉叢集節點都會連接到不同的子網路或不同的子網路集。 這些子網路可以位於相同位置，或位於散佈於不同地理區域的站台。 跨越散佈於不同地理區域之站台的叢集有時候又稱為「延展叢集」。 由於沒有可供所有節點存取的共用儲存體，資料應該在多重子網路上的資料儲存體之間複寫。 透過資料複寫，可用資料就可以擁有多份複本。 因此，除了具有高可用性之外，多重子網路容錯移轉叢集也提供了災害復原方案。  
@@ -71,9 +70,9 @@ ms.locfileid: "36023714"
  當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 與 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]的獨立執行個體並行安裝時，務必避免 IP 位址發生 TCP 通訊埠編號衝突。 通常兩個 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 執行個體同樣設定為使用預設 TCP 通訊埠 (1433) 時，就會發生衝突。 為避免發生衝突，請將其中一個執行個體設定為使用非預設固定通訊埠。 在獨立執行個體上設定固定通訊埠通常最為簡單。 將 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 設定為使用不同的通訊埠，就能防止發生非預期的 IP 位址/TCP 通訊埠衝突，以免造成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI 失敗而移轉至待命節點時，執行個體無法啟動。  
   
 ##  <a name="DNS"></a> 容錯移轉期間的用戶端復原延遲  
- 多重子網路 FCI 預設會針對其網路名稱啟用 RegisterAllProvidersIP 叢集資源。 在多重子網路組態中，網路名稱的線上或離線 IP 位址都會在 DNS 伺服器註冊。 然後用戶端應用程式會從 DNS 伺服器擷取所有註冊的 IP 位址，並依序或平行嘗試連接到位址。 這表示，多重子網路容錯移轉時用戶端復原時間不再取決於 DNS 更新延遲。 根據預設，用戶端會依序嘗試 IP 位址。 當用戶端在其連接字串中使用新的選擇性 `MultiSubnetFailover=True` 參數時，它會改為同時嘗試 IP 位址並連接到第一個回應的伺服器。 這有助於在發生容錯移轉時將用戶端復原延遲降至最低。 如需詳細資訊，請參閱[AlwaysOn 用戶端連接性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)和[建立或設定可用性群組接聽程式&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
+ 多重子網路 FCI 預設會針對其網路名稱啟用 RegisterAllProvidersIP 叢集資源。 在多重子網路組態中，網路名稱的線上或離線 IP 位址都會在 DNS 伺服器註冊。 然後用戶端應用程式會從 DNS 伺服器擷取所有註冊的 IP 位址，並依序或平行嘗試連接到位址。 這表示，多重子網路容錯移轉時用戶端復原時間不再取決於 DNS 更新延遲。 根據預設，用戶端會依序嘗試 IP 位址。 當用戶端在其連接字串中使用新的選擇性 `MultiSubnetFailover=True` 參數時，它會改為同時嘗試 IP 位址並連接到第一個回應的伺服器。 這有助於在發生容錯移轉時將用戶端復原延遲降至最低。 如需詳細資訊，請參閱 < [AlwaysOn 用戶端連接性 (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)並[建立或設定可用性群組接聽程式&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。  
   
- 對於舊版用戶端程式庫或協力廠商資料提供者，您不能使用`MultiSubnetFailover`連接字串中的參數。 為確保用戶端應用程式以最佳方式與 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]多重子網路 FCI 搭配使用，針對每個額外 IP 位址，請嘗試將用戶端連接字串中的連接逾時調增 21 秒。 這可確保在完成多重子網路 FCI 中的所有 IP 位址之間循環前，用戶端的重新連接嘗試不會逾時。  
+ 對於舊版用戶端程式庫或協力廠商資料提供者，您無法使用`MultiSubnetFailover`連接字串中的參數。 為確保用戶端應用程式以最佳方式與 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]多重子網路 FCI 搭配使用，針對每個額外 IP 位址，請嘗試將用戶端連接字串中的連接逾時調增 21 秒。 這可確保在完成多重子網路 FCI 中的所有 IP 位址之間循環前，用戶端的重新連接嘗試不會逾時。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 和 **sqlcmd** 的預設用戶端連接逾時期限是 15 秒。  
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - media errors [SQL Server]
 - CONTINUE_AFTER_ERROR option
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - checksums [SQL Server]
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 914748480202ed69dd95e9796d48eb450093717d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9887d5f158e39ddae24bda31db0fbb76cb5e3482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298518"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>在備份和還原期間可能的媒體錯誤 (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 可讓您選擇復原資料庫，而不理會偵測到的錯誤。 有一項重要的新錯誤偵測機制，就是可以選擇建立備份總和檢查碼，這是由備份作業所建立，並可使用還原作業來加以驗證。 您可以控制作業是否要檢查錯誤，以及在發生錯誤時，是要停止作業，還是要繼續進行。 如果備份包含備份總和檢查碼，RESTORE 和 RESTORE VERIFYONLY 陳述式就可以檢查錯誤。  

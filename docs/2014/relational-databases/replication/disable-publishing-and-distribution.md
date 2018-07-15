@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - disabling publishing
 - publishing [SQL Server replication], disabling
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - disabling distribution
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2b1cb0af2c8082ba7ba649c6d6f21b53d9b96c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ec2381b96818d038c7e40b71a4e56b1c4d415af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313488"
 ---
 # <a name="disable-publishing-and-distribution"></a>停用發行和散發
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中停用發行和散發。  
@@ -114,13 +114,13 @@ ms.locfileid: "36032753"
   
 4.  建立 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 類別的執行個體。 指定 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> 屬性，並傳遞步驟 3 中的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
-5.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法，以取得物件的屬性及確認發行者確實存在。 如果此方法傳回`false`、 步驟 4 中設定的發行者名稱不正確，或是此散發者不使用 「 發行者 」。  
+5.  (選擇性) 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法，以取得物件的屬性及確認發行者確實存在。 如果此方法傳回`false`，步驟 4 中設定 「 發行者 」 名稱不正確，或是此散發者不使用 「 發行者 」。  
   
-6.  呼叫 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 將值傳遞`true`如*強制*如果發行者和散發者位於不同的伺服器，以及應該解除安裝散發者 」 端先驗證發行集不再存在於發行者「 發行者 」。  
+6.  呼叫 <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Remove%2A> 方法。 值傳遞`true`for*強制*如果發行者和散發者位於不同的伺服器，以及 「 發行者 」 端應解除安裝散發者端之前未先確認發行集不再存在於「 發行者 」。  
   
 7.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 類別的執行個體。 傳遞步驟 3 的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件。  
   
-8.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 將值傳遞`true`如*強制*移除所有複寫物件在散發者，而不先確認是否已停用所有本機發行集資料庫，並已解除安裝散發資料庫。  
+8.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationServer.UninstallDistributor%2A> 方法。 值傳遞`true`for*強制*移除所有複寫物件在 「 散發者 」，而不需要先確認是否已停用所有本機發行集資料庫，並已解除安裝散發資料庫。  
   
 ###  <a name="PShellExample"></a> 範例 (RMO)  
  此範例會移除散發者上的發行者註冊、捨棄散發資料庫，以及解除安裝散發者。  

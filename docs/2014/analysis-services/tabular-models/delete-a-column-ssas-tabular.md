@@ -1,5 +1,5 @@
 ---
-title: 刪除資料行 (SSAS 表格式) |Microsoft 文件
+title: 刪除資料行 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bef4966295acafa3b122fe1786cf06495962890d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 378f2a9503abbf277b25c09b66e11acc606529e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145700"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273864"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>刪除資料行 (SSAS 表格式)
   本主題描述的是如何從表格式模型資料表中刪除資料行。  
@@ -42,7 +42,7 @@ ms.locfileid: "36145700"
 3.  在 [編輯資料表屬性] 對話方塊的 [資料表預覽] 視窗中，取消核取您想要刪除的資料行，然後按一下 [確定]。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料行加入資料表&#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [將資料行加入至資料表&#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)   
  [資料分割&#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)  
   
   

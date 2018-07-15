@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.importcolumntrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
 caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d6c4d57a642e5e06ed07b6f4ba8d2932b85283e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0fd60241b0b611ec9adb6f7862371790f7a5c4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257114"
 ---
 # <a name="import-column-transformation"></a>匯入資料行轉換
   「匯入資料行」轉換會從檔案讀取資料，並將資料加入至資料流程中的資料行。 封裝可使用此轉換將其他檔案中儲存的文字和影像加入至資料流程。 例如，將資料載入儲存產品資訊之資料表中的資料流程，即可加入「匯入資料行」轉換，以便從檔案匯入客戶對每項產品的檢閱，然後將檢閱加入至資料流程。  

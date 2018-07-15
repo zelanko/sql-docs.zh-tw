@@ -1,12 +1,11 @@
 ---
-title: 管理 CLR 整合組件 |Microsoft 文件
+title: 管理 CLR 整合組件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,16 +18,16 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fba26bd48f94fb76f44c423297e9f2bc0d2f86cb
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694189"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350180"
 ---
 # <a name="managing-clr-integration-assemblies"></a>管理 CLR 整合組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Managed 程式碼會經過編譯，然後以稱為組件的單位進行部署。 組件會封裝為 DLL 或可執行檔 (.exe)。 可執行檔可以自行執行，而 DLL 則必須裝載在現有的應用程式中。 Managed 的 DLL 組件可以載入並由[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會先要求您使用 CREATE ASSEMBLY 陳述式，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中註冊組件，然後才可以載入到處理序中使用。 這些組件也可以使用 ALTER ASSEMBLY 陳述式，從比較新的版本升級，或者使用 DROP ASSEMBLY 陳述式，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 移除。  
+  Managed 程式碼會經過編譯，然後以稱為組件的單位進行部署。 組件會封裝為 DLL 或可執行檔 (.exe)。 可執行檔可以自行執行，而 DLL 則必須裝載在現有的應用程式中。 Managed 的 DLL 組件可以載入和裝載[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會先要求您使用 CREATE ASSEMBLY 陳述式，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中註冊組件，然後才可以載入到處理序中使用。 這些組件也可以使用 ALTER ASSEMBLY 陳述式，從比較新的版本升級，或者使用 DROP ASSEMBLY 陳述式，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 移除。  
   
  組件資訊會儲存在**sys.assembly_files**資料庫已安裝的組件中的資料表。 **Sys.assembly_files**資料表包含下列資料行。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "35694189"
 |------------|-----------------|  
 |assembly_id|為組件定義的識別項。 此號碼會指派給與同一組件相關的所有物件。|  
 |NAME|物件的名稱。|  
-|file_id|數字，識別每個物件，與相關聯的第一個物件指定**assembly_id**給定值為 1。 如果多個物件具有相同相關**assembly_id**，則每個後續**file_id**值都會遞增 1。|  
+|file_id|數字，識別每個相關聯的第一個物件的物件，指定**assembly_id** 1 的值。 如果多個物件具有相同相關聯**assembly_id**，則每個後續**file_id**值都會遞增 1。|  
 |content|組件或檔案的十六進位表示法。|  
   
 ## <a name="in-this-section"></a>本節內容  

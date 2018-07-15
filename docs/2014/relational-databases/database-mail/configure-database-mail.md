@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.swb.sqlimail.newaccount.f1
 - Sql12.swb.sqlimail.manageexistingaccount.f1
@@ -40,15 +40,15 @@ f1_keywords:
 - Sql12.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a56c620c26a7ef2a7af3dccf59f2f6bcdb0bf3ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5d4b20236528e1908c5012ef6cae19d7fb62e580
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144761"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269354"
 ---
 # <a name="configure-database-mail"></a>設定 Database Mail
   本主題說明如何使用 Database Mail 組態精靈來啟用及設定 Database Mail，並使用範本建立 Database Mail 組態指令碼。  
@@ -71,7 +71,7 @@ ms.locfileid: "36144761"
   
 2.  展開 **[管理]** 節點。  
   
-3.  滑鼠右鍵按一下**Database Mail**，然後按一下 **設定 Database Mail**。  
+3.  滑鼠右鍵按一下**Database Mail**，然後按一下**設定 Database Mail**。  
   
 4.  完成精靈對話方塊  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36144761"
  鍵入將用來回覆給由這個帳戶傳送之電子郵件訊息的電子郵件地址。 回覆電子郵件是選擇性的。 例如，回覆給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 帳戶的郵件，可能會傳送給資料庫管理員 danw@Adventure-Works.com。  
   
  **伺服器名稱**  
- 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 這通常是在格式類似於`smtp.` *< your_company >*`.com`。 如需相關說明，請洽詢您的郵件管理員。  
+ 輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 一般而言，這是在格式類似於`smtp.` *< your_company >*`.com`。 如需相關說明，請洽詢您的郵件管理員。  
   
  **通訊埠編號**  
  輸入此帳戶之 SMTP 伺服器的通訊埠編號。 多數的 SMTP 伺服器使用通訊埠 25。  

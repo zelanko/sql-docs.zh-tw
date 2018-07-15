@@ -5,10 +5,9 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], full
 - troubleshooting [SQL Server], full transaction log
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - full transaction logs [SQL Server]
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0adfc6e8f46a916244ddbaf81383ed8c3c169f1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b3fa89db4f8fb95ca1f2e912c6ee1d131808f42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254030"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)
   本主題將討論對於寫滿交易記錄的可能回應，並建議將來可採用的避免方法。 當交易記錄寫滿時，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 就會發出 9002 錯誤。 此記錄可能會在資料庫處於線上或復原狀態時填滿。 如果此記錄是在資料庫處於線上狀態時填滿，資料庫會保持線上狀態，不過只能讀取而無法更新資料庫。 如果此記錄是在復原期間填滿，則 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會將資料庫標示為 RESOURCE PENDING。 不論是哪一種情況，使用者都必須採取動作，以便提供足夠的記錄空間。  
@@ -36,7 +35,7 @@ ms.locfileid: "36146069"
  寫滿交易記錄的適當回應會部分根據導致記錄填滿的條件而定。 若要探索指定情況下無法進行記錄截斷的原因，請使用 **sys.database** 目錄檢視的 **log_reuse_wait** 和 **log_reuse_wait_desc** 資料行。 如需詳細資訊，請參閱 [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)。 如需可能延遲記錄截斷之其他因素的描述，請參閱[交易記錄 &#40;SQL Server&#41;](the-transaction-log-sql-server.md)。  
   
 > [!IMPORTANT]  
->  如果資料庫處於復原發生 9002 錯誤，在解決問題後復原資料庫，使用 ALTER DATABASE *database_name*設定連線。  
+>  如果發生 9002 錯誤，解決此問題之後，資料庫是在復原來復原資料庫使用 ALTER DATABASE *database_name* SET ONLINE。  
   
  寫滿交易記錄的替代回應方式包括：  
   

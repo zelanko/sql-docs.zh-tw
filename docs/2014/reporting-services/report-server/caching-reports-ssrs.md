@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - cache [Reporting Services]
@@ -25,13 +25,13 @@ ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 22bad94dc3102b48b858f22354039bcb61fea06e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0dd80e542132cb2ebd36b1431e274e823970d9af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206548"
 ---
 # <a name="caching-reports-ssrs"></a>快取多個報表 (SSRS)
   報表伺服器可以快取已處理報表的副本，並在使用者開啟報表時還原該副本。 對使用者而言，能夠指出報表是快取副本的唯一證據是報表執行的日期和時間。 如果日期或時間不是目前的日期和時間，且報表不是快照集，則報表是從快取擷取而來。  
@@ -66,7 +66,7 @@ ms.locfileid: "36146253"
   
  如果您要快取參數化報表的多個執行個體，其中使用不同的參數值來產生不同的報表執行個體，快取報表特別有用。 請注意，您只能在報表上指定查詢式參數。  
   
- 當您指定排程或建立資料驅動訂閱時，必須排程報表傳遞至快取的頻率。 舊副本必須已經過期，新副本才能傳遞至快取。 因此，必須設定報表的執行屬性，以包含快取逾期設定。 逾期設定必須與您定義的訂閱排程一致。 例如，您若是建立一個每晚執行的訂閱，則快取也必須在每天晚上訂閱的執行階段之前過期。 如果執行屬性未包含逾期時間，則會略過較新的傳遞。 如需有關快取重新整理計劃的詳細資訊，請參閱[排程](../subscriptions/schedules.md)。 如需有關設定屬性的詳細資訊，請參閱[設定報表處理屬性](set-report-processing-properties.md)。 如需有關如何使用資料驅動訂閱的詳細資訊，請參閱[資料驅動訂閱](../subscriptions/data-driven-subscriptions.md)。  
+ 當您指定排程或建立資料驅動訂閱時，必須排程報表傳遞至快取的頻率。 舊副本必須已經過期，新副本才能傳遞至快取。 因此，必須設定報表的執行屬性，以包含快取逾期設定。 逾期設定必須與您定義的訂閱排程一致。 例如，您若是建立一個每晚執行的訂閱，則快取也必須在每天晚上訂閱的執行階段之前過期。 如果執行屬性未包含逾期時間，則會略過較新的傳遞。 如需有關快取重新整理計劃的詳細資訊，請參閱 <<c0> [ 排程](../subscriptions/schedules.md)。 如需有關設定屬性的詳細資訊，請參閱 <<c0> [ 設定報表處理屬性](set-report-processing-properties.md)。 如需使用資料驅動訂閱的詳細資訊，請參閱[資料驅動訂閱](../subscriptions/data-driven-subscriptions.md)。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>造成快取逾期的條件  
  快取報表會因回應下列事件而無效：已修改報表定義、已修改報表參數、資料來源認證變更，或報表執行選項變更。 如果您刪除儲存在快取中的報表，也會刪除快取的版本。  
@@ -74,7 +74,7 @@ ms.locfileid: "36146253"
  如果因為任何原因造成報表無法從快取執行個體轉譯 (例如，若使用者指定的參數值與用於產生快取報表的參數值不同)，則報表伺服器會重新執行報表。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定處理選項&#40;的 Reporting Services SharePoint 整合模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [設定處理選項&#40;Reporting Services SharePoint 整合模式&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [設定報表處理屬性](set-report-processing-properties.md)   
  [Reporting Services 概念 &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [預先載入快取 &#40;報表管理員&#41;](preload-the-cache-report-manager.md)   

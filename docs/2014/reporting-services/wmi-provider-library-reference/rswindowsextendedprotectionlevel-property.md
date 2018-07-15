@@ -1,5 +1,5 @@
 ---
-title: RSWindowsExtendedProtectionLevel 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft 文件
+title: RSWindowsExtendedProtectionLevel 屬性 (WMI MSReportServer_ConfigurationSetting) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 162ffe86-69c3-49d2-b9ed-49d097c05551
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e96011dc05f0bc21708f8759aa715dbc4ca79a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fb0fe7d3c4e7ab433128d774d79a69fd0cb13b03
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268184"
 ---
 # <a name="rswindowsextendedprotectionlevel-property-wmi-msreportserverconfigurationsetting"></a>RSWindowsExtendedProtectionLevel 屬性 (WMI MSReportServer_ConfigurationSetting)
   傳回字串值，表示報表伺服器設定為支援的保護等級。 此屬性是唯讀的。  
@@ -46,6 +46,6 @@ public string RSWindowsExtendedProtectionLevel;
  [RSWindowsExtendedProtectionScenario 屬性&#40;WMI MSReportServer_ConfigurationSetting&#41;](rswindowsextendedprotectionscenario-property.md)   
  [SetExtendedProtectionSettings 方法 &#40;WMI MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setextendedprotectionsettings.md)   
  [Reporting Services 的驗證擴充保護](../security/extended-protection-for-authentication-with-reporting-services.md)   
- [RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)  
+ [RSReportServer 設定檔](../report-server/rsreportserver-config-configuration-file.md)  
   
   

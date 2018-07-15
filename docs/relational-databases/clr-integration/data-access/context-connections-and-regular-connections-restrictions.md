@@ -1,12 +1,11 @@
 ---
-title: 一般和內容連接的限制 |Microsoft 文件
+title: 一般和內容連接的限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - context connections [CLR integration]
@@ -16,16 +15,16 @@ caps.latest.revision: 24
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 290110b735765da45bca5f5f67bfd764f4abc6dc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6e3f290a689cc1914548204e95a3a690d045a7d4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694379"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358160"
 ---
-# <a name="context-connections-and-regular-connections---restrictions"></a>內容連接和正常連接的限制
+# <a name="context-connections-and-regular-connections---restrictions"></a>內容連接和正常連接-限制
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題討論中執行程式碼的相關限制[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  
+  本主題討論與執行中的程式碼相關聯的限制[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  
   
 ## <a name="restrictions-on-context-connections"></a>內容連接的限制  
  開發應用程式時，請考慮下列適用於內容連接的限制：  
@@ -40,18 +39,18 @@ ms.locfileid: "35694379"
   
 -   **SqlNotificationRequest**無法搭配針對內容連接執行的命令。  
   
--   不支援取消針對內容連接執行的命令。 **SqlCommand.Cancel**方法會以無訊息模式忽略要求。  
+-   不支援取消針對內容連接執行的命令。 **SqlCommand.Cancel**方法會以無訊息方式忽略要求。  
   
 -   當您使用 "context connection=true" 時，無法使用其他連接字串關鍵字。  
   
--   **SqlConnection.DataSource**屬性會傳回 null 的連接字串如果**SqlConnection**是 「 內容連接 = true"，而不是執行個體名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+-   **SqlConnection.DataSource**屬性會傳回 null 值的連接字串如果**SqlConnection**是 「 內容連線 = true"，而不是執行個體名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
--   設定**SqlCommand.CommandTimeout**屬性針對內容連接執行命令時，就沒有作用。  
+-   設定**SqlCommand.CommandTimeout**屬性沒有任何作用，針對內容連接執行命令。  
   
 ## <a name="restrictions-on-regular-connections"></a>一般連接的限制  
  開發應用程式時，請考慮下列適用於一般連接的限制：  
   
--   不支援針對內部伺服器執行非同步命令。 包括"async = true"連接字串中的命令，然後執行命令，會導致**System.NotSupportedException**擲回。 此訊息會顯示：「在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序內部執行時，不支援非同步處理」。  
+-   不支援針對內部伺服器執行非同步命令。 包括"async = true 」 在連接字串的命令，然後再執行命令，會導致**System.NotSupportedException**所擲回。 此訊息會顯示：「在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序內部執行時，不支援非同步處理」。  
   
 -   **SqlDependency**不支援物件。  
   

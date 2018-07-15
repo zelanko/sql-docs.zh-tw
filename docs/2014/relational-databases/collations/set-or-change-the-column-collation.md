@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tempdb database [SQL Server], collations
 - collations [SQL Server], column
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3de84f26e894f00760a45d5e65769c0db8d4b009
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e215539e97e09fd7512f7673015d07f32e956730
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298508"
 ---
 # <a name="set-or-change-the-column-collation"></a>設定或變更資料行定序
-  您可以覆寫的資料庫定序`char`， `varchar`， `text`， `nchar`， `nvarchar`，和`ntext`資料所指定資料表中特定資料行不同的定序，並使用下列其中之一：  
+  您可以覆寫的資料庫定序`char`， `varchar`， `text`， `nchar`， `nvarchar`，和`ntext`藉由指定資料表中特定資料行不同的定序，並使用下列其中一種資料：  
   
 -   [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) 和 [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)的 COLLATE 子句。 例如：  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36022885"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的 COLLATE 子句。 如需詳細資訊，請參閱 [定序與 Unicode 支援](collation-and-unicode-support.md)。  
   
--   使用`Column.Collation`屬性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO)。  
+-   使用`Column.Collation`屬性中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO)。  
   
  如果目前下列任何一個項目參考資料行定序的話，就無法變更其定序：  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36022885"
  當您使用 **tempdb**時， [COLLATE](/sql/t-sql/statements/collations) 子句會包含 *database_default* 選項，將暫存資料表中的資料行指定為使用連線的目前使用者資料庫預設定序，而非 **tempdb**的定序。  
   
 ## <a name="collations-and-text-columns"></a>定序與 text 資料行  
- 您可以插入或更新中的值`text`其定序是資料庫的預設定序字碼頁不同的資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以隱含方式將該值轉換為資料行定序。  
+ 您可以插入或更新中的值`text`定序與資料庫的預設定序的字碼頁不同的資料行。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以隱含方式將該值轉換為資料行定序。  
   
 ## <a name="collations-and-tempdb"></a>定序與 tempdb  
  **tempdb** 資料庫在每次 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 啟動時建置，且預設定序與 **model** 資料庫相同。 通常與執行個體的預設定序相同。 如果建立使用者資料庫，並指定與 **model**不同的預設定序，使用者資料庫的預設定序就會與 **tempdb**不同。 所有暫存預存程序或暫存資料表會在 **tempdb**中建立及儲存。 這表示暫存資料表中所有隱含的資料行，與暫存預存程序中所有可強迫的常數、變數與參數，都會與建在永久資料表和預存程序中的同等物件具有不同的定序。  

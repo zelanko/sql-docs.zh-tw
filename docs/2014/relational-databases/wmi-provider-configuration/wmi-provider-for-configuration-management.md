@@ -1,5 +1,5 @@
 ---
-title: WMI Provider for Configuration Management Concepts |Microsoft 文件
+title: WMI 提供者組態管理概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, about WMI Provider for Configuration Management
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5185d55296d1b5cd2adcbb6c61139e06195588be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5e19f7bda872dbf29c018599430f40bfd353ae42
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290284"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>組態管理的 WMI 提供者概念
-  WMI 提供者是與搭配使用的發行的層[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager 嵌入式管理單元[!INCLUDE[msCoName](../../includes/msconame-md.md)]Management Console (MMC) 和[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。 它會提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員所要求之登錄作業的 API 呼叫，並在選取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務上，提供增強的控制和操作功能。  
+  WMI 提供者是與搭配使用的發行的層[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]組態管理員嵌入式管理單元[!INCLUDE[msCoName](../../includes/msconame-md.md)]Management Console (MMC) 並[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。 它會提供統一的方式來協助您連結管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員所要求之登錄作業的 API 呼叫，並在選取的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務上，提供增強的控制和操作功能。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] WMI 提供者是一個 DLL 和 MOF 檔案，會透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式自動編譯。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36033615"
  本節以更詳細的方式處理從指令碼存取組態管理的 WMI 提供者。  
   
 ## <a name="using-the-smo-managedcomputer-object"></a>使用 SMO ManagedCompute 物件  
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件是一個 Managed SMO 物件，可存取組態管裡的 WMI 提供者。 透過使用 SMO 程式，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件可用於檢視與修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務、網路設定以及別名設定。 如需詳細資訊，請參閱[管理服務和網路設定，使用 WMI 提供者所](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件是一個 Managed SMO 物件，可存取組態管裡的 WMI 提供者。 透過使用 SMO 程式，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> 物件可用於檢視與修改 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務、網路設定以及別名設定。 如需詳細資訊，請參閱 <<c0> [ 管理的服務和網路設定，使用 WMI 提供者所](../server-management-objects-smo/tasks/managing-services-and-network-settings-by-using-wmi-provider.md)。  
   
 ## <a name="using-the-microsoft-management-console-or-sql-server-configuration-manager"></a>使用 Microsoft Management Console 或 SQL Server 組態管理員  
  Microsoft Management Console (MMC) 提供一個管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務 (而非指令碼語言或 Managed 程式碼程式) 的介面。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management MMC 嵌入式管理單元可用於停止和啟動服務，以及變更服務帳戶。  
@@ -60,8 +60,8 @@ ms.locfileid: "36033615"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員也可用於管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務、用戶端與伺服器通訊協定，以及伺服器別名  
   
 ## <a name="see-also"></a>另請參閱  
- [了解用於組態管理的 WMI 提供者](understanding-the-wmi-provider-for-configuration-management.md)   
+ [了解組態管理的 WMI 提供者](understanding-the-wmi-provider-for-configuration-management.md)   
  [使用組態管理的 WMI 提供者](working-with-the-wmi-provider-for-configuration-management.md)   
- [使用 WQL 與指令碼語言與組態管理的 WMI 提供者](using-wql-and-scripting-languages-with-the-wmi-provider.md)  
+ [搭配組態管理的 WMI 提供者使用 WQL 與指令碼語言](using-wql-and-scripting-languages-with-the-wmi-provider.md)  
   
   

@@ -18,16 +18,16 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6201ec5007c3f7e09c2713d45bdd86badb2addfc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0d2c2c37e0f9c5485b530483b60da08d8da06173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032154"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316818"
 ---
 # <a name="understanding-the-script-component-object-model"></a>了解指令碼元件物件模型
-  在 [程式碼撰寫和偵錯指令碼元件] 中所述 (../ / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md，指令碼元件專案包含三個專案項目：  
+  在 [程式碼撰寫和偵錯指令碼元件] 中所述 (.../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md，指令碼元件專案包含三個專案項目：  
   
 1.  `ScriptMain` 項目，其中包含您用來撰寫程式碼的 `ScriptMain` 類別。 `ScriptMain` 類別繼承自 `UserComponent` 類別。  
   
@@ -129,7 +129,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>ComponentWrapper 專案項目提供的內容  
  ComponentWrapper 專案項目包含了衍生自 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 的 `UserComponent` 類別。 接著您撰寫自訂程式碼所使用的 `ScriptMain` 類別就會衍生自 `UserComponent`。 `UserComponent` 類別包含以下的方法：  
   
--   已覆寫的 `ProcessInput` 方法實作。 這是資料流程引擎在執行階段的 `PreExecute` 方法之後所呼叫的方法，而且它可呼叫多次。 `ProcessInput` 處理交給 **\<inputbuffer > _ProcessInput**方法。 然後 `ProcessInput` 方法會檢查輸入緩衝區的結尾，如果到達了緩衝區結尾，會呼叫可覆寫的 `FinishOutputs` 方法和私用 `MarkOutputsAsFinished` 方法。 然後 `MarkOutputsAsFinished` 方法會在最後一個輸出緩衝區上呼叫 `SetEndOfRowset`。  
+-   已覆寫的 `ProcessInput` 方法實作。 這是資料流程引擎在執行階段的 `PreExecute` 方法之後所呼叫的方法，而且它可呼叫多次。 `ProcessInput` 處理交給** \<inputbuffer > n p u t**方法。 然後 `ProcessInput` 方法會檢查輸入緩衝區的結尾，如果到達了緩衝區結尾，會呼叫可覆寫的 `FinishOutputs` 方法和私用 `MarkOutputsAsFinished` 方法。 然後 `MarkOutputsAsFinished` 方法會在最後一個輸出緩衝區上呼叫 `SetEndOfRowset`。  
   
 -   可覆寫的 **\<輸入緩衝區>_ProcessInput** 方法實作。 這個預設實作只會在每一個輸入資料列中執行迴圈，並呼叫 **\<輸入緩衝區>_ProcessInputRow**。  
   
@@ -154,7 +154,7 @@ public override void PreExecute()
   
 -   每一個輸出資料行的具名、具類型、唯寫的存取子屬性。  
   
--   唯寫**\<資料行 > _IsNull**屬性可用來將資料行值設定為每個選取的輸出資料行`null`。  
+-   唯**\<資料行 > _IsNull**可用來將資料行值設定為每一個選定的輸出資料行的屬性`null`。  
   
 -   要將空白的新資料列加入到輸出緩衝區的 `AddRow` 方法。  
   
@@ -206,10 +206,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定指令碼元件在指令碼元件編輯器]((configuring-the-script-component-in-the-script-component-editor.md)   
+ [指令碼元件在指令碼元件編輯器中設定]((configuring-the-script-component-in-the-script-component-editor.md)   
  [程式碼撰寫和偵錯指令碼元件](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md  
   
   

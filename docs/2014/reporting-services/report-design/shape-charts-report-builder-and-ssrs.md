@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 757cb2570c163ceaa184d15a7e97a253129d05cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294058"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>形狀圖 (報表產生器及 SSRS)
   形狀圖會將值資料顯示為整體所佔的百分比。 形狀圖通常用於顯示集合中不同值之間成比例的比較。 類別目錄是以個別的形狀區段表示。 區段的大小取決於值。 形狀圖在用途上類似於圓形圖，差別在於後者排序類別目錄時是從最大到最小。  
   
- 漏斗圖會將值顯示為逐漸減少的比例。 區域的大小取決於所有值總計中所佔百分比的數列值。 例如，您可能會使用漏斗圖來顯示網站訪客的趨勢。 漏斗圖在頂端可能會顯示一個寬廣的區域，表示訪客點擊首頁的次數，而其他區域在比例上會比較小。 如需如何將資料加入至漏斗圖的詳細資訊，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+ 漏斗圖會將值顯示為逐漸減少的比例。 區域的大小取決於所有值總計中所佔百分比的數列值。 例如，您可能會使用漏斗圖來顯示網站訪客的趨勢。 漏斗圖在頂端可能會顯示一個寬廣的區域，表示訪客點擊首頁的次數，而其他區域在比例上會比較小。 如需如何將資料加入漏斗圖的詳細資訊，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
  下圖顯示漏斗圖的範例。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36023043"
   
 -   形狀圖在按照排序順序顯示成比例的百分比時最有效。 不過，為了維持一致性，圖表預設不會排序資料集中的值。 若要最精確地將資料表示成漏斗圖或金字塔圖，請考慮從最高至最低排序值。 如需詳細資訊，請參閱[篩選、分組和排序資料 &#40;報表產生器及 SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)。  
   
--   計算比例時，Null、空值、負值與零值沒有效用。 因此，這些值不會顯示在形狀圖上。 如果您要在圖表上，以視覺方式表示這些值的類型，請將圖表類型變更為形狀圖之外的其他類型。 如需如何將空點加入至非形狀圖的詳細資訊，請參閱[加入空點加入圖表&#40;報表產生器及 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
+-   計算比例時，Null、空值、負值與零值沒有效用。 因此，這些值不會顯示在形狀圖上。 如果您要在圖表上，以視覺方式表示這些值的類型，請將圖表類型變更為形狀圖之外的其他類型。 如需如何將空點加入至非形狀圖的詳細資訊，請參閱[新增空白點至圖表&#40;報表產生器及 SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md)。  
   
 -   如果您要在形狀圖上使用自訂調色盤定義自己的色彩，請確認您的調色盤上有足夠的色彩，才能以其獨特的色彩反白顯示每個資料點。 如需詳細資訊，請參閱 [設定圖表上數列色彩的格式 &#40;報表產生器及 SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36023043"
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [圓形圖&#40;報表產生器和 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [圓形圖&#40;報表產生器及 SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 使用動態管理檢視 (Dmv) 監視 Analysis Services |Microsoft 文件
+title: 使用動態管理檢視 (Dmv) 監視 Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ef037d3d2745a5cfce8949ca7ac14e0d5743326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 789811d4588efe47848d7a6045342d506e1975ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288564"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>使用動態管理檢視 (DMV) 監視 Analysis Services
   Analysis Services 動態管理檢視 (DMV) 是公開本機伺服器作業和伺服器健全狀況相關資訊的查詢結構。 查詢結構是傳回 Analysis Services 執行個體中繼資料和監視資訊之結構描述資料列集的介面。  
   
- 對於大多數 DMV 查詢，您使用`SELECT`陳述式和`$System`結構描述與 XML/A 結構描述資料列。  
+ 對於大多數 DMV 查詢，您使用`SELECT`陳述式和`$System`搭配 XML/A 結構描述資料列集的結構描述。  
   
 ```  
 SELECT * FROM $System.<schemaRowset>  
@@ -102,7 +102,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  如果 DMV 不適用於給定的資料列集，伺服器會傳回下列錯誤:" \<schemarowset > 伺服器無法辨識要求類型 」。 所有其他錯誤都指向語法問題。  
+>  如果 DMV 不適用於給定的資料列集，伺服器會傳回下列錯誤: 「 \<w > 伺服器無法辨識要求類型 」。 所有其他錯誤都指向語法問題。  
   
 |資料列集|描述|  
 |------------|-----------------|  

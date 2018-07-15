@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing replication properties
 - modifying replication properties, articles
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8168a9cb358f2be2a4b5c7c120ee06a8c10f7ccc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bc7d6dd823e7f19ad13a8921146d13e59f4e443f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230838"
 ---
 # <a name="view-and-modify-publication-properties"></a>檢視及修改發行集屬性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中檢視及修改發行集屬性。  
@@ -160,11 +160,11 @@ ms.locfileid: "36137045"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.TransPublication> 類別的執行個體、為發行集設定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，以及將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中所建立的連接。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，是在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
   
-4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (`&`在 Microsoft Visual C# 和`And`在 Microsoft Visual Basic) 來判斷給定<xref:Microsoft.SqlServer.Replication.PublicationAttributes>值皆設<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>屬性。 使用包含的邏輯 OR 運算子 (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`)，並使用排除的邏輯 OR 運算子 (Visual C# 中的 `^` 和 Visual Basic 中的 `Xor`)，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
+4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (`&`在 Microsoft Visual C# 和`And`Microsoft Visual Basic 中) 以判斷給定<xref:Microsoft.SqlServer.Replication.PublicationAttributes>值設定為<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>屬性。 使用包含的邏輯 OR 運算子 (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`)，並使用排除的邏輯 OR 運算子 (Visual C# 中的 `^` 和 Visual Basic 中的 `Xor`)，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-5.  （選擇性）如果您指定的值`true`如<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法來認可伺服器上的變更。 如果您指定的值`false`如<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（預設值），變更會立即傳送到伺服器。  
+5.  （選擇性）如果您指定的值`true`for <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>; 方法來認可伺服器上的變更。 如果您指定的值`false`針對<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（預設值），變更會立即傳送到伺服器。  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>檢視或修改合併式發行集的屬性  
   
@@ -172,11 +172,11 @@ ms.locfileid: "36137045"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體、為發行集設定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，以及將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中所建立的連接。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，是在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
   
 4.  (選擇性) 若要變更屬性，請針對一或多個可設定的屬性設定新的值。 使用邏輯 AND 運算子 (Visual C# 中的 `&` 及 Visual Basic 中的 `And`)，以判斷是否已針對 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性設定給定的 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。 使用包含的邏輯 OR 運算子 (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`)，並使用排除的邏輯 OR 運算子 (Visual C# 中的 `^` 和 Visual Basic 中的 `Xor`)，為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes> 屬性變更 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 值。  
   
-5.  （選擇性）如果您指定的值`true`如<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>方法來認可伺服器上的變更。 如果您指定的值`false`如<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（預設值），變更會立即傳送到伺服器。  
+5.  （選擇性）如果您指定的值`true`for <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>，呼叫<xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>; 方法來認可伺服器上的變更。 如果您指定的值`false`針對<xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>（預設值），變更會立即傳送到伺服器。  
   
 ###  <a name="PShellExample"></a> 範例 (RMO)  
  此範例會設定交易式發行集的發行集屬性。 這些變更在明確傳送到伺服器之前，會先加以快取。  

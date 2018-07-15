@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing job activity
 - jobs [SQL Server Agent], viewing
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - displaying job activity
 ms.assetid: 5c284e5e-7775-435d-ac49-f3f12a27ddc7
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a71eb46918d9ae7c0189293b6c67313b6b8a285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4efd9964bc375071fcf4cf078a08099bd7fe3b4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280504"
 ---
 # <a name="view-job-activity"></a>檢視作業活動
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)]Agent 作業的執行階段狀態。  
@@ -83,6 +83,6 @@ ms.locfileid: "36145282"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_help_jobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_help_jobactivity &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)。  
   
   

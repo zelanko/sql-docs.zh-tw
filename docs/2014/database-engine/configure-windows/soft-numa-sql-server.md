@@ -1,5 +1,5 @@
 ---
-title: 設定 SQL Server 使用軟體 NUMA (SQL Server) |Microsoft 文件
+title: 設定 SQL Server 使用軟體 NUMA (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2016
 ms.prod: sql-server-2014
@@ -8,41 +8,41 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NUMA
 - non-uniform memory access
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 827975fcb4c5bbba6253f3b44e1813a6e70f6fcf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 434e569b17fa70b6f6b3f4763e54e08e271dc99b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279555"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>設定 SQL Server 使用軟體 NUMA (SQL Server)
-現代處理器在每個插槽有許多核心。 每個插槽通常代表單一 NUMA 節點。 SQL Server 資料庫引擎資料分割將每個 NUMA 節點分為內部結構和資料分割服務執行緒。 處理器都含有 10 個或多個核心，每個通訊端，使用軟體 NUMA (軟體 NUMA) 分割硬體 NUMA 節點通常會增加延展性和效能。   
+現代處理器在每個插槽有許多核心。 每個插槽通常代表單一 NUMA 節點。 SQL Server 資料庫引擎資料分割將每個 NUMA 節點分為內部結構和資料分割服務執行緒。 處理器包含 10 個或多個核心，每個通訊端，使用軟體 NUMA (軟體 NUMA) 將硬體 NUMA 節點通常會增加延展性和效能。   
 
 > [!NOTE]
 > 軟體 NUMA 不支援熱新增處理器。
   
 ## <a name="automatic-soft-numa"></a>自動軟體 NUMA
 
-從 SQL Server 2014 Service Pack 2，每當資料庫引擎伺服器偵測到 8 個以上的實體處理器，在啟動時，軟體 NUMA 節點會自動建立如果啟用追蹤旗標 8079 作為啟動參數。 計算實體處理器時，超執行緒處理器核心不會計算的。 當偵測到的實體處理器數目超過 8 個每個通訊端時，database engine 服務會建立在理想情況下包含 8 個核心，但可以減少至每個節點 5 個或最多 9 個邏輯處理器的 NUMA 節點。 硬體節點的大小可由 CPU 關連遮罩限制。 NUMA 節點數目將永遠不會超過支援的 NUMA 節點數目上限。
+從 SQL Server 2014 Service Pack 2，每當資料庫引擎伺服器偵測到 8 個以上的實體處理器，在啟動時，軟體 NUMA 節點會自動建立如果啟用追蹤旗標 8079 作為啟動參數。 計算實體處理器時，超執行緒處理器核心不會計算的。 當偵測到的實體處理器的數目超過 8 個每個通訊端時，database engine 服務會建立在理想情況下包含 8 個核心，但可以減少至每個節點 5 個最多 9 個邏輯處理器的 NUMA 節點。 硬體節點的大小可由 CPU 關連遮罩限制。 NUMA 節點數目將永遠不會超過支援的 NUMA 節點數目上限。
 
-不追蹤旗標預設是停用 NUMA。 您可以啟用 NUMA 使用追蹤旗標 8079。 變更此設定值需要重新啟動資料庫引擎才會生效。
+不追蹤旗標預設會停用 NUMA。 您可以讓 NUMA 使用追蹤旗標 8079。 變更此設定值需要重新啟動資料庫引擎才會生效。
 
-下圖顯示當 SQL Server 偵測到硬體 NUMA 節點有超過 8 個邏輯處理器，而且如果啟用追蹤旗標 8079，您會看到 SQL Server 錯誤記錄檔中的軟體 NUMA 資訊類型。
+下圖顯示當 SQL Server 偵測到硬體 NUMA 節點有超過 8 個邏輯處理器，且已啟用追蹤旗標 8079，您會看到 SQL Server 錯誤記錄檔中的軟體 NUMA 資訊類型。
 
 ![ssNoVersion](./media/soft-numa-sql-server/soft-numa.PNG)
 
 ## <a name="manual-soft-numa"></a>手動軟體 NUMA
   
-若要設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要以手動方式使用軟體 NUMA，您必須編輯登錄來加入節點組態相似性遮罩。 軟體 NUMA 遮罩可陳述為二進位、DWORD (十六進位或十進位) 或 QWORD (十六進位或十進位) 登錄項目。 若要設定超過前 32 個 CPU，請使用 QWORD 或 BINARY 登錄值  (在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前的版本不能使用 QWORD 值。)您必須重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 來設定軟體 NUMA。  
+若要設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]若要以手動方式使用軟體 NUMA，您必須編輯登錄來加入節點組態親和性遮罩。 軟體 NUMA 遮罩可陳述為二進位、DWORD (十六進位或十進位) 或 QWORD (十六進位或十進位) 登錄項目。 若要設定超過前 32 個 CPU，請使用 QWORD 或 BINARY 登錄值  (在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前的版本不能使用 QWORD 值。)您必須重新啟動 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 來設定軟體 NUMA。  
   
 > [!TIP]  
 >  CPU 編號從 0 開始。  
@@ -95,11 +95,11 @@ ms.locfileid: "36145223"
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node2|DWORD|CPUMask|0x3f000|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node2|DWORD|群組|0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node3|DWORD|CPUMask|0x3F|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node3|DWORD|群組|@shouldalert|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node3|DWORD|群組|1|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node4|DWORD|CPUMask|0x0fc0|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node4|DWORD|群組|@shouldalert|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node4|DWORD|群組|1|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node5|DWORD|CPUMask|0x3f000|  
-    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node5|DWORD|群組|@shouldalert|  
+    |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node5|DWORD|群組|1|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node6|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node6|DWORD|群組|2|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node7|DWORD|CPUMask|0x0fc0|  

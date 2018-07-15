@@ -1,5 +1,5 @@
 ---
-title: AMO OLAP 類別 |Microsoft 文件
+title: AMO OLAP 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, OLAP
 ms.assetid: 397509b7-a4fb-40de-aa30-c66dc9ed2105
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6db043eff86d0cd1675674cefee6aa74508e33f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1fcf669d63554c9a57dc927cb0071fbc17a9f2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145061"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280404"
 ---
 # <a name="amo-olap-classes"></a>AMO OLAP 類別
   分析管理物件 (AMO) OLAP 類別可協助您建立、修改、刪除和處理 Cube、維度及相關的物件，例如關鍵效能指標 (KPI)、動作和主動式快取。  
   
- 如需設定 AMO 程式設計環境，如何與伺服器建立連線，存取資料庫，或是定義資料來源和資料來源檢視，請參閱[AMO 基礎類別](amo-fundamental-classes.md)。  
+ 如需有關 AMO 程式設計環境設定的詳細資訊，如何與伺服器建立連線，存取資料庫，或是定義資料來源和資料來源檢視，請參閱[AMO 基礎類別](amo-fundamental-classes.md)。  
   
  本主題包含下列幾節：  
   
@@ -39,7 +39,7 @@ ms.locfileid: "36145061"
   
 -   [MeasureGroup 物件](#MeasureGroups)  
   
--   [分割區物件](#Partition)  
+-   [Partition 物件](#Partition)  
   
 -   [AggregationDesign 物件](#AggregationDesign)  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36145061"
  <xref:Microsoft.AnalysisServices>   
  [AMO 類別簡介](amo-classes-introduction.md)   
  [程式設計 AMO OLAP 基本物件](programming-amo-olap-basic-objects.md)   
- [設計 AMO OLAP 進階物件](programming-amo-olap-advanced-objects.md)   
+ [程式設計 AMO OLAP 進階物件](programming-amo-olap-advanced-objects.md)   
  [邏輯架構&#40;Analysis Services-多維度資料&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [資料庫物件&#40;Analysis Services-多維度資料&#41;](../olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

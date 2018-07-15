@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 資料存取元件 |Microsoft 文件
+title: SQLXML 4.0 資料存取元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - providers [SQLXML], listed
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d5d0b620c298ced61ee043b981f9f91eee9ed023
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4affd533f25ea3b6dfb3a4ab9c643f1cc6ff7b93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236528"
 ---
 # <a name="sqlxml-40-data-access-components"></a>SQLXML 4.0 Data Access Components
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 包含三個資料提供者，可針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的資料庫插入及擷取 XML 資料：  
@@ -38,7 +38,7 @@ ms.locfileid: "36145575"
   
 -   SQLXML Managed 類別  
   
-     可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內公開 SQLXML 功能。 如需詳細資訊，請參閱[SQLXML Managed 類別](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)。  
+     可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內公開 SQLXML 功能。 如需詳細資訊，請參閱 < [SQLXML Managed 類別](../net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)。  
   
 -   SQL Server Native Client (SQLNCLI11)  
   

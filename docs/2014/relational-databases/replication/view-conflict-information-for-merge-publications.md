@@ -1,5 +1,5 @@
 ---
-title: 檢視合併式發行集 （複寫 TRANSACT-SQL 程式設計） 的衝突資訊 |Microsoft 文件
+title: 檢視合併式發行集 （複寫 TRANSACT-SQL 程式設計） 的衝突資訊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4907fe35-10ee-4f81-b924-fc419b1864d2
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e94a8d9fdccf19668a09917aecea84e645ac2601
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 48225870d89fc6bf39355957187fac84a704093d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316098"
 ---
 # <a name="view-conflict-information-for-merge-publications-replication-transact-sql-programming"></a>檢視合併式發行集的衝突資訊 (複寫 Transact-SQL 程式設計)
   在合併式複寫中解決衝突時，遺失之資料列的資料會寫入衝突資料表。 可以使用複寫預存程序來以程式設計的方式檢視此衝突資料。 如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
@@ -47,9 +47,9 @@ ms.locfileid: "36032543"
   
     |@conflict_logging 值|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
-    |`publisher`|@shouldalert|0|  
-    |`subscriber`|0|@shouldalert|  
-    |`both`|@shouldalert|@shouldalert|  
+    |`publisher`|1|0|  
+    |`subscriber`|0|1|  
+    |`both`|1|1|  
   
 2.  在發行集資料庫的發行者上或是在訂閱資料庫的訂閱者上，執行 [sp_helpmergearticleconflicts](/sql/relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql)。 針對 **@publication** 指定值，只傳回屬於特定發行集之發行項的衝突資訊。 這樣會傳回有衝突之發行項的衝突資料表資訊。 請記下感興趣之任何發行項的 **conflict_table** 值。 如果發行項的 **conflict_table** 值為 NULL，只要刪除此發行項中已發生的衝突。  
   
