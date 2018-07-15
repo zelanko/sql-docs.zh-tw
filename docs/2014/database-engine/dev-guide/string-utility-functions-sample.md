@@ -1,5 +1,5 @@
 ---
-title: 字串公用程式函數範例 |Microsoft 文件
+title: 字串公用程式函數範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,22 +12,22 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bf956d09e957ae963ff2caaadcd61b011080d23d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 892a950795569b87f5a09d4b30aa5b171b26321e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136921"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275094"
 ---
 # <a name="string-utility-functions-sample"></a>字串公用程式函數範例
   這個「字串公用程式」範例包含以 Visual C# 和 Visual Basic 撰寫的資料流資料表值函式，它會將逗號分隔字串分割成具有一個資料行的資料表。 它也包含彙總函式，可將字串資料行轉換為逗號分隔字串。  另外還實作純量函數和資料表值函式，它們提供規則運算式取代和規則運算式搜尋功能。  
   
  若要實作資料流資料表值函式，請建立傳回實作 `IEnumerable` 介面之物件的方法。 此 `IEnumerable` 方法必須透過屬性與填入資料表值函式資料列的另一個方法連結。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -85,7 +85,7 @@ ms.locfileid: "36136921"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-    -   複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存成`test.sql`範例目錄中。  
+    -   複製[!INCLUDE[tsql](../../includes/tsql-md.md)]測試命令指令碼至檔案，並將它儲存為`test.sql`範例目錄中。  
   
 8.  使用下列命令來執行測試指令碼  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, system settings
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 13
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e29f9877a701a4667039d75bb923694de628bcaf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9ab93ff71c31ad9606b6137fea051bb73cfe24c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310098"
 ---
 # <a name="system-settings-master-data-services"></a>系統設定 (Master Data Services)
   針對與 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫相關聯的所有 Web 應用程式和 Web 服務，您可以設定系統設定。  

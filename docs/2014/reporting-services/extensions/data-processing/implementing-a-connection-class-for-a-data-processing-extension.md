@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], connections
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b344f22d800227f1c022186f3678cfa5ac7ce695
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 9be8bc7507cad3a44b4330cc3c49a00abc1953e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309338"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>為資料處理延伸模組實作 Connection 類別
   **Connection** 物件代表資料庫連結或是類似的資源，而且是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組之使用者的起點。 它代表資料庫伺服器的連接，不過任何具有類似行為的實體都可以公開成 **Connection**。  

@@ -1,5 +1,5 @@
 ---
-title: 修改在執行階段的 OData 來源查詢 |Microsoft 文件
+title: 在執行階段修改 OData 來源查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8a6d015c972e9639a53a9affa498067d1c0350d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ada1553d9b170267e5f8521a89afd1cb9577792f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193598"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>在執行階段修改 OData 來源查詢
   您可以在執行階段修改 OData 來源查詢，修改的方式是將運算式加入資料流程工作的 **[OData Source].[Query]** 屬性。  

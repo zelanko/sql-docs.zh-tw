@@ -1,5 +1,5 @@
 ---
-title: 資料採礦程式設計 |Microsoft 文件
+title: 資料採礦程式設計 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ ms.assetid: 9fd77b16-0b89-44ce-bcf1-7c04b62499da
 caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 1ad8f0d8e066fde6f199af26c977b5a9ba3d8917
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: fce4bd16cdc64aeabb2367d757b0b68a5cab6144
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313286"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297368"
 ---
 # <a name="data-mining-programming"></a>資料採礦程式設計
   如果您發現 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的內建工具和檢視器不符合需求，就可以透過編碼自己的延伸模組，擴充 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的功能。 在這種方法中，您有兩種選擇：  
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 支援 XML for Analysis (XMLA) 當做與用戶端應用程式通訊的通訊協定。 擴充 XML for Analysis 規格的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可支援其他命令。  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 支援使用 XML for Analysis (XMLA) 當做與用戶端應用程式進行通訊的通訊協定。 擴充 XML for Analysis 規格的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可支援其他命令。  
   
      因為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會將 XMLA 用於資料定義、資料操作和資料控制支援，所以您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 提供的視覺化工具來建立採礦結構和採礦模型，然後擴充您之前使用資料採礦延伸模組 (DMX) 和 Analysis Services 指令碼語言 (ASSL) 指令碼所建立的資料採礦物件。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36313286"
      您可以使用 DMX 來封裝命令陳述式、預測查詢和中繼資料查詢，並以表格格式傳回結果，前提是您已經建立與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器的連接。  
   
 ## <a name="in-this-section"></a>本節內容  
- [資料採礦的 OLE DB](../../../2014/analysis-services/dev-guide/ole-db-for-data-mining.md)  
+ [OLE DB for Data Mining](../../../2014/analysis-services/dev-guide/ole-db-for-data-mining.md)  
  描述此規格的添加來支援資料採礦和多維度資料：新的結構描述資料列集和資料行、用來建立和管理採礦結構的資料採礦延伸模組 (DMX) 語言。  
   
 ## <a name="related-reference"></a>相關的參考資料  
@@ -70,7 +70,7 @@ ms.locfileid: "36313286"
  介紹 XML for Analysis (XMLA) 和它的延伸模組。  
   
 ## <a name="see-also"></a>另請參閱  
- [開發人員手冊 》 &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
+ [開發人員指南&#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
  [資料採礦延伸模組&#40;DMX&#41;參考](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

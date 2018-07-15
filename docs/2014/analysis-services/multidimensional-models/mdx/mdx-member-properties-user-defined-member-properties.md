@@ -1,5 +1,5 @@
 ---
-title: 使用者自訂成員屬性 (MDX) |Microsoft 文件
+title: 使用者定義成員屬性 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - custom member properties [MDX]
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba34243609b796eef635fc3b55cd99ef4f225638
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 50af6373446859ac0bf98a7170504b9d58c4a5f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321278"
 ---
 # <a name="user-defined-member-properties-mdx"></a>使用者自訂成員屬性 (MDX)
-  使用者自訂成員屬性可以做為屬性關聯性，增加到維度中的特定具名層級。 使用者自訂成員屬性無法加入至`(All)`層級的階層，或階層本身。  
+  使用者自訂成員屬性可以做為屬性關聯性，增加到維度中的特定具名層級。 使用者自訂成員屬性無法加入`(All)`層級的階層或階層本身。  
   
 ## <a name="creating-user-defined-member-properties"></a>建立使用者自訂成員屬性  
  您可以透過使用者介面或以程式設計的方式，將使用者自訂成員屬性增加到伺服器維度或 Cube：  
@@ -41,7 +41,7 @@ ms.locfileid: "36031730"
   
  `DIMENSION PROPERTIES [Dimension.]Level.<Custom_Member_Property>`  
   
- `PROPERTIES`關鍵字會在座標軸規格的集合運算式後面出現。 例如，下列 MDX 查詢`PROPERTIES`關鍵字擷取`List Price`和`Dealer Price`使用者自訂成員屬性和 1 月份銷售集合運算式，可識別產品之後，會出現：  
+ `PROPERTIES`關鍵字會在座標軸規格的集合運算式後面出現。 例如，下列 MDX 查詢`PROPERTIES`關鍵字來擷取`List Price`和`Dealer Price`使用者自訂成員屬性及集合運算式，可識別產品銷售年 1 月之後顯示：  
   
 ```  
 SELECT   

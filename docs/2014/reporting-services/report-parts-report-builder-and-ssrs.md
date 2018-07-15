@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10543"
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 caps.latest.revision: 8
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fe79b6a9cd0e3c25caa2e3a1bccc67f0ac3e9be5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fd8f519abce87b224d062cb245365b42d5ffc79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262074"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>報表組件 (報表產生器及 SSRS)
   資料表、矩陣、圖表和影像等報表項目都可以當做 *「報表組件」*(Report Part) 發行。 報表組件是指已經個別發行至報表伺服器，而且可以在其他報表中重複使用的報表項目。 報表組件的副檔名為 .rsc。  
@@ -78,7 +78,7 @@ ms.locfileid: "36135653"
   
  有些報表組件可以包含其他報表項目。 例如，資料表可以包含圖表，而矩形可以包含矩陣或圖表。 當您發行包含其他報表項目的報表項目時，會儲存為一個單位。 內嵌在容器報表組件中的其他報表項目會一併儲存。 您無法個別更新它們，而且您無法將容器中的項目儲存為個別的報表組件。  
   
- 如需有關發行報表組件的詳細資訊，請參閱[發行並重新發行報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)。  
+ 如需有關發行報表組件的詳細資訊，請參閱 <<c0> [ 發行與重新發行報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)。</c0>  
   
 ### <a name="modifying-report-part-metadata"></a>修改報表組件中繼資料  
  您可以使用預設值將報表組件發行至預設位置，或者您可以將每個報表組件儲存至不同的位置，然後修改中繼資料 (例如標題和描述)。  
@@ -97,12 +97,12 @@ ms.locfileid: "36135653"
 ### <a name="searching-for-report-parts"></a>搜尋報表組件  
  您會尋找報表組件，以便加入至報表組件庫中的報表。 您可以依下列方式篩選報表組件：報表的全部或部分名稱、建立者、上次修改報表組件者、上次修改時間、儲存位置，或報表組件的類型。 例如，您可以依其中一個同事，搜尋上星期建立的所有圖表。  
   
- 您可以以縮圖或清單方式檢視搜尋結果，並依名稱、建立和修改日期，以及建立者來排序搜尋結果。 如需詳細資訊，請參閱[瀏覽報表組件及設定預設資料夾&#40;報表產生器及 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)。  
+ 您可以以縮圖或清單方式檢視搜尋結果，並依名稱、建立和修改日期，以及建立者來排序搜尋結果。 如需詳細資訊，請參閱 <<c0> [ 瀏覽報表組件及設定預設資料夾&#40;報表產生器及 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)。</c0>  
   
 ### <a name="what-comes-with-a-report-part"></a>報表組件隨附的內容  
  當您將報表組件加入到報表時，您也會加入此組件運作所必須擁有的所有項目。 例如，顯示資料的任何物件都取決於資料集，也就是資料來源的查詢和連接。 它也有一個或多個參數。 相依的所有項目都是它的 *「相依性」*(Dependency)，而且當您將報表組件加入至報表時，所有相依性或其指標都隨附在報表組件中。 資料集和參數會列在您報表的 [報表資料] 窗格中。  
   
- 報表組件的資料集可能會內嵌在報表組件中，或者，它可能是報表組件所指向的個別、共用資料集。 如果資料集內嵌在報表組件中，您可以修改它。 如果是共用資料集，則它是您需要權限的個別物件。 如需詳細資訊大約共用和內嵌資料集，請參閱[加入至報表的資料&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)。  
+ 報表組件的資料集可能會內嵌在報表組件中，或者，它可能是報表組件所指向的個別、共用資料集。 如果資料集內嵌在報表組件中，您可以修改它。 如果是共用資料集，則它是您需要權限的個別物件。 如需詳細資訊有關共用與內嵌資料集，請參閱[將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)。  
   
 ### <a name="resolving-naming-conflicts"></a>解決命名衝突  
  當您加入報表組件時，報表產生器會修正所有名稱衝突。 例如，如果您的報表中已經有一個 Chart1，然後又加入一個稱為 Chart1 的報表組件，報表產生器就會自動將新的報表組件重新命名為 Chart2。 如果您的報表中已經有一個 Dataset1，然後您又加入一個參考不同資料集 (也稱為 Dataset1) 的報表組件，報表產生器會將新的資料集重新命名為 Dataset2，並更新參考。  
@@ -118,7 +118,7 @@ ms.locfileid: "36135653"
  每當您開啟報表時，報表產生器都會檢查伺服器上是否已經更新該報表中之報表組件的伺服器執行個體。 它也會檢查報表組件的相依項目 (如資料集和參數) 是否有變更。 如果伺服器上已經更新任何已發行的報表組件或其相依性，報表中的資訊列會顯示已經更新的數目。 您可以選擇檢視並接受或拒絕更新，或是解除資訊列。 如果選擇檢視更新，您會看到報表組件的縮圖、上次修改者，以及上次修改時間。 接著，您可以接受任何或所有更新的項目。  
   
 > [!NOTE]  
->  您可以停用資訊列，如此當報表組件變更時，您就不會收到通知。 當您將報表組件加入至報表時，可設定此選項。 即使您停用了資訊列，還是可以檢查更新。 如需詳細資訊，請參閱[檢查更新或關閉更新&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)。  
+>  您可以停用資訊列，如此當報表組件變更時，您就不會收到通知。 當您將報表組件加入至報表時，可設定此選項。 即使您停用了資訊列，還是可以檢查更新。 如需詳細資訊，請參閱 <<c0> [ 檢查更新或關閉更新&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)。</c0>  
   
  報表產生器會檢查報表組件上次在伺服器上更新的日期，與您上次同步處理報表組件與伺服器的日期之間的差異。 它不會檢查您修改報表中之報表組件的日期。 因此，報表中的報表組件和伺服器上的報表組件差異可能很大，但是報表產生器檢查更新時，將不會發現任何差異。  
   
@@ -145,15 +145,15 @@ ms.locfileid: "36135653"
  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的報表設計師中，報表組件的運作方式稍有不同。 在報表設計師中，發行作業是單向的：您可以從報表設計師發行報表組件，但不能在報表設計師中重複使用現有的報表組件。 如需詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)。  
   
 ##  <a name="HowTo"></a> 如何主題  
- [發行與重新發行報表組件&#40;報表產生器和 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [發行與重新發行報表組件&#40;報表產生器及 SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
- [瀏覽報表組件及設定預設資料夾&#40;報表產生器和 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
+ [瀏覽報表組件及設定預設資料夾&#40;報表產生器及 SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [檢查更新或關閉更新&#40;報表產生器和 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
+ [檢查更新或關閉更新&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [報表組件和報表產生器中的資料集](report-data/report-parts-and-datasets-in-report-builder.md)   
- [疑難排解報表組件&#40;報表產生器和 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [疑難排解報表組件&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [管理報表組件](report-design/managing-report-parts.md)   
  [報表產生器 3 報表組件，在 SQL Server 2008 R2 （影片）](http://technet.microsoft.com/edge/Video/ff711300)   
  [如何： 建立可重複使用報表組件與 SQL Server 報表產生器 （影片）](http://technet.microsoft.com/sqlserver/ff634166.aspx)  

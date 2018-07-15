@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Win32
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 01789595c470865d4a422ac87c2814bcc9570468
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 16ea4d4a00726453918577e2eb0eb92d73580ccd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144739"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260864"
 ---
 # <a name="create-client-applications-for-filestream-data"></a>建立 FILESTREAM 資料的用戶端應用程式
   您可以使用 Win32 來讀取及寫入資料至 FILESTREAM BLOB。 下面是必要的步驟：  
@@ -51,7 +50,7 @@ ms.locfileid: "36144739"
 ##  <a name="steps"></a> 存取 FILESTREAM 資料的步驟  
   
 ###  <a name="path"></a> 讀取 FILESTREAM 檔案路徑  
- FILESTREAM 資料表中的每個資料格都具有與它相關聯的檔案路徑。 若要讀取此路徑，使用`PathName`屬性`varbinary(max)`中的資料行[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 下列範例示範如何讀取的檔案路徑`varbinary(max)`資料行。  
+ FILESTREAM 資料表中的每個資料格都具有與它相關聯的檔案路徑。 若要讀取此路徑，使用`PathName`的屬性`varbinary(max)`中的資料行[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。 下列範例示範如何讀取的檔案路徑`varbinary(max)`資料行。  
   
  [!code-sql[FILESTREAM#FS_PathName](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_pathname)]  
   

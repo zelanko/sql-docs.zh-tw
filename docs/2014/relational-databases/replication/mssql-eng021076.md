@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021076 error
 ms.assetid: 612e5c59-ba3e-49c3-a3df-56bac3d850a2
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 087d6edb5fcb9fb3c5a36949b5a92eb725f3d2bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 835233321589b9560b8933632dd82fdccf4206d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146046"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190045"
 ---
 # <a name="mssqleng021076"></a>MSSQL_ENG021076
     

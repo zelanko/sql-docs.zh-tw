@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c03b77cf021e387544cfc3a235bcd5e933fd2681
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9406ca3d37cbfa8749a039cdf78bb7020467da5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280204"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 來源編輯器 (錯誤輸出頁面)
   使用 **[SAP BW 來源編輯器]** 的 **[錯誤輸出]** 頁面可以選取錯誤處理選項，並設定錯誤輸出資料行的屬性。  
@@ -49,7 +49,7 @@ ms.locfileid: "36137403"
  檢視資料來源的名稱。  
   
  **資料行**  
- 檢視您在 [SAP BW 來源編輯器] 對話方塊之 [資料行] 頁面上所選取的外部 (來源) 資料行。 如需有關此對話方塊的詳細資訊，請參閱[SAP BW 來源編輯器&#40;資料行頁面&#41;](sap-bw-source-editor-columns-page.md)。  
+ 檢視您在 [SAP BW 來源編輯器] 對話方塊之 [資料行] 頁面上所選取的外部 (來源) 資料行。 如需有關此對話方塊的詳細資訊，請參閱 < [SAP BW 來源編輯器&#40;資料行頁面&#41;](sap-bw-source-editor-columns-page.md)。  
   
  **錯誤**  
  指定 SAP BW 來源元件應該在發生錯誤時採取的動作：忽略失敗、重新導向資料列，或使元件失效。  
@@ -67,7 +67,7 @@ ms.locfileid: "36137403"
  將錯誤處理選項套用至選取的資料格。  
   
 ## <a name="see-also"></a>另請參閱  
- [SAP BW 來源編輯器&#40;連接管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 來源編輯器&#40;連線管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [SAP BW 來源編輯器&#40;資料行頁面&#41;](sap-bw-source-editor-columns-page.md)   
  [SAP BW 來源編輯器 &#40;進階頁面&#41;](sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 說明](../microsoft-connector-for-sap-bw-f1-help.md)  

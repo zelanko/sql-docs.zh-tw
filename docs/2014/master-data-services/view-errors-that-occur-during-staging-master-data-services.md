@@ -1,5 +1,5 @@
 ---
-title: 檢視暫存處理序 (Master Data Services) 期間發生的錯誤 |Microsoft 文件
+title: 檢視暫存處理序 (Master Data Services) 期間發生的錯誤 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], viewing errors
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c12a96fc1e842775556cf3b1261d7aab2b7cacab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f5a6dc218cdef2e30e8b25891dc38fe61f5e20bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209398"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>檢視暫存處理序期間發生的錯誤 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以檢視暫存處理序期間發生的錯誤。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫提供下列兩個用來顯示錯誤的檢視：  
@@ -30,7 +30,7 @@ ms.locfileid: "36145864"
   
 -   階層關聯性更新適用的 stg.viw_name_RelationshipErrorDetails。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中，您必須具有 stg.viw_name_MemberErrorDetails 或 stg.viw_name_RelationshipErrorDetails 檢視的 SELECT 權限。  

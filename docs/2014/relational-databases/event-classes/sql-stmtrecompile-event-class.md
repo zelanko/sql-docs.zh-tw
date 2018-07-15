@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:StmtRecompile event class
 ms.assetid: 3a134751-3e93-4fe8-bf22-1e0561189293
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8b72558a2dc8d7c400f935c39fbb052e872d2f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 24630824594621499fcc1c3fc70fca74ed5562e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292808"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile 事件類別
   SQL:StmtRecompile 事件類別表示所有批次類型造成的陳述式層級重新編譯：預存程序、觸發程序、特定批次及查詢。 使用 sp_executesql、動態 SQL、Prepare 方法、Execute 方法或類似介面可以提交查詢。 應該使用 SQL:StmtRecompile 事件類別來取代 SP:Recompile 事件類別。  
@@ -58,7 +58,7 @@ ms.locfileid: "36031440"
 |SPID|`int`|連接的伺服器處理序識別碼。|12|是|  
 |SqlHandle|`varbinary`|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 sys.dm_exec_sql_text()，以便擷取相關聯的 SQL 文字。|63|否|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|重新編譯的 Transact-SQL 陳述式文字。|@shouldalert|是|  
+|TextData|`ntext`|重新編譯的 Transact-SQL 陳述式文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

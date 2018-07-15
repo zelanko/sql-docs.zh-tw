@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server], creating
 - SQL Server Agent, alerts
 - alerts [SQL Server], error numbers
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d6848705ce66cbec1a808515136a17de8973b72f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 330691d0f716be1091687603281740d5aa8a0d81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202488"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>使用錯誤號碼建立警示
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示，當發生指定號碼的錯誤時會引發警示。  
@@ -104,6 +104,6 @@ ms.locfileid: "36145275"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_add_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql)。  
   
   

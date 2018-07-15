@@ -1,5 +1,5 @@
 ---
-title: 程式設計 AMO 互補的類別和方法 |Microsoft 文件
+title: 程式設計 AMO 互補類別和方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - backups [AMO]
 ms.assetid: 14aed554-d2e2-49e5-9c72-26660759bce2
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5d7f1a2a00b91e9bff4b735ff80d4ac927032ea2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 66fcd0c30acb2ddf62288cb549b96b74ebf7f7b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317328"
 ---
 # <a name="programming-amo-complementary-classes-and-methods"></a>程式設計 AMO 互補的類別和方法
   本主題包含下列幾節：  
@@ -43,7 +43,7 @@ ms.locfileid: "36031991"
 -   [CaptureLog 類別和 CaptureXML 屬性](#CL)  
   
 ##  <a name="Assembly"></a> 組件類別  
- 組件可讓使用者擴充功能的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]加入新的預存程序或多維度運算式 (MDX) 函數。 如需詳細資訊，請參閱[AMO 其他類別和方法](amo-other-classes-and-methods.md)。  
+ 組件可讓使用者擴充功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]加入新的預存程序 」 或 「 多維度運算式 (MDX) 函數。 如需詳細資訊，請參閱 < [AMO 其他類別和方法](amo-other-classes-and-methods.md)。  
   
  加入和卸除組件很簡單而且可以在線上執行。 您必須是資料庫管理員才能將組件加入資料庫，或者必須是伺服器管理員才能將組件加入伺服器物件。  
   

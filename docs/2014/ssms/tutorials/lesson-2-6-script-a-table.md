@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea88d736-849e-4368-b55d-06aeee097bf3
-caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f7605be808552de655ed89155f7956efb86cb75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7808c9270e0085c2f8fafb5262d6356f8c8d1e08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145279"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196708"
 ---
 # <a name="script-a-table"></a>編寫資料表的指令碼
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 可以建立指令碼來選取、插入、更新和刪除資料表，以及建立、變更、卸除或執行預存程序。  
@@ -39,6 +37,6 @@ ms.locfileid: "36145279"
      這個練習說明編寫指令碼的功能遠遠超過只是編寫建立資料表或預存程序的指令碼。 這項新功能可協助您將操作資料的指令碼快速加入專案中，以及輕鬆地編寫執行預存程序的指令碼。 如果資料表和程序有許多欄位，這可以節省很多時間。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [摘要： 撰寫 TRANSACT-SQL](../../tutorials/summary-writing-transact-sql.md)  
+ [摘要：撰寫 Transact-SQL](../../tutorials/summary-writing-transact-sql.md)  
   
   

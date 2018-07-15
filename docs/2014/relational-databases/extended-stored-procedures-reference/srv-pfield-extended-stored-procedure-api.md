@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_pfield
 ms.assetid: a61e4c1f-e65b-48ea-a7d1-3e1544af389d
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ff9bb758322af63fbb2a067a6d0f5185ec5fec66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ee6011adaf4db7dbb3de7d915bb05786f89c0a73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136144"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262834"
 ---
 # <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (擴充預存程序 API)
     
@@ -63,7 +63,7 @@ len
  *field*  
  指定連接上要傳回的資料。  
   
-|ReplTest1|傳回值|  
+|值|傳回值|  
 |-----------|-------------|  
 |SRV_APPLNAME|用戶端建立連接時所提供的應用程式名稱。|  
 |SRV_BCPFLAG|如果用戶端正在準備進行大量複製作業，則為 TRUE 的旗標，否則為 FALSE 的旗標。|  

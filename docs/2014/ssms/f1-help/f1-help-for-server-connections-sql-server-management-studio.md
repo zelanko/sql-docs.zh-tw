@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
 - SQL Server Management Studio Help [SQL Server], server connections
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Connect to Server dialog box
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 809b4da6cf9b94a574ffd96a07016a9a807c66d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 60b7be9d34172c0236ce09ddf0407c1eedc6cce1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145078"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274604"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>伺服器連接的 F1 說明 (SQL Server Management Studio)
   本節包含 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，[連接到伺服器] 對話方塊頁面的 F1 說明。  

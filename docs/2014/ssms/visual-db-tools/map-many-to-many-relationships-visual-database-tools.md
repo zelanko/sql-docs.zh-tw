@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - relationships [SQL Server], many-to-many
 - junction tables [SQL Server]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], relationships
 ms.assetid: 2977cf92-98b5-48b2-b0fd-8fbc7040f2b4
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4dd38759ccd32621f31da1c0e078a4cf5c344c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e93eecef54eb5910287a2693311539f5c2fb898e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145762"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202408"
 ---
 # <a name="map-many-to-many-relationships-visual-database-tools"></a>對應多對多關聯性 (Visual Database Tools)
   多對多關聯性可讓您將一個資料表中的每一個資料列，關聯到另一個資料表的多個資料列，反之亦然。 例如，您可以建立 `authors` 資料表和 `titles` 資料表之間的多對多關聯性，以將每一個作者和他/她的書搭配，並將每一本書和所有的作者搭配。 在任一資料表建立一對多關聯性，可能會錯指每一本書只能有一位作者，或每一位作者只能寫一本書。  
@@ -42,9 +42,9 @@ ms.locfileid: "36145762"
   
 4.  將兩個資料表的主索引鍵資料行都複製到聯合資料表。 您可以將其他資料行加入到此資料表，也可以加入到其他資料表。  
   
-5.  在聯合資料表中，將主索引鍵設定為包含來自其他兩個資料表的所有主索引鍵資料行。 如需詳細資訊，請參閱[Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
+5.  在聯合資料表中，將主索引鍵設定為包含來自其他兩個資料表的所有主索引鍵資料行。 如需詳細資訊，請參閱 < [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)。  
   
-6.  定義兩個主資料表和聯合資料表之間的一對多關聯性。 聯合資料表應該位於所建立的兩個關聯性「多」的一方。 如需詳細資訊，請參閱[Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。  
+6.  定義兩個主資料表和聯合資料表之間的一對多關聯性。 聯合資料表應該位於所建立的兩個關聯性「多」的一方。 如需詳細資訊，請參閱 < [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)。  
   
     > [!NOTE]  
     >  在資料庫圖表中建立聯合資料表，並不會將關聯資料表的資料插入至聯合資料表。 如需將資料插入資料表的詳細資訊，請參閱[建立插入結果查詢 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  

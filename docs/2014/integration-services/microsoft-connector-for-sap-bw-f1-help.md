@@ -1,5 +1,5 @@
 ---
-title: Microsoft Connector 1.1 for SAP BW F1 說明 |Microsoft 文件
+title: Microsoft Connector 1.1 for SAP BW F1 說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9664b98f85a551a2ea040b4e595f35f618cf1cca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a3f24dbb9fffb7719ec48e4f792ca8cf813fa87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145185"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252306"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Microsoft Connector 1.1 for SAP BW F1 說明
   本節包含 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW 之三個元件的 F1 說明主題。 在使用者介面中按下 F1 鍵，或在精靈頁面和對話方塊中按一下 [說明]，也可以存取這些主題。  
@@ -31,11 +31,11 @@ ms.locfileid: "36145185"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>SAP BW 連接管理員 F1 說明  
   
--   [SAP BW 連接管理員編輯器](sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連線管理員編輯器](sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>SAP BW 來源 F1 說明  
   
--   [SAP BW 來源編輯器&#40;連接管理員頁面&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [SAP BW 來源編輯器&#40;連線管理員頁面&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
 -   [SAP BW 來源編輯器&#40;資料行頁面&#41;](data-flow/sap-bw-source-editor-columns-page.md)  
   
@@ -53,9 +53,9 @@ ms.locfileid: "36145185"
   
 ### <a name="sap-bw-destination-f1-help"></a>SAP BW 目的地 F1 說明  
   
--   [SAP BW 目的地編輯器&#40;連接管理員頁面&#41;](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [SAP BW 目的地編輯器&#40;連線管理員頁面&#41;](data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [SAP BW 目的地編輯器&#40;[對應] 頁面&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [SAP BW 目的地編輯器&#40;對應頁面&#41;](data-flow/sap-bw-destination-editor-mappings-page.md)  
   
 -   [SAP BW 目的地編輯器&#40;錯誤輸出頁面&#41;](data-flow/sap-bw-destination-editor-error-output-page.md)  
   

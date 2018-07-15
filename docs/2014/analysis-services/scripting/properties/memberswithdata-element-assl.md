@@ -1,5 +1,5 @@
 ---
-title: MembersWithData 元素 (ASSL) |Microsoft 文件
+title: MembersWithData 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MembersWithData element
 ms.assetid: 845087a2-b12d-4344-a8be-85ca61155296
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c0311a774b225234aeb63d4d67680e12b693b0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a0c2e35549f4db2de489916ad1760954d4f6dfd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218228"
 ---
 # <a name="memberswithdata-element-assl"></a>MembersWithData 元素 (ASSL)
   決定是否要在父屬性中顯示非分葉成員的資料成員。  
@@ -62,11 +62,11 @@ ms.locfileid: "36136494"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 值`MembersWithData`項目僅供父屬性 (換言之，值的[使用量](usage-element-dimensionattribute-assl.md)元素`DimensionAttribute`父項目設定為*父*) 來判斷是否若要在父屬性中顯示非分葉成員的資料成員。 如需資料成員的詳細資訊，請參閱 [父子式階層中的屬性](../../multidimensional-models/parent-child-dimension-attributes.md)。  
+ 值`MembersWithData`項目僅供父屬性 (亦即的值[使用量](usage-element-dimensionattribute-assl.md)項目`DimensionAttribute`父項目設定為*父*) 來判斷是否若要在父屬性中顯示非分葉成員的資料成員。 如需資料成員的詳細資訊，請參閱 [父子式階層中的屬性](../../multidimensional-models/parent-child-dimension-attributes.md)。  
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*NonLeafDataHidden*|隱藏非分葉資料。|  
 |*NonLeafDataVisible*|顯示非分頁資料。|  

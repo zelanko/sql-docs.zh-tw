@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
 - XML [SQL Server], mapping data
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 145de83527610217a026f4beca2f8b305fa34aa5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 36f090abe358adab3075693e63ab4fe95cbbbadb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135348"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248328"
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
   在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](specify-metaproperties-in-openxml.md)。  

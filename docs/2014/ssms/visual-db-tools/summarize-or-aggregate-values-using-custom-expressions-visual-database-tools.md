@@ -1,5 +1,5 @@
 ---
-title: 摘要或彙總值使用自訂運算式 (Visual Database Tools) |Microsoft 文件
+title: 摘要或彙總值使用自訂運算式 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - summarizing query results
 - custom expressions to aggregate values [SQL Server]
 ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d1619f794ee3bdec67ec24a46dec81645b6b6fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 36a06bdf7d19c07bc34a53008a0090e31e3db8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238138"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>使用自訂運算式摘要或彙總值 (Visual Database Tools)
   除了使用彙總函式彙總資料以外，您也可以建立自訂運算式產生彙總值。 您可以使用自訂運算式取代彙總查詢中任何位置的彙總函式。  

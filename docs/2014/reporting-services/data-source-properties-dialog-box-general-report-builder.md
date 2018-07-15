@@ -1,5 +1,5 @@
 ---
-title: 資料來源屬性對話方塊、 一般 （報表產生器） |Microsoft 文件
+title: 資料來源屬性對話方塊、 一般 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: edd997ab55e63abe4b5085bbe0b11c197020c2ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30114b93158424512e9a9be6441dc5c3ab8dd460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288454"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>資料來源屬性對話方塊、一般 (報表產生器)
   選取 **[資料來源屬性]** 對話方塊上的 **[一般]** ，即可從報表伺服器中選取共用資料來源，或針對報表中內嵌的資料來源建立或修改連接資訊。  
@@ -61,15 +61,15 @@ ms.locfileid: "36144672"
  **連接字串**  
  輸入資料來源的連接字串。 按一下 **[建立]** ，即可使用 **[連接屬性]** 對話方塊來建立連接字串。 請按一下 [運算式] (*fx*) 按鈕來編輯運算式。  
   
- **處理查詢時使用單一交易**  
+ **處理查詢時，使用單一交易**  
  選取此選項，指出使用此資料來源的資料集會在單一交易中針對資料庫執行。 若要包含使用相同資料來源之子報表的交易，請選取子報表，然後在 [屬性] 窗格中，將 **[MergeTransactions]** 設定為 **[True]**。  
   
  **測試連接**  
  按一下以使用指定的認證確認資料來源連接能夠運作。 如果無法建立連接，您需要確認認證和伺服器可用性。 可以測試內嵌和共用資料來源的資料來源連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [加入及驗證資料連接或資料來源&#40;報表產生器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [資料連接、 資料來源和報表產生器中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [資料來源屬性對話方塊、 認證&#40;報表產生器&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
  [對話方塊、 窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  

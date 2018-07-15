@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.spatialindexes
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c0cece8fb2a7fa52d3185080e34c8b1425470aae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f322ed88e8e9bdf6eea23799e533f124165f1bb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236048"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>空間索引對話方塊 (Visual Database Tools)
   使用 [空間索引] 對話方塊來建立 **geometry** 或 **geography** 資料類型之資料行 (「空間資料行」(Spatial Column)) 的索引，該資料行無法使用 [索引/索引鍵] 對話方塊來建立索引。 每一個空間資料行都可以有一個以上的空間索引，但是一次只能建立一個。  
@@ -113,7 +113,7 @@ ms.locfileid: "36145272"
  **允許頁面鎖定**  
  指定是否在此索引中允許頁面層級的鎖定。 允許或不允許頁面層級的鎖定會影響資料庫效能。  
   
- **重新計算****統計資料**   
+ **重新計算****統計資料  **  
  指定是否會在建立索引時計算新的統計資料。 重新計算統計資料會減緩索引的建置，但是通常會提升查詢效能。  
   
  **允許資料列鎖定**  

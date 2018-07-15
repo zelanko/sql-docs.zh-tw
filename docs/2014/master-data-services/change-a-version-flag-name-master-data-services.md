@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], changing name
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee49bb6cbab24bfe5677f2787c0d275d1b53e7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5d44b7f96f59aae05909cac86fb75a7d17454dd0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275224"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>變更版本旗標名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以變更版本旗標的名稱。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  

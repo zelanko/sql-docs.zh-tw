@@ -1,5 +1,5 @@
 ---
-title: 加入巢狀的資料表至採礦結構 |Microsoft 文件
+title: 加入巢狀的資料表至採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - adding nested tables
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d69932ebba84a08646dd1d8798f52fc2ff36dd66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 868ef7af9d2116e2b148925a2a60bc01da4140bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177155"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>將巢狀資料表加入至採礦結構
   資料採礦精靈建立巢狀資料表之後，即可使用資料採礦設計師，將巢狀資料表加入至採礦結構。  

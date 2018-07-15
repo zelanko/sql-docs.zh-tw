@@ -1,5 +1,5 @@
 ---
-title: SQL Server，Broker DBM Transport 物件 |Microsoft 文件
+title: SQL Server、 訊息代理程式和 DBM Transport 物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Broker / DBM Transport object
 - SQLServer:Broker/DBM Transport
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac5a560f328de972dc40675d83e93c69447e6938
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 278e3776c19c9220b77347a0360e337184c4fd1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253920"
 ---
-# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server，Broker DBM Transport 物件
+# <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server、 訊息代理程式和 DBM Transport 物件
   **Broker / DBM Transport** 效能物件包含效能計數器，以報告 Service Broker 和資料庫鏡像的網路資訊。 下表列出這個物件包含的計數器。  
   
 |SQL Server Broker / DBM Transport 計數器|描述|  
@@ -42,9 +42,9 @@ ms.locfileid: "36145132"
 |**Message Fragment P8 Sends/sec**|此計數器會報告每秒透過網路傳送優先順序 8 訊息片段的數目。|  
 |**Message Fragment P9 Sends/sec**|此計數器會報告每秒透過網路傳送優先順序 9 訊息片段的數目。|  
 |**Message Fragment P10 Sends/sec**|此計數器會報告每秒透過網路傳送優先順序 10 訊息片段的數目。|  
-|**訊息片段傳送大小 Avg**|此計數器會報告透過網路傳送訊息片段的平均大小。|  
+|**訊息片段傳送大小平均**|此計數器會報告透過網路傳送訊息片段的平均大小。|  
 |**Message Fragment Sends/sec**|此計數器會報告每秒透過網路傳送所有優先順序訊息片段的數目。|  
-|**接收訊息片段數/秒**|此計數器會報告每秒透過網路接收訊息片段的數目。|  
+|**接收的訊息片段/sec**|此計數器會報告每秒透過網路接收訊息片段的數目。|  
 |**Msg Fragment Recv Size Avg**|此計數器會報告透過網路接收訊息片段的平均大小。|  
 |**Open Connection Count**|此計數器會報告 Service Broker 目前已開啟的網路連接數目。|  
 |**Pending Bytes for Recv I/O**|此計數器會報告已從網路接收，但尚未放到佇列中或尚未捨棄的訊息片段之位元組數目。|  

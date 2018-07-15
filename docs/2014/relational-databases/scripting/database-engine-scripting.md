@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], PowerShell
 - scripts [SQL Server]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 caps.latest.revision: 22
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 02ae3d24f1f9f642876b4314a41bc2823fc8c622
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 15ead723c73da69d9dd8e6f41b1bf5533eb3c313
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284794"
 ---
 # <a name="database-engine-scripting"></a>Database Engine 指令碼
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 支援使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] PowerShell 指令碼環境來管理 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體和執行個體中的物件。 此外，您也可以在與指令碼環境非常相似的環境中，建立並執行含有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和 XQuery 的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢。  
@@ -34,7 +34,7 @@ ms.locfileid: "36136381"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 提供者，以便將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件模型階層公開成與檔案系統路徑相似的 PowerShell 路徑。 您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件模型類別來管理以路徑之每個節點表示的物件。  
   
--   一組實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令程式。 其中一個 Cmdlet 是 **Invoke-Sqlcmd**。 這用來執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢指令碼以執行`sqlcmd`公用程式。  
+-   一組實作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 命令的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指令程式。 其中一個 Cmdlet 是 **Invoke-Sqlcmd**。 這用來執行[!INCLUDE[ssDE](../../includes/ssde-md.md)]查詢來執行的指令碼`sqlcmd`公用程式。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供了用來執行 PowerShell 的以下功能：  
   

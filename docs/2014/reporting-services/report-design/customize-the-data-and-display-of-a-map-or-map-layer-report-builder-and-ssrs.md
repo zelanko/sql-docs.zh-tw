@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10521"
 - sql12.rtp.rptdesigner.shared.shadowdv.f1
@@ -24,15 +24,15 @@ f1_keywords:
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: dcacda9428bd9a3e404778ed688f94081c1dbb1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae9f4afd9dc5d04e3f9cb511b4bfc4bf9fdb104b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170295"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>自訂地圖或地圖圖層的資料和顯示 (報表產生器及 SSRS)
   使用精靈將地圖或地圖圖層加入至報表之後，您可能會想要變更地圖在報表中的外觀。 您可以考慮下列構想來進行改善：  

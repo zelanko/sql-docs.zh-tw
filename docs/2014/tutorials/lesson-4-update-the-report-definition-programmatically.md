@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 以程式設計方式更新報表定義 |Microsoft 文件
+title: 第 4 課： 以程式設計方式更新報表定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1f0a1d46-6d6d-4f67-b51e-06dbbbffacf9
 caps.latest.revision: 20
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb51cfc7677f60d729efeb1e878c4d4709943860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18fc88beee15b995c3f705e9b6582d695d94d703
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286494"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>第 4 課：以程式設計方式更新報表定義
   既然已經使用報表欄位從報表伺服器載入報表定義，並且您具有對它的參考，就必須更新報表定義。 在此範例中，您將更新報表的 `Description` 屬性。  
   
 ### <a name="to-update-the-report-definition"></a>更新報表定義  
   
-1.  取代 Program.cs 檔案中 UpdateReportDefinition() 方法的程式碼 (Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 取代下列程式碼：  
+1.  取代 UpdateReportDefinition() 方法，在 Program.cs 檔案中的程式碼 (如 Module1.vb [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) 為下列程式碼：  
   
     ```csharp  
     private void UpdateReportDefinition()  

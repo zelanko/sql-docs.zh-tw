@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG002601 error
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1e1432a2a377fa150742d846f443d61ac3545ccc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ccd1dbd55811e2a73a9a4a60dcb2088e89ce07d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313448"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
     

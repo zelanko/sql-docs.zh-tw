@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - MSReportServer_ConfigurationSetting Class
 api_location:
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6e09e954cb842a25a1e20453dec816479061c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: fbc5fb6155840f6c64003f1e1dd38dc7914a0f04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280134"
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 類別
   代表報表伺服器執行個體的安裝與執行階段參數。 這些參數是儲存在報表伺服器的組態檔中。  
   
- 如需此型別的所有成員的清單，請參閱[MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)。  
+ 如需此型別的所有成員的清單，請參閱 < [MSReportServer_ConfigurationSetting 成員](msreportserver-configurationsetting-members.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -49,7 +49,7 @@ public class MSReportServer_ConfigurationSetting
  此類型的任何公用靜態 (在**中為** 共用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 成員都具備多執行緒作業安全。 不保證任何執行個體成員安全執行緒。  
   
 ## <a name="example"></a>範例  
- 若要執行下列程式碼，請新增您的伺服器名稱來取代每個 \<*伺服器名稱*>。 將此路徑更新為指向您的安裝位置 (如果不是預設值的話)。 下列程式碼範例會逐一中每一個屬性[MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)類別，並列印每個屬性名稱和其值到主控台。  
+ 若要執行下列程式碼，請新增您的伺服器名稱來取代每個 \<*伺服器名稱*>。 將此路徑更新為指向您的安裝位置 (如果不是預設值的話)。 下列程式碼範例會逐一中每一個屬性[MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)類別，並列印每個屬性名稱和其值寫入主控台。  
   
 ```vb  
 Imports System  

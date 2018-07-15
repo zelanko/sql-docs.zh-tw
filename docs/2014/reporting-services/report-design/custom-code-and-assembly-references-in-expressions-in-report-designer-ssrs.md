@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
 - data [Reporting Services], expressions
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: 76
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9a313408046919de0c3a07739792d36b88eafa4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 6a239f80c3b560e60ca0b60b9a9fa7deb68a20a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220848"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
   您可以加入內嵌於報表之自訂程式碼的參考，或是建置並儲存至電腦以及部署至報表伺服器之自訂組件的參考。 請將內嵌程式碼用在自訂常數、複雜函數或在單一報表內重複使用的函數上。 請使用自訂程式碼組件，將程式碼維護在單一位置並共用程式碼，讓多份報表使用。 自訂程式碼可能會包含新的自訂常數、變數、函數或副程式。 您可以包含內建集合 (例如 Parameters 集合) 的唯讀參考， 但是不能將報表資料值集傳遞至自訂函數 (尤其是不支援自訂彙總)。  
@@ -71,7 +71,7 @@ ms.locfileid: "36146248"
 ##  <a name="Embedded"></a> 加入內嵌程式碼  
  若要將內嵌程式碼加入至報表，請使用 **[報表屬性]** 對話方塊的 [程式碼] 索引標籤。 您建立的程式碼區塊可以包含多個方法。 內嵌程式碼中的方法必須用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 來撰寫，且必須以執行個體為基礎。 報表處理器會自動加入 System.Convert 和 System.Math 命名空間的參考。 請使用 **[報表屬性]** 對話方塊的 **[參考]** 頁面來加入其他的組件參考。 如需詳細資訊，請參閱 [Add an Assembly Reference to a Report &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md) (將組件參考加入至報表 (SSRS))。  
   
- 內嵌程式碼裡的方法，可透過全域定義的 `Code` 成員使用。 您可以存取這些參考`Code`成員和方法名稱。 下列範例會呼叫此方法`ToUSD`，可將轉換中的值`StandardCost`欄位成美金值：  
+ 內嵌程式碼裡的方法，可透過全域定義的 `Code` 成員使用。 您可以存取這些參考`Code`成員和方法名稱。 下列範例會呼叫方法`ToUSD`，可將轉換中的值`StandardCost`欄位成美金值：  
   
 ```  
 =Code.ToUSD(Fields!StandardCost.Value)  
@@ -101,7 +101,7 @@ Public Dim MyDoubleVersion As Double = 123.456
 =Code.MyDoubleVersion  
 ```  
   
- 下列範例包含的程式碼參考和函式的程式碼實作`FixSpelling`，取代成文字`"Bicycle"`所有的文字項目中"bike"`SubCategory`欄位。  
+ 下列範例包含的程式碼參考和函式的程式碼實作`FixSpelling`，其中文字取代成`"Bicycle"`所有的文字項目中"bike"`SubCategory`欄位。  
   
  `=Code.FixSpelling(Fields!SubCategory.Value)`  
   
@@ -121,7 +121,7 @@ End Function
  如需內建物件集合和初始化的詳細資訊，請參閱[內建的全域和使用者參考 &#40;報表產生器及 SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md) 和[初始化自訂組件物件](../custom-assemblies/initializing-custom-assembly-objects.md)。  
   
 ##  <a name="Parameters"></a> 加入程式碼中參數的參考  
- 您可以透過報表定義之程式碼區塊內或您所提供之自訂組件內的自訂程式碼，參考全域參數集合。 此參數集合是唯讀的，而且沒有任何公用 Iterator。 您無法使用[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`For Each`建構來逐步執行此集合。 您必須先知道報表定義中所定義的參數名稱，才可以在程式碼中參考它。 但是，您可以逐一查看多重值參數的所有值。  
+ 您可以透過報表定義之程式碼區塊內或您所提供之自訂組件內的自訂程式碼，參考全域參數集合。 此參數集合是唯讀的，而且沒有任何公用 Iterator。 您無法使用[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]`For Each`建構來逐步執行集合。 您必須先知道報表定義中所定義的參數名稱，才可以在程式碼中參考它。 但是，您可以逐一查看多重值參數的所有值。  
   
  下表包含從自訂程式碼參考內建 `Parameters` 集合的範例：  
   
@@ -133,15 +133,15 @@ End Function
 ##  <a name="Custom"></a> 加入自訂組件中程式碼的參考  
  若要在報表中使用自訂組件，您必須先建立組件，並設定報表設計師可以使用該組件，在報表中加入對該組件的參考，然後在報表中使用運算式來參考該組件內含的方法。 報表部署至報表伺服器時，您也必須將自訂組件部署至報表伺服器。  
   
- 如需建立自訂組件，並讓它可[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱[搭配報表使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)。  
+ 如需建立自訂組件，並將它提供給[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱 <<c2> [ 搭配報表使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)。  
   
- 若要在運算式中參考自訂程式碼，您必須在組件中呼叫類別的成員。 該如何完成，取決於此方法為靜態或以執行個體為基礎。 報表內的全域都可以使用自訂組件內的靜態方法。 您可以藉著指定命名空間、類別和方法名稱，來存取運算式中的靜態方法。 下列範例會呼叫此方法`ToGBP`，其中的值轉換**StandardCost**值從美元轉換為英鎊：  
+ 若要在運算式中參考自訂程式碼，您必須在組件中呼叫類別的成員。 該如何完成，取決於此方法為靜態或以執行個體為基礎。 報表內的全域都可以使用自訂組件內的靜態方法。 您可以藉著指定命名空間、類別和方法名稱，來存取運算式中的靜態方法。 下列範例會呼叫方法`ToGBP`，可將轉換的值**StandardCost**值從美元轉換為英鎊：  
   
 ```  
 =CurrencyConversion.DollarCurrencyConversion.ToGBP(Fields!StandardCost.Value)  
 ```  
   
- 以執行個體為基礎的方法，可透過全域定義的 `Code` 成員來使用。 您可以藉由參考 `Code` 成員，然後參考執行個體與方法名稱，來存取這些方法。 下列範例會呼叫執行個體方法`ToEUR`，其中的值轉換**StandardCost**從美元為歐元：  
+ 以執行個體為基礎的方法，可透過全域定義的 `Code` 成員來使用。 您可以藉由參考 `Code` 成員，然後參考執行個體與方法名稱，來存取這些方法。 下列範例會呼叫方法的執行個體`ToEUR`，可將轉換的值**StandardCost**從歐元貨幣：  
   
 ```  
 =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
@@ -165,7 +165,7 @@ End Function
   
 ## <a name="see-also"></a>另請參閱  
  [將程式碼加入至報表&#40;SSRS&#41;](add-code-to-a-report-ssrs.md)   
- [報表中使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [與報表搭配使用自訂組件](../custom-assemblies/using-custom-assemblies-with-reports.md)   
  [將組件參考新增至報表 &#40;SSRS&#41;](add-an-assembly-reference-to-a-report-ssrs.md)   
  [Reporting Services 教學課程 &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

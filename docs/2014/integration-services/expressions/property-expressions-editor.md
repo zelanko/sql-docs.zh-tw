@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.propertyexpressionseditor.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 82bad8b23883081df36f23872db9c37957f99668
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 27e6ddae711763ef6e28dcc00ccc8baff52f17db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287656"
 ---
 # <a name="property-expressions-editor"></a>屬性運算式編輯器
   使用 **[屬性運算式編輯器]** 對話方塊，即可建立、編輯或刪除用來更新屬性值的屬性運算式。  

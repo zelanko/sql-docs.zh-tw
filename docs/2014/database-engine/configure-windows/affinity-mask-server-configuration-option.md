@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default affinity mask option
 - reloading processor cache
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6c0c94785452841642edac541d9c120bfbd7ad14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 41fad115e39068b60f9d1a08b4fcf08b2c3d392a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136936"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271964"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask 伺服器組態選項
     
@@ -63,7 +63,7 @@ ms.locfileid: "36136936"
   
  如果您指定嘗試對應到不存在之 CPU 的相似性遮罩，RECONFIGURE 命令會將錯誤訊息回報至用戶端工作階段和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 在此情況下，使用 RECONFIGURE WITH OVERRIDE 選項沒有作用，而且會再次回報相同的組態錯誤。  
   
- 您也可以從處理器中排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動，此為 Windows 2000 或 Windows Server 2003 作業系統所指定的特定工作負載。 如果將某處理器的代表位元設成 1，則表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 已選取該處理器準備進行執行緒指派。 當您將`affinity mask`為 0 （預設值），Microsoft Windows 2000 或 Windows Server 2003 排程演算法設定執行緒的相似性。 將 `affinity mask` 設成任何非零的值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相似性會將該值解譯為指定適合選取之處理器的位元遮罩。  
+ 您也可以從處理器中排除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 活動，此為 Windows 2000 或 Windows Server 2003 作業系統所指定的特定工作負載。 如果將某處理器的代表位元設成 1，則表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 已選取該處理器準備進行執行緒指派。 當您將設定`affinity mask`為 0 （預設值），Microsoft Windows 2000 或 Windows Server 2003 排程演算法設定執行緒的相似性。 將 `affinity mask` 設成任何非零的值時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相似性會將該值解譯為指定適合選取之處理器的位元遮罩。  
   
  藉由將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行緒從特定處理器中分離，Microsoft Windows 2000 或 Windows Server 2003 可以更有效地評估 Windows 特定處理序的系統處理。 例如，系統管理員可以在執行兩個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (執行個體 A 與 B) 的 8-CPU 伺服器上，使用 affinity mask 選項將第一組 4 個 CPU 指派到執行個體 A，並將第二組 4 個 CPU 指派到執行個體 B。若要設定 32 個以上的處理器，請同時設定 affinity mask 與 affinity64 mask。 `affinity mask` 的值如下：  
   
@@ -109,7 +109,7 @@ GO
   
 |十進位值|二進位位元遮罩|允許 SQL Server 執行緒的處理器數目|  
 |-------------------|---------------------|--------------------------------------------|  
-|@shouldalert|00000001|0|  
+|1|00000001|0|  
 |3|00000011|0 與 1|  
 |7|00000111|0、1 與 2|  
 |15|00001111|0、1、2 與 3|  

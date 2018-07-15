@@ -19,15 +19,15 @@ helpviewer_keywords:
 - hyperlinks [Reporting Services]
 ms.assetid: 39e7918c-ad2d-4ca6-b099-2dd4dbdb83dc
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 984f06366a13ebb24392bfde2be7722e590dc7db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7af8148fe0492199416323cc036507a1e83f6bc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274394"
 ---
 # <a name="using-url-access-in-a-web-application"></a>在 Web 應用程式中使用 URL 存取
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 存取是特別針對可透過網路存取個別報表所設計。 這種類型的存取最適於將報表檢視與導覽整合到自訂 Web 應用程式。 若要在 Web 應用程式中使用 URL 存取，您可以：  

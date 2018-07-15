@@ -1,5 +1,5 @@
 ---
-title: 設計窗格 （採礦模型預測檢視） |Microsoft 文件
+title: 設計窗格 （採礦模型預測檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
 ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f170ff6d780871a6ddbb9b1048fb0a521b4fb015
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea979da7db4f0288a01a7bfe9655d1fb34518d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316028"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>設計窗格 (採礦模型預測檢視)
   **[設計]** 窗格包含預測查詢產生器，可用來建立資料採礦預測。 您可以設計預測查詢來使用資料來源檢視中輸入資料的資料表，以便產生大量預測，或者可以建立單一預測查詢，好讓您提供個別值。  
@@ -72,7 +72,7 @@ ms.locfileid: "36031543"
  **單一查詢輸入**  
  當您選取 [單一查詢] 按鈕時，就會啟用此選項。 其中包含下列資料行：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**採礦模型資料行**|列出在 **[採礦模型]** 資料表中所選取、包含在採礦模型中的採礦模型資料行。|  
 |**ReplTest1**|從包含所選取採礦模型之每一可能狀態的清單中選取值。<br /><br /> 如果資料行是巢狀資料表資料行，按一下值資料格即可開啟 **[巢狀資料表輸入]** 對話方塊。|  

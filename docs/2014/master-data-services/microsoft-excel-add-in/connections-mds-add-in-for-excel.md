@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ddced61f73702246c67a49b92e2818430c0269fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ccba6c40a826925651e33c85cc842cdf86eb7dfe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225598"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>連接 (適用於 Excel 的 MDS 增益集)
   若要將資料下載至 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，您必須先建立連接。 連接可讓 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web 服務知道要連接的目標 MDS 資料庫。  
@@ -30,7 +30,7 @@ ms.locfileid: "36145419"
   
  您可以建立多個連接。 最近存取的連接會被視為預設值。  
   
- 多位使用者可以同時進行連接。 不過，當多位使用者嘗試發行相同的資料時，可能會引發衝突。 如需詳細資訊，請參閱[發行資料&#40;MDS 增益集的 Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)。  
+ 多位使用者可以同時進行連接。 不過，當多位使用者嘗試發行相同的資料時，可能會引發衝突。 如需詳細資訊，請參閱 <<c0> [ 發行的資料&#40;MDS 增益集適用於 Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)。</c0>  
   
 ## <a name="connect-automatically-and-load-frequently-used-data"></a>自動連接並載入經常使用的資料  
  如果您想要永遠連接到相同的伺服器並且載入相同的資料集，可以建立包含連接和篩選資訊的捷徑查詢檔案。 如需查詢檔案的詳細資訊，請參閱[捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](shortcut-query-files-mds-add-in-for-excel.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "36145419"
 |工作描述|主題|  
 |----------------------|-----------|  
 |建立 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 資料庫的連接。|[連接到 MDS 存放庫 &#40;適用於 Excel 的 MDS 增益集&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
-|將 MDS 資料載入 Excel 中。|[從 MDS 載入 Excel 資料](export-data-to-excel-from-master-data-services.md)|  
+|將 MDS 資料載入 Excel 中。|[將資料從 MDS 載入 Excel 中](export-data-to-excel-from-master-data-services.md)|  
 |在將 MDS 資料載入 Excel 之前篩選資料。|[載入之前篩選資料&#40;MDS 增益集的 Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>相關內容  
@@ -55,6 +55,6 @@ ms.locfileid: "36145419"
   
 -   [捷徑查詢檔案 &#40;適用於 Excel 的 MDS 增益集&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [Master Data Services 增益集的 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
+-   [Master Data Services 增益集適用於 Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
   

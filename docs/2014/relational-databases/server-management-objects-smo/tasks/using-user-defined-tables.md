@@ -1,5 +1,5 @@
 ---
-title: 使用使用者定義資料表 |Microsoft 文件
+title: 使用使用者定義的資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,20 +14,20 @@ helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 261414ecd50306f687abcc88963658aec2f124fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 611985a99822321092942c1e9de806e24c57f09b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136606"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206788"
 ---
 # <a name="using-user-defined-tables"></a>使用使用者定義的資料表
   使用者定義的資料表表示表格式資訊。 當您將表格式資料傳遞到預存程序或使用者定義函數時，這些資料表會當做參數。 使用者定義的資料表不能用於表示資料庫資料表中的資料行。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> 物件具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 屬性，這個屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 物件。 每個<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>物件，集合中有**資料行**參考的集合屬性<xref:Microsoft.SqlServer.Management.Smo.Column>清單中的使用者定義資料表的資料行的物件。 請使用 Add 方法將資料行加入至使用者定義資料表。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> 物件具有 <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> 屬性，這個屬性會參考 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> 物件。 每個<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>物件，因為集合中有**資料行**屬性，會參考的集合<xref:Microsoft.SqlServer.Management.Smo.Column>清單中的使用者定義資料表的資料行的物件。 請使用 Add 方法將資料行加入至使用者定義資料表。  
   
  當您使用 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> 物件定義新的使用者定義資料表時，需要根據其中一個資料行提供資料行和主要金鑰。  
   

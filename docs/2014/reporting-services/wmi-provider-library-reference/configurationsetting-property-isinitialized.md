@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - IsInitialized
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - IsInitialized property
 ms.assetid: 0c52c4f9-784d-412e-aac1-888179ba549f
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39095c917533c6e12ae31c5d008790a247eca0ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d05e268fb416cde902c8e30580b8b5cdbfdc659a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146223"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37185800"
 ---
 # <a name="isinitialized-property-wmi-msreportserverconfigurationsetting"></a>IsInitialized 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出報表伺服器執行個體是否已初始化。 唯讀。  

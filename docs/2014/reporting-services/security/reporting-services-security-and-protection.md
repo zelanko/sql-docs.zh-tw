@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services]
 - Reporting Services, security
@@ -16,19 +16,19 @@ ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9a993f574cbf272e4fdf47066360bd09299cd7d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3be671426856e57e62ea7de3733f6109bbcd0a31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135735"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232448"
 ---
 # <a name="reporting-services-security-and-protection"></a>Reporting Services 安全性與保護
   您可以使用本節的資訊，了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 本節也將說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中所支援的授權模型和驗證提供者。  
   
 ## <a name="extended-protection-for-authentication"></a>驗證擴充保護  
- 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，就有驗證擴充保護的支援可以使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能可支援使用通道繫結和服務繫結，以增強驗證的保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能需要搭配支援擴充保護的作業系統使用。 如需詳細資訊，請參閱[Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md)。  
+ 從 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]開始，就有驗證擴充保護的支援可以使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能可支援使用通道繫結和服務繫結，以增強驗證的保護。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能需要搭配支援擴充保護的作業系統使用。 如需詳細資訊，請參閱 < [Reporting services 的驗證擴充保護](extended-protection-for-authentication-with-reporting-services.md)。  
   
 ## <a name="authentication-and-authorization"></a>驗證與授權  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會提供不同的使用者驗證類型和用戶端應用程式，便於使用報表伺服器進行驗證。 為您的報表伺服器使用正確的驗證類型可讓組織獲得組織所需之適當的安全性層級。 如需詳細資訊，請參閱 [Authentication with the Report Server](authentication-with-the-report-server.md)。  

@@ -19,13 +19,13 @@ ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 30e66ffc20bdc7f1ff51d54771e53959ec40a601
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 180eb370937cd996f6e002fe9d684f7c168983d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197468"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>以指令碼工作蒐集 ForEach 迴圈的清單
   Foreach from Variable 列舉值會透過以變數傳遞給它的清單中之項目來列舉，並針對每個項目執行相同的工作。 您可以在指令碼工作中使用自訂程式碼，針對此目的填入清單。 如需列舉值的詳細資訊，請參閱 [Foreach 迴圈容器](../control-flow/foreach-loop-container.md)。  
@@ -250,7 +250,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
     }  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [Foreach 迴圈容器](../control-flow/foreach-loop-container.md)   

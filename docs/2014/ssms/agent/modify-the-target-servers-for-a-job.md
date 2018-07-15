@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying target servers
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], modifying
 ms.assetid: 9dbe24f2-acec-4aa2-920c-e8e96efa18e4
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dab9b2cca2848864400af2e86a47b600db2aed04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b8c4775cff2d539f68e566dc7e5d02feb7d60eb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292098"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中變更 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業的目標伺服器。  
@@ -86,7 +86,7 @@ GO
   
 ```  
   
- 如需詳細資訊，請參閱[sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)。  
   
 ## <a name="see-also"></a>另請參閱  
  [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)  

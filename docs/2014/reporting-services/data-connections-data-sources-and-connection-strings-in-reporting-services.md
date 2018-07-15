@@ -1,5 +1,5 @@
 ---
-title: 資料連接、 資料來源和 Reporting Services 中的連接字串 |Microsoft 文件
+title: 資料連接、 資料來源和 Reporting Services 中的連接字串 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], data sources
 - reports [Reporting Services], data
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - logins [Reporting Services]
 ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 caps.latest.revision: 112
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2b5b0e041438ccc01254478715bf4967f305b663
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 021028f9c5039c04de522fe98b23f93a3b529eba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292258"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
-  若要包含在資料[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報告，您必須先建立*資料來源*和*資料集*。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 和[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
+  若要包含在資料[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]報告，您必須先建立*資料來源*並*資料集*。 本主題說明資料來源的類型、如何建立資料來源，以及與資料來源認證相關的重要資訊。 資料來源包括資料來源類型、連接資訊，以及要使用的認證類型。 資料來源有兩種類型：內嵌和共用。 內嵌資料來源是定義在報表中，而且只能供該報表使用。 共用資料來源則與報表分開定義，而且可以供多個報表使用。 如需詳細資訊，請參閱[內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 和[內嵌和共用資料集 &#40;報表產生器及 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)。  
   
 ||  
 |-|  
@@ -80,7 +80,7 @@ ms.locfileid: "36022355"
   
 -   ODBC  
   
--   Microsoft Power View 的 BI 語意模型： SharePoint 的網站上已設定為 PowerPivot 圖庫和[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]，都可以使用此資料來源類型。 此資料來源類型僅用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 簡報。 如需詳細資訊，請參閱 [建立 Power View 的完整 BI 語意表格式模型](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
+-   Microsoft Power View 的 BI 語意模型： SharePoint 的網站上已設定針對 PowerPivot 圖庫和[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]，此資料來源類型為可用。 此資料來源類型僅用於 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 簡報。 如需詳細資訊，請參閱 [建立 Power View 的完整 BI 語意表格式模型](http://technet.microsoft.com/video/building-the-perfect-bi-semantic-tabular-models-for-power-view.aspx)。  
   
  如需 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 支援之資料來源與版本的完整清單，請參閱 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
@@ -111,45 +111,45 @@ ms.locfileid: "36022355"
   
  當您將報表部署至報表伺服器或 SharePoint 網站時，其內嵌和共用資料來源就會分開管理。 從電腦存取資料所需的資料來源認證可能與報表伺服器存取資料所需的認證不同。  
   
- ![請注意](media/rs-fyinote.png "注意")很好的作法是，確認資料來源連接可以持續連接成功，您發行報表之後。 如果您需要變更認證，可以直接在報表伺服器上進行修改。  
+ ![附註](media/rs-fyinote.png "注意")理想的作法是，確認資料來源連接持續連接成功後發行的報表。 如果您需要變更認證，可以直接在報表伺服器上進行修改。  
   
  若要變更報表使用的資料來源，您可以使用原生模式的報表管理員，或使用 SharePoint 模式從文件庫修改報表屬性。 如需詳細資訊，請參閱下列內容：  
   
--   [將認證儲存在 Reporting Services 資料來源](report-data/store-credentials-in-a-reporting-services-data-source.md)[將認證儲存在 Reporting Services 資料來源](report-data/store-credentials-in-a-reporting-services-data-source.md)  
+-   [在 Reporting Services 資料來源中儲存認證](report-data/store-credentials-in-a-reporting-services-data-source.md)[將認證儲存在 Reporting Services 資料來源](report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
 -   [指定報表資料來源的認證及連線資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
 -   [為自訂資料處理延伸模組指定連線](report-data/specify-connections-for-custom-data-processing-extensions.md)  
   
--   [在 報表產生器中指定認證](../../2014/reporting-services/specify-credentials-in-report-builder.md)  
+-   [在報表產生器中指定認證](../../2014/reporting-services/specify-credentials-in-report-builder.md)  
   
--   [加入及驗證資料連接或資料來源&#40;報表產生器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+-   [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
 ##  <a name="bkmk_connection_examples"></a> 一般連接字串範例  
  連接字串是資料提供者之連接屬性的文字表示。 下表列出各種資料連接類型之連接字串的範例。  
   
 |**資料來源**|**範例**|**說明**|  
 |---------------------|-----------------|---------------------|  
-|本機伺服器上的 SQL Server 資料庫|`data source="(local)";initial catalog=AdventureWorks`|資料來源類型設定為`Microsoft SQL Server`。 如需詳細資訊，請參閱 [SQL Server 連接類型 &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)。|  
-|本機伺服器上的 SQL Server 資料庫|`data source="(local)";initial catalog=AdventureWorks`|資料來源類型設定為`Microsoft SQL Server`。|  
-|SQL Server 執行個體<br /><br /> [資料庫]|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|資料來源類型設定為`Microsoft SQL Server`。|  
-|SQL Server Express 資料庫|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|資料來源類型設定為`Microsoft SQL Server`。|  
-|[!INCLUDE[ssSDS](../includes/sssds-md.md)] 在雲端中|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|資料來源類型設定為`Windows Azure SQL Database`。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)。|  
-|SQL Server 平行資料倉儲|`HOST=<IP address>;database= AdventureWorks; port=<port>`|資料來源類型設定為`Microsoft SQL Server Parallel Data Warehouse`。 如需詳細資訊，請參閱 [SQL Server 平行資料倉儲連接類型 &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
-|本機伺服器上的 Analysis Services 資料庫|`data source=localhost;initial catalog=Adventure Works DW`|資料來源類型設定為`Microsoft SQL Server Analysis Services`。 如需詳細資訊，請參閱 [MDX 的 Analysis Services 連線類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或 [DMX 的 Analysis Services 連線類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
-|具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|資料來源類型設定為`Microsoft SQL Server Analysis Services`。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱[檢視方塊 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)。|  
+|本機伺服器上的 SQL Server 資料庫|`data source="(local)";initial catalog=AdventureWorks`|將資料來源類型設定為`Microsoft SQL Server`。 如需詳細資訊，請參閱 [SQL Server 連接類型 &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)。|  
+|本機伺服器上的 SQL Server 資料庫|`data source="(local)";initial catalog=AdventureWorks`|將資料來源類型設定為`Microsoft SQL Server`。|  
+|SQL Server 執行個體<br /><br /> [資料庫]|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|將資料來源類型設定為`Microsoft SQL Server`。|  
+|SQL Server Express 資料庫|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|將資料來源類型設定為`Microsoft SQL Server`。|  
+|[!INCLUDE[ssSDS](../includes/sssds-md.md)] 在雲端中|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|將資料來源類型設定為`Windows Azure SQL Database`。 如需詳細資訊，請參閱 [SQL Azure 連接類型 &#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)。|  
+|SQL Server 平行資料倉儲|`HOST=<IP address>;database= AdventureWorks; port=<port>`|將資料來源類型設定為`Microsoft SQL Server Parallel Data Warehouse`。 如需詳細資訊，請參閱 [SQL Server 平行資料倉儲連接類型 &#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)。|  
+|本機伺服器上的 Analysis Services 資料庫|`data source=localhost;initial catalog=Adventure Works DW`|將資料來源類型設定為`Microsoft SQL Server Analysis Services`。 如需詳細資訊，請參閱 [MDX 的 Analysis Services 連線類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) 或 [DMX 的 Analysis Services 連線類型 &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)。|  
+|具有 Sales 檢視方塊的 Analysis Services 表格式模型資料庫|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|將資料來源類型設定為`Microsoft SQL Server Analysis Services`。 在 cube= 設定中指定檢視方塊名稱。 如需詳細資訊，請參閱[檢視方塊 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/perspectives-ssas-tabular.md)。|  
 |在原生模式設定之報表伺服器上的報表模型資料來源|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|指定報表伺服器或文件庫 URL 以及報表伺服器資料或文件庫資料夾命名空間中已發行模型的路徑。 如需詳細資訊，請參閱[報表模型連線 &#40;SSRS&#41;](report-data/report-model-connection-ssrs.md)。|  
 |在 SharePoint 整合模式設定之報表伺服器上的報表模型資料來源|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|指定報表伺服器或文件庫 URL 以及報表伺服器資料或文件庫資料夾命名空間中已發行模型的路徑。|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]伺服器|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|資料來源類型設定為`OLE DB Provider for OLAP Services 8.0`。<br /><br /> 如果將 `ConnectTo` 屬性設定為 `8.0`，則可以加快 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源的連接。 若要設定這個屬性，請使用 **[連接屬性]** 對話方塊的 **[進階屬性]** 索引標籤。|  
-|Oracle 伺服器|`data source=myserver`|資料來源類型設定為`Oracle`。 Oracle 用戶端工具必須安裝在報表設計師電腦和報表伺服器上。 如需詳細資訊，請參閱 [Oracle 連接類型 &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md)。|  
-|SAP NetWeaver BI 資料來源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|資料來源類型設定為`SAP NetWeaver BI`。 如需詳細資訊，請參閱 [SAP NetWeaver BI 連接類型 &#40;SSRS&#41;](report-data/sap-netweaver-bi-connection-type-ssrs.md)。|  
-|Hyperion Essbase 資料來源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|資料來源類型設定為`Hyperion Essbase`。 如需詳細資訊，請參閱 [Hyperion Essbase 連接類型 &#40;SSRS&#41;](report-data/hyperion-essbase-connection-type-ssrs.md)。|  
-|Teradata 資料來源|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|資料來源類型設定為`Teradata`。 連接字串是四個欄位形式的網際網路通訊協定 (IP) 位址，其中每個欄位都可以是 1 到 3 位數。 如需詳細資訊，請參閱 [Teradata 連線類型 &#40;SSRS&#41;](report-data/teradata-connection-type-ssrs.md)。|  
-|XML 資料來源, Web 服務|`data source=http://adventure-works.com/results.aspx`|資料來源類型設定為`XML`。 連接字串是支援 Web 服務定義語言 (WSDL) 之 Web 服務的 URL。 如需詳細資訊，請參閱 [XML 連線類型 &#40;SSRS&#41;](report-data/xml-connection-type-ssrs.md)。|  
-|XML 資料來源、XML 文件|`http://localhost/XML/Customers.xml`|資料來源類型設定為`XML`。 連接字串是 XML 文件的 URL。|  
-|XML 資料來源, 內嵌 XML 文件|*Empty*|資料來源類型設定為`XML`。 XML 資料內嵌在報表定義中。|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]伺服器|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|將資料來源類型設定為`OLE DB Provider for OLAP Services 8.0`。<br /><br /> 如果將 `ConnectTo` 屬性設定為 `8.0`，則可以加快 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料來源的連接。 若要設定這個屬性，請使用 **[連接屬性]** 對話方塊的 **[進階屬性]** 索引標籤。|  
+|Oracle 伺服器|`data source=myserver`|將資料來源類型設定為`Oracle`。 Oracle 用戶端工具必須安裝在報表設計師電腦和報表伺服器上。 如需詳細資訊，請參閱 [Oracle 連接類型 &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md)。|  
+|SAP NetWeaver BI 資料來源|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|將資料來源類型設定為`SAP NetWeaver BI`。 如需詳細資訊，請參閱 [SAP NetWeaver BI 連接類型 &#40;SSRS&#41;](report-data/sap-netweaver-bi-connection-type-ssrs.md)。|  
+|Hyperion Essbase 資料來源|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|將資料來源類型設定為`Hyperion Essbase`。 如需詳細資訊，請參閱 [Hyperion Essbase 連接類型 &#40;SSRS&#41;](report-data/hyperion-essbase-connection-type-ssrs.md)。|  
+|Teradata 資料來源|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|將資料來源類型設定為`Teradata`。 連接字串是四個欄位形式的網際網路通訊協定 (IP) 位址，其中每個欄位都可以是 1 到 3 位數。 如需詳細資訊，請參閱 [Teradata 連線類型 &#40;SSRS&#41;](report-data/teradata-connection-type-ssrs.md)。|  
+|XML 資料來源, Web 服務|`data source=http://adventure-works.com/results.aspx`|將資料來源類型設定為`XML`。 連接字串是支援 Web 服務定義語言 (WSDL) 之 Web 服務的 URL。 如需詳細資訊，請參閱 [XML 連線類型 &#40;SSRS&#41;](report-data/xml-connection-type-ssrs.md)。|  
+|XML 資料來源、XML 文件|`http://localhost/XML/Customers.xml`|將資料來源類型設定為`XML`。 連接字串是 XML 文件的 URL。|  
+|XML 資料來源, 內嵌 XML 文件|*Empty*|將資料來源類型設定為`XML`。 XML 資料內嵌在報表定義中。|  
   
- 如果無法連接到報表伺服器使用`localhost`，檢查是否啟用 TCP/IP 通訊協定的網路通訊協定。 如需詳細資訊，請參閱[Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。  
+ 如果您無法連線到報表伺服器使用`localhost`，確認已啟用 TCP/IP 通訊協定的網路通訊協定。 如需詳細資訊，請參閱 < [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md)。  
   
  如需連接到這些資料來源類型所需組態的詳細資訊，請參閱[從外部資料來源加入資料 &#40;SSRS&#41;](report-data/add-data-from-external-data-sources-ssrs.md) 或 [Reporting Services 支援的資料來源 &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md) 下的特定資料連接主題。  
   
@@ -180,13 +180,13 @@ ms.locfileid: "36022355"
 -   發行報表之前，請以運算式取代靜態連接字串。 等到設計好報表之後，再以運算式取代靜態連接字串。 一旦使用運算式，就不能在報表設計師中執行查詢。 此外，[報表資料] 窗格中的欄位清單與 [參數] 清單也不會自動更新。  
   
 ## <a name="see-also"></a>另請參閱  
- [內嵌和共用資料連接或資料來源&#40;報表產生器和 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [內嵌和共用資料連接或資料來源&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [管理報表資料來源](report-data/manage-report-data-sources.md)   
  [資料來源屬性對話方塊、 認證](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)   
  [共用的資料來源屬性對話方塊、 認證](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md)   
  [建立、 修改及刪除共用的資料來源&#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [設定部署屬性&#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [加入及驗證資料連接或資料來源&#40;報表產生器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

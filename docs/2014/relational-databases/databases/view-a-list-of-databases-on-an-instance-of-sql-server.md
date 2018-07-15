@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - current databases
 - databases currently on server [SQL Server]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - listing databases
 ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f7c4e34b8aaffef592927edc718da214939ec8b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cbc0fbb62fe335364fd0923745369f740e2d81b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290844"
 ---
 # <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>檢視 SQL Server 執行個體上的資料庫清單
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)]執行個體上的資料庫清單。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - report servers [Reporting Services], performance
@@ -21,13 +21,13 @@ ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 caps.latest.revision: 64
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c672255a822313437682e0dc9e91c73d38a7563f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: facca3a93bb3681903ff6bb9ee7b6cf219c9ffcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244338"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
   使用效能監視工具來監視報表伺服器的效能，以評估伺服器活動、觀察趨勢、診斷系統瓶頸，以及收集可協助您判斷目前系統組態是否適當的資料。 若要微調伺服器效能，您可以指定回收報表伺服器應用程式定義域的頻率。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -43,7 +43,7 @@ ms.locfileid: "36135569"
   
  工作管理員提供有關在您電腦上執行之程式與處理序的資訊。 您可以使用工作管理員來監視報表伺服器效能的重要指標。 您也可以評估執行處理序的活動，以及檢視 CPU 和記憶體使用量的圖表與資料。 如需有關使用工作管理員的資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 產品文件集。  
   
- 您可以使用效能主控台和事件檢視器來建立有關報表處理與資源耗用的記錄和警示。 如需 Windows 事件所產生資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱[Windows 應用程式記錄檔](windows-application-log.md)。 如需有關效能主控台的詳細資訊，請參閱本主題稍後的「Windows 效能計數器」。  
+ 您可以使用效能主控台和事件檢視器來建立有關報表處理與資源耗用的記錄和警示。 如需所產生的 Windows 事件資訊[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，請參閱 < [Windows 應用程式記錄檔](windows-application-log.md)。 如需有關效能主控台的詳細資訊，請參閱本主題稍後的「Windows 效能計數器」。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式也會提供用於快取和工作階段管理之報表伺服器資料庫與暫存資料庫的相關資訊。  
   
@@ -83,10 +83,10 @@ ms.locfileid: "36135569"
  除了 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能物件以外，如果您是以 SharePoint 整合模式執行報表伺服器，而且已經將報表環境設定成使用 SharePoint 產品，則可能也要設定 SharePoint 事件。 在本節中，如果您的報表環境已經與 SharePoint 整合，請使用「SharePoint 整合模式中報表伺服器的事件」來檢閱可能會提供有用資訊的診斷事件。  
   
 ## <a name="in-this-section"></a>本節內容  
- [MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件效能計數器&#40;原生模式&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
+ [MSRS 2014 Web 服務和 MSRS 2014 Windows 服務效能物件的效能計數器&#40;原生模式&#41;](performance-counters-msrs-2011-web-service-performance-objects.md)  
  描述報表伺服器 Web 服務所使用的效能計數器。  
   
- [MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件效能計數器&#40;SharePoint 模式&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
+ [MSRS 2014 Web 服務 SharePoint 模式和 MSRS 2014 Windows 服務 SharePoint 模式效能物件的效能計數器&#40;SharePoint 模式&#41;](performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
  描述報表伺服器 Windows 服務所使用的效能計數器。  
   
  [ReportServer:Service 和 ReportServerSharePoint:Service 效能物件的效能計數器](performance-counters-reportserver-service-performance-objects.md)  

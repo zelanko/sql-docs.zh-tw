@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Resource Governor, disabling
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 35c7ea759013d0f09707999a330a32de5e42b144
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: d0f050783582fe62c85da06700dc168f7753785f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299948"
 ---
 # <a name="disable-resource-governor"></a>停用資源管理員
   您可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 Transact-SQL 停用資源管理員。  

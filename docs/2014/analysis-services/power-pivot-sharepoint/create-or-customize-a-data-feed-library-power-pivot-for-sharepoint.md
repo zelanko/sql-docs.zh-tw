@@ -1,5 +1,5 @@
 ---
-title: 建立或自訂資料摘要的庫 (PowerPivot for SharePoint) |Microsoft 文件
+title: 建立或自訂資料摘要的庫 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data feed library
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 699fbeb9-42ab-436b-beba-214db51ea3dd
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa955fd27e0edde1da50fe608034a98b2107eca4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 865bb5cc87364b4d5240f0365cedb854038fb460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308499"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>建立或自訂資料摘要庫 (PowerPivot for SharePoint)
   *「資料摘要庫」* (Data Feed Library) 是一種特殊用途的 SharePoint 文件庫，可讓您註冊與共用 Atom 資料服務文件 (.atomsvc)。 這些文件會提供 XML 資料摘要給支援 Atom 資料摘要格式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿或其他用戶端應用程式。 資料摘要庫與其他 SharePoint 文件庫不同，因為它讓您能夠：  
@@ -31,7 +31,7 @@ ms.locfileid: "36030170"
   
 -   在中央位置共用及管理資料服務文件。  
   
--   以視覺化方式識別資料服務文件圖示，以便您可以輕鬆地區別服務文件儲存在相同的文件庫中的其他文件： ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
+-   以視覺化方式識別資料服務文件圖示，以便您可以輕鬆區別服務文件儲存在相同的文件庫中的其他文件： ![GMNI_IconDataFeed](../media/gmni-icondatafeed.gif "GMNI_IconDataFeed")  
   
  資料摘要庫一直都是包含資料服務文件 (.atomsvc) 檔案，而從來都不包含資料摘要本身。 資料服務文件與包含靜態 XML 資料的資料摘要不同，它會指定 URL 給接到要求時會產生摘要的服務或應用程式，為可重複的匯入作業提供可重複使用的連接資訊。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36030170"
  [將資料摘要庫內容類型加入至任何文件庫](#addtolib)  
   
 ##  <a name="prereq"></a> 必要條件  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合必須針對您要建立其資料摘要庫的網站啟用。 如果無法使用資料摘要庫範本類型，最可能的原因是不符合這項先決條件。 如需詳細資訊，請參閱[在管理中心為網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 功能整合必須針對您要建立其資料摘要庫的網站啟用。 如果無法使用資料摘要庫範本類型，最可能的原因是不符合這項先決條件。 如需詳細資訊，請參閱 <<c0> [ 在管理中心為網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)。  
   
  您必須是網站擁有者，才能建立該文件庫。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "36030170"
   
  資料摘要庫的連結會出現在目前網站的導覽 [快速啟動] 窗格中。  
   
- 建立文件庫之後，您可以使用它來建立資料服務文件。 如需詳細資訊，請參閱[使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。  
+ 建立文件庫之後，您可以使用它來建立資料服務文件。 如需詳細資訊，請參閱 <<c0> [ 使用資料摘要&#40;PowerPivot for SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md)。</c0>  
   
 ##  <a name="addtolib"></a> 將資料摘要庫內容類型加入至任何文件庫  
  如果您不要建立專用的資料摘要庫，但仍要從 SharePoint 網站建立及管理資料服務文件，則可以手動方式為要用來共用資料服務文件 (.atomsvc) 檔案的任何文件庫，加入並設定資料服務文件內容類型。  

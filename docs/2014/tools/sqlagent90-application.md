@@ -1,5 +1,5 @@
 ---
-title: sqlagent90 應用程式 |Microsoft 文件
+title: sqlagent90 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - starting SQL Server Agent
 - sqlagent90 application
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], sqlagent90
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 924f5305b2553682dd4c3adfbec94b49d9289a44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 17db77a81855e408e0ad263ae59b5ab06d40673d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021730"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293658"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 應用程式
   **sqlagent90** 應用程式可從命令提示字元啟動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent 通常應該從 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 執行，或利用應用程式中的 SQL-SMO 方法來執行。 請只在診斷 **Agent 時，或您的主要支援提供者指示您這麼做時，才從命令提示字元執行** sqlagent90 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 。  

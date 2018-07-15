@@ -1,5 +1,5 @@
 ---
-title: 預留位置屬性對話方塊、 一般 （報表產生器及 SSRS） |Microsoft 文件
+title: 預留位置屬性對話方塊、 一般 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ed0c21a7b55e0cf2387595e1c24dc430151f1e05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309728"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>預留位置屬性對話方塊、一般 (報表產生器及 SSRS)
   使用 **[預留位置屬性]** 對話方塊可變更文字方塊內某個預留位置的值、工具提示和標記選項。  
@@ -48,9 +48,9 @@ ms.locfileid: "36031169"
  [格式化文字方塊中的文字 &#40;報表產生器及 SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [將 HTML 新增至報表 &#40;報表產生器及 SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [文字方塊&#40;報表產生器和 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [文字方塊&#40;報表產生器及 SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式化文字和預留位置&#40;報表產生器和 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [將 HTML 匯入至報表&#40;報表產生器和 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [格式化文字和預留位置&#40;報表產生器及 SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [將 HTML 匯入至報表&#40;報表產生器及 SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

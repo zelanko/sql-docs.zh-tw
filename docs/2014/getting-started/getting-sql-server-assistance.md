@@ -1,5 +1,5 @@
 ---
-title: 取得 SQL Server 協助 |Microsoft 文件
+title: 取得 SQL Server 協助 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
 - Books Online [SQL Server], additional resources
@@ -42,15 +42,15 @@ helpviewer_keywords:
 - SQL Server Solution Center
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ac98b9aa879844e1a458e9f9ed59cd14c10804c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146784"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171159"
 ---
 # <a name="getting-sql-server-assistance"></a>取得 SQL Server 協助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  
@@ -70,7 +70,7 @@ ms.locfileid: "36146784"
   
 -   網際網路上的 MSDN Library 和 TechNet Library 都會發行《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 線上叢書》副本。 這些《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》複本中的主題包含來自社群的意見，例如來自其他客戶的額外資訊和程式碼範例。 您可以檢視在 MSDN Library 副本[SQL Server 2014 線上叢書 》](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)。  
   
--   您可以使用 [Help Library 管理員]，將《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》安裝在本機電腦上。 如需詳細資訊，請參閱[新增或移除的 SQL Server 的產品文件](../2014-toc/books-online-for-sql-server-2014.md)。  
+-   您可以使用 [Help Library 管理員]，將《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》安裝在本機電腦上。 如需詳細資訊，請參閱 <<c0> [ 新增或移除的 SQL Server 的產品文件](../2014-toc/books-online-for-sql-server-2014.md)。  
   
  當 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 發行《[!INCLUDE[msCoName](../includes/msconame-md.md)]線上叢書》的更新時，MSDN Library 中的《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》複本以及可透過 [Help Library 管理員] 取得的線上叢書檔案都會重新整理。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "36146784"
 |[Microsoft SQL Server](http://go.microsoft.com/fwlink/?linkid=8504)|提供有關將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 評估為資料儲存和商業智慧工具的售前資訊。|  
 |[Microsoft 知識庫](http://go.microsoft.com/fwlink/?LinkId=42461)|提供由 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術支援所撰寫之 [!INCLUDE[msCoName](../includes/msconame-md.md)] 文件的可搜尋儲存機制。|    
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品有支援週期，可定義每一個版本可用的支援時間長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援會維護一個定義 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援週期的頁面。 此頁面包含其他頁面的連結，這些頁面會指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品支援的可用性。 如需詳細資訊，請參閱[Microsoft 支援週期](http://go.microsoft.com/fwlink/?LinkId=98306)。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品有支援週期，可定義每一個版本可用的支援時間長度。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援會維護一個定義 [!INCLUDE[msCoName](../includes/msconame-md.md)] 支援週期的頁面。 此頁面包含其他頁面的連結，這些頁面會指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] 產品支援的可用性。 如需詳細資訊，請參閱 < [Microsoft 支援週期](http://go.microsoft.com/fwlink/?LinkId=98306)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server 的產品文件集](../2014-toc/books-online-for-sql-server-2014.md)  

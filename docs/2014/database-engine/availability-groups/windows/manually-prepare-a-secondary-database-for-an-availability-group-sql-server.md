@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.configsecondarydbs.f1
 - sql12.swb.availabilitygroup.preparedbs.f1
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 caps.latest.revision: 44
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: e98f8b7db76d0a19041424242d3035934d02c5a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 47afad65db4f1de79bb1da395ce9954772929179
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022236"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295468"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>針對可用性群組手動準備次要資料庫 (SQL Server)
-  本主題描述如何準備次要資料庫以進行中的 AlwaysOn 可用性群組[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]使用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或 PowerShell。 準備次要資料庫需要進行兩個步驟：(1) 使用 RESTORE WITH NORECOVERY，將主要資料庫的最新資料庫備份和後續記錄備份還原至裝載次要複本的每個伺服器執行個體，以及 (2) 將還原的資料庫聯結至可用性群組。  
+  本主題描述如何準備次要資料庫以進行中的 AlwaysOn 可用性群組[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]， [!INCLUDE[tsql](../../../includes/tsql-md.md)]，或 PowerShell。 準備次要資料庫需要進行兩個步驟：(1) 使用 RESTORE WITH NORECOVERY，將主要資料庫的最新資料庫備份和後續記錄備份還原至裝載次要複本的每個伺服器執行個體，以及 (2) 將還原的資料庫聯結至可用性群組。  
   
 > [!TIP]  
->  如果您有現有的記錄傳送組態，您可能可以將記錄傳送主要資料庫連同其一個或多個次要資料庫，一併轉換成 AlwaysOn 主要資料庫和一個或多個 AlwaysOn 次要資料庫。 如需詳細資訊，請參閱[移轉的必要條件從記錄傳送至 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。  
+>  如果您有現有的記錄傳送組態，您可能可以將記錄傳送主要資料庫連同其一個或多個次要資料庫，一併轉換成 AlwaysOn 主要資料庫和一個或多個 AlwaysOn 次要資料庫。 如需詳細資訊，請參閱 <<c0> [ 必要條件的移轉記錄傳送至 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)。</c0>  
   
 -   **開始之前：**  
   
@@ -98,7 +97,7 @@ ms.locfileid: "36022236"
   
 3.  在裝載次要複本的伺服器執行個體上，還原主要資料庫的完整資料庫備份 (並選擇性地還原差異備份)，接著還原任何後續記錄備份。  
   
-     在**RESTORE database 選項**頁面上，選取**讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)**。  
+     在 [**還原 DATABASEOptions**頁面上，選取**讓資料庫保持不運作，且不回復未認可的交易。可以還原其他交易記錄。(RESTORE WITH NORECOVERY)]**。  
   
      如果主要資料庫與次要資料庫的檔案路徑不同 (例如，主要資料庫位於磁碟機 'F:' 而裝載次要複本的伺服器執行個體缺少 F: 磁碟機)，請在您的 WITH 子句中加入 MOVE 選項。  
   
@@ -249,11 +248,11 @@ ms.locfileid: "36022236"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要準備次要資料庫**  
   
-1.  如果您需要建立主要資料庫的最新備份，將目錄變更 (`cd`) 到裝載主要複本的伺服器執行個體。  
+1.  如果您需要建立主要資料庫的最新備份，將目錄變更 (`cd`) 裝載主要複本的伺服器執行個體。  
   
 2.  使用 `Backup-SqlDatabase` 指令程式來建立每個備份。  
   
-3.  變更目錄 (`cd`) 到裝載次要複本的伺服器執行個體。  
+3.  將目錄變更 (`cd`) 裝載次要複本的伺服器執行個體。  
   
 4.  若要還原每個主要資料庫的資料庫和記錄備份，請使用 `restore-SqlDatabase` 指令程式，並指定 `NoRecovery` 還原參數。 如果在裝載主要複本的電腦和裝載目標次要複本的電腦之間有檔案路徑差異，也要使用 `RelocateFile` 還原參數。  
   

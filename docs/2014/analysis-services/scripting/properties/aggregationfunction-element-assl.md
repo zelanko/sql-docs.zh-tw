@@ -1,5 +1,5 @@
 ---
-title: AggregationFunction 元素 (ASSL) |Microsoft 文件
+title: AggregationFunction 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationFunction element
 ms.assetid: 40cfc7f9-1089-45f9-be90-a29770ed9682
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6c8b28c740e82d661c2664eac576f0e079fd3d46
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90908001138f59d4270811376ac44025148889cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308438"
 ---
 # <a name="aggregationfunction-element-assl"></a>AggregationFunction 元素 (ASSL)
   包含要用於帳戶類型的彙總函式。  
@@ -64,7 +64,7 @@ ms.locfileid: "36031308"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下列其中一個字串：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*Sum*|此量值是使用 `Sum` 函數進行彙總的。|  
 |*計數*|此量值是使用 `Count` 函數進行彙總的。|  

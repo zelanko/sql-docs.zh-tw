@@ -1,5 +1,5 @@
 ---
-title: 工具列 （維度使用方式索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 工具列 （維度使用方式索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 026e5d8335b4353abdd208e3a21fe46687ee920b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9246e554097ebd46e13eb9eeee218a3b319b0928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189165"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (維度使用方式索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師的 **[維度使用方式]** 索引標籤上，使用 **[工具列]** 窗格即可執行一般動作，例如加入 Cube 維度或處理 Cube。  

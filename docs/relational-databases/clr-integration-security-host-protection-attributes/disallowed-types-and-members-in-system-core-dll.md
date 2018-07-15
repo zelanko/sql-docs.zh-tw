@@ -1,11 +1,11 @@
 ---
-title: 不允許中 system.core.dll 的參考類型和成員 |Microsoft 文件
+title: 不允許中 system.core.dll 的參考類型和成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
@@ -13,19 +13,19 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12ff1a59054fd0244abe148cd382e18435d1af53
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6b0734153961954ea0b59e59debb12e30fc8909e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699269"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356300"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll 中不允許的類型和成員
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) programming disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. 下表列出 System.Core.dll 組件的成員和類型，這些成員和類型的主機保護屬性 (HPA) 值不被允許。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language integration (CLR) 程式設計不允許使用型別或成員具有**HostProtectionAttribute** ，指定**System.Security.Permissions.HostProtectionResource**列舉值是**ExternalProcessMgmt**， **ExternalThreading**， **MayLeakOnAbort**， **SecurityInfrastructure**， **SelfAffectingProcessMgmnt**， **SelfAffectingThreading**， **SharedState**，**同步處理**，或**UI**。 下表列出 System.Core.dll 組件的成員和類型，這些成員和類型的主機保護屬性 (HPA) 值不被允許。  
   
 > [!NOTE]  
->  此清單是根據支援的組件產生的。 如需詳細資訊，請參閱[支援.NET Framework 程式庫](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
+>  此清單是根據支援的組件產生的。 如需詳細資訊，請參閱 <<c0> [ 支援的.NET Framework 程式庫](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)。  
   
 |類型或成員|HPA 值|  
 |--------------------|--------------------|  

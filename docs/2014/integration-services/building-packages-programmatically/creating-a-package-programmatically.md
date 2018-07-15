@@ -22,13 +22,13 @@ ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c5955cc67583b5560e3998898822c7905d2d8e41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6cb599e9815c1b44f13efba5d8d63bd71987618
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031677"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320738"
 ---
 # <a name="creating-a-package-programmatically"></a>以程式設計方式建立封裝
   <xref:Microsoft.SqlServer.Dts.Runtime.Package> 物件是 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 專案方案中所有其他物件的最上層容器。 做為最上層容器，封裝是第一個建立的物件，而且後續的物件會加入其中，然後在封裝的內容中執行。 封裝本身不會移動或是轉換資料。 封裝依賴它所含的工作 (Task) 以執行工作 (Work)。 工作 (Task) 會執行封裝所執行的大部分工作 (Work)，並定義封裝的功能。 只需要三行程式碼就可以建立和執行封裝，但是還需要將各種工作與 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 物件加入，以便為您的封裝提供其他功能。 本節討論如何以程式設計方式建立封裝。 有關如何建立工作或 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 的詳細資訊並非在此提供， 這些內容將於後續章節說明。  
@@ -159,7 +159,7 @@ End Module
   
 -   blogs.msdn.com 上的部落格文章：[EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) (EzAPI - 針對 SQL Server 2012 更新)。  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [以程式設計方式新增工作](../building-packages-programmatically/adding-tasks-programmatically.md)  

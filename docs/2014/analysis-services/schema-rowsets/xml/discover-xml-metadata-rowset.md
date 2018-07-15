@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_XML_METADATA 資料列集 |Microsoft 文件
+title: DISCOVER_XML_METADATA 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_XML_METADATA rowset
 ms.assetid: 0befd026-db1b-43ac-b0e6-734abb56a4b1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4452408b36fe50300277d0d0f8e076357403539f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 616e7c06087fff3d2c2e0388ba44a3e30b200e5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214008"
 ---
 # <a name="discoverxmlmetadata-rowset"></a>DISCOVER_XML_METADATA 資料列集
   傳回描述所要求物件的 XML 文件。 傳回的資料列集永遠都是由一個資料列與一個資料行所組成。  
   
- 如果您呼叫[探索](../../xmla/xml-elements-methods-discover.md)方法`DISCOVER_XML_METATDATA`中的列舉值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)項目，`Discover`方法會傳回`DISCOVER_XML_METATDATA`資料列集。  
+ 如果您呼叫[Discover](../../xmla/xml-elements-methods-discover.md)方法`DISCOVER_XML_METATDATA`中的列舉值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)項目`Discover`方法會傳回`DISCOVER_XML_METATDATA`資料列集。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  `DISCOVER_XML_METADATA` 資料列集包含下列資料行。  
@@ -73,13 +73,13 @@ ms.locfileid: "36144819"
 |`DataSourcePermissionID`|`DBTYPE_WSTR`|選擇性。|  
 |`ObjectExpansion`|`DBTYPE_WSTR`|選擇性。|  
   
- 限制`ObjectExpansion`，適用於每個主要物件的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 用戶端通常會使用限制以描述將傳回 DDL 的 OLAP 物件，並使用 `ObjectExpansion` 限制定義所傳回之 DDL 中的擴展程度。 下表會指出是否允許列舉值[Alter 元素&#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md)命令。  
+ 限制`ObjectExpansion`，適用於每個主要物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 用戶端通常會使用限制以描述將傳回 DDL 的 OLAP 物件，並使用 `ObjectExpansion` 限制定義所傳回之 DDL 中的擴展程度。 下表會指出是否允許列舉值[改變的項目&#40;XMLA&#41; ](../../xmla/xml-elements-commands/alter-element-xmla.md)命令。  
   
 |列舉值|描述|  
 |-----------------------|-----------------|  
 |`ReferenceOnly`|只會為要求的物件以及所有下階主要物件，遞迴地傳回要求的名稱/識別碼/時間戳記/狀態。|  
 |`ObjectProperties`|展開沒有參考所含物件的要求物件 (包括已展開的次要所含物件)。|  
-|`ExpandObject`|與相同*ObjectProperties*，但也會傳回名稱、 識別碼和包含的主要物件的時間戳記。|  
+|`ExpandObject`|與相同*ObjectProperties*，但也會傳回名稱、 識別碼和所包含的主要物件的時間戳記。|  
 |`ExpandFull`|以遞迴方式將要求的物件完全展開至每個所含物件的底端。|  
   
 ## <a name="see-also"></a>另請參閱  

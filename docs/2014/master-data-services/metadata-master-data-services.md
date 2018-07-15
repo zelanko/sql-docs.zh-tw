@@ -1,5 +1,5 @@
 ---
-title: 中繼資料 (Master Data Services) |Microsoft 文件
+title: 中繼資料 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined metadata [Master Data Services], about user-defined metadata
 - metadata [Master Data Services], about metadata
@@ -16,25 +16,25 @@ helpviewer_keywords:
 - user-defined metadata [Master Data Services]
 ms.assetid: ac1aabe3-d8d4-4d7a-8954-50ee3c185d81
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 25fa2078127816b2fd9d50bd7bd4c074c3577dae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19e3cde73564540b44c49536da008fa4aa54e348
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296678"
 ---
 # <a name="metadata-master-data-services"></a>中繼資料 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，使用者定義的中繼資料是用來描述模型物件的資訊。 例如，您可以追蹤特定模型或實體的擁有者，或追蹤提供資料給實體的來源系統。  
   
- 使用者定義的中繼資料由稱為模型管理**中繼資料**。 此模型時會自動包含[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]已安裝，而且類似於其他所有 MDS 模型，不同之處在於您無法建立它的版本。  
+ 使用者定義的中繼資料由稱為 「 模型管理**中繼資料**。 此模型時，會自動包含[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]已安裝，而且類似於其他所有 MDS 模型，不同之處在於您無法建立它的版本。  
   
  當您使用使用者定義的中繼資料來擴展中繼資料模型時，可以將其包含在訂閱檢視中，以便透過訂閱系統來取用。  
   
 ## <a name="metadata-entities"></a>中繼資料實體  
- 中繼資料模型包含五個實體，每個實體代表一種支援使用者定義中繼資料的主要資料模型物件類型。 例如，**模型中繼資料定義**實體包含表示模型中，成員和**屬性中繼資料定義**實體具有表示所有模型中的所有屬性成員。  
+ 中繼資料模型包含五個實體，每個實體代表一種支援使用者定義中繼資料的主要資料模型物件類型。 例如，**模型中繼資料定義**實體都包含代表模型的成員和**屬性中繼資料定義**實體具有成員，表示所有模型中的所有屬性。  
   
  若要定義模型物件的中繼資料，必須擴展其中一個成員的屬性。 例如，在**實體中繼資料定義**實體，您可以擴展價格成員的描述屬性，以文字：**賣給客戶的產品價格**。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36031660"
   
 -   名稱為 [上次檢閱日期] 的自由格式屬性，用來追蹤擁有者上次檢閱物件的日期。  
   
--   網域屬性名為來源，您用來追蹤和管理與互動的來源系統[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]執行個體。  
+-   網域屬性名為來源，用來追蹤和管理與互動的來源系統[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]執行個體。  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -62,6 +62,6 @@ ms.locfileid: "36031660"
   
 ## <a name="related-content"></a>相關內容  
   
--   [匯出資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+-   [將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
   
   

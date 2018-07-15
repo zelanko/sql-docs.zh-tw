@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a43c85e5bfc36927b5374d8fb5e2165c01482c41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e2dbeac74a4640102ea6a8ccc41f6fc33ca6eec3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301848"
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>使用運算式指定指標的大小 (報表產生器及 SSRS)
   除了色彩、方向和形狀之外，您還可以使用大小，將指標的視覺影像最大化。  
@@ -33,7 +33,7 @@ ms.locfileid: "36022333"
   
  [屬性] 窗格可存取指標之 IndicatorStates 集合的屬性。 您可以使用運算式設定 IndicatorStates 集合成員的 ScaleFactor 屬性，以便將圖示設定為不同的大小。 如需詳細資訊，請參閱[運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
   
- 此程序中使用的運算式也用來產生具有不同大小的指標，顯示在報表[指標&#40;報表產生器及 SSRS&#41;](indicators-report-builder-and-ssrs.md)。  
+ 在此程序所用的運算式也用來產生不同大小的指標，顯示的報表[指標&#40;報表產生器及 SSRS&#41;](indicators-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

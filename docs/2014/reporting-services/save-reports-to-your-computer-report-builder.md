@@ -1,5 +1,5 @@
 ---
-title: 將報表儲存到您的電腦 （報表產生器） |Microsoft 文件
+title: 將報表儲存到您的電腦 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 caps.latest.revision: 5
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 367fcdacc7172a79155b1865464e92d0596a38ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 765dbc5fc274146cfc6cd660acb2278c8e46b4ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309228"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>將報表儲存到您的電腦 (報表產生器)
   在報表產生器中，您可以將報表定義儲存到電腦。 但是，當您將報表定義儲存到電腦時，其他使用者將無法檢視參考共用資料來源的報表，或者外部存放區報表項目 (如影像和子報表) 可能無法執行。 建議您最好將報表儲存到報表伺服器或 SharePoint 網站。  
@@ -49,7 +49,7 @@ ms.locfileid: "36022559"
   
 ## <a name="see-also"></a>另請參閱  
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [將報表匯出&#40;報表產生器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
+ [匯出報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
  [儲存報表&#40;報表產生器&#41;](report-builder/saving-reports-report-builder.md)   
  [將報表匯出為其他檔案類型 &#40;報表產生器及 SSRS &#41;](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   

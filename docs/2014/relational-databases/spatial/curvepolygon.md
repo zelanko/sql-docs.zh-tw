@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a772fba6776195e914d9e4109a7973f355f3a270
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1989f166f519ddf732cca8cd47e32a14c414cae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136388"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268644"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` 是由一個外部週框環形以及零或多個內部環形所定義的拓撲封閉介面。  
   
 > [!IMPORTANT]  
->  詳細的描述和範例中所引進的空間功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CurvePolygon`子類型，請下載技術白皮書： [SQL Server 2012 中新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
+>  詳細的說明和中空間功能的範例[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]，包括`CurvePolygon`子類型，請下載技術白皮書： [SQL Server 2012 中的新空間功能](http://go.microsoft.com/fwlink/?LinkId=226407)。  
   
  下列準則會定義屬性`CurvePolygon`執行個體：  
   
@@ -33,13 +33,13 @@ ms.locfileid: "36136388"
   
 -   `CurvePolygon` 執行個體的內部是外部環形與所有內部環形之間的空間。  
   
- A`CurvePolygon`執行個體不同於`Polygon`執行個體，其中`CurvePolygon`執行個體可能會包含下列圓弧線段：`CircularString`和`CompoundCurve`。  
+ A`CurvePolygon`執行個體不同於`Polygon`中的執行個體`CurvePolygon`執行個體可能會包含下列圓弧線段：`CircularString`和`CompoundCurve`。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve 執行個體  
- 下圖顯示了有效`CurvePolygon`數字：  
+ 下圖顯示有效`CurvePolygon`數字：  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- 如`CurvePolygon`執行個體已接受，它必須是空白或包含已接受的圓弧環形。 已接受的圓弧環形符合下列需求。  
+ 針對`CurvePolygon`執行個體已接受，它必須是空的或包含已接受的圓弧環形。 已接受的圓弧環形符合下列需求。  
   
 1.  是已接受的 `LineString`、`CircularString` 或 `CompoundCurve` 執行個體。 如需有關已接受之執行個體的詳細資訊，請參閱 [LineString](linestring.md)、 [CircularString](circularstring.md)，和 [CompoundCurve](compoundcurve.md)。  
   
@@ -72,7 +72,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
  `@g1` 不被接受，因為起點和終點的 Y 值不相同。 `@g2` 不被接受，因為環形未包含足夠的點。  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- 如`CurvePolygon`為有效的執行個體外部與內部環形都必須符合下列準則：  
+ 針對`CurvePolygon`為有效的執行個體外部與內部環形都必須符合下列準則：  
   
 1.  它們只能在單一正切點接觸。  
   
@@ -82,7 +82,7 @@ DECLARE @g2 geometry = 'CURVEPOLYGON((0 0, 0 0, 0 0))';
   
 4.  每個環形都必須是可接受的曲線類型。  
   
- `CurvePolygon` 執行個體也必須符合特定準則是否為根據`geometry`或`geography`資料型別。  
+ `CurvePolygon` 執行個體也必須符合特定準則，取決於是否`geometry`或`geography`資料型別。  
   
 #### <a name="geometry-data-type"></a>Geometry 資料類型  
  有效的 **geometryCurvePolygon** 執行個體必須具有下列屬性：  
@@ -136,14 +136,14 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ```  
   
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. 在相同的陳述式中使用 CurvePolygon 來宣告和具現化 Geometry 執行個體  
- 此程式碼片段示範如何宣告和初始化 geometry 執行個體`CurvePolygon`在相同陳述式：  
+ 此程式碼片段示範如何宣告和初始化 geometry 執行個體`CurvePolygon`相同的陳述式中：  
   
 ```tsql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. 使用 CurvePolygon 來具現化 Geography 執行個體  
- 此程式碼片段示範如何宣告及初始化`geography`執行個體，其`CurvePolygon`:  
+ 此程式碼片段示範如何宣告和初始化`geography`執行個體與`CurvePolygon`:  
   
 ```tsql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
@@ -159,7 +159,7 @@ SELECT @g.STArea() AS Area;
 ```  
   
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. 儲存包含內部環形的 CurvePolygon  
- 這個範例會建立在環圈圖`CurvePolygon`（這兩個一個外部週框環形與內部環形用來定義甜甜圈） 的執行個體：  
+ 這個範例會建立在環圈圖`CurvePolygon`（這兩個一個外部週框環形與內部環形來定義環圈圖） 的執行個體：  
   
 ```tsql  
 DECLARE @g geometry;  

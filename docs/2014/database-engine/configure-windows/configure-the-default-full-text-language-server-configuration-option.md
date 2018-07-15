@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - languages [full-text search]
 - default full-text language option
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 195ba7dac5e1561805b3e694f28939e12303a182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 12542af785a220858ca151ce1e64a2199436852c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030129"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308148"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>設定 default full-text language 伺服器組態選項
-  本主題描述如何設定`default full-text language`伺服器組態選項中的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `default full-text language`選項會指定全文檢索索引的預設語言值。 語言分析會針對已全文檢索索引的所有資料執行，而且相依於資料的語言。 這個選項的預設值是伺服器使用的語言。 當地語系化版本的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定集`default full-text language`選項設定為伺服器的語言是否有適當的相符項目。 非當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、`default full-text language`選項會是英文。  
+  本主題描述如何設定`default full-text language`中的伺服器組態選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `default full-text language`選項會指定全文檢索索引的預設語言值。 語言分析會針對已全文檢索索引的所有資料執行，而且相依於資料的語言。 這個選項的預設值是伺服器使用的語言。 如需當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定集`default full-text language`選項設定為伺服器的語言有適當的相符項目。 如需非當地語系化的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則`default full-text language`選項會是英文。  
   
  **本主題內容**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36030129"
   
 ###  <a name="Restrictions"></a> 限制事項  
   
--   值`default full-text language`選項用於全文檢索索引，當透過語言的資料行未不指定任何語言**language_term** CREATE FULLTEXT INDEX 或 ALTER FULLTEXT INDEX 陳述式中的選項。 如果不支援預設的全文檢索語言或無法使用語言分析封裝 (Linguistic Analysis Package)，CREATE 或 ALTER 作業會失敗，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將傳回錯誤訊息，表示指定的語言無效。  
+-   值`default full-text language`時透過語言資料行未不指定任何語言，將會使用全文檢索索引中的選項**language_term** CREATE FULLTEXT INDEX 或 ALTER FULLTEXT INDEX 陳述式中的選項。 如果不支援預設的全文檢索語言或無法使用語言分析封裝 (Linguistic Analysis Package)，CREATE 或 ALTER 作業會失敗，而且 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 將傳回錯誤訊息，表示指定的語言無效。  
   
 ###  <a name="Recommendations"></a> 建議  
   

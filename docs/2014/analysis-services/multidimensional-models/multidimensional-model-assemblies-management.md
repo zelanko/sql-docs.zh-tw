@@ -1,5 +1,5 @@
 ---
-title: 多維度模型組件管理 |Microsoft 文件
+title: 多維度模型組件管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
 - calling user-defined functions
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1c8c27856135007c172e2e53b066b14a1a3a7eb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aa24fc7d6b9bc2d22ef852d039637cf5c0f35b71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243488"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多維度模型組件管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供許多可與多維度運算式 (MDX) 和資料採礦延伸模組 (DMX) 語言搭配使用的內建函數，其設計目的是要完成從標準統計計算一直到階層中周遊成員間的各種運算。 但是，就如同其他複雜且強固的產品一樣，總是有進一步擴充產品功能的需求。  
@@ -95,7 +95,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |權限設定|描述|  
 |------------------------|-----------------|  
 |`Safe`|提供內部計算權限。 這個權限值區不會指派權限，來存取 .NET Framework 中的所有受保護資源。 如果未使用 `PermissionSet` 屬性指定任何權限，這就會是組件的預設權限值區。|  
-|`ExternalAccess`|提供與相同的存取`Safe`設定，以存取外部系統資源的額外功能。 這個權限值區不提供安全性保證 (雖然是可以確保此情況的安全)，但是可以提供可靠性的保證。|  
+|`ExternalAccess`|提供與相同的存取權`Safe`設定，並附帶存取外部系統資源的能力。 這個權限值區不提供安全性保證 (雖然是可以確保此情況的安全)，但是可以提供可靠性的保證。|  
 |`Unsafe`|不提供限制。 在此權限設定下執行的 Managed 程式碼，無法提供安全性或可靠性的保證。 任何權限，即使是管理員納入的自訂權限，皆可被授與在本信任層級執行的程式碼。|  
   
  當 CLR 是由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]主控時，以堆疊查核行程為基礎的權限檢查，就會在原生 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 程式碼的界限處停止。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 組件中的任何 Managed 程式碼都一定會落入前面所列之三種權限類別目錄的其中一種。  
@@ -103,13 +103,13 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  COM (或 Unmanaged) 組件常式不支援 CLR 安全性模型。  
   
 ### <a name="impersonation"></a>模擬  
- 只要 Managed 程式碼存取任何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外部的資源時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會遵循與組件之 `ImpersonationMode` 屬性設定相關的規則，以確定該存取會發生在適當的 Windows 安全性內容中。 因為使用的組件`Safe`權限設定無法存取外部資源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，只適用於使用組件，這些規則都`ExternalAccess`和`Unsafe`權限設定。  
+ 只要 Managed 程式碼存取任何在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外部的資源時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 就會遵循與組件之 `ImpersonationMode` 屬性設定相關的規則，以確定該存取會發生在適當的 Windows 安全性內容中。 因為使用的組件`Safe`權限設定不能存取外部資源[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，這些規則是只適用於使用的組件`ExternalAccess`和`Unsafe`權限設定。  
   
 -   如果目前的執行內容對應到 Windows 驗證的登入，且與原始呼叫者的內容相同 (即中間沒有 EXECUTE AS)，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在存取資源之前模擬 Windows 驗證的登入。  
   
 -   如果有中繼 EXECUTE AS 變更了來自原始呼叫者的內容，對外部資源存取的嘗試就會失敗。  
   
- `ImpersonationMode`屬性可以設定為`ImpersonateCurrentUser`或`ImpersonateAnonymous`。 預設的設定， `ImpersonateCurrentUser`，執行目前使用者的網路登入帳戶的組件。 如果`ImpersonateAnonymous`設定，執行內容會對應到 Windows 登入使用者帳戶 IUSER_*servername*在伺服器上。 這是網際網路 Guest 帳戶，在伺服器上的權限有限。 在這個內容中執行的組件，在本機伺服器上只能存取有限的資源。  
+ `ImpersonationMode`屬性可以設定為`ImpersonateCurrentUser`或`ImpersonateAnonymous`。 預設設定， `ImpersonateCurrentUser`，會執行目前使用者的網路登入帳戶的組件。 如果`ImpersonateAnonymous`設定，則執行內容會對應至 Windows 登入使用者帳戶 IUSER_*servername*伺服器上。 這是網際網路 Guest 帳戶，在伺服器上的權限有限。 在這個內容中執行的組件，在本機伺服器上只能存取有限的資源。  
   
 ### <a name="application-domains"></a>應用程式網域  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不會直接公開應用程式定義域。 因為組件集是在相同的應用程式網域中執行，所以應用程式網域可以在執行時期使用 .NET Framework 中的 `System.Reflection` 命名空間或其他方式，來發現彼此，也可用延遲繫結方式呼叫它們。 這種呼叫會遭受以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 授權為基礎的安全性機制，進行權限檢查。  
@@ -117,7 +117,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  因為應用程式網域界限和每個網域中的組件都是由實作所定義，所以您不應該依賴在同一應用程式網域中尋找組件。  
   
 ## <a name="see-also"></a>另請參閱  
- [正在設定預存程序安全性](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
+ [設定預存程序的安全性](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [定義預存程序](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbpg.f1
 ms.assetid: dd72220e-a599-465d-8b84-9bb6a7433216
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6cff7cfa1f264969b90de56416b4e798f5233de0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: aab98afdf10fc615447060957b75811fd36a3006
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257340"
 ---
 # <a name="database-configuration-page-master-data-services-configuration-manager"></a>資料庫組態頁面 (Master Data Services 組態管理員)
   使用 **[資料庫組態]** 頁面，即可編輯 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的系統設定。 系統設定會影響與選定 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫相關聯的所有 Web 應用程式和 Web 服務。 您必須先選取或建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫，才可啟用及使用系統設定進行組態設定。  
@@ -45,7 +45,7 @@ ms.locfileid: "36135632"
  這些設定可在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 中使用，並儲存在資料庫的 [系統設定] 資料表 (mdm.tblSystemSetting)。 如需所有設定的清單，請參閱[系統設定 &#40;Master Data Services&#41;](system-settings-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定 Master Data Services 資料庫與網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
  [資料庫需求&#40;Master Data Services&#41;](install-windows/database-requirements-master-data-services.md)  
   
   

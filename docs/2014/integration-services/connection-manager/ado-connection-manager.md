@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ADO
 - connection managers [Integration Services], ADO
@@ -17,18 +17,18 @@ ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6278b15b3e99808a015496dfa15b7b4b48b8724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 434468c487d1dc758eeef10a04b8623c88abb529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136898"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243048"
 ---
 # <a name="ado-connection-manager"></a>ADO 連接管理員
   ADO 連接管理員可讓封裝連接到 ActiveX Data Objects (ADO) 物件，例如資料錄集。 這個連接管理員一般用在以舊版語言 (例如 Microsoft Visual Basic 6.0) 所撰寫的自訂工作中，或用於做為使用 ADO 連接到資料來源之現有應用程式一部份的自訂工作中。  
   
- 當您將 ADO 連接管理員加入封裝， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員，將會解析為 ADO 連接，在執行階段、 設定連接管理員屬性，以及將連接管理員加入至`Connections`封裝上的集合。 `ConnectionManagerType`連接管理員的屬性設定為`ADO`。  
+ 當您將 ADO 連接管理員加入封裝時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員，會解析為 ADO 連接，在執行階段、 設定連接管理員屬性，以及將連接管理員加入至`Connections`封裝的集合。 `ConnectionManagerType`連接管理員屬性設定為`ADO`。  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>疑難排解 ADO 連接管理員  
  由 ADO 連接管理員讀取時，某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期資料類型會產生如下表所示結果。  
@@ -56,9 +56,9 @@ ms.locfileid: "36136898"
   
  如需有關可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中設定之屬性的詳細資訊，請按下列主題：  
   
--   [設定 OLE DB 連接管理員](ole-db-connection-manager.md)  
+-   [設定 OLE DB 連線管理員](ole-db-connection-manager.md)  
   
- 如需以程式設計方式設定連接管理員資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[新增連線以程式設計方式](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 以程式設計方式設定連接管理員的相關資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>並[連線以程式設計方式加入](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41;連線](integration-services-ssis-connections.md)  

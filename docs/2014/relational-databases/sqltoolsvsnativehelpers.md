@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98384288159ca4dea6dbd1f70deeb0be834c15a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7a1a4326304e4c5e9fc425bed3bf395c4d6bf8b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315538"
 ---
 # <a name="sqltoolsvsnativehelpers"></a>SqlToolsVSNativeHelpers
   在 Visual Studio 中支援 SQL Server 功能的程式庫。  

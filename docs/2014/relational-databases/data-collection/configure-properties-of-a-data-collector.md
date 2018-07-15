@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.datacollectionprop.advanced.f1
 - sql12.swb.dc.datacollectionprop.general.f1
 ms.assetid: cf98f57d-5a6d-4bc3-bf10-783e460fc63d
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a65a92528715220e2ef4762e16a1dceb941c6bad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ce9a591b6e3e347311c7f056b35e7e1353f031d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203442"
 ---
 # <a name="configure-properties-of-a-data-collector"></a>設定資料收集器的屬性
   本主題討論如何設定資料收集器的屬性。  

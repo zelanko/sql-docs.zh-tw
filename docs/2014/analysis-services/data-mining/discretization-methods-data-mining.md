@@ -1,5 +1,5 @@
 ---
-title: 離散化方法 （資料採礦） |Microsoft 文件
+title: 離散化方法 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content types [data mining]
 - discretization [Analysis Services]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2cedf4996536560ff415746c7948cc62a86de77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29ef2a25704911e1feb31f20a048952d45966925
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206248"
 ---
 # <a name="discretization-methods-data-mining"></a>分隔方法 (資料採礦)
   有些用於在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中建立資料採礦模型的演算法需要特定內容類型，才能正確運作。 例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 貝氏機率分類演算法無法使用連續資料行做為輸入，也無法預測連續值。 另外，有些資料行可能包含太多值，使得演算法不容易識別資料中的模式來建立模型。  
@@ -56,9 +56,9 @@ ms.locfileid: "36137180"
   
 -   您可以使用`EQUAL_AREAS`方法來分隔字串。  
   
--   `CLUSTERS`方法使用 1000年筆隨機取樣記錄來離散化資料。 如果您不想要演算法取樣資料，請使用 `EQUAL_AREAS` 方法。  
+-   `CLUSTERS`方法使用 1000年筆隨機取樣來離散化資料。 如果您不想要演算法取樣資料，請使用 `EQUAL_AREAS` 方法。  
   
--   類神經網路採礦模型提供了一個範例，為您示範如何自訂分隔。 如需詳細資訊，請參閱[第 5 課： 建立類神經網路和羅吉斯迴歸模型&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。  
+-   類神經網路採礦模型提供了一個範例，為您示範如何自訂分隔。 如需詳細資訊，請參閱 <<c0> [ 第 5 課： 建立類神經網路和羅吉斯迴歸模型&#40;中繼資料採礦教學課程&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [內容類型&#40;資料採礦&#41;](content-types-data-mining.md)   

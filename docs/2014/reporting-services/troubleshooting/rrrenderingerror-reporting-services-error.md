@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 87f8f7234553fcb09dc952363d3a099613202f40
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 22e0b47c5deea99c59266a6e88bcf564fd6d1783
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218618"
 ---
 # <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 錯誤
     

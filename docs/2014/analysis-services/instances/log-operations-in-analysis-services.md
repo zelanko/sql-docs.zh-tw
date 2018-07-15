@@ -1,5 +1,5 @@
 ---
-title: 記錄在 Analysis Services 中的作業 |Microsoft 文件
+title: 記錄在 Analysis Services 中的作業 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2748496ead805834f0b6051f159dcca551b0b178
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 332f1ff5bff2379f3d11fa61bf3423a9d8e06347
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145260"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228368"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services 中的記錄作業
   Analysis Services 執行個體會將伺服器通知、錯誤和警告記錄至 msmdsrv.log 檔案 – 所安裝的各執行個體都有一個。 管理員可以參考此記錄檔，獲得例行和異常等事件的深入見解。 最新版本的記錄功能已經過增強，可以加入更多資訊。 記錄檔記錄現在包含產品版本和版本資訊，以及處理器、記憶體、連接及封鎖事件。 您可以在 [記錄改進](http://support.microsoft.com/kb/2965035)檢閱整個變更清單。  
@@ -50,7 +50,7 @@ ms.locfileid: "36145260"
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|錯誤記錄檔|例行監視和基本疑難排解|是|  
 |關聯式資料庫中的 OlapQueryLog 資料表|查詢記錄|收集使用方式的最佳化精靈的輸入|否|  
-|SQLDmp\<guid >.mdmp 檔案|當機和例外狀況|深入疑難排解|否|  
+|Sqldmp<guid\<guid >.mdmp 檔|當機和例外狀況|深入疑難排解|否|  
   
  我們強烈建議使用下列連結，以取得本主題中未涵蓋的其他資訊資源： [來自 Microsoft 支援的初始資料收集提示](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36145260"
   
  這個記錄檔會在每次服務重新啟動時清空。 在舊版中，管理員之所以重新啟動服務，有時只是為了在記錄檔成長到太大而變得無法使用之前加以清除。 現已不再需要這麼做。 SQL Server 2012 SP2 中及更新版本中推出的組態設定，可讓您控制記錄檔和其歷程記錄的大小：  
   
--   `MaxFileSizeMB` 指定最大記錄檔大小 (以 MB 為單位)。 預設值是 256。 有效的取代值必須是正整數。 當`MaxFileSizeMB`會達到，Analysis Services 會重新命名目前的檔案為 msmdsrv {current 的 timestamp}.log 檔案，並啟動新的 msmdsrv.log 檔案。  
+-   `MaxFileSizeMB` 指定最大記錄檔大小 (以 MB 為單位)。 預設值是 256。 有效的取代值必須是正整數。 當`MaxFileSizeMB`會達到，Analysis Services 會將重新命名為 msmdsrv {目前的 timestamp}.log 檔案，目前的檔案並啟動新的 msmdsrv.log 檔案。  
   
--   `MaxNumberFiles` 指定保留較舊的記錄檔。 預設值是 0 (停用)。 您可以將它變更為正整數，以保留記錄檔的版本。 當`MaxNumberFiles`會達到，Analysis Services 會刪除最舊的時間戳記，其名稱中包含的檔案。  
+-   `MaxNumberFiles` 指定保留的較舊的記錄檔。 預設值是 0 (停用)。 您可以將它變更為正整數，以保留記錄檔的版本。 當`MaxNumberFiles`會達到，Analysis Services 會刪除最舊的時間戳記，其名稱中包含的檔案。  
   
  若要使用這些設定，請執行下列動作：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36145260"
   
  查詢記錄設定是以整個伺服器為範圍。 您指定的設定會用於此伺服器上執行的所有資料庫。  
   
- ![查詢在 Management Studio 中的記錄檔設定](../media/ssas-querylogsettings.png "在 Management Studio 中的查詢記錄設定")  
+ ![查詢記錄檔設定，在 Management Studio](../media/ssas-querylogsettings.png "在 Management Studio 中的查詢記錄設定")  
   
  在指定組態設定之後，執行 MDX 查詢多次。 如果取樣設為 10，則執行查詢 11 次。確認已建立資料表。 在 Management Studio 中，連接到關聯式資料庫引擎，開啟資料庫資料夾，開啟 **[資料表]** 資料夾，並確認 **OlapQueryLog** 存在。 如果無法立即看到資料表，請重新整理資料夾，以收取其內容的任何變更。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36145260"
 |值|描述|  
 |-----------|-----------------|  
 |0|關閉記憶體傾印檔案。 將會忽略 Exception 區段下的所有其他設定。|  
-|@shouldalert|(預設值) 啟用，但不會傳送記憶體傾印檔案。|  
+|1|(預設值) 啟用，但不會傳送記憶體傾印檔案。|  
 |2|啟用並自動傳送錯誤報告給 Microsoft。|  
   
  `CrashReportsFolder` 是將傾印檔案的位置。 根據預設，可以在 \Olap\Log 資料夾中找到一個 .mdmp 檔以及相關聯的記錄檔記錄。  
@@ -185,7 +185,7 @@ ms.locfileid: "36145260"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 執行個體管理](analysis-services-instance-management.md)   
- [監視 Analysis Services with SQL Server Profiler 簡介](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
+ [若要使用 SQL Server Profiler 監視 Analysis Services 簡介](introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Analysis Services 中設定伺服器屬性](../server-properties/server-properties-in-analysis-services.md)  
   
   

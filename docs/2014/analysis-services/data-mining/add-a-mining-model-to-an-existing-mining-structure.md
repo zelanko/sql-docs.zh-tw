@@ -1,5 +1,5 @@
 ---
-title: 將採礦模型加入現有的採礦結構 |Microsoft 文件
+title: 將採礦模型加入現有的採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], adding
 - mining structures [Analysis Services], mining models
 - adding mining models
 ms.assetid: fcf72300-0674-4e73-a826-9b8eeffefbb5
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 708d03cac04dc8c3574c40398c005fd17faf4bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5140aa597e6ed1fea65ba3358fb5c493ffdaa5c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295908"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>將採礦模型加入至現有的採礦結構
   在加入初始模型之後，您就可以將更多採礦模型加入至採礦結構中。 每一個模型必須包含存在於結構中的資料行，但您可以為每一個採礦模型定義不同的資料行使用方式。 如需如何定義採礦模型資料行的詳細資訊，請參閱 [採礦模型資料行](mining-model-columns.md)。  

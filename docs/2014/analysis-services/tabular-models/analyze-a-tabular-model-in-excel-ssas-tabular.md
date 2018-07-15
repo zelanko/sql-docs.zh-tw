@@ -1,5 +1,5 @@
 ---
-title: 分析表格式模型中 Excel (SSAS 表格式) |Microsoft 文件
+title: 分析 Excel (SSAS 表格式) 中的表格式模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.chooseperspect.f1
 ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ea5288c3f70bbcb8ce2b44a78348283284a7aeb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d838dbf683746b212967f2775c6c943310ce6cb6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204008"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>在 Excel 中分析表格式模型 (SSAS 表格式)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [在 Excel 中進行分析] 功能會開啟 Microsoft Excel、建立模型工作空間資料庫的資料來源連接，以及將樞紐分析表加入工作表。 模型物件 (資料表、資料行、量值、階層和 KPI) 會包含在樞紐分析表欄位清單中當做欄位。  

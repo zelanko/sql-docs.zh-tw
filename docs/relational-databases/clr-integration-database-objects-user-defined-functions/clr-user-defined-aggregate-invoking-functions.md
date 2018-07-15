@@ -1,11 +1,11 @@
 ---
-title: 叫用 CLR 使用者定義彙總函式 |Microsoft 文件
+title: 叫用 CLR 使用者定義彙總函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,12 +21,12 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7731be96b2cf9eaccdad14274250346c04b67a75
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700339"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355370"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>CLR 使用者定義彙總-叫用函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "35700339"
   
  適用下列其他規則：  
   
--   目前的使用者必須具有**EXECUTE**權限的使用者定義彙總。  
+-   目前的使用者必須擁有**EXECUTE**權限的使用者定義彙總。  
   
--   使用者定義彙總必須使用來叫用兩段式名稱的形式*schema_name.udagg_name*。  
+-   使用者定義彙總必須可使用叫用兩段式名稱的形式*schema_name.udagg_name*。  
   
--   在使用者定義彙總的引數類型必須符合或可隱含地轉換成*input_type*彙總，如中所定義的**CREATE AGGREGATE**陳述式。  
+-   在使用者定義彙總的引數類型必須符合或可隱含地轉換成*input_type*中所定義彙總**CREATE AGGREGATE**陳述式。  
   
 -   在使用者定義彙總的傳回型別必須符合*return_type*中**CREATE AGGREGATE**陳述式。  
   
@@ -200,7 +200,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 一旦您編譯程式碼到**MyAgg.dll**，您可以註冊中的彙總[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
+ 一旦您編譯程式碼插入**MyAgg.dll**，您可以註冊中的彙總[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -212,7 +212,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中不支援使用 /clr:pure 編譯器選項編譯的 Visual C++ 資料庫物件 (例如純量值函式) 執行。  
   
- 因為大部分的彙總與大部分的邏輯中**累積**方法。 此處，當做參數傳入的字串**累積**方法附加到**StringBuilder**物件初始化**Init**方法。 假設這不是第一次**累積**呼叫方法時，逗號也會附加至**StringBuilder**之前附加傳入的字串。 在結束時計算的工作， **Terminate**呼叫方法時，它會傳回**StringBuilder**做為字串。  
+ 因為大部分的彙總，大部分的邏輯是在**Accumulate**方法。 這裡，會傳入做為參數的字串**Accumulate**方法會附加至**StringBuilder**物件初始化**Init**方法。 假設這不是第一次**Accumulate**在呼叫方法，也會附加到逗號**StringBuilder**之前附加傳入的字串。 在計算的工作，結束**Terminate**呼叫方法時，就會傳回**StringBuilder**做為字串。  
   
  例如，請考慮具有下列結構描述的資料表：  
   
@@ -240,12 +240,12 @@ GROUP BY BookID;
   
 |BookID|作者名稱|  
 |------------|------------------|  
-|@shouldalert|Johnson|  
+|1|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   
 ## <a name="example-2"></a>範例 2  
- 下列範例會示範具有兩個參數的彙總**累積**方法。  
+ 下列範例示範具有兩個參數的彙總**Accumulate**方法。  
   
  [C#]  
   

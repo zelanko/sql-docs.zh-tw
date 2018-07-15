@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
 - versions [Master Data Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2777ef1871da042c18459ac33c93e71844b89838
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 40d1a247b8d6efeb39b0c0f311a014ef76b55db4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145880"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217678"
 ---
 # <a name="versions-master-data-services"></a>版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可以在模型內建立多個版本的主要資料。 系統會在您驗證資料時鎖定版本，並在驗證資料之後認可版本。 認可的版本會形成可稽核的變更記錄。 您建立的每個版本都包含該模型的所有成員、屬性值、階層成員、階層關聯性和集合。  
@@ -74,8 +74,8 @@ ms.locfileid: "36145880"
 |工作描述|主題|  
 |----------------------|-----------|  
 |變更現有版本的名稱。|[變更版本名稱&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-name-master-data-services.md)|  
-|鎖定版本，僅讓管理員可以編輯其資料。|[鎖定版本&#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
-|解除鎖定版本，讓使用者可以編輯其資料。|[解除鎖定版本&#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
+|鎖定版本，僅讓管理員可以編輯其資料。|[鎖定版本， &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)|  
+|解除鎖定版本，讓使用者可以編輯其資料。|[解除鎖定版本， &#40;Master Data Services&#41;](../../2014/master-data-services/unlock-a-version-master-data-services.md)|  
 |在驗證所有資料之後認可版本。|[認可版本&#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)|  
 |建立新旗標來標示版本。|[建立版本旗標&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
 |變更現有版本旗標的名稱。|[變更版本旗標名稱&#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)|  

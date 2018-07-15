@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], design and performance
 - designing databases [SQL Server], replication performance
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8c16d70220050578fc810735f76465806a895d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 71afdf1b34056089c767ed021c0e14006f400850
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172869"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
   透過使用本主題中所述的指導方針，您可以提升應用程式及網路上所有複寫類型的一般效能：  
@@ -84,7 +84,7 @@ ms.locfileid: "36145608"
   
 -   限制使用大型物件 (LOB) 資料類型。  
   
-     LOB 比其他資料行資料類型需要更多儲存空間和處理。 除非您的應用程式需要，否則不要在發行項中包含這些資料行。 資料型別`text`， `ntext`，和`image`已被取代。 如果您包含 Lob，建議您使用的資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分別。  
+     LOB 比其他資料行資料類型需要更多儲存空間和處理。 除非您的應用程式需要，否則不要在發行項中包含這些資料行。 資料型別`text`， `ntext`，和`image`已被取代。 若您納入 Lob，建議您使用的資料型別`varchar(max)`， `nvarchar(max)`，`varbinary(max)`分別。  
   
      對於異動複寫，請考慮使用名為 **OLEDB 資料流的散發設定檔**的「散發代理程式」設定檔。 如需詳細資訊，請參閱 [Replication Agent Profiles](../agents/replication-agent-profiles.md)。  
   

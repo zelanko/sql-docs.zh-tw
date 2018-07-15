@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Provider Information event class
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 634e93e708d78563d84fd71ee3b61a69085bd2b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 08e155d532f8c5872ed8895dcfb2042ed11f600f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292758"
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information 事件類別
   在執行分散式查詢時，就會發生 **OLEDB Provider Information** 事件類別，且會收集對應於提供者連接的資訊。  
@@ -67,7 +67,7 @@ ms.locfileid: "36022173"
 |**SessionLoginName**|**nvarchar**|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
-|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

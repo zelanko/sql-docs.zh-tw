@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema collections [SQL Server], viewing
 - XML schemas [SQL Server], viewing
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 164b207ab8191486005491eaf64323fed83aaee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1560eb844657d806862d6a4e85bb9a52682b77d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022342"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301776"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>檢視儲存的 XML 結構描述集合
   使用 [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)匯入 XML 結構描述集合之後，即會將結構描述元件儲存在中繼資料中。 您可以使用 [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)內建函數以重建 XML 結構描述集合。 此函數會傳回`xml`資料類型執行個體。  
@@ -39,7 +39,7 @@ SELECT xml_schema_namespace(N'Production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
- 如果您想要查看的 XML 結構描述集合只能有一個結構描述，您可以指定針對 XQuery`xml`類型所傳回的結果`xml_schema_namespace`。  
+ 如果您想要查看 XML 結構描述集合只能有一個結構描述，您可以指定針對 XQuery`xml`類型所傳回的結果`xml_schema_namespace`。  
   
 ```  
 SELECT xml_schema_namespace(N'RelationalSchemaName',N'XmlSchemaCollectionName').query('  

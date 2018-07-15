@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.logreaderagent.f1
 helpviewer_keywords:
 - Log Reader Agent dialog box
 ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c871e08794fe878cdc67c8c66cc880b0f14b7915
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 40a2b87a8746a77f5d431d6674013e2158ebbaf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179675"
 ---
 # <a name="log-reader-agent"></a>記錄讀取器代理程式
   **[記錄讀取器代理程式]** 對話方塊會顯示記錄讀取器代理程式的詳細資訊，包括狀態、記錄、參考訊息，以及任何錯誤訊息。  

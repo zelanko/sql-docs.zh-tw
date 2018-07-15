@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connection.login.reportserver.f1
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 500624fbf81bc4ffc98ed3342878c2bf811005d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f98d7d47820765e4e4920c95f92d1154350af278
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293188"
 ---
 # <a name="connect-to-server-reporting-services"></a>連接到伺服器 (Reporting Services)
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 時，使用此對話方塊來檢視或指定選項。  
@@ -33,9 +33,9 @@ ms.locfileid: "36031268"
  **伺服器名稱**  
  您要連接之報表伺服器執行個體的伺服器模式會決定您必須輸入的值。  
   
- 若為以原生模式執行的報表伺服器，請指定要連接的報表伺服器執行個體。 如果您正使用預設執行個體，此伺服器名稱通常就是電腦的名稱。 如果您安裝具名執行個體，執行個體名稱附加至伺服器名稱，格式如下： \<servername >\\< InstanceName\>。 Reporting Services 會使用反斜線字元來分隔執行個體名稱。  
+ 若為以原生模式執行的報表伺服器，請指定要連接的報表伺服器執行個體。 如果您正使用預設執行個體，此伺服器名稱通常就是電腦的名稱。 如果您已安裝具名執行個體，執行個體名稱附加至伺服器名稱，格式如下：\<伺服器名稱 >\\< 執行個體名稱\>。 Reporting Services 會使用反斜線字元來分隔執行個體名稱。  
   
- 若為以 SharePoint 整合模式執行的報表伺服器，您就必須指定 SharePoint 網站。 您可以在網站集合中指定與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合的任何網站。 您所提供的 URL 必須包含 HTTP 或 HTTPS 前置詞。 您必須擁有存取 SharePoint 網站的權限，才能在 Management Studio 中連接至此網站。 您被指派的權限等級將會決定您可以檢視和管理的項目。 如需詳細資訊，請參閱[連接到 Management Studio 中的報表伺服器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
+ 若為以 SharePoint 整合模式執行的報表伺服器，您就必須指定 SharePoint 網站。 您可以在網站集合中指定與 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]整合的任何網站。 您所提供的 URL 必須包含 HTTP 或 HTTPS 前置詞。 您必須擁有存取 SharePoint 網站的權限，才能在 Management Studio 中連接至此網站。 您被指派的權限等級將會決定您可以檢視和管理的項目。 如需詳細資訊，請參閱 <<c0> [ 連接到 Management Studio 中的報表伺服器](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)。  
   
  **驗證**  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 可設定為接受由您提供之自訂驗證延伸模組處理的 Windows 驗證要求或表單驗證要求。 連接到 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]時，請選取下列其中一種驗證模式：  

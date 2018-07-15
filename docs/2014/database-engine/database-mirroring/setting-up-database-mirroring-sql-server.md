@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cbe6727f9f3a031e5400dcb260095a518ca69dd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 1aea3a970763cc47c48176cb0fdd5f14a005258b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031271"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314408"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>設定資料庫鏡像 (SQL Server)
   本節描述的是設定資料庫鏡像的必要條件、建議事項及步驟。 如需資料庫鏡像的簡介，請參閱 [資料庫鏡像 &#40;SQL Server&#41;](database-mirroring-sql-server.md)。  
@@ -36,7 +35,7 @@ ms.locfileid: "36031271"
   
 1.  主體伺服器、鏡像伺服器和見證 (如果有的話) 必須是由位於個別主機系統上的個別伺服器執行個體所裝載。 每一個伺服器執行個體都需要資料庫鏡像端點。 如果您需要建立資料庫鏡像端點，請確定其他伺服器執行個體能夠存取它。  
   
-     伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 資料庫鏡像可用的兩種傳輸安全性類型為：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱[資料庫鏡像和 AlwaysOn 可用性群組的傳輸安全性&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。  
+     伺服器執行個體用於資料庫鏡像的驗證格式，是其資料庫鏡像端點的屬性。 資料庫鏡像可用的兩種傳輸安全性類型為：Windows 驗證或以憑證為基礎的驗證。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性，資料庫鏡像和 AlwaysOn 可用性群組&#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)。</c0>  
   
      網路存取的需求與驗證形式相關，如下所示：  
   
@@ -48,7 +47,7 @@ ms.locfileid: "36031271"
   
          若要啟用某伺服器執行個體上資料庫鏡像的憑證驗證，系統管理員必須設定每一個伺服器執行個體，才能同時在傳出和傳入的連接使用憑證。 您必須先設定傳出連接。 如需詳細資訊，請參閱[使用資料庫鏡像端點憑證 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)。  
   
-2.  確定所有資料庫使用者的登入都存在於鏡像伺服器上。 如需詳細資訊，請參閱[設定登入帳戶的資料庫鏡像或 AlwaysOn 可用性群組&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)。  
+2.  確定所有資料庫使用者的登入都存在於鏡像伺服器上。 如需詳細資訊，請參閱 <<c0> [ 設定登入帳戶的資料庫鏡像或 AlwaysOn 可用性群組&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)。</c0>  
   
 3.  在即將裝載鏡像資料庫的伺服器執行個體上，設定鏡像資料庫所需的其餘環境。 如需詳細資訊，請參閱 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)。  
   
@@ -122,7 +121,7 @@ ms.locfileid: "36031271"
  [範例：使用憑證設定資料庫鏡像 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  包含一則範例，內容說明使用以憑證為基礎的驗證建立具有見證之資料庫鏡像工作階段的所有必要階段。  
   
- [設定登入帳戶的資料庫鏡像或 AlwaysOn 可用性群組&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
+ [設定登入帳戶，資料庫鏡像或 AlwaysOn 可用性群組&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  描述針對使用與本機伺服器執行個體不同之帳戶的遠端伺服器執行個體，建立登入。  
   
 ##  <a name="RelatedTasks"></a> 相關工作  
@@ -150,7 +149,7 @@ ms.locfileid: "36031271"
   
  **Transact-SQL/SQL Server Management Studio**  
   
--   [升級伺服器執行個體時，鏡像資料庫的盡可能縮短停機時間](upgrading-mirrored-instances.md)  
+-   [在升級伺服器執行個體時將鏡像資料庫的停機時間減至最少](upgrading-mirrored-instances.md)  
   
 -   [準備鏡像資料庫以進行鏡像 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

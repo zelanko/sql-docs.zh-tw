@@ -1,5 +1,5 @@
 ---
-title: 叢集辨識索引標籤 （採礦模型檢視器） |Microsoft 文件
+title: 叢集辨識索引標籤 （採礦模型檢視器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.discrimination.f1
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8c23aeea11db212ce065baa04d5fc38280fe26a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 992ef4a9145a3137975220ac2febdab3028507c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144840"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179035"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>叢集辨識索引標籤 (採礦模型檢視器)
   使用 [叢集辨識] 索引標籤，即可比較存在於一個叢集模型中的兩個叢集。 可以查看屬性和值的不同組合在叢集中的表示方式。  
@@ -44,7 +44,7 @@ ms.locfileid: "36144840"
  **叢集 2**  
  從採礦模型中的叢集清單選取第二個叢集，以便與 [叢集 1] 比較。 還可以將叢集與其補數 (表示模型中不屬於所選叢集的所有案例) 進行比較。  
   
- **辨識分數\<群集 1 > 和\<cluster 2 >**  
+ **辨識率\<群集 1 > 和\<cluster 2 >**  
  圖形中的資料行提供有關每個屬性/值組與兩個選定叢集之間如何相關的資訊。  
   
 |||  

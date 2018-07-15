@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93418f885f5c14d2d6ad43b7892f64906a43a2be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 6ab4e0486cfcac8eaf4d5ed9d4a0456d4bb6d9dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290894"
 ---
 # <a name="database-engine-tutorials"></a>Database Engine 教學課程
   本節包含 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]的教學課程。  
@@ -48,17 +48,17 @@ ms.locfileid: "36022401"
  [教學課程：使用以原則為基礎的管理來管理伺服器](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  這個教學課程將說明如何建立強制執行網站管理標準的原則。  
   
- [教學課程： 使用原則式管理來評估最佳做法](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [教學課程：使用原則式管理來評估最佳做法](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  這個教學課程將說明如何建立可用於分析 [!INCLUDE[ssDE](../includes/ssde-md.md)] 執行個體的已知問題的原則。  
   
  [教學課程：SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  本教學課程將說明如何執行 SQL Server 備份及還原到 Windows Azure Blob 儲存體服務。  
   
- [在 Windows Azure 儲存體服務教學課程： SQL Server 資料檔案](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [教學課程：Windows Azure 儲存體服務中的 SQL Server 資料檔案](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  本教學課程可協助您了解如何直接將 SQL Server 資料檔案儲存在 Windows Azure Blob 儲存體服務中。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 的教學課程](../tutorials/tutorials-for-sql-server-2014.md)   
+ [適用於 SQL Server 2014 的教學課程](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet WIKI：SQL Server 2012 範例](http://go.microsoft.com/fwlink/?linkID=220734)  
   
   

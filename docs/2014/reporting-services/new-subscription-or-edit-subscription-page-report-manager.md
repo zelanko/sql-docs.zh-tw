@@ -1,5 +1,5 @@
 ---
-title: 新增訂閱或編輯訂閱頁面 （報表管理員） |Microsoft 文件
+title: 新的訂用帳戶或編輯訂閱頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e02d6529-ce67-4305-b7f0-433997e99c21
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: af32c10bd6c18a4cafc46ccba36859413942c98d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cbed3ea7bb8d96f82ae7ef14294d1f5f02c3d5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145790"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212588"
 ---
 # <a name="new-subscription-or-edit-subscription-page-report-manager"></a>新增訂閱或編輯訂閱頁面 (報表管理員)
   使用 [新增訂閱] 或 [編輯訂閱] 頁面，即可在報表中建立新的訂閱或修改現有的訂閱。 這個頁面的此選項隨著您的角色指派而改變。 具有進階權限的使用者可以使用額外的選項。  
   
- 可自主式執行的報表支援訂閱。 報表至少必須使用預存認證或無認證。 如果報表使用參數，就必須指定預設值。 如果您變更報表執行設定或移除參數屬性的預設值，就可能會造成訂閱停用。 如需詳細資訊，請參閱[建立及管理原生模式報表伺服器的訂閱](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)。  
+ 可自主式執行的報表支援訂閱。 報表至少必須使用預存認證或無認證。 如果報表使用參數，就必須指定預設值。 如果您變更報表執行設定或移除參數屬性的預設值，就可能會造成訂閱停用。 如需詳細資訊，請參閱 <<c0> [ 建立及管理原生模式報表伺服器的訂閱](../../2014/reporting-services/create-manage-subscriptions-native-mode-report-servers.md)。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -40,7 +40,7 @@ ms.locfileid: "36145790"
   
 3.  在下拉式功能表中，執行下列其中一項步驟：  
   
-    -   按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。 然後，選取 **訂閱** 索引標籤。在工具列中，按一下 **新訂用帳戶**，或選取現有的訂用帳戶，然後按一下**編輯**。  
+    -   按一下 **[管理]**。 這樣就會開啟該報表的 [一般] 屬性頁面。 然後，選取 **[訂閱]** 索引標籤。在工具列中，按一下**新的訂用帳戶**，或選取現有的訂用帳戶，然後按一下**編輯**。  
   
     -   按一下 **[訂閱]**。 這樣就會開啟該報表的 **[新增訂閱]** 頁面。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36145790"
   
 -   電子郵件訂閱提供電子郵件使用者很熟悉的欄位 (例如， **[收件者]**、 **[主旨]**，以及 **[優先權]** 等欄位)。 指定 **[包含報表]** 即可內嵌或附加報表，或是指定 **[包含連結]** 以包含連結到報表的 URL。 指定 **[轉譯格式]** 即可為附加或內嵌的報表選擇呈現格式。  
   
--   檔案共用訂閱提供讓您指定目標位置的欄位。 您可以傳遞任何報表至檔案共用。 不過，支援互動式功能的報表 (包括支援針對資料列和資料行向下鑽研的矩陣報表) 將轉譯成靜態檔案。 您無法在靜態檔案中檢視向下鑽研資料列和資料行。 檔案共用名稱必須以統一命名慣例 (UNC) 格式指定 (例如， \\\mycomputer\public\myreportfiles)。 在路徑名稱中不可包含反斜線。 報表檔案會使用以轉譯格式為基礎的檔案格式進行傳遞 (例如，如果您選擇了 **[Excel]**，報表就會以 .xls 檔案來傳遞)。  
+-   檔案共用訂閱提供讓您指定目標位置的欄位。 您可以傳遞任何報表至檔案共用。 不過，支援互動式功能的報表 (包括支援針對資料列和資料行向下鑽研的矩陣報表) 將轉譯成靜態檔案。 您無法在靜態檔案中檢視向下鑽研資料列和資料行。 檔案共用名稱必須以統一命名慣例 (UNC) 格式指定 (例如\\\mycomputer\public\myreportfiles)。 在路徑名稱中不可包含反斜線。 報表檔案會使用以轉譯格式為基礎的檔案格式進行傳遞 (例如，如果您選擇了 **[Excel]**，報表就會以 .xls 檔案來傳遞)。  
   
  傳遞延伸模組是否可用，取決於該模組是否安裝和設定於報表伺服器。 報表伺服器電子郵件是預設傳遞延伸模組，但您必須先設定它才能夠使用。 檔案共用傳遞不需要進行設定，但您必須先定義共用資料夾，才能加以使用。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36145790"
  **當排程的報表執行完成時**  
  建立決定何時處理訂閱的排程。  
   
- **共用排程上**  
+ **在共用排程上**  
  選擇預先定義的排程以處理訂閱。  
   
  **輸入參數值**  

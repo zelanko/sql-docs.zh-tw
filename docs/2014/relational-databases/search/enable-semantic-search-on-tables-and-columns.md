@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], enabling
 ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 64ed077658de8ba855bc2301a3db403e12a47511
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 8187e19e40eba87e663c800ba9e593b30fe87a86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296438"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>在資料表和資料行上啟用語意搜尋
   描述如何針對包含文件或文字的選取資料行啟用或停用統計語意索引。  
@@ -196,7 +195,7 @@ GO
 ## <a name="checking-whether-semantic-search-is-enabled-on-database-objects"></a>檢查資料庫物件上是否啟用語意搜尋  
   
 ###  <a name="HowToCheckEnabled"></a> 如何： 檢查資料庫物件上是否啟用語意搜尋  
- **資料庫啟用語意搜尋？**  
+ **資料庫是否已啟用語意搜尋？**  
  查詢 [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/databasepropertyex-transact-sql) 中繼資料函數的 **IsFullTextEnabled** 屬性。  
   
  傳回值 1 表示已針對資料庫啟用全文檢索搜尋和語意搜尋，傳回值 0 表示未啟用這兩個搜尋。  
@@ -216,7 +215,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('table_name'), 'TableFullTextSemanticExtractio
 GO  
 ```  
   
- **資料行啟用語意搜尋？**  
+ **資料行是否已啟用語意搜尋？**  
  若要判斷是否已針對特定資料行啟用語意搜尋：  
   
 -   查詢 [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql) 中繼資料函數的 **StatisticalSemantics** 屬性。  
@@ -279,7 +278,7 @@ GO
  如果您有磁碟空間配置的顧慮，請考慮針對全文檢索和語意索引建立個別的檔案群組。 語意索引與全文檢索索引會建立在相同的檔案群組中。 完整擴展的語意索引可能會包含大量資料。  
   
 ##  <a name="BestPracticeUnderstand"></a>   
-##  <a name="IssueNoResults"></a> 問題： 針對特定資料行搜尋未傳回結果  
+##  <a name="IssueNoResults"></a> 問題： 針對特定資料行搜尋未傳回任何結果  
  **您是否針對 Unicode 語言指定了非 Unicode LCID？**  
  您可以針對 LCID 代表只有 Unicode 字詞之語言 (例如俄文 LCID 1049) 的非 Unicode 資料行類型啟用語意索引。 在此情況下，這個資料行的語意索引永遠不會傳回任何結果。  
   

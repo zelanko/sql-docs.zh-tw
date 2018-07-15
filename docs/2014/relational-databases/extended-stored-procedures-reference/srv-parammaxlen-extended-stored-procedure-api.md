@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_parammaxlen
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f6613a8ad4e907444de66fd8a09777b1704f48a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f832700277d8e015dae9ef7beec41790c6624784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248471"
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (擴充預存程序 API)
     

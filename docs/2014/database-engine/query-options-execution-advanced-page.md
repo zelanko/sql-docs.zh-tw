@@ -1,5 +1,5 @@
 ---
-title: 查詢選項執行 （進階頁面） |Microsoft 文件
+title: 查詢選項執行 （進階頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.advanced.f1
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5cdff5f44079c6c4946f30f9d4cc12ecc1bcac85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 548f8a0dd6a8c24c91144598f649e3bc564e614c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293038"
 ---
 # <a name="query-options-execution-advanced-page"></a>查詢選項執行 (進階頁面)
   使用 **SET** 陳述式時，有許多選項可用。 使用此頁面來指定 **set** 選項，以執行 Microsoft SQL Server 查詢。 如需上述各選項的詳細資訊，請參閱《SQL Server 線上叢書》。  
@@ -67,7 +67,7 @@ GO
  **SET QUERY_GOVERNOR_COST_LIMIT**  
  使用 [查詢管理員成本限制] 選項，指定查詢可執行的時間週期上限。 查詢成本代表在特定的硬體組態上，預估完成查詢所需的時間 (以秒為單位)。 預設值為 0 表示查詢執行沒有時間長度的限制  
   
- **抑制提供者訊息標頭**  
+ **隱藏提供者訊息標頭**  
  選取此核取方塊時，不會顯示來自提供者 (例如 OLE DB 提供者) 的狀態訊息。 依預設，這個核取方塊為已選取。 當疑難排解查詢於提供者層級失敗時，清除此核取方塊即可查看提供者訊息。  
   
  **查詢執行後中斷連接**  

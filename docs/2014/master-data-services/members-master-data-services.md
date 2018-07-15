@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
 - consolidated members [Master Data Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 10
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa1613512d6114a760b984da50089e2f524a083a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 934dbb8ff42bfbb3c334131f77e33d44d8542223
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031899"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307978"
 ---
 # <a name="members-master-data-services"></a>成員 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，成員是指實體主要資料。 例如，成員可以是 Product 實體中的 Road-150 bike，或是 Customer 實體中的特定客戶。  
@@ -54,7 +54,7 @@ ms.locfileid: "36031899"
 -   在明確階層中，合併成員可以是階層中其他成員的父系，也可以是子系。  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>使用階層與集合來組織成員  
- 階層和集合可以用來為成員分組，以進行報告或分析。 如需詳細資訊，請參閱[階層&#40;Master Data Services&#41; ](hierarchies-master-data-services.md)和[集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)。  
+ 階層和集合可以用來為成員分組，以進行報告或分析。 如需詳細資訊，請參閱 <<c0> [ 階層&#40;Master Data Services&#41; ](hierarchies-master-data-services.md)並[集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)。</c0>  
   
 ## <a name="member-example"></a>成員範例  
  在下列範例中，每個成員是由 Name、Code、Subcategory、StandardCost、ListPrice 和 FilePhoto 屬性值所組成。  

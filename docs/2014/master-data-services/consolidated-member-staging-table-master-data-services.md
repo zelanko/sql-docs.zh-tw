@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 caps.latest.revision: 13
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 925f20d61f4638041b7606df584147446ba28d65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 15a47c1e8e1785b9b9b63c0a2dd8d17558898434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320628"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>合併成員暫存資料表 (Master Data Services)
   使用 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的合併成員暫存資料表 (stg.name_Consolidated) 建立、更新、停用以及刪除合併成員。 您也可以用它來更新合併成員的屬性值。  

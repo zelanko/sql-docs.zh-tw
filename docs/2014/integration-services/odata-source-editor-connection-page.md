@@ -1,5 +1,5 @@
 ---
-title: OData 來源編輯器 （連接頁面） |Microsoft 文件
+title: OData 來源編輯器 （連接頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 35f67b1f60acd8fd65132f1d6fe71bff2d52c724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f3ae477a34a296ade90fb50dde0a600cf81ac18a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213268"
 ---
 # <a name="odata-source-editor-connection-page"></a>OData 來源編輯器 (連接頁面)
   使用 **[OData 來源編輯器]** 對話方塊的 **[連接]** 頁面，選取 OData 來源的 OData 連接管理員。 此頁面也可讓您指定集合或資源路徑及任何查詢選項，以指示需要從 OData 來源擷取哪些資料。 若要深入了解 OData 來源，請參閱＜ [OData Source](data-flow/odata-source.md)＞。  

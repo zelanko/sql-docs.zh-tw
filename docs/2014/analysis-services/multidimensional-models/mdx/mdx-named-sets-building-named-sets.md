@@ -1,5 +1,5 @@
 ---
-title: 建立名為 MDX (MDX) 中的集合 |Microsoft 文件
+title: 建立名為 MDX (MDX) 中的集合 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], named sets
 - named sets [MDX]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - set expressions [MDX]
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a05b343150cf72a760ba5eb9de24651f0f5db9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f990def60c377ca84b5dde593470634f3927b496
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297458"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>在 MDX 中建立命名集 (MDX)
   集合運算式可能是一項冗長而複雜的宣告，因而不太容易遵照和了解。 或者，可能會相當頻繁地使用集合運算式，一再定義該集合就變得相當惱人。 若要讓冗長、複雜或經常使用的運算式更為容易處理，多維度運算式 (MDX) 可讓您將這類運算式作為「命名集」。  

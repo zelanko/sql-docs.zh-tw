@@ -1,5 +1,5 @@
 ---
-title: 影像屬性對話方塊、 一般 （報表產生器及 SSRS） |Microsoft 文件
+title: 影像屬性對話方塊、 一般 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10051"
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 26c0378caeca7fd904cd793bc483dd28a464a5d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7137b65223a092cc136db7fda21cd2cd0e5c2ce2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022339"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292208"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>影像屬性對話方塊、一般 (報表產生器及 SSRS)
   選取 [影像屬性] 對話方塊上的 [一般] 來加入圖片、變更影像的預設名稱，以及加入工具提示文字。  
@@ -48,7 +48,7 @@ ms.locfileid: "36022339"
   
  如果您要內嵌影像，從下拉式清單中選擇您要加入報表的影像。 按一下 [匯入] 按鈕，將影像加入到下拉式清單中。  
   
- 如果您選取 [外部] 選項，輸入影像的 URL。 對於發行到設定為原生模式之報表伺服器的報表，請使用完整或相對路徑， 例如 http://\<伺服器名稱 > / /images/image1.jpg。 對於發行到設定為 SharePoint 整合模式之報表伺服器的報表，請使用完整 URL， 例如 http://\<*SharePointservername*>/\<*網站*> / Documents/images/image1.jpg。  
+ 如果您選取 [外部] 選項，輸入影像的 URL。 對於發行到設定為原生模式之報表伺服器的報表，請使用完整或相對路徑， 例如 http://\<伺服器名稱 > / images/image1.jpg。 對於發行到設定為 SharePoint 整合模式之報表伺服器的報表，請使用完整 URL， 例如 http://\<*SharePointservername*>/\<*網站*> / Documents/images/image1.jpg。  
   
  **匯入**  
  按一下此選項，即可將影像加入到 [使用此影像] 下拉式清單中。  
@@ -61,7 +61,7 @@ ms.locfileid: "36022339"
   
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [映像&#40;報表產生器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [映像&#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [對話方塊、 窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

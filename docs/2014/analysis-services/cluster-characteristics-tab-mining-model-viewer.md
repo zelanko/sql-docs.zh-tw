@@ -1,5 +1,5 @@
 ---
-title: 叢集特性索引標籤 （採礦模型檢視器） |Microsoft 文件
+title: 叢集特性索引標籤 （採礦模型檢視器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.characteristics.f1
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e5dcac98dd53edbd5e894c639c067106288e7e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f3b5076884e44926457437ef1c31fd595418edd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172079"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>叢集特性索引標籤 (採礦模型檢視器)
   [叢集特性] 索引標籤可讓您瀏覽叢集模型中某個叢集的特性，或瀏覽該模型中所有案例集合的特性。 圖形會將每個屬性/值組的重要性顯示為定義叢集的特性 (相較於其他叢集)。  
@@ -44,7 +44,7 @@ ms.locfileid: "36145975"
  **特性\<叢集 >**  
  圖形包含描述所選取叢集之特性的下列資料行。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**變數**|列出在所選叢集中找到的採礦模型屬性。|  
 |**值**|列出在目前所選叢集中找到的目前屬性的值。|  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
 caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 835e80fef55be66ab2ef6e641fac113f46cd5ad6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e63f1c7561adbccca36415e78a395db3c354d14a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173299"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>將變更套用到目的地
   在執行累加式變更資料載入之 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中，第三個工作，也就是最後一個工作是將變更套用到您的目的地。 您將需要一個元件來套用插入、一個元件來套用更新，以及一個元件來套用刪除。  

@@ -1,5 +1,5 @@
 ---
-title: 層級元素 (ASSL) |Microsoft 文件
+title: Level 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Level element
 ms.assetid: 66ee2c16-d6b8-4dd3-879f-1f2b6923bc43
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 028375d525ec0197aec24a9005fd3f5f0e8fe769
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba9ca10d1d3ad2319e451d6008c6e8ad77078fc7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263874"
 ---
 # <a name="level-element-assl"></a>Level 元素 (ASSL)
   定義中的層級[階層](hierarchy-element-assl.md)項目。  
@@ -65,12 +65,12 @@ ms.locfileid: "36145243"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Levels](../collections/levels-element-assl.md)|  
-|子元素|[註解](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)， [HideMemberIf](../properties/hidememberif-element-assl.md)，[識別碼](../properties/id-element-assl.md)，[名稱](../properties/name-element-assl.md)， [SourceAttributeID](../properties/attributeid-element-assl.md)，[翻譯](../collections/translations-element-assl.md)|  
+|子元素|[註釋](../collections/annotations-element-assl.md)，[描述](../properties/description-element-assl.md)， [HideMemberIf](../properties/hidememberif-element-assl.md)，[識別碼](../properties/id-element-assl.md)，[名稱](../properties/name-element-assl.md)， [SourceAttributeID](../properties/attributeid-element-assl.md)，[翻譯](../collections/translations-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
  此資料類型在任何部署模式 (1-多維度和資料採礦、2-SharePoint 及 3-表格式) 下都沒有限制。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Level>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Level>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

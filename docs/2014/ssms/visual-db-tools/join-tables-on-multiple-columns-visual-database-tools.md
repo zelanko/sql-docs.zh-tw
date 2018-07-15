@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple column joins
 - joins [SQL Server], multiple columns
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 666774f8cfa46e1328f6d1e335a498c1d5e3e6cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e0b8807ad4a8b2cbcadc0ecaa30db2db105ed482
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218688"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>以多個資料行聯結資料表 (Visual Database Tools)
   可以聯結具有多重資料行的資料表。 也就是說，可以建立查詢，使其找出兩個資料表中滿足多重條件的資料列。 如果資料庫包含使某資料表中多重外部索引鍵資料行符合另一個資料表中多重資料行主索引鍵的關聯性，則可以使用此關聯性來建立多重資料行聯結。 如需詳細資料，請參閱[自動聯結資料表 &#40;Visual Database Tools&#41;](visual-database-tools.md)。  

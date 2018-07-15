@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: cacce3ae-e940-4566-8298-6607c4268e74
 caps.latest.revision: 8
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2fcb71ddb5bef8f4b93c900f4e2f536dea820381
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 5086a557319d4db305f4a3d5d6c2df6437e3f8c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285704"
 ---
 # <a name="contained-databases-with-always-on-availability-groups-sql-server"></a>自主資料庫與 AlwaysOn 可用性群組 (SQL Server)
   本主題包含在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中使用自主資料庫搭配 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]的相關資訊。  

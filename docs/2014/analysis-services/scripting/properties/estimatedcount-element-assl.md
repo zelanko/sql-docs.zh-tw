@@ -1,5 +1,5 @@
 ---
-title: EstimatedCount 元素 (ASSL) |Microsoft 文件
+title: EstimatedCount 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedCount element
 ms.assetid: ce84b54a-8ab2-42f4-a7dd-e10a3d41cb4d
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c865a89d1c67bcb4155aa771ee6709a0068a7bbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a69d67554d0090e0e586421986bc97ba556c84a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300848"
 ---
 # <a name="estimatedcount-element-assl"></a>EstimatedCount 元素 (ASSL)
   包含屬性的預估成員數目 (由使用者定義)。  
@@ -62,9 +62,9 @@ ms.locfileid: "36022709"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 這個值由使用者所指派，並且由[AggregationDesign 元素&#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)。  
+ 這個值由使用者所指派，而且會由[AggregationDesign 元素&#40;ASSL&#41;](../objects/aggregationdesign-element-assl.md)。  
   
- 對應至父系的項目`EstimatedCount`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>和<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 對應至父系的元素`EstimatedCount`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.AggregationDesignAttribute>和<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

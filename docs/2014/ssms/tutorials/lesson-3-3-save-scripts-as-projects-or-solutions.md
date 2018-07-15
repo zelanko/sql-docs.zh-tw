@@ -5,21 +5,19 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
-caps.latest.revision: 32
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 84e56a0fdcf6847b582cd85c7e75947cec8557c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9dc290b0cc833b46b11d0db0df42301be098a1ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286544"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>將指令碼儲存成專案或方案
   熟悉 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 的開發人員會欣然接受 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [方案總管]。 支援您商務的指令碼可以分組成不同的指令碼專案，而且這些指令碼專案可以當作一個方案來一起管理。 當您將指令碼放在指令碼專案和方案中時，您可以將它們當作一個群組來一起開啟，也可以將它們一起儲存在 Visual SourceSafe 之類的原始檔控制產品中。 指令碼專案包括適當執行指令碼所需要的連接資訊，且可以包括支援文字檔之類的非指令碼檔案。  

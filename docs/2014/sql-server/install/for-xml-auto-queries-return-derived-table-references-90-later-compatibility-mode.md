@@ -1,5 +1,5 @@
 ---
-title: FOR XML AUTO 查詢會傳回衍生的資料表參考在 90 或之後的相容性模式 |Microsoft 文件
+title: FOR XML AUTO 查詢會傳回衍生的資料表參考在 90 或之後的相容性模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML AUTO [SQL Server]
 ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a056ae122c30b6014d325e4e87a43921426905c4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 578222ffcdfe7d9b73205e64528441a8300f1959
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321738"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>FOR XML AUTO 查詢在 90 或之後的相容性模式中，會傳回衍生的資料表參考
   當資料庫相容性層級設定為 90 或之後時，在 AUTO 模式中執行的 FOR XML 查詢會傳回衍生資料表別名的參考。 當相容性層級設定為 80 時，FOR XML AUTO 查詢會傳回定義衍生資料表之基底資料表的參考。  
@@ -65,6 +65,6 @@ FOR XML AUTO;
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 升級問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor&#91;新&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor&#91;新增&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 管理 （開啟、 解除鎖定、 重新命名和刪除） 資料品質專案 |Microsoft 文件
+title: 管理 （開啟、 解除鎖定、 重新命名和刪除） 資料品質專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dqproject.opendqproject.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data quality project,open
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
 caps.latest.revision: 8
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2adb53e1f22d089c8d15e3e900a4bd132b31b33e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8cc68f854dfd09c51763d16cf2f32412f955e8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216128"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>管理 (開啟、解除鎖定、重新命名和刪除) 資料品質專案
   此主題描述如何使用 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 管理資料品質專案，例如開啟、解除鎖定、重新命名和刪除資料品質專案。  

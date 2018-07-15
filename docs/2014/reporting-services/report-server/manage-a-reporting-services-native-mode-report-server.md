@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 63291b62b946e733dbcc48359b06e1f3e33abc15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c63f642cd5028bd227c6f6bf59e53de6339a5faa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022575"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305008"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>管理 Reporting Services 原生模式報表伺服器
   本節包含使用 Reporting Services 組態管理員來設定原生模式報表伺服器執行個體的程序。  
@@ -38,7 +38,7 @@ ms.locfileid: "36022575"
  [設定服務帳戶&#40;SSRS 組態管理員&#41;](../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)  
  說明如何指定報表伺服器服務的帳戶和密碼資訊。  
   
- [Register a Service Principal Name &#40;SPN&#41;的報表伺服器](register-a-service-principal-name-spn-for-a-report-server.md)  
+ [註冊的服務主體名稱&#40;SPN&#41;報表伺服器](register-a-service-principal-name-spn-for-a-report-server.md)  
  說明如何手動為報表伺服器註冊 SPN，該伺服器會在使用 Kerberos 驗證之網路的網域使用者帳戶之下執行。  
   
  [設定 URL &#40;SSRS 組態管理員&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md)  

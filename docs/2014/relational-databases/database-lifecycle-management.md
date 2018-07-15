@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
@@ -31,15 +31,15 @@ helpviewer_keywords:
 - Database connectivity
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 27e9da24bae4d85fa067289de06e47c40523c7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4ea9205cafecced4ce0f72282c88e63ab5838a46
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031445"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314048"
 ---
 # <a name="database-lifecycle-management"></a>資料庫生命週期管理
   資料庫生命週期管理 (DLM) 是一種管理資料庫和資料資產的原則式方法。 DLM 不是產品而是一套針對資料庫應用程式管理資料庫結構描述、資料和中繼資料的完整方法。 周全且主動的 DLM 方法可讓組織根據適當的效能、保護、可用性和成本層級管理資料資源。  

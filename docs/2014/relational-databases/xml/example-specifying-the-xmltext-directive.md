@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7d53197ef75615141a2f25f326e3dcdd0f0d0ba2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a00e44cc43f59b4b158f0b780c3bd14b944d3a52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145101"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270354"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>範例：指定 XMLTEXT 指示詞
   此範例說明如何在溢位資料行中的資料定址`XMLTEXT`指示詞`SELECT`使用 EXPLICIT 模式的陳述式。  

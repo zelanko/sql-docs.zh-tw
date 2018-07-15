@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupDimension 資料類型 (ASSL) |Microsoft 文件
+title: MeasureGroupDimension 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupDimension data type
 ms.assetid: 9d1c1c19-31ce-4c42-b2e6-4c1b08875a83
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 369e20e1eaf3c5716e81a580b587c69efa64455f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3dcbba7071e1f2efc8ede59259a48a334652de81
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249118"
 ---
 # <a name="measuregroupdimension-data-type-assl"></a>MeasureGroupDimension 資料類型 (ASSL)
   定義代表某個維度與量值群組之間關聯性的抽象基本資料類型。  
@@ -58,8 +58,8 @@ ms.locfileid: "36136727"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [CubeDimensionID](../properties/id-element-assl.md)，[來源](../properties/source-element-binding-assl.md)|  
-|衍生的元素|[維度](../objects/dimension-element-assl.md)([維度](../collections/dimensions-element-assl.md)集合[MeasureGroup](../objects/group-element-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [CubeDimensionID](../properties/id-element-assl.md)，[來源](../properties/source-element-binding-assl.md)|  
+|衍生的元素|[維度](../objects/dimension-element-assl.md)([維度](../collections/dimensions-element-assl.md)的集合[MeasureGroup](../objects/group-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
  每個 `MeasureGroupDimension` 都是 Cube 上其中一個維度的參考。 這些元素會定義哪些 Cube 維度會套用至量值群組。  
@@ -68,11 +68,11 @@ ms.locfileid: "36136727"
   
  如果沒有提供任何屬性，系統就只會列出維度的索引鍵屬性 (定義資料粒度的最低層級)。 量值群組的每個資料分割都必須具有相同的資料粒度。 列出的屬性集合在屬性之間的關聯性方面不應該重複。 例如，如果 Month 隱含 Year，此資料粒度就會定義為 Month，而非 Month 和 Year。  
   
- 只有當 `MeasureGroupDimension` 具有特別要指出的內容時，它才必須包含階層  (沒有任何方法可選取哪些階層要套用至特定量值群組)。 同樣地，它必須包含[MeasureGroupAttribute](measuregroupattribute-data-type-assl.md)只有當要指出特定項目。  
+ 只有當 `MeasureGroupDimension` 具有特別要指出的內容時，它才必須包含階層  (沒有任何方法可選取哪些階層要套用至特定量值群組)。 同樣地，它必須包含[MeasureGroupAttribute](measuregroupattribute-data-type-assl.md)才具有特別要指出。  
   
- 每個階層都必須是包含之階層的子集[CubeDimension](cubedimension-data-type-assl.md)。 您無法選取這些層級，不過某些層級可能會自動停用，端視量值群組的資料粒度而定。  
+ 每個階層都必須包含之階層的子集[CubeDimension](cubedimension-data-type-assl.md)。 您無法選取這些層級，不過某些層級可能會自動停用，端視量值群組的資料粒度而定。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MeasureGroupDimension>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MeasureGroupDimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

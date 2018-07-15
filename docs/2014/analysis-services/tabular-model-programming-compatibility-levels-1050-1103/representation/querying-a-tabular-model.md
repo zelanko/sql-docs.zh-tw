@@ -1,5 +1,5 @@
 ---
-title: 查詢表格式模型 |Microsoft 文件
+title: 查詢表格式模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b01d45d9-4598-4ded-9a9e-e3419cc3df8e
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 396685b9b6a4ffbfa46db64a16ee3e401b0b9042
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5936ef813b8533d72c8ebdd3d801f1ccfb6d3a7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188815"
 ---
 # <a name="querying-a-tabular-model"></a>查詢表格式模型
   身為開發人員，查詢表格式模型表示會從表格式資料庫擷取資料；若要完成這個目標，您有兩個選項：在 DAX 中使用資料表查詢，或是使用 MDX 並擷取資料，就像是 Cube 中的資料一樣。 但是，根據您的表格式模型的基礎模式而定，您可能會受限於只能使用 DAX 資料表查詢；DirectQuery 模式需要使用 DAX 資料表查詢。  
@@ -108,7 +108,7 @@ DEFINE
 |Product Category Id|Product Category Alternate Id|Product Category Name|Internet Sales|Reseller Sales|  
 |-------------------------|-----------------------------------|---------------------------|--------------------|--------------------|  
 |4|4|Accessories|$        700,759.96|$        571,297.93|  
-|@shouldalert|@shouldalert|Bikes|$  28,318,144.65|$  66,302,381.56|  
+|1|1|Bikes|$  28,318,144.65|$  66,302,381.56|  
 |3|3|Clothing|$        339,772.61|$    1,777,840.84|  
 |2|2|Components||$  11,799,076.66|  
   

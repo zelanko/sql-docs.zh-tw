@@ -1,5 +1,5 @@
 ---
-title: DataSource 資料類型 (ASSL) |Microsoft 文件
+title: DataSource 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - DataSource data type
 ms.assetid: 05e8de8d-452d-4128-98a6-4437df227fec
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b30438e709f6762ae194174ae9ab2be06bfd32d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b498ddc2dcfb4ef2a93d1da98401b4e0c57bdfa7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144816"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273364"
 ---
 # <a name="datasource-data-type-assl"></a>DataSource 資料類型 (ASSL)
   定義表示中的資料來源的抽象基本資料類型[資料庫](../objects/database-element-assl.md)項目。  
@@ -67,7 +67,7 @@ ms.locfileid: "36144816"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[Annotations](../collections/annotations-element-assl.md), [ConnectionString](../properties/connectionstring-element-assl.md), [ConnectionStringSecurity](../properties/connectionstringsecurity-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DataSourcePermission](../collections/datasourcepermissions-element-assl.md), [Description](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [ImpersonationInfo](../properties/impersonationinfo-element-assl.md), [Isolation](../properties/isolation-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [ManagedProvider](../properties/managedprovider-element-assl.md), [MaxActiveConnections](../properties/maxactiveconnections-element-assl.md), [Name](../properties/name-element-assl.md), [Timeout](../properties/timeout-element-assl.md)|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [ConnectionString](../properties/connectionstring-element-assl.md)， [ConnectionStringSecurity](../properties/connectionstringsecurity-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [DataSourcePermission](../collections/datasourcepermissions-element-assl.md)，[描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [ImpersonationInfo](../properties/impersonationinfo-element-assl.md)，[隔離](../properties/isolation-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [ManagedProvider](../properties/managedprovider-element-assl.md)， [MaxActiveConnections](../properties/maxactiveconnections-element-assl.md)，[名稱](../properties/name-element-assl.md)，[逾時](../properties/timeout-element-assl.md)|  
 |衍生的元素|無|  
   
 ## <a name="remarks"></a>備註  
@@ -75,7 +75,7 @@ ms.locfileid: "36144816"
   
  如需資料來源的詳細資訊，請參閱 [多維度模型中的資料來源](../../multidimensional-models/data-sources-in-multidimensional-models.md)。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DataSource>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DataSource>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

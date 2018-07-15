@@ -1,5 +1,5 @@
 ---
-title: 封裝組態 |Microsoft 文件
+title: 封裝組態 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package configuration syntax [Integration Services]
 - SQL Server Integration Services packages, configurations
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 caps.latest.revision: 47
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b3b80e197cedae2b8a9902b8e3de4f9066fab374
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b8341d97c711501b4a9ade2f15d73443312e83a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314148"
 ---
 # <a name="package-configurations"></a>封裝組態
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供封裝組態可讓您在執行階段更新屬性的值。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供封裝組態可供您在執行階段更新屬性的值。  
   
 > [!NOTE]  
 >  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
@@ -48,7 +48,7 @@ ms.locfileid: "36031276"
   
 -   組態使封裝更有彈性。 例如，組態可以更新屬性運算式中使用的變數值。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援幾個不同的方法，來儲存封裝組態，例如 XML 檔案、 資料表中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫和環境和封裝變數。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 支援數個不同的方法儲存封裝組態，例如 XML 檔案、 資料表中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫以及環境和封裝變數。  
   
  每個組態都是屬性/值配對。 XML 組態檔和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 組態類型可以包含多重組態。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36031276"
   
 -   您不能使用 **/ConfigFile** 選項來載入可取代您在設計階段指定之組態的組態。  
   
- 如需有關這些選項，以及這些選項的行為之間的差異[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]和舊版中，請參閱[SQL Server 2014 Integration Services 功能的行為變更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
+ 如需有關這些選項，以及這些選項的行為之間的差異[!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]和舊版中，請參閱[SQL Server 2014 中 Integration Services 功能的行為變更](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md)。  
   
 ## <a name="package-configuration-types"></a>封裝組態類型  
  下表描述封裝組態類型。  
@@ -153,7 +153,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  間接組態會使用環境變數。 與直接指定組態設定的方法不同，間接組態會指向包含組態值的環境變數。 如果組態的位置可以針對封裝的每個部署變更，則使用間接組態是較好的選擇。  
   
 ## <a name="related-tasks"></a>相關工作  
- [建立封裝組態](../../2014/integration-services/create-package-configurations.md)  
+ [建立套件設定](../../2014/integration-services/create-package-configurations.md)  
   
 ## <a name="related-content"></a>相關內容  
   

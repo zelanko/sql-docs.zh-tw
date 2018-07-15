@@ -1,5 +1,5 @@
 ---
-title: 指定屬性排序方式 （維度） （商業智慧精靈） |Microsoft 文件
+title: 指定屬性排序方式 （維度） （商業智慧精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.selectdimension.f1
 ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b9c67acc303534e2b71b8f408cce1d855af785f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 05caa09e6100aad7943ade8d64231d8293f1f9ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167259"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>指定屬性排序方式 (維度) (商業智慧精靈)
   使用 **[指定屬性排列方式]** 頁面即可選取維度，讓商業智慧精靈定義此維度的排序屬性和排序準則，並利用這些屬性和準則來排序該維度所包含之每一個屬性中的成員。  

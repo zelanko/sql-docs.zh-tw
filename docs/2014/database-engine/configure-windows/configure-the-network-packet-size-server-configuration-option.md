@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - default packet size
 - size [SQL Server], packets
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - network packet size option
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f5b18683a726ea4c1f7f6a31bc4594585123c7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8a41ad9cf55fbe1ef2799cef4b0a773ec3db4fb5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314378"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>設定 network packet size 伺服器組態選項
-  本主題描述如何設定`network packet size`伺服器組態選項中的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `network packet size`選項會設定整個網路使用的封包大小 （以位元組為單位）。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
+  本主題描述如何設定`network packet size`中的伺服器組態選項[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]利用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或[!INCLUDE[tsql](../../includes/tsql-md.md)]。 `network packet size`選項會設定用於整個網路的封包大小 （以位元組為單位）。 封包是在用戶端與伺服器之間傳送要求與結果的固定大小資料區塊。 預設的封包大小為 4096 個位元組。  
   
 > [!NOTE]  
 >  除非確信有助於提升效能，否則請勿變更封包大小。 對於大部分應用程式而言，預設封包大小是最適當的大小。  

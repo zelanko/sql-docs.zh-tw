@@ -1,5 +1,5 @@
 ---
-title: 名稱伺服器 (DTA) 項目 |Microsoft 文件
+title: 項目名稱伺服器 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a63cce30a28daa0e990f11f86a7156df0bd7a7ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 695e43a2657db97e624c00e46e397fd17a70ae57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021746"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293908"
 ---
 # <a name="name-element-for-server-dta"></a>伺服器的 Name 元素 (DTA)
   包含您要微調的資料庫所在的伺服器名稱。  
@@ -49,7 +49,7 @@ ms.locfileid: "36021746"
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|[Server 元素&#40;DTA&#41;](server-element-dta.md)|  
+|**父元素**|[伺服器項目&#40;DTA&#41;](server-element-dta.md)|  
 |**子元素**|無。|  
   
 ## <a name="example"></a>範例  

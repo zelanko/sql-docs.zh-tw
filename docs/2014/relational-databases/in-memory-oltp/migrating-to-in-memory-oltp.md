@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: f72caff6a68fbd68ef79a3c7044f7b012669e007
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cf535c9c4c7acf24d5fb3c51c500af4565bd8af5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145141"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262724"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>移轉至 In-Memory OLTP
   本節討論如何將資料庫物件移轉為使用記憶體中 OLTP。  
@@ -32,7 +32,7 @@ ms.locfileid: "36145141"
   
 -   [記憶體中的 OLTP 不支援 Transact-SQL 建構](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
--   [記憶體最佳化資料表中實作 LOB 資料行](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
+-   [在經記憶體最佳化的資料表中實作 LOB 資料行](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   
 -   [在記憶體最佳化資料表中實作 SQL_VARIANT](implementing-sql-variant-in-a-memory-optimized-table.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36145141"
   
 -   [跨資料庫查詢](cross-database-queries.md)  
   
--   [移轉 Check 和 Foreign Key 條件約束](../../database-engine/migrating-check-and-foreign-key-constraints.md)  
+-   [合併 Check 和外部索引鍵條件約束](../../database-engine/migrating-check-and-foreign-key-constraints.md)  
   
 -   [在記憶體最佳化資料表中實作 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)  
   

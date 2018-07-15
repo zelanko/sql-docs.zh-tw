@@ -1,5 +1,5 @@
 ---
-title: 查詢選項結果 （文字頁面） |Microsoft 文件
+title: 查詢選項結果 （文字頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 51e1a98f00bc4d33e0609f1b03ceca928bded049
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205748"
 ---
 # <a name="query-options-results-text-page"></a>查詢選項結果 (文字頁面)
   使用此頁面，即可指定以文字格式顯示查詢結果集的選項。 選取 **[將結果存檔]** 時，此頁面上的設定也適用。  
@@ -44,13 +44,13 @@ ms.locfileid: "36136920"
  **執行查詢之後捨棄結果**  
  在螢幕上顯示查詢結果之後即將其捨棄，以釋放記憶體。  
   
- **在其他索引標籤中顯示結果**  
+ **在另一個索引標籤中顯示結果**  
  選取此核取方塊，即可在新的文件視窗中顯示結果集，而非在查詢文件視窗的下方顯示。  
   
- **查詢執行後，切換至結果索引標籤**  
+ **查詢執行後切換到結果索引標籤**  
  按一下以自動將螢幕焦點設定為結果集。  
   
- **每個資料行中顯示的字元數目上限**  
+ **每個資料行中顯示的字元數上限**  
  這個值預設為 256。 增加這個值即可顯示較大的結果集而不會截斷。  
   
  **重設預設值**  

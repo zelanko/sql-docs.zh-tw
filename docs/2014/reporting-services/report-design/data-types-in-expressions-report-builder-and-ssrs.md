@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bffff032f51c1a349db6ab384c8f6b49e66ed206
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b9dfb573605f8e859f8db4b991e2eb19a73d4606
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319948"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>運算式中的資料類型 (報表產生器及 SSRS)
   資料類型代表不同種類的資料，以便讓系統能夠有效率地儲存和處理資料。 一般資料類型包括文字 (也稱為字串)、含與不含小數位數的數字、日期和時間，以及影像。 報表中的值必須是報表定義語言 (RDL) 資料類型。 當您在報表中顯示值時，可以根據您的喜好設定來格式化值。 例如，代表貨幣的欄位會當做浮點數儲存在報表定義中，但是可能會根據您選擇的格式屬性，以各種格式顯示此欄位。  
@@ -60,7 +60,7 @@ ms.locfileid: "36029989"
 -   將資料來源中擷取的值，從某種資料類型轉換成不同的資料類型。  
   
 ## <a name="determining-the-data-type-of-report-data"></a>判斷報表資料的資料類型  
- 若要判斷報表項目的資料類型，您可以撰寫傳回其資料類型的運算式。 例如，若要顯示欄位 `MyField`的資料類型，請將下列運算式加入至資料表的資料格： `=Fields!MyField.Value.GetType().ToString()`。 結果會顯示用來表示 CLR 資料型別`MyField`，例如`System.String`或`System.DateTime`。  
+ 若要判斷報表項目的資料類型，您可以撰寫傳回其資料類型的運算式。 例如，若要顯示欄位 `MyField`的資料類型，請將下列運算式加入至資料表的資料格： `=Fields!MyField.Value.GetType().ToString()`。 結果會顯示用來表示 CLR 資料類型`MyField`，例如`System.String`或`System.DateTime`。  
   
 ## <a name="converting-dataset-fields-to-a-different-data-type"></a>將資料集欄位轉換成不同的資料類型  
  您也可以先轉換資料集欄位，然後再將它們用於報表中。 下列清單將描述您可以轉換現有資料集欄位的方式：  
@@ -108,7 +108,7 @@ ms.locfileid: "36029989"
   
  `2008-07-01 06:05:07.9999999 +08:00`  
   
- 這個範例會顯示日期 (2008 年 7 月 1 日)、接著 7 位數精確度的時間 (上午 6:05:07.9999999)，然後接著以小時和分鐘為單位的 UTC 時區時差 (加上 8 小時，0 分)。 下列範例中，這個值已放置於`String`欄位稱為`MyDateTime.Value`。  
+ 這個範例會顯示日期 (2008 年 7 月 1 日)、接著 7 位數精確度的時間 (上午 6:05:07.9999999)，然後接著以小時和分鐘為單位的 UTC 時區時差 (加上 8 小時，0 分)。 下列範例中，這個值已放置於`String`稱為欄位`MyDateTime.Value`。  
   
  您可以使用下列其中一種策略，將這項資料轉換成一個或多個 CLR 值：  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36029989"
   
          如果 `MyDateTime.Value` 字串具有 UTC 時差， `DateTime.Parse` 函數會先針對 UTC 時差調整 (上午 7 點 - [`+08:00`] 調整成前一晚 11 點的 UTC 時間)。 然後， `DateTime.Parse` 函數會套用本機報表伺服器 UTC 時差，並在必要時，再次針對日光節約時間調整時間。 例如，在華盛頓州的雷德蒙市，針對日光節約時間調整的本地時間時差是 `[-07:00]`，或下午 11 點之前的 7 個小時。 結果就是下列 `DateTime` 值：`2007-07-06 04:07:07 PM` (2007 年 7 月 6 日下午 4:07)。  
   
- 如需有關將字串轉換為`DateTime`資料類型，請參閱[剖析日期和時間字串](http://go.microsoft.com/fwlink/?LinkId=89703)，[格式的日期和時間的特定文化特性](http://go.microsoft.com/fwlink/?LinkId=89704)，和[選擇DateTime、 DateTimeOffset 和 TimeZoneInfo 之間](http://go.microsoft.com/fwlink/?linkid=110652)MSDN 上。  
+ 如需有關將字串轉換成`DateTime`資料類型，請參閱[剖析的日期和時間字串](http://go.microsoft.com/fwlink/?LinkId=89703)，[格式的日期和時間的特定文化特性](http://go.microsoft.com/fwlink/?LinkId=89704)，和[選擇在 DateTime、 DateTimeOffset 和 TimeZoneInfo 之間](http://go.microsoft.com/fwlink/?linkid=110652)MSDN 上。  
   
 -   將新的導出欄位加入至報表資料集，以便使用運算式來擷取部分字串。 如需詳細資訊，請參閱[加入、編輯、重新整理報表資料窗格中的欄位 &#40;報表產生器及 SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)。  
   

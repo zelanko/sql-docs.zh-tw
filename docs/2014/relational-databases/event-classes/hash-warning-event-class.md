@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Hash Warning event class
 ms.assetid: cb93c620-4be9-4362-8bf0-af3f2048bdaf
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 564b64754a1267ad16d025c6ed56b17d859a24b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9b5ab99db22c29f6069f7b218b2a2c8d498da537
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209068"
 ---
 # <a name="hash-warning-event-class"></a>Hash Warning 事件類別
   Hash Warning 事件類別可用來監視在雜湊作業期間發生雜湊遞迴或雜湊停止 (Hash Bailout) 的時間。  

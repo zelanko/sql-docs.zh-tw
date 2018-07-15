@@ -1,5 +1,5 @@
 ---
-title: 群組屬性成員 （分隔） |Microsoft 文件
+title: 群組屬性成員 （分隔） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NameColumn property
 - discretization [Analysis Services]
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - names [Analysis Services], member groups
 ms.assetid: 5cf2f407-accc-4baf-b54f-7703af338325
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc2c51f16733597af532fe256c73c69649f0e1c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e07f85d5a6162bed15393d8c255a55cf01b903c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251450"
 ---
 # <a name="group-attribute-members-discretization"></a>群組屬性成員 (分隔)
   成員群組是系統產生之連續維度成員的集合。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，可以透過稱為分隔的處理序，將屬性的成員分組成許多成員群組。 階層中的層級包含成員群組或成員，但不會同時包含兩者。 商務使用者瀏覽含有成員群組的層級時，他們會看到成員群組的名稱和資料格值。 由 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 產生以支援成員群組的成員稱為群組成員，看起來就像一般成員。  
@@ -47,9 +47,9 @@ ms.locfileid: "36136971"
   
  屬性 (Attribute) 上的 `DiscretizationNumber` 屬性 (Property)，指定要顯示的群組數目。 如果屬性是設定為預設值 0，則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會取樣或讀取資料 (視 `DiscretizationMethod` 屬性的設定而定)，以決定群組的數目。  
   
- 成員群組中成員的排序次序由使用`OrderBy`屬性的屬性。 會根據這個排序順序，將成員群組中的成員連續排序。  
+ 成員群組中成員的排序次序由使用控制`OrderBy`屬性的屬性。 會根據這個排序順序，將成員群組中的成員連續排序。  
   
- 成員群組一般是用來從具有少數成員的層級向下鑽研至具有許多成員的層級。 若要讓使用者在層級間進行向下鑽研，請將含有許多成員之層級屬性 (Attribute) 上的 `DiscretizationMethod` 屬性 (Property)，從 `None` 變更為上表所描述的其中一個分隔方法。 例如，Client 維度包含擁有 500,000 個成員的 Client Name 屬性階層。 您可以重新命名此用戶端群組的屬性和設定`DiscretizationMethod`屬性`Automatic`屬性階層成員層級上顯示的成員群組。  
+ 成員群組一般是用來從具有少數成員的層級向下鑽研至具有許多成員的層級。 若要讓使用者在層級間進行向下鑽研，請將含有許多成員之層級屬性 (Attribute) 上的 `DiscretizationMethod` 屬性 (Property)，從 `None` 變更為上表所描述的其中一個分隔方法。 例如，Client 維度包含擁有 500,000 個成員的 Client Name 屬性階層。 您可以重新命名此用戶端群組的屬性，並設定`DiscretizationMethod`屬性設`Automatic`以顯示屬性階層成員層級上成員群組。  
   
  若要向下鑽研至每個群組中的個別客戶，則您可以建立繫結到相同資料表資料行的另一個 Client Name 屬性階層。 然後，依據兩個屬性建立新的使用者階層。 最上層是以 Client Groups 屬性為基礎，而下層則是以 Client Name 屬性為基礎。 兩個屬性 (Attribute) 上的 `IsAggregatable` 屬性 (Property) 會是 `True`。 然後，使用者可以展開階層上的 (全部) 層級以檢視群組成員，並展開群組成員以檢視階層的分葉成員。 若要隱藏群組或客戶層級，您可以將對應屬性 (Attribute) 上的 `AttributeHierarchyVisible` 屬性 (Property) 設定為 `False`。  
   

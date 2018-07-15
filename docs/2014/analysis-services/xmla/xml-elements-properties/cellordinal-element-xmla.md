@@ -1,5 +1,5 @@
 ---
-title: CellOrdinal 元素 (XMLA) |Microsoft 文件
+title: CellOrdinal 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CellOrdinal element
 ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2fbcf210fa9c1d816ef78c20fe762e7a7b15d636
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 0e8e0413afb58ae448a053e9eab20d77a1b36096
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245368"
 ---
 # <a name="cellordinal-element-xmla"></a>CellOrdinal 元素 (XMLA)
-  包含更新的資料格的 cube 中的序數位置[UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)命令。  
+  包含更新的儲存格的 cube 中的序數位置[UpdateCells](../xml-elements-commands/updatecells-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36136705"
  如需更新資料格的詳細資訊，請參閱[更新資料格 &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [值的項目&#40;XMLA&#41;](value-element-xmla.md)   
+ [值項目&#40;XMLA&#41;](value-element-xmla.md)   
  [UpdateCells 元素&#40;XMLA&#41;](../xml-elements-commands/updatecells-element-xmla.md)   
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  
   

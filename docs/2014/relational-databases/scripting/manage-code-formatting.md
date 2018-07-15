@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indenting code [SQL Server]
 - displaying URLs
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f57e209ec0bc4417af90b4d257d6be566cccb731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f64ca72111c89521277818573434e32ef82e028b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144916"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234860"
 ---
 # <a name="manage-code-formatting"></a>管理程式碼格式設定
   當使用編輯器時，您可以利用縮排、隱藏文字、URL...等，來建立程式碼的格式。 您也可以利用智慧型縮排 (Smart Indenting) 功能，在輸入程式碼的同時，自動建立程式碼的格式。  

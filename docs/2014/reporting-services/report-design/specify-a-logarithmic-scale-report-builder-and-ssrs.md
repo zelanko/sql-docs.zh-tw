@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3092c1c-b128-433d-9a95-983508b2a8d4
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5e40a78e8c0220c671f4bfa7157fb0f233ff8714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c5833b8622d734acf7c2051c7fccc50a424d1560
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145779"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37170280"
 ---
 # <a name="specify-a-logarithmic-scale-report-builder-and-ssrs"></a>指定對數刻度 (報表產生器及 SSRS)
   如果您的資料在對數上成比例，您可能會想要考慮在圖表上使用對數刻度。 這樣可以讓您的資料更容易管理，而有助於改善圖表的外觀。 大部分的對數刻度都使用 10 當做基底。  
@@ -43,6 +43,6 @@ ms.locfileid: "36145779"
  [格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [將軸標籤格式化成日期或貨幣 &#40;報表產生器及 SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

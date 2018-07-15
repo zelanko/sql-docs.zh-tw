@@ -1,5 +1,5 @@
 ---
-title: Trace 元素 (ASSL) |Microsoft 文件
+title: Trace 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trace element
 ms.assetid: dda9136a-a9c1-44a1-b8d3-b0ec4dc65c87
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb089bc193316a56ab0a7355411178ece44c8788
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2b1aa2ff2c3f00d5c6cb96c5cef4f2ff73e80636
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289505"
 ---
 # <a name="trace-element-assl"></a>Trace 元素 (ASSL)
   定義可查詢的追蹤。  
@@ -90,13 +90,13 @@ ms.locfileid: "36022250"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[追蹤](../collections/traces-element-assl.md)|  
-|子元素|[Annotations](../collections/annotations-element-assl.md), [Audit](../properties/audit-element-assl.md), [AutoRestart](../properties/autorestart-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [Description](../properties/description-element-assl.md), [Events](../collections/events-element-assl.md), [Filter](../properties/filter-element-trace-assl.md), [ID](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [LogFileAppend](../properties/logfileappend-element-assl.md), [LogFileName](../properties/name-element-assl.md), [LogFileRollover](../properties/logfilerollover-element-assl.md), [LogFileSize](../properties/logfilesize-element-assl.md), [Name](../properties/name-element-assl.md), [StopTime](../properties/stoptime-element-assl.md)|  
+|子元素|[註釋](../collections/annotations-element-assl.md)，[稽核](../properties/audit-element-assl.md)， [AutoRestart](../properties/autorestart-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)，[描述](../properties/description-element-assl.md)，[事件](../collections/events-element-assl.md)，[篩選](../properties/filter-element-trace-assl.md)，[識別碼](../properties/id-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [LogFileAppend](../properties/logfileappend-element-assl.md)， [LogFileName](../properties/name-element-assl.md)， [LogFileRollover](../properties/logfilerollover-element-assl.md)， [LogFileSize](../properties/logfilesize-element-assl.md)，[名稱](../properties/name-element-assl.md)， [StopTime](../properties/stoptime-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Trace>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Server 元素&#40;ASSL&#41;](server-element-assl.md)   
+ [伺服器項目&#40;ASSL&#41;](server-element-assl.md)   
  [物件&#40;ASSL&#41;](objects-assl.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.ssms.isprojectprop.versions.f1
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
 caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d4d73679481b31f3a4c23894d874b162804baa3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47a5330398b0a29731376a6387695b220bcb4b93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145439"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197518"
 ---
 # <a name="project-versions-dialog-box"></a>專案版本對話方塊
   使用 **[專案版本]** 對話方塊檢視專案版本，以及還原舊版。  

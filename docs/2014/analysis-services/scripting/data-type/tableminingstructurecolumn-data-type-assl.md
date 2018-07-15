@@ -1,5 +1,5 @@
 ---
-title: TableMiningStructureColumn 資料類型 (ASSL) |Microsoft 文件
+title: TableMiningStructureColumn 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - TableMiningStructureColumn data type
 ms.assetid: 350358b0-f2fc-43c3-957d-884c59fa879e
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9a57859ca60ae7fa83ec4bb4ea8f6a4e742a74f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e03fec81f796ccf87f19df9b2e43fe29b0e318e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022251"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319398"
 ---
 # <a name="tableminingstructurecolumn-data-type-assl"></a>TableMiningStructureColumn 資料類型 (ASSL)
-  定義衍生的資料類型，表示[MiningStructureColumn](miningstructurecolumn-data-type-assl.md)包含巢狀的資料表，而不是與相關聯的純量值的項目[ScalarMiningStructureColumn](scalarminingstructurecolumn-data-type-assl.md)項目其中包含純量值。  
+  定義衍生的資料類型，表示[MiningStructureColumn](miningstructurecolumn-data-type-assl.md)包含巢狀的資料表，而不是與相關聯的純量值的項目[ScalarMiningStructureColumn](scalarminingstructurecolumn-data-type-assl.md)項目包含純量值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,10 +61,10 @@ ms.locfileid: "36022251"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[資料行](../collections/columns-element-assl.md)， [ForeignKeyColumn](../objects/column-element-assl.md)， [SourceMeasureGroup](../objects/group-element-assl.md)，[翻譯](../collections/translations-element-assl.md)|  
-|衍生的元素|[資料行](../objects/column-element-assl.md)([資料行](../collections/columns-element-assl.md)集合[MiningStructure](../objects/miningstructure-element-assl.md))|  
+|衍生的元素|[資料行](../objects/column-element-assl.md)([資料行](../collections/columns-element-assl.md)的集合[MiningStructure](../objects/miningstructure-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.TableMiningStructureColumn>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.TableMiningStructureColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

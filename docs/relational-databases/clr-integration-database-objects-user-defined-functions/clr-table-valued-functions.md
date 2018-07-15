@@ -1,11 +1,11 @@
 ---
-title: CLR 資料表值函式 |Microsoft 文件
+title: CLR 資料表值函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -21,37 +21,37 @@ caps.latest.revision: 88
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8f6d19c3647cb38c7174f87c685fb3abb1d4f709
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c60817f8bb736eef6cdbbb6c15636b19876d4421
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696099"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37360220"
 ---
 # <a name="clr-table-valued-functions"></a>CLR 資料表值函式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   資料表值函式是會傳回資料表的使用者定義函數。  
   
- 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您以任何 Managed 語言定義資料表值函式，藉以擴充資料表值函式的功能。 從透過資料表值函式會傳回資料**IEnumerable**或**IEnumerator**物件。  
+ 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可讓您以任何 Managed 語言定義資料表值函式，藉以擴充資料表值函式的功能。 透過資料表值函式會傳回資料**IEnumerable**或是**IEnumerator**物件。  
   
 > [!NOTE]  
->  傳回資料表類型的資料行對於資料表值函式，不能包含時間戳記資料行或非 Unicode 字串資料類型資料行 (例如**char**， **varchar**，和**文字**). 不支援 NOT NULL 條件約束。  
+>  針對資料表值函式，傳回的資料表類型的資料行不能包含時間戳記資料行或非 Unicode 字串資料類型資料行 (例如**char**， **varchar**，和**文字**). 不支援 NOT NULL 條件約束。  
   
- 如需有關 CLR 資料表值函式的詳細資訊，請參閱 MSSQLTips'[介紹 SQL Server CLR 資料表值函式 ！](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
+ 如需有關 CLR 資料表值函式的詳細資訊，請參閱 MSSQLTips'[簡介 SQL Server CLR 資料表值函式 ！](https://www.mssqltips.com/sqlservertip/2582/introduction-to-sql-server-clr-table-valued-functions/)  
   
 ## <a name="differences-between-transact-sql-and-clr-table-valued-functions"></a>Transact-SQL 和 CLR 資料表值函式之間的差異  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料表值函式會將呼叫函數的結果具體化為中繼資料表。 由於 TVF 使用中繼資料表，因此可以透過結果支援條件約束和唯一的索引。 當傳回較大的結果時，這些功能會非常有用。  
   
- 相反地，CLR 資料表值函式則是屬於以資料流模型進行處理的替代方案。 整組結果不需要在單一資料表中具體化。 **IEnumerable**呼叫資料表值函式的查詢執行計畫直接呼叫 managed 函式所傳回的物件，且取用結果，以遞增的方式。 此資料流模型能確保第一個資料列可供使用之後，就立即使用結果，而不會等待整個資料表填入完成。 如果傳回大量的資料列，這也是一個較好的替代方式，因為它們不必整體在記憶體中進行實體化。 例如，Managed 資料表值函式可用來剖析文字檔案，並將每一行以資料列的方式傳回。  
+ 相反地，CLR 資料表值函式則是屬於以資料流模型進行處理的替代方案。 整組結果不需要在單一資料表中具體化。 **IEnumerable**呼叫資料表值函式的查詢執行計畫直接呼叫 managed 函式所傳回的物件，並以累加的方式使用結果。 此資料流模型能確保第一個資料列可供使用之後，就立即使用結果，而不會等待整個資料表填入完成。 如果傳回大量的資料列，這也是一個較好的替代方式，因為它們不必整體在記憶體中進行實體化。 例如，Managed 資料表值函式可用來剖析文字檔案，並將每一行以資料列的方式傳回。  
   
 ## <a name="implementing-table-valued-functions"></a>實作資料表數值函數  
- 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件中，將資料表值函式當做類別上的方法實作。 您的資料表值函式程式碼必須實作**IEnumerable**介面。 **IEnumerable**介面.NET Framework 中定義。 代表陣列和.NET Framework 中的集合已經實作的型別**IEnumerable**介面。 這樣您就可以輕易地撰寫出能將集合或陣列轉換為結果集的資料表值函式。  
+ 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 組件中，將資料表值函式當做類別上的方法實作。 資料表值函式程式碼必須實作**IEnumerable**介面。 **IEnumerable**介面定義在.NET Framework。 代表陣列和.NET Framework 中的集合已經實作的型別**IEnumerable**介面。 這樣您就可以輕易地撰寫出能將集合或陣列轉換為結果集的資料表值函式。  
   
 ## <a name="table-valued-parameters"></a>資料表值參數  
  資料表值參數是傳入到程序或函數中的使用者定義資料表類型，能提供有效的方式將資料的多個資料列傳遞到伺服器。 資料表值參數提供的功能與參數陣列相似，但是具備了更大的彈性並且和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密地整合。 它們也能夠協助您獲得更佳的效能。 資料表值參數也可以減少與伺服器之間的往返次數。 資料能以資料表值參數的形式傳送到伺服器，而不是傳送多個要求到伺服器，例如一併傳送純量參數的清單。 使用者定義資料表類型無法以資料表值參數的形式傳遞到 Managed 預存程序或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中執行的函數，也無法從該預存程序或函數傳回。 如需詳細資訊，請參閱[使用資料表值參數 &#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>輸出參數和資料表值函式  
- 資訊可以使用輸出參數，從資料表值函式傳回。 實作程式碼資料表值函式中的對應參數應使用依參照傳遞的參數做為引數。 請注意，Visual Basic 不支援輸出參數的方式，與 Visual C# 所使用的方式不同。 您必須依參考指定參數，並套用\<Out() > 屬性以表示 output 參數，如下所示：  
+ 資訊可以使用輸出參數，從資料表值函式傳回。 實作程式碼資料表值函式中的對應參數應使用依參照傳遞的參數做為引數。 請注意，Visual Basic 不支援輸出參數的方式，與 Visual C# 所使用的方式不同。 您必須指定參數的參考，並套用\<Out() > 屬性以表示 output 參數，如下所示：  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -60,7 +60,7 @@ Public Shared Sub FillRow ( <Out()> ByRef value As SqlInt32)
 ```  
   
 ### <a name="defining-a-table-valued-function-in-transact-sql"></a>在 Transact-SQL 中定義資料表值函式  
- 定義 CLR 資料表值函式的語法是類似的[!INCLUDE[tsql](../../includes/tsql-md.md)]資料表值函式，加上的**EXTERNAL NAME**子句。 例如：  
+ 定義 CLR 資料表值函式的語法是類似於[!INCLUDE[tsql](../../includes/tsql-md.md)]資料表值函式，加上**EXTERNAL NAME**子句。 例如：  
   
 ```  
 CREATE FUNCTION GetEmpFirstLastNames()  
@@ -82,7 +82,7 @@ select * from table t cross apply function(t.column);
   
 -   當資料表值函式是從外部資料產生時。 例如，讀取事件記錄檔並將其以資料表的方式公開的資料表值函式。  
   
- **請注意**資料表值函式只能執行透過資料存取[!INCLUDE[tsql](../../includes/tsql-md.md)]以查詢**InitMethod**方法，而不在**FillRow**方法。 **InitMethod**應該用來標記**SqlFunction.DataAccess.Read**屬性內容，如果[!INCLUDE[tsql](../../includes/tsql-md.md)]會執行的查詢。  
+ **附註**的資料表值函式只能執行資料存取，透過[!INCLUDE[tsql](../../includes/tsql-md.md)]中的查詢**InitMethod**方法，而不在**FillRow**方法。 **InitMethod**應該標示**SqlFunction.DataAccess.Read**屬性屬性，如果[!INCLUDE[tsql](../../includes/tsql-md.md)]會執行查詢。  
   
 ## <a name="a-sample-table-valued-function"></a>資料表值函式範例  
  下列資料表值函式會從系統事件記錄檔傳回資訊。 該函數使用包含要讀取之事件記錄檔名稱的單一字串引數。  
@@ -181,7 +181,7 @@ go
 ```  
   
 ## <a name="sample-returning-the-results-of-a-sql-server-query"></a>範例：傳回 SQL Server 查詢的結果  
- 下列範例示範查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表值函式。 這個範例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 AdventureWorks Light 資料庫。 請參閱[ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843)如需下載 AdventureWorks 的詳細資訊。  
+ 下列範例示範查詢 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表值函式。 這個範例使用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的 AdventureWorks Light 資料庫。 請參閱[ http://www.codeplex.com/sqlserversamples ](http://go.microsoft.com/fwlink/?LinkId=87843)如需有關下載 AdventureWorks。  
   
  將原始程式碼檔命名為 FindInvalidEmails.cs 或 FindInvalidEmails.vb。  
   

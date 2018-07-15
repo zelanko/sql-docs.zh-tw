@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG021331 error
 ms.assetid: 9acd75d9-fda1-44cd-ba17-20295ad53ea0
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3b0cbb943935514c6c9a6fc4589e3430146217cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 4bab3ee3277554b3e3846e95c17f44e1cc937a17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298078"
 ---
 # <a name="mssqleng021331"></a>MSSQL_ENG021331
     

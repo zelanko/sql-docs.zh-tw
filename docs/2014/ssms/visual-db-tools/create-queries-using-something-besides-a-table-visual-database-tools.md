@@ -1,5 +1,5 @@
 ---
-title: 建立使用除了資料表的項目 (Visual Database Tools) 的查詢 |Microsoft 文件
+title: 建立查詢使用除了資料表的項目 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 47e0895f71964c1c903bed462a1d0b4f2b118e47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9eea7b83bcad091b395b82aa39c47a2ab2f9685d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030693"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303188"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>使用資料表以外的項目建立查詢 (Visual Database Tools)
   當您編寫擷取查詢時，應該明白指出您要的資料行、您要的資料列和查詢處理器尋找原始資料的位置。 通常其原始資料是由某資料表組成或由數個資料表聯結在一起。 但原始資料可能源自資料表以外的來源。 其實，原始資料可以來自檢視、查詢、同義資料表或傳回資料表的使用者定義函數。  

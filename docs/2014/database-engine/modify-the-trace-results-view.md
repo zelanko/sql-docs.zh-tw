@@ -1,5 +1,5 @@
 ---
-title: 修改追蹤結果檢視 |Microsoft 文件
+title: 修改追蹤結果檢視 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5bb647bb704bee1b33eee00c9b13903d48140ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a2c1e9c9c2d0041e2e09156e4f33744ea1964812
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302758"
 ---
 # <a name="modify-the-trace-results-view"></a>修改追蹤結果檢視
   本主題描述如何透過執行下列工作，在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中修改擴充事件工作階段的追蹤結果檢視。  
@@ -36,7 +36,7 @@ ms.locfileid: "36031272"
   
 6.  [篩選結果](#Filter)  
   
-7.  [資料行中搜尋文字](#Search)  
+7.  [搜尋資料行中的文字](#Search)  
   
 8.  [變更顯示設定](#ChangeDisplay)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36031272"
   
      如果已對資料行進行分組，則資料行排序只會對群組中的資料進行排序。  
   
-##  <a name="GroupResults"></a> 將結果分組  
+##  <a name="GroupResults"></a> 群組結果  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>若要依單一資料行將結果分組  
   
@@ -214,7 +214,7 @@ ms.locfileid: "36031272"
   
 -   如果動作和欄位都不存在，則顯示 NULL。  
   
-##  <a name="Search"></a> 資料行中搜尋文字  
+##  <a name="Search"></a> 搜尋資料行中的文字  
   
 1.  開啟 .XEL 檔案以檢視追蹤結果  
   

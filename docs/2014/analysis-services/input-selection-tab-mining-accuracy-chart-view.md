@@ -1,5 +1,5 @@
 ---
-title: 輸入選取範圍索引標籤 （採礦精確度圖表檢視） |Microsoft 文件
+title: 輸入選取範圍索引標籤 （採礦精確度圖表檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb5abde47c5da9405f7768f1167496fdd603f04f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbee4807b3e68c79edd9e06fbbf85379dc49354b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198208"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>輸入選取範圍索引標籤 (採礦精確度圖表檢視)
   使用 [採礦精確度圖表] 設計師的 [輸入選擇] 索引標籤可以指定用於測試模型及建立精確度圖表的資料來源。  
@@ -34,10 +34,10 @@ ms.locfileid: "36145502"
   
  **注意** ：預設會選取此選項。 唯有在知道兩個採礦結構資料行都衍生自相同的基礎關聯式或多維度來源的情況下，以及這些資料行具有相同的狀態或分隔的情況下，才應清除此方塊。  
   
- **選取要在增益圖中顯示的可預測的採礦模型資料行**  
+ **選取可預測的採礦模型資料行，以顯示在增益圖**  
  方格包含用來控制將哪些模型包含在增益圖中，以及增益圖如何使用它們的資料行。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**顯示**|在要顯示在圖表中的採礦模型中，選取每個可預測資料行名稱旁的方塊。<br /><br /> 如果圖表過於複雜而無法輕鬆檢視，請清除一或多個資料行旁的方塊以簡化圖表。<br /><br /> 注意︰除非至少選取一個資料行，否則將無法建立精確度圖表。|  
 |**採礦模型**|列出採礦結構內所包含的採礦模型。|  
@@ -47,7 +47,7 @@ ms.locfileid: "36145502"
  **選取要用於精確度圖表的資料集**  
  包含用來指定精確度測試資料之三個選項的選項群組。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**使用採礦模型測試案例**|使用在對採礦結構進行資料分割時所建立的測試集，並套用定義於模型的篩選。 如需模型篩選的相關資訊，請參閱 [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**使用採礦結構測試案例**|使用在對採礦結構進行資料分割時所建立的測試集。|  

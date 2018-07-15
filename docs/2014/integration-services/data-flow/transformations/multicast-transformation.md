@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multicasttrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eab69a8c4aafc5f7103a1fd8a8d2649f7d6a7bc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ead69f8be189f80fedb30493a7c8be64178d3e39
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231438"
 ---
 # <a name="multicast-transformation"></a>多點傳送轉換
   「多點傳送」轉換會將其輸入散發至一個或多個輸出。 此轉換與「條件式分割」轉換類似。 這兩種轉換都會將輸入導向多個輸出， 兩者的差異在於「多點傳送」轉換會將每個資料列導向每個輸出，而「條件式分割」會將一個資料列導向單一輸出。 如需詳細資訊，請參閱 [Conditional Split Transformation](conditional-split-transformation.md)。  

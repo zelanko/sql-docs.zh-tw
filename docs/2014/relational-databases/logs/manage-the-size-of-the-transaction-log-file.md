@@ -5,26 +5,25 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-transaction-log
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], size management
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e24c14509cd0154aca2a7ee0cb4486540761066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9fc03b150dba90839b5a2b54b016103a33cd13cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264814"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>管理交易記錄檔的大小
-  在某些情況下，它可以用於實際壓縮或擴充實體記錄檔的交易記錄檔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 本主題包含下列作業的資訊：如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
+  在某些情況下，很適合用來實際壓縮或展開實體記錄檔的交易記錄檔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 本主題包含下列作業的資訊：如何監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交易記錄大小、壓縮交易記錄、加入或加大交易記錄檔、最佳化 **tempdb** 交易記錄成長率，以及控制交易記錄檔的成長。  
   
   
 ##  <a name="MonitorSpaceUse"></a> 監視記錄空間的使用  
@@ -59,7 +58,7 @@ ms.locfileid: "36137371"
 -   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (請參閱一或多個記錄檔的 **size**、**max_size** 和 **growth** 資料行。)  
   
 > [!NOTE]  
->  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 `autoshrink` 資料庫屬性預設為 FALSE。 如果 `autoshrink` 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需有關變更的設定資訊`autoshrink`屬性，請參閱[檢視或變更資料庫的屬性](../databases/view-or-change-the-properties-of-a-database.md)— 使用**Auto Shrink**屬性**選項**頁面 — 或[ALTER DATABASE SET 選項&#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)— 使用 AUTO_SHRINK 選項。  
+>  壓縮資料庫和記錄檔的作業可設定為自動進行。 不過，我們建議您不要進行自動壓縮，而且 `autoshrink` 資料庫屬性預設為 FALSE。 如果 `autoshrink` 設定為 TRUE，只有當超過 25% 的空間未使用時，自動壓縮才會減少檔案的大小。 此時，檔案會壓縮成只有 25% 的檔案是未使用空間的大小，或檔案的原始大小，以較大者為準。 如需有關變更的設定資訊`autoshrink`屬性，請參閱 <<c2> [ 檢視或變更資料庫的屬性](../databases/view-or-change-the-properties-of-a-database.md)— 使用**Auto Shrink**屬性**選項**頁面，或[ALTER DATABASE SET 選項&#40;-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)— 使用 AUTO_SHRINK 選項。</c2>  
   
   
 ##  <a name="AddOrEnlarge"></a> 加入或加大記錄檔  
@@ -81,7 +80,7 @@ ms.locfileid: "36137371"
   
 -   若要變更成長的增量，請使用 FILEGROWTH 選項。 0 的值表示將自動成長設為關閉，而且不允許任何其他空間。 記錄檔的少量自動成長增量可能會降低效能。 記錄檔的檔案成長量應夠大，才不用經常進行擴充。 通常適當的預設成長量為 10%。  
   
-     如需變更記錄檔的檔案成長屬性的資訊，請參閱[ALTER DATABASE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
+     如需變更的記錄檔的檔案成長屬性的詳細資訊，請參閱[ALTER DATABASE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)。  
   
 -   若要控制記錄檔大小的最大值 (單位為 KB、MB、GB 和 TB) 或是將成長設定為 UNLIMITED，請使用 MAXSIZE 選項。  
   

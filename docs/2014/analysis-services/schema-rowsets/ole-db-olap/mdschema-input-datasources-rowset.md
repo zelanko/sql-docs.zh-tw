@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_INPUT_DATASOURCES 資料列集 |Microsoft 文件
+title: MDSCHEMA_INPUT_DATASOURCES 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_INPUT_DATASOURCES rowset
 ms.assetid: 12482fd5-16e3-4171-9cb0-76d0d4f5308e
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba789133cddb1d8b074a58e36ee2018359ae504e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aedd2980b6c51872a9d78d6d1c2cbbecc84d7ec4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135488"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249108"
 ---
 # <a name="mdschemainputdatasources-rowset"></a>MDSCHEMA_INPUT_DATASOURCES 資料列集
   說明在資料庫內定義的資料來源。  

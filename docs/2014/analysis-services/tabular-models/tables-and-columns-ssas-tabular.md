@@ -1,5 +1,5 @@
 ---
-title: 資料表和資料行 (SSAS 表格式) |Microsoft 文件
+title: 資料表和資料行 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6f7302274fc745fbc7a63bf6af59e4622c36b9a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ef5d63ab45c1bad7d74bbf162fd3da0c2e67a161
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319358"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>資料表與資料行 (SSAS 表格式)
   在您使用 [資料表匯入精靈] 將資料表和資料加入模型之後，即可開始使用資料表，包括加入新資料行、建立資料表之間的關聯性、定義可擴充資料的計算，以及在資料表中篩選及排序資料以便於檢視。  
@@ -63,14 +63,14 @@ ms.locfileid: "36021989"
   
 |主題|描述|  
 |-----------|-----------------|  
-|[將資料行加入資料表&#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)|描述如何將來源資料行加入至資料表定義。|  
+|[將資料行加入至資料表&#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)|描述如何將來源資料行加入至資料表定義。|  
 |[刪除資料行&#40;SSAS 表格式&#41;](delete-a-column-ssas-tabular.md)|描述如何使用模型設計師或 [資料表屬性] 對話方塊，刪除模型資料表資料行。|  
 |[變更資料表、 資料行或資料列篩選對應&#40;SSAS 表格式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)|描述如何使用資料表預覽或 [編輯資料表屬性] 對話方塊中的 SQL 查詢編輯器，變更資料表、資料行或資料列篩選對應。|  
-|[指定標記為日期資料表以搭配時間智慧&#40;SSAS 表格式&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|描述如何使用 [標記為日期資料表] 對話方塊來指定日期資料表和唯一識別碼資料行。 DAX 公式中使用時間智慧函數時，必須指定日期資料表和唯一識別碼。|  
+|[指定標記為日期資料表以搭配時間智慧使用&#40;SSAS 表格式&#41;](specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)|描述如何使用 [標記為日期資料表] 對話方塊來指定日期資料表和唯一識別碼資料行。 DAX 公式中使用時間智慧函數時，必須指定日期資料表和唯一識別碼。|  
 |[將資料表加入&#40;SSAS 表格式&#41;](add-a-table-ssas-tabular.md)|描述如何透過使用現有的資料來源連接，從資料來源中加入資料表。|  
 |[刪除資料表&#40;SSAS 表格式&#41;](delete-a-table-ssas-tabular.md)|描述如何刪除模型工作空間資料庫中不再需要的資料表。|  
 |[重新命名資料表或資料行&#40;SSAS 表格式&#41;](rename-a-table-or-column-ssas-tabular.md)|描述如何重新命名資料表或資料行，以在模型中更容易識別。|  
-|[設定資料行的資料型別&#40;SSAS 表格式&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|描述如何變更資料行的資料類型。 資料類型定義資料行中資料的儲存及呈現方式。|  
+|[設定資料行的資料類型&#40;SSAS 表格式&#41;](set-the-data-type-of-a-column-ssas-tabular.md)|描述如何變更資料行的資料類型。 資料類型定義資料行中資料的儲存及呈現方式。|  
 |[隱藏或凍結資料行&#40;SSAS 表格式&#41;](hide-or-freeze-columns-ssas-tabular.md)|描述如何隱藏您不想顯示的資料行，以及如何透過凍結 (鎖定) 某個區域中的特定資料行，以在捲動到模型其他區域時，讓某個模型區域保持可見。|  
 |[導出資料行&#40;SSAS 表格式&#41;](ssas-calculated-columns.md)|本節中的主題描述如何使用導出資料行將彙總資料加入至模型。|  
 |[篩選和排序資料&#40;SSAS 表格式&#41;](../filter-and-sort-data-ssas-tabular.md)|本節中的主題描述如何使用模型設計師中的控制項篩選或排序資料。|  

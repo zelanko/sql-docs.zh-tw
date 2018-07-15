@@ -1,5 +1,5 @@
 ---
-title: xp_logevent (TRANSACT-SQL) |Microsoft 文件
+title: xp_logevent (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 251dfca05a27d78618a4f3dbff5cbecd02ee5813
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ce0b2c462148cfb75da52897f2b453158284fea3
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582030"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854260"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  使用者定義的訊息記錄[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔和 Windows 事件檢視器中。 xp_logevent 可用來傳送警示，而不需要傳送訊息給用戶端。  
+  使用者定義的訊息記錄在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄檔和 Windows 事件檢視器中。 xp_logevent 可用來傳送警示，而不需要將訊息傳送至用戶端。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,7 +62,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  `The command(s) completed successfully.`  
   
 ## <a name="remarks"></a>備註  
- 當您從傳送訊息[!INCLUDE[tsql](../../includes/tsql-md.md)]程序、 觸發程序、 批次，依此類推，而不是 xp_logevent 中使用 RAISERROR 陳述式。 xp_logevent 不會呼叫用戶端的訊息處理常式或設定@ERROR。 若要將訊息寫入 Windows 事件檢視器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中，請執行 RAISERROR 陳述式。  
+ 當您將傳送來自[!INCLUDE[tsql](../../includes/tsql-md.md)]程序、 觸發程序、 批次，並依此類推，而不是 xp_logevent 中使用 RAISERROR 陳述式。 xp_logevent 不會呼叫用戶端的訊息處理常式或 set @@ERROR。 若要將訊息寫入 Windows 事件檢視器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中，請執行 RAISERROR 陳述式。  
   
 ## <a name="permissions"></a>Permissions  
  需要 master 資料庫中 db_owner 固定資料庫角色中的成員資格，或系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
@@ -71,7 +71,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  下列範例會將訊息連同傳遞到訊息的變數記錄到 Windows 事件檢視器中。  
   
 ```  
-DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30),DECLARE @@MESSAGE varchar(255);  
+DECLARE @@TABNAME varchar(30), @@USERNAME varchar(30), @@MESSAGE varchar(255);  
 SET @@TABNAME = 'customers';  
 SET @@USERNAME = USER_NAME();  
 SELECT @@MESSAGE = 'The table ' + @@TABNAME + ' is not owned by the user   

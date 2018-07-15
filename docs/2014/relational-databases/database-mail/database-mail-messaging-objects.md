@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Mail [SQL Server], host databases
 - Database Mail [SQL Server], messaging objects
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7af2b7d227bb534f012fd542ade699cea29e6b10
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 95839d9c8a8f617363ed31b49bef2f2fc1dc3e2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271254"
 ---
 # <a name="database-mail-messaging-objects"></a>Database Mail 訊息物件
   **msdb** 資料庫是 Database Mail 主機資料庫。 這個資料庫包含 Database Mail 的預存程序和訊息物件。 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含 [Database Mail 組態精靈]，用以啟用 Database Mail、建立和管理設定檔及帳戶，以及設定 Database Mail 選項。  
@@ -36,7 +36,7 @@ ms.locfileid: "36145172"
   
  這些物件是郵件主機資料庫中的 Database Mail 介面。 所安裝的其他物件則可執行上列物件所提供的功能。 不過，那些物件會保留給內部使用。  
   
-|[屬性]|類型|描述|  
+|名稱|類型|描述|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|列出提交至 Database Mail 的所有訊息。|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|列出關於 [Database Mail External Program](database-mail-external-program.md)行為的訊息。|  

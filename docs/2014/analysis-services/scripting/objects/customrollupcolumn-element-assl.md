@@ -1,5 +1,5 @@
 ---
-title: CustomRollupColumn 元素 (ASSL) |Microsoft 文件
+title: CustomRollupColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CustomRollupColumn element
 ms.assetid: 8c825f16-0d17-4ff8-bc18-b52cf11edba7
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e57329b1112441ddba51eeaaf709f18219d8db33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ac09217cc0a48b079580b908db599f109a029982
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291484"
 ---
 # <a name="customrollupcolumn-element-assl"></a>CustomRollupColumn 元素 (ASSL)
   定義提供自訂積存公式之資料行的詳細資料。  
@@ -62,9 +62,9 @@ ms.locfileid: "36030625"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`DataItem`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件和屬性的資料表`DataItem`類型，請參閱[DataItem 資料類型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
+ 如需詳細資訊`DataItem`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件和屬性的資料表`DataItem`類型，請參閱[DataItem 資料類型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 對應目的父代的項目`CustomRollupColumn`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 對應至父系的元素`CustomRollupColumn`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

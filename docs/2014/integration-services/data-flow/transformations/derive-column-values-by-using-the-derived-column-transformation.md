@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [Integration Services]
 - derived columns
@@ -18,13 +18,13 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 569d9edeadfab6f31cf3c4d01bbe57e50c1648fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: e2f2ab9752c9b9761e83c9f9207af36454cd52f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215368"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>使用衍生的資料行轉換來衍生資料行值
   若要加入及設定「衍生的資料行」轉換，封裝中必須已包含至少一個「資料流程」工作和一個來源。  

@@ -1,5 +1,5 @@
 ---
-title: 目的地資料庫檔案 |Microsoft 文件
+title: 目的地資料庫檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 97d8a955b199aeb617171ed29f27271252a9fc4b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 184d1838b2f3d6effd37cfbeead410dc2f5299d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022949"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310128"
 ---
 # <a name="destination-database-files"></a>目的地資料庫檔案
   使用 **[目的地資料庫檔案]** 對話方塊，即可檢視或變更目的地伺服器上的資料庫檔案名稱和位置，或是指定傳送資料庫工作的網路檔案位置。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "36022949"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [傳送資料庫工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送資料庫工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [傳送資料庫工作編輯器&#40;資料庫頁面&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

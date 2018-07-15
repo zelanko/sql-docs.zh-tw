@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e5dcdb4cbe4691b397997f24118e9da5f91ba0e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 85dd4c829a05bd051fcf57f1ea299916080251a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031433"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313768"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用於管理您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供工具來設定、監視以及管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 如需詳細資訊，請參閱 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
@@ -157,7 +157,7 @@ ms.locfileid: "36031433"
 ## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>不為下列項目所支援的功能： [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  對於記憶體中 OLTP 物件， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援 Database Engine 所不支援的功能和作業。  
   
- 如需詳細資訊，不支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能，請參閱[支援 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  
+ 如需有關不支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]功能，請參閱[支援的 SQL Server 功能](unsupported-sql-server-features-for-in-memory-oltp.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體中 OLTP 的 SQL Server 支援](sql-server-support-for-in-memory-oltp.md)  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Statement Permission event class
 ms.assetid: 84ababe0-166e-4b1e-903b-bee6c1f005e7
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 57d487c769079d3306cba03f413041b4f44bda9f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7bf2b5a600bf3f04fac1c48a3113ff6c22441235
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271094"
 ---
 # <a name="audit-statement-permission-event-class"></a>Audit Statement Permission 事件類別
   每當使用陳述式權限時 (如 CREATE TABLE)，就會發生 **Audit Statement Permission** 事件類別。  
@@ -54,7 +54,7 @@ ms.locfileid: "36145152"
 |**SPID**|**int**|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
-|**TextData**|**ntext**|需要陳述式權限的 SQL 陳述式文字。|@shouldalert|是|  
+|**TextData**|**ntext**|需要陳述式權限的 SQL 陳述式文字。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

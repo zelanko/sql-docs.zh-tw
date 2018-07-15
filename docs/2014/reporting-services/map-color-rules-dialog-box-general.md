@@ -1,5 +1,5 @@
 ---
-title: 地圖色彩規則對話方塊、 一般 |Microsoft 文件
+title: 地圖色彩規則對話方塊、 一般 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
 caps.latest.revision: 7
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 103e038b715f07c50d702a659f396f9cdd34ffee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238518"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>地圖色彩規則對話方塊、一般
   選取 **[色彩規則屬性]** 對話方塊上的 **[一般]** ，定義此圖層上地圖元素的色彩選項。 地圖元素包括多邊形、線條與點。 當您已經根據資料集欄位或空間資料來源欄位中的空間資料與分析資料建立地圖元素之間的關聯性時，可以套用色彩規則。  
@@ -64,6 +64,6 @@ ms.locfileid: "36136797"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [變更地圖圖例、 色階與相關的規則&#40;報表產生器和 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
+ [變更地圖圖例、 色階與相關的規則&#40;報表產生器及 SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.detachdatabase.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b097b140bcc1069f6d14401fec5b19e083ebd48a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8cd3dbef724de2c2da6d1fb52526d31ce63dc34f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030063"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304108"
 ---
 # <a name="detach-a-database"></a>卸離資料庫
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中卸離資料庫。 卸離的檔案會保留下來，您可以使用 CREATE DATABASE 搭配 FOR ATTACH 或 FOR ATTACH_REBUILD_LOG 選項來重新附加它。 您可以將這些檔案移到另一部伺服器，將它附加在那裡。  

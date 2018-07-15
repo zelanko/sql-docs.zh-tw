@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
 - reports [Reporting Services], publishing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b30d6a4e0f9359b53ac7182879903484fbd54c27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2875701f8b058974df7abf993b1bcc44bf8d08bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315208"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上傳檔案或報表 (報表管理員)
   報表管理員會提供一項上傳功能，讓您可以將報表、模型和其他檔案加入至報表伺服器，而不需要從用戶端應用程式發行這些項目。 您從檔案系統上傳的檔案會當做項目儲存在報表伺服器上。 您所上傳的檔案類型會決定其儲存方式：  

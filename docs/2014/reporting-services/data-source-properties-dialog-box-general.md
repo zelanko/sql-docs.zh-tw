@@ -1,5 +1,5 @@
 ---
-title: 資料來源屬性對話方塊、 一般 |Microsoft 文件
+title: 資料來源屬性對話方塊、 一般 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.general.f1
 - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
 caps.latest.revision: 35
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 823604c6116c78f4313d5f1e328d98d7ed35f950
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5e5b2f1c1792a2fdbc6b83d94f85dd5883b8954
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136595"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206728"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>資料來源屬性對話方塊、一般
   選取 **[資料來源屬性]** 對話方塊上的 **[一般]** ，即可在報表中顯示和修改資料來源的連接資訊。  
@@ -43,13 +43,13 @@ ms.locfileid: "36136595"
  **使用共用的資料來源參考**  
  選取此選項即可連結至共用資料來源。 從下拉式清單選取共用資料來源。 若要編輯選取的資料來源，請按一下 **[編輯]**。 如果選取 **[使用共用資料來源參考]** ，就會停用 **[類型]** 和 **[連接字串]** 。  
   
- **處理查詢時使用單一交易**  
+ **處理查詢時，使用單一交易**  
  選取此選項，指出使用此資料來源的資料集會在單一交易中針對資料庫執行。 若要包含使用相同資料來源之子報表的交易，請在 **[屬性]** 窗格之子報表的 **[其他屬性]** 區段中，將 **MergeTransactions** 設定為 **True** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [建立內嵌或共用資料來源&#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md)   
  [資料連接、 資料來源和 Reporting Services 中的連接字串](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [資料來源屬性對話方塊、 認證](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  
+ [資料來源屬性對話方塊，認證](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md)  
   
   

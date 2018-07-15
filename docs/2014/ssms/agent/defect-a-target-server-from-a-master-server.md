@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
 - target servers [SQL Server], defecting
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - defecting target servers
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07433af48c259d0f2654f01b3a6bc3a43c808c0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 35f113cfd0e038940c00b710b31f254da6343805
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305038"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>使目標伺服器脫離主要伺服器
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 中從主伺服器脫離目標伺服器。 請從目標伺服器執行這個程序。  
@@ -75,9 +75,9 @@ ms.locfileid: "36030931"
 sp_msx_defect ;  
 ```  
   
- 如需詳細資訊，請參閱[sp_msx_defect &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_msx_defect &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 SQL Server 管理物件 (SMO)  
+##  <a name="PowerShellProcedure"></a> 使用 SQL Server Management Objects (SMO)  
  請使用 `MsxDefect Method`。  
   
 ## <a name="see-also"></a>另請參閱  

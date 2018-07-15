@@ -1,5 +1,5 @@
 ---
-title: 翻譯 (Analysis Services) |Microsoft 文件
+title: 翻譯 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
 - translations [Analysis Services], about translations
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 196e55fb22a5e14344f1c379bb8eb77bdd8bf387
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fce0d8195895fafdfe519ddc1609f0d22a0be0cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293288"
 ---
 # <a name="translations-analysis-services"></a>翻譯 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  
@@ -113,7 +113,7 @@ ms.locfileid: "36031302"
   
 2.  在 [翻譯] 中，指定目標語言 (解析成 LCID)、翻譯的標題和翻譯的描述。 不論您要在 Management Studio 中設定伺服器語言，或在單一屬性上加入翻譯覆寫，語言清單在整個 Analysis Services 中都是一致的。  
   
-3.  在 [屬性] 頁面的資料庫，設定`Language`至您為翻譯所指定的相同 LCID。 （選擇性） 設定`Collation`以及如果預設值不再適用。  
+3.  在 [屬性] 頁面的資料庫，設定`Language`至您為翻譯所指定的相同 LCID。 （選擇性） 設定`Collation`，如果預設值不再適用。  
   
 4.  建立及部署資料庫。  
   

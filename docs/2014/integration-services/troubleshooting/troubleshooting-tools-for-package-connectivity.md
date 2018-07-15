@@ -1,5 +1,5 @@
 ---
-title: 疑難排解工具封裝連接 |Microsoft 文件
+title: 疑難排解工具封裝連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -20,13 +20,13 @@ ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6c949af42aa90b00d38ff0c5f254a2eb51ba0c3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a15f2e78fd2a3cbc88f1d3668fde27c5cdb88924
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178075"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>疑難排解工具封裝連接
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所含的功能及工具，可以讓您用於疑難排解封裝與封裝擷取及載入資料之資料來源之間的連接。  
@@ -73,7 +73,7 @@ ms.locfileid: "36137376"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解封裝開發工具](troubleshooting-tools-for-package-development.md)   
+ [疑難排解封裝開發的工具](troubleshooting-tools-for-package-development.md)   
  [套件執行的疑難排解工具](troubleshooting-tools-for-package-execution.md)  
   
   

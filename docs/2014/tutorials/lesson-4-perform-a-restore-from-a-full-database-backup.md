@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 從完整資料庫備份執行還原 |Microsoft 文件
+title: 第 4 課： 從完整資料庫備份執行還原 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 580f76e6-9802-4abc-9043-db6de592c733
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8869fa4bba6050dd0c15b8b59b7f2d091902936f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 9d3220d2012587a6deedad51156b49f13ed9266c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293668"
 ---
 # <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>第 4 課：從完整資料庫備份執行還原
   這一課將示範如何使用 tsql 陳述式，從上一課建立的完整資料庫備份執行還原。  
@@ -44,7 +44,7 @@ ms.locfileid: "36022793"
   
     ```  
   
-5.  確認 T-SQL 陳述式並按一下  **Execute**  
+5.  確認 T-SQL 陳述式，然後按一下**Execute**  
   
 ### <a name="return-to-tutorials-portal"></a>返回教學課程入口網站  
  [教學課程： SQL Server 備份及還原至 Windows Azure Blob 儲存體服務](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)。  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: dda8f1ee734281fc344809bed69a34211bc9009d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f829419b11015209ee06f39b24ec0f773874d41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209138"
 ---
 # <a name="database-properties-files-page"></a>資料庫屬性 (檔案頁面)
   使用此頁面來建立新的資料庫，或者檢視或修改選取之資料庫的屬性。 此主題適用於現有資料庫的 [資料庫屬性 (檔案頁面)]，以及 [新增資料庫 (一般頁面)]。  

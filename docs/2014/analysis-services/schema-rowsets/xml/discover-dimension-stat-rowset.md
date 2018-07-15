@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_DIMENSION_STAT 資料列集 |Microsoft 文件
+title: DISCOVER_DIMENSION_STAT 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 639f8cd7-3b43-40d5-8b84-552daf60d484
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c00442ffcc7af38a24ce0fcb035aad515d9942f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d70382117367762dc35a6d02663f54436ea63bb3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289734"
 ---
 # <a name="discoverdimensionstat-rowset"></a>DISCOVER_DIMENSION_STAT 資料列集
   提供維度的相關資訊，包括包含維度之資料庫的名稱、維度名稱、其屬性，以及每個屬性之成員的計數。 在表格式模型中，這會對應至資料表中的資料行，以及每個資料行中值的數目。  
@@ -44,7 +44,7 @@ ms.locfileid: "36031507"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd90-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|PartitionDimensionStat|  
