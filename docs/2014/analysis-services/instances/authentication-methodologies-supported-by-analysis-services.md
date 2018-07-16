@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 支援的驗證方法 |Microsoft 文件
+title: 支援的 Analysis Services 的驗證方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90837dc0aa815ab56d4f0f8f4b02bf277cd97bb7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 248d5431a4f6015b03d5b2f99cec2e1a037d00c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265724"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services 支援的驗證方法
   從用戶端應用程式到 Analysis Services 執行個體的連接需要 Windows 驗證 (整合式)。 您可以使用下列任何一種方法來提供 Windows 使用者識別：  
@@ -86,7 +86,7 @@ ms.locfileid: "36134726"
  [使用模擬搭配傳輸安全性](http://go.microsoft.com/fwlink/?LinkId=311727)   
  [設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [設定 Analysis Services 進行 Kerberos 限制委派](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [Analysis Services 執行個體的 SPN 註冊](spn-registration-for-an-analysis-services-instance.md)   
+ [Analysis Services 執行個體註冊 SPN](spn-registration-for-an-analysis-services-instance.md)   
  [連接到 Analysis Services](connect-to-analysis-services.md)  
   
   

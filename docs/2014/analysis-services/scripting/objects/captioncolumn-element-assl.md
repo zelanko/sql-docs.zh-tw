@@ -1,5 +1,5 @@
 ---
-title: CaptionColumn 元素 (ASSL) |Microsoft 文件
+title: CaptionColumn 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaptionColumn element
 ms.assetid: bdb1b9b8-b5d5-4d91-81c7-8de8635bbb83
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 58d10ce00adaa3593f50be99383bdfbdbee14441
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c60ac92841ce35e7b4c00c80da4be4eeed6bd96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273344"
 ---
 # <a name="captioncolumn-element-assl"></a>CaptionColumn 元素 (ASSL)
   定義可提供屬性標題的資料行。  
@@ -62,9 +62,9 @@ ms.locfileid: "36133800"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`DataItem`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件和屬性的資料表`DataItem`類型，請參閱[DataItem 資料類型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
+ 如需詳細資訊`DataItem`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件和屬性的資料表`DataItem`類型，請參閱[DataItem 資料類型&#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md)。  
   
- 對應目的父代的項目`CaptionColumn`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.AttributeTranslation>。  
+ 對應至父系的元素`CaptionColumn`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AttributeTranslation>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

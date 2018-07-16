@@ -1,5 +1,5 @@
 ---
-title: Translations 元素 (XMLA) |Microsoft 文件
+title: Translations 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translations element
 ms.assetid: 86fd2119-9bea-4306-829e-cc439da05566
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 180a570d7b466a33c0c057066d88b1bd28d00d27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 64dcf6e45cd70270ca0a5160b777044082c1c27d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135249"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205648"
 ---
 # <a name="translations-element-xmla"></a>Translations 元素 (XMLA)
   包含用來識別 [Attribute](attribute-element-xmla.md) 父元素所代表之屬性成員的成員索引鍵的 [Translation](translation-element-xmla.md) 元素集合。  

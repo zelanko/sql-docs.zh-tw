@@ -1,5 +1,5 @@
 ---
-title: 選項 （文字編輯器的副檔名頁面） |Microsoft 文件
+title: 選項 （文字編輯器-副檔名頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 307d7f6fbf3405d0ff84d1c2672c1de2c90bf092
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145451"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176415"
 ---
 # <a name="options-text-editor---file-extension-page"></a>選項 (文字編輯器 - 副檔名頁面)
   使用 [選項] 對話方塊，以指定 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 如何處理具有特定副檔名的所有檔案。 針對您輸入的每個副檔名，都可以選取一個編輯器。 因此，您可以選擇要用來開啟特定文件類型的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 編輯器。 若要開啟副檔名選項，請按一下 [工具] 功能表上的 [選項]，並展開 [文字編輯器]，然後按一下 [副檔名]。  

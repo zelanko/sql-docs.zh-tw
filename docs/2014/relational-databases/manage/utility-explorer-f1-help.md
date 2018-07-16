@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.ue.navigation.f1
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15c92a525164cf2c8c2f89f2b3afb45bc47b70d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 456bd7ca29338e2e78b57ffdd8f523e05da7ca1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134397"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271184"
 ---
 # <a name="utility-explorer-f1-help"></a>公用程式總管 F1 說明
   下列主題說明 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的功能和關聯的作業。  
@@ -31,7 +31,7 @@ ms.locfileid: "36134397"
   
  [部署資料層應用程式詳細資料&#40;SQL Server 公用程式&#41;](../../database-engine/deployed-data-tier-application-details-sql-server-utility.md)  
   
- [Managed 執行個體&#40;SQL Server 公用程式&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
+ [受控執行個體詳細資料&#40;SQL Server 公用程式&#41;](../../database-engine/managed-instance-details-sql-server-utility.md)  
   
  [公用程式管理 &#40;SQL Server 公用程式&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   

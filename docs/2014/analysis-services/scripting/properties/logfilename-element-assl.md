@@ -1,5 +1,5 @@
 ---
-title: LogFileName 元素 (ASSL) |Microsoft 文件
+title: LogFileName 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - LogFileName element
 ms.assetid: 80c7530d-ef73-44c3-88b5-c11c0f290946
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e3038ae45e740b52662f6e580808096541b7b386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78f8a9cfa6462f7932e69323b0f7622d0f12064a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135255"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171339"
 ---
 # <a name="logfilename-element-assl"></a>LogFileName 元素 (ASSL)
-  包含的記錄檔的檔案名稱[追蹤](../objects/trace-element-assl.md)項目。  
+  包含的記錄檔的檔名[追蹤](../objects/trace-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36135255"
 ## <a name="remarks"></a>備註  
  記錄檔會儲存到執行個體的記錄檔資料夾[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
- 對應目的父代的項目`LogFileName`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Trace>。  
+ 對應至父系的元素`LogFileName`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>另請參閱  
  [追蹤項目&#40;ASSL&#41;](../collections/traces-element-assl.md)   

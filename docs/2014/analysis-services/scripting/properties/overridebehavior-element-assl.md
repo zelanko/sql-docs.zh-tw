@@ -1,5 +1,5 @@
 ---
-title: OverrideBehavior 元素 (ASSL) |Microsoft 文件
+title: OverrideBehavior 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - OverrideBehavior element
 ms.assetid: 6a5b361a-6061-4b73-b1a7-1237fb77606c
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e36223c59306b158812d9bdc18fccd3660c54f0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aecabbb04cefa1abf706c5f725c3a7f8e41aad07
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134261"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241368"
 ---
 # <a name="overridebehavior-element-assl"></a>OverrideBehavior 元素 (ASSL)
   表示所描述之關聯性的覆寫行為[AttributeRelationship](../objects/attributerelationship-element-assl.md)項目。  
@@ -64,7 +64,7 @@ ms.locfileid: "36134261"
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*強式*|指出 AttributeRelationship 元素所描述之關聯性的覆寫行為。 決定一個屬性的定位如何影響其他位置。|  
 |*無*|沒有影響。|  

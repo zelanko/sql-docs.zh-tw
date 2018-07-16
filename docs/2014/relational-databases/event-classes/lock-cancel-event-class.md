@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Cancel event class
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c121cbfef50c7f941f090ae54399bf0ad7760f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f9c82becfb066b6eb7da70d9e0524e0837be680
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242708"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel 事件類別
   **Lock:Cancel** 事件類別指出已取消在資源上取得鎖定，例如，由於取消查詢所導致。  
@@ -58,7 +58,7 @@ ms.locfileid: "36132667"
 |**SessionLoginName**|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 執行陳述式，則 **SessionLoginName** 將顯示 Login1 而 **LoginName** 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |**SPID**|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |**StartTime**|`datetime`|事件的開始時間 (如果可以取得的話)。|14|是|  
-|**TextData**|`ntext`|與取得的鎖定類型有關的文字值。 這和 **sys.dm_tran_locks** 中的 **resource_description**資料行是相同的值。|@shouldalert|是|  
+|**TextData**|`ntext`|與取得的鎖定類型有關的文字值。 這和 **sys.dm_tran_locks** 中的 **resource_description**資料行是相同的值。|1|是|  
 |**TransactionID**|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |**型別**|`int`|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|是|  
   

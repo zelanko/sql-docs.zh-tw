@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: dbeb12e4fcf59b7336d9a1cf05e0887cf118d4ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6958198b0482c792a952efea5c3792a182df8564
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136361"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198276"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>設定報表伺服器應用程式的可用記憶體
   雖然 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 可以使用所有可用的記憶體，但是您可以透過針對配置給 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 伺服器應用程式的記憶體資源總數設定上限，覆寫預設行為。 此外，您也可以設定臨界值，讓報表伺服器根據系統處於低度、中度或嚴重記憶體不足壓力的情況，變更其設定優先權和處理要求的方式。 在低度記憶體不足壓力層級時，報表伺服器的回應方式為提供稍高優先權給互動式或視需要報表處理。 在高度記憶體不足壓力層級時，報表伺服器會運用有限的資源並使用多種技術來維持運作。  
@@ -60,7 +60,7 @@ ms.locfileid: "36136361"
   
 -   `WorkingSetMaximum` 和`WorkingSetMinimum`定義可用記憶體的範圍。 您可以設定這些設定，以便針對報表伺服器應用程式設定可用記憶體的範圍。 如果您要在同一部電腦上主控多個應用程式，而且您判斷出報表伺服器所使用的系統資源數量相對於同一部電腦上的其他應用程式而言不成比例，這樣做可能會很有用。  
   
--   `MemorySafetyMargin` 和`MemoryThreshold`設定低 」、 「 中 」 和高度記憶體不足壓力層級的界限。 針對每個狀態，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]相對於在電腦上可用的記憶體量正確地處理以確保報表處理和其他要求會採取更正動作。 您可以指定組態設定，以便決定低度、高度和中度壓力層級之間的區別。  
+-   `MemorySafetyMargin` 和`MemoryThreshold`設定低、 中度和高記憶體不足壓力層級的界限。 每個狀態，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]會採取矯正措施，以確保報表處理和其他要求會受到妥善處理相對於在電腦上可用的記憶體數量。 您可以指定組態設定，以便決定低度、高度和中度壓力層級之間的區別。  
   
      雖然您可以變更組態設定，但是這樣做不會改善報表處理效能。 只有當要求在完成之前即被卸除時，變更這些組態設定才有用。 改善伺服器效能的最佳方式就是將報表伺服器或個別的報表伺服器應用程式部署在專用的電腦上。  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36136361"
   
  ![記憶體狀態的組態設定](../media/rs-memoryconfigurationzones.gif "記憶體狀態的組態設定")  
   
- 下表描述`WorkingSetMaximum`， `WorkingSetMinimum`， `MemorySafetyMargin`，和`MemoryThreshold`設定。 組態設定指定於[RSReportServer.config 檔](rsreportserver-config-configuration-file.md)。  
+ 下表描述`WorkingSetMaximum`， `WorkingSetMinimum`， `MemorySafetyMargin`，和`MemoryThreshold`設定。 組態設定會指定於[RSReportServer.config 檔](rsreportserver-config-configuration-file.md)。  
   
 |元素|描述|  
 |-------------|-----------------|  
-|`WorkingSetMaximum`|指定一個記憶體臨界值，達到此臨界值後，沒有任何新的記憶體配置要求會授與報表伺服器應用程式。<br /><br /> 根據預設，報表伺服器會將 `WorkingSetMaximum` 設定為電腦上的可用記憶體數量。 這個值是在服務啟動時偵測的。<br /><br /> 除非您手動加入這項設定，否則它不會顯示在 RSReportServer.config 檔中。 如果您想讓報表伺服器使用更少記憶體，可以修改 RSReportServer.config 檔並加入此元素和值。 有效值範圍是從 0 到最大整數。 這個值是以 KB 表示。<br /><br /> 達到 `WorkingSetMaximum` 的值之後，報表伺服器就不再接受新的要求。 系統會允許目前正在進行中的要求完成。 記憶體使用量低於透過指定的值時，才會接受新要求`WorkingSetMaximum`。<br /><br /> 如果現有的要求會繼續耗用其他記憶體之後`WorkingSetMaximum`已達到的值，所有報表伺服器應用程式定義域將都會回收。 如需詳細資訊，請參閱＜ [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)＞。|  
-|`WorkingSetMinimum`|指定資源耗用量的下限。如果整體記憶體使用量低於此限制，報表伺服器將不會釋放記憶體。<br /><br /> 根據預設，此值是在服務啟動時計算的。 計算內容是初始記憶體配置要求代表 `WorkingSetMaximum` 的 60%。<br /><br /> 除非您手動加入這項設定，否則它不會顯示在 RSReportServer.config 檔中。 如果您想要自訂此值，您必須加入`WorkingSetMinimum`到 RSReportServer.config 檔案的項目。 有效值範圍是從 0 到最大整數。 這個值是以 KB 表示。|  
-|`MemoryThreshold`|指定的百分比表示`WorkingSetMaximum`以便定義高度與中度壓力狀況之間的界限。 如果報表伺服器記憶體使用量達到此值，報表伺服器就會讓要求處理的速度變慢，並且變更配置給不同伺服器應用程式的記憶體數量。 預設值是 90。 這個值應該大於設定的值`MemorySafetyMargin`。|  
+|`WorkingSetMaximum`|指定一個記憶體臨界值，達到此臨界值後，沒有任何新的記憶體配置要求會授與報表伺服器應用程式。<br /><br /> 根據預設，報表伺服器會將 `WorkingSetMaximum` 設定為電腦上的可用記憶體數量。 這個值是在服務啟動時偵測的。<br /><br /> 除非您手動加入這項設定，否則它不會顯示在 RSReportServer.config 檔中。 如果您想讓報表伺服器使用更少記憶體，可以修改 RSReportServer.config 檔並加入此元素和值。 有效值範圍是從 0 到最大整數。 這個值是以 KB 表示。<br /><br /> 達到 `WorkingSetMaximum` 的值之後，報表伺服器就不再接受新的要求。 系統會允許目前正在進行中的要求完成。 記憶體使用量低於指定的值時，才會接受新要求`WorkingSetMaximum`。<br /><br /> 如果現有的要求會繼續耗用其他記憶體後的`WorkingSetMaximum`已達到的值，系統會回收所有報表伺服器應用程式定義域。 如需詳細資訊，請參閱＜ [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)＞。|  
+|`WorkingSetMinimum`|指定資源耗用量的下限。如果整體記憶體使用量低於此限制，報表伺服器將不會釋放記憶體。<br /><br /> 根據預設，此值是在服務啟動時計算的。 計算內容是初始記憶體配置要求代表 `WorkingSetMaximum` 的 60%。<br /><br /> 除非您手動加入這項設定，否則它不會顯示在 RSReportServer.config 檔中。 如果您想要自訂此值，您必須新增`WorkingSetMinimum`到 RSReportServer.config 檔案的項目。 有效值範圍是從 0 到最大整數。 這個值是以 KB 表示。|  
+|`MemoryThreshold`|指定的百分比表示`WorkingSetMaximum`以便定義高度與中度壓力狀況之間的界限。 如果報表伺服器記憶體使用量達到此值，報表伺服器就會讓要求處理的速度變慢，並且變更配置給不同伺服器應用程式的記憶體數量。 預設值是 90。 此值應大於設定的值`MemorySafetyMargin`。|  
 |`MemorySafetyMargin`|指定 `WorkingSetMaximum` 的百分比，以便定義中度與低度壓力狀況之間的界限。 這個值是保留給系統而且無法用於報表伺服器作業之可用記憶體的百分比。 預設值是 80。|  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ ms.locfileid: "36136361"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>關於 ASP.NET 記憶體組態設定  
- 雖然報表伺服器 Web 服務和報表管理員是[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式，兩個應用程式會回應您在中指定的記憶體組態設定`processModel`machine.config 之區段[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式，在 IIS 5.0 相容性模式中執行。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 只會從 RSReportServer.config 檔讀取記憶體組態設定。  
+ 雖然報表伺服器 Web 服務和報表管理員是[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式，兩個應用程式會回應您在中指定的記憶體組態設定`processModel`machine.config 區段[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式，在 IIS 5.0 相容性模式中執行。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 只會從 RSReportServer.config 檔讀取記憶體組態設定。  
   
 ## <a name="see-also"></a>另請參閱  
  [RSReportServer 組態檔](rsreportserver-config-configuration-file.md)   

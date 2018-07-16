@@ -1,5 +1,5 @@
 ---
-title: 設定 SSIS 記錄對話方塊 |Microsoft 文件
+title: 設定 SSIS 記錄對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredtslogs.loggingdetails.f1
 - sql12.dts.designer.configuredtslogs.providersandlogs.f1
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Configure SSIS Logs dialog box
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 62dbeb5c5895412b5b9fcab30d92a496f2a41d42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c2a52c7ee15c7fee222b290aa8ac2790965bb91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136469"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189175"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>設定 SSIS 記錄對話方塊
   使用 **[設定 SSIS 記錄]** 對話方塊定義封裝的記錄選項。  
@@ -97,7 +97,7 @@ ms.locfileid: "36136469"
  **進階**  
  選取或清除要記錄的事件，以及選取或清除要為每個事件記錄的資訊。 按一下 **[基本]** ，即可隱藏除了事件清單以外的所有記錄詳細資料。 記錄可以使用下列資訊：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**電腦**|記錄事件發生所在之電腦的名稱。|  
 |**[運算子]**|啟動封裝之人員的使用者名稱。|  

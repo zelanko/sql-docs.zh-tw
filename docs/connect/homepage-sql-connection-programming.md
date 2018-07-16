@@ -13,7 +13,7 @@ ms.reviewer: meetb
 ms.author: genemi
 ms.openlocfilehash: cfb1ac82894ef8fed001077d54665c9f89239787
 ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 06/11/2018
 ms.locfileid: "35306217"
@@ -35,7 +35,7 @@ ms.locfileid: "35306217"
 
 如需連接到 Azure SQL Database 的連接字串的詳細資訊，請參閱：
 
-- [使用.NET 核心 (C#) 來查詢 Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core)。
+- [使用.NET Core (C#) 來查詢 Azure SQL database](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-dotnet-core)。
 - 附近的其他語言的相關內容，上述資料表中發行項是其他 Azure SQL Database。 例如，請參閱[查詢 Azure SQL database 使用 PHP](http://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php)。
 
 
@@ -120,7 +120,7 @@ EF 具有直接或間接關聯性的下列技術：
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | 首先，Microsoft 會在 2008 年 8 月發行 EF。 2015 年 3 月中 Microsoft 宣布的 EF 6.x 已像開發 Microsoft 的最終版本。 Microsoft 會發行到公用網域的原始程式碼。<br /><br />一開始 EF 是.NET Framework 的一部分。 但 EF 6.x 已從.NET Framework 中移除。<br /><br />[EF 6.x 原始碼 Github 儲存機制上的*aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF 核心](http://docs.microsoft.com/ef/core/) | Microsoft 於 2016 年 6 月發行新開發的 EF 核心。 EF 核心專為較佳的彈性和可攜性。 EF 核心可以執行超出只是 Microsoft Windows 作業系統上。 而且 EF 核心可以只 Microsoft SQL Server 以外的資料庫和其他關聯式資料庫互動。<br /><br />**C&#x23;程式碼範例：**<br />[開始使用 Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[開始使用.NET Framework 與現有的資料庫上的 EF 核心](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF Core](http://docs.microsoft.com/ef/core/) | Microsoft 於 2016 年 6 月發行新開發的 EF Core。 EF Core 專為較佳的彈性和可攜性。 EF Core 可以執行超出只是 Microsoft Windows 作業系統上。 而且 EF Core 可以只 Microsoft SQL Server 以外的資料庫和其他關聯式資料庫互動。<br /><br />**C&#x23;程式碼範例：**<br />[開始使用 Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[開始使用.NET Framework 與現有的資料庫上的 EF Core](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF 和相關的技術是強大，而且開發人員想要主要的整個區域學到許多內容。

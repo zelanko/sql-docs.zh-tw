@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
 helpviewer_keywords:
@@ -19,16 +19,16 @@ ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 47b5fffebd2ce4eba41aceb88725e4dc4c867348
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15e2239a7285e4d460e4fa5a85add8445f797ede
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227848"
 ---
 # <a name="for-loop-container"></a>For 迴圈容器
-  「For 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **For** 迴圈的結構類似。 在每次迴圈重複中，For 迴圈 」 容器會評估運算式並重複其工作流程，直到運算式評估為`False`。  
+  「For 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **For** 迴圈的結構類似。 在每次重複迴圈中，「 For 迴圈 」 容器評估運算式，並重複其工作流程，直到運算式評估為`False`。  
   
  「For 迴圈」容器使用下列元素定義迴圈：  
   

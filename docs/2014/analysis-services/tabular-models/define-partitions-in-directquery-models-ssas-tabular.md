@@ -1,5 +1,5 @@
 ---
-title: 資料分割和 DirectQuery 模式 (SSAS 表格式) |Microsoft 文件
+title: 資料分割和 DirectQuery 模式 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6153a5975dd342bfabb00b7f964ee04d6941a363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c928bbc87c39f76e8995c7c2d171d4f731b3171
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134250"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269684"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>資料分割和 DirectQuery 模式 (SSAS 表格式)
   本節說明如何在 DirectQuery 模型中使用資料分割。 如需表格式模型中之資料分割的更一般資訊，請參閱[資料分割 &#40;SSAS 表格式&#41;](partitions-ssas-tabular.md)。  
   
- 如需如何變更使用時，資料分割或磁碟分割的檢視資訊的指示，請參閱[變更 DirectQuery 資料分割&#40;SSAS 表格式&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
+ 如需有關如何變更使用時，資料分割或檢視資料分割的相關資訊，請參閱[變更 DirectQuery 資料分割&#40;SSAS 表格式&#41;](../change-the-directquery-partition-ssas-tabular.md)。  
   
 ## <a name="using-partitions-in-directquery-mode"></a>在 DirectQuery 模式中使用資料分割  
  您必須針對每一個資料表指定當做 DirectQuery 資料來源使用的單一資料分割。  如果有多個資料分割，當您將模型切換為啟用 DirectQuery 模式時，根據預設，資料表中建立的第一個資料分割會標示為 DirectQuery 資料分割。 可以在稍後透過使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的資料分割管理員來變更此設定。  

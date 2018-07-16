@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
 - subscriptions [Reporting Services], status
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 caps.latest.revision: 33
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 39838673c11b980fd38cc312dea51e0c9e2dcc99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 08a4b7f46721f33c1d6cf42b2c2840d0f7a07fcd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214778"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>監視 Reporting Services 訂閱
   您可以透過使用者介面、Windows PowerShell 或記錄檔來監視 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 訂閱。 您可以使用的監視選項取決於正在執行的報表伺服器模式。  
@@ -65,7 +65,7 @@ ms.locfileid: "36136793"
 |無法寫入檔案 \<檔案名稱>：\<訊息>|指出未成功傳遞到檔案共用位置；此訊息來自檔案共用傳遞延伸模組。|  
 |\<自訂狀態訊息>|關於傳遞成功與傳遞失敗的狀態訊息，是由傳遞延伸模組所提供。 如果您使用協力廠商或自訂傳遞延伸模組，就可能會提供其他的狀態訊息。|  
   
- 報表伺服器管理員也可以監視目前正在處理的標準訂閱。 無法監視資料驅動訂閱。 如需詳細資訊，請參閱[管理執行的處理序](manage-a-running-process.md)。  
+ 報表伺服器管理員也可以監視目前正在處理的標準訂閱。 無法監視資料驅動訂閱。 如需詳細資訊，請參閱 <<c0> [ 管理執行的處理序](manage-a-running-process.md)。  
   
  如果無法傳遞訂閱 (例如，若郵件伺服器無法使用)，傳遞延伸模組就會重試傳遞。 組態設定會指定嘗試傳遞的次數。 預設值為不重試。 在某些情況下，報表可能會在無資料狀況下處理 (例如，若資料來源為離線)，此時，訊息內文將會說明此一狀況。  
   

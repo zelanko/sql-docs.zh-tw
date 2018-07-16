@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 組態-資料目錄 |Microsoft 文件
+title: Analysis Services 組態-資料目錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ef732855-b7af-4f40-a619-5573c1c354bb
 caps.latest.revision: 20
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b3b945938c0ffd8a5059f8b2c53546538ea97eee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 64eb317972d33f2fc2957f40c74b0bdea9aac152
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204618"
 ---
 # <a name="analysis-services-configuration---data-directories"></a>Analysis Services 組態 - 資料目錄
   下表的預設目錄可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間由使用者設定。 存取這些檔案的權限會授與本機系統管理員，以及安裝期間建立及佈建的 SQLServerMSASUser$\<執行個體> 安全性群組成員。  
@@ -29,9 +29,9 @@ ms.locfileid: "36134564"
 |描述|預設目錄|建議|  
 |-----------------|-----------------------|---------------------|  
 |資料根目錄|C:\Program Files\Microsoft SQL Server\MSAS12。\<執行個體識別碼 > \OLAP\Data\|確保 \Program files\Microsoft SQL Server\ 資料夾受到有限權限。 在許多組態中，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 效能取決於資料目錄所在之儲存體的效能。 請將這個目錄放置於附加至系統的最高效能儲存體上。 若為容錯移轉叢集安裝，請確定資料目錄位於共用磁碟上。|  
-|記錄檔目錄|C:\Program Files\Microsoft SQL Server\MSAS12。\<執行個體識別碼 > \OLAP\Log\|這是針對目錄[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]記錄檔，而且它包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
-|暫存目錄|C:\Program Files\Microsoft SQL Server\MSAS12。\<執行個體識別碼 > \OLAP\Temp\|暫存目錄放置於高效能儲存體子系統上。|  
-|備份目錄|C:\Program Files\Microsoft SQL Server\MSAS12。\<執行個體識別碼 > \olap\backup.\|這是針對目錄[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]預設備份檔案。 對於 PowerPivot for SharePoint 安裝來說，這也是 PowerPivot 系統服務快取 PowerPivot 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
+|記錄檔目錄|C:\Program Files\Microsoft SQL Server\MSAS12。\<執行個體識別碼 > \OLAP\Log\|這是針對目錄[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]記錄檔，也包括了 FlightRecorder 記錄檔。 如果您增加了飛行記錄器持續時間，請確定記錄檔目錄具有足夠的空間。|  
+|暫存目錄|C:\Program Files\Microsoft SQL Server\MSAS12。\<執行個體識別碼 > \OLAP\Temp\|置於高效能儲存體子系統的 Temp 目錄。|  
+|備份目錄|C:\Program Files\Microsoft SQL Server\MSAS12。\<執行個體識別碼 > \OLAP\Backup\|這是針對目錄[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]預設備份檔案。 對於 PowerPivot for SharePoint 安裝來說，這也是 PowerPivot 系統服務快取 PowerPivot 資料檔案的位置。<br /><br /> 請確定已設定適當的權限來防止資料遺失，並且確定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務的使用者群組具有足夠的權限，可寫入備份目錄。 不支援針對備份目錄使用對應的磁碟機。|  
   
 ## <a name="notes"></a>注意  
   

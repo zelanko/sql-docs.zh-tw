@@ -3,26 +3,24 @@ title: 從預存程序傳回資料 | Microsoft 文件
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
+ms.technology: stored-procedures
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-stored-procs
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [SQL Server], returning data
 - returning data from stored procedure
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
-caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8120714aba03f2be632d19e846daea3789dba54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd21d239fb1a4a947e5f6d17120cc6a63feb575b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249688"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>從預存程序傳回資料
   將結果集或資料從程序傳回至呼叫端程式的方式有兩種：輸出參數和傳回碼。 本主題提供有關這兩種方法的詳細資訊。  
@@ -75,13 +73,13 @@ GO
  呼叫程序時，如果您對參數指定 OUTPUT，但該參數在程序定義中並未使用 OUTPUT 來定義，則會出現錯誤訊息。 不過，您可以用輸出參數來執行程序，但在執行程序時不指定 OUTPUT。 這樣不會傳回錯誤，但您不能在呼叫程式中使用輸出值。  
   
 ### <a name="using-the-cursor-data-type-in-output-parameters"></a>在 OUTPUT 參數中使用 Cursor 資料類型  
- [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程序可以使用`cursor`資料類型只能針對 OUTPUT 參數。 如果`cursor`指定資料類型的參數，必須針對該程序定義中的參數指定 VARYING 和 OUTPUT 關鍵字。 參數可以指定為僅 OUTPUT，但如果在參數宣告中指定 VARYING 關鍵字，則資料型別必須是`cursor`和也必須指定 OUTPUT 關鍵字。  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] 程序可以使用`cursor`資料類型只能針對 OUTPUT 參數。 如果`cursor`指定資料類型的參數，該程序定義中的參數必須指定 VARYING 和 OUTPUT 關鍵字。 參數可以指定為僅 OUTPUT，但如果在參數宣告中指定 VARYING 關鍵字，則必須是資料型別`cursor`和也必須指定 OUTPUT 關鍵字。  
   
 > [!NOTE]  
->  `cursor`無法透過 OLE DB、 ODBC、 ADO 和 Db-library 之類的資料庫 Api 的應用程式變數繫結資料型別。 因為應用程式可以執行的程序的程序之前，必須繫結 OUTPUT 參數`cursor`輸出參數不能從資料庫 Api 呼叫。 這些程序可以從呼叫[!INCLUDE[tsql](../../../includes/tsql-md.md)]批次、 程序或觸發程序時，才`cursor`OUTPUT 變數指派給[!INCLUDE[tsql](../../../includes/tsql-md.md)]本機`cursor`變數。  
+>  `cursor`無法透過 OLE DB、 ODBC、 ADO 和 Db-library 之類的資料庫 Api 的應用程式變數繫結資料型別。 因為應用程式可以執行的程序，程序之前，必須繫結 OUTPUT 參數`cursor`輸出參數無法從資料庫 Api 呼叫。 您可以從呼叫這些程序[!INCLUDE[tsql](../../../includes/tsql-md.md)]批次、 程序或觸發程序時，才`cursor`OUTPUT 變數指派給[!INCLUDE[tsql](../../../includes/tsql-md.md)]本機`cursor`變數。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>Cursor 輸出參數的規則  
- 下列規則是關於`cursor`輸出參數，在執行程序：  
+ 以下規則是有關`cursor`程序執行時，將輸出參數：  
   
 -   順向資料指標的結果集之中只會傳回程序執行結束時，位於或超過資料指標所在位置的資料列，例如：  
   
@@ -108,7 +106,7 @@ GO
     >  關閉的狀態只在傳回時有影響。 舉例來說，在程序執行到一半時關閉資料指標，之後又開啟，然後將該資料指標的結果集傳回至呼叫的批次、程序或觸發程序，這些都是有效的。  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Cursor 輸出參數的範例  
- 在下列範例中，程序會建立一個指定輸出參數， `@currency`_`cursor`使用`cursor`資料型別。 然後在批次中呼叫程序。  
+ 在下列範例中，建立一個程序會指定輸出參數， `@currency`_`cursor`使用`cursor`資料型別。 然後在批次中呼叫程序。  
   
  首先，建立在 Currency 資料表上宣告並隨後開啟資料指標的程序。  
   
@@ -164,7 +162,7 @@ EXECUTE @result = my_proc;
 |傳回碼值|意義|  
 |-----------------------|-------------|  
 |0|成功執行。|  
-|@shouldalert|未指定必要的參數值。|  
+|1|未指定必要的參數值。|  
 |2|指定的參數值無效。|  
 |3|取得銷售值時發生錯誤。|  
 |4|銷售人員有 NULL 銷售值。|  

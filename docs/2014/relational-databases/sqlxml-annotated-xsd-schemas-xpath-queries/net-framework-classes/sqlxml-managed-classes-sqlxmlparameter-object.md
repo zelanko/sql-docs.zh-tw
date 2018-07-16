@@ -1,5 +1,5 @@
 ---
-title: SqlXmlParameter 物件 (SQLXML Managed 類別) |Microsoft 文件
+title: SqlXmlParameter 物件 (SQLXML Managed 類別) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b8f787d8a3242fcaa5d2bf34d21484a8a2b74e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 59dd9b66e08c821d2603d6d21eb9d837890471f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282914"
 ---
 # <a name="sqlxmlparameter-object-sqlxml-managed-classes"></a>SqlXmlParameter 物件 (SQLXML Managed 類別)
-  SqlXmlParameter 物件支援這些屬性：  
+  SqlXmlParameter 物件支援下列屬性：  
   
- [屬性]  
+ 名稱  
  參數的名稱。 可以將參數傳遞給命令。 呼叫 CreateParameter 方法 SqlXmlCommand 物件的建立參數物件。  
   
- ReplTest1  
- 參數的值。 如需實用範例，請參閱[執行 SQL 查詢&#40;SQLXML Managed 類別&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。  
+ 值  
+ 參數的值。 如需實用範例，請參閱 <<c0> [ 執行 SQL 查詢&#40;SQLXML Managed 類別&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [SqlXmlCommand 物件&#40;SQLXML Managed 類別&#41;](sqlxml-managed-classes-sqlxmlcommand-object.md)   

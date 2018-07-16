@@ -1,5 +1,5 @@
 ---
-title: 支援的 SQL Server 功能 |Microsoft 文件
+title: 支援 SQL Server 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 caps.latest.revision: 48
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5233c8ab4eaa9926fe8c058c3f6d410d536306da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 038b429200532796e0fd5a373208af81e2aa82f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205378"
 ---
 # <a name="supported-sql-server-features"></a>支援的 SQL Server 功能
   本主題會討論在使用記憶體最佳化的物件時，所支援或不支援的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援記憶體中 OLTP 的功能  
+## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援記憶體內部 OLTP 的功能  
  擁有記憶體最佳化之物件的資料庫可以支援下列 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能，包括記憶體最佳化的檔案群組在內。  
   
  如需有關支援之資料類型的資訊，請參閱＜ [Supported Data Types](supported-data-types-for-in-memory-oltp.md)＞。  
@@ -63,7 +63,7 @@ ms.locfileid: "36135669"
   
 -   Service Broker 有限制。 無法從原生編譯的預存程序存取佇列。 也無法在存取記憶體最佳化的資料表的交易中存取遠端資料庫內的佇列。  
   
--   容錯移轉叢集：AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 產品的一部分，它會運用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (容錯移轉叢集執行個體 (Failover Cluster Instance，FCI) ) 的備援性提供本機高可用性。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
+-   容錯移轉叢集：AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn 供應項目的一部分，它會運用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (容錯移轉叢集執行個體 (Failover Cluster Instance，FCI) ) 的備援性提供本機高可用性。 如需詳細資訊，請參閱 [AlwaysOn 容錯移轉叢集執行個體 (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)。  
   
 -   與 AlwaysOn 整合： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供幾個選項用於建立伺服器或資料庫的高可用性，包括 AlwaysOn。 如需詳細資訊，請參閱 [高可用性解決方案 &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)。  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 55d1f88c1eb33a29f942adf9a3aec7393d77a598
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ee31966149cbae9ef8264643ee02fbef92f7078
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135153"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234848"
 ---
 # <a name="publication-properties----ltpublicationgt"></a>發行集屬性 - &lt;發行集&gt;
   此章節提供 **[發行集屬性]** 對話方塊之所有頁面的資訊：  

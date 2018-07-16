@@ -1,5 +1,5 @@
 ---
-title: 準備好要預備映像 |Microsoft 文件
+title: 準備好要準備映像 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a19342a0-cd90-4825-aec5-d7c54275cc98
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2205090ba8e073a8e281f63a6050164235f3abe4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: addf3180ce99129e92559f5f662fffbd85d0679a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194458"
 ---
 # <a name="ready-to-prepare-image"></a>準備好要預備映像
   **[準備開始預備映像]** 頁面會提供將由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式準備之功能的摘要。  

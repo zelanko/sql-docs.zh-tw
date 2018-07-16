@@ -1,5 +1,5 @@
 ---
-title: 特徵選取 （資料採礦） |Microsoft 文件
+title: 特徵選取 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
 - attributes [data mining]
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 35afd46d2956cd61669e9a4ea8168e3e3759ec47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295998"
 ---
 # <a name="feature-selection-data-mining"></a>特徵選取 (資料採礦)
-  *特徵選取*是描述的工具和技術可供輸入降低至可管理的大小進行處理及分析資料採礦中常用的詞彙。 特徵選取表示不僅*基數減少*，這表示諸任意或預先定義的截止上的屬性可以在建立模型，但也屬性，這表示的選擇時考量的數目分析師或模型工具主動選取或捨棄對分析的實用性為基礎的屬性。  
+  *特徵選取*指的是常用於資料採礦，以描述的工具和技術可供輸入降低至可管理的大小，用於處理和分析。 特徵選取隱含不僅*基數減少*，這表示強加任意或預先定義的截止，可以在建立模型，但也屬性，這表示的選擇時考量的屬性數目分析師或模型化工具主動選取或捨棄屬性根據對分析的實用性。  
   
  能夠套用特徵選取對有效分析而言很重要，因為資料集經常包含比建立模型所需還要更多的資訊。 例如，資料集可能包含 500 個資料行來描述客戶的特性，但是如果其中一些資料行的資料很疏鬆，將資料加入至模型所能獲得的效益將非常有限。 如果您在建立此模型時保留不需要的資料行，定型程序期間就會需要更多 CPU 和記憶體，而且完成的模型需要更多儲存空間。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "36034281"
  如果資料來源的 500 個資料行中只有 50 個資料行的資訊對建立模型有用，您可以不將其納入模型，或使用特徵選取技術自動探索最佳的特徵，並排除統計上不重要的值。 特徵選取有助於解決兩個問題：低價值資料過多，或高價值資料過少。  
   
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Analysis Services 資料採礦中的特徵選取  
- 通常，特徵選取中自動執行[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，且每個演算法具有一組預設的技術，以聰明的方式套用特徵減少。 特徵選取一定會在定型模型之前執行，可自動從資料集裡選擇最有可能在模型中使用的屬性。 但是，您也可以手動設定參數以影響特徵選取行為。  
+ 通常，特徵選取中自動執行[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，和每個演算法都有一組預設的技術，用於智慧地套用特徵減少。 特徵選取一定會在定型模型之前執行，可自動從資料集裡選擇最有可能在模型中使用的屬性。 但是，您也可以手動設定參數以影響特徵選取行為。  
   
- 一般而言，特徵選取的運作方式是計算每個屬性的分數，然後僅選取擁有最佳分數的屬性。 您也可以調整高分的臨界值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多個方法來計算這些分數和套用任何模型中的精確方法取決於下列因素：  
+ 一般而言，特徵選取的運作方式是計算每個屬性的分數，然後僅選取擁有最佳分數的屬性。 您也可以調整高分的臨界值。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供多種方法來計算這些分數，並實際套用至任何模型的方法取決於下列因素：  
   
 -   模型中所使用的演算法  
   
@@ -71,9 +71,9 @@ ms.locfileid: "36034281"
  下一節將描述每個特徵選取方法。  
   
 #### <a name="interestingness-score"></a>有趣性分數  
- 如果特徵能告訴您一些有用的資訊，就具備「有趣性」。 因為有用的定義會有所差異，視案例而定，資料採礦業界已開發出各種方式來測量*有趣性*。 例如，*新式*可能很有趣極端值偵測，還能夠區分緊密相關的項目，或 *「 辨識權重*，可能更有趣的分類。  
+ 如果特徵能告訴您一些有用的資訊，就具備「有趣性」。 有用的定義會因案例而異，因為資料採礦業界已開發各種方式來測量*有趣性*。 例如，*新奇*可能很有趣極端值偵測，但能夠區別密切相關的項目，或*稱為 「 辨識權重*，可能更有趣的分類。  
   
- 使用 SQL Server Analysis Services 中的 「 有趣性 」 量值*熵為基礎*，亦即，具有隨機散發的屬性具有較高的熵和較低的資訊優勢; 因此，這類屬性小於有趣的。 任何特定屬性的熵都會與所有其他屬性的熵進行比較，如下所示：  
+ 使用 SQL Server Analysis Services 中的 「 有趣 」 的量值*熵為基礎*，這表示具有隨機散發的屬性具有較高的熵和較低的資訊優勢，因此，這類屬性會是小於有趣的。 任何特定屬性的熵都會與所有其他屬性的熵進行比較，如下所示：  
   
  Interestingness(Attribute) = - (m - Entropy(Attribute)) * (m - Entropy(Attribute))  
   

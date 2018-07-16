@@ -1,5 +1,5 @@
 ---
-title: Tuples 元素 (XMLA) |Microsoft 文件
+title: Tuples 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Tuples element
 ms.assetid: 5494bbaa-c1aa-43fa-b3e0-83befb2bccdd
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: da9614fb01620a3dec5bdff9f63d044652a4749b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 5e5f6f1dbddea4e5e962d30f352c254b0f2a7a80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254590"
 ---
 # <a name="tuples-element-xmla"></a>Tuples 元素 (XMLA)
-  包含一組[Tuple](tuple-element-xmla.md)物件[軸](axis-element-xmla.md)項目，會使用[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
+  包含一組[Tuple](tuple-element-xmla.md)物件[軸](axis-element-xmla.md)使用的項目[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,13 +63,13 @@ ms.locfileid: "36135011"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[Axis](axis-element-xmla.md)|  
-|子元素|[tuple](tuple-element-xmla.md)|  
+|子元素|[元組](tuple-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- 當用戶端應用程式設定`AxisFormat`屬性*TupleFormat*，軸就會表示為一組 tuple。 每個 `Axis` 元素都包含代表該軸上 Tuple 集合的 `Tuples` 元素。 每個 tuple 由使用`Tuple`包含項目[成員](member-element-xmla.md)軸上每個階層的項目。  
+ 當用戶端應用程式設定`AxisFormat`屬性，以*TupleFormat*，軸就會表示為一組 tuple。 每個 `Axis` 元素都包含代表該軸上 Tuple 集合的 `Tuples` 元素。 每個 tuple 由使用`Tuple`包含的項目[成員](member-element-xmla.md)軸上每個階層中的項目。  
   
 ## <a name="example"></a>範例  
- 下列範例說明結構`Tuples`時用戶端指定項目*TupleFormat*或*CustomFormat*如`AxisFormat`XML for Analysis (XMLA) 屬性假設軸具有下列成員：  
+ 下列範例說明的結構`Tuples`時用戶端指定的項目*TupleFormat*或是*CustomFormat*的`AxisFormat`XML for Analysis (XMLA) 屬性假設軸具有下列成員：  
   
 |||||  
 |-|-|-|-|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
@@ -16,13 +16,13 @@ ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4b9b26dab6040c5ca98fdf11271233415f163906
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d8b6de50b412029a69ecb0ac2f90406cb26fa50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137024"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224778"
 ---
 # <a name="manage-my-data-alerts-in-data-alert-manager"></a>在資料警示管理員中管理我的資料警示
   SharePoint 使用者可以檢視自己所建立資料警示的清單，以及警示的相關資訊。 使用者還可以在 [資料警示設計工具] 中刪除自己的警示、開啟警示定義進行編輯，以及執行自己的警示。 下圖說明 [資料警示管理員] 中可供使用者使用的功能。  
@@ -50,7 +50,7 @@ ms.locfileid: "36137024"
   
 -   以滑鼠右鍵按一下要編輯其警示定義的資料警示，然後按一下 [編輯]。  
   
-     警示定義會在 [資料警示設計工具] 中開啟。 如需詳細資訊，請參閱[編輯資料警示在警示設計工具中](edit-a-data-alert-in-alert-designer.md)和[資料警示設計工具](../../2014/reporting-services/data-alert-designer.md)。  
+     警示定義會在 [資料警示設計工具] 中開啟。 如需詳細資訊，請參閱 <<c0> [ 編輯資料警示在警示設計工具](edit-a-data-alert-in-alert-designer.md)並[資料警示設計工具](../../2014/reporting-services/data-alert-designer.md)。  
   
     > [!NOTE]  
     >  只有建立資料警示定義的使用者才能進行編輯。  

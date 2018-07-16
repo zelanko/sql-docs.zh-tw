@@ -5,10 +5,9 @@ ms.date: 09/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - Azure SQL Database
 - SQL Server 2014
@@ -41,15 +40,15 @@ helpviewer_keywords:
 - groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 981112bd47f6a75bd633e5baa1046abf56e14669
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 337252b4b5203003bc6bec6b44b12d86183ab343
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188055"
 ---
 # <a name="database-level-roles"></a>資料庫層級角色
   為了輕鬆管理資料庫中的權限， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供了幾個 *「角色」* (Role)，這些角色是分組其他主體的安全性主體。 它們就像是 ***Windows 作業系統中的*** 群組 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 。 資料庫層級角色的權限範圍為整個資料庫。  
@@ -86,7 +85,7 @@ ms.locfileid: "36135355"
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|這些資料庫角色的成員可以管理和使用資料收集器。 如需相關資訊，請參閱 [Data Collection](../../data-collection/data-collection.md)。|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 資料庫角色的成員可以在以原則為基礎的管理原則和條件上執行所有組態和維護活動。 如需詳細資訊，請參閱 [使用原則式管理來管理伺服器](../../policy-based-management/administer-servers-by-using-policy-based-management.md)。|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|這些資料庫角色的成員可以管理和使用已註冊的伺服器群組。|  
-|**dbm_monitor**|在中建立`msdb`時資料庫鏡像監視器 」 中註冊第一個資料庫的資料庫。 **dbm_monitor** 角色沒有任何成員，必須由系統管理員指派使用者給該角色。|  
+|**dbm_monitor**|在中建立`msdb`時資料庫鏡像監視器 」 中註冊的第一個資料庫的資料庫。 **dbm_monitor** 角色沒有任何成員，必須由系統管理員指派使用者給該角色。|  
   
 > [!IMPORTANT]  
 >  db_ssisadmin 角色和 dc_admin 角色的成員可以將其權限提高為系統管理員 (sysadmin)。 之所以能夠進行此權限提高，是因為這些角色可以修改 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝，而且 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 可藉由使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 的 sysadmin 安全性內容由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行。 若要在執行維護計畫、資料收集組和其他 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝時預防此權限提高，請將執行封裝的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 作業設為使用有限權限的 Proxy 帳戶，或是只將系統管理員 (sysadmin) 成員加入 db_ssisadmin 和 dc_admin 角色。  

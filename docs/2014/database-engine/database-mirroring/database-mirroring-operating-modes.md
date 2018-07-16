@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 33e05c5d9e4e400ddc240bfd5bd4630801765164
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9b1519c49181be681fa6ced527d1db14f488aaf1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176515"
 ---
 # <a name="database-mirroring-operating-modes"></a>資料庫鏡像作業模式
   本主題描述資料庫鏡像工作階段的同步與非同步作業模式。  
@@ -50,7 +49,7 @@ ms.locfileid: "36136069"
  本節描述非同步資料庫鏡像如何運作、適合使用高效能模式的時機，以及主體伺服器失敗時如何回應。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的大部分版本僅支援同步資料庫鏡像 (「僅限 Safety Full」)。 哪些版本完全支援資料庫鏡像的相關資訊，請參閱 < 高可用性 (AlwaysOn) >，在[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的大部分版本僅支援同步資料庫鏡像 (「僅限 Safety Full」)。 哪些版本完全支援資料庫鏡像的資訊，請參閱 < 高可用性 (AlwaysOn) >，在[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  當交易安全性設為 OFF 時，資料庫鏡像工作階段就會以非同步的方式運作。 非同步作業只支援一種作業模式：高效能模式。 這種模式可提高效能，但代價是會降低高可用性。 高效能模式僅需使用主體伺服器與鏡像伺服器。 而鏡像伺服器方面的問題絕不會影響到主體伺服器。 如果主體伺服器失效，鏡像資料庫會標示為 DISCONNECTED，但仍可當做暖待命資料庫使用。  
   
@@ -226,7 +225,7 @@ ms.locfileid: "36136069"
   
  <sup>1</sup>如果見證中斷連接，我們建議您設定 WITNESS OFF，直到見證伺服器執行個體可用為止。  
   
- <sup>2</sup>如果見證在高效能模式中，見證並不會參與工作階段。 不過，若要讓資料庫可供使用，必須至少有兩個伺服器執行個體保持連接。 因此，建議您讓 WITNESS 屬性在高效能模式工作階段中保持設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
+ <sup>2</sup>如果在高效能模式中有見證，見證並不會參與工作階段。 不過，若要讓資料庫可供使用，必須至少有兩個伺服器執行個體保持連接。 因此，建議您讓 WITNESS 屬性在高效能模式工作階段中保持設定為 OFF。 如需詳細資訊，請參閱[仲裁：見證如何影響資料庫可用性 &#40;資料庫鏡像&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)。  
   
 ###  <a name="ViewWitness"></a> 檢視安全性設定和見證狀態  
  若要檢視資料庫的安全性設定和見證狀態，請使用 **sys.database_mirroring** 目錄檢視。 相關的資料行如下：  

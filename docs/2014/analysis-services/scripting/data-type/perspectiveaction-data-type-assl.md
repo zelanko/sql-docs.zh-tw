@@ -1,5 +1,5 @@
 ---
-title: PerspectiveAction 資料類型 (ASSL) |Microsoft 文件
+title: PerspectiveAction 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveAction data type
 ms.assetid: a0e4a545-688c-4d4e-b05f-0008d3503349
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 70e3e3df8f864c862dd101b97eeeabb63066e051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8886962d5b2014d3cdaa466861d4693319d21d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034256"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316908"
 ---
 # <a name="perspectiveaction-data-type-assl"></a>PerspectiveAction 資料類型 (ASSL)
   定義代表中動作的相關資訊的基本資料類型[觀點來看](../objects/perspective-element-assl.md)項目。  
@@ -58,10 +58,10 @@ ms.locfileid: "36034256"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[ActionID](../properties/id-element-assl.md)，[註解](../collections/annotations-element-assl.md)|  
-|衍生的元素|[動作](../objects/action-element-assl.md)([動作](../collections/actions-element-assl.md)集合[觀點來看](../objects/perspective-element-assl.md))|  
+|衍生的元素|[動作](../objects/action-element-assl.md)([動作](../collections/actions-element-assl.md)的集合[觀點來看](../objects/perspective-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveAction>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveAction>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

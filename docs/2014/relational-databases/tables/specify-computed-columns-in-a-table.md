@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cc44d75cd4ab87623c84eff94f6569872038c1a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0e70c9c5e8060e4cd2daace9c4997ea324533106
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134365"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234898"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>指定資料表中的計算資料行
   計算資料行是一個虛擬資料行，除非資料行標示了 PERSISTED，否則，並未實際儲存在資料表中。 計算資料行運算式可以使用來自其他資料行的資料來計算其所屬資料行的值。 您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中指定計算資料行的運算式。  
@@ -66,7 +66,7 @@ ms.locfileid: "36134365"
 4.  在 [(Formula)] 子屬性右邊的方格資料格中，輸入此資料行的運算式。 例如，在 `SalesTotal` 資料行中，您輸入的公式可能是 `SubTotal+TaxAmt+Freight`，該公式會將資料表中每一個資料列的這些資料行中的值相加。  
   
     > [!IMPORTANT]  
-    >  當一個公式結合兩個不同資料類型的運算式時，資料類型優先順序的規則，會指定將低優先順序的資料類型，轉換為高優先順序的資料類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤 "`Error validating the formula for column column_name.`"。 使用 CAST 或 CONVERT 函數解決資料類型衝突。 例如，如果類型的資料行`nvarchar`與類型的資料行結合`int`，整數型別必須可轉換成`nvarchar`此公式中所示`('Prod'+CONVERT(nvarchar(23),ProductID))`。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
+    >  當一個公式結合兩個不同資料類型的運算式時，資料類型優先順序的規則，會指定將低優先順序的資料類型，轉換為高優先順序的資料類型。 如果轉換不是支援的隱含轉換，就會傳回錯誤 "`Error validating the formula for column column_name.`"。 使用 CAST 或 CONVERT 函數解決資料類型衝突。 比方說，如果類型的資料行`nvarchar`結合類型的資料行`int`，則整數類型必須轉換成`nvarchar`在此公式中所示`('Prod'+CONVERT(nvarchar(23),ProductID))`。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
 5.  藉由從 [Is Persisted] 子屬性的下拉式清單中選擇 [是] 或 [否]，指示資料是否為永續性。  
   

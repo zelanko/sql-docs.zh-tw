@@ -1,5 +1,5 @@
 ---
-title: Timeout 元素 (ASSL) |Microsoft 文件
+title: Timeout 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Timeout element
 ms.assetid: 7694872b-bd05-459f-b5dc-3cfbd92a9664
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 07aeb620045b3b53bb04369abfd16b0a500f9172
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a9069f5ec57d313b89342533d79e66f8c021604e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269554"
 ---
 # <a name="timeout-element-assl"></a>Timeout 元素 (ASSL)
   指定一段時間 (以秒為單位)，經過這段時間之後，嘗試擷取資料的行為就會回報逾時。  
@@ -62,7 +62,7 @@ ms.locfileid: "36135018"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`Timeout`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DataSource>。  
+ 對應至父系的元素`Timeout`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DataSource>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 caps.latest.revision: 4
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 914a9b9d74c360e466919770b2b749a0f0c00920
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a1d2a85cc2409820165b151542dc1152eda83e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166799"
 ---
 # <a name="transact-sql-code-snippets"></a>Transact-SQL 程式碼片段
   [!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼片段是包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或區塊之基本結構的範本。 當您在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器中加入陳述式時，您可以使用程式碼片段做為起點。 您可以插入 SQL Server 所提供的預先定義程式碼片段，或是建立您自己的程式碼片段。  

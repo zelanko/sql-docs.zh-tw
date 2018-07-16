@@ -14,15 +14,15 @@ helpviewer_keywords:
 - 0x8007052f (WMI error)
 ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d9fd50d33dbcc60cddf03a04d439f3b8630152a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4921cfae222bf6ce31a8aae4e8738bfac1bf4bc8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "35999954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311298"
 ---
 # <a name="wmi-error-0x8007052f"></a>WMI 錯誤 0x8007052f
     

@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Basic.NET 開始使用 |Microsoft 文件
+title: 在 Visual Basic.NET 中開始使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5db9b2a724249849f3dc2b118533bd4281065f01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: aca8e62859da23d3a6b4749ae387fb12ee6c9d9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192371"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Visual Basic .NET 使用者入門
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET 是 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 的通用執行階段程式庫所支援其中一種 Managed 程式語言。 本文件集的許多範例都是以 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 撰寫。 您可以使用 [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] 和 [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] 來開發 SMO 應用程式。  
@@ -35,6 +35,6 @@ ms.locfileid: "36137412"
  在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，SMO 組件位於 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] 資料夾內。  
   
 ## <a name="see-also"></a>另請參閱  
- [在 Visual Studio.NET 中建立 Visual Basic SMO 專案](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
+ [在 Visual Studio .NET 中建立 Visual Basic SMO 專案](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
   
   

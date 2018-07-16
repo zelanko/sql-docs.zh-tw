@@ -1,33 +1,32 @@
 ---
-title: 全文檢索目錄屬性 （一般頁面） |Microsoft 文件
+title: 全文檢索目錄屬性 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 caps.latest.revision: 34
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc774b0dfd87ae4f63e9332dd6813d92f79e4a5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc0d0c6e287d978b0a10979843a50f40f906872b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169320"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>全文檢索目錄屬性 (一般頁面)
   本章節會顯示在 **[全文檢索目錄屬性]** 對話方塊的 **[一般]** 頁面上，可以使用的選項和功能。  
   
 > [!NOTE]  
->  如[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]資料庫中，全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。  
+>  針對[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]資料庫的全文檢索目錄是參考一組全文檢索索引的邏輯概念。 全文檢索目錄是不屬於任何檔案群組的虛擬物件。  
   
 ## <a name="options"></a>選項。  
   
@@ -44,13 +43,13 @@ ms.locfileid: "36136471"
   
 -   **已暫停**  
   
--   **節流**  
+-   **節流處理**  
   
 -   **復原**  
   
 -   **關機**  
   
--   **累加母體擴展正在進行中**  
+-   **累加母體擴展進行中**  
   
 -   **正在建立索引**  
   
@@ -61,7 +60,7 @@ ms.locfileid: "36136471"
  **項目計數**  
  顯示目錄中全文檢索項目的數目。  
   
- **類別目錄大小**  
+ **目錄大小**  
  顯示全文檢索目錄的大小，以 MB 為單位。  
   
  **名稱**  
@@ -74,7 +73,7 @@ ms.locfileid: "36136471"
   
 -   **是**  
   
--   變音符號的相關資訊，請參閱[變音符號](http://go.microsoft.com/fwlink/?LinkId=154091)中 MSN Encarta Encyclopedia 上。  
+-   變音符號標記的相關資訊，請參閱[變音符號記號](http://go.microsoft.com/fwlink/?LinkId=154091)在 MSN Encarta Encyclopedia 上。  
   
  **上次母體擴展日期**  
  顯示目錄上次擴展的日期。  

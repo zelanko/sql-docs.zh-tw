@@ -1,5 +1,5 @@
 ---
-title: 選取報表類型 |Microsoft 文件
+title: 選取報表類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.selectreporttype.f1
 ms.assetid: 725bf110-31a9-4220-afaa-c56c0a39d458
 caps.latest.revision: 23
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0a42c7e0b88b09a1775d9aef3fe370f5f2de3860
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b7d904fdf529ee06caa1c11c20978dd8753454a4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249608"
 ---
 # <a name="select-the-report-type"></a>選取報表類型
   使用報表精靈的這個頁面，即可選取表格式報表或矩陣報表。  

@@ -1,5 +1,5 @@
 ---
-title: 設定 Distributed 的 Replay |Microsoft 文件
+title: 設定 Distributed 的 Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98385aae3bea4eff6227edc4a99807f4d2625775
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c213c892403e4d6bdf527601f5f7482ebb7e2ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135071"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189645"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 組態詳細資料指定於 Distributed Replay Controller、Client 以及安裝管理工具所在的 XML 檔案中。 這些檔案包括下列各項：  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 組態詳細資料指定於 Distributed Replay Controller、Client 以及安裝管理工具所在的 XML 檔案中。 這些檔案包括下列各項：  
   
 -   [控制器組態檔](#DReplayController)  
   
@@ -135,7 +135,7 @@ ms.locfileid: "36135071"
 |查詢逾時|`<QueryTimeout>`|指定查詢逾時值 (以秒為單位)。 此值只在傳回第一個資料列之前有效。|>= 1 的整數<br /><br /> (`-1` 表示停用)|資料分割 根據預設，此值為 `3600`。|  
 |每個用戶端的執行緒|`<ThreadsPerClient>`|指定要用於每個重新執行用戶端的重新執行執行緒數目。|介於 `1` 與 `512`之間的整數。|資料分割 如果未指定，則 Distributed Replay 會使用值 `255`。|  
   
-### <a name="outputoptions-element"></a>\<P > 項目  
+### <a name="outputoptions-element"></a>\<O > 元素  
  重新執行組態檔在 `<OutputOptions>` 元素中指定的設定如下：  
   
 |設定|XML 元素|描述|允許的值|必要項|  
@@ -168,7 +168,7 @@ ms.locfileid: "36135071"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [系統管理工具命令列選項&#40;分散式重新執行公用程式&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [系統管理工具命令列選項&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed 的 Replay](sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay 論壇](http://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [使用 Distributed Replay 對您的 SQL Server 進行負載測試 – 第 2 部分](http://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   

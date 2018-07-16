@@ -1,5 +1,5 @@
 ---
-title: PropertyRef 元素 (CSDLBI) |Microsoft 文件
+title: PropertyRef 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8299efb9-e224-4a82-bdfc-a74ec92f8711
 caps.latest.revision: 4
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1b4d64cc0e0e59029361412bc96bd98559be51b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ba547a44d587851b98249d4a2980645241698b32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231888"
 ---
 # <a name="propertyref-element-csdlbi"></a>PropertyRef 元素 (CSDLBI)
   PropertyRef 元素是簡單類型，可提供為另一個屬性提供所需值的資料行參考。  
@@ -28,16 +28,16 @@ ms.locfileid: "36133326"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 PropertyRef 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
-|[屬性]|是|字串，包含做為參考目標之屬性的名稱。|  
+|名稱|是|字串，包含做為參考目標之屬性的名稱。|  
   
 ## <a name="propertyrefs-element"></a>PropertyRefs 元素  
  PropertyRefs 是複雜類型，用於定義屬性集合，其中每個屬性都包含在 PropertyRef 元素中。  
   
  下表列出 PropertyRefs 類型的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |PropertyRef|是|包含屬性參考的字串。|  
   

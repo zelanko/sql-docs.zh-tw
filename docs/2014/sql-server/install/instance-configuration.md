@@ -1,5 +1,5 @@
 ---
-title: 執行個體組態 |Microsoft 文件
+title: 執行個體組態 |Microsoft Docs
 ms.custom: ''
 ms.date: 2016-05-04
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 caps.latest.revision: 60
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 757b29a54828816de27559715e88b337bd5a06a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bdcfdc34d61b38992c44a220b7b58041cd496200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134862"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274324"
 ---
 # <a name="instance-configuration"></a>執行個體組態
   請使用 **安裝精靈的** [執行個體組態] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 頁面，指定要建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的預設執行個體還是具名執行個體。 如果尚未安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體，則除非您指定具名執行個體，否則將會建立預設執行個體。  
@@ -65,7 +65,7 @@ ms.locfileid: "36134862"
   
 -   如果您為執行個體名稱指定 MSSQLServer，將會建立預設執行個體。  
   
--   安裝[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]一律會安裝成 'Powerpivot' 具名執行個體。 您無法針對這個功能角色指定不同的執行個體名稱。  
+-   安裝[!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]永遠都會安裝成 'Powerpivot' 具名執行個體。 您無法針對這個功能角色指定不同的執行個體名稱。  
   
 -   執行個體名稱限制為 16 個字元。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36134862"
   
 -   執行個體名稱中不允許內嵌空格或其他特殊字元。 此外，也不允許反斜線 (\\)、逗號 (,)、冒號 (:)、分號 (;)、單引號 (')、＆ 符號 (&)、連字號 (-) 和 At 符號 (@)。  
   
--   **只有目前 Windows 字碼頁中是有效的字元可以用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體名稱。如果使用不支援的 Unicode 字元時，會發生安裝錯誤。**  
+-   **只有在目前的 Windows 字碼頁中有效的字元可以用於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體名稱。如果使用不支援的 Unicode 字元時，會發生安裝錯誤。**  
   
  **偵測到的執行個體和功能**  
  在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的電腦上檢視已安裝的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和元件的清單。  

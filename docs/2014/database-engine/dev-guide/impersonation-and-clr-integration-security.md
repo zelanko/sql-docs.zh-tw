@@ -1,5 +1,5 @@
 ---
-title: 模擬和 CLR 整合安全性 |Microsoft 文件
+title: 模擬和 CLR 整合安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e5863ed19f306fbaf88cffd02903a958c63cfe0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 05b117f27d0c27ca9288f94aade079df876fafad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243198"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>模擬和 CLR 整合安全性
   當 Managed 程式碼存取外部資源時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不會自動模擬用來執行常式的目前執行內容。 `EXTERNAL_ACCESS` 和 `UNSAFE` 組件中的程式碼可以明確模擬目前的執行內容。  
   
 > [!NOTE]  
->  如需模擬中行為變更的資訊，請參閱[SQL Server 2014 中對於 Database Engine 功能的突破性變更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  如需模擬中行為變更的資訊，請參閱[SQL Server 2014 中的 Database Engine 功能的突破性變更](../breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
  同處理序資料存取提供者會提供應用程式開發介面 `SqlContext.WindowsIdentity`，可用來擷取與目前安全性內容相關聯的 Token。 `EXTERNAL_ACCESS` 和 `UNSAFE` 組件中的 Managed 程式碼可以使用這個方法來擷取此內容並使用 .NET Framework `WindowsIdentity.Impersonate` 方法來模擬該內容。 使用者程式碼明確模擬時適用下列限制：  
   

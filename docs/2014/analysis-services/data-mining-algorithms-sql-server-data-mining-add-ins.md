@@ -1,5 +1,5 @@
 ---
-title: 資料採礦演算法 （SQL Server 資料採礦增益集） |Microsoft 文件
+title: 資料採礦演算法 （SQL Server 資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation
 - data mining algorithms
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - time series [data mining]
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ea33a6ee29965202189fd4149c243df3d1d91df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8cbcfbeae8691fb76daa6fa9231274040b52c23c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288534"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>資料採礦演算法 (SQL Server 資料採礦增益集)
   適用於 Office 的資料採礦增益集支援使用下列資料採礦演算法建立分析模型。 所有的演算法都是根據已知的機器學習方法而由 Microsoft Research 實作過。  
@@ -63,6 +63,6 @@ ms.locfileid: "36136095"
   
 ## <a name="see-also"></a>另請參閱  
  [查詢&#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)   
- [進階模型&#40;資料採礦 excel 增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
+ [進階模型化&#40;資料採礦適用於 Excel 的增益集&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
   
   

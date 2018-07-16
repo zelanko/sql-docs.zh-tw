@@ -1,5 +1,5 @@
 ---
-title: Translation 元素 (XMLA) |Microsoft 文件
+title: Translation 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Translation element
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 63072fae7d585f18fdc3b3bc1da5ffbef5bb9b8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ce94966eae0cb1088ff462f551bdd27ad4304ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180785"
 ---
 # <a name="translation-element-xmla"></a>Translation 元素 (XMLA)
   定義屬性成員的翻譯。  
@@ -67,7 +67,7 @@ ms.locfileid: "36136933"
 |子元素|[語言](language-element-xmla.md)，[名稱](name-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- A`Translation`項目會定義產生關聯之期間的指定屬性定義的翻譯的屬性成員所需的資訊[插入](../xml-elements-commands/insert-element-xmla.md)或[更新](../xml-elements-commands/update-element-xmla.md)命令。  
+ A`Translation`項目會定義將屬性成員定義的期間指定的屬性轉譯為所需的資訊[插入](../xml-elements-commands/insert-element-xmla.md)或是[更新](../xml-elements-commands/update-element-xmla.md)命令。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  

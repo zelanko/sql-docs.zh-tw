@@ -1,14 +1,13 @@
 ---
-title: 使用物件總管詳細資料監視可用性群組 (SQL Server Management Studio) |Microsoft 文件
+title: 使用物件總管詳細資料監視可用性群組 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.OEdetails.f1
 helpviewer_keywords:
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 29e86a6914ced21ac6c5941c2f728b18da2c7f9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ffadee68a6990a193d794a9af714fd7cd7f5ea08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282197"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>使用物件總管詳細資料監視可用性群組 (SQL Server Management Studio)
   此主題描述如何使用 **的** [物件總管詳細資料] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 窗格來監視及管理現有 AlwaysOn 可用性群組、可用性複本和可用性資料庫。  
@@ -91,7 +90,7 @@ ms.locfileid: "36133768"
   
  可能的值如下：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**不允許連接**|當此可用性複本做為次要複本時，不允許直接連接到可用性資料庫。 次要資料庫不適用於讀取。|  
 |**只允許讀取意圖的連接**|當此複本做為次要複本時，只允許進行直接唯讀連接。 可讀取複本中的所有資料庫。|  
@@ -100,7 +99,7 @@ ms.locfileid: "36133768"
  **連接狀態**  
  指出次要複本目前是否已連接到主要複本。 可能的值如下：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**已中斷連接**|若為遠端可用性複本，表示它與本機可用性複本已中斷連接。 本機複本對 [已中斷連接] 狀態的回應取決於其角色，如下所示：<br /><br /> 在主要複本上，如果次要複本已中斷連接，主要複本上的次要資料庫就會標示為 **[未同步處理]** ，而且主要複本會等候次要複本重新連接。<br /><br /> 在次要複本上，一旦偵測到它已中斷連接之後，次要複本就會嘗試重新連接到主要複本。|  
 |**已連接**|目前連接到本機複本的遠端可用性複本。|  
@@ -109,7 +108,7 @@ ms.locfileid: "36133768"
  **同步處理狀態**  
  指出次要複本目前是否與主要複本進行同步處理。 可能的值如下：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**[未同步處理]**|資料庫未同步處理或者尚未聯結至可用性群組。|  
 |**已同步處理**|資料庫會與目前主要複本 (如果有的話) 或最後一個主要複本的主要資料庫進行同步處理。<br /><br /> 注意：在效能模式中，資料庫永遠不會處於同步處理狀態。|  
@@ -129,14 +128,14 @@ ms.locfileid: "36133768"
   
  可能的同步處理狀態如下所示：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意：在非同步認可模式中，同步處理模式一律為 **正在同步處理**。|  
   
  **已暫停**  
  指出可用性資料庫目前是否已上線。 可能的值如下：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**已暫停**|此狀態指出資料庫在本機已暫停，需要手動恢復。<br /><br /> 在主要複本上，此值對次要資料庫是不可靠的。 若要可靠地判斷次要資料庫是否已暫止，請在裝載此資料庫的次要複本上查詢它。|  
 |**未聯結**|指出次要資料庫尚未聯結至可用性群組或已從群組中移除。|  

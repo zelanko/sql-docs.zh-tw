@@ -1,5 +1,5 @@
 ---
-title: 在 [管理中心] 的 SharePoint Web 應用程式將 PowerPivot 服務應用程式連接 |Microsoft 文件
+title: PowerPivot 服務應用程式連接到 SharePoint Web 應用程式，在 [管理中心] |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6e2f65e97eaff15057b5d427a09f015b7bcdd218
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0e206306e959df9e61e2f07d842fad7900cabb9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272024"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>在管理中心將 PowerPivot 服務應用程式連接到 SharePoint Web 應用程式
   PowerPivot 服務應用程式可由伺服陣列中任何數目的 SharePoint Web 應用程式使用。 若要讓 PowerPivot 服務應用程式可用，請將它加入至服務關聯清單。  
@@ -63,6 +63,6 @@ ms.locfileid: "36135712"
   
 ## <a name="see-also"></a>另請參閱  
  [建立並在管理中心設定 PowerPivot 服務應用程式](create-and-configure-power-pivot-service-application-in-ca.md)   
- [初始組態&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
+ [初始設定&#40;PowerPivot for SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   
   

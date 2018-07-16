@@ -1,5 +1,5 @@
 ---
-title: 選取資料表對話方塊 （採礦精確度圖表檢視） |Microsoft 文件
+title: 選取資料表對話方塊 （採礦精確度圖表檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.selecttable.f1
 helpviewer_keywords:
 - Select Table dialog box
 ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4ee1ec37ce45378ff0a310b51b340ef2bcf08138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7bd479724ba2d109d2ae7b107ea535a5663cb09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285874"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>選取資料表對話方塊 (採礦精確度圖表檢視)
   使用 **[選取資料表]** 對話方塊，即可選取資料表，用來測試所選取採礦結構包含之採礦模型的精確度。  

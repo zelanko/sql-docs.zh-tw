@@ -1,5 +1,5 @@
 ---
-title: 設定資料檢視器 （方格索引標籤） |Microsoft 文件
+title: 設定資料檢視器 （方格索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.configuredataviewer.grid.f1
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: ec4261d1-2799-4af8-9706-06b8c62d2fdf
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9e0a47d42d280507c8e2e6068cc72c7e5bb2b4c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9eaab37c5f23becd7cf16a2c0997855270011ce1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285574"
 ---
 # <a name="configure-data-viewer-grid-tab"></a>設定資料檢視器 (方格索引標籤)
   使用 [設定資料檢視器] 對話方塊的 [方格] 索引標籤，即可指定要顯示的資料行。 方格圖表會將資料記錄顯示為方格中的資料列。 圖表只會反映一個緩衝區的內容。  

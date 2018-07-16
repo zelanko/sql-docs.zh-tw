@@ -1,5 +1,5 @@
 ---
-title: AggregationInstanceCubeDimension 資料類型 (ASSL) |Microsoft 文件
+title: AggregationInstanceCubeDimension 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationInstanceCubeDimension data type
 ms.assetid: b321ad9e-f034-4a7b-b0b7-8ba5fb162e7e
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73a553a301819d8c71ab3464bbace93c00e59e91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1e6c6cc46c975eb89b1ecde559f87328005eb7a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237518"
 ---
 # <a name="aggregationinstancecubedimension-data-type-assl"></a>AggregationInstanceCubeDimension 資料類型 (ASSL)
   定義代表彙總執行個體所使用之 Cube 維度相關資訊的基本資料類型。  

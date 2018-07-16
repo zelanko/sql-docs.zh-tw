@@ -1,5 +1,5 @@
 ---
-title: 建立及查詢使用 DMX 資料採礦模型： 教學課程 (Analysis Services-資料採礦) |Microsoft 文件
+title: 建立及查詢使用 DMX 資料採礦模型： 教學課程 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 145b81a7-c0c3-4ca3-bb32-0b482423b9a0
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 46a60e6fc75613b2f763a31185f3e3861b125fc5
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 93bdf0ee8ed305e9e3843b011ce8057894b8b287
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234400"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>使用 DMX 建立並查詢資料採礦模型：教學課程 (Analysis Services - 資料採礦)
-  使用建立資料採礦方案之後[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，您可以建立查詢，針對資料採礦模型來預測趨勢、 擷取資料模式以及測量採礦模型的精確度。  
+  您已使用，以建立資料採礦方案之後[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，您可以建立查詢，針對資料採礦模型來預測趨勢、 擷取資料中的模式以及測量採礦模型的精確度。  
   
- 下列清單中的逐步教學課程將協助您了解如何建置和執行資料採礦查詢使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]以便您可以充分運用您的資料。  
+ 下列清單中的逐步教學課程將協助您了解如何建置和執行資料採礦查詢使用[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，讓您可以充分運用您的資料。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [Bike Buyer DMX 教學課程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)  
+-   [自行車買主 DMX 教學課程](../../2014/tutorials/bike-buyer-dmx-tutorial.md)  
   
      本教學課程會引導您使用資料採礦延伸模組 (DMX) 語言建立新的採礦結構與採礦模型，並說明如何建立 DMX 預測查詢。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.summary.report.f1
 - sql12.swb.summary.general.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 45c9e3808bb3d546441060431c0d311f22c95904
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a24c1f4e695b86d27737dc09df33a7a91f2bdac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313131"
 ---
 # <a name="object-explorer-details-pane"></a>物件總管詳細資料窗格
   [物件總管詳細資料] 是 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的元件，它會提供伺服器中所有物件的表格式檢視，並且呈現可管理這些物件的使用者介面。 物件總管的功能會隨著伺服器的類型而稍有不同，不過，它通常會包括資料庫的開發功能，以及所有伺服器類型的管理功能。  
@@ -91,7 +91,7 @@ ms.locfileid: "36030932"
 ## <a name="sql-server-object-search"></a>SQL Server 物件搜尋  
  萬用字元  
   
--   支援標準的萬用字元。 例如，搜尋 **dm_os%counters** 就會傳回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 如需詳細資訊，請參閱[使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)。  
+-   支援標準的萬用字元。 例如，搜尋 **dm_os%counters** 就會傳回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 如需詳細資訊，請參閱 <<c0> [ 使用萬用字元搜尋文字](../../relational-databases/scripting/search-text-with-wildcards.md)。  
   
  搜尋範圍  
   

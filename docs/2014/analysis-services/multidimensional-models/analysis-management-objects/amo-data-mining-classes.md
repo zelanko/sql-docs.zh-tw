@@ -1,5 +1,5 @@
 ---
-title: AMO 資料採礦類別 |Microsoft 文件
+title: AMO 資料採礦類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 091d68fedffc16d57834a02cfcbd8ef3a6c2d087
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbea4d55066e2de5061d75c2b40092b84e8008ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171639"
 ---
 # <a name="amo-data-mining-classes"></a>AMO 資料採礦類別
   資料採礦類別可協助您建立、修改、刪除和處理資料採礦物件。 處理資料採礦物件包括建立資料採礦結構、建立資料採礦模型和處理模型。  
   
- 如需有關如何設定環境，以及大約<xref:Microsoft.AnalysisServices.Server>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>，和<xref:Microsoft.AnalysisServices.DataSourceView>物件，請參閱[AMO 基礎類別](amo-fundamental-classes.md)。  
+ 如需有關如何設定環境，以及即將<xref:Microsoft.AnalysisServices.Server>， <xref:Microsoft.AnalysisServices.Database>， <xref:Microsoft.AnalysisServices.DataSource>，以及<xref:Microsoft.AnalysisServices.DataSourceView>物件，請參閱[AMO 基礎類別](amo-fundamental-classes.md)。  
   
  定義分析管理物件 (AMO) 中的物件需要在每個物件上設定一些屬性，才能設定正確的內容。 複雜的物件 (例如 OLAP 與資料採礦物件) 需要較長且詳盡的程式碼。  
   

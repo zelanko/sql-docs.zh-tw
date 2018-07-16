@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UAC
 - installing Reporting Services
@@ -20,16 +20,16 @@ ms.assetid: 312c6bb8-b3f7-4142-a55f-c69ee15bbf52
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 80cdb989ed49604f2b860cf8d01ae15ae799f432
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 660a96d968410c2035ff194d83abb3e00c78d35d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133627"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273964"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>設定原生模式報表伺服器進行本機管理 (SSRS)
-  如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您有尚未安裝，或將報表伺服器設定，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)和[管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md).  
+  如果您想要在本機管理報表伺服器執行個體，則在下列其中一個作業系統上部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器需要其他組態步驟。 本主題說明如何設定報表伺服器以進行本機管理。 如果您有尚未安裝，或將報表伺服器設定，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)並[管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md).  
   
 ||  
 |-|  
@@ -170,7 +170,7 @@ ms.locfileid: "36133627"
   
  **若要在每次開啟 SSDT 時都以更高權限執行：**  
   
-1.  從 [開始] 畫面中，輸入`sql server`然後以滑鼠右鍵按一下**SQL Server Data Tools for Visual Studio**。 按一下 **[以系統管理員身分執行]**。  
+1.  從 [開始] 畫面中，輸入`sql server`然後按一下滑鼠右鍵**SQL Server Data Tools for Visual Studio**。 按一下 **[以系統管理員身分執行]**。  
   
      **或者**，在舊版作業系統上：  
   
@@ -187,7 +187,7 @@ ms.locfileid: "36133627"
 -   請參閱本主題稍早的＜ [報表管理員資料夾設定](#bkmk_configure_folder_settings) ＞和＜ [報表管理員網站設定](#bkmk_configure_site_settings) ＞章節。  
   
 ##  <a name="bkmk_addiitonal_informaiton"></a> 其他資訊  
- 與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理相關的額外且常見的組態步驟如下：在 Windows 防火牆中開啟通訊埠 80，以允許存取報表伺服器電腦。 如需指示，請參閱[Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md)。  
+ 與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 管理相關的額外且常見的組態步驟如下：在 Windows 防火牆中開啟通訊埠 80，以允許存取報表伺服器電腦。 如需相關指示，請參閱 <<c0> [ 設定供報表伺服器存取的防火牆](configure-a-firewall-for-report-server-access.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理 Reporting Services 原生模式報表伺服器](manage-a-reporting-services-native-mode-report-server.md)  

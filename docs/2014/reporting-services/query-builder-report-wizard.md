@@ -1,5 +1,5 @@
 ---
-title: 查詢產生器 （報表精靈） |Microsoft 文件
+title: 查詢產生器 （報表精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
 - sql12.rtp.rptwizard.querybuilder.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Query Builder [Reporting Services]
 ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 caps.latest.revision: 21
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9d6e087d2df36209c443eb8411e2439fe7400360
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fef45f5ec6c4b9e0682ea625b2cc84bc8aaa089
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253460"
 ---
 # <a name="query-builder-report-wizard"></a>查詢產生器 (報表精靈)
   使用查詢產生器，即可指定查詢以擷取使用於報表中的結果集。 您可以在兩種查詢產生器之間進行選擇：  
@@ -50,7 +50,7 @@ ms.locfileid: "36134106"
  **命令類型**  
  指定文字、預存程序或直接指定資料表。 命令類型的可用性會視您指定的資料處理延伸模組而定。  
   
- **[查詢] 窗格**  
+ **查詢窗格**  
  輸入查詢。  
   
  **結果窗格**  

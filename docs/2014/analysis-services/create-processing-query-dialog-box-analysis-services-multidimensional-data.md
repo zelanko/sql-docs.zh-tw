@@ -1,5 +1,5 @@
 ---
-title: 建立處理查詢對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 建立處理查詢對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.createprocessingquerydialog.f1
 ms.assetid: c133d624-f35e-486e-be9f-ceafd906f168
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 01633f8b8ce57d3b8953c1694a250cfdb9a64cc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0744aae90a9d3995d5803bca2ccdff31012b5eeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133825"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244098"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>建立處理查詢對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中的 [建立處理查詢] 對話方塊，即可在 [儲存選項] 對話方塊的 [通知] 索引標籤中建立處理查詢。 處理查詢是會傳回資料列集的查詢，資料列集內會包含與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件相關聯之資料表所做的變更，而且會是上一次輪詢資料表之後所做的變更，如此才能累加地更新該物件的多維度 OLAP (MOLAP) 快取。 Analysis Services 使用另一種查詢 (稱為輪詢查詢) 來輪詢與物件相關聯的資料表，並決定是否已變更該資料表。 完全更新物件的 MOLAP 快取時，不需要處理查詢。  
@@ -63,7 +63,7 @@ ms.locfileid: "36133825"
  **工具列**  
  使用工具列即可管理資料集、選取要顯示的窗格和控制各種查詢功能。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**切換到一般查詢產生器**|選取即可只顯示一般查詢產生器檢視可用的選項。 僅會顯示下列選項：<br /><br /> **SQL 窗格**<br /><br /> **結果窗格**<br /><br /> **工具列**，只包含 **[切換到 VDT 查詢產生器]** 和 **[執行]**<br /><br /> 注意：唯有選取 [切換到 VDT 查詢產生器]  才會顯示此選項。|  
 |**切換到 VDT 查詢產生器**|選取即可顯示 Visual Database Tools (VDT) 查詢產生器檢視可用的所有選項。<br /><br /> 注意：唯有選取 [切換到一般查詢產生器]  才會顯示此選項。|  
@@ -92,7 +92,7 @@ ms.locfileid: "36133825"
 > [!IMPORTANT]  
 >  此對話方塊不支援變更查詢類型。  
   
- **在方格窗格**  
+ **方格窗格**  
  以方格的方式顯示查詢所參考的物件。 您可以使用此方格，在查詢中加入和移除資料行，以及變更每一個資料行的設定。  
   
 > [!NOTE]  

@@ -1,5 +1,5 @@
 ---
-title: 顯示資料表對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 顯示資料表對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.showtabledialog.f1
 helpviewer_keywords:
 - Show Table dialog box
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7a025d6134391a02c107e4103dd696b4720c5834
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90ee18b4b16650337255393a392c0b85744aeb3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134706"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284074"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>顯示資料表對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [顯示資料表] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，以包含與維度、Cube 或採礦結構相關聯之資料來源檢視的資料表。 您可以藉由下列方式在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示此對話方塊：  

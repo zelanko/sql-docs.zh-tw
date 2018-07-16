@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 43551300-89b2-4f4e-af09-69084324afaf
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 31dcb2ef4f2d4881bd2e4ffb94865c9a9d71faad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a05f5b165c72fa57795d22b2dc86d8dac616268b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137228"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198528"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>在資料區中合併資料格 (報表產生器及 SSRS)
   您可以在資料區域中合併資料格來結合資料格、增進資料區域外觀，或為資料行群組與資料列群組提供橫跨的標籤。  
   
 > [!NOTE]  
->  資料格僅能在資料區域的每個區域內進行合併：邊角、資料行標頭、群組定義 (或資料列標頭) 以及主體。 您無法合併跨越區域界限的資料格。 例如，您無法將資料區邊角區域中的資料格與資料列群組區域中的資料格合併。 如需有關 tablix 區域的詳細資訊，請參閱[列出&#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。  
+>  資料格僅能在資料區域的每個區域內進行合併：邊角、資料行標頭、群組定義 (或資料列標頭) 以及主體。 您無法合併跨越區域界限的資料格。 例如，您無法將資料區邊角區域中的資料格與資料列群組區域中的資料格合併。 如需有關 tablix 區域的詳細資訊，請參閱 <<c0> [ 列出&#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)。</c0>  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

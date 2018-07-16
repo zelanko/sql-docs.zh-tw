@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], Unicode character
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 19d00a0ecf553798fb37a424a516476cd3eb307d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 9124d6807bc4fea19e98fb0f099cd31ba15172bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134180"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235338"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>使用 Unicode 字元格式匯入或匯出資料 (SQL Server)
   使用含有擴充/DBCS 字元的資料檔在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間大量傳送資料時，建議使用 Unicode 字元格式。 Unicode 字元資料格式可允許從伺服器匯出資料時所使用的字碼頁，與執行作業之用戶端所使用的字碼頁不同。 在此情況下，使用 Unicode 字元格式具有下列優點：  
@@ -36,7 +35,7 @@ ms.locfileid: "36134180"
 > [!IMPORTANT]  
 >  如果格式檔案要與 Unicode 字元資料檔案搭配使用，則所有的輸入欄位都必須是 Unicode 文字字串 (也就是固定大小或以字元結束的 Unicode 字串)。  
   
- `sql_variant`資料儲存在 Unicode 字元格式資料檔相同的方式操作其運作方式在字元格式資料檔中，不同之處在於資料儲存為`nchar`而不是`char`資料。 如需詳細資訊，請參閱 [定序和 Unicode 支援](../collations/collation-and-unicode-support.md)。  
+ `sql_variant`相同的方式，其運作方式在字元格式資料檔中，不同之處在於資料會儲存為作業的資料儲存在 Unicode 字元格式資料檔`nchar`而不是`char`資料。 如需詳細資訊，請參閱 [定序和 Unicode 支援](../collations/collation-and-unicode-support.md)。  
   
  若要使用 Unicode 字元格式預設值以外的欄位或資料列結束字元，請參閱[指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。  
   
@@ -88,7 +87,7 @@ SELECT Col1,Col2,Col3 FROM myTestUniCharData;
 |限定詞|描述|  
 |----------------|-----------------|  
 |**-w**|指定 Unicode 字元格式。|  
-|**-t** `,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 注意： 預設的欄位結束字元是 tab 鍵 Unicode 字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
+|**-t** `,`|指定逗號 (`,`) 作為欄位結束字元。<br /><br /> 附註： 預設的欄位結束字元是 tab 鍵 Unicode 字元 (\t)。 如需詳細資訊，請參閱 [指定欄位與資料列結束字元 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)。|  
 |**-T**|指定 **bcp** 公用程式使用整合式安全性的信任連接，連接至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果未指定 **-T**，則必須指定 **-U** 與 **-P**，才能順利登入。|  
   
  下列範例會將 Unicode 字元格式的資料，從 `myTestUniCharData` 資料表大量匯出到名為 `myTestUniCharData-w.Dat` 的新資料檔，並使用逗號 (`,`) 做為欄位結束字元。 在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 命令提示字元中，輸入：  

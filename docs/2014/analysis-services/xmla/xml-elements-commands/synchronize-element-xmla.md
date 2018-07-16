@@ -1,5 +1,5 @@
 ---
-title: Synchronize 元素 (XMLA) |Microsoft 文件
+title: Synchronize 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Synchronize command
 ms.assetid: 9401323c-feff-409a-a9da-94aee47e0563
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 367d237cab7ea63b85e000433742d866466b3f62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3f88b07721d391c1f834ed93d21039753728081d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187095"
 ---
 # <a name="synchronize-element-xmla"></a>Synchronize 元素 (XMLA)
   同步處理[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料庫與另一個現有的資料庫。  
@@ -79,12 +79,12 @@ ms.locfileid: "36135684"
   
  在 `Synchronize` 命令執行期間，系統會在來源資料庫上放置讀取鎖定，而在目標資料庫上放置寫入鎖定。 當 `Synchronize` 命令完成時，系統就會釋放這兩個鎖定。  
   
- 如需有關同步處理資料庫的詳細資訊，請參閱[備份、 還原及同步處理資料庫&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 如需有關同步處理資料庫的詳細資訊，請參閱 <<c0> [ 備份、 還原和同步處理資料庫&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [備份項目&#40;XMLA&#41;](backup-element-xmla.md)   
  [批次項目&#40;XMLA&#41;](batch-element-xmla.md)   
- [Parallel 元素&#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
+ [平行項目的&#40;XMLA&#41;](../xml-elements-properties/parallel-element-xmla.md)   
  [Restore 元素&#40;XMLA&#41;](restore-element-xmla.md)   
  [命令&#40;XMLA&#41;](xml-elements-commands.md)  
   
