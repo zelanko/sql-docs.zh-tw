@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.pubproperties.internetsynchronization.f1
 ms.assetid: 8e0198c3-5e4e-418c-9920-78ccbbfc1323
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 994f77e71e3630537021a293a33e79ff3795aa7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 759bce5473161cb2b9c53e17d644ddf0e19e06b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197128"
 ---
 # <a name="publication-properties-ftp-snapshot-and-internet"></a>發行集屬性，FTP 快照集和網際網路
   此頁面可以讓您：  
   
--   設定屬性以經由檔案傳輸通訊協定 (File Transfer Protocol，FTP) 傳遞快照集。 如需詳細資訊，請參閱[透過 FTP 傳送快照集](transfer-snapshots-through-ftp.md)Windows 文件的詳細資訊。  
+-   設定屬性以經由檔案傳輸通訊協定 (File Transfer Protocol，FTP) 傳遞快照集。 如需詳細資訊，請參閱 <<c0> [ 透過 FTP 傳送快照集](transfer-snapshots-through-ftp.md)Windows 文件，如需詳細資訊。  
   
     > [!NOTE]  
     >  FTP 設定若有任何變更，就需要產生新的快照集。  

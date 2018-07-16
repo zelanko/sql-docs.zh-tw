@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Recompile event class
 ms.assetid: 526c8eae-a07b-4d0e-b91e-8e537835d77d
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0b90a00b1d41cf92abd0952b0ea15e569fa80ad8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5e21a1085758cc5442d2839dac679cd092875b8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326078"
 ---
 # <a name="sprecompile-event-class"></a>SP:Recompile 事件類別
   SP:Recompile 事件類別表示有某個預存程序、觸發程序或使用者自訂函數已重新編譯。 這個事件類別報告的重新編譯會在陳述式層級發生。  
@@ -60,7 +60,7 @@ ms.locfileid: "36132694"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`varbinary`|這是一個 64 位元雜湊，以隨選查詢的文字或 SQL 物件的資料庫和物件識別碼為基礎。 這個值可以傳給 sys.dm_exec_sql_text()，以便擷取相關聯的 SQL 文字。|63|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|造成陳述式層級重新編譯的 Transact-SQL 陳述式文字。|@shouldalert|是|  
+|TextData|`ntext`|造成陳述式層級重新編譯的 Transact-SQL 陳述式文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|用來描述目前交易的 Token。|50|是|  
   

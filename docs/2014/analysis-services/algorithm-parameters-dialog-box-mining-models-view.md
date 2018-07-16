@@ -1,5 +1,5 @@
 ---
-title: 演算法參數對話方塊 （採礦模型檢視） |Microsoft 文件
+title: 演算法參數對話方塊 （採礦模型檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
 helpviewer_keywords:
 - Algorithm Parameters dialog box
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 996a6b9ad990eeccd74888c8b43cd29b12ef17db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 491605a58b6a30f0f8b86afd0a2354e3c9b81ed9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134049"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178955"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>演算法參數對話方塊 (採礦模型檢視)
   使用 [演算法參數] 對話方塊，即可調整所選取模型特定的演算法參數。 當您變更演算法參數時，您通常會變更採礦模型的結果。 每一個參數影響結果的方式取決於您所使用的演算法和資料而定。 如需詳細資訊，請參閱[自訂採礦模型和結構](data-mining/customize-mining-models-and-structure.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 採礦模型屬性 |Microsoft 文件
+title: 採礦模型屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
 - data mining [Analysis Services], properties
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b0d00f10bd4ab4ac5f11b0af3e798c873cc5493
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 731ce6e077040767fd5f1bd4eec05242977097a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330898"
 ---
 # <a name="mining-model-properties"></a>採礦模型屬性
   採礦模型具有以下種類的屬性：  
@@ -65,7 +65,7 @@ ms.locfileid: "36133345"
 ## <a name="see-also"></a>另請參閱  
  [採礦模型資料行](mining-model-columns.md)   
  [採礦結構&#40;Analysis Services-資料採礦&#41;](mining-structures-analysis-services-data-mining.md)   
- [採礦模型的工作與操作方法](mining-model-tasks-and-how-tos.md)   
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
  [變更採礦模型的屬性](change-the-properties-of-a-mining-model.md)   
  [資料採礦工具](data-mining-tools.md)   
  [建立關聯式採礦結構](create-a-relational-mining-structure.md)   

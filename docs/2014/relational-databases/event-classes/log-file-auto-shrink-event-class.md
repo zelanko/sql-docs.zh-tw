@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Log File Auto Shrink event class
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fb9af6b37c31ac0635716bbe7d6fd90173d2bd56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 22e00e3acdbb317b4cfd9c164a7e7ddfde0eb6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131951"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275274"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink 事件類別
   **Log File Auto Shrink** 事件類別指出記錄檔會自動壓縮。 如果記錄檔是因為明確的 ALTER DATABASE 陳述式而壓縮，則不會觸發這個事件。  

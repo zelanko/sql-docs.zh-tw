@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.reindex.f1
 - reindex
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d12d547871d2602249d042ff6e93060f340e9b2a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 603f79bcbbe2ec42b05de28b3685c71f6cca9c69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268974"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>重建索引工作 (維護計畫)
   使用 [重建索引工作] 對話方塊，以新的填滿因數重新建立資料庫資料表上的索引。 填滿因數會決定索引中每頁的空白數量，以配合未來擴充需要。 將資料加入資料表時，因為沒有維護填滿因數，所以可用空間都會填滿。 重新組織資料與索引頁面可以重新建立可用空間。  
@@ -69,17 +69,17 @@ ms.locfileid: "36131486"
  **使用預設的可用空間量重新組織頁面**  
  將資料庫中的資料表索引卸除，並以建立索引時指定的填滿因數重新建立它們。  
   
- **每頁的百分比。 可用空間變更**  
+ **每頁的百分比，以可用空間變更**  
  將資料庫中的資料表索引卸除，並以新的、自動計算的填滿因數重新建立它們，以在索引頁面上保留指定的可用空間。 百分比愈高，在索引頁面上保留的可用空間就愈多，而索引也愈大。 有效的數值範圍為 0 到 100。  
   
  **在 tempdb 中排序結果**  
- 使用`SORT_IN_TEMPDB`選項，決定索引建立期間產生的中繼排序結果要暫時儲存位置。 如果排序作業不是必要項目，或是可以在記憶體中執行排序，則會忽略 `SORT_IN_TEMPDB`選項。  
+ 使用`SORT_IN_TEMPDB`選項，決定索引建立期間產生的中繼排序結果要暫時儲存。 如果排序作業不是必要項目，或是可以在記憶體中執行排序，則會忽略 `SORT_IN_TEMPDB`選項。  
   
- **索引保留在線上重新索引時**  
+ **索引保留在線上時重新編製索引**  
  使用 `ONLINE` 選項，而這個選項可讓使用者在索引作業期間存取基礎資料表或叢集索引資料以及任何相關的非叢集索引。  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用線上索引作業。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  **檢視 T-SQL**  
  根據選取的選項，檢視此工作在伺服器上執行的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  

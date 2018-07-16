@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - client configuration [SQL Server], connections
 - Database Engine [SQL Server], network configurations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 08c3fe4ab1df9ba768e88ab427dd597d1e083363
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: c568974a920357548129f2c52500341ba5471d49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134793"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187195"
 ---
 # <a name="client-network-configuration"></a>用戶端網路組態
   用戶端軟體可讓用戶端電腦連接到網路上的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 「用戶端」是前端應用程式，它會使用伺服器 (如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]) 所提供的服務。 主控這個應用程式的電腦稱為「用戶端電腦」。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], report history
 - history snapshots [Reporting Services]
@@ -19,18 +19,18 @@ ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
 caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 29ff943923807b88db27bd9c8c6a1cc8430f96a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b065fa70d102ff86c25aa0fffb78cfa4993cd284
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272574"
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>使用 URL 存取轉譯報表記錄快照集
   您可以提供 *rs:Snapshot* 參數並將其值設定為有效的快照集識別碼，來根據報表記錄快照集轉譯報表。 參數值的格式是 YYYY-MM-DDTHH:MM:SS，此格式符合國際標準組織 (ISO) 8601 標準。  
   
- 如果您省略此參數，就會根據報表伺服器的報表執行與快取管理選項設定來轉譯報表。 如需執行報表的詳細資訊，請參閱[設定報表處理屬性](report-server/set-report-processing-properties.md)。  
+ 如果您省略此參數，就會根據報表伺服器的報表執行與快取管理選項設定來轉譯報表。 如需有關報表執行的詳細資訊，請參閱 <<c0> [ 設定報表處理屬性](report-server/set-report-processing-properties.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會顯示擷取報表記錄快照集的 URL：  

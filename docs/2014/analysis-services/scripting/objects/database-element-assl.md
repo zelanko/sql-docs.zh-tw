@@ -1,5 +1,5 @@
 ---
-title: Database 元素 (ASSL) |Microsoft 文件
+title: Database 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Database element
 ms.assetid: c3bc7eaf-ed0d-4395-a3b7-8d9cfacfe911
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d11843c74cff55a2cfae686f5e7ee6e632427850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56efc69c0e8f7f0e3e008aa5ea769774ee5014af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332818"
 ---
 # <a name="database-element-assl"></a>Database 元素 (ASSL)
   定義[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料庫。  
@@ -83,13 +83,13 @@ ms.locfileid: "36036891"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[資料庫](../collections/databases-element-assl.md)|  
-|子元素|[Accounts](../collections/accounts-element-assl.md), [AggregationPrefix](../properties/aggregationprefix-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Assemblies](../collections/assemblies-element-assl.md), [Collation](../properties/collation-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [Cubes](../collections/cubes-element-assl.md), [DatabasePermissions](../collections/databasepermissions-element-assl.md), [DataSources](../collections/datasources-element-assl.md), [DataSourceViews](../collections/datasourceviews-element-assl.md), [Description](../properties/description-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [EstimatedSize](../properties/estimatedsize-element-assl.md), [ID](../properties/id-element-assl.md), [Language](../properties/language-element-assl.md), [LastProcessed](../properties/lastprocessed-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [LastUpdate](../properties/lastupdate-element-assl.md), [MasterDatasourceID](../properties/datasourceid-element-assl.md), [MiningStructures](../collections/miningstructures-element-assl.md), [Name](../properties/name-element-assl.md), [Roles](../collections/roles-element-assl.md), [State](../properties/state-element-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|子元素|[帳戶](../collections/accounts-element-assl.md)， [AggregationPrefix](../properties/aggregationprefix-element-assl.md)，[註解](../collections/annotations-element-assl.md)，[組件](../collections/assemblies-element-assl.md)，[定序](../properties/collation-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [Cube](../collections/cubes-element-assl.md)， [DatabasePermissions](../collections/databasepermissions-element-assl.md)， [DataSources](../collections/datasources-element-assl.md)， [DataSourceViews](../collections/datasourceviews-element-assl.md)，[描述](../properties/description-element-assl.md)，[維度](../collections/dimensions-element-assl.md)， [EstimatedSize](../properties/estimatedsize-element-assl.md)，[識別碼](../properties/id-element-assl.md)，[語言](../properties/language-element-assl.md)， [LastProcessed](../properties/lastprocessed-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)， [LastUpdate](../properties/lastupdate-element-assl.md)， [MasterDatasourceID](../properties/datasourceid-element-assl.md)， [MiningStructures](../collections/miningstructures-element-assl.md)，[名稱](../properties/name-element-assl.md)，[角色](../collections/roles-element-assl.md)，[狀態](../properties/state-element-assl.md)，[翻譯](../collections/translations-element-assl.md)，[可見](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Database>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Database>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Server 元素&#40;ASSL&#41;](server-element-assl.md)   
+ [伺服器項目&#40;ASSL&#41;](server-element-assl.md)   
  [物件&#40;ASSL&#41;](objects-assl.md)  
   
   

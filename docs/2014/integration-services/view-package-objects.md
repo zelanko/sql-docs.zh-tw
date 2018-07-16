@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, properties
 - properties [Integration Services]
@@ -22,13 +22,13 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0128e5236f517ba9d466f8517145fa44170d0657
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 760bb125a4406179f785c3714b8c0c2a7cfef3b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322618"
 ---
 # <a name="view-package-objects"></a>檢視封裝物件
   在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中，[封裝總管] 索引標籤提供封裝的總管檢視。 此檢視反映 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 架構的容器階層。 封裝容器位於階層的頂端，您可以展開封裝以檢視其中的連接、可執行檔、事件處理常式、記錄提供者、優先順序條件約束和變數。  
@@ -45,7 +45,7 @@ ms.locfileid: "36146554"
   
 ### <a name="to-view-package-content"></a>檢視封裝內容  
   
--   [在 [封裝總管] 中檢視封裝物件](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
+-   [在套件總管中檢視套件物件](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 工作](control-flow/integration-services-tasks.md)   

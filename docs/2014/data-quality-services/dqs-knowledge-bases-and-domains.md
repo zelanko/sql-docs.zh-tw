@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5df31e672577073c2cff8b43951d543f596523b8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd39b54d39d559608c8634345fd7c1e59835a9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131413"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285814"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS 知識庫與定義域
   本主題描述 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫定義。 若要清理資料，您必須有關於資料的知識。 若要準備資料品質專案的知識，您要建置並維護一個 DQS 可以用來識別不正確或無效資料的知識庫 (KB)。 DQS 可讓您同時使用電腦輔助和互動式程序來建立、建置和更新知識庫。 知識庫中的知識是在定義域中維護，其中每個定義域都專屬於某個資料欄位。 知識庫是有關資料的知識儲存機制，可讓您了解資料及維護資料的完整性。  
@@ -134,7 +134,7 @@ ms.locfileid: "36131413"
   
 -   複合定義域中的資料可以附加到參考資料來源，在該情況下，系統會將複合定義域傳送至參考資料提供者。 這通常會透過地址資料完成。  
   
- 剖析複合定義域表示之資料的方式取決於複合定義域屬性。 資料可以依分隔符號、定義域的順序，或是依據附加至複合定義域的定義域中的知識 (藉由選取複合定義域中的 **[以知識為基礎的剖析]** 屬性) 進行剖析。 如需詳細資訊，請參閱[Set Composite Domain Properties](../../2014/data-quality-services/create-a-composite-domain.md#CompositeDomainProperties)。  
+ 剖析複合定義域表示之資料的方式取決於複合定義域屬性。 資料可以依分隔符號、定義域的順序，或是依據附加至複合定義域的定義域中的知識 (藉由選取複合定義域中的 **[以知識為基礎的剖析]** 屬性) 進行剖析。 如需詳細資訊，請參閱 < [Set Composite Domain Properties](../../2014/data-quality-services/create-a-composite-domain.md#CompositeDomainProperties)。  
   
  複合定義域與單一定義域的管理方式不同。 您不會管理複合定義域中的值，但是您可以管理組成複合定義域之單一定義域中的值。 不過，您可以從「定義域管理」活動中的定義域清單，查看複合定義域中不同值之間的關聯性，以及適用於這些關聯性地統計資料。 例如，您可以查看有多少個執行個體屬於組成相同五個字串值的單一地址。 在「知識探索」活動的「探索」步驟中，分析是在複合定義域中的單一定義域上執行，而非在複合定義域上執行。 不過，在互動式清理時，您要清理複合定義域中的資料，而非單一定義域中的資料。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "36131413"
 ##  <a name="Matching"></a> 資料比對  
  除了透過定義域管理對知識庫進行手動變更之外，您還可以將比對知識加入至知識庫。 若要為刪除重複資料程序準備 DQS，您必須建立一個 DQS 將用來計算比對機率的比對原則。 此原則包含一個或多個資料管理人所建立的比對規則，以識別 DQS 比較資料列的方式。 資料管理人會決定應該比較資料列中的哪些資料欄位，以及每個欄位在比較時應該佔多少比重。 資料管理人也將決定要將多高的機率視為相符。 DQS 會將比對規則加入至資料品質專案中用於執行比對活動的知識庫。  
   
- 如需有關知識庫與資料比對的詳細資訊，請參閱[Data Matching](../../2014/data-quality-services/data-matching.md)。  
+ 如需有關知識庫與資料比對的詳細資訊，請參閱 <<c0> [ 資料比對](../../2014/data-quality-services/data-matching.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  您可以在知識庫及其定義域上執行下列作業：  

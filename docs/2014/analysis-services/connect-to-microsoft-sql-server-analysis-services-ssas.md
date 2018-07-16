@@ -1,5 +1,5 @@
 ---
-title: 連接到 Microsoft SQL Server Analysis Services (SSAS) |Microsoft 文件
+title: 連接到 Microsoft SQL Server Analysis Services (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserveras.f1
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 800df54ac7fedcad048ada667376cead7447fd53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43a7dd31c52c81f7a2bfcbf87d1a8df3f6740081
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323658"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>連接到 Microsoft SQL Server Analysis Services (SSAS)
-  這個頁面**資料表匯入精靈**可讓您指定從 Microsoft SQL Server Analysis Services cube 或 SharePoint 主控的 PowerPivot 活頁簿匯入資料的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
+  此頁面**資料表匯入精靈**可讓您指定從 Microsoft SQL Server Analysis Services cube 或 SharePoint 主控的 PowerPivot 活頁簿匯入資料的設定。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
  若要連接至資料來源，您必須先在電腦上安裝適當的提供者。  
   

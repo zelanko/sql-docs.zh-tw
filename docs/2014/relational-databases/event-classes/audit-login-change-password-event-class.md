@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Login Change Password event class
 ms.assetid: c6dbe5e5-b523-4b7c-94f0-eb1dfbce2056
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 216103ac605a08a2bf6e508283b9a1a119634fd9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 644cf995f8fe88dbdf054e95430d59cfa08e0321
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236738"
 ---
 # <a name="audit-login-change-password-event-class"></a>Audit Login Change Password 事件類別
   每次使用者變更其 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入密碼時，就會發生 **Audit Login Change Password** 事件類別。  

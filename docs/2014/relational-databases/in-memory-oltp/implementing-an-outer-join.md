@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 caps.latest.revision: 6
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 246e613d43cceda5cdd87cdbbb30c9e4ddb74724
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ae156babe1859686386274c029b2aa34748f2f1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136632"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327518"
 ---
 # <a name="implementing-an-outer-join"></a>實作外部聯結
   原生編譯的預存程序不支援外部聯結。 下列範例示範如何在原生編譯的預存程序中實作左方外部聯結功能。  
   
  此範例使用一個資料表變數來模擬聯結左側的資料指標，並使用另一個資料表變數來建構單一結果集，由於需要建立額外的資料列複本，因此僅適用於處理有限數目的資料列。  
   
- 變數 (@outer) 型別的 t1_type 用來反覆查看的資料列從 t1，使用 while 迴圈模擬資料指標。 變數@result型別的 t1t2_join_type 然後用來建構結果集。  
+ 變數 (@outer) 型別的 t1_type 用來逐一查看的資料列從 t1，使用 while 迴圈模擬資料指標。 變數@result型別的 t1t2_join_type 然後用來建構結果集。  
   
  您應該測試這個因應措施的執行效果，以確定其在您的應用程式中如預期般執行。  
   

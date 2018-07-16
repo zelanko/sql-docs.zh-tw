@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up filegroups [SQL Server]
 - file backups [SQL Server], how-to topics
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49e2ba4f8788a60b5d0e00d24539a085c233b446
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f453d2f34713a4a00b1a5d99870f3597ac32262e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332648"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>備份檔案和檔案群組 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中備份檔案與檔案群組。 當完整的資料庫備份因資料庫大小和效能需求而變得不可行時，您可以建立檔案備份來代替。 *「檔案備份」* (File Backup) 包含一或多個檔案 (或檔案群組) 中的所有資料。 如需詳細資訊，請參閱 [完整檔案備份 &#40;SQL Server&#41;](full-file-backups-sql-server.md) 和 [差異備份 &#40;SQL Server&#41;](differential-backups-sql-server.md)。  
@@ -221,9 +220,9 @@ GO
   
 1.  使用 `Backup-SqlDatabase` 指令程式，並且為 `Files` 參數指定 `-BackupAction` 值。 另外再指定下列其中一個參數：  
   
-    -   若要備份特定檔案，請指定`-DatabaseFile`*字串*參數，其中*字串*是要備份的一個或多個資料庫檔案。  
+    -   若要備份特定檔案，請指定`-DatabaseFile`*字串*參數，其中*字串*是要備份的一或多個資料庫檔案。  
   
-    -   若要備份給定檔案群組中的所有檔案，請指定`-DatabaseFileGroup`*字串*參數，其中*字串*是要備份的一個或多個資料庫檔案群組。  
+    -   若要備份給定檔案群組中的所有檔案，請指定`-DatabaseFileGroup`*字串*參數，其中*字串*是要備份的一或多個資料庫檔案群組。  
   
      以下範例會為 `MyDB` 資料庫內的次要檔案群組 'FileGroup1' 和 'FileGroup2' 建立其中每個檔案的完整檔案備份。 備份是建立在伺服器執行個體 `Computer\Instance`的預設備份位置。  
   

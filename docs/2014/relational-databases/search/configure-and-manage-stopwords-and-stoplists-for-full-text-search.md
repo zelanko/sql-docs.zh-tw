@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
 - full-text search [SQL Server], stoplists
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f1d32fea4b5d9995628c187d39c7482c6694e828
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284834"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>設定及管理全文檢索搜尋的停用字詞與停用字詞表
   為精簡全文檢索索引， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 具有一種機制，可捨棄無助於搜尋卻經常出現的字串。 這些捨棄的字串稱為 *「停用字詞」*(Stopword)。 在索引建立期間，全文檢索引擎會從全文檢索索引省略停用字詞。 這代表全文檢索查詢不會搜尋停用字詞。  
@@ -38,7 +37,7 @@ ms.locfileid: "36131682"
   
 |Word|位置|  
 |----------|--------------|  
-|Instructions|@shouldalert|  
+|Instructions|1|  
 |are|2|  
 |applicable|3|  
 |to|4|  
@@ -102,11 +101,11 @@ ms.locfileid: "36131682"
 ##  <a name="queries"></a> 在全文檢索查詢中使用停用字詞表  
  若要在查詢中使用停用字詞表，您必須將其與全文檢索索引產生關聯。 您可以在建立索引時將停用字詞表附加到全文檢索索引，也可以之後再更改索引以加入停用字詞表。  
   
- **若要建立全文檢索索引並讓停用字詞表與其產生關聯**  
+ **若要建立全文檢索索引，並讓停用字詞表與其產生關聯**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
- **建立關聯或取消關聯的停用字詞表與現有的全文檢索索引**  
+ **若要建立關聯或取消關聯的停用字詞表與現有的全文檢索索引**  
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   
@@ -120,7 +119,7 @@ ms.locfileid: "36131682"
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
   
- **若要取得目前資料庫中的所有停用字詞表的資訊**  
+ **若要取得目前資料庫中的所有停用字詞表的相關資訊**  
   
 -   [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)  
   

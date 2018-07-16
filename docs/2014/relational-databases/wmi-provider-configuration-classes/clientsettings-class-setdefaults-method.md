@@ -1,5 +1,5 @@
 ---
-title: SetDefaults 方法 （ClientSettings 類別） |Microsoft 文件
+title: SetDefaults 方法 （ClientSettings 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58cfbe5b2a53bfdce97037602058466ccd1af187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 92224fb0d9e8a46702a1bbfdecc6c8cf64d18ecf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216908"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>SetDefaults 方法 (ClientSettings 類別)
-  設定執行個體的所有預設值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]選項來覆寫現有資料的用戶端。  
+  設定執行個體的所有預設值[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]覆寫現有資料的選項與用戶端。  
   
 ## <a name="syntax"></a>語法  
   

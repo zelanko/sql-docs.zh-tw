@@ -1,5 +1,5 @@
 ---
-title: 第 8 課： 定義動作 |Microsoft 文件
+title: 第 8 課： 定義動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a57c6cc8d08d64c8f2498125f7df952c70adfd6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab952dba40b28ed0575b6fdb8da442ea6ebeb770
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274484"
 ---
 # <a name="lesson-8-defining-actions"></a>第 8 課：定義動作
   在這一課，您將學會定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中的動作。 動作只是一個儲存在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的多維度運算式 (MDX) 陳述式，可以併入用戶端應用程式中，由使用者啟動。  
@@ -52,7 +52,7 @@ ms.locfileid: "36132010"
  在這項工作中，您要透過稍早在教學課程中所定義的事實維度關聯性，來定義、使用，然後修改鑽研動作。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 9 課： Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md)  
+ [第 9 課：定義檢視方塊和翻譯](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   

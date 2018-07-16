@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 65f8f0bdc7db2e58efd27522a93e4edf6c4e0bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 95a2dfb8ef3ac1420f243355f732daa246d81d0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198538"
 ---
 # <a name="previous-function-report-builder-and-ssrs"></a>Previous 函數 (報表產生器及 SSRS)
   傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。  
@@ -36,7 +36,7 @@ Previous(expression, scope)
   
 #### <a name="parameters"></a>參數  
  *expression*  
- (`Variant`或`Binary`) 要用來識別的資料運算式和要擷取之前的值，例如`Fields!Fieldname.Value`或`Sum(Fields!Fieldname.Value)`。  
+ (`Variant`或是`Binary`) 要用來識別資料的運算式和要擷取先前的值，例如`Fields!Fieldname.Value`或`Sum(Fields!Fieldname.Value)`。  
   
  *範圍 (scope)*  
  (`String`) 選擇性。 群組或資料區域中或 null 的名稱 (`Nothing`中[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])，指定要從中擷取所指定的上一個值範圍*運算式*。  
@@ -47,18 +47,18 @@ Previous(expression, scope)
 ## <a name="remarks"></a>備註  
  `Previous` 函數會在套用過所有的排序和篩選之後，針對在指定範圍內評估的運算式傳回上一個值。  
   
- 如果*運算式*不包含彙總，`Previous`函數會預設為報表項目目前的範圍。  
+ 如果*運算式*未包含彙總，`Previous`函數會預設為報表項目目前的範圍。  
   
- 在詳細資料群組中，使用`Previous`在先前的執行個體的詳細資料列中指定之欄位參考的值。  
+ 在詳細資料群組中，使用`Previous`詳細資料列的上一個執行個體中指定之欄位參考的值。  
   
 > [!NOTE]  
->  `Previous`函式只支援詳細資料群組欄位參考。 例如，在詳細資料群組的文字方塊中， `=Previous(Fields!Quantity.Value)` 會從上一個資料列傳回 `Quantity` 欄位的資料。 在第一個資料列中，這個運算式會傳回 Null (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)。  
+>  `Previous`函式只支援詳細資料群組中的欄位參考。 例如，在詳細資料群組的文字方塊中， `=Previous(Fields!Quantity.Value)` 會從上一個資料列傳回 `Quantity` 欄位的資料。 在第一個資料列中，這個運算式會傳回 Null (在 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 中為 `Nothing`)。  
   
- 如果*運算式*包含使用預設範圍的彙總函式`Previous`彙總的資料範圍的上一個執行個體中指定的彙總函式呼叫。  
+ 如果*運算式*包含使用預設範圍，彙總函式`Previous`彙總範圍的上一個執行個體內的資料呼叫所指定的彙總函式。  
   
  如果*運算式*包含彙總函式指定非預設值，範圍*範圍*參數`Previous`函式必須是包含範圍中指定的範圍彙總函式呼叫。  
   
- 函式`Level`， `InScope`，`Aggregate`和`Previous`不能用於在*運算式*參數。 不支援為任何彙總函式指定 *recursive* 參數。  
+ 函式`Level`， `InScope`，`Aggregate`並`Previous`不適用於*運算式*參數。 不支援為任何彙總函式指定 *recursive* 參數。  
   
  如需詳細資訊，請參閱[彙總函式參考 &#40;報表產生器及 SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) 和[總計、彙總與內建集合的運算式範圍 &#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)。  
   
@@ -85,9 +85,9 @@ Previous(expression, scope)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

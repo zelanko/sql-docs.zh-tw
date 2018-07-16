@@ -1,5 +1,5 @@
 ---
-title: 新增系統角色指派： 編輯系統角色指派頁面 （報表管理員） |Microsoft 文件
+title: 新增系統角色指派： 編輯系統角色指派頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4cc3521561aac3e91e2af2dd8f45eea77b74b58e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b580fc8ab1a2558d8c356372d6ccbd4f40ebb95
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134540"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331268"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>新增系統角色指派：編輯系統角色指派頁面 (報表管理員)
   使用 [新增系統角色指派] 或 [編輯系統角色指派] 頁面來定義報表伺服器的安全性。 所有的安全性都透過角色指派來定義，角色指派會對應特定使用者或群組至其可執行的工作。 以您在進行角色指派時選取的角色定義來表示工作清單。  
@@ -47,7 +47,7 @@ ms.locfileid: "36134540"
   
 ## <a name="options"></a>選項。  
  **群組或使用者**  
- 輸入網域中之群組或使用者帳戶的名稱。 如果是以本機帳戶執行報表伺服器，您就必須指定本機群組或使用者。 如果是以網域帳戶執行報表伺服器，您就必須指定網域群組或使用者。 以此格式輸入帳戶：\<網域 >\\< 帳戶\>。  
+ 輸入網域中之群組或使用者帳戶的名稱。 如果是以本機帳戶執行報表伺服器，您就必須指定本機群組或使用者。 如果是以網域帳戶執行報表伺服器，您就必須指定網域群組或使用者。 這種格式來輸入帳戶：\<網域 >\\< 帳戶\>。  
   
 > [!NOTE]  
 >  這個方塊只有 [新增角色指派] 頁面才有提供。  
@@ -55,7 +55,7 @@ ms.locfileid: "36134540"
  **角色**  
  提供您可以指派給其他使用者的系統層級角色清單。 您可以針對單一角色指派指定多個角色。  
   
- 報表管理員不會顯示每個角色中的工作，也不會提供加入或修改這些工作的方式。 您必須依照原本定義的方式來使用這些角色。 建立、 修改或刪除角色，請使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如需詳細資訊，請參閱[建立、 刪除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。  
+ 報表管理員不會顯示每個角色中的工作，也不會提供加入或修改這些工作的方式。 您必須依照原本定義的方式來使用這些角色。 建立、 修改或刪除角色，請使用[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 建立、 刪除或修改角色&#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)。</c0>  
   
  請注意，如果您使用[!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)]with Advanced Services，您必須使用所提供的預設角色。  
   

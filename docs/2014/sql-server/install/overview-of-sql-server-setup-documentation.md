@@ -1,5 +1,5 @@
 ---
-title: SQL Server 安裝程式文件的概觀 |Microsoft 文件
+title: SQL Server 安裝程式文件的概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2620439a-f9d3-4b3c-9968-48f60b4bb9a5
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ff6c201df28ed49922d54e0cb04c7ebff813bbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c289b1355418d7c611536600f34e5e2d70255bc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132571"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275876"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>SQL Server 安裝程式文件集的概觀
   您可以在安裝媒體上取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式的文件集，也可以透過線上方式取得。  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Crawl Stopped event class
 ms.assetid: dbc91bf7-687c-4083-9694-02f3e102c175
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 10fdfc0153cfc9ae71ef1b99bfa5a03d5c7b7f84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 82935c5d032887afb580c81b9bf376eba5def47e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134411"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199538"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped 事件類別
   **:Crawl Stopped** 事件類別指出全文檢索搜耙 (母體擴展) 已停止。 停止的原因可能是已順利完成搜耙，或是發生嚴重錯誤。  

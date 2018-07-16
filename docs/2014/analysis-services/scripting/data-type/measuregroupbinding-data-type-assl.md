@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupBinding 資料類型 (ASSL) |Microsoft 文件
+title: MeasureGroupBinding 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: 47e83eec-e0bc-4118-9a0f-5bfdd6218297
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 12c54f8a61d75afd7689f19b2936bb6aefa3b4c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 530ed80199c0bc607016a1b34a1a830dfaabee5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145943"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324908"
 ---
 # <a name="measuregroupbinding-data-type-assl"></a>MeasureGroupBinding 資料類型 (ASSL)
   定義代表繫結的衍生的資料類型[MeasureGroup](../objects/group-element-assl.md)項目。  
@@ -67,11 +67,11 @@ ms.locfileid: "36145943"
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`Binding`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件的繫結型別和繼承階層架構的資料表`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md).  
+ 如需詳細資訊`Binding`型別，包括 Analysis Services 指令碼語言 (ASSL) 物件的繫結型別和繼承階層的資料表`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md).  
   
- 如需 ASSL 中資料繫結的概觀，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需 ASSL 中資料繫結的概觀，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MeasureGroupBinding>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MeasureGroupBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

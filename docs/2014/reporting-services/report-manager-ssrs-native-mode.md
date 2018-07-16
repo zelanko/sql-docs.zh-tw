@@ -1,5 +1,5 @@
 ---
-title: 報表管理員 （SSRS 原生模式） |Microsoft 文件
+title: 報表管理員 （SSRS 原生模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
 - Report Manager [Reporting Services], about Report Manager
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 caps.latest.revision: 69
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 012b0a7d775050108305d44a1eb595a9f8b7b789
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136580"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327068"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>報表管理員 (SSRS 原生模式)
   「報表管理員」是 Web 架構的報表存取與管理工具，用來從遠端位置透過 HTTP 連線管理單一報表伺服器執行個體。 您也可以使用報表管理員的報表檢視器和導覽功能。 本主題內容：  
@@ -70,7 +70,7 @@ ms.locfileid: "36136580"
   
  報表管理員僅適用於以原生模式執行的報表伺服器。 不支援針對 SharePoint 整合模式設定的報表伺服器。  
   
- 部分報表管理員的功能才可以使用指定的版本中[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。  
+ 某些報表管理員功能僅適用於指定版本的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱＜ [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)＞。  
   
  在新的安裝上，只有本機管理員才有足夠的權限處理內容和設定。 若要授與權限給其他使用者，本機管理員必須建立角色指派，提供報表伺服器的存取權。 使用者在這之後可以存取的應用程式頁面和工作，會視該使用者的角色指派而定。 如需詳細資訊，請參閱[將報表伺服器的存取權授與使用者 &#40;報表管理員&#41;](security/grant-user-access-to-a-report-server.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36136580"
  如需角色的詳細資訊，請參閱 [在原生模式報表伺服器上授與權限](security/granting-permissions-on-a-native-mode-report-server.md)。  
   
 > [!NOTE]  
->  如果您使用的是 Windows Vista 或 Windows Server 2008，就必須先設定用於本機管理的報表伺服器，然後才可以使用報表管理員來管理本機報表伺服器執行個體。 如需有關如何設定伺服器的指示，請參閱[設定原生模式報表伺服器進行本機管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。  
+>  如果您使用的是 Windows Vista 或 Windows Server 2008，就必須先設定用於本機管理的報表伺服器，然後才可以使用報表管理員來管理本機報表伺服器執行個體。 如需有關如何設定伺服器的指示，請參閱 <<c0> [ 設定為原生模式報表伺服器進行本機管理&#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)。</c0>  
   
 ## <a name="start-report-manager"></a>啟動報表管理員  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36136580"
 |![模型圖示](media/model-icon.gif "模型圖示")|報表模型|按一下報表模型圖示來開啟模型屬性頁面。|  
 |![連結報表圖示](media/hlp-16linked.gif "連結報表圖示")|連結報表|按一下報表圖示或名稱來開啟連結報表。 報表會在個別視窗中開啟。|  
 |![資料夾圖示](media/hlp-16folder.gif "資料夾圖示")|資料夾|按一下資料夾圖示或名稱來開啟資料夾。|  
-|![訂閱圖示](media/hlp-16subscription.gif "訂閱圖示")|訂閱|按一下訂閱圖示或描述來編輯訂閱。|  
+|![訂閱圖示](media/hlp-16subscription.gif "訂用帳戶圖示")|訂閱|按一下訂閱圖示或描述來編輯訂閱。|  
 |![資料驅動訂閱圖示](media/hlp-16subscriptiondd.gif "資料驅動訂閱圖示")|資料驅動訂閱|按一下資料驅動訂閱圖示或描述來編輯訂閱。|  
 |![一般資源圖示](media/hlp-16file.gif "一般資源圖示")|資源|按一下資源圖示或名稱來開啟資源。 資源會在個別視窗中開啟。|  
 |![共用資料來源圖示](media/hlp-16datasource.png "共用資料來源圖示")|共用資料來源項目|按一下共用資料來源圖，來開啟資料來源的屬性頁面、報表清單和訂閱清單。|  
@@ -122,7 +122,7 @@ ms.locfileid: "36136580"
  [報表產生器&#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Reporting Services 工具](tools/reporting-services-tools.md)   
  [報表伺服器內容管理&#40;SSRS 原生模式&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [檢視及瀏覽使用 SharePoint Web 組件的原生模式報表&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
+ [檢視及瀏覽原生模式報表使用 SharePoint Web 組件&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

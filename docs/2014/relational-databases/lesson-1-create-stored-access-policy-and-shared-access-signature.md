@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 在容器上建立原則並產生共用存取簽章 (SAS) 金鑰 |Microsoft 文件
+title: 第 2 課： 在容器上建立原則並產生共用存取簽章 (SAS) 金鑰 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c5313872497e120ebfce452547f755f61ba567e4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 708c347e587d19ebfb7c2f24e94fd59db0289c52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324298"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>第 2 課： 在容器上建立原則並產生共用存取簽章 (SAS) 金鑰
   在這一課，您將學習如何在 Blob 容器上建立原則以及產生 SAS 金鑰。  
@@ -48,6 +48,6 @@ ms.locfileid: "36133188"
   
  **下一課：**  
   
- [第 3 課： 建立 SQL Server 認證](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+ [第 3 課：建立 SQL Server 認證](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
   

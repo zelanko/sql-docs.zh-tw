@@ -1,5 +1,5 @@
 ---
-title: ProtocolDLL 屬性 （ServerNetworkProtocol 類別） |Microsoft 文件
+title: ProtocolDLL 屬性 （ServerNetworkProtocol 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b0daf8b5d2db8ccce3622db5cbfe92643f62261
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 50b726584db8f547007558331f80f9b06f801642
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208568"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>ProtocolDLL 屬性 (ServerNetworkProtocol 類別)
   取得伺服器網路通訊協定所需的 .dll 檔案名稱。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件的執行個體所使用之網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ A [ServerNetworkProtocol 類別](servernetworkprotocol-class.md)物件，表示執行個體所使用的網路通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定伺服器網路通訊協定所需之通訊協定 .dll 檔案的字串值。  

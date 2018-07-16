@@ -1,5 +1,5 @@
 ---
-title: 授與物件和作業 (Analysis Services) 存取權 |Microsoft 文件
+title: 授權存取物件和作業 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
 - sql12.asvs.roledesignerdialog.general.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ed4336f15c7bb024e9de1d4a4be7928ebf2c89af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43f0606aebac245a3756db1361ea8f1cf6360358
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132017"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249178"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>物件和作業的存取權授權 (Analysis Services)
   非系統管理使用者對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫內的 Cube、維度和採礦模型的存取權，是透過一個或多個資料庫角色的成員資格來授與。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員可以建立這些資料庫角色、授與這些角色對 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的讀取或讀取/寫入權限，然後將 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 使用者和群組指派給每個角色。  
@@ -41,7 +41,7 @@ ms.locfileid: "36132017"
 ## <a name="list-roles-defined-for-your-database"></a>列出為您的資料庫定義的角色  
  系統管理員可以在 SQL Server Management Studio 中執行簡單的 DMV 查詢，以取得伺服器上定義的所有角色清單。  
   
-1.  在 SSMS 中，以滑鼠右鍵按一下資料庫，然後選取**新查詢** | **MDX**。  
+1.  在 SSMS 中，以滑鼠右鍵按一下資料庫，然後選取**新的查詢** | **MDX**。  
   
 2.  輸入下列查詢並按 F5 來執行：  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36132017"
   
  **步驟 1︰伺服器管理**  
   
- 第一個步驟是決定誰具有伺服器層級的系統管理員權限。 在安裝期間，安裝 SQL Server 的本機管理員需要指定一或多個 Windows 帳戶做為 Analysis Services 伺服器管理員。 伺服器管理員擁有伺服器上所有可能的權限，包含檢視、修改及刪除伺服器上的任何物件，或檢視相關聯資料的權限。 安裝完成後，伺服器管理員可以新增或移除帳戶來變更這個角色的成員資格。 請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)如需此權限層級詳細資料。  
+ 第一個步驟是決定誰具有伺服器層級的系統管理員權限。 在安裝期間，安裝 SQL Server 的本機管理員需要指定一或多個 Windows 帳戶做為 Analysis Services 伺服器管理員。 伺服器管理員擁有伺服器上所有可能的權限，包含檢視、修改及刪除伺服器上的任何物件，或檢視相關聯資料的權限。 安裝完成後，伺服器管理員可以新增或移除帳戶來變更這個角色的成員資格。 請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)如需此權限等級的詳細資訊。  
   
  **步驟 2︰資料庫管理**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36132017"
   
  **步驟 3︰啟用查詢和處理工作負載的 Cube 或模型存取權**  
   
- 根據預設，只有伺服器和資料庫系統管理員可以存取 Cube 或表格式模型。 讓您組織中其他人都可以使用這些資料結構需要對應的 Windows 使用者和群組帳戶，以 cube 或模型，以及使用指定的權限的其他角色指派`Read`權限。 如需詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
+ 根據預設，只有伺服器和資料庫系統管理員可以存取 Cube 或表格式模型。 讓您組織中其他人都可以使用這些資料結構需要對應 Windows 使用者和群組帳戶，以 cube 或模型，以及使用指定的權限的其他角色指派`Read`權限。 如需詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
   
  處理工作可以和其他系統管理功能分開進行，因此，伺服器和資料庫系統管理員可將此工作委派給他人，或透過指定執行排程軟體的服務帳戶設定自動處理。 如需詳細資訊，請參閱[授與處理權限 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)。  
   
@@ -97,6 +97,6 @@ ms.locfileid: "36132017"
 ## <a name="see-also"></a>另請參閱  
  [授與伺服器系統管理員權限&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [角色和權限&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Analysis Services 支援的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)  
+ [支援的 Analysis Services 的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

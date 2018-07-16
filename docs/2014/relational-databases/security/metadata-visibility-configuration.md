@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subcomponents visibility [SQL Server]
 - metadata [SQL Server], visibility
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 caps.latest.revision: 51
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5e664343b495990477fb43b0a838edefe930b390
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 8d4eaac9765f36b72e068bb39cda4d3377a67d56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323958"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
   中繼資料的可見性會限制在使用者所擁有的安全性實體，或已授與使用者某些權限的安全性實體。 例如，如果授與使用者資料表 `myTable`的 SELECT 或 INSERT 權限，則下列查詢會傳回一個資料列。  
@@ -67,7 +66,7 @@ GO
   
 -   發出中繼資料的內建函數 (例如 OBJECTPROPERTYEX) 可能傳回 NULL。  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序可能只會傳回資料列的子集，或傳回 NULL。  
+-    [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** 預存程序可能只會傳回資料列的子集，或傳回 NULL。  
   
  SQL 模組 (例如預存程序和觸發程序) 會在呼叫者的安全性內容下執行，因此在中繼資料的存取上受到限制。 例如，在下列的程式碼中，當預存程序嘗試存取資料表 `myTable` 的中繼資料而呼叫者對此資料表沒有任何權限時，將會傳回空的結果集。 若在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，則會傳回一個資料列。  
   

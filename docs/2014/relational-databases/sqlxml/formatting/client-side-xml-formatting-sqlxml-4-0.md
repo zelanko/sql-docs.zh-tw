@@ -1,5 +1,5 @@
 ---
-title: 用戶端 XML 格式化 (SQLXML 4.0) |Microsoft 文件
+title: 用戶端 XML 格式化 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,23 +17,23 @@ helpviewer_keywords:
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ff61967896d2a32f257235a2dca7b92306945c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c02ee420f5ccb676e4cb7708d1550755e4a2c241
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266284"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>用戶端 XML 格式 (SQLXML 4.0)
   本主題提供有關用戶端 XML 格式的資訊。 用戶端格式指的是 XML 在中間層的格式。  
   
 > [!NOTE]  
->  本主題提供在用戶端上使用 FOR XML 子句的其他資訊，並假設您已經熟悉 FOR XML 子句。 如需有關 FOR XML 的詳細資訊，請參閱[使用 FOR XML 建構 XML](../../xml/for-xml-sql-server.md)。  
+>  本主題提供在用戶端上使用 FOR XML 子句的其他資訊，並假設您已經熟悉 FOR XML 子句。 如需有關 FOR XML 的詳細資訊，請參閱 <<c0> [ 使用 FOR XML 建構 XML](../../xml/for-xml-sql-server.md)。  
   
- **重要**若要使用與新的用戶端 FOR XML 功能`xml`資料型別，用戶端應該永遠會使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (SQLNCLI11) 資料提供者，而非 SQLOLEDB 提供者。 SQLNCLI11 是最新版的 SQL Server 提供者，而且完全了解 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的資料類型。 包含 SQLOLEDB 提供者之用戶端 FOR XML 的行為會將 `xml` 資料類型視為字串。  
+ **重要**若要使用用戶端 FOR XML 功能與新`xml`資料類型，用戶端應該永遠會使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (SQLNCLI11) 資料提供者，而非 SQLOLEDB 提供者。 SQLNCLI11 是最新版的 SQL Server 提供者，而且完全了解 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 推出的資料類型。 包含 SQLOLEDB 提供者之用戶端 FOR XML 的行為會將 `xml` 資料類型視為字串。  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>格式化用戶端上的 XML 文件  
  當用戶端應用程式執行下列查詢時：  
@@ -93,7 +93,7 @@ AS
 </ROOT>  
 ```  
   
- 因為**用戶端端 xml**屬性設定為 1 (true) 範本中、 在伺服器上執行預存程序和伺服器所傳回的兩個資料行資料列集是中間層轉換成 XML，並傳回用戶端。 (此處僅顯示部分結果)。  
+ 因為**用戶端端 xml**屬性在範本中設為 1 (true)、 在伺服器上執行預存程序和伺服器所傳回的兩個資料行資料列集是中介層上轉換成 XML，並傳回給用戶端。 (此處僅顯示部分結果)。  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -122,14 +122,14 @@ AS
      您可以將 SQLXML Managed 類別的這個屬性設定為 true，藉以指定用戶端功能。  
   
 ## <a name="enhanced-xml-template-support"></a>增強的 XML 範本支援  
- 開頭為[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]中的 XML 範本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]加上的已增強**用戶端端 xml**屬性。 如果此屬性設定為 true，XML 會在用戶端上格式化。 請注意，此範本屬性 SQLXMLOLEDB 提供者專屬 ClientSideXML 屬性相同的功能。  
+ 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]中的 XML 範本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]加上已增強**用戶端端 xml**屬性。 如果此屬性設定為 true，XML 會在用戶端上格式化。 請注意，此範本屬性的功能與 SQLXMLOLEDB 提供者專屬 ClientSideXML 屬性相同。  
   
 > [!NOTE]  
->  如果您正在使用 SQLXMLOLEDB 提供者的 ADO 應用程式中執行 XML 範本，而且您同時指定兩者**用戶端端 xml**屬性在範本和提供者 ClientSideXML 屬性中指定的值範本會優先使用。  
+>  如果您正在使用 SQLXMLOLEDB 提供者的 ADO 應用程式中執行 XML 範本，而且您同時指定**用戶端端 xml**範本和提供者 ClientSideXML 屬性中指定的值中的屬性範本會優先使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [用戶端和伺服器端 XML 格式化架構&#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
- [FOR XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)   
+ [XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)   
  [FOR XML 安全性考量&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [xml 在 SQLXML 4.0 中的資料類型支援](../xml-data-type-support-in-sqlxml-4-0.md)   
  [SQLXML Managed 類別](../../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   

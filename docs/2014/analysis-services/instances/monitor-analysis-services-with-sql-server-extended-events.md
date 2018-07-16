@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 擴充的事件 (XEvents) 監視 Analysis Services |Microsoft 文件
+title: 使用 SQL Server 擴充事件 (XEvents) 監視 Analysis Services |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: eb67c1eca2b803c01a3716708f73afbb3861476a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4aa591ff08106f7af8946d6725d8894c52149634
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135047"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332798"
 ---
 # <a name="use-sql-server-extended-events-xevents-to-monitor-analysis-services"></a>使用 SQL Server 擴充事件 (XEvents) 監視 Analysis Services
   Analysis Services 會提供追蹤功能，透過使用[擴充事件](../../relational-databases/extended-events/extended-events.md)。  
   
  「擴充事件」是一種可針對伺服器系統高度擴充和設定的事件基礎結構。 「擴充事件」是一種使用極少量效能資源的一種輕量型效能監視系統。  
   
- 所有 Analysis Services 可以擷取事件和特定取用者，如中所定義的目標[擴充事件](../../relational-databases/extended-events/extended-events.md)，透過 XEvents。  
+ 所有的 Analysis Services 可以擷取事件並將特定取用者，如中所定義的目標[擴充事件](../../relational-databases/extended-events/extended-events.md)，透過 XEvents。  
   
 ## <a name="initiating-extended-events-in-analysis-services"></a>起始 Analysis Services 中的擴充事件  
  您可以使用類似的 XMLA 建立物件指令碼命令來啟用擴充事件追蹤，如下所示：  

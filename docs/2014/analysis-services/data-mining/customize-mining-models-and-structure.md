@@ -1,5 +1,5 @@
 ---
-title: 自訂採礦模型和結構 |Microsoft 文件
+title: 自訂採礦模型和結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - mining models [Analysis Services], properties
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 595e914741361fa0922da59a2e0fdc699d96054c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79790404f11ffc40ca3e4826217ab331fec92a85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286354"
 ---
 # <a name="customize-mining-models-and-structure"></a>自訂採礦模型和結構
   當您選取符合商務需求的演算法之後，可以使用下列方式來自訂採礦模型，以便能夠得到更好的結果。  
@@ -65,9 +65,9 @@ ms.locfileid: "36132549"
 ### <a name="creating-aliases-for-model-columns"></a>建立模型資料行的別名  
  當 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 建立採礦模型時，它會使用採礦結構中存在的相同資料行名稱。 您可以將別名加入至採礦模型中的任何資料行。 這樣做可能會讓人較容易了解資料行的內容或使用方式，或者縮短名稱以便建立查詢。 當您想要建立資料行複本，並將它命名為具描述性的名稱時，別名也會很有幫助。  
   
- 您建立別名，藉由編輯`Name`採礦模型資料行的屬性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會繼續使用原始名稱當做輸入的資料行，且新值的識別碼`Name`會成為資料行別名，而且會出現在資料行使用方式旁的括號中的方格。  
+ 您會建立別名，藉由編輯`Name`採礦模型資料行的屬性。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會繼續使用原始名稱當做輸入的資料行，並將新值的識別碼`Name`會成為資料行別名，而且會出現在資料行使用方式旁的括號中的方格。  
   
- ![別名在採礦模型資料行](../media/modelcolumnalias-income.gif "別名在採礦模型資料行")  
+ ![別名在採礦模型資料行](../media/modelcolumnalias-income.gif "別名採礦模型資料行")  
   
  此圖形會顯示相關的模型，這些模型具有採礦結構資料行的多個複本 (全都與收入相關)。 每個結構資料行複本都已經透過不同的方式離散化。 此圖表中的每個模型與採礦結構使用不同的資料行。不過，為了方便比較模型之間的資料行，每個模型中的資料行已經重新命名為 [**Income**]。  
   

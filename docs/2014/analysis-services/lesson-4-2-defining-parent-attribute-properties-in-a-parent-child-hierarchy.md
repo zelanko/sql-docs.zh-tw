@@ -1,5 +1,5 @@
 ---
-title: 定義父子式階層中父屬性屬性 |Microsoft 文件
+title: 定義父子式階層中父屬性的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a167d70ba2041a3b40da242e51b6fb99aa14e900
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 34e32c84044b1ba709ef893949ef83a612d7e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037581"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328578"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>定義父子式階層中父屬性 (Attribute) 的屬性 (Property)
   父子式階層是指維度中以兩個資料表資料行為基礎的階層。 這些資料行會一起定義維度成員之間的階層式關聯性。 第一個名稱為「成員索引鍵資料行」的資料行會識別每個維度成員。 另一個名稱為「父資料行」資料行則會識別每個維度成員的父系。 父屬性的 **NamingTemplate** 屬性決定父子式階層中每個層級的名稱，而 **MembersWithData** 屬性則決定是否應該顯示父成員的資料。  
   
- 如需詳細資訊，請參閱[父子式階層](multidimensional-models/parent-child-dimension.md)，[父子式階層中的屬性](multidimensional-models/parent-child-dimension-attributes.md)  
+ 如需詳細資訊，請參閱 <<c0> [ 父子式階層](multidimensional-models/parent-child-dimension.md)，[父子式階層中的屬性](multidimensional-models/parent-child-dimension-attributes.md)  
   
 > [!NOTE]  
 >  當您使用「維度精靈」來建立維度時，此精靈會辨識具有父子式關聯性的資料表，並自動定義父子式階層。  
@@ -61,7 +61,7 @@ ms.locfileid: "36037581"
   
      下列影像顯示展開的 [員工] 階層。  
   
-10. ![顯示員工階層的樞紐分析表](../../2014/tutorials/media/l4-employee-1.gif "顯示員工階層的樞紐分析表")  
+10. ![顯示 [Employees] 階層的樞紐分析表](../../2014/tutorials/media/l4-employee-1.gif "顯示員工階層的樞紐分析表")  
   
      請注意，每位主管在 [Level 03 (層級 03)] 中達到的銷售量也會顯示在 [Level 04 (層級 04)] 中。 這是因為每位主管也是另一位主管的員工。 在下一項工作中，您會隱藏這些銷售量。  
   

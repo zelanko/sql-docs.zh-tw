@@ -1,5 +1,5 @@
 ---
-title: 導出成員在子選擇和 Subcube |Microsoft 文件
+title: 子選擇和 Subcube 中導出成員 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a073fe9578a877aa840e6a607ca6ae081f97052b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e5681806fd4b7530f3d83d54b21aafb3eeb07b09
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323188"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員
   在舊版，子選擇或 Subcube 中不允許使用導出成員。 但是從 SQL Server 2008 開始，您可以使用導出成員，並透過連接屬性啟用。 此外，SQL Server 2008 R2 也導入了子選擇和 Subcube 中導出成員的新行為。  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>子選擇和 Subcube 中的導出成員  
- `SubQueries`中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROPMSMDSUBQUERIES`屬性[支援 XMLA 屬性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)定義的行為或允許使用導出成員或導出子選擇或 subcube 上設定。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
+ `SubQueries`中的連接字串屬性<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>或`DBPROPMSMDSUBQUERIES`中的屬性[支援的 XMLA 屬性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)定義的行為或允許導出成員或導出在子選擇或 subcube 上的設定。 在本文的內容中，除非另有說明，否則子選擇同時指子選擇和 Subcube。  
   
  SubQueries 屬性允許下列值。  
   
 |||  
 |-|-|  
-|ReplTest1|描述|  
+|值|描述|  
 |0|子選擇或 Subcube 中不允許使用導出成員。<br /><br /> 評估子選擇或 Subcube 時，如果參考導出成員就會引發錯誤。|  
-|@shouldalert|子選擇或 Subcube 中允許使用導出成員，但是在傳回的子空間中未導入上階成員。|  
+|1|子選擇或 Subcube 中允許使用導出成員，但是在傳回的子空間中未導入上階成員。|  
 |2|子選擇或 Subcube 中允許使用導出成員，而且在傳回的子空間中導入上階成員。 此外，在選取導出成員時允許使用混合資料粒度。|  
   
  如果在 SubQueries 屬性中使用值 1 或 2，即可允許導出成員用來篩選子選擇的傳回子空間。  

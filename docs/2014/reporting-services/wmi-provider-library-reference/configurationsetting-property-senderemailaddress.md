@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SenderEmailAddress
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SenderEmailAddress property
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 159c2ff28359a80a4ba5b4ff63e8119593941aee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d53f1a1b65c16cda6d40d05710cd2da3955e8c57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133150"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266134"
 ---
 # <a name="senderemailaddress-property-wmi-msreportserverconfigurationsetting"></a>SenderEmailAddress 屬性 (WMI MSReportServer_ConfigurationSetting)
   取得用以從報表伺服器傳送電子郵件的位址。 唯讀。  

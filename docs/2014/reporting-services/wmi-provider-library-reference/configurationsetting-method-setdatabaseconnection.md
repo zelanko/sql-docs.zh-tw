@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetDatabaseConnection (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetDatabaseConnection method
 ms.assetid: c040aa78-92b8-41e4-9ae2-eff9fcdddc5b
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 006fe47cfa2a994c3acfbd29d8be94a14e60c65e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8808b7ccaf08ecbaad2b124853425c5b1f2792c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181545"
 ---
 # <a name="setdatabaseconnection-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseConnection 方法 (WMI MSReportServer_ConfigurationSetting)
   設定特定報表伺服器資料庫的報表伺服器資料庫連接。  
@@ -87,7 +87,7 @@ public void BackupEncryptionKey(string Server,
   
  第一次設定時，ConnectionPoolSize 屬性是根據下列處理器設定的：ConnectionPoolSize = #Processors * 75。  
   
- SetDatabaseConnection 方法不會將權限授與指定的帳戶。 您必須呼叫[GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md)每個帳戶都需要存取報表伺服器資料庫，而且執行所產生的指令碼的方法。  
+ SetDatabaseConnection 方法不會將權限授與指定的帳戶。 您必須呼叫[GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md)每個帳戶都需要存取報表伺服器資料庫，並執行所產生的指令碼的方法。  
   
 ## <a name="requirements"></a>需求  
  **命名空間：** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

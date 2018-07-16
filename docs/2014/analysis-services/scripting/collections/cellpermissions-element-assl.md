@@ -1,5 +1,5 @@
 ---
-title: CellPermissions 元素 (ASSL) |Microsoft 文件
+title: CellPermissions 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CellPermissions element
 ms.assetid: 4a604f2f-f4c3-42bd-a42b-951263942cc6
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe89d1e2de728773d9eaae32023e801676a02bb0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dafcaf786d58fd8c1441c0f1df50aa5a7d47be31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176455"
 ---
 # <a name="cellpermissions-element-assl"></a>CellPermissions 元素 (ASSL)
-  包含在相關聯的資料格權限集合[Cube](../objects/cube-element-assl.md)項目。  
+  包含在相關聯的資料格權限的集合[Cube](../objects/cube-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36133555"
 |子元素|[CellPermission](../objects/cellpermission-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 集合可以包含最多一個`CellPermission`物件的每個允許值的[存取](../properties/access-element-assl.md)項目。  
+ 集合可以包含最多一個`CellPermission`物件中每個允許值[存取](../properties/access-element-assl.md)項目。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CellPermissionCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.CellPermissionCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Permission 資料類型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

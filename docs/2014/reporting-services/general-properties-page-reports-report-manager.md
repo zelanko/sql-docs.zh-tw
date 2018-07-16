@@ -1,5 +1,5 @@
 ---
-title: 一般屬性頁面，報表 （報表管理員） |Microsoft 文件
+title: 一般屬性頁面，報表 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 21ffa295452a4f025eb15600e48f0e99906ac2fa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 607d50e68cef49fef5940b2729bea8156d7bf2f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134883"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189895"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>一般屬性頁面，報表 (報表管理員)
   使用報表的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代報表定義。 您也可以使用此頁面來建立連結報表。 在頁面頂端指出有關建立或修改報表的人員，以及發生變更之時間的詳細資料。  
@@ -54,10 +54,10 @@ ms.locfileid: "36134883"
  按一下即可從報表伺服器資料庫中移除報表。 刪除報表會刪除所有相關聯的報表記錄和報表特定排程與訂閱。 如果報表與連結報表相關聯，則該連結報表無效。  
   
  **[移動]**  
- 按一下即可在報表伺服器資料夾階層內重新定位報表。 按一下此按鈕會開啟 [移動項目] 頁面，您可在此瀏覽資料夾以選取新位置。 如需詳細資訊，請參閱[移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ 按一下即可在報表伺服器資料夾階層內重新定位報表。 按一下此按鈕會開啟 [移動項目] 頁面，您可在此瀏覽資料夾以選取新位置。 如需詳細資訊，請參閱 <<c0> [ 移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。</c0>  
   
  **建立連結的報表**  
- 按一下即可開啟 [新增連結報表] 頁面。 如需有關此頁面和連結的報表的詳細資訊，請參閱[新增連結報表頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)。  
+ 按一下即可開啟 [新增連結報表] 頁面。 如需有關此頁面和連結的報表的詳細資訊，請參閱 <<c0> [ 新增連結報表頁面&#40;報表管理員&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)。</c0>  
   
  **儲存**  
  按一下即可擷取報表定義的唯讀副本。 視電腦上定義的檔案關聯而定，系統會在 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 或其他應用程式中開啟檔案。 在大多數情況下，會將報表開啟為 XML 檔案。  

@@ -1,5 +1,5 @@
 ---
-title: CLR 預存程序 |Microsoft 文件
+title: CLR 預存程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -23,38 +23,38 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 caps.latest.revision: 74
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7f90cbc5e45a095225f5937864d87d336a9c95da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: db6d1dd298cba3960189c3983ab9d4781113d569
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225878"
 ---
 # <a name="clr-stored-procedures"></a>CLR 預存程序
-  預存程序是無法在純量運算式中使用的常式。 不像純量函數，它們可以將表格式結果及訊息傳回到用戶端、叫用資料定義語言 (DDL) 及資料操作語言 (DML) 陳述式，並傳回輸出參數。 針對 CLR 整合和 managed 程式碼之間選擇的優勢的相關資訊和[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱[CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)。  
+  預存程序是無法在純量運算式中使用的常式。 不像純量函數，它們可以將表格式結果及訊息傳回到用戶端、叫用資料定義語言 (DDL) 及資料操作語言 (DML) 陳述式，並傳回輸出參數。 CLR 整合，以及 managed 程式碼之間進行選擇的優勢的相關資訊並[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱 < [CLR 整合的概觀](../../relational-databases/clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>CLR 預存程序的需求  
- 在 common language runtime (CLR) 預存程序會實作為類別中公用靜態方法[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]組件。 靜態方法可宣告為 Void，或傳回整數值。 如果它傳回整數值，則會將傳回的整數視為程序的傳回碼。 例如：  
+ 在 common language runtime (CLR)，預存程序會實作為類別中公用靜態方法[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]組件。 靜態方法可宣告為 Void，或傳回整數值。 如果它傳回整數值，則會將傳回的整數視為程序的傳回碼。 例如：  
   
  `EXECUTE @return_status = procedure_name`  
   
- @return_status變數將包含之方法所傳回的值。 如果方法宣告為 Void，則傳回碼會是 0。  
+ @return_status變數將包含由方法傳回的值。 如果方法宣告為 Void，則傳回碼會是 0。  
   
  如果方法採用參數，則 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 實作中的參數數目應與預存程序之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 宣告中使用的參數數目相同。  
   
  傳遞至 CLR 預存程序的參數可以是在 Managed 程式碼中具有對等類型的任何原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型。 對於用以建立程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語法，應使用最適合的原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類型對等類型來指定這些類型。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
 ### <a name="table-valued-parameters"></a>資料表值參數  
- 資料表值參數 (TVP) 是使用者定義資料表類型，會傳入到程序或函數中，提供有效的方式將資料的多個資料列傳遞到伺服器。 雖然 TVP 提供相似的功能給參數陣列，但是也提供更大的彈性和與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密的整合。 它們也能夠協助您獲得更佳的效能。 TVP 也減少與伺服器之間的往返次數。 除了傳送多個要求到伺服器 (例如夾帶純量參數的清單)，資料能以 TVP 的形式傳送到伺服器。 使用者定義資料表類型無法以資料表值參數的形式傳遞到 Managed 預存程序或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中執行的函數，也無法從該預存程序或函數傳回。 如需有關 Tvp 的詳細資訊，請參閱[使用資料表值參數&#40;Database Engine&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。  
+ 資料表值參數 (TVP) 是使用者定義資料表類型，會傳入到程序或函數中，提供有效的方式將資料的多個資料列傳遞到伺服器。 雖然 TVP 提供相似的功能給參數陣列，但是也提供更大的彈性和與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密的整合。 它們也能夠協助您獲得更佳的效能。 TVP 也減少與伺服器之間的往返次數。 除了傳送多個要求到伺服器 (例如夾帶純量參數的清單)，資料能以 TVP 的形式傳送到伺服器。 使用者定義資料表類型無法以資料表值參數的形式傳遞到 Managed 預存程序或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中執行的函數，也無法從該預存程序或函數傳回。 如需有關 Tvp 的詳細資訊，請參閱 <<c0> [ 使用資料表值參數&#40;資料庫引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)。</c0>  
   
 ## <a name="returning-results-from-clr-stored-procedures"></a>傳回 CLR 預存程序的結果  
  有數種方式可從 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 預存程序傳回資訊。 這包括輸出參數、表格式結果及訊息。  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>OUTPUT 參數與 CLR 預存程序  
- 與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序一樣，資訊可透過 OUTPUT 參數，從 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 預存程序傳回。 用於建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 語法，與用於建立寫入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之預存程序的語法相同。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別內實作程式碼中的對應參數應使用依參照傳遞的參數做為引數。 請注意，Visual Basic 不支援輸出參數的方式，與 Visual C# 所使用的方式不同。 您必須依參考指定參數，並套用\<Out() > 屬性以表示 OUTPUT 參數，如下所示：  
+ 與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序一樣，資訊可透過 OUTPUT 參數，從 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 預存程序傳回。 用於建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] DML 語法，與用於建立寫入 [!INCLUDE[tsql](../../includes/tsql-md.md)] 之預存程序的語法相同。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 類別內實作程式碼中的對應參數應使用依參照傳遞的參數做為引數。 請注意，Visual Basic 不支援輸出參數的方式，與 Visual C# 所使用的方式不同。 您必須指定參數的參考，並套用\<Out() > 屬性以表示 OUTPUT 參數，如下所示：  
   
 ```  
 Imports System.Runtime.InteropServices  
@@ -132,7 +132,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- 一旦包含上述 CLR 組件預存程序建立及建立在伺服器上，下列[!INCLUDE[tsql](../../includes/tsql-md.md)]用來建立程序，在資料庫中，並指定*總和*做為輸出參數。  
+ 一旦包含上述 CLR 組件預存程序已建置並建立在伺服器上，下列[!INCLUDE[tsql](../../includes/tsql-md.md)]用來在資料庫中，建立程序，並指定*總和*做為輸出參數。  
   
 ```  
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -142,7 +142,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- 請注意，*總和*宣告為`int`SQL Server 資料類型，而*值*CLR 預存程序中定義的參數指定為`SqlInt32`CLR 資料型別。 當呼叫程式執行 CLR 預存程序中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會自動轉換`SqlInt32`CLR 資料型別`int`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  如需有關哪些 CLR 資料型別可以和無法轉換的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
+ 請注意，*總和*宣告為`int`SQL Server 資料類型，而*值*CLR 預存程序中定義的參數指定為`SqlInt32`CLR 資料類型。 當呼叫程式執行 CLR 預存程序中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會自動轉換`SqlInt32`CLR 資料類型`int`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  如需有關哪些 CLR 資料型別可以和無法轉換的詳細資訊，請參閱[對應 CLR 參數資料](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
 ### <a name="returning-tabular-results-and-messages"></a>傳回表格式結果和訊息  
  將表格式結果及訊息傳回到用戶端可透過 `SqlPipe` 物件完成，該物件可藉由使用 `Pipe` 類別的 `SqlContext` 屬性來取得。 `SqlPipe` 物件具有 `Send` 方法。 藉由呼叫 `Send` 方法，您可透過管道將資料傳輸給呼叫應用程式。  
@@ -386,7 +386,7 @@ END;
 ```  
   
 > [!NOTE]  
->  在用戶端應用程式中，擷取訊息及結果集的方式不同。 比方說，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]結果集會出現在**結果**檢視和訊息會出現在**訊息**窗格。  
+>  在用戶端應用程式中，擷取訊息及結果集的方式不同。 比方說，[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]結果集會出現在**結果**檢視中，而訊息會出現在**訊息**窗格。  
   
  如果上述的 Visual C# 程式碼儲存在 MyFirstUdp.cs 檔案中，而且使用下列方式編譯：  
   

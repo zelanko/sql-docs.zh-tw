@@ -1,5 +1,5 @@
 ---
-title: 程式設計 AMO 資料採礦物件 |Microsoft 文件
+title: 程式設計 AMO 資料採礦物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Analysis Management Objects, data mining
 ms.assetid: d27f58b9-91be-449c-8403-439aa6dd1ff9
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62ef444d7fa112267a4a272553834e24fe5b0df9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 340030bcc2acdc220f6aff4634c6926163862c6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133820"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176945"
 ---
 # <a name="programming-amo-data-mining-objects"></a>設計 AMO 資料採礦物件的程式
   使用 AMO 來設計資料採礦物件是簡單且直接的。 第一個步驟是建立資料結構模型以支援採礦專案。 接著建立足以支援您要使用之採礦演算法的資料採礦模型，這是為了預測或是尋找隱藏在資料之下無法察覺的關係。 採礦專案建立完成後 (包括結構與演算法)，您就可以處理採礦模型並取得定型模型，以便稍後在從用戶端應用程式查詢和預測時可以使用。  
@@ -53,7 +53,7 @@ ms.locfileid: "36133820"
   
      採礦結構可加以處理，而且在處理採礦結構時，也會處理或是重塑其子系採礦模型。  
   
- 下列範例程式碼會建立採礦結構以預測時間序列中的銷售額。 在執行之前的範例程式碼，請確定資料庫*db*，做為參數傳遞`CreateSalesForecastingMiningStructure`，包含在`db.DataSourceViews[0]`檢視的參照*dbo.vTimeSeries*中[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]範例資料庫。  
+ 下列範例程式碼會建立採礦結構以預測時間序列中的銷售額。 在執行之前的範例程式碼，請確定資料庫*db*，當做參數傳遞`CreateSalesForecastingMiningStructure`，包含在`db.DataSourceViews[0]`檢視的參照*dbo.vTimeSeries*中[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]範例資料庫。  
   
 ```  
 public static MiningStructure CreateSalesForecastingMiningStructure(Database db)  

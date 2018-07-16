@@ -1,5 +1,5 @@
 ---
-title: 匯入和匯出封裝 （SSIS 服務） |Microsoft 文件
+title: 匯入和匯出封裝 （SSIS 服務） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - packages [Integration Services], importing
 - packages [Integration Services], exporting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - exporting packages
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 caps.latest.revision: 50
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8ee81709bb8f0c9b30ab528d78a21b4ff72c1eed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96f87aedbadd6535fc6e82feb92a822a85b49f0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135856"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322688"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>匯入和匯出封裝 (SSIS 服務)
     
@@ -43,7 +43,7 @@ ms.locfileid: "36135856"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb 資料庫。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可讓您匯入和匯出封裝，並藉此變更儲存格式和套件的位置。 使用匯入和匯出功能，可以將封裝加入檔案系統、封裝存放區或 msdb 資料庫，並將封裝從一個儲存體複製到另一個儲存體。 例如，可以將 msdb 中儲存的封裝複製到檔案系統，反之亦然。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 可讓您匯入和匯出封裝，並藉此變更儲存格式和封裝的位置。 使用匯入和匯出功能，可以將封裝加入檔案系統、封裝存放區或 msdb 資料庫，並將封裝從一個儲存體複製到另一個儲存體。 例如，可以將 msdb 中儲存的封裝複製到檔案系統，反之亦然。  
   
  您也可以使用 **dtutil** 命令提示公用程式 (dtutil.exe)，將封裝複製成其他格式。 如需詳細資訊，請參閱 [dtutil Utility](dtutil-utility.md)。  
   
@@ -137,6 +137,6 @@ ms.locfileid: "36135856"
 8.  按一下 [確定] 以完成匯出。  
   
 ## <a name="see-also"></a>另請參閱  
- [封裝管理&#40;SSIS 服務&#41;](service/package-management-ssis-service.md)  
+ [套件管理&#40;SSIS 服務&#41;](service/package-management-ssis-service.md)  
   
   

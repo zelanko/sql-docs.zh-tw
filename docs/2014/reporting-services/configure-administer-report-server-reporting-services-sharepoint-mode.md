@@ -1,5 +1,5 @@
 ---
-title: 設定和管理報表伺服器 （Reporting Services SharePoint 模式） |Microsoft 文件
+title: 設定和管理報表伺服器 （Reporting Services SharePoint 模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 846e86d0-fbbb-426c-97f9-f179cd42b390
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: bd580d08512b72d6643e97b1dda6f7a58d092714
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7546ee205dc20dccbac6a83e8f1fea8420ee511d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329348"
 ---
 # <a name="configuration-and-administration-of-a-report-server-reporting-services-sharepoint-mode"></a>設定和管理報表伺服器 (Reporting Services SharePoint 模式)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是伺服器架構報告平台，提供完整的已備妥要使用的工具與服務，協助您建立、 部署和管理您的組織，以及可讓您擴充和自訂您的報表的程式設計功能的報表這項功能。 您可以將報表環境與 SharePoint 產品整合，以體驗使用 SharePoint 網站所提供之共同作業環境的優點。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是伺服器架構報告平台，提供各種已準備好要使用的工具和服務，協助您建立、 部署及管理您的組織，以及程式設計的功能，可讓您擴充和自訂您的報表的報表功能。 您可以將報表環境與 SharePoint 產品整合，以體驗使用 SharePoint 網站所提供之共同作業環境的優點。  
   
 ## <a name="in-this-section"></a>本節內容  
  使用下列章節可幫助您更佳了解概念、部署案例、程序等等，讓您將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境與 SharePoint 產品或技術整合：  
@@ -51,7 +51,7 @@ ms.locfileid: "36133160"
   
 -   [在 SharePoint 管理中心啟動報表伺服器檔案同步處理功能](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)  
   
--   [將報表伺服器內容類型加入至文件庫&#40;的 Reporting Services SharePoint 整合模式&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
+-   [將報表伺服器內容類型加入至文件庫&#40;Reporting Services SharePoint 整合模式&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   
 -   [在報告檢視器中的本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../../2014/reporting-services/local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   

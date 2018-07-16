@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editgroup.f1
 - sql12.swb.newgroup.f1
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - groups [SQL Server], server
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bdec272826760d43ef15067794d18d6602659b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 40ed6877480c425fc8219779474c71b3feca1a90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253410"
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>建立或編輯伺服器群組 (SQL Server Management Studio)
   本主題描述如何透過建立伺服器群組，然後將伺服器放入伺服器群組中的方式，組織 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中 [已註冊的伺服器] 內的伺服器。 您隨時都可在「已註冊的伺服器」中建立伺服器群組，您也可以在註冊伺服器時建立伺服器群組。  

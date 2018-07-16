@@ -1,5 +1,5 @@
 ---
-title: 已被取代的 Master Data Services 功能在 SQL Server 2014 |Microsoft 文件
+title: SQL Server 2014 中的已被取代的 Master Data Services 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 423e45193aed8d0f499e5920f08f8c8551e27545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 625887e6b737e3e54fc8c0516ec3fdbc1e13d46e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262954"
 ---
 # <a name="deprecated-master-data-services-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 Master Data Services 功能
   本主題描述 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -38,9 +38,9 @@ ms.locfileid: "36132457"
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中已實作新的、效能更高的暫存處理序。 如需詳細資訊，請參閱[資料匯入 &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)。  
   
 ## <a name="metadata"></a>中繼資料  
- 雖然中繼資料模型仍然顯示在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，不過您不應該使用它。 未來的版本將予以移除。 使用者也可以不會再檢視中的中繼資料**總管**功能區域中，而且您不能再建立中繼資料模型的版本。  
+ 雖然中繼資料模型仍然顯示在 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式中，不過您不應該使用它。 未來的版本將予以移除。 使用者也可以不會再檢視中的中繼資料**總管**功能區域中，而且您無法再建立中繼資料模型的版本。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 中已停止的 Master Data Services 功能](discontinued-master-data-services-features.md)  
+ [SQL Server 2014 中已中止的 Master Data Services 功能](discontinued-master-data-services-features.md)  
   
   

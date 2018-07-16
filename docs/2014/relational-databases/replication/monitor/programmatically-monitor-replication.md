@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 486c0e39c34c706128fc5191ecb15394eb584247
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0ece1fccdfc4fab42bd2b5cd2913dfcd238e9b40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167009"
 ---
 # <a name="programmatically-monitor-replication"></a>以程式設計方式監視複寫
   「複寫監視器」是一個允許您監視複寫拓撲之全面健全狀況的圖形化工具。 您可以使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 複寫預存程序或 Replication Management Objects (RMO)，以程式設計的方式存取相同的監視資料。 這些物件可用來設計下列工作：  
@@ -132,9 +132,9 @@ ms.locfileid: "36133704"
   
 5.  使用步驟 3 中取得的工作階段識別碼，呼叫下列其中一個方法來傳回有關特定工作階段詳細資料的資訊。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -傳回陣列<xref:Microsoft.SqlServer.Replication.MergeSessionDetail>所提供的物件*sessionID*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetails%2A> -傳回的陣列<xref:Microsoft.SqlServer.Replication.MergeSessionDetail>所提供的物件*sessionID*。  
   
-    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -傳回<xref:System.Data.DataSet>資訊所指定物件*sessionID*。  
+    -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionDetailsDataSet%2A> -傳回<xref:System.Data.DataSet>物件，內含所指定的資訊*sessionID*。  
   
 #### <a name="to-monitor-replication-properties-for-all-publications-at-a-distributor"></a>若要監視在散發者端所有發行集的複寫屬性  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36133704"
   
 2.  以下列其中一種方法取得 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 物件。  
   
-    -   建立 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 類別的執行個體。 設定「發行者」的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，「 發行者 」 名稱定義不正確或是發行集不存在。  
+    -   建立 <xref:Microsoft.SqlServer.Replication.PublisherMonitor> 類別的執行個體。 設定「發行者」的 <xref:Microsoft.SqlServer.Replication.PublisherMonitor.Name%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。 呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，「 發行者 」 名稱定義不正確，或發行集不存在。  
   
     -   從藉由現有 <xref:Microsoft.SqlServer.Replication.PublisherMonitorCollection> 物件的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor.PublisherMonitors%2A> 屬性進行存取的 <xref:Microsoft.SqlServer.Replication.ReplicationMonitor> 。  
   
@@ -270,13 +270,13 @@ ms.locfileid: "36133704"
   
     -   *metricID* - <xref:System.Int32> 值，代表來自下列資料表的監視臨界值標準：  
   
-        |ReplTest1|描述|  
+        |值|描述|  
         |-----------|-----------------|  
-        |@shouldalert|`expiration` -監視交易式發行集的訂閱是否即將到期。|  
+        |1|`expiration` -監視交易式發行集的訂閱是否即將到期。|  
         |2|`latency` -監視交易式發行集的訂閱效能。|  
         |4|`mergeexpiration` -監視合併式發行集的訂閱是否即將到期。|  
-        |5|`mergeslowrunduration` -監視透過低頻寬 （撥號） 連接進行合併同步處理的持續時間。|  
-        |6|`mergefastrunduration` -監視透過高頻寬 (LAN) 連接進行合併同步處理的持續時間。|  
+        |5|`mergeslowrunduration` -監視透過低頻寬 （撥號） 連接的進行合併同步處理的持續時間。|  
+        |6|`mergefastrunduration` -監視透過高頻寬 (LAN) 連接的進行合併同步處理的持續時間。|  
         |7|`mergefastrunspeed` - 監視透過高頻寬 (LAN) 連接進行合併同步處理的同步處理速率。|  
         |8|`mergeslowrunspeed` -監視透過低頻寬 （撥號） 連接進行合併同步處理的同步處理速率。|  
   

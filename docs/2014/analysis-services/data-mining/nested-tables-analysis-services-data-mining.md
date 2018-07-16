@@ -1,5 +1,5 @@
 ---
-title: 巢狀資料表 (Analysis Services-資料採礦) |Microsoft 文件
+title: 巢狀資料表 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: acb00a14c6fb59a223727c8f551e74fb636a7ee6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b072c134c047f9833f3b5297688bf30d68a6050
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167729"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>巢狀資料表 (Analysis Services - 資料採礦)
-  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料必須當作包含在案例資料表內的一系列案例，傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供獨特方法來處理這些情況下，使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
+  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中，資料必須當作包含在案例資料表內的一系列案例，傳送至資料採礦演算法。 不過，並非所有的案例都可以由單一資料列描述。 例如，案例可能從兩個資料表衍生：一個資料表包含客戶資訊，而另一個資料表包含客戶購買資訊。 客戶資訊表中的單一客戶在客戶購買資料表中可能有多筆購買項目，所以很難以單一資料列描述資料。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供獨特方法來處理這些情況下，就使用*巢狀資料表*。 下圖展示巢狀資料表的概念。  
   
- ![兩個資料表使用巢狀的資料表結合](../media/nested-tables.gif "利用巢狀的資料表來組合兩個資料表")  
+ ![兩個資料表使用巢狀的資料表結合](../media/nested-tables.gif "兩個資料表合併使用巢狀的資料表")  
   
  在此圖表中，第一個資料表 (父資料表) 包含客戶相關資訊，且每一位客戶有唯一識別碼的關聯。 第二個資料表 (子資料表) 包含每一位客戶的購買資訊。 子資料表中的購買資訊會經由唯一識別碼 **CustomerKey** 資料行，與父資料表產生關聯。 圖表中的第三個資料表會顯示這兩個資料表的結合。  
   

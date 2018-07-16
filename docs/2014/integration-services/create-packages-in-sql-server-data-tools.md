@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, creating
 - Integration Services packages, creating
@@ -18,13 +18,13 @@ ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f28ab22eea6e07cd855e9ff6c8e1ddcbedbbce54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 94fddf1871c03bd70f86a61c80a736d2f18a30a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324568"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>在 SQL Server 資料工具中建立封裝
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 設計師在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中建立的封裝將儲存到檔案系統。 若要將封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 或封裝存放區，您必須儲存該封裝的複本。 如需詳細資訊，請參閱 [儲存封裝的複本](../../2014/integration-services/save-a-copy-of-a-package.md)。  
@@ -41,7 +41,7 @@ ms.locfileid: "36134454"
   
      如果現有的封裝包含您想重複使用的功能，您可以從其他封裝複製及貼上物件，以加快建立控制流程和新封裝內之資料流程的速度。 如需在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中使用複製及貼上功能的詳細資訊，請參閱 [重複使用封裝物件](reuse-of-package-objects.md)。  
   
-     如果您透過複製現有封裝或使用自訂封裝做為範本的方式來建立新封裝，將一併複製現有封裝的名稱和 GUID。 您應該更新這個新封裝的名稱和 GUID，以協助區分新封裝與其複製來源封裝。 例如，如果封裝具有相同的 GUID，在識別記錄資料所屬的封裝時就會發生困難。 您可以重新產生 GUID`ID`屬性和更新的值`Name`屬性，方法是使用中的 [屬性] 視窗[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱 [設定封裝屬性](set-package-properties.md) 和 [dtutil 公用程式](dtutil-utility.md)。  
+     如果您透過複製現有封裝或使用自訂封裝做為範本的方式來建立新封裝，將一併複製現有封裝的名稱和 GUID。 您應該更新這個新封裝的名稱和 GUID，以協助區分新封裝與其複製來源封裝。 例如，如果封裝具有相同的 GUID，在識別記錄資料所屬的封裝時就會發生困難。 您可以重新產生 GUID`ID`屬性和更新的值`Name`使用 [屬性] 視窗中的屬性[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱 [設定封裝屬性](set-package-properties.md) 和 [dtutil 公用程式](dtutil-utility.md)。  
   
 -   使用您指定為範本的自訂封裝。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36134454"
   
      [ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈] 會建立一個完整封裝來進行簡單的匯入或匯出。 此精靈會設定連接、來源和目的地，並加入所需的任何資料轉換，好讓您立即執行匯入或匯出。 您可以選擇儲存封裝以供日後再次執行，或是在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中精簡及增強封裝。 但是，如果您儲存封裝，您必須將封裝加入現有的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案，然後才可以在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]中變更封裝或執行封裝。  
   
- 下列程序描述如何建立或刪除封裝中的[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
+ 下列程序說明如何建立或刪除封裝中的[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
  如需示範如何使用預設封裝範本建立基本封裝的影片，請參閱 [建立基本封裝 (SQL Server 影片)](http://go.microsoft.com/fwlink/?LinkId=131023)。  
   

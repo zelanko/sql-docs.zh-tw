@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95c50d2f0859b6da42788d53493c1d49f7900a13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 97b460cf5508c1b95c9d9acedd02d68e5e0acd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191938"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>建立資料庫快照集 (Transact-SQL)
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]資料庫快照集的唯一方式。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 不支援建立資料庫快照集。  
@@ -34,14 +34,14 @@ ms.locfileid: "36133720"
   
      [最佳作法：命名資料庫快照集](#Naming)  
   
--   **若要建立資料庫快照集，請使用：**[Transact SQL  ](#TsqlProcedure)  
+-   **若要建立資料庫快照集，請使用：**[TRANSACT-SQL  ](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Prerequisites"></a> 必要條件  
  可使用任何復原模式的來源資料庫必須符合下列必要條件：  
   
--   伺服器執行個體必須執行支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需中的資料庫快照集的支援資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   伺服器執行個體必須執行支援資料庫快照集的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 如需中的資料庫快照集的支援資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   除非來源資料庫是資料庫鏡像工作階段中的鏡像資料庫，否則該資料庫必須處於線上狀態。  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> B. 在 Sales 資料庫上建立快照集  
- 此範例會在 `sales_snapshot1200`資料庫上建立資料庫快照集 `Sales` 。 在範例中，「 建立含有檔案群組的資料庫 」 中建立此資料庫[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&AMP;&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
+ 此範例會在 `sales_snapshot1200`資料庫上建立資料庫快照集 `Sales` 。 此資料庫已在此範例中，「 建立含有檔案群組的資料庫 」 中建立[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)。  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  

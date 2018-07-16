@@ -1,5 +1,5 @@
 ---
-title: 一般檔案連接管理員編輯器 （一般頁面） |Microsoft 文件
+title: 一般檔案連接管理員編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.general.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5109aee94d7f566da2f3cf3d61b1a9569d6a44e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09e0d8813ccb444bdbc2713a6a18d028f5f8d21b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131760"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209308"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>一般檔案連接管理員編輯器 (一般頁面)
   使用 **[一般檔案連接管理員編輯器]** 對話方塊的 **[一般]** 頁面，來選取檔案和資料格式。 一般檔案連接可以讓封裝連接到文字檔。  
@@ -55,7 +55,7 @@ ms.locfileid: "36131760"
  **格式**  
  指出檔案是要使用分隔符號、固定寬度或不齊右的格式。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |使用分隔符號|資料行是以分隔符號隔開，分隔符號是在 **[資料行]** 頁面上指定的。|  
 |固定寬度|資料行具有固定寬度。|  
@@ -70,7 +70,7 @@ ms.locfileid: "36131760"
  **標頭資料列分隔符號**  
  從標頭資料列的分隔符號清單中選取，或輸入分隔符號文字。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**{CR}{LF}**|標頭資料列是以歸位字元和換行字元的組合分隔。|  
 |**{CR}**|標頭資料列是以歸位字元分隔。|  

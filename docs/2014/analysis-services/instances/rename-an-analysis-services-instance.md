@@ -1,5 +1,5 @@
 ---
-title: 重新命名 Analysis Services 執行個體 |Microsoft 文件
+title: 重新命名 Analysis Services 執行個體 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
 - renaming instances of Analysis Services
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - names [Analysis Services]
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4d9369a62a1fcd5dde7de92c7da81a4fcb6c02ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 0dfa3a42caf787fad5e8eb64e5bdbab38997640b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132016"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326808"
 ---
 # <a name="rename-an-analysis-services-instance"></a>重新命名 Analysis Services 執行個體
   您可以重新命名現有的執行個體[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]使用**重新命名執行個體**對話方塊。  
@@ -39,7 +39,7 @@ ms.locfileid: "36132016"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>若要重新命名 Analysis Services 的執行個體  
   
-1.  啟動**執行個體重新命名**工具**asinstancerename.exe**，從 C:\Program Files\Microsoft SQL server\110\tools\binn\managementstudio 啟動。  
+1.  啟動**Instance Rename**工具**asinstancerename.exe**，從 C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio。  
   
 2.  在 [重新命名執行個體] 對話方塊的 [要重新命名的執行個體] 清單中，選取您要重新命名的執行個體。  
   

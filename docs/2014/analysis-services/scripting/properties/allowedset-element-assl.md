@@ -1,5 +1,5 @@
 ---
-title: AllowedSet 元素 (ASSL) |Microsoft 文件
+title: AllowedSet 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AllowedSet element
 ms.assetid: 4aff2e03-6e1f-4f1a-b99d-d86bba25ab9b
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 03ea2fddea92bfbac7152338a17f9c547ddbbf3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 57282fc21a17c8b83c91712598781399617d3979
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323058"
 ---
 # <a name="allowedset-element-assl"></a>AllowedSet 元素 (ASSL)
-  包含定義允許權限集集合運算式[角色](../objects/role-element-assl.md)屬性上的項目。  
+  包含定義允許權限集的集合運算式[角色](../objects/role-element-assl.md)屬性上的項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36037759"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`AllowedSet`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.AttributePermission>。  
+ 對應至父系的元素`AllowedSet`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AttributePermission>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

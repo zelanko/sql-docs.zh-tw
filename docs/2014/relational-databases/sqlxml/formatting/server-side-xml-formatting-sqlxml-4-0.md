@@ -1,5 +1,5 @@
 ---
-title: 伺服器端 XML 格式化 (SQLXML 4.0) |Microsoft 文件
+title: 伺服器端 XML 格式化 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - server-side XML formatting
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f7e8db71e82f25bb31afbe5a7a789df0af0a98ef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 943974287b88249bbd277aa59bd4cccef36800a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133166"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325688"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>伺服器端 XML 格式 (SQLXML 4.0)
   本主題提供在伺服器端上，從針對 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫執行之查詢產生的資料列集格式化 XML 文件的相關資訊。  
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，您可以將 XML 文件儲存到資料庫資料表中，以及從資料庫資料表中擷取 XML 文件。 若要擷取 XML 文件，請在 SELECT 查詢中使用 FOR XML 查詢延伸模組。  
   
- 例如，假設用戶端應用程式執行的命令，針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，包含下列項目[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢：  
+ 例如，假設用戶端應用程式針對執行命令[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，包含下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢：  
   
 ```  
 SELECT FirstName, LastName  
@@ -55,7 +55,7 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- 如需 FOR XML 子句的詳細資訊，請參閱[使用 FOR XML 建構 XML](../../xml/for-xml-sql-server.md)。  
+ 如需有關 FOR XML 子句的詳細資訊，請參閱 <<c0> [ 使用 FOR XML 建構 XML](../../xml/for-xml-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [用戶端和伺服器端 XML 格式化架構&#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   

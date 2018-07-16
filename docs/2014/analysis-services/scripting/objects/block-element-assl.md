@@ -1,5 +1,5 @@
 ---
-title: 封鎖元素 (ASSL) |Microsoft 文件
+title: Block 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Block element
 ms.assetid: f45c32ae-e4e0-465a-9564-9ccfb10a858f
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e382ba38c41bc68b3d49b0397cdc3fe3f2dcf0ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44022a2e0bd538b7f4b33b0d1f1fb7b462e676e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131996"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279434"
 ---
 # <a name="block-element-assl"></a>Block 元素 (ASSL)
-  包含所有或部分二進位內容的[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)項目。  
+  包含的所有或部分二進位內容[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   

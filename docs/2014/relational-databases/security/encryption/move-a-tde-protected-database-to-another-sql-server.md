@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e22249985710ebc3ab63aafe99779602ccffe4ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131950"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266304"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>將 TDE 保護的資料庫移至另一個 SQL Server
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，透過透明資料加密 (TDE) 保護資料庫，然後將資料庫移到另一個 [!INCLUDE[tsql](../../../includes/tsql-md.md)]執行個體。 TDE 會執行資料和記錄檔的即時 I/O 加密和解密。 此加密會使用資料庫加密金鑰 (DEK)，該金鑰儲存於資料庫開機記錄中，以便在復原期間可供使用。 DEK 是對稱金鑰，而其維護安全的方式是使用儲存於伺服器之 `master` 資料庫內的憑證或是受到 EKM 模組所保護的非對稱金鑰。  
@@ -61,9 +60,9 @@ ms.locfileid: "36131950"
   
 ####  <a name="Permissions"></a> 權限  
   
--   需要`CONTROL DATABASE`權限`master`才能建立資料庫主要金鑰的資料庫。  
+-   需要`CONTROL DATABASE`權限`master`資料庫以建立資料庫主要金鑰。  
   
--   需要`CREATE CERTIFICATE`權限`master`資料庫才能建立保護 DEK 的憑證。  
+-   需要`CREATE CERTIFICATE`權限`master`資料庫以建立保護 DEK 的憑證。  
   
 -   需要`CONTROL DATABASE`加密資料庫的權限和`VIEW DEFINITION`憑證或非對稱金鑰用來加密資料庫加密金鑰的權限。  
   
@@ -71,9 +70,9 @@ ms.locfileid: "36131950"
   
 ###  <a name="SSMSCreate"></a> 使用 SQL Server Management Studio  
   
-1.  建立資料庫主要金鑰和憑證中`master`資料庫。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
+1.  建立資料庫主要金鑰和憑證在`master`資料庫。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
   
-2.  建立伺服器憑證的備份`master`資料庫。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
+2.  建立伺服器憑證中的備份`master`資料庫。 如需詳細資訊，請參閱下面的 **使用 Transact-SQL** 。  
   
 3.  在 [物件總管] 中，以滑鼠右鍵按一下 **[資料庫]** 資料夾，並選取 **[新增資料庫]**。  
   

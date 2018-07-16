@@ -1,5 +1,5 @@
 ---
-title: 工具列 （翻譯索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 工具列 （翻譯索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e0f8a60c636afb90dd68878b1e989454fb8d327b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d74778a66b1b5b286c26f7366184a2b62da57292
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131991"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328548"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>工具列 (翻譯索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用工具列按鈕，即可執行 **[維度設計師]** 之 **[翻譯]** 檢視中的一般作業。  
@@ -62,7 +62,7 @@ ms.locfileid: "36131991"
  按一下即可切換顯示選取之維度所定義的所有屬性，包括停用屬性階層的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [翻譯&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
+ [翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
  [翻譯詳細資料&#40;翻譯索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

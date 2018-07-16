@@ -1,5 +1,5 @@
 ---
-title: 報表記錄頁面 （報表管理員） |Microsoft 文件
+title: 報表記錄頁面 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
 caps.latest.revision: 24
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c9a696c8b095281633e0d3b631aa773dad9fdb77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e0a3cc0ce4cb29b34ac67d3becfc966217dfb1d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134544"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196738"
 ---
 # <a name="report-history-page-report-manager"></a>報表記錄頁面 (報表管理員)
   使用 [報表記錄] 頁面來檢視產生和儲存一段時間的報表快照集。 依據在報表伺服器上設定的選項，報表記錄可能只包含最近的快照集。  
@@ -31,7 +31,7 @@ ms.locfileid: "36134544"
  按一下報表記錄快照集即可檢視該快照集。 報表記錄中顯示的快照集只能以建立日期和時間來區分。 沒有視覺指示可以區分快照集是回應排程而建立或是手動作業所建立。  
   
 > [!NOTE]  
->  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本都提供此功能。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="navigation"></a>導覽  
  您可以使用下列程序，在使用者介面 (UI) 中導覽至這個位置。  
@@ -59,7 +59,7 @@ ms.locfileid: "36134544"
   
 ## <a name="see-also"></a>另請參閱  
  [檢視或刪除報表記錄&#40;報表管理員&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
- [將加入報表記錄快照集&#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [將快照集加入報表記錄&#40;報表管理員&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [一般屬性頁面，報表 &#40;報表管理員&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [報表管理員 F1 說明](../../2014/reporting-services/report-manager-f1-help.md)   
  [快照集選項屬性頁面&#40;報表管理員&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  

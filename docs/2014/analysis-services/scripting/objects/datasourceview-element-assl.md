@@ -1,5 +1,5 @@
 ---
-title: DataSourceView 元素 (ASSL) |Microsoft 文件
+title: DataSourceView 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSourceView element
 ms.assetid: cda26126-8af2-4519-8237-f4a57976a284
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9d1813af76ff460aedb5345156b85e8d9b9667cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d8f72a69164071af4c9c2346c549cee2a56020b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324898"
 ---
 # <a name="datasourceview-element-assl"></a>DataSourceView 元素 (ASSL)
   定義所使用的資料來源檢視[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] [資料庫](database-element-assl.md)項目。  
@@ -66,13 +66,13 @@ ms.locfileid: "36145942"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[DataSourceViews](../collections/datasourceviews-element-assl.md)|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [DataSourceID](../properties/id-element-assl.md)，[描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)，[名稱](../properties/name-element-assl.md)，[結構描述](../properties/schema-element-assl.md)|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [CreatedTimestamp](../properties/createdtimestamp-element-assl.md)， [DataSourceID](../properties/id-element-assl.md)，[描述](../properties/description-element-assl.md)，[識別碼](../properties/id-element-assl.md)， [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md)，[名稱](../properties/name-element-assl.md)，[結構描述](../properties/schema-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DataSourceView>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DataSourceView>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database 元素&#40;ASSL&#41;](database-element-assl.md)   
+ [資料庫項目&#40;ASSL&#41;](database-element-assl.md)   
  [物件&#40;ASSL&#41;](objects-assl.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DataSourceViews 元素 (ASSL) |Microsoft 文件
+title: DataSourceViews 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DataSourceViews element
 ms.assetid: f708ceac-8eeb-45ee-a2bb-919126898c80
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a50e0e03b993031bfb0df92b99e6873dc28099fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 869e404c4d9a46f4d3b4fc14b8f5dac46fd72304
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187115"
 ---
 # <a name="datasourceviews-element-assl"></a>DataSourceViews 元素 (ASSL)
-  包含集合[DataSourceView](../objects/datasourceview-element-assl.md)與相關聯的項目[資料庫](../objects/database-element-assl.md)項目。  
+  包含的集合[DataSourceView](../objects/datasourceview-element-assl.md)相關聯的項目[資料庫](../objects/database-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36133805"
 |子元素|[DataSourceView](../objects/datasourceview-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DataSourceViewCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DataSourceViewCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

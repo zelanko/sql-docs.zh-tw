@@ -1,5 +1,5 @@
 ---
-title: CLR 整合自訂屬性的概觀 |Microsoft 文件
+title: CLR 整合自訂屬性的概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - building database objects [CLR integration], custom attributes
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1b80a18cd026645fd036741d45794a12880f36b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2153277cbb0592b808fde3e0a8bec3a8ca582455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134666"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324938"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>CLR 整合自訂屬性的概觀
   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 Common Language Runtime (CLR) 允許使用描述性的關鍵字 (稱為屬性)。 這些屬性會針對許多元素 (如方法和類別) 提供其他資訊。 屬性會隨著物件的中繼資料儲存在組件中，而且可用來將程式碼描述給其他開發工具知道，或是影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內的執行階段行為。  
   
- 當您向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊 CLR 常式時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會衍生一組有關此常式的屬性。 這些常式屬性會決定該常式的功能，包括是否可以為此常式建立索引。 例如，將 `DataAccess` 屬性設定為 `DataAccessKind.Read` 可讓您從 CLR 函數內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者資料表存取資料。 下列範例顯示簡單的情況下，在其中`DataAccess`屬性設定為方便地存取資料從使用者資料表**table1**。  
+ 當您向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊 CLR 常式時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會衍生一組有關此常式的屬性。 這些常式屬性會決定該常式的功能，包括是否可以為此常式建立索引。 例如，將 `DataAccess` 屬性設定為 `DataAccessKind.Read` 可讓您從 CLR 函數內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者資料表存取資料。 下列範例會示範簡單的情況下所在`DataAccess`屬性設定為從使用者資料表的資料存取方便**table1**。  
   
 ```csharp  
 using System;  
@@ -94,6 +94,6 @@ End Class
  CLR 常式、使用者定義型別和彙總所需的自訂屬性會定義在 `Microsoft.SqlServer.Server` 命名空間內。  
   
 ## <a name="see-also"></a>另請參閱  
- [對 CLR 常式的自訂屬性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
+ [CLR 常式的自訂屬性](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

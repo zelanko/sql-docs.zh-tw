@@ -1,5 +1,5 @@
 ---
-title: Drop 元素 (XMLA) |Microsoft 文件
+title: Drop 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Drop element
 ms.assetid: a5d21db3-743a-4958-b16d-b6816a5ee787
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 64f6fd75c3c5032c035ca4af6b9950a0de1e6ddc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 8b77be1023fdc7145a367c200efb1e653e767b7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145694"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326488"
 ---
 # <a name="drop-element-xmla"></a>Drop 元素 (XMLA)
   從維度中刪除屬性成員。  
@@ -68,7 +68,7 @@ ms.locfileid: "36145694"
 ## <a name="remarks"></a>備註  
  `Drop` 命令會從可寫入維度中刪除屬性成員。  
   
- 如需有關刪除成員的詳細資訊，請參閱[插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。  
+ 如需有關刪除成員的詳細資訊，請參閱 <<c0> [ 插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [插入項目&#40;XMLA&#41;](insert-element-xmla.md)   

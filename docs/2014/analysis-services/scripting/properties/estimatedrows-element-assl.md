@@ -1,5 +1,5 @@
 ---
-title: EstimatedRows 元素 (ASSL) |Microsoft 文件
+title: EstimatedRows 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EstimatedRows element
 ms.assetid: 08a66481-6479-4a93-aa7e-15e8b1f854f2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0348e39cf3528c34028677a22c2bf7ec25697705
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e35ff79a747ad2106ac976ae2a4bdfeb408f6359
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213868"
 ---
 # <a name="estimatedrows-element-assl"></a>EstimatedRows 元素 (ASSL)
   包含父元素所代表之估計的資料列數目。  
@@ -58,7 +58,7 @@ ms.locfileid: "36132003"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[AggregationDesign](../objects/aggregationdesign-element-assl.md)， [Cube](../objects/cube-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)， [MeasureGroupBinding](../data-type/binding-data-type-assl.md)，[磁碟分割](../objects/partition-element-assl.md)|  
+|父元素|[AggregationDesign](../objects/aggregationdesign-element-assl.md)， [Cube](../objects/cube-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)， [MeasureGroupBinding](../data-type/binding-data-type-assl.md)，[資料分割](../objects/partition-element-assl.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  

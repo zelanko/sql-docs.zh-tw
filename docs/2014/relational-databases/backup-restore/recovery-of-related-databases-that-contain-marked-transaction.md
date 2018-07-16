@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
 - STOPBEFOREMARK option [RESTORE statement]
@@ -23,15 +22,15 @@ helpviewer_keywords:
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ca2529a4dbe6e237b3d8e833659a7c3df1fc941
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8fc37a9704dde533ae9d626a9853ccfb147cb06a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188605"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>復原包含標記之異動的相關資料庫
   這個主題僅與包含標示的交易，且使用完整模式或大量記錄復原模式的資料庫有關。  
@@ -58,7 +57,7 @@ ms.locfileid: "36134959"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- 交易記錄會記錄標示名稱 （交易名稱）、 描述、 資料庫、 使用者、`datetime`資訊，以及記錄序號 (LSN)。 `datetime`資訊與標示名稱用來唯一識別標示。  
+ 交易記錄會記錄標示名稱 （交易名稱）、 描述、 資料庫、 使用者、`datetime`資訊和記錄序號 (LSN)。 `datetime`資訊與標示名稱用來唯一識別標示。  
   
  如需如何將標示插入跨越多個資料庫之交易的相關資訊，請參閱 [使用標示的異動以一致的方式復原相關資料庫 &#40;完整復原模式&#41;](use-marked-transactions-to-recover-related-databases-consistently.md)。  
   
@@ -69,7 +68,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
      STOPATMARK 可向前復原標示，並將已標示的交易納入向前復原。  
   
--   使用 WITH STOPBEFOREMARK = **'*`<mark_name>`*'** 子句來指定記錄檔記錄是否已標示為復原點之前。  
+-   使用 WITH STOPBEFOREMARK = **'*`<mark_name>`*'** 子句，以指定的記錄檔記錄，會標示為復原點之前。  
   
      STOPBEFOREMARK 可向前復原標示，並從向前復原中排除已標示的交易。  
   

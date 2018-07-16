@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], asynchronous commit
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 caps.latest.revision: 37
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 924708dabd2cfe4fa94eb6f726e29613d6917d86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131791"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273744"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性模式 (AlwaysOn 可用性群組)
   在 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 中，「可用性模式」為複本屬性，可判斷給定可用性複本是否可以在同步認可模式下執行。 您必須將每個可用性複本的可用性模式設定為同步認可模式或非同步認可模式。  若將主要複本設定為「非同步認可模式」，其便不會等候任何次要複本將內送交易記錄檔記錄寫入磁碟 (「強行寫入記錄」)。 若將給定次要複本設定為非同步認可模式，主要複本便不會等候次要複本強行寫入記錄。 若將主要複本與給定次要複本皆設定為「同步認可模式」，主要複本會等候次要複本確認其已強行寫入記錄 (除非次要複本在主要的「工作階段逾時期限」內無法 Ping 主要複本)。  
@@ -66,7 +65,7 @@ ms.locfileid: "36131791"
   
  非同步認可的次要複本會嘗試與主要複本所傳來的記錄檔記錄保持同步。 但非同步認可的次要資料庫一律會保持未同步處理的狀態，而且可能會稍微落後對應的主要資料庫。 非同步認可之次要資料庫與對應之主要資料庫間的差距通常很小。 但裝載次要複本的伺服器若是超過負載或網路太慢，此差距就會變大。  
   
- 非同步認可模式唯一支援的容錯移轉形式為強制容錯移轉 (可能會遺失資料)。 強制容錯移轉是最後的方法，當目前的主要複本會有一長段時間無法使用，以及主要資料庫的立即可用性高於遺失資料的潛在風險時，即可使用此方法。容錯移轉目標的複本角色必須處於 SECONDARY 或 RESOLVING 狀態。 容錯移轉目標會轉換成主要角色，而且其資料庫副本會變成主要資料庫。 當剩餘的次要資料庫與先前的主要資料庫恢復其可用性時，系統會暫停這些資料庫，直到您手動一一回復為止。 在非同步認可模式下，所有原始主要複本尚未傳送至先前之次要複本的交易記錄檔皆會遺失。 這表示有部分或全部新主要資料庫可能會缺少最近認可的交易。 強制容錯移轉運作方式及使用它的最佳作法的詳細資訊，請參閱[容錯移轉及容錯移轉模式&#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。  
+ 非同步認可模式唯一支援的容錯移轉形式為強制容錯移轉 (可能會遺失資料)。 強制容錯移轉是最後的方法，當目前的主要複本會有一長段時間無法使用，以及主要資料庫的立即可用性高於遺失資料的潛在風險時，即可使用此方法。容錯移轉目標的複本角色必須處於 SECONDARY 或 RESOLVING 狀態。 容錯移轉目標會轉換成主要角色，而且其資料庫副本會變成主要資料庫。 當剩餘的次要資料庫與先前的主要資料庫恢復其可用性時，系統會暫停這些資料庫，直到您手動一一回復為止。 在非同步認可模式下，所有原始主要複本尚未傳送至先前之次要複本的交易記錄檔皆會遺失。 這表示有部分或全部新主要資料庫可能會缺少最近認可的交易。 如需有關強制容錯移轉運作及使用它的最佳做法的詳細資訊，請參閱 <<c0> [ 容錯移轉及容錯移轉模式&#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)。</c0>  
   
 ##  <a name="SyncCommitAvMode"></a> Synchronous-Commit Availability Mode  
  在同步認可的可用性模式 (「同步認可模式」) 下聯結至可用性群組之後，次要資料庫會趕上對應的主要資料庫並且進入 SYNCHRONIZED 狀態。 只要資料同步處理繼續進行，次要資料庫就會維持 SYNCHRONIZED 狀態。 這可確保在給定主要資料庫上認可的每筆交易，在對應的次要資料庫上也已獲得認可。 當給定次要複本上的每個次要資料庫都已同步處理時，整個次要複本的同步處理健全狀態就是 HEALTHY。  
@@ -115,7 +114,7 @@ ms.locfileid: "36131791"
 ###  <a name="SyncCommitWithAuto"></a> 包含自動容錯移轉的同步認可模式  
  自動容錯移轉可確保主要複本遺失之後快速地重新提供資料庫，藉以提供高可用性。 若要將可用性群組設定為自動容錯移轉，您必須將目前的主要複本和一個次要複本都設定為包含自動容錯移轉的同步認可模式。  
   
- 此外，為了能夠在給定的時間進行自動容錯移轉，這個次要複本必須與主要複本同步處理 (亦即，次要資料庫都會同步處理)，而且 Windows Server 容錯移轉叢集 (WSFC) 叢集必須具有仲裁。 如果主要複本在這些條件下變得無法使用，就會進行自動容錯移轉。 次要複本會切換成主要角色，而且它會提供其資料庫做為主要資料庫。 如需詳細資訊，請參閱的 < 自動容錯移轉 > 一節[容錯移轉及容錯移轉模式&#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)主題。  
+ 此外，為了能夠在給定的時間進行自動容錯移轉，這個次要複本必須與主要複本同步處理 (亦即，次要資料庫都會同步處理)，而且 Windows Server 容錯移轉叢集 (WSFC) 叢集必須具有仲裁。 如果主要複本在這些條件下變得無法使用，就會進行自動容錯移轉。 次要複本會切換成主要角色，而且它會提供其資料庫做為主要資料庫。 如需詳細資訊，請參閱 < 自動容錯移轉 > 一節[容錯移轉及容錯移轉模式&#40;AlwaysOn 可用性群組&#41;](failover-and-failover-modes-always-on-availability-groups.md)主題。  
   
 > [!NOTE]  
 >  如需 WSFC 仲裁和 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 的資訊，請參閱 [WSFC 仲裁模式和投票組態 &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)。  
@@ -153,7 +152,7 @@ ms.locfileid: "36131791"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原的解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
   

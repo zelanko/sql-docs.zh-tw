@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - viewing alerts
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9324249df2f96bf7ddf2a94b199cdfcfe003cb55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 862613ec00fb0274c5c227ab9903568b31969dbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187745"
 ---
 # <a name="view-information-about-an-alert"></a>檢視有關警示的資訊
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的相關資訊。  
@@ -63,9 +63,9 @@ ms.locfileid: "36134304"
   
      如需 [<警示名稱> 警示屬性] 對話方塊中之可用選項的詳細資訊，請參閱：  
   
-    -   [警示屬性新增警示&#40;[一般] 頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [警示屬性-新增警示&#40;一般頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-    -   [警示屬性新增警示&#40;回應頁面&#41;](alert-properties-new-alert-response-page.md)  
+    -   [警示屬性-新增警示&#40;回應頁面&#41;](alert-properties-new-alert-response-page.md)  
   
     -   [警示的內容： 新的警示&#40;選項頁面&#41;](alert-properties-new-alert-options-page.md)  
   
@@ -93,6 +93,6 @@ ms.locfileid: "36134304"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_help_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_help_alert &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-alert-transact-sql)。  
   
   

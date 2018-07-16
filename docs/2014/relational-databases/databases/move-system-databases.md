@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving system databases
 - disaster recovery [SQL Server], moving database files
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c7bf033e015ca982610c126ede29f2936c686bb9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 45673cbae225dbc796fcc84dbc94b33cfc0dedd2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037054"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326188"
 ---
 # <a name="move-system-databases"></a>移動系統資料庫
   本主題將描述如何在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中移動系統資料庫。 在下列狀況下移動系統資料庫可能非常有用：  
@@ -54,7 +54,7 @@ ms.locfileid: "36037054"
 > [!IMPORTANT]  
 >  如果您移動了系統資料庫，接著重建 master 資料庫，就必須再次移動系統資料庫，因為重建作業會將所有系統資料庫安裝到預設的位置。  
   
-##  <a name="Intro"></a> **本主題內容**  
+##  <a name="Intro"></a> **本主題中**  
   
 -   [計畫的重新放置與排程的磁碟維護程序](#Planned)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36037054"
   
 -   [移動 Resource 資料庫](#Resource)  
   
--   [後續工作： 移動所有系統資料庫之後](#Follow)  
+-   [後續操作： 移動所有系統資料庫之後](#Follow)  
   
 -   [範例](#Examples)  
   
@@ -213,7 +213,7 @@ ms.locfileid: "36037054"
   
 2.  以滑鼠右鍵按一下 **[錯誤記錄檔]** ，然後按一下 **[設定]**。  
   
-3.  在 **[設定 SQL Server Agent 錯誤記錄檔]** 對話方塊中，指定 SQLAGENT.OUT 檔的新位置。 預設位置是 C:\Program Files\Microsoft SQL Server\MSSQL12 < instance_name > \MSSQL\Log\\。  
+3.  在 **[設定 SQL Server Agent 錯誤記錄檔]** 對話方塊中，指定 SQLAGENT.OUT 檔的新位置。 預設位置是 < instance_name > \MSSQL\Log\\。 C:\Program Files\Microsoft SQL Server\MSSQL12。  
   
 #### <a name="change-the-database-default-location"></a>變更資料庫預設位置  
   

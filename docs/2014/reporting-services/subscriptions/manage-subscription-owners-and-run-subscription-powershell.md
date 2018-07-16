@@ -1,5 +1,5 @@
 ---
-title: 使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂用帳戶 |Microsoft 文件
+title: 使用 PowerShell 變更及列出 Reporting Services 訂閱擁有者並執行訂用帳戶 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: daed1f77d5e1470f39e8ad2d7afe52e66db7e219
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31bf54cf103a269900ce9edc6caf9ec192a4f4b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323818"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription
-  從開始[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]以程式設計方式，您就可以傳送擁有權[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]到另一位使用者訂閱。 本主題提供數個 Windows PowerShell 指令碼，供您可變更或單純列出訂閱擁有權時使用。 每項範例均包含原生模式和 SharePoint 模式的範例語法。 當您變更訂閱擁有者之後，便會在新擁有者的安全性內容中執行訂閱，且報表中的 [User!UserID] 欄位會顯示新擁有者的值。 如需 PowerShell 範例呼叫的物件模型詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+  開頭[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]您可以透過程式設計方式傳送擁有權[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]從一名使用者到另一個訂用帳戶。 本主題提供數個 Windows PowerShell 指令碼，供您可變更或單純列出訂閱擁有權時使用。 每項範例均包含原生模式和 SharePoint 模式的範例語法。 當您變更訂閱擁有者之後，便會在新擁有者的安全性內容中執行訂閱，且報表中的 [User!UserID] 欄位會顯示新擁有者的值。 如需 PowerShell 範例呼叫的物件模型詳細資訊，請參閱 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
  ![PowerShell 相關內容](../media/rs-powershellicon.jpg "PowerShell 相關內容")  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36037161"
   
  **SharePoint 模式：**  
   
--   列出訂閱： ManageAlerts OR (HYPERLINK"http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx"CreateAlerts 使用者訂用帳戶擁有者且訂閱為定時的訂閱)。  
+-   列出訂閱： ManageAlerts 或 (HYPERLINK"http://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx"CreateAlerts 使用者訂用帳戶擁有者且訂閱為定時的訂閱)。  
   
 -   變更訂閱：ManageWeb  
   
@@ -339,7 +339,7 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  `</Event>`  
   
- 如需有關組態檔的詳細資訊，請參閱[RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)。  
+ 如需有關組態檔的詳細資訊，請參閱 < [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)。  
   
  指令碼包含延遲邏輯 “`Start-Sleep -s 6`”，所以在觸發事件之後會有時間，以透過 ListSubscription 方法取得更新的狀態。  
   

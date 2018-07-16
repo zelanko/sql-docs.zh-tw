@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
@@ -16,13 +16,13 @@ ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 02175d277793a1be7ca7d82edc4fd47b862d26f3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eb219d26d5aa4ce4d1bb2d241475b39d65673f80
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134665"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180365"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 運算式)
   傳回反向順序的字元運算式。  

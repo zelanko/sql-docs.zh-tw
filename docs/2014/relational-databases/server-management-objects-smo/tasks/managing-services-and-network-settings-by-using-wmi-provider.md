@@ -1,5 +1,5 @@
 ---
-title: 使用 WMI 提供者管理服務和網路設定 |Microsoft 文件
+title: 使用 WMI 提供者來管理服務和網路設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 54c441653fd1116aa9061d143aa63ae353a43585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9f0f9c249ac1a494a3dd965386da7160dd373818
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280624"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
   WMI 提供者是已發行的介面，以供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Management Console (MMC) 來管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務和網路通訊協定。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件都代表 WMI 提供者。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件操作可使用所建立的連接與不同<xref:Microsoft.SqlServer.Management.Smo.Server>物件的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，並使用 Windows 認證來連接到 WMI 服務。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件操作可建立的連線與不同<xref:Microsoft.SqlServer.Management.Smo.Server>物件的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，並使用 Windows 認證來連接到 WMI 服務。  
   
 ## <a name="example"></a>範例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.prodinfo.f1
 - sql12.swb.serverproperties.setsapassword.f1
 - sql12.swb.serverproperties.activedirectory.f1
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 caps.latest.revision: 28
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cd50debd54d9cb3313964d74f32f30b419b4e2aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 87367d289859b8b33e7df3ef755a5893e586ab31
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037106"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323158"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>伺服器屬性 (一般頁面) - SQL Server Management Studio
   使用此頁面檢視有關 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的唯讀資訊。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
 - errors [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
 caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0c87d8492bb06a3e1cf5eb46d4e13683d652413e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1c71e1ce5498c76baf3a27eff9fbcdbdfc29360
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132568"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214978"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services 錯誤的原因和解決方案
   本主題包含數個與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]相關之錯誤的原因和解決方案資訊。 本節中的錯誤訊息主題提供錯誤訊息的說明、可能的原因，以及您可以採取哪些動作以更正問題。  

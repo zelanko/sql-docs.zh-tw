@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full backups [SQL Server]
 - backing up [SQL Server], files or filegroups
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - file backups [SQL Server]
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4c3a64856265a37870726e9d9128240fc751c5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 96ceb0dad6a52e4e1f54780e9b0a10084fab5d8f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193331"
 ---
 # <a name="full-file-backups-sql-server"></a>完整檔案備份 (SQL Server)
   本主題僅與包含多個檔案或檔案群組的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫有關。  

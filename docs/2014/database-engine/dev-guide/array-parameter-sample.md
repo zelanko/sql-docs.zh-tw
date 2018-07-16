@@ -1,5 +1,5 @@
 ---
-title: 陣列參數範例 |Microsoft 文件
+title: 陣列參數範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f550af33b55d7b54a5bc88b69ecf419e07a3116
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 9b3675473d52edb767c0aa96fa73e8775430d97e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328188"
 ---
 # <a name="array-parameter-sample"></a>陣列參數範例
   有時，在資料庫中建立、更新或刪除一組資料列非常有用。 您可以使用數種方法實現此目標。 其中之一便是從用戶端將資訊的陣列，傳遞至使用 Common Language Runtime (CLR) 整合使用者自訂資料類型之伺服器上的 CLR 整合預存程序。 此類使用者自訂資料類型的性質將提供給伺服器的資料大小限制在 8000 位元組。 因此，此方法無法滿足大型或複雜的資料。 如果管理的資料較小而且簡單，則相較於呼叫每一個資料列的預存程序，此方法會更有效。 藉由傳遞陣列，對於順序重要的那些應用程式可保留資料的順序。此範例包含下列項目：  
@@ -31,7 +31,7 @@ ms.locfileid: "36037287"
   
 3.  `TestArrayParameter` 主控台應用程式。 這會根據所傳入之命令列參數建立 `ContactTypeNames` 使用者定義資料類型的執行個體，然後叫用 `usp_EnsureContactTypeNames` 預存程序，方法是將使用者定義資料類型的執行個體做為參數進行傳遞。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  
@@ -83,7 +83,7 @@ ms.locfileid: "36037287"
   
 5.  在 c:\MySample 中，建立 `Program.vb` (適用於 Visual Basic 範例) 或 `Program.cs` (適用於 C# 範例) 並將適當的 Visual Basic 或 C# 範例程式碼 (下面) 複製到檔案中。  
   
-6.  （大約是第 24 行） Program 檔案中尋找適當的程式行，並取代`XXX`的執行個體的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+6.  （大約是第 24 行） Program 檔案中尋找適當的列，並取代`XXX`您的執行個體的名稱 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
     -   `Dim connection As New SqlConnection("data source=XXX;initial catalog=AdventureWorks;Integrated Security=SSPI")`  
   

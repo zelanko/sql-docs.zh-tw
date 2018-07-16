@@ -1,5 +1,5 @@
 ---
-title: Update 元素 (XMLA) |Microsoft 文件
+title: Update 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Update command [XMLA]
 ms.assetid: 324dcc16-865d-4d0a-b393-2b06c18ac807
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 68eb54e24daccb08a77cc88b2396d31114a29b25
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 75dda4a163ce6551246e11aa9eba6b57fcd9fb25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283954"
 ---
 # <a name="update-element-xmla"></a>Update 元素 (XMLA)
   更新維度中的屬性成員。  
@@ -69,10 +69,10 @@ ms.locfileid: "36132508"
 ## <a name="remarks"></a>備註  
  `Update` 命令會在可寫入維度內部移動屬性成員。  
   
- 如需有關更新成員的詳細資訊，請參閱[插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。  
+ 如需有關更新成員的詳細資訊，請參閱 <<c0> [ 插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
- [Drop 元素&#40;XMLA&#41;](drop-element-xmla.md)   
+ [卸除項目&#40;XMLA&#41;](drop-element-xmla.md)   
  [插入項目&#40;XMLA&#41;](insert-element-xmla.md)   
  [命令&#40;XMLA&#41;](xml-elements-commands.md)  
   

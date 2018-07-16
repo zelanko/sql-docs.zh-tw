@@ -1,5 +1,5 @@
 ---
-title: ServerNetworkProtocolProperty 類別 |Microsoft 文件
+title: ServerNetworkProtocolProperty 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ServerNetworkProtocolProperty class
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 23ea90f40ca4bf3721dc4a80a59e7c276c3b77ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7554cdae2dd8c7c6276f51feb75d9fb6edb0511b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260384"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>ServerNetworkProtocolProperty 類別
   [ServerNetworkProtocolProperty 類別] servernetworkprotocolproperty-class.md) 代表伺服器網路通訊協定的屬性。  

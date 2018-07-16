@@ -1,5 +1,5 @@
 ---
-title: 連結量值群組 |Microsoft 文件
+title: 連結量值群組 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - linked measure groups [Analysis Services]
 - referencing measure groups
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f01313ce33a2dca510846a66d34d972540d72d85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e67d39b1cafa212b2a43b55d9de58e5df918bd11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037333"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251470"
 ---
 # <a name="linked-measure-groups"></a>連結量值群組
   連結的量值群組會以相同資料庫或不同的 Analysis Services 資料庫中不同之 Cube 中的另一個量值群組為基礎。 如果您想要重複使用多個 Cube 中的一組量值及對應的資料值，您可使用連結量值群組。  
   
- Microsoft 建議原始和連結的量值群組皆位於同一部伺服器上所執行的解決方案中。 連結到遠端伺服器上的量值群組已排定要在未來版本的取代 (請參閱[Deprecated Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
+ Microsoft 建議原始和連結的量值群組皆位於同一部伺服器上所執行的解決方案中。 連結量值群組在遠端伺服器上已排定從未來版本中淘汰 (請參閱[SQL Server 2014 中已被取代 Analysis Services 功能](../deprecated-analysis-services-features-in-sql-server-2014.md))。  
   
 > [!IMPORTANT]  
 >  連結量值群組是唯讀的。 若要挑選最新的變更，您必須先刪除所有連結量值群組，再根據修改的來源物件重新建立連結量值群組。 基於這個理由，未來需要修改量值群組時，建議您考慮在專案之間複製並貼上量值群組這個替代方法。  
@@ -72,7 +72,7 @@ ms.locfileid: "36037333"
 ## <a name="secure-a-linked-measure"></a>維護連結量值的安全  
  定義連結之後，管理連結量值群組中量值的存取權方式，就和管理其他量值群組存取權的方式一樣。 連結物件會連同其非連結的對應項目一起出現在角色設計工具中。 如需管理量值群組之安全性的詳細資訊，請參閱[授與 Cube 或模型權限 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
   
- 若要定義或使用連結量值群組，Windows 服務帳戶[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體必須屬於[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫角色具有`ReadDefinition`和`Read`存取來源上的權限[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體來源 cube 和量值群組，或必須屬於[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來源的系統管理員角色[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。  
+ 若要定義或使用連結量值群組，Windows 服務帳戶[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體必須屬於[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料庫角色具有`ReadDefinition`並`Read`存取來源上的權限[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體來源 cube 和量值群組，或必須屬於[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來源的系統管理員角色[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
  [定義連結維度](define-linked-dimensions.md)  
