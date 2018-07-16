@@ -1,5 +1,5 @@
 ---
-title: Aggregations 元素 (ASSL) |Microsoft 文件
+title: Aggregations 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Aggregations element
 ms.assetid: 79b7de7a-53b2-4202-bc0f-de1daaf1b179
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6a81b8107738121797d06c185b6043ca81a90c50
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9c94129a76064bbbc98f300a855e77826ec57794
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189195"
 ---
 # <a name="aggregations-element-assl"></a>Aggregations 元素 (ASSL)
-  包含定義的彙總集合[AggregationDesign](../objects/aggregationdesign-element-assl.md)項目。  
+  包含定義的彙總的集合[AggregationDesign](../objects/aggregationdesign-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36134709"
 |子元素|[彙總](../objects/aggregation-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AggregationCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.AggregationCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [MeasureGroup 元素&#40;ASSL&#41;](../objects/group-element-assl.md)   

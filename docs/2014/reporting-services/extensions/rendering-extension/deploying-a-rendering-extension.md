@@ -15,30 +15,30 @@ helpviewer_keywords:
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 caps.latest.revision: 43
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd6fb05217c0bde25dcc00e5f520dfd126385ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4847340ab6bb40a4a5c6e247a4b9f2e33034ca8e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133163"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181673"
 ---
 # <a name="deploying-a-rendering-extension"></a>部署轉譯延伸模組
   在您撰寫 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表轉譯延伸模組並將其編譯成 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 程式庫之後，需要使其可供報表伺服器和報表設計師探索。 若要這樣做，請將延伸模組複製到適當的目錄，並將項目加入適當的 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 組態檔。  
   
 ## <a name="configuration-file-rendering-extension-element"></a>組態檔轉譯延伸模組元素  
- 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 `Extension`元素包含兩個屬性的名稱和型別。  
+ 在將轉譯延伸模組編譯成 .DLL 之後，您就可以將項目加入至 rsreportserver.config 檔案。 預設位置為 %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<執行個體名稱>\Reporting Services\ReportServer。 父項目是 \<Render>。 Render 元素之下是代表每個轉譯延伸模組的 Extension 元素。 `Extension`元素包含兩個屬性： 名稱和型別。  
   
- 下表描述的屬性`Extension`轉譯延伸模組項目：  
+ 下表描述的屬性`Extension`轉譯延伸模組的項目：  
   
 |attribute|描述|  
 |---------------|-----------------|  
 |**名稱**|延伸模組的唯一名稱。 **Name** 屬性的最大長度為 255 個字元。 該名稱在組態檔之 **Extensions** 元素的所有項目中，必須是唯一的。 如果重複的名稱存在，報表伺服器會傳回錯誤。|  
 |**型別**|以逗號分隔的清單，包括完整的命名空間以及組件的名稱。|  
-|**Visible**|值若為 `false` 表示轉譯延伸模組不應該顯示在使用者介面中。 如果不包含屬性，則預設值是`true`。|  
-|**LogAllExecutionRequests**|值若為 `false` 表示只會針對工作階段中的第一項報表執行作業記錄項目。 如果不包含屬性，則預設值是`true`。<br /><br /> 例如，這項設定會決定只針對報表中轉譯的第一個頁面記錄項目 (當此值為 `false` 時)，還是針對報表中轉譯的每個頁面記錄項目 (當此值為 `true` 時)。|  
+|**Visible**|值若為 `false` 表示轉譯延伸模組不應該顯示在使用者介面中。 不包含屬性時，預設值是`true`。|  
+|**LogAllExecutionRequests**|值若為 `false` 表示只會針對工作階段中的第一項報表執行作業記錄項目。 不包含屬性時，預設值是`true`。<br /><br /> 例如，這項設定會決定只針對報表中轉譯的第一個頁面記錄項目 (當此值為 `false` 時)，還是針對報表中轉譯的每個頁面記錄項目 (當此值為 `true` 時)。|  
   
  如需詳細資訊，請參閱 [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md)。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36133163"
     <Extension Name="My Rendering Extension Name" Type="CompanyName.ExtensionName.MyRenderingProvider, AssemblyName" />  
     ```  
   
-     **Name** 值是轉譯延伸模組的唯一名稱。 **類型**的值是以逗號分隔的清單，包括 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 實作的完整命名空間項目，後面接著組件的名稱 (不包括 .dll 副檔名)。 根據預設，轉譯延伸模組是可見的。 若要隱藏使用者介面，例如報表管理員中的延伸模組加入**看得見**屬性`Extension`項目，並將它設定為`false`。  
+     **Name** 值是轉譯延伸模組的唯一名稱。 **類型**的值是以逗號分隔的清單，包括 <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension> 實作的完整命名空間項目，後面接著組件的名稱 (不包括 .dll 副檔名)。 根據預設，轉譯延伸模組是可見的。 若要隱藏延伸模組從使用者介面，例如報表管理員中，新增**Visible**屬性設定為`Extension`項目，並將它設定為`false`。  
   
 ## <a name="verifying-the-deployment"></a>確認部署  
  您也可以開啟報表管理員，然後確認延伸模組是否包含在報表可用匯出類型的清單中。  

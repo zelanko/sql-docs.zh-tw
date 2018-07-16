@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e3f5cdbece8396bcc75250146bd43ce79da7f5a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5681c630cc3c45d0f2de06d3b5baa981bebe8c85
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184655"
 ---
 # <a name="qnparameter-table-event-class"></a>QN:Parameter Table 事件類別
   QN:Parameter table 事件會報告建立、保留參考計數，以及卸除儲存參數資訊之內部資料表所需作業的相關資訊。 此事件也會報告為參數資料表重設使用狀態計數的內部作業。  
@@ -38,7 +38,7 @@ ms.locfileid: "36134164"
 |DatabaseName|`nvarchar`|正在其中執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`Int`|事件類型 = 200。|27|否|  
 |EventSequence|`int`|此事件的序號。|51|否|  
-|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 建立資料表： 表示參數資料表已經在資料庫中建立。<br /><br /> 資料表的卸除嘗試： 表示資料庫已嘗試自動卸除未使用的參數資料表，以便釋出資源。<br /><br /> 資料表卸除嘗試失敗： 表示資料庫嘗試卸除未使用的參數資料表，但失敗。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動重新排程參數資料表的刪除作業，以便釋出資源。<br /><br /> 卸除的資料表： 表示資料庫已成功卸除參數資料表。<br /><br /> 釘選的資料表： 表示參數資料表標示為目前用於內部處理。<br /><br /> 資料表不固定： 表示參數資料表已經取消固定。 內部處理已經完成使用此資料表。<br /><br /> 遞增的使用者數目： 表示參考參數資料表的查詢通知訂閱數目已增加。<br /><br /> 遞減的使用者數目： 表示參考參數資料表的查詢通知訂閱數目已減少。<br /><br /> LRU 計數器重設： 表示參數資料表的使用計數已重設。<br /><br /> 啟動清除工作： 表示已經啟動此參數資料表中的所有訂閱的清除作業。 當資料庫啟動或卸除此參數資料表之訂閱底下的資料表時，就會發生這個情況。<br /><br /> 清除工作已經完成： 指出此參數資料表中的所有訂閱的清除作業已經完成時。|21|是|  
+|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 建立資料表： 表示參數資料表已經建立在資料庫中。<br /><br /> 資料表卸除嘗試： 表示資料庫已嘗試自動卸除未使用的參數資料表，以便釋出資源。<br /><br /> 資料表卸除嘗試失敗： 表示資料庫嘗試卸除未使用的參數資料表，但失敗。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將自動重新排程參數資料表的刪除作業，以便釋出資源。<br /><br /> 卸除的資料表： 表示資料庫已成功卸除參數資料表。<br /><br /> 釘選的資料表： 表示參數資料表標示為目前用於內部處理。<br /><br /> 取消固定的資料表： 表示參數資料表已經取消固定。 內部處理已經完成使用此資料表。<br /><br /> 遞增的使用者數目： 表示參考參數資料表的查詢通知訂閱數目已增加。<br /><br /> 遞減的使用者數目： 表示參考參數資料表的查詢通知訂閱數目已減少。<br /><br /> LRU 計數器重設： 表示參數資料表的使用計數已重設。<br /><br /> 清除工作開始： 表示已經啟動此參數資料表中的所有訂閱的清除作業。 當資料庫啟動或卸除此參數資料表之訂閱底下的資料表時，就會發生這個情況。<br /><br /> 清除工作完成： 表示此參數資料表中的所有訂閱的清除作業已經完成。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  
@@ -51,6 +51,6 @@ ms.locfileid: "36134164"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果應用程式使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 會顯示 "Login1"，而 LoginName 則會顯示 "Login2"。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server 查詢通知 Profiler 事件結構描述](http://go.microsoft.com/fwlink/?LinkId=63331) 網頁上所提供的 XML 結構描述。|@shouldalert|是|  
+|TextData|`ntext`|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server 查詢通知 Profiler 事件結構描述](http://go.microsoft.com/fwlink/?LinkId=63331) 網頁上所提供的 XML 結構描述。|1|是|  
   
   

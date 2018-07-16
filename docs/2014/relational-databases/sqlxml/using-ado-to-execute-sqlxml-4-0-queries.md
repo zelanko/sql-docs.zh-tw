@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO 執行 SQLXML 4.0 查詢 |Microsoft 文件
+title: 使用 ADO 執行 SQLXML 4.0 查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLXML, ADO
 ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3a53e88a28a7be770b1bc6541f9118ca64e3fc7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91ccb8afcc1de50498695da442ba1f20a0942d27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201188"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>使用 ADO 執行 SQLXML 4.0 查詢
   在舊版的 SQLXML 中，可使用 SQLXML IIS 虛擬目錄和 SQLXML ISAPI 篩選來支援以 HTTP 為基礎的查詢執行。 在 SQLXML 4.0 中已經移除這些元件，因為自 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 開始引進的原生 XML Web 服務提供了類似且重疊的功能。  
@@ -117,14 +117,14 @@ ms.locfileid: "36132155"
   
 1.  確認已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client，如下所示：  
   
-    1.  從**啟動**功能表上，指向**設定**，然後按一下 **控制台**。  
+    1.  從**開始**功能表上，指向**設定**，然後按一下**控制台**。  
   
-    2.  在控制台中開啟**新增或移除程式**  
+    2.  在 [控制台] 開啟**新增或移除程式**  
   
     3.  在目前安裝的程式清單中，確認**Microsoft SQL Server Native Client**出現在清單中。  
   
         > [!NOTE]  
-        >  如果您需要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，請參閱[安裝 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
+        >  如果您要安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，請參閱[安裝 SQL Server Native Client](../native-client/applications/installing-sql-server-native-client.md)。  
   
 2.  確認用戶端電腦所安裝的 MDAC 版本為 2.6 或更新版本。 如果需要確認 MDAC 版本資訊，可以使用 MDAC Component Checker 工具，此工具可從 Microsoft 網站 (www.microsoft.com) 免費下載。 如需詳細資訊，請在 Microsoft 網站上搜尋 "MDAC Component Checker"。  
   

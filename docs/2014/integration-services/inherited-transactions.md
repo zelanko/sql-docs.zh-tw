@@ -1,5 +1,5 @@
 ---
-title: 繼承的交易 |Microsoft 文件
+title: 繼承的交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], inherited
 - child packages
 - inherited transactions [Integration Services]
 ms.assetid: 90db5564-d41e-4cfe-8c9e-4e68d41eff1c
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0df0ba113b23e9b5cc582b1795299a0befee4bae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b2a4010ccdf7ec3138e180d5d90f6e779aa0529
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215488"
 ---
 # <a name="inherited-transactions"></a>繼承的交易
   封裝可使用「執行封裝」工作執行另一個封裝。 子封裝 (亦即「執行封裝」工作所執行的封裝) 可建立其自己的封裝交易，也可以繼承父封裝交易。  
@@ -60,6 +60,6 @@ ms.locfileid: "36133300"
  封裝 E 不使用交易。  
   
 ## <a name="related-tasks"></a>相關工作  
- [封裝設定成使用交易](../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [設定套件來使用交易](../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

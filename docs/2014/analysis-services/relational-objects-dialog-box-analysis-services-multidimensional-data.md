@@ -1,5 +1,5 @@
 ---
-title: 關聯式物件對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 關聯式物件對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.relationalobjectsdialog.f1
 ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 17e7c07ce8aaef2077ed46f18bc1c28b4de4c199
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc15ef3dbfcaab51bd3e19b7c723c04f49c261b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176965"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>關聯式物件對話方塊 (Analysis Services - 多維度資料)
   使用 **中的** [關聯式物件] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 對話方塊，即可從您要設定主動式快取的資料來源選取資料表、檢視或其他物件。 在 [儲存選項] 對話方塊的 [通知] 索引標籤上，按一下 [指定追蹤資料表] 選項中的省略符號按鈕 (**...**)，即可在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中顯示此對話方塊。  
@@ -38,6 +38,6 @@ ms.locfileid: "36134296"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [通知&#40;儲存選項對話方塊&#41; &#40;Analysis Services-多維度資料&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
+ [通知&#40;儲存體選項對話方塊&#41; &#40;Analysis Services-多維度資料&#41;](notifications-storage-options-dialog-analysis-services-multidimensional-data.md)  
   
   

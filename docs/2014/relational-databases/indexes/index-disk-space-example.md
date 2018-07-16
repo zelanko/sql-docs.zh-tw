@@ -5,10 +5,9 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online index disk space
 - disk space [SQL Server], indexes
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b371198e36cc2e8047ab88275331dab076e0b97b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6e2fc74a9134a03c69e6d436c11de84ef2867b1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182265"
 ---
 # <a name="index-disk-space-example"></a>索引磁碟空間範例
   無論何時建立、重建或卸除索引，舊結構 (來源) 和新結構 (目標) 兩者在它們適當的檔案和檔案群組中都需要磁碟空間。 舊結構要到索引建立交易認可時才會取消配置。 此時也可能會需要額外暫存磁碟空間，以供排序作業。 如需詳細資訊，請參閱 [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)。  
@@ -100,7 +99,7 @@ ms.locfileid: "36132415"
   
 -   決定暫存對應索引的空間。  
   
-     此範例中，舊的書籤是堆積 （8 位元組） 的資料列識別碼 (RID) 和新的書籤是叢集索引鍵 (24 位元組，包括`uniqueifier`)。 舊書籤和新書籤之間沒有重疊的資料行。  
+     在此範例中，舊的書籤是堆積 （8 位元組） 的資料列識別碼 (RID) 和新的書籤是叢集索引鍵 (24 位元組，包括`uniqueifier`)。 舊書籤和新書籤之間沒有重疊的資料行。  
   
      暫存對應索引大小 = 1 百萬 * (8 位元組 + 24 位元組) / 80% ~ 40 MB。  
   

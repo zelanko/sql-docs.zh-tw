@@ -1,5 +1,5 @@
 ---
-title: 使用 CommandText 屬性執行範本檔案 |Microsoft 文件
+title: 使用 CommandText 屬性執行範本檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a935c42d72f0dc26bc329cb0f4c8649097a317f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 7b74755c73982bb4ed0380209b34278e68b2309e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131931"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227118"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
-  此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，使用 CommandTextproperty。 而不是做為 CommandText 值，指定 SQL 或 XPath 查詢，您可以指定檔案名稱做為值。 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType.TemplateFile。  
+  此範例說明如何指定 SQL 或 XPath 查詢所組成的範本檔案，使用 CommandTextproperty。 而不是做為 CommandText 值，指定 SQL 或 XPath 查詢，您可以指定檔案名稱的值。 在下列範例中，CommandType 屬性會指定為 SqlXmlCommandType.TemplateFile。  
   
  此範例應用程式會執行此範本：  
   
@@ -96,7 +96,7 @@ class Test
   
 5.  在命令提示字元中，執行 DocSample.exe。  
   
- 如果您將參數傳遞至範本時，參數名稱開頭必須 at 符號 (@)。例如，p.Name="@ContactID"，其中 p 是 SqlXmlParameter 物件。  
+ 如果您將參數傳遞給範本時，參數名稱必須以開頭 at 符號 (@);比方說，p.Name="@ContactID"，其中 p 是 SqlXmlParameter 物件。  
   
  這是採用一個參數的已更新範本。  
   

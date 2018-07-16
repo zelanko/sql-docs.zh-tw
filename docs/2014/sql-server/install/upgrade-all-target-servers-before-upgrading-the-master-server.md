@@ -1,5 +1,5 @@
 ---
-title: 升級主要伺服器之前升級所有目標伺服器 |Microsoft 文件
+title: 升級所有目標伺服器，然後再升級主要伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TSX [SQL Server Agent]
 - target servers [SQL Server Agent]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - master servers [SQL Server Agent]
 ms.assetid: 2c231793-3878-4a5e-a425-1fa0d787ba84
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fdd218b1d5bfaacaffbd50c50d55dd47d613d207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d0df73fdfa1ebbaa84b0fb11519698351a78ffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218668"
 ---
 # <a name="upgrade-all-target-servers-before-upgrading-the-master-server"></a>先升級所有目標伺服器後再升級主要伺服器
   升級主要伺服器之前，請先升級所有設定為目標伺服器的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦。  

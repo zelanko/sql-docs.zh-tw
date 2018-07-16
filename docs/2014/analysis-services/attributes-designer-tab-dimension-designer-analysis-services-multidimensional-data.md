@@ -1,5 +1,5 @@
 ---
-title: 屬性 （屬性關聯性設計師索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 屬性 （屬性關聯性設計師索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.attributes.f1
 ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f0324d78dd64db1a135a878809a90a8056b95ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff6836db1f179da6c1151d576af20fb210713980
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200598"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>屬性 (屬性關聯性設計師索引標籤，維度設計師) (Analysis Services - 多維度資料)
   使用 **[屬性]** 清單，即可在屬性關聯性圖表中找到特定屬性，或定義新的屬性關聯性。 這個窗格會緊鄰在包含屬性關聯性圖表的窗格底下。  
@@ -55,7 +55,7 @@ ms.locfileid: "36132542"
  在 [屬性] 視窗中顯示屬性 (Attribute) 的屬性 (Property)。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性關聯性&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
+ [屬性關聯性&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;屬性關聯性設計師索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [屬性關聯性圖表&#40;屬性關聯性設計師索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)   
  [屬性關聯性&#40;屬性關聯性設計師索引標籤，維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  

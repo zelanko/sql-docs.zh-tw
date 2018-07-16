@@ -1,5 +1,5 @@
 ---
-title: Collation 元素 (ASSL) |Microsoft 文件
+title: Collation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Collation element
 ms.assetid: 9b6dbe19-543e-43e6-abe9-1e8b4dfaa275
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8d457901781b177b860fdc4592cf87a2ab99456
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 92e4e7eaa9eb4d994fc225c9d3d1c9a0c941b1b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213928"
 ---
 # <a name="collation-element-assl"></a>Collation 元素 (ASSL)
   決定父元素所使用的定序。  

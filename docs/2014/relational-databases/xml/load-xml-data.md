@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e3b250b955028e3f0843699688713cb731f00fee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a5048132c50460475ffe9c04f0f03a75cf6368b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166299"
 ---
 # <a name="load-xml-data"></a>載入 XML 資料
   您可以透過幾種方式將 XML 資料傳送到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 例如：  
@@ -54,10 +54,10 @@ FROM    (SELECT *
   
 -   如果因為來源字碼頁的關係，編碼不是 Unicode 而且是隱含的，則資料庫中的字串字碼頁應與您要載入的字碼指標相同或相容。 若有必要，請使用 COLLATE。 如果沒有這類的伺服器字碼頁存在，則必須加入含有正確編碼的明確 XML 宣告。  
   
--   若要使用明確的編碼，請使用`varbinary()`類型，使用字碼頁沒有互動，或使用適當的字碼頁的字串類型。 然後再將資料指派給 XML 資料行、變數或參數。  
+-   若要使用明確的編碼，請使用`varbinary()`類型，與字碼頁沒有互動，或使用適當的字碼頁的字串類型。 然後再將資料指派給 XML 資料行、變數或參數。  
   
 ### <a name="example-explicitly-specifying-an-encoding"></a>範例：明確地指定編碼方式  
- 假設您將 XML 文件 vcdoc 儲存成沒有明確 XML 宣告的 `varchar(max)`。 下列陳述式加入具有編碼"iso8859-1"的 XML 宣告、 串連 XML 文件、 將轉換結果`varbinary(max)`以便位元組表示法，會保留下來，最後再轉換成 XML。 這樣可以讓 XML 處理器依據所指定的編碼 "iso8859-1" 來剖析資料，並針對字串值來產生對應的 UTF-16 表示法。  
+ 假設您將 XML 文件 vcdoc 儲存成沒有明確 XML 宣告的 `varchar(max)`。 下列陳述式加入具有編碼"iso8859-1"的 XML 宣告、 串連 XML 文件、 將轉換結果`varbinary(max)`以便位元組表示法會保留，而最後將轉換成 XML。 這樣可以讓 XML 處理器依據所指定的編碼 "iso8859-1" 來剖析資料，並針對字串值來產生對應的 UTF-16 表示法。  
   
 ```  
 SELECT CAST(   

@@ -1,5 +1,5 @@
 ---
-title: Members 元素 (XMLA) |Microsoft 文件
+title: Members 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Members element
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5d812d0eea48c4f2b54352f61a176462b280071a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 37eb0532f56fd4aff8ca760b843697f30f3c9585
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201958"
 ---
 # <a name="members-element-xmla"></a>Members 元素 (XMLA)
-  包含集合[成員](member-element-xmla.md)父元素所包含[CrossProduct](crossproduct-element-xmla.md)項目。  
+  包含的集合[成員](member-element-xmla.md)父元素所包含的項目[CrossProduct](crossproduct-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,13 +68,13 @@ ms.locfileid: "36132506"
   
 |attribute|描述|  
 |---------------|-----------------|  
-|階層|需要`String`屬性。 `Members` 元素所包含之成員所屬的階層名稱。|  
+|階層|所需`String`屬性。 `Members` 元素所包含之成員所屬的階層名稱。|  
   
 ## <a name="remarks"></a>備註  
- 當用戶端應用程式設定`AxisFormat`屬性*ClusterFormat*，每個座標軸上的成員會分成的叢集，其中每個叢集代表每個階層的成員已排序集合之間的交叉乘積。 每個 `Axis` 元素都包含一個或多個 `CrossProduct` 元素。 每個 `CrossProduct` 元素都會針對該軸上的每個階層包含 `Members` 元素。 然後，`Members` 元素會針對交叉乘積中包含之指定階層的每個成員包含一個 `Member` 元素。  
+ 當用戶端應用程式設定`AxisFormat`屬性，以*ClusterFormat*，每個座標軸上的為成員會分成的叢集，其中每個叢集代表每個階層的成員已排序集合之間的交叉乘積。 每個 `Axis` 元素都包含一個或多個 `CrossProduct` 元素。 每個 `CrossProduct` 元素都會針對該軸上的每個階層包含 `Members` 元素。 然後，`Members` 元素會針對交叉乘積中包含之指定階層的每個成員包含一個 `Member` 元素。  
   
 ## <a name="example"></a>範例  
- 下列範例說明結構`Members`時用戶端指定項目*ClusterFormat*如`AxisFormat`XMLA 屬性，假設軸具有下列成員：  
+ 下列範例說明的結構`Members`時用戶端指定的項目*ClusterFormat*如`AxisFormat`XMLA 屬性，假設軸具有下列成員：  
   
 ||||||  
 |-|-|-|-|-|  

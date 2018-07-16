@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: ef032c021bb8bdf2a64f63aad8d3eb79da044afb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: f8890c0ccab740444845180a328f9753c7a50976
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194900"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>資料集欄位集合 (報表產生器及 SSRS)
   資料集欄位代表資料連接中的資料。 欄位可以代表數值或非數值資料。 範例包括銷售量、總銷售額、客戶名稱、資料庫識別碼、URL、影像、空間資料及電子郵件地址。 在設計介面上，欄位會以報表項目 (如文字方塊、資料表和圖表) 中的運算式形式出現。  
@@ -61,7 +61,7 @@ ms.locfileid: "36134349"
  如果您正在處理報表模型資料來源，您可將實體和實體欄位指定為報表資料。 在報表模型的查詢設計工具中，您可以透過互動方式來瀏覽及選取相關實體，並選擇您要併入報表資料集的欄位。 當您完成查詢的設計之後，您可以在 [報表資料] 窗格內查看實體識別碼和實體欄位的集合。 實體識別碼是由報表模型自動產生，通常不會對使用者顯示。  
   
 ### <a name="using-extended-field-properties"></a>使用擴充欄位屬性  
- 支援多維度查詢的資料來源 (如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 可支援欄位上的欄位屬性。 欄位屬性會出現在查詢的結果集中，但是在 **[報表資料]** 窗格中則看不到。 欄位屬性仍然可供您的報表使用。 若要參考欄位的屬性，請將欄位拖曳到報表上，然後將預設屬性 `Value` 變更為您想要之屬性的欄位名稱。 例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 中，您可以針對 Cube 資料格中的值來定義格式。 使用欄位屬性是可用的格式化的值`FormattedValue`。 若要直接使用該值，而不是使用值並設定文字方塊的格式屬性，請將欄位拖曳到文字方塊，並將預設運算式 `=Fields!FieldName.Value` 變更為 `=Fields!FieldName.FormattedValue`。  
+ 支援多維度查詢的資料來源 (如 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]) 可支援欄位上的欄位屬性。 欄位屬性會出現在查詢的結果集中，但是在 **[報表資料]** 窗格中則看不到。 欄位屬性仍然可供您的報表使用。 若要參考欄位的屬性，請將欄位拖曳到報表上，然後將預設屬性 `Value` 變更為您想要之屬性的欄位名稱。 例如在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 中，您可以針對 Cube 資料格中的值來定義格式。 格式化的值使用，請使用欄位屬性`FormattedValue`。 若要直接使用該值，而不是使用值並設定文字方塊的格式屬性，請將欄位拖曳到文字方塊，並將預設運算式 `=Fields!FieldName.Value` 變更為 `=Fields!FieldName.FormattedValue`。  
   
 > [!NOTE]  
 >  並非所有 `Field` 屬性都可用於所有資料來源。 `Value` 和 `IsMissing` 屬性是為所有資料來源定義的。 其他預先定義的屬性 (例如多維度資料來源的 `Key`、`UniqueName` 和 `ParentUniqueName`) 只有在資料來源有提供這些屬性時，才受到支援。 某些資料提供者可支援自訂屬性。 如需詳細資訊，請參閱[報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md) 中有關適用於資料來源類型之擴充欄位屬性的特定主題。 例如，如果是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源，請參閱 [Analysis Services 資料庫的擴充欄位屬性 &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)。  
@@ -80,7 +80,7 @@ ms.locfileid: "36134349"
 ##  <a name="DataTypes"></a> 欄位資料類型  
  當您建立資料集時，資料來源上欄位的資料類型可能不完全是報表中使用的資料類型。 資料類型可能會經歷一或兩個對應層。 資料處理延伸模組或資料提供者可以將資料來源中的資料類型對應到 Common Language Runtime (CLR) 資料類型。 資料處理延伸模組所傳回的資料類型會從 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]對應到 Common Language Runtime (CLR) 資料類型的子集。  
   
- 在資料來源上，資料會使用此資料來源所支援的資料類型來儲存。 例如，在資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫必須是其中一個支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等資料類型`nvarchar`或`datetime`。 當您從此資料來源擷取資料時，資料會透過與資料來源類型相關聯的資料處理延伸模組或資料提供者來傳遞。 根據資料處理延伸模組而定，資料可從資料來源使用的資料類型轉換成資料處理延伸模組所支援的資料類型。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用與 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]一起安裝之 Common Language Runtime (CLR) 所支援的資料類型。 資料提供者會將結果集中的每一個資料行從原生資料類型對應到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 資料類型。  
+ 在資料來源上，資料會使用此資料來源所支援的資料類型來儲存。 例如，在中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫必須是其中一個支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等資料類型`nvarchar`或`datetime`。 當您從此資料來源擷取資料時，資料會透過與資料來源類型相關聯的資料處理延伸模組或資料提供者來傳遞。 根據資料處理延伸模組而定，資料可從資料來源使用的資料類型轉換成資料處理延伸模組所支援的資料類型。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用與 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]一起安裝之 Common Language Runtime (CLR) 所支援的資料類型。 資料提供者會將結果集中的每一個資料行從原生資料類型對應到 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 資料類型。  
   
  在每一個階段，資料都是由資料類型來表示，如以下清單所述：  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36134349"
   
 -   **資料提供者或資料處理延伸模組** ：當您連接到資料來源時，您所選取之資料處理延伸模組的資料提供者版本所支援的資料類型。 以 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 為基礎的資料提供者會使用 CLR 所支援的資料類型。 如需 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者資料類型的詳細資訊，請參閱 MSDN 上的 [資料類型對應 (ADO.NET)](http://go.microsoft.com/fwlink/?LinkId=112178) 和 [使用基底類型](http://go.microsoft.com/fwlink/?LinkId=112177) 。  
   
-     一般資料類型，例如支援[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]包含`Int32`和`String`。 `DateTime` 結構支援日曆上的日期和時間。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 導入支援`DateTimeOffset`包含時區時差的日期結構。  
+     比方說，一般資料類型會受到[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]包括`Int32`和`String`。 `DateTime` 結構支援日曆上的日期和時間。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 Service Pack 1 導入支援`DateTimeOffset`針對具有時區時差的日期結構。  
   
     > [!NOTE]  
     >  報表伺服器會使用報表伺服器上所安裝及設定的資料提供者。 [預覽] 模式下的報表撰寫用戶端會使用用戶端電腦上所安裝及設定的資料處理延伸模組。 您必須同時在報表用戶端和報表伺服器環境下測試您的報表。  
