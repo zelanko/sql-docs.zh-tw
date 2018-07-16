@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cd99d3824420db11fd3af6c7cc25d2e68594ebd4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a9047ae20bbf14a2dc72f3d5019706195c6dbca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243028"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
-  使用 SSIS 封裝升級精靈來升級[!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)]封裝和[!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)]的目前版本的封裝格式的封裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
+  使用 SSIS 封裝升級精靈來升級[!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)]封裝並[!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)]目前版本的封裝格式的封裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]。  
   
  **執行 SSIS 封裝升級精靈**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36136257"
   
 -   [選取封裝&#40;SSIS 封裝升級精靈&#41;](../../2014/integration-services/select-packages-ssis-package-upgrade-wizard.md)  
   
--   [完成精靈&#40;SSIS 封裝升級精靈&#41;](../../2014/integration-services/complete-the-wizard-ssis-package-upgrade-wizard.md)  
+-   [完成精靈 &#40;SSIS 封裝升級精靈&#41;](../../2014/integration-services/complete-the-wizard-ssis-package-upgrade-wizard.md)  
   
 -   [正在升級封裝&#40;SSIS 封裝升級精靈&#41;](../../2014/integration-services/upgrading-the-packages-ssis-package-upgrade-wizard.md)  
   

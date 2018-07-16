@@ -1,5 +1,5 @@
 ---
-title: SQL 目的地編輯器 （連接管理員頁面） |Microsoft 文件
+title: SQL 目的地編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.connection.f1
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
 caps.latest.revision: 36
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d6915ae8f2eafcea8e5ff04adf6af8bc3b32948a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb74d6cb0a3496718ef6768ffc69456b76aaf784
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133725"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195688"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>SQL 目的地編輯器 (連接管理員頁面)
   使用 **[SQL 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面，即可指定資料來源資訊並預覽結果。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 目的地會將資料載入到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫中的資料表或檢視。  
@@ -51,7 +51,7 @@ ms.locfileid: "36133725"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL 目的地編輯器&#40;[對應] 頁面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
+ [SQL 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [SQL 目的地編輯器&#40;進階頁面&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   
  [使用 SQL Server 目的地來大量載入資料](data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   

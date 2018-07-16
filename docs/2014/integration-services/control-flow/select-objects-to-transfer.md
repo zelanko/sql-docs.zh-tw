@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c8c6279f2dd57a490db9db3fdc45aa90733e8555
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cb95317ceaac922602d1a6588013b83337466ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246790"
 ---
 # <a name="select-objects-to-transfer"></a>選取要傳送的物件
   使用此對話方塊，即可透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳輸工作，選取要從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體傳輸到其他執行個體的物件。  
@@ -36,6 +36,6 @@ ms.locfileid: "36132487"
  [傳送登入工作編輯器 &#40;登入頁面&#41;](../transfer-logins-task-editor-logins-page.md)   
  [傳送 SQL Server 物件工作編輯器 &#40;物件頁面&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)   
  [傳送主要預存程序工作編輯器 &#40;預存程序頁面&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
- [傳送錯誤訊息工作編輯器&#40;郵件頁面&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+ [傳送錯誤訊息工作編輯器&#40;訊息 頁面&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 重新執行追蹤資料 |Microsoft 文件
+title: 重新執行追蹤資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2a53224c1618434ff9a7db2dda4ffc8a71f2ad1d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8be27c06c27688ad38339ea911bbe0f165658e9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220509"
 ---
 # <a name="replay-trace-data"></a>重新執行追蹤資料
   在您已經備妥輸入追蹤資料之後，就可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 如需詳細資訊，請參閱[準備輸入追蹤資料](prepare-the-input-trace-data.md)。  
   
  您可以使用管理工具的 [重新執行]  選項以起始 Distributed Replay 的事件重新執行階段。 這個階段是由兩個部分組成：追蹤資料分派以及分散式重新執行的啟動和同步處理。  
   
- ![Distributed Replay 事件](../../database-engine/media/eventreplay.gif "Distributed Replay 事件")  
+ ![Distributed Replay 事件](../../database-engine/media/eventreplay.gif "分散式事件重新執行")  
   
  您可以在下列其中一種順序模式中重新執行追蹤資料：壓力模式或同步處理模式。 預設行為是在壓力模式中重新執行追蹤資料。 如需有關事件重新執行階段和順序模式的詳細資訊，請參閱＜ [SQL Server Distributed Replay](sql-server-distributed-replay.md)＞  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36132336"
   
 ## <a name="see-also"></a>另請參閱  
  [Distributed 的 Replay 需求](distributed-replay-requirements.md)   
- [系統管理工具命令列選項&#40;分散式重新執行公用程式&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [系統管理工具命令列選項&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](configure-distributed-replay.md)  
   
   

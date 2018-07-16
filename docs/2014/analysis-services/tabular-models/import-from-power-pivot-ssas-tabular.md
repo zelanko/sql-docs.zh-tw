@@ -1,5 +1,5 @@
 ---
-title: 從 PowerPivot (SSAS 表格式) 匯入 |Microsoft 文件
+title: 匯入從 PowerPivot (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importfromppt.f1
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4636578c435ac158f92ef4968072e374af7fb4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f6480cf0b577a0faa48691a85248efb77a84531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035523"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245738"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>從 PowerPivot 匯入 (SSAS 表格式)
   本主題描述如何使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 的 [從 PowerPivot 匯入] 專案範本，從 PowerPivot 活頁簿匯入中繼資料和資料，以建立新的表格式模型專案。  
@@ -44,7 +44,7 @@ ms.locfileid: "36035523"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]的 **[檔案]** 功能表上，按一下 **[新增]**，然後再按一下 **[專案]**。  
   
-2.  在**新專案**對話方塊的 **已安裝的範本**，按一下**Business Intelligence**，然後按一下**匯入從 PowerPivot**.  
+2.  在**新的專案**對話方塊的 **已安裝的範本**，按一下  **Business Intelligence**，然後按一下 **從 PowerPivot匯入**.  
   
 3.  在 [名稱]中，輸入專案的名稱，並指定位置和方案名稱，然後按一下 [確定]。  
   

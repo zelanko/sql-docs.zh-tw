@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 39633ecaa8c0fbb73e712d1d227c4fe39c8f00dd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 70d23d19f2719aaa86ba81617bfb33544279bd2b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236238"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>教學課程：將圓形圖加入至報表 (報表產生器)
   圓形圖和環圈圖會將資料顯示為整體所佔的百分比。 圓形圖最常用於在群組之間進行比較。 圓形圖和環圈圖以及金字塔圖和漏斗圖會構成一組稱為形狀圖的圖表。 形狀圖沒有軸。 在形狀圖上放置數值欄位時，圖表會計算出每個值佔整體的百分比。  
@@ -30,7 +30,7 @@ ms.locfileid: "36036512"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a> 您將學習  
+##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學會如何：  
   
 1.  [從圖表精靈建立圓形圖](#Chart)  
@@ -39,7 +39,7 @@ ms.locfileid: "36036512"
   
 3.  [在每個配量中顯示百分比](#Percentages)  
   
-4.  [將小扇區結合成一個扇區](#CombineSlices)  
+4.  [將小配量結合成一個扇區](#CombineSlices)  
   
 5.  [自訂繪圖效果](#DrawingEffect)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36036512"
   
 #### <a name="to-add-a-pie-chart"></a>加入圓形圖  
   
-1.  在**選擇圖表類型**頁面上，按一下**圓形圖**，然後按一下 **下一步**。 [排列圖表欄位] 頁面隨即開啟。  
+1.  在 [**選擇圖表類型**頁面上，按一下**圓形圖**，然後按一下**下一步]**。 [排列圖表欄位] 頁面隨即開啟。  
   
      在 [排列圖表欄位] 頁面上，將 [Product] 欄位拖曳至 [類別目錄] 窗格。 類別目錄會定義圓形圖中的配量數目。 在這則範例中，共有八個配量，每一個代表一個產品。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "36036512"
   
 3.  按 [下一步] 。  
   
-4.  在**選擇樣式** 頁面上，樣式 窗格中選取樣式。  
+4.  在 [**選擇樣式**] 頁面上，在 [樣式] 窗格中，選取樣式。  
   
      樣式會指定字型樣式、色彩集和框線樣式。 當您選取樣式時，[預覽] 窗格會顯示具有該樣式的圖表範例。  
   
@@ -138,11 +138,11 @@ ms.locfileid: "36036512"
   
 3.  以滑鼠右鍵按一下標籤，然後按一下**數列標籤屬性**。  
   
-4.  在 標籤資料，從下拉式清單方塊中，選取 **#PERCENT**。  
+4.  在 標籤資料，從下拉式清單方塊中，選取 **#PERCENT{P0}</USERINPUT&GT**。  
   
      若要以百分比顯示值，UseValueAsLabel 屬性必須為 False。 如果系統提示您在 [確認動作] 對話方塊中設定這個值，請按一下 [是]。  
   
-5.  （選擇性）若要指定標籤所顯示的方式有許多小數位數，請輸入`#PERCENT{Pn}`其中*n*是要顯示的小數位數。 例如，若要不顯示任何小數位數，請輸入`#PERCENT{P0}`。  
+5.  （選擇性）若要指定標籤所顯示的小數位數，請輸入`#PERCENT{Pn}`何處*n*是要顯示的小數位數。 例如，若要顯示任何小數位數，請輸入`#PERCENT{P0}`。  
   
     > [!NOTE]  
     >  當您格式化百分比時，[數列標籤屬性] 對話方塊中的 [數字格式] 沒有任何作用。 這會將標籤格式化成百分比，但是不會計算每個配量所代表的圓形圖百分比。  
@@ -160,7 +160,7 @@ ms.locfileid: "36036512"
   
 1.  切換到報表設計檢視。  
   
-2.  在**檢視**索引標籤的**顯示/隱藏**群組中，選取**屬性**。  
+2.  在 **檢視**索引標籤中，於**顯示/隱藏**群組中，選取**屬性**。  
   
 3.  在設計介面上按一下圓形圖的任何配量。 數列的屬性會顯示在 [屬性] 窗格中。  
   
@@ -172,7 +172,7 @@ ms.locfileid: "36036512"
   
 7.  確認 **CollectedThresholdUsePercent** 屬性設定為 **True**。  
   
-8.  在功能區] 上**首頁**索引標籤上，按一下 [**執行**預覽報表。  
+8.  功能區上**首頁**索引標籤上，按一下**執行**預覽報表。  
   
  在圖例中，現在「其他」類別目錄就會存在。 新的圓形圖配量會將低於 5% 的所有配量結合成一個佔整個圓形圖 6% 的配量。  
   
@@ -189,10 +189,10 @@ ms.locfileid: "36036512"
   
 4.  在 [屬性] 窗格中，展開 **[CustomAttributes]** 節點。  
   
-5.  設定 **[piedrawingstyle]** 至 **[softedge]**。  
+5.  設定**PieDrawingStyle**要 **[softedge]**。  
   
     > [!NOTE]  
-    >  繪製效果和三維效果是互斥的選項。 如果圖表已經套用，三維效果 **[piedrawingstyle]** 並沒有出現在 [屬性] 窗格。  
+    >  繪製效果和三維效果是互斥的選項。 如果圖表已經套用，三維效果**PieDrawingStyle**並沒有出現在 [屬性] 窗格。  
   
 6.  按一下 **[執行]** 預覽報表。  
   
@@ -212,9 +212,9 @@ ms.locfileid: "36036512"
   
      **As a Percentage of Total Sales**  
   
-3.  選取**相機與攝錄影機銷售**，然後按一下**粗體**按鈕**字型**區段**首頁**功能區 索引標籤。  
+3.  選取**相機與攝錄影機銷售**，然後按一下**粗體**按鈕**字型**一節**首頁**功能區 索引標籤。  
   
-4.  選取**以百分比的總銷售額**，然後在**字型**區段**首頁**索引標籤上，將字型大小設定為**10**。  
+4.  選取  **As a Percentage of Total Sales**，然後在**字型**區段**首頁**索引標籤上，將字型大小設定為**10**。  
   
 5.  (選擇性) 您可能需要增加 [標題] 文字方塊的高度，才能容納兩行文字。  
   

@@ -1,5 +1,5 @@
 ---
-title: 比較不同 Microsoft 環境中的商業智慧功能 |Microsoft 文件
+title: 比較不同 Microsoft 環境中的商務智慧功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fb759ee-8172-4c4c-9f7d-49af2c731006
 caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: ae54486aa141880189a012d897251604a292aefe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97ac603e2e043810d468d9c9ada00c11a4f78d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136600"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188085"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>比較不同 Microsoft 環境中的商業智慧功能
-  Microsoft[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]商業智慧可以部署在不同的環境，包括一些[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]搭配 SharePoint Server、 SharePoint Online 及 Power BI for Office 365。 本主題會比較每個環境所支援的元件及功能。  
+  Microsoft[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]商業智慧可以部署在許多不同的環境，包括[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]與 SharePoint Server、 SharePoint Online 及 Power BI for Office 365。 本主題會比較每個環境所支援的元件及功能。  
   
  如需 SharePoint Server 及 SharePoint Online 之比較的詳細資訊，請參閱 [比較 SharePoint 方案及選項](http://products.office.com/SharePoint/compare-sharepoint-plans)。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "36136600"
 |使用量監視|是|否|是|  
 |利用資料列基礎的安全性[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]cube|是|否|否|  
   
- **<sup>1</sup>**[了解資料管理中的資料管理人角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)和[影片： Power BI 資訊管理及資料監管中心](https://www.youtube.com/watch?v=8dHOj68ts7c)。    
+ **<sup>1</sup>**[了解資料管理中的資料管理人角色](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US)並[影片： Power BI 資訊管理及資料監管中心](https://www.youtube.com/watch?v=8dHOj68ts7c)。    
   
  **<sup>2</sup>**[power BI 問與答最佳化 Power BI 活頁簿 （雲端模型）](https://support.office.com/article/Power-BI-Q-A-Optimize-a-Power-BI-workbook-cloud-modeling--96dc5941-d0f1-44e2-9d9d-c038a3a55849?ui=en-US&rs=en-US&ad=US)。    
   
- **<sup>3</sup>**[新中預測功能簡介 Power View for Office 365](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)。    
+ **<sup>3</sup>**[適用於 Office 365 的新預測 Power View 中的功能簡介](http://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx)。    
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>檢視及瀏覽 BI 資料、報表與儀表板  
   
@@ -57,13 +57,13 @@ ms.locfileid: "36136600"
 |在瀏覽器中探索 HTML5 的資料|否|否|是|  
 |Mobile BI 應用程式可從遠端存取報表及儀表板|否|否|[是]  **<sup>1</sup>**|  
 |使用 Excel 活頁簿[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]做為資料來源 **<sup>2</sup>**|是|否|否|  
-|可在不同瀏覽器及版本中使用這些功能|是，用於非 Power View 視覺效果 **<sup>3</sup>**|是，活頁簿檔案大小必須小於 10MB  **<sup>3</sup>**|[是]  **<sup>3</sup>**|  
+|可在不同瀏覽器及版本中使用這些功能|是，針對非 Power View 視覺效果 **<sup>3</sup>**|是，活頁簿檔案大小小於 10 MB  **<sup>3</sup>**|[是]  **<sup>3</sup>**|  
   
  **<sup>1</sup>**[Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba)。    
   
  **<sup>2</sup>**[做為資料來源的 PowerPivot 活頁簿  ](http://blogs.technet.com/b/excel_services__powerpivot_for_sharepoint_support_blog/archive/2013/02/15/powerpivot-workbook-as-a-data-source.aspx)  
   
- **<sup>3</sup>**[跨商業智慧 (BI) 工具的行動支援](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx)和[規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx)。    
+ **<sup>3</sup>**[跨商業智慧 (BI) 工具的行動支援](http://msdn.microsoft.com/library/dn151146\(v=sql.110\).aspx)並[規劃 Reporting Services 和 Power View 瀏覽器支援 (Reporting Services 2014)](http://msdn.microsoft.com/library/ms156511.aspx)。    
   
 ## <a name="more-information"></a>詳細資訊  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36136600"
   
 -   [比較 BI 中心網站與 Power BI for Office 365 網站](http://technet.microsoft.com/library/dn394343\(v=office.15\).aspx)。  
   
--   [Microsoft BI 報告和分析工具簡介](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
+-   [介紹 Microsoft BI 報告和分析工具](http://go.microsoft.com/fwlink/p/?LinkId=617093)  
   
 ## <a name="community-content"></a>社群內容  
  [比較內部部署與雲端上的 Microsoft 自助 BI](http://businessintelligist.com/2014/02/07/microsoft-self-service-bi-on-premise-vs-could/)。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingquerytrans.f1
 helpviewer_keywords:
@@ -18,18 +18,18 @@ ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8fbe99a681e2d91e61119adea5f7c48ef00fc8d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 295b615c859fa3524e07fa83f4142396cdf6e4c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192148"
 ---
 # <a name="data-mining-query-transformation"></a>資料採礦查詢轉換
   「資料採礦查詢」轉換會對資料採礦模型執行預測查詢。 這項轉換包含用來建立「資料採礦延伸模組」(DMX) 查詢的查詢產生器。 查詢產生器可讓您建立自訂陳述式，以便使用 DMX 語言對照現有採礦模型評估轉換輸入資料。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](/sql/dmx/data-mining-extensions-dmx-reference)。  
   
- 如果模型是在相同的資料採礦結構上建立，則一項轉換可執行多項預測查詢。 如需詳細資訊，請參閱[資料採礦查詢介面](../../../analysis-services/data-mining/data-mining-query-tools.md)。  
+ 如果模型是在相同的資料採礦結構上建立，則一項轉換可執行多項預測查詢。 如需詳細資訊，請參閱 <<c0> [ 資料採礦查詢介面](../../../analysis-services/data-mining/data-mining-query-tools.md)。  
   
 ## <a name="configuration-of-the-data-mining-query-transformation"></a>設定資料採礦查詢轉換  
  「資料採礦查詢」轉換會使用 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 連接管理員連接到包含採礦結構和採礦模型的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體。 如需相關資訊，請參閱 [Analysis Services Connection Manager](../../connection-manager/analysis-services-connection-manager.md)。  

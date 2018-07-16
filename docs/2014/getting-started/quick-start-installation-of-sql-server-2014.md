@@ -1,5 +1,5 @@
 ---
-title: 快速入門安裝的 SQL Server 2014 |Microsoft 文件
+title: 快速入門的 SQL Server 2014 安裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - quick start installation [SQL Server]
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 caps.latest.revision: 48
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7567675dffc0395da5152a98700f8fd19a1b3e12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: b1b7b5a6a8d763c2773e048f2302f874806a8c27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134484"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231798"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>SQL Server 2014 快速入門安裝
     
@@ -53,7 +53,7 @@ ms.locfileid: "36134484"
   
 -   連接元件  
   
- 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 若要在中提供版本及元件之間最好的選擇[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請參閱[版本和 SQL Server 2014 元件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
+ 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 在中提供版本及元件之間最好的選擇[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請參閱 < [Edition 和 SQL Server 2014 元件](../sql-server/editions-and-components-of-sql-server-2016.md)。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 有 32 位元和 64 位元兩種版本。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式支援下列安裝選項：  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36134484"
   
 -   **命令提示字元**  
   
-     請參閱[從命令提示字元安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)的範例語法和安裝參數，以執行自動的安裝。  
+     請參閱[從命令提示字元安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)執行自動的安裝的範例語法和安裝參數。  
   
 -   **組態檔**  
   
-     請參閱[安裝 SQL Server 2014 使用組態檔](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)透過組態檔執行安裝程式的範例語法和安裝參數。  
+     請參閱[安裝 SQL Server 2014 使用組態檔](../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)透過組態檔執行安裝程式的範例語法及安裝參數。  
   
 -   **SysPrep**  
   
@@ -75,11 +75,11 @@ ms.locfileid: "36134484"
   
 -   **Server Core 安裝**  
   
-     請參閱[在 Server Core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)如需安裝程序性資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows Server Core 上。  
+     請參閱[在 Server Core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)如需安裝程序性資訊[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]在 Windows Server Core 上。  
   
 -   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] BI 功能安裝**  
   
-     請參閱[安裝 SQL Server 2014 BI 功能](../sql-server/install/install-sql-server-business-intelligence-features.md)有關如何安裝屬於 Microsoft BI 平台的功能，包括[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，以及數個用來建立或處理分析資料的用戶端應用程式。  
+     請參閱[安裝 SQL Server 2014 BI 功能](../sql-server/install/install-sql-server-business-intelligence-features.md)有關如何安裝屬於 Microsoft BI 平台的功能，包括[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]， [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]，和數個用來建立或處理分析資料的用戶端應用程式。  
   
 -   **容錯移轉叢集安裝**  
   
@@ -92,38 +92,38 @@ ms.locfileid: "36134484"
   
 -   檢閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝的安裝需求、系統組態檢查與安全性考量。  如需詳細資訊，請參閱 [Planning a SQL Server Installation](quick-start-installation-of-sql-server-2014.md#BKMK_BeforeYouInstall)。  
   
--   執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式，將現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需詳細資訊，請參閱[升級至 SQL Server 2014](#BKMK_Upgrading)。  
+-   執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式，將現有的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 升級至 SQL Server 2014](#BKMK_Upgrading)。  
   
--   執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式，以安裝新的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 如需詳細資訊，請參閱[安裝 SQL Server 2014](#BKMK_Install)。  
+-   執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式，以安裝新的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 如需詳細資訊，請參閱 <<c0> [ 安裝 SQL Server 2014](#BKMK_Install)。  
   
--   完成 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝後，下一個主要的步驟是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 及其元件的設定。 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[設定 SQL Server 2014](#BKMK_Configure)。  
+-   完成 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝後，下一個主要的步驟是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 及其元件的設定。 使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式來設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 設定 SQL Server 2014](#BKMK_Configure)。  
   
  在下一節中，您可以找到這些工作的詳細說明。  
   
 ## <a name="related-tasks"></a>相關工作  
   
 ###  <a name="BKMK_BeforeYouInstall"></a> 規劃[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝  
- 在安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之前，您必須檢閱硬體和軟體需求、網路和網際網路考量，以及安全考量，才能安裝並執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[規劃 SQL Server 安裝](../../2014/sql-server/install/planning-a-sql-server-installation.md)和下列主題：  
+ 在安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之前，您必須檢閱硬體和軟體需求、網路和網際網路考量，以及安全考量，才能安裝並執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 規劃 SQL Server 安裝](../../2014/sql-server/install/planning-a-sql-server-installation.md)和下列主題：  
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|請檢閱硬體及軟體需求、作業系統支援、網路及網際網路考量，以及硬碟空間需求。|[安裝必要條件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
+|請檢閱硬體及軟體需求、作業系統支援、網路及網際網路考量，以及硬碟空間需求。|[安裝的必要條件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |檢閱 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝的安全性考量。|[安全性考量](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |請檢閱由不同版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 所支援功能的詳細資料。|[功能和版本](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |請判斷 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中可用版本及元件之間最好的選擇。|[SQL Server 2014 的版本和元件](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |請檢閱硬體組態，並學習如何準備 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集安裝。|[安裝容錯移轉叢集之前](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
   
 ###  <a name="BKMK_Upgrading"></a> 升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- 您可以將 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的現有執行個體升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需詳細資訊，請參閱[升級至 SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)。 在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之前，請先檢閱下列升級程序的主題：  
+ 您可以將 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 的現有執行個體升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 升級至 SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)。 在執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝程式升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之前，請先檢閱下列升級程序的主題：  
   
 |描述|主題|  
 |-----------------|-----------|  
 |支援 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 升級路徑的文件。|[支援的升級](../database-engine/install-windows/supported-version-and-edition-upgrades.md)|  
 |描述 Upgrade Advisor，這是用於分析 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 執行個體以識別已知升級問題的工具。|[使用 Upgrade Advisor 來準備升級](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)|  
-|描述 Distributed Replay Utility，一種可使用多個元件重新執行追蹤資料，並模擬關鍵任務工作負載的工具。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 升級前後於測試伺服器上進行重新執行作業，可讓您衡量效能差異，並找出應用程式在升級後可能會發生的不相容情況。|[使用 Distributed 的 Replay Utility 來準備升級](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
+|描述 Distributed Replay Utility，一種可使用多個元件重新執行追蹤資料，並模擬關鍵任務工作負載的工具。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 升級前後於測試伺服器上進行重新執行作業，可讓您衡量效能差異，並找出應用程式在升級後可能會發生的不相容情況。|[使用 Distributed Replay Utility 來準備升級](../../2014/sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md)|  
 |列出當您升級到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之後會影響應用程式的一些重大變更。|[回溯相容性](backward-compatibility.md)|  
 |將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的獨立執行個體升級到 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的程序主題。|[升級為 SQL Server 2014 使用安裝精靈&#40;安裝程式&#41;](../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
-|將 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的版本升級至另一個版本的程序主題。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](../database-engine/install-windows/supported-version-and-edition-upgrades.md)。|[升級至不同版本的 SQL Server 2014&#40;安裝程式&#41;](../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)|  
+|將 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的版本升級至另一個版本的程序主題。 如需支援版本升級方式的詳細資訊，請參閱 [支援的版本與版本升級](../database-engine/install-windows/supported-version-and-edition-upgrades.md)。|[升級至不同的 SQL Server 2014 版本&#40;安裝程式&#41;](../database-engine/install-windows/upgrade-to-a-different-edition-of-sql-server-setup.md)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 支援在所有容錯移轉叢集節點上，將 [!INCLUDE[ssDE](../includes/ssde-md.md)] 及 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 分別從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 或 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 容錯移轉叢集。 如需詳細資訊，請檢閱本主題。|[升級 SQL Server 容錯移轉叢集](../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
   
 ###  <a name="BKMK_Install"></a> 安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -133,7 +133,7 @@ ms.locfileid: "36134484"
 |-----------------|-----------|  
 |提供主題的連結以安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的多個元件，以及提供程序主題以安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|[安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server.md)|  
 |檢閱本主題了解如何在 Windows Server Core 上安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]。|[在 Server Core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)|  
-|請檢閱本主題以將個別功能加入現有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的執行個體。|[將功能加入至 SQL Server 2014 執行個體&#40;安裝程式&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
+|請檢閱本主題以將個別功能加入現有 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的執行個體。|[將功能加入至 SQL Server 2014 執行個體的&#40;安裝程式&#41;](../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md)|  
 |請檢閱本主題以建立新的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。|[建立新的 SQL Server 容錯移轉叢集 &#40;安裝程式&#41;](../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |您可以使用本主題管理現有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體中的節點。|[在 SQL Server 容錯移轉叢集中加入或移除節點 &#40;安裝程式&#41;](../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
 |您可以使用本主題在容錯移轉叢集上安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端工具。|[在 SQL Server 容錯移轉叢集上安裝用戶端工具](../sql-server/failover-clusters/install/install-client-tools-on-a-sql-server-failover-cluster.md)|  
@@ -162,7 +162,7 @@ ms.locfileid: "36134484"
 |本主題提供有關在解除安裝 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 或只解除安裝 DQS 伺服器之後，手動移除 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (DQS) 物件的資訊。|[移除 Data Quality Server 物件](../../2014/sql-server/install/remove-data-quality-server-objects.md)|  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 的產品規格](sql-server-2014-product-specifications.md)   
- [開始使用 SQL Server 的產品文件](../2014-toc/books-online-for-sql-server-2014.md)[回溯相容性](backward-compatibility.md)  
+ [適用於 SQL Server 2014 的產品規格](sql-server-2014-product-specifications.md)   
+ [開始使用適用於 SQL Server 的產品文件](../2014-toc/books-online-for-sql-server-2014.md)[回溯相容性](backward-compatibility.md)  
   
   

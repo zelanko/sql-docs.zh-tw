@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services], creating
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8db1358fc13310c56b6486af73eed694e8423cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1fdc032aa6f82ce073720a14a0329764dcfec460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178085"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>建立分葉成員 (Master Data Services)
-  在[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，當您想要新增至系統的主要資料，而不要使用臨時資料表時建立分葉成員或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]匯入資料。  
+  在  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]，建立分葉成員，當您想要將主要資料新增至您的系統，而不要使用暫存資料表或[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]匯入資料。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
--   您必須至少擁有**更新**會加入成員之實體的分葉模型物件的權限。  
+-   您必須擁有至少**更新**您要新增成員之實體的分葉模型物件的權限。  
   
 ### <a name="to-create-a-leaf-member"></a>若要建立分葉成員  
   

@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - STOPAT clause [RESTORE LOG statement]
 - point in time recovery [SQL Server]
 - restoring databases [SQL Server], point in time
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 62676ecbbe57529a2f1eeec4448ef91a4ebf6d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 504810285ca79879e2442526747d40bbf0ed50bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37203558"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>將 SQL Server 資料庫還原至某個時間點 (完整復原模式)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中將資料庫還原至時間點。 本主題僅與使用完整或大量記錄復原模式的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫相關。  
@@ -138,7 +137,7 @@ ms.locfileid: "36036216"
   
  RESTORE LOG *database_name* FROM < 備份裝置 > WITH STOPAT  **= *`time`*，** 復原...  
   
- 復原點是在或之前所發生的最新交易認可`datetime`所指定的值*時間*。  
+ 復原點是發生在或之前的最新交易認可`datetime`所指定的值*時間*。  
   
  若只要還原特定時間點之前進行的修改，請為您要還原的每個備份指定 WITH STOPAT **=** *time* 。 這樣可確保您不會還原到超過目標時間。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "36036216"
   
 3.  還原上一次的差異資料庫備份 (如有)，但不復原資料庫 (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY)。  
   
-4.  套用每個交易記錄備份的相同順序，在其中建立，指定您要停止還原記錄的時間 (RESTORE DATABASE *database_name* FROM < 備份裝置 > WITH STOPAT **= *`time`*，** 復原)。  
+4.  適用於每個交易記錄備份它們已建立所在的相同順序指定想要停止還原記錄的時間 (RESTORE DATABASE *database_name* FROM < 備份裝置 > WITH STOPAT **= *`time`*，** 復原)。  
   
     > [!NOTE]  
     >  RECOVERY 及 STOPAT 選項。 如果交易記錄備份中不含所要求的時間 (例如指定的時間超出交易記錄的結束時間)，則會產生警告訊息，且此資料庫會維持未復原狀態。  

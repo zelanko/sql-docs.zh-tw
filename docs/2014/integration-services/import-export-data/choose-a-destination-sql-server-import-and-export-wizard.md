@@ -8,36 +8,36 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6f0bfcc4ed838cccd0088cbf0011f6e630ee1fc5
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 75a9ef3ae1c496c2469ea27d766eedf317af5bf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324622"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176155"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>選擇目的地 (SQL Server 匯入和匯出精靈)
-  使用**選擇目的地**頁面，指定您要複製之資料的目的地。  
+  使用**選擇目的地**頁面，即可指定您想要複製之資料的目的地。  
   
- 若要深入了解這個精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，以及成功執行精靈所需的權限的選項，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
+ 若要深入了解此精靈，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。 若要深入了解啟動精靈，以及成功執行精靈所需的權限的選項，請參閱[執行 SQL Server 匯入和匯出精靈](start-the-sql-server-import-and-export-wizard.md)。  
   
- 目的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈 」 會將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
+ 目的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈是將資料從來源複製到目的地。 這個精靈也可以為您建立目的地資料庫和目的地資料表。 不過，如果您必須複製多個資料庫或資料表，或複製其他種類的資料庫物件，則應該改用「複製資料庫精靈」。 如需詳細資訊，請參閱 [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md)。  
   
 ## <a name="static-options"></a>靜態選項  
  **目的地**  
- 選擇符合目的地資料儲存格式的資料提供者。 您的資料來源可能有一個以上的提供者可用。 例如，與[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、.NET Framework Data Provider for SQL Server 或 Microsoft OLE DB Provider for SQL Server。  
+ 選擇符合目的地資料儲存格式的資料提供者。 您的資料來源可能有一個以上的提供者可用。 例如，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您可以使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client、.NET Framework Data Provider for SQL Server 或 Microsoft OLE DB Provider for SQL Server。  
   
 > [!NOTE]  
 >  若要將資料儲存到 ODBC 目的地，請選取 .NET Framework Data Provider for ODBC。  
   
- **資料來源**屬性有數目可變的選項，在電腦上安裝的提供者而有所不同。 下表列出部分常用目的地的選項。 若為其他提供者，請參閱提供者特定文件集。  
+ **資料來源**屬性有不同數目的選項，在電腦上安裝的提供者而有所不同。 下表列出部分常用目的地的選項。 若為其他提供者，請參閱提供者特定文件集。  
   
 ## <a name="dynamic-options"></a>動態選項  
  下列章節顯示數個資料來源可用的選項。 這裡並未列出 [目的地] 下拉式清單提供的所有目的地。  
@@ -86,9 +86,9 @@ ms.locfileid: "36324622"
  **格式**  
  指出是要使用分隔符號、固定寬度或不齊右的格式。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|使用分隔符號|在指定的分隔符號所分隔資料行**資料行**頁面。|  
+|使用分隔符號|資料行以在指定的分隔符號分隔**資料行**頁面。|  
 |固定寬度|資料行具有固定寬度。|  
 |不齊右|不齊右檔案就是除了最後一個資料行是由資料列分隔符號所分隔之外，其他所有資料行都有固定寬度的檔案。|  
   
@@ -101,38 +101,38 @@ ms.locfileid: "36324622"
 ### <a name="destination--microsoft-excel"></a>目的地 = Microsoft Excel  
   
 > [!NOTE]  
->  選取**Microsoft Excel**只有當您想要連接到資料來源使用 Excel 2003 或更早版本。 若要連接至使用 Excel 2007 的資料來源，請選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**，按一下 [**屬性**，然後在**所有**] 索引標籤**資料連結屬性**對話方塊中，針對**擴充屬性**，輸入`Excel 12.0`。  
+>  選取  **Microsoft Excel**只有當您想要連接到資料來源使用 Excel 2003 或更早版本。 若要連接至使用 Excel 2007 資料來源，請選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**，按一下**屬性**，然後在**所有** 索引標籤**資料連結屬性** 對話方塊中，如**Extended Properties**，輸入`Excel 12.0`。  
   
  **Excel 檔案路徑**  
  指定用來儲存資料的活頁簿的路徑和檔案名稱 (例如，C:\MyData.xls \\\Sales\Database\Northwind.xls)。 或者，按一下**瀏覽**找出活頁簿。  
   
  **瀏覽**  
- 使用找到的 Excel 活頁簿**開啟** 對話方塊。  
+ 尋找使用的 Excel 活頁簿**開啟** 對話方塊。  
   
  **Excel 版本**  
  選取目的地活頁簿所使用的 Excel 版本。  
   
 > [!NOTE]  
->  當您將資料匯出至[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]目的地，精靈會使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Excel 目的地元件。 在某些使用方式的考量和已知的問題的資訊，請參閱[Excel 目的地](../data-flow/excel-destination.md)。  
+>  當您將資料匯出至[!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]目的地，精靈會使用[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Excel 目的地元件。 如需一些使用方式考量與已知的問題的資訊，請參閱[Excel 目的地](../data-flow/excel-destination.md)。  
   
 ### <a name="destination--microsoft-access"></a>目的地 = Microsoft Access  
   
 > [!NOTE]  
->  選取**Microsoft Access**只有當您想要連接到資料庫使用 Access 2003 或更早版本。 若要連接至使用 Access 2007 的資料庫，選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**。  
+>  選取  **Microsoft Access**只有當您想要連接至使用 Access 2003 資料庫或更早版本。 若要連線至使用 Access 2007 資料庫，選取**Microsoft Office 12.0 Access 資料庫引擎 OLE DB 提供者**。  
   
  **檔案名稱**  
- 指定用來儲存資料的資料庫檔案的路徑和檔案名稱 (例如，C:\MyData.mdb \\\Sales\Database\Northwind.mdb)。 或者，按一下**瀏覽**找出資料庫檔案。  
+ 指定用來儲存資料的資料庫檔案的路徑和檔案名稱 (例如，C:\MyData.mdb， \\\Sales\Database\Northwind.mdb)。 或者，按一下**瀏覽**找出資料庫檔案。  
   
  **瀏覽**  
- 使用瀏覽資料庫檔案**開啟** 對話方塊。  
+ 使用瀏覽至資料庫檔案**開啟** 對話方塊。  
   
  **使用者名稱**  
  當工作群組資訊檔案與資料庫相關聯時，請指定該資料庫連接的有效使用者名稱。  
   
  **密碼**  
- 當工作群組資訊檔案與資料庫相關聯時，請提供該資料庫連接的使用者密碼。 不過，如果受保護資料庫的所有使用者的單一密碼，您必須提供這個值**資料連結屬性**對話方塊中，存取從**進階** 按鈕。  
+ 當工作群組資訊檔案與資料庫相關聯時，請提供該資料庫連接的使用者密碼。 不過，如果所有使用者的單一密碼保護資料庫，您必須提供此值**資料連結屬性** 對話方塊中，該對話方塊可由**進階** 按鈕。  
   
  **進階**  
- 使用 [資料連結屬性] 對話方塊來指定進階選項，例如資料庫密碼或非預設工作群組資訊檔案。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的資料存取區段[MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553)。  
+ 使用 [資料連結屬性] 對話方塊來指定進階選項，例如資料庫密碼或非預設工作群組資訊檔案。 如需有關 OLE DB 提供者屬性的詳細資訊，請搜尋中的 [資料存取] 區段[MSDN Library](http://go.microsoft.com/fwlink/?linkid=62553)。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 授與對維度資料 (Analysis Services) 的自訂存取權 |Microsoft 文件
+title: 授與自訂維度資料存取權 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensiondata.f1
 helpviewer_keywords:
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - ApplyDenied property
 ms.assetid: b028720d-3785-4381-9572-157d13ec4291
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 509cc6dc34ce5c62bcf56f38fe3f229d2a081731
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae4c816ae333edf892b836d25161b70fc81e58e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215968"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>授與維度資料的自訂存取權 (Analysis Services)
   啟用 Cube 的讀取權限後，您可以設定額外的權限以明確允許或拒絕維度成員 (包括 Measures 維度中的量值，其中含有 Cube 中使用的所有量值) 的存取。 例如，假設指定了多個轉售商類別，您可能想要設定權限以排除特定商業類型的資料。 下圖為拒絕存取 Reseller 維度中之 Warehouse 商業類型之前與之後的效果。  
   
- ![不具有維度成員與樞紐分析表](../media/ssas-permsdimdenied.png "不具有維度成員與樞紐分析表")  
+ ![不具有維度成員與樞紐分析表](../media/ssas-permsdimdenied.png "樞紐分析表，而維度成員")  
   
  根據預設，如果您可以從 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 讀取資料，則會自動取得與 Cube 相關聯之所有量值和維度成員的讀取權限。 儘管這個行為對於許多案例可能已經足夠，但有時安全性需求會針對相同維度上的不同使用者來變動存取層級，藉以要求更多區段的授權策略。  
   
@@ -45,12 +45,12 @@ ms.locfileid: "36132758"
   
  基本維度安全性是最簡單的；您只需選取要在角色中包含或排除的維度屬性和屬性階層。 進階安全性較複雜，而且需要 MDX 指令碼的專業知識。 以下是這兩種方法的敘述。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  並非所有量值或維度成員均可用在自訂存取案例中。 如果某個角色禁止存取預設的量值或成員，或是該角色禁止存取的量值為量值運算式的一部分，則連線將會失敗。  
   
  **檢查維度安全性的限制：預設量值、預設成員及量值運算式中使用的量值**  
   
-1.  在 SQL Server Management Studio，以滑鼠右鍵按一下 cube，然後選取**指令碼的 Cube 做** | **ALTER 至** | **新增查詢編輯器視窗**。  
+1.  在 SQL Server Management Studio，以滑鼠右鍵按一下 cube，然後選取**做為指令碼 Cube** | **ALTER 至** | **新增查詢編輯器視窗**。  
   
 2.  搜尋 `DefaultMeasure`。 您應該會在 Cube 中發現一個，在每個檢視方塊中各發現一個。 當您定義維度安全性時，請避免限制對預設量值的存取。  
   
@@ -72,15 +72,15 @@ ms.locfileid: "36132758"
   
      或者，您可以 [取消選取全部成員] 來全面撤銷存取，然後挑選要允許的成員。 在後續的處理作業中，一直到您手動編輯維度資料安全性來允許存取新成員為止，將無法看到任何新成員。  
   
-5.  （選擇性） 按一下**進階**啟用`Visual Totals`針對這個屬性階層。 這個選項會根據可透過這個角色使用的成員，重新計算彙總。  
+5.  （選擇性） 按一下**進階**若要啟用`Visual Totals`針對這個屬性階層。 這個選項會根據可透過這個角色使用的成員，重新計算彙總。  
   
     > [!NOTE]  
-    >  在套用變更維度成員的權限時，並不會自動重新計算彙總的總計。 假設`All`屬性階層的成員傳回的數目為 200 之前會套用權限。 在套用對某些成員，拒絕存取的權限後`All`仍會傳回 200，即使使用者可見的成員值是更少。 為了避免混淆您的 cube 的取用者，您可以設定`All`成員是角色成員，只要這些成員的彙總，而不是所有的屬性階層成員的彙總。 若要叫用此行為，您可以啟用`Visual Totals`上**進階**設定維度安全性時，索引標籤上。 啟用之後，彙總會在查詢期間計算，而不是從預先計算的彙總中擷取。 這可以在查詢效能上產生顯著效果，因此只有在需要時才使用它。  
+    >  在套用變更維度成員的權限時，並不會自動重新計算彙總的總計。 假設`All`套用權限之前，屬性階層的成員會傳回 200 個。 在套用到部分成員，拒絕存取的權限後`All`仍會傳回 200，即使使用者可看見的成員值可比較少。 為了避免混淆您 cube 的取用者，您可以設定`All`成員是只等於角色成員，成員的彙總，而不是所有屬性階層之成員的彙總。 若要叫用此行為，您可以啟用`Visual Totals`上**進階**設定維度安全性時，索引標籤上。 啟用之後，彙總會在查詢期間計算，而不是從預先計算的彙總中擷取。 這可以在查詢效能上產生顯著效果，因此只有在需要時才使用它。  
   
 ## <a name="hiding-measures"></a>隱藏量值  
  在 [Grant custom access to cell data &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)中，已說明如要完全隱藏量值的所有可見層面 (而非只是它的資料格資料)，需具備維度成員的權限。 本節說明如何拒絕存取量值的物件中繼資料。  
   
-1.  在**維度資料** | **基本**，向下的捲動直到您到達 cube 維度，然後選取維度清單**Measures 維度**。  
+1.  在 **維度的資料** | **基本**，向下的捲動直到您到達 cube 維度，然後選取維度清單**量值維度**。  
   
 2.  從量值清單中，清除透過這個角色連接的使用者不應看見之量值的核取方塊。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36132758"
  建立 AllowedSet，會在屬性參與多層級階層時產生漣漪效果。 例如，假設有一個角色允許存取 Washington 州 (假設已將公司的 Washington 州業務部門權限授與角色)。 對於透過這個角色連接的人員，包含上階 (United States) 或下階 (Seattle 和 Redmond) 的查詢將只會看見包含 Washington 州之鏈結中的成員。 因為並未明確允許其他州，所以效果會和拒絕它們一樣。  
   
 > [!NOTE]  
->  如果您定義空的集合 ({}) 之屬性成員的屬性的任何成員會看到資料庫角色。 沒有允許的集合不會被解釋為空的集合。  
+>  如果您定義空的集合 ({}) 之屬性成員的屬性的任何成員會顯示資料庫角色。 沒有允許的集合不會被解釋為空的集合。  
   
  **拒絕的成員集**  
  DeniedSet 屬性可以解析為沒有成員、全部成員 (預設值) 或部分屬性成員。 當拒絕的集合僅包含特定的屬性成員集合時，資料庫角色只會被拒絕存取這些特定成員以及下階 (如果屬性位於多層級階層中)。 請考量 Washington 州業務部門範例。 如果將 Washington 放在 DeniedSet 中，透過這個角色連接的人員將看見除了 Washington 及其下階屬性以外的所有其他州。  
@@ -124,15 +124,15 @@ ms.locfileid: "36132758"
   
  不過，停用 VisualTotals 屬性會產生安全性問題，因為使用者有可能使用彙總資料格的值來推論該使用者的資料庫角色沒有存取權之屬性成員的值。 例如， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用三個屬性成員的值來計算彙總資料格的值。 資料庫角色有檢視這三個屬性成員當中兩個的存取權。 利用彙總資料格的值，此資料庫角色的成員即可推論出第三個屬性成員的值。  
   
- VisualTotals 屬性設定為`True`可以降低此風險。 當您啟用 VisualTotals 屬性時，資料庫角色只能檢視該角色具有權限之維度成員的彙總。  
+ 將 VisualTotals 屬性設定為`True`可以消除這個風險。 當您啟用 VisualTotals 屬性時，資料庫角色只能檢視該角色具有權限之維度成員的彙總。  
   
  **檢查**  
  按一下即可測試此頁面定義的 MDX 語法。  
   
 ## <a name="see-also"></a>另請參閱  
- [授與 cube 或模型的權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [授與 cube 或模型權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [授與對資料格資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [授與權限的資料採礦結構和模型&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授與權限的資料來源物件&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [資料採礦結構和模型的權限授與&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [在 資料來源物件上的權限授與&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

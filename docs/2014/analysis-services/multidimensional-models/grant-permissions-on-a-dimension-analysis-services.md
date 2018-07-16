@@ -1,5 +1,5 @@
 ---
-title: 授與權限的維度 (Analysis Services) |Microsoft 文件
+title: 授與權限的維度 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensions.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], dimensions
 ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 212f89372b510b7a3a1d73702ee231d641fd465b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 553416d7dd8395e53ca5bbf4be5cdfa9b9d2fc5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177045"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>授與維度的權限 (Analysis Services)
   維度安全性是用來設定維度物件的權限，而不是設定它的資料。 通常，允許或拒絕存取處理作業是在設定維度權限時的主要目標。  
@@ -64,7 +64,7 @@ ms.locfileid: "36132015"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
-2.  在**維度**維度 窗格中，變更設定為\<-n a m > **cube 維度**。  
+2.  在 **維度**窗格中，變更維度集變更為\<cube 名稱 > **cube 維度**。  
   
      根據預設，權限是繼承自相對應的資料庫維度。 清除 [繼承] 核取方塊，即可將權限從 [讀取] 更改為 [讀取/寫入]。 使用 [讀取/寫入] 之前，請務必閱讀上一節的注意事項。  
   
@@ -73,8 +73,8 @@ ms.locfileid: "36132015"
   
 ## <a name="see-also"></a>另請參閱  
  [角色和權限&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [授與 cube 或模型的權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [授與權限的資料採礦結構和模型&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [授與 cube 或模型權限&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [資料採礦結構和模型的權限授與&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [授與對維度資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [授與對資料格資料的自訂存取&#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   

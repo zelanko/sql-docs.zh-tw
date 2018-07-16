@@ -1,5 +1,5 @@
 ---
-title: 鑽研動作表單編輯器 （動作索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 鑽研動作表單編輯器 （動作索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.drillthroughaction.f1
 ms.assetid: 225fd818-b5ea-494f-b67b-66e09798274a
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 81b7cde92983bf16f37b586389c059dfbff639d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6c310afd3535c1e5a7da5bd9f7784bec2a235ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145737"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220478"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>鑽研動作表單編輯器 (動作索引標籤，設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[動作]** 索引標籤的 **[鑽研動作表單編輯器]** 窗格，即可修改 **[動作組合管理]** 窗格中選取的鑽研動作。 如需鑽研動作的詳細資訊，請參閱[動作 &#40;Analysis Services - 多維度資料&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)。  
@@ -63,7 +63,7 @@ ms.locfileid: "36145737"
  **預設值**  
  選取 [True] 以包含此鑽研動作作為預設鑽研動作，否則，請選取 [False]。  
   
- 如果`RETURN`省略子句的 mdx`DRILLTHROUGH`由用戶端應用程式執行的陳述式[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]評估所有預設鑽研動作執行個體，並執行第一個預設鑽研傳回非空的集合的動作。 如需有關 MDX`DRILLTHROUGH`陳述式，請參閱[DRILLTHROUGH 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)。  
+ 如果`RETURN`省略子句的 mdx`DRILLTHROUGH`用戶端應用程式中，所執行陳述式[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]評估所有預設鑽研動作執行個體，並執行第一次的預設鑽研傳回非空白集的動作。 如需有關 MDX`DRILLTHROUGH`陳述式，請參閱 < [DRILLTHROUGH 陳述式&#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-drillthrough)。  
   
 > [!NOTE]  
 >  此選項用於回溯相容性用途。  
@@ -79,7 +79,7 @@ ms.locfileid: "36145737"
   
  下表描述可用的設定。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |批次|此動作應該當作批次作業的一部份或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 工作來執行。|  
 |互動式|此動作會在使用者叫用動作時執行。|  
@@ -108,7 +108,7 @@ ms.locfileid: "36145737"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度運算式&#40;MDX&#41;參考](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [動作&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
+ [動作&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [動作組合管理&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [計算工具&#40;動作索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md)   

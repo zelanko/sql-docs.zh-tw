@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d303321941668d5115c3796022f70195b4a0d066
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9265d42cdde8ac528118cb72dead19726f3d3173
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146216"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228418"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>取消隱藏執行自訂報表警告
   自訂報表有兩個警告對話方塊。 此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中取消隱藏這些方塊的顯示。  
@@ -34,9 +34,9 @@ ms.locfileid: "36146216"
   
 1.  連接到\<*伺服器*>\\<*共用*>|\<*磁碟機*> \Documents and Settings\\< UserProfile\>data\microsoft\microsoft SQL Server\120\Tools\Shell\reports.xml。  
   
-2.  以滑鼠右鍵按一下`reports.xml`，然後按一下 **編輯**。  
+2.  以滑鼠右鍵按一下`reports.xml`，然後按一下**編輯**。  
   
-3.  變更**\<SuppressWarning >，則為 true\</SuppressWarning > 至\<SuppressWarning > false\</SuppressWarning >**。  
+3.  變更**\<suppresswarning> 變更 >，則為 true\</SuppressWarning > 要\<suppresswarning> 變更 > false\</SuppressWarning >**。  
   
 4.  重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36146216"
   
 2.  以滑鼠右鍵按一下`reports.xml`，然後按一下**編輯**。  
   
-3.  變更 **\<SuppressDrillthroughWarning >，則為 true\</SuppressDrillthroughWarning > 至\<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
+3.  變更 **\<suppressdrillthroughwarning> 變更 >，則為 true\</SuppressDrillthroughWarning > 要\<Suppressdrillthroughwarning> > false\</SuppressDrillthroughWarning >**.  
   
 4.  重新啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   

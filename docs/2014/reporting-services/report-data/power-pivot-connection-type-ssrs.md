@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 連接類型 (SSRS) |Microsoft 文件
+title: PowerPivot 連接類型 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf22b7c44d554f4e82eb330752d8580102469cc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037164"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234748"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot 連接類型 (SSRS)
   您可以使用 SQL Server Analysis Services 資料處理延伸模組，從已在 SharePoint PowerPivot 圖庫中發行的 PowerPivot 活頁簿中擷取資料。  
   
- 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱[加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。  
+ 您可以使用本主題中的資訊來建置資料來源。 如需逐步指示，請參閱 <<c0> [ 加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)。</c0>  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  您必須在 SharePoint 網站的 PowerPivot 圖庫中發行 PowerPivot 資料來源。  
   
  若要支援報表產生器與 PowerPivot 活頁簿的連接，您的工作站電腦上必須擁有 SQL Server 2008 R2 ADOMD.NET。 此用戶端程式庫隨 PowerPivot for Excel 一併安裝，但如果您使用沒有此應用程式的電腦，您必須下載並安裝 ADOMD.NET 從[SQL Server 2008 R2 功能套件](http://go.microsoft.com/fwlink/?LinkId=192565)。  
@@ -38,7 +38,7 @@ ms.locfileid: "36037164"
  連接字串是在 SharePoint 中 PowerPivot 圖庫或其他程式庫，例如，發行的 PowerPivot 活頁簿的 URL http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx。  
   
 ## <a name="credentials"></a>認證  
- 請指定存取 PowerPivot 活頁簿和 SharePoint 網站所需的認證，例如 Windows 驗證 (整合式安全性)。 如需詳細資訊，請參閱[資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或[指定的認證，在報表產生器](../specify-credentials-in-report-builder.md)。  
+ 請指定存取 PowerPivot 活頁簿和 SharePoint 網站所需的認證，例如 Windows 驗證 (整合式安全性)。 如需詳細資訊，請參閱 <<c0> [ 資料連接、 資料來源和 Reporting Services 中的連接字串](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)或是[在 報表產生器中指定認證](../specify-credentials-in-report-builder.md)。  
   
 ## <a name="queries"></a>查詢  
  在您連接至 PowerPivot 資料來源之後，請使用 MDX 圖形化查詢來建立查詢，其方式是從基礎資料結構進行瀏覽及選取。 建立查詢之後，請執行查詢，於結果窗格中查看範例資料。  
@@ -56,7 +56,7 @@ ms.locfileid: "36037164"
   
  PowerPivot 活頁簿中的資料會進行高度壓縮，而針對報表從 PowerPivot 活頁簿中擷取的資料則不會進行壓縮。 您可以使用查詢設計工具來指定篩選和參數，以便將資料限制為報表所需的項目。  
   
- 與連接至 Analysis Services Cube 不同的是，PowerPivot 模型沒有任何階層。 若要提供類似的功能給活頁簿中的相關交叉分析篩選器，您必須在報表中建立串聯參數。 如需詳細資訊，請參閱[將串聯參數加入至報表&#40;報表產生器及 SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)。  
+ 與連接至 Analysis Services Cube 不同的是，PowerPivot 模型沒有任何階層。 若要提供類似的功能給活頁簿中的相關交叉分析篩選器，您必須在報表中建立串聯參數。 如需詳細資訊，請參閱 <<c0> [ 將串聯參數加入至報表&#40;報表產生器及 SSRS&#41;](../report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)。</c0>  
   
  在某些情況下，您可能需要調整運算式，才能容納來自 PowerPivot 模型的基礎資料值。 若要將資料轉換成正確的資料類型，或是加入或移除彙總函式，您可能需要修改運算式。 例如，若要將資料類型從字串轉換成整數，請使用 `=CInt`。 發行報表之前，請務必確認報表顯示 PowerPivot 模型中資料的預期值。  
   

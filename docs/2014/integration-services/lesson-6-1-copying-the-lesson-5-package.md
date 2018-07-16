@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 caps.latest.revision: 6
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bed4f06e073d370b10be04e614a18b041f0d1dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 042dde7beeff33dd988f5d21d0d5975e4ee88aa0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136461"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190758"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>步驟 1：複製第 5 課的封裝
   在這項工作中，您將為第 5 課所建立的 Lesson 5.dtsx 封裝建立複本。 另外，您也可以將此教學課程中隨附之已完成的第 5 課封裝加入至專案中，然後改為複製該封裝。 在第 6 課其餘的課程中，您將使用這個新的副本。  
@@ -42,7 +42,7 @@ ms.locfileid: "36136461"
   
 7.  在 [屬性] 視窗中，將 Name 屬性更新為第 6 課。  
   
-8.  按一下 ID 屬性，此方塊，然後按一下下拉箭頭，，然後按一下\<產生新的識別碼 >。  
+8.  按一下方塊中的，ID 屬性，然後按一下下拉箭頭，然後按一下 \<產生新的識別碼 >。  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>若要加入已完成的第 5 課封裝  
   
@@ -67,6 +67,6 @@ ms.locfileid: "36136461"
      在複製第 5 課封裝之後，如果您目前在方案中已經有之前課程的封裝，請以滑鼠右鍵按一下 1-5 課的每一個封裝，並按一下 [從專案移除]。 當您完成時，您的方案中應該只有 Lesson 6.dtsx。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [步驟 2： 將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [步驟 2：將專案轉換成專案部署模型](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

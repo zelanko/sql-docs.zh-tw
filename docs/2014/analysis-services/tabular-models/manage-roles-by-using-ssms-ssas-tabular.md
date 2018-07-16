@@ -1,5 +1,5 @@
 ---
-title: 使用 （SSAS 表格式） SSMS 管理角色 |Microsoft 文件
+title: 使用 SSMS （SSAS 表格式） 管理角色 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 907b1ea2b655c9da1b9754441be5a933ac8380af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5c1aa9fc419c80bed7ca38e6d0174fb723ca648
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036434"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226418"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>使用 SSMS 管理角色 (SSAS 表格式)
   對於部署的表格式模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立、編輯和管理角色。  
@@ -62,12 +62,12 @@ ms.locfileid: "36036434"
   
 6.  在成員資格設定視窗中，按一下 [加入]，然後在 [選取使用者或群組] 對話方塊中，加入您要當做成員加入的 Windows 使用者或群組。  
   
-7.  如果您建立的角色具有「讀取」權限，您可以使用 DAX 公式加入任何資料表的資料列篩選。 在中加入資料列篩選，**角色屬性- \<rolename >** 對話方塊中，於**選取頁面**，按一下**資料列篩選器**。  
+7.  如果您建立的角色具有「讀取」權限，您可以使用 DAX 公式加入任何資料表的資料列篩選。 在新增資料列篩選**角色屬性- \<rolename >** 對話方塊的 **選取頁面**，按一下**資料列篩選器**。  
   
-8.  在 [資料列篩選] 視窗中，選取資料表，然後按一下 [ **DAX 篩選**] 欄位中，然後在**DAX 篩選- \<tablename >** 欄位中，輸入 DAX 公式。  
+8.  在 資料列篩選 視窗中，選取資料表，然後按一下  **DAX 篩選**欄位中，然後在**DAX 篩選- \<tablename >** 欄位中輸入 DAX 公式。  
   
     > [!NOTE]  
-    >  [DAX 篩選- \<tablename >] 欄位不包含自動完成查詢編輯器或插入函數功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式編輯器。  
+    >  [DAX 篩選-\<資料表名稱 >] 欄位不包含自動完成查詢編輯器或插入函數功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式編輯器。  
   
 9. 按一下 [確定]，儲存角色。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36036434"
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，展開包含您要編輯之角色的表格式模型資料庫，然後展開 [角色]，再以滑鼠右鍵按一下此角色，然後按一下 [屬性]。  
   
-     在**角色屬性** \<rolename > 對話方塊中，您可以變更權限、 加入或移除成員，並新增/編輯資料列篩選。  
+     在 [**角色屬性** \<rolename >] 對話方塊中，您可以變更權限、 加入或移除成員，以及新增/編輯資料列篩選。  
   
 ###  <a name="bkmk_deletet_role"></a> 若要刪除角色  
   

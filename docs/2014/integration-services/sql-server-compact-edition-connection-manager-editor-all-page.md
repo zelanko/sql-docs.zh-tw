@@ -1,5 +1,5 @@
 ---
-title: SQL Server Compact Edition 連接管理員編輯器 （全部頁面） |Microsoft 文件
+title: SQL Server Compact Edition 連線管理員編輯器 （全部頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlmobileconnection.all.f1
 helpviewer_keywords:
 - SQL Server Compact Connection Manager Editor
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72da9792c77970802a01aedccda6690ea1be2225
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d74007858a1834b4d0aba5538e62824f7cee8c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192108"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 連接管理員編輯器 (全部頁面)
   使用 [SQL Server Compact Edition 連線管理員] 對話方塊，指定連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact 資料庫的屬性。  
@@ -57,7 +57,7 @@ ms.locfileid: "36144963"
   
  模式選項有四個值，如下表所述。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**唯讀**|指定唯讀存取資料庫。|  
 |**讀取寫入**|指定資料庫的讀取/寫入權限。|  

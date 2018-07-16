@@ -1,5 +1,5 @@
 ---
-title: 正在完成精靈 （維度精靈） |Microsoft 文件
+title: 正在完成精靈 （維度精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.finish.f1
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 191c0fd95b4a6a12517bb926b631cbfe05979e68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e498fc8ca6b995dc30b2a2e271b90a627b8940
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145504"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196558"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>正在完成精靈 (維度精靈)
   使用 **[正在完成精靈]** 頁面，即可進行下列程序：  
@@ -32,7 +32,7 @@ ms.locfileid: "36145504"
   
 -   必要時，產生支援維度所需的結構描述。  
   
- **若要開啟 「 維度精靈 」**  
+ **若要開啟 維度精靈**  
   
 -   在方案總管的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度] 資料夾，然後按一下 [新增維度]。  
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], deleting
 - deleting entities [Master Data Services]
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f2d1d4f1d0bfc77f2777d3650ee62c6bca5f983f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cc0c5fb7822c7e411f29ef154f90de4c9eeeaa2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221728"
 ---
 # <a name="delete-an-entity-master-data-services"></a>刪除實體 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，刪除實體以刪除實體的所有成員和屬性。  
@@ -30,7 +30,7 @@ ms.locfileid: "36135412"
 > [!NOTE]  
 >  實體來自所有版本的成員會永久刪除。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -47,7 +47,7 @@ ms.locfileid: "36135412"
   
 4.  選取要刪除之實體的資料列。  
   
-5.  按一下**刪除選取的實體**。  
+5.  按一下 **刪除選取的實體**。  
   
 6.  在確認對話方塊中按一下 **[確定]**。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
@@ -20,13 +20,13 @@ ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f4f4e80a193b1a9cb2f492bf2deab88af1d0f47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 317abe3278784d5328df02ec96c6f126a40d100e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234498"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>在 SharePoint Web 應用程式中設定報表伺服器作業的權限
   針對以 SharePoint 整合模式執行的報表伺服器，在 SharePoint 網站上定義的安全性設定可以決定您檢視與管理報表、報表模型與共用資料來源的方式。 如果您使用預設的 SharePoint 群組、權限等級以及權限指派，則可以使用目前的安全性設定處理報表和其他文件。  
@@ -85,7 +85,7 @@ ms.locfileid: "36131927"
   
 |工作|權限|  
 |----------|----------------|  
-|啟動報表產生器。|沒有明確用來控制使用報表產生器的權限。 如果已設定報表伺服器整合，而且您具備將項目加入文件庫的權限，則可以使用報表產生器。 若要從文件庫中的 **[新增]** 功能表啟動報表產生器，則必須註冊報表產生器內容類型。 如需詳細資訊，請參閱[將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
+|啟動報表產生器。|沒有明確用來控制使用報表產生器的權限。 如果已設定報表伺服器整合，而且您具備將項目加入文件庫的權限，則可以使用報表產生器。 若要從文件庫中的 **[新增]** 功能表啟動報表產生器，則必須註冊報表產生器內容類型。 如需詳細資訊，請參閱 <<c0> [ 將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)。</c0>|  
 |上傳模型或共用資料來源。|「加入項目」 ，針對包含檔案的文件庫。|  
 |檢視模型或相依的共用資料來源。|「檢視項目」 ，針對將包含檔案的文件庫。<br /><br /> 如果模型包含模型項目安全性設定，使用者也必須擁有模型的「列舉權限」  權限。|  
 |從共用資料來源產生模型。|「加入項目」 ，針對包含要從中產生模型之共用資料來源 (.rsds) 檔的文件庫。|  
@@ -124,7 +124,7 @@ ms.locfileid: "36131927"
   
 |工作|權限|  
 |-----------|----------------|  
-|建立共用資料來源。|「加入項目」 ，針對包含共用資料來源的文件庫。 您可以從文件庫中的 [新增] 功能表建立新的共用資料來源。 若要這樣做，您必須在文件庫中註冊報表資料來源內容類型。 如需詳細資訊，請參閱[將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)。|  
+|建立共用資料來源。|「加入項目」 ，針對包含共用資料來源的文件庫。 您可以從文件庫中的 [新增] 功能表建立新的共用資料來源。 若要這樣做，您必須在文件庫中註冊報表資料來源內容類型。 如需詳細資訊，請參閱 <<c0> [ 將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)。</c0>|  
 |編輯共用資料來源。|「編輯項目」 ，針對包含共用資料來源的文件庫，或共用資料來源本身。|  
 |刪除共用資料來源。|「刪除項目」 ，針對包含共用資料來源的文件庫，或共用資料來源本身。|  
 |搭配報表使用共用資料來源 (.rsds)。|「編輯項目」 ，針對報表或包含報表的文件庫。 選取共用資料來源是設定報表上資料來源屬性的一部分。|  
@@ -136,9 +136,9 @@ ms.locfileid: "36131927"
 >  沒有編輯報表模型的權限。 即使您可以產生或刪除報表模型，仍無法在 SharePoint 網站內進行編輯。 編輯報表模型需要模型設計師，這是一個用戶端撰寫工具，不受您在 SharePoint 中設定的權限影響。  
   
 ## <a name="see-also"></a>另請參閱  
- [授與權限在 SharePoint 網站上的報表伺服器項目](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Reporting Services to SharePoint Groups and Permissions 中比較角色和工作](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [授與權限在 SharePoint 網站上的報表伺服器項目](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [授與 SharePoint 網站上的報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [比較 Reporting Services 與 SharePoint 群組和權限中的 角色和工作](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [授與 SharePoint 網站上的報表伺服器項目的權限](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], effective permissions
 - permissions [Master Data Services], model and member overlaps
 - members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dd9706ee95376500993089a496f216c2fe113b27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 468d23a4bddd0df301d263e6c2fd6e22a167ef27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136436"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219678"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>重疊的模型和成員的權限 (Master Data Services)
   指派給成員的權限可能會與指派給模型物件的權限重疊。 當發生重疊情況時，比較嚴格的權限會生效。  
@@ -54,16 +54,16 @@ ms.locfileid: "36136436"
   
  在 **[模型]** 索引標籤上，Subcategory 屬性已被指派 **[更新]** 權限。  
   
- 在**階層成員**索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被明確指派**唯讀**權限。  
+ 在 **階層成員**索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄節點已被明確指派**唯讀**權限。  
   
- 結果： 在**總管**，使用者擁有**唯讀**Subcategory 屬性值中的 Mountain Bikes 節點之成員的權限。 系統會隱藏所有其他成員和屬性。  
+ 結果： 在**總管**，使用者擁有**唯讀**Mountain Bikes 節點中成員之 Subcategory 屬性值的權限。 系統會隱藏所有其他成員和屬性。  
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
 ## <a name="example-3"></a>範例 3  
  ![mds_conc_overlap_model_3](../../2014/master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
- 在**模型**索引標籤上，Subcategory 屬性已**唯讀**指派權限。  
+ 在 **模型**索引標籤上，Subcategory 屬性已**唯讀**指派權限。  
   
  在 **[階層成員]** 索引標籤上，衍生階層中的 Mountain Bikes 子類別目錄已被明確指派 **[更新]** 權限。  
   

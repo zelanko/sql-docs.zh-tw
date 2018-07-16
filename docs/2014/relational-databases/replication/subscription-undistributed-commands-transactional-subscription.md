@@ -1,5 +1,5 @@
 ---
-title: 訂用帳戶，未散發的命令 （交易式訂閱，SQL Server 2005 和更新版本） |Microsoft 文件
+title: 訂用帳戶，未散發的命令 （SQL Server 2005 和更新版本中的 交易式訂閱） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.subscription.performance.f1
 ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0c3b8cc5194ca15733ea23f27d8b4333686003fc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 88124bde6d1f8b54a875f1c30076408dc24fcc2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238710"
 ---
 # <a name="subscription-undistributed-commands-transactional-subscription-sql-server-2005-and-later"></a>訂閱，未散發的命令 (交易式訂閱，SQL Server 2005 和更新的版本)
   **[未散發的命令]** 索引標籤會顯示散發資料庫中尚未傳遞給選取之訂閱者的命令數目，以及傳遞這些命令的估計時間等相關資訊。 如需在散發資料庫中檢視命令的資訊，請參閱 [sp_replshowcmds &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql)。  

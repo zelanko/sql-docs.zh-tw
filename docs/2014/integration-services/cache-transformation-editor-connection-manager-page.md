@@ -1,5 +1,5 @@
 ---
-title: 快取轉換編輯器 （連接管理員頁面） |Microsoft 文件
+title: 快取轉換編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2fbbbf560242448abb4704d595f1907e664b6529
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f20f4054b80f9a76b9748174332d207f55c5d4f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146120"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235548"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>快取轉換編輯器 (連接管理員頁面)
   使用 **[快取轉換編輯器]** 對話方塊的 **[連接管理員]** 索引標籤，即可選取現有的快取連接管理員或建立新的快取連接管理員。  
@@ -41,6 +41,6 @@ ms.locfileid: "36146120"
  修改現有的連接。  
   
 ## <a name="see-also"></a>另請參閱  
- [快取轉換編輯器&#40;[對應] 頁面&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [快取轉換編輯器&#40;對應頁面&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

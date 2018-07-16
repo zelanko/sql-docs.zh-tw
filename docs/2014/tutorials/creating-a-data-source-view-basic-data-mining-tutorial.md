@@ -1,5 +1,5 @@
 ---
-title: 建立資料來源檢視 （基本資料採礦教學課程） |Microsoft 文件
+title: 建立資料來源檢視 （基本資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,34 +8,34 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 37c1548820bfe40478cdd5a8fd7b7ed051722056
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2b64202ccd2b5f420eceeb0287407656dde1cefe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311846"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241838"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>建立資料來源檢視 (基本資料採礦教學課程)
   資料來源檢視建立在資料來源之上，而且會定義一個資料子集，然後您可以在採礦結構中使用該資料子集。 您也可以使用資料來源檢視加入資料行、建立導出資料行與彙總，以及加入具名檢視。 您可以使用資料來源檢視，在不修改原始資料來源的情況下，選取與專案相關的資料、建立資料表之間的關聯性，以及修改資料的結構。 如需詳細資訊，請參閱 [多維度模型中的資料來源檢視](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)。  
   
 ### <a name="to-create-a-data-source-view"></a>若要建立資料來源檢視  
   
-1.  在**方案總管 中**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
+1.  中**方案總管**，以滑鼠右鍵按一下**資料來源檢視**，然後選取**新增資料來源檢視**。  
   
 2.  在 [歡迎使用資料來源檢視精靈] 頁面上，按一下 [下一步]。  
   
-3.  在**選取資料來源**頁面的 **關聯式資料來源**，選取您在前一項工作中建立的 Adventure Works DW 2012 資料來源。 按 [下一步] 。  
+3.  在  **Zdroj Dat**頁面的 **關聯式資料來源**，選取您在前一項工作中建立的 Adventure Works DW 2012 資料來源。 按 [下一步] 。  
   
     > [!NOTE]  
-    >  如果您想要建立資料來源，以滑鼠右鍵按一下**資料來源**，然後按一下 **新的資料來源**來啟動資料來源精靈。  
+    >  如果您想要建立資料來源，以滑鼠右鍵按一下**資料來源**，然後按一下**新的資料來源**來啟動資料來源精靈。  
   
-4.  在**選取資料表和檢視**頁面上，選取下列物件，然後按一下 向右箭號，將它們包含在新的資料來源檢視：  
+4.  在 **選取資料表和檢視**頁面，選取下列物件，然後按一下向右箭號，將它們包含在新的資料來源檢視：  
   
     -   **ProspectiveBuyer (dbo)** -潛在自行車買主的資料表  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36311846"
   
 5.  按 [下一步] 。  
   
-6.  在**正在完成精靈**頁面上，預設的資料來源檢視名稱是 Adventure Works DW 2012。 將名稱變更為`Targeted Mailing`，然後按一下 **完成**。  
+6.  在 [**完成精靈]** 頁面上，預設的資料來源檢視名為 Adventure Works DW 2012。 將名稱變更為`Targeted Mailing`，然後按一下**完成**。  
   
      在中開啟新的資料來源檢視**Targeted Mailing.dsv [設計]**  索引標籤。  
   

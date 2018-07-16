@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cb02d483de02ba4c9cc65a3e9597f5c04e3bb284
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037186"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200828"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
   本教學課程將教導您如何建立兩種報表：鑽研報表與主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 下圖顯示您將建立的報表。  
@@ -31,7 +31,7 @@ ms.locfileid: "36037186"
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>學習內容  
- **鑽研報表中，您將學習如何：**  
+ **鑽研報表中您將了解如何：**  
   
 1.  [從資料表或矩陣精靈建立鑽研矩陣報表和資料集](#DMatrixAndDataset)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "36037186"
   
 2.  [將資料格式化為貨幣](#DFormat)  
   
-3.  [加入資料行，以便在走勢圖中顯示銷售值](#DSparkline)  
+3.  [資料行加入走勢圖中顯示銷售值](#DSparkline)  
   
 4.  [加入具有產品類別目錄名稱的報表標題](#DReportTitle)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36037186"
   
 6.  [將報表儲存至 SharePoint 文件庫](#DSave)  
   
- **主報表中，您將學習如何：**  
+ **主報表中您將了解如何：**  
   
 1.  [從資料表或矩陣精靈建立主要矩陣報表和資料集](#MMatrixAndDataset)  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36037186"
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
   
-1.  按一下**啟動**，指向 **程式**，指向  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **報表產生器**，然後按一下 **報表產生器**。  
+1.  按一下 **開始**，指向**程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下**報表產生器**。  
   
      **[使用者入門]** 對話方塊隨即開啟。 如果沒有出現，請在 **[報表產生器]** 按鈕中按一下 **[新增]**。  
   
@@ -200,7 +200,7 @@ ms.locfileid: "36037186"
     > [!NOTE]  
     >  此參數包含產品類別目錄的名稱。 當您按一下主報表中的產品類別目錄名稱時，系統會使用此參數將其名稱傳遞到鑽研報表。  
   
-###  <a name="DSkip"></a> 建立資料集  
+###  <a name="DSkip"></a> 若要建立資料集  
   
 1.  從 Channel 維度中，將 Channel Name 拖曳至資料窗格。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "36037186"
   
 6.  按 [下一步] 。  
   
-##  <a name="DTotals"></a> 1 d。 加入小計和總計  
+##  <a name="DTotals"></a> 1d。 加入小計和總計  
  建立群組之後，您可以加入並格式化要顯示欄位彙總值的資料列。 您也可以選擇要顯示所有資料，或是讓使用者以互動方式展開和摺疊分組資料。  
   
 #### <a name="to-add-subtotals-and-totals"></a>加入小計和總計  
@@ -398,7 +398,7 @@ ms.locfileid: "36037186"
   
 #### <a name="to-create-a-new-report"></a>建立新的報表  
   
-1.  按一下**啟動**，指向 **程式**，指向  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **報表產生器**，然後按一下 **報表產生器**。  
+1.  按一下 **開始**，指向**程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下**報表產生器**。  
   
 2.  在 **[使用者入門]** 對話方塊中，確認已選取 **[新增報表]** ，然後按一下 **[資料表或矩陣精靈]**。  
   
@@ -523,7 +523,7 @@ ms.locfileid: "36037186"
   
 8.  在 **[名稱]** 方塊中輸入  **Net Sales**，然後按一下 **[確定]**。[導出成員] 窗格會列出 **Net Sales** 導出成員。  
   
-###  <a name="MSkip"></a> 建立資料集  
+###  <a name="MSkip"></a> 若要建立資料集  
   
 1.  從 Channel 維度中，將 Channel Name 拖曳至資料窗格。  
   
@@ -558,7 +558,7 @@ ms.locfileid: "36037186"
   
      步驟 3 和步驟 4 指定了矩陣中要顯示的資料。  
   
-##  <a name="MTotals"></a> 1 d。 加入小計和總計  
+##  <a name="MTotals"></a> 1d。 加入小計和總計  
  您可以在報表中顯示小計和總計。 主報表中的資料會顯示為指標，而且您將會在完成精靈後移除總計。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>若要加入小計和總計  

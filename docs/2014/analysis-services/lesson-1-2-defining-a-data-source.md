@@ -1,5 +1,5 @@
 ---
-title: 定義資料來源 |Microsoft 文件
+title: 定義資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: a564a314e92b683418b2bb3d12291fddeded016c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f764d7e7640fc7549d97402a83f997b63f9105cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179075"
 ---
 # <a name="defining-a-data-source"></a>定義資料來源
   建立 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案之後，您通常會定義專案要使用的一或多個資料來源來開始使用專案。 當您定義資料來源時，要定義用來連接到資料來源的連接字串資訊。 如需詳細資訊，請參閱[建立資料來源 &#40;SSAS 多維度&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)。  
@@ -30,7 +30,7 @@ ms.locfileid: "36134498"
   
 1.  在方案總管中 (於 [Microsoft Visual Studio] 視窗右側)，以滑鼠右鍵按一下 [資料來源]，然後按一下 [新增資料來源]。  
   
-2.  在**歡迎使用資料來源精靈**頁面**資料來源精靈**，按一下 **下一步**開啟**選取如何定義連接**頁面。  
+2.  上**歡迎使用資料來源精靈**頁面**資料來源精靈**，按一下 [**下一步]** 以開啟**選取如何定義連接**頁面。  
   
 3.  在 [選取如何定義連接] 頁面上，您可以根據新連接、現有的連接或先前定義的資料來源物件定義資料來源。 在此教學課程中，您將根據據新連接定義資料來源。 確認已選取 [依據現有的或新的連接建立資料來源]，然後按一下 [新增]。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36134498"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 也支援其他提供者會顯示在**提供者**清單。  
   
-5.  在**伺服器名稱**文字方塊中，輸入`localhost`。  
+5.  在 **伺服器名稱**文字方塊中，輸入`localhost`。  
   
      若要連接到本機電腦上的具名執行個體，輸入**localhost\\< 執行個體名稱\>**。 若要連接至特定電腦而非本機電腦，請輸入電腦名稱或 IP 位址。  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 caps.latest.revision: 12
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e68b94ce70e24d16ac1cc94274b9dac05974dbe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6b18989012a733d39dca843f475ec23e99893d0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036572"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246902"
 ---
 # <a name="the-memory-optimized-filegroup"></a>記憶體最佳化檔案群組
   若要建立記憶體最佳化資料表，您必須先建立記憶體最佳化檔案群組。 記憶體最佳化檔案群組會保存一個或多個容器。 每個容器都包含資料檔案及/或差異檔案。  
@@ -61,7 +61,7 @@ ms.locfileid: "36036572"
   
  在多容器、多磁碟機的案例中，資料和差異檔案會以循環方式配置到容器中。 第一個資料檔案會從第一個容器配置，而差異檔案則是從下一個容器配置，依此方式重複這個配置模式。 如果您有奇數磁碟機 (每個都對應到一個容器)，此配置方案會在所有容器中平均分散資料檔案和差異檔案。 但是，如果您有偶數磁碟機 (每個都對應到容器)，可能會造成儲存空間不平衡，導致資料檔案對應到奇數磁碟機而差異檔案則對應到偶數磁碟機。 若要在復原時取得平衡的 IO 資料流，請考慮將資料檔案和差異檔案組放在相同的主軸/儲存體，如以下範例所示。  
   
- **範例：** 考慮記憶體最佳化檔案群組有兩個容器： 磁碟機 X 和 Y 的磁碟機上的容器 2 上的容器 1。資料和差異檔案的配置以循環配置資源方式完成，因為容器 1 將只有資料檔案和容器 2 將只有差異檔案，這會導致儲存體，以及每秒，為資料檔的輸入/輸出作業持續失衡是明顯大於差異檔案。 若要在磁碟機 X 和 Y 統一散發資料和差異檔案，建立四個容器而非兩個，並將前兩個容器對應到磁碟機 X 和 Y 的磁碟機下面兩個容器。循環配置資源配置的第一個資料和差異的第一個檔案將會從配置容器 1 和容器 2 分別對應到磁碟機 X。同樣地下, 一個資料和差異檔案將會從容器 3 和容器-4，而會對應至磁碟機 Y 配置。這可讓一致的方式將資料和差異檔案分散到兩個磁碟機。  
+ **範例：** 考慮記憶體最佳化檔案群組有兩個容器： 磁碟機 X 和 Y 的磁碟機上的容器 2 上的容器 1。因為資料和差異檔案的配置循環配置資源方式完成，所以容器 1 將只有資料檔案和容器 2 將只有差異檔案，這會導致不平衡的持續性儲存體，以及每秒，為資料檔案的輸入/輸出作業會明顯大於差異檔案。 將資料和差異檔案分散到磁碟機 X 和 Y 的一致的方式，建立四個容器而非兩個，並將前兩個容器對應到磁碟機 X 和 Y 的磁碟機下面兩個容器。循環配置的第一個資料和第一個差異檔案將會配置從容器 1 和容器 2 分別對應至磁碟機 X。同樣地下, 一步 的資料和差異檔案中將配置的容器 3 和容器 4 會對應到磁碟機 Y。這允許一致的方式將資料和差異檔案分散到兩個磁碟機。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立及管理記憶體最佳化物件的儲存體](creating-and-managing-storage-for-memory-optimized-objects.md)  

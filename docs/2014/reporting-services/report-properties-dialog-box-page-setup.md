@@ -1,5 +1,5 @@
 ---
-title: 報表屬性對話方塊、 版面設定 |Microsoft 文件
+title: 報表屬性對話方塊、 版面設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10500"
 - sql12.rtp.rptdesigner.reportproperties.pagesetup.f1
 ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 caps.latest.revision: 38
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3377c1d0384bb15cd131c041abe32590767fd8f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e9881b5016e4d2c8dbf9e69cb5a3fad6d24ed44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194408"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>報表屬性對話方塊、版面設定
   選取 **[報表屬性]** 對話方塊上的 **[版面配置]** 來設定整個報表的頁面選項。  
@@ -55,7 +55,7 @@ ms.locfileid: "36136567"
  **底部**  
  設定報表底部和報表最後一行底部之間的距離。  
   
- **左**  
+ **左邊**  
  設定報表左邊緣和報表資料列左邊緣之間的距離。  
   
  **權限**  

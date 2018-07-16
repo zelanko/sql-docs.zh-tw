@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 108d749044530f50913076f35458227974554091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 525bb7bd5ed1fc3d2c5f48e97f13343d6910182f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199748"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>值包含設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [值包含設定檔要求] 設定選項。 值包含設定檔會計算兩個資料行或資料行集合之間值的重疊。 因此，它也可以判斷資料行或資料行集合是否適合當做選取之資料表之間的外部索引鍵。 這個設定檔也可協助您識別資料中的問題，例如無效的值。 舉例來說，您使用了值包含設定檔來分析 Sales 資料表的 ProductID 資料行。 此設定檔發現該資料行包含在 Products 資料表之 ProductID 資料行中找不到的值。  
@@ -106,7 +106,7 @@ ms.locfileid: "36133512"
 > [!NOTE]  
 >  當您針對 **ColumnName** 使用 **(\*)** 萬用字元時，**CompareOptions** 就是唯讀的，而且它會設定為 [預設值] 設定。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**預設值**|根據來源資料表中的資料行定序來排序和比較資料。|  
 |**BinarySort**|根據針對每個字元所定義的位元模式來排序和比較資料。 二進位排序順序為區分大小寫和區分腔調字。 二進位也是最快的排序順序。|  
@@ -114,7 +114,7 @@ ms.locfileid: "36133512"
   
  如果您選取 [DictionarySort]，也可以選取下表中所列的任何選項組合。 根據預設，系統不會選取這些額外的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**IgnoreCase**|指定比較是否區分大寫與小寫字母。 如果設定此選項，則字串比較會忽略大小寫。 例如，「ABC」與「abc」視為一樣。|  
 |**IgnoreNonSpace**|指定比較是否區分空格字元與變音。 如果設定此選項，則比較會忽略變音符號。 例如，"å" 等於 "a"。|  
@@ -129,7 +129,7 @@ ms.locfileid: "36133512"
  **InclusionThresholdSetting**  
  選取臨界值設定，以便精簡設定檔的輸出。 這個屬性的預設值為 [已指定]。 如需詳細資訊，請參閱本主題前面的「了解臨界值設定」一節。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**無**|沒有指定臨界值。 不論索引鍵強度為何，系統都會報告此值。|  
 |**已指定**|使用 **InclusionStrengthThreshold**中指定的臨界值。 只有當包含強度大於臨界值時，系統才會報告此值。|  
@@ -143,7 +143,7 @@ ms.locfileid: "36133512"
  **SupersetColumnsKeyThresholdSetting**  
  指定超集臨界值。 這個屬性的預設值為 [已指定]。 如需詳細資訊，請參閱本主題前面的「了解臨界值設定」一節。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**無**|沒有指定臨界值。 不論超集資料行的索引鍵強度為何，系統都會報告包含強度。|  
 |**已指定**|使用 **SupersetColumnsKeyThreshold**頁面上。 只有當超集資料行的索引鍵強度大於臨界值時，系統才會報告包含強度。|  
@@ -158,7 +158,7 @@ ms.locfileid: "36133512"
  指定可在輸出中報告的包含違規數目上限。 這個屬性的預設值為 100。 當 [精確] 選取成為 [InclusionThresholdSetting] 時，這個選項會停用。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分析工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [資料分析工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

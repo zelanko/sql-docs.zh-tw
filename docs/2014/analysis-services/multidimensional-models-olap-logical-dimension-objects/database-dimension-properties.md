@@ -1,5 +1,5 @@
 ---
-title: 資料庫維度屬性 |Microsoft 文件
+title: 資料庫維度屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - properties [Analysis Services], dimensions
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f426560d08d9ba4600a3619828d29d658145b8f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e9b86509f0b4a5ab87102c43838cfa1b18376a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135495"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194328"
 ---
 # <a name="database-dimension-properties"></a>資料庫維度屬性
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度的特性由維度時，根據各種維度屬性的設定，並於屬性或維度所含的階層上的中繼資料所定義。 下表描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度屬性。  
+  在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度的特性由維度，根據各種維度屬性的設定和屬性或階層維度所包含的中繼資料定義。 下表描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度屬性。  
   
 |屬性|描述|  
 |--------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "36135495"
 |`WriteEnabled`|指出是否可以使用維度回寫 (受限於安全性權限)。|  
   
 > [!NOTE]  
->  如需有關如何處理 null 值和其他資料完整性問題時如何設定 ErrorConfiguration 和 UnknownMember 屬性值的詳細資訊，請參閱[Analysis Services 2005 中處理資料完整性問題](http://go.microsoft.com/fwlink/?LinkId=81891)。  
+>  如需有關如何設定 ErrorConfiguration 和 UnknownMember 屬性值，當使用 null 值和其他資料完整性議題的詳細資訊，請[Analysis Services 2005 中處理資料完整性問題](http://go.microsoft.com/fwlink/?LinkId=81891)。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性和屬性階層](attributes-and-attribute-hierarchies.md)   

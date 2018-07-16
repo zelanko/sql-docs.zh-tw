@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db45c51e597f739a443027e2e3390656d0820710
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c1e087cb853e6517c0977b2db33c31312631c1ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195428"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>變更屬性類型 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當資料類型或是允許的字元數目不正確時，管理員可以變更屬性類型。  
@@ -29,7 +29,7 @@ ms.locfileid: "36134416"
 > [!NOTE]  
 >  您不能更新 **Name** 或 **Code** 資料行的類型或長度。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 和總管功能區域的權限。  
@@ -40,7 +40,7 @@ ms.locfileid: "36134416"
   
 ### <a name="to-change-the-attribute-type"></a>若要變更屬性類型  
   
-1.  在 Excel 中，載入包含您想要變更之資料行 (屬性) 的實體。 如需詳細資訊，請參閱[從 excel 的 MDS 資料載入](export-data-to-excel-from-master-data-services.md)。  
+1.  在 Excel 中，載入包含您想要變更之資料行 (屬性) 的實體。 如需詳細資訊，請參閱 <<c0> [ 將資料從 MDS 載入 Excel 中的載入](export-data-to-excel-from-master-data-services.md)。  
   
 2.  在您想要變更的資料行中按一下任何資料格。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36134416"
   
 -   變更屬性的資料類型。  
   
--   產生具有後置詞 “_old” 且不包含任何值的屬性複本。 這稱為**取代**屬性。  
+-   產生具有後置詞 “_old” 且不包含任何值的屬性複本。 這就叫做**已被取代**屬性。  
   
  不過，原始屬性的所有現有相依性會指向已被取代的屬性，而不會指向變更的屬性。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36134416"
   
 -   因為在屬性的新資料類型中邏輯可能不同，您必須重新整理商務規則，指向已變更的屬性。 您將需要編輯每個受影響的規則，然後重新組織運算式，以便移除已被取代之屬性 (_old) 的參考，指向更新屬性。  
   
--   您必須開啟在 整合管理選取下的任何訂用帳戶檢視、 選取的檢視資料列中，開啟由按一下鉛筆圖示，即可進行編輯，然後按一下**儲存磁碟**圖示重新整理檢視定義。 重新產生檢視語法不需要其他變更。  
+-   您必須開啟 整合管理選取下的任何訂用帳戶檢視，選取 檢視資料列、 開啟它進行編輯，方法是按一下鉛筆圖示，，然後按一下**儲存磁碟**圖示以重新整理檢視定義。 重新產生檢視語法不需要其他變更。  
   
 -   包含屬性的暫存資料表會加入一個已被取代的屬性資料行，這表示您的暫存碼會受到影響。 若要移除已被取代的屬性，您可以在更新了商務規則和訂閱檢視之後刪除它。  
   

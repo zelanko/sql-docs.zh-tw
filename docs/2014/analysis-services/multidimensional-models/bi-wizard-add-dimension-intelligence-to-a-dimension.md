@@ -1,5 +1,5 @@
 ---
-title: 將維度智慧加入維度 |Microsoft 文件
+title: 將維度智慧加入維度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], dimension intelligence
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Type property
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de910ec8c845c67346c8a31b8d372efa0d3390c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcd7ea323857e0db796b6e4a17bf8c2dde21e199
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208128"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>將維度智慧加入至維度中
   將維度智慧增強功能加入至 Cube 或維度，以指定維度的標準商務類型。 此增強功能同時也會指定維度屬性的對應類型。 用戶端應用程式在分析資料時可以使用這些類型規格。  
@@ -38,7 +38,7 @@ ms.locfileid: "36133828"
 >  如果選取 [帳戶] 作為維度，您將會指定維度的帳戶智慧。 如需詳細資訊，請參閱[將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)。  
   
 ## <a name="specifying-dimension-attributes"></a>指定維度屬性  
- 在**定義維度智慧**頁面上，於**維度類型** 清單中，您所做的選取項目設定的維度`Type`屬性。 `Type`屬性設定會提供資訊給伺服器和用戶端應用程式內容的相關的維度。 部份設定只為用戶端應用程式提供指導；這些設定是選擇性的。 其他設定 (例如帳戶或時間) 決定特定的行為，並可能對實作特殊商業智慧增強功能是必要的。 例如，SQL Server Management Studio 使用維度類型來識別貨幣維度，以及設定適當的貨幣轉換規則。 [維度類型] 的預設值為 [一般]，不會對維度內容做任何假設。  
+ 在 **定義維度智慧**頁面上，於**維度類型**清單中，您的選取項目設定維度的`Type`屬性。 `Type`屬性設定會提供資訊給伺服器和用戶端應用程式內容的相關的維度。 部份設定只為用戶端應用程式提供指導；這些設定是選擇性的。 其他設定 (例如帳戶或時間) 決定特定的行為，並可能對實作特殊商業智慧增強功能是必要的。 例如，SQL Server Management Studio 使用維度類型來識別貨幣維度，以及設定適當的貨幣轉換規則。 [維度類型] 的預設值為 [一般]，不會對維度內容做任何假設。  
   
  選取維度類型之後，在 [維度屬性] 的 [包含] 資料行中，針對在維度中有對應屬性的每個標準屬性類型，選取其旁邊的核取方塊。 最後，在 [維度屬性] 資料行中展開下拉式清單，並在對應到所選取屬性類型的維度中選取屬性。 從清單中選取屬性，會針對屬性設定屬性 `Type` 屬性。  
   

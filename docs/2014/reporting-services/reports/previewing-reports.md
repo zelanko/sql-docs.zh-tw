@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], previewing reports
 - previewing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0c1d7b819f181d8a4b2de8c448a80a5ef24a64cd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: afcfb2cf31526f4e8898fafbe72f9492a1848886
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202528"
 ---
 # <a name="previewing-reports"></a>預覽報表
   設計報表時，在尚未發行至實際環境之前，您可能會想要先檢視該報表。 您可以利用數種方式進行檢視：在報表設計師中切換到 [預覽] 模式、使用報表設計師中的預覽視窗，以及在測試環境中將報表發行至報表伺服器。  
@@ -38,16 +38,16 @@ ms.locfileid: "36144668"
 ## <a name="standalone-preview"></a>獨立預覽  
  另一個預覽報表的方式是在偵錯組態下執行報表專案，例如，偵錯您撰寫的自訂組件。 有三種方法可以執行專案：  
   
--   依序按一下**啟動**上**偵錯**功能表。  
+-   依序按一下**開始**上**偵錯**功能表。  
   
--   依序按一下**啟動**按鈕[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][標準] 工具列。  
+-   依序按一下**開始**按鈕[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]標準 工具列。  
   
 -   可按下 F5。  
   
- 如果您使用的專案組態，建立報表但是未部署，報表中所指定`StartItem`個別的預覽視窗中開啟目前的組態屬性。 預覽視窗顯示報表的方式和功能都與 [預覽] 模式相同。  
+ 如果您使用的專案組態，建立報表但是未部署，報表中所指定`StartItem`另一個預覽視窗中開啟的目前組態的屬性。 預覽視窗顯示報表的方式和功能都與 [預覽] 模式相同。  
   
 > [!NOTE]  
->  在偵錯報表之前，您必須設定一個啟動項目。 若要設定啟動項目，在 [方案總管] 中，以滑鼠右鍵按一下報表專案中，按一下**屬性**，然後在`StartItem`，選取要顯示報表的名稱。  
+>  在偵錯報表之前，您必須設定一個啟動項目。 若要設定啟動項目，在 [方案總管] 中，以滑鼠右鍵按一下報表專案，請按一下**屬性**，然後在`StartItem`，選取要顯示報表的名稱。  
   
  如果您想要預覽並非專案之啟動項目的特定報表，請選取建立報表但未部署報表的組態 (例如 DebugLocal 組態)，以滑鼠右鍵按一下報表，然後按一下 [執行]。 您必須選擇並未部署報表的組態；否則，報表將會發行至報表伺服器，而非在本機的預覽視窗中顯示。  
   

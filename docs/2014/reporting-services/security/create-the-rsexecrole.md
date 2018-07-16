@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b683b9778275f07b791df1881da6d7213e1d1d26
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 560b889359a428625131ff69d8aab5589834a39e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225288"
 ---
 # <a name="create-the-rsexecrole"></a>建立 RSExecRole
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用預先定義的資料庫角色，呼叫`RSExecRole`授與報表伺服器的報表伺服器資料庫的權限。 `RSExecRole` 角色會自動與報表伺服器資料庫一起建立。 您絕對不能修改它或是將其他使用者指派給這個角色，這是一般的規則。 但是，當您將報表伺服器資料庫移到新的或另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 時，您必須在 Master 和 MSDB 系統資料庫中重新建立此角色。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用預先定義的資料庫角色，稱為`RSExecRole`授與報表伺服器報表伺服器資料庫的權限。 `RSExecRole` 角色會自動與報表伺服器資料庫一起建立。 您絕對不能修改它或是將其他使用者指派給這個角色，這是一般的規則。 但是，當您將報表伺服器資料庫移到新的或另一個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 時，您必須在 Master 和 MSDB 系統資料庫中重新建立此角色。  
   
  使用下列指示執行下列步驟：  
   
@@ -37,9 +37,9 @@ ms.locfileid: "36133369"
   
 ## <a name="before-you-start"></a>開始之前  
   
--   請備份加密金鑰，好讓您可以在移動資料庫之後還原這些金鑰。 這是步驟不會直接影響您能夠建立和佈建`RSExecRole`，但是您必須擁有金鑰的備份，才可以確認您的工作。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
+-   請備份加密金鑰，好讓您可以在移動資料庫之後還原這些金鑰。 此步驟不會直接影響您能夠建立及佈建`RSExecRole`，但您必須擁有金鑰的備份，才能確認您的工作。 如需詳細資訊，請參閱 [備份與還原 Reporting Services 加密金鑰](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)。  
   
--   請確認您擁有的使用者帳戶登入`sysadmin`權限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體。  
+-   請確認您身分的使用者帳戶具有登入`sysadmin`權限[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體。  
   
 -   請確認在您打算使用的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上已安裝及執行 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Agent 服務。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "36133369"
  手動建立 `RSExecRole` 的指示是要用於移轉報表伺服器安裝的環境。 本主題不會說明類似備份及移動報表伺服器資料庫等重要工作，這些工作記載於 Database Engine 文件集內。  
   
 ## <a name="create-rsexecrole-in-master"></a>在 Master 資料庫中建立 RSExecRole  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 使用擴充預存程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式服務來支援排程的作業。 下列步驟說明如何將這些程序的 Execute 權限授與給 `RSExecRole` 角色。  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 利用擴充預存程序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式服務來支援排程的作業。 下列步驟說明如何將這些程序的 Execute 權限授與給 `RSExecRole` 角色。  
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>使用 Management Studio 在 Master 系統資料庫中建立 RSExecRole  
   
-1.  啟動[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]並連接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]主控報表伺服器資料庫的執行個體。  
+1.  開始[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ，並連接到[!INCLUDE[ssDE](../../../includes/ssde-md.md)]主控報表伺服器資料庫的執行個體。  
   
 2.  開啟 **[資料庫]**。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36133369"
   
 7.  以滑鼠右鍵按一下 **[資料庫角色]**，然後選取 **[新增資料庫角色]**。 [一般] 頁面隨即出現。  
   
-8.  在**角色名稱**，型別`RSExecRole`。  
+8.  在 **角色名稱**，輸入`RSExecRole`。  
   
 9. 在 **[擁有者]** 中輸入 **DBO**。  
   

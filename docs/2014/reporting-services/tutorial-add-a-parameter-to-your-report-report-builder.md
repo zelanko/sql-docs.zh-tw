@@ -8,38 +8,38 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 230cd7bcbadf9e51ba248ffa34851335977cb0ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 02d7879bab489d92f6c5897406d3dce12b279d96
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134576"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238238"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>教學課程：將參數加入至報表 (報表產生器)
   將參數加入至報表可讓使用者從資料來源或報表中篩選報表資料。 系統會針對您包含在資料集查詢中的每個查詢參數，自動建立報表參數。 參數資料類型會決定該類型會如何在報表檢視器工具列上顯示。  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
   
-##  <a name="BackToTop"></a> 您將學習  
+##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學習如何執行下列作業：  
   
 1.  [從資料表或矩陣精靈建立矩陣報表和資料集](#Setup)  
   
 2.  [組織資料、 選擇配置和樣式從資料表或矩陣精靈](#CompleteWizard)  
   
-3.  [加入查詢參數，以建立報表參數](#Query)  
+3.  [加入查詢參數來建立報表參數](#Query)  
   
 4.  [變更報表參數的預設資料類型和其他屬性](#ChangeDefaultProperties)  
   
-    1.  [加入資料集來提供可用的值與顯示名稱](#AddDataset)  
+    1.  [加入資料集來提供可用的值，並顯示名稱](#AddDataset)  
   
-    2.  [指定可用的值來建立值的下拉式清單](#AvailableValues)  
+    2.  [指定可以用於建立值的下拉式清單值](#AvailableValues)  
   
     3.  [指定預設值，讓報表能夠自動執行](#DefaultValues)  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36134576"
   
 7.  [變更報表參數接受多個值](#Multivalued)  
   
-8.  [加入條件式可見性的布林參數](#Boolean)  
+8.  [新增條件式可見性的布林值參數](#Boolean)  
   
 9. [加入報表標題](#Title)  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36134576"
   
 #### <a name="to-create-a-new-matrix-report"></a>若要建立新的矩陣報表  
   
-1.  按一下**啟動**，指向 **程式**，指向  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下 **報表產生器**。  
+1.  按一下 **開始**，指向**程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下**報表產生器**。  
   
      此時會出現 **[使用者入門]** 對話方塊。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "36134576"
   
 2.  在 [報表資料] 窗格中，展開 [資料集] 資料夾，並以滑鼠右鍵按一下 **DataSet1**，然後按一下 [查詢]。  
   
-3.  加入下列[!INCLUDE[tsql](../includes/tsql-md.md)]`WHERE`子句當做查詢中的最後一行：  
+3.  新增下列[!INCLUDE[tsql](../includes/tsql-md.md)]`WHERE`子句，查詢中的最後一行：  
   
     ```  
     WHERE StoreID = (@StoreID)  
@@ -190,7 +190,7 @@ ms.locfileid: "36134576"
   
 8.  在 [報表資料] 窗格中，展開 **[參數]** 資料夾。  
   
- 請注意，現在有報表參數名稱為*@StoreID*。 根據預設，參數的資料類型為 **[文字]**。 由於商店識別碼是一個整數，所以在下一個步驟中，您會將資料類型變更為 Integer。  
+ 請注意，目前沒有名為報表參數*@StoreID*。 根據預設，參數的資料類型為 **[文字]**。 由於商店識別碼是一個整數，所以在下一個步驟中，您會將資料類型變更為 Integer。  
   
 ##  <a name="ChangeDefaultProperties"></a> 4.變更報表參數的預設資料類型和其他屬性  
  建立報表參數之後，您可以調整屬性的預設值。  
@@ -207,7 +207,7 @@ ms.locfileid: "36134576"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  預覽報表。 報表檢視器顯示的提示*@StoreID*。  
+6.  預覽報表。 報表檢視器顯示的提示字元*@StoreID*。  
   
 7.  在報表檢視器工具列上，就在 Store ID 旁，輸入 **200**，然後按一下 **[檢視報表]**。  
   
@@ -246,7 +246,7 @@ ms.locfileid: "36134576"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>若要從資料集提供可用的參數值  
   
-1.  在 報表資料 窗格中，以滑鼠右鍵按一下參數*@StoreID*，然後按一下 **參數屬性**。  
+1.  在 [報表資料] 窗格中，以滑鼠右鍵按一下參數*@StoreID*，然後按一下**參數屬性**。  
   
 2.  按一下 **[可用的值]**，然後按一下 **[從查詢取得值]**。  
   
@@ -266,13 +266,13 @@ ms.locfileid: "36134576"
   
 9. 預覽報表。  
   
-     在報表檢視器工具列上，在參數文字方塊現在是顯示的下拉式清單**\<選取的值 >**。  
+     在 [報表檢視器] 工具列中，在參數文字方塊現在是顯示的下拉式清單**\<選取一個值 >**。  
   
 10. 從下拉式清單中選取 Contoso Catalog Store，然後按一下 **[檢視報表]**。  
   
  報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
   
-##  <a name="DefaultValues"></a> 4 c。 指定預設值讓報表能夠自動執行  
+##  <a name="DefaultValues"></a> 4 核心。 指定預設值讓報表能夠自動執行  
  您可以指定每一個參數的預設值，讓報表能夠自動執行。  
   
 #### <a name="to-specify-a-default-value-from-a-dataset"></a>若要從資料集指定預設值  
@@ -291,7 +291,7 @@ ms.locfileid: "36134576"
   
 7.  預覽報表。  
   
- 如*@StoreID*，報表檢視器會顯示"Contoso North America Online Store"的值。 這是來自資料集 **Stores**中結果集的第一個值。 報表會針對商店識別碼 **199**顯示  Digital Cameras 售出的數量。  
+ 針對*@StoreID*，報表檢視器會顯示值"Contoso North America Online Store"。 這是來自資料集 **Stores**中結果集的第一個值。 報表會針對商店識別碼 **199**顯示  Digital Cameras 售出的數量。  
   
 #### <a name="to-specify-a-custom-default-value"></a>若要指定自訂預設值  
   
@@ -307,9 +307,9 @@ ms.locfileid: "36134576"
   
 6.  預覽報表。  
   
- 如*@StoreID*，報表檢視器會顯示"Contoso Catalog Store"的值。 這是商店識別碼 **200**的顯示名稱。 報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
+ 針對*@StoreID*，報表檢視器會顯示值"Contoso Catalog Store"。 這是商店識別碼 **200**的顯示名稱。 報表會針對商店識別碼 **200**顯示 Accessories、Camcorders 與 Digital SLR Cameras 售出的數量。  
   
-##  <a name="NameValue"></a> 4 d。 從具有名稱/值組的資料集中查閱值  
+##  <a name="NameValue"></a> 4d。 從具有名稱/值組的資料集中查閱值  
  資料集可能同時包含識別碼與對應的名稱欄位。 如果您只有識別碼，那麼可以查詢包含名稱/值組之資料集 (您先前建立) 中的對應名稱。  
   
 #### <a name="to-look-up-a-value-from-a-dataset"></a>若要從資料集查詢值  
@@ -370,7 +370,7 @@ ms.locfileid: "36134576"
   
 4.  在 [運算式] 的下拉式清單中，選取 StoreID 資料集欄位。 資料類型會顯示 **[整數]**。 當運算式值為資料集欄位時，會自動設定資料類型。  
   
-5.  在**運算子**，確認`equals`選取 （=）。  
+5.  在 **運算子**，確認`equals`選取 （=）。  
   
 6.  在 **[值]** 中，輸入 `[@StoreID]`。 `[@StoreID]` 為表示 `=Parameters!StoreID.Value`的簡單運算式語法。  
   
@@ -399,7 +399,7 @@ ms.locfileid: "36134576"
   
 5.  在 [報表資料] 窗格中，展開 [資料集] 資料夾，並以滑鼠右鍵按一下 **DataSet1**，然後按一下 [查詢]。  
   
-6.  變更`equals`（=） 來`IN`中[!INCLUDE[tsql](../includes/tsql-md.md)]`WHERE`查詢中的最後一行中的子句：  
+6.  變更`equals`（=） 來`IN`中[!INCLUDE[tsql](../includes/tsql-md.md)]`WHERE`在查詢中的最後一行中的子句：  
   
     ```  
     WHERE StoreID IN (@StoreID)  
@@ -485,7 +485,7 @@ ms.locfileid: "36134576"
   
  頁尾中的文字方塊會顯示您所選取的所有商店。  
   
-##  <a name="Title"></a> 第 9。加入報表標題  
+##  <a name="Title"></a> 9。加入報表標題  
   
 #### <a name="to-add-a-report-title"></a>若要加入報表標題  
   

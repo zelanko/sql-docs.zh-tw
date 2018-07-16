@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose 公用程式 (Service Broker) |Microsoft 文件
+title: ssbdiagnose 公用程式 (Service Broker) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Service Broker, runtime reports
 - Service Broker, command prompt utilities
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: 44
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 37b52dd752b04c9aacb6ee49e1dbc2d4c590332a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fc76263bfc2be9d35839444b8fcd2cf8c116bc66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136775"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172329"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 公用程式 [Service Broker]
   **ssbdiagnose** 公用程式會報告 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 交談或 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務組態中的問題。 您可以針對兩個服務或單一服務進行組態檢查。 問題會在命令提示字元視窗中報告成人們可讀取的文字，或可重新導向至檔案或其他程式的格式化 XML。  
@@ -187,16 +187,16 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  可識別應用程式中某個交談端點的唯一識別碼。 交談控制代碼對於交談的某個端點而言是唯一的，而起始端和目標端點具有不同的交談控制代碼。  
   
- 交談控制代碼傳回應用程式由*@dialog_handle*參數**BEGIN DIALOG**陳述式，而`conversation_handle`結果中的資料行集的**接收**陳述式。  
+ 交談控制代碼傳回應用程式*@dialog_handle*參數**BEGIN DIALOG**陳述式，而`conversation_handle`結果中的資料行集的**接收**陳述式。  
   
- 中會報告交談控制代碼`conversation_handle`資料行**sys.transmission_queue**和**sys.conversation_endpoints**目錄檢視。  
+ 中會報告交談控制代碼`conversation_handle`資料行**sys.transmission_queue**並**sys.conversation_endpoints**目錄檢視。  
   
  *conversation_group_id*  
  識別交談群組且不重複的識別碼。  
   
- 交談群組識別碼傳回應用程式由*@conversation_group_id*參數**GET CONVERSATION GROUP**陳述式和`conversation_group_id`結果集中的資料行**接收**陳述式。  
+ 交談群組識別碼傳回應用程式*@conversation_group_id*參數**GET CONVERSATION GROUP**陳述式和`conversation_group_id`結果集中的資料行**接收**陳述式。  
   
- 中會報告交談群組識別碼`conversation_group_id`的資料行**sys.conversation_endpoints**和**sys.conversation_endpoints**目錄檢視。  
+ 中會報告交談群組識別碼`conversation_group_id`的資料行**sys.conversation_groups**並**sys.conversation_endpoints**目錄檢視。  
   
  *conversation_id*  
  識別交談且不重複的識別碼。 對於交談的起始端和目標端點而言，其交談識別碼都相同。  

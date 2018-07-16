@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - copy-only backups [SQL Server]
 - COPY_ONLY option [BACKUP statement]
 - backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e382d3b0bad1a5c43d6fc745280e302c9422ef0e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8d5ef086b610402e2c696196b2baae7705c5f920
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036140"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248878"
 ---
 # <a name="copy-only-backups-sql-server"></a>只複製備份 (SQL Server)
   「只複製備份」是與傳統 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份順序無關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份。 通常，進行備份會變更資料庫，而且會影響往後其他備份的還原方式。 不過，偶爾為了特殊目的在不影響資料庫整體備份及還原程序的情況下進行備份，相當有用。 只複製備份即是供此目的之用。  
@@ -56,7 +55,7 @@ ms.locfileid: "36036140"
   
 -   用於只複製完整備份：  
   
-     BACKUP DATABASE *database_name* TO \<backup_device*>* ... WITH COPY_ONLY …  
+     BACKUP DATABASE *database_name* TO \<backup_device>*>* ... WITH COPY_ONLY …  
   
     > [!NOTE]  
     >  指定 DIFFERENTIAL 選項時，COPY_ONLY 沒有任何作用。  

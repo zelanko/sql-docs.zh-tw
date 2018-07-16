@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfererrormessagestask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e6d8bc72c3c713dc1a113490431f4dba81c2a11a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d7a40c86c0dba2a4b2db08305f7fea379a97b1f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201848"
 ---
 # <a name="transfer-error-messages-task"></a>傳送錯誤訊息工作
   [傳送錯誤訊息] 工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間傳送一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者自訂的錯誤訊息。 使用者定義的訊息是識別碼等於或大於 50000 的訊息。 識別碼小於 50000 的訊息是系統錯誤訊息，這種訊息無法使用「傳送錯誤訊息」工作進行傳送。  
@@ -50,7 +50,7 @@ ms.locfileid: "36131773"
  該工作並不報告錯誤訊息傳送的累加進度，它只報告 0% 和 100 % 完成。  
   
 ## <a name="execution-value"></a>執行值  
- 工作之 `ExecutionValue` 屬性中定義的執行值會傳回已傳送的錯誤訊息數目。 藉由指定使用者定義變數，以`ExecValueVariable`屬性 「 傳送錯誤訊息 」 工作的錯誤訊息傳送相關的資訊可供其他物件中封裝。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
+ 工作之 `ExecutionValue` 屬性中定義的執行值會傳回已傳送的錯誤訊息數目。 藉由指派的使用者定義變數`ExecValueVariable`屬性傳送錯誤訊息工作的錯誤訊息傳送相關的資訊以供其他物件在封裝中。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../integration-services-ssis-variables.md)和[在封裝中使用變數](../use-variables-in-packages.md)。  
   
 ## <a name="log-entries"></a>記錄項目  
  「傳送錯誤訊息」工作包含下列自訂記錄項目：  
@@ -59,7 +59,7 @@ ms.locfileid: "36131773"
   
 -   TransferErrorMessagesTaskFinishedTransferringObjects   此記錄項目報告傳送已完成。 記錄項目會包含結束時間。  
   
- 此外，記錄項目`OnInformation`事件是用以報告已傳送的錯誤訊息和記錄項目數目`OnWarning event`寫入每個錯誤訊息會覆寫目的地上。  
+ 此外，記錄項目`OnInformation`事件會報告已傳送的錯誤訊息和記錄項目數目`OnWarning event`寫入每個錯誤訊息會覆寫目的地上。  
   
 ## <a name="security-and-permissions"></a>安全性和權限  
  若要建立新的錯誤訊息，執行封裝的使用者必須是目的地伺服器上 sysadmin 或 serveradmin 伺服器角色的成員。  
@@ -69,9 +69,9 @@ ms.locfileid: "36131773"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [傳送錯誤訊息工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [傳送錯誤訊息工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [傳送錯誤訊息工作編輯器&#40;郵件頁面&#41;](../transfer-error-messages-task-editor-messages-page.md)  
+-   [傳送錯誤訊息工作編輯器&#40;訊息 頁面&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

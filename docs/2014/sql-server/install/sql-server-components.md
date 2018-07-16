@@ -1,5 +1,5 @@
 ---
-title: SQL Server 元件 |Microsoft 文件
+title: SQL Server 元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
 - listing components to analyze
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85a89e2114cd00b28444cf6ee62d12ff1abdec42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135547"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177117"
 ---
 # <a name="sql-server-components"></a>SQL Server 元件
-  您可以對已在本機或遠端電腦執行 Upgrade Advisor 分析精靈[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安裝。 升級前分析的第一個步驟是識別要分析的電腦和元件。  
+  您可以針對已在本機或遠端電腦執行 Upgrade Advisor 分析精靈[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]， [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]， [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]，或[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]安裝。 升級前分析的第一個步驟是識別要分析的電腦和元件。  
   
 ## <a name="options"></a>選項。  
  **電腦名稱**  
- 指定要分析之電腦的名稱。 Upgrade Advisor 會填入**伺服器名稱**具有本機電腦名稱 方塊。 您也可以使用 "." 和 "localhost" 來連接至本機電腦。  
+ 指定要分析之電腦的名稱。 Upgrade Advisor 會填入**伺服器名稱**與本機電腦名稱 方塊中的。 您也可以使用 "." 和 "localhost" 來連接至本機電腦。  
   
  若要分析不同的電腦，請使用下列指導方針：  
   

@@ -19,13 +19,13 @@ ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
 caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: db92a9dddb75f8dd7b6856124a8a1abd450f7323
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9caf48a0ba48956e6f732a2cd2514422a3d6139a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144965"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245228"
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>使用指令碼元件增強錯誤輸出
   依預設，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤輸出中的兩個額外資料行 ErrorCode 與 ErrorColumn 只包含數字碼，代表錯誤號碼及發生錯誤之資料行的識別碼。 這些數值若無對應的錯誤描述，則用途有限。  
@@ -54,9 +54,9 @@ ms.locfileid: "36144965"
   
 6.  關閉 VSTA。  
   
-7.  在指令碼轉換編輯器中，在**的輸入資料行**頁面上，選取 ErrorCode 資料行。  
+7.  在指令碼轉換編輯器中，在**輸入資料行**頁面上，選取 ErrorCode 資料行。  
   
-8.  在**輸入和輸出**頁面上，加入新的輸出資料行型別的`String`名為**ErrorDescription**。 將新資料行的預設長度增加至 255，以支援長訊息。  
+8.  在 **輸入和輸出**頁面上，加入新的輸出資料行的型別`String`名為**ErrorDescription**。 將新資料行的預設長度增加至 255，以支援長訊息。  
   
 9. 關閉**指令碼轉換編輯器**。  
   
@@ -90,7 +90,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料中的錯誤處理](../data-flow/error-handling-in-data.md)   

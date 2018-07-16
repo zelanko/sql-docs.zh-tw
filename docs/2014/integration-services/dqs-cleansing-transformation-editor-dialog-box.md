@@ -1,5 +1,5 @@
 ---
-title: DQS 清理轉換編輯器對話方塊 |Microsoft 文件
+title: DQS 清理轉換編輯器 對話方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f723e04c13dd16c6f872950652dba759f611cbf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0034984a58971af442ab7154bbba50820dfe1a16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134466"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219668"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 清理轉換編輯器對話方塊
   使用 [DQS 清理轉換編輯器] 對話方塊，即可更正使用 Data Quality Services (DQS) 的資料。 如需詳細資訊，請參閱 [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md)。  
@@ -115,7 +115,7 @@ ms.locfileid: "36134466"
  指出是否要輸出從現有參考資料提供者收到的其他資料。 如需詳細資訊，請參閱 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)。  
   
  **附加的資料結構描述**  
- 指出是否要輸出資料結構描述。 如需詳細資訊，請參閱[將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
+ 指出是否要輸出資料結構描述。 如需詳細資訊，請參閱 <<c0> [ 將定義域或複合定義域附加至參考資料](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)。  
   
 ##  <a name="manager"></a> 設定 DQS 清理連接管理員對話方塊中的選項  
  **伺服器名稱**  

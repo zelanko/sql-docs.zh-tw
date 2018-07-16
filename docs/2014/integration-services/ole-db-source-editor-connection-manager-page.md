@@ -1,5 +1,5 @@
 ---
-title: OLE DB 來源編輯器 （連接管理員頁面） |Microsoft 文件
+title: OLE DB 來源編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 48a56983486d07e2331394a9a07b39bde38925b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71b29c69425508e15ba306c6f9ae7d0319c8a6ca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136663"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37206488"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 來源編輯器 (連接管理員頁面)
   使用 [OLE DB 來源編輯器] 對話方塊的 [連接管理員] 頁面，來選取來源的 OLE DB 連接管理員。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
@@ -34,7 +34,7 @@ ms.locfileid: "36136663"
 >  若要從使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 或更早版本的資料來源載入資料，請使用 Excel 來源。 如需詳細資訊，請參閱 [Excel 來源編輯器 &#40;連接管理員頁面&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)。  
   
 > [!NOTE]  
->  `CommandTimeout` OLE DB 來源的屬性，不適用於**OLE DB 來源編輯器**，但是可以透過設定**進階編輯器**。 如需這個屬性的詳細資訊，請參閱 [OLE DB 自訂屬性](data-flow/ole-db-custom-properties.md)的＜Excel 來源＞一節。  
+>  `CommandTimeout` OLE DB 來源屬性不適用於**OLE DB 來源編輯器**，但可以透過設定**進階編輯器**。 如需這個屬性的詳細資訊，請參閱 [OLE DB 自訂屬性](data-flow/ole-db-custom-properties.md)的＜Excel 來源＞一節。  
   
  若要深入了解 OLE DB 來源，請參閱＜ [OLE DB Source](data-flow/ole-db-source.md)＞。  
   

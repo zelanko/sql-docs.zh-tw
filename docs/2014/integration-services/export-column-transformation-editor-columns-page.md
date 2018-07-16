@@ -1,5 +1,5 @@
 ---
-title: 匯出資料行轉換編輯器 （資料行頁面） |Microsoft 文件
+title: 匯出資料行轉換編輯器 （資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileextractortransformation.columns.f1
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 86f14583351c2ff734ec0cc3e09abaa270c1c9ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b427d8a727f0db31b63d43efbe00378c7ef0f18b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137391"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207448"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>匯出資料行轉換編輯器 (資料行頁面)
   使用 **[匯出資料行轉換編輯器]** 對話方塊的 **[資料行]** 頁面，即可指定資料流程中要擷取至檔案的資料行。 您可以指定匯出資料行轉換將資料附加至檔案或複寫現有的檔案。  
@@ -44,7 +44,7 @@ ms.locfileid: "36137391"
  指定轉換是否在寫入資料之前刪除現有檔案的內容。 預設值為 `false`。  
   
  **寫入 BOM**  
- 指定是否將位元組順序標記 (BOM) 寫入檔案。 資料是否僅寫入 BOM`DT_NTEXT`或 DT_WSTR 資料類型，並不會附加至現有的資料檔案。  
+ 指定是否將位元組順序標記 (BOM) 寫入檔案。 當資料擁有才寫入 BOM`DT_NTEXT`或 DT_WSTR 資料類型，且未附加至現有的資料檔案。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

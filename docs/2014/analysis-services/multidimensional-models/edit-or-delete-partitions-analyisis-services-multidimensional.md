@@ -1,5 +1,5 @@
 ---
-title: 編輯或刪除資料分割 (Analysis Services-多維度) |Microsoft 文件
+title: 編輯或刪除資料分割 (Analysis Services-多維度) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
 - partitions [Analysis Services], modifying
 ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 693550400db63b73b29d01a7a9d198d5924893dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 333caebbfff1870341696ee9d5a6d215288459bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180925"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>編輯或刪除分割區 (Analysis Services - 多維度)
   若要修改 Cube 資料分割，可以在 [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] 中使用 Cube 設計師的 [資料分割] 索引標籤。 [資料分割] 索引標籤會列出 Cube 中所有量值群組的資料分割。 它也會列出已啟用回寫功能的回寫分割區。  
@@ -53,6 +53,6 @@ ms.locfileid: "36132013"
 ## <a name="see-also"></a>另請參閱  
  [建立及管理本機資料分割&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
  [設計彙總&#40;Analysis Services-多維度&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Analysis Services 中的資料分割合併&#40;SSAS-多維度&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services 中合併資料分割&#40;SSAS-多維度&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

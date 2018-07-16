@@ -1,5 +1,5 @@
 ---
-title: 建立關聯式採礦結構 |Microsoft 文件
+title: 建立關聯式採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
 - data mining [Analysis Services], structure
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3622989e4dbc5ba8d954f0f92513820829aaea54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 261936c087c109087c9916513acd45468de55a7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237908"
 ---
 # <a name="create-a-relational-mining-structure"></a>建立關聯式採礦結構
   大多數的資料採礦模型都是根據關聯式資料來源。 建立關聯式資料採礦模型的優點如下：您可以組合隨選資料及定型和更新模型，而不需要經歷建立 Cube 的複雜程序。  
@@ -97,7 +97,7 @@ ms.locfileid: "36037583"
   
  採礦結構中的資料是衍生自現有資料來源檢視中的任何內容。 您可以視需要修改資料來源檢視中的資料，加入在基礎關聯式資料中可能不存在的關聯性或衍生的資料行。 您也可以在資料來源檢視內建立具名的計算或彙總。 如果您對於資料來源中的資料排列方式沒有控制權，或者如果您想要試驗資料採礦模型的不同資料彙總，這些功能會非常實用。  
   
- 您不必使用所有提供的資料，您可以挑選並選擇要將哪些資料行包含在採礦結構中。 然後根據該結構的所有模型可以都使用這些資料行，或您可以為某些資料行的標示`Ignore`針對特定模型。 您甚至可以讓資料採礦模型的使用者從採礦模型的結果進行鑽研，以查看未包含在採礦模型本身中的其他採礦結構資料行。  
+ 您不必使用所有提供的資料，您可以挑選並選擇要將哪些資料行包含在採礦結構中。 然後根據該結構的所有模型都可以都使用這些資料行，或您可以特定資料行標示為`Ignore`針對特定模型。 您甚至可以讓資料採礦模型的使用者從採礦模型的結果進行鑽研，以查看未包含在採礦模型本身中的其他採礦結構資料行。  
   
 ##  <a name="bkmk_ContentDataType"></a> 如何指定內容類型和資料類型  
  此資料類型與您在 SQL Server 或其他應用程式介面中指定的資料類型大致相同：日期和時間、不同大小的數目、布林值、文字和其他離散資料。  
@@ -130,7 +130,7 @@ ms.locfileid: "36037583"
   
 ## <a name="see-also"></a>另請參閱  
  [資料採礦設計師](data-mining-designer.md)   
- [資料採礦精靈&#40;Analysis Services-資料採礦&#41;](data-mining-wizard-analysis-services-data-mining.md)   
+ [資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining-wizard-analysis-services-data-mining.md)   
  [採礦模型屬性](mining-model-properties.md)   
  [採礦結構和結構資料行的屬性](properties-for-mining-structure-and-structure-columns.md)   
  [採礦結構工作和操作說明](mining-structure-tasks-and-how-tos.md)  

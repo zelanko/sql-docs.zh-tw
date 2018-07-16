@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d95395b74de40bcc6f8a93a246deae9c9d799198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 76795367b5f03e65673468d4af8e7f7c7222e73b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036528"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249738"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
   本教學課程的設計在於協助您了解，可對照地理背景顯示報告資料的地圖功能。  
@@ -30,10 +30,10 @@ ms.locfileid: "36036528"
   
  在本教學課程中，您將建立地圖報表，用於顯示紐約州各郡的商店位置。  
   
-##  <a name="BackToTop"></a> 您將學習  
+##  <a name="BackToTop"></a> 您將了解  
  在本教學課程中，您將學習如何執行下列作業：  
   
-1.  [建立含多邊形圖層從地圖精靈地圖](#Map)  
+1.  [建立含多邊形圖層，從地圖精靈地圖](#Map)  
   
 2.  [加入地圖點圖層以顯示商店位置](#PointLayer)  
   
@@ -47,15 +47,15 @@ ms.locfileid: "36036528"
   
     1.  [建立空間資料與分析資料之間的關聯性](#Relationship)  
   
-    2.  [指定多邊形的色彩規則](#ColorRules)  
+    2.  [指定的多邊形色彩規則](#ColorRules)  
   
-    3.  [貨幣格式化色階中的資料](#ColorScale)  
+    3.  [在色階中的資料格式化為貨幣](#ColorScale)  
   
     4.  [建立新的圖例](#NewLegend)  
   
-    5.  [讓圖例與色彩規則](#Associate)  
+    5.  [關聯的圖例與色彩規則](#Associate)  
   
-    6.  [清除包含任何資料之郡的色彩](#NoData)  
+    6.  [清除不含資料的郡的色彩](#NoData)  
   
 7.  [加入自訂點](#CustomPoint)  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36036528"
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>使用新報表中的地圖精靈加入地圖  
   
-1.  按一下**啟動**，指向 **程式**，指向  [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下 **報表產生器**。  
+1.  按一下 **開始**，指向**程式**，指向[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**報表產生器**，然後按一下**報表產生器**。  
   
      [使用者入門] 對話方塊隨即出現。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "36036528"
   
      此時會為您建立名為 DataSet1 的報表資料集。 在完成精靈後，可以使用 [報表資料] 來檢視其欄位集合。  
   
-11. 在**選擇空間資料及地圖檢視選項**頁面上，確認**空間欄位**是`SpatialLocation`而且**圖層類型**是**點**. 接受此頁面上的其他預設值。  
+11. 在 **選擇空間資料及地圖檢視選項**頁面上，確認**空間欄位**是`SpatialLocation`且**圖層類型**是**點**. 接受此頁面上的其他預設值。  
   
      地圖檢視會顯示圓形，這些圓形會標示每一家商店的位置。  
   
@@ -294,7 +294,7 @@ ms.locfileid: "36036528"
   
 1.  切換至 [設計] 檢視。  
   
-2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下 **加入圖層**![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
+2.  按兩下地圖來顯示 **[地圖圖層]** 窗格。 在工具列上，按一下**加入圖層**![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")。  
   
 3.  從下拉式清單中，按一下 **[圖格圖層]**。  
   
@@ -456,7 +456,7 @@ ms.locfileid: "36036528"
   
 5.  在 **[圖例選項]** 的下拉式清單中，選取 [Legend2]。 圖例文字選項隨即出現。 根據預設，圖例文字是以一般 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] 格式字串格式化。 N0 中的 0 會指定不使用小數位數。  
   
-6.  在**圖例文字**，使用下列格式來指定含沒有小數位數的貨幣： `#FROMVALUE {C0} - #TOVALUE {C0}`  
+6.  在 **圖例文字**，使用下列格式來指定沒有小數位數的貨幣： `#FROMVALUE {C0} - #TOVALUE {C0}`  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -479,7 +479,7 @@ ms.locfileid: "36036528"
   
 4.  按一下 **[填滿]**。  
   
-5.  確認填滿樣式是**實線。** 漸層和模式會套用至所有色彩。  
+5.  確認填滿樣式是**純色。** 漸層和模式會套用至所有色彩。  
   
 6.  在 **[色彩]** 中，按一下向下箭頭，然後按一下 **[淺鋼青]**。  
   
@@ -584,9 +584,9 @@ ms.locfileid: "36036528"
 ## <a name="next-steps"></a>後續步驟  
  以上總結如何將地圖加入至報表的逐步解說。  
   
- 如需詳細資訊，請參閱[對應&#40;報表產生器及 SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)和部落格文章：[製圖調整空間資料的 SQL Server Reporting services](http://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com 上。  
+ 如需詳細資訊，請參閱 < [Maps&#40;報表產生器及 SSRS&#41; ](report-design/maps-report-builder-and-ssrs.md)和 部落格文章[製圖調整空間資料的 SQL Server Reporting services](http://go.microsoft.com/fwlink/?LinkId=152771) blogs.msdn.com 上。  
   
- 如需更多的教學課程，請參閱[教學課程&#40;報表產生器&#41;](report-builder-tutorials.md)。  
+ 如需教學課程，請參閱[教學課程&#40;報表產生器&#41;](report-builder-tutorials.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [教學課程&#40;報表產生器&#41;](report-builder-tutorials.md)   

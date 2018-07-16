@@ -1,5 +1,5 @@
 ---
-title: 資料行可見性對話方塊 （報表產生器） |Microsoft 文件
+title: 資料行可見性對話方塊 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
 caps.latest.revision: 12
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b5fbdc627473f449007af6dadcc73fcc69efc46f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6a91788f90fc5fb4e6afddf5a7b7e60c49cbfb49
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205018"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>資料行可見性對話方塊 (報表產生器)
   使用 **[資料行可見性]** 對話方塊在報表第一次執行時顯示或隱藏選取的資料行，或使用其他報表項目來切換資料行的可見性。  
@@ -39,7 +39,7 @@ ms.locfileid: "36134347"
  **顯示或隱藏 依據運算式**  
  選擇此選項即可使用運算式改變初始可見性。  
   
- 輸入運算式評估為`Boolean`值`True`隱藏項目和`False`顯示項目。 請按一下 [運算式]\(*fx*) 按鈕來編輯運算式。  
+ 輸入要評估的運算式`Boolean`的值`True`隱藏項目和`False`顯示項目。 請按一下 [運算式]\(*fx*) 按鈕來編輯運算式。  
   
  **此報表項目可以切換顯示**  
  選擇這個選項可顯示一個切換影像，讓使用者在 HTML 報表檢視器中顯示或隱藏這個資料行。  
@@ -49,7 +49,7 @@ ms.locfileid: "36134347"
 ## <a name="see-also"></a>另請參閱  
  [運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [將展開或摺疊動作新增至項目中 &#40;報表產生器及 SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [映像&#40;報表產生器和 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [映像&#40;報表產生器及 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [影像屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)  
   

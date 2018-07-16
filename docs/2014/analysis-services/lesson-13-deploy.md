@@ -1,5 +1,5 @@
 ---
-title: 第 14 課： 部署 |Microsoft 文件
+title: 第 14 課： 部署 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 2b9bf4afde77cc0438e097c14f6b3743c7da427d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2973afd208039534048908ca1403fc8154898fc3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181035"
 ---
 # <a name="lesson-14-deploy"></a>第 14 課：部署
   在這一課，您將設定部署屬性：指定以 [表格式] 模式執行之 Analysis Services 的部署伺服器執行個體，以及您所部署模型的名稱。 接著將模型部署至該執行個體。 部署完成後，使用者就可以使用報表用戶端應用程式連接到此模型。 如需詳細資訊，請參閱[表格式模型方案部署 &#40;SSAS 表格式&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)。  
   
  完成本課程的估計時間：**5 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課程的工作之前，您應已完成上一課：[第 13 課：在 Excel 中進行分析](lesson-12-analyze-in-excel.md)。  
   
 ## <a name="deploy-the-model"></a>部署模型  
@@ -40,14 +40,14 @@ ms.locfileid: "36133563"
     > [!IMPORTANT]  
     >  您必須具有遠端 Analysis Services 執行個體的系統管理員權限，才能部署到該執行個體。  
   
-3.  確認**查詢模式**屬性設定為**In-memory**。  
+3.  請確認**查詢模式**屬性設定為**記憶體**。  
   
     > [!NOTE]  
     >  DirectQuery 模式不支援使用本教學課程建立的模型。  
   
-4.  在**資料庫**屬性中，輸入`Adventure Works Internet Sales Model`。  
+4.  在 **資料庫**屬性中，輸入`Adventure Works Internet Sales Model`。  
   
-5.  在**Cube**名稱屬性中，輸入`Adventure Works Internet Sales Model`。  
+5.  在  **Cube**名稱屬性中，輸入`Adventure Works Internet Sales Model`。  
   
 6.  確認您的選取，然後按一下 [確定]。  
   

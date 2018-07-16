@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, user configuration
 - jobs [SQL Server Agent], user configuration
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - proxy accounts [SQL Server Agent]
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e39427bf18fafd44bf48eb869d11d901a4dcea8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2804168db65322d9c51219dad044ac0fe211163b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144858"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234348"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>設定使用者可建立及管理 SQL Server Agent 作業
   本主題描述如何設定使用者，以建立或執行 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業。  
@@ -52,7 +52,7 @@ ms.locfileid: "36144858"
   
 3.  以滑鼠右鍵按一下您要新增至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的登入，然後選取 [屬性]。  
   
-4.  在**使用者對應**頁面**登入屬性**對話方塊方塊中，選取資料列包含`msdb`。  
+4.  在上**使用者對應**頁**登入屬性**對話方塊方塊中，選取 資料列包含`msdb`。  
   
 5.  在 **[資料庫角色成員資格對象: msdb]** 底下，核取適當的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36144858"
   
 3.  以滑鼠右鍵按一下 [Proxy]，然後選取 [新增 Proxy]。  
   
-4.  在 **[新 Proxy 帳戶]** 對話方塊的 **[一般]** 頁面上，指定新 Proxy 的 Proxy 名稱、認證名稱及描述。 請注意，在建立 SQL Server Agent Proxy 之前，您必須先建立認證。 如需建立認證的詳細資訊，請參閱[建立認證](../../relational-databases/security/authentication-access/create-a-credential.md)和[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)。  
+4.  在 **[新 Proxy 帳戶]** 對話方塊的 **[一般]** 頁面上，指定新 Proxy 的 Proxy 名稱、認證名稱及描述。 請注意，在建立 SQL Server Agent Proxy 之前，您必須先建立認證。 如需建立認證的詳細資訊，請參閱[建立認證](../../relational-databases/security/authentication-access/create-a-credential.md)並[CREATE CREDENTIAL &#40;-&#41;](/sql/t-sql/statements/create-credential-transact-sql)。  
   
 5.  檢查這個 Proxy 適當的子系統。  
   

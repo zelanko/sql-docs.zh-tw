@@ -1,5 +1,5 @@
 ---
-title: 瀏覽器 （Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 瀏覽器 （Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f431abab7f69c957b64d83f2f06c7675c566b2b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236168"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>瀏覽器 (Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[瀏覽器]** 索引標籤，瀏覽 Cube 中的維度、量值和 KPIS。 在 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]中， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube 瀏覽器已與 MDX 查詢設計工具整合，並提供一個圖形使用者介面來協助您建立 MDX 查詢、篩選與配量 Cube，以及向下鑽研到階層。  
@@ -34,7 +34,7 @@ ms.locfileid: "36131419"
   
  ![Analysis Services MDX 查詢設計工具，設計檢視](media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX 查詢設計工具，設計檢視")  
   
- 當您使用在圖形設計模式中，如果**自動**(![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")) 選取工具列上的切換按鈕時，**瀏覽器**執行查詢每次您放入中繼資料物件拖曳至 [資料] 窗格。 您也可以手動執行查詢使用**執行查詢**(![執行查詢](media/rsqdicon-run.gif "執行查詢")) 在工具列上的按鈕。  
+ 當您在圖形設計模式中，如果**自動執行**(![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")) 工具列上的切換按鈕已選取，**瀏覽器**執行查詢每次您拖放到 [資料] 窗格上的中繼資料物件。 您也可以手動執行查詢使用**執行查詢**(![執行查詢](media/rsqdicon-run.gif "執行查詢")) 工具列上的按鈕。  
   
  若要將圖形化查詢設計工具變更為 **[查詢]** 模式，並使用 MDX 陳述式的文字，請按一下工具列上的 **[設計模式]** 按鈕。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "36131419"
   
  **[中繼資料]** 窗格會顯示 **[中繼資料]** 和 **[函數]** 的索引標籤。 從 **[中繼資料]** 索引標籤中，可以將維度、階層、KPI 和量值拖曳至查詢設計區域中。 您可以將 **[函數]** 索引標籤上的函數拖曳至查詢設計區域。 當您執行查詢時，查詢設計區域會顯示 MDX 查詢的結果。 您也可以按一下 **[工具列]** 上的 **[在 Excel 中進行分析]** ，以便將資料匯出至 Microsoft Office Excel，並在樞紐分析表中檢視使用者檢視的結果。下列幾節會針對 **[瀏覽器]** 的各種模式，更詳細地描述其中的工具列和所有窗格。  
   
- 請注意，當您在文字模式中，使用**自動**(![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")) 不能使用工具列上的切換按鈕。 不過，您可以手動執行的查詢使用**執行查詢**(![執行查詢](media/rsqdicon-run.gif "執行查詢")) 在工具列上的按鈕。  
+ 請注意，當您在文字模式中，作業**自動執行**(![自動執行查詢](media/rsqdicon-autoexecute.gif "自動執行查詢")) 不能使用工具列上的切換按鈕。 不過，您可以手動方式執行查詢使用**執行查詢**(![執行查詢](media/rsqdicon-run.gif "執行查詢")) 工具列上的按鈕。  
   
 ## <a name="sections"></a>區段  
  **工具列**  

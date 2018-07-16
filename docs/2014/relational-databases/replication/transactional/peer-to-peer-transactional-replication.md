@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bidirectional replication
 - transactional replication, bidirectional replication
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - peer-to-peer transactional replication
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 caps.latest.revision: 68
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 299b9968d9daebc61c9625a661125d45f33a3dfa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 838d3fa3190e592c0b46529ea45b7e1a7b91c8be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135593"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236648"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>@loopback_detection
   點對點複寫藉由維護多個伺服器執行個體之間的資料複本 (也稱為 *「節點」*) 來提供向外延展和高可用性解決方案。 點對點複寫是以異動複寫為基礎，會以接近即時、交易式的方式傳播一致的變更。 如此可讓需要向外延展讀取作業的應用程式將來自用戶端的讀取散發到多個節點之間。 由於會以接近即時的方式在節點之間維護資料，所以點對點複寫會提供資料備援性，這樣可提高資料的可用性。  
@@ -149,16 +149,16 @@ ms.locfileid: "36135593"
   
 -   發行集屬性**@allow_initialize_from_backup**需要的值為`true`。  
   
--   發行項屬性**@replicate_ddl**需要的值為`true`;**@identityrangemanagementoption**需要的值為`manual`; 和**@status**需要該選項**24**設定。  
+-   發行項屬性**@replicate_ddl**需要的值為`true`;**@identityrangemanagementoption**需要的值為`manual`; 並**@status**需要該選項**24**設定。  
   
--   發行項屬性的值**@ins_cmd**， **@del_cmd**，和**@upd_cmd**不能設定為`SQL`。  
+-   發行項屬性的值**@ins_cmd**， **@del_cmd**，以及**@upd_cmd**不能設為`SQL`。  
   
 -   訂用帳戶屬性**@sync_type**需要的值為`none`或`automatic`。  
   
 ### <a name="maintenance-considerations"></a>維護考量  
  下列動作需要停止系統。 這表示停止所有節點上已發行之資料表的活動，並確定每個節點都已收到來自其他所有節點的所有變更。  
   
--   加入[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]節點至現有的拓撲  
+-   新增[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]節點至現有的拓撲  
   
 -   將發行項新增至現有的發行集  
   

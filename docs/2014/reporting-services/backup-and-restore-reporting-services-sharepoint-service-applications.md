@@ -1,5 +1,5 @@
 ---
-title: 備份與還原 Reporting Services SharePoint 服務應用程式 |Microsoft 文件
+title: 備份與還原 Reporting Services SharePoint 服務應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 504afebfbe59ef6717bb60e8220600256419f785
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ad72399371d662ee8842dd7f9bf72ce5a72b6b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212568"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>備份與還原 Reporting Services SharePoint 服務應用程式
   本主題描述如何使用 SharePoint 管理中心或 PowerShell 備份和還原 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 服務應用程式。 本主題包含：  
@@ -41,7 +41,7 @@ ms.locfileid: "36037636"
   
 -   開始 SharePoint 備份之前，請先備份加密金鑰。 如果您未備份加密金鑰，則在還原服務應用程式之後，將無法存取加密的資料。 您將需要刪除加密的資料。  
   
--   請確認是否有您[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式是否使用 UEA 或 Windows 驗證進行資料庫存取。 如果是使用其中一種方式，請確定正確的認證為何，如此就能在還原程序之後正確設定服務應用程式。  
+-   如果驗證程式[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式使用 UEA 或 Windows 驗證進行資料庫存取。 如果是使用其中一種方式，請確定正確的認證為何，如此就能在還原程序之後正確設定服務應用程式。  
   
 -   檢閱 SharePoint 備份記錄確實是在備份檔案所在的資料夾中建立。 這個檔案通常命名為 **spbackup.log**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "36037636"
  [Restore a service application (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx)(還原服務應用程式 (SharePoint Server 2010))。  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>使用管理中心還原加密金鑰  
- 如需有關還原資訊[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]加密金鑰，請參閱 「 加密金鑰 」 一節[管理 Reporting Services SharePoint 服務應用程式](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)。  
+ 如需還原[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]加密金鑰，請參閱 < 加密金鑰 > 一節[管理 Reporting Services SharePoint 服務應用程式](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)。  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>設定執行帳戶和資料庫驗證  
  **執行帳戶** ：如果您的服務應用程式使用執行帳戶，請完成下列步驟設定該帳戶：  

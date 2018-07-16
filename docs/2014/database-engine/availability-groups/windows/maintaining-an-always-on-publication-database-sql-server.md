@@ -1,28 +1,27 @@
 ---
-title: 維護 AlwaysOn 發行集資料庫 (SQL Server) |Microsoft 文件
+title: 維護 AlwaysOn 發行集資料庫 (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 caps.latest.revision: 9
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: dd0f464aeefcbd77f2a4f0dee726516a55a60132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1a2e66a3537b62658458357a642a76d6e283abb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200198"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>維護 AlwaysOn 發行集資料庫 (SQL Server)
   本主題將討論使用 AlwaysOn 可用性群組時維護發行集資料庫的特殊考量。  
@@ -36,17 +35,17 @@ ms.locfileid: "36146167"
   
 -   複寫監視器永遠都會在原始發行者底下顯示發行集資訊。 不過，只要加入原始發行者做為伺服器，您就可以在複寫監視器中檢視任何複本的這項資訊。  
   
--   使用預存程序或 Replication Management Objects (RMO) 在目前主要複本上管理複寫時，如果您指定了發行者名稱，就必須指定在其上啟用資料庫以供複寫的執行個體名稱 (原始發行者)。 若要決定適當的名稱，請使用 `PUBLISHINGSERVERNAME` 函數。 當發行資料庫聯結了可用性群組時，儲存在次要資料庫複本中的複寫中繼資料會與主要複本上的中繼資料完全相同。 因此，對於在主要複本上啟用以供複寫的發行集資料庫而言，儲存在次要複本之系統資料表中的發行者執行個體名稱是主要複本的名稱，而不是次要複本的名稱。 如果發行集資料庫容錯移轉至次要複本，這會影響複寫組態和維護。 例如，如果您要在次要伺服器預存程序設定複寫容錯移轉之後，而且您想要在不同的複本已啟用的發行集資料庫的提取訂閱，您必須指定而不是將原始發行者的名稱目前的發行者*@publisher*參數`sp_addpullsubscription`或`sp_addmergepulllsubscription`。 不過，如果您在容錯移轉後啟用發行集資料庫，則儲存在系統資料表中的發行者執行個體名稱就是目前主要主機的名稱。 在此情況中，您會針對 *@publisher* 參數使用目前主要複本的主機名稱。  
+-   使用預存程序或 Replication Management Objects (RMO) 在目前主要複本上管理複寫時，如果您指定了發行者名稱，就必須指定在其上啟用資料庫以供複寫的執行個體名稱 (原始發行者)。 若要決定適當的名稱，請使用 `PUBLISHINGSERVERNAME` 函數。 當發行資料庫聯結了可用性群組時，儲存在次要資料庫複本中的複寫中繼資料會與主要複本上的中繼資料完全相同。 因此，對於在主要複本上啟用以供複寫的發行集資料庫而言，儲存在次要複本之系統資料表中的發行者執行個體名稱是主要複本的名稱，而不是次要複本的名稱。 如果發行集資料庫容錯移轉至次要複本，這會影響複寫組態和維護。 例如，如果您要容錯移轉之後，次要的預存程序設定複寫，而且您想要在不同的複本已啟用的發行集資料庫的提取訂閱，您必須指定的名稱，而不是將原始發行者目前的發行者，作為*@publisher*參數`sp_addpullsubscription`或`sp_addmergepulllsubscription`。 不過，如果您在容錯移轉後啟用發行集資料庫，則儲存在系統資料表中的發行者執行個體名稱就是目前主要主機的名稱。 在此情況中，您會針對 *@publisher* 參數使用目前主要複本的主機名稱。  
   
     > [!NOTE]  
-    >  對於某些程序，例如`sp_addpublication`、 *@publisher*的執行個體的發行者才支援參數[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; 在這些情況下，如無關[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
+    >  對於某些程序，例如`sp_addpublication`，則*@publisher*的執行個體的發行者才支援參數[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; 在這些情況下，不相關的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
   
 -   若要在容錯移轉後同步處理 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 中的訂閱，請從訂閱者同步處理提取訂閱，並從使用中發行者同步處理發送訂閱。  
   
 ##  <a name="RemovePublDb"></a> 從可用性群組中移除已發行的資料庫  
  如果您已從可用性群組中移除已發行的資料庫，或者已卸除具有已發行成員資料庫的可用性群組，請考慮下列問題。  
   
--   如果在原始發行者端的發行集資料庫從可用性群組主要複本中移除，您必須執行`sp_redirect_publisher`但未指定的值*@redirected_publisher*參數以移除發行者/資料庫配對的重新導向。  
+-   如果在原始發行者端的發行集資料庫從可用性群組主要複本中移除，您必須執行`sp_redirect_publisher`但未指定的值*@redirected_publisher*若要移除的參數發行者/資料庫配對的重新導向。  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -115,7 +114,7 @@ ms.locfileid: "36146167"
 -   [複寫訂閱者及 AlwaysOn 可用性群組&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性群組： 互通性 (SQL Server)](always-on-availability-groups-interoperability-sql-server.md)   
  [SQL Server 複寫](../../../relational-databases/replication/sql-server-replication.md)  

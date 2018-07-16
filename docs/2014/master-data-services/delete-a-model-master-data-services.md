@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting models [Master Data Services]
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9643b3d6094c2f0b3815668fc466d73e76f259f7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5f0b813b20c91159b74a82d403ce21a473c85802
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215248"
 ---
 # <a name="delete-a-model-master-data-services"></a>刪除模型 (Master Data Services)
   刪除模型，從 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]移除模型及其所有資料。  
@@ -30,7 +30,7 @@ ms.locfileid: "36145414"
 > [!NOTE]  
 >  完成這個程序時，模型中所有版本的所有物件和所有資料都會永久刪除。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -43,9 +43,9 @@ ms.locfileid: "36145414"
   
 2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
   
-3.  在**模型維護**頁面上，選取您想要刪除之模型的資料列。  
+3.  在 **模型維護**頁面上，選取您想要刪除之模型的資料列。  
   
-4.  按一下**刪除選取的模型**。  
+4.  按一下 **刪除選取的模型**。  
   
 5.  在確認對話方塊中按一下 **[確定]**。  
   

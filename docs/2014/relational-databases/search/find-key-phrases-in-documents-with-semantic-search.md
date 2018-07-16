@@ -5,30 +5,29 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], key phrase queries
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 28696617406fd5f3776181a79cd8fb84bec04307
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3a9cb8c4903580c4b5879b431b1be6de1b77f97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037644"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234958"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>使用語意搜尋找到文件中的主要片語
   描述如何在設定為統計語意索引的文件或文字資料行中尋找主要片語。  
   
-##  <a name="BasicsQueryKey"></a> 文件中尋找主要片語  
+##  <a name="BasicsQueryKey"></a> 在 文件中尋找主要片語  
   
-###  <a name="howtofind"></a> 如何： 使用 SEMANTICKEYPHRASETABLE 文件中尋找主要片語  
+###  <a name="howtofind"></a> 如何： 使用 SEMANTICKEYPHRASETABLE 的文件中尋找主要片語  
  若要在特定文件中識別主要片語，或識別包含特定主要片語的文件，請查詢 [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 函數。  
   
  SEMANTICKEYPHRASETABLE 會傳回包含零個、一個或多個資料列的資料表，表示與指定之資料表資料行相關聯的主要片語。 您可以在 SELECT 陳述式的 FROM 子句中參考這個資料列集函數，就像是一般資料表名稱一樣。  
@@ -41,7 +40,7 @@ ms.locfileid: "36037644"
 > [!IMPORTANT]  
 >  您設定為目標的資料行必須已啟用全文檢索和語意索引。  
   
-###  <a name="HowToTopPhrases"></a> 範例 1： 在特定文件中尋找前的主要片語  
+###  <a name="HowToTopPhrases"></a> 範例 1： 尋找在特定文件中的前幾個關鍵片語  
  下列範例會從 AdventureWorks 範例資料庫之 Production.Document 資料表 Document 資料行 @DocumentId 變數所指定的文件中，擷取前 10 個主要片語。 @DocumentId 變數是指來自全文檢索索引之索引鍵資料行的值。  
   
 ```tsql  
@@ -58,7 +57,7 @@ GO
   
  **SEMANTICKEYPHRASETABLE** 函數會使用索引搜尋有效率地擷取這些結果，而不會使用資料表掃描。  
   
-###  <a name="HowToTopDocuments"></a> 範例 2： 尋找包含特定主要片語的最上層文件  
+###  <a name="HowToTopDocuments"></a> 範例 2： 尋找包含特定關鍵片語的最上層文件  
  下列範例會從 AdventureWorks 範例資料庫之 Production.Document 資料表的 Document 資料行中，擷取前 25 份包含主要片語的 "Bracket" 的文件。  
   
 ```tsql  

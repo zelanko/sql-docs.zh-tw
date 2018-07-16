@@ -1,25 +1,24 @@
 ---
-title: 管理全文檢索索引 |Microsoft 文件
+title: 管理全文檢索索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
 caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 9a38476f427cbc2c9630c66020f35c5f7355e9bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f9dc86071bbed98e835b9b7849c4a1fd4c58f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243108"
 ---
 # <a name="manage-full-text-indexes"></a>管理全文檢索索引
      
@@ -41,7 +40,7 @@ ms.locfileid: "36134237"
     |----------|-----------------|  
     |**一般**|顯示全文檢索索引的基本屬性。 這些屬性包括許多可修改的屬性和一些無法變更的屬性，例如資料庫名稱、資料表名稱，以及全文檢索索引鍵資料行的名稱。 可修改的屬性包括：<br /><br /> **全文檢索索引停用字詞表**<br /><br /> **全文檢索索引已啟用**<br /><br /> **變更追蹤**<br /><br /> **搜尋屬性清單**<br /><br /> <br /><br /> 如需詳細資訊，請參閱[全文檢索搜尋 &#40;一般頁面&#41;](full-text-index-properties-general-page.md)。|  
     |**資料行**|顯示可用於全文檢索索引的資料表資料行。 系統會針對選取的資料行建立全文檢索索引。 您可以選取任意數目的可用資料行，以便包含在全文檢索索引中。 如需詳細資訊，請參閱[全文檢索搜尋 &#40;資料行頁面&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)。|  
-    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](../relational-databases/indexes/indexes.md)。<br /><br /> **\*\* 重要\* \*** 結束之後**全文檢索索引屬性**對話方塊中，任何新建立的排程都會與 SQL Server 代理程式工作 （啟動累加資料表母體擴展上相關聯*database_name*。*table_name*)。|  
+    |**排程**|您可以使用這個頁面來建立或管理 SQL Server Agent 作業的排程，以便針對全文檢索索引母體擴展啟動累加資料表母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](../relational-databases/indexes/indexes.md)。<br /><br /> **\*\* 重要\* \*** 結束之後**全文檢索索引屬性** 對話方塊中，任何新建立的排程都會與 SQL Server Agent 作業 （啟動累加資料表母體擴展相關聯*database_name*。*table_name*)。|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 儲存任何變更並結束 [全文檢索索引屬性] 對話方塊。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "36134237"
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>若要查詢給定的唯一索引是否當做全文檢索索引鍵資料行使用  
   
-1.  使用 [SELECT](/sql/t-sql/queries/select-transact-sql) 陳述式來呼叫 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 函數。 在函式呼叫中，使用 OBJECT_ID 函數，將資料表的名稱 (*table_name*) 轉換為資料表識別碼、 指定資料表的唯一索引的名稱以及指定`IsFulltextKey`索引屬性，如下：  
+1.  使用 [SELECT](/sql/t-sql/queries/select-transact-sql) 陳述式來呼叫 [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) 函數。 函式中呼叫中，使用 OBJECT_ID 函數，將資料表的名稱 (*table_name*) 轉換為資料表識別碼、 指定資料表之唯一索引的名稱以及指定`IsFulltextKey`索引屬性，如下：  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  

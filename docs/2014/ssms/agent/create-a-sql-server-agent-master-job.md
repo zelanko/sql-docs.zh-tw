@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], master jobs
 - jobs [SQL Server Agent], creating
 - master SQL Server Agent job [SQL Server]
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f58fb2055f4da93f882818bc78fe2d7cb2bdd39a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b4146d8b0011255f923a386b3dbcb38cf8b13c7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146658"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226958"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>建立 SQL Server Agent 主要作業
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中建立 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的主要作業。  
@@ -32,7 +32,7 @@ ms.locfileid: "36146658"
 ##  <a name="BeforeYouBegin"></a> 開始之前  
   
 ###  <a name="Restrictions"></a> 限制事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業的變更必須傳播至所有相關的目標伺服器。 因為目標伺服器最初並未下載作業，直到指定這些目標後才下載，所以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您先完成特定作業的所有作業步驟和作業排程，再指定任何目標伺服器。 否則，您必須執行 **sp_post_msx_operation** 預存程序或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]修改作業，手動要求目標伺服器重新下載已修改的作業。 如需詳細資訊，請參閱[sp_post_msx_operation &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)或[修改作業](modify-a-job.md)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 主要作業的變更必須傳播至所有相關的目標伺服器。 因為目標伺服器最初並未下載作業，直到指定這些目標後才下載，所以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 建議您先完成特定作業的所有作業步驟和作業排程，再指定任何目標伺服器。 否則，您必須執行 **sp_post_msx_operation** 預存程序或使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]修改作業，手動要求目標伺服器重新下載已修改的作業。 如需詳細資訊，請參閱 < [sp_update_job &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)或是[修改作業](modify-a-job.md)。  
   
 ###  <a name="Security"></a> 安全性  
   
@@ -59,17 +59,17 @@ ms.locfileid: "36146658"
   
 3.  以滑鼠右鍵按一下 [作業] 資料夾，然後選取 [新增作業]。  
   
-4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性和新的工作&#40;[一般] 頁面&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  在 **[新增作業]** 對話方塊的 **[一般]** 頁面中，修改作業的一般屬性。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業的屬性和新的工作&#40;[一般] 頁&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
-5.  在 **[步驟]** 頁面上，組織作業步驟。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;步驟 頁面&#41;](job-properties-new-job-steps-page.md)  
+5.  在 **[步驟]** 頁面上，組織作業步驟。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;步驟 頁面&#41;](job-properties-new-job-steps-page.md)  
   
-6.  在 **[排程]** 頁面上，組織作業的排程。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;排程 頁面&#41;](job-properties-new-job-schedules-page.md)  
+6.  在 **[排程]** 頁面上，組織作業的排程。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;排程 頁面&#41;](job-properties-new-job-schedules-page.md)  
   
-7.  在 **[警示]** 頁面上，組織作業的警示。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;警示 頁面&#41;](job-properties-new-job-alerts-page.md)  
+7.  在 **[警示]** 頁面上，組織作業的警示。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;警示頁面&#41;](job-properties-new-job-alerts-page.md)  
   
-8.  在 **[通知]** 頁面上，設定當作業完成時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;通知頁面&#41;](job-properties-new-job-notifications-page.md)。  
+8.  在 **[通知]** 頁面上，設定當作業完成時， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 要執行的動作。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;通知頁面&#41;](job-properties-new-job-notifications-page.md)。  
   
-9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面上的可用選項的詳細資訊，請參閱[作業屬性： 新工作&#40;目標 頁面中&#41;](job-properties-new-job-targets-page.md)。  
+9. 在 **[目標]** 頁面上，管理作業的目標伺服器。 如需有關此頁面可用之選項的詳細資訊，請參閱[作業屬性： 新的工作&#40;目標 頁面中&#41;](job-properties-new-job-targets-page.md)。  
   
 10. 完成後，請按一下 **[確定]**。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "36146658"
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
 
   

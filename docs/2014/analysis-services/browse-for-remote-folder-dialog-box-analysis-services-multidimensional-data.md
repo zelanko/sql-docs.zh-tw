@@ -1,5 +1,5 @@
 ---
-title: 瀏覽遠端資料夾對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 瀏覽遠端資料夾對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
 ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a5316d36dc38f41343c9f0dc3afa1638c68b1dbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bbc311b4c096f5f834141084f705fa8bdf50c3e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212068"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>瀏覽遠端資料夾對話方塊 (Analysis Services - 多維度資料)
   **[瀏覽遠端資料夾]** 對話方塊會顯示為 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體定義之可用記錄和資料的資料夾清單。 您可以選取列出的資料夾，或視需要指定不同的資料夾。 執行下列其中一個步驟，即可顯示 **[瀏覽遠端資料夾]** 對話方塊：  
@@ -45,6 +45,6 @@ ms.locfileid: "36037345"
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [處理與儲存位置&#40;資料分割精靈&#41;](processing-and-storage-locations-partition-wizard.md)   
  [資料分割&#40;還原資料庫對話方塊&#41; &#40;Analysis Services-多維度資料&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
- [遠端資料分割-進階設定對話方塊&#40;Analysis Services-多維度資料&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  
+ [遠端資料分割-進階設定 對話方塊中&#40;Analysis Services-多維度資料&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md)  
   
   

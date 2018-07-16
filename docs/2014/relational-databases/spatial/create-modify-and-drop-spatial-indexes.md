@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [SQL Server], creating
 - spatial indexes [SQL Server], dropping
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 188c001672c31b4fdf4b72490553b7f65ccf0cb2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 595a45a89413359861dc9298068622a076c693e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181627"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>建立、修改及卸除空間索引
-  空間索引可以更有效率地執行特定作業的資料行上`geometry`或`geography`資料型別 (*空間資料行*)。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  
+  空間索引可以更有效率地執行特定作業的資料行上`geometry`或是`geography`資料類型 (*空間資料行*)。 可以在空間資料行上指定一個以上的空間索引。 這對於類似在單一資料行上為不同鑲嵌式參數建立索引會很有用處。  
   
  建立空間索引有一些限制。 如需詳細資訊，請參閱本主題中的 [空間索引的限制](#restrictions) 。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36134910"
   
 7.  若要指定您要建立索引的空間資料行，請按一下 [加入]。  
   
-8.  在**從選取的資料行** *\<資料表名稱 >* 對話方塊中，選取類型的資料行`geometry`或`geography`選取對應的核取方塊。 任何其他的空間資料行就會變成無法編輯。 如果您想要選取不同的空間資料行，就必須先清除目前選取的資料行。 完成後，請按一下 **[確定]**。  
+8.  在 [**從選取的資料行** *\<資料表名稱 >* ] 對話方塊中，選取類型的資料行`geometry`或`geography`選取對應的核取方塊。 任何其他的空間資料行就會變成無法編輯。 如果您想要選取不同的空間資料行，就必須先清除目前選取的資料行。 完成後，請按一下 **[確定]**。  
   
 9. 在 [索引鍵資料行] 方格中確認您的資料行選取。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36134910"
   
 11. 在 [空間] 頁面上，指定您想要用於索引之空間屬性的值。  
   
-     在建立索引時`geometry`類型資料行，您必須指定 **(*`X-min`*，*`Y-min`*)** 和 **(*`X-max`*，*`Y-max`*)** 週框方塊座標。 上的索引`geography`類型資料行中的週框方塊欄位會變成唯讀之後您指定**地理方格**鑲嵌式配置，因為地理位置方格鑲嵌式配置不會使用週框方塊。  
+     在建立索引時`geometry`類型資料行，您必須指定 **(*`X-min`*，*`Y-min`*)** 和 **(*`X-max`*，*`Y-max`*)** 週框方塊座標。 上的索引`geography`類型資料行中的週框方塊欄位會變成唯讀之後您指定**地理方格**鑲嵌式配置，因為地理位置方格鑲嵌式不會使用週框方塊。  
   
      您可以選擇性地針對 [每一物件的資料格] 欄位及鑲嵌式配置的任何方格密度等級指定非預設值。 每一物件的資料格預設數目為 16 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) 或 8 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) 或更高，而預設方格密度是 [中] ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36134910"
   
      資料表會在 [資料表設計工具] 中開啟。  
   
-2.  選取`geometry`或`geography`索引資料行。  
+2.  選取 `geometry`或`geography`索引資料行。  
   
 3.  從 [資料表設計工具] 功能表中，按一下 [空間索引]。  
   

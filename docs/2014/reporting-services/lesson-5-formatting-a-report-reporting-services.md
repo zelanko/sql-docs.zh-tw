@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 caps.latest.revision: 16
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: db481a9a35cd55ecef08cf86802196d2a1c94b45
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 19e238919a00bf022cd924be7a66a4d990d8f7c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227085"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
   既然您已經將資料區域和某些欄位加入到銷售訂單報表，您可以格式化日期和貨幣欄位，以及資料行標頭。  
@@ -41,7 +41,7 @@ ms.locfileid: "36145312"
   
 2.  以滑鼠右鍵按一下含有 `[Date]` 欄位運算式的資料格，然後按一下 [文字方塊屬性]。  
   
-3.  按一下**數目**，然後在**類別**欄位中，選取`Date`。  
+3.  按一下 **數字**，然後在**分類**欄位中，選取`Date`。  
   
 4.  在 **[類型]** 方塊中，選取 **[January 31, 2000]**。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36145312"
   
 1.  按一下資料表，使資料行和資料列控點出現在資料表的上面和旁邊。  
   
-     ![設計，具有標頭資料列和詳細資料列的資料表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "設計中，資料表具有標頭資料列和詳細資料列")  
+     ![設計，具有標頭資料列和詳細資料列的資料表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "設計，資料表具有標頭資料列和詳細資料列")  
   
      沿著資料表頂端和側邊的灰色長條是資料行和資料列控點。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36145312"
  您已經成功格式化資料行標頭和日期以及貨幣值。 下一步，您會將群組和總計加入至報表。 請參閱[第 6 課：新增群組和總計 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [格式化數字和日期&#40;報表產生器和 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [格式化數字和日期&#40;報表產生器及 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

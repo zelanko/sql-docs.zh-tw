@@ -1,5 +1,5 @@
 ---
-title: 中的結果集執行 SQL 工作 |Microsoft 文件
+title: 中的結果集執行 SQL 工作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0be727ad9370a56de710c0528949398c12050299
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1ff4dd56ea104d32a2821bc826ad8919712aea1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037273"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217558"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>執行 SQL 工作中的結果集
   在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝中，結果集是否會傳回到執行 SQL 工作，端視工作所使用的 SQL 命令類型而定。 例如，SELECT 陳述式通常會傳回結果集，INSERT 陳述式則不會。  
@@ -59,18 +59,18 @@ ms.locfileid: "36037273"
   
  如果結果集類型為 **完整結果集** 或 **XML**，則必須使用 0 作為結果集名稱。  
   
- 當您將變數對應至結果集類型為 **Single row** 的結果集時，此變數須具有與結果集包含的資料行之資料類型相容的資料類型。 例如，包含資料類型為 `String` 之資料行的結果集不能對應至數值資料類型的變數。 當您將**TypeConversionMode**屬性`Allowed`，「 執行 SQL 」 工作會嘗試將轉換的輸出參數和查詢結果的資料類型變數的結果會指派。  
+ 當您將變數對應至結果集類型為 **Single row** 的結果集時，此變數須具有與結果集包含的資料行之資料類型相容的資料類型。 例如，包含資料類型為 `String` 之資料行的結果集不能對應至數值資料類型的變數。 當您設定**TypeConversionMode**屬性設`Allowed`、 「 執行 SQL 」 工作會嘗試將輸出參數和查詢結果的資料類型變數的結果會指派給。  
   
- XML 結果集只可對應至資料類型為 `String` 或 `Object` 的變數。 如果變數具有`String`資料類型，「 執行 SQL 」 工作會傳回字串，且 XML 來源可使用 XML 資料。 如果變數具有`Object`資料類型，「 執行 SQL 」 工作會傳回文件物件模型 (DOM) 物件。  
+ XML 結果集只可對應至資料類型為 `String` 或 `Object` 的變數。 如果變數具有`String`資料類型，「 執行 SQL 」 工作會傳回字串，且 XML 來源可取用 XML 資料。 如果變數具有`Object`資料類型，「 執行 SQL 」 工作會傳回 「 文件物件模型 (DOM) 物件。  
   
- A**完整結果集**必須對應至變數的`Object`資料型別。 傳回結果為資料列集物件。 您可以使用 Foreach 迴圈容器，將儲存在 Object 變數中的資料表資料列值，擷取到封裝變數中，然後使用指令碼工作，將儲存在封裝變數中的資料寫入檔案。 如需如何使用 Foreach 迴圈容器和指令碼工作執行此作業的示範，請參閱 msftisprodsamples.codeplex.com 上的 CodePlex 範例 [執行 SQL 參數及結果集](http://go.microsoft.com/fwlink/?LinkId=157863)(英文)。  
+ A**完整結果集**必須對應至的變數`Object`資料型別。 傳回結果為資料列集物件。 您可以使用 Foreach 迴圈容器，將儲存在 Object 變數中的資料表資料列值，擷取到封裝變數中，然後使用指令碼工作，將儲存在封裝變數中的資料寫入檔案。 如需如何使用 Foreach 迴圈容器和指令碼工作執行此作業的示範，請參閱 msftisprodsamples.codeplex.com 上的 CodePlex 範例 [執行 SQL 參數及結果集](http://go.microsoft.com/fwlink/?LinkId=157863)(英文)。  
   
  下表列出可對應至結果集之變數的資料類型。  
   
 |結果集類型|變數的資料類型|物件類型|  
 |---------------------|---------------------------|--------------------|  
 |單一資料列|與結果集之類型資料行相容的任何類型。|不適用|  
-|完整結果集|`Object`|如果工作使用原生連接管理員，包括 ADO、 OLE DB、 Excel 和 ODBC 連接管理員傳回的物件是 ADO `Recordset`。<br /><br /> 如果工作使用 managed 的連接管理員，例如[!INCLUDE[vstecado](../includes/vstecado-md.md)]連接管理員，則傳回的物件未`System.Data.DataSet`。<br /><br /> 您可以使用指令碼工作存取`System.Data.DataSet`物件，如下列範例所示。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
+|完整結果集|`Object`|如果工作使用原生連接管理員，包括 ADO、 OLE DB、 Excel 和 ODBC 連接管理員傳回的物件是 ADO `Recordset`。<br /><br /> 如果工作使用 managed 的連接管理員 中，例如[!INCLUDE[vstecado](../includes/vstecado-md.md)]連接管理員 中，則傳回的物件是`System.Data.DataSet`。<br /><br /> 您可以使用指令碼工作存取`System.Data.DataSet`物件，如下列範例所示。<br /><br /> `Dim dt As Data.DataTable` <br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet)` <br /> `dt = ds.Tables(0)`|  
 |XML|`String`|`String`|  
 |XML|`Object`|如果工作使用原生連接管理員，包括 ADO、 OLE DB、 Excel 和 ODBC 連接管理員傳回的物件是`MSXML6.IXMLDOMDocument`。<br /><br /> 如果工作使用 Managed 連接管理員 (例如 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連接管理員)，那麼傳回的物件是 `System.Xml.XmlDocument`。|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36037273"
   
  如需將結果集載入變數中的資訊，請參閱[在執行 SQL 工作中將結果集對應至變數](control-flow/execute-sql-task.md)。  
   
-##  <a name="Configure_result_sets"></a> 設定結果集執行 SQL 工作  
+##  <a name="Configure_result_sets"></a> 在 設定結果集執行 SQL 工作  
  如需有關可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師中設定之結果集屬性的詳細資訊，請按下列主題：  
   
 -   [執行 SQL 工作編輯器&#40;結果集頁面&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
@@ -94,7 +94,7 @@ ms.locfileid: "36037273"
 -   [設定工作或容器的屬性](../../2014/integration-services/set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="related-tasks"></a>相關工作  
- [結果集對應至變數，在執行 SQL 工作](control-flow/execute-sql-task.md)  
+ [在執行 SQL 工作中將結果集對應至變數](control-flow/execute-sql-task.md)  
   
 ## <a name="related-content"></a>相關內容  
   

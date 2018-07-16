@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], about database diagrams
 - database diagrams [SQL Server], designing
 - database diagrams [SQL Server], creating
 ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f49bf89391a0863a54cc57858cd5fb9c05fba90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035805"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244019"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>逐步解說：加入與變更資料庫圖表
   這個逐步解說將說明如何建立與修改資料庫圖表，以及透過資料庫圖表元件對資料庫進行變更。 您將看到如何將資料表加入至圖表、建立資料表之間的關聯性、建立資料行上的條件約束和索引，以及變更您查看每個資料表的資訊層級。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  為了完成這個逐步解說，您需要：  
   
 -   存取含有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例資料庫的 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
@@ -74,7 +74,7 @@ ms.locfileid: "36035805"
   
 1.  以滑鼠右鍵按一下現有資料表外側的 [圖表設計工具]，再選擇 [新增資料表]。  
   
-2.  在**選擇名稱**對話方塊中，按一下 **確定**接受預設名稱`Table1`。  
+2.  在 [**選擇名稱**] 對話方塊中，按一下 **[確定]** 接受預設名稱`Table1`。  
   
      隨即出現新的資料表方格，其中會有三個資料行：[資料行名稱]、[資料類型] 和 [允許 Null]。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36035805"
   
 5.  從 [檔案] 功能表中按一下 [儲存 Diagram1]。  
   
-6.  在**選擇名稱**對話方塊中，按一下 **確定**接受預設名稱`Diagram1`。  
+6.  在 [**選擇名稱**] 對話方塊中，按一下 **[確定]** 接受預設名稱`Diagram1`。  
   
 7.  [儲存] 對話方塊會顯示訊息，表示要將 `Table1` 儲存到資料庫。 按一下 **[是]**。  
   
@@ -214,9 +214,9 @@ ms.locfileid: "36035805"
  [自訂圖表中顯示的資訊量&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [設定資料庫圖表設計工具&#40;Visual Database Tools&#41;](set-up-database-diagram-designer-visual-database-tools.md)   
  [將資料表加入圖表&#40;Visual Database Tools&#41;](add-tables-to-diagrams-visual-database-tools.md)   
- [圖表上的資料表之間建立關聯性&#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
+ [在圖表上的資料表之間建立關聯性&#40;Visual Database Tools&#41;](create-relationships-between-tables-on-a-diagram-visual-database-tools.md)   
  [建立 XML 索引](../../relational-databases/xml/create-xml-indexes.md)   
- [複製資料庫圖表的影像到剪貼簿&#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
+ [將資料庫圖表的影像複製到剪貼簿 &#40;Visual Database Tools&#41;](copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)   
  [使用圖表配置 &#40;Visual Database Tools&#41;](work-with-diagram-layout-visual-database-tools.md)  
   
   

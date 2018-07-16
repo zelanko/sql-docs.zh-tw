@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
 caps.latest.revision: 60
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a34a6efad3223ec4d38133571a7c081364f28fea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a8a4c0fb1fe9128b40ee00e29c243ede617501f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133382"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224698"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表加入至報表 (Reporting Services)
   定義資料集之後，您就可以開始設計報表。 您可以將資料區域、文字方塊、影像和您要包含在報表中的其他項目拖放至設計介面來建立報表配置。  
@@ -33,7 +33,7 @@ ms.locfileid: "36133382"
     > [!NOTE]  
     >  [工具箱] 可能會顯示為 [報表資料] 窗格左側的索引標籤。 若要開啟 [工具箱]，請將指標移至 [工具箱] 索引標籤。如果看不到 [工具箱]，請按一下 [檢視] 功能表上的 [工具箱]。  
   
-2.  在**報表資料**] 窗格中，展開 [ **AdventureWorksDataset**來顯示欄位的資料集。  
+2.  在 **報表資料**窗格中，展開**AdventureWorksDataset**來顯示欄位的資料集。  
   
 3.  拖曳 [日期] 欄位從**報表資料**窗格，即可在資料表中的第一個資料行。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36133382"
   
 4.  拖曳 Order 欄位從**報表資料**窗格，即可在資料表中的第二個資料行。  
   
-5.  拖曳 [產品] 欄位從**報表資料**窗格，即可在資料表中的第三個資料行。  
+5.  拖曳 [Product] 欄位從**報表資料**窗格，即可在資料表中的第三個資料行。  
   
 6.  將 Qty 欄位拖曳到第三個資料行的右邊緣，直到出現垂直游標，而且滑鼠指標有一個加號 [+]。 放開滑鼠按鈕時，就會為 `[Qty]`建立第四個資料行。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36133382"
   
      下圖顯示已擴展這些欄位的資料表資料區域：Date、Order、Product、Qty 和 Line Total。  
   
-     ![設計，具有標頭資料列和詳細資料列的資料表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "設計中，資料表具有標頭資料列和詳細資料列")  
+     ![設計，具有標頭資料列和詳細資料列的資料表](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "設計，資料表具有標頭資料列和詳細資料列")  
   
 ## <a name="preview-your-report"></a>預覽報表  
  預覽報表讓您不必先將報表發行到報表伺服器，就可以檢視轉譯過的報表。 您可能想要時常在設計階段預覽您的報表。 此外，預覽報表也會針對設計和資料連接執行驗證，讓您能夠先更正錯誤和問題，然後再將報表發行至報表伺服器。  

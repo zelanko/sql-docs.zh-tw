@@ -1,5 +1,5 @@
 ---
-title: 運算式對話方塊 （報表產生器） |Microsoft 文件
+title: 運算式對話方塊 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10040"
 helpviewer_keywords:
 - expressions
 ms.assetid: e89c4d97-5d41-4b55-8695-79329edac15d
 caps.latest.revision: 16
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9625b461128b1aa9785edbe92b4defa47e85bc55
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 130d436ceb8080e6e7d70adc41196f3e76b07edb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244498"
 ---
 # <a name="expression-dialog-box-report-builder"></a>運算式對話方塊 (報表產生器)
-  使用**運算式**對話方塊撰寫[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]運算式的報表項目屬性。 您可以使用運算式來設定許多屬性，包含色彩、字型和框線等。 在執行階段，報表處理器會評估運算式並取代屬性值的結果。  
+  使用**運算式**對話方塊，即可撰寫[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]運算式的報表項目屬性。 您可以使用運算式來設定許多屬性，包含色彩、字型和框線等。 在執行階段，報表處理器會評估運算式並取代屬性值的結果。  
   
- [運算式] 對話方塊包含程式碼視窗、類別目錄樹狀結構、類別目錄項目、描述窗格和範例窗格。 **運算式**對話方塊會區分內容; 類別目錄項目和描述變更您正在使用的運算式類別目錄。 如需詳細資訊，請參閱[運算式範例&#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)，[運算式&#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  
+ [運算式] 對話方塊包含程式碼視窗、類別目錄樹狀結構、類別目錄項目、描述窗格和範例窗格。 **運算式**對話方塊會區分內容; 類別目錄項目和描述您正在使用的運算式類別目錄中的變更。 如需詳細資訊，請參閱 <<c0> [ 運算式範例&#40;報表產生器及 SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)，[運算式&#40;報表產生器及 SSRS&#41;</c0>](report-design/expressions-report-builder-and-ssrs.md)  
   
 ## <a name="expression-constructs"></a>運算式建構  
  運算式是以等號 (=) 開始，可以包含常數、常值、運算子，以及內建欄位、內建集合、內建函數、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 執行階段程式庫函數、[!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime 類別和自訂函數的參考。 下列清單描述可加入運算式的類別目錄和值。  
@@ -37,7 +37,7 @@ ms.locfileid: "36134111"
  為其定義運算式的屬性名稱。 您也可以在 [屬性] 窗格中依名稱設定這個屬性。  
   
  **常數**  
- 針對以常數為基礎的屬性，提供對此屬性有效之預先定義值的清單。 例如，以色彩為基礎的屬性會顯示有效的色彩名稱。 Boolean 資料類型的屬性，值為`True`和`False`。  
+ 針對以常數為基礎的屬性，提供對此屬性有效之預先定義值的清單。 例如，以色彩為基礎的屬性會顯示有效的色彩名稱。 對於是布林資料類型屬性，值為`True`和`False`。  
   
  並非所有支援運算式的項目都可設為常數。 如果屬性無法設為常數值，描述窗格會提供這項資訊。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36134111"
  **運算子**  
  顯示您可以包含在計算或字串操作中的運算子。 如需詳細資訊，請參閱[運算式中的運算子 &#40;報表產生器及 SSRS&#41;](report-design/operators-in-expressions-report-builder-and-ssrs.md)。  
   
- **一般函數**  
+ **常見的函式**  
  顯示一般函數，依類型分組。 當您在 [項目] 窗格中選取函數時，描述及範例就會顯示。  
   
  一般函數包含內建報表和彙總函式、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 執行階段程式庫函數，以及 <xref:System.Math> 和 <xref:System.Convert> 命名空間中的 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) 類別。 您也可以加入未出現在類別目錄清單中的 CLR 類別以及外部組件的參考。 如需詳細資訊，請參閱[報表設計師中運算式的自訂程式碼及組件參考 &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)。  
@@ -75,7 +75,7 @@ ms.locfileid: "36134111"
  輸入函數名稱且在後面加上左括號時，您會看到工具提示提供有關參數和函數傳回值的資訊。  
   
  **類別目錄**  
- 顯示運算式的類別目錄。 選擇類別目錄會為運算式的建立奠立內容，並會變更 [項目] 窗格中的有效值清單。 例如，針對文字方塊值的運算式，展開一般函數，然後選取彙總函式來顯示`Avg`， `Count`，和其他函數**項目**窗格。  
+ 顯示運算式的類別目錄。 選擇類別目錄會為運算式的建立奠立內容，並會變更 [項目] 窗格中的有效值清單。 比方說，針對文字方塊值的運算式，依序展開 一般函數，然後選取要顯示的彙總函式`Avg`， `Count`，和在其他函式**項目**窗格。  
   
  **項目**  
  顯示所選取類別目錄的有效值清單。 請在項目上按兩下，以在程式碼視窗中的插入點加入這個項目的運算式文字。  
@@ -86,13 +86,13 @@ ms.locfileid: "36134111"
 ## <a name="see-also"></a>另請參閱  
  [運算式 &#40;報表產生器及 SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [設定報表項目的格式 &#40;報表產生器及 SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [格式化數字和日期&#40;報表產生器和 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [格式化數字和日期&#40;報表產生器及 SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [參數集合參考 &#40;報表產生器及 SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [群組運算式範例 &#40;報表產生器及 SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [篩選方程式範例&#40;報表產生器和 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [資料集欄位集合參考&#40;報表產生器和 SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
- [彙總函式參考&#40;報表產生器和 SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [篩選方程式範例&#40;報表產生器及 SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [資料集欄位集合參考&#40;報表產生器及 SSRS&#41;](report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)   
+ [彙總函式參考&#40;報表產生器及 SSRS&#41;](report-design/report-builder-functions-aggregate-functions-reference.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [選取色彩對話方塊&#40;報表產生器和 SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
+ [選取 [色彩] 對話方塊&#40;報表產生器及 SSRS&#41;](../../2014/reporting-services/select-color-dialog-box-report-builder-and-ssrs.md)  
   
   

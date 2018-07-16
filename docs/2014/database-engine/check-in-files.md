@@ -1,5 +1,5 @@
 ---
-title: 將檔案簽入 |Microsoft 文件
+title: 簽入檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckInDialog
 helpviewer_keywords:
 - checking in files
 ms.assetid: 0657a387-8411-4406-bef9-d262a5bfa269
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cf955c5a2101ba6ffa582601cd587b27a63c1621
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b657d02a06d76645fce350e1f6ba82523e69ff37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222648"
 ---
 # <a name="check-in-files"></a>簽入檔案
   若要將您修改過的原始檔控制檔案提供給其他使用者，您必須將這些檔案簽入原始檔控制中。 當您簽入檔案時，您簽入的版本會寫入原始檔控制提供者中，且會成為檔案的最新版本。  
@@ -34,7 +34,7 @@ ms.locfileid: "36145917"
   
 1.  在 [方案總管] 中，以滑鼠右鍵按一下要簽入的檔案，然後按一下**簽入**。  
   
-2.  如果**簽入**對話方塊出現時，請選取適當的選項，然後按一下 **確定**。  
+2.  如果**簽入** 對話方塊出現時，請選取適當的選項，然後按一下**確定**。  
   
      **簽入**  
      簽入所有選取的項目。  

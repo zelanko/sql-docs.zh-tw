@@ -1,5 +1,5 @@
 ---
-title: Initialize a Transactional Subscription 從備份 （複寫 TRANSACT-SQL 程式設計） |Microsoft 文件
+title: Initialize a Transactional Subscription 從備份 （複寫 TRANSACT-SQL 程式設計） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - backups [SQL Server replication], transactional replication
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1751d98983622a4968f28fd8a84cfa4145065c48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 231e2d8eb7019998cb497980d8ec1bba5bc5e91e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135360"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37168666"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>從備份初始化交易式訂閱 (複寫 Transact-SQL 程式設計)
   雖然通常會使用快照集初始化交易式發行集的訂閱，但是可以使用複寫預存程序從備份初始化訂閱。 如需詳細資訊，請參閱 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
@@ -38,9 +38,9 @@ ms.locfileid: "36135360"
   
     -   如果此值是 **1**，表示發行集支援此功能。  
   
-    -   如果這個值是 **0**，請在發行集資料庫的發行者端執行 [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 指定的值為**allow_initialize_from_backup**如**@property**而值為`true`如**@value**。  
+    -   如果這個值是 **0**，請在發行集資料庫的發行者端執行 [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)。 指定的值為**allow_initialize_from_backup** for **@property**值，並針對`true`如**@value**。  
   
-2.  如果是新的發行集，請在發行集資料庫的發行者端執行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定的值為`true`如**allow_initialize_from_backup**。 如需詳細資訊，請參閱 [Create a Publication](publish/create-a-publication.md)。  
+2.  如果是新的發行集，請在發行集資料庫的發行者端執行 [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)。 指定的值為`true`for **allow_initialize_from_backup**。 如需詳細資訊，請參閱 [Create a Publication](publish/create-a-publication.md)。  
   
     > [!WARNING]  
     >  為了避免遺漏訂閱者資料，當您使用 **sp_addpublication** 搭配 `@allow_initialize_from_backup = N'true'`時，請一律使用 `@immediate_sync = N'true'`。  

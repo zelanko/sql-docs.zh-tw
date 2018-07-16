@@ -1,5 +1,5 @@
 ---
-title: 交叉驗證 (Analysis Services-資料採礦) |Microsoft 文件
+title: 交叉驗證 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
 - cross-validation [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 86d7c0aeec81133a2bfdc8e5d30bd962a5c7cce6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1ff61a92995d65e66a1115b70681585eb643a7ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236008"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>交叉驗證 (Analysis Services - 資料採礦)
   「交叉驗證」是一項標準分析工具，而且它是協助您開發並微調資料採礦模型的重要功能。 在您建立了採礦結構和相關的採礦模型之後，就可以使用交叉驗證來確定模型的有效性。  交叉驗證具有下列應用方式：  
@@ -86,7 +86,7 @@ ms.locfileid: "36036015"
 ### <a name="choosing-models-and-columns-to-validate"></a>選擇要驗證的模型和資料行  
  當您使用資料採礦設計師中的 [交叉驗證] 索引標籤時，必須先從清單選取可預測的資料行。 一般而言，採礦結構可以支援許多採礦模型，但並不是所有的採礦模型都使用同一個可預測資料行。 當您執行交叉驗證時，只有使用同一個可預測資料行的模型可包含在報表中。  
   
- 若要選擇可預測屬性，請按一下 [目標屬性]，然後從清單選取資料行。 如果目標屬性是巢狀資料行或巢狀資料表中的資料行，您必須輸入的巢狀資料行使用的格式名稱\<巢狀資料表名稱 > (key)。\<巢狀資料行 >。 如果從巢狀資料表所使用的唯一資料行是索引鍵資料行，您可以使用\<巢狀資料表名稱 > (key)。  
+ 若要選擇可預測屬性，請按一下 [目標屬性]，然後從清單選取資料行。 如果目標屬性是巢狀資料行或巢狀資料表中的資料行，您必須輸入的巢狀使用格式的資料行名稱\<巢狀資料表名稱 > （索引鍵）。\<巢狀資料行 >。 如果從巢狀資料表所使用的唯一資料行是索引鍵資料行，您可以使用\<巢狀資料表名稱 > （索引鍵）。  
   
  在您選取可預測屬性之後， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會自動測試所有使用同一個可預測屬性的模型。 如果目標屬性包含離散的值，且您有想要預測的特定值，則可以在選取可預測資料行之後，選擇性地輸入目標狀態。  
   

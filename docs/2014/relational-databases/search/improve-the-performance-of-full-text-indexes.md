@@ -5,10 +5,9 @@ ms.date: 04/26/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [SQL Server], full-text search
 - full-text queries [SQL Server], performance
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 caps.latest.revision: 66
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fb10d58c2197f422fe59ff2fa9a165bca5f8bf62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e1f24b14396b5277192ff0a7f7e814e66e40fdc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212768"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
   全文檢索索引與全文檢索查詢的效能會受硬體資源的影響，例如記憶體、磁碟速度、CPU 速度與電腦架構。  
@@ -62,19 +61,19 @@ ms.locfileid: "36144927"
 ##  <a name="tuning"></a> 微調全文檢索索引的效能  
  若要將全文檢索索引的效能發揮至極限，請實作下列最佳作法：  
   
--   若要使用所有處理器或核心來最大值，設定[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' 要在系統上的 Cpu 數目。 此組態選項的相關資訊，請參閱 [全文檢索搜耙最大範圍伺服器組態選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
+-   若要使用所有處理器或核心，最大值，將[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' 系統上的 Cpu 數目。 此組態選項的相關資訊，請參閱 [全文檢索搜耙最大範圍伺服器組態選項](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)。  
   
 -   請確定基底資料表具有叢集索引。 對叢集索引的第一個資料行使用整數資料類型。 避免在叢集索引的第一個資料行使用 GUID。 叢集索引的多重範圍母體擴展可能會產生最高的母體擴展速度。 我們建議當做全文檢索索引鍵的資料行應該是整數資料類型。  
   
 -   請使用 [UPDATE STATISTICS](/sql/t-sql/statements/update-statistics-transact-sql) 陳述式來更新基底資料表的統計資料。 更重要的是，請更新叢集索引上的統計資料或完整母體擴展的全文檢索索引鍵。 這有助於多重範圍母體擴展在資料表上產生良好的資料分割。  
   
--   建立次要索引`timestamp`資料行，如果您想要改善累加母體擴展的效能。  
+-   在 建立次要索引`timestamp`資料行，如果您想要改善累加母體擴展的效能。  
   
 -   在大型的多重 CPU 電腦上執行完整母體擴展之前，我們建議您設定 `max server memory` 值來暫時限制緩衝集區的大小，以便保留足夠的記憶體供 fdhost.exe 處理序和作業系統使用。 如需詳細資訊，請參閱本主題稍後的＜估計篩選背景程式主機處理序 (fdhost.exe) 的記憶體需求＞一節。  
   
   
   
-##  <a name="full"></a> 疑難排解完整母體擴展的效能  
+##  <a name="full"></a> 疑難排解完整母體擴展的效能問題  
  若要診斷效能問題，請查看全文檢索搜耙記錄檔。 如需搜耙記錄檔的相關資訊，請參閱[擴展全文檢索索引](../indexes/indexes.md)。  
   
  如果您對於完整母體擴展的效能不滿意，建議您遵循下列疑難排解順序進行。  
@@ -128,18 +127,18 @@ ms.locfileid: "36144927"
 -   *M*，這是最佳`max server memory`設定。  
   
 > [!IMPORTANT]  
->  如需公式的基本資訊，請參閱<sup>1</sup>， <sup>2</sup>，和<sup>3</sup>底下。  
+>  如需公式的基本資訊，請參閱<sup>1</sup>， <sup>2</sup>，並<sup>3</sup>底下。  
   
-|平台|估計 fdhost.exe 記憶體需求 （mb） —*F*<sup>1</sup>|計算最大伺服器記憶體的公式 —*M*<sup>2</sup>|  
+|平台|估計 fdhost.exe 記憶體需求，以 mb 為單位，*F*<sup>1</sup>|計算最大伺服器記憶體的公式 —*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
 |x86|*F* **=** *Number of crawl ranges* **\*** 50|*M* **= 最小值 (** *T* **，** 2000年 **) –*`F`*–** 500|  
 |x64|*F* **=** *Number of crawl ranges* **\*** 10 **\*** 8|*M* **=** *T* **–** *F* **–** 500|  
   
- <sup>1</sup>如果多個完整母體擴展正在進行中，計算 fdhost.exe 記憶體需求，每個個別為*F1*， *F2*，依此類推。 然後將 *M* 計算為 *T***–** sigma **(***F*i**)**。  
+ <sup>1</sup>多個完整母體擴展正在進行中，如果計算的 fdhost.exe 記憶體需求，每個分別為*F1*， *F2*，依此類推。 然後將 *M* 計算為 *T***–** sigma **(***F*i**)**。  
   
- <sup>2</sup> 500 MB 是系統中其他處理程序所需的記憶體的估計。 如果系統正在進行其他工作，請據此增加這個值。  
+ <sup>2</sup> 500 MB 是系統中其他處理序所需記憶體的估計。 如果系統正在進行其他工作，請據此增加這個值。  
   
- <sup>3</sup> 。*ism_size*假設為 8 MB，適用於 x64 平台。  
+ <sup>3</sup> 。*ism_size*假設為 8 MB x64 平台。  
   
  **範例： 估計 fdhost.exe 記憶體需求**  
   
@@ -153,7 +152,7 @@ ms.locfileid: "36144927"
   
  **範例： 設定 max server memory**  
   
- 這個範例會使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)和[重新設定](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式，以設定`max server memory`計算出的值來*M*在上述範例, `7052`:  
+ 這個範例會使用[sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)並[重新設定](/sql/t-sql/language-elements/reconfigure-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式，將`max server memory`計算的值*M*在上述範例, `7052`:  
   
 ```  
 USE master;  
@@ -202,12 +201,12 @@ GO
   
   
   
-##  <a name="filters"></a> 疑難排解因篩選而索引的效能變慢  
+##  <a name="filters"></a> 疑難排解因篩選而編製索引的效能變慢  
  擴展全文檢索索引時，全文檢索引擎會使用兩種篩選：多執行緒與單一執行緒。 某些文件 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word 文件) 是使用多執行緒篩選進行篩選。 其他文件 (例如 Adobe Acrobat Portable Document Format (PDF) 文件) 則是使用單一執行緒篩選進行篩選。  
   
  基於安全性理由，篩選是由篩選背景程式主機處理序載入。 伺服器執行個體會針對所有多執行緒篩選使用多執行緒處理序，而針對所有單一執行緒篩選使用單一執行緒處理序。 當使用多執行緒篩選的文件包含使用單一執行緒篩選的內嵌文件時，全文檢索引擎就會針對內嵌文件啟動單一執行緒處理序。 例如，如果遇到包含 PDF 文件的 Word 文件，全文檢索引擎就會針對 Word 內容啟動多執行緒處理序，而針對 PDF 內容啟動單一執行緒處理序。 不過，單一執行緒篩選在此環境下可能無法正常運作，而且可能會使篩選處理序不穩定。 在經常會有這類內嵌的特定情況下，不穩定可能會導致篩選處理序損毀。 發生這個狀況時，全文檢索引擎就會將任何失敗的文件 (例如，包含內嵌 PDF 內容的 Word 文件) 重新路由傳送至單一執行緒篩選處理序。 如果經常發生重新路由傳送的狀況，則會導致全文檢索索引處理序的效能降低。  
   
- 若要解決這個問題，請將容器文件 (在此範例中是 Word) 的篩選標示成單一執行緒篩選。 您可以變更篩選登錄值，以便將給定的篩選標示成單一執行緒篩選。 若要將篩選標示成單一執行緒篩選，您必須設定**ThreadingModel**之篩選條件的登錄值`Apartment Threaded`。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
+ 若要解決這個問題，請將容器文件 (在此範例中是 Word) 的篩選標示成單一執行緒篩選。 您可以變更篩選登錄值，以便將給定的篩選標示成單一執行緒篩選。 若要將篩選標示成單一執行緒篩選，您必須設定**ThreadingModel**登錄值，篩選出`Apartment Threaded`。 如需有關單一執行緒 Apartment 的詳細資訊，請參閱 [Understanding and Using COM Threading Models](http://go.microsoft.com/fwlink/?LinkId=209159)(了解與使用 COM 執行緒模型) 技術白皮書。  
   
   
   

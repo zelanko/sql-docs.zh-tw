@@ -1,5 +1,5 @@
 ---
-title: 彙總轉換編輯器 （彙總索引標籤） |Microsoft 文件
+title: 彙總轉換編輯器 （彙總索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.aggregations.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 caps.latest.revision: 30
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4aba29b60491e5f16bf262f2ae7fc5616c827ecd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4383522d6dd3f829222b0edf119e53bfd298ac43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146584"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221848"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>彙總轉換編輯器 (彙總索引標籤)
   使用 [彙總轉換編輯器] 對話方塊的 [彙總] 索引標籤，即可指定彙總的資料行與彙總屬性。 您可以套用多個彙總。 此轉換不會產生錯誤輸出。  
@@ -48,7 +48,7 @@ ms.locfileid: "36146584"
  **索引鍵小數位數**  
  在 [進階] 顯示中，選擇性地指定彙總可以寫入的大約索引鍵數目。 根據預設，此選項的值為 **[未指定]**。 如果 [索引鍵小數位數] 和 [索引鍵] 屬性都有設定，會優先使用 [索引鍵]。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 [索引鍵小數位數] 屬性。|  
 |低|彙總可寫入大約 500,000 個索引鍵。|  
@@ -84,17 +84,17 @@ ms.locfileid: "36146584"
  如果您選擇 [群組依據]，請使用核取方塊來控制轉換執行比較的方式。 如需字串比較選項的資訊，請參閱[比較字串資料](data-flow/comparing-string-data.md)。  
   
  **Count Distinct Scale**  
- 可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果兩個`CountDistinctScale`和**CountDistinctKeys**都有指定， **CountDistinctKeys**優先。  
+ 可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果兩個`CountDistinctScale`並**CountDistinctKeys**指定，則**CountDistinctKeys**會優先使用。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|[未指定]|`CountDistinctScale`屬性不使用。|  
+|[未指定]|`CountDistinctScale`不使用屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  
 |中|彙總可寫入大約 5,000,000 個相異值。|  
 |高|彙總可寫入超過 25,000,000 個相異值。|  
   
  **Count Distinct Keys**  
- 可選擇性地指定彙總可寫入之相異值的確實數目。 如果兩個`CountDistinctScale`和**CountDistinctKeys**都有指定， **CountDistinctKeys**優先。  
+ 可選擇性地指定彙總可寫入之相異值的確實數目。 如果兩個`CountDistinctScale`並**CountDistinctKeys**指定，則**CountDistinctKeys**會優先使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   

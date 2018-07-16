@@ -1,5 +1,5 @@
 ---
-title: 維度翻譯 |Microsoft 文件
+title: 維度翻譯 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - translations [Analysis Services], dimensions
 ms.assetid: 38fc1e05-2ac9-4816-b52b-dfd19c3a43a2
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c1ac374c71c4e6a7d2be081f5d9d607d28b3424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ad366e146a52eacbad63e5fb3eac71418fd5d34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243448"
 ---
 # <a name="dimension-translations"></a>維度翻譯
   翻譯是一種簡單的機制，用來將顯示的標籤和標題從某個語言變成另一個語言。 每一個翻譯都會定義成一組值：具有翻譯文字的字串以及具有語言識別碼的數字。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的所有物件都可使用翻譯。 維度也可以將屬性值翻譯。 用戶端應用程式負責尋找使用者已定義的語言設定，並將所有標題和標籤切換成以該語言顯示。 物件可以有您想要的任何翻譯數目。  
   
  簡單的 <xref:Microsoft.AnalysisServices.Translation> 物件是由語言識別碼和翻譯的標題所組成。 語言識別碼是具有語言識別碼的 `Integer`。 翻譯的標題則是翻譯的文字。  
   
- 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度翻譯就的維度，名稱名稱的特定語言表示法[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件或其中一個成員，例如標題、 成員或階層的層級。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也支援 cube 物件的翻譯。  
+ 在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度翻譯就是語言特定名稱的表示法的維度，名稱[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]物件或其中一個成員，例如標題、 成員或階層的層級。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也支援 cube 物件的翻譯。  
   
  翻譯會針對可支援多種語言的用戶端應用程式，提供伺服器支援。 通常，檢視 Cube 及其維度的使用者來自許多不同國家 (地區)。 可將 Cube 及其維度的各種元素翻譯成不同語言則十分有用，如此這些使用者就可檢視和了解 Cube。 例如，法國的商務使用者使用法文地區設定的工作站存取 Cube 時，就可用法文查看物件屬性值。 而德國的商務使用者使用德文地區設定的工作站存取相同 Cube 時，就可用德文查看相同的物件屬性值。  
   

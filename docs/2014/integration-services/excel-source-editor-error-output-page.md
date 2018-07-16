@@ -1,5 +1,5 @@
 ---
-title: Excel 來源編輯器 （錯誤輸出頁面） |Microsoft 文件
+title: Excel 來源編輯器 （錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
 caps.latest.revision: 18
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 883f2eb28317e0aa4b96f8cd1d76299a2133f1fe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51b10976652d366f1c9016e3e9fb51c47735695b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180355"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Excel 來源編輯器 (錯誤輸出頁面)
   使用 [Excel 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -56,7 +56,7 @@ ms.locfileid: "36135654"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 來源編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Excel 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [Excel 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Excel 連線管理員](connection-manager/excel-connection-manager.md)   
  [使用 Foreach 迴圈容器來執行 Excel 檔案和資料表迴圈](control-flow/foreach-loop-container.md)  

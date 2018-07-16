@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], Oracle databases
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 caps.latest.revision: 38
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b989637b5c16d57aaf6d33fc033229fd08028dc7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2bd46103f4810564317c5072be78b297150c1f17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190055"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>從 Oracle 資料庫建立發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中從 Oracle 資料庫建立發行集。  
@@ -118,7 +118,7 @@ ms.locfileid: "36131945"
   
 2.  如果遠端散發者不存在，請設定遠端散發者。 如需詳細資訊，請參閱 [Configure Publishing and Distribution](../configure-publishing-and-distribution.md)。  
   
-3.  在 Oracle 發行者將使用的遠端散發者端，執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)。 指定的 Oracle 資料庫執行個體的 Transparent Network Substrate (TNS) 名稱**@publisher**以及值`ORACLE`或`ORACLE GATEWAY`如**@publisher_type**。 `Specify` 指定當從 Oracle 發行者連接到遠端 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者時所使用的安全性模式，如下列其中一項：  
+3.  在 Oracle 發行者將使用的遠端散發者端，執行 [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)。 指定 Oracle 資料庫執行個體的 Transparent Network Substrate (TNS) 名稱**@publisher**值，並針對`ORACLE`或是`ORACLE GATEWAY`如**@publisher_type**。 `Specify` 指定當從 Oracle 發行者連接到遠端 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者時所使用的安全性模式，如下列其中一項：  
   
     -   若要使用預設值 Oracle 標準驗證，請將 **@security_mode** 指定 **@security_mode**的值、將 **@login**指定為組態設定期間在 Oracle 發行者上建立之複寫管理使用者結構描述的登入，並將 **@password**中從 Oracle 資料庫建立發行集。  
   

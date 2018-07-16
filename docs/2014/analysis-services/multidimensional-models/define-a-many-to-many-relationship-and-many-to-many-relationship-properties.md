@@ -1,5 +1,5 @@
 ---
-title: 定義多對多關聯性及多對多關聯性屬性 |Microsoft 文件
+title: 定義多對多關聯性及多對多關聯性屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - many-to-many relationships [Analysis Services]
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: db0d630f6efa2ed3499d6e42d7ebe8be5945700e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5a9e14fc0da918438c6284870d0612185231c22
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173571"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>定義多對多關聯性及多對多關聯性屬性
   本主題說明 Analysis Services 中的多對多維度，包括何時使用這些維度以及如何建立這些維度。  
@@ -47,11 +47,11 @@ ms.locfileid: "36144829"
   
  就視覺上而言，Cube 圖表中不會指示多對多維度關聯性。 請改用 [維度使用方式] 索引標籤來快速識別模型中的任何多對多關聯性。 以下圖示會指示多對多關聯性。  
   
- ![維度使用方式中的多對多圖示](../media/ssas-m2m-icondimusage.png "多對多維度使用方式中的圖示")  
+ ![在 維度使用方式的多對多圖示](../media/ssas-m2m-icondimusage.png "多對多維度使用方式中的圖示")  
   
  請按一下此按鈕來開啟 [定義關聯性] 對話方塊，以確認關聯性類型為多對多並且檢視關聯性中會使用哪一個中繼量值群組。  
   
- ![定義關聯性中維度使用方式 按鈕](../media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
+ ![定義維度使用方式中的關聯性 按鈕](../media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
   
  在後續的章節中，您將會學習如何設定多對多維度及測試模型的行為。 如果您想要先檢閱其他資訊或是先嘗試教學課程，請參閱本文結尾的 **深入了解** 。  
   
@@ -93,17 +93,17 @@ ms.locfileid: "36144829"
   
      針對屬性選取全部的值。  
   
-     ![新維度中的屬性清單](../media/ssas-m2m-dimsalesreason.PNG "新維度中的屬性清單")  
+     ![在 新維度的屬性清單](../media/ssas-m2m-dimsalesreason.PNG "新維度中的屬性清單")  
   
 3.  根據現有的資料表 [事實網際網路銷售] 建立第二個維度。 雖然這是事實資料表，但是它包含了銷售訂單資訊。 我們將會使用它來建立「銷售訂單」維度。  
   
 4.  在 [指定來源資訊] 中，您將會看到一則警告指出必須指定名稱資料行。 選擇 **SalesOrderNumber** 作為名稱。  
   
-     ![顯示 [名稱] 欄的銷售訂單維度](../media/ssas-m2m-dimsalesordersource.PNG "顯示 [名稱] 欄的銷售訂單維度")  
+     ![顯示名稱 資料行的銷售訂單維度](../media/ssas-m2m-dimsalesordersource.PNG "顯示名稱 資料行的銷售訂單維度")  
   
 5.  在精靈的下一頁選擇屬性。 在此範例中，您可以只選取 **SalesOrderNumber**。  
   
-     ![銷售訂單維度顯示屬性清單](../media/ssas-m2m-dimsalesorderattrib.PNG "銷售訂單維度的顯示屬性清單")  
+     ![銷售訂單維度顯示屬性清單](../media/ssas-m2m-dimsalesorderattrib.PNG "銷售訂單維度顯示屬性清單")  
   
 6.  將維度重新命名為 **維度銷售訂單**，好讓您擁有一致的維度命名慣例。  
   
@@ -129,13 +129,13 @@ ms.locfileid: "36144829"
   
 1.  在 Cube 設計師中，按一下 [維度使用方式] 索引標籤。請注意，[維度銷售原因] 和 [事實網際網路銷售] 之間已經有多對多關聯性。 記得以下圖示表示多對多關聯性。  
   
-     ![維度使用方式中的多對多圖示](../media/ssas-m2m-icondimusage.png "多對多維度使用方式中的圖示")  
+     ![在 維度使用方式的多對多圖示](../media/ssas-m2m-icondimusage.png "多對多維度使用方式中的圖示")  
   
 2.  按一下 [維度銷售原因] 和 [事實網際網路銷售] 之間的交集資料格，然後按一下此按鈕來開啟 [定義關聯性] 對話方塊。  
   
      您可以看到這個對話方塊是用來指定多對多關聯性。 如果您改為新增具有一般關聯性的維度，您會使用這個對話方塊將它變更為多對多關聯性。  
   
-     ![定義關聯性中維度使用方式 按鈕](../media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
+     ![定義維度使用方式中的關聯性 按鈕](../media/ssas-m2m-btndimusage.png "維度使用方式中的 [定義關聯性] 按鈕")  
   
 3.  將專案部署到 Analysis Services 多維度執行個體。 在下一個步驟，您將會瀏覽 Excel 中的 Cube 來驗證其行為。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36144829"
   
      在往下捲動的過程中，您可以發現訂單號碼 **SO5382**的銷售量和銷售原因。 這個特別訂單的總計為 **539.99**，而歸因於此訂單的購買原因包括促銷、其他和價格。  
   
-     ![Excel 工作表顯示多對多彙總](../media/ssas-m2m-excel.png "Excel 工作表顯示多對多彙總")  
+     ![顯示多對多彙總的 Excel 工作表](../media/ssas-m2m-excel.png "顯示多對多彙總的 Excel 工作表")  
   
      請注意，已經為訂單正確算出銷售量，整筆訂單為 **539.99** 。 雖然每個原因都指出 **539.99** ，但是該值並不是所有三個原因的總和，因而錯誤地誇大了總計。  
   

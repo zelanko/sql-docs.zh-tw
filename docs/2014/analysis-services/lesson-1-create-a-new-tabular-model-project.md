@@ -1,5 +1,5 @@
 ---
-title: 第 1 課： 建立新的表格式模型專案 |Microsoft 文件
+title: 第 1 課： 建立新的表格式模型專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 6a5f5c938289963373d09891f20c3a87495a33a1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ffb0804ab6edd3afbbf3a3e618ca7c417744b21
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226628"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>第 1 課：建立新的表格式模型專案
   在這一課，您將在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中建立新的空白表格式模型專案。 建立新專案之後，您就可以使用 [資料表匯入精靈] 開始加入資料。 除了建立新專案之外，這一課還包括 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中表格式模型撰寫環境的簡介。  
   
- 若要深入了解不同類型的表格式模型專案，請參閱[表格式模型專案 &#40;SSAS 表格式&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)。 若要深入了解表格式模型撰寫環境，請參閱[表格式模型設計師&#40;SSAS 表格式&#41;](tabular-model-designer-ssas-tabular.md)。  
+ 若要深入了解不同類型的表格式模型專案，請參閱[表格式模型專案 &#40;SSAS 表格式&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)。 若要深入了解表格式模型撰寫環境，請參閱[表格式模型設計工具&#40;SSAS 表格式&#41;](tabular-model-designer-ssas-tabular.md)。  
   
  完成本課程的估計時間： **10 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型撰寫教學課程的第一課。 若要完成本課，您必須在 SQL Server 執行個體上安裝 AdventureWorksDW 資料庫。 如需詳細資訊，請參閱[表格式模型化 &#40;Adventure Works 教學課程&#41;](tabular-modeling-adventure-works-tutorial.md)。  
   
 ## <a name="create-a-new-tabular-model-project"></a>建立新的表格式模型專案  
@@ -37,9 +37,9 @@ ms.locfileid: "36132311"
   
 1.  在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]的 **[檔案]** 功能表上，按一下 **[新增]**，然後再按一下 **[專案]**。  
   
-2.  在**新專案**對話方塊的 **已安裝的範本**，按一下  **Business Intelligence**，然後按一下  **Analysis Services**，和然後按一下  **Analysis Services 表格式專案**。  
+2.  在 **新的專案**對話方塊的 **已安裝的範本**，按一下  **Business Intelligence**，然後按一下  **Analysis Services**，和然後按一下**Analysis Services 表格式專案**。  
   
-3.  在**名稱**，型別`AW Internet Sales Tabular Model`，然後指定專案檔案的位置。  
+3.  在 **名稱**，型別`AW Internet Sales Tabular Model`，然後指定專案檔的位置。  
   
      根據預設，[方案名稱] 將與專案名稱相同，不過您可以輸入不同的方案名稱。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "36132311"
 ## <a name="understanding-the-sql-server-data-tools-tabular-model-authoring-environment"></a>了解 SQL Server 資料工具表格式模型撰寫環境  
  現在您已建立新的表格式模型專案，那麼就讓我們花點時間了解 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] (Visual Studio 2010 或更新版本) 中的表格式模型撰寫環境。  
   
- 建立專案之後，該專案會在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中開啟。 模型設計師會顯示空白模型，並選取 **方案總管** 視窗中的 **Model.bim** 檔。 當您加入資料時，資料表和資料行將出現在設計師中。 如果您未看見設計師 （[Model.bim] 索引標籤的空視窗），在**方案總管] 中**下`AW Internet Sales Tabular Model`，按兩下 [ **Model.bim**檔案。  
+ 建立專案之後，該專案會在 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 中開啟。 模型設計師會顯示空白模型，並選取 **方案總管** 視窗中的 **Model.bim** 檔。 當您加入資料時，資料表和資料行將出現在設計師中。 如果您未看見設計師 （含有 [Model.bim] 索引標籤的空視窗），在**方案總管**下方`AW Internet Sales Tabular Model`，按兩下**Model.bim**檔案。  
   
- 您可以在 [屬性] 視窗中檢視基本專案屬性。 在**方案總管] 中**，按一下 [ `AW Internet Sales Tabular Model`。 請注意，您會在 [屬性] 視窗的 [專案檔] 中看見 **AW Internet Sales Tabular Model.smproj**。 這是專案檔的名稱，[專案資料夾] 中則會顯示專案檔的位置。  
+ 您可以在 [屬性] 視窗中檢視基本專案屬性。 在 **方案總管**，按一下  `AW Internet Sales Tabular Model`。 請注意，您會在 [屬性] 視窗的 [專案檔] 中看見 **AW Internet Sales Tabular Model.smproj**。 這是專案檔的名稱，[專案資料夾] 中則會顯示專案檔的位置。  
   
- 在**方案總管 中**，以滑鼠右鍵按一下`AW Internet Sales Tabular Model`專案，然後再按一下**屬性**。 [AW Internet Sales Tabular Model 屬性頁] 對話方塊隨即出現。 這些是進階專案屬性。 稍後您將在準備好部署模型時，設定其中部分屬性。  
+ 在 **方案總管**，以滑鼠右鍵按一下`AW Internet Sales Tabular Model`專案，然後再按一下**屬性**。 [AW Internet Sales Tabular Model 屬性頁] 對話方塊隨即出現。 這些是進階專案屬性。 稍後您將在準備好部署模型時，設定其中部分屬性。  
   
  現在，讓我們來看看模型屬性。 在**方案總管**中，按一下**Model.bim**。 現在您會在 [屬性] 視窗中看見模型屬性，其中最重要的屬性是 [DirectQuery 模式] 屬性。 此屬性指定模型是以 In-Memory 模式 (關閉) 或是 DirectQuery 模式 (開啟) 部署。 在本教學課程中，您將撰寫及部署記憶體中模式的模型。  
   

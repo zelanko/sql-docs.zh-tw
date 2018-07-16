@@ -1,5 +1,5 @@
 ---
-title: Microsoft 類神經網路演算法 |Microsoft 文件
+title: Microsoft 類神經網路演算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - training neural networks
 - output neurons [Analysis Services]
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 61eb4861-8a6a-4214-a4b8-1dd278ad7a68
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc557e9a063b5f3031d6a817b0bf85325b94e086
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8845e1bee588c8f79046e12015b6a9bed021ba4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202048"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
-  在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]結合每個可能狀態與可預測的屬性，每個可能狀態與輸入屬性的類神經網路演算法，並使用定型資料來計算機率。 稍後您可以使用這些機率來進行分類或迴歸，依據輸入屬性預測該預測屬性的結果。  
+  在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則[!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法會將輸入屬性的每個可能狀態與可預測的屬性，每個可能狀態結合，並使用定型資料來計算機率。 稍後您可以使用這些機率來進行分類或迴歸，依據輸入屬性預測該預測屬性的結果。  
   
  以 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法建構的採礦模型可包含多個網路，視用於輸入和預測的資料行數目或只用於預測的資料行數目而定。 單一採礦模型包含的網路數目，視採礦模型使用的輸入資料行和可預測資料行所包含的狀態數目而定。  
   
@@ -55,11 +55,11 @@ ms.locfileid: "36136510"
 -   任何分析許多輸入以及較少輸出之間複雜關聯性的預測模型。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法建立的網路，最多 3 層神經所組成。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]類神經網路演算法會建立最多 3 層神經所組成的網路。 這 3 層分別是輸入層、選擇性隱藏層和輸出層。  
   
- **輸入的層：** 輸入神經會定義所有資料採礦模型和及其機率的輸入的屬性值。  
+ **輸入的層：** 輸入神經會定義資料採礦模型及其機率的所有輸入的屬性值。  
   
- **隱藏層：** 隱藏神經會接收來自輸入神經，並提供輸出給輸出神經。 隱藏層是為輸入的各種機率指派加權之處。 加權會對隱藏神經描述特定輸入的相關性或重要性。 指派給輸入的加權越大，該輸入之值的重要性就越大。 加權可以是負數，這表示輸入可以禁止而非喜好特定結果。  
+ **隱藏層：** 隱藏神經會接收來自輸入神經的輸入，並提供輸出給輸出神經。 隱藏層是為輸入的各種機率指派加權之處。 加權會對隱藏神經描述特定輸入的相關性或重要性。 指派給輸入的加權越大，該輸入之值的重要性就越大。 加權可以是負數，這表示輸入可以禁止而非喜好特定結果。  
   
  **輸出層：** 輸出神經代表資料採礦模型的可預測的屬性值。  
   

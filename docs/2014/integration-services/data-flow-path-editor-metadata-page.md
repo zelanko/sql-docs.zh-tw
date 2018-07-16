@@ -1,5 +1,5 @@
 ---
-title: 資料流程路徑編輯器 （中繼資料頁面） |Microsoft 文件
+title: 資料流程路徑編輯器 （中繼資料頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.metadata.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: b30bb9d7-ebc0-4b1a-8d0f-ee006b32e841
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6cd52c13526eb3ecd91f5255f24726dc1d2830e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f14ff76694d380cfa5e118615568b20c2994872
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136265"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176445"
 ---
 # <a name="data-flow-path-editor-metadata-page"></a>資料流程路徑編輯器 (中繼資料頁面)
   使用 [資料流程路徑編輯器] 對話方塊的 [中繼資料] 頁面，即可檢視路徑資料行的中繼資料。  
@@ -66,7 +66,7 @@ ms.locfileid: "36136265"
  將資料行中繼資料複製到剪貼簿。 依預設，所有中繼資料列都會加以複製，就像依目前顯示的順序加以排序一般。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料流程路徑編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [資料流程路徑編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [資料流程路徑編輯器&#40;資料檢視器頁面&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [資料流程](data-flow/data-flow.md)   
  [在套件中使用註釋](use-annotations-in-packages.md)  

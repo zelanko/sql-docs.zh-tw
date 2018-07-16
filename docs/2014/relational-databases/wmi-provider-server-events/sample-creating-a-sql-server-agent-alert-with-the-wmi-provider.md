@@ -1,5 +1,5 @@
 ---
-title: 範例： 使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示 |Microsoft 文件
+title: 範例： 使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f109802dccbe7698f713f61ce7ba1f26efb1449
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 6c6a8ded031806322961d5f56a1b0ba28fe6dad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37186215"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>範例：使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示
   使用 WMI 事件提供者的常見方式為建立回應特定事件的 SQL Server Agent 警示。 下列範例顯示一個簡單的警示，可將 XML 死結圖形事件儲存在資料表中，以便稍後進行分析。 SQL Server Agent 會提交 WQL 要求、接收 WMI 事件，以及執行工作來回應事件。 請注意，雖然在處理通知訊息時包含數個 Service Broker 物件，但是 WMI 事件提供者會處理建立與管理這些物件的詳細資料。  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>測試範例  
- 若要查看作業執行，請先誘發死結。 在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，開啟兩個**SQL 查詢**索引標籤，然後在兩個查詢連接到相同的執行個體。 在其中一個查詢索引標籤中執行下列指令碼。 這個指令碼會產生一個結果集並完成。  
+ 若要查看作業執行，請先誘發死結。 在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，開啟兩個**SQL 查詢**索引標籤，然後連接到相同的執行個體的兩個查詢。 在其中一個查詢索引標籤中執行下列指令碼。 這個指令碼會產生一個結果集並完成。  
   
 ```  
 USE AdventureWorks ;  

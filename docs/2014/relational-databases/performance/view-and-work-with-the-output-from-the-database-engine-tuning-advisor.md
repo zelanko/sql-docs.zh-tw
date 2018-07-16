@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.reports.f1
 - sql12.dta.sessionmonitor.f1
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - viewing tuning output
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 caps.latest.revision: 33
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7474f3ca2ae832a343c2b356a1bccd7d0947a92a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 83b44addd88b83b424e9cd956dcc4bd7621ee118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146940"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167099"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>檢視及處理 Database Engine Tuning Advisor 的輸出
   Database Engine Tuning Advisor 微調資料庫時，會建立摘要、建議、報表和微調記錄。 您可以使用微調記錄輸出針對 Database Engine Tuning Advisor 的微調工作階段進行疑難排解。 您可以使用摘要、建議和報表來判定是否要實作微調建議，或繼續微調，直到 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的查詢效能改進達到所需的程度為止。 如需有關如何使用 Database Engine Tuning Advisor 來建立工作負載及微調資料庫的詳細資訊，請參閱＜ [啟動及使用 Database Engine Tuning Advisor](database-engine-tuning-advisor.md)＞。  
@@ -152,7 +152,7 @@ ms.locfileid: "36146940"
   
 2.  在 **[檔案]** 功能表上，按一下 **[匯出工作階段結果]** ，並儲存成 XML 檔案。  
   
-3.  在您喜好的 XML 編輯器、文字編輯器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟步驟 2 中建立的 XML 檔案。 向下捲動至`Configuration`項目。 複製並貼上`Configuration`元素區段到 XML 輸入檔範本之後,`TuningOptions`項目。 儲存此 XML 輸入檔。  
+3.  在您喜好的 XML 編輯器、文字編輯器或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中，開啟步驟 2 中建立的 XML 檔案。 向下捲動至`Configuration`項目。 複製並貼上`Configuration`項目區段到 XML 輸入檔範本之後,`TuningOptions`項目。 儲存此 XML 輸入檔。  
   
 4.  在步驟 3 所建立的新 XML 輸入檔中，於 `TuningOptions` 元素中指定您所需的任何微調選項、編輯 `Configuration` 元素區段 (依您的分析需求來新增或刪除實體設計結構)、儲存檔案，然後以 Database Engine Tuning Advisor XML 結構描述來加以驗證。 如需編輯此 XML 檔案的資訊，請參閱 [XML 輸入檔參考 &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36146940"
   
 2.  將[含使用者指定組態的 XML 輸入檔範例 &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) 複製並貼到您的 XML 編輯器或文字編輯器中。 使用此範例來為您的微調工作階段建立 XML 輸入檔。 如需有關執行此工作的詳細資訊，請參閱＜ [啟動及使用 Database Engine Tuning Advisor](database-engine-tuning-advisor.md)＞中的＜建立 XML 輸入檔案＞一節。  
   
-3.  編輯`TuningOptions`和`Configuration`範例 XML 輸入檔中的項目。 在`TuningOptions`項目，指定您要 Database Engine Tuning Advisor 微調工作階段納入考量的實體設計結構。 在 `Configuration` 元素中指定實體設計結構，該結構需符合您要 Database Engine Tuning Advisor 分析之實體資料庫設計結構的假設組態。 如需哪些屬性及子元素中，您可以使用與`TuningOptions`和`Configuration`父項目，請參閱[XML 輸入檔參考&#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
+3.  編輯`TuningOptions`而`Configuration`範例 XML 輸入檔中的項目。 在 `TuningOptions`項目，指定您要 Database Engine Tuning Advisor 微調工作階段納入考量的實體設計結構。 在 `Configuration` 元素中指定實體設計結構，該結構需符合您要 Database Engine Tuning Advisor 分析之實體資料庫設計結構的假設組態。 如需哪些屬性及子元素中，您可以使用與`TuningOptions`而`Configuration`父項目，請參閱[XML 輸入檔參考&#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)。  
   
 4.  請用 **.xml** 副檔名來儲存輸入檔。  
   

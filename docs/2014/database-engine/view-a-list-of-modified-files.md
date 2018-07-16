@@ -1,5 +1,5 @@
 ---
-title: 檢視修改檔案清單 |Microsoft 文件
+title: 檢視修改檔案清單 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.CheckinWindow
 helpviewer_keywords:
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - checking in files
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: affad7b7830088a955794f4825a68e72f12fca96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 22309ba15a3df2ed65fd27a002000e58f4beca36
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228238"
 ---
 # <a name="view-a-list-of-modified-files"></a>檢視修改檔案清單
-  您可以使用**暫止簽入**視窗完全顯示時間，在目前方案中，已簽出檔案的清單和簽入這些檔案，利用單一按鈕按一下。  
+  您可以使用**暫止簽入**視窗完全顯示在目前的方案中，已簽出檔案的清單以及簽入這些檔案，利用單一按鈕按一下。  
   
 ### <a name="to-view-a-list-of-modified-files"></a>檢視修改檔案清單  
   
-1.  在**檢視**功能表上，按一下 **暫止簽入**。  
+1.  在 **檢視**功能表上，按一下**暫止簽入**。  
   
 2.  若要檢查選取的檔案中，按一下**簽入**。 或者，您可以停駐**暫止簽入**視窗的右側[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]環境，因此當您完成時，您可以檢查檔案中使用。  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36036623"
      在檔案的原始檔控制連接下，將您正在簽入的檔案顯示為一般清單。  
   
      **比較版本**  
-     開啟 Visual SourceSafe**差異選項**對話方塊中，比較將任何其他選取之檔案的開發環境專案中選取的檔案，並示範這些差異，如果有的話。  
+     開啟 Visual SourceSafe**差異選項**對話方塊，其中比較您的開發環境專案至任何其他選取的檔案中選取的檔案，並說明這些差異，如果有的話。  
   
-     **恢復簽出**  
+     **復原簽出**  
      反轉簽出的所有項目中選取**暫止簽入**視窗。  
   
      **名稱**  

@@ -1,5 +1,5 @@
 ---
-title: 授與讀取權限定義物件中繼資料 (Analysis Services) |Microsoft 文件
+title: 授與讀取權限定義物件中繼資料 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0a7a6459b282d94801d277bc160b28f15840c59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f87b088072350e58aa00d7c0063a2aa2378346cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036911"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241728"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>授與物件中繼資料的讀取定義權限 (Analysis Services)
-  讀取所選物件上的物件定義或中繼資料的權限，可讓管理員授與檢視物件資訊的權限，而不必同時授與修改物件定義、修改物件結構或檢視物件實際資料的權限。 `Read Definition` 可以在資料庫、 資料來源、 維度、 採礦結構和採礦模型層級授與權限。 如果您需要`Read Definition`cube 的權限，您必須啟用`Read Definition`資料庫。請記住，權限是加總。 例如，某個角色會授與讀取 Cube 之中繼資料的權限，而第二個角色則會授與讀取維度之中繼資料的相同使用者權限。 兩個不同角色的權限結合之後，使用者就會同時擁有讀取該資料庫內 Cube 之中繼資料和維度之中繼資料的權限。  
+  讀取所選物件上的物件定義或中繼資料的權限，可讓管理員授與檢視物件資訊的權限，而不必同時授與修改物件定義、修改物件結構或檢視物件實際資料的權限。 `Read Definition` 在資料庫、 資料來源、 維度、 採礦結構和採礦模型層級，可以授與權限。 如果您需要`Read Definition`cube 的權限，您必須啟用`Read Definition`資料庫。請記住，權限是加總。 例如，某個角色會授與讀取 Cube 之中繼資料的權限，而第二個角色則會授與讀取維度之中繼資料的相同使用者權限。 兩個不同角色的權限結合之後，使用者就會同時擁有讀取該資料庫內 Cube 之中繼資料和維度之中繼資料的權限。  
   
 > [!NOTE]  
 >  讀取資料庫之中繼資料的權限，是要使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 連接到 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]資料庫所需的最少權限。 有權限讀取中繼資料的使用者．也可以使用 DISCOVER_XML_METADATA 結構描述資料列集，來查詢物件和檢視其中繼資料。 如需詳細資訊，請參閱 [DISCOVER_XML_METADATA Rowset](../schema-rowsets/xml/discover-xml-metadata-rowset.md)。  
@@ -34,11 +34,11 @@ ms.locfileid: "36036911"
 ## <a name="set-read-definition-permissions-on-a-database"></a>設定資料庫的讀取定義權限  
  授與讀取資料庫中繼資料的權限時，也會授與讀取資料庫中所有物件之中繼資料的權限。  
   
- 我們建議您包含`Read Definition`在資料庫層級，每當您要設定用於專用處理角色的權限。 具有`Read Definition`允許非系統管理員可以檢視模型的物件階層架構中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]並瀏覽至個別進行後續處理的物件。  
+ 我們建議您包含`Read Definition`在設定用於專用處理的角色時，資料庫層級的權限。 擁有`Read Definition`可讓非系統管理員可以檢視模型的物件階層中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]並瀏覽至個別的物件進行後續處理。  
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連接到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
-2.  在**一般**索引標籤上，選取`Read Definition`選項。  
+2.  在 **一般**索引標籤上，選取`Read Definition`選項。  
   
 3.  在 [成員資格] 窗格中，輸入使用這個角色連線到 Analysis Services 的 Windows 使用者和群組帳戶。  
   
@@ -48,15 +48,15 @@ ms.locfileid: "36036911"
   
 1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，連線到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體、開啟 [資料庫] 資料夾、選取資料庫、在物件總管中展開適當資料庫的 [角色]，然後按一下資料庫角色 (或建立新的資料庫角色)。  
   
-2.  在**一般** 窗格中，清除的資料庫權限`Read Definition`。 這個步驟會移除權限繼承，因此，您可以設定個別物件的權限。  
+2.  在 **一般**窗格中，清除的資料庫權限`Read Definition`。 這個步驟會移除權限繼承，因此，您可以設定個別物件的權限。  
   
-3.  選取您要指定的物件`Read Definition`屬性：  
+3.  選取您要為其指定的物件`Read Definition`屬性：  
   
-    -   在**資料來源**] 窗格中，按一下 [`Read Definition`該資料來源的核取方塊。 角色成員可以檢視連線至資料來源的連線字串，包含伺服器名稱，可能也包含使用者名稱。 如果您想要提供連線字串資訊，可以使用這個權限，不需要同時授與修改連線字串或檢視任何其他物件之定義的權限。  
+    -   在 **資料來源**窗格中，按一下 `Read Definition`核取方塊，該資料來源。 角色成員可以檢視連線至資料來源的連線字串，包含伺服器名稱，可能也包含使用者名稱。 如果您想要提供連線字串資訊，可以使用這個權限，不需要同時授與修改連線字串或檢視任何其他物件之定義的權限。  
   
-    -   在**維度**] 窗格中，按一下 [`Read Definition`該維度的核取方塊。 有經驗的分析師與開發人員可能需要檢視定義，而不需要修改它或檢視其他物件 (例如，其他維度、Cube 物件，或者採礦結構和模型) 之定義的權限。  
+    -   在 **維度**窗格中，按一下 `Read Definition`該維度的核取方塊。 有經驗的分析師與開發人員可能需要檢視定義，而不需要修改它或檢視其他物件 (例如，其他維度、Cube 物件，或者採礦結構和模型) 之定義的權限。  
   
-    -   在 [採礦結構] 窗格中，按一下`Read Definition`資料採礦結構或模型的核取方塊。 `Read Definition` 需要瀏覽資料模型。 請參閱[授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)。  
+    -   在 採礦結構 窗格中，按一下 `Read Definition`資料採礦結構或模型的核取方塊。 `Read Definition` 需要瀏覽資料模型。 請參閱[授與資料採礦結構和模型的權限 &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)。  
   
 4.  在 [成員資格] 窗格中，輸入使用這個角色連線到 Analysis Services 的 Windows 使用者和群組帳戶。  
   

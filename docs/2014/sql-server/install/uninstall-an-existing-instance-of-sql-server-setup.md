@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing instances of SQL Server
 - uninstalling instances of SQL Server
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - uninstalling SQL Server
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ab65ffdd02979695fed79211cb02411b4095f85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 42cf94bc46fd8cb31eb11f6afeb9813bc256d657
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133857"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187605"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>解除安裝現有的 SQL Server 執行個體 (安裝程式)
   本文描述如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的獨立執行個體。 遵循本主題的步驟，也可以讓系統做好準備，以便可以重新安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
@@ -84,7 +84,7 @@ ms.locfileid: "36133857"
   
 1.  若要開始解除安裝程序，請移至 **[控制台]** ，然後移至 **[程式和功能]**。  
   
-2.  以滑鼠右鍵按一下**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 選取**解除安裝**。 然後按一下 **[移除]**。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
+2.  以滑鼠右鍵按一下**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** ，然後選取**解除安裝**。 然後按一下 **[移除]**。 這樣就會啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。  
   
      安裝程式支援規則將會執行，以便驗證您的電腦組態。 若要繼續進行，請按 **[下一步]**。  
   

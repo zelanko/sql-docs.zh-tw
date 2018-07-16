@@ -1,5 +1,5 @@
 ---
-title: 索引鍵資料行對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 索引鍵資料行對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1
 helpviewer_keywords:
 - DataItem Collection dialog box
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bdfbda7088df7953df18ee796f6e41057eb090b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3fbd5ef14875e11cef4144286d82c2b733f4fa2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220568"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>索引鍵資料行對話方塊 (Analysis Services - 多維度資料)
   使用 [索引鍵資料行] 對話方塊，即可變更屬性 (Attribute) 的 **KeyColumns** 屬性 (Property)。 如需詳細資訊，請參閱[修改屬性 (Attribute) 的 KeyColumn 屬性 (Property)](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)。  
   
- **若要顯示索引鍵資料行對話方塊**  
+ **若要顯示 [索引鍵資料行] 對話方塊**  
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，選取屬性 (Attribute)，然後在 [屬性] 視窗中，按一下與該屬性 (Attribute) 之 **KeyColumns** 屬性 (Property) 相關聯的省略符號按鈕 (**...**)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36136086"
  **索引鍵資料行**  
  定義選取之索引鍵資料行的順序。 索引鍵資料行的順序在定義正確的複合索引鍵時很重要。 若要排序或重新排序索引鍵資料行的清單，請選取資料行，然後按一下 [向上] 或 [向下] 按鈕。  
   
- 若要移除的資料行**索引鍵資料行**清單，選取的資料行，然後按一下**\<**  按鈕。  
+ 若要移除的資料行**索引鍵資料行**清單中，選取的資料行，然後按一下**\<**  按鈕。  
   
  **向上**  
  按一下即可將 [索引鍵資料行] 中選取的資料行向上移動一個位置。  

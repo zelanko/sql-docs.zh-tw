@@ -1,5 +1,5 @@
 ---
-title: OLE DB 來源編輯器 （錯誤輸出頁面） |Microsoft 文件
+title: OLE DB 來源編輯器 （錯誤輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.errorhandling.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1dffde7f9b22d47a9d719a97a53a07b6d6cf21e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f607206693a72eb82ea14e0f4a22022606ca301
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136891"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169036"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>OLE DB 來源編輯器 (錯誤輸出頁面)
   使用 [OLE DB 來源編輯器] 對話方塊的 [錯誤輸出] 頁面，以選取錯誤處理選項，並設定錯誤輸出資料行上的屬性。  
@@ -56,7 +56,7 @@ ms.locfileid: "36136891"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 來源編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [OLE DB 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [OLE DB 來源編輯器&#40;資料行頁面&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [使用 OLE DB 來源擷取資料](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 連線管理員](connection-manager/ole-db-connection-manager.md)  

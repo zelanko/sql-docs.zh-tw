@@ -1,5 +1,5 @@
 ---
-title: 程式設計 AMO 安全性物件 |Microsoft 文件
+title: 程式設計 AMO 安全性物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - AMO, security
 ms.assetid: 5d963721-6e6e-46eb-bc9b-18724dd0b751
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 660afdf9a8c6c51c1dc97b8ee8de22ba6853708d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e110e71630a43d30f29be89cd56197ab8f18fd7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134830"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37197948"
 ---
 # <a name="programming-amo-security-objects"></a>以程式設計 AMO 安全性物件
-  在[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，安全性物件的程式設計或是執行使用 AMO 安全性物件的應用程式需要的伺服器系統管理員群組或資料庫管理員群組的成員。 伺服器管理員與資料庫管理員是存取層級提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  在  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，進行安全性物件的程式設計或是執行使用 AMO 安全性物件的應用程式需要伺服器系統管理員群組或資料庫管理員群組的成員。 伺服器管理員與資料庫管理員會存取層級所提供[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
- 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，使用者是透過指派給物件的「角色」和「權限」之組合來取得物件的存取權。 如需詳細資訊，請參閱[AMO 安全性類別](amo-security-classes.md)。  
+ 在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 中，使用者是透過指派給物件的「角色」和「權限」之組合來取得物件的存取權。 如需詳細資訊，請參閱 < [AMO 安全性類別](amo-security-classes.md)。  
   
 ## <a name="role-and-permission-objects"></a>角色和權限物件  
  伺服器角色在集合中僅包含一個角色：管理員角色。 無法將新角色加入伺服器角色集合。 管理員角色的成員資格允許伺服器內所有物件的完整存取權。  

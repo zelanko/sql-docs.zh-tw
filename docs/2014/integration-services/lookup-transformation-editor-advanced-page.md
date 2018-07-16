@@ -1,5 +1,5 @@
 ---
-title: 查閱轉換編輯器 （進階頁面） |Microsoft 文件
+title: 查閱轉換編輯器 （進階頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.advanced.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: f3395c65-0320-47f9-8d83-daaa082d8713
 caps.latest.revision: 41
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4982bd1a964e72d6a7e36d88a6f500d2a3ba5d89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b44973dda00e956d25c694c835e7dc1e683eab9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169194"
 ---
 # <a name="lookup-transformation-editor-advanced-page"></a>查閱轉換編輯器 (進階頁面)
   使用 [查閱轉換編輯器] 對話方塊的 [進階] 頁面，即可設定部分快取並修改查閱轉換的 SQL 陳述式。  
@@ -56,7 +56,7 @@ ms.locfileid: "36134019"
  blogs.msdn.com 上的部落格文章： [查閱快取模式](http://go.microsoft.com/fwlink/?LinkId=219518)   
   
 ## <a name="see-also"></a>另請參閱  
- [查閱轉換編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [查閱轉換編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [查閱轉換編輯器&#40;連接頁面&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [查閱轉換編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [查閱轉換編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   

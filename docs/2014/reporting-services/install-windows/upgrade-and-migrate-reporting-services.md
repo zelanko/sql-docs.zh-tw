@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
@@ -18,18 +18,18 @@ ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 caps.latest.revision: 97
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f140a9c83562ff86dc1a890f2d5a7e0ce7a272c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 626e7c922eb2b6126bdec0b2f9e53b3ab4f1d22d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204948"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
   本主題概述 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的升級和移轉選項。 升級 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的一般方式有兩種：  
   
--   **升級：** 您可以在目前安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱 < 原生至 SharePoint 移轉 > 一節稍後在這份文件和相關的主題[Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
+-   **升級：** 您可以在目前安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的伺服器和執行個體上升級這些元件。 這種方式通常稱為「就地」升級。 不支援從 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器的一種模式就地升級至另一種模式。 例如，您無法將原生模式報表伺服器升級至 SharePoint 模式報表伺服器。 您可以將報表項目從一個模式移轉至另一個模式。 如需詳細資訊，請參閱稍後這份文件和相關的主題的 < 原生至 SharePoint 移轉 > 一節[Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)。  
   
 -   **移轉**：安裝和設定新的 SharePoint 環境、將報表項目和資源複製到新環境，然後設定新環境，以使用現有的內容。 較低層級的移轉形式為複製 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料庫、組態檔，如果您是使用 SharePoint 模式，則還有 SharePoint 內容資料庫。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "36131455"
   
 ##  <a name="bkmk_top"></a> 本主題內容：  
   
--   [已知的升級問題和最佳作法](#bkmk_known_issues)  
+-   [已知升級問題和最佳作法](#bkmk_known_issues)  
   
--   [並排安裝](#bkmk_side_by_side)  
+-   [並存安裝](#bkmk_side_by_side)  
   
--   [就地升級](#bkmk_inplace_upgrade)  
+-   [就地升級：](#bkmk_inplace_upgrade)  
   
 -   [升級前檢查清單](#bkmk_upgrade_checklist)  
   
@@ -65,18 +65,18 @@ ms.locfileid: "36131455"
 >   
 >  -   [SQL Server 2014 版本資訊](http://go.microsoft.com/fwlink/?LinkID=296445)。  
 > -   [SQL Server 2014 Reporting Services 提示、秘訣和疑難排解](http://go.microsoft.com/fwlink/?LinkID=391254)。  
-> -   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Upgrade Advisor。 如需詳細資訊，請參閱[Reporting Services 升級問題&#40;Upgrade Advisor&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)和[如何： 安裝 Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)。  
+> -   使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Upgrade Advisor。 如需詳細資訊，請參閱 < [Reporting Services 升級問題&#40;Upgrade Advisor&#41; ](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)並[如何： 安裝 Upgrade Advisor](../../../2014/sql-server/install/how-to-install-upgrade-advisor.md)。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ##  <a name="bkmk_side_by_side"></a> 並排安裝  
  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 原生模式可以與 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 原生模式部署並排安裝。  
   
  不支援 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] SharePoint 模式與任何舊版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式元件的並排部署。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
-##  <a name="bkmk_inplace_upgrade"></a> 就地升級  
+##  <a name="bkmk_inplace_upgrade"></a> 就地升級：  
  升級是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式完成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式可用於升級任何或所有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件，包括 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在內。 安裝程式會偵測現有的執行個體，並提示您進行升級。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會提供升級選項，您可以將這些選項指定為命令列引數或在安裝精靈中指定。  
   
  您在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式時，可以選取從下列其中一個版本進行升級的選項，或是安裝新的 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 執行個體，與現有安裝並排執行：  
@@ -97,7 +97,7 @@ ms.locfileid: "36131455"
 |[升級為 SQL Server 2014 使用安裝精靈&#40;安裝程式&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)|  
 |[從命令提示字元安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ##  <a name="bkmk_upgrade_checklist"></a> 升級前檢查清單  
  在升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]之前，請檢閱下列文章：  
@@ -120,7 +120,7 @@ ms.locfileid: "36131455"
   
  在升級實際執行環境之前，請務必在與實際執行環境具有相同組態的實際執行前環境中執行測試升級。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ## <a name="overview-of-migration-scenarios"></a>移轉案例概觀  
  如果您要從受支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本升級到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，通常可以執行 [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 來升級報表伺服器程式檔案、資料庫和所有應用程式資料。  
@@ -135,7 +135,7 @@ ms.locfileid: "36131455"
   
 -   您想要將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 SharePoint 2010 部署移轉到 SharePoint 2013。 SharePoint 2013 不支援從 SharePoint 2010 就地升級。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;SharePoint 模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> 原生模式升級和移轉狀況  
  **升級：** 原生模式的就地升級對於每個稍早在本主題中列出的支援版本而言，是相同的程序。 執行 SQL Server 安裝精靈或命令列安裝。 在安裝之後，報表伺服器資料庫將自動升級至新的報表伺服器資料庫結構描述。 如需詳細資訊，請參閱本主題中的＜ [In-place upgrade](#bkmk_inplace_upgrade) ＞一節。  
@@ -168,9 +168,9 @@ ms.locfileid: "36131455"
   
 9. 安裝程式會合併組態檔中的設定。 使用目前安裝中的組態檔當做基礎，加入新的項目。 已過時的項目不會移除，但是報表伺服器在升級完成之後不會再讀取這些項目。 升級將不會刪除舊的記錄檔、過時的 RSWebApplication.config 檔，或是 IIS 中的虛擬目錄設定。 升級也不會移除 SQL Server 2005 報表設計師、Management Studio 或其他用戶端工具。 如果您不再需要這些項目，請務必在升級完成之後移除這些檔案和工具。  
   
- **移轉：** 舊版的原生模式安裝移轉[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是相同的步驟，針對所有本主題稍早所列出的支援的版本。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ **移轉：** 舊版的原生模式安裝移轉[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]是相同的步驟，對於所有稍早在本主題中所列支援版本。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ##  <a name="bkmk_native_scaleout"></a> 升級 Reporting Services 原生模式向外延展部署  
  以下為如何升級向外延展至多部報表伺服器之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式部署的摘要。 此程序需要 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 部署的停機時間：  
@@ -195,7 +195,7 @@ ms.locfileid: "36131455"
     > [!TIP]  
     >  使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 指令程式 `Get-SPRSServiceApplicationServers` 判斷 SharePoint 伺服器陣列中目前執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 共用服務，因此也需要升級的伺服器。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 適用於 SharePoint 產品的增益集。 如需詳細資訊，請參閱[安裝或解除安裝 Reporting Services 增益集的 SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 適用於 SharePoint 產品的增益集。 如需詳細資訊，請參閱 <<c0> [ 安裝或解除安裝 Reporting Services 增益集 for SharePoint &#40;SharePoint 2010 和 SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)。</c0>  
   
  如需移轉 SharePoint 模式安裝的詳細步驟，請參閱[遷移 Reporting Services 安裝 &#40;SharePoint 模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)。  
   
@@ -228,7 +228,7 @@ ms.locfileid: "36131455"
   
      如果您也想要讓結束環境執行 SharePoint 2013，則必須完成 SharePoint 2010 到 SharePoint 2013 的資料庫附加升級。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd-sp2-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Sp2 升級為 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **起始環境：** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2，SharePoint 2007。  
@@ -248,9 +248,9 @@ ms.locfileid: "36131455"
   
 -   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 當您執行 SQL Server 安裝精靈時，將會看到一個關於 **[SQL Server Reporting Services SharePoint 模式驗證]** 的對話方塊。 此時將會安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，而且來自驗證頁面的認證將用於建立新的 SharePoint 應用程式集區。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
-### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+### <a name="sql-server-2005-sp2-to-includesssql14includessssql14-mdmd"></a>SQL Server 2005 SP2 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  **起始環境：** SQL Server 2005 SP2，SharePoint 2007。  
   
  **結束環境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]、SharePoint 2010。  
@@ -268,7 +268,7 @@ ms.locfileid: "36131455"
   
 -   將 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 升級至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 當您執行 SQL Server 安裝精靈時，將會看到一個關於 [SQL Server Reporting Services SharePoint 模式驗證] 的對話方塊。 此時將會安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務，而且來自驗證頁面的認證將用於建立新的 SharePoint 應用程式集區。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ##  <a name="bkmk_migration_considerations"></a> 移轉的考量  
  當您移動應用程式資料時，應該注意下列考量和限制：  
@@ -288,7 +288,7 @@ ms.locfileid: "36131455"
   
 -   原生模式：請參閱 [備份與還原 Reporting Services 加密金鑰](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ### <a name="fixed-database-name"></a>固定資料庫名稱  
  您無法重新命名報表伺服器資料庫。 資料庫的識別會在建立資料庫時，記錄於報表伺服器預存程序中。 重新命名報表伺服器的主要或暫存資料庫將會在程序執行時造成錯誤發生，使得報表伺服器安裝失效。  
@@ -301,7 +301,7 @@ ms.locfileid: "36131455"
   
 -   如果您只有少量的項目，可以從報表設計師、模型設計師和報表產生器將報表、報表模型和共用資料來源重新發行到新的報表伺服器。 您必須重新建立角色指派、訂閱、共用排程、報表快照集排程、您在報表或其他項目上設定的自訂屬性、模型項目安全性，以及您在報表伺服器上設定的屬性。 您將會遺失報表記錄和報表執行記錄資料。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ##  <a name="bkmk_additional_resources"></a> 其他資源  
   
@@ -310,11 +310,11 @@ ms.locfileid: "36131455"
   
 -   [SharePoint 2013 升級程序的概觀](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688)。  
   
--   [清除升級到 SharePoint 2013 之前的準備工作](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689)。  
+-   [清除準備工作，再升級為 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689)。  
   
--   [將資料庫從 SharePoint 2010 升級到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
+-   [將資料庫從 SharePoint 2010 升級至 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  
   
- ![搭配回到頁首連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[本主題內容：](#bkmk_top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](../../2014-toc/media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[本主題中：](#bkmk_top)  
   
 ## <a name="see-also"></a>另請參閱  
  [升級報表](../../reporting-services/install-windows/upgrade-reports.md)   

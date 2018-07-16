@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e01b13d7d8f4d7abc5e57a7bb7ebf23457bfe83
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 45b6a7ccfb2a6d19fb85fc016cbcf66995976fc2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145550"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238478"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>將展開或摺疊動作加入項目中 (報表產生器及 SSRS)
   您可以讓使用者以互動方式展開或摺疊報表項目，或者針對資料表或矩陣，展開或摺疊與群組關聯的資料列和資料行。 若要讓使用者展開或摺疊項目，您可以設定該項目的可見性屬性。 設定可見性適用於 HTML 報表檢視器，有時稱為 *「向下鑽研」* (Drilldown) 動作。  
@@ -48,7 +48,7 @@ ms.locfileid: "36145550"
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請按一下功能區上的 [檢視]，然後按一下 [屬性]。  
   
-4.  在`Hidden`，選擇下列選項來執行報表的第一次設定此報表項目的可見性的其中一個：  
+4.  在  `Hidden`，選擇下列選項來設定這個報表項目的可見性的第一次執行報表的其中一個：  
   
     -   選取`False`來顯示報表項目。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36145550"
      ![執行含有展開的資料表的報表](../media/expandcollapse-runreport-reporttable.png "執行含有展開的資料表的報表")  
   
 ## <a name="see-also"></a>另請參閱  
- [向下鑽研動作&#40;報表產生器和 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [向下鑽研動作&#40;報表產生器及 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [隱藏項目 &#40;報表產生器及 SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

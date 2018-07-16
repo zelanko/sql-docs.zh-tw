@@ -1,5 +1,5 @@
 ---
-title: 準備輸入的追蹤資料 |Microsoft 文件
+title: 準備輸入的追蹤資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 30b9108a8586e56f7a96695be513e6e33fe39c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7da90e14d33fb19b421e0cd5a9219ac356952e83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145270"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196718"
 ---
 # <a name="prepare-the-input-trace-data"></a>準備輸入追蹤資料
   您必須先從 Distributed Replay 管理工具起始前置處理階段，準備輸入追蹤資料，才能透過 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 功能啟動分散式重新執行。 在前置處理階段中，分散式重新執行控制器會處理追蹤資料並產生中繼檔案：  
@@ -64,7 +64,7 @@ ms.locfileid: "36145270"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Distributed 的 Replay](sql-server-distributed-replay.md)   
  [Distributed 的 Replay 需求](distributed-replay-requirements.md)   
- [系統管理工具命令列選項&#40;分散式重新執行公用程式&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [系統管理工具命令列選項&#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [設定 Distributed Replay](configure-distributed-replay.md)  
   
   

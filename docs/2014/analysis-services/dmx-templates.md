@@ -1,5 +1,5 @@
 ---
-title: DMX 範本 |Microsoft 文件
+title: DMX 範本 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d0f29e0c000477ec705111f433c31370edc0d973
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30a02f00df965362c1c8702403b06df8b0883ead
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194358"
 ---
 # <a name="dmx-templates"></a>DMX 範本
   資料採礦範本可幫助您快速建立複雜的查詢。 雖然 DMX 查詢的一般語法已完整記載，但是使用範本可直接按一下並指向引數和資料來源，讓您更容易建立查詢。  
@@ -28,13 +28,13 @@ ms.locfileid: "36137188"
   
 1.  適用於 Excel 的資料採礦用戶端，請按一下**查詢**。  
   
-2.  在精靈**啟動**頁面上，按一下**下一步**。  
+2.  在 精靈**開始**頁面上，按一下**下一步**。  
   
-3.  在頁面上，**選取模型**，按一下 **進階**。  
+3.  在頁面上，**選取模型**，按一下**進階**。  
   
-     **提示：** 如果您要在模型上建立預測查詢，您可以先選取模型，然後按一下**進階**，以預先填入範本使用的模型名稱。  
+     **祕訣︰** 如果您要在模型上建立預測查詢，您可以在第一次，選取的模型，然後按一下**進階**、 預先建立的範本使用的模型名稱。  
   
-4.  在**資料採礦進階查詢編輯器**，按一下  **DMX 範本**，然後選取範本。  
+4.  在 **資料採礦進階查詢編輯器**，按一下**DMX 範本**，然後選取範本。  
   
 5.  按 ENTER 將範本載入 [DMX 查詢] 窗格中。  
   
@@ -42,16 +42,16 @@ ms.locfileid: "36137188"
   
      若是預測查詢，請先選擇輸入資料集，再對應資料行。  
   
-7.  按一下**編輯查詢**切換到文字編輯器檢視，並手動變更查詢。  
+7.  按一下 **編輯查詢**切換到文字編輯器檢視，並手動變更查詢。  
   
      但是請注意，如果您在使用查詢編輯器時切換檢視，便會清除在上一個檢視中的所有資訊。 在變更檢視之前，請將 DMX 陳述式複製並貼到另一個檔案以儲存您的工作。  
   
-8.  按一下 **[完成]**。 在**選擇目的地**對話方塊方塊中，指定您想要儲存的結果。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+8.  按一下 **[完成]**。 在  **選擇目的地**對話方塊方塊中，指定您想要儲存結果的位置。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 > [!NOTE]  
->  如果您已成功地執行陳述式，傳送到伺服器的 DMX 陳述式也會記錄在**追蹤**視窗。 如需如何使用追蹤功能的詳細資訊，請參閱[追蹤&#40;適用於 Excel 的資料採礦用戶端&#41;](trace-data-mining-client-for-excel.md)。  
+>  如果您已成功執行陳述式，您傳送到伺服器的 DMX 陳述式也會記錄於**追蹤**視窗。 如需如何使用追蹤功能的詳細資訊，請參閱[追蹤&#40;適用於 Excel 的資料採礦用戶端&#41;](trace-data-mining-client-for-excel.md)。  
   
- 如需如何使用資料採礦進階查詢編輯器的詳細資訊，請參閱[查詢&#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)和[進階資料採礦查詢編輯器](advanced-data-mining-query-editor.md)。  
+ 如需如何使用資料採礦進階查詢編輯器的詳細資訊，請參閱[查詢&#40;SQL Server 資料採礦增益集&#41;](query-sql-server-data-mining-add-ins.md)並[進階資料採礦查詢編輯器](advanced-data-mining-query-editor.md)。  
   
 ## <a name="list-of-dmx-templates"></a>DMX 範本的清單  
  適用於 Excel 的資料採礦用戶端中包括下列 DMX 範本。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
 - projects [SQL Server Management Studio], connections
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - query associations [SQL Server Management Studio]
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 49826e4d01f847ef8c5954bcf2499e8f76ea2ffc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47b9ad4a6b83ff15732500c4de0862224c887278
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218498"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>變更與查詢相關聯的連接
   您可以變更查詢所用的連接，以針對若干不同的伺服器或資料庫來執行查詢。  
@@ -37,7 +37,7 @@ ms.locfileid: "36145757"
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管](solution-explorer.md)   
- [將查詢與專案中連接產生關聯](associate-a-query-with-a-connection-in-a-project.md)   
+ [在專案中的連接相關聯的查詢](associate-a-query-with-a-connection-in-a-project.md)   
  [檢視或變更專案中連接的屬性](view-or-change-the-properties-of-a-connection-in-a-project.md)  
   
   

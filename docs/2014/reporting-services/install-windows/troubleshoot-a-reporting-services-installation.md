@@ -1,5 +1,5 @@
 ---
-title: 疑難排解 Reporting Services 安裝 |Microsoft 文件
+title: 疑難排解 Reporting Services 安裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 95b88a3ad52ebce063a545f07e16cabb9ef00011
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 447cab185ce02b83b25af160421391ed73bb7cf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145109"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248338"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>疑難排解 Reporting Services 安裝
   如果您因為安裝期間發生的錯誤而無法安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，請使用本主題的指示來處理最有可能造成安裝錯誤的狀況。  
   
- 如需有關問題的最新資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[Reporting Services SQL Server 2012 提示、 秘訣和疑難排解](http://go.microsoft.com/fwlink/?LinkId=221297)  
+ 如需相關問題的最新資訊[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，請參閱[Reporting Services SQL Server 2012 提示、 秘訣和疑難排解](http://go.microsoft.com/fwlink/?LinkId=221297)  
   
  如需有關與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相關之其他錯誤和問題的詳細資訊，請參閱 [疑難排解 SSRS 問題和錯誤](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "36145109"
   
 -   [檢查安裝記錄檔](#bkmk_setuplogs)  
   
--   [在先決條件檢查](#bkmk_prereq)  
+-   [檢查必要條件](#bkmk_prereq)  
   
--   [疑難排解 SharePoint 模式安裝的問題](#bkmk_tshoot_sharepoint)  
+-   [針對 SharePoint 模式安裝的問題進行疑難排解](#bkmk_tshoot_sharepoint)  
   
--   [疑難排解原生模式安裝的問題](#bkmk_tshoot_native)  
+-   [針對原生模式安裝的問題進行疑難排解](#bkmk_tshoot_native)  
   
 -   [其他資源](#bkmk_additional)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36145109"
  **因應措施：** 使用 SharePoint 管理中心，在 SharePoint 模式下設定報表伺服器。 如需詳細資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式安裝 SQL Server 2012 SSRS 之後不看 SQL Server Reporting Services 服務，在 SharePoint 管理中心內  
- **描述：** 如果已成功安裝後的[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]以 SharePoint 模式和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集適用於 SharePoint 2010，您看不"SQL Server Reporting Services 」 在下列兩個功能表，然後[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務尚未註冊：  
+ **描述：** 成功安裝之後，如果[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]以 SharePoint 模式和[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]增益集會在 SharePoint 2010，您看不"SQL Server Reporting Services"下列兩個功能表，然後[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務尚未註冊：  
   
 -   SharePoint 2010 管理中心 -> [應用程式管理] -> [管理伺服器上的服務] 頁面  
   
@@ -116,7 +116,7 @@ ms.locfileid: "36145109"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  確認[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務的狀態顯示成 「**已啟動**」 頁面上： SharePoint 2010 中央系統管理->"**應用程式管理**"->"**管理上的服務伺服器**"  
+2.  確認[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]服務的顯示狀態為 「**已啟動**」 頁面上： SharePoint 2010 Central Administration->"**應用程式管理**]-> [**管理上的服務伺服器**"  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell 指令程式無法使用，而且無法辨識命令  
  **描述：** 當您嘗試執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell 指令程式時，看到類似下列的錯誤訊息：  
@@ -179,7 +179,7 @@ ms.locfileid: "36145109"
   
  尚未支援此功能，因為 SQL Server Reporting Services 服務應用程式不存在，或是未於管理中心設定報表伺服器 URL。  
   
- **因應措施：** 確認您具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，且已正確設定。 如需詳細資訊，請參閱 > 一節建立 Reporting Services 服務應用程式 中[安裝 Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
+ **因應措施：** 確認您具有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式，且已正確設定。 如需詳細資訊，請參閱區段建立 Reporting Services 服務應用程式 中[安裝 Reporting Services SharePoint Mode for SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> 您會看到使用 PREPAREIMAGE 時不支援 RS_SHP 的錯誤訊息  
  **描述：** 嘗試執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的 PREPAREIMAGE 時，會看到類似下列的錯誤訊息：  
@@ -197,16 +197,16 @@ ms.locfileid: "36145109"
   
 1.  刪除下列登錄機碼：  
   
-    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service**  
+    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web 服務**  
   
-    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows Service**  
+    -   **HKLM\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows 服務**  
   
 2.  開啟命令視窗，然後在命令提示字元下輸入下列命令：  
   
     -   **執行\<**  *.NET 2.0 Framework 目錄* **> \InstallUtil.exe \<**  *報表伺服器 Bin 目錄* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  取代\< *.NET 2.0 Framework 目錄*>.NET Framework 2.0 的實體路徑與檔案和取代\<*報表伺服器 Bin 目錄*> 實體路徑報表伺服器 bin 檔案。  
+        >  取代\< *.NET 2.0 Framework 目錄*>.NET Framework 2.0 的實體路徑與檔案，並取代\<*報表伺服器 Bin 目錄*> 的實體路徑報表伺服器 bin 檔案中。  
   
 3.  重新啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務。  
   
@@ -218,15 +218,15 @@ ms.locfileid: "36145109"
   
     1.  按一下 **[開始]**，並按一下 **[執行]**。  
   
-    2.  在**執行**對話方塊中，於**開啟**方塊中，輸入`regedit`。  
+    2.  在 **執行**對話方塊中，於**開放**方塊中，輸入`regedit`。  
   
-2.  在 [登錄編輯器] 中，選取下列登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance`  
+2.  在登錄編輯器中，選取下列登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance`  
   
 3.  以滑鼠右鍵按一下 [Performance] 節點，並指向 [新增]，然後按一下 [多字串值]。  
   
 4.  型別`Counter Names`然後按 ENTER 鍵。  
   
-5.  重複上述步驟新增`Counter Types`此節點中的登錄機碼。  
+5.  若要新增的重複`Counter Types`此節點中的登錄機碼。  
   
 6.  瀏覽至下列登錄機碼： `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance`  
   
@@ -234,20 +234,20 @@ ms.locfileid: "36145109"
   
 8.  型別`Counter Names`然後按 ENTER 鍵。  
   
-9. 重複上述步驟新增`Counter Types`此節點中的登錄機碼。  
+9. 若要新增的重複`Counter Types`此節點中的登錄機碼。  
   
  修復 64 位元執行個體或手動重新加入登錄機碼後，可以使用效能監視器設定您要監視的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 效能物件。  
   
 ###  <a name="ConfigPropsMissing"></a> 從 SQL Server 2005 升級後，ReportServerExternalURL 和 PassThroughCookies 組態屬性未設定  
- 當您升級從[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]至[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]、`ReportServerExternalURL`和`PassThroughCookies`升級程序不會設定組態屬性。 `ReportServerExternalURL` 是選擇性屬性，並應該設定只有當您使用 SharePoint 2.0 Web 組件，而且您想要讓使用者能夠擷取報表，並在新的瀏覽器視窗中開啟它。 如需有關`ReportServerExternalURL`，請參閱[組態檔中的 Url &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。 `PassThroughCookies` 只有在使用自訂驗證方法時，則為必要。 如需有關`PassThroughCookies`，請參閱[設定報表管理員傳遞自訂驗證 Cookie](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
+ 當您從升級[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]要[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，則`ReportServerExternalURL`和`PassThroughCookies`組態屬性未設定升級程序。 `ReportServerExternalURL` 是一個選擇性的屬性，以及其應只有當您使用 SharePoint 2.0 Web 組件，而且您想要能夠擷取報表並且在新的瀏覽器視窗中開啟它的使用者設定。 如需詳細資訊`ReportServerExternalURL`，請參閱 <<c2> [ 組態檔中的 Url &#40;SSRS 組態管理員&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)。</c2> `PassThroughCookies` 只有在使用自訂驗證方法時，則為必要。 如需詳細資訊`PassThroughCookies`，請參閱 <<c2> [ 設定報表管理員傳遞自訂驗證 Cookie](../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)。  
   
 > [!NOTE]  
 >  當您使用自訂驗證時，建議您移轉安裝，而不要執行升級。 如需移轉 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)。  
   
  根據預設，這些屬性不存在 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 組態中。 如果您在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中設定了這些屬性，而且仍然需要這些屬性的功能，就必須在升級程序之後將這些屬性手動加入至 **RSReportServer.config** 檔案。 如需詳細資訊，請參閱[修改 Reporting Services 組態檔 &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)。  
   
-###  <a name="Default2005InstallBreaks2008"></a> SQL Server 2005 Reporting Services 的預設執行個體執行 SQL Server 2012 reporting Services 的電腦上，安裝失敗  
- 如果您嘗試安裝的預設執行個體[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]已經執行的執行個體的電腦上[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體安裝會失敗，並出現下列錯誤訊息：  
+###  <a name="Default2005InstallBreaks2008"></a> SQL Server 2005 Reporting Services 的預設執行個體，在執行 SQL Server 2012 reporting Services 的電腦上，安裝失敗  
+ 如果您嘗試安裝的預設執行個體[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]已執行的執行個體的電腦上[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，則[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體安裝會失敗，並出現下列錯誤訊息：  
   
  「具有相同名稱的執行個體已安裝在這部電腦上。 若要繼續 SQL Server 安裝程式，請提供唯一的執行個體名稱。」  
   
@@ -255,16 +255,16 @@ ms.locfileid: "36145109"
   
  若要解決這個問題，請使用下列其中一個選項：  
   
--   如果您必須執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]在電腦上的預設執行個體，您必須安裝[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]之前執行個體[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]執行個體。  
+-   如果您必須執行[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]電腦上的預設執行個體，您必須安裝[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體之前[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]執行個體。  
   
--   如果[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體不需要是預設執行個體，您可以安裝[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]成具名執行個體在安裝後的執行個體[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]執行個體。  
+-   如果[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體不需要為預設執行個體，您可以安裝[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]執行個體為具名執行個體安裝後[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]執行個體。  
   
-###  <a name="WindowsAuthBreaksAfterUpgrade"></a> 401-未經授權錯誤，使用從 SQL Server 2005 升級至 SQL Server 2012 之後的 Windows 驗證時  
+###  <a name="WindowsAuthBreaksAfterUpgrade"></a> 401 未經授權錯誤，使用從 SQL Server 2005 升級至 SQL Server 2012 之後的 Windows 驗證時  
  如果您從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 升級到 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]，而且對報表伺服器服務帳戶使用 NTLM 驗證及內建帳戶，當您在升級後存取報表伺服器或報表管理員時，可能會遇到 401 未經授權錯誤。  
   
  之所以發生這個錯誤，是因為 Windows 驗證的預設 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 組態中出現變更。 當報表伺服器服務帳戶是 Network Service 或 Local System 時，會設定交涉。 如果報表伺服器服務帳戶不是上述其中一個內建帳戶時，則會設定 NTLM。 若要在升級後修正這個問題，您可以編輯 RSReportServer.config 檔案，並將 `AuthenticationType` 設為 `RSWindowsNTLM`。 如需詳細資訊，請參閱[設定報表伺服器上的 Windows 驗證](../security/configure-windows-authentication-on-the-report-server.md)。  
   
-###  <a name="Uninstall32BitBreaks64Bit"></a> 解除安裝 32 位元執行個體的 SQL Server 2012 Reporting Services 的並存部署中與 64 位元執行個體中斷 64 位元執行個體  
+###  <a name="Uninstall32BitBreaks64Bit"></a> 解除安裝 32 位元的 SQL Server 2012 Reporting Services 部署中執行個體並排顯示與 64 位元執行個體中斷 64 位元執行個體  
  當您在電腦上並存安裝 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 的 32 位元執行個體與 64 位元執行個體後，如果解除安裝 32 位元執行個體，就會移除四個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 登錄機碼。 這會中斷 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的 64 位元執行個體。 當您解除安裝 32 位元執行個體時，會移除的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 登錄機碼如下：  
   
  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows Service\Performance:Counter Names` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Web Service\Performance:Counter Types` `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSRS 2011 Windows Service\Performance:Counter Types`  
@@ -281,6 +281,6 @@ ms.locfileid: "36145109"
   
 -   [論壇：SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   
- ![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見和連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
+ ![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[透過 Microsoft SQL Server Connect 提交意見與連絡資訊](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)。  
   
   

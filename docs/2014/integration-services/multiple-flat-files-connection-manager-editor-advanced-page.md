@@ -1,5 +1,5 @@
 ---
-title: 多個一般檔案連接管理員編輯器 （進階頁面） |Microsoft 文件
+title: 多個一般檔案連接管理員編輯器 （進階頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.advanced.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 caps.latest.revision: 36
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dfbc768285e81c1abfac99430527f2d5dbfe4a81
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cc475677c9e122776deb58d749f0630b1bf57294
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131973"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246738"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>多個一般檔案連接管理員編輯器 (進階頁面)
   使用 [多個一般檔案連線管理員編輯器] 對話方塊的 [進階] 頁面，來設定各種屬性，例如一般檔案連線管理員所連接的文字檔中，每個資料行的資料類型和分隔符號。  
@@ -57,7 +57,7 @@ ms.locfileid: "36131973"
  **新增**  
  按一下 [新增] 來加入新的資料行。 [新增] 按鈕預設會在清單結尾加入新資料行。 此按鈕還有下列選項，可以在下拉式清單中使用。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**加入資料行**|在清單結尾加入新資料行。|  
 |**插在前面**|在選取的資料行之前插入新資料行。|  
@@ -71,7 +71,7 @@ ms.locfileid: "36131973"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [多個一般檔案連接管理員編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [多個一般檔案連接管理員編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [多個一般檔案連接管理員編輯器&#40;資料行頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
  [多個一般檔案連接管理員編輯器&#40;預覽頁面&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 瀏覽維度資料，在 維度設計師 |Microsoft 文件
+title: 瀏覽維度資料，在 維度設計師 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], browsing
 - browsing dimensions [Analysis Services]
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c675c9a84c8b338e64723e7793cfa39a7cef61af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4b64b28ccdfa3dd40918881340f4fc66a5229c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169642"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>在維度設計師中瀏覽維度資料
   您可以從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 存取維度設計師，並使用其中的 [瀏覽器] 檢視來瀏覽維度中的資料。  
   
- 若要在 [瀏覽器] 檢視中顯示維度資料，此維度必須在已處理的狀態。 如需詳細資訊，請參閱[多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  
+ 若要在 [瀏覽器] 檢視中顯示維度資料，此維度必須在已處理的狀態。 如需詳細資訊，請參閱 <<c0> [ 多維度模型物件處理](processing-a-multidimensional-model-analysis-services.md)。  
   
 ### <a name="to-browse-a-dimension-in-sql-server-data-tools"></a>若要在 SQL Server 資料工具中瀏覽維度  
   
