@@ -1,5 +1,5 @@
 ---
-title: 選取案例索引鍵 （資料採礦精靈） |Microsoft 文件
+title: 選取案例索引鍵 （資料採礦精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectcasekey.f1
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ac22701b451360e5877af76a770b106b5c91b699
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de7c1972cdf7a39fe39b045f8a7d555cd9a328c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300908"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>選取案例索引鍵 (資料採礦精靈)
   使用 [選取案例索引鍵] 頁面，即可選取要作為採礦結構的索引鍵之來源 Cube 維度的屬性。 此屬性必須在階層中或已啟用其屬性階層。  

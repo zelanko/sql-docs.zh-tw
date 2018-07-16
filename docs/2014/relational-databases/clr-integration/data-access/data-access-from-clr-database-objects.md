@@ -1,13 +1,11 @@
 ---
-title: 從 CLR 資料庫物件的資料存取 |Microsoft 文件
+title: 從 CLR 資料庫物件的資料存取 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,18 +23,18 @@ helpviewer_keywords:
 - in-process data access providers [CLR integration]
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ab43297c592258075e9c80ec9808b10c7bd267df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1c49134c931bc9f27e7c4856ce23ccde70364000
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035720"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351140"
 ---
 # <a name="data-access-from-clr-database-objects"></a>從 CLR 資料庫物件進行資料存取
-  Common language runtime (CLR) 常式可以輕鬆存取資料的執行個體中儲存[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]執行個體中，以及儲存在遠端執行個體中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 從 CLR 資料庫物件中的資料存取使用.NET Framework Data Provider for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料從受管理的用戶端和中介層應用程式。 因為這個緣故，您可以將 ADO.NET 和 `SqlClient` 的知識運用在用戶端和中間層應用程式。  
+  Common language runtime (CLR) 常式可以輕鬆存取的執行個體中儲存的資料[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]中執行，以及儲存在遠端執行個體中的資料。 常式可以存取的特定資料取決於藉以執行程式碼的使用者內容。 存取資料從 CLR 資料庫物件中的使用.NET Framework Data Provider for[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]從受管理的用戶端和中介層應用程式的資料。 因為這個緣故，您可以將 ADO.NET 和 `SqlClient` 的知識運用在用戶端和中間層應用程式。  
   
 > [!NOTE]  
 >  根據預設，執行資料存取不允許使用使用者定義型別方法與使用者定義函數。 您必須將 `DataAccess` 或 `SqlMethodAttribute` 的 `SqlFunctionAttribute` 屬性設定為 `DataAccessKind.Read` 才能使用者定義型別 (UDT) 方法或使用者定義函數進行唯讀的資料存取。 資料修改作業無法從 UDT 或使用者定義函數進行，如果嘗試進行，則會在執行階段擲回例外狀況。  
@@ -57,7 +55,7 @@ ms.locfileid: "36035720"
  [CLR 整合和交易](../../native-client-ole-db-transactions/transactions.md)  
  描述 System.Transactions 命名空間中提供的新交易架構如何整合 ADO.NET 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 整合。  
   
- [從 CLR 資料庫物件的 XML 序列化](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  
+ [從 CLR 資料庫物件進行 XML 序列化](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  
  說明如何在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中啟用 CLR 資料庫物件的 XML 序列化案例。  
   
   

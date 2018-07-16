@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.exportregisteredservers.f1
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 84fd48359d493642d0c9351a6c947a74b48ff9cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 371440369fa4b315f4a66e09e6c26e9e0a2cab92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275904"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>匯出已註冊的伺服器資訊 (SQL Server Management Studio)
   本主題描述如何儲存並匯出 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中已註冊伺服器的資訊，並將資訊散發給其他員工或伺服器。 您可以使用此匯出功能，在多部電腦上顯示一致的使用者介面。  
@@ -61,6 +61,6 @@ ms.locfileid: "36036502"
     >  雖然匯出檔案已加密，但是如果使用者名稱與 SQL Server 驗證密碼均包含在檔案中，則要小心控制該檔案的存取權。 因此，依預設使用者名稱與密碼會排除在匯出檔案之外。  
   
 ## <a name="see-also"></a>另請參閱  
- [匯入已註冊的伺服器資訊&#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [建立新的已註冊的伺服器&#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+ [已註冊的伺服器資訊匯入&#40;SQL Server Management Studio&#41; ](import-registered-server-information-sql-server-management-studio.md) [建立新的已註冊的伺服器&#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

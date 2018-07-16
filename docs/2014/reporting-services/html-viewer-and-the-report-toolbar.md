@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 caps.latest.revision: 32
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9671f72321630dc53243d695dca7f943e4685e7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: eb889f5f518aa5371afb2604950ba0813f5c9c92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319791"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 檢視器和報表工具列
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供了 HTML 檢視器，可用來從報表伺服器要求報表時，視需要顯示這些報表。 HTML 檢視器提供以 HTML 檢視報表的架構。 其中包含報表工具列、參數區段、認證區段以及文件對應。 HTML 檢視器中的報表工具列含有可用來處理報表的功能，包括可以讓您以非 HTML 格式檢視報表的匯出選項。 只有在開啟設定為使用參數和文件引導模式控制項的報表時，才會顯示參數區段和文件引導模式。  
   
 > [!NOTE]  
->  雖然您無法修改報表工具列，但是您可以設定報表 URL 上的參數，以在報表中隱藏此工具列。 如需有關隱藏報表工具列的詳細資訊，請參閱[URL 存取參數參考](url-access-parameter-reference.md)。  
+>  雖然您無法修改報表工具列，但是您可以設定報表 URL 上的參數，以在報表中隱藏此工具列。 如需有關隱藏報表工具列的詳細資訊，請參閱 < [URL 存取參數參考](url-access-parameter-reference.md)。  
   
 ## <a name="report-toolbar"></a>報表工具列  
  報表工具列會針對以 HTML 轉譯延伸模組轉譯的報表，提供頁面導覽、顯示比例、重新整理、搜尋、匯出、列印和資料摘要功能。  
@@ -78,6 +78,6 @@ ms.locfileid: "36136376"
 ## <a name="see-also"></a>另請參閱  
  [指定報表資料來源的認證及連接資訊](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [將報表匯出&#40;報表產生器和 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
+ [匯出報表&#40;報表產生器及 SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

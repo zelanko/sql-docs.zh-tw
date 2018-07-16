@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE 及 FORMAT_STRING FORMATED_VALUE 上的 |Microsoft 文件
+title: LANGUAGE 及 FORMAT_STRING FORMATED_VALUE 上的 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e68843728ebf28dca0734c7d12953d90b3449e72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035332"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319268"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>FORMATED_VALUE 上的 LANGUAGE 及 FORMAT_STRING
   FORMATTED_VALUE 屬性是根據資料格中 VALUE、FORMAT_STRING 和 LANGUAGE 屬性的互動而建立。 本主題將說明這些屬性如何互動，以便建立 FORMATTED_VALUE 屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "36035332"
  要沿著 FORMAT_STRING 套用來產生當地語系化 FORMATTED_VALUE 版本的地區設定規格。  
   
 ## <a name="formattedvalue-constructed"></a>建構的 FORMATTED_VALUE  
- FORMATTED_VALUE 屬性的建構方式是利用 VALUE 屬性中的值，以及將 FORMAT_STRING 屬性中指定的格式範本套用到該值。 此外，每當格式值是`named formatting literal`LANGUAGE 屬性規格會修改 FORMAT_STRING 遵循具名格式的語言使用方式的輸出。 具名格式常值全都是以可當地語系化的方式來定義。 例如， `"General Date"` 是一種可以當地語系化的規格，與下列範本 `"YYYY-MM-DD hh:nn:ss",` 相反，後者指出日期是以範本定義的方式呈現，不論語言規格為何。  
+ FORMATTED_VALUE 屬性的建構方式是利用 VALUE 屬性中的值，以及將 FORMAT_STRING 屬性中指定的格式範本套用到該值。 此外，每當格式值是`named formatting literal`LANGUAGE 屬性規格就會修改 FORMAT_STRING 的輸出，以遵循具名格式的語言使用方式。 具名格式常值全都是以可當地語系化的方式來定義。 例如， `"General Date"` 是一種可以當地語系化的規格，與下列範本 `"YYYY-MM-DD hh:nn:ss",` 相反，後者指出日期是以範本定義的方式呈現，不論語言規格為何。  
   
  如果 FORMAT_STRING 範本與 LANGUAGE 規格之間有衝突，FORMAT_STRING 範本會覆寫 LANGUAGE 規格。 例如，如果 FORMAT_STRING="$ #0" 且 LANGUAGE=1034 (西班牙)，而且 VALUE=123.456 然後 FORMATTED_VALUE="$ 123" 而非 FORMATTED_VALUE="€ 123"，則預期的格式會是歐元，因為格式範本的值會覆寫指定的語言。  
   

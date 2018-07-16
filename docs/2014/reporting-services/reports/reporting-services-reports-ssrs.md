@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, report creation
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: 52
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2d9c3d3bbae3d7c267a6196eef0d7d0660c4302b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2e80c45aeab9b9ea762b56640d68d46df0d4d4fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306998"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services 報表 (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 報表是一種以 XML 為基礎的報表定義，其中包括報表資料及報表配置元素。 在用戶端檔案系統上，報表定義的副檔名為 .rdl。 在發行報表之後，其為儲存在報表伺服器或 SharePoint 網站上的報表項目。 報表是由 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 提供之伺服器架構報表平台的一部分。  
@@ -87,7 +87,7 @@ ms.locfileid: "36135115"
   
         -   [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
-        -   [圖表&#40;報表產生器和 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+        -   [圖表&#40;報表產生器及 SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
   
         -   [走勢圖和資料橫條 &#40;Report Builder and SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36135115"
   
     -   **自訂資料及配置。** 設計報表配置。 報表定義包含報表主體、資料來源、資料集、資料區、文字方塊、線條和影像。 矩形可以當做配置與視覺化元素的容器使用。 藉由撰寫運算式，並控制篩選、群組、排序、格式及顯示資料，以自訂每個資料區。 加入報表名稱、位置及其他識別資訊，以利管理數十份或數百份報表。 加入視覺化元素及容器以組織頁面上的配置元素。 如需詳細資訊，請參閱下列主題：  
   
-        -   [篩選、 分組和排序資料&#40;報表產生器和 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+        -   [篩選、 分組和排序資料&#40;報表產生器及 SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
         -   [報表參數 &#40;報表產生器和報表設計師&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
@@ -109,7 +109,7 @@ ms.locfileid: "36135115"
   
         -   [影像、文字方塊、矩形和線條 &#40;報表產生器及 SSRS&#41;](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
-        -   [頁面配置和轉譯&#40;報表產生器和 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
+        -   [頁面配置和轉譯&#40;報表產生器及 SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   
     -   **設定互動功能。** 為您的報告讀取器加入互動功能。 例如，加入檢視查詢的排序按鈕或切換項目。 如需詳細資訊，請參閱[互動式排序、文件引導模式及連結 &#40;報表產生器及 SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 完成-安裝 |Microsoft 文件
+title: 完成-安裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - installation complete, Setup
 ms.assetid: eb7ddb23-12d0-4c81-9609-4046ccaca7d2
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 18733abf53a1b381677c9d128a4a7f6749029545
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2ddd87e83c0b5f4b72618f884c84f876e0704409
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036033"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286624"
 ---
 # <a name="complete---installation"></a>完成 - 安裝
   按一下 [關閉] 完成安裝。  

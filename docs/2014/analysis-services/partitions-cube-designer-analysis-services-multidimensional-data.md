@@ -1,5 +1,5 @@
 ---
-title: 資料分割 （Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 資料分割 （Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionspane.f1
 ms.assetid: ac3ce774-eebf-4915-9307-90d0ac11c271
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 691018c375f139dcb3a78f5601203d1ff0d568e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e3d9acc1887cb47967b06aef4d68ca6a3dd6092
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178905"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>資料分割 (Cube 設計師) (Analysis Services - 多維度資料)
   使用 Cube 設計師中的 **[資料分割]** 索引標籤，即可建立和修改資料分割，包括 Cube 中每個量值群組的儲存、主動式快取以及回寫設定。  

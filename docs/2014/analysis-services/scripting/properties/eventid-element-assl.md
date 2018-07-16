@@ -1,5 +1,5 @@
 ---
-title: EventID 元素 (ASSL) |Microsoft 文件
+title: EventID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - EventID element
 ms.assetid: a6b2ee50-1753-496c-af5c-206d63f2542b
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ee579bd4bc20bea12b1dbb9490a7f9c93fde32
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79fd7c49c9749430bc5e73518d2f7eeb4fc450f7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310708"
 ---
 # <a name="eventid-element-assl"></a>EventID 元素 (ASSL)
-  可唯一識別[事件](../objects/event-element-assl.md)要擷取的一部分的項目[追蹤](../objects/trace-element-assl.md)項目。  
+  可唯一識別[事件](../objects/event-element-assl.md)要擷取做為一部分的項目[追蹤](../objects/trace-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36036194"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`EventID`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TraceEvent>。  
+ 對應的父代的項目`EventID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.TraceEvent>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Events 元素&#40;ASSL&#41;](../collections/events-element-assl.md)   

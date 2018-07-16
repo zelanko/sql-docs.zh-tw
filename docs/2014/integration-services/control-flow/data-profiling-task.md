@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataprofilingtask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee64eeed2e6508fc31cac544e6ba4f2617b8a24b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48075a70eba052e6996fa096cde9f8f3b5f946e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036401"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213538"
 ---
 # <a name="data-profiling-task"></a>資料分析工作
   資料分析工作會計算各種設定檔，協助您熟悉資料來源並在資料中識別必須修復的問題。  
@@ -58,7 +58,7 @@ ms.locfileid: "36036401"
 |資料行長度散發設定檔|報告選取之資料行中所有不同的字串值長度，以及該資料表中每個長度所代表之資料列的百分比。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如無效的值。 例如，您分析了應該是兩個字元之美國州名代碼的資料行，並發現長度大於兩個字元的值。|  
 |資料行 Null 比例設定檔|報告選取之資料行中 Null 值的百分比。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如某個資料行中 Null 值的比例過高。 舉例來說，您分析了「郵遞區號」資料行並發現遺漏郵遞區號的百分比過高。|  
 |資料行模式設定檔|報告一組規則運算式，其中涵蓋了字串資料行中值的指定百分比。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如無效的字串。 這個設定檔也可以建議未來可用於驗證新值的規則運算式。 舉例來說，「美國郵遞區號」資料行的模式設定檔可能會產生規則運算式：\d{5}-\d{4}、\d{5} 和 \d{9}。 如果您看見其他規則運算式，表示資料可能包含無效或格式錯誤的值。|  
-|資料行統計資料設定檔|最小值、 最大值、 平均和標準差的數字的資料行，以及最小值和最大值等統計資料會報告`datetime`資料行。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如無效的日期。 舉例來說，您分析了歷程記錄日期的資料行，並發現屬於未來的最大日期。|  
+|資料行統計資料設定檔|最小值、 最大值、 平均值和標準差的數字的資料行和最小和最大值等統計資料會報告`datetime`資料行。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如無效的日期。 舉例來說，您分析了歷程記錄日期的資料行，並發現屬於未來的最大日期。|  
 |資料行值散發設定檔|報告選取之資料行中的所有相異值，以及該資料表中每個值所代表之資料列的百分比。 也可以報告代表超過資料表中指定之資料列百分比的值。<br /><br /> 這個設定檔可協助您識別資料中的問題，例如某個資料行中相異值的數目不正確。 舉例來說，您分析了應該包含美國州名的資料行並發現超過 50 個相異值。|  
   
  下列三個設定檔會分析多個資料行或資料行和資料表之間的關聯性。  
@@ -79,14 +79,14 @@ ms.locfileid: "36036401"
 |-------------|------------------------|  
 |ColumnStatisticsProfile|數值類型或 `datetime` 類型的資料行 (沒有適用於 `mean` 資料行的 `stddev` 和 `datetime`)|  
 |ColumnNullRatioProfile|所有資料行**|  
-|ColumnValueDistributionProfile|資料行的`integer`型別，`char`類型，和`datetime`類型|  
+|ColumnValueDistributionProfile|資料行`integer`型別`char`類型，和`datetime`類型|  
 |ColumnLengthDistributionProfile|資料行的`char`類型|  
 |ColumnPatternProfile|資料行的`char`類型|  
-|CandidateKeyProfile|資料行的`integer`型別，`char`類型，和`datetime`類型|  
-|FunctionalDependencyProfile|資料行的`integer`型別，`char`類型，和`datetime`類型|  
-|InclusionProfile|資料行的`integer`型別，`char`類型，和`datetime`類型|  
+|CandidateKeyProfile|資料行`integer`型別`char`類型，和`datetime`類型|  
+|FunctionalDependencyProfile|資料行`integer`型別`char`類型，和`datetime`類型|  
+|InclusionProfile|資料行`integer`型別`char`類型，和`datetime`類型|  
   
- \* 有效的資料類型的先前資料表中`integer`， `char`， `datetime`，和`numeric`類型包括下列特定的資料類型：  
+ \* 有效的資料類型的上一個資料表中`integer`， `char`， `datetime`，和`numeric`類型包括下列特定的資料類型：  
   
  整數類型包括 `bit`、`tinyint`、`smallint`、`int` 和 `bigint`。  
   
@@ -94,9 +94,9 @@ ms.locfileid: "36036401"
   
  日期和時間類型包括 `datetime`、`smalldatetime` 和 `timestamp`。  
   
- 數值類型包含`integer`類型 (除了`bit`)， `money`， `smallmoney`， `decimal`， `float`， `real`，和`numeric`。  
+ 數值類型包括`integer`類型 (除了`bit`)， `money`， `smallmoney`， `decimal`， `float`， `real`，以及`numeric`。  
   
- \*\* `image``text`， `XML`， `udt`，和`variant`類型不支援的資料行 Null 比例設定檔以外的設定檔。  
+ \*\* `image``text`， `XML`， `udt`，和`variant`之外的資料行 Null 比例設定檔的設定檔不支援的類型。  
   
 ### <a name="valid-tables-and-columns"></a>有效的資料表和資料行  
  如果資料表或資料行為空白，資料分析會採取下列動作：  

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio) |Microsoft 文件
+title: 使用 SQL Server Profiler 建立 SQL 追蹤收集組 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Trace collector set
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5abf2baf12e8ae265020e9d4a5766506e9bcace3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 50754e92bad8bb6241129b53339b173d6d1d1bf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260854"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio)
   在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中，您可以利用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 的伺服器端追蹤功能來匯出追蹤定義，以便用來建立使用一般 SQL 追蹤收集器類型的收集組。 這個程序可以分成兩個部分：  
@@ -76,7 +76,7 @@ ms.locfileid: "36037053"
   
     1.  在篩選清單中，按一下 [持續時間]。  
   
-    2.  在布林運算子視窗中，展開 **大於或等於**節點、 輸入`80`作為值，然後按一下**確定**。  
+    2.  在布林運算子視窗中，依序展開**Greater than 或 equal**節點、 輸入`80`當做值，然後按一下**確定**。  
   
 9. 按一下 **[執行]** 啟動追蹤。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "36037053"
   
 3.  捲動指令碼並進行下列取代 (這些取代會以指令碼註解文字顯示)：  
   
-    -   將 **SQLTrace Collection Set Name Here** 取代成您想要針對收集組使用的名稱。 例如，將收集組命名`SPROC_CollectionSet`。  
+    -   將 **SQLTrace Collection Set Name Here** 取代成您想要針對收集組使用的名稱。 此範例中，命名為此收集組`SPROC_CollectionSet`。  
   
     -   將 **SQLTrace Collection Item Name Here** 取代成您想要針對收集項使用的名稱。 此範例中，命名集合項目`SPROC_Collection_Item`。  
   

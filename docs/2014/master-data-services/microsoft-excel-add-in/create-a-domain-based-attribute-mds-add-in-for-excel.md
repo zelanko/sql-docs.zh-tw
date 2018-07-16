@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e0dc03dad5cfd346b76691113988ba126e67ae3b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 1c7a91411531cccb253b42f4c6b075ebb73b5d78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145866"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217588"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>建立網域屬性 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，當系統管理員想要將資料行中的值限制為一組特定的值時，可以建立網域屬性。  
@@ -29,7 +29,7 @@ ms.locfileid: "36145866"
 > [!NOTE]  
 >  如果使用者在受條件約束的資料行中輸入值，而不是從清單中選取，在發行時 **$InputStatus$** 資料行中會顯示錯誤。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 和總管功能區域的權限。  
@@ -40,7 +40,7 @@ ms.locfileid: "36145866"
   
 ### <a name="to-perform-this-procedure"></a>若要執行此程序：  
   
-1.  在 Excel 中，載入包含您想要限制之資料行 (屬性) 的實體。 如需詳細資訊，請參閱[從 excel 的 MDS 資料載入](export-data-to-excel-from-master-data-services.md)。  
+1.  在 Excel 中，載入包含您想要限制之資料行 (屬性) 的實體。 如需詳細資訊，請參閱 <<c0> [ 將資料從 MDS 載入 Excel 中的載入](export-data-to-excel-from-master-data-services.md)。  
   
 2.  在您想要限制的資料行中按一下任何資料格。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36145866"
   
 ## <a name="next-steps"></a>後續步驟  
   
--   若要在受條件約束的清單中加入及刪除值，請載入屬性所依據的實體。 如需有關載入實體的詳細資訊，請參閱[從 excel 的 MDS 資料載入](export-data-to-excel-from-master-data-services.md)。  
+-   若要在受條件約束的清單中加入及刪除值，請載入屬性所依據的實體。 如需有關載入實體的詳細資訊，請參閱 <<c0> [ 將資料從 MDS 載入 Excel 中的載入](export-data-to-excel-from-master-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [網域型屬性&#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   

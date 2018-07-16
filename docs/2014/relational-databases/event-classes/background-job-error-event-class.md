@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Background Job Error event class
 ms.assetid: 9e6d2a0e-919d-4fe2-a306-b20b8d41c197
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 98f9f72615a7bd26f18898c5ef4bf0a2a9529791
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 88e96d531d901fbb7b58641069cec3cd235ea1db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036121"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310034"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error 事件類別
   當背景作業異常中止時，就會發生 **Background Job Error** 事件類別。 這種狀況可能需要系統管理員注意。  
@@ -46,7 +46,7 @@ ms.locfileid: "36036121"
 |**Severity**|**int**|上次嘗試時所發生錯誤的嚴重性層級 (只限**EventSubClass** 1)。|20|是|  
 |**StartTime**|**datetime**|建立作業的時間。|14|是|  
 |**State**|**int**|上次嘗試時的錯誤狀態 (只限**EventSubClass** 1)。|30|是|  
-|**TextData**|**ntext**|事件子類別值的文字描述。|@shouldalert|是|  
+|**TextData**|**ntext**|事件子類別值的文字描述。|1|是|  
 |**型別**|**int**|作業類型。|57|是|  
   
 ## <a name="see-also"></a>另請參閱  

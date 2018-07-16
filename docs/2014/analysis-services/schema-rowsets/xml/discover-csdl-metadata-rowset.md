@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_CSDL_METADATA 資料列集 |Microsoft 文件
+title: DISCOVER_CSDL_METADATA 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2d3cffd-a2c4-411c-b244-9e41ebe30939
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3bac193969cb4f5392944a79351b44390b013596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29f94bd307f0e863e6ff8e54b7b0ec54281f20b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293522"
 ---
 # <a name="discovercsdlmetadata-rowset"></a>DISCOVER_CSDL_METADATA 資料列集
   傳回有關 (表格式或多維度) [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料模型的資訊，提供 CSDLBI (概念結構定義語言商業智慧註解) 格式的模型定義。 CSDLBI 是以 CSDL 為基礎，它是實體資料架構所使用的 XML 結構描述，用於 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 伺服器與 [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] 用戶端之間的通訊。 商業智慧 (BI) 註解提供了有關表格式模型和其中所含物件的其他中繼資料。 如需表格式資料模型的詳細資訊，請參閱[商業智慧的 CSDL 註解 &#40;CSDLBI&#41;](../../tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)。  
@@ -120,7 +120,7 @@ ms.locfileid: "36035770"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|3444B255-171E-4cb9-AD98-19E57888A75F|  
 |ADOMDNAME|Csdl|  

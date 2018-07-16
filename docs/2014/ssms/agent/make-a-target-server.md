@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.tsxwiz.msx.f1
 - sql12.ag.tsxwiz.cover.f1
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - target servers [SQL Server], creating
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa3a985133eca22ee3222d78b7c9467063e75163
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b168db1de8ad6b10f924d625612e0b6c00ae1d15
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191338"
 ---
 # <a name="make-a-target-server"></a>設為目標伺服器
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 SQL Server 管理物件 (SMO) 在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中設定目標伺服器。  
@@ -109,9 +109,9 @@ ms.locfileid: "36132565"
     GO;  
     ```  
   
-     如需詳細資訊，請參閱[sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
+     如需詳細資訊，請參閱 < [sp_msx_enlist &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql)。  
   
-##  <a name="PowerShellProcedure"></a> 使用 SQL Server 管理物件 (SMO)  
+##  <a name="PowerShellProcedure"></a> 使用 SQL Server Management Objects (SMO)  
   
 ## <a name="see-also"></a>另請參閱  
  [將整個企業的管理自動化](automated-administration-across-an-enterprise.md)  

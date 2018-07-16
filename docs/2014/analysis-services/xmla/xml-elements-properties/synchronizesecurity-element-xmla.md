@@ -1,5 +1,5 @@
 ---
-title: SynchronizeSecurity 元素 (XMLA) |Microsoft 文件
+title: SynchronizeSecurity 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SynchronizeSecurity element
 ms.assetid: d37dbb95-f4a4-44ac-8eb9-f661d5bb5018
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: cc50a9acd38fe394e5ac6b457f72e76669b5ec64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: dee99edf98aec8a9cd3b11add261cd941f9c9a0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030131"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330258"
 ---
 # <a name="synchronizesecurity-element-xmla"></a>SynchronizeSecurity 元素 (XMLA)
-  指定期間如何同步處理安全性定義，例如角色和權限， [Synchronize](../xml-elements-commands/synchronize-element-xmla.md)命令。  
+  指定如何同步處理期間的安全性定義，例如角色和權限[同步處理](../xml-elements-commands/synchronize-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,11 +64,11 @@ ms.locfileid: "36030131"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `Security`元素會決定是否在上定義的安全性定義，例如角色和權限， [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料庫會同步處理期間`Synchronize`命令。 此外，這個元素也會決定定義為安全性定義成員的 Windows 使用者帳戶和群組是否會包含成為 `Synchronize` 命令的一部分。  
+ `Security`元素會決定上定義的安全性定義，例如角色和權限，是否[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料庫同步處理期間`Synchronize`命令。 此外，這個元素也會決定定義為安全性定義成員的 Windows 使用者帳戶和群組是否會包含成為 `Synchronize` 命令的一部分。  
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*SkipMembership*|在進行 `Synchronize` 命令期間，包含安全性定義，但是排除成員資格資訊。|  
 |*CopyAll*|在進行 `Synchronize` 命令期間，包含安全性定義和成員資格資訊。|  

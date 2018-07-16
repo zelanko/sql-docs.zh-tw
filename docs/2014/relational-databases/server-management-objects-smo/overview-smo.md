@@ -1,5 +1,5 @@
 ---
-title: 概觀 (SMO) |Microsoft 文件
+title: 概觀 (SMO) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,18 +12,18 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: 68
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 85d8e44514e4d26be4c720e562c4db7ac7b7af12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 28ccb6ff5219277d25d56670cf46f84e8e7726fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315658"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 是設計來以程式設計方式管理的物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 是專為以程式設計方式管理的物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用 SMO 來建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理應用程式。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是一種用來管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的功能強大且廣泛的應用程式，但是可能有時候 SMO 應用程式還是會提供比較好的服務。  
   
  例如，可能必須簡化控制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理工作的使用者應用程式，才能符合新使用者的需求及降低訓練成本。 您可能必須建立自訂的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，或是建立一個應用程式來建立及監視索引的效率。 也可能會使用 SMO 應用程式，將協力廠商硬體或軟體緊密地併入資料庫管理應用程式中。  
   
@@ -49,29 +49,29 @@ ms.locfileid: "36034967"
   
 -   資料表和索引資料分割，可用於資料分割配置上的資料儲存。 如需相關資訊，請參閱 [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md)。  
   
--   HTTP 端點，可用於管理 SOAP 要求。 如需詳細資訊，請參閱[實作端點](tasks/implementing-endpoints.md)。  
+-   HTTP 端點，可用於管理 SOAP 要求。 如需詳細資訊，請參閱 <<c0> [ 實作端點](tasks/implementing-endpoints.md)。  
   
--   快照隔離和資料列層級版本控制，可用於提升並行數。 如需詳細資訊，請參閱[使用快照隔離](../native-client/features/working-with-snapshot-isolation.md)。  
+-   快照隔離和資料列層級版本控制，可用於提升並行數。 如需詳細資訊，請參閱 <<c0> [ 使用快照隔離](../native-client/features/working-with-snapshot-isolation.md)。  
   
--   XML 結構描述集合、XML 索引和 XML 資料類型會提供 XML 資料的驗證和儲存功能。 如需詳細資訊，請參閱[XML 結構描述集合&#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md)和[使用 XML 結構描述](tasks/using-xml-schemas.md)。  
+-   XML 結構描述集合、XML 索引和 XML 資料類型會提供 XML 資料的驗證和儲存功能。 如需詳細資訊，請參閱 < [XML 結構描述集合&#40;SQL Server&#41; ](../xml/xml-schema-collections-sql-server.md)並[使用的 XML 結構描述](tasks/using-xml-schemas.md)。  
   
 -   用於建立唯讀資料庫複本的快照集資料庫。  
   
--   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 可支援以訊息為基礎的通訊。 如需詳細資訊，請參閱[SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)。  
+-   [!INCLUDE[ssSB](../../includes/sssb-md.md)] 可支援以訊息為基礎的通訊。 如需詳細資訊，請參閱 < [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件多個名稱的同義字支援。 如需詳細資訊，請參閱[同義字&#40;Database Engine&#41;](../synonyms/synonyms-database-engine.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫物件多個名稱的同義字支援。 如需詳細資訊，請參閱 <<c0> [ 同義字&#40;資料庫引擎&#41;](../synonyms/synonyms-database-engine.md)。</c0>  
   
 -   Database Mail 的管理，可讓您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立電子郵件伺服器、電子郵件設定檔和電子郵件帳戶。 如需詳細資訊，請參閱 [Database Mail](../database-mail/database-mail.md)。  
   
--   已註冊的伺服器支援，可用於註冊連接資訊。 如需詳細資訊，請參閱[註冊伺服器](../../ssms/register-servers/register-servers.md)。  
+-   已註冊的伺服器支援，可用於註冊連接資訊。 如需詳細資訊，請參閱 <<c0> [ 註冊伺服器](../../ssms/register-servers/register-servers.md)。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的追蹤和重新執行。 如需詳細資訊，請參閱[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)， [SQL 追蹤](../sql-trace/sql-trace.md)， [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)，和[擴充事件](../extended-events/extended-events.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 事件的追蹤和重新執行。 如需詳細資訊，請參閱 < [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)， [SQL 追蹤](../sql-trace/sql-trace.md)， [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)，以及[擴充事件](../extended-events/extended-events.md)。  
   
--   憑證和金鑰的支援，可用於安全性控制。 如需詳細資訊，請參閱[加密階層](../security/encryption/encryption-hierarchy.md)。  
+-   憑證和金鑰的支援，可用於安全性控制。 如需詳細資訊，請參閱 <<c0> [ 加密階層](../security/encryption/encryption-hierarchy.md)。  
   
 -   DDL 觸發程序，可在 DDL 事件發生時加入功能。 如需詳細資訊，請參閱 [DDL 觸發程序](../triggers/ddl-triggers.md)。  
   
- SMO 命名空間為 <xref:Microsoft.SqlServer.Management.Smo>。 SMO 會實作為[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]組件。 這表示，common language runtime 來自[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]必須安裝 2.0 版，才能使用 SMO 物件。 預設會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 選項將 SMO 組件安裝到全域組件快取 (GAC) 中。 這些組件位於 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]。 如需詳細資訊，請參閱[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文件。  
+ SMO 命名空間為 <xref:Microsoft.SqlServer.Management.Smo>。 SMO 會實作為[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]組件。 這表示 common language runtime 來自[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]之前使用 SMO 物件，就必須安裝 2.0 版。 預設會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SDK 選項將 SMO 組件安裝到全域組件快取 (GAC) 中。 這些組件位於 [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]。 如需詳細資訊，請參閱 < [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]文件。  
   
 ## <a name="smo-classes"></a>SMO 類別  
  SMO 類別包含兩種類別目錄：執行個體類別和公用程式類別。  
@@ -115,7 +115,7 @@ ms.locfileid: "36034967"
   
  **指令碼**  
   
- 在 SMO 中，指令碼的功能已經增強，並移到 `Scripter` 類別中。 `Scripter`類別可以探索相依性、 了解物件，並可讓管理相依性階層之間的關聯性。 主要的指令碼物件是 `Scripter` 物件。 也有幾個支援物件可處理相依性及回應進度或錯誤事件。  
+ 在 SMO 中，指令碼的功能已經增強，並移到 `Scripter` 類別中。 `Scripter`類別可以探索相依性、 了解物件，以及可操作的相依性階層架構之間的關聯性。 主要的指令碼物件是 `Scripter` 物件。 也有幾個支援物件可處理相依性及回應進度或錯誤事件。  
   
  `Scripter` 物件支援下列進階指令碼選項：  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36034967"
 /Server/Database[@Name='Adventureworks2012']  
 ```  
   
- 物件的 URN 可以藉由參考它的 URN 屬性來加以擷取。 Scripter 物件也會使用 URN 當做參數，將物件參考傳遞給 `Scripter` 物件的方法。 此外，可以針對指定的 URN **GetSmoObject**方法`Server`物件。 這是用來建立 SMO 物件的執行個體。  
+ 物件的 URN 可以藉由參考它的 URN 屬性來加以擷取。 Scripter 物件也會使用 URN 當做參數，將物件參考傳遞給 `Scripter` 物件的方法。 此外，針對指定 URN **GetSmoObject**方法`Server`物件。 這是用來建立 SMO 物件的執行個體。  
   
 ## <a name="new-sql-server-features-represented-in-smo"></a>SMO 中表示的新 SQL Server 功能  
  **資料表和索引資料分割**  

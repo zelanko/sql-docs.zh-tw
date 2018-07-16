@@ -1,5 +1,5 @@
 ---
-title: 安裝 Microsoft Connector for 1.1 SAP BW |Microsoft 文件
+title: 安裝 Microsoft Connector for 1.1 SAP BW |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: dc6bbbf5972615880d3852d5f56a955862c9f22b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff4176fabb78aede03ca04fdf64fc52085431c9b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248793"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>安裝 Microsoft Connector for 1.1 SAP BW
-  若要安裝[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW 及其文件，下載及執行 SQL Server 功能套件網頁上的 Windows installer 套件。  
+  若要安裝[!INCLUDE[msCoName](../includes/msconame-md.md)]Connector 1.1 for SAP BW 及其文件中，下載並執行 SQL Server 功能套件網頁上的 Windows installer 套件。  
   
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9eedf55aae8fe87da589d7fccb5e53456d70039
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efe8941ee77c9dbfd8ee335e9e1a2ed2931d1503
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322678"
 ---
 # <a name="define-a-state-variable"></a>定義狀態變數
   此程序描述如何定義 CDC 狀態儲存所在的封裝變數。  
@@ -53,10 +53,10 @@ ms.locfileid: "36032367"
 |-----------|-----------------|  
 |(INITIAL)|這是目前的 CDC 群組上有任何封裝執行之前的初始狀態。 這也是 CDC 狀態為空白時呈現的狀態。|  
 |ILSTART (初始載入開始)|這是在 CDC 控制工作的 `MarkInitialLoadStart` 作業呼叫之後，初始載入封裝開始時的狀態。|  
-|ILEND (初始載入結束)|這是狀態時，初始載入封裝順利結束後`MarkInitialLoadEnd`CDC 控制工作作業呼叫。|  
-|ILUPDATE (初始載入更新)|這是緊接於初始載入之後而仍在處理初始處理範圍期間執行 Trickle 摘要更新封裝時的狀態。 這是之後`GetProcessingRange`CDC 控制工作作業呼叫。<br /><br /> 如果使用了 __$reprocessing 資料行，其值就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。|  
+|ILEND (初始載入結束)|這是初始載入封裝順利結束時的狀態之後`MarkInitialLoadEnd`作業呼叫在 CDC 控制工作。|  
+|ILUPDATE (初始載入更新)|這是緊接於初始載入之後而仍在處理初始處理範圍期間執行 Trickle 摘要更新封裝時的狀態。 這是在之後`GetProcessingRange`作業呼叫在 CDC 控制工作。<br /><br /> 如果使用了 __$reprocessing 資料行，其值就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。|  
 |TFEND (Trickle 摘要更新結束)|這是一般 CDC 回合所預期的狀態。 這種狀態表示上一個回合已順利完成，而且可以啟動具有新處理範圍的新回合。|  
-|TFSTART|這是之後在非初次執行 trickle 摘要的更新封裝中，狀態`GetProcessingRange`CDC 控制工作作業呼叫。<br /><br /> 這表示一般 CDC 回合已啟動但尚未完成或尚未完成，完全 (`MarkProcessedRange`)。|  
+|TFSTART|這是後的狀態，非初次執行 trickle 摘要的更新封裝，`GetProcessingRange`作業呼叫在 CDC 控制工作。<br /><br /> 這表示一般 CDC 回合已啟動但尚未完成或尚未完成，完全 (`MarkProcessedRange`)。|  
 |TFREDO (重新處理 Trickle 摘要更新)|這是在 TFSTART 之後發生 `GetProcessingRange` 時的狀態。 這種狀態表示上一個回合並未順利完成。<br /><br /> 如果使用了 __$reprocessing 資料行，其值就會設定為 1，表示封裝可能要重新處理已經位於目標上的資料列。|  
 |ERROR|CDC 群組處於 ERROR 狀態。|  
   

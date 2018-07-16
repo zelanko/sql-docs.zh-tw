@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
 - tasks [Integration Services], variables
@@ -19,13 +19,13 @@ ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b820a671418fc3126f2b5904f9a2a1c0c881eaa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311968"
 ---
 # <a name="system-variables"></a>系統變數
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供一組儲存執行封裝及其物件之資訊的系統變數。 這些變數可以用於運算式及屬性運算式，以自訂封裝、容器、工作及事件處理常式。  
@@ -45,7 +45,7 @@ ms.locfileid: "36134217"
 |`ExecutionInstanceGUID`|String|執行封裝之執行個體的唯一識別碼。|  
 |`FailedConfigurations`|String|失敗的封裝組態名稱。|  
 |`IgnoreConfigurationsOnLoad`|布林|指出載入封裝時是否忽略封裝組態。|  
-|**InteractiveMode**|布林|指示封裝是否以互動模式執行。 如果封裝在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中執行，則此屬性設為 `True`。 如果封裝執行時使用**DTExec**命令提示字元公用程式的屬性設定為`False`。|  
+|**InteractiveMode**|布林|指示封裝是否以互動模式執行。 如果封裝在「[!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師」中執行，則此屬性設為 `True`。 如果使用執行封裝**DTExec**命令提示字元公用程式的屬性設定為`False`。|  
 |`LocaleId`|Int32|封裝使用的地區設定。|  
 |**MachineName**|String|執行封裝之電腦的名稱。|  
 |**OfflineMode**|布林|指出封裝是否處於離線模式。 離線模式不會取得與資料來源的連接。|  
@@ -93,7 +93,7 @@ ms.locfileid: "36134217"
 |**ProgressCountHigh**|Int32|64 位元值的較高部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |`ProgressCountLow`|Int32|64 位元值的較低部份，指示 OnProgress 事件處理的作業總數。|OnProgress 事件處理常式|  
 |**ProgressDescription**|String|進度的描述。|OnProgress 事件處理常式|  
-|`Propagate`|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 注意： 的值`Propagate`變數驗證封裝期間，會忽略。<br /><br /> 如果您在子封裝中，將 `Propagate` 設定為 `False`，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
+|`Propagate`|布林|指示是否將事件傳播至較高層級的事件處理常式。<br /><br /> 附註： 值的`Propagate`驗證封裝期間，會忽略變數。<br /><br /> 如果您在子封裝中，將 `Propagate` 設定為 `False`，這就無法防止事件向上擴展到父封裝。|所有事件處理常式|  
 |`SourceDescription`|String|事件處理常式中引發事件之可執行檔的描述。|所有事件處理常式|  
 |`SourceID`|String|事件處理常式中引發事件之可執行檔的唯一識別碼。|所有事件處理常式|  
 |**SourceName**|String|事件處理常式中引發事件之可執行檔的名稱。|所有事件處理常式|  
@@ -108,6 +108,6 @@ ms.locfileid: "36134217"
  此規則也適用於使用者自訂變數。 但是，由於系統變數的資料類型無法變更，而且您必須修改這些變數的用法以符合其資料類型，因此使用者自訂變數比較有彈性。 參數繫結中使用之使用者自訂變數所定義的資料類型，通常與其對應參數的資料類型相容。  
   
 ## <a name="related-tasks"></a>相關工作  
- [將查詢參數對應至變數，在執行 SQL 工作](control-flow/execute-sql-task.md)  
+ [在執行 SQL 工作中將查詢參數對應至變數](control-flow/execute-sql-task.md)  
   
   

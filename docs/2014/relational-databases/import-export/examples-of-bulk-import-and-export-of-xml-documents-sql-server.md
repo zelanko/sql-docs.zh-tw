@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
 - bulk importing [SQL Server], data formats
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5ef7ed95cce28904377f0aa9fd1b446c89fb0db1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134630"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303928"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>大量匯入與匯出 XML 文件的範例 (SQL Server)
     
@@ -43,7 +42,7 @@ ms.locfileid: "36134630"
   
 -   INSERT ...SELECT * FROM OPENROWSET(BULK...)  
   
- 如需詳細資訊，請參閱[匯入和匯出大量資料使用 bcp 公用程式&#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)和[使用 BULK INSERT 或 OPENROWSET 匯入大量資料&#40;大量...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 匯入和匯出大量資料使用 bcp 公用程式&#40;SQL Server&#41; ](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)並[使用 BULK INSERT 或 OPENROWSET 匯入大量資料&#40;大量...&#41; &#40;SQL Server&#41;](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)。</c0>  
   
 ## <a name="examples"></a>範例  
  此範例如下：  
@@ -54,12 +53,12 @@ ms.locfileid: "36134630"
   
 -   C. [大量匯入 XML 資料，從包含 DTD 的檔案](#file_contains_dtd)  
   
--   D. [指定使用格式檔案明確欄位結束字元](#field_terminator_in_format_file)  
+-   D. [指定欄位結束字元，明確地使用格式檔案](#field_terminator_in_format_file)  
   
 -   E. [大量匯出 XML 資料](#bulk_export_xml_data)  
   
 ###  <a name="binary_byte_stream"></a> A. 以二進位位元組資料流大量匯入 XML 資料  
- 從包含您要套用的編碼宣告之檔案大量匯入 XML 資料時，請在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 選項。 SINGLE_BLOB 選項可確保中的 XML 剖析器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入資料，根據 XML 宣告中指定的編碼配置。  
+ 從包含您要套用的編碼宣告之檔案大量匯入 XML 資料時，請在 OPENROWSET(BULK…) 子句中指定 SINGLE_BLOB 選項。 SINGLE_BLOB 選項可確保中的 XML 剖析器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]根據 XML 宣告中指定的編碼配置的資料匯入。  
   
 #### <a name="sample-table"></a>範例資料表  
  若要測試範例 A，您必須建立範例資料表`T`。  

@@ -1,5 +1,5 @@
 ---
-title: 關聯性 (SSAS 表格式) |Microsoft 文件
+title: 關聯性 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2796fb23a51d0da71e4314cdbeaab70a13332d5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 517446889205621e4cb9b866e858f53a622bf75d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035314"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314534"
 ---
 # <a name="relationships-ssas-tabular"></a>關聯性 (SSAS 表格式)
   在表格式模型中，關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。 例如，Customers 資料表和 Orders 資料表可以產生關聯，以便顯示彼此有關聯性的客戶名稱。  
@@ -50,37 +50,37 @@ ms.locfileid: "36035314"
 ##  <a name="what"></a> 優點  
  關聯性是在兩個資料表之間，以每個資料表中的一個或多個資料行為基礎的連接。 若要了解為什麼關聯性是有用的，請假設您在追蹤自己商務中的客戶訂單資料。 您可以在具有類似下列結構的單一資料表中追蹤所有資料：  
   
-|CustomerID|[屬性]|EMail|DiscountRate|OrderID|OrderDate|產品|Quantity|  
+|CustomerID|名稱|EMail|DiscountRate|OrderID|OrderDate|產品|Quantity|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
+|1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
+|1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
 |2|Jaworski|michal.jaworski@contoso.com|.10|254|2010-01-03|Budget Movie-Maker|27|  
   
  這種方法可能有效，但牽涉到儲存太多重複的資料，例如每筆訂單的客戶電子郵件地址。 儲存雖然廉價，但是如果電子郵件地址變更，您就需要確定更新該客戶的每個資料列。 此問題的一種解決方案，就是將資料分為多個資料表，並且定義這些資料表之間的關聯性。 這正是在 *這類* 「關聯式資料庫」 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Relational databases) 中使用的方法。 例如，您匯入模型的資料庫可能會使用三個相關的資料表來表示訂單資料：  
   
 ### <a name="customers"></a>客戶  
   
-|[CustomerID]|[屬性]|EMail|  
+|[CustomerID]|名稱|EMail|  
 |--------------------|----------|-----------|  
-|@shouldalert|Ashton|chris.ashton@contoso.com|  
+|1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
   
 ### <a name="customerdiscounts"></a>CustomerDiscounts  
   
 |[CustomerID]|DiscountRate|  
 |--------------------|------------------|  
-|@shouldalert|.05|  
+|1|.05|  
 |2|.10|  
   
 ### <a name="orders"></a>Orders  
   
 |[CustomerID]|OrderID|OrderDate|產品|Quantity|  
 |--------------------|-------------|---------------|-------------|--------------|  
-|@shouldalert|256|2010-01-07|Compact Digital|11|  
-|@shouldalert|255|2010-01-03|SLR Camera|15|  
+|1|256|2010-01-07|Compact Digital|11|  
+|1|255|2010-01-03|SLR Camera|15|  
 |2|254|2010-01-03|Budget Movie-Maker|27|  
   
- 如果從相同資料庫匯入這些資料表，[資料表匯入精靈] 即可根據 [方括號] 中的資料行來偵測資料表之間的關聯性，而且可以在模型設計師中重現這些關聯性。 如需詳細資訊，請參閱本主題中的 [關聯性的自動偵測和推斷](#detection) 。 如果您從多個來源匯入資料表，您可以手動建立關聯性中所述[建立資料表之間的關聯兩個&#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  
+ 如果從相同資料庫匯入這些資料表，[資料表匯入精靈] 即可根據 [方括號] 中的資料行來偵測資料表之間的關聯性，而且可以在模型設計師中重現這些關聯性。 如需詳細資訊，請參閱本主題中的 [關聯性的自動偵測和推斷](#detection) 。 如果您匯入多個來源的資料表，您可以手動建立關聯性中所述[建立關聯性之間兩個資料表的&#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  
   
 ### <a name="columns-and-keys"></a>資料行與索引鍵  
  關聯性是以包含相同資料的每個資料表中的資料行為基礎。 例如，「客戶」和「訂單」資料表可以彼此相關，因為兩者都包含儲存客戶 ID 的資料行。 在此範例中，資料行名稱相同，但這點並不是需求。 一個資料行可以是 CustomerID，另一個資料行則可是 CustomerNumber，只要「訂單」資料表中所有包含 ID 的資料列也都有儲存在「客戶」資料表中即可。  
@@ -116,7 +116,7 @@ ms.locfileid: "36035314"
 ### <a name="single-active-relationship-between-tables"></a>資料表之間的單一使用中關聯性  
  多個關聯性可能會在資料表之間造成模稜兩可的相依性。 若要建立精確的計算，您需要從一個資料表到下一個資料表的單一路徑。 因此，每一對資料表之間只能有一個使用中的關聯性。 例如，在 AdventureWorks DW 2012 中，資料表 DimDate 包含一個資料行 DateKey，這個資料行與資料表 FactInternetSales 中的三個不同資料行相關：OrderDate、DueDate 與 ShipDate。 如果您嘗試匯入這些資料表，會成功建立第一個關聯性，但是對於包含相同資料行的後續關聯性，則會收到下列錯誤：  
   
- \* 關聯性： 資料表 [column 1]-> table [column 2]-狀態： 錯誤-原因： 無法建立資料表之間的關聯性\<資料表 1 > 和\<表格 2 >。 兩個資料表之間只能有一個直接或間接關聯性。  
+ \* 關聯性： table [column 1]-> table [column 2]-狀態： 錯誤-原因： 無法在資料表之間建立關聯性\<資料表 1 > 和\<表 2 >。 兩個資料表之間只能有一個直接或間接關聯性。  
   
  如果您有兩個資料表，而且在這兩個資料表之間有多個關聯性，則您需要匯入包含查閱資料行之資料表的多個複本，然後在每對資料表之間建立一個關聯性。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36035314"
   
  如果您的模型包含來自多個資料來源的資料，則可能需要手動建立關聯性。 例如，您可以從關聯式資料來源匯入 Customers、CustomerDiscounts 和 Orders 資料表。 來源中這些資料表之間的現有關聯式會在模型中自動建立。 然後，您可以從不同來源新增其他資料表，例如，從 Microsoft Excel 活頁簿中的 Geography 資料表匯入地區資料。 接著手動建立 Customers 資料表中的資料行和 Geography 資料表中的資料行之間的關聯性。  
   
- 若要在表格式模型中手動建立關聯性，您可以使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 此圖表檢視以圖形格式顯示資料表，以及資料表之間的關聯性。 您可以按一下一個資料表中的資料行，將游標拖曳到另一個資料表中，輕鬆地在兩個資料表之間以正確順序建立關聯性。 [管理關聯性] 對話方塊以簡單的表格格式顯示資料表之間的關聯性。 若要了解如何手動建立關聯性，請參閱[建立資料表之間的關聯兩個&#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  
+ 若要在表格式模型中手動建立關聯性，您可以使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 此圖表檢視以圖形格式顯示資料表，以及資料表之間的關聯性。 您可以按一下一個資料表中的資料行，將游標拖曳到另一個資料表中，輕鬆地在兩個資料表之間以正確順序建立關聯性。 [管理關聯性] 對話方塊以簡單的表格格式顯示資料表之間的關聯性。 若要了解如何手動建立關聯性，請參閱[建立關聯性之間兩個資料表的&#40;SSAS 表格式&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)。  
   
 ##  <a name="bkmk_dupl_errors"></a> 重複值及其他錯誤  
  如果您選擇不能用於關聯性的資料行，資料行旁邊就會出現紅色的 X。 您可以將游標暫停在錯誤圖示上方，以檢視訊息，其中提供有關此問題的詳細資訊。 以下列出的問題，可能會使得所選資料行之間無法建立關聯性：  

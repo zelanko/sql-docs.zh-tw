@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: 80
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: a9ababac85cb978253682050d558c7d8aca8aad5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 11041aeddd084b47ba1747ce2e555819743d9766
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287986"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>執行可用性群組的強制手動容錯移轉 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中的 PowerShell，在 AlwaysOn 可用性群組上執行強制容錯移轉 (可能會遺失資料)。 強制容錯移轉是一種手動容錯移轉形式，嚴格限於 [已規劃的手動容錯移轉](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) 不可行時用來進行災難復原。 如果您強制容錯移轉至非同步的次要複本，有些資料可能會遺失。 因此，強烈建議您只有在主要複本不再執行、而且您願意承擔遺失資料的風險以還原可用性群組中對資料庫的存取時，才進行強制容錯移轉。  
@@ -161,7 +160,7 @@ ms.locfileid: "36146834"
   
     -   `-AllowDataLoss`  
   
-         根據預設，`-AllowDataLoss` 參數會使 `Switch-SqlAvailabilityGroup` 提示您提醒自己強制容錯移轉可能會導致遺失未認可交易以及要求確認。 若要繼續，請輸入`Y`; 若要取消操作，請輸入`N`。  
+         根據預設，`-AllowDataLoss` 參數會使 `Switch-SqlAvailabilityGroup` 提示您提醒自己強制容錯移轉可能會導致遺失未認可交易以及要求確認。 若要繼續，請輸入`Y`; 若要取消作業，請輸入`N`。  
   
          以下範例會針對名稱為 `MyAg` 之伺服器執行個體上的次要複本，執行可用性群組 `SecondaryServer\InstanceName`的強制容錯移轉 (可能會遺失資料)。 您將會收到確認此作業的提示。  
   
@@ -173,7 +172,7 @@ ms.locfileid: "36146834"
   
     -   **-AllowDataLoss-Force**  
   
-         若要在不確認的情況下起始強制容錯移轉，請同時指定 `-AllowDataLoss` 和 `-Force` 參數。 如果您要在指令碼中加入命令，並在沒有使用者介入的情況之下執行它，這相當實用。  不過，使用`-Force`選項小心，因為強制容錯移轉可能會導致遺失資料從參與可用性群組的資料庫。  
+         若要在不確認的情況下起始強制容錯移轉，請同時指定 `-AllowDataLoss` 和 `-Force` 參數。 如果您要在指令碼中加入命令，並在沒有使用者介入的情況之下執行它，這相當實用。  不過，使用`-Force`選項小心，因為強制容錯移轉可能會導致遺失的資料從參與可用性群組的資料庫。  
   
          以下範例會針對名稱為 `MyAg` 的伺服器執行個體，執行可用性群組 `SecondaryServer\InstanceName`的強制容錯移轉 (可能會遺失資料)。 `-Force` 選項會隱藏此作業的確認。  
   
@@ -325,7 +324,7 @@ ms.locfileid: "36146834"
   
 -   **白皮書：**  
   
-     [Microsoft SQL Server AlwaysOn 高可用性和災害復原的解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Microsoft 的 SQL Server 2012 白皮書](http://msdn.microsoft.com/library/hh403491.aspx)  
   

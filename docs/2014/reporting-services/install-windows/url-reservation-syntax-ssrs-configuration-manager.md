@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 381abbb4ce34272a87f9b9a569fd6c869d0d7152
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133896"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301708"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>URL 保留項目語法 (SSRS 組態管理員)
   本主題描述報表伺服器 Web 服務和報表管理員的 URL 字串部分。 儲存於內部的 URL 字串結構與您在瀏覽器視窗的網址列中輸入的 URL 不同。 當您設定 URL 而且它位於 RSReportServer.config 檔案中時，URL 保留項目字串會出現在 Reporting Services 組態工具的 [結果] 視窗中。 如果您要排除 URL 保留項目問題或是查詢 HTTP.SYS 來檢視伺服器上所定義的內部 URL 保留項目，知道 URL 字串如何定義將會很有幫助。  
   
 ## <a name="url-syntax"></a>URL 語法  
- 報表伺服器 URL 會儲存在 `UrlString` 元素和 `VirtualDirectory` 元素中。 區隔的原因`UrlString`和`VirtualDirectory`分成不同元素時，您可以擁有多個 URL 字串，但是只有一個虛擬目錄名稱，每個[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]應用程式。  
+ 報表伺服器 URL 會儲存在 `UrlString` 元素和 `VirtualDirectory` 元素中。 區隔的原因`UrlString`並`VirtualDirectory`分成不同元素是您可以有多個 URL 字串，但只有一個虛擬目錄名稱，每個[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]應用程式。  
   
  在 HTTP.SYS 中，URL 保留項目包含 `UrlString` 和 `VirtualDirectory` 兩者。 URL 保留項目的語法包含以下部分：  
   

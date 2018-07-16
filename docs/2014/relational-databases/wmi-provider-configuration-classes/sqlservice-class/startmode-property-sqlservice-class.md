@@ -1,5 +1,5 @@
 ---
-title: StartMode 屬性 （SqlService 類別） |Microsoft 文件
+title: StartMode 屬性 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - StartMode property
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a79c5d15341541027d6ef88dd043f9cd3b544bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: c3bed01976385885d84768101d8b64c9436fdcea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307488"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode 屬性 (SqlService 類別)
   取得服務的啟動模式。  

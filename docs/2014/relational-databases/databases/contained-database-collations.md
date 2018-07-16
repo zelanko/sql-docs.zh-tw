@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - contained database, collations
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2858721cdfa3de8c9ebbe2dff0897c1dd806047e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1677c81bb13261e054d352697faeaf96aefd392c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316478"
 ---
 # <a name="contained-database-collations"></a>自主資料庫定序
   許多屬性會影響文字資料的排序次序和相等語意，包括區分大小寫、區分腔調字和使用的基底語言。 這些品質會透過資料的定序選擇表達至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需定序本身的更深入討論，請參閱[定序與 Unicode 支援](../collations/collation-and-unicode-support.md)。  
@@ -31,7 +31,7 @@ ms.locfileid: "36132449"
  本主題將釐清此變更的內容，並且檢查此變更可能會導致問題的區域。  
   
 ## <a name="non-contained-databases"></a>非自主資料庫  
- 所有資料庫都具有預設定序 (可在建立或改變資料庫時設定)。 這個定序會用於資料庫中的所有中繼資料，以及資料庫中所有字串資料行的預設值。 使用者可以選擇任何特定資料行不同的定序使用`COLLATE`子句。  
+ 所有資料庫都具有預設定序 (可在建立或改變資料庫時設定)。 這個定序會用於資料庫中的所有中繼資料，以及資料庫中所有字串資料行的預設值。 使用者可以選擇使用的任何特定資料行不同的定序`COLLATE`子句。  
   
 ### <a name="example-1"></a>範例 1  
  例如，如果我們在北京工作，可能會使用中文定序：  
@@ -62,7 +62,7 @@ mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS
 mycolumn2       Frisian_100_CS_AS  
 ```  
   
- 這段程式碼似乎相當簡單，不過卻引發許多問題。 因為資料行的定序相依於建立資料表的資料庫，使用的暫存資料表就會儲存在引發問題`tempdb`。 定序`tempdb`通常符合執行個體，不需要符合資料庫定序的定序。  
+ 這段程式碼似乎相當簡單，不過卻引發許多問題。 因為資料行的定序相依於資料表建立所在的資料庫，使用暫存資料表就會儲存在引發問題`tempdb`。 定序`tempdb`通常符合執行個體，不需要符合資料庫定序的定序。  
   
 ### <a name="example-2"></a>範例 2  
  例如，假設上述 (中文) 資料庫使用於具有 **Latin1_General** 定序的執行個體上：  
@@ -122,9 +122,9 @@ END;
   
  在自主資料庫中，目錄定序 **Latin1_General_100_CI_AS_WS_KS_SC**。 對於所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體上之所有自主資料庫而言，這個定序都相同，而且無法變更。  
   
- 雖然資料庫定序會保留下來，不過只當做使用者資料的預設定序使用。 根據預設，資料庫定序等於模型資料庫定序，但是可以變更使用者已透過`CREATE`或`ALTER DATABASE`命令做為與非自主資料庫。  
+ 雖然資料庫定序會保留下來，不過只當做使用者資料的預設定序使用。 根據預設，資料庫定序等於模型資料庫定序，但是可以變更使用者已透過`CREATE`或`ALTER DATABASE`命令如同非自主資料庫。  
   
- `CATALOG_DEFAULT` 子句提供了新的關鍵字 `COLLATE`。 在包含和非自主資料庫中，這個關鍵字會當做中繼資料之目前定序的捷徑使用。 也就是在非自主資料庫中，`CATALOG_DEFAULT`會傳回目前的資料庫定序，因為中繼資料已在資料庫定序。 在自主資料庫中，這兩個值可能會不同，因為使用者可以變更資料庫定序，讓它不符合目錄定序。  
+ `CATALOG_DEFAULT` 子句提供了新的關鍵字 `COLLATE`。 在包含和非自主資料庫中，這個關鍵字會當做中繼資料之目前定序的捷徑使用。 也就是在非自主資料庫中，`CATALOG_DEFAULT`會傳回目前的資料庫定序，因為中繼資料已定資料庫定序。 在自主資料庫中，這兩個值可能會不同，因為使用者可以變更資料庫定序，讓它不符合目錄定序。  
   
  下表將摘要說明包含和非自主資料庫中各種物件的行為：  
   
@@ -155,11 +155,11 @@ JOIN #T2
  這段程式碼會正常運作，因為 `T1_txt` 和 `T2_txt` 已在自主資料庫的資料庫定序中定序。  
   
 ## <a name="crossing-between-contained-and-uncontained-contexts"></a>跨越包含與未包含的內容  
- 只要自主資料庫中的工作階段維持包含狀態，它就必須保留在所連接的資料庫中。 在此情況下，其行為非常直接。 但是，如果工作階段跨越包含與非包含的內容，其行為就會變得更複雜，因為您必須橋接這兩組規則。 這可能是在部分自主資料庫中，因為使用者可能`USE`到另一個資料庫。 在此情況下，定序規則的差異是由下列原則處理。  
+ 只要自主資料庫中的工作階段維持包含狀態，它就必須保留在所連接的資料庫中。 在此情況下，其行為非常直接。 但是，如果工作階段跨越包含與非包含的內容，其行為就會變得更複雜，因為您必須橋接這兩組規則。 這種情形在部分自主資料庫中，因為使用者可能`USE`到另一個資料庫。 在此情況下，定序規則的差異是由下列原則處理。  
   
 -   批次的定序行為是由批次開始的資料庫所決定。  
   
- 請注意，在發出任何命令，包括初始之前，進行這項決策`USE`。 也就是說，如果批次開始在自主的資料庫中，但是第一個命令是`USE`非自主資料庫，包含的定序行為仍然會用於批次。 根據這點，變數的參考可能會產生多個可能的結果：  
+ 請注意，在發出任何命令，包括初始之前，進行這項決策`USE`。 也就是說，如果批次開始在自主的資料庫中，但第一個命令是`USE`非自主資料庫，包含的定序行為仍然會用於批次。 根據這點，變數的參考可能會產生多個可能的結果：  
   
 -   參考可能只會尋找一個符合項目。 在此情況下，參考運作時不會發生錯誤。  
   
@@ -167,7 +167,7 @@ JOIN #T2
   
 -   參考可能會尋找原本不同的多個相符項目。 這也會引發錯誤。  
   
- 我們將使用一些範例來說明這點。 在這些範例中，我們假設有一個名為 `MyCDB` 之部分自主資料庫，而且其資料庫定序設定為預設定序 **Latin1_General_100_CI_AS_WS_KS_SC**。 我們假設執行個體定序為`Latin1_General_100_CS_AS_WS_KS_SC`。 這兩個定序只有區分大小寫不同。  
+ 我們將使用一些範例來說明這點。 在這些範例中，我們假設有一個名為 `MyCDB` 之部分自主資料庫，而且其資料庫定序設定為預設定序 **Latin1_General_100_CI_AS_WS_KS_SC**。 我們假設執行個體定序是`Latin1_General_100_CS_AS_WS_KS_SC`。 這兩個定序只有區分大小寫不同。  
   
 ### <a name="example-1"></a>範例 1  
  下列範例將說明參考只會尋找一個符合項目的案例。  
@@ -239,7 +239,7 @@ GO
  無效的物件名稱 '#A'。  
   
 ### <a name="example-3"></a>範例 3  
- 下列範例將說明參考會尋找原本不同的多個相符項目的案例。 首先，我們開始`tempdb`（其中有我們的執行個體相同的區分大小寫定序），然後執行下列陳述式。  
+ 下列範例將說明參考會尋找原本不同的多個相符項目的案例。 首先，我們開始`tempdb`（具有執行個體相同的區分大小寫定序），然後執行下列陳述式。  
   
 ```  
 USE tempdb;  

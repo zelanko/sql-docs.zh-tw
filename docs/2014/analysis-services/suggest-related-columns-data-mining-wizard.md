@@ -1,5 +1,5 @@
 ---
-title: 建議相關資料行 （資料採礦精靈） |Microsoft 文件
+title: 建議相關資料行 （資料採礦精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.suggestrelatedcolumns.f1
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ccad7814782f69536ff0bfab2244d5ab523e4d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6007ce4d2eef03ad4a1f416c8c8409d13e4a544b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226428"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>建議相關資料行 (資料採礦精靈)
   使用 **[建議相關資料行]** 頁面，即可檢視您在先前的精靈頁面中選取之 **[建議]** 功能的建議。 會根據輸入資料行與所選取 [可預測] 資料行的關聯，預先選取輸入資料行。 如果您接受此對話方塊中的變更，這些變更就會反映在 **[指定培訓資料]** 頁面上。  

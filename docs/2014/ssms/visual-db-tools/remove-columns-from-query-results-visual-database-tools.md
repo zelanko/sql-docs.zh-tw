@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [SQL Server], deleting
 - result sets [SQL Server], queries
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 24f72c0da16bb9c0fe7500e6381eba63fc40859c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: dab0c64711da6e8e975920aa3c584f76a0713881
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301308"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>移除查詢結果的資料行 (Visual Database Tools)
   如果在選取查詢中使用資料行，但不要此資料行顯示於結果集 (也就是說，不要它出現在查詢的選取清單)，您可以將它從輸出中移除。 從查詢的輸出移除資料行後，仍可以在搜尋條件中使用它或做為排序欄位。  

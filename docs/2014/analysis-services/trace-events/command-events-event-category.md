@@ -1,5 +1,5 @@
 ---
-title: 命令事件類別目錄 |Microsoft 文件
+title: 命令事件的事件類別目錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - command events [Analysis Services]
 - Command Events event category
 - event classes [Analysis Services], command events
 ms.assetid: 23140c9f-3f5b-4755-920e-1246cbf0d1a3
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8d92c0382ef4c31e16d6ba48f77b09638b9baf31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30cef8542ef11cd0366a71219cbc22930da2a5f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134253"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289434"
 ---
 # <a name="command-events-event-category"></a>命令事件的事件類別目錄
   [命令事件] 事件類別目錄具有下表所描述的事件類別。  

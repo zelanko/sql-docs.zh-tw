@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - surface area configuration [SQL Server], sp_configure
 - configuration options [SQL Server], when take effect
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - administering SQL Server, configuration options
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 caps.latest.revision: 116
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b1ae5c91b9ffebf1b4c5aba1ecaf4c2f19401d68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0ba5185fd33f6ad7dc2e7d5d8b7e228140a0181f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035966"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316998"
 ---
 # <a name="server-configuration-options-sql-server"></a>伺服器組態選項 (SQL Server)
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 sp_configure 系統預存程序，透過組態選項來管理及最佳化 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 資源。 最常使用的伺服器組態選項可以透過 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來使用，而所有組態選項都可以透過 sp_configure 來存取。 在設定這些選項前，請仔細考慮這些選項對系統所造成的效果。 如需詳細資訊，請參閱[檢視或變更伺服器屬性 &#40;SQL Server&#41;](view-or-change-server-properties-sql-server.md)。  
@@ -72,29 +72,29 @@ ms.locfileid: "36035966"
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
-    |[ad hoc distributed queries](ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[ad hoc distributed queries](ad-hoc-distributed-queries-server-configuration-option.md) (A)|0|1|0|  
     |[affinity I/O mask](affinity-input-output-mask-server-configuration-option.md) (A、RR)|-2147483648|2147483647|0|  
     |[affinity64 I/O mask](affinity64-input-output-mask-server-configuration-option.md) (A，只能在 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上使用)|-2147483648|2147483647|0|  
     |[affinity mask](affinity-mask-server-configuration-option.md) (A)|-2147483648|2147483647|0|  
     |[affinity64 mask](affinity64-mask-server-configuration-option.md) (A、RR)，只能用於 64 位元版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|-2147483648|2147483647|0|  
-    |[Agent XPs](agent-xps-server-configuration-option.md) (A)|0|@shouldalert|0<br /><br /> ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時將變成 1。 如果在安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定為自動啟動，預設值就是 0)。|  
-    |[allow updates](allow-updates-server-configuration-option.md) (已過時。 請勿使用。 否則會在重新設定期間導致錯誤)。|0|@shouldalert|0|  
-    |[備份總和檢查碼預設](../backup-checksum-default.md)|0|@shouldalert|0|  
-    |[backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|@shouldalert|0|  
+    |[Agent XPs](agent-xps-server-configuration-option.md) (A)|0|1|0<br /><br /> ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 啟動時將變成 1。 如果在安裝期間將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 設定為自動啟動，預設值就是 0)。|  
+    |[allow updates](allow-updates-server-configuration-option.md) (已過時。 請勿使用。 否則會在重新設定期間導致錯誤)。|0|1|0|  
+    |[備份總和檢查碼預設](../backup-checksum-default.md)|0|1|0|  
+    |[backup compression default](view-or-configure-the-backup-compression-default-server-configuration-option.md)|0|1|0|  
     |[已封鎖的處理序臨界值](blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
-    |[c2 audit mode](c2-audit-mode-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
-    |[clr enabled](clr-enabled-server-configuration-option.md)|0|@shouldalert|0|  
-    |[common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
+    |[c2 audit mode](c2-audit-mode-server-configuration-option.md) (A、RR)|0|1|0|  
+    |[clr enabled](clr-enabled-server-configuration-option.md)|0|1|0|  
+    |[common criteria compliance enabled](common-criteria-compliance-enabled-server-configuration-option.md) (A、RR)|0|1|0|  
     |[自主資料庫驗證](contained-database-authentication-server-configuration-option.md)|0||0|  
     |[平行處理原則的成本臨界值](configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
-    |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|@shouldalert|0|  
+    |[cross db ownership chaining](cross-db-ownership-chaining-server-configuration-option.md)|0|1|0|  
     |[資料指標臨界值](configure-the-cursor-threshold-server-configuration-option.md) (A)|-1|2147483647|-1|  
-    |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[Database Mail XPs](database-mail-xps-server-configuration-option.md) (A)|0|1|0|  
     |[預設全文檢索語言](configure-the-default-full-text-language-server-configuration-option.md) (A)|0|2147483647|1033|  
     |[default language](configure-the-default-language-server-configuration-option.md)|0|9999|0|  
-    |[預設追蹤已啟用](default-trace-enabled-server-configuration-option.md) (A)|0|@shouldalert|@shouldalert|  
-    |[不允許來自觸發程序的結果](disallow-results-from-triggers-server-configuration-option.md) (A)|0|@shouldalert|0|  
-    |[EKM provider enabled](ekm-provider-enabled-server-configuration-option.md)|0|@shouldalert|0|  
+    |[預設追蹤已啟用](default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
+    |[不允許來自觸發程序的結果](disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
+    |[EKM provider enabled](ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
     |[filestream_access_level](filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](configure-the-fill-factor-server-configuration-option.md) (A、RR)|0|100|0|  
     |ft crawl bandwidth (max)，請參閱 [ft crawl bandwidth](ft-crawl-bandwidth-server-configuration-option.md)(A)|0|32767|100|  
@@ -103,7 +103,7 @@ ms.locfileid: "36035966"
     |ft notify bandwidth (min)，請參閱 [ft notify bandwidth](ft-notify-bandwidth-server-configuration-option.md)(A)|0|32767|0|  
     |[index create memory](configure-the-index-create-memory-server-configuration-option.md) (A、SC)|704|2147483647|0|  
     |[in-doubt xact resolution](in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
-    |[lightweight pooling](lightweight-pooling-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
+    |[lightweight pooling](lightweight-pooling-server-configuration-option.md) (A、RR)|0|1|0|  
     |[locks](configure-the-locks-server-configuration-option.md) (A、RR、SC)|5000|2147483647|0|  
     |[max degree of parallelism](configure-the-max-degree-of-parallelism-server-configuration-option.md) (A)|0|32767|0|  
     |[max full-text crawl range](max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
@@ -113,33 +113,33 @@ ms.locfileid: "36035966"
     |[media retention](configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  
-    |[巢狀觸發程序](configure-the-nested-triggers-server-configuration-option.md)|0|@shouldalert|@shouldalert|  
+    |[巢狀觸發程序](configure-the-nested-triggers-server-configuration-option.md)|0|1|1|  
     |[network packet size](configure-the-network-packet-size-server-configuration-option.md) (A)|512|32767|4096|  
-    |[Ole Automation Procedures](ole-automation-procedures-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[Ole Automation Procedures](ole-automation-procedures-server-configuration-option.md) (A)|0|1|0|  
     |[open objects](open-objects-server-configuration-option.md) (A、RR，已過時)|0|2147483647|0|  
-    |[optimize for ad hoc workloads](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|@shouldalert|0|  
-    |[PH_timeout](ph-timeout-server-configuration-option.md) (A)|@shouldalert|3600|60|  
-    |[precompute rank](precompute-rank-server-configuration-option.md) (A)|0|@shouldalert|0|  
-    |[priority boost](configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
+    |[optimize for ad hoc workloads](optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
+    |[PH_timeout](ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
+    |[precompute rank](precompute-rank-server-configuration-option.md) (A)|0|1|0|  
+    |[priority boost](configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|1|0|  
     |[query governor cost limit](configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  
     |[query wait](configure-the-query-wait-server-configuration-option.md) (A)|-1|2147483647|-1|  
     |[recovery interval](configure-the-recovery-interval-server-configuration-option.md) (A、SC)|0|32767|0|  
-    |[remote access](configure-the-remote-access-server-configuration-option.md) (RR)|0|@shouldalert|@shouldalert|  
-    |[remote admin connections](remote-admin-connections-server-configuration-option.md)|0|@shouldalert|0|  
+    |[remote access](configure-the-remote-access-server-configuration-option.md) (RR)|0|1|1|  
+    |[remote admin connections](remote-admin-connections-server-configuration-option.md)|0|1|0|  
     |[remote login timeout](configure-the-remote-login-timeout-server-configuration-option.md)|0|2147483647|10|  
-    |[remote proc trans](configure-the-remote-proc-trans-server-configuration-option.md)|0|@shouldalert|0|  
+    |[remote proc trans](configure-the-remote-proc-trans-server-configuration-option.md)|0|1|0|  
     |[remote query timeout](configure-the-remote-query-timeout-server-configuration-option.md)|0|2147483647|600|  
-    |[Replication XPs Option](replication-xps-server-configuration-option.md) (A)|0|@shouldalert|0|  
-    |[scan for startup procs](configure-the-scan-for-startup-procs-server-configuration-option.md) (A、RR)|0|@shouldalert|0|  
-    |[server trigger recursion](server-trigger-recursion-server-configuration-option.md)|0|@shouldalert|@shouldalert|  
-    |[set working set size](set-working-set-size-server-configuration-option.md) (A、RR，已過時)|0|@shouldalert|0|  
-    |[show advanced options](show-advanced-options-server-configuration-option.md)|0|@shouldalert|0|  
-    |[SMO and DMO XPs](smo-and-dmo-xps-server-configuration-option.md) (A)|0|@shouldalert|@shouldalert|  
-    |[transform noise words](transform-noise-words-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[Replication XPs Option](replication-xps-server-configuration-option.md) (A)|0|1|0|  
+    |[scan for startup procs](configure-the-scan-for-startup-procs-server-configuration-option.md) (A、RR)|0|1|0|  
+    |[server trigger recursion](server-trigger-recursion-server-configuration-option.md)|0|1|1|  
+    |[set working set size](set-working-set-size-server-configuration-option.md) (A、RR，已過時)|0|1|0|  
+    |[show advanced options](show-advanced-options-server-configuration-option.md)|0|1|0|  
+    |[SMO and DMO XPs](smo-and-dmo-xps-server-configuration-option.md) (A)|0|1|1|  
+    |[transform noise words](transform-noise-words-server-configuration-option.md) (A)|0|1|0|  
     |[two digit year cutoff](configure-the-two-digit-year-cutoff-server-configuration-option.md) (A)|1753|9999|2049|  
     |[user connections](configure-the-user-connections-server-configuration-option.md) (A、RR、SC)|0|32767|0|  
     |[user options](configure-the-user-options-server-configuration-option.md)|0|32767|0|  
-    |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|@shouldalert|0|  
+    |[xp_cmdshell](xp-cmdshell-server-configuration-option.md) (A)|0|1|0|  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   

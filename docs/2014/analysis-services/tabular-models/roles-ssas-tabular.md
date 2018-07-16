@@ -1,5 +1,5 @@
 ---
-title: 角色 (SSAS 表格式) |Microsoft 文件
+title: 角色 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3748f99899990bd46379928b3d524e43e48d277a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036003"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235688"
 ---
 # <a name="roles-ssas-tabular"></a>角色 (SSAS 表格式)
   表格式模型中的角色定義模型的成員權限。 每個角色都包含成員 (依 Windows 使用者名稱或 Windows 群組列出) 和權限 (讀取、處理、系統管理員)。 角色的成員可以依角色權限所定義，對模型執行動作。 以讀取權限定義的角色也可以使用資料列層級篩選，在資料列層級提供額外的安全性。  
@@ -100,8 +100,8 @@ ms.locfileid: "36036003"
   
 |函數|描述|  
 |--------------|-----------------|  
-|[USERNAME 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|傳回目前登入使用者的 domain\username。|  
-|[CUSTOMDATA 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|傳回連接字串中的 CustomData 屬性。|  
+|[USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|傳回目前登入使用者的 domain\username。|  
+|[CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|傳回連接字串中的 CustomData 屬性。|  
   
  您可以使用 LOOKUPVALUE 函數傳回資料行值，其中 Windows 使用者名稱與 USERNAME 函數傳回的使用者名稱或 CustomData 函數傳回的字串相同。 然後，可以限制查詢，其中 LOOKUPVALUE 所傳回的值會符合相同或相關資料表中的值。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36036003"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|@shouldalert|Corporate|  
+|1|Corporate|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|Manufacturing|  
@@ -144,8 +144,8 @@ ms.locfileid: "36036003"
 ## <a name="see-also"></a>另請參閱  
  [檢視方塊&#40;SSAS 表格式&#41;](perspectives-ssas-tabular.md)   
  [在 Excel 中分析&#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
+ [LOOKUPVALUE 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
+ [CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

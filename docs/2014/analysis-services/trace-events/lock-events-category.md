@@ -1,5 +1,5 @@
 ---
-title: 鎖定事件類別目錄 |Microsoft 文件
+title: 鎖定事件類別目錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06427f8e-89bb-4710-a0c1-dc5e42b7e95e
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e9bb88bb19f92ea383049ac62a500d1b0f5319f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0a3fc63269fdaff254ef2dfd412ef3a706abb09d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145235"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302768"
 ---
 # <a name="lock-events-category"></a>Lock 事件類別目錄
   鎖定事件的事件類別目錄具有下表所描述的事件類別。  

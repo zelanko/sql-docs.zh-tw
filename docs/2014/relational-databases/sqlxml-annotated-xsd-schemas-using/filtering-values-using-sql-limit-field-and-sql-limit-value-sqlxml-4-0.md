@@ -1,5 +1,5 @@
 ---
-title: '篩選值使用 sql: limit-value-欄位和 sql: limit-value-值 (SQLXML 4.0) |Microsoft 文件'
+title: '篩選值使用 sql: limit-value-欄位和 sql: limit-value-值 (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6cc802c42db2f688ee7d4cab0876e64ee9becc28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d2ae0fe5a6bc85a9c2535b65f1989a8d5cd72904
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260554"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)
   您可以根據特定的限制值來限制從資料庫查詢傳回的資料列。 `sql:limit-field` 和 `sql:limit-value` 註解用於識別包含限制值的資料庫資料行，以及指定篩選所傳回之資料所使用的特定限制值。  
@@ -58,7 +58,7 @@ ms.locfileid: "36036758"
   
  一個客戶可以有一個送貨地址和/或一個帳單地址。 AddressType 資料行值為 Shipping 和 Billing。  
   
- 這是對應的結構描述的**ShipTo**結構描述屬性會對應到 Addresses 關聯中的 StreetAddress 資料行。 針對此屬性傳回的值會透過指定 `sql:limit-field` 和 `sql:limit-value` 註解，僅限於送貨地址。 同樣地， **BillTo**結構描述屬性會傳回客戶的帳單地址。  
+ 這是對應的結構描述所在**ShipTo**結構描述屬性會對應到 Addresses 關聯中的 StreetAddress 資料行。 針對此屬性傳回的值會透過指定 `sql:limit-field` 和 `sql:limit-value` 註解，僅限於送貨地址。 同樣地， **BillTo**結構描述屬性會傳回客戶的帳單地址。  
   
  這是結構描述：  
   
@@ -151,7 +151,7 @@ ms.locfileid: "36036758"
   
 5.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 < [Ba6e326154d2"&gt;using ADO to Execute SQLXML Queries&lt](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下是結果：  
   
@@ -175,7 +175,7 @@ ms.locfileid: "36036758"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- 這是對應的結構描述的**OrderID**訂單詳細資料上的屬性會對應到 orders 關聯中的 OrderID 資料行。 針對此屬性傳回的值會僅限於值為 2.0000000 e-001 (0.2) 與指定的相同**折扣**屬性使用`sql:limit-field`和`sql:limit-value`註解。  
+ 這是對應的結構描述所在**OrderID**訂單明細上的屬性會對應到 orders 關聯中的 OrderID 資料行。 針對此屬性傳回的值會僅限於值為 2.0000000e-001 (0.2) 針對所指定**折扣**屬性使用`sql:limit-field`和`sql:limit-value`註解。  
   
  這是結構描述：  
   
@@ -311,7 +311,7 @@ ms.locfileid: "36036758"
   
 ## <a name="see-also"></a>另請參閱  
  [float 和 real &#40;Transact-SQL&#41;](/sql/t-sql/data-types/float-and-real-transact-sql)   
- [nchar 和 nvarchar &#40;Transact SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
+ [nchar 和 nvarchar &#40;-SQL&AMP;#41;&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [安裝 SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [使用註解式 XSD 結構描述，在查詢中的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
   

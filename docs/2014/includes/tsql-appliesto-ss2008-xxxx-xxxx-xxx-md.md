@@ -1,1 +1,1 @@
-**本主題的適用對象：** ![是](media/yes.png "是")SQL Server\(開頭 2008年\)![沒有](media/no.png "沒有")Azure SQL Database![沒有](media/no.png "沒有")Azure SQL 資料倉儲![沒有](media/no.png "沒有")平行處理資料倉儲
+**本主題適用於：** ![[是]](media/yes.png "yes")SQL Server\(從 2008年開始\)![沒有](media/no.png "沒有")Azure SQL Database![沒有](media/no.png "沒有")Azure SQL 資料倉儲![沒有](media/no.png "沒有")平行資料倉儲

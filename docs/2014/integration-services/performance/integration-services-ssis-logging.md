@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - Windows Event log provider [Integration Services]
@@ -27,13 +27,13 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9611d78d6b94038511b29577aca5aaefb36366d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2656998d20bec2d0133a7158a3695f4163943181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133741"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291044"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) 記錄
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包括可用於在封裝、容器和工作中實作記錄的記錄提供者。 使用記錄，可以擷取有關封裝的執行階段資訊，藉此幫助您在每次執行封裝時對其進行稽核和疑難排解。 例如，記錄可以擷取執行封裝之操作員的名稱，以及封裝開始和結束的時間。  
@@ -56,7 +56,7 @@ ms.locfileid: "36133741"
     > [!NOTE]  
     >  您無法在以 64 位元模式執行的封裝中使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 記錄提供者。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄提供者，將記錄檔項目寫入`sysssislog`資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記錄提供者，將記錄項目寫入`sysssislog`資料表中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
   
 -   「Windows 事件」記錄提供者，它可將項目寫入本機電腦上之「Windows 事件」記錄的「應用程式」記錄中。  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36133741"
 ### <a name="configuration-of-log-provider"></a>設定記錄提供者  
  您可以透過 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師或以程式設計方式設定屬性。  
   
- 記錄提供者是按照在封裝中實作記錄的步驟而建立和設定的。 如需詳細資訊，請參閱[Integration Services 記錄](integration-services-ssis-logging.md)。  
+ 記錄提供者是按照在封裝中實作記錄的步驟而建立和設定的。 如需詳細資訊，請參閱 < [Integration Services 記錄](integration-services-ssis-logging.md)。  
   
  建立記錄提供者之後，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]的 [屬性] 視窗中檢視和修改其屬性。  
   
@@ -209,16 +209,16 @@ ms.locfileid: "36133741"
   
 -   [設定 SSIS 記錄對話方塊](../configure-ssis-logs-dialog-box.md)  
   
--   [啟用封裝記錄中的 SQL Server 資料工具](../enable-package-logging-in-sql-server-data-tools.md)  
+-   [在 SQL Server Data Tools 中啟用套件記錄功能](../enable-package-logging-in-sql-server-data-tools.md)  
   
--   [啟用 for Package Execution on the SSIS Server 記錄](../enable-logging-for-package-execution-on-the-ssis-server.md)  
+-   [在 SSIS 伺服器上啟用套件執行的記錄功能](../enable-logging-for-package-execution-on-the-ssis-server.md)  
   
--   [在 [記錄事件] 視窗中檢視記錄項目](../view-log-entries-in-the-log-events-window.md)  
+-   [檢視記錄事件視窗中的記錄項目](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>相關內容  
  [用於完整及詳細記錄的 DTLoggedExec 工具 (CodePlex 專案)](http://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>另請參閱  
- [在 [記錄事件] 視窗中檢視記錄項目](../view-log-entries-in-the-log-events-window.md)  
+ [檢視記錄事件視窗中的記錄項目](../view-log-entries-in-the-log-events-window.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 檢閱彙總使用方式 （基於使用方式的最佳化精靈） |Microsoft 文件
+title: 檢閱彙總使用方式 （基於使用方式的 Optimiation 精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.reviewaggregationusage.f1
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21618aabe9c7e429c7d78a68c7fcfb9d61a0754c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 76140fbc19eaa8beae41c1196143a326dc5c6414
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235678"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>檢閱彙總使用方式 (基於使用方式的最佳化精靈)
   使用 **[檢閱彙總使用方式]** 頁面，即可設定彙總使用方式設定。  
@@ -39,7 +39,7 @@ ms.locfileid: "36036205"
  **不受限制**  
  選取此選項，即可將屬性的彙總使用方式設定設為 Unrestricted。 透過使用這項設定，系統將不會對彙總設計師設定任何限制。 不過，此屬性仍然必須經過評估，以便判斷它是否為重要的彙總候選。  
   
- **設定所有預設值**  
+ **全部設定為預設值**  
  選取此選項，即可將所有屬性的彙總使用方式設定都設為 Default。  
   
 ## <a name="see-also"></a>另請參閱  

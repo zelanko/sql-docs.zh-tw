@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], creating
 - snapshot replication [SQL Server], initial snapshots
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 caps.latest.revision: 42
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: acb9bfe0b078dae12d4c4db1263f86dcd7700590
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 13184d6de8612a2b86492854e755961008e3f3ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329851"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>建立和套用初始快照集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立及套用初始快照集。 使用參數化篩選的合併式發行集需要一個兩段式快照集。 如需詳細資訊，請參閱 [使用參數化篩選建立合併式發行集的快照集](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)。  
@@ -159,13 +159,13 @@ ms.locfileid: "36030510"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.TransPublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以載入物件的剩餘屬性。 如果此方法傳回`false`，是在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以載入物件的剩餘屬性。 如果此方法傳回`false`，在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
   
-4.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，呼叫<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>建立此發行集的快照集代理程式作業。  
+4.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>已`false`，呼叫<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>建立這個發行集的快照集代理程式作業。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法來啟動代理程式作業，以針對這個發行集產生快照集。  
   
-6.  （選擇性）當值<xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A>是`true`，快照集可供訂閱者。  
+6.  （選擇性）當 windows 7<xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A>是`true`，快照集可供訂閱者。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-snapshot-or-transactional-publication-by-running-the-snapshot-agent-synchronous"></a>執行快照集代理程式 (同步) 來針對快照式或交易式發行集產生初始快照集  
   
@@ -193,13 +193,13 @@ ms.locfileid: "36030510"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以載入物件的剩餘屬性。 如果此方法傳回`false`，是在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以載入物件的剩餘屬性。 如果此方法傳回`false`，在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
   
-4.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>是`false`，呼叫<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>建立此發行集的快照集代理程式作業。  
+4.  如果值<xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>已`false`，呼叫<xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>建立這個發行集的快照集代理程式作業。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 方法來啟動代理程式作業，以針對這個發行集產生快照集。  
   
-6.  （選擇性）當值<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>是`true`，快照集可供訂閱者。  
+6.  （選擇性）當 windows 7<xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A>是`true`，快照集可供訂閱者。  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-running-the-snapshot-agent-synchronous"></a>執行快照集代理程式 (同步) 來針對合併式發行集產生初始快照集  
   

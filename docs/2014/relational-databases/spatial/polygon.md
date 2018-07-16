@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 25
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6a76fc29f234418e5f44586f4fb7e121c3395264
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 629dd979c00c9a40915c94c5bfe79d28b746f44a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146914"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238758"
 ---
 # <a name="polygon"></a>多邊形
-  A`Polygon`是儲存為一連串點定義一個外部週框環形以及零或多個內部環形的二維度介面。  
+  A`Polygon`是儲存為一連串點定義一個外部週框環形以及零或多個內部環形的二維介面。  
   
 ## <a name="polygon-instances"></a>Polygon 執行個體  
- A`Polygon`可以由有至少三個相異點的環形形成的執行個體。 A`Polygon`執行個體也可以是空白。  
+ A`Polygon`執行個體可以從環形組成有至少三個相異點。 A`Polygon`執行個體也可以是空白。  
   
  外部和任何內部環形`Polygon`定義它的界限。 此環形內的空間定義了 `Polygon` 的內部。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36146914"
   
  要讓環形成為可接受環形所需的準則如下。  
   
--   `LineString`必須接受執行個體。  
+-   `LineString`必須接受的執行個體。  
   
 -   `LineString` 執行個體至少必須具有四個點。  
   
@@ -85,7 +85,7 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- 內部環形`Polygon`接觸其本身及彼此在單一正切點，但是如果的內部環形`Polygon`，跨執行個體無效。  
+ 內部環形`Polygon`接觸其本身及彼此在單一正切點，但是，如果內部環形的`Polygon`，跨執行個體無效。  
   
  下列範例示範有效`Polygon`執行個體。  
   
@@ -108,7 +108,7 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` 無效，因為內部環形與外部環形有兩個接觸點。 `@g2` 無效，因為第二個內部環形位於第一個內部環形的內部。 `@g3` 不是有效因為在多個連續點接觸的兩個內部環形。 `@g4` 無效，因為兩個內部環形的內部互相重疊。 `@g5` 無效，因為內部環形不是第一個環形。 `@g6` 無效，因為環形並未包含至少三個不同的點。  
+ `@g1` 無效，因為內部環形與外部環形有兩個接觸點。 `@g2` 無效，因為第二個內部環形位於第一個內部環形的內部。 `@g3` 不是有效因為在多個連續點接觸，兩個內部環形。 `@g4` 無效，因為兩個內部環形的內部互相重疊。 `@g5` 無效，因為內部環形不是第一個環形。 `@g6` 無效，因為環形並未包含至少三個不同的點。  
   
 ## <a name="examples"></a>範例  
  下列範例會建立包含一個洞及 SRID 10 的簡單 `geometry``Polygon` 執行個體。  

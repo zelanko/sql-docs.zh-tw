@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parameters [XML in SQL Server]
 - XML [SQL Server], ADO
@@ -26,15 +26,15 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c4dbf8007297478af88784b183089db9d4774c7e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 13440d6941d05fd02c1c98c8a75d538adbf749de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132675"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293948"
 ---
 # <a name="use-xml-data-in-applications"></a>在應用程式中使用 XML 資料
   本主題描述可供您使用的選項`xml`應用程式中的資料類型。 此主題包括有關下列項目的資訊：  
@@ -48,7 +48,7 @@ ms.locfileid: "36132675"
 ## <a name="handling-xml-from-an-xml-type-column-by-using-ado-and-sql-server-native-client"></a>使用 ADO 和 SQL Server Native Client 處理 xml 類型資料行中的 XML  
  若要使用 MDAC 元件來存取 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中所引進的類型和功能，您必須在 ADO 連接字串中設定 DataTypeCompatibility 初始化屬性。  
   
- 例如，以下 Visual Basic Scripting Edition (VBScript) 範例顯示查詢的結果`xml`資料類型資料行， `Demographics`，請在`Sales.Store`資料表`AdventureWorks2012`範例資料庫。 此查詢特別會尋找此資料行，其資料列的 `CustomerID` 等於 `3`的例項值。  
+ 例如，下列 Visual Basic Scripting Edition (VBScript) 範例顯示的查詢結果`xml`資料類型資料行`Demographics`，請在`Sales.Store`資料表的`AdventureWorks2012`範例資料庫。 此查詢特別會尋找此資料行，其資料列的 `CustomerID` 等於 `3`的例項值。  
   
 ```  
 Const DS = "MyServer"  
@@ -92,7 +92,7 @@ Set objRs = Nothing
 Set objConn = Nothing  
 ```  
   
- 此範例顯示如何設定資料類型相容性屬性。 當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，預設會設定為 0。 如果您將值設定為 80， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者會讓`xml`和使用者定義型別資料行顯示為[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]資料型別。 分別是 DBTYPE_WSTR 和 DBTYPE_BYTES。  
+ 此範例顯示如何設定資料類型相容性屬性。 當您使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 時，預設會設定為 0。 如果您設定的值為 80 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者會讓`xml`和使用者定義型別資料行顯示為[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]資料型別。 分別是 DBTYPE_WSTR 和 DBTYPE_BYTES。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 您也必須在用戶端電腦上安裝 Native Client，而且連接字串必須以 "`Provider=SQLNCLI11;...`" 指定它當作資料提供者。  
   
@@ -149,12 +149,12 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>使用 ADO.NET 處理 xml 類型資料行的 XML  
- 若要處理來自 XML`xml`使用 ADO.NET 資料類型資料行和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]您可以使用的標準行為`SqlCommand`類別。 例如，`xml`資料類型資料行和其值可以在同一個 SQL 擷取資料行一樣是藉由擷取`SqlDataReader`。不過，如果您想要使用的內容`xml`資料類型資料行做為 XML，您就必須先將內容指定`XmlReader`型別。  
+ 若要處理來自 XML`xml`使用 ADO.NET 的資料類型資料行和[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]您可以使用的標準行為`SqlCommand`類別。 例如，`xml`資料類型資料行和其值可以在同一個 SQL 資料行的方式一樣，使用來擷取擷取`SqlDataReader`。不過，如果您想要使用的內容`xml`資料類型資料行為 XML，您就必須將內容以`XmlReader`型別。  
   
  如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件集的 "XML Column Values in a Data Reader"。  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>使用 ADO.NET 處理參數中的 xml 類型資料行  
- 若要以 ADO.NET 和 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 處理傳遞為參數的 xml 資料類型，您可以提供值作為 `SqlXml` 資料類型的例項。 不涉及任何特殊處理，因為`xml`資料類型資料行中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可以接受參數值相同的方式與其他資料行及資料類型，例如`string`或`integer`。  
+ 若要以 ADO.NET 和 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 處理傳遞為參數的 xml 資料類型，您可以提供值作為 `SqlXml` 資料類型的例項。 不涉及任何特殊處理，因為`xml`資料類型中的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]可接受參數值相同的方式與其他資料行及資料類型，例如`string`或`integer`。  
   
  如需詳細資訊及範例程式碼，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 文件集的 "XML Values as Command Parameters"。  
   

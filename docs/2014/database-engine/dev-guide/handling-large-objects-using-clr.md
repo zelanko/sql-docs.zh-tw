@@ -1,5 +1,5 @@
 ---
-title: 處理大型物件使用的 CLR |Microsoft 文件
+title: 處理大型物件使用 CLR |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cb48a2c342d24bd4d7df12dc3fd7759ffb06e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a9408351a786192be62ca9c7c5e0cd8305effc3e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035050"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310348"
 ---
 # <a name="handling-large-objects-using-clr"></a>使用 CLR 處理大型物件
   SQL Server 的 `HandlingLOBUsingCLR` 範例會示範如何使用 Common Language Runtime (CLR) 預存程序，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與伺服器可用的檔案系統之間傳送大型物件 (LOB)。 此範例示範如何在伺服器端程式碼中存取檔案，並從以 CLR 為基礎的預存程序同時叫用動態查詢和預存程序。 它也示範如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來註冊和取消註冊 CLR 方法及組件。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要建立並執行這個專案，您必須安裝下列軟體：  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 您可以從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 文件集和範例[網站](http://go.microsoft.com/fwlink/?LinkId=31046)免費取得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express  

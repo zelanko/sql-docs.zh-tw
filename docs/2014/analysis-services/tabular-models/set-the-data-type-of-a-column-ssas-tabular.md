@@ -1,5 +1,5 @@
 ---
-title: 設定資料類型資料行 (SSAS 表格式) |Microsoft 文件
+title: 設定資料行資料類型 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a6c0c55e44192b348b9ae1510d9ee90731185b70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0871dbef7b9b9a053a7c79688ec7073d2d8fdcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312228"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>設定資料行的資料類型 (SSAS 表格式)
   當您將資料匯入或貼上模型時，模型設計師會自動偵測並套用資料類型。 將資料加入至模型之後，您可以手動修改資料行的資料類型，以變更資料儲存的方式。 如果您只要變更資料顯示方式的格式，而不要變更其儲存方式，可以只變更該顯示格式。  
@@ -69,9 +69,9 @@ ms.locfileid: "36133317"
   
  如果資料類型受到支援，但是模型設計師卻發現不受新資料類型支援的值，您會接到另一項錯誤，並將需要修正資料值，才能再繼續進行。  
   
- 如需使用商業智慧語意模型中的資料類型的詳細資訊，它們都是隱含轉換以及不同資料類型的方式公式中使用，請參閱[支援的資料類型&#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md).  
+ 如需使用商業智慧語意模型中的資料類型的詳細資訊，它們都以隱含方式轉換，和不同資料類型的方式可在公式中，請參閱 <<c0> [ 支援的資料類型&#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md).</c0>  
   
 ## <a name="see-also"></a>另請參閱  
- [支援的資料型別&#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)  
+ [支援的資料類型&#40;SSAS 表格式&#41;](data-types-supported-ssas-tabular.md)  
   
   
