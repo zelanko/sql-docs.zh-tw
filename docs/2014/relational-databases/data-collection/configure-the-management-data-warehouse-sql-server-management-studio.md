@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dc.datacollection.wizard_finish.f1
 - sql12.swb.dc.datacollection.wizard_maploginuser.f1
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f178be9c57ce162cb8f3a15034a5c817f30d1dfb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f9114f2fea8daa3c7ee38d123e4a34d55ed4a2c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326268"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>設定管理資料倉儲 (SQL Server Management Studio)
   此主題描述如何設定管理資料倉儲，以支援使用資料收集器之一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的資料儲存體。 這些執行個體可以在相同伺服器或不同伺服器上。 此主題也提供 [設定管理資料倉儲精靈](#Wizard) 對話方塊的使用者介面描述。 如需設定資料收集器的詳細資訊，請參閱＜ [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md)＞。  

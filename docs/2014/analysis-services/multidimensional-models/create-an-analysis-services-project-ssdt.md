@@ -1,5 +1,5 @@
 ---
-title: 建立 Analysis Services 專案 (SSDT) |Microsoft 文件
+title: 建立 Analysis Services 專案 (SSDT) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [Analysis Services]
 - templates [Analysis Services], projects
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9361e396f9d3c4d33ac2113e2dab68ef00b6b248
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 382e8996ea270203e3a3e756f927764e8aeebf9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035556"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328558"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>建立 Analysis Services 專案 (SSDT)
   您可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 專案範本，或使用 [匯入 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫精靈] 讀取 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫的內容，來定義 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案。 如果目前在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中未載入任何方案，則建立新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案會自動建立新的方案； 否則會將新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案加入至現有的方案。 方案開發的最佳作法需要為不同類型的應用程式資料建立個別的專案，並在專案相關時使用單一方案。 例如，您可以擁有一個方案，其中包含 Integration Services 封裝、Analysis Services 資料庫及 Reporting Services 報表的不同專案，以供相同的商務應用程式使用。  

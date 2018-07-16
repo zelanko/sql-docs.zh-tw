@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09ada3ef426e365ec6ff734cb35da7bb2e394b14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 140fac99176fc41f5e3967c158c7929fe9554989
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134684"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180415"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 可讓您在電腦上準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體，並於稍後完成設定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 需要使用包含兩個步驟的程序來取得已設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]獨立執行個體。 這些步驟包含以下內容：  
@@ -69,7 +69,7 @@ ms.locfileid: "36134684"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當您準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體時，也會自動準備瀏覽器與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]寫入器。 當您在完成映像步驟中完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，便會完成這兩個項目。  
   
- 如需有關支援的版本資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 如需有關支援的版本資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  您可以執行版本升級，同時設定備妥的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 版本不支援這個選項。  
   

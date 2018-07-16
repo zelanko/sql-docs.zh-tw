@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
@@ -16,13 +16,13 @@ ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 caps.latest.revision: 19
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f2892c047bb3826b62da81f8f5f4ddcdea5b46f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ceab28c15a3e0a5e8851fd4d7142a7d0c0b2f18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236158"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>效能、快照、快取 (Reporting Services)
   報表伺服器的效能會受到一些因素組合的影響，包括硬體、存取報表的並行使用者數目、報表中的資料量，以及輸出格式。 若要了解安裝特有的效能因素以及哪些補救措施可產生所需的結果，您必須取得基準資料並執行測試。 如需有關工具和指導方針的詳細資訊，請參閱下列 MSDN 出版品：＜ [Reporting Services 效能最佳化](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) ＞和＜ [在 SQL Server 2005 Reporting Services 報表伺服器上使用 Visual Studio 2005 執行負載測試](http://go.microsoft.com/fwlink/?LinkID=77519)＞。  
@@ -39,9 +39,9 @@ ms.locfileid: "36132579"
   
 -   如果採用特定格式之所有報表的處理速度很慢 (例如，轉譯成 PDF 時)，請考慮採用檔案共用傳遞、加入更多記憶體，或選擇不同的格式。  
   
--   若要了解處理某份報表和其他使用標準需要多久，請檢閱報表伺服器執行記錄。 如需詳細資訊，請參閱[報表伺服器執行記錄和 ExecutionLog3 檢視](report-server-executionlog-and-the-executionlog3-view.md)。  
+-   若要了解處理某份報表和其他使用標準需要多久，請檢閱報表伺服器執行記錄。 如需詳細資訊，請參閱 <<c0> [ 報表伺服器執行記錄和 ExecutionLog3 檢視](report-server-executionlog-and-the-executionlog3-view.md)。  
   
--   如需如何微調記憶體管理組態設定來減少效能問題的詳細資訊，請參閱[設定的報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)。  
+-   如需如何透過微調記憶體管理組態設定來減少效能問題的詳細資訊，請參閱[設定報表伺服器應用程式的可用記憶體](../report-server/configure-available-memory-for-report-server-applications.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [監視報表伺服器效能](monitoring-report-server-performance.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "36132579"
  說明如何設定查詢和報表處理的逾時。  
   
 ## <a name="see-also"></a>另請參閱  
- [管理執行程序](../subscriptions/manage-a-running-process.md)   
+ [管理執行中處理序](../subscriptions/manage-a-running-process.md)   
  [驗證報表執行](verifying-a-report-run.md)  
   
   

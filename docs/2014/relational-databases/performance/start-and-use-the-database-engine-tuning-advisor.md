@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dta.advancedtuningoptions.f1
 - sql12.dta.general.f1
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], starting
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a64863d6d36d7eb5d934b08db7c7ed8fdb2638e8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 536c0a6a1a730fcf74d084fbef2d9f1debb347a6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134945"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182075"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>啟動及使用 Database Engine Tuning Advisor
   此主題描述如何在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中啟動及使用 Database Engine Tuning Advisor。 如需如何在微調資料庫後檢視及處理結果的資訊，請參閱 [檢視及處理 Database Engine Tuning Advisor 的輸出](database-engine-tuning-advisor.md)。  
   
 ##  <a name="Initialize"></a> 初始化 Database Engine Tuning Advisor  
- 在第一次使用時， **系統管理員 (sysadmin)** 固定伺服器角色的成員使用者必須初始化 Database Engine Tuning Advisor。 這是因為必須建立數個系統資料表中`msdb`資料庫以支援微調作業。 初始化也可讓屬於 **db_owner** 固定資料庫角色成員的使用者，微調他們所擁有資料庫中資料表的工作負載。  
+ 在第一次使用時， **系統管理員 (sysadmin)** 固定伺服器角色的成員使用者必須初始化 Database Engine Tuning Advisor。 這是因為必須在中建立數個系統資料表`msdb`資料庫以支援微調作業。 初始化也可讓屬於 **db_owner** 固定資料庫角色成員的使用者，微調他們所擁有資料庫中資料表的工作負載。  
   
  具有系統管理員權限的使用者必須執行下列其中一種動作：  
   

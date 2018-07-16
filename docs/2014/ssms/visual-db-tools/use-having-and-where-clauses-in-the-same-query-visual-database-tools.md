@@ -1,5 +1,5 @@
 ---
-title: 使用 HAVING 和 WHERE 子句在同一個查詢 (Visual Database Tools) |Microsoft 文件
+title: 使用 HAVING 和 WHERE 子句在同一個查詢 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], excluding rows
 - search criteria [SQL Server], WHERE clause
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - excluding rows
 ms.assetid: 1e07cf56-b4b7-4c49-8ddd-c276812a7148
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a5ea47fdcab8682b8777d1e6c36b8463f9f60326
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 967467dbda025160a7ceccad5fbc2f3b7935469e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134855"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175251"
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>在相同查詢中使用 HAVING 和 WHERE 子句 (Visual Database Tools)
   在某些情況下，將條件套用到整個群組 (使用 HAVING 子句) 之前，您可能會想排除群組中的個別資料列 (使用 WHERE 子句)。  

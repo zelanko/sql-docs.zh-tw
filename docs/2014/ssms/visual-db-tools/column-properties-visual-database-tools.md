@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.Column.ColumnIdentitySpec
 - vdt.designers.properties.Column
@@ -17,15 +17,15 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2442b50d7c7a6a325013d3a3a808747925391183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132145"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236178"
 ---
 # <a name="column-properties-visual-database-tools"></a>資料行屬性 (Visual Database Tools)
   有兩個集合的資料行屬性：您可以在資料表設計工具的 [資料行屬性] 索引標籤中看到的完整集合 (僅適用於 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫)，以及使用伺服器總管可以在 [屬性] 視窗中看到的子集。  
@@ -183,12 +183,12 @@ ms.locfileid: "36132145"
  顯示此資料行是否在其他位置已複寫。  
   
  **為 RowGuid**  
- 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否會使用資料行當做 ROWGUID。 您可以將此值設定為**是**僅針對具有的資料類型的資料行`uniqueidentifier`。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
+ 指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 是否會使用資料行當做 ROWGUID。 您可以將此值設定為 **[是]** 只會針對具有的資料類型的資料行`uniqueidentifier`。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
   
  **大小**  
  以位元組為單位，顯示資料行之資料類型所允許的大小。 例如，`nchar` 資料類型的長度可能是 10 (字元數)，但是針對 Unicode 字元集，大小就會是 20。  
   
 > [!NOTE]  
->  每個資料列的 `varchar(max)` 資料類型長度都會不同。 sp_help 會傳回 (-1) 的長度為`varchar(max)`資料行。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會顯示 -1 當作資料行大小。  
+>  每個資料列的 `varchar(max)` 資料類型長度都會不同。 sp_help 會傳回 (-1) 的長度`varchar(max)`資料行。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 會顯示 -1 當作資料行大小。  
   
   

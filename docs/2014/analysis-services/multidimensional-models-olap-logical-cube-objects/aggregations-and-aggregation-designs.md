@@ -1,5 +1,5 @@
 ---
-title: 彙總和彙總設計 |Microsoft 文件
+title: 彙總及彙總設計 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - aggregations [Analysis Services]
 ms.assetid: 35bd8589-39fa-4e0b-b28f-5a07d70da0a2
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 283825b20aaad5764744197aca46d3358feb20b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b196f950e04a2b636c9b758dda6f5f6947a9912d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228198"
 ---
 # <a name="aggregations-and-aggregation-designs"></a>彙總和彙總設計
   <xref:Microsoft.AnalysisServices.AggregationDesign> 物件會定義可在多個資料分割之間共用的一組彙總定義。  
@@ -46,7 +46,7 @@ ms.locfileid: "36132748"
  雖然預先計算 Cube 內所有可能的彙總可能會提供所有查詢的最快可能回應時間，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 可以輕鬆地從其他預先計算的彙總中計算出某些彙總值。 此外，計算所有可能的彙總需要大量處理時間和儲存體。 因此，在儲存需求與預先計算的可能彙總百分比之間會需要有所取捨。 如果未預先計算任何彙總 (0%)，則 Cube 所需的處理時間和儲存空間數量會減至最少，但是因為必須從分葉資料格中擷取回答每一個查詢所需的資料，然後在查詢時加以彙總來回答每一個查詢，所以查詢回應時間可能會變慢。 例如，傳回單一數字來回答前面所問的問題 (「1998 年西北地區 X 產品的銷售如何？」) 可能需要讀取數千個資料列，並擷取資料行的值 (此資料行是用來提供每個資料列的銷售量值)，然後計算總和。 此外，擷取該資料所需的時間長度可能會不同，視選擇的資料儲存模式而定 (MOLAP、HOLAP 或 ROLAP)。  
   
 ## <a name="designing-aggregations"></a>設計彙總  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 併入複雜的演算法，若要選取預先計算的彙總，以便從預先計算的值可以快速地計算其他彙總。 例如，如果針對時間階層的月份層級預先計算出彙總，則季查詢的計算只需要加總三個數字，就可以視需要快速計算出來。 這個技巧可節省處理時間，並減少儲存需求，且對查詢回應時間的影響最小。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 納入了複雜的演算法，來選取預先計算的彙總，以便其他彙總可以快速地計算從預先計算的值。 例如，如果針對時間階層的月份層級預先計算出彙總，則季查詢的計算只需要加總三個數字，就可以視需要快速計算出來。 這個技巧可節省處理時間，並減少儲存需求，且對查詢回應時間的影響最小。  
   
  彙總設計精靈會提供選項讓您指定演算法的儲存體和百分比條件約束，以在查詢回應時間與儲存需求之間達成令人滿意的取捨。 不過，彙總設計精靈的演算法假設所有可能的查詢都同樣適合。 基於使用方式的最佳化精靈可讓您分析用戶端應用程式所提交的查詢，以調整量值群組的彙總設計。 使用這個精靈來微調 Cube 的彙總，即可增加常見查詢的回應能力，以及減少不常見之查詢的回應能力，而不會對 Cube 的儲存需求有太大影響。  
   

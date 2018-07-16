@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 建立時序群集案例 （中繼資料採礦教學課程） |Microsoft 文件
+title: 第 4 課： 建立時序群集案例 （中繼資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
 - sequence clustering algorithms [Analysis Services]
@@ -17,20 +17,20 @@ ms.assetid: 63436bbd-0f73-4012-b6f1-358c81e4d92a
 caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 7bfa4dd3a739e81b5a7f10cda0b17452fe48c4d0
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2e594e44dd3c8af8ade94c549d8b489f31623553
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36311876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251200"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>第 4 課：建立時序群集案例 (中繼資料採礦教學課程)
-  行銷部門[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]想了解客戶如何透過移動[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]網站。 公司猜想客戶會依某種次序模式，將產品放入購物籃中。 公司希望分析購物次序，以了解客戶如何將相關的產品加入購物籃中。 之後，他們就能利用這項資訊來簡化網站的流程，以便引導客戶購買其他產品。  
+  行銷部門[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]想要了解客戶如何透過[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]網站。 公司猜想客戶會依某種次序模式，將產品放入購物籃中。 公司希望分析購物次序，以了解客戶如何將相關的產品加入購物籃中。 之後，他們就能利用這項資訊來簡化網站的流程，以便引導客戶購買其他產品。  
   
  當您完成這個課程的工作時，將會建好一個採礦模型，使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時序群集演算法預測客戶接著會將哪一項產品放入購物籃中。 您將實驗兩種版本的模型：第一個模型只分析購物籃中的產品順序，而第二個模型另外包含一些用於群集的客戶人口統計資料。 最後，您將使用這些模型來建立預測，以便向客戶提供產品建議。  
   
- 若要完成本課程的工作，您會使用您在建立購物籃採礦結構[第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)。 這一課包含下列工作：  
+ 若要在課程中完成的工作，您將使用您在中建立的購物籃採礦結構[第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)。 這一課包含下列工作：  
   
 -   [建立時序群集採礦模型結構&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/create-sequence-clustering-mining-model-intermediate-data-mining.md)  
   

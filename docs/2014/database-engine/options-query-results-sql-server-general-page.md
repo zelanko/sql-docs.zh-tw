@@ -1,5 +1,5 @@
 ---
-title: 選項 （查詢結果-SQL Server 一般頁面） |Microsoft 文件
+title: 選項 （查詢結果-SQL Server-一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CUSTOMERID_TSQL
 - SQL12.SWB.TSQLRESULTS.F1
@@ -19,15 +19,15 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73901b4555760e4978317a620ed0ba15befa639b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 56a2a5cd321ad6914efeda674d2bc6bf0e89f7d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282074"
 ---
-# <a name="options-query-results-sql-server-general-page"></a>選項 （查詢結果-SQL Server 一般頁面）
+# <a name="options-query-results-sql-server-general-page"></a>選項 （查詢結果-SQL Server-一般頁面）
   使用此頁面來決定 [查詢結果] 窗格的預設行為。 若要顯示這些設定，請在 [工具] 功能表上按一下 [選項]，展開 [查詢結果] 資料夾，選取 [SQL Server]，然後按一下 [一般]。 這些選項的變更僅適用於新的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢。 若要變更目前查詢的選項，請按一下 [查詢] 功能表上的 [查詢選項]，或在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢視窗中按一下滑鼠右鍵，並選取 [查詢選項]。  
   
 ## <a name="uielement-list"></a>UIElement 清單  

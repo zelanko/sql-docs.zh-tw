@@ -5,10 +5,9 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backup priority
 - backup on secondary replicas
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 caps.latest.revision: 30
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: fdaebbfc823445594e32f18ba1ec858b2350f108
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b3b35cb41610f490b4a12f8deba77e9d34cc7185
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328438"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>設定可用性複本的備份 (SQL Server)
   本主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中的 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]或 PowerShell，針對 AlwaysOn 可用性群組設定次要複本的備份。  
   
 > [!NOTE]  
->  在次要複本上備份的簡介，請參閱[使用中次要： 在次要複本 （AlwaysOn 可用性群組） 上的備份](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
+>  在次要複本上備份的簡介，請參閱 <<c0> [ 作用中次要複本： 備份在次要複本 （AlwaysOn 可用性群組） 上](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)。  
   
  
   
@@ -115,7 +114,7 @@ ms.locfileid: "36035979"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell  
  **若要設定次要複本的備份**  
   
-1.  設為預設值 (`cd`) 到裝載主要複本的伺服器執行個體。  
+1.  設為預設值 (`cd`) 裝載主要複本的伺服器執行個體。  
   
 2.  (選擇性) 設定您要加入或修改之每個可用性複本的備份優先權。 裝載主要複本的伺服器執行個體會使用這個優先權來決定哪個複本應該服務可用性群組中資料庫的自動備份要求 (系統會選擇優先權最高的複本)。 這個優先權可以是 0 和 100 (含) 之間的任何數字。 如果優先權為 0，就表示系統不應該將複本視為服務備份要求的候選。  預設值為 50。  
   
@@ -199,7 +198,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原的解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
   

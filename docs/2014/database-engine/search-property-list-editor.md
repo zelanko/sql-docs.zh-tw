@@ -1,39 +1,38 @@
 ---
-title: 搜尋屬性清單編輯器 |Microsoft 文件
+title: 搜尋屬性清單編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.spl.searchpropertylisteditor.f1
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 caps.latest.revision: 26
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e34bcf522675e13e9b1fa987f0f3bfc6aba36efb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3f55070e129328e8b876a97382bfca4462a4cf70
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131982"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231528"
 ---
 # <a name="search-property-list-editor"></a>搜尋屬性清單編輯器
   使用此對話方塊來新增或刪除搜尋屬性清單中的搜尋屬性。  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>若要使用 SQL Server Management Studio 管理搜尋屬性清單  
- 如需如何建立、 檢視或刪除搜尋屬性清單，以及有關如何設定屬性搜尋的全文檢索索引資訊，請參閱[使用搜索屬性清單搜索文件屬性](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
+ 如需有關如何建立、 檢視或刪除搜尋屬性清單，以及如何設定屬性搜尋的全文檢索索引資訊，請參閱 < [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)。  
   
 ## <a name="options"></a>選項。  
  **屬性名稱**  
  指定要用來識別全文檢索查詢中之屬性的名稱。 屬性名稱可以包含內部空格。 **[屬性名稱]** 的最大長度為 256 個字元。 這個名稱可以是使用者易記名稱，例如「作者」或「住家地址」，或者它可以是屬性的 Windows 正式名稱，例如 `System.Author` 或 `System.Contact.HomeAddress`。 **[屬性名稱]** 必須唯一識別屬性集內的屬性。  
   
- 開發人員使用屬性名稱來識別中的屬性[CONTAINS](/sql/t-sql/queries/contains-transact-sql)述詞。 因此，在加入屬性時，務必指定可有意義地表示屬性的值。  
+ 開發人員使用的屬性名稱來識別中的屬性[CONTAINS](/sql/t-sql/queries/contains-transact-sql)述詞。 因此，在加入屬性時，務必指定可有意義地表示屬性的值。  
   
  **屬性集 GUID**  
  指定屬性所屬之屬性集的識別碼。 這是全域唯一識別碼 (GUID)。 屬性集是一組邏輯相關的屬性。 如需有關取得此值的詳細資訊，請參閱本主題稍後的＜備註＞。  

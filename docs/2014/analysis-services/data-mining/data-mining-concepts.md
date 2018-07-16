@@ -1,5 +1,5 @@
 ---
-title: 資料採礦概念 |Microsoft 文件
+title: 資料採礦概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data mining
 - cleaning data
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 296ef0bf077c7d28e7288e1c7cae999de592b8e9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1236bc9b0c7e18331d2a3dea660f38d81408176b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212008"
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
   資料採礦是從大型資料集探索可付諸行動之資訊的過程。 資料採礦使用數學分析衍生存在於資料中的模式和趨勢。 傳統資料瀏覽一般無法探索這些模式，因為這些關聯性太複雜或因為沒有太多資料。  
@@ -100,7 +100,7 @@ ms.locfileid: "36133579"
 ##  <a name="PreparingData"></a> 準備資料  
  資料採礦程序中的第個二步驟 (在下列圖表中以反白顯示) 是要合併及清理在 [定義問題](#DefiningTheProblem) 步驟中所識別的資料。  
   
- ![資料採礦的第二個步驟： 準備資料](../media/dmprocess-preparing.gif "資料採礦的第二個步驟： 準備資料")  
+ ![資料採礦的第二個步驟︰ 準備資料](../media/dmprocess-preparing.gif "資料採礦的第二個步驟︰ 準備資料")  
   
  資料可能散佈於公司各處並以不同格式儲存，也可能會不一致，例如有不正確或遺漏的項目。 例如，資料可能會顯示某客戶在產品上市之前購買該產品，或該客戶定期購物的商店竟然距離她的家 2,000 英里。  
   
@@ -112,12 +112,12 @@ ms.locfileid: "36133579"
   
 -   [Data Quality Services](../../data-quality-services/data-quality-services.md)  
   
- 請注意，用於資料採礦的資料不需要儲存在線上分析處理 (OLAP) Cube，甚至也不需要儲存在關聯式資料庫中，即使您可以同時將兩者當做資料來源使用也一樣。 您可以使用已定義為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源之資料的任何來源，進行資料採礦。 這些可以包含文字檔、Excel 活頁簿，或來自其他外部提供者的資料。 如需詳細資訊，請參閱[支援資料來源&#40;SSAS 多維度&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
+ 請注意，用於資料採礦的資料不需要儲存在線上分析處理 (OLAP) Cube，甚至也不需要儲存在關聯式資料庫中，即使您可以同時將兩者當做資料來源使用也一樣。 您可以使用已定義為 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源之資料的任何來源，進行資料採礦。 這些可以包含文字檔、Excel 活頁簿，或來自其他外部提供者的資料。 如需詳細資訊，請參閱 <<c0> [ 支援的資料來源&#40;SSAS 多維度&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。</c0>  
   
 ##  <a name="ExploringData"></a> 瀏覽資料  
  資料採礦程序中的第三個步驟 (在下列圖表中以反白顯示) 是要瀏覽已經準備好的資料。  
   
- ![資料採礦第三個步驟： 瀏覽資料](../media/dmprocess-exploring.gif "資料採礦第三個步驟： 瀏覽資料")  
+ ![資料採礦的第三個步驟： 探索資料](../media/dmprocess-exploring.gif "資料採礦的第三個步驟： 瀏覽資料")  
   
  當您建立採礦模型時，您必須了解資料才能做出適當的決策。 瀏覽技巧包括計算最小值和最大值、計算平均差和標準差，以及查看資料的散發。 例如，您可以會透過檢閱最大值、最小值和平均值來判定資料無法代表您的客戶或商務流程，因此，您必須取得更對稱的資料，或檢閱您期望基礎的假設。 標準差和其他散發值可以提供結果之穩定性和正確性的實用資訊。 標準差大表示加入更多資料可能有助於改良模型。 與標準散發強烈偏差的資料可能會扭曲，或者可能代表真實問題的正確圖片，但是會變成難以讓模型配合資料。  
   

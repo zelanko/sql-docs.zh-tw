@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 caps.latest.revision: 64
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c64662a9bbfa8a4d36ed406b6fb7529961b693da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 260183c80e3efaa53ba5c0e7000c54a1102425e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179725"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>使用 NEAR 搜尋靠近另一個單字的字詞
-  您可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函數中使用鄰近字詞 (NEAR)，以便搜尋彼此接近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您也可以依任何順序或是您所指定的順序來搜尋單字或片語。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援舊版[泛型相近詞彙](#Generic_NEAR)，這目前已被取代，而[自訂相近詞彙](#Custom_NEAR)，新增[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+  您可以在 [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述詞或 [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) 函數中使用鄰近字詞 (NEAR)，以便搜尋彼此接近的單字或片語。 您也可以指定分隔第一個和最後一個搜尋詞彙之非搜尋詞彙的數目上限。 此外，您也可以依任何順序或是您所指定的順序來搜尋單字或片語。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援舊版[泛型相近詞彙](#Generic_NEAR)，這目前已被取代，而[自訂相近詞彙](#Custom_NEAR)，這是新功能[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
 ##  <a name="Custom_NEAR"></a> 自訂相近詞彙  
  自訂相近詞彙導入下列新功能：  
@@ -59,7 +58,7 @@ ms.locfileid: "36134912"
   
  |  
   
- (*search_term* [，...*n* ])[，< maximum_distance > [，< match_order >]]  
+ (*search_term* [，...*n* ])[，< maximum_distance> > [，< match_order> >]]  
   
  }  
   

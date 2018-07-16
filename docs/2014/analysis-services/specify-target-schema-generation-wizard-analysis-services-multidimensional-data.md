@@ -1,5 +1,5 @@
 ---
-title: 指定目標 （結構描述產生精靈） (Analysis Services-多維度資料) |Microsoft 文件
+title: 指定目標 （結構描述產生精靈） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.generationtarget.f1
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 796f28368badd6eb92e4714ee5e98a22cc12d18f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9e4d9b991aed272d7f32d66b760d87597c46136
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134007"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37217978"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>指定目標 (結構描述產生精靈) (Analysis Services - 多維度資料)
   使用 **[指定目標]** 頁面，來識別在其中建立關聯式結構描述的資料來源檢視。  

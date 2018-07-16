@@ -1,5 +1,5 @@
 ---
-title: ReportServer 元素 (ASSL) |Microsoft 文件
+title: ReportServer 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportServer element
 ms.assetid: 677437aa-9d15-4dcc-a9bc-34f851d9640d
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0da706fd2a2bf80a15ae5c4916e33b0420902d59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68d80b432482d5b84db38d43291459c6aff8c758
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132969"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208198"
 ---
 # <a name="reportserver-element-assl"></a>ReportServer 元素 (ASSL)
-  包含名稱的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]所使用的執行個體[ReportAction](../data-type/action-data-type-assl.md)。  
+  包含名稱的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]執行個體，以供[ReportAction](../data-type/action-data-type-assl.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36132969"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`ReportServer`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ReportAction>。  
+ 對應至父系的元素`ReportServer`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ReportAction>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

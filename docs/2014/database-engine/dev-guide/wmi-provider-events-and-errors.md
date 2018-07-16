@@ -1,5 +1,5 @@
 ---
-title: WMI 提供者事件和錯誤 |Microsoft 文件
+title: WMI 提供者事件和錯誤 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - WMI errors
 ms.assetid: 8d17d074-9937-422c-965a-0f0b31a30d37
 caps.latest.revision: 5
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aa1928c649e08760ec05ef5d34c566183da7b46e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ade088611479eca1c79a905ac076c9bbb56c6203
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132237"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237368"
 ---
 # <a name="wmi-provider-events-and-errors"></a>WMI 提供者事件和錯誤
   本主題包含數個與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 相關之 WMI 錯誤的原因和解決方案資訊。  

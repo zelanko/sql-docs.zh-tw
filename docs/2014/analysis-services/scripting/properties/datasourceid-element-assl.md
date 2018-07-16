@@ -1,5 +1,5 @@
 ---
-title: DataSourceID 元素 (ASSL) |Microsoft 文件
+title: DataSourceID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataSourceID element
 ms.assetid: 2d71ba53-1684-4da0-8da4-fb75033c971b
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69cdda7c02c2bea92f1fb631b955e223427f3b85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 86a5e07518097e01509f24f2969580dec7ba0c34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132736"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263584"
 ---
 # <a name="datasourceid-element-assl"></a>DataSourceID 元素 (ASSL)
   識別[DataSource](../objects/datasource-element-assl.md)與父元素相關聯的項目。  
@@ -65,7 +65,7 @@ ms.locfileid: "36132736"
  在「分析管理物件」(AMO) 物件模型中對應至 `DataSourceID` 父系的元素是 <xref:Microsoft.AnalysisServices.CubeDimensionBinding>、<xref:Microsoft.AnalysisServices.DimensionBinding>、<xref:Microsoft.AnalysisServices.MeasureGroupBinding>、<xref:Microsoft.AnalysisServices.QueryBinding>、<xref:Microsoft.AnalysisServices.DataSourceView> 和 <xref:Microsoft.AnalysisServices.TableBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
- [ID 元素&#40;ASSL&#41;](id-element-assl.md)   
+ [ID 項目&#40;ASSL&#41;](id-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

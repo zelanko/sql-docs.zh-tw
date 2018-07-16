@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bb72092ec96c373c05a74a479eaefa47de6d3d35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d3d1bf94e65ffb789204bb774ea502ef824659ff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37266324"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
   全文檢索目錄是不屬於任何檔案群組的虛擬物件。它是參考一組全文檢索索引的邏輯概念。  
@@ -47,7 +46,7 @@ ms.locfileid: "36132624"
   
   
 ##  <a name="props"></a> 檢視全文檢索目錄的屬性  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 函式 （例如 fulltextcatalogproperty） 可以用來取得各種全文檢索索引相關屬性的值。 此資訊適用於管理和疑難排解全文檢索搜尋。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 例如 FULLTEXTCATALOGPROPERTY 函數可用來取得全文檢索索引相關的各種屬性的值。 此資訊適用於管理和疑難排解全文檢索搜尋。  
   
  下表列出與全文檢索目錄相關的屬性。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "36132624"
   
   
   
-##  <a name="rebuildall"></a> 重建資料庫的所有全文檢索目錄  
+##  <a name="rebuildall"></a> 針對資料庫中重建所有全文檢索目錄  
   
 #### <a name="to-rebuild-the-full-text-catalogs-for-a-database"></a>重建資料庫的全文檢索目錄  
   

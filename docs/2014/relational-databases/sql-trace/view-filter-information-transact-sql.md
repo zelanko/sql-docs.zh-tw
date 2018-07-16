@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying filter information
 - filters [SQL Server], viewing
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing filter information
 ms.assetid: b7e52c13-8c83-47c2-8cd0-af7a49eceb5c
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa38ab23b96bcde8046a4607442b67110cd2d2a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7bf6a65f047141be467aee5c8c4eda63887a78bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327668"
 ---
 # <a name="view-filter-information-transact-sql"></a>檢視篩選資訊 (Transact-SQL)
   此主題描述如何使用內建函數來檢視追蹤篩選資訊。  
