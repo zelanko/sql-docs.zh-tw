@@ -1,5 +1,5 @@
 ---
-title: 控制報表頁面 （報表產生器及 SSRS） 上的 Tablix 資料區顯示 |Microsoft 文件
+title: 控制報表頁面 （報表產生器及 SSRS） 上的 Tablix 資料區顯示 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0e0221f8e610b7924c482492f0bc60b86bf8704e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 6484cf1a0ed924c740f4235873169c03daacc71e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37179235"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>控制報表頁面上的 Tablix 資料區顯示 (報表產生器及 SSRS)
   本主題描述 Tablix 資料區的屬性，您可以修改這些屬性來變更您在報表中檢視時 Tablix 資料區顯示的方式。  
@@ -38,7 +38,7 @@ ms.locfileid: "36133363"
   
 -   **沒有資料時顯示訊息**。 報表資料集在執行階段沒有資料存在時，您可以撰寫自己要顯示的訊息來取代資料區。 如需詳細資訊，請參閱[在資料區域中設定沒有資料的訊息 &#40;報表產生器及 SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)。  
   
--   **有條件地隱藏資料**。 有條件地控制是否要顯示或隱藏的資料區域或資料區域的組件，您可以將 Hidden 屬性`True`或運算式。 運算式可以包含報表參數的參考。 您也可以指定切換項目，讓使用者可以決定顯示詳細資料。 如需詳細資訊，請參閱[向下鑽研動作 &#40;報表產生器及 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)。  
+-   **有條件地隱藏資料**。 有條件地控制是否要顯示或隱藏一個資料區域或部分資料區域，您可以將 Hidden 屬性`True`或設定為運算式。 運算式可以包含報表參數的參考。 您也可以指定切換項目，讓使用者可以決定顯示詳細資料。 如需詳細資訊，請參閱[向下鑽研動作 &#40;報表產生器及 SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)。  
   
 -   **合併資料格。** 資料表內多個連續的資料格可以組合成單一資料格。 這稱為資料行範圍或資料格合併。 資料格只能水平或垂直合併。 當您合併資料格時，只會保留第一個資料格的資料。 其他儲存格中的資料則會移除。 合併的資料格可以分割成原始資料行。 如需詳細資訊，請參閱[在資料區中合併資料格 &#40;報表產生器及 SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36133363"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>控制 Tablix 資料列和資料行群組轉譯的方式  
  控制 Tablix 資料區群組轉譯的方式主要取決於群組結構。 Tablix 資料區可以有四個區域，如下圖所示：  
   
- ![Tablix 資料區域](../media/rs-tablixareas.gif "Tablix 資料區域")  
+ ![Tablix 資料區的區域](../media/rs-tablixareas.gif "Tablix 資料區的區域")  
   
  資料列群組區域和資料行群組區域包含群組頁首。 當 Tablix 資料區具有群組頁首時，您就可以透過在 **[Tablix 屬性]** 對話方塊的 **[一般]** 頁面上設定屬性，來控制資料列和資料行重複的方式。  
   
@@ -78,8 +78,8 @@ ms.locfileid: "36133363"
 ## <a name="see-also"></a>另請參閱  
  [將多個資料區連結至相同的資料集 &#40;報表產生器及 SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [巢狀資料區 &#40;報表產生器及 SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [控制分頁符號、 標題、 資料行和資料列&#40;報表產生器和 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [控制分頁符號、 標題、 資料行和資料列&#40;報表產生器及 SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix 資料區 &#40;報表產生器及 SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [資料表 &#40;報表產生器及 SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [矩陣 &#40;報表產生器及 SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

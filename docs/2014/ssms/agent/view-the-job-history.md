@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], history
 - viewing job history
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - displaying job history
 ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7391d4c6e8ddd5d2c7908a6c532a3fe7c9deade4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fe2287c5dca70fb78371e3f23dd199013c81c611
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208388"
 ---
 # <a name="view-the-job-history"></a>檢視作業記錄
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)] 或 SQL Server 管理物件，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中檢視 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業記錄。  
@@ -81,7 +81,7 @@ ms.locfileid: "36037379"
     GO  
     ```  
   
- 如需詳細資訊，請參閱[sp_help_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)。  
+ 如需詳細資訊，請參閱 < [sp_help_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)。  
   
 ##  <a name="SMO"></a> 使用 SQL Server 管理物件  
  **若要檢視作業記錄**  

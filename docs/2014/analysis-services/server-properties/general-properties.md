@@ -1,5 +1,5 @@
 ---
-title: 一般屬性 |Microsoft 文件
+title: 一般屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IdleConnectionTimeout property
 - InstanceVisible property
@@ -39,15 +39,15 @@ helpviewer_keywords:
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 42b6dcdd7407faff8dace8ac7d63bd8bce50c337
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80c01a4282dbdc0e212068bd3f6d2da41b96d069
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132001"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37216028"
 ---
 # <a name="general-properties"></a>一般屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 本主題記載 msmdsrv.ini 檔案中，不包含在特定章節中的伺服器屬性，例如 Security、Network 或 ThreadPool。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
@@ -103,10 +103,10 @@ ms.locfileid: "36132001"
   
  這個屬性的有效值包括：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0|這是預設值。 它指定多維度模式，用於服務使用 MOLAP、HOLAP 和 ROLAP 儲存以及資料採礦模型的多維度資料庫。|  
-|@shouldalert|指定安裝為 PowerPivot for SharePoint 部署一部分的 Analysis Services 執行個體。 請勿變更屬於 PowerPivot for SharePoint 安裝一部分之 Analysis Services 執行個體的部署模式屬性。 如果您變更模式，PowerPivot 資料將不再於伺服器上執行。|  
+|1|指定安裝為 PowerPivot for SharePoint 部署一部分的 Analysis Services 執行個體。 請勿變更屬於 PowerPivot for SharePoint 安裝一部分之 Analysis Services 執行個體的部署模式屬性。 如果您變更模式，PowerPivot 資料將不再於伺服器上執行。|  
 |2|指定用於裝載使用記憶體中儲存或 DirectQuery 儲存之表格式模型資料庫的表格式模式。|  
   
  每個模式彼此之間是獨佔的。 設定為表格式模式的伺服器無法執行包含 Cube 和維度的 Analysis Services 資料庫。 如果基礎電腦硬體可以支援它，您就可以在相同的電腦上安裝多個 Analysis Services 執行個體，並將每個執行個體設定為使用不同的部署模式。 請記住，Analysis Services 是非常耗用資源的應用程式。 建議在相同的系統上，僅針對高階伺服器部署多個執行個體。  

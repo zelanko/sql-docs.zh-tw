@@ -1,5 +1,5 @@
 ---
-title: SQL Server Management Studio |Microsoft 文件
+title: SQL Server Management Studio |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2e6bb90d0f5aa4c92ac8b92898e65361d745418f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 893b4c108feb62f6cd076090bf4f0506765df819
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37178980"
 ---
 # <a name="sql-server-management-studio"></a>Transact-SQL
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用於管理您的 SQL Server 基礎結構的整合式的環境。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 提供工具來設定、監視以及管理 SQL Server 執行個體。 也提供工具來部署、監視以及升級資料層元件 (例如應用程式所使用的資料庫和資料倉儲)，以及建立查詢和指令碼。  
   
 ## <a name="benefits-of-sql-server-management-studio"></a>SQL Server Management Studio 的優點  
- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用於管理 SQL Server 的綜合性公用程式物件的方便使用圖形化介面結合豐富的指令碼功能。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 可以用來管理[!INCLUDE[ssDE](../includes/ssde-md.md)]， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，和[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
+ [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是用於管理 SQL Server 的綜合性公用程式物件，結合簡單易用的圖形介面以及非常豐富的指令碼功能。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 可以用來管理[!INCLUDE[ssDE](../includes/ssde-md.md)]， [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]，和[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。  
   
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 元件  
   

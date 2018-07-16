@@ -1,5 +1,5 @@
 ---
-title: KeyErrorAction 元素 (ASSL) |Microsoft 文件
+title: KeyErrorAction 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - KeyErrorAction element
 ms.assetid: 91fa9f88-b79e-4996-9717-d7ca82b64ddd
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41ebffd86a67ef474180e09770b4e8c0cdef3f28
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 119cf38dc30683c4d1c4fc7edc67c77c8f01e4f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131993"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173525"
 ---
 # <a name="keyerroraction-element-assl"></a>KeyErrorAction 元素 (ASSL)
   指定的動作[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]才會發生錯誤時在索引鍵。  
@@ -64,7 +64,7 @@ ms.locfileid: "36131993"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*ConvertToUnknown*|將問題索引鍵轉換成未知成員值。|  
 |*DiscardRecord*|捨棄記錄。|  

@@ -1,5 +1,5 @@
 ---
-title: 取得對話方塊 （原始檔控制） |Microsoft 文件
+title: 取得對話方塊 （原始檔控制） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisualStudio.SourceControl.GetVersionDialog
 helpviewer_keywords:
 - Get dialog box
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: de0c8be0ee4c5aa37e8ce72d2b1499c10ab5adbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 54f349916d429c7872b479077043608d53a16bde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132491"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193948"
 ---
 # <a name="get-dialog-box-source-control"></a>取得對話方塊 (原始檔控制)
   從原始檔控制資料庫擷取選取項目的唯讀副本，傳送到您的工作資料夾，或者其他指定資料夾。  
   
 ## <a name="dialog-box-access"></a>對話方塊存取  
- 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，選取方案總管中的項目。 在**檔案**功能表上，按一下 **原始檔控制**然後按一下 **取得**。  
+ 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，選取方案總管中的項目。 在上**檔案**功能表上，按一下**原始檔控制**然後按一下**取得**。  
   
 > [!NOTE]  
 >  在方案總管中以滑鼠右鍵按一下項目，亦可使用此對話方塊。  

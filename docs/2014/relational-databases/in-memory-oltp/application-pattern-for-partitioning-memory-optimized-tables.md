@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ef7be1ca170df9efb0a4b76ab4b7f451b6742dbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ad61c1d762a412d9a314b5e41cc2908c0cca704f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131947"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188495"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>分割記憶體最佳化資料表的應用程式模式
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 支援的模式如下：將有限的使用中資料數量保留在記憶體最佳化資料表中，而比較不常存取的資料則在磁碟中處理。 一般而言，這會是儲存資料的案例為基礎`datetime`索引鍵。  

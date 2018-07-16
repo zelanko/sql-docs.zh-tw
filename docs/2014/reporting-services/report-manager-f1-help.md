@@ -1,5 +1,5 @@
 ---
-title: 報表管理員 F1 說明 |Microsoft 文件
+title: 報表管理員 F1 說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: da311acc4787c077fd4ad33637b46507a2979f86
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9bb45f51107d9397494e803533c68f90647fb18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208438"
 ---
 # <a name="report-manager-f1-help"></a>報表管理員 F1 說明
   下列主題將提供 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表管理員的頁面層級說明。 應用程式中的每一個頁面，都會有一個主題。 並非所有頁面都是可用的。 安全性設定會決定您可以存取的頁面。 若要從報表管理員中存取這些主題，請按一下主要工具列上的 **[說明]** 。  
@@ -34,7 +34,7 @@ ms.locfileid: "36036729"
   
 -   [點選連結報表頁面](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
   
--   [[內容] 頁面](../../2014/reporting-services/contents-page-report-manager.md)  
+-   [內容頁面](../../2014/reporting-services/contents-page-report-manager.md)  
   
 -   [建立資料驅動訂閱頁面](../../2014/reporting-services/create-data-driven-subscription-page-report-manager.md)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36036729"
   
 -   [新增資料夾頁面](../../2014/reporting-services/new-folder-page-report-manager.md)  
   
--   [新增連結的報表頁面](../../2014/reporting-services/new-linked-report-page-report-manager.md)  
+-   [新增連結報表頁面](../../2014/reporting-services/new-linked-report-page-report-manager.md)  
   
 -   [新增模型頁面](../../2014/reporting-services/new-model-page-report-manager.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36036729"
   
 -   [新增排程 / 編輯排程頁面](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md)  
   
--   [新增訂閱 / 編輯訂閱頁面](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
+-   [新的訂用帳戶 / 編輯訂閱頁面](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md)  
   
 -   [新增系統角色指派 / 編輯系統角色指派頁面](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "36036729"
   
 -   [搜尋結果頁面](../../2014/reporting-services/search-page-report-manager.md)  
   
--   [安全性頁面 （站台設定）](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
+-   [安全性頁面 (網站設定)](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   
 -   [安全性屬性頁面 （項目）](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   

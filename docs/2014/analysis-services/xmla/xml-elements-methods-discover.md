@@ -1,5 +1,5 @@
 ---
-title: Discover 方法 (XMLA) |Microsoft 文件
+title: Discover 方法 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - Discover method
 ms.assetid: 0eb52d88-c081-416e-a229-610e4373b0b3
 caps.latest.revision: 36
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: ead875bbe88ea71c8741450f8a3127efcf4b313d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: cec0774478c0eb34e9094bd9b6b1663e55339c1a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196018"
 ---
 # <a name="discover-method-xmla"></a>Discover 方法 (XMLA)
   擷取執行個體中的資訊，例如可用的資料庫或有關特定物件的詳細資料清單[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 使用 `Discover` 方法所擷取的資料取決於傳遞給它的參數值。  
   
- **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
+ **命名空間**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-分析  
   
- **SOAP 動作**」 描述 urn:-microsoft-schemas-microsoft-com:-分析： 探索 」  
+ **SOAP 動作**"urn: schemas-microsoft-microsoft-schemas-microsoft-com:-分析： 探索 」  
   
 ## <a name="syntax"></a>語法  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36132281"
 |子元素|[屬性](xml-elements-properties/properties-element-xmla.md)， [RequestType](xml-elements-properties/type-element-xmla.md)，[限制](xml-elements-properties/restrictions-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- `Discover` 方法會要求有關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和物件的中繼資料。 使用 XMLA 來傳回中繼資料[資料列集](xml-data-types/rowset-data-type-xmla.md)資料型別。  
+ `Discover` 方法會要求有關 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和物件的中繼資料。 傳回中繼資料是使用 XMLA[資料列集](xml-data-types/rowset-data-type-xmla.md)資料型別。  
   
 ## <a name="example"></a>範例  
  在下列程式碼範例中，用戶端會傳送 `Discover` 呼叫，以便從 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 範例 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中要求 Cube 清單。  

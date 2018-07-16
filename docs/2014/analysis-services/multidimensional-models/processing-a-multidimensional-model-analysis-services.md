@@ -1,5 +1,5 @@
 ---
-title: 多維度模型物件處理 |Microsoft 文件
+title: 多維度模型物件處理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - online mode [Analysis Services]
 - processing objects [Analysis Services]
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 51
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2b933c003e840d0ef145159f278b9054b1637956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9f95df4ac7d0bd9e0dd93c1a55189e9e46f747c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180975"
 ---
 # <a name="multidimensional-model-object-processing"></a>多維度模型物件處理
   處理是一個步驟或是一連串的步驟，Analysis Services 會在這些步驟中將關聯式資料來源中的資料載入多維度模型中。 如果是使用 MOLAP 儲存的物件，資料會儲存至磁碟的資料庫檔案資料夾中。 對於 ROLAP 儲存，視需要發生處理，以回應物件的 MDX 查詢。 如果是使用 ROLAP 儲存的物件，處理是指在傳回查詢結果之前更新快取。  
@@ -49,7 +49,7 @@ ms.locfileid: "36132526"
   
 ##  <a name="bkmk_prereq"></a> 必要條件  
   
--   處理需要 Analysis Services 執行個體的管理權限。 如果您以互動方式從 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]處理，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的伺服器管理員角色成員。 如果是自動執行的處理，例如使用透過 SQL Server Agent 排程的 SSIS 封裝，則用來執行此封裝的帳戶必須是伺服器管理員角色的成員。 如需有關設定系統管理員權限的詳細資訊，請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。  
+-   處理需要 Analysis Services 執行個體的管理權限。 如果您以互動方式從 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]處理，您必須是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的伺服器管理員角色成員。 如果是自動執行的處理，例如使用透過 SQL Server Agent 排程的 SSIS 封裝，則用來執行此封裝的帳戶必須是伺服器管理員角色的成員。 如需有關設定系統管理員權限的詳細資訊，請參閱 <<c0> [ 授與伺服器系統管理員權限&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)。</c0>  
   
 -   用來擷取資料的帳戶會在資料來源物件中指定，這會以模擬選項的形式 (如果您是使用 Windows 驗證) 或是連接字串中的使用者名稱形式 (如果是使用資料庫驗證) 指定。 該帳戶必須擁有模型所使用之關聯式資料來源的讀取權限。  
   

@@ -1,5 +1,5 @@
 ---
-title: 關聯性表示法 （表格式） |Microsoft 文件
+title: 關聯性表示法 （表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b42c3737ce2369fa6e2e349e377efecc462d0280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 122c09c71985e00792efece956955cd5469562c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131990"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187062"
 ---
 # <a name="relationship-representation-tabular"></a>關聯性表示法 (表格式)
   關聯性是指兩個資料表之間的連接。 關聯性會建立兩個資料表中的資料相互關聯的方式。  
   
- 請參閱[關聯性表示法 （表格式）](relationship-representation-tabular.md)如需如何建立及操作關聯性表示法的詳細說明。  
+ 請參閱[Relationship Representation (Tabular)](relationship-representation-tabular.md)如需如何建立及操作關聯性表示法的詳細說明。  
   
 ## <a name="relationship-representation"></a>關聯性表示法  
  在表格式模型中，可以在兩個資料表之間定義多個關聯性。 定義兩個資料表之間的多個關聯性時，只有一個關聯性可以定義為模型的預設關聯性，而且它會稱為作用中的關聯性；所有其他關聯性則稱為非作用中的關聯性。  

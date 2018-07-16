@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], status information
 - jobs [Reporting Services]
@@ -30,13 +30,13 @@ ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1c1ff34dde99394f39a9636c6deac3d6c1fbc64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9f4571c7e76057339658220075276f7b5a791f4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131648"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187715"
 ---
 # <a name="manage-a-running-process"></a>管理執行中的處理序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會監視在報表伺服器上執行之作業的狀態。 報表伺服器會以固定間隔執行進行中作業的掃描，並將狀態資訊寫入報表伺服器資料庫或服務應用程式資料庫 (如果是 SharePoint 模式)。 如果下列任一個處理序進行中，作業就是進行中：在遠端或本機資料庫伺服器上的查詢執行、報表處理，以及報表轉譯。  
@@ -57,7 +57,7 @@ ms.locfileid: "36131648"
   
 -   個別使用者所擁有的標準訂閱。  
   
- 取消作業只會取消在報表伺服器上執行的處理序。 由於報表伺服器不會管理在其他電腦上進行的資料處理，因此您必須手動取消隨後在其他系統上遺棄的查詢處理序。 請考慮指定查詢逾時值，以自動關閉花太長時間執行的查詢。 如需詳細資訊，請參閱[設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。 如需有關暫時暫停報表的詳細資訊，請參閱[Pause Report and Subscription Processing](disable-or-pause-report-and-subscription-processing.md)。  
+ 取消作業只會取消在報表伺服器上執行的處理序。 由於報表伺服器不會管理在其他電腦上進行的資料處理，因此您必須手動取消隨後在其他系統上遺棄的查詢處理序。 請考慮指定查詢逾時值，以自動關閉花太長時間執行的查詢。 如需詳細資訊，請參閱[設定報表和共用資料集處理的逾時值 &#40;SSRS&#41;](../report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)。 如需有關暫時暫停報表的詳細資訊，請參閱 <<c0> [ 暫停報表與訂閱處理](disable-or-pause-report-and-subscription-processing.md)。  
   
 > [!NOTE]  
 >  很少數的情況下，您可能需要重新啟動伺服器才能取消處理序。 如果是 SharePoint 模式，您可能需要重新啟動裝載 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的應用程式集區。 如需詳細資訊，請參閱 [啟動與停止報表伺服器服務](../report-server/start-and-stop-the-report-server-service.md)。  
@@ -79,7 +79,7 @@ ms.locfileid: "36131648"
   
 ### <a name="how-to-cancel-report-processing-or-subscription"></a>如何取消報表處理或訂閱  
   
-1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，連接至報表伺服器。 如需指示，請參閱[連接到 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)。  
+1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]中，連接至報表伺服器。 如需相關指示，請參閱 <<c0> [ 連接到 Management Studio 中的報表伺服器](../tools/connect-to-a-report-server-in-management-studio.md)。  
   
 2.  開啟 **[作業]** 資料夾。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36131648"
 7.  儲存檔案。  
   
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>設定擷取作業狀態的頻率設定  
- 執行中的作業會儲存在報表伺服器的暫存資料庫中。 您可以修改 RSReportServer.config 檔案中的組態設定，以控制報表伺服器掃描進行中作業的頻率，和執行中作業的狀態要等候多久才會從新的變更為執行中。 `RunningRequestsDbCycle`設定會指定報表伺服器掃描執行中處理序的頻率。 依預設，每 60 秒就會記錄狀態資訊。 `RunningRequestsAge`設定指定的轉換作業的間隔執行的新手。  
+ 執行中的作業會儲存在報表伺服器的暫存資料庫中。 您可以修改 RSReportServer.config 檔案中的組態設定，以控制報表伺服器掃描進行中作業的頻率，和執行中作業的狀態要等候多久才會從新的變更為執行中。 `RunningRequestsDbCycle`設定可讓您指定報表伺服器掃描執行中處理序的頻率。 依預設，每 60 秒就會記錄狀態資訊。 `RunningRequestsAge`設定指定的轉換作業的間隔執行的新手。  
   
 ##  <a name="bkmk_sharepoint"></a> 檢視和取消作業 (SharePoint 模式)  
  使用 SharePoint 管理中心，為每個 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式完成 SharePoint 模式部署中的作業管理。  

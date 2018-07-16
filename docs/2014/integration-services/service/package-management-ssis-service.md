@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, managing
 - packages [Integration Services], managing
@@ -27,13 +27,13 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e792b995e73ba4a964bd5076134af8c9817642ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e41b4df0064343cadf6a7da042c243191c0561d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037058"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37172959"
 ---
 # <a name="package-management-ssis-service"></a>封裝管理 (SSIS 服務)
   封裝的管理包含下列工作：  
@@ -48,7 +48,7 @@ ms.locfileid: "36037058"
 >  本主題會討論 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務，即用於管理 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的 Windows 服務。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 支援此服務能與舊版 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]回溯相容。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，您可以管理 Integration Services 伺服器上的物件，例如封裝。  
   
 ## <a name="package-store"></a>封裝存放區  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供兩個最上層資料夾，用於存取[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]封裝： **Running Packages**和**存放的封裝**。 **[Running Packages]** 資料夾會列出伺服器上目前正在執行的封裝。 **[Stored Packages]** 資料夾會列出所有儲存在封裝存放區中的封裝。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務只會管理這些封裝。 封裝存放區可以只由 msdb 資料庫組成，或者由該資料庫和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔中所列之檔案系統資料夾所組成。 組態檔會指定要管理的 msdb 及檔案系統資料夾。 您可能還有不是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所管理的封裝，而存放在檔案系統的其他位置。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供兩個最上層資料夾用來存取[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]套件： **Running Packages**並**存放的封裝**。 **[Running Packages]** 資料夾會列出伺服器上目前正在執行的封裝。 **[Stored Packages]** 資料夾會列出所有儲存在封裝存放區中的封裝。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務只會管理這些封裝。 封裝存放區可以只由 msdb 資料庫組成，或者由該資料庫和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務組態檔中所列之檔案系統資料夾所組成。 組態檔會指定要管理的 msdb 及檔案系統資料夾。 您可能還有不是由 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務所管理的封裝，而存放在檔案系統的其他位置。  
   
  您儲存到 msdb 的封裝會存放在名為 sysssispackages 的資料表中。 當您將封裝儲存到 msdb 時，還可以將它們群組成邏輯資料夾。 使用邏輯資料夾可以協助您依用途組織封裝，或是篩選 sysssispackages 資料表中的封裝。 您可以經由使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立新的邏輯資料夾。 依預設，您加入至 msdb 的任何邏輯資料夾都會自動納入封裝存放區。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36037058"
   
  依預設， **[Stored Packages]** 資料夾包含兩個資料夾： **[File System]** 和 **[MSDB]**。 **[檔案系統]** 資料夾會列出儲存至檔案系統的封裝。 這些檔案的位置是在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務的組態檔中指定的。 預設資料夾為 [封裝] 資料夾，位於 %Program Files%\Microsoft SQL Server\100\DTS。 **MSDB** 資料夾會列出已儲存至伺服器上 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封裝。 sysssispackages 資料表包含 msdb 中所儲存的封裝。  
   
- 若要檢視封裝存放區中的封裝清單，您必須開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱[SQL Server Management Studio 中檢視 Integration Services 封裝&#40;SSIS 服務&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)。  
+ 若要檢視封裝存放區中的封裝清單，您必須開啟 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 並連接到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需詳細資訊，請參閱 < [SQL Server Management Studio 中檢視 Integration Services 封裝&#40;SSIS 服務&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)。  
   
 ## <a name="monitoring-running-packages"></a>監視執行中的封裝  
  **[Running Packages]** 資料夾會列出目前正在執行的封裝。 若要在 **的** [摘要] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]頁面上檢視有關目前封裝的資訊，請按一下 **Running Packages** 資料夾。 **[摘要]** 頁面上會列出諸如正在執行封裝的執行持續時間等資訊。 選擇性地重新整理資料夾以顯示最新的資訊。  
@@ -85,7 +85,7 @@ ms.locfileid: "36037058"
   
 -   [匯入和匯出封裝&#40;SSIS 服務&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [檢視 Integration Services 封裝在 SQL Server Management Studio &#40;SSIS 服務&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [檢視 Integration Services 封裝，在 SQL Server Management Studio &#40;SSIS 服務&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 服務 &#40;SSIS 服務&#41;](integration-services-service-ssis-service.md)  

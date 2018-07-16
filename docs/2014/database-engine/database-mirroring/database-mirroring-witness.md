@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], about witness
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: 71
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c415d1bea0b901025762bec04114ec4ba8ef558f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: e8d91cd6ff4cd5b96ec95218686101e4427e75c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218118"
 ---
 # <a name="database-mirroring-witness"></a>資料庫鏡像見證
   若要支援自動容錯移轉，就必須在高安全性模式下設定資料庫鏡像工作階段，而且它也會包含第三個伺服器執行個體，稱為「見證」。 見證是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的選擇性執行個體，可以讓在高安全性模式工作階段中的鏡像伺服器辨別是否啟動自動容錯移轉。 與兩位夥伴不同的是，見證並不是為資料庫服務。 支援自動容錯移轉是見證的唯一角色。  
@@ -55,7 +54,7 @@ ms.locfileid: "36037293"
 ##  <a name="SwHwRecommendations"></a> 軟體和硬體建議  
  我們強烈建議見證應該與任何夥伴位於不同的電腦上。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 支援資料庫鏡像夥伴伺服器。 相較之下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 還支援見證。 除了從舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]升級的期間以外，鏡像工作階段中的伺服器執行個體全都必須執行相同版本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 例如，當您從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 鏡像組態升級時可支援 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 見證，但是此見證無法加入至現有或新的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 或更新版本的鏡像組態中。  
   
- 見證可以在支援這些任何版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的任何可靠電腦系統上執行。 不過，建議每一個當做見證使用的伺服器執行個體具有對應於所執行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 版本所需的最低組態。 如需有關這些需求的詳細資訊，請參閱[硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 見證可以在支援這些任何版本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的任何可靠電腦系統上執行。 不過，建議每一個當做見證使用的伺服器執行個體具有對應於所執行之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 版本所需的最低組態。 如需有關這些需求的詳細資訊，請參閱 <<c0> [ 硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
 ##  <a name="InAutoFo"></a> 自動容錯移轉中見證的角色  
  在資料庫鏡像工作階段內，所有伺服器執行個體會監視其連接狀態。 如果夥伴彼此之間中斷連接，就要依靠見證，確保目前只有其中一個為資料庫服務。 如果同步處理鏡像伺服器失去主體伺服器的連接，但仍然連接到見證，鏡像伺服器就會連絡見證，判斷見證是否失去與主體伺服器的連接。  

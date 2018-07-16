@@ -1,5 +1,5 @@
 ---
-title: CellInfo 元素 (XMLA) |Microsoft 文件
+title: CellInfo 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CellInfo element
 ms.assetid: 8b6420f1-e9a7-4975-b580-1439fa11f5ca
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 803640fe83ccc3137b4597b8c1b78850abeb55c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: fda3576bb50314c28dd01474e576ff2b5b333cb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176385"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 元素 (XMLA)
-  表示父系所包含的資料格中繼資料[OlapInfo](olapinfo-element-xmla.md)項目。  
+  表示父元素所包含的資料格中繼資料[OlapInfo](olapinfo-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -76,7 +76,7 @@ ms.locfileid: "36037751"
   
  可用的屬性和其值可以使用 DISCOVER_PROPERTIES 要求類型，搭配取得`Discover`方法。 `PropertyList` 元素中所列的屬性沒有必要的順序。  
   
- 提供者可以選擇性地針對 `AxisInfo` 或 `CellInfo` 區段中的個別成員或資料格屬性指定預設值。 如果屬性一律或幾乎一律具有相同的值，預設值可以提供較小的結果。 若要表示屬性的預設值`Default`元素可以選擇性地指定為其中一個資料格屬性定義元素的子元素。 因此，如果成員或資料格屬性不存在結果中，就表示上述預設值為資料格屬性的值。  
+ 提供者可以選擇性地針對 `AxisInfo` 或 `CellInfo` 區段中的個別成員或資料格屬性指定預設值。 如果屬性一律或幾乎一律具有相同的值，預設值可以提供較小的結果。 若要表示屬性的預設值`Default`元素可以選擇性地指定為其中一個資料格屬性定義元素的子項目。 因此，如果成員或資料格屬性不存在結果中，就表示上述預設值為資料格屬性的值。  
   
 ## <a name="example"></a>範例  
  下列範例將示範如何在 `CellInfo` 元素中表示 VALUE、FORMATTED_VALUE 和 FORMAT_STRING 資料格屬性。  

@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 7bdab22ae7d649e1915cb31c221bf0f546727513
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9594eca6b955081be5689862d96d1c9d09a6a664
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202658"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>從多個報表產生資料摘要 (報表產生器及 SSRS)
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中列出可從報表的資料摘要，並從資料摘要資料的報表中的區域。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組產生您之後可用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端的資料摘要。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom 轉譯延伸模組會產生 Atom 服務文件，其中列出可從報表資料摘要，並從資料摘要的資料在報表中的區域。 您可以使用此延伸模組產生符合 Atom 的資料摘要，這些資料摘要可以使用可取用報表產生之資料摘要的應用程式讀取與交換。 例如，您可以使用 Atom 轉譯延伸模組產生您之後可用於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端的資料摘要。  
   
- Atom 服務文件在報表中，每個資料區至少會列出一個資料摘要。 根據資料區域及資料區域會顯示，資料類型而定[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]可能會產生來自某個資料區的多個資料摘要。 例如，矩陣或圖表可以提供多個資料摘要。 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對每個資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來存取資料摘要的內容。  
+ Atom 服務文件在報表中，每個資料區至少會列出一個資料摘要。 根據的資料區域，以及資料區域顯示的資料類型[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]取自資料區域，可能會產生多個資料摘要。 例如，矩陣或圖表可以提供多個資料摘要。 當 Atom 轉譯延伸模組建立 Atom 服務文件時，系統會針對每個資料摘要建立一個唯一的識別碼，而您會在 URL 中使用該識別碼來存取資料摘要的內容。  
   
  Atom 轉譯延伸模組針對資料摘要產生資料的方式類似於逗點分隔值 (CSV) 轉譯延伸模組將資料轉譯為 CSV 檔案的方式。 資料摘要就像是 CSV 檔案，是報表資料的扁平化表示法。 例如，包含加總群組內銷售量之資料列群組的資料表會在每個資料列中重複顯示這個總和，而且沒有僅包含總和的個別資料列。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36036964"
 
   
 ##  <a name="DataFeeds"></a> 資料摘要  
- 資料摘要是一種 XML 檔案，這個檔案擁有一致的表格格式 (不會隨時間而變更) 與變數資料 (每次執行報表時都可能不同)。 所產生的資料摘要[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]中由 ADO.NET Data Services 所產生的那些相同的格式。  
+ 資料摘要是一種 XML 檔案，這個檔案擁有一致的表格格式 (不會隨時間而變更) 與變數資料 (每次執行報表時都可能不同)。 所產生的資料摘要[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]位於由 ADO.NET Data Services 所產生的那些相同的格式。  
   
  一個資料摘要包含兩個區段：標頭和資料。 Atom 規格會定義每個區段中的元素。 標頭包含搭配資料摘要使用之字元編碼結構描述之類的資訊。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "36036964"
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 下列 XML 會說明 <`entry`> 項目從資料摘要中該報表。 請注意，<`entry`> 元素包含總計之銷售量與訂單群組和總計銷售量與訂單的所有群組。 <`entry`> 元素包含報表上所有的值。  
+ 下列 XML 會說明 <`entry`> 項目從資料摘要中該報表。 請注意，<`entry`> 項目包含銷售量與訂單的所有群組的總計，以及銷售量與訂單群組的總計。 <`entry`> 元素包含報表上所有的值。  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36036964"
   
  報表項目名稱預設為報表項目的報表定義語言 (RDL) 元素名稱，而且這些名稱通常不容易了解或是不容易記住。 例如，置於報表中之第一個矩陣的預設名稱為 Tablix 1。 資料摘要會使用這些名稱。  
   
- 若要讓資料摘要更容易處理，您可以使用資料區的 DataElementName 屬性來提供易記的名稱。 如果您提供 DataElementName 值的資料摘要子元素 <`d`> 會使用為它而不是預設的資料區域名稱。 例如，如果資料區的預設名稱為 Tablix1 而 DataElementName 設定 SalesByTerritoryYear，<`d`> 在資料摘要會使用 SalesByTerritoryYear。 如果資料區有兩個資料摘要，如上述的矩陣報表，則在資料摘要中使用的名稱為 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
+ 若要讓資料摘要更容易處理，您可以使用資料區的 DataElementName 屬性來提供易記的名稱。 如果您提供 dataelementname 的值的資料摘要子元素 <`d`> 會使用它而不是預設的資料區域名稱是。 例如，如果資料區的預設名稱為 Tablix1 而 DataElementName 設定 SalesByTerritoryYear，<`d`> 在資料摘要會使用 SalesByTerritoryYear。 如果資料區有兩個資料摘要，如上述的矩陣報表，則在資料摘要中使用的名稱為 SalesByTerritoryYear _Territory 和 SalesByTerritoryYear _Year。  
   
  如果您比較顯示在報表上的資料與資料摘要中的資料，可能會發現部分差異。 報表通常會顯示格式化的數值和時間/日期資料，而資料摘要則包含未格式化的摘要。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "36036964"
 
   
 ## <a name="see-also"></a>另請參閱  
- [匯出至 CSV 檔案&#40;報表產生器和 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [將報表匯出&#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
+ [匯出至 CSV 檔案&#40;報表產生器及 SSRS&#41;](exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+ [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

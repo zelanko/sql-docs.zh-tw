@@ -1,5 +1,5 @@
 ---
-title: 一般檔案目的地編輯器 （對應頁面） |Microsoft 文件
+title: 一般檔案目的地編輯器 （對應頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfiledestadapter.mappings.f1
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d7c94ee04df34919f40a0369d60592fe975b6bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 83d22f24c737a84a55bef27b2150e2032deccb9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037275"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213408"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>一般檔案目的地編輯器 (對應頁面)
   使用 [一般檔案目的地編輯器] 對話方塊的 [對應] 頁面，即可將輸入資料行對應到目的地資料行。  
@@ -45,6 +45,6 @@ ms.locfileid: "36037275"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [一般檔案目的地編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
+ [一般檔案目的地編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/flat-file-destination-editor-connection-manager-page.md)  
   
   

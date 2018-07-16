@@ -1,5 +1,5 @@
 ---
-title: 值元素 (ASSL) |Microsoft 文件
+title: 值元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Value element
 ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f350c559e78613df5e0a357b8f87dca073e1d248
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5bdf16f2f9ce7415d396cf5f4110fd3127e04774
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201988"
 ---
 # <a name="value-element-assl"></a>Value 元素 (ASSL)
   包含父元素的值。  
@@ -72,7 +72,7 @@ ms.locfileid: "36037324"
 |父元素|預期的值|  
 |--------------------|--------------------|  
 |[AlgorithmParameter](../objects/algorithmparameter-element-assl.md)|演算法參數的值。|  
-|[註解](../objects/annotation-element-assl.md)|註解的值。|  
+|[註釋](../objects/annotation-element-assl.md)|註解的值。|  
 |[Kpi](../objects/kpi-element-assl.md)|用來計算關鍵效能指標 (KPI) 之值的多維度運算式 (MDX) 運算式。|  
 |[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)|報表格式參數的值。|  
 |[ReportParameter](../objects/reportparameter-element-assl.md)|用來計算報表參數值的 MDX 運算式。|  

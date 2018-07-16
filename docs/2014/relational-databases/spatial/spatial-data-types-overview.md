@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
 - geography data type [SQL Server], spatial data
@@ -16,32 +16,32 @@ helpviewer_keywords:
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e328be1225999a629d93ab16c55b2bc4b7f15d5c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: d6dbc52caa183352376ae04887ec02088e8459ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131933"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162179"
 ---
 # <a name="spatial-data-types-overview"></a>空間資料類型概觀
   空間資料有兩種類型： `geometry` 資料類型支援平面或 Euclidean (扁平表面) 資料。 `geometry` 資料類型同時符合開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 SQL 簡單特徵規格 1.1.0 版，而且符合 SQL MM (ISO 標準)。  
   
- 此外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援`geography`資料型別，會儲存橢圓體 （圓形地球） 資料，例如 GPS 經緯度座標。  
+ 颾魤 ㄛ[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援`geography`資料類型，它會儲存橢圓體 （圓形地球） 資料，例如 GPS 經緯度座標。  
   
 > [!IMPORTANT]  
 >  如需 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]中空間功能 (包括空間資料類型的增強功能) 的詳細描述和範例，請下載技術白皮書： [New Spatial Features in SQL Server Code-Named "Denali"](http://go.microsoft.com/fwlink/?LinkId=226407)(SQL Server 代號 "Denali" 中的新空間功能)。  
   
 ##  <a name="objects"></a> 空間資料物件  
- `geometry` 和 `geography` 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體從其區分為其父資料類型衍生某些屬性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或多個`geometry`或`geography`中執行個體`GeometryCollection`。 `Geography` 類型具有一種額外的執行個體類型：`FullGlobe`。  
+ `geometry` 和 `geography` 資料類型支援十六種空間資料物件或執行個體類型。 但是，其中只有十一種執行個體類型「可具現化」；因此，您可以在資料庫中建立及處理這些執行個體 (或加以具現化)。 這些執行個體會從其區分為其父資料類型衍生某些屬性`Points`， **LineStrings，CircularStrings**， `CompoundCurves`， `Polygons`，`CurvePolygons`或多個`geometry`或是`geography`執行個體在`GeometryCollection`。 `Geography` 類型具有一種額外的執行個體類型：`FullGlobe`。  
   
- 下圖說明`geometry`賴以階層`geometry`和`geography`資料型別為基礎。 可具現化的型別`geometry`和`geography`以藍色標示。  
+ 下圖說明`geometry`賴以階層`geometry`和`geography`資料型別為基礎。 可具現化的類型`geometry`和`geography`以藍色標示。  
   
- ![Geometry 類型的階層](../../database-engine/media/geom-hierarchy.gif "geometry 類型的階層架構")  
+ ![Geometry 類型的階層](../../database-engine/media/geom-hierarchy.gif "geometry 類型的階層")  
   
- 如圖中所指示，十種可具現化類型`geometry`和`geography`資料型別是`Point`， `MultiPoint`， `LineString`， `CircularString`， `MultiLineString`， `CompoundCurve`， `Polygon`， `CurvePolygon`， `MultiPolygon`，和`GeometryCollection`。 geography 資料類型還有一種額外的可具現化類型：`FullGlobe`。 `geometry`和`geography`類型可以辨識特定的執行個體，只要它是語式正確的執行個體，即使未明確定義執行個體。 例如，如果您定義`Point`執行個體使用 stpointfromtext （） 方法中，明確`geometry`和`geography`辨識與執行個體`Point`，只要方法輸入的格式不正確。 如果您使用 `STGeomFromText()` 方法定義相同的執行個體，`geometry` 和 `geography` 資料類型都會將此執行個體辨識為 `Point`。  
+ 如圖中所指示，十種可具現化的類型`geometry`並`geography`資料類型為`Point`， `MultiPoint`， `LineString`， `CircularString`， `MultiLineString`， `CompoundCurve`， `Polygon`， `CurvePolygon`， `MultiPolygon`，和`GeometryCollection`。 geography 資料類型還有一種額外的可具現化類型：`FullGlobe`。 `geometry`和`geography`類型可以辨識特定的執行個體，只要它是語式正確的執行個體，即使未明確定義執行個體。 比方說，如果您定義`Point`執行個體使用 stpointfromtext （） 方法中，明確`geometry`並`geography`辨識的執行個體`Point`，只要方法輸入的格式正確。 如果您使用 `STGeomFromText()` 方法定義相同的執行個體，`geometry` 和 `geography` 資料類型都會將此執行個體辨識為 `Point`。  
   
  geometry 和 geography 類型的子類型可區分為簡單與集合類型。  某些方法 (例如 `STNumCurves()` ) 只能使用簡單類型。  
   
@@ -82,14 +82,14 @@ ms.locfileid: "36131933"
 ### <a name="measurements-in-spatial-data-types"></a>空間資料類型的度量  
  在平面或扁平表面系統中，系統會使用與座標相同的度量單位來測量距離和區域。 使用`geometry`資料型別、 之間的距離 （2，2） 和 （5，6） 是 5 單位，不論所使用的單位。  
   
- 在橢圓體 (或圓形地球) 系統中，會使用經緯度來提供座標。 不過，長度和面積通常是測量單位是公尺和平方公尺來測量，但進行的測量可能取決於空間參考識別碼 (SRID) 的`geography`執行個體。 最常見的度量單位`geography`資料型別是公尺。  
+ 在橢圓體 (或圓形地球) 系統中，會使用經緯度來提供座標。 不過，長度和面積通常會測量公尺和平方公尺，還是的測量可能取決的空間參考識別碼 (SRID) 的`geography`執行個體。 最常見的度量單位`geography`資料型別是公尺。  
   
 ### <a name="orientation-of-spatial-data"></a>空間資料的方向  
  在平面系統中，多邊形的環形方向不是重要的因素。 例如，((0, 0), (10, 0), (0, 20), (0, 0)) 描述的多邊形與 ((0, 0), (0, 20), (10, 0), (0, 0)) 描述的多邊形相同。 OGC 的 SQL 簡單特徵規格並未指示環形順序，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並未強制使用環形順序。  
   
  在橢圓體系統中，多邊形如果沒有方向的話，將沒有任何意義或是會模稜兩可。 例如，包圍赤道的環形是要描述北半球還是南半球？ 如果我們使用`geography`資料類型來儲存空間的執行個體，就必須指定此環形的方向，並正確描述執行個體的位置。 在橢圓體系統中，多邊形的內部是由左側規則定義。  
   
- 當相容性層級為 100 或低於中[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]則`geography`資料型別具有下列限制：  
+ 當相容性層級為 100 或低於在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]則`geography`資料型別具有下列限制：  
   
 -   每一個 `geography` 執行個體都必須納入單一半球。 大於半球的空間物件將無法儲存。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36131933"
  在 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 中，`FullGlobe` 是一種特殊類型的多邊形，它涵蓋了整個地球。 `FullGlobe` 有面積，但沒有框線或頂點。  
   
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>外部和內部環形在 geography 資料類型中不重要  
- OGC 的 SQL 規格簡單特徵討論了外部環形和內部環形，但是這樣的區別很少[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`geography`資料類型; 任何多邊形的環形才能採取來當做外部環形。  
+ OGC 的 SQL 規格簡單特徵討論了外部環形和內部環形，但是這項區別很大的意義， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography`資料類型; 任何多邊形的環形可以用來當做外部環形。  
   
  如需有關 OGC 規格的詳細資訊，請參閱下列主題：  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36131933"
   
   
 ##  <a name="circular"></a> 圓弧線段  
- 三種可具現化類型可以採用圓弧線段： `CircularString`， `CompoundCurve`，和`CurvePolygon`。  圓弧線段是由二維平面中的三個點定義，而且第三個點不得與第一個點相同。  
+ 三種可具現化的類型可以採用圓弧線段： `CircularString`， `CompoundCurve`，和`CurvePolygon`。  圓弧線段是由二維平面中的三個點定義，而且第三個點不得與第一個點相同。  
   
  圖 A 和 B 顯示一般圓弧線段。 請注意，這三個點如何分別位於圓形的圓周上。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "36131933"
   
  ![](../../database-engine/media/7e382f76-59da-4b62-80dc-caf93e637c14.png "7e382f76-59da-4b62-80dc-caf93e637c14")  
   
- 這個範例示範如何儲存上述等腰三角形兩者都使用`LineString`執行個體和`CircularString`執行個體：  
+ 此範例示範如何儲存上述等腰三角形使用這兩個`LineString`執行個體和`CircularString`執行個體：  
   
 ```tsql  
 DECLARE @g1 geometry;  
@@ -161,10 +161,10 @@ LS LengthCS Length
   
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
- 如上圖所示`CircularString`執行個體使用較少的點來儲存曲線界限，而精確度卻高於`LineString`執行個體。 `CircularString` 執行個體適合用於儲存圓形邊界，像是從特定點起算的二十英哩搜尋半徑。 `LineString` 執行個體適合用於儲存線性邊界，像是方形的城市街區。  
+ 如上所示，圖`CircularString`執行個體使用較少的點來儲存曲線界限，而精確度卻高於`LineString`執行個體。 `CircularString` 執行個體適合用於儲存圓形邊界，像是從特定點起算的二十英哩搜尋半徑。 `LineString` 執行個體適合用於儲存線性邊界，像是方形的城市街區。  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>LineString 和 CompoundCurve 的比較  
- 下列程式碼範例顯示如何儲存在相同的圖使用`LineString`和`CompoundCurve`執行個體：  
+ 下列程式碼範例示範如何儲存相同的圖使用`LineString`和`CompoundCurve`執行個體：  
   
 ```tsql  
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');  
@@ -197,7 +197,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` 執行個體同時允許`LineString`和`CircularString`元件，因此只有兩個點之直線線段的圓形圖配量需要為已知。  這個程式碼範例示範如何使用`CompoundCurve`來儲存相同的圖形：  
+ `CompoundCurve` 執行個體同時允許`LineString`和`CircularString`元件因此只需要兩個點的圓形圖配量之直線線段為已知。  此程式碼範例示範如何使用`CompoundCurve`來儲存相同的圖形：  
   
 ```tsql  
 DECLARE @g geometry;  

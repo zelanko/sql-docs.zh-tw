@@ -1,5 +1,5 @@
 ---
-title: FileName 屬性 （ClientNetLibInfo 類別） |Microsoft 文件
+title: FileName 屬性 （ClientNetLibInfo 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FileName property
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 5f82f468ab2f0dc5ed5240fe89e1a328e229637a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 55d825f3486977e0ce7127727ee0a6f06700c454
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37166280"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>FileName 屬性 (ClientNetLibInfo 類別)
   取得用戶端網路程式庫檔案的檔案名稱。  

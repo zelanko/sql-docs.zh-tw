@@ -1,5 +1,5 @@
 ---
-title: 維度結構 （維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 維度結構 （維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.f1
 ms.assetid: 88409278-4f8a-4f1f-8730-e602866dbb36
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9b6451fb646e84ea373ce1a0fb87c23eee1f49e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 223c50685ed41cb23ddff81e1fded12b9cac5fa5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214188"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>維度結構 (維度設計師) (Analysis Services - 多維度資料)
   使用維度設計師中的 [維度結構] 頁面，即可修改所選取維度的屬性、階層和層級。 [維度結構] 頁面包含一個工具列和三個窗格。  

@@ -1,5 +1,5 @@
 ---
-title: SetServiceAccountPassword 方法 （SqlService 類別） |Microsoft 文件
+title: SetServiceAccountPassword 方法 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetServiceAccountPassword method
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8f03fc65f6df92bb6e0c728314b74bbd5dbb7a99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: e9664e72427f743d8615f3eede030e0ce6e9c5ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37208678"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>SetServiceAccountPassword 方法 (SqlService 類別)
   修改參考之服務執行時所使用之帳戶的密碼。  

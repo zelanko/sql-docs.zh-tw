@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d897047a117d2c715f24bab4884f58a88d03e161
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4d0191085ac2a294d1dce8a30b9292a1cd7cf8ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132435"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171169"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件類別
   Performance Statistics 事件類別可用來監視正在執行之查詢、預存程序和觸發程序的效能。 其六個事件子類別分別表示了系統中查詢、預存程序和觸發程序存留期間內的一項事件。 您可以使用這些事件子類別以及關聯 sys.dm_exec_query_stats、sys.dm_exec_procedure_stats 和 sys.dm_exec_trigger_stats 動態管理檢視的組合，重新組成任何給定查詢、預存程序或觸發程序的效能記錄。  
@@ -48,7 +48,7 @@ ms.locfileid: "36132435"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`image`|SQL 控制代碼，可用它來透過 sys.dm_exec_sql_text 動態管理檢視取得批次 SQL 文字。|63|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|批次的 SQL 文字。|@shouldalert|是|  
+|TextData|`ntext`|批次的 SQL 文字。|1|是|  
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36132435"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`image`|SQL 控制代碼，可用它來透過 dm_exec_sql_text 動態管理檢視取得預存程序的 SQL 文字。|63|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|NULL|@shouldalert|是|  
+|TextData|`ntext`|NULL|1|是|  
 |PlanHandle|`image`|預存程序之已編譯計畫的計畫控制代碼。 這可用來取得 XML 計畫，其方式是利用 sys.dm_exec_query_plan 動態管理檢視。|65|是|  
 |ObjectType|`int`|代表參與事件之物件類型的值。<br /><br /> 8272 = 預存程序|28|是|  
 |BigintData2|`bigint`|編譯期間使用的總記憶體，以 KB 為單位。|53|是|  
@@ -90,7 +90,7 @@ ms.locfileid: "36132435"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`image`|SQL 控制代碼。 這可用來透過 dm_exec_sql_text 動態管理檢視取得批次 SQL 文字。|63|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|NULL|@shouldalert|是|  
+|TextData|`ntext`|NULL|1|是|  
 |PlanHandle|`image`|批次之已編譯計畫的計畫控制代碼。 這可用來取得批次 XML 計畫，其方式是利用 dm_exec_query_plan 動態管理檢視。|65|是|  
 |BigintData2|`bigint`|編譯期間使用的總記憶體，以 KB 為單位。|53|是|  
 |CPU|`int`|編譯期間所花的總 CPU 時間，以百萬分之一秒為單位。|18|是|  
@@ -113,7 +113,7 @@ ms.locfileid: "36132435"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`image`|SQL 控制代碼，可用它來透過 dm_exec_sql_text 動態管理檢視取得預存程序或批次 SQL 文字。|63|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|QueryExecutionStats|@shouldalert|是|  
+|TextData|`ntext`|QueryExecutionStats|1|是|  
 |PlanHandle|`image`|預存程序或批次的編譯計畫之計畫控制代碼。 這可用來取得 XML 計畫，其方式是利用 dm_exec_query_plan 動態管理檢視。|65|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36132435"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`image`|SQL 控制代碼，可用它來取得之前使用 dm_exec_sql_text 動態管理檢視執行的預存程序 SQL 文字。|63|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|ProcedureExecutionStats|@shouldalert|是|  
+|TextData|`ntext`|ProcedureExecutionStats|1|是|  
 |PlanHandle|`image`|預存程序之已編譯計畫的計畫控制代碼。 這可用來取得 XML 計畫，其方式是利用 dm_exec_query_plan 動態管理檢視。|65|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36132435"
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |SqlHandle|`image`|SQL 控制代碼，可用它來透過 dm_exec_sql_text 動態管理檢視取得觸發程序的 SQL 文字。|63|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|TriggerExecutionStats|@shouldalert|是|  
+|TextData|`ntext`|TriggerExecutionStats|1|是|  
 |PlanHandle|`image`|觸發程序之已編譯計畫的計畫控制代碼。 這可用來取得 XML 計畫，其方式是利用 dm_exec_query_plan 動態管理檢視。|65|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
   

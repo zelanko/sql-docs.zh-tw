@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09b00f2a95ae510cc387d60e3d810e03196bd76e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 4822bfe4b64e9fd169d02bd0b733bc64997d3b90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190518"
 ---
 # <a name="backup-encryption"></a>備份加密
   本主題提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份的加密選項概觀。 內容包括在備份期間加密的用法、益處和建議做法等詳細資料。  
@@ -139,7 +138,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |主題/工作|描述|  
 |-----------------|-----------------|  
 |[建立加密的備份](create-an-encrypted-backup.md)|描述建立加密備份所需的基本步驟|  
-|[SQL Server Managed 的 Backup to Windows Azure-保留和儲存體設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|描述指定加密選項時設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所需的基本步驟。|  
+|[SQL Server Managed Backup 到 Windows Azure - 保留和儲存體設定](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|描述指定加密選項時設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所需的基本步驟。|  
 |[使用 Azure 金鑰保存庫進行可延伸金鑰管理 &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|提供在 Azure 金鑰保存庫中建立受金鑰保護的加密備份範例。|  
   
 ## <a name="see-also"></a>另請參閱  

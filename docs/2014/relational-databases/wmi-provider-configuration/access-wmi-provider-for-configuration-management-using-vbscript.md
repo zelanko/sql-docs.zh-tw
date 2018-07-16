@@ -1,5 +1,5 @@
 ---
-title: 修改 SQL Server 服務進階屬性使用 VBScript |Microsoft 文件
+title: 修改 SQL Server 服務進階屬性使用 VBScript |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 003755ca5366a8571cdcb63f0c59c51a8012bb11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b54407bb2481e6e7e697b94631d9920bba3a3290
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37198768"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>使用 VBScript 修改 SQL Server 服務進階屬性
-  本章節描述如何建立 VBScript 程式來列出已安裝的執行個體的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦上執行。  
+  本節說明如何建立 VBScript 程式來列出已安裝的執行個體的版本[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的電腦上執行。  
   
  此程式碼範例會列出在電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和它的版本。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "36133395"
   
 5.  儲存檔案。  
   
-6.  輸入執行指令碼`cscript test.vbs`在命令提示字元。  
+6.  執行指令碼輸入`cscript test.vbs`在命令提示字元。  
   
 ## <a name="example"></a>範例  
   

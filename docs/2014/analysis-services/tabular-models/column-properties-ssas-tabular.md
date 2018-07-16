@@ -1,5 +1,5 @@
 ---
-title: 資料行屬性 (SSAS 表格式) |Microsoft 文件
+title: 資料行屬性 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.columnprop.f1
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e091df45f6531dfd0922c795105fe8aadd69b4bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 437f225da3d771298a0fcf7af864a45953b194be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169299"
 ---
 # <a name="column-properties-ssas-tabular"></a>資料行屬性 (SSAS 表格式)
   本主題描述表格式模型資料行屬性。  
@@ -65,8 +65,8 @@ ms.locfileid: "36132729"
 2.  在 **[屬性]** 視窗中按一下屬性，然後輸入值，或按一下向下箭頭來選取設定選項。  
   
 ## <a name="see-also"></a>另請參閱  
- [電源檢視報表屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)   
+ [Power 檢視報告的屬性&#40;SSAS 表格式&#41;](properties-ssas-tabular.md)   
  [隱藏或凍結資料行&#40;SSAS 表格式&#41;](hide-or-freeze-columns-ssas-tabular.md)   
- [將資料行加入資料表&#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)  
+ [將資料行加入至資料表&#40;SSAS 表格式&#41;](add-columns-to-a-table-ssas-tabular.md)  
   
   

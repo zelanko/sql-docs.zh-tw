@@ -1,5 +1,5 @@
 ---
-title: SPID 元素 (XMLA) |Microsoft 文件
+title: SPID 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - SPID element
 ms.assetid: c4a54dcb-a0cd-4255-9e0f-a34eb990854f
 caps.latest.revision: 15
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: d203225045314115604a8b99d82ab291c5960376
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 27244dab841ac4793d66c6b177d5382ca7cdc7a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131789"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167019"
 ---
 # <a name="spid-element-xmla"></a>SPID 元素 (XMLA)
-  識別要在上面執行父代的作用中的伺服器處理序識別碼 (SPID)[取消](../xml-elements-commands/cancel-element-xmla.md)項目。  
+  識別的作用中伺服器處理序識別碼 (SPID)，在上面執行父代[取消](../xml-elements-commands/cancel-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36131789"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `SPID`元素代表伺服器處理序識別碼 (SPID) 指定的工作階段的執行個體上使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+ `SPID`項目代表伺服器處理序識別碼 (SPID) 所使用的執行個體之給定工作階段[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="see-also"></a>另請參閱  
  [CancelAssociated 元素&#40;XMLA&#41;](cancelassociated-element-xmla.md)   

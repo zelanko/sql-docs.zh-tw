@@ -1,27 +1,26 @@
 ---
-title: 全文檢索目錄屬性 （母體擴展排程頁面） |Microsoft 文件
+title: 全文檢索目錄屬性 （母體擴展排程頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.schedule.f1
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 04d4cc9c596fa642e895d8d895c1fc1e0a16848c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55ec07c88ab453b0757206d05d4219fad2290ef8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036409"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213738"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>全文檢索目錄屬性 (母體擴展排程頁面)
   使用此對話方塊即可加入或修改排程，決定何時擴展或重新擴展全文檢索目錄。  

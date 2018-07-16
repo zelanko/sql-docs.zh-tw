@@ -1,5 +1,5 @@
 ---
-title: Audit 元素 (ASSL) |Microsoft 文件
+title: Audit 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Audit element
 ms.assetid: 26488119-6490-426d-a4e4-274b5bdffbc2
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc059cfde938bebe2503108faf835271786c3150
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1d87e0c58dd944c140e57f89894cb98a32d9230d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163319"
 ---
 # <a name="audit-element-assl"></a>Audit 元素 (ASSL)
   指定[追蹤](../objects/trace-element-assl.md)元素無法卸除任何事件，即使這樣造成伺服器效能降低。  
@@ -62,7 +62,7 @@ ms.locfileid: "36132293"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`Audit`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Trace>。  
+ 對應至父系的元素`Audit`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Trace>。  
   
 ## <a name="see-also"></a>另請參閱  
  [追蹤項目&#40;ASSL&#41;](../collections/traces-element-assl.md)   
