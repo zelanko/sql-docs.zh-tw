@@ -1,5 +1,5 @@
 ---
-title: 交叉驗證索引標籤 （採礦精確度圖表檢視） |Microsoft 文件
+title: 交叉驗證索引標籤 （採礦精確度圖表檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5b39187ddfc3e4ce0fa8ef0fc7e0402ef54b129
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a30cf9ce920f7e0416e46dd87044ef7e3d52318c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169819"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>交叉驗證索引標籤 (採礦精確度圖表檢視)
-  交叉驗證可讓您將採礦結構資料分割成交叉區段，並反覆地針對每個交叉區段培訓和測試模型。 您會指定數個將資料分割成的折疊，然後使用每個折疊當做測試資料，而剩餘的資料則用來定型新模型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接著會產生一組標準精確度度量，針對每個模型。 藉由比較針對每個交叉區段所產生的模型標準，您可以充分了解採礦模型對整個資料集而言有多可靠。  
+  交叉驗證可讓您將採礦結構資料分割成交叉區段，並反覆地針對每個交叉區段培訓和測試模型。 您會指定數個將資料分割成的折疊，然後使用每個折疊當做測試資料，而剩餘的資料則用來定型新模型。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接著會產生一組標準精確度度量，每個模型。 藉由比較針對每個交叉區段所產生的模型標準，您可以充分了解採礦模型對整個資料集而言有多可靠。  
   
  如需詳細資訊，請參閱[交叉驗證 &#40;Analysis Services - 資料採礦&#41;](data-mining/cross-validation-analysis-services-data-mining.md)。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36134842"
   
  例如，假設針對特定的目標狀態進行了三項預測，而每項預測的機率分別為 0.05、0.15 和 0.8。 如果將臨界值設定為 0.5，只有一項預測會計為正確。 如果您將 [目標臨界值] 設定為 0.10，其中兩項預測就會計為正確。  
   
- 當**目標****閾值**設`null`，這是預設值，每個案例最可能的預測計為正確。 在剛剛提及的範例中，0.05、0.15 和 0.8 是三個不同案例的預測機率。 雖然機率非常不同，但每項預測都會被視為正確，因為每個案例都只會產生一項預測，而這些都是這些案例的最佳預測。  
+ 當**目標****閾值**設定為`null`、 這是預設值、 針對每個案例最可能的預測計為正確。 在剛剛提及的範例中，0.05、0.15 和 0.8 是三個不同案例的預測機率。 雖然機率非常不同，但每項預測都會被視為正確，因為每個案例都只會產生一項預測，而這些都是這些案例的最佳預測。  
   
 ## <a name="see-also"></a>另請參閱  
  [測試和驗證&#40;資料採礦&#41;](data-mining/testing-and-validation-data-mining.md)   

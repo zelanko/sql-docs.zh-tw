@@ -1,5 +1,5 @@
 ---
-title: 「 自動存在 」 |Microsoft 文件
+title: 「 自動存在 」 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8fdb4d1cf175d88a6437f2efab269b4ecbf2e236
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5587d26a8c5df5f343f43b64b692d477ea07a015
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194368"
 ---
 # <a name="autoexists"></a>自動存在
   「自動存在」的概念是將 Cube 空間限制為實際存在於 Cube 中的資料格，相對因建立相同階層中的所有屬性階層成員組合而可能存在的資料格。 這是因為某個屬性階層的成員不能與相同維度中另一個屬性階層的成員同時存在。 在 SELECT 陳述式中使用相同維度的兩個以上屬性階層時，Analysis Services 會評估屬性的運算式來確認這些屬性的成員有受到正確的限制以符合所有其他屬性的準則。  
@@ -66,7 +66,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  請注意，0 是用來指定資料行軸，為 axis(0) (即資料行軸) 的縮寫。  
   
- 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上一個查詢也可以寫入使用新 * variant 的[Crossjoin (MDX)](/sql/mdx/crossjoin-mdx)函式。  
+ 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上述查詢也可以寫入使用新 * 的 variant [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx)函式。  
   
 ```  
 SELECT   
@@ -92,7 +92,7 @@ WHERE (Measures.[Internet Sales Amount],
  上述這三個查詢示範了 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中自動存在行為的作用。  
   
 ## <a name="deep-and-shallow-autoexists"></a>深層和淺層自動存在  
- 自動存在以「深層」或「淺層」方式套用至運算式。 「深層自動存在」(`Deep Autoexists`) 表示在套用 slicer 運算式、軸中的子 SELECT 運算式等之後，會評估所有運算式以符合最深層的可能空間。 `Shallow Autoexists` 表示在目前運算式之前評估外部運算式，但這些結果傳遞至目前運算式。 預設值是深層自動存在。  
+ 自動存在以「深層」或「淺層」方式套用至運算式。 「深層自動存在」(`Deep Autoexists`) 表示在套用 slicer 運算式、軸中的子 SELECT 運算式等之後，會評估所有運算式以符合最深層的可能空間。 `Shallow Autoexists` 表示在目前運算式之前評估外部運算式，而且這些結果傳遞至目前運算式。 預設值是深層自動存在。  
   
  下列案例和範例有助於說明不同類型的自動存在。 在下列範例中會建立兩個集合：一個當做計算運算式，而另一個當做常數運算式。  
   
@@ -312,10 +312,10 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- 「 自動存在 」 行為可以修改使用 AUTOEXISTS = [1 | 2 | 3] 參數中的連接字串。請參閱[支援 XMLA 屬性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)和<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。  
+ 「 自動存在 」 行為可以修改使用 「 自動存在 」 = [1 | 2 | 3] 參數中的連接字串;請參閱[支援的 XMLA 屬性&#40;XMLA&#41; ](../../xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)並<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>參數用法。  
   
 ## <a name="see-also"></a>另請參閱  
- [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Cube 空間](cube-space.md)   
  [Tuple](tuples.md)   
  [使用成員、 Tuple 和集合&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   

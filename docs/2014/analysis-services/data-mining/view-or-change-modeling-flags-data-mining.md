@@ -1,5 +1,5 @@
 ---
-title: 檢視或變更模型旗標 （資料採礦） |Microsoft 文件
+title: 檢視或變更模型旗標 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235b87b8f0aba0753044511f955cedab031e0ac1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7a225d0c20148d8e9728b1e502a36ccc3b0891b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033788"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303138"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>檢視或變更模型旗標 (資料採礦)
   模型旗標是您針對採礦結構資料行或採礦模型資料行設定的屬性，可控制演算法如何在分析期間處理資料。  
@@ -55,7 +55,7 @@ ms.locfileid: "36033788"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [採礦模型的工作與操作方法](mining-model-tasks-and-how-tos.md)   
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
  [模型旗標&#40;資料採礦&#41;](modeling-flags-data-mining.md)  
   
   

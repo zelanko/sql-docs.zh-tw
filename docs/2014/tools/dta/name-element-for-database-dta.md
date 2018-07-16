@@ -1,5 +1,5 @@
 ---
-title: 名稱元素 (DTA) 資料庫 |Microsoft 文件
+title: 命名元素 (DTA) 資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Name element
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfee4af158c9cee424ee44fb28293e3a315feda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 914962bfbedc048ac648e9e0526b320c0eb2213e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286426"
 ---
 # <a name="name-element-for-database-dta"></a>資料庫的 Name 元素 (DTA)
   指定您要微調之資料庫的名稱。  

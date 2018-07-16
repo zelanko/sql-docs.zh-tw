@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent alerts, user-defined events
 - user-defined events [SQL Server]
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - international considerations [SQL Server], alerts
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d92d459e93a8c9d0053e93fcb4d004252df107ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4c59bfb6f5f2c9621d212dc52a92daecd79fad7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034075"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313318"
 ---
 # <a name="create-a-user-defined-event"></a>建立使用者定義的事件
   若要監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預先定義之事件以外的其他事件，您可以建立使用者自訂的事件。 您也可以指派嚴重性層級到每個使用者自訂事件。  
@@ -83,6 +83,6 @@ ms.locfileid: "36034075"
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_update_alert &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
+ [sp_update_alert &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
   

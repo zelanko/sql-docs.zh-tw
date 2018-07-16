@@ -1,5 +1,5 @@
 ---
-title: 導出成員表單編輯器 （計算索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 導出成員表單編輯器 （計算索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a697e65ae650726e59a2ddb515746f5ef1ebb63e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b49b060b8c02219e9f1b8448700ce7f9b065bd5d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218368"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>導出成員表單編輯器 (計算索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[計算]** 索引標籤上的 **[導出成表單編輯器]** 窗格，即可建立或修改導出成員。  
@@ -69,7 +69,7 @@ ms.locfileid: "36136316"
  為導出成員選取用來解析 MDX 中之 NON EMPTY 查詢的量值名稱。 如果 **[非空白行為]** 屬性為空白，就必須重複評估導出成員來決定成員是否為空白。 如果 **[非空白行為]** 屬性包含量值的名稱，且指定的量值是空白的，就會將導出成員視為空白。  
   
 > [!WARNING]  
->  此屬性已被取代。 請勿設定。 請參閱[Deprecated Analysis Services Features in SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md)如需詳細資訊。  
+>  此屬性已被取代。 請勿設定。 請參閱[SQL Server 2014 中已被取代 Analysis Services 功能](deprecated-analysis-services-features-in-sql-server-2014.md)如需詳細資訊。  
   
  **色彩運算式**  
  展開以檢視 [前景色彩] 和 [背景色彩] 選項。  
@@ -116,7 +116,7 @@ ms.locfileid: "36136316"
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [建立導出的成員](multidimensional-models/create-calculated-members.md)   
  [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [計算&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [計算&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [指令碼組合管理&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [計算工具&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   

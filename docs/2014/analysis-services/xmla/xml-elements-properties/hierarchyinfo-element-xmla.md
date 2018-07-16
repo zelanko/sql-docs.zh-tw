@@ -1,5 +1,5 @@
 ---
-title: HierarchyInfo 元素 (XMLA) |Microsoft 文件
+title: HierarchyInfo 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - HierarchyInfo element
 ms.assetid: b4472251-1f1d-4233-a8e6-407397862ab4
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 54eb79259500f9004c7410f59943c0ec1aac8123
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: ff2da32b09833d425f49f47769a98d01e888264a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180799"
 ---
 # <a name="hierarchyinfo-element-xmla"></a>HierarchyInfo 元素 (XMLA)
-  代表包含父系的單一階層[AxisInfo](axisinfo-element-xmla.md)項目。  
+  表示父代所包含的單一階層[AxisInfo](axisinfo-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,13 +67,13 @@ ms.locfileid: "36136287"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[AxisInfo](axisinfo-element-xmla.md)|  
-|子元素|[標題](caption-element-xmla.md)， [DisplayInfo](displayinfo-element-xmla.md)， [LName](name-element-xmla.md)， [LNum](lnum-element-xmla.md)， [UName](uname-element-xmla.md)|  
+|子元素|[Caption](caption-element-xmla.md)， [DisplayInfo](displayinfo-element-xmla.md)， [LName](name-element-xmla.md)， [LNum](lnum-element-xmla.md)， [UName](uname-element-xmla.md)|  
   
 ## <a name="attributes"></a>屬性  
   
 |attribute|描述|  
 |---------------|-----------------|  
-|[屬性]|需要`String`屬性。 階層的名稱。|  
+|名稱|所需`String`屬性。 階層的名稱。|  
   
 ## <a name="remarks"></a>備註  
   

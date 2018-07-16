@@ -1,5 +1,5 @@
 ---
-title: 指定連接字串 (SSAS) |Microsoft 文件
+title: 指定連接字串 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.speconnstring.f1
 ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fc0988701ba21ef7e6880b85abab6309479a8a2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44e253ad8c84b85406cb3c4bf0a9576db419ab7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136282"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169369"
 ---
 # <a name="specify-a-connection-string-ssas"></a>指定連接字串 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您指定連接字串以連接至 OLE DB 或 ODBC 資料來源。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  

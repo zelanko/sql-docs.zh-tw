@@ -1,5 +1,5 @@
 ---
-title: 採礦模型的鑽研 |Microsoft 文件
+title: 採礦模型的鑽研 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f5b59e0a921e27bd5bdc62867130e71bbc67ffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0bb8838b9b012d1951f6b6fe0bde67ed09842d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37192938"
 ---
 # <a name="drillthrough-on-mining-models"></a>採礦模型的鑽研
   「鑽研」表示查詢採礦模型或採礦結構並取得模型中未公開之詳細資料的能力。  
@@ -52,7 +52,7 @@ ms.locfileid: "36136093"
 |Microsoft 貝氏機率分類演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
 |Microsoft 類神經網路演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
 |Microsoft 羅吉斯迴歸演算法|不支援。<br /><br /> 這些演算法不會將案例指派給內容中的特定節點。|  
-|Microsoft 線性迴歸演算法|支援。<br /><br /> 不過，因為此模型會建立單一節點， `All`，鑽研會傳回模型的所有培訓案例。 如果定型集很龐大，載入結果的時間可能會很長。|  
+|Microsoft 線性迴歸演算法|支援。<br /><br /> 不過，因為此模型會建立單一節點， `All`，鑽研會傳回模型的所有定型案例。 如果定型集很龐大，載入結果的時間可能會很長。|  
 |Microsoft 時間序列演算法|支援。<br /><br /> 不過，您無法使用資料採礦設計師中的 **[採礦模型檢視器]** ，鑽研結構或案例資料。 您必須改為建立 DMX 查詢。<br /><br /> 此外，您無法鑽研至特定節點，或撰寫 DMX 查詢來擷取時間序列模型之特定節點中的案例。 您可以使用其他準則 (例如日期或屬性值)，從模型或結構內部擷取案例資料。<br /><br /> 如果您想要檢視 Microsoft 時間序列演算法所建立之 ARTXP 和 ARIMA 節點的詳細資訊，使用 [Microsoft 一般內容樹狀檢視器 &#40;資料採礦&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) 可能更容易。|  
   
 ## <a name="related-tasks"></a>相關工作  

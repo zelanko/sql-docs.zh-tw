@@ -1,5 +1,5 @@
 ---
-title: 使用資料流程路徑編輯器來設定路徑的屬性 |Microsoft 文件
+title: 使用資料流程路徑編輯器來設定路徑的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 caps.latest.revision: 23
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f9b8b60299840327060bfc192ac4fced2773029f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 08d774cb9163f7c047a7333f4ff04e06939e2cf2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322628"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>使用資料流程路徑編輯器來設定路徑的屬性
   路徑會連接兩個資料流程元件。 在您可以設定路徑屬性之前，資料流程必須包含至少兩個已連接的資料流程元件。 如需詳細資訊，請參閱 [在資料流程中加入或刪除元件](data-flow/add-or-delete-a-component-in-a-data-flow.md) 和 [連接資料流程中的元件](data-flow/connect-components-in-a-data-flow.md)。  

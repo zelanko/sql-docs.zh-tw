@@ -1,5 +1,5 @@
 ---
-title: 在 SharePoint 模式下 (SSRS) 報表伺服器上的已發行的報表項目的 URL 範例 |Microsoft 文件
+title: 以 SharePoint 模式 (SSRS) 報表伺服器上的已發行的報表項目的 URL 範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bd98a2e64ca72e0e9b39328620b88732606e98af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: ce1e34688069063cde47849d00497a056c964431
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134868"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214728"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint 模式 (SSRS) 在報表伺服器上已發行報表項目的 URL 範例
   若要將報表和相關項目發行至 SharePoint 文件庫，您可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 撰寫工具 (例如報表設計師) 來發行內容，也可以使用 SharePoint 網站動作來上傳內容。  
@@ -79,7 +79,7 @@ ms.locfileid: "36134868"
  報表定義可以包含當做外部檔案儲存的影像檔。 您可以設定指向影像檔的完整 URL，在報表定義中參考該檔案。 它可以儲存在 SharePoint 網站或遠端電腦上。  
   
 > [!IMPORTANT]  
->  如果外部 URL 代表 SharePoint 網站上的影像，則當您在報表產生器中預覽報表時，會出現不完整的影像圖示。 當您將報表上傳至 SharePoint 網站，並連接模式中轉譯報表時，會出現不完整的影像圖示，如果您只有`View Items`權限。  
+>  如果外部 URL 代表 SharePoint 網站上的影像，則當您在報表產生器中預覽報表時，會出現不完整的影像圖示。 當您將報表上傳至 SharePoint 網站，並以連線模式轉譯報表時，會出現不完整的影像圖示，如果您只有`View Items`權限。  
   
  不管報表伺服器的模式為何，在報表中的外部影像檔參考必須是完整的 URL。 同時，參考外部影像檔通常需要您設定自動報表處理帳戶。  
   

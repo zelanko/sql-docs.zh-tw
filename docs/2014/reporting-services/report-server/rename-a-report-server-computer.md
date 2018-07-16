@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - renaming report servers
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: be5f32d7859d21409930428711c247b208b97e23
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6deb9cf058343e5b2a84d90c5ead07776447c355
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034085"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321728"
 ---
 # <a name="rename-a-report-server-computer"></a>重新命名報表伺服器電腦
   重新命名電腦會使 Web 伺服器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體 (如果它在同一台電腦上) 發生對應的名稱變更。 在某些情況下，一旦電腦名稱變更之後，可能就無法存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 。 電腦名稱變更之後，您可以利用本主題提供的步驟來重新設定報表伺服器。  
@@ -42,9 +42,9 @@ ms.locfileid: "36034085"
 ## <a name="renaming-a-report-server-computer"></a>重新命名報表伺服器電腦  
  如果您要重新命名執行報表伺服器的電腦，請執行下列步驟：  
   
-1.  開啟**RSReportServer.config**文字編輯器中，修改`UrlRoot`設定來反映新的伺服器名稱。 傳遞延伸模組利用 `UrlRoot` 設定來撰寫用於存取儲存在報表伺服器上之項目的 URL。 變更報表伺服器 URL 位址需要您更新`UrlRoot`設定，好讓訂閱會繼續如預期般，傳遞報表。  
+1.  開啟**RSReportServer.config**在文字編輯器中，並修改`UrlRoot`設定來反映新的伺服器名稱。 傳遞延伸模組利用 `UrlRoot` 設定來撰寫用於存取儲存在報表伺服器上之項目的 URL。 變更報表伺服器 URL 位址，您必須更新`UrlRoot`設定，好讓訂用帳戶繼續傳遞報表，如預期般運作。  
   
-2.  在同一個檔案中，如果設定，修改`ReportServerUrl`設定來反映新的伺服器名稱。 請注意，並非每一種安裝都使用此設定。 如果它是空的，請不要執行任何動作。  
+2.  在相同的檔案中，如果設定，修改`ReportServerUrl`設定來反映新的伺服器名稱。 請注意，並非每一種安裝都使用此設定。 如果它是空的，請不要執行任何動作。  
   
     > [!NOTE]  
     >  如果您在企業網路上使用 Windows 網際網路命名服務 (WINS)，報表伺服器和報表管理員可能還可以在先前的名稱下繼續使用一段時間。 WINS 會將 IP 位址對應到它所提供服務的每台電腦。 WINS 為重新命名的電腦重新整理 IP 位址之後，就無法再利用舊的電腦名稱來存取報表伺服器或報表管理員。  

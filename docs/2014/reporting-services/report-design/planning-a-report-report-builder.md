@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 96841d12896ed3bdb414fa1db1825cf5c07ba0cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 030f950d9b18452e415fa23b1a1d43bf13eabdce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144875"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196818"
 ---
 # <a name="planning-a-report-report-builder"></a>規劃報表 (報表產生器)
   報表產生器可讓您建立許多種類的報表。 例如，您可以建立顯示摘要或詳細銷售資料、行銷和銷售趨勢、營運報表或儀表板的報表。 您也可以建立利用豐富文字格式 (例如銷售訂單、產品目錄或正式書信) 的報表。 所有這些報表都是使用報表產生器中相同基本建置組塊的不同組合而建立。 若要建立有用且易於了解的報表，先進行規劃是有效的方法。 以下是開始作業前可能要考量的部分事項：  
   
 -   **要以何種格式顯示報表？**  
   
-     您可以在線上以瀏覽器 (例如報表管理員) 轉譯報表，或將報表匯出為 Excel、Word 或 PDF 之類的其他格式。 報表所採用的最終格式是一項重要的考量，因為並非所有匯出格式都可以提供所有功能。 如需詳細資訊，請參閱[匯出報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。  
+     您可以在線上以瀏覽器 (例如報表管理員) 轉譯報表，或將報表匯出為 Excel、Word 或 PDF 之類的其他格式。 報表所採用的最終格式是一項重要的考量，因為並非所有匯出格式都可以提供所有功能。 如需詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)。</c0>  
   
 -   **要使用什麼結構來展示報表中的資料？**  
   
-     您可以選擇表格式、矩陣 (類似交叉分析或樞紐分析表報表)、圖表、自由形式結構，或上述任何組合來展示資料。 如需詳細資訊，請參閱[列出&#40;報表產生器及 SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md)和[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+     您可以選擇表格式、矩陣 (類似交叉分析或樞紐分析表報表)、圖表、自由形式結構，或上述任何組合來展示資料。 如需詳細資訊，請參閱 <<c0> [ 列出&#40;報表產生器及 SSRS&#41; ](tables-matrices-and-lists-report-builder-and-ssrs.md)並[圖&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。</c0>  
   
 -   **要報表呈現什麼外觀？**  
   
@@ -53,11 +53,11 @@ ms.locfileid: "36144875"
   
 -   **要以何種方式傳遞報表？**  
   
-     您可以將報表儲存至本機電腦，繼續在本機使用或執行，以滿足您自己的資訊需求。 不過，若要與他人共用報表，您需要將報表儲存至以原生模式設定的報表伺服器，或是 SharePoint 整合模式下的報表伺服器。 如果將報表儲存到伺服器，其他人就可以在需要時隨時執行該報表。 或者，報表伺服器管理員可以設定報表的訂閱，或設定以電子郵件將報表傳遞給其他個人。 如果想要，可以用特定的匯出格式傳遞報表。 如需詳細資訊，請參閱[，Viewing，and Managing Reports&#40;報表產生器及 SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
+     您可以將報表儲存至本機電腦，繼續在本機使用或執行，以滿足您自己的資訊需求。 不過，若要與他人共用報表，您需要將報表儲存至以原生模式設定的報表伺服器，或是 SharePoint 整合模式下的報表伺服器。 如果將報表儲存到伺服器，其他人就可以在需要時隨時執行該報表。 或者，報表伺服器管理員可以設定報表的訂閱，或設定以電子郵件將報表傳遞給其他個人。 如果想要，可以用特定的匯出格式傳遞報表。 如需詳細資訊，請參閱 < [Fa98e01c78a9">finding，Viewing，and Managing Reports&#40;報表產生器及 SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 中的報表產生器](../report-builder/report-builder-in-sql-server-2016.md)   
- [報表撰寫概念&#40;報表產生器和 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [報表撰寫概念&#40;報表產生器及 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [教學課程&#40;報表產生器&#41;](../report-builder-tutorials.md)  
   
   

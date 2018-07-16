@@ -1,5 +1,5 @@
 ---
-title: 選項 (文字編輯器： 編輯器索引標籤和狀態列頁面) |Microsoft 文件
+title: 選項 (文字編輯器： 編輯器索引標籤和狀態列頁面) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
@@ -16,13 +16,13 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bfaef2b11c331416134eba0e7325875f47a014b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267264"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>選項 (文字編輯器：編輯器索引標籤和狀態列頁面)
   [編輯器索引標籤和狀態列] 頁面可讓您自訂 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 查詢編輯器所顯示的資訊。 您可以指定 [查詢編輯器] 視窗的索引標籤和狀態列中顯示的資訊層級，以及狀態列出現在編輯器視窗頂端或底部。  
@@ -62,7 +62,7 @@ ms.locfileid: "36036638"
 ## <a name="status-bar-layout-and-colors"></a>狀態列配置和色彩  
  指定查詢編輯器狀態列中項目的色彩。  
   
- **群組連接**  
+ **群組連線**  
  當查詢編輯器有一個以上的連接時，設定狀態列的色彩。  
   
  **單一伺服器連接**  
@@ -86,7 +86,7 @@ ms.locfileid: "36036638"
  **包含檔案名稱**  
  包含儲存指令碼的檔案名稱。  
   
- **包括資料夾名稱**  
+ **包含資料夾名稱**  
  包含儲存指令碼檔的資料夾路徑。  
   
  **包含登入名稱**  

@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - geography data type [SQL Server]
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec18679f1d466917e99f249c75c6ebf3bc42ff8c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ea4dc0a27743e62f0a13f866895cd7fe0ed0ae79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133681"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284714"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>建立、建構並查詢地理位置執行個體
   地理位置空間資料類型 (`geography`) 代表圓形表面座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 .NET Common Language Runtime (CLR) 資料類型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography`資料類型會儲存橢圓體 （圓形地球） 資料，例如 GPS 經緯度座標。  
   
- `geography`類型已預先定義，而且每個資料庫中。 您可以建立 `geography` 類型的資料表資料行，並使用與其他系統提供之類型相同的方式來操作 `geography` 資料。  
+ `geography`類型是預先定義的而且可在每個資料庫。 您可以建立 `geography` 類型的資料表資料行，並使用與其他系統提供之類型相同的方式來操作 `geography` 資料。  
   
 ##  <a name="creating"></a> 建立或建構新的地理位置執行個體  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36133681"
  [STDifference &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stdifference-geography-data-type)  
   
 ###  <a name="wkt"></a> 從已知的文字輸入建構地理位置執行個體  
- `geography`資料類型提供數種內建方法，可從開放式地理空間協會 (OGC) 的 WKT 表示法產生地理位置。 WKT 標準是一種文字字串，可允許使用文字格式交換地理位置資料。  
+ `geography`資料類型提供數種內建的方法，從開放地理空間協會 (OGC) well-known text，WKT 表示法產生地理位置。 WKT 標準是一種文字字串，可允許使用文字格式交換地理位置資料。  
   
  **從 WKT 輸入建構任何類型的地理位置執行個體**  
  [STGeomFromText &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
@@ -80,7 +80,7 @@ ms.locfileid: "36133681"
  [STGeomCollFromText &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
 ###  <a name="wkb"></a> 從已知的二進位輸入建構地理位置執行個體  
- WKB 是 OGC 允許指定的二進位格式`Geography`用戶端應用程式與 SQL 資料庫之間交換資料。 下列函數可接受 WKB 輸入來建構地理位置執行個體：  
+ WKB 是 OGC 允許指定的二進位格式`Geography`来在用戶端應用程式和 SQL database 之間交換資料。 下列函數可接受 WKB 輸入來建構地理位置執行個體：  
   
  **從 WKB 輸入建構任何類型的地理位置執行個體**  
  [STGeomFromWKB &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  
@@ -107,7 +107,7 @@ ms.locfileid: "36133681"
  [STGeomCollFromWKB &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (geography 資料類型)  
   
 ###  <a name="gml"></a> 從 GML 文字輸入建構地理位置執行個體  
- `geography`資料類型提供的方法，會產生`geography`從 GML 的 XML 表示的執行個體`geography`執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
+ `geography`資料類型提供的方法，會產生`geography`執行個體，GML 的 XML 表示法`geography`執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
  如需地理標記語言的詳細資訊，請參閱 OGC 規格： [OGC 規格、地理標記語言](http://go.microsoft.com/fwlink/?LinkId=93629)。  
   
@@ -132,10 +132,10 @@ ms.locfileid: "36133681"
  [AsGml &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="query"></a> 查詢地理位置執行個體的屬性和行為  
- 所有`geography`執行個體都有一些可以透過方法擷取的屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主題定義地理位置類型的屬性和行為以及用來查詢每一個類型的方法。  
+ 所有`geography`執行個體都可以透過方法來擷取的屬性數目，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主題定義地理位置類型的屬性和行為以及用來查詢每一個類型的方法。  
   
 ###  <a name="valid"></a> 有效性、執行個體類型和 GeometryCollection 資訊  
- 之後`geography`建構執行個體，您可以使用下列方法傳回的執行個體類型，或者如果它是`GeometryCollection`執行個體，就會傳回特定`geography`執行個體。  
+ 在後`geography`建構執行個體，您可以使用下列方法來傳回執行個體類型，或者它是否`GeometryCollection`執行個體，就會傳回特定`geography`執行個體。  
   
  **傳回 geography 類型的執行個體**  
  [STGeometryType &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stgeometrytype-geography-data-type)  
@@ -165,7 +165,7 @@ ms.locfileid: "36133681"
  [STEndpoint &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a> 維度  
- 空`geography`執行個體可以是 0，1-維度或 2 維度。 零維度`geography`例項，例如`Point`和`MultiPoint`，沒有長度或區域。 一維度物件 (如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`) 具有長度。 二維度執行個體，例如`Polygon, CurvePolygon`，和`MultiPolygon`，有區域和長度。 空的執行個體會報告 -1 的維度，而 `GeometryCollection` 則會報告其內容的最大維度。  
+ 非空`geography`執行個體可以是 0-1 或 2 維度。 零維度`geography`執行個體，例如`Point`和`MultiPoint`，沒有長度或區域。 一維度物件 (如 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString`) 具有長度。 二維度執行個體，例如`Polygon, CurvePolygon`，和`MultiPolygon`，有區域和長度。 空的執行個體會報告 -1 的維度，而 `GeometryCollection` 則會報告其內容的最大維度。  
   
  **傳回執行個體的維度**  
  [STDimension &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -177,13 +177,13 @@ ms.locfileid: "36133681"
  [STArea &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a> Empty  
- *空*`geography`執行個體沒有任何點。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 執行個體的長度是 0。 空白區域`Polygon, CurvePolygon`和`MultiPolygon`例項為 0。  
+ *空*`geography`執行個體沒有任何點。 空的 `LineString, CircularString`、`CompoundCurve` 和 `MultiLineString` 執行個體的長度是 0。 空白的區域`Polygon, CurvePolygon`和`MultiPolygon`例項為 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  
   
 ###  <a name="closure"></a> 封閉性  
- A*關閉*`geography`執行個體是起始點與結束點相同。 `Polygon` 執行個體視為封閉式。 `Point` 執行個體視為非封閉式。  
+ A*關閉*`geography`執行個體是起始點與結束點相同。 `Polygon` 執行個體都視為封閉式。 `Point` 執行個體視為非封閉式。  
   
  環形是簡單、 關閉`LineString`執行個體。  
   
@@ -229,7 +229,7 @@ ms.locfileid: "36133681"
  [STSymDifference &#40;geography 資料類型&#41;](/sql/t-sql/spatial-geography/stsymdifference-geography-data-type)  
   
 ##  <a name="supportedsrid"></a> 地理位置執行個體必須使用支援的 SRID  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以 EPSG 標準為根據的 SRID。 當執行計算或是搭配地理位置空間資料使用方法時，必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援之 `geography` 執行個體的 SRID。 SRID 必須符合 **sys.spatial_reference_systems** 目錄檢視中所顯示的其中一個 SRID。 如先前所述，當您執行計算上程式空間資料，請使用`geography`資料型別，結果將取決於哪一個橢圓體用來建立您的資料，因為每一個橢圓體都會指派特定的空間參考識別碼 （SRID)。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援以 EPSG 標準為根據的 SRID。 當執行計算或是搭配地理位置空間資料使用方法時，必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援之 `geography` 執行個體的 SRID。 SRID 必須符合 **sys.spatial_reference_systems** 目錄檢視中所顯示的其中一個 SRID。 如先前所述，當您執行計算上的空間資料使用`geography`資料類型，您的結果取決於哪一個橢圓體用於建立您的資料，因為每一個橢圓體都會指派特定的空間參考識別碼 （SRID)。  
   
  在 `geography` 執行個體上使用方法時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用預設 SRID 4326，此 SRID 會對應到 WGS 84 空間參考系統。 如果您使用 WGS 84 (或 SRID 4326) 以外之空間參考系統內的資料，您需要為您的地理位置空間資料決定特定的 SRID。  
   

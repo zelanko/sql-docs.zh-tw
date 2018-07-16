@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing folders
 - modifying folders
@@ -20,13 +20,13 @@ ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 8a6971e6746c7e35afdb010435bda10767e7b8f8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5052533d7ad6ec684a9da0262761e923c43a5a64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177265"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>建立、刪除或修改資料夾 (報表管理員)
   您可以建立資料夾來組織與管理發行至報表伺服器的項目。 建立資料夾可以協助使用者尋找他們感興趣的報表。 對於內容管理員而言，資料夾會提供套用權限的架構。 您可以針對特定資料夾建立角色指派，以便限制在開發中或不應該廣為散發之報表的存取權。  
@@ -37,7 +37,7 @@ ms.locfileid: "36136565"
   
 2.  在報表管理員中，選取主資料夾，然後按一下 [新增資料夾]。 或者若要在現有資料夾下建立資料夾，請在 [內容] 頁面中巡覽到該資料夾，然後按一下資料夾以開啟資料夾。 接著按一下 [新增資料夾]。  
   
-     [新增資料夾] 頁面隨即開啟。  
+      [新增資料夾] 頁面隨即開啟。  
   
 3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：; ? : @ & = +，$ / * \< > |。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
   

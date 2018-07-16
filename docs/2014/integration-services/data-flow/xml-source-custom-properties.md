@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6cda524adafb4202f324246b1a4bd94495ebdf48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2646a9e3a5387b63d5d5784f67d4613adb22266d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37201778"
 ---
 # <a name="xml-source-custom-properties"></a>XML 來源自訂屬性
   XML 來源同時具有自訂屬性以及所有資料流程元件通用的屬性。  

@@ -1,5 +1,5 @@
 ---
-title: InstanceName 屬性 （ServerSettingsGeneralFlag 類別） |Microsoft 文件
+title: InstanceName 屬性 （ServerSettingsGeneralFlag 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - InstanceName property
 ms.assetid: b5da398c-9697-4f67-b4c8-3fdd56a404ec
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 73ea3ab614ad68e656763d74b2f9d07996a44a38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 8b45eb6e49c1341c3af650740c5d0a5d805f5b37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309428"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>InstanceName 屬性 (ServerSettingsGeneralFlag 類別)
   取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體的名稱。  

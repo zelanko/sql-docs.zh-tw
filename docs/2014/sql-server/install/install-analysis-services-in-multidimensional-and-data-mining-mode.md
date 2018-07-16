@@ -1,5 +1,5 @@
 ---
-title: 安裝 Analysis Services 以多維度和資料採礦模式 |Microsoft 文件
+title: 安裝 Analysis Services 多維度和資料採礦模式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, about installing Analysis Services
 - installing Analysis Services
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - SQL Server Analysis Services, installing
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 caps.latest.revision: 47
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 1a35dae4817d38ea3485b8b34a493314302bdfa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d90380f1e908c3b0cf1226f94de4a404ae5e65e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222578"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>以多維度及資料採礦模式安裝 Analysis Services
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供商業智慧應用程式的線上分析處理 (OLAP) 和資料採礦功能。 在此版本中，支援 OLAP 資料庫和資料採礦模型時，使用您安裝[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中*多維度模式*。 多維度模式是執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的三種伺服器模式之一， 也是預設模式。 如果您使用預設值安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則會取得執行多維度資料庫和資料採礦模型的執行個體。  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供商業智慧應用程式的線上分析處理 (OLAP) 和資料採礦功能。 在此版本中，OLAP 資料庫和資料採礦模型都提供當您安裝[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中*多維度模式*。 多維度模式是執行 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的三種伺服器模式之一， 也是預設模式。 如果您使用預設值安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，則會取得執行多維度資料庫和資料採礦模型的執行個體。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 是一項多執行個體功能，表示您可以在單一電腦上安裝一個以上的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體，或是與舊版並存執行新的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。 每個執行個體會有特定的伺服器模式。 使用其他模式需要您安裝其他伺服器執行個體。  
   
@@ -56,15 +56,15 @@ ms.locfileid: "36136802"
   
 |連結|工作|  
 |-----------|-----------|  
-|[硬體 and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)和[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。|執行安裝程式之前，請先檢查安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所需的必要條件，並決定要用來提供伺服器的帳戶。|  
-|[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。|執行 SQL Server 安裝程式，安裝軟體。|  
+|[硬體和 Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)並[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。|執行安裝程式之前，請先檢查安裝 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 所需的必要條件，並決定要用來提供伺服器的帳戶。|  
+|[從安裝精靈安裝 SQL Server 2014&#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。|執行 SQL Server 安裝程式，安裝軟體。|  
 |[設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|安裝程式結束後，您必須設定防火牆設定，以允許遠端連接伺服器。|  
 |[物件和作業的存取權授權 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|存取 Analysis Services 資料庫的使用者至少必須在伺服器上具有一個資料庫的「讀取」權限。|  
   
 ## <a name="related-content"></a>相關內容  
  您可以在下列主題中找到其他設定內容：  
   
- [以表格模式安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)  
+ [以表格式模式安裝 Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)  
   
  [PowerPivot for SharePoint 2010 安裝](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
@@ -75,7 +75,7 @@ ms.locfileid: "36136802"
  根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫、範例程式碼和用戶端應用程式增益集。 若要安裝範例資料庫和範例程式碼，請參閱 [CodePlex 網站](http://go.microsoft.com/fwlink/?LinkId=87843)。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473)   
+ [SQL server 2012 版本支援的功能](http://go.microsoft.com/fwlink/?linkid=232473)   
  [語言和定序&#40;Analysis Services&#41;](../../../2014/analysis-services/languages-and-collations-analysis-services.md)   
  [升級 Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
   

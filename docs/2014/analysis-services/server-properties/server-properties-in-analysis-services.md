@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 中設定伺服器屬性 |Microsoft 文件
+title: Analysis Services 中設定伺服器屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSAS, configuration properties
 - Analysis Services, configuration properties
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fbb4d0682f7bb961b17901efc3cf3994fd81a7cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19f6f04dfe165cb5f3af5bd5587232d65c8c4582
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247348"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>在 Analysis Services 中設定伺服器屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，可以在同一部伺服器上與其他執行個體分開設定。  
@@ -44,7 +44,7 @@ ms.locfileid: "36037555"
  SQL Server Management Studio 中的屬性頁包含可用屬性的子集，其中只會顯示較可能修改的屬性。 完整的屬性集可以在 msmdsrv.ini 檔中找到。  
   
 > [!NOTE]  
->  本主題沒有在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中記載部署組態屬性。 如需有關部署組態的詳細資訊，請參閱[指定方案部署的組態設定](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。  
+>  本主題沒有在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中記載部署組態屬性。 如需部署組態的詳細資訊，請參閱[指定方案部署的組態設定](../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。  
   
 #### <a name="view-or-set-configuration-properties-in-management-studio"></a>在 Management Studio 中檢視或設定組態屬性  
   

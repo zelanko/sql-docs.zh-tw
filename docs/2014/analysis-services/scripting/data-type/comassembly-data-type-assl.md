@@ -1,5 +1,5 @@
 ---
-title: ComAssembly 資料類型 (ASSL) |Microsoft 文件
+title: ComAssembly 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ComAssembly data type
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe3a7791d02d97b4283b63a1aedd3b6702fe563
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 824fb508bb392f6ef84ede39645a5bac0da645e6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171549"
 ---
 # <a name="comassembly-data-type-assl"></a>ComAssembly 資料類型 (ASSL)
-  定義代表與相關聯之 COM 程式庫的衍生的資料類型[伺服器](../objects/server-element-assl.md)或[資料庫](../objects/database-element-assl.md)項目。  
+  定義代表與相關聯之 COM 程式庫的衍生的資料類型[伺服器](../objects/server-element-assl.md)或是[資料庫](../objects/database-element-assl.md)項目。  
   
 > [!IMPORTANT]  
 >  COM 組件可能會造成安全性風險。 由於這項風險和其他考量，COM 組件在 [!INCLUDE[ssASversion10](../../../includes/ssasversion10-md.md)]中已經被取代。 在未來的版本中，可能不再支援 COM 組件。  
@@ -61,12 +61,12 @@ ms.locfileid: "36136283"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[Source](../properties/source-element-comassembly-assl.md)|  
-|衍生的元素|請參閱[組件](../objects/assembly-element-assl.md)([組件](../collections/assemblies-element-assl.md)集合[資料庫](../objects/database-element-assl.md)或[伺服器](../objects/server-element-assl.md))|  
+|衍生的元素|請參閱[組件](../objects/assembly-element-assl.md)([組件](../collections/assemblies-element-assl.md)集合[資料庫](../objects/database-element-assl.md)或是[Server](../objects/server-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- `ComAssembly`項目相關聯的執行個體是 COM 程式庫包含的參考 （完整的檔案名稱或程式設計識別碼） [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]或的執行個體上的特定資料庫[!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
+ `ComAssembly`項目包含的參考 （完整的檔案名稱或程式設計識別碼） 的執行個體相關聯之 COM 程式庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]或與特定資料庫執行個體上的[!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ComAssembly>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.ComAssembly>。  
   
 ## <a name="see-also"></a>另請參閱  
  [ClrAssembly 資料類型&#40;ASSL&#41;](assembly-data-type-assl.md)   

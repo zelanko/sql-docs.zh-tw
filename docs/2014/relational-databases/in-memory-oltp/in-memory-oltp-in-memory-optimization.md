@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 98
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: a7ee2a4a5a9bb56eee68aab349ff65ca811356cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030344"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316198"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
   [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]是 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 中的新功能，可大幅提升 OLTP 資料庫應用程式效能。 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 是已整合至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎的記憶體最佳化資料庫引擎，已針對 OLTP 最佳化。  
@@ -53,7 +53,7 @@ ms.locfileid: "36030344"
   
  在 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 中， [!INCLUDE[tsql](../../../includes/tsql-md.md)] 對於 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]介面區的支援有一些限制。  
   
- [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 使用達到顯著的效能和延展性提升：  
+ [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 藉由使用，達到顯著的效能和延展性提升：  
   
 -   為存取記憶體駐留的資料最佳化的演算法。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "36030344"
 |主題|描述|  
 |-----------|-----------------|  
 |[使用記憶體最佳化資料表的需求](memory-optimized-tables.md)|討論有關使用記憶體最佳化資料表的硬體和軟體需求以及方針。|  
-|[在 VM 環境使用記憶體中 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|涵蓋在虛擬化環境中使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 。|  
+|[在 VM 環境使用記憶體內部 OLTP](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|涵蓋在虛擬化環境中使用 [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 。|  
 |[記憶體內部 OLTP 程式碼範例](in-memory-oltp-code-samples.md)|包含程式碼範例，示範如何建立及使用記憶體最佳化資料表。|  
 |[記憶體最佳化資料表](memory-optimized-tables.md)|介紹記憶體最佳化的資料表。|  
 |[記憶體最佳化資料表變數](../../database-engine/memory-optimized-table-variables.md)|程式碼範例，示範如何使用記憶體最佳化的資料表變數取代傳統資料表變數，以減少 tempdb 的使用量。|  

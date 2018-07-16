@@ -5,24 +5,23 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 36
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2c5efc1697e9911a667872f7293ab971b75a1398
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a4249f87cf7a8361056caf6c49b3775848d7dfe5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250188"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>使用字元格式匯入或匯出資料 (SQL Server)
   若要將資料大量匯出到用於其他程式的文字檔，或是要從其他程式產生的文字檔大量匯入資料，建議您使用字元格式。  
@@ -46,9 +45,9 @@ ms.locfileid: "36134190"
   
 -   若要避免在轉換期間遺失擴充字元，請使用 Unicode 字元格式，或指定字碼頁。  
   
--   所有儲存在字元格式檔案中的 `sql_variant` 資料，會在沒有中繼資料的情況下儲存。 每個資料值會轉換成`char`格式，根據隱含資料轉換的規則。 匯入至 `sql_variant` 資料行時，資料會以 `char` 格式匯入。 匯入資料行資料類型以外`sql_variant`，資料會從轉換`char`會使用隱含轉換。 如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
+-   所有儲存在字元格式檔案中的 `sql_variant` 資料，會在沒有中繼資料的情況下儲存。 每個資料值會轉換成`char`格式，根據隱含資料轉換的規則。 匯入至 `sql_variant` 資料行時，資料會以 `char` 格式匯入。 當匯入資料行資料類型以外`sql_variant`，資料會從轉換`char`使用隱含轉換。 如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   
--   **Bcp**公用程式匯出`money`值為四位數小數點之後、 但沒有任何數字分位符號，例如逗號區隔字元格式資料檔案。 例如，`money` 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
+-   **Bcp**公用程式匯出`money`有四個位數小數點之後、 但沒有任何數字分位符號，例如逗點分隔符號字元格式資料檔的值。 例如，`money` 資料行包含的值 1,234,567.123456，會採用 1234567.1235 的字元字串，大量匯出到資料檔。  
   
 ## <a name="command-options-for-character-format"></a>字元格式的命令選項  
  您可以將字元格式資料匯入資料表，方法是使用 **bcp**、BULK INSERT 或 INSERT ...SELECT \* FROM OPENROWSET(BULK...)。若是 **bcp** 命令或 BULK INSERT 陳述式，您可以在命令列上指定資料格式。 針對 INSERT ...SELECT * FROM OPENROWSET(BULK...) 陳述式，您必須在格式檔案中指定資料格式。  

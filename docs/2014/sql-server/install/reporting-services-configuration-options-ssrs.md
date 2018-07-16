@@ -1,5 +1,5 @@
 ---
-title: Reporting Services 組態選項 (SSRS) |Microsoft 文件
+title: Reporting Services 組態選項 (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
 helpviewer_keywords:
@@ -19,20 +19,20 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 81a94897a4c5a0ebce5932ef09612a377a458937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dff91a860d801257d9228dd904cbe36855504cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327078"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services 組態選項 (SSRS)
   您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈的 [Reporting Services 組態] 頁面來指定報表伺服器的安裝和設定方式。 某個安裝選項的可用與否，取決於您先前在 [特徵選取] 頁面上選擇的選項，以及在安裝報表伺服器時是否也一併安裝 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 的本機執行個體。  
   
- 在某些情況下，如果安全通訊端層 (SSL) 憑證安裝在電腦上，並繫結至強式萬用字元，則安裝程式將會使用 HTTPS 前置詞建立 Reporting Services URL。 如需有關憑證如何對應到 Reporting Services Url 的詳細資訊，請參閱[設定報表伺服器針對安全通訊端層 (SSL) 連線](http://go.microsoft.com/fwlink/?LinkId=199089)(http://go.microsoft.com/fwlink/?LinkId=199089) SQL Server 線上叢書 》 中。  
+ 在某些情況下，如果安全通訊端層 (SSL) 憑證安裝在電腦上，並繫結至強式萬用字元，則安裝程式將會使用 HTTPS 前置詞建立 Reporting Services URL。 如需憑證如何對應到 Reporting Services Url 的詳細資訊，請參閱[設定報表伺服器進行安全通訊端層 (SSL) 連線](http://go.microsoft.com/fwlink/?LinkId=199089)(http://go.microsoft.com/fwlink/?LinkId=199089) SQL Server 線上叢書 》 中。  
   
- 如需最新的資訊關於[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]和的安裝和設定這個版本中，請參閱[其他安裝資訊](http://go.microsoft.com/fwlink/?LinkId=207425)(http://go.microsoft.com/fwlink/?LinkId=207425)。  
+ 如需最新的資訊關於[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]並安裝和設定的此版本中，請參閱[其他安裝資訊](http://go.microsoft.com/fwlink/?LinkId=207425)(http://go.microsoft.com/fwlink/?LinkId=207425)。  
   
 ## <a name="options"></a>選項。  
   
@@ -50,18 +50,18 @@ ms.locfileid: "36030208"
  若要檢視有關安裝程式所使用之預設值的資訊，或是要了解無法安裝預設組態的原因，請按一下 [詳細資料]。 如需原生模式報表伺服器的預設組態的詳細資訊，請參閱[原生模式安裝 (Reporting Services) 的預設組態](http://go.microsoft.com/fwlink/?LinkId=199091)(http://go.microsoft.com/fwlink/?LinkId=199091)。  
   
 #### <a name="install-only"></a>只安裝  
- 安裝報表伺服器程式檔、建立報表伺服器服務帳戶，以及註冊報表伺服器 Windows Management Instrumentation (WMI) 提供者。 這個安裝選項稱為「僅限檔案」的安裝。 如果您不想要使用預設組態，請選取這個選項。 如果無法安裝預設組態，或者您正在安裝包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]容錯移轉叢集，這就是唯一可用的選項。 如需有關僅限檔案安裝的詳細資訊，請參閱[僅限檔案安裝 (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199093) (http://go.microsoft.com/fwlink/?LinkId=199093)。  
+ 安裝報表伺服器程式檔、建立報表伺服器服務帳戶，以及註冊報表伺服器 Windows Management Instrumentation (WMI) 提供者。 這個安裝選項稱為「僅限檔案」的安裝。 如果您不想要使用預設組態，請選取這個選項。 如果無法安裝預設組態，或者您正在安裝包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]容錯移轉叢集，這就是唯一可用的選項。 如需有關僅限檔案安裝的詳細資訊，請參閱 <<c0> [ 僅限檔案安裝 (Reporting Services)](http://go.microsoft.com/fwlink/?LinkId=199093) (http://go.microsoft.com/fwlink/?LinkId=199093)。  
   
- 安裝完成之後，您必須建立報表伺服器資料庫以及設定報表伺服器，之後，才能使用它。 若要設定報表伺服器和建立資料庫，請使用 Reporting Services 組態管理員。 如需詳細資訊，請參閱[How to： 建立報表伺服器資料庫 （Reporting Services 組態）](http://go.microsoft.com/fwlink/?LinkId=199094) (http://go.microsoft.com/fwlink/?LinkId=199094)和[設定報表伺服器資料庫連接](http://go.microsoft.com/fwlink/?LinkId=199095)(http://go.microsoft.com/fwlink/?LinkId=199095)。  
+ 安裝完成之後，您必須建立報表伺服器資料庫以及設定報表伺服器，之後，才能使用它。 若要設定報表伺服器和建立資料庫，請使用 Reporting Services 組態管理員。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立報表伺服器資料庫 （Reporting Services 組態）](http://go.microsoft.com/fwlink/?LinkId=199094) (http://go.microsoft.com/fwlink/?LinkId=199094)並[設定報表伺服器資料庫連接](http://go.microsoft.com/fwlink/?LinkId=199095)(http://go.microsoft.com/fwlink/?LinkId=199095)。  
   
 ### <a name="reporting-services-sharepoint-mode"></a>Reporting Services SharePoint 模式  
   
 #### <a name="install-only"></a>只安裝  
  安裝報表伺服器程式檔案和 PowerShell 指令程式。 安裝完成之後，您必須啟動 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 服務並建立 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式。 如需詳細資訊，請參閱下列主題：  
   
--   [安裝 Reporting Services SharePoint 模式報表伺服器針對 Power View 和資料警示](http://go.microsoft.com/fwlink/?LinkId=207543)(http://go.microsoft.com/fwlink/?LinkId=207543)。  
+-   [安裝 Reporting Services SharePoint 模式報表伺服器的 Power View 及資料警示](http://go.microsoft.com/fwlink/?LinkId=207543)(http://go.microsoft.com/fwlink/?LinkId=207543)。  
   
--   [Reporting Services SharePoint 模式，為單一伺服器陣列安裝](http://go.microsoft.com/fwlink/?LinkId=207544)(http://go.microsoft.com/fwlink/?LinkId=207544)。  
+-   [安裝 Reporting Services SharePoint 模式單一伺服器陣列](http://go.microsoft.com/fwlink/?LinkId=207544)(http://go.microsoft.com/fwlink/?LinkId=207544)。  
   
 -   [Reporting Services 報表伺服器 (SSRS)](http://go.microsoft.com/fwlink/?LinkID=207244) (http://go.microsoft.com/fwlink/?LinkID=207244)。  
   
@@ -74,12 +74,12 @@ ms.locfileid: "36030208"
   
 -   從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝媒體安裝。 在 **安裝完成之後，按一下** 安裝媒體上 Setup 資料夾中的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 檔案。  
   
--   下載和安裝增益集。 如需詳細資訊，請參閱[如何尋找 Reporting Services 增益集適用於 SharePoint 產品](http://go.microsoft.com/fwlink/?LinkID=208634)(http://go.microsoft.com/fwlink/?LinkID=208634)。  
+-   下載和安裝增益集。 如需詳細資訊，請參閱 <<c0> [ 哪裡可以找到的 Reporting Services 增益集適用於 SharePoint 產品](http://go.microsoft.com/fwlink/?LinkID=208634)(http://go.microsoft.com/fwlink/?LinkID=208634)。  
   
 ## <a name="see-also"></a>另請參閱  
  [啟動 Reporting Services 組態管理員](http://go.microsoft.com/fwlink/?LinkId=199096)   
  [建立報表伺服器資料庫 (Reporting Services 組態)](http://go.microsoft.com/fwlink/?LinkId=199094)   
  [升級和移轉 Reporting Services](http://go.microsoft.com/fwlink/?LinkID=245628)   
- [命令提示字元安裝 Reporting Services SharePoint 模式和原生模式](http://go.microsoft.com/fwlink/?LinkId=217620)  
+ [Reporting Services SharePoint 模式和原生模式的命令提示字元安裝](http://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

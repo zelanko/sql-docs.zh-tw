@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 94c05bce76e29f3147af8143fa22f03bdd7844a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8004d3a0342098004286d27e4fe23d4333acb717
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131654"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272644"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括電子郵件傳遞延伸模組以及檔案共用傳遞延伸模組。 電子郵件傳遞提供一個透過電子郵件傳送報表給個別使用者或群組的方法。 檔案共用傳遞可讓您將轉譯的報表自動傳送給網路上的共用。 您可以使用其中一個支援的傳遞延伸模組搭配標準訂閱或資料驅動訂閱來傳送。 每當您呼叫 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>、<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>、<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> 和 <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> 方法時，會傳遞特屬傳遞延伸模組類型的傳遞設定。 若要以程式設計的方式擷取傳遞設定清單，請使用 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 方法。  
@@ -43,7 +43,7 @@ ms.locfileid: "36131654"
 ## <a name="e-mail-delivery-settings"></a>電子郵件傳遞設定  
  下表針對使用報表伺服器電子郵件的訂閱列出電子郵件傳遞設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |**收件人**|出現在電子郵件訊息的 `To` 之電子郵件地址。 分號會分隔多個電子郵件地址。 必要。|  
 |**副本**|出現在電子郵件訊息的 `Cc` 之電子郵件地址。 分號會分隔多個電子郵件地址。 選擇性。|  
@@ -59,7 +59,7 @@ ms.locfileid: "36131654"
 ## <a name="file-share-delivery-settings"></a>檔案共用傳遞設定  
  下表列出訂閱的檔案共用傳遞設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |**FILENAME**|儲存到磁碟的檔案名稱。|  
 |**FILEEXTN**|指出轉譯報表是否包括副檔名。 值是 `true` 或是 `false`。|  

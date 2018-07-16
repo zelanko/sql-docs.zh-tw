@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - master database [SQL Server], rebuilding
 - REBUILDDATABASE parameter
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5b1991dc8af140ee21089f9bd4096923d8e84742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132455"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37219428"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
   您必須重建系統資料庫，才能在 [master](master-database.md)、 [model](model-database.md)、 [msdb](msdb-database.md)或 [resource](resource-database.md) 系統資料庫中修正損毀問題，或修改預設的伺服器層級定序。 本主題將提供在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重建系統資料庫的逐步指示。  
@@ -108,9 +108,9 @@ ms.locfileid: "36132455"
     |/QUIET 或 /Q|指定安裝程式的執行不使用任何使用者介面。|  
     |/ACTION=REBUILDDATABASE|指定安裝程式要重新建立系統資料庫。|  
     |/INSTANCENAME=*InstanceName*|這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。 若為預設執行個體，請輸入 MSSQLSERVER。|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|指定 Windows 群組或個別帳戶新增到`sysadmin`固定的伺服器角色。 指定多個帳戶時，請以空格隔開這些帳戶。 例如，您可以輸入 **BUILTIN\Administrators MyDomain\MyUser**。 當您要指定的帳戶在帳戶名稱中包含空白時，請以雙引號括住該帳戶。 例如，輸入`NT AUTHORITY\SYSTEM`。|  
-    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 帳戶的密碼。 如果執行個體使用混合驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證) 模式，這就是必要的參數。<br /><br /> **\*\* 安全性注意事項\* \***  `sa`帳戶是已知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]惡意使用者的帳戶，而且通常目標。 它是非常重要的是您使用的強式密碼`sa`登入。<br /><br /> 請勿針對 Windows 驗證模式指定此參數。|  
-    |[ /SQLCOLLATION=*CollationName* ]|指定新的伺服器層級定序。 這個參數是選擇性的。 如果沒有指定，就會使用伺服器的目前定序。<br /><br /> **\*\* 重要\* \*** 變更伺服器層級定序不會變更現有使用者資料庫的定序。 所有新建立的使用者資料庫預設都會使用新的定序。<br /><br /> 如需詳細資訊，請參閱 [設定或變更伺服器定序](../collations/set-or-change-the-server-collation.md)。|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|指定要加入的 Windows 群組或個別帳戶`sysadmin`固定的伺服器角色。 指定多個帳戶時，請以空格隔開這些帳戶。 例如，您可以輸入 **BUILTIN\Administrators MyDomain\MyUser**。 當您要指定的帳戶在帳戶名稱中包含空白時，請以雙引號括住該帳戶。 例如，輸入`NT AUTHORITY\SYSTEM`。|  
+    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 帳戶的密碼。 如果執行個體使用混合驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證) 模式，這就是必要的參數。<br /><br /> **\*\* 安全性注意事項\* \* ** `sa`帳戶是已知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]惡意使用者的帳戶，而且經常目標。 它是非常重要的是，您會使用強式密碼`sa`登入。<br /><br /> 請勿針對 Windows 驗證模式指定此參數。|  
+    |[ /SQLCOLLATION=*CollationName* ]|指定新的伺服器層級定序。 這個參數是選擇性的。 如果沒有指定，就會使用伺服器的目前定序。<br /><br /> **\*\* 重要\* \* **變更伺服器層級定序不會變更現有使用者資料庫的定序。 所有新建立的使用者資料庫預設都會使用新的定序。<br /><br /> 如需詳細資訊，請參閱 [設定或變更伺服器定序](../collations/set-or-change-the-server-collation.md)。|  
   
 3.  當安裝程式完成系統資料庫的重建作業時，它就會返回命令提示字元，而且不會顯示任何訊息。 您可以檢查 Summary.txt 記錄檔來確認此程序是否順利完成。 這個檔案位於 C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs。  
   
@@ -151,10 +151,10 @@ ms.locfileid: "36132455"
 6.  在 **[已完成修復準備工作]** 頁面中，按一下 **[修復]**。 [完成] 頁面會指出作業已完成。  
   
 ##  <a name="CreateMSDB"></a> 建立新的 msdb 資料庫  
- 如果`msdb`資料庫損毀，而您不需要的備份`msdb`資料庫中，您可以建立新`msdb`使用**msdb**指令碼。  
+ 如果`msdb`資料庫已損毀，且您不需要一份`msdb`資料庫中，您可以建立新`msdb`利用**instmsdb**指令碼。  
   
 > [!WARNING]  
->  重建`msdb`資料庫使用**msdb**指令碼會消除中儲存的資訊`msdb`例如作業、 警示、 運算子、 維護計畫、 備份記錄、 以原則為基礎的管理設定Database Mail、 效能資料倉儲等。  
+>  重建`msdb`資料庫使用**instmsdb**指令碼將會清除所有儲存的資訊`msdb`例如作業、 警示、 運算子、 維護計畫、 備份歷程記錄、 以原則為基礎的管理設定Database Mail、 效能資料倉儲等。  
   
 1.  停止所有連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的服務，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、 [!INCLUDE[ssRS](../../includes/ssrs-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]，以及使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為資料存放區的所有應用程式。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36132455"
   
      如需詳細資訊，請參閱 [啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)。  
   
-3.  在另一個命令列視窗中，卸離`msdb`資料庫執行下列命令，來取代 *\<servername >* 與執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  在另一個命令列視窗中，卸離`msdb`資料庫執行下列命令，來取代*\<伺服器名稱 >* 的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  使用 Windows 檔案總管中，重新命名`msdb`資料庫檔案。 根據預設，這些檔案位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 DATA 子資料夾中。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "36132455"
   
 8.  在執行個體上重新套用任何已安裝的 Service Pack 或 Hotfix。  
   
-9. 重新建立儲存在使用者內容`msdb`資料庫，例如工作、 警示等。  
+9. 重新建立儲存在使用者內容`msdb`資料庫，例如工作、 警示等等。  
   
 10. 備份`msdb`資料庫。  
   

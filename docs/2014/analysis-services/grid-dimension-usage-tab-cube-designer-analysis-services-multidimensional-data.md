@@ -1,5 +1,5 @@
 ---
-title: 方格 （維度使用方式索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 方格 （維度使用方式索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a470ffb94a457d68b8f47b30b06520984aba87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e112b3cd1a732b403c7e2da2dde185e5e4c7df5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033970"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295828"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>方格 (維度使用方式索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   在 Cube 設計師中，使用 **[維度使用方式]** 索引標籤上的 **[方格]** 窗格，即可檢視及編輯 Cube 維度與量值群組之間的維度關聯性。 每一項維度關聯性都會以方格中的資料格來代表，其中的量值群組會顯示為資料行，而維度則顯示為資料列。  
@@ -49,8 +49,8 @@ ms.locfileid: "36033970"
 ## <a name="see-also"></a>另請參閱  
  [Cube 物件&#40;Analysis Services-多維度資料&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   
- [維度使用方式&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
- [工具列&#40;維度使用方式索引標籤中，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
- [維度使用方式&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)  
+ [維度使用方式&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
+ [工具列&#40;維度使用方式索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   
+ [維度使用方式&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)  
   
   

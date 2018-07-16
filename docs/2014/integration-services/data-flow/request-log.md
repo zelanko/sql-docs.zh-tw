@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f37c7c97863eac901830c7efff3925ab25364688
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c25ed051cfa061cbe402f6da797e360bae97eee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134682"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289408"
 ---
 # <a name="request-log"></a>要求記錄檔
   使用 **[要求記錄檔]** 對話方塊可以檢視對 SAP Netweaver BW 系統提出資料取樣要求期間記錄的事件。 如果您需要疑難排解 SAP BW 來源的組態，這項資訊可能很有用。  
@@ -52,7 +52,7 @@ ms.locfileid: "36134682"
  **型別**  
  顯示記錄的事件類型。 下表列出可能的事件類型。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |S|成功訊息。|  
 |E|錯誤訊息|  
@@ -64,7 +64,7 @@ ms.locfileid: "36134682"
  顯示與記錄之事件相關聯的訊息文字。  
   
 ## <a name="see-also"></a>另請參閱  
- [SAP BW 來源編輯器&#40;連接管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)   
+ [SAP BW 來源編輯器&#40;連線管理員頁面&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 說明](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

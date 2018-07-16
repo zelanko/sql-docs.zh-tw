@@ -1,5 +1,5 @@
 ---
-title: 將資料採礦方案部署到舊版的 SQL Server |Microsoft 文件
+title: 將資料採礦方案部署到舊版的 SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [Analysis Services]
 - holdout [data mining]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28bb6c9ffd7f51c322e1e01d1c60cb40feb20492
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b56e7e62c0717c94edfb4c8aaf7183f8e3e1f88b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136516"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37177235"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>將資料採礦方案部署到舊版的 SQL Server
   本章節描述當您嘗試將 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 執行個體內建立的資料採礦模型或資料採礦結構部署到使用 SQL Server 2005 Analysis Services 的資料庫，或是當您將 SQL Server 2005 中建立的模型部署到 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]執行個體時，可能發生的相容性問題。  
@@ -64,7 +64,7 @@ ms.locfileid: "36136516"
   
  當您在 SQL Server 2005 Analysis Services 中開啟此採礦結構時， [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 會引發錯誤，然後重新產生此結構來移除鑑效組資料分割。  
   
- 已經重建結構之後，鑑效組資料分割的大小已無法再使用在 [屬性] 視窗中。不過，值\<ddl100_100: > 30\</ddl100_100:HoldoutMaxPercent >) 可能仍會存在於 ASSL 指令碼檔案。  
+ 已重建結構之後，鑑效組資料分割大小不再提供在 [屬性] 視窗中;不過，值\<ddl100_100: > 30\</ddl100_100:HoldoutMaxPercent >) 可能仍會存在於 ASSL 指令碼檔案。  
   
 ##  <a name="bkmk_Filter"></a> 部署含篩選的模型  
  如果您使用 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 將篩選套用到採礦模型，此模型可以部署到 SQL Server 2005 執行個體，但是篩選將不會套用。  

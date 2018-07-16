@@ -1,5 +1,5 @@
 ---
-title: 設定報表管理員 （原生模式） |Microsoft 文件
+title: 設定報表管理員 （原生模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 7af188d6f1adf097de20bf08ef8343c9e075c073
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e9156e229188621fb6c5524f1b6bf9e25c72570c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034093"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299758"
 ---
 # <a name="configure-report-manager-native-mode"></a>設定報表管理員 (原生模式)
   報表管理員是一個 Web 前端應用程式，可用來檢視報表、管理報表伺服器內容，以及將原生模式報表伺服器的存取權授與使用者。 如果您在安裝程式中選取 [Install in the default native mode configuration (以預設原生模式組態安裝)] 選項，報表管理員就會與報表伺服器 Web 服務一起安裝在相同的報表伺服器執行個體中，而且進行選擇性設定。 您也可以將報表管理員設定為後續安裝工作。 本主題會提供有關下列報表管理員組態狀況的資訊：  
@@ -53,14 +53,14 @@ ms.locfileid: "36034093"
   
      當您安裝使用原生模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體時，預設就會啟用報表管理員。 不過，如果您擁有提供對等功能的自訂前端應用程式、您只想要使用 SOAP 或 URL 存取介面來存取報表伺服器，或者您要從不同的報表伺服器執行個體使用報表管理員，就可以關閉報表管理員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要使用報表管理員，您必須滿足下列必要條件：  
   
 -   您必須擁有以最低限度方式設定的報表伺服器。 如需如何以最低限度方式設定報表伺服器的詳細資訊，請參閱[設定報表伺服器 &#40;Reporting Services 原生模式&#41;](configure-a-report-server-reporting-services-native-mode.md)。  
   
 -   您的報表伺服器必須以原生模式執行。 您無法使用報表管理員搭配針對 SharePoint 整合模式所設定的報表伺服器。 在 SQL Server 2012 中，您無法將報表伺服器從一種模式切換為另一種模式。 如果您要變更您環境使用之報表伺服器的類型，必須安裝所需之模式的報表伺服器，然後將報表項目複製或移動到新的報表伺服器。 這種程序通常稱為「移轉」。 移轉所需的步驟，取決於您要移轉到哪個模式以及您要從哪個版本移轉。 如需詳細資訊，請參閱＜ [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md)＞。  
   
--   您也必須擁有啟用指令碼的 Internet Explorer 7.0 或更新版本。 如需詳細資訊，請參閱[規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。  
+-   您也必須擁有啟用指令碼的 Internet Explorer 7.0 或更新版本。 如需詳細資訊，請參閱 <<c0> [ 規劃 Reporting Services 和 Power View 瀏覽器支援&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)。</c0>  
   
 ##  <a name="ConfigureRMURL"></a> 將報表管理員設定為使用預設 URL  
  根據預設，報表管理員 URL 包含唯一的虛擬目錄名稱，再加上針對在相同執行個體中執行之報表伺服器 Web 服務所定義的通訊埠和主機名稱。 在大部分情況下，主機名稱就是報表伺服器電腦的網路名稱，但是它可能也是解析電腦的 IP 位址或主機標頭。 若要將報表管理員設定為使用預設 URL，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具中的 [報表管理員 URL] 頁面。  
@@ -90,7 +90,7 @@ ms.locfileid: "36034093"
   
 4.  儲存您的變更，然後關閉檔案。  
   
- 如需有關組態檔的詳細資訊，請參閱[修改 Reporting Services 組態檔&#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md)和[RSReportServer 組態檔](rsreportserver-config-configuration-file.md)。  
+ 如需組態檔的詳細資訊，請參閱[修改 Reporting Services 組態檔&#40;RSreportserver.config&#41; ](modify-a-reporting-services-configuration-file-rsreportserver-config.md)並[RSReportServer Configuration File](rsreportserver-config-configuration-file.md)。  
   
 ##  <a name="ConfigureRemoteRS"></a> 將報表管理員設定為使用遠端報表伺服器  
  若為將報表管理員和報表伺服器放置於不同電腦上的部署組態，您就必須擁有兩個個別的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]安裝。 報表管理員內嵌在報表伺服器服務中，而且無法單獨安裝。 如果您想要在不同的電腦上於自己的處理序中執行報表管理員，就必須安裝第二個報表伺服器。 這兩個伺服器執行個體都必須是 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器。  
@@ -134,7 +134,7 @@ ms.locfileid: "36034093"
   
 8.  關閉您不要使用的伺服器功能：  
   
-    -   報表管理員在電腦上，關閉`WebServiceAndHTTPAccessEnabled`和`ScheduleEventsAndReportDeliveryEnabled`。  
+    -   在報表管理員電腦上，關閉`WebServiceAndHTTPAccessEnabled`和`ScheduleEventsAndReportDeliveryEnabled`。  
   
     -   在報表伺服器電腦上，關閉`ReportManagerEnabled`。  
   

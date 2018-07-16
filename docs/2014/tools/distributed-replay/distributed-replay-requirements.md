@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay 需求 |Microsoft 文件
+title: Distributed Replay 需求 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f38f09e4b9c5bcf2d3d6611f4a6d5e8bdc9534d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: bc0ae7de69ac9887e7bb3e75acfc97a1ae9be822
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312728"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 功能之前，請先考慮本主題所列的各項產品需求。  
@@ -129,7 +129,7 @@ ms.locfileid: "36030679"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>作業系統需求  
- 支援執行管理工具以及控制器和用戶端服務的作業系統，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相同。 如需詳細資訊，了解哪種支援的作業系統程式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，請參閱[硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
+ 支援執行管理工具以及控制器和用戶端服務的作業系統，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體相同。 如需詳細資訊，了解哪種支援的作業系統您[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體，請參閱 <<c2> [ 硬體和軟體需求，安裝 SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)。  
   
  x86 及 x64 作業系統皆支援 Distributed Replay 功能。 若為 x64 架構作業系統，只支援 Windows on Windows (WOW) 模式。  
   
@@ -138,7 +138,7 @@ ms.locfileid: "36030679"
   
 |Distributed Replay 功能|每個重新執行環境的最大安裝數目|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務|@shouldalert|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務|1|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 服務|16 (實體或虛擬電腦)|  
 |管理工具|無限制|  
   

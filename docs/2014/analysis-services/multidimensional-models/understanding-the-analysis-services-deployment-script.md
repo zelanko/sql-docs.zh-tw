@@ -1,5 +1,5 @@
 ---
-title: 了解 Analysis Services 部署指令碼 |Microsoft 文件
+title: 了解 Analysis Services 部署指令碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, scripts
 - deploying [Analysis Services], scripts
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [Analysis Services], deployment
 ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba5d08decac64e8215d99c15102c791c5c92c685
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5473cc30dff70813c252e9529b4490962c329abb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136728"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37194438"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>了解 Analysis Services 部署指令碼
   [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 產生的 XMLA 部署指令碼包含兩個區段：  
@@ -40,6 +40,6 @@ ms.locfileid: "36136728"
   
 ## <a name="see-also"></a>另請參閱  
  [執行 Analysis Services 部署精靈](running-the-analysis-services-deployment-wizard.md)   
- [了解用來建立部署指令碼的輸入的檔案](deployment-script-files-input-used-to-create-deployment-script.md)  
+ [了解用來建立部署指令碼的輸入檔](deployment-script-files-input-used-to-create-deployment-script.md)  
   
   

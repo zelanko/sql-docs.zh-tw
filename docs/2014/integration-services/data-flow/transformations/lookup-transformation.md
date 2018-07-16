@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 104
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f7a4d4a05d738ee844b6eb63ab5c762fb84f6194
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d0dcebe1fa634678fa754b74be04d1dd5e1bcac5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034628"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298808"
 ---
 # <a name="lookup-transformation"></a>查閱轉換
   「查閱」轉換會藉由聯結輸入資料行中的資料與參考資料集中的資料行來執行查閱。 您可以使用查閱在相關資料表中存取以通用資料行中的值為基礎的其他資訊。  
@@ -78,7 +78,7 @@ ms.locfileid: "36034628"
 -   無相符結果輸出。 無相符結果輸出會處理輸入中沒有至少符合參考資料集中一個項目的資料列。 如果將「查閱」轉換設定為把沒有相符項目的資料列視為錯誤，則這些資料列會重新導向至錯誤輸出； 否則，轉換會將這些資料列重新導向至無相符結果輸出。  
   
     > [!NOTE]  
-    >  在 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] 中，「查閱」轉換僅具有一個輸出： 如需有關如何執行 「 查閱 」 轉換中所建立[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，請參閱[升級查閱轉換](../../../sql-server/install/upgrade-lookup-transformations.md)。  
+    >  在 [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] 中，「查閱」轉換僅具有一個輸出： 如需有關如何執行 「 查閱 」 轉換中所建立[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，請參閱 <<c2> [ 升級查閱轉換](../../../sql-server/install/upgrade-lookup-transformations.md)。  
   
 -   錯誤輸出。  
   

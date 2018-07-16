@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 caps.latest.revision: 9
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 897cb599b73c6a136c2d79e2a21068dfb05655ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023942"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331008"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>內建的全域和使用者參考 (報表產生器及 SSRS)
   內建欄位集合包含 `Globals` 和 `User` 集合，代表在處理報表時 Reporting Services 所提供的全域值。 `Globals` 集合提供的值包括報表名稱、開始處理報表的時間，以及報表頁首及頁尾的目前頁碼。 `User` 集合則提供使用者識別碼和語言設定。 您可以在運算式中使用這些值以在報表中篩選結果。  
@@ -33,7 +33,7 @@ ms.locfileid: "36023942"
 |**成員**|**型別**|**說明**|  
 |----------------|--------------|---------------------|  
 |ExecutionTime|`DateTime`|報表開始執行的日期和時間。|  
-|PageNumber|`Integer`|相對於重設頁碼之分頁線的目前頁碼。 在開始處理報表時，初始值設為 1。 每個呈現之頁面的頁碼會遞增。<br /><br /> 中的矩形、 資料區域、 資料區群組或對應，PageBreak 屬性上的分頁符號的數字頁面 [resetpagenumber] 將屬性設定為`True`。 在 Tablix 資料行階層群組上不支援。<br /><br /> PageNumber 只能用於頁首或頁尾中的運算式。|  
+|PageNumber|`Integer`|相對於重設頁碼之分頁線的目前頁碼。 在開始處理報表時，初始值設為 1。 每個呈現之頁面的頁碼會遞增。<br /><br /> 到矩形、 資料區域、 資料區群組，或在 PageBreak 屬性中，對應的分頁符號內的數字頁面 ResetPageNumber 屬性設為`True`。 在 Tablix 資料行階層群組上不支援。<br /><br /> PageNumber 只能用於頁首或頁尾中的運算式。|  
 |ReportFolder|`String`|報表所在之資料夾的完整路徑。 這不包括報表伺服器 URL。|  
 |ReportName|`String`|報表存放在報表伺服器資料庫的名稱。|  
 |ReportServerUrl|`String`|執行報表之報表伺服器的 URL。|  
@@ -43,14 +43,14 @@ ms.locfileid: "36023942"
 |OverallTotalPages|`Integer`|整個報表的總頁數。 這個值不會受到 ResetPageNumber 的影響。<br /><br /> OverallTotalPages 只能用於頁首或頁尾中的運算式。|  
 |RenderFormat|`RenderFormat`|目前轉譯要求的相關資訊。<br /><br /> 如需詳細資訊，請參閱下一節中的＜RenderFormat＞。|  
   
- 成員`Globals`集合傳回變數。 如果要在需要特定資料類型的運算式中使用這個集合的成員，必須先轉換變數。 例如，若要將執行時間變數轉換成日期格式，請使用 `=CDate(Globals!ExecutionTime)`。 如需詳細資訊，請參閱[Data Types in Expressions&#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。  
+ 成員`Globals`集合傳回變數。 如果要在需要特定資料類型的運算式中使用這個集合的成員，必須先轉換變數。 例如，若要將執行時間變數轉換成日期格式，請使用 `=CDate(Globals!ExecutionTime)`。 如需詳細資訊，請參閱 <<c0> [ 運算式中的資料類型&#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)。</c0>  
   
 ### <a name="renderformat"></a>RenderFormat  
  下表描述 `RenderFormat` 的成員。  
   
 |成員|類型|描述|  
 |------------|----------|-----------------|  
-|[屬性]|`String`|在 RSReportServer 組態檔中註冊之轉譯器的名稱。<br /><br /> 可在報表處理/呈現週期的特定部分使用。|  
+|名稱|`String`|在 RSReportServer 組態檔中註冊之轉譯器的名稱。<br /><br /> 可在報表處理/呈現週期的特定部分使用。|  
 |IsInteractive|`Boolean`|目前的轉譯要求是否使用互動式轉譯格式。|  
 |DeviceInfo|唯讀名稱/值集合|目前轉譯要求之 deviceinfo 參數的索引鍵/值配對。<br /><br /> 您可以使用索引鍵或索引指定集合中的字串值。|  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36023942"
  [運算式 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [運算式對話方塊 &#40;報表產生器&#41;](../expression-dialog-box-report-builder.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [格式化數字和日期&#40;報表產生器和 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [格式化數字和日期&#40;報表產生器及 SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

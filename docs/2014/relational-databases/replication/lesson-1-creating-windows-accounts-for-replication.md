@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
@@ -16,13 +16,13 @@ ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a7cf067ff7ebfb4f9990b424acf73d5084470d12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a3bd3b0369c990b6db3dc1cbb44f7fd387289ce9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134158"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303648"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>第 1 課：建立用於複寫的 Windows 帳戶
   在這一課，您將建立 Windows 帳戶，以執行複寫代理程式。 您將在本機伺服器上，另外為下列代理程式建立 Windows 帳戶：  
@@ -45,7 +45,7 @@ ms.locfileid: "36134158"
   
 3.  以滑鼠右鍵按一下 [使用者]，然後按一下 [新增使用者]。  
   
-4.  輸入`repl_snapshot`中**使用者名**，提供密碼和其他相關資訊，然後再按一下**建立**建立 repl_snapshot 帳戶。  
+4.  請輸入`repl_snapshot`中**使用者名稱**方塊中，提供密碼和其他相關資訊，，然後按一下**建立**以建立 repl_snapshot 帳戶。  
   
 5.  重複執行先前的步驟，以建立 repl_logreader、repl_distribution 和 repl_merge 帳戶。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36134158"
   
 3.  以滑鼠右鍵按一下 [使用者]，然後按一下 [新增使用者]。  
   
-4.  輸入`repl_distribution`中**使用者名**，提供密碼和其他相關資訊，然後再按一下**建立**建立 repl_distribution 帳戶。  
+4.  請輸入`repl_distribution`中**使用者名稱**方塊中，提供密碼和其他相關資訊，，然後按一下**建立**以建立 repl_distribution 帳戶。  
   
 5.  重複執行先前的步驟，以建立 repl_merge 帳戶。  
   

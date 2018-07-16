@@ -1,5 +1,5 @@
 ---
-title: 將文件上傳至 SharePoint 文件庫 (SharePoint 模式的 Reporting Services) |Microsoft 文件
+title: 將文件上傳至 SharePoint 文件庫 (SharePoint 模式的 Reporting Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - SharePoint integration [Reporting Services], content management
@@ -17,13 +17,13 @@ ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4dbac694b3c91cb75ba0bb5ffe54919ceee90437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 65f3388137c4fe26e1fcc51c11711944c89bd0c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295878"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>將文件上傳到 SharePoint 文件庫 (SharePoint 模式的 Reporting Services)
   您可以將報表定義和報表模型上傳到 SharePoint 文件庫。 上傳報表伺服器項目時，您必須選取文件庫或文件庫內的資料夾； 不能將報表伺服器項目上傳到清單或頁面中。  

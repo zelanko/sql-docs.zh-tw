@@ -1,5 +1,5 @@
 ---
-title: UnknownMemberTranslation 元素 (ASSL) |Microsoft 文件
+title: UnknownMemberTranslation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - UnknownElementTranslation element
 ms.assetid: a4b8cdac-b065-4a44-b251-c5ac1cfe5e6f
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 38b04dad97f6c61a884d4ba4234083bbc60bc260
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68270cff61daace55131454b549f12880f3b5e6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220298"
 ---
 # <a name="unknownmembertranslation-element-assl"></a>UnknownMemberTranslation 元素 (ASSL)
-  包含標題的翻譯[UnknownMember](member-element-assl.md)元素[維度](dimension-element-assl.md)項目。  
+  包含標題的翻譯[UnknownMember](member-element-assl.md)項目[維度](dimension-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36136292"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`UnknownMemberTranslation`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Dimension>。  
+ 對應至父系的元素`UnknownMemberTranslation`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Translation 元素&#40;ASSL&#41;](translation-element-assl.md)   

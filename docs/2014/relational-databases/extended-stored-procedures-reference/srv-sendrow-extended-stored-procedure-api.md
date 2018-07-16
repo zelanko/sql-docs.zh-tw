@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_sendrow
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 39635048aead2326468259f7b10d023b85bcc1b7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 04b4a4b4b39665e5d8ea020c28fff0769b7c6402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329368"
 ---
 # <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow (擴充預存程序 API)
     

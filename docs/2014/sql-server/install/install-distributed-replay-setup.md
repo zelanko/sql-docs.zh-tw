@@ -1,5 +1,5 @@
 ---
-title: 安裝 Distributed 的 Replay （安裝程式） |Microsoft 文件
+title: 安裝 Distributed 的 Replay （安裝程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 64479cdc-661a-4e32-a381-8f8b5a238337
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea29de67ee3e94089c63d5310e38a050be614ce3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 82e9df54c797b965409020056faac334a0d60709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145294"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37202518"
 ---
 # <a name="install-distributed-replay-setup"></a>安裝 Distributed Replay (安裝程式)
   您可以使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈] 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 功能。 規劃要安裝這些功能的位置時，請考慮下列事項：  
@@ -74,7 +74,7 @@ ms.locfileid: "36145294"
   
 2.  [安裝程式支援規則] 頁面會識別安裝 SQL Server 安裝程式支援檔案時可能會發生的問題。 您必須先更正任何安裝程式支援失敗，然後再繼續進行安裝。  
   
-3.  在 **[產品金鑰]** 頁面上，選取選項按鈕，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，或具有 PID 金鑰之產品的實際執行版本。 如需詳細資訊，請參閱[版本和 SQL Server 2014 元件](../editions-and-components-of-sql-server-2016.md)。  
+3.  在 **[產品金鑰]** 頁面上，選取選項按鈕，指出您要安裝免費的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本，或具有 PID 金鑰之產品的實際執行版本。 如需詳細資訊，請參閱 <<c0> [ 版本和 SQL Server 2014 元件](../editions-and-components-of-sql-server-2016.md)。  
   
 4.  在 **[授權條款]** 頁面上，閱讀授權條款，然後選取要接受授權條款和條件的核取方塊。 若要協助提升 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您也可以啟用功能使用方式選項，並傳送報告給 [!INCLUDE[msCoName](../../includes/msconame-md.md)]。  
   
@@ -127,9 +127,9 @@ ms.locfileid: "36145294"
   
  下列其他主題詳述了 Distributed Replay 的其他安裝方式：  
   
--   [從命令提示字元安裝 Distributed 的 Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+-   [從命令提示字元安裝 Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
--   [使用組態檔安裝 Distributed 的 Replay](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
+-   [使用設定檔安裝 Distributed Replay](../../../2014/sql-server/install/install-distributed-replay-using-a-configuration-file.md)  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  您必須具備管理權限，才可安裝各種 Distributed Replay 功能。 只有擁有系統管理員權限的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入能夠將用戶端服務帳戶加入測試伺服器的系統管理員伺服器角色。 如需 Distributed Replay 安全性考量的詳細資訊，請參閱 [Distributed Replay 安全性](../../tools/distributed-replay/distributed-replay-security.md)。  

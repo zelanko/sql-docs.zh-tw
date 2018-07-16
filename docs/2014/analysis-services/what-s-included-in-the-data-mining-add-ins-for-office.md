@@ -1,5 +1,5 @@
 ---
-title: 什麼&#39;包含在資料採礦增益集，適用於 Office 的 s |Microsoft 文件
+title: 什麼&#39;包含在資料採礦增益集適用於 Office 的 s |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 282155ff681830e3b6c1b3f0bc0d4f281a6435e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231989"
 ---
-# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>什麼&#39;包含在資料採礦增益集，適用於 Office 的 s
+# <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>什麼&#39;中的資料採礦 Office 增益集所包含
   當您安裝適用於 Office 2013 的資料採礦增益集時，選取所有的安裝選項就會加入以下的工具列和範本：  
   
 -   [適用於 Excel 的資料表分析工具](table-analysis-tools-for-excel.md)  
@@ -42,9 +42,9 @@ ms.locfileid: "36135014"
   
      只要將這些圖形拖曳至 Visio 頁面上，以建立連結到採礦模型的圖表，但可以使用 Visio 來自訂圖表，以建立更具吸引力、更互動的呈現方式。  
   
--   [伺服器組態公用程式&#40;資料採礦 excel 增益集&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
+-   [伺服器組態公用程式&#40;資料採礦適用於 Excel 的增益集&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   
-     建立模型時必須連接到資料採礦伺服器。 如果您需要取得設定的說明，只要按一下**協助**並依照組態精靈中的每個頁面上的指示。 您可以自行修正問題，或由精靈提供可讓您傳送給系統管理員以進行正確設定的資訊。  
+     建立模型時必須連接到資料採礦伺服器。 如果您需要取得設定的說明，只要按一下**協助**，並遵循每個頁面的 [組態精靈]。 您可以自行修正問題，或由精靈提供可讓您傳送給系統管理員以進行正確設定的資訊。  
   
 -   [選擇資料和使用範例資料](choosing-data-for-data-mining.md)  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36135014"
   
     -   \<磁碟機 >: \Program Files\Microsoft SQL Server 2014 DM 增益集  
   
-    -   \<磁碟機 >: \Program Files (x86) \Microsoft SQL Server 2014 DM 增益集  
+    -   \<磁碟機 >: \Program 檔案 (x86) \Microsoft SQL Server 2014 DM 增益集  
   
 ## <a name="see-also"></a>另請參閱  
- [開始使用資料採礦&#40;資料採礦 excel 增益集&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
+ [開始使用資料採礦&#40;資料採礦適用於 Excel 的增益集&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   

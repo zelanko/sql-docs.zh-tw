@@ -1,5 +1,5 @@
 ---
-title: DefaultDetails 元素 (CSDLBI) |Microsoft 文件
+title: DefaultDetails 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 2b10c8b155cb0f06754ed6c2bc45062ae5e69898
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 708e829f1af3ebc9d727e3abfd6643913cd460f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146176"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330228"
 ---
 # <a name="defaultdetails-element-csdlbi"></a>DefaultDetails 元素 (CSDLBI)
   DefaultDetails 元素代表屬性參考清單，這些屬性參考會共同定義資料表中資料行的「預設欄位集」。 每個屬性只能參考一個量值或資料行。  
@@ -28,7 +28,7 @@ ms.locfileid: "36146176"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 DefaultDetails 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |DefaultDetailsPosition|否|指出在集合中存在與位置的正整數。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 程式設計 AMO 基礎物件 |Microsoft 文件
+title: 程式設計 AMO 基礎物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Analysis Management Objects, database objects
 ms.assetid: 3f1ab656-f3bc-432d-8b6d-cdf204e5be10
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c85b48c62e271dff6a4db582527c68a7735f0dc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d85bbc23bd016f2e1dd1d4842a5bd66645035ec2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030647"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321298"
 ---
 # <a name="programming-amo-fundamental-objects"></a>程式設計 AMO 基礎物件
   基礎物件通常是簡單且直接的物件。 通常會建立和具現化這些物件，然後當不再需要時，使用者會將它們中斷連接。 基礎類別包括下列物件：<xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.DataSourceView>。 在 AMO 基礎物件中唯一屬於複雜物件的是 <xref:Microsoft.AnalysisServices.DataSourceView>，這需要詳細資料以建立代表資料來源檢視的抽象模型。  
@@ -108,7 +108,7 @@ if ( (svr != null) && ( svr.Connected))
 ```  
   
 ###  <a name="AMO"></a> AmoException 例外狀況物件  
- AMO 在找到不同的問題時將會擲回例外狀況。 如需例外狀況的詳細說明，請參閱[AMO 其他類別和方法](amo-other-classes-and-methods.md)。 下列範例程式碼顯示在 AMO 中擷取例外狀況的正確方法：  
+ AMO 在找到不同的問題時將會擲回例外狀況。 如需例外狀況的詳細說明，請參閱 < [AMO 其他類別和方法](amo-other-classes-and-methods.md)。 下列範例程式碼顯示在 AMO 中擷取例外狀況的正確方法：  
   
 ```  
 try  
@@ -181,7 +181,7 @@ static Database CreateDatabase(Server svr, String DatabaseName)
 ### <a name="processing-a-database"></a>處理資料庫  
  處理資料庫及所有的子系物件是非常簡單的，因為 <xref:Microsoft.AnalysisServices.Database> 物件包括 Process 方法。  
   
- Process 方法可包括參數，但是並非必要。 如果未指定參數，將會使用其 `ProcessDefault` 選項來處理所有的子系物件。 如需有關處理選項的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.Database>。  
+ Process 方法可包括參數，但是並非必要。 如果未指定參數，將會使用其 `ProcessDefault` 選項來處理所有的子系物件。 如需處理選項的詳細資訊，請參閱<xref:Microsoft.AnalysisServices.Database>。  
   
 1.  下列範例程式碼會根據預設值處理資料庫。  
   

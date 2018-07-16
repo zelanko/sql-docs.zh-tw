@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - keys [SQL Server], database encryption
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03e1b85250115c3deb8b1615782c3e64c896bed8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: aliceku
+ms.author: aliceku
+manager: craigg
+ms.openlocfilehash: 7a7e5c9979dfe42b956a90eb61d1a03a9ef65181
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132157"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234888"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server 和資料庫加密金鑰 (Database Engine)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用加密金鑰來保護儲存於伺服器資料庫中之資料、認證和連接資訊的安全。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 有兩種類型的金鑰： *「對稱」* (Symmetric) 與 *「非對稱」*(Asymmetric)。 對稱金鑰會使用相同的密碼為資料加密與解密。 非對稱金鑰會使用某個密碼來加密資料 (稱為「公開」金鑰)，並使用另一個密碼來解密資料 (稱為「私密」金鑰)。  
@@ -35,9 +34,9 @@ ms.locfileid: "36132157"
   
  資料庫主要金鑰是一個用來保護資料庫中憑證之私密金鑰和非對稱金鑰的對稱金鑰。 它也可以用來加密資料，但是有長度上的限制，因此與對稱金鑰相較之下，它用於資料時比較不實用。  
   
- 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密主要金鑰。 若要啟用主要金鑰的自動解密，就要使用 SMK 來加密此金鑰的複本。 使用部署和，同時在資料庫中預存`master`系統資料庫。  
+ 建立資料庫主要金鑰時，會利用三重 DES 演算法和使用者提供的密碼來加密主要金鑰。 若要啟用主要金鑰的自動解密，就要使用 SMK 來加密此金鑰的複本。 使用之處，並在中，這兩個資料庫中預存`master`系統資料庫。  
   
- 儲存中的 dmk 複本`master`每當 DMK 變更時，系統資料庫會以無訊息模式更新。 不過，變更此預設使用`DROP ENCRYPTION BY SERVICE MASTER KEY`選項`ALTER MASTER KEY`陳述式。 未以服務主要金鑰加密的 DMK 必須使用 `OPEN MASTER KEY` 陳述式和密碼來開啟。  
+ 的 DMK 複本儲存在`master`每當 DMK 變更時，系統資料庫會以無訊息模式更新。 不過，藉由變更這個預設值`DROP ENCRYPTION BY SERVICE MASTER KEY`選擇`ALTER MASTER KEY`陳述式。 未以服務主要金鑰加密的 DMK 必須使用 `OPEN MASTER KEY` 陳述式和密碼來開啟。  
   
 ## <a name="managing-sql-server-and-database-keys"></a>管理 SQL Server 和資料庫金鑰  
  加密金鑰的管理包括建立新的資料庫金鑰、建立伺服器和資料庫金鑰的備份，以及了解還原、刪除或變更金鑰的時機和方法。  

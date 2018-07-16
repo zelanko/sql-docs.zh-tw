@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 21
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b0d22fd13abf68cd9eea1c21b135427161fbf8be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a8a8c2fc949755b5cc3fea644a5b08ee3990c541
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135184"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207098"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>估計記憶體最佳化資料表的記憶體需求
   不論是建立新的 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表或將現有的磁碟資料表移轉至記憶體最佳化資料表，都應合理估計每個資料表所需的記憶體，才能佈建記憶體充足的伺服器。 本節描述如何估計保存記憶體最佳化資料表的資料所需的記憶體數目。  
@@ -79,12 +79,12 @@ GO
   
  以下是記憶體最佳化資料表中 5,000,000 (5 百萬) 個資料列的大小計算。 資料列所使用的記憶體總數估計如下：  
   
- **資料表的資料列的的記憶體**  
+ **資料表的資料列的記憶體**  
   
  從上述計算得知，記憶體最佳化資料表的每個資料列大小為 24 + 32 + 200 (或 256) 個位元組。  由於我們有 5 百萬個資料列，因此資料表會耗用 5,000,000 * 256 (或 1,280,000,000) 個位元組，大約是 1.28 GB。  
   
 ##  <a name="bkmk_IndexMeemory"></a> 配置給索引的記憶體  
- **每個雜湊索引的記憶體**  
+ **針對每個雜湊索引的記憶體**  
   
  每個雜湊索引是 8 位元組位址指標的雜湊陣列。  陣列的大小是由該索引的唯一索引值數目來判斷；例如，t1c2_index 的陣列大小可以從唯一的 Col2 值數目開始。 雜湊陣列太大會浪費記憶體。  雜湊陣列太小會降低效能，因為雜湊處理至相同索引的索引值會引起太多衝突。  
   
@@ -119,11 +119,11 @@ SELECT COUNT(DISTINCT [Col2])
   
  如需雜湊索引在 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 記憶體最佳化資料表中運作方式的相關資訊，請參閱 [雜湊索引](../../database-engine/hash-indexes.md)。  
   
- **注意：** 您無法變更動態雜湊索引陣列大小。 若要變更雜湊索引陣列大小，您必須卸除資料表、變更 bucket_count 值，然後重新建立資料表。  
+ **注意：** 您無法變更即時雜湊索引陣列大小。 若要變更雜湊索引陣列大小，您必須卸除資料表、變更 bucket_count 值，然後重新建立資料表。  
   
  **設定雜湊索引陣列大小**  
   
- 雜湊陣列大小由所設定`(bucket_count= <value>)`其中\<值 > 是大於零的整數值。 如果\<值 > 不是乘為 2，實際的 bucket_count 會無條件進位到下一個最接近 2 的乘冪。  在資料表範例 (bucket_count = 5000000)，由於 5,000,000 不是 2 的乘冪，實際值區計數會無條件進位到 8,388,608 (2<sup>23</sup>)。  計算雜湊陣列所需的記憶體時，您必須使用此數值，而不是 5,000,000。  
+ 雜湊陣列大小由設定`(bucket_count= <value>)`其中\<值 > 是大於零的整數值。 如果\<值 > 不是乘冪為 2，實際的 bucket_count 會無條件進位到下一個最接近的 2 乘。  在資料表範例 (bucket_count = 5000000)，由於 5,000,000 不是 2 的乘冪，實際值區計數會無條件進位到 8,388,608 (2<sup>23</sup>)。  計算雜湊陣列所需的記憶體時，您必須使用此數值，而不是 5,000,000。  
   
  因此在此範例中，每個雜湊陣列所需的記憶體為：  
   
@@ -165,7 +165,7 @@ SELECT * FROM t_hk
   
  `rowVersions = durationOfLongestTransactionInSeconds * peakNumberOfRowUpdatesOrDeletesPerSecond`  
   
- 過時的資料列的記憶體需求則估計過時資料列數目乘以記憶體最佳化資料表的資料列的大小 (請參閱[資料表記憶體](#bkmk_MemoryForTable)上方)。  
+ 過時的資料列的記憶體需求則估計過時資料列數目乘以記憶體最佳化資料表的資料列的大小 (請參閱[資料表的記憶體](#bkmk_MemoryForTable)上方)。  
   
  `memoryForRowVersions = rowVersions * rowSize`  
   

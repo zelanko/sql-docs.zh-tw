@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Dynamics
 ms.assetid: 3c1ffa0c-c9e5-40a6-a26b-28339f60ebc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0187f27bd7375b22cd703c6e7caa818cc3a7dd38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83a51fb2449bce6f671ad8ba73d4c6dd4cd79714
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300468"
 ---
 # <a name="qndynamics-event-class"></a>QN:Dynamics 事件類別
   QN:Dynamics 事件類別會報告 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 為了支援查詢通知所執行之背景活動的相關資訊 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]內，背景執行緒會監視訂閱逾時、暫止要引發的訂閱以及參數資料表解構。  
@@ -38,7 +38,7 @@ ms.locfileid: "36033932"
 |DatabaseName|`nvarchar`|正在其中執行使用者陳述式的資料庫名稱。|35|是|  
 |EventClass|`int`|事件類型 = 202|27|否|  
 |EventSequence|`int`|此事件的序號。|51|否|  
-|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 執行啟動的時鐘： 指出的背景執行緒[!INCLUDE[ssDE](../../includes/ssde-md.md)]排程過期參數資料表，清除已啟動。<br /><br /> 執行完成的時鐘： 指出的背景執行緒[!INCLUDE[ssDE](../../includes/ssde-md.md)]排程過期參數資料表，清除已完成。<br /><br /> 主要的清除工作開始： 表示移除過期的查詢通知訂閱資料的清除作業 （記憶體回收） 啟動。<br /><br /> 主要的清除工作已經完成： 表示移除過期的查詢通知訂閱資料的清除作業 （記憶體回收） 完成。<br /><br /> 主要的清除工作略過： 指出[!INCLUDE[ssDE](../../includes/ssde-md.md)]並未執行清除作業 （記憶體回收） 來移除過期的查詢通知訂閱資料。|21|是|  
+|EventSubClass|`nvarchar`|事件子類別的類型，針對每個事件類別提供更詳細的相關資訊。 這個資料行可包含下列值：<br /><br /> 時鐘執行已開始： 表示的背景執行緒[!INCLUDE[ssDE](../../includes/ssde-md.md)]排程過期參數資料表，清除已啟動。<br /><br /> 執行完成的時鐘： 指出的背景執行緒[!INCLUDE[ssDE](../../includes/ssde-md.md)]排程過期參數資料表，清除已完成。<br /><br /> 主要的清除工作開始： 表示移除過期的查詢通知訂閱資料的清除作業 （記憶體回收） 啟動。<br /><br /> 主要的清除工作完成： 表示移除過期的查詢通知訂閱資料的清除作業 （記憶體回收） 完成。<br /><br /> 略過的主要的清除工作： 指出[!INCLUDE[ssDE](../../includes/ssde-md.md)]並未執行清除作業 （記憶體回收） 來移除過期的查詢通知訂閱資料。|21|是|  
 |GroupID|`int`|SQL 追蹤事件引發所在之工作負載群組的識別碼。|66|是|  
 |HostName|`nvarchar`|執行用戶端的電腦名稱。 這個資料行會在用戶端提供主機名稱時填入。 若要判斷主機名稱，請使用 HOST_NAME 函數。|8|是|  
 |IsSystem|`int`|指出事件是發生在系統處理序或使用者處理序。<br /><br /> 0 = 使用者<br /><br /> 1 = 系統|60|否|  
@@ -51,6 +51,6 @@ ms.locfileid: "36033932"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果應用程式使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 會顯示 "Login1"，而 LoginName 則會顯示 "Login2"。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server 查詢通知 Profiler 事件結構描述](http://go.microsoft.com/fwlink/?LinkId=63331) 網頁上所提供的 XML 結構描述。|@shouldalert|是|  
+|TextData|`ntext`|傳回包含這個事件相關資訊的 XML 文件。 這份文件符合 [SQL Server 查詢通知 Profiler 事件結構描述](http://go.microsoft.com/fwlink/?LinkId=63331) 網頁上所提供的 XML 結構描述。|1|是|  
   
   

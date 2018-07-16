@@ -1,5 +1,5 @@
 ---
-title: 將專案部署至 Integration Services 伺服器 |Microsoft 文件
+title: 將專案部署至 Integration Services 伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d70afea75523ddd231a26186ec6f2e8af317cee9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 615d289b3232c59c6266ec8864d52b0a14a67591
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316888"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>將專案部署至 Integration Services 伺服器
   在目前版本的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，您可以將專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器可讓您管理封裝、執行封裝，以及利用環境設定封裝的執行值。  
@@ -27,7 +27,7 @@ ms.locfileid: "36134674"
  如需環境的詳細資訊，請參閱 [建立和對應伺服器環境](../../2014/integration-services/create-and-map-a-server-environment.md)。  
   
 > [!NOTE]  
->  與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]相同，在目前版本中，您也可以將封裝部署至 SQL Server 的執行個體，以及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務來執行和管理封裝。 您會使用封裝部署模型。 如需詳細資訊，請參閱[封裝部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。  
+>  與舊版 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]相同，在目前版本中，您也可以將封裝部署至 SQL Server 的執行個體，以及使用 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 服務來執行和管理封裝。 您會使用封裝部署模型。 如需詳細資訊，請參閱 <<c0> [ 封裝部署&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)。</c0>  
   
  如果要將專案部署至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器，請完成下列工作：  
   

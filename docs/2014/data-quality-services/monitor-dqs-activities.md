@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.administration.activitymonitoring.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 363b1d538c37123c3cc787e7b80c1cf57b693181
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a7458eb1aa76eebeb987ef49f7079634b26e577
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267664"
 ---
 # <a name="monitor-dqs-activities"></a>監控 DQS 活動
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中集中監控下列活動：知識探索、定義域管理、比對原則、資料清理、資料比對和 SSIS 清理。  
@@ -58,7 +58,7 @@ ms.locfileid: "36145012"
     |**名稱**|用於這個活動之知識庫或資料品質專案的名稱。|  
     |**作用中**|指出此活動目前是否使用中。 其值如下：<br /><br /> **使用中**：活動目前正在執行。<br /><br /> **已結束**：活動已完成。<br /><br /> **已終止**：DQS 系統管理員已經使用 [活動監控] 畫面來終止活動，或者在 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]的個別功能區域中執行活動時，使用者已經取消活動。|  
     |**型別**|指出活動的類型。 監控下列類型的活動： **[知識管理]**、 **[DQ 專案]** 和 **[SSIS 清理]**。|  
-    |**子型別**|指出針對活動類型執行的特定工作流程。<br /><br /> **[知識管理]** 類型的活動可能具有下列工作流程或子類型： **[知識探索]**、 **[定義域管理]** 和 **[比對原則]**。<br /><br /> **[DQ 專案]** 類型的活動可能具有下列工作流程或子類型： **[清理]** 和 **[比對]**。<br /><br /> **[SSIS 清理]** 類型的活動只能具有 **[清理]** 工作流程或子類型。|  
+    |**子類型**|指出針對活動類型執行的特定工作流程。<br /><br /> **[知識管理]** 類型的活動可能具有下列工作流程或子類型： **[知識探索]**、 **[定義域管理]** 和 **[比對原則]**。<br /><br /> **[DQ 專案]** 類型的活動可能具有下列工作流程或子類型： **[清理]** 和 **[比對]**。<br /><br /> **[SSIS 清理]** 類型的活動只能具有 **[清理]** 工作流程或子類型。|  
     |**目前的狀態**|指出活動的目前狀態。 活動狀態是由最後一個計算程序所決定。 其值如下：<br /><br /> **執行中**：計算程序正在執行中。<br /><br /> **成功**：在任何計算程序執行之前，狀態都設為 **[成功]**。 同樣地，在計算程序成功結束之後，狀態也設為 **[成功]**。<br /><br /> **失敗**：計算程序失敗。<br /><br /> **已停止**：計算程序已停止。<br /><br /> <br /><br /> 注意： 一個活動，例如執行數次 （在知識探索活動中） 探索程序中可以有數個計算程序。 因此，狀態可能會在活動存留期間變更許多次。|  
     |**DQKB**|用於活動的知識庫名稱。|  
     |**使用者**|起始活動之使用者的名稱，或上次處理活動之使用者的名稱 (如果是不同人)。|  

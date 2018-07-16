@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server Profiler 監視資料採礦 (Analysis Services-資料採礦) |Microsoft 文件
+title: 使用 SQL Server Profiler 監視資料採礦 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 ms.assetid: 655ac93c-5c5c-4565-914b-915327f7d349
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e3c09140c6524e7bff893a72c78aed07b056c1f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71927782c80006c76b5ae54ea5edc00d53a93fed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023671"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323398"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>使用 SQL Server Profiler 監視資料採礦 (Analysis Services - 資料採礦)
   如果您有必要的權限，可以使用 SQL Server Profiler 來監視資料採礦活動，這些活動會當做傳送給 SQL Server Analysis Services 執行個體的要求來發行。 資料採礦活動可包括模型或結構的處理、預測查詢或內容查詢，或是新模型或結構的建立。  
   
- SQL Server Profiler 會使用`trace`監視從多個用戶端，包括傳送要求[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，SQL Server Management Studio、 Web 服務或資料採礦增益集的 Excel，只要這些活動全都使用相同的 SQL Server 執行個體Analysis Services。 您必須針對您想要監視的每一個 SQL Server Analysis Services 執行個體建立個別的追蹤。 如需追蹤及如何使用 SQL Server Profiler 的一般資訊，請參閱[使用 SQL Server Profiler 監視 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
+ 使用 SQL Server Profiler`trace`監視從多個用戶端，包括傳送要求[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，SQL Server Management Studio、 Web 服務或資料採礦增益集的 Excel，只要這些活動全都使用相同的執行個體的 SQL ServerAnalysis Services。 您必須針對您想要監視的每一個 SQL Server Analysis Services 執行個體建立個別的追蹤。 如需追蹤及如何使用 SQL Server Profiler 的一般資訊，請參閱[使用 SQL Server Profiler 監視 Analysis Services](../instances/use-sql-server-profiler-to-monitor-analysis-services.md)。  
   
  如需擷取事件類型的特定指引，請參閱[建立 Profiler 追蹤以重新執行 &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md)。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "36023671"
   
 ## <a name="see-also"></a>另請參閱  
  [監視 Analysis Services 執行個體](../instances/monitor-an-analysis-services-instance.md)   
- [使用 SQL Server 擴充事件&#40;XEvents&#41;監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
+ [使用 SQL Server 擴充事件&#40;XEvents&#41;若要監視 Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
   

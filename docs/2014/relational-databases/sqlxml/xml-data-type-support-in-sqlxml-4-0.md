@@ -1,5 +1,5 @@
 ---
-title: xml 資料類型支援在 SQLXML 4.0 |Microsoft 文件
+title: xml 資料類型支援在 SQLXML 4.0 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3f0c3589b34087c5615179d2e7b6449372bea54d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 639dbfab6191b7266c367997396fa0d127031e5c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030248"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296358"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>xml 資料類型在 SQLXML 4.0 中的支援
-  開頭為[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 XML 輸入資料使用`xml`資料型別。 本主題提供有關 SQLXML 4.0 如何識別 `xml` 資料類型之執行個體與實作其支援的資訊。  
+  開頭[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援 XML 輸入資料使用`xml`資料型別。 本主題提供有關 SQLXML 4.0 如何識別 `xml` 資料類型之執行個體與實作其支援的資訊。  
   
 ## <a name="working-with-xml-data-types"></a>使用 xml 資料類型  
  為了解如何使用實作 `xml` 資料類型資料行之 SQL 資料表的詳細資訊，提供下列範例：  

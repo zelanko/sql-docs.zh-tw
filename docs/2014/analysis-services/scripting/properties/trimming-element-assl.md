@@ -1,5 +1,5 @@
 ---
-title: Trimming 元素 (ASSL) |Microsoft 文件
+title: Trimming 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Trimming element
 ms.assetid: 8b3bbf89-8309-4d00-9aea-a5918f0c7027
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2a7346e9ae91ca3d70ab2f6cf311ea3b7a8b8a06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d34a2b559dfcace0a8334916f66031b130763182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136080"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326538"
 ---
 # <a name="trimming-element-assl"></a>Trimming 元素 (ASSL)
   指定如何修剪資料來源的資料。  
@@ -64,16 +64,16 @@ ms.locfileid: "36136080"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|*左*|從左邊修剪資料。|  
+|*左邊*|從左邊修剪資料。|  
 |*權限*|從右邊修剪資料。|  
 |*LeftRight*|從左邊和右邊修剪資料。|  
 |*無*|不修剪資料。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `Trimming` 允許值的列舉是 <xref:Microsoft.AnalysisServices.Trimming>。  
   
- 對應目的父代的項目`Trimming`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DataItem>。  
+ 對應至父系的元素`Trimming`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DataItem>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

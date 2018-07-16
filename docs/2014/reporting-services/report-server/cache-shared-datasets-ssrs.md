@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f15bfcbea8fb008203c7de0f78c39341bcef780c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf9816240119c1dbcec8f2bb6f41925ce3f8e208
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133626"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212418"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>快取共用資料集 (SSRS)
   共用資料集的查詢結果可以複製到快取，以便為多個報表提供一致的資料，並改善資料集查詢的回應時間。 跟報表一樣，您可以設定共用資料集在第一次使用時或指定排程進行快取。  
@@ -60,7 +60,7 @@ ms.locfileid: "36133626"
  您可以指定資料要在快取中保存到過期的時間。 如需詳細資訊，請參閱[快取頁面、共用資料集 &#40;報表管理員&#41;](../caching-page-shared-datasets-report-manager.md)。  
   
 ## <a name="preloading-the-cache"></a>預先載入快取  
- 您可以透過建立快取重新整理計劃，以預先載入快取。 針對重新整理計劃，您可以使用項目特定排程或共用排程，指定重新整理的頻率。 若要避免產生多個相同項目的快取，您所指定的排程應該有足夠時間來處理外部資料來源的查詢。 例如，如果執行查詢需要 20 分鐘，則重新整理排程應該超過 20 分鐘。 如需詳細資訊，請參閱[排程](../subscriptions/schedules.md)。  
+ 您可以透過建立快取重新整理計劃，以預先載入快取。 針對重新整理計劃，您可以使用項目特定排程或共用排程，指定重新整理的頻率。 若要避免產生多個相同項目的快取，您所指定的排程應該有足夠時間來處理外部資料來源的查詢。 例如，如果執行查詢需要 20 分鐘，則重新整理排程應該超過 20 分鐘。 如需詳細資訊，請參閱 <<c0> [ 排程](../subscriptions/schedules.md)。  
   
  若要建立共用資料集的快取重新整理計劃，則應具備下列條件。  
   

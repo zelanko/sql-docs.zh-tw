@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 43
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 699ab6916cc7b4ee10c40a8aec237b8041913ef7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f3b48cf86ed58813c8bcaccea0506e55feb7927a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238188"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體 (FCI) 中，一個給定時間只能有一個節點可以擁有 Windows Server 容錯移轉叢集 (WSFC) 叢集資源群組。 用戶端要求都是透過 FCI 中的此節點提供服務。 萬一發生失敗而且重新啟動不成功，群組擁有權會移至 FCI 中的另一個 WSFC 節點。 這項程序就稱為容錯移轉。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 提高失敗偵測的可靠性，並提供靈活的容錯移轉原則。  
@@ -99,7 +98,7 @@ ms.locfileid: "36135740"
 |層級|條件|描述|  
 |-----------|---------------|-----------------|  
 |0|沒有自動的容錯移轉或重新啟動|指出任何失敗狀況都不會自動觸發容錯移轉或重新啟動。 這個等級只會用於系統維護的用途。|  
-|@shouldalert|伺服器關閉的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列狀況時觸發：<br /><br /> SQL Server 服務已關閉。|  
+|1|伺服器關閉的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列狀況時觸發：<br /><br /> SQL Server 服務已關閉。|  
 |2|伺服器無回應的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。|  
 |3*|發生重大伺服器錯誤的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「系統錯誤」。|  
 |4|發生一般伺服器錯誤的容錯移轉或重新啟動|表示伺服器重新啟動或容錯移轉會在引發下列任何一個狀況時觸發：<br /><br /> SQL Server 服務已關閉。<br /><br /> SQL Server 執行個體沒有回應 (資源 DLL 無法在 HealthCheckTimeout 設定內接收來自 sp_server_diagnostics 的資料)。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「系統錯誤」。<br /><br /> 系統預存程序 sp_server_diagnostics 傳回「資源錯誤」。|  

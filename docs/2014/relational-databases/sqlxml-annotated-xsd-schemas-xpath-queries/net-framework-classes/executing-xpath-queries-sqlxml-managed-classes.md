@@ -1,5 +1,5 @@
 ---
-title: 執行 XPath 查詢 (SQLXML Managed 類別) |Microsoft 文件
+title: 執行 XPath 查詢 (SQLXML Managed 類別) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQLXML Managed Classes, executing XPath queries
 ms.assetid: 8bef4c4d-bf0e-4236-a875-fd7d3e058396
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b575f648b79ebc1012f72bf38bc4ce7b546682e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 040213e88786450a828d4923d7ce7b8c89505715
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145323"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191698"
 ---
 # <a name="executing-xpath-queries-sqlxml-managed-classes"></a>執行 XPath 查詢 (SQLXML Managed 類別)
   此範例說明如何根據對應結構描述執行 XPath 查詢。  

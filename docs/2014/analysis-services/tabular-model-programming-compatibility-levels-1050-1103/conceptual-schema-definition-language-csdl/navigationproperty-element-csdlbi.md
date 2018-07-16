@@ -1,5 +1,5 @@
 ---
-title: NavigationProperty 元素 (CSDLBI) |Microsoft 文件
+title: NavigationProperty 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a36b4d3b-6a6c-489b-8a46-2e6b925b568f
 caps.latest.revision: 9
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bc9940ccc136e8b6934efc9cc25526959cec667f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 24fe0a9aab029226757cc84ef70e4e8da898e9c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287964"
 ---
 # <a name="navigationproperty-element-csdlbi"></a>NavigationProperty 元素 (CSDLBI)
   NavigationProperty 元素是複雜類型，它會擴充 CSDL Member 類型，以支援在商業智慧資料模型中導覽。  
@@ -31,7 +31,7 @@ ms.locfileid: "36133535"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 NavigationProperty 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |CollectionCaption|否|複數名稱，用於參考導覽屬性的一組執行個體。<br /><br /> 如果省略此屬性，則會使用基底 Member 的 Caption 屬性。|  
   

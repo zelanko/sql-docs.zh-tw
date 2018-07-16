@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.smqlquerydesigner.f1
 - "10015"
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 caps.latest.revision: 29
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 5d01b975eb36f54aa450d4e931740ac319a023e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 231d9357d613d647599a15cbf0e7ed08f7cf25cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030450"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301748"
 ---
 # <a name="report-model-query-designer-user-interface"></a>報表模型查詢設計工具使用者介面
   報表設計師提供了兩個查詢設計工具，可協助您指定想要將「報表伺服器模型」資料來源中的哪些資料用於報表中。 圖形化查詢設計工具可用來瀏覽和選擇模型實體與實體欄位。 使用以文字為基礎的查詢設計工具可直接處理 XML 格式的語意模型定義語言 (SMDL) 規格。  
@@ -91,7 +91,7 @@ ms.locfileid: "36030450"
 |![執行查詢](../../analysis-services/media/rsqdicon-run.gif "執行查詢")|執行查詢文字並將產生的資料列集顯示在 [結果] 窗格中。|  
   
 ## <a name="see-also"></a>另請參閱  
- [查詢設計工具的報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
+ [查詢設計工具，在報表設計工具的 SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
  [從外部資料來源新增資料 &#40;SSRS&#41;](add-data-from-external-data-sources-ssrs.md)   
  [報表模型連線 &#40;SSRS&#41;](report-model-connection-ssrs.md)   
  [RSReportDesigner 設定檔](../report-server/rsreportdesigner-configuration-file.md)  

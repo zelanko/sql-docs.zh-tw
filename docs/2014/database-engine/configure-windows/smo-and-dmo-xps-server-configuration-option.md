@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fe06dd6034c8ada7c5b702655304fc245bb9d8b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: f56e4f6a6c1be7d5072a8532229a9e78660e70ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325038"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO 和 DMO XPs 伺服器組態選項
   使用 SMO 和 DMO XP 選項可啟用此伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Object (SMO) 擴充預存程序。  
@@ -28,10 +28,10 @@ ms.locfileid: "36133764"
   
  下表說明可用的值：  
   
-|ReplTest1|意義|  
+|值|意義|  
 |-----------|-------------|  
 |0|無法使用 SMO XP。|  
-|@shouldalert|可使用 SMO XP。 這是預設值。|  
+|1|可使用 SMO XP。 這是預設值。|  
   
  這項設定會立即生效。  
   

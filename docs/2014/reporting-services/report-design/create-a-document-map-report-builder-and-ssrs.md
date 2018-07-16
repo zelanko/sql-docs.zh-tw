@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c200a97b-67f2-499f-8374-3ed1ebe3f33c
 caps.latest.revision: 13
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 95647eaf64c59078aeda48ec0dc7281d8af27d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 259de5dd91dfdc50958b25589b90fdadde4ac005
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174954"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>建立文件引導模式 (報表產生器及 SSRS)
   文件引導模式提供了與轉譯報表中之報表項目連結的一組導覽連結。 您檢視包含文件引導模式的報表時，報表旁邊會出現另一個側窗格。 使用者按一下文件引導模式中的連結，即可跳到顯示該項目的報表頁面。 報表區段與群組會以連結的階層排列。 按一下文件引導模式中的項目，會重新整理報表並顯示文件引導模式中之項目所對應的報表區域。  
   
- 若要將連結加入至文件引導模式中，您將`DocumentMapLabel`至您所建立的文字或運算式評估為文字的文件引導模式中的顯示報表項目的屬性。 您也可以將資料表或矩陣群組的唯一值加入到文件引導模式。 例如，如果是以色彩為根據的群組，每一個唯一色彩就是報表頁面的連結，可顯示該色彩的群組執行個體。  
+ 若要將連結新增至文件引導模式中，您將`DocumentMapLabel`您所建立的文字或運算式，評估為文字，您會希望顯示於文件引導模式的報表項目屬性。 您也可以將資料表或矩陣群組的唯一值加入到文件引導模式。 例如，如果是以色彩為根據的群組，每一個唯一色彩就是報表頁面的連結，可顯示該色彩的群組執行個體。  
   
  您也可以建立報表的 URL 來覆寫文件引導模式的顯示，讓您可以執行報表而不顯示文件引導模式，然後按一下報表檢視器工具列上的 **[顯示/隱藏文件引導模式]** 按鈕來切換顯示。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36145311"
     > [!NOTE]  
     >  若要選取 Tablix 資料區，請在任何資料格中按一下來顯示資料列和資料行控點，然後按一下角控點。  
   
-2.  在 [屬性] 窗格中，鍵入您想要出現在文件引導模式中的文字`DocumentMapLabel`屬性，或輸入運算式評估為某個標籤。 例如，輸入 **Sales Chart**。  
+2.  在 [屬性] 窗格中，輸入您想要出現在文件引導模式，在文字`DocumentMapLabel`屬性，或輸入運算式評估為某個標籤。 例如，輸入 **Sales Chart**。  
   
     > [!NOTE]  
     >  如果看不到 [屬性] 窗格，請在 **[檢視]** 索引標籤的 **[顯示/隱藏]** 群組中，選取 **[屬性]**。  
@@ -123,6 +123,6 @@ ms.locfileid: "36145311"
  
   
 ## <a name="see-also"></a>另請參閱  
- [尋找及檢視報表在報表管理員中&#40;報表產生器和 SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [尋找及檢視報表在報表管理員中&#40;報表產生器及 SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DataMiningMeasureGroupDimension 資料類型 (ASSL) |Microsoft 文件
+title: DataMiningMeasureGroupDimension 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataMiningMeasureGroupDimension data type
 ms.assetid: 56d5c2ec-7e03-4dc7-a668-c8d598d59e55
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f25a5e72e185085479be12ea6eddd3cdf890020b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c50bf707f105ba40b023e2f1970dda875b0570b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314598"
 ---
 # <a name="dataminingmeasuregroupdimension-data-type-assl"></a>DataMiningMeasureGroupDimension 資料類型 (ASSL)
   定義代表量值群組與資料採礦維度之間關聯性的衍生資料類型。  
@@ -61,7 +61,7 @@ ms.locfileid: "36030162"
 |衍生的元素|請參閱[維度](../objects/dimension-element-assl.md)([維度](../collections/dimensions-element-assl.md)集合[MeasureGroup](../objects/group-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DataMiningMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

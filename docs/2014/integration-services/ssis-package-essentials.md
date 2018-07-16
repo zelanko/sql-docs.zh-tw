@@ -1,5 +1,5 @@
 ---
-title: SSIS 封裝 Essentials |Microsoft 文件
+title: 基本資訊的 SSIS 套件 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1efb7be8739413ff1688888f66313cd792d54684
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a34b86dd370850f61a931aa640df7fb9999d2c08
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133998"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225838"
 ---
 # <a name="ssis-package-essentials"></a>SSIS 封裝基本功能
-  封裝是實作 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以擷取、轉換和載入資料的物件。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 設計師來建立封裝。 您也可以執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接專案精靈來建立封裝。 如需詳細資訊， [SQL Server Data Tools 中建立的套件](create-packages-in-sql-server-data-tools.md)在 SSIS 設計師和[匯入專案精靈](../../2014/integration-services/import-project-wizard.md)。  
+  封裝是實作 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 功能以擷取、轉換和載入資料的物件。 您可以在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 中使用 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 設計師來建立封裝。 您也可以執行 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 匯入和匯出精靈或 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 連接專案精靈來建立封裝。 如需詳細資訊，[在 SQL Server Data Tools 中建立封裝](create-packages-in-sql-server-data-tools.md)SSIS 設計師 」 中並[匯入專案精靈](../../2014/integration-services/import-project-wizard.md)。  
   
  基本的套件包含下列項目：  
   
@@ -38,7 +38,7 @@ ms.locfileid: "36133998"
   
  如需詳細資訊，請參閱 [資料流程](data-flow/data-flow.md)。  
   
- 如需如何建立基本封裝的範例，請參閱[第 1 課： 建立專案和基本封裝](lesson-1-create-a-project-and-basic-package-with-ssis.md)。  
+ 如需如何建立基本封裝的範例，請參閱 <<c0> [ 第 1 課： 建立專案和基本套件](lesson-1-create-a-project-and-basic-package-with-ssis.md)。  
   
 ## <a name="related-tasks"></a>相關工作  
   

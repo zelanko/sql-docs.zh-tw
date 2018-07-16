@@ -1,5 +1,5 @@
 ---
-title: 清除 Analysis Services 快取 |Microsoft 文件
+title: 清除 Analysis Services 快取 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 02a7a6620927472b0019cb4d23a3695f02dd7138
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6393e9d52bbe026adcda7db0c451e64a364ecbc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211848"
 ---
 # <a name="clear-the-analysis-services-caches"></a>清除 Analysis Services 快取
   Analysis Services 會快取資料以提高查詢效能。 此主題提供有關如何使用 XMLA ClearCache 命令，清除回應 MDX 查詢時所建立之快取的建議。 根據您使用的是表格式或多維度模型，執行 ClearCache 的影響有所不同。  
@@ -36,7 +36,7 @@ ms.locfileid: "36037579"
   
  執行 ClearCache 也會清除 xVelocity 記憶體中分析引擎 (VertiPaq) 中的記憶體中快取。 xVelocity 引擎維護小型的快取結果集。 執行 ClearCache 會導致 xVelocity 引擎中的這些快取無效。  
   
- 最後，執行 ClearCache 也會移除項剩餘資料會留在記憶體中的表格式模型重新設定為當`DirectQuery`模式。 如果模型包含受到嚴格控制的敏感性資料，這是特別重要的。 在此情況下，執行 ClearCache 是可採取的預防動作，以確保敏感性資料只存在於預期的地方。 如果您使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 部署模型及變更查詢模式，則需要手動清除快取。 相反地，使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 在模型和資料分割上指定 `DirectQuery`，則會在您將模型切換為使用該查詢模式時自動清除快取。  
+ 最後，執行 ClearCache 也會移除剩餘的資料在記憶體中的表格式模型重新設定為當`DirectQuery`模式。 如果模型包含受到嚴格控制的敏感性資料，這是特別重要的。 在此情況下，執行 ClearCache 是可採取的預防動作，以確保敏感性資料只存在於預期的地方。 如果您使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 部署模型及變更查詢模式，則需要手動清除快取。 相反地，使用 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 在模型和資料分割上指定 `DirectQuery`，則會在您將模型切換為使用該查詢模式時自動清除快取。  
   
  相較於效能測試期間清除多維度模型快取的建議，並沒有清除表格式模型快取的廣泛建議。 如果您未管理包含敏感性資料的表格式模型部署，則沒有需要清除快取的特定管理工作。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36037579"
   
 1.  在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，以滑鼠右鍵按一下資料庫，並指向 [新增查詢]，然後選取 [XMLA]。  
   
-2.  將下列程式碼範例複製到 XMLA 查詢視窗。 變更`DatabaseID`上目前連接之資料庫的識別碼。  
+2.  將下列程式碼範例複製到 XMLA 查詢視窗。 變更`DatabaseID`目前連接上的資料庫識別碼。  
   
     ```  
     <ClearCache xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -92,7 +92,7 @@ ms.locfileid: "36037579"
     ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 中的指令碼管理工作](../script-administrative-tasks-in-analysis-services.md)   
+ [Analysis Services 中編寫管理工作](../script-administrative-tasks-in-analysis-services.md)   
  [監視 Analysis Services 執行個體](monitor-an-analysis-services-instance.md)  
   
   

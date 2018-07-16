@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_setcollen
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: cc059a5cc2b27213915491cebc87f9d16b549a0f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 668e6e0af87ac1a2c240c5b6a636b0529d23615c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133201"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272694"
 ---
 # <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen (擴充預存程序 API)
     

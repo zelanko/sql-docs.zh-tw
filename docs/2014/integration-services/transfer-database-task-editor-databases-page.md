@@ -1,5 +1,5 @@
 ---
-title: 傳送資料庫工作編輯器 （資料庫頁面） |Microsoft 文件
+title: 傳送資料庫工作編輯器 （資料庫頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.database.f1
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 caps.latest.revision: 24
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 64920a0b1d3a326cdda62359bd251a82190afe78
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 24de303a26a148ffe44b643e10a78c77a1ee4d3d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132690"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37231478"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>傳送資料庫工作編輯器 (資料庫頁面)
   使用 [傳送資料庫工作編輯器] 對話方塊的 [資料庫] 頁面，即可指定傳送資料庫工作中所含之來源和目的地資料庫的屬性。 傳送資料庫工作會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的兩個執行個體間，複製或移動 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料庫。 這項工作也可用來在同一部伺服器內複製資料庫。 如需這項工作的詳細資訊，請參閱 [傳送資料庫工作](control-flow/transfer-database-task.md)。  
@@ -57,7 +57,7 @@ ms.locfileid: "36132690"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|覆寫目的地伺服器資料庫。|  
 |**False**|請勿覆寫目的地伺服器資料庫。|  
@@ -86,7 +86,7 @@ ms.locfileid: "36132690"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**True**|重新附加來源資料庫。|  
 |**False**|請勿重新附加來源資料庫。|  
@@ -94,7 +94,7 @@ ms.locfileid: "36132690"
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 工作](control-flow/integration-services-tasks.md)   
- [傳送資料庫工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [傳送資料庫工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [SMO 連線管理員](connection-manager/smo-connection-manager.md)  
   

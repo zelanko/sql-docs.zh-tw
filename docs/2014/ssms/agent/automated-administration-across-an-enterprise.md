@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - enterprise automatic administration [SQL Server]
 - multiserver administration [SQL Server]
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - target servers [SQL Server]
 ms.assetid: 44d8365b-42bd-4955-b5b2-74a8a9f4a75f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 95ed4df18cfb4bcf433d08bbe9decacf35977c0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9c4cd4b54ef4659434f7b73b81c72f79c2cba4e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135733"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257854"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>將整個企業的管理自動化
   將多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之間的管理自動化，稱為「多伺服器管理」(Multiserver Administration)。 使用多伺服器管理，可進行以下工作：  
@@ -39,7 +39,7 @@ ms.locfileid: "36135733"
 -   為企業伺服器之間的資訊流程進行排程以作為資料倉儲之用。  
   
 > [!NOTE]  
->  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 持續努力減少整體擁有成本的過程中，[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了兩項功能：稱為「原則式管理」的管理伺服器方法，以及使用組態伺服器和伺服器群組的多伺服器查詢。 這些功能可以搭配本主題所描述的某些功能使用，也可以取代這些功能。 如需詳細資訊，請參閱[原則式管理的管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)和[管理多部伺服器使用中央管理伺服器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)。  
+>  在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 持續努力減少整體擁有成本的過程中，[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了兩項功能：稱為「原則式管理」的管理伺服器方法，以及使用組態伺服器和伺服器群組的多伺服器查詢。 這些功能可以搭配本主題所描述的某些功能使用，也可以取代這些功能。 如需詳細資訊，請參閱 <<c0> [ 原則式管理來管理伺服器](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)並[管理多部伺服器使用中央管理伺服器](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)。  
   
  若要利用多伺服器管理，您至少要有一部主要伺服器與一部目標伺服器。 主要伺服器會將作業散發到目標伺服器，並接收目標伺服器傳回的事件。 對於目標伺服器上執行的作業，主要伺服器也會儲存其作業定義的集中副本。 目標伺服器則會定期連接到主要伺服器，以更新其作業排程。 如果主要伺服器上有新的作業，目標伺服器便會下載該作業。 當目標伺服器完成作業後，它就會重新連接到主要伺服器並報告作業的狀態。  
   
@@ -88,14 +88,14 @@ ms.locfileid: "36135733"
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Database Engine 回溯相容性](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [註冊伺服器](../register-servers/register-servers.md)   
- [sp_add_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
- [sp_delete_targetserver 來&#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
- [sp_delete_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
- [sp_help_downloadlist &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
- [sp_help_jobserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
- [sp_help_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
- [sp_resync_targetserver &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
- [sp_update_targetservergroup &#40;Transact SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
+ [sp_add_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
+ [sp_delete_targetserver 來&#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   
+ [sp_delete_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql)   
+ [sp_help_downloadlist &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-downloadlist-transact-sql)   
+ [sp_help_jobserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql)   
+ [sp_help_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)   
+ [sp_resync_targetserver &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql)   
+ [sp_update_targetservergroup &#40;-SQL&AMP;#41;&#41;](/sql/relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql)   
  [dbo.sysjobservers &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobservers-transact-sql)   
  [sys.syslogins &#40;Transact SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)   
  [dbo.systargetservers &#40;Transact SQL&#41;](/sql/relational-databases/system-tables/dbo-systargetservers-transact-sql)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server], SPNs
 - network connections [SQL Server], SPNs
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 caps.latest.revision: 56
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 356a475186915a222a8480f4b7f1cbdbc7fa8fed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a4d8948697fb2cc08c57f2e4621c7401e6d44bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211888"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>註冊 Kerberos 連接的服務主體名稱
   若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用 Kerberos 驗證，需要符合下列兩個條件：  
@@ -68,7 +68,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  KB 文件 [How to use Kerberos authentication in SQL Server](http://support.microsoft.com/kb/319723)(如何在 SQL Server 中使用 Kerberos 驗證) 包含如何將讀取或寫入權限授與非網域管理員帳戶之 SPN 的資訊。  
   
- [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
+  [How to Implement Kerberos Constrained Delegation with SQL Server 2008](http://technet.microsoft.com/library/ee191523.aspx)(如何使用 SQL Server 2008 實作 Kerberos 受限委派) 提供額外資訊  
   
 ##  <a name="Formats"></a> SPN 格式  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]開始，SPN 格式就有了變動，以便能夠在 TCP/IP、具名管道和共用記憶體上支援 Kerberos 驗證。 具名和預設執行個體支援的 SPN 格式如下所示。  
@@ -109,7 +109,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 ##  <a name="Auto"></a> 自動 SPN 註冊  
  當 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 執行個體啟動時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試註冊 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務的 SPN。 當此執行個體停止時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試取消註冊 SPN。 如果是 TCP/IP 連接，SPN 會以 MSSQLSvc/\<FQDN>:\<tcpport> 格式註冊。具名執行個體和預設執行個體都會註冊為 MSSQLSvc (根據 \<tcpport> 值來區分執行個體)。  
   
- 支援 Kerberos 的其他連接將會登錄 SPN 格式*MSSQLSvc /\<FQDN >*:*\<執行個體名稱 >* 的具名執行個體。 用來註冊預設執行個體的格式為 MSSQLSvc/\<FQDN>。  
+ 支援 Kerberos 的其他連接中格式註冊的 SPN *MSSQLSvc /\<FQDN >*:*\<執行個體名稱 >* 的具名執行個體。 用來註冊預設執行個體的格式為 MSSQLSvc/\<FQDN>。  
   
  如果服務帳戶缺少這些動作所需的權限，可能需要手動介入才能註冊或取消註冊 SPN。  
   
@@ -162,8 +162,8 @@ WHERE session_id = @@SPID;
   
 |狀況|驗證方法|  
 |--------------|---------------------------|  
-|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意： 正確表示已註冊之 SPN 對應的帳戶是執行 SQL Server 服務的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
-|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意： 正確表示已註冊之 SPN 對應的帳戶是執行 SQL Server 服務的帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 會對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。 例如，Local System 或 NETWORK SERVICE。<br /><br /> 注意： 正確表示已註冊之 SPN 對應的帳戶是執行 SQL Server 服務帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
+|SPN 是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。<br /><br /> 注意： 正確表示已註冊之 SPN 對應的帳戶是執行 SQL Server 服務帳戶。|本機連接會使用 NTLM，遠端連接則使用 Kerberos。|  
 |SPN 對應到不正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|驗證失敗。|  
 |SPN 查閱失敗或是未對應到正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶，或者不是正確的網域帳戶、虛擬帳戶、MSA 或內建帳戶。|本機和遠端連接都會使用 NTLM。|  
   

@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - page compression [Database Engine]
 - compression [SQL Server], page
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 66cdf18b5c614e32ce882b5369daa500f2b9e703
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b3800ad42fcab068ff2cb3cd601438fa82002c59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136861"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37190468"
 ---
 # <a name="page-compression-implementation"></a>頁面壓縮實作
   本主題摘要說明 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 如何實作頁面壓縮。 這個摘要提供協助您計畫資料所需之儲存空間的基本資訊。  

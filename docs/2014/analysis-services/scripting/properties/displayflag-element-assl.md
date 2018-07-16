@@ -1,5 +1,5 @@
 ---
-title: DisplayFlag 元素 (ASSL) |Microsoft 文件
+title: DisplayFlag 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - DisplayFlag element
 ms.assetid: a6750477-0763-46da-9add-1f4448146a6b
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43c797101826a614c67c7c4f213140a427b51395
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c1e36ef82a62c91575312fa4c2ead23538983402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134701"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261454"
 ---
 # <a name="displayflag-element-assl"></a>DisplayFlag 元素 (ASSL)
-  包含指出使用者介面元件是否應該顯示相關聯的唯讀提示[ServerProperty](../objects/serverproperty-element-assl.md)項目。  
+  包含唯讀的提示，指出使用者介面元件是否應該顯示相關聯[ServerProperty](../objects/serverproperty-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,11 +62,11 @@ ms.locfileid: "36134701"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應至父系的項目`DisplayFlag`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ServerProperty>。  
+ 對應的父代的項目`DisplayFlag`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ServerProperty>。  
   
 ## <a name="see-also"></a>另請參閱  
  [ServerProperties 元素&#40;ASSL&#41;](../collections/serverproperties-element-assl.md)   
- [Server 元素&#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [伺服器項目&#40;ASSL&#41;](../objects/server-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

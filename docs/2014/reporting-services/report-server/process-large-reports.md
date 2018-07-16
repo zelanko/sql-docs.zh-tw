@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report processing [Reporting Services], large reports
 - page breaks [Reporting Services]
@@ -19,13 +19,13 @@ ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 5f261d0fcb2af1ffd6b58e09723167d760e0c93f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1fe2bf439a3ba9da5d2f486ec93bf63f909f43db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275964"
 ---
 # <a name="process-large-reports"></a>處理大型報表
   大型報表會造成一定的處理挑戰，若要正確執行，就需要特定的組態。 除非將大型報表設定成支援分頁，否則不應視需要執行大型報表。  
@@ -42,7 +42,7 @@ ms.locfileid: "36135110"
 ## <a name="configuration-recommendations"></a>組態建議  
  報表執行、報表轉譯與報表存取的建議包括下列項目：  
   
--   設計報表以支援分頁。 報表伺服器每次傳送一頁報表。 如果報表包含分頁，您就可以控制多少資料流至瀏覽器。 如需詳細資訊，請參閱[預先載入快取&#40;報表管理員&#41;](preload-the-cache-report-manager.md)。  
+-   設計報表以支援分頁。 報表伺服器每次傳送一頁報表。 如果報表包含分頁，您就可以控制多少資料流至瀏覽器。 如需詳細資訊，請參閱 <<c0> [ 預先載入快取&#40;報表管理員&#41;](preload-the-cache-report-manager.md)。</c0>  
   
 -   設定報表當成已排程的報表快照集執行，以防止其視需要執行。 請勿設定報表執行的逾時值。 在離峰時段執行報表。  
   

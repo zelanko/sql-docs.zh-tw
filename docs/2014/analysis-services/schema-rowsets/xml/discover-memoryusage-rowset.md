@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_MEMORYUSAGE 資料列集 |Microsoft 文件
+title: DISCOVER_MEMORYUSAGE 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 248b1a999cafddd69a4b71aebdb9d52210d38646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7cbe35889e3a703e85b37f2f1c107a9a72ecff90
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304578"
 ---
 # <a name="discovermemoryusage-rowset"></a>DISCOVER_MEMORYUSAGE 資料列集
   傳回伺服器所配置之各種物件的 DISCOVER_MEMORYUSAGE 統計資料。  
@@ -49,7 +49,7 @@ ms.locfileid: "36034252"
 |`ElementCount`|`DBTYPE_UI4`||對於容器物件而言，這是該物件所包含的物件數目。|  
 |`Shrinkable`|`DBTYPE_BOOL`|是|布林值，這個值會指出記憶體是否可壓縮 (可能會由於記憶體不足的壓力而收回)。 如果為 true，就表示記憶體可壓縮。如果為 false，就表示記憶體不可壓縮。|  
 |`ObjectParentPath`|`DBTYPE_WSTR`||識別此物件之完整路徑的字串。|  
-|`ObjectID`|`DBTYPE_WSTR`||識別物件的字串。 此物件的完整路徑由字串: (ObjectParentPath + '。 ' + ObjectId)。|  
+|`ObjectID`|`DBTYPE_WSTR`||識別物件的字串。 此物件的完整路徑由字串表示: (ObjectParentPath + '。 ' + ObjectId)。|  
   
  這個結構描述資料列集並未排序。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36034252"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|A07CCD21-8148-11D0-87BB-00C04FC33942|  
 |ADOMDNAME|MemoryUsage|  

@@ -1,5 +1,5 @@
 ---
-title: 排程資料重新整理 (PowerPivot for SharePoint) |Microsoft 文件
+title: 排程資料重新整理 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 822f4a825e359c2e6e8ed69711bfd95fd3bd4eab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fbabf680ed67f1b2e144287764d16447d9467a43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325148"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>排程資料重新整理 (PowerPivot for SharePoint)
   您可以排程資料重新整理，以取得已發行到 SharePoint 網站之 Excel 活頁簿內對 PowerPivot 資料的自動更新。  
@@ -110,7 +110,7 @@ ms.locfileid: "36146629"
   
     3.  如果您知道目標應用程式的識別碼 (其中包含您要使用之先前儲存的認證)，選擇 **[使用儲存在 Secure Store Service 中的認證連接]** 。  
   
-     如需有關這些選項的詳細資訊，請參閱[設定預存認證 PowerPivot 資料重新整理&#40;PowerPivot for SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)和[設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
+     如需這些選項的詳細資訊，請參閱[PowerPivot 資料重新整理設定的預存認證&#40;PowerPivot for SharePoint&#41; ](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)並[設定 PowerPivot 無人看管資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](configure-unattended-data-refresh-account-powerpivot-sharepoint.md)。  
   
 9. 如果您要資料重新整理重新查詢所有的原始資料來源，則選取 [資料來源] 中的 **[所有資料來源]** 核取方塊。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "36146629"
   
     -   資料來源必須可在執行資料重新整理時使用，並且也可在指定的位置使用。 如果原始資料來源是位於撰寫活頁簿之人員的本機磁碟機上，則必須從資料重新整理作業排除該資料來源，或設法將該資料來源發行到可透過網路連接存取的位置。 如果您將資料來源移至某個網路位置，請務必在 [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 中開啟活頁簿，並更新資料來源連接資訊。 這是重新建立儲存在 PowerPivot 活頁簿的連接資訊所必須執行的動作。  
   
-    -   您必須使用內嵌在 PowerPivot 活頁簿或是在排程中指定的認證資訊，來存取資料來源。 當您使用 PowerPivot for Excel 匯入資料時，會在 PowerPivot 活頁簿中儲存內嵌的認證資訊。 內嵌的認證資訊通常是 SSPI=IntegratedSecurity 或 SSPI=TrustedConnection，表示使用目前使用者的認證連接到資料來源。 如果您要覆寫資料重新整理排程中的認證資訊，可以指定預先定義的預存認證。 如需詳細資訊，請參閱[設定預存認證 PowerPivot 資料重新整理&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
+    -   您必須使用內嵌在 PowerPivot 活頁簿或是在排程中指定的認證資訊，來存取資料來源。 當您使用 PowerPivot for Excel 匯入資料時，會在 PowerPivot 活頁簿中儲存內嵌的認證資訊。 內嵌的認證資訊通常是 SSPI=IntegratedSecurity 或 SSPI=TrustedConnection，表示使用目前使用者的認證連接到資料來源。 如果您要覆寫資料重新整理排程中的認證資訊，可以指定預先定義的預存認證。 如需詳細資訊，請參閱 < [PowerPivot 資料重新整理設定的預存認證&#40;PowerPivot for SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)。  
   
     -   您指定的所有資料來源的都必須能夠順利執行資料重新整理。 否則，這項作業會捨棄重新整理的資料，僅保留活頁簿最後儲存的版本。 請排除任何您不確定的資料來源。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "36146629"
  請檢閱 TechNet WIKI 上的 PowerPivot 資料重新整理疑難排解頁面，以取得解決資料重新整理問題的協助。 如需詳細資訊，請參閱 [PowerPivot 資料重新整理疑難排解](http://go.microsoft.com/fwlink/?LinkId=251594)。  
   
 > [!NOTE]  
->  SharePoint 管理員可以透過在管理中心的 PowerPivot 管理儀表板中檢視合併的資料重新整理報表來協助您疑難排解資料重新整理問題。 如需詳細資訊，請參閱[PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
+>  SharePoint 管理員可以透過在管理中心的 PowerPivot 管理儀表板中檢視合併的資料重新整理報表來協助您疑難排解資料重新整理問題。 如需詳細資訊，請參閱 < [PowerPivot Management Dashboard and Usage Data](power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [與 SharePoint 2010 的 PowerPivot 資料重新整理](powerpivot-data-refresh-with-sharepoint-2010.md)   

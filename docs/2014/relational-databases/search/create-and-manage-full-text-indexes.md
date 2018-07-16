@@ -5,23 +5,22 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d51e71307cceec375cc410debf112cd066d6c10b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 441434839fa15b1f9345ddecf55eef3f7f248724
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307458"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>建立及管理全文檢索索引
   全文檢索引擎會使用全文檢索索引中的資訊來編譯全文檢索查詢，以便快速地在資料表中搜尋特定字詞或字詞組合。 全文檢索索引會儲存重要單字及這些單字在資料庫資料表之一或多個資料行內位置的相關資訊。 全文檢索索引是一種特殊類型的 Token 式功能索引，由 Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所建立與維護。 建立全文檢索索引的程序與建立其他索引類型的程序大不相同。 全文檢索引擎會根據個別 Token 從索引中的文字建立反向、堆疊以及壓縮的索引結構，而不是根據特定資料列中所儲存的值來建構 B 型樹狀結構。  全文檢索索引的大小只受限於執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之電腦的可用記憶體資源。  
@@ -31,7 +30,7 @@ ms.locfileid: "36035208"
 > [!NOTE]  
 >  在 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 及更新的版本中，全文檢索引擎位於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中，而非個別的服務中。 將全文檢索引擎整合到 Database Engine 可以改善全文檢索管理能力、混合式查詢的最佳化，以及整體效能。  
   
- 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 您可以在類型的資料行上建立全文檢索索引`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，和`varbinary(max)`可以建立的索引全文檢索搜尋。 建立全文檢索索引的資料行上的資料類型是`varbinary`， `varbinary(max)`， `image`，或`xml`會要求您指定的類型資料行。 「類型資料行」是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
+ 每個資料表只允許有一個全文檢索索引。 若要對資料表建立全文檢索索引，該資料表必須有單一的非 Null 唯一資料行。 基礎類型的資料行的全文檢索索引`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，以及`varbinary(max)`可以建立索引全文檢索搜尋。 其資料的資料行建立全文檢索索引的類型是`varbinary`， `varbinary(max)`， `image`，或`xml`會要求您指定的型別資料行。 「類型資料行」是一個資料表資料行，您可以在每個資料列中儲存文件的副檔名 (.doc、.pdf 與 .xls 等)。  
   
  建立與維護全文檢索索引的程序稱為「母體擴展」，也稱為「搜耙」。 全文檢索索引母體擴展有三種類型：完整母體擴展、以變更追蹤為基礎的母體擴展，以及以時間戳記為基礎的累加母體擴展。 如需詳細資訊，請參閱 [擴展全文檢索索引](populate-full-text-indexes.md)。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "36035208"
   
 |DocumentID|Title|  
 |----------------|-----------|  
-|@shouldalert|Crank Arm and Tire Maintenance|  
+|1|Crank Arm and Tire Maintenance|  
 |2|Front Reflector Bracket and Reflector Assembly 3|  
 |3|Front Reflector Bracket Installation|  
   
@@ -71,26 +70,26 @@ ms.locfileid: "36035208"
   
 |關鍵字|ColId|DocId|出現次數|  
 |-------------|-----------|-----------|----------------|  
-|Crank|@shouldalert|@shouldalert|@shouldalert|  
-|Arm|@shouldalert|@shouldalert|2|  
-|Tire|@shouldalert|@shouldalert|4|  
-|維護|@shouldalert|@shouldalert|5|  
-|Front|@shouldalert|2|@shouldalert|  
-|Front|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|2|2|  
-|Reflector|@shouldalert|2|5|  
-|Reflector|@shouldalert|3|2|  
-|Bracket|@shouldalert|2|3|  
-|Bracket|@shouldalert|3|3|  
-|組件|@shouldalert|2|6|  
-|3|@shouldalert|2|7|  
-|安裝|@shouldalert|3|4|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|維護|1|1|5|  
+|Front|1|2|1|  
+|Front|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|Bracket|1|3|3|  
+|組件|1|2|6|  
+|3|1|2|7|  
+|安裝|1|3|4|  
   
  **Keyword** 資料行包含編列索引時所擷取的單一 Token 表示法。 文字分隔會決定 Token 的組成項目。  
   
  **ColId** 資料行所包含的值會對應到已建立全文檢索索引的特定資料行。  
   
- `DocId`資料行含有八位元組整數會對應到全文檢索索引資料表中的特定全文檢索關鍵值的值。 當全文檢索索引鍵不是整數資料類型時，這項對應就是必要的。 在這種情況下，全文檢索之間的對應索引鍵值和`DocId`值會在稱為 DocId Mapping 資料表的個別資料表中維護。 若要查詢這些對應，請使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系統預存程序。 為了滿足搜尋條件，上述資料表中的 DocId 值必須與 DocId Mapping 資料表聯結，以便從查詢的基底資料表中擷取資料列。 如果基底資料表的全文檢索索引鍵值是整數類型，此值就會直接當做 DocId 而且不需要任何對應。 因此，使用整數全文檢索索引鍵值有助於最佳化全文檢索查詢。  
+ `DocId`資料行包含對應至特定全文檢索索引鍵值全文檢索索引資料表中的八位元組整數的值。 當全文檢索索引鍵不是整數資料類型時，這項對應就是必要的。 在此情況下，全文檢索停用字之間的對應索引鍵值和`DocId`會在稱為 DocId Mapping 資料表的個別資料表中保留的值。 若要查詢這些對應，請使用 [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) 系統預存程序。 為了滿足搜尋條件，上述資料表中的 DocId 值必須與 DocId Mapping 資料表聯結，以便從查詢的基底資料表中擷取資料列。 如果基底資料表的全文檢索索引鍵值是整數類型，此值就會直接當做 DocId 而且不需要任何對應。 因此，使用整數全文檢索索引鍵值有助於最佳化全文檢索查詢。  
   
  **Occurrence** 資料行包含整數值。 針對每個 DocId 值，都會有一個對應到該 DocId 內特定關鍵字之相對單字位移的出現次數值清單。 出現次數值有助於決定詞句或相似的相符項目，例如，具有鄰近發生次數值的片語。 它們也有助於計算相關分數。例如，在 DocId 中的關鍵字出現次數可用來計分。  
   
@@ -109,8 +108,8 @@ ms.locfileid: "36035208"
   
 |關鍵字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Rear|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|3|2|  
+|Rear|1|3|1|  
+|Reflector|1|3|2|  
   
  如片段 2 所示，全文檢索查詢必須在內部查詢每個片段並捨棄較舊的項目。 因此，如果全文檢索索引包含過多全文檢索索引片段，可能會導致查詢效能大幅降低。 若要減少片段的數目，請使用 [ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的 REORGANIZE 選項來重新組織全文檢索目錄。 這個陳述式會執行「主要合併」，將片段合併成較大的單一片段，然後從全文檢索索引中移除所有已過時的項目。  
   
@@ -118,18 +117,18 @@ ms.locfileid: "36035208"
   
 |關鍵字|ColId|DocId|Occ|  
 |-------------|-----------|-----------|---------|  
-|Crank|@shouldalert|@shouldalert|@shouldalert|  
-|Arm|@shouldalert|@shouldalert|2|  
-|Tire|@shouldalert|@shouldalert|4|  
-|維護|@shouldalert|@shouldalert|5|  
-|Front|@shouldalert|2|@shouldalert|  
-|Rear|@shouldalert|3|@shouldalert|  
-|Reflector|@shouldalert|2|2|  
-|Reflector|@shouldalert|2|5|  
-|Reflector|@shouldalert|3|2|  
-|Bracket|@shouldalert|2|3|  
-|組件|@shouldalert|2|6|  
-|3|@shouldalert|2|7|  
+|Crank|1|1|1|  
+|Arm|1|1|2|  
+|Tire|1|1|4|  
+|維護|1|1|5|  
+|Front|1|2|1|  
+|Rear|1|3|1|  
+|Reflector|1|2|2|  
+|Reflector|1|2|5|  
+|Reflector|1|3|2|  
+|Bracket|1|2|3|  
+|組件|1|2|6|  
+|3|1|2|7|  
   
  [本主題內容](#top)  
   

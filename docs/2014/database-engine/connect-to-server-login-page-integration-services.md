@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodtsserver.login.f1
 - sql12.swb.connecttodts.login.f1
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e41104462b18f9d236a289dbea0196f981006f44
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 703a4f062d327da13b1b75d519c70884a9228978
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134471"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241258"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>連接到伺服器 (登入頁面) Integration Services
   連線到 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 時，可使用此索引標籤檢視或指定下列選項。  
@@ -35,7 +35,7 @@ ms.locfileid: "36134471"
  選取要連接的伺服器。 預設會顯示上次連接的伺服器執行個體。  
   
 > [!NOTE]  
->  請勿使用 *\<servername >*\\*\<執行個體名稱 >*，因為[!INCLUDE[ssIS](../includes/ssis-md.md)]不支援多個執行個體的電腦上。  
+>  請勿使用*\<伺服器名稱 >*\\*\<執行個體名稱 >*，因為[!INCLUDE[ssIS](../includes/ssis-md.md)]不支援多個執行個體的電腦上。  
   
  **驗證**  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] 僅有 [!INCLUDE[ssIS](../includes/ssis-md.md)]Windows 驗證可用。 Windows 驗證模式允許使用者透過 Windows 使用者帳戶連接。  

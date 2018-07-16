@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e32774c7577f357677c149bd3e222498945b9b82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: e6e09fbd1af47c63d12d5c1b726e6a0ad23cf5b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035379"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294128"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>加入或刪除指標 (報表產生器及 SSRS)
   指標是最小的量測計，看一眼就可傳達單一資料值的狀態。 如需指標的詳細資訊，請參閱[指標 &#40;報表產生器及 SSRS&#41;](indicators-report-builder-and-ssrs.md)。  
@@ -30,11 +30,11 @@ ms.locfileid: "36035379"
   
  您可以更新指標的值和狀態。 如需詳細資訊，請參閱下列主題：  
   
--   [變更指標圖示和指標集合&#40;報表產生器和 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [變更指標圖示和指標集合&#40;報表產生器及 SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
--   [設定和設定度量單位&#40;報表產生器和 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
+-   [設定度量單位&#40;報表產生器及 SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [設定同步處理範圍&#40;報表產生器和 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [設定同步處理範圍&#40;報表產生器及 SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  因為指標位於量測計面板的內部，所以當您想要使用 [指標屬性] 對話方塊或 [屬性] 窗格來設定指標時，您需要選取指標，而不是此面板。 下圖顯示選取的指標如何出現在它的量測計面板中。  
   

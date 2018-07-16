@@ -1,5 +1,5 @@
 ---
-title: ConnectionString 元素 (ASSL) |Microsoft 文件
+title: ConnectionString 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ConnectionString element
 ms.assetid: f74181c4-7df7-4fbd-94dd-e4ad03dffe14
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3f1782eb62cec4d028a17f380a8bd924458e1e65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca1905c6790ff71b9a263182a4812c2fedaa1e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285994"
 ---
 # <a name="connectionstring-element-assl"></a>ConnectionString 元素 (ASSL)
   包含加密的連接字串[DataSource](../objects/datasource-element-assl.md)項目。  
@@ -62,7 +62,7 @@ ms.locfileid: "36135698"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`ConnectionString`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DataSource>。  
+ 對應至父系的元素`ConnectionString`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DataSource>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

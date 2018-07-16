@@ -1,5 +1,5 @@
 ---
-title: 表格式模型程式設計 |Microsoft 文件
+title: 表格式模型程式設計 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 785e4818d635d41dc27eea8fc63b62cf63e0ff92
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0725d20308e750fe6b4fc9d2ceb6a8068747b68a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134716"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300858"
 ---
 # <a name="tabular-model-programming"></a>表格式模型程式設計
   表格式模型使用關聯式建構，將分析和報表應用程式所使用的 Analysis Services 資料模型化。 這些模型在設定為表格式模式的 Analysis Service 執行個體上執行，對儲存體使用記憶體中分析引擎，以及在要求資料時執行彙總和計算資料的快速資料表掃描。  
@@ -40,6 +40,6 @@ ms.locfileid: "36134716"
   
 ## <a name="see-also"></a>另請參閱  
  [表格式模型化&#40;SSAS 表格式&#41;](../tabular-models/tabular-models-ssas.md)   
- [表格式模型設計師&#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)  
+ [表格式模型設計工具&#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)  
   
   

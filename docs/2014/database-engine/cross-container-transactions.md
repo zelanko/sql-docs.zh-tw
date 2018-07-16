@@ -1,5 +1,5 @@
 ---
-title: 跨容器交易 |Microsoft 文件
+title: 跨容器交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e09f7b68748aa40620196b0402ce81521591781a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68d22f34ca98f2e7b98320a437a236269e7a9182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310468"
 ---
 # <a name="cross-container-transactions"></a>跨容器交易
   跨容器交易是隱含或明確的使用者交易，其包含對原生編譯的預存程序或記憶體最佳化的資料表作業的呼叫。  
@@ -75,7 +75,7 @@ commit
   
  資料讀取作業會傳回滿足篩選條件的許多資料列。  
   
- 讀取執行讀取作業的交易 t 隔離等級的一部分，可以的了解  
+ 執行讀取作業的交易 t 隔離層級的一部分可以理解的形式讀取  
   
  認可狀態  
  認可狀態指的是，是否可以保證資料讀取為已認可狀態。  
@@ -86,7 +86,7 @@ commit
  穩定性會保證系統給出有關資料讀取的資訊給交易 T。  
  穩定性指的是交易的讀取是否可重複。 也就是說，如果讀取已重複，它們是否會傳回相同的資料列和資料列版本？  
   
- 特定保證指的是交易的邏輯結束時間。 一般而言，邏輯結束時間是資料庫認可交易的時間。 如果記憶體最佳化的資料表是由交易所存取，則邏輯結束時間在技術上為驗證階段的開始  (如需詳細資訊，請參閱中的交易存留期討論[記憶體最佳化資料表中的交易](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 特定保證指的是交易的邏輯結束時間。 一般而言，邏輯結束時間是資料庫認可交易的時間。 如果記憶體最佳化的資料表是由交易所存取，則邏輯結束時間在技術上為驗證階段的開始  (如需詳細資訊，請參閱中的交易存留期討論[Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
  不論隔離等級為何，交易 (T) 永遠都會看到自己的更新：  
   
@@ -103,7 +103,7 @@ commit
  保證資料讀取為已認可狀態，而且一直到交易的邏輯結束時間為止都很穩定。  
   
  SERIALIZABLE  
- 可重複讀取加上虛設項目避免和相對於 t 虛設項目避免表示掃描作業只能傳回已由 T，寫入的其他資料列所執行的所有可序列化的讀取作業的交易一致性的所有保證，但沒有已由其他交易寫入的資料列。  
+ 所有的可重複讀取以及虛設項目避免和 t。 虛設項目避免表示掃描作業只能傳回額外的資料列已由 T，寫入所執行的所有可序列化的讀取作業方面的交易一致性的保證，但沒有已由其他交易寫入的資料列。  
   
  以下列交易為例：  
   
@@ -187,11 +187,11 @@ commit
   
  自動認可模式中的跨容器唯讀交易會在交易結束時回復。 未執行任何驗證。  
   
- 如果交易在 REPEATABLE READ 或 SERIALIZABLE 隔離之下存取記憶體最佳化資料表，則明確或隱含的跨容器唯讀交易會在認可時間執行驗證。 有關驗證的詳細資料請參閱節有關衝突偵測、 驗證和認可相依性檢查[記憶體最佳化資料表中的交易](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如果交易在 REPEATABLE READ 或 SERIALIZABLE 隔離之下存取記憶體最佳化資料表，則明確或隱含的跨容器唯讀交易會在認可時間執行驗證。 有關驗證的詳細資訊請參閱節衝突偵測、 驗證和認可相依性檢查[Transactions in Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解記憶體最佳化資料表上的交易](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [具有記憶體最佳化資料表交易隔離等級的指導方針](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
- [指導方針的記憶體最佳化資料表上的交易重試邏輯](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
+ [具有記憶體最佳化資料表的交易隔離等級的指導方針](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+ [經記憶體最佳化的資料表上交易的重試邏輯方針](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

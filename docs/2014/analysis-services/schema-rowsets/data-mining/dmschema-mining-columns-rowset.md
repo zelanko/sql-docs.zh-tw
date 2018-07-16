@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_COLUMNS 資料列集 |Microsoft 文件
+title: DMSCHEMA_MINING_COLUMNS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_COLUMNS rowset
 ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d53285b088b471ad7a5fca87536cc897db8126d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 60dc2e773b93f27fe96489bcb55fdfe22c3168d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232058"
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>DMSCHEMA_MINING_COLUMNS 資料列集
-  描述中的所有資料採礦模型的個別資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這個資料列集會限定為目前的目錄。  
+  說明中的所有資料採礦模型的個別資料行[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這個資料列集會限定為目前的目錄。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  `DMSCHEMA_MINING_COLUMNS`資料列集包含下列資料行。  
@@ -49,7 +49,7 @@ ms.locfileid: "36133565"
 |`IS_NULLABLE`|`DBTYPE_BOOL`||布林值，指出資料行是否可為 Null。<br /><br /> 如果資料行不可為 Null，則為 `FALSE`，否則為 `TRUE`。|  
 |`DATA_TYPE`|`DBTYPE_UI2`||資料行之資料類型的指標。 下列清單示範傳回的指標類型之範例。<br /><br /> "`TABLE`" 將會傳回 `DBTYPE_HCHAPTER`。<br /><br /> "`TEXT`" 將會傳回 `DBTYPE_WCHAR`。<br /><br /> "`LONG`" 將會傳回 `DBTYPE_I8`。<br /><br /> "`DOUBLE`" 將會傳回 `DBTYPE_R8`。<br /><br /> "`DATE`" 將會傳回 `DBTYPE_DATE`。|  
 |`TYPE_GUID`|`DBTYPE_GUID`||資料行資料類型的 GUID。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 並不支援此資料行，它一律包含 `VT_NULL`。|  
-|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||資料欄中值的可能長度上限。 若是字元、二進位或是位元資料行，這是下列其中一個：<br /><br /> 的中的字元、 位元組或是位元，分別為資料行類型，如果有定義長度的資料行最大長度。 例如，SQL 資料表中的 `CHAR(5)` 資料行其最大的長度為 5。<br />的中的字元、 位元組或是位元，分別為資料行類型，如果資料行沒有定義的長度的資料類型最大長度。<br />零 (0)，如果資料行或是資料類型已定義的最大長度。<br />-   `NULL` 對於所有其他類型的資料行|  
+|`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||資料欄中值的可能長度上限。 若是字元、二進位或是位元資料行，這是下列其中一個：<br /><br /> 的中的字元、 位元組或是位元，分別為資料行類型，如果有定義長度的資料行最大長度。 例如，SQL 資料表中的 `CHAR(5)` 資料行其最大的長度為 5。<br />-中的字元、 位元組或是位元，分別為資料行類型，如果資料行沒有定義的長度的資料類型最大長度。<br />零 (0) (如果資料行和資料類型都不具有已定義的最大長度。<br />-   `NULL` 所有其他類型的資料行|  
 |`CHARACTER_OCTET_LENGTH`|`DBTYPE_UI4`||如果資料行類型是字元或是二進位，則為以八位元資料組 (位元組) 為單位之資料行的最大長度。 值為零 (0) 表示資料行沒有最大長度。 此資料行對於所有其他類型的資料行都包含 `NULL`。|  
 |`NUMERIC_PRECISION`|`DBTYPE_UI2`||如果資料行的資料類型是 `VARNUMERIC` 以外的數值資料類型，則為資料行的最大有效位數。<br /><br /> 如果資料行的資料類型不是數值或者是 `NULL`，則為 `VARNUMERIC`。<br /><br /> 具有 `DBTYPE_DECIMAL` 或 `DBTYPE_NUMERIC` 的資料類型之資料行的有效位數，取決於資料行定義。|  
 |`NUMERIC_SCALE`|`DBTYPE_I2`||如果資料行的類型指標為 `DBTYPE_DECIMAL`、`DBTYPE_NUMERIC` 或 `DBTYPE_VARNUMERIC`，則為小數點右邊的位數。 否則，這個資料行會包含 `VT_NULL`。|  

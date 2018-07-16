@@ -1,5 +1,5 @@
 ---
-title: 第 4 課： 在 MDS 中儲存供應商資料 |Microsoft 文件
+title: 第 4 課： 在 MDS 中儲存供應商資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bacd9eaf-4d12-4f25-aec7-d785dec1b623
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 40f09aa6544bc38378e547c5b6e94dd26956a549
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c366d18c9f8c4606da6cc864df7a7d399151c6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134527"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180945"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>第 4 課：在 MDS 中儲存供應商資料
   Master Data Services (MDS) 是用於主要資料管理的 SQL Server 解決方案。 主要資料管理 (MDM) 會描述組織為了探索及定義非交易之資料清單所付出的心力。  
@@ -38,23 +38,23 @@ ms.locfileid: "36134527"
   
  在這一課，您會執行下列工作：  
   
-1.  建立**供應商**中的模型**MDS**使用**主資料管理員 Web 應用程式**。  
+1.  建立**供應商**中的模型**MDS**利用**主資料管理員 Web 應用程式**。  
   
-2.  開啟**Cleansed and Matched Supplier Data.xls**在 Excel 中並使用**MDS 增益集的 Excel**建立名為實體**供應商**並將資料上傳到 MDS。  
+2.  開啟**Cleansed and Matched Supplier Data.xls**在 Excel 中並使用**MDS 增益集適用於 Excel**來建立名為實體**供應商**並將資料上傳至 MDS。  
   
-3.  驗證資料在 MDS 中建立使用**主資料管理員**。  
+3.  確認資料已建立在 MDS 中，使用**主資料管理員**。  
   
-4.  建立名為實體**狀態**並更新**狀態**屬性**供應商**取決於網域型屬性的實體**狀態**實體。 您可以執行所有使用此**MDS 增益集的 Excel**。  
+4.  建立名為實體**狀態**，並更新**狀態**屬性**供應商**是取決於網域型屬性的實體**狀態**實體。 您可以執行所有使用此**MDS 增益集適用於 Excel**。  
   
-5.  確認已建立網域屬性使用**主資料管理員**和更新的值**名稱**屬性**狀態**實體。  
+5.  確認使用建立網域屬性**主資料管理員**及更新的值**名稱**屬性**狀態**實體。  
   
-6.  檢視您所使用的更新**主資料管理員**中**Excel**。  
+6.  檢視使用您所進行的更新**主資料管理員**中**Excel**。  
   
-7.  從值載入**狀態**實體**Excel**加入值，和使用驗證新增**主資料管理員**。  
+7.  從值載入**狀態**實體載入**Excel**加入值，並使用驗證新增**主資料管理員**。  
   
-8.  建立及使用衍生的階層使用的網域屬性關聯性之間**供應商**實體和**狀態**實體 （Supplier 實體的 State 屬性為 State 實體類型) 使用**主資料管理員**。  
+8.  建立及使用衍生的階層之間的網域屬性關聯性**供應商**實體並**狀態**實體 （Supplier 實體的 State 屬性為 State 實體的類型) 使用**主資料管理員**。  
   
 ## <a name="next-step"></a>下一個步驟  
- [工作 1： 建立使用主資料管理員的供應商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [工作 1：使用主資料管理員建立供應商模型](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

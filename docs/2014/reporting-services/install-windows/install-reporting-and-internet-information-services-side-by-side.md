@@ -1,5 +1,5 @@
 ---
-title: 安裝 Reporting Services 和網際網路資訊服務的並存 （SSRS 原生模式） |Microsoft 文件
+title: 安裝 Reporting Services 和網際網路資訊服務的並存 （SSRS 原生模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2111d9ceda6e38f4abc079b94d678d981b075a91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3db5a0da0050541b0adec9b726184a959ac59001
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274654"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>並存安裝 Reporting Services 和 Internet Information Services (SSRS 原生模式)
   您可以在同一部電腦上安裝和執行 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 與 Internet Information Services (IIS)。 您所使用的 IIS 版本會決定必須處理的互通性問題。  
@@ -47,9 +47,9 @@ ms.locfileid: "36132603"
   
 |範例|要求|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|接收傳送至的所有要求http://123.234.345.456/reports或 http://\<電腦名稱 > / 如果網域名稱服務可以解析成該主機名稱的 IP 位址。|  
+|http://123.234.345.456:80/reports|接收的所有要求傳送至http://123.234.345.456/reports或 http://\<電腦名稱 > / 如果網域名稱服務可以解析成該主機名稱的 IP 位址。|  
 |http://+:80/reports|只要此 URL 包含 "reports" 虛擬目錄名稱，便接收傳送至適用於該電腦之任何 IP 位址或主機名稱的任何要求。|  
-|http://123.234.345.456:80|接收指定的任何要求http://123.234.345.456或 http://\<電腦名稱 > 如果網域名稱服務可以將 IP 位址解析成該主機名稱。|  
+|http://123.234.345.456:80|任何指定的要求會收到http://123.234.345.456或 http://\<computername > 如果網域名稱服務可以將 IP 位址解析成該主機名稱。|  
 |http://+:80|若為對應至 [全部指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
 |http://*:80|若為對應至 [全未指派] 的應用程式端點，便接收尚未由其他應用程式接收的要求。|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36132603"
 |應用程式|URL 保留項目|描述|要求接收|  
 |-----------------|---------------------|-----------------|---------------------|  
 |報表伺服器|http://+:80/ReportServer|通訊埠 80 的強式萬用字元，以及報表伺服器虛擬目錄。|在通訊埠 80 上接收指定報表伺服器虛擬目錄的所有要求。 報表伺服器 Web 服務會接收 http://\<電腦名稱>/reportserver 的所有要求。|  
-|報表管理員|http://+:80/Reports|通訊埠 80 的強式萬用字元，以及 Reports 虛擬目錄。|在通訊埠 80 上接收指定 Reports 虛擬目錄的所有要求。 報表管理員接收的所有要求 http://\<電腦名稱 > /。|  
+|報表管理員|http://+:80/Reports|通訊埠 80 的強式萬用字元，以及 Reports 虛擬目錄。|在通訊埠 80 上接收指定 Reports 虛擬目錄的所有要求。 報表管理員會接收 http:// 的所有要求\<電腦名稱 > / 報告。|  
 |IIS|http://*:80/|通訊埠 80 的弱式萬用字元。|在通訊埠 80 上接收其他應用程式未接收的任何其餘要求。|  
   
 ## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>在 IIS 6.0、7.0、8.0、8.5 上並存部署 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 與 SQL Server 2005 Reporting Services  
@@ -69,9 +69,9 @@ ms.locfileid: "36132603"
   
 -   指派至通訊埠 80 以及名為 "Reports" 之虛擬目錄的 IIS 網站。  
   
--   A[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]報表伺服器執行個體安裝在預設組態中，其中 URL 保留項目也指定了通訊埠 80 而報表管理員應用程式也將"Reports"用於虛擬目錄名稱。  
+-   A[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]安裝在預設組態中，其中 URL 保留項目也指定了連接埠 80 而報表管理員應用程式也將"Reports"用於虛擬目錄名稱的報表伺服器執行個體。  
   
- 指定這個設定，要求傳送至 http://\<電腦名稱 >: 80/reports 收到由報表管理員。 安裝了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器執行個體之後，透過 IIS 中 Reports 虛擬目錄存取的應用程式將不會再接收要求。  
+ 指定此組態中，要求傳送至 http://\<電腦名稱 >: 80/reports 將會收到由報表管理員。 安裝了 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 報表伺服器執行個體之後，透過 IIS 中 Reports 虛擬目錄存取的應用程式將不會再接收要求。  
   
  如果您要執行舊版與新版 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]的並存部署，可能會遇到上述路由傳送的問題。 這是因為所有 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 版本都會使用 "ReportServer" 和 "Reports" 當做報表伺服器與報表管理員應用程式的虛擬目錄名稱，因而增加您在 IIS 中設有 "reports" 和 "reportserver" 虛擬目錄的可能性。  
   

@@ -1,5 +1,5 @@
 ---
-title: 無法載入檔案或組件&#39;Microsoft.Data.Services，Version = 3.5.0.0，Culture = neutral，PublicKeyToken = b77a5c561934e089&#39;或其中一個相依性。 系統找不到指定的檔案。 | Microsoft Docs
+title: 無法載入檔案或組件&#39;Microsoft.Data.Services，version=3.5.0.0，Culture = neutral，publickeytoken=b77a5c561934e089&#39;或其中一個相依性。 系統找不到指定的檔案。 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0330867bb1ffc9d7715d285b6c2c4c5143fb40c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 63c549d310d283743d17632b814b4a621eee0286
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133346"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226388"
 ---
-# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>無法載入檔案或組件&#39;Microsoft.Data.Services，Version = 3.5.0.0，Culture = neutral，PublicKeyToken = b77a5c561934e089&#39;或其中一個相依性。 系統找不到指定的檔案。
+# <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>無法載入檔案或組件&#39;Microsoft.Data.Services，version=3.5.0.0，Culture = neutral，publickeytoken=b77a5c561934e089&#39;或其中一個相依性。 系統找不到指定的檔案。
   在擁有 PowerPivot for SharePoint 的 SharePoint 2010 環境中，如果您嘗試匯出資料摘要而且系統遺漏必要的 Microsoft ADO.NET Data Services 版本，將會發生這個錯誤。  
   
 ## <a name="details"></a>詳細資料  

@@ -1,5 +1,5 @@
 ---
-title: 網路內容 |Microsoft 文件
+title: 網路內容 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - LingerTimeout property
 - EnableNagleAlgorithm property
@@ -36,15 +36,15 @@ helpviewer_keywords:
 - network properties [Analysis Services]
 ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a90b32cce5dabf247c60acf4e33aac07668175a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39758cb4875d6841c9900e2d0ebc8b145688f7d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134698"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204078"
 ---
 # <a name="network-properties"></a>網路屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
@@ -59,7 +59,7 @@ ms.locfileid: "36134698"
  `IPV4Support`  
  此為帶正負號的 32 位元整數屬性，定義 IPv4 通訊協定的支援。 此屬性的值為下表列出的值之一：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*0*|IPv4 已停用；用戶端無法連接。|  
 |*1*|(預設值) 需要有 IPv4；如果伺服器無法接聽 IPv4 將無法啟動。|  
@@ -68,7 +68,7 @@ ms.locfileid: "36134698"
  `IPV6Support`  
  此為帶正負號的 32 位元整數屬性，定義 IPv6 通訊協定的支援。 此屬性的值為下表列出的值之一：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*0*|IPv6 已停用；用戶端無法連接。|  
 |*1*|(預設值) 需要有 IPv6；如果伺服器無法接聽 IPv6 將無法啟動。|  

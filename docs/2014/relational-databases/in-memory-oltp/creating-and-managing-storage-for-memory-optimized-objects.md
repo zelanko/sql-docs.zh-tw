@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 caps.latest.revision: 61
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b619d8e97c18d002c5e5588305e4889234db49c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 324143732c9ae7830e1fb588cb0793795acb6f5f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285234"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>建立及管理記憶體最佳化物件的儲存體
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎已整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，讓您在同一資料庫中可擁有記憶體最佳化資料表和 (傳統) 磁碟資料表。 不過，記憶體最佳化資料表的儲存體結構和磁碟資料表不同。  
@@ -36,7 +36,7 @@ ms.locfileid: "36135383"
   
  記憶體最佳化資料表的儲存體有下列索引鍵屬性︰  
   
--   所有記憶體最佳化資料表會都對應到記憶體最佳化檔案群組。 這個檔案群組是建置使用的 filestream 檔案群組。  
+-   所有記憶體最佳化資料表會都對應到記憶體最佳化檔案群組。 這個檔案群組是建置使用 filestream 檔案群組。  
   
 -   沒有頁面，且資料以資料列保存。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36135383"
   
 -   和磁碟資料表不同，記憶體最佳化資料表的儲存體不壓縮。 將壓縮的 (資料列或頁面) 磁碟資料表移轉至記憶體最佳化資料表時，您必須考量大小的變更。  
   
--   記憶體最佳化資料表可以是耐久的，也可以是非耐久的。 您只需要設定的持久性記憶體最佳化資料表的儲存體。  
+-   記憶體最佳化資料表可以是耐久的，也可以是非耐久的。 您只需要設定儲存體的持久性記憶體最佳化資料表。  
   
  本節將描述檢查點檔案組，以及有關記憶體最佳化資料表中資料的儲存方式等其他方面。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36135383"
   
 -   [比較以磁碟為基礎的資料表儲存體和記憶體最佳化資料表儲存體](comparing-disk-based-table-storage-to-memory-optimized-table-storage.md)  
   
--   [合併資料和差異檔案組的監視和疑難排解](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
+-   [針對資料檔案和差異檔案組的合併進行監視和疑難排解](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp-in-memory-optimization.md)  
