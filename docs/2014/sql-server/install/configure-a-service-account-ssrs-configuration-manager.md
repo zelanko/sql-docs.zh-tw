@@ -1,5 +1,5 @@
 ---
-title: 設定服務帳戶 （SSRS 組態管理員） |Microsoft 文件
+title: 設定服務帳戶 （SSRS 組態管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Server Web service, accounts
 - service accounts [Reporting Services]
@@ -18,18 +18,18 @@ ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 2f680cf4f291bed7a82bb3b7aadd0e8c1871ef17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a8f16a73e32557345086a3363e619e56891f1c65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234488"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>設定服務帳戶 (SSRS 組態管理員)
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 安裝中，報表伺服器 Web 服務、報表管理員和背景處理應用程式會在單一服務中執行。 當您在 [服務識別] 頁面中指定此服務執行所用的帳戶時，安裝期間會定義此帳戶，但是如果您想要使用不同的帳戶或更新密碼，可以使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具。  
   
- 如果您擁有設定為使用 SharePoint 整合模式的報表伺服器，您可以變更服務帳戶使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具，您也必須開啟 SharePoint 管理中心並且使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **授與資料庫存取權**頁面，即可重新套用報表伺服器和執行個體設定。 此步驟中將新服務帳戶存取權授與 SharePoint 資料庫中，所需的整合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]與[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]。  
+ 如果您擁有已設定為使用 SharePoint 整合模式報表伺服器，然後使用變更服務帳戶[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]組態工具中，您也必須開啟 SharePoint 管理中心並且使用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **授與資料庫存取權**頁面來重新套用報表伺服器和執行個體設定。 此步驟中將新服務帳戶存取權授與 SharePoint 資料庫中，所需的整合[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]具有[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]或[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]。  
   
  一定要使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態工具來更新此服務帳戶，好讓與此服務識別相依的其他設定可以並行更新。  
   

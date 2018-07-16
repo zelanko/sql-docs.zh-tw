@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d2a8117e33d89d67b9e47ee7f702f742cc81adc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b995a084331ac2b2c2de452f4951b7aeed8f3700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144928"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309878"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server 的 SQL Statistics 物件
   **的** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件會提供計數器，可用來監視編譯以及傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的要求類型。 監視查詢編譯和重新編譯的次數，以及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體所收到的批次數目，可讓您了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理使用者查詢的速度，以及查詢最佳化工具處理查詢的效率。  

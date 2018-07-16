@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.customize.toolbars
 - sql12.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 35a0c7170cd94d17f7d080517472e9cbaa2571a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6cb0c2cd4f715c947e11b5ae68d8d7ea9f7618a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136325"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290074"
 ---
 # <a name="customize-toolbars-page"></a>自訂 (工具列頁面)
   [工具列] 索引標籤可以讓您建立、重新命名、移除和重設工具列。 您可以在 [工具] 功能表上按一下 [自訂]，然後按一下 [工具列] 來存取此索引標籤。  

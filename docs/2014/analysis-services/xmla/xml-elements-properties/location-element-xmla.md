@@ -1,5 +1,5 @@
 ---
-title: Location 元素 (XMLA) |Microsoft 文件
+title: Location 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 51b0838b9843658b4081f9464c63274631ed74be
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6674d88797e738c4120a7cafae3d12a71e52e36f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137155"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295388"
 ---
 # <a name="location-element-xmla"></a>Location 元素 (XMLA)
-  包含遠端伺服器的父代資訊[備份](../xml-elements-commands/backup-element-xmla.md)，[還原](../xml-elements-commands/restore-element-xmla.md)，或[Synchronize](../xml-elements-commands/synchronize-element-xmla.md)命令。  
+  包含父代的遠端伺服器相關資訊[備份](../xml-elements-commands/backup-element-xmla.md)，[還原](../xml-elements-commands/restore-element-xmla.md)，或[同步處理](../xml-elements-commands/synchronize-element-xmla.md)命令。  
   
 ## <a name="syntax"></a>語法  
   
@@ -85,13 +85,13 @@ ms.locfileid: "36137155"
 |[同步處理](../xml-elements-commands/synchronize-element-xmla.md)|[ConnectionString](connectionstring-element-xmla.md)， [DataSourceID](datasourceid-element-xmla.md)， [DataSourceType](type-element-xmla.md)，[資料夾](folders-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- 如`Backup`命令，`Location`項目會提供建立的遠端執行個體的遠端備份檔案的相關資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+ 針對`Backup`命令，`Location`項目會提供建立的遠端執行個體的遠端備份檔案的相關資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
  若為 `Restore` 命令，`Location` 元素會提供識別和連接至 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 遠端執行個體的相關資訊，以及用來在該遠端執行個體上還原遠端資料分割的遠端備份檔案。  
   
  若為 `Synchronize` 命令，`Location` 元素會描述要由目標執行個體使用的資料來源或必須與目標執行個體同步處理之來源執行個體上定義的遠端執行個體，端視 `DataSourceType` 父命令之 `Synchronize` 元素的值而定。  
   
- 如需有關備份和還原遠端執行個體的詳細資訊，請參閱[備份和還原物件 (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
+ 如需有關備份和還原遠端執行個體的詳細資訊，請參閱 <<c0> [ 備份和還原物件 (XMLA)](../../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [BackupRemotePartitions 元素&#40;XMLA&#41;](backupremotepartitions-element-xmla.md)   

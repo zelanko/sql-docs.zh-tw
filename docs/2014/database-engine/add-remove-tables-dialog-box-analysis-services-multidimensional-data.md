@@ -1,5 +1,5 @@
 ---
-title: 新增或移除資料表對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 新增或移除資料表對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.addremoveobjects.f1
 helpviewer_keywords:
 - Add/Remove Tables dialog box
 ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 69e54f8696aa69d35fca6bb00d160520107411cb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 702d07b93463671335b67f9672f5fff8dcb28c9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235668"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>新增或移除資料表對話方塊 (Analysis Services-多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [加入/移除資料表] 對話方塊，即可將資料來源中的資料表加入資料來源檢視，或者從資料來源檢視移除資料來源中的資料表。 您可依下列方式顯示 [加入/移除資料表] 對話方塊：  
@@ -52,11 +52,11 @@ ms.locfileid: "36037534"
   
  按一下 [<<] 即可將 [包含的物件] 中列出的所有物件傳送到 [可用的物件]，或選取一個或多個物件，然後按一下 [<] 即可將選取的物件傳送至 [可用的物件]。  
   
- **新增相關的資料表**  
+ **加入相關的資料表**  
  按一下即可將與選取之資料表相關的所有資料表加入 [包含的物件]。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [資料來源檢視設計師&#40;Analysis Services-多維度資料&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [資料來源檢視設計工具&#40;Analysis Services-多維度資料&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

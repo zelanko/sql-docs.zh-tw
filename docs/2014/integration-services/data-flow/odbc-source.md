@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b9b3ee40399f6fa3507e27e3d6cb98b63627dcb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 53633e4f963b9d816487721b79388b8236281010
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145892"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297058"
 ---
 # <a name="odbc-source"></a>ODBC 來源
   ODBC 來源會使用資料庫資料表、檢視或 SQL 陳述式，從 ODBC 支援的資料庫中擷取資料。  
@@ -74,7 +74,7 @@ ms.locfileid: "36145892"
   
  如需詳細資訊，請參閱下列其中一個主題：  
   
--   [ODBC 來源編輯器&#40;連接管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 來源編輯器&#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)  
   
 -   [ODBC 來源編輯器&#40;資料行頁面&#41;](../odbc-source-editor-columns-page.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36145892"
   
 -   [ODBC 來源編輯器&#40;資料行頁面&#41;](../odbc-source-editor-columns-page.md)  
   
--   [ODBC 來源編輯器&#40;連接管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 來源編輯器&#40;連線管理員頁面&#41;](../odbc-source-editor-connection-manager-page.md)  
   
 -   [使用 ODBC 來源來擷取資料](odbc-source.md)  
   

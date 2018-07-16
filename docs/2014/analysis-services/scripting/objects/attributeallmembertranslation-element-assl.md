@@ -1,5 +1,5 @@
 ---
-title: AttributeAllMemberTranslation 元素 (ASSL) |Microsoft 文件
+title: AttributeAllMemberTranslation 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberTranslation element
 ms.assetid: 4b0c61dd-6666-4bf4-9b23-c9d8e315c414
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a93f67722e16034d256f4af16c582ef986b4b521
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d70f1420c0324cf1f1a2b3bb06fb68394268071
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145045"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314688"
 ---
 # <a name="attributeallmembertranslation-element-assl"></a>AttributeAllMemberTranslation 元素 (ASSL)
   包含標題的翻譯`All`隸屬[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)項目。  

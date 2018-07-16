@@ -1,5 +1,5 @@
 ---
-title: 繫結元素 (XMLA) |Microsoft 文件
+title: Bindings 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Bindings element
 ms.assetid: caa34cab-f61f-4f39-b800-af1601714daa
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: c630f6f5992c528ee89099c44d2ea69a9e352f5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 2ee02beeb04987680cf9cf516bc6f25e66287b7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302688"
 ---
 # <a name="bindings-element-xmla"></a>Bindings 元素 (XMLA)
-  包含集合[繫結](binding-element-xmla.md)父元素之[批次](../xml-elements-commands/batch-element-xmla.md)或[程序](../xml-elements-commands/process-element-xmla.md)項目。  
+  包含的集合[繫結](binding-element-xmla.md)父元素之[批次](../xml-elements-commands/batch-element-xmla.md)或是[程序](../xml-elements-commands/process-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   

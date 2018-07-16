@@ -5,10 +5,9 @@ ms.date: 10/14/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 f1_keywords:
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 caps.latest.revision: 63
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4f4be5133cc17aef8c24bea72c214039debffb34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: f45a4c892af973850161733508cd9ab43eb7e772
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331468"
 ---
 # <a name="permissions-database-engine"></a>權限 (Database Engine)
   每個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安全性實體都具有可授與主體的關聯權限。 此主題提供下列資訊：  
@@ -122,7 +121,7 @@ ms.locfileid: "36032769"
 > [!CAUTION]  
 >  在安裝時為系統物件授與的預設權限，經過仔細評估可能面臨的威脅，因此在強化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的過程中無須改變。 系統物件的任何權限變更，都可能會限制或破壞其功效，而可能會讓您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝處於不支援的狀態。  
   
-##  <a name="_permissions"></a> SQL Server 和 SQL 資料庫權限  
+##  <a name="_permissions"></a> SQL Server 和 SQL Database 權限  
  下表提供完整的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限清單。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 權限僅供支援的基底安全性實體之用。 無法在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]中授與伺服器層級權限，不過，在某些情況下，會改為提供資料庫權限。  
   
 |基底安全性實體|基底安全性實體上更細微的權限|權限類型代碼|包含基底安全性實體的安全性實體|容器安全性實體上隱含基底安全性實體之小權限的權限|  

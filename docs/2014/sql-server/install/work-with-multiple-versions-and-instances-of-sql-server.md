@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - concurrent installations [SQL Server]
 - versions [SQL Server], multiple
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - editions [SQL Server], side-by-side installations
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 caps.latest.revision: 63
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: abff13ee6139d74dbe0da10d37ff318d10b47f6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 920e7295d56f3b7bfadf91a9532f638911535d44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246368"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>使用 SQL Server 的多個版本和執行個體
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援同一部電腦上的多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體。 您也可以升級舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或在已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 舊版的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如需支援的升級案例，請參閱 [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)。  
@@ -74,7 +74,7 @@ ms.locfileid: "36146426"
   
  範例：Microsoft Sync Framework、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact。  
   
- 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 安裝，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。 如需如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 的詳細資訊，請參閱[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
+ 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact 安裝，請參閱 <<c2> [ 從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。</c2> 如需如何解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 的詳細資訊，請參閱[解除安裝現有的 SQL Server 執行個體 &#40;安裝程式&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)。  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-side-by-side-with-previous-versions-of-includessnoversionincludesssnoversion-mdmd"></a>並存使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  您可以在已執行舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的電腦上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 如果預設執行個體已存在於電腦上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須安裝成具名執行個體。  
@@ -82,7 +82,7 @@ ms.locfileid: "36146426"
 > [!CAUTION]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep 不支援在同一部電腦上並存安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的備妥執行個體和舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。 例如，您無法在並存準備 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體和備妥的 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]執行個體。 不過，您可以在同一部電腦上合併安裝屬於相同主要版本之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的多個備妥執行個體。 如需詳細資訊，請參閱＜ [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)＞。  
 >   
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法在執行 Windows Server 2008 R2 Server Core SP1 的電腦上，與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並存安裝。 如需 Server Core 安裝的詳細資訊，請參閱[在 Server Core 上安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法在執行 Windows Server 2008 R2 Server Core SP1 的電腦上，與舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並存安裝。 如需有關 Server Core 安裝的詳細資訊，請參閱[在 Server Core 上安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
  下表顯示對 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的並存支援：  
   
@@ -95,10 +95,10 @@ ms.locfileid: "36146426"
  當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體與 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的獨立執行個體並行安裝時，務必避免 IP 位址發生 TCP 通訊埠編號衝突。 通常兩個 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體同樣設定為使用預設 TCP 通訊埠 (1433) 時，就會發生衝突。 為避免發生衝突，請將其中一個執行個體設定為使用非預設固定通訊埠。 在獨立執行個體上設定固定通訊埠通常最為簡單。 將 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用不同的通訊埠，通常就能防止發生非預期的 IP 位址/TCP 通訊埠衝突，以免造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體失敗而移轉至待命節點時，執行個體無法啟動。  
   
 ## <a name="see-also"></a>另請參閱  
- [硬體 and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
+ [硬體和 Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [從安裝精靈安裝 SQL Server 2014&#40;安裝程式&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [支援的版本與版本升級](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [升級為 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
+ [升級到 SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [SQL Server 2014 各版本所支援的功能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [回溯相容性](../../../2014/getting-started/backward-compatibility.md)   
  [使用 Upgrade Advisor 來準備升級](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)  

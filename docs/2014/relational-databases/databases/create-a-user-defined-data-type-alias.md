@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.userdefineddatatype.general.f1
 - sql12.swb.new.datatype.properties.general.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5d39ce0a1b6d5672ea574f79ef6427ff0d633072
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8b3fdf094f1db50860d0f4e29d17463ba1092a9a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037246"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264824"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>建立使用者定義資料類型別名
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立新的使用者定義資料類型別名。  
@@ -75,7 +75,7 @@ ms.locfileid: "36037246"
      `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 資料類型不會顯示長度。  
   
      **名稱**  
-     如果您正在建立新的使用者定義資料類型別名，請輸入跨資料庫使用以代表使用者定義資料類型的唯一名稱。 最大字元數必須符合的`sysname`資料型別。 無法編輯現有的使用者定義資料類型別名的名稱。  
+     如果您正在建立新的使用者定義資料類型別名，請輸入跨資料庫使用以代表使用者定義資料類型的唯一名稱。 最大字元數必須符合系統`sysname`資料型別。 無法編輯現有的使用者定義資料類型別名的名稱。  
   
      **規則**  
      選擇性地選取繫結到使用者定義資料類型別名的規則。  
@@ -96,7 +96,7 @@ ms.locfileid: "36037246"
     |20 – 28|13|  
     |29 – 38|17|  
   
-     如`nchar`和`nvarchar`資料型別，這個儲存體值一律是值的兩倍**長度**。  
+     針對`nchar`並`nvarchar`資料類型，儲存體值一律是值的兩倍**長度**。  
   
      `nvarchar(max)`、`varchar(max)` 或 `varbinary(max)` 資料類型不會顯示儲存體。  
   

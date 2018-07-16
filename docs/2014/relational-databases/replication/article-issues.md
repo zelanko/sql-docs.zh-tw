@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newpubwizard.articleissues.f1
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8e943437d555d7a0910a1b0657ca0f27368202f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ddd050608557d8a721ad986ea5aa5b1eef5dee66
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144707"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305558"
 ---
 # <a name="article-issues"></a>發行項的問題
   **[發行項的問題]** 頁面會列出已經發現的發行項狀況，以及這些狀況之結果所需的任何變更。 下表列出可能的問題與確保複寫和現有的應用程式正常運作所需的動作。  

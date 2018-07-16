@@ -1,5 +1,5 @@
 ---
-title: 表格式模型資料存取 |Microsoft 文件
+title: 表格式模型資料存取 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 47494073312225884997c2ca89ccfd84ed6968c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e5a92c5f71f670fe8e592087a8826217a0fd6c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316978"
 ---
 # <a name="tabular-model-data-access"></a>表格式模型資料存取
   Analysis Services 中的表格式模型資料庫可由您用來擷取多維度模型中之資料或中繼資料的大部分相同用戶端、介面和語言所存取。 如需詳細資訊，請參閱[多維度模型資料存取 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "36131810"
  Excel 也是在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中瀏覽表格式模型的建議應用程式。 這個工具包含 [在 Excel 中進行分析] 選項，此選項可啟動新的 Excel 執行個體、建立 Excel 活頁簿，並開啟活頁簿與模型工作空間資料庫之間的資料連接。 在 Excel 中瀏覽表格式模型資料時，請注意 Excel 會使用 Excel 樞紐分析表用戶端，針對模型發出查詢。 因此，Excel 活頁簿中的作業會導致 MDX 查詢傳送給工作空間資料庫，而不是 DAX 查詢。 如果您要使用 SQL Profiler 或其他監視工具來監視查詢，您預期可以在 Profiler 追蹤內看到 MDX 而非 DAX。 如需 [在 Excel 中進行分析] 功能的詳細資訊，請參閱[在 Excel 中進行分析 &#40;SSAS 表格式&#41;](analyze-in-excel-ssas-tabular.md)。  
   
 ### <a name="power-view"></a>Power View  
- [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是一個在 SharePoint 2010 環境下執行的 Reporting Services 報告用戶端應用程式。 它可將資料瀏覽、查詢設計和簡報配置結合成整合式的隨選報表體驗。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 可以使用表格式模型當做資料來源，不論此模型是否裝載於以表格式模式執行的 Analysis Services 執行個體上，或者是否使用 DirectQuery 模式從關聯式資料存放區擷取模型資料。 若要連接至 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中的表格式模型，您必須建立一個包含伺服器位置和資料庫名稱的連接檔案。 您可以在 SharePoint 中建立 Reporting Services 共用資料來源或 BI 語意模型連接檔案。 如需有關 BI 語意模型連接的詳細資訊，請參閱[PowerPivot BI 語意模型連接&#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)。  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 是一個在 SharePoint 2010 環境下執行的 Reporting Services 報告用戶端應用程式。 它可將資料瀏覽、查詢設計和簡報配置結合成整合式的隨選報表體驗。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 可以使用表格式模型當做資料來源，不論此模型是否裝載於以表格式模式執行的 Analysis Services 執行個體上，或者是否使用 DirectQuery 模式從關聯式資料存放區擷取模型資料。 若要連接至 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]中的表格式模型，您必須建立一個包含伺服器位置和資料庫名稱的連接檔案。 您可以在 SharePoint 中建立 Reporting Services 共用資料來源或 BI 語意模型連接檔案。 如需有關 BI 語意模型連接的詳細資訊，請參閱 < [PowerPivot BI 語意模型連接&#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)。  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 用戶端會藉由傳送要求給指定的資料來源來判斷指定之模型的結構，該資料來源會傳回可由用戶端使用的結構描述，以便針對資料來源形式的模型建立查詢，並執行以資料為根據的作業。 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 使用者介面中用來篩選資料、執行計算或彙總及顯示相關資料的後續作業是由用戶端所控制，而且無法以程式設計方式操作。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "36131810"
   
 -   Codeplex 上的表格式模型 AMO 範例  
   
--   [使用動態管理檢視&#40;Dmv&#41;監視 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [使用動態管理檢視&#40;Dmv&#41;若要監視 Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  您可以在 Unmanaged 用戶端應用程式中使用 Analysis Services 9.0 OLE DB 提供者支援 OLE DB 存取表格式模型。 需要更新版本的 Analysis Services OLE DB 提供者來啟用表格式模型存取。 如需與表格式模型搭配使用之提供者的詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36131810"
   
 -   CodePlex 上的 AdventureWorks 範例  
   
- 您可以使用 PowerShell 來管理及監視 Analysis Services 的執行個體，以及用來建立和監視表格式模型存取所使用的安全性。 如需詳細資訊，請參閱[Analysis Services PowerShell](../analysis-services-powershell.md)。  
+ 您可以使用 PowerShell 來管理及監視 Analysis Services 的執行個體，以及用來建立和監視表格式模型存取所使用的安全性。 如需詳細資訊，請參閱 < [Analysis Services PowerShell](../analysis-services-powershell.md)。  
   
 ### <a name="schema-rowsets"></a>結構描述資料列集  
  用戶端應用程式可以使用結構描述資料列集來檢查表格式模型的中繼資料，並從 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器擷取支援和監視資訊。 在這個版本的 SQL Server 中，已加入新的結構描述資料列集，並擴充現有的結構描述資料列集來支援與表格式模型有關的功能及增強 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的監視和效能分析。  
@@ -119,7 +119,7 @@ ms.locfileid: "36131810"
   
 -   [DISCOVER_XEVENT_TRACE_DEFINITION 資料列集](../dev-guide/discover-xevent-trace-definition-rowset.md)  
   
-     為了監視 SQL Server 擴充事件的新結構描述資料列集 如需詳細資訊，請參閱[使用 SQL Server 擴充事件&#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。  
+     為了監視 SQL Server 擴充事件的新結構描述資料列集 如需詳細資訊，請參閱 <<c0> [ 使用 SQL Server 擴充事件&#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)。</c0>  
   
 -   [DISCOVER_TRACES 資料列集](../schema-rowsets/xml/discover-traces-rowset.md)  
   
@@ -127,7 +127,7 @@ ms.locfileid: "36131810"
   
 -   [MDSCHEMA_HIERARCHIES 資料列集](../schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset.md)  
   
-     新`STRUCTURE_TYPE`列舉型別支援表格式模型中建立使用者定義階層的識別碼。 如需詳細資訊，請參閱[階層 &#40;SSAS 表格式&#41;](hierarchies-ssas-tabular.md)。  
+     新`STRUCTURE_TYPE`列舉可支援表格式模型中建立的使用者定義階層的識別。 如需詳細資訊，請參閱[階層 &#40;SSAS 表格式&#41;](hierarchies-ssas-tabular.md)。  
   
  這個版本中的 OLE DB for Data Mining 結構描述資料列集沒有更新。  
   

@@ -1,5 +1,5 @@
 ---
-title: 定義指派和其他指令碼命令 |Microsoft 文件
+title: 定義指派和其他指令碼命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - empty scripts [Analysis Services]
 - calculations [Analysis Services], scripts
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - scripts [Analysis Services], calculations
 ms.assetid: f28b9b22-3dc7-4a45-b4eb-2d023f2c94b8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 41d9b2fc60563d62d475930e0904ec38128e7b75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2bcdd7fdf3a16224b3189cbeaaf5160518c26892
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136508"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297298"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>定義指派和其他指令碼命令
   在 [Cube 設計師] 的 [計算] 索引標籤上，按一下工具列上的**新增指令碼命令**圖示，來建立空的指令碼。 當您建立新的指令碼時，[計算] 索引標籤的 [指令碼組合管理] 窗格中，一開始會顯示空白的標題。您在 [計算運算式] 窗格中輸入的字元，會在 [指令碼組合管理] 中顯示為項目的名稱。 所以您可能想要在第一列輸入註解的名稱，以便更輕易地識別 [指令碼組合管理] 窗格中的指令碼。 如需詳細資訊，請參閱 [Introduction to MDX Scripting in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892) (Microsoft SQL Server 2005 的 MDX 指令碼簡介)。 如需 MDX 查詢和計算相關效能問題的詳細資訊，請參閱 [SQL Server 2005 Analysis Services Performance Guide](http://go.microsoft.com/fwlink/?LinkId=81621) (SQL Server 2005 Analysis Services 效能指南) 的 “Writing Efficient MDX” (＜撰寫有效率的 MDX＞) 一節。  

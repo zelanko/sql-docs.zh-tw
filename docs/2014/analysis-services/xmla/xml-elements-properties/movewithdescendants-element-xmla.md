@@ -1,5 +1,5 @@
 ---
-title: MoveWithDescendants 元素 (XMLA) |Microsoft 文件
+title: MoveWithDescendants 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - MoveWithDescendants element
 ms.assetid: d02285b6-1801-4da9-8e2b-9ab008e25558
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 975044359f2855f8cced46ca2045c2c397e4234b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b75fffd4d923b7593f403ae2268b980a5ab6de6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332568"
 ---
 # <a name="movewithdescendants-element-xmla"></a>MoveWithDescendants 元素 (XMLA)
   指出是否屬性成員的下階也會更新它的父系[更新](../xml-elements-commands/update-element-xmla.md)命令。  
@@ -64,12 +64,12 @@ ms.locfileid: "36036633"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `MoveWithDescendants`元素會決定是否`Update`命令應該不僅更新所識別的屬性成員[屬性](attributes-element-xmla.md)項目，但是，這些屬性成員的下階要一併更新。  
+ `MoveWithDescendants`元素會決定是否`Update`命令應該不僅更新所識別的屬性成員[屬性](attributes-element-xmla.md)項目，但是，這些屬性成員的子系是一併更新。  
   
 > [!NOTE]  
 >  這個元素只會套用至父子式階層中的屬性成員。  
   
- 如需有關更新成員的詳細資訊，請參閱[插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。  
+ 如需有關更新成員的詳細資訊，請參閱 <<c0> [ 插入、 更新和卸除成員&#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  

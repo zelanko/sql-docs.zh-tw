@@ -1,14 +1,13 @@
 ---
-title: 預估角色切換 （資料庫鏡像） 期間的服務中斷時間 |Microsoft 文件
+title: 預估角色切換 （資料庫鏡像） 期間的服務中斷時間 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - parallel redo [SQL Server]
 - role switching [SQL Server]
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], failover
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7a5b43fd5b09963d2fac9535260d7ba411953e42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 25710791fa7585ff2cab8166fad646bd83554816
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145907"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250648"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>預估角色切換期間的服務中斷時間 (資料庫鏡像)
   在角色切換期間，資料庫鏡像無法服務的時間量視角色切換類型和角色切換原因而定。  

@@ -1,5 +1,5 @@
 ---
-title: 部署和版本支援在 SQL Server Data Tools (SSRS) |Microsoft 文件
+title: 部署和版本支援在 SQL Server Data Tools (SSRS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d52ae21eb9313bbb58d04305c9dd79eb41551290
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 856834aa8c29ebaba0661012383d52ad30e3ad59
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313229"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server 資料工具中的部署和版本支援 (SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 支援以下案例：  
@@ -69,7 +69,7 @@ ms.locfileid: "36135104"
 |報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|2012 RDL 結構描述|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|2008 R2 RDL 結構描述|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|2008 RDL 結構描述|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器|在本機將 2003 RDL 和 2005 RDL 升級到 2008 RDL 結構描述。|  
-|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|2005 RDL 結構描述|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器||  
+|報表伺服器專案<br /><br /> 中的多個<br /><br /> 報表伺服器精靈專案|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|2005 RDL 結構描述|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 或是[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]報表伺服器||  
 |報表伺服器專案|[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|2003 RDL 結構描述|不支援||  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] RDLC 報表設計師|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|2005 RDL 結構描述|不支援|不支援 2008 RDL 結構描述。|  
 |[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 檢視器控制項|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2005<br /><br /> [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008|本機模式中不支援 2008 RDL|不適用|可以在伺服器模式下於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上檢視 2008 RDL 報表。|  

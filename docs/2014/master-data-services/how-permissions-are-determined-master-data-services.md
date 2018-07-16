@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Master Data Services], determining permissions
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 49929fedf5b7d1e44a300919f2c9d903efca5bc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: cd396e077ba63369d256c39ba104427f595f4df4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033657"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324398"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>如何決定權限 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，若要以最簡單的方式來設定安全性，可將模型物件權限指派給群組 (使用者為其中的成員)。  
@@ -48,9 +48,9 @@ ms.locfileid: "36033657"
   
 -   隱含拒絕與實體位於相同層級的任何物件。  
   
--   位於較高層級的任何物件會獲得導覽存取權。 如需有關導覽存取權的詳細資訊，請參閱[導覽存取權&#40;Master Data Services&#41;](navigational-access-master-data-services.md)。  
+-   位於較高層級的任何物件會獲得導覽存取權。 如需有關導覽存取權的詳細資訊，請參閱 <<c0> [ 導覽存取權&#40;Master Data Services&#41;](navigational-access-master-data-services.md)。</c0>  
   
- 在此範例中，**唯讀**權限指派給實體，而且其屬性，位於模型結構中較低層級會繼承該權限。 模型會提供導覽存取權給此實體及其屬性。 模型中的其他實體沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此實體。  
+ 在此範例中，**唯讀**權限指派給實體和其屬性，位於模型結構中較低層級會繼承該權限。 模型會提供導覽存取權給此實體及其屬性。 模型中的其他實體沒有被指派任何明確權限，而且沒有繼承任何權限，因此會隱含拒絕此實體。  
   
  ![mds_conc_inheritance_model](../../2014/master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.aboutsqlserverworkbench.f1
 helpviewer_keywords:
 - SQL Server Management Studio dialog box
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6bd51e6102e6e65687c0fd55640fd2a2839a6fa0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 13882e276ab5c963da665cbcf1f1a70148a0bd4e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317448"
 ---
 # <a name="about-sql-server-management-studio"></a>關於 SQL Server Management Studio
   使用此對話方塊來檢視或複製有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 的安裝資訊。 評估版本會列出產品過期的剩餘天數。  

@@ -1,5 +1,5 @@
 ---
-title: 停止 SQL Server 2014 中的 SQL Server 功能 |Microsoft 文件
+title: 已停止的 SQL Server 2014 中的 SQL Server 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0678bfbc-5d3f-44f4-89c0-13e8e52404da
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b842b9a3a98dd69d04f76ce26ccc84d6ec008822
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 99223e87f7d4488783ad76b355f38249d51a82af
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322748"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>在 SQL Server 2014 中停止 SQL Server 的功能
   本主題描述升級至 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 之後無法再使用的功能。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中沒有已停止的功能。  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>不再提供的 Active Directory Helper 服務  
  已移除 Active Directory Helper 服務和相關元件。 下表列出因此一併移除的相關聯元件：  
@@ -39,7 +39,7 @@ ms.locfileid: "36030854"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>SQL Server 2008 R2 中停止的功能  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Reporting Services 中的 64 位元平台支援  
- 從開始[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]元件不再支援執行 Windows Server 2003 或 Windows Server 2003 R2 的 Itanium 型伺服器。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]繼續支援其他 64 位元的作業系統，包括以 Itanium 為基礎系統的 Windows Server 2008 Datacenter 或 Windows Server°2008°R2。 若要從 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 安裝升級為 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]，而此安裝所含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是在以 Itanium 為基礎系統版本 Windows Server 2003 或 Windows Server 2003 R2 上，則必須先升級作業系統。  
+ 從開始[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]，則[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]元件不再支援執行 Windows Server 2003 或 Windows Server 2003 R2 的 Itanium 型伺服器。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]繼續支援其他 64 位元的作業系統，包括以 Itanium 為基礎系統的 Windows Server 2008 Datacenter 或 Windows Server°2008°R2。 若要從 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 安裝升級為 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]，而此安裝所含 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 是在以 Itanium 為基礎系統版本 Windows Server 2003 或 Windows Server 2003 R2 上，則必須先升級作業系統。  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008 中停止的功能  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36030854"
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -EnableIntegrated Security 屬性|使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的屬性設定。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -「 排程事件和報表傳遞 」 與 「 Web 服務和 HTTP 存取 」|編輯 RSReportServer.config 組態檔。|  
 |命令列選項|這個版本不支援。|  
-|SOAP 和 [!INCLUDE[ssSB](../includes/sssb-md.md)] 端點|使用[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)和[ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql)。|  
+|SOAP 和 [!INCLUDE[ssSB](../includes/sssb-md.md)] 端點|使用[CREATE ENDPOINT](/sql/t-sql/statements/create-endpoint-transact-sql)並[ALTER ENDPOINT](/sql/t-sql/statements/alter-endpoint-transact-sql)。|  
   
 ### <a name="discontinued-command-prompt-parameters-for-sql-server-setup"></a>SQL Server 安裝程式中已停止的命令提示字元參數  
  下表將顯示 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的舊版 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 安裝程式命令提示字元參數。  
@@ -80,9 +80,9 @@ ms.locfileid: "36030854"
 |UPGRADE|/ACTION=Upgrade 和 /FEATURES|  
 |USESYSDB|這個版本中沒有對等項目。|  
   
- <sup>1</sup>這些參數是僅適用於安裝。  
+ <sup>1</sup>這些參數都有效，僅適用於安裝。  
   
- <sup>2</sup>起始[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]，指定 /Action = EditionUpgrade，若要升級的現有版本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]至不同版本的任何時間，而不需要使用原始安裝媒體。 如需有關支援之版本與版別升級的詳細資訊，請參閱＜ [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md)＞。  
+ <sup>2</sup>起始[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]，指定 /Action = EditionUpgrade，若要升級的現有版本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]至不同的版本而不使用原始安裝媒體的任何時間。 如需有關支援之版本與版別升級的詳細資訊，請參閱＜ [Supported Version and Edition Upgrades](../database-engine/install-windows/supported-version-and-edition-upgrades.md)＞。  
   
  如需詳細資訊，請參閱[從命令提示字元安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)。  
   

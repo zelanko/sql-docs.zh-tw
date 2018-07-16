@@ -1,5 +1,5 @@
 ---
-title: 將採礦模型加入結構 (Analysis Services-資料採礦) |Microsoft 文件
+title: 將採礦模型加入結構 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], creating
 - mining models [Analysis Services], creating
 - mining models [Analysis Services], modifying
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5252db242cba7fb9a1f3bca54289cdb7b3ee8870
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0813b466184123fea433ccf3467fdf14b5f58740
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030691"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330918"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>將採礦模型加入至結構 (Analysis Services - 資料採礦)
   採礦結構是為了支援多個採礦模型。 因此在您完成此精靈之後，您可以開啟此結構，並加入新的採礦模型。 每當您建立模型時，您都可以使用不同的演算法、變更參數，或是將篩選套用到不同的資料子集。  

@@ -1,5 +1,5 @@
 ---
-title: Translation 資料類型 (ASSL) |Microsoft 文件
+title: Translation 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Translation data type
 ms.assetid: d40039e1-3ff6-4e20-8d8b-5baf501f726f
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f5896ca8c96ce645a0782f17508392b5d0b7d7f2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96c0f9a1ea7d6e3a081230c43fc95d785b1cf449
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135482"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300878"
 ---
 # <a name="translation-data-type-assl"></a>Translation 資料類型 (ASSL)
   定義代表當地語系化翻譯的基本資料類型。  
@@ -58,11 +58,11 @@ ms.locfileid: "36135482"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)，[標題](../properties/caption-element-assl.md)，[描述](../properties/description-element-assl.md)， [DisplayFolder](../properties/displayfolder-element-assl.md)，[語言](../properties/language-element-assl.md)|  
+|子元素|[註釋](../collections/annotations-element-assl.md)，[標題](../properties/caption-element-assl.md)，[描述](../properties/description-element-assl.md)， [DisplayFolder](../properties/displayfolder-element-assl.md)，[語言](../properties/language-element-assl.md)|  
 |衍生的元素|[AllMemberTranslation](../objects/translation-element-assl.md)， [AttributeAllMemberTranslation](../objects/attributeallmembertranslation-element-assl.md)， [NamingTemplateTranslation](../objects/namingtemplatetranslation-element-assl.md)， [UnknownMemberTranslation](../objects/unknownmembertranslation-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Translation>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Translation>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

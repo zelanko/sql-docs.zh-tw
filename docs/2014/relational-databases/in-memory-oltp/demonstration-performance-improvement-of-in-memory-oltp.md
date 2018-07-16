@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 40bda40f2ed8114f77a28e8a7b0b382107cecdd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 171af425cfa479dcf9be3f555250de9a246daa1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146521"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248498"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>示範：記憶體中 OLTP 的效能改善
   此範例說明使用記憶體中 OLTP 時的效能改進，方法是比較對記憶體最佳化和傳統以磁碟為基礎的資料表執行相同的 Transact-SQL 查詢時，兩者的回應時間有何差異。 此外也會建立原生編譯的預存程序 (根據相同的查詢)，然後執行以示範您通常在使用原生編譯的預存程序來查詢記憶體最佳化資料表時，可獲得最佳的回應時間。 此範例僅顯示在記憶體最佳化資料表中存取資料時的其中一個效能改進層面；即執行插入時的資料存取效率。 此範例為單一執行緒且未利用記憶體中 OLTP 的並行優點。 工作負載若是使用並行作業，將會有更高幅度的效能提升。  
@@ -186,13 +186,13 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  預期的結果會提供實際的回應時間，顯示使用記憶體最佳化資料表和原生編譯的預存程序，為何通常在回應時間上都可優於針對傳統以磁碟為基礎的資料表執行相同的工作負載。  
   
 ## <a name="see-also"></a>另請參閱  
- [若要示範記憶體內部 OLTP 的 AdventureWorks 延伸模組](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [為了示範記憶體內部 OLTP 的 AdventureWorks 延伸模組](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp-in-memory-optimization.md)   
  [記憶體最佳化資料表](memory-optimized-tables.md)   
  [原生編譯的預存程序](natively-compiled-stored-procedures.md)   
  [使用記憶體最佳化資料表的需求](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE 檔案及檔案群組選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE 和記憶體最佳化資料表](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [CREATE PROCEDURE 和記憶體最佳化的資料表](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

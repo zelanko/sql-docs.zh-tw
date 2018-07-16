@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findresults1
 - findresultswindow
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Find Results Windows dialog box
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: cb713255228083fb18ff1e338b26ab8f90b06311
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0df41e184e2a1efe3b74d3feb541e7e0ce3bf43c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036331"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251760"
 ---
 # <a name="find-results-windows"></a>尋找結果視窗
   兩個尋找結果視窗使用 **[尋找和取代]** 對話方塊的 **[檔案中尋找]** 或 **[檔案中取代]** 索引標籤，顯示找到的相符結果。 **[檔案中尋找]** 和 **[檔案中取代]** 的 **[結果選項]** 命令允許您選擇 [尋找結果] 視窗，其中會列出所有找到的相符結果。  

@@ -5,25 +5,23 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-synonyms
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
-caps.latest.revision: 30
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e83afab22daea5314947baf3edbf5b786a58f991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8bfd08ba265fb901c6a8225b3df451c7b3617731
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036076"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284634"
 ---
 # <a name="synonyms-database-engine"></a>同義字 (Database Engine)
   同義字是具有下列用途的資料庫物件：  
@@ -116,7 +114,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  如需結構描述繫結函數的詳細資訊，請參閱[建立使用者定義函數 &#40;Database Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md)。  
   
 ## <a name="getting-information-about-synonyms"></a>取得同義字的相關資訊  
- Sys.synonyms 目錄檢視含有一個關於給定資料庫中各個同義字的項目。 此目錄檢視會公開同義字中繼資料，例如同義字的名稱與基底物件的名稱。 如需有關`sys.synonyms`目錄檢視，請參閱[sys.synonyms &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)。  
+ Sys.synonyms 目錄檢視含有一個關於給定資料庫中各個同義字的項目。 此目錄檢視會公開同義字中繼資料，例如同義字的名稱與基底物件的名稱。 如需詳細資訊`sys.synonyms`目錄檢視，請參閱 < [sys.synonyms &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql)。  
   
  透過擴充屬性的運用，您可以將描述性或指示性文字、輸入遮罩以及格式化規則新增為同義字的屬性。 由於屬性儲存在資料庫中，因此讀取屬性的所有應用程式都能夠以同樣的方式評估物件。 如需詳細資訊，請參閱 [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql)。  
   

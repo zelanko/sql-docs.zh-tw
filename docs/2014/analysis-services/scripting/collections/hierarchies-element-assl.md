@@ -1,5 +1,5 @@
 ---
-title: Hierarchies 元素 (ASSL) |Microsoft 文件
+title: Hierarchies 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Hierarchies element
 ms.assetid: dc844eea-869c-4217-b9be-e543a76f5e92
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a53cc41d7373bcd60268bd64247eea6caf56753a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fe89bade8e70b6812dddca1a6e20d274acea3526
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144616"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308458"
 ---
 # <a name="hierarchies-element-assl"></a>Hierarchies 元素 (ASSL)
-  包含集合[階層](../objects/hierarchy-element-assl.md)元素與父元素相關聯。  
+  包含的集合[階層](../objects/hierarchy-element-assl.md)元素與父元素相關聯。  
   
 ## <a name="syntax"></a>語法  
   

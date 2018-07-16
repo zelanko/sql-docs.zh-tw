@@ -1,5 +1,5 @@
 ---
-title: PartitionBinding 資料類型 (ASSL) |Microsoft 文件
+title: PartitionBinding 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PartitionBinding data type
 ms.assetid: 859d4b47-31c7-4678-9388-254fec484299
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4e265cd83401d480de74adf89949dd8edf73616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0c34bee83ab6a32fe10d00b6d3450412e12729dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281914"
 ---
 # <a name="partitionbinding-data-type-assl"></a>PartitionBinding 資料類型 (ASSL)
-  定義代表繫結的衍生的資料類型[分割](../objects/partition-element-assl.md)項目。  
+  定義代表繫結的衍生的資料類型[分割區](../objects/partition-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,9 +63,9 @@ ms.locfileid: "36037569"
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層架構的`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md)。  
+ 如需詳細資訊`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md)。  
   
- 如需 ASSL 中資料繫結的概觀，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需 ASSL 中資料繫結的概觀，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

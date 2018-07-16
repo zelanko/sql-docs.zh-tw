@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: 29
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 87dba93120a3779a35f7f445427dc48f228cd012
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 55a85b29827973522684820600f3a93b19c58200
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322318"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>設定拓撲 (點對點複寫)
   您可以使用 **[設定拓撲]** 頁面來執行一些常見的組態設定工作，例如加入新的節點、刪除節點，以及在現有節點之間加入新連接。 您在此精靈之 **[發行集]** 頁面上選取的節點會顯示在設計介面上。 若要指定組態選項，請以滑鼠右鍵按一下節點、連接或設計介面。  
@@ -36,8 +36,8 @@ ms.locfileid: "36144711"
 |-----------------------|-----------------|  
 |設計介面|顯示其他介面元素。 若要加入元素，請以滑鼠右鍵按一下設計介面。|  
 |![拓撲中的第一個節點](media/p2pwizard-firstnode.gif "拓撲中的第一個節點")|拓撲中的原始節點。 系統會使用原始節點的發行集資料庫副本來初始化新的節點。|  
-|![我們擁有完整的資訊之節點](media/p2pwizard-complete.gif "已完整資訊的節點")或更新版本時，複寫具有完整資訊。 若要指定組態選項，請以滑鼠右鍵按一下節點。|  
-|![我們沒有完整資訊的節點](media/p2pwizard-incomplete.gif "我們沒有完整資訊的節點")|複寫具有不完整資訊的節點。 若要指定組態選項，請以滑鼠右鍵按一下節點。 由於下列其中一項原因，所以複寫具有不完整的資訊：<br /><br /> 節點正在執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體 (無法儲存精靈所需的所有中繼資料)。<br /><br /> 節點正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新版本，但是複寫無法從節點中擷取訂閱資訊。 若要疑難排解這個情況：<br />-請確定資料庫的節點在線上，而且您可以使用相同的認證與連接至節點的散發代理程式連接到它。<br />-請確定記錄讀取器代理程式和連接至節點的所有散發代理程式正在執行。<br />-請確定已設定高到足以蒐集所有拓撲資訊重新整理逾時。 若要設定逾時，請以滑鼠右鍵按一下設計介面，然後按一下 **[設定重新整理逾時]**。|  
+|![我們沒有完整資訊的節點](media/p2pwizard-complete.gif "節點，我們沒有完整資訊")或更新版本，而複寫具有完整資訊。 若要指定組態選項，請以滑鼠右鍵按一下節點。|  
+|![我們沒有完整資訊的節點](media/p2pwizard-incomplete.gif "我們沒有完整資訊的節點")|複寫具有不完整資訊的節點。 若要指定組態選項，請以滑鼠右鍵按一下節點。 由於下列其中一項原因，所以複寫具有不完整的資訊：<br /><br /> 節點正在執行 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體 (無法儲存精靈所需的所有中繼資料)。<br /><br /> 節點正在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新版本，但是複寫無法從節點中擷取訂閱資訊。 若要疑難排解這個情況：<br />-請確定節點的資料庫在線上，而且您可以使用相同的認證連線到節點的散發代理連線到它。<br />-請確定記錄讀取器代理程式和連線到節點的所有散發代理程式正在執行。<br />-請確定重新整理逾時設定得夠高，蒐集所有拓撲資訊。 若要設定逾時，請以滑鼠右鍵按一下設計介面，然後按一下 **[設定重新整理逾時]**。|  
 |含有箭頭的灰線|兩個節點之間的連接。 若要加入連接，請以滑鼠右鍵按一下您想要連接的其中一個節點。 若要移除連接，請以滑鼠右鍵按一下該連接。<br /><br /> 如果此線條只有單一箭頭，就表示複寫具有其中一個節點的不完整資訊。|  
   
 ### <a name="options-for-the-design-surface"></a>設計介面的選項  

@@ -1,25 +1,24 @@
 ---
-title: SQL Server 交易記錄架構與管理 |Microsoft 文件
+title: SQL Server 交易記錄架構與管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
 caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 15e0b458e74df9e40a05a4abbeeeb730b0bc0cea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136103"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301338"
 ---
 # SQL Server 交易記錄架構與管理
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "36136103"
   
  當邏輯記錄檔的結尾到達實體記錄檔的結尾時，新的記錄資料將寫回實體記錄檔的開頭處。  
   
- ![記錄包裝大約至記錄檔的開頭](media/tranlog4.gif "記錄檔記錄大約換行至記錄檔的開頭")  
+ ![記錄將會自動換行大約到記錄檔的開頭](media/tranlog4.gif "記錄大約包裝至記錄檔的開頭")  
   
  只要邏輯記錄檔的結尾永遠不碰到邏輯記錄檔的開頭，此週期就會不斷地重複。 如果經常截斷舊的記錄，以便讓目前到下個檢查點之間建立的所有新記錄一定會有足夠的空間可以使用，記錄檔就永遠不會填滿。 不過，如果邏輯記錄檔的結尾已到達邏輯記錄檔的開頭，會發生下列其中一種狀況：  
   

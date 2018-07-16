@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Completed event class
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 72cfd1b46d4bd43a690a6f82d1405e475a906dc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9401dd59c23b08548c3cb5a02770a8dbf7e51450
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330048"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed 事件類別
   SP:Completed 事件類別指出預存程序已完成執行。  
@@ -59,7 +59,7 @@ ms.locfileid: "36035219"
 |SourceDatabaseID|`int`|物件所存在之資料庫的識別碼。|62|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|預存程序呼叫的文字。|@shouldalert|是|  
+|TextData|`ntext`|預存程序呼叫的文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

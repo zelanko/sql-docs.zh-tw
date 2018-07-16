@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - annotations [SQL Server]
 - database diagrams [SQL Server], annotations
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b985b861a9ad1f95cd7d24fb28c908433179d68a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 8c0888d9552bc352985799e18320fb484a0a79e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146864"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273874"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>將文字附註加入至圖表 (Visual Database Tools)
   若要針對圖表製作註記或備註，您可以加入文字附註。  

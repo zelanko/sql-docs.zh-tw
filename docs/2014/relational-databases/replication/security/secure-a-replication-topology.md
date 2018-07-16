@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], security
 ms.assetid: d7292121-1c8e-4b8e-ac44-8eea36ae27fe
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f18e04757068a33456f442648fe5f49ff29bbb65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a097c43f6081e024b0c7f06e0df9fe88234b5bce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311364"
 ---
 # <a name="secure-a-replication-topology"></a>保護複寫拓撲的安全性
   在設定複寫及建立發行集與訂閱時，會提供複寫所需的安全性帳戶、登入和密碼。 稍後可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、複寫預存程序和 Replication Management Objects (RMO) 變更這些安全性設定。 下列主題描述如何修改複寫安全性設定。  

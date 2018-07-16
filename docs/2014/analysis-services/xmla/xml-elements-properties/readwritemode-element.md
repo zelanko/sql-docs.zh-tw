@@ -1,5 +1,5 @@
 ---
-title: ReadWriteMode 元素 |Microsoft 文件
+title: ReadWriteMode 元素 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReadWriteMode command
 ms.assetid: 379bcaca-bb7e-4934-a9e7-21f8ede2fdc7
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 88ebc7e23fc3ec4aad0d8273464636354958217a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 3577feacc65bc1d7259d95af9b5bc6179e72b3b9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285784"
 ---
 # <a name="readwritemode-element"></a>ReadWriteMode 元素
   `ReadWriteMode` 資料庫屬性會指定資料庫處於 `ReadWrite` 模式或 `ReadOnly` 模式。 此屬性只有這兩種可能的值。  
@@ -58,10 +58,10 @@ ms.locfileid: "36146817"
   
  `ReadWriteMode` 元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|*ReadOnly*|您就無法將任何變更或更新套用至該資料庫。|  
-|*ReadWrite*|您可以將變更或更新套用至該資料庫。|  
+|*唯讀*|您就無法將任何變更或更新套用至該資料庫。|  
+|*讀寫*|您可以將變更或更新套用至該資料庫。|  
   
 ## <a name="see-also"></a>另請參閱  
  [Attach 元素](../xml-elements-commands/attach-element.md)   

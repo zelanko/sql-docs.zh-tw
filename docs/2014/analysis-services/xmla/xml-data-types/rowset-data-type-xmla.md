@@ -1,5 +1,5 @@
 ---
-title: Rowset 資料類型 (XMLA) |Microsoft 文件
+title: Rowset 資料類型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - Rowset data type
 ms.assetid: a3e6e227-2d53-4530-b369-afa8b4df0a40
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 554217fe6d660040b51788d82a63f11ea0b7ce7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b6f7dd6bc7f19d7d3eba42c21cda71a9216cbe32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146604"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279444"
 ---
 # <a name="rowset-data-type-xmla"></a>Rowset 資料類型 (XMLA)
-  定義衍生的資料類型，表示[根](../xml-elements-properties/root-element-xmla.md)傳回的表格式資料的項目[探索](../xml-elements-methods-discover.md)或[Execute](../xml-elements-methods-execute.md)方法呼叫。  
+  定義衍生的資料類型，表示[根](../xml-elements-properties/root-element-xmla.md)傳回的表格式資料的項目[Discover](../xml-elements-methods-discover.md)或是[Execute](../xml-elements-methods-execute.md)方法呼叫。  
   
- **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-xml-analysis: rowset  
+ **命名空間**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-分析： 資料列集  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,12 +63,12 @@ ms.locfileid: "36146604"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|[資料列](../xml-elements-properties/row-element-xmla.md)|  
-|衍生的元素|[根](../xml-elements-properties/root-element-xmla.md)|  
+|衍生的元素|[根目錄](../xml-elements-properties/root-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- XML 不允許使用特定字元當做元素和屬性名稱。 若要解決這個命名條件約束，XML for Analysis (XMLA) 支援所定義的編碼方式[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需包含根據 XML 1.0 規格無效的 XML 名稱字元的資料行名稱，XMLA 會使用對應的十六進位值不是有效的 Unicode 字元編碼。 十六進位值會逸出成為 _x*HHHH*\_，其中*HHHH*代表最高階位元第一筆訂單中的字元的四位數十六進位 ucs-2 碼。 例如，XMLA 會將 "Order Details" 名稱編碼成 Order_x0020_Details，以對應的十六進位碼來取代空格字元。  
+ XML 不允許使用特定字元當做元素和屬性名稱。 若要解決這個命名條件約束，XML for Analysis (XMLA) 所支援的編碼方式所定義[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需包含根據 XML 1.0 規格無效的 XML 名稱字元的資料行名稱，XMLA 會使用對應的十六進位值不是有效的 Unicode 字元編碼。 十六進位值會逸出成為 _x*HHHH*\_，其中*HHHH*代表最高階位元第一筆訂單中的字元四位數字十六進位 ucs-2 代碼。 例如，XMLA 會將 "Order Details" 名稱編碼成 Order_x0020_Details，以對應的十六進位碼來取代空格字元。  
   
- 編碼可能會讓「可延伸樣式語言」(XSL) 轉換更困難。 若要支援快速查閱實際且未編碼的資料行名稱，加入`sql:field`屬性 XML 資料列集結構描述以取得每個資料行，如下列範例所示：  
+ 編碼可能會讓「可延伸樣式語言」(XSL) 轉換更困難。 若要支援快速查閱實際且未編碼的資料行名稱，新增`sql:field`屬性設定為 XML 資料列集結構描述，每個資料行，如下列範例所示：  
   
 ```  
 <xsd:element name="Order_x0020_Details" type="string" sql:field="Order Details" />  

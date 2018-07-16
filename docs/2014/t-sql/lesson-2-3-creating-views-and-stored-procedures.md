@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating views and stored procedures
 ms.assetid: 53a0426d-07d8-4b7c-aa21-22632753bad8
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 828d983b2b85ebd6c3a30a7311186b8bc97cb6b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: f4ff7d53cc51d8995cdf348742299daedf574d26
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301288"
 ---
 # <a name="creating-views-and-stored-procedures"></a>建立檢視和預存程序
   既然 Mary 現在能存取 **TestData** 資料庫，您或許想要建立一些資料庫物件，如檢視和預存程序，然後授與 Mary 存取這些物件。 檢視是預存的 SELECT 陳述式，而預存程序是一個或多個批次執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式。  
@@ -81,7 +81,7 @@ ms.locfileid: "36131423"
     ```  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [授與存取權的資料庫物件](lesson-2-4-granting-access-to-a-database-object.md)  
+ [授與資料庫物件的存取權](lesson-2-4-granting-access-to-a-database-object.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   

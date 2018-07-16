@@ -1,5 +1,5 @@
 ---
-title: 使用者定義函數和預存程序 |Microsoft 文件
+title: 使用者定義函數和預存程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - ADOMD.NET, stored procedures
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ba07911e050fc4b2430957cc45beea55d2f8094d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 719929ec255f29da6477788d4feff1162609f993
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253020"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>使用者定義函數和預存程序
-  透過 ADOMD.NET 伺服器物件，您可以建立使用者定義函數 (UDF) 或是預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，與中繼資料和來自伺服器的資料互動。 這些同處理序 (In-Process) 方法是透過「多維度運算式」(Multidimensional Expressions，MDX) 或「資料採礦延伸模組」(Data Mining Extensions，DMX) 陳述式來呼叫，以提供附加功能，並不會有與網路通訊關聯的延遲。  
+  透過 ADOMD.NET 伺服器物件，您可以建立使用者定義函數 (UDF) 或是預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]來與中繼資料和來自伺服器的資料互動。 這些同處理序 (In-Process) 方法是透過「多維度運算式」(Multidimensional Expressions，MDX) 或「資料採礦延伸模組」(Data Mining Extensions，DMX) 陳述式來呼叫，以提供附加功能，並不會有與網路通訊關聯的延遲。  
   
 ## <a name="udf-examples"></a>UDF 範例  
  UDF 是一種可以在 MDX 或 DMX 陳述式的內容中呼叫的方法，可以使用任何數目的參數，並且可以傳回任何類型的資料。  
@@ -86,7 +86,7 @@ public Set RandomSample(Set set, int returnCount)
 }  
 ```  
   
- 在下列 MDX 範例中會呼叫上述範例。 此 MDX 範例中，在五個隨機的州或省從擷取**Adventure Works**資料庫。  
+ 在下列 MDX 範例中會呼叫上述範例。 在此 MDX 範例中，五個隨機的州或省會從擷取**Adventure Works**資料庫。  
   
 ```  
 SELECT SampleAssembly.RandomSample([Geography].[State-Province].Members, 5) on ROWS,   

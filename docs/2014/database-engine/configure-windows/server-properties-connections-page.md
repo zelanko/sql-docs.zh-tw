@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.serverproperties.connections.f1
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c57ebc36fa8a8145ee1212341e74d07c8d1b1522
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9dcefb5daa67613fd64f277271f4ffa4d35d9738
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314508"
 ---
 # <a name="server-properties-connections-page"></a>伺服器屬性 (連接頁面)
   使用此頁面來檢視或修改您的連接選項。  
@@ -75,7 +75,7 @@ ms.locfileid: "36146804"
  針對此窗格中的選項，檢視目前執行中的值。 這些值是唯讀的。  
   
 ## <a name="see-also"></a>另請參閱  
- [選項&#40;查詢執行： SQL Server： 進階頁面&#41;](../options-query-execution-sql-server-advanced-page.md)   
+ [選項&#40;查詢執行： SQL Server︰ 進階頁面&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

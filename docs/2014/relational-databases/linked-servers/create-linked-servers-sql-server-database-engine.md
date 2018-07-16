@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server (starting with 2008)
 f1_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - linked servers [SQL Server], creating
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fcfb3933a1ce88855ec32a9b4ac86a5c2075819d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 47292d5659b5244a6c318b330b45825ad5408486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294781"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立連結的伺服器以及存取來自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料。 透過建立連結的伺服器，您可以處理多個來源的資料。 連結的伺服器不必是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的另一個執行個體，但那是常見狀況。  
@@ -41,7 +41,7 @@ ms.locfileid: "36146952"
 ##  <a name="Security"></a> 安全性  
   
 ### <a name="permissions"></a>Permissions  
- 當使用[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，需要`ALTER ANY LINKED SERVER`權限的伺服器或成員資格**setupadmin**固定的伺服器角色。 當使用[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]需要`CONTROL SERVER`權限或成員資格**sysadmin**固定的伺服器角色。  
+ 使用時[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式，需要`ALTER ANY LINKED SERVER`中的成員資格的伺服器上的權限**setupadmin**固定的伺服器角色。 使用時[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]需要`CONTROL SERVER`權限或成員資格**sysadmin**固定的伺服器角色。  
   
 ##  <a name="Procedures"></a> 如何建立連結的伺服器  
  您可以使用下列任一項：  
@@ -184,7 +184,7 @@ ms.locfileid: "36146952"
      只會針對提供者叫用層級 0 的 OLE DB 介面。  
   
      **允許 Inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許提供者被具現化為同處理序伺服器。 未設定此選項時，預設的行為便是將提供者具現化於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外。 將提供者起始於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外可以保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序不會受到提供者發生錯誤的影響。 當提供者具現化外部[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]處理，請更新或插入參考的長資料行 (`text`， `ntext`，或`image`) 不允許。  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 允許提供者被具現化為同處理序伺服器。 未設定此選項時，預設的行為便是將提供者具現化於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外。 將提供者起始於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序之外可以保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序不會受到提供者發生錯誤的影響。 當提供者具現化外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]處理，請更新或插入參考的長資料行 (`text`， `ntext`，或`image`) 不允許。  
   
      **非交易更新**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 即使 **ITransactionLocal** 無法使用，仍然允許更新。 如果已啟用此選項，則針對提供者的更新便無法復原，因為提供者不支援交易。  

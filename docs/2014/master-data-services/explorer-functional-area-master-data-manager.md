@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e2763613-79ef-414a-8dbf-837a0331ebf8
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1b92e520492b579009c0f68e07592b7c2916fd75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: e1e100be7ab60e98b53681cf11a811b9627cfb57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309978"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>總管功能區域 (主資料管理員)
   在 [總管] 功能區域中，您可以更新資料，並使用階層和集合。  
@@ -37,7 +37,7 @@ ms.locfileid: "36144753"
   
  [重新啟用成員或集合&#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
- [註解&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
+ [附註&#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
  [交易 &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)  
   

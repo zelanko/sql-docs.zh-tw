@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
 - containers [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c1cdd3b3a75560d1ced61684e1063f4571115833
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147000"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283624"
 ---
 # <a name="integration-services-containers"></a>整合服務容器
   容器是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 中的物件，可提供結構給封裝，並提供服務給工作。 它們支援封裝中的重複控制流程，且會將工作和容器分組成有意義的工作單位。 除了工作外，容器還可包含其他容器。  
@@ -61,8 +61,8 @@ ms.locfileid: "36147000"
 |`DisableEventHandlers`|布林值，指出與該容器關聯的事件處理常式是否執行。 這個屬性的預設值是`False`。|  
 |`FailPackageOnFailure`|布林值，指定如果容器中發生錯誤，封裝是否失敗。 這個屬性的預設值是`False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>為止。|  
 |`FailParentOnFailure`|布林值，指定如果容器中發生錯誤，父容器是否失敗。 這個屬性的預設值是`False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>為止。|  
-|`ForcedExecutionValue`|如果`ForceExecutionValue`設`True`，包含容器之選擇性執行值的物件。 這個屬性的預設值為 **0**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>為止。|  
-|`ForcedExecutionValueType`|資料型別`ForcedExecutionValue`。 這個屬性的預設值是`Int32`。|  
+|`ForcedExecutionValue`|如果`ForceExecutionValue`設為`True`，包含容器之選擇性執行值的物件。 這個屬性的預設值為 **0**。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>為止。|  
+|`ForcedExecutionValueType`|資料類型`ForcedExecutionValue`。 這個屬性的預設值是`Int32`。|  
 |`ForceExecutionResult`|指定執行封裝或容器之強制結果的值。 值是`None`， `Success`， `Failure`，和`Completion`。 這個屬性的預設值是`None`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>為止。|  
 |`ForceExecutionValue`|布林值，指定是否應該強制執行容器的選擇性執行值以包含特定值。 這個屬性的預設值是`False`。<br /><br /> 如需詳細資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>為止。|  
 |`ID`|在建立封裝時所指派的容器 GUID。 此屬性是唯讀的。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A>。|  
@@ -87,7 +87,7 @@ ms.locfileid: "36147000"
  容器包括由可執行檔和優先順序條件約束所組成的控制流程，並可使用事件處理常式和變數。 工作主機容器則是例外：由於工作主機容器會封裝單一工作，因此不會使用優先順序條件約束。  
   
 ### <a name="executables"></a>可執行檔  
- 可執行檔指的是容器層級工作，以及容器內的任何容器。 可執行檔可以是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所提供的其中一個工作和容器，也可以是自訂工作。 如需詳細資訊，請參閱[Integration Services Tasks](integration-services-tasks.md)和[Integration Services Containers](integration-services-containers.md)。  
+ 可執行檔指的是容器層級工作，以及容器內的任何容器。 可執行檔可以是 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所提供的其中一個工作和容器，也可以是自訂工作。 如需詳細資訊，請參閱 < [Integration Services Tasks](integration-services-tasks.md)並[Integration Services Containers](integration-services-containers.md)。  
   
 ### <a name="precedence-constraints"></a>優先順序條件約束  
  優先順序條件約束可將相同父容器中的工作，連結成已排序的控制流程。 如需詳細資訊，請參閱 [Precedence Constraints](precedence-constraints.md)。  

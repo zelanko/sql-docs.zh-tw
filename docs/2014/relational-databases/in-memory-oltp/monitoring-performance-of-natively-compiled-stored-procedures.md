@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 9f1dc6c0ff421909a672fe9abe1ccd94efe6c3b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 30707ed1e70c37fee37c4c84369853ef1fba5c12
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136423"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311838"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>監視原生編譯預存程序的效能
   本主題討論如何監視原生編譯預存程序的效能  
   
 ## <a name="using-extended-events"></a>使用擴充的事件  
- 使用`sp_statement_completed`擴充的事件來追蹤執行的查詢。 以此事件建立擴充事件工作階段，選擇性地針對特定原生編譯預存程序篩選 object_id。執行每項查詢之後都將引發此擴充事件。 擴充事件所報告的 CPU 時間和持續時間代表了查詢的 CPU 使用率和執行時間。 原生編譯預存程序若佔用大量的 CPU 時間，可能就會導致效能問題。  
+ 使用`sp_statement_completed`擴充的事件來追蹤執行查詢。 以此事件建立擴充事件工作階段，選擇性地針對特定原生編譯預存程序篩選 object_id。執行每項查詢之後都將引發此擴充事件。 擴充事件所報告的 CPU 時間和持續時間代表了查詢的 CPU 使用率和執行時間。 原生編譯預存程序若佔用大量的 CPU 時間，可能就會導致效能問題。  
   
  `line_number` 連同擴充事件中的 `object_id` 皆可用來調查查詢。 使用下列查詢即可擷取程序定義。 行號可用來識別定義內的查詢：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "36136423"
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
- 如需有關`sp_statement_completed`擴充事件，請參閱[如何擷取導致事件的陳述式](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
+ 如需詳細資訊`sp_statement_completed`擴充事件，請參閱[如何擷取導致事件的陳述式](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)。  
   
 ## <a name="using-data-management-views"></a>使用資料管理檢視  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援收集原生編譯預存程序在程序層級和查詢層級的執行統計資料。 收集執行統計資料會影響效能，所以預設並未啟用。  

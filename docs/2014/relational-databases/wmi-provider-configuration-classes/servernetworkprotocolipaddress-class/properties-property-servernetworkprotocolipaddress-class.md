@@ -1,5 +1,5 @@
 ---
-title: Properties 屬性 （ServerNetworkProtocolIPAddress 類別） |Microsoft 文件
+title: Properties 屬性 （ServerNetworkProtocolIPAddress 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Properties property
 ms.assetid: 7de217be-50fe-463e-af44-fdd6b79a7045
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2749c2eb418dacd38ef62ecba32c62b794741334
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 68a8d39ae8bc516d40c53cb7c6986ef08aa8d52b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329399"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties 屬性 (ServerNetworkProtocolIPAddress 類別)
   取得與 IP 位址相關聯的屬性。  

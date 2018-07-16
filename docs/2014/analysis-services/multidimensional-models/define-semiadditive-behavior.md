@@ -1,5 +1,5 @@
 ---
-title: 定義局部加總行為 |Microsoft 文件
+title: 定義局部加總行為 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8aa76cf01672dec4edde7ded1049efbd2035839f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037112"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265414"
 ---
 # <a name="define-semiadditive-behavior"></a>定義局部加總行為
   在許多商務狀況中，經常見到局部加總量值並未跨所有維度一致地彙總。 每個以不同時間之結餘快照集為基礎的 Cube 都會出現這個問題。 您可以在處理安全性、帳戶結餘、預算、人力資源、保險政策和理賠、以及其他許多商務領域的應用程式中發現這些快照集。  
@@ -38,7 +38,7 @@ ms.locfileid: "36037112"
  在精靈的 [定義局部加總行為] 頁面上，選取下列其中一個選項來選擇如何定義局部加總：  
   
  **關閉局部加總行為**  
- 從先前定義局部加總行為的 Cube 中移除局部加總行為。 此選項會重設到量值`SUM`如果它設定為任何下列的彙總函式類型：  
+ 從先前定義局部加總行為的 Cube 中移除局部加總行為。 此選取項目會重設的量值以`SUM`如果它設定為任何下列的彙總函式類型：  
   
 -   依帳戶  
   
@@ -54,9 +54,9 @@ ms.locfileid: "36037112"
   
 -   無  
   
- 這個選項不會變更具有下列一般彙總函式的量值： `Sum`， `Min`， `Max`， `Count`，或`Distinct``Count`。  
+ 此選項不會變更具有下列一般彙總函式的量值： `Sum`， `Min`， `Max`， `Count`，或`Distinct``Count`。  
   
- **此精靈偵測到包含局部加總成員的 'Account" 帳戶維度。伺服器將會彙總此維度，根據每一個帳戶類型指定的局部加總行為的成員。**  
+ **此精靈偵測到包含局部加總成員的 'Account" 帳戶維度。伺服器會彙總此維度，依據每一個帳戶類型指定的局部加總行為的成員。**  
  讓系統將帳戶類型維度所建立維度之量值群組中的所有量值設定為「依帳戶」彙總函式，而且伺服器將會根據每一個帳戶類型所指定之局部加總行為來彙總此維度的成員。  
   
 > [!NOTE]  

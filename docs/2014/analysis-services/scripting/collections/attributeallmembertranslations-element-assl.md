@@ -1,5 +1,5 @@
 ---
-title: AttributeAllMemberTranslations 元素 (ASSL) |Microsoft 文件
+title: AttributeAllMemberTranslations 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AttributeAllMemberTranslations element
 ms.assetid: 1a0d86ea-d95d-4d93-b321-acd35ed4ac26
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fa787c7c3731962690c1b8d25e736f061caf74e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd4a3afeac18c5b0aa4935e6abbb51a79015256
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332878"
 ---
 # <a name="attributeallmembertranslations-element-assl"></a>AttributeAllMemberTranslations 元素 (ASSL)
   包含維度之 All 成員標題的翻譯集合。  
@@ -64,7 +64,7 @@ ms.locfileid: "36030171"
 |子元素|[AttributeAllMemberTranslation](../objects/translation-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`AttributeAllMemberTranslations`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Dimension>。  
+ 對應至父系的元素`AttributeAllMemberTranslations`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Dimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Translation 元素&#40;ASSL&#41;](translations-element-assl.md)   

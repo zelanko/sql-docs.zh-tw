@@ -1,5 +1,5 @@
 ---
-title: TuningTimeInMin 元素 (DTA) |Microsoft 文件
+title: TuningTimeInMin 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 305814974dc3cb5aeca4b265a39012f095476e48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 82821b8f8cc728c8b2f15d92af1496714414ea40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304629"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 元素 (DTA)
   指定微調工作階段的最長時間 (分鐘)。  
@@ -44,7 +44,7 @@ ms.locfileid: "36146215"
 |--------------------|-----------------|  
 |**資料類型和長度**|`unsignedInt`沒有長度限制。|  
 |**預設值**|480 分鐘 (8 小時)。|  
-|**出現次數**|已為指定值，除非`NumberOfEvents`項目。|  
+|**出現次數**|除非已指定值，如`NumberOfEvents`項目。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   

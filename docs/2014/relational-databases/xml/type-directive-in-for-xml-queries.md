@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 caps.latest.revision: 40
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3e5a3ffe184513bce9f331f5d905a0587897e64a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2868591cbb80cfb39eaaa81d6cbe75d2bda08c6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294218"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>在 FOR XML 查詢中的 TYPE 指示詞
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援[xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql)可讓您選擇性地要求的 FOR XML 查詢結果傳回的`xml`藉由指定 TYPE 指示詞的資料類型。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、 將結果指派給`xml`類型變數或撰寫[巢狀 FOR XML 查詢](use-nested-for-xml-queries.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援[xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql)可讓您選擇性地要求的 FOR XML 查詢結果傳回為`xml`藉由指定 TYPE 指示詞的資料類型。 這將允許您處理伺服器上 FOR XML 查詢的結果。 例如，您可以針對它指定 XQuery、 將結果指派給`xml`類型變數或撰寫[巢狀 FOR XML 查詢](use-nested-for-xml-queries.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳回 XML 資料類型的執行個體資料至用戶端，作為不同伺服器建構的結果，例如使用 TYPE 指示詞的 FOR XML 查詢或`xml`資料類型用來從 SQL 資料表資料行和輸出中傳回 XML 執行個體資料值參數。 在用戶端應用程式中，ADO.NET 提供者要求以二進位編碼從伺服器傳送此 XML 資料類型資訊。 然而，如果您使用沒有 TYPE 指示詞的 FOR XML，XML 資料會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。 請注意，不含 TYPE 指示詞的最上層 FOR XML 無法與資料指標一起使用。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回 XML 資料類型的執行個體資料至用戶端，作為不同伺服器建構的結果，例如使用 TYPE 指示詞的 FOR XML 查詢或`xml`資料類型用來從 SQL 資料表資料行和輸出中傳回 XML 執行個體資料值參數。 在用戶端應用程式中，ADO.NET 提供者要求以二進位編碼從伺服器傳送此 XML 資料類型資訊。 然而，如果您使用沒有 TYPE 指示詞的 FOR XML，XML 資料會以字串類型傳回。 在任一情況下，用戶端提供者將永遠可以處理任一 XML 形式。 請注意，不含 TYPE 指示詞的最上層 FOR XML 無法與資料指標一起使用。  
   
 ## <a name="examples"></a>範例  
  下列範例說明搭配 FOR XML 查詢使用 TYPE 指示詞。  
@@ -54,7 +54,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>將 FOR XML 查詢結果指派給 xml 類型變數  
- 在下列範例中，FOR XML 結果指派給`xml`類型變數`@x`。 查詢會擷取連絡資訊，例如`BusinessEntityID`， `FirstName`， `LastName`，以及其他電話號碼，從`AdditionalContactInfo`資料行`xml``TYPE`。 由於 `FOR XML` 子句會指定 `TYPE` 指示詞，因此 XML 將以 `xml` 類型傳回並將其指派給變數。  
+ 在下列範例中，FOR XML 結果會指派給`xml`類型變數`@x`。 此查詢會擷取連絡資訊，例如`BusinessEntityID`， `FirstName`， `LastName`，以及其他電話號碼從`AdditionalContactInfo`資料行`xml``TYPE`。 由於 `FOR XML` 子句會指定 `TYPE` 指示詞，因此 XML 將以 `xml` 類型傳回並將其指派給變數。  
   
 ```  
 USE AdventureWorks2012;  
@@ -75,7 +75,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>查詢 FOR XML 查詢的結果  
- FOR XML 查詢會傳回 XML。 因此，您可以套用`xml`類型方法，例如`query()`和`value()`，至 FOR XML 查詢所傳回的 XML 結果。  
+ FOR XML 查詢會傳回 XML。 因此，您可以在其中套用`xml`類型方法，例如`query()`和`value()`，至 FOR XML 查詢所傳回的 XML 結果。  
   
  在下列查詢中，`query()`方法`xml`資料類型用來查詢的結果`FOR XML`查詢。 如需詳細資訊，請參閱 [query&#40;&#41; 方法 &#40;xml 資料類型&#41;](/sql/t-sql/xml/query-method-xml-data-type)。  
   
@@ -91,7 +91,7 @@ FROM Person.Person
 FOR XML AUTO, TYPE).query('/Person.Person[1]');  
 ```  
   
- 內部`SELECT … FOR XML`查詢會傳回`xml`輸入結果，以利外部`SELECT`適用於`query()`方法`xml`型別。 請注意已指定 `TYPE` 指示詞。  
+ 內部`SELECT … FOR XML`查詢會傳回`xml`輸入結果，以利外部`SELECT`適用於`query()`方法，以`xml`型別。 請注意已指定 `TYPE` 指示詞。  
   
  以下是結果：  
   
@@ -130,7 +130,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  在 `value()` 方法中的 XQuery 路徑運算式會擷取客戶連絡人之 `BusinessEntityID` 為 `1`的第一個客戶電話號碼。  
   
 > [!NOTE]  
->  如果未指定 TYPE 指示詞，會以類型傳回 FOR XML 查詢結果`nvarchar(max)`。  
+>  如果未指定 TYPE 指示詞，則會以類型傳回 FOR XML 查詢結果`nvarchar(max)`。  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>使用 INSERT、UPDATE 及 DELETE 中的 FOR XML 查詢結果 (Transact-SQL DML)  
  下列範例示範如何在「資料管理語言」(DML) 陳述式中使用 FOR XML 查詢。 在範例中，`FOR XML`傳回的執行個體`xml`型別。 `INSERT` 陳述式會將此 XML 插入資料表中。  

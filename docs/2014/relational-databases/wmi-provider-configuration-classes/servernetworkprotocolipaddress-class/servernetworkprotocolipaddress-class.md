@@ -1,5 +1,5 @@
 ---
-title: ServerNetworkProtocolIPAddress 類別 |Microsoft 文件
+title: ServerNetworkProtocolIPAddress 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ServerNetworkProtocolIPAddress class
 ms.assetid: 1dbea791-c5a2-4911-b23c-64bddd860dae
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 35a9492435fe5e7c1aef2aa9a78432b1068c2813
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: fa046009808e596876b3a1262db7739efff5195a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307328"
 ---
 # <a name="servernetworkprotocolipaddress-class"></a>ServerNetworkProtocolIPAddress 類別
   [ServerNetworkProtocolIPAddress 類別] servernetworkprotocolipaddress-class.md) 代表伺服器網路通訊協定所支援之 IP 位址。  

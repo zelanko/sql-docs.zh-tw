@@ -1,5 +1,5 @@
 ---
-title: 暫停報表與訂閱處理 |Microsoft 文件
+title: 暫停報表與訂閱處理 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pausing schedules
 - subscriptions [Reporting Services], pausing
@@ -24,13 +24,13 @@ ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a10c8a9b2d23ea5d4803dfc97911cc5695b26b38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2ece2c0fe9ae32652e92a5f8d20b628d924b369a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037618"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261964"
 ---
 # <a name="pause-report-and-subscription-processing"></a>暫停報表與訂閱處理
   您無法直接暫停報表或訂閱。 但是，您可以在處理開始之前，或在進行資料來源連接時，中斷報表與訂閱處理。 您也可以不讓使用者存取報表或訂閱，以禁止處理報表或訂閱。  
@@ -48,7 +48,7 @@ ms.locfileid: "36037618"
  請注意，即使資料來源無法使用，報表仍然會載入。 報表不包含資料，但具備適當權限的使用者可以存取與報表相關聯的屬性頁面、安全性設定、報表記錄，以及訂閱資訊。  
   
 ## <a name="pause-a-shared-schedule"></a>暫停共用排程  
- 如果報表或訂閱從共用排程執行，您可以暫停排程來禁止處理。 由排程驅動的所有報表與訂閱處理，會被延遲至排程繼續為止。 如需詳細資訊，請參閱[暫停及繼續共用排程](schedules.md)。  
+ 如果報表或訂閱從共用排程執行，您可以暫停排程來禁止處理。 由排程驅動的所有報表與訂閱處理，會被延遲至排程繼續為止。 如需詳細資訊，請參閱 <<c0> [ 暫停及繼續共用排程](schedules.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 報表伺服器 &#40;原生模式&#41;](../report-server/reporting-services-report-server-native-mode.md)   

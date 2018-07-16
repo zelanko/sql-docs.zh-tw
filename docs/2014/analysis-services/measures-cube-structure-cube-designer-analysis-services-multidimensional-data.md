@@ -1,5 +1,5 @@
 ---
-title: 量值 （Cube 結構索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 量值 （Cube 結構索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.measurespane.f1
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4b81387a3eb85ca695ffd9860e09a9bf2c696ba6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 90042bb67b29b86941055ed0689a4c7043bfdd6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134722"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319458"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>量值 (Cube 結構索引標籤，Cube 設計師) (Analysis Services - 多維度資料)
   使用 **[量值]** 窗格，即可操作 Cube 設計師中之 **[Cube 結構]** 索引標籤上的量值群組和成員。  
@@ -67,7 +67,7 @@ ms.locfileid: "36134722"
 |選項|定義|  
 |------------|----------------|  
 |**樹狀結構**|在樹狀檢視中顯示量值群組與量值。|  
-|**格線**|在方格中顯示量值群組與量值。|  
+|**方格**|在方格中顯示量值群組與量值。|  
   
  **重新命名**  
  選取即可重新命名選取的量值群組或量值。  

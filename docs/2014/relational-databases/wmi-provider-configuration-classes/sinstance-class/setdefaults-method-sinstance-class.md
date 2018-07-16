@@ -1,5 +1,5 @@
 ---
-title: SetDefaults 方法 （SInstance 類別） |Microsoft 文件
+title: SetDefaults 方法 （SInstance 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetDefaults method
 ms.assetid: dc3c6a85-0711-4688-bf4f-91168c57af28
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 647c74aff602c2cdebeac0857973f1f1650a60c1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: b024fe7394db608a41de18c07f88cc653c7dfd57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323838"
 ---
 # <a name="setdefaults-method-sinstance-class"></a>SetDefaults 方法 (SInstance 類別)
   設定執行個體的所有預設值[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]覆寫現有資料的選項。  

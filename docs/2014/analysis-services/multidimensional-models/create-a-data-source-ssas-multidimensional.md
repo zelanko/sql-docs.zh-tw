@@ -1,5 +1,5 @@
 ---
-title: 建立資料來源 (SSAS 多維度) |Microsoft 文件
+title: 建立資料來源 (SSAS 多維度) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcedesigner.f1
 - sql12.asvs.sqlserverstudio.impersonationinfo.f1
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - security [Analysis Services], data source connections
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b4077a7a0df6fe7575a7844a85917c107aacac07
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4b0275daece83f64726f7b5dd50618d68d7c6e6f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310848"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>建立資料來源 (SSAS 多維度)
   在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度模型中，資料來源物件代表資料來源的連接，您會從其中處理 (或匯入) 資料。 多維度模型至少必須包含一個資料來源物件，不過您可以加入更多資料來源物件，以便結合數個資料倉儲的資料。 使用本主題中的說明為您的模型建立資料來源物件。 如需設定這個物件之屬性的詳細資訊，請參閱[設定資料來源屬性 &#40;SSAS 多維度&#41;](set-data-source-properties-ssas-multidimensional.md)。  
@@ -70,7 +70,7 @@ ms.locfileid: "36146640"
 >  依預設， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不會在連接字串中儲存密碼。 如果未儲存此密碼， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在需要時提示您輸入密碼。 如果您選擇儲存密碼，此密碼會以加密格式儲存在資料連接字串中。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用包含資料來源之資料庫的資料庫加密金鑰來加密資料來源的密碼資訊。 將連接資訊加密之後，您必須使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來變更 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶或密碼，否則將無法復原加密的資訊。 如需詳細資訊，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>定義資料採礦物件的模擬資訊  
- 資料採礦查詢可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶的內容中執行，但是也可以在使用者提交查詢的內容或指定之使用者的內容中執行； 查詢執行所在的內容可能會影響查詢結果。 資料採礦`OPENQUERY`類型的作業，您可能會想要執行的目前使用者或指定的使用者 （不論執行查詢的使用者） 的內容中的內容中，而不是服務帳戶的內容中的資料採礦查詢。 如此可使用有限的安全性認證來執行查詢。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模擬目前的使用者或是模擬指定的使用者，請選取 [使用特定的使用者名稱和密碼] 或 [使用目前使用者的認證] 選項。  
+ 資料採礦查詢可以在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 服務帳戶的內容中執行，但是也可以在使用者提交查詢的內容或指定之使用者的內容中執行； 查詢執行所在的內容可能會影響查詢結果。 資料採礦`OPENQUERY`類型的作業，您可能會想要在目前的使用者，或指定的使用者 （不論執行查詢的使用者） 的內容中的內容，而不是服務帳戶的內容中執行的資料採礦查詢。 如此可使用有限的安全性認證來執行查詢。 如果您希望 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模擬目前的使用者或是模擬指定的使用者，請選取 [使用特定的使用者名稱和密碼] 或 [使用目前使用者的認證] 選項。  
   
 ##  <a name="bkmk_steps"></a> 使用資料來源精靈建立資料來源  
   
@@ -86,11 +86,11 @@ ms.locfileid: "36146640"
   
      新連接的預設提供者為原生 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 提供者。 此提供者是用來連接到使用 OLE DB 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Engine 執行個體。 若要連接到 SQL Server 關聯式資料庫，使用原生 OLE DB\SQL Server Native Client 11.0 通常會比使用其他提供者更快。  
   
-     您可以選擇不同的提供者來存取其他資料來源。 如需清單的提供者和關聯式資料庫支援[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱[支援資料來源&#40;SSAS 多維度&#41;](supported-data-sources-ssas-multidimensional.md)。  
+     您可以選擇不同的提供者來存取其他資料來源。 如需提供者及所支援的關聯式資料庫的清單[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱 <<c2> [ 支援的資料來源&#40;SSAS 多維度&#41;](supported-data-sources-ssas-multidimensional.md)。</c2>  
   
 5.  輸入選定提供者所要求的資訊，以連接到基礎資料來源。 如果已選取**原生 OLE DB\SQL Server Native Client**提供者，請輸入下列資訊：  
   
-    1.  [伺服器名稱] 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝成具名執行個體，您必須包含執行個體名稱 (例如，\<電腦名稱 >\\< instancename\>)。  
+    1.  [伺服器名稱] 是 Database Engine 執行個體的網路名稱。 您可以將它指定為 IP 位址、電腦的 NETBIOS 名稱或完整網域名稱。 如果伺服器安裝成具名執行個體，您必須包含執行個體名稱 (例如\<電腦名稱 >\\< 執行個體名稱\>)。  
   
     2.  [登入伺服器] 會指定驗證連接的方式。 [使用 Windows 驗證] 會使用 Windows 驗證。 [使用 SQL Server 驗證] 會針對支援混合模式驗證的 Windows Azure SQL Database 或 SQL Server 執行個體指定資料庫使用者登入。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "36146640"
  您可以建立多個資料來源物件，以支援與其他資料來源的連接。 每個資料來源都必須擁有可用來建立關聯性的資料行。  
   
 > [!NOTE]  
->  如果已定義多個資料來源，而且在單一查詢中的多個來源查詢資料，例如雪花維度，您必須定義資料來源支援遠端查詢使用`OpenRowset`。 一般來說，這會是 Microsoft SQL Server 資料來源。  
+>  如果已定義多個資料來源和查詢單一查詢中的多個來源的資料，例如針對雪花維度中，您必須定義支援遠端查詢使用的資料來源`OpenRowset`。 一般來說，這會是 Microsoft SQL Server 資料來源。  
   
  使用多個資料來源的需求如下：  
   

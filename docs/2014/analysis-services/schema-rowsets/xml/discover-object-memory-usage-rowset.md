@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_OBJECT_MEMORY_USAGE 資料列集 |Microsoft 文件
+title: DISCOVER_OBJECT_MEMORY_USAGE 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_OBJECT_MEMORY_USAGE rowset
 ms.assetid: 211cfa04-7bd6-43fe-8bd5-bfbff78bdafb
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ae1f26c1bc55c8aa080915a372710e4d59064979
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: afd5d5f612693150cc476c69c3fe0dcf16917d64
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147040"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291514"
 ---
 # <a name="discoverobjectmemoryusage-rowset"></a>DISCOVER_OBJECT_MEMORY_USAGE 資料列集
   提供物件使用之記憶體資源的有關資訊。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
 caps.latest.revision: 23
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 907ee3eb093f4b240aef2199b0928dab602341ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 21d48953edad8d454f75fa919f9e0facdfb5280b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251320"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WebForms ReportViewer 控制項在 Web 應用程式中加以轉譯。  
@@ -66,7 +66,7 @@ ms.locfileid: "36036324"
 ## <a name="viewing-reports-in-remote-processing-mode"></a>以遠端處理模式檢視報表  
  下列範例示範如何轉譯已部署到報表伺服器的報表。 這個範例使用包含在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 範例報表專案中的 Sales Order Detail 報表。  
   
- 此範例使用整合式 Windows 驗證，因此您必須啟用模擬。 執行此會插入下列行插入`web.config`檔案：  
+ 此範例使用整合式 Windows 驗證，因此您必須啟用模擬。 若要執行將下列行插入`web.config`檔案：  
   
 ```  
 <!-- Web.config file. -->  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - IsWindowsServiceEnabled
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - IsWindowsServiceEnabled property
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
 caps.latest.revision: 18
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 0d4ca95b48903214cebbbb1548eaa3535c0584c2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 8fb3667bea39842d8a3e1acad4da8d25c6fe4bc9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132799"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37222678"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled 屬性 (WMI MSReportServer_ConfigurationSetting)
   指出是否已啟用報表伺服器 Windows 服務。 唯讀。  

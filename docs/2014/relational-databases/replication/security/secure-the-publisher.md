@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server replication], publication access list
 - publications [SQL Server replication], publication access lists
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], security
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 caps.latest.revision: 46
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 5540acdd7a5c081258e3ce1fda693d5931b1389e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d7927726090824cfbf8d3e3881385c86e74e6a34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315590"
 ---
 # <a name="secure-the-publisher"></a>保護發行者
   下列複寫代理程式連接到發行者：  

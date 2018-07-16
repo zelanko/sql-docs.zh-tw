@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - event classes [SQL Server], TSQL event category
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4bcfd2a0ae651e149ad5d8a4d5a3c0149b2e57de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d925f4135916907492b8b4d1750efd4fb6f44111
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135614"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322248"
 ---
 # <a name="tsql-event-category"></a>TSQL 事件類別目錄
   **TSQL** 事件類別目錄包含一般 TSQL 事件。  

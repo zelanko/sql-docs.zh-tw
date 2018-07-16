@@ -1,5 +1,5 @@
 ---
-title: NullKeyConvertedToUnknown 元素 (ASSL) |Microsoft 文件
+title: NullKeyConvertedToUnknown 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NullKeyConvertedToUnknown element
 ms.assetid: 1a6cde33-01ba-4095-b464-16d1ad3c6905
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8e11f7de1b3fa7b11774a960351a1b3c974ce4f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cebeef3421533b429a38f6c5696780cb008eca69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316918"
 ---
 # <a name="nullkeyconvertedtounknown-element-assl"></a>NullKeyConvertedToUnknown 元素 (ASSL)
   指定遇到 Null 轉換錯誤時要採取的動作。  
@@ -62,11 +62,11 @@ ms.locfileid: "36146610"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 在索引鍵資料行中遇到 Null 值而且此值解譯為 `Unknown` 成員時，就會發生 Null 轉換錯誤。 不過，此錯誤時才會發生[NullProcessing](nullprocessing-element-assl.md)元素[DataItem](../data-type/dataitem-data-type-assl.md)的上階`ErrorConfiguration`父項目設定為*UnknownMember*。  
+ 在索引鍵資料行中遇到 Null 值而且此值解譯為 `Unknown` 成員時，就會發生 Null 轉換錯誤。 不過，會發生這個錯誤，才[NullProcessing](nullprocessing-element-assl.md)項目[DataItem](../data-type/dataitem-data-type-assl.md)的上階`ErrorConfiguration`父項目設為*UnknownMember*。  
   
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*IgnoreError*|處理時忽略錯誤並繼續。|  
 |*ReportAndContinue*|處理時報告錯誤並繼續。|  

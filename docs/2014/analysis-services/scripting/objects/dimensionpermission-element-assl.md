@@ -1,5 +1,5 @@
 ---
-title: DimensionPermission 元素 (ASSL) |Microsoft 文件
+title: DimensionPermission 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DimensionPermission element
 ms.assetid: e06efbda-64fd-4dca-a2b5-c8ffbf21512c
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 66d9c86c065bb57735e6d54f6d6fc6f30b2d48a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 058a86c54c714dd2244fc45f26cfa53fe503327d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035764"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322798"
 ---
 # <a name="dimensionpermission-element-assl"></a>DimensionPermission 元素 (ASSL)
   定義屬於特定的權限[角色](role-element-assl.md)特定資料庫維度或 cube 維度的項目。  

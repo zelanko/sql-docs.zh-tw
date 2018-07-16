@@ -1,5 +1,5 @@
 ---
-title: 時間序列模型查詢範例 |Microsoft 文件
+title: 時間序列模型查詢範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
 - MISSING_VALUE_SUBSTITUTION
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8b6c0f25f4d5694d678e51acc0ecb4ccbf98f8a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ec5161fab123b9a0b251cfc570318f58fd57ad3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319299"
 ---
 # <a name="time-series-model-query-examples"></a>時間序列模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，時間序列模型的內容查詢可能會提供有關所偵測到之週期性結構的其他詳細資料，而預測查詢則為您提供下 5-10 個時間配量的預測。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -104,7 +104,7 @@ WHERE NODE_NAME = 'TA00000007'
 |簡短的方程式|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
-|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|@shouldalert|  
+|ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|12|  
   
  如需如何解譯這項資訊的詳細資訊，請參閱[時間序列模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)。  
@@ -134,7 +134,7 @@ AND NODE_TYPE = 15
   
 -   使用 `PREDICTION JOIN` 將外部來源中的資料聯結至定型資料。  
   
--   使用單一預測查詢，一次為資料提供一個配量。 如需如何建立單一預測查詢的資訊，請參閱[資料採礦查詢介面](data-mining-query-tools.md)。  
+-   使用單一預測查詢，一次為資料提供一個配量。 如需如何建立單一預測查詢的詳細資訊，請參閱[資料採礦查詢介面](data-mining-query-tools.md)。  
   
 ###  <a name="bkmk_ReplaceExtend"></a> 了解取代和擴充作業的行為  
  當您將新的資料加入時間序列模型時，可以指定是要擴充還是取代定型資料：  
@@ -143,7 +143,7 @@ AND NODE_TYPE = 15
   
      擴充此模型案例對於持續以新的資料更新模型非常實用。 例如，如果您想要讓定型集隨著時間成長，只要擴充模型即可。  
   
-     若要擴充資料，您建立`PREDICTION JOIN`在時間序列模型中，指定新的資料來源，並使用`EXTEND_MODEL_CASES`引數。  
+     若要擴充資料，您建立`PREDICTION JOIN`時間序列模型上指定新的資料來源，並使用`EXTEND_MODEL_CASES`引數。  
   
 -   **取代：** 當您取代資料數列中的資料時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會保留定型的模型，但是會使用新的資料來取代部分或所有現有的定型案例。 因此，定型資料的大小絕對不會改變，但是案例本身則會持續被更新的資料所取代。 如果您提供足夠的新資料，您可以使用完全新的序列來取代定型資料。  
   
@@ -160,7 +160,7 @@ AND NODE_TYPE = 15
   
  例如，假設現有的模型有六個月的資料。 您想要加入最後三個月的銷售數字來擴充這個模型， 同時，您想要對未來三個月做出預測。 如果加入新的資料時只要取得新的預測，請將起點指定為時間配量 4，並將結束點指定為時間配量 7。 您一共可以要求六個預測，但是前三個預測的時間配量會與剛加入的新資料重疊。  
   
- 查詢範例及有關使用的語法的詳細資訊的`REPLACE_MODEL_CASES`和`EXTEND_MODEL_CASES`，請參閱[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
+ 如需查詢範例和使用的語法的詳細資訊`REPLACE_MODEL_CASES`並`EXTEND_MODEL_CASES`，請參閱[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
   
 ###  <a name="bkmk_EXTEND"></a> 使用 EXTEND_MODEL_CASES 做出預測  
  預測行為會因為您要擴充還是取代模型案例而異。 當您擴充模型時，新的資料會附加到序列的結尾，而且定型集的大小會增加。 但是，用於預測查詢的時間配量一定會開始於原始序列的結尾。 因此，如果您加入三個新的資料點，並要求六個預測，則傳回的前三個預測會與新的資料重疊。 在此情況下， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會傳回實際的新資料點，而不是做出預測，直到所有新的資料點都用完為止。 然後， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會根據複合系列來做出預測。  
@@ -182,7 +182,7 @@ AND NODE_TYPE = 15
 ###  <a name="bkmk_REPLACE"></a> 使用 REPLACE_MODEL_CASES 做出預測  
  當您取代模型中的案例時，此模型的大小會維持相同，但是 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會取代此模型中的個別案例。 在交叉預測以及將訓練資料集維持一致大小非常重要的案例下，這種作法會很有用。  
   
- 例如，假設其中一個存放區的銷售資料不足。 您可以建立一般模型，其方式是將特定區域中所有存放區的銷售量加以平均，然後定型模型。 然後，若要為沒有足夠銷售資料存放區做出預測，您建立`PREDICTION JOIN`只針對該存放區的新銷售資料。 當您這樣做時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會保留衍生自區域模型的模式，但是會使用個別存放區中的資料來取代現有的定型案例。 因此，您的預測值將會比較接近於個別存放區的趨勢線。  
+ 例如，假設其中一個存放區的銷售資料不足。 您可以建立一般模型，其方式是將特定區域中所有存放區的銷售量加以平均，然後定型模型。 然後，若要做出預測的存放區沒有足夠銷售資料，您建立`PREDICTION JOIN`只針對該存放區的新銷售資料。 當您這樣做時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會保留衍生自區域模型的模式，但是會使用個別存放區中的資料來取代現有的定型案例。 因此，您的預測值將會比較接近於個別存放區的趨勢線。  
   
  當您使用 `REPLACE_MODEL_CASES` 引數時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會持續將新的案例加入案例集的結尾，並從此案例集的開頭刪除對應的數字。 如果您加入的資料多於原始定型集中的資料， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會捨棄最早的資料。 如果您提供足夠的新值，可以根據完全新的資料來做出預測。  
   
@@ -202,7 +202,7 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  從 REPLACE_MODEL_CASES 的時間戳記 1 開始，您會根據新的資料取得新的預測，新的資料會取代舊的訓練資料。  
   
- 查詢範例及有關使用的語法的詳細資訊的`REPLACE_MODEL_CASES`和`EXTEND_MODEL_CASES`，請參閱[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
+ 如需查詢範例和使用的語法的詳細資訊`REPLACE_MODEL_CASES`並`EXTEND_MODEL_CASES`，請參閱[PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)。  
   
 ###  <a name="bkmk_MissingValues"></a> 時間序列模型中的遺漏值替代  
  當您使用 `PREDICTION JOIN` 陳述式將新的資料加入時間序列模型時，新的資料集不能有任何遺漏值。 如果有任何數列不完整，此模型必須提供遺漏的值，其方式是使用 null、數值平均、特定的數值平均或預測值。 如果您指定 `EXTEND_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用根據原始模型的預測來取代遺漏值。 如果您使用`REPLACE_MODEL_CASES`，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]與您在中指定的值取代遺漏值*MISSING_VALUE_SUBSTITUTION*參數。  
@@ -213,7 +213,7 @@ AND NODE_TYPE = 15
 |||  
 |-|-|  
 |預測函數|使用方式|  
-|[Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
+|[延隔&#40;DMX&#41;](/sql/dmx/lag-dmx)|傳回目前案例的日期與定型集的最後日期之間的時間配量數目。<br /><br /> 這個函數的典型用法就是用來識別最近的定型案例，好讓您可以擷取有關案例的詳細資料。|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回指定之可預測資料行的節點識別碼。<br /><br /> 這個函數的典型用法就是用來識別產生特定預測值的節點，好讓您可以檢閱與此節點有關的案例，或擷取方程式和其他詳細資料。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回指定之可預測資料行中預測的標準差。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回指定之可預測資料行中預測的變異數。<br /><br /> 此函數會取代 INCLUDE_STATISTICS 引數，時間序列模型不支援這個引數。|  

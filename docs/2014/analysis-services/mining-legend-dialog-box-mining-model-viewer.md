@@ -1,5 +1,5 @@
 ---
-title: 採礦圖例對話方塊 （採礦模型檢視器） |Microsoft 文件
+title: 採礦圖例對話方塊 （採礦模型檢視器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.nodelegend.f1
 helpviewer_keywords:
 - Mining Legend dialog box
 ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eca2bab6a052919229d1c3eee46e779ea99c14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10a2fd0221f238d8b022482a7a0c3fe2b214c771
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144823"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306608"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>採礦圖例對話方塊 (採礦模型檢視器)
   可以使用 **[採礦圖例]** 對話方塊，取得有關採礦模型檢視器中所選節點或項目的詳細資訊。  

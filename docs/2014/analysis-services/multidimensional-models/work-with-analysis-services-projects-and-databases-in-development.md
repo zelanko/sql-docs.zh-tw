@@ -1,5 +1,5 @@
 ---
-title: 使用 Analysis Services 專案和資料庫開發階段 |Microsoft 文件
+title: 使用 Analysis Services 專案和資料庫開發階段 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
 ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f6aa0b033d0f30f2c4db017583d0f785e13215d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 19cf53ef3e3f118f53d9496d38c336eb3adb4c2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144828"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301238"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>在開發階段使用 Analysis Services 專案和資料庫
   您可以在專案模式或線上模式中使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 來開發 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 資料庫。  

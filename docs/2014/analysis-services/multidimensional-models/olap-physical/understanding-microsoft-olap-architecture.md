@@ -1,5 +1,5 @@
 ---
-title: 了解 Microsoft OLAP 架構 |Microsoft 文件
+title: 了解 Microsoft OLAP 架構 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services], about multidimensional data
 ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 21a217d19773290f4dac706781e5555a8969732d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a4a8f3506cb7b132d9ecdefc9f6609cf6e68c134
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234218"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>了解 Microsoft OLAP 架構
   使用這些主題可更加了解 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多維度資料庫，並規劃如何在商業智慧方案中實作多維度資料庫。  

@@ -1,14 +1,13 @@
 ---
-title: 容錯移轉及容錯移轉模式 （AlwaysOn 可用性群組） |Microsoft 文件
+title: 容錯移轉及容錯移轉模式 （AlwaysOn 可用性群組） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - Availability Groups [SQL Server], failover
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 caps.latest.revision: 71
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: a2bff986de8e70cca18a5dc978ed05db9cc42061
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 03cbd2d25c3695cc24438bc2b7f871b7cd5093f3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146605"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310438"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>容錯移轉及容錯移轉模式 (AlwaysOn 可用性群組)
   在可用性群組的內容中，可用性複本的主要角色和次要角色在稱為 *「容錯移轉」*(Failover) 的程序中通常可以互換。 容錯移轉共有三種形式，包括自動容錯移轉 (不會遺失資料)、規劃的手動容錯移轉 (不會遺失資料)，以及強制手動容錯移轉 (可能會遺失資料)，這種形式通常稱為「強制容錯移轉」。 自動及經過規劃的手動容錯移轉會保留您的所有資料。 可用性群組會在可用性複本層級容錯移轉。 亦即可用性群組會容錯移轉至其中一個次要複本 (目前的「容錯移轉目標」)。  
@@ -239,14 +238,14 @@ ms.locfileid: "36146605"
   
 1.  連接到主要複本。  
   
-2.  查詢`last_commit_lsn`(上次認可交易的 LSN) 和`last_commit_time`（上次認可時間） 資料行的[sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)動態管理檢視。  
+2.  查詢`last_commit_lsn`(上次認可交易的 LSN) 和`last_commit_time`（上次認可時間） 資料行[sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)動態管理檢視。  
   
 3.  比較每一個主要資料庫和其每個次要資料庫所傳回的值。 兩者的上次認可 LSN 之間的差異表示落後的程度。  
   
 4.  當一個資料庫或一組資料庫的落後程度超過給定期間的所需落後最大值時，您可以觸發警示。 例如，可由每分鐘在每個主要資料庫上執行的作業來執行查詢。 如果主要資料庫及其任何次要資料庫之間的 `last_commit_time` 差異已經超過上一次執行作業之後的復原點目標 (RPO) (例如 5 分鐘)，則此作業可能會引發警示。  
   
 > [!IMPORTANT]  
->  當 WSFC 叢集缺乏仲裁或已經強制仲裁，`last_commit_lsn`和`last_commit_time`都為 NULL。 如需如何在強制仲裁之後可能避免資料遺失的相關資訊，請參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)(Failover) 的程序中通常可以互換。  
+>  當 WSFC 叢集缺乏仲裁或已經強制仲裁，`last_commit_lsn`和`last_commit_time`都是 NULL。 如需如何在強制仲裁之後可能避免資料遺失的相關資訊，請參閱 [執行可用性群組的強制手動容錯移轉 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)(Failover) 的程序中通常可以互換。  
   
 ###  <a name="ForcedFailoverManagingDataLoss"></a> 管理潛在資料遺失  
  強制容錯移轉之後，就會暫停所有次要資料庫。 這包括舊的主要資料庫，在舊的主要複本再次上線之後會發現它現在是次要複本。 您必須以手動方式在每個次要複本上個別繼續每個暫停的資料庫。  
@@ -311,7 +310,7 @@ ms.locfileid: "36146605"
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [Microsoft SQL Server AlwaysOn 高可用性和災害復原的解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
 -   [SQL Server AlwaysOn 團隊部落格： 官方 SQL Server AlwaysOn 團隊部落格](http://blogs.msdn.com/b/sqlalwayson/)  
   

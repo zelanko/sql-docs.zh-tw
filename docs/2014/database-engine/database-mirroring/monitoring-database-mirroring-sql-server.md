@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 caps.latest.revision: 76
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 12d11c304ac3d3b1d3f121d4ba186ec09fc2cf13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 9798038b9b78ddc67bb8c43b7cce97e132c58ba1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036871"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247308"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>監視資料庫鏡像 (SQL Server)
   本節介紹「資料庫鏡像監視器」和 **sp_dbmmonitor** 系統預存程序、說明資料庫鏡像監視功能 (包括 [資料庫鏡像監視器作業] ) 的運作方式，以及摘要說明您可以監視的資料庫鏡像工作階段相關資訊。 另外，本節還會介紹如何為一組預先定義的資料庫鏡像事件定義警告臨界值，以及如何在任何資料庫鏡像事件上設定警示。  

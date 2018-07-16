@@ -1,5 +1,5 @@
 ---
-title: ReportFormatParameter 元素 (ASSL) |Microsoft 文件
+title: ReportFormatParameter 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ReportFormatParameter element
 ms.assetid: 064a8683-c44b-4261-be4d-32226d3d3119
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9df481067c68796c1b1ab1d029dbd08fbda13c9b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dfcc98e3abe60296e7ee28b57bc54fe89f5c2abe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245578"
 ---
 # <a name="reportformatparameter-element-assl"></a>ReportFormatParameter 元素 (ASSL)
-  包含名稱和值的參數來指定如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]格式化報表在執行階段。  
+  包含名稱和指定之參數的值如何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]報表的格式在執行階段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -63,11 +63,11 @@ ms.locfileid: "36036662"
 |子元素|[名稱](../properties/name-element-assl.md)，[值](../properties/value-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`ReportFormatParameter`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ReportAction>。  
+ 對應至父系的元素`ReportFormatParameter`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ReportAction>。  
   
 ## <a name="see-also"></a>另請參閱  
  [ReportAction 資料類型&#40;ASSL&#41;](../data-type/action-data-type-assl.md)   
- [Action 元素&#40;ASSL&#41;](action-element-assl.md)   
+ [動作項目&#40;ASSL&#41;](action-element-assl.md)   
  [物件&#40;ASSL&#41;](objects-assl.md)  
   
   

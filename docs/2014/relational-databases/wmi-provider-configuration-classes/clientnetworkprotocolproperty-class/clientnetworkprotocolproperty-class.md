@@ -1,5 +1,5 @@
 ---
-title: ClientNetworkProtocolProperty 類別 |Microsoft 文件
+title: ClientNetworkProtocolProperty 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,20 +20,20 @@ helpviewer_keywords:
 - ClientNetworkProtocolProperty class
 ms.assetid: a6e8adb5-2ffd-4c49-b9e4-9a1e459ff7b4
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: efa9a28a319a215b6b77af09701a266e11cee629
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 7c2a30253bad6e0750ff67a57f5071d992248ed7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319928"
 ---
 # <a name="clientnetworkprotocolproperty-class"></a>ClientNetworkProtocolProperty 類別
-  [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)代表用戶端網路通訊協定的屬性。  
+  [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)表示用戶端網路通訊協定的屬性。  
   
- 與[ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)，您可以執行下列工作：  
+ 具有[ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)，您可以執行下列工作：  
   
 -   設定索引值，以便從屬性清單中選取用戶端網路通訊協定屬性。  
   

@@ -1,5 +1,5 @@
 ---
-title: 設定量值群組屬性 |Microsoft 文件
+title: 設定量值群組屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - properties [Analysis Services], measure groups
 ms.assetid: fa66bdb6-60b8-413c-ac2a-00e4d09f60a2
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 279452ac51b16d66a5825893a34a94c4900c689d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ea0efc01fd0148abc04e689db088eb57ca91554
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304618"
 ---
 # <a name="configure-measure-group-properties"></a>設定量值群組屬性
   量值群組有一些屬性可讓您定義量值群組的運作方式。  

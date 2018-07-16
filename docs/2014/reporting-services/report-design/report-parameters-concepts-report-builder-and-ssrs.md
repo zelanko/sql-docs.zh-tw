@@ -1,5 +1,5 @@
 ---
-title: 報表參數概念 （報表產生器及 SSRS） |Microsoft 文件
+title: 報表參數概念 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b0aa2159-4e49-4713-8824-5ef9a9edbc62
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3df4f17a75018c3b78653f5b0fb9419d3835f9e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 860099dc49e0fe383d7b53ac379c4671ead2477b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137224"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296058"
 ---
 # <a name="report-parameters-concept-report-builder-and-ssrs"></a>報表參數概念 (報表產生器及 SSRS)
   您可以將參數加入至報表，以便連結相關報表、控制報表外觀、篩選報表資料，或是將報表的範圍縮小至特定使用者或位置。  
@@ -48,7 +48,7 @@ ms.locfileid: "36137224"
  如果您打算建立報表快照集、記錄或已發行報表的訂閱，則必須了解報表參數如何影響報表的設計需求。  
   
 ## <a name="see-also"></a>另請參閱  
- [報表撰寫概念&#40;報表產生器和 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [報表撰寫概念&#40;報表產生器及 SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [報表內嵌資料集和共用資料集 &#40;報表產生器及 SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [教學課程： 將參數加入至報表&#40;報表產生器&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   

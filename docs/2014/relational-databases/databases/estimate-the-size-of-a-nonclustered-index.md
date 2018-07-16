@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
 - size [SQL Server], tables
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 102701a984c6f35d38194c0d8a46c4ed63438936
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d2fb15614dbb72fd9e76bf62174f6b435429d4e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146094"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296648"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>估計非叢集索引的大小
   請遵循下列步驟來估計儲存非叢集索引所需的空間量：  
@@ -226,7 +226,7 @@ ms.locfileid: "36146094"
   
      ***Non-leaf_levels*** = 1 + log25 (1000年 / 25) = 3  
   
-     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，這是範例中所描述的頁數。  
+     ***Num_Index_Pages*** = 1000年 /(25<sup>3</sup>) + 1000年 / (25<sup>2</sup>) + 1000年 / (25<sup>1</sup>) = 1 + 2 + 40 = 43，這是此範例中所述的頁數。  
   
 3.  計算索引的大小 (每個分頁共有 8192 個位元組)：  
   

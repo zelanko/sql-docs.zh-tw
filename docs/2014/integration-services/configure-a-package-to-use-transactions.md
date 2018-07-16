@@ -1,5 +1,5 @@
 ---
-title: 封裝設定成使用交易 |Microsoft 文件
+title: 將封裝設定成使用交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8637409c0248506de68fa6615dcd6b9edbf7a5bf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e443740244e6e70336eb6c711e4e7ade7d2b698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146574"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306160"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>設定封裝來使用交易
   將封裝設定成使用交易時，您有兩個選項：  
@@ -33,9 +33,9 @@ ms.locfileid: "36146574"
  下列程序將描述如何設定這兩個選項。  
   
 ## <a name="configuring-a-single-transaction"></a>設定單一交易  
- 在這個選項中，封裝本身會起始單一交易。 您將套件設定為起始這筆交易之封裝的 TransactionOption 屬性設定`Required`。  
+ 在這個選項中，封裝本身會起始單一交易。 您將封裝設定成起始這筆交易之封裝的 TransactionOption 屬性設定`Required`。  
   
- 接著，您可以在這個單一交易中編列特定工作和容器。 若要編列工作或容器，在交易中的，您設定該工作或容器的 TransactionOption 屬性`Supported`。  
+ 接著，您可以在這個單一交易中編列特定工作和容器。 若要編列工作或容器，在交易中的，您可以設定該工作或容器的 TransactionOption 屬性`Supported`。  
   
 #### <a name="to-configure-a-package-to-use-a-single-transaction"></a>將封裝設定成使用單一交易  
   
@@ -47,11 +47,11 @@ ms.locfileid: "36146574"
   
 4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
   
-5.  在**屬性**視窗中，若要設定 TransactionOption 屬性`Required`。  
+5.  在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Required`。  
   
 6.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]。  
   
-7.  在**屬性**視窗中，若要設定 TransactionOption 屬性`Supported`。  
+7.  在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Supported`。  
   
     > [!NOTE]  
     >  若要在交易中編列連接，請註冊在交易中使用連接的工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)。  
@@ -73,18 +73,18 @@ ms.locfileid: "36146574"
   
 4.  以滑鼠右鍵按一下控制流程設計介面背景的任何位置，然後按一下 [屬性]。  
   
-5.  在**屬性**視窗中，若要設定 TransactionOption 屬性`Supported`。  
+5.  在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Supported`。  
   
     > [!NOTE]  
     >  封裝支援交易，但交易是由封裝中的工作或容器所啟動。  
   
 6.  在 [控制流程] 索引標籤的設計介面上，以滑鼠右鍵按一下要啟動其交易之封裝內的工作或容器，然後按一下 [屬性]。  
   
-7.  在**屬性**視窗中，若要設定 TransactionOption 屬性`Required`。  
+7.  在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Required`。  
   
 8.  如果交易由容器啟動，請以滑鼠右鍵按一下您要在交易中註冊的工作或容器，然後按一下 [屬性]。  
   
-9. 在**屬性**視窗中，若要設定 TransactionOption 屬性`Supported`。  
+9. 在 [**屬性**] 視窗中，將 TransactionOption 屬性設定為`Supported`。  
   
     > [!NOTE]  
     >  若要在交易中編列連接，請註冊在交易中使用連接的工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 連接](connection-manager/integration-services-ssis-connections.md)。  

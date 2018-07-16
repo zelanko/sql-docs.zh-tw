@@ -1,5 +1,5 @@
 ---
-title: 關聯模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft 文件
+title: 關聯模型的採礦模型內容 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
 - association algorithms [Analysis Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c9ea8207778697b10b0be844dbb8ca5d1c8f72fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d65a79697d42d5d91168edfb211ecb57d1e3229
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267600"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>關聯模型的採礦模型內容 (Analysis Services - 資料採礦)
   本主題說明使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 關聯規則演算法的模型專用的採礦模型內容。 如需與適用於所有模型類型採礦模型內容相關的一般及統計詞彙說明，請參閱[Mining Model Content (Analysis Services - Data Mining)](mining-model-content-analysis-services-data-mining.md) (採礦模型內容 &#40;Analysis Services - 資料採礦&#41;)。  
@@ -33,7 +33,7 @@ ms.locfileid: "36036292"
 ## <a name="understanding-the-structure-of-an-association-model"></a>了解關聯模型的結構  
  關聯模型有簡單的結構。 每個模型都擁有代表模型及其中繼資料的單一父節點，而每個父節點則擁有項目集和規則的一般清單。 項目集和規則並非組織成樹狀結構，而是先以項目集排列，再以規則排列，如下列圖表所示。  
   
- ![關聯模型的模型內容結構](../media/modelcontentstructure-assoc.gif "的關聯模型的模型內容結構")  
+ ![關聯模型的模型內容的結構](../media/modelcontentstructure-assoc.gif "的關聯模型的模型內容結構")  
   
  每個項目集都是包含在其本身的節點中 (NODE_TYPE = 7)。 「節點」包含項目集的定義、包含此項目集的案例數以及其他資訊。  
   

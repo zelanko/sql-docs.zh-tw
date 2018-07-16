@@ -1,5 +1,5 @@
 ---
-title: 第 3 課： 加入及處理模型 |Microsoft 文件
+title: 第 3 課： 加入及處理模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cc29927a-c368-4b8a-bbd0-af89a9f54dc9
 caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: a2b4a807d1ed37ab7a801930c951ccfa357a7c57
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: d5205dcbdb8a5e1ee1db6d716713f696d0f22460
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313276"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295968"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>第 3 課：加入及處理模型
-  上一課所建立的採礦結構包含了以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法為根據的單一採礦模型。 您可以使用這個模型來識別目標郵寄促銷活動的客戶。 不過，為確保您的分析很徹底，一般作法是使用不同的演算法建立相關的模型，然後比較其結果。 這種方式可讓您獲得不同角度的資料。 因此，您將建立另外兩個模型，然後處理及部署這兩個模型。  
+  上一課所建立的採礦結構包含了以 [!INCLUDE[msCoName](../includes/msconame-md.md)] 決策樹演算法為根據的單一採礦模型。 您可以使用此模型識別目標郵寄促銷活動的客戶。 不過，為確保您的分析很徹底，一般作法是使用不同的演算法建立相關的模型，然後比較其結果。 這種方式可讓您獲得不同角度的資料。 因此，您將建立另外兩個模型，然後處理及部署這兩個模型。  
   
  在這一課，您將會建立一組採礦模型，它將建議潛在客戶清單中最可能購買的客戶。  
   
- 若要完成的工作，在這一課，您將使用[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)和[Microsoft 貝氏機率分類演算法](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)。  
+ 若要完成的工作，在這一課，您會使用[Microsoft 群集演算法](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)並[Microsoft Naive Bayes Algorithm](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)。  
   
  這一課包含下列工作：  
   
@@ -44,6 +44,6 @@ ms.locfileid: "36313276"
  [第 4 課： 探索目標的郵寄模型&#40;基本資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [將採礦模型加入結構&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+ [將採礦模型加入結構中&#40;Analysis Services-資料採礦&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

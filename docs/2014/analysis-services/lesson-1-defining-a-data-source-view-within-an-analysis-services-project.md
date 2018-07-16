@@ -1,5 +1,5 @@
 ---
-title: 第 1 課： 定義資料來源檢視內的 Analysis Services 專案 |Microsoft 文件
+title: 第 1 課： 定義資料來源檢視中的 Analysis Services 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 56b27476650b88a77be4f00b62e76b742fc3774f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f64787a50373e2bb958d0c3851ff3f762a6eb83c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303088"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>第 1 課：在 Analysis Services 專案內定義資料來源檢視
   要在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中設計商業智慧應用程式，先從在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 中建立 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]專案開始。 在這個專案內，您要定義方案的所有元素，請從資料來源檢視開始。  
@@ -41,7 +41,7 @@ ms.locfileid: "36134832"
  將您的結果與在這一課中建立的範例專案檔案相比較。 如需下載此教學課程隨附之範例專案的詳細資訊，請參閱 CodePlex 之產品範例頁面上的 [SSAS Multidimensional Model Projects for SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) (適用於 SQL Server 2012 的 SSAS 多維度模型專案)。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課： 定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)  
+ [第 2 課：定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 Analysis Services 專案&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   

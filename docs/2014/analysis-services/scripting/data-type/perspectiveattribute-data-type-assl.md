@@ -1,5 +1,5 @@
 ---
-title: PerspectiveAttribute 資料類型 (ASSL) |Microsoft 文件
+title: PerspectiveAttribute 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - PerspectiveAttribute data type
 ms.assetid: bf4d45c1-e48d-4ada-bbab-49c3ac74948d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4e6125aa11dedf6fe1eda706e136caf989e3d4c0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e2f27d082f4d0ff13f736d00a3f6d521e830c402
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295558"
 ---
 # <a name="perspectiveattribute-data-type-assl"></a>PerspectiveAttribute 資料類型 (ASSL)
-  定義代表中屬性的相關資訊的基本資料類型[PerspectiveDimension](dimension-data-type-assl.md)項目。  
+  定義代表屬性中的相關資訊的基本資料類型[PerspectiveDimension](dimension-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,11 +59,11 @@ ms.locfileid: "36137171"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [AttributeHierarchyVisible](../properties/visible-element-assl.md)， [AttributeID](../properties/id-element-assl.md)， [DefaultMember](../objects/member-element-assl.md)|  
-|衍生的元素|[屬性](../objects/attribute-element-assl.md)([屬性](../collections/attributes-element-assl.md)集合[PerspectiveDimension](dimension-data-type-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [AttributeHierarchyVisible](../properties/visible-element-assl.md)， [AttributeID](../properties/id-element-assl.md)， [DefaultMember](../objects/member-element-assl.md)|  
+|衍生的元素|[屬性](../objects/attribute-element-assl.md)([屬性](../collections/attributes-element-assl.md)的集合[PerspectiveDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.PerspectiveAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

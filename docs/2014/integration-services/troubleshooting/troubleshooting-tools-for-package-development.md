@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, troubleshooting
 - SSIS packages, troubleshooting
@@ -19,13 +19,13 @@ ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aae2fac11aab58193883c43e1062e12be837e065
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4ee6252daa58a5e99b8fdd5be6099e8e9de936d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320678"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>疑難排解封裝開發的工具
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 包含在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中開發封裝時可以用於疑難排解封裝的功能和工具。  
@@ -47,9 +47,9 @@ ms.locfileid: "36134971"
   
 -   **無法使用資料來源時，將所有封裝和所有連線設為離線工作**。 您可以從 **[SSIS]** 功能表啟用 **[離線工作]** 。 不同於`DelayValidation`屬性，**離線工作**甚至在開啟封裝之前，會提供選項。 您也可以啟用 **[離線工作]** 來加速設計師中的作業，並只有在想要驗證封裝時才停用這個功能。  
   
--   **在執行階段前無效的封裝元素上設定 DelayValidation 屬性**。 您可以將封裝元素 (其組態在設計階段無效) 的 `DelayValidation` 設為 `True`，以避免發生驗證錯誤。 例如，您可能有一項會使用目的地資料表的資料流程工作，而這個目的地資料表卻要等到執行 SQL 工作在執行階段建立資料表後才會存在。 `DelayValidation`屬性可以在封裝層級，或個別工作和容器，其中包含封裝層級啟用。 通常，您必須保留此屬性設定為`True`上相同封裝元素部署封裝，以避免在執行階段發生相同的驗證錯誤時。  
+-   **在執行階段前無效的封裝元素上設定 DelayValidation 屬性**。 您可以將封裝元素 (其組態在設計階段無效) 的 `DelayValidation` 設為 `True`，以避免發生驗證錯誤。 例如，您可能有一項會使用目的地資料表的資料流程工作，而這個目的地資料表卻要等到執行 SQL 工作在執行階段建立資料表後才會存在。 `DelayValidation`屬性，可以在封裝層級，或在個別工作和容器封裝所包含的層級啟用。 通常，您必須保留此屬性設定為`True`相同封裝元素時您部署封裝，以避免在執行階段相同的驗證錯誤。  
   
-     `DelayValidation`屬性可以設定在一個資料流程工作，但無法針對個別資料流程元件。 將個別資料流程元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性設為 `false`，也可以達到類似的效果。 不過，當這個屬性的值是`false`，元件不會察覺的外部資料來源之中繼資料的變更。  
+     `DelayValidation`屬性可以設定在一個資料流程工作，但無法針對個別資料流程元件。 將個別資料流程元件的 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> 屬性設為 `false`，也可以達到類似的效果。 不過，當這個屬性的值是`false`，元件並不知道的外部資料來源的中繼資料的變更。  
   
  如果發生驗證時，此封裝所使用的資料庫物件遭到鎖定，驗證程序可能會停止回應。 在這些情況下， [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師也會停止回應。 您可以使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 來關閉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的關聯工作階段，以便繼續驗證。 您也可以使用本章節所述的設定來避開此問題。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "36134971"
     > [!NOTE]  
     >  當您為包含多個指令碼工作的封裝偵錯時，偵錯工具只會在一個指令碼工作中叫用中斷點，而且將會忽略其他指令碼工作中的中斷點。 如果指令碼工作是 [Foreach 迴圈] 或 [For 迴圈] 容器的一部分，偵錯工具會在迴圈的第一次反覆運算後，忽略指令碼工作中的中斷點。  
   
- 如需詳細資訊，請參閱 [Debugging Script](debugging-script.md)。 如需有關如何偵錯指令碼元件的建議，請參閱 [撰寫程式碼和偵錯指令碼元件] (.../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。  
+ 如需詳細資訊，請參閱 [Debugging Script](debugging-script.md)。 如需如何偵錯指令碼元件的建議，請參閱 [程式碼撰寫和偵錯指令碼元件] (../ extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md。  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>疑難排解沒有隨附描述的錯誤  
  如果您在封裝開發期間遇到沒有隨附描述的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 錯誤號碼，可以在 [Integration Services 錯誤和訊息參考](../integration-services-error-and-message-reference.md)中找到描述。 此清單這次沒有包含疑難排解資訊。  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解封裝執行的工具](troubleshooting-tools-for-package-execution.md)   
+ [封裝執行的疑難排解工具](troubleshooting-tools-for-package-execution.md)   
  [資料流程效能功能](../data-flow/data-flow-performance-features.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_ENUMERATORS 資料列集 |Microsoft 文件
+title: DISCOVER_ENUMERATORS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - DISCOVER_ENUMERATORS rowset
 ms.assetid: ddc7b13c-3135-4419-8166-eddd459167da
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2c4eb36f93faba7f32352de41d5c6fde4e0dac2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 328d37a9d010388c0cb8d0e7e9d251601e35f949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136726"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302708"
 ---
 # <a name="discoverenumerators-rowset"></a>DISCOVER_ENUMERATORS 資料列集
   針對特定的資料來源，傳回 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 所支援之列舉值 (Enumerator) 的名稱、資料類型和列舉 (Enumeration) 值的清單。 XMLA 提供者會發行它能辨識的所有列舉常數。  
   
- 如果您呼叫[探索](../../xmla/xml-elements-methods-discover.md)方法`DISCOVER_ENUMERATORS`中的列舉值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)項目，`Discover`方法會傳回`DISCOVER_ENUMERATORS`結構描述資料列。  
+ 如果您呼叫[Discover](../../xmla/xml-elements-methods-discover.md)方法`DISCOVER_ENUMERATORS`中的列舉值[RequestType](../../xmla/xml-elements-properties/type-element-xmla.md)項目`Discover`方法會傳回`DISCOVER_ENUMERATORS`結構描述資料列。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  每個列舉值都有多個元素，列舉中的每個值都有一個。 代表每個列舉值的資料列集是扁平的，而且屬於同一列舉的元素可以使用重複的列舉值名稱。  

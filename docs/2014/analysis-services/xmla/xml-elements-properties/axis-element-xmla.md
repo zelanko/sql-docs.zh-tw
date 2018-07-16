@@ -1,5 +1,5 @@
 ---
-title: Axis 元素 (XMLA) |Microsoft 文件
+title: Axis 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: e30ff03b6e1a58a079d35f8e846ed176c42a3a31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036629"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263224"
 ---
 # <a name="axis-element-xmla"></a>Axis 元素 (XMLA)
-  包含一組用來代表多維度資料集中所包含之單一軸的 tuple[座標軸](axes-element-xmla.md)項目，會使用[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
+  包含一組用來代表多維度資料集中所包含之單一軸的 tuple[軸](axes-element-xmla.md)使用的項目[MDDataSet](../xml-data-types/mddataset-data-type-xmla.md)所傳回的資料類型[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,18 +71,18 @@ ms.locfileid: "36036629"
  `Axis` 元素的內容會因 `AxisFormat` 方法所使用的 `Execute` XMLA 屬性值而不同。  
   
 ## <a name="tupleformat"></a>TupleFormat  
- 當用戶端應用程式設定`AxisFormat`屬性*TupleFormat*，軸就會表示為一組 tuple。 每個 `Axis` 元素都包含代表該軸上 Tuple 集合的 `Tuples` 元素。 每個 Tuple 都會使用包含該軸上每個階層之 `Tuple` 元素的 `Member` 元素來表示。  
+ 當用戶端應用程式設定`AxisFormat`屬性，以*TupleFormat*，軸就會表示為一組 tuple。 每個 `Axis` 元素都包含代表該軸上 Tuple 集合的 `Tuples` 元素。 每個 Tuple 都會使用包含該軸上每個階層之 `Tuple` 元素的 `Member` 元素來表示。  
   
 ## <a name="clusterformat"></a>ClusterFormat  
- 當用戶端應用程式設定`AxisFormat`屬性*ClusterFormat*，每個座標軸上的成員會分成的叢集，其中每個叢集代表每個階層的成員已排序集合之間的交叉乘積。 每個 `Axis` 元素都包含一個或多個 `CrossProduct` 元素。 每個 `CrossProduct` 元素都會針對該軸上的每個階層包含 `Members` 元素。  
+ 當用戶端應用程式設定`AxisFormat`屬性，以*ClusterFormat*，每個座標軸上的為成員會分成的叢集，其中每個叢集代表每個階層的成員已排序集合之間的交叉乘積。 每個 `Axis` 元素都包含一個或多個 `CrossProduct` 元素。 每個 `CrossProduct` 元素都會針對該軸上的每個階層包含 `Members` 元素。  
   
 ## <a name="customformat"></a>CustomFormat  
- 當用戶端應用程式設定`AxisFormat`屬性*CustomFormat*，值會被視為相同*TupleFormat* Analysis Services 執行個體的值。  
+ 當用戶端應用程式設定`AxisFormat`屬性，以*CustomFormat*，將值來處理相同*TupleFormat* Analysis Services 執行個體的值。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="description"></a>描述  
- 下列範例說明結構`Axis`時用戶端指定的項目*TupleFormat*或*CustomFormat*如`AxisFormat`指定下列的 XMLA 屬性軸的成員：  
+ 下列範例說明的結構`Axis`時用戶端指定的項目*TupleFormat*或是*CustomFormat*的`AxisFormat`指定下列的 XMLA 屬性座標軸的成員：  
   
 |||||  
 |-|-|-|-|  
@@ -132,7 +132,7 @@ ms.locfileid: "36036629"
 ```  
   
 ### <a name="description"></a>描述  
- 下列範例說明結構`Axis`時用戶端指定的項目*ClusterFormat*如`AxisFormat`XMLA 屬性，假設軸具有下列成員：  
+ 下列範例說明的結構`Axis`時用戶端指定的項目*ClusterFormat*如`AxisFormat`XMLA 屬性，假設軸具有下列成員：  
   
 ||||||  
 |-|-|-|-|-|  

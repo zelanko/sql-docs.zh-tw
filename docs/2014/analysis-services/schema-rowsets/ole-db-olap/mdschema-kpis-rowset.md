@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_KPIS 資料列集 |Microsoft 文件
+title: MDSCHEMA_KPIS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_KPIS rowset
 ms.assetid: 40fb5112-6a90-4455-82b3-8b6322490222
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28a5f4af179c058f822a773dc691383dbee028fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 391c27165b9b4482160b2a8396e64e46650aa87e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314768"
 ---
 # <a name="mdschemakpis-rowset"></a>MDSCHEMA_KPIS 資料列集
   描述資料庫內的關鍵效能指標 (KPI)。  
@@ -43,7 +43,7 @@ ms.locfileid: "36145486"
 |`KPI_NAME`|`DBTYPE_WSTR`||KPI 的名稱。|  
 |`KPI_CAPTION`|`DBTYPE_WSTR`||與 KPI 相關聯的標籤或標題。 主要用於顯示用途。 如果標題不存在，就會傳回 `KPI_NAME`。|  
 |`KPI_DESCRIPTION`|`DBTYPE_WSTR`||人們可讀取的 KPI 描述。|  
-|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||識別用戶端應用程式用於顯示成員之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和用戶端所提供的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要提供多個顯示資料夾，請使用分號 （;） 來分隔資料夾。|  
+|`KPI_DISPLAY_FOLDER`|`DBTYPE_WSTR`||識別用戶端應用程式用於顯示成員之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和所提供的用戶端[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要提供多個顯示資料夾，請使用分號 （;） 來分隔資料夾。|  
 |`KPI_VALUE`|`DBTYPE_WSTR`||KPI 值之量值維度中成員的唯一名稱。|  
 |`KPI_GOAL`|`DBTYPE_WSTR`||KPI Goal 之量值維度中成員的唯一名稱。<br /><br /> 如果沒有定義 Goal，就會傳回 `NULL`。|  
 |`KPI_STATUS`|`DBTYPE_WSTR`||KPI Status 的量值維度中成員的唯一名稱。<br /><br /> 如果沒有定義 Status，則會傳回 `NULL`。|  

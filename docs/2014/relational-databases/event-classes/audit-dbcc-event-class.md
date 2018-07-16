@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit DBCC event class
 ms.assetid: 73724190-d6b7-4f11-9446-78bcafa6c693
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 628be6dabb96f1e305b8199ac2f4f3fc3edea890
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1bf8851e6d4e55a59f6003c2a64840e6a429cee6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147175"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311958"
 ---
 # <a name="audit-dbcc-event-class"></a>稽核 DBCC 事件類別
   每次發出 DBCC 命令時，就會發生 **Audit DBCC** 事件類別。  
@@ -58,7 +58,7 @@ ms.locfileid: "36147175"
 |**成功**|**int**|1 = 成功。 0 = 失敗。 例如，值為 1 指出權限檢查成功，而值為 0 指出該檢查失敗。|23|是|  
 ||||||  
 ||||||  
-|**TextData**|**ntext**|DBCC 命令的 SQL 文字|@shouldalert|是|  
+|**TextData**|**ntext**|DBCC 命令的 SQL 文字|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
 |**XactSequence**|**bigint**|用來描述目前交易的 Token。|50|是|  
   

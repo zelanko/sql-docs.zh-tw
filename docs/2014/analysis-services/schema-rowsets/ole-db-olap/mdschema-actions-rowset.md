@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_ACTIONS 資料列集 |Microsoft 文件
+title: MDSCHEMA_ACTIONS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_ACTIONS rowset
 ms.assetid: f73081f8-ac51-4286-b46e-2b34e792c3e0
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5b3e3a4c91d998e0ba0459577f1e0b469ec7f78b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c7382056922a52e734df61015df85930682d0db0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136298"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319368"
 ---
 # <a name="mdschemaactions-rowset"></a>MDSCHEMA_ACTIONS 資料列集
   描述可用於用戶端應用程式的動作。  
@@ -43,11 +43,11 @@ ms.locfileid: "36136298"
 |`ACTION_TYPE`|`DBTYPE_I4`||點陣圖，可用於指定動作的觸發方法。 Msmd.h 檔案為此點陣圖定義下列的位元值常數：<br /><br /> -   `MDACTION_TYPE_URL` (`0x01`)<br />-   `MDACTION_TYPE_HTML` (`0x02`)<br />-   `MDACTION_TYPE_STATEMENT` (`0x04`)<br />-   `MDACTION_TYPE_DATASET` (`0x08`)<br />-   `MDACTION_TYPE_ROWSET` (`0x10`)<br />-   `MDACTION_TYPE_COMMANDLINE` (`0x20`)<br />-   `MDACTION_TYPE_PROPRIETARY` (`0x40`)<br />-   `MDACTION_TYPE_REPORT` (`0x80`)<br />-   `MDACTION_TYPE_DRILLTHROUGH` (`0x100`)|  
 |`COORDINATE`|`DBTYPE_WSTR`||多維度運算式 (MDX) 運算式，指定物件或要在其中執行動作的多維度空間中的座標。 用戶端應用程式必須負責提供此限制資料行的值。<br /><br /> `CORDINATE` 必須解決成 `COORDINATE_TYPE` 所指定的物件。|  
 |`COORDINATE_TYPE`|`DBTYPE_I4`||點陣圖，指定如何解譯 `COORDINATE` 限制資料行。 Msmd.h 檔案為此點陣圖定義下列的位元值常數：<br /><br /> -   `MDACTION_COORDINATE_CUBE` (`1`)<br />-   `MDACTION_COORDINATE_DIMENSION` (`2`)<br />     參考到維度階層。<br />-   `MDACTION_COORDINATE_LEVEL` (`3`)<br />-   `MDACTION_COORDINATE_MEMBER` (`4`)<br />-   `MDACTION_COORDINATE_SET` (`5`)<br />-   `MDACTION_COORDINATE_CELL` (`6`)|  
-|`ACTION_CAPTION`|`DBTYPE_WSTR`||如果未指定任何標題，且 DDL 中未指定任何翻譯，則此為動作名稱。<br /><br /> 如果指定了標題或翻譯，且 `CaptionIsMDX` 為 False，則下列其中一個字串：<br /><br /> 的適當語言翻譯。<br />如果找不到指定之語言的任何轉譯-指定的標題。<br />的如果沒有找到翻譯，且 DDL 中未指定標題動作名稱。<br /><br /> 如果指定了標題或翻譯，且 `CaptionIsMDX` 為 True，則字串會在找到 DDL 標題中所指定語言的適當翻譯或指定翻譯，並計算建立字串的公式後產生。<br /><br /> 如果動作是在 MDX 指令碼中指定，則沒有翻譯，且標題一定會被視為 MDX 運算式。|  
+|`ACTION_CAPTION`|`DBTYPE_WSTR`||如果未指定任何標題，且 DDL 中未指定任何翻譯，則此為動作名稱。<br /><br /> 如果指定了標題或翻譯，且 `CaptionIsMDX` 為 False，則下列其中一個字串：<br /><br /> -轉譯為適當的語言的。<br />如果找不到指定的語言的任何轉譯-指定的標題。<br />如果沒有找到翻譯，-動作名稱和標題在 DDL 中未指定。<br /><br /> 如果指定了標題或翻譯，且 `CaptionIsMDX` 為 True，則字串會在找到 DDL 標題中所指定語言的適當翻譯或指定翻譯，並計算建立字串的公式後產生。<br /><br /> 如果動作是在 MDX 指令碼中指定，則沒有翻譯，且標題一定會被視為 MDX 運算式。|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||動作的易記描述。|  
 |`CONTENT`|`DBTYPE_WSTR`||要執行之動作的運算式或內容。|  
 |`APPLICATION`|`DBTYPE_WSTR`||要用於執行動作的應用程式的名稱。|  
-|`INVOCATION`|`DBTYPE_I4`||如何叫用動作的相關資訊：<br /><br /> -   `MDACTION_INVOCATION_INTERACTIVE` (`1`) 指出在正常作業期間使用的一般動作。 這是此資料行的預設值。<br />-   `MDACTION_INVOCATION_ON_OPEN` (`2`) 表示第一次開啟 cube 時，應該執行此動作。<br />-   `MDACTION_INVOCATION_BATCH` (`4`) 表示執行的動作是做為批次作業的一部分或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]工作。<br /><br /> 這些列舉值會定義於 Msmd.h 檔案中。|  
+|`INVOCATION`|`DBTYPE_I4`||如何叫用動作的相關資訊：<br /><br /> -   `MDACTION_INVOCATION_INTERACTIVE` (`1`) 表示在正常作業期間使用的一般動作。 這是此資料行的預設值。<br />-   `MDACTION_INVOCATION_ON_OPEN` (`2`) 表示第一次開啟 cube 時，應該執行此動作。<br />-   `MDACTION_INVOCATION_BATCH` (`4`) 表示執行的動作是在批次作業或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]工作。<br /><br /> 這些列舉值會定義於 Msmd.h 檔案中。|  
   
  資料列集會按 `CATALOG_NAME`、`SCHEMA_NAME`、`CUBE_NAME` 和 `ACTION_NAME` 排序。  
   

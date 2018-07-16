@@ -1,5 +1,5 @@
 ---
-title: 量值群組 （資料分割索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 量值群組 （資料分割索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitionspane.measuregroupdetail.f1
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 205b5260d67421cffe8b05abb4c27243d1dc8386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a372e8418692c0db98332b7fa67d8563265d1de4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037113"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249438"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>量值群組 (資料分割索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師的 [資料分割] 索引標籤上，使用 [量值群組] 窗格來管理與 Cube 中每個量值群組相關聯的資料分割。  
@@ -67,7 +67,7 @@ ms.locfileid: "36037113"
 |選項|定義|  
 |------------|----------------|  
 |**加入商業智慧**|按一下以顯示 **[商業智慧精靈]** ，並將商業智慧功能加入至 Cube。 如需 [商業智慧精靈] 的詳細資訊，請參閱[商業智慧精靈 F1 說明](business-intelligence-wizard-f1-help.md)。|  
-|**新的資料分割**|按一下即可顯示 [資料分割精靈]，並在選取的量值群組中建立新的資料分割。|  
+|**新的磁碟分割**|按一下即可顯示 [資料分割精靈]，並在選取的量值群組中建立新的資料分割。|  
 |**重新命名分割區**|選取即可重新命名選取的分割區。|  
 |**刪除**|按一下以顯示 [刪除物件] 對話方塊，然後刪除選取的動作。<br /><br /> 注意：如果已選取回寫分割區，則會停用此選項。|  
 |**設計彙總**|按一下即可顯示 [彙總設計精靈]，並為選取的資料分割建立彙總設計。<br /><br /> 注意：如果已選取回寫分割區，則會停用此選項。|  

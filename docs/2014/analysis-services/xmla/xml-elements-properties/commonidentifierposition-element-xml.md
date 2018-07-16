@@ -1,5 +1,5 @@
 ---
-title: CommonIdentifierPosition 元素 (XML) |Microsoft 文件
+title: CommonIdentifierPosition 元素 (XML) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: c3b64132-3b2e-46f5-ae11-a3cb3c42099c
 caps.latest.revision: 6
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 6fc1e1354a84fc7f777c105e83ef2674b63f6a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 7d648b09d5fa005a290150a8aef91b89a328938b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036874"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267064"
 ---
 # <a name="commonidentifierposition-element-xml"></a>CommonIdentifierPosition 元素 (XML)
   包含有關元素在元素集合中的位置資訊。  

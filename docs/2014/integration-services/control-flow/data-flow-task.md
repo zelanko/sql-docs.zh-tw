@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataflowtask.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 21cc9dd846af38bcbe8985f883f75ec537f58573
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd0ffa2e898661a6685b9608a5e467312ae027c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135213"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320748"
 ---
 # <a name="data-flow-task"></a>資料流程工作
   資料流程工作會封裝在來源與目的地之間移動資料的資料流程引擎，並讓使用者在資料移動時轉換、清除及修改資料。 將資料流程工作加入封裝控制流程，使得封裝擷取、轉換和載入資料成為可能。  
@@ -48,14 +48,14 @@ ms.locfileid: "36135213"
  ![資料流程](../media/mw-dts-09.gif "資料流程")  
   
 ## <a name="log-entries"></a>記錄項目  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 也提供許多工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。 資料流程工作包含下列自訂記錄項目：  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供一組可用於所有工作的記錄事件。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 也提供自訂記錄項目，為許多工作。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../performance/integration-services-ssis-logging.md)和[自訂訊息以進行記錄](../custom-messages-for-logging.md)。 資料流程工作包含下列自訂記錄項目：  
   
 |記錄項目|描述|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|指出資料流程工作已經變更緩衝區的大小。 記錄項目會描述大小變更的原因，並列出暫存的新緩衝區大小。|  
-|`OnPipelinePostEndOfRowset`|表示該元件具有其結尾的資料列集的信號，這是由最後一個呼叫的`ProcessInput`方法。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
-|`OnPipelinePostPrimeOutput`|指出元件已經完成其上次呼叫`PrimeOutput`方法。 根據資料流程而定，可能會寫入多個記錄項目。 如果元件是來源，這個記錄項目則表示元件已經完成資料列的處理。|  
-|`OnPipelinePreEndOfRowset`|指出元件即將接收其結尾的資料列集的信號，這是由最後一個呼叫的`ProcessInput`方法。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
+|`OnPipelinePostEndOfRowset`|表示元件具有已指定其結束的資料列集信號，設定的最後一個呼叫所`ProcessInput`方法。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
+|`OnPipelinePostPrimeOutput`|指出元件已經完成其最後一次呼叫`PrimeOutput`方法。 根據資料流程而定，可能會寫入多個記錄項目。 如果元件是來源，這個記錄項目則表示元件已經完成資料列的處理。|  
+|`OnPipelinePreEndOfRowset`|指出元件即將接收其結束的資料列集訊號，它會設定的最後一個呼叫所`ProcessInput`方法。 處理輸入之資料流程中的每個元件都會寫入一個項目。 項目中包含元件的名稱。|  
 |`OnPipelinePrePrimeOutput`|指出元件即將從 `PrimeOutput` 方法接收其呼叫。 根據資料流程而定，可能會寫入多個記錄項目。|  
 |`OnPipelineRowsSent`|報告由 `ProcessInput` 方法之呼叫提供給元件輸入的資料列數目。 記錄項目會包含元件名稱。|  
 |`PipelineBufferLeak`|提供在緩衝區管理員停止之後使緩衝區保持運作之任何元件的相關資訊。 如果緩衝區仍然在作用中，就不會釋放緩衝區資源，並可能造成記憶體遺漏的問題。 記錄項目會提供元件的名稱和緩衝區的識別碼。|  
@@ -92,9 +92,9 @@ ms.locfileid: "36135213"
   
  例如，下表包含剖析成資料行的訊息：「資料列是提供給資料流程元件做為輸入。 :  : 1185 : OLE DB 來源輸出 : 1180 : 排序 : 1181 : 排序輸入 : 76」。 這個訊息是在資料列從 OLE DB 來源傳送到「排序」轉換時，由 `OnPipelineRowsSent` 事件寫入。  
   
-|「資料行」|描述|ReplTest1|  
+|「資料行」|描述|值|  
 |------------|-----------------|-----------|  
-|**PathID**|從值`ID`OLE DB 來源和 「 排序 」 轉換之間路徑的屬性。|1185|  
+|**PathID**|從值`ID`的 OLE DB 來源和 「 排序 」 轉換之間路徑的屬性。|1185|  
 |**PathName**|從值`Name`路徑屬性。|OLE DB 來源輸出|  
 |**ComponentID**|值`ID`「 排序 」 轉換的屬性。|1180|  
 |**ComponentName**|「排序」轉換之 `Name` 屬性的值。|排序|  

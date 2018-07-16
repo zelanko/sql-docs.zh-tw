@@ -22,15 +22,15 @@ helpviewer_keywords:
 - srv_paramtype
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 caps.latest.revision: 32
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 97ecfcb6060ac94424bf42e54fa80bc7e11d5ad1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7ec38d14a34ed7718c9bb58f6fb3802cc98d531c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136639"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294780"
 ---
 # <a name="srvparamtype-extended-stored-procedure-api"></a>srv_paramtype (擴充預存程序 API)
     

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c81867131974a7cf9f4bdd62b1ab84743a3b3fb6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: bc4a0923e5e0d337df82e87a9086e14b61a0e945
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305458"
 ---
 # <a name="transact-sql-debugger"></a>Transact-SQL 偵錯工具
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可協助您透過調查 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼的執行階段行為，找出程式碼中的錯誤。 在您將 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗設定成偵錯模式之後，就可以在特定的程式碼行上暫停執行作業，然後檢查這些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式所使用或傳回的資訊和資料。  
@@ -64,7 +64,7 @@ ms.locfileid: "36146727"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述如何設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具進行遠端偵錯。|[設定 TRANSACT-SQL 偵錯工具](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|描述如何設定 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具進行遠端偵錯。|[設定 Transact-SQL 偵錯工具](configure-firewall-rules-before-running-the-tsql-debugger.md)|  
 |描述如何啟動、停止和控制偵錯工具的作業。|[執行 Transact-SQL 偵錯工具](transact-sql-debugger.md)|  
 |描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具來逐步執行程式碼。|[逐步執行 Transact-SQL 程式碼](step-through-transact-sql-code.md)|  
 |描述如何使用偵錯工具來檢視 [!INCLUDE[tsql](../../includes/tsql-md.md)] 資料 (例如參數和變數) 以及系統資訊。|[Transact-SQL 偵錯工具資訊](transact-sql-debugger-information.md)|  

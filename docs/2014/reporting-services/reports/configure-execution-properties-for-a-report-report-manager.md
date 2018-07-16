@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report execution properties [Reporting Services]
 - reports [Reporting Services], properties
 - reports [Reporting Services], execution options
 ms.assetid: 73cc8dcc-ef80-40d7-9739-d33bba0eb28a
 caps.latest.revision: 40
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e739ba283864faf55891707e99bb482f469fc8ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: af4a6a8a01a5a07f0f050460f26998db2c1c8550
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137220"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315408"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>設定報表的執行屬性 (報表管理員)
   您可以設定報表處理選項，以便指定擷取報表資料的時間。 如果外部資料來源是在特定時間重新整理 (例如，每日或每週重新整理的資料倉儲)，而且您想要避免每次要求報表都擷取相同資料的負擔，排程報表的資料處理就很有用。 此外，如果您想要控制外部資料庫伺服器的處理負載，或者當您想要針對必須使用相同資料集的多位使用者提供一致的結果時，排程資料處理也很有用。 若為變動資料，視需要報表可能會在不同的時間產生不同的結果。 相對地，報表快照集可讓您針對包含相同時間資料的其他報表或分析工具，進行有效的比較。  
@@ -52,7 +52,7 @@ ms.locfileid: "36137220"
   
 ## <a name="see-also"></a>另請參閱  
  [設定報表處理屬性](../report-server/set-report-processing-properties.md)   
- [開啟和關閉報表&#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [開啟及關閉報表&#40;報表管理員&#41;](../reports/open-and-close-a-report-report-manager.md)   
  [內容頁&#40;報表管理員&#41;](../contents-page-report-manager.md)   
  [報表伺服器內容管理&#40;SSRS 原生模式&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
  [處理選項屬性頁面 &#40;報表管理員&#41;](../processing-options-properties-page-report-manager.md)  

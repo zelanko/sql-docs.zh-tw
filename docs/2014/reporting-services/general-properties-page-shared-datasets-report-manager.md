@@ -1,5 +1,5 @@
 ---
-title: 一般屬性頁面、 共用資料集 （報表管理員） |Microsoft 文件
+title: 一般屬性頁面、 共用資料集 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 10798e41-24c3-4e69-893b-7ee6af7fc958
 caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3378300841bb6ad4f37ee7b7da5d7add6e78adb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747121123f3a654ccd475913ffe8b4a8c7e79be0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290304"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>一般屬性頁面、共用資料集 (報表管理員)
   使用 [共用資料集] 頁面，即可檢視及管理共用資料集項目的屬性。  
@@ -59,7 +59,7 @@ ms.locfileid: "36137028"
  從報表伺服器資料庫中移除共用資料集。 刪除共用資料集會停用任何報表或快取版本。 若要重新啟動報表，您必須在報表撰寫工具中開啟每一個報表，並指定具有相同名稱和相同欄位集合的資料集。 或者，您也可以更新每個資料區參考，以使用含相同欄位集合的不同資料集。  
   
  **[移動]**  
- 將報表伺服器資料夾階層內的共用資料集重新定位放置。 按一下此按鈕會開啟 [移動項目] 頁面，您可在此瀏覽資料夾以選取新位置。 如需詳細資訊，請參閱[移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。  
+ 將報表伺服器資料夾階層內的共用資料集重新定位放置。 按一下此按鈕會開啟 [移動項目] 頁面，您可在此瀏覽資料夾以選取新位置。 如需詳細資訊，請參閱 <<c0> [ 移動項目頁面&#40;報表管理員&#41;](../../2014/reporting-services/move-items-page-report-manager.md)。</c0>  
   
  **下載**  
  擷取共用資料集定義的複本。 視電腦上定義的檔案關聯而定，檔案會在 Visual Studio 或其他應用程式中開啟。 在大多數情況下，共用資料集會開啟為 XML 檔案。  

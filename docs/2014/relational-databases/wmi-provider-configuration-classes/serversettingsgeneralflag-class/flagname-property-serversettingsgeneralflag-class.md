@@ -1,5 +1,5 @@
 ---
-title: FlagName 屬性 （ServerSettingsGeneralFlag 類別） |Microsoft 文件
+title: FlagName 屬性 （ServerSettingsGeneralFlag 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - FlagName property
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1f17e4af06f6f4e1c61c861bf2769f2f89f2b283
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 5301ee43c8f4fde1d0a8b25541ada2e494aef43c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313388"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>FlagName 屬性 (ServerSettingsGeneralFlag 類別)
   取得旗標的名稱。  

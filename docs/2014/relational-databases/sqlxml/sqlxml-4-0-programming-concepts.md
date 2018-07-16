@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 程式設計概念 |Microsoft 文件
+title: SQLXML 4.0 程式設計概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQLXML
 ms.assetid: 5a11cda2-b8a3-4453-848f-641afdaa7024
 caps.latest.revision: 37
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2ab9bd2ff6cfddcf96e4844eb9ea14eea414b650
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5d745284f575feb39f488f0667f5ab976144392e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227070"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
   SQLXML 3.0 會以 Web 發行的形式提供了額外的用戶端 XML 功能以及現有功能的增強功能，例如註解 XSD 結構描述、XML 大量載入、Web 服務 (SOAP) 支援和 Updategram。  
@@ -47,7 +47,7 @@ ms.locfileid: "36036971"
  [執行 SQLXML 範例的需求](requirements-for-running-sqlxml-examples.md)  
  描述從所提供的 SQLXML 範例建立工作範例的需求。  
   
- [用戶端和伺服器端格式&#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [用戶端和伺服器端格式設定&#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  提供用戶端和伺服器端之格式設定的相關資訊和比較，包括用來建構 XML 文件的 FOR XML 命令。  
   
  [SQLXML 4.0 中的註解式 XSD 結構描述](annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -62,10 +62,10 @@ ms.locfileid: "36036971"
  [執行大量載入 XML 資料的&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  描述如何在 SQLXML 4.0 中大量載入 XML。  
   
- [SQLXML 4.0 資料存取元件](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
+ [SQLXML 4.0 Data Access Components](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  提供 SQLXMLOLEDB 提供者的說明以及其他 SQLXML 4.0 資料存取元件的連結。  
   
- [SQLXML 4.0.NET Framework 支援](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
+ [SQLXML 4.0 .NET Framework 支援](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
  描述 .NET Framework 的 SQLXML 4.0 支援。  
   
  [快取範本、 XSL 和結構描述&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  

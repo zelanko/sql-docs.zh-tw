@@ -1,5 +1,5 @@
 ---
-title: 支援的資料來源 (SSAS 多維度) |Microsoft 文件
+title: 支援的資料來源 (SSAS 多維度) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Analysis Services, data sources
 - data sources [Analysis Services], about data sources
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 caps.latest.revision: 59
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 130e0e904dcd60b8dc7838cfc8e57f7589739857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7c4d8c3c37b63568da63d65e9548b50c44bcc455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136089"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301168"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>資料來源支援 (SSAS 多維度)
   此主題描述可用於多維度模型的資料來源類型。  
@@ -50,13 +50,13 @@ ms.locfileid: "36136089"
   
  <sup>1</sup>多維度方案不支援 ODBC 資料來源。 雖然 Analysis Services 本身會處理連接，但是 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中用於建立方案的設計工具無法連接至 ODBC 資料來源，即使使用 MSDASQL 驅動程式亦然。 如果您的業務需求包含 ODBC 資料來源，請考慮改為建立表格式方案。  
   
- <sup>2</sup>如需詳細資訊，請參閱[!INCLUDE[ssSDS](../../includes/sssds-md.md)]上[azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856)。  
+ <sup>2</sup>如需詳細資訊，請參閱 <<c2> [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上[azure.microsoft.com](http://go.microsoft.com/fwlink/?LinkID=157856)。  
   
- <sup>3</sup>如需有關[!INCLUDE[ssSDS](../../includes/sssds-md.md)]PDW，請參閱[SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)。  
+ <sup>3</sup>如需詳細資訊[!INCLUDE[ssSDS](../../includes/sssds-md.md)]PDW，請參閱[SQL Server Parallel Data Warehouse](http://go.microsoft.com/fwlink/?LinkId=150895)。  
   
  <sup>4</sup>在某些情況下，使用 MSDAORA OLE DB 提供者可能會造成連接錯誤，特別是使用較新版本的 Oracle。 若一旦遭遇任何錯誤，建議您改用列於 Oracle 底下的任一其他提供者。  
   
- <sup>5</sup>某些功能需要執行內部部署 SQL Server 關聯式資料庫。 具體而言，回寫和 ROLAP 儲存會要求基礎資料來源為 SQL Server 關聯式資料庫。  
+ <sup>5</sup>有些功能需要內部部署上執行的 SQL Server 關聯式資料庫。 具體而言，回寫和 ROLAP 儲存會要求基礎資料來源為 SQL Server 關聯式資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
  [支援的資料來源&#40;SSAS 表格式&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   

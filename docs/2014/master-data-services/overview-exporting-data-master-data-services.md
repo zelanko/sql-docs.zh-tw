@@ -1,5 +1,5 @@
 ---
-title: 匯出資料 (Master Data Services) |Microsoft 文件
+title: 匯出資料 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - exporting data [Master Data Services]
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
 caps.latest.revision: 9
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 656578a35e70b8371056330e0edec69073816687
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 2d42511c3e7fecfba3f1a8fd92e9f8633564bf17
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332158"
 ---
 # <a name="exporting-data-master-data-services"></a>匯出資料 (Master Data Services)
   您可以匯出[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]資料至訂閱系統建立訂閱檢視。 然後，任何訂閱系統可以檢視 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫中的已發行資料。 如需檢視的詳細資訊，請參閱 [檢視](../relational-databases/views/views.md)。  
@@ -51,7 +51,7 @@ ms.locfileid: "36035011"
 |工作描述|主題|  
 |----------------------|-----------|  
 |建立主要資料的訂閱檢視。|[建立訂閱檢視&#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
-|刪除現有的訂閱檢視。|[刪除訂閱檢視&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
+|刪除現有的訂閱檢視。|[刪除訂用帳戶檢視&#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>相關內容  
   

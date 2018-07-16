@@ -1,5 +1,5 @@
 ---
-title: 編寫擴充的事件工作階段 |Microsoft 文件
+title: 指令碼擴充的事件工作階段 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 71b9918e2f05efcc5a8720dcedeef023392f99ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c199c5e222457deef83a876974d6856ec1a2f047
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036854"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233739"
 ---
 # <a name="script-an-extended-event-session"></a>編寫擴充事件工作階段的指令碼
   本主題說明如何編寫事件工作階段的指令碼。 您可以匯出、更改或卸除事件工作階段，或是在以下目標中卸除及建立事件工作階段：  
   
--   **新增查詢編輯器視窗**  
+-   **新的 [查詢編輯器] 視窗**  
   
 -   **檔案**  
   

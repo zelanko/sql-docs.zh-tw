@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_COMMAND_OBJECTS 資料列集 |Microsoft 文件
+title: DISCOVER_COMMAND_OBJECTS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_COMMAND_OBJECTS rowset
 ms.assetid: 325114ee-3a50-4504-9782-dbf7c1a44778
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c53fccdecc824bd123312a881c1ddcdbcae6060a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78970be3b1ed127ad25e4c27fcf81044b1eb9dca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261194"
 ---
 # <a name="discovercommandobjects-rowset"></a>DISCOVER_COMMAND_OBJECTS 資料列集
   提供參考命令使用中之物件的資源使用量與活動的有關資訊。  
@@ -59,7 +59,7 @@ ms.locfileid: "36036903"
   
  下表將提供可識別此資料列集的 GUID 和字串值。  
   
-|引數|ReplTest1|  
+|引數|值|  
 |--------------|-----------|  
 |GUID|a07ccd35-8148-11d0-87bb-00c04fc33942|  
 |ADOMDNAME|CommandObjects|  

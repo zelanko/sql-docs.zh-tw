@@ -1,5 +1,5 @@
 ---
-title: 檔案連接管理員編輯器 |Microsoft 文件
+title: 檔案連接管理員編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fileconnectionmanager.f1
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 caps.latest.revision: 22
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 95a37202bece446dce6b8a3173415e9d0861ec60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0691e6d8b6bebec04d2126bba0caa8b14ed3cdd1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146989"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311938"
 ---
 # <a name="file-connection-manager-editor"></a>檔案連接管理員編輯器
   使用 **[檔案連接管理員編輯器]** 對話方塊，以指定用來連接到檔案或資料夾的屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "36146989"
  **使用類型**  
  指定 [檔案連線管理員] 是否連接到現有的檔案或資料夾，或者建立新檔案或資料夾。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |建立檔案|在執行階段建立新檔案。|  
 |現有的檔案|使用現有的檔案|  

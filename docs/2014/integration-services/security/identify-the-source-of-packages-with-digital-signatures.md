@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -19,13 +19,13 @@ ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e1657156b61b3f87fb639394b6624f8e0a209207
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b744fb7d966fc7079cf05072f94f425d79e2b34
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136656"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320658"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>使用數位簽章來識別封裝的來源
   您可以使用數位憑證來簽署 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，以便識別其來源。 當您已經使用數位憑證來簽署封裝之後，就可以讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查數位簽章，然後再載入封裝。 若要讓 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 檢查簽章，您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 或 **dtexec** 公用程式 (dtexec.exe) 中設定選項，或設定選擇性登錄值。  
@@ -38,7 +38,7 @@ ms.locfileid: "36136656"
   
 -   若要在設計階段載入封裝之前檢查所有封裝的數位簽章，請在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中設定 [載入封裝時檢查數位簽章] 選項。 這個選項是 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中所有封裝的全域設定。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
--   若要檢查個別封裝的數位簽章，請指定`/VerifyS[igned]`選項，當您使用**dtexec**執行封裝公用程式。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。  
+-   若要檢查個別封裝的數位簽章，請指定`/VerifyS[igned]`選項使用時**dtexec**執行封裝公用程式。 如需詳細資訊，請參閱 [dtexec Utility](../packages/dtexec-utility.md)。  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>設定檢查封裝簽章的登錄值  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 也支援選擇性登錄值 **BlockedSignatureStates**，可讓您用來管理載入已簽署和未簽署封裝的組織原則。 如果封裝未經簽署或是具有無效或不受信任的簽章，此登錄值可以防止載入封裝。 如需如何設定此登錄值的詳細資訊，請參閱[透過設定登錄值實作簽署原則](../implement-a-signing-policy-by-setting-a-registry-value.md)。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 applies_to:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 caps.latest.revision: 34
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: aece3c6dded9e11296be8fde8718149425cabc90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a4a5de8fea73ee5eddf8c9b5eae8eea996a53629
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135395"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290974"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed 事件類別
   RPC:Completed 事件類別表示已經完成遠端程序呼叫。  
@@ -60,7 +60,7 @@ ms.locfileid: "36135395"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|遠端程序呼叫的文字。|@shouldalert|是|  
+|TextData|`ntext`|遠端程序呼叫的文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |Writes|`bigint`|遠端程序呼叫所發出的分頁寫入數。|17|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler-工具選項 （一般選項頁面） |Microsoft 文件
+title: SQL Server Profiler-工具選項 （一般選項頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.tools.generaloptions.f1
 helpviewer_keywords:
 - General Options dialog box
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fed3aec717b21b3c3486d5fd25b27892969de44c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 695c1fc16604c4ce0e0a49da67016acbaa663d50
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035494"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243068"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-工具選項 （一般選項頁面）
   使用 [一般選項] 對話方塊來檢視或指定下列選項。  

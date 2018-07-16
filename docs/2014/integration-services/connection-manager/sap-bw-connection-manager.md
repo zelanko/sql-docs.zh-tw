@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 61106ce6c6eca051f6ad762577d0b4ea72d021a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a541988192c0233426a8f08a79743b822d3f3709
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37223755"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 連接管理員
   SAP BW 連接管理員是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 的連接管理員元件。 因此，SAP BW 連接管理員會提供 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW 來源和目的地元件所需之 SAP Netweaver BW 版本 7 系統的連接 (使用 SAP BW 連線管理員的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 元件只有屬於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Connector 1.1 for SAP BW 封裝一部分的 SAP BW 來源和目的地)。  
@@ -27,7 +27,7 @@ ms.locfileid: "36037517"
 > [!IMPORTANT]  
 >  Microsoft Connector 1.1 for SAP BW 的文件集是假設使用者已熟悉 SAP Netweaver BW 環境。 如需有關 SAP Netweaver BW 的詳細資訊，或有關如何設定 SAP Netweaver BW 物件與處理序的詳細資訊，請參閱 SAP 文件集。  
   
- 當您將 SAP BW 連接管理員加入封裝時，`ConnectionManagerType`連接管理員的屬性設定為`SAPBI`。  
+ 當您將 SAP BW 連接管理員加入封裝時，`ConnectionManagerType`連接管理員屬性設定為`SAPBI`。  
   
 ## <a name="configuring-the-sap-bw-connection-manager"></a>設定 SAP BW 連接管理員  
  您可以利用下列方式設定 SAP BW 連接管理員：  
@@ -52,7 +52,7 @@ ms.locfileid: "36037517"
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>使用 SSIS 設計師設定來源  
  如需有關可以在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中設定之 SAP BW 連接管理員屬性的詳細資訊，請按下列主題：  
   
--   [SAP BW 連接管理員編輯器](../sap-bw-connection-manager-editor.md)  
+-   [SAP BW 連線管理員編輯器](../sap-bw-connection-manager-editor.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Microsoft Connector 1.1 for SAP BW 元件](../microsoft-connector-for-sap-bw-components.md)  

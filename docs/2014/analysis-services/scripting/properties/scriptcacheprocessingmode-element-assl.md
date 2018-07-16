@@ -1,5 +1,5 @@
 ---
-title: ScriptCacheProcessingMode 元素 (ASSL) |Microsoft 文件
+title: ScriptCacheProcessingMode 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ScriptCacheProcessingMode element
 ms.assetid: 95c0723c-69a4-43e7-b743-f712180a7681
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0566ea0411eb3f6574d03e738017d8ca6a5bdf2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de4bac4bfbfa0ab7a6471f107c594194023292a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147032"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253070"
 ---
 # <a name="scriptcacheprocessingmode-element-assl"></a>ScriptCacheProcessingMode 元素 (ASSL)
   指出伺服器應該在處理期間或處理之後建立指令碼快取。  
@@ -64,14 +64,14 @@ ms.locfileid: "36147032"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*規則*|伺服器會在處理期間建立指令碼快取。|  
 |*延遲*|伺服器會在處理之後建立指令碼快取。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `ScriptCacheProcessingMode` 允許值的列舉是 <xref:Microsoft.AnalysisServices.ScriptCacheProcessingMode>。  
   
- 對應目的父代的項目`ScriptCacheProcessingMode`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Cube>。  
+ 對應至父系的元素`ScriptCacheProcessingMode`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Cube>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

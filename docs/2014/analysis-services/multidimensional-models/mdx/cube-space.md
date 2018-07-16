@@ -1,5 +1,5 @@
 ---
-title: Cube 空間 |Microsoft 文件
+title: Cube 空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a8be8107b3d18aca49cf8b670131ef695d5901f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146831"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37282184"
 ---
 # <a name="cube-space"></a>Cube 空間
   「Cube 空間」是 Cube 屬性階層中具有 Cube 量值之成員的乘積。 因此，Cube 空間是由 Cube 所有屬性階層成員和 Cube 量值的組合乘積所決定，定義了 Cube 的大小上限。 請務必注意，此空間包含屬性階層成員的所有可能組合，甚至還包含在真實世界中被視為不可能的組合，例如城市為巴黎而國家/地區為英國、西班牙、日本、印度或其他地方的組合。  
@@ -116,7 +116,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  請注意，`WITH`關鍵字搭配[CurrentMember (MDX)](/sql/mdx/current-mdx)和[Name (MDX)](/sql/mdx/members-string-mdx)函式來建立查詢中使用的導出的成員。 如需詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)。  
+>  請注意，`WITH`關鍵字搭配[CurrentMember (MDX)](/sql/mdx/current-mdx)並[Name (MDX)](/sql/mdx/members-string-mdx)函式來建立查詢中所使用的導出的成員。 如需詳細資訊，請參閱[基本 MDX 查詢 &#40;MDX&#41;](mdx-query-the-basic-query.md)。  
   
  在上述查詢中，會傳回與 State 屬性階層之每個成員相關的 Country 屬性階層的成員名稱。 預期的 Country 成員會出現 (因為 City 和 Country 屬性之間已定義屬性關聯性)。 然而，如果相同維度中的多個屬性階層之間沒有定義屬性關聯性，則會傳回 (全部) 成員，如下列查詢所說明。  
   
@@ -133,7 +133,7 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>計算內容  
   
 ## <a name="see-also"></a>另請參閱  
- [重要概念，在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [重要的概念在 MDX 中的&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuple](tuples.md)   
  [「 自動存在 」](autoexists.md)   
  [使用成員、 Tuple 和集合&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   

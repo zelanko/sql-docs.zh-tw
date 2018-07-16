@@ -1,5 +1,5 @@
 ---
-title: Tuple 元素 (XMLA) |Microsoft 文件
+title: Tuple 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: fe470d60aa008723034e1bdbf95f3ecf593c8a3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037537"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233688"
 ---
 # <a name="tuple-element-xmla"></a>Tuple 元素 (XMLA)
   包含 [Tuples](tuples-element-xmla.md) 父元素所包含之 [Member](member-element-xmla.md) 元素的集合。  
@@ -65,10 +65,10 @@ ms.locfileid: "36037537"
 |子元素|[成員](member-element-xmla.md)|  
   
 ## <a name="remarks"></a>備註  
- 當用戶端應用程式設定`AxisFormat`屬性*TupleFormat*，軸就會表示為一組 tuple。 每個 `Axis` 元素都包含代表該軸上 Tuple 集合的 `Tuples` 元素。 每個 Tuple 都會使用包含該軸上每個階層之 `Tuple` 元素的 `Member` 元素來表示。  
+ 當用戶端應用程式設定`AxisFormat`屬性，以*TupleFormat*，軸就會表示為一組 tuple。 每個 `Axis` 元素都包含代表該軸上 Tuple 集合的 `Tuples` 元素。 每個 Tuple 都會使用包含該軸上每個階層之 `Tuple` 元素的 `Member` 元素來表示。  
   
 ## <a name="example"></a>範例  
- 下列範例說明結構`Tuple`時用戶端指定項目*TupleFormat*或*CustomFormat*如`AxisFormat`指定下列的 XMLA 屬性軸的成員：  
+ 下列範例說明的結構`Tuple`時用戶端指定的項目*TupleFormat*或是*CustomFormat*的`AxisFormat`指定下列的 XMLA 屬性座標軸的成員：  
   
 |||||  
 |-|-|-|-|  

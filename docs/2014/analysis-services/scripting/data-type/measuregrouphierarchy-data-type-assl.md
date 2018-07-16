@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupHierarchy 資料類型 (ASSL) |Microsoft 文件
+title: MeasureGroupHierarchy 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupHierarchy data type
 ms.assetid: 63c2fd97-d7ad-4715-8c49-24d684bc92d7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a2a6270d9480241ff996f60631ae9a849f45cf98
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e34d9c7983ea1a94c8c303e746e28191318f2c58
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035758"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245638"
 ---
 # <a name="measuregrouphierarchy-data-type-assl"></a>MeasureGroupHierarchy 資料類型 (ASSL)
   定義代表量值群組中某個階層之相關資訊的基本資料類型。  
@@ -57,8 +57,8 @@ ms.locfileid: "36035758"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [HierarchyID](../properties/id-element-assl.md)|  
-|衍生的元素|[階層](../objects/hierarchy-element-assl.md)([階層](../collections/hierarchies-element-assl.md)集合[RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [HierarchyID](../properties/id-element-assl.md)|  
+|衍生的元素|[階層](../objects/hierarchy-element-assl.md)([階層](../collections/hierarchies-element-assl.md)的集合[RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

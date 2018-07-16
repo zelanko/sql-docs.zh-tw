@@ -1,5 +1,5 @@
 ---
-title: 建立資料庫郵件設定檔和帳戶對話方塊 （Master Data Services 組態管理員） |Microsoft 文件
+title: 建立 Database Mail 設定檔和帳戶對話方塊 （Master Data Services 組態管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 82901acbfe20a0ec475fc859935c8abdf472b300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: ef6d589c42c6abfd72975d1fbc1c98de76d908fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137378"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289124"
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box-master-data-services-configuration-manager"></a>建立 Database Mail 設定檔和帳戶對話方塊 (Master Data Services 組態管理員)
   使用 [建立 Database Mail 設定檔和帳戶] 對話方塊，即可建立 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 資料庫的 Database Mail 設定檔和 Database Mail 帳戶。 當商務規則驗證失敗時，將會使用這個設定檔來透過電子郵件通知使用者和群組。  
@@ -44,7 +44,7 @@ ms.locfileid: "36137378"
 |**電子郵件地址**|輸入帳戶之電子郵件地址的名稱。 這是寄出電子郵件的電子郵件地址，而且必須使用以下格式： *email_name*@*domain_name*。 範例電子郵件地址為 sales@contoso.com。|  
 |**顯示名稱**|選擇性設定。 輸入要在這個帳戶所送出的電子郵件訊息上顯示的名稱。 範例顯示名稱為 Contoso 業務小組。|  
 |**回覆電子郵件地址**|選擇性設定。 輸入將用來回覆這個帳戶所送出之電子郵件訊息的電子郵件地址。 範例回覆電子郵件地址為 admin@contoso.com。|  
-|**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 範例 SMTP 伺服器格式為`smtp.` *< company_name >*`.com`。 如需相關說明，請洽詢您的郵件管理員。|  
+|**SMTP 伺服器**|輸入帳戶用來傳送電子郵件的 SMTP 伺服器名稱或 IP 位址。 範例 SMTP 伺服器格式為`smtp.` *< 公司名稱 >*`.com`。 如需相關說明，請洽詢您的郵件管理員。|  
 |**通訊埠編號**|輸入此帳戶之 SMTP 伺服器的通訊埠編號。 預設 SMTP 通訊埠為 25。|  
 |**這個伺服器需要安全連接 (SSL)**|使用安全通訊端層 (SSL) 將通訊加密。|  
   
@@ -62,6 +62,6 @@ ms.locfileid: "36137378"
   
 ## <a name="see-also"></a>另請參閱  
  [資料庫組態頁面 &#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
- [設定 Master Data Services 資料庫與網站](set-up-the-database-and-website-for-master-data-services.md)  
+ [設定 Master Data Services 的資料庫與網站](set-up-the-database-and-website-for-master-data-services.md)  
   
   

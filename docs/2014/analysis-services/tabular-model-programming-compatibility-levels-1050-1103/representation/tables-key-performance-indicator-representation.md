@@ -1,5 +1,5 @@
 ---
-title: 主要效能指標表示法 （表格式） |Microsoft 文件
+title: 主要效能指標表示法 （表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4673e33ba3b6ecce58d8d4c06a12d7311b98cde0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cdb38afa672655dbb0a644783e7dc3fadb180b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135689"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295408"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>關鍵效能指標表示法 (表格式)
   KPI 是用來針對目標值，測量由基底量值定義之值的效能。  
@@ -226,6 +226,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>AMO2Tabular 範例  
- 若要了解如何使用 AMO 建立及操作關鍵效能指標表示法，請參閱 「 AMO 對表格式範例的原始程式碼特別要檢查以下的原始程式檔： AddKPIs.cs。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
+ 若要了解如何使用 AMO 建立及操作關鍵效能指標表示法，請參閱 「 AMO 對表格式 」 範例; 的原始程式碼特別要檢查以下的原始程式檔： AddKPIs.cs。 您可以在 Codeplex 上取得範例。 有關此程式碼的重要注意事項：此程式碼的提供目的只是為了支援這裡所說明的邏輯概念，不應該用於實際執行環境，也不應該用於教學以外的其他用途。  
   
   

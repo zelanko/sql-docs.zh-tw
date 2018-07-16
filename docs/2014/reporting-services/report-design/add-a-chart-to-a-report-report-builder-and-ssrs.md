@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6b595dc-f775-4a53-8554-74a0bf9335ec
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e2a663799a6f4559d3720638b1383b648562cdec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: db831f0a92962eaa12d220d31d762d2c591e0d45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309378"
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>將圖表加入至報表 (報表產生器及 SSRS)
   當您想要以視覺格式摘要資料時，請使用圖表資料區域。 針對您要呈現的資料類型選擇適當的圖表類型相當重要。 因為這會影響以圖表形式放入資料時可以解譯資料的程度。 如需詳細資訊，請參閱[圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "36136115"
   
 ### <a name="to-add-a-chart-to-a-report"></a>若要將圖表加入至報表  
   
-1.  建立報表，並定義資料集。 如需詳細資訊，請參閱[加入至報表的資料&#40;報表產生器及 SSRS&#41;](../report-data/report-datasets-ssrs.md)。  
+1.  建立報表，並定義資料集。 如需詳細資訊，請參閱 <<c0> [ 將資料加入至報表&#40;報表產生器及 SSRS&#41;](../report-data/report-datasets-ssrs.md)。</c0>  
   
 2.  在 [插入] 索引標籤上，按一下 [圖表]，然後按一下 [插入圖表]。  
   

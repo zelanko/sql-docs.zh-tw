@@ -1,5 +1,5 @@
 ---
-title: SharePoint 2013 的 PowerPivot 資料重新整理 |Microsoft 文件
+title: SharePoint 2013 的 PowerPivot 資料重新整理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca3c358b6cd8d371a0b93b33ab449998a38d24b0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036908"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280774"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 中的 PowerPivot 資料重新整理
   在 SharePoint 2013 中， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料模型重新整理的設計會利用 Excel Services 做為主要元件，在以 SharePoint 模式執行的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上載入並重新整理資料模型。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器會在 SharePoint 伺服器陣列外部執行。  
   
- 先前的資料重新整理架構會仰賴 PowerPivot 系統服務，載入並重新整理資料模型上的 SharePoint 模式[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體原本是在 PowerPivot 應用程式伺服器本機上執行。 新的架構也導入了一種新方法，將排程資訊當做活頁簿項目的中繼資料保存在文件庫中。 SharePoint 2013 Excel Services 中的架構同時支援 **互動式資料重新整理** 和 **排定的資料重新整理**。  
+ 先前的資料重新整理架構會仰賴 PowerPivot 系統服務，載入並重新整理資料模型，在 SharePoint 模式[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體原本是在 PowerPivot 應用程式伺服器本機上執行。 新的架構也導入了一種新方法，將排程資訊當做活頁簿項目的中繼資料保存在文件庫中。 SharePoint 2013 Excel Services 中的架構同時支援 **互動式資料重新整理** 和 **排定的資料重新整理**。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -130,12 +130,12 @@ ms.locfileid: "36036908"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 如需詳細資訊，請參閱[做為作業系統的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
+ 如需詳細資訊，請參閱 <<c0> [ 做為作業系統的一部分](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx)。  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **排程的資料重新整理關鍵重點：**  
   
--   需要部署 PowerPivot for SharePoint 增益集。 如需詳細資訊，請參閱[安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
+-   需要部署 PowerPivot for SharePoint 增益集。 如需詳細資訊，請參閱 <<c0> [ 安裝或解除安裝 PowerPivot for SharePoint 增益集&#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。</c0>  
   
 -   使用者會設定活頁簿的重新整理排程。 在排程的時間，PowerPivot 系統服務會傳送要求給 Excel Services，以便：  
   
@@ -147,13 +147,13 @@ ms.locfileid: "36036908"
   
 -   **認證** ：使用預存認證。 不使用目前使用者的識別。  
   
--   **支援的活頁簿：** 使用所建立的活頁簿[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 增益集的 Excel 2010 或 Excel 2013。 Excel 2010 中建立的活頁簿[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]PowerPivot 增益集不支援。 升級活頁簿至少為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 格式。 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
+-   **支援的活頁簿：** 使用所建立的活頁簿[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 增益集適用於 Excel 2010 或 Excel 2013。 Excel 2010 中建立的活頁簿[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]PowerPivot 增益集不支援。 將活頁簿升級為至少是[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]PowerPivot 格式。 如需活頁簿升級的詳細資訊，請參閱[升級活頁簿和排程的資料重新整理 &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)。  
   
  若要顯示 **[管理資料重新整理]** 頁面：  
   
 -   請參閱這些步驟後面的圖例。  
   
-1.  在 SharePoint 文件庫中，按一下 **開啟功能表**(**...**) 為 PowerPivot 活頁簿。  
+1.  在 SharePoint 文件庫中，按一下**開啟功能表**(**...**) 為 PowerPivot 活頁簿。  
   
 2.  按一下第二個 **[開啟]** 功能表，然後按一下 **[管理 PowerPivot 資料重新整理]**。  
   
@@ -167,10 +167,10 @@ ms.locfileid: "36036908"
   
     -   將活頁簿儲存回內容資料庫。  
   
- ![管理資料重新整理內容功能表](../media/as-manage-datarefresh-sharepoint2013.gif "管理資料重新整理內容功能表")  
+ ![管理資料重新整理操作功能表](../media/as-manage-datarefresh-sharepoint2013.gif "管理資料重新整理操作功能表")  
   
 > [!TIP]  
->  重新整理活頁簿從 SharePoint online 的資訊，請參閱[重新整理 Excel 活頁簿從 SharePoint Online （白皮書） 的內嵌 PowerPivot 模型](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)。  
+>  如需重新整理活頁簿從 SharePoint online 的資訊，請參閱[從 SharePoint Online （白皮書） 的內嵌 PowerPivot 模型的重新整理 Excel 活頁簿](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 中排程的資料重新整理架構  
  下圖摘要說明 SharePoint 2013 和 SQL Server 2012 SP1 中的資料重新整理架構。  
@@ -198,7 +198,7 @@ ms.locfileid: "36036908"
   
 2.  在儀表板底部，查看 **[資料重新整理 - 最近的活動]** 和 **[資料重新整理 - 最近的失敗]**。  
   
-3.  如需有關使用量資料以及如何啟用此功能的詳細資訊，請參閱[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
+3.  如需有關使用量資料，以及如何加以啟用的詳細資訊，請參閱[PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)。  
   
  **診斷記錄資料** ：您可以檢視與資料重新整理有關的 SharePoint 診斷記錄資料。 首先，請在 SharePoint 管理中心的 **[監視]** 頁面中，確認 **[PowerPivot 服務]** 的診斷記錄組態。 您可能必須提高要記錄之「最低緊急事件」的記錄層級。 例如，請暫時將此值設定為 **[詳細資訊]** ，然後重新執行資料重新整理作業。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "36036908"
   
 -   **[資料重新整理]** 的類別。  
   
- 檢閱 **[設定診斷記錄]**。 如需詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)。  
+ 檢閱 **[設定診斷記錄]**。 如需詳細資訊，請參閱 <<c0> [ 設定及檢視 SharePoint 記錄檔和診斷記錄&#40;PowerPivot for SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)。</c0>  
   
 ##  <a name="datarefresh_additional_authentication"></a> 其他驗證考量  
  在 Excel 2013 中， **[Excel Services 驗證設定]** 對話方塊的設定會決定 Excel Services 和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 用於資料重新整理的 Windows 識別。  

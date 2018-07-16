@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 633fa882fb31d8e870f46891fc7749234f407cad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 136f03a7d3dd2223ed1806c47d9a168c3d6c8bee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036316"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232488"
 ---
 # <a name="line-charts-report-builder-and-ssrs"></a>折線圖 (報表產生器及 SSRS)
-  折線圖會將數列顯示成一組由單一線條連接的點。 因此，折線圖用於表示發生超過一段連續時間的大量資料。 如需如何將資料加入至折線圖的詳細資訊，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
+  折線圖會將數列顯示成一組由單一線條連接的點。 因此，折線圖用於表示發生超過一段連續時間的大量資料。 如需如何將資料新增至折線圖的詳細資訊，請參閱[圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)。  
   
  下圖顯示的是包含三個數列的折線圖。  
   
@@ -50,12 +50,12 @@ ms.locfileid: "36036316"
 -   繪製為線條的數列在圖表區域中將不會佔用太多空間。  因此，折線圖通常會與其他圖表類型組合，例如，直條圖。 不過，折線圖無法與橫條圖、極座標圖、圓形圖或形狀圖等圖表類型組合在一起。  
   
 ## <a name="see-also"></a>另請參閱  
- [橫條圖&#40;報表產生器和 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
+ [橫條圖&#40;報表產生器及 SSRS&#41;](bar-charts-report-builder-and-ssrs.md)   
  [直條圖 &#40;報表產生器及 SSRS&#41;](column-charts-report-builder-and-ssrs.md)   
  [圖表 &#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [圖表類型 &#40;報表產生器及 SSRS&#41;](chart-types-report-builder-and-ssrs.md)   
  [區域圖 &#40;報表產生器及 SSRS&#41;](area-charts-report-builder-and-ssrs.md)   
  [圖表中的空白和 Null 資料點 &#40;報表產生器及 SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [圖表&#40;報表產生器和 SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [圖表&#40;報表產生器及 SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
   

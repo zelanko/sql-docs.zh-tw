@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
 - security [Reporting Services], unattended report processing
@@ -21,18 +21,18 @@ ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 063fd32c8b94bc10bc22aea0d117a6d41a0a84fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0cba2bc68d83c2d0b986324e2efa7f882bac6e76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145785"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321918"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>設定自動執行帳戶 (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 提供了一個特殊帳戶，它是用於自動報表處理和透過網路傳送連接要求。 以下是使用此帳戶的方式：  
   
--   透過網路針對使用資料庫驗證的報表傳送連接要求，或是連接到不需要或不使用驗證的外部報表資料來源。 如需詳細資訊，請參閱[指定認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)SQL Server 線上叢書 》 中。  
+-   透過網路針對使用資料庫驗證的報表傳送連接要求，或是連接到不需要或不使用驗證的外部報表資料來源。 如需詳細資訊，請參閱 <<c0> [ 指定的認證和報表資料來源的連接資訊](../../integration-services/connection-manager/data-sources.md)SQL Server 線上叢書 》 中。  
   
 -   擷取報表中使用的外部影像檔。 如果想要使用影像檔而該檔案無法透過匿名存取來存取，則您可以設定自動報表處理帳戶，並授與該帳戶存取檔案的權限。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "36145785"
 ## <a name="how-to-use-the-unattended-report-processing-account"></a>如何使用自動報表處理帳戶  
  為了擷取影像檔，報表伺服器會自動使用此帳戶，而且您不需要採取特定的動作。 若要使用此帳戶連線到提供資料給報表的外部資料來源，您必須在報表資料來源或共用資料來源的資料來源屬性頁面上指定 [認證類型] 選項：  
   
--   在報表管理員或 SharePoint 網站上，選取**就不需要認證**選項。  
+-   在報表管理員或 SharePoint 網站上，選取**不需要認證**選項。  
   
  自動報表處理帳戶主要是用來連接外部伺服器，而不是登入資料庫伺服器。 如果您想要使用此帳戶認證來登入資料庫，就必須在連接字串中指定認證。 如果資料庫伺服器支援 Windows 整合式安全性，而且自動報表處理所使用的帳戶擁有讀取資料庫的權限，您就可以指定 **Integrated Security=SSPI** 。 否則，您必須在連接字串中輸入使用者名稱和密碼，而此連接字串會以純文字格式顯示給有權編輯資料來源連接屬性的任何使用者查看。  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - InstanceID Property (WMI MSReportServer_Instance)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - InstanceID property
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 caps.latest.revision: 14
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fda235584cab9f769e49214acc4e0da8bd6e1a75
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 7f97076d0341755ed901dd00a489c1312bd6729c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146019"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297838"
 ---
 # <a name="instanceid-property-wmi-msreportserverinstance"></a>InstanceID 屬性 (WMI MSReportServer_Instance)
   此物件支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 基礎結構，而且不能直接從程式碼使用。  

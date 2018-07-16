@@ -1,5 +1,5 @@
 ---
-title: 建置導出的成員的 MDX (MDX) |Microsoft 文件
+title: 建立導出的成員的 MDX (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], calculated members
 - calculated members [MDX]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - queries [MDX], calculated members
 ms.assetid: 9322e8b8-43e1-4e02-a7d1-e41a586a5bb8
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf71de626272200dbd04cf97618db90a61e8aa14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5f01746c6bb0c73705451db8f236c75c1b8935bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144619"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312648"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>在 MDX 中建立導出成員 (MDX)
   在多維度運算式 (MDX) 中，導出成員是藉由計算 MDX 運算式以傳回一個值而解析出來的成員。 此一定義涵蓋的範圍相當廣泛。 在 MDX 查詢中建構和使用導出成員的能力，提供了許多管理多維度資料的功能。  

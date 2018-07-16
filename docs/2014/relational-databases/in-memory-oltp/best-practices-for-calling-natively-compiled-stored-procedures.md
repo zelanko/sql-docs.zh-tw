@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 5439f539e126a64cff92065e049da359e89345b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: f28a62753f2ce6b5474e87be95276b0f464d4314
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135801"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298338"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>呼叫原生編譯預存程序的最佳作法
   原生編譯預存程序：  
@@ -52,9 +52,9 @@ ms.locfileid: "36135801"
   
  透過 XEvent `hekaton_slow_parameter_passing` 與 `reason=named_parameters`，可偵測到 (無效率的) 具名參數與原生編譯預存程序的使用方式。  
   
- 同樣地，您可以偵測到使用不相符的型別，透過相同的 XEvent `hekaton_slow_parameter_passing`，與`reason=parameter_conversion`。  
+ 同樣地，您可以在此偵測使用不相符的類型，透過相同的 XEvent `hekaton_slow_parameter_passing`，使用`reason=parameter_conversion`。  
   
- 因為在使用記憶體最佳化資料表時必須實作重試邏輯 (在許多案例中)，而且因為您必須避開某些功能限制，所以您可能會想要建立包裝函式解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 如需範例，請參閱[記憶體最佳化資料表上的交易的重試邏輯方針](memory-optimized-tables.md)。  
+ 因為在使用記憶體最佳化資料表時必須實作重試邏輯 (在許多案例中)，而且因為您必須避開某些功能限制，所以您可能會想要建立包裝函式解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。 如需範例，請參閱[Guidelines for Retry Logic for Transactions on Memory-Optimized Tables](memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [原生編譯的預存程序](natively-compiled-stored-procedures.md)  

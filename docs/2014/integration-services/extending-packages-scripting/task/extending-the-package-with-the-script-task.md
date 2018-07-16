@@ -23,13 +23,13 @@ ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4cc3a8976f0831db5404c722f3d9910d9cb8440f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5b4fa549a03fd7f74baf98aa7aa489323da7b1ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254550"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>以指令碼工作擴充封裝
   指令碼工作會以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 所撰寫、並且在套件執行階段編譯並執行的自訂程式碼，來擴充 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 套件的執行階段功能。 當 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 所含的工作未完全滿足您的需求時，指令碼工作可簡化自訂執行階段工作的開發。 指令碼工作會為您撰寫所有必要的基礎結構程式碼，讓您專門著重在自訂處理所需的程式碼。  
@@ -67,7 +67,7 @@ ms.locfileid: "36146559"
  [指令碼工作範例](../../extending-packages-scripting-task-examples/script-task-examples.md)  
  提供簡單的範例，以示範指令碼工作的幾個可能用途。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 最新下載、 文章、 範例和影片[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及選取的解決方案由社群，請瀏覽[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 最新下載、 文章、 範例和影片[!INCLUDE[msCoName](../../../includes/msconame-md.md)]，以及選取的解決方案，從社群，請瀏覽[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]MSDN 上的頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [指令碼工作](../../control-flow/script-task.md)   

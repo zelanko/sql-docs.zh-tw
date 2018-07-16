@@ -1,5 +1,5 @@
 ---
-title: 記憶體最佳化資料表上的索引 |Microsoft 文件
+title: 記憶體最佳化資料表上的索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 86805eeb-6972-45d8-8369-16ededc535c7
 caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 6fc8955ceb3639d15a0cbbe47cefef714ccebc02
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a2c467017f7ec24fc770084a829ee96f37a4416
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308088"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>記憶體最佳化資料表上的索引
   本節包含有關記憶體最佳化資料表的索引主題：  

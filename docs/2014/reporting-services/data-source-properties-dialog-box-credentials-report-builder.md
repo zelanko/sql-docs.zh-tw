@@ -1,5 +1,5 @@
 ---
-title: 資料來源屬性對話方塊、 認證 （報表產生器） |Microsoft 文件
+title: 資料來源屬性對話方塊、 認證 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10017"
 ms.assetid: 4531f09f-d653-4c05-a120-d7788838bc99
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 237e1c9ef26c5dba838fa8071b2dce7293f2077a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0b6689c1a75cfc9354f8c47532d0ed773f3c6e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146457"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238588"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>資料來源屬性對話方塊、認證 (報表產生器)
   選取 **[資料來源屬性]** 對話方塊上的 **[認證]** ，即可顯示和修改要連接到報表中內嵌資料來源的認證。 您所提供的認證會用來存取資料來源，以便預覽報表。 如需認證的詳細資訊，請參閱 [在報表產生器中指定認證](../../2014/reporting-services/specify-credentials-in-report-builder.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "36146457"
  **密碼**  
  輸入密碼以登入資料來源。  
   
- **提示認證**  
+ **提示輸入認證**  
  選取此選項即可在執行報表時提示輸入認證。  
   
  **輸入提示字串**  
@@ -55,7 +55,7 @@ ms.locfileid: "36146457"
 ## <a name="see-also"></a>另請參閱  
  [對話方塊、窗格和精靈的報表產生器說明](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [資料來源屬性對話方塊，一般 &#40;報表產生器&#41;](../../2014/reporting-services/data-source-properties-dialog-box-general-report-builder.md)   
- [加入及驗證資料連接或資料來源&#40;報表產生器和 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [將資料加入至報表&#40;報表產生器和 SSRS&#41;](report-data/report-datasets-ssrs.md)  
+ [加入及驗證資料連接或資料來源&#40;報表產生器及 SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [將資料加入至報表&#40;報表產生器及 SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   
