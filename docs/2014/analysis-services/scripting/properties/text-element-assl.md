@@ -1,5 +1,5 @@
 ---
-title: 文字元素 (ASSL) |Microsoft 文件
+title: Text 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Text element
 ms.assetid: 0edece73-236f-4661-8102-3fcc29326bf4
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8cfc13728fa8c6f73e14e8534dd911316bb4616f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26eebe93b7bdf9662011363a2023aaf9e4fe0efa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328406"
 ---
 # <a name="text-element-assl"></a>Text 元素 (ASSL)
-  包含文字的[命令](../objects/command-element-assl.md)項目。  
+  包含的文字[命令](../objects/command-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,10 +60,10 @@ ms.locfileid: "36030367"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`Text`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Command>。  
+ 對應至父系的元素`Text`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Command>。  
   
 ## <a name="see-also"></a>另請參閱  
- [命令元素&#40;ASSL&#41;](../collections/commands-element-assl.md)   
+ [命令項目&#40;ASSL&#41;](../collections/commands-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

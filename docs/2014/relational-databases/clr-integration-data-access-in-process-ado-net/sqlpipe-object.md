@@ -1,13 +1,11 @@
 ---
-title: SqlPipe 物件 |Microsoft 文件
+title: SqlPipe 物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - tabular results
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9b67acce373f412ef4adca2c9957f4f5046f35a8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 61ece1402c9675f4f737098580283f1a6e777b76
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144737"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350850"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe 物件
   在舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，通常會撰寫將結果或輸出參數傳送至呼叫用戶端的預存程序 (或擴充的預存程序)。  
@@ -59,7 +57,7 @@ ms.locfileid: "36144737"
 >  呼叫 `SendResultsStart` 方法之後，只能呼叫 `SendResultsRow` 及 `SendResultsEnd`。 在相同的 `SqlPipe` 執行個體中呼叫任何其他方法會導致 `InvalidOperationException`。 `SendResultsEnd` 會將 `SqlPipe` 設定為可以呼叫其他方法的初始狀態。  
   
 ### <a name="example"></a>範例  
- `uspGetProductLine` 預存程序會傳回指定產品線內所有產品的名稱、產品編號、色彩和標價。 這個預存程序接受完全符合*prodLine*。  
+ `uspGetProductLine` 預存程序會傳回指定產品線內所有產品的名稱、產品編號、色彩和標價。 這個預存程序會接受完全相符項目，如*prodLine*。  
   
  C#  
   

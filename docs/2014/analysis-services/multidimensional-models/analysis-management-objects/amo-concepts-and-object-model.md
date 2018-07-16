@@ -1,5 +1,5 @@
 ---
-title: AMO 概念和物件模型 |Microsoft 文件
+title: AMO 概念和物件模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -21,22 +21,22 @@ helpviewer_keywords:
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 623caca0bf51815328bc24992a8f2d2928b9cab2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f692a0b5d66cc52107b93480bdf9d4541a84603
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036005"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310718"
 ---
 # <a name="amo-concepts-and-object-model"></a>AMO 概念和物件模型
-  本主題提供定義的 「 分析管理物件 」 (AMO) 中，AMO 如何與其他工具和文件庫中的架構提供相關[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及概念性地說明在 AMO 中的所有主要物件。  
+  本主題提供定義的 「 分析管理物件 」 (AMO) 中，AMO 如何與其他工具和程式庫中的架構提供相關[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及概念性地說明在 AMO 中的所有主要物件。  
   
  AMO 是 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 管理類別的完整集合，可在 Managed 環境中的 <xref:Microsoft.AnalysisServices> 命名空間之下，用程式設計方式使用它。 類別包括在 AnalysisServices.dll 檔案中，通常位於何處[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝程式安裝檔案，在資料夾 \100\SDK\Assemblies\\。 若要使用 AMO 類別，請在專案中加入此組件的參考。  
   
- 使用 AMO，您可以建立、 修改和刪除物件，例如 cube、 維度、 採礦結構和[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料庫; 高於所有這些物件可從您的應用程式在.NET Framework 執行動作。 您也可以處理和更新儲存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫中的資訊。  
+ 藉由使用的 AMO，您可以建立，請修改及刪除物件，例如 cube、 維度、 採礦結構和[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]資料庫; 透過所有這些物件時，您可以從.NET Framework 中的應用程式執行動作。 您也可以處理和更新儲存在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料庫中的資訊。  
   
  您無法使用 AMO 查詢您的資料。 若要查詢您的資料，請使用[使用 ADOMD.NET 來開發](../adomd-net/developing-with-adomd-net.md)。  
   
@@ -51,18 +51,18 @@ ms.locfileid: "36036005"
  [使用 AMO 自動化管理工作](#AutomatingAdministrativeTaskswithAMO)  
   
 ##  <a name="AMOintheAnalysisServicesArchitecture"></a> AMO 中的 Analysis Services 架構  
- 依設計，AMO 僅適用於物件管理，而不適用於查詢資料。 如果使用者需要查詢[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]用戶端應用程式中的資料，用戶端應用程式應該使用[使用 ADOMD.NET 來開發](../adomd-net/developing-with-adomd-net.md)。  
+ 依設計，AMO 僅適用於物件管理，而不適用於查詢資料。 如果使用者需要查詢[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]用戶端應用程式的資料，用戶端應用程式應該使用[使用 ADOMD.NET 來開發](../adomd-net/developing-with-adomd-net.md)。  
   
 ##  <a name="AMOArchitecture"></a> AMO 架構  
- AMO 是完整的設計來管理的執行個體的類別庫[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]從.NET Framework 2.0 版之下的 managed 程式碼中用戶端應用程式。  
+ AMO 是完整的設計用來管理的執行個體的類別庫[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]從.NET Framework 2.0 版之下的 managed 程式碼之用戶端應用程式。  
   
  AMO 類別庫是以類別階層的方式設計，在階層中某些類別必須在其他類別之前先具現化，才能在程式碼中使用它們。 在程式碼中隨時都可以具現化輔助類別，但是您可能會先具現化一或多個階層類別，然後才使用任何一個輔助類別。  
   
  下圖是包括主要類別的 AMO 階層之高階檢視。 此圖顯示類別在其容器及其對等之間的位置。 <xref:Microsoft.AnalysisServices.Dimension> 屬於 <xref:Microsoft.AnalysisServices.Database> 和 <xref:Microsoft.AnalysisServices.Server>，而且可以與 <xref:Microsoft.AnalysisServices.DataSource> 和 <xref:Microsoft.AnalysisServices.MiningStructure> 同時建立。 您必須先具現化某些對等類別，才可以使用其他類別。 例如，您必須建立 <xref:Microsoft.AnalysisServices.DataSource> 的執行個體，才能加入新的 <xref:Microsoft.AnalysisServices.Dimension> 或 <xref:Microsoft.AnalysisServices.MiningStructure>。  
   
- ![AMO 類別高層級檢視](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO 類別高層級檢視")  
+ ![AMO 類別高階檢視](../../../analysis-services/dev-guide/media/amo-highlevelview-majorobjectshighlighted.gif "AMO 類別高階檢視")  
   
- A*主要物件*是類別，表示完整的物件，為整個實體，而不要做為另一個物件的一部分。 主要物件包括 <xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension> 和 <xref:Microsoft.AnalysisServices.MiningStructure>，因為這些是獨立的實體。 不過，<xref:Microsoft.AnalysisServices.Level> 不是主要物件，因為它是 <xref:Microsoft.AnalysisServices.Dimension> 的構成部分。 主要物件可以獨立於其他物件之外予以建立、刪除、修改或是處理。 次要物件是只能在建立父主要物件的過程中建立的物件。 次要物件通常會在主要物件建立時建立。 次要物件的值應該在建立時定義，因為預設不會建立次要物件。  
+ A*主要物件*是類別，表示完整的物件，視為整個實體，而不是另一個物件的一部分。 主要物件包括 <xref:Microsoft.AnalysisServices.Server>、<xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Dimension> 和 <xref:Microsoft.AnalysisServices.MiningStructure>，因為這些是獨立的實體。 不過，<xref:Microsoft.AnalysisServices.Level> 不是主要物件，因為它是 <xref:Microsoft.AnalysisServices.Dimension> 的構成部分。 主要物件可以獨立於其他物件之外予以建立、刪除、修改或是處理。 次要物件是只能在建立父主要物件的過程中建立的物件。 次要物件通常會在主要物件建立時建立。 次要物件的值應該在建立時定義，因為預設不會建立次要物件。  
   
  下圖顯示 <xref:Microsoft.AnalysisServices.Server> 物件包含的主要物件。  
   
@@ -118,6 +118,6 @@ ms.locfileid: "36036005"
  透過使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 工作，或是透過建立會自動執行的專業 AMO 應用程式，就可以完成自動備份管理。 透過使用 AMO，您可以為操作員開發備份介面，以協助他們處理每日的作業。  
   
 ##### <a name="tasks-amo-is-not-intended-for"></a>不適合應用 AMO 的工作  
- AMO 無法用於查詢資料。 若要查詢 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料，包括 Cube 和採礦模型，請從使用者應用程式使用 ADOMD.NET。 如需詳細資訊，請參閱[使用 ADOMD.NET 來開發](../adomd-net/developing-with-adomd-net.md)。  
+ AMO 無法用於查詢資料。 若要查詢 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 資料，包括 Cube 和採礦模型，請從使用者應用程式使用 ADOMD.NET。 如需詳細資訊，請參閱 <<c0> [ 使用 ADOMD.NET 來開發](../adomd-net/developing-with-adomd-net.md)。  
   
   

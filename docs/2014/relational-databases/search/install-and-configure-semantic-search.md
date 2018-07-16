@@ -5,24 +5,23 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], installing
 - semantic search [SQL Server], configuring
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8af441227c9a584b6252d5d02b7e9989a772d526
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f0c12ef425f898b8406884fef8eff27c8c80c3df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131934"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329328"
 ---
 # <a name="install-and-configure-semantic-search"></a>安裝及設定語意搜尋
   描述統計語意搜尋的必要元件以及如何安裝或檢查這些必要元件。  
@@ -69,7 +68,7 @@ GO
   
 2.  執行 **SemanticLanguageDatabase.msi** Windows Installer 套件，以擷取資料庫和記錄檔。  
   
-     您可以選擇性地變更目的地目錄。 根據預設，安裝程式將檔案擷取至名為的資料夾**Microsoft 語意語言資料庫**32 位元或 64 位元 Program Files 資料夾中。 MSI 檔案包含壓縮的資料庫檔案和記錄檔。  
+     您可以選擇性地變更目的地目錄。 根據預設，安裝程式將檔案擷取至名為的資料夾**Microsoft 語意語言資料庫**32 位元或 64 位元的 [Program Files] 資料夾中。 MSI 檔案包含壓縮的資料庫檔案和記錄檔。  
   
 3.  將擷取的資料庫檔案和記錄檔移至檔案系統中的適當位置。  
   
@@ -101,7 +100,7 @@ EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsd
 GO  
 ```  
   
-###  <a name="HowToUnregister"></a> 如何： 取消註冊、 卸離，及移除語意語言統計資料庫  
+###  <a name="HowToUnregister"></a> 如何： 取消註冊、 卸離及移除語意語言統計資料庫  
  **取消註冊語意語言統計資料庫。**  
  呼叫 [sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql) 預存程序。 執行個體只能有一個語意語言統計資料庫，因此您不需要提供資料庫的名稱。  
   
@@ -124,7 +123,7 @@ GO
  **移除語意語言統計資料庫。**  
  取消註冊及卸離資料庫之後，就只能刪除資料庫檔案。 目前沒有解除安裝程式，而且 [控制台] 的 **[程式和功能]** 也沒有對應的項目。  
   
-###  <a name="reqinstall"></a> 安裝及移除語意語言統計資料庫的需求和限制  
+###  <a name="reqinstall"></a> 安裝和移除語意語言統計資料庫的需求和限制  
   
 -   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體上，您只能附加並註冊一個語意語言統計資料庫。  
   
@@ -138,7 +137,7 @@ GO
   
 ## <a name="installing-optional-support-for-newer-document-types"></a>安裝選擇性的新版文件類型支援  
   
-###  <a name="office"></a> 如何： 安裝 Microsoft Office 和其他 Microsoft 文件類型的最新的篩選  
+###  <a name="office"></a> 如何： 安裝適用於 Microsoft Office 和其他 Microsoft 文件類型的最新的篩選  
  此版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會安裝最新的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 斷詞工具和字幹，但是不會安裝 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 文件和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 文件類型的最新篩選。 這些篩選是針對以最新版 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office 和其他 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 應用程式建立的文件編製索引時所必要。 若要下載最新的篩選，請參閱 [Microsoft Office 2010 篩選套件](http://go.microsoft.com/fwlink/?LinkId=218293)。  
   
   

@@ -1,13 +1,11 @@
 ---
-title: 叫用 CLR 使用者定義彙總函式 |Microsoft 文件
+title: 叫用 CLR 使用者定義彙總函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96aaaeda1fd22044c5a4f86c11051966f3d8b341
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: b648c81da85be1214dc8b1c7b78235cd23ab525a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36021960"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355050"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>叫用 CLR 使用者定義彙總函式
   您可以在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中叫用 Common Language Runtime (CLR) 使用者定義彙總，依套用至系統彙總函式的所有規則而定。  
@@ -37,11 +35,11 @@ ms.locfileid: "36021960"
   
 -   目前的使用者必須在使用者定義彙總上具有 `EXECUTE` 權限。  
   
--   使用者定義彙總必須使用來叫用兩段式名稱的形式*schema_name.udagg_name*。  
+-   使用者定義彙總必須可使用叫用兩段式名稱的形式*schema_name.udagg_name*。  
   
 -   在使用者定義彙總的引數類型必須符合或可隱含地轉換成*input_type*彙總，如中所定義的`CREATE AGGREGATE`陳述式。  
   
--   在使用者定義彙總的傳回型別必須符合*return_type*中`CREATE AGGREGATE`陳述式。  
+-   在使用者定義彙總的傳回型別必須符合*return_type*在`CREATE AGGREGATE`陳述式。  
   
 ## <a name="example-1"></a>範例 1  
  以下是使用者定義彙總函式的範例，此函數會串連取自資料表之資料行的一組字串值：  
@@ -201,7 +199,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- 一旦您編譯程式碼到**MyAgg.dll**，您可以註冊中的彙總[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
+ 一旦您編譯程式碼插入**MyAgg.dll**，您可以註冊中的彙總[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，如下所示：  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -241,7 +239,7 @@ GROUP BY BookID;
   
 |BookID|作者名稱|  
 |------------|------------------|  
-|@shouldalert|Johnson|  
+|1|Johnson|  
 |2|Taylor, Mayler|  
 |3|Roberts, Michaels, Steven|  
   

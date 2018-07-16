@@ -1,5 +1,5 @@
 ---
-title: Microsoft 決策樹演算法 |Microsoft 文件
+title: Microsoft 決策樹演算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], discrete attributes
 - predictions [Analysis Services], continuous attributes
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 caps.latest.revision: 70
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc3f7cac98736fe558bf19ce00fc57115cade782
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ff4f1b4bb2311231e09e6e150592c6a2dabb3d19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310778"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft 決策樹演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]決策樹演算法是所提供的分類和迴歸演算法[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]用於離散和連續屬性的預測模型。  
@@ -47,9 +47,9 @@ ms.locfileid: "36036492"
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會在樹狀結構中建立一系列分割，藉以建立資料採礦模型。 然後，這些分割會表示成「節點」。 每次發現輸入資料行與可預測資料行有明顯地相互關聯時，此演算法就會在模型中加入一個節點。 演算法決定分岔的方式不同，視它預測連續資料行或分隔資料行而定。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用「特徵選取」來引導選取最有用的屬性。 使用特徵選取是所有[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料採礦演算法來改善效能和分析的品質。 若要防止不重要的屬性佔用處理器時間，特徵選取就很重要。 如果您在設計資料採礦模型時使用過多輸入或可預測的屬性，此模型可能會需要很長的時間才能處理完成，甚至用完記憶體。 用來判斷是否要分割樹狀結構的方法包括 *entropy* 和 Bayesian 網路的業界標準。 如需用來選取有意義屬性，然後針對這些屬性計分並排名之方法的詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用「特徵選取」來引導選取最有用的屬性。 所有使用特徵選取[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料採礦演算法，來改善效能和分析的品質。 若要防止不重要的屬性佔用處理器時間，特徵選取就很重要。 如果您在設計資料採礦模型時使用過多輸入或可預測的屬性，此模型可能會需要很長的時間才能處理完成，甚至用完記憶體。 用來判斷是否要分割樹狀結構的方法包括 *entropy* 和 Bayesian 網路的業界標準。 如需用來選取有意義屬性，然後針對這些屬性計分並排名之方法的詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
   
- 資料採礦模型中的常見問題是模型變得過度敏感定型資料中的小差異，在此情況下就稱為*過度納入*或 *「 過度培訓*。 過度調整的模型無法一般化成為其他資料集。 為了避免過度調整任何特定資料集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用控制樹狀目錄成長的技術。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何運作的更深入說明，請參閱 [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)。  
+ 資料採礦模型中常見的問題是模型變得過度敏感定型資料中的小差異，而這種情況就稱為*過度納入*或是*過度定型*。 過度調整的模型無法一般化成為其他資料集。 為了避免過度調整任何特定資料集， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法會使用控制樹狀目錄成長的技術。 如需 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法如何運作的更深入說明，請參閱 [Microsoft 決策樹演算法技術參考](microsoft-decision-trees-algorithm-technical-reference.md)。  
   
 ### <a name="predicting-discrete-columns"></a>預測分隔資料行  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法為分隔可預測資料行建立樹狀結構的方式，可使用長條圖來示範。 下列圖表顯示一個長條圖，它繪製出可預測資料行 Bike Buyers 對照輸入資料行 Age。 長條圖顯示某人的年齡可協助區分此人是否會購買腳踏車。  
@@ -65,7 +65,7 @@ ms.locfileid: "36036492"
 ### <a name="predicting-continuous-columns"></a>預測連續資料行  
  當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法依據連續可預測資料行建立樹狀結構時，每一個節點會包含一個迴歸公式。 分岔會出現在迴歸公式中的非線性點上。 例如，請看下列圖表。  
   
- ![多個迴歸的線條顯示非線性](../media/regression-tree1.gif "多重迴歸的線條顯示非線性")  
+ ![多個迴歸程式行顯示非線性](../media/regression-tree1.gif "多個迴歸程式行顯示非線性")  
   
  圖表包含可使用單線或使用兩條連接線建立模型的資料。 不過，用單線來表示資料，效果較差。 相對地，如果您使用雙線，則模型更能做好模擬資料的作業。 兩條線交叉的點就是非線性點，也是在決策樹模型中之節點會分岔的那個點。 例如，對應至上面圖表中之非線性點的節點可由下列圖表來表示。 兩個方程式代表兩條線的迴歸方程式。  
   

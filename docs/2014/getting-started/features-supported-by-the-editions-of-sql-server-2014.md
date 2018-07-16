@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 各版本所支援的功能 |Microsoft 文件
+title: SQL Server 2014 各版本所支援的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -14,29 +14,29 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 caps.latest.revision: 126
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9fea176058eeb35d13ab3e104652fdeb13979238
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036879"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312308"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各版本所支援的功能
   本主題提供不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本所支援功能的詳細資料。  
   
-> **注意：** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]是 Evaluation edition 中有提供 180 天的試用期。 如需詳細資訊，請參閱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][試用軟體網站](http://go.microsoft.com/fwlink/?LinkId=190955)。  
+> **注意︰** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中都會提供評估版於 180 天試用期內。 如需詳細資訊，請參閱 < [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [試用軟體網站](http://go.microsoft.com/fwlink/?LinkId=190955)。  
   
-> **注意：** 如 Evaluation 和 Developer edition 所支援的功能，請參閱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterprise 功能集。  
+> **注意︰** 如 Evaluation 和 Developer edition 所支援的功能，請參閱[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterprise 功能集。  
   
  若要導覽至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 技術的資料表，請按一下其連結：  
   
- [跨箱延展限制](#CrossBoxScale)  
+ [跨機箱延展限制](#CrossBoxScale)  
   
  [高可用性](#High_availability)  
   
@@ -89,13 +89,13 @@ ms.locfileid: "36036879"
 |功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |單一執行個體所使用的最大的計算容量 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine)<sup>1</sup>|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
-|計算容量上限 (Analysis Services、 Reporting Services) 的單一執行個體所使用<sup>1</sup>|作業系統最大值|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
+|單一執行個體 (Analysis Services、 Reporting Services) 所使用的最大的計算容量<sup>1</sup>|作業系統最大值|作業系統最大值|限制為 4 個插槽或 16 個核心的較小者|限制為 4 個插槽或 16 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|限制為 1 個插槽或 4 個核心的較小者|  
 |使用的記憶體上限 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database Engine 的每個執行個體)|作業系統最大值|128 GB|128 GB|64 GB|1 GB|1 GB|1 GB|  
 |使用的記憶體上限 ([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的每個執行個體)|作業系統最大值|作業系統最大值|64 GB|不適用|不適用|不適用|不適用|  
 |使用的記憶體上限 ([!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 的每個執行個體)|作業系統最大值|作業系統最大值|64 GB|64 GB|4 GB|不適用|不適用|  
 |關聯式資料庫大小上限|524 PB|524 PB|524 PB|524 PB|10 GB|10 GB|10 GB|  
   
- <sup>1</sup>含伺服器 + 用戶端存取授權 (CAL) 授權 （不適用於新的協議） Enterprise Edition 僅限於 20 個核心每秒最多[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
+ <sup>1</sup> Enterprise Edition，含伺服器 + 用戶端存取授權 (CAL) 授權 （不適用於新的協議） 僅限於最多 20 個核心每[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 核心伺服器授權模式之下沒有任何限制。 如需詳細資訊，請參閱 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)。  
   
 ##  <a name="High_availability"></a> 高可用性  
   
@@ -119,9 +119,9 @@ ms.locfileid: "36036879"
 |加密的備份|是|是|是|||||  
 |智慧型備份|是|是|是|否||||  
   
- <sup>1</sup>如需有關安裝[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]在 Server Core 上看到[在 Server Core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+ <sup>1</sup>如需有關安裝[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]Server core，請參閱[在 Server Core 上安裝 SQL Server 2014](../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
- <sup>2</sup>這項功能只適用於 64 位元[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>2</sup>這項功能僅適用於 64 位元[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ##  <a name="Scalability"></a> 延展性和效能  
   
@@ -134,12 +134,12 @@ ms.locfileid: "36036879"
 |分割區資料表平行處理原則|是|||||||  
 |多個檔案資料流容器|是|||||||  
 |NUMA 感知大型分頁記憶體和緩衝區陣列配置|是|||||||  
-|緩衝集區延伸模組<sup>1</sup>|是|是|是|||||  
+|緩衝集區延伸<sup>1</sup>|是|是|是|||||  
 |IO 資源管理|是|||||||  
 |記憶體內部 OLTP <sup>1</sup>|是|||||||  
 |延遲持久性|是|是|是|是|是|是|是|  
   
- <sup>1</sup>這項功能只適用於 64 位元[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>1</sup>這項功能僅適用於 64 位元[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ##  <a name="Enterprise_security"></a> 安全性  
   
@@ -183,7 +183,7 @@ ms.locfileid: "36036879"
 |將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料庫部署到 Windows Azure VM 精靈|是|是|是|是|是|是|是|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows Azure 中的資料檔案|是|是|是|是|是|是|是|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] web、 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]， [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools 和[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]with Advanced Services 可以使用來分析[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]標準和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterprise edition。  
+ <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] web [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]，[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]工具，並[!INCLUDE[ssExpress](../includes/ssexpress-md.md)]with Advanced Services 可以使用來分析[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]標準和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterprise edition。  
   
  <sup>3</sup>僅針對 Standard edition 功能啟用微調。  
   
@@ -210,11 +210,11 @@ ms.locfileid: "36036879"
 |平行一致性檢查|是|||||||  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 公用程式控制點|是|||||||  
 |自主資料庫|是|是|是|是|是|是|是|  
-|緩衝集區延伸模組<sup>2</sup>|是|是|是|||||  
+|緩衝集區延伸<sup>2</sup>|是|是|是|||||  
   
  <sup>1</sup> 如需詳細資訊，請參閱 [使用 SysPrep 安裝 SQL Server 的考量](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)。  
   
- <sup>2</sup>這項功能只適用於 64 位元[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ <sup>2</sup>這項功能僅適用於 64 位元[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ##  <a name="Dev_tools"></a> Development Tools  
   
@@ -283,7 +283,7 @@ ms.locfileid: "36036879"
 ##  <a name="MDS"></a> Master Data Services  
   
 > [!NOTE]  
->  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 在 64 位元版本的 Business Intelligence 和 Enterprise 只使用。  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 在 Business Intelligence 和 Enterprise 的 64 位元版本只使用。  
   
 |功能|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -348,7 +348,7 @@ ms.locfileid: "36036879"
 |直接回寫|是|是||||||  
 |量值運算式|是|是||||||  
   
- <sup>1</sup>LastChild 局部加總量值適用於 standard edition 中，但是其他局部加總量值，例如 None、 FirstChild、 FirstNonEmpty、 LastNonEmpty、 AverageOfChildren 和 ByAccount，不是。 所有的版本都支援加總量值 (例如 Sum、Count、Min、Max) 和非加總量值 (DistinctCount)。  
+ <sup>1</sup>LastChild 局部加總量值在 standard edition 支援，但是其他局部加總量值，例如 None、 FirstChild、 FirstNonEmpty、 LastNonEmpty、 AverageOfChildren 和 ByAccount，不是。 所有的版本都支援加總量值 (例如 Sum、Count、Min、Max) 和非加總量值 (DistinctCount)。  
   
 ###  <a name="BISemModel_tabular"></a> BI Semantic Model (Tabular)  
   
@@ -427,7 +427,7 @@ ms.locfileid: "36036879"
   
  <sup>1</sup>如需有關支援之資料來源中[!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]，請參閱[Reporting Services 所支援的資料來源&#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。  
   
- <sup>2</sup>需要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以 SharePoint 模式。 如需詳細資訊，請參閱[Reporting Services SharePoint 模式安裝&#40;SharePoint 2010 和 SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
+ <sup>2</sup>需要[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]以 SharePoint 模式。 如需詳細資訊，請參閱 < [Reporting Services SharePoint 模式安裝&#40;SharePoint 2010 和 SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)。  
   
 ### <a name="report-server-database-server-edition-requirements"></a>報表伺服器資料庫伺服器版本需求  
  建立報表伺服器資料庫時，並非所有 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本都可以用來主控資料庫。 下表顯示哪些 [!INCLUDE[ssDE](../includes/ssde-md.md)] 版本可用於特定的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]版本。  
@@ -442,7 +442,7 @@ ms.locfileid: "36036879"
 |Evaluation|Evaluation|  
   
 ##  <a name="BIClients"></a> 商業智慧用戶端  
- 下列軟體用戶端應用程式無法在 Microsoft 下載中心，提供來協助您建立商業智慧文件上執行的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 當您裝載這些文件在伺服器環境中的時，使用的版本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]該文件類型支援。 下表將識別哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含裝載在這些用戶端應用程式中建立之文件所需的伺服器功能。  
+ 下列軟體用戶端應用程式提供位於 Microsoft 下載中心，並可協助您建立商業智慧文件上執行[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體。 當您裝載這些文件的伺服器環境中時，使用的版本[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]支援該文件類型。 下表將識別哪些 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本包含裝載在這些用戶端應用程式中建立之文件所需的伺服器功能。  
   
 |功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -452,8 +452,8 @@ ms.locfileid: "36036879"
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|是|是||||||  
   
 > [!NOTE]  
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 是 Excel 增益集，並不會依賴[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不過，若要在 SharePoint 中共用 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 活頁簿並進行共同作業，則需要使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]，而且這項功能是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence Edition 的一部分。  
-> 2.  上表識別[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]啟用這些用戶端工具所需的版本; 不過，這些功能可以存取任何的資料版本上裝載[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 是 Excel 增益集，並不依賴[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 不過，若要在 SharePoint 中共用 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] 活頁簿並進行共同作業，則需要使用 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]，而且這項功能是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 和 Business Intelligence Edition 的一部分。  
+> 2.  上表識別[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]啟用這些用戶端工具所需的版本，不過這些功能可以存取任何的資料版本上裝載[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
   
@@ -480,8 +480,8 @@ ms.locfileid: "36036879"
 |StreamInsight HA|StreamInsight Premium 版|||||||  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 2014 的產品規格](../../2014/getting-started/sql-server-2014-product-specifications.md)   
+ [適用於 SQL Server 2014 的產品規格](../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [SQL Server 2014 安裝](../database-engine/install-windows/installation-for-sql-server.md)   
- [快速入門的 SQL Server 2014 安裝](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
+ [SQL Server 2014 快速入門安裝](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   
   

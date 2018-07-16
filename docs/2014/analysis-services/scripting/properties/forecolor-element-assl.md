@@ -1,5 +1,5 @@
 ---
-title: ForeColor 元素 (ASSL) |Microsoft 文件
+title: ForeColor 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ForeColor element
 ms.assetid: 5125520c-3bce-40e6-a722-8d4d47306fed
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d33af314081dda790edee205d12e095b018d00b5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efcd4c226743ec313e338eea4af83ba68792b675
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031986"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332828"
 ---
 # <a name="forecolor-element-assl"></a>ForeColor 元素 (ASSL)
-  描述的色彩相關顯示特性[CalculationProperty](../objects/calculationproperty-element-assl.md)或[量值](../objects/measure-element-assl.md)父項目。  
+  描述的色彩相關顯示特性[CalculationProperty](../objects/calculationproperty-element-assl.md)或是[量值](../objects/measure-element-assl.md)父項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36031986"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `ForeColor`屬性包含多維度運算式 (MDX) 運算式，並套用至`CalculationProperty`項目具有[CalculationType](calculationtype-element-assl.md)的*成員*或*資料格*.  
+ `ForeColor`屬性包含多維度運算式 (MDX) 運算式，並套用至`CalculationProperty`擁有的項目[CalculationType](calculationtype-element-assl.md)的*成員*或*資料格*.  
   
- 對應至父系的項目`ForeColor`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
+ 對應至父系的元素`ForeColor`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.CalculationProperty>和<xref:Microsoft.AnalysisServices.Measure>。  
   
 ## <a name="see-also"></a>另請參閱  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

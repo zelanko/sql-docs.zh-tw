@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 69369e5f1701ea1807a42bfb426f8cd26073e2c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f691cc55d7e8a6107e9c602d8edbb5c7d32d904c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323878"
 ---
 # <a name="secure-shared-dataset-items"></a>保護共用資料集項目的安全
   在報表伺服器上，共用資料集項目可由多個報表使用。 您可以保護共用資料集來控制使用者能夠存取的程度。 依預設，只有屬於 **管理員** 內建群組成員的使用者才可以檢視共用資料集、修改屬性、啟用快取、建立快取重新整理計劃，以及刪除項目。 其他所有使用者都必須具有針對他們所建立的角色指派，才能存取共用資料集。  
@@ -50,7 +50,7 @@ ms.locfileid: "36023489"
 |取用報表|檢視共用資料集定義。|內容管理員<br /><br /> 報表產生器|  
 |設定項目安全性|建立及修改控制共用資料集存取權的角色指派。 此工作必須配合「檢視報表」或「管理報表」工作使用。 如果不是，則因為使用者無法選取項目，而沒有作用。|內容管理員|  
   
- 如需詳細資訊，請參閱[項目層級工作](tasks-and-permissions-item-level-tasks.md)和[預先定義的角色](role-definitions-predefined-roles.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 項目層級工作](tasks-and-permissions-item-level-tasks.md)並[預先定義的角色](role-definitions-predefined-roles.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理共用資料集](../report-data/manage-shared-datasets.md)   

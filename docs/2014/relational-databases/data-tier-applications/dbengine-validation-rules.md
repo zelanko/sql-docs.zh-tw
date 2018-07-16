@@ -1,5 +1,5 @@
 ---
-title: 資料層應用程式精靈的驗證規則 |Microsoft 文件
+title: 資料層應用程式精靈的驗證規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,16 +8,16 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a8ef014df775952c2f502376a58759b40b82fac4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.topic: conceptual
+author: mikeraymsft
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 2ef1b840e2810ed796af3e31aa5a8384e31f2a00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311901"
 ---
 # <a name="validation-rules-for-data-tier-application-wizards"></a>資料層應用程式精靈的驗證規則
 請參閱[資料層應用程式精靈的驗證規則](../../database-engine/validation-rules-for-data-tier-application-wizards.md)。

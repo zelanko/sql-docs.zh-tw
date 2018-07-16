@@ -1,5 +1,5 @@
 ---
-title: root 元素 (XMLA) |Microsoft 文件
+title: root 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - root element
 ms.assetid: ecd9d6e8-b16c-4d62-9a87-107c413a0056
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 481947e1d58fe5da34b29f43405bfff48583b8c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 11045be6946a5a73f0ad86fdcfcc53610800a6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321078"
 ---
 # <a name="root-element-xmla"></a>root 元素 (XMLA)
-  包含所傳回的結果[探索](../xml-elements-methods-discover.md)方法或 XML for Analysis (XMLA) 命令，使用執行[Execute](../xml-elements-methods-execute.md)方法。  
+  包含所傳回的結果[Discover](../xml-elements-methods-discover.md)方法或 XML for Analysis (XMLA) 命令，使用執行[Execute](../xml-elements-methods-execute.md)方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36133777"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- `root`項目包含在傳回的資訊[DiscoverResponse](../xml-elements-objects-discoverresponse.md)傳回單一項目`Discover`方法呼叫，或在[ExecuteResponse](../xml-elements-objects-executeresponse.md)項目所執行的是單一的單一 XMLA 命令傳回`Execute`方法呼叫。  
+ `root`項目包含在傳回的資訊[DiscoverResponse](../xml-elements-objects-discoverresponse.md)傳回單一項目`Discover`方法呼叫，或是在[ExecuteResponse](../xml-elements-objects-executeresponse.md)項目執行由單一的單一 XMLA 命令所傳回`Execute`方法呼叫。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  

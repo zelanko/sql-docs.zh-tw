@@ -5,21 +5,20 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 caps.latest.revision: 9
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8bc8f55fbbd939964d22521948ac1132ced4c73c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b5d7d36bd056eddde8b7754b8fd9b5b8ae6a864f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331418"
 ---
 # <a name="modify-a-partition-scheme"></a>修改資料分割配置
   您可以使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 來指定檔案群組以保存下一個要加入資料分割資料表的資料分割，藉此在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中修改資料分割配置。 作法是，將 NEXT USED 屬性指派給檔案群組。 NEXT USED 屬性可以指派給空的檔案群組或已保存資料分割的檔案群組。 換句話說，檔案群組可以保存一個以上的資料分割。  
@@ -57,7 +56,7 @@ ms.locfileid: "36033242"
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
  **若要修改資料分割配置：**  
   
- 您無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來執行這項特定動作。 若要修改資料分割配置，您必須先刪除此配置，然後再使用 [建立資料分割精靈] 來建立具有所需屬性的新配置。 如需詳細資訊，請參閱[建立資料分割資料表和索引使用 SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure)下**建立 Partitioned Tables and Indexes**。  
+ 您無法使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來執行這項特定動作。 若要修改資料分割配置，您必須先刪除此配置，然後再使用 [建立資料分割精靈] 來建立具有所需屬性的新配置。 如需詳細資訊，請參閱 <<c0> [ 建立資料分割資料表和索引使用 SQL Server Management Studio](create-partitioned-tables-and-indexes.md#SSMSProcedure)下方**建立 Partitioned Tables and Indexes**。  
   
 #### <a name="to-delete-a-partition-scheme"></a>若要刪除資料分割配置  
   

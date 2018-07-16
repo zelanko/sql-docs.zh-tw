@@ -1,13 +1,11 @@
 ---
-title: SqlContext 物件 |Microsoft 文件
+title: SqlContext 物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - context [CLR integration]
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea7cd3ca105fd599f3b157f64189210b539de4ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 46ff059b14d5937d1214e0d97ad9aa13083e7fd3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133722"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354010"
 ---
 # <a name="sqlcontext-object"></a>SqlContext 物件
   當您呼叫程序或函數、在 Common Language Runtime (CLR) 使用者定義型別上呼叫方法，或您的動作引發以任何 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 語言定義的觸發程序時，會在伺服器中叫用 Managed 程式碼。 因為要求執行此程式碼做為使用者連接的一部分，所以需要從伺服器上執行的程式碼，存取呼叫端的內容。 此外，特定資料存取作業只有在呼叫端的內容下執行才會有效。 例如，對在觸發程序作業中使用之插入及刪除虛擬資料表的存取，只有在呼叫端的內容下才有效。  
@@ -33,9 +31,9 @@ ms.locfileid: "36133722"
   
  `SqlContext` 會提供下列元件的存取：  
   
--   `SqlPipe`：`SqlPipe` 物件表示結果藉以流向用戶端的「管道」。 如需有關`SqlPipe`物件，請參閱[SqlPipe 物件](sqlpipe-object.md)。  
+-   `SqlPipe`：`SqlPipe` 物件表示結果藉以流向用戶端的「管道」。 如需詳細資訊`SqlPipe`物件，請參閱 < [SqlPipe 物件](sqlpipe-object.md)。  
   
--   `SqlTriggerContext`：`SqlTriggerContext` 物件只能在 CLR 觸發程序內擷取。 它提供造成引發觸發程序的作業及已更新資料行之對應的相關資訊。 如需有關`SqlTriggerContext`物件，請參閱[SqlTriggerContext 物件](sqltriggercontext-object.md)。  
+-   `SqlTriggerContext`：`SqlTriggerContext` 物件只能在 CLR 觸發程序內擷取。 它提供造成引發觸發程序的作業及已更新資料行之對應的相關資訊。 如需詳細資訊`SqlTriggerContext`物件，請參閱 < [SqlTriggerContext 物件](sqltriggercontext-object.md)。  
   
 -   `IsAvailable`：`IsAvailable` 屬性用於判斷內容可用性。  
   

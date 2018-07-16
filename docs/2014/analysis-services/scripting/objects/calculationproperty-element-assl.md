@@ -1,5 +1,5 @@
 ---
-title: CalculationProperty 元素 (ASSL) |Microsoft 文件
+title: CalculationProperty 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalculationProperty element
 ms.assetid: 5f0b4cfc-7d25-4c01-a517-cc2e89859be3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a4d4184b77e05e4a8ffbc07af49dcaed332e74b9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 251cd4bd439fad70fd64e1c5ebf4be2965cf983d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308398"
 ---
 # <a name="calculationproperty-element-assl"></a>CalculationProperty 元素 (ASSL)
   包含的使用者介面中使用之計算的屬性集合[MdxScript](mdxscript-element-assl.md)項目。  
@@ -73,10 +73,10 @@ ms.locfileid: "36132295"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[CalculationProperties](../collections/calculationproperties-element-assl.md)|  
-|子元素|[AssociatedMeasureGroupID](../properties/id-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [CalculationReference](../properties/calculationreference-element-assl.md), [CalculationType](../properties/calculationtype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [NonEmptyBehavior](../properties/nonemptybehavior-element-assl.md), [SolveOrder](../properties/solveorder-element-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|子元素|[AssociatedMeasureGroupID](../properties/id-element-assl.md)， [BackColor](../properties/backcolor-element-assl.md)， [CalculationReference](../properties/calculationreference-element-assl.md)， [CalculationType](../properties/calculationtype-element-assl.md)，[描述](../properties/description-element-assl.md)，[DisplayFolder](../properties/displayfolder-element-assl.md)， [FontFlags](../properties/fontflags-element-assl.md)， [FontName](../properties/name-element-assl.md)， [FontSize](../properties/fontsize-element-assl.md)， [ForeColor](../properties/forecolor-element-assl.md)，[FormatString](../properties/formatstring-element-assl.md)， [NonEmptyBehavior](../properties/nonemptybehavior-element-assl.md)， [SolveOrder](../properties/solveorder-element-assl.md)，[翻譯](../collections/translations-element-assl.md)，[可見](../properties/visible-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.CalculationProperty>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.CalculationProperty>。  
   
 ## <a name="see-also"></a>另請參閱  
  [物件&#40;ASSL&#41;](objects-assl.md)  

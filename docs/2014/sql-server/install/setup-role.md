@@ -1,5 +1,5 @@
 ---
-title: 安裝程式角色 |Microsoft 文件
+title: 安裝程式角色 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 caps.latest.revision: 14
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: b734e817739d887c6e342aa841e3701f770175a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b37c8749ee82894ee7c28acf6b0fa94bf4ee58f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033161"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330978"
 ---
 # <a name="setup-role"></a>安裝程式角色
   您可以使用此頁面來指定要使用 [特徵選取] 頁面選取個別功能，還是使用安裝程式角色進行安裝。  
@@ -39,7 +39,7 @@ ms.locfileid: "36033161"
   
  以角色為基礎的安裝不包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerPivot for Excel 用戶端應用程式。 用戶端應用程式要另外安裝。  
   
- **具有預設值的所有功能**  
+ **使用預設值的所有功能**  
  選擇此安裝程式角色來安裝可用於此版本的所有功能。 請注意，這個角色中會排除 PowerPivot for SharePoint。 您必須使用 PowerPivot for SharePoint 安裝程式角色來安裝該功能。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 設定為使用 **NT AUTHORITY\NETWORK SERVICE** 帳戶啟動。 目前的使用者將會當作 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**系統管理員** 角色的成員提供。 此選項所設定的值可透過指定其他命令行參數來覆寫。  
@@ -49,6 +49,6 @@ ms.locfileid: "36033161"
 ## <a name="see-also"></a>另請參閱  
  [安裝 PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=206906)   
  [硬體和軟體需求 (PowerPivot for SharePoint](http://go.microsoft.com/fwlink/?LinkId=216823)   
- [特徵選取](../../../2014/sql-server/install/feature-selection.md)  
+ [功能選取](../../../2014/sql-server/install/feature-selection.md)  
   
   

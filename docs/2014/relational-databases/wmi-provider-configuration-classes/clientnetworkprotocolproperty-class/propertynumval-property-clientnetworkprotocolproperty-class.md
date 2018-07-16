@@ -1,5 +1,5 @@
 ---
-title: PropertyNumVal 屬性 （ClientNetworkProtocolProperty 類別） |Microsoft 文件
+title: PropertyNumVal 屬性 （ClientNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - PropertyNumVal property
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0e737aaa1d5b224e096a7ae6f3f70b81884ba9f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: d43ef33a5ab4a1d516910edf62fd44017b4eee19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309348"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>PropertyNumVal 屬性 (ClientNetworkProtocolProperty 類別)
   取得所參考之目前屬性的數值[PropertyIdx 屬性 （ClientNetworkProtocolProperty 類別）](clientnetworkprotocolproperty-class.md)值。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>組件  
  *object*  
- A [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，代表所使用的網路通訊協定的屬性[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
+ A [ClientNetworkProtocolProperty 類別](clientnetworkprotocolproperty-class.md)物件，表示所使用之網路通訊協定屬性[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用戶端。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定目前屬性之數值的 u`int32` 值。  

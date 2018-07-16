@@ -1,13 +1,11 @@
 ---
-title: CLR 整合的概觀 |Microsoft 文件
+title: CLR 整合的概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - execution at client vs. execution at server [CLR integration]
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 caps.latest.revision: 49
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9f435a50028358a0db3b9289ae4c7ccb157a6761
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 95ffe3d7ddef362caf0985ac780f299a81151e44
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034796"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349430"
 ---
 # <a name="overview-of-clr-integration"></a>CLR 整合的概觀
   做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 在 CLR 內執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 Just-In-Time (JIT) 編譯、配置及管理記憶體、強制使用型別安全、例外狀況處理、執行緒管理及安全性。  如需詳細資訊，請參閱 .NET Framework SDK。  
@@ -45,7 +43,7 @@ ms.locfileid: "36034796"
  Managed 程式碼要比 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 更適合用於計算和複雜的執行邏輯，而且配有許多複雜工作的廣泛支援，包括字串處理和規則運算式。 有了 .NET Framework 程式庫中的功能，您便可存取數千個預先建立的類別和常式。 可從任何預存程序、觸發程序或使用者定義函數輕鬆地存取這些項目。 基底類別程式庫 (BCL) 包含的類別可提供字串操作、進階數學運算、檔案存取、加密等多項功能。  
   
 > [!NOTE]  
->  透過 SQL Server 中的 CLR 程式碼可使用其中的許多類別，但無法使用對伺服器端而言不適用的類別 (如視窗型類別)。 如需詳細資訊，請參閱[支援.NET Framework 程式庫](database-objects/supported-net-framework-libraries.md)。  
+>  透過 SQL Server 中的 CLR 程式碼可使用其中的許多類別，但無法使用對伺服器端而言不適用的類別 (如視窗型類別)。 如需詳細資訊，請參閱 <<c0> [ 支援的.NET Framework 程式庫](database-objects/supported-net-framework-libraries.md)。  
   
  Managed 程式碼的優點之一是型別安全，即能夠確保程式碼僅以完整定義及所允許的方式存取型別。 在執行 Managed 程式碼以前，CLR 會先驗證程式碼是否安全。 例如，會先檢查程式碼，以確保先前尚未寫入的記憶體並未讀取。 CLR 亦可協助確保程式碼不會管理 Unmanaged 記憶體。  
   
@@ -58,7 +56,7 @@ ms.locfileid: "36034796"
  在您決定是要使用 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 或 Managed 程式碼時，有另一個考量因素，那就是您希望程式碼位於何處 (伺服器電腦還是用戶端電腦)。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 和 Managed 程式碼都可以在伺服器上執行。 這樣會將程式碼和資料放在一起，並讓您利用伺服器的處理能力。 另一方面，您可能會想要避免將處理器密集的工作放在資料庫伺服器上。 現今的大多數用戶端電腦都有非常強大的功能，您可能會想要盡量將程式碼放在用戶端上來利用這項處理功能。 Managed 程式碼可以在用戶端電腦上執行，[!INCLUDE[tsql](../../../includes/tsql-md.md)] 則不行。  
   
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>在擴充預存程序與 Managed 程式碼之間選擇  
- 您可以建立擴充預存程序來執行無法以 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序執行的功能。 但是擴充預存程序可能會危害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序整合性，而驗證為具有型別安全的 Managed 程式碼則不會。 此外，記憶體管理、執行緒與 Fiber 排程及同步處理服務都會在 CLR 的 Managed 程式碼與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間得到進一步整合。 CLR 整合為您提供比擴充預存程序更安全的方式來撰寫執行工作所需的預存程序，而這是無法在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中執行的動作。 如需有關 CLR 整合與擴充預存程序的詳細資訊，請參閱[CLR 整合的效能](clr-integration-architecture-performance.md)。  
+ 您可以建立擴充預存程序來執行無法以 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序執行的功能。 但是擴充預存程序可能會危害 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序整合性，而驗證為具有型別安全的 Managed 程式碼則不會。 此外，記憶體管理、執行緒與 Fiber 排程及同步處理服務都會在 CLR 的 Managed 程式碼與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之間得到進一步整合。 CLR 整合為您提供比擴充預存程序更安全的方式來撰寫執行工作所需的預存程序，而這是無法在 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 中執行的動作。 如需有關 CLR 整合與擴充預存程序的詳細資訊，請參閱 < [CLR 整合的效能](clr-integration-architecture-performance.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [安裝.NET Framework](http://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   

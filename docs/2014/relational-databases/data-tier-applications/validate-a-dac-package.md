@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data-tier application [SQL Server], validate
 - data-tier application [SQL Server], compare
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 438b0b847df6877ada5ba1278d6cf57648439820
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 29496d117c1fde896bcf72cc6e485e6b3a1cef62
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137090"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322288"
 ---
 # <a name="validate-a-dac-package"></a>驗證 DAC 封裝
   最好先檢閱 DAC 封裝的內容，再將它部署至實際執行環境，以及先驗證升級動作，再升級現有 DAC。 當您部署的封裝之前不是在組織內開發時，特別會是這個情況。  
@@ -86,7 +86,7 @@ ms.locfileid: "36137090"
   
 3.  指定變數中的 DAC 名稱。  
   
-4.  使用`GetDatabaseChanges()`方法來擷取`ChangeResults`物件，並將管道傳送至文字檔以產生新的、 的簡單報表物件刪除，而且已變更之物件。  
+4.  使用`GetDatabaseChanges()`方法來擷取`ChangeResults`物件，並將管道傳送至文字檔以產生簡單的報告新，物件刪除，而且已變更之物件。  
   
 ### <a name="view-database-changes-example-powershell"></a>檢視資料庫變更範例 (PowerShell)  
  **檢視資料庫變更範例 (PowerShell)**  
@@ -133,7 +133,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 4.  指定變數中的 DAC 名稱。  
   
-5.  使用`GetIncrementalUpgradeScript()`以取得升級的 TRANSACT-SQL 陳述式清單的方法會執行，並將清單輸送至文字檔案。  
+5.  使用`GetIncrementalUpgradeScript()`方法以取得升級的 TRANSACT-SQL 陳述式的清單會執行，並使用管線將清單傳送至文字檔。  
   
 6.  關閉用來讀取 DAC 封裝檔案的檔案資料流。  
   

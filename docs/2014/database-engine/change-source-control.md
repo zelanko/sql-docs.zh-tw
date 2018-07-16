@@ -1,5 +1,5 @@
 ---
-title: 變更原始檔控制 |Microsoft 文件
+title: 變更原始檔控制 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDD_SCC_CONNECTION_DIALOG
 helpviewer_keywords:
 - Change Source Control dialog box
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 caps.latest.revision: 19
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e2584a7981662bc96fff975d93dfd24ec79d5d77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312298"
 ---
 # <a name="change-source-control"></a>變更原始檔控制
   建立與管理連接和繫結，連接和繫結會將本機上儲存的方案或專案連結至原始檔控制資料庫資料夾。  
   
 ## <a name="dialog-box-access"></a>對話方塊存取  
- 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，選取方案總管中的項目。 在**檔案**功能表上，按一下 **原始檔控制**，然後**變更原始檔控制**。  
+ 在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，選取方案總管中的項目。 在 [**檔案**] 功能表中，按一下**原始檔控制**，然後**變更原始檔控制**。  
   
 > [!NOTE]  
 >  在方案總管中以滑鼠右鍵按一下項目，亦可使用此對話方塊。  
@@ -80,12 +80,12 @@ ms.locfileid: "36146162"
 |**選項**|**說明**|  
 |----------------|---------------------|  
 |有效|項目已正確地繫結並連接到其所屬的伺服器資料夾。|  
-|[無效]|項目不正確地繫結至其所屬的資料夾，或是中斷與其所屬之資料夾的連接。 使用**加入原始檔控制**命令，而不要**繫結**這個項目。|  
+|[無效]|項目不正確地繫結至其所屬的資料夾，或是中斷與其所屬之資料夾的連接。 使用**加入原始檔控制**命令，而非**繫結**此項目。|  
 |Unknown|尚未決定在原始檔控制下之項目的狀態。|  
 |未控制|項目尚未放置在原始檔控制之下。|  
   
  **解除繫結**  
- 顯示**原始檔控制**對話方塊，讓您從原始檔控制移除選取的項目，並永久解除關聯的項目與目前的資料夾。  
+ 顯示**原始檔控制**對話方塊，讓您從原始檔控制移除選取的項目，並永久取消關聯的項目，從其目前的資料夾。  
   
 ## <a name="see-also"></a>另請參閱  
  [方案總管原始檔控制](../../2014/database-engine/solution-explorer-source-control.md)  

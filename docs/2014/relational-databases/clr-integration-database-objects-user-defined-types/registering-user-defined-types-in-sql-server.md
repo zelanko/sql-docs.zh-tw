@@ -1,13 +1,11 @@
 ---
-title: 註冊 SQL Server 中的使用者定義型別 |Microsoft 文件
+title: SQL Server 中註冊使用者定義型別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -35,36 +33,36 @@ helpviewer_keywords:
 - ADD FILE clause
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d9d08059688b9a68b303c8d2369250d7b30cac82
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 1307f5b351ab77e9fb61160f4a0ad73a5eb06eb6
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033934"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351530"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>在 SQL Server 中註冊使用者定義型別
-  若要在使用使用者定義型別 (UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須註冊它。 註冊 UDT 包括註冊組件，以及在要使用該型別的資料庫中建立它。 UDT 的使用範圍為單一資料庫，而且除非已經向每個資料庫註冊相同的組件及 UDT，否則無法在多個資料庫中使用。 一旦註冊 UDT 組件並建立此型別之後，您便可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及用戶端程式碼中使用該 UDT。 如需詳細資訊，請參閱 [CLR 使用者定義型別](clr-user-defined-types.md)。  
+  若要使用的使用者定義的型別 (UDT) 中[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須註冊它。 註冊 UDT 包括註冊組件，以及在要使用該型別的資料庫中建立它。 UDT 的使用範圍為單一資料庫，而且除非已經向每個資料庫註冊相同的組件及 UDT，否則無法在多個資料庫中使用。 一旦註冊 UDT 組件並建立此型別之後，您便可在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及用戶端程式碼中使用該 UDT。 如需詳細資訊，請參閱 [CLR 使用者定義型別](clr-user-defined-types.md)。  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>使用 Visual Studio 部署 UDT  
  使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 是部署 UDT 最簡單的方式。 但是，若為較複雜的部署案例而且需要最大的彈性，請使用本主題稍後將要討論的 [!INCLUDE[tsql](../../includes/tsql-md.md)]。  
   
  請遵循下列步驟，使用 Visual Studio 建立及部署 UDT：  
   
-1.  建立新**資料庫**專案中**Visual Basic**或**Visual C#** 語言節點。  
+1.  建立新**資料庫**專案中**Visual Basic**或是**Visual C#** 語言節點。  
   
 2.  加入將包含 UDT 之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的參考。  
   
-3.  新增**使用者定義型別的**類別。  
+3.  新增**使用者定義型別**類別。  
   
 4.  撰寫程式碼以實作 UDT。  
   
 5.  從**建置**功能表上，選取**部署**。 如此將會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中註冊組件並建立型別。  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>使用 Transact-SQL 部署 UDT  
- 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語法，於要使用 UDT 的資料庫中註冊組件。 它會儲存於資料庫系統資料表內部，而非檔案系統外部。 如果 UDT 與外部組件相關，也必須將它們載入資料庫。 CREATE TYPE 陳述式可在要使用 UDT 的資料庫內建立 UDT。 如需詳細資訊，請參閱[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-assembly-transact-sql)和[CREATE TYPE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)。  
+ 您可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 語法，於要使用 UDT 的資料庫中註冊組件。 它會儲存於資料庫系統資料表內部，而非檔案系統外部。 如果 UDT 與外部組件相關，也必須將它們載入資料庫。 CREATE TYPE 陳述式可在要使用 UDT 的資料庫內建立 UDT。 如需詳細資訊，請參閱[CREATE ASSEMBLY &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-assembly-transact-sql)並[CREATE TYPE &#40;-&#41;](/sql/t-sql/statements/create-type-transact-sql)。  
   
 ### <a name="using-create-assembly"></a>使用 CREATE ASSEMBLY  
  CREATE ASSEMBLY 語法會在要使用 UDT 的資料庫中註冊組件。 一旦註冊此組件，它就不具有相依性。  
@@ -74,7 +72,7 @@ ms.locfileid: "36033934"
  當使用 SAFE 或 EXTERNAL_ACCESS 權限集合執行 CREATE ASSEMBLY 時，系統會檢查組件，以確定它可進行驗證且型別是安全的。 如果您省略指定使用權限集合，則會假設為 SAFE。 系統不會檢查使用 UNSAFE 權限集合的程式碼。 如需有關組件權限集合的詳細資訊，請參閱[設計組件](../../relational-databases/clr-integration/assemblies-designing.md)。  
   
 #### <a name="example"></a>範例  
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式註冊中的將 Point 組件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**AdventureWorks**具有 SAFE 權限集合。 如果省略 WITH PERMISSION_SET 子句，將會使用 SAFE 權限集合註冊該組件。  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式註冊中的點組件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中**AdventureWorks**資料庫，具有 SAFE 權限集合。 如果省略 WITH PERMISSION_SET 子句，將會使用 SAFE 權限集合註冊該組件。  
   
 ```  
 USE AdventureWorks;  
@@ -83,7 +81,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式註冊組件使用 *< assembly_bits >* FROM 子句中的引數。 此 `varbinary` 值將檔案表示為位元組的資料流。  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式註冊使用的組件 *< assembly_bits> >* FROM 子句中的引數。 此 `varbinary` 值將檔案表示為位元組的資料流。  
   
 ```  
 USE AdventureWorks;  
@@ -97,10 +95,10 @@ FROM 0xfeac4 … 21ac78
 > [!NOTE]  
 >  CREATE TYPE 語法也可用於建立原生 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 別名資料類型，而且要用來取代 `sp_addtype`，當做建立別名資料類型的一個方式。 CREATE TYPE 語法中的某些選擇性引數會參考建立 UDT，且不適用於建立別名資料類型 (如基底類型)。  
   
- 如需詳細資訊，請參閱[CREATE TYPE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)。  
+ 如需詳細資訊，請參閱 < [CREATE TYPE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)。  
   
 #### <a name="example"></a>範例  
- 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會建立 `Point` 類型。 使用兩部分命名語法指定外部名稱*AssemblyName*。*UDTName*。  
+ 下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式會建立 `Point` 類型。 EXTERNAL NAME 使用兩部分命名語法的指定*AssemblyName*。*UDTName*。  
   
 ```  
 CREATE TYPE dbo.Point   
@@ -128,7 +126,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>尋找 UDT 相依性  
  如果有相依物件存在 (如具有 UDT 資料行定義的資料表)，則 DROP TYPE 陳述式會失敗。 如果資料庫中有使用 WITH SCHEMABINDING 子句所建立的函數、預存程序或觸發程序，而且這些常式使用使用者定義型別的變數或參數，該陳述式也會失敗。 您必須先卸除所有相依物件，然後再執行 DROP TYPE 陳述式。  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢找出使用 UDT 的參數與資料行的所有**AdventureWorks**資料庫。  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢找出使用 UDT 中的參數與資料行的所有**AdventureWorks**資料庫。  
   
 ```  
 USE Adventureworks;  
@@ -164,7 +162,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>使用 ALTER ASSEMBLY 加入原始程式碼  
  ALTER ASSEMBLY 語法中的 ADD FILE 子句不存在於 CREATE ASSEMBLY 中。 您可以使用它來加入原始程式碼，或與組件相關聯的任何其他檔案。 這些檔案會從原始位置複製，並儲存在資料庫的系統資料表中。 如此可在您需要重新建立或記載 UDT 的目前版本時，確保您一定有原始程式碼或其他檔案可用。  
   
- 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]ALTER ASSEMBLY 陳述式加入 Point.cs 類別原始程式碼，如`Point`UDT。 這會複製 Point.cs 檔案中包含的文字，並將它儲存在名為 PointSource 的資料庫中。  
+ 下列[!INCLUDE[tsql](../../includes/tsql-md.md)]ALTER ASSEMBLY 陳述式加入 Point.cs 類別原始程式碼，以針對`Point`UDT。 這會複製 Point.cs 檔案中包含的文字，並將它儲存在名為 PointSource 的資料庫中。  
   
 ```  
 ALTER ASSEMBLY Point  
@@ -180,12 +178,12 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  物件的名稱。  
   
  **file_id**  
- 數字，識別每個物件，與相關聯的第一個物件指定**assembly_id**給定值為 1。 如果有多個關聯於相同的物件**assembly_id**，則每個後續**file_id**值都會遞增 1。  
+ 數字，識別每個相關聯的第一個物件的物件，指定**assembly_id** 1 的值。 如果有多個物件具有相同相關聯**assembly_id**，則每個後續**file_id**值都會遞增 1。  
   
  **內容**  
  組件或檔案的十六進位表示法。  
   
- 您可以將轉換的內容中使用 CAST 或 CONVERT 函數**內容**可讀取的文字資料行。 下列查詢會將 Point.cs 檔案的內容轉換為可讀取的文字，並在 WHERE 子句中使用此名稱，以將結果集限制為單一資料列。  
+ 您可以使用 CAST 或 CONVERT 函數，將轉換的內容**內容**可讀取的文字資料行。 下列查詢會將 Point.cs 檔案的內容轉換為可讀取的文字，並在 WHERE 子句中使用此名稱，以將結果集限制為單一資料列。  
   
 ```  
 SELECT CAST(content AS varchar(8000))   
@@ -201,9 +199,9 @@ SELECT CAST(content AS varchar(8000))
  將可能會發生變更的程序性程式碼與實作 UDT 所需的程式碼分開，可以大幅簡化維護作業。 只包含 UDT 運作所需的程式碼並使您的 UDT 定義盡量簡單，這樣就會減少因程式碼修訂或錯誤修復而需要從資料庫卸除 UDT 本身的風險。  
   
 ### <a name="the-currency-udt-and-currency-conversion-function"></a>Currency UDT 及貨幣轉換函數  
- **貨幣**UDT **AdventureWorks**範例資料庫提供結構化 UDT 及其相關聯的函式的建議方式的實用範例。 **貨幣**UDT 用於處理貨幣某個文化特性的貨幣系統為基礎而且允許儲存不同貨幣類型，如美元、 歐元等。 UDT 類別會將文化特性名稱顯示為字串，而將貨幣金額顯示為 `decimal` 資料類型。 所有必要的序列化方法都包含在定義類別的組件中。 實作一個不因文化特性的貨幣轉換到另一個函式會實作為名為外部函式**ConvertCurrency**，且此函式位於不同的組件。 **ConvertCurrency**函式會從資料表中擷取轉換比率**AdventureWorks**資料庫。 如果轉換比率的來源應該變更，或如果應該會有任何其他現有的程式碼的變更，組件就可以輕鬆地修改而不會影響**貨幣**UDT。  
+ **貨幣**中的 UDT **AdventureWorks**範例資料庫提供結構化 UDT 及其相關聯的函式的建議方式的實用範例。 **貨幣**UDT 用於處理特定的文化特性的貨幣系統為基礎的貨幣，並允許儲存不同貨幣類型，如美元、 歐元，等等。 UDT 類別會將文化特性名稱顯示為字串，而將貨幣金額顯示為 `decimal` 資料類型。 所有必要的序列化方法都包含在定義類別的組件中。 實作一個不因文化特性的貨幣轉換到另一個函式會實作為名為外部函式**ConvertCurrency**，且此函式位於不同的組件。 **ConvertCurrency**函式會從中的資料表擷取轉換比率**AdventureWorks**資料庫。 如果轉換比率的來源應該變更，或如果應該對現有的程式碼的任何其他變更，可以不會影響輕鬆修改組件**貨幣**UDT。  
   
- 程式碼清單**貨幣**UDT 和**ConvertCurrency**函式可以找到藉由安裝 common language runtime (CLR) 範例。  
+ 程式碼清單**貨幣**UDT 並**ConvertCurrency**函式即可找出安裝 common language runtime (CLR) 範例。  
   
 ### <a name="using-udts-across-databases"></a>跨資料庫使用 UDT  
  根據定義，UDT 屬於單一資料庫的範圍。 因此，在一個資料庫內定義的 UDT 無法用於其他資料庫中的資料行定義。 為了在多個資料庫中使用 UDT，您必須在每個資料庫內的相同組件上執行 CREATE ASSEMBLY 及 CREATE TYPE 陳述式。 具有相同名稱、強式名稱、文化特性、版本、使用權限集合及二進位內容的組件，會視為相同組件。  
@@ -218,7 +216,7 @@ SELECT CAST(content AS varchar(8000))
   
  在這些情況下，伺服器所需的任何轉換都會自動發生。 您將無法使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 或 CONVERT 函數明確地執行轉換。  
   
- 請注意您不需要採取任何動作，使用 Udt 時[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]建立工作資料表中的**tempdb**系統資料庫。 這包括處理的資料指標、 資料表變數和使用者定義資料表值函式會明確地包含 Udt 以及以進行使用**tempdb**。 不過，如果您明確建立暫存資料表的**tempdb**可定義 UDT 資料行，則 UDT 必須登錄在**tempdb**使用者資料庫一樣。  
+ 請注意，不需要採取任何動作來使用 Udt 時[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]中建立工作資料表中的**tempdb**系統資料庫。 這包括處理的資料指標、 資料表變數和使用者定義資料表值函式，明確地包含 Udt 以及以讓使用**tempdb**。 不過，如果您明確地建立中的暫存資料表**tempdb**可定義 UDT 資料行，則必須在中註冊的 UDT **tempdb**與使用者資料庫相同的方式。  
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 使用者定義型別](clr-user-defined-types.md)  

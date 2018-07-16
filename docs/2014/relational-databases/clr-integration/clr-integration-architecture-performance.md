@@ -1,13 +1,11 @@
 ---
-title: CLR 整合的效能 |Microsoft 文件
+title: CLR 整合的效能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - performance [CLR integration]
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2259cf7be33fdf0e1ded99345db8102875f95618
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de2c903436475790b1d7b6fa01c5c59ae16f20b5
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131747"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352580"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 整合的效能
-  本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework common language runtime (CLR)。  
+  本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 通用語言執行平台 (CLR)。  
   
 ## <a name="the-compilation-process"></a>編譯程序  
  編譯 SQL 運算式期間，碰到 Managed 常式的參考時，就會產生 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Intermediate Language (MSIL) 虛設常式。 此虛設常式包含的程式碼可將常式參數從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 封送處理到 CLR、叫用函數，並傳回結果。 這個「黏附」程式碼是以參數類型以及參數方向 (in、out 或參考) 為基礎。  
@@ -40,7 +38,7 @@ ms.locfileid: "36131747"
  編譯程序會產生可以在執行階段，從原生程式碼呼叫的函數指標。 如果是純量值的使用者定義函數，此函數引動過程會以資料列為基礎發生。 若要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 之間轉換的成本降至最低，包含任何 Managed 引動過程的陳述式都有一個識別目標應用程式網域的啟動步驟。 這個識別步驟會降低每個資料列轉換的成本。  
   
 ## <a name="performance-considerations"></a>效能考量  
- 以下摘要說明 CLR 整合到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時的特定效能考量。 更詳細的資訊可以在 「[使用 SQL Server 2005 中的 CLR 整合](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 網站上。 關於 managed 程式碼效能的一般資訊可以在 「[改善.NET 應用程式效能和延展性](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 網站上。  
+ 以下摘要說明 CLR 整合到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時的特定效能考量。 更詳細的資訊可在 「[SQL Server 2005 中使用 CLR 整合](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 網站上。 關於 managed 程式碼效能的一般資訊可在 「[< 改進.NET 應用程式效能和延展性](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 網站上。  
   
 ### <a name="user-defined-functions"></a>使用者定義的函式  
  CLR 函數會因為引動過程路徑比 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 使用者定義函數的引動過程更快速而獲益。 此外，Managed 程式碼在程序性程式碼、計算與字串操作的決定性效能優勢上優於 [!INCLUDE[tsql](../../../includes/tsql-md.md)]。 需要大量計算而不執行資料存取的 CLR 函數以更好的 Managed 程式碼方式撰寫。 不過，[!INCLUDE[tsql](../../../includes/tsql-md.md)] 函數在資料存取的執行上比 CLR 整合更有效率。  

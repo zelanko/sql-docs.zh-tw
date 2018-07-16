@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.roleproperties.selectroll.f1
 - sql12.swb.databaseuser.permissions.user.f1--May use common.permissions
@@ -29,15 +28,15 @@ helpviewer_keywords:
 - '##MS_SQLReplicationSigningCertificate##'
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 54
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1023de7c9ba97728ce23057172ec419c81f9b812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 55f86aa023d1c5ddfb03c24d9c97797b22a93973
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037425"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318038"
 ---
 # <a name="principals-database-engine"></a>主體 (Database Engine)
   「主體」是可要求 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資源的實體。 主體就像其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 授權模型的元件一樣，可以階層方式安排。 主體的影響範圍視主體的定義範圍 (Windows、伺服器、資料庫)，以及主體是否可分割或者是一個集合而定。 「Windows 登入」是不可分割主體的一個範例，而「Windows 群組」則是主體為集合的範例。 每個主體都有一個安全性識別碼 (SID)。  
@@ -89,7 +88,7 @@ ms.locfileid: "36037425"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>guest 使用者  
- 每個資料庫都包括 **guest**。 具有資料庫存取權但在資料庫中沒有使用者帳戶的使用者，將繼承授與 **guest** 使用者的權限。 **客體**無法卸除使用者，但可透過撤銷其停用的`CONNECT`權限。 `CONNECT`會撤銷權限，請執行`REVOKE CONNECT FROM GUEST`master 或 tempdb 以外的任何資料庫中。  
+ 每個資料庫都包括 **guest**。 具有資料庫存取權但在資料庫中沒有使用者帳戶的使用者，將繼承授與 **guest** 使用者的權限。 **客體**無法卸除使用者，但可透過撤銷其停用的`CONNECT`權限。 `CONNECT`權限可以執行撤銷`REVOKE CONNECT FROM GUEST`master 或 tempdb 以外的任何資料庫中。  
   
 ## <a name="client-and-database-server"></a>用戶端和資料庫伺服器  
  根據定義，用戶端和資料庫伺服器都是安全性主體，而且可以維護其安全。 建立安全的網路連接之前，這些實體可以進行相互驗證。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援[Kerberos](http://go.microsoft.com/fwlink/?LinkId=100758)驗證通訊協定，可定義用戶端與網路驗證服務互動的方式。  

@@ -1,5 +1,5 @@
 ---
-title: 結構描述資料庫的元素 (DTA) |Microsoft 文件
+title: 結構描述元素 (DTA) 資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Schema element
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4bcdcba472eb2a439d7786898f30b09d7e1dc50f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: d334d41335d0065fe1883da8b1f5fceae063751e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306698"
 ---
 # <a name="schema-element-for-database-dta"></a>資料庫的 Schema 元素 (DTA)
   指定您要微調之資料庫的結構描述。  
@@ -50,7 +50,7 @@ ms.locfileid: "36132111"
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[伺服器的 database 元素&#40;DTA&#41;](database-element-for-server-dta.md)|  
-|**子元素**|[結構描述名稱元素&#40;DTA&#41;](name-element-for-schema-dta.md)<br /><br /> [資料表結構描述的項目&#40;DTA&#41;](table-element-for-schema-dta.md)|  
+|**子元素**|[結構描述的名稱項目&#40;DTA&#41;](name-element-for-schema-dta.md)<br /><br /> [資料表結構描述的項目&#40;DTA&#41;](table-element-for-schema-dta.md)|  
   
 ## <a name="example"></a>範例  
  如需此元素的使用範例，請參閱 [Server 元素 &#40;DTA&#41;](server-element-dta.md)。  

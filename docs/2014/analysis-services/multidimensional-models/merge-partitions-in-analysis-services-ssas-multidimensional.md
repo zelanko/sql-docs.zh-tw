@@ -1,5 +1,5 @@
 ---
-title: 合併資料分割中 Analysis Services (SSAS-多維度) |Microsoft 文件
+title: 合併 Analysis Services (SSAS-多維度) 中的資料分割 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
 - merging partitions [Analysis Services]
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b926c685b87f863c0b04e4ce570bec2573aebdf4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78fcd5ce33ba73b4eb11e6449b84f3afe3f2028a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036486"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306568"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>在 Analysis Services 中合併分割區 (SSAS - 多維度)
   您可以合併現有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫中的資料分割，以合併相同量值群組中之多個資料分割的事實資料。  
@@ -73,7 +73,7 @@ ms.locfileid: "36036486"
 ##  <a name="bkmk_Where"></a> 合併分割區之後更新分割區來源  
  分割區會依查詢 (例如用於處理資料之 SQL 查詢的 WHERE 子句) 分割，或依資料表或具名查詢分割，以提供資料給分割區。 分割區的 `Source` 屬性指出分割區繫結至查詢或資料表。  
   
- 當您合併資料分割時，則會合併分割區的內容，但`Source`屬性不會更新以反映其他分割區的範圍。 這表示如果您後續重新處理保留其原始的分割區`Source`，就會不正確的資料從該分割區。 分割區會錯誤地在父層級彙總資料。 下列範例說明此行為。  
+ 當您合併資料分割時，會合併分割區的內容，但`Source`屬性不會更新以反映其他分割區的範圍。 這表示如果您後續重新處理保留其原始的分割區`Source`，您會從該資料分割取得不正確的資料。 分割區會錯誤地在父層級彙總資料。 下列範例說明此行為。  
   
  **問題**  
   
@@ -81,16 +81,16 @@ ms.locfileid: "36036486"
   
  **方案**  
   
- 解決方法是更新`Source`屬性調整 WHERE 子句或具名的查詢，或手動合併基礎事實資料表，以確保後續處理正確的分割區範圍擴充的資料。  
+ 解決方法是更新`Source`屬性，可以調整 WHERE 子句或具名的查詢，或者手動合併基礎事實資料表，以確保後續處理正確的資料分割範圍擴充的資料。  
   
  在這個範例中，將資料分割 3 合併到資料分割 2 之後，您可以在所產生的資料分割 2 中提供篩選，例如 ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet')，來指定只從事實資料表擷取關於 [ColaDecaf] 和 [ColaDiet] 的資料，而屬於 [ColaFull] 的資料將被排除在外。 或者，您可以在建立資料分割 2 和資料分割 3 時指定篩選，這些篩選便會在合併過程中進行結合。 不論是哪一種情況，在處理分割區之後，Cube 都不會包含重複的資料。  
   
  **結論**  
   
- 合併資料分割之後，請務必檢查`Source`，確認篩選對於合併的資料正確。 如果您的分割區一開始包含 Q1、Q2 和 Q3 的歷程記錄資料，且您現在想合併 Q4，則必須調整篩選以加入 Q4。 否則，分割區的後續處理將產生錯誤的結果。 此結果對於 Q4 而言將不正確。  
+ 合併分割區之後，請務必檢查`Source`以確認篩選對於合併的資料是正確。 如果您的分割區一開始包含 Q1、Q2 和 Q3 的歷程記錄資料，且您現在想合併 Q4，則必須調整篩選以加入 Q4。 否則，分割區的後續處理將產生錯誤的結果。 此結果對於 Q4 而言將不正確。  
   
 ##  <a name="bkmk_fact"></a> 依事實資料表或具名查詢分割分割區的特殊考量  
- 除了查詢之外，也可依資料表或具名查詢分割分割區。 如果來源分割區和目標分割區使用資料來源或資料來源檢視中的相同事實資料表，`Source` 屬性會在合併分割區之後生效。 它會指定適合結果分割區的事實資料表資料。 由於所需的結果資料分割的事實會在事實資料表，因此任何修改`Source`是必要的屬性。  
+ 除了查詢之外，也可依資料表或具名查詢分割分割區。 如果來源分割區和目標分割區使用資料來源或資料來源檢視中的相同事實資料表，`Source` 屬性會在合併分割區之後生效。 它會指定適合結果分割區的事實資料表資料。 由於產生的資料分割所需的事實資料表已存在的事實，進行任何修改`Source`屬性是必要屬性。  
   
  使用多個事實資料表或具名查詢中資料的分割區需要執行額外的工作。 您必須手動將來源分割區的事實資料表中的事實，合併到目標分割區的事實資料表。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36036486"
   
 1.  在物件總管中，展開包含您要合併的資料分割之 Cube 的 [量值群組] 節點，然後展開 [資料分割]，再以滑鼠右鍵按一下合併作業的目標或目的地資料分割。 例如，如果您要將季度事實資料移至儲存年度事實資料的分割區，請選取包含年度事實資料的分割區。  
   
-2.  按一下**合併資料分割**開啟**合併分割區\<分割區名稱 >**  對話方塊。  
+2.  按一下 [**合併資料分割**以開啟**合併資料分割\<分割區名稱 >** ] 對話方塊。  
   
 3.  在 [來源資料分割] 下，選取要與目標資料分割合併之每個來源資料分割旁的核取方塊，然後按一下 [確定]。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36036486"
  [處理 Analysis Services 物件](processing-analysis-services-objects.md)   
  [資料分割&#40;Analysis Services-多維度資料&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [建立及管理本機資料分割&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [建立及管理遠端資料分割&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [建立和管理遠端資料分割&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
  [設定分割區回寫](set-partition-writeback.md)   
  [寫入的資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [設定維度及分割區的字串存放區](configure-string-storage-for-dimensions-and-partitions.md)  

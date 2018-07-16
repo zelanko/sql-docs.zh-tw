@@ -1,11 +1,11 @@
 ---
-title: 存取目前的交易 |Microsoft 文件
+title: 存取目前的交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +17,18 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01f0f1513d2b627f0097005487bae4e86f2507e8
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 66d123ca233bc71ce401fb7d76fe5b1fc29e0870
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695279"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358750"
 ---
 # <a name="accessing-the-current-transaction"></a>存取目前交易
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  如果交易在使用中的點上執行的 common language runtime (CLR) 程式碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是輸入，交易透過公開**System.Transactions.Transaction**類別。 **Transaction.Current**屬性用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 資料庫連接，ADO.NET 會檢查**Transaction.Current**時自動**c**方法呼叫時，並明確地登記連接在該交易中的 (除非**登錄**關鍵字設定為 false，連接字串中)。  
+  如果異動正在作用中的點上執行的 common language runtime (CLR) 程式碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是輸入，公開此交易是透過**System.Transactions.Transaction**類別。 **Transaction.Current**屬性用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 針對資料庫連接，ADO.NET 會檢查**Transaction.Current**時，自動**Connection.Open**方法呼叫，並明確地登記連接該筆交易中的 (除非**登錄**關鍵字設定為 false 的連接字串中)。  
   
- 您可能想要使用**交易**直接在下列案例中的物件：  
+ 您可能想要**交易**直接在下列案例中的物件：  
   
 -   如果您想要編列不會自動編列的資源，或由於某些原因，無法在初始化期間編列的資源。  
   
@@ -45,13 +45,13 @@ ms.locfileid: "35695279"
 ## <a name="canceling-an-external-transaction"></a>取消外部交易  
  您可以使用下列方式，從 Managed 程序或函數取消外部交易：  
   
--   Managed 程序或函數可以使用輸出參數來傳回值。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]程序可以檢查傳回的值，如果適當，請執行**ROLLBACK TRANSACTION**。  
+-   Managed 程序或函數可以使用輸出參數來傳回值。 呼叫端[!INCLUDE[tsql](../../includes/tsql-md.md)]程序可以檢查傳回的值，如果適當，請執行**ROLLBACK TRANSACTION**。  
   
--   Managed 程序或函數可以擲回自訂例外狀況。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]程序可以捕捉 managed 程序或在 try/catch 區塊中的函式所擲回的例外狀況，並且執行**ROLLBACK TRANSACTION**。  
+-   Managed 程序或函數可以擲回自訂例外狀況。 呼叫端[!INCLUDE[tsql](../../includes/tsql-md.md)]程序可以捕捉 managed 程序或函式的 try/catch 區塊中所擲回的例外狀況，並且執行**ROLLBACK TRANSACTION**。  
   
--   Managed 程序或函式可以藉由呼叫取消目前的交易**Transaction.Rollback**方法在符合特定條件。  
+-   受管理的程序或函式可以藉由呼叫取消目前的交易**Transaction.Rollback**如果符合特定條件的方法。  
   
- 在受管理的程序或函式，呼叫時**Transaction.Rollback**方法擲回例外狀況，並出現模稜兩可的錯誤訊息，而且可能會包裝在 try/catch 區塊中。 此錯誤訊息類似下列內容：  
+ 受管理的程序或函式，呼叫時**Transaction.Rollback**方法會擲回例外狀況的模稜兩可的錯誤訊息，並可以包裝在 try/catch 區塊。 此錯誤訊息類似下列內容：  
   
 ```  
 Msg 3994, Level 16, State 1, Procedure uspRollbackFromProc, Line 0  
@@ -68,7 +68,7 @@ The context transaction which was active before entering user defined routine, t
  這項例外狀況也在預期中，而且您必須在執行引發觸發程序之動作的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式前後設有 try/catch 區塊，才能繼續執行。 儘管會擲回兩項例外狀況，交易仍會回復，而且不會認可變更。  
   
 ### <a name="example"></a>範例  
- 下列是回復交易從受管理的程序所使用的範例**Transaction.Rollback**方法。 請注意周圍的 try/catch 區塊**Transaction.Rollback** managed 程式碼中的方法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼會建立組件和 Managed 預存程序。 請注意， **EXEC Usprollbackfromproc<** 陳述式會包裝在 try/catch 區塊中，如此才能捕捉 managed 程序完成執行時，會擲回的例外狀況。  
+ 下列是回復交易從受管理的程序使用的範例**Transaction.Rollback**方法。 請注意 try/catch 區塊，周圍**Transaction.Rollback** managed 程式碼中的方法。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼會建立組件和 Managed 預存程序。 請注意， **EXEC Usprollbackfromproc&lt**陳述式會包裝在 try/catch 區塊中，如此才能捕捉 managed 程序完成執行時，會擲回的例外狀況。  
   
 ```csharp  
 using System;  

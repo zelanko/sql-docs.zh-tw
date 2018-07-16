@@ -1,5 +1,5 @@
 ---
-title: 在工作或容器上設定中斷點，偵錯封裝 |Microsoft 文件
+title: 針對工作或容器設定中斷點以偵錯封裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
 caps.latest.revision: 33
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6535657a5b193b92b76fd32fee9497e8ef76580e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308108"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>針對工作或容器設定中斷點以偵錯封裝
   此程序描述如何在封裝、工作、「For 迴圈」容器、「Foreach 迴圈」容器或「時序」容器中設定中斷點。  
@@ -49,8 +49,8 @@ ms.locfileid: "36145668"
 6.  若要儲存封裝，請按一下 [檔案] 功能表上的 [儲存選取項目]。  
   
 ## <a name="see-also"></a>另請參閱  
- [疑難排解封裝開發工具](troubleshooting/troubleshooting-tools-for-package-development.md)   
- [指令碼工作和指令碼元件中設定中斷點來偵錯指令碼](data-flow/transformations/script-component.md)   
+ [疑難排解封裝開發的工具](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [在指令碼工作和指令碼元件中設定中斷點，偵錯指令碼](data-flow/transformations/script-component.md)   
  [編碼和偵錯指令碼工作](control-flow/script-task.md)   
  [編碼和偵錯指令碼元件](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   

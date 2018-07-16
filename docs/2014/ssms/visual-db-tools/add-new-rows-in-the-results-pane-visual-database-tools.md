@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - inserting rows
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - row additions [SQL Server], Results pane
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 00efde2b8d3598524dea15f105005d99275f311b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6ace4fb5b33cb2649e81398be6483d87f4371321
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330848"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>在結果窗格中加入新的資料列 (Visual Database Tools)
   您可以利用輸入或是從其他諸如「記事本」或 Excel 程式貼上的方式，加入新的資料。 要貼上資料列必須要有與貼入的資料表完全相同的資料行數目和類型。 多重資料列可一併貼上至 [結果] 窗格。  
@@ -58,7 +58,7 @@ ms.locfileid: "36022313"
 -   按一下 ESC 鍵來取消編輯。 如果是在變更過的資料格中按 ESC 鍵，那麼該資料格中的變更會取消。 如果在沒有變更的資料格中按 ESC 鍵，整個資料列的變更都會取消。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 [結果] 窗格中的資料&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
+ [在 [結果] 窗格中的資料搭配使用&#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)   
  [使用查詢執行基本作業 &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

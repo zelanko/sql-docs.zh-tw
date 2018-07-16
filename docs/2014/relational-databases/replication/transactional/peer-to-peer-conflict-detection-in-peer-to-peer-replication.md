@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactional replication, peer-to-peer replication
 - peer-to-peer transactional replication, conflict detection
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 01cc02c299d4a5fc617a8177efe141ea4916babe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 750781b73012b6815a3ad9c432ef83d1b02a7b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033625"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318128"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>點對點複寫中的衝突偵測
   點對點異動複寫可讓您在拓撲中的任何節點上插入、更新或刪除資料，以及讓資料變更傳播至其他節點。 由於您可以在任何節點上變更資料，因此不同節點的資料變更可能會彼此衝突。 如果在一個以上的節點上修改資料列，它可能會在此資料列傳播到其他節點時，造成衝突或甚至是遺失更新。  
@@ -90,7 +90,7 @@ ms.locfileid: "36033625"
   
 -   透過讓散發代理程式繼續套用變更，嘗試再次同步處理節點：  
   
-    1.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 指定 'p2p_continue_onconflict'@property參數和`true`如@value參數。  
+    1.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 指定 'p2p_continue_onconflict'@property參數並`true`如@value參數。  
   
     2.  重新啟動散發代理程式。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "36033625"
         > [!NOTE]  
         >  如果進行這個步驟之後資料出現不一致，您就必須手動更新具有最高優先權之節點上的資料列，然後讓變更從這個節點傳播。 如果拓撲中沒有其他進一步的衝突變更，所有節點都會處於一致狀態。  
   
-    5.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 指定 'p2p_continue_onconflict'@property參數和`false`如@value參數。  
+    5.  執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)： 指定 'p2p_continue_onconflict'@property參數並`false`如@value參數。  
   
 ## <a name="see-also"></a>另請參閱  
  [@loopback_detection](peer-to-peer-transactional-replication.md)  

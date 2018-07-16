@@ -1,5 +1,5 @@
 ---
-title: Workload 元素 (DTA) |Microsoft 文件
+title: Workload 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Workload element
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 71a7bfe2fe4d613117c1b52e83a7767a474a791e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b2ff6e041783707a6c9a7fa5e2f4472fa8cd901a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315008"
 ---
 # <a name="workload-element-dta"></a>Workload 元素 (DTA)
   指定微調工作階段所用的工作負載。  
@@ -44,7 +44,7 @@ ms.locfileid: "36036009"
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
-|**出現次數**|一次所需的每個`DTAInput`項目。|  
+|**出現次數**|必須出現一次，每個`DTAInput`項目。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36036009"
 ## <a name="remarks"></a>備註  
  工作負載是針對需要微調的一或多個資料庫來執行的一組 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Database Engine Tuning Advisor 可以利用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼、追蹤檔和追蹤資料表來作為工作負載。  
   
- 如果您在 XML 輸入檔中指定工作負載，以及在命令列中利用 **dta** 工具來指定工作負載，就會利用命令列所指定的工作負載來進行微調。 命令列所指定的所有微調選項都會覆寫 XML 輸入檔中所指定的微調選項。 XML 輸入檔中以評估模式輸入的使用者指定組態是唯一例外。 例如，如果以輸入的組態`Configuration`元素的 XML 輸入檔和`EvaluateConfiguration`元素也指定成一個微調選項，請在 XML 輸入檔中指定的微調選項會覆寫在輸入的任何微調選項命令列。  
+ 如果您在 XML 輸入檔中指定工作負載，以及在命令列中利用 **dta** 工具來指定工作負載，就會利用命令列所指定的工作負載來進行微調。 命令列所指定的所有微調選項都會覆寫 XML 輸入檔中所指定的微調選項。 XML 輸入檔中以評估模式輸入的使用者指定組態是唯一例外。 例如，如果您在輸入組態`Configuration`元素的 XML 輸入檔和`EvaluateConfiguration`元素也指定成一個微調選項，在 XML 輸入檔中指定的微調選項會覆寫在輸入的任何微調選項命令列中。  
   
  每個微調工作階段都必須指定一個工作負載。  
   

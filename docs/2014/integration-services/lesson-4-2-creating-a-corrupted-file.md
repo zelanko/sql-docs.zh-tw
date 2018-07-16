@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 caps.latest.revision: 23
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 80961e5899162575ae832d5d6a8dd35824b43a49
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd40a67ecd13dde8c78b38ba0f37d4928b86dd0a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324548"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>步驟 2：建立損毀檔案
   若要示範組態和轉換錯誤的處理，您必須建立處理時會造成元件失敗的範例一般檔案。  
@@ -40,10 +40,10 @@ ms.locfileid: "36036371"
   
 2.  使用文字編輯器的尋找和取代功能，來尋找所有執行個體`VEB`並將其取代為`BAD`。  
   
-3.  在與其他範例資料檔相同資料夾中，將已修改的檔案儲存為`Currency_BAD.txt`。  
+3.  在與其他範例資料檔案相同的資料夾，將已修改的檔案儲存為`Currency_BAD.txt`。  
   
     > [!IMPORTANT]  
-    >  請確定`Currency_BAD.txt`儲存為其他範例資料檔案相同的資料夾。  
+    >  請確定`Currency_BAD.txt`與其他範例資料檔案儲存在相同的資料夾。  
   
 4.  關閉文字編輯器。  
   
@@ -65,6 +65,6 @@ ms.locfileid: "36036371"
     >  數字 27 是元件的識別碼。 當您建立資料流程時會指派此值，您封裝中的值可能不同。  
   
 ## <a name="next-steps"></a>後續步驟  
- [步驟 3： 加入錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
+ [步驟 3：新增錯誤流程重新導向](lesson-4-3-adding-error-flow-redirection.md)  
   
   

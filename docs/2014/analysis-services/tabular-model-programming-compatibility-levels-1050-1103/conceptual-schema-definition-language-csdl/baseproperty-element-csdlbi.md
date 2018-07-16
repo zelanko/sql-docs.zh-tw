@@ -1,5 +1,5 @@
 ---
-title: BaseProperty 元素 (CSDLBI) |Microsoft 文件
+title: BaseProperty 元素 (CSDLBI) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d0f63e52-7330-4b2c-a929-7a517acc6921
 caps.latest.revision: 5
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 61b8338e55195553ccbb16dc30dd9c5081c84280
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 6de9e321e3cd5122a6252663c533be2d536800d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320838"
 ---
 # <a name="baseproperty-element-csdlbi"></a>BaseProperty 元素 (CSDLBI)
   BaseProperty 元素為複雜類型，可做為其他元素的基底。  
@@ -30,7 +30,7 @@ ms.locfileid: "36036473"
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出定義 BaseProperty 元素的元素和屬性。  
   
-|[屬性]|是否必要|描述|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |Alignment|否|成員 (資料行、量值、導覽屬性、階層或層級) 的名稱，藉由實作 Member 類型所定義。|  
 |FormatString|否|成員的顯示名稱。|  
@@ -41,7 +41,7 @@ ms.locfileid: "36036473"
 ## <a name="alignment-element"></a>Alignment 元素  
  此簡單類型會定義用於區分成員的命名格式。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |無|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  
@@ -50,7 +50,7 @@ ms.locfileid: "36036473"
 ## <a name="sortdirection-element"></a>SortDirection 元素  
  此簡單類型會定義用於區分成員的命名格式。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |無|使用屬性名稱。|  
 |內容|使用內送關聯性名稱。|  

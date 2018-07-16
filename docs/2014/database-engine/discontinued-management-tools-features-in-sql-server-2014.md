@@ -1,25 +1,23 @@
 ---
-title: 已停止的管理工具功能，在 SQL Server 2014 |Microsoft 文件
+title: 已停止的管理工具 SQL Server 2014 中的功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
-caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4c166f5c6bf6676b5af2eb0fc53810bb317718de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5e64b28218f4d9912b06b1ab124de9c326133cc6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316078"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>在 SQL Server 2014 中已停止的管理工具功能
   此主題描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中無法再使用的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]管理工具功能。  

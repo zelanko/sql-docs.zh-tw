@@ -1,13 +1,11 @@
 ---
-title: 一般和內容連接的限制 |Microsoft 文件
+title: 一般和內容連接的限制 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - regular connections [CLR integration]
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f0d266b75dad229a0784606af112c249728a112c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: aaff8841ec9ccd7b61b5ab7646daaf700a05b3df
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135170"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349450"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>一般和內容連接的限制
-  本主題討論中執行程式碼的相關限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  
+  本主題討論中執行的程式碼的相關限制[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]透過內容和一般連接處理序。  
   
 ## <a name="restrictions-on-context-connections"></a>內容連接的限制  
  開發應用程式時，請考慮下列適用於內容連接的限制：  

@@ -1,5 +1,5 @@
 ---
-title: SetCurrentCertificate 方法 （ServerSettings 類別） |Microsoft 文件
+title: SetCurrentCertificate 方法 （ServerSettings 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetCurrentCertificate method
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 caps.latest.revision: 14
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3cfc9a7817cfeb952ff698e6b8e6bbcb955bfe65
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: a31c59172d7c9928dd46aa24a0d876bd6df9a2a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132610"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315910"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>SetCurrentCertificate 方法 (ServerSettings 類別)
   設定目前的安全性憑證。  
@@ -46,7 +46,7 @@ SHA
   
 ## <a name="parts"></a>組件  
  *object*  
- [ServerSettings 類別] serversettings-class.md) 物件，表示伺服器執行個體上設定的[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ [ServerSettings 類別] serversettings-class.md) 物件，表示伺服器設定的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 #### <a name="parameters"></a>參數  
   

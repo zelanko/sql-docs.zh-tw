@@ -1,5 +1,5 @@
 ---
-title: 執行 SQL 工作編輯器 （一般頁面） |Microsoft 文件
+title: 執行 SQL 工作編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executesqltask.general.f1
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 caps.latest.revision: 45
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 853586d51aff06012734a677794f29a9e7991878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 68610e2f72c1fa2f47219a7af9620ec911d7d022
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145437"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322648"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>執行 SQL 工作編輯器 (一般頁面)
   使用 [執行 SQL 工作編輯器] 對話方塊的 [一般] 頁面，即可設定「執行 SQL」工作和提供該工作執行的 SQL 陳述式。  
@@ -50,7 +50,7 @@ ms.locfileid: "36145437"
 >  當「執行 SQL」工作使用 ADO 或 ODBC 連線管理員時， **CodePage** 屬性就無法使用。 如果您的方案需要使用字碼頁，請使用 OLE DB 或 ADO.NET 連接管理員搭配執行 SQL 工作。  
   
  **TypeConversionMode**  
- 當您將此屬性設定為`Allowed`，「 執行 SQL 」 工作會嘗試將轉換的輸出參數和查詢結果的資料類型變數的結果會指派。 這適用於 [單一資料列] 結果集類型。  
+ 當您將此屬性設定為`Allowed`、 「 執行 SQL 」 工作會嘗試將輸出參數和查詢結果的資料類型變數的結果會指派給。 這適用於 [單一資料列] 結果集類型。  
   
  **ResultSet**  
  指定 SQL 陳述式開始執行的預期結果類型。 在 [單一資料列]、[完整結果集]、[XML] 或 [無] 之間選擇。  
@@ -72,7 +72,7 @@ ms.locfileid: "36145437"
   
  這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 Transact-SQL 陳述式。 選取此值會顯示動態選項 [SQLStatement]。|  
 |**檔案連接**|選取包含 Transact-SQL 陳述式的檔案。 選取此選項會顯示動態選項 [FileConnection]。|  

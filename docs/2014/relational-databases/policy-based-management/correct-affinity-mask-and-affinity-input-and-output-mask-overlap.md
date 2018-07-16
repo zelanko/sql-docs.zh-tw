@@ -1,5 +1,5 @@
 ---
-title: 正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊 |Microsoft 文件
+title: 正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Best Practices [Database Engine]
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9a5cc744eb941d309ff938452fef01a24716a946
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 14dbd2e0f3815e500d5742822f7ca8157408c917
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133935"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324198"
 ---
-# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>正確的 Affinity Mask 和 Affinity 輸入的輸出 Mask 重疊
+# <a name="correct-affinity-mask-and-affinity-input-output-mask-overlap"></a>正確的 Affinity Mask 和 Affinity 輸入的輸出遮罩重疊
   這個規則會檢查 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體是否有一或多個指派給搭配 affinity mask 和 affinity I/O mask 選項使用的處理器。 在具有一個以上處理器的電腦中，affinity mask 和 affinity I/O mask 選項是用來指派 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]所使用的 CPU。 使用 affinity mask 和 affinity I/O mask 來啟用 CPU 可能會強制處理器過度使用而使效能變慢。  
   
 ## <a name="best-practices-recommendations"></a>最佳做法建議  

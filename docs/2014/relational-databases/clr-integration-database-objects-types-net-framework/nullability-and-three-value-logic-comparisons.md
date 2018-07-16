@@ -1,13 +1,11 @@
 ---
-title: Null 屬性和三值邏輯比較 |Microsoft 文件
+title: Null 屬性和三值邏輯比較 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - SqlBoolean data type
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 07a0076cadc805b3534d778070b7b61b28e1bf3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 43420c9e796605617e3884d8b5bf0aae0c5cfb6c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134194"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353930"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Null 屬性和三值邏輯比較
   如果您熟悉 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型，就會在 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 的 `System.Data.SqlTypes` 命名空間中找到類似的語意和有效位數。 不過，其中仍有一些差異，而且本主題將涵蓋最重要的差異。  
@@ -41,7 +39,7 @@ ms.locfileid: "36134194"
  `System.Data.SqlTypes` 命名空間導入了 `SqlBoolean` 類型來代表這個 3 值邏輯。 任何 `SqlTypes` 之間的比較都會傳回 `SqlBoolean` 值類型。 UNKNOWN 值是由 `SqlBoolean` 類型的 Null 值所代表。 系統提供了 `IsTrue`、`IsFalse` 和 `IsNull` 屬性來檢查 `SqlBoolean` 類型的值。  
   
 ## <a name="operations-functions-and-null-values"></a>作業、函數和 NULL 值  
- 所有算術運算子 (+、-， \*，/，%)，位元運算子 (~、 &、 和 |)，大部分函式會傳回 NULL，如果有任何運算元或引數和`SqlTypes`都為 NULL。 `IsNull` 屬性一律會傳回 true 或 false 值。  
+ 所有算術運算子 (+、-， \*，/、 %)，位元運算子 (~、 &、 和 |)，以及大部分函數都會傳回 NULL，如果任何運算元或引數`SqlTypes`都是 NULL。 `IsNull` 屬性一律會傳回 true 或 false 值。  
   
 ## <a name="precision"></a>有效位數  
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 中的十進位資料類型與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的數值和十進位資料類型具有不同的最大值。 此外，[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR 十進位資料類型會採用最大有效位數。 不過，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 CLR 中，`SqlDecimal` 會提供相同的最大有效位數和小數位數，以及與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中十進位資料類型相同的語意。  

@@ -1,13 +1,11 @@
 ---
-title: CLR 純量值函式 |Microsoft 文件
+title: CLR 純量值函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -19,21 +17,21 @@ helpviewer_keywords:
 - scalar-valued functions
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 caps.latest.revision: 81
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 93c56555b0a11e2638f58019f6214c8c6971760c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5dee7f6654bdf4e24eb170b968dd8afa366e8211
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146964"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350927"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 純量值函式
-  純量值函式 (SVF) 傳回單一值，如字串、整數或位元值。您可以使用任何 .NET Framework 程式語言，以 Managed 程式碼建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 針對 CLR 整合和 managed 程式碼之間選擇的優勢的相關資訊和[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱[CLR 整合的概觀](../clr-integration/clr-integration-overview.md)。  
+  純量值函式 (SVF) 傳回單一值，如字串、整數或位元值。您可以使用任何 .NET Framework 程式語言，以 Managed 程式碼建立純量值的使用者定義函數。 這些函數可供 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或其他 Managed 程式碼存取。 CLR 整合，以及 managed 程式碼之間進行選擇的優勢的相關資訊並[!INCLUDE[tsql](../../includes/tsql-md.md)]，請參閱 < [CLR 整合的概觀](../clr-integration/clr-integration-overview.md)。  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>CLR 純量值函式的需求  
- .NET Framework SVF 會在 .NET Framework 組件中實作為類別上的方法。 輸入的參數和從 SVF 傳回的型別可以是任何純量資料類型所支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了`varchar`， `char`， `rowversion`， `text`， `ntext`， `image`， `timestamp`， `table`，或`cursor`。 SVF 必須確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與實作方法的傳回資料類型相符。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
+ .NET Framework SVF 會在 .NET Framework 組件中實作為類別上的方法。 輸入的參數和從 SVF 傳回的型別可以是任何支援的純量資料類型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，除了`varchar`， `char`， `rowversion`， `text`， `ntext`， `image`， `timestamp`， `table`，或`cursor`。 SVF 必須確保 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型與實作方法的傳回資料類型相符。 如需類型轉換的詳細資訊，請參閱[對應 CLR 參數資料](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)。  
   
  當以 .NET Framework 語言實作 .NET Framework SVF 時，您可藉由指定 `SqlFunction` 自訂屬性，併入有關此函數的其他資訊。 `SqlFunction` 屬性會指出當函數具有決定性或涉及浮點運算時，是否可以存取或修改資料。  
   
@@ -43,7 +41,7 @@ ms.locfileid: "36146964"
 >  在提供相同輸入值和相同資料庫狀態時，如果某個函數不一定會產生相同輸出值，請勿將這個函數標示為具有決定性。 當某個函數不是真的具有決定性卻將它標示為具有決定性時，可能會導致索引檢視表和計算資料行損毀。 您可以將 `IsDeterministic` 屬性設定為 true，將函數標示為具有決定性。  
   
 ### <a name="table-valued-parameters"></a>資料表值參數  
- 資料表值參數 (TVP) 是使用者定義資料表類型，會傳入到程序或函數中，提供有效的方式將資料的多個資料列傳遞到伺服器。 雖然 TVP 提供相似的功能給參數陣列，但是也提供更大的彈性和與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密的整合。 它們也能夠協助您獲得更佳的效能。 TVP 也減少與伺服器之間的往返次數。 除了傳送多個要求到伺服器 (例如夾帶純量參數的清單)，資料能以 TVP 的形式傳送到伺服器。 使用者定義資料表類型無法以資料表值參數的形式傳遞到 Managed 預存程序或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中執行的函數，也無法從該預存程序或函數傳回。 如需有關 Tvp 的詳細資訊，請參閱[使用資料表值參數&#40;Database Engine&#41;](../tables/use-table-valued-parameters-database-engine.md)。  
+ 資料表值參數 (TVP) 是使用者定義資料表類型，會傳入到程序或函數中，提供有效的方式將資料的多個資料列傳遞到伺服器。 雖然 TVP 提供相似的功能給參數陣列，但是也提供更大的彈性和與 [!INCLUDE[tsql](../../includes/tsql-md.md)] 更緊密的整合。 它們也能夠協助您獲得更佳的效能。 TVP 也減少與伺服器之間的往返次數。 除了傳送多個要求到伺服器 (例如夾帶純量參數的清單)，資料能以 TVP 的形式傳送到伺服器。 使用者定義資料表類型無法以資料表值參數的形式傳遞到 Managed 預存程序或在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 處理序中執行的函數，也無法從該預存程序或函數傳回。 如需有關 Tvp 的詳細資訊，請參閱 <<c0> [ 使用資料表值參數&#40;資料庫引擎&#41;](../tables/use-table-valued-parameters-database-engine.md)。</c0>  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>CLR 純量值函式的範例  
  以下是可存取資料並傳回整數值的簡單 SVF：  

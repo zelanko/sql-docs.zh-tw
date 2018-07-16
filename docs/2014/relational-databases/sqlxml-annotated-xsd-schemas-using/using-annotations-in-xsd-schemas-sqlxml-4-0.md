@@ -1,5 +1,5 @@
 ---
-title: 使用註解 XSD 結構描述 (SQLXML 4.0) 中 |Microsoft 文件
+title: 使用 XSD 結構描述 (SQLXML 4.0) 中的註釋 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mapping schema [SQLXML], scenarios for using
 ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 56db3f001d68bcaf65d71f793744896944318fc1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 26fd2f853697765fda82b869aae7780976753749
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132377"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321948"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>在 XSD 結構描述中使用註釋 (SQLXML 4.0)
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 中，XSD 結構描述語言以類似 XML-Data Reduced (XDR) 結構描述語言所推出之註解的方式支援註解。 在 XSD 中有 XDR 不支援的其他註解。  
@@ -53,37 +53,37 @@ ms.locfileid: "36132377"
  [XSD 元素和屬性對資料表和資料行的明確對應&#40;SQLXML 4.0&#41;](explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
  說明與 `sql:relation` 和 `sql:field` 註解的明確對應，並提供範例。  
   
- [指定關聯性使用 sql: relationship &#40;SQLXML 4.0&#41;](specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+ [關聯性使用 sql: relationship 指定&#40;SQLXML 4.0&#41;](specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
  描述及提供 `sql:relationship` 註解的範例。  
   
  [Sql: relationship 指定 sql: inverse 屬性&#40;SQLXML 4.0&#41;](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
  描述 `sql:inverse` 註解。  
   
- [建立常數元素使用 sql: is-constant< &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
+ [建立常數項目使用 sql: is-constant&lt &#40;SQLXML 4.0&#41;](creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
  描述及提供 `sql:is-constant` 註解的範例。  
   
- [產生 XML 文件使用的 sql 中排除結構描述項目： 對應&#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
+ [結構描述元素排除產生 XML 文件使用 sql： 對應&#40;SQLXML 4.0&#41;](excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
  描述及提供 `sql:mapped` 註解的範例。  
   
  [篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  描述及提供 `sql:limit-field` 和 `sql:limit-value` 註解的範例。  
   
- [識別索引鍵資料行使用 sql: key-fields-欄位&#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
+ [識別索引鍵資料行使用 sql: key-fields 來-欄位&#40;SQLXML 4.0&#41;](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
  描述及提供 `sql:key-fields` 註解的範例。  
   
- [指定目標命名空間使用 targetNamespace 屬性&#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ [目標命名空間使用 targetNamespace 屬性來指定&#40;SQLXML 4.0&#41;](specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
  描述與提供的範例**targetNamespace**屬性。  
   
- [建立有效的 ID、 IDREF 和 IDREFS 類型屬性使用 sql: prefix &#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
+ [有效的 ID、 IDREF 和 IDREFS 類型屬性使用 sql: prefix 建立&#40;SQLXML 4.0&#41;](creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
  描述及提供 `sql:prefix` 註解的範例。  
   
  [資料類型強制型轉和 sql: datatype 註解&#40;SQLXML 4.0&#41;](data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
  描述及提供 `sql:datatype` 註解的範例。  
   
- [將 XSD 資料類型對應到 XPath 資料型別&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
+ [將 XSD 資料類型對應到 XPath 資料類型&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md)  
  提供比較 XSD、XDR 與 XPath 資料類型的資料表，並列出相關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轉換。  
   
- [建立 CDATA 區段使用 sql: use-cdata-cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
+ [CDATA 區段使用 sql: use-cdata 建立-cdata &#40;SQLXML 4.0&#41;](creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
  描述及提供 `sql:use-data` 註解的範例。  
   
  [要求的 URL 參考 BLOB 資料使用 sql： 編碼&#40;SQLXML 4.0&#41;](requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
@@ -102,6 +102,6 @@ ms.locfileid: "36132377"
  描述及提供 `sql:max-depth` 註解的範例。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解式結構描述的安全性考量&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [註解式結構描述安全性考量&#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
   
   

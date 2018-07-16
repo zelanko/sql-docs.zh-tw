@@ -1,5 +1,5 @@
 ---
-title: ManyToManyMeasureGroupDimension 資料類型 (ASSL) |Microsoft 文件
+title: ManyToManyMeasureGroupDimension 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ManyToManyMeasureGroupDimension data type
 ms.assetid: f2b914cb-c817-43ff-9cb4-ac8d326136b5
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 14233f2e39771174b4d1b15acdeafb76bc76f32d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 96a6df09c6474994a38930fa07c0a7b5f73cfd61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037111"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308418"
 ---
 # <a name="manytomanymeasuregroupdimension-data-type-assl"></a>ManyToManyMeasureGroupDimension 資料類型 (ASSL)
   定義代表多對多維度與量值群組之間關聯性的衍生資料類型。  
@@ -62,7 +62,7 @@ ms.locfileid: "36037111"
 |衍生的元素|無|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.ManyToManyMeasureGroupDimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

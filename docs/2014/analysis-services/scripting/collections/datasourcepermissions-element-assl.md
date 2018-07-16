@@ -1,5 +1,5 @@
 ---
-title: DataSourcePermissions 元素 (ASSL) |Microsoft 文件
+title: DataSourcePermissions 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - DataSourcePermissions element
 ms.assetid: 6e1cfbec-65b9-4942-a628-f7f7c891e35f
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 774b06c14bfbd5d7c90c4b2f07d3ff4c40bd746a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42f330e28ac9a8bd349660550cee84df075121f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321178"
 ---
 # <a name="datasourcepermissions-element-assl"></a>DataSourcePermissions 元素 (ASSL)
-  包含集合[DataSourcePermission](../objects/datasourcepermission-element-assl.md)與相關聯的項目[DataSource](../data-type/datasource-data-type-assl.md)資料型別。  
+  包含的集合[DataSourcePermission](../objects/datasourcepermission-element-assl.md)相關聯的項目[DataSource](../data-type/datasource-data-type-assl.md)資料型別。  
   
 ## <a name="syntax"></a>語法  
   

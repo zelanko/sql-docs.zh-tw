@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 caps.latest.revision: 101
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ec77f66bc627d851295a6afa90fb515c85b2ab84
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9082ded2ceacd4a29364e3ee9b513887b2fcb1a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320768"
 ---
 # <a name="ado-net-source"></a>ADO NET 來源
   ADO NET 來源會從 .NET 提供者取用資料，並使該資料可供資料流程使用。  
@@ -71,7 +71,7 @@ ms.locfileid: "36135676"
 >  當您使用 SQL 陳述式呼叫從暫存資料表傳回結果的預存程序時，請使用 WITH RESULT SETS 選項定義結果集的中繼資料。  
   
 > [!NOTE]  
->  如果您使用 SQL 陳述式來執行預存程序，而導致封裝失敗，發生下列錯誤，您可以藉由新增解決錯誤`SET FMTONLY OFF`exec 陳述式前面的陳述式。  
+>  如果您使用 SQL 陳述式來執行預存程序，則封裝會失敗，發生下列錯誤，您可以藉由新增解決錯誤`SET FMTONLY OFF`exec 陳述式前面的陳述式。  
 >   
 >  **在資料來源中找不到資料行 <資料行名稱>。**  
   

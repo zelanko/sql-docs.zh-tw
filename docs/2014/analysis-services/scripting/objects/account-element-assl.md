@@ -1,5 +1,5 @@
 ---
-title: 帳戶元素 (ASSL) |Microsoft 文件
+title: 帳戶元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Account element
 ms.assetid: 0bb7d06c-0158-4ab2-b2b1-cb50ba24f7c0
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0a99dbaee6e1eaec95385295cf1842ffcc336adf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d763b75cfb357554948565a59f5348d7fd3b725a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145485"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321168"
 ---
 # <a name="account-element-assl"></a>Account 元素 (ASSL)
   包含內部帳戶類型的詳細[資料庫](database-element-assl.md)項目。  
@@ -65,16 +65,16 @@ ms.locfileid: "36145485"
 |子元素|[AccountType](../properties/accounttype-element-assl.md)， [AggregationFunction](../properties/aggregationfunction-element-assl.md)，[別名](../collections/aliases-element-assl.md)，[註解](../collections/annotations-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 維度，其[類型](../properties/type-element-dimension-assl.md)元素設定為*帳戶*可以在維度中有由成員之指定帳戶類型，例如 Income、 Expense 等等，表示屬性。 接著會使用帳戶類型[量值](measure-element-assl.md)項目，其[AggregationFunction](../properties/aggregatefunction-element-assl.md)元素設定為*ByAccount*，以決定時要使用的彙總函式彙總該維度成員。 `Account` 元素代表單一帳戶類型以及這類量值應該使用的彙總函式。  
+ 維度，其[型別](../properties/type-element-dimension-assl.md)元素設定為*帳戶，* 可以有屬性，指定帳戶類型，例如 Income、 Expense 等等，表示成員在維度中。 然後會使用帳戶類型[量值](measure-element-assl.md)項目，其[AggregationFunction](../properties/aggregatefunction-element-assl.md)元素設定為*ByAccount*，以決定時要使用的彙總函式彙總該維度成員。 `Account` 元素代表單一帳戶類型以及這類量值應該使用的彙總函式。  
   
  如果彙總函式所使用的預設值不同，就必須列出帳戶類型[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]每一個帳戶類型。  
   
  有效的帳戶類型集合是固定的。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Account>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Account>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Database 元素&#40;ASSL&#41;](database-element-assl.md)   
+ [資料庫項目&#40;ASSL&#41;](database-element-assl.md)   
  [物件&#40;ASSL&#41;](objects-assl.md)  
   
   

@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CSV [Reporting Services]
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 caps.latest.revision: 42
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 205d1ac37c78001d4f34f4f1cbc92731b88cfd1a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 5e2183790fcc7af3f173d7f674173f3dd49857fb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307498"
 ---
 # <a name="csv-device-information-settings"></a>CSV 裝置資訊設定
   CSV 轉譯延伸模組的裝置資訊設定，允許變更分隔符號與限定詞，以及指定分行符號處理。 您也可以提交檔案的延伸模組，以及在輸出中編碼和包括標頭資料列。 因為分隔符號有可能是特殊的字元，所以如果設定是以 XML 來撰寫，您應該在 CDATA 區段中編碼它們。  
   
  下表列出以 Text 格式轉譯的裝置資訊設定。  
   
-|設定|ReplTest1|  
+|設定|值|  
 |-------------|-----------|  
 |`Encoding`|.NET Framework 所支援之字元編碼方式的 Internet Assigned Numbers Authority (IANA) 名稱。 預設值是 `UTF-8`。 其他值的範例包括 ASCII、UTF-7 和 UTF-16。|  
 |`ExcelMode`|指定 Excel 的目標輸出。 預設值是 `true`。|  
@@ -38,7 +38,7 @@ ms.locfileid: "36032959"
 |**NoHeader**|表示標頭資料列是否從輸出排除。 預設值是 `false`。|  
 |`Qualifier`|要放在結果周圍的限定詞字串，包括欄位分隔符號或是記錄分隔符號。 如果結果包含分隔符號，則會重複限定詞。 `Qualifier` 設定必須不同於 `FieldDelimiter` 與 `RecordDelimiter` 設定。 預設值是引號 (")。|  
 |`RecordDelimiter`|放在每個記錄結尾處的記錄分隔符號。 預設值為 \<cr>\<lf>。|  
-|**SuppressLineBreaks**|指出是否從輸出中所含的資料移除分行符號。 預設值是 `false`。 如果值為`true`、 `FieldDelimiter`， `RecordDelimiter`，和`Qualifier`設定不能是空格字元。|  
+|**SuppressLineBreaks**|指出是否從輸出中所含的資料移除分行符號。 預設值是 `false`。 如果值為`true`，則`FieldDelimiter`， `RecordDelimiter`，和`Qualifier`設定不能是空格字元。|  
 |`UseFormattedValues`|指出是否將格式字串放入 CSV 輸出。 預設值是`true`時`ExcelMode`是`true`; 否則就是`false`。|  
   
 ## <a name="see-also"></a>另請參閱  

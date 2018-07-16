@@ -1,5 +1,5 @@
 ---
-title: 選取採礦模型和資料採礦檢視器 |Microsoft 文件
+title: 選取採礦模型和資料採礦檢視器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 61974f415e8c9dc754ecefe896a5d4474108b112
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca04c65fdfbf643f64f3bad7ad706abdc2b4d016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134833"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317358"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>選取採礦模型和資料採礦檢視器
   您可以使用資料採礦設計師的 **[採礦模型檢視器]** 索引標籤上的其中一個檢視器來瀏覽採礦模型。 您可以輕鬆切換不同的模型，或是變更使用的檢視器。  

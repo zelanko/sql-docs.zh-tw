@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:Starting event class
 ms.assetid: ef55e579-080d-4650-a7fc-4dd03ed8e391
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c18f41e7f47909f3ab3a6fae6e644ac53531b121
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 84e247df75251ac63ec08cb9c812ac8b718737a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037022"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316308"
 ---
 # <a name="spstarting-event-class"></a>SP:Starting 事件類別
   SP:Starting 事件類別指出正在開始執行預存程序。  
@@ -56,7 +56,7 @@ ms.locfileid: "36037022"
 |SourceDatabaseID|`int`|物件所存在之資料庫的識別碼。|62|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|程序呼叫的文字。|@shouldalert|是|  
+|TextData|`ntext`|程序呼叫的文字。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.generatescriptswizard.setscriptingoptions.f1
 - sql9.swb.generatescriptswizard.scriptwizarddescription.f1
@@ -43,15 +43,15 @@ helpviewer_keywords:
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 06b4bbbca6699c274701ae479cf24daaabdcf18b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4c784a16a3539b52c2f900af7af6e08afca098e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307608"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>[產生和發佈指令碼]
   您可以使用 [產生和發佈指令碼精靈] 建立指令碼，以在 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 或 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 執行個體之間傳送資料庫。 您可以針對區域網路上 Database Engine 執行個體的資料庫產生指令碼，或是從 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]產生指令碼。 產生的指令碼可以在另一個 Database Engine 或 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]執行個體上執行。 您也可以使用此精靈，將資料庫內容直接發行到使用資料庫發行服務所建立的 Web 服務。 您可以針對整個資料庫建立指令碼，或將它限制為特定物件。  
@@ -154,7 +154,7 @@ ms.locfileid: "36131493"
   
  **一般** ：下列選項適用於整個指令碼。  
   
--   **ANSI 填補**-包含`ANSI PADDING ON`指令碼中。 預設值為 **True**。  
+-   **ANSI Padding** -包含`ANSI PADDING ON`指令碼中。 預設值為 **True**。  
   
 -   **附加至檔案** ：設定為 **[True]** 時，這個指令碼會加入至 **[設定指令碼編寫選項]** 頁面上所指定的現有指令碼底部。 設定為 **[False]** 時，新的指令碼就會覆寫先前的指令碼。 預設值為 **False**。  
   
@@ -192,9 +192,9 @@ ms.locfileid: "36131493"
   
 -   **編寫物件層級權限的指令碼** ：包含於資料庫的物件上設定權限的指令碼。 預設值為 **False**。  
   
--   **編寫統計資料的指令碼**-當設定為**編寫統計資料的**，這個選項會包含`CREATE STATISTICS`陳述式來重新建立物件的統計資料。 **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
+-   **編寫統計資料的指令碼**-當設定為**編寫統計資料**，這個選項會包含`CREATE STATISTICS`陳述式來重新建立物件的統計資料。 **[編寫統計資料和長條圖的指令碼]** 選項也會建立長條圖資訊。 預設值為 **[不要編寫統計資料的指令碼]**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
--   **編寫 USE DATABASE 的指令碼**-新增`USE DATABASE`陳述式的指令碼。 若要確定在正確的資料庫會建立資料庫物件，包含`USE DATABASE`陳述式。 當指令碼用於不同的資料庫中，選取**False**省略`USE DATABASE`陳述式。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)。  
+-   **編寫 USE DATABASE 的指令碼**-加入`USE DATABASE`陳述式的指令碼。 若要確定正確的資料庫中會建立資料庫物件，包含`USE DATABASE`陳述式。 當指令碼要用於不同的資料庫時，請選取**假**省略`USE DATABASE`陳述式。 預設值為 **True**。 如需詳細資訊，請參閱 [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql)。  
   
 -   [要編寫指令碼的資料類型] - 選取應該編寫指令碼的項目：[僅限資料] 和/或 [僅限結構描述]。 預設值為 **[僅限結構描述]**。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "36131493"
   
 -   **編寫變更追蹤的指令碼** ：如果來源資料庫或來源資料庫中的資料表已啟用變更追蹤，則會編寫變更追蹤的指令碼。 預設值為 **False**。 如需詳細資訊，請參閱[關於變更追蹤 &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)。  
   
--   **編寫 check 條件約束**– Adds`CHECK`條件約束的指令碼。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表，以符合某些指定的條件的資料。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
+-   **編寫 check 條件約束**– Adds`CHECK`指令碼的條件約束。 預設值為 **True**。 `CHECK` 條件約束會要求輸入資料表，以符合某些指定的條件的資料。 如需相關資訊，請參閱 [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md)。  
   
 -   [編寫資料壓縮選項的指令碼] - 如果來源資料庫或來源資料庫中的資料表已設定資料壓縮選項，則會編寫資料壓縮選項的指令碼。 如需詳細資訊，請參閱 [Data Compression](../data-compression/data-compression.md)。 預設值為 **False**。  
   
@@ -258,7 +258,7 @@ ms.locfileid: "36131493"
   
 8.  **發佈統計資料**-當設定為**發佈統計資料**，包括`CREATE STATISTICS`陳述式來重新建立物件的統計資料。 **[發行統計資料和長條圖]** 選項也會建立長條圖資訊。 預設值為 **不要發行統計資料**。 如需詳細資訊，請參閱 [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)。  
   
-9. **發佈 vardecimal 選項**-可讓`vardecimal`來源資料庫資料表上啟用時的目標資料庫資料表上的資料表格式。 預設值為 **True**。  
+9. **發佈 vardecimal 選項**-可讓`vardecimal`來源資料庫資料表上啟用時，才會進行目標資料庫資料表上的資料表格式。 預設值為 **True**。  
   
 10. **結構描述會限定物件名稱** - 在所建立物件的名稱中包含結構描述名稱。 預設值為 **True**。  
   
