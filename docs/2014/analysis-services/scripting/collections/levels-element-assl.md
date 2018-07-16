@@ -1,5 +1,5 @@
 ---
-title: 層級元素 (ASSL) |Microsoft 文件
+title: 層級元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Levels element
 ms.assetid: a9dd4890-a5da-48e7-9bbf-f857107cde8d
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aafc68525f656f77eca7c8cdcd0fdc4cb4534791
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf2019ee06a053cc047bfd47a04a98865f611949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304568"
 ---
 # <a name="levels-element-assl"></a>Levels 元素 (ASSL)
-  包含集合[層級](../objects/level-element-assl.md)中的項目[階層](../objects/hierarchy-element-assl.md)項目。  
+  包含的集合[層級](../objects/level-element-assl.md)中的項目[階層](../objects/hierarchy-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36035763"
 |子元素|[Level](../objects/level-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.LevelCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.LevelCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

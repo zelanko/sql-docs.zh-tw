@@ -1,5 +1,5 @@
 ---
-title: 使用 Analysis Services 專案和實際執行環境中的資料庫 |Microsoft 文件
+title: 使用 Analysis Services 專案和在生產環境中的資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0231e4e9db8696a5f98dca7836ec60f9c408bb09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a28d61cd262fb348e839055ea0f0d443187bf75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302798"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-in-a-production-environment"></a>在實際執行環境中搭配 Analysis Services 專案及資料庫使用
   當您已經從 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案將 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料庫開發並部署到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體之後，您必須決定要如何變更已部署之資料庫中的物件。 某些變更 (例如，與安全性角色、資料分割和儲存設定有關的變更) 可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來進行， 其他變更則只能在專案模式或線上模式中，使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]來進行 (例如，加入屬性或使用者自訂階層)。  

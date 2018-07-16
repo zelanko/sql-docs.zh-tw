@@ -1,5 +1,5 @@
 ---
-title: 處理 SMO 事件 |Microsoft 文件
+title: 處理 SMO 事件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SMO], about events
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 caps.latest.revision: 46
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34d447d0fca75012d786bd7de5911c2846dd76c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e74a05e025f474737130f1faeb61f2647d8e69bd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212988"
 ---
 # <a name="handling-smo-events"></a>處理 SMO 事件
   有些伺服器事件類型可以藉由事件處理常式和 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件進行訂閱。  
@@ -40,7 +40,7 @@ ms.locfileid: "36135349"
 ## <a name="event-subscription"></a>事件訂閱  
  您可藉由下列步驟來處理事件：撰寫事件處理常式類別、建立其執行個體、將事件處理常式指派給父物件，然後再訂閱事件。  
   
- 您必須撰寫事件處理常式類別，才能處理事件。 事件處理常式類別可以包含一個以上的事件處理常式函數，而且必須加以安裝，才能處理事件。 事件處理常式函式收到的事件的相關資訊*ServerEventNotificatificationArgs*可以用來報告事件的相關資訊的參數。  
+ 您必須撰寫事件處理常式類別，才能處理事件。 事件處理常式類別可以包含一個以上的事件處理常式函數，而且必須加以安裝，才能處理事件。 事件處理常式函式會接收來自事件的相關資訊*ServerEventNotificatificationArgs*可以用來報告該事件的相關資訊的參數。  
   
  資料庫和伺服器可以處理的事件類型會列在<xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet>類別和<xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>類別。  
   

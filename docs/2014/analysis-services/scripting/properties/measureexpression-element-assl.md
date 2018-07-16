@@ -1,5 +1,5 @@
 ---
-title: MeasureExpression 元素 (ASSL) |Microsoft 文件
+title: MeasureExpression 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureExpression element
 ms.assetid: a0b6490d-a793-41be-8c97-41b08e1580a1
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 686bfc84c39c502467089b5957f8320d346e518a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2eee18ad981c45c009350be926432a5a7a23c4a8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134702"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265404"
 ---
 # <a name="measureexpression-element-assl"></a>MeasureExpression 元素 (ASSL)
   包含定義如何取得父量值之值的多維度運算式 (MDX) 運算式。  
@@ -62,7 +62,7 @@ ms.locfileid: "36134702"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`MeasureExpression`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Measure>。  
+ 對應至父系的元素`MeasureExpression`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Measure>。  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

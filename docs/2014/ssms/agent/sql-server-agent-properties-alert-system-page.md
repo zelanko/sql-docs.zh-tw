@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.agent.alert.f1
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 370db89590275e5e08f4b26dad357093d76e31e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1d8edb6696adee4d3b3873e01194f746c1dfcafe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37238288"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server Agent 屬性 (警示系統頁面)
   使用此頁面來檢視和修改 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示所傳送的訊息設定。  

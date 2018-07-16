@@ -1,5 +1,5 @@
 ---
-title: Data Flow 可以使用運算式設定屬性 |Microsoft 文件
+title: 資料流程可以使用運算式設定的屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
 caps.latest.revision: 43
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0dccc1a7bb932ae044f6d1e2491c7521652e9033
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9855c21e19e4e2ef0e9f9d7ab88d6d12fdadda16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146783"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173169"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>可以使用運算式設定的資料流程屬性
   可使用「資料流程」工作容器上提供的屬性運算式，以指定資料流程物件的某些屬性值。  
@@ -39,7 +39,7 @@ ms.locfileid: "36146783"
   
  若要針對本主題所列的其中一個資料流程物件屬性指定屬性運算式，請顯示資料流程工作的 [屬性] 視窗，其方式是在設計工具的 [控制流程] 介面上選取資料流程工作，或是選取設計工具的 [資料流程] 索引標籤，而不需選取任何個別的元件或路徑。 選取 [運算式] 屬性，然後按一下省略符號 (...)，顯示 [屬性運算式編輯器] 對話方塊。 下拉 [屬性] 清單來選取屬性，然後在 [運算式] 文字方塊中輸入運算式，或是按一下省略符號 (...) 以顯示 [運算式產生器] 對話方塊。  
   
- [屬性] 清單只會針對您已經放在設計工具之 [資料流程] 介面上的那些資料流程物件來顯示可用的屬性。 因此，您無法使用 [屬性] 清單來檢視支援屬性運算式之資料流程物件的所有可能屬性。 例如，如果您在設計工具介面上放置 ADO NET 來源**屬性**清單包含的項目`[ADO NET Source].[SqlCommand]`屬性。 此清單也會顯示資料流程工作本身的許多屬性。  
+ [屬性] 清單只會針對您已經放在設計工具之 [資料流程] 介面上的那些資料流程物件來顯示可用的屬性。 因此，您無法使用 [屬性] 清單來檢視支援屬性運算式之資料流程物件的所有可能屬性。 例如，如果您已經在設計介面上放置 ADO NET 來源**屬性**清單中包含的項目`[ADO NET Source].[SqlCommand]`屬性。 此清單也會顯示資料流程工作本身的許多屬性。  
   
 ## <a name="properties-of-data-flow-objects-that-support-property-expressions"></a>支援屬性運算式之資料流程物件的屬性  
  可以使用屬性運算式來指定下列清單中的屬性值。  

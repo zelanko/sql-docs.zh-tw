@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: f0e544137f62968aeca6513fb8683713898a1e7d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0d2f2df91e523376bc2e91efe321296ebf6ce4cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131983"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291114"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 目的地編輯器 (對應頁面)
   使用 [SAP BW 目的地編輯器] 的 [對應] 頁面可以將輸入資料行對應至目的地資料行。  
@@ -81,7 +81,7 @@ ms.locfileid: "36131983"
  檢視每個可用的目的地資料行，不論該資料行是否已經對應。  
   
 ## <a name="see-also"></a>另請參閱  
- [SAP BW 目的地編輯器&#40;連接管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 目的地編輯器&#40;連線管理員頁面&#41;](sap-bw-destination-editor-connection-manager-page.md)   
  [SAP BW 目的地編輯器 &#40;錯誤輸出頁面&#41;](sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 目的地編輯器 &#40;進階頁面&#41;](sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector 1.1 for SAP BW F1 說明](../microsoft-connector-for-sap-bw-f1-help.md)  

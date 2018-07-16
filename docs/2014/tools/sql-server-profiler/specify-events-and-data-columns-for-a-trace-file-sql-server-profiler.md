@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding events
 - traces [SQL Server], data columns
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c732cf3ec6925bf4805b2a9a344cefca013f4604
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: daef2308b3a97ddd0fe799eb81dcacf74fa78383
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135709"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275674"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定追蹤檔案的事件及資料行 (SQL Server Profiler)
   此主題描述如何使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]來指定追蹤的事件類別及資料行。  

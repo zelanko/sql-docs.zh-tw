@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -18,27 +18,27 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c6d2fd657b3fa7cd91f00f98242aed0e959dd5e9
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 11b88bd8144651abfed39fb5b68316abc23f09a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324602"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295138"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 連接管理員
   OLE DB 連接管理員可透過使用 OLE DB 提供者讓封裝連接到資料來源。 例如，與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接的 OLE DB 連線管理員可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 提供者不支援多重子網路容錯移轉叢集的新連接字串關鍵字 (MultiSubnetFailover=True)。 如需詳細資訊，請參閱[SQL Server 版本資訊](http://go.microsoft.com/fwlink/?LinkId=247824)和部落格文章， [AlwaysOn 多重子網路容錯移轉和 SSIS](http://go.microsoft.com/fwlink/?LinkId=247825)，www.mattmasson.com 上。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 OLEDB 提供者不支援多重子網路容錯移轉叢集的新連接字串關鍵字 (MultiSubnetFailover=True)。 如需詳細資訊，請參閱 < [SQL Server 版本資訊](http://go.microsoft.com/fwlink/?LinkId=247824)部落格文章，以及[AlwaysOn 多重子網路容錯與 SSIS](http://go.microsoft.com/fwlink/?LinkId=247825)，www.mattmasson.com 上。  
   
  有數個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 工作和資料流程元件使用 OLE DB 連線管理員。 例如，OLE DB 來源和 OLE DB 目的地使用此連線管理員來擷取和載入資料，Execute SQL 工作則可以使用此連線管理員來連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫以執行查詢。  
   
  OLE DB 連接管理員還可用來存取 Unmanaged 程式碼 (使用如 C++ 等語言) 撰寫之自訂工作中的 OLE DB 資料來源。  
   
- 當您新增的 OLE DB 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員，將會解析為 OLE DB 連接，在執行階段、 設定連接管理員屬性，以及將連接管理員加入`Connections`集合封裝。  
+ 當您新增的 OLE DB 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接管理員會解析為 OLE DB 連接在執行階段、 設定連接管理員屬性，並將連接管理員加入`Connections`集合封裝。  
   
- `ConnectionManagerType`連接管理員的屬性設定為`OLEDB`。  
+ `ConnectionManagerType`連接管理員屬性設定為`OLEDB`。  
   
  您可以利用下列方式來設定 OLE DB 連接管理員：  
   

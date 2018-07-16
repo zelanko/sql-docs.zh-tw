@@ -1,5 +1,5 @@
 ---
-title: 建立 BI 語意模型連接到表格式模型資料庫 |Microsoft 文件
+title: 建立表格式模型資料庫的 BI 語意模型連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 084de463855ba83051d5d4ceb41e58431ae5e4f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d1bac7c3bc5e328db1bc54908f1d78ad5829c45
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136513"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269934"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>建立與表格式模型資料庫的 BI 語意模型連接
   使用本主題的資訊可設定 BI 語意模型連接，重新導向至 SharePoint 伺服器陣列外部的 Analysis Services 執行個體上執行的表格式模型資料庫。  
@@ -43,7 +43,7 @@ ms.locfileid: "36136513"
 ##  <a name="bkmk_prereq"></a> 檢閱必要條件  
  您必須有 [參與] 以上權限，才能建立 BI 語意模型連接檔案。  
   
- 您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱[將 BI 語意模型連接內容類型加入至文件庫&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。  
+ 您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱 <<c0> [ 將 BI 語意模型連接內容類型加入至文件庫&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。</c0>  
   
  您必須知道要設定 BI 語意模型連接的伺服器和資料庫名稱。 Analysis Services 必須設定表格式模式。 在伺服器上執行的資料庫必須是表格式模型資料庫。 如需如何檢查伺服器模式的指示，請參閱 [判斷 Analysis Services 執行個體的伺服器模式](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "36136513"
   
  您必須是 Analysis Services 系統管理員，才能在 Management Studio 中授與管理權限。  
   
- PowerPivot for SharePoint 必須透過使用傳統驗證模式的 Web 應用程式來存取。 與外部資料來源的 BI 語意模型連接相依於傳統模式登入。 如需詳細資訊，請參閱[PowerPivot 驗證及授權](power-pivot-authentication-and-authorization.md)。  
+ PowerPivot for SharePoint 必須透過使用傳統驗證模式的 Web 應用程式來存取。 與外部資料來源的 BI 語意模型連接相依於傳統模式登入。 如需詳細資訊，請參閱 < [PowerPivot 驗證及授權](power-pivot-authentication-and-authorization.md)。  
   
  參與連接順序的所有電腦和使用者都必須是在相同網域或受信任網域 (雙向信任) 中。  
   
@@ -148,6 +148,6 @@ ms.locfileid: "36136513"
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot BI 語意模型連接&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [建立 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [建立與 PowerPivot 活頁簿的 BI 語意模型連接](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dmf.managepolicies.general.f1
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 548b7dc663b4566f2823e55bbad596eff2268ff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: b9ef07a93f263517d04f3a6c4c563b07b953632b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131468"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37175261"
 ---
 # <a name="view-policies-dialog-box"></a>檢視原則對話方塊
   使用此對話方塊可檢視對這個目標有效的原則。 此對話方塊會顯示相關的原則、其原則類別目錄以及有關原則的資訊。  

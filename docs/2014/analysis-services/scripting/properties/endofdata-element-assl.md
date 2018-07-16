@@ -1,5 +1,5 @@
 ---
-title: EndOfData 元素 (ASSL) |Microsoft 文件
+title: EndOfData 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - EndOfData element
 ms.assetid: 4cee48bc-d486-4125-9d65-f323c6ec9d09
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b82240de66655ac829566adc56bc2d48c8afdf1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1640b052f72e28790a131ddd63eecaa833ced52a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285954"
 ---
 # <a name="endofdata-element-assl"></a>EndOfData 元素 (ASSL)
   表示從收到的資料結尾[PushedDataSource](../data-type/datasource-data-type-assl.md)項目。  

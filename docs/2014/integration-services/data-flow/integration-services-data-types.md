@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
 - data types [Integration Services], listed
@@ -21,13 +21,13 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c25bb056540c718c67d5de8ab78f80c3290bc5de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265340"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 資料類型
   當資料輸入封裝中的資料流程時，擷取資料的來源會將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 數值資料會指派為數值資料類型、字串資料指派為字元資料類型，而日期則是指派為日期資料類型。 其他資料，例如 GUID 和「二進位大型物件區塊 (BLOB)」也都會被指派適當的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型。 如果資料的資料類型不能轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型，則會發生錯誤。  
@@ -65,7 +65,7 @@ ms.locfileid: "36036419"
 |DT_UI8|八位元組不帶正負號的整數。|  
 |DT_WSTR|最大長度為 4000 字元，以 Null 終止的 Unicode 字元字串。 如果資料行值包含額外的 Null 結束字元，字串就會在第一個 Null 出現時被截斷。|  
 |DT_IMAGE|大小上限為 2 的二進位值<sup>31</sup>-1 (2,147,483,647) 個位元組。 執行個體時提供 SQL Server 登入。|  
-|DT_NTEXT|Unicode 字元字串的最大長度為 2<sup>30</sup> -1 (1,073,741,823) 個字元。|  
+|DT_NTEXT|最大長度為 2 的 Unicode 字元字串<sup>30</sup> -1 (1,073,741,823) 個字元。|  
 |DT_TEXT|[!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS 字元字串的最大長度為 2<sup>31</sup>-1 (2,147,483,647) 個字元。|  
   
 ## <a name="conversion-of-data-types"></a>資料類型的轉換  
@@ -228,7 +228,7 @@ ms.locfileid: "36036419"
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|CURRENCY||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[日期&#40;Transact SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期&#40;Transact SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||日期|日期|日期|  
+|DT_DBDATE|[日期&#40;-SQL&AMP;#41;&#41;](/sql/t-sql/data-types/date-transact-sql)|[日期&#40;-SQL&AMP;#41;&#41;](/sql/t-sql/data-types/date-transact-sql)||日期|日期|日期|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[時間 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[時間 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)、[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)、[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  

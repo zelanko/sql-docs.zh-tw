@@ -1,5 +1,5 @@
 ---
-title: KeyErrorLimitAction 元素 (ASSL) |Microsoft 文件
+title: KeyErrorLimitAction 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - KeyErrorLimitAction element
 ms.assetid: a2a01aae-0571-499f-9025-b61c741f3ddb
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 73c903190a0cc982a75227be6ff1adeb5081c0c9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6001901e7613099eff2856905b88452870f7f2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37247268"
 ---
 # <a name="keyerrorlimitaction-element-assl"></a>KeyErrorLimitAction 元素 (ASSL)
-  指定的動作[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定的索引鍵錯誤計數時[KeyErrorLimit](keyerrorlimit-element-assl.md)到達項目。  
+  指定的動作[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]中指定的索引鍵錯誤計數時[KeyErrorLimit](keyerrorlimit-element-assl.md)項目出現為止。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36035963"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*StopProcessing*|停止處理物件。|  
 |*StopLogging*|繼續處理物件，但停止記錄處理期間遇到的錯誤。|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
 - SQL12.SWB.makemanaged.Summary.F1
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9ae119f84af86a44e994e0a4684f99783a7edf2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 499516a41c06d31a32bb6846d16cb4be6f43de9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279154"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>註冊 SQL Server 的執行個體 (SQL Server 公用程式)
   將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體註冊到現有的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式內，當做 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Managed 執行個體來監視它的效能和組態。 公用程式控制點 (UCP) 每隔 15 分鐘就會從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Managed 執行個體收集組態和效能資訊。 這項資訊會儲存在 UCP 的公用程式管理資料倉儲 (UMDW) 中，而 UMDW 檔案名稱為 sysutility_mdw。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 效能資料會與原則相比較，有助於識別資源使用瓶頸及合併機會。  
@@ -48,7 +48,7 @@ ms.locfileid: "36146757"
   
  在此版本中，UCP 必須滿足下列需求：  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體必須是受支援的版本。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體必須是受支援的版本。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 -   我們建議您使用區分大小寫的 SQL Server 執行個體來主控 UCP。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36146757"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式監視不支援 FILESTREAM 資料。  
   
- 如需詳細資訊，請參閱[Maximum Capacity Specifications for SQL Server](../../sql-server/maximum-capacity-specifications-for-sql-server.md)和[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 如需詳細資訊，請參閱 < [SQL Server 的最大容量規格](../../sql-server/maximum-capacity-specifications-for-sql-server.md)並[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式概念的詳細資訊，請參閱 [SQL Server 公用程式的功能與工作](sql-server-utility-features-and-tasks.md)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36146757"
 |條件|更正動作|  
 |---------------|-----------------------|  
 |您必須在指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和 UCP 上擁有系統管理員權限。|您必須使用具有指定之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體和 UCP 上系統管理員權限的帳戶登入。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必須支援執行個體註冊。|如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本必須支援執行個體註冊。|如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 必須啟用 TCP/IP。|在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 上啟用 TCP/IP。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不能以其他任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP 註冊。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體已經當做現有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 公用程式的一部分進行管理，您無法以不同的 UCP 註冊它。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不得為 UCP。|如果您指定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體已經是與您所連接之 UCP 不同的 UCP，您無法在這個 UCP 中註冊它。|  

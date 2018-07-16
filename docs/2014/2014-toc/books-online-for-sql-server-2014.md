@@ -1,7 +1,8 @@
 ---
-title: 適用於 SQL Server 2014 線上叢書 》 |Microsoft 文件
+title: 適用於 SQL Server 2014 線上叢書 》 |Microsoft Docs
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
+ms.technology: release-landing
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
@@ -17,22 +18,21 @@ helpviewer_keywords:
 - Books Online [SQL Server], home page
 - portal page [SQL Server]
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
-caps.latest.revision: 61
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 92236bc057996a66ca12484e03154d91a1bbbd58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145068"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232530"
 ---
 # SQL Server 2014 的線上叢書
-  歡迎使用[!INCLUDE[msCoName](../includes/msconame-md.md)]® 線上叢書 》 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®。 線上叢書 》 包含工作描述和參考文件，描述如何使用執行資料管理及商業智慧工作[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+  歡迎來到[!INCLUDE[msCoName](../includes/msconame-md.md)]® 線上叢書 》 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®。 線上叢書 》 包含工作描述和參考文件會說明如何使用執行資料管理與商業智慧工作[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **現在就試試看：**  
- ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往**[這裡](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 來微調 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器已安裝。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱[SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 
+ ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往**[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 
   
 ## SQL Server 技術  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 包含數種資料管理和分析技術。 按下表中的連結，以尋找每項技術的功能、工作及參考文件集。  

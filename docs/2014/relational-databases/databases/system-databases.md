@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server]
 - displaying system database data
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - viewing system database data
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 caps.latest.revision: 24
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: efd67c89cab33862ceed2dc849a0ed4ca42c0279
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 38cf70ffff7a8ac0edabe432481f4adb064cf039
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281484"
 ---
 # <a name="system-databases"></a>系統資料庫
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包括下列系統資料庫。  

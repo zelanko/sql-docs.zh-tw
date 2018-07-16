@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 18858eb2c692be3bfe4c987dd365ae267d097d43
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 91dd0d2aefa6128dfdac0a948efe61f0a9334fb4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036069"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37236358"
 ---
 # <a name="create-xml-indexes"></a>建立 XML 索引
   此主題描述如何建立主要和次要 XML 索引。  
@@ -48,9 +48,9 @@ ms.locfileid: "36036069"
   
 -   主要 XML 索引名稱的限制與檢視名稱的限制相同。  
   
- 您無法建立 XML 索引上`xml`類型在檢視中的資料行上**資料表**值的變數`xml`類型資料行，或`xml`類型變數。  
+ 您無法建立 XML 索引上`xml`資料行在檢視中，輸入上**表格**值的變數`xml`類型資料行，或`xml`類型變數。  
   
--   若要變更`xml`類型資料行從不具類型至具類型的 XML，或反之亦然，使用 ALTER TABLE ALTER COLUMN 選項，XML 資料行上應存在任何索引。 如果 XML 索引確實存在，必須在嘗試變更資料行類型前先卸除它。  
+-   若要變更`xml`類型資料行從不具類型至具類型的 XML，或反之亦然，藉由使用 ALTER TABLE ALTER COLUMN 選項，XML 資料行上應存在任何索引。 如果 XML 索引確實存在，必須在嘗試變更資料行類型前先卸除它。  
   
 -   在建立 XML 索引時，必須將 ARITHABORT 選項設定為 ON。 若要使用 XML 資料類型方法查詢、插入、刪除或更新 XML 資料行中的值，必須在連接上設定相同的選項。 若未設定，XML 資料類型方法將會失敗。  
   

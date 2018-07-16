@@ -1,5 +1,5 @@
 ---
-title: 散發保留期限設定交易式發行集 (SQL Server Management Studio) |Microsoft 文件
+title: 散發保留期限為交易式發行集 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transaction retention periods [SQL Server replication]
 - retention periods [SQL Server replication]
 ms.assetid: 9a98c53a-fea5-4235-b23d-6c69587c5676
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ad1a697d6e139939723296fd481b2bbdb15cc39e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0c2997c2d3c07fad951bf750e852e9e4ab37e9da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225308"
 ---
 # <a name="set-the-distribution-retention-period-for-transactional-publications-sql-server-management-studio"></a>設定交易式發行集的散發保留週期 (SQL Server Management Studio)
   在 [散發資料庫屬性 - \<散發資料庫>] 對話方塊中，指定最短和最長散發保留期限。 這可以從 [散發者屬性 - \<散發者>] 對話方塊的 [一般] 頁面取得。 如需存取此對話方塊的詳細資訊，請參閱[檢視及修改散發者和發行者屬性](view-and-modify-distributor-and-publisher-properties.md)。  

@@ -1,5 +1,5 @@
 ---
-title: 邏輯架構 (Analysis Services-資料採礦) |Microsoft 文件
+title: 邏輯架構 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], about mining structures
 - logical architecture [Data Mining]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4505a89b4ea9e815b2fedbe8dbfddbfe70bff6c8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0314d921a69b20286b9c525d3de9a1fa898b74a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299298"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>邏輯架構 (Analysis Services – 資料採礦)
   資料採礦是涉及多個元件互動的程序。  
@@ -45,7 +45,7 @@ ms.locfileid: "36132771"
 ##  <a name="bkmk_SourceData"></a> 資料採礦來源資料  
  資料採礦方案中不會儲存用於資料採礦的資料，而只會儲存繫結。 資料可能位於以舊版的 SQL Server 所建立的資料庫、CRM 系統或甚至一般檔案中。 當您以處理方式來定型結構或模型時，便會建立資料的統計摘要，並將其儲存在快取中，該快取可以保留供之後的作業使用，或是在處理之後加以刪除。 如需詳細資訊，請參閱[採礦結構 &#40;Analysis Services - 資料採礦&#41;](mining-structures-analysis-services-data-mining.md)。  
   
- 您會結合 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源檢視 (DSV) 物件中的不同資料，這樣會在資料來源頂端提供抽象層。 您可以在資料表之間指定聯結，或是加入具有多對一關聯性的資料表，以建立巢狀資料表資料行。 這些物件的定義、資料來源和資料來源檢視會儲存在方案內，而且副檔名為 *.ds 和 \*.dsv。 如需有關建立和使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料來源和資料來源檢視，請參閱[支援資料來源&#40;SSAS 多維度&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
+ 您會結合 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料來源檢視 (DSV) 物件中的不同資料，這樣會在資料來源頂端提供抽象層。 您可以在資料表之間指定聯結，或是加入具有多對一關聯性的資料表，以建立巢狀資料表資料行。 這些物件的定義、資料來源和資料來源檢視會儲存在方案內，而且副檔名為 *.ds 和 \*.dsv。 如需有關建立和使用[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]資料來源和資料來源檢視，請參閱[支援的資料來源&#40;SSAS 多維度&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md)。  
   
  您也可以使用 AMO 或 XMLA 來定義及更改資料來源和資料來源檢視。 如需如何以程式設計方式處理這些物件的詳細資訊，請參閱[邏輯架構概觀 &#40;Analysis Services - 多維度資料&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36132771"
 ##  <a name="bkmk_Structures"></a> Mining Structures  
  資料採礦結構是定義資料網域 (從中建立採礦模型) 的邏輯資料容器。 單一採礦結構可以支援多個採礦模型。  
   
- 當您需要使用資料採礦方案中的資料時，Analysis Services 會從來源讀取資料，並產生彙總與其他資訊的快取。 預設會保存此快取，以便重複使用定型資料來支援其他模型。 如果您要刪除快取，請變更`CacheMode`屬性的值，對採礦結構物件`ClearAfterProcessing`。 如需詳細資訊，請參閱 [AMO 資料採礦類別](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)。  
+ 當您需要使用資料採礦方案中的資料時，Analysis Services 會從來源讀取資料，並產生彙總與其他資訊的快取。 預設會保存此快取，以便重複使用定型資料來支援其他模型。 如果您需要刪除快取，變更`CacheMode`屬性的值，對採礦結構物件`ClearAfterProcessing`。 如需詳細資訊，請參閱 [AMO 資料採礦類別](../multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)。  
   
  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 也提供將資料分為定型資料集與測試資料集的功能，讓您可以在隨機選取但具代表性的資料集上測試採礦模型。 資料實際上並不會分開儲存，而是以某個屬性來標示結構快取中的案例資料，該屬性指出特定案例是否用於定型或測試。 如果快取遭到刪除，就無法擷取該資訊。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36132771"
  此外， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也包含許多系統預存程序，可在內部用來進行資料採礦。 雖然系統預存程序供內部使用，但是您可能會發現這些是非常實用的捷徑。 Microsoft 保留視需要變更這些預存程序的權利；因此在實際使用上，我們建議您最好使用 DMX、AMO 或 XMLA 建立查詢。  
   
  **建立外掛程式演算法**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一個機制來建立您自己的演算法，及將演算法當做新的資料採礦服務的伺服器執行個體。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供一個機制來建立您自己的演算法，然後將演算法當做新的資料採礦服務的伺服器執行個體。  
   
  Analysis Services 會使用 COM 介面與外掛程式演算法通訊。 若要深入了解如何實作新的演算法，請參閱 [外掛程式演算法](plugin-algorithms.md)。  
   

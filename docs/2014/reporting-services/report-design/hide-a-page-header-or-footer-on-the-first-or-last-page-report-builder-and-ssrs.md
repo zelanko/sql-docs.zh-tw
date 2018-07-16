@@ -1,5 +1,5 @@
 ---
-title: 隱藏頁首或頁尾的第一個或最後一頁 （報表產生器及 SSRS） |Microsoft 文件
+title: 隱藏頁首或頁尾的第一個或最後一頁 （報表產生器及 SSRS） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b0abf817e5f4f05f6e9dd6507234712c20256a36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 023dce7e8ced27e0ac549fef83b360812e878800
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37244228"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隱藏第一頁或最後一頁的頁首或頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端執行的頁首和頁尾。 在您加入頁首或頁尾之後，就可以選擇性地隱藏報表第一頁和最後一頁的頁首或頁尾。  
@@ -52,8 +52,8 @@ ms.locfileid: "36133372"
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [頁首和頁尾&#40;報表產生器和 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [頁首和頁尾&#40;報表產生器及 SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [新增或移除頁首或頁尾&#40;報表產生器和 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [新增或移除頁首或頁尾&#40;報表產生器及 SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

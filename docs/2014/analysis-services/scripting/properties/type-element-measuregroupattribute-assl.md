@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (MeasureGroupAttribute) (ASSL) |Microsoft 文件
+title: 輸入元素 (MeasureGroupAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 93740504-297a-4a06-ab3e-b598e466eebb
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d06b5df3ba99e54ec62de5c6f274874289cbbc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 49155b00ca70c613ffec01e898e7c6f071e24c84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036198"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254850"
 ---
 # <a name="type-element-measuregroupattribute-assl"></a>Type 元素 (MeasureGroupAttribute) (ASSL)
   包含的型別[MeasureGroupAttribute](../data-type/measuregroupattribute-data-type-assl.md)項目。  
@@ -64,17 +64,17 @@ ms.locfileid: "36036198"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*規則*|代表一般屬性。|  
 |*資料粒度*|代表資料粒度屬性。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `Type` 允許值的列舉是 <xref:Microsoft.AnalysisServices.MeasureGroupAttributeType>。  
   
- 對應目的父代的項目`Type`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.MeasureGroupAttribute>。  
+ 對應至父系的元素`Type`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性項目&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [Attributes 項目&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
  [RegularMeasureGroupDimension 資料類型&#40;ASSL&#41;](../data-type/dimension-data-type-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   

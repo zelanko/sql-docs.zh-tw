@@ -1,5 +1,5 @@
 ---
-title: 修改追蹤範本 (SQL Server Profiler) |Microsoft 文件
+title: 修改追蹤範本 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - modifying traces
 ms.assetid: b81df2a1-e202-43d8-92b0-0beb145f0116
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: afa7876575dca287f492f07cc69d6dd7dfe27222
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8079f4dfa5893915a10ae044045d1cc9eb59baa8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035748"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299368"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>修改追蹤範本 (SQL Server Profiler)
   本主題說明如何使用 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 來修改追蹤範本。  
@@ -45,7 +45,7 @@ ms.locfileid: "36035748"
 4.  按一下 [儲存]，或按一下 [另存新檔]，以另一個名稱儲存追蹤範本。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定追蹤檔案的事件及資料行&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [指定事件及資料行追蹤檔案的&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [從執行中的追蹤衍生範本 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [從追蹤檔案或追蹤資料表衍生範本 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler 範本和權限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

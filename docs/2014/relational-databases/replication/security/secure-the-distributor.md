@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], Distributors
 - Distributors [SQL Server replication], security
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f4378be21503d0885774f630dcf0d0d8460389c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8e5dadadffd2703dc3d2f3feab081be946c1c8ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290394"
 ---
 # <a name="secure-the-distributor"></a>保護散發者
   下列複寫代理程式連接到「散發者」：記錄讀取代理程式、快照集代理程式、佇列讀取器代理程式、散發代理程式及合併代理程式。 為遵循授與所需最小權限的原則，並同時保護所有密碼的儲存，有必要為這些代理程式中的每一個提供適當的登入。  

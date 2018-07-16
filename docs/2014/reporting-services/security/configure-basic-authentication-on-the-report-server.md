@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
 - Basic authentication
@@ -16,13 +16,13 @@ ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2611f683ee02180bc5b90b0b08fe961d049e9aab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6bc51edfd6e7ba2aeff58a230ad29ce800fffd79
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136353"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189825"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>設定報表伺服器的基本驗證
   根據預設，Reporting Services 會接受可指定交涉式驗證或 NTLM 驗證的要求。 如果您的部署包含了使用基本驗證的用戶端應用程式或瀏覽器，您必須將基本驗證加入支援的類型清單中。 此外，如果您要使用報表產生器，必須啟用對報表產生器檔案的匿名存取。  
@@ -42,7 +42,7 @@ ms.locfileid: "36136353"
   
 1.  在文字編輯器中開啟 RSReportServer.config。  
   
-     檔案是位於*\<磁碟機 >:* \Program Files\Microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\ReportServer。  
+     檔案位於 \microsoft *\<磁碟機 >:* \Program Files\Microsoft SQL Server\MSRS12。MSSQLSERVER\Reporting Services\ReportServer。  
   
 2.  尋找 <`Authentication`>。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "36136353"
           </AuthenticationTypes>  
     ```  
   
-4.  貼上的現有項目 <`Authentication`>。  
+4.  貼上現有的項目，如 <`Authentication`>。  
   
-     如果您使用多個驗證類型，將只`RSWindowsBasic`項目，但不是刪除的項目`RSWindowsNegotiate`， `RSWindowsNTLM`，或`RSWindowsKerberos`。  
+     如果您使用多種驗證類型，將剛才`RSWindowsBasic`項目，但不是刪除的項目`RSWindowsNegotiate`， `RSWindowsNTLM`，或`RSWindowsKerberos`。  
   
      若要支援 Safari 瀏覽器，您無法設定報表伺服器使用多個驗證類型。 您只能指定`RSWindowsBasic`並刪除其他項目。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36136353"
   
 |元素|必要項|有效的值|  
 |-------------|--------------|------------------|  
-|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可隨著每個 HTTP 要求傳送的驗證封裝中的登入認證保存，允許伺服器模擬使用者連接到網路中其他伺服器時。 (預設值)<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
+|LogonMethod|是<br /><br /> 如果您未指定值，將會使用 3。|`2` = 網路登入，用於驗證純文字密碼的高效能伺服器。<br /><br /> `3` = 純文字登入，可隨著每個 HTTP 要求傳送的驗證封裝中的登入認證保存，可讓伺服器在連接到網路中的其他伺服器時，模擬使用者。 (預設值)<br /><br /> 注意： [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]中不支援值 0 (用於互動式登入) 和 1 (用於批次登入)。|  
 |Realm|選擇性|指定資源分割區，其中包含用於控制組織中受保護資源之存取權的授權和驗證功能。|  
 |DefaultDomain|選擇性|指定伺服器用以驗證使用者的網域。 雖然這個值是選擇性的，但是如果您省略它，報表伺服器將使用電腦名稱當做網域。 如果電腦是網域的成員，該網域就是預設網域。 如果您在網域控制站上安裝了報表伺服器，則使用的網域就是電腦所控制的網域。|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36136353"
   
 -   將 `IsReportBuilderAnonymousAccessEnabled` 元素加入到 RSReportServer.config，並將它設定為 `True`。 當您儲存檔案之後，報表伺服器會建立報表產生器的新端點。 端點用於內部存取程式檔案，而且在程式碼內不會有可使用的程式設計介面。 擁有個別的端點可讓報表產生器在報表伺服器服務處理序界限下，於它自己的應用程式定義域內執行。  
   
--   您可以選擇指定最低權限帳戶，在與報表伺服器不同的安全性內容之下處理要求。 這個帳戶會變成匿名帳戶，以便在報表伺服器上存取報表產生器檔案。 此帳戶會設定 ASP.NET 工作處理序內執行緒的識別。 該執行緒內執行的要求會傳遞給報表伺服器，而不需執行驗證檢查。 此帳戶就相當於 IUSR_<\<機器 > 啟用匿名存取和模擬時，處理帳戶在網際網路資訊服務 (IIS)，用來設定 ASP.NET 背景工作的安全性內容。 若要指定此帳戶，請將它加入報表產生器 Web.config 檔中。  
+-   您可以選擇指定最低權限帳戶，在與報表伺服器不同的安全性內容之下處理要求。 這個帳戶會變成匿名帳戶，以便在報表伺服器上存取報表產生器檔案。 此帳戶會設定 ASP.NET 工作處理序內執行緒的識別。 該執行緒內執行的要求會傳遞給報表伺服器，而不需執行驗證檢查。 這個帳戶相當的 iusr_<\<機器 > 啟用匿名存取和模擬時，處理帳戶在網際網路資訊服務 (IIS)，用來設定 ASP.NET 背景工作角色的安全性內容。 若要指定此帳戶，請將它加入報表產生器 Web.config 檔中。  
   
  如果您想要啟用對報表產生器程式檔案的匿名存取，報表伺服器必須設定基本驗證。 如果報表伺服器沒有設定成基本驗證，嘗試啟用匿名存取時，會出現錯誤。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36136353"
     </configuration>  
     ```  
   
-     驗證模式必須設定為`Windows`如果您包含 Web.config 檔。  
+     驗證模式必須設定為`Windows`如果您包含 Web.config 檔案。  
   
      `Identity impersonate` 可以是`True`或`False`。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36136353"
   
 5.  將 Web.config 檔儲存到 ReportBuilder\bin 資料夾。  
   
-6.  開啟 RSReportServer.config 檔案，請在 [服務] 區段中，尋找`IsReportManagerEnabled`並加入其下的下列設定：  
+6.  開啟 RSReportServer.config 檔案，在 [服務] 區段中，尋找`IsReportManagerEnabled`並加入其下的下列設定：  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  

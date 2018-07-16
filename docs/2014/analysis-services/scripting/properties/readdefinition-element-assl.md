@@ -1,5 +1,5 @@
 ---
-title: ReadDefinition 元素 (ASSL) |Microsoft 文件
+title: ReadDefinition 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReadDefinition element
 ms.assetid: 1f250129-13b2-41b9-b083-b5aacddf0060
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fdb505ff02917259b71d5f5b1ee803a5982217b3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fed91c75bd717e67dd624fc16f7091be24fb030c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146190"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297228"
 ---
 # <a name="readdefinition-element-assl"></a>ReadDefinition 元素 (ASSL)
   決定成員是否可以讀取資料庫的定義或資料庫中物件的定義。  
@@ -64,11 +64,11 @@ ms.locfileid: "36146190"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*無*|不允許對物件定義進行存取。|  
 |*基本*|允許對物件定義進行基本存取。 **注意：** 此權限，才能建立本機 cube、 連結量值群組和連結維度。|  
-|*允許*|允許對物件定義進行完整存取。 **注意：** 此權限，需要執行[探索](../../xmla/xml-elements-methods-discover.md)XML for Analysis (XMLA) 呼叫使用 DISCOVER_XML_METADATA 參數。|  
+|*允許*|允許對物件定義進行完整存取。 **注意︰** 此權限，才能執行[Discover](../../xmla/xml-elements-methods-discover.md) XML for Analysis (XMLA) 呼叫使用 DISCOVER_XML_METADATA 參數。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `ReadDefinition` 父系的元素是 <xref:Microsoft.AnalysisServices.CubePermission>、<xref:Microsoft.AnalysisServices.DatabasePermission>、<xref:Microsoft.AnalysisServices.DimensionPermission>、<xref:Microsoft.AnalysisServices.MiningModelPermission>、<xref:Microsoft.AnalysisServices.MiningStructurePermission> 和 <xref:Microsoft.AnalysisServices.Permission>。  
   

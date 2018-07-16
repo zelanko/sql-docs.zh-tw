@@ -1,5 +1,5 @@
 ---
-title: XML 資料類型 (XMLA) |Microsoft 文件
+title: XML 資料類型 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - XML for Analysis, data types
 ms.assetid: 979b5384-90d9-4e09-9286-1d1eafdc4864
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d7a21691474e890ba8614715b18e972d1353b2c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ccba3c69101362d1a384320808a30066ae572b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037300"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297088"
 ---
 # <a name="xml-data-types-xmla"></a>XML 資料類型 (XMLA)
   除了 XML 1.0 建議所定義的標準基本和衍生類型以外，XML for Analysis (XMLA) 1.1 規格還定義了其他資料類型，可支援多維度和表格式資料的表示。  
@@ -42,9 +42,9 @@ ms.locfileid: "36037300"
 |[EmptyResult](emptyresult-data-type-xmla.md)|`root` 元素的命名空間。 XMLA 命令不會傳回結果，因為 XMLA 命令通常也不會傳回結果，或是因為發生錯誤時，會傳回此命名空間[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行 XMLA 命令時的執行個體。|  
 |[EnumString](enumstring-data-type-xmla.md)|給定列舉值的具名字串常數集合。|  
 |Integer|標準的 XML `int` 資料類型。|  
-|[MDDataSet](mddataset-data-type-xmla.md)|所傳回的多維度資料*結果*參數[Execute](../xml-elements-methods-execute.md)方法。|  
+|[MDDataSet](mddataset-data-type-xmla.md)|所傳回的多維度資料*結果*的參數[Execute](../xml-elements-methods-execute.md)方法。|  
 |[結果集](resultset-data-type-xmla.md)|`Execute` 方法所傳回的自我描述 XML 結果集。|  
-|[Rowset](rowset-data-type-xmla.md)|傳回資料列從資料來源，內嵌 XML 結構描述，結構化[探索](../xml-elements-methods-discover.md)方法。|  
+|[Rowset](rowset-data-type-xmla.md)|所傳回的資料來源，內嵌 XML 結構描述，結構化的資料列[探索](../xml-elements-methods-discover.md)方法。|  
 |String|XML `string` 資料類型。|  
 |UnsignedInt|XML `unsignedInt` 結構描述類型。|  
   

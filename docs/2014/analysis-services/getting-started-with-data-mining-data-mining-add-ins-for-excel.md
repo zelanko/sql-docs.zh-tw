@@ -1,5 +1,5 @@
 ---
-title: 開始使用資料採礦 （資料採礦增益集的 Excel） |Microsoft 文件
+title: 開始使用資料採礦 （資料採礦適用於 Excel 的增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c2d82f4569dbdf2c9e6c686c1235300de40bf445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035347"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303128"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>開始使用資料採礦 (適用於 Excel 的資料採礦增益集)
   資料採礦是探索有意義資料模式的程序。 資料採礦自然補充了透過傳統 BI 瀏覽及了解資料的程序。 機器演算法可以處理非常大量的資料，並且找出原本隱藏的模式和趨勢。  
   
- 若要進行資料採礦，您收集相關資料的特定問題，例如 「 是我的客戶？ 」 或者 「 購買了哪些產品？ 」 然後套用演算法來尋找資料中的統計相互關聯。 透過分析找到的模式和趨勢會儲存為採礦模型。 您可以接著將採礦模型套用至新資料，以便在下列商務案例中進行分析：  
+ 若要執行資料採礦，您收集的相關資料的特定問題，例如 「 是我的客戶？ 」 或者 「 購買了哪些產品？ 」 然後套用演算法來尋找資料中的統計相互關聯。 透過分析找到的模式和趨勢會儲存為採礦模型。 您可以接著將採礦模型套用至新資料，以便在下列商務案例中進行分析：  
   
 -   使用過去的趨勢預測下一季的銷售、存貨需求或客戶滿意度。  
   
@@ -90,12 +90,12 @@ ms.locfileid: "36035347"
   
  模型完成後，請花一些時間檢閱結果，並找出方式修正資料或取得更理想的結果。 您的第一個模型鮮少會提供所有答案。 資料採礦通常是反覆進行的程序。  
   
- 當您再次嘗試您的資料不同的方式，分類收納或加入新的資料行，請務必使用**文件模型**精靈以擷取每個模型的中繼資料和結果的快照集。 保有記錄可讓您在探索的過程中更輕鬆地追蹤進度。  
+ 當您嘗試分類收納您的資料不同的方式，或加入新的資料行，請務必使用**文件模型**精靈以擷取每個模型的中繼資料和結果的快照集。 保有記錄可讓您在探索的過程中更輕鬆地追蹤進度。  
   
  [瀏覽和清除資料](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>驗證模型  
- 您執行每個精靈或工具時，演算法都會分析資料的內容，並判斷統計上有效的模式是否存在。 如果演算法找不到有效的模式，您將會收到錯誤訊息。 不過，即使模型建立成功，您仍會想要測試模型，查看它是否驗證您的假設。 您可以使用工具，例如[精確度圖表&#40;SQL Server 資料採礦增益集&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)或[交叉驗證&#40;SQL Server 資料採礦增益集&#41;](cross-validation-sql-server-data-mining-add-ins.md)來產生統計模型品質的量值。  
+ 您執行每個精靈或工具時，演算法都會分析資料的內容，並判斷統計上有效的模式是否存在。 如果演算法找不到有效的模式，您將會收到錯誤訊息。 不過，即使模型建立成功，您仍會想要測試模型，查看它是否驗證您的假設。 您可以使用工具，例如[精確度圖表&#40;SQL Server 資料採礦增益集&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)或是[交叉驗證&#40;SQL Server 資料採礦增益集&#41;](cross-validation-sql-server-data-mining-add-ins.md)來產生統計模型品質的量值。  
   
  當您評估第一個模型的結果時，請反問自己下列問題：  
   
@@ -126,12 +126,12 @@ ms.locfileid: "36035347"
   
  資料採礦模型的重要用途是建立預測和建議。 適用於 Excel 的資料採礦增益集中的工具可讓您輕鬆產生更複雜的預測查詢，將深入資訊轉換成可採取動作的結果。 所有這些工具都完全整合到 Excel 中。  
   
- [檢視模型&#40;採礦適用於 Office 的增益集的資料&#41;](viewing-models-data-mining-add-ins-for-office.md)  
+ [檢視模型&#40;資料採礦適用於 Office 的增益集&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [驗證模型及使用模型進行預測&#40;資料採礦 excel 增益集&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [驗證模型及使用模型進行預測&#40;資料採礦適用於 Excel 的增益集&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [包含的內容在資料採礦增益集 for Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [技術參考&#40;資料採礦 excel 增益集&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+ [包含的內容中的資料採礦增益集適用於 Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [技術參考&#40;資料採礦適用於 Excel 的增益集&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

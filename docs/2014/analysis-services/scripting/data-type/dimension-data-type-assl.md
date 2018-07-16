@@ -1,5 +1,5 @@
 ---
-title: 維度的資料類型 (ASSL) |Microsoft 文件
+title: 維度的資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Dimension data type
 ms.assetid: 3fe6adc2-5206-44c3-a689-a731705f43ca
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1451da2c20228e00b99482a7c9b43a92a8478154
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b60c51847900fee89f0baee2d5b04d96dc3c9ad5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036477"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289554"
 ---
 # <a name="dimension-data-type-assl"></a>Dimension 資料類型 (ASSL)
   定義代表資料庫維度的基本資料類型。  
@@ -105,7 +105,7 @@ ms.locfileid: "36036477"
   
 -   *ProactiveCaching*  
   
- 分析管理物件 (AMO) 物件模型中對應的元素是<xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.AggregationDimension>， <xref:Microsoft.AnalysisServices.AggregationDesignDimension>， <xref:Microsoft.AnalysisServices.CubeDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupDimension>，和<xref:Microsoft.AnalysisServices.PerspectiveDimension>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應項目<xref:Microsoft.AnalysisServices.Dimension>， <xref:Microsoft.AnalysisServices.AggregationDimension>， <xref:Microsoft.AnalysisServices.AggregationDesignDimension>， <xref:Microsoft.AnalysisServices.CubeDimension>， <xref:Microsoft.AnalysisServices.MeasureGroupDimension>，和<xref:Microsoft.AnalysisServices.PerspectiveDimension>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

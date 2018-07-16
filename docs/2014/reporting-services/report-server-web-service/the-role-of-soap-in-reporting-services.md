@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8254170f0922d42574153c73012c7ddc27827863
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: d37f6f04c0b383493d48f1469535a3f048e97876
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036036"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290200"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   報表伺服器 Web 服務透過網路使用簡易物件存取通訊協定 (SOAP) 訊息，傳送以文字為基礎的命令。 這些命令使用 XML 文字的格式，以 HTTP 透過全球資訊網來傳送文字。 透過使用 SOAP 做為其通訊協定，報表伺服器 Web 服務允許應用程式和元件使用開放且廣為接受的基礎結構，來與報表伺服器交換資料。 SOAP 標準是定義在 www.w3.org/TR/SOAP。  

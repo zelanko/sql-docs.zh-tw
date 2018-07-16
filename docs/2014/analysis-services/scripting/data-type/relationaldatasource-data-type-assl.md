@@ -1,5 +1,5 @@
 ---
-title: RelationalDataSource 資料類型 (ASSL) |Microsoft 文件
+title: RelationalDataSource 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - RelationalDataSource data type
 ms.assetid: 2b99d7d0-731d-4506-8c37-678a5dc29c8a
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2928f86dd45538cc1507718008113522d02f80a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0739648e7e843bbfce62953a1bae543be4f2f9c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134478"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37204128"
 ---
 # <a name="relationaldatasource-data-type-assl"></a>RelationalDataSource 資料類型 (ASSL)
   定義衍生的資料類型，表示[DataSource](../objects/datasource-element-assl.md)關聯式資料來源為基礎的項目。  
@@ -57,10 +57,10 @@ ms.locfileid: "36134478"
 |------------------|-------------|  
 |父元素|無|  
 |子元素|無|  
-|衍生的元素|[資料來源](../objects/datasource-element-assl.md)([DataSources](../collections/datasources-element-assl.md)集合[資料庫](../objects/database-element-assl.md))|  
+|衍生的元素|[資料來源](../objects/datasource-element-assl.md)([DataSources](../collections/datasources-element-assl.md)的集合[資料庫](../objects/database-element-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.RelationalDataSource>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.RelationalDataSource>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -5,10 +5,9 @@ ms.date: 07/14/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.MEMBERSHIP.F1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - join a role
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 12
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d01aa38a22025763f824b67073319ceaeacbdd5f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 61557c9cbc9d11a23af9bfc0beda9ab84b319eca
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37214938"
 ---
 # <a name="join-a-role"></a>加入角色
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中將角色指派給登入和資料庫使用者。 您可以在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中使用角色來有效率地管理權限。 您可以將權限指派給角色，然後在這些角色中加入和移除使用者與登入。 使用角色時，不需要針對每位使用者個別維護權限。  
@@ -66,7 +65,7 @@ ms.locfileid: "36037203"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 權限  
- 需要`ALTER ANY ROLE`資料庫的權限`ALTER`權限中的成員資格的角色， **db_securityadmin**。  
+ 需要`ALTER ANY ROLE`資料庫上的權限`ALTER`權限的角色或中的成員資格**db_securityadmin**。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   

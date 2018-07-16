@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 4351b5581ccce3185c7354a29157f7ea9747631d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 243524a0f073ab1950398eff715bd1f1420144a3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035297"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291344"
 ---
 # <a name="database-engine-instances-sql-server"></a>Database Engine 執行個體 (SQL Server)
   執行個體[!INCLUDE[ssDE](../../includes/ssde-md.md)]是一份`sqlservr.exe`當做作業系統服務執行的可執行檔。 每個執行個體都會管理數個系統資料庫以及一個或多個使用者資料庫。 每部電腦都可以執行多個 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體。 應用程式會連接至執行個體，以在執行個體所管理的資料庫中執行工作。  

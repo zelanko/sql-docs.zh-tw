@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - pager addresses [SQL Server]
 - SQL Server Agent, alerts
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - alerts [SQL Server], pager addresses
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0ab8b9ea34298eab2f8639975bc4871c288c936f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 83ece1b0392f303d10b7f431789c6829abb87bdf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256040"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 [!INCLUDE[tsql](../../includes/tsql-md.md)]，在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中格式化 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 警示的呼叫器號碼。  

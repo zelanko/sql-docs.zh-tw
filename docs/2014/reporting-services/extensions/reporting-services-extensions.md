@@ -18,15 +18,15 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 44
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5444041bf1fb2cbb9c43f3f092af64914f527d68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 67864d393f50fb6fa37ba36e032000d1739d508a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034932"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268494"
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 延伸模組
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的模組化架構是針對擴充性所設計。 現在可以使用 Managed 程式碼 API，這樣您就可以輕鬆地開發、安裝和管理許多 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件取用的延伸模組。 您可以使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 建立私人或共用組件，並新增新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 功能以滿足不斷成長的商務需求。  

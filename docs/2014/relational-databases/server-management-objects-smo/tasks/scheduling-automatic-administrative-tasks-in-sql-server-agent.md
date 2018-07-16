@@ -1,5 +1,5 @@
 ---
-title: 排程 Automatic Administrative Tasks in SQL Server Agent |Microsoft 文件
+title: 排程 SQL Server Agent 中的自動管理工作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd9f5ca6e2b00893bcf5fea14829d76a18b85fa9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ad4b0fa53b7a15d9ff8118336d0ec0b9d31a4b56
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256050"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
   在 SMO 中，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 是由下列物件表示：  
@@ -40,7 +40,7 @@ ms.locfileid: "36146467"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空間中。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或[建立 Visual C&#35; SMO Project in Visual Studio](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 1.  如果程式使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent，則您必須包含 `Imports` 陳述式來限定 Agent 命名空間。 將陳述式插入至其他 `Imports` 陳述式之後、在應用程式中的任何宣告之前，例如：  
   

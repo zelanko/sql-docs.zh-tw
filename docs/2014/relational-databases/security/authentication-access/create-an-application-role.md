@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.approle.general.f1
 helpviewer_keywords:
 - application roles [SQL Server], creating
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 caps.latest.revision: 26
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 571fd7a15c12caa6e6ed9cab7355db8a636319ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 31d412581ef160635800d1952fdcd4b19bf05f69
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270434"
 ---
 # <a name="create-an-application-role"></a>建立應用程式角色
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中建立應用程式角色。 應用程式角色限制使用者必須經由特定應用程式存取資料庫。 應用程式角色沒有使用者，所以選取 **[應用程式角色]** 時，不會顯示 **[角色成員]** 。  
@@ -73,7 +72,8 @@ ms.locfileid: "36135151"
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>其他選項  
- **[應用程式角色 - 新增]** 對話方塊也在其他兩個頁面上提供選項： **[安全性實體]** 和 **[擴充屬性]**。  
+ 
+  **[應用程式角色 - 新增]** 對話方塊也在其他兩個頁面上提供選項： **[安全性實體]** 和 **[擴充屬性]**。  
   
 -   **[安全性實體]** 頁面列出所有可能的安全性實體以及可授與登入的安全性實體權限。  
   

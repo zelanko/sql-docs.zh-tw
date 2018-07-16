@@ -1,5 +1,5 @@
 ---
-title: 部署專案和封裝 |Microsoft 文件
+title: 部署專案和封裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50da655d029228c4fc2339b49245cd11f5967305
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bf58e533b46304d4d8833626381e52e86d017404
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135208"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221660"
 ---
 # <a name="deployment-of-projects-and-packages"></a>部署專案和封裝
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 支援兩種部署模型：專案部署模型和封裝部署模型。 專案部署模型可讓您將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器。  
   
  如需將專案部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的詳細資訊，請參閱[將專案部署至 Integration Services 伺服器](../deploy-projects-to-integration-services-server.md)。  
   
- 如需有關封裝部署模型的詳細資訊，請參閱[封裝部署&#40;SSIS&#41;](legacy-package-deployment-ssis.md)。  
+ 如需封裝部署模型的詳細資訊，請參閱[封裝部署&#40;SSIS&#41;](legacy-package-deployment-ssis.md)。  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>專案部署與封裝部署的比較  
  您為專案選擇的部署模型類型，會決定可用於該專案的開發及管理選項。 下表顯示使用專案部署模型與使用封裝部署模型之間的差異和相似性。  

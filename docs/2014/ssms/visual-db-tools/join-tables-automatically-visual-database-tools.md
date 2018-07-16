@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatic joins
 - joins [SQL Server], creating
 - joins [SQL Server], automatic
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 373264e421362d29ee00909707abc2be41ce1956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 394aab0fd5726b2a885f0f113cfe1f66c1eac5c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268174"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>自動聯結資料表 (Visual Database Tools)
   當您將兩個或多個資料表新增至查詢時， [查詢和檢視表設計工具](visual-database-tools.md) 會嘗試判斷它們是否相關。 如果相關聯，查詢和檢視設計師會自動在代表資料表或表格化物件的矩形之間加上聯結線 (Join Line)。  
@@ -44,7 +44,7 @@ ms.locfileid: "36136534"
  如果查詢和檢視設計師不會自動聯結查詢中的資料表，則可以自行建立聯結。 如需詳細資料，請參閱[手動聯結資料表 &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [如何在 查詢和檢視表設計工具表示聯結&#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
+ [如何在查詢和檢視表設計工具表示聯結&#40;Visual Database Tools&#41;](how-the-query-and-view-designer-represents-joins-visual-database-tools.md)   
  [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [使用聯結查詢 &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - DatabaseQueryTimeout Property
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DatabaseQueryTimeout property
 ms.assetid: 96faed97-9799-4bbf-a66f-fdd532d3eace
 caps.latest.revision: 35
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bcfd675860851b62dd2868adae00c6f6f13f6357
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 2cf7248fe0052a23e3ceef2243a4b6b45645402b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257994"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>DatabaseQueryTimeout 屬性 (WMI MSReportServer_ConfigurationSetting)
   指定在報表伺服器認定命令失敗，或是花太多時間執行之前必須經過的秒數。 報表伺服器會針對 SQL 目錄，而不是報表資料來源排定查詢的時間。 讀取/寫入  

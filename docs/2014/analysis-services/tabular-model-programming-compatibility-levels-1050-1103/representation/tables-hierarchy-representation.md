@@ -1,5 +1,5 @@
 ---
-title: 階層表示法 （表格式） |Microsoft 文件
+title: 階層表示法 （表格式） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4fb0c2b5f071e008b986fbb60cfb08c6b97f6fd8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9e2cca3bfc667730820109157f9ffdd3000522a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135479"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37215768"
 ---
 # <a name="hierarchy-representation-tabular"></a>階層表示法 (表格式)
   在表格式模型中，階層是根據使用者選取的值從一個屬性到另一個屬性的導覽路徑。  

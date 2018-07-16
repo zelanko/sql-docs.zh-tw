@@ -1,5 +1,5 @@
 ---
-title: 安裝適用於 SQL Server 2014 |Microsoft 文件
+title: SQL Server 2014 安裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.portal.Installation.f1
 helpviewer_keywords:
@@ -17,19 +17,19 @@ helpviewer_keywords:
 - initial installation [SQL Server]
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6eb94e86633e5bff588993ac1b71cd52bde3ae3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8c25f5057c6e1cd5b877376e67634946ef489276
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135685"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224458"
 ---
 # <a name="installation-for-sql-server-2014"></a>SQL Server 2014 安裝
  ## <a name="-download-sql-server-2014-express-httpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[ 下載 SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
-  **感謝您到[Scott Hanselman](http://www.hanselman.com/)收集的所有安裝程式封裝連結，在一個地方 ！**
+  **感謝[Scott Hanselman](http://www.hanselman.com/)收集的所有安裝程式套件連結在同一個地方 ！**
   
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈提供了安裝所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件的單一功能樹狀目錄：  
   
@@ -49,11 +49,11 @@ ms.locfileid: "36135685"
   
 -   連接元件  
   
- 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 若要提供版本及元件之間最好的選擇[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)和[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有 32 位元和 64 位元兩種版本。
+ 您可以個別安裝每個元件，也可以選取上面所列出元件的組合。 在中提供版本及元件之間最好的選擇[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[版本和 SQL Server 2014 元件](../../sql-server/editions-and-components-of-sql-server-2016.md)並[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 有 32 位元和 64 位元兩種版本。
  
  **現在就試試看：**  
   
--   有 Azure 帳戶嗎？  接著前往**[這裡](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 來微調 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器已安裝。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱[SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。  
+-   有 Azure 帳戶嗎？  接著前往**[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。  
   
 ## <a name="in-this-section"></a>本節內容  
  不論您是使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈或命令提示字元來安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，安裝程序都包括下列步驟：  
@@ -94,6 +94,6 @@ ms.locfileid: "36135685"
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 安裝的新增功能](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
- [硬體 and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ [安裝 SQL Server 2014 的硬體與軟體需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
   

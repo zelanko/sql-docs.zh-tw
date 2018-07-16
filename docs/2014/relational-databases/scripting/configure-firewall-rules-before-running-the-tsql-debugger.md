@@ -1,5 +1,5 @@
 ---
-title: 設定 TRANSACT-SQL 偵錯工具 |Microsoft 文件
+title: 設定 TRANSACT-SQL 偵錯工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.error.sqlde_register_failed
 - vs.debug.error.sqlde_accessdenied
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 747165efe7f5493263da0deec3ec5b2ebcdbad04
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 79bb9e677f078f4ee1f4a18142fa3068f61349b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146917"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262514"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>設定 Transact-SQL 偵錯工具
   當連接的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 執行個體與 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器在不同的電腦上執行時，就必須設定 Windows 防火牆規則才能啟用 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 偵錯。  
@@ -160,7 +160,7 @@ ms.locfileid: "36146917"
   
 * [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗必須連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 或更新版本中的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 執行個體。 當 [查詢編輯器] 視窗連接至處於單一使用者模式下的執行個體時，您就無法執行偵錯工具。
 
-* 伺服器必須透過 RPC 回應用戶端。 在其下應該有 SQL Server 服務正在執行的帳戶驗證至用戶端的權限。  
+* 伺服器必須透過 RPC 回應用戶端。 服務正在執行的 SQL Server 應該已在其下的帳戶驗證至用戶端的權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [Transact-SQL 偵錯工具](transact-sql-debugger.md)   

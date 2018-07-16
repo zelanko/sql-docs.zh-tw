@@ -1,5 +1,5 @@
 ---
-title: 連接到資料來源 (SSAS) |Microsoft 文件
+title: 連接到資料來源 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conndatasource.f1
 ms.assetid: 1e2b17e9-092b-4af1-8a58-c52b8fe10ff1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f33af08d91f2c8e739c9295daed0ae47563ede51
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e77906d12c334f9e10ac6a2c26b9c90a2efc8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293523"
 ---
 # <a name="connect-to-a-data-source-ssas"></a>連接到資料來源 (SSAS)
   **[資料表匯入精靈]** 的這個頁面可讓您建立與各種資料來源之間的新資料來源連接，例如關聯式資料庫、資料摘要和檔案等資料來源。 若要從 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]存取精靈，請按一下 **[模型]** 功能表上的 **[從資料來源匯入]**。  
   
  若要連接至資料來源，您必須先在機器上安裝適當的提供者。 您必須將適當的提供者安裝在工作空間資料庫伺服器上。 若是 32 位元 (x86) 伺服器，必須安裝 32 位元提供者。 若是 64 位元 (x64) 伺服器，必須安裝 64 位元提供者。  
   
- [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 一定是在 32 位元處理程序，不管架構為何。 在 64 位元機器上執行 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 時，如果要安裝資料提供者，您應該注意下列事項：  
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 一律以 32 位元處理序執行，不管架構為何。 在 64 位元機器上執行 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 時，如果要安裝資料提供者，您應該注意下列事項：  
   
 -   針對支援並行安裝 32 位元和 64 位元提供者的提供者，您必須同時安裝兩個提供者。  
   

@@ -1,5 +1,5 @@
 ---
-title: 中繼資料採礦教學課程 (Analysis Services-資料採礦) |Microsoft 文件
+title: 中繼資料採礦教學課程 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
 caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 545c219623331ef167731c3142f36642e530307a
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2286ab1890865e651f8166ebd4cc8f0dd42274f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301298"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>中繼資料採礦教學課程 (Analysis Services - 資料採礦)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供一個整合式的環境來建立及使用資料採礦模型。 您可以輕易地繫結資料來源、以相同資料建立及測試多個模型，以及部署模型以供預測分析。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供一個整合式的環境來建立和使用資料採礦模型。 您可以輕易地繫結資料來源、以相同資料建立及測試多個模型，以及部署模型以供預測分析。  
   
  在基本資料採礦教學課程中，您學會了如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 建立資料採礦方案，並且建立了三個模型來支援目標郵寄行銷資料，以供分析客戶購買行為與目標潛在購買者。  
   
@@ -37,13 +37,13 @@ ms.locfileid: "36312296"
 ## <a name="lesson-scenarios"></a>課程狀況  
  當您成功完成目標郵寄行銷資料後，接著要運用您的資料採礦知識，開發數種新模型以便用於商務計畫。 這些包括下列工作：  
   
--   **預測：** 您將建立*時間序列*模型，可用來預測全世界不同區域中的產品銷售狀況。 您將開發個別的模型，針對每個區域，並了解如何使用*交叉預測*。  
+-   **預測-** 會建立*時間序列*模型，可用來預測全世界不同區域中的產品銷售狀況。 您會開發個別的模型，每個區域，並了解如何使用*交叉預測*。  
   
--   **購物籃分析：** 您將建立*關聯模型*，用來分析客戶造訪時所購買的產品群組[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]電子商務網站。 您可以根據這個購物籃模型向客戶提供產品建議。  
+-   **購物籃分析：** 會建立*關聯模型*，用來分析客戶造訪時所購買的產品群組[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]電子商務網站。 您可以根據這個購物籃模型向客戶提供產品建議。  
   
--   **時序分析：** 您建置*時序群集模型*，用來分析客戶購買產品的順序。 您可以根據這個模型，計畫網站設計變更或規劃新產品內容。  
+-   **時序分析：** 建置*時序群集模型*，用來分析客戶購買產品的順序。 您可以根據這個模型，計畫網站設計變更或規劃新產品供應項目。  
   
--   **因素分析：** 您使用*類神經網路*模型來瀏覽服務品質不佳中撥接中心資料的可能原因。 根據來自初步模型的深入資訊，您將建立*羅吉斯迴歸模型*來預測改善客戶體驗的策略。  
+-   **因素分析：** 您使用*類神經網路*模型探索客服中心資料中的不佳的服務品質的可能原因。 根據來自初步模型的深入解析，您會建立*羅吉斯迴歸模型*來預測改善客戶體驗的策略。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
  這個教學課程告訴您如何建立和使用各種類型的資料採礦演算法。 這個教學課程分成下列課程：  
@@ -59,7 +59,7 @@ ms.locfileid: "36312296"
  [第 3 課： 建立購物籃狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  在這個課程中，您將加入新的資料來源檢視，並學習如何使用巢狀資料表與索引鍵。 根據這項資料，您將建立購物籃狀況中所能使用的採礦模型。 此外，您還將探索 [!INCLUDE[msCoName](../includes/msconame-md.md)] 關聯分析演算法建立的採礦模型。  
   
- [第 4 課： 建立時序群集狀況&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
+ [第 4 課： 建立時序群集案例&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  在這個課程中，您將建立時序群集狀況中所能使用的採礦模型。 另外，您也將學習如何探索 [!INCLUDE[msCoName](../includes/msconame-md.md)] 時序群集演算法所建立的採礦模型。  
   
  [第 5 課： 建立類神經網路和羅吉斯迴歸模型&#40;中繼資料採礦教學課程&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  

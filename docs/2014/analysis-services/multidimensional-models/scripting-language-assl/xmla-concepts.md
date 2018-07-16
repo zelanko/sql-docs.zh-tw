@@ -1,5 +1,5 @@
 ---
-title: XMLA 概念 |Microsoft 文件
+title: XMLA 概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XMLA, concepts
 ms.assetid: 816183a7-d2f7-4e14-8e5b-2a4c1798fbc1
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0669a5ae645d015c0d79e802cc138af368ec472d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e381b0c3880dfd07ff10740ec1fffeeb295629a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293508"
 ---
 # <a name="xmla-concepts"></a>XMLA 概念
   XML for Analysis (XMLA) 開放標準支援對位於全球資訊網上的資料來源進行資料存取。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 依據 XMLA 1.1 規格實作 XMLA。  
   
  XML for Analysis (XMLA) 是以簡易物件存取通訊協定 (SOAP) 為基礎的 XML 通訊協定，它是特別針對位在網路上的任何標準多維度資料來源進行通用資料存取而設計。 XMLA 也不需要部署用戶端元件以公開元件物件模型 (COM) 或[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 介面。 XMLA 是針對網際網路最佳化，因為在這種環境下，往返伺服器的作業會耗用大量的時間和資源，而且資料來源的可設定狀態連接可能會限制伺服器上的使用者連接。  
   
- XMLA 是原生通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，用於用戶端應用程式的執行個體之間的所有互動[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 完全支援 XML for Analysis 1.1，而且也提供延伸模組以支援中繼資料管理、工作階段管理以及鎖定功能。 分析管理物件 (AMO) 與 ADOMD.NET 在與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體通訊時，會使用 XMLA 通訊協定。  
+ XMLA 是原生通訊協定[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]使用的用戶端應用程式和執行個體之間的所有互動， [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 完全支援 XML for Analysis 1.1，而且也提供延伸模組以支援中繼資料管理、工作階段管理以及鎖定功能。 分析管理物件 (AMO) 與 ADOMD.NET 在與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體通訊時，會使用 XMLA 通訊協定。  
   
 ## <a name="handling-xmla-communications"></a>處理 XMLA 通訊  
  XMLA 開放標準描述兩種普遍可存取的方法：`Discover` 與 `Execute`。 這些方法使用 XML 支援的鬆散偶合的用戶端與伺服器架構，以處理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體的傳入和傳出資訊。  

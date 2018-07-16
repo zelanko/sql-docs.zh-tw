@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.testcdrule.f1
 - sql12.dqs.dm.cdrules.f1
@@ -16,13 +16,13 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 07c6f1a6d6f202805f5d2b830e45e8638c5a3a80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 198f3c46c97039fb788cb924a5980f0b6cd75145
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137162"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295438"
 ---
 # <a name="create-a-cross-domain-rule"></a>建立跨定義域規則
   本主題描述如何在 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 中的知識庫內建立複合定義域的跨定義域規則。 跨定義域規則會在複合定義域所包含的單一定義域中測試值之間的關聯性。 跨定義域規則必須在複合定義域中成立，才能讓定義域值被視為正確且符合商務需求。 跨定義域規則是用來驗證、更正並標準化定義域值。  
@@ -31,7 +31,7 @@ ms.locfileid: "36137162"
   
  具有最終條件的跨定義域規則會將規則邏輯套用至條件中值的同義字，以及值本身。 If 和 Then 子句的最終條件包括 [值等於]、[值不等於]、[值在] 或 [值不在]。 例如，假設您擁有複合定義域的下列跨定義域規則：「對於 ‘City’ 而言，如果值等於 ‘Los Angeles’，則對於 ‘State’ 而言，值等於 ‘CA’」。 如果 ‘Los Angeles’ 和 ‘LA’ 是同義字，此規則會針對 ‘Los Angeles CA’ 和 ‘LA CA’ 傳回正確，而針對 ‘Los Angeles WA’ 和 ‘LA WA’ 傳回錯誤。  
   
- 除了只讓您知道跨定義域規則是否有效之外，跨定義域規則中的最終 *Then* 子句 **[值等於]** 也會在資料清理活動期間更正資料。 如需詳細資訊，請參閱[使用最終跨定義域規則的資料更正](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection)中[清理複合定義域中的資料](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)。  
+ 除了只讓您知道跨定義域規則是否有效之外，跨定義域規則中的最終 *Then* 子句 **[值等於]** 也會在資料清理活動期間更正資料。 如需詳細資訊，請參閱 <<c0> [ 使用最終跨定義域規則的資料更正](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md#CDCorrection)中[清理複合定義域中的資料](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)。  
   
  跨定義域規則會在只影響單一定義域的所有簡單規則之後納入考量。 只有當某個值通過單一定義域規則 (如果存在的話) 時，才會套用跨定義域規則。 您必須先定義所有要執行規則的複合定義域和單一定義域，然後才能執行規則。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36137162"
   
     6.  測試完成之後，請在 **[測試複合定義域規則]** 對話方塊中按一下 **[關閉]** 。  
   
-2.  當您完成跨定義域規則時，按一下 **完成**中所述，完成定義域管理活動，[結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)。  
+2.  當您完成跨定義域規則時，按一下**完成**中所述，完成定義域管理活動中，[結束定義域管理活動](../../2014/data-quality-services/end-the-domain-management-activity.md)。  
   
 ##  <a name="FollowUp"></a> 後續操作：建立跨定義域規則之後  
  在建立跨定義域規則之後，您可以針對定義域執行其他定義域管理工作、執行知識探索來將知識加入至定義域，或者將比對原則加入至定義域。 如需詳細資訊，請參閱[執行知識探索](../../2014/data-quality-services/perform-knowledge-discovery.md)、[管理定義域](../../2014/data-quality-services/managing-a-domain.md)或[建立比對原則](../../2014/data-quality-services/create-a-matching-policy.md)。  

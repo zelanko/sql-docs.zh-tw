@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.registerserver.general.sqlce.f1
 - sql12.swb.registerserver.general.sqlserver.f1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], creating new registered servers
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 28039cf3d87fb25895044defc039c9a3f3d46ffb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: ba895e7c6bd490278147fb6656b8c5856c02f57c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033151"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299568"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>建立新的已註冊伺服器 (SQL Server Management Studio)
   本主題描述如何藉由在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中於 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]的「已註冊的伺服器」元件中註冊伺服器，來儲存您經常存取之伺服器的連接資訊。 您可以在連接之前或在連接時從 [物件總管] 註冊伺服器。 有一個特定的功能表選項，可用來註冊本機電腦上的伺服器執行個體。  

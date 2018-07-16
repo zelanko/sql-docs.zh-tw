@@ -1,5 +1,5 @@
 ---
-title: 指派讀取器和寫入器角色給封裝 |Microsoft 文件
+title: 指派讀取器和寫入器角色給封裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1c9c96ca-81cb-48e2-a71b-0657439a4c51
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1cd3e3be25b000b5d2348dacee760ed88c613351
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ae3eb5ce2114c339b83fccaea0b24815ed23c5e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036167"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283844"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>指派讀取器和寫入器角色給封裝
   您可將讀取器和寫入器角色指派給每個封裝。  

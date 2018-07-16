@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c9b1b8f1-b117-4e87-9704-2170f62c5c8b
 caps.latest.revision: 8
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 925eec025bb2943845748acd30e8f24693245ae2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c0f82e3bb4185a29a8a40247da8ef7533b3d281c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135239"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224098"
 ---
 # <a name="convert-urns-to-sql-server-provider-paths"></a>將 URN 轉換成 SQL Server 提供者路徑
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型 (SMO) 會針對它的物件建立統一資源名稱 (URN)。 每個 URN 可以唯一識別 SMO 物件，而且可以使用轉換成 SQL Server PowerShell 提供者路徑`Convert-UrnToPath`cmdlet。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理物件模型 (SMO) 會針對它的物件建立統一資源名稱 (URN)。 每個 URN 可唯一識別 SMO 物件，而且可以使用轉換成 SQL Server PowerShell 提供者路徑`Convert-UrnToPath`cmdlet。  
   
 ## <a name="converting-urns-to-paths"></a>將 URN 轉換成路徑  
  每一個 URN 都有與物件之路徑相同的資訊，但是格式會不同。 例如，以下為資料表的路徑：  

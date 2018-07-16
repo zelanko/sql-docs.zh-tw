@@ -1,5 +1,5 @@
 ---
-title: 多維度模型中的維度 |Microsoft 文件
+title: 多維度模型中的維度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - OLAP [Analysis Services], dimensions
 - dimensions [Analysis Services], about dimensions
 - OLAP objects [Analysis Services], dimensions
 ms.assetid: 2b62b05c-00fd-4e60-b77f-f707ba83a19b
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8f048b8c4a531ce32714a7bda328a60102e0ef2f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 41e833e61095082e16511daae92eaed8e950ba73
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303058"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>多維度模型中的維度
   資料庫維度是相關物件的集合 (稱為屬性)，可用來提供與一或多個 Cube 中的事實資料有關的資訊。 例如，產品維度中的典型屬性可能是產品名稱、產品類別目錄、產品線、產品尺寸和產品價格； 這些物件會繫結到資料來源檢視中一或多個資料表內的一或多個資料行， 依預設，這些屬性可以顯示為屬性階層，而且可用來了解 Cube 中的事實資料。 屬性可以組成使用者自訂階層，在使用者瀏覽 Cube 中的資料時，提供導覽路徑來協助使用者。  
@@ -39,7 +39,7 @@ ms.locfileid: "36036678"
  建立 Cube 時，也可以將資料庫中的任何現有維度加入新的 Cube 中。 這些維度可能是先前已經為其他 Cube 定義的維度，或已由維度精靈定義的維度。 定義資料庫維度之後，您可以在維度設計師中修改並設定資料庫維度。 您也可以在 Cube 設計師中自訂有限範圍的 Cube 維度。  
   
 > [!NOTE]  
->  此外，您也可以透過使用 XMLA 或分析管理物件 (AMO)，以程式設計方式設計並設定維度、屬性和階層。 如需詳細資訊，請參閱[Analysis Services 指令碼語言&#40;ASSL&#41;參考](../scripting/analysis-services-scripting-language-assl-for-xmla.md)和[使用分析管理物件開發&#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md)。  
+>  此外，您也可以透過使用 XMLA 或分析管理物件 (AMO)，以程式設計方式設計並設定維度、屬性和階層。 如需詳細資訊，請參閱 < [Analysis Services Scripting Language &#40;ASSL&#41;參考](../scripting/analysis-services-scripting-language-assl-for-xmla.md)並[使用分析管理物件開發&#40;AMO&#41;](analysis-management-objects/developing-with-analysis-management-objects-amo.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  下表描述此章節的主題。  

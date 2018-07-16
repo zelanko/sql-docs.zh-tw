@@ -1,5 +1,5 @@
 ---
-title: 預測查詢產生器 （資料採礦） |Microsoft 文件
+title: 預測查詢產生器 （資料採礦） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 12900d49-db88-48bb-a5f4-0a9a172bc126
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 65f236bb738117de9775b6a1e6100433c71f81d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d1cb14a2ff16c4af5326bca111b07640604284a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147043"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293548"
 ---
 # <a name="prediction-query-builder-data-mining"></a>預測查詢產生器 (資料採礦)
   使用 **[採礦模型預測]** 檢視，即可根據採礦結構包含的採礦模型建立預測。  

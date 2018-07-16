@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'Progress Report: Online Index Operation event class [SQL Server]'
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 caps.latest.revision: 23
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 447358a672abb724ad4c120cdebbad633d07a747
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: e4851bee4101ebeea3ea6b225ecb7bafede33dd5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035927"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37248628"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>進度報表：線上索引作業事件類別
   Progress Report: Online Index Operation 事件類別指出在執行建立程序時，線上索引建立作業的進度。  

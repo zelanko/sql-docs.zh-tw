@@ -1,5 +1,5 @@
 ---
-title: ServerName 屬性 （SqlServerAlias 類別） |Microsoft 文件
+title: ServerName 屬性 （SqlServerAlias 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - ServerName property
 ms.assetid: 58c82b19-b548-42fa-9c5a-059b606da097
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 317035d73eae387b9de06324415b795693527489
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0e483fceeae8e659d8f9f5ad1080f49b27554130
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188135"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>ServerName 屬性 (SqlServerAlias 類別)
   取得執行個體名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]伺服器連接別名所指定。  
@@ -43,7 +43,7 @@ object
   
 ## <a name="parts"></a>組件  
  *object*  
- A [SqlServerAlias 類別](sqlserveralias-class.md)物件，代表[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]別名。  
+ A [SqlServerAlias 類別](sqlserveralias-class.md)物件，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]別名。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  
  指定由伺服器連接別名所參考之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱的字串值。  

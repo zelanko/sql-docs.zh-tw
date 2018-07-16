@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1dcd7e2af58e789a3e99d4e3fb16e3010d838982
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5cdb0804e91e74486facbbc7d7b77885d87d6bc1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135244"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250818"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client 首頁畫面
   使用這個畫面以存取 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 三大工作群組的使用者介面：知識庫管理、資料品質專案，以及系統管理。  

@@ -1,5 +1,5 @@
 ---
-title: CustomRollup 元素 (XMLA) |Microsoft 文件
+title: CustomRollup 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CustomRollup element
 ms.assetid: b266ac8b-1ae7-461c-9127-3c5642f829f5
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 715aca3e7bb35eb082a9e6fecc286aaf30ff3b71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a5da3f49101d900088e11cbb954aa65dbbf16620
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145015"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261104"
 ---
 # <a name="customrollup-element-xmla"></a>CustomRollup 元素 (XMLA)
-  包含父代所代表之屬性成員的自訂積存公式[屬性](attribute-element-xmla.md)項目。  
+  包含父元素所代表之屬性成員的自訂積存公式[屬性](attribute-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36145015"
 ## <a name="remarks"></a>備註  
  `CustomRollup` 元素包含多維度運算式 (MDX) 運算式，可定義 `Attribute` 父元素所定義之屬性成員的積存行為。  
   
- 如需有關 MDX 運算式的詳細資訊，請參閱[運算式&#40;MDX&#41;](/sql/mdx/expressions-mdx)。  
+ 如需有關 MDX 運算式的詳細資訊，請參閱 <<c0> [ 運算式&#40;MDX&#41;](/sql/mdx/expressions-mdx)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [插入項目&#40;XMLA&#41;](../xml-elements-commands/insert-element-xmla.md)   

@@ -1,5 +1,5 @@
 ---
-title: Storage 元素 (XMLA) |Microsoft 文件
+title: Storage 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Storage element
 ms.assetid: c3590af8-a24b-4fd3-b846-17edbd399b6d
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 8bccf119846d699d653a480f6479412b46dcc4f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 65a301134d245cc419c762a139e81b05010dbdcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195968"
 ---
 # <a name="storage-element-xmla"></a>Storage 元素 (XMLA)
-  指定以位元組為單位，所使用的存放裝置的最大數量[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)命令來設計彙總。  
+  以位元組為單位，使用指定的儲存體數量上限[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)命令來設計彙總。  
   
 ## <a name="syntax"></a>語法  
   

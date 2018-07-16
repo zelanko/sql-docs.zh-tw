@@ -1,5 +1,5 @@
 ---
-title: 雜湊索引 |Microsoft 文件
+title: 雜湊索引 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
 caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3da74688d6a2f65b191788ab9ecd2394bcca8597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037303"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295228"
 ---
 # <a name="hash-indexes"></a>雜湊索引
   索引做為記憶體最佳化資料表的進入點。 讀取資料表的資料列需要索引，以找出記憶體中的資料。  
@@ -38,7 +38,7 @@ ms.locfileid: "36037303"
   
 -   平衡雜湊函數，表示索引鍵值在雜湊值區上的分配通常會遵循波氏分配。  
   
-     波氏分配不是平均分配。 索引鍵值不會平均分佈在雜湊值區中。 例如，波氏分佈的*n*相異索引鍵*n*雜湊值區會導致大約三分之一的空白貯體、 三分之一的貯體包含一個索引鍵和其他第三個包含兩個索引鍵。 少數貯體會包含兩個以上的索引鍵。  
+     波氏分配不是平均分配。 索引鍵值不會平均分佈在雜湊值區中。 例如，波氏分佈*n*相異索引鍵*n*雜湊貯體中大約三分之一空貯體、 三分之一的貯體包含一個索引鍵和其他第三個結果包含兩個索引鍵。 少數貯體會包含兩個以上的索引鍵。  
   
  如果兩個索引鍵對應到相同雜湊值區，就會發生雜湊衝突。 大量的雜湊衝突可能會對讀取作業產生效能影響。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36037303"
   
  此圖中有三個貯體包含資料列。 最上方第二個貯體包含三個紅色資料列。 第四個貯體包含單一藍色資料列。 最下方的貯體包含兩個綠色資料列。 這些可能是相同資料列的不同版本。  
   
- 如需記憶體最佳化資料表的索引的詳細資訊，請參閱[使用記憶體最佳化資料表的索引指導方針](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如需有關記憶體最佳化資料表的索引的詳細資訊，請參閱[Guidelines for Using 的 Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體最佳化資料表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

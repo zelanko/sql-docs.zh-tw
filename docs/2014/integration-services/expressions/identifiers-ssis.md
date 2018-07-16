@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
 - variables [Integration Services], expressions
@@ -23,13 +23,13 @@ ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17236ca6698b1daf947d4364b38eb3ef0e9a60b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 84a20b15390463d19577ab6ae800bcb7f0579bb8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295048"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  
@@ -116,9 +116,9 @@ ms.locfileid: "36133304"
 > [!IMPORTANT]  
 >  您必須將命名空間和限定變數名稱的組合加上方括號，運算式評估工具才能辨認該變數。  
   
- 如果值**計數**中**使用者**命名空間為 10，而值**計數**中**MyNamespace**為 2，則運算式評估為`true`因為運算式評估工具可以辨認這兩個不同的變數。  
+ 如果值**計數**中**使用者**命名空間為 10，而值**計數**中**MyNamespace**為 2，運算式評估為`true`因為運算式評估工具可以辨認這兩個不同的變數。  
   
- 即使變數名稱不是唯一的，也不會發生錯誤。 但運算式評估工具只會使用一個變數執行個體評估運算式，並傳回不正確的結果。 例如，下列運算式要用來比較兩個不同的值 （10 和 2）**計數**變數，但運算式評估為`false`因為運算式評估工具會使用相同的執行個體的**計數**變數兩次。  
+ 即使變數名稱不是唯一的，也不會發生錯誤。 但運算式評估工具只會使用一個變數執行個體評估運算式，並傳回不正確的結果。 例如，下列運算式要用來比較兩個不同的值 （10 和 2）**計數**變數，但運算式會評估為`false`因為運算式評估工具會使用相同的執行個體的**計數**變數兩次。  
   
 ```  
 @Count > @Count  

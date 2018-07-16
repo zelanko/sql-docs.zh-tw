@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 81bfb6671a5c504505de34d368c972de98e21b8a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 4f71b4d7955c874fcff2efdd69ed14c12745dea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035919"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300408"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
   在多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體之間，使用不包含任何擴充/雙位元組字集 (DBCS) 字元的資料檔傳送大量資料時，建議使用原生格式。  
@@ -61,16 +60,16 @@ ms.locfileid: "36035919"
   
 -   `char` 或 `varchar` 資料  
   
-     在每個起始`char`或`varchar` 欄位中， **bcp**加入前置長度。  
+     每個開頭`char`或是`varchar`欄位中， **bcp**加入前置長度。  
   
     > [!IMPORTANT]  
     >  使用原生模式時，依預設，**bcp** 公用程式會將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的字元轉換為 OEM 字元，然後再將它們複製到資料檔。 **bcp** 公用程式會將資料檔中的字元轉換為 ANSI 字元，然後再將它們大量匯入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表。 在進行這些轉換期間，可能會遺失擴充字元。 如有擴充字元，請使用 Unicode 原生格式或指定字碼頁。  
   
 -   `sql_variant` 資料  
   
-     如果`sql_variant`資料會儲存為 SQLVARIANT 原生格式資料檔中，資料會維持它所有的特性。 用來記錄每一個資料值的資料類型的中繼資料，會與資料值一起儲存。 此中繼資料用來重新建立相同的資料類型，在目的地中的資料值`sql_variant`資料行。  
+     如果`sql_variant`資料儲存為 SQLVARIANT 原生格式資料檔中，則資料會維持它所有的特性。 用來記錄每一個資料值的資料類型的中繼資料，會與資料值一起儲存。 此中繼資料用來重新建立相同的資料類型，在目的地中的資料值`sql_variant`資料行。  
   
-     如果目的地資料行的資料類型不是`sql_variant`，每個資料值會轉換成資料類型的目的地資料行，依照隱含資料轉換的一般規則。 如果資料轉換期間發生錯誤，將會回復目前批次。 任何在 `char` 資料行之間傳送的 `varchar` 及 `sql_variant` 值，都可能有字碼頁轉換問題。  
+     如果目的地資料行的資料型別不`sql_variant`，每個資料值會轉換成資料類型的目的地資料行，依照隱含資料轉換的一般規則。 如果資料轉換期間發生錯誤，將會回復目前批次。 任何在 `char` 資料行之間傳送的 `varchar` 及 `sql_variant` 值，都可能有字碼頁轉換問題。  
   
      如需資料轉換的詳細資訊，請參閱[資料類型轉換 &#40;Database Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)。  
   

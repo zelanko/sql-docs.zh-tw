@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Plan Guide Unsuccessful event class
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 92a9dc479d3125ef6be5a5232aa231cab2a98dfd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 197379f910efef984a16cccb9ddebe3dfe3a8786
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133756"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246838"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful 事件類別
   Plan Guide Unsuccessful 事件類別會指出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法針對包含計畫指南的查詢或批次產生執行計畫。 而且，系統將不會使用此計畫指南來編譯計畫。 當下列條件成立時，就會引發此事件：  
@@ -60,7 +60,7 @@ ms.locfileid: "36133756"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|計畫指南的名稱。|@shouldalert|是|  
+|TextData|`ntext`|計畫指南的名稱。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

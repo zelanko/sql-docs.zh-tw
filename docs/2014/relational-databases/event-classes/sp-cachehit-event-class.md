@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheHit event class
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 caps.latest.revision: 41
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 34a0a8beba7b9d8f0ac667777ce0d7c0b8587294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 466caff52f0b715cc5a0d9ee491abc1ae095f9d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37162799"
 ---
 # <a name="spcachehit-event-class"></a>SP:CacheHit 事件類別
   SP:CacheHit 事件類別指出預存程序在計畫快取中。  
@@ -54,7 +54,7 @@ ms.locfileid: "36144729"
 |SessionLoginName|`nvarchar`|引發工作階段之使用者的登入名稱。 例如，如果您使用 Login1 連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，並以 Login2 身分執行陳述式，則 SessionLoginName 將顯示 Login1 而 LoginName 則顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
 |SPID|`int`|事件發生所在之工作階段的識別碼。|12|是|  
 |StartTime|`datetime`|事件啟動的時間 (如果有的話)。|14|是|  
-|TextData|`ntext`|在快取中找到之 SQL 程式碼的內文。 如果 TextData 已填入，ObjectName 就不會填入。|@shouldalert|是|  
+|TextData|`ntext`|在快取中找到之 SQL 程式碼的內文。 如果 TextData 已填入，ObjectName 就不會填入。|1|是|  
 |TransactionID|`bigint`|由系統指派給交易的識別碼。|4|是|  
 |XactSequence|`bigint`|描述目前交易的 Token。|50|是|  
   

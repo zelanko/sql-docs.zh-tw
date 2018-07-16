@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f46357975476ac301c28f639a3508edc992e5e5b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a3eb895440cc6680acd719b47a88200d6c92eff4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289054"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>使用格式檔案大量匯入資料 (SQL Server)
   此主題說明格式檔案在大量匯入作業中的用法。 格式檔案會將資料檔案的欄位對應到資料表的資料行。  您可以使用非 XML 或 XML 格式檔案來大量匯入資料，當您使用 **bcp** 命令或 BULK INSERT 或 INSERT ......SELECT * FROM OPENROWSET(BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令時，可以使用非 XML 或 XML 格式的檔案來大量匯入資料。  
@@ -31,7 +30,7 @@ ms.locfileid: "36036117"
 >  如果格式檔案要與 Unicode 字元資料檔案搭配使用，則所有的輸入欄位都必須是 Unicode 文字字串 (也就是固定大小或以字元結束的 Unicode 字串)。  
   
 > [!NOTE]  
->  如果您不熟悉格式檔案，請參閱[非 XML 格式檔案&#40;SQL Server&#41; ](xml-format-files-sql-server.md)和[XML 格式檔案&#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
+>  如果您不熟悉格式檔案，請參閱[非 XML 格式檔案&#40;SQL Server&#41; ](xml-format-files-sql-server.md)並[XML 格式檔案&#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ## <a name="format-file-options-for-bulk-import-commands"></a>大量匯入命令的格式檔案選項  
  下表摘述每個大量匯入命令的格式檔案選項。  

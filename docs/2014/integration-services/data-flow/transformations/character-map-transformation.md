@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.charactertrans.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: aa6046957dc424eefada194dae1ec18a29a7608b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7b56b24150f5c1deb5897a1d64a6a7aae0a7d862
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306028"
 ---
 # <a name="character-map-transformation"></a>字元對應轉換
   「字元對應」轉換會套用字串函數，例如從小寫轉換成大寫、字元資料。 此轉換只能在字串資料類型的資料行資料上操作。  

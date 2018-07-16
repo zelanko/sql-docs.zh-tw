@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 011da620d6daed5af1d7fad3ad4f3746d768b892
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: d9eda1bdc422b4768c7031e48b46f13868e463e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131713"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305588"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>建立記憶體最佳化資料表和原生編譯的預存程序
   本主題包含介紹記憶體中 OLTP 語法的範例。  
@@ -237,7 +237,7 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [記憶體中 OLTP 程式碼範例](in-memory-oltp-code-samples.md)   
+ [記憶體內部 OLTP 程式碼範例](in-memory-oltp-code-samples.md)   
  [移轉計算資料行](migrating-computed-columns.md)   
  [在記憶體最佳化資料表中實作 IDENTITY](implementing-identity-in-a-memory-optimized-table.md)  
   

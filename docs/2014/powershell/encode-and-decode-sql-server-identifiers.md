@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 caps.latest.revision: 7
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: f7651c43569003862f41a62f5e2a9917f3d534a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 0c2a997ec2df79b600b73be0bd5a33f7144fe119
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137312"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37195358"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>編碼及解碼 SQL Server 識別碼
   SQL Server 分隔識別碼有時會包含 Windows PowerShell 路徑中不支援的字元。 編碼這些字元的十六進位值，就可以指定這些字元。  
@@ -34,7 +34,7 @@ ms.locfileid: "36137312"
  **Encode-SqlName** Cmdlet 會將 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼作為輸入。 它會輸出一個字串，其中包含編碼為 "%xx" 之 Windows PowerShell 語言不支援的所有字元。 **Decode-SqlName** Cmdlet 會將編碼的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 識別碼作為輸入，並傳回原始識別碼。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
- `Encode-Sqlname`和`Decode-Sqlname`cmdlet 只能編碼或解碼 SQL Server 分隔識別碼中允許但不是支援 PowerShell 路徑中的字元。 下列為 **Encode-SqlName** 所編碼和 **Decode-SqlName**所解碼的字元：  
+ `Encode-Sqlname`和`Decode-Sqlname`cmdlet 只能編碼或解碼 SQL Server 分隔識別碼中允許，但是 PowerShell 路徑中不支援的字元。 下列為 **Encode-SqlName** 所編碼和 **Decode-SqlName**所解碼的字元：  
   
 |||||||||||||  
 |-|-|-|-|-|-|-|-|-|-|-|-|  

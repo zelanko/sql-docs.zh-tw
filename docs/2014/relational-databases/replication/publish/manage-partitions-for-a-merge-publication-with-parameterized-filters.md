@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitions [SQL Server replication]
 - merge replication partitions [SQL Server replication], SQL Server Management Studio
 - parameterized filters [SQL Server replication], partition management
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: b8b9cc6b2328e24758404cae5a88f21656fb7631
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 805bbfaf66f2f24aac284b94952cd6d881d7c832
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132160"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37191708"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>使用參數化篩選管理合併式發行集的資料分割
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中使用參數化篩選管理合併式發行集的資料分割。 參數化資料列篩選器可用來產生非重疊的資料分割。 這些資料分割可以限制為只有一個訂閱能收到給定資料分割。 在這種狀況中，大量的訂閱者會導致大量的資料分割，而這種情況則需要同等數量的資料分割快照集。 如需詳細資訊，請參閱 [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)。  
@@ -141,7 +141,7 @@ ms.locfileid: "36132160"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，是在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> 方法，並將結果傳遞到 <xref:Microsoft.SqlServer.Replication.MergePartition> 物件的陣列。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "36132160"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體。 設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，是在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergePublication.EnumMergePartitions%2A> 方法，並將結果傳遞到 <xref:Microsoft.SqlServer.Replication.MergePartition> 物件的陣列。  
   

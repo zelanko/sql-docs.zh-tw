@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG014162 error
 ms.assetid: a15eef3f-219f-45d3-8286-6a864c85a723
 caps.latest.revision: 11
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 03dc74af5c7403d6259ad5f8ce00eb33dac7c668
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a24378455e4be14daea6d4f6ec7168ca247b1f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137263"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276534"
 ---
 # <a name="mssqleng014162"></a>MSSQL_ENG014162
     

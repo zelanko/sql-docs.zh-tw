@@ -1,5 +1,5 @@
 ---
-title: 資料採礦服務與資料來源 |Microsoft 文件
+title: 資料採礦服務與資料來源 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d6ff58773c90a1fa5f70e638666ac92c3a2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133824"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297468"
 ---
 # <a name="data-mining-services-and-data-sources"></a>資料採礦服務與資料來源
   資料採礦會要求建立與 SQL Server Analysis Services 執行個體的連接。 資料採礦不需要 Cube 中的資料，而且建議您使用關聯式來源；但是資料採礦會使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 引擎所提供的元件。  
@@ -27,7 +27,7 @@ ms.locfileid: "36133824"
  此主題將提供一些在您連接至 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體來建立、處理、部署或查詢資料採礦模型時所需要了解的資訊。  
   
 ## <a name="data-mining-services"></a>資料採礦服務  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的伺服器元件是 msmdsrv.exe 應用程式，這個應用程式通常是當做 Windows 服務來執行。 這個應用程式是由安全性元件、XML for Analysis (XMLA) 接聽程式元件、查詢處理器元件及執行下列功能的許多其他內部元件所組成：  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的伺服器元件是 msmdsrv.exe 應用程式，這個應用程式通常是當做 Windows 服務來執行。 這個應用程式是由安全性元件、XML for Analysis (XMLA) 接聽程式元件、查詢處理器元件及執行下列功能的許多其他內部元件所組成：  
   
 -   剖析從用戶端收到的陳述式  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36133824"
 -   管理伺服器資源  
   
 ### <a name="xmla-listener"></a>XMLA 接聽程式  
- XMLA 接聽程式元件會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及其用戶端之間的所有 XMLA 通訊。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 檔案中的組態設定可以用來指定連接埠上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體所接聽。 這個檔案中 0 的值表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會接聽預設通訊埠。 除非另有指定，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用下列預設 TCP 通訊埠：  
+ XMLA 接聽程式元件會處理 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 及其用戶端之間的所有 XMLA 通訊。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Msmdsrv.ini 檔案中的組態設定可用來指定連接埠上[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體所接聽。 這個檔案中 0 的值表示 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會接聽預設通訊埠。 除非另有指定，否則 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用下列預設 TCP 通訊埠：  
   
 |通訊埠|描述|  
 |----------|-----------------|  
@@ -78,10 +78,10 @@ ms.locfileid: "36133824"
   
  下列伺服器屬性與資料採礦特別相關：  
   
--   `AllowAdHocOpenRowsetQueries` 控制項的特定存取至 OLE DB 提供者，它們直接載入伺服器記憶體空間。  
+-   `AllowAdHocOpenRowsetQueries` 控制項的特定存取至 OLE DB 提供者，它們會直接載入伺服器記憶體空間。  
   
     > [!IMPORTANT]  
-    >  若要改善安全性，我們建議您將這個屬性設定為 `false`。 預設值是 `false`。 不過，即使這個屬性會設定為`false`，使用者可以繼續建立單一查詢，而且可以在允許的資料來源使用 OPENQUERY。  
+    >  若要改善安全性，我們建議您將這個屬性設定為 `false`。 預設值是 `false`。 不過，即使這個屬性設為`false`，使用者仍然可以繼續建立單一查詢，並可以針對允許的資料來源使用 OPENQUERY。  
   
 -   **AllowedProvidersInOpenRowset** ：指定提供者 (如果已啟用特定存取的話)。 您可以透過輸入逗號分隔的 ProgID 清單，指定多個提供者。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36133824"
  您也可以設定屬性，以便微調伺服器以及控制用戶端使用量的安全性。 如需詳細資訊，請參閱 [功能屬性](../server-properties/feature-properties.md)。  
   
 > [!NOTE]  
->  如需支援版本的外掛程式演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
+>  如需支援版本的外掛程式演算法[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2012 的版本功能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)。  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>以程式設計方式存取資料採礦物件  
  您可以使用下列物件模型來建立 Analysis Services 資料庫的連接以及使用資料採礦物件：  

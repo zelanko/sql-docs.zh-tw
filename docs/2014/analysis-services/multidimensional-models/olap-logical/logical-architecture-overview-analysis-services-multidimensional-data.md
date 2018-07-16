@@ -1,5 +1,5 @@
 ---
-title: 邏輯架構概觀 (Analysis Services-多維度資料) |Microsoft 文件
+title: 邏輯架構概觀 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - cubes [Analysis Services], about cubes
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 89260e7ed530216d514e3237ed0ffe11322e17d9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2d249097413675c4284bc8d19038eebbf88f446
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134283"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284114"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>邏輯架構概觀 (Analysis Services - 多維度資料)
   Analysis Services 會以伺服器部署模式運作，該模式可判斷不同類型的 Analysis Services 模型所使用的記憶體架構和執行階段環境。 伺服器模式是在安裝期間決定。 **多維度和資料採礦模式**支援傳統 OLAP 和資料採礦。 **表格式模式**支援表格式模型。 **SharePoint 整合的模式**指的是安裝為 PowerPivot for SharePoint，用於載入和查詢 Excel 或 PowerPivot 活頁簿內的資料模型的 Analysis Services 的執行個體。  
   
- 本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需有關其他模式的詳細資訊，請參閱[表格式模型化&#40;SSAS 表格式&#41;](../../tabular-models/tabular-models-ssas.md)和[比較表格式和多維度解決方案&#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。  
+ 本主題說明 Analysis Services 以多維度和資料採礦模式運作時的基本架構。 如需有關其他模式的詳細資訊，請參閱 <<c0> [ 表格式模型化&#40;SSAS 表格式&#41;](../../tabular-models/tabular-models-ssas.md)並[比較表格式和多維度解決方案&#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)。</c0>  
   
 ## <a name="basic-architecture"></a>基本架構  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 執行個體[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]名為"\<ServerName >\\< InstanceName\>"。 下圖顯示之間所有提及的關聯性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體可包含多個資料庫，而且資料庫可同時有 OLAP 物件和資料採礦物件。 應用程式會連接到指定的 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體和指定的資料庫。 伺服器電腦可主控多個 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體。 執行個體[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]分別名為"\<伺服器名稱 >\\< 執行個體名稱\>"。 下圖顯示之間所有提及的關聯性[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]物件。  
   
  ![執行中 AMO 物件的關聯性](../../../analysis-services/dev-guide/media/amo-runningobjects.gif "執行中 AMO 物件的關聯性")  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36134283"
  Route 維度表示匯入到達目的地的方式。 這個維度的成員包括 ground、nonground、air、sea、road 或 rail。 Source 維度代表製造進口產品的地點，例如 Africa 或 Asia。 Time 維度表示某季或半年度。  
   
 ### <a name="aggregates"></a>彙總  
- 因為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會視需要彙總較高層級的值，所以不論維度內的成員層級如何，Cube 的商務使用者都可決定每個維度之每個成員的任何量值。 比方說，在上圖中的量值可以彙總根據標準日曆階層中使用下列圖表所示，在時間維度中的日曆時間階層。  
+ 因為 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 會視需要彙總較高層級的值，所以不論維度內的成員層級如何，Cube 的商務使用者都可決定每個維度之每個成員的任何量值。 例如，在上圖中的量值可以彙總根據標準日曆階層使用的日曆時間階層，在時間維度，如下圖所示。  
   
  ![沿著時間維度的量值的圖表組織](../../../analysis-services/dev-guide/media/cubeintro2.gif "組織沿著時間維度的量值的圖表")  
   
@@ -87,14 +87,14 @@ ms.locfileid: "36134283"
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
 |All Time|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|  
-||1st half||11173|2977|8196|Jun-28-99|6 月-20-99|Jun-28-99|  
-|||1st quarter|5108|1452|3656|Mar-30-99|Mar-3-19-99|Mar-30-99|  
-|||2nd quarter|6065|1525|4540|Jun-28-99|6 月-20-99|Jun-28-99|  
+||1st half||11173|2977|8196|Jun-28-99|6 月 20 99|Jun-28-99|  
+|||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99 之間|Mar-30-99|  
+|||2nd quarter|6065|1525|4540|Jun-28-99|6 月 20 99|Jun-28-99|  
 ||2nd half||13937|3570|10367|Dec-29-99|Dec-22-99|Dec-29-99|  
-|||3rd quarter|6119|1444|4675|Sep-30-99|9 月-18-99|Sep-30-99|  
+|||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99 之間|Sep-30-99|  
 |||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
- 定義 Cube 之後，您可以建立新的彙總，或變更現有的彙總以設定選項 (例如，在查詢的處理或計算期間，是否要預先計算彙總)。 **相關的主題：**[彙總和彙總設計](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
+ 定義 Cube 之後，您可以建立新的彙總，或變更現有的彙總以設定選項 (例如，在查詢的處理或計算期間，是否要預先計算彙總)。 **相關的主題：**[彙總及彙總設計](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>對應量值、屬性和階層  
  範例 Cube 的量值、屬性和階層都是衍生自 Cube 事實和維度資料表的下列資料行。  
@@ -110,19 +110,19 @@ ms.locfileid: "36134283"
 |Time 維度的 Half 屬性|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Time 維度的 Quarter 屬性|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
- 單一 Cube 資料格的資料通常衍生自事實資料表的多個資料列。 例如，air 成員、 Africa 成員和 1st quarter 成員交集處的 cube 資料格包含一個值，由彙總中的下列資料列**ImportsFactTable**事實資料表。  
+ 單一 Cube 資料格的資料通常衍生自事實資料表的多個資料列。 例如，air 成員、 Africa 成員和 1st quarter 成員交集之 cube 資料格會包含一個值，衍生的彙總中的下列資料列**ImportsFactTable**事實資料表。  
   
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|Packages|最後一個|  
-|3516987|@shouldalert|6|@shouldalert|15|年 1 月-10-99|  
-|3554790|@shouldalert|6|@shouldalert|40|年 1 月 19-99 之間|  
-|3572673|@shouldalert|6|@shouldalert|34|Jan-27-99|  
-|3600974|@shouldalert|6|@shouldalert|45|Feb-02-99|  
-|3645541|@shouldalert|6|@shouldalert|20|Feb-09-99|  
-|3674906|@shouldalert|6|@shouldalert|36|Feb-17-99|  
+|3516987|1|6|1|15|年 1 月-10-99 之間|  
+|3554790|1|6|1|40|年 1 月 19 99|  
+|3572673|1|6|1|34|Jan-27-99|  
+|3600974|1|6|1|45|Feb-02-99|  
+|3645541|1|6|1|20|Feb-09-99|  
+|3674906|1|6|1|36|Feb-17-99|  
   
- 上表中，每個資料列都有相同的值**RouteKey**， **SourceKey**，和**TimeKey**資料行，表示這些資料列，會造成相同的 cube 資料格。  
+ 上表中，每個資料列都有相同的值**RouteKey**， **SourceKey**，並**TimeKey**資料行，表示這些資料列會參與相同的 cube 資料格。  
   
  此處所顯示的範例代表極簡單的 Cube，而在該範例中，Cube 含有單一量值群組，且所有維度資料表都是以星狀結構描述來聯結至事實資料表。 另一個通用結構描述是雪花式結構描述，其中一或多份維度資料表會聯結至另一份維度資料表，而不是直接聯結至事實資料表。 **相關的主題：**[維度&#40;Analysis Services-多維度資料&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
   

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c6df09231069b5c9249880f83266cb14a5d6cf9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 42f2ddfeb6df940b03301a731ac2e868423ba112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298460"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report 事件類別
   **Blocked Process Report** 事件類別指出封鎖工作的時間已超過指定的時間量。 這個事件類別不包含系統工作，或在無法偵測死結的資源上等候的工作。  
@@ -48,7 +48,7 @@ ms.locfileid: "36030533"
 |**Exchange Spill**|**int**|取得鎖定所在之物件的系統指派識別碼，如果可用且適用的話。|22|是|  
 |**ServerName**|**nvarchar**|正在追蹤之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。|26||  
 |**SessionLoginName**|**nvarchar**|最先建立工作階段的使用者的登入名稱。 例如，如果您使用 Login1 連接到 SQL Server，並以 Login2 執行陳述式，則 **SessionLoginName** 會顯示 Login1；而 **LoginName** 會顯示 Login2。 此資料行將同時顯示 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 Windows 登入。|64|是|  
-|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|@shouldalert|是|  
+|**TextData**|**ntext**|與追蹤中所擷取的事件類別有關的文字值。|1|是|  
 |**TransactionID**|**bigint**|由系統指派給交易的識別碼。|4|是|  
   
 ## <a name="see-also"></a>另請參閱  

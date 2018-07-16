@@ -1,5 +1,5 @@
 ---
-title: 連接到伺服器 （連接屬性頁面） Integration Services |Microsoft 文件
+title: 連接到伺服器 （連接屬性頁面） Integration Services |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttodts.connectionproperties.f1
 - sql12.ssiseditserverregistration.connectionproperties.f1
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3ebd26cf1f71b31aaf38f494cda5b64a1c5cf131
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0161171ff488627c5cc70dd81fac9a991f52aebe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297078"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>連接到伺服器 (連接屬性頁面) Integration Services
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssIS](../includes/ssis-md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  

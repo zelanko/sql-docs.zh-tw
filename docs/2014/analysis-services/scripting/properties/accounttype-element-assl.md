@@ -1,5 +1,5 @@
 ---
-title: AccountType 元素 (ASSL) |Microsoft 文件
+title: AccountType 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AccountType element
 ms.assetid: 4fdf17d3-cd84-4bf6-9baf-21e15d4bf71e
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff7203d2882689b21a6ab3171880c26a8d385f7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6b79eec0531cf2ab9451a93df2e5f1bf0eb2adf0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243428"
 ---
 # <a name="accounttype-element-assl"></a>AccountType 元素 (ASSL)
   包含名稱中所定義之帳戶類型的[資料庫](../objects/database-element-assl.md)項目。  
@@ -64,12 +64,12 @@ ms.locfileid: "36134264"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*收入*|此帳戶是收入帳戶。|  
 |*費用*|此帳戶是支出帳戶。|  
-|*資料流程*|此帳戶是現金流量帳戶。|  
-|*平衡*|此帳戶是結餘帳戶。|  
+|*流程*|此帳戶是現金流量帳戶。|  
+|*資產負債*|此帳戶是結餘帳戶。|  
 |*資產*|此帳戶是資產帳戶。|  
 |*責任*|此帳戶是負債帳戶。|  
 |*統計*|此帳戶是統計帳戶。|  

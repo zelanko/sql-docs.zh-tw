@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7d6b0f60-c6ac-4f71-a9d0-fc3c2ffa7e91
 caps.latest.revision: 6
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: c6734bbbb57da12d1d83bbaa3135c0910d35b076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 81446455290deca9a3eebd425a27ac7fbcaaa0a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036974"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296408"
 ---
 # <a name="intellisense-sql-server-management-studio"></a>IntelliSense (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的編輯器支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense 選項，而此選項可減少輸入、提供語法資訊的快速存取，或簡化複雜運算式之分隔符號的檢視。  
@@ -36,7 +36,7 @@ ms.locfileid: "36036974"
 |描述如何使用 [快速諮詢]，取得用來描述識別碼的工具提示 (例如資料表或檢視表名稱)。|[快速諮詢 &#40;IntelliSense&#41;](quick-info-intellisense.md)|  
 |描述如何讓 IntelliSense 在您輸入足夠的名稱之後完成識別碼的其他部分，以取得其名稱開頭為相同字串之物件的簡短清單。|[自動完成文字 &#40;IntelliSense&#41;](complete-word-intellisense.md)|  
 |描述 IntelliSense 如何識別成對分隔符號的兩端，以及如何在該配對的兩端切換。|[語法組的自動比對](automatic-matching-of-syntax-pairs.md)|  
-|描述 IntelliSense 可能無法運作的狀況。|[疑難排解 IntelliSense (SQL Server Management Studio)](troubleshooting-intellisense.md)|  
+|描述 IntelliSense 可能無法運作的狀況。|[針對 IntelliSense (SQL Server Management Studio) 進行疑難排解](troubleshooting-intellisense.md)|  
   
 ## <a name="see-also"></a>另請參閱  
  [查詢與文字編輯器 &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  

@@ -1,5 +1,5 @@
 ---
-title: PartitionID 元素 (ASSL) |Microsoft 文件
+title: PartitionID 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - PartitionID element
 ms.assetid: 95e59c73-5ca4-478e-898d-50ffa4bbe794
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d75bc87e5c6546e57c9cf3e3d67053117edffd0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6acc27bd3d60a5768a331a117e18ebc7cde2abe3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233758"
 ---
 # <a name="partitionid-element-assl"></a>PartitionID 元素 (ASSL)
-  將[分割](../objects/partition-element-assl.md)元素與父元素、 繫結或超出的非正規繫結。  
+  將產生關聯[分割區](../objects/partition-element-assl.md)元素與父元素、 繫結或程式碼外部繫結。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36035964"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需繫結和-單行繫結的詳細資訊，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需有關繫結和程式碼外部繫結的詳細資訊，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性&#40;ASSL&#41;](properties-assl.md)  

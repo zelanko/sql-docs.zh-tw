@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
 - .NET Framework data providers for Reporting Services
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: 17
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: fcfaa1e1459df5bd3a399ce80b29dfd6a721e991
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 94e37e8c947074d23b208ebdfc18f21220c1f0de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036963"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200868"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>註冊標準的 .NET Framework Data Provider (SSRS)
   若要使用協力廠商的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者來擷取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表資料集的資料，您必須在兩個位置部署並註冊 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件：報表撰寫用戶端與報表伺服器。 在報表撰寫用戶端上，您必須註冊資料提供者做為資料來源類型，並將其與查詢設計工具產生關聯。 然後您可以在建立報表資料集時，選取此資料提供者做為資料來源的類型。 相關聯的查詢設計工具便會開啟，協助您建立此資料來源類型的查詢。 在報表伺服器上，您必須註冊資料提供者，做為資料來源類型。 然後您可以處理使用此資料提供者，從資料來源擷取資料的已發行報表。  
@@ -48,7 +48,7 @@ ms.locfileid: "36036963"
   
 1.  在 bin 的 ReportServer 上層目錄中，製作 RSReportServer.config 檔的備份。  
   
-2.  開啟 RSReportServer.config。您可以開啟組態檔與[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或簡單的文字編輯器，例如 [記事本]。  
+2.  開啟 RSReportServer.config。您可以開啟組態檔[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]或簡單的文字編輯器，例如 [記事本]。  
   
 3.  找出`Data`RSReportServer.config 檔案中的項目。 在下列位置應該就會建立一個 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的項目：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36036963"
   
     |attribute|描述|  
     |---------------|-----------------|  
-    |`Name`|為資料提供者提供唯一的名稱，例如， **MyNETDataProvider**。 `Name` 屬性的最大長度為 255 個字元。 名稱必須是唯一的所有項目中`Extension`組態檔元素。 當您建立新的資料來源時，您在此處包含的值會出現在資料來源類型的下拉式清單中。|  
+    |`Name`|為資料提供者提供唯一的名稱，例如， **MyNETDataProvider**。 `Name` 屬性的最大長度為 255 個字元。 名稱必須是唯一的所有項目中`Extension`組態檔的項目。 當您建立新的資料來源時，您在此處包含的值會出現在資料來源類型的下拉式清單中。|  
     |`Type`|輸入一個逗號分隔清單，其中包含實作 <xref:System.Data.IDbConnection> 介面之類別的完整命名空間，後面緊接著 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件的名稱 (不包含 .dll 副檔名)。|  
   
      例如，若是部署至報表伺服器 bin 目錄的 DLL，該項目可能類似如下：  
@@ -87,7 +87,7 @@ ms.locfileid: "36036963"
   
 3.  在 rssrvpolicy.config 檔中，找出 `CodeGroup` 元素。  
   
-4.  加入程式碼群組授與資料提供者組件`FullTrust`權限。 您的程式碼群組可能類似如下：  
+4.  授與的資料提供者組件加入程式碼群組`FullTrust`權限。 您的程式碼群組可能類似如下：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -137,7 +137,7 @@ ms.locfileid: "36036963"
   
     |attribute|描述|  
     |---------------|-----------------|  
-    |`Name`|為資料提供者提供唯一的名稱，例如， **MyNETDataProvider**。 `Name` 屬性的最大長度為 255 個字元。 名稱必須是唯一的所有項目中`Extension`組態檔元素。 當您建立新的資料來源時，您在此處包含的值會出現在資料來源類型的下拉式清單中。|  
+    |`Name`|為資料提供者提供唯一的名稱，例如， **MyNETDataProvider**。 `Name` 屬性的最大長度為 255 個字元。 名稱必須是唯一的所有項目中`Extension`組態檔的項目。 當您建立新的資料來源時，您在此處包含的值會出現在資料來源類型的下拉式清單中。|  
     |`Type`|輸入一個逗號分隔清單，其中包含實作 <xref:System.Data.IDbConnection> 介面之類別的完整命名空間，後面緊接著 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件的名稱 (不包含 .dll 副檔名)。|  
   
      例如，若是部署至 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] PrivateAssemblies 目錄的 DLL，該項目可能類似如下：  
@@ -162,7 +162,7 @@ ms.locfileid: "36036963"
     </Extensions>  
     ```  
   
-6.  將下列項目加入至 RSReportDesigner.config 檔名`Designer`項目。 您需要更換只`Name`具有您在先前的項目中提供的名稱屬性。  
+6.  將下列項目加入至 RSReportDesigner.config 檔名`Designer`項目。 您必須只更換`Name`具有您在先前的項目中提供的名稱屬性。  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="Microsoft.ReportingServices.QueryDesigners.GenericQueryDesigner,Microsoft.ReportingServices.QueryDesigners"/>  
@@ -176,7 +176,7 @@ ms.locfileid: "36036963"
   
 3.  在 RSPreviewPolicy.config 檔中，找出 `CodeGroup` 元素。  
   
-4.  加入程式碼群組[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]授與資料提供者組件`FullTrust`權限。 您的程式碼群組可能類似如下：  
+4.  加入程式碼群組[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]授與的資料提供者組件`FullTrust`權限。 您的程式碼群組可能類似如下：  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -195,7 +195,7 @@ ms.locfileid: "36036963"
  URL 成員資格僅是您可以針對資料提供者選取的多個成員資格條件的其中一個。  
   
 ### <a name="verifying-the-deployment-and-registration-on-the-report-designer-client"></a>在報表設計師用戶端上確認部署與註冊  
- 在您可以確認部署之前，必須在本機電腦上，關閉 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的所有執行個體。 您已經結束所有目前工作階段之後，您可以確認是否資料提供者已成功部署到報表設計工具建立新的報表專案中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 當您從報表建立新的資料集時，資料提供者應該會包含在可用資料來源類型的清單中。  
+ 在您可以確認部署之前，必須在本機電腦上，關閉 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 的所有執行個體。 您已經結束所有目前工作階段之後，您可以確認是否您的資料提供者已成功部署到報表設計工具建立新的報表專案中[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]。 當您從報表建立新的資料集時，資料提供者應該會包含在可用資料來源類型的清單中。  
   
 ## <a name="platform-considerations"></a>平台考量  
  在 64 位元 (x64) 平台上，[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 會以 32 位元 WOW 模式執行。 當您在 x64 平台上撰寫報表時，您需要將 32 位元資料提供者安裝在報表撰寫用戶端上，才能預覽您的報表。 如果您在相同的系統上發行報表，您需要 x64 資料提供者，才能使用報表管理員檢視報表。  

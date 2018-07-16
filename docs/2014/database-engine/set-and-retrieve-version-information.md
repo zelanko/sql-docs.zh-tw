@@ -1,5 +1,5 @@
 ---
-title: 設定及擷取版本資訊 |Microsoft 文件
+title: 設定和擷取版本資訊 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - historical information [SQL Server]
 - source controls [SQL Server Management Studio], version information
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - historical information [SQL Server], source control files
 ms.assetid: c3f253c4-4e3d-48e8-8d90-bd6ee899faf7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: da9b33474449140cb31b6dcfd752a5112ebb9d4e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0dde0359b67d34e712b76e53a855efaafc29b5b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133759"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265226"
 ---
 # <a name="set-and-retrieve-version-information"></a>設定及擷取版本資訊
   版本資訊包括原始檔控制檔案的記錄和目前狀態。 [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe 會維護每個原始檔控制檔案的完整歷程，供您追蹤一或多個檔案在時間中的進展。 您也可以利用這項資訊來擷取檔案任何版本的本機副本，或比較任意兩個檔案版本。  
@@ -57,7 +57,7 @@ ms.locfileid: "36133759"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [檢視檔案歷程記錄](../../2014/database-engine/view-file-history.md)  
+-   [檢視檔案記錄](../../2014/database-engine/view-file-history.md)  
   
 -   [檢視專案記錄](../../2014/database-engine/view-project-history.md)  
   
@@ -65,13 +65,13 @@ ms.locfileid: "36133759"
   
 -   [擷取檔案](../../2014/database-engine/retrieve-files.md)  
   
--   [將版本指定為最新版本](../../2014/database-engine/specify-a-version-as-the-latest-version.md)  
+-   [將版本指定為最新版](../../2014/database-engine/specify-a-version-as-the-latest-version.md)  
   
 -   [比較檔案](../../2014/database-engine/compare-files.md)  
   
 -   [共用檔案](../../2014/database-engine/share-files.md)  
   
--   [建立歷程記錄和狀態報表](../../2014/database-engine/create-history-and-status-reports.md)  
+-   [建立記錄和狀態報表](../../2014/database-engine/create-history-and-status-reports.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [原始檔控制基本概念](../../2014/database-engine/source-control-basics.md)  

@@ -1,5 +1,5 @@
 ---
-title: 表格式模型方案 (SSAS 表格式) |Microsoft 文件
+title: 表格式模型方案 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f79d0822026b1638898b2bbc5007c964433a449c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1b9157911050be20e3eafee4817eb46c9a8c0424
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037554"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289534"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>表格式模型方案 (SSAS 表格式)
   本節中的主題提供如何使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的表格式模型設計師來撰寫表格式模型的資訊。  
   
 ## <a name="in-this-section"></a>本節內容  
- [表格式模型設計師&#40;SSAS 表格式&#41;](tabular-model-designer-ssas-tabular.md)  
+ [表格式模型設計工具&#40;SSAS 表格式&#41;](tabular-model-designer-ssas-tabular.md)  
   
  [工作空間資料庫&#40;SSAS 表格式&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   

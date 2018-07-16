@@ -1,5 +1,5 @@
 ---
-title: Action 元素 (ASSL) |Microsoft 文件
+title: Action 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7dcabe0b31b44b293fe54e24699d25dc340e3302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136954"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37196008"
 ---
 # <a name="action-element-assl"></a>Action 元素 (ASSL)
-  包含中可用動作的相關資訊[Cube](cube-element-assl.md)項目或[觀點來看](perspective-element-assl.md)項目。  
+  包含中可用動作的相關資訊[Cube](cube-element-assl.md)項目或有[觀點來看](perspective-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36136954"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.Action>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.Action>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Cube 元素&#40;ASSL&#41;](cube-element-assl.md)   

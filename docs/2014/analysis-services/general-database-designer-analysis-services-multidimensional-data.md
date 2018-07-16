@@ -1,5 +1,5 @@
 ---
-title: 一般 （資料庫設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 一般 （資料庫設計工具） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
 helpviewer_keywords:
 - Database Designer
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 435817b44643ddf1d3e6703ca2872dd5afe407c5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8a2af00d2dcdb6d28ab311067172e808e49539a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135292"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37234268"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>一般 (資料庫設計工具) (Analysis Services - 多維度資料)
   使用 **[一般]** 索引標籤，即可變更 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的屬性。  
@@ -54,7 +54,7 @@ ms.locfileid: "36135292"
   
  若要將新翻譯加入方格中，按一下**\<加入新翻譯 >**。  
   
- **翻譯的標題**  
+ **已翻譯的標題**  
  以適當的翻譯語言鍵入資料庫的標題。 如果空白，則會使用資料庫的預設標題。  
   
  **翻譯的描述**  
@@ -71,7 +71,7 @@ ms.locfileid: "36135292"
  **名稱**  
  鍵入帳戶類型的名稱。  
   
- 若要加入新的帳戶類型，請按一下**\<加入新的帳戶類型 >**。  
+ 若要新增新的帳戶類型，請按一下**\<加入新的帳戶類型 >**。  
   
  **別名**  
  設定供商業智慧精靈使用之帳戶類型的預設名稱。 如果此資料行保留空白，則會使用 **[名稱]** 資料行中的預設值。  

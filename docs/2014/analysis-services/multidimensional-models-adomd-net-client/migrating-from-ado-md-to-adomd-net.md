@@ -1,5 +1,5 @@
 ---
-title: 從 ADO MD 移轉至 ADOMD.NET |Microsoft 文件
+title: 從 ADO MD 移轉至 ADOMD.NET |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - ADO MD migration [ADOMD.NET]
 ms.assetid: 8c760db3-c475-468e-948d-e5f599d985ad
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ca9b4ba7dae762dead880c39c228391898e36e27
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bc10312f8e4a19c334c0eeba7284d7af0eabd0df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245724"
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>從 ADO MD 移轉至 ADOMD.NET
   ADOMD.NET 程式庫類似於 ActiveX Data Objects Multidimensional (ADO MD) 程式庫，這個 ActiveX Data Objects (ADO) 程式庫的延伸模組是用來存取以元件物件模型 (COM) 為基礎的用戶端應用程式中的多維度資料。 ADO MD 可輕鬆地從 Unmanaged 語言 (例如 C++ 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) 存取多維度資料。 ADOMD.NET 可輕鬆地從 Managed 語言 (例如 [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET) 存取分析資料 (多維度與資料採礦)。 此外，ADOMD.NET 提供增強型中繼資料物件模型。  
@@ -43,7 +43,7 @@ ms.locfileid: "36133564"
 |------------|---------------|  
 |使用類別目錄類別。|使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A> 的 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 屬性。|  
   
- **執行查詢並傳回資料格集物件**  
+ **若要執行查詢並傳回資料格集物件**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
 |使用資料格集類別。|使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 類別。|  
@@ -56,10 +56,10 @@ ms.locfileid: "36133564"
 > [!NOTE]  
 >  支援 <xref:Microsoft.AnalysisServices.AdomdClient.Position> 類別是為了與舊版相容。  
   
- **若要擷取採礦模型中繼資料**  
+ **若要擷取採礦模型的中繼資料**  
  |ADO MD|ADOMD.NET|  
 |------------|---------------|  
-|沒有可用的類別。|使用資料採礦集合之一：<br /><br /> -<xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection>包含資料來源中的每個採礦模型的清單。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection>提供可用的採礦演算法的相關資訊。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection>公開伺服器上採礦結構的相關資訊。|  
+|沒有可用的類別。|使用資料採礦集合之一：<br /><br /> -<xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection>包含資料來源中每個採礦模型的清單。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection>提供可用之採礦演算法的相關資訊。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection>公開伺服器上採礦結構的相關資訊。|  
   
  下列移轉範例比較現有 ADO MD 應用程式與對等 ADOMD.NET 應用程式，以強調這些差異。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "36133564"
  在本章節中所顯示的現有 ADO MD 與對等的 ADOMD.NET 程式碼範例，會執行相同的動作：建立連接、執行多維度運算式 (MDX) 陳述式以及擷取中繼資料與資料。 不過，這兩組程式碼不會使用相同的物件來執行這些工作。  
   
 ### <a name="existing-ado-md-code"></a>現有的 ADO MD 程式碼  
- 下列程式碼範例，取自 ADO MD 2.8 說明文件，以撰寫[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic® 6.0 並使用 ADO MD 來示範如何連接及查詢[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源。 這個 ADO MD 範例使用下列物件：  
+ 下列程式碼範例中，取自 ADO MD 2.8 說明文件中，以[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Basic® 6.0 並使用 ADO MD 來示範如何連接及查詢[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料來源。 這個 ADO MD 範例使用下列物件：  
   
 -   從 `Catalog` 物件建立連接。  
   

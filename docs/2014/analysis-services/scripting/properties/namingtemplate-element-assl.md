@@ -1,5 +1,5 @@
 ---
-title: NamingTemplate 元素 (ASSL) |Microsoft 文件
+title: NamingTemplate 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d8eb2589b0b33a0b3268e6104b51c3e3612ad894
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036196"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300838"
 ---
 # <a name="namingtemplate-element-assl"></a>NamingTemplate 元素 (ASSL)
   定義從建構的父子式階層中如何命名層級[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)父項目。  
@@ -62,7 +62,7 @@ ms.locfileid: "36036196"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 值`NamingTemplate`項目僅供父屬性 (換言之，值[使用量](usage-element-dimensionattribute-assl.md)元素`DimensionAttribute`父項目設定為*父*)。  
+ 值`NamingTemplate`項目僅供父屬性 (亦即的值[使用量](usage-element-dimensionattribute-assl.md)項目`DimensionAttribute`父項目設定為*父*)。  
   
  當父屬性用於建構階層時，階層的層級就會由父屬性所包含之成員之間的父子式關聯性決定。 因此，與其他維度不同的是，您無法從用於階層的屬性名稱中提取層級名稱。  
   
@@ -74,9 +74,9 @@ ms.locfileid: "36036196"
   
  清單中的每個名稱都會被視為範本，以便確保層級名稱的唯一性。 例如，使用 `Manager;Team Lead;Manager;Team Lead;Worker *` 就會產生 `Manager`、`Team Lead`、`Manager 01`、`Team Lead 01`、`Worker 05`、`Worker 06` 等層級名稱。  
   
- 請使用兩個星號 （*） 來包含星號 (\*) 層級命名範本的一部分名稱中的字元。  
+ 使用兩個星號 （*） 包含星號 (\*) 層級命名範本的一部分名稱中的字元。  
   
- 對應目的父代的項目`NamingTemplate`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 對應至父系的元素`NamingTemplate`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
  [NamingTemplateTranslations 元素&#40;ASSL&#41;](../collections/translations-element-assl.md)   

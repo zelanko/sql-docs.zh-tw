@@ -1,5 +1,5 @@
 ---
-title: 第 2 課： 定義和部署 Cube |Microsoft 文件
+title: 第 2 課： 定義和部署 Cube |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 527781bac1cdab44c0fd750bfb939ec80ae145a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 077d422f47fa62083420713b580100afcccf1712
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284124"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>第 2 課：定義和部署 Cube
   在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案中定義資料來源檢視之後，您可以開始定義初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube。  
@@ -37,7 +37,7 @@ ms.locfileid: "36146633"
  [定義 Cube](lesson-2-2-defining-a-cube.md)  
  在這項工作中，您會使用 Cube 精靈來定義初始 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube。  
   
- [將屬性加入至維度](lesson-2-3-adding-attributes-to-dimensions.md)  
+ [將屬性新增至維度](lesson-2-3-adding-attributes-to-dimensions.md)  
  在這項工作中，您會將屬性加入至已建立的維度。  
   
  [檢閱 Cube 和維度屬性](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
@@ -50,7 +50,7 @@ ms.locfileid: "36146633"
  在此工作中，您會使用 Excel 或 MDX 查詢設計工具來瀏覽 Cube 和維度資料。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 3 課： 修改量值、 屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [第 3 課：修改量值、屬性和階層](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 教學課程案例](analysis-services-tutorial-scenario.md)   

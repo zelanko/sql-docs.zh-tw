@@ -1,5 +1,5 @@
 ---
-title: SQL Server agent （SQL Server 組態管理員） 設定服務啟動帳戶 |Microsoft 文件
+title: 設定服務啟動帳戶的 SQL Server Agent （SQL Server 組態管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, service accounts
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6d2fb2581a2f2f5b7d851323290665af2c23b8ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f08e086bfcd523904d0f95c1e4b823c05bd7cb6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134067"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232561"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 服務啟動帳戶會定義 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行的 Windows 帳戶以及它的網路權限。 此主題描述如何透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 組態管理員來設定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Agent 服務帳戶。  
@@ -49,7 +49,7 @@ ms.locfileid: "36134067"
 ###  <a name="Security"></a> 安全性  
   
 ####  <a name="Permissions"></a> 權限  
- 若要執行其函式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式必須設定為使用之成員的帳戶認證`sysadmin`固定的伺服器角色的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此帳戶必須擁有下列 Windows 權限：  
+ 若要執行其函式，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式必須設定為使用之成員的帳戶認證`sysadmin`固定的伺服器角色中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此帳戶必須擁有下列 Windows 權限：  
   
 -   以服務登入 (SeServiceLogonRight)  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36134067"
   
 -   調整處理序的記憶體配額 (SeIncreaseQuotaPrivilege)  
   
- 如需有關所需的 Windows 權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務帳戶，請參閱[選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 Windows 服務帳戶和權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+ 如需有關所需的 Windows 權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 服務帳戶，請參閱 <<c2> [ 選取 SQL Server Agent 服務的帳戶](select-an-account-for-the-sql-server-agent-service.md)和[設定 Windows 服務帳戶和權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
   
 ##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
   

@@ -1,5 +1,5 @@
 ---
-title: 貨幣轉換 (Analysis Services) |Microsoft 文件
+title: 貨幣轉換 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
 - monetary data [SQL Server]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - many-to-one currency conversions [Analysis Services]
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fe7eb5df9c2f25912d95aa9b0d72a6effaf06f2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6d2a439a5ef4d422b69b95d1c76dbeefa39b658a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037352"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289824"
 ---
 # <a name="currency-conversions-analysis-services"></a>貨幣轉換 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  僅限多維度  
@@ -72,7 +72,7 @@ ms.locfileid: "36037352"
   
 -   時間維度和比率量值群組之間存在一般維度關聯性。  
   
--   `Type` 屬性也可以設定為 ExchangeRate。 商業智慧精靈會使用貨幣與時間維度的關聯性，識別可能的比率量值群組，而設定`Type`為 ExchangeRate 屬性可讓用戶端應用程式更輕鬆地識別比率量值群組。  
+-   `Type` 屬性也可以設定為 ExchangeRate。 雖然商業智慧精靈會使用貨幣和時間維度的關聯性，識別可能的比率量值群組，設定`Type`為 ExchangeRate 屬性可讓用戶端應用程式，以更輕鬆地識別比率量值群組。  
   
 -   一或多個量值，代表比率量值群組所包含的匯率。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36037352"
 ## <a name="defining-currency-conversions"></a>定義貨幣轉換  
  您可以使用商業智慧精靈來定義 Cube 的貨幣轉換功能，或使用 MDX 指令碼來手動定義貨幣轉換。  
   
-### <a name="prerequisites"></a>必要條件  
+### <a name="prerequisites"></a>先決條件  
  您必須先定義至少一個貨幣維度、至少一個時間維度以及至少一個比率量值群組，才能使用商業智慧精靈來定義 Cube 中的貨幣轉換。 從這些物件中，商業智慧精靈可以擷取資料和中繼資料，這些資料用來建構報表貨幣維度與提供貨幣轉換功能所需的 MDX 指令碼。  
   
 ### <a name="decisions"></a>決策  

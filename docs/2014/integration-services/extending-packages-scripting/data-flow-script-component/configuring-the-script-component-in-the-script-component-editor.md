@@ -21,13 +21,13 @@ ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5ac2d2c8c45e359dafbed4d33dc26c3470fc13d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+manager: craigg
+ms.openlocfilehash: 7299359d6535a9a3378dc898fa61da62a969d438
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135673"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292888"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在指令碼元件編輯器中設定指令碼元件
   您在指令碼元件中撰寫自訂程式碼之前，必須選取您要建立的資料流程元件的類型 (來源、轉換或是目的地)，然後在 [指令碼轉換編輯器] 中設定元件的中繼資料與屬性。  
@@ -54,7 +54,7 @@ ms.locfileid: "36135673"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>指令碼轉換編輯器的輸入資料行頁面  
  會為轉換和目的地，但不會為來源顯示 [指令碼轉換編輯器] 的 [輸入資料行] 頁面。 在本頁，您選取要提供給自訂指令碼使用的輸入資料行，並指定這些資料行的唯讀或讀寫存取權限。  
   
- 在將會根據此中繼資料產生的程式碼專案中，BufferWrapper 專案項目包含每個輸入的類別，而且這個類別包含每個選取的輸入資料行之具類型的存取子屬性。 例如，如果您選取整數**CustomerID**資料行和一個字串**CustomerName**從名為輸入的資料行`CustomerInput`，BufferWrapper 專案項目會包含`CustomerInput`類別衍生自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>，而`CustomerInput`類別會公開 （expose) 名為整數屬性**CustomerID**和名為字串屬性**CustomerName**。 這個慣例使得撰寫具有類型檢查的程式碼變得可能，如下所示：  
+ 在將會根據此中繼資料產生的程式碼專案中，BufferWrapper 專案項目包含每個輸入的類別，而且這個類別包含每個選取的輸入資料行之具類型的存取子屬性。 例如，如果您選擇的整數**CustomerID**資料行和一個字串**CustomerName**從名為輸入的資料行`CustomerInput`，BufferWrapper 專案項目將包含`CustomerInput`類別衍生自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>，而`CustomerInput`類別將公開名為整數屬性**CustomerID**和字串屬性，名為**CustomerName**。 這個慣例使得撰寫具有類型檢查的程式碼變得可能，如下所示：  
   
 ```vb  
 Dim currentCustomerID as Integer = CustomerInput.CustomerID  
@@ -72,7 +72,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
 -   當做為目的地使用時，指令碼元件支援一個輸入並且沒有輸出。  
   
- 在將會根據此中繼資料產生的程式碼專案中，BufferWrapper 專案項目包含每個輸入與輸出的類別。 例如，如果您建立名為輸出`CustomerOutput`，BufferWrapper 專案項目會包含`CustomerOutput`類別衍生自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>，和`CustomerOutput`類別會包含每個輸出資料行建立的具型別的存取子屬性。  
+ 在將會根據此中繼資料產生的程式碼專案中，BufferWrapper 專案項目包含每個輸入與輸出的類別。 例如，如果您建立名為的輸出`CustomerOutput`，BufferWrapper 專案項目會包含`CustomerOutput`類別衍生自<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>，和`CustomerOutput`類別將包含建立每個輸出資料行的類型存取子屬性。  
   
  您只能在 [輸入及輸出] 頁面上設定輸出資料行。 您可以在 [輸入資料行] 頁面上，選取轉換和目的地的輸入資料行。 在 BufferWrapper 專案項目中為您建立的具類型之存取子屬性對於輸出資料行而言將是唯寫的。 輸入資料行的存取子屬性將是唯讀或是讀取/寫入，端視您為 [輸入資料行] 頁面上的每個資料行所選取的使用類型而定。  
   
@@ -87,7 +87,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `SynchronousInputID` 屬性只有在具有同步輸出的轉換中才有非零值。 如果此屬性的值是零，即表示輸出是非同步的。 若是同步輸出，亦即將資料列傳遞到選取的輸出或是沒有加入任何新資料列的輸出，則這個屬性應該會包含元件輸入的 `ID`。  
   
 > [!NOTE]  
->  當**指令碼轉換編輯器**建立第一個輸出，編輯器設定`SynchronousInputID`要輸出的屬性`ID`元件的輸入。 然而，當編輯器建立後續的輸出時，編輯器會將這些輸出的 `SynchronousInputID` 屬性設定為零。  
+>  當**指令碼轉換編輯器**建立第一個輸出時，編輯器設定`SynchronousInputID`屬性的輸出，`ID`元件的輸入。 然而，當編輯器建立後續的輸出時，編輯器會將這些輸出的 `SynchronousInputID` 屬性設定為零。  
 >   
 >  如果您以同步輸出建立元件，每個輸出都必須將其 `SynchronousInputID` 屬性設定為元件輸入的 `ID`。 因此，編輯器在第一個輸出之後所建立的每個輸出，都必須將其 `SynchronousInputID` 值從零變更為元件輸入的 `ID`。  
 >   
@@ -108,7 +108,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  `ValidateExternalMetadata` 屬性的布林值可指定元件要在設計階段針對外部資料來源執行驗證，還是將驗證延後到執行階段執行。 依預設，此屬性的值是 `True`，也就是，外部中繼資料是在設計階段與執行階段進行驗證。 當外部資料來源在設計階段無法使用時，您可能會想要將此屬性的值設定為 `False`：例如，當封裝只在執行階段下載來源或建立目的地時。  
   
 #### <a name="readonlyvariables-and-readwritevariables-properties"></a>ReadOnlyVariables 與 ReadWriteVariables 屬性  
- 您可以輸入現有變數的逗號分隔清單做為這些屬性的值，使得變數可在指令碼元件程式碼中以唯讀或讀取/寫入的方式來存取。 在程式碼中，變數是透過自動產生的基底類別之 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 屬性來存取。 如需詳細資訊，請參閱 [使用中指令碼 Component]((using-variables-in-the-script-component.md) 變數。  
+ 您可以輸入現有變數的逗號分隔清單做為這些屬性的值，使得變數可在指令碼元件程式碼中以唯讀或讀取/寫入的方式來存取。 在程式碼中，變數是透過自動產生的基底類別之 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadOnlyVariables%2A> 與 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReadWriteVariables%2A> 屬性來存取。 如需詳細資訊，請參閱 [使用中指令碼 Component]((using-variables-in-the-script-component.md) 的變數。  
   
 > [!NOTE]  
 >  變數名稱會區分大小寫。  
@@ -129,9 +129,9 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
     Me.Connections.MyADONETConnection  
 ```  
   
- 如需詳細資訊，請參閱 [連線到指令碼 Component]((connecting-to-data-sources-in-the-script-component.md) 中的資料來源。  
+ 如需詳細資訊，請參閱 [指令碼 Component]((connecting-to-data-sources-in-the-script-component.md) 中的資料來源的連接。  
   
-![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期  **<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [程式碼撰寫和偵錯指令碼元件]((coding-and-debugging-the-script-component.md)  

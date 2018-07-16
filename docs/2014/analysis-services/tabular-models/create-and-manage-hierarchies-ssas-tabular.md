@@ -1,5 +1,5 @@
 ---
-title: 建立及管理階層 (SSAS 表格式) |Microsoft 文件
+title: 建立及管理階層 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c4faae5fb17bf2be67fa33e590a65fce222f7cbb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e729d8963149809ba53a423a19bf9c2c7eac6fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146603"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293233"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>建立及管理階層 (SSAS 表格式)
   您可以在 [圖表檢視] 中，透過模型設計師建立及管理階層。 若要在 [圖表檢視] 中檢視模型設計師，請按一下 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的 [模型] 功能表，然後指向 [模型檢視]，再按一下 [圖表檢視]。  
@@ -98,7 +98,7 @@ ms.locfileid: "36146603"
 -   或按一下父階層層級，然後按 Delete。 這也會移除所有子層級。  
   
 ## <a name="see-also"></a>另請參閱  
- [表格式模型設計師&#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)   
+ [表格式模型設計工具&#40;SSAS 表格式&#41;](../tabular-model-designer-ssas-tabular.md)   
  [階層&#40;SSAS 表格式&#41;](hierarchies-ssas-tabular.md)   
  [量值&#40;SSAS 表格式&#41;](measures-ssas-tabular.md)  
   

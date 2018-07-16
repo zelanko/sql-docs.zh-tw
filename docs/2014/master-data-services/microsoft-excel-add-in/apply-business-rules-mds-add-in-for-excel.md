@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: be74d232575f396ae491a3475d632f58fb55a1ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 9f1db21079b7c07394a149b173195ed8fca56d5e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135405"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254740"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>套用商務規則 (適用於 Excel 的 MDS 增益集)
   在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 中，當您想要驗證資料並確認資料是否有效時，請套用商務規則。 您可以更正驗證並且重新發行資料。  
@@ -27,7 +27,7 @@ ms.locfileid: "36135405"
 > [!NOTE]  
 >  資料驗證會在您發行資料時自動進行。 如需詳細資訊，請參閱[驗證預存程序 &#40;Master Data Services&#41;](../validation-stored-procedure-master-data-services.md)。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有總管 功能區域的存取權。  

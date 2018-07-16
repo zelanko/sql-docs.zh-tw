@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restoretlog.options.f1
 - sql12.swb.restoretlog.general.f1
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 35
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e688a81d1a555efcad659b6b89ef4f21f116191d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85c4008e1872a48126c67e47cc8d68ed0867828d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237018"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>還原交易記錄備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中還原交易記錄備份。  
@@ -100,7 +99,7 @@ ms.locfileid: "36134653"
   
      下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-    |標頭|ReplTest1|  
+    |標頭|值|  
     |------------|-----------|  
     |**Restore**|選取的核取方塊表示要還原的備份組。|  
     |**名稱**|備份組的名稱。|  
@@ -132,7 +131,7 @@ ms.locfileid: "36134653"
   
          下表列出方格的各資料行標頭，並描述各標頭的值。  
   
-        |標頭|ReplTest1|  
+        |標頭|值|  
         |------------|-----------|  
         |\<空白>|顯示選取標示的核取方塊。|  
         |**交易標示**|在認可交易時，由使用者所指定之標示交易的名稱。|  
@@ -150,9 +149,9 @@ ms.locfileid: "36134653"
   
          將發行資料庫還原至並非建立該資料庫的伺服器時，就會保留複寫設定。  
   
-         這個選項是只能搭配**透過回復未認可的交易，讓資料庫保持備妥可用...** 選項 （稍後會說明），相當於使用還原備份`RECOVERY`選項。  
+         此選項是僅適用於**回復未認可的交易，讓資料庫保持備妥...** 選項 （稍後會說明），這相當於使用還原備份`RECOVERY`選項。  
   
-         選取此選項相當於使用`KEEP_REPLICATION`選項[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`陳述式。  
+         核取此選項相當於使用`KEEP_REPLICATION`選項[!INCLUDE[tsql](../../includes/tsql-md.md)]`RESTORE`陳述式。  
   
     -   **還原每個備份之前先提示**  
   

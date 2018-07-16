@@ -1,5 +1,5 @@
 ---
-title: Mode 元素 (XMLA) |Microsoft 文件
+title: Mode 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Mode element
 ms.assetid: 43a54181-6494-48c3-b14b-376d8939fa9f
 caps.latest.revision: 13
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5634e273e1708f9de213436e20008cc6874f50a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c90d67995e6775c035265db57c2b55380ad0fe76
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147028"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267644"
 ---
 # <a name="mode-element-xmla"></a>Mode 元素 (XMLA)
-  識別要父系所使用的模式[鎖定](../xml-elements-commands/lock-element-xmla.md)項目指定的物件上建立鎖定時。  
+  識別父元素所要使用的模式[鎖定](../xml-elements-commands/lock-element-xmla.md)項目指定的物件上建立鎖定時。  
   
 ## <a name="syntax"></a>語法  
   
@@ -66,13 +66,13 @@ ms.locfileid: "36147028"
 ## <a name="remarks"></a>備註  
  `Lock` 父元素會使用 `Mode` 元素來決定要在物件上建立的鎖定類型。 這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|*CommitShared*|在指定的物件上建立共用鎖定。 您可以針對相同的物件建立其他共用鎖定。<br /><br /> 共用的鎖定會防止交易包含寫入作業，例如[Execute](../xml-elements-methods-execute.md)執行方法呼叫[Alter](../xml-elements-commands/alter-element-xmla.md)命令上指定的物件，從認可，直到移除共用的鎖定為止。 共用的鎖定無法防止交易包含讀取的作業，例如[探索](../xml-elements-methods-discover.md)方法呼叫或`Execute`執行方法呼叫[陳述式](../xml-elements-commands/statement-element-xmla.md)命令認可。|  
+|*CommitShared*|在指定的物件上建立共用鎖定。 您可以針對相同的物件建立其他共用鎖定。<br /><br /> 共用的鎖定會防止交易包含寫入作業，例如[Execute](../xml-elements-methods-execute.md)方法呼叫[Alter](../xml-elements-commands/alter-element-xmla.md)命令上指定的物件，認可，直到移除共用的鎖定為止。 共用的鎖定無法防止交易包含讀取的作業，例如[Discover](../xml-elements-methods-discover.md)方法呼叫或有`Execute`方法呼叫[陳述式](../xml-elements-commands/statement-element-xmla.md)命令認可。|  
 |*執行 CommitExclusive*|在指定的物件上建立獨佔鎖定。 您無法針對相同的物件建立其他共用或獨佔鎖定。<br /><br /> 獨佔鎖定會防止認可在指定的物件上包含讀取或寫入作業的交易，直到移除獨佔鎖定為止。|  
   
 ## <a name="see-also"></a>另請參閱  
- [ID 元素&#40;XMLA&#41;](id-element-xmla.md)   
+ [ID 項目&#40;XMLA&#41;](id-element-xmla.md)   
  [物件項目&#40;XMLA&#41;](object-element-xmla.md)   
  [屬性&#40;XMLA&#41;](xml-elements-properties.md)  
   

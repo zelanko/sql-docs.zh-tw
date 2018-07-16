@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], resolving permissions
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6523603f7524af93bc21417f378a41bd907532d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 06b8f48e1f2b7c246c1f5e4559bbbba851ccf128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264934"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>重疊的使用者和群組的權限 (Master Data Services)
   使用者的權限是根據以下條件：  
@@ -48,7 +48,7 @@ ms.locfileid: "36144956"
   
  使用者屬於群組 1 和群組 2。  
   
- 使用者具有**唯讀**Product 實體的權限。  
+ 使用者擁有**唯讀**Product 實體的權限。  
   
  群組 1 擁有 Product 實體的 **更新** 權限。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36144956"
   
  使用者屬於群組 1 和群組 2。  
   
- 使用者具有**唯讀**Product 實體的權限。  
+ 使用者擁有**唯讀**Product 實體的權限。  
   
  群組 1 擁有 Product 實體的 **更新** 權限。  
   

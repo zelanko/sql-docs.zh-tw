@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd utility, Database Engine connections
 - Named Pipes [SQL Server], sqlcmd utility
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b28b6861eab90e3109cbc294023d0eb2c0eec88d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 4ea4dda5eb99066bc88e0fde9a1c9b98abaeacf8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135152"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227208"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>使用 sqlcmd 連接至 Database Engine
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援使用 TCP/IP 網路通訊協定 (預設值) 和具名管道通訊協定，來進行用戶端通訊。 如果用戶端是連接到同一部電腦上的 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體，也可以使用共用記憶體通訊協定。 選取通訊協定有三種常見的方法。 **sqlcmd** 公用程式所使用的通訊協定是以下列順序決定：  

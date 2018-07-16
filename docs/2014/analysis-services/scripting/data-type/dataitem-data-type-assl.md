@@ -1,5 +1,5 @@
 ---
-title: DataItem 資料類型 (ASSL) |Microsoft 文件
+title: DataItem 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - DataItem data type
 ms.assetid: f4f5155f-9c3d-49a1-a390-a9c734fafbce
 caps.latest.revision: 44
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5622ca2cdda5a08bdcfdfd486e44b6fcd8fbf7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b2646dcce64672d98d33ecff3575016269379325
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030624"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300888"
 ---
 # <a name="dataitem-data-type-assl"></a>DataItem 資料類型 (ASSL)
   定義代表某個資料項目 (例如資料行或屬性) 之資料相關特性的基本資料類型。  
@@ -65,13 +65,13 @@ ms.locfileid: "36030624"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)，[定序](../properties/collation-element-assl.md)， [DataSize](../properties/datasize-element-assl.md)， [DataType](../properties/datatype-element-assl.md)，[格式](../properties/format-element-assl.md)， [InvalidXmlCharacters](../properties/invalidxmlcharacters-element-assl.md)， [MimeType](../properties/mimetype-element-assl.md)， [NullProcessing](../properties/nullprocessing-element-assl.md)，[來源](../properties/source-element-binding-assl.md)，[修剪](../properties/trimming-element-assl.md)|  
+|子元素|[註釋](../collections/annotations-element-assl.md)，[定序](../properties/collation-element-assl.md)， [DataSize](../properties/datasize-element-assl.md)，[資料類型](../properties/datatype-element-assl.md)，[格式](../properties/format-element-assl.md)， [InvalidXmlCharacters](../properties/invalidxmlcharacters-element-assl.md)， [MimeType](../properties/mimetype-element-assl.md)， [NullProcessing](../properties/nullprocessing-element-assl.md)，[來源](../properties/source-element-binding-assl.md)，[修剪](../properties/trimming-element-assl.md)|  
 |衍生的元素|請參閱「備註」中的表格。|  
   
 ## <a name="remarks"></a>備註  
  `DataItem` 資料類型會用於可繫結的任何資料項目。例如，量值、屬性索引鍵和屬性名稱。 相關的詳細資料和適用的預設值會因使用方式而不同。例如，屬性名稱必須是字串。  
   
- 執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]接受只有特定的一組資料類型。 使用其他資料類型會產生錯誤，而不會隱含轉換成其中一種有效的類型。  
+ 執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]僅接受特定集合的資料型別。 使用其他資料類型會產生錯誤，而不會隱含轉換成其中一種有效的類型。  
   
  下表列出 `DataItem` 類型的元素。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36030624"
 |[ScalarMiningStructureColumn](miningstructurecolumn-data-type-assl.md)|[[Namecolumn]](../objects/namecolumn-element-assl.md)|`Source` 項目`DataItem`必須是型別[ColumnBinding](binding-data-type-assl.md)|  
 |[TableMiningStructureColumn](../objects/foreignkeycolumn-element-assl.md)|`Source` 項目`DataItem`必須是型別[ColumnBinding](binding-data-type-assl.md)|  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.DataItem>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.DataItem>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

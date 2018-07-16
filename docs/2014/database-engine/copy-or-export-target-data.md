@@ -1,5 +1,5 @@
 ---
-title: 複製或匯出目標資料 |Microsoft 文件
+title: 複製或匯出目標資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3c44b821-7a0e-4c96-8994-cba4e6337bdc
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a1029c072262c50451118079528a24c72ef59308
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8388ccfab854a111de1be8184e9dea959646e6d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302748"
 ---
 # <a name="copy-or-export-target-data"></a>複製或匯出目標資料
   您可以複製目標資料，也可以將目標資料匯出到 .CSV 檔。  

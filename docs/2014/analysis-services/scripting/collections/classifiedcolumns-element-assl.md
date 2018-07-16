@@ -1,5 +1,5 @@
 ---
-title: ClassifiedColumns 元素 (ASSL) |Microsoft 文件
+title: ClassifiedColumns 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClassifiedColumns element
 ms.assetid: f16b4f51-c38d-4601-98b8-1497dbf12d02
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 95c00f4863223caaacfb7cc7554ec9b48a82922d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38436c97f74adef2af6d5645aea6547682740894
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036667"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286044"
 ---
 # <a name="classifiedcolumns-element-assl"></a>ClassifiedColumns 元素 (ASSL)
   包含相關的資料行所分類的集合[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)項目。  
@@ -64,7 +64,7 @@ ms.locfileid: "36036667"
 |子元素|[ClassifiedColumnID](../properties/id-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`ClassifiedColumns`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
+ 對應至父系的元素`ClassifiedColumns`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
  [MiningStructureColumn 資料類型&#40;ASSL&#41;](../data-type/miningstructurecolumn-data-type-assl.md)   

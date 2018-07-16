@@ -1,5 +1,5 @@
 ---
-title: 將封裝儲存至檔案系統 |Microsoft 文件
+title: 將封裝儲存至檔案系統 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, saving
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
 caps.latest.revision: 35
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 73253e1c27e0ba1e518e203df55cb5fef308d8b2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f9783f89c7ca81966c71bd50b02e5ffb3c4c35f9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147178"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37246748"
 ---
 # <a name="save-a-package-to-the-file-system"></a>將封裝儲存至檔案系統
   此程序描述如何將現有封裝儲存為檔案系統中的 .dtsx 檔案。  
@@ -43,6 +43,6 @@ ms.locfileid: "36147178"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41;封裝](../../2014/integration-services/integration-services-ssis-packages.md)   
- [儲存封裝的副本](../../2014/integration-services/save-a-copy-of-a-package.md)  
+ [儲存套件的複本](../../2014/integration-services/save-a-copy-of-a-package.md)  
   
   

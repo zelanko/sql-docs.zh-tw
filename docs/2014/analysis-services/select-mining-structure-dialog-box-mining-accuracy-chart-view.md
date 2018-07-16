@@ -1,5 +1,5 @@
 ---
-title: 選取採礦結構對話方塊 （採礦精確度圖表檢視） |Microsoft 文件
+title: 選取採礦結構對話方塊 （採礦精確度圖表檢視） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.selectminingstructure.f1
 helpviewer_keywords:
 - Select Mining Structure dialog box
 ms.assetid: ce5af79f-a1f8-47f3-acb9-769022285a69
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c710852493a9fefc4f6a2625bf30d1e4d02e3079
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 293f73cfad52e21ec3ec85f1f6e214bb7c090073
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035512"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275194"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>選取採礦結構對話方塊 (採礦精確度圖表檢視)
   使用 **[選取採礦結構]** 對話方塊，即可選取採礦結構，其中包含您想要為其比較或測試精確度的採礦模型。  

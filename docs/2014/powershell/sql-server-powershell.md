@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: e66e94d1b49ecb275ba1422a6c7ee16c1eddc3f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f605305a86295f8b2e91aa7300086c5827e683d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146548"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271134"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 支援 Windows PowerShell，它是功能強大的指令碼處理介面，可讓系統管理員和開發人員將伺服器管理和應用程式部署自動化。 Windows PowerShell 語言可支援比 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼更複雜的邏輯，讓 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理員能夠建立功能強大的管理指令碼。 Windows PowerShell 指令碼也可用來管理其他 [!INCLUDE[msCoName](../includes/msconame-md.md)] 伺服器產品。 如此可為管理員提供跨伺服器的通用指令碼語言。  
@@ -40,10 +40,10 @@ ms.locfileid: "36146548"
   
 |工作描述|主題|  
 |----------------------|-----------|  
-|描述執行的慣用的機制[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 元件; 若要開啟 PowerShell 工作階段和載入`sqlps`模組。 `sqlps` 模組會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者和 Cmdllet 中載入，以及提供者和 Cmdllet 所使用的 SQL Server 管理物件 (SMO) 組件。|[匯入 SQLPS 模組](../database-engine/import-the-sqlps-module.md)|  
+|描述執行的慣用的機制[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]PowerShell 元件; 若要開啟 PowerShell 工作階段，以及載入`sqlps`模組。 `sqlps` 模組會在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 提供者和 Cmdllet 中載入，以及提供者和 Cmdllet 所使用的 SQL Server 管理物件 (SMO) 組件。|[匯入 SQLPS 模組](../database-engine/import-the-sqlps-module.md)|  
 |描述如何在沒有提供者或 Cmdllet 的情況下，只載入 SMO 組件。|[載入 Windows PowerShell 中的 SMO 組件](load-the-smo-assemblies-in-windows-powershell.md)|  
 |描述如何以滑鼠右鍵按一下 **物件總管**中的節點，來執行 Windows PowerShell 工作階段。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 會啟動 Windows PowerShell 工作階段、 載入`sqlps`模組，並將 SQL Server 提供者路徑設為所選取的物件。|[從 SQL Server Management Studio 執行 Windows PowerShell](run-windows-powershell-from-sql-server-management-studio.md)|  
-|描述如何建立可執行 Windows PowerShell 指令碼的 SQL Server Agent 作業步驟。 然後，就可以排程在特定時間或為回應事件而執行作業。|[SQL Server Agent 中執行 Windows PowerShell 步驟](run-windows-powershell-steps-in-sql-server-agent.md
+|描述如何建立可執行 Windows PowerShell 指令碼的 SQL Server Agent 作業步驟。 然後，就可以排程在特定時間或為回應事件而執行作業。|[SQL Server Agent 中執行 Windows PowerShell 的步驟](run-windows-powershell-steps-in-sql-server-agent.md
 )|  
 |描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 提供者來導覽 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 物件的階層。|[SQL Server PowerShell 提供者](sql-server-powershell-provider.md)|  
 |描述如何使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cmdllet，以指定 [!INCLUDE[ssDE](../includes/ssde-md.md)] 動作 (例如，執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 指令碼)。|[使用資料庫引擎 Cmdlet](../database-engine/use-the-database-engine-cmdlets.md)|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
@@ -16,13 +16,13 @@ ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a06b8864c458817185223a9ee45c3dd25c4a2d33
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cd26c9c3d81ffd308ca013915f924f9cf88d7e1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37237138"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>運算式中的 Integration Services 資料類型
   運算式評估工具使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 當資料初次進入 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝中的資料流程時，資料流程引擎會將所有資料行的資料轉換成 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型，而運算式所使用的資料行資料已為 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型。 「條件式分割」和「衍生的資料行」轉換中使用的運算式可參考資料行，因為它們是包含資料行資料的資料流程中的一部分。  
@@ -36,7 +36,7 @@ ms.locfileid: "36135853"
  此外，運算式還可包含字串、布林，以及數值常值。 如需將數值常值轉換為數值 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱[常值 &#40;SSIS&#41;](numeric-string-and-boolean-literals.md)。  
   
 ## <a name="implicit-data-conversion"></a>隱含資料轉換  
- 當運算式評估工具自動將資料從一種資料類型轉換為另一種資料類型時，會發生資料類型的隱含轉換。 例如，如果`smallint`相較於`int`、`smallint`隱含地轉換成`int`執行比較之前。  
+ 當運算式評估工具自動將資料從一種資料類型轉換為另一種資料類型時，會發生資料類型的隱含轉換。 例如，如果`smallint`相較於`int`，則`smallint`隱含地轉換成`int`執行比較之前。  
   
  當引數和運算元的資料類型不相容時，運算式評估工具無法執行隱含資料轉換。 此外，運算式評估工具無法將任何值隱含轉換為布林。 而必須使用轉換運算子隱含轉換引數和運算元。 如需詳細資訊，請參閱 [Cast &#40;SSIS 運算式&#41;](cast-ssis-expression.md)。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36135853"
 > [!NOTE]  
 >  布林值是邏輯值，而非數字。 雖然布林值可以在某些環境下顯示為數字，但不會儲存為數字，而且不同的程式設計語言將布林值表示成數值的方式各有不同，.NET Framework 方法也是如此。  
 >   
->  例如，Visual Basic 提供的轉換函數會將 `True` 轉換為 -1；然而 .NET Framework 中的 `System.Convert.ToInt32` 方法會將 `True` 轉換為 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]將轉換運算式語言`True`為-1。  
+>  例如，Visual Basic 提供的轉換函數會將 `True` 轉換為 -1；然而 .NET Framework 中的 `System.Convert.ToInt32` 方法會將 `True` 轉換為 +1。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]運算式語言轉換`True`為-1。  
 >   
 >  若要避免錯誤或非預期結果，您所撰寫的程式碼不應該以特定數值表示 `True` 和 `False`。 您應該盡可能將布林變數的使用限制在當初所設計的邏輯值上。  
   

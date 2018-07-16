@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - opening Database Diagram Designer
 - Database Diagram Designer
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9414f399a469bbd8a04fc0969e4fb0a44b407725
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: f0f632aef15291b24057d3a97d68b0517cf128dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134853"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269864"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>開啟資料庫圖表設計工具 (Visual Database Tools)
   資料庫圖表設計工具是一種視覺化工具，可以讓您設計要連接的資料庫，並且視覺化方式呈現該資料庫。 設計資料庫時，您可以使用資料庫設計工具建立、編輯或刪除資料表、資料行、索引鍵、索引、關聯性和條件約束。 若要以視覺化方式呈現資料庫，可以建立一或多個圖表說明該資料庫中部分或全部的資料表、資料行、索引鍵和關聯性。  

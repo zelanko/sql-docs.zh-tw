@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xe
 - sessions
 - extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 782c883958470b308f2d3605891fcfb654078589
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: a6c00a184eccb1139652edf39dbedd349eaeb100
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036122"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287234"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server 擴充的事件工作階段
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 擴充的事件工作階段會建立在主控擴充之事件引擎的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序中。 下列是擴充的事件工作階段的各個層面，可讓您了解擴充的事件基礎結構的來龍去脈以及進行的一般處理：  

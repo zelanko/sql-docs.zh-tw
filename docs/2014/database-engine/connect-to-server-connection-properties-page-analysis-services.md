@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.connecttoas.connectionproperties.f1
 ms.assetid: 26cf53e3-3bcb-4697-8a88-53e93bc68b56
 caps.latest.revision: 18
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a757ba43fe2a90f532fde71c9bbc0bbf0e902ca
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a50e63ecd929581f9ae9c185c714fd21dc171c6b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37225858"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>連接到伺服器 (連接屬性頁面) Analysis Services
   連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssAS](../includes/ssas-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssAS](../includes/ssas-md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
   
 ## <a name="options"></a>選項。  
  **連接到資料庫**  
- 從清單中選取要連接的資料庫。 如果您選取**\<預設 >**，您將會連接到伺服器的預設資料庫。 如果您選取**\<瀏覽伺服器 >**，您可以瀏覽您想要連接到資料庫的伺服器。  
+ 從清單中選取要連接的資料庫。 如果您選取**\<預設值 >**，您將會連接到伺服器的預設資料庫。 如果您選取**\<瀏覽伺服器 >**，您可以瀏覽您想要連接到資料庫的伺服器。  
   
  **連接逾時**  
  輸入在逾時之前所要等候建立連接的秒數。預設值為 15 秒。  

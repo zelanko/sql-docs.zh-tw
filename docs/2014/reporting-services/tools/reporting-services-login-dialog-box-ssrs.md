@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.reportservicelogin.f1
 ms.assetid: 2037d797-0b61-44c7-931f-6c689c3fc733
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e4a3feeca737e1d4db6627af5ece9fa9d36c6b7b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 505288382a078a020984db3b9f560f7c2e52fcbb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131920"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305018"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services 登入對話方塊 (SSRS)
   使用 **[Reporting Services 登入]** 對話方塊，即可提供發行報表至報表伺服器的認證。  
   
--   **請注意**如果這是您將報表發行至報表伺服器之後第一次您設定部署屬性**TargetServerURL**專案中，確認您指定的伺服器名稱是類似於`http://localhost/reportserver`，而非`http://localhost/reports`。 如果是指定本機伺服器的 `reports` 目錄，而不是 `reportserver` 目錄，則會間接導致此對話方塊開啟。 如需設定 **TargetServerURL** 的詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)。  
+-   **附註**如果這是您將報表發行至報表伺服器之後的第一次您設定部署屬性**TargetServerURL**專案，請確認您所指定的伺服器名稱是類似於`http://localhost/reportserver`，而非`http://localhost/reports`。 如果是指定本機伺服器的 `reports` 目錄，而不是 `reportserver` 目錄，則會間接導致此對話方塊開啟。 如需設定 **TargetServerURL** 的詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md)。  
   
 ## <a name="options"></a>選項。  
  **Server**  

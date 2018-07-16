@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], e-mail
 - e-mail [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9af13376bd8dfe6fc182b784c250c286fcabdf6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: de8849902a313391f414367ca6e51fb64c6dffdc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303538"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services 中的電子郵件傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包含了電子郵件傳遞延伸模組，可讓您透過電子郵件傳送報表給個別使用者或群組。 您可以透過 Reporting Services 組態管理員並藉由編輯 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態檔，設定電子郵件傳遞延伸模組。  
   
- 若要透過電子郵件散發或接收報表，您可以定義標準訂閱或資料驅動訂閱。 您一次只能訂閱或散發一個報表。 您無法建立在單一電子郵件訊息中傳遞多個報表的訂閱。 如需訂用帳戶的詳細資訊，請參閱[Create，Modify，and 刪除標準訂閱&#40;原生模式的 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
+ 若要透過電子郵件散發或接收報表，您可以定義標準訂閱或資料驅動訂閱。 您一次只能訂閱或散發一個報表。 您無法建立在單一電子郵件訊息中傳遞多個報表的訂閱。 如需有關訂用帳戶的詳細資訊，請參閱[建立、 修改和刪除標準訂用帳戶&#40;原生模式的 Reporting Services&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)。  
   
 ||  
 |-|  
@@ -81,7 +81,7 @@ ms.locfileid: "36137221"
   
  如需如何設定 SharePoint 模式報表伺服器的詳細資訊，請參閱下列內容：  
   
--   [Reporting Services 服務應用程式，設定電子郵件&#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [設定 Reporting services 服務應用程式的電子郵件&#40;SharePoint 2010 和 SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [工作和權限](../security/tasks-and-permissions.md)   

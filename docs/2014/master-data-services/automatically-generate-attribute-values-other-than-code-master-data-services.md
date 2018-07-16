@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9d895f2270f28ff3da8aabfa2a8701c589b1829e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: d2c75529abee7da0550e628a1b6c2263e652fa9e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300488"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>自動產生 Code 以外的屬性值 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您希望每次套用商務規則時，自動將整數指派為值，請自動為實體的屬性自動產生值。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -76,7 +76,7 @@ ms.locfileid: "36136446"
 -   [根據商務規則驗證版本&#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [自動建立代碼&#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
+ [自動程式碼建立&#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
  [商務規則&#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
  [驗證&#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   

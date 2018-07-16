@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 caps.latest.revision: 137
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 262d4eb283d8149e5a339fe2e95954d4558b26a2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147102"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268154"
 ---
 # <a name="before-installing-failover-clustering"></a>安裝容錯移轉叢集之前
   安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集之前，您必須先選取硬體以及要執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的作業系統。 您也必須設定 Windows Server 容錯移轉叢集 (WSFC)，並檢閱要在容錯移轉叢集上執行之其他軟體的網路、安全性及考量。  
@@ -269,7 +269,7 @@ ms.locfileid: "36147102"
   
   
 ## <a name="see-also"></a>另請參閱  
- [硬體 and Software Requirements for Installing SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [硬體和 Software Requirements for Installing SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [檢查 System Configuration Checker 的參數](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [容錯移轉叢集執行個體管理及維護](../windows/failover-cluster-instance-administration-and-maintenance.md)  
   

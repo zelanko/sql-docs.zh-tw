@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
 - high availability [SQL Server], failover clustering
@@ -21,18 +20,18 @@ helpviewer_keywords:
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 caps.latest.revision: 76
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 14a25d065b617657c56ebcffa089959bf71376ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 7a93c08669f0cf3ac962fa72df89423e3cbc8d0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37251460"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn 容錯移轉叢集執行個體 (SQL Server)
-  AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 產品的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體 (FCI)」) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
+  AlwaysOn 容錯移轉叢集執行個體是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn 供應項目的一部分，會利用 Windows Server 容錯移轉叢集 (WSFC) 功能，透過伺服器執行個體層級 (「容錯移轉叢集執行個體」(FCI)) 的備援提供本機高可用性。 FCI 是跨 Windows Server 容錯移轉叢集 (WSFC) 節點且可能跨多個子網路安裝的單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在網路上，FCI 看似單一電腦上的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體，但是 FCI 提供容錯移轉，可以在目前的 WSFC 節點無法使用時，從該節點容錯移轉到另一個節點。  
   
  FCI 可以利用 [AlwaysOn 可用性群組](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)提供資料庫層級的遠端災害復原。 如需詳細資訊，請參閱[容錯移轉叢集和 AlwaysOn 可用性群組 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)。  
   
@@ -149,13 +148,13 @@ ms.locfileid: "36134107"
 |------------------------|-----------|  
 |描述失敗偵測機制和彈性的容錯移轉原則。|[容錯移轉叢集執行個體的容錯移轉原則](failover-policy-for-failover-cluster-instances.md)|  
 |描述 FCI 管理和維護的概念。|[容錯移轉叢集執行個體管理及維護](failover-cluster-instance-administration-and-maintenance.md)|  
-|描述多重子網路組態和概念|[SQL Server 多重子網路叢集 （;SQL Server)。](sql-server-multi-subnet-clustering-sql-server.md)|  
+|描述多重子網路組態和概念|[SQL Server 多重子網路叢集 （;SQL Server);](sql-server-multi-subnet-clustering-sql-server.md)|  
   
 ##  <a name="RelatedTopics"></a> 相關主題  
   
 |**主題描述**|**主題**|  
 |----------------------------|---------------|  
-|描述如何安裝新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI。|[建立新的 SQL Server 容錯移轉叢集 （;安裝程式）。](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
+|描述如何安裝新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI。|[建立新的 SQL Server 容錯移轉叢集 （;安裝程式） 」。](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |描述如何升級至 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 容錯移轉叢集。|[升級 SQL Server 容錯移轉叢集](upgrade-a-sql-server-failover-cluster-instance.md)|  
 |描述 Windows 容錯移轉叢集概念，並提供 Windows 容錯移轉叢集相關工作的連結|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]： [容錯移轉叢集概觀](http://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2： [容錯移轉叢集概觀](http://go.microsoft.com/fwlink/?LinkId=177879)|  
 |描述 FCI 節點和可用性群組複本之間的概念差異，以及使用 FCI 裝載可用性群組複本的考量。|[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  

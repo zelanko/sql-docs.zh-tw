@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - committing versions [Master Data Services]
 - versions [Master Data Services], committing
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5512a43939eb14eb7a4357cbe59928709f56d812
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b65d604e3ca82294248437b1d21b0a41f6629251
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37205768"
 ---
 # <a name="commit-a-version-master-data-services"></a>認可版本 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，您可認可模型版本，以防止模型成員及其屬性的變更。 已認可的版本無法解除鎖定。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[版本管理]** 功能區域的權限。  

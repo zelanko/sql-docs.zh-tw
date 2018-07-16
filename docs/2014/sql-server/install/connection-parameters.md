@@ -1,5 +1,5 @@
 ---
-title: 連接參數 |Microsoft 文件
+title: 連接參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], connections
 - authentication [Upgrade Advisor]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], connections
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dc99f9fc26f0e46f0f5ea0d717614bf5935f4814
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba6652a172e06c64018243acd01a6d60dcced47b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144662"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37181615"
 ---
 # <a name="connection-parameters"></a>連接參數
   若要分析特定伺服器類型 (例如 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)])，您必須選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的特定執行個體。 系統會自動選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設執行個體。 您可以變更此選擇，但一次只能選取一個執行個體供 Upgrade Advisor 分析。 如果您已加入需要驗證的伺服器類型，就必須輸入驗證模式和認證。  
@@ -46,7 +46,7 @@ ms.locfileid: "36144662"
  如果您要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請在此方塊中輸入使用者名稱。 我們建議使用者名稱擁有這部電腦的管理認證。  
   
 > [!NOTE]  
->  如果您選取 Windows 驗證時，會填入目前登入之使用者的使用者名稱**使用者名**文字方塊。  
+>  如果您選取 Windows 驗證時，會填入目前登入使用者的使用者名稱**使用者名**文字方塊。  
   
  **密碼**  
  請輸入指定之使用者的密碼。  

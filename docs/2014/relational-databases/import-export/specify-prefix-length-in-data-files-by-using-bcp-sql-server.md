@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-bulk-import-export
+ms.technology: data-movement
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server], prefix length
 - prefix length [SQL Server]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 338a19bca2f465d6af1b4f409d0563caeb71738f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 0924e829729039aec7221a8faeeff37a9e830310
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036567"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212898"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>使用 bcp 指定資料檔的前置長度 (SQL Server)
   為了讓原生格式的資料大量匯出至資料檔時，能夠有最精簡的檔案儲存方式， **bcp** 命令會在每個欄位前面都加上一個或多個字元，指出欄位的長度。 這些字元稱作 *「長度前置字元」*(Length prefix characters)。  
@@ -40,7 +39,7 @@ ms.locfileid: "36036567"
 >  以互動方式在 **bcp** 命令中指定所有欄位之後，此命令會提示您將每個欄位的回應以非 XML 格式的檔案加以儲存。 如需非 XML 格式檔案的詳細資訊，請參閱[非 XML 格式檔案 &#40;SQL Server&#41;](xml-format-files-sql-server.md)。  
   
 ## <a name="overview-of-prefix-length"></a>前置長度的概觀  
- 若要儲存欄位的前置長度，您需要有足夠的位元組來表示欄位的最大長度。 所需的位元組數目取決於檔案儲存類型、資料行的 Null 屬性，以及資料是以原生或字元格式儲存於資料檔中。 例如，`text`或`image`資料類型需要四個前置字元來儲存欄位長度，但`varchar`資料類型需要兩個字元。 在資料檔中，這些長度前置字元會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的內部二進位資料格式儲存。  
+ 若要儲存欄位的前置長度，您需要有足夠的位元組來表示欄位的最大長度。 所需的位元組數目取決於檔案儲存類型、資料行的 Null 屬性，以及資料是以原生或字元格式儲存於資料檔中。 例如，`text`或是`image`資料類型需要四個前置字元來儲存欄位長度，但`varchar`資料類型則需要兩個字元。 在資料檔中，這些長度前置字元會以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的內部二進位資料格式儲存。  
   
 > [!IMPORTANT]  
 >  在使用原生格式時，請使用長度前置詞，而不是欄位的結束字元。 原生格式資料可能會和結束字元有衝突，因為原生格式的資料檔是以 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部二進位資料格式儲存。  
@@ -65,27 +64,27 @@ ms.locfileid: "36036567"
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
 |`image` <sup>1</sup>|4|4|4|4|  
-|`datetime`|0|@shouldalert|0|@shouldalert|  
-|`smalldatetime`|0|@shouldalert|0|@shouldalert|  
-|`decimal`|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
-|`numeric`|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
-|`float`|0|@shouldalert|0|@shouldalert|  
-|`real`|0|@shouldalert|0|@shouldalert|  
-|`int`|0|@shouldalert|0|@shouldalert|  
-|`bigint`|0|@shouldalert|0|@shouldalert|  
-|`smallint`|0|@shouldalert|0|@shouldalert|  
-|`tinyint`|0|@shouldalert|0|@shouldalert|  
-|`money`|0|@shouldalert|0|@shouldalert|  
-|`smallmoney`|0|@shouldalert|0|@shouldalert|  
-|`bit`|0|@shouldalert|0|@shouldalert|  
-|`uniqueidentifier`|@shouldalert|@shouldalert|0|@shouldalert|  
-|`timestamp`|@shouldalert|@shouldalert|@shouldalert|@shouldalert|  
+|`datetime`|0|1|0|1|  
+|`smalldatetime`|0|1|0|1|  
+|`decimal`|1|1|1|1|  
+|`numeric`|1|1|1|1|  
+|`float`|0|1|0|1|  
+|`real`|0|1|0|1|  
+|`int`|0|1|0|1|  
+|`bigint`|0|1|0|1|  
+|`smallint`|0|1|0|1|  
+|`tinyint`|0|1|0|1|  
+|`money`|0|1|0|1|  
+|`smallmoney`|0|1|0|1|  
+|`bit`|0|1|0|1|  
+|`uniqueidentifier`|1|1|0|1|  
+|`timestamp`|1|1|1|1|  
 |`varchar(max)`|8|8|8|8|  
 |`varbinary(max)`|8|8|8|8|  
 |UDT (使用者定義資料類型)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> `ntext`， `text`，和`image`的未來版本將移除的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 使用`nvarchar(max)`， `varchar(max)`，和`varbinary(max)`改為。  
+ <sup>1</sup> `ntext`， `text`，以及`image`的未來版本將移除的資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這些資料類型，並規劃修改目前在使用這些資料類型的應用程式。 使用`nvarchar(max)`， `varchar(max)`，和`varbinary(max)`改。  
   
 ##  <a name="PrefixLengthsImport"></a> 大量匯入的前置長度  
  大量匯入資料時，前置長度就是原先建立資料檔時即指定的值。 如果資料檔案不是由 **bcp** 命令所建立，則長度前置字元可能不存在。 在此狀況下，可指定 0 做為前置長度。  

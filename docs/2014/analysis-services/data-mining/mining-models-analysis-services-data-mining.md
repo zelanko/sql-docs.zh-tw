@@ -1,5 +1,5 @@
 ---
-title: 採礦模型 (Analysis Services-資料採礦) |Microsoft 文件
+title: 採礦模型 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - mining models [Analysis Services]
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 203295e2c3c45c5e9d67228e5009bc130d0d49eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ea9bf0ccedda65e75928aa4cca94e65e3901d4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133585"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228378"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>採礦模型 (Analysis Services - 資料採礦)
   「採礦模型」透過將演算法套用至資料來建立，但是採礦模型不只是演算法或中繼資料容器，還是可以套用至新資料以產生預測並推斷關聯性的一組資料、統計資料及模式。  
@@ -94,7 +94,7 @@ ms.locfileid: "36133585"
   
  此外，每個採礦模型都包含兩個特殊的屬性： <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 和 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>。  
   
--   **演算法屬性** ：指定建立模型所使用的演算法。 可用的演算法取決於您所使用的提供者。 如需隨附之演算法的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱[資料採礦演算法&#40;Analysis Services-Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 屬性會套用到採礦模型，而且每一個模型只能設定一次。 您可以在稍後變更演算法，但是如果採礦模型中的某些資料行未受到您所選擇的演算法所支援，這些資料行可能會變成無效。 您一定要在變更此屬性之後重新處理模型。  
+-   **演算法屬性** ：指定建立模型所使用的演算法。 可用的演算法取決於您所使用的提供者。 如需隨附之演算法的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，請參閱[Data Mining Algorithms &#40;Analysis Services-Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)。 `Algorithm` 屬性會套用到採礦模型，而且每一個模型只能設定一次。 您可以在稍後變更演算法，但是如果採礦模型中的某些資料行未受到您所選擇的演算法所支援，這些資料行可能會變成無效。 您一定要在變更此屬性之後重新處理模型。  
   
 -   **Usage 屬性** ：定義此模型要如何使用每一個資料行。 您可以定義為資料行使用方式`Input`， `Predict`， `Predict Only`，或`Key`。 `Usage` 屬性會套用到個別採礦模型，而且必須針對模型中所包含的每一個資料行來個別設定。 如果此結構包含模型中未使用的資料行，使用方式會設定為 `Ignore`。 您想包含在採礦結構中但不想用於分析的資料範例可能包括客戶名稱或電子郵件地址。 如此一來，您可以稍後再查詢，而不需要包含在分析階段期間。  
   

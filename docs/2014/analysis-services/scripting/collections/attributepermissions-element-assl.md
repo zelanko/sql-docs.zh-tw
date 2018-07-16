@@ -1,5 +1,5 @@
 ---
-title: AttributePermissions 元素 (ASSL) |Microsoft 文件
+title: AttributePermissions 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AttributePermissions element
 ms.assetid: ac703177-5936-440e-b1a5-a254a89258bc
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 328442196ded3537b8f6926bdfd67ea8e9100c5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98869453e0ecd50301e94cf5b7034173fc7a8a5b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249038"
 ---
 # <a name="attributepermissions-element-assl"></a>AttributePermissions 元素 (ASSL)
-  包含的個別屬性權限集合[角色](../objects/role-element-assl.md)之特定維度上的項目[Cube](../objects/cube-element-assl.md)項目。  
+  包含個別的屬性權限的集合[角色](../objects/role-element-assl.md)特定維度上的項目[Cube](../objects/cube-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36136503"
 ## <a name="remarks"></a>備註  
  若為 `DimensionPermission`，這個集合只能針對每個元素包含單一 `AttributePermission`。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AttributePermissionCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.AttributePermissionCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Permission 資料類型&#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   

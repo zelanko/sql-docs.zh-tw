@@ -1,5 +1,5 @@
 ---
-title: 參數和傳回碼在執行 SQL 工作 |Microsoft 文件
+title: 參數和傳回碼中執行 SQL 工作 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
 - parameters [Integration Services]
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 949fefc6beb432eaee882b3a842279a9531f3fbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252330"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>執行 SQL 工作中的參數和傳回碼
-  SQL 陳述式和預存程序經常使用`input`參數，`output`參數和傳回碼。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，執行 SQL 工作支援 `Input`、`Output` 和 `ReturnValue` 等參數類型。 您使用`Input`類型當做輸入參數，`Output`輸出參數和`ReturnValue`的傳回碼。  
+  SQL 陳述式和預存程序經常使用`input`參數，`output`參數和傳回碼。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，執行 SQL 工作支援 `Input`、`Output` 和 `ReturnValue` 等參數類型。 您使用`Input`類型當做輸入參數，`Output`當做輸出參數，和`ReturnValue`當做傳回碼。  
   
 > [!NOTE]  
 >  只有在資料提供者支援參數時，您才能在執行 SQL 工作中使用參數。  
@@ -86,22 +86,22 @@ ms.locfileid: "36035734"
 ##  <a name="Date_and_time_data_types"></a> 搭配日期和時間資料類型使用參數  
   
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>搭配 ADO.NET 和 ADO 連接管理員使用日期和時間參數  
- 當讀取資料的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]型別，`time`和`datetimeoffset`，使用 「 執行 SQL 」 工作[!INCLUDE[vstecado](../includes/vstecado-md.md)]或 ADO 連接管理員具有下列額外需求：  
+ 讀取的資料時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]類型，`time`並`datetimeoffset`，使用 「 執行 SQL 」 工作[!INCLUDE[vstecado](../includes/vstecado-md.md)]或 ADO 連接管理員具有下列額外需求：  
   
--   如`time`資料，[!INCLUDE[vstecado](../includes/vstecado-md.md)]連接管理員要求此資料儲存在參數的參數型別`Input`或`Output`，且資料類型為`string`。  
+-   針對`time`資料[!INCLUDE[vstecado](../includes/vstecado-md.md)]連接管理員要求此資料儲存在其參數類型的參數`Input`或`Output`，且資料類型為`string`。  
   
--   如`datetimeoffset`資料，[!INCLUDE[vstecado](../includes/vstecado-md.md)]連接管理員要求此資料儲存在下列參數的其中一個：  
+-   針對`datetimeoffset`資料，[!INCLUDE[vstecado](../includes/vstecado-md.md)]連接管理員要求此資料儲存在其中一個下列參數：  
   
     -   參數類型為 `Input`，且資料類型為 `string` 的參數。  
   
-    -   參數的參數型別`Output`或`ReturnValue`，且資料類型為`datetimeoffset`， `string`，或`datetime2`。 如果您選取的參數，其資料類型為`string`或`datetime2`，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]將資料轉換成字串或 datetime2。  
+    -   參數的參數型別`Output`或是`ReturnValue`，且資料類型為`datetimeoffset`， `string`，或`datetime2`。 如果您選取的資料類型的參數`string`或是`datetime2`，[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]將資料轉換成字串或 datetime2。  
   
 -   ADO 連接管理員要求 `time` 或 `datetimeoffset` 資料必須以參數類型為 `Input` 或 `Output`，且資料類型為 `adVarWchar` 的參數儲存。  
   
  如需 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料類型以及如何將其對應到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型的詳細資訊，請參閱[資料類型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) 和 [Integration Services 資料類型](data-flow/integration-services-data-types.md)。  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>搭配 OLE DB 連接管理員使用日期和時間參數  
- 「 執行 SQL 」 工作使用 OLE DB 連接管理員時，具有特定的儲存需求的資料，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料型別， `date`， `time`， `datetime`， `datetime2`，和`datetimeoffset`。 您必須以下列其中一種參數類型儲存此資料：  
+ 「 執行 SQL 」 工作使用 OLE DB 連接管理員時，具有資料的特定儲存體需求[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料類型`date`， `time`， `datetime`， `datetime2`，和`datetimeoffset`。 您必須以下列其中一種參數類型儲存此資料：  
   
 -   NVARCHAR 資料類型的輸入參數。  
   
@@ -117,11 +117,11 @@ ms.locfileid: "36035734"
  如果資料沒有以適當的輸入或輸出參數儲存，則封裝會失敗。  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>搭配 ODBC 連接管理員使用日期和時間參數  
- 「 執行 SQL 」 工作使用 ODBC 連接管理員時，具有特定的儲存需求使用其中一個資料[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料型別， `date`， `time`， `datetime`， `datetime2`，或`datetimeoffset`。 您必須以下列其中一種參數類型儲存此資料：  
+ 「 執行 SQL 」 工作使用 ODBC 連接管理員時，具有資料的其中一個特定的儲存體需求[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]資料類型`date`， `time`， `datetime`， `datetime2`，或`datetimeoffset`。 您必須以下列其中一種參數類型儲存此資料：  
   
 -   SQL_WVARCHAR 資料類型的 `input` 參數。  
   
--   `output`與適當的資料類型，如下表中所列的參數。  
+-   `output`具有適當的資料類型下, 表中所列的參數。  
   
     |`Output` 參數類型|日期資料類型|  
     |-------------------------------|--------------------|  
@@ -156,14 +156,14 @@ ms.locfileid: "36035734"
 ##  <a name="Stored_procedures"></a> 搭配預存程序使用參數  
  執行預存程序的 SQL 命令亦可使用參數對應。 如何使用參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定，這一點與參數化查詢的規則相同。  
   
- 下表依照連接管理員類型列出 EXEC 命令的範例。 這些範例會執行 [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] 中的 **uspGetBillOfMaterials** 預存程序。 預存程序會使用`@StartProductID`和`@CheckDate``input`參數。  
+ 下表依照連接管理員類型列出 EXEC 命令的範例。 這些範例會執行 [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] 中的 **uspGetBillOfMaterials** 預存程序。 預存程序會使用`@StartProductID`並`@CheckDate``input`參數。  
   
 |連接類型|EXEC 語法|  
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](http://go.microsoft.com/fwlink/?LinkId=89462)。|  
-|ADO|如果設為 IsQueryStoredProcedure `False`， `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果設為 IsQueryStoredProcedure `True`， `uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|如果設為 IsQueryStoredProcedure `False`， `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果設為 IsQueryStoredProcedure `True`， `uspGetBillOfMaterials`|  
+|ADO|如果 IsQueryStoredProcedure 設為`False`， `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> 如果 IsQueryStoredProcedure 設為`True`， `uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|如果 IsQueryStoredProcedure 設為`False`， `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> 如果 IsQueryStoredProcedure 設為`True`， `uspGetBillOfMaterials`|  
   
  若要使用輸出參數，此語法要求您必須在每個參數標記後面加上 OUTPUT 關鍵字。 例如，下列輸出參數語法是正確的：`EXEC myStoredProcedure ? OUTPUT`。  
   
@@ -180,10 +180,10 @@ ms.locfileid: "36035734"
 |---------------------|-----------------|  
 |EXCEL 和 OLEDB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> 如需 ODBC CALL 語法的詳細資訊，請參閱 MSDN Library 之《ODBC 程式設計人員參考》中的主題 [程序參數](http://go.microsoft.com/fwlink/?LinkId=89462)。|  
-|ADO|如果設為 IsQueryStoreProcedure `False`， `EXEC ? = myStoredProcedure 1`<br /><br /> 如果設為 IsQueryStoreProcedure `True`， `myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|設定 IsQueryStoreProcedure 設`True`。<br /><br /> `myStoredProcedure`|  
+|ADO|如果 IsQueryStoreProcedure 設為`False`， `EXEC ? = myStoredProcedure 1`<br /><br /> 如果 IsQueryStoreProcedure 設為`True`， `myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|將 IsQueryStoreProcedure 設為`True`。<br /><br /> `myStoredProcedure`|  
   
- 在上表顯示的語法中，「執行 SQL」工作使用 [直接輸入] 來源類型執行預存程序。 「執行 SQL」工作也可以使用 [檔案連接] 來源類型執行預存程序。 不論 「 執行 SQL 」 工作使用**直接輸入**或**檔案連接**來源類型，請使用參數的`ReturnValue`實作傳回碼的型別。 如需如何設定「執行 SQL」工作所執行之 SQL 陳述式來源類型的詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)。  
+ 在上表顯示的語法中，「執行 SQL」工作使用 [直接輸入] 來源類型執行預存程序。 「執行 SQL」工作也可以使用 [檔案連接] 來源類型執行預存程序。 不論 「 執行 SQL 」 工作是使用**直接輸入**或是**檔案連接**來源類型，請使用參數的`ReturnValue`實作傳回碼的型別。 如需如何設定「執行 SQL」工作所執行之 SQL 陳述式來源類型的詳細資訊，請參閱[執行 SQL 工作編輯器 &#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)。  
   
  如需搭配 Transact-SQL 預存程序使用傳回碼的詳細資訊，請參閱 [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql)。  
   
@@ -207,6 +207,6 @@ ms.locfileid: "36035734"
   
 ## <a name="see-also"></a>另請參閱  
  [執行 SQL 工作](control-flow/execute-sql-task.md)   
- [中的結果集執行 SQL 工作](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
+ [執行 SQL 工作中的結果集](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql11.rtp.rptdesigner.placeholderproperties.font.f1
 - "10118"
@@ -18,15 +18,15 @@ f1_keywords:
 - sql11.rtp.rptdesigner.textproperties.font.f1
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6c3add2546128bedffdcbeb14c6cc819f6318871
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: b395410bfe5a5a8a1dad97260c766500c0e814e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294148"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>格式化文字和預留位置 (報表產生器及 SSRS)
   文字方塊可以是資料區內包含文字的報表項目或個別資料格、導出欄位、資料庫中欄位的指標，或是所有這三個項目的組合。 您可以混合字型和色彩、加入粗體和斜體樣式，以及使用對齊和首行縮排等段落樣式。 您可以格式化整個文字方塊，也可以格式化文字方塊內的特定文字、數字、運算式或欄位。  
@@ -49,7 +49,7 @@ ms.locfileid: "36146885"
   
 -   從 **[報表資料]** 窗格拖曳欄位，並將其放置到文字方塊中。 如果您拖曳報表主體上任何其他位置的運算式，就會建立包含預留位置的新文字方塊。 這個預留位置的值，將是對應至已卸除之欄位的欄位運算式。  
   
--   以滑鼠右鍵按一下文字方塊中的任一處，然後選取 [插入預留位置]。 您可以在 **[預留位置屬性]** 對話方塊中，指定運算式做為預留位置的值。 如需詳細資訊，請參閱[預留位置屬性對話方塊、 一般&#40;報表產生器及 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)。  
+-   以滑鼠右鍵按一下文字方塊中的任一處，然後選取 [插入預留位置]。 您可以在 **[預留位置屬性]** 對話方塊中，指定運算式做為預留位置的值。 如需詳細資訊，請參閱 <<c0> [ 預留位置屬性對話方塊、 一般&#40;報表產生器及 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)。</c0>  
   
 -   將任何簡單或複雜的運算式輸入至文字方塊。 例如，如果您在文字方塊中輸入 **Name: [Name]** ， **[Name]** 文字將會顯示為代表運算式 `=Fields!Name.Value`的預留位置。  
   
@@ -81,6 +81,6 @@ ms.locfileid: "36146885"
  [清單 &#40;報表產生器及 SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [預留位置屬性對話方塊、一般 &#40;報表產生器及 SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [匯出至 Microsoft Excel &#40;報表產生器及 SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [文字方塊&#40;報表產生器和 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
+ [文字方塊&#40;報表產生器及 SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

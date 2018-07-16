@@ -1,5 +1,5 @@
 ---
-title: 資料採礦查詢工作和使用說明 |Microsoft 文件
+title: 資料採礦查詢工作和使用說明 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 15adaa8227a80d04cbdbdaa379dfccc4f2f03acf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e79d4ee05472de8be071cd47c1868d649f7e247b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257454"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>資料採礦查詢工作和使用說明
   建立查詢的功能對於使用資料採礦模型十分重要。 本節提供一些範例連結，這些範例示範如何透過使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 和 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中提供的工具針對資料採礦模型建立查詢。 如果您需要有關資料採礦查詢的作用或者可建立之不同查詢類型的詳細資訊，請參閱 [資料採礦查詢](data-mining-queries.md)。  

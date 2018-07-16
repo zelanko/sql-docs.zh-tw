@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.selecttableandkeys.f1
 ms.assetid: 01e0495f-de35-4607-ba19-0539e801e8fd
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9a62ab620db99e06f4e971e4bfe488f1741dd510
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 79d3fbb53d59c9a85ba7246e7e20179eb25085e9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136897"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292798"
 ---
 # <a name="select-a-dimension-table-and-keys-slowly-changing-dimension-wizard"></a>選取維度資料表與索引鍵 (緩時變維度精靈)
   使用 **[選取維度資料表與索引鍵]** 頁面，即可選取要載入的維度資料表。 將資料流程的資料行對應至即將載入的資料行。  

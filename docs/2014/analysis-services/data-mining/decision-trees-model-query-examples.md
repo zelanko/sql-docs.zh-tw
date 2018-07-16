@@ -1,5 +1,5 @@
 ---
-title: 決策樹模型查詢範例 |Microsoft 文件
+title: 決策樹模型查詢範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - decision tree algorithms [Analysis Services]
 - content queries [DMX]
 - decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 25
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56763f6e1b207e0f676c08e5bbca7066b680dcda
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 734402a21381ef6bf60eec5860b887ae3e0a73f5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134744"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261514"
 ---
 # <a name="decision-trees-model-query-examples"></a>決策樹模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，或是建立預測查詢來使用模型中的模式，為新的資料進行預測。 例如，決策樹模型的內容查詢可能會提供有關每一樹狀結構層上之案例數的統計資料，或是區分案例的規則。 或者，預測查詢會將此模型對應到新的資料，以便產生建議、分類等等。 您也可以使用查詢來擷取有關模型的中繼資料。  
@@ -70,7 +70,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  此查詢會傳回類型 2 的所有節點，這些節點是代表特定可預測屬性之樹狀結構的最上層節點。  
   
 > [!NOTE]  
->  資料行， `CHILDREN_CARDINALITY`，必須括在括號內具有相同名稱的 MDX 保留關鍵字區別。  
+>  資料行， `CHILDREN_CARDINALITY`，必須加上方括號，以便與同名的 MDX 保留關鍵字區分。  
   
 ```  
 SELECT MODEL_NAME, NODE_NAME, NODE_CAPTION,   
@@ -87,10 +87,10 @@ WHERE NODE_TYPE = 2
   
  這些結果代表什麼意思？ 在決策樹模型中，特定節點的基數會告訴您該節點擁有多少下層子節點。 這個節點的基數是 5，表示此模型已將潛在自行車買主的目標母體分成 5 個子群組。  
   
- 下列相關查詢會傳回這五個子群組的子節點，連同這些子節點中屬性和值的分佈。 例如支援、 機率和變異數的統計資料會儲存在巢狀資料表中，因為`NODE_DISTRIBUTION`，這個範例會使用`FLATTENED`關鍵字來輸出巢狀的資料表資料行。  
+ 下列相關查詢會傳回這五個子群組的子節點，連同這些子節點中屬性和值的分佈。 例如支援、 機率和變異數的統計資料會儲存在巢狀資料表中，因為`NODE_DISTRIBUTION`，此範例會使用`FLATTENED`關鍵字來輸出巢狀的資料表資料行。  
   
 > [!NOTE]  
->  巢狀的資料表資料行`SUPPORT`，必須括在方括號，以便與同名的保留關鍵字區分。  
+>  巢狀的資料表資料行中， `SUPPORT`，必須加上方括號，以便與同名的保留關鍵字區分。  
   
 ```  
 SELECT FLATTENED NODE_NAME, NODE_CAPTION,  
@@ -106,10 +106,10 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
 |----------------|-------------------|-----------------------|------------------------|-------------|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
-|00000000100|Number Cars Owned = 0|Bike Buyer|@shouldalert|1875|  
+|00000000100|Number Cars Owned = 0|Bike Buyer|1|1875|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|Missing|0|  
 |00000000101|Number Cars Owned = 3|Bike Buyer|0|678|  
-|00000000101|Number Cars Owned = 3|Bike Buyer|@shouldalert|473|  
+|00000000101|Number Cars Owned = 3|Bike Buyer|1|473|  
   
  從這些結果中，您所見的客戶購買自行車 (`[Bike Buyer]` = 1)，有 1067 位客戶擁有 0 輛汽車 473 客戶擁有 3 輛汽車。  
   
@@ -189,7 +189,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
 |Bike Buyer|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|$VARIANCE|$STDEV|  
 |----------------|--------------|------------------|--------------------------|---------------|------------|  
-|@shouldalert|2540|0.634849242045644|0.013562168281562|0|0|  
+|1|2540|0.634849242045644|0.013562168281562|0|0|  
 |0|1460|0.364984174579377|0.00661336932550915|0|0|  
 ||0|0.000166583374979177|0.000166583374979177|0|0|  
   
@@ -250,7 +250,7 @@ WHERE NODE_TYPE = 25
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|@shouldalert|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   
@@ -265,10 +265,10 @@ WHERE NODE_TYPE = 25
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
 |[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|指示指定的節點是否包含目前案例。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回加權機率。|  
-|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
+|[[Predictassociation] &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|預測關聯資料集的成員資格。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回與目前預測值相關之值的資料表。|  
 |[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|傳回每個案例的 Node_ID。|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
+|[[Predictprobability] &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回預測值的機率。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回指定之資料行的預測標準差。|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回指定之資料行的變異數。|  

@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - snapshots [SQL Server replication], alternate folder locations
 - snapshot replication [SQL Server], alternate folder locations
 - alternate snapshot folders [SQL Server replication]
 ms.assetid: 437553b0-19df-4522-8f27-06b5bc747c69
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a227b6226bfa3a38cd0566b64f8aa68aad42770f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d6981397103a409600b3eb33880bb6e2299d47cf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262444"
 ---
 # <a name="alternate-snapshot-folder-locations"></a>替代快照集資料夾位置
   替代的快照集位置可以讓您將快照集檔案儲存到預設位置以外的地方，通常是位於「散發者」。 替代位置可以位於其他伺服器、網路磁碟機或抽取式媒體 (例如 CD-ROM 或抽取式磁碟)。  

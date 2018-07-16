@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.planeditor.f1
 - sql12.swb.maint.subplaneditor.f1
 - sql12.swb.maint.maintplanproperties.optimizations.f1
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6f2ff799df15b9f9521ddc402d20a7a7ae27426d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 6936c9e850c36c087271c6f6f07b0041ecdd9c16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37188565"
 ---
 # <a name="maintenance-plan-design-tab"></a>維護計畫 (設計索引標籤)
   使用 [維護計畫 (設計索引標籤)] 可指定維護計畫及其子計畫的屬性。 將工作從工具箱拖曳至計畫設計師。 在工作群組按一下滑鼠右鍵，即可建立分支執行路徑。 維護計畫會儲存為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，然後由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業執行。  

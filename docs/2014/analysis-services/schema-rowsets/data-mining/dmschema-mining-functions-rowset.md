@@ -1,5 +1,5 @@
 ---
-title: DMSCHEMA_MINING_FUNCTIONS 資料列集 |Microsoft 文件
+title: DMSCHEMA_MINING_FUNCTIONS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - DMSCHEMA_MINING_FUNCTIONS rowset
 ms.assetid: 9ace7493-a7b1-45ca-93de-3cb2f3597017
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5a60e18a57c15976e7a7bd5d5e31729e255869a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b726c81df5a6085ee52b177d95b4917d7cb8be1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136509"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37169641"
 ---
 # <a name="dmschemaminingfunctions-rowset"></a>DMSCHEMA_MINING_FUNCTIONS 資料列集
-  描述可在伺服器上執行資料採礦演算法所支援之資料採礦函數[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
+  描述正在執行的伺服器上可用的資料採礦演算法所支援的資料採礦功能[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  `DMSCHEMA_MINING_FUNCTIONS`資料列集包含下列資料行。  

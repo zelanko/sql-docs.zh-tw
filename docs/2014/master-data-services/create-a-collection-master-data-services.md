@@ -8,33 +8,33 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
 caps.latest.revision: 7
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4a278341b6ce997a6bad9b84e8e411d719c09c85
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 84641634751ff54ee5af2f494e548d6dac193981
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134660"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227708"
 ---
 # <a name="create-a-collection-master-data-services"></a>建立集合 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要建立分頁成員和合併成員的一般清單時，請建立集合。 集合不必包含實體的所有成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
   
 -   針對實體的集合模型物件，您必須至少擁有 **[更新]** 權限。  
   
--   您必須啟用明確階層和集合的實體。 如需詳細資訊，請參閱[啟用實體的明確階層和集合&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。  
+-   您必須啟用明確階層和集合的實體。 如需詳細資訊，請參閱 <<c0> [ 啟用明確階層和集合的實體&#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)。</c0>  
   
 ### <a name="to-create-a-collection"></a>若要建立集合  
   

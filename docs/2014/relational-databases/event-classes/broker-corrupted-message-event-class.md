@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Corrupted Message event class
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 22d863ee7fe3fb0ed5fd8f025ceff692f92448df
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 9b4585e093505e684efc694e450e5e37ceca168b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292768"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message 事件類別
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會建立 **Broker:Corrupted Message** 事件。  
@@ -55,7 +55,7 @@ ms.locfileid: "36033293"
 |**SPID**|**int**|由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 指派給用戶端關聯之處理序的伺服器處理序識別碼。|12|是|  
 |**StartTime**|**datetime**|事件啟動的時間 (如果有的話)。|14|是|  
 |**State**|**int**|指出產生事件的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 原始程式碼內的位置。 每個可能產生此事件的位置都有不同的狀態碼。 Microsoft 支援工程師可以使用此狀態碼來尋找產生事件的位置。|30|否|  
-|**TextData**|**ntext**|偵測到的損毀之描述。|@shouldalert|是|  
+|**TextData**|**ntext**|偵測到的損毀之描述。|1|是|  
 |**Transaction ID**|**bigint**|系統指派的交易識別碼。|4|否|  
   
  此事件的 **TextData** 資料行包含描述此訊息問題的訊息。  

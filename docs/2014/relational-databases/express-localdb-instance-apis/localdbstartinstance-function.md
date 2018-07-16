@@ -1,5 +1,5 @@
 ---
-title: LocalDBStartInstance 函數 |Microsoft 文件
+title: LocalDBStartInstance 函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ topic_type:
 - apiref
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 caps.latest.revision: 17
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e484d362d5bc25a5aeddd6ed2ad9fee417837f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 4e2ecc8dbf59ddf108b8090bbcb5ad784b09fe67
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37242818"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 函數
   啟動指定的 SQL Server Express LocalDB 執行個體。  
@@ -55,7 +55,7 @@ HRESULT LocalDBStartInstance(
  [輸出] 儲存 LocalDB 執行個體連接字串的緩衝區。  
   
  *lpcchSqlConnection*  
- [輸入/輸出]輸入包含大小的*wszSqlConnection*以字元為單位，包括任何尾端的 null 值的緩衝區。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。  
+ [輸入/輸出]輸入包含的大小*wszSqlConnection*以字元為單位，包括任何尾端的 null 值的緩衝區。 輸出時，如果指定的緩衝區大小太小，則會包含所需的緩衝區大小 (以字元為單位)，包括尾端的 Null。  
   
 ## <a name="returns"></a>傳回值  
  S_OK  
@@ -119,7 +119,7 @@ HRESULT LocalDBStartInstance(
 |存在|NULL|不允許；輸入不正確。|傳回的結果為 LOCALDB_ERROR_INVALID_PARAMETER。|  
 |存在|存在|使用者想要啟動執行個體，且在啟動後，需要管道名稱以連接至此執行個體。|檢查緩衝區大小、啟動執行個體，然後傳回緩衝區中的管道名稱。 <br />緩衝區大小引數會傳回 “server=” 字串的長度，但不包括結束的 Null。|  
   
- 如需使用 LocalDB API 的程式碼範例，請參閱[SQL Server Express LocalDB 參考](../sql-server-express-localdb-reference.md)。  
+ 使用 LocalDB API 的程式碼範例，請參閱 < [SQL Server Express LocalDB 參考](../sql-server-express-localdb-reference.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Express LocalDB 標頭和版本資訊](sql-server-express-localdb-header-and-version-information.md)  

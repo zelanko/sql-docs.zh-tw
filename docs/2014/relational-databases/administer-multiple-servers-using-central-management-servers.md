@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - multiserver queries
 - central management server
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7d482798e8e0d89fc37b2259d718c98e167ee313
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bb33b06555e5804b58bb39b5d02cce349cb8b7c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279624"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>使用中央管理伺服器管理多部伺服器
   您可以透過指定中央管理伺服器並建立伺服器群組來管理多部伺服器。  

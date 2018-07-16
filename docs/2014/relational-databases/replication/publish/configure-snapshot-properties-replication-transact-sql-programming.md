@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - snapshots [SQL Server replication], properties
 ms.assetid: 978d150f-8971-458a-ab2b-3beba5937b46
 caps.latest.revision: 36
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 0c95dd5654bdda8604567902e2594c9a95b56710
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 161ff6dadbd3917e75609e60f9e1a602b6437028
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134146"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292248"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>設定快照集屬性 (複寫 Transact-SQL 程式設計)
   可以使用複寫預存程序來以程式設計的方式定義及修改快照集屬性，使用的預存程序將取決於發行集的類型而定。  

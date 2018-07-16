@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupBinding 資料類型 (out out-of-line) (ASSL) |Microsoft 文件
+title: MeasureGroupBinding 資料類型 (非正規-out-of-line) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupBinding data type
 ms.assetid: e6c65597-89ac-457e-a0e5-01d85449a1b7
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4c467267028e60910be01466754648e216c685d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1b67e063402a1488f77c3fc8bf43e54f580c513
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034941"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291504"
 ---
 # <a name="measuregroupbinding-data-type-out-of-line-assl"></a>MeasureGroupBinding 資料類型 (out-of-line) (ASSL)
   定義代表量值群組之繫結的基本資料類型。  
@@ -65,7 +65,7 @@ ms.locfileid: "36034941"
 |衍生的元素|請參閱[繫結](binding-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱 < > 一節，超出繫結中,[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需詳細資訊，請參閱一節，共線的繫結，在[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 32b6073a1149303187668e83e666b486d0789c6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 3abe4aaf030ff27be19cc081f8b2d6d87029055e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036288"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232560"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>重新執行追蹤的考量 (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 無法重新執行下列種類的追蹤：  
