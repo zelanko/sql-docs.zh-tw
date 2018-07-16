@@ -1,13 +1,11 @@
 ---
-title: .NET Framework 中的 SQL Server 資料類型 |Microsoft 文件
+title: .NET Framework 中的 SQL Server 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 09dff25c6f125c70a6304823ec98f80dfd744632
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: a3f476b727527e1c2616106451409c98870f9810
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137320"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355000"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>.NET Framework 的 SQL Server 資料類型
   `SqlTypes` 程式庫是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 基底類別庫的一部分。 其設計為提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中之資料類型具有相同語意及精確度的資料類型。 本主題描述 .NET Framework 程式設計人員的新語意，並介紹 `System.Data.SqlTypes` 程式庫隨附之 `System.Data` 命名空間中實作的類型。  

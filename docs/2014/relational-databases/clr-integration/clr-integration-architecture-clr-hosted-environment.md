@@ -1,13 +1,11 @@
 ---
-title: CLR 主控環境 |Microsoft 文件
+title: CLR 主控環境 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -29,15 +27,15 @@ helpviewer_keywords:
 - HPAs [CLR integration]
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 caps.latest.revision: 59
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 06301efa5022c5ed686a4db97951c62bc85daf35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: ea3ca5dbbc51a7e675d1876114209d37fc928c89
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031046"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354690"
 ---
 # <a name="clr-hosted-environment"></a>CLR 主控環境
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework Common Language Runtime (CLR) 是一個執行許多新式程式語言的環境，包括 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 和 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++。 CLR 具備記憶體回收的記憶體、先佔式執行緒、中繼資料服務 (類型反映)、程式碼可驗證性以及程式碼存取安全性。 CLR 會使用中繼資料來找出並載入類別、配置記憶體中的執行個體、解析方法引動過程、產生機器碼、強制使用安全性，和設定執行階段內容界限。  
@@ -71,7 +69,7 @@ ms.locfileid: "36031046"
  存取資料表或資料行之類的資料庫物件時，在資料庫中執行的使用者程式碼必須遵循 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證和授權規則。 此外，資料庫管理員應該能夠從資料庫中執行的使用者程式碼控制作業系統資源的存取權，例如檔案和網路存取權。 由於 Managed 程式語言 (不像 Transact-SQL 之類的非 Managed 語言) 提供 API 來存取這類資源，因此這變得相當重要。 系統必須為使用者程式碼提供一個安全的方式來存取 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 處理序外部的電腦資源。 如需相關資訊，請參閱 [CLR Integration Security](security/clr-integration-security.md)。  
   
 ###### <a name="performance"></a>效能  
- 在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中執行的 Managed 使用者程式碼應該擁有可與在伺服器外部執行之相同程式碼相比的計算效能。 從 Managed 使用者程式碼進行資料庫存取的速度不如原生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 快。 如需詳細資訊，請參閱[CLR 整合的效能](clr-integration-architecture-performance.md)。  
+ 在 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 中執行的 Managed 使用者程式碼應該擁有可與在伺服器外部執行之相同程式碼相比的計算效能。 從 Managed 使用者程式碼進行資料庫存取的速度不如原生 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 快。 如需詳細資訊，請參閱 < [CLR 整合的效能](clr-integration-architecture-performance.md)。  
   
 ## <a name="clr-services"></a>CLR Services  
  CLR 提供數種服務協助達成 CLR 與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 整合的設計目標。  
@@ -80,7 +78,7 @@ ms.locfileid: "36031046"
  類型安全程式碼是只以妥善定義的方式存取記憶體結構的程式碼。 例如，在有一個有效的物件參考上，類型安全程式碼可以存取和實際欄位成員對應的固定位移上的記憶體。 然而，如果程式碼存取的記憶體，是位於該物件所屬記憶體範圍以內或以外的任意位移時，即不是類型安全。 當組件載入 CLR 時，在要使用 Just-In-Time (JIT) 編譯來編譯的 MSIL 前，執行階段會執行一個檢查程式碼來判斷其類型安全性的驗證階段。 成功通過此驗證的程式碼稱為可驗證類型安全 (verifiably type-safe) 的程式碼。  
   
 ###### <a name="application-domains"></a>應用程式網域  
- CLR 支援應用程式網域的概念，做為主機處理序內的執行區域，其中可以載入與執行 Managed 程式碼組件。 應用程式網域界限提供組件間的隔離。 組件會透過靜態變數與資料成員的可見性，以及動態呼叫程式碼的能力隔離。 應用程式網域也是載入和卸載程式碼的機制。 程式碼只能透過卸載應用程式網域來從記憶體卸載。 如需詳細資訊，請參閱[應用程式定義域和 CLR 整合安全性](../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)。  
+ CLR 支援應用程式網域的概念，做為主機處理序內的執行區域，其中可以載入與執行 Managed 程式碼組件。 應用程式網域界限提供組件間的隔離。 組件會透過靜態變數與資料成員的可見性，以及動態呼叫程式碼的能力隔離。 應用程式網域也是載入和卸載程式碼的機制。 程式碼只能透過卸載應用程式網域來從記憶體卸載。 如需詳細資訊，請參閱 <<c0> [ 應用程式定義域和 CLR 整合安全性](../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)。  
   
 ###### <a name="code-access-security-cas"></a>程式碼存取安全性 (CAS)  
  CLR 安全性系統提供一種方式來控制 Managed 程式碼可以透過指派權限給程式碼來執行的作業種類。 程式碼存取權限是根據程式碼識別指派的 (例如，組件的簽章或程式碼的來源)。  
@@ -89,7 +87,7 @@ ms.locfileid: "36031046"
   
  如果 .NET Framework 中的 Managed API 會公開受程式碼存取權限保護之資源的作業，則 API 將會在存取資源前要求權限。 此要求會使 CLR 安全性系統在呼叫堆疊中觸發每個程式碼單位 (組件) 的完整檢查。 只有在整個呼叫鏈結都有權限時，才會存取要授與的資源。  
   
- 請注意，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 CLR 主控環境內部，不支援使用 Reflection.Emit API 動態產生 Managed 程式碼的功能。 此種程式碼將沒有要執行的 CAS 權限，因此會在執行階段失敗。 如需詳細資訊，請參閱[CLR 整合程式碼存取安全性](security/clr-integration-code-access-security.md)。  
+ 請注意，在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的 CLR 主控環境內部，不支援使用 Reflection.Emit API 動態產生 Managed 程式碼的功能。 此種程式碼將沒有要執行的 CAS 權限，因此會在執行階段失敗。 如需詳細資訊，請參閱 < [CLR 整合程式碼存取安全性](security/clr-integration-code-access-security.md)。  
   
 ###### <a name="host-protection-attributes-hpas"></a>主機保護屬性 (HPA)  
  CLR 會提供一個機制來使用 CLR 主機可能需要的某些屬性，為屬於 .NET Framework 之一部分的 Managed API 加註。 這類屬性的範例包括：  
@@ -100,7 +98,7 @@ ms.locfileid: "36031046"
   
 -   ExternalProcessMgmt，它可指出 API 是否會公開控制主機處理序的方法。  
   
- 當提供了這些屬性時，主機可以指定 HPA (如 SharedState 屬性) 的清單，在主控環境內應該不允許使用這些 HPA。 在此情況下，CLR 會拒絕使用者程式碼嘗試呼叫 HPA 在禁止清單中加註的 API。 如需詳細資訊，請參閱[主機保護屬性和 CLR 整合程式設計](../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)。  
+ 當提供了這些屬性時，主機可以指定 HPA (如 SharedState 屬性) 的清單，在主控環境內應該不允許使用這些 HPA。 在此情況下，CLR 會拒絕使用者程式碼嘗試呼叫 HPA 在禁止清單中加註的 API。 如需詳細資訊，請參閱 <<c0> [ 主機保護屬性和 CLR 整合程式設計](../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)。  
   
 ## <a name="how-sql-server-and-the-clr-work-together"></a>SQL Server 和 CLR 如何一起運作  
  本節討論 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 如何整合 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 CLR 的執行緒、排程、同步處理以及記憶體管理模型。 特別是，本節會按照延展性、可靠性以及安全性目標來檢查整合效果。 當 CLR 裝載到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 內部時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 實質上會當做它的作業系統。 CLR 會針對執行緒、排程、同步處理與記憶體管理，呼叫 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 所實作的低階常式。 這些是其餘 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 引擎所使用的相同原始物件。 此方法提供數個延展性、可靠性與安全性優勢。  
@@ -145,7 +143,7 @@ ms.locfileid: "36031046"
   
  基於這些考量，我們不鼓勵使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中所使用之類別的靜態變數和靜態資料成員。 對於 SAFE 和 EXTERNAL_ACCESS 組件而言，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會在 CREATE ASSEMBLY 時檢查組件的中繼資料；如果發現有使用靜態資料成員和變數，則會讓這類組件的建立作業失敗。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也不允許呼叫利用 `SharedState`、`Synchronization` 和 `ExternalProcessMgmt` 主機保護屬性加註的 .NET Framework API。 這會讓 SAFE 和 EXTERNAL_ACCESS 組件無法呼叫可啟用共用狀態、執行同步處理，以及影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序完整性的任何 API。 如需詳細資訊，請參閱[CLR 整合程式設計模型限制](database-objects/clr-integration-programming-model-restrictions.md)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 也不允許呼叫利用 `SharedState`、`Synchronization` 和 `ExternalProcessMgmt` 主機保護屬性加註的 .NET Framework API。 這會讓 SAFE 和 EXTERNAL_ACCESS 組件無法呼叫可啟用共用狀態、執行同步處理，以及影響 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序完整性的任何 API。 如需詳細資訊，請參閱 < [CLR Integration Programming Model Restrictions&lt](database-objects/clr-integration-programming-model-restrictions.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [CLR 整合安全性](security/clr-integration-security.md)   
