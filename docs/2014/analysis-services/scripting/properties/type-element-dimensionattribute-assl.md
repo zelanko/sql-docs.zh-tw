@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (DimensionAttribute) (ASSL) |Microsoft 文件
+title: 輸入元素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 450f25e039a4efbc2a6ae4175faf396bfbfa9ff7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293468"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 元素 (DimensionAttribute) (ASSL)
   包含屬性的類型。  
@@ -64,7 +64,7 @@ ms.locfileid: "36136507"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*帳戶*|此屬性代表帳戶的名稱。|  
 |*AccountNumber*|此屬性代表帳戶的號碼。|  
@@ -157,7 +157,7 @@ ms.locfileid: "36136507"
 |*GeoCentroidZ*|屬性代表地理區域的 Z 軸距心。|  
 |*HalfYears*|屬性代表半年度。|  
 |*HalfYearsOfYear*|屬性代表年中的半年度序數。|  
-|*小時*|此屬性代表小時。|  
+|*時數*|此屬性代表小時。|  
 |*Id*|此屬性代表識別碼或索引鍵。|  
 |*IsHoliday*|此屬性會指出日期是否為假日。|  
 |*ISO8601DayOfWeek*|此屬性代表 ISO 8601 日曆中之週的日序數。|  
@@ -223,7 +223,7 @@ ms.locfileid: "36136507"
 |*郵遞區號*|屬性代表郵遞區號。|  
 |*產品*|屬性代表產品。|  
 |*ProductBrand*|此屬性代表產品品牌。|  
-|*ProductCategory*|此屬性代表產品類別目錄。|  
+|*[Productcategory]*|此屬性代表產品類別目錄。|  
 |*ProductGroup*|此屬性代表產品群組。|  
 |*ProductSKU*|此屬性代表產品存貨保持單元 (SKU)。|  
 |*ProjectCode*|此屬性代表專案代碼。|  
@@ -300,11 +300,11 @@ ms.locfileid: "36136507"
   
  在「分析管理物件」(AMO) 物件模型中對應至 `Type` 允許值的列舉是 <xref:Microsoft.AnalysisServices.AttributeType>。  
   
- 對應目的父代的項目`Type`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 對應至父系的元素`Type`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性項目&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
- [維度元素&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
+ [Attributes 項目&#40;ASSL&#41;](../collections/attributes-element-assl.md)   
+ [維度項目&#40;ASSL&#41;](../objects/dimension-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   
   

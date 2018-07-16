@@ -1,5 +1,5 @@
 ---
-title: Master Data Services 概觀 |Microsoft 文件
+title: Master Data Services 概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Master Data Services, overview
 - Master Data Services
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 caps.latest.revision: 24
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6ba63353b1a5fba1e5853f641cc6217002f0c805
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 121113386ac42e689b2b8f73e60642c868c170f1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329948"
 ---
 # <a name="master-data-services-overview"></a>Master Data Services 概觀
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，此模型是您主要資料結構中的最上層容器。 您可以建立模型來管理各種類似資料分類，例如管理線上產品資料組。 模型包含一或多個實體，而實體又包含成員，亦即資料記錄。  
@@ -39,7 +39,7 @@ ms.locfileid: "36137381"
   
  例如產品實體在費用與權數上可能會有沒有特定格式的屬性。 在包含由色彩實體成員值入值的色彩中，則有網域屬性。 此主要色彩清單會用為產品實體的屬性值。  
   
- ![具有色彩網域型屬性的 [產品] 實體](../../2014/master-data-services/media/mds-productentity-colorattribute.png "Product 實體具有色彩網域型屬性")  
+ ![具有色彩網域型屬性的 [產品] 實體](../../2014/master-data-services/media/mds-productentity-colorattribute.png "具有色彩網域型屬性的 [產品] 實體")  
   
  衍生的階層由模型中實體之間的關聯性而來。 這些是網域屬性關聯性。 例如，在產品模型中可能會有色彩衍生階層來自色彩與產品實體之間的關聯性。  
   
@@ -66,9 +66,9 @@ ms.locfileid: "36137381"
 |如有需要，建立明確階層|如果您想要建立的階層不是以層級為基礎且包含單一實體的成員，可以建立明確階層。|[明確階層&#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)<br /><br /> [建立明確階層&#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
 |如有需要，建立集合|如果您想要檢視成員的不同群組進行報告或分析，而且不需要完整的階層，請建立集合。<br /><br /> 注意：如果使用者至少擁有集合模型物件的 [更新] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]**權限且可存取 [總管]****功能區域，他們就可以在** 中建立集合。|[集合&#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)<br /><br /> [建立集合&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)|  
 |建立使用者定義的中繼資料|若要描述模型物件，請將使用者定義的中繼資料加入至模型。 中繼資料可能包含物件擁有者或資料來源。|[中繼資料&#40;Master Data Services&#41;](../../2014/master-data-services/metadata-master-data-services.md)<br /><br /> [新增中繼資料&#40;Master Data Services&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)|  
-|鎖定模型版本以及指派版本旗標|鎖定模型版本，以防止系統管理員以外的使用者變更成員。 在版本的資料成功通過商務規則驗證之後，您就可以認可版本，防止所有使用者變更成員。<br /><br /> 建立版本旗標，並將它指派至模型。 旗標可幫助使用者和訂閱系統來識別所要使用之模型的版本。|[版本&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)<br /><br /> [鎖定版本&#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)<br /><br /> [建立版本旗標&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
-|建立訂閱檢視|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 若要讓訂閱系統取用主要資料，請建立訂閱檢視，在  資料庫中建立標準檢視。|[匯出資料&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)<br /><br /> [建立訂閱檢視&#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
-|設定使用者和群組的權限|您無法將使用者和群組的權限從測試環境複製到實際執行環境。 但可以使用測試環境來判斷最終要用於實際執行的安全性。|[安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)<br /><br /> [新增群組&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)<br /><br /> [將使用者新增&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)|  
+|鎖定模型版本以及指派版本旗標|鎖定模型版本，以防止系統管理員以外的使用者變更成員。 在版本的資料成功通過商務規則驗證之後，您就可以認可版本，防止所有使用者變更成員。<br /><br /> 建立版本旗標，並將它指派至模型。 旗標可幫助使用者和訂閱系統來識別所要使用之模型的版本。|[版本&#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)<br /><br /> [鎖定版本， &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)<br /><br /> [建立版本旗標&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-version-flag-master-data-services.md)|  
+|建立訂閱檢視|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 若要讓訂閱系統取用主要資料，請建立訂閱檢視，在  資料庫中建立標準檢視。|[將資料匯出&#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)<br /><br /> [建立訂閱檢視&#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
+|設定使用者和群組的權限|您無法將使用者和群組的權限從測試環境複製到實際執行環境。 但可以使用測試環境來判斷最終要用於實際執行的安全性。|[安全性 &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)<br /><br /> [新增群組&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)<br /><br /> [新增使用者&#40;Master Data Services&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)|  
   
  準備就緒時，您可以將包含或不含資料的模型部署至實際執行環境。 如需詳細資訊，請參閱[部署模型 &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)。  
   

@@ -1,5 +1,5 @@
 ---
-title: 指定來源資訊 （資料分割精靈） |Microsoft 文件
+title: 指定來源資訊 （資料分割精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.specifydsvandfacttables.f1
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d29067eabeb7050ec033cc5d274f9f5373c97ed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c6f60f8470c45e8dbc97de12d7a13b19bea9becb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146370"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310448"
 ---
 # <a name="specify-source-information-partition-wizard"></a>指定來源資訊 (資料分割精靈)
   使用 [指定來源資訊] 頁面，即可選取要在其中建立資料分割 (以及該資料分割的資料來源檢視和篩選資料表) 的量值群組。  

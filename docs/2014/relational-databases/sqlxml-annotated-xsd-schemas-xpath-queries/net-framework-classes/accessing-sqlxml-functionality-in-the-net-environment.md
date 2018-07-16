@@ -1,5 +1,5 @@
 ---
-title: 存取.NET 環境中的 SQLXML 功能 |Microsoft 文件
+title: 存取.NET 環境中的 SQLXML 功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ helpviewer_keywords:
 - .NET Framework [SQLXML], accessing SQLXML functionality
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e6546aee11353579f5f7096be72aac491478f03e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 53a61e858eef876716c07ab54186178c4e4e202b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033206"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323802"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>存取 .NET 環境中的 SQLXML 功能
   此範例顯示：  
   
--   如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML Managed 類別 (Microsoft.Data.SqlXml) 來存取 Microsoft[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 環境。  
+-   如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML Managed 類別 (Microsoft.Data.SqlXml) 來存取 Microsoft[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]在[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework 環境。  
   
 -   在 .NET Framework 環境中產生的 DiffGrams 如何將資料更新套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。  
   

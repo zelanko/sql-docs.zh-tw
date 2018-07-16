@@ -1,5 +1,5 @@
 ---
-title: CubeName 元素 (XMLA) |Microsoft 文件
+title: CubeName 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CubeName element
 ms.assetid: c5c0546e-b9b2-4813-82a9-b028628b88dc
 caps.latest.revision: 11
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 27427c84100f04b173c958ad2fe8cbb50368fec2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: b5b5f75ef00172fb64f4818a7c741bb81d2880e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037538"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250808"
 ---
 # <a name="cubename-element-xmla"></a>CubeName 元素 (XMLA)
-  包含父代所代表之 cube 名稱[Cube](cube-element-olapinfo-xmla.md)項目。  
+  包含父元素所代表之 cube 的名稱[Cube](cube-element-olapinfo-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   

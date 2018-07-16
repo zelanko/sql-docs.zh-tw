@@ -1,5 +1,5 @@
 ---
-title: 進度 （解除安裝） |Microsoft 文件
+title: 進度 （解除安裝） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ee19dbb2-6fd7-4b9b-9ea6-36c6faeedf10
 caps.latest.revision: 8
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4b5c3f166904e0fe24cf12d08365db28cdb9ba62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 11a8686f878fc349665f1ddcbc55dbd10a5a0198
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034503"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325548"
 ---
 # <a name="progress-uninstall"></a>進度 (解除安裝)
   使用 [進度 (解除安裝)] 頁面，即可監視安裝程式的進度。  

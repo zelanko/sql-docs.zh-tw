@@ -1,5 +1,5 @@
 ---
-title: 檢閱 Cube 和維度屬性 |Microsoft 文件
+title: 檢閱 Cube 和維度屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 092ffbd7242d65d06476e3a22f43252600562520
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 30dc761707ec02843bcc296bdb3cc7408c33a554
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37241738"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>檢閱 Cube 和維度屬性
   定義 Cube 之後，您可以使用 Cube 設計師來檢閱這些結果。 在下列工作中，您將檢閱 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中 Cube 的結構。  
@@ -38,7 +38,7 @@ ms.locfileid: "36037343"
   
 4.  在 [Cube 結構] 索引標籤的 [維度] 窗格中，展開 [客戶]，然後按一下 [編輯客戶]，即可在維度設計師中開啟該維度。  
   
-     維度設計師包含下列索引標籤：[維度結構]、[屬性關聯性]、[翻譯] 和 [瀏覽器]。 請注意，[維度結構] 索引標籤包含三個窗格：[屬性]、[階層] 和 [資料來源檢視]。 該維度所包含的屬性會顯示在 [屬性] 窗格中。 如需詳細資訊，請參閱[Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)， [Create User-Defined 階層](multidimensional-models/user-defined-hierarchies-create.md)。  
+     維度設計師包含下列索引標籤：[維度結構]、[屬性關聯性]、[翻譯] 和 [瀏覽器]。 請注意，[維度結構] 索引標籤包含三個窗格：[屬性]、[階層] 和 [資料來源檢視]。 該維度所包含的屬性會顯示在 [屬性] 窗格中。 如需詳細資訊，請參閱 < [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)，[建立使用者定義階層](multidimensional-models/user-defined-hierarchies-create.md)。  
   
 5.  若要切換到 Cube 設計師，可在方案總管中以滑鼠右鍵按一下 [Cube] 節點中的 [Analysis Services 教學課程] Cube，然後按一下 [檢視設計師]。  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36037343"
  [部署 Analysis Services 專案](lesson-2-5-deploying-an-analysis-services-project.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [瀏覽維度設計師 中的維度資料](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
+ [在維度設計工具中瀏覽維度資料](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

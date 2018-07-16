@@ -1,5 +1,5 @@
 ---
-title: 選取如何定義連接 （資料來源精靈） (Analysis Services) |Microsoft 文件
+title: 選取如何定義連接 （資料來源精靈） (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.selectdataconnection.f1
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 55a2963fd36d25f7d163659fecbd854ab0660dce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f74438c1591c5035117d974c838ca38cf2174b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134803"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330488"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>選取如何定義連接 (資料來源精靈) (Analysis Services)
   使用 **[選取如何定義連接]** 頁面，來建立或選取資料來源的資料連接。  
   
 ## <a name="options"></a>選項。  
- **建立資料來源依據現有的或新的連接**  
+ **建立現有或新的連接資料來源**  
  選取此選項即可使用現有的連接字串，或建立資料來源物件的新連接字串。  
   
  **資料連接**  
@@ -36,7 +36,7 @@ ms.locfileid: "36134803"
  **資料連接屬性**  
  顯示您在 [資料連接] 之下選取的資料連接之連接屬性設定。  
   
- **新...**  
+ **新的...**  
  按一下即可使用 [連接管理員] 對話方塊來建立新的資料來源。  
   
  **刪除**  

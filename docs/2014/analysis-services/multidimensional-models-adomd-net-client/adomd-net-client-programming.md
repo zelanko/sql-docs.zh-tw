@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET 用戶端程式設計 |Microsoft 文件
+title: ADOMD.NET 用戶端程式設計 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - ADOMD.NET, programming
 ms.assetid: 55156115-ecd1-4ed9-876e-23406af9bbf9
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9faa64cce77c883ed6adb86bca6d50f32f015c97
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dd4884abb345f1254c3987acb06e83ced7bcf392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136960"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332748"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 用戶端程式設計
-  ADOMD.NET 用戶端元件位在 `Microsoft.AnalysisServices.AdomdClient` 命名空間中 (在 microsoft.analysisservices.adomdclient.dll 中)。 這些用戶端元件提供用戶端的功能與中介層應用程式輕鬆地查詢資料和中繼資料的分析資料存放區中，從這類[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
+  ADOMD.NET 用戶端元件位在 `Microsoft.AnalysisServices.AdomdClient` 命名空間中 (在 microsoft.analysisservices.adomdclient.dll 中)。 這些用戶端元件可提供用戶端的功能和中介層應用程式輕鬆地查詢資料和中繼資料從分析資料存放區，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  
   
 ## <a name="using-the-adomdnet-client-objects"></a>了解 ADOMD.NET 用戶端物件  
  在查詢分析資料來源時，需要執行一組一般工作。 下表說明使用 ADOMD.NET 用戶端物件執行這類查詢的一般工作。  
@@ -44,7 +44,7 @@ ms.locfileid: "36136960"
 |若要|使用此物件|  
 |--------|---------------------|  
 |連接到分析資料來源|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 物件代表資料來源連接與資料來源中繼資料。 例如，您可以連接到[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]本機 cube (.cub) 檔案，然後再檢查<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Cubes%2A>屬性，以取得有關出現在分析資料來源上 cube 的中繼資料。 這個物件也代表 `IDbConnection` 介面的實作，這是所有 .NET Framework 資料提供者所需的介面。|  
-|探索資料來源的資料採礦功能|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 物件會公開數個採礦集合：<br /><br /> -<xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection>包含資料來源中的每個採礦模型的清單。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection>提供可用的採礦演算法的相關資訊。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection>公開伺服器上採礦結構的相關資訊。|  
+|探索資料來源的資料採礦功能|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 物件會公開數個採礦集合：<br /><br /> -<xref:Microsoft.AnalysisServices.AdomdClient.MiningModelCollection>包含資料來源中每個採礦模型的清單。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningServiceCollection>提供可用之採礦演算法的相關資訊。<br />-<xref:Microsoft.AnalysisServices.AdomdClient.MiningStructureCollection>公開伺服器上採礦結構的相關資訊。|  
 |查詢資料來源|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand><br /> <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 物件代表將傳送到伺服器的陳述式或查詢。 建立資料來源的連接之後，請使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 物件，以支援的語言執行陳述式，例如多維度運算式 (MDX) 或是資料採礦延伸模組 (DMX)。 您也可以使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 物件傳回 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 或 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> 物件形式的結果。|  
 |以快速、有效率的方式擷取資料|<xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader><br /> 若要建立 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader>，可以呼叫 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> 物件的 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteReader%2A> 或 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 方法。 這個物件會從 .NET Framework 類別庫的 `IDbDataReader` 命名空間實作 `System.Data` 介面。|  
 |使用最大量的中繼資料來擷取分析資料|<xref:Microsoft.AnalysisServices.AdomdClient.CellSet><br /> 若要建立 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet>，可以呼叫 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.Execute%2A> 的 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteCellSet%2A> 或 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 方法。 在 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> 傳回 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 之後，您可以檢查 <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> 所包含的分析資料。|  

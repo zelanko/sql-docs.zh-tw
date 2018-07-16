@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - WMI provider [Reporting Services], remote configuration
@@ -19,13 +19,13 @@ ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0f7a3ee16a9085639e03abe268c4c72dc0f488de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e89d1452c1daa5c1aa53341fa09e0e6b71b0c078
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034711"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325698"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>設定報表伺服器來進行遠端管理
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，您可以在本機或遠端設定報表伺服器執行個體。 若要設定遠端報表伺服器執行個體，您可以使用 Reporting Services 組態工具，或是撰寫使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows Management Instrumentation (WMI) 提供者的自訂程式碼。 Reporting Services 組態工具提供了 WMI 提供者的圖形介面，好讓您不需要撰寫程式碼就可以設定報表伺服器。 當您啟動這個工具時，可以指定要連接的遠端伺服器。  
@@ -38,7 +38,7 @@ ms.locfileid: "36034711"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要修改防火牆設定，您必須在本機登入，而且必須是本機管理員群組的成員； 您不能透過遠端連接修改遠端電腦的 Windows 防火牆設定。  
   
  如果您想要針對非管理員的使用者啟用遠端管理，必須將遠端啟動權限授與給「分散式元件物件模型」(DCOM) 帳戶。 本主題有提供針對非管理員存取權設定伺服器的指示。  
@@ -80,7 +80,7 @@ ms.locfileid: "36034711"
   
 1.  以本機管理員的身分登入您想要啟用遠端管理的電腦。  
   
-2.  如果報表伺服器在 Windows Vista 上執行，以滑鼠右鍵按一下**命令提示字元**選取**系統管理員身分執行**。 如果是其他作業系統，請開啟命令提示字元視窗。  
+2.  如果報表伺服器在 Windows Vista 上執行，以滑鼠右鍵按一下**命令提示字元**，然後選取**系統管理員身分執行**。 如果是其他作業系統，請開啟命令提示字元視窗。  
   
 3.  執行下列命令：  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36034711"
   
 1.  在 [開始] 功能表上，指向 **[系統管理工具]**，然後按一下 **[元件服務]**。  
   
-     Windows vista 中，在 開始 功能表上按一下**所有程式**，按一下 **執行**，然後輸入`mmc comexp.msc`。  
+     適用於 Windows Vista [開始] 功能表中，按一下**所有程式**，按一下**執行**，然後輸入`mmc comexp.msc`。  
   
 2.  開啟 [元件服務] 資料夾。  
   

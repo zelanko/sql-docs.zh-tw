@@ -1,5 +1,5 @@
 ---
-title: 來源元素 (XMLA) |Microsoft 文件
+title: 來源元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - Sources element
 ms.assetid: fefe8f01-4c62-4b70-9bf6-f11d2f01623a
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: f634df53b1eb92979caa699b25824d9345e00c21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 1aae2aca405aaabce130400d4d5896a6ae823851
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136277"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304168"
 ---
 # <a name="sources-element-xmla"></a>Sources 元素 (XMLA)
-  包含集合[來源](source-element-xmla.md)父元素之[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)項目。  
+  包含的集合[來源](source-element-xmla.md)父元素之[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   

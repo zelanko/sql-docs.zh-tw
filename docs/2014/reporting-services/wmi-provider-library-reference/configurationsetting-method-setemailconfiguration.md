@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 api_name:
 - SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting Class)
 api_location:
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SetEmailConfiguration method
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 caps.latest.revision: 19
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 67d63332e69e42b3f8631d37fe24626e108dde14
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: aeb662c9457c2f07bda1541c5d21a59cd5cca8ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131432"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258014"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>SetEmailConfiguration 方法 (WMI MSReportServer_ConfigurationSetting)
   設定報表伺服器用來傳送電子郵件的電子郵件傳遞延伸模組。  
@@ -63,7 +63,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
  傳回 *HRESULT* ，指出方法呼叫成功或失敗。 值為 0 表示方法呼叫成功。 非零值則表示已發生錯誤。  
   
 ## <a name="remarks"></a>備註  
- 當*SendUsingSMTPServer*參數設定為`true`、 **SendUsing**報表伺服器組態檔中的項目設為 1。 當*SendUsingSMTPServer*設為`false`、 **SendUsing**未設定項目。  
+ 當*SendUsingSMTPServer*參數設為`true`，則**SendUsing**報表伺服器組態檔中的項目會設定為 1。 當*SendUsingSMTPServer*設為`false`，則**SendUsing**未設定項目。  
   
  這個方法無法讓使用者將報表伺服器組態檔中的 **SendUsing** 項目設定為 1 以外的值。 若要針對 SMTP 郵件以外的任何項目設定報表伺服器，您必須手動編輯此組態檔。  
   

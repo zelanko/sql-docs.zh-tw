@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, application code usage
 - XML [SQL Server], FOR XML clause
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 73ca2ee9220b73e329ab829f3533274416b1855b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037419"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254110"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
   藉由在 SQL 查詢中使用 FOR XML 子句，您就可以將查詢結果擷取為 XML 資料，以及將其轉換為 XML 資料。 如果可以在 XML 應用程式的程式碼中使用 FOR XML 查詢結果，此功能便能讓您執行下列功能：  
@@ -39,7 +39,7 @@ ms.locfileid: "36037419"
  此主題提供範例來示範這些方式。  
   
 ## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>以 ADO 和 XML 資料島擷取 FOR XML 資料  
- ADO`Stream`物件或其他物件，支援 COM`IStream`介面，例如 Active Server Pages (ASP)`Request`和`Response`物件，可用來包含當您使用 FOR XML 查詢的結果。  
+ ADO`Stream`物件或其他物件，支援 COM`IStream`介面，例如動態伺服器網頁 (ASP)`Request`和`Response`物件，可用來包含當您使用 FOR XML 查詢的結果。  
   
  例如，下列 ASP 程式碼顯示的查詢結果`xml`資料類型資料行 Demographics 的 AdventureWorks 範例資料庫的 Sales.Store 資料表中。 該查詢尤其會在此資料行的執行個體值中尋找 CustomerID 等於 3 的資料列。  
   
@@ -205,13 +205,13 @@ ms.locfileid: "36037419"
   
  在此範例中，使用了下列 Microsoft .NET Framework 管理的 API 來完成 FOR XML 查詢結果的傳回和轉譯作業：  
   
-1.  `SqlConnection` 用來開啟連接至 SQL Server，根據指定的連接字串變數 strConn 的內容。  
+1.  `SqlConnection` 用來開啟連線到 SQL Server，根據指定的連接字串變數 strConn 的內容。  
   
 2.  `SqlDataAdapter` 則做為資料配接器使用，它使用 SQL 連接和指定的 SQL 查詢字串來執行 FOR XML 查詢。  
   
-3.  執行查詢之後，`SqlDataAdapter.Fill`方法呼叫並傳遞的執行個體然後`DataSet,`（mydataset） 內，以便填滿資料集，FOR XML 查詢的輸出。  
+3.  執行查詢之後，`SqlDataAdapter.Fill`然後呼叫並傳遞的執行個體方法`DataSet,`（mydataset） 內，以填入 FOR XML 查詢的輸出資料集。  
   
-4.  `DataSet.GetXml`方法接著會呼叫可顯示伺服器所產生的 HTML 網頁上以字串形式傳回查詢結果。  
+4.  `DataSet.GetXml`方法接著會呼叫將查詢結果傳回做為伺服器產生 HTML 頁面中可顯示的字串。  
   
     ```  
     <%@ Page Language="VB" %>  
@@ -294,7 +294,7 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`資料類型支援可讓您要求的 FOR XML 查詢結果傳回做為`xml`資料型別，而不是以字串或影像類型資料，方法是指定[TYPE 指示詞](type-directive-in-for-xml-queries.md)。 如果在 FOR XML 查詢中使用了 TYPE 指示詞時，它會提供以程式方式存取 FOR XML 結果 (類似 [在應用程式中使用 XML 資料](use-xml-data-in-applications.md)中所顯示)。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml`資料類型支援可讓您要求的 FOR XML 查詢結果傳回成`xml`資料類型，而不是以字串或影像類型資料，方法是指定[TYPE 指示詞](type-directive-in-for-xml-queries.md)。 如果在 FOR XML 查詢中使用了 TYPE 指示詞時，它會提供以程式方式存取 FOR XML 結果 (類似 [在應用程式中使用 XML 資料](use-xml-data-in-applications.md)中所顯示)。  
   
 ## <a name="see-also"></a>另請參閱  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  

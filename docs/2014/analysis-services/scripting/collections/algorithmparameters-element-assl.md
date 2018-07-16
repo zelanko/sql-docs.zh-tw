@@ -1,5 +1,5 @@
 ---
-title: AlgorithmParameters 元素 (ASSL) |Microsoft 文件
+title: AlgorithmParameters 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - AlgorithmParameters element
 ms.assetid: 240cbb60-7fa3-46ef-b5be-cd14c9ec10de
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c73495677fd6a1eaf8ff1c70f154bf240b04e709
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3ab357b16b8b10b13d3ddb23b2a2bc1e7a32c486
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330428"
 ---
 # <a name="algorithmparameters-element-assl"></a>AlgorithmParameters 元素 (ASSL)
-  包含所使用之演算法的參數集合[MiningModel](../objects/miningmodel-element-assl.md)項目。  
+  包含所使用之演算法參數的集合[MiningModel](../objects/miningmodel-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36137172"
   
  您可以從 DMSCHEMA_MINING_SERVICE_PARAMETERS 結構描述資料列中擷取可用的演算法參數，包括驗證和顯示資訊。  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.AlgorithmParameterCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.AlgorithmParameterCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Algorithm 元素&#40;ASSL&#41;](../properties/algorithm-element-assl.md)   

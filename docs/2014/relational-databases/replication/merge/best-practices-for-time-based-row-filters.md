@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 718615cbe81c5238d6d16cff1806d14a019920e5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8dd38a60a64738535d65931d40aac5182e331e41
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331338"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>以時間為基礎之資料列篩選的最佳做法
   應用程式使用者通常需要來自資料表中以時間為基礎的資料子集。 例如，業務員可能需要上週的訂單資料，或事件計劃者可能需要未來一週的事件資料。 許多狀況下，應用程式會使用包含 `GETDATE()` 函數的查詢來達成這個目的。 請考量下列資料列篩選陳述式：  
@@ -30,7 +30,7 @@ ms.locfileid: "36134381"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 使用這種類型的篩選時，通常假設合併代理程式執行時一律會發生兩件事：滿足這個篩選的資料列會複寫至訂閱者，以及不再滿足這個篩選的資料列會從訂閱者端清除 (如需有關使用篩選`HOST_NAME()`，請參閱[Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)。)然而，不論您為資料所定義的資料列篩選為何，合併式複寫只能複寫和清除自上次同步處理後已變更的資料。  
+ 使用這種類型的篩選時，通常假設合併代理程式執行時一律會發生兩件事：滿足這個篩選的資料列會複寫至訂閱者，以及不再滿足這個篩選的資料列會從訂閱者端清除 (如需有關使用篩選`HOST_NAME()`，請參閱 < [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md)。)然而，不論您為資料所定義的資料列篩選為何，合併式複寫只能複寫和清除自上次同步處理後已變更的資料。  
   
  若要合併式複寫處理資料列，資料列中的資料必須滿足資料列篩選，並且自上次同步處理後必須已變更。 在 **SalesOrderHeader** 資料表的案例中， **OrderDate** 是在插入資料列時所輸入的。 資料列會如預期複寫至訂閱者，因為插入動作是資料變更。 然而，如果訂閱者端有不再滿足篩選的資料列 (超過七天以上的訂單資料列)，除非這些資料列因其他原因而更新，否則不會從訂閱者端移除。  
   
@@ -53,17 +53,17 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
 ## <a name="recommendations-for-using-time-based-row-filters"></a>以時間為基礎的資料列篩選使用建議  
  下列方法為以時間為基礎的篩選提供了完善直接的作法：  
   
--   資料行加入資料表的資料型別`bit`。 這個資料行是用來指出資料列是否應複寫。  
+-   將資料行資料類型的資料表加入`bit`。 這個資料行是用來指出資料列是否應複寫。  
   
 -   使用會參考新資料行 (而不是以時間為基礎的資料行) 的資料列篩選。  
   
 -   建立 SQL Server Agent 作業 (或透過另一個機制排程的作業)，這個作業會在合併代理程式已排程執行之前更新資料行。  
   
- 這種方法的缺點使用`GETDATE()`或另一個以時間為基礎的方法，並可避免必須決定當篩選評估資料分割的問題。 請考量 **Events** 資料表的下列範例：  
+ 這種方法的缺點使用`GETDATE()`或另一個以時間為基礎的方法，並避免必須決定何時評估資料分割篩選的問題。 請考量 **Events** 資料表的下列範例：  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**複寫**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|Reception|112|2006-10-04|@shouldalert|  
+|1|Reception|112|2006-10-04|1|  
 |2|Dinner|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
@@ -87,10 +87,10 @@ GO
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**複寫**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
-|@shouldalert|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|@shouldalert|  
-|3|Party|112|2006-10-11|@shouldalert|  
-|4|Wedding|112|2006-10-12|@shouldalert|  
+|1|Reception|112|2006-10-04|0|  
+|2|Dinner|112|2006-10-10|1|  
+|3|Party|112|2006-10-11|1|  
+|4|Wedding|112|2006-10-12|1|  
   
  下一週的事件現在會標幟為複寫準備就緒。 下次合併代理程式針對事件協調者 112 所使用的訂閱而執行時，資料列 2、3 及 4 將會下載至訂閱者，並且資料列 1 將會從訂閱者移除。  
   

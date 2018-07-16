@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - formats [Reporting Services], URL rendering
 - URL access [Reporting Services], rendering formats
@@ -16,16 +16,16 @@ ms.assetid: 6a3b7fc3-3d91-4d12-8371-42ea12e74517
 caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 84bc0567927a1347d6bd5d83eef7f38ea301ba30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d44c68f381ee1fd7b6fed31e15bf2639dd57976e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034526"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327438"
 ---
 # <a name="export-a-report-using-url-access"></a>使用 URL 存取匯出報表
-  您可以選擇性地指定用於轉譯報表所使用的格式*rs： 格式*參數。 例如，直接從原生模式報表伺服器取得報表的 PDF 副本。  
+  您可以選擇性地指定用於轉譯報表所使用的格式*rs: Format*參數。 例如，直接從原生模式報表伺服器取得報表的 PDF 副本。  
   
 ```  
 http://myrshost/ReportServer?/myreport&rs:Format=PDF  

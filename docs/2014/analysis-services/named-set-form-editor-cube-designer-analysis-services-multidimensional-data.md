@@ -1,5 +1,5 @@
 ---
-title: 命名集表單編輯器 （計算索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 命名集表單編輯器 （計算索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.namedset.f1
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71b2e06ab78f4e9267c9bc85bf55a14b0c71d69c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c548022920690437937bc3a24f39049574d3d911
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146385"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291644"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>命名集表單編輯器 (計算索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   在 Cube 設計師中使用 **[計算]** 索引標籤的 **[命名集表單編輯器]** 窗格，即可建立或修改命名集。  
@@ -45,7 +45,7 @@ ms.locfileid: "36146385"
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [建立命名的集](multidimensional-models/create-named-sets.md)   
  [Cube 設計師&#40;Analysis Services-多維度資料&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [計算&#40;Cube 設計師&#41; &#40;Analysis Services-多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
+ [計算&#40;Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [工具列&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [指令碼組合管理&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   
  [計算工具&#40;計算索引標籤，Cube 設計工具&#41; &#40;Analysis Services-多維度資料&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   

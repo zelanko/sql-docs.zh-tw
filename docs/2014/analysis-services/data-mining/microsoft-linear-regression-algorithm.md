@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線性迴歸演算法 |Microsoft 文件
+title: Microsoft 線性迴歸演算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
 - linear regression algorithms [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8a249f0c1a4ffde7e14841d53c01a9bdf6790931
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146406"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315075"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線性迴歸演算法
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線性迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 決策樹演算法的變異形式，可幫助您計算相依與獨立變數之間的線性關聯性，然後使用該關聯性進行預測。  
   
  關聯性會以最能夠代表一系列資料的線性方程式表示。 例如，下列圖表中的線條是最佳的資料線性表示法。  
   
- ![模型的一組資料列](../media/linear-regression.gif "模型的一組資料行")  
+ ![模型一組資料列](../media/linear-regression.gif "模型一組資料列")  
   
  圖表中的每一個資料點都有錯誤，與它到迴歸線的距離相關聯。 迴歸方程式中的係數 a 和 b 會調整迴歸線的角度和位置。 您可以調整 a 和 b，直到與所有點相關聯的錯誤總和達到最小值為止，以取得迴歸方程式。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "36146406"
   
  如果您想要知道此方程式的詳細資料，也可以使用 [Microsoft 一般內容樹狀檢視器](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)來檢視係數和其他詳細資料。  
   
- 如果是線性迴歸模型，此模型內容包含中繼資料、迴歸公式及有關輸入值分佈的統計資料。 如需詳細資訊，請參閱[Model Content for Linear Regression Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
+ 如果是線性迴歸模型，此模型內容包含中繼資料、迴歸公式及有關輸入值分佈的統計資料。 如需詳細資訊，請參閱 < [Mining Model Content for Linear Regression Models &#40;Analysis Services-Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)。  
   
 ## <a name="creating-predictions"></a>建立預測  
  當此模型已處理完之後，結果會儲存成一組統計資料，連同線性迴歸公式 (這些公式可用來計算未來趨勢)。 如需搭配線性迴歸模型使用之查詢的範例，請參閱 [線性迴歸模型查詢範例](linear-regression-model-query-examples.md)。  

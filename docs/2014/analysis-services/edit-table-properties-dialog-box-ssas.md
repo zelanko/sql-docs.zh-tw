@@ -1,5 +1,5 @@
 ---
-title: 編輯資料表屬性對話方塊 (SSAS) |Microsoft 文件
+title: 編輯資料表屬性對話方塊 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 36cabf1186738420e3dbd35504a81ea0318b966b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cd8e464967dbe4b2546f51889f2a2da49d81e4df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132060"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249588"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>編輯資料表屬性對話方塊 (SSAS)
   **[編輯資料表屬性]** 對話方塊可讓您檢視與修改使用 [資料表匯入精靈] 匯入至模型設計師之資料表的屬性。 若要存取此對話方塊，請在模型設計師中選取資料表，然後按一下 **[資料表]** 功能表，再按一下 **[資料表屬性]**。  
@@ -62,7 +62,7 @@ ms.locfileid: "36132060"
 |**資料表預覽**|選取此選項，以預覽所選資料表及有限數目的資料列。|  
 |**查詢編輯器**|選取此選項，以檢視對所選資料來源執行的查詢。 並非所有的資料來源都可使用這個選項。|  
   
- **在資料行標頭中的核取方塊**  
+ **資料行標頭中的核取方塊**  
  選取核取方塊可將資料行納入資料匯入作業。 清除核取方塊可從資料匯入作業排除資料行。  
   
  **資料行標頭中的向下箭頭按鈕**  

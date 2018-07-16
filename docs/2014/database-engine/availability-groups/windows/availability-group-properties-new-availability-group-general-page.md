@@ -1,27 +1,26 @@
 ---
-title: 可用性群組屬性和新的可用性群組 （一般頁面） |Microsoft 文件
+title: 可用性群組屬性和新的可用性群組 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.availabilitygroupproperties.general.f1
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 caps.latest.revision: 14
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: d47dc448cb0662d3324eaaa61d257a10caa69e74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cb98cf3bdc1a0e4f021a5b82116dba1f390b0fd4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131414"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283994"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>可用性群組屬性和新增可用性群組 (一般頁面)
   本主題適用於 [新增可用性群組] 對話方塊和 [可用性群組屬性] 對話方塊的 [一般] 索引標籤。  [新增可用性群組] 對話方塊可讓您建立新的可用性群組，而不需要使用 [[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]]。 [可用性群組屬性] 對話方塊可讓您檢視和改變現有可用性群組的組態。  
@@ -69,7 +68,7 @@ ms.locfileid: "36131414"
  **同步認可**  
  主要複本會等候認可給定交易，直到次要複本將交易寫入磁碟為止。  
   
- 如需詳細資訊，請參閱[可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 可用性模式 （AlwaysOn 可用性群組）](availability-modes-always-on-availability-groups.md)。  
   
  **容錯移轉模式**  
  複本的容錯移轉模式，下列其中一項：  

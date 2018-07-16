@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextindexingwizard.selecttablecolumns.f1
 - sql12.swb.fulltextindexingwizard.welcome.f1
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 caps.latest.revision: 22
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 69b7caacb7d6731731aaae11c18e9f960278136c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 5395a6ee63d3fbf4456a3da4e4e19390e042e2b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146918"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309518"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
   全文檢索索引精靈會提供一系列的逐步說明，以協助您建立全文檢索索引。  
@@ -53,7 +52,7 @@ ms.locfileid: "36146918"
      **類型資料行**  
      選取資料行的名稱，其中包含要建立全文檢索索引之資料行的文件類型。  
   
-     **類型資料行**命名資料行時，才會啟用**可用的資料行**資料行是類型`varbinary(max)`或`image`。  
+     **類型資料行**中命名的資料行時，才會啟用**可用的資料行**sloupec je typu`varbinary(max)`或`image`。  
   
      **統計語意**  
      選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](semantic-search-sql-server.md)。  
@@ -97,7 +96,7 @@ ms.locfileid: "36146918"
   
      選取下列其中一個值：  
   
-    |ReplTest1|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |**\<預設值 >**|如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果資料表或檢視表已分割，則會使用主要檔案群組。|  
     |**PRIMARY**|選取即可針對新的全文檢索索引使用主要檔案群組。|  
@@ -110,7 +109,7 @@ ms.locfileid: "36146918"
   
      選取下列其中一個值：  
   
-    |ReplTest1|描述|  
+    |值|描述|  
     |-----------|-----------------|  
     |**\<系統 >**|選取即可針對新的全文檢索索引使用系統停用字詞表。 這是預設值。|  
     |**\<關閉 >**|選取即可針對新的全文檢索索引停用停用字詞表。|  

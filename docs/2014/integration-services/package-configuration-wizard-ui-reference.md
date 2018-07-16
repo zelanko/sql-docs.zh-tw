@@ -1,5 +1,5 @@
 ---
-title: 封裝組態精靈 UI 參考 |Microsoft 文件
+title: 封裝組態精靈 UI 參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
 - sql12.dts.configwizard.selecconfigtype.f1
@@ -16,15 +16,15 @@ f1_keywords:
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e88427ce2a7450e2e03638254da720d0c464fb8f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9a95f28077a06d52d8b597cae8d6a36d5cd1d502
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322428"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>封裝組態精靈 UI 參考
   使用 **[封裝組態精靈]** ，即可建立在執行階段更新 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝及其物件之屬性的組態。 當您在 **[封裝組態組合管理]** 對話方塊中加入新的組態或修改現有的組態時，這個精靈便會執行 若要開啟 **[封裝組態組合管理]** 對話方塊，請在 **中選取** [SSIS] **功能表上的** [封裝組態] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 如需詳細資訊，請參閱[建立封裝組態](../../2014/integration-services/create-package-configurations.md)。  
@@ -53,7 +53,7 @@ ms.locfileid: "36146786"
  **組態類型**  
  使用下列選項，即可選取儲存組態的來源類型：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**XML 組態檔**|將組態儲存為 XML 檔案。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
 |**環境變數**|將組態儲存在其中一個環境變數中。 選取這個值就會顯示 **[組態類型]** 區段中的動態選項。|  
@@ -70,7 +70,7 @@ ms.locfileid: "36146786"
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**組態檔名稱**|鍵入精靈產生之組態檔的路徑。|  
 |**瀏覽**|使用 **[選取組態檔位置]** 對話方塊，即可指定精靈產生之組態檔的路徑。 如果檔案不存在，精靈就會建立檔案。|  
@@ -78,7 +78,7 @@ ms.locfileid: "36146786"
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -90,14 +90,14 @@ ms.locfileid: "36146786"
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**登錄項目**|輸入包含組態資訊的登錄機碼。 格式為 \<登錄機碼>。<br /><br /> 登錄機碼必須已經存在於 HKEY_CURRENT_USER 中且具有名為 Value 的值。 該值可以是 DWORD 或字串。<br /><br /> 如果您想要使用不是在 HKEY_CURRENT_USER 根目錄的登錄機碼，請使用 \<登錄機碼\登錄機碼\\...> 格式來識別該機碼。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -105,14 +105,14 @@ ms.locfileid: "36146786"
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**父變數**|在包含組態資訊的父封裝中指定變數。|  
   
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -120,7 +120,7 @@ ms.locfileid: "36146786"
  **直接指定組態設定**  
  這可用來直接指定設定。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**[連接]**|請從清單中選取連接，或按一下 **[新增]** 即可建立新的連接。|  
 |**組態資料表**|選取現有的資料表，或按一下 **[新增]** ，即可撰寫建立新資料表的 SQL 陳述式。|  
@@ -129,7 +129,7 @@ ms.locfileid: "36146786"
  **組態位置儲存在環境變數中**  
  這可用來指定儲存組態的環境變數。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**環境變數**|從清單中選取環境變數。|  
   
@@ -160,6 +160,6 @@ ms.locfileid: "36146786"
  建立組態，並結束 [封裝組態精靈]。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立封裝組態](../../2014/integration-services/create-package-configurations.md)  
+ [建立套件設定](../../2014/integration-services/create-package-configurations.md)  
   
   

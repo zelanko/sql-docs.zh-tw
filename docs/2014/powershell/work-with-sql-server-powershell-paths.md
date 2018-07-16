@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: jhubbard
-ms.openlocfilehash: 7a0f936daca1683c4aeb54e01c8b8cb567d145c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fb7c5270dba5a624ec843d2c4f90019e777b462f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37327778"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>使用 SQL Server PowerShell 路徑
   當您導覽至 [!INCLUDE[ssDE](../includes/ssde-md.md)] 提供者路徑中的節點之後，即可使用與該節點相關聯之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 管理物件的方法與屬性，進行工作或取得資訊。  
@@ -80,7 +80,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Table
 Get-ChildItem | where {$_.Schema -eq "Sales"}  
 ```  
   
- 這個範例會使用 SMO**指令碼**方法來產生包含的指令碼`CREATE VIEW`陳述式，您必須重新建立 AdventureWorks2012 中的檢視：  
+ 此範例會使用 SMO**指令碼**方法來產生包含的指令碼`CREATE VIEW`陳述式，您必須重新建立 AdventureWorks2012 中的檢視：  
   
 ```  
 Remove-Item C:\PowerShell\CreateViews.sql  

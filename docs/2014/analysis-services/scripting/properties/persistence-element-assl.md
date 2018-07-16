@@ -1,5 +1,5 @@
 ---
-title: Persistence 元素 (ASSL) |Microsoft 文件
+title: Persistence 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Persistence element
 ms.assetid: dafe3df2-4795-48ea-bebe-33c1a3bf18b6
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1409ee5b58ee0e65aa324bb8009758430ef95224
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 44b97b0289b45ca231bc35f0a9690bafcea737e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035510"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330288"
 ---
 # <a name="persistence-element-assl"></a>Persistence 元素 (ASSL)
-  決定繫結的來源資料中哪些部分是動態的而且會檢查是否有使用所指定的頻率更新[RefreshPolicy](refreshpolicy-element-assl.md)項目。  
+  繫結的來源資料中哪些部分是動態的而且會檢查是否有更新使用所指定的頻率會決定[RefreshPolicy](refreshpolicy-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36035510"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*NotPersisted*|來源中繼資料、成員和資料都是動態的。|  
 |*中繼資料*|來源中繼資料是靜態的，但是成員和資料是動態的。|  

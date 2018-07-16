@@ -1,5 +1,5 @@
 ---
-title: 翻譯詳細資料 （翻譯索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft 文件
+title: 翻譯詳細資料 （翻譯索引標籤，維度設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationpane.tranlationdetails.f1
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c3fea9b837915fff37bad632780544bcf7ebb1a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f4051de358b2567d6473a016e7f965d15b1dd215
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306328"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>翻譯詳細資料 (翻譯索引標籤，維度設計師) (Analysis Services - 多維度資料)
   在 [維度設計師] 的 **[翻譯]** 索引標籤中使用 **[翻譯詳細資料]** 窗格，即可定義和管理目前所選取維度的翻譯。  
@@ -103,6 +103,6 @@ ms.locfileid: "36146171"
  選取即可切換顯示所選取維度已定義的所有屬性，包括已停用屬性階層的屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [翻譯&#40;維度設計師&#41; &#40;Analysis Services-多維度資料&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [翻譯&#40;維度設計工具&#41; &#40;Analysis Services-多維度資料&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   
