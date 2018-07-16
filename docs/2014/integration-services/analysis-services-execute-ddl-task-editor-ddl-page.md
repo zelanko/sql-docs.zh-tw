@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 執行 DDL 工作編輯器 （DDL 頁面） |Microsoft 文件
+title: Analysis Services 執行 DDL 工作編輯器 （DDL 頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9499537bdb59778ab4dc5d511c16e3fb4cb9be08
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8693bb66bb848301a739a16f6989537d203eca25
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269425"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services 執行 DDL 工作編輯器 (DDL 頁面)
   使用 [Analysis Services 執行 DDL 工作編輯器] 對話方塊的 [DDL] 頁面，即可指定 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案或 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的連接，並提供資料定義語言 (DDL) 陳述式來源的相關資訊。  
@@ -39,7 +39,7 @@ ms.locfileid: "36035496"
  **SourceType**  
  指定 DDL 陳述式的來源類型。 此屬性具有下表所列的選項：  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 [SourceDirect] 文字方塊中所儲存的 DDL 陳述式。 選取這個值就會顯示在下列章節中的動態選項。|  
 |**檔案連接**|將來源設定為包含 DDL 陳述式的檔案。 選取這個值就會顯示在下列章節中的動態選項。|  
@@ -65,7 +65,7 @@ ms.locfileid: "36035496"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 執行 DDL 工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Analysis Services 執行 DDL 工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [控制流程](control-flow/control-flow.md)   
  [Analysis Services 指令碼語言&#40;ASSL&#41;參考](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   

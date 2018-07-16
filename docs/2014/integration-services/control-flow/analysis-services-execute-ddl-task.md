@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0f14f743b09d23619a89ade34726ff346590b081
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fafdf3ff7c4b04f08d2c8d640566b3bf9cfdfc4d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036835"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275374"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services 執行 DDL 工作
   「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行 DDL」工作會執行可建立、卸除或修改採礦模型和多維度物件 (如 Cube 和維度) 的資料定義語言 (DDL) 陳述式。 例如，DDL 陳述式可在 **Adventure Works** Cube 中建立資料分割，或在 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中所含的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範例資料庫) 中刪除維度。  
@@ -42,7 +42,7 @@ ms.locfileid: "36036835"
 ## <a name="ddl-statements"></a>DDL 陳述式  
  DDL 陳述式會在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 指令碼語言 (ASSL) 中以陳述式的方式呈現，在 XML for Analysis (XMLA) 命令中則會加上框架。  
   
--   ASSL 是用來定義和描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，及其包含的資料庫和資料庫物件。 如需詳細資訊，請參閱[Analysis Services 指令碼語言&#40;ASSL&#41;參考](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。  
+-   ASSL 是用來定義和描述 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的執行個體，及其包含的資料庫和資料庫物件。 如需詳細資訊，請參閱 < [Analysis Services Scripting Language &#40;ASSL&#41;參考](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)。  
   
 -   XMLA 為命令語言，用來傳送動作命令 (如「建立」、「改變」或「處理」) 至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體。 如需詳細資訊，請參閱 [XML for Analysis &#40;XMLA&#41; 參考](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)。  
   
@@ -222,9 +222,9 @@ ms.locfileid: "36036835"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [Analysis Services 執行 DDL 工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services 執行 DDL 工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services 執行 DDL 工作編輯器&#40;DDL 頁面&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Analysis Services 執行 DDL 工作編輯器 &#40;DDL 頁面&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

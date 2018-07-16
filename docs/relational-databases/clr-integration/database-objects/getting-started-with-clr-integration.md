@@ -1,12 +1,11 @@
 ---
-title: 開始使用 CLR 整合 |Microsoft 文件
+title: CLR 整合使用者入門 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.topic: get-started-article
 dev_langs:
 - TSQL
@@ -28,19 +27,19 @@ caps.latest.revision: 62
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33904494978b4a85377ef4d3bdb3cee4f176f2f2
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: e54af4adc976d8a5b8e9990d91155d5178f5ef03
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702369"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349460"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 整合使用者入門
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題提供的命名空間和編譯資料庫物件使用所需的程式庫的總覽[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]與.NET Framework common language runtime (CLR) 整合。 此外，本主題還會為您示範如何撰寫、編譯及執行以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 所撰寫的簡單 CLR 預存程序。  
+  本主題提供的命名空間和編譯資料庫物件所需的程式庫總覽[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]與.NET Framework common language runtime (CLR) 整合。 此外，本主題還會為您示範如何撰寫、編譯及執行以 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 所撰寫的簡單 CLR 預存程序。  
   
 ## <a name="required-namespaces"></a>必要命名空間  
- 若要開發基本 CLR 資料庫物件所需的元件會安裝與[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 CLR 整合功能會在稱為 system.data.dll (.NET Framework 的一部分) 的組件中公開。 此組件可以在全域組件快取 (GAC) 及 .NET Framework 目錄中找到。 命令列工具及 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 通常會自動加入此組件的參考，因此不需要手動加入。  
+ 若要開發基本 CLR 資料庫物件所需的元件會隨[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 CLR 整合功能會在稱為 system.data.dll (.NET Framework 的一部分) 的組件中公開。 此組件可以在全域組件快取 (GAC) 及 .NET Framework 目錄中找到。 命令列工具及 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 通常會自動加入此組件的參考，因此不需要手動加入。  
   
  system.data.dll 組件包含下列編譯 CLR 資料庫物件所需的命名空間：  
   
@@ -89,7 +88,7 @@ End Class
   
 ```  
   
- 此簡單的程式包含公用類別上的單一靜態方法。 這個方法會使用兩個新的類別、 **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 和 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**，來建立 managed 資料庫物件以輸出簡單文字訊息。 此方法也會將字串 "Hello world!" 指派 為 out 參數的值。 此方法可以宣告為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的預存程序，然後以與 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序相同的方法執行。  
+ 此簡單的程式包含公用類別上的單一靜態方法。 這個方法會使用兩個新的類別， **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** 並 **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**，來建立 managed 資料庫物件以輸出簡單的文字訊息。 此方法也會將字串 "Hello world!" 指派 為 out 參數的值。 此方法可以宣告為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的預存程序，然後以與 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 預存程序相同的方法執行。  
   
  此程式編譯為程式庫，並將其載入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，並執行預存程序。  
   

@@ -1,5 +1,5 @@
 ---
-title: 在 [記錄事件] 視窗中檢視記錄項目 |Microsoft 文件
+title: 在 記錄事件視窗中檢視記錄項目 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], viewing
 - Integration Services packages, logs
 - packages [Integration Services], logs
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
 caps.latest.revision: 20
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fb92bd7899e1d35d8ca816356c9618709964bb13
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 15afed05e62e6d03fb785df734afcb5c6dabd2d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144752"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37279664"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>檢視記錄事件視窗中的記錄項目
   此程序描述如何執行封裝並檢視封裝寫入的記錄項目。 您可以即時檢視記錄項目， 也可以複製及儲存寫入 [記錄事件] 視窗中的記錄項目，以執行進一步的分析。  

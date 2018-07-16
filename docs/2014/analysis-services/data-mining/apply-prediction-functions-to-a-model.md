@@ -1,5 +1,5 @@
 ---
-title: 套用至模型的預測函數 |Microsoft 文件
+title: 套用至模型的預測函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Prediction [Analysis Services], selecting mining models
 ms.assetid: cf9a97e2-c249-441b-af12-c977c1a91c44
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: abd75a7a7be7cacc0395af11e02b5dc55828e31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a512c4e9f288c0e776b7ac6de91604da39d9f4d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144832"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37270014"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>將預測函數套用至模型
   若要建立預測查詢，您必須先選取查詢所根據的採礦模型。 您可以選取存在於目前專案中的任何採礦模型。  
@@ -96,9 +96,9 @@ ms.locfileid: "36144832"
   
 5.  在查詢方格中，針對 [來源] 選取 TM_Clustering 採礦模型，並加入 [Bike Buyer] 資料行。  
   
-6.  如**來源**，選取**預測函數**，並加入函式， `Cluster`。  
+6.  針對**來源**，選取**預測函數**，並新增函式， `Cluster`。  
   
-7.  如**來源**，選取**預測函數**，加入函式， `PredictSupport`，並將模型資料行 [Bike Buyer] 拖曳至**準則/引數**方塊。 在 [別名] 資料行中輸入 **Support**。  
+7.  針對**來源**，選取**預測函數**，新增函式， `PredictSupport`，然後將模型資料行 [Bike Buyer] 拖曳至**準則/引數** 方塊中。 在 [別名] 資料行中輸入 **Support**。  
   
      從 [準則/引數] 方塊複製代表預測函數和資料行參考的運算式。  
   

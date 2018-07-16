@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - upgrading replicated databases
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 caps.latest.revision: 41
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 7a50483132e751df3be2a5f4e31bb2a523c59d3a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bd13dfcbb5c90cc74d2e135f65eee8d3b4bf8393
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294758"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>升級複寫指令碼 (複寫 Transact-SQL 程式設計)
   [!INCLUDE[tsql](../../../includes/tsql-md.md)] 指令碼檔案可以用於以程式設計的方式設定複寫拓撲。 如需詳細資訊，請參閱[複寫系統預存程序概念](../concepts/replication-system-stored-procedures-concepts.md)。  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 00f6cc4f2a6d2283a44b91319362bf0cd171a448
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30e1259da07f315b424747ad977917e8c68eb30
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037718"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285472"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>步驟 4：加入一般檔案目的地
   [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  
@@ -40,11 +40,11 @@ ms.locfileid: "36037718"
   
 6.  在 **[一般檔案格式]** 對話方塊中，確認已選取 **[使用分隔符號]** ，然後按一下 **[確定]**。  
   
-7.  在**一般檔案連接管理員編輯器**，請在**連接管理員名稱**方塊中，輸入`Error Data`。  
+7.  在 **一般檔案連接管理員編輯器**，請在**連接管理員名稱**方塊中，輸入`Error Data`。  
   
 8.  在 **[一般檔案連接管理員編輯器]** 對話方塊中，按一下 **[瀏覽]**，並尋找儲存該檔案的資料夾。  
   
-9. 在**開啟**對話方塊中，針對**檔案名稱**，型別`ErrorOutput.txt`，然後按一下 **開啟**。  
+9. 中**開放**] 對話方塊中，如**檔案名稱**，型別`ErrorOutput.txt`，然後按一下 [**開啟**。  
   
 10. 在 **[一般檔案連接管理員編輯器]** 對話方塊中，確認 **[地區設定]** 方塊包含 [英文 (美國)]， **[字碼頁]** 包含 1252 [ANSI - 拉丁文 1]。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "36037718"
 15. 按一下 [確定] 。  
   
 ## <a name="next-steps"></a>後續步驟  
- [步驟 5：測試第 4 課的教學課程封裝](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+ [步驟 5：測試第 4 課的教學課程套件](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

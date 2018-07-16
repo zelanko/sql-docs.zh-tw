@@ -1,5 +1,5 @@
 ---
-title: 第 8 課： 將資料庫還原至 Windows Azure 儲存體 |Microsoft 文件
+title: 第 8 課： 將資料庫還原至 Windows Azure 儲存體 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 caps.latest.revision: 7
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ea9ec20e60fb879b17434e8fe4581d28b3d7a551
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 98d44755a26519dd63701ba8e5eebb1cf4ef7e7f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023763"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311780"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>第 8 課： 將資料庫還原至 Windows Azure 儲存體
   在這一課，您將學習如何在本機上建立備份檔案，然後將它還原到 Windows Azure 儲存體。 請注意，您的資料庫可以位於 Windows Azure 的內部部署或虛擬機器中。 進行這一課並不需要完成第 4、5、6 和 7 課。  
@@ -73,23 +73,23 @@ ms.locfileid: "36023763"
   
  若要使用 SQL Server Management Studio 使用者介面還原資料庫，且其中資料和記錄檔指向 Windows Azure 儲存體，請執行下列步驟：  
   
-1.  在**物件總管] 中**，按一下 [伺服器名稱以展開伺服器樹狀目錄。  
+1.  在 **物件總管 中**，按一下 伺服器名稱以展開伺服器樹狀目錄。  
   
-2.  展開**資料庫**，並選取您的資料庫。  
+2.  依序展開**資料庫**，並選取您的資料庫。  
   
 3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [還原]。  
   
-4.  在**一般**頁面上，於**還原**來源區段中，按一下**來源**裝置。  
+4.  在 **一般**頁面上，於**還原**來源區段中，按一下**來源**裝置。  
   
-5.  按一下瀏覽 按鈕取得**來源**裝置 文字方塊中，這會開啟**選取備份裝置** 對話方塊。  
+5.  按一下 瀏覽按鈕**來源**裝置 文字方塊中，這會開啟**選取備份裝置** 對話方塊。  
   
-6.  在 備份媒體 文字方塊中，選取 **檔案**，然後按一下**新增**按鈕尋找備份檔案 (.bak)。 按一下 [確定] 。  
+6.  在 [備份媒體] 文字方塊中，選取**檔案**，然後按一下**新增**按鈕尋找備份檔案 (.bak)。 按一下 [確定] 。  
   
-7.  按一下**檔案**第一頁。  
+7.  按一下 **檔案**第一頁。  
   
-8.  在**資料庫檔案還原**區段中底下**還原成**欄位中，輸入下列資訊：  
+8.  在 **還原資料庫檔案**區段中下方**還原成**欄位中，輸入下列項目：  
   
-     針對資料檔案中，輸入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`。 如需記錄檔中，輸入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`。  
+     資料檔案，請輸入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`。 如需記錄檔中，輸入： `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
@@ -101,6 +101,6 @@ ms.locfileid: "36023763"
   
  **下一課：**  
   
- [第 9 課。從 Windows Azure 儲存體還原資料庫](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [第 9 課：從 Windows Azure 儲存體還原資料庫](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

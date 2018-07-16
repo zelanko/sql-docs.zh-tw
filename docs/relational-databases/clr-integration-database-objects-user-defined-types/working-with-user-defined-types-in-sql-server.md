@@ -1,11 +1,11 @@
 ---
-title: 使用 SQL Server 中的 使用者定義型別 |Microsoft 文件
+title: 使用 SQL Server 中的 使用者定義型別 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: reference
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,16 +19,16 @@ caps.latest.revision: 12
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fd0a2dcedc20cc1448ef16b89bc3f933e986ce15
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a16dc823d7428f61391d44e6e0511e07667a3f23
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703109"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356950"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>使用 SQL Server 中的使用者定義型別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  您可以存取使用者定義型別 (UDT) 功能在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從[!INCLUDE[tsql](../../includes/tsql-md.md)]使用一般查詢語法的語言。 在資料庫物件定義中，UDT 可當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、函數及預存程序中的變數，以及函數及預存程序中的引數使用。  
+  您可以存取中的使用者定義型別 (UDT) 功能[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]從[!INCLUDE[tsql](../../includes/tsql-md.md)]語言中的，透過使用標準查詢語法。 在資料庫物件定義中，UDT 可當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 批次、函數及預存程序中的變數，以及函數及預存程序中的引數使用。  
   
 ## <a name="in-this-section"></a>本節內容  
  [定義 UDT 資料表及資料行](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  

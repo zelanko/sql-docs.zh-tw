@@ -1,5 +1,5 @@
 ---
-title: 透過設定登錄值實作簽署原則 |Microsoft 文件
+title: 透過設定登錄值實作簽署原則 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 caps.latest.revision: 27
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c101b66398d7259d97bdf4a828830764138df09c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e7c1259e38a50ad11d3a0f074dd3c911f89f776d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023372"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320638"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>透過設定登錄值實作簽署原則
   您可以使用選擇性登錄值來管理載入已簽署或未簽署之封裝的組織原則。 如果您使用這個登錄值，就必須在即將執行 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 封裝而且想要強制執行此原則的每部電腦上建立這個登錄值。 設定此登錄值之後， [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 就會檢查或確認簽章，然後再載入封裝。  
@@ -38,10 +38,10 @@ ms.locfileid: "36023372"
   
  下表列出 DWORD 資料的有效值及其相關聯的原則。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0|沒有管理限制。|  
-|@shouldalert|封鎖無效的簽章。<br /><br /> 此設定不會封鎖未簽署的封裝。|  
+|1|封鎖無效的簽章。<br /><br /> 此設定不會封鎖未簽署的封裝。|  
 |2|封鎖無效及不受信任的簽章。<br /><br /> 此設定不會封鎖未簽署的封裝，但是會封鎖自我產生的簽章。|  
 |3|封鎖無效和不受信任的簽章以及未簽署的封裝<br /><br /> 此設定也會封鎖自我產生的簽章。|  
   
@@ -52,15 +52,15 @@ ms.locfileid: "36023372"
   
 1.  在 **[開始]** 功能表上，按一下 **[執行]**。  
   
-2.  在 執行 對話方塊中，輸入`Regedit`，然後按一下 **確定**。  
+2.  在 [執行] 對話方塊中，鍵入`Regedit`，然後按一下 **[確定]**。  
   
 3.  找出登錄機碼 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS。  
   
 4.  以滑鼠右鍵按一下 [MSDTS]，指向 [新增]，然後按一下 [DWORD 值]。  
   
-5.  更新的新值的名稱`BlockedSignatureStates`。  
+5.  更新的新值以名稱`BlockedSignatureStates`。  
   
-6.  以滑鼠右鍵按一下`BlockedSignatureStates`按一下**修改**。  
+6.  以滑鼠右鍵按一下`BlockedSignatureStates`，按一下 **修改**。  
   
 7.  在 [編輯 DWORD 值] 對話方塊中，輸入值 0、1、2 或 3。  
   

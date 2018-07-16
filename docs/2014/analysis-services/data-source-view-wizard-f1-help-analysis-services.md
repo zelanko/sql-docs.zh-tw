@@ -1,5 +1,5 @@
 ---
-title: 資料來源檢視精靈 F1 說明 (Analysis Services) |Microsoft 文件
+title: 資料來源檢視精靈 F1 說明 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Source View Wizard
 ms.assetid: 0f5057a3-2d3a-4966-8b61-99c4b8ec3433
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f866ebe7d18a749409d1bdeb0f2b7d2b073c5f74
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: efc9c20cc6e79ae4e03838d9d4621fca383a5b43
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136980"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269824"
 ---
 # <a name="data-source-view-wizard-f1-help-analysis-services"></a>資料來源檢視精靈 F1 說明 (Analysis Services)
   使用資料來源檢視精靈即可建立資料來源檢視，在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中用於下列商業智慧專案：  
@@ -52,7 +52,7 @@ ms.locfileid: "36136980"
   
 -   [選取資料表和檢視&#40;資料來源檢視精靈&#41; &#40;Analysis Services&#41;](select-tables-and-views-data-source-view-wizard-analysis-services.md)  
   
--   [正在完成精靈&#40;資料來源檢視精靈&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
+-   [完成精靈&#40;資料來源檢視精靈&#41; &#40;Analysis Services&#41;](completing-the-wizard-data-source-view-wizard-analysis-services.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 精靈&#40;多維度資料&#41;](analysis-services-wizards-multidimensional-data.md)  

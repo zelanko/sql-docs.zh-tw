@@ -1,5 +1,5 @@
 ---
-title: 啟用實體的明確階層和集合 (Master Data Services) |Microsoft 文件
+title: 啟用實體的明確階層和集合 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 caps.latest.revision: 5
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c15f62eaebbfe77303004bb2417989ed5320ea11
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a300dd4ab0a162c335dc0c0efac548dcb757f11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311905"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>啟用明確階層和集合的實體 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，啟用明確階層和集合的實體，才能建立實體的明確階層和集合。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -50,11 +50,11 @@ ms.locfileid: "36030549"
   
 6.  從**啟用明確階層和集合**清單中，選取**是**。  
   
-7.  在**明確階層名稱**方塊中，輸入明確階層的名稱。  
+7.  在 **明確階層名稱**方塊中，輸入明確階層的名稱。  
   
 8.  (選擇性) 清除 [強制階層] 核取方塊，將階層建立為非強制階層。  
   
-9. 按一下**儲存實體**。  
+9. 按一下 **儲存實體**。  
   
 ## <a name="next-steps"></a>後續步驟  
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2315c4ef4b70427bf4709045857875ac4b66693b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3cbae0de78322d4b9dccb21f246a8cc689734262
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132393"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252030"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>第 1 課：使用異動複寫發行資料
   在這一課，您將使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立交易式發行集，以發行 **範例資料庫中** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料表的篩選子集。 此外，您也會將散發代理程式所使用的 SQL Server 登入加入至發行集存取清單 (PAL)。 開始進行此教學課程之前，必須先完成上一個教學課程 [準備伺服器進行複寫](tutorial-preparing-the-server-for-replication.md)。  

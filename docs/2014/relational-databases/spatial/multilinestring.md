@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e87912fc00924698bf2fe735c0bd9ce9433cdb1e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c340afc52dbd60f4accb1da7d3883e62d36974f6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37288524"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  A`MultiLineString`是零或多個集合`geometry`或**geographyLineString**執行個體。  
+  A`MultiLineString`是零或多個集合`geometry`或是**geographyLineString**執行個體。  
   
 ## <a name="multilinestring-instances"></a>MultiLineString 執行個體  
  下圖顯示的範例`MultiLineString`執行個體。  
@@ -42,12 +42,12 @@ ms.locfileid: "36036534"
   
 -   圖 4 是非簡單、 非封閉的`MultiLineString`執行個體。  
   
--   圖 5 是簡單、非封閉的 `MultiLineString`。 未關閉因為其`LineStrings`未關閉元素。 它是簡單因為無任何不相交，所以`LineStrings`執行個體相交。  
+-   圖 5 是簡單、非封閉的 `MultiLineString`。 它未關閉，因為其`LineStrings`未關閉元素。 很容易因為都不相交的任一`LineStrings`執行個體相交。  
   
 -   圖 6 是簡單、 關閉`MultiLineString`執行個體。 它是封閉的，因為它的所有元素都是封閉的。 因為它的所有元素在內部都不相交，所以它是簡單的。  
   
 ### <a name="accepted-instances"></a>已接受的執行個體  
- 如`MultiLineString`它必須是可接受的執行個體是空白或組成`LineString`platform 所接受。 如需有關接受`LineString`執行個體，請參閱[LineString](../spatial/linestring.md)。 以下為可接受之 `MultiLineString` 執行個體的範例。  
+ 針對`MultiLineString`執行個體，以接受它必須是可為空白或組成只`LineString`則可接受。 如需有關已接受`LineString`執行個體，請參閱[LineString](../spatial/linestring.md)。 以下為可接受之 `MultiLineString` 執行個體的範例。  
   
 ```  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  
@@ -63,7 +63,7 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
 ```  
   
 ### <a name="valid-instances"></a>有效的執行個體  
- 如`MultiLineString`執行個體有效，它必須符合下列準則：  
+ 針對`MultiLineString`執行個體有效，它必須符合下列準則：  
   
 1.  組成 `MultiLineString` 執行個體的所有執行個體必須都是有效的 `LineString` 執行個體。  
   

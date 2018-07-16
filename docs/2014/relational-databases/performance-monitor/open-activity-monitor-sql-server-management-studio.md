@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Activity Monitor [SQL Server], setting the refresh interval
 - refresh interval for Activity Monitor
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c2f067d5efbf5b8e3262311e3b351e0443920287
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8b1910e465e9f2f5d8341c5dd51596d5a6710bb0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37262434"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>開啟活動監視器 (SQL Server Management Studio)
-  本主題描述如何開啟活動監視器 來取得相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]處理程序以及這些處理序如何影響目前的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此外，本主題也描述如何設定 [活動監視器] 的重新整理間隔。  
+  本主題描述如何開啟活動監視器 來取得其相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]處理程序以及這些處理序如何影響目前的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 此外，本主題也描述如何設定 [活動監視器] 的重新整理間隔。  
   
  **本主題內容**  
   
@@ -35,7 +35,7 @@ ms.locfileid: "36134615"
   
      [Security](#Security)  
   
--   **若要開啟活動監視器使用：**  
+-   **若要開啟活動監視器的使用：**  
   
      [Transact-SQL](#SSMSProcedure)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36134615"
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>若要在 SQL Server Management Studio 中開啟活動監視器  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]標準工具列上，按一下 **活動監視器**。  
+1.  在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]標準工具列上，按一下**活動監視器**。  
   
 2.  在 **[連接到伺服器]** 對話方塊中，選取伺服器名稱和驗證模式，然後按一下 **[連接]**。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "36134615"
   
 #### <a name="to-open-activity-monitor-in-object-explorer"></a>若要在物件總管中開啟活動監視器  
   
--   在 [物件總管] 中，以滑鼠右鍵按一下執行個體名稱，然後**活動監視器**。  
+-   在 [物件總管] 中，以滑鼠右鍵按一下執行個體名稱，然後按**活動監視器**。  
   
 #### <a name="to-open-activity-monitor-when-opening-sql-server-management-studio"></a>若要在開啟 SQL Server Management Studio 時開啟活動監視器  
   

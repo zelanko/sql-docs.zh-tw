@@ -1,5 +1,5 @@
 ---
-title: 報表伺服器執行記錄和 ExecutionLog3 檢視 |Microsoft 文件
+title: 報表伺服器執行記錄和 ExecutionLog3 檢視 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9059bf91729065342e0013770b7b4b688df6fa17
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 38ffd98216c7943f164ad633603fa51aa717a552
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37255690"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>報表伺服器執行記錄和 ExecutionLog3 檢視
   報表伺服器執行記錄包含有關在伺服器上執行，或在原生模式向外延展部署或 SharePoint 伺服器陣列中多個伺服器上執行之報表的資訊。 您可以使用報表執行記錄來了解要求報表的頻率、最常使用的輸出格式，以及每一個處理階段所花費處理時間的毫秒數。 此記錄會包含執行報表之資料集查詢所花費時間長度的資訊，以及處理資料所花費的時間。 如果您是報表伺服器管理員，可以檢閱記錄資訊、識別長時間執行工作，並且向報表作者提出有關他們能夠改善之報表區域 (資料集或處理) 的建議。  
@@ -127,7 +127,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|擷取資料所花費的毫秒數。|  
 |TimeProcessing|處理報表所花費的毫秒數。|  
 |TimeRendering|轉譯報表所花費的毫秒數。|  
-|來源|報表執行的來源。 可能的值如下：<br /><br /> **Live**<br /><br /> **快取**： 表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**： 表示動態產生的報表基礎的模型鑽研報表，或者使用報表伺服器處理與轉譯的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**： 指出後續要求中已經建立的工作階段。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**： 表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
+|來源|報表執行的來源。 可能的值如下：<br /><br /> **即時**<br /><br /> **快取**： 表示快取的執行，例如，查詢不會執行即時的資料集。<br /><br /> **快照式**<br /><br /> **記錄**<br /><br /> **臨機操作**： 表示動態產生的報表基礎的模型鑽研報表，或者使用 處理與轉譯的報表伺服器的用戶端上預覽的報表產生器報表。<br /><br /> **工作階段**： 表示已經建立的工作階段內的後續要求。  例如，初始要求是檢視頁面 1，而後續要求則是匯出到 Excel (包含目前的工作階段狀態)。<br /><br /> **Rdce**： 表示報表定義自訂延伸模組。 RDCE 自訂延伸模組可以動態地自訂報表定義，然後在執行報表時將其傳遞至處理引擎。|  
 |[狀態]|狀態 (不是 rsSuccess 就是錯誤碼；如果發生多個錯誤，就只會記錄第一個錯誤)。|  
 |ByteCount|轉譯報表的大小 (以位元組為單位)。|  
 |RowCount|從查詢傳回的資料列數目。|  
@@ -226,9 +226,9 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- 以下說明一些在 AdditionalInfo 欄位中，您會看到的內容：  
+ 以下說明一些您會看到在 AdditionalInfo 欄位中的屬性：  
   
--   **ProcessingEngine**: 1 = SQL Server 2005，2 = 新的點播處理引擎。 如果大部分報表仍然顯示 1 值，可以調查重新設計報表的方式，讓它們都利用較新且更有效率的視需要處理引擎。  
+-   **ProcessingEngine**: 1 = SQL Server 2005，2 = 新的視需要處理引擎。 如果大部分報表仍然顯示 1 值，可以調查重新設計報表的方式，讓它們都利用較新且更有效率的視需要處理引擎。  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
@@ -240,7 +240,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**： 尖峰數量的記憶體，以 kb 為單位，在特定要求期間每個元件所使用的估計。  
+-   **EstimatedMemoryUsageKB**： 尖峰數量的記憶體，以 kb 為單位，每個元件所耗用的特定要求期間的估計值。  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -256,7 +256,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**的值是以毫秒來表示。 此資料可用來診斷效能問題。 從外部 Web 伺服器擷取影像所需的時間可能會讓整體報表執行變慢。 中加入[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **ExternalImages**的值是以毫秒來表示。 此資料可用來診斷效能問題。 從外部 Web 伺服器擷取影像所需的時間可能會讓整體報表執行變慢。 已新增至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
     ```  
     <ExternalImages>  
@@ -266,7 +266,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **連線**： 多層的結構。 中加入[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
+-   **連線**： 多層的結構。 已新增至[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]。  
   
     ```  
     <Connections>  

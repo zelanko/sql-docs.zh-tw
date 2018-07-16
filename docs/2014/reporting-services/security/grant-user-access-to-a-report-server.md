@@ -1,5 +1,5 @@
 ---
-title: 授與使用者存取報表伺服器 （報表管理員） |Microsoft 文件
+title: 授與使用者存取報表伺服器 （報表管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
 - permissions [Reporting Services], granting report server access
@@ -19,13 +19,13 @@ ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: d3a3526e9c52dad5c595c9df9fb722abb5f5b288
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b705997e16e2f41fb92ed7a5385a0907db09d99e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37256140"
 ---
 # <a name="grant-user-access-to-a-report-server-report-manager"></a>將報表伺服器的存取權授與使用者 (報表管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用角色型安全性將報表伺服器的存取權授與使用者。 在新的報表伺服器安裝上，只有屬於本機管理員群組的成員擁有報表伺服器內容和作業的權限。 若要讓報表伺服器供其他使用者使用，您必須建立角色指派，以便將使用者或群組帳戶對應至指定工作集合的預先定義角色。  
@@ -38,7 +38,7 @@ ms.locfileid: "36145778"
   
 -   系統層級角色會授與並未繫結至任何特定項目之網站範圍作業的存取權。 範例包括使用報表產生器和使用共用排程。  
   
-     這兩種角色類型彼此互補，而且您應該一起使用它們。 因此，將使用者加入至報表伺服器是兩個部分的作業。 如果您將某位使用者指派至項目層級角色，就應該同時將他指派至伺服器層級角色。 指派使用者至角色時，您必須選取已經定義的角色。 若要建立、修改或刪除角色，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如需詳細資訊，請參閱[建立、 刪除或修改角色&#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)。  
+     這兩種角色類型彼此互補，而且您應該一起使用它們。 因此，將使用者加入至報表伺服器是兩個部分的作業。 如果您將某位使用者指派至項目層級角色，就應該同時將他指派至伺服器層級角色。 指派使用者至角色時，您必須選取已經定義的角色。 若要建立、修改或刪除角色，請使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 建立、 刪除或修改角色&#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)。</c0>  
   
 ## <a name="before-you-start"></a>開始之前  
  將使用者加入至原生模式報表伺服器之前，請檢閱下列清單。  
@@ -61,7 +61,7 @@ ms.locfileid: "36145778"
   
 4.  按一下 **[新增角色指派]**。  
   
-5.  在**群組或使用者名稱**中，輸入 Windows 網域使用者或群組帳戶，格式如下：\<網域 >\\< 帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
+5.  在 **群組或使用者名稱**，輸入 Windows 網域使用者或群組帳戶，格式如下：\<網域 >\\< 帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
   
 6.  選取系統角色，然後按一下 **[確定]**。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36145778"
     > [!NOTE]  
     >  如果某個項目目前是從父項目繼承安全性，請按一下工具列中的 **[編輯項目安全性]** 來變更安全性設定。 然後，按一下 **[新增角色指派]**。  
   
-5.  在**群組或使用者名稱**中，輸入 Windows 網域使用者或群組帳戶，格式如下：\<網域 >\\< 帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
+5.  在 **群組或使用者名稱**，輸入 Windows 網域使用者或群組帳戶，格式如下：\<網域 >\\< 帳戶\>。 如果您要使用表單驗證或自訂安全性，請使用適用於部署的正確格式來指定使用者或群組帳戶。  
   
 6.  選取描述使用者或群組應如何存取項目的一或多個角色定義，然後按一下 **[確定]**。  
   

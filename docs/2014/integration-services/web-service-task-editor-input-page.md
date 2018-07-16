@@ -1,5 +1,5 @@
 ---
-title: Web 服務工作編輯器 （輸入頁面） |Microsoft 文件
+title: Web 服務工作編輯器 （輸入頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.input.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 93529c88-f540-47f2-a10a-12c87318ed6f
 caps.latest.revision: 29
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8f458f4a2898915102ab2a05b04fb7ba223c5e30
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e6322a234ea1653f578f60b36a84b7e2c71af169
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264954"
 ---
 # <a name="web-service-task-editor-input-page"></a>Web 服務工作編輯器 (輸入頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [輸入] 頁面，即可指定 Web 服務、Web 方法，以及提供給 Web 方法的輸入值。 在 [值] 資料行中直接輸入字串，或是在 [值] 資料行中選取變數，即可提供這些值。  
@@ -57,7 +57,7 @@ ms.locfileid: "36135421"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Web 服務工作編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Web 服務工作編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [Web 服務工作編輯器&#40;輸出頁面&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [運算式頁面](expressions/expressions-page.md)  
   

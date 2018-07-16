@@ -1,5 +1,5 @@
 ---
-title: FTP 工作編輯器 （一般頁面） |Microsoft 文件
+title: FTP 工作編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 caps.latest.revision: 28
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 786f0d4371773f77045f0ef9cd6825057c12a937
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97f8761af335319cbd205eca3c57d4f6874e5829
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133502"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283634"
 ---
 # <a name="ftp-task-editor-general-page"></a>FTP 工作編輯器 (一般頁面)
   使用 **[FTP 工作編輯器]** 對話方塊的 **[一般]** 頁面，即可指定 FTP 連接管理員，以連接到工作進行通訊的 FTP 伺服器。 您也可以命名和描述 FTP 工作。  

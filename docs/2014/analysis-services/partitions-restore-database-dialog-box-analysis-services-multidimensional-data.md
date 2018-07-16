@@ -1,5 +1,5 @@
 ---
-title: 資料分割 （還原資料庫對話方塊） (Analysis Services-多維度資料) |Microsoft 文件
+title: 資料分割 （還原資料庫對話方塊） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.partitions.f1
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 24e07fc2d8374af6f4bf0b6de5f73bc0df4a3bfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7ca646ca62f0e91f026c2917325ca6c8c75b63d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133328"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37269984"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>資料分割 (還原資料庫對話方塊) (Analysis Services - 多維度資料)
   在 **中，使用** [還原資料庫] **對話方塊的** [資料分割] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 頁面，即可指定本機資料分割的還原位置和是否還原遠端資料分割，以及指定還原遠端資料分割時所使用的遠端備份檔案。  
@@ -32,7 +32,7 @@ ms.locfileid: "36133328"
 > [!NOTE]  
 >  還原現有的資料庫之後，還原資料庫的使用者可能會喪失已還原資料庫的存取權。 如果在執行備份時，使用者不是伺服器角色的成員，也不是擁有完整控制權 (管理員) 權限的資料庫角色成員，就可能會發生存取權喪失的情況。  
   
- **在 還原資料庫對話方塊中顯示資料分割頁面**  
+ **若要在還原資料庫 對話方塊中顯示資料分割頁面**  
   
 -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的 [資料庫] 資料夾或物件總管中的資料庫，按一下 [還原]，然後按一下 [選取頁面] 底下的 [資料分割]。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36133328"
 |「資料行」|描述|  
 |------------|-----------------|  
 |**Cube**|顯示包含本機資料分割的 Cube 名稱。|  
-|**量值群組**|顯示包含本機資料分割之量值群組的名稱。|  
+|**MeasureGroup**|顯示包含本機資料分割之量值群組的名稱。|  
 |**資料分割**|顯示本機資料分割的名稱。|  
 |**大小 (MB)**|顯示本機資料分割的大小，以 MB 為單位。|  
 |**原始資料夾**|顯示儲存本機資料分割之原始資料夾的名稱。|  

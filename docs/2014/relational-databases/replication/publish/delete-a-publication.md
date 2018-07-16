@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing publications
 - publications [SQL Server replication], deleting
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - deleting publications
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 caps.latest.revision: 35
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ab132b903fcb15d11bac4a6d21ab6670397a13e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e13b845d6fba844ccf4199403240c5e8cb79bdbd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023565"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303718"
 ---
 # <a name="delete-a-publication"></a>刪除發行集
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來刪除 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中的發行集。  
@@ -62,7 +62,7 @@ ms.locfileid: "36023565"
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者上執行 [sp_droppublication](/sql/relational-databases/system-stored-procedures/sp-droppublication-transact-sql) 。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值為`tran`如**@type**。 (選擇性) 如果無法存取散發者，或是資料庫的狀態有疑問或離線，請針對 **@force** @type **@force**資料夾中刪除發行集。 (選擇性) 如果未在發行集資料庫上執行 **@dbname** ，請針對 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值為`tran`for **@type**。 (選擇性) 如果無法存取散發者，或是資料庫的狀態有疑問或離線，請針對 **@force** @type **@force**資料夾中刪除發行集。 (選擇性) 如果未在發行集資料庫上執行 **@dbname** ，請針對 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
   
         > [!NOTE]  
         >  針對 **@force** @type **@force** 的值可能會將與複寫有關的發行物件留在資料庫中。  
@@ -77,7 +77,7 @@ ms.locfileid: "36023565"
   
     -   若要刪除單一發行集，請在發行集資料庫的發行者端執行 [sp_dropmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql)。  
   
-    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值為`merge`如**@type**。 (選擇性) 如果無法存取散發者，或是資料庫的狀態有疑問或離線，請針對 **@force** @type **@force**資料夾中刪除發行集。 (選擇性) 如果未在發行集資料庫上執行 **@dbname** ，請針對 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
+    -   若要從發行的資料庫中刪除所有發行集及移除所有複寫物件，請在發行者上執行 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 。 指定的值為`merge`for **@type**。 (選擇性) 如果無法存取散發者，或是資料庫的狀態有疑問或離線，請針對 **@force** @type **@force**資料夾中刪除發行集。 (選擇性) 如果未在發行集資料庫上執行 **@dbname** ，請針對 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql) 指定資料庫的名稱。  
   
         > [!NOTE]  
         >  針對 **@force** @type **@force** 的值可能會將與複寫有關的發行物件留在資料庫中。  
@@ -106,7 +106,7 @@ ms.locfileid: "36023565"
   
 3.  設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
-4.  檢查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 屬性，確認該發行集存在。 如果這個屬性的值為`false`，是在步驟 3 中的發行集屬性定義不正確，或發行集不存在。  
+4.  檢查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 屬性，確認該發行集存在。 如果這個屬性的值為`false`，在步驟 3 中的發行集屬性定義不正確，或發行集不存在。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> 方法。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "36023565"
   
     1.  建立 <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> 類別的執行個體。 將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 的執行個體。  
   
-    2.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回`false`，確認資料庫是否存在。  
+    2.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回`false`，確認此資料庫確實存在。  
   
-    3.  設定<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>屬性`false`。  
+    3.  設定<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>屬性設`false`。  
   
     4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "36023565"
   
 3.  設定發行集的 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，並將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為在步驟 1 中建立的連接。  
   
-4.  檢查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 屬性，確認該發行集存在。 如果這個屬性的值為`false`，是在步驟 3 中的發行集屬性定義不正確，或發行集不存在。  
+4.  檢查 <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> 屬性，確認該發行集存在。 如果這個屬性的值為`false`，在步驟 3 中的發行集屬性定義不正確，或發行集不存在。  
   
 5.  呼叫 <xref:Microsoft.SqlServer.Replication.Publication.Remove%2A> 方法。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "36023565"
   
     2.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 `false`，請確認此資料庫存在。  
   
-    3.  設定<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>屬性`false`。  
+    3.  設定<xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>屬性設`false`。  
   
     4.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 方法。  
   

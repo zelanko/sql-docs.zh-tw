@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - merge replication logical records [SQL Server replication]
 - articles [SQL Server replication], logical records
 - logical records [SQL Server replication]
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 caps.latest.revision: 43
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 79de2148e10d4e43ae6560741435b1dcf3f31e90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 8975a3c535d627fe41a51b9b4937e204a07326c0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36029802"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298058"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>定義合併資料表發行項之間的邏輯記錄關聯性
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO)，在 [!INCLUDE[tsql](../../../includes/tsql-md.md)]中定義合併資料表發行項之間的邏輯記錄關聯性。  
@@ -106,7 +106,7 @@ ms.locfileid: "36029802"
   
     -   若要偵測及解決邏輯記錄中相關資料列內所發生的衝突，請為 **@value** 指定 **@logical_record_level_conflict_detection** ＞和＜ **@logical_record_level_conflict_resolution**。  
   
-    -   若要使用的標準資料列或資料行層級的衝突偵測和解決方式，指定其值為`false`如**@logical_record_level_conflict_detection**和**@logical_record_level_conflict_resolution**，預設值。  
+    -   若要使用的標準資料列或資料行層級的衝突偵測和解決方式，指定其值為`false`for **@logical_record_level_conflict_detection**並**@logical_record_level_conflict_resolution**，這是預設值。  
   
 3.  針對組成此邏輯記錄的每一個發行項重複步驟 2。 您必須針對此邏輯記錄中的每一個發行項使用相同的衝突偵測和解決選項。 如需詳細資訊，請參閱 [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)。  
   
@@ -131,9 +131,9 @@ ms.locfileid: "36029802"
   
 2.  若要使用標準資料列層級或資料行層級的衝突偵測與解決方式：  
   
-    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值為**logical_record_level_conflict_detection**如**@property**而值為`false`如**@value**。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription**。  
+    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值為**logical_record_level_conflict_detection** for **@property**值，並針對`false`如**@value**。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription**。  
   
-    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值為**logical_record_level_conflict_resolution**如**@property**而值為`false`如**@value**。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription**。  
+    -   在發行集資料庫的發行者上，執行 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)。 指定的值為**logical_record_level_conflict_resolution** for **@property**值，並針對`false`如**@value**。 請為 **1** 指定 **@force_invalidate_snapshot** ＞和＜ **@force_reinit_subscription**。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>移除邏輯記錄關聯性  
   
@@ -164,7 +164,7 @@ ms.locfileid: "36029802"
   
 2.  建立 <xref:Microsoft.SqlServer.Replication.MergePublication> 類別的執行個體、為發行集設定 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 和 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 屬性，以及將 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性設定為步驟 1 中所建立的連接。  
   
-3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，是在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
+3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。 如果此方法傳回`false`，在步驟 2 中的發行集屬性定義不正確，或發行集不存在。  
   
 4.  如果 <xref:Microsoft.SqlServer.Replication.MergePublication.PartitionGroupsOption%2A> 屬性設定為 <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.False>，請將它設定為 <xref:Microsoft.SqlServer.Replication.PartitionGroupsOption.True>。  
   

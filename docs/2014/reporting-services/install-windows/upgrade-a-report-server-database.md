@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading databases
 - report server database
@@ -17,13 +17,13 @@ ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 1c27b2bed8932fd5dbb415be7889242c0752b52b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 18ee01868f27e12f709ec5784e868eadcdd46f6c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253572"
 ---
 # <a name="upgrade-a-report-server-database"></a>升級報表伺服器資料庫
   報表伺服器資料庫為一個或多個報表伺服器執行個體提供了儲存裝置。 由於報表伺服器資料庫結構描述可隨著每個新的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]版本一起變更，所以此資料庫版本必須符合您所使用的報表伺服器執行個體版本。 在大多數情況下，報表伺服器資料庫可以自動升級，而不需要您採取特定的動作。  
@@ -71,7 +71,7 @@ ms.locfileid: "36037188"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 組態管理員&#40;原生模式&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [建立報表伺服器資料庫&#40;SSRS 組態管理員&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [變更資料庫精靈&#40;SSRS 原生模式&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
+ [變更資料庫精靈 &#40;SSRS 原生模式&#41;](../../sql-server/install/change-database-wizard-ssrs-native-mode.md)   
  [升級和移轉 Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [移轉 Reporting Services 安裝&#40;原生模式&#41;](migrate-a-reporting-services-installation-native-mode.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: ProactiveCachingQueryBinding 資料類型 (ASSL) |Microsoft 文件
+title: ProactiveCachingQueryBinding 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - ProactiveCachingQueryBinding data type
 ms.assetid: c1b06e50-9e68-40db-bdab-fc2cb3a8ff64
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 339c35a33d3d26268b027068c6ac7f5254046606
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c93fc223e66910dde5e532ecf20e89497227f6d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263494"
 ---
 # <a name="proactivecachingquerybinding-data-type-assl"></a>ProactiveCachingQueryBinding 資料類型 (ASSL)
-  定義衍生的資料類型，表示資訊[ProactiveCaching](../objects/proactivecaching-element-assl.md)有關資料表和檢視，透過指定的查詢需要重建快取的執行中的資料來源變更的項目。  
+  定義衍生的資料類型，表示資訊[ProactiveCaching](../objects/proactivecaching-element-assl.md)有關資料表和檢視，識別執行指定之查詢所需要重建快取中的資料來源變更的項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36131807"
 |衍生的元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`ProactiveCachingBinding`型別，包括資料表的繼承階層架構`ProactiveCachingBinding`類型，請參閱[ProactiveCachingBinding 資料類型&#40;ASSL&#41;](binding-data-type-assl.md)。  
+ 如需詳細資訊`ProactiveCachingBinding`型別，包括繼承階層的資料表`ProactiveCachingBinding`類型，請參閱[ProactiveCachingBinding 資料類型&#40;ASSL&#41;](binding-data-type-assl.md)。  
   
- 如需有關`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層架構的`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](binding-data-type-assl.md).  
+ 如需詳細資訊`Binding`型別，包括之 Analysis Services 指令碼語言 (ASSL) 物件的資料表`Binding`型別和繼承階層`Binding`類型，請參閱[繫結資料類型 &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- 如需 ASSL 中資料繫結的概觀，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需 ASSL 中資料繫結的概觀，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.ProactiveCachingQueryBinding>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.ProactiveCachingQueryBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

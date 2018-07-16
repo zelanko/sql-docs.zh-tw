@@ -1,5 +1,5 @@
 ---
-title: 工作 2 （選擇性）： 建立 MDS 訂閱檢視，使用主資料管理員 |Microsoft 文件
+title: 工作 2 （選擇性）： 建立 MDS 訂閱檢視，使用主資料管理員 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,45 +10,45 @@ ms.technology:
 - integration-services
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 caps.latest.revision: 6
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4883d4f5c7bef05de9625c2fcb7bac235c0306e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b1245beb168f2781e5acca344eb412bde104e4c9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145751"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284244"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>工作 2 (選擇性)：使用主資料管理員建立 MDS 訂閱檢視
-  在這項工作，您可以建立訂閱檢視，以公開**供應商**中的實體**供應商**模型給其他應用程式。 您不會在目前的教學課程版本中使用這個檢視。  
+  在這個工作中，您會建立訂閱檢視，公開**供應商**中的實體**供應商**模型到其他應用程式。 您不會在目前的教學課程版本中使用這個檢視。  
   
-1.  切換至的主頁面**主資料管理員**([http://localhost/MDS](http://localhost/MDS)) 依序按一下**SQL Server 2012 Master Data Services**頂端。  
+1.  切換至的主頁面**主資料管理員**([http://localhost/MDS](http://localhost/MDS))，即可**SQL Server 2012 Master Data Services**頂端。  
   
-2.  按一下**整合管理**。  
+2.  按一下 **整合管理**。  
   
-3.  按一下**建立檢視表**功能表列上。  
+3.  按一下 **建立檢視表**功能表列上。  
   
-     ![加入新的訂閱檢視 按鈕](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "加入新的訂閱檢視 按鈕")  
+     ![加入新的訂用帳戶檢視 按鈕](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-01.jpg "新增新的訂用帳戶檢視 按鈕")  
   
-4.  按一下 **+ （加號）** 建立訂閱檢視 工具列上的圖示。  
+4.  按一下 [ **+ （加號）** 建立訂閱檢視] 工具列上的圖示。  
   
-5.  在**建立訂閱檢視**窗格中，輸入**供應商**如**訂閱檢視名稱**。  
+5.  在 **建立訂閱檢視**窗格中，輸入**供應商**for**訂用帳戶檢視表名稱**。  
   
-6.  選取**供應商**如**模型**。  
+6.  選取 **供應商**for**模型**。  
   
-7.  選取**VERSION_1**如**版本**。  
+7.  選取  **VERSION_1** for**版本**。  
   
-8.  選取**供應商**如**實體**。  
+8.  選取 **供應商**for**實體**。  
   
-9. 選取**分葉成員**如**格式**。  
+9. 選取 **分葉成員**for**格式**。  
   
      ![儲存訂閱檢視 按鈕](../../2014/tutorials/media/et-creatingamdssubscriptionviewusingmdm-02.jpg "儲存訂閱檢視 按鈕")  
   
-10. 按一下**儲存**儲存訂閱檢視 工具列上。 這個動作會建立名為 SQL Server 中的檢視**供應商**。 您可以使用 SQL Server Management Studio (SSMS) 來驗證。  
+10. 按一下 [**儲存**儲存訂閱檢視] 工具列上。 這個動作會建立名為 SQL Server 中的檢視**供應商**。 您可以使用 SQL Server Management Studio (SSMS) 來驗證。  
   
 ## <a name="next-step"></a>下一個步驟  
  [工作 3&#40;選擇性&#41;： 檢閱訂閱檢視](task-3-optional-reviewing-the-subscription-views.md)  

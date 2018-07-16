@@ -19,13 +19,13 @@ ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cbc0be5255b3345ba27297123981f2b0138e4437
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6c34669ffc14ee623b17549f588385886488ed02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287594"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>使用指令碼元件剖析非標準文字檔案格式
   當來源資料是以非標準格式排列時，為了達成相同的結果，您可能會發現將所有剖析邏輯合併在單一指令碼中會比將多個 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 轉換鏈結在一起更方便。  
@@ -99,7 +99,7 @@ ms.locfileid: "36144768"
   
 11. 在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上，選取單一可用的輸入資料行。  
   
-12. 在**輸入和輸出**頁面**指令碼轉換編輯器**、 選取 Output 0，並設定其`SynchronousInputID`為 None。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
+12. 在上**輸入和輸出**頁面**指令碼轉換編輯器**，選取 Output 0 並將其`SynchronousInputID`為 None。 建立 5 個輸出資料行，全部都屬於字串 [DT_STR] 類型而且長度為 32：  
   
     -   FirstName  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36144768"
   
     -   StateProvince  
   
-13. 在**指令碼**頁面**指令碼轉換編輯器**，按一下 **編輯指令碼**輸入程式碼所示`ScriptMain`類別使用的範例。 關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
+13. 在上**指令碼**頁面**指令碼轉換編輯器**，按一下 **編輯指令碼**並輸入所示的程式碼`ScriptMain`類別的範例。 關閉指令碼開發環境以及 [指令碼轉換編輯器]。  
   
 14. 將 SQL Server 目的地加入至資料流程。 將它設定為使用 OLE DB 連接管理員和 RowDelimitedData 資料表。 將指令碼元件的輸出連接至這個目的地。  
   
@@ -258,7 +258,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. 在 [指令碼轉換編輯器] 的 [輸入資料行] 頁面上，選取單一可用的輸入資料行。  
   
-12. 在**輸入和輸出**頁面**指令碼轉換編輯器**，選取 Output 0、 將它重新命名為 ParentRecords 並將其`SynchronousInputID`為 None。 建立 2 個輸出資料行：  
+12. 在上**輸入和輸出**頁面**指令碼轉換編輯器**，選取 Output 0、 將它重新命名為 ParentRecords，並將其`SynchronousInputID`為 None。 建立 2 個輸出資料行：  
   
     -   ParentID (主索引鍵)，屬於四位元組帶正負號的整數 [DT_I4] 類型  
   
@@ -351,7 +351,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼元件建立同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  

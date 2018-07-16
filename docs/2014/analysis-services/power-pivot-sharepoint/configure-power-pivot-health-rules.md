@@ -1,5 +1,5 @@
 ---
-title: PowerPivot 健全狀況規則-設定 |Microsoft 文件
+title: PowerPivot 健全狀況規則-設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f22cf615d32ebe0d784aa71f3169f4ce9b9e9125
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 853dc9e66b42830f241715f2283b75f1983e2433
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135030"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265425"
 ---
 # <a name="powerpivot-health-rules---configure"></a>PowerPivot 健全狀況規則 - 設定
   PowerPivot for SharePoint 包含的 SharePoint 健全狀況規則可幫助您監控及修復伺服器可用性與組態問題。 套用至 PowerPivot for SharePoint 的健全狀況規則會出現在 [檢閱規則定義] 頁面中。  
@@ -32,7 +32,7 @@ ms.locfileid: "36135030"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **注意** ：健全狀況規則設定是針對 SQL Server Analysis Services 執行個體和 PowerPivot 服務應用程式分別設定。 請使用本主題的指示來設定每一個服務的健全狀況規則。 如果是 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 只會使用服務應用程式。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱本主題中的 「 版本 」 資料行[健全狀況規則參考&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
+ **注意** ：健全狀況規則設定是針對 SQL Server Analysis Services 執行個體和 PowerPivot 服務應用程式分別設定。 請使用本主題的指示來設定每一個服務的健全狀況規則。 如果是 SharePoint 2013 部署， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 只會使用服務應用程式。 因此， [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 會針對不同版本的 SharePoint 安裝不同組的健全狀況規則。 請參閱主題中的 「 版本 」 資料行[健全狀況規則參考&#40;PowerPivot for SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md)，或者您可以執行下列 Windows PowerShell 命令來查看已安裝的規則。  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like “*power*”}  | format-table -property * -autosize | out-default  
@@ -46,7 +46,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [設定用來評估 （PowerPivot 服務應用程式） 的應用程式穩定性的健全狀況規則](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  您必須是服務應用程式管理員，才能變更 Analysis Services 執行個體與 PowerPivot 服務應用程式的組態屬性。  
   
 ##  <a name="bkmk_view"></a> 檢視 PowerPivot 健全狀況規則  
@@ -68,7 +68,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 2.  在頁面頂端，擁有 Analysis Services 執行個體的 SharePoint 伺服器陣列中選取伺服器 (在下圖中，伺服器名稱為 AW-SRV033)。 **[SQL Server Analysis Services]** 將會出現在服務清單中。  
   
-     ![螢幕擷取畫面管理服務的伺服器 頁面上](../media/ssas-centraladmin-servicesonserver.gif "螢幕擷取畫面管理服務的伺服器 頁面")  
+     ![螢幕擷取畫面管理服務的伺服器 頁面](../media/ssas-centraladmin-servicesonserver.gif "螢幕擷取畫面管理服務的伺服器 頁面")  
   
 3.  按一下 **[SQL Server Analysis Services]**。  
   
@@ -95,7 +95,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: 連接數目太多表示要部署更多的伺服器才能處理目前的負載]**。  
   
      磁碟空間不足 (預設為 5%)  
-     每次要求資料庫時，都會使用磁碟空間來快取 PowerPivot 資料。 當磁碟空間不足時，這個規則會讓您知道這個狀況。 根據預設，當備份資料夾所在之磁碟機上的磁碟空間低於 5% 時，便會觸發此健全狀況規則。 如需有關磁碟使用量的詳細資訊，請參閱[設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)。  
+     每次要求資料庫時，都會使用磁碟空間來快取 PowerPivot 資料。 當磁碟空間不足時，這個規則會讓您知道這個狀況。 根據預設，當備份資料夾所在之磁碟機上的磁碟空間低於 5% 時，便會觸發此健全狀況規則。 如需有關磁碟使用量的詳細資訊，請參閱 <<c0> [ 設定磁碟空間使用量&#40;PowerPivot for SharePoint&#41;](configure-disk-space-usage-power-pivot-for-sharepoint.md)。</c0>  
   
      此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: PowerPivot 資料快取所在之磁碟機上的磁碟空間不足]**。  
   
@@ -112,7 +112,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 3.  隨即出現 PowerPivot 管理儀表板。 在 **[動作]** 清單中，按一下 **[設定服務應用程式設定]** ，以開啟服務應用程式設定頁面。  
   
-     ![螢幕擷取畫面的儀表板，專注於動作清單](../media/ssas-centraladmin-actionslist.gif "螢幕擷取畫面的儀表板，專注於動作清單")  
+     ![專注於動作 清單中的儀表板的螢幕擷取畫面](../media/ssas-centraladmin-actionslist.gif "專注於動作 清單中的儀表板的螢幕擷取畫面")  
   
 4.  在 [健全狀況規則設定] 中，修改下列設定：  
   
@@ -127,7 +127,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
      檢查 PowerPivot Management Dashboard.xlsx 檔案的更新 (預設為 5 天)  
      PowerPivot Management Dashboard.xlsx 檔案是 PowerPivot 管理儀表板中的報表所使用的資料來源。 在預設伺服器組態中，此 .xlsx 檔每天都會重新整理 (使用 SharePoint 和 PowerPivot 系統服務所收集的使用量資料)。 萬一未更新此檔案，健全狀況規則會將它報告為問題。 根據預設，如果此檔案的時間戳記長達 5 天都未變更，則會觸發此規則。  
   
-     如需有關使用量資料收集的詳細資訊，請參閱[設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。  
+     如需有關使用量資料收集的詳細資訊，請參閱 <<c0> [ 設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)。</c0>  
   
      此組態設定會對應到 **[檢閱問題與方案]** 頁面上的以下規則定義： **[PowerPivot: 使用量資料並未以預期的頻率更新]**。  
   

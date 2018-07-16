@@ -1,5 +1,5 @@
 ---
-title: 選取建立方法 （維度精靈） |Microsoft 文件
+title: 選取建立方法 （維度精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.dimensiondefinition.f1
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 10d52966956d39f7a495e353bdf6acd595cc51ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d10005b2b689078eb7677547ebfc905fbdcc996
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036467"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267154"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>選取建立方法 (維度精靈)
   使用 **[選取建立方法]** 頁面，即可選取建立維度的方式。  
   
- **若要開啟 「 維度精靈 」**  
+ **若要開啟 維度精靈**  
   
 -   在方案總管的 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中，以滑鼠右鍵按一下 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 專案的 [維度] 資料夾，然後按一下 [新增維度]。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36036467"
   
  如需詳細資訊，請參閱 [產生時間資料表來建立時間維度](multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)。  
   
- **資料來源中產生非時間資料表**  
+ **在 資料來源中產生非時間資料表**  
  定義不含基礎關聯式資料來源的維度，然後針對資料來源產生必要的結構描述。 這種方法稱為由上而下的模型。  
   
 > [!NOTE]  

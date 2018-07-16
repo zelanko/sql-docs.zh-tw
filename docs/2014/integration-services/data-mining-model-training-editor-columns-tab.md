@@ -1,5 +1,5 @@
 ---
-title: 資料採礦模型培訓編輯器 （資料行索引標籤） |Microsoft 文件
+title: 資料採礦模型培訓編輯器 （資料行索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.columns.f1
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 0891254c-74c2-4482-b41a-fd69b1677b23
 caps.latest.revision: 21
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4f3300a8dd536d0110ca82657e676476b932b482
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bffc0cc328fd775c445c14537092bb7785a64b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035473"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37250668"
 ---
 # <a name="data-mining-model-training-editor-columns-tab"></a>資料採礦模型培訓編輯器 (資料行索引標籤)
   使用 **[資料採礦模型培訓編輯器]** 對話方塊的 **[資料行]** 頁面，即可將輸入資料行對應至採礦結構的資料行。  

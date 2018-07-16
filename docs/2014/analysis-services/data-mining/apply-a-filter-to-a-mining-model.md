@@ -1,5 +1,5 @@
 ---
-title: 將篩選套用至採礦模型 |Microsoft 文件
+title: 將篩選套用至採礦模型 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
 - filters [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: cb6cdfdf92e5cec0da4e27a78474037e2bd7d70e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f550dde21f45d7850db5cc6a27d2247c565dcee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137181"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253200"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>將篩選套用至採礦模型
   如果採礦結構包含巢狀資料表，則篩選可以套用至案例資料表、巢狀資料表或兩者。  
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  按一下 [值] 文字方塊，然後在方塊中輸入值。  
   
-     例如，選取`Income`做為資料行中，選取大於運算子 (>)、，然後輸入`30000`。  
+     例如，選取`Income`做為資料行，然後選取大於運算子 (>)、，然後輸入`30000`。  
   
 9. 在方格中，按下一個資料列。  
   
@@ -90,7 +90,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>若要在採礦模型中的巢狀資料表加入篩選  
   
-1.  在**\<名稱 > 模組篩選器**對話方塊方塊中，按一下空白資料列在底下的方格**採礦結構資料行**。  
+1.  在  **\<名稱 > 模組篩選器**對話方塊方塊中，按一下空白資料列在底下的方格**採礦結構資料行**。  
   
 2.  從下拉式清單選取巢狀資料表的名稱。  
   
@@ -110,7 +110,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  按一下 [值]，然後輸入值。  
   
-     例如，對於**採礦結構資料行，** 選取`Model`。 如**運算子**，選取`<>`，然後輸入值`Water Bottle`。 這種情況會建立下列篩選運算式：  
+     例如，對於**採礦結構資料行**選取`Model`。 針對**運算子**，選取`<>`，然後輸入值`Water Bottle`。 這種情況會建立下列篩選運算式：  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -119,7 +119,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  由於巢狀資料表屬性的數目基本上並無限制，所以 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 不會提供可能值的清單以供選取。 您必須輸入確實的值。 此外，您也不能在巢狀資料表中使用 LIKE 運算子。  
   
-1.  加入更多條件，如有必要，藉由選取結合條件`AND`或`OR`中**及/或**在左側的方塊**條件**方格。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  加入更多條件，如有必要，選取來組合條件`AND`或`OR`中**及/或**左側的方塊**條件**方格。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  在 [模型篩選器] 對話方塊中，檢閱您使用 [篩選器] 對話方塊建立的條件。 巢狀資料表的條件會附加至案例資料表的條件，完整的篩選條件集合會在 [運算式] 文字方塊中顯示。  
   
@@ -131,7 +131,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](mining-models-analysis-services-data-mining.md)   
- [採礦模型的工作與操作方法](mining-model-tasks-and-how-tos.md)   
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
  [從採礦模型中刪除篩選](delete-a-filter-from-a-mining-model.md)  
   
   

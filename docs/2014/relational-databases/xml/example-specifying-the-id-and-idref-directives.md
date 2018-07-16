@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: f0bdc2134723cddd5acf6ead6e137b91bf52f68e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 1b6ea8ca74c7ca587b0ecbc6ef4ee3c3f1decc16
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034938"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319758"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>範例：指定 ID 和 IDREF 指示詞
   此範例幾乎與＜ [指定 ELEMENTXSINIL 指示詞](example-specifying-the-elementxsinil-directive.md) ＞範例相同。 唯一的差異在於查詢會指定 **ID** 和 **IDREF** 指示詞。 這些指示詞會覆寫 <`OrderHeader`> 和 <`OrderDetail`> 元素中的 **SalesPersonID** 屬性類型。 這會形成內部文件連結。 您需要結構描述，才能查看被覆寫的類型。 因此，查詢會在 FOR XML 子句中指定 **XMLDATA** 選項，以擷取結構描述。  

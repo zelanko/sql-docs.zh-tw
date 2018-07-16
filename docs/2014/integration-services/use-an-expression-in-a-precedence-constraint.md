@@ -1,5 +1,5 @@
 ---
-title: 優先順序條件約束中使用運算式 |Microsoft 文件
+title: 在 優先順序條件約束中使用運算式 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], adding expressions
 - expressions [Integration Services], adding
 ms.assetid: 601038bb-3b17-42ac-b09d-5b3a82fb6564
 caps.latest.revision: 44
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e9752ccb8a925f144abc256db01a6eab683e7d6b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 31e3e002996d523aa225e0d0bb607d1772d8b0e7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146975"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273064"
 ---
 # <a name="use-an-expression-in-a-precedence-constraint"></a>在優先順序條件約束中使用運算式
   此程序描述如何使用 [優先順序條件約束編輯器] 對話方塊，將運算式加入優先順序條件約束。 封裝必須包括至少兩個可執行檔 (工作或容器)，且這兩個可執行檔必須由優先順序條件約束連接，您才可以將運算式加入優先順序條件約束。  
@@ -48,7 +48,7 @@ ms.locfileid: "36146975"
 ## <a name="see-also"></a>另請參閱  
  [優先順序條件約束](control-flow/precedence-constraints.md)   
  [使用預設的優先順序條件約束來連線工作和容器](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
- [使用快速鍵功能表設定優先順序條件約束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
+ [使用快顯功能表設定優先順序條件約束的值](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   
  [設定優先順序條件約束的屬性](../../2014/integration-services/set-the-properties-of-a-precedence-constraint.md)   
  [Integration Services &#40;SSIS&#41; 運算式](expressions/integration-services-ssis-expressions.md)  
   

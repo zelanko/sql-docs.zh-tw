@@ -1,5 +1,5 @@
 ---
-title: 從採礦模型刪除篩選器 |Microsoft 文件
+title: 從採礦模型刪除篩選器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - filters [Analysis Services]
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 143ab55a3ebfa3036fe23afd120d8b9c36f73a77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 535859d04212b09af5a96745f3fb4e234af3f6e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030389"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289844"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>從採礦模型刪除篩選
   當您建立採礦模型的篩選時，您可以在資料來源檢視中的資料子集上建立模型。 篩選對於測試原始資料子集上之模型的精確度也非常實用。  
@@ -58,13 +58,13 @@ ms.locfileid: "36030389"
   
 1.  在 [方案總管] 中，按一下包含篩選的採礦模型。  
   
-2.  在**屬性**視窗中，以滑鼠右鍵按一下中的篩選文字`Filter`屬性，然後選取**全選**。  
+2.  在**屬性** 視窗中，以滑鼠右鍵按一下中的篩選文字`Filter`屬性，然後選取**全選**。  
   
 3.  按退格鍵或 Delete 鍵。  
   
 ## <a name="see-also"></a>另請參閱  
  [從採礦模型鑽研到案例資料](drill-through-to-case-data-from-a-mining-model.md)   
- [採礦模型的工作與操作方法](mining-model-tasks-and-how-tos.md)   
+ [採礦模型工作和使用說明](mining-model-tasks-and-how-tos.md)   
  [採礦模型的篩選&#40;Analysis Services-資料採礦&#41;](mining-models-analysis-services-data-mining.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 077ccf4ad3793db7bbf067460f42cf8c8e98b427
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: b9ff94d28a55da5d199647af200c6179ccadc2d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324672"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271314"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
   OLE DB 來源會使用資料庫資料表、檢視或 SQL 命令，從各種 OLE DB 相容的關聯式資料庫中擷取資料。 例如，OLE DB 來源可從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中擷取資料。  
@@ -94,7 +94,7 @@ ms.locfileid: "36324672"
   
  如需可在 [OLE DB 來源編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [OLE DB 來源編輯器&#40;連接管理員頁面&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [OLE DB 來源編輯器&#40;連線管理員頁面&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
 -   [OLE DB 來源編輯器&#40;資料行頁面&#41;](../ole-db-source-editor-columns-page.md)  
   

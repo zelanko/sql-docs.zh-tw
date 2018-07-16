@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Integration Services packages, about packages
 - packages [Integration Services], about packages
@@ -23,13 +23,13 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 85eeb75badeed90812c657b9dbdc64e261947e20
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99a414e27b9fb470d8e7ee07589c42e0184b283e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134219"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252380"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) 封裝
   封裝是指經過組織的連接、控制流程元素、資料流程元素、事件處理常式、變數、參數以及組態的集合，您可以使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供的圖形設計工具組裝或利用撰寫程式的方式建立封裝。  然後將完成的封裝儲存到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] 封裝存放區或檔案系統中，或者您可以將 ssISnoversion 專案部署到 [!INCLUDE[ssIS](../includes/ssis-md.md)] 伺服器。 封裝是所擷取、執行和儲存的工作單位。  
@@ -54,9 +54,9 @@ ms.locfileid: "36134219"
 ## <a name="package-templates"></a>封裝範本  
  封裝經常用來當作範本，用以建立共用基本功能的封裝。 您可以建立基本封裝，然後複製它，您也可以將封裝指定為範本。 例如，下載並複製檔案然後再擷取資料的封裝，可能會在列舉資料夾內檔案的「Foreach 迴圈」中包含 FTP 和「檔案系統」工作。 它也可以包含用來存取資料的一般檔案連接管理員，以及用來擷取資料的一般檔案來源。 資料的目的地各有不同，而且從基本封裝複製之後，目的地便會加入每個新封裝中。 您也可以建立封裝，然後再使用這些封裝當作加入 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案之新封裝的範本。 如需詳細資訊，請參閱 [在 SQL Server 資料工具中建立封裝](create-packages-in-sql-server-data-tools.md)。  
   
- 當第一次建立封裝，以程式設計方式或使用 SSIS 設計師中，GUID 會新增至其`ID`屬性和名稱，使其`Name`屬性。 如果您透過複製現有封裝或使用範本封裝的方式來建立新封裝，將一併複製名稱和 GUID。 如果您使用記錄功能，這可能會造成問題，因為封裝的 GUID 和名稱會被寫入記錄檔，以識別記錄資訊所屬的封裝。 因此，您應該更新新封裝的名稱和 GUID，以協助區分新封裝與其複製來源封裝，並使記錄資料中的封裝有所區別。  
+ 當第一次建立封裝，以程式設計方式或使用 SSIS 設計師中，GUID 會新增至其`ID`屬性並將名稱加入其`Name`屬性。 如果您透過複製現有封裝或使用範本封裝的方式來建立新封裝，將一併複製名稱和 GUID。 如果您使用記錄功能，這可能會造成問題，因為封裝的 GUID 和名稱會被寫入記錄檔，以識別記錄資訊所屬的封裝。 因此，您應該更新新封裝的名稱和 GUID，以協助區分新封裝與其複製來源封裝，並使記錄資料中的封裝有所區別。  
   
- 若要變更封裝 GUID，重新產生的 GUID`ID`屬性中的 [屬性] 視窗中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 若要變更封裝名稱，您可以更新的值`Name`屬性 視窗中的屬性。 您也可以使用 **dtutil** 命令提示字元，或以程式設計方式來更新 GUID 和名稱。 如需詳細資訊，請參閱[設定封裝屬性](set-package-properties.md)和 [dtutil 公用程式](dtutil-utility.md)。  
+ 若要變更封裝 GUID，重新產生 GUID`ID`屬性中的 [屬性] 視窗中[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。 若要變更封裝名稱，您可以更新的值`Name`屬性 視窗中的屬性。 您也可以使用 **dtutil** 命令提示字元，或以程式設計方式來更新 GUID 和名稱。 如需詳細資訊，請參閱[設定封裝屬性](set-package-properties.md)和 [dtutil 公用程式](dtutil-utility.md)。  
   
 ## <a name="objects-that-extend-package-functionality"></a>延伸封裝功能的物件  
  封裝可包含額外的物件，以便提供進階功能或擴充現有功能，例如事件處理常式、組態、記錄和變數。  
@@ -119,7 +119,7 @@ ms.locfileid: "36134219"
   
 ## <a name="related-content"></a>相關內容  
   
--   [實作 SQL Server Integration Services 與 Microsoft Dynamics Mobile](http://msdn.microsoft.com/library/cc563950)  
+-   [實作與 Microsoft Dynamics Mobile 搭配運作的 SQL Server Integration Services](http://msdn.microsoft.com/library/cc563950)  
   
 -   [如何： 針對 Microsoft Dynamics AX 設定 SQL Server Integration Services 封裝](http://msdn.microsoft.com/library/bb986852)  
   

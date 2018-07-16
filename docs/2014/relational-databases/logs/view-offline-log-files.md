@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, viewing offline logs
 - offline log files
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 caps.latest.revision: 16
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d24237c0464b79eb193001baef23e8a7b4362233
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e2e54a2eb18fc3adb98fca83620d8b88a2cec92
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307568"
 ---
 # <a name="view-offline-log-files"></a>檢視離線記錄檔
   從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]開始，當目標執行個體已離線或無法啟動時，您就可以從本機或遠端 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體檢視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記錄檔。  
@@ -64,9 +64,9 @@ ms.locfileid: "36030343"
   
 1.  開啟 [WMI 控制] 嵌入式管理單元。 若要這樣做，請根據作業系統執行下列其中一項作業：  
   
-    -   按一下**啟動**，型別`wmimgmt.msc`中**開始搜尋**方塊，然後再按 ENTER 鍵。  
+    -   按一下 **開始**，型別`wmimgmt.msc`中**開始搜尋**方塊，然後再按 ENTER 鍵。  
   
-    -   按一下**啟動**，按一下 **執行**，型別`wmimgmt.msc`，然後按 ENTER 鍵。  
+    -   按一下 **開始**，按一下**執行**，型別`wmimgmt.msc`，然後按 ENTER 鍵。  
   
 2.  根據預設，[WMI 控制] 嵌入式管理單元會管理本機電腦。  
   

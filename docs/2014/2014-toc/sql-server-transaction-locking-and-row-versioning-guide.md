@@ -5,31 +5,30 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 caps.latest.revision: 17
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: b27d403459973ecabdf7a7c2ae080b95429c1d90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 0f37da0a2d3425d5aacc9b201183977f3c931d32
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311328"
 ---
 # SQL Server 交易鎖定與資料列版本設定指南
   任何資料庫若交易管理不當，時常會導致多使用者的系統發生競爭與效能問題。 隨著存取資料的使用者數量增加，能夠有效使用交易的應用程式更形重要。 本指南描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 用以確保每筆交易實體完整性的鎖定及資料列版本設定機制，並提供有關應用程式如何能夠有效控制交易的資訊。  
   
-**適用於**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]透過[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非明。  
+**適用於**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]透過[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另有指示。  
   
 ##  <a name="Top"></a> 本指南中  
  [交易基本概念](#Basics)  
   
- [鎖定及資料列版本設定基本概念](#Lock_Basics)  
+ [鎖定與資料列版本設定基本概念](#Lock_Basics)  
   
  [Database Engine 中鎖定](#Lock_Engine)  
   
@@ -65,7 +64,7 @@ ms.locfileid: "36022851"
 -   強制不可部份完成性 (Atomicity) 與一致性的交易管理功能。 交易在啟動之後必須成功地完成 (認可)，否則 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會將交易啟動後所做的所有資料修改動作復原。 這項作業稱為回復交易，因為資料將恢復為任何變更發生之前的狀態。  
   
 ### 控制交易  
- 應用程式主要是透過指定交易何時啟動及結束來控制交易。 這可利用 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式或資料庫應用程式開發介面 (API) 函數來指定。 系統也必須能夠正確地處理交易完成之前便結束交易的錯誤。 如需詳細資訊，請參閱[Transaction 陳述式&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql)， [ODBC 中的交易](http://technet.microsoft.com/library/ms131281.aspx)和[交易中 SQL Server Native Client (OLEDB)](http://msdn.microsoft.com/library/ms130918.aspx).  
+ 應用程式主要是透過指定交易何時啟動及結束來控制交易。 這可利用 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式或資料庫應用程式開發介面 (API) 函數來指定。 系統也必須能夠正確地處理交易完成之前便結束交易的錯誤。 如需詳細資訊，請參閱 < [Transaction 陳述式&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql)， [ODBC 中的交易](http://technet.microsoft.com/library/ms131281.aspx)並[交易在 SQL Server Native Client (OLEDB)](http://msdn.microsoft.com/library/ms130918.aspx).  
   
  依照預設，會在連接層級管理交易。 在連接上啟動交易時，連接上執行的所有 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式在交易結束之前都是該交易的一部分。 但是，在 Multiple Active Result Set (MARS) 工作階段下，[!INCLUDE[tsql](../includes/tsql-md.md)] 明確或不明確交易會成為在批次層級管理的批次範圍交易。 當批次完成時，如果未認可或回復批次範圍的交易，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會自動回復它。 如需詳細資訊，請參閱 [SQL Server 中的 Multiple Active Result Sets (MARS)](http://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)。  
   
@@ -180,7 +179,7 @@ SELECT * FROM TestBatch;  -- Returns rows 1 and 2.
 GO  
 ```  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Lock_Basics"></a> 鎖定與資料列版本設定基本概念  
  當多個使用者同時存取資料時，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 會使用下列機制來確保交易完整性，並維護資料庫一致性：  
@@ -342,7 +341,7 @@ GO
   
  針對快照集交易，應用程式會將 Attribute 設定為 SQL_COPT_SS_TXN_ISOLATION 並將 ValuePtr 設定為 SQL_TXN_SS_SNAPSHOT，來呼叫 `SQLSetConnectAttr`。 快照集交易可以使用 SQL_COPT_SS_TXN_ISOLATION 或 SQL_ATTR_TXN_ISOLATION 來擷取。  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Lock_Engine"></a> Database Engine 中鎖定  
  鎖定是 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的一種機制，用以同步處理多個使用者在同一時間對相同資料的存取。  
@@ -541,7 +540,7 @@ GO
 #### 範例  
  下列資料表和索引是用來作為索引鍵範圍鎖定範例要遵循的基礎。  
   
- ![資料庫資料表與索引 b 型樹狀目錄圖](media/btree4.gif "資料庫資料表與索引 b 型樹狀目錄的圖例")  
+ ![資料庫資料表與索引 b 型樹狀目錄圖](media/btree4.gif "資料庫資料表與索引 b 型樹狀目錄圖")  
   
 ##### 範圍掃描查詢  
  為了確保範圍掃描查詢是可序列化，相同的查詢每次在相同交易內執行時都必須傳回相同的結果。 其他的交易絕不能把新的資料列插入範圍掃描查詢內；否則這些動作將會變成虛設項目插入。 例如，以下的查詢使用上述的資料表與索引：  
@@ -592,7 +591,7 @@ INSERT mytable VALUES ('Dan');
 ### 動態鎖定  
  使用像資料列鎖定等低層級鎖定，可藉由降低兩個交易同時要求相同片段的資料鎖定之可能性來增加並行。 使用低層級鎖定也會增加鎖定的數目以及需要管理鎖定的資源。 使用高層級的資料表或頁面鎖定可降低額外負荷，但必須花費降低並行的成本。  
   
- ![顯示成本與資料粒度的圖表](media/lockcht.gif "圖表顯示成本與資料粒度")  
+ ![此圖顯示與資料粒度的成本](media/lockcht.gif "圖表顯示成本與資料粒度")  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]使用動態鎖定策略來決定最具成本效益的鎖定。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 在執行查詢時會依照結構描述與查詢的特性，自動決定最合適的鎖定類型。 例如，為了降低鎖定的額外負荷，最佳化工具在進行索引掃描時可能會選擇頁面層級的鎖定。  
   
@@ -604,7 +603,7 @@ INSERT mytable VALUES ('Dan');
   
 -   應用程式開發人員可以專注於開發。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會自動調整鎖定。  
   
- 在[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]和更新版本中，鎖定擴大的行為已變更的 LOCK_ESCALATION 選項的介紹。 如需詳細資訊，請參閱的 LOCK_ESCALATION 選項[ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)。  
+ 在 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]及更新版本中，隨著 LOCK_ESCALATION 選項的引進，已經變更鎖定擴大的行為。 如需詳細資訊，請參閱的 LOCK_ESCALATION 選項[ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql)。  
   
 ### 死結  
  當二或多個工作各自具有某個資源的鎖定，但其他工作嘗試要鎖定此資源，而造成工作永久封鎖彼此時，會發生死結。 例如：  
@@ -631,7 +630,7 @@ INSERT mytable VALUES ('Dan');
   
  在上圖中，在 **Part** 資料表鎖定資源上，交易 T1 相依於交易 T2。 同樣的，在 **Supplier** 資料表鎖定資源上，交易 T2 相依於交易 T1。 由於這些相依性形成循環，交易 T1 與 T2 之間便構成死結。  
   
- 當資料表已分割，而且 ALTER TABLE 的 LOCK_ESCALATION 設定為 AUTO 時，也可能會發生死結。 當 LOCK_ESCALATION 設定為 AUTO 時，藉由增加並行[!INCLUDE[ssDE](../includes/ssde-md.md)]在 HoBT 層級而不是在資料表層級鎖定資料表資料分割。 但是，當個別交易在資料表中保留資料分割鎖定，而且想要鎖定其他交易資料分割上的某個地方時，這就會造成死結。 您可以將 LOCK_ESCALATION 設定為 TABLE 來避免這種類型的死結；雖然這項設定會藉由強制資料分割的大量更新等候資料表鎖定，因而減少並行。  
+ 當資料表已分割，而且 ALTER TABLE 的 LOCK_ESCALATION 設定為 AUTO 時，也可能會發生死結。 當 LOCK_ESCALATION 設定為 AUTO 時，藉由增加並行[!INCLUDE[ssDE](../includes/ssde-md.md)]鎖定 HoBT 層級而不是在資料表層級的資料表資料分割。 但是，當個別交易在資料表中保留資料分割鎖定，而且想要鎖定其他交易資料分割上的某個地方時，這就會造成死結。 您可以將 LOCK_ESCALATION 設定為 TABLE 來避免這種類型的死結；雖然這項設定會藉由強制資料分割的大量更新等候資料表鎖定，因而減少並行。  
   
 #### 偵測與結束死結  
  當二或多個工作各自具有某個資源的鎖定，但其他工作嘗試要鎖定此資源，而造成工作永久封鎖彼此時，會發生死結。 下圖顯示死結狀態的高階檢視，其中：  
@@ -642,7 +641,7 @@ INSERT mytable VALUES ('Dan');
   
 -   因為在有資源可用之前，沒有一項工作可以繼續，而在有工作繼續之前，沒有一項資源可以釋放，所以會有死結狀態。  
   
- ![顯示處於死結狀態的工作圖表](media/task-deadlock-state.gif "圖顯示處於死結狀態的工作")  
+ ![此圖顯示處於死結狀態的工作](media/task-deadlock-state.gif "圖顯示處於死結狀態的工作")  
   
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 自動偵測 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的死結循環。 [!INCLUDE[ssDE](../includes/ssde-md.md)] 會選擇其中一個工作階段作為死結犧牲者，讓目前交易終止並產生錯誤，以破除死結。  
   
@@ -708,8 +707,8 @@ INSERT mytable VALUES ('Dan');
 |屬性|追蹤旗標 1204 和追蹤旗標 1222|僅追蹤旗標 1204|僅追蹤旗標 1222|  
 |--------------|-----------------------------------------|--------------------------|--------------------------|  
 |輸出格式|輸出是擷取到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 錯誤記錄檔中。|聚焦於死結所涉及的節點。 每一個節點有一個專用區段，最後區段描述死結犧牲者。|以類似 XML 格式傳回不符合 XML 結構描述定義 (XSD) 結構描述的資訊。 此格式有三大區段。 第一個區段宣告死結犧牲者。 第二個區段描述死結所涉及的每一個處理序。 第三個區段描述與追蹤旗標 1204 中的節點同義的資源。|  
-|識別屬性|**SPID:\<x > ECID:\<x >。** 識別平行處理序中的系統處理序識別碼執行緒。 項目`SPID:<x> ECID:0`，其中\<x > 被 SPID 值取代、 代表主執行緒。 項目`SPID:<x> ECID:<y>`，其中\<x > 被 SPID 值取代和\<y > 大於 0，代表相同 spid 子執行緒。<br /><br /> **BatchID** (追蹤旗標 1222 的**sbid** )。 識別程式碼執行從中要求或保留鎖定的批次。 停用 Multiple Active Result Sets (MARS) 時，BatchID 值為 0。 啟用 MARS 時，作用中批次的值為 1 到 *n*。 如果工作階段中沒有作用中批次，BatchID 為 0。<br /><br /> **模式**。 指定執行緒所要求、授與或等待之特定資源的鎖定類型。 模式可為 IS (意圖共用)、S (共用)、U (更新)、IX (意圖獨佔)、SIX (共用意圖獨佔) 和 X (獨佔)。<br /><br /> **Line #** (追蹤旗標 1222 的**line** )。 列出發生死結時正在執行之目前陳述式批次中的行號。<br /><br /> **Input Buf** (追蹤旗標 1222 的**inputbuf** )。 列出目前批次中的所有陳述式。|**節點**。 代表死結鏈結中的項目號碼。<br /><br /> **清單**。 鎖定擁有者可以是這些清單的一部分：<br /><br /> **授與清單**。 列舉資源的目前擁有者。<br /><br /> **轉換清單**。 列舉嘗試將其鎖定轉換為更高層的目前擁有者。<br /><br /> **等待清單**。 列舉資源的目前最新鎖定要求。<br /><br /> **陳述式類型**。 描述執行緒有權限的 DML 陳述式的類型 (SELECT、INSERT、UPDATE 或 DELETE)。<br /><br /> **犧牲者資源擁有者**。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 選擇作為犧牲者來中斷死結循環的參與執行緒。 選擇的執行緒和所有現存的子執行緒會終止。<br /><br /> **下一分支**。 代表相同 SPID 中兩個以上涉及死結循環的子執行緒。|**deadlock victim**。 代表被選為死結犧牲者之工作的實體記憶位址 (請參閱 [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql))。 在未解決的死結案例中，它可能會是 0 (零)。 回復中的工作不可選為死結犧牲者。<br /><br /> **executionstack**。 代表發生死結時正在執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼。<br /><br /> **priority**。 代表死結優先權。 在特定案例中，[!INCLUDE[ssDE](../includes/ssde-md.md)] 可能會選擇在短時間內變更死結優先權，以達到更佳的並行效果。<br /><br /> **logused**。 工作所使用的記錄檔空間。<br /><br /> **owner id**。具有要求控制權之交易的識別碼。<br /><br /> **status**。 工作的狀態。 它是下列其中一值：<br /><br /> >> **pending**。 等待工作者執行緒。<br /><br /> >> **runnable**。 可開始執行但等待配量。<br /><br /> >> **running**。 目前在排程器上執行。<br /><br /> >> **suspended**。 執行已暫停。<br /><br /> >> **done**。 工作已完成。<br /><br /> >> **spinloop**。 等待單一執行緒存取鎖變成可用。<br /><br /> **waitresource**。 工作所需的資源。<br /><br /> **waittime**。 等待資源的時間 (以毫秒為單位)。<br /><br /> **schedulerid**。 與這個工作相關聯的排程器。 請參閱 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql)。<br /><br /> **hostname**。 工作站的名稱。<br /><br /> **isolationlevel**。 目前交易隔離等級。<br /><br /> **Xactid**。 具有要求控制權之交易的識別碼。<br /><br /> **currentdb**。 資料庫的識別碼。<br /><br /> **lastbatchstarted**。 用戶端處理序上次啟動批次執行的時間。<br /><br /> **lastbatchcompleted**。 用戶端處理序上次完成批次執行的時間。<br /><br /> **clientoption1 和 clientoption2**。 此用戶端連接上的設定選項。 這是位元遮罩，其中包含通常由 SET 陳述式 (例如 SET NOCOUNT 和 SET XACTABORT) 所控制之選項的資訊。<br /><br /> **associatedObjectId**。 代表 HoBT (堆積或 B 型樹狀目錄) 識別碼。|  
-|資源屬性|**RID**。 識別在資料表內保留或要求鎖定的單一資料列。 RID 是以 RID: *db_id:file_id:page_no:row_no*表示。 例如， `RID: 6:1:20789:0`。<br /><br /> **OBJECT**。 識別保留或要求鎖定的資料表。 OBJECT 是以 OBJECT: *db_id:object_id*表示。 例如， `TAB: 6:2009058193`。<br /><br /> **KEY**。 識別在索引內保留或要求鎖定的索引鍵範圍。 KEY 是以 KEY: *db_id:hobt_id* (*index key hash value*) 表示。 例如， `KEY: 6:72057594057457664 (350007a4d329)`。<br /><br /> **PAG**。 識別保留或要求鎖定的頁面資源。 PAG 是以 PAG: *db_id:file_id:page_no*表示。 例如， `PAG: 6:1:20789`。<br /><br /> **EXT**。 識別範圍結構。 EXT 是以 EXT: *db_id:file_id:extent_no*表示。 例如， `EXT: 6:1:9`。<br /><br /> **DB**。 識別資料庫鎖定。 **DB 會以下列其中一種方式表示：**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]，識別備份資料庫使用的資料庫鎖定。<br /><br /> DB: *db_id*[BULK-OP-LOG]，識別該特定資料庫的備份記錄檔所使用的鎖定。<br /><br /> **APP**。 識別應用程式資源使用的鎖定。 APP 是以 APP: *lock_resource*表示。 例如， `APP: Formf370f478`。<br /><br /> **METADATA**。 代表死結所涉及的中繼資料資源。 因為 METADATA 有許多子資源，所以傳回的值視含有死結的子資源而定。 例如，中繼資料。USER_TYPE 傳回`user_type_id =` \< *integer_value*>。 如需有關 METADATA 資源和子資源的詳細資訊，請參閱 [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。<br /><br /> **HOBT**。 代表死結所涉及的堆積或 B 型樹狀目錄。|None 與此追蹤旗標互斥。|None 與此追蹤旗標互斥。|  
+|識別屬性|**SPID:\<x > ECID:\<x >。** 識別平行處理序中的系統處理序識別碼執行緒。 項目`SPID:<x> ECID:0`，其中\<x > 被 SPID 值取代、 代表主執行緒。 項目`SPID:<x> ECID:<y>`，其中\<x > 被 SPID 值取代和\<y > 大於 0，代表相同 SPID 子執行緒。<br /><br /> **BatchID** (追蹤旗標 1222 的**sbid** )。 識別程式碼執行從中要求或保留鎖定的批次。 停用 Multiple Active Result Sets (MARS) 時，BatchID 值為 0。 啟用 MARS 時，作用中批次的值為 1 到 *n*。 如果工作階段中沒有作用中批次，BatchID 為 0。<br /><br /> **模式**。 指定執行緒所要求、授與或等待之特定資源的鎖定類型。 模式可為 IS (意圖共用)、S (共用)、U (更新)、IX (意圖獨佔)、SIX (共用意圖獨佔) 和 X (獨佔)。<br /><br /> **Line #** (追蹤旗標 1222 的**line** )。 列出發生死結時正在執行之目前陳述式批次中的行號。<br /><br /> **Input Buf** (追蹤旗標 1222 的**inputbuf** )。 列出目前批次中的所有陳述式。|**節點**。 代表死結鏈結中的項目號碼。<br /><br /> **清單**。 鎖定擁有者可以是這些清單的一部分：<br /><br /> **授與清單**。 列舉資源的目前擁有者。<br /><br /> **轉換清單**。 列舉嘗試將其鎖定轉換為更高層的目前擁有者。<br /><br /> **等待清單**。 列舉資源的目前最新鎖定要求。<br /><br /> **陳述式類型**。 描述執行緒有權限的 DML 陳述式的類型 (SELECT、INSERT、UPDATE 或 DELETE)。<br /><br /> **犧牲者資源擁有者**。 指定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 選擇作為犧牲者來中斷死結循環的參與執行緒。 選擇的執行緒和所有現存的子執行緒會終止。<br /><br /> **下一分支**。 代表相同 SPID 中兩個以上涉及死結循環的子執行緒。|**deadlock victim**。 代表被選為死結犧牲者之工作的實體記憶位址 (請參閱 [sys.dm_os_tasks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql))。 在未解決的死結案例中，它可能會是 0 (零)。 回復中的工作不可選為死結犧牲者。<br /><br /> **executionstack**。 代表發生死結時正在執行的 [!INCLUDE[tsql](../includes/tsql-md.md)] 程式碼。<br /><br /> **priority**。 代表死結優先權。 在特定案例中，[!INCLUDE[ssDE](../includes/ssde-md.md)] 可能會選擇在短時間內變更死結優先權，以達到更佳的並行效果。<br /><br /> **logused**。 工作所使用的記錄檔空間。<br /><br /> **owner id**。具有要求控制權之交易的識別碼。<br /><br /> **status**。 工作的狀態。 它是下列其中一值：<br /><br /> >> **pending**。 等待工作者執行緒。<br /><br /> >> **runnable**。 可開始執行但等待配量。<br /><br /> >> **running**。 目前在排程器上執行。<br /><br /> >> **suspended**。 執行已暫停。<br /><br /> >> **done**。 工作已完成。<br /><br /> >> **spinloop**。 等待單一執行緒存取鎖變成可用。<br /><br /> **waitresource**。 工作所需的資源。<br /><br /> **waittime**。 等待資源的時間 (以毫秒為單位)。<br /><br /> **schedulerid**。 與這個工作相關聯的排程器。 請參閱 [sys.dm_os_schedulers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql)。<br /><br /> **hostname**。 工作站的名稱。<br /><br /> **isolationlevel**。 目前交易隔離等級。<br /><br /> **Xactid**。 具有要求控制權之交易的識別碼。<br /><br /> **currentdb**。 資料庫的識別碼。<br /><br /> **lastbatchstarted**。 用戶端處理序上次啟動批次執行的時間。<br /><br /> **lastbatchcompleted**。 用戶端處理序上次完成批次執行的時間。<br /><br /> **clientoption1 和 clientoption2**。 此用戶端連接上的設定選項。 這是位元遮罩，其中包含通常由 SET 陳述式 (例如 SET NOCOUNT 和 SET XACTABORT) 所控制之選項的資訊。<br /><br /> **associatedObjectId**。 代表 HoBT (堆積或 B 型樹狀目錄) 識別碼。|  
+|資源屬性|**RID**。 識別在資料表內保留或要求鎖定的單一資料列。 RID 是以 RID: *db_id:file_id:page_no:row_no*表示。 例如， `RID: 6:1:20789:0`。<br /><br /> **OBJECT**。 識別保留或要求鎖定的資料表。 OBJECT 是以 OBJECT: *db_id:object_id*表示。 例如， `TAB: 6:2009058193`。<br /><br /> **KEY**。 識別在索引內保留或要求鎖定的索引鍵範圍。 KEY 是以 KEY: *db_id:hobt_id* (*index key hash value*) 表示。 例如， `KEY: 6:72057594057457664 (350007a4d329)`。<br /><br /> **PAG**。 識別保留或要求鎖定的頁面資源。 PAG 是以 PAG: *db_id:file_id:page_no*表示。 例如， `PAG: 6:1:20789`。<br /><br /> **EXT**。 識別範圍結構。 EXT 是以 EXT: *db_id:file_id:extent_no*表示。 例如， `EXT: 6:1:9`。<br /><br /> **DB**。 識別資料庫鎖定。 **DB 會以下列其中一種方式表示：**<br /><br /> DB: *db_id*<br /><br /> DB: *db_id*[BULK-OP-DB]，識別備份資料庫使用的資料庫鎖定。<br /><br /> DB: *db_id*[BULK-OP-LOG]，識別該特定資料庫的備份記錄檔所使用的鎖定。<br /><br /> **APP**。 識別應用程式資源使用的鎖定。 APP 是以 APP: *lock_resource*表示。 例如， `APP: Formf370f478`。<br /><br /> **METADATA**。 代表死結所涉及的中繼資料資源。 因為 METADATA 有許多子資源，所以傳回的值視含有死結的子資源而定。 例如，中繼資料。傳回 USER_TYPE `user_type_id =` \< *integer_value*>。 如需有關 METADATA 資源和子資源的詳細資訊，請參閱 [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)。<br /><br /> **HOBT**。 代表死結所涉及的堆積或 B 型樹狀目錄。|None 與此追蹤旗標互斥。|None 與此追蹤旗標互斥。|  
   
 ###### 追蹤旗標 1204 範例  
  下列範例顯示追蹤旗標 1204 開啟時的輸出。 在此案例中，節點 1 中的資料表是一個不含索引的堆積，節點 2 中的資料表是一個含非叢集索引的堆積。 當發生死結時，正在更新節點 2 中的索引鍵。  
@@ -822,7 +821,7 @@ deadlock-list
   
  ![流程圖顯示使用者處理序死結的邏輯。](media/udb9-profilerdeadlockgraphc.gif "流程圖顯示使用者處理序死結的邏輯。")  
   
- 如需有關執行[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]死結圖形，請參閱[儲存死結圖形&#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)。  
+ 如需有關執行[!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]死結圖形，請參閱 <<c2> [ 儲存 Deadlock Graph &#40;SQL Server Profiler&#41;](../relational-databases/performance/save-deadlock-graphs-sql-server-profiler.md)。</c2>  
   
 #### 處理死結  
  當 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]執行個體選擇某個交易作為死結犧牲者時，會終止目前的批次、復原交易，然後將錯誤訊息 1205 傳回給應用程式。  
@@ -863,7 +862,7 @@ deadlock-list
 ##### 以相同的順序來存取物件  
  如果所有同時發生的交易都以相同的順序來存取物件，就比較不會發生死結。 例如，如果同時發生的兩筆交易都取得 **Supplier** 資料表的鎖定，再取得 **Part** 資料表的鎖定，其中一筆交易便被封鎖於 **Supplier** 資料表直到另一筆交易完成為止。 第一筆交易認可或回復之後，第二筆才會繼續，這樣就不會發生死結。 使用預存程序來進行所有的資料修改動作可將物件的存取順序標準化。  
   
- ![顯示死結避免的圖表](media/dedlck2.gif "圖顯示死結避免")  
+ ![此圖顯示死結避免](media/dedlck2.gif "顯示死結避免的圖表")  
   
 ##### 在交易中避免使用者互動  
  避免撰寫包含使用者互動的交易，因為沒有使用者介入的批次執行速度比使用者必須對查詢做出手動回應的批次更快，例如對應用程式所要求的參數提示做出回覆。 例如，交易如果正在等候使用者輸入，而使用者去用餐，或甚至回家渡假，交易就會被使用者延遲而無法完成。 如此便會降低系統產能，因為交易所持有的任何鎖定只有在交易被認可或回復之後才會釋放。 即使並未發生死結的狀況，要存取相同資源的其他交易還是會被封鎖而等待交易完成。  
@@ -1003,7 +1002,7 @@ BEGIN TRANSACTION
         WITH (TABLOCKX, HOLDLOCK);  
 ```  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Row_versioning"></a> Database Engine 中的資料列版本設定為基礎的隔離等級  
  從 SQL Server 2005 開始，Database Engine 引進了現有交易隔離等級 (讀取認可) 的實作，透過使用資料列版本設定以提供陳述式層級的快照。 SQL Server Database Engine 另還引進一種交易隔離等級稱為快照，同樣是使用資料列版本設定但提供交易層級的快照。  
@@ -1159,7 +1158,7 @@ BEGIN TRANSACTION
   
  如果您使用任何資料列版本設定功能，您可能需要配置額外的磁碟空間給資料庫，以容納每個資料庫資料列的 14 個位元組。 如果目前頁面沒有足夠的可用空間，則加入資料列版本設定資訊會造成索引頁面分割或需要配置新的資料頁。 例如，如果平均資料列長度是 100 個位元組，則額外的 14 個位元組會造成現有資料表成長高達百分之 14。  
   
- 降低[填滿因數](../relational-databases/indexes/specify-fill-factor-for-an-index.md)可能有助於防止或減少索引頁片段。 若要檢視之資料和索引的資料表或檢視表的片段資訊，您可以使用[DBCC SHOWCONTIG](/sql/t-sql/database-console-commands/dbcc-showcontig-transact-sql)。  
+ 降低[填滿因數](../relational-databases/indexes/specify-fill-factor-for-an-index.md)可能有助於防止或減少索引頁片段。 若要檢視之資料與索引的資料表或檢視表的片段資訊，您可以使用[DBCC SHOWCONTIG](/sql/t-sql/database-console-commands/dbcc-showcontig-transact-sql)。  
   
 #### 大型物件使用的空間  
  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 支援 6 種資料類型，可保留長度多達 2 GB 的大型字串：`nvarchar(max)`、`varchar(max)`、`varbinary(max)`、`ntext`、`text` 和 `image`。 使用這些資料類型儲存的大型字串是儲存在一系列資料片段中，而這些片段是連結到資料列。 資料列版本設定資訊是儲存在用來儲存這些大型字串的每一個片段中。 資料片段是專供資料表中大型物件使用的頁面集合。  
@@ -1561,7 +1560,7 @@ ALTER DATABASE AdventureWorks2012
     > [!NOTE]  
     >  BULK INSERT 作業可能會造成變更目標資料表中繼資料 (例如，停用條件約束檢查時)。 如果發生這種狀況，存取大量插入資料表的並行快照隔離交易會失敗。  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ## 自訂鎖定及資料列版本設定  
   
@@ -1709,7 +1708,7 @@ GO
 |資料列層級|分頁層級與資料表層級鎖定|  
 |分頁層級與資料列層級|資料表層級鎖定|  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ##  <a name="Advanced"></a> 進階交易資訊  
   
@@ -1757,7 +1756,7 @@ GO
   
  ROLLBACK TRANSACTION 陳述式的 *transaction_name* 參數參考一組具名巢狀交易的內部交易是不合法的。 *transaction_name* 只能參考最外層交易的交易名稱。 如果使用外部交易名稱的 ROLLBACK TRANSACTION *transaction_name* 陳述式，是在一組巢狀交易的任何層級執行，將會回復所有的巢狀交易。 如果在一組巢狀交易的任何層級執行不包含 *transaction_name* 參數的 ROLLBACK WORK 或 ROLLBACK TRANSACTION 陳述式，它會回復所有巢狀交易，包括最外層的交易。  
   
- @@TRANCOUNT函數記錄目前的交易巢狀層級。 每個 BEGIN TRANSACTION 陳述式會遞增@TRANCOUNT一。 每個 COMMIT TRANSACTION 或 COMMIT WORK 陳述式遞減 @@TRANCOUNT一。 ROLLBACK WORK 或 ROLLBACK TRANSACTION 陳述式，但是沒有交易名稱回復所有巢狀的交易並遞減 @@TRANCOUNT設為 0。 使用一組巢狀交易中最外層交易的交易名稱的 ROLLBACK TRANSACTION 會復原所有的巢狀的交易並遞減 @@TRANCOUNT設為 0。 當您不確定您是否已經在交易中，選取@TRANCOUNT判斷它是否為 1 或更多。 如果 @@TRANCOUNT是 0，您不在交易中。  
+ @@TRANCOUNT函數記錄目前的交易巢狀層級。 每個 BEGIN TRANSACTION 陳述式會遞增@TRANCOUNT一。 每個 COMMIT TRANSACTION 或 COMMIT WORK 陳述式遞減 @@TRANCOUNT一。 ROLLBACK WORK 或沒有交易名稱的 ROLLBACK TRANSACTION 陳述式會回復所有巢狀的交易並遞減 @@TRANCOUNT設為 0。 使用一組巢狀交易中的最外層交易的交易名稱的 ROLLBACK TRANSACTION 會彙復原所有巢狀的交易並遞減 @@TRANCOUNT設為 0。 當您不確定您是否已經在交易中，選取 @TRANCOUNT來判斷是否為 1 或更多。 如果 @@TRANCOUNT是 0，則您不在交易中。  
   
 ### 使用繫結工作階段  
  繫結工作階段可簡化相同伺服器上多個工作階段之間動作的協調作業。 繫結工作階段允許兩個以上的工作階段共用相同的交易和鎖定，並且可以使用相同的資料，而不會發生鎖定衝突。 繫結工作階段可以從同一個應用程式中的多個工作階段來建立，也可以從擁有個別工作階段的多個應用程式來建立。  
@@ -1843,7 +1842,7 @@ GO
   
 -   伺服器執行個體若是在使用中交易已執行許多未認可的修改之後關閉，其隨後重新啟動歷經復原階段的時間可能遠超過 **[復原間隔]** 伺服器組態選項或 ALTER DATABASE… SET TARGET_RECOVERY_TIME 選項 所指定的時間。 這些選項分別控制著使用中檢查點與間接檢查點的頻率。 如需有關檢查點類型的詳細資訊，請參閱[資料庫檢查點 &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)。  
   
--   更重要的是，等候中交易儘管產生的記錄可能很少，卻會永久阻礙記錄截斷動作，而導致交易記錄逐漸增大乃至填滿。 一旦交易記錄填滿，資料庫就不再能夠執行任何更新。 如需詳細資訊，請參閱[完整交易記錄疑難排解&#40;SQL Server 錯誤 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)，和[交易記錄&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)。  
+-   更重要的是，等候中交易儘管產生的記錄可能很少，卻會永久阻礙記錄截斷動作，而導致交易記錄逐漸增大乃至填滿。 一旦交易記錄填滿，資料庫就不再能夠執行任何更新。 如需詳細資訊，請參閱 <<c0> [ 寫滿交易記錄疑難排解&#40;SQL Server 錯誤 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)，以及[交易記錄檔的&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)。</c0>  
   
 #### 探索長時間執行的交易  
  若要尋找長時間執行的交易，請使用下列其中一種方式：  
@@ -1861,7 +1860,7 @@ GO
 #### 停止交易  
  您可能必須使用 KILL 陳述式。 但是，請小心使用此陳述式，尤其是執行重要處理序時。 如需詳細資訊，請參閱 [KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql)。  
   
- ![搭配回到頁首連結使用的箭號圖示](media/uparrow16x16.gif "搭配回到頁首連結使用的箭號圖示")[在此指南](#Top)  
+ ![搭配 [回到頁首] 連結使用的箭號圖示](media/uparrow16x16.gif "搭配 [回到頁首] 連結使用的箭號圖示")[在此快速入門](#Top)  
   
 ## 另請參閱  
  [SQL Server 2005 資料列版本設定為基礎的交易隔離](http://msdn.microsoft.com/library/ms345124(v=sql.90).aspx)   

@@ -1,5 +1,5 @@
 ---
-title: MDX 查詢編輯器 (Analysis Services-多維度資料) |Microsoft 文件
+title: MDX 查詢編輯器 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.startpage.mdx.f1
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - MDX Query Editor
 ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: ff0c288919bed3a6e1c13c9a7cb98bc7adbb949c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c3fa81db8ca9f6a9ebd490724bf003a81d87c7d9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275869"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>MDX 查詢編輯器 (Analysis Services - 多維度資料)
   使用 MDX 查詢編輯器即可設計和執行以多維度運算式 (MDX) 語言撰寫的陳述式和指令碼。  
@@ -60,8 +60,8 @@ ms.locfileid: "36136742"
   
 |詞彙|定義|  
 |----------|----------------|  
-|**查詢編輯器視窗**|鍵入要由 MDX 查詢編輯器執行的 MDX 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪下**： 將目前的選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br /><br /> **複製**：將目前選取範圍複製到剪貼簿。<br /><br /> **貼上**： 貼上目前的選取範圍至剪貼簿的內容。<br /><br /> **連接**：開啟 [連接到伺服器] 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br /><br /> **中斷連線**： 中斷目前查詢編輯器與[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br /><br /> **中斷連接所有查詢**： 中斷連接所有目前開啟的查詢編輯器。<br /><br /> **變更連接**： 開啟**連接到伺服器**對話方塊，以連接到不同[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br /><br /> **在物件總管 中開啟伺服器**： 開啟[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]目前查詢編輯器中連接執行個體**物件總管 中**。<br /><br /> **執行**： 執行選取的程式碼，或如果不選取任何程式碼時，會以目前查詢編輯器執行的所有程式碼。<br /><br /> **屬性視窗**： 顯示**屬性**視窗[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]目前查詢視窗。<br /><br /> **查詢選項**： 顯示**查詢選項** 對話方塊。|  
-|**中繼資料視窗**|顯示目前連接之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的中繼資料。|  
+|**查詢編輯器視窗**|鍵入要由 MDX 查詢編輯器執行的 MDX 陳述式和指令碼。<br /><br /> 查詢編輯器的內容功能表提供下列選項：<br /><br /> **剪下**： 將目前的選取範圍複製到剪貼簿，並從 [查詢編輯器] 視窗中移除選取範圍。<br /><br /> **複製**：將目前選取範圍複製到剪貼簿。<br /><br /> **貼上**： 將目前的選取範圍至剪貼簿的內容貼上。<br /><br /> **連接**：開啟 [連接到伺服器] 對話方塊，以建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。<br /><br /> **中斷**： 中斷目前查詢編輯器與[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br /><br /> **中斷連接所有查詢**： 中斷連接所有目前開啟的查詢編輯器。<br /><br /> **變更連接**： 會開啟**連接到伺服器**對話方塊，以連接到不同[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體。<br /><br /> **在 [物件總管] 中開啟伺服器**： 會開啟[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]目前查詢編輯器中連接執行個體**物件總管 中**。<br /><br /> **執行**： 執行選取的程式碼，或如果未選取，則在目前的查詢編輯器中執行所有的程式碼。<br /><br /> **屬性視窗**： 顯示**屬性** 視窗中的[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]目前查詢視窗。<br /><br /> **查詢選項**： 顯示**查詢選項** 對話方塊。|  
+|**中繼資料 視窗**|顯示目前連接之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫的中繼資料。|  
 |**Cube**|選取目前連接之 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫內的 Cube，即可在 **[中繼資料]** 索引標籤中顯示與 Cube 相關聯的中繼資料。|  
 |**中繼資料**|顯示在 **[Cube]** 中選取之 Cube 的中繼資料，包括量值群組與量值、關鍵效能指標、維度、階層、層級、成員及成員屬性。 若要擷取物件的完整索引鍵，請：<br /><br /> 從 **[中繼資料]** 索引標籤，將物件拖曳至查詢窗格。<br /><br /> 以滑鼠右鍵按一下物件，然後選取 [複製]，再以滑鼠右鍵按一下查詢窗格，然後選取 [貼上]。|  
 |**函數**|顯示從 MDSCHEMA_FUNCTIONS 結構描述資料列集所擷取，且 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 資料庫可以使用的 MDX 函數之中繼資料。 若要擷取函數的語法，請：<br /><br /> 從 **[函數]** 索引標籤，將物件拖曳至查詢窗格。<br /><br /> 以滑鼠右鍵按一下函數，然後選取 **[複製]**，再以滑鼠右鍵按一下查詢窗格，然後選取 **[貼上]**。|  

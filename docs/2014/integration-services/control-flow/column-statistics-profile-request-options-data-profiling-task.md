@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e50abc86092a2d39f6fdb40ab9776063be3e71ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d401a108b3d29dcb370fc202ae50d3423e71fc3f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37252680"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>資料行統計資料設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行統計資料設定檔要求] 設定選項。 資料行統計資料設定檔會報告數值資料行的最小值、最大值、平均和標準差，以及 `datetime` 資料行的最小值和最大值等統計資料。 這個設定檔可協助您識別資料中的問題，例如無效的日期。 舉例來說，您分析了歷程記錄日期的資料行，並發現屬於未來的最大日期。  
@@ -74,7 +74,7 @@ ms.locfileid: "36135002"
  輸入描述性名稱，以便識別這個設定檔要求。 一般而言，您不需要變更自動產生的值。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料分析工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)   
+ [資料分析工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)   
  [單一資料表快速分析表單 &#40;資料分析工作&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

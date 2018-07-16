@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9188401b9bbfd3b0c70d446943cfebf22dd93616
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47318402206bc0a11ce943d74df8a612acd5f128
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037066"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280424"
 ---
 # <a name="foreach-loop-container"></a>Foreach 迴圈容器
   「Foreach 迴圈」容器定義封裝中重複的控制流程。 迴圈實作與程式設計語言中 **Foreach** 迴圈的結構類似。 在封裝中，迴圈是使用 Foreach 列舉值啟用。  「Foreach 迴圈」容器會為指定列舉值的每個成員重複控制流程。  
@@ -41,7 +41,7 @@ ms.locfileid: "36037066"
   
 -   「Foreach 檔案」列舉值，用來列舉資料夾中的檔案。 列舉值可往返子資料夾。 例如，您可以讀取 Windows 資料夾及其子資料夾中所有副檔名為 *.log 的檔案。  
   
--   Foreach From Variable 列舉值，用來列舉指定的變數所包含的可列舉物件。 可列舉的物件可以是陣列、 ADO.NET `DataTable`、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]列舉值等等。 例如，您可以列舉包含伺服器名稱之陣列的值。  
+-   Foreach From Variable 列舉值，用來列舉指定的變數所包含的可列舉物件。 可列舉物件可以是陣列、 ADO.NET `DataTable`、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]列舉值等等。 例如，您可以列舉包含伺服器名稱之陣列的值。  
   
 -   「Foreach 項目」列舉值，用來列舉集合項目。 例如，您可以列舉「執行處理」工作使用之可執行檔與工作目錄的名稱。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36037066"
   
 -   Foreach Azure Blob 列舉值會列舉在 Azure 儲存體 blob 容器中的 Blob。  
   
--   列舉 ADLS 目錄中的檔案的 ADLS Foreach 檔案列舉值。
+-   Foreach ADLS 檔案列舉值會列舉的 ADLS 目錄中的檔案。
   
  下列圖表顯示擁有「檔案系統」工作的「Foreach 迴圈」容器。 Foreach 迴圈會使用「Foreach 檔案」列舉值，而「檔案系統」工作則設定為複製檔案。 如果列舉值指定的資料夾含有四個檔案，則迴圈會重複四次並複製四個檔案。  
   
  ![列舉資料夾的 Foreach 迴圈容器](../media/ssis-foreachloop.gif "列舉資料夾的 Foreach 迴圈容器")  
   
- 您可以使用變數和屬性運算式的組合，以列舉值集合值更新封裝物件的屬性。 首先，對應集合值與使用者定義的變數，接著在使用該變數的屬性上實作屬性運算式。 例如，Foreach 檔案列舉值的集合值對應至名為`MyFile`變數然後使用屬性運算式中傳送郵件工作的主旨屬性。 當執行封裝時，便會在每次迴圈重複時以某個檔案名稱更新 Subject 屬性。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../expressions/use-property-expressions-in-packages.md)。  
+ 您可以使用變數和屬性運算式的組合，以列舉值集合值更新封裝物件的屬性。 首先，對應集合值與使用者定義的變數，接著在使用該變數的屬性上實作屬性運算式。 比方說，「 Foreach 檔案列舉值的集合值對應至變數，稱為 「`MyFile`變數然後使用屬性運算式中的 傳送郵件工作的 Subject 屬性。 當執行封裝時，便會在每次迴圈重複時以某個檔案名稱更新 Subject 屬性。 如需詳細資訊，請參閱 [在封裝中使用屬性運算式](../expressions/use-property-expressions-in-packages.md)。  
   
  對應至列舉值集合值的變數亦可在運算式和指令碼中使用。  
   
@@ -79,8 +79,8 @@ ms.locfileid: "36037066"
 |Foreach 項目|定義「Foreach 項目」集合中的項目，包括資料行和資料行資料類型。|  
 |Foreach Nodelist|指定 XML 文件的來源並設定 XPath 作業。|  
 |Foreach SMO|指定資料庫的連接和要列舉的 SMO 物件。|  
-|Foreach Azure Blob|指定包含要列舉的 blob 的 Azure blob 容器。|  
-|Foreach ADLS 檔案|指定包含要列舉的有些篩選條件以及檔案的 ADLS 目錄。|
+|Foreach Azure Blob|指定 Azure blob 容器，其中包含要列舉的 blob。|  
+|Foreach ADLS 檔案|指定包含要列舉，以及某些篩選器檔案的 ADLS 目錄。|
   
 ## <a name="property-expressions-in-foreach-loop-containers"></a>Foreach 迴圈容器中的屬性運算式  
  封裝可以設定成同時執行多個可執行檔。 當封裝包含實作屬性運算式的「Foreach 迴圈」容器時，請謹慎使用這項組態。  

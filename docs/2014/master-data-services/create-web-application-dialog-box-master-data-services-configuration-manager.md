@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createapp.f1
 ms.assetid: e045b41a-4836-47f6-8e78-2b09494b461f
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0edae9b1692eb12f14f66ebb067758f5a6c468f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 92ca9531bd94f2fc81fc4c074841b4049b6e3120
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146099"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273004"
 ---
 # <a name="create-web-application-dialog-box-master-data-services-configuration-manager"></a>建立 Web 應用程式對話方塊 (Master Data Services 組態管理員)
   使用 [建立 Web 應用程式] 對話方塊可建立 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式。 這個 Web 應用程式會建立在您於 [Web 組態] 頁面上所選取的網站中。  
   
 ## <a name="web-application"></a>Web 應用程式  
- Web 伺服器會針對檔案系統中， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 資料夾內的這個 Web 應用程式提供內容。 這個位置指定在安裝期間，而且預設路徑為*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication。  
+ Web 伺服器會針對檔案系統中， [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] **WebApplication** 資料夾內的這個 Web 應用程式提供內容。 這個位置指定在安裝期間，而且預設路徑是*磁碟機*: \Program Files\Microsoft SQL Server\120\Master Data Services\WebApplication。  
   
 |控制項名稱|描述|  
 |------------------|-----------------|  
@@ -44,9 +44,9 @@ ms.locfileid: "36146099"
 |**確認密碼**|重新輸入指定之使用者帳戶的密碼。 **[密碼]** 和 **[確認密碼]** 欄位必須包含相同的密碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Web 組態 頁面上&#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [設定 Master Data Services 資料庫與網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Web 應用程式的需求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Web 組態 頁面&#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Web 應用程式需求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

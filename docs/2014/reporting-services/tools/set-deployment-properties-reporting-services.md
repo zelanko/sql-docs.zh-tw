@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
@@ -18,13 +18,13 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: f656681c39367bc82c4b5f2b548df69e6106fffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2cf985f4f16f60378dd3d866489fc7c64c940928
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146225"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37276374"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>設定部署屬性 (Reporting Services)
   在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，您必須為報表及共用資料來源指定報表伺服器和資料夾 (選擇性)，讓您可以將報表伺服器專案中的項目發行至報表伺服器。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 需要建立、預覽部署報表的屬性和值都儲存在報表伺服器專案的專案組態中。 您可以為這些專案屬性建立多個命名集，讓您可以在屬性集之間方便地切換。 每一組屬性都是一個組態。 例如，您可以擁有一個組態將報表發行到測試伺服器，並有另一個組態將報表發行到實際伺服器。  
@@ -46,23 +46,23 @@ ms.locfileid: "36146225"
     > [!NOTE]  
     >  您可以使用多個組態，在不同的報表伺服器或設定之間快速切換。  
   
-3.  在**OutputPath**文字方塊中，輸入或貼上路徑，在您的本機檔案系統儲存在組建驗證、 部署和預覽報表中使用的報表定義。 此路徑必須不同於專案所使用的路徑以及位於專案路徑下之子資料夾的相對路徑。  
+3.  在  **OutputPath**文字方塊中，輸入或貼上您的本機檔案系統，以儲存組建驗證、 部署和預覽報表時所使用的報表定義中的路徑。 此路徑必須不同於專案所使用的路徑以及位於專案路徑下之子資料夾的相對路徑。  
   
-4.  在**ErrorLevel**文字方塊中，輸入問題的組建嚴重性回報為錯誤。 建立嚴重性報表、 資料來源或其他專案資源時所發生的問題層級小於或等於值**ErrorLevel**會回報為錯誤; 否則這些問題回報為警告。 任何錯誤都會導致建立工作失敗。 有效的嚴重性層級為 0 到 4 (包含)。 預設值為 2。  
+4.  在  **ErrorLevel**文字方塊中，輸入組建問題的嚴重性，會回報為錯誤。 建立嚴重性報表、 資料來源或其他專案資源時所發生的問題層級小於或等於值**ErrorLevel**會回報為錯誤; 否則這些問題回報為警告。 任何錯誤都會導致建立工作失敗。 有效的嚴重性層級為 0 到 4 (包含)。 預設值為 2。  
   
      [ErrorLevel] 可用來增加或減少組建的敏感度。 例如，在部署到 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 報表伺服器期間建立包含對應的報表時，預設會顯示一個錯誤，而且報表的建立會失敗。 如果您降低 [ErrorLevel]，就會從報表移除對應、顯示警告，並繼續建置報表。  
   
-5.  在**StartItem**清單中，選取要執行報表專案時，顯示在預覽視窗或瀏覽器視窗中的報表。  
+5.  在  **StartItem**清單中，選取要執行報表專案時，顯示在預覽視窗或瀏覽器視窗中的報表。  
   
 6.  在 [OverwriteDataSources] 清單中，選取 [True] 即可在每次發行共用資料來源時覆寫伺服器上的共用資料來源，或選取 [False] 則可保留伺服器上的資料來源。  
   
-7.  在**TargetServerVersion**清單中，選取[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]或選取**偵測版本**來自動判斷上安裝的版本所識別之伺服器**TargetServer URL**屬性。 伺服器預設值是 **SQL Server 2008 R2**。  
+7.  在  **TargetServerVersion**清單中，選取[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]或[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]版本[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，或選取**偵測版本**來自動判斷安裝的版本所識別之伺服器**TargetServer URL**屬性。 伺服器預設值是 **SQL Server 2008 R2**。  
   
      使用 **TargetServerVersion** 針對 **TargetServer URL** 中指定的報表伺服器版本自訂已建置的報表 (放在 OutputPath 中指定的路徑)。  
   
 8.  在 [TargetDataSourceFolder] 文字方塊中，鍵入報表伺服器上的資料夾，以放入已發行的共用資料來源。 [TargetDataSourceFolder] 的預設值為 Data Sources。 如果這個值保留空白，資料來源就會發行至 [TargetReportFolder] 中所指定的位置。  
   
-9. 在 [TargetReportFolder] 文字方塊中，鍵入報表伺服器上的資料夾，以放入已發行的報表。 預設值為**TargetReportFolder**是報表專案的名稱。  
+9. 在 [TargetReportFolder] 文字方塊中，鍵入報表伺服器上的資料夾，以放入已發行的報表。 預設值**TargetReportFolder**是報表專案的名稱。  
   
     > [!NOTE]  
     >  如果是以原生模式執行的報表伺服器，您必須具有目標資料夾的「發行」權限，才能將報表發行至該資料夾。 「發行」權限是透過將您的使用者帳戶對應到包含發行作業之角色的角色指派來提供。 如需詳細資訊，請參閱 [建立和管理角色指派](../security/create-and-manage-role-assignments.md)。 如果是以 SharePoint 整合模式執行的報表伺服器，您必須具有 SharePoint 網站的「成員」或「擁有者」權限。 如需詳細資訊，請參閱 [報表伺服器項目的 SharePoint 網站和清單權限參考](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)。  

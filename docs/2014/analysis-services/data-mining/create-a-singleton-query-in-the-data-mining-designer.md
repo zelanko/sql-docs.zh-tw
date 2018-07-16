@@ -1,5 +1,5 @@
 ---
-title: 在資料採礦設計師中建立單一查詢 |Microsoft 文件
+title: 在 資料採礦設計師中建立單一查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - singleton queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], singleton queries
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 33c4e815c2bdf5ad0f3c3eaa2bceaed03b09bc77
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 917efe321e2e43779e28cb7f707a9dadaeb8a7cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284234"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>在資料採礦設計師中建立單一查詢
   如果您想要針對單一案例建立預測，單一查詢便很有用。 如需單一查詢的詳細資訊，請參閱[資料採礦查詢](data-mining-queries.md)。  
@@ -61,7 +61,7 @@ AS [t]
   
 4.  在 [單一查詢輸入] 資料表上，選取 [值] 資料行中的值來描述您要建立預測的案例。  
   
-     例如，選取**2**如**Number Children At Home**，然後輸入`45`如**年齡**。  
+     例如，選取**2**的**Number Children At Home**，然後輸入`45`如**年齡**。  
   
 5.  將可預測資料行從 [採礦模型] 資料表拖曳到索引標籤底端的 [來源] 資料行。(選擇性) 您可以針對資料行輸入別名。  
   

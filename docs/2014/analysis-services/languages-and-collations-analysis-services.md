@@ -1,5 +1,5 @@
 ---
-title: 語言和定序 (Analysis Services) |Microsoft 文件
+title: 語言和定序 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows collations [Analysis Services]
 - default collations
@@ -19,22 +19,22 @@ helpviewer_keywords:
 - collations [Analysis Services]
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3279919a5a089991b09a3eea6807bec8589f7a64
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e2c52f657ce161edbb82c16eda2f6f0c3084c8a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293718"
 ---
 # <a name="languages-and-collations-analysis-services"></a>語言和定序 (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 支援 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 作業系統所提供的語言和定序。 `Language` 和 `Collation` 屬性會在安裝期間於執行個體層級進行初始設定，但之後可在物件階層的不同層級進行變更。  
   
  在多維度模型中 (僅限多維度模型)，您可以在資料庫或 Cube 上設定這些屬性，您也可以在為 Cube 中物件所建立的翻譯上設定這些屬性。  
   
- 設定時`Language`和`Collation`，您會在處理和查詢執行期間，或 （適用於僅限多維度模型） 資料模型所使用的其中一個指定設定外語具有多個翻譯，因此，外部的模型語言喇叭可以使用其原生語言中的模型。 在針對不同地區設定對開發環境和生產伺服器進行設定的情況下，需要在物件 (資料庫、模型或 Cube) 上明確設定 `Language` 和 `Collation` 屬性，您也需要確定語言和定序符合預定目標環境的語言和定序。  
+ 設定時`Language`和`Collation`，您會使用資料模型在處理和查詢執行期間，或 （適用於僅限多維度模型） 可以指定設定提供具有多個翻譯，因此，外部索引的模型給外語語言喇叭可以使用其原生語言模型。 在針對不同地區設定對開發環境和生產伺服器進行設定的情況下，需要在物件 (資料庫、模型或 Cube) 上明確設定 `Language` 和 `Collation` 屬性，您也需要確定語言和定序符合預定目標環境的語言和定序。  
   
  本主題包含下列章節：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36022295"
 -   [Analysis Services 中的 GB18030 支援](#bkmk_gb18030)  
   
 ##  <a name="bkmk_object"></a> 支援語言和定序屬性的物件  
- `Language` 和`Collation`屬性通常會一起公開 –，您可以設定`Language`，您也可以設定`Collation`。  
+ `Language` 並`Collation`屬性通常會一起公開，您可以設定`Language`，您也可以設定`Collation`。  
   
  您可以設定`Language`和`Collation`這些物件：  
   
@@ -71,16 +71,16 @@ ms.locfileid: "36022295"
   
      不論您在 Cube 上設定的語言和定序為何，都可供 Cube 中含有的所有量值和維度使用。 只有在維度屬性上建立翻譯時，才能進一步設定定序屬性。 否則會假設屬性層級沒有翻譯，而且每個 Cube 有一個定序。  
   
- 此外，您可以設定`Language`，單獨使用時，在**轉譯**物件。  
+ 此外，您可以設定`Language`，單獨使用時，在**翻譯**物件。  
   
- 您將翻譯加入 Cube 或維度時，會建立翻譯物件。 `Language` 是翻譯定義的一部分。 `Collation`相反地，設定在 cube 或更高版本，並供所有翻譯共用。 這在含有翻譯之 Cube 的 XMLA 中會很明顯，其中您會看到多個語言屬性 (每個翻譯一個屬性)，但只會看到一個定序。 請注意，維度屬性翻譯是例外；在這種情況下，您可以覆寫 Cube 定序，來指定符合來源資料行的屬性定序 (資料庫引擎支援在個別資料行上設定定序，並且通常可設定個別翻譯，從不同的來源資料行取得成員資料)。 否則，對於其他所有翻譯而言`Language`單獨使用，而不`Collation`推論。 如需詳細資訊，請參閱[翻譯 &#40;Analysis Services&#41;](translations-analysis-services.md)。  
+ 您將翻譯加入 Cube 或維度時，會建立翻譯物件。 `Language` 是翻譯定義的一部分。 `Collation`相反地，是設定在 cube 或更高版本，並供所有翻譯共用。 這在含有翻譯之 Cube 的 XMLA 中會很明顯，其中您會看到多個語言屬性 (每個翻譯一個屬性)，但只會看到一個定序。 請注意，維度屬性翻譯是例外；在這種情況下，您可以覆寫 Cube 定序，來指定符合來源資料行的屬性定序 (資料庫引擎支援在個別資料行上設定定序，並且通常可設定個別翻譯，從不同的來源資料行取得成員資料)。 否則，對於其他所有翻譯而言`Language`單獨使用，不含`Collation`必然結果。 如需詳細資訊，請參閱[翻譯 &#40;Analysis Services&#41;](translations-analysis-services.md)。  
   
 ##  <a name="bkmk_lang"></a> Analysis Services 中的語言支援  
- `Language`屬性會設定物件，用於在處理期間，查詢，並使用的地區設定`Captions`和`Translations`以支援多語系案例。 地區設定是以語言識別碼 (例如英文) 和領域 (例如美國或澳洲) 為基礎，並進一步精簡日期和時間表示法。  
+ `Language`屬性設定的地區設定物件，用於在處理期間，查詢，並使用`Captions`和`Translations`支援多語系案例。 地區設定是以語言識別碼 (例如英文) 和領域 (例如美國或澳洲) 為基礎，並進一步精簡日期和時間表示法。  
   
  在執行個體層級，屬性會在安裝期間根據 Windows Server 作業系統的語言來設定 (37 種語言之一並假設已安裝語言套件)。 您無法變更安裝程式的語言。  
   
- 您可以覆寫安裝後，`Language`在 Management Studio，或在 msmdsrv.ini 組態檔中使用的伺服器屬性頁面。 您可以選擇更多語言，包括 Windows 用戶端支援的所有語言。 當執行個體層級，在伺服器上，設定`Language`決定後續部署的所有資料庫的地區設定。 例如，如果您將 `Language` 設為德文，部署至執行個體的所有資料庫都會有語言屬性 1031，也就是德文的 LCID。  
+ 您可以覆寫安裝後，`Language`在 Management Studio，或在 msmdsrv.ini 組態檔中使用的伺服器屬性頁面。 您可以選擇更多語言，包括 Windows 用戶端支援的所有語言。 當設定執行個體層級，在伺服器上，`Language`決定後續部署的所有資料庫的地區設定。 例如，如果您將 `Language` 設為德文，部署至執行個體的所有資料庫都會有語言屬性 1031，也就是德文的 LCID。  
   
 ###  <a name="bkmk_lcid"></a> 語言屬性的值是地區設定識別碼 (LCID)  
  有效值包括出現在下拉式清單中的任何 LCID。 在 Management Studio 和 SQL Server Data Tools 中，LCID 會以對等字串來表示。 不論工具為何，只要公開 `Language` 屬性的位置都會顯示相同的語言。 具有相同的語言清單可確保您可以在整個模型中一致地實作及測試翻譯。  
@@ -121,7 +121,7 @@ ms.locfileid: "36022295"
      二進位定序會根據 Unicode 字碼指標 (而非語言值) 排序。 例如，Latin1_General_BIN 和 Japanese_BIN 若使用於 Unicode 資料，會產生相同排序結果。 語言排序可能會產生類似 aAbBcCdD 的結果，而二進位排序則是 ABCDabcd，因為所有大寫字元的字碼指標總計會高於小寫字元的字碼指標。  
   
 ###  <a name="bkmk_sortorder"></a> 排序順序選項  
- 排序選項可根據區分大小寫、腔調字、假名和全半形，來精簡排序和比較規則。 例如，預設值的`Collation`組態屬性[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是 latin1_general_as_cs，它指定 Latin1_General 定序使用，且區分腔調字、 區分大小寫的排序次序。  
+ 排序選項可根據區分大小寫、腔調字、假名和全半形，來精簡排序和比較規則。 例如，預設值`Collation`組態屬性[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]是 latin1_general_as_cs，它指定使用 Latin1_General 定序，以及區分腔調字、 區分大小寫的排序順序。  
   
  請注意，BIN 和 BIN2 與其他排序選項互斥，如果您想要使用 BIN 或 BIN2，請清除 [區分腔調字] 的排序選項。 同樣地，選取 BIN2 時，則無法使用區分大小寫、不區分大小寫、區分腔調字、不區分腔調字、區分假名和區分全半形等選項。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36022295"
   
 -   更新定序之後，請重新處理資料分割和維度。  
   
- 您可以在伺服器層級，使用 SQL Server Management Studio 或 AMO PowerShell 來變更預設語言或定序。 或者，您可以修改**\<語言 >** 和 **\<CollationName >** 在 msmdsrv.ini 檔案中，設定指定之語言的 LCID。  
+ 您可以在伺服器層級，使用 SQL Server Management Studio 或 AMO PowerShell 來變更預設語言或定序。 或者，您可以在其中修改**\<語言 >** 並 **\<CollationName >** 在 msmdsrv.ini 檔案中，設定指定之語言的 LCID。  
   
 1.  在 Management Studio 中，在伺服器名稱上按一下滑鼠右鍵 | [屬性] | [語言/定序]。  
   
@@ -182,7 +182,7 @@ ms.locfileid: "36022295"
 4.  重新處理 Cube。  
   
 ##  <a name="bkmk_enablefast1033"></a> 透過 EnableFast1033Locale 提高英文地區設定的效能  
- 如果您使用的英文 （美國） 語言識別碼 （0x0409 或 1033年） 做為預設語言[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體，您可以藉由設定取得額外效能優勢`EnableFast1033Locale`組態屬性、 進階的組態屬性僅適用於該語言識別項。 將此屬性的值設定為 **true** ，就可以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用更快的演算法來進行字串雜湊和比較。 如需設定組態屬性的詳細資訊，請參閱[在 Analysis Services 中設定伺服器屬性](server-properties/server-properties-in-analysis-services.md)。  
+ 如果您使用英文 （美國） 語言識別碼 （0x0409 或 1033年） 做為預設語言[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]執行個體，您可以藉由設定取得額外的效能優點`EnableFast1033Locale`組態屬性、 進階的組態屬性僅適用於該語言識別碼。 將此屬性的值設定為 **true** ，就可以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 使用更快的演算法來進行字串雜湊和比較。 如需設定組態屬性的詳細資訊，請參閱[在 Analysis Services 中設定伺服器屬性](server-properties/server-properties-in-analysis-services.md)。  
   
 ##  <a name="bkmk_gb18030"></a> Analysis Services 中的 GB18030 支援  
  GB18030 是一種獨立標準，可供中華人民共和國進行中文字元的編碼。 在 GB18030 中，字元的長度可以是 1、2 或 4 個位元組。 在 Analysis Services 中，處理外部來源的資料時沒有任何資料轉換。 資料會以 Unicode 的簡單格式儲存。 在查詢時，當查詢結果中傳回文字資料時，系統會根據用戶端作業系統設定，透過 Analysis Services 用戶端程式庫 (也就是 MSOLAP.dll OLE DB 提供者) 來執行 GB18030 轉換。 資料庫引擎也支援 GB18030。 如需詳細資訊，請參閱＜ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)＞。  

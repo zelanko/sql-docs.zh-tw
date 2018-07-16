@@ -1,5 +1,5 @@
 ---
-title: 使用從模型檢視器鑽研 |Microsoft 文件
+title: 從 模型檢視器使用鑽研 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f18e2efe4a9457e9e7ac320dcf8570d89df0edbf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2a272b1a86de667087c8a2a583d0fee6fd5584f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134740"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265754"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>從模型檢視器使用鑽研
   根據模型類型，您可以從資料採礦設計師的 [採礦模型檢視器] 索引標籤上的瀏覽檢視器中使用鑽研，以瀏覽採礦模型中使用的案例或查看採礦結構中的其他資料行。 雖然因為模型中的模式無法直接連結到特定案例，導致許多模型類型不支援鑽研，但下列模型類型支援鑽研。  

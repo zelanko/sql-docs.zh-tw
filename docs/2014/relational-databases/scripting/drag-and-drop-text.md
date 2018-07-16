@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dragging and dropping text
 - Query Editor [SQL Server Management Studio], dragging and dropping text
 ms.assetid: 623354b8-fa56-4167-862a-98c468dd8a22
 caps.latest.revision: 22
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: bc3480d8afb3bf621a9f2bb3f9798c1c7f84507e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 6e3dcd12e3ab266e90ae55a507432ea678714be7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319908"
 ---
 # <a name="drag-and-drop-text"></a>拖放文字
   您可以選取文字，再將它拖放到另一個位置。 請依照下列方式來拖放文字：  

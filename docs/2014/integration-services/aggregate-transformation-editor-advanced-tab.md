@@ -1,5 +1,5 @@
 ---
-title: 彙總轉換編輯器 （進階索引標籤） |Microsoft 文件
+title: 彙總轉換編輯器 （進階索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.aggregationtransformation.advanced.f1
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 917bffe5d88b30ffe5a3d56b7e8776c4e66c0051
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 398ec0597f0240548d6aba15ac2f29b218f4089a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136268"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37254570"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>彙總轉換編輯器 (進階索引標籤)
   使用 **[彙總轉換編輯器]** 對話方塊的 **[進階]** 索引標籤，即可設定元件屬性、指定彙總，以及設定輸入和輸出資料行的屬性。  
@@ -39,7 +39,7 @@ ms.locfileid: "36136268"
  **[索引鍵小數位數]**  
  選擇性地指定彙總預期的近似索引鍵數目。 轉換時會使用此資訊來最佳化初始快取大小。 根據預設，此選項的值為 **[未指定]**。 如果 **[索引鍵小數位數]** 和 **[索引鍵數目]** 都有指定，會優先使用 **[索引鍵數目]** 。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 **[索引鍵小數位數]** 屬性。|  
 |低|彙總可寫入大約 500,000 個索引鍵。|  
@@ -52,7 +52,7 @@ ms.locfileid: "36136268"
  **[計算相異小數位數]**  
  可選擇性地指定彙總可寫入之相異值的近似數目。 根據預設，此選項的值為 **[未指定]**。 如果 **[計算相異小數位數]** 和 **[計算相異索引鍵]** 都有指定，會優先使用 **[計算相異索引鍵]** 。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |[未指定]|不使用 CountDistinctScale 屬性。|  
 |低|彙總可寫入大約 500,000 個相異值。|  

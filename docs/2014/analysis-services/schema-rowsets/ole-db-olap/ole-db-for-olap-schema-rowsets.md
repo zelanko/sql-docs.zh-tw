@@ -1,5 +1,5 @@
 ---
-title: OLE DB for OLAP 結構描述資料列 |Microsoft 文件
+title: OLE DB for OLAP 結構描述資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,27 +17,27 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB for OLAP
 ms.assetid: 5fad3ecc-407c-4148-862e-ea6119cc7480
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 898749e17cb5b85e61a2b2c3a94b7247a7ab219b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 406451b0e8e6edce92d69cde493888f70813f4de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306478"
 ---
 # <a name="ole-db-for-olap-schema-rowsets"></a>OLE DB for OLAP 結構描述資料列集
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA) 提供者支援下列的 OLE DB for OLAP 結構描述資料列集。  
   
 > [!NOTE]  
->  若要檢查特定資料來源提供者是否支援資料列集，請使用`DISCOVER_ENUMERATIONS`含有資料列集[探索](../../xmla/xml-elements-methods-discover.md)方法。  
+>  若要檢查的特定資料來源提供者是否支援資料列集，請使用`DISCOVER_ENUMERATIONS`資料列集搭配[Discover](../../xmla/xml-elements-methods-discover.md)方法。  
   
- 您也可以找到藉由搜尋 「 OLAP 結構描述資料列集，"主題，這些資料列集的詳細的資訊，在此 MSDN Library 中[Microsoft 寍鯚](http://go.microsoft.com/fwlink/?LinkId=15426)。  
+ 您也可以找到所搜尋主題，也就是 「 OLAP 結構描述資料列 」，這些資料列集的詳細的資訊，位於 MSDN Library，這[Microsoft 寍鯚](http://go.microsoft.com/fwlink/?LinkId=15426)。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|結構描述資料列<sup>1</sup>|描述|  
+|結構描述資料列集<sup>1</sup>|描述|  
 |-------------------------------|-----------------|  
 |[DISCOVER_INSTANCES 資料列集](discover-instances-rowset.md)|描述伺服器上的執行個體。|  
 |[DISCOVER_KEYWORDS 資料列集&#40;OLE DB for OLAP&#41;](discover-keywords-rowset-ole-db-for-olap.md)|列舉提供者所保留字詞的清單。|  
@@ -56,7 +56,7 @@ ms.locfileid: "36035340"
 |[MDSCHEMA_PROPERTIES 資料列集](mdschema-properties-rowset.md)|描述資料庫內的成員屬性。|  
 |[MDSCHEMA_SETS 資料列集](mdschema-sets-rowset.md)|描述目前定義於資料庫中的任何集合，包括工作階段範圍集。|  
   
- <sup>1</sup>此處所列的所有結構描述資料列的 MSOLAP 資料來源提供者支援[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供者。  
+ <sup>1</sup>的 MSOLAP 資料來源提供者支援此處所列的所有結構描述資料列[!INCLUDE[msCoName](../../../includes/msconame-md.md)]XMLA 提供者。  
   
 ## <a name="see-also"></a>另請參閱  
  [DISCOVER_ENUMERATORS 資料列集](../xml/discover-enumerators-rowset.md)   

@@ -1,5 +1,5 @@
 ---
-title: 報表屬性對話方塊、 參考 （報表產生器） |Microsoft 文件
+title: 報表屬性對話方塊、 參考 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10082"
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 caps.latest.revision: 11
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: a33b1456e31220a2453cf318cf3d925c1002260f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99be366023499607a5798ea202445f2b4a57b6c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286664"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>報表屬性對話方塊、參考 (報表產生器)
   選取 **[報表屬性]** 對話方塊上的 **[參考]** ，即可將參考加入報表定義中運算式所使用的自訂或其他外部組件以及自訂類別執行個體，或從中移除。 在報表產生器的本機模式中不支援自訂組件。 若要撰寫使用自訂組件的報表，請使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的報表設計師。  
   
 ## <a name="options"></a>選項。  
  **新增或移除組件**  
- 列出報表參考的組件。 組件必須可以在安裝設計報表所使用之工具的電腦和報表伺服器上使用。 參考的名稱必須符合的內容 **\<CodeModule >** 完全在報表定義語言 (.rdl) 檔案標記。  
+ 列出報表參考的組件。 組件必須可以在安裝設計報表所使用之工具的電腦和報表伺服器上使用。 參考的名稱必須符合的內容 **\<CodeModule >** 完全標記儲存在報表定義語言 (.rdl) 檔案。  
   
  **[加入]**  
  按一下即可加入組件。 按一下省略符號 (...) 按鈕來開啟 [開啟] 對話方塊，並選取完成報表處理和運算式評估所需的組件。  

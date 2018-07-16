@@ -1,5 +1,5 @@
 ---
-title: DBSCHEMA_COLUMNS 資料列集 |Microsoft 文件
+title: DBSCHEMA_COLUMNS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - DBSCHEMA_COLUMNS rowset
 ms.assetid: 653bdd07-a533-4a99-8b6a-6e5c7322e1f3
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 413e86e156db59e7621c94bdc1c99cd0087a987f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6fa933eb153b0d8de4c2fec4ba92b072954be141
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131586"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267574"
 ---
 # <a name="dbschemacolumns-rowset"></a>DBSCHEMA_COLUMNS 資料列集
   為所有符合提供之限制準則的資料行提供資料行資訊。  
@@ -45,8 +45,8 @@ ms.locfileid: "36131586"
 |`ORDINAL_POSITION`|`DBTYPE_UI4`||以 1 為開頭的資料行位置。|  
 |`COLUMN_HAS_DEFAULT`|`DBTYPE_BOOL`||不支援。|  
 |`COLUMN_DEFAULT`|`DBTYPE_WSTR`||不支援。|  
-|`COLUMN_FLAGS`|`DBTYPE_UI4`||指出資料行屬性的 `DBCOLUMNFLAGS` 位元遮罩。 請參閱 'DBCOLUMNFLAGS 列舉型別' [icolumnsinfo:: Getcolumninfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
-|`IS_NULLABLE`|`DBTYPE_BOOL`||一律傳回`false`。|  
+|`COLUMN_FLAGS`|`DBTYPE_UI4`||指出資料行屬性的 `DBCOLUMNFLAGS` 位元遮罩。 在 請參閱 < DBCOLUMNFLAGS 列舉類型' [icolumnsinfo:: Getcolumninfo](http://msdn2.microsoft.com/library/ms722704.aspx)|  
+|`IS_NULLABLE`|`DBTYPE_BOOL`||一律會傳回`false`。|  
 |`DATA_TYPE`|`DBTYPE_WSTR`<br /><br /> `DBTYPE_VARIANT`||資料行的資料類型。 傳回維度資料行的字串以及量值的變數。|  
 |`TYPE_GUID`|`DBTYPE_GUID`||不支援。|  
 |`CHARACTER_MAXIMUM_LENGTH`|`DBTYPE_UI4`||資料行中值的最大可能長度。<br /><br /> 這是從 `DataSize` 的 `DataItem` 屬性擷取的。|  

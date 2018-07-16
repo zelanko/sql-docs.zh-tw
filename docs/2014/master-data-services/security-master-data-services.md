@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: bbb9817ac5e9ef4c779dd8a283223622b28c9119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 138ab7faa61857de9f130b9feffe7879095a32c3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287564"
 ---
 # <a name="security-master-data-services"></a>安全性 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]在  中，使用安全性可確保使用者具有執行工作所需之特定主要資料的存取權，並避免使用者存取不應使用的資料。  
@@ -44,7 +44,7 @@ ms.locfileid: "36036813"
   
 -   [模型物件權限](../../2014/master-data-services/model-object-permissions-master-data-services.md)，用來決定使用者可以存取的屬性，以及使用者對這些屬性的存取 （讀取或更新） 的類型。  
   
--   （選擇性）[階層成員權限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)，判斷的成員的使用者可以存取，以及 （讀取或更新） 的存取類型的使用者對這些成員。  
+-   （選擇性）[階層成員權限](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)，決定使用者可以存取，成員並 （「 讀取 」 或 「 更新 」） 的存取類型的使用者對這些成員。  
   
  將權限指派給屬性和成員時，權限會交集，此時規則會決定優先使用的權限。 如需詳細資訊，請參閱[如何決定權限 &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36036813"
   
  ![樣式衍生階層和成員的權限](../../2014/master-data-services/media/style-derived-hierarchy-mds.png "樣式衍生階層和成員的權限")  
   
- 如需如何建立階層的資訊，請參閱[建立明確階層&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)和[建立衍生階層&#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)。  
+ 如需如何建立階層的詳細資訊，請參閱[建立明確階層&#40;Master Data Services&#41; ](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)並[建立衍生階層 &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-derived-hierarchy-master-data-services.md)。  
   
  如需如何指派成員權限資訊，請參閱[指派階層成員權限&#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 執行封裝工作編輯器 |Microsoft 文件
+title: 執行封裝工作編輯器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.parameter.F1
 - sql12.dts.designer.executepackagetask.package.f1
 - sql12.dts.designer.executepackagetask.general.f1
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 45d295035ecd4b01b481fc40573336a0fc5a0109
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 91e6903528380735fde050decace5903e0a55c9f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135214"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37271714"
 ---
 # <a name="execute-package-task-editor"></a>執行封裝工作編輯器
   使用「執行封裝工作編輯器」設定「執行封裝」工作。 「執行封裝」工作可讓封裝將其他封裝當做工作流程的一部分執行，以延伸 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的企業功能。  
@@ -65,7 +65,7 @@ ms.locfileid: "36135214"
  如果子封裝受到密碼保護，請提供子封裝的密碼，或按一下省略符號 (...) 按鈕，然後建立子封裝的新密碼。  
   
  `ExecuteOutOfProcess`  
- 指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 根據預設，「 執行封裝 」 工作的 ExecuteOutOfProcess 屬性設定為`False`，並在父封裝相同的程序中執行子封裝。 如果您將此屬性設定為 `true`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 `true`，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。  
+ 指定子封裝是在父封裝的處理序中執行，還是在個別的處理序中執行。 根據預設，「 執行封裝 」 工作的 ExecuteOutOfProcess 屬性設為`False`，並執行相同的處理序與父封裝中的子封裝。 如果您將此屬性設定為 `true`，子封裝就會在不同的處理序中執行。 這可能會降低子封裝的啟動速度。 另外，如果此屬性設定為 `true`，則無法在僅限工具安裝中偵錯封裝；您必須安裝 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 產品。 如需詳細資訊，請參閱[安裝 Integration Services](install-windows/install-integration-services.md)。  
   
 ### <a name="referencetype-dynamic-options"></a>ReferenceType 動態選項  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36135214"
  **位置**  
  選取子封裝的位置。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**[SQL Server]**|設定 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]執行個體的位置。|  
 |**檔案系統**|設定檔案系統的位置。|  

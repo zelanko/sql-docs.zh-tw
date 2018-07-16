@@ -1,5 +1,5 @@
 ---
-title: 演算法參數 （SQL Server 資料採礦增益集） |Microsoft 文件
+title: 演算法參數 （SQL Server 資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MAXIMUM_STATES
 - FORCED_REGRESSOR
@@ -48,24 +48,24 @@ helpviewer_keywords:
 - COMPLEXITY_PENALTY
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5e8856d824e043c5cb68f18d3b34c9a07ea21375
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a7f640f259375c48584ee33b72e63b082de0a3e2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144634"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37267674"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>演算法參數 (SQL Server 資料採礦增益集)
   當您使用適用於 Excel 的資料表分析工具來執行資料採礦時，您不需要設定資料採礦演算法或參數；每一個工具都會分析資料，並自動選取最佳參數。 但是，如果您想要修改模型或是從頭開始建立採礦模型，適用於 Excel 的資料採礦用戶端提供了幾個選項供您自訂。  
   
--   手動建立資料採礦模型，依序按一下**進階**，然後按一下 **將模型加入結構**。  
+-   手動建立資料採礦模型，依序按一下**進階**，然後按一下**將模型加入結構**。  
   
--   資料採礦用戶端，使用任何一個模型精靈，然後按一下**參數**控制行為的[!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法。  
+-   在 資料採礦用戶端，使用任何一個模型精靈，然後按一下**參數**來控制行為的[!INCLUDE[msCoName](../includes/msconame-md.md)]資料採礦演算法。  
   
--   按一下**查詢**以開啟查詢模型精靈，然後按一下 **進階**開啟**資料採礦進階查詢編輯器**。 在此編輯器中，您可以使用 DMX 範本建立模型。  
+-   按一下 **查詢**以開啟 查詢模型精靈，然後按一下**進階**以開啟**資料採礦進階查詢編輯器**。 在此編輯器中，您可以使用 DMX 範本建立模型。  
   
  您也可以修改已經建立之採礦模型的行為，或者也可以在採礦模型檢視器中設定參數來篩選結果。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36144634"
 |CLUSTER_COUNT|Microsoft 群集演算法<br /><br /> Microsoft 時序叢集演算法|指定演算法要建立的大約群集數目。 如果無法從資料建立大約群集數目，則演算法會盡可能建立最多的群集。 將 CLUSTER_COUNT 設定為 0 會造成演算法使用啟發式決定，對於建立的群集數做出最好的決定。<br /><br /> 預設值是 10。|  
 |CLUSTER_SEED|Microsoft 群集演算法|指定在模型建立的初始階段，用於隨機產生群集的種子號碼。<br /><br /> 預設值是 0。|  
 |CLUSTERING_METHOD|Microsoft 群集演算法|指定演算法要使用的群集方法。 可用的群集方法有：可擴充的 EM (1)、不可擴充的 EM (2)、可擴充的 K-means (3) 和不可擴充的 K-means (4)。<br /><br /> 預設值是 1。|  
-|COMPLEXITY_PENALTY|Microsoft 決策樹演算法<br /><br /> Microsoft 時間序列演算法|控制決策樹的成長。 低值會增加分岔數目，而高值會減少分岔數目。 預設值是依據特定模型的屬性數目，如下列清單所述：<br /><br /> 1 到 9 個屬性，預設值為 0.5。<br /><br /> 10 到 99 個屬性，預設值為 0.9。<br /><br /> 100 個以上的屬性，預設值為 0.99。<br /><br /> 注意： 在時間序列模型，此參數僅適用於使用 ARTxp 演算法建立的模型或混合模型。|  
+|COMPLEXITY_PENALTY|Microsoft 決策樹演算法<br /><br /> Microsoft 時間序列演算法|控制決策樹的成長。 低值會增加分岔數目，而高值會減少分岔數目。 預設值是依據特定模型的屬性數目，如下列清單所述：<br /><br /> 1 到 9 個屬性，預設值為 0.5。<br /><br /> 10 到 99 個屬性，預設值為 0.9。<br /><br /> 100 個以上的屬性，預設值為 0.99。<br /><br /> 注意： 在時間序列模型，此參數僅適用於使用 ARTxp 演算法建立模型或混合模型。|  
 |FORCED_REGRESSOR|Microsoft 決策樹演算法<br /><br /> Microsoft 線性迴歸演算法|強制演算法使用指定的資料行作為迴歸輸入變數，不考慮演算法計算出來之資料行的重要性。<br /><br /> 注意： 這個參數只用於預測連續屬性的決策樹。 根據定義，線性迴歸模型是一種特殊案例的決策樹，可預測持續的屬性。 但是，任何決策樹模型都可以包含一個代表線性迴歸公式的節點。|  
 |FORECAST_METHOD|Microsoft 時間序列演算法|指示是否應該使用 ARTxp 演算法、ARIMA 演算法或這兩者的組合來進行預測。<br /><br /> 預設值為 MIXED。|  
 |HIDDEN_NODE_RATIO|Microsoft Neural Network Algorithm|指定隱藏神經與輸入和輸出神經的比例。 下列公式決定隱藏層中的初始神經數目：<br /><br /> HIDDEN_NODE_RATIO * SQRT(總輸入神經 \* 總輸出神經)<br /><br /> 預設值為 4.0。|  
@@ -88,7 +88,7 @@ ms.locfileid: "36144634"
 |HISTORICAL_MODEL_GAP|Microsoft 時間序列演算法|指定兩個連續記錄模型之間的時間延遲。 例如，將此值設定為 g，會造成要建立記錄模型的資料，依 g、2\*g、3\*g 等等的間隔而遭到時間配量截斷。<br /><br /> 預設值是 10。|  
 |HOLDOUT_PERCENTAGE|Microsoft 羅吉斯迴歸演算法<br /><br /> Microsoft Neural Network Algorithm|指定用來計算鑑效組錯誤之定型資料內的案例百分比，這可作為定型採礦模型時停止準則的一部分。<br /><br /> 預設值是 30。<br /><br /> 注意：這個參數與套用到採礦結構的鑑效組百分比值不同。|  
 |HOLDOUT_SEED|Microsoft 羅吉斯迴歸演算法<br /><br /> Microsoft Neural Network Algorithm|在演算法隨機決定鑑效組資料時，指定用來植入虛擬隨機產生器的數字。 如果此參數設定為 0，此演算法會依據採礦模型的名稱產生種子，以保證在重新處理期間，模型內容保持不變。<br /><br /> 預設值是 0。<br /><br /> 注意：這個參數與套用到採礦結構的鑑效組種子值不同。|  
-|INSTABILITY_SENSITIVITY|Microsoft 時間序列演算法|控制預測變異數超過某個臨界值且 ARTxp 演算法隱藏預測的那個點。 預設值是 1。<br /><br /> 注意： 這個參數只適用於混合的模型或模型使用 ARTxp 演算法。|  
+|INSTABILITY_SENSITIVITY|Microsoft 時間序列演算法|控制預測變異數超過某個臨界值且 ARTxp 演算法隱藏預測的那個點。 預設值是 1。<br /><br /> 注意： 這個參數只適用於混合式的模型或模型使用 ARTxp 演算法。|  
 |MAXIMUM_INPUT_ATTRIBUTES|Microsoft 群集演算法<br /><br /> Microsoft 決策樹演算法<br /><br /> Microsoft 線性迴歸演算法<br /><br /> Microsoft 貝氏機率分類演算法<br /><br /> Microsoft Neural Network Algorithm<br /><br /> Microsoft 羅吉斯迴歸演算法|定義演算法在叫用特徵選取之前，可以處理的輸入屬性數目。 將此值設定為 0 可關閉特徵選取。<br /><br /> 預設值是 255。|  
 |MAXIMUM_ITEMSET_COUNT|Microsoft Association Algorithm|指定要產生的最大項目集數目。 如果沒有指定數目，演算法會產生所有可能的項目集。<br /><br /> 預設值是 200000。|  
 |MAXIMUM_ITEMSET_SIZE|Microsoft Association Algorithm|指定項目集內所允許的最大項目數。 將此值設定為 0，即代表項目集沒有大小限制。<br /><br /> 預設值是 3。|  

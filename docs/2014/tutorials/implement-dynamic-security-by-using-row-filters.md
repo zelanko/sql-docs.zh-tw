@@ -1,5 +1,5 @@
 ---
-title: 使用資料列篩選實作動態安全性 |Microsoft 文件
+title: 使用資料列篩選實作動態安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,31 +8,31 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 066e628cc40f4ac4745f4b2edaa93ecdbd8d93d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4364b9c18125b5aa4baa479ae92a2dc688d9fe18
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37257594"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>使用資料列篩選器實作動態安全性
   在這個補充課程中，您將建立實作動態安全性的其他角色。 動態安全性提供以使用者目前登入的使用者名稱或登入識別碼為主的資料列層級安全性。 如需詳細資訊，請參閱[角色 &#40;SSAS 表格式&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md)。  
   
  若要實作動態安全性，您必須將資料表加入至包含 Windows 使用者名稱的模型，這些使用者可以建立與模型的連接做為資料來源並且瀏覽模型物件與資料。 您使用本教學課程建立的模型位於 Adventure Works Corp. 內容中；不過為了完成本課程，您必須加入包含您自己的網域使用者的資料表。 您將不需要所加入使用者名稱的密碼。 若要 Employee Security 資料表，其中包含幾個您網域中的範例使用者，您將使用 [貼上] 功能從 Excel 試算表貼入員工資料。 在真實情況中，包含您加入模型中之使用者名稱的資料表通常會使用來自實際資料庫的資料表做為資料來源；例如，實際的 dimEmployee 資料表。  
   
- 若要實作動態安全性，您會使用兩個新的 DAX 函數： [USERNAME 函數&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)和[LOOKUPVALUE 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 該公式會使用 LOOKUPVALUE 函數從 Employee Security 資料表指定一個值，然後將該值傳遞給 USERNAME 函數，此函數會指定登錄使用者的使用者名稱屬於此角色。 之後使用者就只能瀏覽角色的資料列篩選器所指定的資料。 在這個案例中，您將指定銷售員工只能瀏覽本身所屬銷售地區的網際網路銷售資料。  
+ 若要實作動態安全性，您將使用兩個新的 DAX 函式： [USERNAME 函式&#40;DAX&#41; ](https://msdn.microsoft.com/library/hh230954.aspx)並[LOOKUPVALUE 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)。 這兩個函數是在新角色中定義，並且會套用至資料列篩選器公式。 該公式會使用 LOOKUPVALUE 函數從 Employee Security 資料表指定一個值，然後將該值傳遞給 USERNAME 函數，此函數會指定登錄使用者的使用者名稱屬於此角色。 之後使用者就只能瀏覽角色的資料列篩選器所指定的資料。 在這個案例中，您將指定銷售員工只能瀏覽本身所屬銷售地區的網際網路銷售資料。  
   
  您將要完成一系列工作，才能完成這個補充課程。 例如此 Adventure Works 表格式模型案例專屬的工作就是這類工作，但不一定適用於真實案例。 每一項工作都包含描述工作目的的其他資訊。  
   
  完成本課程的估計時間： **30 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  這個補充課程主題是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>將 dimSalesTerritory 資料表加入至 AW Internet Sales 表格式模型專案  
@@ -89,14 +89,14 @@ ms.locfileid: "36145532"
   
     |Employee Id|Sales Territory Id|First Name|Last Name|Login Id|  
     |-----------------|------------------------|----------------|---------------|--------------|  
-    |@shouldalert|2|\<使用者第一個名稱 >|\<使用者最後一個名稱 >|\<網域 \ 使用者名稱 >|  
-    |@shouldalert|3|\<使用者第一個名稱 >|\<使用者最後一個名稱 >|\<網域 \ 使用者名稱 >|  
-    |2|4|\<使用者第一個名稱 >|\<使用者最後一個名稱 >|\<網域 \ 使用者名稱 >|  
-    |3|5|\<使用者第一個名稱 >|\<使用者最後一個名稱 >|\<網域 \ 使用者名稱 >|  
+    |1|2|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<網域 \ 使用者名稱 >|  
+    |1|3|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<網域 \ 使用者名稱 >|  
+    |2|4|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<網域 \ 使用者名稱 >|  
+    |3|5|\<使用者第一個名稱 >|\<使用者的最後一個名稱 >|\<網域 \ 使用者名稱 >|  
   
 3.  在新的工作表中，將 first name、last name 和 domain\username 取代為您組織中三個使用者的姓名和登入識別碼。 在 Employee Id 1 的前兩個資料列中放入相同的使用者。 這樣表示這個使用者屬於多個銷售地區。 Employee Id 和 Sales Territory Id 欄位保持不變。  
   
-4.  做為工作表儲存`Sample Employee`。  
+4.  儲存為工作表`Sample Employee`。  
   
 5.  在該工作表中，選取所有包含員工資料的資料格 (包括標頭)，然後以滑鼠右鍵按一下選取的資料，再按一下 [複製]。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36145532"
   
      如果 [貼上] 呈現灰色，請按一下模型設計師視窗中任何資料表的任何資料行，然後按一下 [編輯] 功能表，再按一下 [貼上]。  
   
-7.  在**貼上預覽**對話方塊中，於**資料表名稱**，型別`Employee Security`。  
+7.  在 **貼上預覽**對話方塊中，於**資料表名稱**，型別`Employee Security`。  
   
 8.  在 [要貼上的資料] 中，確認資料包含 Sample Employee 工作表中的所有使用者資料和標頭。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36145532"
   
      具有「無」權限的新角色就會加入至清單中。  
   
-3.  按一下新角色，然後在**名稱**資料行中，若要將角色重新命名`Sales Employees by Territory`。  
+3.  按一下新角色，然後在**名稱**資料行中，重新命名角色`Sales Employees by Territory`。  
   
 4.  按一下 [權限] 資料行中的下拉式清單，然後選取 [讀取] 權限。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36145532"
   
 7.  按一下 [資料列篩選器] 索引標籤。  
   
-8.  如`Employee Security`表格中，於**DAX 篩選**資料行中，輸入下列公式。  
+8.  針對`Employee Security`表格中，於**DAX 篩選** 欄中，輸入下列公式。  
   
      `=FALSE()`  
   
@@ -202,8 +202,8 @@ ms.locfileid: "36145532"
      這個使用者無法瀏覽或查詢本身所屬地區以外之地區的任何網際網路銷售資料，因為 Sales Employees by Territory 使用者角色中針對 Sales Territory 資料表所定義的資料列篩選器有效地保護了與其他銷售地區相關之所有資料的安全。  
   
 ## <a name="see-also"></a>另請參閱  
- [USERNAME 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [LOOKUPVALUE 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [CUSTOMDATA 函數&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
+ [LOOKUPVALUE 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
+ [CUSTOMDATA 函式&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
   
   

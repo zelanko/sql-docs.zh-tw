@@ -5,23 +5,22 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 caps.latest.revision: 39
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 9d02bd4202848c0c22033b00d818c2f0d2554bc2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 65663e51d915b86a796bb98126c9efeebf74bf14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035767"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273504"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>建立可用性群組 (SQL Server PowerShell)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]中的 PowerShell，透過 PowerShell 指令程式建立及設定 AlwaysOn 可用性群組。 *「可用性群組」* (Availability Group) 會定義當做單一單位容錯移轉的一組使用者資料庫，以及支援容錯移轉的一組容錯移轉夥伴 (也稱為 *「可用性複本」*(Availability Replica))。  
@@ -51,13 +50,13 @@ ms.locfileid: "36035767"
   
 |工作|PowerShell 指令程式 (如果可用) 或 Transact-SQL 陳述式|要在何處執行工作**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|`New-SqlHadrEndPoint`|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。<br /><br /> 注意： 若要改變現有資料庫鏡像端點，使用`Set-SqlHadrEndpoint`。|  
-|建立可用性群組|首先，使用 `New-SqlAvailabilityReplica` 指令程式搭配 `-AsTemplate` 參數，針對您打算包含在可用性群組內之兩個可用性複本的每一個來建立記憶體內的可用性複本物件。<br /><br /> 接著，建立可用性群組使用`New-SqlAvailabilityGroup`cmdlet 及參考可用性複本物件。|於裝載初始主要複本的伺服器執行個體上執行。|  
+|建立資料庫鏡像端點 (每個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體一次)|`New-SqlHadrEndPoint`|在缺少資料庫鏡像端點的每一個伺服器執行個體上執行。<br /><br /> 注意： 若要變更現有資料庫鏡像端點，使用`Set-SqlHadrEndpoint`。|  
+|建立可用性群組|首先，使用 `New-SqlAvailabilityReplica` 指令程式搭配 `-AsTemplate` 參數，針對您打算包含在可用性群組內之兩個可用性複本的每一個來建立記憶體內的可用性複本物件。<br /><br /> 然後，使用建立可用性群組`New-SqlAvailabilityGroup`cmdlet 及參考可用性複本物件。|於裝載初始主要複本的伺服器執行個體上執行。|  
 |將次要複本加入可用性群組|`Join-SqlAvailabilityGroup`|在裝載次要複本的每一個伺服器執行個體上執行。|  
 |準備次要資料庫|`Backup-SqlDatabase` 和 `Restore-SqlDatabase`|在裝載主要複本的伺服器執行個體上建立備份。<br /><br /> 使用 `NoRecovery` 還原參數，還原裝載次要複本之每個伺服器執行個體上的備份。 如果在裝載主要複本的電腦和裝載目標次要複本的電腦之間有檔案路徑差異，也要使用 `RelocateFile` 還原參數。|  
 |將每一個次要資料庫加入可用性群組來啟動資料同步處理。|`Add-SqlAvailabilityDatabase`|在裝載次要複本的每一個伺服器執行個體上執行。|  
   
- **<sup>*</sup>**  若要執行指定的工作，將目錄變更 (`cd`) 到指定的伺服器執行個體。  
+ **<sup>*</sup>**  若要執行指定的工作，將目錄變更 (`cd`) 指定的伺服器執行個體或執行個體。  
   
 ###  <a name="PsProviderLinks"></a> 若要設定和使用 SQL Server PowerShell 提供者  
   
@@ -68,9 +67,9 @@ ms.locfileid: "36035767"
 ##  <a name="PowerShellProcedure"></a> 使用 PowerShell 建立和設定可用性群組  
   
 > [!NOTE]  
->  若要檢視的語法，並且指定 cmdlet 的範例，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
+>  若要檢視的語法和特定 cmdlet 的範例，請使用`Get-Help`指令程式在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]PowerShell 環境。 如需詳細資訊，請參閱 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)。  
   
-1.  變更目錄 (`cd`) 為裝載主要複本的伺服器執行個體。  
+1.  將目錄變更 (`cd`) 為裝載主要複本的伺服器執行個體。  
   
 2.  針對主要複本建立記憶體中的可用性複本物件。  
   
@@ -173,7 +172,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [啟用和停用 AlwaysOn 可用性群組 &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
--   [建立資料庫鏡像端點的 AlwaysOn 可用性群組&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [建立資料庫鏡像 AlwaysOn 可用性群組的&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
  **若要設定可用性群組和複本屬性**  
   
@@ -213,7 +212,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [建立可用性群組 &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)  
   
- **若要疑難排解 AlwaysOn 可用性群組組態**  
+ **AlwaysOn 可用性群組組態進行疑難排解**  
   
 -   [疑難排解 AlwaysOn 可用性群組組態 (SQL Server) 刪除](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
@@ -223,7 +222,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **部落格：**  
   
-     [AlwaysON-HADRON 學習系列： 資料庫啟用 hadron 時工作者集區使用量](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [AlwaysON-HADRON 學習系列： Worker Pool Usage for HADRON 功能之資料庫](http://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [使用 SQL Server PowerShell 設定 AlwaysOn](http://blogs.msdn.com/b/sqlalwayson/archive/2012/02/03/configuring-alwayson-with-sql-server-powershell.aspx)  
   
@@ -233,13 +232,13 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **影片：**  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分： 簡介 下一步高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 1 部分： 產生高可用性解決方案簡介](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列第 2 部： 建立使用 AlwaysOn 關鍵任務的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named"Denali"AlwaysOn 系列，第 2 部分： 建立使用 AlwaysOn 的任務關鍵性的高可用性解決方案](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **白皮書：**  
   
-     [Microsoft SQL Server AlwaysOn 高可用性和災害復原的解決方案指南](http://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server AlwaysOn 解決方案指南高可用性和災害復原](http://go.microsoft.com/fwlink/?LinkId=227600)  
   
      [Microsoft 的 SQL Server 2012 白皮書](http://msdn.microsoft.com/library/hh403491.aspx)  
   

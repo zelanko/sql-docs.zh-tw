@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.upgradedacwizard.reviewpolicy.f1
 - sql12.swb.upgradedacwizard.selectoptions.f1
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - How to [DAC], upgrade
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 2406cf16d4c5d6f2a9189e9f513beee0816a9014
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: fbe586573ac3ad40e3bc26514020bb928c0f09e0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134207"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37281694"
 ---
 # <a name="upgrade-a-data-tier-application"></a>升級資料層應用程式
   您可以使用升級資料層應用程式精靈或 Windows PowerShell 指令碼，將目前部署之資料層應用程式 (DAC) 的結構描述和屬性變更為符合新版 DAC 中所定義的結構描述和屬性。  
@@ -48,13 +48,13 @@ ms.locfileid: "36134207"
 ###  <a name="ChoseDACUpgOptions"></a> 選擇 DAC 升級選項  
  就地升級有四個升級選項：  
   
--   **忽略資料遺失**– 如果`True`，即使某些作業導致資料遺失，升級會繼續。 若為 `False`，這些作業將會結束升級。 比方說，如果目前資料庫中的資料表不存在新 DAC 的結構描述中，將會卸除資料表`True`指定。 預設值是`True`。  
+-   **忽略資料遺失**– 如果`True`，即使某些作業導致資料遺失，升級還是會繼續。 若為 `False`，這些作業將會結束升級。 比方說，如果目前的資料庫中的資料表不存在新 DAC 的結構描述中，將會卸除資料表`True`指定。 預設值是`True`。  
   
--   **變更時封鎖**– 如果`True`，如果資料庫結構描述不同於舊版 DAC 中所定義，就會結束升級。 如果`False`，即使偵測到變更，升級仍會繼續。 預設值是`False`。  
+-   **變更時封鎖**– 如果`True`，如果資料庫結構描述不同於舊版 DAC 中所定義，則會結束升級。 如果`False`，即使偵測到變更時，仍會繼續升級。 預設值是`False`。  
   
 -   **失敗時回復**– 如果`True`，升級將會包含在交易中，而如果發生錯誤，則會嘗試回復。 若為 `False`，將會認可所有變更，而如果發生錯誤，您可能必須還原資料庫的先前備份。 預設值是`False`。  
   
--   **略過原則驗證**– 如果`True`，不會評估 DAC 伺服器選取原則。 如果`False`，原則會評估，而如果發生驗證錯誤時，會結束升級。 預設值是`False`。  
+-   **略過原則驗證**– 如果`True`，不會評估 DAC 伺服器選取原則。 如果`False`，則會評估原則和驗證錯誤時，會結束升級。 預設值是`False`。  
   
 ###  <a name="LimitationsRestrictions"></a> 限制事項  
  DAC 升級只能在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]或 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) 或更新版本中執行。  
@@ -128,7 +128,7 @@ ms.locfileid: "36134207"
   
  **描述** - 當撰寫 DAC 或是從資料庫擷取 DAC 時，顯示撰寫之描述的唯讀方塊。  
   
- **\< 先前**-傳回**簡介**頁面。  
+ **\< 先前**-回到**簡介**頁面。  
   
  **下一步 >** - 將進度列顯示為確認選定檔案為有效 DAC 封裝的精靈。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "36134207"
   
  **正在驗證 DAC 的內容** - 報告驗證程序之目前狀態的進度列。  
   
- **\< 先前**-傳回的初始狀態**選取封裝**頁面。  
+ **\< 先前**-回到 的初始狀態**選取封裝**頁面。  
   
  **下一步 >** - 繼續進行最終版本的 [選取封裝] 頁面。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "36134207"
   
  **忽略違反原則** - 使用這個核取方塊可在一個或多個原則條件失敗時繼續升級。 只有當您確定所有失敗的條件都不會阻礙 DAC 作業的成功時，才選取此選項。  
   
- **\< 先前**-傳回**選取封裝**頁面。  
+ **\< 先前**-回到**選取封裝**頁面。  
   
  **下一步 >** - 繼續進行 [偵測變更] 頁面。  
   
@@ -173,7 +173,7 @@ ms.locfileid: "36134207"
   
  **儲存報表** - 按一下此按鈕，可儲存精靈在資料庫內的物件與其在 DAC 定義內的對應物件之間偵測到之變更的報表。 然後您可以檢閱報表，以決定升級完成之後是否需要採取動作，將報表中列出的某些物件或所有物件併入新的資料庫內。  
   
- **\< 先前**-傳回**選取 DAC 封裝**頁面。  
+ **\< 先前**-回到**選取 DAC 封裝**頁面。  
   
  **下一步 >** - 繼續進行 [選項] 頁面。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "36134207"
   
  **還原預設值** - 將此選項還原為其預設值 false。  
   
- **\< 先前**-傳回**偵測變更**頁面。  
+ **\< 先前**-回到**偵測變更**頁面。  
   
  **下一步 >** - 繼續進行 [檢閱升級計畫] 頁面。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36134207"
   
  **還原預設值** - 將此選項還原為其預設值 false。  
   
- **\< 先前**-傳回**偵測變更**頁面。  
+ **\< 先前**-回到**偵測變更**頁面。  
   
  **下一步 >** - 繼續進行 [摘要] 頁面。  
   
@@ -218,7 +218,7 @@ ms.locfileid: "36134207"
   
  **將使用以下設定升級您的 DAC** - 檢閱顯示的資訊，以確保採取的動作將會是正確的。 此視窗會顯示您選取要進行升級的 DAC，以及包含新版 DAC 的 DAC 封裝。 此視窗也會顯示目前的資料庫版本是否與目前的 DAC 定義相同，或資料庫是否已經變更。  
   
- **\< 先前**-會讓您返回**檢閱升級計畫**頁面。  
+ **\< 先前**-會讓您回到**檢閱升級計畫**頁面。  
   
  **下一步 >** - 部署 DAC，並在 [升級 DAC] 頁面中顯示結果。  
   

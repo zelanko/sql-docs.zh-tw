@@ -1,5 +1,5 @@
 ---
-title: 刪除資料來源檢視 (Analysis Services) |Microsoft 文件
+title: 刪除資料來源檢視 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deleting data source views
 - data source views [Analysis Services], deleting
 - removing data source views
 ms.assetid: ae3f5ca0-ecbf-4b52-8386-eb457719d854
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9e4467d476acbb45e0ec18c7a28fd1a9a143c386
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c8d04731a4b555b6e4afe9c8697fc5c4f907a9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146205"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37284016"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>刪除資料來源檢視 (Analysis Services)
   如果您不再需要使用 OLAP 專案中的某個資料來源檢視 (DSV)，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 從專案中刪除檢視。  
@@ -38,6 +38,6 @@ ms.locfileid: "36146205"
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視中變更屬性&#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [變更資料來源檢視中的屬性&#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
   

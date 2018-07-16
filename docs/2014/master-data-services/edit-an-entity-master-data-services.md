@@ -1,5 +1,5 @@
 ---
-title: 變更實體名稱 (Master Data Services) |Microsoft 文件
+title: 變更實體名稱 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c2f0869bd7cff707ac65d83c870b290aa1af4cec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 3986f5508bd5b6fe5ce55b38ff038e4a14a2b73c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133202"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260994"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>變更實體名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以變更實體的名稱。  
@@ -29,7 +29,7 @@ ms.locfileid: "36133202"
 > [!NOTE]  
 >  系統將不會更新相關聯之暫存資料表的名稱。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -48,9 +48,9 @@ ms.locfileid: "36133202"
   
 5.  按一下 **[編輯選取的實體]**。  
   
-6.  在**實體名稱**方塊中，輸入實體的更新的名稱。  
+6.  在 **實體名稱**方塊中，輸入實體的更新的名稱。  
   
-7.  按一下**儲存實體**。  
+7.  按一下 **儲存實體**。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立實體&#40;Master Data Services&#41;](create-an-entity-master-data-services.md)   

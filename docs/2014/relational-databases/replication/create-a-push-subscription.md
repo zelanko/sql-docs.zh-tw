@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - push subscriptions [SQL Server replication], creating
 - merge replication subscribing [SQL Server replication], push subscriptions
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 caps.latest.revision: 39
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 841236b9f31f5b3bbf9703a9b4695e3c13630702
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e30ea044e434c5dd08336a964f587dcb07ebd88d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134384"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37268724"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的發送訂閱。 如需為非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者建立發送訂閱的資訊，請參閱[為非 SQL Server 訂閱者建立訂閱](create-a-subscription-for-a-non-sql-server-subscriber.md)。  
@@ -95,9 +95,9 @@ ms.locfileid: "36134384"
   
     -   如果 **allow_push** 的值為 **1**，則發送訂閱受到支援。  
   
-    -   如果值**allow_push**是**0**，執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定**allow_push**如 **@property**和`true`如**@value**。  
+    -   如果值**allow_push**是**0**，執行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)，並指定**allow_push**如 **@property**並`true`for **@value**。  
   
-2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來建立 **@subscriber** ，並將 **@destination_db**＞。 將 **@subscription_type** 指定為 **@subscription_type**＞。 如需如何更新訂閱的資訊，請參閱[建立交易式發行集的可更新訂閱](create-updatable-subscription-transactional-publication-transact-sql.md)  
+2.  在發行集資料庫的「發行者」上，執行 [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來建立 **@subscriber** ，並將 **@destination_db**＞。 將 **@subscription_type** 指定為 **@subscription_type**＞。 如需有關如何更新訂用帳戶的資訊，請參閱[建立交易式發行集的可更新訂閱](create-updatable-subscription-transactional-publication-transact-sql.md)  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)。 指定下列項目：  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36134384"
   
     -   如果 **allow_push** 的值為 **1**，則發行集支援發送訂閱。  
   
-    -   如果值**allow_push**不**1**，執行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，並指定**allow_push**如**@property** 和`true`如**@value**。  
+    -   如果值**allow_push**不是**1**，執行[sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)，並指定**allow_push**如**@property** 並`true`如**@value**。  
   
 2.  在發行集資料庫的「發行者」上，執行 [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)並指定下列參數：  
   
@@ -174,7 +174,7 @@ ms.locfileid: "36134384"
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 `false`，則表示步驟 2 中指定的屬性不正確，或伺服器上不存在該發行集。  
   
-4.  執行位元邏輯 AND (`&` Visual C# 和`And`在 Visual Basic 中) 之間<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>屬性和<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 如果結果為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，則將 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 設為 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之間位元運算邏輯 OR (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`) 的結果。 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以啟用發送訂閱。  
+4.  執行位元邏輯 AND (`&` Visual C# 中並`And`Visual Basic 中) 之間<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>屬性和<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 如果結果為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，則將 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 設為 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之間位元運算邏輯 OR (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`) 的結果。 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以啟用發送訂閱。  
   
 5.  如果訂閱資料庫不存在，可使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 類別建立它。 如需詳細資訊，請參閱[建立、改變和移除資料庫](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "36134384"
   
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法。 如果此方法傳回 `false`，則表示步驟 2 中指定的屬性不正確，或伺服器上不存在該發行集。  
   
-4.  執行位元邏輯 AND (`&` Visual C# 和`And`在 Visual Basic 中) 之間<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>屬性和<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 如果結果為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，則將 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 設為 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之間位元運算邏輯 OR (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`) 的結果。 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以啟用發送訂閱。  
+4.  執行位元邏輯 AND (`&` Visual C# 中並`And`Visual Basic 中) 之間<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>屬性和<xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>。 如果結果為 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>，則將 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 設為 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 和 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 之間位元運算邏輯 OR (Visual C# 中的 `|` 和 Visual Basic 中的 `Or`) 的結果。 然後呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 以啟用發送訂閱。  
   
 5.  如果訂閱資料庫不存在，可使用 <xref:Microsoft.SqlServer.Management.Smo.Database> 類別建立它。 如需詳細資訊，請參閱[建立、改變和移除資料庫](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)。  
   
@@ -232,7 +232,7 @@ ms.locfileid: "36134384"
   
     -   將 <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>設為發行集的名稱。  
   
-    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>和<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>或<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>欄位<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>提供的認證[!INCLUDE[msCoName](../../includes/msconame-md.md)]散發者端的合併代理程式執行的 Windows 帳戶。 此帳戶用於建立到「散發者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
+    -   <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A>並<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A>或<xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A>的欄位<xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>提供的認證[!INCLUDE[msCoName](../../includes/msconame-md.md)]「 合併代理程式在散發者上執行的 Windows 帳戶。 此帳戶用於建立到「散發者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
   
         > [!NOTE]  
         >  當訂閱是由 `sysadmin` 固定伺服器角色的成員建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但還是建議您對其進行設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](security/replication-agent-security-model.md)。  

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 20
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 2720d4e3a767a66768909bccad6cf1a7fdf78722
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9aa5b777f8e05b9a3bd8784c15ae8294e9caa8bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37264274"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>匯出至 Microsoft Word (報表產生器及 SSRS)
-  Word 轉譯延伸模組的原生格式將報表轉譯[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010年。 此格式為 Office Open XML。  
+  Word 轉譯延伸模組會將報表轉譯成原生格式[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010年。 此格式為 Office Open XML。  
   
  Word 轉譯器相容於 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 以及已安裝 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office Word、Excel 和 PowerPoint 相容性套件的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003。 如需有關相容性套件的詳細資訊，請參閱 [Microsoft Office Word、Excel 及 PowerPoint 檔案格式相容性套件](http://go.microsoft.com/fwlink/?LinkID=205622)。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "36133901"
  與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版 Word 轉譯延伸模組已重新命名為 Word 2003。 根據預設，只能使用 Word 轉譯延伸模組。 您必須更新 Reporting Services 組態檔，才能使用 Word 2003 轉譯延伸模組。 Word 2003 轉譯器所產生之檔案的內容類型為 **application/vnd.ms-word** 而檔案的副檔名為 .doc。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003年轉譯延伸模組已被取代。 如需詳細資訊，請參閱[Deprecated Features in SQL Server Reporting Services SQL Server 2014 中](../deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
+>  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003年轉譯延伸模組已被取代。 如需詳細資訊，請參閱 < [SQL Server Reporting Services 中 SQL Server 2014 中已被取代的功能](../deprecated-features-in-sql-server-reporting-services-ssrs.md)。  
   
  當報表匯出成 Word 文件之後，您可以變更報表的內容，並設計文件樣式的報表，例如郵件標籤、採購單或套印信件。  
   
@@ -140,14 +140,14 @@ ms.locfileid: "36133901"
   
 -   報表匯出後，Word 會為報表再次分頁。 這可能會將額外的分頁符號加入到轉譯的報表中。  
   
--   Word 不會重複第二頁上的標頭資料列和更多，雖然您會將靜態標頭資料列，在 tablix （資料表、 矩陣或清單） 中的 [repeatonnewpage] 屬性設定為`True`。 您可以在報表中定義明確的分頁符號，以強制標頭資料列出現在新的頁面上。 不過，Word 會將自己的分頁套用到匯出至 Word 的已轉譯報表，因此，結果可能會不同，而且標頭資料列可能不會如預期般重複。 靜態標頭資料列是包含資料行標題的資料列。  
+-   Word 不會重複第二頁上的標頭資料列和更新版本，您將在 tablix （資料表、 矩陣或清單） 中的靜態標頭資料列的 RepeatOnNewPage 屬性設定為雖然`True`。 您可以在報表中定義明確的分頁符號，以強制標頭資料列出現在新的頁面上。 不過，Word 會將自己的分頁套用到匯出至 Word 的已轉譯報表，因此，結果可能會不同，而且標頭資料列可能不會如預期般重複。 靜態標頭資料列是包含資料行標題的資料列。  
   
 -   文字方塊會在其內含不中斷空格時成長。  
   
 -   當文字匯出到 Word 時，如果文字的某些字型中有使用字型裝飾，則可能會在轉譯報表中產生非預期或遺漏的圖像。  
   
 ##  <a name="WordBenefits"></a> 使用 Word 轉譯器的優點  
- 除了讓新的功能[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010 用於匯出報表、 匯出的報表 *.docx 檔案通常較小。 使用 Word 轉譯器所匯出的報表通常比使用 Word 2003 轉譯器所匯出的相同報表小得多。  
+ 除了新的功能提供更[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010 可用匯出報表、 匯出的報表 *.docx 檔案通常較小。 使用 Word 轉譯器所匯出的報表通常比使用 Word 2003 轉譯器所匯出的相同報表小得多。  
   
 ## <a name="backward-compatibility-of-exported-reports"></a>匯出之報表的回溯相容性  
  您可以選取 Word 相容模式及設定相容選項。 Word 轉譯器會以開啟的相容模式來建立文件。 以關閉的相容模式重新儲存文件，可能會影響文件配置。  
@@ -155,11 +155,11 @@ ms.locfileid: "36133901"
  如果您關閉相容模式，然後重新儲存報表，報表配置可能會以非預期的方式變更。  
   
 ##  <a name="AvailabilityWord"></a> Word 2003 轉譯器的可用性  
- 在[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，預設 Word 轉譯器轉譯為原生格式的版本[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007年-2010年。 在報表管理員和 SharePoint 清單的 **[匯出]** 功能表中，這就是 **[Word]** 選項。 只與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版現在已命名為 Word 2003，而且使用該名稱列於功能表上。 根據預設，系統不會顯示 **[Word 2003]** 功能表選項，但是管理員可以透過更新 RSReportServer 組態檔，顯示此選項。 若要使用 Word 2003 轉譯器，從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 匯出報表，請更新 RSReportDesigner 組態檔。 不過，讓 Word 2003 轉譯器顯示並不適用於所有案例。 因為 RSReportServer 組態檔位於報表伺服器上，所以您從中匯出報表的工具或產品必須連接至報表伺服器，以便讀取組態檔。 如果您在中斷連接或本機模式中使用工具或產品，讓 Word 2003 轉譯器顯示就沒有任何作用。 **[Word 2003]** 功能表選項會維持無法使用的狀態。 如果您在 RSReportDesigner 組態檔中，讓 Word 2003 轉譯器顯示，就一定可以在 **報表預覽中使用** [Word 2003] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 功能表選項。  
+ 在  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，預設的 Word 轉譯器是可轉譯的原生格式的版本[!INCLUDE[ofprword](../../includes/ofprword-md.md)]2007-2010年。 在報表管理員和 SharePoint 清單的 **[匯出]** 功能表中，這就是 **[Word]** 選項。 只與 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 相容的舊版現在已命名為 Word 2003，而且使用該名稱列於功能表上。 根據預設，系統不會顯示 **[Word 2003]** 功能表選項，但是管理員可以透過更新 RSReportServer 組態檔，顯示此選項。 若要使用 Word 2003 轉譯器，從 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 匯出報表，請更新 RSReportDesigner 組態檔。 不過，讓 Word 2003 轉譯器顯示並不適用於所有案例。 因為 RSReportServer 組態檔位於報表伺服器上，所以您從中匯出報表的工具或產品必須連接至報表伺服器，以便讀取組態檔。 如果您在中斷連接或本機模式中使用工具或產品，讓 Word 2003 轉譯器顯示就沒有任何作用。 **[Word 2003]** 功能表選項會維持無法使用的狀態。 如果您在 RSReportDesigner 組態檔中，讓 Word 2003 轉譯器顯示，就一定可以在 **報表預覽中使用** [Word 2003] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 功能表選項。  
   
  在下列案例中， **[Word 2003]** 功能表選項永不顯示：  
   
--   報表產生器處於中斷連接模式，而且您在報表產生器中預覽報表。 這個問題發生在同時[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]和單機版本報表產生器。  
+-   報表產生器處於中斷連接模式，而且您在報表產生器中預覽報表。 發生這種情況同時[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]和單機版本報表產生器。  
   
 -   報表檢視器 Web 組件處於本機模式，而且 SharePoint 伺服陣列並未與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器整合。 如需詳細資訊，請參閱[本機模式與連線模式報表 &#40;SharePoint 模式的 Reporting Services&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36133901"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 和預覽報表。  
   
--   報表產生器已連接至報表伺服器。 這可以是[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]或單機版報表產生器。  
+-   報表產生器已連接至報表伺服器。 這可以是[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]或單機版本報表產生器。  
   
 -   報表檢視器 Web 組件處於遠端模式。  
   
@@ -181,7 +181,7 @@ ms.locfileid: "36133901"
   
  `<Extension Name="WORD" Type="Microsoft.ReportingServices.Rendering.WordRenderer.WordDocumentRenderer,Microsoft.ReportingServices.WordRendering" Visible="false"/>`  
   
- WORDOPENXML 延伸模組會定義 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 的 Word 轉譯器。 WORD 延伸模組會定義 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = “false”` 表示隱藏 Word 2003 轉譯器。 如需詳細資訊，請參閱[RSReportServer 組態檔](../report-server/rsreportserver-config-configuration-file.md)和[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)。  
+ WORDOPENXML 延伸模組會定義 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010 的 Word 轉譯器。 WORD 延伸模組會定義 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 版本。 `Visible = “false”` 表示隱藏 Word 2003 轉譯器。 如需詳細資訊，請參閱 < [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)並[RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)。  
   
 ##  <a name="Differences"></a> Word 與 Word 2003 轉譯器之間的差異  
  透過 Word 或 Word 2003 轉譯器所轉譯的報表通常無法用肉眼分辨。 不過，您可能會注意到 Word 或 Word 2003 這兩個格式之間的小差異。  
@@ -192,7 +192,7 @@ ms.locfileid: "36133901"
 ## <a name="see-also"></a>另請參閱  
  [Reporting Services 中的分頁 &#40;報表產生器及 SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [轉譯行為 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [不同報表轉譯延伸模組的互動式功能&#40;報表產生器和 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [不同報表轉譯延伸模組的互動式功能&#40;報表產生器及 SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [轉譯報表項目 &#40;報表產生器及 SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [資料表、矩陣和清單 &#40;報表產生器及 SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

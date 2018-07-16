@@ -1,5 +1,5 @@
 ---
-title: 檢視專案記錄 |Microsoft 文件
+title: 檢視專案記錄 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing project history
 - version control services [SQL Server], project history
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - historical information [SQL Server], projects
 ms.assetid: be0ea2ac-4a35-429c-9c9e-4001ea9035a4
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d99c3a27a74d41efc895489a8690d735dadd3b4f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: e10e920a5c60d389eaec6a5af06e4597d9667967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134769"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287844"
 ---
 # <a name="view-project-history"></a>檢視專案記錄
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe (VSS) 專案記錄包括一份在每個專案檔上所採用的完整動作清單，其中包括建立、新增、刪除和復原檔案。  
@@ -38,9 +38,9 @@ ms.locfileid: "36134769"
   
 1.  在 [方案總管] 中，選取一個專案。  
   
-2.  在**檔案**功能表上，指向**原始檔控制**按一下**檢視記錄**。  
+2.  在 **檔案**功能表上，指向**原始檔控制**，按一下 **檢視歷程記錄**。  
   
-3.  在**的歷程記錄**\<專案 > 對話方塊方塊中，執行下列動作：  
+3.  在 **歷程記錄**\<專案 > 對話方塊方塊中，執行下列動作：  
   
     -   檢視原始檔控制系統的所選檔案副本。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "36134769"
     -   將記錄報表匯出到印表機、檔案或 [剪貼簿] 中。  
   
 ## <a name="see-also"></a>另請參閱  
- [設定及擷取版本資訊](../../2014/database-engine/set-and-retrieve-version-information.md)   
+ [設定和擷取版本資訊](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [檢視檔案狀態](../../2014/database-engine/view-file-status.md)   
  [擷取檔案](../../2014/database-engine/retrieve-files.md)   
  [比較檔案](../../2014/database-engine/compare-files.md)  

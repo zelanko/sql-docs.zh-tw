@@ -5,25 +5,24 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - FILESTREAM [SQL Server], about
 - FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b8af5e825fb72ce47c7612b0c1c56af9bce4369
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6c2c5e8841a866eb82d9c844b1eccf60c09555ac
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287294"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM 可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 架構應用程式在檔案系統上儲存非結構化的資料，例如文件和影像。 應用程式可以利用檔案系統的豐富資料流 API 和效能，並同時維護非結構化資料與對應結構化資料之間的交易一致性。  
@@ -32,12 +31,12 @@ ms.locfileid: "36135199"
   
  FILESTREAM 會使用 NT 系統快取來儲存檔案資料。 如此可減少 FILESTREAM 資料可能對 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 效能產生的任何影響。 並不會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 緩衝集區；因此，此記憶體可用於查詢處理。  
   
- 當您安裝或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，並不會自動啟用 FILESTREAM。 您必須使用 SQL Server 組態管理員和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來啟用 FILESTREAM。 若要使用 FILESTREAM，您必須建立或修改資料庫，以便包含特殊類型的檔案群組。 接著，建立或修改資料表，使其包含`varbinary(max)`具有 FILESTREAM 屬性的資料行。 完成這些工作之後，您就可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Win32 來管理 FILESTREAM 資料。  
+ 當您安裝或升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時，並不會自動啟用 FILESTREAM。 您必須使用 SQL Server 組態管理員和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來啟用 FILESTREAM。 若要使用 FILESTREAM，您必須建立或修改資料庫，以便包含特殊類型的檔案群組。 然後，建立或修改資料表，使其包含`varbinary(max)`具有 FILESTREAM 屬性的資料行。 完成這些工作之後，您就可以使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 和 Win32 來管理 FILESTREAM 資料。  
   
  如需有關安裝和使用 FILESTREAM 的詳細資訊，請參閱清單[相關工作](#reltasks)。  
   
 ##  <a name="whentouse"></a> 使用 FILESTREAM 的時機  
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Blob 可以是標準`varbinary(max)`資料儲存在資料表或 FILESTREAM 資料之`varbinary(max)`將資料儲存在檔案系統中的物件。 資料的大小和使用情況可決定您是應該使用資料庫儲存體還是檔案系統儲存體。 如果下列條件成立，您應該考慮使用 FILESTREAM：  
+ 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，Blob 可以是標準`varbinary(max)`將資料儲存在資料表或 FILESTREAM 資料`varbinary(max)`將資料儲存在檔案系統的物件。 資料的大小和使用情況可決定您是應該使用資料庫儲存體還是檔案系統儲存體。 如果下列條件成立，您應該考慮使用 FILESTREAM：  
   
 -   平均來說，儲存的物件大於 1 MB。  
   
@@ -49,9 +48,9 @@ ms.locfileid: "36135199"
   
   
 ##  <a name="storage"></a> FILESTREAM 儲存體  
- FILESTREAM 儲存體會實作為`varbinary(max)`所在資料會當做 Blob 儲存在檔案系統中的資料行。 BLOB 的大小只受到檔案系統磁碟區大小的限制。 標準`varbinary(max)`2 GB 檔案大小的限制不適用於檔案系統中所儲存的 Blob。  
+ FILESTREAM 儲存體會實作為`varbinary(max)`所在的資料會當做 Blob 儲存在檔案系統中的資料行。 BLOB 的大小只受到檔案系統磁碟區大小的限制。 標準`varbinary(max)`2 GB 檔案大小的限制不適用於檔案系統中所儲存的 Blob。  
   
- 若要指定資料行應該將資料儲存在檔案系統上，指定 FILESTREAM 屬性上`varbinary(max)`資料行。 如此會讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將該資料行的所有資料都儲存在檔案系統上，而不是儲存在資料庫檔案中。  
+ 若要指定資料行是否應該將資料儲存在檔案系統上，指定 FILESTREAM 屬性上`varbinary(max)`資料行。 如此會讓 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 將該資料行的所有資料都儲存在檔案系統上，而不是儲存在資料庫檔案中。  
   
  FILESTREAM 資料必須儲存在 FILESTREAM 檔案群組中。 FILESTREAM 檔案群組是包含檔案系統目錄 (而非檔案本身) 的特殊檔案群組， 這些檔案系統目錄稱為「資料容器」。 資料容器是 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 儲存體與檔案系統儲存體之間的介面。  
   

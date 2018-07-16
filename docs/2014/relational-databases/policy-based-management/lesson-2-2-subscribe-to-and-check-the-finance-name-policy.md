@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d6387825abc2b2eb3426bbbd19f05674615f9e7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8a564533f26faea5330da3c45cd8e00cd7e2c12d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035421"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37253950"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>訂閱和檢查 Finance Name 原則
   在這項工作中，您會將 Finance 資料庫設定為訂閱 Finance 原則類別目錄。 然後，您將測試 Finance Name 原則。  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>訂閱 Finance 原則類別目錄  
   
-1.  在 物件總管 中，展開**資料庫**，以滑鼠右鍵按一下`Finance`，指向 **原則**，然後按一下 **類別**。  
+1.  在 [物件總管] 中，展開**資料庫**，以滑鼠右鍵按一下`Finance`，指向**原則**，然後按一下**類別**。  
   
-2.  選取**訂閱**核取方塊`Finance`類別目錄。  
+2.  選取 **已訂閱**核取方塊`Finance`類別目錄。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36035421"
 ## <a name="next"></a>下一個  
  本教學課程已完成。 若要返回開頭，請按一下 [教學課程：使用以原則為基礎的管理來管理伺服器](tutorial-administering-servers-by-using-policy-based-management.md)。  
   
- 如需教學課程，請參閱[適用於 SQL Server 2014 的教學課程](../../tutorials/tutorials-for-sql-server-2014.md)。  
+ 如需教學課程的清單，請參閱 < [SQL Server 2014 的教學課程](../../tutorials/tutorials-for-sql-server-2014.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用原則式管理來管理伺服器](administer-servers-by-using-policy-based-management.md)  

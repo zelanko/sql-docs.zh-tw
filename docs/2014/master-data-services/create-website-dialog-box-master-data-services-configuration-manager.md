@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.createsite.f1
 ms.assetid: 179c9c1e-3b06-421b-b71b-1cb64d104f5e
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2ba53eed2e5d9bd7d3de0c85e27b049d002a67bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 4bffa7a08382c025c3150287d1b09044d72047cb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37285404"
 ---
 # <a name="create-website-dialog-box-master-data-services-configuration-manager"></a>建立網站對話方塊 (Master Data Services 組態管理員)
   使用 **[建立網站]** 對話方塊可在本機電腦上建立新的網站。 當您在 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]中建立網站時，網站會新增至本機電腦上的 Internet Information Services (IIS)，而且包含設定為 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web 應用程式的根應用程式。 也會建立新的應用程式集區，而 Web 應用程式會放在該應用程式集區內。  
@@ -46,9 +46,9 @@ ms.locfileid: "36135417"
 |**確認密碼**|重新輸入指定之使用者帳戶的密碼。 **[密碼]** 和 **[確認密碼]** 欄位必須包含相同的密碼。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Web 組態 頁面上&#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
- [設定 Master Data Services 資料庫與網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
- [Web 應用程式的需求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
+ [Web 組態 頁面&#40;Master Data Services 組態管理員&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md)   
+ [設定 Master Data Services 資料庫和網站](../../2014/master-data-services/set-up-the-database-and-website-for-master-data-services.md)   
+ [Web 應用程式需求&#40;Master Data Services&#41;](install-windows/web-application-requirements-master-data-services.md)   
  [建立主資料管理員 Web 應用程式 &#40;Master Data Services&#41;](install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

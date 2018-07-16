@@ -1,5 +1,5 @@
 ---
-title: 追蹤屬性 （事件選取範圍索引標籤） |Microsoft 文件
+title: 追蹤屬性 （事件選取範圍 索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.pro.traceproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Properties dialog box
 ms.assetid: e1892f24-7272-4d5d-8926-6150cc82b2c3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 627785dc9be7d6b2d270d82f1bc6797c98980779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 033cde8c84edc6ceb7b0fb9686e31b6ce98ef1c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37283824"
 ---
 # <a name="trace-properties-events-selection-tab"></a>追蹤屬性 (事件選取範圍索引標籤)
   使用 **[追蹤屬性]** 對話方塊的 **[事件選取範圍]** 索引標籤，來檢視或指定追蹤的事件和資料行。  
@@ -50,7 +50,7 @@ ms.locfileid: "36132490"
  變更追蹤中資料行的順序，並且依據一或多個資料行對結果進行分組。  
   
 ## <a name="see-also"></a>另請參閱  
- [指定追蹤檔案的事件及資料行&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [指定事件及資料行追蹤檔案的&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [組織追蹤內顯示的資料行&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [篩選追蹤中的事件&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [檢視篩選資訊 &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   

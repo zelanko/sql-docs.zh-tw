@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - incremental loads [SQL Server change data capture]
 - change data capture [SQL Server], Integration Services and
@@ -16,13 +16,13 @@ ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4c1dba16a2a0d923bba1d99bad19112634c31ebb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ccc292cda8b3263c7e1457a52e4426dc9d24460d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136903"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263234"
 ---
 # <a name="change-data-capture-ssis"></a>異動資料擷取 (SSIS)
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，異動資料擷取會針對將累加式載入從來源資料表有效執行到資料超市和資料倉儲的挑戰，提供有效的方案。  
@@ -33,7 +33,7 @@ ms.locfileid: "36136903"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 的異動資料擷取功能會擷取套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表的插入、更新與刪除活動，並以容易取用的關聯式格式，提供變更的詳細資料。 異動資料擷取所使用的變更資料表包含鏡像追蹤來源資料表之資料行結構的資料行，以及了解逐資料列發生之變更所需的中繼資料。  
   
 > [!NOTE]  
->  異動資料擷取不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需所支援的版本功能的清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+>  異動資料擷取不是每個版本都可使用[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 如需的版本所支援的功能清單[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
 ## <a name="how-change-data-capture-works-in-integration-services"></a>異動資料擷取在 Integration Services 中的運作方式  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 封裝可以輕易地收集 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中的異動資料，從而對資料倉儲執行有效率的累加式載入。 不過，在您可以使用 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 載入變更資料前，管理員必須在您要擷取變更的資料庫和資料表上啟用異動資料擷取。 如需如何在資料庫上設定異動資料擷取的詳細資訊，請參閱[啟用和停用異動資料擷取 &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)。  
@@ -47,17 +47,17 @@ ms.locfileid: "36136903"
  **步驟 1：設計控制流程**  
  在封裝的控制流程中，必須定義下列工作：  
   
--   計算的開始和結束`datetime`您想要擷取的來源資料的變更間隔的值。  
+-   計算的開始和結束`datetime`針對至您想要擷取的來源資料的變更間隔的值。  
   
-     若要計算這些值，使用 「 執行 SQL 」 工作或[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]運算式`datetime`函式。 然後您可以用封裝變數儲存這些端點，以便稍後在封裝中使用。  
+     若要計算這些值，請使用 執行 SQL 」 工作或[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]運算式使用`datetime`函式。 然後您可以用封裝變數儲存這些端點，以便稍後在封裝中使用。  
   
-     **如需詳細資訊：**[指定間隔的變更資料  ](specify-an-interval-of-change-data.md)  
+     **如需詳細資訊：**[指定變更資料的間隔  ](specify-an-interval-of-change-data.md)  
   
 -   判斷所選間隔的變更資料是否就緒。 由於非同步的擷取程序可能還沒有達到所選的端點，因此這是必要的步驟。  
   
      若要判斷資料是否就緒，如果必要，開始使用「For 迴圈」容器延遲執行，直到所選間隔的變更資料就緒為止。 在迴圈容器內部，使用「執行 SQL」工作查詢由異動資料擷取所維護的時間對應資料表。 然後，使用呼叫 `Thread.Sleep` 方法的「指令碼」工作，或搭配 `WAITFOR` 陳述式使用另一個「執行 SQL」工作，暫時延遲封裝的執行 (如有必要)。 或者，使用其他「指令碼」工作記錄錯誤條件或逾時。  
   
-     **如需詳細資訊：**[判斷是否變更資料已準備好  ](determine-whether-the-change-data-is-ready.md)  
+     **如需詳細資訊：**[判斷變更資料是否就緒  ](determine-whether-the-change-data-is-ready.md)  
   
 -   準備將用於查詢變更資料的查詢字串。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36136903"
   
      若要分割變更，使用「條件式分割」轉換，將插入、更新與刪除導引到不同的輸出以便進行適當的處理。  
   
-     **如需詳細資訊：**[程序插入、 更新和刪除  ](process-inserts-updates-and-deletes.md)  
+     **如需詳細資訊：**[處理插入、 更新和刪除  ](process-inserts-updates-and-deletes.md)  
   
 -   將插入、刪除與更新套用到目的地。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36136903"
  在上圖與上述步驟中所述的程序包含來自單一資料表的累加式載入。 當您必須從多個資料表執行累加式載入時，整個程序都相同。 不過，必須變更封裝的設計以配合多個資料表的處理。 如需如何建立可從多個資料表執行累加式載入之封裝的詳細資訊，請參閱 [執行多個資料表的累加式載入](perform-an-incremental-load-of-multiple-tables.md)。  
   
 ## <a name="samples-of-change-data-capture-packages"></a>異動資料擷取封裝的範例  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供兩個範例會示範如何使用中的異動資料擷取封裝。 如需詳細資訊，請參閱下列主題：  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 提供兩個範例，示範如何使用異動資料擷取在封裝中。 如需詳細資訊，請參閱下列主題：  
   
 -   [讀我檔案_指定之間隔的異動資料擷取封裝範例](http://go.microsoft.com/fwlink/?LinkId=133507)  
   

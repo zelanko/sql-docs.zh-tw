@@ -5,24 +5,23 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 caps.latest.revision: 50
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3da4262dc6bc32155216b3bd41479ad710f71f88
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: ef7947e68e78916f5e5b78d76797d4f2f879abd7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260434"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>設定全文檢索篩選背景程式啟動器的服務帳戶
   此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員來為 SQL 全文檢索篩選背景程式啟動器服務 (MSSQLFDLauncher) 設定服務帳戶。 ssNoVersion 全文檢索搜尋使用 SQL 全文檢索篩選背景程式啟動器服務，來啟動篩選背景程式主機處理序，以便處理全文檢索搜尋篩選和斷詞。 若要使用全文檢索搜尋，您必須執行這個服務。  
@@ -36,14 +35,14 @@ ms.locfileid: "36145810"
   
 1.  指向 **[開始]** 功能表上的 **[所有程式]**，然後依序指向 [ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] 和 **[組態工具]**，再按一下 **[SQL Server 組態管理員]**。  
   
-2.  在**SQL Server 組態管理員**，按一下  **SQL Server 服務**，以滑鼠右鍵按一下**SQL 全文檢索篩選背景程式啟動器 (*`instance name`*)**，然後按一下 **屬性**。  
+2.  在  **SQL Server 組態管理員**，按一下**SQL Server 服務**，以滑鼠右鍵按一下**SQL 全文檢索篩選背景程式啟動器 (*`instance name`*)**，然後按一下**屬性**。  
   
 3.  按一下對話方塊的 [登入] 索引標籤，然後選取或輸入用以執行 SQL 全文檢索篩選背景程式啟動器服務所建立之每個處理序的帳戶。  
   
 4.  在您關閉對話方塊之後，請按一下 [重新啟動]  重新啟動 SQL 全文檢索篩選背景程式啟動器服務。  
   
   
-##  <a name="error"></a> 若 SQL 全文檢索篩選背景程式啟動器服務未啟動  
+##  <a name="error"></a> 如果 SQL 全文檢索篩選背景程式啟動器服務就無法啟動  
  若未啟動 SQL 全文檢索篩選背景程式啟動器服務，則可能是下列其中一個或多個原因所造成：  
   
 -   與 SQL 全文檢索篩選背景程式啟動器服務帳戶相關聯的密碼已過期。  

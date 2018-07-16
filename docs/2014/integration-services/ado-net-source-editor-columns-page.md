@@ -1,5 +1,5 @@
 ---
-title: ADO NET 來源編輯器 （資料行頁面） |Microsoft 文件
+title: ADO NET 來源編輯器 （資料行頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 caps.latest.revision: 15
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 791d2e660c3672e63b3fea12ad28afcf46e9ffa6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fc9021085fd238ac2c86fbe73d7db372540cabd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134668"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37287684"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>ADO NET 來源編輯器 (資料行頁面)
   使用 [ADO NET 來源編輯器] 對話方塊的 [資料行] 頁面，即可將輸出資料行對應至每個外部 (來源) 資料行。  
@@ -47,7 +47,7 @@ ms.locfileid: "36134668"
  為每個輸出資料行提供唯一的名稱。 預設值為選取的外部 (來源) 資料行的名稱；不過，您也可以選擇任何唯一的、描述性的名稱。 提供的名稱將顯示在 [!INCLUDE[ssIS](../includes/ssis-md.md)] 設計師內。  
   
 ## <a name="see-also"></a>另請參閱  
- [ADO NET 來源編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 來源編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [ADO NET 來源編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [ADO.NET 連線管理員](connection-manager/ado-net-connection-manager.md)  
   

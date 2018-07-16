@@ -1,5 +1,5 @@
 ---
-title: MdxScripts 元素 (ASSL) |Microsoft 文件
+title: MdxScripts 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MdxScripts element
 ms.assetid: 0aaa849f-e723-4245-8c16-7ed049590fd2
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2fc6e9f226cbb528d7332260b730f672ce041222
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 559508cd5a0b0c16554bae2ed6a1adc185f9ed9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034659"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312448"
 ---
 # <a name="mdxscripts-element-assl"></a>MdxScripts 元素 (ASSL)
-  包含集合[MdxScript](../objects/mdxscript-element-assl.md)與相關聯的項目[Cube](../objects/cube-element-assl.md)項目。  
+  包含的集合[MdxScript](../objects/mdxscript-element-assl.md)相關聯的項目[Cube](../objects/cube-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36034659"
 |子元素|[MdxScript](../objects/mdxscript-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MdxScriptCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MdxScriptCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

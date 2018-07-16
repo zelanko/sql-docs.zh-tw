@@ -1,5 +1,5 @@
 ---
-title: 啟用封裝記錄中的 SQL Server 資料工具 |Microsoft 文件
+title: 啟用封裝記錄功能在 SQL Server 資料工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfd9f1fff5f1c9d89edf923c87dfe805825ae56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e0c34833bf458ce38a8e83a1a3db2a40f0760b2e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034174"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320668"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>在 SQL Server Data Tools 中啟用封裝記錄功能
   本程序描述如何將記錄檔加入封裝、設定封裝層級的記錄，以及將記錄組態儲存至 XML 檔案。 您可以僅在封裝層級加入記錄檔，但封裝無需執行記錄即可啟用封裝所包含之容器中的記錄。  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10526"
 - sql12.rtp.rptdesigner.maptilelayerproperties.general.f1
@@ -28,15 +28,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.maplayerproperties.analyticaldata.f1
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 caps.latest.revision: 12
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f9f187f50864bfccdcf093ca8270c096f5032d57
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 951fe65c8cf9876d5ea5afe2e8eda25b2f8e8a1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135343"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286684"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  
@@ -45,7 +45,7 @@ ms.locfileid: "36135343"
   
  ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
- 地圖圖層是以它們顯示在 [地圖] 窗格中的順序，由下而上繪製。 在上圖中，圖格圖層會最先繪製，而多邊形圖層則是最後繪製。 稍後繪製的圖層可能會隱藏圖層上先前繪製的地圖元素。 您可以使用 [地圖] 窗格工具列上的方向鍵來變更圖層的順序。 若要顯示或隱藏圖層，請切換可見性圖示。 您可以在變更圖層透明度`Visibility`頁面**圖層資料**屬性 對話方塊。  
+ 地圖圖層是以它們顯示在 [地圖] 窗格中的順序，由下而上繪製。 在上圖中，圖格圖層會最先繪製，而多邊形圖層則是最後繪製。 稍後繪製的圖層可能會隱藏圖層上先前繪製的地圖元素。 您可以使用 [地圖] 窗格工具列上的方向鍵來變更圖層的順序。 若要顯示或隱藏圖層，請切換可見性圖示。 您可以在變更圖層的透明度`Visibility`頁面的**圖層資料**屬性 對話方塊。  
   
  下表顯示 [地圖] 窗格的工具列圖示。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36135343"
   
  [地圖] 窗格的底部為地圖檢視區域。 若要變更地圖的置中或縮放選項，請使用方向鍵調整檢視置中，並使用滑動軸調整縮放層級。  
   
- 如需有關圖層的詳細資訊，請參閱[對應&#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
+ 如需圖層的詳細資訊，請參閱[Maps&#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -128,7 +128,7 @@ ms.locfileid: "36135343"
   
 1.  選取 [地圖點屬性] 對話方塊上的 [一般] 來變更下列地圖元素的標籤、工具提示和標記類型選項：  
   
-    -   點圖層上的所有動態或內嵌的點。 點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定內嵌點的選項，使用[地圖內嵌點屬性對話方塊、 標記](../map-embedded-point-properties-dialog-box-marker.md)頁面。  
+    -   點圖層上的所有動態或內嵌的點。 點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定內嵌點的選項，請使用[地圖內嵌點屬性對話方塊、 標記](../map-embedded-point-properties-dialog-box-marker.md)頁面。  
   
     -   在多邊形圖層上，所有動態或內嵌之多邊形的中心點。 中心點的色彩規則、大小規則與標記類型規則會覆寫這些選項。 若要覆寫特定中心點的選項，請使用[地圖內嵌點屬性對話方塊、標記](../map-embedded-point-properties-dialog-box-marker.md)頁面。  
   
@@ -286,6 +286,6 @@ ms.locfileid: "36135343"
   
 ## <a name="see-also"></a>另請參閱  
  [地圖 &#40;報表產生器及 SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [報表疑難排解： 地圖報表&#40;報表產生器和 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [報表疑難排解： 地圖報表&#40;報表產生器及 SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
