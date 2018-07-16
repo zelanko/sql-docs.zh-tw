@@ -1,5 +1,5 @@
 ---
-title: Multiplicity 元素 (ASSL) |Microsoft 文件
+title: Multiplicity 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 91ecb8a8b7ada49666d2b6144d1ba258a7c26b58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 98eb9ba8186c395b598bff6a7ad2ea63ed101999
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261314"
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 元素 (ASSL)
   指出 RelationshipEnd 中的屬性位於關聯性的「一」端還是「多」端。  
@@ -54,7 +54,7 @@ ms.locfileid: "36146371"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*其中一個*|這是主索引鍵端。|  
 |*許多*|這是外部索引鍵端。|  

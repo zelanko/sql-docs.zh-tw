@@ -1,13 +1,11 @@
 ---
-title: 設計組件 |Microsoft 文件
+title: 設計組件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], designing
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 486c6ad507682db3bd7ab06c674164b1d31f34bd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: de9b80a9406078a6f5d4ad3a16add7c02f4bde5a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136876"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351020"
 ---
 # <a name="designing-assemblies"></a>設計組件
   此主題描述以下在設計組件時應該考慮的因數：  
@@ -39,7 +37,7 @@ ms.locfileid: "36136876"
   
  將程式碼封裝到組件時，應該要考慮以下事項：  
   
--   CLR 使用者定義型別及相依於 CLR 使用者自訂函數的索引，會導致保留的資料放在相依於組件的資料庫中。 資料庫中有相依於組件的保存資料時，修改組件的程式碼通常更為複雜。 因此，一般最好將保存資料相依性所依賴的程式碼 (例如，使用者定義型別及使用使用者自訂函數的索引)，跟沒有這類保存資料相依性的程式碼分開。 如需詳細資訊，請參閱[實作的組件](assemblies-implementing.md)和[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)。  
+-   CLR 使用者定義型別及相依於 CLR 使用者自訂函數的索引，會導致保留的資料放在相依於組件的資料庫中。 資料庫中有相依於組件的保存資料時，修改組件的程式碼通常更為複雜。 因此，一般最好將保存資料相依性所依賴的程式碼 (例如，使用者定義型別及使用使用者自訂函數的索引)，跟沒有這類保存資料相依性的程式碼分開。 如需詳細資訊，請參閱 <<c0> [ 實作的組件](assemblies-implementing.md)並[ALTER ASSEMBLY &#40;-&#41;](/sql/t-sql/statements/alter-assembly-transact-sql)。</c0>  
   
 -   如果有段 Managed 程式碼需要更高的權限，最好將那個程式碼跟不需要較高權限的程式碼分隔，放在個別的組件。  
   
@@ -88,7 +86,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>不允許的 .NET Framework API  
- 任何[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]註解的其中一個，以不允許應用程式開發介面**HostProtectionAttributes**不能從 SAFE 和 EXTERNAL_ACCESS 組件呼叫。  
+ 任何[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] API，而不允許其中一項**HostProtectionAttributes** SAFE 和 EXTERNAL_ACCESS 組件無法呼叫。  
   
 ```  
 eSelfAffectingProcessMgmt  

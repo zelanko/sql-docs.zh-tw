@@ -1,5 +1,5 @@
 ---
-title: sqllogship 應用程式 |Microsoft 文件
+title: sqllogship 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 66b07b7867d8337941c052818d665d9590550806
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035559"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306678"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
   **sqllogship** 應用程式會對記錄傳送組態執行備份、複製或還原作業，以及相關的清除工作。 這些作業是在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定執行個體上對特定資料庫執行。  
   
- ![主題連結圖示](../../2014/database-engine/media/topic-link.gif "主題連結圖示")語法慣例，請參閱[命令提示字元公用程式參考&#40;Database Engine&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
+ ![主題連結圖示](../../2014/database-engine/media/topic-link.gif "主題連結圖示")如需語法慣例，請參閱[命令提示字元公用程式參考&#40;資料庫引擎&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
 |level|描述|  
 |-----------|-----------------|  
 |0|輸出不追蹤和偵錯的訊息。|  
-|@shouldalert|輸出錯誤處理訊息。|  
+|1|輸出錯誤處理訊息。|  
 |2|輸出警告和錯誤處理訊息。|  
 |**3**|輸出參考用訊息、警告和錯誤處理訊息。 這是預設值。|  
 |4|輸出所有偵錯和追蹤訊息。|  
@@ -78,7 +78,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  **sqllogship** 所建立的記錄傳送記錄會穿插記錄傳送備份、複製和還原作業所建立的記錄。 如果您要重複使用 **sqllogship** 對記錄傳送組態執行備份、複製或還原作業，請考慮停用對應的一或多個記錄傳送作業。 如需詳細資訊，請參閱 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)。  
   
- **Sqllogship** SqlLogShip.exe，應用程式安裝在 x:\Program Files\Microsoft SQL Server\120\Tools\Binn 目錄。  
+ **Sqllogship** x:\Program Files\Microsoft SQL Server\120\Tools\Binn 目錄中已安裝的應用程式，SqlLogShip.exe。  
   
 ## <a name="permissions"></a>Permissions  
  **sqllogship** 使用「Windows 驗證」。 執行命令的「Windows 驗證」帳戶必須擁有 Windows 目錄存取權和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 需求取決於 **sqllogship** 命令是指定 **-backup**、 **-copy**或 **-restore** 選項。  

@@ -1,5 +1,5 @@
 ---
-title: 加入、 刪除、 變更封裝中的使用者定義變數的範圍 |Microsoft 文件
+title: 加入、 刪除、 變更封裝中的使用者定義變數的範圍 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - variables [Integration Services], adding
 ms.assetid: cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e
 caps.latest.revision: 46
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3d0d607408aed88a91be310d715505881708edee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2fdccdecea434aa3fe56c362f932b3ba0da396b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145440"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37213598"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>加入、刪除、變更封裝中使用者定義變數的範圍
   這些程序描述如何使用 [變數] 視窗，在封裝中加入、刪除及變更使用者定義變數的範圍。  
   
  如需變數範圍的詳細資訊，請參閱[Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供讓系統資訊可在執行階段，並可用於封裝和事件處理常式等容器的系統變數。 您無法刪除系統變數。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 也提供系統變數，在執行階段，讓系統資訊可用，而且可以使用封裝和事件處理常式等容器中。 您無法刪除系統變數。  
   
 ### <a name="to-add-a-variable"></a>加入變數  
   
@@ -90,6 +90,6 @@ ms.locfileid: "36145440"
  [Integration Services &#40;SSIS&#41;變數](integration-services-ssis-variables.md)   
  [在封裝中使用變數](../../2014/integration-services/use-variables-in-packages.md)   
  [設定使用者定義變數的屬性](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
- [子封裝中使用變數和參數的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
+ [在子套件中使用變數和參數的值](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  
   
   

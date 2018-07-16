@@ -1,13 +1,11 @@
 ---
-title: 存取目前的交易 |Microsoft 文件
+title: 存取目前的交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - Transaction class
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 618b272195dc61179db7ac36a19cc30f5eaa2aef
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: dad95c2d2fc02e46b139f29889315873f21887e7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136448"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37351810"
 ---
 # <a name="accessing-the-current-transaction"></a>存取目前交易
   如果某個交易在輸入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上執行的 Common Language Runtime (CLR) 程式碼時處於作用中狀態，系統就會透過 `System.Transactions.Transaction` 類別公開此交易。 `Transaction.Current` 屬性可用來存取目前的交易。 在大部分情況下，您不需要明確存取交易。 若為資料庫連接，ADO.NET 會在呼叫 `Transaction.Current` 方法時自動檢查 `Connection.Open`，而且以透明方式在該交易中編列連接 (除非連接字串中的 `Enlist` 關鍵字設定為 false)。  
@@ -48,7 +46,7 @@ ms.locfileid: "36136448"
   
 -   Managed 程序或函數可以使用輸出參數來傳回值。 呼叫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序可以檢查傳回的值，並且在適當的情況下，執行 `ROLLBACK TRANSACTION`。  
   
--   Managed 程序或函數可以擲回自訂例外狀況。 呼叫[!INCLUDE[tsql](../../includes/tsql-md.md)]程序可以捕捉 managed 程序或在 try/catch 區塊中的函式所擲回的例外狀況，並且執行`ROLLBACK TRANSACTION`。  
+-   Managed 程序或函數可以擲回自訂例外狀況。 呼叫端[!INCLUDE[tsql](../../includes/tsql-md.md)]程序可以捕捉 managed 程序或函式的 try/catch 區塊中所擲回的例外狀況，並且執行`ROLLBACK TRANSACTION`。  
   
 -   如果滿足特定條件，Managed 程序或函數可以透過呼叫 `Transaction.Rollback` 方法來取消目前的交易。  
   

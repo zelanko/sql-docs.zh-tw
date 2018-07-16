@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_HIERARCHIES 資料列集 |Microsoft 文件
+title: MDSCHEMA_HIERARCHIES 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_HIERARCHIES rowset
 ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e8c6fa75c935256235d64ad337500923b5974c68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a38dd03023fc266c5b8505979766d90979d16f05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036687"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321218"
 ---
 # <a name="mdschemahierarchies-rowset"></a>MDSCHEMA_HIERARCHIES 資料列集
   描述特定維度中的每個階層。  
@@ -50,15 +50,15 @@ ms.locfileid: "36036687"
 |`ALL_MEMBER`|`DBTYPE_WSTR`||積存最高層級的成員。|  
 |`DESCRIPTION`|`DBTYPE_WSTR`||人們可讀取的階層描述。 如果沒有描述，則為 `NULL`。|  
 |`STRUCTURE`|`DBTYPE_I2`||階層的結構。 有效值包括下列各值：<br /><br /> -   `MD_STRUCTURE_FULLYBALANCED` (`0`)<br />-   `MD_STRUCTURE_RAGGEDBALANCED` (`1`)<br />-   `MD_STRUCTURE_UNBALANCED` (`2`)<br />-   `MD_STRUCTURE_NETWORK` (`3`)|  
-|`IS_VIRTUAL`|`DBTYPE_BOOL`||一律傳回`False`。|  
+|`IS_VIRTUAL`|`DBTYPE_BOOL`||一律會傳回`False`。|  
 |`IS_READWRITE`|`DBTYPE_BOOL`||布林值，指出是否啟用回寫至維度資料行功能。<br /><br /> 如果已啟用代表此階層的 `TRUE` 資料行，則傳回 `Write Back to dimension`。|  
 |`DIMENSION_UNIQUE_SETTINGS`|`DBTYPE_I4`||永遠傳回 `MDDIMENSIONS_MEMBER_KEY_UNIQUE` (`1`)。|  
-|`DIMENSION_MASTER_UNIQUE_NAME`|`DBTYPE_WSTR`||一律傳回`NULL`。|  
-|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||一律傳回`true`。 如果維度為不可見，就不會顯示在結構描述資料列集中。|  
+|`DIMENSION_MASTER_UNIQUE_NAME`|`DBTYPE_WSTR`||一律會傳回`NULL`。|  
+|`DIMENSION_IS_VISIBLE`|`DBTYPE_BOOL`||一律會傳回`true`。 如果維度為不可見，就不會顯示在結構描述資料列集中。|  
 |`HIERARCHY_ORDINAL`|`DBTYPE_UI4`||階層在 Cube 所有階層中的序數。|  
-|`DIMENSION_IS_SHARED`|`DBTYPE_BOOL`||一律傳回`TRUE`。|  
+|`DIMENSION_IS_SHARED`|`DBTYPE_BOOL`||一律會傳回`TRUE`。|  
 |`HIERARCHY_IS_VISIBLE`|`DBTYPE_BOOL`||布林值，指出階層是否為可見。<br /><br /> 如果階層為可見，則傳回 `TRUE`；否則傳回 `FALSE`。|  
-|`HIERARCHY_ORIGIN`|`DBTYPE_UI2`||位元遮罩，決定階層的來源：<br /><br /> -   `MD_USER_DEFINED` 識別使用者定義階層，而且值為`0x0000001`。<br />-   `MD_SYSTEM_ENABLED` 識別屬性階層，且具有值為`0x0000002`。<br />-   `MD_SYSTEM_INTERNAL` 沒有屬性階層，以識別屬性和值為**0x0000004**。<br /><br /> 父子式屬性階層同時為 `MD_USER_DEFINED` 和 `MD_SYSTEM_ENABLED`。|  
+|`HIERARCHY_ORIGIN`|`DBTYPE_UI2`||位元遮罩，決定階層的來源：<br /><br /> -   `MD_USER_DEFINED` 識別使用者定義階層，且其值為`0x0000001`。<br />-   `MD_SYSTEM_ENABLED` 識別屬性階層，且其值為`0x0000002`。<br />-   `MD_SYSTEM_INTERNAL` 使用沒有屬性階層，識別屬性和其值為**0x0000004**。<br /><br /> 父子式屬性階層同時為 `MD_USER_DEFINED` 和 `MD_SYSTEM_ENABLED`。|  
 |`HIERARCHY_DISPLAY_FOLDER`|`DBTYPE_WSTR`||在使用者介面中顯示階層時所使用的路徑。 資料夾名稱將以分號 (;) 分隔。 巢狀的資料夾會以反斜線 (\\)。|  
 |`INSTANCE_SELECTION`|`DBTYPE_UI2`||提供給用戶端應用程式有關如何顯示階層的提示。 有效值包括下列各值：<br /><br /> -   `MD_INSTANCE_SELECTION_NONE`<br />-   `MD_INSTANCE_SELECTION_DROPDOWN`<br />-   `MD_INSTANCE_SELECTION_LIST`<br />-   `MD_INSTANCE_SELECTION_FILTEREDLIST`<br />-   `MD_INSTANCE_SELECTION_MANDATORYFILTER`|  
 |`GROUPING_BEHAVIOR`|`DBTYPE_I2`||列舉，指定此階層的預期用戶端分組行為。 可能的值如下：<br /><br /> -   **EncourageGrouping** (1)<br />-   **DiscourageGrouping** (2)|  

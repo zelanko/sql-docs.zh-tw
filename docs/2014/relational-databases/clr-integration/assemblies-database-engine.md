@@ -1,13 +1,11 @@
 ---
-title: 組件 (Database Engine) |Microsoft 文件
+title: 組件 (Database Engine) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - managed code [SQL Server], assemblies
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9e0fbe3edd6e7d15a108186c11cd207fe02473eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 157f43f4646c6c935da7884a0fdae93c9676e6fe
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032341"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354960"
 ---
 # <a name="assemblies-database-engine"></a>組件 (Database Engine)
   本節中的主題提供可協助您了解、設計和實作組件的資訊。  
@@ -33,15 +31,15 @@ ms.locfileid: "36032341"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的組件是會參考 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Common Language Runtime 中所建立 Managed 應用程式模組 (.dll 檔案) 的物件。 組件包含類別中繼資料及 Managed 程式碼。 將組件上傳到 SQL Server 的執行個體是建立下列任何一個資料庫物件的首要步驟：  
   
--   CLR 函數。 如需詳細資訊，請參閱[建立 CLR 函數](../user-defined-functions/create-clr-functions.md)。  
+-   CLR 函數。 如需詳細資訊，請參閱 <<c0> [ 建立 CLR 函數](../user-defined-functions/create-clr-functions.md)。  
   
--   CLR 預存程序。 如需詳細資訊，請參閱[CLR 預存程序](../../database-engine/dev-guide/clr-stored-procedures.md)。  
+-   CLR 預存程序。 如需詳細資訊，請參閱 < [CLR 預存程序](../../database-engine/dev-guide/clr-stored-procedures.md)。  
   
--   CLR 觸發程序。 如需詳細資訊，請參閱[建立 CLR 觸發程序](../triggers/create-clr-triggers.md)。  
+-   CLR 觸發程序。 如需詳細資訊，請參閱 <<c0> [ 建立 CLR 觸發程序](../triggers/create-clr-triggers.md)。  
   
--   使用者自訂彙總函式。 如需詳細資訊，請參閱[建立使用者定義彙總](../user-defined-functions/create-user-defined-aggregates.md)。  
+-   使用者自訂彙總函式。 如需詳細資訊，請參閱 <<c0> [ 建立使用者定義彙總](../user-defined-functions/create-user-defined-aggregates.md)。  
   
--   使用者定義型別。 如需詳細資訊，請參閱[Using User-Defined 類型](../native-client/features/using-user-defined-types.md)。  
+-   使用者定義型別。 如需詳細資訊，請參閱 < [Using User-Defined 類型](../native-client/features/using-user-defined-types.md)。  
   
  組件在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中會執行下列功能：  
   
@@ -58,7 +56,7 @@ ms.locfileid: "36032341"
 |主題|描述|  
 |-----------|-----------------|  
 |[設計組件](assemblies-designing.md)|解釋在建立組件之前，您必須考慮的項目。 包括封裝組件、程式碼存取權限，以及其他的限制。|  
-|[實作的組件](assemblies-implementing.md)|解釋如何建立和卸除組件、如何修改組件和修改組件的時機，以及如何擷取關於組件的中繼資料。|  
+|[實作組件](assemblies-implementing.md)|解釋如何建立和卸除組件、如何修改組件和修改組件的時機，以及如何擷取關於組件的中繼資料。|  
 |[取得組件的相關資訊](assemblies-getting-information.md)|列出可用來查詢組件相關中繼資料的目錄檢視和函數。|  
   
 ## <a name="see-also"></a>另請參閱  

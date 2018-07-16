@@ -1,5 +1,5 @@
 ---
-title: 執行 Upgrade Advisor （命令提示字元） |Microsoft 文件
+title: 執行 Upgrade Advisor （命令提示字元） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
 - command prompt [Upgrade Advisor]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 525cb2237795e778bef2aa33ad43cff7c2e5ad6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022115"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330948"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>執行 Upgrade Advisor (命令提示字元)
   使用**UpgradeAdvisorWizardCmd**公用程式來從命令提示字元執行 Upgrade Advisor。 您可以選擇以 XML 格式或含有逗號分隔值的檔案來接收結果。  
@@ -47,23 +47,23 @@ where <server_info> is any combination of the following:
  顯示命令語法。  
   
  **-ConfigFile** *檔名*  
- 路徑名稱和檔案名稱的 XML 檔案包含您執行時要使用的設定**UpgradeAdvisorWizardCmd**公用程式。  
+ 路徑名稱和檔案名稱的 XML 檔案，其中包含要在執行時使用的設定**UpgradeAdvisorWizardCmd**公用程式。  
   
  *< server_info >*  
  指定要分析的電腦和執行個體。 如果您不要使用組態檔，請使用這些選項。  
   
  *< server_info >* 可以是下列四個引數的任何組合：  
   
- **伺服器** *server_name*  
+ **-Server** *_ n a*  
  指定要分析之電腦的名稱。 這可以是本機電腦 (預設值) 或遠端電腦。  
   
- **-執行個體** *instance_name*  
+ **-執行個體***執行個體名稱*  
  指定要分析之執行個體的名稱。 沒有預設值。 如果您沒有指定這個參數，就不會掃描 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。 代表 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預設執行個體的值為 MSSQLSERVER。 若為具名執行個體，請使用執行個體名稱。  
   
- **-ASInstance***AS_instance_name*   
+ **-ASInstance***AS_instance_name  *  
  指定要分析之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。 代表 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 預設執行個體的值為 MSSQLServerOLAPService。 若為具名執行個體，請使用執行個體名稱。  
   
- **-RSInstance***RS_instance_name*   
+ **-RSInstance***RS_instance_name  *  
  指定要分析之 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 執行個體的名稱。 沒有預設值。 如果您沒有指定這個值，就不會掃描 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 代表 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 預設執行個體的值為 ReportServer。 若為具名執行個體，請使用執行個體名稱。  
   
  **-SqlUser** *login_id*  
@@ -78,7 +78,7 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>傳回值  
  下表顯示的值， **UpgradeAdvisorWizardCmd**傳回。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |0|分析成功，未找到升級問題。|  
 |正整數|分析成功，找到升級問題。|  

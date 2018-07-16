@@ -1,5 +1,5 @@
 ---
-title: 使用資料表和索引資料分割 |Microsoft 文件
+title: 使用資料表和索引資料分割 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,36 +17,36 @@ helpviewer_keywords:
 - partitioned indexes [SQL Server], SMO
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 caps.latest.revision: 43
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bdd2f053895704484019c7771c8eab4689402992
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: db31f674605b1cf1c75351e6241ff6aed2b282c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147124"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37221018"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用資料表和索引資料分割
-  資料可以使用所提供的儲存演算法來儲存[Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)。 分割作業可讓大型資料表和索引更容易管理及擴充。  
+  要儲存資料，請使用所提供的儲存演算法[Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)。 分割作業可讓大型資料表和索引更容易管理及擴充。  
   
 ## <a name="index-and-table-partitioning"></a>索引和資料表資料分割  
  此功能可以讓索引和資料表資料散佈到資料分割中的多個檔案群組。 資料分割函數會定義資料表的資料列或索引如何依據某些資料行 (稱為分割資料行) 的值對應到資料分割集。 資料分割配置則會將資料分割函數所指定的每個資料分割都對應到檔案群組。 如此您就可以開發出封存策略，讓資料表可以擴充到檔案群組，並進而擴充到實體裝置。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database>物件包含的集合<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>表示所實作的資料分割函數的集合物件<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>描述資料如何對應至檔案群組的物件。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database>物件包含的集合<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>物件，代表所實作的資料分割函數和集合<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>描述資料如何對應至檔案群組的物件。  
   
  每個 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件都會在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 屬性中指定所使用的資料分割配置，並在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定資料行。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO 專案](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)和[建立 Visual C&#35; SMO Project in Visual Studio](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 < [Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)並[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>在 Visual Basic 中為資料表設定資料分割配置  
- 程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
+ 在程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBPartition1](SMO How to#SMO_VBPartition1)]  -->  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>在 Visual C# 中為資料表設定資料分割配置  
- 程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
+ 在程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
   
 ```  
 {   
@@ -94,7 +94,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>在 PowerShell 中為資料表設定資料分割配置  
- 程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
+ 在程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

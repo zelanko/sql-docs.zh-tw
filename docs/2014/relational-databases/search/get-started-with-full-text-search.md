@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text indexes [SQL Server], creating
@@ -16,20 +15,20 @@ helpviewer_keywords:
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 caps.latest.revision: 70
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: a4bdb94c371342a94c74e72a1cb1f33886fc0963
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e9745635b277a53f724b61ff4143e41af47775a7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022570"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324008"
 ---
 # <a name="get-started-with-full-text-search"></a>全文檢索搜尋使用者入門
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的資料庫預設會啟用全文檢索。 不過，若要針對資料表使用全文檢索索引，您必須在要以全文檢索引擎存取的資料表資料行中設定全文檢索索引功能。  
   
-##  <a name="configure"></a> 設定全文檢索搜尋的資料庫  
+##  <a name="configure"></a> 設定資料庫的全文檢索搜尋  
  在任何案例中，資料庫管理員都會執行下列基本步驟，針對全文檢索搜尋設定資料庫中的資料表資料行：  
   
 1.  建立全文檢索目錄。  
@@ -38,7 +37,7 @@ ms.locfileid: "36022570"
   
     1.  識別您想要包含在全文檢索索引中的每個文字資料行。  
   
-    2.  如果給定的資料行包含儲存為二進位資料的文件 (`varbinary(max)`，或`image`資料)，您必須指定資料表資料行 (*類型資料行*)，識別要索引之資料行中每個文件的類型。  
+    2.  如果指定的資料行包含儲存為二進位資料的文件 (`varbinary(max)`，或`image`資料)，您必須指定資料表資料行 (*類型資料行*)，識別要編製索引的資料行中每個文件的類型。  
   
     3.  指定您想讓全文檢索搜尋用於資料行中文件的語言。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "36022570"
   
 2.  針對資料表或索引檢視表建立全文檢索索引。  
   
-     全文檢索索引是一種特殊類型的 Token 式功能索引，由全文檢索引擎所建立與維護。 若要針對資料表或檢視表建立全文檢索搜尋，它必須具有唯一、單一資料行且不可為 Null 的索引。 全文檢索引擎需要使用此唯一索引，將資料表中的各資料列對應至唯一且可壓縮的索引鍵。 全文檢索索引可以包含`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，和`varbinary(max)`資料行。 如需詳細資訊，請參閱 [建立及管理全文檢索索引](create-and-manage-full-text-indexes.md)。  
+     全文檢索索引是一種特殊類型的 Token 式功能索引，由全文檢索引擎所建立與維護。 若要針對資料表或檢視表建立全文檢索搜尋，它必須具有唯一、單一資料行且不可為 Null 的索引。 全文檢索引擎需要使用此唯一索引，將資料表中的各資料列對應至唯一且可壓縮的索引鍵。 全文檢索索引可以包含`char`， `varchar`， `nchar`， `nvarchar`， `text`， `ntext`， `image`， `xml`， `varbinary`，以及`varbinary(max)`資料行。 如需詳細資訊，請參閱 [建立及管理全文檢索索引](create-and-manage-full-text-indexes.md)。  
   
  學習建立全文檢索索引之前，請務必了解全文檢索索引與一般 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 索引的差異。 下表將列出這些差異。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "36022570"
 ### <a name="associating-a-stoplist-with-the-full-text-index"></a>將停用字詞表與全文檢索索引產生關聯  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入了停用字詞表。 *「停用字詞表」* (Stoplist) 是停用字詞 (也稱為非搜尋字) 的清單。 停用字詞表會與每個全文檢索索引相關聯，而且該停用字詞表中的字詞會套用至該索引的全文檢索查詢。 根據預設，系統停用字詞表會與新的全文檢索索引相關聯。 不過，您可以改為建立並使用自己的停用字詞表。 如需詳細資訊，請參閱 [設定及管理全文檢索搜尋的停用字詞與停用字詞表](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)。  
   
- 例如，下列[CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式會建立新全文檢索停用字詞表名為 myStoplist3 從系統停用字詞表複製：  
+ 例如，下列[CREATE FULLTEXT STOPLIST](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式會建立新全文檢索停用字詞表複製從系統停用字詞表，名為 myStoplist3:  
   
 ```  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  

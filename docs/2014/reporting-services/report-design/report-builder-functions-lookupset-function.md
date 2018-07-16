@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: c7721c5cc57392f1e9968b4b59cb01ba07916f00
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 05fe44b16818d52b861fe63dd657e60fef5793fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133888"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311248"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet 函數 (報表產生器及 SSRS)
   從包含名稱/值組的資料集傳回符合指定之名稱的值組。  
@@ -42,7 +42,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  (`Variant`) - 針對資料集中的每個資料列評估並指定要比對之名稱或索引鍵的運算式。 例如， `=Fields!CustomerID.Value`。  
   
  *result_expression*  
- (`Variant`) 會針對資料集中的資料列評估的運算式其中*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!PhoneNumber.Value`。  
+ (`Variant`) 會針對資料集中的資料列評估的運算式所在*source_expression* = *destination_expression*，並指定要擷取的值。 例如， `=Fields!PhoneNumber.Value`。  
   
  *資料集 (dataset)*  
  指定報表中資料集名稱的常數。 例如，"ContactInformation"。  
@@ -51,9 +51,9 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
  傳回`VariantArray`，或`Nothing`如果沒有相符項目。  
   
 ## <a name="remarks"></a>備註  
- 使用`LookupSet`擷取名稱/值組的指定資料集中的一組值 1 對多關聯性。 例如，資料表中的客戶識別碼，您可以使用`LookupSet`擷取該客戶的未繫結至資料區域的資料集的所有相關的電話號碼。  
+ 使用`LookupSet`擷取名稱/值組的指定資料集中的一組值 1 對多關聯性。 例如，在資料表中的客戶識別碼，您可以使用`LookupSet`擷取該客戶的未繫結至資料區的資料集的所有相關聯的電話號碼。  
   
- `LookupSet` 會執行下列動作：  
+ `LookupSet` 執行下列作業：  
   
 -   評估目前範圍中的來源運算式。  
   
@@ -75,7 +75,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   來源、目的地和結果運算式無法包含報表或群組變數的參考。  
   
--   `LookupSet` 無法使用以運算式為下列報表項目：  
+-   `LookupSet` 不能用於做為運算式的下列報表項目：  
   
     -   資料來源的動態連接字串。  
   
@@ -105,7 +105,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  使用[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]函式`Join`從一組物件建立分隔的字串。 使用逗號當做分隔符號，在單一行中結合這些物件。 在某些轉譯器中，您可能會使用 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 換行字元 (`vbCrLF`) 當作分隔符號，在新行中列出每一個值。  
   
- 它會當做 Value 屬性的文字方塊中，使用時，下列運算式會使用`Join`建立清單。  
+ 當它用來當做 [值] 屬性文字方塊中，下列運算式會使用`Join`來建立清單。  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -151,9 +151,9 @@ End Function
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [運算式會在報表中使用&#40;報表產生器和 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [在報表中的運算式會使用&#40;報表產生器及 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [運算式範例 &#40;報表產生器及 SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [運算式中的資料類型 &#40;報表產生器及 SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器和 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Expression Scope for Totals，Aggregates，and Built-in Collections&#40;報表產生器及 SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

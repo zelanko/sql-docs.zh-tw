@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - leading blanks
 - TRIM function
@@ -17,13 +17,13 @@ ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
 caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ef5a948e4734c1965217702f600605666c385c01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0f6ebc237ccedbde4cc2b7a9cabc848846eef511
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184605"
 ---
 # <a name="trim-ssis-expression"></a>TRIM (SSIS 運算式)
   傳回移除開頭和尾端空白之後的字元運算式。  

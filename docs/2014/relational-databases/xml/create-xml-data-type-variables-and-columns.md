@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 62f1bd69d60fb7a0c919b07a8582d28a08e666e2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: c3c7b01d8238c4e82fd66dd7bba85d47ae2bbe83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132367"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309388"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>建立 XML 資料類型變數與資料行
-  `xml` 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 `int` 與 `varchar`。 您可以使用其他內建類型，`xml`資料類型作為資料行類型，當您建立資料表作為變數類型、 參數類型、 函式傳回型別，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
+  `xml` 資料類型是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的內建資料類型，而且與其他內建類型有些相似，例如 `int` 與 `varchar`。 如同其他內建的類型，您可以使用`xml`資料類型作為資料行類型，當您建立資料表作為變數類型、 參數類型、 函式傳回類型，或在[CAST 和 CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)。  
   
 ## <a name="creating-columns-and-variables"></a>建立資料行和變數  
  若要在資料表中建立 `xml` 類型資料行，請使用 `CREATE TABLE` 陳述式，如下列範例所示：  
@@ -57,7 +57,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>指派預設值  
  在資料表中，您可以將預設的 XML 執行個體指派給 `xml` 類型的資料行。 您可以使用以下兩種方法的其中一種來提供預設的 XML：使用 XML 常數，或是明確轉換成 `xml` 類型。  
   
- 若要將預設 XML 提供為 XML 常數，請使用類似以下範例的語法。 請注意，字串會隱含地轉換成`xml`型別。  
+ 若要將預設 XML 提供為 XML 常數，請使用類似以下範例的語法。 請注意，此字串會隱含地轉換成`xml`型別。  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -95,7 +95,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- 使用條件約束的替代方式是建立包裝函式、 使用者定義函數來包裝`xml`資料類型方法，並在檢查條件約束中指定使用者定義函數，如下列範例所示。  
+ 使用條件約束的替代方法是建立包裝函式、 使用者定義函式來包裝`xml`資料類型方法，並在檢查條件約束中指定使用者定義函式，如下列範例所示。  
   
  在下列範例中，在 `Col2` 上的條件約束指定儲存在此資料行中的每個 XML 執行個體都必須有包含 `<ProductDescription>` 屬性的 `ProductID` 元素。 此條件約束是由使用者定義函數所強制執行：  
   
@@ -131,17 +131,17 @@ INSERT INTO T values(1,'<Product />')
 ```  
   
 ## <a name="same-or-different-table"></a>相同或相異的資料表  
- `xml`可以建立資料類型資料行，在含有其他關聯式資料行，資料表或個別的資料表，與主資料表的外部索引鍵關聯性。  
+ `xml`可以建立資料類型資料行，在資料表中含有其他關聯式資料行，或在個別的資料表，與主資料表有外部索引鍵關聯性。  
   
- 建立`xml`當下列條件的其中一個為 true 時，相同資料表中的資料類型資料行：  
+ 建立`xml`當下列條件之一成立時，相同資料表中的資料類型資料行：  
   
 -   您的應用程式在 XML 資料行上執行資料擷取，而且不需要 XML 資料行的 XML 索引。  
   
 -   您想要在 `xml` 資料類型資料行上建立 XML 索引，且主資料表的主索引鍵與其叢集索引鍵相同。 如需詳細資訊，請參閱 [XML 索引 &#40;SQL Server&#41;](xml-indexes-sql-server.md)。  
   
- 建立`xml`符合下列條件時，在個別的資料表中的資料類型資料行：  
+ 建立`xml`如果下列條件成立的個別資料表中的資料類型資料行：  
   
--   您想要建立 XML 索引`xml`資料類型資料行，但是主資料表的主索引鍵與其叢集索引鍵，從不同的主資料表沒有主索引鍵或主資料表是堆積 （沒有叢集索引鍵）。 如果主資料表已存在，就可能會有這種情形。  
+-   您想要建立 XML 索引`xml`資料類型資料行，但是主資料表的主索引鍵是不同於其叢集索引鍵，或主資料表沒有主索引鍵或主資料表是堆積 （沒有叢集索引鍵）。 如果主資料表已存在，就可能會有這種情形。  
   
 -   您不想因為資料表中有 XML 資料行存在，而讓資料表掃描的速度慢下來。 無論是以同資料列或資料列外的方式儲存，都會用到空間。  
   

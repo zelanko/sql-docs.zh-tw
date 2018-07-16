@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d1e14cca1726ec72d60f3c309d63f1d773c521d2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: cb1f53dba9fc2b4289ff0d900a53401035300602
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133193"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311928"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings 事件類別
   Sort Warnings 事件類別指出不適合在記憶體中的排序作業。 不包括關於索引建立的排序作業，只包括在查詢中 (例如在 SELECT 陳述式中所用的 ORDER BY 子句) 的排序作業。  

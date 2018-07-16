@@ -1,5 +1,5 @@
 ---
-title: 使用 RollupChildren 函數 (MDX) |Microsoft 文件
+title: 使用 RollupChildren 函數 (MDX) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], RollupChildren function
 - RollupChildren function
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - IIf function
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7776ad0bf70060912e4ad8d3e612b04bbcd4183
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d864ea4e9d71928823b7de4d5b539594783d8ba2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132308"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314980"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>使用 RollupChildren 函數 (MDX)
-  多維度運算式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [指令碼的搜尋和取代] 函式會彙總的子系的成員，將不同的一元運算子套用至每個子系，並傳回此彙總套件的數字的值。 一元運算子可由與子成員相關的成員屬性提供，或者可能是字串運算式直接將運算子提供給函數。  
+  多維度運算式 (MDX) [RollupChildren](/sql/mdx/rollupchildren-mdx) [指令碼搜尋和取代] 函式彙總的子系的成員，將不同的一元運算子套用至每個子系，並傳回此彙總套件的數字的值。 一元運算子可由與子成員相關的成員屬性提供，或者可能是字串運算式直接將運算子提供給函數。  
   
 ## <a name="rollupchildren-function-examples"></a>RollupChildren 函數範例  
  要說明使用多維度運算式 (MDX) 陳述式的 `RollupChildren` 函數是很簡單，但此函數對 MDX 查詢的影響相當廣泛。  
@@ -68,7 +68,7 @@ RollupChildren([Net Sales], [Net Sales].CurrentMember.Properties("SALES_OPERATOR
  當呼叫此函數時，就會使用成員屬性中儲存的運算子，將每個子系的值套用到總計。 國內外退貨量會被忽略，而且 `RollupChildren` 函數所傳回的積存總計會乘以 1.1。  
   
 ### <a name="using-the-iif-function"></a>使用 IIf 函數  
- 如果範例作業不是經常，或將作業套用至一個 MDX 查詢，只[IIf](/sql/mdx/iif-mdx)函數可以搭配`RollupChildren`函式來提供相同的結果。 以下的 MDX 查詢可以提供跟先前 MDX 範例一樣的結果，但不需要使用自訂的成員屬性就可以做到。  
+ 如果範例作業不會經常執行，或將作業套用至一個 MDX 查詢，只有[IIf](/sql/mdx/iif-mdx)函式可以搭配`RollupChildren`函式以提供相同的結果。 以下的 MDX 查詢可以提供跟先前 MDX 範例一樣的結果，但不需要使用自訂的成員屬性就可以做到。  
   
 ```  
 RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPERATOR") = "-", "~", [Net Sales].CurrentMember.Properties("UNARY_OPERATOR))) * 1.1  

@@ -12,21 +12,21 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 714017b7-1bd6-4950-a3c6-d0df8450a877
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 43c0988abc3ea5043873421054fc370a58ed9347
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 57edecff9fbebb062381e9d236d24ee329facd75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131448"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37313158"
 ---
 # <a name="report-viewer-web-part-programmability-in-sharepoint-integration"></a>SharePoint 整合中的報表檢視器 Web 組件可程式性
   報表檢視器 Web 組件是 `T:Microsoft.ReportingServices.SharePoint.UI.WebParts.ReportViewerWebPart` 伺服器控制項，這個控制項包含一組公用應用程式開發介面 (API)，可讓開發人員建立自訂 SharePoint 應用程式。 您可以建立自訂 Web 組件，利用 Web 組件連接提供報表路徑和參數給報表檢視器 Web 組件。 您也可以將 Web 組件內嵌在自訂 SharePoint Web 組件頁面中，並使用公用 API 來自訂該組件。  
   
 ## <a name="connecting-to-report-viewer-web-part-with-custom-web-parts"></a>使用自訂 Web 組件連接到報表檢視器 Web 組件  
- 報表檢視器 Web 組件是實作 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 或 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` 之 SharePoint Web 組件的連接取用者。 如果將 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 網頁組件 (例如**文件**網頁組件) 放在與報表檢視器網頁組件相同的網頁組件頁面上，此網頁組件也可以提供報表路徑給報表檢視器網頁組件。 同樣地， `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web 組件，例如**文字篩選**或**選擇篩選**，可以提供報表參數給報表檢視器 Web 組件放在同一個報表檢視器 Web 網頁組件頁面時組件。  
+ 報表檢視器 Web 組件是實作 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 或 `T:Microsoft.SharePoint.WebPartPages.IFilterValues` 之 SharePoint Web 組件的連接取用者。 如果將 <xref:System.Web.UI.WebControls.WebParts.IWebPartRow> 網頁組件 (例如**文件**網頁組件) 放在與報表檢視器網頁組件相同的網頁組件頁面上，此網頁組件也可以提供報表路徑給報表檢視器網頁組件。 同樣地， `T:Microsoft.SharePoint.WebPartPages.IFilterValues` Web 組件，例如**全文篩選條件**或**選擇篩選**，可以提供報表參數給報表檢視器 Web 組件放在報表檢視器 Web 相同 Web 組件頁面時組件。  
   
 ### <a name="implementing-a-report-path-provider-with-iwebpartrow"></a>使用 IWebPartRow 實作報表路徑提供者  
  若要透過 Web 組件連接將報表路徑提供給報表檢視器 Web 組件，請執行以下作業：  

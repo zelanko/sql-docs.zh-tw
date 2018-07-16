@@ -1,5 +1,5 @@
 ---
-title: Materialize 元素 (XMLA) |Microsoft 文件
+title: Materialize 元素 (XMLA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Materialize element
 ms.assetid: cda19474-7170-4b0e-b0ea-297ce5128112
 caps.latest.revision: 10
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 5cc2c35ffb2fc615bfc1d6afad1dbb55ac20ffbc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: 10848ac990c19f5b4b3a63aa9dfa0478700a525e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037096"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302648"
 ---
 # <a name="materialize-element-xmla"></a>Materialize 元素 (XMLA)
   指定是否要具體化所設計的彙總[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)命令。  

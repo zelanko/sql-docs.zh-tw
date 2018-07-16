@@ -1,5 +1,5 @@
 ---
-title: ColumnID 元素 (EventColumn) (ASSL) |Microsoft 文件
+title: ColumnID 元素 (EventColumn) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ColumnID element
 ms.assetid: c4f4fbad-9d70-4de2-8cf7-caee80a4a1e4
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 71e51ec736b10a6d72621efb2a9b094882ed8057
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 82cc6d67aa0c1533b9779b93468fdf8845272cde
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145242"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37245598"
 ---
 # <a name="columnid-element-eventcolumn-assl"></a>ColumnID 元素 (EventColumn) (ASSL)
   包含資訊的一部分，針對某個事件擷取的資料行的識別碼 (ID)[追蹤](../objects/trace-element-assl.md)項目。  
@@ -60,11 +60,11 @@ ms.locfileid: "36145242"
 |子元素|無。|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`ColumnID`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.TraceColumn>。  
+ 對應至父系的元素`ColumnID`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.TraceColumn>。  
   
 ## <a name="see-also"></a>另請參閱  
- [Columns 元素&#40;ASSL&#41;](../collections/columns-element-assl.md)   
- [Event 元素&#40;ASSL&#41;](../objects/event-element-assl.md)   
+ [資料行的項目&#40;ASSL&#41;](../collections/columns-element-assl.md)   
+ [事件項目的&#40;ASSL&#41;](../objects/event-element-assl.md)   
  [Events 元素&#40;ASSL&#41;](../collections/events-element-assl.md)   
  [屬性&#40;ASSL&#41;](properties-assl.md)  
   

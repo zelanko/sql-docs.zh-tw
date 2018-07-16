@@ -1,5 +1,5 @@
 ---
-title: 進階多重網站組態 （SSRS 原生模式） |Microsoft 文件
+title: 進階多重網站組態 （SSRS 原生模式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.advancedmultiplewebsiteconfig.F1
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 880a5a496df597e929be8063323fa833696eabc3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eafcc3b69916ba253b430a61fb5b510eb3480d91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37220728"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>進階多重網站組態 (SSRS 原生模式)
   使用此對話方塊可建立及管理用來存取報表伺服器或報表管理員的 URL。 **[進階多重網站組態]** 對話方塊是用來建立其他 URL (亦即包含主機標頭名稱的自訂 URL)，或是指定 IPv4 或 IPv6 格式的 IP 位址。  
@@ -30,7 +30,7 @@ ms.locfileid: "36134091"
   
  如果您想要設定不同的方式來存取報表伺服器，建立多個 URL 將會非常實用。 例如，透過內部網路和外部網路連接的報表伺服器存取，通常需要對每一種連接類型都有不同的 URL。  
   
- 若要開啟**進階多重網站組態**對話方塊中，按一下 **進階**上**Web 服務 URL**或**報表管理員 URL**頁面[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager。 當 **[進階多重網站組態]** 對話方塊開啟之後，您可以按一下 **[加入]** 或 **[編輯]** ，以定義新的 URL 或是修改或刪除現有的 URL。  
+ 若要開啟 [**進階多重網站組態**] 對話方塊中，按一下**進階**上**Web 服務 URL**或**報表管理員 URL**頁面[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager。 當 **[進階多重網站組態]** 對話方塊開啟之後，您可以按一下 **[加入]** 或 **[編輯]** ，以定義新的 URL 或是修改或刪除現有的 URL。  
   
  按一下 **[確定]** 儲存您的變更。 如果您加入或移除 URL，然後沒有先按一下 **[確定]** 就關閉此對話方塊，您的變更將會遺失。  
   
@@ -44,12 +44,12 @@ ms.locfileid: "36134091"
   
 -   **[127.0.0.1]** 是用來存取 localhost， 它可支援報表伺服器電腦上的本機管理。 如果您只選取這個值，則只有在本機登入報表伺服器電腦的使用者才會擁有此應用程式的存取權。  
   
--   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 定址，IP 位址將會是 128 位元值的 8 個 4 位元組欄位類似於下列格式：\<標頭 >:*nnnn:nnnn:nnnn:nnnn*。  
+-   *Nnn.nnn.nnn.nnn* 是電腦網路卡的 IPv4 位址。 如果您的網路使用 IPv6 定址的 IP 位址會是 128 位元值的 8 4 位元組欄位，類似於下列格式：\<標頭 >:*nnnn:nnnn:nnnn:nnnn*。  
   
      如果您有多張網路卡，您會看到每一張網路卡都有一個 IP 位址。 如果您只選取這個值，它會將應用程式存取限制為只有該 IP 位址 (以及網域名稱伺服器對應至該位址的任何主機名稱)。 您無法使用 localhost 來存取報表伺服器，而且也不能使用安裝於報表伺服器電腦上之其他網路卡的 IP 位址。  
   
  **通訊埠**  
- 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他通訊埠編號，您必須一律包含在 URL (例如， http://localhost:8181/reports)。  
+ 指定報表伺服器用來監視要求的通訊埠。 通訊埠 80 是預設通訊埠。 如果您使用通訊埠 80，您不需要在 URL 中包含此通訊埠。 如果您使用任何其他連接埠號碼，您必須一律包含在 URL (例如http://localhost:8181/reports)。  
   
  **主機標頭**  
  如果您已經在網域名稱伺服器上定義解析為電腦的主機標頭，您可以在設定報表伺服器存取的 URL 中指定該主機標頭。  

@@ -1,13 +1,11 @@
 ---
-title: 處理大型物件 (LOB) 參數，在 CLR 中的 |Microsoft 文件
+title: 處理 CLR 中的大型物件 (LOB) 參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - SqlChars data type
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 58b2e188a69799dd0b8d36958a7059d5cfcc09f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: f23f42a01ba5268c9165a79f5330fb0efcc538ce
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136873"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353230"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>處理 CLR 中的大型物件 (LOB) 參數
   使用 `SqlBytes` 和 `SqlChars` 分別傳遞大型物件 (LOB) 二進位類型 (`varbinary(max)`) 和 LOB 字元類型 (`nvarchar(max)`) 參數。 這些類型允許將 LOB 值從資料庫串流到 Common Language Runtime (CLR) 常式，而非將整個值複製到 Managed 空間。 `SqlBinary` 和 `SqlString` 應該僅用於小型二進位和字元字串值。  

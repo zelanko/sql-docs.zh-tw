@@ -1,5 +1,5 @@
 ---
-title: 定義帳戶智慧 （商業智慧精靈） |Microsoft 文件
+title: 定義帳戶智慧 （商業智慧精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.acctintelligence.mapaccounttype.f1
 ms.assetid: fe4c204b-1031-4ac4-9916-8052ce2301cc
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b55d270b9b7ae2a2094c24e0f71bdcd0f72a0ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 780f13e8ef18a4c17e3bec0322bd3c498efff4d2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133819"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319238"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>定義帳戶智慧 (商業智慧精靈)
   使用 **[定義帳戶智慧]** 頁面，即可將 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上所定義的帳戶類型，對應至資料來源中來源資料表所定義的帳戶類型，該來源資料表會提供帳戶維度的資料。  
@@ -38,7 +38,7 @@ ms.locfileid: "36133819"
   
  下表列出在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體上定義的帳戶類型。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**資產**|擁有之事物在特定時間點的價值。|  
 |**結餘**|某項目在特定時間點的計數。|  

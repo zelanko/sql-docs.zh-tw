@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - adding external tools
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 15d26c23413cc3f47cba2cce5d7d7ce9efab9a66
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 60e6ba4d3c9997eaa9052b5d88bf1e2ed625f548
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37226638"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具對話方塊
   請利用 [外部工具] 對話方塊，將 SQLCMD 或 [記事本] 之類的外部工具新增至 [工具] 功能表。 新增外部工具可讓您在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境中工作時，輕易地啟動其他應用程式。 啟動工具時，您可以指定引數和工作目錄。 此外，某些工具的輸出可以顯示在 [輸出] 視窗中。 [外部工具] 對話方塊可以透過 [工具] 功能表使用。  
@@ -71,14 +71,14 @@ ms.locfileid: "36147079"
 ## <a name="example"></a>範例  
  在 [外部工具] 對話方塊中輸入下列值，將會建立標示為 DAC 的功能表項目；在選取該功能表項目時，會開啟命令提示字元，並使用專用管理員連接執行 **sqlcmd** 公用程式。  
   
-|方塊|ReplTest1|  
+|方塊|值|  
 |---------|-----------|  
 |**Title**|DAC|  
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  
 |**引數**|-A|  
   
 ## <a name="see-also"></a>另請參閱  
- [外部工具引數](menu-help/external-tools.md)   
+ [外部工具的引數](menu-help/external-tools.md)   
  [一般使用者介面元素](general-user-interface-elements.md)  
   
   

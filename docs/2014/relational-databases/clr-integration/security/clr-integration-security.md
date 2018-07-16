@@ -1,13 +1,11 @@
 ---
-title: CLR 整合安全性 |Microsoft 文件
+title: CLR 整合安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,18 +15,18 @@ helpviewer_keywords:
 - database objects [CLR integration], security
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 caps.latest.revision: 54
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 689d425c2f13a442b1d8bbd5515939135f44fa0c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 5037f3bb0d77fd25ad17b761f8c7943aef61200c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031452"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349590"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
-  安全性模型[!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]通用語言執行平台 (CLR) 可管理及保護不同類型 CLR 及非 CLR 物件內執行的存取權[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]陳述式或另一個伺服器上執行的 CLR 物件。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  
+  安全性模型[!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]通用語言執行平台 (CLR) 管理及保護不同類型 CLR 及非 CLR 物件內執行的存取權[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]陳述式或另一部伺服器上執行的 CLR 物件。 這些物件之間的呼叫稱為連結。 針對這些物件所執行的安全性檢查類型會因所涉及的連結類型而不同。  
   
  CLR 整合安全性模型具有下列目標：  
   
@@ -40,7 +38,7 @@ ms.locfileid: "36031452"
   
 -   使用者定義程式碼不應該透過在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 處理序中執行，取得系統資源的未經授權存取權。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用 CLR 的程式碼存取架構安全性模型。 本節將討論這種結合方法對於安全性的一些優點。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR 的程式碼存取安全性模型。 本節將討論這種結合方法對於安全性的一些優點。  
   
  下表列出本節的主題。  
   
@@ -56,7 +54,7 @@ ms.locfileid: "36031452"
  [模擬和 CLR 整合安全性](../../../database-engine/dev-guide/impersonation-and-clr-integration-security.md)  
  討論 Managed 程式碼如何使用模擬來存取外部資源。  
   
- [允許部分信任呼叫端](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
+ [允許部分信任的呼叫端](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
  討論 Managed 方法叫用其他組件所包含之類別中的方法時所引發的問題。  
   
  [應用程式定義域和 CLR 整合安全性](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  

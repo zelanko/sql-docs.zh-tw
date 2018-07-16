@@ -1,5 +1,5 @@
 ---
-title: 全文檢索搜尋升級選項 |Microsoft 文件
+title: 全文檢索搜尋升級選項 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
@@ -16,13 +16,13 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: af3bf4f26b94e6fc8ce18c07ed052ef53087f68c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52490126091c122a272d0404f95026a1d68d12ea
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146217"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37280714"
 ---
 # <a name="full-text-search-upgrade-options"></a>全文檢索搜尋升級選項
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈的 [全文檢索搜尋升級選項] 頁面，針對此時升級的資料庫選取要使用的全文檢索搜尋升級選項。  

@@ -1,5 +1,5 @@
 ---
-title: 存取元素 (ASSL) |Microsoft 文件
+title: 存取元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Access element
 ms.assetid: 6ad99010-fac5-48e9-a099-ecbca380e127
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d1eea0d7e8b0d26692c2cc6e0400d4ceaf7aa8ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6ba7c322fdd7c48a7a61262ea7aa891ae5fe4167
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134705"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314728"
 ---
 # <a name="access-element-assl"></a>Access 元素 (ASSL)
   表示層級的存取權提供給[CellPermission](../objects/cellpermission-element-assl.md)項目。  
@@ -64,11 +64,11 @@ ms.locfileid: "36134705"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*讀取*|允許唯讀存取。|  
 |*意外讀取*|允許意外讀取存取。|  
-|*ReadWrite*|允許讀寫存取。|  
+|*讀寫*|允許讀寫存取。|  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `Access` 允許值的列舉是 <xref:Microsoft.AnalysisServices.CellPermissionAccess>。  
   

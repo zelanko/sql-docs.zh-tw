@@ -1,5 +1,5 @@
 ---
-title: 資料元素 (ASSL) |Microsoft 文件
+title: 資料元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Data element
 ms.assetid: e52b1961-7e11-4029-8ab1-84d275845067
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5a3ff1b93efe374b9ddc8b080de143550aae8388
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8b31922593446e7d8aafd88cdb5667bef8b109ba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037107"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37218278"
 ---
 # <a name="data-element-assl"></a>Data 元素 (ASSL)
-  包含 (子系的集合中[區塊項目&#40;ASSL&#41; ](block-element-assl.md)項目) 的二進位內容[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)項目。  
+  包含 (集合中的子系[區塊項目&#40;ASSL&#41; ](block-element-assl.md)項目) 的二進位內容[ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,7 +62,7 @@ ms.locfileid: "36037107"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 對應目的父代的項目`Data`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
+ 對應至父系的元素`Data`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.ClrAssemblyFile>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Assembly 項目&#40;ASSL&#41;](assembly-element-assl.md)   

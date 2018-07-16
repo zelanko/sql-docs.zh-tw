@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 指令碼語言 XML 元素階層 (ASSL) |Microsoft 文件
+title: Analysis Services 指令碼語言 XML 元素階層 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - hierarchies [Analysis Services Scripting Language]
 ms.assetid: 343dbab9-4c2c-49b9-8f35-efc65f2216f1
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0811c567582c3bc241a6abae6c2be2405afa68ad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab6bcc89947c051dff31f566820e9fa9cdd5077a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146608"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37274264"
 ---
 # <a name="analysis-services-scripting-language-xml-element-hierarchy-assl"></a>Analysis Services 指令碼語言 XML 元素階層 (ASSL)
   下表顯示「Analysis Services 指令碼語言」(ASSL) 中物件的階層。  

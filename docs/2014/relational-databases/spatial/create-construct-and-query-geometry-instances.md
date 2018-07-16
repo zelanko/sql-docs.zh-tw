@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-spatial
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1ce999d3a443ef4a691f980646997eb1c927172e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: e75fa36b86a0efa24a1de7f5ebfa638b14392776
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037204"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37294538"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>建立、建構及查詢幾何執行個體
   平面空間資料類型， `geometry`，代表 Euclidean （平面） 座標系統中的資料。 這種類型在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中是實作為 Common Language Runtime (CLR) 資料類型。  
   
- `geometry`類型已預先定義，而且每個資料庫中。 您可以建立類型的資料表資料行`geometry`和操作`geometry`相同的方式中的資料會使用其他 CLR 類型。  
+ `geometry`類型是預先定義的而且可在每個資料庫。 您可以建立的型別資料表資料行`geometry`及操作`geometry`相同的方式中的資料會使用其他 CLR 類型。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 支援的 `geometry` 資料類型 (平面) 符合開放式地理空間協會 (Open Geospatial Consortium，OGC) 的 SQL 簡單特徵規格 1.1.0 版。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36037204"
   
   
 ###  <a name="wkb"></a> 從已知的二進位輸入建構 geometry 執行個體  
- WKB 是一種二進位格式，指定由開放式地理空間協會 (OGC)，允許`geometry`用戶端應用程式與 SQL 資料庫之間交換資料。 下列函數可接受 WKB 輸入來建構幾何：  
+ WKB 是一種二進位格式，指定由開放地理空間協會 (OGC) 允許`geometry`来在用戶端應用程式和 SQL database 之間交換資料。 下列函數可接受 WKB 輸入來建構幾何：  
   
  **從 WKB 輸入建構任何類型的 geometry 執行個體**  
  [STGeomFromWKB &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  
@@ -133,7 +133,7 @@ ms.locfileid: "36037204"
   
   
 ###  <a name="gml"></a> 從 GML 文字輸入建構 geometry 執行個體  
- `geometry`資料類型提供的方法，會產生`geometry`從 GML 是幾何物件的 XML 表示的執行個體。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
+ `geometry`資料類型提供的方法，會產生`geometry`執行個體，GML 是幾何物件的 XML 表示法。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可支援 GML 的子集。  
   
  **從 GML 輸入建構任何類型的 geometry 執行個體**  
  [GeomFromGml &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -160,10 +160,10 @@ ms.locfileid: "36037204"
   
   
 ##  <a name="querying"></a> 查詢 geometry 執行個體的屬性和行為  
- 所有`geometry`執行個體都有一些可以透過方法擷取的屬性，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主題定義幾何類型的屬性和行為以及用來查詢每一個類型的方法。  
+ 所有`geometry`執行個體都可以透過方法來擷取的屬性數目，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 下列主題定義幾何類型的屬性和行為以及用來查詢每一個類型的方法。  
   
 ###  <a name="valid"></a> 有效性、執行個體類型和 GeometryCollection 資訊  
- 一次`geometry`建構執行個體，您可以使用下列方法來判斷它是否格式正確、 傳回執行個體類型，或者如果它是集合執行個體，就會傳回特定`geometry`執行個體。  
+ 一次`geometry`建構執行個體，您可以使用下列方法來判斷它是否格式正確、 傳回執行個體類型，或如果它是集合執行個體，就會傳回特定`geometry`執行個體。  
   
  **傳回 geometry 類型的執行個體**  
  [STGeometryType &#40;geometry 資料類型&#41;](/sql/t-sql/spatial-geometry/stgeometrytype-geometry-data-type)  
@@ -215,7 +215,7 @@ ms.locfileid: "36037204"
   
   
 ###  <a name="dimension"></a> 維度  
- 空`geometry`執行個體可以是 0，1-維度或 2 維度。 零維度`geometries`，例如`Point`和`MultiPoint`，沒有長度或區域。 一維度物件，例如`LineString, CircularString, CompoundCurve`，和`MultiLineString`，具有長度。 二維度執行個體 (如 `Polygon`、`CurvePolygon` 和 `MultiPolygon`) 具有區域和長度。 空的執行個體將會報告 -1 的維度，而 `GeometryCollection` 則會報告與其內容類型相依的區域。  
+ 非空`geometry`執行個體可以是 0-1 或 2 維度。 零維度`geometries`，這類`Point`和`MultiPoint`，沒有長度或區域。 一維度物件，例如`LineString, CircularString, CompoundCurve`，和`MultiLineString`，具有長度。 二維度執行個體 (如 `Polygon`、`CurvePolygon` 和 `MultiPolygon`) 具有區域和長度。 空的執行個體將會報告 -1 的維度，而 `GeometryCollection` 則會報告與其內容類型相依的區域。  
   
  **傳回執行個體的維度**  
  [STDimension](/sql/t-sql/spatial-geometry/stdimension-geometry-data-type)  
@@ -229,7 +229,7 @@ ms.locfileid: "36037204"
   
   
 ###  <a name="empty"></a> Empty  
- *空*`geometry`執行個體沒有任何點。 空白的長度`LineString, CircularString`， `CompoundCurve`，和`MultiLineString`執行個體是零。 空白區域`Polygon`， `CurvePolygon`，和`MultiPolygon`例項為 0。  
+ *空*`geometry`執行個體沒有任何點。 空白的長度`LineString, CircularString`， `CompoundCurve`，和`MultiLineString`執行個體是零。 空白的區域`Polygon`， `CurvePolygon`，和`MultiPolygon`例項為 0。  
   
  **判斷執行個體是否為空的**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type)。  
@@ -237,7 +237,7 @@ ms.locfileid: "36037204"
   
   
 ###  <a name="simple"></a> Simple  
- 如`geometry`的執行個體成為*簡單*，它必須符合以下兩個需求：  
+ 針對`geometry`的執行個體*簡單*，它必須符合兩個需求：  
   
 -   此例項的每一個圖形都不能自己相交 (除了在它的端點上以外)。  
   
@@ -252,7 +252,7 @@ ms.locfileid: "36037204"
   
   
 ###  <a name="boundary"></a> 界限、內部和外部  
- *內部*的`geometry`執行個體是在執行個體所佔據的空間和*外部*是未佔據它的空間。  
+ *內部*的`geometry`執行個體是在執行個體所佔用的空間並*外部*是未佔據它的空間。  
   
  *「界限」* (Boundary) 是由 OGC 定義如下：  
   
@@ -280,7 +280,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a> 範圍  
- *信封*的`geometry`執行個體，也稱為*週框方塊*、 的座標軸對齊矩形形成的最小和最大值 （X，Y） 座標的執行個體。  
+ *信封*的`geometry`執行個體，也稱為*週框方塊*、 的座標軸對齊矩形形成的最小和最大 （X，Y） 座標的執行個體。  
   
  **傳回執行個體的範圍**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  
@@ -288,7 +288,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> 封閉性  
- A*關閉*`geometry`執行個體是起始點與結束點相同。 `Polygon` 執行個體視為封閉式。 `Point` 執行個體視為非封閉式。  
+ A*關閉*`geometry`執行個體是起始點與結束點相同。 `Polygon` 執行個體都視為封閉式。 `Point` 執行個體視為非封閉式。  
   
  環形是簡單、 關閉`LineString`執行個體。  
   

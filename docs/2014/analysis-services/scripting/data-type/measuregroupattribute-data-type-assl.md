@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupAttribute 資料類型 (ASSL) |Microsoft 文件
+title: MeasureGroupAttribute 資料類型 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MeasureGroupAttribute data type
 ms.assetid: dc7f71e6-3755-4d99-9fcd-5830e10eb653
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 05dfd16d5e1f3cb5a2af3926cca398678b649675
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 43177fe7c63c241f4a66b326af2eca94bcd5d600
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37261324"
 ---
 # <a name="measuregroupattribute-data-type-assl"></a>MeasureGroupAttribute 資料類型 (ASSL)
   定義代表某個屬性與量值群組之間關聯性的基本資料類型。  
@@ -59,11 +59,11 @@ ms.locfileid: "36035517"
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|無|  
-|子元素|[註解](../collections/annotations-element-assl.md)， [AttributeID](../properties/id-element-assl.md)， [KeyColumns](../collections/columns-element-assl.md)，[類型](../properties/type-element-measuregroupattribute-assl.md)|  
-|衍生的元素|[屬性](../objects/attribute-element-assl.md)([屬性](../collections/attributes-element-assl.md)集合[RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
+|子元素|[註釋](../collections/annotations-element-assl.md)， [AttributeID](../properties/id-element-assl.md)， [KeyColumns](../collections/columns-element-assl.md)，[類型](../properties/type-element-measuregroupattribute-assl.md)|  
+|衍生的元素|[屬性](../objects/attribute-element-assl.md)([屬性](../collections/attributes-element-assl.md)的集合[RegularMeasureGroupDimension](dimension-data-type-assl.md))|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MeasureGroupAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 指令碼語言 XML 資料類型&#40;ASSL&#41;](analysis-services-scripting-language-xml-data-types-assl.md)  

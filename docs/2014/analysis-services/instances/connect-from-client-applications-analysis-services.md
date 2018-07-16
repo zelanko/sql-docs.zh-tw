@@ -1,5 +1,5 @@
 ---
-title: 從用戶端應用程式 (Analysis Services) 連接 |Microsoft 文件
+title: 連接用戶端應用程式 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d343794027e87b575b9cdaa9ee3a9dd2908438aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ee609b8a208b55509058e635b96fa70c52c4112
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037126"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314908"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>從用戶端應用程式連接 (Analysis Services)
   如果您不熟悉 Analysis Services，請透過本主題中的資訊，使用常用的工具和應用程式連接至 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 現有的執行個體。 本主題也說明如何以不同的使用者識別進行連接，方便測試之用。  
@@ -38,7 +38,7 @@ ms.locfileid: "36037126"
   
 -   [設定 Windows 防火牆以允許 Analysis Services 存取](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
--   [物件和作業存取權授權&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [授與物件和作業存取權&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_SSMS"></a> 使用 SQL Server Management Studio (SSMS) 連接  
  您可以使用 SSMS 連接至 Analysis Services，以互動方式管理伺服器執行個體和資料庫。 您也可以執行 XMLA 或 MDX 查詢，以執行管理工作或擷取資料。 相較於在傳送查詢時只會載入資料庫的其他工具和應用程式，SSMS 會在您連接到伺服器時載入所有資料庫，前提是您有權檢視資料庫。 這表示，如果您在伺服器上擁有許多表格式資料庫，當您使用 SSMS 連接時，所有資料庫都會載入系統記憶體中。  
@@ -59,7 +59,7 @@ ms.locfileid: "36037126"
   
 3.  驗證一定會是 Windows 驗證，而且使用者識別一定會是透過 Management Studio 連接的 Windows 使用者。  
   
-     為了要讓連接成功，您必須擁有存取伺服器或伺服器上之資料庫的權限。 您要在 Management Studio 中執行的大部分工作都需要管理權限， 因此請確定您所連接的帳戶為伺服器管理員角色的成員。 如需詳細資訊，請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)。  
+     為了要讓連接成功，您必須擁有存取伺服器或伺服器上之資料庫的權限。 您要在 Management Studio 中執行的大部分工作都需要管理權限， 因此請確定您所連接的帳戶為伺服器管理員角色的成員。 如需詳細資訊，請參閱 <<c0> [ 授與伺服器系統管理員權限&#40;Analysis Services&#41;](grant-server-admin-rights-to-an-analysis-services-instance.md)。</c0>  
   
 4.  按一下 [連接屬性] 指定特定的資料庫、設定逾時值或加密選項。 選擇性連接資訊包括只用於目前連接的連接屬性。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "36037126"
   
 ## <a name="see-also"></a>另請參閱  
  [連接到 Analysis Services](connect-to-analysis-services.md)   
- [Analysis Services 支援的驗證方法](authentication-methodologies-supported-by-analysis-services.md)   
+ [支援的 Analysis Services 的驗證方法](authentication-methodologies-supported-by-analysis-services.md)   
  [模擬&#40;SSAS 表格式&#41;](../tabular-models/impersonation-ssas-tabular.md)   
  [建立資料來源&#40;SSAS 多維度&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   

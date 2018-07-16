@@ -1,5 +1,5 @@
 ---
-title: 修改對應對話方塊 （採礦精確度圖表） |Microsoft 文件
+title: 修改對應對話方塊 （採礦精確度圖表） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.modifyconnections.f1
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b0bc54855c11b3e0bb3cfea36f1e577272d5c160
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c57fb7cd0ced32a6de3c898f343bb6e4b66796
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036910"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37171709"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>修改對應對話方塊 (採礦精確度圖表)
-  使用 **[修改對應]** 對話方塊可變更輸入資料行與採礦模型中的資料行聯結的方法。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將對應的資料行，會自動根據資料行名稱和資料類型，但您可以使用此對話方塊來變更資料行對應。 如果要進行變更，則必須確定外部資料來源中的資料行具有與所測試採礦模型中的資料行相符的資料類型和內容類型。  
+  使用 **[修改對應]** 對話方塊可變更輸入資料行與採礦模型中的資料行聯結的方法。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將對應會自動根據資料行名稱和資料類型的資料行，但您可以使用此對話方塊來變更資料行對應。 如果要進行變更，則必須確定外部資料來源中的資料行具有與所測試採礦模型中的資料行相符的資料類型和內容類型。  
   
 ## <a name="options"></a>選項。  
  **採礦結構資料行**  

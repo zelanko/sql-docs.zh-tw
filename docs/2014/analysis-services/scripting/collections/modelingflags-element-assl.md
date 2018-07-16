@@ -1,5 +1,5 @@
 ---
-title: ModelingFlags 元素 (ASSL) |Microsoft 文件
+title: ModelingFlags 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - ModelingFlags element
 ms.assetid: 83968c1e-aae8-4657-aa53-d971de0dc834
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 219b5b7dfc0ff50a1dfe5a49be69121925ce63ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bcaab47515c02a2ba40a6fb837309a7f5bed4308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147044"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37207908"
 ---
 # <a name="modelingflags-element-assl"></a>ModelingFlags 元素 (ASSL)
-  包含集合[ModelingFlag](../objects/modelingflag-element-assl.md)元素中的資料行的[MiningStructure](../objects/miningstructure-element-assl.md)或[MiningModel](../objects/miningmodel-element-assl.md)。  
+  包含的集合[ModelingFlag](../objects/modelingflag-element-assl.md)中的資料行的項目[MiningStructure](../objects/miningstructure-element-assl.md)或是[MiningModel](../objects/miningmodel-element-assl.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36147044"
 |子元素|[ModelingFlag](../objects/modelingflag-element-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MiningModelingFlags>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MiningModelingFlags>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

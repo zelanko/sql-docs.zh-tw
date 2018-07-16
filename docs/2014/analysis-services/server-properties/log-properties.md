@@ -1,5 +1,5 @@
 ---
-title: 記錄屬性 |Microsoft 文件
+title: 記錄屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
 - QueryLogTableName property
@@ -54,15 +54,15 @@ helpviewer_keywords:
 - LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 76a7f70754f211add486783019c1cd7bc7f5e24f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aee6f05c7d572f38c90754d2cf1996661d10f89d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295508"
 ---
 # <a name="log-properties"></a>記錄屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的記錄伺服器屬性。 如需有關其他伺服器屬性及如何設定伺服器屬性的詳細資訊，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
@@ -80,7 +80,7 @@ ms.locfileid: "36132956"
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
 ## <a name="error-log"></a>錯誤記錄檔  
- 您可以在伺服器執行個體層級設定這些屬性，以修改顯示在其他工具和設計師中之錯誤組態的預設值。 請參閱[Cube、 分割區和維度處理的錯誤組態&#40;SSAS-多維度&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)和<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>如需詳細資訊。  
+ 您可以在伺服器執行個體層級設定這些屬性，以修改顯示在其他工具和設計師中之錯誤組態的預設值。 請參閱[Cube、 分割區和維度處理的錯誤組態&#40;SSAS-多維度&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)並<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>如需詳細資訊。  
   
  **ErrorLog\ErrorLogFileName**  
  此屬性在伺服器執行處理作業期間，用來作為預設值。  
@@ -111,20 +111,20 @@ ms.locfileid: "36132956"
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  指定伺服器所採取的動作時`KeyNotFound`就會發生錯誤。 此錯誤的有效回應包括：  
   
--   `IgnoreError` 會要求伺服器繼續處理，但不記錄錯誤或將其計入索引鍵錯誤限制。 如果忽略錯誤，您僅允許繼續處理，而不將錯誤加入錯誤計數，或將其記錄至畫面或記錄檔。 有問題的記錄發生資料完整性問題，無法加入資料庫。 資料錄會被捨棄或彙總至未知的成員，取決於`KeyErrorAction`屬性。  
+-   `IgnoreError` 會要求伺服器繼續處理，但不記錄錯誤或將其計入索引鍵錯誤限制。 如果忽略錯誤，您僅允許繼續處理，而不將錯誤加入錯誤計數，或將其記錄至畫面或記錄檔。 有問題的記錄發生資料完整性問題，無法加入資料庫。 記錄會被捨棄或彙總至未知的成員，取決於`KeyErrorAction`屬性。  
   
 -   `ReportAndContinue` 告知伺服器應記錄錯誤並將其計數算入索引鍵錯誤限制，接著繼續處理。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
   
 -   `ReportAndStop` 告知伺服器應記錄錯誤並立即停止處理，而無視於索引鍵錯誤限制。 觸發錯誤的記錄會被捨棄，或是轉換成未知的成員。  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
- 指定伺服器在發現索引鍵重複狀況時所採取的動作。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
+ 指定伺服器在發現索引鍵重複狀況時所採取的動作。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`來記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
   
  **ErrorLog\ LogErrorTypes\NullKeyConvertedToUnknown**  
- 指定伺服器在 Null 索引鍵轉換為未知的成員時所採取的動作。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
+ 指定伺服器在 Null 索引鍵轉換為未知的成員時所採取的動作。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`來記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- 指定伺服器所採取的動作時`NullProcessing`設`Error`為維度屬性。 當給定的屬性中不允許 Null 值時，會產生錯誤。 此錯誤組態屬性會通知下一個步驟，也就是報告錯誤並繼續處理，直到達到錯誤限制為止。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
+ 指定伺服器所採取的動作時`NullProcessing`設為`Error`維度屬性。 當給定的屬性中不允許 Null 值時，會產生錯誤。 此錯誤組態屬性會通知下一個步驟，也就是報告錯誤並繼續處理，直到達到錯誤限制為止。 有效值包括`IgnoreError`如同未發生錯誤，繼續處理`ReportAndContinue`記錄錯誤並繼續處理，以及`ReportAndStop`來記錄錯誤並立即停止處理，即使錯誤計數未達錯誤限制。  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  此屬性在伺服器執行處理作業期間，用來作為預設值。  

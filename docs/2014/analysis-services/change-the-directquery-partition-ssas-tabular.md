@@ -1,5 +1,5 @@
 ---
-title: 變更 DirectQuery 資料分割 (SSAS 表格式) |Microsoft 文件
+title: 變更 DirectQuery 資料分割 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f9df1e66-dd23-41b4-95eb-af110d10eda4
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5c777c0ce70d06b979fbc26ac8f50df1bdbd858d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3115805cf5d6d8fabfa67100305f7bdffea1d339
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132313"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312678"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>變更 DirectQuery 資料分割 (SSAS 表格式)
   因為資料表中只有一個資料分割可以指定為 DirectQuery 資料分割，所以根據預設，Analysis Services 會使用資料表中建立的第一個資料分割。 在模型專案撰寫期間，您可以藉由使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]中的 [資料分割管理員] 對話方塊來變更 DirectQuery 資料分割。 如果是部署的模型，您可以使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]來變更 DirectQuery 資料分割。  

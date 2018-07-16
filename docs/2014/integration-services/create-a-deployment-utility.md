@@ -1,5 +1,5 @@
 ---
-title: 建立部署公用程式 |Microsoft 文件
+title: 建立部署公用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 caps.latest.revision: 49
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c7e51388856f6bbd63382410100b5655194ec3d6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09c39bccc82df8539fc419180465739cf1ed8054
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37273114"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   部署封裝的第一步是建立 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的部署公用程式。 部署公用程式是一個資料夾，包含在其他伺服器的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案中部署封裝所需的檔案。 部署公用程式在儲存 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案的電腦上建立。  
@@ -51,7 +51,7 @@ ms.locfileid: "36146136"
   
 3.  在 [\<專案名稱> 屬性頁] 對話方塊中，按一下 [部署公用程式]。  
   
-4.  若要在部署封裝時更新封裝組態，請設定**AllowConfigurationChanges**至`True`。  
+4.  若要部署封裝時更新封裝組態，請設定**AllowConfigurationChanges**至`True`。  
   
 5.  設定`CreateDeploymentUtility`至`True`。  
   

@@ -1,5 +1,5 @@
 ---
-title: MDSCHEMA_SETS 資料列集 |Microsoft 文件
+title: MDSCHEMA_SETS 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - MDSCHEMA_SETS rowset
 ms.assetid: abb00dc0-2b83-48d6-b2ba-6615c1488d06
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: edc33b87256fb680225eaaa087ff655be1b82851
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecc8167d697be2195c9ae44e214afcbc1f3a05b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146199"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275474"
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS 資料列集
   描述目前定義於資料庫中的任何集合，包括工作階段範圍集。  
@@ -45,7 +45,7 @@ ms.locfileid: "36146199"
 |`EXPRESSION`|`DBTYPE_WSTR`||集合的運算式。|  
 |`DIMENSIONS`|`DBTYPE_WSTR`||以逗號分隔的清單，其中列出集合中所包含的階層。|  
 |`SET_CAPTION`|`DBTYPE_WSTR`||與集合關聯的標籤或標題。 標籤或標題主要是供顯示之用。|  
-|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||識別用戶端應用程式用於顯示集合之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和用戶端所提供的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要提供多個顯示資料夾，請使用分號 （;） 來分隔資料夾。|  
+|`SET_DISPLAY_FOLDER`|`DBTYPE_WSTR`||識別用戶端應用程式用於顯示集合之顯示資料夾路徑的字串。 資料夾層級的分隔符號是由用戶端應用程式所定義。 工具和所提供的用戶端[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，反斜線 (\\) 為層級分隔符號。 若要提供多個顯示資料夾，請使用分號 （;） 來分隔資料夾。|  
 |`SET_EVALUATION_CONTEXT`|`DBTYPE_I4`||集合的內容。 集合可以是靜態的，也可以是動態的。<br /><br /> 此資料行可以有下列其中一個值：<br /><br /> -MDSET_RESOLUTION_STATIC = 1<br />-MDSET_RESOLUTION_DYNAMIC = 2|  
   
  資料列集會在 `CATALOG_NAME`、`SCHEMA_NAME` 和 `CUBE_NAME` 排序。  

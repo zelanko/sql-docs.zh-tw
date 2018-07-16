@@ -18,15 +18,15 @@ helpviewer_keywords:
 - reports [Reporting Services], integrating
 ms.assetid: 49eb539c-d89b-4291-839a-0ec1a65cd270
 caps.latest.revision: 56
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3a27e580a6558b6574b1bdb166f6bdbfb250f01c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 18c5e61ddd29b4f0c30eeb4e6fc856dda3276aa6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325568"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>將 Reporting Services 整合到應用程式
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 是開放且可延伸的報表平台，用以提供開發人員一組完整的 API 以開發方案。  
@@ -54,7 +54,7 @@ ms.locfileid: "36022341"
   
 ## <a name="see-also"></a>另請參閱  
  [報表管理員&#40;SSRS 原生模式&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [URL 存取和 SOAP 之間選擇](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
+ [URL 存取與 SOAP 之間選擇](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
  [技術參考 &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [報表伺服器 Web 服務](../report-server-web-service/report-server-web-service.md)  
   

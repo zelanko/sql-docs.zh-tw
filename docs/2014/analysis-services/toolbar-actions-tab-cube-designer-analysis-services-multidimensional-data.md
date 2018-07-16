@@ -1,5 +1,5 @@
 ---
-title: 工具列 （動作索引標籤，Cube 設計工具） (Analysis Services-多維度資料) |Microsoft 文件
+title: 工具列 （動作索引標籤，Cube 設計師） (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4ef65300-abce-43a6-8119-cb3f962dd564
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3742a1ad0eaa7b5423e6c87577e0d31d364d819c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3b1d1c13385660e498961cb697486e6771110735
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37275314"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>工具列 (動作索引標籤，Cube 設計工具) (Analysis Services - 多維度資料)
   使用 [工具列] 窗格，即可在 Cube 設計師的 [動作] 索引標籤上執行一般動作。  

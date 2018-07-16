@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e5f14bd16fa44247508ef04bf68d2d02c0503394
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c34c0764e0dd8b8eb64c9bf776a8ed071310fae3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036062"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290224"
 ---
 # <a name="saving-reports-report-builder"></a>儲存報表 (報表產生器)
   在報表產生器中，您可以將報表儲存到報表伺服器、SharePoint 文件庫、您具有寫入權限的檔案共用位置或是您的電腦上。 您可以將報表儲存到開啟它的相同位置，也可以儲存到另一個位置，或是以新的名稱儲存到相同或不同的位置。 根據預設，報表會重新儲存到開啟它的相同位置。 當您儲存報表時，您實際上儲存的是報表定義，報表定義會描述報表配置。 您不會儲存資料。 每當您執行報表時，便會重新整理報表資料，而且報表資料可能會與您上次執行報表時的資料不同。  
@@ -56,7 +56,7 @@ ms.locfileid: "36036062"
 
   
 ##  <a name="ExportingAndSavingReports"></a> 匯出與儲存報表  
- 若您要封存的報表數量很少，請考慮將報表匯出，並將它儲存成檔案。 在您將報表匯出至應用程式 (例如 PDF 或 Excel) 後，可以將它另存新檔，並放在網路上一個受保護的共用目錄下。 或者，如果您想要在報表伺服器資料庫中，保留報表的所有複本 (不論何種格式)，您可以將已經儲存的 PDF 或 Excel 檔案，做為資源項目進行上傳。 如需有關匯出報表的詳細資訊，請參閱[匯出報表&#40;報表產生器及 SSRS&#41; ](export-reports-report-builder-and-ssrs.md)和[上傳檔案或報表&#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)。  
+ 若您要封存的報表數量很少，請考慮將報表匯出，並將它儲存成檔案。 在您將報表匯出至應用程式 (例如 PDF 或 Excel) 後，可以將它另存新檔，並放在網路上一個受保護的共用目錄下。 或者，如果您想要在報表伺服器資料庫中，保留報表的所有複本 (不論何種格式)，您可以將已經儲存的 PDF 或 Excel 檔案，做為資源項目進行上傳。 如需有關匯出報表的詳細資訊，請參閱 <<c0> [ 匯出的報表&#40;報表產生器及 SSRS&#41; ](export-reports-report-builder-and-ssrs.md)並[上傳檔案或報表&#40;報表管理員&#41;](../reports/upload-a-file-or-report-report-manager.md)。</c0>  
   
 
   
@@ -81,10 +81,10 @@ ms.locfileid: "36036062"
 
   
 ## <a name="see-also"></a>另請參閱  
- [報表、 報表組件，以及報表定義&#40;報表產生器和 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [安裝、 解除安裝，以及報表產生器支援](../install-uninstall-and-report-builder-support.md)   
+ [報表、 報表組件，以及報表定義&#40;報表產生器及 SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [安裝、 解除安裝與報表產生器支援](../install-uninstall-and-report-builder-support.md)   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [將報表匯出&#40;報表產生器和 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
+ [匯出報表&#40;報表產生器及 SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [列印報表 &#40;報表產生器及 SSRS&#41;](print-reports-report-builder-and-ssrs.md)  
   
   

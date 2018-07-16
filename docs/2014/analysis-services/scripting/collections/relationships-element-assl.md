@@ -1,5 +1,5 @@
 ---
-title: Relationships 元素 (ASSL) |Microsoft 文件
+title: Relationships 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: e78882c9-b14e-4044-848e-ea7fddd3b75d
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 987b35a09670908e5604693c2b42b4a014d5eda6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2071ae26b20ee39b47115e4ada1695878631fc84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134011"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316948"
 ---
 # <a name="relationships-element-assl"></a>Relationships 元素 (ASSL)
   包含相關聯維度之關聯性的集合。  
@@ -54,7 +54,7 @@ ms.locfileid: "36134011"
 |子元素|[關聯性](../data-type/relationship-data-type-assl.md)|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中對應的元素是<xref:Microsoft.AnalysisServices.RelationshipCollection>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應項目<xref:Microsoft.AnalysisServices.RelationshipCollection>。  
   
 ## <a name="see-also"></a>另請參閱  
  [集合&#40;ASSL&#41;](collections-assl.md)  

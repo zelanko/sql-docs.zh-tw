@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - managing data in a table
 ms.assetid: a0fd21fc-87fa-42c3-a3ae-1fed24cdd692
 caps.latest.revision: 14
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fc4ffd0658e150e0fee8913f20d3e5cc02384f68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b152587ad63cd09281e61dcc746fd1dc18cda1b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037415"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297908"
 ---
 # <a name="summary-managing-data-in-a-hierarchical-table"></a>摘要：在階層式資料表中管理資料
   `hierarchyid` 資料類型可讓您輕鬆建立反映階層式資料的資料表，然後建立深度優先和廣度優先的索引，即可有效率地存取資料表。 使用階層式方法來查詢與操作資料。  

@@ -1,5 +1,5 @@
 ---
-title: 匯入從文字檔案 (SSAS 表格式) |Microsoft 文件
+title: 匯入來自文字檔案 (SSAS 表格式) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0723d7b079fef518f80d468f3a3a08c179a01fbd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f897668d21a9f213cf841a688f217a5ff1a9fe02
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022020"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310758"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>從文字檔匯入 (SSAS 表格式)
   您可以使用 [資料表匯入精靈]，從 Microsoft Excel 檔案和文字檔匯入資料。  

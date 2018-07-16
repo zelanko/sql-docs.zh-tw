@@ -1,5 +1,5 @@
 ---
-title: 變更字型色彩、 大小和樣式，在圖表 (Visual Database Tools) |Microsoft 文件
+title: 變更字型色彩、 大小和樣式，在圖表 (Visual Database Tools) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database diagrams [SQL Server], changing text size
 - text in database diagrams
 - appearance of database diagrams
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 caps.latest.revision: 9
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 96bd9cddc0821887982f26485f38be8370fba9c6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: a8ecb71fc2a9dce37bf3797da0326c16d5965afb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146234"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37232398"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>變更圖表中的字型色彩、大小及樣式 (Visual Database Tools)
   您可以透過變更字型色彩、大小及樣式，自訂資料庫圖表中文字的顯示方式。 進行修改後，這些變更就會套用至新的圖表以及現有的圖表。  

@@ -1,13 +1,11 @@
 ---
-title: 使用 Dataadapter 更新 UDT 資料行 |Microsoft 文件
+title: 使用 Dataadapter 更新 UDT 資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - data adapters [CLR integration]
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 683e1f82aaf76a21f20fed02b6be1c39347d7302
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 7a69065a293d5ffedba91308c9b4ac7c6d02b7c7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023130"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354870"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>以 DataAdapter 更新 UDT 資料行
   可藉由使用 `System.Data.DataSet` 和 `System.Data.SqlClient.SqlDataAdapter` 擷取與修改資料，以支援使用者定義型別 (UDT)。  
@@ -90,9 +88,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  下列 ADO.NET 範例有兩個方法：  
   
--   `UserProvidedCommands`其中會示範如何提供`InsertCommand`， `UpdateCommand`，和`DeleteCommand`物件更新`Point`UDT 中的**點**資料表 (不含`timestamp`資料行)。  
+-   `UserProvidedCommands`其中會示範如何提供`InsertCommand`， `UpdateCommand`，和`DeleteCommand`更新的物件`Point`中的 UDT**點**資料表 (不含`timestamp`資料行)。  
   
--   `CommandBuilder`其中會示範如何使用`SqlCommandBuilder`中**Points_ts**資料表，其中包含`timestamp`資料行。  
+-   `CommandBuilder`其中示範如何使用`SqlCommandBuilder`中**Points_ts**資料表，其中包含`timestamp`資料行。  
   
 ```vb  
 Imports System  

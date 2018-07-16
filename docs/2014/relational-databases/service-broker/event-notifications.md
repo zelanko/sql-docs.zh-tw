@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-notifications
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e52a31296cee16b8580d08bc4eaf016f9d0cc3e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305108"
 ---
 # <a name="event-notifications"></a>事件通知
   事件通知會傳送事件的詳細資訊給 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 服務。 事件通知會將這些事件的資訊傳送給 [!INCLUDE[tsql](../../includes/tsql-md.md)] 服務，以回應各種 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 資料定義語言 (DDL) 陳述式和 SQL 追蹤事件。  
@@ -55,7 +54,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>事件通知概念  
  建立事件通知時，會在 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 執行個體與您所指定的目標服務之間開啟一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 交談。 交談通常會維持開啟狀態，只要事件通知是以伺服器執行個體上的物件存在即可。 在某些錯誤的例子中，可以在卸除事件通知之間先關閉交談。 這些交談永遠不會在事件通知之間共用。 每個事件通知都有自己獨佔的交談。 明確地結束交談可防止目標服務再收到訊息，而且在下次事件通知引發之前都不會再重新開啟交談。  
   
- 事件資訊傳遞至[!INCLUDE[ssSB](../../includes/sssb-md.md)]服務型別的變數`xml`提供相關事件的發生時，受影響的資料庫物件的相關資訊[!INCLUDE[tsql](../../includes/tsql-md.md)]批次陳述式，以及其他資訊。 如需事件通知所產生之 XML 結構描述的詳細資訊，請參閱 [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
+ 事件資訊傳遞給[!INCLUDE[ssSB](../../includes/sssb-md.md)]服務類型的變數`xml`提供有關事件的發生時，受影響的資料庫物件的相關資訊[!INCLUDE[tsql](../../includes/tsql-md.md)]批次陳述式，以及其他資訊。 如需事件通知所產生之 XML 結構描述的詳細資訊，請參閱 [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)。  
   
 ### <a name="event-notifications-vs-triggers"></a>事件通知與 觸發程序  
  下表比較觸發程序和事件通知的異同。  
@@ -63,7 +62,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |觸發程序|事件通知|  
 |--------------|-------------------------|  
 |DML 觸發程序回應資料管理語言 (DML) 事件。 DDL 觸發程序回應資料定義語言 (DDL) 事件。|事件通知可回應 DDL 事件和 SQL 追蹤事件的子集。|  
-|觸發程序可以執行 Transact-SQL 或 Common Language Runtime (CLR) Managed 程式碼。|事件通知不會執行程式碼。 相反的傳送`xml`訊息給 Service Broker 服務。|  
+|觸發程序可以執行 Transact-SQL 或 Common Language Runtime (CLR) Managed 程式碼。|事件通知不會執行程式碼。 相反，它們可以傳送`xml`訊息給 Service Broker 服務。|  
 |觸發程序會在引發它們的交易範圍內同步處理觸發程序。|事件通知可以非同步處理，而且不會在引發它們的交易範圍中執行。|  
 |觸發程序的取用者與引發它的事件緊密繫結在一起。|事件通知的取用者與引發它的事件分離。|  
 |觸發程序必須在本機伺服器上處理。|事件通知可以在遠端伺服器上處理。|  
@@ -71,7 +70,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DML 觸發程序名稱是由結構描述限定範圍。 DML 觸發程序名稱是以資料庫或伺服器限定範圍。|事件通知名稱是以伺服器或資料庫限定範圍。 在 QUEUE_ACTIVATION 事件上的事件通知是限定成特定的佇列。|  
 |DML 觸發程序是由套用觸發程序的資料表之相同擁有者所擁有。|佇列上的事件通知擁有者，有可能與套用事件通知的物件具有不同的擁有者。|  
 |觸發程序支援 EXECUTE AS 子句。|事件通知不支援 EXECUTE AS 子句。|  
-|DDL 觸發程序事件資訊可以使用 EVENTDATA 函數，它會傳回擷取`xml`資料型別。|事件通知會傳送`xml`事件資訊給 Service Broker 服務。 資訊將格式化成與 EVENTDATA 函數相同的結構描述。|  
+|DDL 觸發程序的事件資訊可以使用 EVENTDATA 函數，以傳回擷取`xml`資料型別。|事件通知會傳送`xml`事件資訊給 Service Broker 服務。 資訊將格式化成與 EVENTDATA 函數相同的結構描述。|  
 |與觸發程序相關的中繼資料可在 **sys.triggers** 與 **sys.server_triggers** 目錄檢視中找到。|與事件通知相關的中繼資料可在 **sys.event_notifications** 與 **sys.server_event_notifications** 目錄檢視中找到。|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>事件通知與 SQL 追蹤  

@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_OBJECT_ACTIVITY 資料列集 |Microsoft 文件
+title: DISCOVER_OBJECT_ACTIVITY 資料列集 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - DISCOVER_OBJECT_ACTIVITY rowset
 ms.assetid: 100f7de1-ad5c-4973-b863-3c10df1245c4
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5ab904cff026149194c3bd2d242ab448da4be89
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 09aec1da2c7e9001585b0793b12f0faf89feaf27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146383"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37235698"
 ---
 # <a name="discoverobjectactivity-rowset"></a>DISCOVER_OBJECT_ACTIVITY 資料列集
   提供每個物件自從服務啟動之後的資源使用量資訊。  

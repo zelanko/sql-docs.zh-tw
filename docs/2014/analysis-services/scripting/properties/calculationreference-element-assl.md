@@ -1,5 +1,5 @@
 ---
-title: CalculationReference 元素 (ASSL) |Microsoft 文件
+title: CalculationReference 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CalculationReference element
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19d96e9f589a9a83d4d31c5b7b1dfb9c37f29633
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: aace0256c454505e07b4226efc63da0d5d3581c7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037100"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37224058"
 ---
 # <a name="calculationreference-element-assl"></a>CalculationReference 元素 (ASSL)
   包含命名的集或導出資料格所參考的名稱[CalculationProperty](../objects/calculationproperty-element-assl.md)。  
@@ -64,7 +64,7 @@ ms.locfileid: "36037100"
 ## <a name="remarks"></a>備註  
  如果 `CalculationReference` 的值與現有命名集或導出資料格定義的名稱不符，就會忽略 `CalculationReference`。  
   
- 對應目的父代的項目`CalculationReference`在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.CalculationProperty>。  
+ 對應至父系的元素`CalculationReference`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CalculationProperty>。  
   
 ## <a name="see-also"></a>另請參閱  
  [CalculationProperties 元素&#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

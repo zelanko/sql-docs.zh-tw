@@ -1,5 +1,5 @@
 ---
-title: 指定定型資料 （資料採礦精靈） |Microsoft 文件
+title: 指定定型資料 （資料採礦精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6c6239831cc1e53ba1925b022d310f5cef907e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f32fe8718acdfbb16e549154ff030ca493f2768c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134247"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291424"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>指定培訓資料 (資料採礦精靈)
   使用 [指定定型資料] 頁面，即可識別要在採礦結構中包含什麼資料行。 您可以選取要包含在結構中的資料行，即使不會在所有模型中使用也是如此。 例如，如果想要從採礦模型鑽研資料行，則可將這些資料行包含在結構中 (而非模型中)。  
@@ -71,6 +71,6 @@ ms.locfileid: "36134247"
  [資料採礦精靈 F1 說明&#40;Analysis Services-資料採礦&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [建議相關資料行&#40;資料採礦精靈&#41;](suggest-related-columns-data-mining-wizard.md)   
  [指定資料表類型&#40;資料採礦精靈&#41;](specify-table-types-data-mining-wizard.md)   
- [指定資料行的內容和資料型別&#40;資料採礦精靈&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+ [指定資料行的內容和資料類型&#40;資料採礦精靈&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   

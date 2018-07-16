@@ -1,13 +1,11 @@
 ---
-title: 建立使用者定義型別 |Microsoft 文件
+title: 建立使用者定義型別 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -17,15 +15,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b832d8191cd153f5f11af88263f4ecbeb1021ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032791"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350970"
 ---
 # <a name="creating-a-user-defined-type"></a>建立使用者定義型別
   若要建立可在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中安裝的使用者定義型別 (UDT)，您必須先以其中一種受支援的 .NET Framework 程式語言 (例如 Visual C# 或 Visual Basic)，建立符合建立 UDT 之規格的類別。 然後，您就可以將此類別編譯為可載入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的動態連結程式庫 (DLL)。 您也可以使用 Visual Studio 來建立和部署 UDT。  
@@ -41,11 +39,11 @@ Reconfigure
  [使用者定義型別需求](creating-user-defined-types-requirements.md)  
  說明撰寫使用者定義型別之程式碼的需求。  
   
- [使用者定義型別撰寫程式碼](creating-user-defined-types-coding.md)  
+ [編碼使用者定義型別](creating-user-defined-types-coding.md)  
  示範建立使用者定義型別所涉及的程式碼撰寫技巧。  
   
 ## <a name="example"></a>範例  
- 下列程式碼清單會定義 Point UDT，詳細資料中所述[撰寫類型](creating-user-defined-types-coding.md)。  
+ 下列程式碼清單會定義 Point UDT，詳細資料中所述[< 類型](creating-user-defined-types-coding.md)。  
   
  藉由安裝 CLR 範例，可取得本節所討論之其他範例的完整程式碼清單。 如需有關安裝這些範例的指示，請參閱[SQL Server Database Engine 範例](http://msftengprodsamples.codeplex.com/)。  
   

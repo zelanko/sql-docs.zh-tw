@@ -1,5 +1,5 @@
 ---
-title: 羅吉斯迴歸模型查詢範例 |Microsoft 文件
+title: 羅吉斯迴歸模型查詢範例 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - content queries [DMX]
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b079609e6d2df8d104b3430488ae37ac0e9ea179
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8f908b029074e58866f51dbd7deff571763e11b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37189595"
 ---
 # <a name="logistic-regression-model-query-examples"></a>羅吉斯迴歸模型查詢範例
   當您針對資料採礦模型建立查詢時，可以建立內容查詢來提供有關分析期間所發現之模式的詳細資料，也可以建立預測查詢來使用模型中的模式，透過新的資料進行預測。  
@@ -95,12 +95,12 @@ FROM [TM_Logistic Regression].CONTENT
   
 |t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Age|Missing|0|0|0|@shouldalert|  
-|Age|45.43491192|17484|@shouldalert|126.9544114|3|  
-|Bike Buyer|Missing|0|0|0|@shouldalert|  
+|Age|Missing|0|0|0|1|  
+|Age|45.43491192|17484|1|126.9544114|3|  
+|Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|@shouldalert|8615|0.492736216|0|4|  
-|Commute Distance|Missing|0|0|0|@shouldalert|  
+|Bike Buyer|1|8615|0.492736216|0|4|  
+|Commute Distance|Missing|0|0|0|1|  
 |Commute Distance|5-10 英哩|3033|0.173472889|0|4|  
   
  實際查詢會傳回更多資料列，但是，這個範例說明關於輸入所提供之資訊的類型。 若為離散輸入，每個可能值都會列在資料表中。 若為連續值輸入 (例如 Age)，就無法列出完整清單，因此輸入會離散化為平均值。 如需如何使用臨界統計資料節點中資訊的詳細資訊，請參閱[羅吉斯迴歸模型的採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-for-logistic-regression-models.md)。  
@@ -161,7 +161,7 @@ NATURAL PREDICTION JOIN
   
 6.  在 [採礦結構] 索引標籤中，以滑鼠右鍵按一下 Service Grade 的資料行，然後選取 [屬性]。  
   
-7.  變更`Content`屬性從**連續**至**Discretized**。 變更`DiscretizationMethod`屬性**叢集**。 針對 DiscretizationBucketCount 輸入 **3**。  
+7.  變更`Content`屬性從**連續**要**Discretized**。 變更`DiscretizationMethod`屬性，以**叢集**。 針對 DiscretizationBucketCount 輸入 **3**。  
   
     > [!NOTE]  
     >  這些參數只用來說明此程序，並不一定會產生有效的模型。  
@@ -201,7 +201,7 @@ NATURAL PREDICTION JOIN
 |[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|確定某個節點是否為模型中另一個節點的子系。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|傳回指定狀態的已調整機率。|  
 |[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|傳回指定之資料行的一個或一組預測值。|  
-|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回指定狀態的機率。|  
+|[[Predictprobability] &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|傳回指定狀態的機率。|  
 |[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|傳回預測值的標準差。|  
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|傳回指定狀態的支援值。|  
 |[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|傳回指定之資料行的變異數。|  

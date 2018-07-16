@@ -1,5 +1,5 @@
 ---
-title: 關鍵效能指標 (Kpi) 多維度模型中的 |Microsoft 文件
+title: 關鍵效能指標 (Kpi) 多維度模型中的 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - viewing Key Performance Indicators
 - Key Performance Indicators [Analysis Services]
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - child KPIs
 ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 514fa1de69baefeb6c05d8145be71b4f201b953b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2d9d138805673defca5c1910b32ebeb9c998f7e8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304708"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多維度模型中的關鍵效能指標 (KPI)
   在商務用語中，關鍵效能指標 (KPI) 是量測商務成就的可量化度量。  
@@ -51,7 +51,7 @@ ms.locfileid: "36132525"
 |詞彙|定義|  
 |----------|----------------|  
 |目標|會傳回 KPI 目標值的 MDX 數值運算式或計算。|  
-|ReplTest1|會傳回實際 KPI 值的 MDX 數值運算式。|  
+|值|會傳回實際 KPI 值的 MDX 數值運算式。|  
 |[狀態]|代表特定時間點之 KPI 狀態的 MDX 運算式。<br /><br /> 狀態 MDX 運算式應傳回介於 -1 和 1 之間的正規化值。 等於或小於 -1 的值將解譯為「不良」或「低」。 零值 (0) 會解釋為「可接受」或「中」。 等於或大於 1 的值將解譯為「很好」或「高」。<br /><br /> 可以選擇性地傳回無限數量的中繼值，而且如果用戶端應用程式支援的話，也可用來顯示任意數量的其他狀態。|  
 |趨勢|評估一段時間後之 KPI 值的 MDX 運算式。 趨勢可以是在特定商務內容中任何有意義且以時間為基礎的準則。<br /><br /> 趨勢 MDX 運算式可讓商務使用者判斷經過一段時間之後，KPI 是提升還是降低。|  
 |狀態指標|快速表示 KPI 狀態的視覺元素。 元素的顯示取決於用來評估狀態的 MDX 運算式值。|  

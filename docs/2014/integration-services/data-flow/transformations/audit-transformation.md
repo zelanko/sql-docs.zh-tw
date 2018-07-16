@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittrans.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6e820eeb28440f18ce1f033d66c4fc7d9366be41
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4cbe349fb83fea587874271c340853f8f38d2197
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037070"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37176125"
 ---
 # <a name="audit-transformation"></a>稽核轉換
   稽核轉換可讓封裝中的資料流程包含有關封裝執行的環境資料。 例如，可以將封裝、電腦與操作員的名稱加入資料流程。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 包括提供此資訊的系統變數。  
@@ -35,7 +35,7 @@ ms.locfileid: "36037070"
 |系統變數|索引|描述|  
 |---------------------|-----------|-----------------|  
 |`ExecutionInstanceGUID`|0|識別封裝執行執行個體的 GUID。|  
-|`PackageID`|@shouldalert|封裝的唯一識別碼。|  
+|`PackageID`|1|封裝的唯一識別碼。|  
 |`PackageName`|2|封裝名稱。|  
 |`VersionID`|3|封裝的版本。|  
 |`ExecutionStartTime`|4|封裝開始執行的時間。|  

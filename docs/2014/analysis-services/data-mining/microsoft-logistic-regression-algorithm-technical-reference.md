@@ -1,5 +1,5 @@
 ---
-title: Microsoft 羅吉斯迴歸演算法技術參考 |Microsoft 文件
+title: Microsoft 羅吉斯迴歸演算法技術參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - MAXIMUM_INPUT_ATTRIBUTES parameter
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: accf5f68267c4e66b2becac0f03c6bc4548b4ae5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f211c048acff10e3e9509beebc909ee141ba56a5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317463"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 羅吉斯迴歸演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 羅吉斯迴歸演算法是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 類神經網路演算法的演變，其中 *HIDDEN_NODE_RATIO* 參數設為 0。 此設定會建立不包含隱藏層的類神經網路模型，而這相等於羅吉斯迴歸。  
@@ -40,7 +40,7 @@ ms.locfileid: "36131427"
   
  x 軸包含輸入資料行的值。 y 軸包含可預測資料行成為一個狀態或另一個狀態的機率。 其問題在於，即使 0 和 1 是資料行的最大值和最小值，但線性迴歸並不限制資料行介於 0 和 1 之間。 解決此問題的方式之一是執行羅吉斯迴歸。 羅吉斯迴歸分析不建立直線，而是建立「S」形曲線來包含最大和最小條件約束。 例如，下列圖表說明您如果對先前範例所使用的相同資料執行羅吉斯迴歸會達到的結果。  
   
- ![資料模型化使用羅吉斯迴歸](../media/logistic-regression.gif "使用羅吉斯迴歸模型的資料")  
+ ![資料模型化使用羅吉斯迴歸](../media/logistic-regression.gif "資料建立使用羅吉斯迴歸模型")  
   
  請注意，曲線絕不能高於 1 或低於 0。 您可以使用羅吉斯迴歸來描述哪些輸入資料行在決定可預測資料行的狀態時很重要。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "36131427"
  所有 Analysis Services 資料採礦演算法都會自動使用特徵選取來改善分析並減少處理的負載。 在羅吉斯迴歸模型中，特徵選取所使用的方法取決於屬性的資料類型。 羅吉斯迴歸是以 Microsoft 類神經網路演算法為基礎，因此，它會使用適用於類神經網路的特徵選取方法子集。 如需詳細資訊，請參閱[特徵選取 &#40;資料採礦&#41;](feature-selection-data-mining.md)。  
   
 ### <a name="scoring-inputs"></a>計分輸入  
- 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程序可讓您*分數*，或比較，不論值之間的差異，每個輸入的重要性。  
+ 在類神經網路模型或羅吉斯迴歸模型的內容中，「計分」表示一種程序，會將資料中出現的值轉換為使用相同小數位數的一組值，因此可以互相比較。 例如，假設 Income 輸入的範圍是 0 到 100,000，而 [Number of Children] 輸入的範圍是 0 到 5。 此轉換程序可讓您*分數*，或比較，不論值的差異的每個輸入的重要性。  
   
  對於出現在定型集中的每個狀態，模型都會產生一個輸入。 對於離散或離散化的輸入，如果在定型集中至少出現一次遺漏狀態，則會建立其他輸入來代表「遺漏」狀態。 至於連續輸入，最多會建立兩個輸入節點：一個用於「遺漏」值 (如果出現在定型資料中)，而另一個輸入則用於所有現有的值或非 Null 值。 每個輸入會調整為數值的格式使用 z-score 正規化方法，(x – μ） / 標準差。  
   

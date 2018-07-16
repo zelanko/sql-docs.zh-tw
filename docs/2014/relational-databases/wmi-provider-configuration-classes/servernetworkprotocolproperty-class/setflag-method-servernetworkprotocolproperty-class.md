@@ -1,5 +1,5 @@
 ---
-title: SetFlag 方法 （ServerNetworkProtocolProperty 類別） |Microsoft 文件
+title: SetFlag 方法 （ServerNetworkProtocolProperty 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SetFlag method
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 285e00e7f4f8c7b640523d76f9bd9dc96f68d4e1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: be1c1ce569ccc68965106950f4371807cc88991e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134895"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296188"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>SetFlag 方法 (ServerNetworkProtocolProperty 類別)
   設定參考之屬性的旗標。  
@@ -46,7 +46,7 @@ BoolValue
   
 ## <a name="parts"></a>組件  
  *object*  
- [ServerNetworkProtocolProperty 類別] servernetworkprotocolproperty-class.md) 表示的執行個體上網路通訊協定的屬性物件[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ [ServerNetworkProtocolProperty 類別] servernetworkprotocolproperty-class.md) 物件，表示執行個體上網路通訊協定的屬性[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 #### <a name="parameters"></a>參數  
   
