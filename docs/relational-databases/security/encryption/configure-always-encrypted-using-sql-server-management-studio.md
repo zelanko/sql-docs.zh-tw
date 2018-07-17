@@ -3,7 +3,6 @@ title: 使用 SQL Server Management Studio 設定 Always Encrypted | Microsoft D
 ms.custom: ''
 ms.date: 11/30/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: security
@@ -16,17 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Always Encrypted, configure with SSMS
 ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b9a96caf26665ae2c51d64a55df14d3f91e3488
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 7b72dca20aaa566f8bb6630931fc656ee6231182
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697929"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180445"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
