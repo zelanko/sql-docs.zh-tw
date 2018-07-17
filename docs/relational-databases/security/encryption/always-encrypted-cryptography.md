@@ -3,7 +3,6 @@ title: Always Encrypted 密碼編譯 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: security
@@ -12,17 +11,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-caps.latest.revision: 11
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44c1b31a59c804bfea3f2515591a6f87f6c07e71
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 44f5b03dca9d6c1ba852ac90d3a3949894dbc0a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698149"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243608"
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

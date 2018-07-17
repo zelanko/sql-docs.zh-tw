@@ -13,16 +13,16 @@ helpviewer_keywords:
 - security [SQL Server], logins and users
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69b990c6934eccd4045daceec7ab4c08b3f4d634
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4fae179df5681a3b277c470c2d00767bad2aa517
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703469"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942984"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>管理登入、使用者與結構描述的使用說明主題
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

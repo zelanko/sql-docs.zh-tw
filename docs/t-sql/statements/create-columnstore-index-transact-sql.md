@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -30,16 +29,16 @@ helpviewer_keywords:
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 caps.latest.revision: 76
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34236139"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787762"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -319,13 +318,13 @@ ON
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層、標準層 (S3 和以上)，以及所有 VCore 優惠層的叢集資料行存放區索引)   
+-   nvarchar(max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層、標準層 (S3 和以上)，以及所有 VCore 供應項目層的叢集資料行存放區索引)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層、標準層 (S3 和以上)，以及所有 VCore 優惠層的叢集資料行存放區索引)
+-   varchar(max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層、標準層 (S3 和以上)，以及所有 VCore 供應項目層的叢集資料行存放區索引)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary (max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層的 Azure SQL Database、標準層 (S3 和以上)，以及所有 VCore 優惠層的叢集資料行存放區索引)
+-   varbinary (max)  (僅適用於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 和進階層的 Azure SQL Database、標準層 (S3 和以上)，以及所有 VCore 供應項目層的叢集資料行存放區索引)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier (適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和更新的版本)
   
@@ -348,7 +347,7 @@ ON
 -   無法使用 **ALTER INDEX** 陳述式加以變更。 若要變更非叢集索引，您必須先卸除再重新建立資料行存放區索引。 您可以使用 **ALTER INDEX** 來停用並重建資料行存放區索引。  
 -   無法使用 **INCLUDE** 關鍵字來建立。  
 -   不可包含 **ASC** 或 **DESC** 關鍵字來排序索引。 資料行存放區索引是依據壓縮演算法來排序。 遞增或遞減排序會取消許多效能優點。  
--   無法在非叢集資料行存放區索引中包含類型 nvarchar(max)、varchar(max), 和 varbinary(max) 的大型物件 (LOB) 資料行。 僅叢集資料行存放區索引支援 LOB 類型，開始於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版和設定於進階層的 Azure SQL Database、標準層 (S3 和以上)，以及所有 VCore 優惠層。 請注意，先前的版本不支援叢集和非叢集資料行存放區索引中的 LOB 類型。
+-   無法在非叢集資料行存放區索引中包含類型 nvarchar(max)、varchar(max), 和 varbinary(max) 的大型物件 (LOB) 資料行。 僅叢集資料行存放區索引支援 LOB 類型，開始於 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 版和設定於進階層的 Azure SQL Database、標準層 (S3 和以上)，以及所有 VCore 供應項目層。 請注意，先前的版本不支援叢集和非叢集資料行存放區索引中的 LOB 類型。
 
 
  **資料行存放區索引無法與下列功能結合：**  

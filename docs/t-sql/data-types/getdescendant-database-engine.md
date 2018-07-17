@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - GetDescendant [Database Engine]
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d8c18e3bcc92147de0483ebcf7f0136ef39a053a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fea2cf85ab38bfad67801b9ca3e5bfcd3f6297c
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053695"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37406947"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

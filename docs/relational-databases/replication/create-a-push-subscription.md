@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 464fe19b441009e8a619cea6e478866890b19e8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f66fd7e355b453fc2d00a775c0a244b04763d19e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957113"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349980"
 ---
 # <a name="create-a-push-subscription"></a>建立發送訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "32957113"
   
     -   針對合併式發行集的訂閱，請於 **[合併代理程式安全性]** 頁面指定認證。  
   
-     如需有關各代理程式需要的權限資訊，請參閱＜ [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
+     如需有關各代理程式需要的權限資訊，請參閱＜ [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)＞。  
   
 -   指定同步處理排程，以及訂閱者要初始化的時間。  
   
@@ -130,11 +129,11 @@ ms.locfileid: "32957113"
   
     -   **@subscription_priority**＞。 指定主訂閱的訂閱優先權 (從**0.00** 到 **99.99**)。  
   
-         如需詳細資訊，請參閱＜ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)＞。  
+         如需詳細資訊，請參閱 [進階合併式複寫衝突偵測與解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)。  
   
 3.  在發行集資料庫的「發行者」上，執行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定下列項目：  
   
-    -   將 **@subscriber**或 Replication Management Objects (RMO) 來建立 **@subscriber_db**和 **@publication** 參數。  
+    -   將 **@subscriber**或 Replication Management Objects (RMO)，在 **@subscriber_db**和 **@publication** 參數。  
   
     -   Windows 認證，「散發者」上的「合併代理程式」執行時會針對 **@job_login** ，並將 **@job_password**＞。  
   
@@ -190,7 +189,7 @@ ms.locfileid: "32957113"
   
     -   將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，並將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) 欄位，為「散發代理程式」在「散發者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到「散發者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
   
-        > **注意**：當訂閱是由 **sysadmin** 固定伺服器角色的成員建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但還是建議您加以設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        > **注意**：當訂閱是由 **sysadmin** 固定伺服器角色的成員建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但還是建議您加以設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
     -   (選擇性) **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值 (預設值)，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false**，則只能以程式設計的方式同步處理訂閱。  
   
@@ -198,7 +197,7 @@ ms.locfileid: "32957113"
   
 8.  呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。  
   
-    > **重要！** 利用遠端「散發者」來建立「發行者」上的發送訂閱時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 都會以純文字的方式傳給「散發者」。 您應該先加密「發行者」及其遠端「散發者」之間的連接，再呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
+    > **重要！** 利用遠端「散發者」來建立「發行者」上的發送訂閱時，提供給所有屬性的值 (包括 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>) 都會以純文字的方式傳給「散發者」。 您應該先加密「發行者」及其遠端「散發者」之間的連線，然後再呼叫 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 方法。 如需詳細資訊，請參閱[啟用 Database Engine 的加密連接 &#40;SQL Server 組態管理員&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)。  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>若要建立合併式發行集的發送訂閱  
   
@@ -228,7 +227,7 @@ ms.locfileid: "32957113"
   
     -   將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> ，並將 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> (或 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> ) 欄位，為「散發代理程式」在「散發者」上執行時所使用的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 帳戶提供認證。 此帳戶用於建立到「散發者」的本機連接，以及使用「Windows 驗證」建立遠端連接。  
   
-        > **注意**：當訂閱是由 **sysadmin** 固定伺服器角色的成員建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但還是建議您加以設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)。  
+        > **注意**：當訂閱是由 **sysadmin** 固定伺服器角色的成員建立時，不需要設定 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>，但還是建議您加以設定。 在這種情況下，代理程式會模擬「SQL Server Agent」帳戶。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
     -   (選擇性) **@value** 的 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 值 (預設值)，以建立用於同步處理訂閱的代理程式作業。 如果指定 **false**，則只能以程式設計的方式同步處理訂閱。  
   
