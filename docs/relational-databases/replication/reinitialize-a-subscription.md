@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7f6fc92335de75aa6ccbf18814b262ee17cec890
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c8fd8479cc560a532c9150f4c32f16fd8524a8e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964733"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352230"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "32964733"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>重新初始化交易式發行集的提取訂閱  
   
-1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md)。 指定 **@publisher**或 Replication Management Objects (RMO)，在 **@publisher_db**和 **@publication**取得。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
+1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md)。 指定 **@publisher**或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db**和 **@publication**資料夾中可用。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
   
 2.  (選擇性) 在訂閱者上啟動散發代理程式，以同步處理此訂閱。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)。  
   
@@ -122,11 +121,11 @@ ms.locfileid: "32964733"
   
 1.  在發行者端，執行 [sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md)。 指定 **@publication**或 Replication Management Objects (RMO) 來重新初始化 **@subscriber**和 **@destination_db**資料夾中可用。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
   
-2.  (選擇性) 在散發者上啟動散發代理程式，以同步處理此訂閱。 如需詳細資訊，請參閱 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+2.  (選擇性) 在散發者上啟動散發代理程式，以同步處理此訂閱。 如需詳細資訊，請參閱 [同步處理發送訂閱](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的提取訂閱  
   
-1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)。 指定 **@publisher**或 Replication Management Objects (RMO)，在 **@publisher_db**和 **@publication**取得。 若要在重新初始化發生之前從訂閱者上傳變更，請針對 **@upload_first** @upload_first **@upload_first**資料夾中可用。 這樣會標示此訂閱，在下次執行合併代理程式時重新初始化。  
+1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md)。 指定 **@publisher**或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db**和 **@publication**資料夾中可用。 若要在重新初始化發生之前從訂閱者上傳變更，請針對 **@upload_first** @upload_first **@upload_first**資料夾中可用。 這樣會標示此訂閱，在下次執行合併代理程式時重新初始化。  
   
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
@@ -140,7 +139,7 @@ ms.locfileid: "32964733"
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
   
-2.  (選擇性) 在散發者上啟動合併代理程式，以同步處理此訂閱。 如需詳細資訊，請參閱 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
+2.  (選擇性) 在散發者上啟動合併代理程式，以同步處理此訂閱。 如需詳細資訊，請參閱 [同步處理發送訂閱](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>在建立新的合併式發行集時，設定重新初始化原則  
   

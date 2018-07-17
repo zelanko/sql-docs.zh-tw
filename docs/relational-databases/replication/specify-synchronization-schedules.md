@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +20,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05e5e55f02573bc73ac13a411ebb03671bf9bba2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36a8f87973096213c11cc9df8cd880c0928a5b88
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964803"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358320"
 ---
 # <a name="specify-synchronization-schedules"></a>指定同步處理排程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -172,25 +171,25 @@ ms.locfileid: "32964803"
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>針對交易式發行集的提取訂閱定義同步排程  
   
-1.  建立交易式發行集的新提取訂閱。 如需詳細資訊，請參閱 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  建立交易式發行集的新提取訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 2.  在訂閱者端，執行 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 **@publisher**或 Replication Management Objects (RMO)，在 **@publisher_db**或 Replication Management Objects (RMO)，在 **@publication**以及針對 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_name **@job_name** ＞與＜ **@password**＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的散發代理程式作業定義排程。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>針對交易式發行集的發送訂閱定義同步排程  
   
-1.  建立交易式發行集的新發送訂閱。 如需詳細資訊，請參閱 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  建立交易式發行集的新發送訂閱。 如需詳細資訊，請參閱 [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 2.  在訂閱者端，執行 [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)。 指定 **@subscriber**或 Replication Management Objects (RMO)，在 **@subscriber_db**或 Replication Management Objects (RMO)，在 **@publication**以及針對 **@job_name** ＞與＜ **@password**＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的散發代理程式作業定義排程。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>針對合併式發行集的提取訂閱定義同步排程  
   
-1.  建立合併式發行集的新提取訂閱。 如需詳細資訊，請參閱 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  建立合併式發行集的新提取訂閱。 如需詳細資訊，請參閱 [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 2.  在訂閱者上，執行 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 指定 **@publisher**或 Replication Management Objects (RMO)，在 **@publisher_db**或 Replication Management Objects (RMO)，在 **@publication**以及針對 **@job_name** ＞與＜ **@password**＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的合併代理程式作業定義排程。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>針對合併式發行集的發送訂閱定義同步排程  
   
-1.  建立合併式發行集的新發送訂閱。 如需詳細資訊，請參閱 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)。  
+1.  建立合併式發行集的新發送訂閱。 如需詳細資訊，請參閱 [建立發送訂閱](../../relational-databases/replication/create-a-push-subscription.md)。  
   
 2.  在訂閱者上，執行 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)。 指定 **@subscriber**或 Replication Management Objects (RMO)，在 **@subscriber_db**或 Replication Management Objects (RMO)，在 **@publication**以及針對 **@job_name** ＞與＜ **@password**＞。 指定以上詳述的同步處理參數，這些參數會針對同步處理訂閱的合併代理程式作業定義排程。  
   
@@ -233,7 +232,7 @@ ms.locfileid: "32964803"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>當您建立交易式發行集的提取訂閱時，定義複寫代理程式排程  
   
-1.  為您所建立的訂閱建立 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 類別的執行個體。 如需詳細資訊，請參閱 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  為您所建立的訂閱建立 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 類別的執行個體。 如需詳細資訊，請參閱 [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 2.  在您呼叫 <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>之前，請設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 屬性的下列一或多個欄位：  
   
@@ -264,7 +263,7 @@ ms.locfileid: "32964803"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>當您建立合併式發行集的提取訂閱時，定義複寫代理程式排程  
   
-1.  為您所建立的訂閱建立 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 類別的執行個體。 如需詳細資訊，請參閱 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+1.  為您所建立的訂閱建立 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 類別的執行個體。 如需詳細資訊，請參閱 [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 2.  在您呼叫 <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>之前，請設定 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 屬性的下列一或多個欄位：  
   

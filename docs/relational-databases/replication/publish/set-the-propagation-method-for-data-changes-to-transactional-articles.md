@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa1eef0787a96ddd1661c6276a692d3ad05d7b5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 787db7a15a214b029f55e315c41a624c09b9d244
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964593"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352850"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>設定對交易式發行項之資料變更的傳播方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ ms.locfileid: "32964593"
     > [!NOTE]  
     >  當針對以上任何參數指定 **SQL** 的值時，該類型的命令將會以適當的 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 命令形式複寫到訂閱者。  
   
-     如需詳細資訊，請參閱 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-create-an-article-that-does-not-propagate-data-changes"></a>建立不會傳播資料變更的發行項  
   
@@ -117,7 +116,7 @@ ms.locfileid: "32964593"
     > [!NOTE]  
     >  當針對以上任何參數指定 **NONE** 的值時，該類型的命令將不會複寫到訂閱者。  
   
-     如需詳細資訊，請參閱 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 #### <a name="to-create-an-article-with-user-modified-custom-stored-procedures"></a>使用使用者修改的自訂預存程序建立發行項  
   
@@ -135,7 +134,7 @@ ms.locfileid: "32964593"
     > [!NOTE]  
     >  如需 CALL、SCALL、XCALL 和 MCALL 語法的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
-     如需詳細資訊，請參閱 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  產生快照集之後，導覽至這個發行項所屬發行集的快照集資料夾，並尋找與該發行項同名的 **.sch** 檔。 使用 Notepad.exe 開啟這個檔案，尋找插入、更新或刪除預存程序的 CREATE PROCEDURE 命令，然後編輯程序定義以便提供傳播資料變更所需的任何自訂邏輯。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
@@ -155,7 +154,7 @@ ms.locfileid: "32964593"
     > [!NOTE]  
     >  如需 CALL、SCALL、XCALL 和 MCALL 語法的詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   
-     如需詳細資訊，請參閱 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+     如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 2.  在發行集資料庫的發行者上，使用 [ALTER PROCEDURE](../../../t-sql/statements/alter-procedure-transact-sql.md) 陳述式編輯 [sp_scriptpublicationcustomprocs](../../../relational-databases/system-stored-procedures/sp-scriptpublicationcustomprocs-transact-sql.md) ，好讓它針對插入、更新或刪除自訂預存程序傳回 [CREATE PROCEDURE](../../../t-sql/statements/create-procedure-transact-sql.md) 指令碼。 如需詳細資訊，請參閱[指定交易式發行項變更的傳播方式](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)。  
   

@@ -11,16 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-caps.latest.revision: 20
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 2b6e9ad5c727c568ebdc5bc2b8eddea9ff309806
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4a0c51c21e11f59ae8fe6ae06785a242e1f29c28
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332778"
 ---
 # <a name="back-up-a-database-master-key"></a>備份資料庫主要金鑰
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

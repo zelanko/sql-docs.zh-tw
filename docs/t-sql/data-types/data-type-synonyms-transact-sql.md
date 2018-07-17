@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -18,15 +17,15 @@ helpviewer_keywords:
 - synonyms [SQL Server], data types
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b0e16289f244a8b1fdf24bb3b41e253a1d70c5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38224caa215f0beef86b0efb1777ec90bc7738c0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33051895"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410757"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>資料類型同義字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
