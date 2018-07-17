@@ -3,23 +3,21 @@ title: 完成資料庫引擎升級 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
 ms.prod: sql
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
-caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f140aeb51832ccc44af5ee907d67e4506fb05bbd
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 11512e0cd48a102aa7f4e48e0882336b2d1425e5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771086"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151749"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成資料庫引擎升級
 

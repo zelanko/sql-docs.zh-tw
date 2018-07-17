@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/09/2015
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - DECRYPTBYKEYAUTOASYMSKEY function
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c42d3aea3b73f5afae90e5f7612e9c3d65bfc22
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: a5e036e7c80218750161ffc2322a5969dcbd6e1e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238958"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784579"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

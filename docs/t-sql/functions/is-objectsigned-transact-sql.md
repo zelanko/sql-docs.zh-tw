@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 104cf6916beca429e65610106cbdba5a289deeec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 385ccf4fcf3b411536b825f4ff34e06cc8de4120
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054865"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786689"
 ---
 # <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,16 +18,16 @@ helpviewer_keywords:
 - DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e6f5d64408bc74b069ba4fbd7f39b98ed2f278d
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: 29c207ea7683068f16ca5de22d5ddc254ef06fde
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239228"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785739"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -80,7 +79,7 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-an-example-without-fractions-of-a-second"></a>A. 不包含秒的小數部分範例  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. 不包含秒之小數部分的範例  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  

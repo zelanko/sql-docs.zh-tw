@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
@@ -24,12 +23,12 @@ caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39a7659298ce2efd2daf7c96aa337a019619609f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a41a828194b6d844c65f86e94a0b034ca4b8f46
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957663"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37357740"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>從備份初始化交易式訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "32957663"
   
     -   (適用於磁帶裝置的選擇項) **@unload** - 如果在完成還原之後應該從磁碟機卸載磁帶，請指定 **1** (預設值) 的值；如果不應該將它卸載，請指定 **0** 的值。  
   
-6.  (選擇性) 針對提取訂閱，在訂閱資料庫的訂閱者端執行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) 和 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 如需詳細資訊，請參閱 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)。  
+6.  (選擇性) 針對提取訂閱，在訂閱資料庫的訂閱者端執行 [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md) 和 [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)。 如需詳細資訊，請參閱 [建立提取訂閱](../../relational-databases/replication/create-a-pull-subscription.md)。  
   
 7.  (選擇性) 啟動散發代理程式。 如需相關資訊，請參閱 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) 或 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)。  
   

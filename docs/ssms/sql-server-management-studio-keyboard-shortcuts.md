@@ -7,8 +7,7 @@ ms.prod_service: sql-tools
 ms.component: ssms
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,16 +25,18 @@ caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4e0ddf3ca23438a761b330238c9aa7356b8f7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7579eb32749cf41763f37980ddc6dc0b85997c2
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055145"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36927029"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>SQL Server Management Studio 鍵盤快速鍵
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 為使用者提供了兩種鍵盤配置。 根據預設，它會使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 配置，其鍵盤快速鍵是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 為基礎。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 也提供了類似於 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 中標準配置的鍵盤配置。 若要變更鍵盤配置或加入其他鍵盤快速鍵，請在 [工具] 功能表上，按一下 [選項]。 請在 [環境]、[鍵盤] 頁面上，選取所需要的鍵盤配置。  
+  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 為使用者提供了兩種鍵盤配置。 根據預設，它會使用 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 配置，其鍵盤快速鍵是以 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 為基礎。 
+  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 也提供了類似於 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]中標準配置的鍵盤配置。 若要變更鍵盤配置或加入其他鍵盤快速鍵，請在 [工具] 功能表上，按一下 [選項]。 請在 [環境]、[鍵盤] 頁面上，選取所需要的鍵盤配置。  
   
 > [!NOTE]  
 >  若要只顯示標題，請按一下這個頁面頂端的 [全部摺疊]。  

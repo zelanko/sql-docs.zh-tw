@@ -3,28 +3,24 @@ title: 解決 SQL Server 中的 JSON 常見問題 | Microsoft 文件
 ms.custom: ''
 ms.date: 07/07/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: json
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: 9
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 086f333604c19d33a74efdb7e79d7462f9d3fca7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57c111ecbd9766b267554a6de41637685f79f2db
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944943"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407417"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>解決 SQL Server 中的 JSON 常見問題
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

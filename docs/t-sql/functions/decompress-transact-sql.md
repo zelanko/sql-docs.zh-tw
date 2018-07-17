@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 11/30/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - DECOMPRESS function
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b6412856e373c3b1ad5ac838f9b15486d451a2b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9c2eb8c020127211b25b762d96e6e376be7e234c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779194"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792139"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

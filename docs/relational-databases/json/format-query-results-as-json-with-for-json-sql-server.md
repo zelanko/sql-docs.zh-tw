@@ -3,12 +3,9 @@ title: 使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server) | Microsoft
 ms.custom: ''
 ms.date: 07/18/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: json
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - JSON, exporting
 - exporting JSON
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
-caps.latest.revision: 31
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ad65f71c46a89f3758cb5102021843f96b3adf1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33dd2f4e2f5988a249300e419d3dd17e07c63bfe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940793"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420279"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>使用 FOR JSON 將查詢結果格式化為 JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

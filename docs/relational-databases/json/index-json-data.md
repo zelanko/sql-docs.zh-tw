@@ -3,29 +3,25 @@ title: 索引 JSON 資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/01/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: json
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - JSON, indexing JSON data
 - indexing JSON data
 ms.assetid: ced241e1-ff09-4d6e-9f04-a594a9d2f25e
-caps.latest.revision: 9
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22a22adda08dffc2b0afeadd2f672f034b958826
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42fb5c56478dc97c2621a702266e77367de42ea5
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939313"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431177"
 ---
 # <a name="index-json-data"></a>索引 JSON 資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

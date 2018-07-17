@@ -2,12 +2,9 @@
 title: 啟用外部指令碼伺服器設定選項 | Microsoft Docs
 ms.date: 11/13/2017
 ms.prod: sql
-ms.prod_service: high-availability
+ms.technology: configuration
 ms.reviewer: ''
 ms.suite: sql
-ms.custom: ''
-ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - external scripts enabled
@@ -15,16 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-caps.latest.revision: 9
-author: jeannt
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f0dcd3474939b1f2b533651b159b81cd978dd383
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb602248a8a409cb79c4ca4c0769fbc4fd66b616
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404820"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428907"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>啟用外部指令碼伺服器設定選項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
