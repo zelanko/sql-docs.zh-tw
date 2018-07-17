@@ -1,5 +1,5 @@
 ---
-title: 時序群集叢集設定檔 索引標籤 (採礦模型檢視器 |Microsoft 文件
+title: 時序群集叢集設定檔 索引標籤 (採礦模型檢視器 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.profiles.f1
 ms.assetid: 44230895-0a42-4032-8d6c-0cdb8a2dbb8c
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f7730b07877b0cfe6cdcc6d4a749d28ce4cf093d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b69066bd09f74fddd0fc7151eae216b74444e8f0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032171"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323128"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>時序叢集的叢集設定檔索引標籤 (採礦模型檢視器)
   [Microsoft 時序叢集檢視器] 中的 [叢集設定檔] 索引標籤提供每個叢集中所包含時序的色彩編碼檢視。  
   
  可以使用此時序叢集模型檢視，來快速查看模型所找到的時序的分組方式。 長時序的數目和短時序的數目一目了然。 還可以按一下叢集並顯示 **[採礦圖例]** ，來準確了解每個時序中各種色彩所表示的狀態。  
   
- **如需詳細資訊：**[Microsoft 時序群集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 時序叢集檢視器  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **如需詳細資訊：**[Microsoft 時序叢集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)，[瀏覽模型，使用 Microsoft 時序叢集檢視器  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  
@@ -53,9 +53,9 @@ ms.locfileid: "36032171"
   
  模型中每個叢集各顯示兩組長條圖，每組位於圖形中不同的資料列上：  
   
--   **\<屬性名稱 > t**： 此資料列中的長條圖顯示代表每個叢集之項目的序列。 在 DMX 詞彙中，它們是每個叢集的範例案例。  
+-   **\<屬性名稱 >.samples**： 此資料列中的長條圖顯示代表每個叢集之項目的時序。 在 DMX 詞彙中，它們是每個叢集的範例案例。  
   
--   **\<屬性名稱 >**： 此資料列中的長條圖描述叢集包含的所有項目及其整體散發。 在 **[採礦圖例]** 可見時按一下長條圖，這會顯示每個項目的數值。  
+-   **\<屬性名稱 >**： 此資料列中的長條圖描述叢集包含的所有項目及其整體分佈。 在 **[採礦圖例]** 可見時按一下長條圖，這會顯示每個項目的數值。  
   
  **狀態**  
  此資料行在圖表中是選擇性的，可透過選取 [顯示圖例] 選項來顯示或移除它。 **[狀態]** 資料行就對應的叢集長條圖中的哪種色彩表示哪種狀態提供了指南。  

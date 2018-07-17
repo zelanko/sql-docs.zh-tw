@@ -1,5 +1,5 @@
 ---
-title: Filter 元素 (Binding) (ASSL) |Microsoft 文件
+title: Filter 元素 (Binding) (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Filter element
 ms.assetid: 3d4cd169-2903-4266-8541-540ece424b7b
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 659719ea4ba87b548b08b5b7cb680e1b28b563d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ca1fe43bfe98061065cda1da5b1ff64772a4751d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144817"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291304"
 ---
 # <a name="filter-element-binding-assl"></a>Filter 元素 (Binding) (ASSL)
   包含篩選父元素內容的多維度運算式 (MDX) 運算式。  
@@ -62,11 +62,11 @@ ms.locfileid: "36144817"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需有關`Binding`型別，包括資料表的[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指令碼語言 (ASSL) 物件的`Binding`型別和繼承階層架構的`Binding`類型，請參閱[繫結資料型別&#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
+ 如需詳細資訊`Binding`型別，包括資料表[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]指令碼語言 (ASSL) 物件的`Binding`型別和繼承階層架構`Binding`類型，請參閱[繫結資料類型 &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  
   
- 如需 ASSL 中資料繫結的概觀，請參閱[資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。  
+ 如需 ASSL 中資料繫結的概觀，請參閱 <<c0> [ 資料來源和繫結&#40;SSAS 多維度&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)。</c0>  
   
- 對應至父系的項目`Filter`在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.CubeDimensionBinding>和<xref:Microsoft.AnalysisServices.MeasureGroupBinding>。  
+ 對應至父系的元素`Filter`在 「 分析管理物件 (AMO) 物件模型所<xref:Microsoft.AnalysisServices.CubeDimensionBinding>和<xref:Microsoft.AnalysisServices.MeasureGroupBinding>。  
   
 ## <a name="see-also"></a>另請參閱  
  [繫結資料型別&#40;ASSL&#41;](../data-type/binding-data-type-assl.md)   

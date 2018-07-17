@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], creating models
 - creating models [Master Data Services]
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 643f46f0e8339cbe5e5cc46c13e90796b1479bf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 7538c80ac8425e02f5ccc37ecffacfa07b8576c5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318748"
 ---
 # <a name="create-a-model-master-data-services"></a>建立模型 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立模型以包含模型物件。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -38,9 +38,9 @@ ms.locfileid: "36146552"
   
 2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
   
-3.  在**模型維護**頁面上，按一下**Add model**。  
+3.  在 **模型維護**頁面上，按一下**Add model**。  
   
-4.  在**模型名稱**方塊中，輸入模型的名稱。  
+4.  在 **模型名稱**方塊中，輸入模型的名稱。  
   
 5.  (選擇性) 選取 [建立與模型同名的實體]，建立與模型同名的實體。  
   

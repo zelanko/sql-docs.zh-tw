@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 caps.latest.revision: 27
-author: douglaslM
+author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 03a681cf4ab018d82d991b91c463dfbef3fe8d73
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 690c7a670ca448c14c984b9fda76098ae7269c4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322708"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>步驟 3：測試第 3 課的教學課程封裝
   在這項工作中，您將執行 Lesson 3.dtsx 封裝。 當封裝執行時，[記錄事件] 視窗會列出寫入記錄檔的記錄項目。 在封裝完成執行之後，您要確認記錄提供者所產生之記錄檔的內容。  
@@ -47,9 +47,9 @@ ms.locfileid: "36132470"
   
 -   使用記事本或任何其他文字編輯器來開啟 TutorialLog.log 檔。  
   
--   雖然產生的資訊之語意`PipelineExecutionPlan`和`PipelineExecutionTrees`事件等已超出本教學課程的範圍，您可以看到第一行列出在指定的資訊欄位**詳細資料** 索引標籤**設定 SSIS 記錄** 對話方塊。 而且，您還可以確認，在 Foreach 迴圈的每一個反覆運算中，已記錄您選取的兩個事件 PipelineExecutionPlan 和 PipelineExecutionTrees。  
+-   雖然產生的資訊之語意`PipelineExecutionPlan`並`PipelineExecutionTrees`事件已超出本教學課程的範圍，您可以看到第一行列出在指定的資訊欄位**詳細資料** 索引標籤**設定 SSIS 記錄** 對話方塊。 而且，您還可以確認，在 Foreach 迴圈的每一個反覆運算中，已記錄您選取的兩個事件 PipelineExecutionPlan 和 PipelineExecutionTrees。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課： 加入錯誤流程重新導向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [課程 4：新增錯誤流程重新導向](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

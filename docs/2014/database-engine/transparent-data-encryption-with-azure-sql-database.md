@@ -5,39 +5,37 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TDE, SQL Database
 - Transparent Data Encryption, SQL Database
 - encryption (SQL Database) TDE
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
-caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1850458778cadbfe871880d42a7830c94078c2a4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 0f5a78b0045e004b17c09bc9e87863179e38eee5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137136"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295188"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database 的透明資料加密
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透明資料加密 （預覽） 可協助防範惡意活動帶來威脅，而不需要變更應用程式上執行資料庫、 相關聯的備份和靜止的交易記錄檔的即時加密與解密。  
+  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 透明資料加密 （預覽版） 可協助防範惡意活動的威脅，而不需要變更應用程式執行即時加密和解密資料庫、 相關聯的備份和待用的交易記錄檔。  
   
  TDE 會使用稱為資料庫加密金鑰的對稱金鑰，將整個資料庫的儲存體加密。 在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 中，資料庫加密金鑰由內建的伺服器憑證保護。 每部 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 伺服器各有其專用的內建伺服器憑證。 若資料庫具有 GeoDR 關聯性，則由每部伺服器上不同的金鑰保護。 如有 2 個資料庫同時連線到同一部伺服器，則這兩個資料庫會共用同一個內建憑證。 [!INCLUDE[msCoName](../includes/msconame-md.md)] 會每隔 90 天自動輪換這些憑證。 如需 TDE 的一般說明，請參閱 [透明資料加密 &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)。  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 不支援 Azure 金鑰保存庫與 TDE 整合。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用金鑰保存庫中的非對稱金鑰。 如需詳細資訊，請參閱[範例 a: Transparent Data Encryption 使用金鑰保存庫之非對稱金鑰](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)。  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 不支援 Azure 金鑰保存庫與 TDE 整合。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 可以使用金鑰保存庫中的非對稱金鑰。 如需詳細資訊，請參閱 <<c0> [ 範例 a: Transparent Data Encryption by 使用非對稱金鑰從 Key Vault](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA)。  
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([某些區域處於預覽](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**適用於**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([某些區域中的預覽](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
   
 > [!IMPORTANT]  
->  目前是預覽功能。 我了解並同意實作[!INCLUDE[ssSDS](../includes/sssds-md.md)]我的資料庫中的透明資料加密限於授權合約 (例如 Enterprise 合約、 Microsoft Azure 合約或 Microsoft 線上訂用帳戶中的 preview 條款協議），以及任何適用[補充使用條款的 Microsoft Azure Preview](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)。  
+>  目前是預覽功能。 我了解並同意[!INCLUDE[ssSDS](../includes/sssds-md.md)]在我的資料庫的透明資料加密預覽條款位於我的授權合約 （例如 Enterprise 合約、 Microsoft Azure 合約或 Microsoft 線上訂用帳戶協議），以及任何適用[補充使用條款的 Microsoft Azure Preview](http://azure.microsoft.com/support/legal/preview-supplemental-terms/)。  
   
  TDE 狀態預覽即使在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 版本系列 V12 已宣佈為目前處於公開可用狀態的地理區域也適用。 在 [!INCLUDE[ssSDS](../includes/sssds-md.md)] 宣佈 TDE 從預覽版升級至 GA 前， [!INCLUDE[msCoName](../includes/msconame-md.md)] 的 TDE 並不適用於生產資料庫。 如需有關 [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12 的詳細資訊，請參閱 [Azure SQL Database 的新功能](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)。  
   
@@ -48,13 +46,13 @@ ms.locfileid: "36137136"
   
 -   您必須已經註冊 TDE 預覽版。  
   
--   若要建立資料庫加密金鑰，您必須是[!INCLUDE[ssSDS](../includes/sssds-md.md)]系統管理員，或必須是成員的**dbmanager**角色在 master 資料庫，而且擁有**控制項**資料庫的權限。  
+-   若要建立資料庫加密金鑰，您必須是[!INCLUDE[ssSDS](../includes/sssds-md.md)]系統管理員，或是必須隸屬**dbmanager** master 中的角色資料庫，而且擁有**控制**資料庫的權限。  
   
 -   若要執行 ALTER DATABASE 陳述式與 SET 選項，便只需要具備 **dbmanager** 角色的成員資格。  
   
-##  <a name="Preview"></a> 註冊 TDE 並啟用 TDE 的資料庫上的預覽  
+##  <a name="Preview"></a> 註冊資料庫的 TDE，並啟用 TDE 的預覽  
   
-1.  Azure 入口網站，請瀏覽[ https://portal.azure.com ](https://portal.azure.com)和使用您的 Azure 系統管理員或參與者帳戶登入。  
+1.  請瀏覽 Azure 入口網站，網址[ https://portal.azure.com ](https://portal.azure.com)並使用您的 Azure 系統管理員或參與者帳戶登入。  
   
 2.  在左邊的橫幅中，按一下 [瀏覽] ，再按一下 [SQL 資料庫] 。  
   
@@ -66,7 +64,7 @@ ms.locfileid: "36137136"
   
 6.  按一下 [預覽條款] 。  
   
-7.  閱讀預覽條款，如果您同意條款，請選取 **透明資料 encryptionPreview 條款**核取方塊，然後**確定**接近頁面底部。 返回**資料 encryptionPREVIEW**刀鋒視窗中，其中**資料加密**按鈕應該已啟用。  
+7.  閱讀預覽條款，如果您同意這些條款，請選取**透明資料 encryptionPreview 條款**核取方塊，然後按一下**確定**靠近頁面底部。 返回**資料 encryptionPREVIEW**刀鋒視窗中，其中**資料加密**應該已啟用 按鈕。  
   
 8.  在 [資料加密預覽]  刀鋒視窗中，將 [資料加密]  按鈕移至 [開啟] ，然後按一下 [儲存]  (位於頁面頂端)，以套用此設定。 [加密狀態]  會顯示透明資料加密的概略進度。  
   
@@ -124,7 +122,7 @@ ms.locfileid: "36137136"
   
 #### <a name="to-disable-tde-by-using-the-azure-portal"></a>使用 Azure 入口網站停用 TDE  
   
-1.  Azure 入口網站，請瀏覽[ https://portal.azure.com ](https://portal.azure.com)和使用您的 Azure 系統管理員或參與者帳戶登入。  
+1.  請瀏覽 Azure 入口網站，網址[ https://portal.azure.com ](https://portal.azure.com)並使用您的 Azure 系統管理員或參與者帳戶登入。  
   
 2.  在左邊的橫幅中，按一下 [瀏覽] ，再按一下 [SQL 資料庫] 。  
   
@@ -152,7 +150,7 @@ ms.locfileid: "36137136"
   
 3.  若要監視加密進度上[!INCLUDE[ssSDS](../includes/sssds-md.md)]，資料庫使用者**VIEW DATABASE STATE**權限可以查詢`encryption_state`資料行[sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)檢視。  
   
-##  <a name="Working"></a> 在 TDE 使用受保護的資料庫 [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
+##  <a name="Working"></a> 使用受 TDE 保護的資料庫上 [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
  您無須解密資料庫，即可在 Azure 執行作業。 目標會自動繼承來源資料庫或主要資料庫的 TDE 設定。 這包括下列作業：  
   
 -   異地複原  

@@ -1,5 +1,5 @@
 ---
-title: 在 Management Studio 建立 Analysis Services 指令碼 |Microsoft 文件
+title: 在 Management Studio 中建立 Analysis Services 指令碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services objects, scripts
 - objects [Analysis Services], scripts
 - scripts [Analysis Services], objects
 ms.assetid: 4f1b965c-9ca6-427b-8f4d-0ce1eea7c0fe
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5819b821bf482e02a8a5b189b5600aa6e4e637fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd7a8102fdde22ada4f1b7bf4eb9edc6d1b31d7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144826"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330778"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中建立 Analysis Services 指令碼
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 包含指令碼產生功能、範本和編輯器，您可以使用它們來編寫 Analysis Services 物件和工作的指令碼。  
@@ -69,7 +69,7 @@ ms.locfileid: "36144826"
     >  一般而言，如果您要建立檔案的多個不同版本，請選取 [檔案]。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 中的指令碼管理工作](../script-administrative-tasks-in-analysis-services.md)   
- [XMLA 查詢編輯器&#40;Analysis Services-多維度資料&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
+ [Analysis Services 中編寫管理工作](../script-administrative-tasks-in-analysis-services.md)   
+ [XMLA 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](../xmla-query-editor-analysis-services-multidimensional-data.md)  
   
   

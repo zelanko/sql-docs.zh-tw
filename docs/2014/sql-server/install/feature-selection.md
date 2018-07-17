@@ -1,5 +1,5 @@
 ---
-title: 特徵選取 |Microsoft 文件
+title: 特徵選取 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - feature selection, Setup
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Components to Install page [SQL Server Installation Wizard]
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 caps.latest.revision: 86
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 159c77133a5b0a218fa308ab179b2d25376432bc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a00261718d83a82c595416b6dd0d9b97e8929e0d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134327"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315488"
 ---
 # <a name="feature-selection"></a>特徵選取
   使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈之 [特徵選取] 頁面上的核取方塊可選取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝的元件。  
@@ -44,12 +44,12 @@ ms.locfileid: "36134327"
   
 |功能|描述|  
 |--------------|-----------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 包含[!INCLUDE[ssDE](../../includes/ssde-md.md)]，用於儲存、 處理和保護資料、 複寫、 全文檢索搜尋、 工具，來管理關聯式和 XML 資料的核心服務和[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS) 伺服器。 以下是 Database Engine的功能：<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用來儲存、處理和保護資料安全的核心服務。<br /><br /> 複寫：(選擇性) 複寫是一組技術，用於將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理以維護一致性。<br /><br /> 全文檢索搜尋：(選擇性) 全文檢索搜尋提供一種功能，可針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中一般以字元為主的資料發出全文檢索查詢。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]：選擇性：[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一種資料清除方案，可讓您在資料來源中探索不一致和不正確的資料，並提供電腦輔助及互動的方式以清理資料。 選取此核取方塊可安裝 DQS 伺服器。 在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝之後，您必須執行 DQSInstaller.exe 檔案才能「完成」 DQS 伺服器安裝。 如果您安裝 SQL server 的預設執行個體，這個檔案可在 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\mssql\。MSSQLSERVER\MSSQL\Binn。<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集：** 當您選取 Database Engine Services 時，複寫和全文檢索搜尋元件為必要項目，且安裝程式會自動選取這些元件進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝。|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 服務|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 包含[!INCLUDE[ssDE](../../includes/ssde-md.md)]，來儲存、 處理和保護資料、 複寫、 全文檢索搜尋、 工具，來管理關聯式和 XML 資料的核心服務和[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS) 伺服器。 以下是 Database Engine的功能：<br /><br /> [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是用來儲存、處理和保護資料安全的核心服務。<br /><br /> 複寫：(選擇性) 複寫是一組技術，用於將資料和資料庫物件從某個資料庫複製和散發到另一個資料庫，然後在兩個資料庫之間進行同步處理以維護一致性。<br /><br /> 全文檢索搜尋：(選擇性) 全文檢索搜尋提供一種功能，可針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表中一般以字元為主的資料發出全文檢索查詢。<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]：選擇性：[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 是一種資料清除方案，可讓您在資料來源中探索不一致和不正確的資料，並提供電腦輔助及互動的方式以清理資料。 選取此核取方塊可安裝 DQS 伺服器。 在完成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝之後，您必須執行 DQSInstaller.exe 檔案才能「完成」 DQS 伺服器安裝。 如果您安裝 SQL server 的預設執行個體，這個檔案位於 C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12.<instancename>\。MSSQLSERVER\MSSQL\Binn。<br /><br /> <br /><br /> **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集：** 當您選取 Database Engine Services 時，複寫和全文檢索搜尋元件為必要項目，且安裝程式會自動選取這些元件進行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 包括用來建立及管理線上分析處理 (OLAP) 和資料採礦應用程式的工具。|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] – 原生|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式包括伺服器和用戶端元件，可用來建立、管理和部署表格式、矩陣、圖形化和自由形式報表。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 也是一個可延伸的平台，可讓您用來開發報表應用程式。|  
   
 > [!IMPORTANT]  
->  1.  安裝程式不會為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 向外延展部署中的多個節點，設定負載平衡和單一 URL 定址。 若要完成向外延展部署，您必須使用 Windows Server、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 或協力廠商叢集管理軟體。 如需有關設定 Web 伺服陣列部署的詳細資訊，請參閱[設定 Reporting Services 進行向外延展部署](http://go.microsoft.com/fwlink/?LinkId=199448)(http://go.microsoft.com/fwlink/?LinkId=199448)。  
+>  1.  安裝程式不會為 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 向外延展部署中的多個節點，設定負載平衡和單一 URL 定址。 若要完成向外延展部署，您必須使用 Windows Server、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Application Center 或協力廠商叢集管理軟體。 如需有關設定 Web 伺服陣列部署的詳細資訊，請參閱 <<c0> [ 設定 Reporting Services 進行向外延展部署](http://go.microsoft.com/fwlink/?LinkId=199448)(http://go.microsoft.com/fwlink/?LinkId=199448)。  
 > 2.  如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 元件的瀏覽器需求，請參閱 [規劃 Reporting Services 和 Power View 瀏覽器支援 &#40;Reporting Services 2014&#41;](../../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)。  
 > 3.  同時在 64 位元平台以及在 64 位元伺服器的 32 位元子系統 (WOW64) 的並存組態中，不支援 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。  
   
@@ -58,8 +58,8 @@ ms.locfileid: "36134327"
   
 |功能|描述|  
 |-------------|-----------------|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式是伺服器應用程式，用於建立、 管理和傳遞報表至電子郵件、 多個檔案格式和互動式 Web 格式。 SharePoint 模式會將報表檢視和報表管理經驗與 SharePoint 產品整合。 如需詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)。|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 適用於 SharePoint 產品的增益集|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 用於 SharePoint 產品包含管理和使用者介面元件，可整合 SharePoint 產品的增益集會在[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式報表伺服器。 如需詳細資訊，請參閱[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -SharePoint|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式是伺服器應用程式，來建立、 管理和傳遞報表至電子郵件、 多個檔案格式和互動式 Web 格式。 SharePoint 模式會將報表檢視和報表管理經驗與 SharePoint 產品整合。 如需詳細資訊，請參閱 [Reporting Services 報表伺服器 &#40;原生模式&#41;](../../../2014/reporting-services/reporting-services-report-server-sharepoint-mode.md)。|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 適用於 SharePoint 產品的增益集|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集的 SharePoint 產品包括管理和使用者介面元件，可整合 SharePoint 產品與[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 模式報表伺服器。 如需詳細資訊，請參閱[尋找適用於 SharePoint 產品之 Reporting Services 增益集的位置](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)。|  
 |Data Quality Client|Data Quality Client 是連接到 DQS 伺服器的獨立應用程式，提供了直覺式的圖形化使用者介面，可執行資料清理作業、資料比對作業，以及執行 DQS 的管理工作。|  
 |用戶端工具連接性|用戶端工具包括用於用戶端和伺服器之間通訊的元件，包括 DB-Library、OLEDB for OLAP、ODBC、ADODB 和 ADOMD+ 的網路程式庫。|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 是一組圖形化工具和可程式化物件，用來移動、複製和轉換資料。|  
@@ -91,7 +91,7 @@ ms.locfileid: "36134327"
 -   在指定的磁碟機上，移動其他檔案或應用程式，藉以創造更多可用空間。  
   
 ## <a name="installing-adventureworks-sample-databases"></a>安裝 AdventureWorks 範例資料庫  
- 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 如需有關安裝範例資料庫和範例程式碼的詳細資訊，請參閱[Microsoft SQL Server 社群專案和範例](http://go.microsoft.com/fwlink/?LinkId=87843)(http://go.microsoft.com/fwlink/?LinkId=87843)。  
+ 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程序中不會安裝範例資料庫和範例程式碼。 如需有關安裝範例資料庫和範例程式碼的詳細資訊，請參閱 < [Microsoft SQL Server 社群專案和範例](http://go.microsoft.com/fwlink/?LinkId=87843)(http://go.microsoft.com/fwlink/?LinkId=87843)。  
   
  在安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 之後，可使用有關範例的其他資訊。 從**啟動**功能表上，按一下**所有程式**，按一下**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**，按一下**文件集和教學課程**然後按一下 **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範例概觀**。  
   

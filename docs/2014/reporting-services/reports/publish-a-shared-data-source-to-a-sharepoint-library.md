@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], publishing to a SharePoint library
 - SharePoint integration [Reporting Services], publishing to a library
@@ -17,13 +17,13 @@ ms.assetid: 966ed425-3ce2-4e76-8237-3c1c977954ae
 caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 876609eeb6f6a1490f4d2c7ad9196b08e2558646
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4bff0c3d4ed7f1eb155b170f0ffdbcaac45c20ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317908"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>將共用資料來源發行至 SharePoint 文件庫
   若要將共用資料來源發行到以 SharePoint 整合模式執行的報表伺服器，您必須在報表設計師中設定報表專案屬性。 在專案屬性中，伺服器、報表和共用資料來源的所有參考都必須是完整 URL。  
@@ -61,6 +61,6 @@ ms.locfileid: "36136786"
  [專案屬性頁對話方塊](../tools/project-property-pages-dialog-box.md)   
  [設定部署屬性&#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [將報表發行至報表伺服器](publishing-reports-to-a-report-server.md)   
- [使用 Office 資料連線&#40;.odc&#41;報表&#40;的 Reporting Services SharePoint 整合模式&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [使用 Office 資料連線&#40;.odc&#41;報表&#40;Reporting Services SharePoint 整合模式&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

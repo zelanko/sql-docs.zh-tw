@@ -1,5 +1,5 @@
 ---
-title: 定義未知的成員和 Null 處理屬性 |Microsoft 文件
+title: 定義未知的成員和 Null 處理屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 29c4958263524f6c702f112d5817231734a4b31d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e355d6c376b8196118d056954f8a2694676e08a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134285"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317298"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>定義未知的成員和 Null 處理屬性
   當 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 處理維度時，資料來源檢視中之資料表或檢視內基礎資料行的所有相異值會在維度中擴展屬性。 如果 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在處理期間發現 Null 值，它預設會將這個 Null 轉換成零 (若為數值資料行) 或空字串 (若為字串資料行)。 您可以在基礎關聯式資料倉儲的擷取、轉換和載入過程中，修改這些預設值或轉換 Null 值 (如果有的話)。 此外，您也可以設定下列三個屬性，藉以讓 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 將 Null 值轉換成指定的值：維度的 [UnknownMember] 和 [UnknownMemberName] 屬性 (property)，以及維度索引鍵屬性 (attribute) 的 [NullProcessing] 屬性 (property)。  
@@ -28,7 +28,7 @@ ms.locfileid: "36134285"
   
  但是，當您以累加方式建立雪花維度時 (就如同我們在這個教學課程中處理 [產品] 維度的方式一樣)，或者當您使用 [維度設計師] 定義維度，然後將這些現有的維度合併到 Cube 中時，可能必須以手動方式設定 [UnknownMember] 和 [NullProcessing] 屬性。  
   
- 在這個主題的工作中，您會從雪花資料表將產品類別目錄和產品子類別目錄屬性加入 [產品] 維度中，而且您將把雪花資料表加入 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 資料來源檢視中。 然後您會啟用**UnknownMember** [產品] 維度的屬性指定`Assembly Components`做為值**UnknownMemberName**屬性，與相關`Subcategory`和`Category`產品的屬性名稱的屬性，然後定義自訂錯誤處理連結雪花資料表的成員索引鍵屬性。  
+ 在這個主題的工作中，您會從雪花資料表將產品類別目錄和產品子類別目錄屬性加入 [產品] 維度中，而且您將把雪花資料表加入 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 資料來源檢視中。 您接著會啟用**UnknownMember**屬性的 [產品] 維度中，指定`Assembly Components`做為值**UnknownMemberName**屬性，與相關`Subcategory`和`Category`產品屬性 name 屬性，，，然後定義自訂錯誤處理以連結雪花資料表的成員索引鍵屬性。  
   
 > [!NOTE]  
 >  如果您最初使用「Cube 精靈」定義 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube 時已經加入了 [子類別目錄] 和 [類別目錄] 屬性，系統就會自動執行這些步驟。  
@@ -55,7 +55,7 @@ ms.locfileid: "36134285"
   
      ![ErrorConfiguration 屬性集合](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "ErrorConfiguration 屬性集合")  
   
-5.  按一下**瀏覽器**索引標籤上，確認**產品型號線**中選取**階層**清單，然後再展開`All Products`。  
+5.  按一下 **瀏覽器**索引標籤上，確認**產品型號線**中選取**階層**清單中，然後再展開`All Products`。  
   
      請注意 [產品線] 層級的 5 個成員。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "36134285"
   
 8.  在 [資料來源檢視] 窗格中，尋找 [DimProductCategory] 資料表，以滑鼠右鍵按一下該資料表中的 [ProductCategoryKey]，然後按一下 [從資料行新增屬性]。  
   
-9. 在**屬性**窗格中，將以新屬性的名稱變更`Category`。  
+9. 在 **屬性**窗格中，變更這個屬性的名稱新增至`Category`。  
   
 10. 在 [屬性] 視窗的 [NameColumn] 屬性欄位中按一下，然後按一下瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
   
@@ -99,13 +99,13 @@ ms.locfileid: "36134285"
   
 12. 在 [資料來源檢視] 窗格中，尋找 [DimProductSubcategory] 資料表，以滑鼠右鍵按一下該資料表中的 [ProductSubcategoryKey]，然後按一下 [從資料行新增屬性]。  
   
-13. 在**屬性**窗格中，將以新屬性的名稱變更`Subcategory`。  
+13. 在 **屬性**窗格中，變更這個屬性的名稱新增至`Subcategory`。  
   
 14. 在 [屬性] 視窗的 [NameColumn] 屬性欄位中按一下，然後按一下瀏覽 (**…**) 按鈕，即可開啟 [名稱資料行] 對話方塊。  
   
 15. 選取 [來源資料行] 清單中的 [EnglishProductSubcategoryName]，然後按一下 [確定]。  
   
-16. 建立新使用者定義階層稱為**產品類別目錄**下列層級，從上到下的順序： `Category`， `Subcategory`，和**產品名稱**。  
+16. 建立新使用者定義階層稱為**產品類別目錄**含有下列層級，從上往下依序： `Category`， `Subcategory`，並**產品名稱**。  
   
 17. 指定`All Products`做為值**AllMemberName** Product Categories 使用者自訂階層的屬性。  
   
@@ -129,17 +129,17 @@ ms.locfileid: "36134285"
   
 7.  確認**產品型號線**會出現在**階層**清單中，展開`All Products`，然後展開**元件**。  
   
-8.  選取**產品類別目錄**中**階層**清單中，展開`All Products`，然後展開**元件**。  
+8.  選取 **產品類別目錄**中**階層**清單中，展開`All Products`，然後展開**元件**。  
   
      請注意，沒有任何組件元件出現。  
   
- To modify the behavior mentioned in the previous task, you will enable the **UnknownMember** property of the Products dimension, set a value for the **UnknownMemberName** property, set the **NullProcessing** property for the `Subcategory` and **Model Name** attributes to **UnknownMember**, define the `Category` attribute as a related attribute of the `Subcategory` attribute, and then define the **Product Line** attribute as a related attribute of the **Model Name** attribute. 這些步驟將會使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在沒有 [SubcategoryKey] 資料行值的每一項產品中使用未知的成員名稱值，如下一項工作所示。  
+ 若要修改先前工作中所述的行為，您會啟用**UnknownMember**的 「 產品 」 維度的屬性設定的值**UnknownMemberName**屬性，設定**NullProcessing**屬性`Subcategory`並**模型名稱**屬性**UnknownMember**，定義`Category`的相關屬性的屬性`Subcategory`屬性，然後再定義**產品線**屬性的相關聯的屬性當做**模型名稱**屬性。 這些步驟將會使 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 在沒有 [SubcategoryKey] 資料行值的每一項產品中使用未知的成員名稱值，如下一項工作所示。  
   
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>啟用未知的成員、定義屬性關聯性及指定 Null 的自訂處理屬性  
   
 1.  在 [產品] 維度的 [維度設計師] 中，按一下 [維度結構] 索引標籤，然後在 [屬性] 窗格中選取 [產品]。  
   
-2.  在**屬性**視窗中，變更**UnknownMember**屬性**看得見**，然後將變更的值**UnknownMemberName**屬性`Assembly Components`。  
+2.  在 **屬性**視窗中，變更**UnknownMember**屬性設**看得見**，然後將變更的值**UnknownMemberName**屬性設`Assembly Components`。  
   
      將 [UnknownMember] 屬性變更為 [可見] 或 [隱藏] 會啟用維度的 [UnknownMember] 屬性。  
   
@@ -147,7 +147,7 @@ ms.locfileid: "36134285"
   
 4.  在圖表中，以滑鼠右鍵按一下`Subcategory`屬性，然後選取**新增屬性關聯性**。  
   
-5.  在**建立屬性關聯性**對話方塊中，**來源屬性**是`Subcategory`。 設定**相關屬性**至`Category`。 然後，保持關聯性類型設定為 [彈性]。  
+5.  在 [**建立屬性關聯性**] 對話方塊中，**來源屬性**是`Subcategory`。 設定**相關屬性**至`Category`。 然後，保持關聯性類型設定為 [彈性]。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -163,7 +163,7 @@ ms.locfileid: "36134285"
   
 12. 將 [NullProcessing] 屬性變更為 [UnknownMember]。  
   
-     由於這些變更，當[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]遇到的 null 值`Subcategory`屬性或**模型名稱**屬性在處理期間，未知的成員值將取代為索引鍵的值，而使用者定義階層將可正確建構。  
+     由於這些變更，當[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]遇到的 null 值`Subcategory`屬性或**模型名稱**屬性在處理期間，未知的成員值會替換成索引鍵值，而使用者定義階層將可正確建構。  
   
 ## <a name="browsing-the-product-dimension-again"></a>再次瀏覽 [產品] 維度  
   
@@ -171,17 +171,17 @@ ms.locfileid: "36134285"
   
 2.  順利完成部署之後，針對 [產品] 維度按一下 [維度設計師] 的 [瀏覽器] 索引標籤，然後按一下 [重新連接]。  
   
-3.  確認**產品類別目錄**中選取**階層**清單，然後再展開`All Products`。  
+3.  確認**產品類別目錄**中選取**階層**清單中，然後再展開`All Products`。  
   
      請注意，此時「組件元件」會出現成為 [類別目錄] 層級的新成員。  
   
-4.  展開`Assembly Components`隸屬`Category`層級，然後展開 `Assembly Components`隸屬`Subcategory`層級。  
+4.  依序展開`Assembly Components`隸屬`Category`層級，然後展開`Assembly Components`的成員`Subcategory`層級。  
   
      請注意，所有組件元件現在都會出現在 [產品名稱] 層級，如下圖所示。  
   
      ![顯示組件元件的產品名稱層級](../../2014/tutorials/media/l4-assemblycomponents-1.gif "顯示組件元件的產品名稱層級")  
   
 ## <a name="next-lesson"></a>下一課  
- [第 5 課：在維度和量值群組之間定義關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [第 5 課：定義維度和量值群組之間的關聯性](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

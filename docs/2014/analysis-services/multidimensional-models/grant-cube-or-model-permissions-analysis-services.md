@@ -1,5 +1,5 @@
 ---
-title: 授與 cube 或模型的權限 (Analysis Services) |Microsoft 文件
+title: 授與 cube 或模型權限 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 4f3c50f06e71d69b893e5bbebc1ca9870da04f54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137173"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306558"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>授與 Cube 或模型權限 (Analysis Services)
   Cube 或表格式模型是 Analysis Services 資料模型中的主要查詢物件。 從 Excel 連線到多維度或表格式資料以進行特定資料瀏覽時，使用者一開始通常會選取特定 Cube 或表格式模型做為樞紐分析報表物件後面的資料結構。 這個主題說明如何授與存取 Cube 或表格式資料的必要權限。  
@@ -38,7 +38,7 @@ ms.locfileid: "36137173"
  若要在後續解決方案部署中保留角色定義，最佳做法是在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中定義角色來做為模型的一部分，然後讓資料庫管理員在發佈資料庫之後，於 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中指派角色成員資格。 但是，您可以針對這兩個工作使用其中一項工具。 為了簡化練習，我們將同時針對角色定義和成員資格使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 。  
   
 > [!NOTE]  
->  只有伺服器管理員或擁有完整控制權限的資料庫管理員可以將 Cube 從來源檔案部署到伺服器，或者建立角色並指派成員。 請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)和[授與資料庫權限&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)如需有關這些權限的詳細資訊層級。  
+>  只有伺服器管理員或擁有完整控制權限的資料庫管理員可以將 Cube 從來源檔案部署到伺服器，或者建立角色並指派成員。 請參閱[授與伺服器系統管理員權限&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)並[授與資料庫權限&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)如需這些權限的詳細資訊層級。  
   
 #### <a name="step-1-create-the-role"></a>步驟 1：建置角色  
   
@@ -62,9 +62,9 @@ ms.locfileid: "36137173"
   
 #### <a name="step-3-set-cube-permissions"></a>步驟 3：設定 Cube 權限  
   
-1.  在**Cube**  窗格中，選取 cube，然後按一下`Read`或**讀/寫**存取。  
+1.  在 [ **Cube** ] 窗格中，選取 cube，然後按一下`Read`或是**讀/寫**存取。  
   
-     `Read` 存取已足以應付大部分的作業。 [讀取/寫入] 僅適用於回寫，不適用於處理。 如需此功能的詳細資訊，請參閱[設定分割區回寫](set-partition-writeback.md)。  
+     `Read` 存取就足以執行大部分的作業。 [讀取/寫入] 僅適用於回寫，不適用於處理。 如需此功能的詳細資訊，請參閱[設定分割區回寫](set-partition-writeback.md)。  
   
      請注意，您可以選取多個 Cube，以及可以在 [建立角色] 對話方塊中取得的其他物件。 授與存取 Cube 的權限會授權對與 Cube 相關聯之維度及檢視方塊的存取權。 不需要手動新增 Cube 中已經有的物件。  
   
@@ -105,8 +105,8 @@ ms.locfileid: "36137173"
  您可以精簡 Cube 權限來將存取權限制在資料格或維度資料。 如需詳細資訊，請參閱[授與維度資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) 和[授與資料格資料的自訂存取權 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [Analysis Services 支援的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [授與權限的資料採礦結構和模型&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [授與權限的資料來源物件&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [支援的 Analysis Services 的驗證方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [資料採礦結構和模型的權限授與&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [在 資料來源物件上的權限授與&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

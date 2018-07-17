@@ -1,5 +1,5 @@
 ---
-title: Foreach 迴圈編輯器 （集合頁面） |Microsoft 文件
+title: Foreach 迴圈編輯器 （集合頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 caps.latest.revision: 62
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 50ab22c5b36390645aa8f6fb961531479e592188
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d10057943aa872c919171227f072f6b2836eba4a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135009"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318878"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Foreach 迴圈編輯器 (集合頁面)
   使用 [Foreach 迴圈編輯器] 對話方塊的 [集合] 頁面，即可指定列舉值類型和設定列舉值。  
@@ -32,7 +32,7 @@ ms.locfileid: "36135009"
  **列舉值**  
  從清單中選取列舉值類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**Foreach 檔案列舉值**|列舉檔案。 選取這個值就會在 **[Foreach 檔案列舉值]** 區段中顯示動態選項。|  
 |**Foreach 項目列舉值**|列舉項目中的值。 選取這個值就會在 **[Foreach 項目列舉值]** 區段中顯示動態選項。|  
@@ -42,7 +42,7 @@ ms.locfileid: "36135009"
 |**Foreach NodeList 列舉值**|以 XML 文件列舉節點。 選取這個值就會在 **[Foreach NodeList 列舉值]** 區段中顯示動態選項。|  
 |**Foreach SMO 列舉值**|列舉 SMO 物件。 選取這個值就會在 **[Foreach SMO 列舉值]** 區段中顯示動態選項。|  
 |**Foreach Azure Blob 列舉值**|列舉指定 Blob 位置中的 Blob 檔案。 選取此值可在 **[Foreach ADO 列舉值]** 區段中顯示動態選項。|  
-|**Foreach ADLS 檔案列舉值**|列舉 ADLS 上具有篩選條件的檔案。 選取這個值就會在 [Foreach ADLS 檔案列舉值] 區段中顯示動態選項。|
+|**Foreach ADLS 檔案列舉值**|列舉在 ADLS 上具有篩選條件中的檔案。 選取這個值就會在 [Foreach ADLS 檔案列舉值] 區段中顯示動態選項。|
   
  **運算式**  
  按一下或展開 **[運算式]** ，即可檢視現有屬性運算式的清單。 按一下省略符號 **(...)** 按鈕以加入列舉值屬性的屬性運算式，或是編輯和評估現有的屬性運算式。  
@@ -165,14 +165,14 @@ ms.locfileid: "36135009"
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>列舉值 = Foreach NodeList 列舉值  
  Foreach Nodelist 列舉值可用來列舉因為將 XPath 運算式套用至 XML 檔案而產生的 XML 節點集合。 例如，如果 Foreach 迴圈包括指令碼工作，則您可使用 Foreach NodeList 列舉值將符合 XPath 運算式條件的值從 XML 檔案傳送給該指令碼工作。  
   
- 套用至 XML 檔案的 XPath 運算式就是儲存在 OuterXPathString 屬性中的外部 XPath 作業。 如果 XPath 列舉型別設定為`ElementCollection`，Foreach NodeList 列舉值可套用儲存在 InnerXPathString 屬性中的項目集合的內部 XPath 運算式。  
+ 套用至 XML 檔案的 XPath 運算式就是儲存在 OuterXPathString 屬性中的外部 XPath 作業。 如果 XPath 列舉類型設定為`ElementCollection`，則 Foreach NodeList 列舉值可以套用儲存在 InnerXPathString 屬性中的項目集合的內部 XPath 運算式。  
   
  若要深入了解 XML 文件和資料，請參閱 MSDN Library 中的[在 .NET Framework 內採用 XML](http://go.microsoft.com/fwlink/?LinkId=56214)。  
   
  **DocumentSourceType**  
  選取 XML 文件的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -192,7 +192,7 @@ ms.locfileid: "36135009"
  **EnumerationType**  
  從清單中選取列舉類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**Navigator**|使用 XPathNavigator 列舉。|  
 |**節點**|列舉 XPath 作業傳回的節點。|  
@@ -202,7 +202,7 @@ ms.locfileid: "36135009"
  **OuterXPathStringSourceType**  
  選取 XPath 字串的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -220,12 +220,12 @@ ms.locfileid: "36135009"
  **相關主題**：[Integration Services &#40;SSIS&#41; 變數](integration-services-ssis-variables.md)、[加入變數](../../2014/integration-services/add-variable.md)。  
   
  **InnerElementType**  
- 如果**EnumerationType**設`ElementCollection`，清單中選取內部元素的類型。  
+ 如果**EnumerationType**設定為`ElementCollection`，在清單中選取內部元素的類型。  
   
  **InnerXPathStringSourceType**  
  選取內部 XPath 字串的來源類型。 這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**直接輸入**|設定 XML 文件的來源。|  
 |**檔案連接**|選取包含 XML 文件的檔案。|  
@@ -278,7 +278,7 @@ ms.locfileid: "36135009"
  **Blob 的起迄時間範圍篩選**  
  指定時間範圍篩選條件。 這會列舉在 **TimeRangeFrom** 之後及在 **TimeRangeTo** 之前修改的檔案。  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a>列舉值 = Foreach ADLS 檔案列舉值  
-**ADLS 檔案列舉值**可讓 SSIS 封裝列舉 ADLS 上具有篩選條件的檔案。 斜線 (`/`)-帶有前置詞的完整路徑的列舉檔案可以儲存在變數中，並用於 Foreach 迴圈容器中的工作。
+**ADLS 檔案列舉值**可讓 SSIS 封裝列舉在 ADLS 上具有篩選條件的檔案。 斜線 (`/`)-可以儲存在變數中並使用 「 Foreach 迴圈 」 容器內的工作中有前置詞的列舉檔案的完整路徑。
   
 **AzureDataLakeConnection**  
 指定 Azure Data Lake 連線管理員，或建立參考 ADLS 帳戶的新連線管理員。   
@@ -300,7 +300,7 @@ ms.locfileid: "36135009"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Foreach 迴圈編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [Foreach 迴圈編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [Foreach 迴圈編輯器&#40;變數對應頁面&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [運算式頁面](expressions/expressions-page.md)   
  [For 迴圈容器](control-flow/for-loop-container.md)  

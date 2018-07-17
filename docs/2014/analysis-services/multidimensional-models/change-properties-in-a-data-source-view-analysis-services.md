@@ -1,5 +1,5 @@
 ---
-title: 變更屬性中的資料來源檢視 (Analysis Services) |Microsoft 文件
+title: 變更屬性中的資料來源檢視 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - friendly names [Analysis Services]
 - names [Analysis Services], data source views
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7c740690921e496cffc70959e0494bcdfb190b16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f264928a8abde5e20738b0fb60d712aa9bef2320
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145252"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332508"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>變更資料來源檢視的屬性 (Analysis Services)
   當您使用 [資料來源檢視精靈] 定義資料來源檢視，以及將資料表、檢視、具名計算和具名查詢加入到此資料來源檢視之後，您可能會想要變更與下列項目有關的屬性：  
@@ -51,7 +51,7 @@ ms.locfileid: "36145252"
 |--------------|-----------------|  
 |資料來源|指定您要檢視其屬性之資料來源檢視內的資料來源。|  
 |描述|指定資料來源檢視的描述。|  
-|[屬性]|指定出現在 [方案總管] 或 Analysis Services 資料庫中的資料來源檢視名稱。 您可以在這裡或 [方案總管] 中變更此資料來源檢視名稱。|  
+|名稱|指定出現在 [方案總管] 或 Analysis Services 資料庫中的資料來源檢視名稱。 您可以在這裡或 [方案總管] 中變更此資料來源檢視名稱。|  
 |NameMatchingCriteria|資料來源的名稱比對準則； 如果 [資料來源檢視精靈] 偵測到主索引鍵 - 外部索引鍵關聯性，則預設值為 (無)。 不論 [資料來源檢視精靈] 是否有設定這個屬性，您都可以在這裡指定值。 如果有資料庫關聯性存在，而且您有指定名稱比對準則，則這兩者都會用來推斷現有資料表與新加入之資料表之間的關聯性。|  
 |RetrieveRelationships|指定是否要從資料庫擷取關聯性。 預設值是 True。|  
 |SchemaRestriction|指定對於從資料來源擷取之結構描述的限制 (如果有的話)。 依預設，不會有任何結構描述限制存在。|  
@@ -65,7 +65,7 @@ ms.locfileid: "36145252"
 |DataSource|指定物件的資料來源。 您不能編輯這個屬性。|  
 |描述|指定資料表、檢視或具名查詢的描述。 如果基礎資料庫資料表或檢視具有儲存為擴充屬性的描述，就會出現這個值。 您可以編輯這個屬性。|  
 |FriendlyName|對資料表或檢視指定讓使用者更容易了解的名稱，或是指定與主題領域更有相關性的名稱。 依預設，資料表或檢視的 **[FriendlyName]** 屬性會與資料表或檢視的 **[Name]** 屬性相同。 當根據資料表或檢視來定義物件名稱時，OLAP 和資料採礦物件會使用 **[FriendlyName]** 屬性。 您可以編輯這個屬性。|  
-|[屬性]|指定基礎資料表或檢視的名稱，或是具名查詢的名稱。 當根據具名查詢來定義物件名稱時，OLAP 和資料採礦物件會使用 **[Name]** 屬性。 只有在具名查詢中才可以編輯這個屬性。|  
+|名稱|指定基礎資料表或檢視的名稱，或是具名查詢的名稱。 當根據具名查詢來定義物件名稱時，OLAP 和資料採礦物件會使用 **[Name]** 屬性。 只有在具名查詢中才可以編輯這個屬性。|  
 |QueryDefinition|指定具名查詢定義。 這個屬性只適用於具名查詢，而且不能直接編輯； 若要編輯這個屬性，您要編輯此具名查詢本身。|  
 |結構描述|指定適用於資料表、檢視或具名查詢的資料庫結構描述。 無法編輯這個屬性。|  
 |TableType|指定資料表、檢視表或具名查詢的資料表類型。 無法編輯這個屬性。|  
@@ -81,10 +81,10 @@ ms.locfileid: "36145252"
 |描述|指定資料行的描述。 如果基礎資料庫資料行具有儲存為擴充屬性的描述，就會出現這個值。 您可以編輯這個屬性。|  
 |FriendlyName|對資料表或檢視中的資料行指定讓使用者更容易了解的名稱，或是指定與主題領域更有相關性的名稱。 依預設，資料表或檢視中資料行的 **[FriendlyName]** 屬性會與該資料行的 **[Name]** 屬性相同。 當根據資料表或檢視中的資料行來定義屬性時，OLAP 和資料採礦物件會使用 **[FriendlyName]** 屬性。 您可以編輯這個屬性。|  
 |長度|根據基礎資料表或檢視中資料行內的資料來指定資料行的最大長度。|  
-|[屬性]|指定基礎資料行的名稱，或是具名計算的名稱。 當根據具名計算來定義屬性時，OLAP 和資料採礦物件會使用 **[Name]** 屬性。 只有在具名計算中才可以編輯這個屬性。|  
+|名稱|指定基礎資料行的名稱，或是具名計算的名稱。 當根據具名計算來定義屬性時，OLAP 和資料採礦物件會使用 **[Name]** 屬性。 只有在具名計算中才可以編輯這個屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [在 資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

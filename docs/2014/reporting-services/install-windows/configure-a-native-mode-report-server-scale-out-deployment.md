@@ -1,5 +1,5 @@
 ---
-title: 設定原生模式報表伺服器向外延展部署 （SSRS 組態管理員） |Microsoft 文件
+title: 設定原生模式報表伺服器向外延展部署 （SSRS 組態管理員） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], deployments
 - deploying [Reporting Services], scale-out deployment model
@@ -17,13 +17,13 @@ ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 04d66fcb5151a325402ff541fb4fd4f97d442d5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 153d97c15dcde21e70f29aeb77d80aee1e55adc5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034532"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296068"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>設定原生模式報表伺服器向外延展部署 (SSRS 組態管理員)
   Reporting Services 原生模式支援向外延展部署模型，它可讓您在執行多個報表伺服器執行個體時共用單一報表伺服器資料庫。 向外延展部署是用來提高報表伺服器的延展性，以便處理更多的並行使用者及更大量的報表執行負載。 它也可以給特定伺服器專用，以處理互動式或已排程的報表。  
@@ -42,7 +42,7 @@ ms.locfileid: "36034532"
   
  **若要規劃、安裝及設定向外延展部署，請遵循以下步驟：**  
   
--   檢閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》 的指示來安裝報表伺服器執行個體。  
+-   檢閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》 的指示，有關如何安裝報表伺服器執行個體。  
   
 -   如果您打算在網路負載平衡 (NLB) 叢集上主控向外延展部署，您應該先設定 NLB 叢集，然後再設定向外延展部署。 如需詳細資訊，請參閱 [在網路負載平衡叢集上設定報表伺服器](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36034532"
   
 3.  請將報表伺服器連接到您用於第一個報表伺服器執行個體的相同資料庫：  
   
-    1.  按一下**資料庫**以開啟 [資料庫] 頁面。  
+    1.  按一下 **資料庫**以開啟 資料庫 頁面。  
   
     2.  按一下 **[變更資料庫]**。  
   
@@ -90,13 +90,13 @@ ms.locfileid: "36034532"
   
     4.  輸入主控您要使用之報表伺服器資料庫的 SQL Server Database Engine 執行個體的伺服器名稱。 這必須是您在先前的指示集內所連接的相同伺服器。  
   
-    5.  按一下**測試連接**，然後按一下 **下一步**。  
+    5.  按一下 [**測試連接**，然後按一下**下一步]**。  
   
-    6.  在**報表伺服器資料庫**選取第一個報表伺服器中，您建立的資料庫，然後按一下 **下一步**。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
+    6.  在 [**報表伺服器資料庫**，選取您的第一個報表伺服器時，所建立的資料庫，然後按一下**下一步]**。 預設名稱為 ReportServer。 請勿選取 ReportServerTempDB，因為它只能在處理報表時用來儲存暫存資料。 如果資料庫清單是空的，請重複前四個步驟來建立與伺服器的連接。  
   
     7.  在 [認證] 頁面中，選取報表伺服器將用來連接到報表伺服器資料庫的帳戶類型和認證。 您可以使用與第一個報表伺服器執行個體相同的認證，或是不同的認證。 按 [下一步] 。  
   
-    8.  按一下**摘要**，然後按一下 **完成**。  
+    8.  按一下 **摘要**，然後按一下**完成**。  
   
 4.  設定報表伺服器 Web 服務 URL。 還不要測試 URL， 要等到報表伺服器加入向外延展部署之後，才會解析此 URL。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "36034532"
   
      ![[向外延展部署] 頁面的局部螢幕擷取畫面](../../../2014/sql-server/install/media/scaloutscreen.gif "[向外延展部署] 頁面的局部螢幕擷取畫面")  
   
-3.  在向外延展部署 頁面中，選取 正在等候加入此部署，並按一下 報表伺服器執行個體**新增伺服器**。  
+3.  在向外延展部署] 頁面上，選取 [報表伺服器執行個體正在等候加入此部署中，然後按一下**新增伺服器**。  
   
     > [!NOTE]  
     >  **問題** ：嘗試將 Reporting Services 報表伺服器執行個體加入向外延展部署時，您可能會遇到像是「拒絕存取」之類的錯誤訊息。  

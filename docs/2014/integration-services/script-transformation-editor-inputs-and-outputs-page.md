@@ -1,5 +1,5 @@
 ---
-title: 指令碼轉換編輯器 （輸入及輸出頁面） |Microsoft 文件
+title: 指令碼轉換編輯器 （輸入及輸出頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
 caps.latest.revision: 26
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c3d03826e9259a67ddd113e38ba9b58a9054e067
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 52d82b5ca8010e3343d089281f3f66e85f32864b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034400"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324628"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>指令碼轉換編輯器 (輸入及輸出頁面)
   使用 **[指令碼轉換編輯器]** 對話方塊的 **[輸入及輸出]** 頁面，即可加入、移除和設定指令碼轉換的輸入及輸出。  
@@ -55,10 +55,10 @@ ms.locfileid: "36034400"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [選取指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
+ [選取 指令碼元件類型](../../2014/integration-services/select-script-component-type.md)   
  [指令碼轉換編輯器&#40;輸入資料行頁面&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [指令碼轉換編輯器&#40;指令碼 頁面&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [指令碼轉換編輯器&#40;連接管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [指令碼轉換編輯器&#40;連線管理員頁面&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [其他指令碼元件範例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

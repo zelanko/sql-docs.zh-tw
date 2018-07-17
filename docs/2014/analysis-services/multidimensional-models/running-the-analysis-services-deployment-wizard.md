@@ -1,5 +1,5 @@
 ---
-title: 執行 Analysis Services 部署精靈 |Microsoft 文件
+title: 執行 Analysis Services 部署精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, running
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3b3a453586afdc51c77afc7ae654e3b044e684d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fcc326b21515bbfd6c8c325ca91685c00fa96c93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323168"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>執行 Analysis Services 部署精靈
   當您使用「 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈」來部署 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案時，可依下列方式執行此精靈：  
@@ -44,7 +44,7 @@ ms.locfileid: "36136511"
   
      – 或 –  
   
--   在**專案**資料夾[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，按兩下*\<專案名稱 >*.asdatabase 檔案。  
+-   在 **專案**的資料夾[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案中，按兩下*\<專案名稱 >*.asdatabase 檔案。  
   
     > [!NOTE]  
     >  如果找不到*\<專案名稱 >*.asdatabase 檔案，請嘗試使用搜尋，並指定 *.asdatabase。  

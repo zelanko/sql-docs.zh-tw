@@ -1,5 +1,5 @@
 ---
-title: 定義事實關聯性 |Microsoft 文件
+title: 定義事實關聯性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 caps.latest.revision: 19
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 28beac3f919350de1bf030dd9d4478146c28b2a7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f0dbd387f5b98f5547487df7d3fdba9724e10d0f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330788"
 ---
 # <a name="defining-a-fact-relationship"></a>定義事實關聯性
   使用者有時候想要按事實資料表中的資料項目建立量值維度，或查詢事實資料表中的其他特定相關資訊，例如與特定銷售事實相關的發票號碼或訂單號碼。 當您依據這樣的事實資料表項目來定義維度時，這種維度稱為「事實維度」。 事實維度也稱為變質維度。 事實維度對於將相關事實資料表資料列 (例如，與特定發票號碼相關的所有資料列) 分組很有幫助。 雖然您可以將這項資訊放在關聯式資料庫的個別維度資料表中，但為這項資訊建立個別的維度資料表並無好處，因為維度資料表與事實資料表的成長速率一樣，只會建立重複資料和產生不必要的複雜性而已。  
@@ -67,15 +67,15 @@ ms.locfileid: "36135506"
   
 13. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
-14. 在**屬性**維度之維度設計師 窗格**Internet Sales Order Details**維度，並選取**Sales Order Number**，然後變更**名稱**屬性 視窗中的屬性 `Item Description.`  
+14. 在**屬性**窗格中的 維度設計師**Internet Sales Order Details**維度，並選取**Sales Order Number**，然後變更**名稱**到 屬性 視窗中的屬性 `Item Description.`  
   
 15. 在 [NameColumn] 屬性資料格中，按一下瀏覽按鈕 **(…)**。 從 [名稱資料行] 對話方塊的 [來源資料表] 清單中，選取 [Product]、針對 [來源資料行] 選取 [EnglishProductName]，然後按一下 [確定]。  
   
 16. 將 [SalesOrderNumber] 資料行從 [資料來源檢視] 窗格中的 [InternetSales] 資料表拖曳到 [屬性] 窗格，以這個方式將 [銷售訂單號碼] 屬性加入維度。  
   
-17. 變更**名稱**屬性的新**Sales Order Number**屬性`Order Number`，並變更**OrderBy**屬性**金鑰**.  
+17. 變更**名稱**屬性的新**Sales Order Number**屬性設定為`Order Number`，並將變更**OrderBy**屬性設**金鑰**.  
   
-18. 在**階層** 窗格中，建立**網際網路銷售訂單**使用者階層，其中包含`Order Number`和**項目描述**層級，依照該順序。  
+18. 在 [**階層**] 窗格中，建立**網際網路銷售訂單**使用者階層，其中包含`Order Number`和**項目描述**層級，並依此順序。  
   
 19. 在 [屬性] 窗格，選取 [網際網路銷售訂單的詳細資料]，然後在 [屬性] 視窗中檢閱 [StorageMode] 屬性的值。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36135506"
   
      下圖顯示 [定義關聯性] 對話方塊中的事實關聯性屬性。  
   
-     ![定義關聯性對話方塊](../../2014/tutorials/media/l5-factrelationship-2.gif "定義關聯性對話方塊")  
+     ![定義關聯性 對話方塊](../../2014/tutorials/media/l5-factrelationship-2.gif "定義關聯性對話方塊")  
   
 3.  按一下 [取消]。  
   

@@ -1,5 +1,5 @@
 ---
-title: 在 屬性關聯性圖表中排列形狀 |Microsoft 文件
+title: 在 屬性關聯性圖表中排列形狀 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - attribute relationships [Analysis Services]
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
 caps.latest.revision: 10
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 56577bb2fbd1d3a1d1645e6400f65f5a37ed8245
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e99f3b4bc7687c70321874cce87b567acbbe5771
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037110"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330528"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>在屬性關聯性圖表中排列形狀
   您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中維度設計師之 [維度結構] 檢視的 [屬性關聯性] 索引標籤中，變更形狀的配置。  

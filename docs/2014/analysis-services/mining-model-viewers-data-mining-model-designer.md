@@ -1,5 +1,5 @@
 ---
-title: 採礦模型檢視器 （資料採礦模型設計師） |Microsoft 文件
+title: 採礦模型檢視器 （資料採礦模型設計工具） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 caps.latest.revision: 29
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e04799cbd5d78f82612732506e460008a4138117
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c9fd7d89abbbbce1c55b20227d44c191cf315d52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136506"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293628"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>採礦模型檢視器 (資料採礦模型設計師)
   使用 **[採礦模型檢視器]** 索引標籤，即可瀏覽採礦結構所包含的採礦模型。  
@@ -57,11 +57,11 @@ ms.locfileid: "36136506"
   
 -   [使用 Microsoft 關聯規則檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-    -   [項目集索引標籤&#40;採礦模型檢視器&#41;](itemsets-tab-mining-model-viewer.md)  
+    -   [項目集 索引標籤&#40;採礦模型檢視器&#41;](itemsets-tab-mining-model-viewer.md)  
   
     -   [規則索引標籤&#40;採礦模型檢視器&#41;](rules-tab-mining-model-viewer.md)  
   
-    -   [相依性網路索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
   
 ### <a name="microsoft-clustering-algorithm"></a>Microsoft 群集演算法  
   
@@ -83,7 +83,7 @@ ms.locfileid: "36136506"
   
     -   [決策樹索引標籤&#40;採礦模型檢視器&#41;](decision-tree-tab-mining-model-viewer.md)  
   
-    -   [相依性網路索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
   
     -   [採礦圖例對話方塊&#40;採礦模型檢視器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
@@ -93,7 +93,7 @@ ms.locfileid: "36136506"
   
     -   [決策樹索引標籤&#40;採礦模型檢視器&#41;](decision-tree-tab-mining-model-viewer.md)  
   
-    -   [相依性網路索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
   
     -   [採礦圖例對話方塊&#40;採礦模型檢視器&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
@@ -105,7 +105,7 @@ ms.locfileid: "36136506"
   
 -   [使用 Microsoft 貝氏機率分類檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
-    -   [相依性網路索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
   
     -   [屬性設定檔 索引標籤&#40;採礦模型檢視器&#41;](attribute-profiles-tab-mining-model-viewer.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "36136506"
   
 -   [使用 Microsoft 類神經網路檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
-    -   [相依性網路索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
+    -   [相依性網路 索引標籤&#40;採礦模型檢視器&#41;](dependency-network-tab-mining-model-viewer.md)  
   
     -   [類神經網路&#40;採礦模型檢視器&#41;](neural-network-mining-model-viewer.md)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36136506"
   
 ## <a name="see-also"></a>另請參閱  
  [採礦模型檢視&#40;資料採礦模型設計工具&#41;](mining-models-view-data-mining-model-designer.md)   
- [採礦結構檢視&#40;資料採礦模型設計工具&#41;](mining-structure-view-data-mining-model-designer.md)   
+ [採礦結構 檢視&#40;資料採礦模型設計工具&#41;](mining-structure-view-data-mining-model-designer.md)   
  [採礦精確度圖表設計師&#40;資料採礦&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [預測查詢產生器&#40;資料採礦&#41;](prediction-query-builder-data-mining.md)  
   

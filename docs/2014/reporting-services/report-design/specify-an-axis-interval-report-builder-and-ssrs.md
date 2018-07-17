@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1ce88458add3922b5626a3d883a3df414d76221e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3c619ec718e3471eb6518f6604a65c97cb367508
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134117"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304988"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>指定軸間隔 (報表產生器及 SSRS)
   軸間隔定義軸上的標籤數及隨附的刻度。 在值軸上，軸間隔會為圖表上的資料點提供一致的量值； 不過，在類別目錄軸上，這項功能則可能導致類別目錄無法顯示軸標籤。 您可以在軸 Interval 屬性中指定所需間隔數。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會根據結果集中的資料，在執行階段計算間隔數。 如需如何計算軸間隔的詳細資訊，請參閱[格式化圖表上的軸標籤 &#40;報表產生器及 SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)。  
@@ -40,7 +40,7 @@ ms.locfileid: "36134117"
   
 1.  以滑鼠右鍵按一下類別目錄軸，然後按一下 **[軸屬性]**。 **[軸屬性]** 對話方塊隨即開啟。  
   
-2.  在**軸選項**，將`Interval`至**1**。 每個類別目錄群組標籤隨即顯示。 如果想要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。  
+2.  在 **軸選項**，將`Interval`要**1**。 每個類別目錄群組標籤隨即顯示。 如果想要在 X 軸上每隔一個類別目錄群組標籤進行顯示，請輸入 **2**。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -51,13 +51,13 @@ ms.locfileid: "36134117"
   
 1.  以滑鼠右鍵按一下要變更的圖表軸，然後按一下 **[軸屬性]**。 **[軸屬性]** 對話方塊隨即開啟。  
   
-2.  在**軸選項**，將`Interval`至**自動**。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
+2.  在 **軸選項**，將`Interval`要**自動**。圖表將顯示可納入軸的最佳類別目錄標籤數目。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
  [格式化圖表 &#40;報表產生器和 SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [格式化圖表上的資料點&#40;報表產生器和 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [格式化圖表上的資料點&#40;報表產生器及 SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [在資料區中排序資料 &#40;報表產生器及 SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [軸屬性對話方塊、軸選項 &#40;報表產生器及 SSRS&#41;](../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)   
  [指定對數刻度 &#40;報表產生器及 SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)   

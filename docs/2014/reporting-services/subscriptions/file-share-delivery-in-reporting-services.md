@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
@@ -16,13 +16,13 @@ ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3bcb077bc785005557f20b96722f5aeb94c58234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e4123ae77852bf0ccde4229644393f8160ffb391
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030976"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331208"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Reporting Services 中的檔案共用傳遞
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 包括檔案共用傳遞延伸模組，讓您可以傳遞報表到資料夾。 依預設，可以使用檔案共用傳遞延伸模組，且不需額外的組態。 若要順利完成檔案傳遞，您必須設定共用資料夾的寫入權限。 此外，需要存取報表的使用者必須擁有共用資料夾的讀取權限。  
@@ -35,7 +35,7 @@ ms.locfileid: "36030976"
   
  本主題內容：  
   
--   [傳遞給共用資料夾之報表的特性](#bkmk_Characteristics)  
+-   [傳遞至共用資料夾報表的特性](#bkmk_Characteristics)  
   
 -   [目標資料夾](#bkmk_target_folders)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "36030976"
   
 -   [檔案選項](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> 傳遞給共用資料夾之報表的特性  
+##  <a name="bkmk_Characteristics"></a> 傳遞至共用資料夾報表的特性  
  傳遞給共用資料夾的報表屬於靜態檔案，這和報表伺服器所主控及管理的報表不同。 為報表定義的互動式功能不適用於以檔案形式儲存在檔案系統中的報表， 互動式功能是以靜態元素來表示。 例如，如果您傳遞矩陣報表，所產生的檔案會顯示報表的最上層檢視；您無法展開資料列和資料行來檢視支援的資料。 如果報表包括圖表，則使用預設呈現方式。 如果報表連結到其他報表，則連結會轉譯成靜態文字。 如果您想要在傳遞的報表中保留互動式功能，請改用電子郵件傳遞。 如需詳細資訊，請參閱 [Reporting Services 中的電子郵件傳遞](e-mail-delivery-in-reporting-services.md)。  
   
 ##  <a name="bkmk_target_folders"></a> 目標資料夾  
@@ -71,9 +71,9 @@ ms.locfileid: "36030976"
   
  您可以指定覆寫選項，針對每一次報表傳遞重複使用相同的檔案名稱，或者也可以建立新的檔案。 若要覆寫檔案，您必須使用相同的檔案名稱和副檔名。  
   
- 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請加入`@timestamp`變數的檔案名稱 (例如， *CompanySales@timestamp*)。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
+ 有一個替代方式可以在每一次傳遞中建立唯一的檔案，就是在檔案名稱中加入時間戳記。 若要這樣做，請新增`@timestamp`變數加入檔案名稱 (例如*CompanySales@timestamp*)。 使用這個方法時，會讓檔案名稱依照定義成為唯一的檔案名稱，所以絕對不會遭到覆寫。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立、 修改及刪除標準訂閱&#40;Reporting Services 原生模式&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+ [建立、 修改及刪除標準訂用帳戶&#40;Reporting Services 原生模式&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

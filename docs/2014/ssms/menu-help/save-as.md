@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.saveas
 helpviewer_keywords:
 - Save As dialog box
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 968cb13c9a115fcc0445cdfba194a2087a06a234
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 4dc19118c88734062a9c57ac39acf33bab5942d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031355"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326898"
 ---
 # <a name="save-as"></a>另存新檔
-  使用此對話方塊，即可以指定的檔案格式將目前項目的執行個體儲存在指定的位置。 若要顯示此對話方塊中，按一下**儲存** *\<檔案 >* **為**上**檔案**功能表 (其中 *\<檔案 >* 是目前項目的名稱)，或按 ALT + F，A 在程式碼編輯器。  
+  使用此對話方塊，即可以指定的檔案格式將目前項目的執行個體儲存在指定的位置。 若要顯示此對話方塊中，按一下**儲存** *\<檔案 >* **作為**上**檔案**功能表 (其中 *\<檔案 >* 是目前項目的名稱)，或按 ALT + F，A 在程式碼編輯器。  
   
 ## <a name="central-panel"></a>中央面板  
  **儲存於**  

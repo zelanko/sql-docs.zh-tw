@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], configuring notifications
 - e-mail [Master Data Services], configuring business rules
 - notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2d0c5d66a15ba476806df39792206c47a31bb26d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: c20519f4db37f398fefed79042cc2d3ecf5ba631
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030074"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326128"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>設定商務規則來傳送通知 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您想要通知使用者屬性值變更時，請設定商務規則來傳送通知。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 [系統管理] 和 [使用者及群組的權限] 功能區域的權限。 如果您沒有 [使用者及群組的權限] 功能區域的權限，就無法檢視傳送通知的目標使用者和群組清單。  
@@ -51,11 +51,11 @@ ms.locfileid: "36030074"
   
 4.  從 [實體] 清單中選取實體。  
   
-5.  從**成員型別**清單中，選取 成員類型。  
+5.  從**的成員型別**清單中，選取 成員類型。  
   
 6.  從 [屬性] 清單中，選取屬性或保留預設值 [全部]。  
   
-7.  在方格中，商務規則，資料列中按兩下**通知**欄位。  
+7.  在方格中，在 商務規則資料列，按兩下**通知**欄位。  
   
 8.  從子功能表中，按一下要傳送電子郵件通知給哪一個使用者或群組。  
   

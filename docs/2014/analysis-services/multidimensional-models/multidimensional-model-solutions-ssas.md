@@ -1,5 +1,5 @@
 ---
-title: 多維度模型方案 (SSAS) |Microsoft 文件
+title: 多維度模型方案 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [Analysis Services], defining objects
 - multidimensional data [Analysis Services], designing objects
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c85555caa6ef6ef832e7e01613bd636e59ccdca5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 566c9a2b53f58629148e28b57dfe9d98a55fd39b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135267"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330368"
 ---
 # <a name="multidimensional-model-solutions-ssas"></a>多維度模型方案 (SSAS)
     
@@ -44,7 +44,7 @@ ms.locfileid: "36135267"
  [多維度模型中的 cube](cubes-in-multidimensional-models.md)  
  描述如何設計 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube 物件。  
   
- [結構描述產生精靈&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [結構描述產生精靈 &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
  描述如何在無現有的關聯式結構描述之下來設計多維度資料庫物件。  
   
  [Analysis Services 個人化延伸模組](extending-olap/analysis-services-personalization-extensions.md)  

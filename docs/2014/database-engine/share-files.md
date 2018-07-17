@@ -1,5 +1,5 @@
 ---
-title: 共用檔案 |Microsoft 文件
+title: 共用檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sharing files
 - file sharing [SQL Server]
 - version control services [SQL Server], file sharing
 ms.assetid: 645f5c0a-e949-4e87-8988-85e4d6128464
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 528e0ac6eb185089fc7e5e38f654dd1acf2fb64e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: b931d9ebcf8ef5889158a4c393833298dc3b097a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135221"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308078"
 ---
 # <a name="share-files"></a>共用檔案
   您可以利用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 來跨越不同的原始檔控制專案共用項目。 當您共用某個項目時，這個項目的任何變更都會反映在共用這個項目的每個專案中。  
@@ -38,11 +38,11 @@ ms.locfileid: "36135221"
   
 1.  在 [方案總管] 中，選取共用檔案要放在其中的資料夾或專案。  
   
-2.  在**檔案**功能表上，指向**原始檔控制**，然後按一下 **共用**。  
+2.  在 **檔案**功能表上，指向**原始檔控制**，然後按一下**共用**。  
   
-3.  在**分享**對話方塊中，瀏覽目錄清單中，您想要共用的項目，然後按一下該項目。  
+3.  在 [**分享**] 對話方塊中，瀏覽目錄清單中，您想要共用的項目，然後按一下該項目。  
   
-4.  按一下**共用**。  
+4.  按一下 **共用**。  
   
 ## <a name="see-also"></a>另請參閱  
  [原始檔控制基本概念](../../2014/database-engine/source-control-basics.md)  

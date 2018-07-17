@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -27,21 +27,21 @@ helpviewer_keywords:
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 caps.latest.revision: 115
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1c563d74c639d580d6e20d76a9ebfef98fbf458b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 04edfd00a4f298e944837153e5e71f3c832a17f2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033642"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303438"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
-  `sqlcmd`公用程式可讓您輸入[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式、 系統程序和指令碼中的檔案在命令提示字元中，**查詢編輯器**SQLCMD 模式、 Windows 指令碼檔案或的作業系統 (Cmd.exe) 作業步驟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理程式作業。 這個公用程式利用 ODBC 執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批次。  
+  `sqlcmd`公用程式可讓您輸入[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式、 系統程序與指令碼檔案在命令提示字元中，在**查詢編輯器**SQLCMD 模式、 Windows 指令碼檔案或的作業系統 (Cmd.exe) 作業步驟[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]代理程式作業。 這個公用程式利用 ODBC 執行 [!INCLUDE[tsql](../includes/tsql-md.md)] 批次。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]適用於執行一般和 SQLCMD 模式中的 SqlClient**查詢編輯器**。 從命令列執行 `sqlcmd` 時，`sqlcmd` 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中以及在 `sqlcmd` 公用程式中執行相同的查詢時，可能會看到不同的行為。  
+>  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 會使用[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]中的執行正規和 SQLCMD 模式中的 SqlClient**查詢編輯器**。 從命令列執行 `sqlcmd` 時，`sqlcmd` 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中以及在 `sqlcmd` 公用程式中執行相同的查詢時，可能會看到不同的行為。  
   
  目前，`sqlcmd` 不需要在命令列選項與值之間保留一個空格。 但是在未來的版本中，可能會需要在命令列選項與值之間空一個空格。  
   
@@ -99,16 +99,16 @@ ms.locfileid: "36033642"
  這是工作站名稱。 這個選項會設定 `sqlcmd` 指令碼變數 SQLCMDWORKSTATION。 工作站名稱列在 **sys.processes** 目錄檢視的 **hostname** 資料行中，而且可以使用預存程序 **sp_who** 傳回名稱。 如果未指定這個選項，預設值為目前的電腦名稱。 這個名稱可用來識別不同的 `sqlcmd` 工作階段。  
   
  **-K** *application_intent*  
- 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，sqlcmd 公用程式將無法支援 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要： 可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
+ 宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K**，sqlcmd 公用程式將無法支援 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱 <<c0> [ 使用中次要： 可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)。  
   
  `-M` *multisubnet_failover*  
- 請務必指定`-M`連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 `-M` 提供目前使用中伺服器的更快速偵測與連接。 如果未指定 `–M`，`-M` 為關閉。 如需有關[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，請參閱[可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[使用中次要： 可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .  
+ 一律指定`-M`連接到可用性群組接聽程式時[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]可用性群組或[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]容錯移轉叢集執行個體。 `-M` 提供目前使用中伺服器的更快速偵測與連接。 如果未指定 `–M`，`-M` 為關閉。 如需詳細資訊[!INCLUDE[ssHADR](../includes/sshadr-md.md)]，請參閱 <<c2> [ 可用性群組接聽程式、 用戶端連接性及應用程式容錯移轉&#40;SQL Server&#41;](../database-engine/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 AlwaysOn 可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)，和[使用中次要： 可讀取次要複本](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) .</c2>  
   
  **-N**  
  用戶端會用這個參數要求加密的連接。  
   
  **-P** *password*  
- 這是一個使用者指定的密碼。 密碼會區分大小寫。 如果使用-U 選項和 **-P**選項不在使用中，而且未設定 SQLCMDPASSWORD 環境變數，`sqlcmd`會提示使用者輸入密碼。 如果 **-P**選項用在命令提示字元，而且沒有密碼結尾`sqlcmd`使用預設密碼 (NULL)。  
+ 這是一個使用者指定的密碼。 密碼會區分大小寫。 如果使用-U 選項和 **-P**選項不在使用中，而且尚未設定 SQLCMDPASSWORD 環境變數，`sqlcmd`會提示使用者輸入密碼。 如果 **-P**結尾的命令提示字元，而且沒有密碼使用選項`sqlcmd`使用預設密碼 (NULL)。  
   
 > [!IMPORTANT]  
 >  請勿使用空白密碼。 請使用增強式密碼。 如需詳細資訊，請參閱 [Strong Passwords](../relational-databases/security/strong-passwords.md)。  
@@ -133,7 +133,7 @@ ms.locfileid: "36033642"
  如果使用者名稱和密碼的組合不正確，會產生錯誤訊息。  
   
 > [!NOTE]  
->  保留 OSQLPASSWORD 環境變數的目的是為了與舊版相容。 SQLCMDPASSWORD 環境變數優先於 OSQLPASSWORD 環境變數。這表示`sqlcmd`和**osql**可以是使用不會互相干擾，舊的指令碼將繼續運作。  
+>  保留 OSQLPASSWORD 環境變數的目的是為了與舊版相容。 SQLCMDPASSWORD 環境變數優先於 OSQLPASSWORD 環境變數中;這表示`sqlcmd`並**osql**可以使用下一步 而不需要彼此干擾，舊的指令碼仍能運作。  
   
  如果同時使用 **-P** 選項和 **-E** 選項，就會產生錯誤訊息。  
   
@@ -142,22 +142,22 @@ ms.locfileid: "36033642"
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 它會設定 `sqlcmd` 指令碼變數 SQLCMDSERVER。  
   
- 指定 *server_name*，即可連接至該伺服器電腦上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定*server_name* [**\\* * * instance_name* ] 連接到具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]該伺服器電腦上。 如果未指定伺服器電腦，`sqlcmd` 會連接到本機電腦上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 當您從網路的遠端電腦執行 `sqlcmd` 時，需要這個選項。  
+ 指定 *server_name*，即可連接至該伺服器電腦上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定*server_name* [**\\* * * 執行個體名稱*] 連接到具名執行個體[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]該伺服器電腦上。 如果未指定伺服器電腦，`sqlcmd` 會連接到本機電腦上 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 當您從網路的遠端電腦執行 `sqlcmd` 時，需要這個選項。  
   
- *通訊協定*可以`tcp`(TCP/IP)、 `lpc` （共用記憶體），或`np`（具名管道）。  
+ *通訊協定*可以是`tcp`(TCP/IP)、 `lpc` （共用記憶體） 或`np`（具名管道）。  
   
- 如果您未指定*server_name* [**\\* * * instance_name* ] 啟動時`sqlcmd`，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]檢查及使用 SQLCMDSERVER 環境變數。  
+ 如果您未指定*server_name* [**\\* * * 執行個體名稱*] 當您啟動`sqlcmd`，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]檢查，並使用 SQLCMDSERVER 環境變數。  
   
 > [!NOTE]  
->  保留 OSQLSERVER 環境變數的目的是為了與舊版相容。 SQLCMDSERVER 環境變數優先於 OSQLSERVER 環境變數中。這表示`sqlcmd`和**osql**可以是使用不會互相干擾，舊的指令碼將繼續運作。  
+>  保留 OSQLSERVER 環境變數的目的是為了與舊版相容。 SQLCMDSERVER 環境變數優先於 OSQLSERVER 環境變數中;這表示`sqlcmd`並**osql**可以使用下一步 而不需要彼此干擾，舊的指令碼仍能運作。  
   
  **-U** *login_id*  
  這是使用者登入識別碼。  
   
 > [!NOTE]  
->  可利用 OSQLUSER 環境變數達到回溯相容性。 SQLCMDUSER 環境變數優先於 OSQLUSER 環境變數。 這表示`sqlcmd`和**osql**可以互相使用不受干擾。 這也表示現有的 **osql** 指令碼仍然有效。  
+>  可利用 OSQLUSER 環境變數達到回溯相容性。 SQLCMDUSER 環境變數優先於 OSQLUSER 環境變數。 這表示`sqlcmd`並**osql**可用彼此相鄰不受干擾。 這也表示現有的 **osql** 指令碼仍然有效。  
   
- 如果沒有 **-U**選項和 **-P**指定選項，`sqlcmd`嘗試藉由連線[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 驗證模式。 這項驗證以執行 `sqlcmd` 之使用者的 Windows 帳戶為基礎。  
+ 如果既未 **-U**選項，也不 **-P**指定選項，則`sqlcmd`嘗試藉由連線[!INCLUDE[msCoName](../includes/msconame-md.md)]Windows 驗證模式。 這項驗證以執行 `sqlcmd` 之使用者的 Windows 帳戶為基礎。  
   
  如果同時使用 **-U** 選項和 **-E** 選項 (本主題稍後將說明)，便會產生錯誤訊息。 如果 **–U** 選項後面有多個引數，就會產生錯誤訊息並結束程式。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "36033642"
   
 -   假設多個輸入檔都是相同的字碼頁。 Unicode 與非 Unicode 的輸入檔可以混合使用。  
   
- 輸入`chcp`命令提示字元，以驗證 Cmd.exe 的字碼頁。  
+ 輸入`chcp`在命令提示字元中，以驗證 Cmd.exe 的字碼頁。  
   
  **-i** *input_file*[**,***input_file2*...]  
  識別包含 SQL 陳述式或預存程序的批次之檔案。 您可以指定多個檔案，它們會依照順序加以讀取和處理。 檔案名稱之間不能有空格。 `sqlcmd` 會先檢查指定的檔案是否全部存在。 如果有一個或多個檔案不存在，`sqlcmd` 會結束作業。 -i 和 -Q/-q 為互斥選項。  
@@ -270,7 +270,7 @@ ms.locfileid: "36033642"
 >  實際逾時值可能與指定的 *time_out* 值之間有幾秒的差異。  
   
  **-vvar =**  *value*[ **var =** *value*...]  
- 建立`sqlcmd`指令碼變數可以用於`sqlcmd`指令碼。 如果值包含空格，請用引號括住該值。 您可以指定多個***var***=**"*`values`*"** 值。 如果指定的任何值發生錯誤，`sqlcmd` 會產生一則錯誤訊息，並結束作業。  
+ 會建立`sqlcmd`指令碼變數可以用於`sqlcmd`指令碼。 如果值包含空格，請用引號括住該值。 您可以指定多個***var***=**」*`values`*"** 值。 如果指定的任何值發生錯誤，`sqlcmd` 會產生一則錯誤訊息，並結束作業。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -388,7 +388,7 @@ ms.locfileid: "36033642"
   
  如果指定了選擇性參數 **1** ，統計資料的輸出格式是用冒號分隔的格式，很容易匯入試算表中，指令碼也很容易處理它。  
   
- 如果選擇性參數不是任何值**1**，則會產生錯誤和`sqlcmd`結束。  
+ 如果選擇性的參數是任何值以外**1**，則會產生錯誤和`sqlcmd`結束。  
   
  `-X`[**1**]  
  停用從批次檔執行 `sqlcmd` 時，可能會危及系統安全性的命令。 仍會辨識停用的命令；`sqlcmd` 會發出一則警告訊息，並繼續作業。 如果選擇性參數**1**指定，則`sqlcmd`會產生錯誤訊息，並結束作業。 使用 `-X` 選項時，會停用下列命令：  
@@ -397,7 +397,7 @@ ms.locfileid: "36033642"
   
 -   **!!** *command*  
   
- 如果指定了 `-X` 選項，您就無法將環境變數傳給 `sqlcmd`。 也無法執行利用 SQLCMDINI 指令碼變數所指定的啟動指令碼。 如需有關`sqlcmd`指令碼變數，請參閱[以指令碼變數使用 sqlcmd](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
+ 如果指定了 `-X` 選項，您就無法將環境變數傳給 `sqlcmd`。 也無法執行利用 SQLCMDINI 指令碼變數所指定的啟動指令碼。 如需詳細資訊`sqlcmd`指令碼變數，請參閱[以指令碼變數使用 sqlcmd](../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)。  
   
  **-?**  
  顯示 `sqlcmd` 選項的語法摘要。  
@@ -405,12 +405,12 @@ ms.locfileid: "36033642"
 ## <a name="remarks"></a>備註  
  您不需要按照語法區段中顯示的順序使用選項。  
   
- 傳回多項結果時，`sqlcmd` 會在批次的各結果集之間，列印一行空白行。 此外，「\<x > 影響的資料列 」 不適用於執行的陳述式時，沒有出現訊息。  
+ 傳回多項結果時，`sqlcmd` 會在批次的各結果集之間，列印一行空白行。 此外，「\<x > 受影響的資料列 」 不適用於執行的陳述式時，沒有出現訊息。  
   
  若要使用`sqlcmd`，以互動方式輸入`sqlcmd`在命令提示字元中的一個或多個本主題稍早所述的選項。 如需詳細資訊，請參閱[使用 sqlcmd 公用程式](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
 > [!NOTE]  
->  選項 **-L**， **-Q**， **-Z**或 **-i**導致`sqlcmd`在執行之後結束。  
+>  選項 **-L**， **-Q**， **-Z**或是 **-i**導致`sqlcmd`在執行之後結束。  
   
  命令列環境 (Cmd.exe) 中之 `sqlcmd` 命令列的總長度 (包括所有引數和擴充的變數)，皆由 Cmd.exe 的作業系統決定。  
   
@@ -420,7 +420,7 @@ ms.locfileid: "36033642"
   
 2.  使用者層級環境變數  
   
-3.  命令殼層 (**設定**X = Y) 於命令提示字元，再執行`sqlcmd`。  
+3.  命令殼層 (**設定**X = Y) 於命令提示字元執行前`sqlcmd`。  
   
 4.  **sqlcmd-v** X=Y  
   
@@ -503,7 +503,7 @@ ms.locfileid: "36033642"
  列印陳述式快取內容。  
   
  **變數**  
-  **: Setvar** \< **var**> [ **"*`value`*"** ]  
+  **: Setvar** \< **var**> [ **」*`value`*"** ]  
  定義 `sqlcmd` 指令碼變數。 指令碼變數的格式如下： `$(VARNAME)`。  
   
  變數名稱不區分大小寫。  
@@ -531,7 +531,7 @@ ms.locfileid: "36033642"
  顯示目前所設定之指令碼變數的清單。  
   
 > [!NOTE]  
->  僅限指令碼變數所設定的`sqlcmd`，以及使用設定 **: Setvar**命令將會顯示。  
+>  指令碼變數所設定的僅`sqlcmd`，並使用所設定的 **: Setvar**命令將會顯示。  
   
  **輸出命令**  
   **:Error**   
@@ -614,12 +614,12 @@ ms.locfileid: "36033642"
   
  **其他命令**  
   **:r \<** 檔名**>**  
- 剖析其他[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式和`sqlcmd`命令所指定的檔案從 **< *`filename`* >** 到陳述式快取。  
+ 其他剖析[!INCLUDE[tsql](../includes/tsql-md.md)]陳述式並`sqlcmd`命令所指定的檔案 **< *`filename`* >** 到陳述式快取。  
   
  如果檔案包含的 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式後面沒有緊接著 **GO**，您必須在 **:r** 之後的一行輸入 **GO**。  
   
 > [!NOTE]  
->  **\<** *檔名* **>** 讀取所在之啟動目錄的相對`sqlcmd`執行。  
+>  **\<** *檔名* **>** 啟動目錄相對讀取`sqlcmd`執行。  
   
  在發現批次結束字元之後，便會讀取和執行這個檔案。 您可以發出多個 **:r** 命令。 這個檔案可包含任何 `sqlcmd` 命令。 其中包括批次結束字元 **GO**。  
   
@@ -672,11 +672,11 @@ ms.locfileid: "36033642"
 ### <a name="sqlcmd-file-names"></a>sqlcmd 檔案名稱  
  `sqlcmd` 您可以使用指定的輸入的檔 **-i**選項或 **: r**命令。 輸出檔則可以使用 **-o** 選項或 **:Error**、 **:Out** 和 **:Perftrace** 命令予以指定。 以下列出使用這些檔案的幾項指導方針：  
   
--   **: Error**， **: Out**和 **: Perftrace**應使用不同**< *`filename`* >**. 如果相同**< *`filename`* >** 是使用之命令的輸入可能這些固定文字混合。  
+-   **: Error**， **: Out**並 **: Perftrace**應該使用不同**< *`filename`* >**. 如果相同**< *`filename`* >** 是使用輸入的命令可能會混合。  
   
 -   如果從本機電腦的 `sqlcmd` 呼叫位於遠端伺服器上的輸入檔，且檔案中包含磁碟機檔案路徑 (例如 :out c:\OutputFile.txt)， 便會在本機電腦建立輸出檔案，而不是在遠端伺服器建立。  
   
--   Valid file paths include: C:\\**<*`filename`*>**, \\\\<Server\>\\<Share$>\\**<*`filename`*>** and "C:\Some Folder\\**<*`file name`*>**". 如果路徑中有空格，請使用引號。  
+-   有效的檔案路徑包括： c:\\**<*`filename`*>**， \\ \\< 伺服器\>\\< 共用 $>\\ **< *`filename`* >** 和"C:\Some Folder\\  **< *`file name`*>**". 如果路徑中有空格，請使用引號。  
   
 -   每個新的 `sqlcmd` 工作階段都會覆寫現有的同名檔案。  
   

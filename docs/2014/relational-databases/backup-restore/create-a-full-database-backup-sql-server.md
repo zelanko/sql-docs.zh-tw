@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
 - backing up databases [SQL Server], SQL Server Management Studio
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 caps.latest.revision: 51
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 89af2b55ab06a6d034ca75d009802f126519ef06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 7d5d52c835ea69914d538138cf189c7171e07a78
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146780"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320438"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>建立完整資料庫備份 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 PowerShell，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立完整資料庫備份。  
@@ -73,7 +72,7 @@ ms.locfileid: "36146780"
 ###  <a name="Security"></a> 安全性  
  資料庫備份上的 TRUSTWORTHY 是設為 OFF。 如需如何將 TRUSTWORTHY 設成 ON 的資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)。  
   
- 開頭為[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]`PASSWORD`和`MEDIAPASSWORD`選項已遭到停用建立備份。 您仍然可以還原以密碼建立的備份。  
+ 開頭[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]`PASSWORD`和`MEDIAPASSWORD`選項已遭到停用建立備份。 您仍然可以還原以密碼建立的備份。  
   
 ####  <a name="Permissions"></a> 權限  
  BACKUP DATABASE 和 BACKUP LOG 權限預設為 **sysadmin** 固定伺服器角色以及 **db_owner** 和 **db_backupoperator** 固定資料庫角色的成員。  
@@ -93,7 +92,7 @@ ms.locfileid: "36146780"
   
 3.  以滑鼠右鍵按一下資料庫，指向 [工作]，然後按一下 [備份]。 會出現 **[備份資料庫]** 對話方塊。  
   
-4.  在`Database`清單方塊中，確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
+4.  在 `Database`清單方塊中，確認資料庫名稱。 您可以選擇性從清單中選取不同的資料庫。  
   
 5.  您可以針對任何復原模式 (**完整**、**大量記錄**或**簡單**) 執行資料庫備份。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "36146780"
     > [!NOTE]  
     >  選取 **[差異]** 選項時，您無法建立「只複製」備份。  
   
-8.  如**備份元件**，按一下  `Database`。  
+8.  針對**備份元件**，按一下  `Database`。  
   
 9. 接受 **[名稱]** 文字方塊中建議的預設備份組名稱，或者輸入不同的備份組名稱。  
   

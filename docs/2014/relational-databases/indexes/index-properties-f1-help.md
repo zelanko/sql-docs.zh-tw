@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.indexproperties.storage.f1
 - sql12.swb.indexproperties.columns.f1
@@ -19,15 +18,15 @@ f1_keywords:
 - sql12.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 8ac38a8ac0fbe4e4761e3f2cd9a0524109727c99
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 240c72d9facde541e2eefa25fd8ba6d456cb7133
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145620"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290944"
 ---
 # <a name="index-properties-f1-help"></a>索引屬性 F1 說明
   本主題中的章節參考使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 對話方塊提供的各種不同索引屬性。  
@@ -184,7 +183,7 @@ ms.locfileid: "36145620"
 ### <a name="bounding-box"></a>週框方塊  
  *「週框方塊」* (Bounding Box) 是幾何平面最上層方格的周邊。 週框方塊參數只存在於幾何方格鑲嵌內。 如果 **[鑲嵌式配置]** 為 **[地理方格]**，就無法使用這些參數。  
   
- 此面板會顯示 **(*`X-min`*，*`Y-min`*)** 和 **(*`X-max`*，*`Y-max`* )** 週框方塊座標。 沒有預設座標值。 因此，當您在 `geometry` 類型資料行上建立新的空間索引時，您必須指定座標值。  
+ 此面板會顯示 **(*`X-min`*，*`Y-min`*)** 並 **(*`X-max`*，*`Y-max`* )** 週框方塊座標。 沒有預設座標值。 因此，當您在 `geometry` 類型資料行上建立新的空間索引時，您必須指定座標值。  
   
  `X-min`  
  週框方塊左下角的 X 座標。  

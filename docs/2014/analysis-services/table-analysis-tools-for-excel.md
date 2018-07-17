@@ -1,5 +1,5 @@
 ---
-title: 適用於 Excel 的資料表分析工具 |Microsoft 文件
+title: 適用於 Excel 的資料表分析工具 |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,24 +8,24 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
 - getting started
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2614553a97cb44e1a326de1a1d37bafdd9bd42db
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dde976376aa356a0b349e769821b0137eb0be29c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034653"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312338"
 ---
 # <a name="table-analysis-tools-for-excel"></a>適用於 Excel 的資料表分析工具
-  中的資料採礦工具**分析**工具列是開始使用資料採礦的最簡單方式。 每個工具都會自動分析資料的散發和類型，並設定參數以確保結果是有效的。 您不需選取演算法或設定複雜參數。  
+  中的資料採礦工具**分析**工具列是最簡單的方式，若要開始使用資料採礦。 每個工具都會自動分析資料的散發和類型，並設定參數以確保結果是有效的。 您不需選取演算法或設定複雜參數。  
   
  ![DM](media/dm-tabletoolsanalyze.gif "DM")  
   
@@ -57,14 +57,14 @@ ms.locfileid: "36034653"
  **反白顯示例外狀況**」 工具採用 Microsoft 群集演算法。  
   
  [搜尋目標狀況&#40;適用於 Excel 的資料表分析工具&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)  
- 在**搜尋目標**您工具，指定目標值和此工具會識別必須變更以符合該目標的基礎因數。 例如，如果您知道必須增加通話滿意度 20%，就可以要求模型預測應該要變更才能達到目標的因數。  
+ 在 **搜尋目標**您工具，指定目標值，而此工具會識別必須變更為符合該目標的基礎因數。 例如，如果您知道必須增加通話滿意度 20%，就可以要求模型預測應該要變更才能達到目標的因數。  
   
  **搜尋目標**」 工具採用 Microsoft 羅吉斯迴歸演算法。  
   
  [假設狀況&#40;適用於 Excel 的資料表分析工具&#41;](what-if-scenario-table-analysis-tools-for-excel.md)  
- **互補分析**工具**搜尋目標**工具。 使用此工具時，您要輸入您想要變更的值，模型就會預測該變更是否足以達到所要的結果。 例如，您可以要求模型推測若額外增加一個話務員是否能將客戶滿意度提高一個積分點。  
+ **模擬 Analysis**工具互補**搜尋目標**工具。 使用此工具時，您要輸入您想要變更的值，模型就會預測該變更是否足以達到所要的結果。 例如，您可以要求模型推測若額外增加一個話務員是否能將客戶滿意度提高一個積分點。  
   
- **假設**」 工具採用 Microsoft 羅吉斯迴歸演算法。  
+ **What-if** 」 工具採用 Microsoft 羅吉斯迴歸演算法。  
   
  [預測計算器&#40;適用於 Excel 的資料表分析工具&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
  這個工具會建立模型，用於分析產生目標結果的因數，然後根據從資料衍生的計分規則預測任何新輸入的結果。 這個工具也會產生互動式決策工作表，讓您輕鬆為新輸入計分。 您還可以建立計分工作表的列印版本，以供離線使用。  
@@ -79,15 +79,15 @@ ms.locfileid: "36034653"
  **購物籃分析**」 工具採用 Microsoft 關聯分析演算法。  
   
 ## <a name="requirements-for-the-table-analysis-tools-for-excel"></a>適用於 Excel 的資料表分析工具的需求  
- 若要使用適用於 Excel 的資料表分析工具，您必須先建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 此連接可讓您存取分析資料時所用的 Microsoft 資料採礦演算法。 如果您無法存取執行個體，建議您請系統管理員設定一個執行個體，讓您能夠用於實驗資料採礦。 如需詳細資訊，請參閱[連接至來源資料&#40;適用於 Excel 的資料採礦用戶端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。  
+ 若要使用適用於 Excel 的資料表分析工具，您必須先建立與 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 執行個體的連接。 此連接可讓您存取分析資料時所用的 Microsoft 資料採礦演算法。 如果您無法存取執行個體，建議您請系統管理員設定一個執行個體，讓您能夠用於實驗資料採礦。 如需詳細資訊，請參閱 <<c0> [ 連接至來源的資料&#40;適用於 Excel 的資料採礦用戶端&#41;](connect-to-source-data-data-mining-client-for-excel.md)。</c0>  
   
  若要使用資料表分析工具來處理資料，您必須將您要使用的資料範圍轉換成 Excel 資料表。  
   
- 如果您看**分析**功能區中，請嘗試按一下資料表內部的第一次。 此功能表要等到選取了資料表之後才會啟動。  
+ 如果您看**分析**功能區上，嘗試按一下資料表內部的第一次。 此功能表要等到選取了資料表之後才會啟動。  
   
 ## <a name="see-also"></a>另請參閱  
  [適用於 Excel 的資料採礦用戶端&#40;SQL Server 資料採礦增益集&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)   
  [Visio 資料採礦圖表的疑難排解&#40;SQL Server 資料採礦增益集&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)   
- [包含的內容在資料採礦增益集 for Office](what-s-included-in-the-data-mining-add-ins-for-office.md)  
+ [適用於 Office 的資料採礦增益集包含的內容](what-s-included-in-the-data-mining-add-ins-for-office.md)  
   
   

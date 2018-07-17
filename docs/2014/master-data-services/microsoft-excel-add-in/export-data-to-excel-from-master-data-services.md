@@ -1,5 +1,5 @@
 ---
-title: 資料從 MDS 載入 Excel |Microsoft 文件
+title: 將資料從 MDS 載入 Excel |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 caps.latest.revision: 12
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8bee7252d1adfcce827eadbd62cb7d38416d7596
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b74f5fc00ea25f434a4191c04b0f890e04d8aca0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37316548"
 ---
 # <a name="load-data-from-mds-into-excel"></a>將資料從 MDS 載入 Excel 中
-  在[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，您必須從 MDS 儲存機制載入資料，才能使用它。  
+  在  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]，您必須從 MDS 儲存機制載入資料，才能使用。  
   
- 如果您想要篩選資料集載入之前，請參閱[載入之前篩選資料&#40;MDS 增益集的 Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)改為。  
+ 如果您想要篩選資料集載入之前，請參閱[載入之前篩選資料&#40;MDS 增益集適用於 Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md)改為。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[總管]** 功能區域的權限。  
@@ -51,7 +51,7 @@ ms.locfileid: "36035227"
     >  如果您使用適用於 Microsoft Excel (32 位元 Excel) 的增益集載入以文字分隔的資料，而且 [Cell Count to Load (要載入的資料格計數)] 和 [Cell Count to Publish (要發行的資料格計數)] 屬性的值都設為最大值 1000，將會發生記憶體不足的錯誤。 您必須使用 64 位元 Excel，才能使用 [Cell Count to Load (要載入的資料格計數)] 和 [Cell Count to Publish (要發行的資料格計數)] 的最大值設定。  
   
 ## <a name="next-steps"></a>後續步驟  
- [將資料從 Excel 到 MDS 發行&#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [從 Excel 發行資料給 MDS &#40;MDS 增益集的 Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [載入資料&#40;MDS 增益集的 Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   

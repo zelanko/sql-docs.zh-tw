@@ -1,5 +1,5 @@
 ---
-title: 第 1 課： 建立 Windows Azure 儲存體帳戶和容器 |Microsoft 文件
+title: 第 1 課： 建立 Windows Azure 儲存體帳戶和容器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9c4a2fb1db64456fe63bc814adda8278b253937a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: craigg-msft
+ms.author: craigg
+manager: craigg
+ms.openlocfilehash: 3953936761ac031a352ef17544e4818c276ab54a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299308"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>第 1 課：建立 Windows Azure 儲存體帳戶和容器
   在您開始將 SQL Server 資料檔案儲存在 Windows Azure 儲存體之前，必須先建立 Windows Azure 儲存體帳戶和 Blob 容器以及共用存取簽章。 第 1 課會逐步引導您完成登入 Windows Azure 管理入口網站，以及建立儲存體帳戶、Blob 容器和共用存取簽章的步驟。  
@@ -32,7 +32,7 @@ ms.locfileid: "36135517"
   
 -   使用預存的存取原則管理容器或其 Blob 的共用存取簽章。 預存的存取原則為您提供另一種控制共用存取簽章的方法，同時也提供了直接將簽章撤銷的方式。  
   
- 如需詳細資訊，請參閱[管理 Windows Azure 儲存體資源的存取](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx)。  
+ 如需詳細資訊，請參閱 <<c0> [ 管理 Windows Azure 儲存體資源的存取](http://msdn.microsoft.com/library/windowsazure/ee393343.aspx)。  
   
 ## <a name="create-storage-account"></a>建立儲存體帳戶  
  若要在 Windows Azure 管理入口網站上建立儲存體帳戶，請遵循下列步驟：  
@@ -52,19 +52,19 @@ ms.locfileid: "36135517"
   
 1.  登入[Windows Azure 管理入口網站](https://manage.windowsazure.com)。  
   
-2.  選取儲存體帳戶中，按一下**容器**索引標籤上，按一下  **ADD CONTAINER**螢幕的底部，以開啟新的對話方塊。  
+2.  選取儲存體帳戶，請按一下**容器**索引標籤，然後按一下**新增容器**螢幕的底部，這會開啟新的對話方塊。  
   
 3.  輸入容器的名稱。  
   
-4.  選取**私人**如**存取類型**。 當您將存取設為私用時，只有 Windows Azure 帳戶擁有者才能讀取容器和 Blob 資料。  
+4.  選取 **私人**for**存取類型**。 當您將存取設為私用時，只有 Windows Azure 帳戶擁有者才能讀取容器和 Blob 資料。  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-4.gif "SQL 14 CTP2")  
   
 > [!NOTE]  
->  若要以程式設計方式建立容器，您也可以使用 REST 應用程式開發介面。 如需詳細資訊，請參閱[建立容器](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx)以及[Windows Azure 儲存體服務 REST API 參考](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx)。  
+>  若要以程式設計方式建立容器，您也可以使用 REST 應用程式開發介面。 如需詳細資訊，請參閱 <<c0> [ 建立容器](http://msdn.microsoft.com/library/windowsazure/dd179468.aspx)也[Windows Azure 儲存體服務 REST API 參考](http://msdn.microsoft.com/library/windowsazure/dd179355.aspx)。  
   
  **下一課：**  
   
- [第 2 課。在容器上建立原則，並產生共用存取簽章&#40;SAS&#41;金鑰](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+ [第 2 課：在容器上建立原則，並產生共用存取簽章&#40;SAS&#41;索引鍵](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
   

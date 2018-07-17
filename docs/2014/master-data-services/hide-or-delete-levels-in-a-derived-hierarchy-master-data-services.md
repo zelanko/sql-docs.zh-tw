@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, hiding levels
 - derived hierarchies, deleting levels
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 caps.latest.revision: 4
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 898827072bfcebb869703d479628c290f3bf5fc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: da74b0ff57f6bb5488903730351dcacacf92b2f8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300418"
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>隱藏或刪除衍生階層中的層級 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，當您要求群組的層級但是不需要顯示該層級時，請在衍生階層中隱藏該層級。 當您不想要使用層級來群組時，請將它刪除。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -38,13 +38,13 @@ ms.locfileid: "36146320"
   
 1.  在 [ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]] 中，按一下 **[系統管理]**。  
   
-2.  在**模型檢視** 頁面上，從功能表列指向**管理**按一下**衍生階層**。  
+2.  在 **模型檢視**頁面上，從功能表列指向**管理**，按一下 **衍生階層**。  
   
 3.  在 [衍生階層維護] 頁面上，選取 [模型] 清單中的模型。  
   
 4.  選取要編輯之衍生階層的資料列。  
   
-5.  按一下**選取 編輯衍生階層**。  
+5.  按一下 **選取 編輯衍生階層**。  
   
 6.  在 [目前層級] 窗格中：  
   

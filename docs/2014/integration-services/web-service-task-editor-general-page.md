@@ -1,5 +1,5 @@
 ---
-title: Web 服務工作編輯器 （一般頁面） |Microsoft 文件
+title: Web 服務工作編輯器 （一般頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 caps.latest.revision: 34
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d23c975b44a9d61bb9e9b1b61ebf04285842ba01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36022912"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331858"
 ---
 # <a name="web-service-task-editor-general-page"></a>Web 服務工作編輯器 (一般頁面)
   使用 [Web 服務工作編輯器] 對話方塊的 [一般] 頁面，來指定 HTTP 連接管理員、指定 Web 服務工作使用的 Web 服務描述語言 (WSDL) 檔案的位置、描述 Web 服務工作，以及下載 WSDL 檔案。  
@@ -48,7 +48,7 @@ ms.locfileid: "36022912"
   
 -   在 [WSDLFile] 選項中選取此空白檔案。  
   
--   值設定**OverwriteWSDLFile**至`True`啟用實際的 WSDL 檔案以覆寫此空白檔案。  
+-   設定的值**OverwriteWSDLFile**到`True`啟用實際的 WSDL 檔案可以覆寫此空白檔案。  
   
 -   按一下 [下載 WSDL]，下載實際的 WSDL 檔案並覆寫空白檔案。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "36022912"
  **OverwriteWSDLFile**  
  指出是否可以覆寫 Web 服務工作的 WSDL 檔案。  
   
- 如果您想要使用下載 WSDL 檔案**下載 WSDL**按鈕，將此值設定為`True`。  
+ 如果您想要使用 下載 WSDL 檔案**下載 WSDL**按鈕，將此值設定為`True`。  
   
  **名稱**  
  為 Web 服務工作提供唯一的名稱。 這個名稱是作為工作圖示中的標籤使用。  

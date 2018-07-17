@@ -1,5 +1,5 @@
 ---
-title: MiningStructurePermission 元素 (ASSL) |Microsoft 文件
+title: MiningStructurePermission 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0c74423bfbf199825dc707d80e21c5b5a4555cc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036890"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295488"
 ---
 # <a name="miningstructurepermission-element-assl"></a>MiningStructurePermission 元素 (ASSL)
-  定義的權限的成員[角色](role-element-assl.md)針對個別的項目有[MiningStructure](miningstructure-element-assl.md)項目。  
+  定義的權限的成員[角色](role-element-assl.md)項目有針對個別[MiningStructure](miningstructure-element-assl.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,9 +64,9 @@ ms.locfileid: "36036890"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 分析管理物件 (AMO) 物件模型中的對應元素是<xref:Microsoft.AnalysisServices.MiningStructurePermission>。  
+ 在 「 分析管理物件 (AMO) 物件模型的對應元素是<xref:Microsoft.AnalysisServices.MiningStructurePermission>。  
   
- 在[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，權限`AllowDrillthrough`已經過擴充，可套用至採礦結構。 當您指派這個權限給某個角色時，屬於該角色成員的任何使用者都可以使用下列語法來直接查詢採礦結構：  
+ 在  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]，權限`AllowDrillthrough`已擴充到套用至採礦結構。 當您指派這個權限給某個角色時，屬於該角色成員的任何使用者都可以使用下列語法來直接查詢採礦結構：  
   
 ```  
 SELECT <structure column list> FROM <structure>.CASES  

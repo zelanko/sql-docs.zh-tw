@@ -1,5 +1,5 @@
 ---
-title: 定義 Cube |Microsoft 文件
+title: 定義 Cube |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: ee7de0dd605b8a6083a6541daf7942cf93ab5916
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9de74db589624ecbf16785ca108dbdd6c5f9ca87
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031128"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323288"
 ---
 # <a name="defining-a-cube"></a>定義 Cube
   「Cube 精靈」可協助您定義 Cube 的量值群組和維度。 在下列工作中，您將使用「Cube 精靈」來建立 Cube。  
@@ -60,7 +60,7 @@ ms.locfileid: "36031128"
   
 11. 按 [下一步] 。  
   
-12. 在**正在完成精靈**頁面上，變更至 cube 的名稱`Analysis Services Tutorial`。 在 [預覽] 窗格中，您可以看見 [InternetSales] 量值群組及其量值。 此外，您也可以看見 [Date]、[Customer] 和 [Product] 維度。  
+12. 在 **完成精靈**頁面上，將 cube 名稱變更`Analysis Services Tutorial`。 在 [預覽] 窗格中，您可以看見 [InternetSales] 量值群組及其量值。 此外，您也可以看見 [Date]、[Customer] 和 [Product] 維度。  
   
 13. 按一下 [完成] 以完成精靈。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "36031128"
 15. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [將屬性加入至維度](lesson-2-3-adding-attributes-to-dimensions.md)  
+ [將屬性新增至維度](lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的 cube](multidimensional-models/cubes-in-multidimensional-models.md)   

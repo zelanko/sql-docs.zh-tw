@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 caps.latest.revision: 37
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 795ff8c9d1ebc751bdf0a2acfd57b158ed64c956
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: a13bd70e82e219a3935f0076481df9de7b683e23
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030997"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318328"
 ---
 # <a name="reinitialize-a-subscription"></a>重新初始化訂閱
   本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]或 Replication Management Objects (RMO) 來重新初始化 [!INCLUDE[tsql](../../includes/tsql-md.md)]中的訂閱。 個別訂閱可標示為要重新初始化，好讓下一次同步處理期間會套用新的快照集。  
@@ -123,7 +123,7 @@ ms.locfileid: "36030997"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的提取訂閱  
   
-1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)。 指定 **@publisher**或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db**和 **@publication**資料夾中可用。 若要重新初始化之前，請上傳變更從訂閱者，請指定值`true`如**@upload_first**。 這樣會標示此訂閱，在下次執行合併代理程式時重新初始化。  
+1.  在訂閱資料庫的訂閱者端，執行 [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql)。 指定 **@publisher**或 Replication Management Objects (RMO) 來重新初始化 **@publisher_db**和 **@publication**資料夾中可用。 若要重新初始化發生之前，請上傳變更從訂閱者，指定其值為`true`for **@upload_first**。 這樣會標示此訂閱，在下次執行合併代理程式時重新初始化。  
   
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
@@ -132,7 +132,7 @@ ms.locfileid: "36030997"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>重新初始化合併式發行集的發送訂閱  
   
-1.  在發行者端，執行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來重新初始化 **@subscriber**和 **@subscriber_db**資料夾中可用。 若要重新初始化之前，請上傳變更從訂閱者，請指定值`true`如**@upload_first**。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
+1.  在發行者端，執行 [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql)。 指定 **@publication**或 Replication Management Objects (RMO) 來重新初始化 **@subscriber**和 **@subscriber_db**資料夾中可用。 若要重新初始化發生之前，請上傳變更從訂閱者，指定其值為`true`for **@upload_first**。 這樣會標示此訂閱，在下次執行散發代理程式時重新初始化。  
   
     > [!IMPORTANT]  
     >  如果您新增、卸除或變更參數化篩選，在重新初始化期間，便無法將訂閱者的暫止變更上傳到發行者。 如果您要上傳暫止變更，請在變更篩選之前，同步處理所有訂閱。  
@@ -177,7 +177,7 @@ ms.locfileid: "36030997"
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
     > [!NOTE]  
-    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確或是提取訂閱不存在。  
+    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確，或提取訂閱不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> 方法。 此方法會標示要重新初始化的訂閱。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "36030997"
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
     > [!NOTE]  
-    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確或發送訂閱不存在。  
+    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確，或發送訂閱不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> 方法。 此方法會標示要重新初始化的訂閱。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36030997"
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
     > [!NOTE]  
-    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確或是提取訂閱不存在。  
+    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確，或提取訂閱不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> 方法。 傳遞 `true` 的值可在重新初始化之前上傳訂閱者上的變更，或者傳遞 `false` 的值可重新初始化及遺失訂閱者上的任何暫止變更。 此方法會標示要重新初始化的訂閱。  
   
@@ -225,7 +225,7 @@ ms.locfileid: "36030997"
 3.  呼叫 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 方法以取得物件的屬性。  
   
     > [!NOTE]  
-    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確或發送訂閱不存在。  
+    >  如果此方法傳回`false`，步驟 2 中的訂閱屬性定義不正確，或發送訂閱不存在。  
   
 4.  呼叫 <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> 方法。 傳遞 `true` 的值可在重新初始化之前上傳訂閱者上的變更，或者傳遞 `false` 的值可重新初始化及遺失訂閱者上的任何暫止變更。 此方法會標示要重新初始化的訂閱。  
   

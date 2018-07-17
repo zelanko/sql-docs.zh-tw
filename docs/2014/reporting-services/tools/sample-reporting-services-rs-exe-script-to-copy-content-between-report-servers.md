@@ -1,5 +1,5 @@
 ---
-title: Sample Reporting Services rs.exe Script to Migrate Content between Report Servers |Microsoft 文件
+title: Sample Reporting Services rs.exe Script to Migrate Content between Report Servers |Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2015
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2014
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: a1490220bc414ba4ad830bea7dfcfe0134363c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 51008a07a327a9601de1bd52795e19eee44af016
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37290294"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>在報表伺服器之間移轉內容的範例 Reporting Services rs.exe 指令碼
-  此主題包括並描述範例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]複製內容項目和設定其中一個的 RSS 指令碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]另一部報表伺服器，報表伺服器使用**RS.exe**公用程式。 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
+  本主題包括並描述範例[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]複製內容項目設定不同的 RSS 指令碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]另一部報表伺服器，報表伺服器使用**RS.exe**公用程式。 不論是原生或 SharePoint 模式，RS.exe 都會和 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 一起安裝。 這個指令碼會在伺服器之間複製 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 項目，例如報表和訂閱。 這個指令碼同時支援 SharePoint 模式和原生模式報表伺服器。  
   
 ||  
 |-|  
@@ -74,7 +74,7 @@ ms.locfileid: "36132811"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
- 這個指令碼可用來在相同模式或不同模式的報表伺服器之間複製內容。 例如，您可以執行指令碼，將內容從複製[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]原生模式報表伺服器到[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]SharePoint 模式報表伺服器。 您可以安裝 RS.exe 的任何伺服器執行這個指令碼。 例如，在下列部署中，您可以：  
+ 這個指令碼可用來在相同模式或不同模式的報表伺服器之間複製內容。 例如，您可以在其中執行指令碼複製的內容[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]原生模式報表伺服器到[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]SharePoint 模式報表伺服器。 您可以安裝 RS.exe 的任何伺服器執行這個指令碼。 例如，在下列部署中，您可以：  
   
 -   在伺服器 A **上** 執行 RS.exe 和指令碼。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "36132811"
 |項目|已移轉|SharePoint|描述|  
 |----------|--------------|----------------|-----------------|  
 |密碼|**否**|**否**|密碼 **不會** 移轉。 內容項目移轉之後，請更新目的地伺服器上的認證資訊。 例如，具有預存認證的資料來源。|  
-|我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **–u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上的 [我的報表] 資料夾中的報表項目。 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列操作：<br /><br /> 1） 建立新的資料夾在報表管理員中。 或者，您可以為每位使用者建立資料夾或子資料夾。<br /><br /> 2） 做為其中一個與我的報表 內容使用者的登入。<br /><br /> 3） 請在報表管理員中，按一下**我的報表**資料夾。<br /><br /> 4） 按一下**詳細資料**資料夾檢視。<br /><br /> 5） 選取您要複製的每個報表。<br /><br /> 6） 按一下**移動**報表管理員工具列中。<br /><br /> 7） 選取所需的目的地資料夾。<br /><br /> 8） 為每個使用者重複步驟 2-7。<br /><br /> 9） 執行指令碼。|  
+|我的報表|**否**|**否**|原生模式 [我的報表] 功能是以個別使用者登入為基礎，因此，除非使用 **–u** 參數執行 rss 指令碼，否則指令碼服務無法存取 [我的報表] 資料夾中使用者的內容。 此外，[我的報表] 不屬於 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint 模式的功能，所以資料夾中的項目無法複製到 SharePoint 環境中。 因此，指令碼不會複製來源原生模式報表伺服器上的 [我的報表] 資料夾中的報表項目。 若要使用這個指令碼移轉 [我的報表] 資料夾中的內容，請完成下列操作：<br /><br /> 1） 建立新的資料夾在報表管理員中。 或者，您可以為每位使用者建立資料夾或子資料夾。<br /><br /> 2） 做為其中一個使用我的報表 內容使用者的登入。<br /><br /> 3） 請在 [報表管理員] 中，按一下**我的報表**資料夾。<br /><br /> 4） 按一下**詳細資料**資料夾的檢視。<br /><br /> 5） 選取您想要複製的每個報表。<br /><br /> 6） 按一下**移動**在報表管理員工具列上。<br /><br /> 7） 選取所需的目的地資料夾。<br /><br /> 8） 的每個使用者重複步驟 2-7。<br /><br /> 9） 執行指令碼。|  
 |記錄|**否**|**否**||  
 |記錄設定|是|是|雖然記錄設定會移轉，但是記錄詳細資料「不會」移轉。|  
 |[排程]|是|是|若要移轉排程，則必須在目標伺服器上執行 SQL Server Agent。 如果 SQL Server Agent 未在目標上執行，您將會看見類似下面的錯誤訊息：<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service is not running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service is not running. This operation requires the SQL Agent service.`|  

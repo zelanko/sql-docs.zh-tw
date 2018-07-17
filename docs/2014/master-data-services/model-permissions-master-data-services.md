@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], permissions
 - permissions [Master Data Services], models
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 caps.latest.revision: 5
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e92f595bcf701e20378fe94dfde6c91d8c57bee1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: b83229221afc84634689c70e29311fba7b2c1374
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031449"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37289104"
 ---
 # <a name="model-permissions-master-data-services"></a>模型權限 (Master Data Services)
   模型權限適用於所有實體、衍生階層、明確階層及存在於模型內的集合。 可以針對任何個別的物件來覆寫指派給模型的權限。  
@@ -32,8 +32,8 @@ ms.locfileid: "36031449"
   
 |權限|描述|  
 |----------------|-----------------|  
-|**唯讀**|在**總管**，會顯示此模型，但使用者無法加入或移除成員，也無法更新屬性值、 階層成員資格或集合成員資格。|  
-|**Update**|在**總管**模型會顯示，而且使用者可以加入和移除成員，可以更新屬性值、 階層成員資格與集合成員資格。|  
+|**唯讀**|在 **總管**，會顯示此模型，但使用者無法加入或移除成員，也無法更新屬性值、 階層成員資格或集合成員資格。|  
+|**Update**|在 **總管**模型會顯示，而且使用者可以新增和移除成員，可以更新屬性值、 階層成員資格和集合成員資格。|  
 |**拒絕**|不顯示模型。|  
   
  當您將權限指派給模型時，使用者會取得模型之所有版本的存取權。 您無法將權限指派給個別的版本。  

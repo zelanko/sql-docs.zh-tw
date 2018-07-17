@@ -20,13 +20,13 @@ ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3bfa2cd1c622041936d36edccc8e832359f74c56
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6e2b34352e3fbb84a3f801919537b5936322ae7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146358"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37300588"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用指令碼元件建立同步轉換
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用轉換元件，以修改及分析從來源傳遞到目的地的資料。 具有同步輸出的轉換會處理通過該元件的每個輸入資料列。 具有非同步輸出的轉換會等到它收到所有的輸入資料列後，才完成其處理。 本主題討論同步轉換。 如需非同步轉換的資訊，請參閱[使用指令碼元件建立非同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -74,9 +74,9 @@ ms.locfileid: "36146358"
  如需 [指令碼轉換編輯器] 之 [輸入及輸出] 頁面的詳細資訊，請參閱[指令碼轉換編輯器 &#40;輸入及輸出頁面&#41;](../script-transformation-editor-inputs-and-outputs-page.md)。  
   
 ### <a name="adding-variables"></a>加入變數  
- 如果您想要在您的指令碼中使用現有的變數，您可以將其加入`ReadOnlyVariables`和`ReadWriteVariables`屬性欄位上**指令碼**頁面**指令碼轉換編輯器**。  
+ 如果您想要在您的指令碼中使用現有的變數，您可以將其加入`ReadOnlyVariables`並`ReadWriteVariables`屬性欄位上**指令碼**頁面**指令碼轉換編輯器**。  
   
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以選取多個變數，依序按一下省略符號 (**...**) 旁邊`ReadOnlyVariables`和`ReadWriteVariables`屬性欄位，然後選取 [在變數**選取變數**] 對話方塊。  
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以選取多個變數，按一下省略符號 (**...**) 按鈕旁`ReadOnlyVariables`並`ReadWriteVariables`屬性欄位，然後選取 [在變數**選取變數**] 對話方塊。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "36146358"
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼  
  當您在建立和設定轉換元件之後開啟 VSTA IDE，可編輯的 `ScriptMain` 類別會出現在程式碼編輯器中，並具有 `ProcessInputRow` 方法的 Stub。 `ScriptMain` 類別是您將撰寫自訂程式碼的地方，而 `ProcessInputRow` 則是轉換元件中最重要的方法。  
   
- 如果您開啟**Project Explorer**視窗在 VSTA 中的，您可以看到，指令碼元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案項目。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。  
+ 如果您開啟**Project Explorer**  視窗中的在 VSTA 中，您所見，指令碼元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案項目。 `ScriptMain` 類別會繼承 `UserComponent` 專案項目中的 `ComponentWrapper` 類別。  
   
  在執行階段，資料流程引擎會叫用 `ProcessInput` 類別中的 `UserComponent` 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 方法。 `ProcessInput` 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 `ProcessInputRow` 方法。  
   
@@ -141,7 +141,7 @@ else
  以下範例示範在 `ScriptMain` 類別中所需的自訂程式碼，以建立同步轉換元件。  
   
 > [!NOTE]  
->  這些範例使用**Person.Address**資料表中`AdventureWorks`範例資料庫，並傳遞其第一個和第四個資料行， **intAddressID**和**nvarchar (30) 縣 （市)**，經過資料流資料行。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
+>  這些範例會使用**Person.Address**資料表中`AdventureWorks`範例資料庫，並將傳遞其第一個和第四個資料行**intAddressID**和**nvarchar (30) 縣 （市)** 資料行，並透過資料流程。 在本章節中的來源、轉換和目的地範例使用相同的資料。 每個範例都會記載其他必要條件與假設。  
   
 ### <a name="single-output-synchronous-transformation-example"></a>單一輸出同步轉換範例  
  此範例示範具有單一輸出的同步轉換元件。 此轉換會通過 **AddressID** 資料行，並將 **City** 資料行轉換為大寫字元。  
@@ -150,7 +150,7 @@ else
   
 1.  將新指令碼元件加入資料流程設計師介面，並將它設定為轉換。  
   
-2.  將來源的輸出或另一個轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的新轉換元件。 這個輸出應該會提供來自資料**Person.Address**資料表`AdventureWorks`範例資料庫包含**AddressID**和**縣 （市)** 資料行。  
+2.  將來源的輸出或另一個轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的新轉換元件。 此輸出應會提供資料**Person.Address**的資料表`AdventureWorks`範例資料庫，其中包含**AddressID**並**縣 （市)** 資料行。  
   
 3.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 [AddressID] 和 [City] 資料行。 將 **City** 資料行標示為讀取/寫入。  
   
@@ -202,7 +202,7 @@ public class ScriptMain:
   
 1.  將新指令碼元件加入資料流程設計師介面，並將它設定為轉換。  
   
-2.  將來源的輸出或另一個轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的新轉換元件。 這個輸出應該會提供來自資料**Person.Address**資料表`AdventureWorks`範例資料庫包含最少為**AddressID**和**縣 （市)** 資料行。  
+2.  將來源的輸出或另一個轉換的輸出連接到 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師中的新轉換元件。 此輸出應會提供資料**Person.Address**的資料表`AdventureWorks`範例資料庫，其中包含至少**AddressID**並**縣 （市)** 資料行。  
   
 3.  開啟**指令碼轉換編輯器**。 在 [輸入資料行] 頁面上，選取 [AddressID] 和 [City] 資料行。 將 **City** 資料行標示為讀取/寫入。  
   
@@ -263,7 +263,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 }  
 ```  
   
-|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **取得最新消息 with Integration Services**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+|![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **保持最新的 Integration Services**<br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解同步和非同步轉換](../understanding-synchronous-and-asynchronous-transformations.md)[使用指令碼元件建立非同步轉換](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)[開發具有同步的自訂轉換元件輸出](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)  

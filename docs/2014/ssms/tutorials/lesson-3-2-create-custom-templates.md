@@ -5,25 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tql
 - templates [Transact-SQL], creating
 - templates [Transact-SQL]
 ms.assetid: 41098e78-b482-410e-bfe8-2ac10769ac4a
 caps.latest.revision: 31
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2980ff029352e638dc12169e3e0692fcd60b7c2d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 5a679ed1aaf51ff1282976aa7c8c0b509c23a0d4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137211"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321698"
 ---
 # <a name="create-custom-templates"></a>建立自訂範本
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了許多一般工作的範本，但範本真正的威力，在於能夠建立您經常需要建立之複雜指令碼的自訂範本。 在這個練習中，您將利用幾個參數來建立簡單的指令碼，但冗長而重複的指令碼也適合使用範本。  
@@ -71,7 +70,7 @@ ms.locfileid: "36137211"
   
 10. 在 [查詢編輯器] 中，輸入 **EXECUTE dbo.WorkOrdersForBlade**，然後按 F5 鍵來執行查詢。 確認 [結果] 窗格會傳回刀鋒視窗的工單清單。  
   
-11. 編輯範本指令碼 （指令碼在步驟 7 中），以參數取代產品名稱 刀鋒視窗 ***< * product_name**， `nvarchar(50)`，**名稱*> * * *，四個位置中。  
+11. 編輯範本指令碼 （指令碼在步驟 7 中），參數來取代產品名稱 Blade ***< * product_name**， `nvarchar(50)`，**名稱*> * * *，在四個位置。  
   
     > [!NOTE]  
     >  參數具備三個元素：想要取代的參數名稱、參數的資料類型和參數的預設值。  
@@ -107,7 +106,7 @@ ms.locfileid: "36137211"
   
 3.  在 **[查詢]** 功能表上，按一下 **[指定範本參數的值]**。  
   
-4.  在**取代範本參數**對話方塊中，針對`product_name`值，請輸入**FreeWheel** （覆寫預設內容），然後按一下  **確定**關閉**取代範本參數**對話方塊修改指令碼在 查詢編輯器 中。  
+4.  在**取代範本參數** 對話方塊中，如`product_name`值，請輸入**FreeWheel** （覆寫預設內容），然後按一下**確定**關閉**取代範本參數**對話方塊方塊，然後修改指令碼，在 查詢編輯器 中。  
   
 5.  按 F5 鍵來執行這項查詢，建立程序。  
   

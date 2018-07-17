@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], requiring attribute values
 - attributes [Master Data Services], requiring values
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3cf1df107725eb50ca8c291838ef289b7ca8ee62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 080f6ef911ee36a8f71efbf3c8783457ac1dc403
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034396"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37305994"
 ---
 # <a name="require-attribute-values-master-data-services"></a>要求屬性值 (Master Data Services)
   當您想要確保主要資料完整時，在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中要求屬性值。  
@@ -30,7 +30,7 @@ ms.locfileid: "36034396"
 > [!NOTE]  
 >  在以網域屬性關聯性為基礎的衍生階層中，不會顯示遺漏網域屬性值的成員。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -57,7 +57,7 @@ ms.locfileid: "36034396"
   
 9. 在 [元件] 窗格中，展開 [動作] 節點。  
   
-10. 按一下**無須**將它拖曳到**然後**窗格的**動作**標籤。  
+10. 按一下 **須**將它拖曳到**然後**窗格的**動作**標籤。  
   
 11. 在 [屬性] 窗格中，按一下屬性並將它拖曳至 [編輯動作] 窗格的 [選取屬性] 標籤。  
   

@@ -1,5 +1,5 @@
 ---
-title: 配量來源 Cube （資料採礦精靈） |Microsoft 文件
+title: 配量來源 Cube （資料採礦精靈） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 caps.latest.revision: 23
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a0e3badd385e654db3b869a197130fde26fbffcc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326548"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>配量來源 Cube (資料採礦精靈)
    您可以使用 [配量來源 Cube] 對話方塊來限制用於培訓模型的資料。 Cube 通常包含了與許多不同維度及屬性相關的資料，例如所有商店、所有區域和所有產品。 根據無限制的屬性組合來培訓模型並不實用，所以您要使用此對話方塊選擇用於培訓模型的一組特定項目。  
@@ -37,9 +37,9 @@ ms.locfileid: "36132732"
 > [!NOTE]  
 >  請注意，資料分割的 Slice 屬性不支援動態多維度運算式 (MDX) 函數 (例如 [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) 或 [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function))。 您必須使用明確的 Tuple 或成員參考來定義配量。  
 >   
->  例如，而不是使用[:&#40;範圍&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)定義的範圍，您必須以特定的年份來列舉每個成員。  
+>  比方說，而不是使用[:&#40;範圍&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx)若要定義範圍，您必須以特定的年份來列舉每個成員。  
 >   
->  如果您需要定義複雜的配量，我們建議您使用 XMLA Alter 指令碼在配量中定義 Tuple。 然後，您可以使用 ascmd 命令列工具或 SSIS [Analysis Services 執行 DDL 工作](../integration-services/control-flow/analysis-services-execute-ddl-task.md)執行指令碼，並在處理分割區之前，立即建立指定的集合的成員。  
+>  如果您需要定義複雜的配量，我們建議您使用 XMLA Alter 指令碼在配量中定義 Tuple。 然後，您可以使用 ascmd 命令列工具或 SSIS [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md)執行指令碼，並立即處理資料分割之前，建立指定的集合的成員。  
   
  **如需詳細資訊，請參閱**[資料採礦精靈 &#40;Analysis Services - 資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "36132732"
  此選項不適用於資料採礦模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [正在完成精靈&#40;資料採礦精靈&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [完成精靈&#40;資料採礦精靈&#41;](completing-the-wizard-data-mining-wizard.md)   
  [資料採礦精靈 F1 說明&#40;Analysis Services-資料採礦&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [指定採礦模型資料行使用方式&#40;資料採礦精靈&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   

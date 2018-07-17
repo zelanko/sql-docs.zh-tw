@@ -1,5 +1,5 @@
 ---
-title: 第 1 課： 建立 RDL 結構描述 Visual Studio 專案 |Microsoft 文件
+title: 第 1 課： 建立 RDL 結構描述 Visual Studio 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f420509c-51aa-4170-8c25-64c2954f4bb9
 caps.latest.revision: 17
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: b6c502205f669c48efe1f939ba88e5352205f4de
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fc69b4bbcc40fa669ca9cf5f889944cb302e4b14
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319808"
 ---
 # <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>第 1 課：建立 RDL 結構描述 Visual Studio 專案
-  在這個教學課程中，您會建立簡單的主控台應用程式。 本教學課程假設您要開發[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
+  在這個教學課程中，您會建立簡單的主控台應用程式。 本教學課程假設您正在開發中[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]。  
   
 > [!NOTE]  
 >  當您存取在 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上執行的報表伺服器 Web 服務時，必須將 "_SQLExpress" 附加至 "ReportServer" 路徑。 例如：  
@@ -31,7 +31,7 @@ ms.locfileid: "36136543"
   
 ### <a name="to-create-the-web-service-proxy"></a>若要建立 Web 服務 Proxy  
   
-1.  從**啟動**功能表上，選取**所有程式**，Microsoft Visual Studio，然後**Visual Studio Tools**，然後**Visual Studio 2010 命令提示字元**.  
+1.  從**開始**功能表上，選取**所有程式**、 Microsoft Visual Studio，然後**Visual Studio Tools**，然後**Visual Studio 2010 命令提示字元**.  
   
 2.  如果您是使用 C#，請在命令提示字元視窗中執行下列命令：  
   
@@ -49,29 +49,29 @@ ms.locfileid: "36136543"
   
 ### <a name="to-create-a-console-application"></a>若要建立主控台應用程式  
   
-1.  上**檔案**功能表上，指向**新增**，然後按一下 [**專案**開啟**新專案**] 對話方塊。  
+1.  上**檔案**功能表上，指向**新增**，然後按一下**專案**以開啟**新專案** 對話方塊。  
   
-2.  在左窗格中，在**已安裝的範本**，按一下  **Visual Basic**或**Visual C#** 節點，然後選取專案的類別類型從展開的清單。  
+2.  在左窗格中，在**已安裝的範本**，按一下**Visual Basic**或**Visual C#** 節點，然後選取專案的類別類型從展開的清單。  
   
 3.  選擇**主控台應用程式**專案類型。  
   
-4.  在**名稱**方塊中，輸入您的專案名稱。 輸入名稱`SampleRDLSchema`。  
+4.  在 **名稱**方塊中，輸入您專案的名稱。 輸入名稱`SampleRDLSchema`。  
   
-5.  在**位置**方塊中，輸入您要儲存您的專案，或按一下的路徑**瀏覽**巡覽至資料夾。  
+5.  在 **位置**方塊中，輸入您想要用來儲存您的專案，或按一下 的路徑**瀏覽**瀏覽至資料夾。  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 您的專案的摺疊的檢視會顯示在 [方案總管]。  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] 您的專案的摺疊的檢視會顯示在 [方案總管] 中。  
   
 7.  在 [專案] 功能表上，按一下 [新增現有項目]。  
   
-8.  .Cs 或.vb 檔案產生，您導覽至的位置，然後選取檔案，，然後按一下**新增**。  
+8.  巡覽至的位置，為.cs 或.vb 檔案來產生，然後選取檔案，然後按一下 **新增**。  
   
      您也必須加入 <xref:System.Web.Services> 命名空間的參考，才能讓 Web 參考運作。  
   
-9. 在 [專案] 功能表上按一下**加入參考**。  
+9. 在 專案 功能表中，按一下 **加入參考**。  
   
-     在**加入參考**對話方塊中，於 **.NET**索引標籤上，選取**System.Web.Services**，然後按一下 **確定**。  
+     在**加入參考**對話方塊中，於 **.NET**索引標籤上，選取**System.Web.Services**，然後按一下**確定**。  
   
-     如需如何連接到報表伺服器 Web 服務的詳細資訊，請參閱[建置應用程式使用 Web 服務和.NET Framework](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
+     如需如何連接到報表伺服器 Web 服務的詳細資訊，請參閱[使用 Web 服務和.NET Framework 建置應用程式](../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)。  
   
 10. 在 [方案總管] 中，展開專案節點。 您會看到含有預設名稱 Program.cs (在 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] 中則為 Module1.vb) 的程式碼檔案已加入專案中。  
   

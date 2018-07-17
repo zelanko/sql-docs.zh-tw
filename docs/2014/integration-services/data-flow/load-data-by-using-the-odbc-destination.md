@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: e65f7d46506d611118b7e3ee43d630503a81c0d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b5baccb74f86d4de59d5323c647db5378d5469e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298668"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>使用 ODBC 目的地來載入資料
   此程序說明如何透過使用 ODBC 目的地載入資料。 若要加入及設定 ODBC 目的地，封裝必須已包括至少一個「資料流程」工作與來源。  
@@ -55,7 +55,7 @@ ms.locfileid: "36031057"
 12. 若要儲存已更新的封裝，請在 **[檔案]** 功能表上，按一下 **[儲存選取項目]** 。  
   
 ## <a name="see-also"></a>另請參閱  
- [ODBC 目的地編輯器&#40;連接管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 目的地編輯器&#40;連線管理員頁面&#41;](../odbc-destination-editor-connection-manager-page.md)   
  [ODBC 目的地編輯器 &#40;對應頁面&#41;](../odbc-destination-editor-mappings-page.md)   
  [ODBC 來源編輯器&#40;錯誤輸出頁面&#41;](../odbc-source-editor-error-output-page.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 建立及管理本機資料分割 (Analysis Services) |Microsoft 文件
+title: 建立及管理本機資料分割 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
 - partitions [Analysis Services], local
 - partitions [Analysis Services], creating
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 7aee67c9e63078a0218665fc818381d473e493e3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 10b6498034ddcd2733501c63601f026b229d616a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36147053"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321268"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>建立及管理本機分割區 (Analysis Services)
   您可以建立其他分割區，讓量值群組能夠改善處理效能。 擁有多個分割區可讓您在本機和遠端伺服器上，跨對應數目的實體資料檔案以配置事實資料。 在 Analysis Services 中，分割區可以獨立及平行處理，讓您在伺服器上處理工作負載時，能夠有更強的控制力。  
@@ -31,7 +31,7 @@ ms.locfileid: "36147053"
  您可以在模型設計期間，於 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中建立分割區，或是在部署方案之後，使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或 XMLA 來建立分割區。 建議您選取一種方法就好。 如果您交替使用這兩種工具，可能會發現，當您後續從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 重新部署方案時，先前在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中對已部署的資料庫所做的變更會被覆寫。  
   
 ## <a name="before-you-start"></a>開始之前  
- 檢查您是否有 Business Intelligence 版或 Enterprise 版。 Standard 版不支援多個分割區。 若要檢查版本，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中以滑鼠右鍵按一下伺服器節點，然後選取 [報表][一般] | 。 如需有關功能可用性的詳細資訊，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
+ 檢查您是否有 Business Intelligence 版或 Enterprise 版。 Standard 版不支援多個分割區。 若要檢查版本，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中以滑鼠右鍵按一下伺服器節點，然後選取 [報表][一般] | 。 如需有關功能可用性的詳細資訊，請參閱 <<c0> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。  
   
  一開始時就務必了解，如果您之後要將分割區合併，則其必須共用相同的彙總設計。 分割區必須要有相同的彙總設計及儲存模式，才能進行合併。  
   
@@ -128,6 +128,6 @@ ms.locfileid: "36147053"
 ## <a name="see-also"></a>另請參閱  
  [資料分割&#40;Analysis Services-多維度資料&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [遠端資料分割](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Analysis Services 中的資料分割合併&#40;SSAS-多維度&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services 中合併資料分割&#40;SSAS-多維度&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

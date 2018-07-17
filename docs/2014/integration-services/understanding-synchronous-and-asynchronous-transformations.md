@@ -19,13 +19,13 @@ ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2e943eab4aea643762f2ab9553c800211c5a2d9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d8a4fb438fce2ff1e774938a34dfd25be1b483a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037492"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37302358"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>了解同步和非同步轉換
   如需了解 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 之同步與非同步轉換間的差異，可以從了解同步轉換開始著手。 如果同步轉換不符合您的需求，您的設計可能需要非同步轉換。  
@@ -35,7 +35,7 @@ ms.locfileid: "36037492"
   
  同步轉換的一個範例為資料轉換。 對於每一個內送的資料列而言，它都會轉換指定之資料行中的值，並依照其方式來傳送此資料列。 每一個離散轉換作業都與資料集內的所有其他資料列無關。  
   
- 在[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]查閱元件輸入的識別碼，並將它指派給指令碼和程式設計中，指定同步轉換`SynchronousInputID`元件輸出的屬性。 這樣會告訴資料流程引擎要處理輸入中的每一個資料列，並將每一個資料列自動傳送給指定的輸出。 如果您希望每一個資料列都能進入到每一個輸出，您不需要撰寫任何其他程式碼，也可以輸出資料。 如果您使用 `ExclusionGroup` 屬性來指定資料列應該只能進入到某一組輸出 (如同「條件式分割」轉換中的處理方式)，您必須呼叫 `DirectRow` 方法，才能為每一個資料列選取適當的目的地。 當您有錯誤輸出時，您必須呼叫 `DirectErrorRow`，將有問題的資料列傳送到錯誤輸出，而不是預設輸出。  
+ 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]指令碼和程式設計中，您會指定同步轉換查閱元件輸入的識別碼，並將它指派給`SynchronousInputID`元件輸出的屬性。 這樣會告訴資料流程引擎要處理輸入中的每一個資料列，並將每一個資料列自動傳送給指定的輸出。 如果您希望每一個資料列都能進入到每一個輸出，您不需要撰寫任何其他程式碼，也可以輸出資料。 如果您使用 `ExclusionGroup` 屬性來指定資料列應該只能進入到某一組輸出 (如同「條件式分割」轉換中的處理方式)，您必須呼叫 `DirectRow` 方法，才能為每一個資料列選取適當的目的地。 當您有錯誤輸出時，您必須呼叫 `DirectErrorRow`，將有問題的資料列傳送到錯誤輸出，而不是預設輸出。  
   
 ## <a name="asynchronous-transformations"></a>非同步轉換  
  當您無法將每一個資料列與所有其他資料列分開處理時，您可能會決定您的設計需要非同步處理。 換句話說，當您處理每一個資料列時，您無法在資料流程中傳遞它，但是必須改為以非同步方式輸出資料，或是讓輸出與輸入的時間不同。 例如，下列案例需要非同步轉換：  
@@ -53,7 +53,7 @@ ms.locfileid: "36037492"
   
  此外，也可以建立非同步轉換，使其模擬同步轉換 (其方式是明確地將每一個輸入資料列複製到輸出)。 您可以透過這個方法來重新命名資料行，或是轉換資料類型或格式。 不過，這個方法會降低效能。 您可以達到相同的結果而且有更好的效能，其方式是使用內建 Integration Services 元件，例如複製資料行或資料轉換。  
   
-![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用指令碼元件建立同步轉換](data-flow/transformations/script-component.md)   

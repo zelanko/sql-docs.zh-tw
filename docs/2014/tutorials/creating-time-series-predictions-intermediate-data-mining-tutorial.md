@@ -1,5 +1,5 @@
 ---
-title: 建立時間序列預測 （中繼資料採礦教學課程） |Microsoft 文件
+title: 建立時間序列預測 （中繼資料採礦教學課程） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 999dcdec7c6a30617c9c9e04512da26ddebfdcc3
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312946"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310828"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>建立時間序列預測 (中繼資料採礦教學課程)
   在本課之前的工作中，您已經建立一個時間序列模型並瀏覽結果。 根據預設，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 一定會建立一組五個的時間數列模型預測，並將預測值顯示為預測圖表的一部分。 但是，您也可以建立資料採礦延伸模組 (DMX) 預測查詢來建立預測。  
@@ -33,53 +33,53 @@ ms.locfileid: "36312946"
   
 #### <a name="to-select-a-model-and-input-table"></a>若要選取模型和輸入資料表  
   
-1.  在**採礦模型預測**資料採礦設計師索引標籤，請在**採礦模型**方塊中，按一下**選取模型**。  
+1.  在上**採礦模型預測**] 索引標籤的 [資料採礦設計師中**採礦模型**方塊中，按一下**選取模型**。  
   
-2.  在**選取採礦模型**對話方塊方塊中，展開預測結構中，選取**預測**從清單中，模型，然後按一下**確定**。  
+2.  在 **選取採礦模型**對話方塊方塊中，展開預測結構，選取**預測**從清單中，模型，然後按一下**確定**。  
   
-3.  忽略**選取輸入資料表**方塊。  
+3.  略過**選取輸入資料表** 方塊中。  
   
     > [!NOTE]  
     >  如果是時間序列模型，您不需要指定個別輸入，除非您要執行交叉預測。  
   
-4.  在**來源**上方格中的資料行，**採礦模型預測**索引標籤上，按一下第一個空白資料列中的資料格，然後選取**預測採礦模型**。  
+4.  在 **來源**在上方格中的資料行，**採礦模型預測**索引標籤上，按一下第一個空白資料列中的資料格，然後選取**預測採礦模型**。  
   
-5.  在**欄位**欄中，選取**Model Region**。  
+5.  在 **欄位**欄中，選取**Model Region**。  
   
      這個動作會將數列識別碼加入到預測查詢中，以表示此預測會套用到哪一個模型和地區組合。  
   
-6.  按一下 下一步的空白資料列中**來源**資料行，然後選取**預測函數**。  
+6.  按一下 下一步中的空白資料列**來源**資料行，然後選取**預測函數**。  
   
-7.  在**欄位**欄中，選取**PredictTimeSeries**。  
+7.  在 **欄位**欄中，選取**PredictTimeSeries**。  
   
     > [!NOTE]  
     >  您也可以搭配時間序列模型使用 `Predict` 函數。 但是根據預設，Predict 函數只會針對每一個數列各建立一項預測。 因此，若要指定多個預測步驟，您必須使用**PredictTimeSeries**函式。  
   
-8.  在**採礦模型** 窗格中，選取採礦模型資料行，**數量。** 將 Amount 拖曳到**準則/引數**方塊**PredictTimeSeries**您先前加入的函式。  
+8.  在 **採礦模型**窗格中，選取採礦模型資料行，**數量。** 將 Amount 拖曳到**準則/引數**方塊**PredictTimeSeries**您稍早新增的函式。  
   
-9. 按一下**準則/引數**方塊，然後輸入逗號，後面接著**5**，欄位名稱之後。  
+9. 按一下 **準則/引數**方塊，然後輸入逗號，後面接著**5**，欄位名稱之後。  
   
      中的文字**準則/引數**方塊現在應該會顯示下列：  
   
      `[Forecasting].[Amount],5`  
   
-10. 在**別名**欄中，輸入`PredictAmount`。  
+10. 在 **別名**資料行中輸入`PredictAmount`。  
   
-11. 按一下 下一步的空白資料列中**來源**資料行，然後選取**預測函數**一次。  
+11. 按一下 下一步中的空白資料列**來源**資料行，然後選取**預測函數**一次。  
   
-12. 在**欄位**欄中，選取**PredictTimeSeries**。  
+12. 在 **欄位**欄中，選取**PredictTimeSeries**。  
   
-13. 在**採礦模型**窗格中選取資料行數量，然後將它拖曳到**準則/引數**第二個方塊**PredictTimeSeries**函式。  
+13. 在 **採礦模型**窗格中選取資料行 Quantity，然後將它拖曳到**準則/引數**第二個方塊**PredictTimeSeries**函式。  
   
-14. 按一下**準則/引數**方塊，然後輸入逗號，後面接著**5**，欄位名稱之後。  
+14. 按一下 **準則/引數**方塊，然後輸入逗號，後面接著**5**，欄位名稱之後。  
   
      中的文字**準則/引數**方塊現在應該會顯示下列：  
   
      `[Forecasting].[ Quantity],5`  
   
-15. 在**別名**欄中，輸入`PredictQuantity`。  
+15. 在 **別名**資料行中輸入`PredictQuantity`。  
   
-16. 按一下**切換到查詢結果檢視**。  
+16. 按一下 **切換到查詢結果檢視**。  
   
      查詢的結果會以表格格式顯示。  
   
@@ -166,15 +166,15 @@ ms.locfileid: "36312946"
   
     ```  
   
-4.  按一下**切換到查詢結果檢視**。  
+4.  按一下 **切換到查詢結果檢視**。  
   
 #### <a name="to-export-prediction-query-results"></a>若要匯出預測查詢結果  
   
-1.  按一下**儲存查詢結果**。  
+1.  按一下 **將查詢結果儲存**。  
   
-2.  在**儲存資料採礦查詢結果**對話方塊中，針對**資料來源**，選取[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]。 如果您想要將資料儲存到不同的關聯式資料庫，您也可以建立資料來源。  
+2.  在 [**儲存資料採礦查詢結果**] 對話方塊中，如**資料來源**，選取[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]。 如果您想要將資料儲存到不同的關聯式資料庫，您也可以建立資料來源。  
   
-3.  在**資料表名稱**欄中，輸入新的暫存資料表名稱，例如**Test Predictions**。  
+3.  在 **資料表名稱**資料行中輸入新的暫存資料表名稱，例如**Test Predictions**。  
   
 4.  按一下 **[儲存]**。  
   

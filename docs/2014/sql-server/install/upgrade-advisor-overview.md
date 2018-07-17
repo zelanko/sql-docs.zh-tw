@@ -1,5 +1,5 @@
 ---
-title: Upgrade Advisor 概觀 |Microsoft 文件
+title: Upgrade Advisor 概觀 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
 - SQL Server Upgrade Advisor, components
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], about analysis
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 caps.latest.revision: 47
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b204fd2f108ce4a2a12d6036e4ddc51ea5e9edfe
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0b30fddb6ce8570b438c869d72c2d3d0ac48036e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134553"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37315958"
 ---
 # <a name="upgrade-advisor-overview"></a>Upgrade Advisor 概觀
   Upgrade Advisor 提供了一個中央主控台，可讓您分析 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 元件，並檢視包含有關分析結果資訊的報表。  
@@ -43,7 +43,7 @@ ms.locfileid: "36134553"
   
 -   Upgrade Advisor 說明  
   
- 第一次使用 Upgrade Advisor 時，請執行 Upgrade Advisor 分析精靈來分析伺服器。 當精靈完成分析時，按一下 **啟動報表**從精靈或返回 Upgrade Advisor 開始頁面。 如此，您就可以執行 Upgrade Advisor 報表檢視器來檢視報表。 此報表會提供一些資訊的連結，以便協助您解決已知的問題。  
+ 第一次使用 Upgrade Advisor 時，請執行 Upgrade Advisor 分析精靈來分析伺服器。 當精靈完成分析時，按一下**啟動報表**從精靈或返回 Upgrade Advisor 開始頁面。 如此，您就可以執行 Upgrade Advisor 報表檢視器來檢視報表。 此報表會提供一些資訊的連結，以便協助您解決已知的問題。  
   
 ## <a name="upgrade-advisor-analysis-wizard"></a>Upgrade Advisor 分析精靈  
  若要執行分析，請按一下**啟動 Upgrade Advisor 分析精靈**Upgrade Advisor 開始頁面上。 Upgrade Advisor 分析精靈會蒐集有關您想要分析之電腦、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件和追蹤檔案的資訊。 在蒐集並確認所有資訊之後，Upgrade Advisor 分析精靈便分析 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件。  
@@ -81,9 +81,9 @@ ms.locfileid: "36134553"
   
  當 Upgrade Advisor 報表檢視器中載入 Upgrade Advisor 分析精靈的 XML 檔案時，它就會顯示每個元件的報表。 此報表包含所有您必須處理的已知問題，同時包括可偵測和無法偵測的問題。 針對每個問題，系統會顯示一個圖示 (指出重要性)、一個標籤 (告知您必須修正此問題的時間)，以及一則簡短描述。 當您展開問題時，將會看見更長的描述、問題詳細資料的連結和說明檔的連結。 每個問題的資訊都設計成提供足夠的資訊，可讓您修正問題。  
   
- 大部分元件都具有無法偵測的問題。 若要檢視這些問題，請展開**其他升級問題**元件的項目，然後按一下 連結，即可檢視文件中的其他問題的相關資訊。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 回溯相容性問題的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。  
+ 大部分元件都具有無法偵測的問題。 若要檢視這些問題，請展開**其他升級問題**元件，項目，然後按一下 連結，即可檢視文件中的其他問題的相關資訊。 如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 回溯相容性問題的詳細資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
+ [使用升級建議程式](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

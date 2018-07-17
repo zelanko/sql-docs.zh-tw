@@ -1,5 +1,5 @@
 ---
-title: 定義資料來源檢視 (Analysis Services) |Microsoft 文件
+title: 定義資料來源檢視 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - names [Analysis Services], data source views
 - name matching criteria [Analysis Services]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - data source views [Analysis Services], creating
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 90c3085f0dde8ba5fd317ce8768926787ac5f585
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 46e84e7a5f546dc90bf3ffbe141dcf5bec4b2792
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145961"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308548"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>定義資料來源檢視 (Analysis Services)
   資料來源檢視包含 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 多維度資料庫物件 (也就是 Cube、維度和採礦結構) 所使用之結構描述的邏輯模型。 資料來源檢視就是統一維度模型 (UDM) 和採礦結構所使用之結構描述元素的中繼資料定義，並以 XML 格式儲存。 資料來源檢視：  
@@ -111,7 +111,7 @@ ms.locfileid: "36145961"
 ##  <a name="bkmk_secondaryDS"></a> 加入次要資料來源  
  當您定義包含多個資料來源中資料表、檢視或資料行的資料來源檢視時，您加入到此資料來源檢視之物件所來自的第一個資料來源會指定為主要資料來源 (在定義主要資料來源之後就不能變更)。 在根據單一資料來源中的物件定義資料來源檢視之後，可以加入其他資料來源中的物件。  
   
- 如果 OLAP 處理或資料採礦查詢需要從單一查詢中的多個資料來源的資料，主要資料來源必須支援遠端查詢使用`OpenRowset`。 一般來說，這會是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源。 例如，如果您設計一個 OLAP 維度，其中包含繫結至多個資料來源中資料行的屬性，則在處理期間，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將會建構 `OpenRowset` 查詢來擴展這個維度。 不過，如果可以擴展 OLAP 物件或是資料採礦查詢解析來自單一資料來源，則`OpenRowset`將不會建構查詢。 在某些情況下，您或許可以定屬性之間的屬性關聯性，如此便不需要 `OpenRowset` 查詢。 如需有關屬性關聯性的詳細資訊，請參閱[屬性關聯性](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)，[加入或移除資料表或檢視資料來源檢視中的&#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)和[定義屬性關聯性](attribute-relationships-define.md)。  
+ 如果 OLAP 處理或資料採礦查詢需要從單一查詢中的多個資料來源的資料，主要資料來源必須支援遠端查詢使用`OpenRowset`。 一般來說，這會是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料來源。 例如，如果您設計一個 OLAP 維度，其中包含繫結至多個資料來源中資料行的屬性，則在處理期間，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 將會建構 `OpenRowset` 查詢來擴展這個維度。 不過，如果可以擴展 OLAP 物件或是資料採礦查詢解析單一資料來源，則`OpenRowset`將不會建構查詢。 在某些情況下，您或許可以定屬性之間的屬性關聯性，如此便不需要 `OpenRowset` 查詢。 如需有關屬性關聯性的詳細資訊，請參閱 <<c0> [ 屬性關聯性](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)，[新增或移除資料表或檢視資料來源檢視中的&#40;Analysis Services&#41; ](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)和  [定義屬性關聯性](attribute-relationships-define.md)。</c0>  
   
  若要從次要資料來源新增資料表及資料行，請按兩下 [方案總管] 中的 DSV，以在資料來源檢視設計工具中開啟 DSV，然後使用 [新增/移除資料表] 對話方塊，以包含專案中定義之其他資料來源的物件。 如需詳細資訊，請參閱[在資料來源檢視中加入或移除資料表或檢視 &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)。  
   
@@ -136,11 +136,11 @@ ms.locfileid: "36145961"
   
 ## <a name="see-also"></a>另請參閱  
  [新增或移除資料表或檢視表中的資料來源檢視&#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
- [資料來源檢視中定義邏輯主索引鍵&#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
+ [在 資料來源檢視中定義邏輯主索引鍵&#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [在資料來源檢視中定義具名的計算&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   
- [在資料來源檢視中定義具名的查詢&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
- [取代的資料表或資料來源檢視中的具名的查詢&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
- [在資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
+ [在 資料來源檢視中定義具名的查詢&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)   
+ [取代的資料表或具名的查詢的資料來源檢視中&#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)   
+ [在 資料來源檢視設計師中使用圖表&#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [瀏覽資料來源檢視中的資料&#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [刪除資料來源檢視&#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
  [重新整理資料來源檢視中的結構描述&#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  

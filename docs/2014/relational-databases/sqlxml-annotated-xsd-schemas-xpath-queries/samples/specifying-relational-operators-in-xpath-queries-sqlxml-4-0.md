@@ -1,5 +1,5 @@
 ---
-title: XPath 查詢 (SQLXML 4.0) 中指定關係運算子 |Microsoft 文件
+title: 在 XPath 查詢 (SQLXML 4.0) 中指定關係運算子 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,29 +17,29 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 9d8c77a561c4853db9bba036b33661f1a1f760a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: a44253e26443288286a935fcaf06815ebcdeb405
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146734"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329528"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
-  下列範例示範如何在 XPath 查詢中指定關係運算子。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述的 XPath 範例&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
+  下列範例示範如何在 XPath 查詢中指定關係運算子。 這些範例中的 XPath 查詢會針對 SampleSchema1.xml 中包含的對應結構描述來指定。 如需此範例結構描述資訊，請參閱[範例註解式 XSD 結構描述 XPath 範例的&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-specify-relational-operator"></a>A. 指定關係運算子  
- 此 XPath 查詢傳回的子系的項目**\<客戶 >** 元素其中**CustomerID**屬性值是"1"，其中任何子系**\<順序>** 元素包含 **\<OrderDetail >** 子系**OrderQty**屬性值大於 3:  
+ 此 XPath 查詢傳回的子系的項目**\<客戶 >** 項目其中**CustomerID**屬性值是"1"，其中任何子**\<順序>** 項目包含 **\<OrderDetail >** 子項**OrderQty**屬性大於 3 的值：  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- 指定在方括號篩選條件的述詞**\<客戶 >** 項目。 只有**\<客戶 >** 至少有一個項目 **\<OrderDetail >** 孫系包含 OrderQty 屬性值大於 3 會傳回。  
+ 指定在方括號篩選器述詞**\<客戶 >** 項目。 只有**\<客戶 >** 至少有一個項目 **\<OrderDetail >** 包含 OrderQty 屬性值大於 3 會傳回的孫系。  
   
  `child` 軸是預設值。 因此，此查詢可以指定為：  
   
@@ -49,7 +49,7 @@ ms.locfileid: "36146734"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (SpecifyRelationalA.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36146734"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的結果集：  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36146734"
 ```  
   
 ### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. 在 XPath 查詢中指定關係運算子並使用布林函數來比較結果  
- 此查詢會傳回所有**\<順序 >** 元素子系內容節點具有**SalesPersonID**屬性為小於 270 的值：  
+ 此查詢會傳回所有**\<順序 >** 具有的內容節點的項目子系**SalesPersonID**屬性是小於 270 的值：  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  
@@ -101,7 +101,7 @@ ms.locfileid: "36146734"
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>針對對應的結構描述測試 XPath 查詢  
   
-1.  複製[範例結構描述程式碼](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
+1.  複製[結構描述程式碼範例](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)並將它貼到文字檔。 將檔案儲存為 SampleSchema1.xml。  
   
 2.  建立下列範本 (SpecifyRelationalB.xml)，並將其儲存在儲存 SampleSchema1.xml 的目錄中。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "36146734"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為範本執行的部分結果集：  
   

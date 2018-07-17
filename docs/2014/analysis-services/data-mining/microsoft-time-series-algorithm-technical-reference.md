@@ -1,5 +1,5 @@
 ---
-title: Microsoft 時間序列演算法技術參考 |Microsoft 文件
+title: Microsoft 時間序列演算法技術參考 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - HISTORICAL_MODEL_GAP parameter
@@ -28,15 +28,15 @@ helpviewer_keywords:
 - PREDICTION_SMOOTHING parameter
 ms.assetid: 7ab203fa-b044-47e8-b485-c8e59c091271
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ab83d1cefec896835d8ecb0c9baa49d4ea44b68
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 78a54bc173a3d3b780e57752d86aebc33249066a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37323618"
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Microsoft 時間序列演算法技術參考
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法包括兩種不同的演算法來分析時間序列：  
@@ -71,7 +71,7 @@ ms.locfileid: "36037587"
   
  Microsoft 時間序列演算法運作方式是取時間序列中的值，並嘗試將資料放入模式。 如果資料序列還不是定態，演算法就會套用差分階數。 差分階數的每個增量會嘗試讓時間序列成為定態。  
   
- 比方說，如果您有時間序列 （z1、 z2，...，zn），並使用差異的一種順序執行計算，您會取得新的序列 (y1，y2，...，yn-1)，其中*爨文 = zi + 1-zi*。 當差分階數是 2 時，此演算法會產生另一個數列 （x1，x2，...，y2...xn 2），根據衍生自第一階方程式的 y 序列。 正確的差分量視資料而定。 單階差分在顯示固定趨勢的模型中最常見，而二階差分則表示隨時間變動的趨勢。  
+ 比方說，如果您有時間序列 （z1，z2，...，zn），並使用差異的一種順序執行計算，求得新序列 (y1，y2，...，yn-1)，其中*爨文 = zi + 1-zi*。 當差分階數是 2 時，演算法就會產生另一個系列 （x1，x2，...，xn-2），根據衍生自第一階方程式的 y 序列。 正確的差分量視資料而定。 單階差分在顯示固定趨勢的模型中最常見，而二階差分則表示隨時間變動的趨勢。  
   
  根據預設，Microsoft 時間序列演算法中所用的差分階數是 -1，表示演算法會自動偵測差分階數的最佳值。 該最佳值通常是 1 (當差分為必要時)，但在某些狀況下，演算法會將該值增加為最大值 2。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "36037587"
   
  當 ARIMA_AR_ORDER 的值大於 1 時，演算法會將時間序列乘以多項式項。 如果多項式公式的單項解析為 1 的根或接近 1，演算法會嘗試移除該項並將差分階數增加 1，保留模型的穩定性。 如果差分階數已經是最大值，則會移除該項，而且不會變更差分階數。  
   
- 例如，如果 AR 的值 = 2，產生的 AR 多項式可能看起來像這樣： 1-1.4B +.45B ^2 = (1-.9B) (1-0.5B)。 請注意一詞 (1-.9B) 的根約為 0.9。 演算法會從多項式公式中消除此項，但不會將差分階數增加 1，因為它已經是最大值 2。  
+ 例如，如果 AR 的值 = 2，產生的 AR 多項式可能看起來如下： 1-1.4B +.45B ^2 = (1-.9B) (1-0.5B)。 請注意一詞 (1-.9B) 的根約為 0.9。 演算法會從多項式公式中消除此項，但不會將差分階數增加 1，因為它已經是最大值 2。  
   
  請務必注意， **強制** 變更差分階數的唯一方式是使用不支援的參數 ARIMA_DIFFERENCE_ORDER。 這個隱藏參數控制演算法對時間序列執行差分的次數，可藉由輸入自訂演算法參數來設定。 但除非您準備實驗並熟悉相關計算，否則不建議您變更這個值。 另請注意，目前沒有機制 (包括隱藏參數) 可讓您控制觸發差分階數增加的臨界值。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "36037587"
 >  ARTXP 和 ARIMA 演算法對於季節性提示非常敏感。 因此，提供錯誤的提示對於結果會有負面的影響。  
   
 ### <a name="choosing-an-algorithm-and-specifying-the-blend-of-algorithms"></a>選擇演算法並指定演算法的混合程度  
- 根據預設，或當您選取 MIXED 選項時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會結合演算法並指派相同的權重。 不過，在[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]、 您可以指定特定的演算法，或藉由設定參數來加權短期或長期預測的結果，您可以自訂結果中的每一個演算法的比例。 依預設， *FORECAST_METHOD* 參數會設定為 MIXED，而 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用這兩個演算法，然後加權它們的值，讓每一個演算法的強度最大化。  
+ 根據預設，或當您選取 MIXED 選項時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會結合演算法並指派相同的權重。 不過，在[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，您可以指定特定的演算法，或您可以自訂在結果中的每個演算法的比例，藉由設定參數來加權短期或長期預測的結果。 依預設， *FORECAST_METHOD* 參數會設定為 MIXED，而 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會使用這兩個演算法，然後加權它們的值，讓每一個演算法的強度最大化。  
   
 -   若要控制演算法的選擇，您可設定 *FORECAST_METHOD* 參數。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36037587"
   
 -   如果您要改善長期預測，請將 *FORECAST_METHOD* 設為 ARIMA。  
   
- 在[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，您也可以自訂如何[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]混合 ARIMA 和 ARTXP 演算法組合。 您可以藉由設定 *PREDICTION_SMOOTHING* 參數來控制此混合的起點及變動率：  
+ 在  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]，您也可以自訂如何[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]混合 ARIMA 與 ARTXP 演算法組合。 您可以藉由設定 *PREDICTION_SMOOTHING* 參數來控制此混合的起點及變動率：  
   
 -   如果將 *PREDICTION_SMOOTHING* 設為 0，則模型只能使用 ARTXP。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36037587"
 |*MINIMUM_SUPPORT*|指定要在每一個時間序列樹中產生分割所需之時間配量的最小數目。 預設值是 10。|  
 |*MISSING_VALUE_SUBSTITUTION*|指定如何填滿歷程記錄資料中的間距。 根據預設，資料中不允許有間隔。 如果資料包含多個數列，數列也不能有不完全的邊緣。 也就是說，所有的數列都應該有相同的起點和終點。 當您在時間序列模型上執行 `PREDICTION JOIN` 時，[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 也會使用這個參數值來填滿新資料中的間距。 下表列出此參數的可能值：<br /><br /> None： 預設值。 使用沿著定型模型曲線所繪製的值來取代遺漏的值。<br /><br /> 上一步： 重複先前時間配量中的值。<br /><br /> 平均： 使用定型中所使用的時間配量的移動平均。<br /><br /> 數值常數：使用指定的數目來取代所有遺漏的值。|  
 |*PERIODICITY_HINT*|提供演算法關於資料週期性的提示。 例如，若每年銷售不同，而且數列中的度量單位是月，則週期性是 12。 此參數採用 {n [, n]} 的格式，其中 n 為任意正數。<br /><br /> 方括弧 [] 內的 n 是選擇性的，可以視需要而重複。 例如，若要針對每個月提供的資料來提供多個週期性提示，您可輸入 {12, 3, 1} 來偵測年、季和月的模式。 但是，週期性對於模型的品質有很大的影響。 如果您所給的提示與實際週期性不同，對結果會有負面影響。<br /><br /> 預設值為 {1}。<br /><br /> 注意： 大括號是必要的。 而且，這個參數具有字串資料類型。 因此，如果您在資料採礦延伸模組 (DMX) 陳述式中輸入這個參數，您必須以引號括住數字和大括號。|  
-|*PREDICTION_SMOOTHING*|指定應該如何混合模型來讓預測最佳化。 只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中才可使用這個參數。 您可以輸入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 與 1 之間的任何值，或是使用下列其中一個值：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]： 指定預測只能使用 ARTXP。 已針對較少的預測數而最佳化預測。<br /><br /> 0.5: （預設值） 會指定應該使用這兩種演算法的預測，而且應該混合結果。<br /><br /> 1：指定預測只能使用 ARIMA。 已針對許多的預測數而最佳化預測。<br /><br /> <br /><br /> 注意： 使用*FORECAST_METHOD*參數來控制定型。|  
+|*PREDICTION_SMOOTHING*|指定應該如何混合模型來讓預測最佳化。 只有在某些 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中才可使用這個參數。 您可以輸入 [!INCLUDE[tabValue](../../includes/tabvalue-md.md)] 與 1 之間的任何值，或是使用下列其中一個值：<br /><br /> [!INCLUDE[tabValue](../../includes/tabvalue-md.md)]： 指定預測只能使用 ARTXP。 已針對較少的預測數而最佳化預測。<br /><br /> 0.5: （預設值） 指定應使用這兩個演算法的預測，而且應該混合結果。<br /><br /> 1：指定預測只能使用 ARIMA。 已針對許多的預測數而最佳化預測。<br /><br /> <br /><br /> 注意： 使用*FORECAST_METHOD*參數來控制定型。|  
   
 ### <a name="modeling-flags"></a>模型旗標  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法支援下列模型旗標。 當您建立採礦結構或採礦模型時，您會定義模型旗標來指定分析期間要如何處理每個資料行中的值。 如需詳細資訊，請參閱[模型旗標 &#40;資料採礦&#41;](modeling-flags-data-mining.md)。  

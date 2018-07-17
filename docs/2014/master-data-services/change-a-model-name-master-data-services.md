@@ -1,5 +1,5 @@
 ---
-title: 變更模型名稱 (Master Data Services) |Microsoft 文件
+title: 變更模型名稱 (Master Data Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 caps.latest.revision: 4
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fc049820c419dd2b5dd3fbcd165522ef80193d2c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 58f66ff01adba7661897b93076d7867bab73dcff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023148"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37324418"
 ---
 # <a name="change-a-model-name-master-data-services"></a>變更模型名稱 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 中，您可以變更模型的名稱。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -39,14 +39,14 @@ ms.locfileid: "36023148"
   
 2.  在 **[模型檢視]** 頁面上，從功能表列指向 **[管理]** ，然後按一下 **[模型]**。  
   
-3.  在**模型維護**頁面上，在方格中，按一下您想要變更的名稱與模型的資料列。  
+3.  在 **模型維護**頁面上，在方格中，按一下您想要變更名稱之模型的資料列。  
   
     > [!NOTE]  
     >  您無法變更中繼資料模型的名稱。  
   
-4.  按一下**編輯選取的模型**。  
+4.  按一下 **編輯選取的模型**。  
   
-5.  在**模型名稱**方塊中，輸入模型的更新的名稱。  
+5.  在 **模型名稱**方塊中，輸入模型的更新的名稱。  
   
 6.  按一下 **[儲存模型]**。  
   

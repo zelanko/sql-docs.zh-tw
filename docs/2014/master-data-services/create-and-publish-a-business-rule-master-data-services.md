@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ea043eaf389aa87e1162c2321220c4fd7878923a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5cdcdb6edb146393a9daee7221d0a0d979989046
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132203"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322378"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>建立及發行商務規則 (Master Data Services)
   在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，建立商務規則，確保主要資料的正確性。 建立規則之後，您必須發行它，才能將它套用至資料。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  若要執行此程序：  
   
 -   您必須擁有存取 **[系統管理]** 功能區域的權限。  
@@ -54,14 +54,14 @@ ms.locfileid: "36132203"
   
 9. 在 [元件] 窗格中，展開 [條件] 節點。  
   
-10. 按一下條件並將它拖曳至**如果**窗格的**條件**標籤。  
+10. 按一下條件並將它拖曳至**IF**窗格中的**條件**標籤。  
   
     > [!TIP]  
-    >  您可以從您的商務規則刪除項目上按一下滑鼠右鍵，然後選擇**刪除**。  
+    >  您也可以從您的商務規則刪除項目上按一下滑鼠右鍵，然後選擇**刪除**。  
   
-11. 在**屬性** 窗格中，按一下屬性，並將它拖曳至**編輯條件**窗格的**Select 屬性**標籤。  
+11. 在 **屬性**窗格中，按一下屬性，並將它拖曳至**編輯條件**窗格的**選取屬性**標籤。  
   
-12. 在**編輯條件** 窗格中，完成任何必要的欄位。  
+12. 在 [**編輯條件**] 窗格中，完成任何必要的欄位。  
   
 13. 在 [編輯條件] 窗格中，按一下 [儲存項目]。  
   

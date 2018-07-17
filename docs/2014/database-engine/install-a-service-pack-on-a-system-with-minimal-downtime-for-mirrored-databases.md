@@ -1,14 +1,13 @@
 ---
-title: 最少停機時間的系統上安裝 Service Pack，為鏡像資料庫 |Microsoft 文件
+title: 在最短停機時間的系統上安裝 Service Pack，為鏡像資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
 - database mirroring [SQL Server], upgrading system
@@ -18,18 +17,18 @@ helpviewer_keywords:
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 caps.latest.revision: 13
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e15b15020dcf28ad83bfbc50ab18e0005c71a4d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137417"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37296918"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>在鏡像資料庫停機時間最少的情況下於系統上安裝 Service Pack
-  此主題描述如何在您安裝 Service Pack 和 Hotfix 時，將鏡像資料庫的停機時間減至最少。 這個程序牽涉到循序升級參與資料庫鏡像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 這種形式的更新，這稱為*輪流更新*，減少至只有單一容錯移轉的停機時間。 請注意，高效能模式工作階段中的鏡像伺服器之間主體伺服器的地理位置遙遠，輪流更新可能不適合。  
+  此主題描述如何在您安裝 Service Pack 和 Hotfix 時，將鏡像資料庫的停機時間減至最少。 這個程序牽涉到循序升級參與資料庫鏡像的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 執行個體。 這種形式的更新，這就所謂*輪流更新*，停機時間減少至只有單一容錯移轉。 請注意，高效能模式工作階段中的鏡像伺服器與主體伺服器地理位置遙遠，輪流更新可能不適合。  
   
  輪流更新是指由下列階段組成的多階段程序：  
   
@@ -129,7 +128,7 @@ ms.locfileid: "36137417"
   
     -   在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中：使用 [資料庫屬性] 對話方塊的[鏡像頁面](../relational-databases/databases/database-properties-mirroring-page.md)，將 [作業模式] 選項變更為 [高效能 (非同步)]。  
   
-    -   在[!INCLUDE[tsql](../includes/tsql-md.md)]： 使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
+    -   在  [!INCLUDE[tsql](../includes/tsql-md.md)]： 使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)將交易安全性設定為 OFF。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>讓見證回到鏡像工作階段  
   

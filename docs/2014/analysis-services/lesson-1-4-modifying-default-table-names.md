@@ -1,5 +1,5 @@
 ---
-title: 修改預設資料表名稱 |Microsoft 文件
+title: 修改預設資料表名稱 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 87328bab0552074462ec039cbcb9c8184639f350
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c0051a4bdd4a274ee91997117f491c435a556c04
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308588"
 ---
 # <a name="modifying-default-table-names"></a>修改預設資料表名稱
   您可以針對資料來源檢視中的物件，變更 **FriendlyName** 屬性的值，使其更明顯且更容易使用。  
@@ -41,7 +41,7 @@ ms.locfileid: "36035543"
   
      當您按一下而離開 **FriendlyName** 屬性的資料格時，即套用變更。 在下一課，您將定義以此事實資料表為基礎的量值群組。 事實資料表的名稱是 InternetSales 而不是 FactInternetSales，因為您在這一課已做了變更。  
   
-4.  按一下 [資料表] 窗格中的 [DimProduct]。 在 [屬性] 視窗中，變更**FriendlyName**屬性*`Product`*。  
+4.  按一下 [資料表] 窗格中的 [DimProduct]。 在 [屬性] 視窗中，變更**FriendlyName**屬性設*`Product`*。  
   
 5.  以相同方式變更資料來源檢視中其餘每個資料表的 **FriendlyName** 屬性，以便移除 "**Dim**" 前置詞。  
   
@@ -50,10 +50,10 @@ ms.locfileid: "36035543"
 7.  在 [檔案] 功能表上或 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 的工具列上，按一下 [全部儲存]，即可儲存您到目前為止在 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程專案中所做的變更。 如果您想要的話，可以在此停止教學課程，之後再繼續。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 2 課： 定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)  
+ [第 2 課：定義和部署 Cube](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [多維度模型中的資料來源檢視](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [在資料來源檢視中變更屬性&#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
+ [變更資料來源檢視中的屬性&#40;Analysis Services&#41;](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   
   

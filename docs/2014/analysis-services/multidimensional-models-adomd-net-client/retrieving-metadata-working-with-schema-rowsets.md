@@ -1,5 +1,5 @@
 ---
-title: Working with Schema Rowsets in ADOMD.NET |Microsoft 文件
+title: Working with Schema Rowsets in ADOMD.NET |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - schema rowsets [ADOMD.NET]
 ms.assetid: 7bf75bf8-f1e1-44f6-ac42-c38a681654cf
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9c6acc3ffe3a0f0b7ae5523833cbb85f0c152cc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e77a3a4c7d38779da149f63644ad9a3106034f51
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132533"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310748"
 ---
 # <a name="working-with-schema-rowsets-in-adomdnet"></a>使用 ADOMD.NET 中的結構描述資料列集
   當您需要的中繼資料比 ADOMD.NET 物件模型所提供的還要多時，ADOMD.NET 提供的功能，可擷取完整範圍的 XML for Analysis (XMLA)、OLE DB、OLE DB for OLAP 以及 OLE DB for Data Mining 結構描述資料列集：  
@@ -75,7 +75,7 @@ ms.locfileid: "36132533"
  在這些方法中，每個都會傳回使用結構描述資訊擴展的 `DataSet` 物件之執行個體。 `DataSet` 物件是來自 Microsoft .NET Framework 類別庫的 `System.Data` 命名空間。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，GetActions 函數會採用連接、 cube 名稱、 座標和座標類型，會擷取[MDSCHEMA_ACTIONS 資料列集](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)，並傳回選取座標上可用的動作。  
+ 在下列範例中，GetActions 函數接受連線、 cube 名稱、 座標和座標類型，擷取[MDSCHEMA_ACTIONS 資料列集](../schema-rowsets/ole-db-olap/mdschema-actions-rowset.md)，並傳回選取座標上的 可用的動作。  
   
  [!code-csharp[Adomd.NetClient#GetActions](../../snippets/csharp/SQL14/adomd.net/adomd.netclient/cs/adomdexample.cs#getactions)]  
   

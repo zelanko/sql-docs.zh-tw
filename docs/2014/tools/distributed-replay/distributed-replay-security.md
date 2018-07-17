@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay 安全性 |Microsoft 文件
+title: Distributed Replay 安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 408d899379150e88684df38713f94765a0c0c7cc
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b7c2c2a92ebbde62b20ba99539b31b4a3e40d267
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301278"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay 安全性
   安裝和使用 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay] 功能之前，您應該先檢閱本主題中的重要安全性資訊。 本主題描述的是使用 Distributed Replay 之前必須進行的安裝後安全性設定步驟。 本主題亦描述與資料保護和重要移除步驟有關的重要考量。  
@@ -51,9 +51,9 @@ ms.locfileid: "36036296"
   
 1.  請根據作業系統執行下列其中一項作業：  
   
-    -   按一下**啟動**，型別`services.msc`中**搜尋**方塊，然後再按 ENTER 鍵。  
+    -   按一下 **開始**，型別`services.msc`中**搜尋**方塊，然後再按 ENTER 鍵。  
   
-    -   按一下**啟動**，按一下 **執行**，型別`services.msc`，然後按 ENTER 鍵。  
+    -   按一下 **開始**，按一下**執行**，型別`services.msc`，然後按 ENTER 鍵。  
   
 2.  在 [服務] 對話方塊中，以滑鼠右鍵按一下您想要設定的服務，然後按一下 [內容]。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "36036296"
   
     1.  在 Controller 電腦上，按一下 [開始]。  
   
-    2.  型別`dcomcnfg.exe`中**搜尋**方塊。  
+    2.  型別`dcomcnfg.exe`中**搜尋** 方塊中。  
   
     3.  按 ENTER 鍵。  
   

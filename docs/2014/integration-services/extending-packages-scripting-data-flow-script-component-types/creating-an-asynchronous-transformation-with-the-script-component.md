@@ -20,13 +20,13 @@ ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 660524626e7120f21d5e420526f0634f3155f2b6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6f63101c71ada32768139c075dd98122bac5ca75
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37329938"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>使用指令碼元件建立非同步轉換
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用轉換元件，以修改及分析從來源傳遞到目的地的資料。 具有同步輸出的轉換會處理通過該元件的每個輸入資料列。 具有非同步輸出的轉換可能會等候完成其處理作業，直到轉換作業收到所有輸入資料列為止，或者轉換作業可能會在收到所有輸入資料列以前先輸出某些資料列。 本主題將討論非同步轉換。 如果您的處理需要同步轉換，請參閱[使用指令碼元件建立同步轉換](../data-flow/transformations/script-component.md)。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -75,7 +75,7 @@ ms.locfileid: "36135215"
 ### <a name="adding-variables"></a>加入變數  
  如果有任何要在指令碼中使用其值的現有變數，則可以在 [指令碼轉換編輯器] 的 [指令碼] 頁面上，將它們新增至 ReadOnlyVariables 和 ReadWriteVariables 屬性欄位中。  
   
- 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以選取多個變數，依序按一下省略符號 (**...**) 旁邊`ReadOnlyVariables`和`ReadWriteVariables`屬性欄位，然後選取 [在變數**選取變數**] 對話方塊。  
+ 當您在屬性欄位中加入多個變數時，請用逗號分隔變數名稱。 您也可以選取多個變數，按一下省略符號 (**...**) 按鈕旁`ReadOnlyVariables`並`ReadWriteVariables`屬性欄位，然後選取 [在變數**選取變數**] 對話方塊。  
   
  如需如何利用指令碼元件使用變數的一般資訊，請參閱[在指令碼元件中使用變數](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)。  
   
@@ -87,11 +87,11 @@ ms.locfileid: "36135215"
  如需使用指令碼元件所建立之各種元件都適用的重要資訊，請參閱[編碼和偵錯指令碼元件](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)。  
   
 ### <a name="understanding-the-auto-generated-code"></a>了解自動產生的程式碼  
- 當您在建立和設定轉換元件，可編輯之後開啟 VSTA IDE 時`ScriptMain`ProcessInputRow 和 CreateNewOutputRows 方法類別會出現在程式碼編輯器，為虛設常式。 ScriptMain 類別是您將撰寫自訂程式碼的地方，而 ProcessInputRow 則是轉換元件中最重要的方法。 `CreateNewOutputRows` 方法通常比較常在來源元件中使用，這就像非同步轉換，因為兩個元件都必須建立自己的輸出資料列。  
+ 當您在建立和設定轉換元件，可編輯之後開啟 VSTA IDE 時`ScriptMain`類別會出現在含虛設常式程式碼編輯器，並包括 ProcessInputRow 和 CreateNewOutputRows 方法。 ScriptMain 類別是您將撰寫自訂程式碼的地方，而 ProcessInputRow 則是轉換元件中最重要的方法。 `CreateNewOutputRows` 方法通常比較常在來源元件中使用，這就像非同步轉換，因為兩個元件都必須建立自己的輸出資料列。  
   
- 如果您在 VSTA 中開啟**Project Explorer**視窗中，您可以看到，指令碼元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案項目。 ScriptMain 類別繼承自 UserComponent 類別中`ComponentWrapper`專案項目。  
+ 如果您開啟 VSTA **Project Explorer**  視窗中，您所見，指令碼元件也會產生唯讀`BufferWrapper`和`ComponentWrapper`專案項目。 ScriptMain 類別繼承自中的 UserComponent 類別`ComponentWrapper`專案項目。  
   
- 在執行階段，資料流程引擎呼叫 PrimeOutput 方法中`UserComponent`類別，它會覆寫<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A>方法<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>父類別。 PrimeOutput 方法接著會呼叫 CreateNewOutputRows 方法。  
+ 在執行階段，資料流程引擎會呼叫 PrimeOutput 方法`UserComponent`類別，它會覆寫<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A>方法<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>父類別。 PrimeOutput 方法接著會呼叫 CreateNewOutputRows 方法。  
   
  接下來，資料流程引擎會叫用 UserComponent 類別中的 ProcessInput 方法，它會覆寫 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> 父類別的 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> 方法。 ProcessInput 方法接著會在輸入緩衝區的資料列中執行迴圈，並為每個資料列呼叫一次 ProcessInputRow 方法。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "36135215"
   
  在非同步轉換中，您可以使用 AddRow 方法，從 ProcessInputRow 或 ProcessInput 方法適當地將資料列新增至輸出。 您不需要使用 CreateNewOutputRows 方法。 如果您要將單一結果資料列 (如彙總結果) 寫入特定輸出，您可以事先使用 CreateNewOutputRows 方法建立輸出資料列，然後在處理所有輸入資料列之後填入它的值。 不過，在 CreateNewOutputRows 方法中建立多個資料列並不實用，因為指令碼元件只能讓您在輸入或輸出中使用目前的資料列。 在沒有輸入資料列要處理的來源元件中，CreateNewOutputRows 方法比較重要。  
   
- 您可能也會想要覆寫 ProcessInput 方法本身，好讓您在輸入緩衝區內執行迴圈及針對每一個資料列呼叫 ProcessInputRow 之前或之後，可以執行其他初步或最終處理。 例如，本主題中的程式碼範例的其中一個覆寫來計算特定城市中的位址數目做為資料列的 ProcessInputRow 迴圈 ProcessInput`.`範例寫入的摘要值的第二個輸出之後的所有資料列處理。 此範例會完成 ProcessInput 中的輸出，因為呼叫 PostExecute 時輸出緩衝區將不再可用。  
+ 您可能也會想要覆寫 ProcessInput 方法本身，好讓您在輸入緩衝區內執行迴圈及針對每一個資料列呼叫 ProcessInputRow 之前或之後，可以執行其他初步或最終處理。 例如，本主題中的程式碼範例的其中一個覆寫 ProcessInput 以計算特定城市中的位址數目，為資料列的 ProcessInputRow 迴圈`.`範例摘要值寫入第二個輸出之後的所有資料列已處理。 此範例會完成 ProcessInput 中的輸出，因為呼叫 PostExecute 時輸出緩衝區將不再可用。  
   
  視您的需求而定，您也可能會想要在 PreExecute 和 PostExecute 方法 (可在 ScriptMain 類別中取得) 中撰寫指令碼，以執行任何初步或最終處理。  
   
@@ -234,7 +234,7 @@ public class ScriptMain:
   
 ```  
   
-![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多 with Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
+![Integration Services 圖示 （小）](../media/dts-16.gif "Integration Services 圖示 （小）")**保持最多包含 Integration Services 的日期** <br /> 若要取得 Microsoft 的最新下載、文件、範例和影片以及社群中的精選解決方案，請瀏覽 MSDN 上的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 頁面：<br /><br /> [瀏覽 MSDN 上的 Integration Services 頁面](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> 若要得到這些更新的自動通知，請訂閱該頁面上所提供的 RSS 摘要。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解同步和非同步轉換](../understanding-synchronous-and-asynchronous-transformations.md)   

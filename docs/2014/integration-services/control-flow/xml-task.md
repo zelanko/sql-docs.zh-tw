@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmltask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 8278f24e51e6288eb31f2f8ac4ec941a7f23e3aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8dc356cd9401b28a102124d81af3a6f8dda7a64b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036834"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331928"
 ---
 # <a name="xml-task"></a>XML 工作
   XML 工作用於處理 XML 資料。 使用此工作，封裝可以擷取 XML 文件、使用「可延伸樣式表語言轉換」(XSLT) 樣式表和 XPath 運算式將作業套用到文件、合併多個文件，或者驗證、比較更新的文件，並將其儲存至檔案和變數。  
@@ -74,7 +74,7 @@ ms.locfileid: "36036834"
 |選項|描述|  
 |------------|-----------------|  
 |**IgnoreComments**|指定是否要比較註解節點的值。|  
-|**IgnoreNamespaces**|指定是否要比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱的值。 如果此選項設定為`true`，兩個具有相同的本機名稱但不同的命名空間的項目會被視為相同。|  
+|**IgnoreNamespaces**|指定是否要比較元素的命名空間統一資源識別碼 (URI) 及其屬性名稱的值。 如果此選項設定為`true`，具有相同本機名稱但不同的命名空間的兩個元素會被視為相同。|  
 |**IgnorePrefixes**|指定是否要比較元素前置詞和屬性名稱的值。 如果此選項設定為 `true,`，則本機名稱相同但命名空間 URI 和前置詞不同的兩個元素會被視為一樣。|  
 |**IgnoreXMLDeclaration**|指定是否要比較 XML 宣告的值。|  
 |**IgnoreOrderOfChildElements**|指定是否要比較子元素順序的值。 如果此選項設定為 `true`，則同層級清單中只有位置不同的子元素會被視為一樣。|  
@@ -123,7 +123,7 @@ ms.locfileid: "36036834"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [XML 工作編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [XML 工作編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [以 XML 工作驗證 XML](xml-task.md)  
   

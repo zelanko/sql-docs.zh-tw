@@ -1,5 +1,5 @@
 ---
-title: 啟用和停用 RDL 沙箱 |Microsoft 文件
+title: 啟用和停用 RDL 沙箱功能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0fefbebb9c56df87c83bb3b41ee508550a5f2113
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135340"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37311348"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>啟用或停用 RDL 沙箱
   RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器之單一 Web 伺服陣列的環境中，讓您偵測及限制個別租用戶使用特定資源類型的情形。 這種情形的一個範例是裝載服務案例，在此案例中，您可能要為由多個可能分屬不同公司的租用戶所使用的報表伺服器，維護單一 Web 伺服器陣列。 您身為報表伺服器管理員，可以啟用此功能來幫助您達成下列目標：  
@@ -38,7 +38,7 @@ ms.locfileid: "36135340"
   
 -   運算式中的指名參數。  
   
- 本主題說明中的每個項目 <`RDLSandboxing`> RSReportServer.Config 檔案中的項目。 如需如何編輯此檔案的詳細資訊，請參閱[Modify a Reporting Services Configuration File (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。 伺服器追蹤記錄會記錄與 RDL 沙箱功能有關的活動。 如需有關追蹤記錄檔的詳細資訊，請參閱[Report Server Service Trace Log](report-server/report-server-service-trace-log.md)。  
+ 本主題說明中的每個項目 <`RDLSandboxing`> RSReportServer.Config 檔案中的項目。 如需如何編輯此檔案的詳細資訊，請參閱[Modify a Reporting Services Configuration File (RSreportserver.config)](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) (修改 Reporting Services 組態檔 (RSreportserver.config))。 伺服器追蹤記錄會記錄與 RDL 沙箱功能有關的活動。 如需有關追蹤記錄檔的詳細資訊，請參閱 <<c0> [ 報表伺服器服務追蹤記錄](report-server/report-server-service-trace-log.md)。  
   
 ## <a name="example-configuration"></a>範例組態  
  下列範例示範設定和範例值 <`RDLSandboxing`> RSReportServer.Config 檔案中的項目。  
@@ -122,9 +122,9 @@ ms.locfileid: "36135340"
   
 -   將這個新類別加入至允許清單。  
   
- 若要加入[!INCLUDE[vbprvb](../includes/vbprvb-md.md)]至允許清單中，.NET Framework 函式對應的型別從 Microsoft.VisualBasic 命名空間新增至允許清單。  
+ 若要新增[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 函數加入允許清單中，將對應的型別 Microsoft.VisualBasic 命名空間新增至允許清單。  
   
- 若要將 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 類型關鍵字加入至允許清單，請將對應的 CLR 類型加入至允許清單。 例如，若要使用[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 關鍵字`Integer`，加入下列 XML 片段至 **\<RDLSandboxing >** 項目：  
+ 若要將 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 類型關鍵字加入至允許清單，請將對應的 CLR 類型加入至允許清單。 例如，若要使用[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 關鍵字`Integer`，將下列 XML 片段来加入 **\<RDLSandboxing >** 項目：  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -152,7 +152,7 @@ ms.locfileid: "36135340"
 -   當您因為新的成員可能已加入至 RDL 類型，而更新報表伺服器來處理較新的 RDL 結構描述時。  
   
 ### <a name="working-with-operators-and-new"></a>使用運算子及 New  
- 根據預設，一定會允許 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 `New` 除外。 `New`運算子由`AllowNew`屬性**\<允許 >** 項目。 其他語言運算子，例如預設集合存取子運算子`!`和[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 轉換巨集例如`CInt`，一律允許。  
+ 根據預設，一定會允許 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework 語言運算子，但是 `New` 除外。 `New`運算子會受到`AllowNew`屬性上**\<允許 >** 項目。 其他語言運算子，例如預設集合存取子運算子`!`並[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework 轉換巨集的這類`CInt`，一律允許。  
   
  不支援將運算子加入至封鎖清單中，包括自訂運算子。 若要排除某個類型的運算子，您必須執行下列動作：  
   

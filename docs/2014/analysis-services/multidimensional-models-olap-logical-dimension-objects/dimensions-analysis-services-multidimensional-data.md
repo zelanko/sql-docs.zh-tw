@@ -1,5 +1,5 @@
 ---
-title: 維度 (Analysis Services-多維度資料) |Microsoft 文件
+title: 維度 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Analysis Services objects, dimensions
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
 caps.latest.revision: 39
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bfe683915d9cacfa21bdd5f32533024da7a7ee34
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 48cba502e905c1f83503ac8955184116971316c4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033786"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37301148"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>維度 (Analysis Services - 多維度資料)
-  在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度是 cube 的基礎元件。 維度會以使用者希望了解的領域來組織資料，例如客戶、商店或員工。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度包含對應到維度資料表中之資料行的屬性。 這些屬性會顯示為屬性階層，並可以組成使用者自訂階層，也可以根據基礎維度資料表中的資料行定義為父子式階層。 這些階層會用於組織包含在 Cube 中的量值。 下列主題提供維度、屬性以及階層的概觀。  
+  在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，維度是 cube 的基礎元件。 維度會以使用者希望了解的領域來組織資料，例如客戶、商店或員工。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中的維度包含對應到維度資料表中之資料行的屬性。 這些屬性會顯示為屬性階層，並可以組成使用者自訂階層，也可以根據基礎維度資料表中的資料行定義為父子式階層。 這些階層會用於組織包含在 Cube 中的量值。 下列主題提供維度、屬性以及階層的概觀。  
   
 ## <a name="in-this-section"></a>本節內容  
   

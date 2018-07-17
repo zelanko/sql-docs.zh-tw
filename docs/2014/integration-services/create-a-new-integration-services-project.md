@@ -1,5 +1,5 @@
 ---
-title: 建立新的 Integration Services 專案 |Microsoft 文件
+title: 建立新的 Integration Services 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
 - Integration Services projects, creating
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SSIS projects, creating
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 caps.latest.revision: 51
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4ee4484b97102b6bae3bd9496ee161233c47ee12
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fd06f9372092ccbbe221796555c63880d3566f91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030330"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37298728"
 ---
 # <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案
   此程序會建立新的專案和新的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 方案。  
@@ -52,10 +52,10 @@ ms.locfileid: "36030330"
     > [!NOTE]  
     >  若要檢視和變更選取的原始檔控制外掛程式，以及設定原始檔控制環境，請按一下 [工具] 功能表上的 [選項]，然後展開 [原始檔控制] 節點。  
   
-8.  按一下**確定**將方案加入至**方案總管**r 及將專案加入方案。  
+8.  按一下  **確定**若要將方案加入**方案總管**r 及將專案加入方案。  
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services &#40;SSIS&#41;專案](integration-services-ssis-projects-and-solutions.md)   
- [新增或移除方案中的 Integration Services 專案](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
+ [在方案中新增或移除 Integration Services 專案](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   
   

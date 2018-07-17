@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partitionprocessingdest.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b01498c14c460fe5566b14203bd8d70002f8f457
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1f77ae8ec3ca4a5964ffedcd8bc533321f7f898a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36133511"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320698"
 ---
 # <a name="partition-processing-destination"></a>資料分割處理目的地
   「資料分割處理」目的地會載入及處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料分割。 如需資料分割的詳細資訊，請參閱[資料分割 &#40;Analysis Services - 多維度資料&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)。  
@@ -52,9 +52,9 @@ ms.locfileid: "36133511"
   
  如需有關 **[資料分割處理目的地編輯器]** 對話方塊中可設定之屬性的詳細資訊，請按一下下列主題之一：  
   
--   [資料分割處理目的地編輯器&#40;連接管理員頁面&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
+-   [資料分割處理目的地編輯器&#40;連線管理員頁面&#41;](../partition-processing-destination-editor-connection-manager-page.md)  
   
--   [資料分割處理目的地編輯器&#40;[對應] 頁面&#41;](../partition-processing-destination-editor-mappings-page.md)  
+-   [資料分割處理目的地編輯器&#40;對應頁面&#41;](../partition-processing-destination-editor-mappings-page.md)  
   
 -   [資料分割處理目的地編輯器&#40;進階頁面&#41;](../partition-processing-destination-editor-advanced-page.md)  
   

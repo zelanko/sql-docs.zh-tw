@@ -1,5 +1,5 @@
 ---
-title: 資料採礦精靈 F1 說明 (Analysis Services-資料採礦) |Microsoft 文件
+title: 資料採礦精靈 F1 說明 (Analysis Services-資料採礦) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.welcome.f1
 helpviewer_keywords:
 - Mining Model Wizard
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e1f66b73d25762a949322b84859d12dd02053c80
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6782013eab9b190efe2f6756c1ee409598eb1619
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136757"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37291674"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>資料採礦精靈 F1 說明 (Analysis Services - 資料採礦)
   使用 **[資料採礦精靈]** ，即可建立新的採礦結構和選擇性的相關採礦模型。  
@@ -32,7 +32,7 @@ ms.locfileid: "36136757"
   
 -   採礦模型讓您分析採礦結構中的資料以找出模式，並根據這些模式做預測。 您可以在單一的採礦結構上，根據不同的演算法建立不同類型的採礦模型。  
   
- 如需詳細資訊，請參閱[資料採礦精靈&#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 資料採礦精靈 &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)。</c0>  
   
  **[資料採礦精靈]** 會引導您完成下列步驟：  
   
@@ -61,12 +61,12 @@ ms.locfileid: "36136757"
  在建立採礦結構和選擇性的採礦模型之後，可以使用 **[資料採礦設計師]** 來修改其屬性。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦精靈&#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [資料採礦精靈 &#40;Analysis Services-資料採礦&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [資料採礦設計師](data-mining/data-mining-designer.md)   
  [建立關聯式採礦結構](data-mining/create-a-relational-mining-structure.md)   
  [選取定義方法&#40;資料採礦精靈&#41;](select-the-definition-method-data-mining-wizard.md)   
  [建立資料採礦結構&#40;資料採礦精靈&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [選取資料來源檢視&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)   
+ [選取 [資料來源檢視]&#40;資料採礦精靈&#41;](select-data-source-view-data-mining-wizard.md)   
  [瀏覽資料來源檢視&#40;資料採礦精靈&#41;](browse-data-source-view-data-mining-wizard.md)   
  [指定資料表類型&#40;資料採礦精靈&#41;](specify-table-types-data-mining-wizard.md)   
  [指定定型資料&#40;資料採礦精靈&#41;](specify-the-training-data-data-mining-wizard.md)   
@@ -78,9 +78,9 @@ ms.locfileid: "36136757"
  [選取量值群組維度&#40;加入新的巢狀的資料表精靈&#41;](select-a-measure-group-dimension-add-new-nested-table-wizard.md)   
  [選取巢狀的資料表索引鍵&#40;加入新的巢狀的資料表精靈&#41;](select-nested-table-key-add-new-nested-table-wizard.md)   
  [選取巢狀的資料表資料行&#40;加入新的巢狀的資料表精靈&#41;](select-nested-table-columns-add-new-nested-table-wizard.md)   
- [指定資料行的內容和資料型別&#40;資料採礦精靈&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
+ [指定資料行的內容和資料類型&#40;資料採礦精靈&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)   
  [配量來源 Cube&#40;資料採礦精靈&#41;](slice-source-cube-data-mining-wizard.md)   
- [正在完成精靈&#40;資料採礦精靈&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [完成精靈&#40;資料採礦精靈&#41;](completing-the-wizard-data-mining-wizard.md)   
  [指定資料行內容和資料類型&#40;資料採礦精靈&#41;](specify-column-content-and-data-type-data-mining-wizard.md)   
  [建立測試集&#40;資料採礦精靈&#41;](create-testing-set-data-mining-wizard.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 處理對話方塊 (Analysis Services-多維度資料) |Microsoft 文件
+title: 處理對話方塊 (Analysis Services-多維度資料) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.processdialog.f1
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b5788bce44bc3ad63956183ac4e8950a0ace11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 187de4a1978b20065080f50a1d9924e8d1138e7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134818"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314998"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>處理對話方塊 (Analysis Services - 多維度資料)
   使用 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 和 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 中的 [處理] 對話方塊，即可處理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件。 您可以在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 中依下列方式顯示 [處理] 對話方塊：  
@@ -69,6 +69,6 @@ ms.locfileid: "36134818"
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services Designers and Dialog Boxes&#40;多維度資料&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [處理進度對話方塊&#40;Analysis Services-多維度資料&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
+ [處理進度 對話方塊&#40;Analysis Services-多維度資料&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   
   

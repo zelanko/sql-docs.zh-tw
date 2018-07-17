@@ -1,5 +1,5 @@
 ---
-title: 可寫入維度 |Microsoft 文件
+title: 可寫入維度 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - writeback [Analysis Services], dimensions
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f140fc79d1b93c419e64d564efec68d29821f2d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a928d7bd7e35114a174373933b974d32a1af5d40
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035326"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293524"
 ---
 # <a name="write-enabled-dimensions"></a>可寫入維度
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- 維度中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望維度是可寫入的。 在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，寫入-維度讓商務使用者可以修改與維度的內容，並查看變更的立即影響維度的階層上。 以單一資料表為根據的任何維度皆可寫入； 在可寫入維度中，商務使用者和管理員可以變更、移動、加入及刪除此維度中的屬性成員。 這些更新統稱為*維度回寫*。  
+ 維度中的資料通常是唯讀的； 但是在某些狀況下，您可能會希望維度是可寫入的。 在  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，寫入-維度讓商務使用者能夠修改維度的內容，並了解變更的立即影響維度的階層。 以單一資料表為根據的任何維度皆可寫入； 在可寫入維度中，商務使用者和管理員可以變更、移動、加入及刪除此維度中的屬性成員。 這些更新指*維度回寫*。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援所有維度屬性上的維度回寫，並修改維度的任何成員。 如果是可寫入的 Cube 或資料分割，會將更新儲存在與 Cube 來源資料表分開的回寫資料表中。 不過，針對可寫入維度，更新會直接記錄在維度的資料表中。 而且，如果可寫入維度是包含在有多個資料分割的 Cube 中，其中部分或全部資料來源具有維度資料表的副本，則在回寫程序中只更新原始維度資料表。  
   

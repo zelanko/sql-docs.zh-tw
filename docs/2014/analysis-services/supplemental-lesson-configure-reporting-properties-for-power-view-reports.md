@@ -1,5 +1,5 @@
 ---
-title: 設定 Power View 報表的報表屬性 |Microsoft 文件
+title: 設定 Power View 報表的報表屬性 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 0f2e5e76b9779ce2cc8362d93ebe2389db8fb8da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ee7bcbbb5294047c2499cabd4c094e15563883d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131418"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37304368"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>設定 Power View 報表的報表屬性
   在此補充課程中，我們將會針對 Adventure Works Internet Sales Model 專案設定報表屬性。 報表屬性讓使用者能夠更輕鬆地在 Power View 中選取及顯示模型資料。 您也會設定屬性來隱藏某些資料行和資料表，並建立新的資料供圖表使用。  
@@ -30,7 +30,7 @@ ms.locfileid: "36131418"
   
  完成本課程的估計時間： **30 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  這個補充課程是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
   
  為了完成這個特殊補充課程，您也必須具備以下條件：  
@@ -108,7 +108,7 @@ ms.locfileid: "36131418"
   
 6.  針對 [Geography] 資料表執行以上相同步驟，選取以下欄位並依照以下順序排列：  
   
-     **縣 （市)**， **State Province Code**，**狀態地區碼**。  
+     **城市**， **State Province Code**，**狀態區域碼**。  
   
 7.  最後，針對 [Product] 資料表執行以上相同步驟，選取以下欄位並依照以下順序排列。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "36131418"
   
      **客戶**  
   
-    |「資料行」|屬性|ReplTest1|  
+    |「資料行」|屬性|值|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Birth Date|資料格式|簡短日期|  
@@ -166,7 +166,7 @@ ms.locfileid: "36131418"
     > [!NOTE]  
     >  因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需指定日期資料表的詳細資訊，請參閱《SQL Server 線上叢書》中的[指定標記為日期資料表以搭配時間智慧使用 &#40;SSAS 表格式&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)。  
   
-    |「資料行」|屬性|ReplTest1|  
+    |「資料行」|屬性|值|  
     |------------|--------------|-----------|  
     |date|資料格式|簡短日期|  
     |Day Number of Week|Hidden|True|  
@@ -183,14 +183,14 @@ ms.locfileid: "36131418"
   
      **地理位置**  
   
-    |「資料行」|屬性|ReplTest1|  
+    |「資料行」|屬性|值|  
     |------------|--------------|-----------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
      **產品**  
   
-    |「資料行」|屬性|ReplTest1|  
+    |「資料行」|屬性|值|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|預設標籤|True|  
@@ -201,7 +201,7 @@ ms.locfileid: "36131418"
   
      **Internet Sales**  
   
-    |「資料行」|屬性|ReplTest1|  
+    |「資料行」|屬性|值|  
     |------------|--------------|-----------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  

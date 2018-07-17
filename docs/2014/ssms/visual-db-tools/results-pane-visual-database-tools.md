@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
 - result sets [SQL Server], queries
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - Results pane
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1a0923c3c8fd27764e01e1656f95fef0a9deaf4c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 911f9eaa294b88ce9c773493f3eed9824a12ae7b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136108"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37321678"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果窗格 (Visual Database Tools)
   [結果] 窗格顯示的是最近執行 SELECT 查詢的結果 (其他查詢類型的結果則顯示在訊息方塊中)。若要開啟結果窗格、開啟或建立查詢或檢視，或傳回資料表的資料。 如果結果窗格未預設顯示，可從 [ **查詢設計工具** ] 功能表，指向 [ **窗格**]，然後按一下 [ **結果**]。  
@@ -71,7 +71,7 @@ ms.locfileid: "36136108"
  [執行查詢&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [圖表 窗格&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [準則窗格&#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [準則窗格 &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [使用結果窗格中的資料 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

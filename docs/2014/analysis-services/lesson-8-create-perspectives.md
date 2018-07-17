@@ -1,5 +1,5 @@
 ---
-title: 第 9 課： 建立檢視方塊 |Microsoft 文件
+title: 第 9 課： 建立檢視方塊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 55b0f0d0-1cdf-4876-9c3d-d0c848be3f5d
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: fe2e746ec290aeb3b8690f818875616f2b9dd2f1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 55c9ef5ca0049c3adda66405f941f4270f562b65
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136302"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295948"
 ---
 # <a name="lesson-9-create-perspectives"></a>第 9 課：建立檢視方塊
   在這一課，您將建立一個 [網際網路銷售] 檢視方塊。 檢視方塊會定義可檢視之模型的子集，而這類子集會提供有焦點的商務特有或應用程式特有視點。 使用者使用檢視方塊連接到模型時，只會將那些模型物件 (資料表、資料行、量值、階層和 KPI) 視為該檢視方塊中定義的欄位。  
@@ -32,20 +32,20 @@ ms.locfileid: "36136302"
   
  完成本課程的估計時間： **5 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
  本主題是表格式模型教學課程的一部分，必須依序完成。 在執行本課中的工作之前，您應已完成上一課：[第 8 課：建立關鍵效能指標](lesson-7-create-key-performance-indicators.md)。  
   
 ## <a name="create-perspectives"></a>建立檢視方塊  
   
 #### <a name="to-create-an-internet-sales-perspective"></a>若要建立網際網路銷售檢視方塊  
   
-1.  在模型設計師中，按一下**模型**功能表，然後再按一下**檢視方塊**。  
+1.  在模型設計師中，按一下**模型**功能表，然後再按一下**觀點**。  
   
 2.  在 [檢視方塊] 對話方塊中，按一下 [新增檢視方塊]。  
   
-3.  若要重新命名檢視方塊，請按兩下**新檢視方塊 1**資料行標題，然後輸入`Internet Sales`。  
+3.  若要重新命名檢視方塊，請按兩下**新的檢視方塊 1**資料行標題，然後按`Internet Sales`。  
   
-4.  在**欄位**，選取下列資料表**日期**， **Geography**，**產品**，**產品類別目錄**，**產品子類別目錄**，和`Internet Sales`。  
+4.  在 **欄位**，選取下列資料表**日期**， **Geography**，**產品**， **Product Category**，**產品子類別目錄**，和`Internet Sales`。  
   
      請注意，您從此檢視方塊中排除了 Customer 資料表及其所有資料行。 稍後，您將在第 12 課中使用 [在 Excel 中進行分析] 功能測試此檢視方塊。 Excel 樞紐分析表欄位清單將包含 Customer 資料表之外的每個資料表。  
   

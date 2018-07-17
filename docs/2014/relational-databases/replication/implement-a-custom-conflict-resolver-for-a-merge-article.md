@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6d3692d6fc83af166a16aa628747078f60cb663a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: d0a94b6e958626e429711bb643cecc7bb87592c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135778"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292289"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>針對合併發行項實作自訂衝突解析程式
   本主題描述如何 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]使用[!INCLUDE[tsql](../../includes/tsql-md.md)] [或是以 COM 為基礎的自訂解析程式](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)，在中針對合併發行項實作自訂衝突解析程式。  
@@ -101,7 +101,7 @@ ms.locfileid: "36135778"
   
 8.  在發行者端，執行 [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql)，以確認此程式庫尚未註冊為自訂衝突解決器。  
   
-9. 若要將此程式庫註冊為自訂衝突解決器，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)。 指定的 COM 物件的易記名稱**@article_resolver**，程式庫的識別碼 (CLSID) **@resolver_clsid**，而值為`false`如**@is_dotnet_assembly**.  
+9. 若要將此程式庫註冊為自訂衝突解決器，請在散發者端執行 [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)。 指定的 COM 物件的易記名稱**@article_resolver**，程式庫的識別碼 (CLSID) 適用於**@resolver_clsid**，而值為`false`如**@is_dotnet_assembly**.  
   
     > [!NOTE]  
     >  當不再需要時，可以使用 [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) 來取消註冊自訂衝突解決器。  
@@ -129,7 +129,7 @@ ms.locfileid: "36135778"
 3.  執行 **setup.exe**  
   
     > [!NOTE]  
-    >  選擇安裝選項時，只需要安裝 **複寫** 範例。 (預設安裝路徑是**C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\**)  
+    >  選擇安裝選項時，只需要安裝 **複寫** 範例。 (預設安裝路徑**C:\Program Files (x86) \Microsoft SQL Server 2000 Samples\1033\\**)  
   
 4.  移至安裝資料夾。 (預設資料夾是 **C:\Program Files (x86)\Microsoft SQL Server 2000 Samples\1033\sqlrepl\unzip_sqlreplSP3.exe**)  
   

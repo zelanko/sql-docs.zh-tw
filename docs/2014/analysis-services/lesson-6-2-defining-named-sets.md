@@ -1,5 +1,5 @@
 ---
-title: 定義命名集 |Microsoft 文件
+title: 定義命名集 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5d2988a40cdbf9294a89982396535c7389fb2bea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f2f1e53e6dd8aacf6bcf347f2d604ae1e5c1aa6a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145964"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312688"
 ---
 # <a name="defining-named-sets"></a>定義命名集
   命名集是指傳回一組維度成員的多維度運算式 (MDX) 運算式。 您可以定義命名集，將它們儲存為 Cube 定義的一部分；也可以在用戶端應用程式建立命名集。 您可以結合 Cube 資料、算術運算子、數字和函數，來建立命名集。 使用者可以在用戶端應用程式中將命名集用於 MDX 查詢，也可以用於定義 Subcube 中的集合。 Subcube 是指交叉聯結集的集合，它會將 Cube 空間限制為針對後續陳述式定義的子空間。 定義限制的 Cube 空間是 MDX 指令碼的基本概念。  
@@ -36,11 +36,11 @@ ms.locfileid: "36145964"
   
      當您在 [計算] 索引標籤上定義新的計算時，請記住，計算是根據它們出現在 [指令碼組合管理] 窗格中的順序加以解析的。 在建立新計算時，您在窗格內的焦點，決定了執行計算的順序；新的計算會在焦點計算進行之後立即定義。  
   
-3.  在**名稱**方塊中，將新的名稱命名集來`[Core Products]`。  
+3.  在 **名稱**方塊中，將新的名稱變更名為設為`[Core Products]`。  
   
      在 [指令碼組合管理] 窗格中，請注意分辨命名集與指令碼命令或導出成員所用的唯一圖示。  
   
-4.  上**中繼資料**索引標籤中**計算工具** 窗格中，展開**產品**，展開**類別**，展開`Members`，然後按一下展開**所有產品**。  
+4.  上**中繼資料**索引標籤中**計算工具**窗格中，展開**產品**，展開**類別**，依序展開`Members`，然後依序展開**所有產品**。  
   
     > [!NOTE]  
     >  如果您無法在 [計算工具] 窗格檢視任何中繼資料，請在工具列上按一下 [重新連接]。 如果此舉無效，可能得處理 Cube，或者啟動 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 的執行個體。  
@@ -51,11 +51,11 @@ ms.locfileid: "36145964"
   
 ## <a name="defining-a-large-resellers-named-set"></a>定義大型轉售商命名集  
   
-1.  以滑鼠右鍵按一下`[Core Products]`中**指令碼組合管理** 窗格中，然後再按一下**新增命名集**。  
+1.  以滑鼠右鍵按一下`[Core Products]`中**指令碼組合管理**窗格中，然後再按一下**新增命名集**。  
   
-2.  在**名稱**方塊中，變更此命名集，以名稱`[Large Resellers]`。  
+2.  在 **名稱**方塊中，變更此命名集的名稱`[Large Resellers]`。  
   
-3.  在**運算式**方塊中，輸入`Exists()`。  
+3.  在 **運算式**方塊中，輸入`Exists()`。  
   
      您會使用 Exists 函數，傳回 [轉售商名稱] 屬性階層中的成員集合，這個成員集合與 [員工數目] 屬性階層中，具有最多員工的成員集合交集。  
   
@@ -73,23 +73,23 @@ ms.locfileid: "36145964"
   
      現在您已經定義了 Exists 集合運算式的第一個集合，可以再加入第二個集合，亦即含有最多員工之 [轉售商] 維度的成員集合。  
   
-7.  上**中繼資料**索引標籤中**計算工具**] 窗格中，展開 [**員工數目**在轉售商] 維度中，依序展開`Members`，然後展開 [ **所有轉售商**。  
+7.  上**中繼資料**索引標籤中**計算工具**窗格中，展開**員工數目**轉售商] 維度中，展開 [ `Members`，然後展開**所有轉售商**。  
   
      請注意，這個屬性階層的成員並未分組。  
   
 8.  針對 [轉售商] 維度開啟 [維度設計師]，然後按一下 [屬性] 窗格中的 [員工數目]。  
   
-9. 在 [屬性] 視窗中，變更`DiscretizationMethod`屬性**自動**，然後變更`DiscretizationBucketCount`屬性`5`。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
+9. 在 [屬性] 視窗中，變更`DiscretizationMethod`屬性，以**自動**，然後變更`DiscretizationBucketCount`屬性設`5`。 如需詳細資訊，請參閱 [Group Attribute Members &#40;Discretization&#41;](multidimensional-models/attribute-properties-group-attribute-members.md) (群組屬性成員 (分隔))。  
   
 10. 在 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 的 [建立] 功能表上，按一下 [部署 Analysis Services 教學課程]。  
   
 11. 順利完成部署之後，針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師]，然後按一下 [計算] 索引標籤之工具列上的 [重新連接]。  
   
-12. 上**中繼資料**索引標籤中**計算工具**] 窗格中，展開 [**員工數目**中**轉售商**維度中，展開`Members`，然後展開**所有轉售商**。  
+12. 在上**中繼資料**索引標籤中**計算工具**窗格中，展開**員工數目**中**轉銷商**維度中，展開`Members`，然後展開**所有轉售商**。  
   
      請注意，這個屬性階層的成員現已包含在編號 0 到 4 的五個群組中。 若要檢視群組的數目，請將資料指標暫停在該群組上，以檢視資訊提示。 對於範圍 `2 -17`，資訊提示應該會包含 `[Reseller].[Number of Employees].&[0]`。  
   
-     這個屬性階層的成員分組，是因為 DiscretizationBucketCount 屬性設定為`5`和 DiscretizationMethod 屬性設定為**自動**。  
+     這個屬性階層的成員分組，是因為 DiscretizationBucketCount 屬性設定為`5`和 [DiscretizationMethod] 屬性設定為**自動**。  
   
 13. 在 [運算式] 方塊中，Exists 集合運算式的 Members 函數後面和右括弧前面加入逗號，然後將 [83 - 100] 從 [中繼資料] 窗格拖曳到逗號後面。  
   
@@ -127,13 +127,13 @@ ms.locfileid: "36145964"
   
      請注意，只有 [類別目錄] 屬性的 [自行車] 成員和 [自行車] 子類別目錄的成員會繼續留在 Cube 中。 這是因為 [核心產品] 命名集是用來定義 Subcube。 這個 Subcube 會將 Subcube 內 [產品] 維度的 [類別目錄] 屬性的成員限制為 [核心產品] 命名集的那些成員，如下圖所示。  
   
-     ![成員的核心產品命名集](../../2014/tutorials/media/l6-named-set-04.gif "成員在核心產品命名集")  
+     ![成員在核心產品命名集](../../2014/tutorials/media/l6-named-set-04.gif "成員在核心產品命名集")  
   
 7.  在 [中繼資料] 窗格中，展開 [轉售商]，然後將 [大型轉售商] 加入篩選區域。  
   
      請注意，[資料] 窗格中的 [轉售商銷售量] 量值只會顯示自行車大型轉售商的銷售量。 同時也請注意，[篩選] 窗格現在會顯示用於定義這個特定 Subcube 的兩個命名集，如下圖所示。  
   
-     ![設定篩選 窗格包含兩個名為](../../2014/tutorials/media/l6-named-set-05.gif "篩選 窗格包含兩個名為設定")  
+     ![設定篩選 窗格包含兩個具名](../../2014/tutorials/media/l6-named-set-05.gif "設定篩選 窗格包含兩個名為")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [第 7 課：定義關鍵效能指標 &#40;KPI&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Multiple Flat Files connection manager
 - connections [Integration Services], flat files
@@ -20,20 +20,20 @@ ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 68b9fcf9965a3245b869006d1177104702f8079d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 88409baa25d3e54319dc5b824494ff6a51d159aa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033321"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37322738"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>多個一般檔案連接管理員
   「多個一般檔案」連接管理員可讓封裝存取多個一般檔案中的資料。 例如，當資料流程工作位於迴圈容器 (如 For 迴圈容器) 內時，「一般檔案」來源可以使用「多個一般檔案」連接管理員。 在此容器的每一個迴圈上，「一般檔案」來源會從「多個一般檔案」連接管理員提供的下一個檔案名稱中載入資料。  
   
  當您新增多個一般檔案連接管理員加入封裝時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]建立連接，將會解析為在執行階段，設定在多個一般檔案連接管理員屬性的多個一般檔案連接管理員和將多個一般檔案連接管理員加入`Connections`封裝的集合。  
   
- `ConnectionManagerType`連接管理員的屬性設定為`MULTIFLATFILE`。  
+ `ConnectionManagerType`連接管理員屬性設定為`MULTIFLATFILE`。  
   
  您可以利用下列方式設定「多個一般檔案」連接管理員：  
   
@@ -53,11 +53,11 @@ ms.locfileid: "36033321"
   
  \<*path*>|\<*path*>  
   
- 您也可以使用萬用字元來指定多個檔案。 例如，若要參考的磁碟機 C 上的所有文字檔案，值`ConnectionString`屬性可以設定為 c:\\*.txt。  
+ 您也可以使用萬用字元來指定多個檔案。 例如，若要參考磁碟機 C 上的所有文字檔，值`ConnectionString`屬性可以設定為 c:\\*.txt。  
   
  如果「多個一般檔案」連接管理員參考多個檔案，則所有檔案必須具有相同的格式。  
   
- 依預設，「多個一般檔案」連接管理員會將字串資料行的長度設定成 50 個字元。 在 **[多個一般檔案連接管理員編輯器]** 對話方塊中，您可以評估取樣資料，並自動調整這些資料行的長度，以避免資料遭截斷或超出資料行寬度。 除非在一般檔案來源或轉換中調整資料行長度，否則在整個資料流程中，資料行長度將維持不變。 如果這些資料行對應到較窄的目的資料行，使用者介面中將會出現警告，而且在執行階段中可能發生因為資料截斷所產生的錯誤。 您可以調整資料行的大小，使其與一般檔案連接管理員、一般檔案來源或轉換中的目的地資料行相容。 若要修改輸出資料行的長度，您將設定`Length`屬性上的輸出資料行**輸入與輸出屬性**索引標籤中**進階編輯器** 對話方塊。  
+ 依預設，「多個一般檔案」連接管理員會將字串資料行的長度設定成 50 個字元。 在 **[多個一般檔案連接管理員編輯器]** 對話方塊中，您可以評估取樣資料，並自動調整這些資料行的長度，以避免資料遭截斷或超出資料行寬度。 除非在一般檔案來源或轉換中調整資料行長度，否則在整個資料流程中，資料行長度將維持不變。 如果這些資料行對應到較窄的目的資料行，使用者介面中將會出現警告，而且在執行階段中可能發生因為資料截斷所產生的錯誤。 您可以調整資料行的大小，使其與一般檔案連接管理員、一般檔案來源或轉換中的目的地資料行相容。 若要修改輸出資料行的長度，您設定`Length`上的輸出資料行的屬性**輸入與輸出屬性**索引標籤**進階編輯器** 對話方塊。  
   
  如果在加入及設定使用「多個一般檔案」連接管理員的一般檔案來源之後，在該連接管理員中更新資料行長度，您就不需要手動調整一般檔案來源中輸出資料行的大小。 在您開啟 **[一般檔案來源]** 對話方塊時，一般檔案來源會提供一個用來同步化資料行中繼資料的選項。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36033321"
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [多個一般檔案連接管理員編輯器&#40;[一般] 頁面&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [多個一般檔案連接管理員編輯器&#40;一般頁面&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [多個一般檔案連接管理員編輯器&#40;資料行頁面&#41;](../multiple-flat-files-connection-manager-editor-columns-page.md)  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36033321"
   
 -   [多個一般檔案連接管理員編輯器&#40;預覽頁面&#41;](../multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- 如需以程式設計方式設定連接管理員資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>和[新增連線以程式設計方式](../building-packages-programmatically/adding-connections-programmatically.md)。  
+ 以程式設計方式設定連接管理員的相關資訊，請參閱<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>並[連線以程式設計方式加入](../building-packages-programmatically/adding-connections-programmatically.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [一般檔案來源](../data-flow/flat-file-source.md)   

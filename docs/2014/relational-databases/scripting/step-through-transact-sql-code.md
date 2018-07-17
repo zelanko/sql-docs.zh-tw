@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, debugging code
 - Transact-SQL debugger, step over
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 17
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6cb9a3f5e0d275e4b7b646401f81b8128546a850
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 331dca27a98a9493478ff294a21e5c52e1a1ba97
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37331278"
 ---
 # <a name="step-through-transact-sql-code"></a>逐步執行 Transact-SQL 程式碼
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 偵錯工具可讓您控制哪些 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式要在 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器視窗中執行。 您可以在個別的陳述式上暫停偵錯工具，然後在該點檢視程式碼項目的狀態。  
@@ -55,10 +55,10 @@ ms.locfileid: "36030496"
   
 |動作|程序|  
 |------------|---------------|  
-|執行所有陳述式，從目前的陳述式到下一個端點|在**偵錯**功能表上，按一下 **繼續**。<br /><br /> 在**偵錯**工具列上，按一下 [**繼續**] 按鈕。|  
-|逐步執行下一個陳述式或模組|在**偵錯**功能表上，按一下 **逐步執行**。<br /><br /> 在**偵錯**工具列上，按一下 [**逐步執行**] 按鈕。<br /><br /> 按下 F11。|  
-|不進入下一個陳述式或模組|在**偵錯**功能表上，按一下 **不進入函式**。<br /><br /> 在**偵錯**工具列上，按一下 [**不進入函式**] 按鈕。<br /><br /> 按下 F10。|  
-|跳離模組|在**偵錯**功能表上，按一下 **跳離函式**。<br /><br /> 在**偵錯**工具列上，按一下 [**跳離函式**] 按鈕。<br /><br /> 按下 SHIFT+F11。|  
+|執行所有陳述式，從目前的陳述式到下一個端點|在 **偵錯**功能表上，按一下**繼續**。<br /><br /> 在 [**偵錯**工具列上，按一下**繼續**] 按鈕。|  
+|逐步執行下一個陳述式或模組|在 **偵錯**功能表上，按一下**逐步執行**。<br /><br /> 在 [**偵錯**工具列上，按一下**逐步執行**] 按鈕。<br /><br /> 按下 F11。|  
+|不進入下一個陳述式或模組|在 **偵錯**功能表上，按一下**不進入函式**。<br /><br /> 在 [**偵錯**工具列上，按一下**不進入函式**] 按鈕。<br /><br /> 按下 F10。|  
+|跳離模組|在 **偵錯**功能表上，按一下**跳離函式**。<br /><br /> 在 [**偵錯**工具列上，按一下**跳離函式**] 按鈕。<br /><br /> 按下 SHIFT+F11。|  
 |執行至目前的資料指標位置|在 [查詢編輯器] 視窗中按一下滑鼠右鍵，然後按一下 [執行至資料指標處]。<br /><br /> 按下 CTRL+F10。|  
   
 ## <a name="see-also"></a>另請參閱  

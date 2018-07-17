@@ -1,5 +1,5 @@
 ---
-title: 第 3 課： 處理自行車買主採礦結構 |Microsoft 文件
+title: 第 3 課： 處理自行車買主採礦結構 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e748c2cd-339d-4e82-82f1-be2d0fc41b61
 caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: ae7d871f4695d4109866a6a25979936116838d17
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 4fdf27dce12915a8cf0f26f976543c00ad70725a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312636"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306628"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>第 3 課：處理自行車買主採礦結構
-  在這一課，您將使用 INSERT INTO 陳述式和 vTargetMail 檢視[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]來處理採礦結構和採礦模型中所建立的範例資料庫[第 1 課： 建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)和[第 2 課： 將採礦模型加入 Bike Buyer 採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  
+  在這一課，您將使用 INSERT INTO 陳述式和從的 vTargetMail 檢視[!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]範例資料庫來處理採礦結構和採礦模型中建立[第 1 課： 建立自行車買主採礦結構](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)並[第 2 課： 將採礦模型加入 Bike Buyer 採礦結構](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)。  
   
- 當您處理採礦結構時，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會讀取來源資料並建立支援採礦模型的結構。 當您處理採礦模型時，採礦結構所定義的資料會透過您選擇的資料採礦演算法來傳遞。 此演算法會搜尋趨勢和模式，然後將此資訊儲存在採礦模型中。 因此，採礦模型不包含實際來源資料，而包含演算法所發現的資訊。 如需有關處理採礦模型的詳細資訊，請參閱[處理需求和考量&#40;資料採礦&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。  
+ 當您處理採礦結構時，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 會讀取來源資料並建立支援採礦模型的結構。 當您處理採礦模型時，採礦結構所定義的資料會透過您選擇的資料採礦演算法來傳遞。 此演算法會搜尋趨勢和模式，然後將此資訊儲存在採礦模型中。 因此，採礦模型不包含實際來源資料，而包含演算法所發現的資訊。 如需有關處理採礦模型的詳細資訊，請參閱 <<c0> [ 處理需求和考量&#40;資料採礦&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)。</c0>  
   
  只有當您變更結構資料行或變更來源資料時，才需要重新處理採礦結構。 如果您將採礦模型加入已處理的採礦結構中，您可以使用 INSERT INTO MINING MODEL 陳述式來定型新的採礦模型。  
   
 ## <a name="train-structure-template"></a>定型結構範本  
- 若要定型採礦結構及其相關聯的採礦模型，使用[INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx)陳述式。 陳述式中的程式碼可分成下列各部份：  
+ 若要定型採礦結構及其相關聯的採礦模型，使用[插入&#40;DMX&#41; ](/sql/dmx/insert-into-dmx)陳述式。 陳述式中的程式碼可分成下列各部份：  
   
 -   識別採礦結構  
   
@@ -78,7 +78,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   
 #### <a name="to-process-the-mining-structure-by-using-insert-into"></a>若要使用 INSERT INTO 處理採礦結構  
   
-1.  在**物件總管] 中**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向 [**新查詢**，然後按一下**DMX**。  
+1.  中**物件總管**，以滑鼠右鍵按一下執行個體[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，指向**新查詢**，然後按一下**DMX**。  
   
      此時會開啟 [查詢編輯器] 且包含新的空白查詢。  
   
@@ -172,15 +172,15 @@ OPENQUERY([<datasource>],'<SELECT statement>')
         FROM dbo.vTargetMail')  
     ```  
   
-6.  在**檔案**功能表上，按一下 **另存 DMXQuery1.dmx 為**。  
+6.  在 **檔案**功能表上，按一下**另存 DMXQuery1.dmx 為**。  
   
-7.  在**存**對話方塊中，瀏覽至適當的資料夾，並將檔案`Process Bike Buyer Structure.dmx`。  
+7.  在 [**另存新檔**] 對話方塊中，瀏覽至適當的資料夾，並將檔案命名`Process Bike Buyer Structure.dmx`。  
   
-8.  在工具列上，按一下 [ **Execute** ] 按鈕。  
+8.  在工具列上，按一下**Execute**  按鈕。  
   
  在下一課，您將探索這一課加入採礦結構中的採礦模型內容。  
   
 ## <a name="next-lesson"></a>下一課  
- [第 4 課： 瀏覽 Bike Buyer 採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [第 4 課：瀏覽自行車買主採礦模型](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
   
   

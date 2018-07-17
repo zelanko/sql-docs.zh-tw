@@ -1,5 +1,5 @@
 ---
-title: 使用資料來源檢視建立 Cube |Microsoft 文件
+title: 使用資料來源檢視建立 Cube |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 8bf9a08773ef90bb4d316f7fb533e5a5a854c779
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 32d358eef64c43535f8d04944feb445a5190414a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035773"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37303048"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>使用資料來源檢視建立 Cube
   如果您想使用現有的資料來源檢視，請使用此建立新 Cube 的方法。 透過此方法，您可以指定資料來源檢視，並選取要用於資料來源檢視的事實和維度資料表。 然後，您可以選擇要包含在 Cube 中的維度和量值。  
@@ -55,7 +55,7 @@ ms.locfileid: "36035773"
 > [!NOTE]  
 >  在 [圖表] 索引標籤上，您可以放大或最大化精靈視窗以檢視結構描述。  
   
- 如果資料來源檢視中含有時間維度資料表，請在 [時間維度資料表] 清單中選取資料表。 如果沒有，請將保留**\<無 >** 選取。 這是清單中的預設項目。 選取資料表作為時間維度資料表，也會選取該資料表作為 [資料表] 和 [圖表] 索引標籤上的維度資料表。  
+ 如果資料來源檢視中含有時間維度資料表，請在 [時間維度資料表] 清單中選取資料表。 如果沒有任何項目，將保留**\<無 >** 選取。 這是清單中的預設項目。 選取資料表作為時間維度資料表，也會選取該資料表作為 [資料表] 和 [圖表] 索引標籤上的維度資料表。  
   
 ## <a name="defining-time-periods"></a>定義時間週期  
  如果您在選取資料表類型時指定時間維度資料表，請使用精靈的 [定義時間週期] 頁面，指定資料表中對應至標準時間週期的資料行。 在 [時間屬性名稱] 下尋找標準週期。 針對在時間維度資料表中有對應資料行的每個資料列，在 [時間資料表資料行] 下，選擇正確的資料行。 精靈會使用您指定建立屬性的關聯，並建議對您的資料有意義的時間階層。 這些關聯也會設定新時間維度中對應屬性 (Attribute) 的 [類型] 屬性 (Property)。 接著，精靈會根據時間維度資料表建立時間維度。  
@@ -92,7 +92,7 @@ ms.locfileid: "36035773"
   
  若要從 Cube 中移除樹狀目錄中的任何物件，請清除物件旁的核取方塊。 清除物件旁的核取方塊也會移除底下的所有物件。 系統會強制執行物件之間的相依性，因此，如果您移除屬性，也會移除相依於該屬性的任何階層層級。 例如，清除階層旁的核取方塊會清除階層中所有層級旁的核取方塊，並移除層級及階層。 您無法移除維度的索引鍵屬性。  
   
- 您可以重新命名任何維度、 屬性、 階層或層級是按一下名稱或名稱上按一下滑鼠右鍵，然後在捷徑功能表按一下**重新命名\<物件 >**，其中 **\<物件 >** 是**維度**，**屬性**，或**層級**。  
+ 您可以重新命名任何維度、 屬性、 階層或層級是按一下名稱或以滑鼠右鍵按一下名稱，然後在捷徑功能表按一下**重新命名\<物件 >**，其中 **\<物件 >** 已**維度**，**屬性**，或**層級**。  
   
  精靈的 [Identify Fact and Dimension Tables (識別事實和維度資料表)] 頁面上定義的維度資料表數目與此精靈頁面上列出的維度數目之間，不一定是一對一關聯性。 根據資料來源檢視中資料表之間的關聯性，精靈可以使用兩個 (含) 以上的資料表建立維度 (例如依雪花結構描述的需求而定)。  
   

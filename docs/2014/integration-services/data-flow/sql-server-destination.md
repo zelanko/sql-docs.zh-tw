@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdest.f1
 helpviewer_keywords:
@@ -21,13 +21,13 @@ ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39aaf8c972070b717f4b50bf42d4fe587a509d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a518189d9ee14da620689cd3ebaff8b4982d590f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136472"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37312038"
 ---
 # <a name="sql-server-destination"></a>SQL Server 目的地
   SQL Server 目的地會連接到本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，並大量載入資料到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表和檢視中。 如果封裝會存取遠端伺服器上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫，您就無法在這種封裝中使用 SQL Server 目的地。 反之，這種封裝應該使用 OLE DB 目的地。 如需詳細資訊，請參閱 [OLE DB Destination](ole-db-destination.md)。  
@@ -95,9 +95,9 @@ ms.locfileid: "36136472"
   
  如需可以在 [SQL Server 目的地編輯器] 對話方塊中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [SQL 目的地編輯器&#40;連接管理員頁面&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [SQL 目的地編輯器&#40;連線管理員頁面&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [SQL 目的地編輯器&#40;[對應] 頁面&#41;](../sql-destination-editor-mappings-page.md)  
+-   [SQL 目的地編輯器&#40;對應頁面&#41;](../sql-destination-editor-mappings-page.md)  
   
 -   [SQL 目的地編輯器&#40;進階頁面&#41;](../sql-destination-editor-advanced-page.md)  
   

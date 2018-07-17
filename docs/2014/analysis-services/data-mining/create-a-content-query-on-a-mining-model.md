@@ -1,5 +1,5 @@
 ---
-title: 採礦模型上建立內容查詢 |Microsoft 文件
+title: 在 採礦模型上建立內容查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - content queries [DMX]
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1bbc92d8083c570aa46371d4251b8ea2f8d9b57a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 747f066839ee10ab9982c5b6388c946abec66cb2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146403"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308888"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>建立採礦模型內容查詢
   雖然您可以使用 AMO 或 XML/A，以程式設計方式查詢採礦模型內容，但是使用 DMX 來建立查詢是比較簡單的方式。 您也可以針對資料採礦結構描述資料列集建立查詢，方法是建立與 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的連接，然後使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]所提供的 DMV 建立查詢。  
@@ -44,11 +44,11 @@ ms.locfileid: "36146403"
   
      [內容查詢] 範本就會在適當的程式碼編輯器中開啟。 [中繼資料] 窗格會列出目前資料庫中可用的模型。 若要變更資料庫，請從 [可用的資料庫] 清單中選取不同的資料庫。  
   
-5.  在一行中，輸入採礦模型的名稱`FROM`[*\<採礦模型，名稱，Mymodel> >*]`.CONTENT`。 如果採礦模型名稱包含空格，您就必須以方括號括住名稱。  
+5.  在一行中，輸入採礦模型的名稱`FROM`[*\<採礦模型，name，Mymodel> >*]`.CONTENT`。 如果採礦模型名稱包含空格，您就必須以方括號括住名稱。  
   
      如果您不想要輸入名稱，可以在 **物件總管** 中選取採礦模型，然後將它拖曳至範本中。  
   
-6.  在一行中， `SELECT` *\<選取清單中，expr 清單\* >* ，輸入採礦模型內容結構描述資料列集中的資料行的名稱。  
+6.  在一行中， `SELECT` *\<選取清單中，運算式清單， \* >* ，輸入採礦模型內容結構描述資料列集中的資料行的名稱。  
   
      若要檢視您可以在採礦模型內容查詢中傳回的資料行清單，請參閱[採礦模型內容 &#40;Analysis Services - 資料採礦&#41;](mining-model-content-analysis-services-data-mining.md)。  
   

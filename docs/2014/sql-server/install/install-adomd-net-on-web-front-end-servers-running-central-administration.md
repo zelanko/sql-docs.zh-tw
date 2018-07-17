@@ -1,5 +1,5 @@
 ---
-title: 在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET |Microsoft 文件
+title: 執行中央系統管理的 Web 前端伺服器上安裝 ADOMD.NET |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,35 +8,35 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: ccedd48fcebab07eeb7b27821917b684d98a11d5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5fd8c345a0f5b1cafdf675fa5ed57b857d9714b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034295"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317538"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET
   如果您將 PowerPivot for SharePoint 安裝到具有管理中心拓撲的伺服器陣列中 (沒有 Excel Services 或 PowerPivot for SharePoint)，若要完整存取 PowerPivot 管理儀表板中的內建報表，請下載及安裝 Microsoft ADOMD.NET 用戶端程式庫。 儀表板中的某些報表會使用 ADOMD.NET 來存取內部資料，這些資料會提供關於在伺服陣列中 PowerPivot 查詢處理和伺服器健全狀況的報告資料。  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
   
- 若為 SharePoint 2013，提供者內含在 SQL Server 功能套件中。 如需有關如何下載 spPowerPivot.msi 的資訊，請參閱[Microsoft SQL Server 2014 功能套件](http://www.microsoft.com/download/details.aspx?id=35577)  
+ 若為 SharePoint 2013，提供者內含在 SQL Server 功能套件中。 如需如何下載 spPowerPivot.msi 的詳細資訊，請參閱[Microsoft SQL Server 2014 功能套件](http://www.microsoft.com/download/details.aspx?id=35577)  
   
 ### <a name="download-and-install-the-client-library"></a>下載和安裝用戶端文件庫  
   
-1.  在[SQL Server 2014 功能套件頁面](http://go.microsoft.com/fwlink/?LinkID=296473)，尋找 Microsoft ADOMD.NET。  
+1.  在  [SQL Server 2014 功能套件頁面](http://go.microsoft.com/fwlink/?LinkID=296473)，尋找 Microsoft ADOMD.NET。  
   
 2.  下載 `SQL_AS_ADOMD.msi` 安裝程式的 x64 封裝。  
   
 3.  執行 .msi 以安裝程式庫。  
   
-4.  當安裝完成之後，重設 IIS。 開啟 系統管理命令提示字元並輸入**IISRESET**。  
+4.  當安裝完成之後，重設 IIS。 開啟系統管理命令提示字元並輸入**IISRESET**。  
   
 ### <a name="verify-installation"></a>確認安裝  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36034295"
   
 3.  按一下 **[版本]**。  
   
-4.  請確認該版本包含 12.00。\<組建編號 > 及描述為 Microsoft.AnalysisService.AdomdClient。  
+4.  請確認該版本包含 12.00。\<組建編號 > 且描述為 Microsoft.AnalysisService.AdomdClient。  
   
 ## <a name="see-also"></a>另請參閱  
  [PowerPivot 管理儀表板和使用量資料](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

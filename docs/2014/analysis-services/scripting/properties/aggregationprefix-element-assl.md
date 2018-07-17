@@ -1,5 +1,5 @@
 ---
-title: AggregationPrefix 元素 (ASSL) |Microsoft 文件
+title: AggregationPrefix 元素 (ASSL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 84f7b086e1cdc2516f0912a4580d0b3eb45132ee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145948"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37293278"
 ---
 # <a name="aggregationprefix-element-assl"></a>AggregationPrefix 元素 (ASSL)
   定義要在整個相關聯父元素中用於彙總名稱的一般前置詞。  
@@ -58,11 +58,11 @@ ms.locfileid: "36145948"
   
 |關聯性|元素|  
 |------------------|-------------|  
-|父元素|[Cube](../objects/cube-element-assl.md)，[資料庫](../objects/database-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[磁碟分割](../objects/partition-element-assl.md)|  
+|父元素|[Cube](../objects/cube-element-assl.md)，[資料庫](../objects/database-element-assl.md)， [MeasureGroup](../objects/group-element-assl.md)，[資料分割](../objects/partition-element-assl.md)|  
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 彙總前置詞產生的彙總名稱[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，以及儲存在關聯式 OLAP (ROLAP) 資料分割的彙總的關聯式資料庫中產生資料表名稱。  
+ 彙總前置詞產生彙總鼎[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，而且也會儲存在關聯式 OLAP (ROLAP) 資料分割的彙總在關聯式資料庫中產生資料表名稱。  
   
  完全展開的彙總名稱具有下列部分：  
   
@@ -70,15 +70,15 @@ ms.locfileid: "36145948"
   
  彙總名稱的前四個部分組成彙總前置詞。 使用者會提供前四個部分：  
   
--   *DatabasePrefix*代表的值`AggregationPrefix`元素相關聯`Database`項目。  
+-   *DatabasePrefix*代表的值`AggregationPrefix`相關聯的項目`Database`項目。  
   
--   *CubePrefix*代表的值`AggregationPrefix`元素相關聯`Cube`項目。  
+-   *CubePrefix*代表的值`AggregationPrefix`相關聯的項目`Cube`項目。  
   
--   *MeasureGroupPrefix*代表的值`AggregationPrefix`元素相關聯`MeasureGroup`項目。  
+-   *MeasureGroupPrefix*代表的值`AggregationPrefix`相關聯的項目`MeasureGroup`項目。  
   
--   *PartitionPrefix*代表的值`AggregationPrefix`元素相關聯`Partition`項目。  
+-   *PartitionPrefix*代表的值`AggregationPrefix`相關聯的項目`Partition`項目。  
   
- 第五個名稱的一部分， *AggregationID*是系統定義的識別碼，且使用者無權控制這部分的名稱。  
+ 名稱 的第五個部分*AggregationID*是系統定義的識別碼，且使用者無權控制這一部分的名稱。  
   
  在「分析管理物件」(AMO) 物件模型中對應至 `AggregationPrefix` 父系的元素是 <xref:Microsoft.AnalysisServices.Cube>、<xref:Microsoft.AnalysisServices.Database>、<xref:Microsoft.AnalysisServices.MeasureGroup> 和 <xref:Microsoft.AnalysisServices.Partition>。  
   

@@ -1,5 +1,5 @@
 ---
-title: 硬體 and Software Requirements for Installing SQL Server 2014 |Microsoft 文件
+title: 硬體和 Software Requirements for Installing SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 10/25/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Setup [SQL Server], software
 - software [SQL Server]
@@ -46,15 +46,15 @@ helpviewer_keywords:
 - localized SQL Server versions
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 caps.latest.revision: 302
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3f1b9764032fcf9551a677e62927000a01f420a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: fc4d0dae04fd8c3301590f6a5d3e7d42d40f27a2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36134590"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37320038"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
 
@@ -62,15 +62,15 @@ ms.locfileid: "36134590"
   
 ## <a name="considerations"></a>考量 
   
--   我們建議您執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]電腦使用 NTFS 檔案格式。 FAT32 檔案系統是支援，但不是建議，因為它是安全性低於 NTFS 檔案系統。  
+-   我們建議您執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]NTFS 的電腦上的檔案格式。 FAT32 檔案系統支援，但不是建議，因為它是安全性低於 NTFS 檔案系統。  
   
 -   您無法安裝在唯讀、 對應或是壓縮的磁碟機上。  
   
--   若要讓 Visual Studio 元件正確安裝，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會要求您安裝更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會檢查此更新的狀態，則會要求您下載及安裝該更新，再繼續進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。 若要避免期間中斷[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式，下載並安裝更新**再執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝**做為下面描述 （或安裝.NET 3.5 SP1 的 Windows Update 上可用的所有更新）：  
+-   若要讓 Visual Studio 元件正確安裝，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會要求您安裝更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會檢查此更新的狀態，然後需要您下載及安裝該更新，才能繼續進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。 若要避免期間中斷[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式，下載並安裝更新**再執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝**為如下所述 （或.NET 3.5 sp1 提供 Windows Update 上安裝所有更新）：  
   
-    -   如[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]SP2，取得必要的更新[這裡](http://go.microsoft.com/fwlink/?LinkId=198093)。  
+    -   針對[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]SP2，取得所需的更新[這裡](http://go.microsoft.com/fwlink/?LinkId=198093)。  
   
-    -   針對任何其他支援的作業系統已包含此更新。  
+    -   適用於任何其他支援作業系統，已包含此更新。  
   
 -   不支援透過終端機服務用戶端啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。 如果您啟動安裝程式，透過終端機服務用戶端，則安裝會失敗。   
   
@@ -94,25 +94,25 @@ ms.locfileid: "36134590"
   
 -   [硬碟空間需求 （32 位元和 64 位元）](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace)  
   
--   [資料檔案的儲存類型](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)  
+-   [資料檔案的儲存體類型](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)  
   
--   [網域控制站上安裝 SQL Server](hardware-and-software-requirements-for-installing-sql-server.md#dc_support)  
+-   [在網域控制站上安裝 SQL Server](hardware-and-software-requirements-for-installing-sql-server.md#dc_support)  
   
 ##  <a name="hwswr"></a> 硬體及軟體需求  
  下列需求適用於所有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝：  
   
 |元件|需求|  
 |---------------|-----------------|  
-|.NET Framework|.NET 3.5 SP1 是其中一個需求[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]當您選取[!INCLUDE[ssDE](../../includes/ssde-md.md)]， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]， [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]，複寫，或[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，以及程式不再安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式。 <br />-如果您執行安裝程式並沒有.NET 3.5 SP1，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式要求您下載及安裝.NET 3.5 SP1，再繼續進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。 (安裝.NET 3.5 SP1 從[Microsoft.NET Framework 3.5 Service Pack 1](http://www.microsoft.com/download/details.aspx?id=22)。)此錯誤訊息包含下載中心的連結，或者，您也可以從 Windows Update 下載 .NET 3.5 SP1。 若要避免 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間發生中斷，您可以先下載及安裝 .NET 3.5 SP1，再執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。<br />-如果您的電腦上執行安裝程式[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 或[!INCLUDE[win8](../../includes/win8-md.md)]，您必須啟用.NET Framework 3.5 SP1，然後再安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />-如果沒有網際網路存取權，您必須下載並安裝.NET Framework 3.5 SP1，才能執行安裝程式來安裝任何上述的元件。 如需有關建議和指導如何取得和啟用.NET Framework 3.5 上[!INCLUDE[win8](../../includes/win8-md.md)]和[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，請參閱[Microsoft.NET Framework 3.5 部署考量](http://msdn.microsoft.com/library/windows/hardware/hh975396)(http://msdn.microsoft.com/library/windows/hardware/hh975396)。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 需要 .NET 4.0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在功能安裝步驟期間安裝 .NET 4.0。<br />-如果您要安裝[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，請確認網際網路連線的電腦上。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式下載並安裝.NET Framework 4，因為它不會包含在[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]媒體。<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 不會安裝.NET 4.0 的 Server Core 模式[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 您必須先安裝 .NET 4.0，才能在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上安裝 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。|  
-|Windows PowerShell|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不會安裝或啟用 Windows PowerShell 2.0。不過，Windows PowerShell 2.0 為安裝必要條件[!INCLUDE[ssDE](../../includes/ssde-md.md)]元件和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果安裝程式回報 Windows PowerShell 2.0 不存在，您可以遵循 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) (機器翻譯) 頁面上的指示進行安裝或啟用。|  
+|.NET Framework|.NET 3.5 SP1 是必要條件[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]當您選取[!INCLUDE[ssDE](../../includes/ssde-md.md)]， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]， [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]，複寫，或[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，並不會再安裝由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式。 <br />-如果您執行安裝程式並沒有.NET 3.5 SP1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式會要求您下載並安裝.NET 3.5 SP1，才能繼續使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。 (安裝.NET 3.5 SP1 from [Microsoft.NET Framework 3.5 Service Pack 1](http://www.microsoft.com/download/details.aspx?id=22)。)此錯誤訊息包含下載中心的連結，或者，您也可以從 Windows Update 下載 .NET 3.5 SP1。 若要避免 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間發生中斷，您可以先下載及安裝 .NET 3.5 SP1，再執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。<br />-如果您的電腦上執行安裝程式[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 或[!INCLUDE[win8](../../includes/win8-md.md)]，您必須啟用.NET Framework 3.5 SP1，再安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />-如果沒有網際網路存取權，您必須下載並安裝.NET Framework 3.5 SP1，才能執行安裝程式安裝上述元件之一。 如需有關建議和指導如何取得和啟用.NET Framework 3.5[!INCLUDE[win8](../../includes/win8-md.md)]並[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，請參閱[Microsoft.NET Framework 3.5 部署考量](http://msdn.microsoft.com/library/windows/hardware/hh975396)(http://msdn.microsoft.com/library/windows/hardware/hh975396)。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 需要 .NET 4.0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在功能安裝步驟期間安裝 .NET 4.0。<br />-如果您要安裝[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，請確定該網際網路連線可在電腦上。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式下載並安裝.NET Framework 4，因為它不會包含在[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]媒體。<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 無法在 Server Core 模式的上安裝.NET 4.0 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 您必須先安裝 .NET 4.0，才能在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上安裝 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。|  
+|Windows PowerShell|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不會安裝或啟用 Windows PowerShell 2.0;不過，Windows PowerShell 2.0 為安裝的必要條件[!INCLUDE[ssDE](../../includes/ssde-md.md)]元件和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果安裝程式回報 Windows PowerShell 2.0 不存在，您可以遵循 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) (機器翻譯) 頁面上的指示進行安裝或啟用。|  
 |網路軟體|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援的作業系統有內建的網路軟體。 獨安裝立的具名執行個體和預設執行個體支援下列網路通訊協定：共用記憶體、具名管道、TCP/IP 和 VIA。<br /><br /> 注意：容錯移轉叢集上不支援共用記憶體和 VIA。 VIA 通訊協定已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> 如需有關網路通訊協定和網路程式庫的詳細資訊，請參閱＜ [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)＞。|  
-|虛擬化|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援虛擬機器上執行的環境中的 HYPER-V 角色：<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard、Enterprise 和 Datacenter 版本<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard、 Enterprise 和 Datacenter 版本。<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 和 Standard 版本。<br /><br /> 除了父分割區所需的資源外，您也必須為其 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的每部虛擬機器 (子分割) 提供足夠的處理器資源、記憶體和磁碟資源。 在本主題稍後會列出需求。\*<br /><br /> 在 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 上的 Hyper-V 角色內，最多可以將 4 (四) 個虛擬處理器配置給執行 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32 位元/64 位元或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位元版本的虛擬機器。<br /><br /> 上的 HYPER-V 角色內[!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />最多 8 （八） 個虛擬處理器可以配置給虛擬機器執行[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]SP2 32 位元/64 位元。<br />最多為 64 （六十四）） 的虛擬處理器可配置給虛擬機器執行[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 64 位元或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]64 位元版本。<br /><br /> 如需有關不同版本的計算容量限制[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]以及如何在具有超執行緒處理器的實體和虛擬化環境中不同，請參閱[Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md). 如需有關 Hyper-V 角色的詳細資訊，請參閱＜ [Windows Server 2008 網站](http://go.microsoft.com/fwlink/?LinkId=182820)＞。<br /><br /> **\*\* 重要\* \*** 支援 Guest 容錯移轉叢集[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 如需有關支援的版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和作業系統的客體容錯移轉叢集，以及支援的虛擬化，請參閱[虛擬硬體以執行 Microsoft SQL Server 產品的支援原則環境](http://go.microsoft.com/fwlink/?LinkId=151676)。|  
-|硬碟|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 需要至少 6 GB 的可用硬碟空間。<br /><br /> 磁碟空間需求會因為您安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件而有所不同。 如需詳細資訊，請參閱[Hard Disk Space Requirements （32 位元和 64 位元）](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace)本主題稍後。 如需支援之資料檔案儲存類型的資訊，請參閱 [資料檔案的儲存類型](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
+|虛擬化|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援虛擬機器上執行的環境中的 HYPER-V 角色：<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard、Enterprise 和 Datacenter 版本<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard、 Enterprise 和 Datacenter 版本。<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 和 Standard 版本。<br /><br /> 除了父分割區所需的資源外，您也必須為其 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的每部虛擬機器 (子分割) 提供足夠的處理器資源、記憶體和磁碟資源。 本主題稍後列出的需求。\*<br /><br /> 在 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 上的 Hyper-V 角色內，最多可以將 4 (四) 個虛擬處理器配置給執行 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32 位元/64 位元或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位元版本的虛擬機器。<br /><br /> 在中的 HYPER-V 角色[!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />最多 8 （八） 個虛擬處理器可以配置給虛擬機器執行[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]SP2 32 位元/64 位元。<br />最多 64 （六十四）） 的虛擬處理器可以配置到執行的虛擬機器[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 64 位元或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]64 位元版本。<br /><br /> 如需有關不同版本的計算容量限制[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]以及如何在具有超執行緒處理器的實體和虛擬化環境中不同，請參閱[計算容量限制的 SQL server 版本](../compute-capacity-limits-by-edition-of-sql-server.md). 如需有關 Hyper-V 角色的詳細資訊，請參閱＜ [Windows Server 2008 網站](http://go.microsoft.com/fwlink/?LinkId=182820)＞。<br /><br /> **\*\* 重要\* \*** 支援 Guest 容錯移轉叢集[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 如需支援版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 guest 容錯移轉叢集的作業系統以及支援的虛擬化，請參閱[虛擬硬體中執行的 Microsoft SQL Server 產品的支援原則環境](http://go.microsoft.com/fwlink/?LinkId=151676)。|  
+|硬碟|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 需要至少 6 GB 的可用硬碟空間。<br /><br /> 磁碟空間需求會因為您安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件而有所不同。 如需詳細資訊，請參閱 < [Hard Disk Space Requirements （32 位元和 64 位元）](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace)本主題稍後的。 如需支援之資料檔案儲存類型的資訊，請參閱 [資料檔案的儲存類型](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
 |光碟機|若要從光碟片安裝，則需要 DVD 光碟機。|  
 |監視器|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 需要 Super-VGA (800x600) 或更高解析度的監視器。|  
 |網際網路|網際網路功能需要網際網路存取 (可能會另行收費)。|  
   
- * 執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]虛擬機器都將低於執行原生由於虛擬化的負擔。  
+ * 執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上虛擬機器會比執行要慢原生因為虛擬化的負擔。  
   
 ##  <a name="pmosr"></a> 處理器、記憶體和作業系統需求  
  下列記憶體和處理器需求適用於所有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]：  
@@ -129,9 +129,9 @@ ms.locfileid: "36134590"
   
  WOW64 (Windows 64 位元上的 Windows 32 位元) 是 Windows 64 位元版本的一項功能，可讓 32 位元應用程式在 32 位元模式中以原生方式執行。 即使基礎作業系統是 64 位元的作業系統，應用程式仍可在 32 位元模式下運作。  
   
--   支援 64 位元作業系統上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 位元版本可安裝在 64 位元伺服器的 WOW64 32 位元子系統。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體才支援 WOW64， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝則不支援 WOW64。  
+-   支援 64 位元作業系統上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 位元版本可以安裝以 64 位元伺服器的 WOW64 32 位元子系統。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體才支援 WOW64， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝則不支援 WOW64。  
   
--   對於安裝在支援之 64 位元作業系統上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位元版本，WOW64 支援管理工具。 如需有關支援之作業系統的詳細資訊，請選取版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]從以下各節。  
+-   對於安裝在支援之 64 位元作業系統上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位元版本，WOW64 支援管理工具。 如需有關支援之作業系統的詳細資訊，請選取 版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]從下列各節。  
   
  **Server Core 支援：**  
   
@@ -153,9 +153,9 @@ ms.locfileid: "36134590"
   
 -   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元  
   
- 如需有關安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Server Core 上看到[在 Server Core 上安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+ 如需有關安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Server Core 上看到[Server Core 上安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
   
-> **注意：** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本所支援的[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]64 位元 x64 Standard edition 也支援[!INCLUDE[sbs_2](../../includes/sbs-2-md.md)]64 位元 x64。  
+> **注意︰** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援的版本[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]64 位元 x64 Standard edition 也支援[!INCLUDE[sbs_2](../../includes/sbs-2-md.md)]64 位元 x64。  
   
  **作業系統支援：**  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36134590"
   
 -   [SQL Server 2014 的廣泛版本](hardware-and-software-requirements-for-installing-sql-server.md#top_breadth)  
   
-###  <a name="TOP_Principal"></a> 主要版本的作業系統需求  
+###  <a name="TOP_Principal"></a> 主體版本的作業系統需求  
  下表顯示 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]主要版本的作業系統需求：  
   
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|32 位元|64 位元|  
@@ -208,9 +208,9 @@ ms.locfileid: "36134590"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 位元版本包含擴充系統的支援，亦稱為 Windows 64 位元上的 Windows 32 位元 (WOW64)。 WOW64 是 Windows 64 位元版本的一項功能，可讓 32 位元應用程式在 32 位元模式中以原生方式執行。 即使基礎作業系統是 64 位元，應用程式仍可在 32 位元模式下運作。  
   
 ##  <a name="HardDiskSpace"></a> 硬碟空間需求 （32 位元和 64 位元）  
- 在安裝 Windows Installer 會建立暫存檔案系統磁碟機上。 執行安裝程式來安裝或升級之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請確認至少有**6.0 GB**這些檔案系統磁碟機上的可用磁碟空間。 即使您將元件安裝到非預設磁碟機，就會適用這項需求。  
+ 在安裝 Windows 安裝程式會建立暫存檔案系統磁碟機上。 執行安裝程式來安裝或升級之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，確認您擁有最少**6.0 GB**的這些檔案系統磁碟機上的可用磁碟空間。 即使您將元件安裝到非預設磁碟機，就會適用這項需求。  
   
- 實際硬碟空間需求需視系統組態和您決定要安裝的功能而定。 如需各版本所支援的功能的清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱[支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 下表提供 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件的磁碟空間需求。  
+ 實際硬碟空間需求需視系統組態和您決定要安裝的功能而定。 如需版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 下表提供 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件的磁碟空間需求。  
   
 |**功能**|**磁碟空間需求**|  
 |-----------------|--------------------------------|  
@@ -233,13 +233,13 @@ ms.locfileid: "36134590"
   
 -   SMB 檔案共用  
   
-    > **注意：** 不支援 SMB 儲存體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]獨立或叢集的安裝的資料檔案。 請改用直接附加儲存體或存放區域網路。  
+    > **注意︰** 不支援 SMB 儲存體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]獨立或叢集的安裝的資料檔案。 請改用直接附加儲存體或存放區域網路。  
   
     > **重要！！** SMB 儲存體可由 Windows File Server 或協力廠商 SMB 儲存體裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱＜ [將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)的最低軟硬體需求。  
   
-    > **警告！！！！**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝只有在安裝 tempdb 檔時支援本機磁碟。 請確認指定為 tempdb 資料和記錄檔的路徑上的有效**所有**叢集節點。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。  
+    > **警告！！！！**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝只有在安裝 tempdb 檔時支援本機磁碟。 請確認指定 tempdb 資料和記錄檔的路徑上的有效**所有**叢集節點。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。  
   
-##  <a name="DC_support"></a> 安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的網域控制站的限制  
+##  <a name="DC_support"></a> 安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在網域控制站-限制  
  基於安全性理由，不建議您在網域控制站上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會封鎖當做網域控制站之電腦上的安裝，但適用以下限制：  
   
 -   您無法以本機服務帳戶在網域控制站上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
@@ -255,6 +255,6 @@ ms.locfileid: "36134590"
 ## <a name="see-also"></a>另請參閱  
  [規劃 SQL Server 安裝](planning-a-sql-server-installation.md)   
  [SQL Server 安裝的安全性考量](security-considerations-for-a-sql-server-installation.md)   
- [SQL Server 2014 的產品規格](../../getting-started/sql-server-2014-product-specifications.md)  
+ [適用於 SQL Server 2014 的產品規格](../../getting-started/sql-server-2014-product-specifications.md)  
   
   

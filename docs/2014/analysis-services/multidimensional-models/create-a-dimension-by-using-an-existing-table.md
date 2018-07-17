@@ -1,5 +1,5 @@
 ---
-title: 使用現有的資料表建立維度 |Microsoft 文件
+title: 使用現有的資料表建立維度 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
 - main dimension tables
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - standard dimensions [Analysis Services]
 ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 caps.latest.revision: 52
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d01e7148df98b5b05cb3adac6e5f64ce68905191
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ff912d4c828efec8bacd163ae6b47f980a94beb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36036906"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37319248"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>使用現有的資料表建立維度
   在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 中，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的「維度精靈」，從現有的資料表建立維度。 方法是，選取精靈之 [選取建立方法] 頁面的 [使用現有的資料表] 選項。 如果您選取此選項，精靈會以維度資料表、其資料行，以及在現有資料來源檢視中之資料行間的任何關聯性為基礎， 並以來源資料表和相關資料表中的資料為範例。 它會使用此資料，定義以維度資料表中資料行為基礎的屬性資料行，並定義屬性的階層 (稱為「使用者定義的」階層)。 使用「維度精靈」建立維度之後，您可以使用 [維度設計師] 在維度中加入、移除和設定屬性與階層。  
@@ -57,12 +57,12 @@ ms.locfileid: "36036906"
 ## <a name="selecting-dimension-attributes"></a>選取維度屬性  
  選取維度資料表後，您可以使用 [選取維度屬性] 頁面，從這些資料表中選取您要包含在維度中的屬性。 所有這些資料表中的所有基礎資料行都可以當做潛在的維度屬性使用。 您必須選取維度索引鍵屬性，並針對瀏覽啟用。  
   
- 根據預設，精靈會將屬性的類型設定為 `Regular`。 不過，您可能想要將特定的屬性對應到更能代表資料的不同屬性類型。 例如， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 範例資料庫的 dbo.DimAccount 資料表包含可提供帳戶號碼的 AccountCodeAlternateKey 資料行。 而不是將類型設定為`Regular`這個屬性，您可以將此屬性來對應`Account Number`型別。  
+ 根據預設，精靈會將屬性的類型設定為 `Regular`。 不過，您可能想要將特定的屬性對應到更能代表資料的不同屬性類型。 例如， [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] DW 範例資料庫的 dbo.DimAccount 資料表包含可提供帳戶號碼的 AccountCodeAlternateKey 資料行。 而不是將類型設定為`Regular`此屬性，您可能想要將此屬性來對應`Account Number`型別。  
   
 > [!NOTE]  
 >  如果建立維度時，尚未設定維度類型和標準屬性類型，請在建立維度後，使用「商業智慧精靈」設定這些值。 如需詳細資訊，請參閱 [將維度智慧加入至維度中](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 或 [將帳戶智慧加入至維度中](bi-wizard-add-account-intelligence-to-a-dimension.md)(適用於帳戶類型維度)。  
   
- 精靈會根據指定的屬性類型，自動設定維度類型。 在精靈的集合中指定的屬性類型`Type`屬性的屬性。 維度及其屬性的 `Type` 屬性設定會提供關於維度內容的資訊給伺服器和用戶端應用程式。 在某些情況下，這些`Type`屬性設定只提供用戶端應用程式的指引，以及是選擇性的。 在其他情況下，對於帳戶、 時間或貨幣維度，這些`Type`屬性設定會決定特定的伺服器型行為且可能需要實作某些 cube 行為。  
+ 精靈會根據指定的屬性類型，自動設定維度類型。 指定精靈組中的屬性類型`Type`屬性的屬性。 維度及其屬性的 `Type` 屬性設定會提供關於維度內容的資訊給伺服器和用戶端應用程式。 在某些情況下，這些`Type`屬性設定只提供用戶端應用程式的指引，以及是選擇性的。 在其他情況下，例如帳戶、 時間 或 貨幣維度，這些`Type`屬性設定會決定特定的伺服器型行為，且可能需要實作某些 cube 行為。  
   
  如需維度和屬性類型的詳細資訊，請參閱 [維度類型](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)、 [設定屬性類型](attribute-properties-configure-attribute-types.md)。  
   

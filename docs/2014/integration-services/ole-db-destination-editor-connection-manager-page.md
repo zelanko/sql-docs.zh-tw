@@ -1,5 +1,5 @@
 ---
-title: OLE DB 目的地編輯器 （連接管理員頁面） |Microsoft 文件
+title: OLE DB 目的地編輯器 （連線管理員頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.connection.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
 caps.latest.revision: 81
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cead24f56ca904d8d1286dfb7e1dd1b96302291
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+manager: craigg
+ms.openlocfilehash: 1e6aaff0e415aeaab5e42395a3acd7c0b96a0f00
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324712"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328068"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>OLE DB 目的地編輯器 (連接管理員頁面)
   使用 **[OLE DB 目的地編輯器]** 對話方塊的 **[連接管理員]** 頁面來選取目的地的 OLE DB 連接。 這個頁面也可以讓您從資料庫中選取資料表或檢視。  
   
 > [!NOTE]  
->  `CommandTimeout` OLE DB 目的地的屬性不適用於**OLE DB 目的地編輯器**，但是可以透過設定**進階編輯器**。 此外， **[進階編輯器]** 中只會有特定的快速載入選項。 如需有關這些屬性的詳細資訊，請參閱＜ [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)＞的＜OLE DB 目的地＞一節。  
+>  `CommandTimeout` OLE DB 目的地的屬性不適用於**OLE DB 目的地編輯器**，但可以透過設定**進階編輯器**。 此外， **[進階編輯器]** 中只會有特定的快速載入選項。 如需有關這些屬性的詳細資訊，請參閱＜ [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md)＞的＜OLE DB 目的地＞一節。  
   
  若要深入了解 OLE DB 目的地，請參閱＜ [OLE DB Destination](data-flow/ole-db-destination.md)＞。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36324712"
   
 ## <a name="see-also"></a>另請參閱  
  [Integration Services 錯誤和訊息參考](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 目的地編輯器&#40;[對應] 頁面&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [OLE DB 目的地編輯器&#40;對應頁面&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [OLE DB 目的地編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [使用 OLE DB 目的地來載入資料](data-flow/load-data-by-using-the-ole-db-destination.md)  
   

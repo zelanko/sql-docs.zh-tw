@@ -1,5 +1,5 @@
 ---
-title: 已被取代的 SQL Server 2014 中的對於 Database Engine 功能 |Microsoft 文件
+title: 已被取代的 Database Engine Features in SQL Server 2014 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 208
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 553d47cd9c9637492fce0fe0a943e8de6cde3eb8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 05cf9071049947adceaeeccf2e728f1d5045d05d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36135493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326398"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中已被取代的 Database Engine 功能
   本主題描述 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 中仍然可用但已被取代的 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]功能。 這些功能將在未來的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]版本中移除。 已被取代的功能不應在新應用程式中使用。  
@@ -128,7 +128,7 @@ ms.locfileid: "36135493"
 |資料表壓縮|使用 Vardecimal 儲存格式。|Vardecimal 儲存格式已被取代。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料壓縮會壓縮十進位值及其他資料類型。 我們建議您使用資料壓縮，而不要使用 Vardecimal 儲存格式。|Vardecimal 儲存格式|200|  
 |資料表壓縮|使用 sp_db_vardecimal_storage_format 程序。|Vardecimal 儲存格式已被取代。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 資料壓縮會壓縮十進位值及其他資料類型。 我們建議您使用資料壓縮，而不要使用 Vardecimal 儲存格式。|sp_db_vardecimal_storage_format|201|  
 |資料表壓縮|使用 sp_estimated_rowsize_reduction_for_vardecimal 程序。|請改用資料壓縮和 sp_estimate_data_compression_savings 程序。|sp_estimated_rowsize_reduction_for_vardecimal|202|  
-|資料表提示|在 UPDATE 或 DELETE 陳述式的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。|請從 FROM 子句中移除 NOLOCK 或 READUNCOMMITTED 資料表提示。|UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED|@shouldalert|  
+|資料表提示|在 UPDATE 或 DELETE 陳述式的 FROM 子句中指定 NOLOCK 或 READUNCOMMITTED。|請從 FROM 子句中移除 NOLOCK 或 READUNCOMMITTED 資料表提示。|UPDATE 或 DELETE 中的 NOLOCK 或 READUNCOMMITTED|1|  
 |資料表提示|指定資料表提示，而不使用 WITH 關鍵字。|使用 WITH。|沒有 WITH 的資料表提示|8|  
 |資料表提示|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointer|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|無|UPDATETEXT 或 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
@@ -150,8 +150,8 @@ ms.locfileid: "36135493"
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|透過檢視表將資料表提示間接套用到多重陳述式資料表值函式 (TVF) 的引動過程。|無。|間接 TVF 提示|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 語法：<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |其他|DB-Library<br /><br /> Embedded SQL for C|雖然 [!INCLUDE[ssDE](../includes/ssde-md.md)] 仍支援使用 DB-Library 和內嵌式 SQL API 之現有應用程式的連接，但它不包含要在使用這些 API 的應用程式上執行程式設計工作所需的檔案或文件集。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的未來版本將卸除對 DB-Library 或內嵌式 SQL 應用程式連接的支援。 請勿使用 DB-Library 或內嵌式 SQL 來開發新的應用程式。 在修改現有的應用程式時，請移除對 DB-Library 或內嵌式 SQL 的相依性。 如果不想要使用這些 API，請使用 SQLClient 命名空間或 API (例如 ODBC)。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 不包含執行這些應用程式所需的 DB-Library DLL。 若要執行 DB-Library 或內嵌式 SQL 應用程式，則您必須可從 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 6.5 版、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 或 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]使用 DB-Library DLL。|無|無|  
-|工具|SQL Server Profiler for Trace Capture|請使用 SQL Server Management Studio 內嵌的擴充事件分析工具。<br /><br /> 注意： 繼續使用 SQL Server Profiler for Trace Capture Analysis Services 工作負載。|SQL Server Profiler|無|  
-|工具|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注意： 繼續使用 SQL Server Profiler for Trace Replay，針對 Analysis Services 工作負載。|SQL Server Profiler|無|  
+|工具|SQL Server Profiler for Trace Capture|請使用 SQL Server Management Studio 內嵌的擴充事件分析工具。<br /><br /> 附註： 繼續使用 SQL Server Profiler for Trace Capture Analysis Services 工作負載。|SQL Server Profiler|無|  
+|工具|SQL Server Profiler for Trace Replay|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)<br /><br /> 注意： 繼續進行 SQL Server Profiler for Trace Replay 用於 Analysis Services 工作負載。|SQL Server Profiler|無|  
 |追蹤管理物件|Microsoft.SqlServer.Management.Trace 命名空間 (包含 SQL Server 追蹤和重新執行物件的 API)|追蹤組態︰ <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 追蹤讀取︰ <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 追蹤重新執行：無|||  
 |SQL 追蹤預存程序、函數和目錄檢視|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|[擴充事件](../relational-databases/extended-events/extended-events.md)|sp_trace_create<br /><br /> sp_trace_setevent<br /><br /> sp_trace_setfilter<br /><br /> sp_trace_setstatus<br /><br /> fn_trace_geteventinfo<br /><br /> fn_trace_getfilterinfo<br /><br /> fn_trace_getinfo<br /><br /> fn_trace_gettable<br /><br /> sys.traces<br /><br /> sys.trace_events<br /><br /> sys.trace_event_bindings<br /><br /> sys.trace_categories<br /><br /> sys.trace_columns<br /><br /> sys.trace_subclass_values|258<br /><br /> 260<br /><br /> 261<br /><br /> 259<br /><br /> 256<br /><br /> 257|  
   

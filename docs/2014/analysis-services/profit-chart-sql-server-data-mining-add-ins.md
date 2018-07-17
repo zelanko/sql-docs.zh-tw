@@ -1,5 +1,5 @@
 ---
-title: 收益圖 （SQL Server 資料採礦增益集） |Microsoft 文件
+title: 收益圖 （SQL Server 資料採礦增益集） |Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy chart
 - profit chart
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - mining models, testing
 ms.assetid: 5c902543-4da9-4db3-99d5-4ce04c43d7ef
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c78d1f477b878b2ddf78e3c5446e46c249ffcb62
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1639ed1ad54d8eabc861a8ec9023638ad4289d63
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030922"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37297358"
 ---
 # <a name="profit-chart-sql-server-data-mining-add-ins"></a>收益圖 (SQL Server 資料採礦增益集)
-  ![資料採礦功能區中的收益圖按鈕](media/dmc-profitchart.gif "資料採礦功能區中的收益圖按鈕")  
+  ![資料採礦功能區中的收益圖按鈕](media/dmc-profitchart.gif "資料採礦功能區中的 [收益圖] 按鈕")  
   
  在商務案例中，收益圖會顯示當公司使用某採礦模型來決定應連絡的客戶對象時，相關的估計收益增加量。 圖表的 Y 軸代表收益，而 X 軸則代表母體中公司所連絡的百分比。 一般收益圖會顯示收益增加直到某個點為止，過了這個點之後，收益就會隨著連絡的母體百分比增加而減少。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "36030922"
      與每一次成功銷售相關聯的營收金額。  
   
 ## <a name="using-the-profit-chart-wizard"></a>使用收益圖精靈  
- 若要建立收益圖，您必須參考現有的資料採礦模型。 您可以瀏覽模型來尋找符合您的資料，依序按一下模型**管理模型**或**瀏覽**以查看詳細資料所使用的演算法和採礦模型中的資料行。  
+ 若要建立收益圖，您必須參考現有的資料採礦模型。 您可以瀏覽模型來尋找符合您的資料，依序按一下模型**管理模型**或是**瀏覽**若要查看有關所使用之演算法的詳細資料和採礦模型中的資料行。  
   
- 如需詳細資訊，請參閱[Excel 中瀏覽模型&#40;SQL Server 資料採礦增益集&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)和[管理模型&#40;SQL Server 資料採礦增益集&#41;](manage-models-sql-server-data-mining-add-ins.md)。  
+ 如需詳細資訊，請參閱 < [Excel 中的 瀏覽模型&#40;SQL Server 資料採礦增益集&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)並[管理模型&#40;SQL Server 資料採礦增益集&#41;](manage-models-sql-server-data-mining-add-ins.md)。  
   
 #### <a name="to-create-a-profit-chart"></a>建立收益圖  
   
@@ -75,11 +75,11 @@ ms.locfileid: "36030922"
  如果您要預測離散數值，必須選取要預測的精確目標值。  
   
 ## <a name="understanding-the-profit-chart"></a>了解收益圖  
- 收益圖包含一條灰色垂直線，您可以按一下圖表中的位置來移動此線條。 **採礦圖例**顯示分數、 母體擴展正確及預測機率灰線在圖表上的位置與相關聯。 如果您在圖表中使用灰線選取最大收益點，則可以使用預測機率值來判斷連絡客戶的機率臨界值。  
+ 收益圖包含一條灰色垂直線，您可以按一下圖表中的位置來移動此線條。 **採礦圖例**顯示分數、 母體擴展正確及預測機率的灰線在圖表上的位置與相關聯。 如果您在圖表中使用灰線選取最大收益點，則可以使用預測機率值來判斷連絡客戶的機率臨界值。  
   
  例如，假設收益曲線的峰值是母體的 55%，而相關聯的預測機率是 20%，這表示您應該只連絡預測回應機率在 20% 以上的客戶，才能達到最大收益。  
   
 ## <a name="see-also"></a>另請參閱  
- [驗證模型及使用模型進行預測&#40;資料採礦 excel 增益集&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [驗證模型及使用模型進行預測&#40;資料採礦適用於 Excel 的增益集&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

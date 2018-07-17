@@ -1,5 +1,5 @@
 ---
-title: 建立 PowerPivot 活頁簿的 BI 語意模型連接 |Microsoft 文件
+title: 建立 PowerPivot 活頁簿的 BI 語意模型連接 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34e81c0f6023b6dee0c9770fdfde89a92eb2afc5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ab47a88ef1bda109cca1abbe27a975d9df9290ed
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36132014"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37328478"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>建立與 PowerPivot 活頁簿的 BI 語意模型連接
   使用本主題中的資訊可設定 BI 語意模型連接，該連接會重新導向至相同伺服器陣列中的 PowerPivot 活頁簿。  
@@ -41,9 +41,9 @@ ms.locfileid: "36132014"
 ##  <a name="bkmk_prereq"></a> 檢閱必要條件  
  您必須有 [參與] 以上權限，才能建立 BI 語意模型連接檔案。  
   
- 您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱[將 BI 語意模型連接內容類型加入至文件庫&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。  
+ 您必須具有支援 BI 語意模型連接內容類型的文件庫。 如需詳細資訊，請參閱 <<c0> [ 將 BI 語意模型連接內容類型加入至文件庫&#40;PowerPivot for SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)。</c0>  
   
- 您必須知道您要為其設定 BI 語意模型連接的 PowerPivot 活頁簿的 URL (例如， http://adventure-works/shared documents/myworkbook.xlsx)。 活頁簿必須位於相同伺服器陣列中。  
+ 您必須知道您正在為其設定 BI 語意模型連接的 PowerPivot 活頁簿的 URL (例如 http://adventure-works/shared /myworkbook.xlsx)。 活頁簿必須位於相同伺服器陣列中。  
   
  參與連接順序的所有電腦和使用者都必須是在相同網域或受信任網域 (雙向信任) 中。  
   
@@ -53,13 +53,13 @@ ms.locfileid: "36132014"
   
      ![在 SharePoint 文件庫中的新文件子功能表](../media/ssas-bismconnection-new.gif "SharePoint 文件庫中的新文件子功能表")  
   
-2.  設定**伺服器**屬性設為 PowerPivot 活頁簿的 SharePoint URL (例如，  **http://mysharepoint/shared documents/Myworkbook.xlsx**。 在 PowerPivot for SharePoint 部署中，可以在伺服器陣列中的任何伺服器上載入資料。 因此，資料來源與 PowerPivot 資料的連接只會指定活頁簿的路徑。 PowerPivot 系統服務會決定載入資料的伺服器。  
+2.  設定**伺服器**屬性設為 PowerPivot 活頁簿的 SharePoint URL (例如 **http://mysharepoint/shared /Myworkbook.xlsx**。 在 PowerPivot for SharePoint 部署中，可以在伺服器陣列中的任何伺服器上載入資料。 因此，資料來源與 PowerPivot 資料的連接只會指定活頁簿的路徑。 PowerPivot 系統服務會決定載入資料的伺服器。  
   
-     請勿使用**資料庫**屬性; 它不會用於指定 PowerPivot 活頁簿的位置。  
+     請勿使用**資料庫**屬性; 指定 PowerPivot 活頁簿的位置時，會不會使用它。  
   
      頁面應看起來類似下圖。  
   
-     ![顯示活頁簿 URL 的 BISM 連接頁面](../media/ssas-bismconnection-ppvtds.gif "顯示活頁簿 URL 的 BISM 連接頁面")  
+     ![BISM 連接頁面顯示活頁簿 URL](../media/ssas-bismconnection-ppvtds.gif "顯示活頁簿 URL 的 BISM 連接頁面")  
   
      或者，如果您有活頁簿的 SharePoint 權限，則會執行額外的驗證步驟，以確保該位置有效。 如果您沒有資料的存取權限，則會提供一個無需驗證回應即儲存 BI 語意模型連接的選項。  
   

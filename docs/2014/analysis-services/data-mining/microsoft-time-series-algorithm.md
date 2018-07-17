@@ -1,5 +1,5 @@
 ---
-title: Microsoft 時間序列演算法 |Microsoft 文件
+title: Microsoft 時間序列演算法 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 caps.latest.revision: 74
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0291f91ea4432c9bf4a51b617f7e44fe92130d1b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325108"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft 時間序列演算法
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法提供迴歸演算法，適合用於預測連續值，例如產品銷售狀況經過一段時間。 雖然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法 (如決策樹) 需要含有新資訊的其他資料行當做輸入來預測趨勢，但是時間序列模型則不需要。 時間序列模型可以只根據用於建立此模型的原始資料集來預測趨勢。 當您做出預測並將新的資料自動納入趨勢分析時，也可以將新的資料加入此模型中。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法提供最適合用於預測連續值，例如產品銷售狀況經過一段時間的迴歸演算法。 雖然其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 演算法 (如決策樹) 需要含有新資訊的其他資料行當做輸入來預測趨勢，但是時間序列模型則不需要。 時間序列模型可以只根據用於建立此模型的原始資料集來預測趨勢。 當您做出預測並將新的資料自動納入趨勢分析時，也可以將新的資料加入此模型中。  
   
  下列圖表顯示一個典型模型，其中會預測一段時間內在四個不同銷售區域的產品銷售。 此圖表中顯示的模型會將每一個區域的銷售繪製成紅色、黃色、紫色和藍色的線條。 每個區域的線條有兩個部分：  
   
@@ -41,7 +41,7 @@ ms.locfileid: "36136754"
   
  來源資料和預測資料的組合稱為「序列」。  
   
- ![時間序列範例](../media/time-series.gif "時間序列的範例")  
+ ![時間序列的範例](../media/time-series.gif "的時間序列範例")  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法的重要功能之一是可以執行交叉預測。 如果您以兩個分開但相關的序列來定型演算法，則可以使用產生的模型依據其他序列的行為來預測一個序列的結果。 例如，一個產品的已知銷售量會影響另一個產品的預測銷售量。 交叉預測對於建立可套用至多個序列的一般模型也很有用處。 例如，特定區域的預測會因為此序列缺少品質良好的資料而造成不穩定的情形。 您可以根據所有四個區域的平均值來定型一般模型，然後將此模型套用至個別序列，以針對每一個區域建立更穩定的預測。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "36136754"
  此公司在每一季都打算以最近的銷售資料來更新此模型，並將其預測更新為模型的最近趨勢。 若要針對未能正確或一致更新銷售資料的商店做出更正，將會建立一般預測模型，並使用該模型來建立所有區域的預測。  
   
 ## <a name="how-the-algorithm-works"></a>演算法的運作方式  
- 在[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法會使用單一演算法 ARTXP。 ARTXP 演算法已針對短期預測而最佳化，因此，會預測序列中的下一個可能的值。 從開始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法使用 ARTXP 演算法及第二個演算法 ARIMA。 ARIMA 演算法已針對長期預測而最佳化。 如需 ARTXP 和 ARIMA 演算法實作的詳細說明，請參閱 [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)。  
+ 在  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，則[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法會使用單一演算法 ARTXP。 ARTXP 演算法已針對短期預測最佳化，因此，會預測序列中下一個可能的值。 從開始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，則[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法使用 ARTXP 演算法及第二個演算法 ARIMA。 ARIMA 演算法已針對長期預測而最佳化。 如需 ARTXP 和 ARIMA 演算法實作的詳細說明，請參閱 [Microsoft 時間序列演算法技術參考](microsoft-time-series-algorithm-technical-reference.md)。  
   
- 依預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法在分析模式及作出預測時，會混合使用這些演算法。 演算法定型相同的資料上兩個不同的模型： 一個模型使用 ARTXP 演算法，另一個模型則使用 ARIMA 演算法。 然後此演算法會混合這兩個模型的結果，以針對變動數目的時間配量產生最佳預測結果。 因為 ARTXP 最適合用於短期預測，所以在一系列預測的開始會有較重的加權。 不過，隨著預測的時間配量進入未來，ARIMA 會有更重的加權。  
+ 依預設， [!INCLUDE[msCoName](../../includes/msconame-md.md)] 時間序列演算法在分析模式及作出預測時，會混合使用這些演算法。 此演算法會定型相同的資料上的兩個不同的模型： 一個模型使用 ARTXP 演算法，另一個模型則使用 ARIMA 演算法。 然後此演算法會混合這兩個模型的結果，以針對變動數目的時間配量產生最佳預測結果。 因為 ARTXP 最適合用於短期預測，所以在一系列預測的開始會有較重的加權。 不過，隨著預測的時間配量進入未來，ARIMA 會有更重的加權。  
   
  您也可以控制演算法的組合，以選擇偏好時間序列中的短期或長期預測。 從開始[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]標準，您可以指定[!INCLUDE[msCoName](../../includes/msconame-md.md)]時間序列演算法使用下列設定的其中一個：  
   

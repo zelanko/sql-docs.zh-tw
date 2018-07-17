@@ -1,5 +1,5 @@
 ---
-title: 查閱轉換編輯器 （連接頁面） |Microsoft 文件
+title: 查閱轉換編輯器 （連接頁面） |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 caps.latest.revision: 42
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 91794c83736042672026f5a0fe35ead15dd112eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3c3236fe156e103269995a0707be17602af0a5ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36144962"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37318908"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>查閱轉換編輯器 (連接頁面)
   使用 **[查閱轉換編輯器]** 對話方塊的 **[連接]** 頁面，來選取連接管理員。 如果您選取 OLE DB 連接管理員，也可以選取查詢、資料表或檢視來產生參考資料集。  
@@ -75,7 +75,7 @@ ms.locfileid: "36144962"
  blogs.msdn.com 上的部落格文章： [查閱快取模式](http://go.microsoft.com/fwlink/?LinkId=219518)   
   
 ## <a name="see-also"></a>另請參閱  
- [查閱轉換編輯器&#40;[一般] 頁面&#41;](general-page-of-integration-services-designers-options.md)   
+ [查閱轉換編輯器&#40;一般頁面&#41;](general-page-of-integration-services-designers-options.md)   
  [查閱轉換編輯器 &#40;資料行頁面&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [查閱轉換編輯器&#40;進階頁面&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
  [查閱轉換編輯器&#40;錯誤輸出頁面&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   

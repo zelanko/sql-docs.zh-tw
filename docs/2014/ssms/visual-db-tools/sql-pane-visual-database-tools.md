@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Query Designer [SQL Server], SQL pane
 - View Designer, SQL pane
 - SQL pane [Visual Database Tools]
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3d6261a52d4ff41923e87402327b98ff60622af7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 1894d321f6dc8321f4c2b53369d7140f500ce003
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36034489"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37310868"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL 窗格 (Visual Database Tools)
   您可以使用 [SQL] 窗格建立您自己的 SQL 陳述式，也可以使用 [準則] 窗格和 [圖表] 窗格建立陳述式。在這個情況中，SQL 陳述式會在 [SQL] 窗格中建立。 當您建置查詢時，[SQL 窗格] 會自動進行簡單的可讀性更新及重新格式化。  
@@ -62,7 +62,7 @@ ms.locfileid: "36034489"
  [執行查詢&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [設計查詢和檢視表的使用說明主題&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   
  [圖表 窗格&#40;Visual Database Tools&#41;](diagram-pane-visual-database-tools.md)   
- [準則窗格&#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
+ [準則窗格 &#40;Visual Database Tools&#41;](criteria-pane-visual-database-tools.md)   
  [結果窗格 &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  
   
   

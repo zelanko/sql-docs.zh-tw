@@ -1,5 +1,5 @@
 ---
-title: 執行 SQL Server 匯入和匯出精靈 |Microsoft 文件
+title: 執行 SQL Server 匯入和匯出精靈 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Import and Export Wizard
 - starting SQL Server Import and Export Wizard
@@ -18,34 +18,34 @@ ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 817172e78c7f7702aa4dc9d7555b25f6866a6897
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d39f6988fafe56210e5641b85f54adb644b8d8b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307988"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>執行 SQL Server 匯入和匯出精靈
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈提供最簡單的方法，讓您在資料來源之間複製資料以及建構基本封裝。 如需有關精靈的詳細資訊，請參閱[SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈提供最簡單的方法，讓您在資料來源之間複製資料以及建構基本封裝。 如需有關精靈的詳細資訊，請參閱 < [SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。  
   
- 如需示範如何使用 SQL Server 匯入和匯出精靈建立的封裝，將資料從 SQL Server 資料庫匯出至 Microsoft Excel 試算表的影片，請參閱[SQL Server 資料匯出到 Excel （SQL Server 視訊）](http://go.microsoft.com/fwlink/?LinkId=131024)。  
+ 如需示範如何使用 SQL Server 匯入和匯出精靈建立的封裝，將資料從 SQL Server 資料庫匯出至 Microsoft Excel 試算表的影片，請參閱[SQL Server 資料匯出到 Excel （SQL Server 影片）](http://go.microsoft.com/fwlink/?LinkId=131024)。  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>若要啟動 SQL Server 匯入和匯出精靈  
   
--   在**啟動**功能表上，指向**所有程式**，指向 **Microsoft SQL Server** ，然後按一下 **匯入和匯出資料**。  
+-   在上**開始**功能表上，指向**所有程式**，指向**Microsoft SQL Server** ，然後按一下**匯入和匯出資料**。  
   
      – 或 –  
   
-     在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，以滑鼠右鍵按一下**SSIS 封裝**資料夾，然後再按一下**SSISImport 和匯出精靈**。  
+     在  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，以滑鼠右鍵按一下**SSIS 封裝**資料夾，然後再按一下**SSISImport 和匯出精靈**。  
   
      – 或 –  
   
-     在[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]上**專案**功能表上，按一下  **SSISImport 和匯出精靈**。  
+     在 [[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]上**專案**功能表上，按一下**SSISImport 和匯出精靈]**。  
   
      – 或 –  
   
-     在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]伺服器類型，展開資料庫，請以滑鼠右鍵按一下資料庫，指向**工作**，然後按一下 **匯入資料**或**匯出資料**.  
+     在  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，連接到[!INCLUDE[ssDE](../../includes/ssde-md.md)]伺服器類型，展開資料庫，請以滑鼠右鍵按一下資料庫，指向**工作**，然後按一下 **匯入資料**或**匯出資料**.  
   
      – 或 –  
   
@@ -73,7 +73,7 @@ ms.locfileid: "36145422"
   
     -   指示是否要新建資料庫並設定資料庫屬性。 下列屬性無法進行設定，精靈將使用指定的預設值：  
   
-        |屬性|ReplTest1|  
+        |屬性|值|  
         |--------------|-----------|  
         |定序|Latin1_General_CS_AS_KS_WS|  
         |復原模式|完整|  
@@ -85,7 +85,7 @@ ms.locfileid: "36145422"
   
          如果來源為 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 提供者，您還可以使用複製查詢結果的選項，提供 DBCommand 字串當做查詢。  
   
-         如果來源資料 檢視中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈 」 自動將檢視轉換至目的地中的資料表。  
+         如果來源資料 檢視中，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]匯入和匯出精靈自動將檢視在目的地資料表。  
   
     -   指示是否卸除並重新建立目的地資料表，以及是否啟用識別插入。  
   
@@ -121,14 +121,14 @@ ms.locfileid: "36145422"
   
 6.  儲存並執行封裝。  
   
-     如果從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或命令提示字元啟動精靈，此封裝便可立即執行。 您可以選擇性地將封裝儲存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**資料庫或檔案系統。 如需有關**msdb**資料庫，請參閱[封裝管理&#40;SSIS 服務&#41;](../service/package-management-ssis-service.md)。  
+     如果從 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 或命令提示字元啟動精靈，此封裝便可立即執行。 您可以選擇性地將封裝儲存到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**資料庫或檔案系統。 如需詳細資訊**msdb**資料庫，請參閱[套件管理&#40;SSIS 服務&#41;](../service/package-management-ssis-service.md)。  
   
-     當您儲存封裝時，可以設定封裝保護等級，而如果保護等級使用密碼，請提供密碼。 如需有關封裝保護等級的詳細資訊，請參閱[封裝中的機密資料的存取控制](../security/access-control-for-sensitive-data-in-packages.md)。  
+     當您儲存封裝時，可以設定封裝保護等級，而如果保護等級使用密碼，請提供密碼。 如需有關封裝保護等級的詳細資訊，請參閱 <<c0> [ 套件中敏感性資料的存取控制](../security/access-control-for-sensitive-data-in-packages.md)。  
   
-     如果啟動精靈從[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]專案中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您無法從精靈執行封裝。 而是加入到啟動精靈的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 然後您可以在執行封裝[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
+     如果精靈從啟動[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]專案中[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]，您無法從精靈執行封裝。 而是加入到啟動精靈的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。 然後您可以在執行封裝[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]。  
   
     > [!NOTE]  
-    >  在[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，就無法使用儲存精靈所建立的封裝選項。  
+    >  在  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]，則無法使用儲存精靈所建立的封裝選項。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 匯入和匯出精靈](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

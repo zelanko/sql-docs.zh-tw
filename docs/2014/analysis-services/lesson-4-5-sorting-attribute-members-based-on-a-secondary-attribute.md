@@ -1,5 +1,5 @@
 ---
-title: 根據次要屬性排序屬性成員 |Microsoft 文件
+title: 依次要屬性來排序屬性成員根據 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 caps.latest.revision: 17
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 5286bcca918cd77985ea6aef98cd3c99b89e20f9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6245cc93f107ff437e3c17e6cc5e789dd5994698
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035776"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299288"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>依次要屬性來排序屬性成員
   在第 3 課，您學會如何根據名稱或索引鍵值排序屬性成員。 您也學會如何使用複合成員索引鍵來影響屬性成員和排序次序。 如需詳細資訊，請參閱 [修改 Date 維度](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)。 不過，如果屬性的名稱或索引鍵都無法提供想要的排序次序，您可以使用次要屬性來達成所需的排序次序。 藉由定義屬性之間的關聯性，您可以使用次要屬性排序第一個屬性的成員。  
@@ -122,6 +122,6 @@ ms.locfileid: "36035776"
      ![重新排序 通勤距離屬性階層](../../2014/tutorials/media/l4-memberproperties-5.gif "Re-sorted 通勤距離屬性階層")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
- [指定使用者定義階層中各屬性之間的屬性關聯性](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+ [在使用者定義階層的屬性之間指定屬性關聯性](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
   
   

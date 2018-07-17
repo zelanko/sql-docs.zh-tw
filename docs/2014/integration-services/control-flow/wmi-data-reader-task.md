@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmidatareadertask.f1
 helpviewer_keywords:
@@ -18,13 +18,13 @@ ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d9871b79451feacd256692513e767d9d693e6300
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e31b3c63d1fab749aea96e0d55fd7a704301d26d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36037291"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37308098"
 ---
 # <a name="wmi-data-reader-task"></a>WMI 資料讀取器工作
   「WMI 資料讀取器」工作使用「Windows Management Instrumentation (WMI) 查詢語言」執行查詢，該查詢語言會從 WMI 傳回有關電腦系統的資訊。 您可將「WMI 資料讀取器」工作用於下列用途：  
@@ -88,7 +88,7 @@ Select * FROM Win32_QuickFixEngineering
   
  如需有關可以在「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」中設定之屬性的詳細資訊，請按下列其中一個主題：  
   
--   [WMI 資料讀取器工作編輯器&#40;WMI 選項頁面&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [WMI 資料讀取器工作編輯器 &#40;WMI 選項頁面&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [運算式頁面](../expressions/expressions-page.md)  
   

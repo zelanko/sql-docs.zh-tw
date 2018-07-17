@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f9bc20a70899e84dacb4f7bfbadf0a0f26f88ffa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 8806b23d422969637a536e7a86c12bb5f323e2e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031753"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37326908"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>修改控制器服務帳戶與用戶端服務帳戶
   在本主題中，您將了解如何修改 Distributed Replay Controller 和用戶端服務帳戶，然後重新套用存取控制清單 (ACL)。  
   
 ### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>若要使用電腦管理來啟動或停止 Distributed Replay 服務  
   
-1.  安裝的電腦上的 Distributed Replay 服務是，從命令提示字元中，輸入`dcomcnfg`。  
+1.  Distributed Replay 服務安裝所在，從命令提示字元中，在電腦上輸入`dcomcnfg`。  
   
 2.  按兩下**服務**、 向下捲動並以滑鼠右鍵按一下 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay\<服務名稱 >**，然後按一下 **啟動**或**停止**。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "36031753"
   
     1.  停止 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 服務。  
   
-    2.  在控制器電腦安裝控制器服務，從命令提示字元上輸入`dcomcnfg`。  
+    2.  在控制器電腦安裝控制器服務，從命令提示字元中，輸入`dcomcnfg`。  
   
     3.  在 [元件服務] 視窗中，巡覽至主控台根目錄 -> [元件服務] -> [電腦] -> [我的電腦] -> [DCOM 設定] -> [DReplayController]。  
   

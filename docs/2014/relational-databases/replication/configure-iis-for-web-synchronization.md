@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: 86
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 6589261f0ad1a800bcf88d11abe2ebe6314a4855
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: eda7d98c6c90cf53f8b788a52717db01bcc8fae9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146057"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37307588"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>針對 Web 同步處理設定 IIS
   本主題中的程序，會構成設定合併式複寫之 Web 同步處理時所採取的第二個步驟。 請在啟用 Web 同步處理的發行集之後執行這個步驟。 如需組態處理序的概觀，請參閱＜ [[設定 Web 同步處理]](configure-web-synchronization.md)＞。 完成本主題中的程序之後，請繼續執行第三個步驟，即設定訂閱來使用 Web 同步處理。 第三個步驟在下列主題中描述：  
@@ -72,7 +72,7 @@ ms.locfileid: "36146057"
   
     1.  按一下 **[開始]**，然後按一下 **[執行]**。  
   
-    2.  在**開啟**方塊中，輸入`inetmgr`，然後按一下 **確定**。  
+    2.  在 **開放**方塊中，輸入`inetmgr`，然後按一下**確定**。  
   
 3.  執行 IIS 憑證精靈：  
   
@@ -104,7 +104,7 @@ ms.locfileid: "36146057"
         > [!NOTE]  
         >  依預設，SelfSSL 安裝的憑證在七天內有效。  
   
-    -   若要指定一或多個參數值：請按一下 **[開始]**，然後按一下 **[執行]**。 在**開啟**方塊中，輸入`cmd`，然後按一下 **確定**。 找出 SelfSSL 安裝目錄，輸入 `SelfSSL`，然後指定一或多個參數的值。 如需參數列表，請輸入 `SelfSSL -?`。  
+    -   若要指定一或多個參數值：請按一下 **[開始]**，然後按一下 **[執行]**。 在 **開放**方塊中，輸入`cmd`，然後按一下**確定**。 找出 SelfSSL 安裝目錄，輸入 `SelfSSL`，然後指定一或多個參數的值。 如需參數列表，請輸入 `SelfSSL -?`。  
   
 ## <a name="installing-connectivity-components-and-sql-server-management-studio"></a>安裝連接元件和 SQL Server Management Studio  
   
@@ -112,7 +112,7 @@ ms.locfileid: "36146057"
   
 1.  以管理員身分登入執行 IIS 的電腦。  
   
-2.  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝磁碟，啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。 如需有關使用此精靈的詳細資訊，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+2.  從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 安裝磁碟，啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝精靈。 如需使用此精靈的詳細資訊，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
   
 3.  在 **[特徵選取]** 頁面中，選取 **[用戶端工具連接性]**。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "36146057"
   
     1.  在 **[別名]** 方塊中輸入虛擬目錄的別名。  
   
-    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您輸入`websync1`中**別名**方塊中，輸入`C:\Inetpub\wwwroot\websync1`中**路徑**方塊。 按 [下一步] 。  
+    2.  在 **[路徑]** 方塊中輸入虛擬目錄的路徑。 例如，如果您輸入`websync1`中**別名**方塊中，輸入`C:\Inetpub\wwwroot\websync1`中**路徑** 方塊中。 按 [下一步] 。  
   
     3.  在兩個對話方塊中，按一下 **[是]**。 這會指定您要建立新資料夾，並指定您要複製 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL。 執行個體時提供 SQL Server 登入。  
   
@@ -183,11 +183,11 @@ ms.locfileid: "36146057"
   
 11. 如果執行 IIS 的電腦執行於 64 位元版本的 Windows 上，則必須將 replisapi.dll 複製到適當的目錄：  
   
-    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在**開啟**方塊中，輸入`iisreset`，然後按一下 **確定**。  
+    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在 **開放**方塊中，輸入`iisreset`，然後按一下**確定**。  
   
     2.  停止並重新啟動 IIS 之後，請將 replisapi.dll 從 [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\replisapi 複製到步驟 6b 中指定的目錄。  
   
-    3.  按一下 **[開始]**，然後按一下 **[執行]**。 在**開啟**方塊中，輸入`cmd`，然後按一下 **確定**。  
+    3.  按一下 **[開始]**，然後按一下 **[執行]**。 在 **開放**方塊中，輸入`cmd`，然後按一下**確定**。  
   
     4.  於您在步驟 6b 中指定的目錄中，執行下列命令：  
   
@@ -207,7 +207,7 @@ ms.locfileid: "36146057"
   
 3.  註冊 replisapi.dll：  
   
-    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在**開啟**方塊中，輸入`cmd`，然後按一下 **確定**。  
+    1.  按一下 **[開始]**，然後按一下 **[執行]**。 在 **開放**方塊中，輸入`cmd`，然後按一下**確定**。  
   
     2.  於您在步驟 1 中建立的目錄中，執行下列命令：  
   
@@ -280,7 +280,7 @@ ms.locfileid: "36146057"
   
     1.  按一下 **[開始]**，然後按一下 **[執行]**。  
   
-    2.  在**開啟**方塊中，輸入`inetmgr`，然後按一下 **確定**。  
+    2.  在 **開放**方塊中，輸入`inetmgr`，然後按一下**確定**。  
   
     3.  在 **[Internet Information Services (IIS) 管理員]** 中，展開 **[本機電腦]** 節點。  
   
