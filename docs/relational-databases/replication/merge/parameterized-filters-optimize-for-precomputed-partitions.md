@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f094b8701172ece034c53ebad5f07b45fa3c207c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bd89a336eb0797d67f22c5f534ce06bd96caf50
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32960253"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359340"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>參數化篩選 - 針對預先計算的資料分割最佳化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,6 +73,6 @@ ms.locfileid: "32960253"
  當變更從「訂閱者」上傳到「發行者」時，預先計算的資料分割會有小的效能消耗，但是在評估資料分割及將變更從「發行者」下載到「訂閱者」會花費大量合併處理時間，因此網路優勢仍十分重要。 效能利益視同時進行同步處理的「訂閱者」數量，與每個將資料列從一個資料分割移到其他資料分割的同步處理之更新數量的不同而有所不同。  
   
 ## <a name="see-also"></a>另請參閱  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [參數化資料列篩選器](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   
