@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -18,14 +17,15 @@ helpviewer_keywords:
 - REVOKE statement, symmetric keys
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6de3f9315da8d3ff1d241eeebfc3f10b5012cf48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 979cb0791822ca5ae0f01598f8bb546e5246e287
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785819"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE 對稱金鑰權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

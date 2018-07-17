@@ -3,11 +3,9 @@ title: 授與資料庫物件的存取權 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql
+ms.technology: t-sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -15,17 +13,16 @@ applies_to:
 helpviewer_keywords:
 - granting access to database objects
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f75b198819aca8e235d14f210af7c1cd5c46fc65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5641055b11a53bcf39e2eb87ca547553521f9bf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33059635"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37427017"
 ---
 # <a name="lesson-2-4---granting-access-to-a-database-object"></a>課程 2-4 - 授與資料庫物件的存取權
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

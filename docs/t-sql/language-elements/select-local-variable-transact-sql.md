@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -29,12 +28,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2e6b368c571c67ba4a65e5caceb680145adb5a53
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8faa50a7878f65a5a408dfdf383941cf435e751f
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33060655"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36240520"
 ---
 # <a name="select-localvariable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

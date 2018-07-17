@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - VARP function [Transact-SQL]
 ms.assetid: ce5d2e32-01da-4e18-b8ed-a08b61d84456
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1ea79a06db5b0b4ad8a1cb269d7dfb06a280515
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b474f5bfa7bc6e6f7ce3d4b6d70ea7260dcbdb2
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33060795"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783009"
 ---
 # <a name="varp-transact-sql"></a>VARP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,8 +43,8 @@ ms.locfileid: "33060795"
 ```  
 -- Syntax for SQL Server and Azure SQL Database  
   
-VARP ( [ ALL | DISTINCT ] expression )  
-   OVER ( [ partition_by_clause ] order_by_clause )  nh  
+VARP ( [ ALL | DISTINCT ] expression )
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ```  

@@ -6,25 +6,23 @@ ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 237c0a53319d7b4c0478cdd8527737401ab5b5f1
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702611"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942174"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

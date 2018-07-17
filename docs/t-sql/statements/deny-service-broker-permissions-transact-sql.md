@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -25,15 +24,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1db9fcfc9be2c8db8380f5ecd1f3d21b68ec36b8
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: c5553d6a7ea1f1dc7f241c8e2361e80a601dd706
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701451"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37785659"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

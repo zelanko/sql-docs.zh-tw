@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/19/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,15 +21,16 @@ helpviewer_keywords:
 - GRANT statement, database scoped credentials
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
 caps.latest.revision: 3
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 6290a5b975b81805e23804aff8ad7383504426c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5b235e2066ff41b8fffb24f352d9362ddd3b5a8
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941574"
 ---
 # <a name="grant-database-scoped-credential-permissions-transact-sql"></a>GRANT 資料庫範圍認證 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

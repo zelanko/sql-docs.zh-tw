@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,21 +25,22 @@ helpviewer_keywords:
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 caps.latest.revision: 76
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 38ee232615df4c4f80bce08d69fb14251aab58e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d55da07e2011cf611525f1ba5edd904ad5d6095c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786219"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   根據與來源資料表聯結的結果，在目標資料表上執行插入、更新或刪除作業。 例如，您可以根據在另一個資料表中所找到的差異在資料表中插入、更新或刪除資料列，以同步處理兩個資料表。  
   
- **效能提示：**當兩個資料表有複雜的比對特性時，MERGE 陳述式的條件式行為表現最佳。 例如沒有資料列時插入資料列，或資料列相符時更新資料列。 只要根據另一個資料表的資料列更新資料表，基本 INSERT、 UPDATE 及 DELETE 陳述式就能提升效能及可調適性。 例如：  
+ **效能提示：** 當兩個資料表有複雜的比對特性時，MERGE 陳述式的條件式行為表現最佳。 例如沒有資料列時插入資料列，或資料列相符時更新資料列。 只要根據另一個資料表的資料列更新資料表，基本 INSERT、 UPDATE 及 DELETE 陳述式就能提升效能及可調適性。 例如：  
   
 ```  
 INSERT tbl_A (col, col2)  

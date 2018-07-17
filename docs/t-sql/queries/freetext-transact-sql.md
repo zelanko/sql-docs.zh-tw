@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,12 +25,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01ce44ba1bc3a1e81b85c86d626d93e54542662b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bb21acfc39081176d21b27b25689e4e5664cbae
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065025"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36240860"
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

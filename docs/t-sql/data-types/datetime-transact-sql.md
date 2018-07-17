@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 caps.latest.revision: 64
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c2550514f373a91457a75bdf2c04b60ea13fe137
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055175"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420457"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

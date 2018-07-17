@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - stats update date
 ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6efd8b0e5c8097853d86f05bc028687e3dfb97e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a587a90f1f5016ebbc0473584441cdf3f80aede
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33059545"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783609"
 ---
 # <a name="statsdate-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

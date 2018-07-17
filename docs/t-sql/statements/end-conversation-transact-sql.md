@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 940a843a643f35c58db74948dd9bf71c50c09b58
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3b2afef78504eb1fda2994bf1aca64b964ca05fb
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702358"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791065"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

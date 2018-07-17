@@ -6,23 +6,21 @@ ms.prod: ''
 ms.prod_service: pdw
 ms.reviewer: ''
 ms.service: sql-data-warehouse
-ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: t-sql
+ms.component: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: ronortloff
+ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 619fe7055ef67a7be88dfa6fbf08ceeb8dae66ee
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b3a35be7145db9bb2ada6bd0af5805740568c216
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702651"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926579"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

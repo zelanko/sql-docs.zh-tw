@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,15 +25,15 @@ helpviewer_keywords:
 - conversations [Service Broker], groups
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4f85628c2725c4a71c54349e94468607a0178895
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 8be62945e89b3b7e6b074338ec8fbd5b593f1eae
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701243"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792229"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

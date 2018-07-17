@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - ENCRYPTBYKEY function
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5b3d8f7ba013058b16dfe79b27a814a5a273f2a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6aa24a1c65168ba3c4be0f600584013a174dab57
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055445"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782509"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

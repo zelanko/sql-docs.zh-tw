@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/17/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,14 +18,15 @@ helpviewer_keywords:
 - permissions [SQL Server], endpoints
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4f83a459ea3f649b407c3a5ed2340422edec78ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b53a1ccaf24a324b99d42bd6b1c88d84d8e9083
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787289"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 端點權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

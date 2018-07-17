@@ -3,8 +3,6 @@ title: CHECKPOINT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
-ms.prod_service: sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - manual checkpoints [SQL Server]
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-caps.latest.revision: 59
-author: edmacauley
-ms.author: edmaca
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c7232d1494ad48987d91ffe4dfc05e5ef47e4b5
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0cde74c2a82ae77b1bc417ba9642dd3632c2f435
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33700691"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781269"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

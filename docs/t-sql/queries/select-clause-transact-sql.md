@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -31,12 +30,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 098b5850d8570e10672518f2c93f8a2faeb8cd66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38ad84a186398eb2da903a9181edf55262b8a816
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063947"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36252750"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

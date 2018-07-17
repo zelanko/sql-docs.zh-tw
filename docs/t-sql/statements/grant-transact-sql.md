@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,15 +25,16 @@ helpviewer_keywords:
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 caps.latest.revision: 64
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 71e48ac3fdf525ba77c288cf0e33cc879e72a5a9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2869a07f4b4c358cfd0cb9662f00441fdafd1d1b
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941503"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

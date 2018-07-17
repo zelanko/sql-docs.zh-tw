@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|spatial-geography
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,12 +21,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c31bd46b13388d8ccb0fcb80d9af2ad8d79967f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e01fa293c043fbc5682862d633201f27a0f9ee75
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063235"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36244600"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

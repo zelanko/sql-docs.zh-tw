@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,15 +21,16 @@ helpviewer_keywords:
 - SET ANSI_DEFAULTS statement
 ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4153c694ecb88b62cf3526321025d47287b2a8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe19be8b5aae2525e175cc015e851d292f1c1a1c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787789"
 ---
 # <a name="set-ansidefaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

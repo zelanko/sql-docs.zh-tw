@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 9/8/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -29,16 +28,16 @@ helpviewer_keywords:
 - smallint data type
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ddd1dca194c6a80b627dafd62dff7f46ef96906b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a05137f97a03fc55f94aeb7ca092a92fdee6eab
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053775"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409157"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint 和 tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

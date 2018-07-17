@@ -1,26 +1,24 @@
 ---
 title: 在 SSIS 套件部署於 Azure 的情況下開啟和儲存檔案 | Microsoft Docs
 description: 了解當您將使用本機檔案系統的 SSIS 套件隨即轉移至 Azure 中的 SSIS 時，如何在內部部署與 Azure 中開啟和儲存檔案
-ms.date: 11/27/2017
+ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: c4f9d5e91db382d59dc156ed919c1af06cc56b77
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c77d072067799df660ab1c0989eda410480de816
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410470"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065988"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>在 SSIS 套件部署於 Azure 的情況下，於內部部署與 Azure 中開啟和儲存檔案
 
 本文描述當您將使用本機檔案系統的 SSIS 套件隨即轉移至 Azure 中的 SSIS 時，如何在內部部署與 Azure 中開啟和儲存檔案。
-
-> [!IMPORTANT]
-> 目前，SSIS 目錄 (SSISDB) 僅支援一組存取認證。 因此，您無法使用不同的單一認證集，來連線至多個內部部署檔案共用和 Azure 檔案共用。
 
 ## <a name="save-temporary-files"></a>儲存暫存檔案
 如果您需要在單一套件執行期間儲存及處理暫存檔案，套件可以使用目前的工作目錄 (`.`) 或 Azure-SSIS Integration Runtime 節點的暫存資料夾 (`%TEMP%`)。

@@ -3,8 +3,6 @@ title: Transact-SQL 參考 (資料庫引擎) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -16,17 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
-caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 51ecb9f50a8f6bd5f8a5b9f33caa65ca9eb7393e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8875ec1f1fd112408b118e39033f987648d58149
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34709016"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412377"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 參考 (資料庫引擎)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

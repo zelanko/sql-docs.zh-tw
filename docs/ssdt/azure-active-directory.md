@@ -12,12 +12,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a61c80ebc47a4f3ca99e637518c58b88d8a96f97
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: af9fc2f5eeeb65a14a227e52d2fe6e9380b6cafb
+ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689266"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37093282"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 中的 Azure Active Directory 支援
 
@@ -88,7 +88,6 @@ MFA 強制執行是由 Azure AD 透過此額外的 MFA 快顯視窗來提供。
 
 [多重要素驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [搭配使用 Azure Active Directory 驗證和 SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
-[Visual Studio 中的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 團隊部落格](http://blogs.msdn.com/b/ssdt/)  
 [DACFx API 參考](https://msdn.microsoft.com/library/dn645454.aspx)  

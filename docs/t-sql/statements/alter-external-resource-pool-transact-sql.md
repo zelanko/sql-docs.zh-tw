@@ -3,8 +3,6 @@ title: ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
-ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER EXTERNAL RESOURCE POOL statement
 ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
-caps.latest.revision: 10
-author: jeannt
-ms.author: edmaca
-manager: craigg
-ms.openlocfilehash: 4c4d3653b7fc499f8997d4fc0097ae88bba9eb12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
+ms.openlocfilehash: 4c591737c596752fe0268073ea3ea3b9a8c7db9f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33064515"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416587"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

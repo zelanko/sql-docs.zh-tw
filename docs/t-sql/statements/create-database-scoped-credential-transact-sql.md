@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,16 @@ helpviewer_keywords:
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9606bc7e70ca12fcdd9edf145955d469ad87ae54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5ab5d4cacc44280ce008486545bee326ce1c5ca
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941604"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - denying permissions [SQL Server], database scoped credential
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
 caps.latest.revision: 2
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 799eb7604e5026e95a986a5aaddeb0e8e5e35bd2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42aae9a44f35d9d1905bead4df36aa667c550df5
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33067975"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941634"
 ---
 # <a name="deny-database-scoped-credential-transact-sql"></a>DENY 資料庫範圍認證 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

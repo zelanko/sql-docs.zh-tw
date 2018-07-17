@@ -3,8 +3,6 @@ title: NULL 和 UNKNOWN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, pdw, sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -13,17 +11,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
-caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 53908dd59ebe1aede15a6725db10c49d61212e7e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 30f82893d316b187db8e187cf7aeac0be91ee697
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701653"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781429"
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL 和 UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]

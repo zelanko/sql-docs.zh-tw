@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,12 +27,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d5e4b322eb6c334d8e5f946ff233901230d87ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b6beeb57513ade4f192a597e433ebd811989613
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33064175"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36249590"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -3,8 +3,6 @@ title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
-ms.prod_service: sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -18,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
-ms.assetid: ''
-caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 98fa06e4161b922c84e69ce2a80848e18d4a584a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 76807bc54394fe55248e76791fa97ae693cb462d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063775"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784299"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

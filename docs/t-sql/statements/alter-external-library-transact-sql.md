@@ -3,8 +3,6 @@ title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -17,16 +15,16 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER EXTERNAL LIBRARY
-author: jeannt
-ms.author: jeannt
-manager: craigg
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a7a1d38efc0ea14ed00c3e49205c36f5953e73f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9579a28d1d243475aeea5d2120f7895c10b6582a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33064115"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408217"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 

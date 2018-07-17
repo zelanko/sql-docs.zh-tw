@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/19/2015
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - ALTER CREDENTIAL statement
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30b3200d3e18e538554e5c56b582cd0e97310e49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6044765dc79c6a61ef59b6368a108a0519646cb
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33063995"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781229"
 ---
 # <a name="alter-credential-transact-sql"></a>ALTER CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

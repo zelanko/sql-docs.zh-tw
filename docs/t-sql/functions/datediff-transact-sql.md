@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -32,16 +31,16 @@ helpviewer_keywords:
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 caps.latest.revision: 52
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7dfad584cfbdbf130053557edcace42579cb8470
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: 73175b2174c03ed917d4eaa5ab87403827e89ea0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249931"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784339"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

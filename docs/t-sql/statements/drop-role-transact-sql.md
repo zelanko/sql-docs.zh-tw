@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - dropping roles
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 caps.latest.revision: 50
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: df52ed86bb11f9c416b610ecc3824b782ad88800
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acfd6de2177d94b78296332e2de68cafc6f083d8
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33066815"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942934"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

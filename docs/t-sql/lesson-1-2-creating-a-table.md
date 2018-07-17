@@ -3,8 +3,6 @@ title: 建立資料表 (教學課程) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/18/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -13,17 +11,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - creating tables
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
-caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 97aa24c9a3a320577073cf42ca5dd8cb6cbf08d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7e26428cbe6815331e0e4c3a30e1fb91b8340b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33061905"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409707"
 ---
 # <a name="lesson-1-2---creating-a-table"></a>課程 1-2 - 建立資料表
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

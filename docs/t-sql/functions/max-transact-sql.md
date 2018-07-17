@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - maximum values [SQL Server]
 ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: def08bb1b6089cd264014b2f9c39fabae6900ed7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 832cf55ef97e67f08f52e40544c3d7b9135cd8f3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054285"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783649"
 ---
 # <a name="max-transact-sql"></a>MAX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,8 +41,8 @@ ms.locfileid: "33054285"
 ## <a name="syntax"></a>語法  
   
 ```  
-MAX ( [ ALL | DISTINCT ] expression )  
-   OVER ( [ partition_by_clause ] order_by_clause )     
+MAX ( [ ALL | DISTINCT ] expression )
+   [ OVER ( [ partition_by_clause ] order_by_clause ) ]
 ```  
   
 ## <a name="arguments"></a>引數  

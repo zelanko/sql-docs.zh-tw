@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 665edc29f3989f73ba997e1ac693634356689aa4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95fc297f4219e66100daef4229323219a9870605
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055335"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782479"
 ---
 # <a name="count-transact-sql"></a>COUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +75,7 @@ DISTINCT
 為任何類型的[運算式](../../t-sql/language-elements/expressions-transact-sql.md) (**image**、**ntext** 或 **text** 除外)。 請注意，`COUNT` 不支援運算式中的彙總函數或子查詢。
   
 \*  
-指定 `COUNT` 應該計算所有資料列，以判斷要傳回的總資料表資料列計數。 `COUNT(*)` 不接受任何參數，而且不支援使用 DISTINCT。 `COUNT(*)` 不需要 *expression* 參數，因為依照定義，它不會使用任何特定資料行的相關資訊。 `COUNT(*)` 會傳回指定之資料表的資料列數，而且它會保留重複的資料列。 它會個別計算每個資料列。 其中包括含有 Null 值的資料列。
+指定 `COUNT` 應該計算所有資料列，以判斷要傳回的總資料表資料列計數。 `COUNT(*)` 不接受任何參數，而且不支援使用 DISTINCT。 `COUNT(*)` 不需要 *expression* 參數，因為依照定義，它不會使用任何特定資料行的相關資訊。 `COUNT(*)` 會傳回指定資料表的資料列數，而且它會保留重複的資料列。 它會個別計算每個資料列。 其中包括含有 Null 值的資料列。
   
 OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_clause* ] **)**  
 *partition_by_clause* 會將 `FROM` 子句產生的結果集，分割成 `COUNT` 函數所要套用的資料分割。 如未指定，此函數會將查詢結果集的所有資料列視為單一群組。 *order_by_clause* 會決定作業的邏輯順序。 如需詳細資訊，請參閱 [OVER 子句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)。 

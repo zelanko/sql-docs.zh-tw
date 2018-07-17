@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,15 +21,15 @@ helpviewer_keywords:
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39e6b56b64f6a9aafa259be99e86bb66cf75f3d1
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: b309bb7411d3c75aa1c98a219123efffc5dbca3e
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35250041"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782519"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,14 +27,15 @@ helpviewer_keywords:
 - application roles [SQL Server], permissions
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c1ad7d85472fe253dc507f34f225130b8d7beaf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa76a8c824b2390e54be422cdce5e668fee4c1e6
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943104"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY 資料庫主體權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,16 +25,16 @@ helpviewer_keywords:
 - comparison operators [SQL Server], null values
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe1bbff7ae50d44885c061eee1550adc78f1df11
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: bc2cd5ced0f0528be99b8b6c7531f04d7b87114a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582560"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788479"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]

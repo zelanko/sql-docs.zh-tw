@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - backup header information [SQL Server]
 ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 caps.latest.revision: 95
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 41f8c9931419d9fb2ba6baa52f01432e8b44b510
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: bb001613cea3dd94131d028329d2fed159b8fc7c
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702773"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36941984"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 陳述式 - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]

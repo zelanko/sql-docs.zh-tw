@@ -18,16 +18,16 @@ helpviewer_keywords:
 - databases [SQL Server], security
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5077606e63d4c6c3233cedbda038cc5829e6be96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.openlocfilehash: 6c161f1799bbee3e0d775a9538e679da0f2d9e45
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "35999974"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942354"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
