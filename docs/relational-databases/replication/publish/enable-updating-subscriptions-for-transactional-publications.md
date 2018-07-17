@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c9f031139b8ebe4e3df498b3bcffb5ebc2d5368
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bae2a9aa176ef20c0eae1500c273071e0b3ef649
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964283"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359321"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>啟用交易式發行集的可更新訂閱
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "32964283"
   
 3.  在發行者端，執行 [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **@publication** 指定步驟 3 中所使用的發行集名稱，以及快照集代理程式針對 **@job_name** 以及 **@password**＞。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，則也必須指定 **@publisher_security_mode** 的值 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 **@publisher_login** @password **@publisher_password**中啟用交易式發行集的訂閱更新。 這麼做會為發行集建立快照集代理程式作業。  
   
-4.  將發行項加入至發行集。 如需詳細資訊，請參閱 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+4.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 5.  在訂閱者上，建立此發行集的更新訂閱。   
   
@@ -89,13 +88,13 @@ ms.locfileid: "32964283"
   
     -   如果您不確定散發資料庫是否有佇列讀取器代理程式作業存在，請在散發資料庫的散發者上執行 [sp_helpqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)。 如果結果集是空的，就必須建立佇列讀取器代理程式作業。  
   
-    -   在散發者端，執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)。 針對 **@job_name** @password **@password**中啟用交易式發行集的訂閱更新。 當佇列讀取器代理程式連接到發行者和訂閱者時，會使用這些認證。 如需詳細資訊，請參閱 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
+    -   在散發者端，執行 [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md)。 針對 **@job_name** @password **@password**中啟用交易式發行集的訂閱更新。 當佇列讀取器代理程式連接到發行者和訂閱者時，會使用這些認證。 如需詳細資訊，請參閱 [複寫代理程式安全性模型](../../../relational-databases/replication/security/replication-agent-security-model.md)。  
   
 3.  執行 [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)，並為 **@allow_queued_tran** 參數指定 **true** 的值，以及為 **@conflict_policy** 指定 **pub wins**、**sub reinit** 或 **sub wins** 的值。  
   
 4.  在發行者端，執行 [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)。 為 **@publication** 指定步驟 2 中所使用的發行集名稱，以及針對 **@snapshot_job_name** @password **@password**中啟用交易式發行集的訂閱更新。 如果代理程式會在連接到發行者時使用 SQL Server 驗證，則也必須指定 **@publisher_security_mode** 的值 **@publisher_security_mode** ，以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 **@publisher_login** @password **@publisher_password**中啟用交易式發行集的訂閱更新。 這麼做會為發行集建立快照集代理程式作業。  
   
-5.  將發行項加入至發行集。 如需詳細資訊，請參閱 [Define an Article](../../../relational-databases/replication/publish/define-an-article.md)。  
+5.  將發行項加入至發行集。 如需詳細資訊，請參閱 [定義發行項](../../../relational-databases/replication/publish/define-an-article.md)。  
   
 6.  在訂閱者上，建立此發行集的更新訂閱。  
   
