@@ -25,7 +25,6 @@
 ## [使用複製資料庫精靈](use-the-copy-database-wizard.md)  
 ## [使用備份與還原複製資料庫](copy-databases-with-backup-and-restore.md)  
 ## [發行資料庫 (SQL Server Management Studio)](publish-a-database-sql-server-management-studio.md)  
-## [將 SQL Server Database 部署到 Microsoft Azure 虛擬機器](deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  
 # [資料庫卸離與附加](database-detach-and-attach-sql-server.md)  
 ## [使用卸離與附加移動資料庫 (Transact-SQL)](move-a-database-using-detach-and-attach-transact-sql.md)  
 ## [使用卸離與附加升級資料庫 (Transact-SQL)](upgrade-a-database-using-detach-and-attach-transact-sql.md)  

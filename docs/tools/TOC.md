@@ -33,4 +33,5 @@
 
 # sqlpackage
 ## [安裝 sqlpackage](sqlpackage-download.md)
+## [版本資訊](sqlpackage-release-notes.md)
 ## [sqlpackage 參考](sqlpackage.md)

@@ -53,6 +53,7 @@
 ### [完成精靈 (SSIS 套件升級精靈)](complete-the-wizard-ssis-package-upgrade-wizard.md)
 ### [升級套件 (SSIS 套件升級精靈)](upgrading-the-packages-ssis-package-upgrade-wizard.md)
 ## [SQL Server 匯入和匯出精靈](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)
+## [從 Excel 匯入或匯出至 Excel](load-data-to-from-excel-with-ssis.md)
 ## [套件開發的疑難排解工具 +](troubleshooting/troubleshooting-tools-for-package-development.md)
 ## [Integration Services 套件所記錄的事件](performance/events-logged-by-an-integration-services-package.md)
 ## [檢視記錄事件視窗中的記錄項目](view-log-entries-in-the-log-events-window.md)

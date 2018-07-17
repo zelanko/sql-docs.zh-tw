@@ -1,9 +1,4 @@
 # [SQL Server 2014 的線上叢書](books-online-for-sql-server-2014.md) 
-## [案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 複寫建置具有延展性和效能的企業生態系統](case-study-building-an-enterprise-ecosystem.md)
-## [索引設計指南](sql-server-index-design-guide.md)
-## [交易鎖定與資料列版本設定指南](sql-server-transaction-locking-and-row-versioning-guide.md)
-## [交易記錄架構與管理](sql-server-transaction-log-architecture-and-management.md)
-## [詞彙](glossary.md)
 
 # [Analysis Services +](../analysis-services/analysis-services.md)
 # [Data Quality Services +](../data-quality-services/data-quality-services.md)
@@ -15,6 +10,7 @@
 # [關聯式資料庫功能 +](../relational-databases/database-features.md)
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [適用於 SQL Server 2014 的教學課程 +](../tutorials/tutorials-for-sql-server-2014.md)
+# [詞彙](glossary.md)
 
 # [SQL Server 2014 的新功能 +](../sql-server/what-s-new-in-sql-server-2016.md)
 
@@ -30,4 +26,9 @@
 ## [升級建議程式 +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
 ## [安裝程式和服務安裝 +](../sql-server/install/setup-and-servicing-installation.md)
 # [設定管理員說明 +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+
+# [索引設計指南](sql-server-index-design-guide.md)
+# [交易鎖定與資料列版本設定指南](sql-server-transaction-locking-and-row-versioning-guide.md)
+# [交易記錄架構與管理](sql-server-transaction-log-architecture-and-management.md)
+# [案例研究：使用 Microsoft Dynamics ERP 和 SQL Server 2014 複寫建置具有延展性和效能的企業生態系統](case-study-building-an-enterprise-ecosystem.md)
 

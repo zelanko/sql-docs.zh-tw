@@ -130,10 +130,11 @@
 ## [Analysis Services 範例](analysis-services-samples.md)
 
 # 參考
+## [Analysis Services 的 PowerShell 參考](../analysis-services/powershell/analysis-services-powershell-reference.md)  
+## [Power Pivot for SharePoint 的 PowerShell 參考](../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
 ## [MSDN 上的 Data Analysis Expressions (DAX)](https://msdn.microsoft.com/library/gg413422.aspx)
 ## [資料採礦延伸模組 (DMX)](../dmx/data-mining-extensions-dmx-reference.md)
 ## [多維度運算式 (MDX)](../mdx/analysis-services-language-reference.md)
-## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)
-## [PowerShell](../analysis-services/powershell/technical-reference-ssas.md)
+## [Power Query M](https://msdn.microsoft.com/library/mt211003.aspx)  
 ## [伺服器屬性](../analysis-services/server-properties/server-properties-in-analysis-services.md)
 ## [XML for Analysis (XMLA)](../analysis-services/xmla/xml-for-analysis-xmla-reference.md)
