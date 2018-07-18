@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.fn_backup_db_config (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978950"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|資料庫名稱。|  
 |db_guid|UNIQUEIDENTIFIER|唯一識別資料庫的識別碼。|  
@@ -61,7 +62,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |credential_name|SYSNAME|用來驗證儲存體帳戶之 SQL 認證的名稱。 NULL 值表示未設定 SQL 認證。|  
 |retention_days|INT|目前的保留期限 (以天為單位)。 NULL 值表示從未設定此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |is_managed_backup_enabled|INT|指出目前是否已啟用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。 值 1 表示目前已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]，值 0 表示已停用此資料庫的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
-|storage_url|NVARCHAR （1024)|儲存體帳戶的 URL。|  
+|storage_url|NVARCHAR(1024)|儲存體帳戶的 URL。|  
 |Encryption_algorithm|NCHAR(20)|傳回加密備份時所使用的目前加密演算法。|  
 |Encryptor_type|NCHAR(15)|傳回加密程式設定：憑證或非對稱金鑰。|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|憑證或非對稱金鑰的名稱。|  
@@ -69,7 +70,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
- 需要的成員資格**db_backupoperator**與資料庫角色**ALTER ANY CREDENTIAL**權限。 使用者不應被拒絕**VIEW ANY DEFINITION**權限。  
+ 需要的成員資格**db_backupoperator**資料庫角色**ALTER ANY CREDENTIAL**權限。 使用者不應被拒絕**VIEW ANY DEFINITION**權限。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回 'TestDB' 的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]組態  

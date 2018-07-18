@@ -1,6 +1,6 @@
 ---
 title: UserName (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 887af13c84fd06ead5a36564c0dda740a5f6d0b0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: f8c08855d70d6a880607cc4310e6adcabbf7d9ad
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581350"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743477"
 ---
 # <a name="username-mdx"></a>UserName (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回目前連接的網域名稱與使用者名稱。  
   

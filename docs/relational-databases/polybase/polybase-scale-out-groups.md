@@ -3,8 +3,6 @@ title: PolyBase 向外延展群組 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: polybase
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fd249645266a7d9477e2dc098817138d8f722d0
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d2b8f0ae4b0c251e14a4a5d68faf947e7abe31a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37265219"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase 向外延展群組
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

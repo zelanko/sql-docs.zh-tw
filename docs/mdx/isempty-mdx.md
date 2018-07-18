@@ -1,6 +1,6 @@
 ---
 title: IsEmpty (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ab2f65bbc15aecec93294225435d3d2d38fff062
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: dbed0eba3fec73d7134b1ce21275c28dbd387fcd
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578710"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740167"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回評估的運算式是否為空白資料格值。  
   
@@ -38,7 +38,7 @@ IsEmpty(Value_Expression)
 > [!NOTE]  
 >  成員的預設屬性就是成員的值。  
   
- **IsEmpty**函式是唯一能確實地測試空白資料格的空白資料格值具有特殊意義，因為[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
+ **IsEmpty**函式是唯一能確實地測試空白資料格的空白資料格值具有特殊意義，因為[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。  
   
 > [!IMPORTANT]  
 >  如果值運算式的評估會傳回錯誤，此函數會傳回**false**。 例如，屬性參考所參考的是無效或不存在的屬性時，值運算式會傳回錯誤。  

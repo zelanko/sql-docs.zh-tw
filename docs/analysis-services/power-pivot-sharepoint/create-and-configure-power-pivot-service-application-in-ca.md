@@ -1,5 +1,5 @@
 ---
-title: 建立及設定 Power Pivot 服務應用程式，在 CA |Microsoft 文件
+title: 在建立和設定 Power Pivot 服務應用程式 CA |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 581bcc4777121d42b8f7e6b629d98e26b49b425d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982600"
 ---
-# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>建立及設定 Power Pivot 服務應用程式，在 CA 中
+# <a name="create-and-configure-power-pivot-service-application-in-ca"></a>在建立和設定 Power Pivot 服務應用程式 CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式是 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 系統服務的共用服務執行個體。 每一個服務應用程式都有它自己的應用程式識別、組態設定、屬性以及內部資料儲存位置。  
   
@@ -56,13 +57,13 @@ ms.lasthandoff: 05/10/2018
   
 3.  選取 [SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式]。 如果它沒有出現在清單中，表示 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 未安裝或未正確設定。  
   
-4.  在 [建立新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式] 頁面中，輸入應用程式的名稱。 預設值是 PowerPivotServiceApplication\<數 >。 如果您要建立多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，描述性名稱將可協助其他系統管理員，了解如何使用應用程式。  
+4.  在 [建立新的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式] 頁面中，輸入應用程式的名稱。 預設值為 Powerpivotserviceapplication<number\<編號 >。 如果您要建立多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式，描述性名稱將可協助其他系統管理員，了解如何使用應用程式。  
   
 5.  在 [應用程式集區] 中，針對此應用程式建立新的應用程式集區 (建議作法)。 請針對此應用程式集區選取或建立受管理的帳戶。 請務必指定網域使用者帳戶。 網域使用者帳戶會啟用 SharePoint 的受管理帳戶功能，好讓您在一個地方更新密碼和帳戶資訊。 如果您計劃將部署向外延展，以包括將在相同識別下執行的其他服務執行個體，也需要網域帳戶。  
   
 6.  在 **[資料庫伺服器]** 中，預設值是主控伺服陣列組態資料庫的 SQL Server Database Engine 執行個體。 您可以使用這部伺服器，或選擇不同的 SQL Server。  
   
-7.  在**資料庫名稱**，預設值是 Powerpivotserviceapplication1_<guid>\<guid >。 您必須針對每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式建立唯一的資料庫。 預設的資料庫名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。  
+7.  在 **資料庫名稱**，預設值是 powerpivotserviceapplication1_<guid>\<guid >。 您必須針對每個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式建立唯一的資料庫。 預設的資料庫名稱會對應至服務應用程式的預設名稱。 如果您輸入唯一的服務應用程式名稱，請依照類似的命名慣例來命名資料庫名稱，以利同時管理它們。  
   
 8.  在 **[資料庫驗證]** 中，預設值是 Windows 驗證。 如果您選擇 **[SQL 驗證]**，請參考 SharePoint 管理員指南，以了解有關如何在 SharePoint 部署中使用這個驗證類型的最佳作法。  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
   
      如需服務關聯的詳細資訊，請參閱 [在管理中心將 Power Pivot 服務應用程式連接到 SharePoint Web 應用程式](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)。  
   
-10. 按一下 **[確定]**。 此服務將會與伺服器陣列服務應用程式清單中的其他受管理的服務一起顯示。  
+10. 按一下 **[確定].** 此服務將會與伺服器陣列服務應用程式清單中的其他受管理的服務一起顯示。  
   
 ##  <a name="ConfigApp"></a> 設定 Power Pivot 服務應用程式  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式是使用預設組態所建立。 在大部分的情況下建議使用預設值。 只有在您遇到回應時間變慢或已捨棄連接時，或是如果您要改變特定 SharePoint Web 應用程式的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務組態時，才變更它們。  
@@ -105,9 +106,9 @@ ms.lasthandoff: 05/10/2018
   
 9. 在 [資料重新整理] 的 **[上班時間]** 中，您可以指定定義上班時間的小時範圍。 資料重新整理排程可以在下班後執行，以取得在正常上班時間所產生的交易資料。  
   
-10. 您可以在 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 無人看管的資料重新整理帳戶] 中指定預先定義的 Secure Store Service 目標應用程式，它會儲存預先定義的帳戶來執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理作業。 請務必指定目標應用程式名稱，而非識別碼。 如果您在 SQL Server 安裝程式中使用 [新的伺服器] 選項來安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，就會自動建立自動資料整理的目標應用程式。 否則，您必須手動建立目標應用程式。 如需如何設定帳戶的相關指示，請參閱 [設定 PowerPivot 無人看管的資料重新整理帳戶 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
+10. 您可以在 [[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 無人看管的資料重新整理帳戶] 中指定預先定義的 Secure Store Service 目標應用程式，它會儲存預先定義的帳戶來執行 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理作業。 請務必指定目標應用程式名稱，而非識別碼。 如果您在 SQL Server 安裝程式中使用 [新的伺服器] 選項來安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint，就會自動建立自動資料整理的目標應用程式。 否則，您必須手動建立目標應用程式。 如需如何設定帳戶的相關指示，請參閱[設定 PowerPivot 無人看管的資料重新整理帳戶 (PowerPivot for SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)。  
   
-11. 在 **[允許使用者輸入自訂的 Windows 認證]** 中，您可以選取或清除可指定排程擁有者是否可以輸入任意 Windows 認證來執行資料重新整理排程的核取方塊。 如果您選取這個核取方塊， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式將針對每組預存認證建立及管理目標應用程式。 如需詳細資訊，請參閱 [設定 Power Pivot 資料重新整理的預存認證 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。  
+11. 在 **[允許使用者輸入自訂的 Windows 認證]** 中，您可以選取或清除可指定排程擁有者是否可以輸入任意 Windows 認證來執行資料重新整理排程的核取方塊。 如果您選取這個核取方塊， [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式將針對每組預存認證建立及管理目標應用程式。 如需詳細資訊，請參閱[設定 Power Pivot 資料重新整理的預存認證 (PowerPivot for SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75)。  
   
 12. 在 **[最大處理記錄長度]** 中，您可以指定要保留資料重新整理處理的記錄多久。 此資訊會出現在資料重新整理記錄頁面中，這些頁面會針對使用資料重新整理的每個活頁簿而保留。 此資訊也會出現在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理儀表板中。  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  若是 **[custom]**，請選取您想要使用的每個服務應用程式連接旁邊的核取方塊。 如果您具有多個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式 (由設為 [Power Pivot 服務應用程式 Proxy] 的類型指出)，請務必只選擇一個。  
   
-6.  按一下 **[確定]**。  
+6.  按一下 [確定] 。  
   
 ##  <a name="EditGSA"></a> 編輯服務應用程式屬性  
  使用下列指示來重新開啟屬性頁，以指定服務的應用程式名稱、應用程式集區、資料庫設定以及服務關聯。  

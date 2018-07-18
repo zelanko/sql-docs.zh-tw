@@ -1,13 +1,12 @@
 ---
-title: SqlDataRecord 物件 |Microsoft 文件
+title: SqlDataRecord 物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,19 +17,20 @@ caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 414d1bfd7ac105c5c99bc7b6d1a64bbe40ca0f7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eed4ff836262fdf9a2a0cbb4d48e7b9fc7c4b94a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359920"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **SqlDataRecord**物件都代表單一資料列的資料，以及其相關的中繼資料。  
   
- Managed 預存程序可能會傳送給用戶端的結果集不是來自**SqlDataReader**。 **SqlDataRecord**類別以及**SendResultsStart**， **SendResultsRow**，和**SendResultsEnd**方法**SqlPipe**物件，可讓自訂結果集給用戶端傳送的預存程序。  
+ Managed 預存程序可能會傳送至用戶端的結果集不是來自**SqlDataReader**。 **SqlDataRecord**類別，以及使用**SendResultsStart**， **SendResultsRow**，以及**SendResultsEnd**方法**SqlPipe**物件，可讓自訂結果集傳送至用戶端的預存程序。  
   
- 如需詳細資訊，請參閱**Microsoft.SqlServer.Server.SqlDataRecord**類別參考文件中的.NET Framework SDK 文件。  
+ 如需詳細資訊，請參閱 < **Microsoft.SqlServer.Server.SqlDataRecord**類別中的.NET Framework SDK 文件的參考文件。  
   
 ## <a name="example"></a>範例  
  以下範例會建立一筆新的員工記錄，並將它傳回給呼叫端。  

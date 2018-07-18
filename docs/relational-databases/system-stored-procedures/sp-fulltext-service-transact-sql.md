@@ -29,6 +29,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33259488"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_fulltext_service [ [@action=] 'action'
   
 ## <a name="arguments"></a>引數  
  [  **@action=**] **'***動作***'**  
- 這是要變更或重設的屬性。 *動作*是**nvarchar（100)，**沒有預設值。 取得一份*c*動作屬性，可以設定的值及其說明，請參閱底下的表格*值*引數。 這個引數會傳回下列屬性：資料類型、目前執行中的值、最小值或最大值，以及已被取代的狀態 (如果適用的話)。  
+ 這是要變更或重設的屬性。 *動作*是**nvarchar（100)，** 沒有預設值。 取得一份*c*動作屬性，可以設定的值及其說明，請參閱底下的表格*值*引數。 這個引數會傳回下列屬性：資料類型、目前執行中的值、最小值或最大值，以及已被取代的狀態 (如果適用的話)。  
   
  [  **@value=**]*值*  
  這是指定的屬性值。 *值*是**sql_variant**，預設值是 NULL。 如果@value為 null， **sp_fulltext_service**傳回目前的設定。 這份資料表會列出動作屬性及其描述，以及可設定的值之清單。  

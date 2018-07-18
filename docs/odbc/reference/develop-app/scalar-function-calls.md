@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913393"
 ---
 # <a name="scalar-function-calls"></a>純量函式呼叫
 純量函數會傳回每個資料列的值。 比方說，絕對值純量函數會採用數字的資料行做為引數和傳回的資料行中的每個值的絕對值。 是逸出序列呼叫純量函式  

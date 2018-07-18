@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538858"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>平行處理資料倉儲的 tempdb 資料庫
 **tempdb**會儲存使用者資料庫的本機暫存資料表的 SQL Server PDW 系統資料庫。 暫存資料表，通常可用來改善查詢效能。 比方說，您可以使用的暫存資料表，使模組化指令碼，並重複使用計算的資料。  

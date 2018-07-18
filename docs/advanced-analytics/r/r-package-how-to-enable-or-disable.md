@@ -9,10 +9,10 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: 997db094cb5e69e0cbf82d9a7e247cb13ec1d452
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34707656"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>啟用或停用的 SQL Server 的遠端封裝管理

@@ -3,8 +3,6 @@ title: 設定專案選項 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bd7f7c08b6fbf74b11a99cf9ae662e304ec62869
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af0584a64be3ec5454517a8b00349b1261835026
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779394"
 ---
 # <a name="setting-project-options-sybasetosql"></a>設定專案選項 (SybaseToSQL)
 每個 SSMA 專案，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 SQL azure、 使用者介面和資料移轉設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 移轉資料或[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，請確認您的組態選項都適用於專案。  
@@ -46,11 +45,11 @@ SSMA 會有五種專案設定：
   
 它也會有四種模式來設定這些設定：  
   
-1.  預設值  
+1.  預設  
   
 2.  開放式  
   
-3.  [完整]  
+3.  完整  
   
 4.  Custom  
   
@@ -85,7 +84,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     -   若要指定自訂設定，請直接選取或輸入新的設定或值。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 您也可以自訂設定目前的專案。 這些設定會儲存到目前的專案檔。  
   
@@ -99,7 +98,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     -   若要指定自訂模式，在**模式**下拉式清單方塊中，選取**自訂**、 左窗格中選取一個選項，按一下 設定 或 值在右窗格中，然後選取或輸入新的設定或值。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 ## <a name="next-steps"></a>後續步驟  
 移轉的下一個步驟取決於您專案的需求：  

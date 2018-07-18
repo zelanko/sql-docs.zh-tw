@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025515"
 ---
 # <a name="report-builder-functions---previous-function"></a>報表產生器函式 - Previous 函式
   傳回某個項目在指定之範圍內上一個執行個體的值或指定的彙總值。  

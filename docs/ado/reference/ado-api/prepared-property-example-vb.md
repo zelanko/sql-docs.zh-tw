@@ -2,7 +2,6 @@
 title: 備妥屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2a104e2b18f80d390e940c6edfea4368ffa7300
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66efabdcbd3475a873dea67aa8540f9c36a560a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280597"
 ---
 # <a name="prepared-property-example-vb"></a>已備妥的屬性範例 (VB)
 這個範例會示範[已準備](../../../ado/reference/ado-api/prepared-property-ado.md)開啟兩個屬性[命令](../../../ado/reference/ado-api/command-object-ado.md)物件 — 一個備妥，尚未準備好的另一個。  

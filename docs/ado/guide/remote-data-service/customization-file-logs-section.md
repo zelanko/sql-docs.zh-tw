@@ -2,7 +2,6 @@
 title: 自訂檔案記錄區段 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37bcfdea2c98295d2869cd4bc5766e89758e2773
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b80034b1d2668960aa918b1c66df878eb75ca86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274007"
 ---
 # <a name="customization-file-logs-section"></a>自訂檔案記錄檔 > 一節
 **記錄**區段包含指定名稱的作業期間會將錯誤記錄檔的記錄檔項目**DataFactory**。  
@@ -42,7 +42,7 @@ FileName
   
 ## <a name="remarks"></a>備註  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |**err**|常值字串，表示這是記錄檔項目。|  
 |*FileName*|完整路徑和檔案名稱。 典型的檔案名稱是**c:\msdfmap.log**。|  

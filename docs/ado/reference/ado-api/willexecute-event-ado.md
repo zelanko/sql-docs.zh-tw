@@ -2,7 +2,6 @@
 title: WillExecute 事件 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d9fee251d53f5966f83fb1a49d3ecd75fe0813
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0fd9c97018c5c15710067298a88b4996c5a699f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282877"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute 事件 (ADO)
 **WillExecute**事件被呼叫之前暫止命令的連接上執行。  
@@ -47,7 +47,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *LockType*  
  A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) ，其中包含的鎖定類型**資料錄集**，將會開啟。 使用這個參數，您可以變更鎖定期間的任何型別為**RecordsetOpen**作業。 *LockType*將忽略任何其他作業。  
   
- *選項。*  
+ *選項*  
  A**長**值，指出選項，可用來執行命令或開啟**資料錄集**。  
   
  *adStatus*  

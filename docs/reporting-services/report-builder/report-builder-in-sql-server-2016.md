@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022925"
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016 的報表產生器
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 是撰寫分頁報表的工具，適合喜歡在獨立的環境中工作，而不是使用 Visual Studio 報表設計師的商務使用者。  當您設計分頁報表時，您建立的報表定義會指定資料的取得位置、要取得的資料，以及資料的顯示方式。 當您執行報表時，報表處理器會採用已指定的報表定義、擷取資料，然後將它與報表配置結合，以便產生報表。 您可以在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 中預覽報表，然後將報表發行至原生模式或 SharePoint 整合模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器，讓其他人執行報表。  

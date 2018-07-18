@@ -1,15 +1,13 @@
 ---
 title: 執行 SQL Server Integration Services (SSIS) Scale Out 中的套件 | Microsoft Docs
-ms.description: This article describes how to run SSIS packages in Scale Out
-ms.custom: ''
+description: 本文描述如何在 Scale Out 中執行 SSIS 套件
+ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
@@ -18,11 +16,12 @@ ms.author: haoqian
 manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 3566938f25a646206e203810a84451829b0206cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4179a458fd159248ffacb05feb60bc2834535e05
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400860"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>執行 Integration Services (SSIS) Scale Out 中的套件
 將套件部署至 Integration Services 伺服器之後，即可使用下列其中一種方法在 Scale Out 中予以執行：

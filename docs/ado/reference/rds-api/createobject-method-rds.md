@@ -2,7 +2,6 @@
 title: CreateObject 方法 (RDS) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5759c1b1b9faaaa9262879a614913a5fcf16c42
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0307edbf2e9b5a6495dd84c45c8dc647fe5bdefd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287567"
 ---
 # <a name="createobject-method-rds"></a>CreateObject 方法 (RDS)
 建立目標商務物件的 proxy，並傳回的指標。 要與商務物件的通訊會透過網際網路傳送要求和資料的伺服器端 stub proxy 封裝和把資料。 同處理序元件物件，會使用任何 proxy，只是物件的指標會提供。  

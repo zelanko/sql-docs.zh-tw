@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901463"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 資料類型
 下表顯示如何將 Microsoft Excel 驅動程式資料類型對應至 ODBC SQL 資料類型。 Microsoft Excel 驅動程式會將這些資料類型指派給資料行中的資料為基礎的 Microsoft Excel 資料表中資料行。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902013"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName （桌面資料庫驅動程式）
 **SQLGetCursorName**支援，但只能使用資料指標程式庫時，因為驅動程式中不支援定位的操作。

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022357"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>報表產生器中運算式的自訂程式碼及組件參考 (SSRS)
   您可以加入內嵌於報表之自訂程式碼的參考，或是建置並儲存至電腦以及部署至報表伺服器之自訂組件的參考。 請將內嵌程式碼用在自訂常數、複雜函數或在單一報表內重複使用的函數上。 請使用自訂程式碼組件，將程式碼維護在單一位置並共用程式碼，讓多份報表使用。 自訂程式碼可能會包含新的自訂常數、變數、函數或副程式。 您可以包含內建集合 (例如 Parameters 集合) 的唯讀參考， 但是不能將報表資料值集傳遞至自訂函數 (尤其是不支援自訂彙總)。  
@@ -125,7 +126,7 @@ End Function
   
  下表包含從自訂程式碼參考內建 `Parameters` 集合的範例：  
   
- **將整個全域參數集合傳遞給自訂程式碼。**這個函數會傳回特定報表參數 *MyParameter*的值。  
+ **將整個全域參數集合傳遞給自訂程式碼。** 這個函數會傳回特定報表參數 *MyParameter*的值。  
   
  運算式中的參考 `=Code.DisplayAParameterValue(Parameters)`  
   

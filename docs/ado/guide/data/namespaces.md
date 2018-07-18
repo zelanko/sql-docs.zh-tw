@@ -2,7 +2,6 @@
 title: 命名空間 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93a3aca2aee11ed1f78fb33ca286b171a28f62d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 419d11660d88f102cfa92628f4ee16fb89d8c422
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272087"
 ---
 # <a name="namespaces"></a>命名空間
 在 ADO 中的 XML 持續性格式會使用下列四個命名空間。  
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>備註  
  在 ADO 中的 XML 持續性格式會使用下列四個命名空間。  
   
-|Prefix|Description|  
+|Prefix|描述|  
 |------------|-----------------|  
 |s|是指 「 XML 資料 」 命名空間包含的項目和目前資料錄集的結構描述定義的屬性。|  
 |dt|參考的資料型別定義的規格。|  

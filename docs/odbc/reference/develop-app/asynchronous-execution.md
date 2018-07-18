@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907453"
 ---
 # <a name="asynchronous-execution"></a>非同步執行
 ODBC 支援陳述式和連線作業的非同步的作業。 有兩種方式可判斷非同步作業完成：  

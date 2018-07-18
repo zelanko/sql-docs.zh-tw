@@ -2,7 +2,6 @@
 title: 資料錄集的界限 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20373bc374d1f5f5b75522ede5255a376ab6f657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49282472acf783008a45d0b66f12e0aefc13ecb6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270927"
 ---
 # <a name="boundaries-of-a-recordset"></a>資料錄集的界限
 **資料錄集**支援**BOF**和**EOF**區分的開頭和結尾，分別資料集的屬性。 您可以將**BOF**和**EOF**為位於開頭和結尾的 「 虛設 」 記錄**資料錄集**。 計算**BOF**和**EOF**，我們的範例**資料錄集**現在看起來會像這樣：  

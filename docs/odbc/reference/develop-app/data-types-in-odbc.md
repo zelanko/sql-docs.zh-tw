@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910723"
 ---
 # <a name="data-types-in-odbc"></a>ODBC 中的資料類型
 ODBC 使用兩組資料類型： SQL 資料類型和 C 資料類型。 SQL 資料類型會以資料來源，並在 C 程式碼應用程式中使用的 C 資料類型。  

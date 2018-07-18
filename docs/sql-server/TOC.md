@@ -9,11 +9,11 @@
 ## [SQL Server 版本的計算容量限制](compute-capacity-limits-by-edition-of-sql-server.md)
 ## [客戶經驗改進計畫](customer-experience-improvement-program-for-sql-server-data-tools.md)
 ## [設定 SQL Server 將意見反應傳送給 Microsft](sql-server-customer-feedback.md)
-### 合作夥伴
-#### [監視](partner-monitor-sql-server.md)
-#### [高可用性及災害復原](partner-hadr-sql-server.md)
-#### [管理](partner-management-sql-server.md)
-#### [開發](partner-dev-sql-server.md)
+## 合作夥伴
+### [監視](partner-monitor-sql-server.md)
+### [高可用性及災害復原](partner-hadr-sql-server.md)
+### [管理](partner-management-sql-server.md)
+### [開發](partner-dev-sql-server.md)
 
 # [新文章及更新的文章](new-updated-sql-server.md)
 

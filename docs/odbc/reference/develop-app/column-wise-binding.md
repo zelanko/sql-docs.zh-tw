@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909773"
 ---
 # <a name="column-wise-binding"></a>資料行取向繫結
 當使用資料行取向的繫結，應用程式將會傳回資料的每個資料行繫結一或兩個，或在某些情況下的三個陣列。 第一個陣列保留的資料值，而第二個陣列會保留長度/指標緩衝區。 指標和長度的值可以儲存在個別的緩衝區的 SQL_DESC_INDICATOR_PTR 和 SQL_DESC_OCTET_LENGTH_PTR 的描述項欄位設為不同的值;如果這麼做，第三個陣列會繫結。 每個陣列包含資料列集內有資料列的元素。  

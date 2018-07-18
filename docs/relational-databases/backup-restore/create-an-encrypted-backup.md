@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919233"
 ---
 # <a name="create-an-encrypted-backup"></a>建立加密的備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  使用下列步驟建立要存放到本機磁碟的資料庫加密備份。 此範例會使用稱為 MyTestDB 的使用者資料庫。  
   
-1.  **建立主要資料庫的資料庫主要金鑰︰**選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]。  
+1.  **建立主要資料庫的資料庫主要金鑰︰** 選擇要儲存在資料庫中之主要金鑰複本的加密密碼。 連接到 Database Engine，再啟動新的查詢視窗，將下列範例複製並貼到新的查詢視窗中，然後按一下 [執行]。  
   
     ```  
     -- Creates a database master key.   
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
     ```  
   
-2.  **建立備份憑證︰**建立主要資料庫的備份憑證。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**  
+2.  **建立備份憑證︰** 建立主要資料庫的備份憑證。 將下列範例複製並貼入查詢視窗中，然後按一下 **[執行]**  
   
     ```  
     Use Master  
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
 -   主要資料庫的資料主要金鑰，以及 SQL Server 執行個體的憑證或非對稱金鑰。 如需加密需求及權限的資訊，請參閱[備份加密](../../relational-databases/backup-restore/backup-encryption.md)。  
   
-1.  **建立 SQL Server 認證：**若要建立 SQL Server 認證，請連接到 Database Engine，再開啟新的查詢視窗，複製並貼上下列範例，然後按一下 [執行]。  
+1.  **建立 SQL Server 認證：** 若要建立 SQL Server 認證，請連接到 Database Engine，再開啟新的查詢視窗，複製並貼上下列範例，然後按一下 [執行]。  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -104,7 +105,7 @@ ms.lasthandoff: 05/03/2018
   
     ```  
   
-3.  **建立備份憑證︰**建立主要資料庫的備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]。  
+3.  **建立備份憑證︰** 建立主要資料庫的備份憑證。 複製下列範例，並將其貼到查詢視窗中，然後按一下 [執行]。  
   
     ```  
     USE Master;  
@@ -115,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
     ```  
   
-4.  **備份資料庫：**指定要使用的加密演算法與憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
+4.  **備份資料庫：** 指定要使用的加密演算法與憑證。 複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

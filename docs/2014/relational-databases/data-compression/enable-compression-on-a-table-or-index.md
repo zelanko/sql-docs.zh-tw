@@ -1,0 +1,255 @@
+---
+title: 啟用資料表或索引的壓縮 | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords:
+- sql12.swb.compwiz.selectaction.f1
+- sql12.swb.compwiz.welcome.f1
+- sql12.swb.compwiz.scriptfileoption.f1
+- sql12.swb.compwiz.createjob.f1
+- sql12.swb.compwiz.progress.f1
+- sql12.swb.compwiz.outputoptions.f1
+- sql12.swb.compwiz.compressiontype.f1
+- sql12.swb.compwiz.summary.f1
+helpviewer_keywords:
+- data compression wizard
+- compression [SQL Server], enable
+ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
+caps.latest.revision: 9
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 875d94f869a1111c4f859c90da8075577a246ccb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277274"
+---
+# <a name="enable-compression-on-a-table-or-index"></a>啟用資料表或索引的壓縮
+  本主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中啟用資料表或索引的壓縮。  
+  
+ **本主題內容**  
+  
+-   **開始之前：**  
+  
+     [限制事項](#Restrictions)  
+  
+     [Security](#Security)  
+  
+-   **若要使用下列項目來啟用資料表或索引的壓縮：**  
+  
+     [Transact-SQL](#SSMSProcedure)  
+  
+     [Transact-SQL](#TsqlProcedure)  
+  
+##  <a name="BeforeYouBegin"></a> 開始之前  
+  
+###  <a name="Restrictions"></a> 限制事項  
+  
+-   系統資料表無法啟用壓縮。  
+  
+-   如果資料表是堆積，ONLINE 模式的重建作業將會是單一執行緒。 請針對多執行緒的堆積重建作業使用 OFFLINE 模式。 如需資料壓縮的詳細資訊，請參閱 [資料壓縮](data-compression.md)。  
+  
+-   您無法在資料表具有非對齊索引時變更單一分割區的壓縮設定。  
+  
+###  <a name="Security"></a> 安全性  
+  
+####  <a name="Permissions"></a> 權限  
+ 需要資料表或索引的 ALTER 權限。  
+  
+##  <a name="SSMSProcedure"></a> 使用 SQL Server Management Studio  
+  
+#### <a name="to-enable-compression-on-a-table-or-index"></a>若要啟用資料表或索引的壓縮  
+  
+1.  在 [物件總管] 中，展開包含您想要壓縮之資料表的資料庫，然後展開 **[資料表]** 資料夾。  
+  
+2.  若要壓縮索引，請展開包含您想要壓縮之索引的資料表，然後展開 **[索引]** 資料夾。  
+  
+3.  以滑鼠右鍵按一下要壓縮的資料表或索引、指向 [儲存體]，然後選取 [管理壓縮]。  
+  
+4.  在 [資料壓縮精靈] 的 **[歡迎使用資料壓縮精靈]** 頁面上，按 **[下一步]**。  
+  
+5.  在 **[選取壓縮類型]** 頁面上，選取要套用至您想要壓縮之資料表或索引中每個資料分割的壓縮類型。 完成後，請按 **[下一步]**。  
+  
+     **[選取壓縮類型]** 頁面提供了下列選項：  
+  
+     [所有分割區使用相同的壓縮類型] 核取方塊  
+     選取此選項以針對所有資料分割設定相同的壓縮設定。 如此會啟用選取方塊，並停用方格中的 **[壓縮類型]** 資料行。 選取之後，相鄰清單中的選項包括 **[無]**、 **[資料列]** 和 **[頁面]**。  
+  
+     **資料分割編號**  
+     列出資料表或索引中的每個資料分割。 此資料行是唯讀的。  
+  
+     **[壓縮類型]**  
+     選取每個資料分割的壓縮選項。 在選取 **[所有資料分割使用相同的壓縮類型]** 時無法使用。 清單選項包括 **[無]**、 **[資料列]** 和 **[頁面]**。  
+  
+     **界限**  
+     顯示資料分割的界限。 此資料行是唯讀的。  
+  
+     **資料列計數**  
+     顯示此資料分割中的資料列數目。 此資料行是唯讀的。  
+  
+     **目前空間**  
+     顯示此資料分割所佔的目前空間 (以 MB 表示)。 此資料行是唯讀的。  
+  
+     **要求壓縮的空間**  
+     在按一下 [計算] 之後，此資料行會使用在 [壓縮類型] 資料行中指定的設定顯示壓縮之後每個分割區的估計大小。 此資料行是唯讀的。  
+  
+     **計算**  
+     按一下此選項可使用在 [壓縮類型] 資料行中指定的設定，估計壓縮之後每個分割區的大小。  
+  
+6.  在 **[選取輸出選項]** 頁面上，指定要如何完成壓縮。 選取 **[建立指令碼]** ，根據精靈中先前的步驟建立 SQL 指令碼。 選取 **[立即執行]** ，在完成精靈中的其餘所有頁面後建立新的分割區資料表。 選取 **[排程]** ，在預先定義的未來日期建立新的分割區資料表。  
+  
+     如果您選取 **[建立指令碼]**，在 **[指令碼選項]** 底下可以使用下列選項：  
+  
+     **編寫指令碼至檔案**  
+     產生指令碼做為 .sql 檔案。 在 **[檔案名稱]** 方塊中輸入檔案名稱和位置，或按一下 **[瀏覽]** 開啟 **[指令碼檔案位置]** 對話方塊。 從 **[另存新檔]**，選取 **[Unicode 文字]** 或 **[ANSI 文字]**。  
+  
+     **編寫指令碼至剪貼簿**  
+     將指令碼儲存至剪貼簿。  
+  
+     **編寫指令碼至新增查詢視窗**  
+     產生指令碼至新的 [查詢編輯器] 視窗。 這是預設選項。  
+  
+     如果您選取 **[排程]**，請按一下 **[變更排程]**。  
+  
+    1.  在 **[新增作業排程]** 對話方塊的 **[名稱]** 方塊中，輸入作業排程的名稱。  
+  
+    2.  在 **[排程類型]** 清單，選取排程類型：  
+  
+        -   **當 SQL Server Agent 啟動時自動啟動**  
+  
+        -   **只要 CPU 閒置就啟動**  
+  
+        -   **重複執行**： 如果您的新分割區資料表會使用新資訊定期更新，請選取此選項。  
+  
+        -   **執行一次**： 這是預設選項。  
+  
+    3.  選取或清除 **[已停用]** 核取方塊，以啟用或停用排程。  
+  
+    4.  如果您選取 **[重複執行]**：  
+  
+        1.  在 **[頻率]** 底下的 **[發生於]** 清單中，指定發生頻率：  
+  
+            -   如果您選取 **[每天]**，在 **[重複頻率]** 方塊中，輸入幾天重複一次作業排程的頻率。  
+  
+            -   如果您選取 **[每週]**，在 **[重複頻率]** 方塊中，輸入幾週重複一次作業排程的頻率。 選取一週中執行作業排程是在星期幾。  
+  
+            -   如果您選取 **[每月]**，可以選取 **[天]** 或 **[於]**。  
+  
+                -   如果您選取 **[天]**，請輸入執行作業排程的當月日期以及幾個月重複一次作業排程的頻率。 例如，如果要在每兩個月的 15 號執行一次作業排程，請選取 **[天]** ，然後在第一個方塊中輸入 “15”，並在第二個方塊中輸入 “2”。 請注意，在最後一個方塊中允許的最大數目是 “99”。  
+  
+                -   如果您選取 **[於]**，請選取執行作業排程的當月一週中特定的星期幾，以及幾個月重複一次作業排程的頻率。 例如，如果要在每兩個月的最後一個工作日執行一次作業排程，請選取 **[天]**，然後在第一個清單中選取 **[最後一個]** ，在第二個清單中選取 **[工作日]** ，然後在最後一個方塊中輸入 “2”。 您也可以在前兩個清單中選取 [第一個]、[第二個]、[第三個] 或 [第四個]，以及特定工作日 (例如星期日或星期三)。 請注意在最後一個方塊中允許的最大數目是 “99”。  
+  
+        2.  在 **[每日頻率]** 底下，指定在執行作業排程當天重複作業排程的頻率：  
+  
+            -   如果您選取 **[執行一次於]**，請在 **[執行一次於]** 方塊中輸入執行作業排程的當天特定時間。 輸入時、分鐘和秒的時間，以及上午或下午。  
+  
+            -   如果您選取 **[重複執行於每]**，請在 **[頻率]** 底下指定在所選當天執行作業排程的頻率。 例如，如果要在執行作業排程的當天每 2 個小時重複一次作業排程，請選取 [重複執行於每]，在第一個方塊中輸入 “2”，然後在清單中選取 [小時]。 您也可以從這個清單中選取 [分鐘] 和 [秒]。 請注意，在第一個方塊中允許的最大數目是 “100”。  
+  
+                 在 **[開始時間]** 方塊中，輸入作業排程應該開始執行的時間。 在 **[結束時間]** 方塊中，輸入作業排程應該停止重複的時間。 輸入時、分鐘和秒的時間，以及上午或下午。  
+  
+        3.  在 **[持續時間]** 底下的 **[開始日期]**，輸入您希望作業排程開始執行的日期。 選取 **[結束日期]** 或 **[沒有結束日期]** ，以指示作業排程應該停止執行的日期。 如果您選取 **[結束日期]**，請輸入您希望作業排程停止執行的日期。  
+  
+    5.  如果您選取 [執行一次]，請在 [僅執行一次於] 底下的 [日期] 方塊中，輸入將要執行作業排程的日期。 在 **[時間]** 方塊中，輸入將要執行作業排程的時間。 輸入時、分鐘和秒的時間，以及上午或下午。  
+  
+    6.  在 **[摘要]** 底下的 **[描述]**，確認所有作業排程設定是否都正確。  
+  
+    7.  按一下 [確定] 。  
+  
+     完成這個頁面之後，請按 **[下一步]**。  
+  
+7.  在 **[檢閱摘要]** 頁面上，展開 **[檢閱您的選取項目]** 底下的所有可用選項，確認所有壓縮設定是否都正確。 如果一切如預期，請按一下 **[完成]**。  
+  
+8.  在 **[壓縮精靈進度]** 頁面上，監視 [建立資料分割精靈] 動作的狀態資訊。 根據您在精靈中選取的選項，[進度] 頁面可能會包含一個或多個動作。 頂端的方塊會顯示精靈的整體狀態以及精靈已接收的狀態、錯誤和警告訊息數。  
+  
+     **[壓縮精靈進度]** 頁面提供了下列選項：  
+  
+     **詳細資料**  
+     提供從精靈所採取的動作傳回的動作、狀態和任何訊息。  
+  
+     **動作**  
+     指定每個動作的類型和名稱。  
+  
+     **狀態**  
+     指出整個精靈動作傳回 [成功] 或 [失敗] 的值。  
+  
+     **Message**  
+     提供從程序所傳回的任何錯誤或警告訊息。  
+  
+     **報表**  
+     建立包含 [建立分割區精靈] 結果的報表。 選項為 **[檢視報表]**、 **[將報表儲存到檔案]**、 **[複製報表到剪貼簿]** 和 **[以電子郵件傳送報表]**。  
+  
+     **檢視報表**  
+     開啟 [檢視報表] 對話方塊，其中包含 [建立分割區精靈] 進度的文字報表。  
+  
+     **將報表儲存到檔案**  
+     開啟 [另存報表] 對話方塊。  
+  
+     **複製報表到剪貼簿**  
+     將精靈進度報表的結果複製到剪貼簿。  
+  
+     **[以電子郵件傳送報表]**  
+     將精靈進度報表的結果複製到電子郵件。  
+  
+     完成後，請按一下 **[關閉]**。  
+  
+##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
+  
+#### <a name="to-enable-compression-on-a-table"></a>若要啟用資料表的壓縮  
+  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+  
+2.  在標準列上，按一下 **[新增查詢]**。  
+  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會先執行 `sp_estimate_data_compression_savings` 預存程序以傳回物件的估計大小 (如果要使用 ROW 壓縮設定的話)。 然後，此範例會針對指定資料表中的所有資料分割啟用 ROW 壓縮。  
+  
+    ```  
+    USE AdventureWorks2012;  
+    GO  
+    EXEC sp_estimate_data_compression_savings 'Production', 'TransactionHistory', NULL, NULL, 'ROW' ;  
+  
+    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
+    WITH (DATA_COMPRESSION = ROW);   
+    GO  
+    ```  
+  
+#### <a name="to-enable-compression-on-an-index"></a>若要啟用索引的壓縮  
+  
+1.  在 **[物件總管]** 中，連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的執行個體。  
+  
+2.  在標準列上，按一下 **[新增查詢]**。  
+  
+3.  複製下列範例並將其貼到查詢視窗中，然後按一下 **[執行]**。 此範例會先查詢 `sys.indexes` 目錄檢視以傳回 `index_id` 資料表上每個索引的名稱和 `Production.TransactionHistory` 。 然後，它會執行 `sp_estimate_data_compression_savings` 預存程序以傳回指定索引識別碼的估計大小 (如果要使用 PAGE 壓縮設定的話)。 最後，此範例會重建索引識別碼 2 (`IX_TransactionHistory_ProductID`)，並指定 PAGE 壓縮。  
+  
+    ```  
+    USE AdventureWorks2012;   
+    GO  
+    SELECT name, index_id  
+    FROM sys.indexes  
+    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';  
+  
+    EXEC sp_estimate_data_compression_savings   
+        @schema_name = 'Production',   
+        @object_name = 'TransactionHistory',  
+        @index_id = 2,   
+        @partition_number = NULL,   
+        @data_compression = 'PAGE' ;   
+  
+    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
+    GO  
+    ```  
+  
+ 如需詳細資訊，請參閱 [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) 和 [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [資料壓縮](data-compression.md)   
+ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql)  
+  
+  

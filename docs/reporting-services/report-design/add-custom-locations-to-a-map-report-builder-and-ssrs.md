@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020175"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>將自訂位置加入至地圖 (報表產生器及 SSRS)
   將地圖加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表後，您可以加入自己的點位置。  

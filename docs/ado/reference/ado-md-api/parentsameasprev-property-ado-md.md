@@ -2,7 +2,6 @@
 title: ParentSameAsPrev 屬性 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3827d8caf756113406af0bb7ec26613252fde5ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1b4934a36522c6b7c8a444e2e3b88eb9ee89845
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284807"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev 屬性 (ADO MD)
 指出是否此位置的父代[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)等同於前一個成員的父系。  

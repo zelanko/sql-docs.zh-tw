@@ -2,7 +2,7 @@
 title: 以程式設計方式變更密碼 |Microsoft 文件
 description: 使用 SQL Server 的 OLE DB 驅動程式以程式設計方式變更密碼
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -24,14 +24,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8ac5c5c127b67fb872a6b10ffc7bd32ec7458092
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e09154c595f2e008f29ef6bd690968388cbe062b
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611994"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 開頭為[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，OLE DB 驅動程式處理密碼逾期透過 OLE DB 驅動程式，以程式設計方式，以及透過變更的 SQL Server 支援**SQL Server 登入**對話方塊。  
   

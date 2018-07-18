@@ -1,8 +1,6 @@
 ---
 title: 連接到 MySQL (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2290b67ac66a1fa06d62b88390a538a3e06621ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e4de2590221535410b5095494dd6f1801460f73
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775694"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>連接到 MySQL (MySQLToSQL)
 使用**連接到 MySQL**對話方塊連接到您想要移轉的 MySQL 資料庫。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 MySQL**。 如果您之前已連線，則命令是**重新連接到 MySQL**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **提供者**  
   
 可用的 MySQL 提供者是 MySQL ODBC 5.1 驅動程式 （信任）。  
@@ -67,11 +66,11 @@ ms.lasthandoff: 05/03/2018
   
 按下按鈕 「 設定 」，對話方塊隨即出現。 若要使用加密，而連接到 MySQL 資料庫，出現在對話方塊中的下列三種憑證檔案的路徑必須被定義 [隱私權增強式郵件憑證 (PEM)]:  
   
--   **SSL 憑證授權單位：**信任 SSL Ca 的清單中指定檔案的路徑。  
+-   **SSL 憑證授權單位：** 信任 SSL Ca 的清單中指定檔案的路徑。  
   
--   **SSL 憑證：**指定要用來建立安全連線的 SSL 憑證檔案的名稱。  
+-   **SSL 憑證：** 指定要用來建立安全連線的 SSL 憑證檔案的名稱。  
   
--   **SSL 金鑰：**指定要用來建立安全連線的 SSL 金鑰檔案的名稱。  
+-   **SSL 金鑰：** 指定要用來建立安全連線的 SSL 金鑰檔案的名稱。  
   
 > [!NOTE]  
 > -   **確定**按鈕已啟用時未提供必要的資訊。 如果任一檔案路徑無效，將會維持停用 [確定] 按鈕。  

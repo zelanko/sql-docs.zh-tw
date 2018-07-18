@@ -1,5 +1,5 @@
 ---
-title: sp_dbremove (TRANSACT-SQL) |Microsoft 文件
+title: sp_dbremove b n (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 518ffebe8638292ee1b6bd4aa63a7f5e5f19a4d3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042712"
 ---
 # <a name="spdbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   移除資料庫及其所有相關檔案。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)改。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,10 +48,10 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
   
 ## <a name="arguments"></a>引數  
  [  **@dbname=** ] **'***資料庫***'**  
- 這是要移除的資料庫名稱。 *資料庫*是**sysname**，預設值是 NULL。  
+ 這是要移除的資料庫名稱。 *資料庫*已**sysname**，預設值是 NULL。  
   
  [  **@dropdev=** ] **'***dropdev***'**  
- 這是專為了與舊版相容而提供的旗標，目前予以忽略。 *dropdev*值**dropdev**。  
+ 這是專為了與舊版相容而提供的旗標，目前予以忽略。 *dropdev*具有值**dropdev**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

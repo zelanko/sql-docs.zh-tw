@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905473"
 ---
 # <a name="supported-versions-of-foxpro"></a>支援的版本的 FoxPro
 您可以使用 Microsoft® Visual FoxPro® ODBC Driver，才能存取 FoxPro 資料表中儲存的資料。 支援下列版本的 FoxPro 資料：  

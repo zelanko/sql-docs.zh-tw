@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917223"
 ---
 # <a name="types-of-data-sources"></a>類型的資料來源
 有兩種類型的資料來源： 電腦的資料來源和檔案資料來源。 雖然兩者都包含類似的資料來源的相關資訊，但在這項資訊的儲存的方式不同。 因為這些差異，所以會使用稍有不同的方式。  

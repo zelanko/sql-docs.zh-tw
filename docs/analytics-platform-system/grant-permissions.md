@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539468"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>授與 T-SQL 的平行處理資料倉儲的權限
 授與 T-SQL 的平行處理資料倉儲的資料庫作業的權限。

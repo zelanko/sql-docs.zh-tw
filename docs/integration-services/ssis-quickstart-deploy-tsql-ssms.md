@@ -1,23 +1,21 @@
 ---
 title: 使用 Transact-SQL 部署 SSIS 專案 (SSMS) | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6bbcae0e5aea6521ad75401002d0a1488b5dbdf6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 4453198895cbc67d412019a9ff0f4e9463a496f6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455161"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402560"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 部署 SSIS 專案
 
@@ -35,7 +33,7 @@ SQL Server Management Studio 是整合式環境，用於管理任何 SQL 基礎�
 
 -   Windows 上的 SQL Server。
 
-您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Azure SQL Database。 `catalog.deploy_project` 預存程序必須有本機 (內部部署) 檔案系統中 `.ispac` 檔案的路徑。 如需在 Azure 部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Azure SQL Database。 `catalog.deploy_project` 預存程序必須有本機 (內部部署) 檔案系統中 `.ispac` 檔案的路徑。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Linux 上的 SQL Server。 如需在 Linux 上執行套件的詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 

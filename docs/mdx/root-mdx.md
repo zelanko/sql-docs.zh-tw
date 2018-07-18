@@ -1,6 +1,6 @@
 ---
 title: 根 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 8dd99d852ab33088d4af6df9bd06386b0e8877ab
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2c2301f44cbdac4505bef95d590ce206c8b6b509
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580730"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742767"
 ---
 # <a name="root-mdx"></a>Root (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回 tuple 所組成，**所有**cube、 維度或 tuple 中目前的範圍內的每個屬性階層的成員。 如需範圍的詳細資訊，請參閱[SCOPE 陳述式&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)。  
   

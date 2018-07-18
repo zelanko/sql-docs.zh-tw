@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914253"
 ---
 # <a name="function-conformance"></a>函式一致性
 下表指出這是妥善定義的每個 ODBC 函式中，一致性層級。  

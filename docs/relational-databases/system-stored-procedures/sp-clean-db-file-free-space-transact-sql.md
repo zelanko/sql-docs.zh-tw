@@ -24,10 +24,10 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 52f5fb5b32a49ef6bcb4922069dc7f5250c771c9
-ms.sourcegitcommit: e37f017cbebb22ad9d12e4daf863190933a4d8a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34689126"
 ---
 # <a name="spcleandbfilefreespace-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)

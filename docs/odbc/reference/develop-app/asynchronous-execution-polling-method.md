@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913823"
 ---
 # <a name="asynchronous-execution-polling-method"></a>非同步執行 （輪詢方法）
 ODBC 3.8 和 Windows 7 SDK 之前, 才被允許陳述式的函式的非同步作業。 如需詳細資訊，請參閱**非同步執行陳述式作業**稍後在本主題中。  

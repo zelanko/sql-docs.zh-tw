@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915423"
 ---
 # <a name="step-2-initialize-the-application"></a>步驟 2： 初始化應用程式
 第二個步驟是初始化應用程式，如下圖所示。 完全所完成的作業這裡會隨著應用程式。  

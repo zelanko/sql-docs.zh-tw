@@ -11,7 +11,7 @@ ms.openlocfilehash: b24832c8debe12c11aaa337e9558d99e7fae5ae0
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585500"
 ---
 # <a name="configure-and-manage-machine-learning-components-in-sql-server"></a>設定及管理 SQL Server 中的機器學習服務元件

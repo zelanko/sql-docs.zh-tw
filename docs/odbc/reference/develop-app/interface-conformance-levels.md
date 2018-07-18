@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912043"
 ---
 # <a name="interface-conformance-levels"></a>介面的一致性層級
 調節的目的是通知哪些可用功能，從驅動程式的應用程式。 函式為基礎的撫平配置未充分達成這個目標。 在 ODBC 3。*x*，驅動程式就會歸類在根據他們擁有的功能。 支援的功能，可以包括支援函式。它也可以包含支援所傳回的資訊類型描述元欄位、 陳述式屬性、"Y"值**SQLGetInfo**，依此類推。  

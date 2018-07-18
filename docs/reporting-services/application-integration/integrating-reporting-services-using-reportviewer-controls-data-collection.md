@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33013755"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>使用 ReportViewer 控制項整合 Reporting Services - 資料收集
 根據預設，ReportViewer 控制項會匿名收集使用方式資訊，以便讓 Microsoft 進一步了解客戶如何使用控制項。 藉由進一步了解客戶如何部署及使用檢視器控制項，未來開發就可以專注於為客戶實現最大價值的改善。

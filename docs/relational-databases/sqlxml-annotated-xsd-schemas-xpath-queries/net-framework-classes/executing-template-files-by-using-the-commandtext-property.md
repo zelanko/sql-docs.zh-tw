@@ -22,11 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a97f18ab83742d3adde940c4f528f50e4ac347d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d96e75c3cd077b6985d76994cef35cb0b9dc7853
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619495"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>使用 CommandText 屬性執行範本檔案
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +98,7 @@ class Test
   
 5.  在命令提示字元中，執行 DocSample.exe。  
   
- 如果您將參數傳遞至範本時，參數名稱開頭必須 at 符號 (@)。例如，p.Name="@ContactID"，其中 p 是 SqlXmlParameter 物件。  
+ 如果您將參數傳遞至範本時，參數名稱開頭必須 at 符號 (@)。例如，p.Name="\@ContactID"，其中 p 是 SqlXmlParameter 物件。  
   
  這是採用一個參數的已更新範本。  
   

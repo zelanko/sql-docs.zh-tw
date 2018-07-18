@@ -1,5 +1,5 @@
 ---
-title: AssociationSet 元素 (CSDLBI) |Microsoft 文件
+title: AssociationSet 元素 (CSDLBI) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2ae4f565a2383284421bb433ed5cc98371196d3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968978"
 ---
 # <a name="associationset-element-csdlbi"></a>AssociationSet 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="applicable-attributes"></a>適用的屬性  
  下表列出定義 **AssociationSet** 元素的元素和屬性。  
   
-|名稱|是否必要|說明|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |State|是|指出關聯是否為使用中的字串。 值是由 State 元素所定義。|  
 |Hidden|否|布林值，指出關聯性是否可見。 根據預設，Hidden 的值為 **false**，表示模型中的所有關聯性都可見。|  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/10/2018
   
  下表列出 **State** 元素的值。  
   
-|Value|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |作用中|關聯為使用中。|  
 |非使用中|關聯為使用中。|  
@@ -73,6 +74,6 @@ ms.lasthandoff: 05/10/2018
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Csdl 的 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [CSDL 之 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

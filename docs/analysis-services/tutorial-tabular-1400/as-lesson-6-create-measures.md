@@ -10,32 +10,33 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 61ead234a52f258f2c535f85c0992523b5b4e146
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973090"
 ---
 # <a name="create-measures"></a>建立量值
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-在這一課，您可以建立要包含在模型中的量值。 類似於您所建立的導出資料行，量值是透過使用 DAX 公式所建立的計算。 不過，不同於導出資料行，量值會根據評估使用者選取*篩選*。 例如，特定資料行或交叉分析篩選器加入至樞紐分析表中之資料列標籤欄位。 然後套用的量值就會計算篩選中每個資料格的值。 量值是您想要在數值資料上執行動態計算幾乎所有表格式模型中包含的功能強大、 有彈性的計算。 若要進一步了解，請參閱[量值](../tabular-models/measures-ssas-tabular.md)。
+在這一課，您可以建立要包含在您的模型中的量值。 類似於您所建立的導出資料行，量值是使用 DAX 公式所建立的計算。 不過，不同於導出資料行，量值評估是根據使用者選取*篩選*。 例如，特定資料行或交叉分析篩選器加入至樞紐分析表中的資料列標籤 欄位。 然後套用的量值就會計算篩選中每個資料格的值。 量值是功能強大又靈活的計算，您想要包含在幾乎所有表格式模型中，對數值資料執行動態計算。 若要進一步了解，請參閱[量值](../tabular-models/measures-ssas-tabular.md)。
   
-若要建立的量值，您使用*量值方格*。 根據預設，每一個資料表具有空白量值方格;不過，您通常不建立每個資料表的量的值。 在 [資料檢視] 中，量值方格會出現在模型設計師中的資料表下方。 若要隱藏或顯示資料表的量值方格，請按一下 [資料表] 功能表，然後按一下 [顯示量值方格]。  
+若要建立量值，您使用*量值方格*。 根據預設，每個資料表都有一個空的量值方格;不過，您通常請勿建立針對每個資料表的量值。 在 [資料檢視] 中，量值方格會出現在模型設計師中的資料表下方。 若要隱藏或顯示資料表的量值方格，請按一下 [資料表] 功能表，然後按一下 [顯示量值方格]。  
   
-您可以按一下量值方格中的空資料格，然後在公式列中輸入 DAX 公式建立量值。 當您按 ENTER 完成公式，量值，則會出現在資料格。 您也可以建立使用按一下資料行，然後再按一下 [自動加總] 按鈕的標準彙總函式的量值 (**∑**) 在工具列上。 使用自動加總 功能建立的量值會出現在資料行正下方的量值方格資料格，但是可以移動。  
+若要建立量值，您可以按一下空白儲存格在量值方格中，然後在公式列中輸入 DAX 公式。 當您按 ENTER 完成公式，量值，則會出現在資料格。 您也可以建立使用標準彙總函式，藉由按一下資料行，然後按一下 自動加總 按鈕的量值 (**∑**) 工具列上。 使用 「 自動加總 」 功能建立量值會出現在資料行的下方的量值方格資料格中，但是可以移動。  
   
-在這一課，您會建立量值，藉由在公式列中，這兩個輸入 DAX 公式，而藉由使用 [自動加總] 功能。  
+在這一課，您會建立量值，在公式列中，輸入 DAX 公式和使用 「 自動加總 」 功能。  
   
 完成本課程的估計時間： **30 分鐘**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 然後再執行工作，在這一課，您應已完成上一課：[第 5 課： 建立導出資料行](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。  
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 5 課： 建立計算結果的欄](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)。  
   
 ## <a name="create-measures"></a>建立量值  
   
-#### <a name="to-create-a-dayscurrentquartertodate-measure-in-the-dimdate-table"></a>若要建立 DaysCurrentQuarterToDate 量值與 DimDate 資料表中  
+#### <a name="to-create-a-dayscurrentquartertodate-measure-in-the-dimdate-table"></a>在 DimDate 資料表中建立 DaysCurrentQuarterToDate 量值  
   
 1.  在模型設計師中，按一下**DimDate**資料表。  
   
@@ -47,16 +48,16 @@ ms.lasthandoff: 05/10/2018
     DaysCurrentQuarterToDate:=COUNTROWS( DATESQTD( 'DimDate'[Date])) 
     ```
   
-    請注意左上資料格現在包含量值名稱， **DaysCurrentQuarterToDate**，後面接著結果**92**。 結果無關此時因為沒有使用者篩選已經套用。
+    請注意左上方資料格現在包含量值名稱**DaysCurrentQuarterToDate**，後面接著結果**92**。 結果不相關此時因為沒有使用者篩選已經套用。
     
-      ![做為 lesson6 newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![為 lesson6 newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
-    不同於導出資料行，量值公式與您可以輸入量值名稱，後面接著冒號，後面接著公式的運算式。
+    不同於導出資料行，量值公式與您可以輸入量值名稱，後面接著冒號，後面接著公式運算式。
 
   
-#### <a name="to-create-a-daysincurrentquarter-measure-in-the-dimdate-table"></a>若要建立 DaysInCurrentQuarter 量值與 DimDate 資料表中  
+#### <a name="to-create-a-daysincurrentquarter-measure-in-the-dimdate-table"></a>若要在 DimDate 資料表中建立 DaysInCurrentQuarter 量值  
   
-1.  與**DimDate**資料表仍為使用中模型設計師中，在量值方格中，按一下您所建立的量值下方的空白資料格。  
+1.  具有**DimDate**資料表在模型設計師中，量值方格中，按一下您所建立之量值下方的空資料格。  
   
 2.  在公式列中，輸入下列公式：  
   
@@ -64,13 +65,13 @@ ms.lasthandoff: 05/10/2018
     DaysInCurrentQuarter:=COUNTROWS( DATESBETWEEN( 'DimDate'[Date], STARTOFQUARTER( LASTDATE('DimDate'[Date])), ENDOFQUARTER('DimDate'[Date])))
     ```
   
-    當建立一個不完整期間與前一個期間之間的比率。 公式必須計算期間已過，與前一個期間中的相同比例比較的比例。 在這種情況下，[DaysCurrentQuarterToDate] / [DaysInCurrentQuarter] 提供比例經過目前期間內。  
+    當建立一個不完整期間與前一個期間之間的比率。 此公式必須計算期間已過，與前一個期間中的相同比例比較的比例。 在此情況下，[DaysCurrentQuarterToDate] / [daysincurrentquarter] 比例目前期間內已經過。  
   
-#### <a name="to-create-an-internetdistinctcountsalesorder-measure-in-the-factinternetsales-table"></a>在 [FactInternetSales] 資料表中建立 InternetDistinctCountSalesOrder 量值  
+#### <a name="to-create-an-internetdistinctcountsalesorder-measure-in-the-factinternetsales-table"></a>在 FactInternetSales 資料表中建立 InternetDistinctCountSalesOrder 量值  
   
-1.  按一下**FactInternetSales**資料表。   
+1.  按一下  **FactInternetSales**資料表。   
   
-2.  按一下**SalesOrderNumber**資料行標題。  
+2.  按一下  **SalesOrderNumber**資料行標題。  
   
 3.  在工具列上按一下 [自動加總] \(**∑**) 按鈕旁的向下箭號，然後選取 [DistinctCount]。  
   
@@ -78,14 +79,14 @@ ms.lasthandoff: 05/10/2018
     
        ![as-lesson6-newmeasure2](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
   
-4.  在量值方格中，按一下 新增量值，然後在**屬性**視窗，請在**量值名稱**，重新命名量值**InternetDistinctCountSalesOrder**。 
+4.  在量值方格中，按一下 [新增量值，然後在**屬性**] 視窗，請在**量值名稱**，重新命名的量值**InternetDistinctCountSalesOrder**。 
  
   
-#### <a name="to-create-additional-measures-in-the-factinternetsales-table"></a>FactInternetSales 資料表中建立其他量值  
+#### <a name="to-create-additional-measures-in-the-factinternetsales-table"></a>建立 FactInternetSales 資料表中的其他量值  
   
 1.  使用 [自動加總] 功能建立並命名下列量值：  
 
-    |資料行|量值名稱|自動加總 (∑)|公式|  
+    |「資料行」|量值名稱|自動加總 (∑)|公式|  
     |----------------|----------|-----------------|-----------|  
     |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
     |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 05/10/2018
     |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
     |Freight|InternetTotalFreight|SUM|=SUM([Freight])|  
   
-2.  藉由按一下量值方格中的空資料格以及使用公式列中，建立，順序中的下列自訂量值：  
+2.  按一下空白儲存格在量值方格中，並使用公式列中，建立，順序中的下列自訂量值：  
   
       ```
       InternetPreviousQuarterMargin:=CALCULATE([InternetTotalMargin],PREVIOUSQUARTER('DimDate'[Date]))
@@ -122,7 +123,7 @@ ms.lasthandoff: 05/10/2018
       InternetPreviousQuarterSalesProportionToQTD:=[InternetPreviousQuarterSales]*([DaysCurrentQuarterToDate]/[DaysInCurrentQuarter])
       ```
   
-針對 FactInternetSales 資料表所建立的量值可以用來分析關鍵的財務資料，例如銷售額、 成本以及使用者所選取的篩選所定義的項目獲利率。  
+建立 FactInternetSales 資料表的量值可用來分析重要財務資料，例如銷售額、 成本和獲利率的使用者選取的篩選條件所定義的項目。  
   
 ## <a name="whats-next"></a>下一步
 

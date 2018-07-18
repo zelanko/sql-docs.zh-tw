@@ -1,7 +1,7 @@
 ---
 title: 必要條件、限制和建議 - AlwaysOn 可用性群組 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d5b1b75df79f8422320089fe1a1a75fc890cfc8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769734"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934900"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>必要條件、限制和建議 - AlwaysOn 可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,8 @@ ms.locfileid: "34769734"
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定系統不是網域控制站。|網域控制站不支援可用性群組。|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確認每一部電腦都正在執行 Windows Server 2012 或更新版本。|[安裝 SQL Server 2016 的硬體與軟體需求](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
 |![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定每部電腦都是 WSFC 中的節點。|[SQL Server 的 Windows Server 容錯移轉叢集 &#40;WSFC&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)|  
-|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定 WSFC 包含足夠多的節點可支援您的可用性群組組態。|叢集節點只能裝載給定可用性群組的一個可用性複本。 在給定叢集節點上，一個或多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體可以裝載許多可用性群組的可用性複本。<br /><br /> 詢問您的資料庫管理員，規劃可用性群組的可用性複本支援需要多少叢集節點。<br /><br /> [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
+|![核取方塊](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "核取方塊")|確定 WSFC 包含足夠多的節點可支援您的可用性群組組態。|叢集節點可以裝載可用性群組的一個複本。 相同的節點不能裝載來自相同可用性群組的二個複本。 叢集節點可以參與多個可用性群組，包含來自每個群組的一個複本。 <br /><br /> 詢問您的資料庫管理員，規劃可用性群組的可用性複本支援需要多少叢集節點。<br /><br /> [AlwaysOn 可用性群組概觀 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)。|  
+
   
 > [!IMPORTANT]  
 >  還要確定您的環境已正確設定為連接到可用性群組。 如需詳細資訊，請參閱 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
@@ -170,8 +171,10 @@ ms.locfileid: "34769734"
   
     -   如果給定的執行緒已經閒置一段時間，它會釋放回一般 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行緒集區。 一般而言，非使用中的執行緒在 ~15 秒非使用狀態之後釋出。 不過，根據上一個活動，閒置執行緒可能會保留更久。  
 
-    - SQL Server 執行個體針對次要複本最多可使用 100 個平行重做執行緒。 每個資料庫最多可使用 CPU 核心總數的一半，但每個資料庫不得超過 16 個執行緒。 如果單一執行個體所需的執行緒總數超過 100，SQL Server 會針對其餘每個資料庫使用單一重做執行緒。 重做傳送執行緒在 ~15 秒非使用狀態之後釋出。 
-
+    -   SQL Server 執行個體針對次要複本最多可使用 100 個平行重做執行緒。 每個資料庫最多可使用 CPU 核心總數的一半，但每個資料庫不得超過 16 個執行緒。 如果單一執行個體所需的執行緒總數超過 100，SQL Server 會針對其餘每個資料庫使用單一重做執行緒。 序列重做執行緒在處於非使用狀態 ~15 秒之後便會釋出。 
+    
+    > [!NOTE]
+    > 系統會根據資料庫識別碼的遞增順序，選擇要改為單一執行緒的資料庫。 因此，應針對裝載可用性群組資料庫多於可用性背景工作執行緒的 SQL Server 執行個體，考慮其資料庫建立順序。 例如，在具有 32 個或更多個 CPU 核心的系統上，從第 7 個加入可用性群組的資料庫開始的所有資料庫都會處於序列重做模式，而不論每個資料庫的實際重做工作負載。 需要平行重做的資料庫應先加入可用性群組。    
   
 -   此外，可用性群組也使用不共用的執行緒，如下所示：  
   

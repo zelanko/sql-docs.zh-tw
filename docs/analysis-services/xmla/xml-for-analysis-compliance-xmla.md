@@ -13,7 +13,7 @@ ms.openlocfilehash: b618fdd8cca3faed72afb0276f18cd928a3f31f7
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576880"
 ---
 # <a name="xml-for-analysis-xmla-compliance"></a>XML for Analysis (XMLA) 相容性

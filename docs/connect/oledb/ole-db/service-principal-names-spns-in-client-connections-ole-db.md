@@ -2,10 +2,10 @@
 title: 用戶端連接 (OLE DB) 中的服務主體名稱 (Spn) |Microsoft 文件
 description: 用戶端連接 (OLE DB) 中的服務主體名稱 (Spn)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b03f6f44cd23679e3b60ce03410a9582020d84ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4afff2d6f742d1e11791963822d76f075104836b
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611713"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>用戶端連接中的服務主要名稱 (SPN) (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
   本主題描述可在用戶端應用程式內支援服務主要名稱 (SPN) 的 OLE DB 屬性和成員函數。 如需有關 Spn 的用戶端應用程式，請參閱[服務主體名稱&#40;SPN&#41;支援用戶端連接中的](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。 如需範例，請參閱[整合式 Kerberos 驗證&#40;OLE DB&#41;](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)。  
@@ -29,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="provider-initialization-string-keywords"></a>提供者初始化字串關鍵字  
  下列提供者初始化字串關鍵字可支援 OLE DB 應用程式內的 SPN。 下表中，關鍵字欄中的值會用於 idbinitialize:: Initialize 的提供者字串。 使用 ADO 或 idatainitialize:: Getdatasource 連接時，描述資料行的值可用在初始化字串中。  
   
-|關鍵字|Description|Value|  
+|關鍵字|描述|ReplTest1|  
 |-------------|-----------------|-----------|  
 |ServerSPN|伺服器 SPN|伺服器的 SPN。 預設值是空字串，這會導致 OLE DB 驅動程式使用預設的 SQL Server，提供者產生 SPN。|  
 |FailoverPartnerSPN|容錯移轉夥伴 SPN|容錯移轉夥伴的 SPN。 預設值是空字串，這會導致 OLE DB 驅動程式使用預設的 SQL Server，提供者產生 SPN。|  
@@ -37,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="data-source-initialization-properties"></a>資料來源初始化屬性  
  中的下列屬性**DBPROPSET_SQLSERVERDBINIT**屬性集讓應用程式指定 Spn。  
   
-|名稱|型別|使用方式|  
+|[屬性]|類型|使用方式|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR，讀取/寫入|指定伺服器的 SPN。 預設值是空字串，這會導致 OLE DB 驅動程式使用預設的 SQL Server，提供者產生 SPN。|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR，讀取/寫入|指定容錯移轉夥伴的 SPN。 預設值是空字串，這會導致 OLE DB 驅動程式使用預設的 SQL Server，提供者產生 SPN。|  
@@ -45,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="data-source-properties"></a>資料來源屬性  
  中的下列屬性**DBPROPSET_SQLSERVERDATASOURCEINFO**屬性集讓應用程式探索驗證方法。  
   
-|名稱|型別|使用方式|  
+|[屬性]|類型|使用方式|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR，唯讀|傳回連接所使用的驗證方法。 傳回至應用程式的值是 Windows 回到 SQL Server 的 OLE DB 驅動程式的值。 以下是可能的值： <br />"NTLM"，當使用 NTLM 驗證開啟連接時所傳回。<br />"Kerberos"，當使用 Kerberos 驗證開啟連接時所傳回。<br /><br /> 如果連接已經開啟，而且無法判定驗證方法，就會傳回 VT_EMPTY。<br /><br /> 只有當已經初始化資料來源時，才可讀取這個屬性。 如果您嘗試在初始化資料來源以前讀取屬性，IDBProperties::GetProperies 會適當地傳回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，而且將在 DBPROPSET_PROPERTIESINERROR 中設定 DBPROPSTATUS_NOTSUPPORTED這個屬性。 這個行為會根據 OLE DB 核心規格。|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL，唯讀|如果連接中的伺服器已互相驗證過，則會傳回 VARIANT_TRUE，否則會傳回 VARIANT_FALSE。<br /><br /> 只有當已經初始化資料來源時，才可讀取這個屬性。 如果沒有嘗試在初始化資料來源以前讀取屬性，IDBProperties::GetProperies 會適當地傳回 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，而且將 DBPROPSET_ 中設定 DBPROPSTATUS_NOTSUPPORTED這個屬性的 PROPERTIESINERROR。 這個行為會根據 OLE DB 核心規格。<br /><br /> 如果針對未使用 Windows 驗證的連接來查詢這個屬性，就會傳回 VARIANT_FALSE。|  
@@ -53,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="ole-db-api-support-for-spns"></a>OLE DB API 對 SPN 的支援  
  下表描述在用戶端連接中支援 SPN 的 OLE DB 成員函數：  
   
-|成員函數|Description|  
+|成員函數|描述|  
 |---------------------|-----------------|  
 |IDataInitialize::GetDataSource|*pwszInitializationString*可以包含新的關鍵字**ServerSPN**和**FailoverPartnerSPN**。|  
 |IDataInitialize::GetInitializationString|如果 SSPROP_INIT_SERVERSPN 和 SSPROP_INIT_FAILOVERPARTNERSPN 有非預設值，它們會包含在初始化字串透過*ppwszInitString*關鍵字的值為**ServerSPN**和**FailoverPartnerSPN**。 否則，這些關鍵字將不會包含在初始化字串中。|  

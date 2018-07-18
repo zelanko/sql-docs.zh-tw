@@ -1,7 +1,7 @@
 ---
 title: 常見問題集 (FAQ) JDBC driver |Microsoft 文件
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 282f71f49eba5ccece8bc9d50ef690fd0af3cb8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ebe12966a73d5944c2cfb6eb1a2328e27a5385e
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452158"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>常見問題集 (FAQ) 的 JDBC 驅動程式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  本文提供有關 Microsoft JDBC Driver for SQL Server 之常見問題的答案。  
+  此頁面提供有關 Microsoft JDBC Driver for SQL Server 的常見問題集問題的答案。  
   
 ## <a name="frequently-asked-questions"></a>常見問題集  
 **如何協助改善 JDBC 驅動程式？**  
@@ -32,6 +33,9 @@ JDBC 驅動程式是開放原始碼和原始程式碼位於[GitHub](https://gith
 **SQL Server 和 Java 的驅動程式支援哪些版本？**  
  請參閱[Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)頁面以取得詳細資料。  
   
+**Microsoft Download Center 上可用的 JDBC 驅動程式套件與 GitHub 上的 JDBC 驅動程式之間的差異為何？**  
+ JDBC 驅動程式檔案可用 GitHub 儲存機制上的 Microsoft JDBC driver 是 JDBC 驅動程式的核心，底下所列的儲存機制中的開放原始碼授權。 Microsoft 下載中心上的驅動程式套件包含額外的程式庫，針對 Windows 整合式驗證和啟用 XA 交易，JDBC 驅動程式。 這些額外的程式庫並在可下載的封裝所包含的授權。
+
  **升級我的驅動程式時，我應該知道什麼？**  
  Microsoft JDBC 驅動程式 6.4 支援 JDBC 4.1、 4.2、 與 4.3 （部分） 規格和安裝封裝中包含三個 JAR 類別庫時，也將，如下所示：  
   
@@ -69,30 +73,30 @@ JDBC 驅動程式是開放原始碼和原始程式碼位於[GitHub](https://gith
   
  **可以重新發佈的驅動程式嗎？** JDBC 驅動程式 4.1、 4.2、 6.0、 6.2 和 6.4 是可轉散發套件。 檢閱授權合約中的 「 可散布程式碼 」 子句。 
    
- **可以使用驅動程式從 Linux 電腦存取 Microsoft SQL Server？** 當然可以。 您可以使用此驅動程式從 Linux、 Unix 及其他非 Windows 平台存取 SQL Server。 請參閱[Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)如需詳細資訊。  
+ **可以使用驅動程式從 Linux 電腦存取 Microsoft SQL Server？** 當然可以。 您可以使用此驅動程式從 Linux、 Unix 及其他非 Windows 平台存取 SQL Server。 如需詳細資訊，請參閱[Microsoft JDBC Driver for SQL Server 支援對照表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)。
   
  **此驅動程式是否支援安全通訊端層 (SSL) 加密？** 此驅動程式自 1.2 版起，即支援安全通訊端層 (SSL) 加密。 如需詳細資訊，請參閱[使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)。  
   
  **Microsoft JDBC 驅動程式支援哪些驗證類型為 SQL Server？**  
- 下表列出可用的驗證選項。 請注意，只有 4.0 版以後的驅動程式，才能使用純 Java Kerberos 驗證。  
+ 下表列出可用的驗證選項。 純 Java Kerberos 驗證。 此驅動程式 4.0 版起可用  
   
 |||  
 |-|-|  
 |平台|驗證|  
 |非 Windows|純 Java Kerberos|  
-|非 Windows|SQL Server|  
+|非 Windows|[SQL Server]|  
 |非 Windows|Azure Active Directory 驗證|
-|視窗|純 Java Kerberos|  
-|視窗|SQL Server|
+|Windows|純 Java Kerberos|  
+|Windows|[SQL Server]|
 |視窗|Kerberos 加 NTLM 備份|  
-|視窗|NTLM|  
-|視窗|Azure Active Directory 驗證|  
+|Windows|NTLM|  
+|Windows|Azure Active Directory 驗證|  
   
 **此驅動程式是否支援網際網路通訊協定第 6 版 (IPv6) 位址？**  
- 支援。此驅動程式可以使用 IPv6 位址搭配連接屬性集合 serverName 連接字串屬性。 如需詳細資訊，請參閱[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)。  
+ 是的。 此驅動程式支援使用 IPv6 位址。 使用連接屬性集合 serverName 連接字串屬性。 如需詳細資訊，請參閱[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)。  
   
 **什麼是自適性緩衝？**  
- 自適性緩衝功能自 Microsoft SQL Server 2005 JDBC Driver 1.2 版起引進，其設計可以擷取任何種類的大型數值資料，但不會額外增加伺服器資料指標的負荷。 Microsoft SQL Server JDBC Driver 的自適性緩衝功能提供連接字串屬性 responseBuffering，可以設定為 "adaptive" 或 "full"。 自 JDBC Driver 2.0 版起，此驅動程式的預設行為是 "adaptive"。 換言之，若要取得適應性緩衝行為，您的應用程式不需要明確要求適應性行為。 但在 1.2 版中，預設的緩衝模式為 "full"，且應用程式必須明確要求自適性緩衝的模式。 如需詳細資訊，請參閱[使用適應性緩衝](../../connect/jdbc/using-adaptive-buffering.md)主題和部落格。 [什麼 adaptiveresponse 緩衝和為什麼應該使用它？](http://go.microsoft.com/fwlink/?LinkId=111575)  
+ 適應性緩衝是起導入 Microsoft SQL Server 2005 JDBC Driver 1.2 版。 它被設計來擷取任何種類的大數值資料，而沒有伺服器資料指標的負擔。 Microsoft SQL Server JDBC Driver 的自適性緩衝功能提供連接字串屬性 responseBuffering，可以設定為 "adaptive" 或 "full"。 在 1.2 版，緩衝處理模式是 「 完整 」 依預設，應用程式必須明確設定適應性緩衝模式。 自 JDBC Driver 2.0 版起，此驅動程式的預設行為是 "adaptive"。 因此，您的應用程式沒有要求適應性行為，明確地取得適應性緩衝行為。 如需詳細資訊，請參閱[使用適應性緩衝](../../connect/jdbc/using-adaptive-buffering.md)和部落格[什麼 adaptiveresponse 緩衝和為什麼應該使用它？](http://go.microsoft.com/fwlink/?LinkId=111575)。
   
 **驅動程式支援連接共用嗎？**  
  此驅動程式提供支援 Java Platform, Enterprise Edition 5 (Java EE 5) 的連接共用。 此驅動程式實作了 JDBC 3.0 所需的介面，讓驅動程式能夠參與中介軟體應用程式廠商所提供的連接共用實作。 此驅動程式可參與這些環境中的共用連接。 如需詳細資訊，請參閱[使用連接共用](../../connect/jdbc/using-connection-pooling.md)。 此驅動程式不提供自己的共用實作，而會使用第三方 Java 應用程式伺服器。  

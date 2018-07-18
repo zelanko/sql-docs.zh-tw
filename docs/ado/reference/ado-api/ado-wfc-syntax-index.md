@@ -6,8 +6,7 @@ ms.date: 02/15/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 128e34bad797477fdeadbb18e241fc4d5981e3a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 355a32f2e37aca0202c803cde7c527a47bfe1905
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275637"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO-WFC 語法索引
 ADO 語言參考會使用 Microsoft Visual Basic 程式語言來說明 ADO 方法和屬性的語法。 此索引是 ADO 語言參考主題，ADO 的 Windows Foundation Classes (ADO/WFC) 為基礎的交互參考。 語法差異，則會發生時使用函式簽章在這個索引中，而不是語法中的清單語言參考主題。  

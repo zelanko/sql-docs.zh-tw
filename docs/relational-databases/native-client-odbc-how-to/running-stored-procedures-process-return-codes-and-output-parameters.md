@@ -1,37 +1,36 @@
 ---
-title: 處理傳回碼和輸出參數 (ODBC) |Microsoft 文件
+title: 處理傳回碼和輸出參數 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b17a4c623e280e2ae8b1e16f9b4b998dba562b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b64711f2cf375ee602e26a77a00d8a22e9e16e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423987"
 ---
-# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>執行預存的程序的處理程序傳回碼和輸出參數
+# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>執行預存的程序-處理傳回碼和輸出參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 驅動程式支援將預存程序當做遠端預存程序執行。 將預存程序當做遠端預存程序執行可讓驅動程式和伺服器最佳化執行程序的效能。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會從伺服器傳送的最後一個封包中並不能使用應用程式，直到[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)傳回 sql_no_data 為止。 如果從預存程序傳回錯誤，則呼叫 SQLMoreResults 前進至下一個結果，直到傳回 SQL_NO_DATA 為止。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數從伺服器傳送最後一個封包，並不適用於應用程式，直到[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)傳回 sql_no_data 為止。 如果從預存程序會傳回錯誤，請呼叫 SQLMoreResults 前進到下一個結果，直到傳回 SQL_NO_DATA 為止。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -40,11 +39,11 @@ ms.lasthandoff: 05/03/2018
   
 1.  建構使用 ODBC CALL 逸出序列的 SQL 陳述式。 此陳述式應該會針對每個輸入、輸入/輸出和輸出參數，以及程序傳回值 (若有) 使用參數標記。  
   
-2.  呼叫[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)針對每個輸入、 輸入/輸出和輸出參數，和程序傳回值 （如果有的話）。  
+2.  呼叫[SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md)每個輸入、 輸入/輸出和輸出參數，以及程序傳回值 （如果有的話）。  
   
-3.  執行陳述式使用**SQLExecDirect**。  
+3.  執行陳述式搭配**SQLExecDirect**。  
   
-4.  處理序的結果集，直到**SQLFetch**或**SQLFetchScroll**時處理最後一個結果集，或直到傳回 SQL_NO_DATA **SQLMoreResults**傳回 sql_no_data 為止。 此時，繫結至傳回碼和輸出參數的變數會填入傳回的資料值。  
+4.  處理序的結果集，直到**SQLFetch**或是**SQLFetchScroll**同時處理最後一個結果集，或直到傳回 sql_no_data 為止**SQLMoreResults**傳回 sql_no_data 為止。 此時，繫結至傳回碼和輸出參數的變數會填入傳回的資料值。  
   
 ## <a name="example"></a>範例  
  此範例顯示處理傳回碼和輸出參數。 IA64 不支援此範例。 此範例是針對 ODBC 3.0 版或更新版本所開發。  
@@ -199,6 +198,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[呼叫預存程序 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
+[呼叫預存程序&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
   
   

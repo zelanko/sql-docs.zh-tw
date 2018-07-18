@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030195"
 ---
 # <a name="configurationsetting-property---iswebserviceenabled"></a>ConfigurationSetting 屬性 - IsWebServiceEnabled
   指出報表伺服器 Web 服務是否已啟用。 唯讀。  

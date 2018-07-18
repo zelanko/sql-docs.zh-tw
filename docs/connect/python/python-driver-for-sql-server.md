@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: python
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fae55b3dcb10c6704271c6b5ef1d035d77aa2a30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd2c3a6c3913cb712a441e400fc0a14b2688bb59
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309567"
 ---
 # <a name="python-sql-driver"></a>Python SQL 驅動程式
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 
 您可以連接到 SQL 資料庫，在 Windows、 Linux 或 mac 上使用 Python   
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
 有數個 python SQL 驅動程式。 不過，Microsoft 將其測試的工作和其信心**pyodbc**驅動程式。 選擇驅動程式，並據以設定您的開發環境：
 * [Python SQL 驅動程式-pyodbc](pyodbc/python-sql-driver-pyodbc.md)
 * [Python SQL 驅動程式-pymssql](pymssql/python-sql-driver-pymssql.md)

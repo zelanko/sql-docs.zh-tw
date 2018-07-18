@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900453"
 ---
 # <a name="functions-accepting-string-parameters"></a>接受字串參數的函式
 所有採用字串參數的函式會轉換成 Unicode。 （將匯出的函式"W"形式）。位元組計數會轉換成適用於 ODBC Api 的計數的字元。 這適用於下列函數：  

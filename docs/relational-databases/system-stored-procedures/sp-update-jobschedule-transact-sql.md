@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253032"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
  **j**提供回溯相容性。  
   
 > [!IMPORTANT]  
->  如需舊版的 Microsoft SQL Server 中使用的語法的詳細資訊，請參閱 TRANSACT-SQL Referencefor Microsoft SQL Server 2000*。*  
+>  如需舊版的 Microsoft SQL Server 中使用的語法的詳細資訊，請參閱 TRANSACT-SQL Referencefor Microsoft SQL Server 2000 *。*  
   
 ## <a name="remarks"></a>備註  
  現在，您可以在作業之外，獨立管理作業排程。 若要更新的排程，使用**sp_update_schedule**。  

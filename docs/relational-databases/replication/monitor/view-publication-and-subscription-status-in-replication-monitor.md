@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +26,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 24360f72317bd0f4d6193405c4b271914cb86d33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0f656827b0f40ea364ebcd99125fff5f5af8359c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37359350"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>在複寫監視器中檢視發行集和訂閱狀態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="subscription-status-values"></a>訂閱狀態值  
  下列各資料表按優先權順序顯示訂閱狀態值及其對應的圖示。 訂閱可同時處於兩種狀態，例如 **「即將過期/已過期」** 和 **「正在重試失敗的命令」**；此時會顯示最高優先權的狀態。  
   
- **「效能嚴重不足」**、 **「即將過期/已過期」**和 **「未初始化」** 等狀態值都是警告。 當顯示警告時，「複寫監視器」也會顯示是否有代理程式正在執行。 例如，狀態可能是 **[執行中，效能嚴重不足]**。  
+ **「效能嚴重不足」**、 **「即將過期/已過期」** 和 **「未初始化」** 等狀態值都是警告。 當顯示警告時，「複寫監視器」也會顯示是否有代理程式正在執行。 例如，狀態可能是 **[執行中，效能嚴重不足]**。  
   
 ### <a name="transactional-subscriptions"></a>交易式訂閱  
   

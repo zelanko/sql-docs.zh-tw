@@ -2,7 +2,6 @@
 title: 篩選器和 RecordCount 屬性範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1462aea811bafb1b2d3dad0380488317beb33867
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72b9edbc322403e49a4938bf541220bde43ce4b9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278617"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>篩選器和 RecordCount 屬性範例 （VC + +）
 這個範例會使用[篩選](../../../ado/reference/ado-api/filter-property.md)屬性來開啟新[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)根據指定的條件套用到現有**資料錄集**。 它會使用[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)屬性，以兩個顯示的記錄數目**資料錄集**。 若要執行此程序需要 FilterField 函式。  

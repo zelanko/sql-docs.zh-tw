@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544710"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>使用者工作階段中 Analytics Platform System
 具有適當的權限的登入可以管理 SQL Server PDW 應用裝置，包括在執行這些動作上的所有登入工作的階段：  

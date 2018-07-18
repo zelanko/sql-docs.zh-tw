@@ -1,7 +1,7 @@
 ---
-title: 安全性延伸模組概觀 | Microsoft Docs
+title: 安全性延伸模組概觀 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: extensions
@@ -19,13 +19,14 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0aa92c8538efae252aa205a38aa6f5eb2c542c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cd80296e13af18902d48b934bf26144d153c039
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550459"
 ---
-# <a name="security-extensions-overview"></a>安全性延伸模組概觀
+# <a name="security-extensions-overview---reporting-services-ssrs"></a>安全性延伸模組 - Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 安全性延伸模組會啟用使用者或群組的驗證和授權；也就是說，它會讓不同的使用者登入到報表伺服器，並根據其識別執行不同的工作或作業。 依預設，[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用 Windows 架構的驗證延伸模組，此模組使用 Windows 帳戶通訊協定來確認宣稱在系統上具有帳戶之使用者的識別。 以 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 會使用以角色為基礎的安全性系統來授權使用者。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 以角色為基礎的安全性模型類似於其他技術以角色為基礎的安全性模型。  
   
  因為安全性延伸模組是以開放且可延伸的 API 為基礎，所以您可以在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中建立新的驗證和授權延伸模組。 以下是一般安全性延伸模組實作的範例，此實作會使用以表單為基礎的驗證和授權：  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  如下圖所顯示，驗證和授權的進行方式如下：  
   
-1.  使用者使用 URL 來嘗試存取報表管理員，然後被重新導向至針對用戶端應用程式而收集使用者認證的表單。  
+1.  使用者使用 URL 來嘗試存取入口網站，然後被重新導向至針對用戶端應用程式收集使用者認證的表單。  
   
 2.  使用者將認證提交給表單。  
   
@@ -42,11 +43,11 @@ ms.lasthandoff: 05/03/2018
   
 4.  Web 服務呼叫客戶所提供的安全性延伸模組，並且確認自訂的安全性授權中具有使用者名稱和密碼。  
   
-5.  在進行驗證後，Web 服務會建立驗證 Ticket (也稱為 "Cookie")、管理 Ticket，然後針對報表管理員的首頁確認使用者的角色。  
+5.  在進行驗證後，Web 服務會建立驗證票證 (也稱為 "Cookie")、管理票證，然後針對入口網站的首頁確認使用者的角色。  
   
-6.  Web 服務將 Cookie 傳回給瀏覽器，並在報表管理員中顯示適當的使用者介面。  
+6.  Web 服務將 Cookie 傳回給瀏覽器，並在入口網站中顯示適當的使用者介面。  
   
-7.  在使用者經過驗證後，瀏覽器會以 HTTP 標頭傳送 Cookie 以對報表管理員提出要求。 這些要求是用於回應報表管理員應用程式中的使用者動作。  
+7.  在使用者經過驗證後，瀏覽器會以 HTTP 標頭傳送 Cookie 以對入口網站提出要求。 這些要求是用於回應入口網站中的使用者動作。  
   
 8.  Cookie 會在 HTTP 標頭中，與所要求的使用者作業一起傳送給 Web 服務。  
   
@@ -69,6 +70,5 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [實作安全性延伸模組](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [設定報表管理員傳遞自訂驗證 Cookie](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   

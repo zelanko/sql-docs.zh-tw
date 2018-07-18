@@ -13,7 +13,7 @@ ms.openlocfilehash: d92dd753d63979f32fe9b8242d78202303f2bb60
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574310"
 ---
 # <a name="datasourceview-element-xmla"></a>DataSourceView 元素 (XMLA)

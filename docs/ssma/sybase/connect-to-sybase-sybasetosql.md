@@ -3,8 +3,6 @@ title: 連接到 Sybase (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2152c6a02a7c02d7aea5fb5ab01c2aa5b74dfad4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1302d7e57d7ef2559d107039648e813e1292efa
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778396"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>連接到 Sybase (SybaseToSQL)
 使用**連接到 Sybase**對話方塊連接到您想要移轉的 Sybase Adaptive Server Enterprise (ASE) 執行個體。  
   
 若要存取此對話方塊，請在**檔案**功能表上，選取**連接到 Sybase**。 如果您之前已連線，則命令是**重新連接到 Sybase**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **提供者**  
 選取任何連接到 Sybase 伺服器電腦上已安裝的提供者。  
   
@@ -59,10 +58,10 @@ ms.lasthandoff: 05/03/2018
   
     |設定|Sybase 12.5 參數|Sybase 15 參數|  
     |-----------|-------------------------|-----------------------|  
-    |伺服器名稱|伺服器名稱|Server|  
+    |伺服器名稱|伺服器名稱|[伺服器]|  
     |通訊埠|伺服器連接埠位址|通訊埠|  
-    |使用者名稱|使用者識別碼|使用者識別碼|  
-    |密碼|密碼|密碼|  
+    |[使用者名稱]|使用者識別碼|使用者識別碼|  
+    |[密碼]|[密碼]|[密碼]|  
     |提供者|提供者|提供者|  
   
     Sybase ASE 12.5，連接字串範例如下：  
@@ -78,9 +77,9 @@ ms.lasthandoff: 05/03/2018
     |設定|Sybase 12.5/15 參數|  
     |-----------|-----------------------------|  
     |驅動程式名稱|驅動程式|  
-    |伺服器名稱|Server|  
+    |伺服器名稱|[伺服器]|  
     |使用者名稱|uid|  
-    |密碼|Pwd|  
+    |[密碼]|Pwd|  
     |通訊埠編號|通訊埠|  
   
     Sybase ASE 12.5 或 15，連接字串範例如下所示：  
@@ -91,9 +90,9 @@ ms.lasthandoff: 05/03/2018
   
     |設定|Sybase 12.5/15 參數|  
     |-----------|-----------------------------|  
-    |伺服器名稱|Server|  
+    |伺服器名稱|[伺服器]|  
     |使用者名稱|uid|  
-    |密碼|Pwd|  
+    |[密碼]|Pwd|  
     |通訊埠編號|通訊埠|  
   
     ADO.NET 提供者的連接字串的範例是如下：  

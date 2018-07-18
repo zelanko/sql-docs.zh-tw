@@ -13,7 +13,7 @@ ms.openlocfilehash: 3dd4d8f56d59eecc61c164e76fe76b776797af0f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577760"
 ---
 # <a name="attributes-element-xmla"></a>Attributes 元素 (XMLA)

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_dms_workers (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_exec_dms_workers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,33 +27,34 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 940857ee9b723eed5adf1626d8db8c7868d30e7c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982610"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  保留所有背景工作完成 DMS 步驟的相關資訊。  
+  保留所有的背景工作完成 DMS 步驟的相關資訊。  
   
- 此檢視會顯示最近 1000 則要求和作用中要求的資料使用中要求一定會出現在此檢視中的資料。  
+ 此檢視會顯示最近 1000 則要求和作用中的要求; 的資料使用中要求一律會有此檢視中的資料。  
   
-|資料行名稱|資料類型|Description|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|查詢此 DMS 工作者是部分 of.request_id，step_index，，和 dms_step_index 形成這個檢視的索引鍵。||  
-|step_index|**int**|查詢此 DMS 工作者是一部分的步驟。|請參閱中的步驟索引[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
-|dms_step_index|**int**|這個工作者執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
-|compute_node_id|**int**|背景工作執行的節點。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
+|execution_id|**nvarchar(32)**|查詢此 DMS 背景工作角色是部分 of.request_id，step_index，，和 dms_step_index 形成這個檢視的索引鍵。||  
+|step_index|**int**|查詢此 DMS 背景工作角色是一部分的步驟。|請參閱中的步驟索引[sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)。|  
+|dms_step_index|**int**|此工作者執行的 DMS 計劃中的步驟。|請參閱[sys.dm_exec_dms_workers & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|compute_node_id|**int**|Worker 執行所在的節點。|請參閱[sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)。|  
 |distribution_id|**int**|||  
 |型別|**nvarcha(32)**|||  
-|status|**nvarchar(32)**|此步驟的狀態|' 取消暫停的'，'執行'，'完整'、 'Failed'、 'UndoFailed'、 'PendingCancel'，''，'復原'、 '中止'|  
+|status|**nvarchar(32)**|此步驟的狀態|'暫止'、 'Running'，'Complete'、 'Failed'、 'UndoFailed'、 'PendingCancel'，' 已取消 '，'復原'、 '中止'|  
 |bytes_per_sec|**bigint**|||  
 |bytes_processed|**bigint**|||  
 |rows_processed|**bigint**|||  
-|start_time|**datetime**|在步驟開始執行的時間|較小或等於目前的時間，大於或等於 end_compile_time 這個步驟所屬的查詢。|  
-|end_time|**datetime**|在此步驟中完成執行、 已取消，或失敗的時間。|較小或等於目前的時間，大於或等於 start_time，針對目前在執行中的步驟設定為 NULL，或是排入佇列。|  
-|total_elapsed_time|**int**|已執行的查詢步驟，以毫秒為單位的時間總數量|介於 0 到 end_time 和 start_time 之間的差異。 0 代表佇列的步驟。|  
+|start_time|**datetime**|步驟開始執行時間|較小或等於目前的時間和大於或等於 end_compile_time 屬於此步驟中的查詢。|  
+|end_time|**datetime**|在此步驟中完成執行、 已取消，或失敗的時間。|較小或等於目前的時間和大於或等於 start_time，目前在執行中的步驟設定為 NULL 或已排入佇列。|  
+|total_elapsed_time|**int**|已執行的查詢步驟，以毫秒為單位的時間總數量|介於 0 到 end_time 和 start_time 之間的差異。 0 代表已排入佇列的步驟。|  
 |cpu_time|**bigint**|||  
 |query_time|**int**|||  
 |buffers_available|**int**|||  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/23/2018
 |command|**nvarchar(4000)**|||  
   
 ## <a name="see-also"></a>另請參閱  
- [PolyBase，疑難排解動態管理檢視](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase 疑難排解動態管理檢視](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

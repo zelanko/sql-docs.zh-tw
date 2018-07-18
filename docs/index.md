@@ -8,11 +8,12 @@ ms.author: craigg
 ms.topic: hub-page
 ms.prod: sql
 ms.technology: install
-ms.openlocfilehash: a9e466cc1e88300164036aa831e8cbe2e2c45e6e
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: d959a393062c0806e3e4a5c9444d2d7d723b5d04
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36244780"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -37,8 +38,9 @@ ms.lasthandoff: 05/08/2018
                                                 <h3 class="bgdAccent1" style="padding:20px;">資料庫</h3>
                                                 <h4>SQL</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation">SQL Server (2016、2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2014</a></li>
+                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
+                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
+                                                    <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
                                                     <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">舊版 (2005 - 2012)</a></li>
                                                     <li><a class="barLink" href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
                                                     <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL 資料倉儲</a></li>

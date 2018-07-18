@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: python
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,17 +14,18 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c841c711a79f788c30b36b40994df805228e2f92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a747f9edc3a816d3b82eb22cb47aff6167638ba8
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309787"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 驅動程式-pyodbc
 
 ![下載 DownArrow Circled](../../../ssdt/media/download.png)[安裝 Python SQL 驅動程式](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-## <a name="getting-started"></a>快速入門
+## <a name="getting-started"></a>使用者入門
 
 * [步驟 1︰設定 pyodbc Python 開發的開發環境](step-1-configure-development-environment-for-pyodbc-python-development.md)  
 * [步驟 2︰建立 pyodbc Python 開發的 SQL 資料庫](step-2-create-a-sql-database-for-pyodbc-python-development.md)  

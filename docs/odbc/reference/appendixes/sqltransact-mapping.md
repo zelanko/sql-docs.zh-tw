@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907873"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 對應
 **SQLTransact**現在取代**SQLEndTran**。 兩個函式之間的主要差異在於**SQLEndTran**包含引數*HandleType*，以指定要完成工作的範圍。 *HandleType*引數可以指定的環境或連接控制代碼。 下列呼叫**SQLTransact**:  

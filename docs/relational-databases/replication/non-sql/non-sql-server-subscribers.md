@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,11 +25,12 @@ caps.latest.revision: 55
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e031fe7469b95a68f06d01efb53903978c5ecd1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab93ca40e53454d1574482b8ebeeaa625e671f9f
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352610"
 ---
 # <a name="non-sql-server-subscribers"></a>非 SQL Server 訂閱者  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,9 +108,11 @@ Oracle 版本資訊：
   
 ### <a name="replication-feature-support"></a>複寫功能支援  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種訂閱類型：發送訂閱和提取訂閱。 非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」必須使用發送訂閱，該訂閱中「散發代理程式」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端執行。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種訂閱類型：發送訂閱和提取訂閱。 非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」必須使用發送訂閱，該訂閱中「散發代理程式」在「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 散發者」端執行。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種快照集格式：原生 bcp 模式以及字元模式。 非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」需要字元模式快照集。  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 提供兩種快照集格式：原生 bcp 模式以及字元模式。 非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」需要字元模式快照集。  
   
 -   非「[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 訂閱者」不能使用立即更新或佇列更新訂閱，或成為點對點拓撲中的節點。  
   

@@ -2,7 +2,6 @@
 title: 自訂檔案 SQL > 一節 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 792168588c13af5007ff35b7af9004f3cc78d385
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f6cc8d75883f06acf449aba74341f86a8ae017b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274167"
 ---
 # <a name="customization-file-sql-section"></a>自訂檔案 SQL > 一節
 **Sql**區段只能包含新的 SQL 字串，取代用戶端的命令字串。 如果沒有 SQL 字串的區段中，將會忽略 > 一節。  
@@ -49,7 +49,7 @@ SQL = " "
  **SQL=**   
  ***sqlString***  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
 |**SQL**|常值字串，表示這是 SQL 區段項目。|  
 |***sqlString***|SQL 字串，取代用戶端的字串。|  

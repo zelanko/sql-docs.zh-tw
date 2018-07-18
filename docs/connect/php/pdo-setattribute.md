@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 226bc8435480477a3d217e4e0a0008c496a6055d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4bb058781139fd4a22fde87ddaab05a292499ca
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308329"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ bool PDO::setAttribute ( $attribute, $value );
   
 ## <a name="remarks"></a>備註  
   
-|Attribute|處理者|支援的值|Description|  
+|attribute|處理者|支援的值|描述|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|指定資料行名稱的大小寫。<br /><br />PDO::CASE_LOWER 會產生小寫的資料行名稱。<br /><br />PDO::CASE_NATURAL (預設值) 會顯示資料庫所傳回的資料行名稱。<br /><br />PDO::CASE_UPPER 會使資料行名稱以大寫顯示。<br /><br />此屬性可以使用 PDO::setAttribute 來設定。|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|請參閱 PDO 文件。|請參閱 PDO 文件。|  
@@ -56,7 +56,7 @@ bool PDO::setAttribute ( $attribute, $value );
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|設定驅動程式用來與伺服器通訊的字元集編碼。<br /><br />不支援 PDO::SQLSRV_ENCODING_BINARY。<br /><br />預設值為 PDO::SQLSRV_ENCODING_UTF8。|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true 或 false|處理數值擷取資料行和數值 SQL 型別 （位元、 整數、 smallint、 tinyint、 float、 或真實）。<br /><br />連線選項旗標 ATTR_STRINGIFY_FETCHES 時，傳回值會是字串，即使 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 上。<br /><br />PDO_PARAM_INT 繫結資料行中傳回的 PDO 型別時，整數資料行的傳回值會是 int，即使 SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 已關閉。|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|設定查詢逾時 (以秒為單位)。<br /><br />預設值為 0，表示驅動程式將會無限期地等候結果。<br /><br />不允許使用負數。|  
-|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|設定查詢緩衝區的大小。<br /><br />預設值為 0，緩衝區大小不受限。<br /><br />不允許使用負數。<br /><br />如需建立用戶端資料指標之查詢的詳細資訊，請參閱[資料指標類型&#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
+|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|integer|設定查詢緩衝區的大小。<br /><br />如果未在 php.ini 檔案中指定，則預設值為 10240 KB。<br /><br />不允許零和負的數字。<br /><br />如需建立用戶端資料指標之查詢的詳細資訊，請參閱[資料指標類型&#40;PDO_SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)。|  
   
 PDO 會處理一些預先定義的屬性，且需要驅動程式才能處理其他屬性。 驅動程式會處理所有的自訂屬性和連接選項。 不支援的屬性、 連接選項或不支援的值會根據 pdo:: ATTR_ERRMODE 的設定報告。  
   

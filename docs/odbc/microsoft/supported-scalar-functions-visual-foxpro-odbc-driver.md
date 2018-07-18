@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908073"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>支援的純量函式 （Visual FoxPro ODBC 驅動程式）
 Visual FoxPro ODBC 驅動程式支援 ODBC SQL 文法中定義純量函數的三種： 字串、 數值及日期和時間函式。  

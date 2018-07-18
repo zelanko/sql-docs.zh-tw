@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904373"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE 的 SQL 命令
 以程式設計方式修改資料表的結構。  

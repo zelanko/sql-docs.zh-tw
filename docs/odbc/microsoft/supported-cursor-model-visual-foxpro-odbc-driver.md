@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903623"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>支援的資料指標模型 （Visual FoxPro ODBC 驅動程式）
 Visual FoxPro ODBC 驅動程式同時支援*區塊*(*資料列集*) 和*靜態*資料指標。 靜態資料指標支援層級 1 ODBC 相容性符合任何驅動程式。 驅動程式不支援動態、 索引鍵集驅動或混合 （索引鍵集與動態） 資料指標。  

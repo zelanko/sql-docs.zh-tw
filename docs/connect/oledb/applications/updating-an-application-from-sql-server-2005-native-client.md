@@ -2,7 +2,7 @@
 title: 從 SQL Server 2005 Native Client 將應用程式更新 |Microsoft 文件
 description: 從 SQL Server 2005 Native Client 將應用程式更新
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -16,14 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: faea11704538aea426d5c1c6fdbe8018893dcdc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60a03e3ec34c29821a6b29d3174b11c5376511e6
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612063"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>從 SQL Server 2005 Native Client 更新應用程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 隨附[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 隨附[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 隨附於 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 隨附於 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。  
 
-|OLE DB 驅動程式中的行為變更的 SQL Server 相較於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]原生用戶端|Description|  
+|OLE DB 驅動程式中的行為變更的 SQL Server 相較於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]原生用戶端|描述|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB 只會填補至定義的小數位數。|OLE DB 驅動程式的 SQL Server 會只為止的最大長度的資料中的尾端零填補進行轉換的轉換的資料傳送給伺服器， **datetime**值。 SQL Server Native Client 9.0 則會填滿至 9 位數。|  
 |如 ICommandWithParameter::SetParameterInfo 驗證 DBTYPE_DBTIMESTAMP。|OLE DB 驅動程式的 SQL Server 實作的 OLE DB 需求*bScale*中 ICommandWithParameter::SetParameterInfo 針對 DBTYPE_DBTIMESTAMP 設定為小數的秒數有效位數。|  

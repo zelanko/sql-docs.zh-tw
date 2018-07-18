@@ -2,7 +2,6 @@
 title: RDS 物件模型摘要 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +17,18 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01f4af73d416616eeba6d8bcba82c390b09c3b7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecbfaf946dfdd6744ddd6ed5d6d8f9ef654f52a6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274117"
 ---
 # <a name="rds-object-model-summary"></a>RDS 物件模型摘要
 > [!IMPORTANT]
 >  從 Windows 8 和 Windows Server 2012 開始，RDS 伺服器元件已不再包含在 Windows 作業系統中 (請參閱 < Windows 8 和[Windows Server 2012 相容性手冊](https://www.microsoft.com/en-us/download/details.aspx?id=27416)如需詳細資訊)。 Windows 的未來版本將移除 RDS 用戶端元件。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 使用 RDS 的應用程式應該移轉到[WCF 資料服務](http://go.microsoft.com/fwlink/?LinkId=199565)。  
   
-|物件|Description|  
+|Object|描述|  
 |------------|-----------------|  
 |[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|此物件包含方法，以取得伺服器 proxy。 Proxy 可能是預設或自訂伺服器的程式 （商務物件）。 伺服器程式可在網際網路、 內部網路、 區域網路上，叫用，或者是本機的動態連結程式庫。<br /><br /> **DataSpace**物件而言是安全的指令碼。|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|這個物件代表的預設伺服器程式。 它會執行預設 RDS 資料擷取和更新行為。<br /><br /> **DataFactory**物件不是安全的。|  

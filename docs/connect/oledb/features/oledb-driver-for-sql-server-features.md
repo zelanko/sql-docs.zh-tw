@@ -2,7 +2,7 @@
 title: SQL Server 功能的 OLE DB 驅動程式 |Microsoft 文件
 description: OLE DB 驅動程式的 SQL Server 功能
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f1cc26981dae02bd76133c204c5eff142db76c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbc52f29aa0bfc6c60d9f8b7cb47b138c11b561
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612353"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>SQL Server 功能的 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
  [使用使用者定義型別](../../oledb/features/using-user-defined-types.md)  
  討論 OLE DB 驅動程式的 SQL Server 如何支援使用者定義型別 (UDT)，這會擴充 SQL 類型系統，可讓您將物件和自訂資料結構中的儲存[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。  
   
- [使用大型值型別](../../oledb/features/using-large-value-types.md)  
+ [使用大型實值型別](../../oledb/features/using-large-value-types.md)  
  討論 OLE DB 驅動程式的 SQL Server 如何支援大數值資料類型，也就是大型物件資料類型 (LOB)。  
   
  [以程式設計方式變更密碼](../../oledb/features/changing-passwords-programmatically.md)  

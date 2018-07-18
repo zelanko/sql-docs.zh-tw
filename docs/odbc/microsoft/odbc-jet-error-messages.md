@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901413"
 ---
 # <a name="odbc-jet-error-messages"></a>ODBC Jet 錯誤訊息
 資料來源中發生的錯誤，ODBC 驅動程式會傳回錯誤訊息傳回至它的 ODBC 檔案程式庫。 ODBC 驅動程式或驅動程式管理員中發生的錯誤，錯誤訊息會根據的文字，則驅動程式傳回 SQLSTATE 與相關聯。  

@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 452c82ff5fb19f90b3c20ad030c77b40f6de33d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0af7787982a49f82edafe1a39878e9e9f581356b
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37349850"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 訂閱者
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.lasthandoff: 05/03/2018
   
 -   如果資料表中一或多個主索引鍵資料行的資料類型為 DECIMAL(32-38, 0-38) 或 NUMERIC(32-38, 0-38)，則不要使用異動複寫將資料表發行至「DB2 訂閱者」。 異動複寫使用主索引鍵識別資料列；這可能會導致失敗，因為這些資料類型對應至「訂閱者」端的 VARCHAR(41)。 含有可使用這些資料類型之主索引鍵的資料表可以使用快照式複寫加以發行。  
   
--   如果您要在「訂閱者」端預先建立資料表，請不要由複寫來建立，而是使用僅支援複寫選項。 如需詳細資訊，請參閱 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
+-   如果您要在「訂閱者」端預先建立資料表，請不要由複寫來建立，而是使用僅支援複寫選項。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
 -   相對於 DB2，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許使用更長的資料表名稱和資料行名稱：  
   

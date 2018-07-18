@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255942"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +48,12 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  [ **@schedule_id=** ] *schedule_id*  
  這是要刪除之排程的排程識別碼。 *schedule_id*是**int**，預設值是 NULL。  
   
-> **注意：**任一*schedule_id*或*schedule_name*必須指定，但不可同時指定兩者。  
+> **注意：** 任一*schedule_id*或*schedule_name*必須指定，但不可同時指定兩者。  
   
  [  **@schedule_name=** ] **'***schedule_name***'**  
  這是要刪除的排程名稱。 *schedule_name*是**sysname**，預設值是 NULL。  
   
-> **注意：**任一*schedule_id*或*schedule_name*必須指定，但不可同時指定兩者。  
+> **注意：** 任一*schedule_id*或*schedule_name*必須指定，但不可同時指定兩者。  
   
  [ **@force_delete** = ] *force_delete*  
  指定如果排程附加至作業，程序是否會失敗。 *Force_delete* bit，預設值是**0**。 當*force_delete*是**0**，如果排程附加至作業的預存程序會失敗。 當*force_delete*是**1**，不論排程是否附加至作業刪除此排程。  

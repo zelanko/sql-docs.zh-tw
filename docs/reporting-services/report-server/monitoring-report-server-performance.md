@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027155"
 ---
 # <a name="monitoring-report-server-performance"></a>監視報表伺服器效能
   使用效能監視工具來監視報表伺服器的效能，以評估伺服器活動、觀察趨勢、診斷系統瓶頸，以及收集可協助您判斷目前系統組態是否適當的資料。 若要微調伺服器效能，您可以指定回收報表伺服器應用程式定義域的頻率。 如需詳細資訊，請參閱 [設定報表伺服器應用程式的可用記憶體](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/03/2018
  如果您在單一電腦上有多個報表伺服器執行個體，則可以一起或分開監視這些執行個體。 加入計數器時，選擇要包含哪些執行個體。 如需使用效能主控台 (perfmon.msc) 與加入計數器的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 產品文件集。  
   
 ## <a name="other-performance-counters"></a>其他效能計數器  
- 僅針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] MSRS 2008 Web 服務 **、**MSRS 2008 Windows 服務 **和**ReportServer:Service **提供自訂的**效能計數器。 下列效能物件會提供報表伺服器的其他效能監視資料。  
+ 僅針對 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] MSRS 2008 Web 服務 **、** MSRS 2008 Windows 服務 **和**ReportServer:Service **提供自訂的**效能計數器。 下列效能物件會提供報表伺服器的其他效能監視資料。  
   
 |效能物件|注意|  
 |------------------------|-----------|  

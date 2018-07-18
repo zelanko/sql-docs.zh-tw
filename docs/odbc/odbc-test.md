@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914503"
 ---
 # <a name="odbc-test"></a>ODBC 測試
 Microsoft® ODBC 測試是 ODBC 的應用程式可讓您測試 ODBC 驅動程式和 ODBC 驅動程式管理員。 ODBC 3.51 包含 ANSI 和 unicode 版本的 ODBC 測試。 對應檔案如下所示：  

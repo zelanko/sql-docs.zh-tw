@@ -2,7 +2,6 @@
 title: 資料行和資料表附加方法中，屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 922e2cf68402fe47a358d46ba2209b8506a46e3a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e3f480ab34c22a720f4ed8b0d51870f209fb7f6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285337"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>資料行和資料表附加名稱屬性範例 (VB) 方法
 下列程式碼會示範如何建立新的資料表。  

@@ -1,39 +1,38 @@
 ---
-title: sys.pdw_nodes_indexes (TRANSACT-SQL) |Microsoft 文件
+title: sys.pdw_nodes_indexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 04591e83fdfd8222a84480f983b21a6d77d51da2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db4fcae2e341731ff3e56b8b5a11101d7db5da5
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875016"
 ---
-# <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (TRANSACT-SQL)
+# <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   傳回索引[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。  
   
-|資料行名稱|資料類型|Description|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|此索引所屬的物件識別碼。||  
-|name|**sysname**|索引的名稱。 名稱只物件內是唯一。 NULL = 堆積||  
+|NAME|**sysname**|索引的名稱。 只有在物件內的唯一名稱。 NULL = 堆積||  
 |index_id|**int**|索引的識別碼。 index_id 只物件內是唯一。<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集索引<br /><br /> > 1 = 非叢集索引||  
 |型別|**tinyint**|索引的類型：<br /><br /> 0 = 堆積<br /><br /> 1 = 叢集<br /><br /> 2 = 非叢集<br /><br /> 5 = 叢集 xVelocity 記憶體最佳化的資料行存放區索引|  
 |type_desc|**nvarchar(60)**|索引類型的描述：<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> 叢集資料行存放區||  
@@ -49,8 +48,8 @@ ms.lasthandoff: 05/04/2018
 |allow_row_locks|**bit**|1 = 索引允許資料列鎖定。|永遠為 1。|  
 |allow_page_locks|**bit**|1 = 索引允許頁面鎖定。|永遠為 1。|  
 |has_filter|**bit**|0 = 索引沒有篩選。|一律是 0。|  
-|filter_definition|**nvarchar(max)**|包含在已篩選之索引內的資料列子集運算式。|一律為 NULL。|  
-|pdw_node_id|**int**|唯一識別項[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點。|NOT NULL|  
+|filter_definition|**nvarchar(max)**|包含在已篩選之索引內的資料列子集運算式。|一律是 NULL。|  
+|pdw_node_id|**int**|唯一識別碼[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點。|NOT NULL|  
   
 ## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 權限。  

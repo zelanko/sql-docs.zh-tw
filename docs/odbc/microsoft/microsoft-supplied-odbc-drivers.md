@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900463"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供的 ODBC 驅動程式
 *驅動程式*實作 ODBC API 函式的程式庫。 每個驅動程式是針對特定資料庫管理系統 (DBMS)。 在大部分情況下，驅動程式會公開基礎 dbms; 功能不需要它們實作不支援的 DBMS 功能。 驅動程式執行特定工作，並可分為兩類： 以檔案為基礎和以 DBMS 為基礎。 如需有關驅動程式和驅動程式架構的詳細資訊，請參閱[驅動程式](../../odbc/reference/drivers.md)。  

@@ -13,7 +13,7 @@ ms.openlocfilehash: 18b81434c2e863ef3fc4db6ce2458f236dafdd53
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573870"
 ---
 # <a name="unlock-element-xmla"></a>Unlock 元素 (XMLA)

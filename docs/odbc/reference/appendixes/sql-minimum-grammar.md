@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909963"
 ---
 # <a name="sql-minimum-grammar"></a>SQL 最小文法
 本節描述 ODBC 驅動程式必須支援的最小 SQL 語法。 這一節所述的語法是以 sql-92 的項目層級語法的子集。  

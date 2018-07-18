@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912795"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>資料長度，緩衝區長度和截斷
 *資料長度*資料的位元組長度，會儲存在應用程式的資料緩衝區，不是它會儲存在資料來源。 此差異很重要的因為資料通常會儲存在資料來源中比資料緩衝區中的不同類型。 因此對於傳送至資料來源的資料，這是之前轉換成資料來源的類型資料的位元組長度。 從資料來源擷取資料，這可以是資料的位元組長度的資料緩衝區的型別以及之前完成任何截斷的轉換後。  

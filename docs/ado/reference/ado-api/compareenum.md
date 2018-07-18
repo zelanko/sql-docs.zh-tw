@@ -2,7 +2,6 @@
 title: CompareEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16bc257e151fc68eddd9268c10cf9d093d9c8491
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c458b18e4270acecb4abd573a5996442f3f9ef4d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276827"
 ---
 # <a name="compareenum"></a>CompareEnum
 指定兩筆記錄，其書籤所代表的相對位置。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
-|**adCompareEqual**|1|指出書籤相等。|  
+|**adCompareEqual**|@shouldalert|指出書籤相等。|  
 |**adCompareGreaterThan**|2|指出第一個書籤之後，第二個。|  
 |**adCompareLessThan**|0|表示第一個書籤前，第二個。|  
 |**adCompareNotComparable**|4|表示書籤無法進行比較。|  

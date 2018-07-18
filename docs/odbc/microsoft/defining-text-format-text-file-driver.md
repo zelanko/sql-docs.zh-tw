@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904873"
 ---
 # <a name="defining-text-format-text-file-driver"></a>定義文字格式 （文字檔案驅動程式）
 使用文字驅動程式時，您可以使用**定義文字格式**對話方塊，即可在選取的檔案中定義的資料行的格式。 此對話方塊可讓您指定每個資料表的結構描述。 這項資訊會寫入 Schema.ini 檔中的資料來源目錄。 每個文字資料來源目錄建立個別的 Schema.ini 檔案。  

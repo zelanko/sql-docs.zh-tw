@@ -13,7 +13,7 @@ ms.openlocfilehash: c802b20b0e2d6212f68fa4dc43c35426ff377957
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34578140"
 ---
 # <a name="restrictionlist-element-xmla"></a>RestrictionList 元素 (XMLA)

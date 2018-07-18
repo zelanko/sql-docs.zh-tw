@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911483"
 ---
 # <a name="choosing-an-sql-grammar"></a>選擇 SQL 文法
 當建構 SQL 陳述式的第一個決策是要使用的文法。 除了可從各種標準內文，例如 Open Group、 ANSI 和 ISO 文法幾乎 DBMS 廠商定義自己的文法，其中每個稍有不同於標準。  

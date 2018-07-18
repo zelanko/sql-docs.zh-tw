@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Microsoft Active Directory 服務 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c38caaead8d2eb1fa24a4b7a38aebfdc19cbcec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f26d8a9aa58c45ddb5ac58a6415776a60ed5b80
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270647"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft OLE DB Provider for Microsoft Active Directory 服務
 Active Directory 服務介面 (ADSI) 提供者可讓 ADO 連接到透過 ADSI 異質目錄服務。 這可讓 ADO 應用程式對唯讀存取 Microsoft Windows NT 4.0 和 Microsoft Windows 2000 目錄服務，除了任何 LDAP 相容目錄服務和 Novell 目錄服務。 ADSI 本身為基礎的提供者模型，使新的提供者提供存取至另一個目錄時，ADO 應用程式將能夠順暢地存取它。 ADSI 提供者是無限制執行緒，啟用 Unicode。  
@@ -47,7 +47,7 @@ ADSDSOObject
   
  下列關鍵字所組成的字串。  
   
-|關鍵字|Description|  
+|關鍵字|描述|  
 |-------------|-----------------|  
 |**提供者**|指定 Active Directory 服務的 OLE DB 提供者。|  
 |**使用者識別碼**|指定使用者名稱。 如果省略此關鍵字，則會使用目前登入。|  
@@ -63,7 +63,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |*Root*|指出**ADsPath**要開始搜尋 （也就是說，搜尋的根） 的物件。|  
 |*篩選*|表示搜尋篩選器以 RFC 1960 格式。|  
@@ -121,12 +121,12 @@ objectClass='user' AND objectCategory='Person'"
 |方法|可用？|  
 |------------|----------------|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|  
-|[[取消]](../../../ado/reference/ado-api/cancel-method-ado.md)|否|  
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|否|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|  
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|是|  
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|  
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
+|[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|  
 |[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|是|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|  

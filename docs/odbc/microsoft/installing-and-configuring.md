@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899603"
 ---
 # <a name="installing-and-configuring"></a>安裝和設定
 若要下載 Visual FoxPro ODBC 驅動程式，請參閱[Visual FoxPro ODBC 驅動程式下載網站](http://go.microsoft.com/fwlink/?LinkId=121318)。  

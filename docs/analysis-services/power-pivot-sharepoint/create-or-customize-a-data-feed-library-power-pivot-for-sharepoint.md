@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021247"
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>建立或自訂資料摘要庫 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="createlib"></a> 建立新的資料摘要庫  
  建立資料摘要庫是為 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿啟用資料摘要的第一個步驟。 資料摘要庫會提供資料服務文件的應用程式和管理頁面，因此您必須先將此摘要庫準備就緒，才能建立新文件。  
   
- 資料摘要庫的根據是內建範本與預先設定的*「資料服務文件內容類型」*(Data service document content type)，此類型定義資料服務文件的屬性和行為。  
+ 資料摘要庫的根據是內建範本與預先設定的 *「資料服務文件內容類型」*(Data service document content type)，此類型定義資料服務文件的屬性和行為。  
   
 1.  按一下頁面左上角的 [網站動作]。  
   

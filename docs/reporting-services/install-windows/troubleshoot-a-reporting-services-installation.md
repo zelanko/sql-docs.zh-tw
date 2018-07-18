@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -15,11 +14,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a9e470347f20649c3ef42a93e862e32cb046171a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 345d104ce52a89e7ddcfdca24c93283ddfabb0d0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322587"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>針對 Reporting Services 安裝進行疑難排解
 
@@ -75,14 +75,14 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="bkmk_configmanager_notstart"></a> Reporting Services 設定管理員未啟動
 
- **描述：**依 SQL Server 2012 或更新版本的設計會出現此問題。 Reporting Services 現在的架構為 SharePoint 服務架構。 在 SharePoint 模式中設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，不再需要組態管理員。  
+ **描述：** 依 SQL Server 2012 或更新版本的設計會出現此問題。 Reporting Services 現在的架構為 SharePoint 服務架構。 在 SharePoint 模式中設定及管理 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 時，不再需要組態管理員。  
   
  **因應措施：** 使用 SharePoint 管理中心，在 SharePoint 模式下設定報表伺服器。 如需詳細資訊，請參閱 [管理 Reporting Services SharePoint 服務應用程式](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
  ![搭配回到頁首連結使用的箭頭圖示](../../analysis-services/instances/media/uparrow16x16.gif "搭配回到頁首連結使用的箭頭圖示") [針對 SharePoint 模式安裝的問題進行疑難排解](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> 在 SharePoint 模式下安裝 SQL Server 2016 SSRS 之後，您在 SharePoint 管理中心內看不到 SQL Server Reporting Services 服務  
- **描述：**如果成功安裝 SharePoint 模式的 SQL Server 2016 Reporting Services 與適用於 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 增益集之後，您沒有在下列兩個功能表中看見 “SQL Server Reporting Services”，表示 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務尚未註冊：  
+ **描述：** 如果成功安裝 SharePoint 模式的 SQL Server 2016 Reporting Services 與適用於 SharePoint 2013/2016 的 SQL Server 2016 Reporting Services 增益集之後，您沒有在下列兩個功能表中看見 “SQL Server Reporting Services”，表示 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務尚未註冊：  
   
 -   SharePoint 2013/2016 管理中心 -> [應用程式管理] -> [管理伺服器上的服務] 頁面  
   

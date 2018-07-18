@@ -2,7 +2,6 @@
 title: 篩選條件屬性 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9dc176d7c64d1845ddb863cd58fd41313967ccce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72efa7b9a70bdfdf141c32d5487cc2a5b9776d16
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278757"
 ---
 # <a name="filter-property"></a>篩選屬性
 指出資料中的篩選[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  
@@ -33,9 +33,9 @@ ms.lasthandoff: 05/03/2018
 
 設定或傳回**Variant**值，其中可以包含下列項目之一：  
   
--   **準則字串：**與串連的一個或多個個別的子句所組成的字串**AND**或**OR**運算子。  
+-   **準則字串：** 與串連的一個或多個個別的子句所組成的字串**AND**或**OR**運算子。  
   
--   **陣列的書籤：**的唯一的書籤值陣列中的記錄該點**資料錄集**物件。  
+-   **陣列的書籤：** 的唯一的書籤值陣列中的記錄該點**資料錄集**物件。  
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)值。  
   
@@ -97,8 +97,8 @@ ms.lasthandoff: 05/03/2018
 ||非索引鍵|單一索引鍵|多個索引鍵|
 |-|--------------|----------------|-------------------|
 |**非索引鍵**|+|+|+|
-|**單一索引鍵**|+|-|해당 사항 없음|
-|**多個索引鍵**|+|해당 사항 없음|+|
+|**單一索引鍵**|+|-|不適用|
+|**多個索引鍵**|+|不適用|+|
 |||||
   
 ## <a name="applies-to"></a>適用於

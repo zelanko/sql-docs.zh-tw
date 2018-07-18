@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/18/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,14 +27,15 @@ helpviewer_keywords:
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e5dafed981c030b5f06e41610fd3add6c4af0238
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4f7c950785268f1b462c8363e4fb9e5f426055b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788859"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ CREATE COLUMN MASTER KEY key_name
  key_path  
  資料行主要金鑰存放區中的金鑰路徑。 金鑰路徑在每個用戶端應用程式的內容中都必須有效，這些用戶端應用程式必須加密或解密儲存在參考資料列主要金鑰所保護的資料行中 (間接) 的資料，而且用戶端應用程式必須能夠存取金鑰。 金鑰路徑的格式為金鑰存放區提供者專用。 下列清單描述特定 Microsoft 系統金鑰存放區提供者的金鑰路徑格式。  
   
--   **提供者名稱：**MSSQL_CERTIFICATE_STORE  
+-   **提供者名稱：** MSSQL_CERTIFICATE_STORE  
   
      **金鑰路徑格式：** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   

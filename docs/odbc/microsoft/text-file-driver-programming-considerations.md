@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908833"
 ---
 # <a name="text-file-driver-programming-considerations"></a>文字檔案驅動程式的程式設計考量
 本節包含下列主題：  

@@ -11,11 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842811"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 容器中的 SQL Server 資料庫還原
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 05/23/2018
 > * 執行 TRANSACT-SQL 陳述式，來檢視及修改資料庫。
 > * 將已修改的資料庫備份。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 * 在任何支援的 Linux 發行版本或適用於 Mac/Windows 上的 Docker 安裝 Docker 引擎 1.8 以上版本。 如需詳細資訊，請參閱[安裝 Docker](https://docs.docker.com/engine/installation/)。
 * 至少 2 GB 的磁碟空間
@@ -102,7 +103,7 @@ ms.lasthandoff: 05/23/2018
 
 本教學課程使用[Wide World Importers 範例資料庫](../sample/world-wide-importers/wide-world-importers-documentation.md)。 使用下列步驟下載並將 Wide World Importers 資料庫備份檔案複製到您的 SQL Server 容器。
 
-1. 首先，使用**docker exec**建立備份的資料夾。 El comando siguiente crea **/var/選擇/mssql/** SQL Server 容器內的目錄。
+1. 首先，使用**docker exec**建立備份的資料夾。 El comando siguiente crea **/var/opt/mssql/backup** SQL Server 容器內的目錄。
 
    ```bash
    sudo docker exec -it sql1 mkdir /var/opt/mssql/backup

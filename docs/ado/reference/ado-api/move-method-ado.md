@@ -2,7 +2,6 @@
 title: Move 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a596576b742eed097d0f7f89f5c13b70adb99477
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4cd82d1e3e18c408afb1771a5f0f3fa1557b8ae
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279367"
 ---
 # <a name="move-method-ado"></a>Move 方法 (ADO)
 移動中的目前記錄的位置[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -49,9 +49,9 @@ recordset.Move NumRecords, Start
   
  如果*NumRecords*引數為大於零，目前的記錄位置前移 (的尾端**資料錄集**)。 如果*NumRecords*小於零，會向後移動目前的記錄位置 (開頭**資料錄集**)。  
   
- 如果**移動**呼叫會將目前的記錄位置移至第一筆記錄之前，ADO 資料錄集中第一筆記錄之前的位置設定為目前的記錄 ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)是**，則為 True**). 嘗試移動回溯時**BOF**內容已出現**True**會產生錯誤。  
+ 如果**移動**呼叫會將目前的記錄位置移至第一筆記錄之前，ADO 資料錄集中第一筆記錄之前的位置設定為目前的記錄 ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)是 **，則為 True**). 嘗試移動回溯時**BOF**內容已出現**True**會產生錯誤。  
   
- 如果**移動**呼叫會移至某個點目前的記錄位置最後一筆記錄之後，ADO 資料錄集中的最後一筆記錄之後將目前的記錄設定至位置 ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)是**，則為 True**). 嘗試移動時，正向**EOF**內容已出現**True**會產生錯誤。  
+ 如果**移動**呼叫會移至某個點目前的記錄位置最後一筆記錄之後，ADO 資料錄集中的最後一筆記錄之後將目前的記錄設定至位置 ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)是 **，則為 True**). 嘗試移動時，正向**EOF**內容已出現**True**會產生錯誤。  
   
  呼叫**移動**方法從空**資料錄集**物件會產生錯誤。  
   

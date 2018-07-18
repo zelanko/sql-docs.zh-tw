@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912393"
 ---
 # <a name="header-files"></a>標頭檔
 標頭檔 Sql.h 包含原型函式和核心 ODBC 介面一致性層級中的功能。 Sqlext.h 標頭檔包含原型函式和中的層級 1 和層級 2 API 的一致性層級的功能。 Sqltypes.h 標頭檔包含類型定義與 SQL 資料類型的指標。  

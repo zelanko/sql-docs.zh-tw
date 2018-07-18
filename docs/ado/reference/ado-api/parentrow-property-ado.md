@@ -2,7 +2,6 @@
 title: ParentRow 屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91a84b0c34a29858ec18f241db3d5c792075a766
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86122a7cb075816809dd8868c1db94adf1b81612
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280557"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow 屬性 (ADO)
 設定 OLE DB 的容器**列**物件上**ADORecordConstruction**物件，使資料列的父代會轉換成 ADO**記錄**物件。  

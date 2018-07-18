@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910663"
 ---
 # <a name="role-of-the-driver"></a>驅動程式的角色
 驅動程式會檢查所有錯誤和警告不會檢查驅動程式管理員，並排序它所產生的狀態記錄。 資料庫連接 (ODBC 2。*x*驅動程式不會排序狀態記錄。)這在資料截斷、 資料轉換、 語法和某些狀態轉換包含錯誤和警告。 錯誤和警告部分核取驅動程式管理員，可能也會檢查驅動程式。 例如，雖然驅動程式管理員會檢查是否值*作業*中**SQLSetPos**是合法的驅動程式必須檢查它是否支援。  

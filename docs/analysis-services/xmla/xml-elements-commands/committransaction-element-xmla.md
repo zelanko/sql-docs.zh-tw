@@ -13,7 +13,7 @@ ms.openlocfilehash: 5ade8d12812212193a082afddf1504eebadb270e
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575050"
 ---
 # <a name="committransaction-element-xmla"></a>CommitTransaction 元素 (XMLA)

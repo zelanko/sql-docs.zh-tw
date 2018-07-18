@@ -1,5 +1,5 @@
 ---
-title: 之 deprecated sys.numbered_procedures (TRANSACT-SQL) |Microsoft 文件
+title: sys.numbered_procedures (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,16 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d16757a007b423ab6c4ed8ff8a002a73c9c583dd
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33178754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987440"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  針對建立為編號程序的每個 SQL Server 預存程序，各包含一個資料列。 這並不會顯示基底 (數字 = 1) 預存程序的一個資料列。 基底的預存程序項目可以檢視中找到這類**sys.objects**和**sys.procedures**。  
+  針對建立為編號程序的每個 SQL Server 預存程序，各包含一個資料列。 這並不會顯示基底 (數字 = 1) 預存程序的一個資料列。 基底的預存程序的項目可以檢視中找到這類**sys.objects**並**sys.procedures**。  
   
 > [!IMPORTANT]  
 >  編號程序已被取代。 不再使用編號程序。 當編譯使用這份目錄檢視的查詢時，會引發 DEPRECATION_ANNOUNCEMENT 事件。  

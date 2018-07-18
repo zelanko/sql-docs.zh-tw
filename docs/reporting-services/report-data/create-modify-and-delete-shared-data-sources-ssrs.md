@@ -1,7 +1,7 @@
 ---
 title: 建立、修改及刪除共用資料來源 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -23,19 +23,15 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f68f43c6b004219977aed509286c8d56fdca1afe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550759"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。  共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  
-  
- 下列圖示會指出報表管理員資料夾階層中的共用資料來源：  
-  
- ![共用資料來源圖示](../../reporting-services/report-data/media/hlp-16datasource.png "共用資料來源圖示")  
-共用資料來源的圖示  
   
  對於報表以及資料驅動訂閱而言，共用資料來源是選擇性的，但是對於報表模型而言，則是必要的。 如果您打算將報表模型用於隨選報表，您必須建立並維護一個共用資料來源項目，才能提供連接資訊給模型。  
   
@@ -44,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 |部分|描述|  
 |----------|-----------------|  
 |[屬性]|識別報表伺服器資料夾階層中之項目的名稱。|  
-|描述|檢視資料夾的內容時，與「報表管理員」中的項目一起顯示的描述。|  
+|描述|檢視資料夾的內容時，與入口網站中的項目一起顯示的描述。|  
 |連接類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附之資料處理延伸模組的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
 |連接字串|資料庫的連接字串。 如需詳細資訊，或者要檢視常用資料來源之連接字串的範例，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
 |認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
@@ -52,7 +48,7 @@ ms.lasthandoff: 05/03/2018
  共用資料來源不包含用來擷取資料的查詢資訊。 查詢永遠會保留在報表定義中。  
   
 ## <a name="creating-and-modifying-shared-data-sources"></a>建立與刪除共用資料來源  
- 若要建立共用資料來源或修改其屬性，您必須擁有報表伺服器的 [管理資料來源] 權限。 如果報表伺服器是在原生模式下執行，您可以使用「報表管理員」來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
+ 若要建立共用資料來源或修改其屬性，您必須擁有報表伺服器的 [管理資料來源] 權限。 如果報表伺服器是在原生模式下執行，您可以使用入口網站來建立與設定共用資料來源。 如果報表伺服器是在 SharePoint 整合模式下執行，您可以使用 SharePoint 網站上的應用程式頁面。 如果是任意模式下的任何報表伺服器，您可以在「報表設計師」中建立共用資料來源，然後將其發行到目標伺服器上。  
   
  在報表伺服器上建立共用資料來源之後，您可以建立角色指派來控制其存取權、將其移動到不同的位置、重新命名它，或者在外部資料來源執行維護作業時離線以防進行報表處理。 如果您重新命名或移動共用資料來源項目至報表伺服器資料夾階層中的其他位置，所有參考共用資料來源的報表或訂閱，其相關路徑資訊會隨之更新。 如果您讓共用資料來源離線，所有報表、模型和訂閱都不會執行，直到您重新啟用資料來源為止。  
   
@@ -75,30 +71,26 @@ ms.lasthandoff: 05/03/2018
   
          新的共用資料來源會出現在 [方案總管] 的 [共用資料來源] 資料夾中。  
   
-4.  按一下 [認證]。  
+4.  按一下 **[認證]**。  
   
      指定用於這個資料來源的認證。 資料來源的擁有者會選擇支援的認證類型。  
   
- **在報表管理員中建立共用資料來源**  
+ **在入口網站中建立共用資料來源**  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
-  
-2.  在報表管理員中，導覽至 **[內容]** 頁面。  
-  
-3.  按一下 **[新增資料來源]**。 [新增資料來源] 頁面隨即開啟。  
+1.  在入口網站中，選取 [新增] > [資料來源]。 
   
 4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ? : @ & = + , $ / * < > | " /。  
   
-5.  選擇性地輸入描述，以提供使用者有關連接的資訊。 此描述會出現在報表管理員的 [內容] 頁面上。  
+5.  選擇性地鍵入描述，以提供使用者連線的相關資訊。  
   
 6.  在 [資料來源類型] 清單中，指定用來處理資料來源中之資料的資料處理延伸模組。  
   
 7.  針對 [連接字串]，指定報表伺服器用於連線到資料來源的連接字串。 建議您不要在連接字串中指定認證。  
   
-     下列範例將說明用以連接至本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫的連接字串：  
+     下列範例將說明用以連線至本機 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AdventureWorks2016 資料庫的連接字串：  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
+    data source=<localservername>; initial catalog=AdventureWorks2016 
     ```  
   
 8.  針對 **[使用下列方式連接]**，指定報表執行時要如何取得認證：  
@@ -120,11 +112,13 @@ ms.lasthandoff: 05/03/2018
   
 10. 按一下 **[確定]**。  
   
- **在報表管理員中修改共用資料來源**  
+ **在入口網站中修改共用資料來源**  
   
-1.  在報表管理員中，導覽至 [內容] 頁面。  
+1.  在入口網站中，巡覽至共用資料來源。  
   
-2.  巡覽至共用資料來源項目，將滑鼠停留在該項目上，按一下下拉式清單，然後在操作功能表中按一下 [管理]。 [屬性] 頁面隨即開啟。  
+2.  選取共用資料來源右上角的省略符號 (...) > [管理]。   
+
+    [屬性] 頁面隨即開啟。
   
 3.  修改資料來源，然後按一下 [套用]。  
   
@@ -133,21 +127,14 @@ ms.lasthandoff: 05/03/2018
   
  **若要刪除共用資料來源**  
   
-1.  在報表管理員中，巡覽至 [內容] 頁面，然後執行下列其中一個動作：  
+1. 在入口網站中，巡覽至共用資料來源。  
   
-    -   導覽至共用資料來源項目。  
+2.  選取共用資料來源右上角的省略符號 (...) > [管理]。    
+    [屬性] 頁面隨即開啟。
   
-         按一下項目來開啟它。 [一般屬性] 頁面隨即開啟。  
+3. 按一下 [刪除]，然後按一下 [確定]。  
   
-         按一下 [刪除]，然後按一下 [確定]。  
-  
-    -   在 [內容] 頁面中，巡覽至包含您要刪除之資料來源的資料夾。  
-  
-         將滑鼠停留在該項目上，按一下下拉式清單，然後在操作功能表中按一下 [刪除]。  
-  
-         [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- 刪除共用資料來源將會停用使用共用資料來源的所有報表、模型或資料驅動訂閱。 如果沒有資料來源連接資訊，這些項目就無法再執行 若要啟動這些項目，您必須開啟每個項目，並執行下列動作：  
+刪除共用資料來源會停用使用共用資料來源的所有報表、模型或資料驅動訂閱。 如果沒有資料來源連接資訊，這些項目就無法再執行 若要啟動這些項目，您必須開啟每個項目，並執行下列動作：  
   
 -   若是參考共用資料來源的報表和資料驅動訂閱，您可以在報表屬性或訂閱中指定資料來源連接資訊，或者選取其中包含您要使用之值的新共用資料來源。  
   
@@ -156,7 +143,8 @@ ms.lasthandoff: 05/03/2018
  刪除共用資料來源時，沒有「復原」作業。 不過，如果您不小心刪除了共用資料來源，可以使用相同的屬性值來建立一個新的共用資料來源。 您必須開啟每個報表、模型和資料驅動訂閱，才能在使用它的項目中重建共用資料來源，但是，只要資料來源屬性與之前的資料來源屬性相同，報表、模型和訂閱就會如先前般運作。  
   
 ## <a name="importing-shared-data-sources"></a>匯入共用資料來源  
- **若要在報表設計師中匯入現有的資料來源**  
+
+**若要在報表設計師中匯入現有的資料來源**  
   
 1.  在方案總管中，以滑鼠右鍵按一下報表伺服器專案中的 [共用資料來源] 資料夾，然後按一下 [加入現有項目]。 [新增現有項目] 對話方塊隨即開啟。  
   
@@ -220,7 +208,7 @@ ms.lasthandoff: 05/03/2018
  刪除報表模型時，請特別小心。 如果您刪除模型，就不能再於報表產生器中，開啟和修改以該模型為基礎的任何報表。 如果您不慎刪除了現有報表所使用的模型，就必須重新產生該模型，重新建立並儲存使用該模型的任何報表，然後重新指定想要使用的任何模型項目安全性。 您不能只是重新產生模型，然後將它附加到現有的報表。  
   
 ## <a name="dependent-items"></a>相依項目  
- 若要檢視使用資料來源之報表和模型的清單，開啟共用資料來源的 [相依項目] 頁面。 當您在「報表管理員」或 SharePoint 應用程式頁面中開啟資料來源時，您可以存取此頁面。 請注意，[相依項目] 頁面中不會顯示資料驅動訂閱。 如果共用資料來源是由訂閱所使用，訂閱將不會出現在相依項目清單中。  
+ 若要檢視使用資料來源之報表和模型的清單，開啟共用資料來源的 [相依項目] 頁面。 當您在入口網站或 SharePoint 應用程式頁面中開啟資料來源時，您可以存取此頁面。 請注意，[相依項目] 頁面中不會顯示資料驅動訂閱。 如果共用資料來源是由訂閱所使用，訂閱將不會出現在相依項目清單中。  
   
  **檢視 SharePoint 中的相依項目**  
   
@@ -233,13 +221,8 @@ ms.lasthandoff: 05/03/2018
      若為報表模型，相依項目的清單就會顯示在報表產生器中建立的報表。 若為共用資料來源，相依項目清單可能會同時包括報表和報表模型。  
   
 ## <a name="see-also"></a>另請參閱  
- [建立及管理共用資料來源 &#40;SharePoint 整合模式的 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [管理報表資料來源](../../reporting-services/report-data/manage-report-data-sources.md)   
- [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [內嵌和共用資料連接或資料來源 &#40;報表產生器及 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [資料來源屬性頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [設定報表的資料來源屬性 &#40;報表管理員&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [設定編頁報表的資料來源屬性](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

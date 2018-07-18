@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904663"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>選項以程式設計方式設定為 dBASE 驅動程式
 |選項|Description|方法|  

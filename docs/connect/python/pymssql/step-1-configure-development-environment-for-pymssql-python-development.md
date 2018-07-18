@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: python
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,22 +14,23 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91b941785a6fe7788c9590efd9f9c42ac6c60b10
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a4a573ce609bfb5364a1dabac784eb760915b8a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309517"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>步驟 1： 設定 pymssql Python 開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 Python Driver for SQL Server 的應用程式。    
   
 請注意，Python SQL 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
   
-## <a name="windows"></a>視窗  
+## <a name="windows"></a>Windows  
   
 1. **安裝 Python 執行階段以及 pip 封裝管理員**  
-a. 移至[python.org](https://www.python.org/downloads/)  
-b. 按一下適當的 Windows 安裝程式 msi 連結。   
+A. 移至[python.org](https://www.python.org/downloads/)  
+B. 按一下適當的 Windows 安裝程式 msi 連結。   
 c. 下載一次執行的 msi 安裝 Python 執行階段  
   
 2. **下載模組說明 pymssql**從[這裡](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
@@ -66,8 +66,8 @@ c. 下載一次執行的 msi 安裝 Python 執行階段
 ## <a name="mac"></a>Mac  
   
 1. **安裝 Python 執行階段以及 pip 封裝管理員**  
-a. 移至[python.org](https://www.python.org/downloads/)  
-b. 按一下適當的 Mac installer byok-kek-pkg 連結。   
+A. 移至[python.org](https://www.python.org/downloads/)  
+B. 按一下適當的 Mac installer byok-kek-pkg 連結。   
 c. 下載一次執行安裝 Python 執行階段版本  
   
 2.  **開啟終端機**  

@@ -1,5 +1,5 @@
 ---
-title: 導出資料行 |Microsoft 文件
+title: 導出資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3a79910d324a1e0c157a638745ad96a4bfff800e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e27c545e960c8c57178f099bfa99a7187795d959
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982520"
 ---
 # <a name="calculated-columns"></a>導出資料行
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  導出資料行，在表格式模型中，可讓您將新資料加入至模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
+  導出資料行，在表格式模型中，可讓您將新資料加入至您的模型。 您可以建立定義資料行之資料列層級值的 DAX 公式，而不是將值貼上或匯入至資料行中。 然後就可以像是其他任何資料行一樣，在報表、樞紐分析表或樞紐分析圖中使用導出資料行。  
  
   
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
   
 -   當您重新命名導出資料行時，必須手動更新依賴此資料行的所有公式。 只要您不是處於手動更新模式，公式的結果都會自動更新。 不過，這項作業可能需要花一些時間。  
   
--   資料行的名稱中不能使用某些字元。 如需詳細資訊，請參閱 [DAX 語法參考](http://msdn.microsoft.com/en-us/098630f4-7d1d-467e-976c-99b2279430d5)中的＜命名需求＞。  
+-   資料行的名稱中不能使用某些字元。 如需詳細資訊，請參閱 [DAX 語法參考](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)中的＜命名需求＞。  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  導出資料行的公式可能會比量值所使用的公式更耗費資源。 其中一個原因是：導出資料行的結果永遠是針對資料表中的每個資料列計算，而量值僅針對報表、樞紐分析表或樞紐分析圖中所用篩選定義的資料格計算。 例如，包含一百萬個資料列的資料表所擁有的導出資料行永遠都會有一百萬個結果，在效能上也會有對應的影響。 但是，樞紐分析表通常會套用資料列和資料行標題來篩選資料，因此，只會針對樞紐分析表內每一個資料格中的資料子集來計算量值。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/10/2018
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[建立導出資料行](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|此主題中的工作描述如何將新導出資料行加入至資料表。|  
   

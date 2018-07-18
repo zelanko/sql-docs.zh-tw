@@ -10,12 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbd53d9d49c937967e88cefa95750dca41631876
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045326"
 ---
-# <a name="measures"></a>[量值]
+# <a name="measures"></a>量值
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   在表格式模型中，量值是透過報表用戶端內使用的 DAX 公式所建立的計算。 量值會以使用者在報表用戶端應用程式中選取的欄位、篩選及交叉分析篩選器為依據來計算。  
   
@@ -59,7 +60,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  依預設，使用自動加總時，量值的名稱會由相關聯的資料行名稱所定義，後面接著冒號和公式。 您可在公式列或 [屬性] 視窗的 **[量值名稱]** 屬性設定中變更名稱。 使用自訂公式建立量值時，您可在公式列中輸入名稱，後接冒號和公式，或者，您可在 [屬性] 視窗的 **[量值名稱]** 屬性設定中輸入名稱。  
   
- 務必命名量值謹慎。 量值名稱會和相關聯的資料表一起出現在報表用戶端的欄位清單中。 KPI 也會根據基底量值來命名。 量值不得與模型中任何資料表的任何資料行名稱相同。  
+ 務必命名量值仔細。 量值名稱會和相關聯的資料表一起出現在報表用戶端的欄位清單中。 KPI 也會根據基底量值來命名。 量值不得與模型中任何資料表的任何資料行名稱相同。  
   
 > [!TIP]  
 >  您可以將多個資料表中的量值群組到一個資料表中，其方式是建立空白資料表，然後將量值移到其中或是在其中建立新的量值。 請牢記，當您參考其他資料表中的資料行時，可能必須在 DAX 公式中包含資料表名稱。  
@@ -69,7 +70,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 ##  <a name="bkmk_properties"></a> 量值屬性  
  每個量值都有定義的屬性。 您可在 [屬性] 視窗中，編輯量值屬性以及相關聯的資料行屬性。 量值具有下列屬性：  
   
-|屬性|預設設定|Description|  
+|屬性|預設設定|描述|  
 |--------------|---------------------|-----------------|  
 |**說明**|空白|量值的說明。 報表用戶端中不會顯示量值說明。|  
 |**格式**|在公式運算式中，自動從參考資料行的資料類型來判斷。|量值的格式。 例如，貨幣或百分比。|  
@@ -83,7 +84,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 ##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[建立及管理量值](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|描述如何使用模型設計師中的量值方格，建立及管理量值。|  
   

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700899"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services 的高可用性與延展性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +85,7 @@ ms.lasthandoff: 05/10/2018
 |使用 MOLAP 儲存的多維度模型。|選擇平衡的組態，以提供可快速載入資料的磁碟 IO，並具有足夠的 RAM 來處理快取的資料。|  
 |使用 ROLAP 儲存的多維度模型。|最大化磁碟 IO，並將網路延遲降至最低。|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>透過 WSFC 提供高可用性和備援  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>透過 WSFC 高可用性和備援  
  Analysis Services 可安裝到現有的 Windows Server 容錯移轉叢集 (WSFC) 以取得高可用性，盡可能在最短的時間內還原服務。  
   
  容錯移轉叢集提供資料庫的完整存取權 (讀取和回寫)，但一次只會針對一個節點。 次要資料庫會在叢集中的額外節點上執行，並在第一個節點關閉時作為取代伺服器。  

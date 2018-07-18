@@ -2,7 +2,6 @@
 title: 中斷並重新連接的資料錄集 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c801632ede4bf71dbfafdc799f5329179abb536
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5b0aa191cc98716934c8fc87c12cb9fff39ecd73
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271467"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>中斷並重新連接的資料錄集
 開啟資料來源的用戶端的資料錄集，然後中斷資料來源中的資料錄集的功能最強大的功能在 ADO 中找到的其中一個。 一旦已中斷連接資料錄集，可以被關閉資料來源的連接，藉此釋放用來進行維護的伺服器上的資源。 您可用來檢視和編輯資料錄集中的資料，它已中斷連接時繼續並稍後重新連線至資料來源和批次模式中傳送您的更新。  

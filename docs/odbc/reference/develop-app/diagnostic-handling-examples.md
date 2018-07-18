@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908193"
 ---
 # <a name="diagnostic-handling-examples"></a>診斷的處理範例
 下列範例會顯示在 ODBC 連接的不同元件可能會產生診斷訊息和不同的驅動程式可能會傳回在應用程式的診斷**SQLGetDiagRec**。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908363"
 ---
 # <a name="basic-odbc-application-steps"></a>基本的 ODBC 應用程式的步驟
 本節描述 ODBC 應用程式的一般流程。 也不太可能，任何應用程式就會將所有這些函式呼叫這個順序完全相同。 不過，大部分的應用程式會使用一些不同的步驟執行。 基本應用程式步驟會在下圖顯示。  

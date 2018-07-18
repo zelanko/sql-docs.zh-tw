@@ -1,29 +1,28 @@
 ---
-title: 尋找其他 SQL Server Native Client 資訊 |Microsoft 文件
+title: 尋找其他 SQL Server Native Client 資訊 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLNCLI, additional resources
 - SQL Server Native Client, additional resources
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 639ca13ec6cedf95c08ed8be75e25c5a40dcd31b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06b8b102293ed8bea4af80650a4eaef67da0441b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416697"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>尋找其他 SQL Server Native Client 資訊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
 
   如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 以及其他類型之資料存取程式設計的詳細資訊，請參閱下列線上資源：  
   
- [資料存取和存放開發人員中心](http://go.microsoft.com/fwlink?linkid=4173)  
+ [資料存取和儲存開發人員中心](http://go.microsoft.com/fwlink?linkid=4173)  
  這個網站提供了 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 及其他資料存取技術的技術文件、程式碼範例和其他資源。  
   
  [Data Access 部落格](http://go.microsoft.com/fwlink/?LinkId=48617)  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908113"
 ---
 # <a name="database-access-architecture"></a>資料庫存取架構
 其中一個 ODBC 的開發工作的問題是資料庫存取架構，以標準化的哪個部分。 程式設計介面上一節中所述的 SQL，內嵌 SQL，SQL 模組和 Cli，只能有一個屬於此架構。 事實上，因為 ODBC 的主要目的是將迷你電腦和大型主機 Dbms 個人電腦為基礎的應用程式連接，另外還有網路元件，其中有些無法標準化的數字。  

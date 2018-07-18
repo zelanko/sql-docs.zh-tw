@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024785"
 ---
 # <a name="adomdnet-client-functionality"></a>ADOMD.NET 用戶端功能
   ADOMD.NET 和其他 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 資料提供者一樣，可做為應用程式與資料來源之間的橋樑。 不過，ADOMD.NET 與其他 .NET Framework 資料提供者不同的是，ADOMD.NET 可處理分析資料。 為了處理分析資料，ADOMD.NET 支援與其他 .NET Framework 資料提供者非常不一樣的功能。 ADOMD.NET 不僅可讓您擷取資料，還可以擷取中繼資料並變更分析資料存放區的結構：  

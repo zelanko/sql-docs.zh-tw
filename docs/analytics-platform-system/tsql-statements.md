@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538888"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse 的 T-SQL 陳述式
 TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。

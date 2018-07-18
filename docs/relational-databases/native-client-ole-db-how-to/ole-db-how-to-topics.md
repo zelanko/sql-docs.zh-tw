@@ -1,13 +1,12 @@
 ---
-title: OLE DB 的使用說明主題 |Microsoft 文件
+title: OLE DB 的使用說明主題 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 59beaa60325dbab18db0e0abedd63c098b0d6fb8
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 60a4113f849a150ed0e639559fb93ae5d22fb1f3
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708106"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407717"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB 的使用說明主題
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "34708106"
   
 -   [列舉 OLE DB 資料來源&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
--   [大量複製資料使用 IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
+-   [大量複製資料，使用 IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)  
   
 -   [取得 FAST_FORWARD 資料指標](../../relational-databases/native-client-ole-db-how-to/obtain-a-fast-forward-cursor.md)  
   
@@ -63,7 +62,7 @@ ms.locfileid: "34708106"
   
 -   [整合式 Kerberos 驗證&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)  
   
--   [您可以使用資料表值參數&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+-   [使用資料表值參數&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Native Client 程式設計](../../relational-databases/native-client/sql-server-native-client-programming.md)  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905919"
 ---
 # <a name="c-to-sql-binary"></a>SQL 到 C： 二進位
 二進位的 ODBC C 資料類型的識別項是：  

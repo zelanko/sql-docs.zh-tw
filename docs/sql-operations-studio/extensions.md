@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL 作業 Studio （預覽）的擴充功能 |Microsoft 文件
 description: 加入擴充功能至 SQL 作業 Studio （預覽）
 ms.custom: tools|sos
@@ -18,10 +18,11 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235498"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a> [!INCLUDE[name-sos] 的擴充模組 (../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>的擴充模組 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 提供了一種對基本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝更多功能的簡單方法。 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]提供了一種對基本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝更多功能的簡單方法。 
 
 擴充功能由 SQL Operations Studio 團隊 (Microsoft) 以及第 3 方社 (您 ！) 提供。 如需有關建立擴充功能的詳細資訊，請參閱[開始使用擴充性](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility)。
 

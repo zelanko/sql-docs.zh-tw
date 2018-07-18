@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909703"
 ---
 # <a name="elements-used-in-sql-statements"></a>使用 SQL 陳述式中的項目
 先前所列的 SQL 陳述式中，會使用下列項目。  

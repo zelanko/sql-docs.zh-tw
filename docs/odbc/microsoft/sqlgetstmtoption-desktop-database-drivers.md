@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902433"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption （桌面資料庫驅動程式）
 所傳回的書籤*fOption*的 SQL_GETBOOKMARK 僅有效開啟查詢時，查詢會重新發行時，會失效。 不支援持續性的書籤。

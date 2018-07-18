@@ -13,7 +13,7 @@ ms.openlocfilehash: f82fbcfecff5e6d216c3758ce442d82591a24d78
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576080"
 ---
 # <a name="password-element-xmla"></a>Password 元素 (XMLA)

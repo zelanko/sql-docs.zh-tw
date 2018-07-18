@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33261044"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ sp_help_notification
   
 ## <a name="arguments"></a>引數  
  [ **@object_type =**] **'***object_type***'**  
- 要傳回的資訊類型。 *object_type*是**char(9)**，沒有預設值。 *object_type*可能是 ALERTS 會列出指派給所提供之操作員名稱的警示*，* OPERATORS 會列出負責所提供之警示名稱的操作員或*。*  
+ 要傳回的資訊類型。 *object_type*是**char(9)**，沒有預設值。 *object_type*可能是 ALERTS 會列出指派給所提供之操作員名稱的警示 *，* OPERATORS 會列出負責所提供之警示名稱的操作員或 *。*  
   
  [ **@name =**]  **'***name***'**  
  運算子名稱 (如果*object_type*是 OPERATORS) 或警示名稱 (如果*object_type*是 ALERTS)。 *名稱*是**sysname**，沒有預設值。  

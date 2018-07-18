@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32931083"
 ---
 # <a name="extract-a-dac-from-a-database"></a>從資料庫中擷取 DAC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +105,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="ValidateSummary"></a> Validation and summary page  
  在這個頁面上，此精靈會驗證資料層應用程式 (DAC) 是否支援所有資料庫物件。 此外，它也會檢查資料庫物件之間的相依性，以便判斷可成功包含在 DAC 中的物件集合。 之後，它會顯示驗證報表並摘要列出您在這個精靈中所選取的選項。 若要變更選項，請按 **[上一步]**。 若要開始擷取 DAC，請按 **[下一步]**。  
   
-> **注意！**如果 DAC 不支援一個或多個物件，[下一步] 按鈕就會停用，而且擷取程序便無法繼續。 在這種情況下，建議您移除不支援的物件，然後再次執行此精靈。  
+> **注意！** 如果 DAC 不支援一個或多個物件，[下一步] 按鈕就會停用，而且擷取程序便無法繼續。 在這種情況下，建議您移除不支援的物件，然後再次執行此精靈。  
   
  **摘要**：所選取的選項摘要會列在 [DAC 屬性] 底下。 驗證的結果則列在 **[DAC 物件]** 底下。 驗證的結果有三種類型：  
   

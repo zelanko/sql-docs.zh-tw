@@ -1,8 +1,6 @@
 ---
 title: 管理備份 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 76fe6ed52f7d321db361d5d13b718ac61a07cdec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a17cbc5aef7874555520db18464c79698ee41c30
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777324"
 ---
 # <a name="managing-backups-oracletosql"></a>管理備份 (OracleToSQL)
 Oracle 備份管理可讓您備份和還原之前或之後執行測試的表格資料。 您也可以管理與管理備份的內容對話方塊的備份內容。  
   
 ## <a name="oracle-backup-management"></a>Oracle 備份管理  
   
-### <a name="backup"></a>備份  
+### <a name="backup"></a>Backup  
 若要開啟 備份 對話方塊中的，測試人員在功能表上指向 Oracle 備份管理，然後按一下 備份... 在 [備份] 對話方塊中，您會發現顯示所有資料表載入 Oracle 結構描述的 Oracle 中繼資料樹狀結構。 選取要執行備份的一個或多個資料表。  
   
 下列按鈕，可在對話方塊上：  
@@ -65,7 +64,7 @@ Oracle 備份管理可讓您備份和還原之前或之後執行測試的表格�
 ## <a name="sql-server-backup-management"></a>SQL Server 備份管理  
 SQL Server 備份管理可讓您備份和還原之前或之後執行測試的表格資料。 您也可以管理與管理備份的內容對話方塊的備份內容。  
   
-### <a name="backup"></a>備份  
+### <a name="backup"></a>Backup  
 若要開啟備份對話方塊中的，測試人員在功能表上指向 SQL Server 備份管理，然後按一下 備份... 在 [備份] 對話方塊中，您會發現顯示所有資料表載入 SQL Server 資料庫的 SQL Server 中繼資料樹狀結構。 選取要執行備份的一個或多個資料表。  
   
 下列按鈕，可在對話方塊上：  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907143"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 類型識別碼用來表示緩衝區中的資料將會於 ARD SQL_DESC_CONCISE_TYPE 欄位中指定的型別。 SQL_ARD_TYPE 進入*TargetType*引數呼叫**SQLGetData**而不是特定資料類型，而且可讓您變更資料的應用程式的緩衝區輸入的描述元欄位。 這個值會繫結的資料型別 *\*TargetValuePtr*緩衝區描述項欄位。 (SQL_ARD_TYPE 尚未進入的呼叫**SQLBindCol**或**SQLBindParameter**因為繫結的緩衝區類型已經繫結至 SQL_DESC_TYPE 和 SQL_DESC_CONCISE_TYPE 欄位，而且可以變更在任何時間變更這些欄位。）  

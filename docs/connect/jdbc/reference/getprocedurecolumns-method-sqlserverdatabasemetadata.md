@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32843273"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -97,7 +98,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |SS_XML_SCHEMACOLLECTION_CATALOG_NAME|**字串**|XML 結構描述集合的名稱。 如果找不到該名稱，這就是空字串。|  
 |SS_XML_SCHEMACOLLECTION_SCHEMA_NAME|**字串**|包含使用者定義型別 (UDT) 的目錄名稱。|  
 |SS_XML_SCHEMACOLLECTION_NAME|**字串**|包含使用者定義型別 (UDT) 的結構描述名稱。|  
-|SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料型別，由擴充預存程序。<br /><br /> <br /><br /> **注意：**如需有關所傳回的資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，請參閱中的 < 資料類型 (TRANSACT-SQL) >[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。|  
+|SS_DATA_TYPE|**tinyint**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料型別，由擴充預存程序。<br /><br /> <br /><br /> **注意：** 如需有關所傳回的資料型別[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，請參閱中的 < 資料類型 (TRANSACT-SQL) >[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。|  
   
 > [!NOTE]  
 >  GetProcedureColumns 方法所傳回之資料的相關詳細資訊，請參閱 < sp_sproc_columns (TRANSACT-SQL) 」 中,[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]線上叢書 》。  

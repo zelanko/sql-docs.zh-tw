@@ -2,7 +2,6 @@
 title: 跳至記錄 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4364db29f8d4476c6f4238b970f0e56240ef0f06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da5573ef2f96947f9d8660d8d3461df879398e4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272027"
 ---
 # <a name="jumping-to-a-record"></a>跳至資料錄
 [移動](../../../ado/reference/ado-api/move-method-ado.md)方法可讓您移往前或往後在**資料錄集**指定的數目的記錄可以使用下列語法：  

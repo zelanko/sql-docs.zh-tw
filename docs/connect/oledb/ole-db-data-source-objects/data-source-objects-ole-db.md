@@ -2,10 +2,10 @@
 title: 資料來源物件 (OLE DB) |Microsoft 文件
 description: 資料來源物件 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2eb3583366cf896ecf2382a5d2f36d1298e4c4a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a69fbb260c594ad095872049b06b1f7084bfc29b
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665648"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB 驅動程式適用於 SQL Server 會使用資料來源這個詞用來建立資料存放區的連結，例如 OLE DB 介面的集合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 建立資料來源物件的提供者的執行個體是 SQL Server 取用者的 OLE DB 驅動程式第一項工作。  
   
@@ -80,7 +83,7 @@ else
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [資料來源屬性 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [資料來源屬性&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [資料來源資訊屬性](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -90,7 +93,7 @@ else
   
 -   [工作階段屬性 - OLE DB Driver for SQL Server](../../oledb/ole-db-data-source-objects/session-properties-oledb-driver-for-sql-server.md)  
   
--   [保存資料來源物件](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
+-   [保存的資料來源物件](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

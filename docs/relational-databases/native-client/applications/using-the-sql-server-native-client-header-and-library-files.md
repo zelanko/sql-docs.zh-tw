@@ -1,13 +1,11 @@
 ---
-title: 使用 SQL Server Native Client 標頭和程式庫檔案 |Microsoft 文件
+title: 使用 SQL Server Native Client 標頭和程式庫檔案 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7fcb33012d766c2585e11468e23a3591a4b2650
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42a657a4524a09ea8d6643d6b37e193c5c6b227f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416867"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>使用 SQL Server Native Client 標頭檔與程式庫檔案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +67,7 @@ include "sqlncli.h";
 ```  
   
 > [!NOTE]  
->  如果應用程式同時使用 OLE DB 和 ODBC API，以上顯示的第一行程式碼應該省略。 此外，如果應用程式有**包含**sqloledb.h，陳述式**包含**sqlncli.h 陳述式必須緊跟在後。  
+>  如果應用程式同時使用 OLE DB 和 ODBC API，以上顯示的第一行程式碼應該省略。 此外，如果應用程式**包括**sqloledb.h，陳述式**包含**用於 sqlncli.h 的陳述式必須緊跟在後。  
   
  透過 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 建立資料來源的連接時，請使用 "SQLNCLI11" 當做提供者名稱字串。  
   
@@ -90,7 +88,7 @@ include "sqlncli.h";
   
 |屬性|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 10.0<br /><br /> SQL Server 2008|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]|MDAC|  
 |--------------|--------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------------|----------|  
-|ODBC 驅動程式名稱|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|SQL Server|  
+|ODBC 驅動程式名稱|SQL Native Client|SQL Server Native Client 10.0|SQL Server Native Client 11.0|[SQL Server]|  
 |ODBC 標頭檔名稱|Sqlncli.h|Sqlncli.h|Sqlncli.h|Odbcss.h|  
 |ODBC 驅動程式 DLL|Sqlncli.dll|Sqlncl10.dll|Sqlncl11.dll|sqlsrv32.dll|  
 |適用於 BCP API 的 ODBC 程式庫檔|Sqlncli.lib|Sqlncli10.lib|Sqlncli11.lib|Odbcbcp.lib|  
@@ -109,6 +107,6 @@ include "sqlncli.h";
  如需詳細資訊，請參閱 < 執行[執行大量複製作業](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 SQL Server Native Client 建立應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 建置應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

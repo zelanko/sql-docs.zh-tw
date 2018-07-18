@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,15 +25,16 @@ helpviewer_keywords:
 - comparison operators [SQL Server], null values
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e1a05133d905e6211cded5afc46dba8db75757f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc2cd5ced0f0528be99b8b6c7531f04d7b87114a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788479"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -66,7 +66,22 @@ SET ANSI_NULLS ON
  當 SET ANSI_NULLS 是 OFF 時，等於 (=) 和不等於 (<>) 比較運算子並不遵照 ISO 標準。 使用 WHERE *column_name* = **NULL** 的 SELECT 陳述式會傳回 *column_name* 中含有 Null 值的資料列。 使用 WHERE *column_name* <> **NULL** 的 SELECT 陳述式會傳回資料行中含有非 Null 值的資料列。 另外，使用 WHERE *column_name* <> *XYZ_value* 的 SELECT 陳述式也會傳回非 *XYZ_value* 以及非 Null 值的所有資料列。  
   
  當 SET ANSI_NULLS 是 ON 時，所有對於 Null 值的比較都會得出 UNKNOWN。 當 SET ANSI_NULLS 是 OFF 時，如果資料值是 NULL，所有對於 Null 值的資料比較都會得出 TRUE。 如果未指定 SET ANSI_NULLS，就會套用目前資料庫的 ANSI_NULLS 選項設定。 如需 ANSI_NULLS 資料庫選項的詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。  
+
+ 下表顯示 ANSI_NULLS 的設定如何影響多個使用 Null 值和非 Null 值的布林運算式的結果。  
   
+|布林運算式|SET ANSI_NULLS ON|SET ANSI_NULLS OFF|  
+|---------------|---------------|------------|  
+|NULL = NULL|UNKNOWN|TRUE|  
+|1 = NULL|UNKNOWN|FALSE|  
+|NULL <> NULL|UNKNOWN|FALSE|  
+|1 <> NULL|UNKNOWN|TRUE|  
+|NULL > NULL|UNKNOWN|UNKNOWN|  
+|1 > NULL|UNKNOWN|UNKNOWN|  
+|NULL IS NULL|TRUE|TRUE|  
+|1 IS NULL|FALSE|FALSE|  
+|NULL IS NOT NULL|FALSE|FALSE|  
+|1 IS NOT NULL|TRUE|TRUE|  
+
  只有在一個比較運算元是 NULL 變數或常值 NULL 變數時，SET ANSI_NULLS ON 才會影響比較。 如果比較的兩端是資料行或複合運算式，設定就不會影響比較。  
   
  若要使指令碼的運作能夠符合預期，不論 ANSI_NULLS 資料庫選項或 SET ANSI_NULLS 設定為何，請在可能含有 Null 值的比較中，使用 IS NULL 和 IS NOT NULL。  

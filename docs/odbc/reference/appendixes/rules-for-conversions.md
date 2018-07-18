@@ -24,13 +24,14 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912705"
 ---
 # <a name="rules-for-conversions"></a>轉換規則
 本節中的規則適用於包含數值常值轉換。 這些規則的目的，會定義下列詞彙：  
   
--   *儲存指派：*時將資料傳送到資料庫中的資料表資料行。 呼叫期間發生此錯誤**SQLExecute**， **SQLExecDirect**，和**SQLSetPos**。 在存放區指派 「 目標 」 是指資料庫資料行和 「 來源 」 是指應用程式緩衝區中的資料。  
+-   *儲存指派：* 時將資料傳送到資料庫中的資料表資料行。 呼叫期間發生此錯誤**SQLExecute**， **SQLExecDirect**，和**SQLSetPos**。 在存放區指派 「 目標 」 是指資料庫資料行和 「 來源 」 是指應用程式緩衝區中的資料。  
   
--   *擷取指派：*若干應用程式緩衝區，從資料庫擷取資料時。 呼叫期間發生此錯誤**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，和**SQLSetPos**。 在擷取指派 「 目標 」 是指應用程式緩衝區和 「 來源 」 是指資料庫資料行。  
+-   *擷取指派：* 若干應用程式緩衝區，從資料庫擷取資料時。 呼叫期間發生此錯誤**SQLFetch**， **SQLGetData**， **SQLFetchScroll**，和**SQLSetPos**。 在擷取指派 「 目標 」 是指應用程式緩衝區和 「 來源 」 是指資料庫資料行。  
   
 -   *CS:* 字元來源中的值。  
   

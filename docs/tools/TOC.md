@@ -1,8 +1,8 @@
 
 # [SQL Server 工具和公用程式概觀](../tools/overview-sql-tools.md)
-# [新增及更新的發行項](new-updated-tools.md)
+# [新文章及更新的文章](new-updated-tools.md)
 
-# [SQL Operations Studio (預覽)](../sql-operations-studio/what-is.md)
+# [SQL Operations Studio (preview)](../sql-operations-studio/what-is.md)
 
 # [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
 
@@ -30,3 +30,8 @@
 ## [sqlps 公用程式](sqlps-utility.md)  
 ## [sqlservr 應用程式](sqlservr-application.md)  
 ## [tablediff 公用程式](tablediff-utility.md)
+
+# sqlpackage
+## [安裝 sqlpackage](sqlpackage-download.md)
+## [版本資訊](sqlpackage-release-notes.md)
+## [sqlpackage 參考](sqlpackage.md)

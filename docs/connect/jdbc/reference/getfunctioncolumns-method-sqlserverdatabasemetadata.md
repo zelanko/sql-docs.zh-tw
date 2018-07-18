@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32838223"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -80,9 +81,9 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |RADIX|**short**|數值類型的基底。|  
 |NULLABLE|**short**|指出是否可以包含參數或傳回值**null**值。<br /><br /> **它可以是下列值之一：**<br /><br /> functionNoNulls (0)：不允許 NULL 值。<br /><br /> functionNullable (1)：允許 NULL 值。<br /><br /> functionNullableUnknown (2)：未知。|  
 |REMARKS|**字串**|資料行或參數的相關註解。|  
-|COLUMN_DEF|**字串**|資料行的預設值。<br /><br /> **注意：**這項資訊適用於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是 JDBC 驅動程式專屬。|  
-|SQL_DATA_TYPE|**smallint**|此資料行等同於**DATA_TYPE**資料行，除了**datetime**和 ISO**間隔**資料型別。<br /><br /> **注意：**這項資訊適用於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是 JDBC 驅動程式專屬。|  
-|SQL_DATETIME_SUB|**smallint**|**Datetime** ISO**間隔**子代碼，如果值**SQL_DATA_TYPE**是**SQL_DATETIME**或**SQL_INTERVAL**. 資料類型以外**datetime**和 ISO**間隔**，此資料行為 unll。<br /><br /> **注意：**這項資訊適用於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是 JDBC 驅動程式專屬。|  
+|COLUMN_DEF|**字串**|資料行的預設值。<br /><br /> **注意：** 這項資訊適用於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是 JDBC 驅動程式專屬。|  
+|SQL_DATA_TYPE|**smallint**|此資料行等同於**DATA_TYPE**資料行，除了**datetime**和 ISO**間隔**資料型別。<br /><br /> **注意：** 這項資訊適用於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是 JDBC 驅動程式專屬。|  
+|SQL_DATETIME_SUB|**smallint**|**Datetime** ISO**間隔**子代碼，如果值**SQL_DATA_TYPE**是**SQL_DATETIME**或**SQL_INTERVAL**. 資料類型以外**datetime**和 ISO**間隔**，此資料行為 unll。<br /><br /> **注意：** 這項資訊適用於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和是 JDBC 驅動程式專屬。|  
 |CHAR_OCTET_LENGTH|**int**|針對以字元為基礎的參數或資料行之最大二進位長度。 如果是其他資料類型，則為 NULL。|  
 |ORDINAL_POSITION|**int**|針對輸入和輸出參數，這代表從位置 1 開始。<br /><br /> 針對結果集資料行，這是結果集中從 1 開始的資料行位置。<br /><br /> 針對傳回值，這個值是 0。|  
 |IS_NULLABLE|**字串**|決定參數或資料行的 Null 屬性。<br /><br /> 它可能是下列其中一個值：<br /><br /> **[是]**： 參數或資料行可以包含 NULL 值。<br /><br /> **否**： 參數或資料行不能包含 NULL 值。<br /><br /> 空字串 ("")：未知。|  

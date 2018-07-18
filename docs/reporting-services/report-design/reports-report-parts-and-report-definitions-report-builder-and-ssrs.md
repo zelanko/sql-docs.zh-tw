@@ -1,7 +1,7 @@
 ---
 title: 報表、報表組件和報表定義 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -18,11 +18,12 @@ caps.latest.revision: 26
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cd2c743dbff40d700bf50533028994bf78fb40fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 918cf42c76038411777628c200f0ed71fe3e8788
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550469"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>報表、報表組件和報表定義 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會使用各種詞彙來描述不同狀態的分頁報表，這些狀態包括初始定義、已發行的報表以及使用者檢視的報表。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  已發行的報表會透過使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以角色為基礎之安全性模型的角色指派來維護其安全。 您可以透過 URL、SharePoint Web 組件或 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web 入口網站存取已發行的報表，也可以在報表產生器中巡覽並開啟它們。  
   
 ### <a name="report-snapshots"></a>報表快照集  
- 您也可以將報表當做快照集來發行 (其中包含報表一開始執行時的配置資訊和資料)。 報表快照集不會以特定轉譯格式儲存。 而是只有在使用者或應用程式要求它時，報表快照集才以最後的檢視格式轉譯 (例如 HTML)。 如需詳細資訊，請參閱[在報表管理員中尋找及檢視報表 &#40;報表產生器及 SSRS&#41;](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)。  
+ 您也可以將報表當做快照集來發行 (其中包含報表一開始執行時的配置資訊和資料)。 報表快照集不會以特定轉譯格式儲存。 而是只有在使用者或應用程式要求它時，報表快照集才以最後的檢視格式轉譯 (例如 HTML)。 如需詳細資訊，請參閱[在入口網站中尋找和檢視報表](../report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)。  
   
 ## <a name="rendered-reports"></a>已轉譯的報表  
  已轉譯的報表是一種完全處理的報表，其中包含採用適合檢視之格式 (例如 HTML) 的資料與配置資訊。 報表要等到轉譯成輸出格式後，才能夠檢視。 您可以執行下列任一種動作來轉譯報表：  

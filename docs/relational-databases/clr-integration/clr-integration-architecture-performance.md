@@ -1,14 +1,11 @@
 ---
-title: CLR 整合的效能 |Microsoft 文件
+title: CLR 整合的效能 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - common language runtime [SQL Server], performance
@@ -19,15 +16,16 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ad749572b54e76c751002db3516fdf46ce31f729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21480acac0ba1d54ede060c127114da46d0ba8a3
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355060"
 ---
-# <a name="clr-integration-architecture----performance"></a>CLR 整合架構效能
+# <a name="clr-integration-architecture----performance"></a>CLR 整合架構-效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework common language runtime (CLR)。  
+  本主題討論某些設計選擇，可增強的效能[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與整合[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework 通用語言執行平台 (CLR)。  
   
 ## <a name="the-compilation-process"></a>編譯程序  
  編譯 SQL 運算式期間，碰到 Managed 常式的參考時，就會產生 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language (MSIL) 虛設常式。 此虛設常式包含的程式碼可將常式參數從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 封送處理到 CLR、叫用函數，並傳回結果。 這個「黏附」程式碼是以參數類型以及參數方向 (in、out 或參考) 為基礎。  
@@ -40,7 +38,7 @@ ms.lasthandoff: 05/03/2018
  編譯程序會產生可以在執行階段，從原生程式碼呼叫的函數指標。 如果是純量值的使用者定義函數，此函數引動過程會以資料列為基礎發生。 若要將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 CLR 之間轉換的成本降至最低，包含任何 Managed 引動過程的陳述式都有一個識別目標應用程式網域的啟動步驟。 這個識別步驟會降低每個資料列轉換的成本。  
   
 ## <a name="performance-considerations"></a>效能考量  
- 以下摘要說明 CLR 整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時的特定效能考量。 更詳細的資訊可以在 「[使用 SQL Server 2005 中的 CLR 整合](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 網站上。 關於 managed 程式碼效能的一般資訊可以在 「[改善.NET 應用程式效能和延展性](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 網站上。  
+ 以下摘要說明 CLR 整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 時的特定效能考量。 更詳細的資訊可在 「[SQL Server 2005 中使用 CLR 整合](http://go.microsoft.com/fwlink/?LinkId=50332)"MSDN 網站上。 關於 managed 程式碼效能的一般資訊可在 「[< 改進.NET 應用程式效能和延展性](http://go.microsoft.com/fwlink/?LinkId=50333)"MSDN 網站上。  
   
 ### <a name="user-defined-functions"></a>使用者定義的函式  
  CLR 函數會因為引動過程路徑比 [!INCLUDE[tsql](../../includes/tsql-md.md)] 使用者定義函數的引動過程更快速而獲益。 此外，Managed 程式碼在程序性程式碼、計算與字串操作的決定性效能優勢上優於 [!INCLUDE[tsql](../../includes/tsql-md.md)]。 需要大量計算而不執行資料存取的 CLR 函數以更好的 Managed 程式碼方式撰寫。 不過，[!INCLUDE[tsql](../../includes/tsql-md.md)] 函數在資料存取的執行上比 CLR 整合更有效率。  
@@ -60,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字元資料，例如**varchar**，可以是 managed 函數中 SqlString 或 SqlChars 類型。 SqlString 變數會在記憶體中建立整個值的執行個體。 SqlChars 變數會提供資料流介面，不需要透過在記憶體中建立整個值的執行個體，就可以用於達到更好的效能與延展性。 這對於大型物件 (LOB) 資料而言，變得特別重要。 此外，伺服器 XML 資料可以透過所傳回的資料流介面來存取**SqlXml.CreateReader()**。  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR 與擴充預存程序  
- 允許 Managed 程序將結果集傳回用戶端之 Microsoft.SqlServer.Server 應用程式開發介面 (API) 的執行效能比擴充預存程序所使用的開放式資料服務 (ODS) API 更好。 此外，System.Data.SqlServer Api 支援資料類型例如**xml**， **varchar （max)**， **nvarchar （max)**，和**varbinary （max)** 中導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而 ODS Api 尚未擴充為支援新的資料類型。  
+ 允許 Managed 程序將結果集傳回用戶端之 Microsoft.SqlServer.Server 應用程式開發介面 (API) 的執行效能比擴充預存程序所使用的開放式資料服務 (ODS) API 更好。 此外，System.Data.SqlServer Api 支援等資料類型**xml**， **varchar （max)**， **nvarchar （max)**，和**varbinary （max)** 中導入[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，而 ODS Api 尚未擴充為支援新的資料類型。  
   
  利用 Managed 程式碼，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可管理資源的使用，例如，記憶體、執行緒和同步處理。 這是因為公開這些資源的 Managed API 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源管理員頂端實作。 相反地，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無法檢視或控制擴充預存程序的資源使用量。 例如，如果擴充預存程序耗用太多 CPU 或記憶體資源，就無法利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 偵測或控制這個擴充預存程序。 不過，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以利用 Managed 程式碼偵測到給定的執行緒已經很長一段時間沒有產生，然後強制工作產生，如此就可以排程其他工作。 因此，使用 Managed 程式碼可以提供較佳的延展性與系統資源使用量。  
   
@@ -70,9 +68,9 @@ ms.lasthandoff: 05/03/2018
 >  建議您不要開發新的擴充預存程序，因為此功能已被取代。  
   
 ### <a name="native-serialization-for-user-defined-types"></a>使用者定義型別的原生序列化  
- 使用者定義型別 (UDT) 會針對純量類型系統，設計成一個擴充性機制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 呼叫的 Udt，實作序列化格式**Format.Native**。 在編譯期間，系統會檢查類型的結構來產生針對該特定類型定義自訂的 MSIL。  
+ 使用者定義型別 (UDT) 會針對純量類型系統，設計成一個擴充性機制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於呼叫的 Udt，實作序列化格式**Format.Native**。 在編譯期間，系統會檢查類型的結構來產生針對該特定類型定義自訂的 MSIL。  
   
- 原生序列化是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設實作。 使用者定義序列化會叫用類型作者所定義的方法來進行序列化。 **Format.Native**序列化應盡可能為了達到最佳效能。  
+ 原生序列化是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的預設實作。 使用者定義序列化會叫用類型作者所定義的方法來進行序列化。 **Format.Native**序列化應該用於盡可能達到最佳效能。  
   
 ### <a name="normalization-of-comparable-udts"></a>可比較 UDT 的正規化  
  排序和比較 UDT 之類的關聯式作業會直接針對值的二進位表示操作。 這會透過將 UDT 狀態的正規化 (二進位排序) 表示儲存在磁碟上完成。  

@@ -3,12 +3,9 @@ title: SQL Server 2016 的新功能
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
@@ -19,15 +16,15 @@ helpviewer_keywords:
 - SQL Server 2008 what's new
 - what's new [SQL Server]
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
-caps.latest.revision: 224
-author: craigg-msft
-ms.author: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c75528700e090c125f90aad47213d1a2e5332c30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3696b571b7c17580297faba8ee09db1aad94dbcd
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926239"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 中的新功能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -54,9 +51,9 @@ ms.lasthandoff: 05/03/2018
     - 支援上至 2TB 的資料表 (原本為 256GB)。 
     - 具備針對排序的資料行存放區索引增強功能，以及 Always On 可用性群組支援。
 - 新的安全性功能：
-    - **Always Encrypted：**啟用時，只有具備加密金鑰的應用程式才能存取 SQL Server 2016 資料庫中加密的敏感性資料。 金鑰一律不會傳遞至 SQL Server。
-    - **動態資料遮罩：**如果有在資料表定義中指定，則受遮罩的資料會對大部分的使用者隱藏，且只有具有 UNMASK 權限的使用者可查看完整資料。
-    - **資料列層級安全性：**資料存取可限制於資料庫引擎層級，來讓使用者只能看見與他們相關的項目。 
+    - **Always Encrypted：** 啟用時，只有具備加密金鑰的應用程式才能存取 SQL Server 2016 資料庫中加密的敏感性資料。 金鑰一律不會傳遞至 SQL Server。
+    - **動態資料遮罩：** 如果有在資料表定義中指定，則受遮罩的資料會對大部分的使用者隱藏，且只有具有 UNMASK 權限的使用者可查看完整資料。
+    - **資料列層級安全性：** 資料存取可限制於資料庫引擎層級，來讓使用者只能看見與他們相關的項目。 
 
 請參閱[資料庫引擎](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)。
 ## <a name="sql-server-2016-analysis-services-ssas"></a>SQL Server 2016 Analysis Services (SSAS)

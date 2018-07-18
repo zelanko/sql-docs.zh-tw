@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853113"
 ---
 # <a name="system-requirements"></a>系統需求
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
 -   64 位元 UnixODBC 2.3.0 驅動程式管理員 (針對 64 位元 SQLLEN/SQLULEN 建置)。 Linux 上的 ODBC 驅動程式不支援較新版本的 64 位元 UnixODBC 驅動程式管理員。 如需相關資訊，請參閱 [Installing the Driver Manager](../../../connect/odbc/linux-mac/installing-the-driver-manager.md) 。  
   
--   ODBC 驅動程式**Red Hat Enterprise Linux 5 （64 位元）**需要下列封裝，而且可以在這裡下載： [Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
+-   ODBC 驅動程式**Red Hat Enterprise Linux 5 （64 位元）** 需要下列封裝，而且可以在這裡下載： [Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
     -   `krb5-libs`  
     -   `openssl`  
   
--   ODBC 驅動程式**Red Hat Enterprise Linux 6 （64 位元）**需要下列封裝，而且可以在這裡下載： [Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
+-   ODBC 驅動程式**Red Hat Enterprise Linux 6 （64 位元）** 需要下列封裝，而且可以在這裡下載： [Microsoft ODBC Driver 11 for SQL Server-Red Hat Linux](http://go.microsoft.com/fwlink/?LinkId=267321)  
     -   `glibc`  
     -   `libgcc`  
     -   `libstdc++`  
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/03/2018
     -   `krb5-libs`  
     -   `openssl`  
   
--   ODBC 驅動程式**SUSE Linux Enterprise 11 Service Pack 2 （64 位元）**需要下列封裝，而且可以在這裡下載： [Microsoft ODBC Driver 11 Preview for SQL Server-SUSE Linux](http://go.microsoft.com/fwlink/?LinkId=264916)  
+-   ODBC 驅動程式**SUSE Linux Enterprise 11 Service Pack 2 （64 位元）** 需要下列封裝，而且可以在這裡下載： [Microsoft ODBC Driver 11 Preview for SQL Server-SUSE Linux](http://go.microsoft.com/fwlink/?LinkId=264916)  
     -   `glibc`  
     -   `libstdc++46`  
     -   `libgcc46`  

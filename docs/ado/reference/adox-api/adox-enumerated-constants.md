@@ -2,7 +2,6 @@
 title: ADOX 列舉常數 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,18 +16,19 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ba95b08ddaa4a75a8243f6830b0f9ce9637d819
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a862168ffd8be5d7490a7151813bb6c1272f6d86
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284777"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 列舉常數
 若要協助偵錯，ADOX 列舉常數會列出每個常數的值。 不過，這個值是單純諮詢，，而且可能會從一個版本 ADOX 變更到另一個。 您的程式碼應該僅相依於名稱，而不是實際值、 列舉常數。  
   
  會定義下列的列舉的常數。  
   
-|列舉型別|Description|  
+|列舉型別|描述|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|指定當執行動作的類型**SetPermissions**呼叫。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|指定具有 null 值的記錄都編製索引。|  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923383"
 ---
 # <a name="sqlsetdescfield-function"></a>SQLSetDescField 函數
 **一致性**  
@@ -198,7 +199,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD： 未使用的 APD： 未使用的 IRD: R IPD:
  [IPD 中的 2] 的 SQL_DESC_DATA_PTR 欄位可以設定為強制的一致性檢查。 中的後續呼叫**SQLGetDescField**或**SQLGetDescRec**，驅動程式不需要 SQL_DESC_DATA_PTR 已設定為將值傳回。  
   
 ## <a name="fieldidentifier-argument"></a>FieldIdentifier 引數  
- *FieldIdentifier*引數指示要設定描述項欄位。 描述元包含*描述項標頭，*下一節，「 標頭欄位 」，以及零或多個所述的標頭欄位所組成*描述項記錄*組成記錄欄位「 標頭欄位 」 一節之後一節所述。  
+ *FieldIdentifier*引數指示要設定描述項欄位。 描述元包含*描述項標頭，* 下一節，「 標頭欄位 」，以及零或多個所述的標頭欄位所組成*描述項記錄*組成記錄欄位「 標頭欄位 」 一節之後一節所述。  
   
 ## <a name="header-fields"></a>標頭欄位  
  每個描述元具有標頭包含下列欄位：  

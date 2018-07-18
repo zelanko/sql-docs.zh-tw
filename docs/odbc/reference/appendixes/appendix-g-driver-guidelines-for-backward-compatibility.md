@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906026"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>附錄 g： 驅動程式的指導方針回溯相容性
 本附錄提供驅動程式使用 ODBC 3 上的寫入器的資訊。*x*需要支援 ODBC 2 的驅動程式。*x*應用程式。 如需有關回溯相容性的詳細資訊，請參閱[回溯相容性和標準相容性](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)。  

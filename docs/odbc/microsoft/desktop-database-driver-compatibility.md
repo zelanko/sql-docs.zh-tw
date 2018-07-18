@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899763"
 ---
 # <a name="desktop-database-driver-compatibility"></a>桌面資料庫驅動程式相容性
 Unicode 是軟體的字元編碼的方法會將所有的字元視為具有兩個位元組的固定的寬度。 這個方法用做為 Windows ANSI 字元編碼、 替代其，因為它代表一個位元組中的字元限制為 256 個字元。 Unicode 可表示 65000 的字元，因為它可容納許多語言的字元都不會出現在 ANSI 編碼方式。  

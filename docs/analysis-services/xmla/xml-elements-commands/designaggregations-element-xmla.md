@@ -13,7 +13,7 @@ ms.openlocfilehash: b32a7ecaf7c8268b88d3fc417cc1e41e024bfd2f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574130"
 ---
 # <a name="designaggregations-element-xmla"></a>DesignAggregations 元素 (XMLA)

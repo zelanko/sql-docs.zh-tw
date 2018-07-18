@@ -2,7 +2,6 @@
 title: CubeDef 物件 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31e2bf587c19ab8088b0ab702be60fde54247aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc529ed3ab408d70e6bcc0881a9a62d86029e35e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283597"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef 物件 (ADO MD)
 代表多維度結構描述，其中包含一組相關維度的 cube。  
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
  **屬性**集合包含提供者提供的屬性。 下表列出可供使用的屬性。 實際的屬性清單可能與不同的提供者實作而定。 請參閱您的提供者，如需更完整清單可用內容的文件。  
   
-|名稱|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |CatalogName|此 cube 所屬的目錄的名稱。|  
 |CreatedOn|日期和時間的 cube 建立。|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |CubeName|Cube 的名稱。|  
 |CubeType|Cube 的類型。|  
 |DataUpdatedBy|進行最後的資料更新的人員的使用者識別碼。|  
-|Description|Cube 有意義的描述。|  
+|描述|Cube 有意義的描述。|  
 |LastSchemaUpdate|日期和時間的最後一個結構描述更新。|  
 |SchemaName|此 cube 所屬的結構描述名稱。|  
 |SchemaUpdatedBy|進行最後一個結構描述更新的人員的使用者識別碼。|  

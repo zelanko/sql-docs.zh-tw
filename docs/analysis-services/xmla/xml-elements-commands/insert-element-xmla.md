@@ -13,7 +13,7 @@ ms.openlocfilehash: 272da4d23d6427c8f570acff6344f58c15a709f3
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573571"
 ---
 # <a name="insert-element-xmla"></a>Insert 元素 (XMLA)

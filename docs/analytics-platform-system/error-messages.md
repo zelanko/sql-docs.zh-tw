@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539068"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>平行處理資料倉儲中的錯誤訊息
 

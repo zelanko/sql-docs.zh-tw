@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f6133332f2d6e47900c03db4e4ec8a68318d573
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54802ce4096caf85d2d5a33eb1e122b7e82057bc
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406640"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>查閱轉換完整快取模式 - 快取連線管理員
   您可以將查閱轉換設定為使用完整快取模式以及快取連接管理員。 在完整快取模式中，參考資料集會在查閱轉換執行之前載入快取。  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
         >  「查閱」轉換會自動對應具有相同名稱和相同資料類型的資料行。  
   
         > [!NOTE]  
-        >  資料行必須具有要對應的相符資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+        >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 [可用的查閱資料行] 清單中選取資料行。 然後在 [查閱作業] 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   
@@ -209,7 +208,7 @@ ms.lasthandoff: 05/03/2018
         >  「查閱」轉換會自動對應具有相同名稱和相同資料類型的資料行。  
   
         > [!NOTE]  
-        >  資料行必須具有要對應的相符資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+        >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 [可用的查閱資料行] 清單中選取資料行。 然後在 [查閱作業] 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   
@@ -274,7 +273,7 @@ ms.lasthandoff: 05/03/2018
         >  「查閱」轉換會自動對應具有相同名稱和相同資料類型的資料行。  
   
         > [!NOTE]  
-        >  資料行必須具有要對應的相符資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+        >  資料行必須具有要對應的相符資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
     8.  在 [可用的查閱資料行] 清單中選取資料行。 然後在 [查閱作業] 清單中，指定查閱資料行的值是否要取代輸入資料行中的值，或要寫入至新的資料行。  
   

@@ -3,27 +3,24 @@ title: Always Encrypted 密碼編譯 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/29/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ead5689c2edb47f4ce2699e6b94bff53957ce9fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f5b03dca9d6c1ba852ac90d3a3949894dbc0a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243608"
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  資料行加密金鑰 (CEK) 是受到 CMK 保護的內容加密金鑰 (也就是用來保護資料的金鑰)。  
   
- 所有的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存放區提供者都會使用 RSA 搭配最佳非對稱加密填補 (RSA-OAEP)，並利用 A.2.1 節中 RFC 3447 所指定的預設參數，來加密 CEK。 這些預設參數會使用 SHA-1 的雜湊函數，以及搭配 SHA-1 的 MGF1 遮罩產生函數。  
+ 所有的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 存放區提供者都會使用 RSA 搭配最佳非對稱加密填補 (RSA-OAEP)，並利用 A.2.1 節中 RFC 8017 所指定的預設參數，來加密 CEK。 這些預設參數會使用 SHA-1 的雜湊函數，以及搭配 SHA-1 的 MGF1 遮罩產生函數。  
   
 ## <a name="data-encryption-algorithm"></a>資料加密演算法  
  「永遠加密」會使用 **AEAD_AES_256_CBC_HMAC_SHA_256** 演算法來加密資料庫中的資料。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911493"
 ---
 # <a name="arguments-in-catalog-functions"></a>目錄函數中的引數
 所有類別目錄函式接受引數與應用程式可以限制傳回的資料範圍。 例如，第一個和第二個呼叫**SQLTables**在下列程式碼會傳回包含所有的資料表的相關資訊，而第三個呼叫會傳回 Orders 資料表的相關資訊的結果集：  

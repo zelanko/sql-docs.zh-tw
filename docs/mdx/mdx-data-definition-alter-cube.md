@@ -1,39 +1,23 @@
 ---
 title: ALTER CUBE 陳述式 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Cube
-- ALTER_CUBE
-- ALTER CUBE
-- ALTER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- ALTER CUBE statement
-- cubes [Analysis Services], modifying
-- modifying cubes
-ms.assetid: 2f0af61b-f509-4e1a-990f-20a215d22994
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6a91092f5a62f1c21312ca585834795d678216ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 3b21466e1f8af33faa49a217038fee78ddf9fcc6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741567"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 資料定義 ALTER CUBE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   改變指定 Cube 的結構，通常用來支援維度回寫。 如需應用程式中使用回寫的詳細資訊，請參閱此部落格文章：[建置回寫應用程式與 Analysis Services （部落格）](http://go.microsoft.com/fwlink/?LinkId=394977)  
   

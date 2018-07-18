@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919143"
 ---
 # <a name="writing-odbc-3x-applications"></a>撰寫 ODBC 3.x 應用程式
 當 ODBC 2。*x*應用程式會升級到 ODBC 3。*x*，應該寫入，它會使用這兩個 ODBC 2。*x*和 3。*x*驅動程式。 應用程式應將條件式程式碼，以充分利用 ODBC 3。*x*功能。  

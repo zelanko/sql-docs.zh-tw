@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/13/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -36,22 +35,23 @@ helpviewer_keywords:
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 caps.latest.revision: 136
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ad45365bc2ddd0d43b7f683299c46e14f5a08a65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8b221c752e670d9894a1108e2dea8e01f564221
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788789"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 和 CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 這些函式會將某種資料類型的運算式轉換成另一種資料類型。  
 
-**範例：**變更輸入資料類型
+**範例：** 變更輸入資料類型
 
 **轉換**
 ```sql  
@@ -177,7 +177,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
   
 |ReplTest1|輸出|  
 |---|---|
-|**0** (預設)|使用預設剖析行為，以捨棄無意義的空白字元，而且不允許內部 DTD 子集。<br /><br />**注意：**轉換成 **xml** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無意義空白字元的處理方式會與 XML 1.0 不同。 如需詳細資訊，請參閱[建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
+|**0** (預設)|使用預設剖析行為，以捨棄無意義的空白字元，而且不允許內部 DTD 子集。<br /><br />**注意：** 轉換成 **xml** 資料類型時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 無意義空白字元的處理方式會與 XML 1.0 不同。 如需詳細資訊，請參閱[建立 XML 資料的執行個體](../../relational-databases/xml/create-instances-of-xml-data.md)。|  
 |**1**|保留無意義的空格。 此樣式設定會設定預設 **xml:space** 處理，以符合 **xml:space="preserve"** 的行為。|  
 |**2**|啟用有限的內部 DTD 子集處理。<br /><br /> 啟用時，伺服器可以使用內部 DTD 子集所提供的下列資訊來執行非驗證的剖析作業。<br /><br />   - 已套用屬性的預設值<br />   - 已解決和展開內部實體參考<br />   - 已檢查 DTD 內容模型來確定語法正確性<br /><br /> 剖析器會忽略外部 DTD 子集。 此外，它不會評估 XML 宣告，以查看 **standalone** 屬性具有 **yes** 還是 **no** 值。 相反地，它會將 XML 執行個體剖析為獨立文件。|  
 |**3**|保留無意義的空白字元，並啟用有限的內部 DTD 子集處理。|  

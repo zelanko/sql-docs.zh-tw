@@ -2,7 +2,6 @@
 title: onError 事件 (RDS) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7b14f2008446bbe6f49a8c8ae0887f84782f1a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470ed14f132233eb4bec6d58ac17c4d3c492b94e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288437"
 ---
 # <a name="onerror-event-rds"></a>onError 事件 (RDS)
 **OnError**作業期間發生錯誤時，會呼叫事件。  
@@ -41,7 +41,7 @@ onError SCode, Description, Source, CancelDisplay
  *SCode*  
  整數，表示錯誤的狀態碼。  
   
- *說明*  
+ *描述*  
  A**字串**，指出錯誤的描述。  
   
  *Source*  

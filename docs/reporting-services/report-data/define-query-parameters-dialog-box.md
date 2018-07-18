@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018795"
 ---
 # <a name="define-query-parameters-dialog-box"></a>定義查詢參數對話方塊
   使用 **[定義查詢參數]** 對話方塊，即可在設計階段在查詢設計工具中執行查詢以查看範例資料時，指定參數值。 查詢參數會篩選資料來源的資料，並且協助限制報表所處理的資料量。 這些值不會儲存在報表定義中。  

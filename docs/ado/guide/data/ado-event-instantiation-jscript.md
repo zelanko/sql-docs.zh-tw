@@ -2,7 +2,6 @@
 title: ADO 事件具現化： JScript |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80d43fa869cda4cf38187b46d44938d5fa0bd6ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4bc7aa84c136bb1560a9e3c5d2b8a4ff98f359c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270527"
 ---
 # <a name="ado-event-instantiation-jscript"></a>ADO 事件具現化： JScript
 Microsoft® JScript® 不支援 ADO 事件。

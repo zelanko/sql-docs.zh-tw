@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910263"
 ---
 # <a name="deferred-fields"></a>延後的欄位
 值*延遲欄位*時設定，但是驅動程式會將儲存延後的效果之變數的位址不會使用。 應用程式參數描述元，驅動程式會使用變數的內容時呼叫的**SQLExecDirect**或**SQLExecute**。 應用程式的資料列描述項，為驅動程式會使用變數的內容，在擷取的時間。  

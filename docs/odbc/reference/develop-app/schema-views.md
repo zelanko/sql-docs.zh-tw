@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911553"
 ---
 # <a name="schema-views"></a>結構描述檢視
 藉由呼叫 ODBC 目錄函數或藉由使用 INFORMATION_SCHEMA 檢視應用程式可以從 DBMS 擷取中繼資料資訊。 ANSI sql-92 標準所定義的檢視。  

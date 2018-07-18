@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907163"
 ---
 # <a name="cstring-class"></a>CString 類別
 因為物件的**CString** Microsoft® C++® 中的類別已簽署，在 ODBC 函數的字串引數是不帶正負號，應用程式會通過**CString** ODBC 的功能，但不包含的物件將它們轉型將會收到編譯器警告。

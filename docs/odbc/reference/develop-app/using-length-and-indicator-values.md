@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916663"
 ---
 # <a name="using-length-and-indicator-values"></a>使用長度與指標值
 長度/指標緩衝區用來傳遞資料緩衝區或例如 SQL_NULL_DATA 表示資料為 NULL 的特殊指標中資料的位元組長度。 根據函式，會使用它，是 SQLINTEGER 或 SQLSMALLINT 定義長度/指標緩衝區。 因此，需要單一引數來描述它。 如果資料緩衝區 nondeferred 輸入的緩衝區，這個引數包含資料本身的位元組長度或指標值。 它通常會命名為*StrLen_or_Ind*或類似的名稱。 例如，下列程式碼呼叫**SQLPutData**傳遞緩衝區的資料; 位元組長度 (*ValueLen*) 因為直接傳遞資料緩衝區 (*ValuePtr*) 是輸入的緩衝區中。  

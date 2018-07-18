@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912523"
 ---
 # <a name="sql-type-identifiers"></a>SQL 類型識別碼
 每個資料來源定義自己的 SQL 資料類型。 ODBC 定義類型的識別項，並描述可能會對應至每個類型識別項的 SQL 資料類型的一般特性。 它是驅動程式專用的基礎資料來源中的每個資料類型如何對應至 ODBC SQL 類型識別碼。  

@@ -1,36 +1,25 @@
 ---
-title: ClusterDistance (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ClusterDistance
-dev_langs:
-- DMX
-helpviewer_keywords:
-- ClusterDistance function
-ms.assetid: a13152b3-4cd1-4c79-8a3e-207624198330
-caps.latest.revision: 11
-author: Minewiskan
+title: ClusterDistance (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 03e85862a5fc8a1a9daae56282294d9addad53f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2d8eb879d23a344e5de6bad3c9fb6042fdadb3e7
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985394"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  **ClusterDistance**函式會傳回輸入案例的距離，從指定的叢集，或如果沒有指定任何群集，輸入案例與最可能的群集的距離。  
+  **ClusterDistance**函式會傳回輸入案例的距離，從指定的叢集，或如果沒有指定任何群集，輸入案例與最可能之群集的距離。  
   
 ## <a name="syntax"></a>語法  
   
@@ -67,7 +56,7 @@ ClusterDistance([<ClusterID expression>])
   
 -   使用[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函數來傳回輸入案例存在於每個模型的群集的可能性的長條圖。  
   
--   使用[PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)函式傳回 0 到 1 表示輸入的案例可能性的量值為模型存在於透過演算法取得。  
+-   使用[PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)函數傳回 0 到 1，表示輸入的案例可能性的量值存在於模型學習演算法。  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>範例 1：取得最可能之群集的群集距離  
  下列範例會傳回指定之案例與該案力最可能所屬之群集間的距離。  
@@ -100,7 +89,7 @@ NATURAL PREDICTION JOIN
 |叢集 6|  
   
 ## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>範例 2：取得指定之群集的距離  
- 下列語法使用採礦模型內容結構描述資料列集，傳回節點識別碼的清單，以及採礦模型中之群集的節點標題。 然後您可以使用節點標題中的群集識別碼引數為**ClusterDistance**函式。  
+ 下列語法使用採礦模型內容結構描述資料列集，傳回節點識別碼的清單，以及採礦模型中之群集的節點標題。 您可以使用節點標題中的叢集識別碼引數作為**ClusterDistance**函式。  
   
 ```  
 SELECT NODE_UNIQUE_NAME, NODE_CAPTION   
@@ -138,8 +127,8 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>另請參閱  
  [叢集&#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [叢集模型 & #40; 採礦模型內容Analysis Services-資料採礦 & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [叢集模型的採礦模型內容&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

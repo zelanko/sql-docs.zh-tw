@@ -2,7 +2,6 @@
 title: 輸入屬性的範例 （欄位） (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffbbc8356e1a53033b4c415d1ac6fa009a1e3f13
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 700ceebeb78f1cda3d609255bd5406fd711900f1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282637"
 ---
 # <a name="type-property-example-field-vb"></a>型別屬性範例 （欄位） (VB)
 這個範例會示範[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性所顯示的值之常數的對應名稱[類型](../../../ado/reference/ado-api/type-property-ado.md)屬性的所有[欄位](../../../ado/reference/ado-api/field-object.md)中的物件***員工***資料表。 FieldType 函式，才能執行這個程序。  

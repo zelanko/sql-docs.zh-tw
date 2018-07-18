@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903103"
 ---
 # <a name="odbc-component-files"></a>ODBC 元件檔案
 ODBC 桌面資料庫驅動程式 4.0 的每個元件所需的 ODBC 驅動程式檔案。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905583"
 ---
 # <a name="visual-foxpro-language-reference"></a>Visual FoxPro 語言參考
 此章節包含下列主題。  

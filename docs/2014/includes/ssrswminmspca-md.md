@@ -1,1 +1,1 @@
-**根\\Microsoft\\SqlServer\\ReportServer\\\<*InstanceName*\>\\v12\\系統管理員**
+**根\\Microsoft\\SqlServer\\ReportServer\\\<*執行個體名稱*\>\\v12\\系統管理員**

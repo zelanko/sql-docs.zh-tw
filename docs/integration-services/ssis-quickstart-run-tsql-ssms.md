@@ -1,23 +1,21 @@
 ---
 title: 使用 Transact-SQL 執行 SSIS 套件 (SSMS) | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07e3d841a04a632ac00a2e414b67c182e21c4557
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: d4943bbddb027632a39e7a3ef13748dec286c68c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34454901"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35328452"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>使用 Transact-SQL 從 SSMS 執行 SSIS 套件
 本快速入門示範如何使用 SQL Server Management Studio (SSMS) 連線到 SSIS 目錄資料庫，然後使用 Transact-SQL 陳述式來執行儲存在 SSIS 目錄的 SSIS 套件。
@@ -61,7 +59,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **伺服器類型** | 資料庫引擎 | 這是必要的值。 |
    | **伺服器名稱** | 完整伺服器名稱 | 如果您要連線至 Azure SQL Database 伺服器，則名稱的格式如下：`<server_name>.database.windows.net`。 |
-   | **驗證** | SQL Server 驗證 | 使用 SQL Server 驗證時，您可以連線到 SQL Server 或 Azure SQL Database。 如果要連線到 Azure SQL Database 伺服器，您無法使用 Windows 驗證。 |
+   | **驗證** | SQL Server 驗證 | 使用 SQL Server 驗證時，您可以連線到 SQL Server 或 Azure SQL Database。 如果要連線至 Azure SQL Database 伺服器，您無法使用 Windows 驗證。 |
    | **登入** | 伺服器系統管理員帳戶 | 這個帳戶是您在建立伺服器時指定的帳戶。 |
    | **密碼** | 伺服器系統管理員帳戶的密碼 | 這個密碼是您在建立伺服器時指定的密碼。 |
 

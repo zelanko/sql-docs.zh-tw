@@ -2,7 +2,6 @@
 title: 附錄 a： 提供者 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4cd609a06e0d30e28a451a4308cfec337d47f68
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 7cd4f36537158452eee32a92bd5544acc0956a91
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34707506"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271277"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>附錄 a： 資料和服務提供者
 本節說明三種類型的提供者： 資料提供者、 服務提供者，以及服務元件。 提供者分為兩類： 所提供的資料以及提供服務。 A*資料提供者*擁有它自己的資料，且會公開在表格式表單，以您的應用程式。 A*服務提供者*封裝所產生及取用資料，加強功能，在 ADO 應用程式中的服務。 服務提供者也可以進一步定義為*服務元件*，這必須與其他服務提供者或元件一起工作。

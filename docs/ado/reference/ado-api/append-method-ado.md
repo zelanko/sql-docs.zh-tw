@@ -2,7 +2,6 @@
 title: Append 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22e33175e9a52891f8e9fbd3eb2e6b637a0788bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b887ece3551b2ef88bc9b61037c0f2ddebd75f5e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275897"
 ---
 # <a name="append-method-ado"></a>Append 方法 (ADO)
 將物件附加至集合。 如果集合是[欄位](../../../ado/reference/ado-api/fields-collection-ado.md)，新[欄位](../../../ado/reference/ado-api/field-object.md)可以先建立物件，會附加至集合。  
@@ -44,10 +44,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *欄位*  
  A**欄位**集合。  
   
- *物件*  
+ *object*  
  物件變數，表示要附加的物件。  
   
- *名稱*  
+ *[名稱]*  
  A**字串**包含新的名稱值**欄位**物件，而且不可以是相同的名稱中的任何其他物件*欄位*。  
   
  *型別*  

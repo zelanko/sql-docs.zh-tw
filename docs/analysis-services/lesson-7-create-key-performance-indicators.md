@@ -1,5 +1,5 @@
 ---
-title: 第 8 課： 建立關鍵效能指標 |Microsoft 文件
+title: 第 8 課： 建立關鍵效能指標 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033406"
 ---
 # <a name="lesson-7-create-key-performance-indicators"></a>第 7 課： 建立關鍵效能指標
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -22,8 +23,8 @@ ms.lasthandoff: 05/10/2018
   
 完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 6 課： 建立量值](../analysis-services/lesson-6-create-measures.md)。   
+## <a name="prerequisites"></a>先決條件  
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 6 課： 建立量值](../analysis-services/lesson-6-create-measures.md)。   
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  以滑鼠右鍵按一下**InternetCurrentQuarterSalesPerformance** > **建立 KPI**。   
   
-5.  在 [關鍵效能指標 (KPI)] 對話方塊中**目標**選取**絕對值**，然後輸入**1.1**。  
+5.  在 [關鍵效能指標 (KPI)] 對話方塊中，在**目標**選取**絕對值**，然後輸入**1.1**。  
   
 7.  在左側 (下) 滑動軸欄位輸入 **1**，然後在右側 (上) 滑動軸欄位中輸入 **1.07**。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/10/2018
     ![做為表格式-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
-    > 請注意展開**描述**可用圖示樣式下方的標籤。 使用此輸入不同的 KPI 元素，使其更容易識別在用戶端應用程式中的描述。  
+    > 請注意可擴充**描述**可用圖示樣式下方的標籤。 使用此輸入各種 KPI 元素，使其更容易在用戶端應用程式中的描述。  
   
 9. 按一下 [確定] 完成 KPI。  
   
@@ -70,13 +71,13 @@ ms.lasthandoff: 05/10/2018
  
 3.  以滑鼠右鍵按一下**InternetCurrentQuarterMarginPerformance** > **建立 KPI**。  
   
-4.  在 [關鍵效能指標 (KPI)] 對話方塊中**目標**選取**絕對值**，然後輸入**1.25**。   
+4.  在 [關鍵效能指標 (KPI)] 對話方塊中，在**目標**選取**絕對值**，然後輸入**1.25**。   
   
 5.  在 [定義狀態臨界值] 中，滑動左側 (下) 滑動軸欄位，直到欄位顯示 **0.8**，然後滑動右側 (上) 滑動軸欄位，直到欄位顯示 **1.03**。  
   
 6.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型，然後按一下 [確定]。  
   
 ## <a name="whats-next"></a>下一步
-移至下一課：[第 8 課： 建立檢視方塊](../analysis-services/lesson-8-create-perspectives.md)。
+移至下一個課程︰[第 8 課： 建立檢視方塊](../analysis-services/lesson-8-create-perspectives.md)。
   
   

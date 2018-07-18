@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539418"
 ---
 # <a name="password-reset---analytics-platform-system"></a>密碼重設-Analytics Platform System
 **密碼重設**頁面可讓您變更 Analytics Platform System 所用的系統管理員帳戶的密碼。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/19/2018
 每種類型的認證的密碼強度原則符合網域系統管理員認證和系統管理員認證。 新的密碼變更時的網域系統管理員認證，會更新為網域所需整個 SQL Server PDW。  
   
 > [!IMPORTANT]  
-> SQL Server PDW 不支援貨幣符號字元 (**$**) 中的網域系統管理員或本機系統管理員密碼。 字元**^ %&**允許的密碼，但 PowerShell 目前這些特殊字元。 如果下列任何字元的密碼中使用的系統管理員或 SQL Server**sa**帳戶 ( **AdminPassword**和**PdwSAPassword**期間的參數安裝程式） 然後安裝程式，包括安裝、 升級、 REPLACENODE 和修補，將會失敗。 若要確保升級成功，當目前的密碼包含不支援的字元，變更這些密碼，使它們不包含這類字元執行升級之前。 升級完成之後，您可以設定這些密碼回其原始值。 如需密碼需求的詳細資訊，請參閱[ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)。  
+> SQL Server PDW 不支援貨幣符號字元 (**$**) 中的網域系統管理員或本機系統管理員密碼。 字元 **^ %&** 允許的密碼，但 PowerShell 目前這些特殊字元。 如果下列任何字元的密碼中使用的系統管理員或 SQL Server**sa**帳戶 ( **AdminPassword**和**PdwSAPassword**期間的參數安裝程式） 然後安裝程式，包括安裝、 升級、 REPLACENODE 和修補，將會失敗。 若要確保升級成功，當目前的密碼包含不支援的字元，變更這些密碼，使它們不包含這類字元執行升級之前。 升級完成之後，您可以設定這些密碼回其原始值。 如需密碼需求的詳細資訊，請參閱[ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)。  
   
 ## <a name="to-reset-a-password"></a>重設密碼  
   

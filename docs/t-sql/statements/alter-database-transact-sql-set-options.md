@@ -2,7 +2,7 @@
 title: ALTER DATABASE SET 選項 (Transact-SQL) | Microsoft Docs
 description: 深入了解如何在 SQL Server 和 Azure SQL Database 中設定資料庫選項，例如自動微調、加密、查詢存放區
 ms.custom: ''
-ms.date: 12/20/2017
+ms.date: 6/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -33,16 +33,17 @@ caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: ea637d3853d3e63cbab6806022000c04d95e3e92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52ad590fd7efeddc9a7e086f1337b4e61a850fc1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744137"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  本主題包含與設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料庫選項有關的 ALTER DATABASE 語法。 如需其他 ALTER DATABASE 語法，請參閱下列主題。  
+  本文包含與設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中資料庫選項有關的 ALTER DATABASE 語法。 如需其他 ALTER DATABASE 語法，請參閱下列主題。  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -274,7 +275,7 @@ SET
   
  `CURRENT` 會在目前資料庫中執行動作。 所有選項在所有內容中不支援 `CURRENT`。 如果 `CURRENT` 失敗，請提供資料庫名稱。  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  控制自動選項。  
  <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  
@@ -438,7 +439,7 @@ SET
  OFF  
  當認可交易時，資料指標維持開啟狀態；回復交易會關閉任何資料指標，但定義為 INSENSITIVE 或 STATIC 的資料指標除外。  
   
- 利用 SET 陳述式來設定的連接層級設定會覆寫 CURSOR_CLOSE_ON_COMMIT 的預設資料庫設定。 根據預設，當連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，ODBC 和 OLE DB 用戶端會發出連接層級的 SET 陳述式，將工作階段的 CURSOR_CLOSE_ON_COMMIT 設為 OFF。 如需詳細資訊，請參閱 [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)。  
+ 利用 SET 陳述式來設定的連接層級設定會覆寫 CURSOR_CLOSE_ON_COMMIT 的預設資料庫設定。 根據預設，當連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體時，ODBC 和 OLE DB 用戶端會發出連線層級的 SET 陳述式，將工作階段的 CURSOR_CLOSE_ON_COMMIT 設為 OFF。 如需詳細資訊，請參閱 [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)。  
   
  您可以檢查 sys.databases 目錄檢視中的 is_cursor_close_on_commit_on 資料行，或 DATABASEPROPERTYEX 函數的 IsCloseCursorsOnCommitEnabled 屬性來判斷這個選項的狀態。  
   
@@ -507,7 +508,7 @@ SET
  資料庫是標示為 READ_ONLY、記錄已停用並限定只有系統管理員 (sysadmin) 固定伺服器角色的成員才可存取。 EMERGENCY 主要是做為疑難排解的用途。 例如，由於記錄檔損毀而被標示有疑問的資料庫可以設為 EMERGENCY 狀態。 在這個情況下，系統管理員可以進行資料庫的唯讀存取。 只有系統管理員 (sysadmin) 固定伺服器角色的成員，可以將資料庫設定為 EMERGENCY 狀態。  
   
 > [!NOTE]  
-> **權限：**若要將資料庫變更為離線或緊急狀態，需要主旨資料庫的 ALTER DATABASE 權限。 若要將資料庫從離線狀態移到連線狀態，需要伺服器層級的 ALTER ANY DATABASE 權限。  
+> **權限：** 若要將資料庫變更為離線或緊急狀態，需要主旨資料庫的 ALTER DATABASE 權限。 若要將資料庫從離線狀態移到連線狀態，需要伺服器層級的 ALTER ANY DATABASE 權限。  
   
  您可以檢查 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 目錄檢視的 state 和 state_desc 資料行，或檢查 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 函數的 Status 屬性來判斷這個選項的狀態。 如需詳細資訊，請參閱 [Database States](../../relational-databases/databases/database-states.md)。  
   
@@ -538,7 +539,7 @@ SET
  SINGLE_USER  
  **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 不適用於 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
- 指定每次只能有一位使用者存取資料庫。 如果指定了 SINGLE_USER，且沒有其他使用者連接到資料庫，就會封鎖 ALTER DATABASE 陳述式，直到所有使用者都中斷連接指定的資料庫為止。 若要覆寫這個行為，請參閱 WITH \<termination> 子句。  
+ 指定每次只能有一位使用者存取資料庫。 如果指定 SINGLE_USER，且沒有其他使用者連線到資料庫，就會封鎖 ALTER DATABASE 陳述式，直到所有使用者都中斷與指定資料庫的連線為止。 若要覆寫這個行為，請參閱 WITH \<termination> 子句。  
   
  資料庫會保留在 SINGLE_USER 模式中，即使是將選項記錄設為關閉的使用者也是如此。 此時其他使用者可以連接到這個資料庫，但只能有一位。  
   

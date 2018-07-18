@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905563"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>日期、 時間和時間戳記逸出序列
 ODBC 定義日期、 時間和時間戳記常值的逸出序列。 這些逸出序列語法如下所示：  

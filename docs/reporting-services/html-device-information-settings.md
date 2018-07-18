@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017085"
 ---
 # <a name="html-device-information-settings"></a>HTML 裝置資訊設定
 下表列出以 HTML 格式轉譯的裝置資訊設定。  

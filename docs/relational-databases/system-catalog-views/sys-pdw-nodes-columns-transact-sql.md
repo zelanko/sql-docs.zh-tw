@@ -1,43 +1,42 @@
 ---
-title: sys.pdw_nodes_columns (TRANSACT-SQL) |Microsoft 文件
+title: sys.pdw_nodes_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 268c77b7-1d71-4197-a2ed-5e2b2b8fc260
-caps.latest.revision: 7
 author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aab0463f2fcc2a6ae24e716fd502c91eb8f9f867
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.openlocfilehash: 20bb25d3699a6fab734da0974bc0726da7e5cb96
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36875036"
 ---
 # <a name="syspdwnodescolumns-transact-sql"></a>sys.pdw_nodes_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   顯示使用者定義的資料表和使用者定義的檢視表的資料行。  
   
-|資料行名稱|資料類型|Description|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|這個資料行所屬的物件識別碼。||  
-|name|**sysname**|資料行的名稱。 物件中是唯一的。||  
+|NAME|**sysname**|資料行的名稱。 物件中是唯一的。||  
 |column_id|**int**|資料行的識別碼。 物件中是唯一的。||  
 |system_type_id|**tinyint**|資料行的系統類型識別碼。||  
 |user_type_id|**int**|使用者所定義的資料行類型識別碼。||  
-|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。|包含傳回-1 （不正確） 不支援的資料行類型。|  
+|max_length|**smallint**|資料行的最大長度 (以位元組為單位)。|包含-1 （不是有效的） 不支援的資料行類型。|  
 |有效位數|**tinyint**|如果是以數值為基礎，便是資料行的有效位數；否則，便是 0。||  
 |scale|**tinyint**|如果是以數值為基礎，便是資料行的小數位數；否則，便是 0。||  
 |collation_name|**sysname**|如果是以字元為基礎，便是資料行的定序名稱；否則，便是 NULL。||  
@@ -53,11 +52,11 @@ ms.lasthandoff: 05/04/2018
 |is_dts_replicated|**bit**|1 = 使用 SSIS 來複寫資料行。|一律是 0。|  
 |is_xml_document|**bit**|1 = 內容是完整的 XML 文件集。|一律是 0。|  
 |xml_collection_id|**int**|0 = 沒有 XML 結構描述集合。|一律是 0。|  
-|default_object_id|**int**|與預設物件的識別碼0 = 沒有預設值。|一律是 0。|  
+|default_object_id|**int**|預設物件識別碼0 = 沒有預設值。|一律是 0。|  
 |rule_object_id|**int**|獨立規則繫結至資料行的識別碼。 <br />0 = 沒有獨立規則。|一律是 0。|  
 |is_sparse|**bit**|1 = 資料行是疏鬆資料行。|一律是 0。|  
 |is_column_set|**bit**|1 = 資料行是資料行集。|一律是 0。|  
-|pdw_node_id|**int**|唯一識別項[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點。|NOT NULL|  
+|pdw_node_id|**int**|唯一識別碼[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]節點。|NOT NULL|  
   
 ## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 權限。  

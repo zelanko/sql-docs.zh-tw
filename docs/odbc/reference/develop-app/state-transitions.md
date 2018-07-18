@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914173"
 ---
 # <a name="state-transitions"></a>狀態轉換
 ODBC 定義離散*狀態*每個環境中，每個連接，和每個陳述式。 例如，環境有三種可能狀態： 未配置的 （在其任何環境配置），已配置 （所在環境配置，但沒有連線配置），並連接 （所在的環境和一個或多個連接都是已配置）。 連接具有七個可能的狀態。陳述式有 13 的可能狀態。  

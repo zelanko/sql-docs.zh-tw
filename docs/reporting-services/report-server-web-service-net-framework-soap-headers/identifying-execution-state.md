@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025675"
 ---
 # <a name="identifying-execution-state"></a>識別執行狀態
   超文字傳輸協定 (HTTP) 是一種無連接且沒有狀態 (Stateless) 的通訊協定，也就是說它不會自動指出不同的要求是否全都來自相同的用戶端，也不會自動指出某個特定瀏覽器執行個體是否仍在主動檢視網頁或網站。 工作階段會建立邏輯連接以透過 HTTP 維護伺服器與用戶端之間的狀態。 與特定工作階段相關的使用者特定資訊又稱為工作階段狀態。  

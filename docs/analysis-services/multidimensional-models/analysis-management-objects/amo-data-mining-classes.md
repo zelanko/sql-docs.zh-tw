@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021595"
 ---
 # <a name="amo-data-mining-classes"></a>AMO 資料採礦類別
   資料採礦類別可協助您建立、修改、刪除和處理資料採礦物件。 處理資料採礦物件包括建立資料採礦結構、建立資料採礦模型和處理模型。  

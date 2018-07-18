@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897293"
 ---
 # <a name="aggregate-function-limitations"></a>彙總函式限制
 彙總函式和非彙總資料行參考不能同時使用當做單一的 SQL 陳述式的引數。

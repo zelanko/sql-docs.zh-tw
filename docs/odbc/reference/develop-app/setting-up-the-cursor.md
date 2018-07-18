@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912543"
 ---
 # <a name="setting-up-the-cursor"></a>設定資料指標
 應用程式之前執行的陳述式建立的結果集，可以指定資料指標類型。 它會與 的 SQL_ATTR_CURSOR_TYPE 陳述式屬性。 如果應用程式未明確指定型別，就會使用順向資料指標。 若要取得混合的資料指標，指定索引鍵集驅動資料指標的應用程式，但是宣告的索引鍵集大小不超過結果集大小。  

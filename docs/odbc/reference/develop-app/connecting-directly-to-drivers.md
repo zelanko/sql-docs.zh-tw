@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909793"
 ---
 # <a name="connecting-directly-to-drivers"></a>直接連接到驅動程式
 中所述的[選擇資料來源或驅動程式](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)稍早在本章節，某些應用程式不會希望完全使用資料來源。 相反地，他們想要直接連接到驅動程式。 **SQLDriverConnect**提供方法，讓應用程式直接連接到驅動程式但未指定資料來源。 在概念上，於執行階段建立暫存資料來源。  

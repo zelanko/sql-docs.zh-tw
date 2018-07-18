@@ -1,31 +1,20 @@
 ---
-title: PredictHistogram (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictHistogram
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictHistogram function
-ms.assetid: 85ffc542-96e7-4f58-aaa3-34d76befcedf
-caps.latest.revision: 34
-author: Minewiskan
+title: PredictHistogram (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a7b6c9df43d66d69b9dea1e06bea646a6a31d4dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f7e7129985eac09d741ea9d00c551a9507ee92c9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985357"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,10 +35,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  資料表。  
   
 ## <a name="remarks"></a>備註  
- 長條圖產生統計資料行。 傳回之長條圖的資料行結構相依於搭配使用的資料行參考的型別**PredictHistogram**函式。  
+ 長條圖產生統計資料行。 傳回之長條圖的資料行結構而定，可搭配資料行參考的型別**PredictHistogram**函式。  
   
 ## <a name="scalar-columns"></a>純量資料行  
- 如\<純量資料行參考 >，長條圖， **PredictHistogram**函式會傳回下列資料行所組成：  
+ 針對\<純量資料行參考 >，長條圖， **PredictHistogram**函式會傳回包含下列資料行：  
   
 -   所預測的值。  
   
@@ -67,19 +56,19 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     **$AdjustedProbability**資料行是[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]延伸[!INCLUDE[msCoName](../includes/msconame-md.md)]OLE DB for Data Mining 規格。  
+     **$AdjustedProbability**資料行是[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]擴充功能來[!INCLUDE[msCoName](../includes/msconame-md.md)]OLE DB for Data Mining 規格。  
   
 ## <a name="cluster-columns"></a>群集資料行  
- 長條圖， **PredictHistogram**函式會傳回\<叢集資料行參考 > 包含下列資料行：  
+ 長條圖可**PredictHistogram**函式會傳回\<叢集資料行參考 > 包含下列資料行：  
   
--   **$Cluster** （代表群集名稱）  
+-   **$Cluster** （代表叢集名稱）  
   
 -   **$Distance**  
   
 -   **$Probability**  
   
 ## <a name="examples"></a>範例  
- 下列範例在單一查詢中傳回 Bike Buyer 資料行的預測狀態。 此查詢也會傳回 Bike Buyer 屬性，根據使用取得的已調整機率的前兩個最可能狀態**PredictHistogram**函式。  
+ 下列範例在單一查詢中傳回 Bike Buyer 資料行的預測狀態。 此查詢也會傳回 Bike Buyer 屬性，以取得使用的已調整機率的前兩個最可能狀態**PredictHistogram**函式。  
   
 ```  
 SELECT  
@@ -99,12 +88,12 @@ NATURAL PREDICTION JOIN
  [叢集&#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
  [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
- [PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
+ [[Predictprobability] &#40;DMX&#41;](../dmx/predictprobability-dmx.md)   
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [資料採礦演算法 &#40;Analysis Services-資料採礦 &#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦演算法&#40;Analysis Services-資料採礦&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

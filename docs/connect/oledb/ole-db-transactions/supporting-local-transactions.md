@@ -2,10 +2,10 @@
 title: 支援本機交易 |Microsoft 文件
 description: OLE DB 驅動程式中的 SQL Server 的本機交易
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: de00c4aac3125209bb56a1867f07b1f395804cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25d6c98c17c139a1658d0711bcff0c1c8f3f1d18
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689361"
 ---
 # <a name="supporting-local-transactions"></a>支援本機交易
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   工作階段會分隔 OLE DB driver for SQL Server 的本機交易的交易範圍。 時，取用者的方向，在 SQL Server OLE DB 驅動程式提交要求至連接的執行個體的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，此要求會構成的 SQL Server 的 OLE DB 驅動程式的工作單位。 本機交易一律會將單一 OLE DB 驅動程式在一或多個工作單位的 SQL Server 工作階段。  
   
@@ -38,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
  SQL Server 的 OLE DB 驅動程式支援**itransactionlocal:: Starttransaction**參數，如下所示。  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*isoLevel*[in]|與此交易搭配使用的隔離等級。 在本機交易中，SQL Server OLE DB 驅動程式支援以下功能：<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE 的情況下**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> 注意︰ 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]，ISOLATIONLEVEL_SNAPSHOT 都是有效的*isoLevel*是否啟用資料庫的版本控制的引數。 不過，如果使用者嘗試執行執行陳述式，而未啟用版本控制且/或資料庫不是唯讀的，則會發生錯誤。 此外，如果 ISOLATIONLEVEL_SNAPSHOT 指定為將會發生 XACT_E_ISOLATIONLEVEL 錯誤*isoLevel*連線到的版本時[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]早於[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。|  
 |*isoFlags*[in]|SQL Server OLE DB 驅動程式會傳回錯誤的任何非零的值。|  
@@ -47,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  若是本機交易，SQL Server OLE DB 驅動程式會實作**itransaction:: Abort**參數，如下所示。  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*pboidReason*[in]|如果設定，則略過。 可以安全地成為 NULL。|  
 |*fRetaining*[in]|當為 TRUE 時，就會針對工作階段隱含地開始新的交易。 此交易必須由取用者認可或結束。 若為 FALSE，SQL Server OLE DB 驅動程式會還原到自動認可模式工作階段。|  
@@ -55,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  若是本機交易，SQL Server OLE DB 驅動程式會實作**itransaction:: Commit**參數，如下所示。  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |*fRetaining*[in]|當為 TRUE 時，就會針對工作階段隱含地開始新的交易。 此交易必須由取用者認可或結束。 若為 FALSE，SQL Server OLE DB 驅動程式會還原到自動認可模式工作階段。|  
 |*grfTC*[in]|非同步和第一階段傳回不支援的 OLE DB 驅動程式的 SQL Server。 SQL Server OLE DB 驅動程式 XACT_E_NOTSUPPORTED 以外的任何值傳回 XACT_E_NOTSUPPORTED。|  

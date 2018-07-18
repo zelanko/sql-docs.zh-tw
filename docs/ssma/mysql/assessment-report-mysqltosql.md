@@ -1,8 +1,6 @@
 ---
 title: 評估報表 (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,22 +16,23 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 96afe843bfd12c0d971ecaf06cbb21cdd88e5a35
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 602509c1c8d1f2de14513e67e4d850da24774e7a
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775654"
 ---
 # <a name="assessment-report-mysqltosql"></a>評估報表 (MySQLToSQL)
 評估報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並且也可幫助您評估複雜度及成本的移轉專案。  
   
 若要存取評估的報表，在來源中繼資料總管，轉換選取的物件上按一下滑鼠右鍵**結構描述**，然後選取**建立報表**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 |||  
 |-|-|  
-|**詞彙**|**[定義]**|  
+|**詞彙**|**定義**|  
 |**轉換統計資料**|顯示依陳述式類型的轉換統計資料。 這個窗格會顯示當群組物件，例如結構描述，或沒有程式碼的物件已選取左窗格中。|  
 |**依類別分組的物件**|依類別顯示物件的數目。 這個窗格會顯示時，才是群組物件，例如結構描述，或沒有程式碼的物件已選取左窗格中。|  
 |**統計資料**|顯示所選物件的轉換統計資料。 只有在左窗格中選取個別物件以程式碼時，此窗格是可見。 您可能必須展開 [**統計資料**，正上方**來源**] 窗格中，若要檢視此窗格。|  

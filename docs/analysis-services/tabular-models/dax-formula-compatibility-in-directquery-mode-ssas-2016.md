@@ -1,5 +1,5 @@
 ---
-title: 在 DirectQuery 模式中的 DAX 公式相容性 |Microsoft 文件
+title: 在 DirectQuery 模式中的 DAX 公式相容性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2005742b524db0ec5587ad3f8d959b03dec6965b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4bcebbcf8702c2605d36df844f5db7c7b5699a22
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985380"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>在 DirectQuery 模式中的 DAX 公式相容性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-針對表格式 1200年 （含） 以上模型在 DirectQuery 模式中，在舊版本的許多功能限制不再適用。 特別針對 DAX 公式︰
+針對表格式 1200年及以上模型在 DirectQuery 模式中，在舊版中的許多功能限制不再適用。 特別針對 DAX 公式︰
 
 - DirectQuery 現在會產生較簡單的查詢，提供更佳的效能。
 - 在 DirectQuery 模式中現在支援資料列層級安全性 (RLS)。
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="dax-functions-in-directquery-mode"></a>DirectQuery 模式中的 DAX 函數
 
-簡單地說，對於 DirectQuery 模型支援所有 DAX 函數。 不過，並非所有函數都支援的所有公式的類型，而且並非所有函數都已針對 DirectQuery 模型中都最佳化。 在最基本的層級，我們可以將 DAX 函數分為兩大派︰最佳化與非最佳化。 首先讓我們仔細看看最佳化的函數。
+簡單地說，針對 DirectQuery 模型支援所有 DAX 函數。 不過，並非所有的函式支援所有公式類型，而且並非所有的函式已針對 DirectQuery 模型最佳化。 在最基本的層級，我們可以將 DAX 函數分為兩大派︰最佳化與非最佳化。 首先讓我們仔細看看最佳化的函數。
 
 
 ### <a name="optimized-for-directquery"></a>針對 DirectQuery 最佳化
@@ -33,18 +34,18 @@ ms.lasthandoff: 05/10/2018
 
 | 支援所有 DAX 公式                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 僅支援量值和查詢公式                                                                                                                                                                                                                                                                                                |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ABS</br>  ACOS</br>  ACOT</br>  與</br>  ASIN</br>  ATAN</br>  BLANK</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  CURRENCY</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  OR</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  值</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
+| ABS</br>  ACOS</br>  ACOT</br>  與</br>  ASIN</br>  ATAN</br>  BLANK</br>  CEILING</br>  CONCATENATE</br>  COS</br>  COT</br>  CURRENCY</br>  DATE</br>  DATEDIFF</br>  DATEVALUE</br>  DAY</br>  DEGREES</br>  DIVIDE</br>  EDATE</br>  EOMONTH</br>  EXACT</br>  EXP</br>  FALSE</br>  FIND</br>  HOUR</br>  IF</br>  INT</br>  ISBLANK</br>  ISO.CEILING</br>  KEEPFILTERS</br>  LEFT</br>  LEN</br>  LN</br>  LOG</br>  LOG10</br>  LOWER</br>  MAX</br>  MID</br>  MIN</br>  MINUTE</br>  MOD</br>  MONTH</br>  MROUND</br>  NOT</br>  NOW</br>  或</br>  PI</br>  POWER</br>  QUOTIENT</br>  RADIANS</br>  RAND</br>  RELATED</br>  REPT</br>  RIGHT</br>  ROUND</br>  ROUNDDOWN</br>  ROUNDUP</br>  SEARCH</br>  SECOND</br>  SIGN</br>  SIN</br>  SQRT</br>  SQRTPI</br>  SUBSTITUTE</br>  SWITCH</br>  TAN</br>  TIME</br>  TIMEVALUE</br>  TODAY</br>  TRIM</br>  TRUE</br>  TRUNC</br>  UNICODE</br>  UPPER</br>  USERNAME</br>  USERELATIONSHIP</br>  值</br>  WEEKDAY</br>  WEEKNUM</br>  YEAR</br> | ALL</br> ALLEXCEPT</br> ALLNOBLANKROW</br> ALLSELECTED</br> AVERAGE</br> AVERAGEA</br> AVERAGEX</br> CALCULATE</br> CALCULATETABLE</br> COUNT</br> COUNTA</br> COUNTAX</br> COUNTROWS</br> COUNTX</br> DISTINCT</br> DISTINCTCOUNT</br> FILTER</br> FILTERS</br> HASONEFILTER</br> HASONEVALUE</br> ISCROSSFILTERED</br> ISFILTERED</br> MAXA</br> MAXX</br> MIN</br> MINA</br> MINX</br> RELATEDTABLE</br> STDEV.P</br> STDEV.S</br> STDEVX.P</br> STDEVX.S</br> SUM</br> SUMX</br> VALUES</br> VAR.P</br> VAR.S</br> VARX.P</br> VARX.S |
 
 
 
 ### <a name="non-optimized-for-directquery"></a>未針對 DirectQuery 最佳化
-這些函式有未最佳化，可使用 DirectQuery。 導出資料行和資料列層級安全性公式完全「不」支援這些函數。 不過， 量值和查詢公式「支援」這些函數，隨然效能並不確定。
+這些函式有尚未最佳化，以使用 DirectQuery。 導出資料行和資料列層級安全性公式完全「不」支援這些函數。 不過， 量值和查詢公式「支援」這些函數，隨然效能並不確定。
 
  我們不會在此列出所有的函數。 基本上，如果不是上述列出的其中一種最佳化函數，它就不是針對 DirectQuery 的最佳化功能。
 
 特定函數可能未針對 DirectQuery 最佳化的原因，是因為基礎關聯式引擎無法執行相當於 xVelocity 引擎所執行的計算，或公式無法轉換為相等的 SQL 運算式。 在其他情況下，轉換運算式以及產生的計算效能可能令人無法接受。
 
-若要深入了解所有 DAX 函數，請參閱 [DAX 函數參考]。(https://msdn.microsoft.com/en-us/library/ee634396.aspx)
+若要深入了解所有 DAX 函數，請參閱 [DAX 函數參考]。(https://msdn.microsoft.com/library/ee634396.aspx)
 
 ## <a name="dax-operators-in-directquery-mode"></a>在 DirectQuery 模式中的 DAX 運算子
 在 DirectQuery 模式中完全支援所有 DAX 比較和算術運算子。 若要深入了解，請參閱 [DAX 運算子參考](https://msdn.microsoft.com/library/ee634237.aspx)。
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/10/2018
 使用記憶體中資料存放區之模型所支援的日期文字格式範圍比 SQL Server 所支援的日期字串格式更有限。 不過，DAX 支援自訂日期和時間格式。  
   
 **從字串轉換成其他非布林值**  
-從字串轉換成非布林值時，DirectQuery 模式的行為與 SQL Server 相同。 如需詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
+從字串轉換成非布林值時，DirectQuery 模式的行為與 SQL Server 相同。 如需詳細資訊，請參閱 [CAST 和 CONVERT (Transact-SQL)](http://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8)。  
   
 **不允許從數字轉換成字串**  
 範例： `CONCATENATE(102,”,345”)`  
@@ -341,7 +342,7 @@ DirectQuery 模式會將 DAX TRIM 函數轉譯成 SQL 陳述式 `LTRIM(RTRIM(<co
 
 
 ## <a name="see-also"></a>另請參閱  
-[DirectQuery 模式](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+[DirectQuery 模式](http://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030795"
 ---
 # <a name="msreportserverinstance-properties---editionname"></a>MSReportServer_Instance 屬性 - EditionName
   傳回報表伺服器版本之人們可讀取的名稱。 唯讀。  

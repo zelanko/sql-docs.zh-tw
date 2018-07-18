@@ -2,7 +2,6 @@
 title: PrimaryKey 屬性 (ADOX) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a289d2a96ecfd67ce3a0fedbb2d4d03f3f58b395
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4a13f413e4f18b84133757082879ac4eff7ec58
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286747"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 屬性 (ADOX)
 指出索引是否代表資料表的主索引鍵。  

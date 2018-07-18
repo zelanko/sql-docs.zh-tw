@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912303"
 ---
 # <a name="executing-a-statement"></a>執行陳述式
 有四種方式執行的陳述式，在編譯 （預備） 資料庫引擎和使用者定義時，取決於：  

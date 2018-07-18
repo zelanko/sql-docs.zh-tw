@@ -13,7 +13,7 @@ ms.openlocfilehash: 0536e7fd2d2e5df4c07e477cb771c16fd1f85fd4
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576180"
 ---
 # <a name="partitionid-element-xmla"></a>PartitionID 元素 (XMLA)

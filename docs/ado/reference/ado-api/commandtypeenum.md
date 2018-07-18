@@ -2,7 +2,6 @@
 title: CommandTypeEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,21 +19,22 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d15cf7ce3c4af4d6bb4072dd3070298a846e825
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2120e4e593b0465d7f2412b3e938a8aea6cc2674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276917"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 指定應如何解譯為命令引數。  
   
  請務必驗證使用者提供*CommandString*值，以免讓應用程式使用者有機會將用於 ADO 來執行有潛在危險的命令。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|未指定命令的型別引數。|  
-|**adCmdText**|1|評估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)做為文字定義命令或預存程序的呼叫。|  
+|**adCmdText**|@shouldalert|評估[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)做為文字定義命令或預存程序的呼叫。|  
 |**adCmdTable**|2|評估**CommandText**做為其資料行大小會傳回由內部產生的 SQL 查詢的資料表名稱。|  
 |**adCmdStoredProc**|4|評估**CommandText**做為預存程序名稱。|  
 |**adCmdUnknown**|8|預設值。 表示命令中的型別**CommandText**並不知道屬性。<br /><br /> ADO 在不知道的命令類型，也必須用於解譯多嘗試幾次**CommandText**。<br /><br /> -   **CommandText**解譯為文字的命令或預存程序呼叫的定義。 這是相同的行為**adCmdText**。<br />-   **CommandText**是預存程序的名稱。 這是相同的行為**adCmdStoredProc**。<br />-   **CommandText**解譯為資料表的名稱。 由內部產生的 SQL 查詢會傳回所有資料行。 這是相同的行為**adCmdTable**。|  

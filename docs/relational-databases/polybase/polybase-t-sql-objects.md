@@ -3,8 +3,6 @@ title: PolyBase T-SQL 物件 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: polybase
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee8e10e0b018d8b49316710d40279f8d62802225
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 94d5f10b12b09668c72669ef90ad6802de617fe2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243588"
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 物件
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1845ee99dc77a25c1afbd7257a6ba31f1fb6d6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 832df9084c737873b388631668afc4e1024a2d55
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273547"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>使用 ADO 文件的必要條件
 若要使用這份文件，您應該有，最少開發應用程式使用 Microsoft Visual Basic 中，因為大部分的指南中的範例以該語言撰寫的經驗。 另外還有 Microsoft Visual c + +、 Java、 Visual Basic Scripting Edition (VBScript) 和 Microsoft JScript 撰寫的一些範例。  

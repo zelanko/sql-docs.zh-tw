@@ -2,7 +2,6 @@
 title: 將更新傳送： UpdateBatch 方法 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,11 +14,12 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f37d46927f2424171c84b723f7541b34f09957d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a791806a21a2e1260a39dcadad62894e7eb85cb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272477"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>將更新傳送： UpdateBatch 方法
 下列程式碼的 LockType 屬性設定為 Adlockpessimistic 和至 adUseClient CursorLocation 在批次模式中開啟資料錄集。 它會將兩個新的記錄加入和變更現有資料錄，儲存原始值，欄位的值，然後呼叫 UpdateBatch 傳送回資料來源所做的變更。  

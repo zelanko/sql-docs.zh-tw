@@ -1,8 +1,6 @@
 ---
 title: 執行 SSMA 主控台 (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,11 +24,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a3af52acedfa86cc969e8c2ced508e30a5ddd1f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8381ce25e64ef417483791b4e8f68c2e4a8f1845
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776034"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>執行 SSMA 主控台 (MySQLToSQL)
 Microsoft 提供一組強大的指令碼檔案命令來執行及控制 SSMA 活動。  
@@ -293,7 +292,7 @@ generate-assessment-report
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <generate-assessment-report  
@@ -367,7 +366,7 @@ convert-schema
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <convert-schema  
@@ -427,7 +426,7 @@ convert-schema
   
 </migrate-data>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <migrate-data  
@@ -515,7 +514,7 @@ convert-schema
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target  
@@ -524,7 +523,7 @@ convert-schema
   
   object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <synchronize-target>  
@@ -580,7 +579,7 @@ convert-schema
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database  
@@ -589,7 +588,7 @@ convert-schema
   
    object-type="<object-category>"/>  
 ```  
-或  
+中的多個  
   
 ```xml  
 <refresh-from-database>  
@@ -639,7 +638,7 @@ save-as-script
   
 />  
 ```  
-或  
+中的多個  
   
 ```xml  
 <save-as-script  
@@ -678,7 +677,7 @@ convert-sql-statement
   
 8.  `write-summary-report-to` 指定產生的摘要報告所在的路徑。 如果只提及的資料夾路徑，然後檔案名稱**ConvertSQLReport.XML**建立。 （選擇性的屬性）  
   
-    報表建立了 2 子類別，取得進一步的 viz..,:  
+    報表建立了 2 子類別，取得進一步的 viz。。，：  
   
     -   報告錯誤 （="true/false"，預設值為"false"（選擇性的屬性））。  
   
@@ -715,7 +714,7 @@ convert-sql-statement
   
 </convert-sql-statement>  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  
@@ -740,7 +739,7 @@ convert-sql-statement
   
 />  
 ```  
-或  
+中的多個  
   
 ```  
 <convert-sql-statement  

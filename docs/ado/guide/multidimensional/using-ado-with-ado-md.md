@@ -2,7 +2,6 @@
 title: 使用 ADO 搭配 ADO MD |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00a999350e2aed86e74bb0bfaea77c05207a21a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d6aed08b40b25eb0f725697eb6fac8908894ebd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273529"
 ---
 # <a name="using-ado-with-ado-md"></a>使用 ADO 搭配 ADO MD
 ADO 和 ADO MD 個相關但不同的物件模型。 ADO 提供物件連接到資料來源、 執行命令、 擷取表格式資料和結構描述中繼資料，以表格格式，以及檢視提供者資訊時發生錯誤。 ADO MD 可用於擷取多維度資料和多維度結構描述中繼資料檢視的物件。  

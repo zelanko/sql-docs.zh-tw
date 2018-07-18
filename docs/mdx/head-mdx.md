@@ -1,34 +1,23 @@
 ---
 title: Head (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- HEAD
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Head function
-ms.assetid: 2a909bda-1366-4537-93b0-c089554fc11f
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b0e25718c55dbe433bd34438b459aed31b2097f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 05cfcb3c23a0369f010b8440d4a27e94ffacdb21
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740477"
 ---
 # <a name="head-mdx"></a>Head (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回集合中指定數目的前幾個元素，同時保留重複項。  
   
@@ -43,7 +32,7 @@ Head(Set_Expression [ ,Count ] )
  *Set_Expression*  
  傳回集合的有效多維度運算式 (MDX) 運算式。  
   
- *Count*  
+ *計數*  
  有效的數值運算式，會指定要傳回的 Tuple 數目。  
   
 ## <a name="remarks"></a>備註  
@@ -71,6 +60,6 @@ FROM [Adventure Works]
  [項目&#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [項目&#40;成員&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
  [順位&#40;MDX&#41;](../mdx/rank-mdx.md)   
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

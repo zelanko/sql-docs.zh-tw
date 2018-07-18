@@ -12,14 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9091d714-98bc-43ec-b8d1-9c892cb57f19
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 789445b46712ebfd832a5ccc28f078d8993d5901
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 12d0e87d50f96dbd69973b5c196303d4286a5ec5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37325558"
 ---
 # <a name="framewindowvisible"></a>FrameWindowVisible
   指定特定視窗框架是否可見的屬性。 Helper 方法是從 Managed 程式碼使用。  

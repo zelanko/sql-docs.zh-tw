@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912673"
 ---
 # <a name="driver-aware-connection-pooling"></a>可感知驅動程式的連接共用
 驅動程式可感知連接共用是 Windows 8 中的驅動程式管理員的新功能。 驅動程式可感知連接共用允許驅動程式撰寫者自訂連接共用其 ODBC 驅動程式中的行為。  

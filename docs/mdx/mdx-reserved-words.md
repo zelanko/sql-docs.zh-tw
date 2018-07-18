@@ -1,6 +1,6 @@
 ---
 title: MDX 保留字 |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 18ca96f8788d8ecb9b8567af30ec67570e2b4dae
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5eec141a82b4cf7aca5fd8c112249c362a1242d4
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579800"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742287"
 ---
 # <a name="mdx-reserved-words"></a>MDX 保留字
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   下表包含保留以供多維度運算式 (MDX) 使用的字。 您不應該在 MDX 中將這些字作為任何識別碼 (如 Cube 名稱) 或使用者自訂函數名稱的一部份使用。  
   

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910733"
 ---
 # <a name="developing-applications"></a>開發應用程式
 本節包含有關開發使用 ODBC 介面和實作該類別的驅動程式的應用程式的資訊。  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905757"
 ---
 # <a name="table-references-limitations"></a>資料表參考的限制
 16 資料表參考的最多可以包含在查詢中的任何陳述式。

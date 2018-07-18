@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Microsoft Jet |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0046abe221607ff85b237c1b15ad331ba09c4e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd81c1c5efcb2ca8ebedac756d569ca947aac051
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271617"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 概觀
 Microsoft Jet OLE DB 提供者可讓 ADO 可以存取 Microsoft Jet 資料庫。
@@ -46,7 +46,7 @@ Microsoft.Jet.OLEDB.4.0
 
  字串，包含這些關鍵字：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 Microsoft Jet OLE DB 提供者。|
 |**資料來源**|指定資料庫的路徑和檔案名稱 (例如， `c:\Northwind.mdb`)。|
@@ -61,7 +61,7 @@ Microsoft.Jet.OLEDB.4.0
 
  下表列出這些屬性以及括號中相對應的 OLE DB 屬性名稱。
 
-|매개 변수|Description|
+|參數|描述|
 |---------------|-----------------|
 |Jet OLEDB:Compact 回收的空間量 (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|表示估計量的空間，以位元組為單位，可以回收壓縮資料庫。 建立資料庫連接之後，這個值才有效。|
 |Jet OLEDB:Connection 控制項 (DBPROP_JETOLEDB_CONNECTIONCONTROL)|指出使用者是否可以連線到資料庫。|
@@ -95,7 +95,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>提供者特定資料錄集和命令屬性
  Jet 提供者也支援數個提供者專屬**資料錄集**和**命令**屬性。 存取這些屬性，透過設定**屬性**集合**資料錄集**或**命令**物件。 此資料表列出的 ADO 屬性名稱，以及在括號中的其對應 OLE DB 屬性名稱。
 
-|屬性名稱|Description|
+|屬性名稱|描述|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk 交易 (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|指出是否已交易的大量 SQL 作業。 當交易，因為資源的延遲，大規模的大量作業可能會失敗。|
 |Jet OLEDB:Enable Fat 資料指標 (DBPROP_JETOLEDB_ENABLEFATCURSOR)|指出是否 Jet 應該快取多個資料列擴展的遠端資料來源的資料錄集時。|
@@ -150,7 +150,7 @@ Microsoft.Jet.OLEDB.4.0
 |資料列大小上限|DBPROP_MAXROWSIZE|
 |資料列大小上限包括 BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |在選取的最大資料表|DBPROP_MAXTABLESINSELECT|
-|模式|DBPROP_INIT_MODE|
+|[模式]|DBPROP_INIT_MODE|
 |多個參數集|DBPROP_MULTIPLEPARAMSETS|
 |多個結果|DBPROP_MULTIPLERESULTS|
 |多個儲存體物件|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -163,7 +163,7 @@ Microsoft.Jet.OLEDB.4.0
 |ORDER BY 選取清單中的資料行|DBPROP_ORDERBYCOLUMNSINSELECT|
 |輸出參數使用|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |傳址存取子|DBPROP_BYREFACCESSORS|
-|密碼|DBPROP_AUTH_PASSWORD|
+|[密碼]|DBPROP_AUTH_PASSWORD|
 |持續性的識別碼型別|DBPROP_PERSISTENTIDTYPE|
 |準備中止行為|DBPROP_PREPAREABORTBEHAVIOR|
 |準備認可行為|DBPROP_PREPARECOMMITBEHAVIOR|

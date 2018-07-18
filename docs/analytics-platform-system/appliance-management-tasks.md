@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538828"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>Analytics Platform System 的應用裝置管理工作
 本指南說明如何執行分析平台 System (APS) 的應用裝置管理工作。  

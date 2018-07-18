@@ -2,7 +2,6 @@
 title: ADO 事件處理常式摘要 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3e52fe70e497ab8c5b715861e16f3f67266f9f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcb37f418a053abbd67cae435b674e187956a7a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271257"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 連接和資料錄集的事件
 兩個 ADO 物件可以引發事件：[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件和[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 **ConnectionEvent**系列相關作業上**連接**物件，而**RecordsetEvent**系列相關作業上**資料錄集**物件。
@@ -33,14 +33,14 @@ ms.lasthandoff: 05/03/2018
 
  下表摘要說明的事件，以及其描述。
 
-|ConnectionEvent|Description|
+|ConnectionEvent|描述|
 |---------------------|-----------------|
 |[BeginTransComplete，CommitTransComplete，RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**交易管理**— 通知會在連接上目前的交易啟動後，認可或回復。|
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)， [ConnectComplete，中斷連線](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**連接管理**— 通知，將會啟動目前的連線，已啟動，或已結束。|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)， [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**命令執行管理**— 將啟動目前的命令在連接上執行，或已結束的通知。|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**告知性**— 有通知目前作業的其他資訊。|
 
-|RecordsetEvent|Description|
+|RecordsetEvent|描述|
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)， [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**擷取狀態**— 或擷取作業已完成的資料擷取作業的進度通知。 這些事件，才可以使用如果**資料錄集**使用用戶端資料指標為開啟。|
 |[WillChangeField FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**欄位變更管理**— 目前欄位的值將會變更，或已變更的通知。|

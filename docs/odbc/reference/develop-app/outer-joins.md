@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914353"
 ---
 # <a name="outer-joins"></a>外部聯結
 ODBC 支援以 sql-92 左、 右方和完整外部聯結語法。 外部聯結的逸出序列是  

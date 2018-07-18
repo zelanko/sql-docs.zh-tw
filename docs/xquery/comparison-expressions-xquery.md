@@ -1,5 +1,5 @@
 ---
-title: 比較運算式 (XQuery) |Microsoft 文件
+title: 比較運算式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f80838771b36f59f58203dfc687957ea2f208522
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984350"
 ---
 # <a name="comparison-expressions-xquery"></a>比較運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
  在下表中定義了一般運算子。  
   
-|運算子|Description|  
+|運算子|描述|  
 |--------------|-----------------|  
 |=|等於|  
 |!=|不等於|  
@@ -95,7 +96,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- 下列查詢會比較序列中的電話號碼 < 數字\>字串常值"112-111-1111"項目。 該查詢會比較 AdditionalContactInfo 資料行中電話號碼元素的序列，以判斷在文件中是否存在特定客戶的特定電話號碼。  
+ 下列查詢會比較序列中的電話號碼 < 數字\>字串常值"112-111-1111"的項目。 該查詢會比較 AdditionalContactInfo 資料行中電話號碼元素的序列，以判斷在文件中是否存在特定客戶的特定電話號碼。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -108,7 +109,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- 此查詢會傳回 True。 這表示文件中存在該號碼。 下列查詢是前一個查詢的稍微修改版。 在此查詢中，將從文件中擷取的電話號碼值與兩個電話號碼值之序列進行比較。 如果該比較為 True 時，< 數字\>元素傳回。  
+ 此查詢會傳回 True。 這表示文件中存在該號碼。 下列查詢是前一個查詢的稍微修改版。 在此查詢中，將從文件中擷取的電話號碼值與兩個電話號碼值之序列進行比較。 如果該比較為 True 時，< 數字\>則會傳回元素。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -144,7 +145,7 @@ WHERE ContactID=1
   
  在下表中定義了值比較運算子。  
   
-|運算子|Description|  
+|運算子|描述|  
 |--------------|-----------------|  
 |eq|等於|  
 |ne|不等於|  
@@ -157,7 +158,7 @@ WHERE ContactID=1
   
  這些運算子只能在單一不可部份完成值上運算。 也就是，您無法將某個序列指定為其中一個運算元。  
   
- 例如，下列查詢會擷取\<圖片 > 產品型號圖片大小所在位置的項目 」 小：  
+ 例如，下列查詢會擷取\<圖片 > 產品型號圖片大小所在的項目 」 小：  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -174,9 +175,9 @@ WHERE ProductModelID=19
   
 -   `declare namespace` 定義後續用於查詢中的命名空間前置詞。  
   
--   \<大小 > 項目值與指定不可部分完成的值，「 小型 」。  
+-   \<大小 > 項目值相較於指定不可部分完成的值，「 小型 」。  
   
--   請注意，因為值運算子只適用於不可部份完成值， **data （)** 隱含地利用函數來擷取節點值。 也就是，`data($P/PD:Size) eq "small"` 會產生相同的結果。  
+-   請注意，因為值運算子只適用於不可部份完成值， **data （)** 函式以隱含方式來擷取節點值。 也就是，`data($P/PD:Size) eq "small"` 會產生相同的結果。  
   
  以下是結果：  
   
@@ -192,7 +193,7 @@ WHERE ProductModelID=19
  請注意值比較的類型升級規則與一般比較的類型升級規則相同。 另外，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會在進行值比較時為不具類型的值使用與進行一般比較時所使用的轉換規則相同的規則。 相對的，XQuery 規格永遠會在進行值比較時，將不具類型的值轉換為 xs:string。  
   
 ## <a name="node-comparison-operator"></a>節點比較運算子  
- 節點比較運算子，**是**，只適用於節點類型。 它所傳回的結果會指出，以運算元傳遞的兩個節點是否代表來源文件中的相同節點。 如果兩個運算元是相同的節點，則此運算子此會傳回 True。 否則它會傳回 False。  
+ 節點比較運算子**是**，只套用至節點類型。 它所傳回的結果會指出，以運算元傳遞的兩個節點是否代表來源文件中的相同節點。 如果兩個運算元是相同的節點，則此運算子此會傳回 True。 否則它會傳回 False。  
   
  下列查詢會檢查工作中心位置 10 在製造特定產品型號的過程中是否為第一個。  
   
@@ -225,11 +226,11 @@ ProductModelID       Result
   
  這些是根據文件順序所做的比較：  
   
--   `<<` : **Operand 1**前面**operand 2**文件順序。  
+-   `<<` ： 沒有**operand 1**前面**運算元 2**文件順序。  
   
--   `>>` : **Operand 1**遵循**operand 2**文件順序。  
+-   `>>` ： 沒有**operand 1**遵循**運算元 2**文件順序。  
   
- 下列查詢會傳回 True，如果產品目錄描述中的\<擔保 > 元素之前出現\<維護 > 特定產品的文件順序中的項目。  
+ 下列查詢會傳回 True，如果產品目錄描述\<瑕疵責任擔保 > 元素之前出現\<維護 > 特定產品的文件順序中的項目。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -245,14 +246,14 @@ where ProductModelID=19
   
  請注意下列項目是從上一個查詢而來：  
   
--   **Value （)** 方法**xml**資料型別用於查詢。  
+-   **Value （)** 方法**xml**查詢中使用的資料型別。  
   
--   查詢的布林值的結果會轉換成**nvarchar （10)** 後傳回。  
+-   布林值的查詢結果轉換成**nvarchar(10**後傳回。  
   
 -   此查詢會傳回 True。  
   
 ## <a name="see-also"></a>另請參閱  
- [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)   
+ [型別系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [XQuery 運算式](../xquery/xquery-expressions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 查詢處理事件的資料行 |Microsoft 文件
+title: 查詢處理事件的資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8c0222c19d1f21e130f342f689ebb72cc8c0fda7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017595"
 ---
 # <a name="query-processing-events-data-columns"></a>查詢處理事件資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -120,7 +121,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -162,7 +163,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -184,7 +185,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -205,7 +206,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -227,7 +228,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -248,7 +249,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -270,7 +271,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -292,7 +293,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ProgressTotal|9|1|整體進度。|  
 |IntegerData|10|1|整數資料。|  
@@ -314,7 +315,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ObjectPath|14|8|物件路徑。 以物件的父系開頭之父系清單 (以逗號分隔)。|  
 |ConnectionID|25|1|唯一的連接識別碼。|  
@@ -334,7 +335,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ObjectPath|14|8|物件路徑。 以物件的父系開頭之父系清單 (以逗號分隔)。|  
 |ConnectionID|25|1|唯一的連接識別碼。|  
@@ -353,7 +354,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ObjectPath|14|8|物件路徑。 以物件的父系開頭之父系清單 (以逗號分隔)。|  
 |ConnectionID|25|1|唯一的連接識別碼。|  
@@ -373,7 +374,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ObjectPath|14|8|物件路徑。 以物件的父系開頭之父系清單 (以逗號分隔)。|  
 |ConnectionID|25|1|唯一的連接識別碼。|  
@@ -418,7 +419,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |JobID|7|1|進度的作業識別碼。|  
 |SessionType|8|8|工作階段類型 (造成作業的實體)。|  
@@ -492,7 +493,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |JobID|7|1|進度的作業識別碼。|  
 |SessionType|8|8|工作階段類型 (造成作業的實體)。|  
@@ -520,7 +521,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |JobID|7|1|進度的作業識別碼。|  
 |SessionType|8|8|工作階段類型 (造成作業的實體)。|  

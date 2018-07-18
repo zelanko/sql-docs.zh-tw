@@ -2,7 +2,7 @@
 title: Microsoft SQL Operations Studio (preview) 版本資訊 |Microsoft 文件
 description: Microsoft SQL Operations Studio (preview) 版本資訊
 ms.custom: tools|sos
-ms.date: 05/08/2018
+ms.date: 06/20/2018
 ms.prod: sql
 ms.reviewer: alayu; sstein
 ms.suite: sql
@@ -13,16 +13,43 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: 29ae09022c18e5c96ffe4db25f59e6bfd619f432
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34473822"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271009"
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>SQL Operations Studio (preview) 版本資訊
 
-**[下載可能公開預覽](download.md)**
+**[下載公用年 6 月預覽](download.md)**
+
+
+## <a name="june-2018-june-public-preview"></a>年 6 月 2018 （年 6 月公用預覽）
+
+發行日期： 2018 年 6 月 20，  
+版本： 0.30.6
+
+*年 6 月公用預覽*包含下列重點：  
+
+- **SQL Server Profiler 的 SQL 作業 Studio*預覽*** 擴充功能的初始版本。
+- 新**SQL 資料倉儲**的擴充功能包含豐富的自訂儀表板 widget 面對 insights 到資料倉儲。 這會解除鎖定金鑰管理和微調您的資料倉儲，以確保它適合一致的效能案例。
+- **編輯資料 」 篩選和排序"** 支援。
+- **SQL Server Agent 的 SQL 作業 Studio*預覽*** 擴充功能的增強功能作業與作業歷程記錄檢視。
+- 改善**精靈和對話方塊 UI 產生器架構**擴充性 Api。
+- 更新與程式碼的平台程式碼來源整合[年 3 月 2018 (1.22)](https://code.visualstudio.com/updates/v1_22)和[年 4 月 2018 (1.23)](https://code.visualstudio.com/updates/v1_23)釋放。
+- 修正 GitHub 問題：
+  - 功能要求 ([發出 1204年](https://github.com/Microsoft/sqlopsstudio/issues/1204)): 請資料，讓結果方格自動調整資料行寬度及 （或) 重新執行相同的查詢時，請記得手動變更。
+  - 修正[發出 1398年](https://github.com/Microsoft/sqlopsstudio/issues/1398)： 應該顯示將加入訊息，空白連結的帳戶時新增帳戶的帳戶 按鈕。
+  - 修正[發出 1399年](https://github.com/Microsoft/sqlopsstudio/issues/1399)： 摺疊的檢視時，會中斷連結的帳戶 索引標籤。
+  - 修正[發出 1374年](https://github.com/Microsoft/sqlopsstudio/issues/1374)： 從磁碟開啟.sql 檔案時，SQL 工具服務當機。
+  - 修正[發出 1372年](https://github.com/Microsoft/sqlopsstudio/issues/1372)： 遺漏 SQL 關鍵字"BETWEEN"。
+  - 修正[發出 1395年](https://github.com/Microsoft/sqlopsstudio/issues/1395): 'MATCH' 關鍵字損毀的 SQL 工具服務。
+  - 修正[發出 1496年](https://github.com/Microsoft/sqlopsstudio/issues/1496)： 在物件總管 中的 「 新的分析工具 」 操作功能表選項不做任何動作。
+  - 修正[發出 1495年](https://github.com/Microsoft/sqlopsstudio/issues/1495)： 查詢編輯器 」 解釋"查詢計劃已中斷。
+
+
+如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
 
 
 ## <a name="may-2018-may-public-preview"></a>2018 年 5 月版（ 5 月公開預覽）
@@ -47,8 +74,6 @@ ms.locfileid: "34473822"
    - 修正[問題 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): SQL Agent擴充功能和狀態列
    - 修正[問題 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): 在視窗大小改變後，SQL Agent 不會隨之調整大小
 
-
-如需詳細資訊，請參閱[變更記錄](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md)，和[版本](https://github.com/Microsoft/sqlopsstudio/releases)。
 
 
 

@@ -2,7 +2,6 @@
 title: 'ConnectionEvents （Visual c + + 語法索引與 #import） |Microsoft 文件'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f346f92726feb07b91a87afb31c422e9b0448930
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4eb2b129efc27ca3c64bf72e8c52702f160488d6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276977"
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents （Visual c + + 語法索引與 #import）
 ## <a name="events"></a>事件  

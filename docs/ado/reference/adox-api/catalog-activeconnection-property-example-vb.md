@@ -2,7 +2,6 @@
 title: 目錄 ActiveConnection 屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc353766a68dc32a96842a9102434511740f34c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 078d5bad66b0f50f0baae63b0c0aeab8313207c7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285227"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>目錄 ActiveConnection 屬性範例 (VB)
 設定[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)屬性有效，請開啟連接的 「 開啟 」 目錄。 從開啟的類別目錄，您可以存取該目錄中所包含的結構描述物件。  

@@ -1,8 +1,6 @@
 ---
 title: 功能表命令和其他的快速鍵 (Oracle 到 SQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 090f24ff2535a8bdd4a3b57886b9c2a92d7695e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f06d9c2a59daf9b714abe17fa94ca3b3623a5cba
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777604"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>功能表命令和其他的快速鍵 (Oracle 到 SQL)
 下列章節說明的鍵盤快速鍵，來存取功能表命令與其他 Oracle 應用程式使用不同的 SSMA 對話方塊中的快速鍵。  

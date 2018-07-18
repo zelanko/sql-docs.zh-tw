@@ -1,5 +1,5 @@
 ---
-title: 使用 WMI 提供者管理服務和網路設定 |Microsoft 文件
+title: 使用 WMI 提供者來管理服務和網路設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,20 +22,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 77eef3609246b60c7a49adcde9ee72498bb6f215
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031626"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>使用 WMI 提供者管理服務和網路設定
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   WMI 提供者是已發行的介面，以供[!INCLUDE[msCoName](../../../includes/msconame-md.md)]Management Console (MMC) 來管理[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]服務和網路通訊協定。 在 SMO 中，<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件都代表 WMI 提供者。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件操作可使用所建立的連接與不同<xref:Microsoft.SqlServer.Management.Smo.Server>物件的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，並使用 Windows 認證來連接到 WMI 服務。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>物件操作可建立的連線與不同<xref:Microsoft.SqlServer.Management.Smo.Server>物件的執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，並使用 Windows 認證來連接到 WMI 服務。  
   
 ## <a name="example"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
 
   
  程式使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]WMI 提供者，您必須包含**匯入**陳述式來限定 WMI 命名空間。 將陳述式插入至其他 **Imports** 陳述式之後、在應用程式中的任何宣告之前，例如：  

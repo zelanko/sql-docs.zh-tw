@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912983"
 ---
 # <a name="pattern-value-arguments"></a>模式值引數
 在目錄中的某些引數函式，例如*TableName*引數中的**SQLTables**，接受搜尋模式。 這些引數接受搜尋模式如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_FALSE。它們是這個屬性設定為 SQL_TRUE，如果不接受之搜尋模式的識別項引數。  

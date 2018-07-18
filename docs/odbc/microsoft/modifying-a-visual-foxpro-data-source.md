@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899933"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>修改 Visual FoxPro 資料來源
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>若要修改 Visual FoxPro 資料來源  

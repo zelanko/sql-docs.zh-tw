@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906363"
 ---
 # <a name="returning-sqlnodata"></a>傳回 sql_no_data 為止
 當 ODBC 2。*x*應用程式使用 ODBC 3 *.x*驅動程式呼叫**SQLExecDirect**， **SQLExecute**，或**SQLParamData**，並搜尋的更新或刪除陳述式執行，但未影響任何資料列在資料來源，而 ODBC 3 *.x*驅動程式應該會傳回 SQL_SUCCESS。 當 ODBC 3 *.x*應用程式使用 ODBC 3 *.x*驅動程式呼叫**SQLExecDirect**， **SQLExecute**，或**SQLParamData**具有相同的結果，而 ODBC 3 *.x*驅動程式應該會傳回 sql_no_data 為止。  

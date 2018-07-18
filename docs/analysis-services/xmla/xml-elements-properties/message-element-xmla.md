@@ -13,7 +13,7 @@ ms.openlocfilehash: 29780b5578c5e48c2ff8781719f9ebffe065e62c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575700"
 ---
 # <a name="message-element-xmla"></a>Message 元素 (XMLA)

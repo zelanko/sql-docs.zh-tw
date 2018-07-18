@@ -13,25 +13,26 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 94a760c815b9933ff4d8d7da3dd24c292fcdc641
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 7f8963de448c39709a4df102cdf764a361b7654c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985070"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>快速入門： 使用 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 連接及查詢 SQL Server 
 本快速入門示範如何使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接到 SQL Server，然後使用 TRANSACT-SQL (T-SQL) 陳述式來建立*TutorialDB*，並用於[!INCLUDE[name-sos](../includes/name-sos-short.md)]教學課程。
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成本快速入門，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 SQL Server 存取權。
+若要完成本快速入門中，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 SQL 伺服器的存取權。
 
 - [安裝[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
-如果您沒有 SQL Server 存取權，請從下列連結選取平台 （請確定您記得您的 SQL 登入和密碼 ！）：
+如果您沒有存取 SQL Server，請從下列連結選取您的平台 （請確定您記得您的 SQL 登入和密碼 ！）：
 - [Windows - 下載 SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - 下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - 下載 SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -您只需要按照步驟操作，直到*建立及查詢資料*即可。
+- [macOS - 下載 Docker 上的 SQL Server 2017](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)
+- [Linux - 下載 SQL Server 2017 Developer Edition](https://docs.microsoft.com/sql/linux/sql-server-linux-overview#install) -您只需要按照步驟操作，直到*建立及查詢資料*即可。
 
 
 ## <a name="connect-to-a-sql-server"></a>連線到 SQL Server
@@ -40,18 +41,18 @@ ms.lasthandoff: 05/17/2018
 1. 啟動**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**。
 1. 第一次執行 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* **連接** 對話方塊將會開啟。 如果**連接**對話方塊未開啟，按一下**伺服器**頁面中的**新增連線**圖示：
    
-   ![新的連線圖示](media/quickstart-sql-server/new-connection-icon.png)
+   ![新的 [連線] 圖示](media/quickstart-sql-server/new-connection-icon.png)
 
 1. 本文使用*SQL 登入*，但也支援*Windows 驗證*。 填妥欄位，如下所示： 填妥欄位，如下所示：
  
     - **伺服器名稱：** localhost
     - **驗證類型：** SQL 登入  
-    - **使用者名稱：** for SQL Server 的使用者名稱  
-    - **密碼：** for SQL Server 密碼  
-    - **資料庫名稱：** 這個欄位保留空白 
+    - **使用者名稱：** 適用於 SQL Server 的使用者名稱  
+    - **密碼：** 適用於 SQL Server 密碼  
+    - **資料庫名稱：** 將此欄位保留空白 
     - **伺服器群組：** \<預設\>  
 
-   ![新的 [連接] 畫面](media/quickstart-sql-server/new-connection-screen.png)
+   ![新的 [連線] 畫面](media/quickstart-sql-server/new-connection-screen.png)
 
 
 
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/17/2018
 下列步驟會建立一個名為 **TutorialDB** 的資料庫：
 
 1. 以滑鼠右鍵按一下您的伺服器，**localhost**，然後選取**新增查詢。**
-1. [查詢] 視窗中貼入下列程式碼片段： 
+1. 將下列程式碼片段貼到 [查詢] 視窗中： 
 
    ```sql
    USE master
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/17/2018
    ```
 1. 若要執行查詢時，按一下**執行**。
 
-查詢完成後，新**TutorialDB**會出現在資料庫清單。 如果您沒有看到它，以滑鼠右鍵按一下**資料庫**節點，然後選取**重新整理**。
+查詢完成後，新**TutorialDB**會出現在資料庫的清單。 如果您沒有看到它，以滑鼠右鍵按一下**資料庫**節點，然後選取**重新整理**。
 
 
 ## <a name="create-a-table"></a>建立資料表
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/17/2018
 
 
 
-1. 下列程式碼片段貼到查詢視窗，然後按一下**執行**:
+1. 將下列程式碼片段貼到 [查詢] 視窗，然後按一下**執行**:
 
    > [!NOTE]
    > 您可以將程式碼片段附加或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
@@ -117,7 +118,7 @@ ms.lasthandoff: 05/17/2018
 
 ## <a name="insert-rows"></a>插入資料列
 
-- 下列程式碼片段貼到查詢視窗，然後按一下**執行**:
+- 將下列程式碼片段貼到 [查詢] 視窗，然後按一下**執行**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -134,7 +135,7 @@ ms.lasthandoff: 05/17/2018
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>檢視查詢所傳回的資料
-1. 下列程式碼片段貼到查詢視窗，然後按一下**執行**:
+1. 將下列程式碼片段貼到 [查詢] 視窗，然後按一下**執行**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -147,6 +148,6 @@ ms.lasthandoff: 05/17/2018
 
 
 ## <a name="next-steps"></a>後續的步驟
-現在您已成功連接到 SQL Server 和執行查詢，試試[教學課程中的程式碼編輯器](tutorial-sql-editor.md)。
+既然您已成功連線至 SQL Server 並執行查詢，試試看[教學課程中的程式碼編輯器](tutorial-sql-editor.md)。
 
 

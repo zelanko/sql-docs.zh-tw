@@ -2,7 +2,6 @@
 title: 成員物件 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6629f860fb8043387526019ec17c0e1775915a66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee79dc5a17ebbce35a8543a0ed2351ca65f03374
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284037"
 ---
 # <a name="member-object-ado-md"></a>成員物件 (ADO MD)
 代表在 cube 中，層級成員的層級、 成員或成員的資料格集沿座標軸的位置的子系。  
@@ -72,12 +72,12 @@ ms.lasthandoff: 05/03/2018
   
  **屬性**集合包含提供者提供的屬性。 下表列出可供使用的屬性。 實際的屬性清單可能與不同的提供者實作而定。 請參閱您的提供者，如需更完整清單可用內容的文件。  
   
-|名稱|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |CatalogName|此 cube 所屬的目錄的名稱。|  
 |ChildrenCardinality|成員擁有的子系數目。|  
 |CubeName|Cube 的名稱。|  
-|Description|成員有意義的描述。|  
+|描述|成員有意義的描述。|  
 |DimensionUniqueName|模稜兩可的名稱[維度](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)。|  
 |HierarchyUniqueName|階層的模稜兩可的名稱。|  
 |LevelNumber|之間的層級和階層的根的距離。|  

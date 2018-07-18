@@ -13,7 +13,7 @@ ms.openlocfilehash: 84cf252303832ed157981103ffaede9718949e16
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576210"
 ---
 # <a name="row-element-xmla"></a>row 元素 (XMLA)

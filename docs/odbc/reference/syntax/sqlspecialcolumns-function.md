@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923623"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 函數
 **一致性**  
@@ -174,7 +175,7 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_SIZE (ODBC 1.0)|5|Integer|資料來源之資料行的大小。 如需有關資料行大小，請參閱[資料行大小、 十進位數字、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Integer|以位元組為單位的傳輸上的資料長度**SQLGetData**或**SQLFetch**作業時，如果指定 SQL_C_DEFAULT。 針對數值資料，這個大小可能會與資料來源上所儲存之資料的大小不同。 這個值可以是字元或二進位資料的 COLUMN_SIZE 資料行相同。 如需詳細資訊，請參閱[資料行大小、 十進位數字、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|資料來源之資料行的小數位數。 會傳回 NULL 的資料類型小數位數不適用。 關於十進位數字的詳細資訊，請參閱[資料行大小、 十進位數字、 傳輸八位元長度和顯示大小](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)。|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|指出資料行是否為虛擬資料行，例如 Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**附註：**最大的互通性，虛擬資料行應不會加上引號的引號字元所傳回的識別項**SQLGetInfo**。|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|指出資料行是否為虛擬資料行，例如 Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO**附註：** 最大的互通性，虛擬資料行應不會加上引號的引號字元所傳回的識別項**SQLGetInfo**。|  
   
  應用程式會擷取 SQL_BEST_ROWID 值之後，應用程式可以使用這些值以重新選取該資料列定義的範圍內。 **選取**保證陳述式會傳回任何資料列或一個資料列。  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft 文件
+title: sp_add_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 12b5a6f22c7cfdde137b7e15b6a146175838ddd0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018465"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +51,16 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
   
 ## <a name="arguments"></a>引數  
  [ **@plan_name =**] **'***plan_name***'**  
- 指定要加入的維護計畫名稱。 *plan_name*是**varchar （128)**。  
+ 指定要加入的維護計畫名稱。 *plan_name*已**varchar(128)**。  
   
  **@plan_id = '** *plan_id* **'**  
- 指定維護計畫的識別碼。 *plan_id*是**uniqueidentifier**。  
+ 指定維護計畫的識別碼。 *plan_id*已**uniqueidentifier**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_add_maintenance_plan**必須從執行**msdb**資料庫並建立新的空白維護計畫。 若要新增一或多個資料庫，並將其與作業關聯，執行**sp_add_maintenance_plan_db**和**sp_add_maintenance_plan_job**。  
+ **sp_add_maintenance_plan**必須從執行**msdb**資料庫並建立新的空白維護計畫。 若要新增一或多個資料庫，並將它們與作業關聯，執行**sp_add_maintenance_plan_db**並**sp_add_maintenance_plan_job**。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_maintenance_plan**。  

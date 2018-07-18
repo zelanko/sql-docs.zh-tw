@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: connect
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d02eb4c8fd8d1e3ff115c8ed1273183802f1d06
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 609604e890052d742c99d8e12604abe7ce9e5259
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309737"
 ---
 # <a name="sql-data-developer"></a>SQL 資料開發人員
 若要建立跨行動裝置和桌上型電腦的網頁伺服器、 企業伺服器及雲端資料中心的方案使用 Microsoft SQL 資料平台。  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [複寫服務](../relational-databases/replication/concepts/replication-developer-documentation.md)
-* [Reporting Services (英文)](../reporting-services/reporting-services-developer-documentation.md)
+* [Reporting Services](../reporting-services/reporting-services-developer-documentation.md)
 * [Service Broker](../database-engine/configure-windows/sql-server-service-broker.md)
 
 

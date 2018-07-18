@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_hash_index_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_xtp_hash_index_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fdb15a0c64b11eb0fc57772ccaf37adcc1cc599e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969770"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,11 +45,11 @@ ms.lasthandoff: 05/23/2018
 較長的鏈結長度可能對個別資料列上所有 DML 作業的效能造成相當大的影響，包括 SELECT 和 INSERT。 鏈結長度較短且空的值區計數較高時，表示 bucket_count 太高。 這樣會降低索引掃描的效能。  
   
 > [!WARNING]
-> **sys.dm_db_xtp_hash_index_stats**掃描整個資料表。 因此，如果您的資料庫中有大型資料表**sys.dm_db_xtp_hash_index_stats**可能需要較長時間執行。  
+> **sys.dm_db_xtp_hash_index_stats**掃描整個資料表。 因此，如果在資料庫中，有大型資料表**sys.dm_db_xtp_hash_index_stats**可能需要很長時間執行。  
   
-如需詳細資訊，請參閱[記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
+如需詳細資訊，請參閱 <<c0> [ 記憶體最佳化資料表的雜湊索引](../../relational-databases/sql-server-index-design-guide.md#hash_index)。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |object_id|**int**|父資料表的物件識別碼。|  
 |xtp_object_id|**bigint**|記憶體最佳化資料表的識別碼。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/23/2018
 |empty_bucket_count|**bigint**|索引中空雜湊值區的數目。|  
 |avg_chain_length|**bigint**|索引中所有雜湊值區的平均資料列鏈結長度。|  
 |max_chain_length|**bigint**|雜湊值區中資料列鏈結的最大長度。|  
-|xtp_object_id|**bigint**|記憶體中 OLTP 物件識別碼對應至記憶體最佳化的資料表。|  
+|xtp_object_id|**bigint**|記憶體中 OLTP 物件識別碼對應到記憶體最佳化的資料表。|  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW DATABASE STATE 權限。  
@@ -66,7 +67,7 @@ ms.lasthandoff: 05/23/2018
   
 ### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. 疑難排解雜湊索引值區計數
 
-下列查詢可用來疑難排解現有的資料表的雜湊索引值區計數。 使用者資料表，查詢會傳回空值區和所有的雜湊索引的鏈結長度的百分比有關的統計資料。
+下列查詢可用來針對現有的資料表的雜湊索引值區計數進行疑難排解。 查詢會傳回空值區和所有的雜湊索引的鏈結長度的百分比的統計資料，使用者資料表上。
 
 ```sql
   SELECT  
@@ -90,11 +91,11 @@ ms.lasthandoff: 05/23/2018
   ORDER BY [table], [index];  
 ``` 
 
-如需有關如何解譯此查詢的結果的詳細資訊，請參閱[疑難排解記憶體最佳化資料表的雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
+如需有關如何解譯此查詢的結果的詳細資訊，請參閱 <<c0> [ 疑難排解記憶體最佳化資料表的雜湊索引](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 內部資料表的雜湊索引統計資料
 
-某些功能會使用內部利用雜湊索引，例如記憶體最佳化資料表的資料行存放區索引的資料表。 下列查詢會傳回連結至使用者資料表的內部資料表上的雜湊索引的統計資料。
+某些功能會使用利用雜湊索引，例如記憶體最佳化資料表上的資料行存放區索引的內部資料表。 下列查詢會傳回連結至使用者資料表的內部資料表上的雜湊索引的統計資料。
 
 ```sql
   SELECT  
@@ -117,7 +118,7 @@ ms.lasthandoff: 05/23/2018
 
 請注意，無法變更內部資料表上索引的 BUCKET_COUNT，因此這個查詢的輸出應該僅被視為具有資訊價值。 您不需要執行任何動作。  
 
-此查詢不會傳回任何資料列，除非您正在使用的功能，運用內部資料表上的雜湊索引。 下列記憶體最佳化資料表包含資料行存放區索引。 建立這個資料表之後, 您會看到在內部資料表上的雜湊索引。
+此查詢不會傳回任何資料列，除非您使用會利用內部的資料表上的雜湊索引的功能。 下列為記憶體最佳化的資料表包含資料行存放區索引。 建立此資料表之後, 您會看到上內部資料表的雜湊索引。
 
 ```sql
   CREATE TABLE dbo.table_columnstore

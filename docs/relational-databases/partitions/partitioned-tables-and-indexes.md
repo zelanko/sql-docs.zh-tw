@@ -3,12 +3,9 @@ title: 資料分割資料表與索引 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: partitions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-partition
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd4402ca30b3f99e8470282aea9fa46a4667cb05
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: dcfc1cb8507608ac1e426ab510da7d42333bfa3b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708446"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37193998"
 ---
 # <a name="partitioned-tables-and-indexes"></a>分割資料表與索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

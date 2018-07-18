@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905113"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>層級 1 API 函式 （如 Oracle 的 ODBC 驅動程式）
 > [!IMPORTANT]  

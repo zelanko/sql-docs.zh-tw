@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021645"
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>內建集合 - 報表和群組變數參考 (報表產生器)
   當您要進行的複雜計算是在報表的運算式中使用一次以上時，建議您建立一個變數。 您可以建立報表變數或群組變數。 變數名稱在報表中必須是唯一的。  

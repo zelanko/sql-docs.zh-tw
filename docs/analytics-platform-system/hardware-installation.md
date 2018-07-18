@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539088"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Analytics Platform System 應用裝置的硬體安裝
 本文說明如何移動，請解除封裝，並安裝您的 SQL Server PDW 應用裝置的硬體。 本文只是參考，並要幫助您了解程序。 應該解除封裝，安裝，而且您開啟之前，檢查您的應用裝置。 客戶參與是必要項目，例如資料中心存取、 電力和乙太網路連線。  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853013"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>資料來源名稱和連接字串關鍵字和屬性
 

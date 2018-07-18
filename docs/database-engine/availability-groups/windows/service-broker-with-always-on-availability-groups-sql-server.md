@@ -3,7 +3,6 @@ title: Service Broker 與 AlwaysOn 可用性群組 (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 caps.latest.revision: 13
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1febefd8e60b0ff054f1e556f23665da14b29320
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 540ecf6bef4dc74d8052a58c96543c5c9b159b5b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770734"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker 與 AlwaysOn 可用性群組 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,10 @@ ms.lasthandoff: 05/03/2018
     ```  
   
      如需詳細資訊，請參閱 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../../t-sql/statements/create-endpoint-transact-sql.md)的相關資訊。  
-  
+
+    > [!NOTE]  
+    SQL Server Broker 不是多重子網路感知。 請務必使用設定為 0 的 "registerallprovidersip"，並確定您未在提供 DNS 上叢集之必要權限的 DNS 上使用靜態 IP，如 https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server 上所定義。 Broker 可能會延遲狀態為 "CONVERSING" 的訊息，並嘗試使用已停用的 IP。
+
 3.  **授與端點的 CONNECT 權限。**  
   
      將 Service Broker 端點的 CONNECT 權限授與 PUBLIC 或登入。  

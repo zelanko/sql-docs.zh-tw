@@ -13,7 +13,7 @@ ms.openlocfilehash: 1c962452675a0c1c91a3573546f0763060dfb44e
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575650"
 ---
 # <a name="member-element-xmla"></a>Member 元素 (XMLA)

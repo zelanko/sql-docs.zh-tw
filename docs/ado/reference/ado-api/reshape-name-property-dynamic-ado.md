@@ -2,7 +2,6 @@
 title: 重繪名稱屬性動態 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4901e09d0df933c6aa35e8c1ebed3e62ef2012f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4752609469ecad3a3a6631584e120de8cc4a7575
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281407"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>重繪名稱屬性動態 (ADO)
 指定的名稱[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  

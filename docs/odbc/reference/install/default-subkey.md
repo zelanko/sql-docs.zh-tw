@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917507"
 ---
 # <a name="default-subkey"></a>預設子機碼
 登錄可能會指定預設的資料來源的預設子機碼。 這個子機碼資料來源規格子機碼的特殊案例，而且具有相同的任何其他資料來源規格子機碼值。 唯一的差別在於，它不顯示為 ODBC 資料來源的子機碼底下的值。

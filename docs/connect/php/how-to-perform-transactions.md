@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe11037ad2b7a5ae0f927a0880537adf67594899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307657"
 ---
 # <a name="how-to-perform-transactions"></a>如何：執行交易
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,7 +65,7 @@ PDO_SQLSRV 驅動程式提供三個方法來執行交易：
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
 以下範例會在交易期間執行數個查詢。 如果所有查詢都成功，就會認可交易。 如果其中一個查詢失敗，則會復原交易。  
   
 此範例會嘗試從 *Sales.SalesOrderDetail* 資料表刪除銷售訂單，並在銷售訂單中每項產品的 *Product.ProductInventory* 資料表中調整產品庫存量。 這些查詢會包含在交易中，因為對資料庫而言，所有查詢都必須成功，才能正確地反映訂單狀態和產品可用性。  

@@ -2,7 +2,6 @@
 title: OLE DB 提供者 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa8bcda85b1b149da9dcc66bed92e044de800f66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae1cb60ac963b71814cfc225e42799c375081e5b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272157"
 ---
 # <a name="ole-db-providers-ado"></a>OLE DB 提供者 (ADO)
 OLE DB 定義一組 COM 介面，可提供應用程式統一存取各種資訊來源中所儲存的資料。 這個方法可讓共用支援的 DBMS 功能至資料來源的適當數量的介面透過其資料的資料來源。 根據設計，高效能架構的 OLE DB 會依據其彈性，以元件為基礎的服務模型的使用情形。 而不是讓應用程式和資料之間的中繼層級低於指定的數目，OLE DB 需求只做為所需的許多元件完成特定工作。  

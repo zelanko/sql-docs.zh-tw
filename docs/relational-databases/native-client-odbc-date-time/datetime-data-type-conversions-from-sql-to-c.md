@@ -1,13 +1,12 @@
 ---
-title: 從 SQL 轉換成 C |Microsoft 文件
+title: 從 SQL 轉換成 C |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,13 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe025209a14da132e6f6e3e1efd55d2263bdf997
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0eb7cf6d146324ac5e472ea58fca5743683479e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425637"
 ---
-# <a name="datetime-data-type-conversions-from-sql-to-c"></a>從 SQL 到 C 的資料類型轉換的日期時間
+# <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime 資料類型從 SQL 轉換成 C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -37,16 +37,16 @@ ms.lasthandoff: 05/03/2018
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|確定|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|確定|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|確定|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|確定|21|16|16|  
+|SQL_TYPE_DATE|[確定]|12|13|12|13,23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|[確定]|10,23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7,8|[確定]|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|[確定]|21|16|16|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
-|確定|沒有轉換問題。|  
+|[確定]|沒有轉換問題。|  
 |1|適用 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 之前的規則。|  
 |2|忽略開頭和尾端空白。|  
 |3|字串會剖析成日期、時間、時區或時區時差，而且小數秒數最多允許 9 位數。 如果剖析了時區時差，時間就會轉換成用戶端時區。 如果此轉換期間發生錯誤，將診斷記錄會產生含有 SQLSTATE 22018 和訊息 「 日期時間欄位溢位 」。|  
@@ -70,9 +70,9 @@ ms.lasthandoff: 05/03/2018
 |21|如果緩衝區夠大，足以容納 SQL_SS_TIMESTAMPOFFSET_STRUCT，此值就會傳回成 SQL_SS_TIMESTAMPOFFSET_STRUCT。 否則，系統會產生含有 SQLSTATE 22003 和訊息「數值超出範圍」的診斷記錄。|  
 |22|在擷取日期之前，此值會轉換成用戶端時區。 這樣做會在其他含有時間戳記時差類型的轉換中提供一致性。 如果進行這項轉換期間發生錯誤，就會產生含有 SQLSTATE 22008 和訊息「日期時間欄位溢位」的診斷記錄。 這可能會產生與簡單截斷所取得之值不同的日期。|  
   
- 本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 輸出參數，如果在指定的伺服器類型 SQLBindParameter 不符合伺服器上的實際型別、 伺服器將會執行隱含的轉換和型別傳回至用戶端會比對透過 SQLBindParameter 中指定的型別。 當伺服器的轉換規則與上述表格中所列的規則不同時，這可能會導致非預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
+ 本主題中的表格描述傳回用戶端之類型與繫結中之類型之間的轉換。 當做輸出參數，如果在指定的伺服器類型 SQLBindParameter 不符合伺服器上的實際類型、 伺服器將會執行隱含的轉換和類型傳回給用戶端會比對透過 SQLBindParameter 中指定的型別。 當伺服器的轉換規則與上述表格中所列的規則不同時，這可能會導致非預期的轉換結果。 例如，必須提供預設日期時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會使用 1900-1-1 而非目前的日期。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

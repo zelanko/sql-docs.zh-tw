@@ -1,5 +1,5 @@
 ---
-title: 藉由使用 OLE DB (SQLXML 4.0) 執行 Updategram |Microsoft 文件
+title: 藉由使用 OLE DB (SQLXML 4.0) 中執行 Updategram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,22 +22,23 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1c80025b375cfa017d92a6ae1602c78ddc57d9f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032266"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>使用 OLE DB 執行 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本主題提供 usingOLE DB 來執行 updategram 的工作範例。  
+  本主題提供 usingOLE DB 執行 updategram 的工作範例。  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>使用 ICommandStream 來設定 XML 命令  
- OLE DB （2.6 版或更新版本） ICommandStream 介面傳遞的命令，為資料流物件，而不是字串。  
+ OLE DB （2.6 版或更新版本） ICommandStream 介面會將傳遞命令，為資料流物件，而非字串。  
   
- 此介面可以讓命令使用 XML 剖析器所了解的任何編碼。 呼叫 icommand:: Execute 時，直接讀取超出資料流命令文字，就不需要轉換。 因此，執行 XML 命令使用 ICommandStream 介面會更有效率。  
+ 此介面可以讓命令使用 XML 剖析器所了解的任何編碼。 Icommand:: Execute 呼叫時，命令文字會直接讀取從資料流，並就不需要轉換。 因此，執行 XML 命令使用 ICommandStream 介面會更有效率。  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>使用 ICommandStream 將 XML 設定為命令並且將結果擷取為 XML 文件  
- ICommandStream 介面可用來將 XML 文件設定為命令，並以 XML 文件，可以擷取的結果。  
+ ICommandStream 介面可用來做為命令，將 XML 文件，並以 XML 文件，可以擷取的結果。  
   
 #### <a name="executing-templates-with-xpath-queries"></a>執行具有 XPath 查詢的範本  
  下列 XPath 查詢所組成的 XML 範本會指定為使用 ICommandStream 命令：  
@@ -64,13 +65,13 @@ ms.lasthandoff: 05/03/2018
 </Schema>  
 ```  
   
- 此查詢會傳回所有的員工元素。 利用預設對應，  **\<Person.Contact >** 元素會對應至 AdventureWorks 資料庫中的 Person.Contact 資料表。  
+ 此查詢會傳回所有的員工元素。 預設的對應 **\<Person.Contact >** 元素會對應至 AdventureWorks 資料庫中的 Person.Contact 資料表。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>將 XML 設定為命令並且將結果擷取為 XML 文件  
   
 1.  初始化並建立資料庫連接。  
   
-2.  取得上 ICommand ICommandStream 介面。  
+2.  取得上 ICommand 的 ICommandStream 介面。  
   
 3.  設定必要的命令屬性。 在此範例中，提供者特定的屬性 SSPROP_STREAM_BASEPATH 是設為儲存對應結構描述和範本檔案的目錄。  
   

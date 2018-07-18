@@ -2,7 +2,6 @@
 title: 什麼是鎖定？ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97d36e1fdfa054de01862d8978c8efdae8cadb86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 396faecd122eef7ad6e40f790252a0902a508ba8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273287"
 ---
 # <a name="what-is-a-lock"></a>什麼是鎖定？
 鎖定是 DBMS 會存取限制在多使用者環境中的資料列的程序。 資料列或資料行以獨佔方式鎖定時，不允許其他使用者存取鎖定的資料，直到釋放鎖定為止。 這可確保兩位使用者無法同時更新相同的資料行的資料列中。  

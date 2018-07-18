@@ -2,7 +2,6 @@
 title: ErrorValueEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ce91ab8f23db46f82bbcbbe2c39210d47f597f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 842c452e9289a9197f93009167943b92e0143012
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278539"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 指定 ADO 執行階段錯誤的類型。  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 >  OLE DB 錯誤可傳遞至 ADO 應用程式。 一般來說，識別這些程式的 Windows 設備碼*4*。 例如，0x800***4***。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707-2146824581 0x800A0E7B|無法變更**ActiveConnection**屬性**資料錄集**具有物件**命令**作為其來源的物件。|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|伺服器無法完成作業。|  

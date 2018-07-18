@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912273"
 ---
 # <a name="driver-specific-connection-information"></a>驅動程式特有的連接資訊
 **SQLConnect**假設資料來源名稱、 使用者識別碼和密碼是足以連接至資料來源，而所有其他連接資訊，可以儲存在系統上。 這通常不是大小寫。 例如，驅動程式可能需要一位使用者 ID 和密碼登入伺服器以及不同的使用者識別碼和密碼來登入 DBMS。 因為**SQLConnect**接受單一使用者識別碼和密碼，這表示，其他使用者識別碼和密碼必須儲存在系統上的資料來源資訊如果**SQLConnect**使用。 這是潛在的安全性漏洞，而且應該避免使用，除非密碼加密。  

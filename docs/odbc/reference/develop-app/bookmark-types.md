@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909288"
 ---
 # <a name="bookmark-types"></a>書籤的型別
 在 ODBC 3 的所有書籤 *.x*可變長度的書籤。 這可讓主索引鍵或唯一索引相關聯的資料表來作為書籤。 書籤也可以是 32 位元值，所使用的 ODBC 2。*x*。 若要指定書籤使用與資料指標，而 ODBC 3 *.x*應用程式設定 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARK 陳述式屬性。 會自動使用可變長度的書籤。  

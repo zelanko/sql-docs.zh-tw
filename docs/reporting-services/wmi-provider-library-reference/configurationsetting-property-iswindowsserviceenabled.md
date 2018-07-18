@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030655"
 ---
 # <a name="configurationsetting-property---iswindowsserviceenabled"></a>ConfigurationSetting 屬性 - IsWindowsServiceEnabled
   指出是否已啟用報表伺服器 Windows 服務。 唯讀。  

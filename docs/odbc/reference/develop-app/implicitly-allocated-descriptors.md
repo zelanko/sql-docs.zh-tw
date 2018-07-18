@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913873"
 ---
 # <a name="implicitly-allocated-descriptors"></a>隱含地配置描述元
 當配置陳述式控制代碼時，應用程式以隱含方式配置一組的四個描述項。 應用程式可以取得這些隱含地配置描述元做為屬性的陳述式控制代碼的控制代碼。 當應用程式會釋放陳述式控制代碼時，驅動程式會釋放該控制代碼上的所有隱含地配置描述元。

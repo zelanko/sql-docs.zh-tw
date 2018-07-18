@@ -13,7 +13,7 @@ ms.openlocfilehash: 11804b9b6ca9ac430bdb47c0b9050b8c6995cf7f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574560"
 ---
 # <a name="synchronize-element-xmla"></a>Synchronize 元素 (XMLA)

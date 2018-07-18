@@ -2,7 +2,6 @@
 title: Flush 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d13058d961007e891042ca6aada3fafd09e83a7b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 931d8a2546c9a4d5c41d6b2348a7db5d9ad312ef
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278767"
 ---
 # <a name="flush-method-ado"></a>Flush 方法 (ADO)
 強制內容[資料流](../../../ado/reference/ado-api/stream-object-ado.md)基礎物件與其 ADO 緩衝區中剩餘**資料流**相關聯。  

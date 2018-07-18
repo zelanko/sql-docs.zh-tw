@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911043"
 ---
 # <a name="mixed-cursors"></a>混合的資料指標
 混合的資料指標為索引鍵集驅動資料指標和動態資料指標的組合。 它用於結果集是太大，無法適當地儲存整個結果集的金鑰。 混合的資料指標是藉由建立小於整個結果集，但大於資料列集索引鍵集實作。  

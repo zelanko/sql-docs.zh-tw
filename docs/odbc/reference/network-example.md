@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915153"
 ---
 # <a name="network-example"></a>網路範例
 下圖顯示如何各個先前的設定無法顯示在單一網路。  

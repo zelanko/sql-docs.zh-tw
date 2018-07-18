@@ -2,7 +2,6 @@
 title: EOS 和 LineSeparator 屬性 SkipLine 方法範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30574dbeff5b8dded6f1f5ae7b7b01082962749d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60a68227156d7138f6dbaacd3670fbd142543a9a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278037"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS 和 LineSeparator 屬性 SkipLine 方法範例 (VB)
 此範例示範如何操作一次的文字資料流一行。 變更從預設歸位字元/換行的行分隔符號的影響 (**adCRLF**) 至只要換行字元 (**adLF**) 或歸位字元 (**adCR**) 會顯示。  

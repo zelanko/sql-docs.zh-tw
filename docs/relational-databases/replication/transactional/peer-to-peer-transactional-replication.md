@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +21,12 @@ caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a008570306da0413e4a71fbc5fc2576e66129b1b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fde84d7da5df42bc2f9d5c37edc8f56935fd0a4
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355640"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>點對點 - 異動複寫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 -   在建立任何訂閱前，必須先啟用點對點複寫的發行集。  
   
--   訂閱必須使用備份或藉由 [僅支援複寫]  選項進行初始化。 如需詳細資訊，請參閱 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
+-   訂閱必須使用備份或藉由 [僅支援複寫]  選項進行初始化。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
 -   我們不建議您使用識別欄位。 使用識別時，您必須手動管理指派給每個參與資料庫中資料表的範圍。 如需詳細資訊，請參閱[複寫識別資料行](../../../relational-databases/replication/publish/replicate-identity-columns.md)中的＜為手動識別範圍管理指派範圍＞一節。  
   

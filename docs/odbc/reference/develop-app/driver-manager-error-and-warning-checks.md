@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908943"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>驅動程式管理員錯誤和警告檢查
 驅動程式管理員完全或部分實作數個函數，並因此檢查所有或部分的錯誤和警告，這些函式中。  

@@ -2,7 +2,6 @@
 title: 更新和保存資料 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40e92067564f56eb7bc30739c0abd0d758a3b9c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2c4d7fd046631814e263c8bd6a413fb9ef2f00c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273157"
 ---
 # <a name="updating-and-persisting-data"></a>更新和保存資料
 如何使用 ADO 來取得資料來源中的資料、 如何在資料中四處移動以及如何甚至編輯資料，將有討論前述章節。 當然，如果您的應用程式的目標是允許使用者變更資料，您必須了解如何儲存這些變更。 您可能可以保存**資料錄集**變更為檔案，使用**儲存**方法，或者您可以將變更送回儲存體使用的資料來源**更新**或**UpdateBatch**方法。  

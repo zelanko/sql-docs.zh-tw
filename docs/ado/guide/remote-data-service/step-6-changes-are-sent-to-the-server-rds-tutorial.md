@@ -2,7 +2,6 @@
 title: 步驟 6： 變更傳送到伺服器 （RDS 教學課程） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0537d8d05553b4e50861bda664d2cdc53489cb82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd14dcfa918afc5bc252822ceacccfe10ddd7302
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274727"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>步驟 6： 變更傳送到伺服器 （RDS 教學課程）
 如果**資料錄集**物件編輯，可以傳送至伺服器 （也就是資料列會加入、 變更或刪除） 的任何變更。  

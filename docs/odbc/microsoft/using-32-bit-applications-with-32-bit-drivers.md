@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906433"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32 位元應用程式使用 32 位元驅動程式
 您可以使用 32 位元驅動程式來執行 32 位元應用程式。 32 位元應用程式和 32 位元驅動程式會使用 Win32® 應用程式開發介面。  

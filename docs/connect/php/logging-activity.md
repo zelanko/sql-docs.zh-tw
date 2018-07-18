@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a36683429987afff72c3ee9aa98124c4ee0f613
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 146365e4a4a0a287992bb1873a104f62cc79fc0b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307887"
 ---
 # <a name="logging-activity"></a>記錄活動
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,11 +40,11 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** 可以是下列其中一個值：  
   
-|Value|설명|  
+|ReplTest1|描述|  
 |---------|---------------|  
 |0|停用記錄 (這是沒有任何定義時的預設值)。|  
 |-1|指定記錄錯誤、 警告和通知。|  
-|1|指定錯誤記錄。|  
+|@shouldalert|指定錯誤記錄。|  
 |2|指定也會記錄警告。|  
 |4|指定會記錄通知。|  
   
@@ -65,7 +65,7 @@ PHP 會在初始化時讀取組態檔，並將資料儲存在快取中；它也�
   
 下表說明可做為 **LogSubsystems** 設定值的常數：  
   
-|值 (括號中的整數對等項目)|Description|  
+|值 (括號中的整數對等項目)|描述|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SYSTEM_ALL (-1)|開啟所有子系統的記錄。|  
 |SQLSRV_LOG_SYSTEM_OFF (0)|關閉記錄。 這是預設值。|  
@@ -96,7 +96,7 @@ PHP 會在初始化時讀取組態檔，並將資料儲存在快取中；它也�
   
 下表說明可做為 **LogSeverity** 設定值的常數：  
   
-|值 (括號中的整數對等項目)|Description|  
+|值 (括號中的整數對等項目)|描述|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|指定記錄錯誤、 警告和通知。|  
 |SQLSRV_LOG_SEVERITY_ERROR (1)|指定錯誤記錄。 這是預設值。|  

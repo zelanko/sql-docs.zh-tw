@@ -1,29 +1,28 @@
 ---
-title: 準備及執行陳述式 (ODBC) |Microsoft 文件
+title: 準備和執行陳述式 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfd8780e6d4fe804a6a124870c06e43bec752463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 86f4550aee7f9a5c7df7a600df32cb9d97c22897
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408137"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>準備和執行陳述式 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  呼叫[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)準備陳述式。  
   
-2.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來判斷已備妥的陳述式中的參數數目。  
+2.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
   
 3.  (選擇性) 針對準備陳述式中的每個參數：  
   
@@ -48,11 +47,11 @@ ms.lasthandoff: 05/03/2018
   
     -   呼叫[SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)執行備妥的陳述式。  
   
-    -   如果資料在執行中輸入的參數使用， [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)傳回 SQL_NEED_DATA。 按照區塊傳送資料，使用[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)和[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
+    -   如果資料在執行中輸入的參數， [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400)會傳回 SQL_NEED_DATA。 使用區塊傳送資料[SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405)並[SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md)。  
   
 ### <a name="to-prepare-a-statement-with-column-wise-parameter-binding"></a>準備含有資料行取向參數繫結的陳述式  
   
-1.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定下列屬性：  
+1.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
   
     -   將 SQL_ATTR_PARAMSET_SIZE 設定為參數集 (S) 的數目。  
   
@@ -64,9 +63,9 @@ ms.lasthandoff: 05/03/2018
   
 2.  呼叫 SQLPrepare 準備陳述式。  
   
-3.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來判斷已備妥的陳述式中的參數數目。  
+3.  （選擇性） 呼叫[SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404)來決定已備妥的陳述式中的參數數目。  
   
-4.  （選擇性） 如果已備妥的陳述式中每一個參數，呼叫 SQLDescribeParam 以便取得參數資訊。  
+4.  （選擇性） 針對已備妥的陳述式中每個參數，呼叫 SQLDescribeParam 以便取得參數資訊。  
   
 5.  針對每個參數標記：  
   
@@ -74,7 +73,7 @@ ms.lasthandoff: 05/03/2018
   
     -   配置 S 個參數緩衝區的陣列來儲存資料長度。  
   
-    -   呼叫以將參數資料值和資料長度陣列繫結至陳述式參數的 SQLBindParameter。  
+    -   呼叫 SQLBindParameter，若要將參數資料值和資料長度陣列繫結至陳述式參數。  
   
     -   如果參數是資料執行中的 text 或 image 參數，請設定此參數。  
   
@@ -86,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
     -   呼叫 SQLExecute 執行備妥的陳述式。  
   
-    -   如果資料在執行中輸入的參數使用，SQLExecute 會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 區塊傳送資料。  
+    -   如果資料在執行中輸入的參數，SQLExecute 就會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 區塊傳送資料。  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>準備含有資料列取向繫結參數的陳述式  
   
@@ -96,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
     -   第二個部分是 SQLINTEGER 變數，可保存狀態指標。  
   
-2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)來設定下列屬性：  
+2.  呼叫[SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)設定下列屬性：  
   
     -   將 SQL_ATTR_PARAMSET_SIZE 設定為參數集 (S) 的數目。  
   
@@ -116,9 +115,9 @@ ms.lasthandoff: 05/03/2018
   
     -   呼叫 SQLExecute 執行備妥的陳述式。 驅動程式會有效率地執行 SQL 陳述式 S 次，針對每個參數集執行一次。  
   
-    -   如果資料在執行中輸入的參數使用，SQLExecute 會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 區塊傳送資料。  
+    -   如果資料在執行中輸入的參數，SQLExecute 就會傳回 SQL_NEED_DATA。 使用 SQLParamData 和 SQLPutData 區塊傳送資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行查詢的如何主題 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [執行查詢使用說明主題&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

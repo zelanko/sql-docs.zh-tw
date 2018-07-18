@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906373"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>轉譯 Dll 和桌面資料庫驅動程式
 不支援。

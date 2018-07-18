@@ -1,8 +1,6 @@
 ---
 title: SSMA 安裝 MySQL 用戶端 (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a0df85f3b44d7956ed9382213bc380681d47e48b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d349ccf848d62363733a02bf296edaa88bea9e8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776224"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安裝的 SSMA for MySQL 用戶端 (MySQLToSQL)
 SSMA for MySQL 用戶端包含的程式檔案，執行下列工作：  
@@ -41,7 +40,7 @@ SSMA for MySQL 用戶端包含的程式檔案，執行下列工作：
   
 本主題提供的安裝必要條件和安裝 SSMA for MySQL 用戶端的指示。  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>必要條件  
 SSMA for MySQL 被為了搭配 MySQL 4.1 或更新版本以及所有版本的 SQL Server 2005、 SQL Server 2008、 SQL Server 2012、 SQL Server 2014、 SQL Server 2016、 SQL Server 2017 和 Azure SQL DB。  
   
 SSMA 安裝之前，請確定電腦符合下列需求：  

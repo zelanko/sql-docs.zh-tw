@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900663"
 ---
 # <a name="select-statement-limitations"></a>SELECT 陳述式的限制
 無法混合的彙總函式的資料行具有非彙總資料行中的 SELECT 陳述式。  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904683"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>SQLGetInfo Paradox 的傳回值
 下表列出 C 語言 #defines *fInfoType*引數和傳回對應值**SQLGetInfo**。 這項資訊可以擷取傳遞列出的 C 語言 #defines **SQLGetInfo**中*fInfoType*引數。 如需有關所傳回的值**SQLGetInfo**，請參閱*ODBC 程式設計人員參考*。  

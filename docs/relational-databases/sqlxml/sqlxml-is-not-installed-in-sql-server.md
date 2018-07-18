@@ -1,5 +1,5 @@
 ---
-title: SQLXML 不會安裝在 SQL Server |Microsoft 文件
+title: SQLXML 不會在 SQL Server 安裝 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4dcf2cf4de62b4f63d37bf7bfd74def6b98cd2f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982280"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML 不會安裝在 SQL Server 中
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,9 +30,9 @@ ms.lasthandoff: 05/03/2018
  如果應用程式執行於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，而且需要 SQLXML 4.0 中，您必須下載並安裝 SQLXML 4.0 SP1。  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>使用 SQLOLEDB 和 SQL Server Native Client OLE DB Provider 的 SQLXML 4.0 SP1 行為以及新的資料類型  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入使用 SQLXML 開發人員可能想要使用下列資料類型：  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 導入使用 SQLXML 開發人員可能想要使用的下列資料類型：  
   
--   **日期**  
+-   **Date**  
   
 -   **Time**  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **DateTimeOffset**  
   
- 當使用 SQLXML 4.0 SP1 搭配 SQLOLEDB 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 從[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，這些類型會顯示為字串的開發人員。 SQLXML 4.0 SP1 會將這四個新的資料類型啟用成內建的純量類型搭配使用時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者 11.0 或更新版本。 在您下載 SQLXML 4.0 SP1 之前，將這些類型對應至非字串類型可能會導致某些資料遭截斷。 例如，對應**DateTime2**至**xsd: date**會導致資料截斷成[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **DateTime**精確度為 3.33 毫秒。  
+ 當使用 SQLXML 4.0 SP1 搭配 SQLOLEDB 或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 從[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]，這些類型會顯示為開發人員的字串。 SQLXML 4.0 SP1 會將這四個新的資料類型啟用成內建的純量類型搭配使用時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者 11.0 或更新版本。 在您下載 SQLXML 4.0 SP1 之前，將這些類型對應至非字串類型可能會導致某些資料遭截斷。 例如，對應**DateTime2**要**xsd: date**會導致資料截斷成[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] **DateTime**精確度為 3.33 毫秒。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLXML 4.0 程式設計概念](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  

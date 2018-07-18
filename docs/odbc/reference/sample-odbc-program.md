@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914913"
 ---
 # <a name="sample-odbc-program"></a>ODBC 程式範例
 [ODBC 程式碼範例](http://go.microsoft.com/fwlink/?LinkId=244831)會提示您輸入 ODBC 資料來源名稱。  系統將會再提示您輸入的查詢，此範例會顯示查詢的結果。

@@ -32,6 +32,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912623"
 ---
 # <a name="descriptor-handles"></a>描述項控制代碼
 A*描述元*偵測到的應用程式或驅動程式會描述 SQL 陳述式的參數或結果集的資料行的中繼資料集合 (也稱為*實作*)。 因此，描述元可以填滿任何四個角色：  

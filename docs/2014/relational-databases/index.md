@@ -1,8 +1,9 @@
 ---
-redirect_url: /sql/relational-databases/sqltoolsvsnativehelpers-framewindowvisible?view=sql-server-2014
-ms.openlocfilehash: 9e96a8ee687b47a00f27510652d9bbfdfeac1082
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+redirect_url: /sql/relational-databases/database-features?view=sql-server-2014
+ms.openlocfilehash: 02ff5252acc21ecde3414dc986f0df5b83f9f569
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999854"
 ---

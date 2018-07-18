@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33238535"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
   
 ## <a name="arguments"></a>引數  
  [  **@objname =** ] **'***物件***'**  
- 這是目前資料庫中現有資料表、檢視表、使用者定義函數或預存程序的名稱。 *物件*是**nvarchar(776)**，沒有預設值。 *物件*可以限定在表單中的現有物件的擁有者*existing_owner***。***物件*有相同名稱的結構描述和其擁有者。  
+ 這是目前資料庫中現有資料表、檢視表、使用者定義函數或預存程序的名稱。 *物件*是**nvarchar(776)**，沒有預設值。 *物件*可以限定在表單中的現有物件的擁有者*existing_owner ***。*** 物件*有相同名稱的結構描述和其擁有者。  
   
  [  **@newowner=**] **' * * * 擁有者* **'**  
  這是即將成為物件新擁有者的安全性帳戶名稱。 *擁有者*是**sysname**，沒有預設值。 *擁有者*必須是有效的資料庫使用者、 伺服器角色、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 登入或具有目前資料庫存取權的 Windows 群組。 如果新擁有者是一個 Windows 使用者或是沒有對應資料庫層級主體的 Windows 群組，就會建立一個資料庫使用者。  

@@ -1,24 +1,26 @@
 ---
-title: 課程 5 定型和儲存模型，使用 T-SQL |Microsoft 文件
+title: 課程 5 定型和儲存模型，使用 R 和 T-SQL （SQL Server 機器學習） |Microsoft 文件
+description: 教學課程顯示如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4d8bedd65e150d94c6030ea6c9c9fc6483bdaafd
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: bd5bdc7d256a22dbab6662a74dc39073892dbb4d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250061"
 ---
 # <a name="lesson-5-train-and-save-a-model-using-t-sql"></a>第 5 課： 定型和儲存模型，使用 T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
 
-在這一課，您將學習如何在機器學習模型定型使用。您將定型的模型使用您剛才建立的資料功能，然後將儲存已定型的模型中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 在此情況下，R 封裝已安裝與[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，因此可以從 SQL 完成的所有項目。
+在這一課，您將學習如何在機器學習模型定型使用。您將定型的模型使用您在上一課中，建立的資料功能，然後將儲存已定型的模型中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。 在此情況下，R 封裝已安裝與[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]，因此可以從 SQL 完成的所有項目。
 
 ## <a name="create-the-stored-procedure"></a>建立預存程序
 
@@ -80,7 +82,7 @@ ms.lasthandoff: 04/16/2018
     EXEC TrainTipPredictionModel
     ```
 
-2. 監看式**訊息**視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的訊息會經由管道輸出至 R 的**stdout**資料流，例如此郵件： 
+2. 監看式**訊息**視窗[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]的訊息會經由管道輸出至 R 的**stdout**資料流，類似這個訊息： 
 
     「 從外部指令碼的 STDOUT 訊息： Rows Read: 1193025，總計資料列處理： 1193025，時間總計區塊： 0.093 秒 」
 
@@ -104,5 +106,5 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="previous-lesson"></a>上一課
 
-[第 4 課： 建立使用 T-SQL 資料功能](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[第 4 課： 建立使用 R 和 T-SQL 函式的資料功能](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

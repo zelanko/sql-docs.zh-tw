@@ -2,7 +2,6 @@
 title: '附錄 d: ADO 範例 |Microsoft 文件'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 279e19f7f07144c376946c3155a2767f822c779c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c2e8ae98494d5208d05a61836c1bf9e586abf52
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270217"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>在 Windows SDK 中的附錄 d: ADO 範例
 Windows SDK 包含數個示範如何使用 ADO 和 RDS 的程式碼的範例應用程式。 這些範例為了協助您了解如何使用 ADO 和 RDS，但不是部署在實際執行伺服器上。

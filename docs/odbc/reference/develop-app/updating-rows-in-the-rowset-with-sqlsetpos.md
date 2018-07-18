@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916333"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos 以更新資料列集中的資料列
 更新作業的**SQLSetPos** ，使得資料來源更新一或多個選取的資料列的資料表中，使用資料應用程式緩衝區中，每個繫結資料行 （除非長度/指標緩衝區中的值是 SQL_COLUMN_IGNORE）。 未繫結的資料行不會更新。  

@@ -1,5 +1,5 @@
 ---
-title: 查詢元素 (XMLA) |Microsoft 文件
+title: 查詢元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 861f216ac263de32b9f2afc3e0fcd4e43b3dfb4a
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576170"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984639"
 ---
 # <a name="query-element-xmla"></a>Query 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含查詢內[查詢](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)集合所使用[DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)命令在基於使用方式的最佳化。  
+  包含查詢中的[查詢](../../../analysis-services/xmla/xml-elements-properties/queries-element-xmla.md)所使用的集合[DesignAggregations](../../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md)命令在基於使用方式的最佳化期間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576170"
 </Queries>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34576170"
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
@@ -47,9 +47,9 @@ ms.locfileid: "34576170"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- **DesignAggregations** 命令會在命令的 **Query** 集合中包含一個或多個 **Queries** 元素，藉以支援基於使用方式的最佳化。 每個 **Query** 元素都代表一個目標查詢，而且設計處理序會使用此查詢來定義以最常用查詢為目標的彙總。 您可以指定您自己的目標查詢，或者您可以使用 Analysis Services 執行個體的查詢記錄中所儲存的資訊來擷取有關最常用的查詢資訊。  
+ **DesignAggregations** 命令會在命令的 **Query** 集合中包含一個或多個 **Queries** 元素，藉以支援基於使用方式的最佳化。 每個 **Query** 元素都代表一個目標查詢，而且設計處理序會使用此查詢來定義以最常用查詢為目標的彙總。 您可以指定您自己的目標查詢，或者您可以使用 Analysis Services 查詢記錄中的執行個體所儲存的資訊來擷取有關最常用的查詢。  
   
- 如果您反覆設計彙總，您只需要將目標查詢傳入第一個**DesignAggregations**指令，因為[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體儲存這些目標查詢，並在後續期間使用這些查詢**DesignAggregations**命令。 當您將目標查詢傳入反覆處理序的第一個 **DesignAggregations** 命令之後，任何在 **DesignAggregations** 屬性中包含目標查詢的後續 **Queries** 命令就會產生錯誤。  
+ 如果您反覆設計彙總，您只需要將目標查詢傳入第一個**DesignAggregations**命令即可，因為[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]執行個體儲存這些目標查詢，以及後續期間使用這些查詢**DesignAggregations**命令。 當您將目標查詢傳入反覆處理序的第一個 **DesignAggregations** 命令之後，任何在 **DesignAggregations** 屬性中包含目標查詢的後續 **Queries** 命令就會產生錯誤。  
   
  **Query** 元素包含具有下列引數的逗號分隔值：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "34576170"
  例如，字串 "011" 是指涉及含有三個屬性之維度的查詢，其中第二和第三個屬性包含在查詢中。  
   
 > [!NOTE]  
->  某些屬性會從資料集的考量中排除。 如需有關排除屬性的詳細資訊，請參閱[屬性 (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)。  
+>  某些屬性會從資料集的考量中排除。 如需有關排除屬性的詳細資訊，請參閱 <<c0> [ 屬性 (XMLA)](../../../analysis-services/xmla/xml-elements-properties/query-element-xmla.md)。  
   
  量值群組中包含彙總設計的每個維度是由 *Query* 元素中的 **Dataset** 值代表。 *Dataset* 值的順序必須與量值群組中包含維度的順序相符。  
   

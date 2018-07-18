@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911393"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>使用者所輸入的 SQL 陳述式
 也常執行臨機操作分析的應用程式可讓使用者直接輸入 SQL 陳述式。 例如：  

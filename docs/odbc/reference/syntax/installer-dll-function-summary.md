@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917384"
 ---
 # <a name="installer-dll-function-summary"></a>安裝程式的 DLL 函式摘要
 下表描述的安裝程式 DLL 中函式。 如需語法和語意，每個函式的詳細資訊，請參閱[Installer DLL 應用程式開發介面參考](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)。  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33221819"
 ---
 # <a name="sysspatialindextessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
 |object_id|**int**|索引定義所在的物件識別碼。 每個 （object_id、 index_id） 有對應的項目[sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)。|  
 |index_id|**int**|索引資料行定義所在的空間索引識別碼。|  
 |tessellation_scheme|**sysname**|鑲嵌式配置，其中一個的名稱： GEOMETRY_GRID、 GEOGRAPHY_GRID|  
-|bounding_box_xmin|**float(53)**|中的週框的左下角的 X 座標，一個： NULL = 不適用於給定的鑲嵌式配置 （例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 為 GEOMETRY_GRID，為 x-min 座標值。                     **注意：**週框方塊參數所定義的座標會解譯為每個物件根據其[空間參考識別碼 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。|  
+|bounding_box_xmin|**float(53)**|中的週框的左下角的 X 座標，一個： NULL = 不適用於給定的鑲嵌式配置 （例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 為 GEOMETRY_GRID，為 x-min 座標值。                     **注意：** 週框方塊參數所定義的座標會解譯為每個物件根據其[空間參考識別碼 (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)。|  
 |bounding_box_ymin|**float(53)**|Y 座標的左下角的週框方塊中，其中一個： NULL = 不適用於給定的鑲嵌式配置 （例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 為 GEOMETRY_GRID，為 y-min 座標值|  
 |bounding_box_xmax|**float(53)**|中的週框的右上角的 X 座標，一個： NULL = 不適用於給定的鑲嵌式配置 （例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 為 GEOMETRY_GRID，為 x-max 座標值|  
 |bounding_box_ymax|**float(53)**|中的週框右上角的 Y 座標，一個： NULL = 不適用於給定的鑲嵌式配置 （例如 GEOGRAPHY_GRID) *n* = 如果 tessellation_scheme 為 GEOMETRY_GRID，為 y-max 座標值|  

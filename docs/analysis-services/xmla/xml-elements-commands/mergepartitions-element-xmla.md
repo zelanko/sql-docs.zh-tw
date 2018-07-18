@@ -13,7 +13,7 @@ ms.openlocfilehash: 937ea7bb52e1b1ab4be992b5a8415edd51e680a9
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573950"
 ---
 # <a name="mergepartitions-element-xmla"></a>MergePartitions 元素 (XMLA)

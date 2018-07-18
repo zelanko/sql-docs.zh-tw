@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -35,11 +34,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 68995aed72fd9fb793499d65e7c6e31bf0e72317
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4a3532f27682bede31839298d13a8382f10b3d6
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36242820"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -70,17 +70,17 @@ BEGIN { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>引數  
  *transaction_name*  
- **適用於：**SQL Server (從 2008 開始)、Azure SQL Database
+ **適用於：** SQL Server (從 2008 開始)、Azure SQL Database
  
  這是指派給交易的名稱。 *transaction_name* 必須符合識別碼的規則，但不允許超出 32 個字元的識別碼。 請只在巢狀 BEGIN...COMMIT 或 BEGIN...ROLLBACK 陳述式的最外一組使用交易名稱。 即使 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體不區分大小寫，*transaction_name* 一律還是會區分大小寫。  
   
  @*tran_name_variable*  
- **適用於：**SQL Server (從 2008 開始)、Azure SQL Database
+ **適用於：** SQL Server (從 2008 開始)、Azure SQL Database
  
  這是包含有效交易名稱之使用者定義變數的名稱。 這個變數必須用 **char**、**varchar**、**nchar** 或 **nvarchar** 資料類型來宣告。 如果有 32 個以上的字元傳給變數，只會使用前 32 個字元，其餘字元會截斷。  
   
  WITH MARK [ '*description*' ]  
-**適用於：**SQL Server (從 2008 開始)、Azure SQL Database
+**適用於：** SQL Server (從 2008 開始)、Azure SQL Database
 
 指定在記錄中標示交易。 *description* 是說明標記的字串。 系統會先將超出 128 個字元的 *description* 截斷為 128 個字元，才會將它儲存於 msdb.dbo.logmarkhistory 資料表。  
   
@@ -149,7 +149,7 @@ COMMIT TRAN T1;
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-an-explicit-transaction"></a>A. 使用明確交易
-**適用於：**SQL Server (從 2008 開始)、Azure SQL Database、Azure SQL 資料倉儲、平行處理資料倉儲
+**適用於：** SQL Server (從 2008 開始)、Azure SQL Database、Azure SQL 資料倉儲、平行處理資料倉儲
 
 這個範例會使用 AdventureWorks。 
 
@@ -161,7 +161,7 @@ COMMIT;
 ```
 
 ### <a name="b-rolling-back-a-transaction"></a>B. 復原交易
-**適用於：**SQL Server (從 2008 開始)、Azure SQL Database、Azure SQL 資料倉儲、平行處理資料倉儲
+**適用於：** SQL Server (從 2008 開始)、Azure SQL Database、Azure SQL 資料倉儲、平行處理資料倉儲
 
 下列範例示範復原交易的效果。 在此範例中，ROLLBACK 陳述式將復原 INSERT 陳述式，但所建立的資料表仍會存在。
 
@@ -176,7 +176,7 @@ ROLLBACK;
 ```
 
 ### <a name="c-naming-a-transaction"></a>C. 命名交易 
-**適用於：**SQL Server (從 2008 開始)、Azure SQL Database
+**適用於：** SQL Server (從 2008 開始)、Azure SQL Database
 
 下列範例顯示如何命名交易。  
   
@@ -194,7 +194,7 @@ GO
 ```  
   
 ### <a name="d-marking-a-transaction"></a>D. 標示交易  
-**適用於：**SQL Server (從 2008 開始)、Azure SQL Database
+**適用於：** SQL Server (從 2008 開始)、Azure SQL Database
 
 下列範例顯示如何標示交易。 已標示交易 `CandidateDelete`。  
   

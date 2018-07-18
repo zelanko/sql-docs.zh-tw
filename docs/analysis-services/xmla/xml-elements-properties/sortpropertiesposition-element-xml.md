@@ -13,7 +13,7 @@ ms.openlocfilehash: 855857e0c4b1a9cb554fcbaa61935809ad9c71e0
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576340"
 ---
 # <a name="sortpropertiesposition-element-xml"></a>SortPropertiesPosition 元素 (XML)

@@ -2,7 +2,6 @@
 title: ResyncEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79752a7733450fc1e6761f39cd49fb6f808a334b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b974d00ecb1fb4d0d9d7e431f28df16f945d778
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281357"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 指定基礎值會覆寫呼叫[重新同步處理](../../../ado/reference/ado-api/resync-method.md)。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|預設值。 覆寫資料，然後取消擱置中的更新。|  
-|**adResyncUnderlyingValues**|1|不會覆寫資料，並不會取消暫止的更新。|  
+|**adResyncUnderlyingValues**|@shouldalert|不會覆寫資料，並不會取消暫止的更新。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  
  封裝： **com.ms.wfc.data**  

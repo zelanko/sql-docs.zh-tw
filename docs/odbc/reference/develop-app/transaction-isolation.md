@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914773"
 ---
 # <a name="transaction-isolation"></a>交易隔離
 *交易隔離*指的是多個並行交易之間的互動的程度。 若要查看這為何如此重要，您必須先來看的可序列化能力。  

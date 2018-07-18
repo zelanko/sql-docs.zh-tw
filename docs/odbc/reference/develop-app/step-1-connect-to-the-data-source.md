@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915603"
 ---
 # <a name="step-1-connect-to-the-data-source"></a>步驟 1： 連接到資料來源
 在任何應用程式中的第一個步驟是連接到資料來源。 這個階段中，包括它需要時，函式會在下圖顯示。  

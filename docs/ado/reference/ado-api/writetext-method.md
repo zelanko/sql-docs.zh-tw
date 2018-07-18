@@ -2,7 +2,6 @@
 title: WriteText 方法 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2b12293935df6f9afaf6a1691e2decce3f6c6f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283187"
 ---
 # <a name="writetext-method"></a>WriteText 方法
 將指定的文字字串至[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  
@@ -41,7 +41,7 @@ Stream.WriteText Data, Options
  *資料*  
  A**字串**包含以字元為單位來寫入的文字值。  
   
- *選項。*  
+ *選項*  
  選擇性。 A [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md)值，指定是否必須在指定的字串結尾處寫入行分隔符號字元。  
   
 ## <a name="remarks"></a>備註  

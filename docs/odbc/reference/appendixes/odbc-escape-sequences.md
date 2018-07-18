@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906873"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC 逸出序列
 ODBC 中，會使用下列的逸出序列。 本章節內容文法將使用中定義的某些項目[SQL 陳述式中使用的項目](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)。  

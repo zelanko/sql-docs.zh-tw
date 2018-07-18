@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916203"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos 以更新資料
 應用程式可以更新或刪除任何資料列與資料列集中**SQLSetPos**。 呼叫**SQLSetPos**是一個方便的替代方式建構及執行 SQL 陳述式。 它可讓 ODBC 驅動程式支援定位的更新，即使資料來源不支援定位的 SQL 陳述式。 它是透過函式呼叫達成完整的資料庫存取的開發架構的一部分。  

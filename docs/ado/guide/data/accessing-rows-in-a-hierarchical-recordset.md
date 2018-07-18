@@ -2,7 +2,6 @@
 title: 存取階層式資料錄集中的資料列 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b1b387eaa01a3a3d71c51172becf196ec6474ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f45ec72f864c719091adc04a88e181a41124b76
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270167"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>存取資料列中的階層式資料錄集 （範例）
 下列範例說明中的步驟需要存取的資料列階層式[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md):

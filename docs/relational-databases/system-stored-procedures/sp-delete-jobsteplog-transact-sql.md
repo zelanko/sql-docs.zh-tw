@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257325"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@job_name =**] **'***job_name***'**  
  作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
   
-> **注意：**任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
+> **注意：** 任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
   
  [ **@step_id =**] *step_id*  
  這是作業中將刪除作業步驟記錄之步驟的識別碼。 如果未包含，會刪除作業中的所有作業步驟記錄，除非**@older_than**或**@larger_than**所指定。 *step_id*是**int**，預設值是 NULL。  
@@ -61,7 +62,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  [ **@step_name =**] **'***step_name***'**  
  這是作業中將刪除作業步驟記錄之步驟名稱。 *step_name*是**sysname**，預設值是 NULL。  
   
-> **注意：**任一*step_id*或*step_name*可以指定，但不可同時指定兩者。  
+> **注意：** 任一*step_id*或*step_name*可以指定，但不可同時指定兩者。  
   
  [ **@older_than =**] **'***date***'**  
  您要保留的最舊作業步驟記錄的日期和時間。 在這個日期和時間之前的所有作業步驟記錄都會被移除。 *日期*是**datetime**，預設值是 NULL。 同時**@older_than**和**@larger_than**可以指定。  

@@ -1,7 +1,7 @@
 ---
 title: 查詢處理架構指南 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/16/2018
+ms.date: 06/06/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
@@ -14,27 +14,51 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, query processing architecture
 - query processing architecture guide
+- row mode execution
+- batch mode execution
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 15fd6269a2e879eba086af8d1d143cc0e0cffc1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842901"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可在多種資料儲存架構處理查詢，例如本機資料表、資料分割資料表及散發到多部伺服器的資料表。 下列主題涵蓋了 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 如何處理查詢以及透過執行計畫快取最佳化查詢重複使用。
 
+## <a name="execution-modes"></a>執行模式
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 可以使用兩種不同的處理模式來處理 SQL 陳述式：
+- 資料列模式執行
+- 批次模式執行
+
+### <a name="row-mode-execution"></a>資料列模式執行
+「資料列模式執行」是可搭配傳統 RDMBS 資料表使用的查詢處理方法，其中資料是以資料列格式儲存。 當查詢執行並存取資料列存放區資料表中的資料時，執行樹狀目錄運算子和子運算子會在資料表結構描述中指定的所有資料行之間，讀取每個必要的資料列。 從所讀取的每個資料列，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會接著擷取結果集所需的資料行，以供 SELECT 陳述式、聯結述詞或篩選述詞參考。
+
+> [!NOTE]
+> 資料列模式執行針對 OLTP 案例非常有效率，但在掃描大量資料時 (例如在資料倉儲案例中) 可能比較沒有效率。
+
+### <a name="batch-mode-execution"></a>批次模式執行  
+「批次模式執行」是用來同時處理多個資料列的查詢處理方法 (如批次一詞所指)。 批次內的每個資料行會儲存為不同記憶體區域中的向量，因此批次模式處理是以向量為基礎。 批次模式處理也會使用演算法，這些演算法已針對現代硬體上發現的多核心 CPU 和增加的記憶體輸送量進行最佳化。      
+
+批次模式執行與資料行存放區儲存格式緊密整合，並以其為中心進行最佳化。 當情況允許時，批次模式處理會在壓縮的資料上作業，並排除資料列模式執行所使用的 [Exchange 運算子](../relational-databases/showplan-logical-and-physical-operators-reference.md#exchange)。 結果會是較佳的平行處理原則與更快的效能。    
+
+當查詢以批次模式執行並存取資料行存放區索引中的資料時，執行樹狀目錄運算子和子運算子會同時讀取資料行區段中的多個資料列。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只會讀取結果所需的資料行，以供 SELECT 陳述式、聯結述詞或篩選述詞參考。    
+如需資料行存放區索引的詳細資訊，請參閱[資料行存放區索引架構](../relational-databases/sql-server-index-design-guide.md#columnstore_index)。  
+
+> [!NOTE]
+> 批次模式執行對於資料倉儲案例非常有效率，其中會讀取及彙總大量資料。
+
 ## <a name="sql-statement-processing"></a>SQL 陳述式處理
+處理單一 [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行 SQL 陳述式最基本的方法。 用於處理僅參考本機基底資料表 (非檢視表或遠端資料表) 之單一 `SELECT` 陳述式的步驟可說明這個基本程序。
 
-處理單一 SQL 陳述式是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行 SQL 陳述式最基本的方法。 用於處理僅參考本機基底資料表 (非檢視表或遠端資料表) 之單一 `SELECT` 陳述式的步驟可說明這個基本程序。
-
-#### <a name="logical-operator-precedence"></a>邏輯運算子優先順序
+### <a name="logical-operator-precedence"></a>邏輯運算子優先順序
 
 當陳述式中使用一個以上的邏輯運算子，`NOT` 會第一個計算，接下來是 `AND`，最後才是 `OR`。 先處理算術以及位元運算子，接著才處理邏輯運算子。 如需詳細資訊，請參閱[運算子優先順序](../t-sql/language-elements/operator-precedence-transact-sql.md)。
 
@@ -68,7 +92,7 @@ WHERE ProductModelID = 20 OR (ProductModelID = 21
 GO
 ```
 
-#### <a name="optimizing-select-statements"></a>最佳化 SELECT 陳述式
+### <a name="optimizing-select-statements"></a>最佳化 SELECT 陳述式
 
 `SELECT` 陳述式為非程序性，它無法敘述資料庫伺服器應用來擷取所需資料的正確步驟。 這是表示資料庫伺服器應該先分析陳述式，才能判斷出取得所需資料的最有效方式。 這稱為將 `SELECT` 陳述式最佳化。 執行此動作的元件稱為查詢最佳化工具。 查詢最佳化工具的輸入是由查詢、資料庫結構描述 (資料表和索引定義) 以及資料庫統計資料所組成。 查詢最佳化工具的輸出是查詢執行計畫，有時稱為查詢計畫或只是計畫。 在本主題稍後將更詳盡地描述查詢計畫的內容。
 
@@ -104,7 +128,7 @@ GO
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具非常重要，因為它可以讓資料庫伺服器隨著資料庫中的狀況變更來進行動態調整，而不需要由程式設計人員或資料庫管理員來輸入。 這樣程式設計師便不用將焦點集中在描述查詢的最後結果。 他們可以相信每次執行陳述式時，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 查詢最佳化工具將依資料庫的狀態建立最有效率的執行計畫。
 
-#### <a name="processing-a-select-statement"></a>處理 SELECT 陳述式
+### <a name="processing-a-select-statement"></a>處理 SELECT 陳述式
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 處理單一 SELECT 陳述式所使用的基本步驟如下： 
 
@@ -114,7 +138,7 @@ GO
 4. 關聯式引擎開始執行執行計畫。 當在處理需要基底資料表中資料的步驟時，關聯式引擎會要求儲存引擎，從取自關聯式引擎的資料列集中傳回資料。
 5. 關聯式引擎處理從儲存引擎傳回的資料，並將其設定成結果集所定義的格式，然後將結果集傳回給用戶端。
 
-#### <a name="processing-other-statements"></a>處理其他的陳述式
+### <a name="processing-other-statements"></a>處理其他的陳述式
 
 這裡描述來用以處理 `SELECT` 陳述式的基本步驟適用於其他 SQL 陳述式，例如 `INSERT`、 `UPDATE`及 `DELETE`。 `UPDATE` 與 `DELETE` 陳述式都必須將目標設定為要修改或刪除的資料列集合。 識別這些資料列的處理序，與用以識別參與 `SELECT` 陳述式結果集之來源資料列的處理序相同。 `UPDATE` 和 `INSERT` 陳述式可能都包含內嵌的 `SELECT 陳述式，其可提供要更新或插入的資料值。
 
@@ -170,7 +194,7 @@ WHERE OrderDate > '20020531';
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio 的執行程序表功能顯示關聯式引擎為這兩個 `SELECT` 陳述式建立相同的執行計畫。
 
-#### <a name="using-hints-with-views"></a>使用檢視的提示
+### <a name="using-hints-with-views"></a>使用檢視的提示
 
 在查詢中檢視所放置的提示可能與在擴充檢視以存取基底資料表時所發現的其他提示衝突。 當這種情況發生時，查詢會傳回錯誤： 例如，請考慮下列在其定義中包含資料表提示的檢視：
 

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -31,14 +30,15 @@ helpviewer_keywords:
 - rules [SQL Server], creating
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c495cabda9c94fb5b0e32b7df0474501d2307353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8e0ef2de168411dbd4662a7fabd88ec0b6ad141f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781709"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  CREATE RULE 無法在單一批次中，與其他 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式結合起來。 規則不適用於建立規則時已在資料庫中的資料，規則無法繫結到系統資料類型。  
   
- 規則只能建立在目前資料庫中。 建立好規則之後，請執行 **sp_bindrule**，將規則繫結到資料行或別名資料類型。 規則必須相容於資料行資料類型。 例如，"@value LIKE A%" 不能用來作為數值資料行的規則。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
+ 規則只能建立在目前資料庫中。 建立好規則之後，請執行 **sp_bindrule**，將規則繫結到資料行或別名資料類型。 規則必須相容於資料行資料類型。 例如， "\@value LIKE A%" 不能用來作為數值資料行的規則。 規則無法繫結到 **text**、**ntext****image**、**varchar (max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、CLR 使用者定義型別或 **timestamp** 資料行。 規則無法繫結到計算資料行。  
   
  請用單引號 (') 括住字元和日期常數，二進位常數前面要附加 0x。 如果規則與所繫結的資料行不相容，[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會在插入值時 (而不是繫結規則時)，傳回一則錯誤訊息。  
   

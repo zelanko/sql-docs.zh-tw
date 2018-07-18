@@ -1,5 +1,5 @@
 ---
-title: StartDate 屬性 （SecurityCertificate 類別） |Microsoft 文件
+title: StartDate 屬性 （SecurityCertificate 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0807fdbbcf2df31355a38b5f21d808efad446ea8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017538"
 ---
 # <a name="startdate-property-securitycertificate-class"></a>StartDate 屬性 (SecurityCertificate 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ object.StartDate [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  代表安全性憑證的 [SecurityCertificate 類別](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

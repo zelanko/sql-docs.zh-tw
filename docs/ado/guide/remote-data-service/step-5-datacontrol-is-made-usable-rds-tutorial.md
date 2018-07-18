@@ -1,11 +1,8 @@
 ---
 title: '步驟 5: DataControl 已進行使用 （RDS 教學課程） |Microsoft 文件'
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 470e965fe84216c7c50476e1add74b3d05d561f2
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: fd2d73a97e8ba4b3e2c052bb5fa0e08fa7c2d941
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274567"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>步驟 5: DataControl 已進行使用 （RDS 教學課程）
 傳回**資料錄集**物件是可供使用。 您可以檢查、 瀏覽，或進行編輯，就像其他任何**資料錄集**。 您可以使用達成**資料錄集**取決於您的環境。 Visual Basic 和 Visual c + + 已經可以使用的視覺控制項**資料錄集**直接或間接與啟用的資料控制項的協助。  

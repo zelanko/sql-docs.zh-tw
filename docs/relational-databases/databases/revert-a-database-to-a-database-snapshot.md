@@ -19,11 +19,12 @@ caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6bdd055cc32d6f01ec017f72c7caa8f503754f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fdedcbb66bbf9c62a7001750c1dc149c4427cbb
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799828"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>將資料庫還原成資料庫快照集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="Restrictions"></a> 限制事項  
  在下列狀況下，不支援還原：  
   
--   資料庫目前只能有一個資料庫快照集，就是您打算要還原的目標快照集。  
+-   資料庫有多個快照集。 您打算還原的目標資料庫只能有一個快照集，才能進行還原。  
   
 -   任何唯讀或壓縮的檔案群組存在資料庫中。  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
  在還原資料庫之前，請仔細考慮以下限制：  
   
--   還原不適用於媒體復原。 執行個體時提供 SQL Server 登入。 資料庫快照集是不完整的資料庫檔案複本，因此如果資料庫或資料庫快照集已損毀，很可能無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。 因此，建立定期備份和測試還原計畫是保護資料庫的基本措施。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
+-   還原不適用於媒體復原。 資料庫快照集是不完整的資料庫檔案複本，因此如果資料庫或資料庫快照集已損毀，很可能無法從快照集還原。 此外，即使可以還原，但是在損毀的情況下還原也不太可能會更正問題。 因此，建立定期備份和測試還原計畫是保護資料庫的基本措施。 如需詳細資訊，請參閱 [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)。  
   
     > [!NOTE]  
     >  如果您必須能夠將來源資料庫還原到您建立資料庫快照集當時的時間點，請使用完整復原模式並實作可讓您執行此作業的備份原則。  

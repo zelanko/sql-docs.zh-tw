@@ -2,7 +2,6 @@
 title: 加入資料錄使用 AddNew |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba15d68b5fbaa749e00987b1fbfef73887dc377
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36827d102d7e6ef0850c557eb6555135343fbec0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270087"
 ---
 # <a name="adding-records-using-addnew-method"></a>加入資料錄使用 AddNew 方法
 這是基本語法**AddNew**方法：

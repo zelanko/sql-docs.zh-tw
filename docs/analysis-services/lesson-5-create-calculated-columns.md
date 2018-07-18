@@ -1,5 +1,5 @@
 ---
-title: 第 6 課： 建立導出資料行 |Microsoft 文件
+title: 第 6 課： 建立計算結果的欄 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3b86f84567e85fb604883e7cd7f8de83feb252e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031586"
 ---
 # <a name="lesson-5-create-calculated-columns"></a>第 5 課： 建立導出資料行
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -24,20 +25,20 @@ ms.lasthandoff: 05/10/2018
   
 完成本課程的估計時間：**15 分鐘**  
   
-## <a name="prerequisites"></a>必要條件  
-本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 4 課： 建立關聯性](../analysis-services/lesson-4-create-relationships.md)。 
+## <a name="prerequisites"></a>先決條件  
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 4 課： 建立關聯性](../analysis-services/lesson-4-create-relationships.md)。 
   
 ## <a name="create-calculated-columns"></a>建立導出資料行  
   
-#### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>建立與 DimDate 資料表中的 MonthCalendar 導出資料行  
+#### <a name="create-a-monthcalendar-calculated-column-in-the-dimdate-table"></a>在 DimDate 資料表中建立 MonthCalendar 計算結果的欄  
   
-1.  按一下**模型**功能表 >**模型檢視** > **資料檢視**。  
+1.  按一下 **模型**功能表 >**模型檢視** > **資料檢視**。  
   
     導出資料行只能使用模型設計師在「資料檢視」中建立。  
   
 2.  在模型設計師中，按一下**DimDate**資料表 （標籤）。  
   
-3.  以滑鼠右鍵按一下**CalendarQuarter**資料行標頭，然後再按一下**插入資料行**。  
+3.  以滑鼠右鍵按一下**CalendarQuarter**資料行標頭，，然後按一下**插入資料行**。  
   
     名為 [Calculated Column 1] 的新資料行將會插入 [日曆季] 資料行的左側。  
   
@@ -53,11 +54,11 @@ ms.lasthandoff: 05/10/2018
 
     ![做為表格式-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
-MonthCalendar 導出資料行會提供可排序月份名稱。  
+MonthCalendar 計算結果欄提供可排序的月份名稱。  
   
-#### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>建立 DayOfWeek 導出資料行與 DimDate 資料表中  
+#### <a name="create-a-dayofweek-calculated-column-in-the-dimdate-table"></a>在 DimDate 資料表中建立 DayOfWeek 計算結果的欄  
   
-1.  與**DimDate**資料表仍在作用中，按一下**資料行**功能表，然後再按一下**加入資料行**。  
+1.  具有**DimDate**資料表仍為使用中，按一下 **資料行**功能表，然後再按一下**加入資料行**。  
   
 2.  在公式列中，輸入下列公式：  
     
@@ -69,17 +70,17 @@ MonthCalendar 導出資料行會提供可排序月份名稱。
   
 3.  重新命名的資料行**DayOfWeek**。  
   
-4.  按一下資料行標頭，然後拖曳的資料行之間**EnglishDayNameOfWeek**資料行和**DayNumberOfMonth**資料行。  
+4.  按一下資料行標頭，然後拖曳之間的資料行**EnglishDayNameOfWeek**資料行和有**DayNumberOfMonth**資料行。  
   
     > [!TIP]  
     > 移動資料表中的資料行可使導覽更方便。  
   
-DayOfWeek 導出資料行提供可排序的週間日名稱。  
+DayOfWeek 計算結果欄提供可排序的星期幾名稱。  
   
-#### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 資料表中建立 ProductSubcategoryName 導出資料行  
+#### <a name="create-a-productsubcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 資料表中建立 ProductSubcategoryName 計算結果的欄  
   
   
-1.  在**DimProduct**資料表中，捲動到右邊的資料表。 您會發現，最右側的資料行命名為 [加入資料行] \(斜體)，請按一下該欄位標題。  
+1.  在  **DimProduct**資料表中，捲動到右邊的資料表。 您會發現，最右側的資料行命名為 [加入資料行] \(斜體)，請按一下該欄位標題。  
   
 2.  在公式列中，輸入下列公式。  
     
@@ -89,11 +90,11 @@ DayOfWeek 導出資料行提供可排序的週間日名稱。
   
 3.  重新命名的資料行**ProductSubcategoryName**。  
   
-ProductSubcategoryName 導出資料行用來建立階層，其中包括來自 [englishproductsubcategoryname] 資料行資料 DimProductSubcategory 資料表中的 DimProduct 資料表內。 階層不可跨越多個資料表。 稍後在第 9 課中，您將建立階層。  
+ProductSubcategoryName 導出資料行用來建立階層，其中包括 [englishproductsubcategoryname] 資料行來自 DimProductSubcategory 資料表中資料的 DimProduct 資料表內。 階層不可跨越多個資料表。 稍後在第 9 課，您將建立階層。  
   
-#### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 資料表中建立 ProductCategoryName 導出資料行  
+#### <a name="create-a-productcategoryname-calculated-column-in-the-dimproduct-table"></a>在 DimProduct 資料表中建立 ProductCategoryName 計算結果的欄  
   
-1.  與**DimProduct**資料表仍在作用中，按一下**資料行**功能表，然後再按一下**加入資料行**。  
+1.  具有**DimProduct**資料表仍在作用中，按一下 **資料行**功能表，然後再按一下**加入資料行**。  
   
 2.  在公式列中，輸入下列公式：  
   
@@ -103,9 +104,9 @@ ProductSubcategoryName 導出資料行用來建立階層，其中包括來自 [e
     
 3.  重新命名的資料行**ProductCategoryName**。  
   
-ProductCategoryName 導出資料行用來建立階層，其中包括來自 [englishproductcategoryname] 資料行資料 DimProductCategory 資料表中的 DimProduct 資料表內。 階層不可跨越多個資料表。  
+ProductCategoryName 導出資料行用來建立階層，其中包括 [englishproductcategoryname] 資料行來自 DimProductCategory 資料表中資料的 DimProduct 資料表內。 階層不可跨越多個資料表。  
   
-#### <a name="create-a-margin-calculated-column-in-the-factinternetsales-table"></a>在 [FactInternetSales] 資料表中建立 Margin 導出資料行  
+#### <a name="create-a-margin-calculated-column-in-the-factinternetsales-table"></a>在 FactInternetSales 資料表中建立 Margin 計算結果的欄  
   
 1.  在模型設計師中，選取**FactInternetSales**資料表。  
   
@@ -119,14 +120,14 @@ ProductCategoryName 導出資料行用來建立階層，其中包括來自 [engl
 
 4.  將這個資料行重新命名為 **Margin**。  
   
-5.  資料行之間拖曳**SalesAmount**資料行和**TaxAmt**資料行。 
+5.  資料行之間拖曳**SalesAmount**資料行和有**TaxAmt**資料行。 
  
       ![做為表格式-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
-    Margin 導出資料行用來分析每個銷售的利率。  
+    Margin 計算結果的欄用來分析每個銷售的利率。  
   
 ## <a name="whats-next"></a>下一步
-移至下一課：[第 6 課： 建立量值](../analysis-services/lesson-6-create-measures.md)。
+移至下一個課程︰[第 6 課： 建立量值](../analysis-services/lesson-6-create-measures.md)。
   
   
   

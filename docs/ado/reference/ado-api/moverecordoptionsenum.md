@@ -2,7 +2,6 @@
 title: MoveRecordOptionsEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18508d9103b0be9a0dae3cff013ca2732a00035c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bb86ce988a47db06c59e7b70609ba021bd524d7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279427"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 指定的行為[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)方法。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|預設值。 會執行預設移動作業： 如果目的地檔案或目錄已存在，而且此作業會更新超文字連結，則作業會失敗。|  
-|**adMoveOverWrite**|1|請覆寫目的地檔案或目錄，即使它已經存在。|  
+|**adMoveOverWrite**|@shouldalert|請覆寫目的地檔案或目錄，即使它已經存在。|  
 |**adMoveDontUpdateLinks**|2|修改預設行為的**MoveRecord**方法藉由不更新來源的超文字連結**記錄**。 預設的行為取決於提供者的功能。 提供者是否能夠移動作業會更新連結。 如果提供者無法修正連結，或未指定此值，然後移動會成功，即使當連結尚未修正。|  
 |**adMoveAllowEmulation**|4|提供者嘗試模擬移動 （使用下載、 上傳和刪除作業） 的要求。 如果嘗試移動**記錄**會失敗，因為目的地 URL 是在不同的伺服器或服務的不同來源的提供者，這可能會導致增加的延遲或資料遺失，因為不同的提供者功能，所以當提供者之間的移動資源。|  
   

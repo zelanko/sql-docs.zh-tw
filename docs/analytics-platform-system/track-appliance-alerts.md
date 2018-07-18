@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539268"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>追蹤 Analytics Platform System 中的應用裝置警示
 本主題說明如何使用管理主控台和系統檢視表來追蹤 SQL Server PDW 應用裝置中的警示。  

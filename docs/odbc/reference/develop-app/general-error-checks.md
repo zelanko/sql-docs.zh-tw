@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908693"
 ---
 # <a name="general-error-checks"></a>一般錯誤檢查
 驅動程式管理員會檢查一次的一般錯誤。 它一律會傳回 SQL_ERROR 時遇到下列錯誤： 驅動程式必須支援此函式。

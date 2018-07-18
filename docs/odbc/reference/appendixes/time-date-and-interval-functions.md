@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914263"
 ---
 # <a name="time-date-and-interval-functions"></a>時間、日期和間隔函數
 下表列出 ODBC 純量函式集合中包含的日期和時間函式。 應用程式就可以判斷驅動程式支援的日期和時間函式呼叫**SQLGetInfo**與*資訊類型*SQL_TIMEDATE_FUNCTIONS。  

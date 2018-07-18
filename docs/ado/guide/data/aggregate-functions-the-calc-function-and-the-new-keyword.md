@@ -2,7 +2,6 @@
 title: 彙總函式、 CALC 函式和 NEW 關鍵字 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e3af3e37caacae09f4ee57bc251f7ebcabfb04e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba6aae19a559dd1e475809339281c8b65c282517
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271547"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>彙總函式、 CALC 函式和 NEW 關鍵字
 資料成形支援下列函數。 要處理指派章節包含的資料行的名稱是*章別名*。  
   
- 章別名可以是完整，導致章節包含每個章節資料行名稱所組成*資料行名稱，*以句號分隔。 例如，如果父章 chap1，包含子章節，chap2，都具有 amount 資料行時，amt，就限定的名稱會是 chap1.chap2.amt。  
+ 章別名可以是完整，導致章節包含每個章節資料行名稱所組成*資料行名稱，* 以句號分隔。 例如，如果父章 chap1，包含子章節，chap2，都具有 amount 資料行時，amt，就限定的名稱會是 chap1.chap2.amt。  
   
-|彙總函式|Description|  
+|彙總函式|描述|  
 |-------------------------|-----------------|  
 |SUM (*章別名*。*資料行名稱*)|計算指定的資料行中的所有值的總和。|  
 |AVG (*章別名*。*資料行名稱*)|計算指定的資料行中的所有值的平均值。|  
@@ -41,11 +41,11 @@ ms.lasthandoff: 05/03/2018
 |Stdev 函數 (*章別名*。*資料行名稱*)|計算標準差，指定資料行中。|  
 |任何 (*章別名*。*資料行名稱*)|指定的資料行的值。 任何在資料行的值是相同的章節中的所有資料列時，才有可預測的值。<br /><br /> **請注意**資料行不包含所有一章中的資料列的相同值，如果 SHAPE 命令任意傳回其中一個值的任何函式的值。|  
   
-|計算的運算式|Description|  
+|計算的運算式|描述|  
 |---------------------------|-----------------|  
 |CALC(*expression*)|計算的任意的運算式，但只能出現在資料列**資料錄集**包含 CALC 函式。 使用這些任何運算式[Visual Basic for Applications (VBA) 函數](../../../ado/guide/data/visual-basic-for-applications-functions.md)允許。|  
   
-|NEW 關鍵字|Description|  
+|NEW 關鍵字|描述|  
 |-----------------|-----------------|  
 |新*欄位類型*[(*寬度* &#124; *標尺* &#124; *精確度* &#124; *錯誤*[，*標尺* &#124; *錯誤*])]|加入空白資料行指定的型別**資料錄集**。|  
   

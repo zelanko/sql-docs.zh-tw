@@ -3,8 +3,6 @@ title: 安裝 SQL Server (SybaseToSQL) 上的 SSMA 元件 |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a8d198ba1ae8fed6c48bb55db45618b36944e7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17d9068497072660fd48888a2b4652dcb46815cf
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779254"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>安裝 SQL Server (SybaseToSQL) 上的 SSMA 元件
 除了安裝 SSMA，使用伺服器端資料移轉，您也必須安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 這些元件包括 SSMA 延伸模組組件，可支援資料移轉和 Sybase 提供者，以啟用伺服器對伺服器的連線。  

@@ -22,12 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67534172dc879b7865af535e8a85f4a69d8dfc68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040506"
 ---
-# <a name="functions-on-sequences---distinct-values"></a>序列的相異值的函式
+# <a name="functions-on-sequences---distinct-values"></a>對序列-相異值的函式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   移除重複值所指定的時序 *$arg*。 如果 *$arg*是空的序列，則函數會傳回空的序列。  
@@ -44,17 +45,17 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  不可部份完成值的時序。  
   
 ## <a name="remarks"></a>備註  
- 所有類型的不可部份完成值傳遞至**distinct-values （)** 必須是相同的基底類型的子類型。 接受的基底類型的類型，可支援**eq**作業。 這些類型包含三個內建數值基底類型以及日期/時間基底類型，它們是 xs:string、xs:boolean 以及 xdt:untypedAtomic。 xdt:untypedAtomic 類型的值會轉換成 xs:string。 如果混合了這些類型，或是如果傳遞了其他類型的值，就會引發靜態錯誤。  
+ 所有類型的不可部份完成值傳遞給**distinct-values （)** 一定要相同的基底類型的子類型。 可接受的基底類型是支援的類型**eq**作業。 這些類型包含三個內建數值基底類型以及日期/時間基底類型，它們是 xs:string、xs:boolean 以及 xdt:untypedAtomic。 xdt:untypedAtomic 類型的值會轉換成 xs:string。 如果混合了這些類型，或是如果傳遞了其他類型的值，就會引發靜態錯誤。  
   
- 結果**distinct-values （)** 包含原始基數接收傳入的類型，例如 xdt，xs: string 的基底類型。 如果輸入是靜態空白，則會隱含空白並引發靜態錯誤。  
+ 結果**distinct-values （)** 接收傳入的類型，例如 xs: string untypedatomic 情況下，基底類型，包含原始基數。 如果輸入是靜態空白，則會隱含空白並引發靜態錯誤。  
   
  xs:string 類型的值將與 XQuery 預設的「Unicode 字碼指標定序」相比較。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. 使用 distinct-values() 函數以移除時序的重複值  
- 在此範例中，XML 執行個體，其中包含電話號碼指派給**xml**類型變數。 針對此變數會使用指定之 XQuery **distinct-values （)** 編譯不包含重複的電話號碼清單的函式。  
+ 在此範例中，XML 執行個體，其中包含電話號碼指派給**xml**類型變數。 針對這個變數會使用指定的 XQuery **distinct-values （)** 編譯不包含重複的電話號碼清單的函式。  
   
 ```  
 declare @x xml  
@@ -75,7 +76,7 @@ select @x.query('
 111-111-1111 222-222-2222    
 ```  
   
- 下列查詢中，在一連串的數字 （1，1，2） 會在傳遞至**distinct-values （)** 函式。 該函數接著會移除序列中的重複並傳回另兩個。  
+ 在下列查詢中，一連串數字 （1、 1、 2） 會傳遞至**distinct-values （)** 函式。 該函數接著會移除序列中的重複並傳回另兩個。  
   
 ```  
 declare @x xml  
@@ -92,9 +93,9 @@ select @x.query('
   
 -   **Distinct-values （)** 函式會將整數值對應至 xs: decimal。  
   
--   **Distinct-values （)** 函式只支援先前提及的類型，並不支援的基底類型的混合。  
+-   **Distinct-values （)** 函式只支援先前所述的類型，並不支援混合的基底型別。  
   
--   **Distinct-values （)** 不支援在 xs: duration 值上的函式。  
+-   **Distinct-values （)** xs: duration 值上的函式不支援。  
   
 -   不支援提供定序的語法選項。  
   

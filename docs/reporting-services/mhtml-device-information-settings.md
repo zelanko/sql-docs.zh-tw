@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018605"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML 裝置資訊設定
   下表列出以 Web 封存 (MHTML) 格式轉譯報表的裝置資訊設定。  

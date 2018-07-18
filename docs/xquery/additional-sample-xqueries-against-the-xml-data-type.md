@@ -1,5 +1,5 @@
 ---
-title: 其他範例 XQueries 針對 xml 資料類型 |Microsoft 文件
+title: 針對其他範例 XQueries xml 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,15 +24,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: fa92635bcca9a206fcfb2f85e3da72e57facdeb1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38030366"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>針對 xml 資料類型的其他範例 XQueries
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  本節中的主題提供其他範例，示範如何使用 XQuery 查詢**xml**資料類型：  
+  在本節中的主題提供其他範例，示範如何使用 XQuery 查詢**xml**資料型別：  
   
 -   [一般 XQuery 使用案例](../xquery/general-xquery-use-cases.md)  
   

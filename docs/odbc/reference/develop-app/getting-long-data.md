@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913243"
 ---
 # <a name="getting-long-data"></a>取得長資料
 Dbms 定義*long 資料*為任何字元或二進位資料超過特定大小，例如 255 個字元。 這些資料可能會不夠小，儲存在單一緩衝區中，例如有數個數千個字元的部分描述。 不過，它可能太長，無法儲存在記憶體中，例如長文字文件或點陣圖。 因為這類資料無法儲存在單一緩衝區中，它會從使用組件中的驅動程式**SQLGetData**已經提取資料列中的其他資料之後。  

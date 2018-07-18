@@ -2,7 +2,6 @@
 title: Find 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 953398f5ed01cc3e0f7c0da1fee769d5e64209af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278717"
 ---
 # <a name="find-method-ado"></a>Find 方法 (ADO)
 搜尋[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)符合指定之準則的資料列。 （選擇性） 您可以指定搜尋開始的資料列及從起始的資料列位移的方向。 如果符合條件時，所找到的記錄; 上設定目前資料列位置否則，會結束 （或開始） 的設定位置**資料錄集**。  
@@ -42,10 +42,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  A**字串**值，包含在搜尋中指定要使用的資料行名稱、 比較運算子和值的陳述式。  
   
  *SkipRows*  
- 選擇性*。* A**長**值，其預設值為零，會指定從目前資料列的資料列位移或*啟動*來開始搜尋的書籤。 根據預設，搜尋會啟動目前的資料列。  
+ 選擇性 *。* A**長**值，其預設值為零，會指定從目前資料列的資料列位移或*啟動*來開始搜尋的書籤。 根據預設，搜尋會啟動目前的資料列。  
   
  *SearchDirection*  
- 選擇性*。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該開始搜尋在目前的資料列或下一個可用的資料列中搜尋方向。 失敗的搜尋會停止在結尾**資料錄集**如果值為**adSearchForward**。 失敗的搜尋會停止在開頭**資料錄集**如果值為**adSearchBackward**。  
+ 選擇性 *。* A [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md)值，指定是否應該開始搜尋在目前的資料列或下一個可用的資料列中搜尋方向。 失敗的搜尋會停止在結尾**資料錄集**如果值為**adSearchForward**。 失敗的搜尋會停止在開頭**資料錄集**如果值為**adSearchBackward**。  
   
  *啟動*  
  選擇性。 A **Variant**做為搜尋的起始位置的書籤。  

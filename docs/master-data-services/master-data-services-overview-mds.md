@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -21,11 +20,12 @@ caps.latest.revision: 28
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a329416c51580e32fef969a48c96dfa6a68b1cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 638027d75f14f93b19085700a20360d30b7df402
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333752"
 ---
 # <a name="master-data-services-overview-mds"></a>Master Data Services 概觀 (MDS)
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 可讓您管理組織的一組主要資料。 您可以將資料組織到模型、建立用來更新資料的規則，並控制誰更新資料。 使用 Excel，您可以在組織中與其他人共用主要資料集。 
   
- >  如需 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 架構的說明，請參閱 simple-talk.com 上的 [Master Data Services - 基本概念](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 文件。如需 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新功能的資訊，請參閱 [Master Data Services 的新功能 &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ >  如需 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 架構的說明，請參閱 simple-talk.com 上的 [Master Data Services - 基本概念](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) 文件。 如需 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 中新功能的資訊，請參閱 [Master Data Services 的新功能 &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **如需如何安裝 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、設定資料庫和網站，以及部署範例模型的指示，請參閱** [Master Data Services 安裝和組態](../master-data-services/master-data-services-installation-and-configuration.md)。  
   
  在 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]中，此模型是您主要資料結構中的最上層容器。 您可以建立模型來管理各種類似資料分類，例如管理線上產品資料組。 模型包含一或多個實體，而實體又包含成員，亦即資料記錄。 實體類似於資料表。  

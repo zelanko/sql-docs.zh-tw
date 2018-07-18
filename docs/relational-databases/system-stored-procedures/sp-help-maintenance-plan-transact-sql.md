@@ -1,5 +1,5 @@
 ---
-title: sp_help_maintenance_plan (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,17 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979050"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回指定維護計畫的相關資訊。 如果未指定計畫，這個預存程序會傳回所有維護計畫的相關資訊。  
   
-> **注意：**這個預存程序搭配資料庫維護計畫。 這項功能已被不使用這個預存程序的維護計畫所取代。 請使用這個程序來維護由舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級之安裝的資料庫維護計畫。  
+> **注意：** 此預存程序搭配資料庫維護計畫。 這項功能已被不使用這個預存程序的維護計畫所取代。 請使用這個程序來維護由舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 升級之安裝的資料庫維護計畫。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -49,7 +50,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ## <a name="arguments"></a>引數  
  [  **@plan_id =**] **'***plan_id***'**  
- 指定維護計畫的計畫識別碼。 *plan_id*是**UNIQUEIDENTIFIER**。 預設值是 NULL。  
+ 指定維護計畫的計畫識別碼。 *plan_id*已**UNIQUEIDENTIFIER**。 預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  無  
@@ -59,7 +60,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="plan-table"></a>計畫資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|維護計畫識別碼。|  
 |**plan_name**|**sysname**|維護計畫名稱。|  
@@ -75,15 +76,15 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
   
 ### <a name="database-table"></a>資料庫資料表  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
 |**database_name**|維護計畫所有相關資料庫的名稱。 *database_name* 為 **sysname**。|  
   
 ### <a name="job-table"></a>作業資料表  
   
-|資料行名稱|Description|  
+|資料行名稱|描述|  
 |-----------------|-----------------|  
-|**job_id**|與維護計畫相關聯之所有作業的識別碼。 *job_id*是**uniqueidentifier**。|  
+|**job_id**|與維護計畫相關聯之所有作業的識別碼。 *job_id*已**uniqueidentifier**。|  
   
 ## <a name="remarks"></a>備註  
  **sp_help_maintenance_plan**處於**msdb**資料庫。  

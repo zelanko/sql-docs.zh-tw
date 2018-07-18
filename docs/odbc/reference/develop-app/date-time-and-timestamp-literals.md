@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913383"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日期、 時間和時間戳記常值
 日期、 時間和時間戳記常值的逸出序列是  

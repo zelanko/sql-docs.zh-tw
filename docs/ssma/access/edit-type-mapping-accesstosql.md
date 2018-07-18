@@ -1,8 +1,6 @@
 ---
 title: 編輯類型對應 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 50126b377891d792685b96714f85df5926281988
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb67bb417673928114529f9f88530eb00c892de0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774695"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>編輯類型對應 (AccessToSQL)
 **編輯類型對應** 對話方塊可讓您指定來源和目的地的資料庫物件之間如何對應型別。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 特定資料表的型別對應會覆寫資料庫，和專案類型對應。 特定資料庫的對應覆寫專案對應。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源類型**  
 選取來源資料類型對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029715"
 ---
 # <a name="set-report-server-properties-management-studio"></a>設定報表伺服器屬性 (Management Studio)
   您可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中設定報表伺服器系統屬性，以便啟用功能或設定伺服器預設值。  

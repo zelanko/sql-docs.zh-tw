@@ -1,7 +1,7 @@
 ---
 title: 向下鑽研動作 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -45,14 +45,15 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: db793e5608aca874a98f6125136429244eb5ffff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1250e47366e8beab3cdee5f07e6d17e76827a597
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550709"
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>向下鑽研動作 (報表產生器及 SSRS)
-  透過在文字方塊上提供加號和減號圖示，您就可以讓使用者以互動方式隱藏和顯示項目。 這稱為 *「向下鑽研」* (Drilldown) 動作。 對於資料表或矩陣，您可以顯示或隱藏靜態資料列和資料行，或者顯示或隱藏與群組相關聯的資料列和資料行。  
+透過在文字方塊上提供加號和減號圖示，您就可以讓使用者以互動方式隱藏和顯示項目。 這稱為 *「向下鑽研」* (Drilldown) 動作。 對於資料表或矩陣，您可以顯示或隱藏靜態資料列和資料行，或者顯示或隱藏與群組相關聯的資料列和資料行。  
   
  ![rs_drilldown](../../reporting-services/report-design/media/rs-drilldown.gif "rs_drilldown")  
   
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  在向下鑽研報表中，使用者可按一下加號或減號按鈕來展開或摺疊報表區段，以就地顯示詳細資料。 在鑽研報表中，使用者則會按一下摘要值的連結，這會開啟相關的個別報表來顯示詳細資料。 只有在詳細資料報表執行時，才會擷取詳細資料。 鑽研報表需要的資源通常比向下鑽研報表更少。 如需詳細資訊，請參閱 [鑽研、向下鑽研、子報表和巢狀資料區 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)。  
   
 ## <a name="rendering-extension-support-for-hidden-report-items"></a>隱藏報表項目的轉譯延伸模組支援  
- 只有支援使用者互動性的轉譯延伸模組 (例如在報表產生器和報表管理員中執行報表時使用的 HTML 轉譯延伸模組)，才支援報表項目的顯示與隱藏切換。 其他轉譯延伸模組會顯示隱藏的項目。 下列清單描述包含條件式可見性之報表項目的支援：  
+ 只有支援使用者互動性的轉譯延伸模組 (例如在報表產生器和入口網站中執行報表時使用的 HTML 轉譯延伸模組)，才支援報表項目的顯示與隱藏切換。 其他轉譯延伸模組會顯示隱藏的項目。 下列清單描述包含條件式可見性之報表項目的支援：  
   
 -   在 HTML 中，如果項目是隱藏的，則在 HTML 原始檔中看不到它們。  
   

@@ -2,7 +2,6 @@
 title: 項目屬性的範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3802906ac53a015dc5d38ead8599fffd20792ff8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae9d63a532a54ed7f1c163685a39542ce8b2d53a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279268"
 ---
 # <a name="item-property-example-vc"></a>項目屬性的範例 （VC + +）
 這個範例會示範如何[項目](../../../ado/reference/ado-api/item-property-ado.md)屬性存取集合的成員。 範例會開啟***作者***資料表***Pubs***使用參數化命令的資料庫。  

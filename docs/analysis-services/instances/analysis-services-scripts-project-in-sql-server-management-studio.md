@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 指令碼專案，在 SQL Server Management Studio |Microsoft 文件
+title: Analysis Services 指令碼專案，在 SQL Server Management Studio |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e8ee5d2958b6ba7f180472e4d91ce389159e0438
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034966"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 指令碼專案
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/10/2018
   
  Analysis Server 指令碼專案的專案資料夾，可以包含下表列出的檔案類型。  
   
-|檔案類型|Description|  
+|檔案類型|描述|  
 |---------------|-----------------|  
 |Analysis Server 指令碼專案定義檔案 (.ssmsasproj)|包含在方案總管中所顯示之資料夾的中繼資料，也包含資訊指出哪些資料夾應該顯示專案中所包含的檔案。<br /><br /> 專案定義檔案也包含專案中之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接的中繼資料，以及在連接和專案中所包含的指令碼檔案之間產生關聯的中繼資料。|  
 |DMX 指令碼檔案 (.dmx)|包含專案中的 DMX 指令碼。|  
@@ -51,9 +52,9 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server 資料工具 &#40;SSDT&#41; 建立多維度模型](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [多維度運算式 & #40;MDX & #41;參考](../../mdx/multidimensional-expressions-mdx-reference.md)   
- [資料採礦延伸模組 & #40; DMX & #41;參考](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [多維度運算式 &#40;MDX&#41 參考](../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Analysis Services 指令碼語言 &#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
- [Analysis Services 指令碼語言&#40;ASSL xmla&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
+ [Analysis Services 指令碼語言&#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: 使用成員運算式 |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bdf16151dac1e55e6fe41d76078b5fc409fd36d3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581530"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743768"
 ---
 # <a name="using-member-expressions"></a>使用成員運算式
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   成員運算式包含成員識別碼、成員函數或可轉換為成員的運算式。  
   

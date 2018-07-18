@@ -2,7 +2,6 @@
 title: 解決活頁簿的資料繫結物件 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8efa72c893f0b2ddd07c834a07976babfbb46233
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7002d3755d213eebd61efab40aa51d8988f311a3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273637"
 ---
 # <a name="address-book-data-binding-object"></a>通訊錄資料繫結物件
 通訊錄應用程式會使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)繫結至資料的 SQL Server 資料庫 （在這個情況下，DHTML 資料表） 的視覺物件在應用程式的用戶端 HTML 網頁中的物件。 事件驅動的 VBScript 程式邏輯會使用[.RDSDataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)至：  
@@ -54,15 +54,15 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 ## <a name="generic-object-tag-parameters"></a>泛用物件標記參數  
  下表描述與物件標籤相關聯的參數。  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |***CLASSID***|唯一的、 128 位元數字，識別系統的內嵌物件的型別。 這個識別碼是在本機電腦的系統登錄中維護。 (如類別 Id **.RDSDataControl**物件，請參閱[.RDSDataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)|  
-|***識別碼***|定義用來識別程式碼中的內嵌物件的整個文件的識別項。|  
+|***ID***|定義用來識別程式碼中的內嵌物件的整個文件的識別項。|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>RDSDataControl 標記參數  
  下表描述的特定參數 **.RDSDataControl**物件。 (如需完整的清單 **.RDSDataControl**物件參數，以及何時實作它們，請參閱[.RDSDataControl 物件](../../../ado/reference/rds-api/datacontrol-object-rds.md)。)  
   
-|매개 변수|Description|  
+|參數|描述|  
 |---------------|-----------------|  
 |[伺服器](../../../ado/reference/rds-api/server-property-rds.md)|如果您使用 HTTP，值是前面加上的伺服器電腦的名稱`http://`。|  
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|會提供必要的連接資訊給 **.RDSDataControl**連接到 SQL Server。|  

@@ -5,18 +5,18 @@ author: MightyPen
 ms.date: 04/16/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: connect
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: meetb
 ms.author: genemi
-ms.openlocfilehash: f281fff6085048bb5918901a9e12af702b71b3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cfb1ac82894ef8fed001077d54665c9f89239787
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306217"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>用戶端程式設計與 Microsoft SQL Server 首頁
 
@@ -199,7 +199,7 @@ SQL Server 的 Node.js 連接驅動程式是在 JavaScript 中實作。 驅動�
 本節中的 ODBC 內容著重於從 c + + 存取 SQL Server 或 SQL Azure。 下表列出近似的 ODBC 的主要文件大綱。
 
 
-| 區域 | 子區域 | Description |
+| 區域 | 子區域 | 描述 |
 | :--- | :------ | :---------- |
 | [C + + ODBC](./odbc/index.md) | 我們的文件的根節點。 |
 | [Linux Mac](./odbc/linux-mac/index.md) | &nbsp; | Linux 或 MacOS 作業系統上使用 ODBC 的相關資訊。 |
@@ -252,7 +252,7 @@ SQL Server 的 Node.js 連接驅動程式是在 JavaScript 中實作。 驅動�
 
 #### <a name="documentation"></a>文件集
 
-| 區域 | Description |
+| 區域 | 描述 |
 | :--- | :---------- |
 | [SQL Server 的 Python](./python/index.md) | 我們的文件的根節點。 |
 | [pymssql 驅動程式](./python/pymssql/index.md) | Microsoft 不會維護或測試 pymssql 驅動程式。<br /><br />Pymssql 連線驅動程式是一個簡單的介面與 SQL 資料庫，以供 Python 程式使用。 Pymssql 是建置基礎 freetds 才能使用 Microsoft SQL server 提供 Python DB API (PEP 249) 介面。 |

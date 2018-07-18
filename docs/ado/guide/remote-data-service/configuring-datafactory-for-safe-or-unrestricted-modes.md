@@ -2,7 +2,6 @@
 title: 為安全 Safe 或不受限制的模式設定 DataFactory |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3af0bf538b8d2fb774b06644e8089cf201b5fc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b1356c61602d1383788263e4031f8059fe81bb2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273753"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>為安全 Safe 或不受限制的模式設定 DataFactory
 > [!IMPORTANT]

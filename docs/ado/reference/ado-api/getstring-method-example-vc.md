@@ -2,7 +2,6 @@
 title: GetString 方法範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5743aff49b884f16f5b9a3de9fc4a56bcf0f0fb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a301175045bbe323c00b7b17b6217aaec9f7b74f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278897"
 ---
 # <a name="getstring-method-example-vc"></a>GetString 方法範例 （VC + +）
 這個範例會示範[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)方法。  

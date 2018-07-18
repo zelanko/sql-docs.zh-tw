@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914703"
 ---
 # <a name="configuring-data-sources"></a>設定資料來源
 資料來源的相關資訊會儲存在系統登錄。 使用者修改資料來源資訊，透過管理程式。 這可以是 ODBC 管理員、 ODBC 控制台裝置或應用程式或驅動程式的開發人員撰寫的管理程式。  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2016 Analysis Services 回溯相容性 |Microsoft 文件
+title: SQL Server 2016 Analysis Services 回溯相容性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984690"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services 回溯相容性 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
-這篇文章描述功能可用性及目前的版本和舊版之間的行為變更。
+這篇文章說明功能可用性和目前的版本與舊版之間的行為變更。
 
 ## <a name="deprecated-features"></a>已被取代的功能
-A*已被取代功能*會停止從產品在未來版本中，但仍支援，且包含在目前版本為了維持回溯相容性。 建議您停止在新的和現有的專案中使用已被取代的功能，為了維持與未來發行版本的相容性。
+A*已被取代功能*將不再從產品在未來的版本中，但仍支援且包含在目前版本為了維持回溯相容性。 建議您停止使用新的和現有的專案中的已被取代的功能，為了相容於未來的版本。
   
 在此版本中已被取代的下列功能：
   
@@ -35,18 +36,18 @@ A*已被取代功能*會停止從產品在未來版本中，但仍支援，且�
 |多維度|用於主動式快取的 SQL Server 資料表通知。  <br />取代為使用輪詢進行主動式快取。 <br />請參閱[主動式快取 &#40;維度&#41;](../analysis-services/multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md) 和[主動式快取 &#40;資料分割&#41;](../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)。|  
 |多維度|工作階段 Cube。 沒有取代項目。|  
 |多維度|本機 Cube。 沒有取代項目。|  
-|表格式|未來版本將不支援表格式模型 1100 和 1103 相容性層級。 取代為 1200年或更高版本，將模型定義轉換成表格式中繼資料，在相容性層級設定模型。 請參閱 [Analysis Services 中表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
-|工具|SQL Server Profiler for Trace Capture<br /><br /> 取代為使用 SQL Server Management Studio 內嵌的擴充事件分析工具。  <br /> 請參閱 [使用 SQL Server 擴充事件監視 Analysis Services](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
+|表格式|未來版本將不支援表格式模型 1100 和 1103 相容性層級。 取代為 1200年或更高版本，將模型定義轉換成表格式中繼資料，請在相容性層級設定模型。 請參閱 [Analysis Services 中表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。|  
+|工具|SQL Server Profiler for Trace Capture<br /><br /> 取代為使用 SQL Server Management Studio 內嵌的擴充事件分析工具。  <br /> 請參閱 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|Server Profiler for Trace Replay <br />取代。 沒有取代項目。|  
-|追蹤管理物件和 Trace API|Microsoft.AnalysisServices.Trace 物件 (包含 Analysis Services Trace 和 Replay 物件的 API)。 取代為多部分：<br /><br /> 追蹤組態： Microsoft.SqlServer.Management.XEvent<br />追蹤讀取： Microsoft.SqlServer.XEvent.Linq<br />-   追蹤重新執行：無|  
+|追蹤管理物件和 Trace API|Microsoft.AnalysisServices.Trace 物件 (包含 Analysis Services Trace 和 Replay 物件的 API)。 取代為多部分：<br /><br /> -追蹤組態︰ Microsoft.SqlServer.Management.XEvent<br />-追蹤讀取︰ Microsoft.SqlServer.XEvent.Linq<br />-   追蹤重新執行：無|  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中所宣告之先前已被取代的功能仍然有效。 因為尚未從產品中移除支援這些功能的程式碼，所以許多功能仍會在此版本中。 先前已被取代的功能時可能會存取，他們仍會視為已被取代，而實際上可能會移除從產品在任何時間。  
+>  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中所宣告之先前已被取代的功能仍然有效。 因為尚未從產品中移除支援這些功能的程式碼，所以許多功能仍會在此版本中。 在先前已被取代的功能時可能會存取，他們仍視為已被取代，而且可能會實際移除從產品在任何時間。  
 
 ## <a name="discontinued-features"></a>已停止的功能
-A*已停止的功能*先前的版本中已被取代。 它包含在目前版本中，可以繼續，但已不再支援。 已停止的功能可能會移除整個未來版本或更新。
+A*已停止的功能*先前的版本中已被取代。 它可能會繼續包含在目前的版本中，但不受支援。 已停止的功能可能會移除完全在未來版本或更新。
 
-下列功能已被取代的舊版本，並且不再支援此版本中。
+下列功能先前的版本中已被取代，並且不再支援此版本中。
 
 |||  
 |-|-|  
@@ -58,16 +59,16 @@ A*已停止的功能*先前的版本中已被取代。 它包含在目前版本�
 |CELL_EVALUATION_LIST 內建資料格屬性|無。 此功能在 SQL Server 2005 中已遭取代。|  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中所宣告之先前已被取代的功能仍然有效。 因為尚未從產品中移除支援這些功能的程式碼，所以許多功能仍會在此版本中。 先前已被取代的功能時可能會存取，他們仍會視為已被取代，而實際上可能會移除從產品在任何時間。  
+>  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 中所宣告之先前已被取代的功能仍然有效。 因為尚未從產品中移除支援這些功能的程式碼，所以許多功能仍會在此版本中。 在先前已被取代的功能時可能會存取，他們仍視為已被取代，而且可能會實際移除從產品在任何時間。  
 
 ## <a name="breaking-changes"></a>重大變更
 「重大變更」會導致資料模型、應用程式程式碼或指令碼在升級模型或伺服器之後無法運作。
   
 ### <a name="net-40-version-upgrade"></a>.NET 4.0 版本升級  
- Analysis Services 管理物件 (AMO)、 ADOMD.NET 和表格式物件模型 (TOM) 用戶端程式庫現在 runtime 為目標的.NET 4.0。 這可能是以 .NET 3.5 為目標之應用程式的重大變更。 使用這些組件之更新版本的應用程式現在必須以 .NET 4.0 或更新版本為目標。  
+ Analysis Services 管理物件 (AMO)、 ADOMD.NET 和表格式物件模型 (TOM) 用戶端程式庫現在.NET 4.0 執行階段為目標。 這可能是以 .NET 3.5 為目標之應用程式的重大變更。 使用這些組件之更新版本的應用程式現在必須以 .NET 4.0 或更新版本為目標。  
   
 ### <a name="amo-version-upgrade"></a>AMO 版本升級  
- 此版本是版本升級為[Analysis Services 管理物件&#40;AMO&#41; ](https://msdn.microsoft.com/library/mt436122.aspx)和在某些情況下是重大變更。  現有可呼叫 AMO 的程式碼和指令碼將會繼續執行，就和從舊版升級之前一樣。 不過，如果您需要*重新編譯*您應用程式，以及設為目標的 SQL Server 2016 Analysis Services 執行個體，您必須新增下列命名空間，讓您的程式碼或指令碼運作：  
+ 此版本是版本升級[Analysis Services 管理物件&#40;AMO&#41; ](https://msdn.microsoft.com/library/mt436122.aspx)而且在某些情況下為重大變更。  現有可呼叫 AMO 的程式碼和指令碼將會繼續執行，就和從舊版升級之前一樣。 不過，如果您需要*重新編譯*應用程式和您的目標 SQL Server 2016 Analysis Services 執行個體，您必須新增下列命名空間，以讓您的程式碼或指令碼正常運作：  
   
 ```  
   
@@ -81,7 +82,7 @@ using Microsoft.AnalysisServices.Core;
  雖然現在有多個命名空間，且都存在於相同的組件中 (Microsoft.AnalysisServices.dll)。  
   
 ### <a name="xevent-discover-changes"></a>XEvent DISCOVER 變更  
- 若要更妥善支援 XEvent 會探索 SQL Server 2016 Analysis services，資料流在 SSMS 中`DISCOVER_XEVENT_TRACE_DEFINITION`取代為下列 XEvent 追蹤：  
+ 若要更有效地支援 XEvent DISCOVER 資料流在 SSMS 中，SQL Server 2016 Analysis services，`DISCOVER_XEVENT_TRACE_DEFINITION`會取代下列 XEvent 追蹤：  
   
 -   DISCOVER_XEVENT_PACKAGES  
   
@@ -99,16 +100,16 @@ using Microsoft.AnalysisServices.Core;
 這裡會列出本版本中的已變更但不會中斷現有模型或程式碼後置升級的功能行為。
   
 ### <a name="analysis-services-in-sharepoint-mode"></a>SharePoint 模式的 Analysis Services
- 不再需要執行 [Power Pivot 組態精靈] 作為後續安裝工作。 這是適用於所有支援的 SharePoint 版本，從目前的 SQL Server 2016 Analysis Services 載入模型。
+ 不再需要執行 [Power Pivot 組態精靈] 作為後續安裝工作。 這是適用於所有支援版本的 SharePoint，從目前的 SQL Server 2016 Analysis Services 中載入模型。
   
 ### <a name="directquery-mode-for-tabular-models"></a>表格式模型的 DirectQuery 模式
  *DirectQuery* 是表格式模型的資料存取模式，其中，會對後端關聯式資料庫執行查詢執行，以即時擷取結果集。 這通常用於無法放入記憶體的極大型資料集，或是資料是暫時性的而且您想要有表格式模型的查詢中所傳回的最新資料時。
   
- DirectQuery 已是最後數個版本的資料存取模式。 SQL Server 2016 Analysis Services 中已稍微修訂實作，假設表格式模型為 1200年或更高的相容性層級。 DirectQuery 的限制比以前少。 它也有不同的資料庫屬性。
+ DirectQuery 已是最後數個版本的資料存取模式。 SQL Server 2016 Analysis Services 中實作已稍微修訂，假設 1200年或更高的相容性層級的表格式模型。 DirectQuery 的限制比以前少。 它也有不同的資料庫屬性。
   
- 如果您在現有表格式模型中使用 DirectQuery，則可以保留模型的目前相容性層級 1100 或 1103，並繼續使用 DirectQuery 作為這些層級的實作。 或者，您可以升級為 1200年或更高受益於 DirectQuery 進行的增強功能。
+ 如果您在現有表格式模型中使用 DirectQuery，則可以保留模型的目前相容性層級 1100 或 1103，並繼續使用 DirectQuery 作為這些層級的實作。 或者，您可以升級至 1200年或更新版本，才能受益於 DirectQuery 增強功能。
   
- 為 DirectQuery 模型沒有就地升級，因為從舊版的相容性層級設定的較新的 1200年 （含） 以上的相容性層級中沒有確切對應項目。 如果您有現有的表格式模型在 DirectQuery 模式下執行，您應該在 SQL Server Data Tools 中開啟模型、 關閉 DirectQuery、 將設定**相容性層級**屬性為 1200年或更高，，然後重新設定 DirectQuery屬性。 請參閱[DirectQuery 模式](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)如需詳細資訊。
+ DirectQuery 模型無法就地升級，因為較舊的相容性層級設定的較新的 1200年及以上的相容性層級中沒有確切對應項目。 如果您有現有的表格式模型以 DirectQuery 模式執行時，您應該在 SQL Server Data Tools 中開啟模型、 關閉 DirectQuery、 將**相容性層級**屬性為 1200年或更高版本，並再重新設定 DirectQuery屬性。 請參閱[DirectQuery 模式](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)如需詳細資訊。
 
 
 ## <a name="see-also"></a>另請參閱

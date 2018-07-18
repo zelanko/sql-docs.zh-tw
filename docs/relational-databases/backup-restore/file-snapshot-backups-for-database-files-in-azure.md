@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923633"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中資料庫檔案的檔案快照集備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,9 +81,9 @@ ms.lasthandoff: 05/03/2018
   
  **大量復原模式︰** 使用大量記錄復原模式，且使用包含最小量交易記錄的交易記錄備份時，您無法使用交易記錄備份執行記錄還原 (包含時間點復原)。 相反地，您需要執行還原至檔案快照集備份組之時間的資料庫還原。 此限制與資料流備份的限制相同。  
   
- **線上還原：**當使用檔案快照集備份時，您無法執行「線上還原」。 如需「線上還原」的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
+ **線上還原：** 當使用檔案快照集備份時，您無法執行「線上還原」。 如需「線上還原」的詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
- **計費︰**使用 SQL Server 檔案快照集備份時，會隨著檔案變更產生額外費用。 如需詳細資訊，請參閱 [Understanding How Snapshots Accrue Charges](https://msdn.microsoft.com/library/azure/hh768807.aspx)(了解快照集的計費方式)。  
+ **計費︰** 使用 SQL Server 檔案快照集備份時，會隨著檔案變更產生額外費用。 如需詳細資訊，請參閱 [Understanding How Snapshots Accrue Charges](https://msdn.microsoft.com/library/azure/hh768807.aspx)(了解快照集的計費方式)。  
   
  **封存：** 如果您想要封存檔案快照集備份，您可以封存到 Blob 儲存體或資料流備份。 若要封存至 Blob 儲存體，請將檔案快照集備份中的快照集複製到其他 Blob。 若要封存至資料流備份，請將資料庫檔案快照集備份還原為新的資料庫，然後執行壓縮和/或加密的標準串流備份，並且獨於基底 Blob 之外，視所需的期限封存它。  
   

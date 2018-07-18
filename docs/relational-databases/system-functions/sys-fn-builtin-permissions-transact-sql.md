@@ -1,5 +1,5 @@
 ---
-title: sys.fn_builtin_permissions (TRANSACT-SQL) |Microsoft 文件
+title: sys.fn_builtin_permissions & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql
@@ -33,15 +33,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ff815d345d1cddc58ca484351c71baf8df40fcc8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031596"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回伺服器之內建權限階層的描述。 `sys.fn_builtin_permissions` 只有在呼叫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，它會傳回所有的權限，無論是否支援目前的平台。 大部分的權限適用於所有平台，但某些無法適用。 如需範例 SQL 資料庫不能授與伺服器層級權限。 平台支援每個權限的相關資訊，請參閱[權限&#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md)。  
+  傳回伺服器之內建權限階層的描述。 `sys.fn_builtin_permissions` 只有在呼叫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]，而且它會傳回所有的權限，而不論它們是否支援目前的平台。 大部分的權限適用於所有平台，但某些無法適用。 例如無法授與 SQL Database 伺服器層級權限。 如需哪些平台都支援每個權限的詳細資訊，請參閱 <<c0> [ 權限&#40;資料庫引擎&#41;](../../relational-databases/security/permissions-database-engine.md)。</c0>  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,7 +64,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="arguments"></a>引數  
  DEFAULT  
- 當呼叫它時，使用預設選項 （不含引號） 時，則函數會傳回內建權限的完整清單。  
+ 當呼叫它時，使用預設選項 （不含引號） 時，則函數會傳回內建的權限的完整清單。  
   
  NULL  
  相當於 DEFAULT。  
@@ -72,11 +73,11 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  相當於 DEFAULT。  
   
  **'**<securable_class>**'**  
- 當呼叫它時，安全性實體類別的名稱時，sys.fn_builtin_permissions 會傳回所有套用至該類別的權限。 < securable_class > 是必須以引號的字串常值。 **nvarchar(60)**  
+ 當呼叫它時，安全性實體類別的名稱時，sys.fn_builtin_permissions 會傳回所有套用至類別的權限。 < securable_class > 是必須以引號的字串常值。 **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|定序|Description|  
+|資料行名稱|資料類型|定序|描述|  
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|伺服器的定序|安全性實體類別的描述。|  
 |permission_name|**nvarchar(60)**|伺服器的定序|權限名稱。|  
@@ -117,7 +118,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
-|AL|ALTER|USER|  
+|AL|ALTER|使用者|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
 |ALAG|ALTER ANY AVAILABILITY GROUP<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|SERVER|  
@@ -184,7 +185,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
-|CL|CONTROL|USER|  
+|CL|CONTROL|使用者|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
 |CO|CONNECT|ENDPOINT|  
@@ -224,9 +225,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **適用於**： [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。|DATABASE|  
-|DL|DELETE|DATABASE|  
-|DL|DELETE|OBJECT|  
-|DL|DELETE|SCHEMA|  
+|DL|Delete|DATABASE|  
+|DL|Delete|OBJECT|  
+|DL|Delete|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|DATABASE|  
 |EX|執行 CREATE 陳述式之前，請先執行|DATABASE|  
 |EX|執行 CREATE 陳述式之前，請先執行|OBJECT|  
@@ -235,10 +236,10 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |EX|執行 CREATE 陳述式之前，請先執行|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|SERVER|  
 |IM|IMPERSONATE|登入|  
-|IM|IMPERSONATE|USER|  
-|IN|INSERT|DATABASE|  
-|IN|INSERT|OBJECT|  
-|IN|INSERT|SCHEMA|  
+|IM|IMPERSONATE|使用者|  
+|IN|Insert|DATABASE|  
+|IN|Insert|OBJECT|  
+|IN|Insert|SCHEMA|  
 |KIDC|KILL DATABASE CONNECTION<br />**適用於**： [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|DATABASE|  
 |RC|RECEIVE|OBJECT|  
 |RF|REFERENCES|ASSEMBLY|  
@@ -313,7 +314,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
-|VW|VIEW DEFINITION|USER|  
+|VW|VIEW DEFINITION|使用者|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [目前版本](http://go.microsoft.com/fwlink/p/?LinkId=299658))。|DATABASE|  
@@ -327,7 +328,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
 ## <a name="remarks"></a>備註  
- `sys.fn_builtin_permissions` 是資料表值函式，它會發出一份預先定義的權限階層副本。 這個階層含有涵蓋權限。 `DEFAULT`結果集描述的權限階層，其中的根是導向、 非循環圖表 (類別 = SERVER，權限 = CONTROL SERVER)。  
+ `sys.fn_builtin_permissions` 是資料表值函式，它會發出一份預先定義的權限階層副本。 這個階層含有涵蓋權限。 `DEFAULT`結果集描述的權限階層中，根是導向、 非循環圖表 (類別 = SERVER，權限 = CONTROL SERVER)。  
   
  `sys.fn_builtin_permissions` 不接受相互關聯的參數。  
   

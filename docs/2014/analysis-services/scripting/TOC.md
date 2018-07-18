@@ -1,0 +1,8 @@
+# [ASSL 參考](analysis-services-scripting-language-assl-for-xmla.md)
+# [Analysis Services 指令碼語言 XML 元素階層 (ASSL)](analysis-services-scripting-language-xml-element-hierarchy-assl.md)
+# [Analysis Services 指令碼語言 XML 資料類型階層 (ASSL)](analysis-services-scripting-language-xml-data-type-hierarchy-assl.md)
+# [Analysis Services 指令碼語言 XML 元素 (ASSL)](analysis-services-scripting-language-xml-elements-assl.md)
+## [物件 +](objects/objects-assl.md)
+## [集合 +](collections/collections-assl.md)
+## [屬性 +](properties/properties-assl.md)
+# [Analysis Services 指令碼語言 XML 資料類型 (ASSL) +](data-type/analysis-services-scripting-language-xml-data-types-assl.md)

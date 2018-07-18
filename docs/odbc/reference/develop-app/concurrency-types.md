@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911853"
 ---
 # <a name="concurrency-types"></a>並行類型
 若要解決此問題的資料指標中的並行減少，ODBC 會公開資料指標並行的四種不同的類型：  

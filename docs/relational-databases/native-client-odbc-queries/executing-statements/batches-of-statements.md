@@ -1,13 +1,12 @@
 ---
-title: 陳述式的批次 |Microsoft 文件
+title: 陳述式的批次 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-queries
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,22 +17,22 @@ helpviewer_keywords:
 - SQLMoreResults function
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87fc93dc92da66af4371543a2650bad673546b0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54714f81cd4145174b82e255fde683d2cc9ef4d9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414917"
 ---
 # <a name="batches-of-statements"></a>陳述式的批次
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  批次[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式包含兩個或多個陳述式，並以分號 （;），單一字串傳遞至內建**SQLExecDirect**或[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)。 例如：  
+  批次[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式包含兩個或多個陳述式，並以分號 （;），單一字串傳遞至內建**SQLExecDirect**或是[SQLPrepare 函數](http://go.microsoft.com/fwlink/?LinkId=59360)。 例如：  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -41,11 +40,11 @@ SQLExecDirect(hstmt,
     SQL_NTS);  
 ```  
   
- 批次可能會比個別提交陳述式更有效率，因為其網路傳輸量通常較低。 使用[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)來定位下一個結果集時已完成，但目前的結果集。  
+ 批次可能會比個別提交陳述式更有效率，因為其網路傳輸量通常較低。 使用[SQLMoreResults](../../../relational-databases/native-client-odbc-api/sqlmoreresults.md)來定位下一步 時，結果集已完成，但目前的結果集。  
   
  當 ODBC 資料指標屬性設定為預設值 (資料列集大小為 1 的順向唯讀資料指標) 時，就一定可以使用批次。  
   
- 如果針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用伺服器資料指標時執行了批次，伺服器資料指標就會隱含地轉換成預設的結果集。 **SQLExecDirect**或**SQLExecute**傳回 SQL_SUCCESS_WITH_INFO，而且呼叫**SQLGetDiagRec**傳回：  
+ 如果針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 使用伺服器資料指標時執行了批次，伺服器資料指標就會隱含地轉換成預設的結果集。 **SQLExecDirect**或是**SQLExecute**傳回 SQL_SUCCESS_WITH_INFO，而且呼叫**SQLGetDiagRec**傳回：  
   
 ```  
 szSqlState = "01S02", pfNativeError = 0  
@@ -53,6 +52,6 @@ szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type cha
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [執行陳述式 & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
+ [執行陳述式&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

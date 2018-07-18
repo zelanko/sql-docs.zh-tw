@@ -2,7 +2,6 @@
 title: 才可遏制 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 010504a6fe07b952f59631769bd288970c7904c9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82b2b66d691f94ce79795b7a11002ba88f7ac74a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272467"
 ---
 # <a name="reshaping"></a>才可遏制
 A**資料錄集**建立命令可能會指派 」 圖形的子句*別名*名稱 （通常是使用 AS 關鍵字）。 形狀的別名**資料錄集**可以完全不同的命令中參考。 也就是說，您可以重複使用，或*重繪*，先前形狀**資料錄集**中新的圖形命令。 若要支援這項功能，ADO 提供屬性，[重繪名稱](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)。  

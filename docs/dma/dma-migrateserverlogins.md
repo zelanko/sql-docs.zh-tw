@@ -1,5 +1,6 @@
 ---
-title: 移轉 SQL Server 登入 （資料移轉小幫手） |Microsoft 文件
+title: 移轉 SQL Server 登入，使用 Data Migration Assistant |Microsoft Docs
+description: 了解如何移轉 SQL Server 登入，使用 Data Migration Assistant
 ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
@@ -17,41 +18,43 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 23da8fe364ffad914013719f54871e85213befc5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb5dec6babc17ad8be5d0531b463f230e719c73d
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783159"
 ---
-# <a name="migrating-sql-server-logins-using-data-migration-assistant"></a>使用資料移轉小幫手移轉 SQL Server 登入
+# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>移轉 SQL Server 登入，使用 Data Migration Assistant
 
-本文章提供使用資料移轉小幫手移轉 SQL Server 登入的概觀。 
+本文提供使用 Data Migration Assistant 移轉 SQL Server 登入的概觀。 
 
-## <a name="key-concepts"></a>重要概念
-以下是重要的概念。
+## <a name="which-logins-are-migrated"></a>移轉的登入
 
-- 您可以移轉 （例如網域使用者或 Windows 網域群組） 的 Windows 主體為基礎的登入。 您也可以移轉 SQL 驗證，也稱為 SQL Server 登入為基礎建立的登入。
+- 您可以移轉 （例如網域使用者或 Windows 網域群組） 的 Windows 主體為基礎的登入。 您也可以移轉建立根據 SQL 驗證，也稱為 SQL Server 登入的登入。
 
-- 資料移轉小幫手目前並不支援與獨立安全性憑證 （登入對應到憑證）、 獨立的非對稱金鑰 （登入對應到非對稱金鑰） 和對應到認證的登入相關聯的登入。
+- Data Migration Assistant 目前不支援與獨立安全性憑證 （登入對應到憑證）、 獨立的非對稱金鑰 （對應至非對稱金鑰的登入） 和對應至認證的登入相關聯的登入。
 
-- 不會移動資料移轉小幫手**sa**登入與伺服器的原則，以雜湊用雙引號括住的名稱 (\#\#)，這是僅供內部使用。
+- 不會移動 data Migration Assistant **sa**登入和伺服器名稱加上雙引號的雜湊與原則 (\#\#)，這是僅供內部使用。
 
-- 根據預設，資料移轉 Assistatn 選取要移轉所有合格的登入。 或者，您可以選取要移轉的特定登入。 資料移轉小幫手移轉時所有合格的登入，登入使用者對應中保持不變的已移轉的資料庫。 
+- 根據預設，資料移轉小幫手，請選取要移轉所有合格的登入。 或者，您可以選取要移轉的特定登入。 Data Migration Assistant 移轉時所有合格的登入，登入使用者的對應中保持不變的已移轉的資料庫。 
 
-  如果您打算移轉特定登入，請務必選取對應至一或多個使用者在移轉所選的資料庫中的登入。
+  如果您打算移轉特定登入，請務必選取對應至在選取要移轉的資料庫中的一或多個使用者的登入。
 
-- 登入移轉時，資料移轉小幫手也將使用者定義伺服器角色並將伺服器層級權限加入的使用者定義伺服器角色。 角色的擁有者將會設定為**sa**主體。
+- 登入移轉的一部分，Data Migration Assistant 也將使用者定義伺服器角色並將伺服器層級權限加入的使用者定義伺服器角色。 角色的擁有者將會設定為**sa**主體。
 
-- 登入移轉的一部分，資料移轉小幫手會指派權限給目標 SQL Server 上的安全性實體存在於來源 SQL Server 上。 
+## <a name="during-and-after-migration"></a>在移轉前後和期間
 
-  如果登入已存在於目標 SQL Server 中，資料移轉小幫手移轉指派給安全性實體的權限，並將不會重新建立整個登入。
+- 登入移轉的一部分，Data Migration Assistant 將指派權限給目標 SQL Server 上的安全性實體存在於來源 SQL Server 上。 
 
-- 資料移轉小幫手會盡力在登入對應到資料庫使用者，如果目標伺服器上已有登入。
+  如果登入已在目標 SQL Server 中，Data Migration Assistant 移轉只指派給安全性實體的權限，不會重新產生整個登入。
 
-- 建議您檢閱移轉結果，以了解整體的狀態，登入移轉以及移轉後任何建議的動作。
+- 資料移轉小幫手會盡力將登入對應至資料庫使用者，如果目標伺服器上已經有登入。
+
+- 建議您檢閱移轉的結果，以了解登入移轉及任何建議的移轉後動作的整體狀態。
 
 ## <a name="resources"></a>資源
 
-[資料移轉小幫手 (DMA)](../dma/dma-overview.md)
+[Data Migration Assistant (DMA)](../dma/dma-overview.md)
 
 [資料移轉小幫手： 組態設定](../dma/dma-configurationsettings.md)

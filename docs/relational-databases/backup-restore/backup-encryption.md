@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921123"
 ---
 # <a name="backup-encryption"></a>備份加密
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="Prerequisites"></a> 必要條件  
  下列為加密備份的必要條件：  
   
-1.  **為 master 資料庫建立資料庫主要金鑰：**資料庫主要金鑰是一個對稱金鑰，用來保護資料庫中出現之憑證和非對稱金鑰的私密金鑰。 如需詳細資訊，請參閱 [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
+1.  **為 master 資料庫建立資料庫主要金鑰：** 資料庫主要金鑰是一個對稱金鑰，用來保護資料庫中出現之憑證和非對稱金鑰的私密金鑰。 如需詳細資訊，請參閱 [SQL Server 和資料庫加密金鑰 &#40;Database Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)。  
   
 2.  建立用來備份加密的憑證或非對稱金鑰。 如需建立憑證的詳細資訊，請參閱 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)。 如需建立非對稱金鑰的詳細資訊，請參閱 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)。  
   

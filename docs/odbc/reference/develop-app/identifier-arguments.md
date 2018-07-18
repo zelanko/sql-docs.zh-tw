@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911513"
 ---
 # <a name="identifier-arguments"></a>識別項引數
 如果已加上引號的字串識別項引數中，驅動程式會移除開頭和尾端空白，並將常值引號內的字串。 如果字串不加上引號，驅動程式會移除尾端的空白和摺疊成大寫的字串。 設定識別項引數為 null 指標會傳回 SQL_ERROR 並 SQLSTATE HY009 （使用無效的 null 指標），除非引數是目錄名稱，而且不支援類別目錄。  

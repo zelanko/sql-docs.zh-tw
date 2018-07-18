@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030165"
 ---
 # <a name="configurationsetting-property---instancename"></a>ConfigurationSetting 屬性 - InstanceName
   指定特定電腦上報表伺服器執行個體的名稱。 唯讀。  

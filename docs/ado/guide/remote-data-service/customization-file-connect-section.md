@@ -2,7 +2,6 @@
 title: 自訂檔案連接 > 一節 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12d1560220a9c281425a1d75c43f0ef95845d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6774d32587a2c6d5c969be4d56640d137972ddc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273847"
 ---
 # <a name="customization-file-connect-section"></a>自訂檔案連接 > 一節
 此處理常式的預設行為是拒絕所有連線。 **連接**區段會指定該行為的例外狀況。 例如，如果所有**連接**區段已不存在或空的則預設無法建立任何連線。  
@@ -57,9 +57,9 @@ connectionString
   
 ## <a name="remarks"></a>備註  
   
-|部分|Description|  
+|部分|描述|  
 |----------|-----------------|  
-|**連接**|常值字串，表示這是連接字串的項目。|  
+|**[連接]**|常值字串，表示這是連接字串的項目。|  
 |***connectionString***|字串，取代整個用戶端連接字串。|  
 |**存取**|常值字串，表示這是存取項目。|  
 |***accessRight***|其中一個的下列存取權限：<br /><br /> -   **NoAccess** -使用者無法存取資料來源。<br />-   **ReadOnly** — 使用者可以讀取的資料來源。<br />-   **ReadWrite** — 使用者可讀取或寫入至資料來源。|  

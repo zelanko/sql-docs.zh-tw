@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910793"
 ---
 # <a name="how-is-metadata-used"></a>方式是使用中繼資料？
 應用程式需要大部分結果集作業的中繼資料。 例如，應用程式會使用資料行的資料類型來決定要繫結到該資料行的變數種類。 它會使用字元資料行的位元組長度來判斷多少空間，以便顯示該資料行的資料。 應用程式決定資料行之中繼資料的方式取決於應用程式的類型。  

@@ -2,7 +2,6 @@
 title: 檢視物件 (ADOX) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a55d77b7bb7f79ee5871445d5169a4dfd2de5f5d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2980c92b7980fe2fa6ec16f82bc4d8f7d3aff585
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287437"
 ---
 # <a name="view-object-adox"></a>檢視物件 (ADOX)
 代表已篩選的一組記錄或一份虛擬資料表。 使用 ADO 搭配使用時[命令](../../../ado/reference/ado-api/command-object-ado.md)物件**檢視**物件可用於加入、 刪除或修改檢視。  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911323"
 ---
 # <a name="connecting-using-file-data-sources"></a>使用檔案資料來源連接
 檔案資料來源的連接資訊儲存在.dsn 檔案。 如此一來，連接字串可以重複使用由單一使用者，或如果他們已安裝適當的驅動程式，在數個使用者之間共用。 檔案包含驅動程式名稱 （或在自檔案資料來源的情況下的另一個資料來源名稱） 與 （選擇性） 的連接字串，可供**SQLDriverConnect**。 驅動程式管理員建置連接字串呼叫**SQLDriverConnect**從.dsn 檔案中的關鍵字。  

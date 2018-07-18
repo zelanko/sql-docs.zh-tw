@@ -2,7 +2,6 @@
 title: 重新同步處理命令屬性動態 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 240c4d6ce4aa392f01ebb27a4a52fd73c684b981
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37896464c8c9387cb0d68da8bf9bc561e29602d0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281369"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>重新同步處理命令屬性動態 (ADO)
 指定使用者提供的命令字串[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法問題中名為資料表中的資料重新整理[唯一資料表](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動態屬性。  

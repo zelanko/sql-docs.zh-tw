@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,11 +21,12 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 589fc732d9d49b58763f6374277d4375cccbbaf8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309047"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -61,7 +61,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 #### <a name="parameters"></a>參數  
 *$errorsAndOrWarnings*[選用]: 預先定義的常數。 此參數可以採用下表所列的其中一個值：  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤和警告。|  
 |SQLSRV_ERR_ERRORS|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤。|  
@@ -72,7 +72,7 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ## <a name="return-value"></a>傳回值  
 陣列的 **array** ，或為 **null**。 每個**陣列**在傳回**陣列**包含三個索引鍵-值組。 下表列出每個索引鍵及其描述：  
   
-|索引鍵|Description|  
+|索引鍵|描述|  
 |-------|---------------|  
 |SQLSTATE|若為源自 ODBC 驅動程式的錯誤，則為 ODBC 所傳回的 SQLSTATE。 ODBC SQLSTATE 值的詳細資訊，請參閱[ODBC 錯誤碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的錯誤，則為 IMSSP 的 SQLSTATE。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，則為 01SSP 的 SQLSTATE。|  
 |代碼|若為源自 SQL Server 的錯誤，則為原生 SQL Server 錯誤碼。<br /><br />若為源自 ODBC 驅動程式的錯誤，則為 ODBC 所傳回的錯誤碼。<br /><br />對於源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的錯誤，則為 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 錯誤碼。 如需詳細資訊，請參閱 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)。|  

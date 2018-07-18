@@ -3,8 +3,6 @@ title: 專案設定 （轉換） (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4903ec6923239b76784d1aef94303860582b8b85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c90a4ebb4f1c8f9225713ff6608be7f1a2c14e8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779324"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>專案設定 （轉換） (SybaseToSQL)
 [轉換] 頁面的**專案設定**對話方塊包含自訂 SSMA 如何轉換 Sybase Adaptive Server Enterprise (ASE) 語法來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的語法。  
@@ -45,9 +44,9 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**轉換，以警告標記  
+**預設/Optimistic 模式：** 轉換，以警告標記  
   
-**完整模式：**錯誤標記  
+**完整模式：** 錯誤標記  
   
 **LIKE 運算子的轉換**  
 指定是否將運算元，以符合 Sybase ASE 行為類似轉換。 重點是 Sybase 會修剪尾端空格的 like 模式。 因應措施是轉型，右運算式的最大有效位數的固定的長度資料類型。  
@@ -78,15 +77,15 @@ ms.lasthandoff: 05/03/2018
 **NULL 串連**  
 此設定指定如何將轉換的 NULL 字串串連。 此特定的設定，可以設定下列選項：  
   
--   **使用 ISNULL 函數將包裝：**如果設定此選項、 每個非常數 'n'，串連中會包裝與 ISNULL(string_expression) 和 null 值將會取代空字串。  
+-   **使用 ISNULL 函數將包裝：** 如果設定此選項、 每個非常數 'n'，串連中會包裝與 ISNULL(string_expression) 和 null 值將會取代空字串。  
   
 -   **保留目前的語法**  
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**保留目前的語法  
+**預設/Optimistic 模式：** 保留目前的語法  
   
-**完整模式：**換行以 ISNULL 函數  
+**完整模式：** 換行以 ISNULL 函數  
   
 **空字串轉換**  
 此設定指定如何將空字串轉換。 此特定的設定，可以設定下列選項：  
@@ -99,9 +98,9 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**保留目前的語法  
+**預設/Optimistic 模式：** 保留目前的語法  
   
-**完整模式：**取代空間中的所有字串運算式  
+**完整模式：** 取代空間中的所有字串運算式  
   
 **CONVERT 或 CAST 二進位字串轉換**  
 二進位值轉換成數字可以在不同的平台上傳回不同的值。 例如，在 x86 處理器、 CONVERT （整數、 0x00000100） 會傳回 65536 ASE 中的和在 256 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 ASE 也會傳回不同的值，位元組順序而定。  
@@ -116,11 +115,11 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設模式：**轉換，以警告標記  
+**預設模式：** 轉換，以警告標記  
   
-**開放式模式：**簡單的轉換  
+**開放式模式：** 簡單的轉換  
   
-**完整模式：**轉換，並更正  
+**完整模式：** 轉換，並更正  
   
 **動態 SQL**  
 使用此設定指定當它遇到 ASE 程式碼中的動態 SQL SSMA 會顯示在 [輸出] 或 [錯誤清單] 窗格中的訊息 （警告或錯誤） 的類型。  
@@ -131,9 +130,9 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**轉換，以警告標記  
+**預設/Optimistic 模式：** 轉換，以警告標記  
   
-**完整模式：**錯誤標記  
+**完整模式：** 錯誤標記  
   
 **相等檢查轉換**  
 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 中，如果 ANSI_NULLS 設定為 on， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ 任何相等比較包含 null 值時，SQL Azure 會傳回 UNKNOWN。 如果 ANSI_NULLS 是 off，包含 null 值的相等比較，則為 true 時傳回比較資料行和運算式或兩個運算式都是 null。 預設值 （ANSINULL 關閉） Sybase ASE 等號比較作用如同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 與 ANSI_NULLS OFF。  
@@ -144,9 +143,9 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**簡單的轉換  
+**預設/Optimistic 模式：** 簡單的轉換  
   
-**完整模式：**考慮 NULL 值  
+**完整模式：** 考慮 NULL 值  
   
 **格式字串**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ 不再支援 SQL Azure *format_string* PRINT 和 RAISERROR 陳述式中的引數。 *Format_string*變數支援直接在字串中，將可置換的參數，然後取代在執行階段參數。 相反地，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用字串常值或使用的變數所建置的字串中需要完整的字串。 如需詳細資訊，請參閱 「 列印 ([!INCLUDE[tsql](../../includes/tsql_md.md)]) 」 中的主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
@@ -229,9 +228,9 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**建立新的字串  
+**預設/Optimistic 模式：** 建立新的字串  
   
-**完整模式：**建立新變數  
+**完整模式：** 建立新變數  
   
 **將明確值插入 timestamp 資料行**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 不支援外顯值插入 timestamp 資料行。  
@@ -242,9 +241,9 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**排除資料行  
+**預設/Optimistic 模式：** 排除資料行  
   
-**完整模式：**錯誤標記  
+**完整模式：** 錯誤標記  
   
 **儲存暫存程序中所定義的物件**  
 此設定指定是否在程序中出現的暫存物件定義應該儲存在來源中繼資料轉換期間。  
@@ -255,7 +254,7 @@ ms.lasthandoff: 05/03/2018
   
 **預設/開放式模式：** [是]  
   
-**完整模式：**否  
+**完整模式：** 否  
   
 **Proxy 資料表轉換**  
 指定是否 ASE proxy 資料表轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 的資料表或無法轉換和錯誤註解的標記程式碼。  
@@ -266,7 +265,7 @@ ms.lasthandoff: 05/03/2018
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic/完整模式：**錯誤標記  
+**預設/Optimistic/完整模式：** 錯誤標記  
   
 **RAISERROR 基底的訊息編號**  
 ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 集中儲存及可透過使用者訊息**sys.messages**目錄檢視。 此外 ASE 使用者訊息開始 20000，但[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]開始 50001 的錯誤訊息。  
@@ -300,9 +299,9 @@ ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../i
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**轉換，以警告標記  
+**預設/Optimistic 模式：** 轉換，以警告標記  
   
-**完整模式：**錯誤標記  
+**完整模式：** 錯誤標記  
   
 **無法解析識別項**  
 您可以使用此設定來指定 SSMA 會顯示在 [輸出] 或 [錯誤清單] 窗格中，無法解析識別項時的訊息 （警告或錯誤） 的類型。  
@@ -313,9 +312,9 @@ ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../i
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**轉換，以警告標記  
+**預設/Optimistic 模式：** 轉換，以警告標記  
   
-**完整模式：**錯誤標記  
+**完整模式：** 錯誤標記  
   
 ## <a name="system-function-options"></a>系統函式選項  
 **CHARINDEX 函數**  
@@ -327,9 +326,9 @@ ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../i
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**保留目前的語法  
+**預設/Optimistic 模式：** 保留目前的語法  
   
-**完整模式：**取代函式  
+**完整模式：** 取代函式  
   
 **DATALENGTH 函數**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] / SQL Azure 和 ASE 的單一空格的值時，DATALENGTH 函數所傳回的值不同。 在此情況下， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 會傳回 0 和 ASE 傳回 1。  
@@ -340,9 +339,9 @@ ASE 使用者訊息會儲存在每個資料庫。 [!INCLUDE[ssNoVersion](../../i
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**保留目前的語法  
+**預設/Optimistic 模式：** 保留目前的語法  
   
-**完整模式：**取代函式  
+**完整模式：** 取代函式  
   
 **INDEX_COL 函數**  
 ASE 支援選擇性*user_id*引數，INDEX_COL 函式; 不過， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 不支援這個引數。 如果您使用*user_id*引數，此函式不能轉換成[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 的語法。  
@@ -351,7 +350,7 @@ ASE 支援選擇性*user_id*引數，INDEX_COL 函式; 不過， [!INCLUDE[ssNoV
   
 -   若要每次遇到該 INDEX_COL 時顯示錯誤訊息，請選取**錯誤標記**。 SSMA 不會將轉換函數的參考，並會將標示為錯誤註解的陳述式。  
   
-**預設/Optimistic/完整模式：**錯誤標記  
+**預設/Optimistic/完整模式：** 錯誤標記  
   
 **INDEX_COLORDER 函式**  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 並沒有 INDEX_COLORDER 系統函數。  
@@ -362,7 +361,7 @@ ASE 支援選擇性*user_id*引數，INDEX_COL 函式; 不過， [!INCLUDE[ssNoV
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic/完整模式：**錯誤標記  
+**預設/Optimistic/完整模式：** 錯誤標記  
   
 **LEFT 和 RIGHT 函數**  
 左和右 Sybase 中的函式的行為有所不同負數長度參數。  
@@ -373,9 +372,9 @@ ASE 支援選擇性*user_id*引數，INDEX_COL 函式; 不過， [!INCLUDE[ssNoV
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**保留目前的語法  
+**預設/Optimistic 模式：** 保留目前的語法  
   
-**完整模式：**取代函式  
+**完整模式：** 取代函式  
   
 > [!NOTE]  
 > 如果常值，而不是複雜運算式的長度參數，長度值會一律會取代 null，不論專案設定。  
@@ -389,7 +388,7 @@ ASE 支援選擇性*user_id*引數，INDEX_COL 函式; 不過， [!INCLUDE[ssNoV
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic/完整模式：**錯誤標記  
+**預設/Optimistic/完整模式：** 錯誤標記  
   
 **PATINDEX 函數**  
 指定是否要轉換 PATINDEX 函數，以符合 Sybase ASE 行為。 重點是 Sybase 會修剪尾端空格的搜尋模式。 因應措施是進行轉型為固定長度資料類型最大有效位數，並套用 rtrim 函式，來搜尋模式的值運算式。  
@@ -400,9 +399,9 @@ ASE 支援選擇性*user_id*引數，INDEX_COL 函式; 不過， [!INCLUDE[ssNoV
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**請勿使用  
+**預設/Optimistic 模式：** 請勿使用  
   
-**完整模式：**使用  
+**完整模式：** 使用  
   
 **REPLICATE 函數**  
 REPLICATE 函數會重複指定次數的字串。 在 ASE，如果您指定重複字串零次，則結果為 null。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 中，結果為空字串。  
@@ -413,7 +412,7 @@ REPLICATE 函數會重複指定次數的字串。 在 ASE，如果您指定重�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 完整模式/模式：**取代函式  
+**預設/Optimistic 完整模式/模式：** 取代函式  
   
 **TRIM （LTRIM、 RTRIM） 函式**  
 此設定指定是否將 Trim （LTRIM、 RTRIM） 函式的呼叫取代 Sybase ASE 對等項目語法函式，或保留目前的語法。 此特定的設定有下列選項：  
@@ -424,7 +423,7 @@ REPLICATE 函數會重複指定次數的字串。 在 ASE，如果您指定重�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 完整模式/模式：**取代函式  
+**預設/Optimistic 完整模式/模式：** 取代函式  
   
 **SUBSTRING 函數**  
 在 ASE，函式`SUBSTRING(expression, start, length)`如果指定的開始值大於運算式中的字元數目，或長度等於零，傳回 NULL。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]/ SQL Azure 的對等的運算式會傳回空字串。  
@@ -435,9 +434,9 @@ REPLICATE 函數會重複指定次數的字串。 在 ASE，如果您指定重�
   
 當您選取中的轉換模式**模式** 方塊中，SSMA 會套用下列設定：  
   
-**預設/Optimistic 模式：**保留目前的語法  
+**預設/Optimistic 模式：** 保留目前的語法  
   
-**完整模式：**取代函式  
+**完整模式：** 取代函式  
   
 ## <a name="tables"></a>TABLES  
 **新增主索引鍵**  

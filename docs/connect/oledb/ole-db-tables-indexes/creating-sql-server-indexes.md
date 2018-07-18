@@ -2,10 +2,10 @@
 title: 建立 SQL Server 索引 |Microsoft 文件
 description: 建立使用 SQL Server 的 OLE DB 驅動程式的 SQL Server 索引
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4f1169ac498362d8716f532b08f8928cac507287
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 352cdcbe6c2f5697ad7864f8048474d7a19ed632
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689491"
 ---
 # <a name="creating-sql-server-indexes"></a>建立 SQL Server 索引
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server OLE DB 驅動程式會公開**iindexdefinition:: Createindex**函式，讓取用者上，定義新的索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。  
   
@@ -45,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  **CreateIndex**會解譯索引屬性，如下所示。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： SQL Server OLE DB 驅動程式不支援這個屬性。 嘗試將屬性設定**CreateIndex**使 DB_S_ERRORSOCCURRED 傳回值。 *DwStatus*屬性結構成員表示 DBPROPSTATUS_BADVALUE。|  
 |DBPROP_INDEX_CLUSTERED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：控制索引叢集。<br /><br /> VARIANT_TRUE: SQL Server OLE DB 驅動程式會嘗試建立叢集的索引上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在任何資料表上，最多支援一個叢集索引。<br /><br /> VARIANT_FALSE: SQL Server OLE DB 驅動程式會嘗試建立非叢集索引上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。|  
@@ -61,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
  在提供者特有的屬性集 DBPROPSET_SQLSERVERINDEX 中，SQL Server OLE DB 驅動程式會定義下列資料來源資訊屬性。  
   
-|屬性識別碼|Description|  
+|屬性識別碼|描述|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|類型：VT_BOOL (R/W)<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：利用包含 IIndexDefinition::CreateIndex 的 VARIANT_TRUE 值指定此屬性時，會建立對應到要建立索引之資料行的主要 xml 索引。 如果此屬性為 VARIANT_TRUE，cIndexColumnDescs 應該為 1，否則就是錯誤。|  
   

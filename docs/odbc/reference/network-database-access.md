@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916403"
 ---
 # <a name="network-database-access"></a>網路資料庫存取權
 透過網路存取資料庫需要多個元件，其中每一個都是獨立的和位於下方的程式設計介面。 下列圖例顯示這些元件。  

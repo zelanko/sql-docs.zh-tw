@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32832583"
 ---
 # <a name="feature-dependencies-of-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 的功能相依性
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/03/2018
  ##  <a name="test-time"></a>測試時間
 其中一個上述兩項功能需要的特定專案需要明確宣告其 pom 檔案中的個別相依性：
 
-***例如：***如果您使用*Azure Active Directory 驗證功能*，則您需要重新宣告*adal4j*您的專案 pom 檔案中的相依性。 下列程式碼片段，請參閱： 
+***例如：*** 如果您使用*Azure Active Directory 驗證功能*，則您需要重新宣告*adal4j*您的專案 pom 檔案中的相依性。 下列程式碼片段，請參閱： 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
 </dependency>
 ```
 
-***例如：***如果您使用*Azure 金鑰保存庫功能*則需要重新宣告*azure keyvault*相依性和*adal4j*中的相依性您專案的 pom 檔案。 下列程式碼片段，請參閱： 
+***例如：*** 如果您使用*Azure 金鑰保存庫功能*則需要重新宣告*azure keyvault*相依性和*adal4j*中的相依性您專案的 pom 檔案。 下列程式碼片段，請參閱： 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>

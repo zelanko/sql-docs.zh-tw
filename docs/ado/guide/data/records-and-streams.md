@@ -2,7 +2,6 @@
 title: 記錄和資料流 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d083594f9dd54cee0f1c9c70f6fdfe14d32e49a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62066ab92b6acaa393036a7b4be01499fa830dd3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272417"
 ---
 # <a name="records-and-streams"></a>記錄和資料流
 目前提供 ADO[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件做為存取資料來源，例如關聯式資料庫中的資訊的主要方法。 不過，某些提供者支援[記錄](../../../ado/reference/ado-api/record-object-ado.md)和[資料流](../../../ado/reference/ado-api/stream-object-ado.md)替代或互補的物件與資料提供者都可以管理的物件。 如需詳細資訊，在**記錄**行為，請參閱您的提供者文件。  

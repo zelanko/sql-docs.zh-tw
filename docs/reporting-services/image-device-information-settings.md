@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018015"
 ---
 # <a name="image-device-information-settings"></a>影像裝置資訊設定
   下表列出以 IMAGE 格式轉譯的裝置資訊設定。  

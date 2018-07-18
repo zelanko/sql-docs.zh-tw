@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: python
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 003fedf9f8a629c39cfeffb8a2b6ac8840496c40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e744d2e472e082cacb48a3e4f8c3a07a1f87bb03
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309927"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>步驟 3： 連接到使用 pymssql SQL 的概念證明
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

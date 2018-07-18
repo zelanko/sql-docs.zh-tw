@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904193"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare （桌面資料庫驅動程式）
 使用資料行數目不正確準備的陳述式會傳回錯誤，在執行時，不會在陳述式準備。

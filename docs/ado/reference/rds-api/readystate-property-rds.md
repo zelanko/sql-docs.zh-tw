@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1afc0e84acaf044a7271f0d46d599f4422c650b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37ac91100876f9519e7f7ec2de1c9a375567d392
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288537"
 ---
 # <a name="readystate-property-rds"></a>ReadyState 屬性 (RDS)
 表示進度[DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)物件，它會擷取資料到其[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回下列值之一。  
   
-|Value|Description|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|仍在執行目前的查詢，並已經提取的任何資料列。 **DataControl**物件的**資料錄集**不是可供使用。|  
 |**adcReadyStateInteractive**|一組初始的擷取目前查詢的資料列存入**DataControl**物件的**資料錄集**而且可供使用。 剩餘的資料列仍會被擷取。|  

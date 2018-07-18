@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914373"
 ---
 # <a name="numeric-functions"></a>數值函數
 下表描述 ODBC 純量函式集合中包含的數值函式。 藉由呼叫**SQLGetInfo**與*資訊類型*的 SQL_NUMERIC_FUNCTIONS，應用程式可以判斷驅動程式支援哪些數值的函式。  

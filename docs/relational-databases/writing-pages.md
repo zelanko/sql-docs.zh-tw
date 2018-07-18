@@ -7,23 +7,22 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pages
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
-caps.latest.revision: 2
 author: pmasl
 ms.author: pelopes
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 428a59514b2884341e3adcbe842dff28eeb06d17
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1631b6848055db76e2f3876f95b69bd0ff68941
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37187385"
 ---
 # <a name="writing-pages"></a>寫入分頁
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

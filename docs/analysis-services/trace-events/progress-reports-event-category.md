@@ -1,5 +1,5 @@
 ---
-title: 進度報表事件類別目錄 |Microsoft 文件
+title: 進度報表事件類別目錄 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f3e48e34e5b85093793b0ea70786b106d72235a7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981302"
 ---
 # <a name="progress-reports-event-category"></a>進度報表事件類別目錄
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   進度報表事件類別目錄具有下表所描述的事件類別。  
   
-|Event Class|事件識別碼|說明|  
+|Event Class|事件識別碼|描述|  
 |-----------------|--------------|-----------------|  
 |進度報表開始|5|收集自從啟動追蹤之後的所有進度報表開始事件。|  
 |進度報表結束|6|收集自從啟動追蹤之後的所有進度報表結束事件。|  

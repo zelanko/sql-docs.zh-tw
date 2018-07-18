@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901295"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>設定 ODBC 連接共用選項
 連接共用可讓應用程式不需要重新建立每次使用的連接集區使用的連接。 您可以使用**連接共用** 索引標籤**ODBC 資料來源管理員**啟用和停用效能監視 對話方塊。 按兩下要設定連接逾時期限的驅動程式名稱。  

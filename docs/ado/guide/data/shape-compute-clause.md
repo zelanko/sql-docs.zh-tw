@@ -2,7 +2,6 @@
 title: 圖形 COMPUTE 子句 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25d89db4052234482846dc752e5c0431bb517164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272827"
 ---
 # <a name="shape-compute-clause"></a>圖形 COMPUTE 子句
 圖形 COMPUTE 子句產生父代**資料錄集**，其資料行所組成之子系的參考**資料錄集**; 選擇性資料行內容的章節中，新的、 或導出資料行，或子系上執行彙總函式的結果**資料錄集**或先前形狀**資料錄集**; 以及從子系的任何資料行**資料錄集**中所列選擇性的 BY 子句。  
@@ -36,7 +36,7 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>描述  
  這個子句的部分如下所示：  
   
  *child-command*  
@@ -59,7 +59,7 @@ SHAPE child-command [AS] child-alias
  *grp-field-list*  
  父系和子系中的資料行清單**資料錄集**指定資料列應該如何群組之子系的物件。  
   
- 每個資料行中*群組欄位清單，*沒有對應的資料行中的子系和父系**資料錄集**物件。 每個資料列的父**資料錄集**、*群組欄位清單*資料行具有唯一的值與子系**資料錄集**參考的父資料列僅包含子資料列的*群組欄位清單*資料行具有與父資料列相同的值。  
+ 每個資料行中*群組欄位清單，* 沒有對應的資料行中的子系和父系**資料錄集**物件。 每個資料列的父**資料錄集**、*群組欄位清單*資料行具有唯一的值與子系**資料錄集**參考的父資料列僅包含子資料列的*群組欄位清單*資料行具有與父資料列相同的值。  
   
  如果包含，BY 子句，則子系**資料錄集**的資料列會根據 COMPUTE 子句中的資料行群組。 父代**資料錄集**會包含一個資料列的每一個子系中的資料列群組**資料錄集**。  
   
@@ -73,22 +73,22 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
   
  不論哪種方式父**資料錄集**形成 （使用計算或使用附加），它會包含用來關聯至子系的章節資料行**資料錄集**。 如果您想，父系**資料錄集**也可能包含透過子資料列包含彙總 （SUM、 MIN、 MAX 和等等） 的資料行。 父和子系**資料錄集**可能包含資料行包含在中的資料列的運算式**資料錄集**，以及空的資料行，新的和一開始。  
   
-## <a name="operation"></a>運算  
+## <a name="operation"></a>作業  
  *子命令*發行給提供者，則會傳回子**資料錄集**。  
   
  COMPUTE 子句指定的父資料行**資料錄集**，這可能是子系的參考**資料錄集**，一或多個彙總、 計算的運算式或新的資料行。 如果沒有包含 BY 子句，它定義的資料行也會附加至父**資料錄集**。 BY 子句會指定如何在子系的資料列**資料錄集**分組。  
   
  例如，假設您有一個資料表，名為人口統計資料，包括狀態、 縣市和母體擴展的欄位。 （僅做為範例會提供圖形內資料表的母體擴展。）  
   
-|State|City|母體|  
+|State|[縣/市]|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
+|或|Medford|200,000|  
+|或|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|聖地牙哥|600,000|  
 |WA|Tacoma|500,000|  
-|OR|Corvallis|300,000|  
+|或|Corvallis|300,000|  
   
  現在，發出此圖形命令：  
   
@@ -112,29 +112,29 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |---------------------------|--------|-----------|  
 |1,300,000|Child1 參考|CA|  
 |1,200,000|Child2 參考|WA|  
-|1,100,000|Child3 參考|OR|  
+|1,100,000|Child3 參考|或|  
   
 ## <a name="child1"></a>Child1  
   
-|State|City|母體|  
+|State|[縣/市]|母體|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|聖地牙哥|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|母體|  
+|State|[縣/市]|母體|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|母體|  
+|State|[縣/市]|母體|  
 |-----------|----------|----------------|  
-|OR|Medford|200,000|  
-|OR|Portland|400,000|  
-|OR|Corvallis|300,000|  
+|或|Medford|200,000|  
+|或|Portland|400,000|  
+|或|Corvallis|300,000|  
   
 ## <a name="see-also"></a>另請參閱  
  [存取資料列中的階層式資料錄集](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916373"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>ODBC 服務提供者介面 (SPI) 參考
 傳統上，ODBC 定義應用程式開發介面 (API)。 應用程式可以呼叫 API 中的函式，所以應該實作驅動程式管理員和驅動程式內部。  

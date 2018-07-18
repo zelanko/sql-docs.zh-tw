@@ -2,7 +2,6 @@
 title: 叢集屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0550867bb66b87d8396e87d0e883a81a2ffae51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44b80c7eba15937835e066fd09990b23b5f5f2cb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285247"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered 的屬性範例 (VB)
 這個範例會示範[Clustered](../../../ado/reference/adox-api/clustered-property-adox.md)屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 請注意，Microsoft Jet 資料庫不支援叢集的索引，因此這個範例會傳回**False**如**Clustered**屬性中的所有索引**Northwind**資料庫。  

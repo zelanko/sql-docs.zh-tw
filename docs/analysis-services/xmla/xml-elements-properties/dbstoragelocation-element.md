@@ -13,7 +13,7 @@ ms.openlocfilehash: 42b0b7e4ded0aa9d31587e5a4fa296968559e78b
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34579110"
 ---
 # <a name="dbstoragelocation-element"></a>DbStorageLocation 元素

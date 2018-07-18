@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912873"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 動態資料指標
 動態資料指標僅是： 動態。 它可以偵測到的成員資格、 順序和值之結果集資料指標開啟後所做的變更。 例如，假設動態資料指標擷取兩個資料列，並將另一個應用程式然後更新那些資料列的其中一個，並刪除其他。 如果動態資料指標會再嘗試重新提取這些資料列，它會找不到刪除的資料列，但會傳回更新的資料列的新值。  

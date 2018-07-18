@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024995"
 ---
 # <a name="connections-in-adomdnet---performing-transactions"></a>Connections in ADOMD.NET-執行交易
   在 ADO.NET 中，請使用 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdTransaction> 物件來管理指定之 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 物件的交易內容。 這個功能可讓您在相同的內容中執行數個命令。 每個命令都將讀取相同的資料，已讀取的資料不會在每個命令的執行之間變更。  

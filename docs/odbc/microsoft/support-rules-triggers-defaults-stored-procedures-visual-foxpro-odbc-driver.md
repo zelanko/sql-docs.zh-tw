@@ -37,6 +37,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904673"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>規則、 觸發程序，預設值和預存程序 （Visual FoxPro ODBC 驅動程式） 支援
 您無法建立 Visual FoxPro 規則、 觸發程序、 預設值或使用 Visual FoxPro ODBC 驅動程式的預存程序。 不過，您的應用程式可能會與互動現有的規則、 觸發程序、 預設值或預存程序，因為它會將插入、 更新或刪除儲存在資料庫中的 Visual FoxPro 資料。  

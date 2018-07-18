@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907243"
 ---
 # <a name="catalog-and-schema-usage"></a>類別目錄和結構描述的使用方式
 資料來源不一定支援類別目錄和結構描述名稱做為所有的 SQL 陳述式中的物件名稱識別碼。 資料來源可能支援類別目錄和結構描述名稱中一或多個 SQL 陳述式的下列類別： 資料操作語言 (DML) 陳述式、 程序呼叫中，資料表定義陳述式、 索引定義陳述式和權限定義陳述式。 若要判斷哪一個類別目錄和結構描述中可以使用名稱的 SQL 陳述式的類別，應用程式呼叫**SQLGetInfo**與 SQL_CATALOG_USAGE 和 SQL_SCHEMA_USAGE 選項。

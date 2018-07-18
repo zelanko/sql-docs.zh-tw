@@ -13,7 +13,7 @@ ms.openlocfilehash: 36bd72f205ef93069f2e25924c474adc7a227ef8
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575280"
 ---
 # <a name="helpfile-element-xmla"></a>HelpFile 元素 (XMLA)

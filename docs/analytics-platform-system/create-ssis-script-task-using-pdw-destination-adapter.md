@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538968"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>建立使用 SSIS Parallel Data Warehouse 目的地配接器的指令碼工作
 此 SSIS 封裝的指令碼是使用 SSIS PDW 目的地配接器程式碼範例。  Integration Services 指令碼工作可讓您在.Net 應用程式內容中的 SSIS 控制流程中執行幾乎任何作業，即可達成。 

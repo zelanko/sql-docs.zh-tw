@@ -1,5 +1,5 @@
 ---
-title: sys.resource_usage (Azure SQL Database) |Microsoft 文件
+title: sys.resource_usage (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -28,10 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: cc8f9c68bd6074439203c384c99b407022f90997
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985050"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,15 +50,15 @@ ms.lasthandoff: 05/04/2018
   
  針對每個使用者資料庫，連續每個小時都會有一個資料列。 即使資料庫在某一小時期間是處於閒置狀態，還是會有一個資料列，而該資料庫的 usage_in_seconds 值將會是 0。 該小時的儲存使用量和 SKU 資訊則會適當地縮合起來。  
   
-|資料行|資料類型|Description|  
+|[資料行]|資料類型|描述|  
 |-------------|---------------|-----------------|  
 |time|**datetime**|以每小時增加的時間 (UTC)。|  
 |database_name|**nvarchar**|使用者資料庫的名稱。|  
-|sku|**nvarchar**|SKU 的名稱。 以下是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium|  
-|usage_in_seconds|**int**|某一小時內所使用的 CPU 時間總和。<br /><br /> 請注意： 此資料行 v11 已被取代，並不會套用至 V12。 **值一律設定為 0。**|  
+|sku|**nvarchar**|SKU 的名稱。 以下是可能的值：<br /><br /> Web<br /><br /> Business<br /><br /> [基本]<br /><br /> Standard<br /><br /> Premium|  
+|usage_in_seconds|**int**|某一小時內所使用的 CPU 時間總和。<br /><br /> 注意： 本專欄 v11 已被取代，並不適用於 V12。 **值一律是設定為 0。**|  
 |storage_in_megabytes|**decimal**|某一小時的最大儲存體大小，包括資料庫資料、索引、預存程序和中繼資料。|  
   
 ## <a name="permissions"></a>Permissions  
- 這個檢視可用於所有的使用者角色有權連接到虛擬**主要**資料庫。  
+ 這個檢視可供所有使用者角色權限來連接到虛擬**主要**資料庫。  
   
   

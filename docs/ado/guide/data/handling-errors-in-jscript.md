@@ -2,7 +2,6 @@
 title: 在 JScript 中的錯誤處理 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a1e965f08a9176da74724b549dd411065ca549c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dcebaef8a36961a5c28af4eee80fca4d088b9ed5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270867"
 ---
 # <a name="handling-errors-in-jscript"></a>在 JScript 中的錯誤處理
 您的 Microsoft® JScript® 程式碼必須檢查**計數**屬性**連接**物件的**錯誤**集合。 如果值為大於 0，逐一查看集合，並列印在任何其他語言中一樣的值。  

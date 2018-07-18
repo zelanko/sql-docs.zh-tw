@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32932443"
 ---
 # <a name="database-properties-mirroring-page"></a>資料庫屬性 (鏡像頁面)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +105,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **容錯移轉**  
  按一下即可以手動方式將主體資料庫容錯移轉至鏡像資料庫。  
   
-> **注意：**如果鏡像工作階段是在高效能模式中執行，則不支援手動容錯移轉。 若要以手動方式容錯移轉，必須先將作業模式變更為 [不具有自動容錯移轉的高安全性 (同步)]。 在容錯移轉完成之後，就可以將新的主體伺服器執行個體上的作業模式再變回 [高效能 (非同步)]。  
+> **注意：** 如果鏡像工作階段是在高效能模式中執行，則不支援手動容錯移轉。 若要以手動方式容錯移轉，必須先將作業模式變更為 [不具有自動容錯移轉的高安全性 (同步)]。 在容錯移轉完成之後，就可以將新的主體伺服器執行個體上的作業模式再變回 [高效能 (非同步)]。  
   
  會出現提示要求確認。 如果您按一下 [是]，系統就會嘗試容錯移轉。 主體伺服器一開始會使用 Windows 驗證來嘗試連接至鏡像伺服器。 如果 Windows 驗證沒有用，主體伺服器就會顯示 [連接到伺服器] 對話方塊。 如果鏡像伺服器使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證，請在 [驗證] 方塊中選取 [SQL Server 驗證]。 在 [登入] 文字方塊中，指定要用來連接至鏡像伺服器的登入帳戶，然後在 [密碼] 文字方塊中，指定該帳戶的密碼。  
   

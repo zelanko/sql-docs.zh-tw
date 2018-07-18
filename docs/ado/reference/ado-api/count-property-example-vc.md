@@ -2,7 +2,6 @@
 title: 計數屬性範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14470bd316473eb77de66cea530c78073bb902ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 567e1eed35fba0148e4ebb0e9fd137d4425e90ac
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277217"
 ---
 # <a name="count-property-example-vc"></a>計數屬性範例 （VC + +）
 這個範例會示範[計數](../../../ado/reference/ado-api/count-property-ado.md)屬性中的兩個集合與***員工***資料庫。 此屬性會取得中的每個集合的物件數目，並設定列舉這些集合的迴圈的上限。  

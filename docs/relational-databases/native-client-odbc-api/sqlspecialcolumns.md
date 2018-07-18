@@ -1,13 +1,12 @@
 ---
-title: SQLSpecialColumns |Microsoft 文件
+title: SQLSpecialColumns |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -19,29 +18,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9da4bda9e0e2c983764028a291aa1fc5553d6c15
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b818c8efc35d4dde76cecc153e09748619e42d61
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37424807"
 ---
 # <a name="sqlspecialcolumns"></a>SQLSpecialColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  當要求資料列識別碼 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**傳回空的結果集 （無資料列） 的任何要求針對 SQL_SCOPE_CURROW 以外的範圍。 產生的結果集表示資料行只有在這個範圍中才是有效的。  
+  當要求資料列識別碼 (*IdentifierType* SQL_BEST_ROWID)， **SQLSpecialColumns**針對 SQL_SCOPE_CURROW 以外的任何要求範圍傳回空的結果集 （無資料列）。 產生的結果集表示資料行只有在這個範圍中才是有效的。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 不支援識別碼的虛擬資料行。 **SQLSpecialColumns**結果集將會將所有資料行識別為 SQL_PC_NOT_PSEUDO。  
   
- **SQLSpecialColumns**可以在靜態資料指標上執行。 嘗試執行**SQLSpecialColumns**上可更新 （索引鍵集驅動或動態） 傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
+ **SQLSpecialColumns**可以在靜態資料指標上執行。 嘗試執行**SQLSpecialColumns**上可更新 （索引鍵集驅動或動態） 會傳回 SQL_SUCCESS_WITH_INFO，指出資料指標類型已經變更。  
   
 ## <a name="sqlspecialcolumns-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLSpecialColumns 支援  
- 如需值的資訊傳回的資料行 DATA_TYPE、 TYPE_NAME、 COLUMN_SIZE、 BUFFER_LENGTH 和 DECIMAL_DIGTS 日期/時間類型，請參閱 <<c0> [ 目錄中繼資料](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
+ 如需值的資訊傳回的資料行 DATA_TYPE、 TYPE_NAME、 COLUMN_SIZE、 BUFFER_LENGTH 和 DECIMAL_DIGTS 日期/時間類型，請參閱 < [Catalog Metadata](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
 ## <a name="sqlspecialcolumns-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLSpecialColumns 支援  
- **SQLSpecialColumns**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLSpecialColumns**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLSpecialColumns 函數](http://go.microsoft.com/fwlink/?LinkId=59371)   

@@ -3,8 +3,6 @@ title: 專案設定 （移轉） (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 42420de655264630bf03dde19e9a257439d10e7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92294164becfdc79556118e4402938c87d083c28
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779164"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>專案設定 （移轉） (SybaseToSQL)
 [移轉] 頁面的**專案設定**對話方塊包含自訂如何 SSMA 會移轉資料從 Sybase Adaptive Server Enterprise (ASE) 來設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
 |**引發觸發程序**|指定當它將資料加入至 SQL Server 資料表，SSMA 是否應該引發插入觸發程序。<br /><br />**預設模式**: False<br /><br />**開放式模式**: False<br /><br />**完整模式**: False|  
 |**保留識別**|指定 SSMA 是否要將資料加入至 SQL Server 時保存 Sybase 識別值。 值為 False 會識別值依目的地指派。<br /><br />**預設模式**: True<br /><br />**開放式模式**: True<br /><br />**完整模式**: True|  
 |**保留 Null**|指定是否要 SSMA 保存來源資料中的 null 值時，它將資料加入 SQL Server，不論在 SQL Server 中指定的預設值。<br /><br />**預設模式**: True<br /><br />**開放式模式**: True<br /><br />**完整模式**: True|  
-|**錯誤時**|發生錯誤時，請停止資料移轉。 它有三個選項：<br /><br />**停止移轉：**停止資料移轉作業<br /><br />**繼續進行下一個資料表：**會停止目前的資料表資料移轉並繼續進行下一個<br /><br />**繼續進行下一個批次：**會停止目前的批次的資料移轉並繼續進行下一個<br /><br />**預設模式**： 繼續進行下一個批次<br /><br />**開放式模式**： 繼續進行下一個批次<br /><br />**完整模式**： 繼續進行下一個批次|  
+|**錯誤時**|發生錯誤時，請停止資料移轉。 它有三個選項：<br /><br />**停止移轉：** 停止資料移轉作業<br /><br />**繼續進行下一個資料表：** 會停止目前的資料表資料移轉並繼續進行下一個<br /><br />**繼續進行下一個批次：** 會停止目前的批次的資料移轉並繼續進行下一個<br /><br />**預設模式**： 繼續進行下一個批次<br /><br />**開放式模式**： 繼續進行下一個批次<br /><br />**完整模式**： 繼續進行下一個批次|  
 |**四捨五入的數字的小數部分**|指定是否要修剪 decimal 和 numeric 資料的小數部分的整數類型的移轉期間，或如果為非一般的小數部分會顯示錯誤訊息<br /><br />**預設模式**： 否<br /><br />**開放式模式**： 否<br /><br />**完整模式**： 否|  
 |**Sybase Unicode Endian**|指定以位元組由小到大 Sybase Unicode 字串類型。 此特定的設定，可以設定下列選項：<br /><br />由小到大<br /><br />Big endian<br /><br />**預設模式**: Little endian<br /><br />**開放式模式**: Little endian<br /><br />**完整模式**: Little endian|  
 |**資料表鎖定**|指定當它將資料加入資料表資料移轉期間，SSMA 是否鎖定資料表。 大量複製作業期間，會取得大量更新鎖定。 如果值為 False 時，鎖定資料列層級設定。<br /><br />**預設模式**: True<br /><br />**開放式模式**: True<br /><br />**完整模式**: True|  

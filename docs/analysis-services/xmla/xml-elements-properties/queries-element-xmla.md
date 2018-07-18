@@ -13,7 +13,7 @@ ms.openlocfilehash: ae9da22e9afe449eecd0d173fbf998401ca6a7d4
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34577860"
 ---
 # <a name="queries-element-xmla"></a>Queries 元素 (XMLA)

@@ -2,7 +2,7 @@
 title: 用戶端連接中的服務主要名稱 (SPN) 支援 |Microsoft 文件
 description: 用戶端連接中的服務主要名稱 (SPN) 支援
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c119c14cbd0441d22b8e97f8d168d10d652e86d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802d8593c671ecef58f5a0eea8439e2f16898de1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612323"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>用戶端連接中的服務主要名稱 (SPN) 支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   開頭為[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]，服務主體名稱 (Spn) 的支援已經過擴充，跨所有通訊協定進行相互驗證。 在舊版的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，支援 Spn 的 Kerberos 透過 TCP 時的預設 SPN[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]與 Active Directory 註冊任何執行個體。  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="usage"></a>使用方式  
  下表描述用戶端應用程式可允許安全驗證的常見案例。  
   
-|狀況|Description|  
+|狀況|描述|  
 |--------------|-----------------|  
 |舊版應用程式不會指定 SPN。|此相容性案例保證對於針對舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 開發的應用程式沒有行為上的變更。 如果沒有指定 SPN，應用程式會依賴所產生的 SPN，而且不會知道所使用的驗證方法。|  
 |適用於 SQL Server 中使用目前版本的 OLE DB 驅動程式的用戶端應用程式連接字串中指定 SPN，以網域使用者或電腦帳戶、 特定執行個體的 SPN，或使用者定義的字串。|**ServerSPN** 關鍵字可以在提供者、初始化或連接字串中使用，以執行下列操作：<br /><br /> -指定所使用的帳戶[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]連接的執行個體。 這會簡化 Kerberos 驗證的存取。 如果有 Kerberos 金鑰發行中心 (KDC)，而且有指定正確的帳戶，則可能使用 Kerberos 驗證而非 NTLM。 KDC 通常位於與網域控制站相同的電腦上。<br /><br /> -指定要查閱的服務帳戶 SPN[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體。 針對每個[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體，產生兩個預設 Spn 會用於此目的。 不過，系統不保證這些金鑰存在於 Active Directory 中，因此在此情況下，不保證使用 Kerberos 驗證。<br /><br /> -指定將用於查閱的服務帳戶的 SPN[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]執行個體。 這可以是對應到服務帳戶的任何使用者定義字串。 在此情況下，必須在 KDC 中手動註冊金鑰，而且必須滿足使用者定義 SPN 的規則。<br /><br /> **FailoverPartnerSPN** 關鍵字可用於指定容錯移轉夥伴伺服器的 SPN。 帳戶的範圍與 Active Directory 金鑰值與您針對主體伺服器指定的值相同。|  
@@ -90,7 +93,7 @@ ms.lasthandoff: 05/03/2018
   
  SPN 在連接字串或連接屬性中所使用的語法如下所示：  
   
-|語法|Description|  
+|語法|描述|  
 |------------|-----------------|  
 |MSSQLSvc/*fqdn*|使用 TCP 以外的通訊協定時，此為提供者針對預設執行個體所產生的預設 SPN。<br /><br /> *fqdn* 是完整的網域名稱。|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 時，此為提供者產生的預設 SPN。<br /><br /> *port* 是 TCP 通訊埠編號。|  

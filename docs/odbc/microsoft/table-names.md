@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906083"
 ---
 # <a name="table-names"></a>資料表名稱
 當 dBASE、 Microsoft Excel、 Paradox，或使用驅動程式的文字、 資料表名稱中所發生的 SELECT 或 DELETE FROM 子句之後 INTO 子句中的插入，並更新之後，CREATE TABLE 和 DROP TABLE 可以包含有效的路徑、 主要的名稱，與檔案副檔名.  

@@ -2,7 +2,6 @@
 title: InfoMessage 事件 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e4e0df8393f7f6e6b7c7eefccf8f60c18a242679
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6cce906c08e524c3a709c573394a72df89eac8e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279187"
 ---
 # <a name="infomessage-event-ado"></a>InfoMessage 事件 (ADO)
 **InfoMessage**期間發生警告時，會呼叫事件**ConnectionEvent**作業。  

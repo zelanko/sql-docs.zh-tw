@@ -1,1 +1,1 @@
-SQL Server 2014 平行資料倉儲
+SQL Server 2014 的平行資料倉儲

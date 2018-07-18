@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -33,22 +32,23 @@ helpviewer_keywords:
 - options [SQL Server], date
 ms.assetid: a178868e-49d5-4bd5-a5e2-1283409c8ce6
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c1af3730ecd3484728266ed7aecdfd975286461
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4231c534aa021192a45ad56f059cb02c2ddffaec
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792199"
 ---
 # <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40;DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-傳回[ SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 之工作階段的目前值。
+此函式會傳回特定工作階段之 [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md) 的目前值。
   
-如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函數的概觀，請參閱[日期和時間資料類型與函數 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
+如需所有 [!INCLUDE[tsql](../../includes/tsql-md.md)] 日期和時間資料類型與函式的概觀，請參閱[日期和時間資料類型與函式 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)。
   
 ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -62,9 +62,20 @@ ms.lasthandoff: 05/03/2018
 **tinyint**
   
 ## <a name="remarks"></a>Remarks  
-SET DATEFIRST 會指定每週第一天。 U.S.English 預設值是 7，也就是星期日。
+SET DATEFIRST *n* 會指定當週第一天 (星期日、星期一、星期二等)。 *n* 值的範圍從 1 到 7。
+
+```sql
+SET DATEFIRST 3;
+GO  
+SELECT @@DATEFIRST; -- 3 (Wednesday)
+GO
+```  
+
+針對美國英文環境，@@DATEFIRST 預設為 7 (星期日)。
   
-這個語言設定會影響字元字串轉換成日期值以便儲存在資料庫中的解譯方式，以及儲存在資料庫中之日期值的顯示。 這項設定不會影響日期資料的儲存格式。 在下列範例中，語言會先設定為 `Italian`。 陳述式 `SELECT @@DATEFIRST;` 會傳回 `1`。 然後，語言便設定為 `us_english`。 陳述式 `SELECT @@DATEFIRST;` 會傳回 `7`。
+這項語言設定會影響字元字串解譯，因為 SQL Server 會將這些字串轉換成日期值以便資料庫儲存。 這項設定也會影響儲存在資料庫中之日期值的顯示。 這項設定不會影響日期資料的儲存格式。
+
+此範例會先將語言設定為 `Italian`。 陳述式 `SELECT @@DATEFIRST;` 會傳回 `1`。 下一個陳述式會接著將語言設定為 `us_english`。 最後一個陳述式 `SELECT @@DATEFIRST;` 會傳回 `7`。
   
 ```sql
 SET LANGUAGE Italian;  
@@ -77,7 +88,7 @@ SELECT @@DATEFIRST;
 ```  
   
 ## <a name="examples"></a>範例  
-下列範例是將當週第一天設為 `5` (星期五)，並且假設當日 (`Today`) 是星期六。 `SELECT` 陳述式會傳回 `DATEFIRST` 值以及當週當日的號碼。
+此範例是將當週第一天設為 `5` (星期五)，並且假設當日 (`Today`) 是星期六。 `SELECT` 陳述式會傳回 `DATEFIRST` 值以及當週當日的號碼。
   
 ```sql
 SET DATEFIRST 5;  

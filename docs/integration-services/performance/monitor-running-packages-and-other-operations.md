@@ -1,14 +1,12 @@
 ---
 title: 監視執行中套件和其他作業 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
+ms.custom: supportability
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ed3dff81ab07e210b9b239987fc2a7c9c2c52b2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e3a7c929dd3335c5200efc3d4009ba05053f84a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403120"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>監視執行封裝和其他作業
   您可以使用下列其中一項或多項工具，監視 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行封裝、專案驗證及其他作業。 某些工具 (例如資料點選) 僅適用於部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的專案。  
@@ -45,7 +44,12 @@ ms.lasthandoff: 05/03/2018
      如需相關資訊，請參閱 [Performance Counters](../../integration-services/performance/performance-counters.md)。  
   
 -   資料點選  
-  
+
+> [!NOTE]
+> 本文描述如何在一般情況下監視執行中的 SSIS 套件，以及如何在內部部署監視執行中的套件。 您也可以在 Azure SQL Database 中執行並監視 SSIS 套件。 如需詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+>
+> 雖然您也可以在 Linux 上執行 SSIS 套件，但 Linux 上未提供任何監視工具。 如需詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../../linux/sql-server-linux-migrate-ssis.md)。
+
 ## <a name="operation-types"></a>作業類型  
  **伺服器上的** SSISDB [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中會監視數個不同類型的作業。 每個作業都可以有多則與其相關聯的訊息。 每則訊息可以分類在數種不同的類型之一。 例如，訊息可以是資訊、警告或錯誤等類型。 如需訊息類型的完整清單，請參閱 Transact-SQL [catalog.operation_messages &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 檢視的文件集。 如需作業類型的完整清單，請參閱 [catalog.operations &#40;SSISDB 資料庫&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)。  
   

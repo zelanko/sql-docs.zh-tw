@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029265"
 ---
 # <a name="report-designer-f1-help"></a>報表設計師 F1 說明
   本節提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]報表設計師精靈、檢視和對話方塊的 F1 說明。 或者，您可以在使用對話方塊時，按下 F1 或按一下對話方塊中顯示的 [說明] 按鈕，來開啟 [F1 說明]。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538608"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>還原平行處理資料倉儲的 TDE 所保護的資料庫
 使用下列步驟將使用透明資料加密來加密的資料庫還原。  

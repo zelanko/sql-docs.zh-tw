@@ -1,8 +1,6 @@
 ---
 title: 設定專案選項 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 82cfce0e662130c38c8c3040d7366045d0d3fccd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48c434d30623d7b293fc4fef0cb3d42a737b5a5b
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775984"
 ---
 # <a name="setting-project-options-db2tosql"></a>設定專案選項 (DB2ToSQL)
 針對每個 SSMA 專案中，您可以設定專案層級選項。 這些選項會指定物件轉換、 載入物件、 使用者介面和資料移轉的設定。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或移轉將資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，確認組態選項都適用於專案。  
@@ -44,11 +43,11 @@ SSMA 會有五種專案設定：
   
 它也會有四種模式來設定這些設定：  
   
--   預設值  
+-   預設  
   
 -   開放式  
   
--   [完整]  
+-   完整  
   
 -   Custom  
   
@@ -81,7 +80,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     -   若要指定自訂設定，請選取或輸入新的設定或值。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 您也可以自訂設定目前的專案。 這些設定會儲存到目前的專案檔。  
   
@@ -95,7 +94,7 @@ SSMA，在您可以設定所有專案的預設設定。 這些設定會儲存 SS
   
     -   若要指定自訂模式，在**模式**方塊中，選取**自訂**，然後選取適當的專案設定。  
   
-3.  按一下  **確定** 儲存設定。  
+3.  按一下**確定**儲存設定。  
   
 ## <a name="next-steps"></a>後續步驟  
 移轉的下一個步驟取決於您專案的需求：  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904903"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos （桌面資料庫驅動程式）
 大量模型語意**SQLSetPos**呼叫*irow*支援等於 0 的引數。  

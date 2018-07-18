@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -19,15 +18,16 @@ helpviewer_keywords:
 - Collation Designator
 ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de2d55bbe2dafaa02886a1e0deeb675a43469e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be59e84a5b40444e6218c2b390b832516193ecf
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782689"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 定序名稱 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -147,7 +147,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |喬治亞文 (喬治亞)|Cyrillic_General_100_|無法使用|  
 |格陵蘭文 (格陵蘭)|Danish_Greenlandic_100_|無法使用|  
 |古吉拉特文 (印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
-|豪沙文 (奈及利亞，拉丁)|Latin1_General_100_|無法使用|  
+|豪撒文 (奈及利亞，拉丁)|Latin1_General_100_|無法使用|  
 |印度文 (印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |伊布文 (奈及利亞)|Latin1_General_100_|無法使用|  
 |依奴提圖特文 (加拿大，拉丁)|Latin1_General_100_|無法使用|  
@@ -166,7 +166,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |馬來亞拉姆文 (印度)|Indic_General_100_<sup>1</sup>|無法使用|  
 |馬爾他文 (馬爾他)|Maltese_100_|無法使用|  
 |毛利文 (紐西蘭)|Maori_100_|無法使用|  
-|馬布切語 (智利)|Mapudungan_100_|無法使用|  
+|馬普切文 (智利)|Mapudungan_100_|無法使用|  
 |馬拉提文 (印度)|Indic_General_100_<sup>1</sup>|Indic_General_90_|  
 |莫霍克文 (加拿大)|Mohawk_100_|無法使用|  
 |蒙古文 (中國)|Cyrillic_General_100_|無法使用|  
@@ -230,7 +230,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
  [定序與 Unicode 支援](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [常數 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   

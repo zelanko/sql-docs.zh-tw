@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32994085"
 ---
 # <a name="spgettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
   
 ## <a name="arguments"></a>引數  
  [ @request_id=] *request_id*  
- 這是拓撲狀態要求的識別碼。 *request_id*是**int**，預設值是 NULL。 若要取得識別碼，請使用@request_id輸出參數[sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)或查詢[MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)系統資料表。  
+ 這是拓撲狀態要求的識別碼。 *request_id*是**int**，預設值是 NULL。 若要取得識別碼，請使用@request_id輸出參數 [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md)或查詢 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)系統資料表。  
   
 ## <a name="result-sets"></a>結果集  
  sp_gettopologyinfo 會傳回具有單一 XML 資料行的結果集。 XML 資料行中的資料是中的資料相同[MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)系統資料表。  

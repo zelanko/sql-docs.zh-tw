@@ -1,8 +1,6 @@
 ---
 title: 連接到 SQL Server (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5e4cb9b948b186fa473e5860b82910cacedc9d2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50649ffad9b862fa914178400a3c68d5e398c6cb
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773524"
 ---
 # <a name="connect-to-sql-server-accesstosql"></a>連接到 SQL Server (AccessToSQL)
 使用**連接到 SQL Server**對話方塊連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]您想要移轉到。 若要存取**連接到 SQL Server**對話方塊**檔案**功能表上，按一下 **連接到 SQL Server**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **伺服器名稱**  
 輸入或選取要連接到 SQL Server 執行個體。 根據預設，會顯示您連接到最近的執行個體。  
   
@@ -40,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 **伺服器通訊埠**  
 如果您的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]未設定為接受連接，使用預設通訊埠 (1433)，輸入連接埠號碼。 否則，這個值保留空白。  
   
-**資料庫**  
+**[資料庫備份]**  
 指定要移轉的物件和資料的資料庫。 此選項時，無法提供重新連接至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
   
 **驗證**  

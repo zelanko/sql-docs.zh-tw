@@ -3,8 +3,6 @@ title: 評估 SAP ASE 資料庫物件進行轉換 (SybaseToSQL) |Microsoft 文�
 ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7f28d8f35adacfa4443ed804e1233386f3794606
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1e2115578b95ab5ca682d7d8c4f1c4a84907179e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778335"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>評估 SAP ASE 資料庫物件的轉換 (SybaseToSQL)
 在您載入的物件，並將資料移轉至之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 中，您應該先判斷如何移轉程序的複雜度和應該花費多少時間。 SSMA 可以建立顯示的物件和程序，將會成功轉換為百分比的評估報告[!INCLUDE[tsql](../../includes/tsql_md.md)]。 SSMA 也可讓您檢視可能會導致轉換失敗的特定問題。  

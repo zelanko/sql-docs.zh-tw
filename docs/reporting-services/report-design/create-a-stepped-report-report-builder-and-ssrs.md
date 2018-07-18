@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021815"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>建立階梯狀報表 (報表產生器及 SSRS)
 階梯狀報表是一種  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表類型，會在相同的資料行中，顯示父群組底下縮排的詳細資料列或子群組，如以下範例所示：  

@@ -2,7 +2,6 @@
 title: DeleteRecord 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca7b2a425e24a115b8572f26ec7b2efb103ba9ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 168b53d0ad68f55656e005f7523a0c09ba599004
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277637"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 方法 (ADO)
 刪除所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)。  

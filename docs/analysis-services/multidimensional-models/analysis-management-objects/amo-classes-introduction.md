@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020585"
 ---
 # <a name="amo-classes---introduction"></a>AMO 類別-簡介
   分析管理物件 (AMO) 是一個設計來管理的執行個體的類別庫[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]從用戶端應用程式。 AMO 類別是您將用以管理 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 物件 (例如資料庫、維度、Cube、採礦結構與模型、角色與權限、例外狀況等等) 的類別。  

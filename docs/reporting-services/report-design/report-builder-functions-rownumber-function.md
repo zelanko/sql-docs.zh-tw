@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024055"
 ---
 # <a name="report-builder-functions---rownumber-function"></a>報表產生器函式 - RowNumber 函式
   傳回指定範圍中資料列數的執行計數。  

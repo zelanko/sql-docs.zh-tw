@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901713"
 ---
 # <a name="managing-data-sources"></a>管理資料來源
 您已安裝 ODBC 驅動程式從驅動程式的安裝程式之後，您可以為它定義一個或多個資料來源。 資料來源名稱 (DSN) 應該提供資料; 的唯一描述例如，*薪資*或*Accounts Payable*。 所有目前已安裝的驅動程式所定義使用者和系統資料來源會列在**使用者 DSN**或**系統 DSN**索引標籤的**ODBC 資料來源管理員** 對話方塊。 檔案資料來源，在指定的目錄中所述**檔案 DSN**索引標籤，以輸入要顯示的目錄是**查看**方塊中**檔案 DSN**  索引標籤。  

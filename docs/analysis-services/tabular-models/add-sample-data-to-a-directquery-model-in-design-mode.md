@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34041632"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>在設計模式中將範例資料加入 DirectQuery 模型中
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/10/2018
   
 2.  按一下 [資料表] > [屬性] 以開啟 [資料分割管理] 對話方塊。  
   
-    請注意預設資料分割是**（直接查詢）\<資料表名稱 >**。 這是完整資料檢視。 請勿刪除此資料分割。 部署模型時，將會使用此資料分割。  
+    請注意預設資料分割是 **（直接查詢）\<資料表名稱 >**。 這是完整資料檢視。 請勿刪除此資料分割。 部署模型時，將會使用此資料分割。  
   
 4.  選取資料分割，然後按一下 [複製]。  
 

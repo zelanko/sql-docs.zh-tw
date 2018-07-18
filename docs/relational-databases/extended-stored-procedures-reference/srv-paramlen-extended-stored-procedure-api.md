@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32937933"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (擴充預存程序 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,13 +67,13 @@ n
   
 |新的資料類型|輸入資料長度|  
 |--------------------|-----------------------|  
-|**BITN**|**NULL：**1<br /><br /> **ZERO：**1<br /><br /> **>=255：**N/A<br /><br /> **<255：**N/A|  
-|**BIGVARCHAR**|**NULL：**0<br /><br /> **ZERO：**1<br /><br /> **>=255:** 255<br /><br /> **<255：**實際 *len*|  
-|**BIGCHAR**|**NULL：**0<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGBINARY**|**NULL：**0<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGVARBINARY**|**NULL：**0<br /><br /> **ZERO：**1<br /><br /> **>=255:** 255<br /><br /> **<255：**實際 *len*|  
-|**NCHAR**|**NULL：**0<br /><br /> **ZERO：**255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**NVARCHAR**|**NULL：**0<br /><br /> **ZERO：**1<br /><br /> **>=255:** 255<br /><br /> **<255：**實際 *len*|  
+|**BITN**|**NULL：** 1<br /><br /> **ZERO：** 1<br /><br /> **>=255：** N/A<br /><br /> **<255：** N/A|  
+|**BIGVARCHAR**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255:** 255<br /><br /> **<255：** 實際 *len*|  
+|**BIGCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BIGBINARY**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BIGVARBINARY**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255:** 255<br /><br /> **<255：** 實際 *len*|  
+|**NCHAR**|**NULL：** 0<br /><br /> **ZERO：** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**NVARCHAR**|**NULL：** 0<br /><br /> **ZERO：** 1<br /><br /> **>=255:** 255<br /><br /> **<255：** 實際 *len*|  
 |**NTEXT**|**NULL：**-1<br /><br /> **ZERO：**-1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
   
  \*   實際 *len* = 多位元組字元字串 (cch) 的長度  

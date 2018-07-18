@@ -1,14 +1,12 @@
 ---
-title: bcp_getcolfmt |Microsoft 文件
+title: bcp_getcolfmt |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,11 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cbffca9e7a853be778c998562deeb6a51c72b94a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c2826a3b54f61c63f84f7c0fb13fa941ce1695e
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419307"
 ---
 # <a name="bcpgetcolfmt"></a>bcp_getcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ RETCODE bcp_getcolfmt (
  *field*  
  這是擷取屬性的資料行編號。  
   
- *屬性*  
+ *property*  
  這是其中一個屬性常數。  
   
  *pValue*  
@@ -72,14 +71,14 @@ RETCODE bcp_getcolfmt (
  SUCCEED 或 FAIL。  
   
 ## <a name="remarks"></a>備註  
- 資料行格式屬性值會列在[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)主題。 資料行格式屬性值藉由呼叫設定**bcp_setcolfmt**函式，而**bcp_getcolfmt**函式用來尋找資料行格式屬性值。  
+ 資料行格式屬性值會列在[bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)主題。 資料行格式屬性值為藉由呼叫**bcp_setcolfmt**函式，而**bcp_getcolfmt**函式用來尋找資料行格式屬性值。  
   
- 連接到時的行為變更可能會觀察到[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]（或更新版本） 伺服器電腦上，相較於先前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 如需詳細資訊，請參閱[中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
+ 當連接到的行為變更可能會觀察到[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]（或更新版本） 伺服器電腦上，相較於先前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本。 如需詳細資訊，請參閱 <<c0> [ 中繼資料探索](../../relational-databases/native-client/features/metadata-discovery.md)。  
   
 ## <a name="bcpgetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt 對於增強型日期和時間功能的支援  
  搭配使用的型別**BCP_FMT_TYPE**日期/時間類型的屬性中所指定[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [大量複製函數](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

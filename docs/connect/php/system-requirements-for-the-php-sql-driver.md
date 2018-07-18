@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c1eae99587a1f447b809becee9509d5a04136e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8b98b10ee285c8e6be4e34214689eeaa7d7049f
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309797"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>系統需求的 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,7 +71,7 @@ PHP 執行所在的電腦上需要 Microsoft ODBC Driver for SQL Server 的正�
 
 如果您使用 SQLSRV 驅動程式[sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md)傳回哪個版本的相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]正在使用 Microsoft ODBC Driver for SQL Server [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 如果您使用 PDO_SQLSRV 驅動程式，您可以使用[pdo:: getattribute](../../connect/php/pdo-getattribute.md)來探索版本。  
 
-## <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>[SQL Server]
 
 支援 azure SQL 資料庫。 如需資訊，請參閱[連接到 Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)。
 

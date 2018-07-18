@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_xtp_nonclustered_index_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7bec37b0223f2384ebdfc2898717bd937bb0b046
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978120"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,9 +42,9 @@ ms.lasthandoff: 05/23/2018
   
  大量重試表示發生並行問題，請連絡 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 支援人員。  
   
- 如需有關記憶體最佳化的非叢集索引的詳細資訊，請參閱[SQL Server 記憶體中 OLTP 內部概觀](http://t.co/T6zToWc6y6)，第 17 頁。  
+ 如需有關記憶體最佳化的非叢集索引的詳細資訊，請參閱 < [SQL Server 記憶體內部 OLTP 內部概觀](http://t.co/T6zToWc6y6)，第 17 頁。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|物件的識別碼。|  
 |xtp_object_id|**bigint**|記憶體最佳化資料表的識別碼。|  

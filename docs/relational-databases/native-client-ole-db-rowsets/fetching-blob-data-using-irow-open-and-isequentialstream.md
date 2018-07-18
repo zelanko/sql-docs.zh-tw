@@ -1,13 +1,12 @@
 ---
-title: '使用 irow:: Open 和 ISequentialStream 提取 BLOB 資料 |Microsoft 文件'
+title: '使用 irow:: Open 和 ISequentialStream 提取 BLOB 資料 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3716c9eedab9105a9671c296d2f55aaa3c624528
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd55cc02558987350e0a620ef0c48150465a0c47
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410287"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 
   **Irow:: Open**僅支援開啟 DBGUID_STREAM 和 DBGUID_NULL 類型的物件。  
   
- 下列函式使用**irow:: Open**和**ISequentialStream**來提取大型資料。  
+ 下列函式會使用**irow:: Open**並**ISequentialStream**來提取大型資料。  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,9 +84,9 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 大型資料可繫結或擷取使用**ISequentialStream**介面。 對於繫結的資料行，狀態旗標會藉由設定 DBSTATUS_S_TRUNCATED 指出資料是否遭到截斷。  
+ 大型資料可以繫結，或藉由抓取**ISequentialStream**介面。 對於繫結的資料行，狀態旗標會藉由設定 DBSTATUS_S_TRUNCATED 指出資料是否遭到截斷。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 IRow 提取 BLOB 資料](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [使用 IRow 擷取 BLOB 資料](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

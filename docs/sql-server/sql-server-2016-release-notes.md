@@ -2,11 +2,10 @@
 title: SQL Server 2016 版本資訊 | Microsoft Docs
 ms.date: 04/24/2018
 ms.prod: sql
-ms.prod_service: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: supportability
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2568e2d57cb05164153fa5a9b2a22a49bcb31dac
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 413ee4cac6f8cb6ca60ad92165f50177e4801cf1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926499"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

@@ -3,23 +3,21 @@ title: 計劃和測試資料庫引擎升級計畫 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b58c3b7a00b8ba886c189c5d4b4ff3678d57f4a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 17c19123ed16308ad1919ad9901508e838aa4370
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770664"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332248"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
 

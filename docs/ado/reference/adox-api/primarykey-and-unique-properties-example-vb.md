@@ -2,7 +2,6 @@
 title: PrimaryKey 和獨有的內容範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ee188dfe7c5b40484580aa6c50f9ed99bda4ec2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fdb442faab89d88577449c136ba4ffb1cf2781f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286697"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey 和獨有的內容範例 (VB)
 這個範例會示範[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)和[Unique](../../../ado/reference/adox-api/unique-property-adox.md)屬性[索引](../../../ado/reference/adox-api/index-object-adox.md)。 程式碼會建立新的資料表具有兩個資料行。 **PrimaryKey**和**Unique**屬性用來讓一個資料行不允許重複的值是主索引鍵。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907033"
 ---
 # <a name="display-size"></a>顯示大小
 資料行的顯示大小是以字元格式顯示資料所需字元的數目上限。 下表定義每個 ODBC SQL 資料類型的顯示大小。  

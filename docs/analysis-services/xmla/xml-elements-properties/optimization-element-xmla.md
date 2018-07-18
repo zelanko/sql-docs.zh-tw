@@ -13,7 +13,7 @@ ms.openlocfilehash: 156aa5b9ae7ea6997c74be1b767843abdeeca780
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575990"
 ---
 # <a name="optimization-element-xmla"></a>Optimization 元素 (XMLA)

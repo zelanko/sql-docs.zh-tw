@@ -2,7 +2,7 @@
 title: SQL Server 的 OLE DB 驅動程式的元件 |Microsoft 文件
 description: 適用於 SQL Server 的 OLE DB 驅動程式的元件
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -18,20 +18,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 2548d1c3830611f9b9fddb556d8711ca7039b9ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78b72796de5aa4ac2fb9bc0793f98365b7d8281e
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611683"
 ---
 # <a name="components-of-ole-db-driver-for-sql-server"></a>適用於 SQL Server 的 OLE DB 驅動程式的元件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB 驅動程式的 SQL Server 包含下列元件：  
 
-|元件|Description|  
+|元件|描述|  
 |---------------|-----------------|  
 |msoledbsql.dll|動態連結程式庫 (DLL) 檔案，其中包含所有 SQL Server 功能，OLE DB 驅動程式。|  
 |msoledbsqlr.rll|SQL Server 文件庫，OLE DB 驅動程式隨附的資源檔。|   

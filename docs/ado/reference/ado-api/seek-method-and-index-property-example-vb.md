@@ -2,7 +2,6 @@
 title: 搜尋方法和索引屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0fb30723fb55c7e33de4f841eb64b0be5dcafef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f9b13fa707cd1b44621b3c3dd74b7649f25b5f7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281547"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>搜尋方法和索引屬性範例 (VB)
 這個範例會使用[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件的[搜尋](../../../ado/reference/ado-api/seek-method.md)方法和[索引](../../../ado/reference/ado-api/index-property.md)屬性搭配給定***員工識別碼***，以找出中的員工的姓名***員工***Nwind.mdb 資料庫資料表。  

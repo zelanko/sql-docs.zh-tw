@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -23,12 +22,12 @@ caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6502c85bdf016f325058c69fc5ae01f8d2553e87
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a1104ea9d5e26731ad22be5ab0645d2e8773a08
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550649"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322217"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>移轉 Reporting Services 安裝 (原生模式)
 

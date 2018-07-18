@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913033"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC 驅動程式管理員所產生的事件
 > [!IMPORTANT]  

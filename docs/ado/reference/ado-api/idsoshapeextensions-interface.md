@@ -2,7 +2,6 @@
 title: IDSOShapeExtensions 介面 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0ab928d6ae248acf7dfeafa95755723474c14b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbffd2f45ada95c455bb1cc44165a4c9455cfe3e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278917"
 ---
 # <a name="idsoshapeextensions-interface"></a>IDSOShapeExtensions 介面
 SHAPE 提供者取得基礎 OLE DB 資料來源物件。  

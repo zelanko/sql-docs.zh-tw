@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024355"
 ---
 # <a name="programming-amo-olap-advanced-objects"></a>設計 AMO OLAP 進階物件的程式
   本主題說明 OLAP 進階物件的分析管理物件 (AMO) 程式設計詳細資料。 本主題包含下列幾節：  

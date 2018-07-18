@@ -13,27 +13,28 @@ ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: c72e6d5b8e3e2770300e6b890b076bf77617849b
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 5470e19da9d8641a1337f0f8162fe0a1789820dd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982260"
 ---
-# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入門： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連接並查詢 Azure SQL database
+# <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>快速入門： 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]連線及查詢 Azure SQL database
 
 本快速入門示範如何使用 *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* 連接到 Azure SQL database，然後使用 TRANSACT-SQL (T-SQL) 陳述式來建立 *TutorialDB* 並用於  [!INCLUDE[name-sos](../includes/name-sos-short.md)] 教學課程。
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成本快速入門，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 伺服器。
+若要完成本快速入門中，您需要[!INCLUDE[name-sos](../includes/name-sos-short.md)]，和 Azure SQL 伺服器。
 
 - [安裝[!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md)。
 
 如果您還沒有 Azure SQL 伺服器，請完成下列 Azure SQL Database 快速入門 (請記住伺服器名稱和登入認證！)：
 
-- [建立資料庫-入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
-- [建立資料庫-CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
-- [建立資料庫-PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
+- [建立 DB-入口網站](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
+- [建立 DB-CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
+- [建立 DB-PowerShell](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-powershell)
 
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>連接到 Azure SQL Database 伺服器
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/17/2018
 
 1. 第一次執行[!INCLUDE[name-sos](../includes/name-sos-short.md)]時應該會開啟**連接**頁面。 如果您沒有看到**連接**頁面，按一下**加入連接**，或**伺服器**資訊看板中的**新增連線**圖示：
    
-   ![新的連線圖示](media/quickstart-sql-database/new-connection-icon.png)
+   ![新的 [連線] 圖示](media/quickstart-sql-database/new-connection-icon.png)
 
 2. 本文使用 *SQL 登入*，但也支援 *Windows 驗證*。 如下表所示，填入*您*的 Azure SQL server 所使用的伺服器名稱、使用者名稱和密碼:
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/17/2018
    | **資料庫名稱** | *保留空白* | 您想要連接到資料庫的名稱。 |
    | **伺服器群組** | 選取 <Default> | 如果您建立伺服器群組，您可以設定為特定的伺服器群組。 | 
 
-   ![新的連線圖示](media/quickstart-sql-database/new-connection-screen.png)  
+   ![新的 [連線] 圖示](media/quickstart-sql-database/new-connection-screen.png)  
 
 3. 如果您的伺服器沒有允許 SQL Operations Studio 連線的防火牆規則，**建立新的防火牆規則**表單將會開啟。 請完成表單，以建立新的防火牆規則。 如需詳細資訊，請參閱[防火牆規則](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure)。
 
@@ -70,7 +71,7 @@ ms.lasthandoff: 05/17/2018
 
 1. 在伺服器資訊看板上以滑鼠右鍵按一下您的 Azure SQL 伺服器，然後選取**新增查詢。**
 
-1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
+1. 將下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    ```sql
    IF NOT EXISTS (
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/17/2018
 
 
 
-1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
+1. 將下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    > [!NOTE]
    > 您可以將程式碼片段附加或覆寫先前編輯器中的查詢。 請注意，按一下**執行**只會執行已選取的查詢。 如果未選取，按一下**執行**將執行編輯器中所有的查詢。
@@ -122,7 +123,7 @@ ms.lasthandoff: 05/17/2018
 
 ## <a name="insert-rows"></a>插入資料列
 
-- 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
+- 將下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/17/2018
 
 
 ## <a name="view-the-result"></a>檢視結果
-1. 下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
+1. 將下列程式碼片段貼到查詢編輯器，然後按一下**執行**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -153,8 +154,8 @@ ms.lasthandoff: 05/17/2018
 ## <a name="clean-up-resources"></a>清除資源
 
 在此系列文章中其他的文章建立在本快速入門之上。 如果您打算繼續實作後續的快速入門，請勿清除本快速入門中建立的資源。  如果您不打算繼續，請使用下列步驟刪除本快速入門在 Azure 入口網站所建立的資源。
-刪除您不再需要的資源群組來清除資源。 如需詳細資訊，請參閱[清除資源](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
+清除資源，藉由刪除您不再需要的資源群組。 如需詳細資訊，請參閱 <<c0> [ 清除資源](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources)。
 
 ## <a name="next-steps"></a>後續的步驟
 
-現在您已成功連接到 Azure SQL database，並執行查詢，試試[教學課程中的程式碼編輯器](tutorial-sql-editor.md)。
+既然您已成功連線到 Azure SQL database，並執行查詢，試試看[教學課程中的程式碼編輯器](tutorial-sql-editor.md)。

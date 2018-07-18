@@ -1,8 +1,6 @@
 ---
 title: 選取並設定受影響的物件 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4593830a2cc22b04977f117502bb14118b1b31a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0db1a6e426c7ca889b9805850ec81f5de120b0a5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777984"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>選取並設定受影響的物件 (OracleToSQL)
 在此頁面中，您可以選取資料表和外部索引鍵，在其中變更應該比較當 SSMA 確認上一個步驟中所選擇的物件執行的結果。 此外，您可以自訂的驗證參數。  
@@ -45,7 +44,7 @@ ms.lasthandoff: 05/03/2018
   
 -   規則  
   
--   預設值  
+-   預設  
   
 -   識別  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sql"></a>Sql  
 SQL 索引標籤包含 「 建立資料表 」 選取的資料表的 SQL。  
   
-## <a name="data"></a>資料  
+## <a name="data"></a>data  
 資料索引標籤會顯示選取的資料表中存在的資料。  
   
 ## <a name="properties"></a>屬性  

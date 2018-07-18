@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 組態工具 |Microsoft 文件
+title: Power Pivot 組態工具 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0a8bbdabd1fe02033de6dd9f718a4b0b02f8d25d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ab3e6eb8839b87f1145501cd0b30895bf181ec60
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984470"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot 組態工具
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
 |名稱|支援的 SharePoint 版本|詳細組態|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態|SharePoint 2013|[設定或修復 Power Pivot for SharePoint 2013 &#40;Power Pivot 組態工具&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具|SharePoint 2010 含 SharePoint 2010|[設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具|SharePoint 2010 含 SharePoint 2010|[設定或修復 Power Pivot for SharePoint 2010 （Power Pivot 組態工具）](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> 兩種組態工具之間的差異  
  這兩個版本的組態工具很類似，但是兩者執行的組態設定步驟有些差異。 這些差異是因為 SharePoint 2010 和 SharePoint 2013 之間的變更，以及 SQL Server 2012 SP1 版的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 與舊版 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 之間的架構差異而產生。  
@@ -62,10 +63,10 @@ ms.lasthandoff: 05/10/2018
   
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 組態|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 組態工具|  
 |--------------------------------------------------------------|-----------------------------------------------|  
-|主頁面有 [適用於 Excel Services 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 這個新選項。 這個選項支援採用在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 您設定 Excel Services 使用以 SharePoint 模式執行的一部或多部 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。<br /><br /> ![新的組態工具中的 PowerPivot 伺服器](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "新組態工具中的 PowerPivot 伺服器")||  
-||2010 工具包括 [在本機伺服器上註冊 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])] 頁面，用來設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的本機執行個體。 這個頁面不是 2013 工具的一部分，因為沒有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本機執行個體。<br /><br /> ![為舊組態工具中的服務帳戶](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "做為舊組態工具中的服務帳戶")|  
+|主頁面有 [適用於 Excel Services 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 這個新選項。 這個選項支援採用在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 您設定 Excel Services 使用以 SharePoint 模式執行的一部或多部 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 伺服器。<br /><br /> ![在新的組態工具中的 PowerPivot 伺服器](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "新組態工具中的 PowerPivot 伺服器")||  
+||2010 工具包括 [在本機伺服器上註冊 SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])] 頁面，用來設定 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的本機執行個體。 這個頁面不是 2013 工具的一部分，因為沒有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的本機執行個體。<br /><br /> ![舊組態工具中的服務帳戶身分](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "做為舊組態工具中的服務帳戶")|  
 ||[建立 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 服務應用程式] 頁面多了 [升級活頁簿以啟用資料重新整理] 這個額外選項。 這個選項在 2013 工具中無法使用。<br /><br /> ![升級舊組態工具中的活頁簿](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "升級舊組態工具中的活頁簿")|  
-|2013 工具有 [設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 這個新頁面。 這個頁面支援在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 根據預設，在主頁面的文字方塊 [適用於 Excel Services 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 中輸入的伺服器名稱，也會在 [設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 上列出。<br /><br /> ![註冊 PowerPivot 伺服器新組態工具](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "註冊 PowerPivot 伺服器新組態工具")||  
+|2013 工具有 [設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 這個新頁面。 這個頁面支援在 SharePoint 伺服器陣列外部執行之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 的新架構。 根據預設，在主頁面的文字方塊 [適用於 Excel Services 的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 中輸入的伺服器名稱，也會在 [設定 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器] 上列出。<br /><br /> ![註冊 PowerPivot 伺服器新組態工具](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "註冊的 PowerPivot 伺服器新組態工具")||  
 |2013 工具有一個新頁面 [將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 增益集註冊為 Excel Services Usage Tracker]。 SharePoint 2010 Excel Services 不會追蹤 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 的使用量資料。||  
 ||2010 工具包括 [加入 MSOLAP.5 做為受信任的提供者] 這個頁面，可用來註冊 MSOLAP，讓 SharePoint 2010 中的 Excel Services 可以載入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 模型。 這個頁面不是 2013 工具的一部分。 SharePoint 2013 Excel Services 不會使用 MSOLAP 提供者來載入模型。|  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/10/2018
 >  此工具不會設定 Reporting Services。 如果您要將 Reporting Services 加入至 SharePoint 環境，則需要另外安裝及設定 Reporting Services。 如需詳細資訊，請參閱下列內容：  
 >   
 >  -   [以 SharePoint 模式安裝第一部報表伺服器](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md)。  
-> -   [Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)。  
+> -   [Install Reporting Services SharePoint Mode for SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)。  
   
 ##  <a name="bmkm_start_tool"></a> 啟動其中一種 Power Pivot 組態工具  
   

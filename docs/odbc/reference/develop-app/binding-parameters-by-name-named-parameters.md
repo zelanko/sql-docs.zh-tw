@@ -17,11 +17,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2fc52c7bd989884b80c489801e76b51981270c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 41e5c18119e8ec3482e6cddbdaee26bf10d6b1d0
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619515"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>繫結參數 （具名參數） 的名稱
 特定 Dbms 允許應用程式名稱而不是在程序呼叫中的位置來指定預存程序的參數。 這種參數稱為*具名參數*。 ODBC 支援具名參數的使用。 在 ODBC 中，具名的參數僅用於預存程序的呼叫，並不能用於其他 SQL 陳述式。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- 在此程序的第一個參數， @title_id，預設值為 1。 應用程式可以使用下列程式碼來叫用此程序，它會指定只有一個動態參數。 這個參數是具名的參數具有名稱"@quote"。  
+ 在此程序的第一個參數， @title_id，預設值為 1。 應用程式可以使用下列程式碼來叫用此程序，它會指定只有一個動態參數。 這個參數是具名的參數具有名稱"\@引號"。  
   
 ```  
 // Prepare the procedure invocation statement.  

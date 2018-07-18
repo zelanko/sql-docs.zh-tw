@@ -2,10 +2,10 @@
 title: 資料列集和 SQL Server 資料指標 |Microsoft 文件
 description: 資料列集和 SQL Server 資料指標
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 12b9c497e0bfdf6b1d1ce2da270a04bc0f7ab396
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0860e164edcff6f4f89f1ac5ece5624d11d4568e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689601"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用兩個方法將結果集傳回給取用者：  
   
@@ -65,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
  下列資料列集屬性的直接 SQL Server 以使用 OLE DB 驅動程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標。 某些屬性可以安全地與其他屬性合併在一起。 例如，顯示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 屬性的資料列集將會是一個顯示立即更新行為的書籤資料列集。 其他屬性互斥。 例如，顯示 DBPROP_OTHERINSERT 的資料列集不能包含書籤。  
   
-|屬性識別碼|Value|資料列集行為|  
+|屬性識別碼|ReplTest1|資料列集行為|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 資料列集是循序的，只支援順向捲動和提取。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句。|  
 |DBPROP_CANSCROLLBACKWARDS 或 DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集支援一個方向的捲動和提取。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句。|  
@@ -94,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
  若要使用某種類型的資料指標模型，請找出對應至此資料指標模型的資料行，並尋找此資料行中具有 'T' 值的所有資料列集屬性。 將這些資料列集屬性設定為 VARIANT_TRUE，以便使用特定的資料指標模型。 具有 '-' 值的資料列集屬性可以設定為 VARIANT_TRUE 或 VARIANT_FALSE。  
   
-|資料列集屬性/資料指標模型|預設值<br /><br /> result<br /><br /> 集合<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|靜態<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
+|資料列集屬性/資料指標模型|預設<br /><br /> result<br /><br /> 集合<br /><br /> (RO)|快速<br /><br /> 順<br /><br /> 向<br /><br /> (RO)|靜態<br /><br /> (RO)|索引鍵集<br /><br /> 驅動<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

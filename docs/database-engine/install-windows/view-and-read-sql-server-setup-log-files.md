@@ -21,18 +21,30 @@ caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d3b40219a412b498e891d0550a10a99e23b7adf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771454"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612253"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>檢視與讀取 SQL Server 安裝程式記錄檔
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 安裝程式預設會在 %programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log 內的時間戳記記錄檔資料夾中建立記錄檔。 時間戳記記錄檔資料夾的名稱格式為 YYYYMMDD_hhmmss。 在自動安裝模式下執行安裝程式時，會在 %temp%\sqlsetup*.log 內建立記錄檔。 記錄檔資料夾中的所有檔案都會封存到個別記錄檔資料夾的 Log\*.cab 檔中。  
+SQL Server 安裝程式預設會將記錄檔建立在 **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 內具有日期和時間戳記的資料夾中，*nnn* 為對應至要安裝之 SQL 版本的數字。 時間戳記記錄檔資料夾的名稱格式為 YYYYMMDD_hhmmss。 在自動安裝模式下執行安裝程式時，會在 %temp%\sqlsetup*.log 內建立記錄檔。 記錄檔資料夾中的所有檔案都會封存到個別記錄檔資料夾的 Log\*.cab 檔中。  
+
+   | 檔案           | 路徑 |
+   | :------        | :----------------------------- |
+   | **Summary.txt**    | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log |
+   | **Summary_\<MachineName>\_Date.txt**  | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **Detail.txt** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss|
+   | **Datastore** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\Datastore
+   | **MSI 記錄檔** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss\\\<Name>.log|
+   | **ConfigurationFile.ini** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **SystemConfigurationCheck_Report.htm** | \%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log\YYYYMMDD_hhmmss |
+   | **自動安裝** | %temp%\sqlsetup*.log |
+
 
  ![setup-bootstrap-example.png](media/view-and-read-sql-server-setup-log-files/setup-bootstrap-example.png)
 
@@ -46,9 +58,9 @@ SQL Server 安裝程式預設會在 %programfiles%\Microsoft SQL Server\\*nnn*\S
 3.  使用者要求的動作：可讓使用者選取和自訂功能
   
 
-此工作流程會產生單一摘要記錄檔，以及一個詳細資料記錄檔 (用於 RTM 安裝) 或兩個詳細資料記錄檔 (用於匯集媒體時)。
+此工作流程會產生單一摘要記錄檔，以及和基底安裝一起安裝的基底 SQL Server 安裝單一詳細記錄檔 (如 Service Pack)，或更新時為兩個詳細記錄檔。 
   
-資料存放區檔案包含安裝程序所追蹤之所有設定物件的狀態快照集，對於針對設定錯誤進行疑難排解很有用。 XML 傾印檔案會針對每個執行階段建立，並且會儲存在資料存放區記錄檔子資料夾的時間戳記記錄檔資料夾下。 
+而且，資料存放區檔案包含安裝程序所追蹤之所有設定物件的狀態快照集，對於針對設定錯誤進行疑難排解很有用。 XML 傾印檔案會針對每個執行階段建立，並且會儲存在資料存放區記錄檔子資料夾的時間戳記記錄檔資料夾下。 
 
 下列各節描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式記錄檔。  
   
@@ -130,6 +142,8 @@ SQL Server 安裝程式預設會在 %programfiles%\Microsoft SQL Server\\*nnn*\S
   
 ### <a name="location"></a>位置  
 SystemConfigurationCheck_Report.htm 位於 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\。
+
+[!INCLUDE[get-help-options](../../includes/paragraph-content/get-help-options.md)]
   
 ## <a name="see-also"></a>另請參閱  
  [安裝 SQL Server 2017](../../database-engine/install-windows/install-sql-server.md)

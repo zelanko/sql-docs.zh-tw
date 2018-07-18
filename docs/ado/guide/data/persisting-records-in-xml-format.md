@@ -2,7 +2,6 @@
 title: 以 XML 格式保存記錄 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 582e0a0fb3b757f9f9257ebaa199c819068cb2e4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64041d559dcc680cc72f44f082013c65ef738c27
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272427"
 ---
 # <a name="persisting-records-in-xml-format"></a>以 XML 格式保存記錄
 ADTG 格式，例如**資料錄集**持續性 XML 格式使用 Microsoft OLE DB 持續性提供者實作。 此提供者會從已儲存的 XML 檔案或資料流，包含 ADO 所產生的結構描述資訊產生的順向、 唯讀資料列集。 同樣地，可能需要 ADO**資料錄集**、 產生的 XML，並將它儲存到檔案或任何物件實作 COM **IStream**介面。 (事實上，檔案是支援的物件只是另一個範例**IStream**。)版本 2.5 和更新版本中，針對 ADO 會依賴上 Microsoft XML Parser (MSXML) 來將 XML 載入**資料錄集**; 因此 msxml.dll 是必要。  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922833"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>將資料庫還原到新位置 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +171,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="TsqlExample"></a> 範例 &#40;Transact-SQL&#41;  
  此範例會透過還原 `MyAdvWorks` 範例資料庫的備份 (其中包括兩個檔案： [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] _Data 和 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log)，建立名為 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]的新資料庫。 這個資料庫會使用簡單復原模式。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 資料庫已經存在伺服器執行個體上，因此備份中的檔案都必須還原至新的位置。 RESTORE FILELISTONLY 陳述式是用來決定資料庫中所要還原的檔案數目及名稱。 此資料庫備份是備份裝置上的第一個備份組。  
   
-> **注意：**備份和還原交易記錄 (包括時間點還原) 的範例會使用從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立的 `MyAdvWorks_FullRM` 資料庫，就如同以下 `MyAdvWorks` 範例。 不過，您必須使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將產生的 `MyAdvWorks_FullRM` 資料庫變更為使用完整復原模式：ALTER DATABASE <database_name> SET RECOVERY FULL。  
+> **注意：** 備份和還原交易記錄 (包括時間點還原) 的範例會使用從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 建立的 `MyAdvWorks_FullRM` 資料庫，就如同以下 `MyAdvWorks` 範例。 不過，您必須使用下列 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，將產生的 `MyAdvWorks_FullRM` 資料庫變更為使用完整復原模式：ALTER DATABASE <database_name> SET RECOVERY FULL。  
   
 ```sql  
 USE master;  

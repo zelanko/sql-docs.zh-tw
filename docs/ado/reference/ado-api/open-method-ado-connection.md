@@ -2,7 +2,6 @@
 title: Open 方法 （ADO 連接） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 252afc6de9b6cf405fba7ae21a191beef2c198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8035a40949e269fd8d8b039eb1931e8ed17c73c7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280007"
 ---
 # <a name="open-method-ado-connection"></a>Open 方法 （ADO 連接）
 開啟資料來源的連接。  
@@ -48,7 +48,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *密碼*  
  選擇性。 A**字串**值，包含要建立連線時所使用的密碼。  
   
- *選項。*  
+ *選項*  
  選擇性。 A [ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)值，決定是否此方法應傳回之後 （同步） 或之前 （非同步） 建立連線。  
   
 ## <a name="remarks"></a>備註  

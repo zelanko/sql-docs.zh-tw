@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 資料列集 (OLE DB) |Microsoft 文件
+title: LINKEDSERVERS 資料列集 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client-ole-db
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,21 +19,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 08dabc873c9d80b3759f6a425f9e963064773350
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 975008ce3de833315ea9319e85880d7789517028
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421037"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>結構描述資料列集 LINKEDSERVERS 資料列集
+# <a name="schema-rowsets---linkedservers-rowset"></a>結構描述資料列集-LINKEDSERVERS 資料列集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  **LINKEDSERVERS**資料列集會列舉可以參與組織資料來源[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散式查詢。  
+  **LINKEDSERVERS**資料列集會列舉可以參與的組織資料來源[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散式查詢。  
   
  **LINKEDSERVERS**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|Description|  
+|資料行名稱|類型指標|描述|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|連結伺服器的名稱。|  
 |SVR_PRODUCT|DBTYPE_WSTR|製造商或是識別由連結伺服器名稱表示之資料存放區類型的其他名稱。|  

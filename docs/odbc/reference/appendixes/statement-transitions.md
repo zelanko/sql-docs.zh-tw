@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914213"
 ---
 # <a name="statement-transitions"></a>陳述式轉換
 ODBC 陳述式具有下列狀態。  

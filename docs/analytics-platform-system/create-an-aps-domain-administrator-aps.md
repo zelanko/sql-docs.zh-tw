@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31545114"
 ---
 # <a name="create-an-aps-domain-administrator"></a>建立 AP 網域系統管理員
 某些作業需要 Analytics Platform System 網域系統管理員權限。 本節將說明如何建立其他的應用裝置的網域系統管理員。  

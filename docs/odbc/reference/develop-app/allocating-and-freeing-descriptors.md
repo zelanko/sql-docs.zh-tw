@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908846"
 ---
 # <a name="allocating-and-freeing-descriptors"></a>配置及釋放描述元
 描述元會隱含或明確配置，如下列各節中所述。  

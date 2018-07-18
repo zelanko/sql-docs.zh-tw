@@ -2,7 +2,6 @@
 title: Status 屬性 （ADO 資料錄集） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9713b716d1bd9514d60912f016355d41b9cd3600
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 819b8e0d1c1716fd630aefc1622d7c08dcc4da73
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282077"
 ---
 # <a name="status-property-ado-recordset"></a>Status 屬性 （ADO 資料錄集）
 表示相對於批次更新為目前的記錄或其他的大量作業的狀態。  

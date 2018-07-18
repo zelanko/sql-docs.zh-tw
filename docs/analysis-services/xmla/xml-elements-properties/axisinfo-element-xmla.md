@@ -13,7 +13,7 @@ ms.openlocfilehash: 52c3b114c1082a895325170fa8fbf6fef656b8ca
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574330"
 ---
 # <a name="axisinfo-element-xmla"></a>AxisInfo 元素 (XMLA)

@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33262698"
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +99,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="remarks"></a>備註  
- Database Mail 提供不同的參數**@email_address**， **@display_name**，和**@replyto_address**。 **@email_address**參數是傳送訊息的位址。 **@display_name**參數是顯示的名稱**從：**電子郵件訊息的欄位。 **@replyto_address**參數是位址將會傳送回覆的電子郵件訊息。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所用的帳戶，可以從只供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用的電子郵件地址傳送電子郵件訊息。 這個地址所送出的訊息應該會顯示易記名稱，使收件者能夠輕鬆判斷是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 送出訊息。 如果收件者回應訊息，這個回應應該會送給資料庫管理員，而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所用的地址。 此案例中，此帳戶會使用**SqlAgent@Adventure-Works.com**為電子郵件地址。 顯示名稱設定為**SQL Server Agent Automated Mailer**。 此帳戶會使用**danw@Adventure-Works.com**當做回應地址，因此回覆給由這個帳戶傳送的郵件移至資料庫管理員，而不是電子郵件地址[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。 Database Mail 分別提供這三個參數的獨立設定，因此，您可以依照需要來設定訊息。  
+ Database Mail 提供不同的參數**@email_address**， **@display_name**，和**@replyto_address**。 **@email_address**參數是傳送訊息的位址。 **@display_name**參數是顯示的名稱**從：** 電子郵件訊息的欄位。 **@replyto_address**參數是位址將會傳送回覆的電子郵件訊息。 例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所用的帳戶，可以從只供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 使用的電子郵件地址傳送電子郵件訊息。 這個地址所送出的訊息應該會顯示易記名稱，使收件者能夠輕鬆判斷是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 送出訊息。 如果收件者回應訊息，這個回應應該會送給資料庫管理員，而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 所用的地址。 此案例中，此帳戶會使用**SqlAgent@Adventure-Works.com**為電子郵件地址。 顯示名稱設定為**SQL Server Agent Automated Mailer**。 此帳戶會使用**danw@Adventure-Works.com**當做回應地址，因此回覆給由這個帳戶傳送的郵件移至資料庫管理員，而不是電子郵件地址[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。 Database Mail 分別提供這三個參數的獨立設定，因此，您可以依照需要來設定訊息。  
   
  **@mailserver_type**參數支援值 **'SMTP'**。  
   
@@ -110,7 +111,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
  執行此程序預設值，成員的權限**sysadmin**固定的伺服器角色。  
   
 ## <a name="examples"></a>範例  
- 下列範例會建立名稱為 `AdventureWorks Administrator` 的帳戶。 這個帳戶所用的電子郵件地址是 `dba@Adventure-Works.com`，它將郵件傳給 SMTP 郵件伺服器 `smtp.Adventure-Works.com`。 電子郵件傳送這個帳戶顯示`AdventureWorks Automated Mailer`上**從：**訊息。 訊息的回應會導向 `danw@Adventure-Works.com`。  
+ 下列範例會建立名稱為 `AdventureWorks Administrator` 的帳戶。 這個帳戶所用的電子郵件地址是 `dba@Adventure-Works.com`，它將郵件傳給 SMTP 郵件伺服器 `smtp.Adventure-Works.com`。 電子郵件傳送這個帳戶顯示`AdventureWorks Automated Mailer`上**從：** 訊息。 訊息的回應會導向 `danw@Adventure-Works.com`。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_account_sp  

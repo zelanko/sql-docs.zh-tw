@@ -2,7 +2,6 @@
 title: 使用資料錄集 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b83fb8d5ad4e2e063ca840b7e8fb31bbf15fde14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6bcc69980dfc4e3be72221964d339bd37754207
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273487"
 ---
 # <a name="working-with-recordsets"></a>使用資料錄集
 **資料錄集**物件具有內建功能，可讓您重新整理結果集中資料的順序，來搜尋特定的記錄，根據您提供的準則，並且甚至最佳化使用索引搜尋作業。 這些功能是否可供使用取決於提供者，以及在某些情況下，例如的[索引](../../../ado/reference/ado-api/index-property.md)屬性 — 資料來源本身的結構。  
@@ -115,7 +115,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="filtering-with-a-constant"></a>篩選與常數  
  下列常數是可用於篩選**資料錄集**。  
   
-|常數|Description|  
+|常數|描述|  
 |--------------|-----------------|  
 |**adFilterAffectedRecords**|篩選器來檢視記錄，最後會受到**刪除**，**重新同步處理**， **UpdateBatch**，或**CancelBatch**呼叫。|  
 |**adFilterConflictingRecords**|檢視失敗，最後一個批次更新記錄的篩選條件。|  

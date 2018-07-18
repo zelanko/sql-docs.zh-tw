@@ -2,7 +2,6 @@
 title: Microsoft OLE DB Provider for Microsoft 索引服務 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271307"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Microsoft OLE DB Provider for Microsoft 索引服務概觀
 Microsoft OLE DB Provider for Microsoft 索引服務提供以程式設計方式唯讀存取檔案系統和 Web 資料由 Microsoft 索引服務編製索引。 ADO 應用程式可以發出 SQL 查詢來擷取內容和檔案屬性資訊。
@@ -48,7 +48,7 @@ MSIDXS
 
  字串，包含這些關鍵字：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 OLE DB Provider for Microsoft 索引服務。 一般而言，這是唯一的連接字串中指定的關鍵字。|
 |**資料來源**|指定的索引服務類別目錄名稱。 如果未指定此關鍵字，系統會使用預設目錄。|
@@ -100,12 +100,12 @@ MSIDXS
 |方法|可用？|
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|否|
-|[[取消]](../../../ado/reference/ado-api/cancel-method-ado.md)|是|
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|是|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|否|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|否|
 |[複製](../../../ado/reference/ado-api/clone-method-ado.md)|是|
 |[關閉](../../../ado/reference/ado-api/close-method-ado.md)|是|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|
+|[刪除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|否|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|是|
 |[[移動]](../../../ado/reference/ado-api/move-method-ado.md)|是|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|是|

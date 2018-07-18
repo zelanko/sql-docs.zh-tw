@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022005"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page"></a>控制報表頁面上的 Tablix 資料區顯示
 請了解您可在資料表、矩陣或清單資料區之 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中設定的屬性，以變更它在您檢視報表時的顯示方式。  

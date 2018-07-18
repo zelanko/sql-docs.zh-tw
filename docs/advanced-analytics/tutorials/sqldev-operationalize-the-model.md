@@ -1,24 +1,26 @@
 ---
-title: 第 6 課實施 R 模型 |Microsoft 文件
+title: 課程 6 使用 R 模型 （SQL Server 機器學習） 的預測潛在結果 |Microsoft 文件
+description: 教學課程顯示如何在 SQL Server 中內嵌 R 預存程序和 T-SQL 函數
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/08/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1503467f1979e2e123f12227cc92ea975b6cd6a3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249851"
 ---
-# <a name="lesson-6-operationalize-the-r-model"></a>第 6 課： 實施 R 模型
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>第 6 課： 預測潛在的預存程序中使用 R 模型的結果
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章是有關如何在 SQL Server 中使用 R 的 SQL 開發人員的教學課程的一部分。
 
-在此步驟中，您學會*實施*使用預存程序的模型。 您可以透過其他應用程式直接呼叫此預存程序，對新的觀察值進行預測。 逐步解說將示範兩種執行預存程序中使用 R 模型的計分方式：
+在此步驟中，您了解如何使用針對新的觀察模型來預測潛在的結果。 模型被包裝在其他應用程式可以直接呼叫預存程序。 逐步解說會示範執行計分的幾種方法：
 
 - **批次計分模式**: SELECT 查詢做為預存程序的輸入。 此預存程序會傳回對應至輸入案例的觀察值資料表。
 
@@ -28,7 +30,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="basic-scoring"></a>基本分數
 
-預存程序 _PredictTip_ 說明將預測呼叫包裝在預存程序中的基本語法。
+預存程序 **PredictTip** 說明將預測呼叫包裝在預存程序中的基本語法。
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTip] @inquery nvarchar(max) 
@@ -54,7 +56,7 @@ GO
 
 + SELECT 陳述式從資料庫中，取得序列化的模型，並將模型存放至 R 變數`mod`做進一步的處理使用。
 
-+ 計分的新案例所取自[!INCLUDE[tsql](../../includes/tsql-md.md)]中指定查詢`@inquery`，預存程序的第一個參數。 讀取查詢資料之後，這些資料列會儲存在預設資料框架 `InputDataSet`中。 此資料框架會傳遞至 R 中的 `rxPredict` 函數，再由此函數產生分數。
++ 計分的新案例所取自[!INCLUDE[tsql](../../includes/tsql-md.md)]中指定查詢`@inquery`，預存程序的第一個參數。 讀取查詢資料之後，這些資料列會儲存在預設資料框架 `InputDataSet`中。 此資料框架會傳遞至[rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict)函式在[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)，如此就會產生分數。
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -91,13 +93,13 @@ GO
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    此查詢可以做為預存程序中，輸入_PredictTipBatchMode_下載的一部分提供。
+    此查詢可以做為預存程序中，輸入**PredictTipMode**下載的一部分提供。
 
-2. 花點時間檢閱程式碼的預存程序_PredictTipBatchMode_中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
+2. 花點時間檢閱程式碼的預存程序**PredictTipMode**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
     ```SQL
-    /****** Object:  StoredProcedure [dbo].[PredictTipBatchMode]  ******/
-    CREATE PROCEDURE [dbo].[PredictTipBatchMode] @inquery nvarchar(max)
+    /****** Object:  StoredProcedure [dbo].[PredictTipMode]  ******/
+    CREATE PROCEDURE [dbo].[PredictTipMode] @inquery nvarchar(max)
     AS
     BEGIN
     DECLARE @lmodel2 varbinary(max) = (SELECT TOP 1 model FROM nyc_taxi_models);
@@ -141,7 +143,7 @@ GO
 
 在本節中，您可以了解如何建立單一預測使用預存程序。
 
-1. 請花幾分鐘檢閱下載時已隨附之預存程序 _PredictTipSingleMode_的程式碼。
+1. 花點時間檢閱程式碼的預存程序**PredictTipSingleMode**，這是下載的一部分。
   
     ```SQL
     CREATE PROCEDURE [dbo].[PredictTipSingleMode] @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0

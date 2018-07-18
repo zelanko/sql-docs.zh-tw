@@ -1,8 +1,6 @@
 ---
 title: 產生報表 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3116ae117dc7e75a8efc4d898b1c2b18cae85759
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 847fe8d703c003dd977945f1177bcaad9dae5185
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773554"
 ---
 # <a name="generating-reports-accesstosql"></a>產生報表 (AccessToSQL)
 使用命令來執行特定活動的報表會在物件樹狀目錄層級的 SSMA 主控台產生。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**Command**|**報表標題**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
+    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|移轉資料|DataMigrationReport&lt;n&gt;。XML|  
     |4|同步處理目標|TargetSynchronizationReport&lt;n&gt;.XML|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**命令和參數**|**輸出說明**|  
-    |1|verbose=”false”|產生之活動的摘要的報告。|  
+    |@shouldalert|verbose=”false”|產生之活動的摘要的報告。|  
     |2|verbose=”true”|產生每個活動的摘要和詳細狀態報告。|  
   
     > [!NOTE]  
@@ -63,7 +62,7 @@ ms.lasthandoff: 05/03/2018
     ||||  
     |-|-|-|  
     |**Sl。[否]。**|**命令和參數**|**輸出說明**|  
-    |1|report-errors=”false”|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
+    |@shouldalert|report-errors=”false”|沒有詳細資料發生錯誤 / 警告 / 資訊訊息。|  
     |2|report-errors=”true”|詳細的錯誤 / 警告 / 資訊訊息。|  
   
     > [!NOTE]  
@@ -94,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="synchronize-target"></a>同步處理目標：  
 命令**同步處理目標**具有**報告錯誤至**參數，指定同步處理作業的錯誤報表的位置。 然後，名稱的檔案**TargetSynchronizationReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目與每個執行的相同命令的數字遞增。  
   
-**注意：**如果指定的資料夾路徑，則 '報告錯誤-對' 參數就會變成命令 '同步處理目標' 的選用屬性。  
+**注意：** 如果指定的資料夾路徑，則 '報告錯誤-對' 參數就會變成命令 '同步處理目標' 的選用屬性。  
   
 ```xml  
 <!-- Example: Synchronize target entire Database with all attributes-->  
@@ -109,9 +108,9 @@ ms.lasthandoff: 05/03/2018
   
 />  
 ```  
-**物件名稱：**指定同步處理 （它也可以有 indivdual 物件名稱或群組的物件名稱） 被視為物件。  
+**物件名稱：** 指定同步處理 （它也可以有 indivdual 物件名稱或群組的物件名稱） 被視為物件。  
   
-**-錯誤：**指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
+**-錯誤：** 指定是否要指定同步處理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
 -   報表-總計-為-警告  
   
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="refresh-from-database"></a>重新整理從-資料庫：  
 命令**從資料庫重新整理**具有**報告錯誤至**參數，指定重新整理作業的錯誤報表的位置。 然後，名稱的檔案**SourceDBRefreshReport&lt;n&gt;。XML**會建立在指定的位置，其中**&lt;n&gt;** 是唯一的檔案數目與每個執行的相同命令的數字遞增。  
   
-**注意：**如果指定的資料夾路徑，則 '報告錯誤-對' 參數就會變成命令 '同步處理目標' 的選用屬性。  
+**注意：** 如果指定的資料夾路徑，則 '報告錯誤-對' 參數就會變成命令 '同步處理目標' 的選用屬性。  
   
 ```xml  
 <!-- Example: Refresh entire Schema (with all attributes)-->  
@@ -139,9 +138,9 @@ ms.lasthandoff: 05/03/2018
   
 />  
 ```  
-**物件名稱：**指定重新整理 （它也可以有 indivdual 物件名稱或群組的物件名稱） 被視為物件。  
+**物件名稱：** 指定重新整理 （它也可以有 indivdual 物件名稱或群組的物件名稱） 被視為物件。  
   
-**-錯誤：**指定是否要指定重新整理錯誤視為警告或錯誤。 在錯誤的可用選項：  
+**-錯誤：** 指定是否要指定重新整理錯誤視為警告或錯誤。 在錯誤的可用選項：  
   
 -   報表-總計-為-警告  
   

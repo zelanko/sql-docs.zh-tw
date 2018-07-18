@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914323"
 ---
 # <a name="column-size"></a>資料行大小
 數值資料類型的資料行 （或參數） 的大小被定義為資料行或參數的資料類型或資料的精確度所使用的最大位數。 字元類型，這是以字元為單位的資料; 長度二進位資料類型資料行大小被定義為資料的長度以位元組為單位。 針對時間、 時間戳記和所有間隔資料型別，這是中的這項資料的字元表示法的字元數。 下表顯示每個簡潔的 SQL 資料類型所定義的資料行大小。  

@@ -3,9 +3,7 @@ title: SQL Server 說明內容和說明檢視器 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/15/2017
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: ''
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -15,15 +13,15 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
-author: craigg-msft
-ms.author: craigg
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d00aa3a4085b17f8fcc40fc9317b8acd77e5998
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926099"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 離線說明和說明檢視器
 

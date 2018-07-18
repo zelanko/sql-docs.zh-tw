@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909573"
 ---
 # <a name="applications"></a>應用程式
 *應用程式*是呼叫 ODBC API 來存取資料的程式。 雖然可能會有許多類型的應用程式，絕大部分會做為範例，本指南中的三個類別。  

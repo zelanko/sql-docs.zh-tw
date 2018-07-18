@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902883"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns （桌面資料庫驅動程式）
 唯一的索引就會傳回 （如果有的話） 中的 SQL_BEST_ROWID 旗標*fColType*。 SQL_ROWVER 旗標，就會不傳回任何結果集。  

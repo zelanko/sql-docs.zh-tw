@@ -2,7 +2,6 @@
 title: Field 物件 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 872bb5e1ccede336f85b7bbcbdc7e91c89dd1688
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8df319455802bb16d5e828d1d79c6253643e7ead
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273007"
 ---
 # <a name="the-field-object"></a>Field 物件
 每個**欄位**物件通常會對應至資料庫資料表中的資料行。 不過，**欄位**也可以代表一個指標到另一個**資料錄集**，稱為章節。 例外狀況，例如章節資料行，將稍後在本指南涵蓋。  

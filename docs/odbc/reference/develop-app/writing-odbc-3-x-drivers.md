@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921153"
 ---
 # <a name="writing-odbc-3x-drivers"></a>寫入 ODBC 3.x 驅動程式
 下表會顯示在 ODBC 3 函式支援。*x*驅動程式和 ODBC 應用程式，以及對應函式的呼叫針對 ODBC 3 時，請執行驅動程式管理員。*x*驅動程式。  

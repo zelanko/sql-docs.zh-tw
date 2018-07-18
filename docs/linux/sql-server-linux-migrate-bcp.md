@@ -1,5 +1,5 @@
 ---
-title: 大量複製資料到 SQL Server on Linux |Microsoft 文件
+title: 將資料大量複製到 Linux 上的 SQL Server |Microsoft 文件
 description: ''
 author: rothja
 ms.author: jroth
@@ -13,42 +13,43 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.openlocfilehash: d792a7dfd4481d5c5cce3e2517559dcb0b3e22be
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984165"
 ---
-# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux 的 bcp 大量複製資料
+# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 Linux 上的 SQL Server 的 bcp 大量複製資料
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文示範如何使用[bcp](../tools/bcp-utility.md) Linux 上的 SQL Server 2017 的執行個體和使用者指定格式資料檔之間大量複製資料的命令列公用程式。
+這篇文章示範如何使用[bcp](../tools/bcp-utility.md)命令列公用程式的 Linux 上的 SQL Server 2017 執行個體以使用者指定格式資料檔之間大量複製資料。
 
-您可以使用`bcp`大量的資料列匯入 SQL Server 資料表，或將資料從 SQL Server 資料表匯出至資料檔案。 Queryout 選項搭配使用時，除非`bcp`不需要知道的 Transact SQL。 `bcp`命令列公用程式的運作方式與在內部部署執行 Microsoft SQL Server，或在雲端中，有關 Linux、 Windows 或 Docker 和 Azure SQL Database 和 Azure SQL 資料倉儲。
+您可以使用`bcp`大量的資料列匯入至 SQL Server 資料表，或將資料從 SQL Server 資料表匯出至資料檔案。 除非與 queryout 選項搭配使用時`bcp`不需要知道 Transact SQL。 `bcp`命令列公用程式的運作方式與內部部署上執行的 Microsoft SQL Server，或在雲端、 Linux、 Windows 或 Docker 和 Azure SQL Database 和 Azure SQL 資料倉儲中。
 
-本文章將示範如何以：
+本文示範如何：
 - 資料匯入至資料表，使用`bcp in`命令
 - 將資料從資料表使用匯出`bcp out`命令
 
 ## <a name="install-the-sql-server-command-line-tools"></a>安裝 SQL Server 命令列工具
 
-`bcp` 是 SQL Server 命令列工具，不會與 SQL Server on Linux 自動安裝的一部分。 如果您在 Linux 電腦上並沒有安裝 SQL Server 命令列工具，您必須安裝它們。 如需有關如何安裝這些工具的詳細資訊，請從下列清單中選取您的 Linux 散發套件：
+`bcp` 是 SQL Server 命令列工具，不會使用 Linux 上的 SQL Server 自動安裝的一部分。 如果您在 Linux 機器上並沒有安裝 SQL Server 命令列工具，您必須安裝它們。 如需有關如何安裝工具的詳細資訊，請從下列清單中選取您的 Linux 散發套件：
 
 - [Red Hat Enterprise Linux (RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
 - [SUSE Linux Enterprise Server (SLES)](sql-server-linux-setup-tools.md#SLES)
 
-## <a name="import-data-with-bcp"></a>以 bcp 匯入資料
+## <a name="import-data-with-bcp"></a>使用 bcp 匯入資料
 
-在本教學課程中，您建立範例資料庫及資料表本機 SQL Server 執行個體上 (**localhost**)，然後使用`bcp`載入從磁碟上的文字檔案的範例資料表。
+在本教學課程中，您的範例資料庫和資料表上建立本機的 SQL Server 執行個體 (**localhost**)，然後使用`bcp`載入到磁碟上的文字檔案的範例資料表。
 
 ### <a name="create-a-sample-database-and-table"></a>建立範例資料庫和資料表
 
-讓我們開始透過使用在本教學課程的其餘部分的簡單資料表以建立範例資料庫。
+讓我們開始建立範例資料庫使用簡單的資料表，可在本教學課程的其餘部分。
 
-1. 在 Linux 方塊中，開啟 [命令終端機]。
+1. 在您的 Linux 中，開啟 命令終端機。
 
-2. 複製並貼到終端機視窗中的下列命令。 這些命令會使用**sqlcmd**命令列公用程式來建立範例資料庫 (**BcpSampleDB**) 和資料表 (**TestEmployees**) 上的本機 SQL Server 執行個體 (**localhost**)。 請記得要取代`username`和`<your_password>`視之前執行命令。
+2. 複製並貼到終端機視窗中的下列命令。 這些命令會使用**sqlcmd**若要建立範例資料庫的命令列公用程式 (**BcpSampleDB**) 和資料表 (**TestEmployees**) 本機的 SQL Server 執行個體 (**localhost**)。 請記得取代`username`和`<your_password>`視之前執行命令。
 
 建立資料庫**BcpSampleDB**:
 ```bash 
@@ -59,7 +60,7 @@ sqlcmd -S localhost -U sa -P <your_password> -Q "CREATE DATABASE BcpSampleDB;"
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
 ### <a name="create-the-source-data-file"></a>建立來源資料檔
-複製並貼入您的終端機視窗中的下列命令。 我們會使用內建`cat`命令以建立具有三個記錄的範例文字資料檔案將檔案儲存為主目錄中 **~/test_data.txt**。 以逗號分隔記錄中的欄位。
+複製並貼入您的終端機視窗中的下列命令。 我們會使用內建`cat`命令來建立具有三個記錄的範例文字資料檔案儲存為主目錄中的檔案 **~/test_data.txt**。 記錄中的欄位是以逗號分隔。
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -69,12 +70,12 @@ cat > ~/test_data.txt << EOF
 EOF
 ```
 
-您可以確認資料檔案已正確建立您的終端機視窗中執行下列命令：
+您可以確認資料檔案已正確建立，在您的終端機視窗中執行下列命令：
 ```bash 
 cat ~/test_data.txt
 ```
 
-這應該在終端機視窗會顯示下列：
+這應該在您的終端機視窗會顯示下列：
 ```bash
 1,Jared,Australia
 2,Nikita,India
@@ -82,7 +83,7 @@ cat ~/test_data.txt
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>從來源資料檔匯入資料
-複製並貼到終端機視窗中的下列命令。 此命令會使用`bcp`連接到本機 SQL Server 執行個體 (**localhost**) 和從資料檔匯入資料 (**~/test_data.txt**) 到資料表 (**TestEmployees**) 資料庫中 (**BcpSampleDB**)。 請記得要取代的使用者名稱和`<your_password>`視之前執行命令。
+複製並貼到終端機視窗中的下列命令。 此命令會使用`bcp`連接到本機的 SQL Server 執行個體 (**localhost**) 和從資料檔匯入資料 (**~/test_data.txt**) 插入資料表 (**TestEmployees**) 在資料庫中 (**BcpSampleDB**)。 請記得取代使用者名稱和`<your_password>`視之前執行命令。
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
@@ -90,21 +91,21 @@ bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d Bc
 
 以下是我們搭配使用的命令列參數的簡短概觀`bcp`在此範例中：
 - `-S`： 指定要連接的 SQL Server 執行個體
-- `-U`： 指定的登入識別碼用來連接到 SQL Server
-- `-P`： 指定的密碼登入識別碼。
+- `-U`： 指定的識別碼，用以連接到 SQL Server 的登入
+- `-P`： 指定的密碼登入識別碼
 - `-d`： 指定要連接到資料庫
 - `-c`： 使用字元資料類型執行作業
-- `-t`： 指定欄位結束字元。 我們使用`comma`作為欄位結束字元，我們的資料檔案中的資料錄
+- `-t`： 指定欄位結束字元。 我們會使用`comma`作為我們的資料檔案中的資料錄的欄位結束字元
 
 > [!NOTE]
-> 我們在此範例中未指定自訂的資料列結束字元。 文字資料檔案中的資料列已正確地終止與`newline`當我們使用`cat`稍早建立的資料檔案的命令。
+> 我們不會在此範例中，指定自訂的資料列結束字元。 在文字資料檔案中的資料列已正確地終止與`newline`當我們使用`cat`稍早建立的資料檔案的命令。
 
-您可以確認資料已成功匯入您的終端機視窗中執行下列命令。 請記得要取代`username`和`<your_password>`在必要時，才能執行此命令。
+您可以確認資料已成功匯入終端機視窗中執行下列命令。 請記得取代`username`和`<your_password>`必要時再執行命令。
 ```bash 
 sqlcmd -S localhost -d BcpSampleDB -U sa -P <your_password> -I -Q "SELECT * FROM TestEmployees;"
 ```
 
-這應會顯示下列結果：
+這應該會顯示下列結果：
 ```bash
 Id          Name                Location
 ----------- ------------------- -------------------
@@ -115,22 +116,22 @@ Id          Name                Location
 (3 rows affected)
 ```
 
-## <a name="export-data-with-bcp"></a>以 bcp 匯出資料
+## <a name="export-data-with-bcp"></a>使用 bcp 匯出資料
 
-在此教學課程中，您可以使用`bcp`從我們稍早建立的新資料檔的範例資料表匯出資料。
+在本教學課程中，您可以使用`bcp`從我們稍早建立新的資料檔案的範例資料表匯出資料。
 
-複製並貼到終端機視窗中的下列命令。 這些命令會使用`bcp`命令列公用程式將資料從資料表匯出**TestEmployees**資料庫中**BcpSampleDB**到新的資料檔案，稱為 **~/test_export.txt**.  請記得要取代的使用者名稱和`<your_password>`在必要時，才能執行此命令。
+複製並貼到終端機視窗中的下列命令。 這些命令會使用`bcp`將資料從資料表匯出的命令列公用程式**TestEmployees**資料庫中**BcpSampleDB**到新的資料檔案，稱為 **~/test_export.txt**.  請記得取代使用者名稱和`<your_password>`必要時再執行命令。
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','
 ```
 
-您可以確認資料已正確匯出，您的終端機視窗中執行下列命令：
+您可以確認資料已正確匯出，藉由在終端機視窗中執行下列命令：
 ```bash 
 cat ~/test_export.txt
 ```
 
-這應該在終端機視窗會顯示下列：
+這應該在您的終端機視窗會顯示下列：
 ```
 1,Jared,Australia
 2,Nikita,India
@@ -141,4 +142,4 @@ cat ~/test_export.txt
 - [bcp 公用程式](../tools/bcp-utility.md)
 - [使用 bcp 時的相容性的資料格式](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
 - [使用 BULK INSERT 匯入大量資料](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
-- [BULK INSERT (TRANSACT-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
+- [BULK INSERT & Amp;#40;transact-SQL&AMP;#41](../t-sql/statements/bulk-insert-transact-sql.md)

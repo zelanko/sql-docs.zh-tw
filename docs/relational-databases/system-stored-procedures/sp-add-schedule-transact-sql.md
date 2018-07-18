@@ -22,11 +22,12 @@ caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95723f90b248d214638a4bfcd38b1fc40bcfb121
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3f1ce62c23519f44e9673e425662bd0e24dc80da
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262232"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +68,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_type =** ] *freq_type*  
  指出將執行作業之時間的值。 *freq_type*是**int**，預設值是**0**，而且可以是下列值之一。  
   
-|Value|描述|  
+|ReplTest1|描述|  
 |-----------|-----------------|  
 |**1**|一次|  
 |**4**|每日|  
@@ -93,7 +94,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_subday_type =** ] *freq_subday_type*  
  指定的單位*freq_subday_interval*。 *freq_subday_type*是**int**，預設值是**0**，而且可以是下列值之一。  
   
-|Value|描述 (單位)|  
+|ReplTest1|描述 (單位)|  
 |-----------|--------------------------|  
 |**0x1**|在指定的時間|  
 |**0x2**|秒|  
@@ -106,7 +107,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  [ **@freq_relative_interval =** ] *freq_relative_interval*  
  發生作業的*freq_interval*中每個月，如果*freq_interval*為 32 （每月相對）。 *freq_relative_interval*是**int**，預設值是**0**，而且可以是下列值之一。 *freq_relative_interval*在這些情況下會忽略其中*freq_type*不等於 32。  
   
-|Value|描述 (單位)|  
+|ReplTest1|描述 (單位)|  
 |-----------|--------------------------|  
 |**1**|第一個|  
 |**2**|第二個|  

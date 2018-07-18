@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906853"
 ---
 # <a name="application-and-driver-compatibility"></a>應用程式和驅動程式相容性
 ODBC 應用程式和驅動程式可分為除了自己版本的類別目錄數目。 一些應用程式不相容的一些驅動程式。在其他情況下，應用程式或驅動程式的類型可能造成回溯相容性問題，兩者之間並無影響。  

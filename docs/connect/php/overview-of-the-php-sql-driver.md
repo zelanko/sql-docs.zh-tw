@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e11308cc4c5095a212f508168fdae2b1d14e8b96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f63d2d829c36432e1d03a783ee438fc9e53e9132
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308007"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 的概觀
 
@@ -31,14 +31,14 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 | ![下載 DownArrow Circled](../../ssdt/media/download.png)[若要下載 PHP for SQL Server 驅動程式](download-drivers-php-sql-server.md) | 若要下載適用於 PHP 的 Microsoft Drivers for SQL Server 的連結。 |
 |[Microsoft Drivers for PHP for SQL Server 的版本資訊](../../connect/php/release-notes-for-the-php-sql-driver.md)|列出 4.0、 3.2、 3.1、 3.0 和 2.0 版已加入的功能。|  
 |[支援資源 Microsoft Drivers for PHP for SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|提供可在您開發使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的應用程式時提供協助的資源連結。|  
 |[關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)|提供可在您執行此文件中的程式碼範例時很有幫助的資訊。|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>參考  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
 [PDO_SQLSRV 驅動程式參考](../../connect/php/pdo-sqlsrv-driver-reference.md)  
 [常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

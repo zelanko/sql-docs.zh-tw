@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245119"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|邏輯檔案名稱。|  
-|**fileid**|**smallint**|檔案的數值識別碼。 如果不會傳回*名稱*指定*。*|  
+|**fileid**|**smallint**|檔案的數值識別碼。 如果不會傳回*名稱*指定 *。*|  
 |**filename**|**nchar(260)**|實體檔案名稱。|  
 |**filegroup**|**sysname**|檔案所屬的檔案群組。<br /><br /> NULL = 檔案是記錄檔。 它永遠不在檔案群組中。|  
 |**size**|**nvarchar(15)**|檔案大小 (以 KB 為單位)。|  

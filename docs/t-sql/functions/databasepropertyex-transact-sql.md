@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,15 +20,16 @@ helpviewer_keywords:
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 caps.latest.revision: 84
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cb0ea7d3443e338190e9bc63c7132aa554aa843
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c59f13b67d8594610a8d7b764f5f42aed8733203
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790009"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsTornPageDetectionEnabled|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 偵測到因為斷電或其他系統失效所造成的不完全 I/O 作業。|1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**| 
 |IsVerifiedClone|資料庫僅為使用 DBCC CLONEDATABASE 之 WITH VERIFY_CLONEDB 選項所建立之使用者資料庫的結構描述和統計資料複本。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/3177838)。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> <br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入<br /><br /> 基底資料類型：**int**| 
 |IsXTPSupported|指出資料庫是否支援記憶體內部 OLTP，即建立及使用經記憶體最佳化的資料表和原生編譯模組。<br /><br /> 特定於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：<br /><br /> IsXTPSupported 是獨立於任何建立記憶體內部 OLTP 物件所必須之 MEMORY_OPTIMIZED_DATA 檔案群組的存在之外。|**適用於**：[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])，以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 1：TRUE<br /><br /> 0：FALSE<br /><br /> NULL：無效輸入、發生錯誤或不適用<br /><br /> 基底資料類型：**int**|  
-|LastGoodCheckDbTime|最後一個成功 DBCC CHECKDB 在指定的資料庫上執行的日期和時間。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> 日期時間值<br /><br /> NULL：無效輸入<br /><br /> 基底資料型別：**datetime**| 
+|LastGoodCheckDbTime|最後一個成功 DBCC CHECKDB 在指定的資料庫上執行的日期和時間。<sup>1</sup> 如果 DBCC CHECKDB 尚未在資料庫上執行，則回傳回 1900-01-01 00:00:00.000。|**適用於**：從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 開始。<br /><br /> 日期時間值<br /><br /> NULL：無效輸入<br /><br /> 基底資料型別：**datetime**| 
 |LCID|Windows 的定序地區設定識別碼 (LCID)。|LCID 值 (十進位格式)。<br /><br /> 基底資料類型：**int**|  
 |MaxSizeInBytes|資料庫的大小上限 (以位元組為單位)。|**適用於**：[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL：資料庫未啟動<br /><br /> 基底資料型別：**bigint**|  
 |復原|資料庫復原模式|FULL：完全復原模式<br /><br /> BULK_LOGGED：大量記錄模式<br /><br /> SIMPLE：簡單復原模式<br /><br /> 基底資料型別：**nvarchar(128)**|  
@@ -99,8 +99,12 @@ DATABASEPROPERTYEX ( database , property )
 |[狀態]|資料庫狀態。|ONLINE：資料庫可用於查詢。<br /><br /> **注意：** 當資料庫開啟且尚未復原時，可能會傳回 ONLINE 狀態。 若要識別資料庫可接受連線的時間，請查詢 **DATABASEPROPERTYEX** 的 Collation 屬性。 當資料庫定序傳回非 Null 值時，表示資料庫可接受連接。 對於 AlwaysOn 資料庫，可查詢 `sys.dm_hadr_database_replica_states` 的 database_state 或 database_state_desc 資料行。<br /><br /> OFFLINE：資料庫明確離線。<br /><br /> RESTORING：資料庫還原已啟動。<br /><br /> RECOVERING：資料庫復原已啟動，但資料庫尚未準備好提供查詢。<br /><br /> SUSPECT：資料庫未復原。<br /><br /> EMERGENCY：資料庫處於緊急、唯讀的狀態。 存取限於系統管理員 (sysadmin) 成員<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |Updateability|指出資料是否可以修改。|READ_ONLY：資料庫支援資料讀取，但不支援資料修改。<br /><br /> READ_WRITE：資料庫支援資料讀取和修改。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |UserAccess|指定那些使用者可以存取資料庫。|SINGLE_USER：一次只有一個 db_owner、資料庫建立者 (dbcreator) 或系統管理員使用者<br /><br /> RESTRICTED_USER：只有 db_owner、資料庫建立者 (dbcreator) 或系統管理員角色的成員<br /><br /> MULTI_USER：所有使用者<br /><br /> 基底資料型別：**nvarchar(128)**|  
-|Version|建立資料庫所用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼的內部版本號碼。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|版本號碼：資料庫是開啟的。<br /><br /> NULL：資料庫尚未啟動。<br /><br /> 基底資料類型：**int**|  
-  
+|Version|建立資料庫所用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 程式碼的內部版本號碼。 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|版本號碼：資料庫是開啟的。<br /><br /> NULL：資料庫尚未啟動。<br /><br /> 基底資料類型：**int**| 
+<br/>   
+
+> [!NOTE]  
+> <sup>1</sup> 對於屬於可用性群組一部分的資料庫，`LastGoodCheckDbTime` 將會傳回最後一個成功 DBCC CHECKDB 在主要複本上執行的日期和時間，而不論您是從哪一個複本執行命令。 
+
 ## <a name="return-types"></a>傳回類型
 **sql_variant**
   

@@ -2,23 +2,24 @@
 title: 步驟 2 匯入資料到 SQL Server 使用 PowerShell |Microsoft 文件
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d85419c06915cc7d96c9713053239c27c70a9f0b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 14606b42d17acdd56527795d2d475a263d918d7d
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249991"
 ---
 # <a name="step-2-import-data-to-sql-server-using-powershell"></a>步驟 2： 將資料匯入 SQL Server 使用 PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 這篇文章的教學課程中，屬於[SQL 開發人員的資料庫中的 Python 分析](sqldev-in-database-python-for-sql-developers.md)。 
 
-在此步驟中，您執行其中一個下載的指令碼，來建立這個逐步解說所需的資料庫物件。 指令碼也會建立數個預存程序，並將範例資料上傳至您指定的資料庫中的資料表。
+在此步驟中，執行下載的指令碼來建立這個逐步解說所需的資料庫物件的其中一個。 指令碼也會建立數個預存程序，並將範例資料上傳至您指定的資料庫中的資料表。
 
 ## <a name="create-database-objects-and-load-data"></a>建立資料庫物件和載入資料
 
@@ -34,6 +35,16 @@ ms.lasthandoff: 04/16/2018
 
 如果您遇到問題時，您可以使用做為參考的指令碼手動執行步驟。
 
+### <a name="modify-the-script-to-use-a-trusted-windows-identity"></a>修改指令碼以使用受信任的 Windows 身分識別
+
+根據預設，指令碼會假設 SQL Server 資料庫使用者登入和密碼。 如果您是 db_owner Windows 使用者帳戶時，您可以使用您的 Windows 身分識別來建立物件。 若要這樣做，請開啟`RunSQL_SQL_Walkthrough.ps1`要附加的程式碼編輯器中**`-T`** bcp 大量插入命令：
+
+```text
+bcp $db_tb in $csvfilepath -t ',' -S $server -f taxiimportfmt.xml -F 2 -C "RAW" -b 200000 -U $u -P $p -T
+```
+
+### <a name="run-the-script"></a>執行指令碼
+
 1. 以系統管理員身分開啟 PowerShell 命令提示字元。 如果您已不在上一個步驟中建立的資料夾中，瀏覽至資料夾，並執行下列命令：
   
     ```ps
@@ -44,8 +55,8 @@ ms.lasthandoff: 04/16/2018
 
     - 名稱或位址[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]已安裝使用 Python 的機器學習服務執行個體。
     - 執行個體上之帳戶的使用者名稱和密碼。 您使用的帳戶必須具有建立資料庫、 建立資料表和預存程序，並大量載入資料至資料表的能力。 
-    - 如果您未提供使用者名稱和密碼，您的 Windows 身分識別用來登入 SQL Server，而且您會提升輸入密碼。
-    - 您剛才下載之範例資料檔案的路徑和檔案名稱。 例如， `C:\temp\pysql\nyctaxi1pct.csv`
+    - 如果您未提供使用者名稱和密碼，您的 Windows 身分識別用來登入 SQL Server。
+    - 您剛才下載之範例資料檔案的路徑和檔案名稱。 例如，使用 IPv4 位址的 `C:\temp\pysql\nyctaxi1pct.csv`
 
     > [!NOTE]
     > 若要成功地載入資料時，程式庫 xmlrw.dll 必須 bcp.exe 相同資料夾中。

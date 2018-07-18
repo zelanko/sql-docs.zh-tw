@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899517"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>多個 hstmts （Paradox 驅動程式）
 ODBC Paradox 驅動程式使用時，如果您想要使用一個以上*hstmt*資料表上執行查詢，資料表必須有唯一的索引 （Paradox 主索引鍵）。

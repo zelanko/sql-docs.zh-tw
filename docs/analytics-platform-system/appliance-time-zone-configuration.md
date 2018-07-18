@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544656"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>應用裝置的時區設定 Analytics Platform System
 **時區**頁面可讓您設定 Analytics Platform System (APS) 應用裝置上的所有節點的時區。  

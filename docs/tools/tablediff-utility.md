@@ -27,9 +27,10 @@ manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077529"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,7 +87,7 @@ tablediff
  傳回支援的參數清單。  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *source_server_name***\\*** instance_name*。  
+ 這是來源伺服器的名稱。 指定 *預設執行個體的* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *source_server_name***\\***instance_name*。  
   
  **-sourcedatabase** *source_database*  
  這是來源資料庫的名稱。  
@@ -110,7 +111,7 @@ tablediff
  在比較期間，來源資料表以 TABLOCK 和 HOLDLOCK 資料表提示鎖定。  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *destination_server_name***\\*** instance_name*。  
+ 這是目的地伺服器的名稱。 指定 *預設執行個體的* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體指定 *destination_server_name***\\***instance_name*。  
   
  **-destinationdatabase** *subscription_database*  
  這是目的地資料庫的名稱。  

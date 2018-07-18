@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -23,11 +22,12 @@ caps.latest.revision: 67
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0156e099cac8984cf1e2661e1d1226579c246439
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8398a169e12f597e7baec9fe42495c59b19d6903
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309077"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ```  
   
 #### <a name="parameters"></a>參數  
-*$serverName*：一個字串，指定要建立連接之伺服器的名稱。 執行個體名稱 (例如 "myServer\instanceName") 或通訊埠編號 (例如 "myServer, 1521") 可以納入為此字串的一部分。 如需此參數之可用選項的完整說明，請參閱 ODBC 驅動程式連接字串關鍵字 」 一節中的 「 Server 關鍵字[Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+*$serverName*：一個字串，指定要建立連接之伺服器的名稱。 執行個體名稱 (例如 "myServer\instanceName") 或通訊埠編號 (例如 "myServer, 1521") 可以納入為此字串的一部分。 如需此參數之可用選項的完整說明，請參閱 [搭配 SQL Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)的「ODBC 驅動程式連接字串關鍵字」一節中的「Server 關鍵字」。  
   
 從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]3.0 版開始，您也可以透過 `"(localdb)\instancename"`指定 LocalDB 執行個體。 如需詳細資訊，請參閱[LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)。  
   

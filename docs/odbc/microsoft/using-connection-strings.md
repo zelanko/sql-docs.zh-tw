@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905684"
 ---
 # <a name="using-connection-strings"></a>使用連接字串
 您可以使用的連接字串連接至 Visual FoxPro 資料來源。  

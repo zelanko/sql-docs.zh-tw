@@ -13,7 +13,7 @@ ms.openlocfilehash: 6fecd3b679f69166d8a9946372ba58d95e79c9f3
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575060"
 ---
 # <a name="clearcache-element-xmla"></a>ClearCache 元素 (XMLA)

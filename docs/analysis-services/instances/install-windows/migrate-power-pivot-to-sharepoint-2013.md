@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34018455"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>將 Power Pivot 移轉至 SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="bkmk_backup_restore"></a>備份、 複製和還原資料庫  
  「SharePoint 資料庫附加升級」程序是指將 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 相關內容及服務應用程式資料庫備份、複製和還原至 SharePoint 2013 伺服器陣列的一連串步驟。  
   
-1.  **將資料庫設定唯讀：**在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下資料庫名稱，然後按一下 [屬性]。 在 [選項] 頁面上，將 [資料庫唯讀] 屬性設定為 [True]。  
+1.  **將資料庫設定唯讀：** 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下資料庫名稱，然後按一下 [屬性]。 在 [選項] 頁面上，將 [資料庫唯讀] 屬性設定為 [True]。  
   
 2.  **備份** ：備份您想要移轉至 SharePoint 2013 伺服器陣列的每個內容資料庫及服務應用程式資料庫。 在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 中，以滑鼠右鍵按一下資料庫名稱，按一下 [工作]，然後按一下 [備份]。  
   
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  **還原** ：將資料庫還原至目的地 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]。 您可以使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 來完成這個步驟。  
   
-5.  **將資料庫設定為讀寫：**將 [資料庫唯讀]設定為 [False]。  
+5.  **將資料庫設定為讀寫：** 將 [資料庫唯讀]設定為 [False]。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>準備 Web 應用程式和掛接內容資料庫  
  如需下列程序的更詳細說明，請參閱[將資料庫從 SharePoint 2010 升級到 SharePoint 2013](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911243"
 ---
 # <a name="batches-of-sql-statements"></a>批次的 SQL 陳述式
 SQL 陳述式的批次是一組兩個或多個 SQL 陳述式或單一的 SQL 陳述式有兩個或多個 SQL 陳述式群組相同的效果。 在某些實作中，整個批次陳述式才可供任何結果。 這通常會較有效率比個別提交陳述式，因為通常可以降低網路流量，而且資料來源有時可以最佳化的 SQL 陳述式批次的執行。 在其他實作中呼叫**SQLMoreResults**觸發批次中的下一個陳述式執行。 ODBC 支援下列類型的批次：  

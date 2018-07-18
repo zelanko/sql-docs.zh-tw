@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898453"
 ---
 # <a name="convert-function-limitations"></a>轉換函式限制
 類型轉換失敗，導致受影響的資料行設為 NULL。  

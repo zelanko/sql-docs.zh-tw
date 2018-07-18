@@ -3,11 +3,9 @@ title: 第 2 課：設定資料庫物件的權限 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql
+ms.technology: t-sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -15,16 +13,16 @@ applies_to:
 helpviewer_keywords:
 - database permissions
 ms.assetid: f964b66a-ec32-44c2-a185-6a0f173bfa22
-caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea82e895f42e6dcbf68a100f1067a4602e7055c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0a330e7c8e97986af084acecf6fe9669aab96ea
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418617"
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>第 2 課：設定資料庫物件的權限
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

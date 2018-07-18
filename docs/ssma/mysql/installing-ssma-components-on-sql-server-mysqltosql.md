@@ -1,8 +1,6 @@
 ---
 title: 安裝 SQL Server (MySQLToSql) 上的 SSMA 元件 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9bdf41c278fe5660c645eab72498cbbee540508
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc0a4555d41d4848fdbbe8a3b3244275dae1aaa2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776324"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>安裝 SQL Server (MySQLToSql) 上的 SSMA 元件
 除了安裝 SSMA，您也必須安裝元件正在執行的電腦上[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 這些元件包括 SSMA 延伸模組組件，可支援資料移轉和 MySQL 提供者，以啟用伺服器對伺服器的連線。  
@@ -34,7 +33,7 @@ SSMA 延伸模組組件會加入資料庫， **sysdb**，以指定的執行個�
   
 此外，當您將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，SSMA 建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式作業，伺服器端資料移轉引擎是用來進行資料移轉。  
   
-### <a name="prerequisites"></a>필수 구성 요소  
+### <a name="prerequisites"></a>必要條件  
 SSMA for MySQL 伺服器元件在安裝之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請確定電腦是否符合下列需求：  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  

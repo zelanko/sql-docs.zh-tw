@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902309"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>錯誤訊息 （Visual FoxPro ODBC 驅動程式）
 發生錯誤時，Visual FoxPro 驅動程式會傳回下列資訊：  

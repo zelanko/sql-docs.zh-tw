@@ -13,7 +13,7 @@ ms.openlocfilehash: 3ada531d33baf7007d08ac8a719fca2bf8f1b2e4
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574250"
 ---
 # <a name="cellinfo-element-xmla"></a>CellInfo 元素 (XMLA)

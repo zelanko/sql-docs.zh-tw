@@ -2,7 +2,6 @@
 title: 更新和 CancelUpdate 方法範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709e155ee6f5dba684aa284b479bde29b922ee66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93a9f0c959e1e6c271e611a0ab94150317e9c45a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282777"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>更新和 CancelUpdate 方法範例 （VC + +）
 這個範例會示範[更新](../../../ado/reference/ado-api/update-method.md)方法搭配[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)方法。  

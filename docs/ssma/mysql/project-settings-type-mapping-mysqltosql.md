@@ -1,8 +1,6 @@
 ---
 title: 專案設定 （型別對應） (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1805c9536995ddbd3a661a50ef3c4804a720fd8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bf1d1c219b8673345d5f2074fe8885b5c58223f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776763"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>專案設定 （型別對應） (MySQLToSQL)
 型別對應的專案設定可讓您設定的 SSMA 專案的預設型別對應。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   您可以使用預設專案設定 對話方塊來設定所有專案的組態選項。 若要存取的類型對應設定，請在 工具 功能表中，選取預設專案設定，設定會才能檢視 / 變更從選取的移轉專案類型**移轉的目標版本**下拉式清單，然後按一下左窗格中的 型別對應。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 ##### <a name="source-type"></a>來源類型  
 它是具有要對應到目標資料庫的資料類型的 MySQL 資料型別。  
@@ -41,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ##### <a name="target-type"></a>目標類型  
 目標資料庫資料類型指定的 MySQL 資料型別。  
   
-##### <a name="add"></a>[加入]  
+##### <a name="add"></a>加入  
 按一下以新增的資料類型對應清單。  
   
 ##### <a name="edit"></a>編輯  
@@ -59,8 +58,8 @@ ms.lasthandoff: 05/03/2018
 |||  
 |-|-|  
 |**MySQL 資料類型**|**SQL Server 資料類型**|  
-|bigint|bigint|  
-|bigint [*..255]|bigint|  
+|BIGINT|BIGINT|  
+|bigint [*..255]|BIGINT|  
 |BINARY|二進位 [1]|  
 |binary[0..1]|二進位 [1]|  
 |binary[2..255]|binary[*]|  
@@ -87,35 +86,35 @@ ms.lasthandoff: 05/03/2018
 |char[2..255]|nchar[*]|  
 |character|nchar [1]|  
 |字元不同 [0..1]|nvarchar [1]|  
-|字元不同 [2..255]|nvarchar|  
+|字元不同 [2..255]|NVARCHAR|  
 |character[0..1]|nchar [1]|  
 |character[2..255]|nchar[*]|  
-|date|date|  
-|datetime|datetime2[0]|  
-|dec|decimal|  
+|日期|日期|  
+|DATETIME|datetime2[0]|  
+|dec|Decimal|  
 |dec [*..65]|decimal[*][0]|  
 |dec [*..65][\*..30]|decimal[*][\*]|  
-|decimal|decimal|  
+|Decimal|Decimal|  
 |小數 [*..65]|decimal[*][0]|  
 |小數 [*..65][\*..30]|decimal[*][\*]|  
 |double|float [53]|  
 |雙精度|float [53]|  
 |雙精確度 [*..255][\*..30]|數字 [*][\*]|  
 |double [*..255][\*..30]|數字 [*][\*]|  
-|修正|numeric|  
+|修正|NUMERIC|  
 |修正 [*..65][\*..30]|數字 [*][\*]|  
-|float|float[24]|  
+|FLOAT|float[24]|  
 |float [*..255][\*..30]|數字 [*][\*]|  
 |float [*..53]|float [53]|  
-|int|int|  
-|int [*..255]|int|  
-|integer|int|  
-|整數 [*..255]|int|  
+|ssNoversion|ssNoversion|  
+|int [*..255]|ssNoversion|  
+|integer|ssNoversion|  
+|整數 [*..255]|ssNoversion|  
 |longblob|varbinary(max)|  
 |長文字|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint [*..255]|int|  
+|mediumint|ssNoversion|  
+|mediumint [*..255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
 |國家 （地區) 的 char|nchar [1]|  
 |國家 （地區) 的 char [0..1]|nchar [1]|  
@@ -138,71 +137,71 @@ ms.lasthandoff: 05/03/2018
 |nchar varchar [4001..*]|nvarchar(max)|  
 |nchar[0..1]|nchar [1]|  
 |nchar[2..255]|nchar[*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |數字 [*..65]|numeric[*][0]|  
 |數字 [*..65][\*..30]|數字 [*][\*]|  
-|nvarchar|nvarchar [1]|  
+|NVARCHAR|nvarchar [1]|  
 |nvarchar[0..1]|nvarchar [1]|  
 |nvarchar[2..4000]|nvarchar[*]|  
 |nvarchar[4001..*]|nvarchar(max)|  
-|real|float [53]|  
+|REAL|float [53]|  
 |實際 [*..255][\*..30]|數字 [*][\*]|  
-|序列|bigint|  
-|smallint|smallint|  
-|smallint [*..255]|smallint|  
+|序列|BIGINT|  
+|SMALLINT|SMALLINT|  
+|smallint [*..255]|SMALLINT|  
 |text|nvarchar(max)|  
 |text[0..1]|nvarchar [1]|  
 |text[2..4000]|nvarchar[*]|  
 |text[4001..*]|nvarchar(max)|  
 |time|time|  
-|timestamp|datetime|  
+|TIMESTAMP|DATETIME|  
 |tinyblob|varbinary [255]|  
-|tinyint|smallint|  
-|tinyint [*..255]|smallint|  
+|TINYINT|SMALLINT|  
+|tinyint [*..255]|SMALLINT|  
 |tinytext|nvarchar[255]|  
-|不帶正負號的 bigint|bigint|  
-|不帶正負號的 bigint [*..255]|bigint|  
-|不帶正負號的 12 月|decimal|  
+|不帶正負號的 bigint|BIGINT|  
+|不帶正負號的 bigint [*..255]|BIGINT|  
+|不帶正負號的 12 月|Decimal|  
 |不帶正負號的 dec [*..65]|decimal[*][0]|  
 |不帶正負號的 dec [*..65][\*..30]|decimal[*][\*]|  
-|不帶正負號的十進位|decimal|  
+|不帶正負號的十進位|Decimal|  
 |不帶正負號的十進位 [*..65]|decimal[*][0]|  
 |不帶正負號的十進位 [*..65][\*..30]|decimal[*][\*]|  
 |不帶正負號的雙|float [53]|  
 |不帶正負號的雙精度|float [53]|  
 |不帶正負號雙精確度 [*..255][\*..30]|數字 [*][\*]|  
 |不帶正負號 double [*..255][\*..30]|數字 [*][\*]|  
-|不帶正負號固定|numeric|  
+|不帶正負號固定|NUMERIC|  
 |不帶正負號固定 [*..65][\*..30]|數字 [*][\*]|  
 |不帶正負號的浮點數|float[24]|  
 |不帶正負號的浮點數 [*..255][\*..30]|數字 [*][\*]|  
 |不帶正負號的浮點數 [*..53]|float [53]|  
-|不帶正負號的整數|bigint|  
-|不帶正負號的 int [*..255]|bigint|  
-|不帶正負號的整數|bigint|  
-|不帶正負號的整數 [*..255]|bigint|  
-|不帶正負號的 mediumint|int|  
-|不帶正負號的 mediumint [*..255]|int|  
-|不帶正負號的數字|numeric|  
+|不帶正負號的整數|BIGINT|  
+|不帶正負號的 int [*..255]|BIGINT|  
+|不帶正負號的整數|BIGINT|  
+|不帶正負號的整數 [*..255]|BIGINT|  
+|不帶正負號的 mediumint|ssNoversion|  
+|不帶正負號的 mediumint [*..255]|ssNoversion|  
+|不帶正負號的數字|NUMERIC|  
 |不帶正負號的數字 [*..65]|numeric[*][0]|  
 |不帶正負號的數字 [*..65][\*..30]|數字 [*][\*]|  
 |未簽署的真實|float [53]|  
 |未簽署的真實 [*..255[[\*..30]|數字 [*][\*]|  
-|不帶正負號的 smallint|int|  
-|不帶正負號的 smallint [*..255]|int|  
-|不帶正負號的 tinyint|tinyint|  
-|不帶正負號的 tinyint [*..255]|tinyint|  
+|不帶正負號的 smallint|ssNoversion|  
+|不帶正負號的 smallint [*..255]|ssNoversion|  
+|不帶正負號的 tinyint|TINYINT|  
+|不帶正負號的 tinyint [*..255]|TINYINT|  
 |varbinary[0..1]|varbinary [1]|  
 |varbinary[2..8000]|varbinary[*]|  
 |varbinary[8001..*]|varbinary(max)|  
 |varchar[0..1]|nvarchar [1]|  
 |varchar[2..4000]|nvarchar[*]|  
 |varchar[4001..*]|nvarchar(max)|  
-|year|smallint|  
-|year[2..2]|smallint|  
-|year[4..4]|smallint|  
+|year|SMALLINT|  
+|year[2..2]|SMALLINT|  
+|year[4..4]|SMALLINT|  
   
-##### <a name="add"></a>[加入]  
+##### <a name="add"></a>加入  
 按一下以新增的資料類型對應清單。  
   
 ##### <a name="edit"></a>編輯  

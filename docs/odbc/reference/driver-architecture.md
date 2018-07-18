@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916013"
 ---
 # <a name="driver-architecture"></a>驅動程式架構
 驅動程式架構分為兩種類別，根據哪個軟體處理序的 SQL 陳述式：  

@@ -1,8 +1,6 @@
 ---
 title: 新的專案 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,16 +13,17 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 14228d43d5e0841a081fac70c9bbb105a46ff49b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4505c11d20c826b9c2b879d7b9c17bd690efaed9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777584"
 ---
 # <a name="new-project-oracletosql"></a>新的專案 (OracleToSQL)
 使用**新專案**對話方塊來建立新的 SSMA 專案。 若要存取**新專案**對話方塊中，於**檔案**功能表上，按一下 **新專案**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **名稱**  
 輸入專案的名稱。 SSMA 會將附加檔案的副檔名。  
   

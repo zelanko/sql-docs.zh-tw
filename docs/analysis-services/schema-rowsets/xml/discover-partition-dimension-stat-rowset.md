@@ -1,5 +1,5 @@
 ---
-title: DISCOVER_PARTITION_DIMENSION_STAT 資料列集 |Microsoft 文件
+title: DISCOVER_PARTITION_DIMENSION_STAT 資料列集 |Microsoft Docs
 ms.date: 05/03/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,22 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fe43b694b8fdeb4128ae1ad2aa9dc137d2bc9d42
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980421"
 ---
 # <a name="discoverpartitiondimensionstat-rowset"></a>DISCOVER_PARTITION_DIMENSION_STAT 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   傳回與資料分割相關聯之維度的統計資料。  
   
- **適用於：**表格式模型、 多維度模型  
+ **適用於：** 表格式模型、 多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_PARTITION_DIMENSION_STAT**資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|限制|Description|  
+|資料行名稱|類型指標|限制|描述|  
 |-----------------|--------------------|-----------------|-----------------|  
 |**DATABASE_NAME**|**DBTYPE_WSTR**|必要項|資料庫的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|必要項|Cube 或表格式模型的名稱。<br /><br /> 這個資料行是限制清單中的必要項。|  

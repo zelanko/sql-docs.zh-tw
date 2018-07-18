@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030645"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting 屬性 - SecureConnectionLevel
   傳回 RSReportServer.config 檔案中指定的安全連接層級。 唯讀。  

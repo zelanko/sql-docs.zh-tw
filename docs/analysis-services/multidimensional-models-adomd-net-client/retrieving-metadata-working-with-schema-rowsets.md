@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020375"
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>擷取中繼資料-使用 結構描述資料列集
   當您需要的中繼資料比 ADOMD.NET 物件模型所提供的還要多時，ADOMD.NET 提供的功能，可擷取完整範圍的 XML for Analysis (XMLA)、OLE DB、OLE DB for OLAP 以及 OLE DB for Data Mining 結構描述資料列集：  

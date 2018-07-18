@@ -1,6 +1,6 @@
 ---
 title: (MDX) LastChild |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29edcf11644f316a3ab57ea304b785567abc2653
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 77c8d0c3f1332b222a028747619ce792915dbe87
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578840"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740997"
 ---
 # <a name="lastchild-mdx"></a>LastChild (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回指定成員的最後一個子系。  
   
