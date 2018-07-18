@@ -1,5 +1,5 @@
 ---
-title: 刪除關聯性 |Microsoft 文件
+title: 刪除關聯性 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 115d72bd0b833d1f392b2349d3ed4e4970f58453
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34040092"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999177"
 ---
 # <a name="delete-relationships"></a>刪除關聯性 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  您可以刪除現有的關聯性，方法是使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 如需如何在表格式模型中使用關聯性資訊，請參閱[關聯性](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
+  您可以刪除現有的關聯性，方法是使用 [圖表檢視] 中的模型設計師或使用 [管理關聯性] 對話方塊。 如需如何在表格式模型中使用關聯性的資訊，請參閱[關聯性](../../analysis-services/tabular-models/relationships-ssas-tabular.md)。  
   
 ## <a name="considerations-for-deleting-relationships"></a>刪除關聯性的考量  
  當您決定是否要刪除關聯性時，請牢記以下問題：  

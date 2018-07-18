@@ -1,5 +1,5 @@
 ---
-title: sp_grantlogin (TRANSACT-SQL) |Microsoft 文件
+title: sp_grantlogin (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: c0e5454e94024bf0cebe6d9b0b2702e1bcf989f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248123"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054216"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33248123"
   建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md)改。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ sp_grantlogin [@loginame=] 'login'
   
 ## <a name="arguments"></a>引數  
  [ **@loginame =** ] **'***login***'**  
- 這是 Windows 使用者或群組的名稱。 Windows 使用者或群組必須在表單中的 Windows 網域名稱限定*網域*\\*使用者*; 例如， **London\Joeb**。 *登入*是**sysname**，沒有預設值。  
+ 這是 Windows 使用者或群組的名稱。 Windows 使用者或群組必須在表單中的 Windows 網域名稱限定*網域*\\*使用者*，例如**London\Joeb**。 *登入*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_grantlogin**呼叫支援其他選項的 CREATE LOGIN。 如需建立 SQL Server 登入資訊，請參閱[CREATE LOGIN &#40;Transact SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
+ **sp_grantlogin**呼叫 CREATE LOGIN、 支援其他選項。 如需建立 SQL Server 登入資訊，請參閱 < [CREATE LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  **sp_grantlogin**無法在使用者自訂交易內執行。  
   
@@ -62,7 +62,7 @@ sp_grantlogin [@loginame=] 'login'
  需要伺服器的 ALTER ANY LOGIN 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`CREATE LOGIN`建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 使用者的登入`Corporate\BobJ.`這是慣用的方法。  
+ 下列範例會使用`CREATE LOGIN`來建立[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 使用者的登入`Corporate\BobJ.`這是慣用的方法。  
   
 ```  
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  

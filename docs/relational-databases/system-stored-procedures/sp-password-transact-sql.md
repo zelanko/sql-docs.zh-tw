@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 186384ed3dc9ec22264c4cbb184f9369c3677af3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993700"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33258186"
   加入或變更的密碼[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)改。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,22 +50,22 @@ sp_password [ [ @old = ] 'old_password' , ]
   
 ## <a name="arguments"></a>引數  
  [  **@old=** ] **'***old_password***'**  
- 這是舊密碼。 *old_password*是**sysname**，預設值是 NULL。  
+ 這是舊密碼。 *old_password*已**sysname**，預設值是 NULL。  
   
  [  **@new=** ] **'***new_password***'**  
- 這是新密碼。 *new_password*是**sysname**，沒有預設值。 *old_password*必須指定是否沒有使用具名的參數。  
+ 這是新密碼。 *new_password*已**sysname**，沒有預設值。 *old_password*必須指定是否沒有使用具名的參數。  
   
 > [!IMPORTANT]  
 >  請勿使用 NULL 密碼。 請使用增強式密碼。 如需詳細資訊，請參閱 [Strong Passwords](../../relational-databases/security/strong-passwords.md)。  
   
  [  **@loginame=** ] **'***登入***'**  
- 這是受到密碼變更影響的登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 *登入*必須存在，而且可以指定的成員只能由**sysadmin**或**securityadmin**固定伺服器角色。  
+ 這是受到密碼變更影響的登入名稱。 *login* 是預設值為 NULL 的 **sysname**。 *登入*必須已經存在，而且可以只指定的成員**sysadmin**或是**securityadmin**固定伺服器角色。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_password**呼叫 ALTER LOGIN。 這個陳述式支援其他選項。 如需變更密碼資訊，請參閱[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
+ **sp_password**呼叫 ALTER LOGIN。 這個陳述式支援其他選項。 如需有關變更密碼的資訊，請參閱[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
  **sp_password**無法在使用者自訂交易內執行。  
   

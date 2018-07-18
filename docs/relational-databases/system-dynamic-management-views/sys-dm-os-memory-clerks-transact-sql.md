@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_memory_clerks (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_memory_clerks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 00fad2477b9dd6bd25f998d3d741bcb63c364d05
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052356"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,9 +37,9 @@ ms.lasthandoff: 05/23/2018
   傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中所有目前作用中記憶體 Clerk 集。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_memory_clerks**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_memory_clerks**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|指定記憶體 Clerk 的唯一記憶體位址。 這是主索引鍵資料行。 不可為 Null。|  
 |**type**|**nvarchar(60)**|指定記憶體 Clerk 的類型。 每一個 Clerk 都有特定類型，例如 CLR Clerks MEMORYCLERK_SQLCLR。 不可為 Null。|  
@@ -53,14 +54,14 @@ ms.lasthandoff: 05/23/2018
 |**shared_memory_reserved_kb**|**bigint**|指定記憶體 Clerk 所保留的共用記憶體數量。 記憶體數量已保留給共用記憶體和檔案對應使用。 不可為 Null。|  
 |**shared_memory_committed_kb**|**bigint**|指定記憶體 Clerk 認可的共用記憶體數量。 不可為 Null。|  
 |**page_size_in_bytes**|**bigint**|指定這個記憶體 Clerk 的頁面配置資料粒度。 不可為 Null。|  
-|**page_allocator_address**|**varbinary(8)**|指定頁面配置器的位址。 此位址是唯一的記憶體 clerk，並可用於**sys.dm_os_memory_objects**找出繫結這個 clerk 的記憶體物件。 不可為 Null。|  
-|**host_address**|**varbinary(8)**|指定這個記憶體 Clerk 之主機的記憶體位址。 如需詳細資訊，請參閱[s &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)。 元件，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]透過主機介面的記憶體資源。<br /><br /> 0x00000000 = 記憶體 Clerk 屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> 不可為 Null。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**page_allocator_address**|**varbinary(8)**|指定頁面配置器的位址。 此位址都是唯一的記憶體 clerk，而且可用於**sys.dm_os_memory_objects**找出繫結這個 clerk 的記憶體物件。 不可為 Null。|  
+|**host_address**|**varbinary(8)**|指定這個記憶體 Clerk 之主機的記憶體位址。 如需詳細資訊，請參閱 < [sys.dm_os_hosts &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md)。 元件，例如[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]透過主機介面的記憶體資源。<br /><br /> 0x00000000 = 記憶體 Clerk 屬於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。<br /><br /> 不可為 Null。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions 
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員是由三層階層組成。 階層底端是記憶體節點。 中層級是由記憶體 Clerk、記憶體快取和記憶體集區所組成。 最上層是由記憶體物件組成。 這些物件通常用在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體中配置記憶體。  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/23/2018
 
  [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

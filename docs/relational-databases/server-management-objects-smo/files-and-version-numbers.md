@@ -1,5 +1,5 @@
 ---
-title: 檔案和版本號碼 |Microsoft 文件
+title: 檔案和版本號碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -23,23 +23,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 10e11076ce023a3d969b4ba95a30c15de43eafa6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32966513"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046226"
 ---
 # <a name="files-and-version-numbers"></a>檔案和版本號碼
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  所有必要的 SQL Server 管理物件 (SMO) 元件內含在 Microsoft.SqlServer.SqlManagementObjects NuGet 封裝。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
+  所有必要的 SQL Server 管理物件 (SMO) 元件包含在 Microsoft.SqlServer.SqlManagementObjects NuGet 套件。 SMO 是實作於數個 Managed 組件中。 您可以在用戶端或伺服器上開發 SMO 應用程式。  
 
 >>[!Important]
-檔案版本的 SMO 組件會顯示為主要。**0**。Build.Revision。 但是，內嵌的組件版本為主要。**100**。Build.Revision。 這是為了讓其中一個更新並不會影響任何其他保留 SMO 在每個應用程式中使用的版本不同。
+SMO 組件的檔案版本會顯示為主要。**0**。Build.Revision。 但內嵌組件的版本為主要。**100**。Build.Revision。 這是為了讓其中一個更新並不會影響任何其他人將 SMO 在每個應用程式中使用的版本是分開。
 >>
->>因此您應該**不**安裝這些版本的組件到全域組件快取 (GAC) 中。 如此一來可能會導致其他應用程式，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio 中，若要中斷。 
+>>因此您應該**不**安裝這些版本的組件至全域組件快取 (GAC) 中。 這樣可能會造成其他應用程式，例如[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio 中，若要中斷。 
   
-|檔案|Description|  
+|檔案|描述|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|包含與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體進行連接的支援。|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|包含 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker 程式設計的支援。 只有在存取 Service Broker 的程式中才需要此檔案。|  

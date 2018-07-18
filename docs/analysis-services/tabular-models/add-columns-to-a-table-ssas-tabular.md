@@ -1,5 +1,5 @@
 ---
-title: 將資料行加入資料表 |Microsoft 文件
+title: 將資料行加入資料表 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77be2e392add4811d011d85ebc1ee9efbf52191d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34043452"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991470"
 ---
 # <a name="add-columns-to-a-table"></a>將資料行加入資料表
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  本文說明如何將資料行加入至現有的資料表。  
+  本文說明如何將資料行新增至現有的資料表。  
   
 ## <a name="add-columns-from-the-datasource"></a>從資料來源加入資料行  
  當您使用 [資料表匯入精靈] 從資料來源資料表匯入資料時，系統會在模型中建立新的資料表，此模型包含來源資料表中的所有資料行；或者如果您選擇使用 [預覽和篩選] 功能來篩選出某些資料行，則只會包含您選取的資料行及篩選的資料。 您也可以撰寫 SQL 查詢來指定只匯入某些資料行。 但是，您之後可決定來源資料表擁有您想要加入至模型資料表的其他資料行，或者您必須加入所包含的值衍生自 DAX 公式的導出資料行。  
@@ -51,7 +51,7 @@ ms.locfileid: "34043452"
 2.  在公式列中輸入 DAX 公式，以便為每個資料列加入屬性。  
   
 ## <a name="add-a-blank-column"></a>加入空白的資料行  
- 您可以在模型資料表中建立空白的具名資料行。 如果您想從其他來源貼上資料，空白資料行會很有用。 請記住，貼上的資料之儲存方式與匯入的資料之儲存方式不同。 如需詳細資訊，請參閱[複製及貼上資料](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
+ 您可以在模型資料表中建立空白的具名資料行。 如果您想從其他來源貼上資料，空白資料行會很有用。 請記住，貼上的資料之儲存方式與匯入的資料之儲存方式不同。 如需詳細資訊，請參閱 <<c0> [ 複製並貼上資料](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)。  
   
 #### <a name="to-create-a-named-blank-column"></a>建立空白的具名資料行  
   

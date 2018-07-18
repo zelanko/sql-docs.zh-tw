@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_xtp_gc_queue_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef266afcab07fbb9d5bb73a48dafcf8eea59844
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465944"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000830"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "34465944"
   
  主要記憶體回收執行緒 (閒置的執行緒) 會追蹤自從上一次叫用主要記憶體回收執行緒之後所完成之所有交易的已更新、刪除及插入的資料列。 當記憶體回收執行緒喚醒時，它會判斷最舊作用中交易的時間戳記是否已變更。 如果最舊的作用中交易已經變更，則閒置的執行緒會針對不再需要寫入集合的交易將工作項目加入佇列 (以 16 個資料列的區塊為單位)。 例如，如果您刪除 1,024 個資料列，您最終將會看到 64 個記憶體回收工作項目加入佇列，每個項目都包含 16 個已刪除的資料列。  使用者交易在認可之後，它會選取其排程器上所有加入佇列的項目。 如果其排程器上沒有任何項目加入佇列，使用者交易將會在目前 NUMA 節點中的任何佇列上搜尋。  
   
- 您可以藉由執行 sys.dm_xtp_gc_queue_stats 來了解已加入佇列的工作是否已經在處理，藉以判斷記憶體回收是否釋出已刪除之資料列的記憶體。 如果 current_queue_depth 中的項目不會被處理，或沒有新的工作項目加入至 current_queue_depth，這種情況表示記憶體回收並未釋放記憶體。 例如，如果有長時間執行的交易，便無法執行記憶體回收。  
+ 您可以藉由執行 sys.dm_xtp_gc_queue_stats 來了解已加入佇列的工作是否已經在處理，藉以判斷記憶體回收是否釋出已刪除之資料列的記憶體。 如果 current_queue_depth 中的項目不會被處理，或沒有新的工作項目都會加入 current_queue_depth，這會是表示記憶體回收並未釋放記憶體。 例如，如果有長時間執行的交易，便無法執行記憶體回收。  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
 
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|佇列的唯一識別碼。|  
 |total_enqueues|**bigint**|自從伺服器啟動之後加入這個佇列中的記憶體回收工作項目的總數。|  

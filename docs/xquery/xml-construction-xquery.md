@@ -1,5 +1,5 @@
 ---
-title: XML 建構 (XQuery) |Microsoft 文件
+title: XML 建構 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -30,19 +30,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 66dc8917b0fa80c79d385dafb4bfb4c4c96c4127
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077720"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995140"
 ---
 # <a name="xml-construction-xquery"></a>XML 建構 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  在 XQuery 中，您可以使用**直接**和**計算**建構函式來查詢中建構 XML 結構。  
+  在 XQuery 中，您可以使用**直接**並**計算**建構函式來查詢中建構 XML 結構。  
   
 > [!NOTE]  
->  之間沒有差異**直接**和**計算**建構函式。  
+>  沒有任何差異**直接**並**計算**建構函式。  
   
 ## <a name="using-direct-constructors"></a>使用直接建構函式  
  當您使用直接建構函式時，可以在建構 XML 時指定與 XML 相似的語法。 下列範例說明以直接建構函式建構 XML 。  
@@ -52,11 +52,11 @@ ms.locfileid: "33077720"
   
 -   文字節點。  
   
--   兩個項目節點，\<摘要 > 和\<功能 >。  
+-   兩個項目節點\<摘要 > 和\<功能 >。  
   
-    -   \<摘要 > 項目具有一個文字子節點的值是"Some description"。  
+    -   \<摘要 > 項目有一個其值是"Some description"的文字節點子系。  
   
-    -   \<功能 > 項目具有三個元素節點子系\<色彩 >，\<加權 >，並\<擔保 >。 這些節點的每一個都有一個文字子節點，而且分別有 Red、25、2 years parts and labor 的值。  
+    -   \<功能 > 項目具有三個元素節點子系\<色彩 >，\<權數 >，並\<瑕疵責任擔保 >。 這些節點的每一個都有一個文字子節點，而且分別有 Red、25、2 years parts and labor 的值。  
   
 ```  
 declare @x xml;  
@@ -86,7 +86,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- 雖然從常數運算式建構元素 (如本範例所示) 非常有用，不過此 XQuery 語言真正強大的功能在於能夠從資料庫動態擷取資料來建構 XML。 您可以使用大括號指定查詢運算式。 在產生的 XML 中，其值將會取代運算式。 例如，下列查詢使用一個子元素 (<`e`>) 來建構 <`NewRoot`> 元素。 元素的值 <`e`> 計算所指定路徑運算式在大括號 （"{… }").  
+ 雖然從常數運算式建構元素 (如本範例所示) 非常有用，不過此 XQuery 語言真正強大的功能在於能夠從資料庫動態擷取資料來建構 XML。 您可以使用大括號指定查詢運算式。 在產生的 XML 中，其值將會取代運算式。 例如，下列查詢使用一個子元素 (<`e`>) 來建構 <`NewRoot`> 元素。 元素的值 <`e`> 計算所指定路徑運算式在大括號 （"{... }").  
   
 ```  
 DECLARE @x xml;  
@@ -106,7 +106,7 @@ SELECT @x.query('<NewRoot><e> { /root } </e></NewRoot>');
 </NewRoot>  
 ```  
   
- 下列查詢與上一個查詢相似。 不過，在大括號運算式指定**data （)** 函式可擷取的不可部份完成值 <`root`> 項目並將它指派給建構元素 <`e`>。  
+ 下列查詢與上一個查詢相似。 不過，在大括號運算式的指定**data （)** 函式可擷取的不可部份完成值 <`root`> 項目並將它指派給建構元素 <`e`>。  
   
 ```  
 DECLARE @x xml;  
@@ -250,7 +250,7 @@ This is product model catalog description.
   
  當您建構屬性時，您可以在大括號中指定值與運算式。 在此情況下，將以屬性值傳回運算式的結果。  
   
- 在下列範例中， **data （)** 函式不是絕對必要。 您的運算式值指派給屬性，因為**data （)** 隱含地套用至擷取指定之運算式的具類型的值。  
+ 在下列範例中， **data （)** 函式不是絕對必要。 因為您將運算式值指派給屬性 (attribute)，所以**data （)** 會隱含套用至擷取指定之運算式的具類型的值。  
   
 ```  
 DECLARE @x xml;  
@@ -322,7 +322,7 @@ where ProductModelID=7;
         <a attr="Item 5" />  
         ```  
   
-    -   使用[concat 函數](../xquery/functions-on-string-values-concat.md)串連成產生的屬性值的兩個字串引數：  
+    -   使用[concat 函式](../xquery/functions-on-string-values-concat.md)串連成產生的屬性值的兩個字串引數：  
   
         ```  
         SELECT @x.query( '<a attr="{concat(''Item'', /x[1])}"/>' )   
@@ -490,7 +490,7 @@ This is the result:
 ### <a name="xml-construction-and-white-space-handling"></a>XML 建構與空白處理  
  在 XML 建構中的元素內容可以包含空白字元。 這些字元是以下列方式處理：  
   
--   命名空間 Uri 中的空白字元視為 XSD 類型**anyURI**。 具體而言，以下是處理它們的方式：  
+-   命名空間 Uri 中的空白字元視為 XSD 型別**anyURI**。 具體而言，以下是處理它們的方式：  
   
     -   任何在開頭和結尾的空白字元都會被刪減。  
   
@@ -552,7 +552,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>其他直接 XML 建構函式  
  處理指示和 XML 註解的建構函式使用與對應 XML 建構語法相同的語法。 也支援文字節點的計算建構函式，但主要用於 XML DML 以建構文字節點。  
   
- **請注意**使用明確文字節點建構函式的範例，請參閱中的特定範例[插入&#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)。  
+ **附註**如需使用明確文字節點建構函式的範例，請參閱中的特定範例[insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md)。  
   
  在下列查詢中，已建構的 XML 包含一個元素、兩個屬性、註解以及處理指示。 請注意在 <`FirstLocation`> 前面使用了一個逗號，因為正在建構時序。  
   
@@ -589,7 +589,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>使用計算建構函式  
- 。 在此情況下，您可以指定關鍵字，以識別您要建構的節點類型。 只支援下列關鍵字：  
+ 執行個體時提供 SQL Server 登入。 在此情況下，您可以指定關鍵字，以識別您要建構的節點類型。 只支援下列關鍵字：  
   
 -   element  
   
@@ -640,7 +640,7 @@ text{"Some text "},
   
  請注意計算元素與屬性建構函式 (如 XQuery 規格所定義) 允許您計算節點名稱。 當您使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的直接建構函式時，節點名稱 (例如元素與屬性) 必須以常值指定。 因此，元素和屬性的直接建構函式與計算建構函式之間並沒有差異。  
   
- 在下列範例中，建構節點的內容從 XML 製造指示儲存在資料行中取得**xml** ProductModel 資料表的資料類型。  
+ 在下列範例中，建構節點的內容從 XML 製造指示儲存在 Instructions 資料行中取得**xml** ProductModel 資料表的資料類型。  
   
 ```  
 SELECT Instructions.query('  

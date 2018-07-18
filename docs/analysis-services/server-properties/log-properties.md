@@ -9,11 +9,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4e76f53329280caa589b2e45c19a967dc7c4e7dc
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238891"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999340"
 ---
 # <a name="log-properties"></a>記錄屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -21,7 +21,7 @@ ms.locfileid: "35238891"
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的記錄伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
 
 > [!NOTE]
-> 並非所有的屬性會套用至 Azure Analysis Services。
+> 並非所有的屬性會套用到 Azure Analysis Services。
   
 ## <a name="general"></a>一般  
  **檔案**  
@@ -36,7 +36,7 @@ ms.locfileid: "35238891"
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
 ## <a name="error-log"></a>錯誤記錄檔  
- 您可以在伺服器執行個體層級設定這些屬性，以修改顯示在其他工具和設計師中之錯誤組態的預設值。 請參閱[Cube、 分割區和維度處理的錯誤組態&#40;SSAS-多維度&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)和<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>如需詳細資訊。  
+ 您可以在伺服器執行個體層級設定這些屬性，以修改顯示在其他工具和設計師中之錯誤組態的預設值。 請參閱[Cube、 分割區和維度處理的錯誤組態&#40;SSAS-多維度&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)並<xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>如需詳細資訊。  
   
  **ErrorLog\ErrorLogFileName**  
  此屬性在伺服器執行處理作業期間，用來作為預設值。  

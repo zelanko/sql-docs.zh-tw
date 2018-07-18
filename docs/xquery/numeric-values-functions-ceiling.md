@@ -1,5 +1,5 @@
 ---
-title: ceiling 函數 (XQuery) |Microsoft 文件
+title: ceiling 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1399fd20bf4d7af3fed85730fc397e1400347ad2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077495"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991330"
 ---
-# <a name="numeric-values-functions---ceiling"></a>數字的值函式-ceiling 
+# <a name="numeric-values-functions---ceiling"></a>數值函式-ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回不含小數的最小數字，不小於其引數的值。 如果引數是空的序列，它會傳回空的序列。  
@@ -49,17 +49,17 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="remarks"></a>備註  
  如果類型 *$arg*是三個字的基底類型，其中**xs: float**， **xs: double**，或**xs: decimal**，傳回的型別是相同 *$arg*型別。  
   
- 如果類型 *$arg*是衍生自其中一個數字類型，類型的傳回型別是基底的數值類型。  
+ 如果類型 *$arg*是型別衍生自其中一個數字的類型，傳回的類型是基底的數值類型。  
   
- 如果 fn: floor、 fn: ceiling 或 fn: round 函數的輸入是**xdt: untypedatomic**，它會隱含地轉換為**xs: double**。  
+ Fn: floor、 fn: ceiling 或 fn: round 函數的輸入是否**xdt: untypedatomic**，它會隱含地轉換為**xs: double**。  
   
  任何其他類型都會產生靜態錯誤。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. 使用 ceiling() XQuery 函數  
- 對於「產品型號 7」，此查詢傳回產品型號之製造過程中的工作中心位置的清單。 如有記載，則此查詢會針對每一個工作中心位置，傳回位置識別碼、工時和批量。 此查詢會使用**ceiling**函數傳回工時，做為型別的值**十進位**。  
+ 對於「產品型號 7」，此查詢傳回產品型號之製造過程中的工作中心位置的清單。 如有記載，則此查詢會針對每一個工作中心位置，傳回位置識別碼、工時和批量。 此查詢會使用**ceiling**函數傳回工時，做為值型別的**十進位**。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -81,13 +81,13 @@ WHERE ProductModelID=7
   
 -   AWMI 命名空間前置詞代表 Adventure Works Manufacturing Instructions。 此前置詞是指要查詢之文件中使用的相同命名空間。  
   
--   **指示**是**xml**類型資料行。 因此， [query （） 方法 （XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)用來指定 XQuery。 XQuery 陳述式是指定成查詢方法的引數。  
+-   **指示**已**xml**類型資料行。 因此， [query （） 方法 （XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)用來指定 XQuery。 XQuery 陳述式是指定成查詢方法的引數。  
   
--   **for...傳回**是迴圈建構。 在查詢中，**如**迴圈識別一份\<位置 > 項目。 針對每個工作中心位置，**傳回**陳述式中的**如**迴圈描述要產生的 XML:  
+-   **for...傳回**是迴圈建構。 在查詢中， **for**迴圈識別一份\<位置 > 項目。 針對每個工作中心位置，**傳回**中的陳述式**如**迴圈描述要產生的 XML:  
   
     -   A\<位置 > 有 LocationID 和 LaborHrs 屬性的項目。 大括號 ({ }) 內的相對應運算式從文件中擷取必要值。  
   
-    -   {$i/@LotSize } 運算式擷取 LotSize 屬性文件中，如果有的話。  
+    -   {$i/@LotSize } 運算式從文中擷取 LotSize 屬性文件中，如果有的話。  
   
     -   以下是結果：  
   

@@ -1,5 +1,5 @@
 ---
-title: IsDefaultMeasure 元素 (XML) |Microsoft 文件
+title: IsDefaultMeasure 元素 (XML) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bf91c689addd9aa08054c716c0ceb714769d759
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34578310"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050503"
 ---
 # <a name="isdefaultmeasure-element-xml"></a>IsDefaultMeasure 元素 (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34578310"
 </RelationshipEndVisualizationProperties>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34578310"
 |預設值|false|  
 |基數|0-1：只出現一次的選擇性元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
@@ -47,6 +47,6 @@ ms.locfileid: "34578310"
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如**RelationshipEndVisualizationProperties**項目， **IsDefaultMeasure**項目指示可以瀏覽至另一端，以取得此實體的預設量值此關聯性。 預設值**false**表示沒有要取得的預設量值。  
+ 針對**RelationshipEndVisualizationProperties**項目**IsDefaultMeasure**項目表示，就可以瀏覽至另一端，以取得此實體的預設量值此關聯性。 預設值**false**表示沒有要取得的預設量值。  
   
   

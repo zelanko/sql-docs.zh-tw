@@ -1,5 +1,5 @@
 ---
-title: 在 Management Studio 建立 Analysis Services 指令碼 |Microsoft 文件
+title: 在 Management Studio 中建立 Analysis Services 指令碼 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016815"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057816"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>在 Management Studio 中建立 Analysis Services 指令碼
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -62,6 +62,6 @@ ms.locfileid: "34016815"
     >  一般而言，如果您要建立檔案的多個不同版本，請選取 [檔案]。  
   
 ## <a name="see-also"></a>另請參閱  
- [XMLA 查詢編輯器 & #40;Analysis Services-多維度資料 & #41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [XMLA 查詢編輯器 &#40;Analysis Services-多維度資料&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

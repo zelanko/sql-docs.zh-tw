@@ -1,5 +1,5 @@
 ---
-title: 建立、 改變和移除外部索引鍵 |Microsoft 文件
+title: 建立、 改變和移除外部索引鍵 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,23 +19,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fb86a1463eef4a4e438a2bda7b329c9d78a46c6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969303"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998010"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>建立、改變和移除外部索引鍵
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理物件 (SMO) 中，外部索引鍵是由 <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> 物件表示。  
   
- 若要在 SMO 中建立外部索引鍵，您必須指定外部索引鍵定義中的建構函式所在的資料表<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>物件。 您必須從該資料表至少選取一個資料行做為外部索引鍵。 若要進行這項作業，請建立 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 物件變數，並指定做為外部索引鍵之資料行的名稱。 然後，指定參考的資料表和參考的資料行。 使用<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>方法來加入資料行，**資料行**物件屬性。  
+ 若要在 SMO 中建立的外部索引鍵，您必須指定外部索引鍵定義中的建構函式所在的資料表<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>物件。 您必須從該資料表至少選取一個資料行做為外部索引鍵。 若要進行這項作業，請建立 <xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumn> 物件變數，並指定做為外部索引鍵之資料行的名稱。 然後，指定參考的資料表和參考的資料行。 使用<xref:Microsoft.SqlServer.Management.Smo.ForeignKeyColumnCollection.Add%2A>方法來加入資料行**資料行**物件屬性。  
   
  代表外部索引鍵資料行會列於**資料行**物件的屬性<xref:Microsoft.SqlServer.Management.Smo.ForeignKey>物件。 外部索引鍵所參考的主索引鍵由<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>屬性中指定的資料表中<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>屬性。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除外部索引鍵  
  此程式碼範例示範如何在某個資料表的一個或多個資料行以及另一個資料表的主要索引鍵資料行之間，建立外部索引鍵關聯性。  

@@ -1,5 +1,5 @@
 ---
-title: 安全性屬性 |Microsoft 文件
+title: 安全性屬性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 99678bc9a4a335ef39e10e41112551c751701b8f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238788"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991460"
 ---
 # <a name="security-properties"></a>安全性屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "35238788"
  **DataProtection\ RequiredProtectionLevel**  
  此為帶正負號的 32 位元整數屬性，其中定義所有必要的用戶端要求保護層級。 此屬性的值為下表列出的值之一。  
   
-|ReplTest1|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*0*|無，允許純文字。|  
 |*1*|(預設值) 需要有加密，不能以純文字記錄。|  

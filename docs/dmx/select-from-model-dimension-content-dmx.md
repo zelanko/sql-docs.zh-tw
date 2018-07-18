@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft 文件
+title: SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 29f730f0bdff985ffceb849c429e5d1b02f70d5f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842521"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992622"
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  採礦模型可用來做為 OLAP Cube 中的維度，而模型中的每個節點都代表該維度的成員。 **SELECT FROM\<模型 >。Dimension_CONTENT**陳述式會傳回模型的維度做為相關的內容。  
+  採礦模型可用來做為 OLAP Cube 中的維度，而模型中的每個節點都代表該維度的成員。 **SELECT FROM\<模型 >。Dimension_CONTENT**陳述式會傳回與做為維度模型的內容。  
   
 ## <a name="syntax"></a>語法  
   

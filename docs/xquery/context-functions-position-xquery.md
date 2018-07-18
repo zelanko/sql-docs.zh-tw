@@ -1,5 +1,5 @@
 ---
-title: position 函數 (XQuery) |Microsoft 文件
+title: position 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0afc659ea30da13a520c04c3d9f7efbdfaf8681
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077925"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052406"
 ---
-# <a name="context-functions---position-xquery"></a>內容函數的位置 (XQuery)
+# <a name="context-functions---position-xquery"></a>內容函式-position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回整數值，以指出目前所處理的項目序列中內容項目的位置。  
@@ -41,10 +41,10 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>備註  
- 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， **fn:position()** 只能用於內容相依述詞的內容。 具體而言，它只能用於括號 ([ ]) 內。針對此函數所做的比較不會在靜態類型推斷期間減少基數。  
+ 在  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]， **fn:position()** 只能用於內容相依述詞的內容。 具體而言，它只能用於括號 ([ ]) 內。針對此函數所做的比較不會在靜態類型推斷期間減少基數。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. 使用 position() XQuery 函數以擷取前兩個產品功能  
  下列查詢會從產品型號目錄描述擷取前兩個功能、<`Features`> 元素的前兩個子元素。 如果有更多的功能，它會將 <`there-is-more/`> 元素加入結果中。  
@@ -73,11 +73,11 @@ WHERE CatalogDescription is not null
   
  請注意下列項目是從上一個查詢而來：  
   
--   **命名空間**關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)查詢主體中定義命名空間前置詞使用。  
+-   **命名空間**中的關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義命名空間前置詞用於查詢主體中。  
   
--   查詢主體建構的 XML\<產品 > 項目**ProductModelID**和**ProductModelName**屬性，且具有以子元素傳回的產品功能。  
+-   查詢主體建構具有的 XML\<產品 > 項目**ProductModelID**並**ProductModelName**屬性，且具有以子元素傳回的產品功能。  
   
--   **Position （)** 函式用於述詞中決定的位置\<功能 > 子元素內容中的。 如果它是第一個或第二個功能，就會傳回它。  
+-   **Position （)** 函式來判斷的位置時，會在述詞\<功能 > 內容中的子項目。 如果它是第一個或第二個功能，就會傳回它。  
   
 -   如果陳述式加入\<該處是更 / > 元素加入結果中，如果產品目錄中有兩個以上的功能。  
   

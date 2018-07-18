@@ -1,5 +1,5 @@
 ---
-title: SQLXML Managed 類別 |Microsoft 文件
+title: SQLXML Managed 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -29,27 +29,27 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 13212c73e4f12ed83e6677a8c819b3306eab3118
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708496"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046156"
 ---
-# <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0.NET Framework 支援的 Managed 類別
+# <a name="sqlxml-40-net-framework-support---managed-classes"></a>SQLXML 4.0.NET Framework 支援-Managed 類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 支援的功能可讓您撰寫應用程式以便從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體存取 XML 資料、將資料置於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 環境、處理資料，以及將更新傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML Managed 類別會在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內部公開 SQLXML 4.0 的功能。 您可以利用 SQLXML Managed 類別撰寫 C# 應用程式來存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體中的 XML 資料、將資料帶到 .NET Framework 環境、處理資料，以及將更新傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 做為 DiffGram 來套用更新。 使用 SQLXML Managed 類別，將更新套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫時，您必須使用對應的結構描述。 如需實用範例，請參閱[存取.NET 環境中的 SQLXML 功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML Managed 類別會在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內部公開 SQLXML 4.0 的功能。 您可以利用 SQLXML Managed 類別撰寫 C# 應用程式來存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體中的 XML 資料、將資料帶到 .NET Framework 環境、處理資料，以及將更新傳回 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 做為 DiffGram 來套用更新。 使用 SQLXML Managed 類別，將更新套用到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫時，您必須使用對應的結構描述。 如需實用範例，請參閱 <<c0> [ 存取.NET 環境中的 SQLXML 功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)。  
   
  若要搭配 SQLXML 4.0 使用 SQLXML Managed 類別，您必須安裝 Microsoft Visual Studio。  
   
 > [!NOTE]  
 >  .NET Framework 包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .NET 資料提供者。 此提供者可用於存取 .NET 環境中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，不過，它僅能處理傳統的 SQL 查詢 (也就是除了 FOR XML 查詢之外的關聯式資料庫查詢)。 您無法在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中執行 XML 範本或伺服器端的 XPath 查詢。  
 
- 如需有關存取和修改資料中的資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework，以及如何使用 DiffGrams 更新中的資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表，請參閱[.NET環境中存取SQLXML功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
+ 如需有關存取和修改資料中的資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]內[!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework，以及如何使用 DiffGrams 更新中的資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表，請參閱[存取.NET 環境中的SQLXML功能](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  
   
 > [!NOTE]  
->  您也可以撰寫 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 應用程式，藉由使用 XML 大量載入來大量載入 XML 文件。 如需詳細資訊，請參閱[執行大量載入的 XML 資料&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。 您必須在應用程式中加入 XML 大量載入 DLL (Xblkld4.dll) 的參考。 這是 COM DLL，Visual Studio .NET 會自動為其建立包裝函數程式庫。  
+>  您也可以撰寫 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio 應用程式，藉由使用 XML 大量載入來大量載入 XML 文件。 如需詳細資訊，請參閱 <<c0> [ 執行大量載入的 XML 資料&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。</c0> 您必須在應用程式中加入 XML 大量載入 DLL (Xblkld4.dll) 的參考。 這是 COM DLL，Visual Studio .NET 會自動為其建立包裝函數程式庫。  
   
   本節提供範例應用程式，示範如何使用[!INCLUDE[msCoName](../../../includes/msconame-md.md)]SQLXML Managed 類別：  
  [執行 SQL 查詢&#40;SQLXML Managed 類別&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)  

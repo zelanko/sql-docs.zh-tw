@@ -1,5 +1,5 @@
 ---
-title: 與階層有關的 Xquery |Microsoft 文件
+title: 與階層有關的 Xquery |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dd9e93969bd8677311edc22ae61f314c8b89c5d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077225"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048288"
 ---
 # <a name="xqueries-involving-hierarchy"></a>與階層有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33077225"
 ## <a name="examples"></a>範例  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 從製造指示文件中，擷取工作中心位置以及這些位置上的第一個製造步驟  
- 此查詢會建構 XML 包含產品型號 7 」，如 <`ManuInstr`> 項目，與**ProductModelID**和**ProductModelName**屬性，以及一個或多個 <`Location`>子項目。  
+ 對於 產品型號 7 」，此查詢會建構 XML 包含 <`ManuInstr`> 項目，與**ProductModelID**並**ProductModelName**屬性，以及一個或多個 <`Location`>子項目。  
   
  每一個 <`Location`> 元素有它自己的屬性集和一個 <`step`> 子元素。 這個 <`step`> 子元素是工作中心位置的第一個製造步驟。  
   
@@ -63,11 +63,11 @@ WHERE ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   **命名空間**關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義的命名空間前置詞。 稍後在查詢主體中會使用此前置詞。  
+-   **命名空間**中的關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義的命名空間前置詞。 稍後在查詢主體中會使用此前置詞。  
   
 -   內容切換 Token {) 和 (} 是用來將 XML 建構的查詢切換至查詢評估。  
   
--   **: Column （)** 用於所建構的 XML 中包含關聯式值。  
+-   **: Column （)** 用來包含所建構的 XML 中的關聯式值。  
   
 -   在建構 <`Location`> 元素時，$wc/@* 會擷取所有工作中心位置屬性。  
   

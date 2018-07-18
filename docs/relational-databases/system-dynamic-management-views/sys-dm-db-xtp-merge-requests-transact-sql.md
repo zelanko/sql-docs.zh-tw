@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_merge_requests (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_xtp_merge_requests (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
 ms.prod: sql
@@ -14,33 +14,34 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 262fb2743efef806c31cf1b452a214150691e255
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048516"
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 
-追蹤資料庫合併要求。 合併要求可能是由 SQL Server 產生或要求無法可能已由使用者以[sys.sp_xtp_merge_checkpoint_files (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)。
+追蹤資料庫合併要求。 Merge 要求可能會產生 SQL server，或要求可能已有的使用者[sys.sp_xtp_merge_checkpoint_files & Amp;#40;transact-SQL&AMP;#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql.md)。
 
 > [!NOTE]
 > 這個動態管理檢視 (DMV)，Microsoft SQL Server 2014 之前的 sys.dm_db_xtp_merge_requests，存在。
 > 
-> 但是從 SQL Server 2016 開始此 DMV 不再適用。
+> 但是，從 SQL Server 2016 開始此 DMV 就不再適用。
 
 ## <a name="columns-in-the-report"></a>在報表中的資料行
 
-| 資料行名稱 | 資料類型 | Description |
+| 資料行名稱 | 資料類型 | 描述 |
 | :-- | :-- | :-- |
-| request_state | tinyint | 合併要求的狀態：<br/>0 = Requested<br/>1 = Pending<br/>2 = 安裝<br/>3 = Abandoned |
-| request_state_desc | nvarchar(60) | 要求的目前狀態的意義：<br/><br/>要求的合併要求存在。<br/>暫止的合併會為所處理。<br/>安裝-合併已完成。<br/>已放棄的合併無法完成，可能是因為儲存空間不足。 |
+| request_state | TINYINT | 合併要求的狀態：<br/>0 = Requested<br/>1 = Pending<br/>2 = 已安裝<br/>3 = Abandoned |
+| request_state_desc | nvarchar(60) | 要求的目前狀態的意義：<br/><br/>要求-合併要求存在。<br/>暫止的合併會是正在處理。<br/>安裝-合併已完成。<br/>已放棄的合併無法完成，可能是因為儲存空間不足。 |
 | destination_file_id | GUID | 用於合併來源檔案之目的地檔案的唯一識別碼。 |
-| lower_bound_tsn | bigint | 目標合併檔案的最小時間戳記。 要合併之所有來源檔案的最低交易時間戳記。 |
-| upper_bound_tsn | bigint | 目標合併檔案的最大時間戳記。 要合併之所有來源檔案的最高交易時間戳記。 |
-| collection_tsn | bigint | 可收集目前資料列的時間戳記。<br/><br/>當 checkpoint_tsn 大於 collection_tsn 時，就會移除處於 Installed 狀態的資料列。<br/><br/>當 checkpoint_tsn 小於 collection_tsn 時，就會移除處於 Abandoned 狀態的資料列。 |
-| checkpoint_tsn | bigint | 檢查點啟動的時間。<br/><br/>由時間戳記低於此數的交易所完成的所有刪除都會計算在新的資料檔案中。 剩餘的刪除則會移到目標差異檔案。 |
+| lower_bound_tsn | BIGINT | 目標合併檔案的最小時間戳記。 要合併之所有來源檔案的最低交易時間戳記。 |
+| upper_bound_tsn | BIGINT | 目標合併檔案的最大時間戳記。 要合併之所有來源檔案的最高交易時間戳記。 |
+| collection_tsn | BIGINT | 可收集目前資料列的時間戳記。<br/><br/>當 checkpoint_tsn 大於 collection_tsn 時，就會移除處於 Installed 狀態的資料列。<br/><br/>當 checkpoint_tsn 小於 collection_tsn 時，就會移除處於 Abandoned 狀態的資料列。 |
+| checkpoint_tsn | BIGINT | 檢查點啟動的時間。<br/><br/>由時間戳記低於此數的交易所完成的所有刪除都會計算在新的資料檔案中。 剩餘的刪除則會移到目標差異檔案。 |
 | sourcenumber_file_id | GUID | 可在合併中唯一識別來源檔案的內部檔案識別碼，最多 16 個。 |
 
 ## <a name="permissions"></a>Permissions
@@ -49,6 +50,6 @@ ms.lasthandoff: 05/23/2018
 
 ## <a name="see-also"></a>另請參閱
 
-[記憶體最佳化的資料表動態管理檢視 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
+[記憶體最佳化的資料表動態管理檢視 & Amp;#40;transact-SQL&AMP;#41](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)
 
 

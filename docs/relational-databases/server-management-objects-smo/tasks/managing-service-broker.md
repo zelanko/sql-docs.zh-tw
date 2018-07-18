@@ -1,5 +1,5 @@
 ---
-title: 管理 Service Broker |Microsoft 文件
+title: 管理 Service Broker |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1d3bb44a64386329570d78e8b3ce436b9573f63f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967953"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000940"
 ---
 # <a name="managing-service-broker"></a>管理 Service Broker
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  在 SMO 中，[!INCLUDE[ssSB](../../../includes/sssb-md.md)]物件位於**Microsoft.SqlServer.Management.Smo.Broker**命名空間需要參考 Microsoft.SqlServer.Smo.dll。 支援類別資訊也需要參考 Microsoft.SqlServer.ServiceBrokerEnum.dll。  
+  在 SMO 中，[!INCLUDE[ssSB](../../../includes/sssb-md.md)]物件中找到**Microsoft.SqlServer.Management.Smo.Broker**命名空間需要參考 Microsoft.SqlServer.Smo.dll。 支援類別資訊也需要參考 Microsoft.SqlServer.ServiceBrokerEnum.dll。  
   
  SMO 會提供一組 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 物件，允許 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 的程式設計管理 (DDL) 實作。 這包括定義訊息類型、合約、佇列與服務。 SMO 是一個其用途並不在於資料操作的管理工具，因此，SMO 不支援傳送和接收 [!INCLUDE[ssSB](../../../includes/sssb-md.md)] 訊息。  
   

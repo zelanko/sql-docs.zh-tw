@@ -1,5 +1,5 @@
 ---
-title: 受管理備份的預存程序 (TRANSACT-SQL) |Microsoft 文件
+title: 受管理備份的預存程序 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9a7903f06c1e38e9ff34210e01c3da72fd2e3c35
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236413"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046027"
 ---
-# <a name="managed-backup-stored-procedures-transact-sql"></a>受管理備份的預存程序 (TRANSACT-SQL)
+# <a name="managed-backup-stored-procedures-transact-sql"></a>受管理備份的預存程序 & Amp;#40;transact-SQL&AMP;#41
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  下列預存程序可以用來設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
+  下列的預存程序可用來設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
   
 ## <a name="in-this-section"></a>本節內容  
  [managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)  

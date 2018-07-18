@@ -1,5 +1,5 @@
 ---
-title: 使用註解 XSD 結構描述 (SQLXML 4.0) 中 |Microsoft 文件
+title: 使用 XSD 結構描述 (SQLXML 4.0) 中的註釋 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -24,11 +24,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f3e44d91a958441e421259b7257df49f14883eb0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707537"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053993"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>在 XSD 結構描述中使用註釋 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,57 +53,57 @@ ms.locfileid: "34707537"
  說明預設對應，並提供與預設對應相關之工作的範例。  
   
  [XSD 元素和屬性對資料表和資料行的明確對應&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md)  
- 說明與明確對應**sql: relation**和**sql: field**註解，並提供範例。  
+ 說明使用明確的對應**sql: relation**並**sql: field**註解，並提供範例。  
   
- [指定關聯性使用 sql: relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
- 描述與提供的範例**sql: relationship**註解。  
+ [關聯性使用 sql: relationship 指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)  
+ 描述與提供的範例**sql: relationship**註釋。  
   
  [Sql: relationship 指定 sql: inverse 屬性&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)  
- 描述**sql: inverse**註解。  
+ 描述**sql: inverse**註釋。  
   
- [建立常數元素使用 sql: is-constant< &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
- 描述與提供的範例**sql: is-constant<** 註解。  
+ [建立常數項目使用 sql: is-constant&lt &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md)  
+ 描述與提供的範例**sql: is-constant&lt**註釋。  
   
- [產生 XML 文件使用的 sql 中排除結構描述項目： 對應&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
- 描述與提供的範例**sql： 對應**註解。  
+ [結構描述元素排除產生 XML 文件使用 sql： 對應&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md)  
+ 描述與提供的範例**sql： 對應**註釋。  
   
  [篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)  
- 描述與提供的範例**sql: limit-value-欄位**和**sql: limit-value-值**註解。  
+ 描述與提供的範例**sql: limit-value-欄位**並**sql: limit-value-值**註解。  
   
- [識別索引鍵資料行使用 sql: key-fields-欄位&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
- 描述與提供的範例**sql: key-fields-欄位**註解。  
+ [識別索引鍵資料行使用 sql: key-fields 來-欄位&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md)  
+ 描述與提供的範例**sql: key-fields 來-欄位**註釋。  
   
- [指定目標命名空間使用 targetNamespace 屬性&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
+ [目標命名空間使用 targetNamespace 屬性來指定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md)  
  描述與提供的範例**targetNamespace**屬性。  
   
- [建立有效的 ID、 IDREF 和 IDREFS 類型屬性使用 sql: prefix &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
- 描述與提供的範例**sql: prefix**註解。  
+ [有效的 ID、 IDREF 和 IDREFS 類型屬性使用 sql: prefix 建立&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)  
+ 描述與提供的範例**sql: prefix**註釋。  
   
  [資料類型強制型轉和 sql: datatype 註解&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md)  
- 描述與提供的範例**sql: datatype**註解。  
+ 描述與提供的範例**sql: datatype**註釋。  
   
- [將 XSD 資料類型對應到 XPath 資料型別&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)  
+ [將 XSD 資料類型對應到 XPath 資料類型&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)  
  提供比較 XSD、XDR 與 XPath 資料類型的資料表，並列出相關的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 轉換。  
   
- [建立 CDATA 區段使用 sql: use-cdata-cdata &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
- 描述與提供的範例**sql: use-cdata-資料**註解。  
+ [CDATA 區段使用 sql: use-cdata 建立-cdata &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)  
+ 描述與提供的範例**sql: use-cdata-資料**註釋。  
   
  [要求的 URL 參考 BLOB 資料使用 sql： 編碼&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md)  
- 描述與提供的範例**sql： 編碼**註解。  
+ 描述與提供的範例**sql： 編碼**註釋。  
   
  [擷取未耗用資料使用 sql: overflow-field-欄位&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)  
- 描述與提供的範例**sql: overflow-field-欄位**註解。  
+ 描述與提供的範例**sql: overflow-field-欄位**註釋。  
   
  [使用 sql:hide 來隱藏項目和屬性](../../relational-databases/sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md)  
- 描述與提供的範例**sql: hide**註解。  
+ 描述與提供的範例**sql: hide**註釋。  
   
  [使用 sql:identity 和 sql:guid 註解](../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md)  
- 描述與提供的範例**sql: identity**和**sql: guid**註解。  
+ 描述與提供的範例**sql: identity**並**sql: guid**註解。  
   
  [使用 sql:max-depth 來指定遞迴關聯性的深度](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)  
- 描述與提供的範例**sql: max-depth-深度**註解。  
+ 描述與提供的範例**sql: max-depth-深度**註釋。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解式結構描述的安全性考量&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
+ [註解式結構描述安全性考量&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)  
   
   

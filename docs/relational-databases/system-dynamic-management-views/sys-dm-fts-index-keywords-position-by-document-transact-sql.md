@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords_position_by_document (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_fts_index_keywords_position_by_document & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,12 +23,13 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: b02615dbc260c951a08d3bfa5279b20464653203
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000890"
 ---
-# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (TRANSACT-SQL)
+# <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回索引的文件中的關鍵字的位置資訊。  
@@ -52,22 +53,22 @@ OBJECT_ID('table_name')
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行|資料類型|Description|  
+|「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
-|關鍵字 (keyword)|**varbinary(128)**|二進位字串關鍵字。|  
+|關鍵字 (keyword)|**varbinary(128)**|二進位字串，表示關鍵字。|  
 |display_term|**nvarchar(4000)**|關鍵字的人們可讀取格式。 這個格式衍生自儲存在全文檢索索引中的內部格式。|  
 |column_id|**int**|從中針對目前關鍵字進行全文檢索索引之資料行的識別碼。|  
 |document_id|**bigint**|從中針對目前詞彙進行全文檢索索引之文件或資料列的識別碼。 這個識別碼會對應至該文件或資料列的全文檢索索引鍵值。|  
 |position|**int**|文件中關鍵字的位置。|  
   
 ## <a name="remarks"></a>備註  
- 您可以使用 DMV 來識別索引的文字，在索引之文件中的位置。 此 DMV 可用來疑難排解問題時**sys.dm_fts_index_keywords_by_document**表示的文字並在全文檢索索引中，但當您執行查詢，使用這些字時，不會傳回文件。  
+ 您可以使用 DMV 來識別索引中的字數編製文件的位置。 此 DMV 可用來疑難排解問題的時機**sys.dm_fts_index_keywords_by_document**表示單字會在全文檢索索引中，但當您執行查詢，使用這些字，就不會傳回文件。  
   
 ## <a name="permissions"></a>Permissions  
  需要全文檢索索引和 CREATE FULLTEXT CATALOG 權限所涵蓋之資料行的 SELECT 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回從全文檢索索引的關鍵字`Production.Document`資料表`AdventureWorks`範例資料庫。  
+ 下列範例會傳回從全文檢索索引的關鍵字`Production.Document`資料表的`AdventureWorks`範例資料庫。  
   
 ```  
 USE AdventureWorks2012;  
@@ -81,7 +82,7 @@ SELECT * FROM sys.dm_fts_index_keywords_position_by_document
 GO  
 ```  
   
- 您可以在其他 columns_id 如同下列範例查詢中，若要進一步找出的位置上加入述詞。  
+ 您可以在下列範例查詢，若要進一步找出位置的其他 columns_id 上加入述詞。  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_position_by_document  
@@ -96,7 +97,7 @@ WHERE document_id = 7 AND display_term = 'performance';
  [全文檢索搜尋](../../relational-databases/search/full-text-search.md)   
  [改善全文檢索索引的效能](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [全文檢索搜尋和語意搜尋函數&#40;Transact SQL&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
- [全文檢索搜尋和語意搜尋動態管理檢視與函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [全文檢索搜尋和語意搜尋動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [全文檢索搜尋和語意搜尋預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [使用搜索屬性清單搜索文件屬性](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  

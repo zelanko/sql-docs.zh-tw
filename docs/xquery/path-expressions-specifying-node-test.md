@@ -1,5 +1,5 @@
 ---
-title: 在路徑運算式步驟中指定節點測試 |Microsoft 文件
+title: 在路徑運算式步驟中指定節點測試 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3460ecf0a821d5c7ffa39f242650e06c0e8ddaf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077665"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058298"
 ---
-# <a name="path-expressions---specifying-node-test"></a>路徑運算式的指定節點測試
+# <a name="path-expressions---specifying-node-test"></a>路徑運算式-指定節點測試
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   路徑運算式中的軸步包含下列部份：  
   
--   [軸](../xquery/path-expressions-specifying-axis.md)  
+-   [座標軸](../xquery/path-expressions-specifying-axis.md)  
   
 -   節點測試  
   
 -   [零或多個步驟限定詞 （選擇性）](../xquery/path-expressions-specifying-predicates.md)  
   
- 如需詳細資訊，請參閱[路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。</c0>  
   
  節點測試是一種條件，而且是路徑運算式中軸步的第二個部份。 步驟所選取的所有節點必須符合此條件。 對於路徑運算式 `/child::ProductDescription`，節點測試是 `ProductDescription`。 此步驟只會擷取名稱是 ProductDescription 的元素節點子系。  
   
@@ -75,9 +75,9 @@ child::ProductDescription
   
  路徑運算式 `/child::PD:ProductDescription/child::PD:Features/descendant::*,` 有三步。 這些步可以指定元素和下階軸。 在每一步中，會將節點名稱指定成節點測試。 在第三步中的萬用字元 (`*`) 代表下階軸主要節點種類的所有節點。 軸的主要節點種類可決定所選取的節點類型，而節點名稱可篩選所選取的節點。  
   
- 如此一來，當此運算式會針對執行中的產品目錄 XML 文件**ProductModel**資料表，它會擷取的所有元素節點子系\<功能 > 元素節點子系\<P > 項目。  
+ 如此一來，當此運算式會針對執行中的產品目錄 XML 文件**ProductModel**資料表，它會擷取的所有元素節點子系\<功能 > 元素節點子系\<ProductDescription > 項目。  
   
- 路徑運算式`/child::PD:ProductDescription/attribute::ProductModelID`，所組成的兩個步驟。 這兩步均指定節點名稱做為節點測試。 另外，第二步會使用屬性軸。 因此，每一步所選取的軸之主要節點種類的節點，其所指定的名稱均與節點測試相同。 因此，運算式會傳回**ProductModelID**屬性節點\<p > 項目節點。  
+ 路徑運算式`/child::PD:ProductDescription/attribute::ProductModelID`，兩個步驟所組成。 這兩步均指定節點名稱做為節點測試。 另外，第二步會使用屬性軸。 因此，每一步所選取的軸之主要節點種類的節點，其所指定的名稱均與節點測試相同。 因此，運算式會傳回**ProductModelID**的屬性節點\<p > 項目節點。  
   
  當為節點測試指定節點名稱時，您可以使用萬用字元 (*) 指定節點的本機名稱或用於節點的命名空間前置詞，如下列範例所示：  
   

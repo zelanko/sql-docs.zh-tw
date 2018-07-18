@@ -1,5 +1,5 @@
 ---
-title: '&lt;= （小於或等於） (DMX) |Microsoft 文件'
+title: '&lt;= （小於或等於） (DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 12dc7ca07dba7d36e7f65c9c6097b8b42457d3da
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841561"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054006"
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= （小於或等於） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

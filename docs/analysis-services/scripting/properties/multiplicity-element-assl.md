@@ -1,5 +1,5 @@
 ---
-title: Multiplicity 元素 (ASSL) |Microsoft 文件
+title: Multiplicity 元素 (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2740e920332d55fd2826b8d91d6f7434d2f59e91
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042422"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045836"
 ---
 # <a name="multiplicity-element-assl"></a>Multiplicity 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34042422"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值||  
@@ -49,11 +49,11 @@ ms.locfileid: "34042422"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|值|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |*其中一個*|這是主索引鍵端。|  
 |*許多*|這是外部索引鍵端。|  
   
- 列舉型別對應至允許的值**角色**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.Multiplicity>。  
+ 列舉型別對應至允許的值**角色**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.Multiplicity>。  
   
   

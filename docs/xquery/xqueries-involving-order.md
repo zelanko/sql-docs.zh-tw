@@ -1,5 +1,5 @@
 ---
-title: 與順序有關的 Xquery |Microsoft 文件
+title: 與順序有關的 Xquery |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,16 +25,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 978e800ba5539878eb805c16f2460de3761dda59
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077131"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051676"
 ---
 # <a name="xqueries-involving-order"></a>與順序有關的 XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  關聯式資料庫沒有順序的概念。 例如，您不能提出像「從資料庫取得第一個客戶」之類的要求。 不過，查詢 XML 文件，然後擷取第一個\<客戶 > 項目。 如此一來，您會一直擷取相同客戶。  
+  關聯式資料庫沒有順序的概念。 例如，您不能提出像「從資料庫取得第一個客戶」之類的要求。 不過，您可以在 查詢 XML 文件，並擷取第一個\<客戶 > 項目。 如此一來，您會一直擷取相同客戶。  
   
  此主題依據節點出現在文件中的順序來說明查詢。  
   
@@ -67,13 +67,13 @@ WHERE ProductModelID=7
   
  請注意下列項目是從上一個查詢而來：  
   
--   大括號括住的運算式由其評估結果取代。 如需詳細資訊，請參閱[XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)。  
+-   大括號括住的運算式由其評估結果取代。 如需詳細資訊，請參閱 < [XML 建構&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)。  
   
 -   **@\*** 擷取第二個工作中心位置的所有的屬性。  
   
 -   FLWOR 反覆運算 (FOR ...RETURN) 擷取第二個工作中心位置的所有 <`step`> 子元素。  
   
--   [: Column （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)所建構的 XML 中包含的關聯式值。  
+-   [: Column （） 函數 (XQuery)](../xquery/xquery-extension-functions-sql-column.md)正在建構的 XML 中包含的關聯式值。  
   
  以下是結果：  
   
@@ -89,7 +89,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- 上一個查詢只擷取文字節點。 如果您想讓整個 <`step`> 項目傳回相反地，移除**string （)** 函式的查詢：  
+ 上一個查詢只擷取文字節點。 如果您想要將整個 <`step`> 元素傳回相反的移除**string （)** 函式的查詢：  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. 在第二個工作中心位置尋找所有用來製造產品的材料和工具  
  針對特定產品型號，下列查詢會在製造過程的工作中心位置順序中，擷取在第二個工作中心位置所使用的工具和材料。  
@@ -189,7 +189,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-find-the-first-two-tools-used-at-the-first-work-center-location-in-the-manufacturing-process-of-the-product"></a>D. 在產品的製造過程中的第一個工作中心位置尋找所使用的前兩個工具  
- 針對產品型號，此查詢會在製造過程的工作中心位置序列的第一個工作中心位置傳回所使用的前兩個工具。 針對製造指示儲存在指定的查詢**指示**資料行**Production.ProductModel**資料表。  
+ 針對產品型號，此查詢會在製造過程的工作中心位置序列的第一個工作中心位置傳回所使用的前兩個工具。 查詢針對製造指示儲存在所指定**指示**資料行**Production.ProductModel**資料表。  
   
 ```  
 SELECT Instructions.query('  
@@ -225,7 +225,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="e-find-the-last-two-manufacturing-steps-at-the-first-work-center-location-in-the-manufacturing-of-a-specific-product"></a>E. 在特定產品之製造過程的第一個工作中心位置尋找最後兩個製造步驟  
- 此查詢會使用**last （)** 函式可擷取最後兩個製造步驟。  
+ 此查詢會使用**last （)** 函式來擷取最後兩個製造步驟。  
   
 ```  
 SELECT Instructions.query('   

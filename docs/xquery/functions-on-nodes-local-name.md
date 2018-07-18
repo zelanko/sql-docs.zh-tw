@@ -1,5 +1,5 @@
 ---
-title: local-name 函數 (XQuery) |Microsoft 文件
+title: local-name 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a5cdd64e6c283a41a4a51f71f84381b584d03f4d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997130"
 ---
-# <a name="functions-on-nodes---local-name"></a>節點的本機名稱的函式
+# <a name="functions-on-nodes---local-name"></a>節點的本機名稱的相關函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  傳回本機名稱部份 *$arg* xs: string 會是零長度字串，或將會有 xs: ncname 的語彙格式。 如果沒有提供引數，預設值是內容節點。  
+  傳回本機名稱部份 *$arg* xs: string，將會是零長度字串，或會有 xs: ncname 的語彙格式。 如果沒有提供引數，預設值是內容節點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -48,14 +48,14 @@ fn:local-name($arg as node()?) as xs:string
   
 ## <a name="remarks"></a>備註  
   
--   在 SQL Server， **fn:local-name()** 不只可以在內容相依述詞的內容中使用的引數。 具體而言，它只能在括號 (`[ ]`) 內使用。  
+-   在 SQL Server **fn:local-name()** 沒有引數僅適用於內容相依述詞的內容中。 具體而言，它只能在括號 (`[ ]`) 內使用。  
   
 -   如果提供引數，而且是空白時序，函數會傳回零長度的字串。  
   
 -   如果目標節點沒有名稱，因為它是文件節點、註解或文字節點，函數會傳回零長度的字串。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. 擷取特定節點的本機名稱  
  下列查詢是針對不具類型的 XML 執行個體所指定。 查詢運算式 `local-name(/ROOT[1])` 會擷取指定節點的本機名稱部份。  
@@ -79,7 +79,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-using-local-name-without-argument-in-a-predicate"></a>B. 使用述詞中沒有引數的本機名稱  
- 下列查詢針對具類型的 Instructions 資料行指定**xml** ProductModel 資料表的資料行。 運算式會傳回 QName 本機名稱部份為 "Location" 的 <`root`> 元素之所有的元素子系。 **Local-name （)** 函式是述詞中的指定，且它沒有任何函數會使用內容節點的引數。  
+ 下列查詢針對具類型的 Instructions 資料行指定**xml** ProductModel 資料表的資料行。 運算式會傳回 QName 本機名稱部份為 "Location" 的 <`root`> 元素之所有的元素子系。 **Local-name （)** 函式是述詞中的指定，且其內容節點由函式沒有引數。  
   
 ```  
 SELECT Instructions.query('  
@@ -93,6 +93,6 @@ WHERE ProductModelID=7
   
 ## <a name="see-also"></a>另請參閱  
  [在節點上的函式](http://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
- [namespace-uri 函數&#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
+ [namespace-uri 函式&#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   
   

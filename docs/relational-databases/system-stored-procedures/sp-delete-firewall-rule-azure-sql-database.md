@@ -1,5 +1,5 @@
 ---
-title: sp_delete_firewall_rule （SQL Azure 資料庫） |Microsoft 文件
+title: sp_delete_firewall_rule (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: ''
@@ -27,11 +27,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 5d5f53e8bd0062ca5ecf46c4462e326db5cdc243
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243827"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049472"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -50,16 +50,16 @@ sp_delete_firewall_rule [@name =] 'name'
  此預存程序的引數為：  
   
  [@name =] '*名稱*'  
- 要移除的伺服器層級防火牆設定的名稱。 *名稱*是**nvarchar (128)** 沒有預設值。  
+ 要移除的伺服器層級防火牆設定的名稱。 *名稱*已**nvarchar (128)** 沒有預設值。  
   
 ## <a name="remarks"></a>備註  
  在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中，驗證連線需要登入資料，且伺服器層級防火牆規則會暫時快取在每個資料庫中。 此快取會定期重新整理。 若要重新整理驗證快取，並確定資料庫擁有登入資料表的最新版本，請執行 [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 只有由佈建程序所建立的伺服器層級主體登入才可以刪除伺服器層級防火牆規則。 使用者必須連接到 master 資料庫來執行 sp_delete_firewall_rule。  
+ 只有由佈建程序所建立的伺服器層級主體登入才可以刪除伺服器層級防火牆規則。 使用者必須連接到 master 資料庫執行 sp_delete_firewall_rule。  
   
 ## <a name="example"></a>範例  
- 以下範例會移除名為 'Example setting 1' 的伺服器層級防火牆設定。 虛擬 master 資料庫中執行陳述式。  
+ 以下範例會移除名為 'Example setting 1' 的伺服器層級防火牆設定。 在虛擬 master 資料庫中執行陳述式。  
   
 ```   
 EXEC sp_delete_firewall_rule N'Example setting 1';   

@@ -1,5 +1,5 @@
 ---
-title: 執行緒集區屬性 |Microsoft 文件
+title: 執行緒集區屬性 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 47efe6ddd741cb458e5f3c5eda765f2e4e28c86f
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239248"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050599"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
   
- 每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此， **PerNumaNode**屬性，在本文中所述來說不具意義對於表格式執行個體。 在下面的 [屬性參考](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
+ 每個 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體各自維護一組執行緒集區。 表格式執行個體和多維度執行個體使用執行緒集區的方式不同。 例如，只有多維度執行個體使用 **IOProcess** 執行緒集區。 因此， **PerNumaNode**在本文中描述的屬性不是針對表格式執行個體有意義。 在下面的 [屬性參考](#bkmk_propref) 區段中，會呼叫每個屬性的模式需求。
   
  本文包含下列各節：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "35239248"
   
  屬性是依照字母順序列出。  
   
-|[屬性]|類型|描述|預設值|指引|  
+|名稱|類型|描述|預設值|指引|  
 |----------|----------|-----------------|-------------|--------------|  
 |**IOProcess** \ **Concurrency**|double|此為雙精確度浮點數值，決定可以一次佇列之執行緒數目的設定目標演算法。|2.0|此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。<br /><br /> 並行可用來初始化執行緒集區，會透過 Windows 的 I/O 完成通訊埠來實作。 如需詳細資料，請參閱 [I/O 完成連接埠](http://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 。<br /><br /> 僅適用於多維度模型。|  
 |**IOProcess** \ **GroupAffinity**|string|對應至系統上之處理器群組的十六進位值陣列，可用來設定 IOProcess 執行緒集區中的執行緒與每個處理器群組中的邏輯處理器之相似性。|無|您可以使用此屬性來建立自訂相似性。 此屬性預設為空白。<br /><br /> 如需詳細資訊，請參閱＜ [設定 GroupAffinity 將執行緒相似化為處理器群組中的處理器](#bkmk_groupaffinity) ＞。<br /><br /> 僅適用於多維度模型。|  
@@ -275,9 +275,9 @@ ms.locfileid: "35239248"
  [關於處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
  [多個處理器](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
  [處理器群組](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
- [SQL Server 2012 中 analysis Services 執行緒集區變更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
+ [Analysis Services 執行緒集區 SQL Server 2012 中的變更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 組態設定 （Wordpress 部落格）](http://go.microsoft.com/fwlink/?LinkId=330387)   
- [支援具有超過 64 個處理器的系統](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
+ [支援具有超過 64 個處理器系統](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   
  [SQL Server Analysis Services 作業指南](http://go.microsoft.com/fwlink/?LinkID=225539)  
   
   

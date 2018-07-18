@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan_db (TRANSACT-SQL) |Microsoft 文件
+title: sp_delete_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f21146a8fa893a40f3c613fce4105a19fc13dd6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247161"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049546"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>引數  
  [  **@plan_id =**] **'***plan_id***'**  
- 指定維護計畫識別碼。 *plan_id*是**uniqueidentifier**。  
+ 指定維護計畫識別碼。 *plan_id*已**uniqueidentifier**。  
   
  [ **@db_name =**] **'***database_name***'**  
  指定要從維護計畫中刪除的資料庫名稱。 *database_name* 為 **sysname**。  
@@ -65,15 +65,15 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="remarks"></a>備註  
  **sp_delete_maintenance_plan_db**必須從執行**msdb**資料庫。  
   
- **Sp_delete_maintenance_plan_db**預存程序會移除維護計畫和指定的資料庫之間的關聯，則不會卸除或損毀資料庫。  
+ **Sp_delete_maintenance_plan_db**預存程序會移除維護計畫和指定的資料庫之間的關聯，它不會卸除或損毀資料庫。  
   
- 當**sp_delete_maintenance_plan_db**移除的最後一個資料庫維護計畫、 預存程序也會刪除維護計畫。  
+ 當**sp_delete_maintenance_plan_db**移除的最後一個資料庫維護計畫時，預存程序也會刪除維護計畫。  
   
 ## <a name="permissions"></a>Permissions  
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_delete_maintenance_plan_db**。  
   
 ## <a name="examples"></a>範例  
- 刪除維護計畫中的**AdventureWorks2012**資料庫，使用先前加入**sp_add_maintenance_plan_db**。  
+ 刪除中的維護計畫**AdventureWorks2012**資料庫中，使用先前加入**sp_add_maintenance_plan_db**。  
   
 ```  
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  

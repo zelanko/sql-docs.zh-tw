@@ -1,5 +1,5 @@
 ---
-title: 定量運算式 (XQuery) |Microsoft 文件
+title: 定量運算式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,11 +31,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9fa6c22aafdd0279c9205f36902bac1ef18c77df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076688"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004630"
 ---
 # <a name="quantified-expressions-xquery"></a>定量運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ ms.locfileid: "33076688"
 ( some | every ) <variable> in <Expression> (,…) satisfies <Expression>  
 ```  
   
- 您可以在查詢中使用這些運算式，以明確地將存在或通用定量套用至一或多個時序中的運算式。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中的運算式必須產生下列其中一個：節點時序、空白時序或布林值。 該運算式所產生的有效布林值結果將用於定量中。 使用的存在定量**某些**會傳回 True，如果至少一個與數量詞繫結的值有符合的運算式，則為 True 的結果。 使用通用定量其與**每**與數量詞繫結的所有值必須為 True。  
+ 您可以在查詢中使用這些運算式，以明確地將存在或通用定量套用至一或多個時序中的運算式。 在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，`satisfies` 子句中的運算式必須產生下列其中一個：節點時序、空白時序或布林值。 該運算式所產生的有效布林值結果將用於定量中。 使用的存在定量**某些**會傳回 True，如果至少一個與數量詞繫結的值有符合的運算式，則為 True 的結果。 使用通用定量**每個**與數量詞繫結的所有值必須為 True。  
   
- 例如，下列查詢會檢查每個\<位置 > 項目，以查看是否有 LocationID 屬性。  
+ 例如，下列查詢會檢查每個\<位置 > 項目，查看是否有 LocationID 屬性。  
   
 ```  
 SELECT Instructions.query('  
@@ -72,13 +72,13 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- 因為 LocationID 是必要的屬性\<位置 > 項目，您會收到預期的結果：  
+ 因為 LocationID 是必要的屬性的\<位置 > 項目，您會收到預期的結果：  
   
 ```  
 <Result>All work centers have Location ID</Result>   
 ```  
   
- 而不是使用[query （） 方法](../t-sql/xml/query-method-xml-data-type.md)，您可以使用[value （） 方法](../t-sql/xml/value-method-xml-data-type.md)，將結果傳回至關聯式世界，如下列查詢所示。 如果所有的工作中心位置都有 LocationID 屬性，查詢將會傳回 True。 否則，查詢會傳回 False。  
+ 而不是使用[query （） 方法](../t-sql/xml/query-method-xml-data-type.md)，您可以使用[value （） 方法](../t-sql/xml/value-method-xml-data-type.md)關聯式的世界中，以傳回結果，如下列查詢所示。 如果所有的工作中心位置都有 LocationID 屬性，查詢將會傳回 True。 否則，查詢會傳回 False。  
   
 ```  
 SELECT Instructions.value('  

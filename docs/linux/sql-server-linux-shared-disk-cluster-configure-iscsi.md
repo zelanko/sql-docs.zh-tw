@@ -1,5 +1,5 @@
 ---
-title: 設定容錯移轉叢集執行個體儲存體 iSCSI SQL Server on Linux |Microsoft 文件
+title: 設定容錯移轉叢集執行個體儲存體 iSCSI Linux 上的 SQL Server |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,48 +12,48 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: 6876ac9f3aa6641efe4e08e6c434870347315bc6
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323639"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057336"
 ---
-# <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-iSCSI-SQL Server on Linux
+# <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-iSCSI-Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文說明如何在 Linux 上設定 iSCSI 儲存體容錯移轉叢集執行個體 (FCI)。 
+這篇文章說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 iSCSI 存放裝置。 
 
 ## <a name="configure-iscsi"></a>設定 iSCSI 
-iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路。 連線到 iSCSI 目標伺服器需要已設定 iSCSI 啟動器。 在目標上的磁碟會獲得明確權限，如此應該要能夠存取它們的起始端可以這樣做。 目標本身應該是高度可用且可靠。
+iSCSI 使用網路來呈現從已知做為目標伺服器的伺服器的磁碟。 連線到 iSCSI 目標伺服器需要已設定 iSCSI 啟動器。 在目標上的磁碟可以明確權限，以便能夠存取它們的起始端可以這麼做。 本身的目標應該是高度可用且可靠。
 
 ### <a name="important-iscsi-target-information"></a>重要的 iSCSI 目標資訊
-雖然本節不將討論如何設定 iSCSI 目標，因為它是針對您要使用的來源類型，請確定已將叢集節點使用的磁碟的安全性。  
+雖然本節不會討論如何設定 iSCSI 目標，因為它是專屬於您將使用的來源類型，請確定已將叢集節點所使用的磁碟的安全性。  
 
-如果使用以 Linux 為基礎的 iSCSI 目標的目標應該永遠不會設定在任何 FCI 節點上。 對於效能和可用性，iSCSI 網路應該不同於所使用的來源伺服器與用戶端伺服器上的一般網路流量。 用於 iSCSI 的網路應該是快速。 請記住該網路無法使用某些處理器的頻寬，所以請據此是否使用一般的伺服器。
-最重要的是，以確保完成目標上為所建立的磁碟會指派適當的權限，以便參與 FCI 中的伺服器才能存取它們。 下列範例從 Microsoft iSCSI 目標其中 linuxnodes1 是名稱建立，而使它們不會顯示 NewFCIDisk1.vhdx，在此情況下，指派節點的 IP 位址。
+如果使用以 Linux 為基礎的 iSCSI 目標目標應該永遠不會設定在任何 FCI 節點上。 基於效能和可用性，iSCSI 網路應不同於所使用的來源伺服器與用戶端伺服器上的一般網路流量。 用於 iSCSI 的網路應快速。 請記住該網路不使用某些處理器的頻寬，因此據此規劃如果使用一般的伺服器。
+最重要的是，以確保目標上完成時所建立的磁碟會指派適當的權限，以便只在 FCI 中參與的伺服器才能存取它們。 如下所示的範例，其中 linuxnodes1 是建立，名稱，而使 NewFCIDisk1.vhdx 顯示給他們，在此案例中，指派節點的 IP 位址時，Microsoft iSCSI 目標。
 
 ![Initiator][1]
 
 ### <a name="instructions"></a>Instructions
 
-本節將討論如何將 fci 做為節點的伺服器上設定 iSCSI 啟動器。 指示應該會如 RHEL 和 Ubuntu 上運作。
+本節將討論如何設定伺服器，fci 會做為節點上的 iSCSI 啟動器。 指示應該可以如常 RHEL 和 Ubuntu 上運作。
 
-如需有關支援的發行版本的 iSCSI 啟動器的詳細資訊，請參閱下列連結：
+如需有關支援的散發套件的 iSCSI 啟動器的詳細資訊，請參閱下列連結：
 - [Red Hat](http://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](http://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
-1.  選擇其中一個伺服器，為即將加入 FCI 組態中。 不論哪一個。 iSCSI 應該是在專用的網路，因此設定 iSCSI 辨識，並使用該網路。 執行`sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new`其中`<iSCSIIfaceName>`是網路的唯一或好記名稱。 下列範例會使用`iSCSINIC`:
+1.  您可以選擇其中一個將參與的伺服器 FCI 組態中。 不論哪一個。 iSCSI 應該是在專用的網路，因此設定 iSCSI 辨識並使用該網路。 執行`sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new`其中`<iSCSIIfaceName>`是網路的唯一或易記名稱。 下列範例會使用`iSCSINIC`:
    
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
     ![7-setiscsinetwork][6]
  
-2.  編輯`/var/lib/iscsi/ifaces/iSCSIIfaceName`。 請確定它擁有完整填寫下列值：
+2.  編輯`/var/lib/iscsi/ifaces/iSCSIIfaceName`。 請確定它已完全填妥下列值：
 
-    - 在作業系統中所見，iface.net_ifacename 是網路卡的名稱。
+    - iface.net_ifacename 是網路卡的名稱，在 OS 中所示。
     - iface.hwaddress 是名稱的唯一，將會建立下列這個介面的 MAC 位址。
     - iface.ipaddress
     - iface.subnet_Mask 
@@ -68,7 +68,7 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     sudo iscsiadm -m discovery -t sendtargets -I <iSCSINetName> -p <TargetIPAddress>:<TargetPort>
     ```
 
-     \<iSCSINetName > 網路的唯一/易記名稱\<TargetIPAddress > 是 iSCSI 目標的 IP 位址和\<TargetPort > 是的 iSCSI 目標的連接埠。 
+     \<iSCSINetName > 是網路的唯一/易記名稱\<TargetIPAddress > 是 iSCSI 目標的 IP 位址和\<TargetPort > 是的 iSCSI 目標的連接埠。 
 
     ![iSCSITargetResults][3]
 
@@ -79,11 +79,11 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     sudo iscsiadm -m node -I <iSCSIIfaceName> -p TargetIPAddress -l
     ```
 
-    \<iSCSIIfaceName > 網路的唯一/易記名稱和\<TargetIPAddress > 是 iSCSI 目標的 IP 位址。
+    \<iSCSIIfaceName > 是唯一的/易記名稱，網路和\<TargetIPAddress > 是 iSCSI 目標的 IP 位址。
 
     ![iSCSITargetLogin][4]
 
-5.  請檢查已連線到 iSCSI 目標。
+5.  請檢查連接到 iSCSI 目標。
 
     ```bash
     sudo iscsiadm -m session
@@ -92,14 +92,14 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     ![iSCSIVerify][5]
 
  
-6.  檢查 iSCSI 連接的磁碟
+6.  檢查 iSCSI 連接磁碟
 
     ```bash
     sudo grep “Attached SCSI” /var/log/messages
     ```
     ![30 iSCSIattachedDisks][7]
 
-7.  在 iSCSI 磁碟上建立的實體磁區。
+7.  建立實體的磁碟區上的 iSCSI 磁碟。
 
     ```bash
     sudo pvcreate /dev/<devicename>
@@ -108,21 +108,21 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     \<devicename > 會將裝置從上一個步驟的名稱。 
 
  
-8.  ISCSI 磁碟上建立磁碟區群組。 指派給單一磁碟區群組的磁碟會被視為在集區或集合。 
+8.  建立磁碟區群組上的 iSCSI 磁碟。 指派給單一磁碟區群組的磁碟會被視為集區或集合。 
 
     ```bash
     sudo vgcreate <VolumeGroupName> /dev/devicename
     ```
 
-    \<VolumeGroupName > 磁碟區群組的名稱和\<devicename > 是從步驟 6 裝置的名稱。 
+    \<VolumeGroupName > 磁碟區群組的名稱和\<devicename > 是來自步驟 6 之裝置的名稱。 
  
-9.  建立並確認磁碟的邏輯磁碟區。
+9.  建立並驗證磁碟的邏輯磁碟區。
 
     ```bash
     sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
     ```
     
-    \<大小 > 是要建立時，磁碟區的大小，而且可以指定與 G (gb)、 T (tb) 等等，\<LogicalVolumeName > 是邏輯磁碟區的名稱和\<VolumeGroupName > 是從磁碟區群組的名稱上一個步驟。 
+    \<大小 > 是要建立時，磁碟區的大小，而且可以指定與 G (gb)、 T (tb) 等\<LogicalVolumeName > 是邏輯磁碟區的名稱和\<VolumeGroupName > 是從磁碟區群組的名稱上一個步驟。 
 
     下列範例會建立 25 GB 的磁碟區。
  
@@ -130,30 +130,30 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
 
 10. 執行`sudo lvs`若要查看已建立 LVM。
  
-11. 支援的檔案系統邏輯磁碟區格式化。 如需 EXT4，使用下列範例：
+11. 格式化具有支援的檔案系統的邏輯磁碟區。 針對 EXT4，使用下列的範例：
 
     ```bash
     sudo mkfs.ext4 /dev/<VolumeGroupName>/<LogicalVolumeName>
     ```
 
-    \<VolumeGroupName > 是從上一個步驟的磁碟區群組的名稱。 \<LogicalVolumeName > 是從上一個步驟的邏輯磁碟區的名稱。  
+    \<VolumeGroupName > 是從上一個步驟的磁碟區群組的名稱。 \<LogicalVolumeName > 是上一個步驟的邏輯磁碟區的名稱。  
 
 12. 系統資料庫或儲存在預設資料位置的任何項目，請遵循下列步驟。 否則，請跳至步驟 13。
 
-   *    請確定 SQL Server 會停止您正在使用的伺服器上。
+   *    請確定 SQL Server 已停止您正在使用的伺服器上。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   *    參數完全是超級使用者。 如果成功，則不會收到任何通知。
+   *    全面轉換成是超級使用者的參數。 如果成功，則不會收到任何通知。
 
     ```bash
     sudo -i
     ```
 
-   *    Mssql 使用者參數。 如果成功，則不會收到任何通知。
+   *    要使用 mssql 使用者的參數。 如果成功，則不會收到任何通知。
 
     ```bash
     su mssql
@@ -179,14 +179,14 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
 
     \<TempDir > 是從上一個步驟的資料夾名稱。
     
-   *    請確認檔案是目錄中。
+   *    確認目錄中的檔案。
 
     ```bash
     ls \<TempDir>
     ```
-    \<TempDir > 是從步驟 d 資料夾的名稱。
+    \<TempDir > 會從步驟 d 資料夾的名稱。
 
-   *    從現有的 SQL Server 資料目錄刪除檔案。 如果成功，則不會收到任何通知。
+   *    從現有的 SQL Server 資料目錄中刪除檔案。 如果成功，則不會收到任何通知。
 
     ```bash
     rm – f /var/opt/mssql/data/*
@@ -200,27 +200,27 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
 
     ![45-CopyMove][8]
  
-   *    型別`exit`切換回根使用者。
+   *    型別`exit`若要切換回根使用者。
 
-   *    裝載 SQL Server data 資料夾中的 iSCSI 邏輯磁碟區。 如果成功，則不會收到任何通知。
+   *    掛接 iSCSI 邏輯磁碟區的 SQL Server data 資料夾中。 如果成功，則不會收到任何通知。
 
     ```bash
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > 磁碟區群組的名稱和\<LogicalVolumeName > 是建立邏輯磁碟區的名稱。 下列的範例語法比對前一個命令的邏輯磁碟區與磁碟區群組。
+    \<VolumeGroupName > 磁碟區群組的名稱和\<LogicalVolumeName > 是已建立的邏輯磁碟區的名稱。 下列的範例語法會比對前一個命令的邏輯磁碟區與磁碟區群組。
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
     ``` 
 
-   *    Mssql 來變更掛接的擁有者。 如果成功，則不會收到任何通知。
+   *    將 mssql 掛接的擁有者。 如果成功，則不會收到任何通知。
 
     ```bash
     chown mssql /var/opt/mssql/data
     ```
 
-   *    將裝載群組擁有權變更為 mssql。 如果成功，則不會收到任何通知。
+   *    將 mssql 掛上群組的擁有權。 如果成功，則不會收到任何通知。
 
     ```bash
     chgrp mssql /var/opt/mssql/data
@@ -244,57 +244,57 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     ls /var/opt/mssql/data
     ``` 
  
-   *    輸入`exit`不是 mssql。
+   *    輸入`exit`無法 mssql。
     
    *    輸入`exit`不是根目錄。
 
-   *    啟動 SQL Server。 如果所有項目已正確複製，並套用安全性是否正確，SQL Server 應該會顯示為已啟動。
+   *    啟動 SQL Server。 如果所有項目已正確地複製和套用的安全性是否正確，SQL Server 應該會顯示為已啟動。
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ``` 
  
-   *    停止 SQL Server 並確認它已關閉。
+   *    停止 SQL Server，並確認它已關閉。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ``` 
 
-13. 進行的非系統資料庫，例如使用者資料庫或備份，請遵循下列步驟。 如果只使用的預設位置，請跳至步驟 14。
+13. 項目以外的系統資料庫，例如使用者資料庫或備份，請遵循下列步驟。 如果僅使用預設位置，請跳至步驟 14。
 
-   *    參數是超級使用者。 如果成功，則不會收到任何通知。
+   *    切換到是超級使用者。 如果成功，則不會收到任何通知。
 
     ```bash
     sudo -i
     ```
 
-   *    建立將 SQL Server 所使用的資料夾。 
+   *    建立將由 SQL Server 的資料夾。 
 
     ```bash
     mkdir <FolderName>
     ```
 
-    \<資料夾名稱 > 資料夾的名稱。 將資料夾的完整路徑必須指定如果不在正確的位置。 下列範例會建立名為 /var/opt/mssql/userdata 的資料夾。
+    \<資料夾名稱 > 是資料夾的名稱。 資料夾的完整路徑必須指定如果不在正確的位置。 下列範例會建立名為 /var/opt/mssql/userdata 的資料夾。
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   *    裝載 iSCSI 邏輯磁碟區在上一個步驟中建立的資料夾中。 如果成功，則不會收到任何通知。
+   *    掛接 iSCSI 邏輯磁碟區在上一個步驟中建立的資料夾中。 如果成功，則不會收到任何通知。
     
     ```bash
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName > 磁碟區群組的名稱\<LogicalVolumeName > 所建立的邏輯磁碟區的名稱和\<資料夾名稱 > 資料夾的名稱。 範例語法如下所示。
+    \<VolumeGroupName > 磁碟區群組的名稱\<LogicalVolumeName > 是已建立的邏輯磁碟區的名稱和\<資料夾名稱 > 是資料夾的名稱。 範例語法如下所示。
 
     ```bash
     mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
     ```
 
-   *    變更至 mssql 建立之資料夾的擁有權。 如果成功，則不會收到任何通知。
+   *    變更以 mssql 所建立之資料夾的擁有權。 如果成功，則不會收到任何通知。
 
     ```bash
     chown mssql <FolderName>
@@ -306,7 +306,7 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     chown mssql /var/opt/mssql/userdata
     ```
   
-   *    變更的群組建立到 mssql 資料夾。 如果成功，則不會收到任何通知。
+   *    變更建立 mssql 資料夾的群組。 如果成功，則不會收到任何通知。
 
     ```bash
     chown mssql <FolderName>
@@ -318,9 +318,9 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     chown mssql /var/opt/mssql/userdata
     ```
 
-   *    型別`exit`不再超級使用者。
+   *    型別`exit`不再是超級使用者。
 
-   *    若要測試，請在該資料夾中建立的資料庫。 如下所示的範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
+   *    若要測試，請在該資料夾中建立資料庫。 如下所示的範例會使用 sqlcmd 建立資料庫、 切換到它的內容，請確認檔案存在於 OS 層級，然後刪除 暫存位置。 您可以使用 SSMS。
   
     ![50 ExampleCreateSSMS][9]
 
@@ -330,38 +330,38 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
     sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName > 磁碟區群組的名稱\<LogicalVolumeName > 所建立的邏輯磁碟區的名稱和\<資料夾名稱 > 資料夾的名稱。 範例語法如下所示。
+    \<VolumeGroupName > 磁碟區群組的名稱\<LogicalVolumeName > 是已建立的邏輯磁碟區的名稱和\<資料夾名稱 > 是資料夾的名稱。 範例語法如下所示。
 
     ```bash
     sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
     ```
 
-14. 該唯一 Pacemaker 可以啟動磁碟區群組，請設定伺服器。
+14. 因此，唯一的 Pacemaker 可以啟用磁碟區群組，請設定伺服器。
 
     ```bash
     sudo lvmconf --enable-halvm --services –startstopservices
     ```
  
-15. 產生伺服器上的磁碟區群組的清單。 列出的任何不是 iSCSI 磁碟可供系統，例如用於作業系統磁碟。
+15. 產生伺服器上的磁碟區群組的清單。 列出的任何項目不是 iSCSI 磁碟是由系統，例如針對 OS 磁碟。
 
     ```bash
     sudo vgs
     ```
 
-16. 修改檔案 /etc/lvm/lvm.conf 啟動組態區段。 設定下列行：
+16. 修改檔案 /etc/lvm/lvm.conf 啟動組態區段。 設定下面這一行：
 
     ```bash
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker > 不會使用 fci 的步驟為 20，輸出中的磁碟區群組的清單。 將以引號括住和個別的每個以逗號分隔。 下列為範例。
+    \<ListOfVGsNotUsedByPacemaker > 是的輸出中的磁碟區群組，將無法供 FCI 的步驟 20 的清單。 將以引號括住，而且會分開每個以逗號分隔。 下列為範例。
 
     ![55-ListOfVGs][11]
  
  
-17. Linux 啟動時，它將會掛接檔案系統。 若要確保只有 Pacemaker 可以掛上的 iSCSI 磁碟，重建根檔案系統映像。 
+17. 當 Linux 啟動時，它將會掛接檔案系統。 若要確保只有 Pacemaker 可以掛接 iSCSI 磁碟，重建根檔案系統映像。 
 
-    執行下列命令，這可能需要一些時間才能完成。 如果成功，會回收到任何訊息。
+    執行下列命令，這可能需要一些時間才能完成。 如果成功，您會回到收到任何訊息。
 
     ```bash
     sudo dracut -H -f /boot/initramfs-$(uname -r).img $(uname -r)
@@ -369,38 +369,38 @@ iSCSI 用來顯示已知做為目標伺服器的伺服器，從磁碟的網路�
 
 18. 重新啟動伺服器。
 
-19. 在 FCI 中會參與另一部伺服器，執行步驟 1-6。 這將在 iSCSI 目標的 SQL server。 
+19. 在要參與 FCI 的另一部伺服器，執行步驟 1 – 6。 這將會顯示的 iSCSI 目標 SQL server。 
  
 20. 產生伺服器上的磁碟區群組的清單。 它應該會顯示先前建立的磁碟區群組。 
 
     ```bash
     sudo vgs
     ``` 
-23. 啟動 SQL Server 並確認它可以啟動此伺服器上。
+23. 啟動 SQL Server，並確認它可以啟動此伺服器上。
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
 
-24. 停止 SQL Server 並確認它已關閉。
+24. 停止 SQL Server，並確認它已關閉。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25. 重複步驟 1 到 6，為即將加入 FCI 中的其他伺服器上。
+25. 重複步驟 1-6，FCI 會參與的任何其他伺服器上。
 
-現在您已經準備好要設定 FCI。
+您現在已準備好設定 FCI。
 
 |Distribution |主題 
 |----- |-----
-|**Red Hat Enterprise Linux HA 的附加元件** |[設定](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**SUSE Linux Enterprise Server 高可用性的附加元件** |[設定](sql-server-linux-shared-disk-cluster-sles-configure.md)
+|**Red Hat Enterprise Linux HA 附加元件** |[設定](sql-server-linux-shared-disk-cluster-configure.md)<br/>[操作](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**SUSE Linux Enterprise Server HA 附加元件** |[設定](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 ## <a name="next-steps"></a>後續的步驟
 
-[設定容錯移轉叢集執行個體的 SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+[設定容錯移轉叢集執行個體-在 Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/05-initiator.png

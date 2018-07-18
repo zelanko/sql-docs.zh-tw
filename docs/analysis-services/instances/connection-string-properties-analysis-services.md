@@ -1,5 +1,5 @@
 ---
-title: 連接字串屬性 (Analysis Services) |Microsoft 文件
+title: 連接字串屬性 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24f7302b94477b76b161be184cd27839f8516564
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239093"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994970"
 ---
 # <a name="connection-string-properties-analysis-services"></a>連接字串屬性 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  本主題說明您可能會在某個設計工具或管理工具 中設定，或查詢建立的用戶端應用程式連接到 Analysis Services 資料的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  
+  本主題說明您可能會設定其中一種設計工具 或 系統管理工具，或在建立連接到的用戶端應用程式和查詢 Analysis Services 資料的連接字串中看到的連接字串屬性。 因此，本文內容只涵蓋可用屬性的子集。 完整的清單包含許多伺服器和資料庫屬性，可讓您針對特定應用程式自訂連接，而不必在乎伺服器上設定執行個體或資料庫的方式。  
   
  開發人員若要透過撰寫應用程式的程式碼以建立自訂連接字串，應該檢閱適用於 ADOMD.NET 用戶端的 API 文件以檢視更詳細的清單： <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
@@ -35,9 +35,9 @@ ms.locfileid: "35239093"
   
 |屬性|描述|範例|  
 |--------------|-----------------|-------------|  
-|**Data Source** 或 **DataSource**|指定伺服器執行個體。 此屬性是所有連接的必要項。 有效值包括伺服器的網路名稱或 IP 位址、本機連接的 local 或 localhost 值、設定為 HTTP 或 HTTPS 存取之伺服器的 URL，或是本機 Cube (.cub) 檔案的名稱。 <br /><br /> Azure Analysis Services，為有效的值`<protocol>://<region>/<servername>`區域通訊協定的字串 asazure，為伺服器建立所在的 Uri (例如，westus.asazure.windows.net) 並為您在區域內的唯一伺服器名稱。 |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01` 代表預設執行個體及通訊埠 (TCP 2383)。<br /><br /> `Data source=AW-SRV01$Finance:8081` 代表具名執行個體 ($Finance) 及固定連接埠。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` 代表完整網域名稱，假設是預設執行個體及通訊埠。<br /><br /> `Data source=172.16.254.1` 代表伺服器的 IP 位址，略過 DNS 伺服器查閱，對於疑難排解連接問題相當實用。|  
+|**Data Source** 或 **DataSource**|指定伺服器執行個體。 此屬性是所有連接的必要項。 有效值包括伺服器的網路名稱或 IP 位址、本機連接的 local 或 localhost 值、設定為 HTTP 或 HTTPS 存取之伺服器的 URL，或是本機 Cube (.cub) 檔案的名稱。 <br /><br /> 有效的值，Azure Analysis services， `<protocol>://<region>/<servername>` region 通訊協定是字串 asazure，是在伺服器建立所在的 Uri (例如 westus.asazure.windows.net)，servername 是您在區域內的唯一伺服器的名稱。 |`Data source=asazure://westus.asazure.windows.net/myasserver`<br /><br />`Data source=AW-SRV01` 代表預設執行個體及通訊埠 (TCP 2383)。<br /><br /> `Data source=AW-SRV01$Finance:8081` 代表具名執行個體 ($Finance) 及固定連接埠。<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` 代表完整網域名稱，假設是預設執行個體及通訊埠。<br /><br /> `Data source=172.16.254.1` 代表伺服器的 IP 位址，略過 DNS 伺服器查閱，對於疑難排解連接問題相當實用。|  
 |**Initial Catalog** 或 **Catalog**|指定要連接的 Analysis Services 資料庫的名稱。 資料庫必須部署在 Analysis Services 上，而且您必須具有連接到該資料庫的權限。 此屬性對於 AMO 連接而言為選擇項，但卻是 ADOMD.NET 的必要項。|`Initial catalog=AdventureWorks2016`|  
-|**提供者**|有效值包括 MSOLAP。\<版本 >，其中\<版本 > 是 4、 5、 6 或 7。<br /><br /> -   MSOLAP.4 是隨 SQL Server 2008 發行，並在 SQL Server 2008 R2 再度發行 (SQL Server 2008 和 2008 R2 中的檔案名稱為 msolap100.dll)<br />-   MSOLAP.5 是隨 SQL Server 2012 發行 (檔案名稱為 msolap110.dll)<br />-   MSOLAP.6 是隨 SQL Server 2014 發行 (檔案名稱為 msolap1200.dll)<br />-   MSOLAP.7 是隨 SQL Server 2016 發行 (檔案名稱為 msolap130.dll)<br /><br /> 此屬性是選擇項。 依預設，用戶端程式庫會從登錄讀取目前版本的 OLE DB 提供者。 只有在需要特定版本的資料提供者 (例如要連接到 SQL Server 2012 執行個體) 時，才需要設定此屬性。<br /><br /> MSOLAP.4 是隨 SQL Server 2008 及 SQL Server 2008 R2 發行。 2008 R2 版支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，有時候必須在 SharePoint 伺服器上手動安裝此版本。 若要區別這些版本，您必須檢查提供者檔案內容中的組建編號：移至 Program files\Microsoft Analysis Services\AS OLEDB\10。 以滑鼠右鍵按一下 msolap110.dll，然後選取 **[內容]**。 按一下 **[詳細資料]**。 檢視檔案版本資訊。 此版本應該包含 10.50。\<buildnumber > SQL Server 2008 r2。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [用於 Analysis Services 連接的資料提供者](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。|`Provider=MSOLAP.7` 的適用對象為需要 SQL Server 2016 版 OLE DB Provider for Analysis Services 的連接。|  
+|**提供者**|有效值包括 MSOLAP。\<版本 >，其中\<版本 > 是 4、 5、 6 或 7。<br /><br /> -   MSOLAP.4 是隨 SQL Server 2008 發行，並在 SQL Server 2008 R2 再度發行 (SQL Server 2008 和 2008 R2 中的檔案名稱為 msolap100.dll)<br />-   MSOLAP.5 是隨 SQL Server 2012 發行 (檔案名稱為 msolap110.dll)<br />-   MSOLAP.6 是隨 SQL Server 2014 發行 (檔案名稱為 msolap1200.dll)<br />-   MSOLAP.7 是隨 SQL Server 2016 發行 (檔案名稱為 msolap130.dll)<br /><br /> 此屬性是選擇項。 依預設，用戶端程式庫會從登錄讀取目前版本的 OLE DB 提供者。 只有在需要特定版本的資料提供者 (例如要連接到 SQL Server 2012 執行個體) 時，才需要設定此屬性。<br /><br /> MSOLAP.4 是隨 SQL Server 2008 及 SQL Server 2008 R2 發行。 2008 R2 版支援 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿，有時候必須在 SharePoint 伺服器上手動安裝此版本。 若要區別這些版本，您必須檢查提供者檔案內容中的組建編號：移至 Program files\Microsoft Analysis Services\AS OLEDB\10。 以滑鼠右鍵按一下 msolap110.dll，然後選取 **[內容]**。 按一下 **[詳細資料]**。 檢視檔案版本資訊。 此版本應該包含 10.50.<buildnumber>。\<組建編號 > 適用於 SQL Server 2008 R2。 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [用於 Analysis Services 連接的資料提供者](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)。|`Provider=MSOLAP.7` 的適用對象為需要 SQL Server 2016 版 OLE DB Provider for Analysis Services 的連接。|  
 |**Cube**|Cube 名稱或檢視方塊名稱。 資料庫可能包含多個 Cube 和檢視方塊。 如果可能會有多重目標，請在連接字串中加入 Cube 或檢視方塊的名稱。|`Cube=SalesPerspective` 表示您可以使用 Cube 連接字串屬性指定 Cube 的名稱或檢視方塊的名稱。|  
   
 ##  <a name="bkmk_auth"></a> 驗證和安全性  
@@ -74,7 +74,7 @@ ms.locfileid: "35239093"
 |**CompareCaseSensitiveStringFlags**|針對指定的地區設定，調整區分大小寫的字串比較。 如需有關設定此屬性的詳細資訊，請參閱 [CompareCaseSensitiveStringFlags 屬性](http://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)。|  
 |**壓縮等級**|如果 **TransportCompression** 是 XPRESS，您就可以設定壓縮層級控制所使用的壓縮程度。 有效值為 0 到 9，其中 0 的壓縮程度最低，而 9 的壓縮程度最高。 壓縮程度提高會降低效能。 預設值是 0。|  
 |**連接逾時**|決定用戶端嘗試連接直到逾時的最大時間量 (以秒為單位)。若未在此期限內連接成功，用戶端便會停止嘗試連接並且產生錯誤。|  
-|**DbpropMsmdRequestMemoryLimit**|這個屬性會覆寫[Memory\QueryMemoryLimit](../server-properties/memory-properties.md)連接的伺服器屬性值。 指定此選項，以 kb 為單位。 |
+|**DbpropMsmdRequestMemoryLimit**|此屬性會覆寫[Memory\QueryMemoryLimit](../server-properties/memory-properties.md)連接的伺服器屬性值。 指定此選項，以 kb 為單位。 |
 |**MDX 相容性**|此屬性的目的是確保發出 MDX 查詢的應用程式有整套一致的 MDX 行為。 Excel 即是使用 MDX 查詢以填入和計算連接至 Analysis Services 的樞紐分析表，藉由將此屬性設定為 1 可確保在樞紐分析表內看得到不完全階層中的預留位置成員。 有效值包括 0、1 和 2。<br /><br /> 0 和 1 會公開預留位置成員，而 2 則否。 如果留空，則假設為 0。|  
 |**MDX Missing Member Mode=Error**|指出是否要在 MDX 陳述式中忽略遺漏的成員。 有效值為 Default、Error 和 Ignore。 Default 會使用伺服器定義的值。 Error 將於成員不存在時產生錯誤。 Ignore 指定應該忽略遺漏的值。|  
 |**最佳化回應**|指出已啟用下列哪幾項查詢回應最佳化的位元遮罩。<br /><br /> -   0x01 使用 NormalTupleSet (這是預設值)<br />-   0x02 當交叉分析篩選器空白時使用|  

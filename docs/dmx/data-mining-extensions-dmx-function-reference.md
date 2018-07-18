@@ -1,5 +1,5 @@
 ---
-title: 資料採礦延伸模組 (DMX) 函數參考 |Microsoft 文件
+title: 資料採礦延伸模組 (DMX) 函式參考 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842531"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998420"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>資料採礦延伸模組 (DMX) 函數參考
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "34842531"
 |[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|指出指定的節點是否包含案例。|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|指出某案例是否屬於測試案例集。|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|指出某案例是否屬於定型案例集。|  
-|[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|傳回目前案例之日期、與資料之最後日期之間的時間配量。|  
+|[延隔&#40;DMX&#41;](../dmx/lag-dmx.md)|傳回目前案例之日期、與資料之最後日期之間的時間配量。|  
 |[預測&#40;DMX&#41;](../dmx/predict-dmx.md)|在指定的資料行上執行預測。|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|傳回指定之可預測資料行的已調整機率。|  
-|[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|在資料行中，預測關聯的成員資格。|  
+|[[Predictassociation] &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|在資料行中，預測關聯的成員資格。|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|傳回輸入案例符合現有模型的可能性。 此函數只能搭配群集模型使用。|  
 |[PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md)|傳回代表指定資料行之長條圖的資料表。|  
 |[PredictNodeId &#40;DMX&#41;](../dmx/predictnodeid-dmx.md)|傳回選取之案例的 NodeID。|  
-|[PredictProbability &#40;DMX&#41;](../dmx/predictprobability-dmx.md)|傳回指定資料行的機率。|  
+|[[Predictprobability] &#40;DMX&#41;](../dmx/predictprobability-dmx.md)|傳回指定資料行的機率。|  
 |[PredictSequence &#40;DMX&#41;](../dmx/predictsequence-dmx.md)|預測順序中的下一個值。|  
 |[PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)|擷取指定之資料行的標準差值。|  
 |[PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)|傳回資料行的支援值。|  

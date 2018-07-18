@@ -1,5 +1,5 @@
 ---
-title: p (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropextendedproc (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/04/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 23361e6f28bdb87ab35a39ec68b448a60ad677d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049386"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
   
 ## <a name="arguments"></a>引數  
  [  **@functname =**] **'***程序***'**  
- 這是要卸除的擴充預存程序名稱。 *程序*是**nvarchar （517)**，沒有預設值。  
+ 這是要卸除的擴充預存程序名稱。 *程序*已**nvarchar(517)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -56,9 +57,9 @@ sp_dropextendedproc [ @functname = ] 'procedure'
  無  
   
 ## <a name="remarks"></a>備註  
- 執行**sp_dropextendedproc**卸除使用者定義擴充預存程序名稱，從[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視和移除的項目從[sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)目錄檢視。 這個預存程序可以僅在執行**主要**資料庫。  
+ 執行**sp_dropextendedproc**卸除使用者定義擴充預存程序名稱，從[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視，並移除的項目[sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md)目錄檢視。 可以只在執行這個預存程序**主要**資料庫。  
   
-**sp_dropextendedproc**不會卸除系統擴充預存程序。 相反地，系統管理員應該拒絕擴充預存程序的 EXECUTE 權限**公用**角色。  
+**sp_dropextendedproc**未卸除系統擴充預存程序。 相反地，由系統管理員應該拒絕擴充預存程序的 EXECUTE 權限**公開**角色。  
   
  **sp_dropextendedproc**無法在交易內執行。  
   
@@ -78,8 +79,8 @@ EXEC sp_dropextendedproc 'xp_hello';
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_helpextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_helpextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

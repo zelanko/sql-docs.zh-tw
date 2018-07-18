@@ -1,5 +1,5 @@
 ---
-title: sys.assembly_types (TRANSACT-SQL) |Microsoft 文件
+title: sys.assembly_types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d519c57b76e45a297598b6821658c640e8e97989
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178574"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998180"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  針對由 CLR 組件所定義的每個使用者定義型別，各包含一個資料列。 下列**sys.assembly_types**繼承的資料行清單中出現 (請參閱[sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 之後**rule_object_id**。  
+  針對由 CLR 組件所定義的每個使用者定義型別，各包含一個資料列。 下列**sys.assembly_types**出現在繼承的資料行清單 (請參閱[sys.types &#40;-&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 之後**rule_object_id**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|建立這個類型所依據的組件識別碼。|  
 |**assembly_class**|**sysname**|定義這個類型的組件內的類別名稱。|  

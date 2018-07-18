@@ -1,5 +1,5 @@
 ---
-title: 程式設計特有的工作 |Microsoft 文件
+title: 程式設計特有的工作 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6878e0e429bf826d4dc3f6b57f8df42645f22dd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971693"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998121"
 ---
 # <a name="programming-specific-tasks"></a>程式設計特有的工作
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   使用 SMO 物件的程式設計特有工作包含只有具備特定功能之程式所需要的複雜主題，例如，備份、監視統計資料、複寫、管理執行個體物件，以及設定組態選項。  
   
-|主題|Description|  
+|主題|描述|  
 |-----------|-----------------|  
 |[在 SMO 中使用連結的伺服器](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|描述 SMO 如何使用 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 物件連結 OLE-DB 伺服器。|  
 |[在 SMO 中設定 SQL Server](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|描述如何在 SMO 中檢視與修改 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的組態設定。|  
@@ -59,6 +59,6 @@ ms.locfileid: "32971693"
 |[實作全文檢索搜尋](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|描述如何在 SMO 中實作全文檢索搜尋目錄與索引。|  
 |[實作端點](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|描述如何建立端點來處理資料庫鏡像、SOAP 要求與 Service Broker 的裝載。|  
 |[建立和更新統計資料](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|描述如何在 SMO 中設定與監視資料庫上的統計資料。|  
-|[追蹤及重新執行事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|描述如何使用**追蹤**和**重新執行**在 SMO 中追蹤和重新執行事件的物件。|  
+|[追蹤及重新執行事件](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|描述如何使用**追蹤**並**重新執行**在 SMO 中追蹤和重新執行事件的物件。|  
   
   

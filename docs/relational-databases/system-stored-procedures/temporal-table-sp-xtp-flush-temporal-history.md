@@ -1,5 +1,5 @@
 ---
-title: sp_xtp_flush_temporal_history |Microsoft 文件
+title: sp_xtp_flush_temporal_history |Microsoft Docs
 ms.custom: ''
 ms.date: 02/21/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1e4ea75e11840c91e6fcac81d43a33272d9882bf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257279"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045906"
 ---
-# <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history (TRANSACT-SQL)
+# <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   若要從記憶體中的暫存資料表的所有已認可的資料列移至磁碟歷程記錄資料表的資料清除工作會叫用。  

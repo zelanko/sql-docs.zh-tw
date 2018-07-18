@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a7e9cc50f543232dea6b5ce39153eee2292284ac
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248052"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052246"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
   
 ## <a name="arguments"></a>引數  
  [  **@funcname =**] **'***程序***'**  
- 這是報告的資訊所屬的擴充預存程序名稱。 *程序*是**sysname**，預設值是 NULL。  
+ 這是報告的資訊所屬的擴充預存程序名稱。 *程序*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|擴充預存程序的名稱。|  
 |**dll**|**nvarchar(255)**|DLL 的名稱。|  
@@ -64,7 +64,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
  當*程序*指定，則**sp_helpextendedproc**報告指定擴充預存程序。 未提供這個參數時**sp_helpextendedproc**所屬的傳回所有擴充預存程序名稱，以及每個擴充預存程序的 DLL 名稱。  
   
 ## <a name="permissions"></a>Permissions  
- 執行權限**sp_helpextendedproc**會授與**公用**。  
+ 若要執行的權限**sp_helpextendedproc**授與**公用**。  
   
 ## <a name="examples"></a>範例  
   
@@ -89,8 +89,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
- [sp_dropextendedproc &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
+ [sp_addextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+ [sp_dropextendedproc &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

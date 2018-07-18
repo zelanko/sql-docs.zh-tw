@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_node_status (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_pdw_node_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,32 +18,33 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 423bae3ce66e21721e328a23d51a8356be40ea2a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000800"
 ---
-# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status (TRANSACT-SQL)
+# <a name="sysdmpdwnodestatus-transact-sql"></a>sys.dm_pdw_node_status & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  保存其他資訊 (透過[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 有關的效能和狀態的應用裝置的所有節點。 它會列出一個資料列，每個應用裝置中的節點。  
+  保存其他資訊 (透過[sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) 相關的效能和應用裝置的所有節點的狀態。 它會列出每個設備中的節點的一個資料列。  
   
-|資料行名稱|資料類型|Description|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。<br /><br /> 此檢視的索引鍵。|唯一的應用裝置，不論類型為何。|  
+|pdw_node_id|**int**|與節點相關聯的唯一數值識別碼。<br /><br /> 此檢視的索引鍵。|跨設備，無論何種類型是唯一的。|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|allocated_memory|**bigint**|在此節點上的記憶體配置總計。||  
-|available_memory|**bigint**|在此節點上的總可用記憶體。||  
-|process_cpu_usage|**bigint**|總處理程序的 CPU 使用量，以刻度為單位。||  
+|allocated_memory|**bigint**|在這個節點上的記憶體配置總計。||  
+|available_memory|**bigint**|在這個節點上的總可用記憶體。||  
+|process_cpu_usage|**bigint**|總處理序 CPU 使用量，以刻度為單位。||  
 |total_cpu_usage|**bigint**|總 CPU 使用量，以刻度為單位。||  
-|thread_count|**bigint**|在此節點上的使用中的執行緒總數。||  
-|handle_count|**bigint**|在此節點上的使用中的控制代碼總數。||  
-|total_elapsed_time|**bigint**|系統啟動或重新啟動後，就會經過的總時間。|系統啟動或重新啟動後，就會經過的總時間。 如果 total_elapsed_time 超過整數 （以毫秒為單位的 24.8 天） 的最大值，它會導致具體化失敗，因為發生溢位。<br /><br /> 以毫秒為單位的最大值就相當於 24.8 天。|  
-|is_available|**bit**|表示此節點是否可使用的旗標。||  
-|sent_time|**datetime**|最後一次此節點已傳送的網路套件。||  
+|thread_count|**bigint**|在這個節點上的使用中的執行緒總數。||  
+|handle_count|**bigint**|在這個節點上的使用中的控制代碼的總數。||  
+|total_elapsed_time|**bigint**|自系統啟動或重新啟動後經過的時間總計。|自系統啟動或重新啟動後經過的時間總計。 如果 total_elapsed_time 超過整數 （以毫秒為單位的 24.8 天） 的最大值，它會具體化失敗，因為溢位。<br /><br /> 以毫秒為單位的最大值相當於 24.8 天。|  
+|is_available|**bit**|指出是否可使用此節點的旗標。||  
+|sent_time|**datetime**|上次，此節點所傳送的網路套件。||  
 |received_time|**datetime**|最後一次此節點已收到網路套件。||  
-|error_id|**nvarchar(36)**|在此節點上發生的最後一個錯誤的唯一識別碼。||  
+|error_id|**nvarchar(36)**|在這個節點發生的最後一個錯誤的唯一識別碼。||  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL 資料倉儲和平行處理資料倉儲動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

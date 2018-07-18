@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13ea15a23bbf6de6c50b494f709f65cae2f7c48b
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943194"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992900"
 ---
 # <a name="analysis-services-powershell-reference"></a>Analysis Services PowerShell 參考
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]

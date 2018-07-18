@@ -1,5 +1,5 @@
 ---
-title: sys.memory_optimized_tables_internal_attributes (TRANSACT-SQL) |Microsoft 文件
+title: sys.memory_optimized_tables_internal_attributes & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: ea18b7493e5a5ff35a50a63f9d8d57d22149838c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180434"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058210"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 讓用於儲存使用者記憶體最佳化資料表的每個內部記憶體最佳化資料表都包含一列資料列。 每個使用者資料表都會對應一或多份內部資料表。 單一資料表用於儲存核心資料。 其他的內部資料表用來支援功能，例如暫時的資料行存放區索引與記憶體最佳化資料表的非資料列 (LOB) 儲存。
  
-| 資料行名稱  | 資料類型  | Description |
+| 資料行名稱  | 資料類型  | 描述 |
 | :------ |:----------| :-----|
 |object_id  |**int**|       使用者資料表識別碼。 為支援使用者資料表而存在的內部記憶體最佳化資料表 (例如 Hk/資料行存放區組合時的非資料列儲存或刪除的資料列) 與其父系有相同的 object_id。 |
 |xtp_object_id  |**bigint**|    對應至內部記憶體最佳化資料表的記憶體內部 OLTP 物件識別碼，可用於支援使用者資料表。 它是資料庫內唯一且可因物件的存留期而變更。 
@@ -102,7 +102,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. 傳回記憶體最佳化資料表的資料行存放區索引的記憶體耗用量
 
-您可以使用下列查詢顯示記憶體最佳化資料表上的資料行存放區索引的記憶體耗用量：
+使用下列查詢來顯示記憶體最佳化資料表上的資料行存放區索引的記憶體耗用量：
 
 ```Transact-SQL
 SELECT
@@ -118,7 +118,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-使用下列查詢細分的記憶體耗用量跨內部使用的記憶體最佳化資料表上的資料行存放區索引的結構：
+使用下列查詢細分的記憶體耗用量在內部用於記憶體最佳化資料表上的資料行存放區索引的結構：
 
 ```Transact-SQL
 SELECT

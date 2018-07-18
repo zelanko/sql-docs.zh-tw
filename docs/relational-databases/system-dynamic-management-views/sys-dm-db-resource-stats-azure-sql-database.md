@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_resource_stats (Azure SQL Database) |Microsoft 文件
+title: sys.dm_db_resource_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.prod: ''
@@ -26,44 +26,46 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a91988c36604ce38c7022e6bc111cc1941e43a03
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ae25c2075fdb3cb618a38d1a4be2212c9135001d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005691"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  傳回的 CPU、 I/O 和記憶體耗用量[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]資料庫。 每 15 秒有一個資料列存在，即使資料庫中沒有任何活動亦然。 歷程記錄資料會保留一個小時。  
+  傳回 CPU、 I/O 和記憶體耗用量[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]資料庫。 每 15 秒有一個資料列存在，即使資料庫中沒有任何活動亦然。 歷程記錄資料會保留一個小時。  
   
-|資料行|資料類型|Description|  
+|[資料行]|資料類型|描述|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|UTC 時間會指出目前報告間隔的結束。|  
-|avg_cpu_percent|**decimal (5,2)**|平均運算使用率，以服務層限制的百分比計算。|  
-|avg_data_io_percent|**decimal (5,2)**|平均資料 I/O 使用量佔服務層限制的百分比。|  
-|avg_log_write_percent|**decimal (5,2)**|平均寫入資源使用率，以服務層限制的百分比計算。|  
-|avg_memory_usage_percent|**decimal (5,2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用來儲存記憶體中 OLTP 物件的記憶體。|  
-|xtp_storage_percent|**decimal (5,2)**|儲存體使用量記憶體內部 OLTP 的服務層限制的百分比表示 （結尾的報告的時間間隔）。 這包括用來儲存下列記憶體中 OLTP 物件的記憶體： 記憶體最佳化資料表、 索引和資料表變數。 它也包含用於處理的 ALTER TABLE 作業的記憶體。<br /><br /> 如果未使用記憶體內部 OLTP 資料庫中，則傳回 0。|  
-|max_worker_percent|**decimal (5,2)**|最大並行工作者 （要求），以資料庫的服務層限制的百分比表示。|  
-|max_session_percent|**decimal (5,2)**|最大並行工作階段的資料庫服務層限制的百分比。|  
-|dtu_limit|**int**|目前最大資料庫 DTU 此資料庫設定此間隔。 |
+|avg_cpu_percent|**十進位 (5,2)**|平均運算使用率，以服務層限制的百分比計算。|  
+|avg_data_io_percent|**十進位 (5,2)**|平均資料 I/O 使用率的服務層限制的百分比表示。|  
+|avg_log_write_percent|**十進位 (5,2)**|平均寫入資源使用率，以服務層限制的百分比計算。|  
+|avg_memory_usage_percent|**十進位 (5,2)**|平均記憶體使用率，以服務層限制的百分比計算。<br /><br /> 這包括用來儲存記憶體中 OLTP 物件的記憶體。|  
+|xtp_storage_percent|**十進位 (5,2)**|儲存體使用量記憶體內部 OLTP 的服務層限制的百分比表示 （在報告的時間間隔結束）。 這包括用來儲存下列記憶體內部 OLTP 物件的記憶體： 記憶體最佳化資料表、 索引和資料表變數。 它也包含用於處理的 ALTER TABLE 作業的記憶體。<br /><br /> 如果未使用記憶體內部 OLTP 資料庫中，會傳回 0。|  
+|max_worker_percent|**十進位 (5,2)**|最大並行背景工作角色 （要求） 的資料庫的服務層限制的百分比表示。|  
+|max_session_percent|**十進位 (5,2)**|最大並行工作階段的資料庫服務層限制百分比表示。|  
+|dtu_limit|**int**|目前最大資料庫 DTU 此資料庫設定在此間隔期間。 使用以 vCore 為基礎的模型資料庫，此資料行是 NULL。|
+|cpu_limit|**十進位 (5,2)**|在此間隔期間此資料庫的 Vcore 的數目。 使用以 DTU 為基礎的模型資料庫，此資料行是 NULL。|
 |||
   
 > [!TIP]  
->  詳細說明這些限制，以及服務層的內容，請參閱主題[服務層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)和[服務層的功能以及限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)。  
+>  如需這些限制和服務層的詳細內容，請參閱主題[服務層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)並[服務層功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)。  
   
 ## <a name="permissions"></a>Permissions  
  此檢視需要 VIEW DATABASE STATE 權限。  
   
 ## <a name="remarks"></a>備註  
- 所傳回的資料**sys.dm_db_resource_stats**的最大允許您正在執行的服務層/效能層級的限制百分比表示。
+ 所傳回的資料**sys.dm_db_resource_stats**會以您所執行的服務層/效能層級的限制所允許的最大的百分比表示。
  
  如果資料庫在過去的 60 分鐘內已容錯移轉到另一部伺服器，檢視將只會傳回該資料庫在容錯移轉之後做為主要資料庫時的資料。  
   
- 這項資料較不精細的檢視，使用**sys.resource_stats**目錄檢視中的**主要**資料庫。 此檢視會每隔 5 秒擷取一次資料，並會保留 14 天內的歷程記錄資料。  如需詳細資訊，請參閱[sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
+ 這項資料較不精細的檢視，使用**sys.resource_stats**目錄檢視中的**主要**資料庫。 此檢視會每隔 5 秒擷取一次資料，並會保留 14 天內的歷程記錄資料。  如需詳細資訊，請參閱 < [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)。  
   
- 彈性集區的成員資料庫時，資源統計資料呈現為百分比的值會表示為資料庫在彈性集區設定中所設定的最大限制的百分比。  
+ 當資料庫的彈性集區成員時，資源統計資料顯示為百分比值，會以資料庫在彈性集區設定中所設定的最大限制的百分比表示。  
   
 ## <a name="example"></a>範例  
   
@@ -104,6 +106,6 @@ FROM sys.dm_db_resource_stats;
 ## <a name="see-also"></a>另請參閱  
  [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [服務層](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [服務層的功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [服務層功能和限制](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   
