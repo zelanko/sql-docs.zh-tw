@@ -1,5 +1,5 @@
 ---
-title: Microsoft OLE DB 簡單提供者 |Microsoft 文件
+title: Microsoft OLE DB 簡單提供者 |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,26 +18,26 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d3abb4d2d34220800a1d8c71b6227cc8de0fd88
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 366f4df5074288ec6950027cfa3444037d097924
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271517"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981050"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 簡單提供者概觀
-Microsoft OLE DB 簡單提供者 (OSP) 可讓 ADO 存取任何資料的提供者已寫入使用[OLE DB 簡單提供者 (OSP) 工具組](http://msdn.microsoft.com/en-us/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取資料來源需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件。
+Microsoft OLE DB 簡單提供者 (OSP) 允許存取的提供者已經使用任何資料的 ADO [OLE DB 簡單提供者 (OSP) 工具組](http://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)。 簡單的提供者被用來存取需要唯一基本的 OLE DB 支援，例如記憶體中陣列或 XML 文件的資料來源。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到 OLE DB 簡單提供者 DLL，請設定*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
+ 若要連接到 OLE DB 範例提供者 DLL，請設定*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
 ```
 MSDAOSP
 ```
 
- 這個值也可以設定或讀取使用[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。
+ 此值也可以設定或使用讀取[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性。
 
- 您可以連接到已註冊為完整的 OLE DB 提供者使用的已註冊的提供者名稱，取決於提供者撰寫人員的簡單提供者。
+ 您可以連接到已註冊為完整的 OLE DB 提供者所使用的已註冊的提供者的名稱，取決於提供者撰寫人員的簡單提供者。
 
 ## <a name="typical-connection-string"></a>一般連接字串
  此提供者的一般連接字串是：
@@ -46,7 +46,7 @@ MSDAOSP
 "Provider=MSDAOSP;Data Source=serverName"
 ```
 
- 字串，包含這些關鍵字：
+ 字串是由這些關鍵字所組成：
 
 |關鍵字|描述|
 |-------------|-----------------|
@@ -54,7 +54,7 @@ MSDAOSP
 |**資料來源**|指定伺服器的名稱。|
 
 ## <a name="xml-document-example"></a>XML 文件範例
- OLE DB 簡單提供者 (OSP) 在 MDAC 2.7 版或更新版本以及 Windows Data Access Components (Windows DAC) 已增強為支援開啟階層式 ADO**資料錄集**比任意 XML 檔案。 這些 XML 檔案可能包含 ADO XML 持續性結構描述，但並非必要。 這已藉由連接到 OSP 實作**MSXML2.DLL**; 因此**MSXML2.DLL**或更新版本。
+ OLE DB 簡單提供者 (OSP) 在 MDAC 2.7 或更新版本以及 Windows Data Access Components (Windows DAC) 已增強為支援開啟階層式的 ADO**資料錄集**任意的 XML 檔案。 這些 XML 檔案可能包含 ADO XML 持續性結構描述，但並非必要。 這已實作連接以 OSP **MSXML2.DLL**; 因此**MSXML2.DLL**或更新版本。
 
  **Portfolio.xml**用在下列範例中的檔案包含下列樹狀結構：
 
@@ -69,9 +69,9 @@ Portfolio
          WebSite
 ```
 
- XML DSO 會使用內建的啟發式來轉換 XML 樹狀結構中的節點在階層式章節**資料錄集**。
+ XML DSO 會使用內建的啟發學習法來將 XML 樹狀結構中的節點轉換成階層式的章節**資料錄集**。
 
- 使用這些內建的啟發學習法，XML 樹狀結構會轉換成兩個層級階層式**資料錄集**的格式如下：
+ 使用這些內建的啟發學習法，XML 樹狀結構會轉換成兩個層級階層**資料錄集**的格式如下：
 
 ```
 Parent Recordset
@@ -80,28 +80,28 @@ Shares, Symbol, Price, $Text
       Company Name, WebSite, $Text
 ```
 
- 請注意階層中並無代表 Portfolio 和資訊標記**資料錄集**。 如需說明 XML DSO 如何將 XML 樹狀結構轉換為階層式**資料錄集**，請參閱下列規則。 在下一節討論 $Text 資料行。
+ 請注意 公事包 和 資訊標記不會出現在階層**資料錄集**。 如需 XML DSO 如何將 XML 樹狀結構轉換為階層式的說明**資料錄集**，請參閱下列規則。 在下一節中討論 $Text 資料行。
 
-## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>指定 XML 元素和屬性資料行和資料列的規則
- XML DSO 會遵循的程序，指派項目和屬性，將資料行和資料繫結應用程式中的資料列。 XML 是模型化為具有一個標籤，其中包含整個階層的樹狀目錄。 例如，活頁簿的 XML 描述可能包含章標記、 圖標籤和區段標記。 最高的層級會是包含子元素章節，圖中和區段的活頁簿標記。 當 XML DSO 會對應至資料列和資料行的 XML 項目時，子項目，而不是最上層項目，會轉換。
+## <a name="rules-for-assigning-xml-elements-and-attributes-to-columns-and-rows"></a>指派的 XML 項目和屬性資料行和資料列的規則
+ XML DSO 會遵循的程序指派項目和屬性加入至資料行和資料繫結的應用程式中的資料列。 XML 會模型化為樹狀目錄中包含整個階層的一個標記。 比方說，一本書的 XML 描述可能包含一章標記、 圖標記和區段標記。 在最高的層級會是活頁簿的標記，包含子元素一章，圖中和一節。 當 XML DSO 會對應至資料列和資料行的 XML 項目時，子元素，而不是最上層項目，將會轉換。
 
- XML DSO 會使用這個程序的轉換子元素：
+ XML DSO 會使用這個程序，將轉換的子元素：
 
--   每一個子元素和屬性對應到資料行，在某些**資料錄集**階層中。
+-   每一個子元素和屬性對應到的某些資料行**資料錄集**階層架構中。
 
--   資料行的名稱會做為子元素或屬性的名稱相同，除非父項目可具有的屬性和子元素具有相同的名稱，在此情況下"！"子元素的資料行名稱前面加上。
+-   資料行名稱會做為子元素或屬性的名稱相同，除非在父項目可具有屬性和子項目具有相同的名稱，在此情況下"！"會附加至子元素的資料行名稱。
 
--   每個資料行是*簡單*資料行包含純量值 （通常是字串） 或**資料錄集**含有子系的資料行**資料錄集**。
+-   每個資料行是*簡單*資料行包含純量值 （通常是字串） 或**Recordset**含有子系的資料行**資料錄集**。
 
--   資料行對應到屬性一定是簡單的。
+-   資料行對應至屬性一定是簡單的。
 
--   資料行對應到子元素是**資料錄集**如果子元素都具有自己的子元素或屬性 （或兩者），或是子元素的父代具有子元素做為子系的多個執行個體的資料行。 否則，資料行是簡單的。
+-   資料行對應至子元素是**資料錄集**如果子元素有它自己的子元素或屬性 （或兩者），或子元素的父代具有一個以上的執行個體的子元素做為子系的資料行。 否則，資料行是簡單的。
 
--   當有多個執行個體的子元素 （在不同的父代） 時，其資料行是**資料錄集**資料行如果*任何*的執行個體代表**資料錄集**資料行，其資料行是簡單才*所有*執行個體代表簡單的資料行。
+-   其資料行的子元素 （在不同的父代） 的多個執行個體時，較**資料錄集**資料行若*任何*的執行個體表示**資料錄集**資料行，其資料行是簡單才*所有*執行個體代表簡單的資料行。
 
--   所有**資料錄集**具有名為 $Text 額外的資料行。
+-   所有**資料錄集**有額外的資料行，名為 $Text。
 
- 程式碼所需建構**資料錄集**如下所示：
+ 程式碼所需的建構**資料錄集**如下所示：
 
 ```
 Dim adoConn as ADODB.Connection
@@ -128,24 +128,24 @@ adoRS.Open "\\ComputerName\ShareName\portfolio.xml", adoConn
 adoRS.Open "C:\Directory\portfolio.xml", adoConn
 ```
 
- 只要**資料錄集**已開啟，一般 ADO**資料錄集**巡覽命令可用。
+ 只要**Recordset**已開啟，一般的 ADO**資料錄集**瀏覽命令可用。
 
  **資料錄集**產生 OSP 有一些限制：
 
 -   用戶端資料指標 (**adUseClient**) 不支援。
 
--   階層式**資料錄集**建立任意 XML 無法保存使用**Recordset.Save**。
+-   階層式**錄**建立任意 XML 無法保存使用**Recordset.Save**。
 
--   **資料錄集**以 OSP 建立處於唯讀狀態。
+-   **資料錄集**建立 OSP 為唯讀狀態。
 
--   XMLDSO 將額外的資料行的資料 ($Text) 加入至每個**資料錄集**階層中。
+-   XMLDSO 將額外的資料行的資料 ($Text) 加入至每個**資料錄集**階層架構中。
 
- 如需有關 OLE DB 簡單提供者的詳細資訊，請參閱[建置簡單的提供者](http://msdn.microsoft.com/en-us/b31a6cba-58ae-4ee8-9039-700973d354d6)。
+ 如需有關 OLE DB 簡單提供者的詳細資訊，請參閱 <<c0> [ 建置簡單的提供者](http://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6)。
 
 ## <a name="code-example"></a>程式碼範例
- 下列 Visual Basic 程式碼示範如何開啟任意 XML 檔案，建構一個階層式**資料錄集**，並以遞迴方式撰寫每一筆記錄，每個**資料錄集**的偵錯視窗。
+ 下列 Visual Basic 程式碼示範如何開啟任意的 XML 檔案，建構階層式**Recordset**，並以遞迴方式撰寫的每個每一筆記錄**資料錄集**至偵錯視窗。
 
- 以下是簡單的 XML 檔案，其中包含股票報價。 下列程式碼會使用此檔案，以建構兩個層級階層式**資料錄集**。
+ 以下是簡單的 XML 檔案，其中包含股票報價。 下列程式碼會使用此檔案以建構兩個層級階層**資料錄集**。
 
 ```
 <portfolio>
@@ -188,7 +188,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 </portfolio>
 ```
 
- 以下是兩個 Visual Basic sub 程序。 第一個建立**資料錄集**並將其傳遞給*WalkHier* sub 程序中，遞迴階層中向下，撰寫每個所引導**欄位**中每個中的每一筆記錄**資料錄集**的偵錯視窗。
+ 以下是兩個 Visual Basic sub 程序。 建立第一個**資料錄集**並將它傳遞給*WalkHier* sub 程序中，遞迴會逐步引導，階層中向下，撰寫每個**欄位**中每個中的每一筆記錄**資料錄集**至偵錯視窗。
 
 ```
 Private Sub BrowseHierRecordset()

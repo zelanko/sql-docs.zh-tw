@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 可用性和災害復原 |Microsoft 文件
+title: Power Pivot 可用性和災害復原 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b2b5a16ac487b52f3592743481e0013b4bf44856
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9ed5a7d272f5f21b720df33ef71c0c562f8d699a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026535"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979580"
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Power Pivot 可用性和災害復原
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34026535"
   
  下圖描述 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 部署範例。 這個範例支援 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務的正常可用性，並假設資料庫會定期備份。  
   
- ![2013 中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "2013年中的 powerpivot 可用性")  
+ ![在 2013年中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "2013年中的 powerpivot 可用性")  
   
 -   **(1)** Web 前端伺服器。 使用 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 增益集，將資料提供者安裝在每部伺服器上。 如需詳細資訊，請參閱 [安裝或解除安裝 Power Pivot for SharePoint 增益集 &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)。  
   
@@ -58,9 +58,9 @@ ms.locfileid: "34026535"
   
  下圖描述 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 部署範例。 這個範例支援 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 服務的正常可用性，並假設資料庫會定期備份。  
   
- ![sharepoint 2010 中的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "sharepoint 2010 中的 powerpivot 可用性")  
+ ![在 sharepoint 2010 的 powerpivot 可用性](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2010.png "sharepoint 2010 中的 powerpivot 可用性")  
   
--   **(1)** Web 前端伺服器。 在每部伺服器上安裝資料提供者。 如需詳細資訊，請參閱＜ [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)＞。  
+-   **(1)** Web 前端伺服器。 在每部伺服器上安裝資料提供者。 如需詳細資訊，請參閱 [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)。  
   
 -   **(2)** 兩個 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 共用服務和 **(4)** Windows 服務 **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 都會安裝在 SharePoint 應用程式伺服器上。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34026535"
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 和 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 同步鏡像的可用性。|支援，但不建議使用。 建議在「同步認可模式」模式下使用 AlwaysOn。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 處於「同步認可模式」模式|支援和建議。|  
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 非同步鏡像或記錄傳送至另一個伺服器陣列以進行災害復原。|支援。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 在非同步認可下的災害復原|Supported|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 在非同步認可下的災害復原|支援|  
   
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
   

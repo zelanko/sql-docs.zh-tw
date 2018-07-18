@@ -1,6 +1,6 @@
 ---
-title: 設定記錄傳送的 SQL Server on Linux |Microsoft 文件
-description: 本教學課程會示範如何使用記錄傳送次要執行個體複寫在 Linux 上的 SQL Server 執行個體的基本範例。
+title: Linux 上的 SQL Server 中設定記錄傳送 |Microsoft Docs
+description: 本教學課程會示範如何將 Linux 上的 SQL Server 執行個體複寫至次要執行個體使用記錄傳送的基本範例。
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -12,44 +12,44 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2d2057779b13141c6b1fee49fa1b3d299a660862
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.openlocfilehash: 8371660357848226ef00a9c843177ebae38c8790
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323649"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982030"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>開始使用 Linux 上的記錄傳送
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個或多個次要伺服器上的位置。 簡而言之，來源資料庫的備份還原到次要伺服器。 接著在主要伺服器，會建立交易記錄備份會定期與次要伺服器還原，更新資料庫的次要複本。 
+SQL Server 記錄傳送是 HA 組態，將資料庫從主要伺服器複寫到一個或多個次要伺服器上。 簡單的說，來源資料庫的備份還原到次要伺服器。 然後在主要伺服器建立交易記錄備份，以定期和次要伺服器還原，更新資料庫的次要複本。 
 
   ![記錄傳送](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-此中所述的圖片，記錄傳送工作階段包含下列步驟：
+在此所述的圖片，記錄傳送工作階段包含下列步驟：
 
-- 備份交易記錄檔，主要 SQL Server 執行個體
-- 將交易記錄備份檔案透過網路複製到一或多個次要 SQL Server 執行個體
-- 還原交易記錄備份檔案，第二個 SQL Server 執行個體
+- 備份交易記錄檔，主要的 SQL Server 執行個體
+- 透過網路複製交易記錄備份檔案，一或多個次要 SQL Server 執行個體
+- 還原交易記錄備份檔案，在次要 SQL Server 執行個體上
 
-## <a name="prerequisites"></a>필수 구성 요소
-- [Linux 上安裝 SQL Server 代理程式](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-setup-sql-agent)
+## <a name="prerequisites"></a>先決條件
+- [在 Linux 上安裝 SQL Server 代理程式](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
-## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>安裝了網路共用，記錄傳送使用 CIFS 
+## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>記錄傳送使用 CIFS 的網路共用安裝程式 
 
 > [!NOTE] 
 > 本教學課程會使用 CIFS + Samba 設定網路共用。 如果您想要使用 NFS，留下註解，我們會將它加入文件。       
 
 ### <a name="configure-primary-server"></a>設定主要伺服器
--   執行下列命令以安裝 Samba
+-   執行下列命令來安裝 Samba
 
     ```bash
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   建立目錄來儲存記錄檔記錄傳送，以及 mssql 的必要權限
+-   建立目錄來儲存記錄檔記錄傳送，並授與 mssql 必要的權限
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -82,13 +82,13 @@ SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個�
  
 ### <a name="configure-secondary-server"></a>設定次要伺服器
 
--   執行下列命令以安裝 CIFS 用戶端
+-   執行下列命令來安裝 CIFS 用戶端
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   建立檔案以儲存您的認證。 使用您最近為您 mssql Samba 帳戶的密碼 
+-   建立檔案以儲存您的認證。 使用您 mssql Samba 帳戶最近設定的密碼 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -96,7 +96,7 @@ SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個�
         domain=<domain>
         password=<password>
 
--   執行下列命令，以建立空的目錄進行裝載，並正確設定權限及擁有權
+-   執行下列命令來建立空白的掛接目錄，並正確設定權限，以及擁有權
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -182,7 +182,7 @@ SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個�
     ```
 
 
-- 從次要伺服器執行這個指令碼
+- 從您的次要伺服器執行此指令碼
 
     ```tsql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
@@ -290,7 +290,7 @@ SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個�
 
 ## <a name="verify-log-shipping-works"></a>確認記錄傳送可運作
 
-- 確認記錄傳送主要伺服器上啟動下列工作來運作，
+- 確認記錄傳送可運作的主要伺服器上啟動下列工作
 
     ```tsql
     USE msdb ;  
@@ -300,7 +300,7 @@ SQL Server 記錄傳送是 HA 組態資料庫從主要伺服器複寫到一個�
     GO  
     ```
 
-- 確認記錄傳送次要伺服器上啟動下列工作來運作，
+- 確認記錄傳送可運作的次要伺服器上啟動下列工作
  
     ```tsql
     USE msdb ;  

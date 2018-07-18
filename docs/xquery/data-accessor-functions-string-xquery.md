@@ -1,5 +1,5 @@
 ---
-title: 字串函數 (XQuery) |Microsoft 文件
+title: 字串函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c20973cdaa3b3d80124a9713a104d7294d6c20f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076475"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968870"
 ---
-# <a name="data-accessor-functions---string-xquery"></a>資料存取子函式的字串 (XQuery)
+# <a name="data-accessor-functions---string-xquery"></a>資料存取子函式-string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回的值 *$arg*表示為字串。  
@@ -49,18 +49,18 @@ fn:string($arg as item()?) as xs:string
   
 ## <a name="remarks"></a>備註  
   
--   如果 *$arg*是空的序列，則傳回零長度字串。  
+-   如果 *$arg*是空的序列，會傳回長度為零的字串。  
   
--   如果 *$arg*是一個節點，此函式傳回的字串值使用字串值存取子所取得的節點。 這定義在 W3C XQuery 1.0 及 XPath 2.0 Data Model 規格中。  
+-   如果 *$arg*是一個節點，函式傳回的字串值使用字串值存取子所取得的節點。 這定義在 W3C XQuery 1.0 及 XPath 2.0 Data Model 規格中。  
   
--   如果 *$arg*不可部分完成的值，此函數會傳回相同的字串轉換為運算式所傳回**xs: string**， *$arg*，明時除外。  
+-   如果 *$arg*是不可部分完成的值，函式會傳回相同的字串轉換為運算式所傳回**xs: string**， *$arg*，明時除外。  
   
--   如果類型 *$arg*是**xs: anyuri**，URI 會轉換成字串，但不逸出特殊字元。  
+-   如果類型 *$arg*是**xs: anyuri**，URI 會轉換成字串，而不需要逸出特殊字元。  
   
--   實行中， **fn: string**不只可以在內容相依述詞的內容中使用的引數。 具體而言，它只能在括號 ([ ]) 內使用。  
+-   實行中， **fn: string**沒有引數僅適用於內容相依述詞的內容中。 具體而言，它只能在括號 ([ ]) 內使用。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-string-function"></a>A. 使用字串函數  
  以下查詢會擷取 <`ProductDescription`> 元素的 <`Features`> 子元素節點。  

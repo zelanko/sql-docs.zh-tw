@@ -1,5 +1,5 @@
 ---
-title: 評估報表 (AccessToSQL) |Microsoft 文件
+title: 評定報告 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,30 +19,30 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9a7cdcd7df17e17b61ec867da6ea02f9bb1c5c3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8a268b123663b213f3702dde24eba905e38bf1ac
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773264"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980001"
 ---
-# <a name="assessment-report-accesstosql"></a>評估報表 (AccessToSQL)
-評估報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並且也可幫助您評估複雜度及成本的移轉專案。  
+# <a name="assessment-report-accesstosql"></a>評定報告 (AccessToSQL)
+評定報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，也可以幫助您評估複雜度和成本的移轉專案。  
   
-若要建立評估報表中，選取來源中繼資料總管，在轉換的物件上按一下滑鼠右鍵**資料庫**，然後選取**建立報表**。 您也會自動顯示這份報表之後您將結構描述的轉換。 不過，報表名稱將會轉換報告。 如需詳細資訊，請參閱[專案設定 (GUI) （SSMA 常見）](http://msdn.microsoft.com/en-us/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
+若要建立的評估報告，將來源中繼資料總管 中，選取物件上按一下滑鼠右鍵**資料庫**，然後選取**建立報表**。 您也會自動顯示這份報告之後您將結構描述的轉換。 不過，報表名稱將會轉換報告。 如需詳細資訊，請參閱 <<c0> [ 專案設定 (GUI) （SSMA 常見）](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   
 ## <a name="options"></a>選項。  
-**總管窗格**  
-包含評估報表中的物件階層。 展開資料夾，以檢視個別物件和子元件。 當您按一下類別或物件時，該類別或物件的轉換統計資料會出現在 [詳細資料] 窗格中。  
+**檔案總管 窗格**  
+包含評估報表中的物件階層。 展開以檢視個別物件和子元件的資料夾。 當您按一下類別或物件時，該類別或物件的轉換統計資料會出現在 [詳細資料] 窗格中。  
   
 **詳細資料窗格**  
-顯示所選物件的統計資料或錯誤和警告訊息的轉換。 例如，如果選取 「 資料表 」 資料夾時，詳細資料窗格會顯示外部索引鍵、 索引、 主索引鍵和資料表的已轉換的數字。  
+顯示轉換所選物件的統計資料或錯誤和警告訊息。 比方說，如果選取 [資料表] 資料夾時，[詳細資料] 窗格會顯示外部索引鍵、 索引、 主索引鍵和資料表的已轉換的數字。  
   
 **訊息窗格**  
-顯示錯誤、 警告和評估報表建立時所產生的資訊訊息。 訊息會依數字分組。  
+顯示錯誤、 警告和資訊訊息時建立評定報表所產生。 訊息會依數字。  
   
-若要檢視訊息詳細資料，請按一下**錯誤**，**警告**，或**訊息**，然後展開 訊息。 SSMA 會顯示具有這項錯誤的物件清單。 按一下以顯示物件所有轉換的詳細資料物件。  
+若要檢視訊息詳細資料，請按一下**錯誤**，**警告**，或**訊息**，然後展開 訊息。 SSMA 會顯示具有這項錯誤的物件清單。 按一下以顯示物件的所有轉換詳細資訊的物件。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用者介面 Reference(Access)](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
+[使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

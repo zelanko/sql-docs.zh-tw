@@ -24,16 +24,16 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b7f84fbe973bfb1b303757a340ac979278d30f9e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
-ms.translationtype: HT
+ms.openlocfilehash: eb7cce29ffc56db2bc72b3116c84b34aeb1d0b9a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417447"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979360"
 ---
 # <a name="installing-sql-server-native-client"></a>安裝 SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 如需舊版 SQL Server 相關的內容，請參閱[安裝 SQL Server Native Client](https://msdn.microsoft.com/en-US/library/ms131321(SQL.120).aspx)。
+ > 如需舊版 SQL Server 相關的內容，請參閱[安裝 SQL Server Native Client](https://msdn.microsoft.com/library/ms131321(SQL.120).aspx)。
 
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 

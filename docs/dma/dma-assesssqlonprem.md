@@ -2,7 +2,7 @@
 title: 執行 SQL Server 移轉評估 (Data Migration Assistant) |Microsoft Docs
 description: 了解如何使用 Data Migration Assistant 評估內部部署 SQL Server 移轉至另一個 SQL Server 或 Azure SQL Database 之前
 ms.custom: ''
-ms.date: 10/04/2017
+ms.date: 07/09/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: bfb92c1217fe95687bdef5203189315b965b7446
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
+ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782219"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37934950"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>執行 SQL Server 移轉評估，使用 Data Migration Assistant
 
@@ -86,7 +86,7 @@ ms.locfileid: "37782219"
 
 2.  檢閱跨所有相容性層級目標 SQL Server 版本支援您在選取的相容性問題**選項**頁面。
 
-您可以藉由分析受影響的物件和其下識別每個問題的詳細資料檢閱相容性問題**重大變更**，**行為變更**，和**已淘汰的功能**.
+您可以藉由分析受影響的物件，其詳細資料，並可能識別在每個問題的修正檢閱相容性問題**重大變更**，**行為變更**，和**已淘汰的功能**。
 
 ![檢視評估結果](../dma/media/ReviewResults.png)
 

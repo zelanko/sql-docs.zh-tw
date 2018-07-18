@@ -1,5 +1,5 @@
 ---
-title: sys.trace_subclass_values (TRANSACT-SQL) |Microsoft 文件
+title: sys.trace_subclass_values (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,23 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 070327b43854e9b78f927e68ebfb1f20d607f5d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220939"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969631"
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sys.trace_subclass_values**目錄檢視包含一份具名資料行值。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 給定版本的這些子類別值不會改變。  
   
- 如需支援的追蹤事件完整清單，請參閱[SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
+ 如需支援的追蹤事件的完整清單，請參閱 < [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用擴充事件目錄檢視。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|追蹤事件的識別碼。 這個參數也是**sys.trace_events**目錄檢視。|  
 |**trace_column_id**|**smallint**|列舉所用的追蹤資料行之識別碼。 這個參數也是**sys.trace_columns**目錄檢視。|  
@@ -54,9 +54,9 @@ ms.locfileid: "33220939"
 ## <a name="see-also"></a>另請參閱  
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.traces &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
- [sys.trace_categories &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
+ [sys.trace_categories &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [sys.trace_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   
- [sys.trace_events &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
- [sys.trace_event_bindings &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)  
+ [sys.trace_events &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-trace-events-transact-sql.md)   
+ [sys.trace_event_bindings &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)  
   
   

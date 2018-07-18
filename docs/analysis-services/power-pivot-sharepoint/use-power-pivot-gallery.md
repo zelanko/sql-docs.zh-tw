@@ -1,5 +1,5 @@
 ---
-title: 使用 Power Pivot 圖庫 |Microsoft 文件
+title: 使用 Power Pivot 圖庫 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7d47fc300b39e0dc7d63c2699e8a05f677573ea9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a2eb7bfae0c4fcbc82995c120ef588fdfd4710af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037462"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980581"
 ---
 # <a name="use-power-pivot-gallery"></a>使用 Power Pivot 圖庫
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "34037462"
 ##  <a name="icons"></a> Power Pivot 圖庫中的圖示  
  圖示會提供有關內容可用性和狀態的視覺指標。  
   
-|圖示|Description|  
+|圖示|描述|  
 |----------|-----------------|  
 |![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|在文件中產生每一個頁面的縮圖影像時，將會出現沙漏圖示。 重新整理頁面以顯示更新的影像。|  
 |![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|當活頁簿或報表的頁面數多於可以顯示在 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫中的頁數時，將會出現頁面圖示。 若要檢視所有頁面，您必須使用用戶端應用程式。|  
@@ -122,7 +122,7 @@ ms.locfileid: "34037462"
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|按一下 [管理資料重新整理] 按鈕以建立或檢視排程，從連接的資料來源擷取更新的資料。 如需如何建立排程的指示，請參閱 [排程資料重新整理 (PowerPivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)。|  
+|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|按一下 [管理資料重新整理] 按鈕以建立或檢視排程，從連接的資料來源擷取更新的資料。 如需如何建立排程的指示，請參閱 [排程資料重新整理 (PowerPivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)。|  
   
 ##  <a name="delete"></a> 刪除 Power Pivot 圖庫中的活頁簿或報表  
  若要從文件庫中刪除文件，請先切換至 [所有文件] 檢視。  
@@ -163,6 +163,6 @@ ms.locfileid: "34037462"
  [在管理中心建立 Power Pivot 網站的信任位置](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [刪除 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
  [建立及自訂 Power Pivot 圖庫](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [排定資料重新整理 (Power Pivot for SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [排程資料重新整理 (Power Pivot for SharePoint)](http://msdn.microsoft.com/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   
