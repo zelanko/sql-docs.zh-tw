@@ -1,5 +1,5 @@
 ---
-title: XQuery 運算子針對 xml 資料類型 |Microsoft 文件
+title: XQuery 運算子針對 xml 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 62c4875c74d6ff67e8d1760a29ac48672fc7765a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077565"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988173"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>針對 xml 資料類型的 XQuery 運算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ ms.locfileid: "33077565"
   
 -   用於一般比較運算子 (=、 ！ =、 \<，>， \<=、 > =)  
   
- 如需有關這些運算子的詳細資訊，請參閱[比較運算式&#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
+ 如需有關這些運算子的詳細資訊，請參閱 <<c0> [ 比較運算式&#40;XQuery&#41;</c0>](../xquery/comparison-expressions-xquery.md)  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-using-general-operators"></a>A. 使用一般運算子  
  此查詢會說明套用到序列與比較序列的一般運算子使用方式。 此查詢會擷取每個客戶的電話號碼的序列**AdditionalContactInfo**資料行**連絡人**資料表。 然後，將此序列和這兩個電話號碼的序列 ("111-111-1111", "222-2222") 比較。  
   
- 此查詢會使用**=** 比較運算子。 每個節點的右側序列中**=** 與左側序列中的每個節點進行比較運算子。 如果節點相符，節點比較是**TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
+ 此查詢會使用**=** 比較運算子。 在右側序列中的每個節點**=** 左側序列中每個節點會與比較運算子。 如果節點相符，節點比較就是 **，則為 TRUE**。 接著會轉換為整數並和 1 進行比較，然後查詢會傳回客戶識別碼。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -63,7 +63,7 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- 還有另一個方法，可以發現上一個查詢中的運作方式： 每個電話號碼值擷取自**AdditionalContactInfo**資料行進行比較的兩個電話號碼組。 如果值位於集合中，則結果中就會傳回該客戶。  
+ 沒有觀察上述查詢中的運作方式的另一種方法： 每個電話號碼值擷取自**AdditionalContactInfo**資料行與兩個電話號碼的集合。 如果值位於集合中，則結果中就會傳回該客戶。  
   
 ### <a name="b-using-a-numeric-operator"></a>B. 使用數值運算子  
  此查詢中的 + 運算子是值運算子，因為它會套用到單一項目。 例如，值 1 會加入到查詢傳回的配置大小：  
@@ -99,7 +99,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- 因為兩個運算元**eq**運算子不可部份完成值，在查詢中使用值運算子。 您可以使用一般比較運算子撰寫相同的查詢 ( **=** )。  
+ 因為兩個運算元**eq**運算子不可部份完成值，查詢中使用值運算子。 您可以撰寫相同的查詢，使用一般比較運算子 ( **=** )。  
   
 ## <a name="see-also"></a>另請參閱  
  [針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)   

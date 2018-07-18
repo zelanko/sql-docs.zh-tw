@@ -1,5 +1,5 @@
 ---
-title: sys.master_files (TRANSACT-SQL) |Microsoft 文件
+title: sys.master_files (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/10/2016
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: cd7c2b9aac08fe6133c2138f5a1c2ea5369ec34c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181564"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039032"
 ---
 # <a name="sysmasterfiles-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   依照 master 資料庫的儲存情況，針對資料庫的每個檔案，各包含一個資料列。 這是單一全系統的檢視。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|套用這個檔案的資料庫識別碼。 Masterdatabase_id 永遠為 1。|  
 |file_id|**int**|資料庫內的檔案識別碼。 主要 file_id 一定是 1。|  
@@ -45,12 +45,12 @@ ms.locfileid: "33181564"
 |型別|**tinyint**|檔案類型：<br /><br /> 0 = 資料列 <br /><br /> 1 = 記錄<br /><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = 全文檢索 (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄；已升級為 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 或更高版本或是以此版本建立的全文檢索目錄將報告檔案類型 0)。|  
 |type_desc|**nvarchar(60)**|檔案類型的描述：<br /><br /> ROWS<br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT (早於 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 的全文檢索目錄)。|  
 |data_space_id|**int**|這個檔案所屬的資料空間識別碼。 資料空間是一個檔案群組。<br /><br /> 0 = 記錄檔。|  
-|name|**sysname**|資料庫中之檔案的邏輯名稱。|  
+|NAME|**sysname**|資料庫中之檔案的邏輯名稱。|  
 |physical_name|**nvarchar(260)**|作業系統檔案名稱。|  
 |state|**tinyint**|檔案狀態：<br /><br /> 0 = ONLINE <br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |state_desc|**nvarchar(60)**|檔案狀態的描述：<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> 如需詳細資訊，請參閱[檔案狀態](../../relational-databases/databases/file-states.md)。|  
 |size|**int**|目前檔案大小 (以 8 KB 頁面為單位)。 如果是資料庫快照集，size 會反映快照集可以使用的最大檔案空間。<br /><br /> 注意： 此欄位會填入零 FILESTREAM 容器。 查詢*sys.database_files*目錄檢視中 FILESTREAM 容器的實際大小。|  
-|max_size|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意： 升級以無限的記錄檔案大小的資料庫將會報告記錄檔的大小上限-1。|  
+|max_size|**int**|最大檔案大小 (以 8 KB 頁面為單位)：<br /><br /> 0 = 不允許任何成長。<br /><br /> -1 = 檔案會成長到磁碟已滿。<br /><br /> 268435456 = 記錄檔可以成長到最大 2 TB 的大小。<br /><br /> 注意： 不受限的記錄檔大小會升級的資料庫將會報告記錄檔的大小上限為-1。|  
 |growth|**int**|0 = 檔案是固定大小，不會成長。<br /><br /> >0 = 檔案會自動成長。<br /><br /> 如果 is_percent_growth = 0，成長遞增是以 8 KB 頁面來表示，會捨入到最接近的 64 KB。<br /><br /> 如果 is_percent_growth = 1，便會以整數百分比的方式來表現成長遞增。|  
 |is_media_read_onlyF|**bit**|1 = 檔案在唯讀媒體中。<br /><br /> 0 = 檔案在讀寫媒體中。|  
 |is_read_only|**bit**|1 = 檔案標示為唯讀。<br /><br /> 0 = 檔案標示為可讀寫。|  
@@ -69,7 +69,7 @@ ms.locfileid: "33181564"
 |redo_target_lsn|**numeric(25,0)**|能夠停止這個檔案的線上向前復原的 LSN。<br /><br /> 除非 state = RESTORING 或 state = RECOVERY_PENDING，否則，便是 NULL。|  
 |redo_target_fork_guid|**uniqueidentifier**|能夠復原容器的復原分岔。 與 redo_target_lsn 形成一組。|  
 |backup_lsn|**numeric(25,0)**|檔案最近的資料或差異備份的 LSN。|  
-|credential_id|**int**|`credential_id`從`sys.credentials`用來儲存檔案。 例如，當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行 Azure 虛擬機器和資料庫上的檔案會儲存在 Azure blob 儲存體、 與儲存位置的存取認證來設定認證。|  
+|credential_id|**int**|`credential_id`從`sys.credentials`用來儲存檔案。 例如，當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Azure 虛擬機器和資料庫上執行檔案會儲存在 Azure blob 儲存體、 認證已使用的儲存位置的存取認證。|  
   
 > [!NOTE]  
 >  當您卸除或重建大型索引時，或卸除或截斷大型資料表時，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會延遲取消配置實際的頁面及其相關聯鎖定，直到認可交易之後。 延遲的卸除作業並不會立即釋出已配置的空間。 因此，在卸除或截斷大型物件之後，sys.master_files 立即傳回的值不一定能反映實際可用的磁碟空間。  

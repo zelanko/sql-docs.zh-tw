@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_event_actions (Azure SQL Database) |Microsoft 文件
+title: sys.dm_xe_database_session_event_actions (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: b52adfa82c532a8144e142f5d87c991a249becf8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468654"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040226"
 ---
 # <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -30,9 +30,9 @@ ms.locfileid: "34468654"
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 和所有未來的版本。|  
+|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 以及任何未來的版本。|  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 不可為 Null。|  
 |action_name|**nvarchar(60)**|動作的名稱。 不可為 Null。|  

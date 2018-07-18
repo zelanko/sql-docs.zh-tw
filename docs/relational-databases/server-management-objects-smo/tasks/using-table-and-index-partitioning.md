@@ -1,5 +1,5 @@
 ---
-title: 使用資料表和索引資料分割 |Microsoft 文件
+title: 使用資料表和索引資料分割 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,29 +22,29 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c6dca91e1be799d4fd666432820a7839718d3e28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969223"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039062"
 ---
 # <a name="using-table-and-index-partitioning"></a>使用資料表和索引資料分割
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  資料可以使用所提供的儲存演算法來儲存[Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)。 分割作業可讓大型資料表和索引更容易管理及擴充。  
+  要儲存資料，請使用所提供的儲存演算法[Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)。 分割作業可讓大型資料表和索引更容易管理及擴充。  
   
 ## <a name="index-and-table-partitioning"></a>索引和資料表資料分割  
  此功能可以讓索引和資料表資料散佈到資料分割中的多個檔案群組。 資料分割函數會定義資料表的資料列或索引如何依據某些資料行 (稱為分割資料行) 的值對應到資料分割集。 資料分割配置則會將資料分割函數所指定的每個資料分割都對應到檔案群組。 如此您就可以開發出封存策略，讓資料表可以擴充到檔案群組，並進而擴充到實體裝置。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database>物件包含的集合<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>表示所實作的資料分割函數的集合物件<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>描述資料如何對應至檔案群組的物件。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database>物件包含的集合<xref:Microsoft.SqlServer.Management.Smo.PartitionFunction>物件，代表所實作的資料分割函數和集合<xref:Microsoft.SqlServer.Management.Smo.PartitionScheme>描述資料如何對應至檔案群組的物件。  
   
  每個 <xref:Microsoft.SqlServer.Management.Smo.Table> 和 <xref:Microsoft.SqlServer.Management.Smo.Index> 物件都會在 <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> 屬性中指定所使用的資料分割配置，並在 <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> 中指定資料行。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>在 Visual C# 中為資料表設定資料分割配置  
- 程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
+ 在程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
   
 ```csharp  
 {   
@@ -92,7 +92,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>在 PowerShell 中為資料表設定資料分割配置  
- 程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
+ 在程式碼範例示範如何建立資料分割函數和資料分割配置`TransactionHistory`資料表中[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]範例資料庫。 這些資料分割會以日期區分，用意在於將舊記錄區隔到 `TransactionHistoryArchive` 資料表中。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  
@@ -138,6 +138,6 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [分割資料表與索引](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

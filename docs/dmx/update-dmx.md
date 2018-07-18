@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4049c6052a4aabcfe7207086db1db19961354eb0
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989690"
 ---
 # <a name="update-dmx"></a>UPDATE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,13 +35,13 @@ SET NODE_CAPTION='new caption'
  模型識別碼。  
   
  *新的標題*  
- 包含新名稱的字串**NODE_CAPTION**資料行。  
+ 包含的新名稱的字串**NODE_CAPTION**資料行。  
   
  *條件運算式*  
  選擇性。 限制從資料行清單傳回之值的條件。  
   
 ## <a name="examples"></a>範例  
- 在下列範例中，**更新**陳述式會變更預設名稱， `Cluster 1`，叢集`001`更具描述性的名稱， `Likely Customers`。  
+ 在下列範例中，**更新**陳述式會變更預設名稱， `Cluster 1`，為叢集`001`更具描述性的名稱， `Likely Customers`。  
   
 ```  
 UPDATE [TM Clustering].CONTENT  

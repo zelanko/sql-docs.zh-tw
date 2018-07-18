@@ -1,5 +1,5 @@
 ---
-title: 有效的布林值 (XQuery) |Microsoft 文件
+title: 有效的布林值 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4ab470f5643335cd1ed26edd07aa93284bab1d47
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077515"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987430"
 ---
 # <a name="effective-boolean-value-xquery"></a>有效的布林值 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "33077515"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 下列是有效布林值的範例。 當**如果**運算式的處理，決定條件的有效布林值。 因為 `/a[1]` 會傳回空的序列，所以有效布林值為 False。 傳回的結果會是具有一個文字節點 (False) 的 XML。  
+ 下列是有效布林值的範例。 當**如果**運算式的處理、 有效的布林值條件的決定。 因為 `/a[1]` 會傳回空的序列，所以有效布林值為 False。 傳回的結果會是具有一個文字節點 (False) 的 XML。  
   
 ```  
 value is false  
@@ -74,9 +74,9 @@ go
   
  在查詢具類型**xml**資料行或變數，您可以有布林類型的節點。 **Data （)** 在此情況下會傳回布林值。 如果查詢運算式傳回的布林值為 True，則有效布林值即為 True，如下個範例所示。 範例中也說明下列各項：  
   
--   建立 XML 結構描述集合。 項目\<b > 集合中是屬於布林類型。  
+-   建立 XML 結構描述集合。 項目\<b > 在集合中是屬於布林類型。  
   
--   具型別的**xml**變數已建立並查詢。  
+-   具型別**xml**變數已建立並查詢。  
   
 -   `data(/b[1])` 運算式會傳回布林值 True。 因此，此情況中的有效布林值是 True。  
   

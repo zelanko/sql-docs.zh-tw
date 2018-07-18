@@ -1,5 +1,5 @@
 ---
-title: sys.server_principals (TRANSACT-SQL) |Microsoft 文件
+title: sys.server_principals (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 503ae5f7918edabd609e6176eeb0fa5c1238dd77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221629"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039028"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   針對每一個伺服器層級的主體，各包含一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|主體的名稱。 在伺服器中，這是唯一的。|  
 |**principal_id**|**int**|主體的識別碼。 在伺服器中，這是唯一的。|  
@@ -50,7 +50,7 @@ ms.locfileid: "33221629"
 |**default_database_name**|**sysname**|這個主體的預設資料庫。|  
 |**default_language_name**|**sysname**|這個主體的預設語言。|  
 |**credential_id**|**int**|與這個主體相關聯的認證識別碼。 如果沒有與這個主體相關聯的認證，則 credential_id 為 NULL。|  
-|**owning_principal_id**|**int**|**Principal_id**的伺服器角色的擁有者。 如果主體不是伺服器角色，則為 NULL。|  
+|**owning_principal_id**|**int**|**Principal_id**伺服器角色的擁有者。 如果主體不是伺服器角色，則為 NULL。|  
 |**is_fixed_role**|**bit**|如果主體是其中一個固定伺服器角色，則傳回 1。 如需詳細資訊，請參閱 [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)。|  
   
 ## <a name="permissions"></a>Permissions  

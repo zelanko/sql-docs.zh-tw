@@ -1,5 +1,5 @@
 ---
-title: 順序和 Qname (XQuery) |Microsoft 文件
+title: 序列和 Qname (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 30d463050f129bbc232c0261f1d6af481744ef93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077995"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990007"
 ---
 # <a name="sequence-and-qnames-xquery"></a>順序和 QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ SELECT @x.query('/Root/a');
   
  在運算式 (`/Root/a`) 中，`Root` 和 `a` 是 QName。  
   
- 在下列範例中，指定查詢針對具類型**xml**資料行。 查詢會逐一查看所有\<步驟 > 的第一個工作中心位置的項目。  
+ 在下列範例中，指定查詢針對具型別**xml**資料行。 查詢會逐一查看所有\<步驟 > 的第一個工作中心位置的項目。  
   
 ```  
 SELECT Instructions.query('  
@@ -151,7 +151,7 @@ WHERE ProductModelID=7;
 |xml|`http://www.w3.org/XML/1998/namespace`|  
 |(無前置詞)|`http://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- 您所建立的每個資料庫有**sys** XML 結構描述集合。 此集合會保留這些結構描述，所以從使用者建立的任何 XML 結構描述集合都能存取這些結構描述。  
+ 您所建立的每個資料庫都**sys** XML 結構描述集合。 此集合會保留這些結構描述，所以從使用者建立的任何 XML 結構描述集合都能存取這些結構描述。  
   
 > [!NOTE]  
 >  此實作不支援`local`前置詞中的 XQuery 規格中所述http://www.w3.org/2004/07/xquery-local-functions。  
