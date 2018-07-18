@@ -1,5 +1,5 @@
 ---
-title: 了解 Analysis Services 部署指令碼 |Microsoft 文件
+title: 了解 Analysis Services 部署指令碼 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84179762d2c4819fb5fc5f82ad6d0528ea689ecf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026575"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021423"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>了解 Analysis Services 部署指令碼
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 產生的 XMLA 部署指令碼包含兩個區段：  
+  [ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 部署精靈] 產生的 XMLA 部署指令碼包含兩個區段：  
   
 -   部署指令碼的第一個部分包含要建立、改變或刪除目的地資料庫中的適當 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 物件時所需的命令。 根據預設， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 專案產生的輸入檔是以累加部署為基礎。 因此，XMLA 部署指令碼將只會影響已變更或刪除的物件。  
   
@@ -32,6 +32,6 @@ ms.locfileid: "34026575"
   
 ## <a name="see-also"></a>另請參閱  
  [執行 Analysis Services 部署精靈](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)   
- [了解用來建立部署指令碼的輸入的檔案](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
+ [了解用來建立部署指令碼的輸入檔](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
   
   

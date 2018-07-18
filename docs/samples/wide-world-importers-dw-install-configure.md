@@ -14,11 +14,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: eb74abac4f13f5841d6ae06dac7c1eb38de7bfd0
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964300"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023421"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 安裝和設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sys.database_connection_stats (Azure SQL Database) |Microsoft 文件
+title: sys.database_connection_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: ''
@@ -28,27 +28,27 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 2de813bc474d59deb417b5aec1e1d02b5e9f5967
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181524"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029511"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   包含統計資料[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫**連線**事件，提供資料庫連接成功和失敗的概觀。 如需有關連接性事件的詳細資訊，請參閱中的事件類型[sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
-|統計資料|型別|Description|  
+|統計資料|類型|描述|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|資料庫的名稱。|  
 |**start_time**|**datetime2**|彙總間隔開始的 UTC 日期和時間。 這個時間永遠是 5 分鐘的倍數。 例如：<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
-|**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 **End_time**一律會多出剛好 5 分鐘比對應**start_time**相同的資料列中。|  
+|**end_time**|**datetime2**|彙總間隔結束的 UTC 日期和時間。 **End_time**一律為剛好 5 分鐘晚於相對應**start_time**相同的資料列中。|  
 |**success_count**|**int**|成功連接的數目。|  
-|**total_failure_count**|**int**|連接失敗的總數。 這是總和**connection_failure_count**， **terminated_connection_count**，和**throttled_connection_count**，但不包括死結事件。|  
+|**total_failure_count**|**int**|連接失敗的總數。 這是總和**connection_failure_count**， **terminated_connection_count**，並**throttled_connection_count**，而且不包含死結事件。|  
 |**connection_failure_count**|**int**|登入失敗的數目。|  
-|**terminated_connection_count**|**int**|***只適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。***<br /><br /> 終止的連接數目。|  
-|**throttled_connection_count**|**int**|***只適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。***<br /><br /> 節流的連接數目。|  
+|**terminated_connection_count**|**int**|***僅適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。***<br /><br /> 終止的連接數目。|  
+|**throttled_connection_count**|**int**|***僅適用於[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]v11。***<br /><br /> 節流的連接數目。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33181524"
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`0`|`7`|`7`|`0`|`0`|  
   
 ### <a name="interval-starttime-and-endtime"></a>間隔的 start_time 和 end_time  
- 在事件發生時，事件是否包含在彙總間隔*上*或*之後 * * * start_time** 和*之前 * * * end_time** 對於該間隔。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
+ 在事件發生時，事件是否包含在彙總間隔*上*或*之後 * * * start_time** 並*之前 * * * end_time** 對於該間隔。 例如，正巧發生在 `2012-10-30 19:25:00.0000000` 的事件只會納入到以下所示的第二段間隔：  
   
 ```  
   
@@ -80,7 +80,7 @@ start_time                    end_time
 ### <a name="errors-not-included"></a>不包括錯誤  
  這個檢視可能不會包括所有連接和錯誤資訊：  
   
--   這個檢視不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫可能發生的錯誤，只有在 事件類型的指定[sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
+-   這個檢視不包括所有[!INCLUDE[ssSDS](../../includes/sssds-md.md)]資料庫可能會發生，只指定事件類型中的錯誤[sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)。  
   
 -   如果在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 資料中心內發生機器故障，則事件資料表中可能會遺漏邏輯伺服器的少量資料。  
   
@@ -90,7 +90,7 @@ start_time                    end_time
  具有存取權限的使用者**主要**資料庫有唯讀存取此檢視。  
   
 ## <a name="example"></a>範例  
- 下列範例顯示的查詢**sys.database_connection_stats**傳回中午到 2011 年 9 月 25 日中午到 9/28/2011 (UTC) 之間發生的資料庫連接摘要。 根據預設，查詢結果會依照**start_time** （遞增順序）。  
+ 下列範例顯示的查詢**sys.database_connection_stats**傳回 2011 年 9 月 25 日中午 12:00 與 9/28/2011 (UTC) 之間的資料庫連接摘要。 根據預設，查詢結果會依照**start_time** （遞增順序）。  
   
 ```  
 SELECT *  

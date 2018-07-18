@@ -1,5 +1,5 @@
 ---
-title: Star （註解） (DMX) 的斜線 |Microsoft 文件
+title: 斜線星形 （註解） (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1d96c65ea1dd187d5678987447415ca419ad10d7
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842291"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020746"
 ---
-# <a name="slash-star-comment-dmx"></a>斜線星狀 （註解） (DMX)
+# <a name="slash-star-comment-dmx"></a>斜線星形 （註解） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   指出 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 不應執行的文字字串。 伺服器不會評估註解字元之間的文字 / * 和\*/。 您可以在資料採礦延伸模組 (DMX) 陳述式內巢狀註解、在程式碼行的尾端包含註解，或者將註解插入單獨的一行。  

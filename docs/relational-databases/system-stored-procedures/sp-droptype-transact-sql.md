@@ -1,5 +1,5 @@
 ---
-title: sp_droptype (TRANSACT-SQL) |Microsoft 文件
+title: sp_droptype (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 6f898820839afe4057805d9d6ed8bc4e53341065
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242561"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970310"
 ---
 # <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,8 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@typename=**] **'***類型***'**  
- 這是您所擁有的別名資料類型名稱。 *型別*是**sysname**，沒有預設值。  
+ [  **@typename=**] **'***型別***'**  
+ 這是您所擁有的別名資料類型名稱。 *型別*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-type"></a>傳回碼類型  
  0 (成功) 或 1 (失敗)  
@@ -54,7 +54,7 @@ sp_droptype [ @typename = ] 'type'
  無  
   
 ## <a name="remarks"></a>備註  
- **類型**別名資料型別無法卸除如果資料表或其他資料庫物件參考它。  
+ **型別**別名資料型別無法卸除如果資料表或其他資料庫物件參考它。  
   
 > [!NOTE]  
 >  如果別名資料類型用於資料表定義中，或者如果有規則或預設值與它繫結，就無法卸除別名資料類型。  
@@ -77,7 +77,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [Database Engine 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sp_addtype &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
+ [sp_addtype &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

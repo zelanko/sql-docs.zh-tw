@@ -1,5 +1,5 @@
 ---
-title: 識別項 (DMX) |Microsoft 文件
+title: 識別碼 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca1a3bd1754659548f6d1bc23764fd167006974a
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842411"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978602"
 ---
 # <a name="identifiers-dmx"></a>識別碼 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ SELECT * FROM Clustering.CONTENT;
   
     -   底線 (_)。  
   
-3.  識別碼不可以是 DMX 保留字。 DMX 中的保留字不區分大小寫。 如需詳細資訊，請參閱[保留關鍵字&#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)。  
+3.  識別碼不可以是 DMX 保留字。 DMX 中的保留字不區分大小寫。 如需詳細資訊，請參閱 <<c0> [ 保留關鍵字&#40;DMX&#41;](../dmx/reserved-keywords-dmx.md)。</c0>  
   
 4.  識別碼不能包含內嵌空格或特殊字元。  
   
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   您使用保留字作為物件名稱或部份的物件名稱時。  
   
-     建議您不要使用保留的關鍵字作為物件名稱。 從舊版升級的資料庫，[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]識別碼包含了不是保留的字較早的版本可能會包含[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的保留的字，但[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 您可以使用分隔識別碼參考這類物件，直到您能夠變更物件的名稱為止。  
+     建議您不要使用保留的關鍵字作為物件名稱。 您從舊版升級的資料庫[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能有些識別碼包含未保留的字較早的版本[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]但卻是保留的字[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 您可以使用分隔識別碼參考這類物件，直到您能夠變更物件的名稱為止。  
   
 -   您使用未列為合格識別碼的字元時。  
   
@@ -99,7 +99,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
  [資料採礦延伸模組&#40;DMX&#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

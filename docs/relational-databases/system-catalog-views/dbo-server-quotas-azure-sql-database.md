@@ -1,5 +1,5 @@
 ---
-title: dbo.server_quotas (Azure SQL Database) |Microsoft 文件
+title: dbo.server_quotas (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: ''
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ada6f943e451e6c468adaed27bfe4618407d2dc7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177191"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029666"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "33177191"
   
  傳回伺服器上可用的資料庫配額類型。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|quota_name|**nvarchar**|伺服器的配額類型。 型別**Premium_database**相當於含有資源保留的資料庫。|  
+|quota_name|**nvarchar**|伺服器的配額類型。 型別**Premium_database**就相當於與含有資源保留資料庫。|  
 |quota_value|**int**|伺服器中允許的配額類型數目。|  
   
 ## <a name="permissions"></a>Permissions  
- 這個檢視可用於所有的使用者角色有權連接到虛擬**主要**資料庫。  
+ 這個檢視可供所有使用者角色權限來連接到虛擬**主要**資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
  [管理高階資料庫](http://go.microsoft.com/fwlink/?LinkID=311927)  

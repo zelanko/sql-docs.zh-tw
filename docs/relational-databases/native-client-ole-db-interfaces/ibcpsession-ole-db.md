@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 25c27a948a183ac1a06f3516ef05041ef3eefdae
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419217"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38018643"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

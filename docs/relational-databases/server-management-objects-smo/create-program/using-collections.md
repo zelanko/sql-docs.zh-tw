@@ -1,5 +1,5 @@
 ---
-title: 使用集合 |Microsoft 文件
+title: 使用集合 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85f06095f120086bd4f11e3fd5959b8fe17198e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970795"
 ---
 # <a name="using-collections"></a>使用集合
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/03/2018
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **For...每個**陳述式或[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach**陳述式可用來逐一查看集合的每個成員。  
   
 ## <a name="examples"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>在 Visual Basic 中使用集合來參考物件  
- 這個程式碼範例示範如何使用設定資料行屬性<xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>， <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>，和<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>屬性。 這些屬性代表集合，當這些屬性搭配可指定物件名稱的參數使用時，就可用來識別特定物件。 名稱和結構描述所需的<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>集合物件屬性。  
+ 此程式碼範例示範如何使用設定資料行屬性<xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>， <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>，和<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>屬性。 這些屬性代表集合，當這些屬性搭配可指定物件名稱的參數使用時，就可用來識別特定物件。 名稱和結構描述所需的<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>集合物件屬性。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -50,7 +51,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 ```
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-c"></a>在 Visual C# 中使用集合來參考物件  
- 這個程式碼範例示範如何使用設定資料行屬性<xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>， <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>，和<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>屬性。 這些屬性代表集合，當這些屬性搭配可指定物件名稱的參數使用時，就可用來識別特定物件。 名稱和結構描述所需的<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>集合物件屬性。  
+ 此程式碼範例示範如何使用設定資料行屬性<xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>， <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>，和<xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>屬性。 這些屬性代表集合，當這些屬性搭配可指定物件名稱的參數使用時，就可用來識別特定物件。 名稱和結構描述所需的<xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>集合物件屬性。  
   
 ```csharp  
 {   
@@ -65,7 +66,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName
 ```  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>在 Visual Basic 中逐一查看集合的成員  
- 這個程式碼範例會逐一<xref:Microsoft.AnalysisServices.Server.Databases%2A>集合屬性，並顯示所有資料庫的執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 此程式碼範例會逐一<xref:Microsoft.AnalysisServices.Server.Databases%2A>集合屬性，並顯示所有資料庫的執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -86,7 +87,7 @@ Console.WriteLine("Total connections =" & total)
 ```
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>在 Visual C# 中逐一查看集合的成員  
- 這個程式碼範例會逐一<xref:Microsoft.AnalysisServices.Server.Databases%2A>集合屬性，並顯示所有資料庫的執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 此程式碼範例會逐一<xref:Microsoft.AnalysisServices.Server.Databases%2A>集合屬性，並顯示所有資料庫的執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

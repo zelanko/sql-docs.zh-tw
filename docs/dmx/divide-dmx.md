@@ -1,5 +1,5 @@
 ---
-title: （除法）(DMX) |Microsoft 文件
+title: （除法）(DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842371"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972664"
 ---
 # <a name="divide-dmx"></a>（除法）(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ Dividend / Divisor
  [算術運算子&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)   
- [分割&#40;SSIS 運算式&#41;](../integration-services/expressions/divide-ssis-expression.md)   
- [&#40;分割&#41; &#40;Transact SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
+ [將&#40;SSIS 運算式&#41;](../integration-services/expressions/divide-ssis-expression.md)   
+ [&#40;將&#41; &#40;TRANSACT-SQL&#41;](../t-sql/language-elements/divide-transact-sql.md)  
   
   

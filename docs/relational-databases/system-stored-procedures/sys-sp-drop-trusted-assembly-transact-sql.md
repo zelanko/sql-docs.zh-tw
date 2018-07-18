@@ -1,5 +1,5 @@
 ---
-title: sys.sp_drop_trusted_assembly (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_drop_trusted_assembly (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ffdc0c87a798b23ce25e544b26ea63132495b53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255331"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971850"
 ---
-# <a name="sysspdroptrustedassembly-transact-sql"></a>sys.sp_drop_trusted_assembly (TRANSACT-SQL)  
+# <a name="sysspdroptrustedassembly-transact-sql"></a>sys.sp_drop_trusted_assembly & Amp;#40;transact-SQL&AMP;#41;  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 從伺服器上的受信任組件清單中卸除組件。
@@ -49,7 +49,7 @@ sp_drop_trusted_assembly
 ## <a name="arguments"></a>引數
 
 [ @hash =] '*值*'  
-從伺服器受信任的組件清單中卸除組件的 SHA2_512 雜湊值。 啟用 clr 嚴格的安全性，即使組件是不帶正負號或資料庫不標示為值得信任時，可能會載入受信任的組件。
+從伺服器的受信任組件清單中卸除組件的 SHA2_512 雜湊值。 啟用 clr 嚴格安全性時，即使是不帶正負號的組件或資料庫不會標示為值得信任，可能會載入受信任的組件。
 
 ## <a name="remarks"></a>備註  
 
@@ -61,7 +61,7 @@ sp_drop_trusted_assembly
 
 ## <a name="examples"></a>範例  
 
-下列範例會從受信任的組件的伺服器清單，卸除組件雜湊。  
+下列範例會從伺服器的受信任組件清單，卸除組件雜湊。  
 
 ```  
 EXEC sp_drop_trusted_assembly 
@@ -69,7 +69,7 @@ EXEC sp_drop_trusted_assembly
 ```  
 
 ## <a name="see-also"></a>另請參閱  
-  [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [DROP ASSEMBLY &#40;Transact SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
+  [sys.sp_add_trusted_assembly](sys-sp-add-trusted-assembly-transact-sql.md) [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) [卸除組件&#40;-SQL&AMP;#41;&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  
 

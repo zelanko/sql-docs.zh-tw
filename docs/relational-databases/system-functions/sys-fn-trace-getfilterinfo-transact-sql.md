@@ -1,5 +1,5 @@
 ---
-title: sys.fn_trace_getfilterinfo (TRANSACT-SQL) |Microsoft 文件
+title: sys.fn_trace_getfilterinfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1f55c02dfd91edbb964b87e74e2d413f9066501d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236301"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971873"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ fn_trace_getfilterinfo ( trace_id )
   
 ## <a name="arguments"></a>引數  
  *trace_id*  
- 這是追蹤的識別碼。 *trace_id*是**int**，沒有預設值。  
+ 這是追蹤的識別碼。 *trace_id*已**int**，沒有預設值。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
- 傳回下列資訊。 如需資料行的詳細資訊，請參閱[sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
+ 傳回下列資訊。 如需有關資料行的詳細資訊，請參閱[sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|套用篩選之資料行的識別碼。|  
 |**logical_operator**|**int**|指定套用 AND 或 OR 運算子。|  
@@ -65,7 +65,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**value**|**sql_variant**|指定套用篩選的值。|  
   
 ## <a name="remarks"></a>備註  
- 使用者會設定*trace_id*值來識別、 修改和控制追蹤。 在傳遞特定追蹤的識別碼**fn_trace_getfilterinfo**傳回該追蹤的任何篩選器的相關資訊。 如果指定的追蹤沒有篩選，此函數就會傳回空的資料列集。 當傳遞無效的識別碼時，這個函數會傳回空的資料列集。 如需有關追蹤的類似資訊，請參閱[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
+ 使用者會設定*trace_id*值來識別、 修改和控制追蹤。 在傳遞特定的追蹤識別碼**fn_trace_getfilterinfo**傳回該追蹤的任何篩選條件的相關資訊。 如果指定的追蹤沒有篩選，此函數就會傳回空的資料列集。 當傳遞無效的識別碼時，這個函數會傳回空的資料列集。 如需有關追蹤的類似資訊，請參閱[sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 ALTER TRACE 權限。  
@@ -83,11 +83,11 @@ GO
  [建立追蹤 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
- [sys.fn_trace_geteventinfo &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [sys.fn_trace_gettable &#40;Transact SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
+ [sys.fn_trace_gettable &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)  
   
   

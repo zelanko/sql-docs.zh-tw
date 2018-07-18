@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_index (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_spatial_geography_index (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: f2f06d0955d8f7febece5cc98c0719131554e764
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259188"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019846"
 ---
 # <a name="sphelpspatialgeographyindex-transact-sql"></a>sp_help_spatial_geography_index (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  名稱和指定的屬性集的值會傳回有關**geography**空間索引。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
+  傳回有關的名稱和值的一組指定的屬性**地理區**空間索引。 結果會以資料表格式傳回。 您可以選擇傳回核心屬性集或索引的所有屬性。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +58,7 @@ sp_help_spatial_geography_index [ @tabname =] 'tabname'
 ## <a name="remarks"></a>備註  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geography_index`調查**geography**空間索引**SIndx_SpatialTable_geography_col2**資料表上定義**該索引是針對**中的給定的查詢範例**@qs**。 這個範例只會傳回指定索引的核心屬性。  
+ 下列範例會使用`sp_help_spatial_geography_index`調查**地理**空間索引**SIndx_SpatialTable_geography_col2**資料表上定義**geography_col&lt**在給定的查詢範例**@qs**。 這個範例只會傳回指定索引的核心屬性。  
   
 ```  
 declare @qs geography  
@@ -66,7 +66,7 @@ declare @qs geography
 exec sp_help_spatial_geography_index 'geography_col', 'SIndx_SpatialTable_geography_col2', 0, @qs;  
 ```  
   
- 週框方塊的**geography**執行個體是整個地球。  
+ 週框方塊**地理區**執行個體是整個地球。  
   
 ## <a name="requirements"></a>需求  
   

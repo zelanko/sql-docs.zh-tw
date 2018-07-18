@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8eba7e0e1e949883f2af30999b93b290e00e07f2
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957611"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968942"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

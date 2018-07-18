@@ -1,5 +1,5 @@
 ---
-title: sp_unprepare (TRANSACT-SQL) |Microsoft 文件
+title: sp_unprepare (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c444b5b8fbd83a490993dde2a864d60afa9b6932
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243822"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978161"
 ---
 # <a name="spunprepare-transact-sql"></a>sp_unprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  捨棄 sp_prepare 預存程序所建立的執行計畫。 sp_unprepare 的叫用方式指定 ID = 15 表格式資料流 (TDS) 封包中的。  
+  捨棄 sp_prepare 預存程序所建立的執行計畫。 sp_unprepare 的叫用方式指定 ID = 15 中的表格式資料流 (TDS) 封包。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,7 +45,7 @@ sp_unprepare handle
   
 ## <a name="arguments"></a>引數  
  *控制代碼*  
- 是*處理*sp_prepare 傳回的值。  
+ 已*處理*sp_prepare 所傳回的值。  
   
 ## <a name="examples"></a>範例  
  下列範例會準備、執行及取消準備單一陳述式。  

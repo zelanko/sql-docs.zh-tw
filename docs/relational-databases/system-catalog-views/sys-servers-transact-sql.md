@@ -1,5 +1,5 @@
 ---
-title: sys.servers (TRANSACT-SQL) |Microsoft 文件
+title: sys.servers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,20 +26,20 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 17a270028d94974643c1993730e353cea30dd897
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969790"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  包含連結伺服器或遠端伺服器登錄，每一個資料列和本機伺服器的一個資料列**server_id** = 0。  
+  包含連結伺服器或遠端伺服器註冊，每一個資料列和具有本機伺服器的資料列**server_id** = 0。  
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|連結伺服器的本機識別碼。|  
 |**name**|**sysname**|當**server_id** = 0，這是伺服器名稱。<br /><br /> 當**server_id** > 0，這是連結伺服器的本機名稱。|  
@@ -51,7 +51,7 @@ ms.locfileid: "33221789"
 |**catalog**|**sysname**|OLEDB 目錄連接屬性。 如果沒有，則為 NULL。|  
 |**connect_timeout**|**int**|連接逾時 (以秒為單位)，如果沒有，則為 0。|  
 |**query_timeout**|**int**|查詢逾時 (以秒為單位)，如果沒有，則為 0。|  
-|**is_linked**|**bit**|0 = 已利用加入的舊式伺服器**sp_addserver**、 以不同的 RPC 和分散式交易行為。<br /><br /> 1 = 標準連結伺服器。|  
+|**is_linked**|**bit**|0 = 是使用加入的舊式伺服器**sp_addserver**使用不同的 RPC 和分散式交易行為。<br /><br /> 1 = 標準連結伺服器。|  
 |**is_remote_login_enabled**|**bit**|已設定 RPC 選項，目的是啟用這部伺服器的內送遠端登入。|  
 |**is_rpc_out_enabled**|**bit**|已啟用外寄 (從這部伺服器) RPC。|  
 |**is_data_access_enabled**|**bit**|已啟用伺服器來進行分散式查詢。|  
@@ -68,22 +68,22 @@ ms.locfileid: "33221789"
 |**modify_date**|**datetime**|上次變更伺服器資訊的日期。|  
   
 ## <a name="permissions"></a>Permissions  
- 中的值**provider_string**一律是 NULL 除非呼叫端具有 ALTER ANY LINKED SERVER 權限。  
+ 中的值**provider_string**總是 NULL，除非呼叫端具有 ALTER ANY LINKED SERVER 權限。  
   
  若要檢視本機伺服器不需要權限 (**server_id** = 0)。  
   
- 當您建立連結伺服器或遠端伺服器，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立預設登入對應，以**公用**伺服器角色。 這表示所有登入預設都可以檢視所有的連結伺服器和遠端伺服器。 若要限制這些伺服器的可見性，請移除預設登入對應執行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)並指定 NULL *locallogin*參數。  
+ 當您建立的連結或遠端伺服器，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會建立預設登入對應至**公用**伺服器角色。 這表示所有登入預設都可以檢視所有的連結伺服器和遠端伺服器。 若要限制可見性到這些伺服器，請移除預設登入對應執行[sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)並指定，則為 NULL *locallogin*參數。  
   
  如果刪除預設登入對應，則只有已明確加入成為連結登入或遠端登入的使用者可以檢視他們所擁有之登入的連結伺服器或遠端伺服器。 刪除預設登入對應之後，使用者必須具備下列權限才能檢視所有的連結伺服器和遠端伺服器：  
   
 -   ALTER ANY LINKED SERVER 或 ALTER ANY LOGIN ON SERVER  
   
--   中的成員資格**setupadmin**或**sysadmin**固定伺服器角色  
+-   中的成員資格**setupadmin**或是**sysadmin**固定伺服器角色  
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [連結的伺服器目錄檢視&#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [sp_addlinkedsrvlogin &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

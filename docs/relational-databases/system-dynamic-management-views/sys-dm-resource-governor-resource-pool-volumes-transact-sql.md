@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_resource_pool_volumes (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_resource_governor_resource_pool_volumes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,18 +24,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 49c3cc7312978f313ed55147530c371bdde69675
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969220"
 ---
 # <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  傳回目前的資源集區的每個磁碟區的 IO 統計資料的相關資訊。 這項資訊也會提供在資源集區層級中[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
+  傳回目前的資源集區的每個磁碟區的 IO 統計資料的相關資訊。 這項資訊也會提供在資源集區層級[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。  
   
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|資源集區的識別碼。 不可為 Null。|  
 |volume_name|**sysname**|磁碟 volue 的名稱。 不可為 Null。|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/23/2018
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.resource_governor_resource_pools &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

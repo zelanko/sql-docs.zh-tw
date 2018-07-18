@@ -1,5 +1,5 @@
 ---
-title: sp_db_increased_partitions |Microsoft 文件
+title: sp_db_increased_partitions |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: b63255e4f15505dc75dfdf92f550a1d6d4149028
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237686"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970410"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_dp_increased_partitions
   
 ## <a name="arguments"></a>引數  
  [ @dbname=] '*database_name*'  
- 這是資料庫的名稱。 *dbname*是**sysname**預設值是 NULL。 如果*dbname*未指定，會使用目前的資料庫。  
+ 這是資料庫的名稱。 *dbname*已**sysname**預設值是 NULL。 如果*dbname*未指定，會使用目前的資料庫。  
   
  [ @increased_partitions=] '*increased_partitions*'  
- 啟用或停止對於指定資料庫之 15,000 個資料分割上限的支援。 *increased_partitions*是**varchar(6)** 預設值是 NULL。 接受的值如果是 'ON' 或 'TRUE'，表示啟用支援，如果是 'OFF' 或 'FALSE'，即表示停用支援。 如果*increased_partitions*未指定，此程序會傳回 1，指出指定的資料庫已啟用支援，或 0，表示支援已停用。  
+ 啟用或停止對於指定資料庫之 15,000 個資料分割上限的支援。 *increased_partitions*已**varchar(6)** 預設值是 NULL。 接受的值如果是 'ON' 或 'TRUE'，表示啟用支援，如果是 'OFF' 或 'FALSE'，即表示停用支援。 如果*increased_partitions*未指定，此程序會傳回 1，表示指定的資料庫已啟用支援，或 0，表示支援已停用。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

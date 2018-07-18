@@ -23,10 +23,11 @@ author: jeannt
 ms.author: jeannt
 manager: craigg
 ms.openlocfilehash: 01380a29665d848fff1620787a97aabbcdac4033
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023812"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/23/2018
 > [!NOTE]  
 >  只有安裝並啟用支援外部指令碼執行的功能，才能使用此 DMV。 如需如何針對 R 指令碼執行這項操作的資訊，請參閱[設定 SQL Server R Services](../../advanced-analytics/r-services/set-up-sql-server-r-services-in-database.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|註冊的外部指令碼語言名稱。 每個外部指令碼必須在指令碼要求中指定語言，才能啟動相關聯的啟動程式。 |  
 |counter_name|**nvarchar**|註冊的外部指令碼函數名稱。 不可為 Null。|  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/23/2018
 ### <a name="r-counter-values"></a>R 計數器值
  [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] 支援的外部指令碼語言目前只有 R。R 語言的外部指令碼要求是由 [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] 來處理。 
 
-，這個 DMV 會追蹤執行個體上的 R 的呼叫所做的。 例如，如果呼叫 `rxLinMod` 並以平行方式執行，此計數器會遞增 1。
+針對 R，此 DMV 會追蹤執行個體上的 R 呼叫數目。 例如，如果呼叫 `rxLinMod` 並以平行方式執行，此計數器會遞增 1。
  
 針對 R 語言， *counter_name* 欄位中所顯示的計數器值代表所註冊之 ScaleR 函數的名稱。 *counter_value* 欄位中的值代表特定 ScaleR 函數執行個體的累計數目。 
 

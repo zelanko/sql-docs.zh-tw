@@ -1,5 +1,5 @@
 ---
-title: 套用 XSL 轉換 (SQLXML Managed 類別) |Microsoft 文件
+title: 套用 XSL 轉換 (SQLXML Managed 類別) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 951c8d315fa4ff72d16acb0873117af4b7857196
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968833"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972130"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>套用 XSL 轉換 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在本範例中，SQL 查詢會針對 AdventureWorks 資料庫執行。 XSL 轉換會套用到查詢結果以產生員工名字和姓氏之兩個資料行的資料表。  
   
- SqlXmlCommand 物件的 XslPath 屬性用於指定 XSL 檔案及其目錄路徑。  
+ SqlXmlCommand 物件 XslPath 屬性用來指定 XSL 檔案及其目錄路徑。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

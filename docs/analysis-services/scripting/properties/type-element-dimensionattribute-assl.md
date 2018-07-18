@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (DimensionAttribute) (ASSL) |Microsoft 文件
+title: 輸入元素 (DimensionAttribute) (ASSL) |Microsoft Docs
 ms.date: 5/8/2018
 ms.prod: sql
 ms.custom: assl
@@ -10,11 +10,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f1b0a959e57d4df5db8fa4616cf8a31536cf1689
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045682"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971450"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Type 元素 (DimensionAttribute) (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "34045682"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
-|預設值|*一般*|  
+|預設值|*規則*|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
 ## <a name="element-relationships"></a>元素關聯性  
@@ -49,7 +49,7 @@ ms.locfileid: "34045682"
 ## <a name="remarks"></a>備註  
  這個元素的值限制為下表所列的其中一個字串。  
   
-|值|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |*帳戶*|此屬性代表帳戶的名稱。|  
 |*AccountNumber*|此屬性代表帳戶的號碼。|  
@@ -68,11 +68,11 @@ ms.locfileid: "34045682"
 |*AddressStreet*|此屬性代表地址的街道名稱。|  
 |*AddressZip*|此屬性代表地址的郵遞區號。|  
 |*BOMResource*|此屬性代表用料表 (BOM) 的資源。|  
-|*Caption*|屬性代表標題。|  
+|*標題*|屬性代表標題。|  
 |*CaptionAbbreviation*|屬性代表縮寫。|  
 |*CaptionDescription*|屬性代表描述。|  
 |*通路*|屬性代表通道。|  
-|*City*|屬性代表縣 (市)。|  
+|*縣 （市)*|屬性代表縣 (市)。|  
 |*公司*|屬性代表公司。|  
 |*大陸*|屬性代表大陸。|  
 |*國家/地區*|屬性代表國家或地區。|  
@@ -142,7 +142,7 @@ ms.locfileid: "34045682"
 |*GeoCentroidZ*|屬性代表地理區域的 Z 軸距心。|  
 |*HalfYears*|屬性代表半年度。|  
 |*HalfYearsOfYear*|屬性代表年中的半年度序數。|  
-|*小時*|此屬性代表小時。|  
+|*時數*|此屬性代表小時。|  
 |*Id*|此屬性代表識別碼或索引鍵。|  
 |*IsHoliday*|此屬性會指出日期是否為假日。|  
 |*ISO8601DayOfWeek*|此屬性代表 ISO 8601 日曆中之週的日序數。|  
@@ -185,7 +185,7 @@ ms.locfileid: "34045682"
 |*MonthOfTrimester*|屬性代表每四個月的月序數。|  
 |*MonthOfYear*|屬性代表年中的月序數。|  
 |*幾個月*|此屬性代表月數。|  
-|*organizationalUnit*|此屬性代表組織單位。|  
+|*OrganizationalUnit*|此屬性代表組織單位。|  
 |*OrgTitle*|此屬性代表組織標題。|  
 |*PercentOwnership*|此屬性代表擁有權的百分比。|  
 |*PercentVoteRight*|此屬性代表投票權的百分比。|  
@@ -204,11 +204,11 @@ ms.locfileid: "34045682"
 |*PhysicalVolume*|屬性代表體積。|  
 |*PhysicalWeight*|屬性代表重量。|  
 |*PhysicalWidth*|屬性代表寬度。|  
-|*Point*|屬性代表點。|  
-|*PostalCode*|屬性代表郵遞區號。|  
+|*點*|屬性代表點。|  
+|*郵遞區號*|屬性代表郵遞區號。|  
 |*產品*|屬性代表產品。|  
 |*ProductBrand*|此屬性代表產品品牌。|  
-|*ProductCategory*|此屬性代表產品類別目錄。|  
+|*[Productcategory]*|此屬性代表產品類別目錄。|  
 |*ProductGroup*|此屬性代表產品群組。|  
 |*ProductSKU*|此屬性代表產品存貨保持單元 (SKU)。|  
 |*ProjectCode*|此屬性代表專案代碼。|  
@@ -216,17 +216,17 @@ ms.locfileid: "34045682"
 |*ProjectEnddate*|此屬性代表專案結束日期。|  
 |*專案名稱*|此屬性代表專案名稱。|  
 |*ProjectStartDate*|此屬性代表專案開始日期。|  
-|*促銷*|屬性代表促銷。|  
+|*升級*|屬性代表促銷。|  
 |*QtyRangeHigh*|屬性代表數量範圍的最大值。|  
 |*QtyRangeLow*|屬性代表數量範圍的最小值。|  
-|*數量*|屬性代表數量的屬性。|  
+|*量化*|屬性代表數量的屬性。|  
 |*QuarterOfHalfYear*|屬性代表半年中的季序數。|  
 |*QuarterOfYear*|屬性代表年中的季序數。|  
 |*數個季度*|屬性代表季數。|  
 |*速率*|屬性代表比率。|  
 |*RateType*|屬性代表比率類型。|  
 |*區域*|屬性代表客戶自訂的區域。|  
-|*一般*|屬性代表一般屬性。|  
+|*規則*|屬性代表一般屬性。|  
 |*RelationToParent*|屬性代表與父系的關聯性。|  
 |*ReportingDay*|屬性代表報表日曆中的天數。|  
 |*ReportingDayOfHalfYears*|屬性代表報表日曆中之半年的日序數。|  
@@ -257,7 +257,7 @@ ms.locfileid: "34045682"
 |*代表*|此屬性表示代表。|  
 |*案例*|此屬性代表狀況。|  
 |*秒*|此屬性代表秒數。|  
-|*順序*|屬性代表順序屬性。|  
+|*序列*|屬性代表順序屬性。|  
 |*ShortCaption*|屬性代表簡短標題。|  
 |*StateOrProvince*|屬性代表省份。|  
 |*TenDayOfHalfYears*|屬性代表半年的十天週期序數。|  
@@ -283,13 +283,13 @@ ms.locfileid: "34045682"
 |*週*|此屬性代表週數。|  
 |*年*|此屬性代表年度。|  
   
- 列舉型別對應至允許的值**類型**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.AttributeType>。  
+ 列舉型別對應至允許的值**型別**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.AttributeType>。  
   
- 對應目的父代的項目**類型**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.DimensionAttribute>。  
+ 對應至父系的元素**型別**在 「 分析管理物件 (AMO) 物件模型是<xref:Microsoft.AnalysisServices.DimensionAttribute>。  
   
 ## <a name="see-also"></a>另請參閱  
- [屬性項目&#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Dimension 元素 & #40;ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [屬性 & #40;ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Attributes 項目&#40;ASSL&#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [維度項目&#40;ASSL&#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [屬性&#40;ASSL&#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

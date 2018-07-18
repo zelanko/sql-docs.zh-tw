@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio.NET 中建立 Visual C# SMO 專案 |Microsoft 文件
+title: Visual Studio.NET 中建立 Visual C# SMO 專案 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,32 +19,32 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 25e06aa3493b10e5a282fc5a709605eae18cb5fd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708316"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974188"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>如何在 Visual Studio.NET 中建立 Visual C# SMO 專案
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   本節描述如何建立簡單的 SMO 主控台應用程式。  
   
- 此範例會匯入命名空間，讓程式可以參考 SMO 類型。 匯入**代理程式**是選擇性的命名空間。 請在撰寫使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的程式時使用該命名空間。 **常見**建立的執行個體的安全連接所需的命名空間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **SqlClient**命名空間用來處理 SQL 例外狀況錯誤。  
+ 此範例會匯入命名空間，讓程式可以參考 SMO 類型。 匯入**代理程式**是選擇性的命名空間。 請在撰寫使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的程式時使用該命名空間。 **常見**命名空間，才能建立安全連線的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **SqlClient**命名空間用來處理 SQL 例外狀況錯誤。  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>在 Visual Studio .NET 中建立 Visual C# SMO 專案  
   
 1. 啟動 Visual Studio
   
-2. 在**檔案**功能表上，按一下 **新增**然後**專案**。  [新增專案]  對話方塊隨即出現。   
+2. 在 **檔案**功能表上，按一下**新增**，然後**專案**。  [新增專案]  對話方塊隨即出現。   
   
 3. 在[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]**已安裝** 窗格中，瀏覽至**範本**\\**Visual C#**\\**Windows**選取**主控台應用程式**。  
   
-4. （選擇性）在**名稱**文字方塊中，輸入新的應用程式的名稱。  
+4. （選擇性）在 **名稱**文字中，輸入新的應用程式的名稱。  
 
-5. 按一下**確定**載入主控台應用程式範本。  
+5. 按一下 **確定**載入主控台應用程式範本。  
 
-6. 按照指示[安裝 SMO](installing-smo.md)安裝您的專案參考的封裝。
+6. 遵循上的指示[Smo&lt](installing-smo.md)安裝適用於您的專案參考的套件。
   
 7. 在 [檢視] 功能表中，按一下 [程式碼]。
     

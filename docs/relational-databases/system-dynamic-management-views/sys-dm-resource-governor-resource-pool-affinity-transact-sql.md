@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_resource_pool_affinity (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_resource_governor_resource_pool_affinity & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9142b5219a8f404ee81ebfb51460d451ff2096a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466954"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023671"
 ---
 # <a name="sysdmresourcegovernorresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "34466954"
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |----------------|---------------|-----------------|  
 |Pool_id|**int**|資源集區的識別碼。 不可為 Null。|  
 |Processor_group|**smallint**|Windows 邏輯處理器群組的 ID。 不可為 Null。|  
 |Scheduler_mask|**bigint**|二進位遮罩，表示與此集區相關聯的排程器。 不可為 Null。|  
   
 ## <a name="remarks"></a>備註  
- 以 AUTO 相似性建立的集區不會出現在此檢視中，因為它們沒有相似性。 如需詳細資訊，請參閱[CREATE RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-resource-pool-transact-sql.md)和[ALTER RESOURCE POOL &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-resource-pool-transact-sql.md)陳述式。  
+ 以 AUTO 相似性建立的集區不會出現在此檢視中，因為它們沒有相似性。 如需詳細資訊，請參閱[建立資源集區&#40;TRANSACT-SQL&#41; ](../../t-sql/statements/create-resource-pool-transact-sql.md)並[ALTER RESOURCE POOL &#40;-&#41; ](../../t-sql/statements/alter-resource-pool-transact-sql.md)陳述式。  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

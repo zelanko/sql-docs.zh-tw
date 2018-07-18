@@ -20,16 +20,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c0cd40177729800f0fc307f0e9ebce99a64efbee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234198"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970510"
 ---
-# <a name="system-functions-for-transact-sql"></a>系統函數的 Transact SQL
+# <a name="system-functions-for-transact-sql"></a>TRANSACT-SQL 的系統函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列系統函數的群組。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供下列系統函式群組。  
   
 ## <a name="in-this-section"></a>本節內容  
  [Always On 可用性群組功能](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)  
@@ -37,14 +37,14 @@ ms.locfileid: "33234198"
  [變更追蹤函數](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)  
  [資料收集器函數](../../relational-databases/system-functions/data-collector-functions-transact-sql.md)  
  [Filestream 和 FileTable 函數](../../relational-databases/system-functions/filestream-and-filetable-functions-transact-sql.md)  
- [受管理備份功能](../../relational-databases/system-functions/managed-backup-functions-transact-sql.md)  
+ [受管理備份的函式](../../relational-databases/system-functions/managed-backup-functions-transact-sql.md)  
  [sys.fn_get_sql](../../relational-databases/system-functions/sys-fn-get-sql-transact-sql.md)  
  [sys.fn_MSxe_read_event_stream](../../relational-databases/system-functions/sys-fn-msxe-read-event-stream-transact-sql.md)  
  [sys.fn_stmt_sql_handle_from_sql_stmt](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
  [sys.fn_validate_plan_guide](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)  
  [sys.fn_xe_file_target_read_file](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md)  
  [sys.fn_backup_file_snapshots](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
- [語意的全文檢索搜尋功能](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
+ [語意的全文檢索搜尋函數](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)  
  [系統中繼資料函數](../../relational-databases/system-functions/system-metadata-functions.md)  
  [系統安全性函數](../../relational-databases/system-functions/system-security-functions.md)  
  [系統追蹤函數](../../relational-databases/system-functions/system-trace-functions.md)  

@@ -1,5 +1,5 @@
 ---
-title: XQuery 初構 |Microsoft 文件
+title: XQuery 初構 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,11 +26,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: debf4aac70b13c5bb5cbb37db2b71687f33a3df1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077675"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974551"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>模組和初構-XQuery 初構
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ WHERE ProductModelID=7
 -   `/AWMI:root/AWMI:Location[@LocationID="10"]` 則是查詢主體。  
   
 ## <a name="namespace-declarations"></a>命名空間宣告  
- 命名空間宣告會定義前置詞，並將其與命名空間 URI 產生關聯，如下列查詢所示。 在查詢中，`CatalogDescription`是**xml**類型資料行。  
+ 命名空間宣告會定義前置詞，並將其與命名空間 URI 產生關聯，如下列查詢所示。 在查詢中，`CatalogDescription`已**xml**類型資料行。  
   
  針對此資料行指定 XQuery 時，查詢初構指定了 `declare namespace` 宣告，使前置詞 `PD` (產品描述) 與命名空間 URI 產生關聯。 接著，在查詢主體中使用這個前置詞來代替命名空間 URI。 所產生 XML 中的節點，就會位在與該命名空間 URI 相關聯的命名空間中。  
   

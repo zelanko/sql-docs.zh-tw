@@ -1,5 +1,5 @@
 ---
-title: 處理 XQuery 中的命名空間 |Microsoft 文件
+title: 處理 XQuery 中的命名空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4602c1234c00b15191ca616ed56352f0eb784d9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077915"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031386"
 ---
 # <a name="handling-namespaces-in-xquery"></a>處理 XQuery 中的命名空間
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. 使用預設命名空間的建構  
- 您也可以定義要用於所建構之 XML 的預設命名空間。 例如，下列查詢會示範如何指定預設命名空間"uri: somenamespace"\\，若要使用預設值做為建構，例如本機具名元素`<Result>`項目。  
+ 您也可以定義要用於所建構之 XML 的預設命名空間。 例如，下列查詢會示範如何指定預設命名空間"uri: somenamespace"\\，以使用預設值做為建構，例如本機具名元素`<Result>`項目。  
   
 ```  
 SELECT CatalogDescription.query('  

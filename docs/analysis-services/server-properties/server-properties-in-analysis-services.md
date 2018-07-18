@@ -1,5 +1,5 @@
 ---
-title: Server Properties in Analysis Services |Microsoft 文件
+title: Server Properties in Analysis Services |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35238818"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975096"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services 中的伺服器屬性
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理員可以修改 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的預設伺服器組態屬性。 每一個執行個體都有自己的組態屬性，與同一部伺服器上的其他執行個體分開設定。  
   
- 若要設定伺服器，使用 SQL Server Management Studio 或是編輯特定的 SQL Server Analysis Services 執行個體的 msmdsrv.ini 檔。  
+ 若要設定伺服器，使用 SQL Server Management Studio，或是編輯特定的 SQL Server Analysis Services 執行個體的 msmdsrv.ini 檔。  
  
 SQL Server Management Studio 的 [屬性] 頁會顯示最有可能修改的屬性子集。 完整的屬性清單位在 msmdsrv.ini 檔中。   
   
 > [!NOTE]  
->  在預設 SQL Server Analysis Services 安裝中，可以找到 msmdsrv.ini \Program Files\Microsoft SQL Server\MSAS13 中。MSSQLSERVER\OLAP\Config 資料夾。
+>  在預設 SQL Server Analysis Services 安裝中，msmdsrv.ini 篇 \Program Files\Microsoft SQL Server\MSAS13。MSSQLSERVER\OLAP\Config 資料夾中。
 > 
 > 其他會影響伺服器組態的屬性包括 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的部署組態屬性。 如需這些屬性的詳細資訊，請參閱 [指定方案部署的組態設定](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)。
  

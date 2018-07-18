@@ -1,5 +1,5 @@
 ---
-title: dbo.sysdac_instances (TRANSACT-SQL) |Microsoft 文件
+title: dbo.sysdac_instances (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -26,18 +26,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178814"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031336"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>資料層應用程式檢視-dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  針對部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的每個資料層應用程式 (DAC) 執行階段，各顯示一個資料列。 sysdac_instances 屬於 msdb 資料庫中的 dbo 結構描述。 下表描述 sysdac_instances 檢視中的資料行。  
+  針對部署至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的每個資料層應用程式 (DAC) 執行階段，各顯示一個資料列。 sysdac_instances 屬於 msdb 資料庫中的 dbo 結構描述。 下表描述 [sysdac_instances] 檢視中的資料行。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|DAC 執行個體的識別碼。|  
 |instance_name|**sysname**|部署 DAC 時指定之 DAC 執行個體的名稱。|  

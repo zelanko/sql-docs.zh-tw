@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_xtp_index_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,21 +25,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e59eeea065a0346a623d929562fc554ad842e416
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468504"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031456"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   包含上次重新啟動資料庫之後收集的統計資料。  
   
- 如需詳細資訊，請參閱[記憶體內部 OLTP&#40;記憶體中最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)和[使用記憶體最佳化資料表的索引指導方針](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)。  
+ 如需詳細資訊，請參閱[記憶體內部 OLTP&#40;記憶體中最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)並[Guidelines for Using 的 Indexes on Memory-Optimized Tables](http://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b)。  
 
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|這個索引所屬物件的識別碼。|  
 |xtp_object_id|**bigint**|對應至物件的目前版本的內部識別碼。<br /><br /> 注意： 適用於[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
