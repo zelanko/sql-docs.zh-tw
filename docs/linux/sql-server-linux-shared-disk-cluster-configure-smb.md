@@ -1,5 +1,5 @@
 ---
-title: 設定容錯移轉叢集執行個體存放區 SMB-SQL Server on Linux |Microsoft 文件
+title: 設定容錯移轉叢集執行個體的儲存體 SMB-Linux 上的 SQL Server |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -12,32 +12,32 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.openlocfilehash: b762740be742aa2d716b9d354c26fe87bb170732
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322969"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981795"
 ---
-# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-SMB-SQL Server on Linux
+# <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>設定容錯移轉叢集執行個體-SMB-Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 SMB 存放裝置。 
+這篇文章說明如何在 Linux 上設定容錯移轉叢集執行個體 (FCI) 的 SMB 存放裝置。 
  
-在非 Windows 世界中，SMB 是通常參照為 Common Internet File System (CIFS) 共用，而且透過 Samba 實作。 在 Windows 世界中，在存取 SMB 共用達成這種方式： \\SERVERNAME\SHARENAME。 以 Linux 為基礎的 SQL Server 安裝中，SMB 共用必須可掛接為資料夾。
+在非 Windows 世界中，SMB 通常是指為 Common Internet File System (CIFS) 共用，而且透過 Samba 實作。 在 Windows 世界中，在存取 SMB 共用會進行這種方式： \\SERVERNAME\SHARENAME。 對於以 Linux 為基礎的 SQL Server 安裝中，SMB 共用必須可掛接為資料夾。
 
 ## <a name="important-source-and-server-information"></a>來源和伺服器的重要資訊
 
 以下是一些秘訣和成功使用 SMB 的附註：
-- 在 Windows、 Linux、 或甚至是從作為長，因為它使用 SMB 3.0 或更高的應用裝置，可以是 SMB 共用。 如需有關 Samba 和 SMB 3.0 的詳細資訊，請參閱[SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) Samba 實作是否與 SMB 3.0 相容。
+- SMB 共用可以是 Windows，Linux，或甚至是從長，因為它使用 SMB 3.0 或更高版本的應用裝置。 如需有關 Samba 和 SMB 3.0 的詳細資訊，請參閱[SMB 3.0](https://wiki.samba.org/index.php/Samba3/SMB2#SMB_3.0) Samba 實作是否含 SMB 3.0 相容。
 - SMB 共用必須提供高可用性。
-- 安全性必須設定 SMB 共用上的正確。 以下是共用的範例 /etc/samba/smb.conf，SQLData1 所在名稱。
+- 安全性必須設定 SMB 共用上的正確。 以下是共用的從 /etc/samba/smb.conf，範例 SQLData1 所在名稱。
 
 ![05 smbsource][1]
 
 ## <a name="instructions"></a>Instructions
 
-1.  選擇其中一個伺服器，為即將加入 FCI 組態中。 不論哪一個。
+1.  您可以選擇其中一個將參與的伺服器 FCI 組態中。 不論哪一個。
 
 2.  取得 mssql 使用者的相關資訊。
 
@@ -49,25 +49,25 @@ ms.locfileid: "34322969"
 
 3. 執行 `sudo smbclient -L //NameOrIP/ShareName -U User`。
 
-    \<NameOrIP > 的 DNS 名稱或 IP 位址裝載 SMB 共用的伺服器。
+    \<NameOrIP > 是裝載 SMB 共用的伺服器的 IP 位址的 DNS 名稱。
 
     \<共用名稱 > 是 SMB 共用的名稱。 
 
 4. 系統資料庫或儲存在預設資料位置的任何項目，請遵循下列步驟。 否則請跳至步驟 5。 
 
-   *    請確定 SQL Server 會停止您正在使用的伺服器上。
+   *    請確定 SQL Server 已停止您正在使用的伺服器上。
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   *    參數完全是超級使用者。 如果成功，則不會收到任何通知。
+   *    全面轉換成是超級使用者的參數。 如果成功，則不會收到任何通知。
 
     ```bash
     sudo -i
     ```
 
-   *    Mssql 使用者參數。 如果成功，則不會收到任何通知。
+   *    要使用 mssql 使用者的參數。 如果成功，則不會收到任何通知。
 
     ```bash
     su mssql
@@ -93,15 +93,15 @@ ms.locfileid: "34322969"
 
     \<TempDir > 是從上一個步驟的資料夾名稱。
     
-   *    請確認檔案是目錄中。
+   *    確認目錄中的檔案。
 
     ```bash
     ls <TempDir>
     ```
 
-    \<TempDir > 是從步驟 d 資料夾的名稱。
+    \<TempDir > 會從步驟 d 資料夾的名稱。
     
-   *    從現有的 SQL Server 資料目錄刪除檔案。 如果成功，則不會收到任何通知。
+   *    從現有的 SQL Server 資料目錄中刪除檔案。 如果成功，則不會收到任何通知。
  
     ```bash
     rm – f /var/opt/mssql/data/*
@@ -113,9 +113,9 @@ ms.locfileid: "34322969"
     ls /var/opt/mssql/data
     ```
  
-   *    輸入 exit，切換到以根使用者。
+   *    若要切換回根使用者的輸入 exit。
 
-   *    裝載 SQL Server data 資料夾中的 SMB 共用。 如果成功，則不會收到任何通知。 這個範例會顯示連線到 Windows Server 為基礎的 SMB 3.0 共用的語法。
+   *    掛接 SMB 共用的 SQL Server data 資料夾中。 如果成功，則不會收到任何通知。 此範例會顯示連線到 Windows Server 為基礎的 SMB 3.0 共用的語法。
 
     ```bash
     Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
@@ -125,7 +125,7 @@ ms.locfileid: "34322969"
     
     \<共用名稱 > 是共用的名稱
 
-    \<使用者名稱 > 是要存取此共用的使用者名稱
+    \<使用者名稱 > 是要存取共用的使用者名稱
 
     \<密碼 > 使用者的密碼
 
@@ -135,7 +135,7 @@ ms.locfileid: "34322969"
  
     \<mssqlGID > 是在 mssql 使用者 GID
  
-   *    請查看掛接成功發出掛接不使用任何參數。
+   *    請確認掛接已成功發出掛接不使用任何參數。
 
     ```bash
     mount
@@ -163,25 +163,25 @@ ms.locfileid: "34322969"
 
    *    輸入不是 根的結束
 
-   *    啟動 SQL Server。 如果所有項目已正確複製，並套用安全性是否正確，SQL Server 應該會顯示為已啟動。
+   *    啟動 SQL Server。 如果所有項目已正確地複製和套用的安全性是否正確，SQL Server 應該會顯示為已啟動。
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
  
-   *    若要進一步測試，建立資料庫，以確定是正常的權限。 下列範例使用 Transact SQL。您可以使用 SSMS。
+   *    若要進一步測試，建立資料庫，以確保是正常的權限。 下列範例使用 TRANSACT-SQL;您可以使用 SSMS。
 
     ![10_testcreatedb][2] 
   
-   *    停止 SQL Server 並確認它已關閉。 如果您要新增或測試其他的磁碟，不會關閉 SQL Server 之前所加入和測試。
+   *    停止 SQL Server，並確認它已關閉。 如果您要新增或測試的其他磁碟，不會關閉 SQL Server 之前所新增和測試。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   *    只有當完成後，請取消掛接共用。 否則，請取消掛接後完成測試/新增任何其他磁碟。
+   *    只有當完成時，取消掛接共用。 如果沒有，完成測試/新增任何額外的磁碟取消掛接。
 
     ```bash
     sudo umount //<IPAddressorServerName>/<ShareName /<FolderMountedIn>
@@ -191,29 +191,29 @@ ms.locfileid: "34322969"
 
     \<共用名稱 > 是共用的名稱
     
-    \<FolderMountedIn > 是 SMB 掛接的資料夾名稱
+    \<FolderMountedIn > 是的 SMB 掛接所在的資料夾名稱
 
-5.  進行的非系統資料庫，例如使用者資料庫或備份，請遵循下列步驟。 如果只使用的預設位置，請跳至步驟 14。
+5.  項目以外的系統資料庫，例如使用者資料庫或備份，請遵循下列步驟。 如果僅使用預設位置，請跳至步驟 14。
     
-   *    參數是超級使用者。 如果成功，則不會收到任何通知。
+   *    切換到是超級使用者。 如果成功，則不會收到任何通知。
 
     ```bash
     sudo -i
     ```
     
-   *    建立將 SQL Server 所使用的資料夾。 
+   *    建立將由 SQL Server 的資料夾。 
 
     ```bash
     mkdir <FolderName>
     ```
 
-    \<資料夾名稱 > 資料夾的名稱。 將資料夾的完整路徑必須指定如果不在正確的位置。 下列範例會建立名為 /var/opt/mssql/userdata 的資料夾。
+    \<資料夾名稱 > 是資料夾的名稱。 資料夾的完整路徑必須指定如果不在正確的位置。 下列範例會建立名為 /var/opt/mssql/userdata 的資料夾。
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   *    裝載 SQL Server data 資料夾中的 SMB 共用。 如果成功，則不會收到任何通知。 這個範例會顯示連線到 Samba 為基礎的 SMB 3.0 共用的語法。
+   *    掛接 SMB 共用的 SQL Server data 資料夾中。 如果成功，則不會收到任何通知。 此範例會顯示連線至 Samba 型 SMB 3.0 共用的語法。
 
     ```bash
     Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
@@ -223,9 +223,9 @@ ms.locfileid: "34322969"
 
     \<共用名稱 > 是共用的名稱
 
-    \<資料夾名稱 > 的最後一個步驟中建立的資料夾名稱  
+    \<資料夾名稱 > 是的最後一個步驟中建立的資料夾名稱  
 
-    \<使用者名稱 > 是要存取此共用的使用者名稱
+    \<使用者名稱 > 是要存取共用的使用者名稱
 
     \<密碼 > 使用者的密碼
 
@@ -233,11 +233,11 @@ ms.locfileid: "34322969"
 
     \<mssqlGID > 是在 mssql 使用者 GID。
  
-   * 請查看掛接成功發出掛接不使用任何參數。
+   * 請確認掛接已成功發出掛接不使用任何參數。
  
-   * 輸入 exit，不再是超級使用者。
+   * 請輸入 exit，不再是超級使用者。
 
-   * 若要測試，請在該資料夾中建立的資料庫。 下列範例會使用 sqlcmd 建立資料庫，切換至該內容，確認檔案存在於作業系統層級，然後再刪除暫存位置。 您可以使用 SSMS。
+   * 若要測試，請在該資料夾中建立資料庫。 下列範例會使用 sqlcmd 建立資料庫、 切換到它的內容，請確認檔案存在於 OS 層級，然後刪除 暫存位置。 您可以使用 SSMS。
  
    * 取消掛接共用 
 
@@ -249,15 +249,15 @@ ms.locfileid: "34322969"
  
     \<共用名稱 > 是共用的名稱
  
-    \<FolderMountedIn > 是 SMB 掛接資料夾的名稱。
+    \<FolderMountedIn > 是的 SMB 掛接所在的資料夾名稱。
  
-6.  重複步驟，在其他節點上。
+6.  重複的步驟，在其他節點上。
 
-現在您已經準備好要設定 FCI。
+您現在已準備好設定 FCI。
 
 ## <a name="next-steps"></a>後續的步驟
 
-[設定容錯移轉叢集執行個體的 SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
+[設定容錯移轉叢集執行個體-在 Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-smb/05-smbsource.png 

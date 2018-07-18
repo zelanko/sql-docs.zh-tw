@@ -1,5 +1,5 @@
 ---
-title: sys.routes (TRANSACT-SQL) |Microsoft 文件
+title: sys.routes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 89fb63380c95e38f97f02b24eb68c178182b873a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220059"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985227"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33220059"
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|路由的名稱，它在資料庫中是唯一的。 不是 NULLABLE。|  
 |**route_id**|**int**|路由的識別碼。 不是 NULLABLE。|  
@@ -47,7 +47,7 @@ ms.locfileid: "33220059"
 |**remote_service_name**|**nvarchar(256)**|遠端服務的名稱。 NULLABLE。|  
 |**broker_instance**|**nvarchar(128)**|主控遠端服務的 Broker 識別碼。 NULLABLE。|  
 |**lifetime**|**datetime**|路由到期的日期和時間。 請注意，此值不使用當地的時區。 此值會顯示 UTC 格式的到期時間。 NULLABLE。|  
-|**address**|**nvarchar(256)**|Service Broker 傳送遠端服務訊息至的網路位址。 NULLABLE。 SQL 資料庫 Managed 執行個體，必須是本機位址。|  
+|**address**|**nvarchar(256)**|Service Broker 傳送遠端服務訊息至的網路位址。 NULLABLE。 SQL Database 受控執行個體，位址必須是本機。|  
 |**mirror_address**|**nvarchar(256)**|位址中所指定的伺服器之鏡像夥伴網路位址。 NULLABLE。|  
   
 ## <a name="permissions"></a>Permissions  

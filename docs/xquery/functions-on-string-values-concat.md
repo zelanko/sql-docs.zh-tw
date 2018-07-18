@@ -1,5 +1,5 @@
 ---
-title: concat 函數 (XQuery) |Microsoft 文件
+title: concat 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8be65777bb65ad54735ad6bdf43ea88608355c5b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077255"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981930"
 ---
-# <a name="functions-on-string-values---concat"></a>針對字串值-concat 函數
+# <a name="functions-on-string-values---concat"></a>串連字串值的相關函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   接受零個或多個字串做為引數，並傳回串連每個引數的值所建立的字串。  
@@ -52,10 +52,10 @@ fn:concat ($string as xs:string?
  函式至少需要兩個引數。 如果引數是空白時序，將以零長度的字串處理。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補充字元 (Surrogate 字組)  
- XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)和[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
+ XQuery 函式中 Surrogate 字組的行為相依於資料庫相容性層級，而且在某些情況下，還相依於函式的預設命名空間 URI。 如需詳細資訊，請參閱主題中的 「 XQuery 函式是 Surrogate 感知 」 區段[SQL Server 2016 中的 Database Engine 功能的突破性變更](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。 另請參閱[ALTER DATABASE 相容性層級&#40;TRANSACT-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)並[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的 AdventureWorks 範例資料庫。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 範例資料庫。  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. 使用 concat() XQuery 函式串連字串  
  對於特定產品型號，此查詢將傳回透過串連警告期限與警告描述所建立的字串。 在目錄描述文件中，<`Warranty`> 元素是由 <`WarrantyPeriod`> 與 <`Description`> 子元素所構成。  
@@ -81,9 +81,9 @@ WHERE  PD.ProductModelID=28
   
  請注意下列項目是從上一個查詢而來：  
   
--   在 SELECT 子句中，CatalogDescription 是**xml**類型資料行。 因此， [query （） 方法 （XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)、 instructions.query。 XQuery 陳述式是指定成查詢方法的引數。  
+-   在 SELECT 子句中，是 CatalogDescription **xml**類型資料行。 因此， [query （） 方法 （XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)、 instructions.query。 XQuery 陳述式是指定成查詢方法的引數。  
   
--   查詢所執行的文件將會使用命名空間。 因此，**命名空間**關鍵字用來定義命名空間前置詞。 如需詳細資訊，請參閱[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)。  
+-   查詢所執行的文件將會使用命名空間。 因此，**命名空間**關鍵字用以定義命名空間的前置詞。 如需詳細資訊，請參閱 < [XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)。  
   
  以下是結果：  
   
@@ -91,7 +91,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- 下列查詢會擷取特定產品的資訊。 下列查詢會擷取儲存 XML 目錄描述的所有產品之相同資訊。 **Exist （)** 方法**xml** WHERE 子句會傳回 True，則資料列中的 XML 文件中的資料類型 <`ProductDescription`> 項目。  
+ 下列查詢會擷取特定產品的資訊。 下列查詢會擷取儲存 XML 目錄描述的所有產品之相同資訊。 **Exist （)** 方法**xml**資料類型中的 WHERE 子句會傳回 True，則資料列中的 XML 文件 <`ProductDescription`> 項目。  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -113,7 +113,7 @@ WHERE CatalogDescription.exist('//pd:ProductDescription ') = 1
   
 ```  
   
- 請注意，所傳回的布林值**exist （)** 方法**xml**與 1 比較類型。  
+ 請注意，所傳回的布林值**exist （)** 方法**xml**類型與 1 比較。  
   
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  

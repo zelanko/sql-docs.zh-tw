@@ -1,5 +1,5 @@
 ---
-title: sys.sql_logins (TRANSACT-SQL) |Microsoft 文件
+title: sys.sql_logins (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
@@ -26,30 +26,30 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: cdf6447b7673606224852078f80306c4b7fb4632
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220739"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985161"
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   針對每一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入，各傳回一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<繼承資料行 >**|--|繼承自**sys.server_principals**。|  
 |**is_policy_checked**|**bit**|已經檢查密碼原則。|  
 |**is_expiration_checked**|**bit**|已經檢查密碼逾期。|  
 |**password_hash**|**varbinary(256)**|SQL 登入密碼的雜湊。 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 開始，預存密碼資訊會使用加料式 (Salted) 密碼的 SHA-512 加以計算。|  
   
- 如需這個檢視所繼承的資料行的清單，請參閱[sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
+ 如需這個檢視所繼承的資料行的清單，請參閱 < [sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
 ## <a name="remarks"></a>備註  
- 若要檢視同時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入和 Windows 驗證登入，請參閱[sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
+ 若要檢視這兩個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證登入和 Windows 驗證登入，請參閱[sys.server_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)。  
   
- 當自主資料庫使用者所啟用，不具有登入進行連接。 若要識別這些帳戶，請參閱[sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)。  
+ 當包含啟用的資料庫使用者，可以不具有登入建立連接。 若要識別這些帳戶，請參閱[sys.database_principals &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證登入都可以查看他們自己的登入名稱和 sa 登入。 若要查看其他登入，則需要 ALTER ANY LOGIN 或該登入的權限。  

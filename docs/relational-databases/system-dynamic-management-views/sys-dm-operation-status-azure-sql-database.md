@@ -1,5 +1,5 @@
 ---
-title: sys.dm_operation_status (Azure SQL Database) |Microsoft 文件
+title: sys.dm_operation_status (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/05/2017
 ms.prod: ''
@@ -27,18 +27,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1df62f4ac877ed82ba1d7b555f8fd9ef759362
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979450"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
   傳回 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 伺服器中的資料庫上所執行之作業的相關資訊。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|作業的識別碼。 非 Null。|  
 |resource_type|**int**|表示執行作業所在資源的類型。 非 Null。 在目前的版本中，這個檢視只會追蹤 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上所執行的作業，對應的整數值為 0。|  
@@ -48,7 +48,7 @@ ms.locfileid: "34464905"
 |operation (作業)|**nvarchar(60)**|在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 上執行的運算，例如 CREATE 或 ALTER。|  
 |state|**tinyint**|作業的狀態。<br /><br /> 0 = 暫止<br />1 = 進行中<br />2 = 已完成<br />3 = 失敗<br />4 = 已取消|  
 |state_desc|**nvarchar(120)**|PENDING = 作業正在等候可用的資源或配額。<br /><br /> IN_PROGRESS = 作業已開始且正在進行。<br /><br /> COMPLETED = 作業已成功完成。<br /><br /> FAILED = 作業失敗。 請參閱**error_desc**如需詳細資訊的資料行。<br /><br /> CANCELLED = 使用者要求停止作業。|  
-|percent_complete|**int**|已完成作業的百分比。 值不連續且有效的值如下所列。 不是 NULL。<br/><br/>0 = 未啟動的作業<br/>50 = 作業正在進行中<br/>100 = 作業完成|  
+|percent_complete|**int**|已完成作業的百分比。 值不連續且有效的值如下。 不是 NULL。<br/><br/>0 = 未啟動的作業<br/>50 = 作業進行中<br/>100 = 作業完成|  
 |error_code|**int**|表示在作業失敗期間發生之錯誤的代碼。 如果這個值為 0，就表示作業已順利完成。|  
 |error_desc|**nvarchar(2048)**|在作業失敗期間發生之錯誤的描述。|  
 |error_severity|**int**|在作業失敗期間發生之錯誤的嚴重性層級。 如需錯誤嚴重性的詳細資訊，請參閱[Database Engine 錯誤嚴重性](http://go.microsoft.com/fwlink/?LinkId=251052)。|  
@@ -60,7 +60,7 @@ ms.locfileid: "34464905"
  此檢視僅供以**主要**伺服器層級主體登入的資料庫。  
   
 ## <a name="remarks"></a>備註  
- 若要使用此檢視，您必須連接到**主要**資料庫。 使用`sys.dm_operation_status`檢視中**主要**資料庫[!INCLUDE[ssSDS](../../includes/sssds-md.md)]伺服器追蹤上執行下列作業的狀態[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
+ 若要使用此檢視，您必須連接到**主要**資料庫。 使用`sys.dm_operation_status`檢視中**主要**資料庫[!INCLUDE[ssSDS](../../includes/sssds-md.md)]追蹤上執行下列作業的狀態伺服器[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:  
   
 -   建立資料庫  
   
@@ -81,7 +81,7 @@ ms.locfileid: "34464905"
 -   刪除資料庫  
   
 ## <a name="example"></a>範例  
- 顯示與資料庫 'mydb' 相關聯的最新地理複寫作業。  
+ 顯示與資料庫 'mydb' 相關聯的最新異地複寫作業。  
   
 ```  
 SELECT * FROM sys.dm_ operation_status   
@@ -90,7 +90,7 @@ SELECT * FROM sys.dm_ operation_status
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [地理複寫動態管理檢視和函數&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [異地複寫動態管理檢視和函式&#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys.dm_geo_replication_link_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
  [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  

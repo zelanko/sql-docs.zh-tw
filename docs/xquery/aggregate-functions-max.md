@@ -1,5 +1,5 @@
 ---
-title: max 函數 (XQuery) |Microsoft 文件
+title: max 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a53b02bc682bf7b3c918a02d5a16dc326ca3a594
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077855"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983386"
 ---
-# <a name="aggregate-functions---max"></a>最大值彙總函式-
+# <a name="aggregate-functions---max"></a>彙總函式-max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  從不可部份完成值的序列傳回 *$arg*，其值大於所有其他的項目。  
+  從一連串不可部份完成值，傳回 *$arg*，其值大於所有其他的一個項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,24 +47,24 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  不可部份完成值的序列，要從中傳回最大值。  
   
 ## <a name="remarks"></a>備註  
- 所有類型的不可部份完成值傳遞至**max （)** 必須是相同的基底類型的子類型。 接受的基底類型的類型，可支援**gt**作業。 這些類型包含三個內建數值基底類型以及日期/時間基底類型，它們是 xs:string、xs:boolean 以及 xdt:untypedAtomic。 xdt:untypedAtomic 類型的值會轉換為 xs:double。 如果沒有混用這些類型，或其他類型的其他值會傳遞，就會引發靜態錯誤。  
+ 所有類型的不可部份完成值傳遞給**max （)** 一定要相同的基底類型的子類型。 可接受的基底類型是支援的類型**l**作業。 這些類型包含三個內建數值基底類型以及日期/時間基底類型，它們是 xs:string、xs:boolean 以及 xdt:untypedAtomic。 xdt:untypedAtomic 類型的值會轉換為 xs:double。 如果沒有混用這些類型，或其他類型的其他值會傳遞，則會引發靜態錯誤。  
   
- 結果**max （)** 接收傳入的類型，例如 xdt 的 xs: double 類型的基底類型。 如果輸入是靜態空白，則會隱含空白並引發靜態錯誤。  
+ 結果**max （)** 接收傳入的類型，例如 xs: untypedatomic 的 double 類型的基底類型。 如果輸入是靜態空白，則會隱含空白並引發靜態錯誤。  
   
- **Max （)** 函式會傳回一個值大於輸入序列中的任何其他的順序。 對於 xs:string 值，會使用預設 Unicode 字碼指標定序。 如果 xdt: untypedatomic 值無法轉換成 xs: double，值會忽略輸入序列中 *$arg*。 如果輸入是動態計算的空白序列，則會傳回空白序列。  
+ **Max （)** 函式會傳回一個值大於輸入序列中的任何其他的序列中。 對於 xs:string 值，會使用預設 Unicode 字碼指標定序。 如果 xdt: untypedatomic 值無法轉換成 xs: double，值將被忽略的輸入的順序，請 *$arg*。 如果輸入是動態計算的空白序列，則會傳回空白序列。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
   
 ### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. 使用 max() XQuery 函數來尋找製造過程中佔去大部分工時的工作中心位置  
- 中提供的查詢[min 函數 (XQuery)](../xquery/aggregate-functions-min.md)可以改寫為使用**max （)** 函式。  
+ 中提供的查詢[min 函數 (XQuery)](../xquery/aggregate-functions-min.md)加以改寫才能使用**max （)** 函式。  
   
 ## <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Max (**) 函式會將所有整數都對應至 xs: decimal。  
+-   **Max (**) 函式會將所有整數都對應到 xs: decimal。  
   
--   **Max （)** 不支援的 xs: duration 類型值的函數。  
+-   **Max （)** 不支援的 xs: duration 類型值的函式。  
   
 -   不支援跨越基底類型界限的混合類型。  
   

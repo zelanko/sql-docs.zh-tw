@@ -1,5 +1,5 @@
 ---
-title: ExecuteResponse 元素 (XMLA) |Microsoft 文件
+title: ExecuteResponse 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a1ff44c8e2fb23e40aac30e70c73b4d260145bfd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576280"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979116"
 ---
-# <a name="xml-elements---objects---executeresponse"></a>XML 項目物件-ExecuteResponse
+# <a name="xml-elements---objects---executeresponse"></a>XML 元素-物件-ExecuteResponse
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含 Analysis Services 執行個體以回應所傳回的資訊[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
+  包含 Analysis services 執行個體，以回應所傳回的資訊[Execute](../../analysis-services/xmla/xml-elements-methods-execute.md)方法呼叫。  
   
- **命名空間**描述 urn:-microsoft-schemas-microsoft-com:-分析  
+ **命名空間**urn: schemas-microsoft-microsoft-schemas-microsoft-com:-分析  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34576280"
 </ExecuteResponse>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34576280"
 |預設值|無|  
 |基數|1-1：只能出現一次的必要元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  

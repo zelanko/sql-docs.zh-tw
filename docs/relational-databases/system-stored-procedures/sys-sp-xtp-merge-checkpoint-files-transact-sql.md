@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_merge_checkpoint_files (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_xtp_merge_checkpoint_files (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/28/2016
 ms.prod: sql
@@ -23,24 +23,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bc2c91d93ad24147fa288ffb8164823f4f8a84c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259688"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979420"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  **sys.sp_xtp_merge_checkpoint_files**合併指定的交易範圍內的所有資料和差異檔案。  
+  **sys.sp_xtp_merge_checkpoint_files**合併指定的交易範圍中的所有資料和差異檔案。  
   
- 如需詳細資訊，請參閱[建立和管理記憶體最佳化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 建立及管理記憶體最佳化物件的儲存體](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ||  
 |-|  
-|**請注意**： 這個預存程序已被取代[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 它不再需要也不能，啟動[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
+|**附註**： 這個預存程序中已過時[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。 它不再需要也不能，啟動[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。|  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,7 +55,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  要叫用合併之資料庫的名稱。 如果該資料庫沒有記憶體中的資料表，這個程序會傳回使用者錯誤。 如果資料庫處於離線狀態，則會傳回錯誤。  
   
  *lower_bound_Tid*  
- 資料檔中所示的交易 (bigint) 下限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)對應於合併開始檢查點檔案。 如果是無效的 transactonId 值，則會產生錯誤。  
+ 資料檔中所示的交易 (bigint) 下限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)開始檢查點檔案合併的對應。 如果是無效的 transactonId 值，則會產生錯誤。  
   
  *upper_bound_Tid*  
  資料檔中所示的交易 (bigint) 上限[sys.dm_db_xtp_checkpoint_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md)。 如果是無效的 transactonId 值，則會產生錯誤。  

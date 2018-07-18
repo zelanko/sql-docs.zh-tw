@@ -1,5 +1,5 @@
 ---
-title: SELECT DISTINCT FROM&lt;模型&gt;(DMX) |Microsoft 文件
+title: SELECT DISTINCT FROM&lt;模型&gt;(DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842711"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985323"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;模型&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- **SELECT DISTINCT FROM**與單一資料行或一組相關的資料行，只適用於陳述式。 這個子句不能配合一組未關聯的資料行使用。  
+ **SELECT DISTINCT FROM**陳述式僅適用於具有單一資料行或一組相關的資料行。 這個子句不能配合一組未關聯的資料行使用。  
   
  **SELECT DISTINCT FROM**陳述式可讓您直接參考巢狀資料表內部的資料行。 例如：  
   
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuous|資料行中之值的中點。|  
   
 ## <a name="discrete-column-example"></a>分隔資料行範例  
- 下列程式碼範例根據`[TM Decision Tree]`中建立的模型[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 此查詢會傳回離散資料行 `Gender` 中存在的唯一值。  
+ 下列程式碼範例根據`[TM Decision Tree]`您在中建立的模型[83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 此查詢會傳回離散資料行 `Gender` 中存在的唯一值。  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -100,10 +100,10 @@ FROM [TM Decision Tree]
  此查詢也會查詢 Null 值的單一資料列，來表示遺漏值。  
   
 ## <a name="discretized-column-example"></a>離散化資料行範例  
- 下列程式碼範例會針對演算法建立的每個值區，傳回 [`Yearly Income]` 資料行的中點、最大與最小值。 若要重新產生此範例的結果，您必須建立與 `[Targeted Mailing]` 相同的新採礦結構。 在精靈中，變更的內容類型`Yearly Income`資料行從**連續**至**Discretized**。  
+ 下列程式碼範例會針對演算法建立的每個值區，傳回 [`Yearly Income]` 資料行的中點、最大與最小值。 若要重新產生此範例的結果，您必須建立與 `[Targeted Mailing]` 相同的新採礦結構。 在精靈中，變更的內容型別`Yearly Income`資料行**連續**要**Discretized**。  
   
 > [!NOTE]  
->  您也可以變更在＜基本採礦教學課程＞中建立的採礦模型，以便將採礦結構資料行 [`Yearly Income]` 離散化。 如需如何執行這項操作資訊，請參閱[變更採礦模型中的資料行的離散化](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)。 不過，當您變更資料行的離散化時，將會強制重新處理採礦結構，這樣會變更您使用該結構建立之其他模型的結果。  
+>  您也可以變更在＜基本採礦教學課程＞中建立的採礦模型，以便將採礦結構資料行 [`Yearly Income]` 離散化。 如需如何執行這項操作的資訊，請參閱[變更採礦模型中的資料行的離散化](../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)。 不過，當您變更資料行的離散化時，將會強制重新處理採礦結構，這樣會變更您使用該結構建立之其他模型的結果。  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   

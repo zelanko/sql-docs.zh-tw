@@ -1,5 +1,5 @@
 ---
-title: sp_syspolicy_purge_health_state (TRANSACT-SQL) |Microsoft 文件
+title: sp_syspolicy_purge_health_state (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80d1aa2edc25fceeb23ddd3db82f0153ee7197ab
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248664"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979070"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
   
 ## <a name="arguments"></a>引數  
  [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
- 代表您要在 [物件總管] 中清除健全狀態的節點。 *target_tree_root_with_id*是**nvarchar （400)**，預設值是 NULL。  
+ 代表您要在 [物件總管] 中清除健全狀態的節點。 *target_tree_root_with_id*已**nvarchar(400)**，預設值是 NULL。  
   
  您可以從 msdb.dbo.syspolicy_system_health_state 系統檢視表的 target_query_expression_with_id 資料行指定值。  
   
@@ -73,6 +73,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [原則式管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [以原則為基礎的管理預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

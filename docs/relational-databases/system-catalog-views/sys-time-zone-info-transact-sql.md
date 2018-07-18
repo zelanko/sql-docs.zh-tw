@@ -1,5 +1,5 @@
 ---
-title: sys.time_zone_info (TRANSACT-SQL) |Microsoft 文件
+title: sys.time_zone_info & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2018
 ms.prod: sql
@@ -28,22 +28,22 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 252def1ce861b926a6c8a990a3cbf10b22eb83f6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222413"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984920"
 ---
-# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (TRANSACT-SQL)
+# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  傳回支援的時區資訊。 在電腦上安裝所有的時區會儲存在下列的登錄區：  
+  傳回支援的時區資訊。 在電腦上安裝所有的時區會儲存在下列登錄區：  
 `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Windows 標準格式的時區名稱。 例如， **cen。澳大利亞標準時間**或**歐洲中部標準時間**。|  
-|**current_utc_offset**|**nvarchar(12)**|目前的 UTC 的位移。 例如， **+ 01:00**或 **-07:00**。|  
+|**name**|**sysname**|Windows 標準格式的時區名稱。 比方說， **cen。澳洲標準時間**或是**歐洲中部標準時間**。|  
+|**current_utc_offset**|**nvarchar(12)**|目前的 UTC 的位移。 例如， **+ 01:00**或是 **-07:00**。|  
 |**is_currently_dst**|**bit**|如果目前觀察日光節約時間，則為 true。|  
   
 ## <a name="see-also"></a>另請參閱  

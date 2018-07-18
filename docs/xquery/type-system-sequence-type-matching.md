@@ -1,5 +1,5 @@
 ---
-title: 序列類型比對 |Microsoft 文件
+title: 序列類型比對 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2ce01e8b2f587527b264a3ea11021257375fb842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078025"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980020"
 ---
-# <a name="type-system---sequence-type-matching"></a>類型系統的序列類型比對
+# <a name="type-system---sequence-type-matching"></a>類型系統-序列類型比對
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery 運算式值一律為 0 個以上項目的序列。 項目可以是不可部份完成的值，或是節點。 序列類型是指將查詢運算式傳回的序列類型與特定類型比對的能力。 例如：  
@@ -41,13 +41,13 @@ ms.locfileid: "33078025"
   
 -   您可能想知道運算式是傳回 XML 元素或是特定名稱和類型的屬性節點。  
   
- 您可以在序列類型比對中使用 `instance of` 布林運算子。 如需有關`instance of`運算式，請參閱[SequenceType 運算式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)。  
+ 您可以在序列類型比對中使用 `instance of` 布林運算子。 如需詳細資訊`instance of`運算式，請參閱 < [SequenceType 運算式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)。  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>比較運算式傳回的不可部份完成值類型  
  如果運算式傳回含有不可部份完成值的序列，則您必須尋找序列中值的類型。 下列範例說明如何使用序列類型語法，來評估運算式傳回的不可部份完成值類型。  
   
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>範例：判斷序列是否為空  
- **Empty （)** 順序類型可以在序列類型運算式中用來判斷指定的運算式所傳回的序列是否是空的序列。  
+ **Empty （)** 順序類型可以使用序列類型運算式中，以判斷所指定的運算式傳回的序列是空的序列。  
   
  在下列範例中，XML 結構描述允許 <`root`> 元素為 Nilled：  
   
@@ -168,7 +168,7 @@ GO
  如果都符合，`instance of` 運算式會傳回 True。  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>範例：針對 xml 類型資料行查詢  
- 在下列範例中，查詢針對 Instructions 資料行指定**xml**輸入[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。 它是具類型的 XML 資料行，因為它有相關聯的結構描述。 XML 結構描述定義了整數類型的 `LocationID` 屬性。 因此，在序列運算式中， `instance of xs:integer?` ，則傳回 True。  
+ 在下列範例中，查詢針對 Instructions 資料行指定**xml**中輸入[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。 它是具類型的 XML 資料行，因為它有相關聯的結構描述。 XML 結構描述定義了整數類型的 `LocationID` 屬性。 因此，在序列運算式中， `instance of xs:integer?` ，則傳回 True。  
   
 ```  
 SELECT Instructions.query('   
@@ -181,15 +181,15 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>比較運算式傳回的節點類型  
  如果運算式傳回含有節點的序列，則您必須尋找序列中節點的類型。 下列範例說明如何使用序列類型語法，來評估運算式傳回的節點類型。 您可以使用下列序列類型：  
   
--   **m （)** – 比對序列中的任何項目。  
+-   **item** – 比對序列中的任何項目。  
   
 -   **node （)** – 判斷序列是否為節點。  
   
--   **p** – 判斷運算式是否會傳回處理指示。  
+-   **processing-instruction** – 判斷運算式是否會傳回處理指示。  
   
--   **comment** – 判斷運算式是否會傳回註解。  
+-   **comment （)** – 判斷運算式是否會傳回註解。  
   
--   **d** – 判斷運算式是否會傳回文件節點。  
+-   **document-node** – 判斷運算式是否會傳回文件節點。  
   
  下列範例說明這些序列類型。  
   
@@ -236,7 +236,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>實作限制  
  特定限制如下：  
   
--   **d**語法不支援內容類型。  
+-   **document-node**不支援內容類型語法。  
   
 -   **processing-instruction （name)** 語法不受支援。  
   
@@ -343,7 +343,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 此 XML 結構描述集合用來建立具類型**xml**變數。 指派給此變數的 XML 執行個體有兩個 <`customer`> 元素，分別為不同類型。 第一個元素是 `CustomerType` 類型，而第二個元素是 `SpecialCustomerType` 類型。  
+ 此 XML 結構描述集合用來建立具型別**xml**變數。 指派給此變數的 XML 執行個體有兩個 <`customer`> 元素，分別為不同類型。 第一個元素是 `CustomerType` 類型，而第二個元素是 `SpecialCustomerType` 類型。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -390,7 +390,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 下列查詢會傳回 True，因為要查詢的 XML 執行個體中，有一個屬性節點的名稱是 `Age`。 在此運算式中，使用了 `attribute(Age)` 屬性測試。 因為屬性沒有順序，所以查詢會使用 FLWOR 運算式來擷取所有屬性，然後使用 `instance of` 運算式來測試每一個屬性。 此範例會先建立 XML 結構描述集合來建立具類型**xml**變數。  
+ 下列查詢會傳回 True，因為要查詢的 XML 執行個體中，有一個屬性節點的名稱是 `Age`。 在此運算式中，使用了 `attribute(Age)` 屬性測試。 因為屬性沒有順序，所以查詢會使用 FLWOR 運算式來擷取所有屬性，然後使用 `instance of` 運算式來測試每一個屬性。 此範例會先建立以建立具類型的 XML 結構描述集合**xml**變數。  
   
 ```  
 DECLARE @var XML(SC)  
@@ -428,19 +428,19 @@ RETURN
 ### <a name="implementation-limitations"></a>實作限制  
  特定限制如下：  
   
--   在元素測試中，類型名稱後面必須發生指標 (**？**)。  
+-   在元素測試中，型別名稱後面必須接著會發生指標 (**？**)。  
   
 -   **element （ElementName，TypeName）** 不支援。  
   
 -   **項目 (\*，TypeName)** 不支援。  
   
--   **schema-element()** 不支援。  
+-   **schema-element （)** 不支援。  
   
--   **schema-attribute(AttributeName)** 不支援。  
+-   **schema-attribute （attributename)** 不支援。  
   
--   明確查詢**xsi: type**或**xsi: nil**不支援。  
+-   明確查詢**xsi: type**或是**xsi: nil**不支援。  
   
 ## <a name="see-also"></a>另請參閱  
- [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [型別系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

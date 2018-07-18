@@ -1,5 +1,5 @@
 ---
-title: upper-case 函數 (XQuery) |Microsoft 文件
+title: upper-case 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 177659d16f1fda6e0d6dd45430949baf6331eefe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076211"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981893"
 ---
-# <a name="functions-on-string-values---upper-case"></a>字串值的大小寫的函式
+# <a name="functions-on-string-values---upper-case"></a>大寫字串值的相關函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  此函式中的每個字元轉換 *$arg*成大寫對等。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成大寫。 這項標準與 Unicode 標準字碼元素標準的對應不同。  
+  此函式中的每個字元的轉換 *$arg*成大寫對等。 Microsoft Windows Unicode 字碼元素的二進位大小寫轉換會指定字元如何轉換成大寫。 這項標準與 Unicode 標準字碼元素標準的對應不同。  
   
 ## <a name="syntax"></a>語法  
   

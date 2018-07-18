@@ -1,5 +1,5 @@
 ---
-title: xp_sqlmaint (TRANSACT-SQL) |Microsoft 文件
+title: xp_sqlmaint (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b5509b126a88ab2500fca0509789b61182af2ad2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256646"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979380"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  呼叫**sqlmaint**公用程式包含的字串**sqlmaint**參數。 **Sqlmaint**公用程式會執行一組一個或多個資料庫的維護作業。  
+  呼叫**sqlmaint**公用程式字串，包含**sqlmaint**參數。 **Sqlmaint**公用程式會執行一組一個或多個資料庫上的維護作業。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -48,15 +48,15 @@ xp_sqlmaint 'switch_string'
   
 ## <a name="arguments"></a>引數  
  **'** *switch_string* **'**  
- 這一個字串包含**sqlmaint**公用程式參數。 參數和值必須用空格分隔。  
+ 這字串，包含**sqlmaint**公用程式參數。 參數和值必須用空格分隔。  
   
- **-？** 參數不是有效值**xp_sqlmaint**。  
+ **-嗎？** 參數不是適用於**xp_sqlmaint**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  無。 如果傳回錯誤**sqlmaint**公用程式會失敗。  
   
 ## <a name="remarks"></a>備註  
- 如果使用者登入使用 SQL Server 驗證時，會呼叫此程序 **-U"***login_id***"** 和 **-P"***密碼***"** 參數前面加上了*switch_string*之前執行。 如果使用者以 Windows 驗證登入*switch_string*傳遞不會變更至**sqlmaint**。  
+ 如果使用 SQL Server 驗證，登入使用者呼叫此程序 **-U"***login_id***"** 並 **-P"***密碼***"** 參數前面會加上*switch_string*之前執行。 如果使用者使用 Windows 驗證登入時*switch_string*不會變更至傳遞**sqlmaint**。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  

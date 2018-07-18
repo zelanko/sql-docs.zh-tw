@@ -1,5 +1,5 @@
 ---
-title: ': column （) 函數 (XQuery) |Microsoft 文件'
+title: ': column （) 函數 (XQuery) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -24,16 +24,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077645"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981940"
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 擴充函數-: column （）
+# <a name="xquery-extension-functions---sqlcolumn"></a>XQuery 擴充函式-: column （）
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  主題中所述[繫結關聯式資料在 XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)，您可以使用**sql:column(()** 函式，當您使用[XML 資料類型方法](../t-sql/xml/xml-data-type-methods.md)來公開的關聯式值XQuery 內。  
+  主題中所述[繫結關聯式資料在 XML](../t-sql/xml/binding-relational-data-inside-xml-data.md)，您可以使用**sql:column(()** 函式使用時[XML 資料類型方法](../t-sql/xml/xml-data-type-methods.md)来公開的關聯式值XQuery 內。  
   
  例如， [query （） 方法 （XML 資料類型）](../t-sql/xml/query-method-xml-data-type.md)用來指定對儲存在變數或資料行的 XML 執行個體的查詢**xml**型別。 有時，您可能會想要讓查詢使用另一個非 XML 資料行的值，以同時查詢關聯式資料與 XML 資料。 若要這樣做，您使用 **: column （)** 函式。  
   
@@ -47,11 +47,11 @@ sql:column("columnName")
 ```  
   
 ## <a name="remarks"></a>備註  
- 請注意該資料行中指定的參考 **: column （)** XQuery 內的函式參考正在處理的資料列中的資料行。  
+ 請注意，參考中指定的資料行 **: column （)** XQuery 內的函式參考正在處理的資料列中的資料行。  
   
- 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，您只能參考**xml**內容中執行個體的來源運算式的 XML DML 插入陳述式; 否則您不能參考類型的資料行**xml**或 CLR使用者定義型別。  
+ 在  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，您只能參考**xml**執行個體內容中的來源運算式的 XML DML 插入陳述式; 否則您不能參考類型的資料行**xml**或 CLR使用者定義型別。  
   
- **: Column （)** 聯結作業中不支援函式。 可改為使用 APPLY 作業。  
+ **: Column （)** 函式不支援聯結作業。 可改為使用 APPLY 作業。  
   
 ## <a name="examples"></a>範例  
   
@@ -67,11 +67,11 @@ sql:column("columnName")
   
  請注意在建構 XML 中的下列項目：    
   
--   **ProductID**， **ProductName**，和**ProductPrice**屬性值從取得**產品**資料表。  
+-   **ProductID**， **ProductName**，並**ProductPrice**屬性值從取得**產品**資料表。  
   
 -   **ProductModelID**屬性值從擷取**ProductModel**資料表。  
   
--   若要使查詢更有趣， **ProductModelName**屬性值取自**CatalogDescription**資料行**xml 型別**。 由於並非所有的產品型號都有儲存 XML 產品型號目錄資訊，因此 `if` 陳述式可用以擷取存在的值。  
+-   若要讓查詢更有趣的是， **ProductModelName**屬性值取自**CatalogDescription**資料行**xml 型別**。 由於並非所有的產品型號都有儲存 XML 產品型號目錄資訊，因此 `if` 陳述式可用以擷取存在的值。  
   
     ```  
     SELECT P.ProductID, CatalogDescription.query('  
@@ -98,7 +98,7 @@ sql:column("columnName")
   
 -   因為值是從兩個不同的資料表擷取而來，所以 FROM 子句會指定兩個資料表。 WHERE 子句中的條件會篩選結果，並只擷取產品型號含有目錄描述的產品。  
   
--   **命名空間**關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義 XML 命名空間前置詞"pd"，在查詢主體中使用。 請注意資料表別名 "P" 與 "PM" 是定義在查詢本身的 FROM 子句中。  
+-   **命名空間**中的關鍵字[XQuery 初構](../xquery/modules-and-prologs-xquery-prolog.md)定義 XML 命名空間前置詞"pd"，在查詢主體中使用。 請注意資料表別名 "P" 與 "PM" 是定義在查詢本身的 FROM 子句中。  
   
 -   **: Column （)** 函式用來將 XML 內的非 XML 值。  
   
@@ -113,7 +113,7 @@ ProductID               Result
 ...  
 ```  
   
- 下列查詢建構了包含產品特定資訊的 XML。 此資訊包含隸屬於特定產品型號 ProductModelID=19 的所有產品之 ProductID、ProductName、ProductPrice 以及 ProductModelName (如果有的話)。 接著會將 XML 指派給@x變數**xml**型別。  
+ 下列查詢建構了包含產品特定資訊的 XML。 此資訊包含隸屬於特定產品型號 ProductModelID=19 的所有產品之 ProductID、ProductName、ProductPrice 以及 ProductModelName (如果有的話)。 接著會將 XML 指派給@x的變數**xml**型別。  
   
 ```  
 declare @x xml  
@@ -138,7 +138,7 @@ select @x
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server XQuery 擴充函數](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server XQuery 擴充函式](http://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [比較具類型的 XML 與不具類型的 XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [建立 XML 資料的執行個體](../relational-databases/xml/create-instances-of-xml-data.md)   

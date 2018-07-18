@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_fields (Azure SQL Database) |Microsoft 文件
+title: sys.database_event_session_fields (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0a7c7ee610ae5eb3a56a46c5b8c7ba1645b64532
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179654"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981850"
 ---
 # <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "33179654"
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及任何更新的版本。|  
+|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及更新的版本。|  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |object_id|**int**|這個欄位相關聯之物件的識別碼。 不可為 Null。|  
-|name|**sysname**|欄位的名稱。 不可為 Null。|  
+|NAME|**sysname**|欄位的名稱。 不可為 Null。|  
 |value|**sql_variant**|此欄位的值。 不可為 Null。|  
   
 ## <a name="permissions"></a>Permissions  

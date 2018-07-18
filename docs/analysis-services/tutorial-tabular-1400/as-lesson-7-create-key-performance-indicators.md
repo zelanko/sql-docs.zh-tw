@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 教學課程第 7 課： 建立關鍵效能指標 |Microsoft 文件
+title: Analysis Services 教學課程第 7 課： 建立關鍵效能指標 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03dd09c8f06c8e4d96176f47dcc310008feaf564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34042712"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979130"
 ---
 # <a name="create-key-performance-indicators"></a>建立關鍵效能指標
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 
-在這一課，您可以建立關鍵效能指標 (Kpi)。 Kpi 用來量測計所定義之值的效能*基底*量值，針對*目標*由量值或絕對值定義的值。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 若要進一步了解，請參閱[Kpi](../tabular-models/kpis-ssas-tabular.md)
+在這一課，您可以建立關鍵效能指標 (Kpi)。 Kpi 用來量測計所定義之值的效能*基底*量值、 針對*目標*由量值或絕對值定義的值。 在報表用戶端應用程式中，KPI 可為商務專業人士提供快速而簡便的方法來了解商務成就的摘要，或是找出趨勢。 若要進一步了解，請參閱[Kpi](../tabular-models/kpis-ssas-tabular.md)
   
 完成本課程的估計時間： **15 分鐘**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>先決條件  
 
-這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 然後再執行工作，在這一課，您應已完成上一課：[第 6 課： 建立量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。   
+這篇文章是表格式模型化教學課程中，應該依序完成的一部分。 執行工作之前在這一課，您應已完成上一課：[第 6 課： 建立量值](../tutorial-tabular-1400/as-lesson-6-create-measures.md)。   
   
 ## <a name="create-key-performance-indicators"></a>建立關鍵效能指標  
   
@@ -42,20 +42,20 @@ ms.locfileid: "34042712"
     InternetCurrentQuarterSalesPerformance :=DIVIDE([InternetCurrentQuarterSales]/[InternetPreviousQuarterSalesProportionToQTD],BLANK())  
     ```
 
-    此量值做為 KPI 的基底量值。  
+    此量值做為 kpi 基底量值。  
   
-4.  在量值方格中，以滑鼠右鍵按一下**InternetCurrentQuarterSalesPerformance** > **建立 KPI**。   
+4.  在量值方格中，以滑鼠右鍵按一下**InternetCurrentQuarterSalesPerformance** > **Create KPI**。   
   
-5.  在 [關鍵效能指標 (KPI)] 對話方塊中**目標**選取**絕對值**，然後輸入**1.1**。  
+5.  在 [關鍵效能指標 (KPI)] 對話方塊中，在**目標**選取**絕對值**，然後輸入**1.1**。  
   
 7.  在左側 (下) 滑動軸欄位輸入 **1**，然後在右側 (上) 滑動軸欄位中輸入 **1.07**。  
   
 8.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型。
   
-    ![做為 lesson7 kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
+    ![為 lesson7 kpi](../tutorial-tabular-1400/media/as-lesson7-kpi.png)
     
     > [!TIP]  
-    > 請注意展開**描述**可用圖示樣式下方的標籤。 使其更容易識別在用戶端應用程式中使用不同的 KPI 元素的描述。  
+    > 請注意可擴充**描述**可用圖示樣式下方的標籤。 您可以使用各種 KPI 元素的描述，使其更容易在用戶端應用程式。  
   
 9. 按一下 [確定] 完成 KPI。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "34042712"
  
 3.  以滑鼠右鍵按一下**InternetCurrentQuarterMarginPerformance** > **建立 KPI**。  
   
-4.  在 [關鍵效能指標 (KPI)] 對話方塊中**目標**選取**絕對值**，然後輸入**1.25**。   
+4.  在 [關鍵效能指標 (KPI)] 對話方塊中，在**目標**選取**絕對值**，然後輸入**1.25**。   
   
-5.  在左側 （下） 滑動軸欄位中，投影片直到欄位顯示**0.8**，然後滑動右側 （上） 滑動軸欄位，直到欄位顯示**1.03**。  
+5.  在左側 （下） 滑動軸欄位中，滑動直到欄位顯示**0.8**，然後滑動右側 （高） 滑桿欄位，直到欄位顯示**1.03**。  
   
 6.  在 [選取圖示樣式] 中，選取菱形 (紅色)、三角形 (黃色)、圓形 (綠色) 圖示類型，然後按一下 [確定]。  
   

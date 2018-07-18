@@ -1,6 +1,6 @@
 ---
-title: DB 郵件和電子郵件警示，在 Linux 上的 SQL 代理程式與 |Microsoft 文件
-description: 本文說明如何使用 SQL Server on Linux 的 DB 郵件和電子郵件警示
+title: DB Mail 和 Linux 上的 SQL 代理程式的電子郵件警示 |Microsoft Docs
+description: 本文說明如何在 Linux 上的 SQL Server 中使用 DB Mail 和電子郵件警示
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
@@ -13,17 +13,17 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585190"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984260"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 郵件和電子郵件警示，在 Linux 上的 SQL 代理程式
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail 和 Linux 上的 SQL 代理程式的電子郵件警示
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-下列步驟說明如何設定 DB 電子郵件，並使用它搭配 SQL Server Agent (**mssql server agent**) 在 Linux 上。 
+下列步驟會示範如何設定 DB 電子郵件，並將它與 SQL Server Agent (**mssql server agent**) 在 Linux 上。 
 
 ## <a name="1-enable-db-mail"></a>1.啟用 DB 郵件
 
@@ -65,7 +65,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4.將 Database Mail 帳戶加入至 Database Mail 設定檔
+## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4.Database Mail 設定檔中新增 Database Mail 帳戶
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp 
 @profile_name = 'default', 
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
  
 ## <a name="6-send-test-email"></a>6.傳送測試電子郵件
 > [!NOTE]
-> 您可能必須移至您的電子郵件用戶端，並啟用 「 允許較不安全的用戶端傳送郵件 」。 並非所有的用戶端會辨識 DB 郵件做為電子郵件服務精靈。
+> 您可能必須移至您的電子郵件用戶端，並啟用 「 允許較不安全的用戶端傳送郵件 」。 並非所有的用戶端會辨識 DB 郵件的電子郵件服務精靈的形式。
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -95,7 +95,7 @@ GO
 ```
 
 ## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7.設定 DB 郵件設定檔使用 mssql conf 或環境變數
-若要註冊您的資料庫郵件設定檔，您可以使用 mssql conf 公用程式或環境變數。 在此情況下，讓我們呼叫預設的設定檔。
+若要註冊您的資料庫郵件設定檔，您可以使用 mssql conf 公用程式或環境變數。 在此情況下，讓我們來呼叫我們的設定檔預設值。
 
 ```bash
 # via mssql-conf
@@ -104,7 +104,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8.設定 SQLAgent 作業通知的操作員 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8.設定操作員 SQLAgent 作業通知。 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -115,7 +115,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9.'測試代理程式作業' 成功時傳送電子郵件 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9.'代理程式測試工作' 順利完成時傳送電子郵件 
 
 ```
 EXEC msdb.dbo.sp_update_job 
@@ -126,4 +126,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>後續的步驟
-如需有關如何使用 SQL Server Agent 來建立、 排程及執行工作的詳細資訊，請參閱[在 Linux 上執行的 SQL Server Agent 作業](sql-server-linux-run-sql-server-agent-job.md)。
+如需有關如何使用 SQL Server Agent 來建立、 排程及執行工作的詳細資訊，請參閱 <<c0> [ 在 Linux 上執行的 SQL Server Agent 作業](sql-server-linux-run-sql-server-agent-job.md)。

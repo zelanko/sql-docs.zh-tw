@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ca3b7040e5d51c324ddd50d489243b0f67f64feb
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841201"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981830"
 ---
 # <a name="double-slash-comment-dmx"></a>雙斜線 （註解） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34841201"
  如需如何在 DMX 中使用不同類型的註解的詳細資訊，請參閱[註解&#40;DMX&#41;](../dmx/comments-dmx.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [斜線星狀&#40;註解&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
+ [斜線星形&#40;註解&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)   
  [-&#40;註解&#41; &#40;DMX&#41;摘要](../dmx/comment-dmx-summary.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [運算子&#40;DMX&#41;](../dmx/operators-dmx.md)  

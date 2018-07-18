@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;結構&gt;。案例 |Microsoft 文件
+title: SELECT FROM&lt;結構&gt;。案例 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842101"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985260"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;結構&gt;。案例
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34842101"
   
  如果結構上未啟用鑽研，則陳述式會失敗。 同時，如果使用者沒有採礦結構的鑽研權限，陳述式將會失敗。  
   
- 在[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，預設會啟用新的採礦結構的鑽研。 若要確認是否為特定結構啟用鑽研，查看是否值**CacheMode**屬性設定為**KeepTrainingCases**。  
+ 在  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，預設會啟用新的採礦結構的鑽研。 若要確認是否針對特定結構啟用鑽研，請檢查是否的值**CacheMode**屬性設定為**KeepTrainingCases**。  
   
  如果值**CacheMode**變更為**ClearAfterProcessing**、 從快取清除結構案例，而且您無法使用鑽研。  
   
@@ -63,10 +63,10 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
 SELECT StructureColumn('<column name>') FROM <model>.CASES  
 ```  
   
- 因此，若要保護敏感性資料或個人資訊，您應該建構您的資料來源檢視來遮罩個人資訊，並授與**AllowDrillthrough**採礦結構或採礦模型只在必要時權限。  
+ 因此，若要保護敏感性資料或個人資訊，您應該建構您的資料來源檢視來遮罩個人資訊，並授與**AllowDrillthrough**採礦結構或採礦模型權限時，才必要。  
   
 ## <a name="examples"></a>範例  
- 下列範例以採礦結構中，目標郵寄 」 為基礎[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料庫及相關聯的採礦模型。 如需詳細資訊，請參閱[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 下列範例以採礦結構中，目標郵寄 」，此作業取決於[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]資料庫和相關聯的採礦模型。 如需詳細資訊，請參閱 < [83c8-9df5dddfeb9c"&gt;basic Data Mining Tutorial&lt](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>範例 1：鑽研結構案例  
  下列範例會傳回採礦結構「目標郵寄」中，最舊的 500 位客戶的清單。 此查詢會傳回採礦模型中的所有資料行，但會將資料列限制為購買自行車的客戶，並以年齡加以排序。 您也可以編輯運算式清單，僅傳回您需要的資料行。  

@@ -1,5 +1,5 @@
 ---
-title: 容錯移轉叢集執行個體的 SQL Server on Linux |Microsoft 文件
+title: 容錯移轉叢集執行個體-在 Linux 上的 SQL Server |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,80 +13,80 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 0275d0004bc02f1e32e7da3630c8a0bd15532d18
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322519"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982797"
 ---
-# <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體的 SQL Server on Linux
+# <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體-在 Linux 上的 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-本文說明有關 SQL Server 容錯移轉叢集執行個體 (FCI) 在 Linux 上的概念。 
+這篇文章說明 SQL Server 容錯移轉叢集執行個體 (FCI) 在 Linux 上的相關概念。 
 
-若要建立 SQL Server FCI on Linux，請參閱[Linux 上設定 SQL Server FCI](sql-server-linux-shared-disk-cluster-configure.md)
+若要在 Linux 上建立 SQL Server FCI，請參閱[Linux 上設定 SQL Server FCI](sql-server-linux-shared-disk-cluster-configure.md)
 
-## <a name="the-clustering-layer"></a>叢集的圖層
+## <a name="the-clustering-layer"></a>叢集層
 
-* RHEL、 在叢集的圖層基礎上 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 
+* RHEL，叢集的圖層基礎上 Red Hat Enterprise Linux (RHEL) [HA 附加元件](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)。 
 
     > [!NOTE] 
     > Red Hat HA 附加元件和文件集的存取需要訂用帳戶。 
 
-* SLES，在叢集的圖層根據 SUSE Linux Enterprise[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)。
+* 在 SLES，叢集的圖層根據 SUSE Linux Enterprise[高可用性延伸模組 (HAE)](https://www.suse.com/products/highavailability)。
 
-    如需有關叢集設定、 資源代理程式的選項、 管理、 最佳做法和建議的詳細資訊，請參閱[SUSE Linux Enterprise 高可用性延伸 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
+    如需有關叢集設定、 資源代理程式選項、 管理、 最佳做法和建議的詳細資訊，請參閱 < [SUSE Linux Enterprise 高可用性延伸模組 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)。
 
 RHEL HA 附加元件和 SUSE HAE 之上[Pacemaker](http://clusterlabs.org/)。
 
-如下列圖表所示，存放裝置會呈現至兩個伺服器。 -Corosync 以及 Pacemaker-叢集元件協調通訊和資源管理。 其中一個伺服器具有作用中連接的儲存體資源，以及 SQL Server。 當 Pacemaker 偵測到失敗時叢集的元件管理將資源移動到另一個節點。  
+下圖所示，兩部伺服器被提供儲存體。 -Corosync 和 Pacemaker-叢集元件協調通訊和資源管理。 其中一個伺服器具有作用中的連接到儲存體資源和 SQL Server。 當 Pacemaker 偵測到失敗時叢集的元件會管理資源移動到另一個節點。  
 
 ![Red Hat Enterprise Linux 7 共用磁碟的 SQL 叢集](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> 此時，不是與使用 Windows 上的 WSFC 為結合與 Pacemaker Linux 上的 SQL Server 的整合。 從 SQL、 內沒有存在叢集的認知，所有的協調流程外中，服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是屬於 WSFC、 沒有對等的 Pacemaker 中相同。 預期的是，@@servername和 sys.servers 返回節點名稱，而叢集 dmv sys.dm_os_cluster_nodes 並且 sys.dm_os_cluster_properties，不將任何記錄。 若要使用連接字串指向字串伺服器名稱並不會使用 IP，則必須在其 DNS 伺服器將 IP 登錄用來建立虛擬 IP 資源 （如下列各節所述） 所選的伺服器名稱。
+> 到目前為止，不是與使用 Windows 上為 WSFC，結合與 Linux 上的 Pacemaker 的 SQL Server 的整合。 從 SQL，在沒有知識存在的叢集，所有的協調流程中超出而且服務由 Pacemaker 控制做為獨立執行個體。 此外，虛擬網路名稱是特有 WSFC 的相同的 Pacemaker 沒有對等。 預期的是，@@servername和 sys.servers 返回節點名稱，而叢集 dmv sys.dm_os_cluster_nodes 並且 sys.dm_os_cluster_properties，不將任何記錄。 若要使用的連接字串指向字串伺服器名稱，未使用的 IP，他們必須註冊在他們的 DNS 伺服器用來建立虛擬 IP 資源 （如下列各節所述） 的 IP 與所選的伺服器名稱。
 
 ## <a name="number-of-instances-and-nodes"></a>執行個體數目和節點
 
-使用 SQL Server on Linux 的其中一個主要差異是，只能有一個安裝的 SQL Server，每個 Linux 伺服器。 該安裝被呼叫執行個體。 這表示，不同於 Windows Server 支援最多 25 個 Fci 每個 Windows Server 容錯移轉叢集 (WSFC)，以 Linux 為基礎的 FCI 將只有單一執行個體。 這一個執行個體也是預設執行個體。沒有在 Linux 上的具名執行個體的概念。 
+Linux 上的 SQL Server 的一個主要差異是，只能有一個安裝的 SQL Server，每一部 Linux 伺服器。 該安裝被呼叫執行個體。 這表示，不同於 Windows Server 支援最多 25 個 Fci，每個 Windows Server 容錯移轉叢集 (WSFC)，在以 Linux 為基礎的 FCI 只會有單一執行個體。 這一個執行個體也是預設執行個體;沒有在 Linux 上的具名執行個體的概念。 
 
-Pacemaker 叢集只能有最多 16 個節點包含 Corosync，因此單一 FCI 可以跨越多達 16 個伺服器。 FCI 使用的 SQL Server 標準版實作支援最多兩個叢集節點 Pacemaker 叢集在沒有最大 16 個節點。
+Pacemaker 叢集只能有最多 16 個節點包含 Corosync，因此單一 FCI 可以跨越多達 16 部伺服器。 FCI 實作的 SQL Server Standard Edition 支援最多兩個叢集的節點，Pacemaker 叢集在沒有最大 16 個節點。
 
-在 SQL Server FCI，SQL Server 執行個體是在上一個節點或其他作用中。
+在 SQL Server FCI，SQL Server 執行個體為上一個節點或其他作用中。
 
 ## <a name="ip-address-and-name"></a>IP 位址和名稱
-在 Linux Pacemaker 叢集上，每個 SQL Server FCI 都需要自己唯一的 IP 位址和名稱。 如果 FCI 設定跨越多個子網路，一個 IP 位址就必須針對每個子網路。 唯一的名稱和 IP 位址可用來存取 FCI，使應用程式和使用者不需要知道 Pacemaker 叢集中的哪一個基礎伺服器。
+在 Linux Pacemaker 叢集上，每個 SQL Server FCI 會需要它自己唯一的 IP 位址和名稱。 如果 FCI 設定跨越多個子網路，一個 IP 位址必須針對每個子網路。 唯一的名稱和 IP 位址用來存取 FCI，使應用程式和終端使用者不需要知道的 Pacemaker 叢集的基礎伺服器。
 
-在 FCI 在 DNS 中的名稱應該與 FCI 資源建立 Pacemaker 叢集中的名稱相同。
-名稱和 IP 位址必須在 DNS 中登錄。
+FCI 在 DNS 中的名稱應該與建立 Pacemaker 叢集內的 FCI 資源名稱相同。
+必須在 DNS 中註冊的名稱和 IP 位址。
 
 ## <a name="shared-storage"></a>共用儲存
-所有 Fci，它們是在 Linux 或 Windows Server 上是否都需要某種形式的共用存放裝置。 這個儲存體呈現給可能可以裝載 FCI 的所有伺服器，但只有一部伺服器可以使用的存放裝置 FCI 在任何指定時間。 適用於 Linux 下的共用存放裝置的選項如下：
+所有 Fci，無論它們是在 Linux 或 Windows Server，都需要某種形式的共用存放裝置。 此存放裝置會向所有的伺服器，可能可以裝載 FCI 中，但只有一部伺服器可以在任何時候 fci 中使用的儲存體。 適用於 Linux 下的共用儲存體的選項如下：
 
 - iSCSI
 - Network File System (NFS)
-- 伺服器訊息區塊 (SMB) 在 Windows Server，有稍微不同的選項。 目前不支援 linux Fci 的其中一個選項是使用 TempDB，也就是 SQL Server 的暫存工作區的節點的本機磁碟的能力。
+- 伺服器訊息區 (SMB) 在 Windows Server，有稍微不同的選項。 目前不支援以 Linux 為基礎的 Fci 的其中一個選項是使用 TempDB，也就是 SQL Server 的暫存工作區的節點的本機磁碟的能力。
 
-在設定跨越多個位置中，必須與其他同步什麼儲存在一個資料中心。 發生容錯移轉，FCI 將無法上線，而且存放裝置被視為相同。 達到此會需要某些外部方法儲存體複寫是否透過基礎的存放裝置硬體或某些軟體為基礎的公用程式。 
+在這種設定方式跨越多個位置，必須與其他同步在一個資料中心儲存的內容。 發生容錯移轉時，FCI 會上線，存放裝置被視為相同。 達到此目標需要某些外部方法的儲存體複寫是否透過基礎的儲存體硬體或某些軟體為基礎的公用程式。 
 
 >[!NOTE]
->針對 SQL Server 2017，必須使用 XFS 或 EXT4 格式化以 Linux 為基礎的部署使用直接呈現這類伺服器的磁碟。 目前不支援其他檔案系統。 這裡將會反映任何變更。
+>SQL Server 2017，您必須使用 XFS 或 EXT4，格式化以 Linux 為基礎的部署使用直接向這類伺服器的磁碟。 目前不支援其他檔案系統。 這裡將會反映任何變更。
 
-呈現共用存放裝置的程序也適用於不同的支援方法：
+提供共用存放裝置的程序也適用於不同的支援方法：
 
 - 設定共用存放裝置
-- 裝載存放裝置做為要做為 FCI 的 Pacemaker 叢集節點的伺服器資料夾
-- 必要時，SQL Server 系統資料庫移到共用的存放裝置
-- SQL Server 的運作方式與每一部伺服器的測試連接的共用存放裝置
+- 將儲存體掛接為資料夾的伺服器上要做為 FCI 的 Pacemaker 叢集的節點
+- 如有需要，將 SQL Server 系統資料庫移到共用存放裝置
+- SQL Server 的運作方式與每一部伺服器的測試連線的共用存放裝置
 
-使用 SQL Server on Linux 的一項主要差異是，雖然您可以設定預設的使用者資料和記錄檔位置，系統資料庫必須一直存在在`/var/opt/mssql/data`。 在 Windows Server 上沒有移動包括 TempDB 系統資料庫的能力。 播放到如何共用儲存體已針對 FCI 的此事實。
+Linux 上的 SQL Server 的一項主要差異是，雖然您可以設定預設的使用者資料和記錄檔位置，系統資料庫必須一律存在於`/var/opt/mssql/data`。 在 Windows Server 上沒有移動包括 TempDB 系統資料庫的能力。 這項事實播放到共用的儲存體已針對 FCI。
 
-非系統資料庫的預設路徑可以使用變更`mssql-conf`公用程式。 如需有關如何變更預設值，資訊[變更預設資料或記錄檔的目錄位置](sql-server-linux-configure-mssql-conf.md#datadir)。 您也可以儲存 SQL Server 資料和交易中的其他位置，只要它們具有正確的安全性，即使它不是預設位置。位置必須所述。
+非系統資料庫的預設路徑可以使用變更`mssql-conf`公用程式。 如需如何變更預設值，[變更預設的資料或記錄檔目錄位置](sql-server-linux-configure-mssql-conf.md#datadir)。 您也可以儲存 SQL Server 資料和交易中的其他位置，只要它們有適當的安全性，即使它不是預設位置;位置必須所述。
 
-下列主題說明如何為以 Linux 為基礎 SQL Server FCI 設定支援的存放裝置類型：
+下列主題說明如何以 Linux 為主的 SQL Server FCI 設定支援的存放裝置類型：
 
-- [設定容錯移轉叢集執行個體-iSCSI-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [設定容錯移轉叢集執行個體-NFS-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [設定容錯移轉叢集執行個體-SMB-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [設定容錯移轉叢集執行個體-iSCSI-Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [設定容錯移轉叢集執行個體-NFS-Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [設定容錯移轉叢集執行個體-SMB-Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure-smb.md)

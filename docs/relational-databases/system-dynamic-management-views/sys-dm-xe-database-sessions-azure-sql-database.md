@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_sessions，以查看 (Azure SQL Database) |Microsoft 文件
+title: sys.dm_xe_database_sessions，以查看 (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
@@ -17,10 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 28759d7101a8a798223a92b9201e0e9aa930a4fa
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984197"
 ---
 # <a name="sysdmxedatabasesessions-azure-sql-database"></a>sys.dm_xe_database_sessions，以查看 (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -29,9 +30,9 @@ ms.lasthandoff: 05/23/2018
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及任何更新的版本。|  
+|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及更新的版本。|  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 不可為 Null。|  
 |event_name|**nvarchar(60)**|動作繫結之事件的名稱。 不可為 Null。|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/23/2018
  需要 VIEW DATABASE STATE 權限。  
   
 ### <a name="relationship-cardinalities"></a>關聯性基數  
-2015-07-13 'sys.dm_xe_objects' 為 '（_d）' 在其名稱中的不包含這些 XEvents Dmv 的其中一個。 不是錯字或下列資料表右邊資料行中的錯誤。 名稱可以是 Microsoft SQL Server 和 Azure SQL Database 中的相同。 GeneMi。  
+截至 2015年-07-13 'sys.dm_xe_objects' 是 '（_d）' 在其名稱中的不包含這些 XEvents Dmv。 不是錯字或下列資料表的右邊資料行中的錯誤。 Microsoft SQL Server 和 Azure SQL Database 中的相同名稱。 GeneMi。  
   
 |來源|若要|關聯性|  
 |--------|------|----------------|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/23/2018
 |sys.dm_xe_database_session_events.event_package_guid、 sys.dm_xe_database_session_events.event_name|sys.dm_xe_objects.name, sys.dm_xe_objects.package_guid|多對一|  
   
 ## <a name="see-also"></a>另請參閱  
-[Azure SQL Database 中的擴充的事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+[Azure SQL Database 中擴充的事件](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
 [擴充事件](../../relational-databases/extended-events/extended-events.md)  
   
  
