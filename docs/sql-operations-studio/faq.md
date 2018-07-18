@@ -27,7 +27,7 @@ ms.lasthandoff: 05/17/2018
 
 ## <a name="where-can-i-get-includename-sosincludesname-sos-shortmd"></a>哪裡可以取得[!INCLUDE[name-sos](../includes/name-sos-short.md)]？
 
-下載[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows、 macOS，和從 Linux [http://aka.ms/sqlopsstudio](download.md)
+從[http://aka.ms/sqlopsstudio](download.md)下載SQL Operations Studio (preview)的[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows、 macOS，和Linux版本。
 
 ## <a name="how-much-does-includename-sosincludesname-sos-shortmd-cost"></a>多少[!INCLUDE[name-sos](../includes/name-sos-short.md)]成本？
 
