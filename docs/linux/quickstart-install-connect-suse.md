@@ -1,4 +1,4 @@
----
+﻿---
 title: 開始使用 SUSE Linux Enterprise Server 上的 SQL Server 2017 |Microsoft 文件
 description: 本快速入門示範如何在 SUSE Linux Enterprise Server 上安裝 SQL Server 2017 然後建立並查詢資料庫，以使用 sqlcmd。
 author: rothja

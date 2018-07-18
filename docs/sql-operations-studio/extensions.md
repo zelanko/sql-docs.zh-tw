@@ -1,4 +1,4 @@
----
+﻿---
 title: SQL 作業 Studio （預覽）的擴充功能 |Microsoft 文件
 description: 加入擴充功能至 SQL 作業 Studio （預覽）
 ms.custom: tools|sos

@@ -1,4 +1,4 @@
----
+﻿---
 title: 啟用或停用 SQL Operations Studio （預覽）的使用量資料收集與損毀報表 |Microsoft 文件
 description: 本文說明如何控制是否收集使用量與損毀報告資料並傳送給 Microsoft。
 ms.custom: tools|sos

@@ -46,6 +46,6 @@ ADO.NET 是 .NET 語言的核心資料存取技術。 使用 System.Data.SqlClie
 * [ADO.NET 程式碼範例](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [在 Windows 上的.NET Framework 使用者入門](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
 * [開始使用.NET Core macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [開始使用.NET 核心上 Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
-* [開始使用.NET 核心上 Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
+* [開始使用.NET Core 上 Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [開始使用.NET Core 上 Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   
