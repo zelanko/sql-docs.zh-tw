@@ -1,5 +1,5 @@
 ---
-title: SessionID 元素 (XMLA) |Microsoft 文件
+title: SessionID 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76e30e2e14cc0e98c1a275831dabefde7d8db948
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34577330"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036566"
 ---
 # <a name="sessionid-element-xmla"></a>SessionID 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  識別要在上面執行父代的作用中工作階段[取消](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)項目。  
+  識別作用中的工作階段要在上面執行父代[取消](../../../analysis-services/xmla/xml-elements-commands/cancel-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34577330"
 </Cancel>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "34577330"
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  

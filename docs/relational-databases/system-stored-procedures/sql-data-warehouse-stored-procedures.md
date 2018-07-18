@@ -16,11 +16,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: b3d5174c871d25c37a299e7d24b0aab9a32bf2af
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
-ms.translationtype: HT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36797953"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037726"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>SQL 資料倉儲預存程序
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]

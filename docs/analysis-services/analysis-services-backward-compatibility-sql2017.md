@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2017 Analysis Services 回溯相容性 |Microsoft 文件
+title: SQL Server 2017 Analysis Services 回溯相容性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7dc1581fd2940ec5bad7698985eeab2c8ed96b2c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014095"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037516"
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 回溯相容性 (SQL 2017)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-這篇文章描述功能可用性及目前的版本和舊版之間的行為變更。
+這篇文章說明功能可用性和目前的版本與舊版之間的行為變更。
 
 ## <a name="deprecated-features"></a>已被取代的功能
-A*已被取代功能*會停止從產品在未來版本中，但仍支援，且包含在目前版本為了維持回溯相容性。 建議您停止在新的和現有的專案中使用已被取代的功能，為了維持與未來發行版本的相容性。
+A*已被取代功能*將不再從產品在未來的版本中，但仍支援且包含在目前版本為了維持回溯相容性。 建議您停止使用新的和現有的專案中的已被取代的功能，為了相容於未來的版本。
 
 在此版本中已被取代的下列功能：
   
@@ -33,15 +33,15 @@ A*已被取代功能*會停止從產品在未來版本中，但仍支援，且�
 |多維度|遠端連結量值群組|
 |表格式|模型 1100年和 1103年相容性層級|
 |表格式|表格式物件模型的屬性： Column.TableDetailPosition，Column.IsDefaultLabel，Column.IsDefaultImage|
-|工具|SQL Server Profiler for Trace Capture<br /><br /> 取代為使用 SQL Server Management Studio 內嵌的擴充事件分析工具。  <br /> 請參閱 [使用 SQL Server 擴充事件監視 Analysis Services](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
+|工具|SQL Server Profiler for Trace Capture<br /><br /> 取代為使用 SQL Server Management Studio 內嵌的擴充事件分析工具。  <br /> 請參閱 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)。|  
 |工具|Server Profiler for Trace Replay <br />取代。 沒有取代項目。|  
-|追蹤管理物件和 Trace API|Microsoft.AnalysisServices.Trace 物件 (包含 Analysis Services Trace 和 Replay 物件的 API)。 取代為多部分：<br /><br /> 追蹤組態： Microsoft.SqlServer.Management.XEvent<br />追蹤讀取： Microsoft.SqlServer.XEvent.Linq<br />-   追蹤重新執行：無|  
+|追蹤管理物件和 Trace API|Microsoft.AnalysisServices.Trace 物件 (包含 Analysis Services Trace 和 Replay 物件的 API)。 取代為多部分：<br /><br /> -追蹤組態︰ Microsoft.SqlServer.Management.XEvent<br />-追蹤讀取︰ Microsoft.SqlServer.XEvent.Linq<br />-   追蹤重新執行：無|  
 
 
 ## <a name="discontinued-features"></a>已停止的功能
-A*已停止的功能*先前的版本中已被取代。 它包含在目前版本中，可以繼續，但已不再支援。 已停止的功能可能會移除整個未來版本或更新。
+A*已停止的功能*先前的版本中已被取代。 它可能會繼續包含在目前的版本中，但不受支援。 已停止的功能可能會移除完全在未來版本或更新。
 
-下列功能已被取代的舊版本，並且不再支援此版本中。
+下列功能先前的版本中已被取代，並且不再支援此版本中。
   
 |||  
 |-|-|  
@@ -54,14 +54,14 @@ A*已停止的功能*先前的版本中已被取代。 它包含在目前版本�
 
 
 ## <a name="breaking-changes"></a>重大變更
-A*中斷變更*升級至目前的版本之後造成功能、 資料模型、 應用程式程式碼或指令碼會無法再運作。
+A*重大變更*導致後面的升級至目前版本的功能、 資料模型、 應用程式程式碼或指令碼無法再運作。
 
 在此版本中有任何重大變更。
 
 ## <a name="behavior-changes"></a>行為變更
-A*行為變更*都會影響在目前的版本相較於舊版的相同功能的運作方式。 描述重要行為所做的變更。 不包含使用者介面中的變更。
+A*行為變更*會影響相同的功能相較於舊版的目前版本中的運作方式。 說明只有重大行為變更。 找不到包含的使用者介面中的變更。
 
-MDSCHEMA_MEASUREGROUP_DIMENSIONS 和 DISCOVER_CALC_DEPENDENCY，變更中詳述[的新功能 Analysis Services 的 SQL Server 2017 CTP 2.1](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/)公告。
+MDSCHEMA_MEASUREGROUP_DIMENSIONS 和 DISCOVER_CALC_DEPENDENCY，變更詳述[的新功能 Analysis Services 的 SQL Server 2017 CTP 2.1](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/)公告。
 
 
 ## <a name="see-also"></a>另請參閱
