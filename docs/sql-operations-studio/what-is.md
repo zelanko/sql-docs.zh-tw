@@ -1,6 +1,6 @@
 ---
-title: 何謂 SQL 作業 Studio （預覽） | Microsoft Docs
-description: SQL 作業 Studio （預覽） 是免費的輕量型工具，來管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲; 在 Windows、 macOS 和 Linux 上執行只要它們正在執行。
+title: 何謂 SQL Operations Studio （預覽） | Microsoft Docs
+description: SQL Operations Studio （預覽） 是一套可在 Windows、 macOS 和 Linux 上執行免費且輕量型的工具，用於管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲; 無論在哪個平台上執行。
 ms.custom: tools|sos
 ms.date: 11/17/2017
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.lasthandoff: 05/17/2018
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>什麼是[!INCLUDE[name-sos](../includes/name-sos.md)]？
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 是免費的工具來管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲; 在 Windows、 macOS 和 Linux 上執行只要它們正在執行。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一套可在 Windows, macOS 和 Linux 上執行的免費工具，用於管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲; 無論在哪個平台上執行。
 
 **[下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
@@ -32,16 +32,16 @@ ms.lasthandoff: 05/17/2018
 
 ## <a name="smart-t-sql-code-snippets"></a>智慧 T-SQL 程式碼片段
 
-T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料表、 檢視、 預存程序、 使用者、 登入、 角色等等，並更新現有的資料庫物件。 使用快速建立您開發或測試用途的資料庫副本，並且將產生並執行 智慧程式碼片段會建立並插入指令碼。
+T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料表、 檢視、 預存程序、 使用者、 登入、 角色等等，並更新現有的資料庫物件。 使用智慧程式碼片段快速建立資料庫副本以進行開發或測試，並生成和執行 CREATE 和 INSERT 指令。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 也提供功能，以建立自訂的 T-SQL 程式碼片段。 若要進一步了解，請參閱[建立並使用程式碼片段](code-snippets.md)。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 也提供建立自訂的 T-SQL 程式碼片段功能。 若要進一步了解，請參閱[建立並使用程式碼片段](code-snippets.md)。
 
 
 ## <a name="customizable-server-and-database-dashboards"></a>可自訂的伺服器和資料庫儀表板
 
-建立豐富可自訂的儀表板來監視和快速疑難排解您的資料庫中的效能瓶頸。 若要深入了解深入了解 widget 和資料庫 （和伺服器） 的儀表板，請參閱[管理伺服器和資料庫，以深入了解 widget](insight-widgets.md)。
+建立豐富可自訂的儀表板來監視和快速疑難排解您的資料庫中的效能瓶頸。 若要深入了解 insight widget 和資料庫 （和伺服器） 的儀表板，請參閱[管理伺服器和資料庫，以深入了解 widget](insight-widgets.md)。
 
-## <a name="connection-management-server-groups"></a>（伺服器群組） 的連接管理
+## <a name="connection-management-server-groups"></a>連接管理（伺服器群組）
 
 伺服器群組提供組織伺服器及您使用的資料庫連接資訊的方式。 如需詳細資訊，請參閱[伺服器群組](server-groups.md)。
 
