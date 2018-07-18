@@ -1,7 +1,7 @@
 ---
 title: SQL Server 的災害復原 | Microsoft Docs
 description: ''
-author: allanhirt
+author: MashaMSFT
 ms.author: mihaelab
 ms.reviewer: mikeray
 manager: craigg
@@ -14,12 +14,12 @@ ms.suite: sql
 ms.custom: ''
 ms.technology: database-engine
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.openlocfilehash: c7779cde6e5115457cb5a781b4d13aebf30c79ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c294da89bca877bce4dba3e280a6d2ee4ac2a7ef
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32864473"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297494"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server"></a>商務持續性與資料庫復原 - SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

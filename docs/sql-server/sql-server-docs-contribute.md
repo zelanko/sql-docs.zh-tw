@@ -5,19 +5,18 @@ ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 508dd4a658810bb6c62c1b4cf7eb067d9ccc563d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288757"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926529"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 

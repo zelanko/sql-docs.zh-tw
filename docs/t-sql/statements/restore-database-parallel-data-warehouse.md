@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -12,16 +11,16 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed7e6aeb0630a20ee39d512fc17dfe24040737f2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 0fb3c753e4bde29eb9b5cbb5f287fc18d03a117a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33702512"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782429"
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -132,7 +131,7 @@ RESTORE HEADERONLY
   
 例如，將 60 GB 資料庫從具有 2 個節點的應用裝置 (每個節點 30 GB) 還原至具有 6 個節點的應用裝置時，[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]會在具有 6 個節點的應用裝置上建立一個 180 GB 的資料庫 (6 個節點，每個節點 30 GB)。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]一開始會將資料庫還原至 2 個節點以符合來源組態，然後會將資料轉散發至全部 6 個節點。  
   
- 在轉散發之後，與較小型的來源應用裝置相比，每個計算節點將會包含較少的實際資料和較多的可用空間。 請使用額外的空間將更多資料新增至資料庫。 如果所還原的資料庫大於您所需的大小，您可以使用 [ALTER DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)來縮減資料庫檔案大小。  
+ 在轉散發之後，與較小型的來源應用裝置相比，每個計算節點將會包含較少的實際資料和較多的可用空間。 請使用額外的空間將更多資料新增至資料庫。 如果所還原的資料庫大於您所需的大小，您可以使用 [ALTER DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqlpdw)來縮減資料庫檔案大小。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  
  就這些限制而言，來源應用裝置是您從中建立資料庫備份的應用裝置，而目標應用裝置則是將作為資料庫還原目的地的應用裝置。  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: ''
 caps.latest.revision: ''
-author: allanhirt
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b2f8ba15720726e177884aa4481fb43dae6084f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0c035428e526b64dd4b0245719b139f6567108b6
+ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769334"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270949"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,12 +16,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0bc88e4e54e915851f065309e86bffef3c00484a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: dd289185d211277dc7a66574640bf2d2b053e35f
+ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402410"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37872778"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>預存程序 (Integration Services 目錄)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "35402410"
  [catalog.move_environment &#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-move-environment-ssisdb-database.md)  
  將環境從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的某個資料夾移動到另一個資料夾。  
   
- [catalog.move_project &#40;&#40;SSISDB 資料庫&#41;](../Topic/catalog.move_project%20\(\(SSISDB%20Database\).md)  
+ [catalog.move_project &#40;&#40;SSISDB 資料庫&#41;](../../integration-services/system-stored-procedures/catalog-move-project-ssisdb-database.md)  
  將專案從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 目錄中的某個資料夾移動到另一個資料夾。  
   
  [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md)  

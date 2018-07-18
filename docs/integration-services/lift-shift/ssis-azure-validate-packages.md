@@ -8,15 +8,16 @@ ms.prod_service: integration-services
 ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 0e19b7fe45acfdea692d1334719e9dc8721124df
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 5dcdd0f396f0cb6a272af121fd03757dc8bb2b72
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328622"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262052"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>驗證部署到 Azure 的 SQL Server Integration Services (SSIS) 套件
 
@@ -30,7 +31,7 @@ ms.locfileid: "35328622"
 ## <a name="validate-connection-managers"></a>驗證連線管理員
 
 此精靈會檢查特定連線管理員，了解其是否具有下列可能導致連線失敗的問題：
-- **Windows 驗證**。 若連接字串使用 Windows 驗證，驗證就會產生警告。 Windows 驗證需要其他設定步驟。 如需詳細資訊，請參閱[使用 Windows 驗證連線到資料和檔案共用](ssis-azure-connect-with-windows-auth.md)。
+- **Windows 驗證**。 若連接字串使用 Windows 驗證，驗證就會產生警告。 Windows 驗證需要其他設定步驟。 如需詳細資訊，請參閱[使用 Windows 驗證連線至資料和檔案共用](ssis-azure-connect-with-windows-auth.md)。
 - **檔案路徑**。 若連接字串包含硬式編碼的本機檔案路徑 (例如 `C:\\...`)，驗證就會產生警告。 包含絕對路徑的套件可能會失敗。
 - **UNC 路徑**。 若連接字串包含 UNC 路徑，驗證就會產生警告。 包含 UNC 路徑的套件可能會失敗，原因通常是 UNC 路徑需要 Windows 驗證才可存取。
 - **主機名稱**。 若伺服器屬性包含主機名稱而非 IP 位址，驗證就會產生警告。 包含主機名稱的套件可能會失敗，原因通常是因為 Azure 虛擬網路需要正確的 DNS 設定來支援 DNS 名稱解析。

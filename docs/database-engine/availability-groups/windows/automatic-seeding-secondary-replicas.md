@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Automatic seeding [SQL Server], secondary replica
 ms.assetid: ''
 caps.latest.revision: ''
-author: allanhirt
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6576f0430a45300d76f675730f14b2a257441ffd
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 97ae521971c94a572a64ed0f504eca677951d21d
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769694"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297424"
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>自動植入次要複本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

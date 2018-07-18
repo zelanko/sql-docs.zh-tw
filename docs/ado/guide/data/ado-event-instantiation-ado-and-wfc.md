@@ -44,7 +44,7 @@ ADO 的 Windows Foundation 類別 (ADO/WFC) ADO 事件模型為基礎，提供�
   
      第一個引數**ConnectionEventHandler**建構函式是包含名為第二個引數中的事件處理常式的類別的參考。  
   
-3.  將事件處理常式加入指定用來處理特定類型的事件處理常式的清單。 使用此方法的名稱，例如 **addOn * * * EventName*(*處理常式*)。  
+3.  將事件處理常式加入指定用來處理特定類型的事件處理常式的清單。 使用此方法的名稱，例如 **addOn** *EventName*(*處理常式*)。  
   
 4.  ADO/WFC 在內部實作所有 ADO 事件處理常式。 因此，事件的原因**連接**或**資料錄集**ADO/WFC 事件處理常式攔截作業。  
   
@@ -62,7 +62,7 @@ ADO 的 Windows Foundation 類別 (ADO/WFC) ADO 事件模型為基礎，提供�
   
 6.  從您的事件處理常式返回 ADO 事件的 ADO/WFC 處理常式。 ADO/WFC 複製回 ADO 事件參數，ADO/WFC 相關的事件資料成員，然後 ADO 事件處理常式傳回。  
   
-7.  當您準備完成處理，從 ADO/WFC 事件處理常式的清單中移除您的處理常式。 使用此方法的名稱，例如 **removeOn * * * EventName*(*處理常式*)。  
+7.  當您準備完成處理，從 ADO/WFC 事件處理常式的清單中移除您的處理常式。 使用此方法的名稱，例如 **removeOn** *EventName*(*處理常式*)。  
   
 ## <a name="see-also"></a>另請參閱  
  [ADO 事件處理常式摘要](../../../ado/guide/data/ado-event-handler-summary.md)   

@@ -1,8 +1,7 @@
 ---
 title: SQL Server 2008 R2 SP2 版本資訊 | Microsoft Docs
 ms.prod: sql
-ms.prod_service: sql
-ms.technology: supportability
+ms.technology: install
 ms.custom: ''
 ms.date: 01/31/2017
 ms.reviewer: ''
@@ -17,12 +16,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 214be1c0aac58e06c931876d49f7066cad86953b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6918f65a2330062165b8b39b4dd930187122867
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036125"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926249"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
