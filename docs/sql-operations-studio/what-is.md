@@ -39,7 +39,7 @@ T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料
 
 ## <a name="customizable-server-and-database-dashboards"></a>可自訂的伺服器和資料庫儀表板
 
-建立豐富可自訂的儀表板來監視和快速疑難排解您的資料庫中的效能瓶頸。 若要深入了解 insight widget 和資料庫 （和伺服器） 的儀表板，請參閱[管理伺服器和資料庫，以深入了解 widget](insight-widgets.md)。
+建立豐富可自訂的儀表板來監視和快速疑難排解您的資料庫中的效能瓶頸。 若要深入了解 insight widget 和資料庫 （和伺服器）的儀表板，請參閱[透過 insight widget 管理伺服器和資料庫](insight-widgets.md)。
 
 ## <a name="connection-management-server-groups"></a>連接管理（伺服器群組）
 
@@ -47,7 +47,7 @@ T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料
 
 ## <a name="integrated-terminal"></a>整合式終端機
 
-使用您最愛的命令列工具 (例如，被，PowerShell、 sqlcmd、 bcp，和 ssh) 在整合式終端機視窗內[!INCLUDE[name-sos](../includes/name-sos-short.md)]使用者介面。 若要深入了解整合的終端機，請參閱 [整合式驗證終端機] (整合 terminal.md)。
+在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用者介面的整合式終端機視窗中使用您喜歡的命令列工具（例如：Bash, PowerShell, sqlcmd, bcp和 ssh）。若要深入了解整合式終端機，請參閱[整合式驗證終端機] (整合 terminal.md)。
 
 ## <a name="next-steps"></a>後續步驟
 - [下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
