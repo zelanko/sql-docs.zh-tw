@@ -2,7 +2,8 @@
 
 # [資料移轉小幫手的新功能](dma-whatsnew.md)
 # [SQL Server 移轉評定](dma-assesssqlonprem.md)
-# [移轉 SQL Server](dma-migrateonpremsql.md)
+# [將 SQL Server 升級至較新版本](dma-migrateonpremsql.md)
+# [將 SQL Server 移轉至 Azure SQL Database](dma-migrateonpremsqltosqldb.md)
 # [移轉 SQL Server 登入](dma-migrateserverlogins.md)
 # [資料移轉小幫手的最佳做法](dma-bestpractices.md)
 # [合併評定報告](dma-consolidatereports.md)

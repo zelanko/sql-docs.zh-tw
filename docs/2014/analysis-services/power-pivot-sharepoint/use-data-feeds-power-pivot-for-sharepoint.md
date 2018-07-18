@@ -1,5 +1,5 @@
 ---
-title: 使用資料摘要 (PowerPivot for SharePoint) |Microsoft 文件
+title: 使用資料摘要 (PowerPivot for SharePoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3c8ecd6c4d3cde888559886154c679c0a4f7a5e0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0e974c81b3f65ef7830362bc80fc7f15df0f1009
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36131587"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37249408"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>使用資料摘要 (PowerPivot for SharePoint)
   資料摘要是從線上資料來源產生，並串流至目的地文件或應用程式的一個或多個資料流。 如果您使用的是 PowerPivot for Excel，資料摘要可以協助您從任意資料來源取得現有的公司或商務資料，送到 Excel 2010 活頁簿的 PowerPivot 視窗中。 將資料摘要匯入活頁簿之後，您可以在 SharePoint 伺服器上排程的任何資料重新整理作業中參考該摘要。  
@@ -55,9 +55,9 @@ ms.locfileid: "36131587"
 3.  在 [連線及匯出] 中，按一下 [匯出為資料摘要]。  
   
     > [!NOTE]  
-    >  **匯出為資料摘要**按鈕會加入至 SharePoint 藉由 PowerPivot。 如果您沒有安裝 PowerPivot for SharePoint 或您沒有啟動 PowerPivot 功能，將無法使用此按鈕。  
+    >  **匯出為資料摘要**按鈕會加入至藉由 PowerPivot 的 SharePoint。 如果您沒有安裝 PowerPivot for SharePoint 或您沒有啟動 PowerPivot 功能，將無法使用此按鈕。  
   
-4.  按一下**開啟**如果 PowerPivot for Excel 安裝在本機，或按一下**儲存**若要在稍後，將.atomsvc 文件儲存至您的硬碟要匯入作業。  
+4.  按一下 **開放**如果 PowerPivot for Excel 安裝在本機，或按一下**儲存**.atomsvc 文件儲存到硬碟機進行匯入作業，稍後。  
   
 5.  如果您選擇 [開啟]，使用 [資料表匯入精靈] 將資料摘要匯入工作表中。 資料摘要將會當做新的資料表加入至 PowerPivot 視窗中。  
   
@@ -69,12 +69,12 @@ ms.locfileid: "36131587"
  如需如何從報表匯出資料摘要的指示，請參閱[報表產生器說明檔](http://go.microsoft.com/fwlink/?LinkId=154494)中的[從報表產生資料摘要 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)。  
   
 > [!NOTE]  
->  若要設定週期性的資料重新整理排程，將報表資料重新匯入至已發行至 SharePoint 文件庫的 PowerPivot 活頁簿中，報表伺服器必須設定為整合 SharePoint。 如需有關 PowerPivot for SharePoint 和 Reporting Services 如何一起使用的詳細資訊，請參閱[設定和管理報表伺服器&#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)。  
+>  若要設定週期性的資料重新整理排程，將報表資料重新匯入至已發行至 SharePoint 文件庫的 PowerPivot 活頁簿中，報表伺服器必須設定為整合 SharePoint。 如需 PowerPivot for SharePoint 和 Reporting Services 如何一起使用的詳細資訊，請參閱[設定和管理報表伺服器的&#40;Reporting Services SharePoint 模式&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)。  
   
 ##  <a name="dsdoc"></a> 從資料服務文件建立資料摘要  
  如果您有可以產生 Atom 摘要的自訂資料服務，您可以設定資料服務文件，以便將資料提供給使用者和應用程式使用。 「資料服務文件」(.atomsvc) 檔案會指定一個或多個以 Atom 電傳格式發行資料之線上來源的連接。 資料服務文件可以在「資料摘要庫」中建立，這是一個特殊用途的文件庫，可以提供一般存取點來瀏覽已經發行到 SharePoint 伺服器的資料服務文件。 在資料摘要庫中擁有資料服務文件存取權限的資訊工作者可以參照文件的 SharePoint URL，將資料摘要匯入其活頁簿及應用程式。  
   
-1.  開啟網站管理員所建立的資料摘要庫。 如需詳細資訊，請參閱[建立或自訂資料摘要庫&#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。  
+1.  開啟網站管理員所建立的資料摘要庫。 如需詳細資訊，請參閱 <<c0> [ 建立或自訂資料摘要庫&#40;PowerPivot for SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)。</c0>  
   
 2.  在 [文件庫工具] 中，按一下 [文件]。  
   
@@ -86,14 +86,14 @@ ms.locfileid: "36131587"
   
     1.  [基底 URL] 是選擇性的。 如果資料服務文件提供多個摘要，則您應該指定它。 基底 URL 應該指定所有摘要通用的 URL 部分 (例如，伺服器名稱和網站)。 如果您要建立 Reporting Services 報表的資料服務文件，基底 URL 將是報表伺服器 URL 與報表。  
   
-    2.  [Web 服務 URL] 是必要的。 如果沒有基底 URL，這個值在位址中必須包含 http:// 或 https://。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL 是http://adventure-works/inventory/today.aspx，基底 URL 將是http://adventure-works/inventory，和 Web 服務 URL 將是 /today.aspx。  
+    2.  [Web 服務 URL] 是必要的。 如果沒有基底 URL，這個值在位址中必須包含 http:// 或 https://。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL，則http://adventure-works/inventory/today.aspx，基底 URL 將是http://adventure-works/inventory，和 Web 服務 URL 將是 /today.aspx。  
   
          Web 服務 URL 可以包含篩選或選取資料子集的參數。 提供摘要的應用程式或服務必須支援您在 URL 中指定的參數。  
   
 6.  輸入 [資料表名稱]，每個摘要各使用一個資料表。 這是必要的值。 資料表名稱是由取用資料摘要的用戶端應用程式所使用。 在 PowerPivot for Excel 中，資料表名稱用來命名 PowerPivot 視窗中，將包含已匯入之資料的資料表。  
   
 ## <a name="see-also"></a>另請參閱  
- [為在 [管理中心] 網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)   
+ [為在 [管理中心] 的網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [使用資料摘要的庫共用資料摘要&#40;PowerPivot for SharePoint&#41;](share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   

@@ -1,13 +1,11 @@
 ---
-title: 對應 CLR 參數資料 |Microsoft 文件
+title: 對應 CLR 參數資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,15 +26,15 @@ helpviewer_keywords:
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 caps.latest.revision: 69
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6a7c442f3bf102c668f0889f008b8a87205b2257
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: 34d30e57908e8cd44eefa43d6f2d030ae0d102f7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145655"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354520"
 ---
 # <a name="mapping-clr-parameter-data"></a>對應 CLR 參數資料
   下表列出[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型、 common language runtime (CLR) 中的對應項[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中`System.Data.SqlTypes`命名空間，並在其原生 CLR 對等用法[!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework。  
@@ -53,33 +51,33 @@ ms.locfileid: "36145655"
 |`datetime`|`SqlDateTime`|**日期時間，可為 Null\<日期時間 >**|  
 |`datetime2`|無|**日期時間，可為 Null\<日期時間 >**|  
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset，可為 Null\<DateTimeOffset >**|  
-|`decimal`|`SqlDecimal`|**Decimal、 可為 Null\<十進位 >**|  
+|`decimal`|`SqlDecimal`|**Decimal，可為 Null\<十進位 >**|  
 |`float`|`SqlDouble`|**Double，可為 Null\<雙 >**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 定義於 Microsoft.SqlServer.Types.dll 隨 SQL Server 安裝，可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|無|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 定義於 Microsoft.SqlServer.Types.dll 隨 SQL Server 安裝，可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|無|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 定義於 Microsoft.SqlServer.Types.dll 隨 SQL Server 安裝，可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|無|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|無|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|無|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` 定義於 Microsoft.SqlServer.Types.dll 中，它會隨 SQL Server，並可以從下載[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][功能套件](http://go.microsoft.com/fwlink/?LinkId=131220)。|無|  
 |`image`|無|無|  
 |`int`|`SqlInt32`|**Int32，可為 Null\<Int32 >**|  
-|`money`|`SqlMoney`|**Decimal、 可為 Null\<十進位 >**|  
+|`money`|`SqlMoney`|**Decimal，可為 Null\<十進位 >**|  
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|無|無|  
-|`numeric`|`SqlDecimal`|**Decimal、 可為 Null\<十進位 >**|  
+|`numeric`|`SqlDecimal`|**Decimal，可為 Null\<十進位 >**|  
 |`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` 比較適合資料傳輸和存取，而 `SQLString` 比較適合執行 String 作業。|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char、 String，Char []，可為 Null\<char >**|  
 |`real`|`SqlSingle` (`SqlSingle` 的範圍，但大於 `real`)|**單一、 可為 Null\<單一 >**|  
 |`rowversion`|無|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16，可為 Null\<Int16 >**|  
-|`smallmoney`|`SqlMoney`|**Decimal、 可為 Null\<十進位 >**|  
+|`smallmoney`|`SqlMoney`|**Decimal，可為 Null\<十進位 >**|  
 |`sql_variant`|無|`Object`|  
 |`table`|無|無|  
 |`text`|無|無|  
-|`time`|無|**TimeSpan，可為 Null\<TimeSpan >**|  
+|`time`|無|**時間範圍，可為 Null\<TimeSpan >**|  
 |`timestamp`|無|無|  
-|`tinyint`|`SqlByte`|**可為 Null 位元組\<位元組 >**|  
+|`tinyint`|`SqlByte`|**位元組，可為 Null\<位元組 >**|  
 |`uniqueidentifier`|`SqlGuid`|**Guid，可為 Null\<Guid >**|  
 |`User-defined type(UDT)`|無|繫結到相同組件或相依組件中之使用者定義型別的相同類別。|  
 |**varbinary**|`SqlBytes, SqlBinary`|`Byte[]`|  
-|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**位元組、 Byte []，可為 Null\<位元組 >**|  
+|`varbinary(1), binary(1)`|`SqlBytes, SqlBinary`|**byte、 Byte []、 Nullable\<位元組 >**|  
 |`varchar`|無|無|  
 |`xml`|`SqlXml`|無|  
   

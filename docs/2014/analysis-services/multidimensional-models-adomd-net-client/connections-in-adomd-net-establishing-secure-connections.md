@@ -1,5 +1,5 @@
 ---
-title: 建立安全 Connections in ADOMD.NET |Microsoft 文件
+title: 建立在 ADOMD.NET 中的安全連線 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - security [ADOMD.NET]
 ms.assetid: b084d447-1456-45a4-8e0e-746c07d7d6fd
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dd860308d9e4e7f7ed17072572594d6b8aaeeb70
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d97079ca400d92502cf3ff217137eb6f32d1920d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36032010"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37180855"
 ---
 # <a name="establishing-secure-connections-in-adomdnet"></a>在 ADOMD.NET 中建立安全連接
   在 ADOMD.NET 中使用連接時，用於連接的安全性方法，端視您呼叫 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> 的 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> 方法時所使用的連接字串之 `ProtectionLevel` 屬性值而定。  
@@ -37,8 +37,8 @@ ms.locfileid: "36032010"
 |--------------------|---------------------------|  
 |*未經驗證的連接*<br /> 未經驗證的連接不會執行任何形式的驗證。 這種連接代表最廣泛支援，但最不安全的連接形式。|`None`|  
 |*已驗證的連接*<br /> 未驗證的連接會驗證正在建立連接的使用者，但是不會保護其他通訊的安全。 這種連接非常有用，因為您可以建立使用者的識別或是連接到分析資料來源的應用程式。|`Connect`|  
-|*帶正負號的連線*<br /> 簽署的連接會驗證正在要求連接的使用者，並確定不會修改傳輸。 當必須驗證傳輸資料的驗證時，這種連接非常有用。 不過，簽署連接只能防止資料封包的內容免於遭到修改。 在傳輸中仍然可以檢視內容。 **注意：** XML for Analysis 提供者所提供只支援帶正負號的連接[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|`Pkt Integrity` 或 `PktIntegrity`|  
-|*加密的連接*<br /> 加密的連接是 ADOMD.NET 使用的預設連接類型。 這種連接會驗證正在要求連接的使用者，然後也會加密傳輸的資料。 加密的連接是 ADOMD.NET 可以建立的最安全之連接形式。 無法檢視或修改資料封包的內容，因此可在傳輸期間保護資料。 **注意：** 才支援 XML for Analysis 提供者所提供的加密的連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|`Pkt Privacy` 或 `PktPrivacy`|  
+|*帶正負號的連線*<br /> 簽署的連接會驗證正在要求連接的使用者，並確定不會修改傳輸。 當必須驗證傳輸資料的驗證時，這種連接非常有用。 不過，簽署連接只能防止資料封包的內容免於遭到修改。 在傳輸中仍然可以檢視內容。 **注意︰** 帶正負號的連線才支援 XML for Analysis 提供者所提供[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|`Pkt Integrity` 或 `PktIntegrity`|  
+|*加密的連接*<br /> 加密的連接是 ADOMD.NET 使用的預設連接類型。 這種連接會驗證正在要求連接的使用者，然後也會加密傳輸的資料。 加密的連接是 ADOMD.NET 可以建立的最安全之連接形式。 無法檢視或修改資料封包的內容，因此可在傳輸期間保護資料。 **注意︰** 加密的連線才支援 XML for Analysis 提供者所提供[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。|`Pkt Privacy` 或 `PktPrivacy`|  
   
  不過，並非所有的安全性等級都可供所有種類的連接使用。  
   
@@ -54,9 +54,9 @@ ms.locfileid: "36032010"
 |ProtectionLevel 值|是否可與 TCP 連接搭配使用？|結果|  
 |---------------------------|------------------------------|-------------|  
 |`None`|是|指定未驗證的連接。<br /><br /> TCP 資料流是提供者所要求，但是對於要求資料流的使用者，則是未執行任何形式的驗證。|  
-|`Connect`|是|指定驗證的連接。<br /><br /> TCP 資料流是提供者所要求，然後會針對伺服器來驗證要求資料流的使用者之安全性內容：<br /><br /> -如果驗證成功，會不採取其他任何動作。<br />-如果驗證失敗，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件中斷連線多維度資料來源，並擲回例外狀況。<br /><br /> 在驗證成功或是失敗之後，會處置用以驗證連接的安全性內容。|  
-|`Pkt Integrity` 或 `PktIntegrity`|是|指定簽署的連接。<br /><br /> TCP 資料流是提供者所要求，然後會針對伺服器來驗證要求資料流的使用者之安全性內容：<br /><br /> -如果驗證成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件會關閉現有的 TCP 串流並開啟帶正負號的 TCP 資料流來處理所有要求。 每個對於資料或是中繼資料的要求，都會使用之前用以開啟連接的安全性內容來驗證。 此外，會數位簽署每個封包以確定未使用任何方式來變更 TCP 封包的裝載。<br />-如果驗證失敗，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件中斷連線多維度資料來源，並擲回例外狀況。|  
-|`Pkt Privacy` 或 `PktPrivacy`|是|指定加密的連接。 **注意：** 您也可以指定加密的連接不設定`ProtectionLevel`連接字串中的屬性。 <br /><br /> TCP 資料流是提供者所要求，然後會針對伺服器來驗證要求資料流的使用者之安全性內容：<br /><br /> -如果驗證成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件會關閉現有的 TCP 串流並開啟加密的 TCP 資料流來處理所有要求。 每個對於資料或是中繼資料的要求，都會使用之前用以開啟連接的安全性內容來驗證。 此外，會使用提供者與多維度資料來源支援的最高加密方法，來加密每個 TCP 封包的裝載。<br />-如果驗證失敗，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件中斷連線多維度資料來源，並擲回例外狀況。|  
+|`Connect`|是|指定驗證的連接。<br /><br /> TCP 資料流是提供者所要求，然後會針對伺服器來驗證要求資料流的使用者之安全性內容：<br /><br /> -如果驗證成功，則會不採取任何其他動作。<br />-如果驗證失敗，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>從多維度資料來源中斷連線的物件，並擲回例外狀況。<br /><br /> 在驗證成功或是失敗之後，會處置用以驗證連接的安全性內容。|  
+|`Pkt Integrity` 或 `PktIntegrity`|是|指定簽署的連接。<br /><br /> TCP 資料流是提供者所要求，然後會針對伺服器來驗證要求資料流的使用者之安全性內容：<br /><br /> -如果驗證成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件會關閉現有的 TCP 資料流，並開啟簽署的 TCP 資料流來處理所有要求。 每個對於資料或是中繼資料的要求，都會使用之前用以開啟連接的安全性內容來驗證。 此外，會數位簽署每個封包以確定未使用任何方式來變更 TCP 封包的裝載。<br />-如果驗證失敗，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>從多維度資料來源中斷連線的物件，並擲回例外狀況。|  
+|`Pkt Privacy` 或 `PktPrivacy`|是|指定加密的連接。 **注意︰** 您也可以指定加密的連線未設定`ProtectionLevel`連接字串中的屬性。 <br /><br /> TCP 資料流是提供者所要求，然後會針對伺服器來驗證要求資料流的使用者之安全性內容：<br /><br /> -如果驗證成功，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>物件會關閉現有的 TCP 資料流，並開啟加密的 TCP 資料流來處理所有要求。 每個對於資料或是中繼資料的要求，都會使用之前用以開啟連接的安全性內容來驗證。 此外，會使用提供者與多維度資料來源支援的最高加密方法，來加密每個 TCP 封包的裝載。<br />-如果驗證失敗，<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>從多維度資料來源中斷連線的物件，並擲回例外狀況。|  
   
 ### <a name="using-windows-integrated-security-for-the-connection"></a>針對連接使用 Windows 整合式安全性  
  Windows 整合式安全性是建立和保護 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體連接最安全的方法。 Windows 整合式安全性不會在驗證處理期間顯示安全性認證，例如使用者名稱或是密碼，但是會改用目前執行的處理序之安全性識別碼來建立識別。 對於大部分的用戶端應用程式，這個安全性識別碼代表目前登入的使用者之識別。  

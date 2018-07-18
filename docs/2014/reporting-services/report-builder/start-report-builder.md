@@ -1,5 +1,5 @@
 ---
-title: 啟動報表產生器 （報表產生器） |Microsoft 文件
+title: 啟動報表產生器 （報表產生器） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder, launching
 - launching Report Builder
@@ -16,27 +16,27 @@ helpviewer_keywords:
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
 caps.latest.revision: 50
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: bb09858869f76fd32a1e05151eef48870f96f68a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: c2802b0ed89de430e892baacdd8ec3dfce8485c1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36137027"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37227008"
 ---
 # <a name="start-report-builder-report-builder"></a>啟動報表產生器 (報表產生器)
-  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包括單機版和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的報表產生器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可以搭配在原生模式或 SharePoint 整合模式下安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
+  [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 包括單機和[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]版本的報表產生器。 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本可以搭配在原生模式或 SharePoint 整合模式下安裝的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
   
 > [!NOTE]  
 >  報表產生器無法安裝在 Itanium 64 型電腦上。 這適用於[!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)]和單機版本報表產生器。  
   
  如果開啟之 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 版本的報表產生器為舊版的報表產生器，請連絡可以更新報表管理員和 SharePoint 網站的管理員來使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本的報表產生器。  
   
- 您也可以在已發行至 SharePoint 的 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 活頁簿上使用 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 版本的報表產生器建立報表。 如需有關使用報表產生器與[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，請參閱[使用 PowerPivot 資料建立 Reporting Services 報表](http://go.microsoft.com/fwlink/?LinkId=185238)technet.microsoft.com 上的。  
+ 您也可以在已發行至 SharePoint 的 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 活頁簿上使用 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 版本的報表產生器建立報表。 如需有關使用使用報表產生器[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]，請參閱 <<c2> [ 使用 PowerPivot 資料建立 Reporting Services 報表](http://go.microsoft.com/fwlink/?LinkId=185238)technet.microsoft.com 上的。  
   
- 若要啟動報表產生器從獨立**啟動**功能表上，您的本機電腦，您或系統管理員必須安裝報表產生器直接在您的電腦上可供您使用此工具之前。 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時不會安裝單機版本；您必須另外進行下載與安裝。 若要下載報表產生器，請參閱[Microsoft® SQL Server® 2012年報表產生器](http://go.microsoft.com/fwlink/?LinkId=401502)。  
+ 若要啟動報表產生器從獨立**啟動** 功能表上，您的本機電腦，您或系統管理員必須安裝報表產生器直接在您的電腦上可供您使用此工具之前。 安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 時不會安裝單機版本；您必須另外進行下載與安裝。 若要下載報表產生器，請參閱[Microsoft® SQL Server® 2012年報表產生器](http://go.microsoft.com/fwlink/?LinkId=401502)。  
   
 ### <a name="to-start-report-builder-clickonce-from-report-manager"></a>若要從報表管理員啟動報表產生器 ClickOnce  
   
@@ -68,11 +68,11 @@ ms.locfileid: "36137027"
   
      報表產生器隨即開啟，而且您可以在報表伺服器上建立報表或開啟報表。  
   
-     **請注意**如果**新文件**功能表未列出**報表產生器報表**，**報表產生器模型**，和**的報表資料來源**選項，其內容類型需要加入至 SharePoint 文件庫。 如需詳細資訊，請參閱[將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?LinkId=154888)上msdn.microsoft.com。  
+     **附註**如果**新的文件**功能表未列出**報表產生器報表**，**報表產生器模型**，以及**報表資料來源**選項，其內容類型必須可以加入至 SharePoint 文件庫。 如需詳細資訊，請參閱 <<c0> [ 將報表伺服器內容類型加入至文件庫&#40;以 SharePoint 整合模式的 Reporting Services&#41; ](../add-reporting-services-content-types-to-a-sharepoint-library.md)中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][線上叢書 》](http://go.microsoft.com/fwlink/?LinkId=154888)上msdn.microsoft.com。</c0>  
   
 ### <a name="to-start-report-builder-stand-alone-from-the-start-menu"></a>若要從開始功能表獨立啟動報表產生器  
   
-1.  在 [開始] 功能表上按一下**所有程式**，然後按一下  [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] **報表產生器**。  
+1.  在 [開始] 功能表中，按一下 **所有程式**，然後按一下[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]**報表產生器**。  
   
 2.  按一下 [報表產生器]  。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36137027"
   
 4.  若要開啟儲存於您本機電腦或報表伺服器上的現有報表，請按一下左上角的 SQL Server 圖示，然後按一下 [開啟]。  
   
-     如果您沒有看到報表伺服器中的現有伺服器清單，請關閉**開啟報表**對話方塊，然後按一下**連接**底部的 報表產生器連接到伺服器。  
+     如果您沒有看到報表伺服器中的現有伺服器清單，請關閉**開啟報表**對話方塊，然後按一下**Connect**底部的 報表產生器連接到伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 中的報表產生器](report-builder-in-sql-server-2016.md)  

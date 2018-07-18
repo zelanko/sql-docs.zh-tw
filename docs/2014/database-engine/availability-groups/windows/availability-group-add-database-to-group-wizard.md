@@ -1,14 +1,13 @@
 ---
-title: 使用將資料庫加入至可用性群組精靈 (SQL Server Management Studio) |Microsoft 文件
+title: 使用將資料庫加入至可用性群組精靈 (SQL Server Management Studio) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 caps.latest.revision: 23
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 2eae2dbc1f6031b18f6edf3a92e65d05d56b4ff2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3900ee843069adb8775497168069716e68eea352
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37243498"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將資料庫加入至可用性群組] 精靈 (SQL Server Management Studio)
   使用 [將資料庫加入至可用性群組精靈] 可將一個或多個資料庫加入現有的 AlwaysOn 可用性群組。  
@@ -51,7 +50,7 @@ ms.locfileid: "36145229"
   
 -   如果資料庫已加密，甚至包含資料庫加密金鑰 (DEK)，您就無法使用 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 或 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] ，將資料庫加入至可用性群組。 即使加密的資料庫已經解密，其記錄備份可能包含加密資料。 在此情況中，資料庫的完整初始資料同步處理可能會失敗。 這是因為還原記錄作業可能需要資料庫加密金鑰 (DEK) 所使用的憑證，而該憑證可能無法使用。  
   
-     **若要讓解密的資料庫能夠透過加入至可用性群組精靈：**  
+     **若要讓解密的資料庫能夠加入至可用性群組精靈：**  
   
     1.  建立主要資料庫的記錄備份。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "36145229"
   
 3.  以滑鼠右鍵按一下您要加入資料庫的可用性群組，並選取 [加入資料庫] 命令。 這個命令會啟動 [將資料庫加入至可用性群組] 精靈。  
   
-4.  在 **[選取資料庫]** 頁面上，選取一個或多個資料庫。 如需詳細資訊，請參閱[選取資料庫頁面&#40;新增可用性群組精靈加入資料庫精靈&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)。  
+4.  在 **[選取資料庫]** 頁面上，選取一個或多個資料庫。 如需詳細資訊，請參閱 [ 選取 [資料庫] 頁面&#40;新可用性群組精靈 / 加入資料庫精靈&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)。  
   
 5.  在 **[選取初始資料同步處理]** 頁面上，選擇您要如何建立新的次要資料庫並將它聯結至可用性群組。 選擇下列其中一個選項：  
   
@@ -110,25 +109,25 @@ ms.locfileid: "36145229"
   
          如果要使用您自己的主要資料庫的資料庫和記錄備份，請選取此選項。 如需詳細資訊，請參閱[於 AlwaysOn 次要資料庫啟動資料移動 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)。  
   
-     如需詳細資訊，請參閱[選取初始資料同步處理頁面&#40;AlwaysOn 可用性群組精靈&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 選取初始資料同步處理頁面&#40;AlwaysOn 可用性群組精靈&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md)。</c0>  
   
 6.  在 **[連接到現有次要複本]** 頁面上，如果裝載此可用性群組之可用性複本的所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體都是在相同使用者帳戶下以服務方式執行，請按一下 **[全部連接]**。 如果有任何伺服器執行個體是在不同的帳戶下以服務方式執行，請按一下每個伺服器執行個體名稱右邊的個別 **[連接]** 按鈕。  
   
-     如需詳細資訊，請參閱[連接到現有次要複本頁面&#40;加入複本精靈和加入資料庫精靈&#41;](connect-to-existing-secondary-replicas-page.md)。  
+     如需詳細資訊，請參閱 [ 連接到現有次要複本頁面&#40;新增複本精靈及 [新增資料庫精靈]&#41;](connect-to-existing-secondary-replicas-page.md)。  
   
 7.  **[驗證]** 頁面會驗證您在此精靈中指定的值是否符合 [新增可用性群組精靈] 的需求。 若要進行變更，您可以按 **[上一步]** 返回先前的精靈頁面，以變更一個或多個值。 然後按 **[下一步]** 返回 **[驗證]** 頁面，再按一下 **[重新執行驗證]**。  
   
-     如需詳細資訊，請參閱[驗證頁面&#40;AlwaysOn 可用性群組精靈&#41;](validation-page-always-on-availability-group-wizards.md)。  
+     如需詳細資訊，請參閱 [ 驗證頁面的&#40;AlwaysOn 可用性群組精靈&#41;](validation-page-always-on-availability-group-wizards.md)。  
   
 8.  在 **[摘要]** 頁面上，檢閱您為新的可用性群組的選擇。 若要進行變更，請按 **[上一步]** 返回相關頁面。 進行變更之後，請按 **[下一步]** 返回 **[摘要]** 頁面。  
   
-     如需詳細資訊，請參閱[摘要頁面&#40;AlwaysOn 可用性群組精靈&#41;](summary-page-always-on-availability-group-wizards.md)。  
+     如需詳細資訊，請參閱 < [[摘要] 頁面&#40;AlwaysOn 可用性群組精靈&#41;](summary-page-always-on-availability-group-wizards.md)。  
   
      如果您對所做的選擇感到滿意時，可以選擇按一下 [指令碼]，建立精靈將執行之步驟的指令碼。 然後，若要建立及設定新的可用性群組，請按一下 **[完成]**。  
   
 9. **[進度]** 頁面會顯示建立可用性群組之步驟的進度 (設定端點、建立可用性群組，並將次要複本加入群組中)。  
   
-     如需詳細資訊，請參閱[進度頁面&#40;AlwaysOn 可用性群組精靈&#41;](progress-page-always-on-availability-group-wizards.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 進度頁面&#40;AlwaysOn 可用性群組精靈&#41;](progress-page-always-on-availability-group-wizards.md)。</c0>  
   
 10. 當這些步驟完成時， **[結果]** 頁面會顯示每個步驟的結果。 如果所有這些步驟都成功，表示新的可用性群組已完成設定。 如果任何步驟導致錯誤，您可能需要手動完成設定。 如需有關給定錯誤原因的詳細資訊，請按一下 **[結果]** 資料行中相關聯的 [錯誤] 連結。  
   
@@ -146,7 +145,7 @@ ms.locfileid: "36145229"
   
 ## <a name="see-also"></a>另請參閱  
  [AlwaysOn 可用性群組概觀&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [必要條件、 限制和建議的 AlwaysOn 可用性群組&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [必要條件、 限制和建議，AlwaysOn 可用性群組的&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [將資料庫新增至可用性群組 &#40;SQL Server&#41;](availability-group-add-a-database.md)   
  [於 AlwaysOn 次要資料庫啟動資料移動&#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
  [將資料庫加入至可用性群組 &#40;SQL Server&#41;](availability-group-add-a-database.md)  

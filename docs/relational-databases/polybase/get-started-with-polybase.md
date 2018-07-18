@@ -3,8 +3,6 @@ title: 開始使用 PolyBase | Microsoft Docs
 ms.custom: ''
 ms.date: 08/15/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: polybase
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-caps.latest.revision: 78
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfde818a22771ba7bfa08259e3a34eff68fb1aea
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 4542219cc2597ed86157a41e22ebeb8b25b9945b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334669"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37233928"
 ---
 # <a name="get-started-with-polybase"></a>開始使用 PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

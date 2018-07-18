@@ -1,7 +1,7 @@
 ---
-title: sqlsrv_get_field | Microsoft Docs
+title: sqlsrv_get_field |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -21,12 +21,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c1396662cc17d54899eb697694c452e663eaf533
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c097a8735033be257dae8bb51d1946758f5936ae
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309267"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042678"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,6 @@ ms.locfileid: "35309267"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])  
 ```  
   
@@ -45,18 +44,18 @@ sqlsrv_get_field( resource $stmt, int $fieldIndex [, int $getAsType])
   
 *$fieldIndex*：要擷取之欄位的索引。 索引從零開始。  
   
-*$getAsType* [選用]: A **SQLSRV**常數 (**SQLSRV_PHPTYPE_\***) 可決定傳回的資料的 PHP 資料類型。 如需支援的資料類型的資訊，請參閱[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 若未指定傳回類型，將會傳回預設 PHP 類型。 如需關於預設 PHP 類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 如需關於指定 PHP 資料類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+*$getAsType* [選擇性]：一個 **SQLSRV** 常數 (**SQLSRV_PHPTYPE_&#x2a;**)，可決定傳回資料的 PHP 資料類型。 如需支援之資料類型的資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 若未指定傳回類型，將會傳回預設 PHP 類型。 如需關於預設 PHP 類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 如需關於指定 PHP 資料類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 ## <a name="return-value"></a>傳回值  
 欄位資料。 您可以使用 *$getAsType* 參數，指定傳回資料的 PHP 資料類型。 若未指定傳回資料類型，將會傳回預設 PHP 資料類型。 如需關於預設 PHP 類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 如需關於指定 PHP 資料類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
-## <a name="remarks"></a>備註  
-組合**sqlsrv_fetch**和**sqlsrv_get_field**提供順向的資料存取。  
+## <a name="remarks"></a>Remarks  
+結合 **sqlsrv_fetch** 和 **sqlsrv_get_field**，可提供僅限轉送的資料存取。  
   
-組合**sqlsrv_fetch**/**sqlsrv_get_field**會載入只能有一個欄位的結果集資料列指令碼記憶體，並允許指定 PHP 傳回類型規格。 (如需如何指定 PHP 傳回類型資訊，請參閱[How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。)函數的此一組合，也可讓您以串流的形式擷取資料。 (如需擷取資料當做資料流的詳細資訊，請參閱[使用 SQLSRV 驅動程式以資料流形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)。)  
+結合 **sqlsrv_fetch**/**sqlsrv_get_field**，會僅將結果集資料列的一個欄位載入指令碼記憶體中，並允許指定 PHP 傳回類型。 (如需如何指定 PHP 傳回類型的資訊，請參閱[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)。)函數的此一組合，也可讓您以串流的形式擷取資料。 (如需以資料流形式擷取資料的資訊，請參閱[使用 SQLSRV 驅動程式以資料流形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)。)  
   
 ## <a name="example"></a>範例  
-下列範例會擷取包含產品評論和評論者名稱的資料列。 若要從結果集內擷取資料，請使用 **sqlsrv_get_field** 。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會擷取包含產品評論和評論者名稱的資料列。 若要從結果集內擷取資料，請使用 **sqlsrv_get_field** 。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

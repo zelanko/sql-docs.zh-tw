@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
 - shared schedules [Reporting Services]
@@ -25,27 +25,27 @@ ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c4ac89d35cfe118cb82e945ef48d87c24b56abed
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a5cecee40fb3eaee2bd481b38a54cbcfa686eb0c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36031373"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37317875"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   使用本主題可讓您了解如何建立、修改和刪除排程。  
   
  本主題內容：  
   
--   [共用排程的管理概觀](#bkmk_overview)  
+-   [共用排程的管理的概觀](#bkmk_overview)  
   
--   [建立及管理共用的排程 （SharePoint 模式）](#bkmk_sharepoint)  
+-   [建立和管理共用的排程 （SharePoint 模式）](#bkmk_sharepoint)  
   
--   [建立及管理共用的排程 （原生模式）](#bkmk_native)  
+-   [建立和管理共用的排程 （原生模式）](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a> 共用排程的管理概觀  
- 若要管理原生模式的共用的排程，請使用報表管理員中的 [排程] 頁面或 [共用排程] 資料夾中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
+##  <a name="bkmk_overview"></a> 共用排程的管理的概觀  
+ 若要管理原生模式的共用的排程，請使用在報表管理員中的 [排程] 頁面或 [共用排程] 資料夾中的[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。 如果是 SharePoint 模式，請使用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 服務應用程式的管理頁面。  
   
  您可以檢視所有為報表伺服器定義的共用排程、暫停與繼續排程 (只能在報表管理員上進行)，以及選取要修改或刪除的排程。 [共用排程] 頁面中會有每一個排程狀態的下列摘要資訊：頻率、擁有者、到期日與狀態。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36031373"
   
 4.  選取排程，然後按一下 **[刪除]**。  
   
-##  <a name="bkmk_native"></a> 建立及管理共用的排程 （原生模式）  
+##  <a name="bkmk_native"></a> 建立和管理共用的排程 （原生模式）  
  您必須使用報表管理員中的 [排程] 頁面或 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中的 [共用排程] 資料夾，手動刪除共用排程。 如果您刪除使用中的共用排程，所有的參考都會以報表特定排程取代。  
   
  當您刪除報表或訂閱，或者選擇不同的方法來執行報表或訂閱時，系統就會刪除報表和訂閱特有的排程。 例如，選擇 [永遠以最新的資料執行此報表] 將會刪除您建立為以報表執行快照集的方式執行報表的報表特有排程。  
@@ -176,7 +176,7 @@ ms.locfileid: "36031373"
   
 2.  在 [物件總管] 中，展開報表伺服器節點。  
   
-3.  共用排程] 資料夾中，以滑鼠右鍵按一下，然後按一下 [**新排程**。 就會顯示 **[新增共用排程]** 對話方塊的 [一般] 頁面。  
+3.  共用排程 資料夾中，以滑鼠右鍵按一下，然後按一下**新的排程**。 就會顯示 **[新增共用排程]** 對話方塊的 [一般] 頁面。  
   
      若要修改現有的共用排程，請展開 [共用排程] 資料夾、以滑鼠右鍵按一下您要修改的排程，然後按一下 [屬性]。  
   

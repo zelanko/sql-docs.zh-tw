@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 的版本和元件 |Microsoft 文件
+title: SQL Server 2014 的版本和元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Enterprise Edition [SQL Server]
 - Developer Edition [SQL Server]
@@ -34,25 +34,25 @@ helpviewer_keywords:
 - Setup [SQL Server]
 ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 caps.latest.revision: 111
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 450c54feb6d8e360ca812524778762751318aab7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 0c27bcd84ddb567eaab1645fcee75f68d513855b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36033815"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150109"
 ---
 # <a name="editions-and-components-of-sql-server-2014"></a>SQL Server 2014 的版本和元件
   安裝需求根據應用程式的需要而異。 不同的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本可配合組織和個人的獨特效能、執行階段和價格需求。 安裝的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件也將取決於您的特定需求。 下列章節幫助您了解如何在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的可用版本和元件之間做出最好的選擇。  
   
 ## <a name="principal-editions-of-includesscurrentincludessscurrent-mdmd"></a>主要版本 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- 下表描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要版本。 如需詳細資訊，請參閱[支援的 SQL Server 2014 版本的功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ 下表描述 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要版本。 如需詳細資訊，請參閱[支援的 SQL Server 2014 的版本功能](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本|定義|  
 |---------------------------------------|----------------|  
-|Enterprise (64 位元和 32 位元)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition 這套頂級產品不但提供完整的高階資料中心功能，而且具備急速效能、不受限制的虛擬化以及端對端商業智慧 - 為關鍵任務工作負載提供最高的服務等級，並且讓使用者獲得資料洞察能力。|  
+|Enterprise (64 位元和 32 位元)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise Edition 這套頂級供應項目不但提供完整的高階資料中心功能，而且具備急速效能、不受限制的虛擬化以及端對端商業智慧 - 為關鍵任務工作負載提供最高的服務等級，並且讓使用者獲得資料洞察能力。|  
 |Business Intelligence (64 位元和 32 位元)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Business Intelligence Edition 提供了一套完整的平台，讓組織能夠建置並部署安全、可擴充且可管理的 BI 方案。 此外，它提供了創新的功能，例如瀏覽器架構的資料探索和視覺效果、功能強大的資料結合功能，以及強化的整合管理。|  
 |Standard (64 位元和 32 位元)|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Standard Edition 針對部門和小型組織提供基本的資料管理與商業智慧資料庫來執行應用程式，並且支援內部部署和雲端的一般開發工具 - 以最少的 IT 資源提供最有效率的資料庫管理。|  
   
@@ -80,7 +80,7 @@ ms.locfileid: "36033815"
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>搭配用戶端/伺服器應用程式使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  您可以在執行用戶端/伺服器應用程式的電腦上只安裝 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用戶端元件，這些應用程式會直接連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的執行個體。 如果您要在資料庫伺服器上管理 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的執行個體，或您打算開發 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 應用程式，則用戶端元件安裝也是一個不錯的選項。  
   
- 用戶端工具選項會安裝下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能：回溯相容性元件、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]、連接元件、管理工具、軟體開發套件和《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》元件。 如需詳細資訊，請參閱[從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。  
+ 用戶端工具選項會安裝下列 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 功能：回溯相容性元件、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]、連接元件、管理工具、軟體開發套件和《 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》元件。 如需詳細資訊，請參閱 <<c0> [ 從安裝精靈安裝 SQL Server 2014&#40;安裝&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)。</c0>  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 元件之間作決定  
  使用 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝精靈的 [特徵選取] 頁面來選取要併入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]安裝的元件。 依預設，不會選取樹狀結構中的任何功能。  
@@ -89,7 +89,7 @@ ms.locfileid: "36033815"
   
 |伺服器元件|描述|  
 |-----------------------|-----------------|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含[!INCLUDE[ssDE](../includes/ssde-md.md)]，用於儲存、 處理和保護資料、 複寫、 全文檢索搜尋、 工具，來管理關聯式和 XML 資料的核心服務和[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)](DQS) 伺服器。|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 包含[!INCLUDE[ssDE](../includes/ssde-md.md)]，來儲存、 處理和保護資料、 複寫、 全文檢索搜尋、 工具，來管理關聯式和 XML 資料的核心服務和[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)](DQS) 伺服器。|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 包括用來建立及管理線上分析處理 (OLAP) 和資料採礦應用程式的工具。|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 包括伺服器和用戶端元件，可用來建立、管理和部署表格式、矩陣、圖形化和自由形式報表。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 也是一個可延伸的平台，可讓您用來開發報表應用程式。|  
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 是一組圖形化工具和可程式化物件，用來移動、複製和轉換資料。 其中還包括 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] 的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)](DQS) 元件。|  

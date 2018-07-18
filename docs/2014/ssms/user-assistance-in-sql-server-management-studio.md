@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 caps.latest.revision: 29
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b6c3da6431e278ff05548b0b93e2847335c4e50b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 80c0a03a6eeaa33977e5152a4b4da24b17abf8b7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36035563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37212478"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio 中的使用者協助
   您可以利用 [說明] 功能表和《[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 線上叢書》，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中取得使用者輔助程式。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的 [說明] 功能表提供了幾個不同的路徑，供您取得 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的相關資訊。 您也可以利用它來存取 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 社群和 MSDN Online 資源，先前的 [說明] 環境並未提供這項功能。 另外，您現在也可以將 [說明] 環境設定成在 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境內啟動，或在它自己的相關外部視窗中啟動。  
@@ -48,7 +48,7 @@ ms.locfileid: "36035563"
   
      將使用者主題書籤儲存起來，以便日後方便存取。  
   
- [如何使用輔助說明] \([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 說明) 會將使用者連結到說明檢視器的相關文件集，但主題是在《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]。 [說明] 主題的 [說明] 集合加入線上叢書 》 集合的相關資訊，請參閱[新增或移除的 SQL Server 的產品文件](../2014-toc/books-online-for-sql-server-2014.md)。  
+ [如何使用輔助說明] \([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer 說明) 會將使用者連結到說明檢視器的相關文件集，但主題是在《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》以外的集合中。 如需有關說明檢視器的資訊，請參閱《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》之 [說明] 功能表中的 [如何使用輔助說明]。 如需說明的主題 [說明] 集合加入線上叢書集合的資訊，請參閱[新增或移除的 SQL Server 的產品文件](../2014-toc/books-online-for-sql-server-2014.md)。  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online 和 SQL Server 社群  
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 中的說明也提供了若干方式，供使用者連絡 Web 中的 MSDN Online 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]焦點社群，以取得相關資訊。 您可以：  

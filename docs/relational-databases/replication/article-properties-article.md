@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12c255b06cd56ff27f1ada7f3ca0f0fa36113407
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fa58456bf72ab50dec1ff67a40c10be19b0ad45
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956843"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37354260"
 ---
 # <a name="article-properties---ltarticlegt"></a>發行項屬性 - &lt;發行項&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,8 @@ ms.locfileid: "32956843"
   
 ## <a name="options-for-all-publications"></a>所有發行集的選項  
  **[複製資料表資料分割結構描述]** 和 **[複製索引資料分割結構描述]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入資料表資料分割和索引資料分割，這與透過資料列和資料行篩選提供的資料分割複寫不相關。 **[複製資料表資料分割結構描述]** 和 **[複製索引資料分割結構描述]** 選項，會指定是否應將資料分割結構描述複製到訂閱者。 如需有關資料分割的詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入資料表資料分割和索引資料分割，這與透過資料列和資料行篩選提供的資料分割複寫不相關。 **[複製資料表資料分割結構描述]** 和 **[複製索引資料分割結構描述]** 選項，會指定是否應將資料分割結構描述複製到訂閱者。 如需有關資料分割的詳細資訊，請參閱＜ [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)＞。  
   
  **轉換資料類型**  
  在訂閱者端建立物件時，決定是否從使用者自訂資料類型轉換為基底資料型別。 使用者定義資料類型包括 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]中導入的使用者定義 CLR 類型。 如果您要將這些資料類型複寫到舊版的 **，請指定** [True] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]值；這可確保訂閱者端能夠正確地處理這些類型。  

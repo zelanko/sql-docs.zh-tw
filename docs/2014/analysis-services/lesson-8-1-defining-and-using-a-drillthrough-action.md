@@ -1,5 +1,5 @@
 ---
-title: 定義和使用鑽研動作 |Microsoft 文件
+title: 定義和使用鑽研動作 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 3498bae6136476a92df3c772263f943b54e7d3a0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7737ab3d7631440010be2fdb3047d7d021b275b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36146194"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37263724"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>定義和使用鑽研動作
   依據事實維度測量事實資料的維度，但卻未正確篩選查詢傳回的資料，可能會降低查詢效能。 為了避免這種情況，您可以定義鑽研動作，以便限制傳回的資料列總數。 這樣做將會大幅改善查詢效能。  
@@ -34,7 +34,7 @@ ms.locfileid: "36146194"
   
      下圖顯示 [Cube 設計師] 的 [動作] 索引標籤。  
   
-     ![動作索引標籤，Cube 設計工具的](../../2014/tutorials/media/l8-action1.gif "動作索引標籤，Cube 設計工具")  
+     ![動作索引標籤，Cube 設計師](../../2014/tutorials/media/l8-action1.gif "Cube 設計師的 [動作] 索引標籤")  
   
 2.  在 [動作] 索引標籤的工具列上，按一下 [新增鑽研動作] 按鈕。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36146194"
   
      ![在 [顯示] 窗格中的空白動作範本](../../2014/tutorials/media/l8-action2.gif "顯示 窗格中的空白動作範本")  
   
-3.  在**名稱**方塊中，此動作的名稱變更`Internet Sales Details Drillthrough Action`。  
+3.  在 **名稱**方塊中，此動作的名稱變更`Internet Sales Details Drillthrough Action`。  
   
 4.  在 [量值群組成員] 清單中，選取 [網際網路銷售]。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "36146194"
   
      ![其他屬性方塊](../../2014/tutorials/media/l8-action4.gif "其他屬性方塊")  
   
-8.  在**最大資料列**方塊中，輸入`10`。  
+8.  在 **最大資料列**方塊中，輸入`10`。  
   
-9. 在**標題**方塊中，輸入`Drillthrough to Order Details…`。  
+9. 在  **Caption**方塊中，輸入`Drillthrough to Order Details…`。  
   
      這些設定會限制傳回的資料列數，指定在用戶端應用程式功能表中所顯示的標題。 下圖顯示 [其他屬性] 方塊中的這些設定。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "36146194"
   
      運送給 Adam Powell 的訂單詳細資料會顯示在 [資料範例檢視器] 中，如下圖所示。 不過，額外附加的詳細資料，有時候是很有用的，例如，訂購日期、截止日期和出貨日期。 在下一個程序中，您要加入這些額外的詳細資料。  
   
-     ![到 Adam Powell 送貨的訂單](../../2014/tutorials/media/l8-action6.gif "到 Adam Powell 送貨的訂單")  
+     ![訂單運送給 Adam Powell](../../2014/tutorials/media/l8-action6.gif "運送給 Adam Powell 的訂單")  
   
 8.  關閉 Excel/  
   
@@ -108,11 +108,11 @@ ms.locfileid: "36146194"
   
     -   ShipDateKey  
   
-6.  變更**名稱**屬性**訂單日期索引鍵**屬性`Order Date`然後按一下 瀏覽按鈕**名稱資料行**屬性，在**名稱資料行**對話方塊中，選取**日期**做為來源資料表並選取 SimpleDate 當做來源資料行。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  變更**名稱**屬性**訂單日期索引鍵**屬性設定為`Order Date`然後按一下 瀏覽按鈕**名稱資料行**屬性，在**名稱資料行**對話方塊中，選取**日期**做為來源資料表並選取 SimpleDate 當做來源資料行。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  變更**名稱**屬性**到期的日期索引鍵**屬性`Due Date`，再，以使用相同的方法為**訂單日期索引鍵**屬性，請變更**名稱資料行**這個屬性的屬性**Date.SimpleDate (WChar)**。  
+7.  變更**名稱**屬性**到期的日期索引鍵**屬性設定為`Due Date`，然後再，來使用相同的方法**訂單日期索引鍵**屬性，請變更**名稱資料行**這個屬性的屬性**Date.SimpleDate (WChar)**。  
   
-8.  變更**名稱**屬性**出貨日期索引鍵**屬性`Ship Date`，然後變更**名稱資料行**這個屬性的屬性**Date.SimpleDate (WChar)**。  
+8.  變更**名稱**屬性**出貨日期索引鍵**屬性設定為`Ship Date`，然後變更**名稱資料行**至這個屬性的**Date.SimpleDate (WChar)**。  
   
 9. 針對 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 教學課程 Cube，切換到 [Cube 設計師] 的 [動作] 索引標籤。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "36146194"
   
      傳送給 Adam Powell 的訂購詳細資料會顯示在暫存的工作表中。 這項資料包括項目描述、訂單號碼、訂購日期、截止日期和出貨日期資訊，如下圖所示。  
   
-     ![到 Adam Powell 送貨的訂單](../../2014/tutorials/media/l8-action8.gif "到 Adam Powell 送貨的訂單")  
+     ![訂單運送給 Adam Powell](../../2014/tutorials/media/l8-action8.gif "運送給 Adam Powell 的訂單")  
   
 ## <a name="next-lesson"></a>下一課  
  [第 9 課：定義檢視方塊和翻譯](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  

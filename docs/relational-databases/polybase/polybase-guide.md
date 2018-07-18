@@ -2,8 +2,6 @@
 title: PolyBase 指南 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: polybase
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f671dbae59d7187366a337a93336cbf3aae944cb
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: b94cc6a8a906721c43f1da66867d954fa8f9b50b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333979"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299058"
 ---
 # <a name="polybase-guide"></a>PolyBase 指南
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]

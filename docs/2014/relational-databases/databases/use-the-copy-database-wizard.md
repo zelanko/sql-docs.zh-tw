@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.cdw.transfermethod.f1
 - sql12.swb.cdw.welcome.f1
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: 61
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e22f3ae3949c47c21423e855e5d4d35cbbe914fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 27352ec11f14042266d17babefda47055a57a9ec
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36023357"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37199548"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
-  「複製資料庫精靈」可讓您輕鬆地在伺服器之間移動或複製資料庫及其物件，而不需要讓伺服器停機。 您也可以從舊版升級資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此精靈可以執行下列作業：  
+  「複製資料庫精靈」可讓您輕鬆地在伺服器之間移動或複製資料庫及其物件，而不需要讓伺服器停機。 您也可以從舊版升級的資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 使用此精靈可以執行下列作業：  
   
 -   挑選來源和目的地伺服器。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "36023357"
   
      [複製、 移動或升級資料庫](#Copy_Move)  
   
--   **待處理，升級之後：**  
+-   **待處理，在升級之後：**  
   
      [升級 SQL Server 資料庫之後](#FollowUp)  
   
@@ -111,7 +111,7 @@ ms.locfileid: "36023357"
   
 ##  <a name="Copy_Move"></a> 複製、 移動或升級資料庫  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，在 [物件總管] 中展開**資料庫**，以滑鼠右鍵按一下資料庫，指向**工作**，然後按一下 **複製資料庫**。  
+1.  在 [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，請在物件總管] 中展開**資料庫**，以滑鼠右鍵按一下資料庫，指向**工作**，然後按一下 **複製資料庫**。  
   
 2.  從 **[選取來源伺服器]** 頁面，指定要移動或複製之資料庫所在的伺服器，以及輸入登入資訊。 在您選取驗證方法並輸入登入資訊之後，按 **[下一步]** 以建立與來源伺服器的連接。 在整個工作階段中，此連接會保持開啟。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "36023357"
      允許使用者藉由提供連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證使用者名稱和密碼。  
   
      **使用者名稱**  
-     輸入要用來連接的使用者名稱。 此選項才可以使用您選取要使用連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+     輸入要用來連接的使用者名稱。 此選項才可使用您選取要使用連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
   
      **密碼**  
      輸入登入的密碼。 這個選項只有在您選取了使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 驗證連接時才可以使用。  
@@ -148,10 +148,10 @@ ms.locfileid: "36023357"
      允許使用者藉由提供連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證使用者名稱和密碼。  
   
      **使用者名稱**  
-     輸入要用來連接的使用者名稱。 此選項才可以使用您已選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+     輸入要用來連接的使用者名稱。 此選項才可使用您已選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
   
      **密碼**  
-     輸入登入的密碼。 此選項才可以使用您已選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
+     輸入登入的密碼。 此選項才可使用您已選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。  
   
      **下一個**  
      連接到伺服器，並驗證使用者。 此處理序會檢查使用者在選取的電腦上是否擁有以上所列的權限。  
@@ -239,7 +239,7 @@ ms.locfileid: "36023357"
   
      例如:"\\\\*server_name*\C$\Program Files\Microsoft SQL Server\MSSQL110。MSSQLSERVER\MSSQL\Data  
   
-9. 複製資料庫精靈 」 建立[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝來傳送資料庫。 請從**設定封裝**頁面適當地自訂封裝。  
+9. 複製資料庫精靈會建立[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝來傳送資料庫。 請從**設定套件**頁面適當地自訂封裝。  
   
      **封裝位置**  
      顯示 where[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝的寫入。  
@@ -253,7 +253,7 @@ ms.locfileid: "36023357"
      **錯誤記錄檔路徑**  
      提供記錄檔位置的路徑。 只有在已選取文字檔案登入選項時，才能使用此選項。  
   
-10. 從 **[排程封裝]** 頁面，指定您要讓移動或複製作業開始的時間。 如果您不是系統管理員，您必須指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent Proxy 帳戶具有存取權[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 封裝執行子系統。  
+10. 從 **[排程封裝]** 頁面，指定您要讓移動或複製作業開始的時間。 如果您不是系統管理員，您必須指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent Proxy 帳戶可存取[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) 封裝執行子系統。  
   
      **Run immediately**  
      在您按 **[下一步]** 之後，開始移動或複製作業。  
@@ -267,7 +267,7 @@ ms.locfileid: "36023357"
      **Integration Services proxy 帳戶**  
      選取可用的 Proxy 帳戶。 若要排程傳送，至少必須有一個 Proxy 帳戶可供使用者使用，而且帳戶要設定為擁有 **[SQL Server Integration Services 封裝執行]** 子系統的權限。  
   
-     若要建立的 proxy 帳戶[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝執行時，在 [物件總管] 中，展開**SQL Server Agent**，依序展開**Proxy**，以滑鼠右鍵按一下**SSIS 封裝執行**，然後按一下 **新 Proxy**。  
+     若要建立的 proxy 帳戶[!INCLUDE[ssIS](../../includes/ssis-md.md)]封裝執行，在 [物件總管] 中，展開**SQL Server Agent**，展開**Proxy**，以滑鼠右鍵按一下**SSIS 套件執行**，然後按一下**新的 Proxy**。  
   
      **[系統管理員 (sysadmin)]** 固定伺服器角色成員的使用者，可以選取具有必要權限的 **[SQL Server Agent 服務帳戶]** 來執行這個作業步驟。  
   

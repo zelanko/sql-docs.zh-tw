@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTTP connection manager
 - Web site connections [Integration Services]
@@ -19,20 +19,20 @@ ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: d1b2cd536d08df8499e42291fab7470c608fea6d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 02df4c5dff88988bd6a233208646e9eb9a7f0e2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36030829"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37314448"
 ---
 # <a name="http-connection-manager"></a>HTTP 連接管理員
   HTTP 連接讓封裝得以經由使用 HTTP 傳送或接收檔案，存取 Web 伺服器。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所包含的「Web 服務」工作便使用此連接管理員。  
   
  當您將 HTTP 連接管理員加入封裝時，[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 會建立連接管理員，用來在執行階段解析為 HTTP 連接、設定連接管理員屬性，以及將連接管理員加入封裝的 `Connections` 集合。  
   
- `ConnectionManagerType`連接管理員的屬性設定為 `HTTP.`  
+ `ConnectionManagerType`連接管理員屬性設定為 `HTTP.`  
   
  您可以利用下列方式設定 HTTP 連接管理員：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "36030829"
   
 -   [HTTP 連接管理員編輯器&#40;伺服器 頁面&#41;](../http-connection-manager-editor-server-page.md)  
   
--   [HTTP 連接管理員編輯器&#40;Proxy 頁面&#41;](../http-connection-manager-editor-proxy-page.md)  
+-   [HTTP 連接管理員編輯器 &#40;[Proxy] 頁面&#41;](../http-connection-manager-editor-proxy-page.md)  
   
  如需以程式設計方式設定連線管理員的資訊，請參閱 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>。  
   

@@ -1,5 +1,5 @@
 ---
-title: 管理中心的 PowerPivot 伺服器管理和組態 |Microsoft 文件
+title: 管理中心的 PowerPivot 伺服器管理和組態 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 62232430002833de70ecbf1cf76a401324b12174
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 17a0dd962b2cd3bf3515df6151e1ce5d2ed9699b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36145498"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37200288"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>管理中心的 PowerPivot 伺服器管理和組態
   PowerPivot 伺服器管理與組態是由 SharePoint 服務應用程式管理員使用 SharePoint 管理中心所執行。  
@@ -45,9 +45,9 @@ ms.locfileid: "36145498"
  管理中心所提供的頁面會完整指定當您設定應用程式或伺服器時可能設定的所有選項，與 PowerPivot 組態工具或 PowerShell 指令程式相反。 其他方法會將組態工作流程濃縮成較少的步驟，或者需要事先了解如何使用 PowerShell 設定 SharePoint 伺服器。  
   
 ## <a name="related-content"></a>相關內容  
- [使用 Windows PowerShell 的 PowerPivot 組態](power-pivot-configuration-using-windows-powershell.md)  
+ [使用 Windows PowerShell 的 PowerPivot 設定](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot 組態工具](power-pivot-configuration-tools.md)  
+ [PowerPivot 設定工具](power-pivot-configuration-tools.md)  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -55,9 +55,9 @@ ms.locfileid: "36145498"
 |----------|----------|----------------------|  
 |[將 PowerPivot 方案部署到 SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|必要項|這個步驟會安裝方案檔，這些檔案會將程式檔和應用程式頁面加入至伺服器陣列和網站集合。|  
 |[建立並在管理中心設定 PowerPivot 服務應用程式](create-and-configure-power-pivot-service-application-in-ca.md)|必要項|這個步驟會佈建 PowerPivot 系統服務。|  
-|[為在 [管理中心] 網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)|必要項|這個步驟會在網站集合層級開啟 PowerPivot 功能。|  
+|[為在 [管理中心] 的網站集合啟用 PowerPivot 功能整合](activate-power-pivot-integration-for-site-collections-in-ca.md)|必要項|這個步驟會在網站集合層級開啟 PowerPivot 功能。|  
 |[將 MSOLAP.5 新增為 Excel Services 中信任的資料提供者](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|必要項|此步驟會加入 Analysis Services OLE DB 提供者做為 Excel Services 中受信任的提供者。|  
-|[與 SharePoint 2010 的 PowerPivot 資料重新整理](../powerpivot-data-refresh-with-sharepoint-2010.md)|建議|資料重新整理為選擇性，但是建議使用它。 它可讓您將自動更新排程到已發行之 Excel 活頁簿中的 PowerPivot 資料。|  
+|[SharePoint 2010 中的 PowerPivot 資料重新整理](../powerpivot-data-refresh-with-sharepoint-2010.md)|建議|資料重新整理為選擇性，但是建議使用它。 它可讓您將自動更新排程到已發行之 Excel 活頁簿中的 PowerPivot 資料。|  
 |[設定 PowerPivot 無人看管的資料重新整理帳戶&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|建議|這個步驟會佈建特殊目的的帳戶，此帳戶可在伺服器上用來執行資料重新整理作業。|  
 |[設定使用量資料收集的&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|選擇性|預設會設定使用量資料收集。 您可以使用這些步驟來修改預設值。|  
 |[設定專用的資料重新整理或僅查詢處理&#40;PowerPivot for SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|選擇性|PowerPivot 執行個體可以專門處理資料重新整理作業或查詢。 此外，您也可以修改平行資料重新整理作業的預設值。|  

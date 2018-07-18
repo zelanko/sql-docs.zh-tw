@@ -1,12 +1,12 @@
 ---
-title: 資料類型對 ODBC 日期和時間增強功能支援 |Microsoft 文件
+title: 資料類型對 ODBC 日期和時間改善功能的支援 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 970e40843b11679df67de56995606d077b583d1e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702629"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431287"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC 日期和時間增強功能的資料類型支援
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>資料類型對 ODBC 日期和時間改善功能支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -39,7 +39,7 @@ ms.locfileid: "35702629"
   
  下表顯示完整伺服器類型的對應。 請注意，資料表的某些資料格包含兩個項目：在這些情況下，第一個是 ODBC 3.0 值，而第二個是 ODBC 2.0 值。  
   
-|SQL Server 資料類型|SQL 資料類型|ReplTest1|  
+|SQL Server 資料類型|SQL 資料類型|值|  
 |--------------------------|-------------------|-----------|  
 |DATETIME|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
@@ -68,7 +68,7 @@ ms.locfileid: "35702629"
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> 此資料類型的精確度為一分鐘。 輸出時，秒數元件為零，而在輸入時，將會由伺服器捨去。|  
 |date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'yyyy-mm-dd'|  
 |Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
-|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy-mm-dd hh: mm: [.9999999]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
+|Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' yyyy 為 yyyy-mm-dd hh:mm:ss[.9999999]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
   
  日期/時間常值的 ODBC 逸出序列沒有變更。  
@@ -140,9 +140,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- 如果**timezone_hour**是負數， **timezone_minute**必須為負數或零。 如果**timezone_hour**是正數， **timezone_minute**必須是正數或零。 如果**timezone_hour**為零，s**timezone_minute**可以-59 到 + 59 範圍內有任何值。  
+ 如果**timezone_hour**是負數**timezone_minute**必須為負數或零。 如果**timezone_hour**是正數， **timezone_minute**必須是正數或零。 如果**timezone_hour**為零，s**timezone_minute**可能-59 到 + 59 範圍內會有任何值。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

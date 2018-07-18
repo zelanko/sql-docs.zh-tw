@@ -1,5 +1,6 @@
 # [執行個體管理](analysis-services-instance-management.md)  
 # [安裝](../../analysis-services/instances/install-windows/install-analysis-services.md)
+# [驗證 Analysis Services 累積更新組建版本](analysis-services-component-version.md)
 # [後續安裝組態](post-install-configuration-analysis-services.md)  
 ## [設定 Windows 防火牆](configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 ## [設定服務帳戶](configure-service-accounts-analysis-services.md)  

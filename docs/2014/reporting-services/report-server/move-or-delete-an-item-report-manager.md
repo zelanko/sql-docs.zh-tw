@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - moving items
 - items [Reporting Services], moving
@@ -16,13 +16,13 @@ ms.assetid: 980a66c7-a18b-4af7-8954-45726fa517d6
 caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b3b4ede3a29c43cf2c77b61e2fe8fb6fb3b9e6ff
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9ac8b351e0d3cd76650df17e2aa5aa00ed427be3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36136563"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37309318"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>移動或刪除項目 (報表管理員)
   您發行至報表伺服器的報表和報表相關項目會儲存在資料夾中。 您可以將項目移至不同的資料夾，報表伺服器會自動維護這些項目的參考。 刪除某個項目之前，請考慮是否有其他項目相依於該項目。  
@@ -45,7 +45,7 @@ ms.locfileid: "36136563"
   
 #### <a name="to-move-an-item-from-within-the-contents-page"></a>若要從內容頁面中移動項目  
   
-1.  啟動 [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-管理員-ssrs-原生-mode.md）。  
+1.  啟動 [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-manager-ssrs-原生-mode.md）。  
   
 2.  在報表管理員中，巡覽至 [內容] 頁面，然後找出您要移動的項目。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "36136563"
   
 #### <a name="to-delete-a-report-or-item"></a>若要刪除報表或項目  
   
-1.  啟動 [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-管理員-ssrs-原生-mode.md）。  
+1.  啟動 [報表管理員&#40;SSRS 原生模式&#41;].../ 報表-manager-ssrs-原生-mode.md）。  
   
 2.  在報表管理員中，巡覽至 [內容] 頁面，然後找出您要刪除的項目。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "36136563"
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [內容頁&#40;報表管理員&#41;].../ 內容頁面-報表 manager.md）   
+ [內容頁面&#40;報表管理員&#41;].../ 內容頁報表-manager.md）   
  [尋找、檢視和管理報表 &#40;報表產生器及 SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
