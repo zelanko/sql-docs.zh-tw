@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -59,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 484d0e3c9fccd0e65041665eef523dbf92311399
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9265dea7529c1f80eb2d12741193a43c216489e9
+ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34470289"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854340"
 ---
 # <a name="hints-transact-sql---query"></a>提示 (Transact-SQL) - 查詢
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -246,7 +245,7 @@ ms.locfileid: "34470289"
  SIMPLE 指示查詢最佳化工具嘗試簡單參數化。 FORCED 指示查詢最佳化工具嘗試使用強制參數化。 如需詳細資訊，請參閱[查詢處理架構指南中的強制參數化](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)和[查詢處理架構指南中的簡單參數化](../../relational-databases/query-processing-architecture-guide.md#SimpleParam)。  
   
  RECOMPILE  
- 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 捨棄在執行查詢之後所產生的計畫，強制查詢最佳化工具在下次執行相同的查詢時，重新編譯查詢計畫。 在未指定 RECOMPILE 的情況下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會快取查詢計劃並重複使用。 當編譯查詢計畫時，RECOMPILE 查詢提示會使用查詢中任何本機變數目前的值，如果查詢在預存程序內，就會將目前的值傳給任何參數。  
+ 指示 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 針對查詢產生新的暫時計畫，並在查詢完成執行之後立即捨棄該計畫。 在沒有 RECOMPILE 提示的情況下執行相同的查詢時，產生的查詢計畫不會取代快取中儲存的計畫。 在未指定 RECOMPILE 的情況下，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會快取查詢計劃並重複使用。 當編譯查詢計畫時，RECOMPILE 查詢提示會使用查詢中任何本機變數目前的值，如果查詢在預存程序內，就會將目前的值傳給任何參數。  
   
  當不必編譯整個預存程序，只需要重新編譯預存程序內的部分查詢時，RECOMPILE 是非常有用的替代方案，可供您建立使用 WITH RECOMPILE 子句的預存程序。 如需詳細資訊，請參閱[重新編譯預存程序](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)。 另外，當您建立計畫指南時，RECOMPILE 也非常有用。  
   

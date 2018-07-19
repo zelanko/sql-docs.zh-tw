@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 345d104ce52a89e7ddcfdca24c93283ddfabb0d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 0bfbd13fb96fa78071043ed1ff564be2f9a8e30c
+ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322587"
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37923640"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>針對 Reporting Services 安裝進行疑難排解
 
@@ -55,7 +55,7 @@ ms.locfileid: "35322587"
   
  安裝程式不再檢查 Internet Information Services (IIS) 或 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 需要 MDAC 2.0 與 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 版；如果尚未安裝，則安裝程式會加以安裝。  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> 針對 SharePoint 模式安裝的問題進行疑難排解  
+##  <a name="bkmk_tshoot_sharepoint"></a> 針對 SharePoint 模式安裝的問題進行移難排解  
   
 -   [Reporting Services 組態管理員未啟動](#bkmk_configmanager_notstart)  
   

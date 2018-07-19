@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.custom: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/19/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
+ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698329"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37107236"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "35698329"
 
 ### <a name="general-guidelines"></a>一般指導方針
 - 請確定 Azure Key Valut 和 Azure SQL Database 會在同一個租用戶之中。  **不支援**跨租用戶金鑰保存庫與伺服器的互動。
-- 為需要的資源決定使用哪一個訂用帳戶。若稍後要在訂用帳戶之間移動伺服器，必須重新設定使用 BYOK 的 TDE。
+- 為需要的資源決定使用哪一個訂用帳戶。若稍後要在訂用帳戶之間移動伺服器，必須重新設定使用 BYOK 的 TDE。 深入瞭解[移動資源](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-move-resources)
 - 透過 BYOK 設定 TDE 時，請務必考量重複 wrap/unwrap 作業對金鑰保存庫產生的負載。 例如，由於與邏輯伺服器建立關聯的所有資料庫都使用相同的 TDE 保護裝置，因此該伺服器的容錯移轉會對保存庫觸發伺服器資料庫中的所有金鑰作業。 根據我們的經驗與文件所列的[金鑰保存庫服務限制](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits)，建議您每個訂用帳戶的每個 Azure Key Vault，最多關聯 500 個標準資料庫 (一般目的) 或 200 個進階資料庫 (商務關鍵)，以確保存取保存庫中的 TDE 保護裝置時，可有穩定一致的高可用性。 
 - 建議：在內部部署保留一份 TDE 保護裝置複本。  這需要使用硬體安全模組 (HSM) 裝置在本機建立 TDE 保護裝置，以及使用金鑰委付系統儲存 TDE 保護裝置的本機複本。
 
@@ -68,6 +68,7 @@ ms.locfileid: "35698329"
 - 建立已啟用[虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)的金鑰保存庫，萬一意外刪除金鑰或是金鑰保存庫時可防止資料遺失。  您必須[使用 PowerShell 以在金鑰保存庫上啟用「虛刪除」屬性](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) (目前從 AKV 入口網站還無法使用此選項 - 但對 SQL 為必要項)：  
   - 虛刪除的資源會保留一段時間，除非復原或清除，否則保留 90 天。
   - **復原**和**清除**動作本身的權限已在金鑰保存庫的存取原則中建立關聯。 
+- 在金鑰保存庫上設定資源鎖定，控制誰可以刪除這個重要的資源，並有效防止被意外或未獲授權刪除。  [深入了解資源鎖定](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources)
 
 - 使用邏輯伺服器的 Azure Active Directory (Azure AD) 身分識別，對其授與金鑰保存庫的存取權。  使用入口網站 UI 時，Azure AD 身分識別會自動建立，而金鑰保存庫的存取權限會授與伺服器。  必須建立 AAD 身分識別，且應驗證完成，才能使用 PowerShell 來設定具 BYOK 的 TDE。 如需使用 PowerShell 時的詳細逐步指示，請參閱[使用 BYOK 設定 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
 

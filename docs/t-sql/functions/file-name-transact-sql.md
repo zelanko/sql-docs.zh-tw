@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -27,20 +26,20 @@ helpviewer_keywords:
 - logical file names [SQL Server]
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4092e8dc584847d1a3a5e18c570838145ed88d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8342dff7af15fc9c497521124e52e5c60519245b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33050815"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791919"
 ---
 # <a name="filename-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回給定檔案識別碼 (ID) 的邏輯檔案名稱。  
+此函式會傳回給定之檔案識別碼 (ID) 的邏輯檔案名稱。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,17 +50,17 @@ FILE_NAME ( file_id )
 ```  
   
 ## <a name="arguments"></a>引數  
- *file_id*  
- 這是要傳回檔案名稱的檔案識別碼。 *file_id* 是 **int**。  
+*file_id*  
+會傳回其檔案名稱 `FILE_NAME` 的檔案識別碼。 *file_id* 具有 **int** 資料類型。  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- *file_ID* 對應於 sys.master_files 或 sys.database_files 目錄檢視中的 file_id 資料行。  
+*file_ID* 對應於 sys.master_files 目錄檢視或 sys.database_files 目錄檢視中的 file_id 資料行。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `file_ID 1` 和 `file_ID` 的檔案名稱。  
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `file_ID 1` 和 `file_ID` 的檔案名稱。  
   
 ```sql  
 SELECT FILE_NAME(1) AS 'File Name 1', FILE_NAME(2) AS 'File Name 2';  
@@ -71,9 +70,9 @@ GO
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
-File Name 1           File Name 2  
-----------------      ------------------------  
-AdventureWorks2012_Data   AdventureWorks2012_Log  
+File Name 1                File Name 2  
+-------------------------  ------------------------  
+AdventureWorks2012_Data    AdventureWorks2012_Log  
 
 (1 row(s) affected)
 ``` 

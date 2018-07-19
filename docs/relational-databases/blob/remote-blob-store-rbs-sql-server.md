@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: blob
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +17,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7fa5a31e0ffaafdff982fdfb64fd6f260624f70
-ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
+ms.openlocfilehash: 31f1e34d745c08ac19157fb9d2e096ac0d72ed69
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34799818"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36772073"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>遠端 Blob 存放區 (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

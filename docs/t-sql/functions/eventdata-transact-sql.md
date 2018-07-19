@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,20 +25,20 @@ helpviewer_keywords:
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
 caps.latest.revision: 55
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0853aaa013cd46c81d22ad8093a891ecb54a6d3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: acdfdee721729b68b43a6b0a32a10cb91ea6d889
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055195"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790829"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回伺服器或資料庫事件的相關資訊。 EVENTDATA 是在引發事件通知之時呼叫的，結果會傳回指定的 Service Broker。 EVENTDATA 也可以用在 DDL 或登入觸發程序主體內。  
+此函數會傳回伺服器或資料庫事件的相關資訊。 當事件通知引發，且指定的 Service Broker 收到結果時，會呼叫 `EVENTDATA`。 DDL 或登入觸發程序也支援在內部使用 `EVENTDATA`。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,12 +50,17 @@ EVENTDATA( )
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 只有在 DDL 或登入觸發程序內直接參考時，EVENTDATA 才會傳回資料。 如果 EVENTDATA 是由其他常式所呼叫，它便會傳回 NULL，即使這些常式是由 DDL 或登入觸發程序所呼叫亦然。  
+只有在 DDL 或登入觸發程序內直接參考時，`EVENTDATA` 才會傳回資料。 如果 `EVENTDATA` 是由其他常式所呼叫，它便會傳回 NULL，即使那些常式是由 DDL 或登入觸發程序所呼叫亦然。
   
- 在呼叫 EVENTDATA 的交易之後，EVENTDATA 傳回的資料便告無效，可能是明確或隱含地認可或回復。  
+`EVENTDATA` 傳回的資料在以下交易之後無效：
+
++ 明確呼叫 `EVENTDATA`
++ 隱含呼叫 `EVENTDATA`
++ 認可
++ 會回復  
   
 > [!CAUTION]  
->  EVENTDATA 會傳回 XML 資料。 這項資料會以 Unicode 的方式傳給用戶端，每個字元佔 2 個位元組。 下列 Unicode 字碼指標可以用 EVENTDATA 傳回的 XML 來表示：  
+>  `EVENTDATA` 會傳回 XML 資料，這項資料會以 Unicode 的方式傳給用戶端，每個字元佔 2 個位元組。 `EVENTDATA` 會傳回可代表這些 Unicode 字碼指標的 XML：  
 >   
 >  `0x0009`  
 >   
@@ -68,24 +72,24 @@ EVENTDATA( )
 >   
 >  `>= 0xE000 && <= 0xFFFD`  
 >   
->  在 XML 中，無法表示或不允許使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼和資料所能使用的某些字元。 有上述清單所未顯示之字碼指標的字元或資料會對應至問號 (?)。  
+>  XML 無法表示且不允許使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼和資料中所能使用的某些字元。 有上述清單所未顯示之字碼指標的字元或資料會對應至問號 (?)。  
   
- 為了保護登入的安全性，在執行 CREATE LOGIN 或 ALTER LOGIN 陳述式時將不會顯示密碼。  
+執行 `CREATE LOGIN` 或 `ALTER LOGIN` 陳述式時，不會顯示密碼。 這可以保護登入安全性。  
   
 ## <a name="schemas-returned"></a>傳回的結構描述  
- EVENTDATA 會傳回 **xml** 類型的值。 根據預設，所有事件的結構描述定義都會安裝在以下目錄：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
+EVENTDATA 會傳回 **xml** 資料類型的值。 根據預設，所有事件的結構描述定義都會安裝在此目錄中：[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd。  
   
- 或者，事件結構描述會在 [Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) (Microsoft SQL Server XML 結構描述) 網頁中發佈。  
+[Microsoft SQL Server XML Schemas](http://go.microsoft.com/fwlink/?LinkID=31850) (Microsoft SQL Server XML 結構描述) 網頁也會有事件結構描述。  
   
- 若要針對任何特定的事件擷取結構描述，請搜尋複雜類型 `EVENT_INSTANCE_\<event_type>` 的結構描述。 例如，若要擷取 DROP_TABLE 事件的結構描述，請搜尋 `EVENT_INSTANCE_DROP_TABLE` 的結構描述。  
+若要針對任何特定的事件擷取結構描述，請搜尋複雜類型 `EVENT_INSTANCE_<event_type>` 的結構描述。 例如，若要擷取 `DROP_TABLE` 事件的結構描述，請搜尋 `EVENT_INSTANCE_DROP_TABLE` 的結構描述。  
   
 ## <a name="examples"></a>範例  
   
 ### <a name="a-querying-event-data-in-a-ddl-trigger"></a>A. 查詢 DDL 觸發程序中的事件資料  
- 下列範例會建立一個 DDL 觸發程序來防止在資料庫中建立新的資料表。 引發觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式是利用 XQuery 針對 EVENTDATA 所產生的 XML 資料來擷取的。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
+此範例會建立可防止建立新資料庫資料表的 DDL 觸發程序。 針對 `EVENTDATA` 所產生的 XML 資料使用 XQuery ，可擷取引發觸發程序的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 如需詳細資訊，請參閱 [XQuery 語言參考 &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)。  
   
 > [!NOTE]  
->  當您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [以方格顯示結果] 來查詢 `\<TSQLCommand>` 項目時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)。  
+>  當您使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中的 [以方格顯示結果] 來查詢 `<TSQLCommand>` 元素時，命令文字中不會出現分行符號。 請改用 [Results to Text] (以文字顯示結果)。  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,10 +115,10 @@ GO
 ```  
   
 > [!NOTE]  
->  當您要傳回事件資料時，我們建議您使用 XQuery **value()** 方法，而非 **query()** 方法。 **query()** 方法會在輸出中傳回 XML 和逸出 & 符號的歸位字元及換行字元 (CR/LF) 執行個體，**value()** 方法則會在輸出中將 CR/LF 轉譯為不可見。  
+>  若要傳回事件資料，請使用 XQuery **value()** 方法，不要使用 **query()** 方法。 **query()** 方法會在輸出中傳回 XML 和逸出 & 符號的歸位字元及換行字元 (CR/LF) 執行個體，**value()** 方法則會在輸出中將 CR/LF 轉譯為不可見。  
   
 ### <a name="b-creating-a-log-table-with-event-data-in-a-ddl-trigger"></a>B. 利用 DDL 觸發程序中的事件資料來建立記錄資料表  
- 下列範例會建立一份資料表來儲存有關所有資料庫層級事件的資訊，且會以 DDL 觸發程序來擴展資料表。 事件類型和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式是利用 XQuery 針對 `EVENTDATA` 所產生的 XML 資料所擷取。  
+此範例會建立一份資料表來儲存和所有資料庫層級事件有關的資訊，且會以 DDL 觸發程序來擴展該資料表。 針對 `EVENTDATA` 所產生的 XML 資料使用 XQuery ，可擷取事件類型和 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。  
   
 ```  
 USE AdventureWorks2012;  

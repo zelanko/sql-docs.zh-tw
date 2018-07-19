@@ -14,15 +14,15 @@ ms.service: sql-database
 ms.tgt_pltfrm: ''
 ms.devlang: azurecli, powershell
 ms.topic: conceptual
-ms.date: 04/24/2018
+ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 966d391f1c4fbd5dddf90cc2db1307b45ef0f362
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 5b6a5d6eafc76b80a169332f8c71309440c4ef0f
+ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696219"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37093312"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell 與 CLI：使用 Azure Key Vault 中您自己的金鑰來啟用透明資料加密
 
@@ -91,7 +91,7 @@ ms.locfileid: "35696219"
 > 
 
 >[!Tip]
->Key Vault 的 KeyId 範例：https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
+>Key Vault 的 KeyId 範例： https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
 >
 
    ```powershell
@@ -242,7 +242,7 @@ ms.locfileid: "35696219"
 > 
 
 >[!Tip]
->Key Vault 的 KeyId 範例：https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
+>Key Vault 的 KeyId 範例： https://contosokeyvault.vault.azure.net/keys/Key1/1a1a2b2b3c3c4d4d5e5e6f6f7g7g8h8h
 >
   
 ## <a name="step-4-turn-on-tde"></a>步驟 4： 開啟 TDE 
@@ -261,4 +261,14 @@ ms.locfileid: "35696219"
 
       # get whether encryption is on or off
       az sql db tde show-configuration -n "DatabaseName" -g "ResourceGroupName" -s "ServerName" 
+
+## <a name="sql-cli-references"></a>SQL CLI 參考
+
+https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+
+https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+
+https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+
+https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
 

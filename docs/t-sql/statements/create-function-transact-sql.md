@@ -1,10 +1,9 @@
 ---
 title: CREATE FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 06/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -37,14 +36,15 @@ helpviewer_keywords:
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 caps.latest.revision: 162
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2b6f3905029c6929f4c747f3d34fa54bfde0f07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c14264516a877a193e9fa076114f52a492985ca
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37790399"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +68,10 @@ ms.lasthandoff: 05/03/2018
 -   使用內嵌函式作為安全性原則的篩選述詞  
   
 > [!NOTE]  
->  本主題將討論如何將 .NET Framework CLR 整合至 SQL Server。 CLR 整合不適用於 Azure SQL Database。  
+>  本主題將討論如何將 .NET Framework CLR 整合至 SQL Server。 CLR 整合不適用於 Azure SQL Database。
+
+> [!NOTE]  
+>  對於 Azure SQL 資料倉儲，請參閱 [CREATE FUNCTION (SQL 資料倉儲)](https://docs.microsoft.com/sql/t-sql/statements/create-function-sql-data-warehouse?view=aps-pdw-2016) 一文。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

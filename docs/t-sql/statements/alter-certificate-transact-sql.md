@@ -1,10 +1,9 @@
 ---
 title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/12/2017
+ms.date: 06/18/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,19 +23,19 @@ helpviewer_keywords:
 - certificates [SQL Server], modifying
 ms.assetid: da4dc25e-72e0-4036-87ce-22de83160836
 caps.latest.revision: 46
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b478026b549078601540322e8f249cc718146425
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9890f1f127b20cb857822df66b30b165f0862ab
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33065065"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781839"
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   變更為憑證加密所用的私密金鑰，如果沒有，則加入一個。 將憑證的可用性改為 [!INCLUDE[ssSB](../../includes/sssb-md.md)]。  
   
@@ -59,7 +58,7 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 ALTER CERTIFICATE certificate_name   
 {  
@@ -96,7 +95,7 @@ ALTER CERTIFICATE certificate_name
   
  從檔案匯入已存在於資料庫中之憑證的私密金鑰時，私密金錀會自動受到資料庫主要金鑰的保護。 若要利用密碼來保護私密金鑰，請使用 ENCRYPTION BY PASSWORD 片語。  
   
- REMOVE PRIVATE KEY 選項會從資料庫刪除憑證的私密金鑰。 您可以在利用憑證來驗證簽章時，或者在不需要私密金鑰的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 案例中，進行這項作業。 請勿移除保護對稱金鑰之憑證的私密金鑰。  
+ REMOVE PRIVATE KEY 選項會從資料庫刪除憑證的私密金鑰。 您可以在利用憑證來驗證簽章時，或在不需要私密金鑰的 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 案例中，移除私密金鑰。 請勿移除保護對稱金鑰之憑證的私密金鑰。  
   
  如果私密金鑰是利用資料庫主要金鑰加密時，就不必指定解密密碼。  
   

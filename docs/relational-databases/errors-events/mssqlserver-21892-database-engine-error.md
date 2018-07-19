@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d882b1b908488b4a708a31f8914309210223ced8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 1113f662e8d38958120e4c5af7fdd3d2a570847e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322169"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332948"
 ---
 # <a name="mssqlserver21892"></a>MSSQLSERVER_21892
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34322169"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|SQLErrorNum21892|  
-|訊息文字|無法在與虛擬網路名稱 '%s' 相關聯的可用性群組主要複本中，針對成員複本的伺服器名稱查詢 sys.availability_replicas：錯誤 = %d，錯誤訊息 = %s。|  
+|訊息文字|無法在與虛擬網路名稱 '%s' 相關聯的可用性群組主要複本中，針對成員複本的伺服器名稱查詢 sys.availability_replicas：錯誤 = %d，錯誤訊息 = %s。'|  
   
 ## <a name="explanation"></a>說明  
 **sp_validate_replica_hosts_as_publishers** 會查詢與重新導向發行者相關聯之可用性群組的目前主要複本，以便判斷裝載成員複本的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  當此查詢失敗時，就會傳回錯誤 21892。  

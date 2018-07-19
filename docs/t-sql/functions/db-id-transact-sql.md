@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/30/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,16 +23,16 @@ helpviewer_keywords:
 - DB_ID function
 ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 24b4ecf201ad5b805cd55693cfe8e4aa2d9dd619
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: b445816ec9d088138d17c103f39f1471ce16c57c
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239308"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786809"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,6 +53,9 @@ DB_ID ( [ 'database_name' ] )
   
 ## <a name="return-types"></a>傳回類型
 **int**
+
+## <a name="remarks"></a>Remarks
+`DB_ID` 只能用來傳回 Azure SQL Database 中目前資料庫的資料庫識別碼。 如果指定的資料庫名稱不是目前資料庫的名稱，就會傳回 NULL。
   
 ## <a name="permissions"></a>Permissions  
 如果 `DB_ID` 的呼叫端未擁有特定非 **master** 或非 **tempdb** 資料庫，至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 伺服器層級權限才能查看對應的 `DB_ID` 資料列。 針對 **master** 資料庫，`DB_ID` 至少需要 `CREATE DATABASE` 權限。 呼叫端所連線的資料庫一律會出現在 **sys.databases** 中。

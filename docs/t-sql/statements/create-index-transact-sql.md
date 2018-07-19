@@ -1,10 +1,9 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/21/2017
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -55,16 +54,16 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 caps.latest.revision: 223
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b3e9f873046646b3c247cd2930c458da810d203
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0253d659a428b46aceee2b261f4b07e96983325b
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582300"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782709"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,6 +142,8 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | STATISTICS_INCREMENTAL = { ON | OFF }  
   | DROP_EXISTING = { ON | OFF }  
   | ONLINE = { ON | OFF }  
+  | RESUMABLE = {ON | OF }
+  | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }  
   | ALLOW_PAGE_LOCKS = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -309,7 +310,7 @@ ON *partition_scheme_name* **( *column_name* )**
   
  指定在建立叢集索引時，資料表之 FILESTREAM 資料的位置。 FILESTREAM_ON 子句允許將 FILESTREAM 資料移到不同的 FILESTREAM 檔案群組或分割區配置。  
   
- *filestream_filegroup_name* 是 FILESTREAM 檔案群組的名稱。 此檔案群組必須有一個使用 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式針對此檔案群組定義的檔案，否則會引發錯誤。  
+ *filestream_filegroup_name* 是 FILESTREAM 檔案群組的名稱。 此檔案群組必須有一個使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式針對此檔案群組定義的檔案，否則會引發錯誤。  
   
  如果分割此資料表，則必須包含 FILESTREAM_ON 子句，而且必須指定 FILESTREAM 檔案群組的分割區配置，此配置會使用與資料表之分割區配置相同的分割區函數和分割區資料行。 否則，就會引發錯誤。  
   
@@ -461,7 +462,26 @@ ONLINE = { ON | **OFF** }
  在索引作業期間會套用資料表鎖定。 建立、重建或卸除叢集索引的離線索引作業，或重建或卸除非叢集索引的離線索引作業，會取得資料表的結構描述修改 (Sch-M) 鎖定。 這可防止所有使用者在作業持續期間存取基礎資料表。 建立非叢集索引的離線索引作業會取得資料表的共用 (S) 鎖定。 這可避免對基礎資料表進行更新，但仍可執行讀取作業，如 SELECT 陳述式。  
   
  如需詳細資訊，請參閱[線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)。  
-  
+ 
+RESUMABLE **=** { ON | **OFF**}
+
+**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 作為公開預覽功能
+
+ 指定線上索引作業是否為可繼續的作業。
+
+ ON 索引作業為可繼續的作業。
+
+ OFF 索引作業不是可繼續的作業。
+
+MAX_DURATION **=** *time* [**MINUTES**] 與 **RESUMABLE = ON** (需要 **ONLINE = ON**) 搭配使用。
+ 
+**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 作為公開預覽功能 
+
+指出可繼續的線上索引作業在暫停之前的執行時間 (以分鐘為單位指定的一個整數值)。 
+
+> [!WARNING]
+>  如需有關可以在線上執行之索引作業的詳細資訊，請參閱[線上索引作業的指導方針](../../relational-databases/indexes/guidelines-for-online-index-operations.md)。
+
  您可以採用線上方式建立索引，包括全域暫存資料表上的索引，但以下是例外狀況：  
   
 -   XML 索引  
@@ -648,7 +668,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  從 **image**、**ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)** 及 **xml** 資料類型衍生的計算資料行，只要計算資料行資料類型可作為索引鍵資料行或非索引鍵資料行，就可編製索引以作為索引鍵或內含的非索引鍵資料行。 例如，您無法在計算的 **xml** 資料行上建立主要 XML 索引。 如果索引鍵大小超過 900 個位元組，畫面上會顯示警告訊息。  
   
- 在計算資料行上建立索引，可能會使先前有效的插入或更新作業失敗。 當計算資料行導致算術錯誤時，就可能發生這類失敗。 例如在下表中，雖然計算資料行 `c` 導致算術錯誤，但 `INSERT` 陳述式仍可運作。  
+ 在計算資料行上建立索引，可能會使先前有效的插入或更新作業失敗。 當計算資料行導致算術錯誤時，就可能發生這類失敗。 例如在下表中，雖然計算資料行 `c` 導致算術錯誤，但 INSERT 陳述式仍可運作。  
   
 ```sql  
 CREATE TABLE t1 (a int, b int, c AS a/b);  
@@ -696,7 +716,50 @@ INSERT INTO t1 VALUES (1, 0);
 -   線上作業可在下列索引上執行：分割區索引，以及包含保存的計算資料行或內含資料行的索引。  
   
  如需詳細資訊，請參閱 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)。  
-  
+ 
+### <a name="resumable-indexes"></a> 可繼續的索引作業
+
+**適用於**：[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 作為公開預覽功能。
+
+可繼續索引作業適用下列方針：
+
+- 線上索引建立已使用 RESUMABLE = ON 選項指定為可繼續。 
+- 指定索引的中繼資料中不會保存 RESUMABLE 選項，並且僅適用於目前 DDL 陳述式的持續時間。 因此，必須明確指定 RESUMABLE = ON 子句，才能啟用可繼續性。
+- 只有 RESUMABLE = ON 選項才支援 MAX_DURATION 選項。 
+-  RESUMABLE 選項的 MAX_DURATION 可指定建置索引時的時間間隔。 使用此時間之後，索引建置就會暫停或完成執行。 使用者可決定何時可以繼續已暫停索引的建置。 MAX_DURATION 的**時間**是以分鐘計算，且必須大於 0 分鐘，並少於或等於一週i (7 * 24 * 60 = 10080 分鐘)。 索引作業長時間暫停可能會影響特定資料表上的 DML 效能，以及影響資料庫磁碟容量，因為原始索引和新建立的索引都需要磁碟空間，且需要在 DML 作業期間更新。 如果省略 MAX_DURATION 選項，索引作業將會繼續執行直到完成或發生失敗為止。 
+- 若要立即暫停索引作業，您可以停止 (Ctrl-C) 進行中的命令、執行 [ALTER INDEX](alter-index-transact-sql.md) PAUSE 命令，或執行 KILL `<session_id>` 命令。 暫停命令之後，可以使用 [ALTER INDEX](alter-index-transact-sql.md) 命令繼續執行該命令。 
+- 重新執行可繼續索引的原始 CREATE INDEX 陳述式，會自動繼續已暫停索引的建立作業。
+- 可繼續的索引不支援 SORT_IN_TEMPDB=ON 選項。 
+- RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是開始 TRAN … COMMIT 區塊的一部分)。
+- 若要繼續/中止建置/重建索引，請使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 語法
+
+> [!NOTE]
+> DDL 命令會執行，直到完成、暫停或失敗為止。 如果命令暫停，將會發出錯誤指出作業已暫停，而且沒有完成索引建立。 您可以從 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md) 取得目前索引狀態的詳細資訊。 和以前一樣，如果發生失敗，也會發出錯誤。 
+
+若要指出索引建立是以可繼續的作業來執行，以及檢查其目前的執行狀態，請參閱 [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md)。 針對公開預覽版，此檢視中的下列資料行都會設定為 0：
+- total_execution_time
+- percent_complete 和 page_count
+
+**資源** 可繼續的線上索引建立作業需要下列資源
+- 需要額外的空間以保留正在建立的索引，包括索引的暫停時間
+- 進行排序階段時的額外記錄檔輸送量。 相較於一般線上索引建立，可繼續索引的整體記錄檔空間使用量較小，而且在此作業期間允許記錄截斷。
+- 可防止進行任何 DDL 修改的 DDL 狀態
+  - 在作業暫停期間以及作業執行時，內建索引上都會封鎖準刪除清除。
+
+**目前的功能限制**
+
+> [!IMPORTANT]
+> 目前僅非叢集索引支援**可繼續的線上索引建立**。
+
+已針對可繼續的索引建立作業停用下列功能
+- 處於公開預覽的叢集索引不支援可繼續的索引建立。
+- 在可繼續的線上索引建立作業暫停之後，即無法變更 MAXDOP 的初始值
+- 不支援 DROP EXISTING 子句
+- 建立的索引包含 
+ - 作為索引鍵資料行的計算或 TIMESTAMP 資料行
+ - LOB 資料行作為可繼續索引建立的內含資料行
+- 已篩選的索引
+ 
 ## <a name="row-and-page-locks-options"></a>資料列和頁面鎖定選項  
  如果 ALLOW_ROW_LOCKS = ON 且 ALLOW_PAGE_LOCK = ON，當您在存取索引時，允許使用資料列、頁面和資料表層級的鎖定。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 會選擇適當的鎖定，且可以將鎖定從資料列或頁面鎖定擴大到資料表鎖定。  
   
@@ -983,11 +1046,53 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
     DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;  
 GO  
 ```  
-  
+### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. 建立、繼續、暫停及中止可繼續的索引作業
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx1 on test_table PAUSE   
+ALTER INDEX test_idx2 on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx1 on test_table RESUME   
+ALTER INDEX test_idx2 on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx1 on test_table ABORT 
+ALTER INDEX test_idx2 on test_table ABORT 
+```
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="m-basic-syntax"></a>M. 基本語法  
-  
+### <a name="n-basic-syntax"></a>N. 基本語法  
+  ### <a name="create-resume-pause-and-abort-resumable-index-operations"></a>建立、繼續、暫停及中止可繼續的索引作業
+
+```sql
+-- Execute a resumable online index create statement with MAXDOP=1
+CREATE  INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)  
+
+-- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
+
+-- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumbale index create operation is paused.
+CREATE INDEX test_idx on test_table  WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)   
+
+-- Pause a running resumable online index creation 
+ALTER INDEX test_idx on test_table PAUSE   
+
+-- Resume a paused online index creation 
+ALTER INDEX test_idx on test_table RESUME   
+
+-- Abort resumable index create operation which is running or paused
+ALTER INDEX test_idx on test_table ABORT 
+
 ```sql  
 CREATE INDEX IX_VendorID   
     ON ProductVendor (VendorID);  
@@ -997,7 +1102,7 @@ CREATE INDEX IX_VendorID
     ON Purchasing..ProductVendor (VendorID);  
 ```  
   
-### <a name="n-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>N. 在目前資料庫的資料表上建立非叢集索引  
+### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. 在目前資料庫的資料表上建立非叢集索引  
  下列範例會在 `ProductVendor` 資料表的 `VendorID` 資料行上建立非叢集索引。  
   
 ```sql  
@@ -1005,7 +1110,7 @@ CREATE INDEX IX_ProductVendor_VendorID
     ON ProductVendor (VendorID);   
 ```  
   
-### <a name="o-create-a-clustered-index-on-a-table-in-another-database"></a>O. 在另一個資料庫的資料表上建立叢集索引  
+### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. 在另一個資料庫的資料表上建立叢集索引  
  下列範例會在 `Purchasing` 資料庫中 `ProductVendor` 資料表的 `VendorID` 資料行上建立非叢集索引。  
   
 ```sql  

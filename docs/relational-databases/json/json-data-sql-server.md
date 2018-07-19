@@ -3,29 +3,25 @@ title: 使用 SQL Server 中的 JSON | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: json
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: 47
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a83e36e7f62f9b8ca38c11e5113dae1c8fc4f5d3
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
+ms.openlocfilehash: 6b81626832f6428969f86b179b06232b81d7326f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612213"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417537"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

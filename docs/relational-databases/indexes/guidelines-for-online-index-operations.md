@@ -22,12 +22,12 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7762c5e00dde9e317cc1a1521385faad4c7d1d49
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: d62566a8e5db1eaee81944d364f169ccfa6ef477
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235792"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262142"
 ---
 # <a name="guidelines-for-online-index-operations"></a>線上索引作業的指導方針
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,27 +91,29 @@ ms.locfileid: "34235792"
 ## <a name="transaction-log-considerations"></a>交易記錄考量因素  
  大規模的索引作業，無論是離線或線上執行，都會產生大量資料負載，而很快就填滿了交易記錄。 若要確定可以回復索引作業，在索引作業完成以前，不能截斷交易記錄；不過，在索引作業期間可以備份此記錄。 因此，在索引作業期間，交易記錄必須有足夠的空間，才能儲存索引作業交易與任何並行使用者交易。 如需詳細資訊，請參閱 [索引作業的交易記錄磁碟空間](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)。  
 
-## <a name="resumable-index-rebuild-considerations"></a>可繼續索引重建考量
+## <a name="resumable-index-considerations"></a>可繼續索引考量因素
 
 > [!NOTE]
-> 可繼續索引選項適用於 SQL Server (從 SQL Server 2017 開始) 和 SQL Database。 請參閱[改變索引](../../t-sql/statements/alter-index-transact-sql.md)。 
+> 可繼續的索引選項適用於 SQL Server (從 SQL Server 2017 開始) (僅限索引重建) 和 SQL Database (建立非叢集索引和索引重建)。 請參閱[建立索引](../../t-sql/statements/create-index-transact-sql.md) (目前處於僅限 SQL Database 公開預覽狀態) 和[更改索引](../../t-sql/statements/alter-index-transact-sql.md)。 
 
-當您執行可繼續的線上索引重建時，將適用下列指導方針：
--   管理、規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引重建作業多次，以符合您的維護期間。
-- 從索引重建失敗 (例如資料庫容錯移轉或磁碟空間不足) 中復原。
+當您執行可繼續的線上索引建立或重建時，將適用下列指導方針：
+-   管理、規劃和擴充索引的維護期間。 您可以暫停和重新啟動索引建立或重建作業多次，以符合您的維護期間。
+- 從索引建立或重建失敗 (例如資料庫容錯移轉或磁碟空間不足) 中復原。
 - 當索引作業暫停時，原始索引和新建立的索引都需要磁碟空間，而且必須在 DML 作業期間進行更新。
 
-- 在索引重建作業期間啟用交易記錄的截斷功能 (無法為一般線上索引作業執行此作業)。
+- 在索引建立或重建作業時，啟用交易記錄的截斷功能。
 - 不支援 SORT_IN_TEMPDB=ON 選項
 
 > [!IMPORTANT]
-> 可繼續的重建不需要您持續開啟長時間執行的交易，允許在此作業期間執行記錄截斷，而讓記錄空間管理的效能更佳。 利用新的設計，我們設法將資料庫中的必要資料與重新啟動可繼續作業所需的所有參考保存在一起。
+> 可繼續的索引建立或重建不需要您持續開啟長時間執行的交易，允許在此作業期間執行記錄截斷，而讓記錄空間管理的效能更佳。 利用新的設計，我們設法將資料庫中的必要資料與重新啟動可繼續作業所需的所有參考保存在一起。
 
-一般而言，可繼續和不可繼續的線上索引重建之間沒有效能差異。 若在索引重建作業暫停時，更新可繼續的索引：
+一般而言，可繼續和不可繼續的線上索引重建之間沒有效能差異。 對於建立可繼續的索引，會有一定的額外負荷造成可繼續和不可繼續的索引建立之間出現細微的效能差異。 這種差異只有在較小的資料表上才非常明顯。
+
+若在索引作業暫停時，更新可繼續的索引：
 - 對於最常讀取的工作負載，效能影響微不足道。 
 - 對於更新繁重的工作負載，您可能會遇到輸送量降低情況 (我們的測試顯示小於 10% 的降低情況)。
 
-一般而言，可繼續和不可繼續的線上索引重建之間的磁碟重組品質沒有差異。
+一般而言，可繼續和不可繼續的線上索引建立或重建之間的磁碟重組品質沒有差異。
 
 ## <a name="online-default-options"></a>線上預設選項 
 

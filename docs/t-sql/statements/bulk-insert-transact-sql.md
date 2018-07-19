@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,14 +27,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 caps.latest.revision: 153
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6388c41cf93e79b215927fbec6a2e31a4ef6ed3f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782669"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ BULK INSERT
       { 'char' | 'native'| 'widechar' | 'widenative' } ]   
    [ [ , ] DATASOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
-   [ [ , ] ERRORFILE_DATASOURCE = 'data_source_name' ]   
+   [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]   
    [ [ , ] FIRSTROW = first_row ]   
    [ [ , ] FIRE_TRIGGERS ]   
    [ [ , ] FORMATFILE_DATASOURCE = 'data_source_name' ]
@@ -146,7 +146,8 @@ BULK INSERT
 |**char** (預設值)|字元格式。<br /><br /> 如需詳細資訊，請參閱[使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)。|  
 |**native**|原生 (資料庫) 資料類型。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立原生資料檔案。<br /><br /> 原生值提供了效能比 char 值更高的替代項。<br /><br /> 如需詳細資訊，請參閱[使用原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)。|  
 |**widechar**|Unicode 字元。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 字元格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)。|  
-|**widenative**|原生 (資料庫) 資料類型，但在 **char**、**varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative**。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|  
+|**widenative**|原生 (資料庫) 資料類型，但在 **char**、**varchar** 及 **text** 資料行中除外，其中資料會儲存成 Unicode。 請利用 **bcp** 公用程式，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 大量匯入資料來建立 **widenative** 資料檔案。<br /><br /> 
+  **widenative** 值是效能比 **widechar** 更高的替代方案。 如果資料檔案包含 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)] 擴充字元，請指定 **widenative**。<br /><br /> 如需詳細資訊，請參閱 [使用 Unicode 原生格式匯入或匯出資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)。|  
   
   ERRORFILE **='***file_name***'**  
  指定用來收集格式錯誤且無法轉換成 OLE DB 資料列集之資料列的檔案。 這些資料列會「依照原狀」，從資料檔複製到這個錯誤檔中。  
@@ -424,6 +425,18 @@ BULK INSERT Sales.Invoices
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
+```
+
+### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. 從 Azure Blob 儲存體中的檔案匯入資料並指定錯誤檔   
+下列範例說明如何在已設定為外部資料來源並指定錯誤檔的 Azure Blob 儲存體位置中，從 CSV 檔案載入資料。 這需要一個使用共用存取簽章的資料庫範圍認證。 請注意，如果在 Azure SQL Database 上執行，ERRORFILE 選項應伴隨 ERRORFILE_DATA_SOURCE，否則匯入可能會因權限錯誤而導致失敗。 ERRORFILE 中指定的檔案不應該存在容器中。
+
+```sql
+BULK INSERT Sales.Invoices
+FROM 'inv-2017-01-19.csv'
+WITH (DATA_SOURCE = 'MyAzureInvoices',
+     FORMAT = 'CSV',
+     ERRORFILE = 'MyErrorFile',
+     ERRORFILE_DATA_SOURCE = 'MyAzureInvoices'); 
 ```
 
 如需包含設定認證和外部資料來源的完整 `BULK INSERT` 範例，請參閱[大量存取 Azure Blob 儲存體資料的範例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)。

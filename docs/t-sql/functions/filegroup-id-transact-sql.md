@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,50 +22,47 @@ helpviewer_keywords:
 - names [SQL Server], filegroups
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 872d45d523869d1260e2d69ec62b99434439020e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ce9b0d41ae0d1acf097999cd274c76e8e0571df
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33052665"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37781629"
 ---
 # <a name="filegroupid-transact-sql"></a>FILEGROUP_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回指定檔案群組名稱的檔案群組識別碼。  
+此函數會傳回指定檔案群組名稱的檔案群組識別碼。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
 ## <a name="arguments"></a>引數  
- **'** *filegroup_name* **'**  
- 為 **sysname** 類型的運算式，代表傳回檔案群組識別碼的檔案群組名稱。  
+*filegroup_name* 這是 **sysname** 類型的運算式，代表會傳回其檔案群組識別碼 `FILEGROUP_ID` 的檔案群組名稱。  
   
 ## <a name="return-types"></a>傳回類型  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- *filegroup_name* 對應到 **sys.filegroups** 目錄檢視中的 **name** 資料行。  
+*filegroup_name* 對應到 **sys.filegroups** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中之檔案群組 `PRIMARY` 的檔案群組識別碼。  
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中 `PRIMARY` 檔案群組的檔案群組識別碼。  
   
 ```  
-  
 SELECT FILEGROUP_ID('PRIMARY') AS [Filegroup ID];  
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```
 Filegroup ID  

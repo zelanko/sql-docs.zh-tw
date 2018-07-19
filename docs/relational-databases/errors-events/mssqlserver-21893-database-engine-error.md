@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b6323f9199d537bc66483b41975ca794c39eb369
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: b4679aa123792a55292085cd837f7202dd2ec73c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34322159"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332188"
 ---
 # <a name="mssqlserver21893"></a>MSSQLSERVER_21893
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34322159"
 |事件來源|MSSQLSERVER|  
 |元件|SQLEngine|  
 |符號名稱|SQLErrorNum21893|  
-|訊息文字|原始發行者 '%s' 的訂閱者 ( %s ) 並未在重新導向的發行者 '%s' 上顯示為遠端伺服器。 請在重新導向的發行者上執行 **sp_addlinkedserver**，將這些訂閱者新增為為遠端伺服器。|  
+|訊息文字|原始發行者 '%s' 的訂閱者 ( %s ) 並未在重新導向的發行者 '%s' 上顯示為遠端伺服器。 請在重新導向的發行者上執行 **sp_addlinkedserver**，將這些訂閱者新增為遠端伺服器。|  
   
 ## <a name="explanation"></a>說明  
 **sp_validate_redirected_publisher** 會使用位於遠端伺服器之發行者資料庫的訂閱中繼資料資料表，來識別其相關聯的訂閱者，並確認訂閱者的 master.dbo.sysservers 中是否存在相關聯的項目。 如果任何識別的訂閱者不存在，就會傳回此錯誤。  

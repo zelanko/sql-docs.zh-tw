@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - statistical information [SQL Server], updating
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 caps.latest.revision: 74
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d662031dec5912311d252b3c5a44e2abc5059eba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13d85a3eb7bcea27cb5b2d1a3c5c98ba83735639
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074155"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782559"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -193,6 +192,7 @@ MAXDOP = *max_degree_of_parallelism*
 ## <a name="limitations-and-restrictions"></a>限制事項  
 * 不支援更新外部資料表上的統計資料。 若要更新外部資料表上的統計資料，請卸除並重新建立統計資料。  
 * MAXDOP 選項與 STATS_STREAM、ROWCOUNT 及 PAGECOUNT 選項不相容。
+* 如果使用 MAXDOP 選項，會受限於 Resource Governor 工作負載群組 MAX_DOP 設定。
 
 ## <a name="updating-all-statistics-with-spupdatestats"></a>使用 sp_updatestats 來更新所有統計資料  
  如需如何針對資料庫中所有使用者定義和內部資料表更新統計資料的詳細資訊，請參閱預存程序 [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)。 例如，下列命令會呼叫 sp_updatestats 來更新資料庫的所有統計資料。  

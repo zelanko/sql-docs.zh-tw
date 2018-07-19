@@ -19,12 +19,12 @@ caps.latest.revision: 3
 author: pelopes
 ms.author: harinid
 manager: ''
-ms.openlocfilehash: 72d3f28c6cc0e2998004b8b4883fdb846e2a92e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a38a652ad967b8e473d51eda335e430426d1187e
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956423"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297364"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

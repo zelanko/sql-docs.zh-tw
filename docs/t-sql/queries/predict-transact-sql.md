@@ -1,10 +1,10 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/25/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|queries
+ms.component: t-sql
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -17,19 +17,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: jeannt
-ms.author: jeannt
+author: douglaslMS
+ms.author: douglasl
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: b027530565b9b138d5a8f9559e3e60e0331dd3af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: '>= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions'
+ms.openlocfilehash: 4ec9f538c7506375adc74b4a0b2779b40bafab2f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708886"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408057"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 根據預存模型產生預測值或分數。  
 
@@ -99,7 +99,7 @@ WITH 子句用來指定 `PREDICT` 函數傳回之輸出的結構描述。
 
 ## <a name="remarks"></a>Remarks
 
-所有版本的 SQL Server (包括 Linux，以及在 Azure SQL Database 中) 都支援 `PREDICT` 函數，不論是否已啟用其他機器學習功能。 不過，需要 SQL Server 2017 或更新版本。 
+所有版本的 SQL Server 2017 和更新版本都支援 `PREDICT` 函數。 此支援包括 SQL Server 2017 的 Linux 版。 雲端的 Azure SQL Database 也支援 `PREDICT`。 這些支援都已啟用，不論是否已啟用其他機器學習功能。
 
 在要使用 `PREDICT` 函數的伺服器上，不一定要安裝 R、Python 或其他機器學習語言。 您可以在另一個環境中訓練模型，並將它儲存到 SQL Server 資料表，搭配 `PREDICT` 使用，或從儲存模型的另一個 SQL Server 執行個體呼叫模型。
 

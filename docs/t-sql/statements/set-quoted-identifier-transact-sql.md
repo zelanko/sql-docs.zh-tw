@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/03/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,15 +25,16 @@ helpviewer_keywords:
 - SET QUOTED_IDENTIFIER statement
 ms.assetid: 10f66b71-9241-4a3a-9292-455ae7252565
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b78a2ba8a3d9520376746da1810c4a2d64324781
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba68407344b9b5fe79d8230a9036b13dcb17eeae
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37784609"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +84,7 @@ SET QUOTED_IDENTIFIER ON
   
  SET QUOTED_IDENTIFIER 只會在剖析時生效，並且只會影響剖析，而不會影響查詢執行。  
   
- 針對最上層的臨機剖析，剖析會使用工作階段針對 QUOTED_IDENTIFIER 的目前設定開始。  在剖析批次的同時，任何出現 SET QUOTED_IDENTIFIER 的地方，都會從該點之後變更剖析的行為，並針對工作階段儲存該設定。  因此在剖析和執行批次之後，工作階段的 QUOTED_IDENTIFER 設定便會根據批次中最後出現的 SET QUOTED_IDENTIFIER 進行設定。  
+ 針對最上層的隨選批次，剖析會使用工作階段針對 QUOTED_IDENTIFIER 的目前設定開始。  在剖析批次的同時，任何出現 SET QUOTED_IDENTIFIER 的地方，都會從該點之後變更剖析的行為，並針對工作階段儲存該設定。  因此在剖析和執行批次之後，工作階段的 QUOTED_IDENTIFER 設定便會根據批次中最後出現的 SET QUOTED_IDENTIFIER 進行設定。  
  位於預存程序中的靜態 SQL 會針對建立或修改預存程序的批次使用 QUOTED_IDENTIFIER 設定進行剖析。  SET QUOTED_IDENTIFIER 當作靜態 SQL 出現在預存程序的主體時，沒有任何效果。  
   
  針對使用 sp_executesql 或 exec() 的巢狀批次，剖析會使用工作階段的 QUOTED_IDENTIFIER 設定開始。  如果巢狀批次位於預存程序之中，則剖析會使用預存程序的 QUOTED_IDENTIFIER 設定啟動。  在剖析巢狀批次的同時，任何出現 SET QUOTED_IDENTIFIER 的地方，都會從該點之後變更剖析的行為，但工作階段的 QUOTED_IDENTIFIER 將不會更新。  
@@ -195,7 +195,7 @@ GO
  ```  
   
 ## <a name="see-also"></a>另請參閱  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

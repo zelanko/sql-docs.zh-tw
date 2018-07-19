@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 10/25/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - RANK function [Transact-SQL]
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
 caps.latest.revision: 62
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45f90acb599ec92b0673868c1ae8672dfd8931c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31743561c75bccc99eff40694c92f4c662b6aa8f
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33057495"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782409"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -1,7 +1,7 @@
 ---
 title: 將 Excel 中的資料匯入到 SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 05/15/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: import-export
@@ -15,48 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebd7a83bb1decc8c75dfdd11255f2b09b4ba7d49
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d4bbe4268e60408f5c362c2e68121a4f89b1d82f
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329779"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137917"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>將 Excel 中的資料匯入到 SQL Server 或 Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-有數種方式可以將 Excel 檔案中的資料匯入到 SQL Server 或 Azure SQL Database。 本文摘要說明所有這些選項，並提供更詳細指示的連結。
+有數種方式可以將 Excel 檔案中的資料匯入到 SQL Server 或 Azure SQL Database。 某些方法可讓您只執行一個步驟，便能直接從 Excel 檔案匯入資料；其他方法會要求先將 Excel 資料匯出成文字，然後您再匯入這些文字。 本文摘要說明常用的方法，並提供連結，為您提供更詳細的資訊。
 
-針對複雜工具和服務 (例如 SSIS 或 Azure Data Factory) 的完整描述不在此清單的涵蓋範圍內。 若要深入了解您感興趣的解決方案，請遵循所提供的連結以取得詳細資訊。
+## <a name="list-of-methods"></a>方法清單
 
 -   您可以使用下列其中一種工具，透過單一步驟將資料直接從 Excel 匯入至 SQL：
-    -   SQL Server 匯入和匯出精靈
-    -   SQL Server Integration Services (SSIS)
-    -   OPENROWSET 函式
+    -   [SQL Server 匯入和匯出精靈](#wiz)
+    -   ]SQL Server Integration Services (SSIS)](#ssis)
+    -   [OPENROWSET](#openrowset) 函式
 -   您可以將資料從 Excel 匯出為文字，然後使用下列其中一種工具來匯入文字檔，透過這兩個步驟來匯入資料：
-    -   BULK INSERT 陳述式
-    -   BCP
-    -   Azure Data Factory
+    -   [匯入一般檔案精靈](#import-wiz)
+    -   [BULK INSERT](#bulk-insert) 陳述式
+    -   [BCP](#bcp)
+    -   [複製精靈 (Azure Data Factory)](#adf-wiz)
+    -   [Azure Data Factory](#adf)
 
 如果您想要從 Excel 活頁簿匯入多個工作表，您通常必須針對每個工作表執行每個工具一次。
+
+針對複雜工具和服務 (例如 SSIS 或 Azure Data Factory) 的完整描述不在此清單的涵蓋範圍內。 若要深入了解您感興趣的解決方案，請遵循所提供的連結以取得詳細資訊。
 
 > [!IMPORTANT]
 > 如需連接至 Excel 檔案，以及將資料從 Excel 檔案載入或載入至 Excel 檔案的限制與已知問題的詳細資訊，請參閱[使用 SQL Server Integration Services (SSIS) 將資料從 Excel 載入或載入至 Excel](../../integration-services/load-data-to-from-excel-with-ssis.md)。
 
-## <a name="sql-server-import-and-export-wizard"></a>SQL Server 匯入和匯出精靈
+## <a name="wiz"></a> SQL Server 匯入和匯出精靈
 
-逐步執行 [SQL Server 匯入和匯出精靈] 的頁面，以從 Excel 檔案直接匯入資料。 您也可以將設定儲存為 SQL Server Integration Services (SSIS) 套件，以便自訂及重複使用。
-
-![連線至 Excel 資料來源](media/excel-connection.png)
-
-如需使用精靈從 Excel 匯入至 SQL Server 的範例，請參閱[透過這個匯入和匯出精靈的簡單範例來開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
+逐步執行 [SQL Server 匯入和匯出精靈] 的頁面，以從 Excel 檔案直接匯入資料。 您也可以將設定儲存為 SQL Server Integration Services (SSIS) 套件，以便日後自訂及重複使用。
 
 若要了解如何啟動精靈，請參閱[啟動 SQL Server 匯入和匯出精靈](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)。
 
-## <a name="sql-server-integration-services-ssis"></a>SQL Server Integration Services (SSIS)
+如需使用精靈從 Excel 匯入至 SQL Server 的範例，請參閱[透過這個匯入和匯出精靈的簡單範例來開始使用](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)。
+
+![連線至 Excel 資料來源](media/excel-connection.png)
+
+## <a name="ssis"></a> SQL Server Integration Services (SSIS)
 
 如果您熟悉 SSIS 且不想執行 SQL Server 匯入和匯出精靈，請建立在資料流程中使用 Excel 來源和 SQL Server 目的地的 SSIS 套件。
-
-![資料流程中的元件](media/excel-to-sql-data-flow.png)
 
 如需這些 SSIS 元件的詳細資訊，請參閱下列主題：
 -   [Excel 來源](../../integration-services/data-flow/excel-source.md)
@@ -64,7 +66,9 @@ ms.locfileid: "34329779"
 
 若要開始學習如何建置 SSIS 套件，請參閱[如何建立 ETL 套件](../../integration-services/ssis-how-to-create-an-etl-package.md)的教學課程。
 
-## <a name="openrowset-and-linked-servers"></a>OPENROWSET 和連結的伺服器
+![資料流程中的元件](media/excel-to-sql-data-flow.png)
+
+## <a name="openrowset"></a> OPENROWSET 和連結的伺服器
 
 > [!NOTE]
 > 在 Azure 中，OPENROWSET 與 OPENDATASOURCE 函式僅適用於 SQL Database 受控執行個體 (預覽)。
@@ -171,7 +175,15 @@ EXEC @RC = [master].[dbo].[sp_addlinkedserver] @server, @srvproduct, @provider,
 > [!TIP]
 > 若要取得資料匯入工具的最佳結果，請儲存僅包含資料行標題和包含資料之資料列的工作表。 如果儲存的資料包含頁面標題、空白行、註解和其他內容，您稍後在匯入資料時可能會看到非預期的結果。
 
-## <a name="bulk-insert-command"></a>BULK INSERT 命令
+## <a name="import-wiz"></a> 匯入一般檔案精靈
+
+逐步設定「匯入一檔案精靈」的每個頁面，匯入儲存為文字檔的資料。
+
+如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用「匯入一般檔案精靈」將它匯入。
+
+如需「匯入一般檔案精靈」的詳細資訊，請參閱[將一般檔案匯入 SQL 精靈](import-flat-file-wizard.md)。
+
+## <a name="bulk-insert"></a> BULK INSERT 命令
 
 `BULK INSERT` 是您可從 SQL Server Management Studio 執行的 Transact-SQL 命令。 下列範例會將來自 `Data.csv` 逗號分隔檔案的資料載入至現有資料庫資料表。
 
@@ -192,7 +204,7 @@ GO
 -   [使用 BULK INSERT 或 OPENROWSET(BULK...) 匯入大量資料](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
 -   [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)
 
-## <a name="bcp-tool"></a>BCP 工具
+## <a name="bcp"></a> BCP 工具
 
 BCP 是您從命令提示字元執行的程式。 下列範例會將來自 `Data.csv` 逗號分隔檔案的資料載入至現有 `Data_bcp` 資料庫資料表。
 
@@ -207,8 +219,8 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 -   [bcp 公用程式](../../tools/bcp-utility.md)
 -   [準備大量匯出或匯入的資料](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)
 
-## <a name="copy-wizard-azure-data-factory"></a>複製精靈 (Azure Data Factory)
-透過 [複製精靈] 的頁面，匯入儲存為文字檔的資料。
+## <a name="adf-wiz"></a> 複製精靈 (Azure Data Factory)
+逐步設定「Azure Data Factory 複製精靈」的每個頁面，匯入儲存為文字檔的資料。
 
 如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用 Azure Data Factory 將它匯入。 Data Factory 無法直接讀取 Excel 檔案。
 
@@ -216,7 +228,7 @@ bcp.exe ImportFromExcel..Data_bcp in "D:\Desktop\data.csv" -T -c -t ,
 -   [Data Factory 複製精靈](https://docs.microsoft.com/azure/data-factory/data-factory-azure-copy-wizard)
 -   [教學課程：使用 Data Factory 複製精靈建立具有複製活動的管線](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-wizard-tutorial)。
 
-## <a name="azure-data-factory"></a>Azure Data Factory
+## <a name="adf"></a> Azure Data Factory
 如果您熟悉 Azure Data Factory，且不想執行 [複製精靈]，請建立具有 [複製] 活動的管線，以從文字檔複製至 SQL Server 或 Azure SQL Database。
 
 如先前[必要條件](#prereq)一節中所述，您必須將 Excel 資料匯出成文字，才能使用 Azure Data Factory 將它匯入。 Data Factory 無法直接讀取 Excel 檔案。

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -24,20 +23,20 @@ helpviewer_keywords:
 - file names [SQL Server], FILE_ID
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0857a8982fe64d2e2461f5420588ea4a9c527556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f7d7a1a8e585370353050abb508464ce0f1c0ed
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054005"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788469"
 ---
 # <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回目前資料庫中給定邏輯檔案名稱的檔案識別碼 (ID)。  
+對於目前資料庫元件檔案的給定邏輯名稱，此函式會傳回檔案識別碼 (ID)。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 請改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
@@ -47,25 +46,26 @@ ms.locfileid: "33054005"
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 FILE_ID ( file_name )  
 ```  
   
 ## <a name="arguments"></a>引數  
- *file_name*  
- 這是 **sysname** 類型的運算式，代表傳回檔案識別碼的檔案名稱。  
+*file_name*  
+這是 **sysname** 類型的運算式，代表會傳回其檔案識別碼值 `FILE_ID` 之檔案的邏輯名稱。  
   
 ## <a name="return-types"></a>傳回類型  
- **smallint**  
+**smallint**  
   
 ## <a name="remarks"></a>Remarks  
- *file_name* 對應於 sys.master_files 或 sys.database_files 目錄檢視中之 name 資料行中所顯示的邏輯檔案名稱。  
+*file_name* 對應於 sys.master_files 或 sys.database_files 目錄檢視 name 資料行中所顯示的邏輯檔案名稱。  
+
+如果 *file_name* 未對應於目前資料庫元件檔案的邏輯名稱，`FILE_ID` 會傳回 `NULL`。
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指派給全文檢索目錄的識別碼大於 32767。 由於 FILE_ID 函數的傳回類型是 **smallint**，所以此函數無法用於全文檢索檔案。 請改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
+在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，指派給全文檢索目錄的識別碼超過 32767。 由於 `FILE_ID` 函數的傳回類型是 **smallint**，所以`FILE_ID` 不支援全文檢索檔案。 請改用 [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 `AdventureWorks_Data` 檔案的檔案識別碼。  
-  
+此範例會傳回 `AdventureWorks_Data` 檔案的檔案識別碼值，這是 `ADVENTUREWORKS2012` 資料庫的元件檔案。  
+
 ```sql  
 USE AdventureWorks2012;  
 GO  

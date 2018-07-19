@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c586823c0ad4b270ba03283e4ce75b9f2f9c022
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955725"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356050"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,8 @@ ms.locfileid: "32955725"
   
 -   將應用程式設計中的交易量最小化。  
   
-     依預設，異動複寫會根據交易界限傳播變更。 如果交易較小，便不太可能發生「散發代理程式」因網路問題而必須重新傳送交易的情況。 如果需要代理程式來重新傳送交易，則傳送的資料量較小。  
+     依預設，異動複寫會根據交易界限傳播變更。 如果交易較小，便不太可能發生「散發代理程式」因網路問題而必須重新傳送交易的情況。 如果需要代理程式來重新傳送交易，則傳送的資料量較小。 
+
   
 ## <a name="distributor-configuration"></a>散發者組態  
   
@@ -62,51 +62,78 @@ ms.locfileid: "32955725"
   
 -   跨多發行集傳播發行項。  
   
-     如果您無法使用 **-SubscriptionStreams** 參數 (本主題中稍後將進行討論)，請考慮建立多個發行集。 在這些發行集間分散發行項允許複寫將變更平行套用到各個「訂閱者」。  
+     如果您無法使用 [**-SubscriptionStreams** 參數](#subscriptionstreams)，請考慮建立多個發行集。 在這些發行集間分散發行項允許複寫將變更平行套用到各個「訂閱者」。  
   
 ## <a name="subscription-considerations"></a>訂閱考量因素  
   
 -   如果您在同一「發行者」端有多個發行集，請使用獨立代理程式而非共用代理程式 (此為「新增發行集精靈」的預設值)。  
   
--   連續執行代理程式來代替非常頻繁的排程執行。  
+-   連續執行代理程式來代替頻繁的排程執行。  
   
      將代理程式設定為連續執行來代替建立頻繁的排程 (例如每分鐘) 可提升複寫效能，因為代理程式不必啟動和停止。 當您將「散發代理程式」設定為連續執行時，變更將以低度延遲傳播到拓撲中連接的其他伺服器。 如需詳細資訊，請參閱：  
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]：[指定同步處理排程](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>散發代理程式和記錄讀取器代理程式參數  
+代理程式設定檔參數會經常調整，目的是要讓「記錄讀取器」和「散發代理程式」的輸送量與高流量 OLTP 系統一同增加。 
+
+進行測試的目的是要決定最合適的值，以提高「記錄讀取器」和「散發代理程式」的效能。 此測試的結論是：工作負載已成為值在何種情況下才有效的決定性因素了，因此，不可能只調整單一值就改善每種情況下的效能。 
+
+結果： 
+- 若「記錄讀取器代理程式」具有較小型交易的工作負載 (少於 500 個命令) 時，**ReadBatchSize** 較高的值可能會對輸送量產生有利的影響。 不過，針對具有大型交易的工作負載，變更這值不會改善效能。 
+    - 當同一個伺服器上有多個「記錄讀取器代理程式」和多個「散發代理程式」平行執行時，**ReadBatchSize** 較大的值會導致散發資料庫出現爭用的狀況。 
+- 針對「散發代理程式」
+    - 增加 **CommitBatchSize** 可以改善輸送量。 缺點是，如果發生失敗，「散發代理程式」必須復原並從頭再次套用更大的交易量。 
+    - 增加 **SubscriptionStreams** 值有助於提升「散發代理程式」的整體輸送量，因為多個訂閱者連線會平行套用變更批次。 不過，根據處理器數目以及其他中繼資料的條件 (例如主索引鍵、外部索引鍵、唯一限制式和索引)，SubscriptionStreams 較高的值，實際上可能會有不利的影響。 此外，如果資料流無法執行或認可，則「散發代理程式」會退而使用單一資料流來重試失敗的批次。
+
+
+如需有關這項測試的詳細資訊，請參閱部落格[最佳化複寫代理程式設定檔參數以提升效能](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/) \(英文\)。
+
+
+### <a name="log-reader-agent"></a>記錄讀取器代理程式
+
+#### <a name="readbatchsize"></a>ReadBatchSize
+- 為「記錄讀取器代理程式」增加 **-ReadBatchSize** 參數的值。  
   
--   若要解決意外的一次性瓶頸，請針對記錄讀取器代理程式使用 **–MaxCmdsInTran** 參數。  
+「記錄讀取器代理程式」與「散發代理程式」支援交易讀取與認可作業的批次大小。 批次大小的預設值是 500 項交易。 「記錄讀取器代理程式」會從記錄檔中讀取特定數量的交易，無論這些交易是否都標示為複寫。 當大量交易寫入發行集資料庫，但標示要複寫的只是其中小部分子集時，您就應該使用 **-ReadBatchSize** 參數來增加「記錄讀取器代理程式」的讀取批次大小。 此參數不會套用至 Oracle 發行者。  
+
+   - 當 **ReadBatchSize** 增加到 5000 時，較小型交易的工作負載 (少於 500 個的命令) 每秒處理的命令數會增加。 
+   - 至於較大型的工作負載 (具有 500 到 1000 個命令的交易)，增加 **ReadBatchSize** 會稍提改善效能。 增加 **ReadBatchSize** 會導致大量交易被一次性寫入散發資料庫。 這會增加「散發代理程式」看到交易和命令的時間，讓複寫處理產生延遲。  
+
+#### <a name="pollinginterval"></a>PollingInterval
+- 為「記錄讀取器代理程式」減少 **-PollingInterval** 參數的值。  
   
-     **–MaxCmdsInTran** 參數指定當「記錄讀取器」將命令寫入散發資料庫時，分組到某交易內的最大陳述式數量。 使用此參數可讓「記錄讀取器代理程式」和「散發作業代理程式」在「訂閱者」端套用命令時，於「發行者」端將大型交易 (由許多命令組成) 分割成幾個較小的交易。 指定此參數可以降低「散發者」的競爭，並減少「發行者」和「訂閱者」之間的延遲。 因為原始交易是以較小的單位來套用，所以「訂閱者」在原始交易結束之前可以存取大量的邏輯「發行者」交易資料列，打破了嚴格的交易不可部份完成性。 預設值為 **0**，保留「發行者」的交易界限。 此參數不會套用至 Oracle 發行者。  
+**-PollingInterval** 參數指定針對待複寫交易查詢已發行資料庫之交易記錄檔的頻率。 預設值是 5 秒。 如果減小此值，記錄檔輪詢將更頻繁，這會降低從發行集資料庫到散發資料庫之交易傳遞的延遲。 但是，您應在降低延遲需求和因更頻繁地輪詢而導致伺服器負載增加之間進行平衡。   
   
-    > [!WARNING]  
-    >  **MaxCmdsInTran** 的設計不是為了要永遠開啟。 其存在的目的是為了解決有人不小心在單一交易中執行大量 DML 作業的狀況 (使得整筆交易在散發資料庫之前延遲命令的散發、鎖定持有等等)。 如果您習慣性地遇到這個狀況，您應該檢閱您的應用程式，並找出減少交易大小的方法。  
+#### <a name="maxcmdsintran"></a>MaxCmdsInTran
+- 若要解決意外的一次性瓶頸，請針對記錄讀取器代理程式使用 **–MaxCmdsInTran** 參數。  
   
--   使用「散發代理程式」的 **–SubscriptionStreams** 參數。  
+**–MaxCmdsInTran** 參數指定當「記錄讀取器」將命令寫入散發資料庫時，分組到某交易內的最大陳述式數量。 使用此參數可讓「記錄讀取器代理程式」和「散發作業代理程式」在「訂閱者」端套用命令時，於「發行者」端將大型交易 (由許多命令組成) 分割成幾個較小的交易。 指定此參數可以降低「散發者」的競爭，並減少「發行者」和「訂閱者」之間的延遲。 因為原始交易是以較小的單位來套用，所以「訂閱者」在原始交易結束之前可以存取大量的邏輯「發行者」交易資料列，打破了嚴格的交易不可部份完成性。 預設值為 **0**，保留「發行者」的交易界限。 此參數不會套用至 Oracle 發行者。  
   
-     **–SubscriptionStreams** 參數可大幅提升彙總複寫輸送量。 它允許至「訂閱者」的多個連接平行套用批次變更，同時在使用單一執行緒時維護現有的許多交易特性。 如果有一個連接無法執行或認可，則所有連接都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。 在此重試階段完成之前，「訂閱者」端可能會出現暫時的交易不一致性。 成功認可失敗的批次後，「訂閱者」將返回交易一致性的狀態。  
+   > [!WARNING]  
+   >  **MaxCmdsInTran** 的設計不是為了要永遠開啟。 其存在的目的是為了解決有人不小心在單一交易中執行大量 DML 作業的狀況 (使得整筆交易在散發資料庫之前延遲命令的散發、鎖定持有等等)。 如果您經常地遇到這個狀況，請檢閱您的應用程式，並找出減少交易大小的方法。  
   
-     此代理程式參數的值可以使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 **@subscriptionstreams** 來指定。  
+### <a name="distribution-agent"></a>散發代理程式
+
+#### <a name="subscriptionstreams"></a>SubscriptionStreams
+- 增加「散發代理程式」的 **–SubscriptionStreams** 參數。  
   
--   為「記錄讀取器代理程式」增加 **-ReadBatchSize** 參數的值。  
+**–SubscriptionStreams** 參數可大幅提升彙總複寫輸送量。 它允許至「訂閱者」的多個連接平行套用批次變更，同時在使用單一執行緒時維護現有的許多交易特性。 如果有一個連接無法執行或認可，則所有連接都將中止目前批次，且代理程式將使用單一資料流重試失敗的批次。 在此重試階段完成之前，「訂閱者」端可能會出現暫時的交易不一致性。 成功認可失敗的批次後，「訂閱者」將返回交易一致性的狀態。  
   
-     「記錄讀取器代理程式」與「散發代理程式」支援交易讀取與認可作業的批次大小。 批次大小的預設值是 500 項交易。 「記錄讀取器代理程式」會從記錄檔中讀取特定數量的交易，無論這些交易是否都標示為複寫。 當大量交易寫入發行資料庫，但標示要複寫的只是其中小部分子集時，您就應該使用 **-ReadBatchSize** 參數來增加「記錄讀取器代理程式」的讀取批次大小。 此參數不會套用至 Oracle 發行者。  
+此代理程式參數的值可以使用 [sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 的 **@subscriptionstreams** 來指定。  
+
+如需有關實作訂用帳戶資料流的詳細資訊，請參閱[瀏覽 SQL 複寫 subscriptionStream 設定](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting) \(英文\)。
   
--   為「散發代理程式」增加 **-CommitBatchSize** 參數的值。  
+#### <a name="commitbatchsize"></a>CommitBatchSize
+- 為「散發代理程式」增加 **-CommitBatchSize** 參數的值。  
   
-     認可一組交易的負擔是固定的；透過以較低頻率認可較大的交易量，負擔會分散到較大量的資料。 但是，由於套用變更的成本還受限於其他因素，例如包含記錄檔之磁碟的最大 I/O，因此增加此參數的好處不那麼明顯。 此外，還要考慮反向作用：任何導致散發代理程式重新啟動的失敗都必須回復，並重新套用更大量的交易。 對於不穩定的網路，當發生錯誤時，值越低導致的錯誤就越少，要回復並重新套用的交易數也越少。  
+認可一組交易的負擔是固定的；透過以較低頻率認可較大的交易量，負擔會分散到較大量的資料。  增加 CommitBatchSize (最多到 200) 可以改善效能，因為可提交更多的交易給訂閱者。 但是，由於套用變更的成本還受限於其他因素，例如包含記錄檔之磁碟的最大 I/O，因此增加此參數的好處不那麼明顯。 此外，還要考慮以下的權衡得失：任何導致「散發代理程式」重新啟動的失敗都必須復原，並重新套用更大的交易數。 對於不穩定的網路，當發生錯誤時，值越低導致的錯誤就越少，要復原並重新套用的交易數也越少。  
   
--   為「記錄讀取器代理程式」減少 **-PollingInterval** 參數的值。  
+
+##<a name="see-more"></a>查看更多
   
-     **-PollingInterval** 參數指定針對待複寫交易查詢已發行資料庫之交易記錄檔的頻率。 預設值是 5 秒。 如果減小此值，記錄檔輪詢將更頻繁，這會降低從發行集資料庫到散發資料庫之交易傳遞的延遲。 但是，您應在降低延遲需求和因更頻繁地輪詢而導致伺服器負載增加之間進行平衡。  
-  
- 可於代理程式設定檔和命令列中指定代理程式參數。 如需詳細資訊，請參閱：  
-  
--   [處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
-  
--   [檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
-  
--   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+[處理複寫代理程式設定檔](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
+[檢視並修改複寫代理程式命令提示字元參數 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
   

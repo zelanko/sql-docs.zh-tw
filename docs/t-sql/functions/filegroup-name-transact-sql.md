@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,44 +25,44 @@ helpviewer_keywords:
 - viewing filegroup names
 ms.assetid: 26add1c0-56e5-47a8-b489-ae56784a7ee9
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 877969369a9b18cd7b13db556078a5773b89c947
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b5921a0d15230df4628d4dbb084bcbe964e39b46
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37782149"
 ---
 # <a name="filegroupname-transact-sql"></a>FILEGROUP_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回指定的檔案群組識別碼的檔案群組名稱。  
+此函數會傳回指定檔案群組識別碼的檔案群組名稱。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
 ## <a name="arguments"></a>引數  
  *filegroup_id*  
- 這是需要傳回檔案群組名稱的檔案群組識別碼。 *filegroup_id* 為 **smallint**。  
+
+會傳回其檔案群組名稱 `FILEGROUP_NAME` 的檔案群組識別碼。 *filegroup_id* 的資料類型為 **smallint**。  
   
 ## <a name="return-types"></a>傳回類型  
- **nvarchar(128)**  
+**nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
- *filegroup_id* 對應到 **sys.filegroups** 目錄檢視中的 **data_space_id** 資料行。  
+*filegroup_id* 對應到 **sys.filegroups** 目錄檢視的 **data_space_id** 資料行。  
   
 ## <a name="examples"></a>範例  
- 下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的檔案群組識別碼 `1` 的檔案群組名稱。  
+此範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中檔案群組識別碼 `1` 的檔案群組名稱。  
   
 ```  
-  
 SELECT FILEGROUP_NAME(1) AS [Filegroup Name];  
 GO  
 ```  

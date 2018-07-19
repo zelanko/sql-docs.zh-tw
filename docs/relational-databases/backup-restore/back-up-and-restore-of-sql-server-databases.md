@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c0f697cb84405cd84c2aa595a1d39f28f048474
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708026"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324482"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 資料庫的備份與還原
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34708026"
   
 ##  <a name="glossary-of-backup-terms"></a>備份詞彙表
  **備份** [動詞]  
- 將資料或記錄檔記錄從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫或其交易記錄複製至備份裝置 (例如磁碟)，以建立資料備份或記錄備份。  
+ 建立**備份 [名詞]** 的過程，就是從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫複製資料錄，或從它的交易記錄檔複製記錄檔記錄。  
   
  **備份** [名詞]  
  失敗後可用來還原和復原資料的資料複本。 資料庫備份也可用來將資料庫的複本還原到新位置。  

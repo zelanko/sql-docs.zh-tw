@@ -1,10 +1,9 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 06/19/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -28,18 +27,19 @@ helpviewer_keywords:
 - CREATE CERTIFICATE statement
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 caps.latest.revision: 74
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: abd46332127b1b15280df0ec5bab5655da5a148a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942834"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
   將憑證加入至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中。  
 
@@ -91,7 +91,7 @@ CREATE CERTIFICATE certificate_name [ AUTHORIZATION user_name ]
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 CREATE CERTIFICATE certificate_name   
     { <generate_new_keys> | FROM <existing_keys> }  
@@ -183,7 +183,7 @@ CREATE CERTIFICATE certificate_name
 > [!NOTE]  
 >  用於加密及簽署的內建函數不會檢查憑證的到期日期。 這些函數的使用者必須決定何時檢查憑證到期日期。  
   
- 您可以使用 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 函式來建立憑證的二進位描述。 如需使用 **CERTPRIVATEKEY** 和 **CERTENCODED** 將憑證複製到其他資料庫的範例，請參閱 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 主題中的範例 B。  
+ 您可以使用 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 和 [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md) 函式來建立憑證的二進位描述。 如需使用 **CERTPRIVATEKEY** 和 **CERTENCODED** 將憑證複製到其他資料庫的範例，請參閱 [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) 一文中的範例 B。  
   
 ## <a name="permissions"></a>Permissions  
  需要資料庫的 CREATE CERTIFICATE 權限。 只有 Windows 登入、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入，以及應用程式角色可以擁有憑證。 群組和角色無法擁有憑證。  
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 建立自我簽署憑證  
- 下列範例會建立稱為 `Shipping04` 的憑證，而不指定加密密碼。 這個範例可以搭配使用 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。
+ 下列範例會建立稱為 `Shipping04` 的憑證，而不指定加密密碼。 這個範例可以搭配使用 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]。
   
 ```  
 CREATE CERTIFICATE Shipping04   

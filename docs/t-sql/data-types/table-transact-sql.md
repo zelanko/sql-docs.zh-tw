@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/23/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - table variables [SQL Server]
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 caps.latest.revision: 48
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1751c6c9b6a05cd4337bd376108ef8d7e3d84ea4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054218"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432237"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,8 +105,9 @@ SELECT select_list INTO table_variable;
   
 修改 **table** 變數的查詢不會產生平行查詢執行計畫。 修改超大型 **table** 變數或複雜查詢中的 **table** 變數時，可能會影響效能。 在這些狀況中，請改用暫存資料表。 如需詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。 讀取但不修改 **table** 變數的查詢仍然可以平行處理。
   
-您無法明確建立 **table** 變數的索引，也無法保留 **table** 變數的任何統計資料。 在某些情況下，改用支援索引和統計資料的暫存資料表可以提升效能。 如需暫存資料表的詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。
-  
+您無法明確建立 **table** 變數的索引，也無法保留 **table** 變數的任何統計資料。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始， 已引進新的語法，允許您建立某些內嵌資料表定義的索引類型。  您可以使用這個新的語法在 **table** 變數上建立索引，作為資料表定義的一部分。 在某些情況下，改用完整索引支援和統計資料的暫存資料表可以提升效能。 如需暫存資料表和建立內嵌索引的詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。
+
+
 **table** 類型宣告中的 CHECK 條件約束、DEFAULT 值和計算資料行無法呼叫使用者定義函式。
   
 不支援 **table** 變數之間的指派作業。
