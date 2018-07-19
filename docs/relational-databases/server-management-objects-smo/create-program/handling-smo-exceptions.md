@@ -1,5 +1,5 @@
 ---
-title: 處理 SMO 例外狀況 |Microsoft 文件
+title: 處理 SMO 例外狀況 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 85d0705776117d09584ea27d1d0b6ef68ede1b9d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967273"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005730"
 ---
 # <a name="handling-smo-exceptions"></a>處理 SMO 例外狀況
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,15 +43,15 @@ ms.locfileid: "32967273"
 > [!NOTE]  
 >  **SQLException**例外狀況會在宣告**System.Data.SqlClient**命名空間。  
   
- ![此圖顯示的層級 excp](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "的圖表，顯示的層級 excp")  
+ ![此圖顯示等級的 excp](../../../relational-databases/server-management-objects-smo/create-program/media/exception-flow.gif "的圖表，顯示的層級 excp")  
   
  此圖顯示應用程式層級中的例外狀況流程。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>
   
 ## <a name="catching-an-exception-in-visual-basic"></a>在 Visual Basic 中攔截例外狀況  
- 這個程式碼範例示範如何使用**再試一次...Catch...最後**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]陳述式來攔截 SMO 例外狀況。 所有的 SMO 例外狀況都具有 SmoException 類型，而且會列於 SMO 參考中。 內部例外狀況的順序會顯示，以指出錯誤的根源所在。 如需詳細資訊，請參閱 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 文件集。  
+ 此程式碼範例示範如何使用**試...Catch...最後**[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]陳述式來攔截 SMO 例外狀況。 所有的 SMO 例外狀況都具有 SmoException 類型，而且會列於 SMO 參考中。 內部例外狀況的順序會顯示，以指出錯誤的根源所在。 如需詳細資訊，請參閱[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].NET 文件。  
   
 ```VBNET
 'This sample requires the Microsoft.SqlServer.Management.Smo.Agent namespace is included.

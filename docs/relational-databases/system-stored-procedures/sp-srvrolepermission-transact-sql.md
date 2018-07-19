@@ -1,5 +1,5 @@
 ---
-title: sp_srvrolepermission (TRANSACT-SQL) |Microsoft 文件
+title: sp_srvrolepermission (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: db6b3367b1d1a048bb47e4d30b96970557f48939
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014759"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="arguments"></a>引數  
  [  **@srvrolename =** ] **'***角色***'**  
- 這是要傳回權限的固定伺服器角色名稱。 *角色*是**sysname**，預設值是 NULL。 如果未指定角色，則會傳回所有固定伺服器角色的權限。 *角色*可以有下列值之一。  
+ 這是要傳回權限的固定伺服器角色名稱。 *角色*已**sysname**，預設值是 NULL。 如果未指定角色，則會傳回所有固定伺服器角色的權限。 *角色*可以有下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**sysadmin**|系統管理員|  
 |**securityadmin**|安全性管理員|  
@@ -66,7 +66,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**伺服器角色**|**sysname**|固定伺服器角色的名稱|  
 |**權限**|**sysname**|與相關聯的權限**ServerRole**|  
@@ -77,7 +77,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
  **Sysadmin**固定的伺服器角色擁有的所有其他固定的伺服器角色的權限。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列查詢會傳回與 `sysadmin` 固定伺服器角色相關聯的權限。  
@@ -90,8 +90,8 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_dropsrvrolemember &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
- [sp_helpsrvrole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
+ [sp_dropsrvrolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   
+ [sp_helpsrvrole &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

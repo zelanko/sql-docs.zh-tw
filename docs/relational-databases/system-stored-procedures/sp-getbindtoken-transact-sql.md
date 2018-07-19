@@ -1,5 +1,5 @@
 ---
-title: sp_getbindtoken (TRANSACT-SQL) |Microsoft 文件
+title: sp_getbindtoken (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: ecf272b61591124b6e7ce920ecf1c8b481a6ac5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241826"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014913"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33241826"
   傳回交易的唯一識別碼。 這個唯一識別碼是利用 sp_bindsession 來繫結工作階段時所用的字串。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用 Multiple Active Result Set (MARS) 或分散式交易。 如需詳細資訊，請參閱[使用 Multiple Active Result Set & #40;MARS & #41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]請改用 Multiple Active Result Set (MARS) 或分散式交易。 如需詳細資訊，請參閱 <<c0> [ 使用 Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)。</c0>  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
   
 ## <a name="arguments"></a>引數  
  [@out_token=]'*return_value*'  
- 這是用來繫結工作階段的 Token。 *return_value*是**varchar （255)** 沒有預設值。  
+ 這是用來繫結工作階段的 Token。 *return_value*已**varchar(255)** 沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  無  
@@ -57,7 +57,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  無  
   
 ## <a name="remarks"></a>備註  
- 只有在使用中交易內執行預存程序時，sp_getbindtoken 會傳回有效的語彙基元。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤訊息。 例如：  
+ 只有在使用中交易內執行預存程序時，sp_getbindtoken 才會傳回有效的語彙基元。 否則，[!INCLUDE[ssDE](../../includes/ssde-md.md)] 會傳回錯誤訊息。 例如：  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -70,7 +70,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- 當 sp_getbindtoken 來編列分散式的交易連接開啟的交易，內部[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回相同的 token。 例如：  
+ 使用分散式的交易內加入連接開啟的交易，sp_getbindtoken 時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]傳回相同的語彙基元。 例如：  
   
 ```  
 USE AdventureWorks2012;  
@@ -131,7 +131,7 @@ SELECT @bind_token AS Token;
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_bindsession & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [srv_getbindtoken&#40;擴充預存程序 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  
   

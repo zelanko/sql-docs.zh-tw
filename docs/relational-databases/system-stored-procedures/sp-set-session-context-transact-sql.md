@@ -1,5 +1,5 @@
 ---
-title: sp_set_session_context (TRANSACT-SQL) |Microsoft 文件
+title: sp_set_session_context & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
 ms.prod: sql
@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2d1396ef79eb69b96a40f075c50cd38b6ad77d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248346"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015004"
 ---
-# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (TRANSACT-SQL)
+# <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-設定工作階段內容中的索引鍵-值組。  
+工作階段內容中設定的索引鍵 / 值組。  
   
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,26 +51,26 @@ sp_set_session_context [ @key= ] 'key', [ @value= ] 'value'
   
 ## <a name="arguments"></a>引數  
  [ @key=] 'key'  
- 正在設定，類型的機碼**sysname**。 最大的金鑰大小為 128 個位元組。  
+ 正在設定的類型的索引鍵**sysname**。 最大的金鑰大小為 128 個位元組。  
   
  [ @value=] 'value'  
- 指定之索引鍵，類型的值**sql_variant**。 將值設定為 NULL，就會釋出記憶體。 大小上限是 8,000 位元組。  
+ 所指定的索引鍵類型的值**sql_variant**。 將值設定為 NULL，就會釋出記憶體。 大小上限是 8,000 位元組。  
   
  [ @read_only= ] { 0 | 1 }  
- 類型的旗標**元**。 如果是 1，然後指定索引鍵的值無法再進行變更在這個邏輯連線。 如果您可以變更為 0 （預設值），則會將值。  
+ 類型的旗標**元**。 如果是 1，然後指定的索引鍵的值無法變更一次這個邏輯連接。 如果您可以變更為 0 （預設值），則會將值。  
   
 ## <a name="permissions"></a>Permissions  
  任何使用者可以設定他們的工作階段的工作階段內容。  
   
 ## <a name="remarks"></a>備註  
- 如同其他預存程序，只有常值和變數 （不是運算式或函式呼叫） 可以被當做參數傳遞。  
+ 像其他預存程序，唯一的常值和變數 （不是運算式或函式呼叫） 可以是當做參數傳遞。  
   
- 工作階段內容的大小總計僅限於 256 kb。 如果設定值，導致超過此限制，陳述式會失敗。 您可以監視整體的記憶體使用量，以[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
+ 工作階段內容的大小總計僅限於 256 kb。 如果設定值，會導致超過此限制，陳述式會失敗。 您可以監視整體記憶體使用量[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。  
   
  您可以藉由查詢監視整體的記憶體使用量[sys.dm_os_memory_cache_counters &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) ，如下所示： `SELECT * FROM sys.dm_os_memory_cache_counters WHERE type = 'CACHESTORE_SESSION_CONTEXT';`  
   
 ## <a name="examples"></a>範例  
- 下列範例會示範如何設定，然後再回頭執行名為值的英文語言的工作階段內容金鑰。  
+ 下列範例示範如何設定，然後再將 工作階段內容的索引鍵，名為值是英文的語言。  
   
 ```  
 EXEC sp_set_session_context 'language', 'English';  

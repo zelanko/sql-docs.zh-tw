@@ -1,5 +1,5 @@
 ---
-title: SMO 命名空間 |Microsoft 文件
+title: SMO 命名空間 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -22,25 +22,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 66e6dfd0bd563dfc43fa1bbb44c4042159f0608a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32967403"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005952"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 物件模型命名空間
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 具有多種命名空間。 不同的命名空間代表 SMO 內不同的功能區域。  
   
- 在[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，SMO 組件位於 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ 資料夾中。  
+ 在  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，SMO 組件位於 C:\Program Files\Microsoft SQL Server\130\SDK\Assemblies\ 資料夾中。  
   
 ## <a name="namespaces"></a>命名空間  
  SMO 命名空間有：  
   
 |類別|函數|  
 |-----------|--------------|  
-|<xref:Microsoft.SqlServer.Management.Smo>|包含執行個體類別、 公用程式類別和列舉，可用來以程式設計方式操作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|<xref:Microsoft.SqlServer.Management.Smo>|包含執行個體類別、 公用程式類別和列舉，用來以程式設計方式操作[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |<xref:Microsoft.SqlServer.Management.Common>|包含 Replication Management Objects (RMO) 和 SMO 通用的類別，例如連接類別。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Agent>|包含表示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 的類別。|  
 |<xref:Microsoft.SqlServer.Management.Smo.Wmi>|包含表示 WMI 提供者的類別。|  

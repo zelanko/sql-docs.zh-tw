@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_object_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_xtp_object_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5b6faed35e58044263ea6563a43fd85ada94bbae
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464844"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015576"
 ---
 # <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   報告自從上一次資料庫重新啟動之後，受到每個 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 物件上的作業所影響的資料列數。 不論交易是否認可還是已經回復，執行此作業時都會更新統計資料。  
   
- sys.dm_db_xtp_object_stats 可幫助您識別哪些記憶體最佳化資料表有最大的改變。 您可能會決定移除資料表上未使用或不常使用的索引，因為每個索引都會影響效能。 如果有雜湊索引，您應該定期重新評估貯體計數。 如需詳細資訊，請參閱＜ [Determining the Correct Bucket Count for Hash Indexes](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)＞。  
+ sys.dm_db_xtp_object_stats 可幫助您識別哪些記憶體最佳化資料表有最大的改變。 您可能會決定移除資料表上未使用或不常使用的索引，因為每個索引都會影響效能。 如果有雜湊索引，您應該定期重新評估貯體計數。 如需詳細資訊，請參閱 <<c0> [ 判斷雜湊索引的正確貯體計數](http://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)。  
   
  sys.dm_db_xtp_object_stats 可幫助您識別哪些記憶體最佳化資料表導致了寫入-寫入衝突，這些衝突可能會影響應用程式的效能。 例如，如果您有交易重試邏輯，相同的陳述式可能必須執行一次以上。 此外，您可以使用這項資訊來識別需要處理寫入-寫入錯誤的資料表 (以及商務邏輯)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34464844"
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|物件的識別碼。|  
 |row_insert_attempts|**bigint**|上一次資料庫重新啟動之後，由認可和中止的交易插入資料表中的資料列數。|  
