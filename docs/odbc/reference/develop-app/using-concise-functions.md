@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915573"
 ---
 # <a name="using-concise-functions"></a>使用精簡函式
 某些 ODBC 函數隱含存取描述元。 應用程式撰寫者可能會發現它們比撥號更方便**SQLSetDescField**或**SQLGetDescField**。 這些函式的呼叫*精簡*函式，因為它們執行的函式，包括設定或取得描述項欄位的數字。 某些精簡函式可讓應用程式設定或擷取單一函式呼叫中的數個相關的描述項欄位。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed6b502b0d8b2034624518344c78ed0195dce6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: deffdb98790baa64eaa1983fee6839a65289d0d4
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307287"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>資料指標類型 （SQLSRV 驅動程式）
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ SQLSRV 驅動程式可讓您建立資料列結果集，您可以存取以任何�
   
 您可以建立含有可捲動資料指標，可讓您存取結果集中，依照任何順序中的任何資料列的結果集。 下表列出的值可以傳遞至**Scrollable** sqlsrv_query 或 sqlsrv_prepare 中的選項。  
   
-|選項|Description|  
+|選項|描述|  
 |----------|---------------|  
 |SQLSRV_CURSOR_FORWARD|可讓您開始第一列的結果集，直到您到達結果集的結尾一次移動一個資料列。<br /><br />這是預設資料指標類型。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)會傳回錯誤與此資料指標類型所建立之結果集。<br /><br />**向前**是 SQLSRV_CURSOR_FORWARD 縮寫的形式。|  
 |SQLSRV_CURSOR_STATIC|可讓您以任何順序存取資料列，但不是會反映資料庫中的變更。<br /><br />**靜態**是 SQLSRV_CURSOR_STATIC 縮寫的形式。|  
@@ -46,7 +46,7 @@ SQLSRV 驅動程式可讓您建立資料列結果集，您可以存取以任何�
   
 下表描述您可以在指定的值*列*參數。  
   
-|매개 변수|Description|  
+|參數|描述|  
 |-------------|---------------|  
 |SQLSRV_SCROLL_NEXT|指定下一個資料列。 這是預設值，如果您未指定*列*可捲動的結果集的參數。|  
 |SQLSRV_SCROLL_PRIOR|指定的資料列目前資料列之前。|  

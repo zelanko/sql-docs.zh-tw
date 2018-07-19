@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 996c74d9810464c1da294343d4deb1bf5fe1dd8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d1b0767564d0e664d14af285617f8ae0947382d
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329312"
 ---
 # <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>課程 1-5 - 加入和設定一般檔案來源
 在這項工作中，您會在封裝中加入和設定一般檔案來源。 一般檔案來源是一個資料流程元件，它使用一般檔案連接管理員所定義的中繼資料，來指定轉換處理序要從一般檔案擷取之資料的格式和結構。 一般檔案來源可設定為使用一般檔案連接管理員提供的檔案格式定義，從單個一般檔案擷取資料。  

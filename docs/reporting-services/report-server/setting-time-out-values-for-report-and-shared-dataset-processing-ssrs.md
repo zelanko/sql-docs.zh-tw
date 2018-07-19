@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027115"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>設定報表和共用資料集處理的逾時值 (SSRS)
   您可以 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 指定逾時值，以便設定系統資源的使用限制。 報表伺服器支援兩種逾時值：  

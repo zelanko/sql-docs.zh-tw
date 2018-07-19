@@ -2,7 +2,6 @@
 title: 支援的方法範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e89dde5395bcf58a5958effceb26ae4d07bde0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f92a96be897f8cf89a8355d6aaab22b65e1398f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282647"
 ---
 # <a name="supports-method-example-vc"></a>支援的方法範例 （VC + +）
 這個範例會使用[支援](../../../ado/reference/ado-api/supports-method.md)開啟具有不同的資料指標類型的方法，以顯示一個資料錄集所支援的選項。 若要執行這個範例需要 DisplaySupport 函式。  

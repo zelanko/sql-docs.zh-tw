@@ -1,5 +1,5 @@
 ---
-title: 執行大量載入 XML 資料 (SQLXML 4.0) |Microsoft 文件
+title: 執行大量載入 XML 資料 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: c4087c97debb92415c9a4e72a4fc29ffeaf81713
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708176"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032486"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>執行 XML 資料的大量載入 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34708176"
  [記錄產生處理序&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md)  
  描述藉以產生 XML 大量載入之記錄的程序和規則。  
   
- [註解的解譯&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [註解解譯&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
  描述 XML 大量載入如何解譯 XSD 和 XDR 結構描述中的註解。  
   
  [SQL Server XML 大量載入物件模型&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  
@@ -54,7 +54,7 @@ ms.locfileid: "34708176"
  [資料型別和 XML 大量載入行為&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md)  
  描述 XML 大量載入在處理 XSD 和 XDR 中的不同類型時的行為。  
   
- [方針和限制的 XML 大量載入&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
+ [指導方針和限制的 XML 大量載入&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md)  
  列出一些在使用 XML 大量載入時要注意的問題。  
   
   

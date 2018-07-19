@@ -1,5 +1,5 @@
 ---
-title: 處理用戶端上的 XML (SQLXML Managed 類別) |Microsoft 文件
+title: 在用戶端上處理 XML (SQLXML Managed 類別) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,16 +23,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ea74968bc1776aecab380f5566abbe9a1e64ac5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37972041"
 ---
 # <a name="processing-xml-on-the-client-side-sqlxml-managed-classes"></a>在用戶端上處理 XML (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   此範例說明使用 ClientSideXml 屬性。 應用程式會在伺服器上執行預存程序。 預存程序的結果 (兩個資料行的資料列集) 會在用戶端上進行處理以產生 XML 文件。  
   
- 下列 GetContacts 預存程序傳回**FirstName**和**LastName**的 AdventureWorks 資料庫中的 Person.Contact 資料表中的員工。  
+ 下列 GetContacts 預存程序會傳回**FirstName**並**LastName**的 AdventureWorks 資料庫中的 Person.Contact 資料表中的員工。  
   
 ```  
 USE AdventureWorks  
@@ -44,7 +45,7 @@ WHERE LastName = @LastName
 Go  
 ```  
   
- 此 C# 應用程式執行預存程序，並指定 FOR XML AUTO 選項中指定 CommandText 值。 應用程式、 SqlXmlCommand 物件 ClientSideXml 屬性設定為 true。 這可讓您執行預先存在的預存程序以傳回資料列集，並在用戶端上，將 XML 轉換套用到該資料列集。  
+ 這個 C# 應用程式執行預存程序，並指定 FOR XML AUTO 選項中指定 CommandText 值。 在應用程式，ClientSideXml 屬性的 SqlXmlCommand 物件設定為 true。 這可讓您執行預先存在的預存程序以傳回資料列集，並在用戶端上，將 XML 轉換套用到該資料列集。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

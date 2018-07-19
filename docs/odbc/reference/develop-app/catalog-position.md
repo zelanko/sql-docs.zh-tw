@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910003"
 ---
 # <a name="catalog-position"></a>目錄位置
 識別項和分隔識別碼的其他方式中的目錄名稱位置到資料來源不同資料來源。 比方說，Xbase 資料來源中的目錄名稱是一個目錄，在 Microsoft® Windows®，資料表名稱 （這是檔案名稱） 來隔開反斜線 (\\)。 下圖示範這種狀況。  

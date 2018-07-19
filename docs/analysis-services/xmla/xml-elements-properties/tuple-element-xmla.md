@@ -1,5 +1,5 @@
 ---
-title: Tuple 元素 (XMLA) |Microsoft 文件
+title: Tuple 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9f7f7d21f64c502e60ee0f6c95d2b6cbfd09c1b7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0192a126b3be4338cedd47c1cd5b175ba1debc41
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062665"
 ---
 # <a name="tuple-element-xmla"></a>Tuple 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,15 +32,15 @@ ms.lasthandoff: 05/10/2018
 </Tuples>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|無|  
 |預設值|無|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

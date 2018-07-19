@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032275"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services 中的 SharePoint 文件庫傳遞
   針對 SharePoint 整合所設定的報表伺服器包含您可以用來將報表傳送至 SharePoint 文件庫的傳遞延伸模組。  

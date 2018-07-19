@@ -2,7 +2,6 @@
 title: 基本 RDS 程式設計模型 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 911413ee9bc02c2edbdff0c2e1445dfa94bb5c9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5bf9f06f87a2c94560ff2c8b70df3ef54464e01d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273667"
 ---
 # <a name="basic-rds-programming-model"></a>基本 RDS 程式設計模型
 > [!IMPORTANT]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -15,11 +14,12 @@ caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c1504f51732a5f0dd6b7affabdbc49f3517db254
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d828bb3d70346ecb41bd5382f67a8c54ed18e8fd
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322387"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>原生至 SharePoint 移轉 (SSRS)
 

@@ -1,6 +1,6 @@
 ---
 title: MDX 資料定義陳述式 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: abd819871af876d15354af4258c3cd76e0e52197
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d6a440b76ee639c345d24c1c1e60a2038fca75de
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579670"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741587"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>MDX 資料定義陳述式 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   在多維度運算式 (MDX) 中，資料定義陳述式可建立、卸除和管理多維度物件。 下表列出可用的資料定義陳述式。  
   

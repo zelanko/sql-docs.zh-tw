@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,12 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 3d7b44e607fb232f044b502f1a692d2c91529bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3d49a3702cfb781d89d4cda018d271eed52c17a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408340"
 ---
 # <a name="upgrade-integration-services-packages"></a>升級 Integration Services 封裝
   當您將 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 執行個體升級為目前的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本時，現有的 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 封裝並不會自動升級為目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 版本所使用的封裝格式。 您必須選取升級方法並手動升級您的封裝。  

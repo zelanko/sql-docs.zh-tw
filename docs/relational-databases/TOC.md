@@ -14,6 +14,7 @@
 ## [執行緒和工作架構](thread-and-task-architecture-guide.md)
 ## [交易記錄架構與管理指南](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [交易鎖定與資料列版本設定指南](sql-server-transaction-locking-and-row-versioning-guide.md)
+## [準刪除記錄清除程序](ghost-record-cleanup-process-guide.md)
 
 # [備份與還原](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
 # [BLOB](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)

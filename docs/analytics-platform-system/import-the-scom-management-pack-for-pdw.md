@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538588"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>匯入 SCOM 管理組件-Analytics Platform System
 請遵循下列步驟來匯入 System Center Operations Manager (SCOM) 管理組件 Analytics Platform System (AP)。 監視從 SCOM Parallel Data Warehouse 所需的管理組件。 

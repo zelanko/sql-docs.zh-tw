@@ -1,8 +1,6 @@
 ---
 title: SSMA 使用來存取主控台 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5b2bb79c943daa2065320aa4dcebe5c81b1ae989
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 09d785bf9fc4de885bab5bde80927896922a706d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774724"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>SSMA 使用來存取主控台 (AccessToSQL)
 現在可透過在命令列主控台應用程式存取 Microsoft SQL Server 移轉小幫手 (SSMA) 進行存取。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式，SSMA 啟用指令碼層級互動、 減少移轉循環和縮放移轉作業。  

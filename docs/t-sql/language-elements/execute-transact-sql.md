@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -36,11 +35,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a68416a450c521bfcdf78887e2f6b4f469ea2c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49a9a6bdbd2b952614dff3c1095847a434803c78
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36251030"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -302,7 +302,7 @@ Execute a character string
   
 |詞彙|定義|  
 |----------|----------------|  
-|RECOMPILE|在執行模組之後，強制編譯、使用和捨棄新計畫。 如果該模組有現有的查詢計畫，這個計畫便會保留在快取中。<br /><br /> 如果您所提供的參數不合規則，或者如果資料已經大幅變更，請使用這個選項。 這個選項不適用於擴充預存程序。 我們建議您少用這個選項，因為它的成本很高。<br /><br /> **注意：**呼叫使用 OPENDATASOURCE 語法的預存程序時，您無法使用 WITH RECOMPILE。 指定物件名稱四部分時，會忽略 WITH RECOMPILE 選項。<br /><br /> **注意：**RECOMPILE 不支援搭配原生編譯的純量使用者定義函數。 如果您需要重新編譯，請使用 [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
+|RECOMPILE|在執行模組之後，強制編譯、使用和捨棄新計畫。 如果該模組有現有的查詢計畫，這個計畫便會保留在快取中。<br /><br /> 如果您所提供的參數不合規則，或者如果資料已經大幅變更，請使用這個選項。 這個選項不適用於擴充預存程序。 我們建議您少用這個選項，因為它的成本很高。<br /><br /> **注意：** 呼叫使用 OPENDATASOURCE 語法的預存程序時，您無法使用 WITH RECOMPILE。 指定物件名稱四部分時，會忽略 WITH RECOMPILE 選項。<br /><br /> **注意：** RECOMPILE 不支援搭配原生編譯的純量使用者定義函數。 如果您需要重新編譯，請使用 [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)。|  
 |**RESULT SETS UNDEFINED**|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 這個選項不保證會傳回何種結果 (如果有的話)，也不提供定義。 如果傳回任何結果或未傳回結果，陳述式會正確無誤地執行。 如果未提供 result_sets_option，RESULT SETS UNDEFINED 是預設行為。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
 |RESULT SETS NONE|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證 Execute 陳述式不會傳回任何結果。 如果傳回任何結果，會中止批次。<br /><br /> 對於解譯的純量使用者定義函數和原生編譯的純量使用者定義函數，這個選項沒有作用，因為函數永遠不會傳回結果集。|  
 |*\<result_sets_definition>*|**適用對象**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 保證結果會依 result_sets_definition 中所指定傳回。 針對傳回多個結果集的陳述式，請提供多個 *result_sets_definition* 區段。 將每個 *result_sets_definition* 括在括號中，並以逗號分隔。 如需詳細資訊，請參閱本主題稍後的 \<result_sets_definition>。<br /><br /> 此選項對於原生編譯的純量使用者定義函數一律會產生錯誤，因為函數永遠不會傳回結果集。|

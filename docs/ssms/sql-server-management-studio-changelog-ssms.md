@@ -15,11 +15,12 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619535"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +45,7 @@ Azure SQL 資料倉儲：
 
 **Integration Services (IS)**
 
-- 針對部署到 Azure SQL Database 的 SSIS 套件，新增排程功能。 不同於內部部署 SQL Server 和 SQL Database 受控執行個體 (預覽) 有 SQL Server Agent 作為首要工作排程器，SQL Database 並沒有內建排程器。 此新的 SSMS 功能提供類似於 SQL Server Agent 的熟悉使用者介面，來排程部署到 SQL Database 的套件。 如果您使用 SQL Database 裝載 SSIS 目錄資料庫 SSISDB，您可以使用此 SSMS 功能，產生排程 SSIS 套件所需的 Data Factory 管線、活動和觸發程序。 您可以接著編輯並擴充 Data Factory 中的這些物件。 如需詳細資訊，請參閱[使用 SSMS 排程 Azure SQL Database 上的 SSIS 套件執行](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)。 若要深入了解 Azure Data Factory 管線、活動和觸發程序，請參閱 [Azure Data Factory 中的管道及活動](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)和 [Azure Data Factory 中的管道執行和觸發程序](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)。
+- 針對部署到 Azure SQL Database 的 SSIS 套件，新增排程功能。 不同於具有 SQL Server Agent 作為首要工作排程器的內部部署 SQL Server 和 SQL Database 受控執行個體 (預覽，SQL Database 並沒有內建排程器。 此新的 SSMS 功能提供類似於 SQL Server Agent 的熟悉使用者介面，來排程部署到 SQL Database 的套件。 如果您使用 SQL Database 來裝載 SSIS 目錄資料庫 SSISDB，您可以使用此 SSMS 功能，產生排程 SSIS 套件所需的 Data Factory 管線、活動和觸發程序。 然後，您可以編輯並擴充 Data Factory 中的這些物件。 如需詳細資訊，請參閱[使用 SSMS 排程 Azure SQL Database 上的 SSIS 套件執行](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md)。 若要深入了解 Azure Data Factory 管線、活動和觸發程序，請參閱 [Azure Data Factory 中的管道及活動](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities)和 [Azure Data Factory 中的管道執行和觸發程序](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers)。
 - 支援在 SQL 受控執行個體上的 SQL Agent 中排程 SSIS 套件。 您現在可以建立 SQL Agent 工作，在受控執行個體上執行 SSIS 套件。 
 
 ### <a name="bug-fixes"></a>錯誤修正
@@ -226,7 +227,7 @@ SMO：
 
 - 修正 SMO 在伺服器定序區分大小寫時無法提取 AvailabilityReplica 屬性的問題 (因此，SSMS 可以顯示「無法繫結多部分識別碼 "a.delimited"」這類錯誤訊息。
 - 修正 DatabaseScopedConfigurationCollection 類別中不正確地處理定序的問題 (因此，以滑鼠右鍵按一下在含區分大小寫定序之伺服器上執行的資料庫時，在含土耳其文地區設定之 ma 電腦上執行的 SSMS 會顯示「舊版基數估計不是有效的範圍設定」這類錯誤)。
-- 修正 JobServer 類別中 SMO 無法提取 SQL 2005 伺服器上 SQL Agent 屬性的問題 (因此，SSMS 將會擲回下列這類錯誤：「無法將預設值指派給區域變數。 必須宣告純量變數 "@ServiceStartMode"」，且最後不會在物件總管中顯示 SQL Agent 節點)。
+- 修正 JobServer 類別中 SMO 無法提取 SQL 2005 伺服器上 SQL Agent 屬性的問題 (因此，SSMS 將會擲回下列這類錯誤：「無法將預設值指派給區域變數。 必須宣告純量變數 "\@ServiceStartMode"，且最後不會在物件總管中顯示 SQL Agent 節點)。
 
 範本： 
 

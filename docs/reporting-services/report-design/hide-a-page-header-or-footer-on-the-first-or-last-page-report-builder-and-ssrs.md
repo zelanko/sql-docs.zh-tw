@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023345"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>隱藏第一頁或最後一頁的頁首或頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端執行的頁首和頁尾。 在您加入頁首或頁尾之後，就可以選擇性地隱藏報表第一頁和最後一頁的頁首或頁尾。  

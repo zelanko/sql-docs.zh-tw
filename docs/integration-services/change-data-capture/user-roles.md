@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
@@ -16,11 +14,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c96d380d5168a936dc5f4db51f2b52f68e30f49d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd24537cc05c7b2786f766278832ae64ab924508
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331392"
 ---
 # <a name="user-roles"></a>使用者角色
   本節描述 Attunity Oracle Change Data Capture (CDC) 服務的使用者角色。 描述的角色包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色、Windows 角色或 Oracle 資料庫角色。  

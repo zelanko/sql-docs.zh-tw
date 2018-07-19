@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544930"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>PDW 憑證佈建-Analytics Platform System
 **PDW 憑證佈建**頁面 Analytics Platform System **Configuration Manager**匯入或移除 PDW 區域所使用的憑證。 使用，來加密連接的憑證可協助安全的通訊透過 SQL Server 用戶端，可以使用 SQL Server PDW 驅動程式的工具的控制節點到[管理主控台](monitor-the-appliance-by-using-the-admin-console.md)，和 Integration Services 就會載入。  

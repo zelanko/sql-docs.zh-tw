@@ -1,38 +1,27 @@
 ---
-title: PredictAssociation (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 09/14/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictAssociation
-dev_langs:
-- DMX
-helpviewer_keywords:
-- PredictAssociation function
-ms.assetid: 33eb66b5-84c6-449f-aaae-316345bc4ad5
-caps.latest.revision: 33
-author: Minewiskan
+title: PredictAssociation (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e1d65c529dd268560b34d25a1cb767aefe4575db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989540"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   預測關聯的成員資格。  
   
-例如，您可以使用 PredictAssociation 函數以取得建議給客戶的購物籃的目前狀態的集合。 
+比方說，您可以使用 PredictAssociation 函式，以取得建議給客戶的購物籃的目前狀態的集合。 
   
 ## <a name="syntax"></a>語法  
   
@@ -42,29 +31,29 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>適用於  
- 包含可預測的巢狀的資料表，包括關聯和某些分類演算法的演算法。 支援巢狀的資料表的分類演算法包括[!INCLUDE[msCoName](../includes/msconame-md.md)]決策樹[!INCLUDE[msCoName](../includes/msconame-md.md)]貝氏機率分類和[!INCLUDE[msCoName](../includes/msconame-md.md)]類神經網路演算法。  
+ 包含可預測的巢狀的資料表，包括關聯和一些分類演算法的演算法。 支援巢狀的資料表的分類演算法包括[!INCLUDE[msCoName](../includes/msconame-md.md)]決策樹[!INCLUDE[msCoName](../includes/msconame-md.md)]貝氏機率分類和[!INCLUDE[msCoName](../includes/msconame-md.md)]類神經網路演算法。  
   
 ## <a name="return-type"></a>傳回類型  
  \<資料表運算式 >  
   
 ## <a name="remarks"></a>備註  
- 選項**PredictAssociation**函式包括 EXCLUDE_NULL、 INCLUDE_NULL、 INCLUSIVE、 EXCLUSIVE （預設）、 INPUT_ONLY、 INCLUDE_STATISTICS 和 INCLUDE_NODE_ID。  
+ 選項**PredictAssociation**函式包括 EXCLUDE_NULL、 INCLUDE_NULL、 INCLUSIVE、 EXCLUSIVE （預設）、 INPUT_ONLY、 INCLUDE_STATISTICS 與 INCLUDE_NODE_ID。  
   
 > [!NOTE]  
 >  INCLUSIVE、EXCLUSIVE、INPUT_ONLY 與 INCLUDE_STATISTICS 只適用於資料表資料行參考，而 EXCLUDE_NULL 與 INCLUDE_NULL 只適用於純量資料行參考。  
   
- INCLUDE_STATISTICS 只會傳回 **$Probability**和 **$AdjustedProbability**。  
+ INCLUDE_STATISTICS 只會傳回 **$Probability**並 **$AdjustedProbability**。  
   
- 如果數字參數*n*指定，則**PredictAssociation**函式會傳回前 n 個最可能的值根據機率：  
+ 如果將數字參數*n*指定，則**PredictAssociation**函式會傳回根據機率的前 n 個最可能值：  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- 如果您包含 **$AdjustedProbability**，陳述式傳回前*n*值根據 **$AdjustedProbability**。  
+ 如果您納入 **$AdjustedProbability**，此陳述式傳回前*n*值根據 **$AdjustedProbability**。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用**PredictAssociation**函數傳回的四項產品在 Adventure Works 資料庫中最有可能同時銷售。  
+ 下列範例會使用**PredictAssociation**函式傳回的四種產品，在 Adventure Works 資料庫，最有可能一起銷售。  
   
 ```  
 SELECT  
@@ -72,7 +61,7 @@ SELECT
 From  
   [Association]  
 ```  
-下列範例會示範如何使用巢狀的資料表當做預測函數的輸入使用 SHAPE 子句。 SHAPE 查詢建立一個資料列集具有 customerId 做為一個資料行和巢狀的資料表做為第二個資料行，其中包含的產品已經帶來客戶的清單。 
+下列範例會示範如何使用巢狀的資料表當做預測函式中，輸入使用 SHAPE 子句。 SHAPE 查詢會使用 customerId 做為一個資料行和巢狀的資料表做為第二個資料行，其中包含客戶已經已經給了的產品清單建立資料列集。 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
@@ -89,7 +78,7 @@ SHAPE {
 
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

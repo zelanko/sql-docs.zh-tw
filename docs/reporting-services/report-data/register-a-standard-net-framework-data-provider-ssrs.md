@@ -1,7 +1,7 @@
 ---
 title: 註冊標準的 .NET Framework Data Provider (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/18/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 68c34c7ce77c3986d4df390c3512617e27de23b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfd6cbea6bfefca9b695af4071727ba3d2550a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550429"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>註冊標準的 .NET Framework Data Provider (SSRS)
   若要使用協力廠商的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者來擷取 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表資料集的資料，您必須在兩個位置部署並註冊 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者組件：報表撰寫用戶端與報表伺服器。 在報表撰寫用戶端上，您必須註冊資料提供者做為資料來源類型，並將其與查詢設計工具產生關聯。 然後您可以在建立報表資料集時，選取此資料提供者做為資料來源的類型。 相關聯的查詢設計工具便會開啟，協助您建立此資料來源類型的查詢。 在報表伺服器上，您必須註冊資料提供者，做為資料來源類型。 然後您可以處理使用此資料提供者，從資料來源擷取資料的已發行報表。  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  URL 成員資格僅是您可以針對資料提供者選取的多個成員資格條件的其中一個。  
   
 ### <a name="verifying-the-deployment-and-registration"></a>確認部署與註冊  
- 您可以確認是否將資料提供者成功部署至報表伺服器，方法是，開啟報表管理員，然後確認該資料提供者包含在可用資料來源的清單中。 如需報表管理員和資料來源的詳細資訊，請參閱[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
+ 您可以確認是否將資料提供者成功部署至報表伺服器，方法是開啟 Web 入口網站，然後確認該資料提供者包含在可用資料來源的清單中。 如需 Web 入口網站和資料來源的詳細資訊，請參閱[建立、修改及刪除共用資料來源 &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)。  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>在報表設計師用戶端上註冊 .NET Framework Data Provider  
  若要針對資料來源撰寫使用此 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者的報表，您必須在執行報表設計師的用戶端電腦上安裝該組件。 您必須修改兩個組態檔。 修改 RSReportDesigner.config 以註冊資料提供者做為資料來源，以及使用一般查詢設計工具。 修改 RSPreviewPolicy.config 以授與資料提供者組件的程式碼存取安全性權限。  
@@ -198,7 +199,7 @@ ms.lasthandoff: 05/03/2018
  在您可以確認部署之前，必須在本機電腦上，關閉 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 的所有執行個體。 在您已經結束所有目前的工作階段後，您可以確認是否已將您的資料提供者成功部署至報表設計師，方法是，在 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]中建立新的報表專案。 當您從報表建立新的資料集時，資料提供者應該會包含在可用資料來源類型的清單中。  
   
 ## <a name="platform-considerations"></a>平台考量  
- 在 64 位元 (x64) 平台上， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會以 32 位元 WOW 模式執行。 當您在 x64 平台上撰寫報表時，您需要將 32 位元資料提供者安裝在報表撰寫用戶端上，才能預覽您的報表。 如果您在相同的系統上發行報表，您需要 x64 資料提供者，才能使用報表管理員檢視報表。  
+ 在 64 位元 (x64) 平台上， [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 會以 32 位元 WOW 模式執行。 當您在 x64 平台上撰寫報表時，您需要將 32 位元資料提供者安裝在報表撰寫用戶端上，才能預覽您的報表。 如果您在相同的系統上發佈報表，您需要 x64 資料提供者，才能在 Web 入口網站中檢視報表。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 不支援以 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]為基礎的平台。  
   

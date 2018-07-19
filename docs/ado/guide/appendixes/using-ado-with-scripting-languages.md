@@ -2,7 +2,6 @@
 title: 使用 ADO 搭配指令碼語言 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 070cfacfad680fbf0664ad5dc6bc3a01aed99520
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa90243680a59676f64f00cc4fd2b0c182c3d674
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271207"
 ---
 # <a name="using-ado-with-scripting-languages"></a>使用 ADO 搭配指令碼語言
 在指令碼環境中，ADO 可讓您公開資料透過伺服器端指令碼。 在此案例中，ADO 中，基礎 OLE DB 提供者，它使用，而且參考指定的資料存放區所需的其他元件安裝在執行網際網路資訊服務 (IIS) 的伺服器。 ADO 使用 Active Server Pages (ASP)，是可以產生 HTML，例如指令碼中參考的元件。 這個 HTML 內容可以透過 HTTP 傳遞至用戶端 Web 瀏覽器。 使用指令碼，網頁就可以將動作傳送回伺服器端指令碼，可讓您以更新、 周遊，或檢視特定資料。  
   
  您在網頁中使用 ActiveX 物件之前，請務必知道物件是否可安全用於指令碼。 當物件會被視為安全用於指令碼時，這表示不採取任何有害的動作，在使用者電腦上的控制項，因此可以執行，而要求使用者核准。 下表列出 ADO 物件，並指出它們是否可安全用於指令碼。  
   
-|物件|指令碼的安全？|  
+|Object|指令碼的安全？|  
 |------------|-------------------------|  
 |ADO 連接|是|  
 |ADO 命令|否|  

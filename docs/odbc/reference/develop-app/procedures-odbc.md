@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910123"
 ---
 # <a name="procedures-odbc"></a>ODBC 的程序
 A*程序*是儲存在資料來源上的可執行物件。 通常，它是先行編譯的一或多個 SQL 陳述式。  

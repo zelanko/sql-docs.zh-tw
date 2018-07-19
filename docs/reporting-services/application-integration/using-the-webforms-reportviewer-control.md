@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017487"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>使用 WebForms ReportViewer 控制項
   若要檢視已部署至報表伺服器或存在於本機檔案系統的報表，您可以使用 WebForms ReportViewer 控制項在 Web 應用程式中加以轉譯。  

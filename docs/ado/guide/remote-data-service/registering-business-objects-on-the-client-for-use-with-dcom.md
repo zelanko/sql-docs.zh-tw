@@ -2,7 +2,6 @@
 title: 使用用戶端上的商務物件向 DCOM |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c92544630110443b3db9092738978a3608e57db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2be8421c2d1b09887d50a49c0fdb71d2a5d92886
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274217"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>用於搭配 DCOM 用戶端上註冊商務物件
 自訂商務物件需要確保用戶端可以將他們的程式名稱 (ProgId) 對應到可透過 DCOM 使用的識別項 (CLSID)。 基於這個理由，DCOM 物件的 ProgID 必須位於用戶端登錄中，並將對應至的伺服器端的商務物件的類別識別碼。 針對其他支援的通訊協定 （HTTP、 HTTPS 和同處理序），這不需要。  

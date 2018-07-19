@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910933"
 ---
 # <a name="sql-92-cast-function"></a>SQL 92 CAST 函數
 **轉換**以 sql-92 定義的函數即相當於**轉換**ODBC 中定義的函式。 對等函式的語法如下所示：  

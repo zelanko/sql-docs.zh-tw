@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016085"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>第 4 課：將資料表加入至報表 (Reporting Services)
 定義資料集之後，您就可以開始設計報表。 您可以將資料區域、文字方塊、影像和您要包含在報表中的其他項目拖放至設計介面來建立報表配置。  

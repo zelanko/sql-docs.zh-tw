@@ -2,7 +2,6 @@
 title: CopyRecord、 CopyTo 和 SaveToFile 方法範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1bc60c7059534f7e6e4bfda3c6433c845ef9f296
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64a1367298c3d5c78e95112802732aa10ef75141
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277127"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord、 CopyTo 和 SaveToFile 方法範例 (VB)
 這個範例示範如何建立複製的檔案，使用[資料流](../../../ado/reference/ado-api/stream-object-ado.md)或[記錄](../../../ado/reference/ado-api/record-object-ado.md)物件。 一個複本進行，以供網際網路發行的 Web 資料夾。 其他屬性和方法，顯示包含[資料流類型](../../../ado/reference/ado-api/type-property-ado-stream.md)，**開啟**， [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)，和[記錄開啟](../../../ado/reference/ado-api/open-method-ado-record.md)。  

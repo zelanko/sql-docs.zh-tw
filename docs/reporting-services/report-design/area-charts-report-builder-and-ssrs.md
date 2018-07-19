@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019855"
 ---
 # <a name="area-charts-report-builder-and-ssrs"></a>區域圖 (報表產生器及 SSRS)
   區域圖會將數列顯示成一組用線條連接的點，線條下會有一個全部填滿的區域。 如需如何將資料加入區域圖的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

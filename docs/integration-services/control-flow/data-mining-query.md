@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91639e391d4cd0ede308d13d093347855c0db0b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2438aaceb3880068440f44d0bc670a161a6dbeca
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400670"
 ---
 # <a name="data-mining-query"></a>資料採礦查詢
   設計窗格包含資料採礦預測查詢產生器，您可以使用該產生器來建立資料採礦預測查詢。 您可以依據輸入資料表來設計預測查詢，或設計單一預測查詢。 切換到結果檢視以執行查詢並檢視結果。 查詢檢視會顯示預測查詢產生器所建立的資料採礦延伸模組 (DMX) 查詢。  

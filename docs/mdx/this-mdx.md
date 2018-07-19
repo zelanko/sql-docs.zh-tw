@@ -1,34 +1,23 @@
 ---
 title: 此 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- THIS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- This function [MDX]
-ms.assetid: 87acddee-ae54-49ee-8923-1b760606e8b7
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 87d902437558a4637d4f67c8338d40c3c3a361b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 77db403ee016283a565a6bc86d2f6857de0eff45
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743247"
 ---
 # <a name="this-mdx"></a>This (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回目前的 Subcube，用於多維度運算式 (MDX) 計算指令碼中的指派。  
   
@@ -86,7 +75,7 @@ This
  `End Scope;`  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [計算](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

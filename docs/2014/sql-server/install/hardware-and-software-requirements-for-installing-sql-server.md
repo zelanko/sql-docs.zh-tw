@@ -1,0 +1,260 @@
+---
+title: 硬體和 Software Requirements for Installing SQL Server 2014 |Microsoft Docs
+ms.custom: ''
+ms.date: 07/10/2018
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Setup [SQL Server], software
+- software [SQL Server]
+- installing SQL Server, software
+- operating systems [SQL Server], SQL Server requirements
+- Setup [SQL Server], cross-language support
+- operating systems [SQL Server], cross-language support
+- network connections [SQL Server], requirements
+- disk space [SQL Server], SQL Server installations
+- WOW [SQL Server]
+- Setup [SQL Server], hardware
+- dependencies [SQL Server], SQL Server installations
+- cluster hardware requirements [SQL Server]
+- endpoints [SQL Server], SQL Server installations
+- Internet [SQL Server], SQL Server installations
+- hardware [SQL Server]
+- Windows on Windows [SQL Server]
+- installing SQL Server, hardware
+- Setup Configuration Checker
+- SCC [SQL Server]
+- operating systems [SQL Server]
+- space [SQL Server], SQL Server installations
+- system configuration checker
+- installing SQL Server, cross-language support
+- Internet [SQL Server]
+- space [SQL Server]
+- extended system support [SQL Server]
+- 64-bit edition [SQL Server]
+- failover clustering [SQL Server]
+- failover clustering [SQL Server], hardware requirements
+- 32-bit edition [SQL Server]
+- locales [SQL Server], SQL Server installations
+- cross-language support
+- disk space [SQL Server]
+- localized SQL Server versions
+ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
+caps.latest.revision: 302
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 37ce2d372a3ae4ccf12deb24794a31c6034705c3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984270"
+---
+# <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
+
+ > - 嘗試安裝的 SQL Server 2016 **[免費的開發人員版本](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)！**  
+  
+## <a name="considerations"></a>考量 
+  
+-   我們建議您執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]NTFS 的電腦上的檔案格式。 FAT32 檔案系統支援，但不是建議，因為它是安全性低於 NTFS 檔案系統。  
+  
+-   您無法安裝在唯讀、 對應或是壓縮的磁碟機上。  
+  
+-   若要讓 Visual Studio 元件正確安裝，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會要求您安裝更新。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會檢查此更新的狀態，然後需要您下載及安裝該更新，才能繼續進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。 若要避免期間中斷[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式，下載並安裝更新**再執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝**為如下所述 （或.NET 3.5 sp1 提供 Windows Update 上安裝所有更新）：  
+  
+    -   針對[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]SP2，取得所需的更新[這裡](http://go.microsoft.com/fwlink/?LinkId=198093)。  
+  
+    -   適用於任何其他支援作業系統，已包含此更新。  
+  
+-   不支援透過終端機服務用戶端啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。 如果您啟動安裝程式，透過終端機服務用戶端，則安裝會失敗。   
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式會安裝該產品所需的下列軟體元件：  
+  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
+  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式支援檔案  
+  
+-   如需在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 上安裝 [!INCLUDE[win8](../../includes/win8-md.md)] 的最低版本需求，請參閱[在 Windows Server 2012 或 Windows 8 上安裝 SQL Server](http://support.microsoft.com/kb/2681562) (http://support.microsoft.com/kb/2681562)。  
+  
+ 本主題包含下列幾節：  
+  
+-   [硬體和軟體需求](hardware-and-software-requirements-for-installing-sql-server.md#hwswr)  
+  
+-   [處理器、 記憶體和作業系統需求](hardware-and-software-requirements-for-installing-sql-server.md#pmosr)  
+  
+-   [跨語言支援](hardware-and-software-requirements-for-installing-sql-server.md#crosslanguagesupport)  
+  
+-   [擴充系統支援](hardware-and-software-requirements-for-installing-sql-server.md#ess)  
+  
+-   [硬碟空間需求 （32 位元和 64 位元）](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace)  
+  
+-   [資料檔案的儲存體類型](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)  
+  
+-   [在網域控制站上安裝 SQL Server](hardware-and-software-requirements-for-installing-sql-server.md#dc_support)  
+  
+##  <a name="hwswr"></a> 硬體及軟體需求  
+ 下列需求適用於所有的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 安裝：  
+  
+|元件|需求|  
+|---------------|-----------------|  
+|.NET Framework|.NET 3.5 SP1 是必要條件[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]當您選取[!INCLUDE[ssDE](../../includes/ssde-md.md)]， [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]， [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]， [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]，複寫，或[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，並不會再安裝由[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式。 <br />-如果您執行安裝程式並沒有.NET 3.5 SP1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝程式會要求您下載並安裝.NET 3.5 SP1，才能繼續使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝。 (安裝.NET 3.5 SP1 from [Microsoft.NET Framework 3.5 Service Pack 1](http://www.microsoft.com/download/details.aspx?id=22)。)此錯誤訊息包含下載中心的連結，或者，您也可以從 Windows Update 下載 .NET 3.5 SP1。 若要避免 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間發生中斷，您可以先下載及安裝 .NET 3.5 SP1，再執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式。<br />-如果您的電腦上執行安裝程式[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 或[!INCLUDE[win8](../../includes/win8-md.md)]，您必須啟用.NET Framework 3.5 SP1，再安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br />-如果沒有網際網路存取權，您必須下載並安裝.NET Framework 3.5 SP1，才能執行安裝程式安裝上述元件之一。 如需有關建議和指導如何取得和啟用.NET Framework 3.5[!INCLUDE[win8](../../includes/win8-md.md)]並[!INCLUDE[win8srv](../../includes/win8srv-md.md)]，請參閱[Microsoft.NET Framework 3.5 部署考量](http://msdn.microsoft.com/library/windows/hardware/hh975396)(http://msdn.microsoft.com/library/windows/hardware/hh975396)。<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 需要 .NET 4.0。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會在功能安裝步驟期間安裝 .NET 4.0。<br />-如果您要安裝[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]版本，請確定該網際網路連線可在電腦上。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式下載並安裝.NET Framework 4，因為它不會包含在[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]媒體。<br />-[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 無法在 Server Core 模式的上安裝.NET 4.0 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 您必須先安裝 .NET 4.0，才能在 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] SP1 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 的 Server Core 安裝上安裝 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。|  
+|Windows PowerShell|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 不會安裝或啟用 Windows PowerShell 2.0;不過，Windows PowerShell 2.0 為安裝的必要條件[!INCLUDE[ssDE](../../includes/ssde-md.md)]元件和[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如果安裝程式回報 Windows PowerShell 2.0 不存在，您可以遵循 [Windows Management Framework](http://go.microsoft.com/fwlink/?LinkId=186214) (機器翻譯) 頁面上的指示進行安裝或啟用。|  
+|網路軟體|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援的作業系統有內建的網路軟體。 獨安裝立的具名執行個體和預設執行個體支援下列網路通訊協定：共用記憶體、具名管道、TCP/IP 和 VIA。<br /><br /> 注意： 透過通訊協定不支援容錯移轉叢集上。 用戶端或容錯移轉叢集與 SQL Server 執行個體，在相同節點上執行的應用程式可以使用共用記憶體通訊協定連接到 SQL Server 使用其本機管道位址。 不過這種類型的連接不是叢集感知，而且執行個體的容錯移轉之後將會失敗。 它會因此不建議，並應該只用在非常特定的案例中。 VIA 通訊協定已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br /><br /> 如需有關網路通訊協定和網路程式庫的詳細資訊，請參閱＜ [Network Protocols and Network Libraries](network-protocols-and-network-libraries.md)＞。|  
+|虛擬化|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 支援虛擬機器上執行的環境中的 HYPER-V 角色：<br />-<br />                    [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard、Enterprise 和 Datacenter 版本<br />-[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard、 Enterprise 和 Datacenter 版本。<br />-<br />                    [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 和 Standard 版本。<br /><br /> 除了父分割區所需的資源外，您也必須為其 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 執行個體的每部虛擬機器 (子分割) 提供足夠的處理器資源、記憶體和磁碟資源。 本主題稍後列出的需求。\*<br /><br /> 在 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 上的 Hyper-V 角色內，最多可以將 4 (四) 個虛擬處理器配置給執行 [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 32 位元/64 位元或 [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 64 位元或 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 64 位元版本的虛擬機器。<br /><br /> 在中的 HYPER-V 角色[!INCLUDE[win8srv](../../includes/win8srv-md.md)]:<br />最多 8 （八） 個虛擬處理器可以配置給虛擬機器執行[!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]SP2 32 位元/64 位元。<br />最多 64 （六十四）） 的虛擬處理器可以配置到執行的虛擬機器[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]SP1 64 位元或[!INCLUDE[win8srv](../../includes/win8srv-md.md)]64 位元版本。<br /><br /> 如需有關不同版本的計算容量限制[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]以及如何在具有超執行緒處理器的實體和虛擬化環境中不同，請參閱[計算容量限制的 SQL server 版本](../compute-capacity-limits-by-edition-of-sql-server.md). 如需有關 Hyper-V 角色的詳細資訊，請參閱＜ [Windows Server 2008 網站](http://go.microsoft.com/fwlink/?LinkId=182820)＞。<br /><br /> **\*\* 重要\* \*** 支援 Guest 容錯移轉叢集[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。 如需支援版本的詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和 guest 容錯移轉叢集的作業系統以及支援的虛擬化，請參閱[虛擬硬體中執行的 Microsoft SQL Server 產品的支援原則環境](http://go.microsoft.com/fwlink/?LinkId=151676)。|  
+|硬碟|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 需要至少 6 GB 的可用硬碟空間。<br /><br /> 磁碟空間需求會因為您安裝的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件而有所不同。 如需詳細資訊，請參閱 < [Hard Disk Space Requirements （32 位元和 64 位元）](hardware-and-software-requirements-for-installing-sql-server.md#harddiskspace)本主題稍後的。 如需支援之資料檔案儲存類型的資訊，請參閱 [資料檔案的儲存類型](hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
+|光碟機|若要從光碟片安裝，則需要 DVD 光碟機。|  
+|監視器|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 需要 Super-VGA (800x600) 或更高解析度的監視器。|  
+|網際網路|網際網路功能需要網際網路存取 (可能會另行收費)。|  
+  
+ * 執行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]上虛擬機器會比執行要慢原生因為虛擬化的負擔。  
+  
+##  <a name="pmosr"></a> 處理器、記憶體和作業系統需求  
+ 下列記憶體和處理器需求適用於所有版本的 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]：  
+  
+|元件|需求|  
+|---------------|-----------------|  
+|記憶體<sup>[1]</sup>|**最小值：**<br /><br /> Express 版：512 MB<br /><br /> 所有其他版本：1 GB<br /><br /> **建議使用：**<br /><br /> Express 版：1 GB<br /><br /> 所有其他版本：至少 4 GB，並應隨著資料庫大小增加以確保最佳效能。|  
+|處理器速度|**最小值：**<br /><br /> x86 處理器：1.0 GHz<br /><br /> x64 處理器：1.4 GHz<br /><br /> **建議值：** 2.0 GHz 或以上|  
+|處理器類型|x64 處理器：AMD Opteron、AMD Athlon 64、具有 Intel EM64T 支援的 Intel Xeon、具有 EM64T 支援的 Intel Pentium IV<br /><br /> x86 處理器：Pentium III 相容處理器或更快的處理器|  
+  
+ <sup>[1]</sup>安裝所需的最小記憶體[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]元件[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS) 是 2 GB 的 RAM，這不同於[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]最小記憶體需求。 如需有關安裝 DQS 的詳細資訊，請參閱＜ [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)＞。  
+  
+ **WOW64 支援：**  
+  
+ WOW64 (Windows 64 位元上的 Windows 32 位元) 是 Windows 64 位元版本的一項功能，可讓 32 位元應用程式在 32 位元模式中以原生方式執行。 即使基礎作業系統是 64 位元的作業系統，應用程式仍可在 32 位元模式下運作。  
+  
+-   支援 64 位元作業系統上， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 32 位元版本可以安裝以 64 位元伺服器的 WOW64 32 位元子系統。 只有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的獨立執行個體才支援 WOW64， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝則不支援 WOW64。  
+  
+-   對於安裝在支援之 64 位元作業系統上的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 位元版本，WOW64 支援管理工具。 如需有關支援之作業系統的詳細資訊，請選取 版本[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]從下列各節。  
+  
+ **Server Core 支援：**  
+  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 和 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 的 Server Core 安裝目前已支援 [!INCLUDE[win8srv](../../includes/win8srv-md.md)]。 安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]支援下列版本的 Windows Server 的 Server Core 模式：  
+  
+-   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元  
+  
+-   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元  
+  
+-   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元  
+  
+-   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元  
+  
+-   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元  
+  
+-   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元  
+  
+-   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元  
+  
+-   [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元  
+  
+ 如需有關安裝[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]在 Server Core 上看到[Server Core 上安裝 SQL Server 2014](../../database-engine/install-windows/install-sql-server-on-server-core.md)。  
+  
+> **注意︰** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]支援的版本[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]64 位元 x64 Standard edition 也支援[!INCLUDE[sbs_2](../../includes/sbs-2-md.md)]64 位元 x64。  
+  
+ **作業系統支援：**  
+  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 版本分類如下：  
+  
+-   [SQL Server 2014 的主要版本](hardware-and-software-requirements-for-installing-sql-server.md#top_principal)  
+  
+-   [SQL Server 2014 的特殊的版本](hardware-and-software-requirements-for-installing-sql-server.md#top_sp)  
+  
+-   [SQL Server 2014 的廣泛版本](hardware-and-software-requirements-for-installing-sql-server.md#top_breadth)  
+  
+###  <a name="TOP_Principal"></a> 主體版本的作業系統需求  
+ 下表顯示 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]主要版本的作業系統需求：  
+  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|32 位元|64 位元|  
+|---------------------------------------|-------------|-------------|  
+|[!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 32 位元|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 32 位元|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元|  
+|[!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]|Windows 10 家用版 64 位元<br /><br /> Windows 10 專業版 64 位元<br /><br /> Windows 10 企業版 64 位元<br /><br /> Windows 10 家用版 32 位元<br /><br /> Windows 10 專業版 32 位元<br /><br /> Windows 10 企業版 32 位元<br /><br />[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 32 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 32 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 32 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Foundation 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 32 位元|Windows 10 家用版 64 位元<br /><br /> Windows 10 專業版 64 位元<br /><br /> Windows 10 企業版 64 位元<br /><br />[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Foundation 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元| 
+  
+###  <a name="TOP_SP"></a> 特製化的版本的作業系統需求  
+ 下表顯示 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 特殊版本的作業系統需求：  
+  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|32 位元|64 位元|  
+|---------------------------------------|-------------|-------------|  
+|[!INCLUDE[ssWeb](../../includes/ssweb-md.md)]|Windows 10 家用版 64 位元<br /><br /> Windows 10 專業版 64 位元<br /><br /> Windows 10 企業版 64 位元<br /><br /> Windows 10 家用版 32 位元<br /><br /> Windows 10 專業版 32 位元<br /><br /> Windows 10 企業版 32 位元<br /><br />[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 32 位元|Windows 10 家用版 64 位元<br /><br /> Windows 10 專業版 64 位元<br /><br /> Windows 10 企業版 64 位元<br /><br />[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br />[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元| 
+  
+###  <a name="TOP_Breadth"></a> 廣泛版本的作業系統需求
+ 下表顯示 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]廣泛版本的作業系統需求：  
+  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本|32 位元|64 位元|  
+|---------------------------------------|-------------|-------------|  
+|[!INCLUDE[ssDeveloper](../../includes/ssdeveloper-md.md)]|Windows 10 家用版 64 位元<br /><br /> Windows 10 專業版 64 位元<br /><br /> Windows 10 企業版 64 位元<br /><br /> Windows 10 家用版 32 位元<br /><br /> Windows 10 專業版 32 位元<br /><br /> Windows 10 企業版 32 位元<br /><br />[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br />[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 32 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 32 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 32 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用進階版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用入門版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用進階版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用入門版 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 32 位元|Windows 10 家用版 64 位元<br /><br /> Windows 10 專業版 64 位元<br /><br /> Windows 10 企業版 64 位元<br /><br />[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br />[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用進階版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用入門版 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元|  
+|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]|Windows 10 家用版 64 位元<br /><br /> Windows 10 專業版 64 位元<br /><br /> Windows 10 企業版 64 位元<br /><br /> Windows 10 家用版 32 位元<br /><br /> Windows 10 專業版 32 位元<br /><br /> Windows 10 企業版 32 位元<br /><br />[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 32 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 32 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 32 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 32 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用進階版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用入門版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用進階版 32 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用入門版 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Foundation 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 32 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 32 位元|Windows 10 家用版 64 位元<br /><br /> Windows 10 專業版 64 位元<br /><br /> Windows 10 企業版 64 位元<br /><br />[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials 64 位元<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Datacenter 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Standard 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Foundation 64 位元<br /><br /> [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1 Web 64 位元<br /><br /> [!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8](../../includes/win8-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)] 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 旗艦版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 企業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 專業版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用進階版 64 位元<br /><br /> [!INCLUDE[win7](../../includes/win7-md.md)] SP1 家用入門版 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Datacenter 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Foundation 64 位元<br /><br /> [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64 位元|  
+  
+## <a name="minimum-sql-server-version-requirements-for-windows-10"></a>Windows 10 的 SQL Server 基本版本需求  
+ 在執行 Windows 10 的電腦上安裝 SQL Server 之前，必須先確定您符合下列基本需求：  
+  
+-   SQL Server 2014 必須套用 SQL Server 2014 Service Pack 1 或更新版的更新。 如需詳細資訊，請參閱 [如何取得 SQL Server 2014 的最新版 Service Pack](https://support.microsoft.com/en-us/kb/2958069)。  
+  
+-   SQL Server 2012 必須套用 SQL Server 2012 Service Pack 2 或更新版的更新。 如需詳細資訊，請參閱 [如何取得 SQL Server 2012 的最新版 Service Pack](https://support.microsoft.com/en-us/kb/2755533)。  
+  
+-   SQL Server 2008 R2  
+    與 SQL Server 2008 在 Windows 10 不受支援。  
+  
+##  <a name="CrossLanguageSupport"></a> 跨語言支援  
+ 如需跨語言支援及使用當地語系化語言安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之考量的詳細資訊，請參閱 [SQL Server 中的地區語言版本](local-language-versions-in-sql-server.md)。  
+  
+##  <a name="ess"></a> 擴充系統支援  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 64 位元版本包含擴充系統的支援，亦稱為 Windows 64 位元上的 Windows 32 位元 (WOW64)。 WOW64 是 Windows 64 位元版本的一項功能，可讓 32 位元應用程式在 32 位元模式中以原生方式執行。 即使基礎作業系統是 64 位元，應用程式仍可在 32 位元模式下運作。  
+  
+##  <a name="HardDiskSpace"></a> 硬碟空間需求 （32 位元和 64 位元）  
+ 在安裝 Windows 安裝程式會建立暫存檔案系統磁碟機上。 執行安裝程式來安裝或升級之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，確認您擁有最少**6.0 GB**的這些檔案系統磁碟機上的可用磁碟空間。 即使您將元件安裝到非預設磁碟機，就會適用這項需求。  
+  
+ 實際硬碟空間需求需視系統組態和您決定要安裝的功能而定。 如需版本所支援的功能清單[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 支援的 SQL Server 2014 的版本功能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)。 下表提供 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 元件的磁碟空間需求。  
+  
+|**功能**|**磁碟空間需求**|  
+|-----------------|--------------------------------|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 和資料檔案、複寫、全文檢索搜尋和 Data Quality Services|811 MB|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 和資料檔案|345 MB|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和報表管理員|304 MB|  
+|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|591 MB|  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|243 MB|  
+|用戶端元件 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書元件和 Integration Services 工具除外)|1823 MB|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書元件，來檢視並管理說明內容<sup>1</sup>|375 KB|  
+  
+ <sup>1</sup>下載線上叢書內容的磁碟空間需求為 200 MB。  
+  
+##  <a name="StorageTypes"></a> 資料檔案的儲存類型  
+ 支援的資料檔案儲存類型包括：  
+  
+-   本機磁碟  
+  
+-   共用儲存  
+  
+-   SMB 檔案共用  
+  
+    > **注意︰** 不支援 SMB 儲存體[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]獨立或叢集的安裝的資料檔案。 請改用直接附加儲存體或存放區域網路。  
+  
+    > **重要！！** SMB 儲存體可由 Windows File Server 或協力廠商 SMB 儲存體裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱＜ [將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)的最低軟硬體需求。  
+  
+    > **警告！！！！**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝只有在安裝 tempdb 檔時支援本機磁碟。 請確認指定 tempdb 資料和記錄檔的路徑上的有效**所有**叢集節點。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。  
+  
+##  <a name="DC_support"></a> 安裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在網域控制站-限制  
+ 基於安全性理由，不建議您在網域控制站上安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會封鎖當做網域控制站之電腦上的安裝，但適用以下限制：  
+  
+-   您無法以本機服務帳戶在網域控制站上執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務。  
+  
+-   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝到電腦上以後，您無法將電腦從網域成員變成網域控制站。 在您將主機電腦變更為網域控制站之前，必須先解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  
+-   當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝到電腦上以後，您無法將電腦從網域控制站變成網域成員。 在您將主機電腦變更為網域成員之前，必須先解除安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。  
+  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式無法在唯讀的網域控制站上建立安全性群組或提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 在此狀況中，安裝程式將會失敗。  
+  
+## <a name="see-also"></a>另請參閱  
+ [規劃 SQL Server 安裝](planning-a-sql-server-installation.md)   
+ [SQL Server 安裝的安全性考量](security-considerations-for-a-sql-server-installation.md)   
+ [適用於 SQL Server 2014 的產品規格](../../getting-started/sql-server-2014-product-specifications.md)  
+  
+  

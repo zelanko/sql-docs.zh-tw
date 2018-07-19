@@ -2,7 +2,6 @@
 title: 搜尋方法 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59dcdd3426c39449b3d2348218aa7794a75c0474
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcac398a9c45a43fd59dd29c7a41aeeb9545214c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281617"
 ---
 # <a name="seek-method"></a>搜尋方法
 搜尋的索引[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)來快速找出符合指定的值，並變更該資料列目前資料列位置的資料列。  

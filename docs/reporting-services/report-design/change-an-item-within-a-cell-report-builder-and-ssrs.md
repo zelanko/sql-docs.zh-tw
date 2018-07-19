@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019515"
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>變更資料格內的項目 (報表產生器及 SSRS)
 在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 分頁報表中，只有非容器項目 (例如文字方塊、線條或影像) 才能以新報表項目來取代。 例如，您可以將資料表拖曳到文字方塊，即可以資料表取代文字方塊。  

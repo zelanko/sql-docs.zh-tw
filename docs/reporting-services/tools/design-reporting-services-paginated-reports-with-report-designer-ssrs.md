@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33037035"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Reporting Services 分頁的報表與報表設計工具 (SSRS) 的設計
 
@@ -91,7 +92,7 @@ ms.lasthandoff: 05/03/2018
      如需詳細資訊，請參閱[報表定義語言 &#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)。  
   
 ##  <a name="bkmk_ReportParts"></a> 報表組件  
- 在報表設計師中，建立專案的資料表、圖表及其他分頁報表項目之後，您可以將它們當作*「報表組件」*發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。 如需詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
+ 在報表設計師中，建立專案的資料表、圖表及其他分頁報表項目之後，您可以將它們當作 *「報表組件」* 發行至報表伺服器或與報表伺服器整合的 SharePoint 網站，以供您和其他人員在其他報表中重複使用這些組件。 如需詳細資訊，請參閱[報表設計師中的報表組件 &#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)。  
   
  透過使用 **TargetReportPartFolder** 和其他屬性，即可從專案中的其他項目獨立部署報表組件。 如需詳細資訊，請參閱[設定部署屬性 &#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)。  
   

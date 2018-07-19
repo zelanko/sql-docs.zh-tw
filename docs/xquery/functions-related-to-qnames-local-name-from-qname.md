@@ -1,5 +1,5 @@
 ---
-title: 本機名稱-從-QName (XQuery) |Microsoft 文件
+title: 本機名稱-從-QName (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,15 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 691e26b9e58bbb83706fb987a06280321dc37656
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061356"
 ---
-# <a name="functions-related-to-qnames---local-name-from-qname"></a>函式與 QNames 相關的本機名稱-從-QName
+# <a name="functions-related-to-qnames---local-name-from-qname"></a>與本機名稱-從-QName QNames 相關的函式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回 xs: ncname，代表所指定的 QName 的本機部分 *$arg*。 結果是空的序列，如果 *$arg*是空的序列。  
+  傳回 xs: ncname，表示本機的組件所指定的 QName *$arg*。 結果是空的序列，如果 *$arg*是空的序列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -43,15 +44,15 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  應該擷取本機名稱的來源 QName。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
   
- 下列範例會使用**local-name-from-qname （)** 函式可擷取區域名稱和命名空間 URI 部分從 QName 類型值。 本範例將執行下列動作：  
+ 下列範例會使用**local-name-from-qname （)** 函式來擷取區域名稱和命名空間 URI 的組件從 QName 類型值。 本範例將執行下列動作：  
   
 -   建立 XML 結構描述集合。  
   
 -   建立資料表以及 xml 類型資料行。 xml 類型是使用 XML 結構描述集合來設定其類型。  
   
--   在資料表中儲存範例 XML 執行個體。 使用**query （)** 方法的 xml 資料類型、 查詢運算式會執行，以從執行個體擷取 QName 類型值的本機名稱部份。  
+-   在資料表中儲存範例 XML 執行個體。 使用**query （)** 從執行個體擷取 QName 類型值的本機名稱部分執行的 xml 資料類型，查詢運算式的方法。  
   
 ```  
 DROP TABLE T  
@@ -81,6 +82,6 @@ FROM T
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [函式與 QNames 相關的&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [與 QNames 相關的函式&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

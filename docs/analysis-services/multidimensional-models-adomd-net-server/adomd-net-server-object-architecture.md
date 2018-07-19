@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34021215"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 伺服器物件架構
   ADOMD.NET 伺服器物件是可以用於建立使用者定義函數 (Udf) 或預存程序中的協助程式物件[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  

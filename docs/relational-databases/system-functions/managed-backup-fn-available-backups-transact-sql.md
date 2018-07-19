@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_available_backups (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.fn_available_backups & Amp;#40;transact-SQL&AMP;#41; |Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,12 +26,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7899bdcc0ef397534a723abae15d7263d371d5ee
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040356"
 ---
-# <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (TRANSACT-SQL)
+# <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回指定資料庫之可用備份檔案的資料表，內含 0、1 或更多資料列。 傳回的備份檔案是 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 建立的備份。  
@@ -46,14 +47,14 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
   
 ##  <a name="Arguments"></a> 引數  
  @database_name  
- 資料庫的名稱。 @database_name是 nvarchar （512）。  
+ 資料庫的名稱。 @database_name是 NVARCHAR(512)。  
   
 ## <a name="table-returned"></a>傳回的資料表  
  資料表已啟用唯一的叢集條件約束 (database_guid、backup_start_date、first_lsn 和 backup_type)。   
 如果卸除資料庫再重新建立，則會傳回所有資料庫的備份組。 此輸出是依照可唯一識別每個資料庫的 database_guid 排序。   
 如果 LSN 有間距，表示記錄鏈結中斷，資料表將針對每個遺漏的 LSN 區段各包含一個特殊資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|備份檔案的 URL。|  
 |backup_type|NVARCHAR(6)|'DB' 表示資料庫備份，'LOG' 表示記錄備份|  
@@ -67,7 +68,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 |last_recovery_fork_id|UNIQUEIDENTIFIER|結尾復原分岔的識別碼。|  
 |first_recovery_fork_id|UNIQUEIDENTIFIER|起始復原分岔的識別碼。 對於資料備份而言，first_recovery_fork_guid 等於 last_recovery_fork_guid。|  
 |fork_point_lsn|NUMERIC(25, 0)|如果 first_recovery_fork_id 不等於 last_recovery_fork_id，這就是分岔點的記錄序號。 否則，這個值是 NULL。|  
-|availability_group_guid|UNIQUEIDENTIFIER|如果資料庫是 Alwayson 資料庫，這是可用性群組的 GUID。 否則，這個值是 NULL。|  
+|availability_group_guid|UNIQUEIDENTIFIER|如果資料庫是 Alwayson 資料庫，這會是可用性群組的 GUID。 否則，這個值是 NULL。|  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)。  

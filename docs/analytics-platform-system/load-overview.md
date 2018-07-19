@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539078"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>將資料載入 Parallel Data Warehouse
 您可以載入或插入資料至 SQL Server Parallel Data Warehouse (PDW) 使用 Integration Services [bcp 公用程式](../tools/bcp-utility.md)， **dwloader**命令列載入器或 SQL INSERT 陳述式。  
@@ -30,7 +31,7 @@ dwloader 載入直接用於運算節點的資料，而不傳遞控制節點的�
   
 每個計算節點上，資料移動服務 (DMS) 會接收和處理的資料區塊。 處理資料，包括將每個資料列轉換成 SQL Server 原生格式，並計算發佈雜湊，來判斷每個資料列所屬的計算節點。  
   
-在處理資料列之後, DMS 會使用隨機移動傳送每個資料列的正確計算節點和 SQL Server 執行個體。 當 SQL Server 收到的資料列，則批次根據它們**– b** batch size 參數中 dwloader，所設定，然後再大量載入的批次。  
+在處理資料列之後, DMS 會使用隨機移動傳送每個資料列的正確計算節點和 SQL Server 執行個體。 當 SQL Server 收到的資料列，則批次根據它們 **– b** batch size 參數中 dwloader，所設定，然後再大量載入的批次。  
 
 ## <a name="load-with-prepared-statements"></a>載入與準備的陳述式
 

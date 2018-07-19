@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908653"
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>回溯相容性和標準相容性
 回溯相容性是以使用舊的 ODBC 元件更新 ODBC 元件的能力。 下列各節將討論這些元件如何受到影響的變更，在 ODBC 3 *.x*。 主要是在它們所包含的資訊解決 ODBC 3 撰寫 *.x*應用程式，以及如何向後相容性問題會由 ODBC 驅動程式。 如需特定的指導方針之方式的回溯相容性問題會影響 ODBC 3 撰寫 *.x*驅動程式，請參閱[附錄 g： 驅動程式提供回溯相容性方針](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)。  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027005"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services 屬性 - 報表伺服器項目屬性
   項目屬性是報表伺服器資料庫中項目特有的屬性。 這類型的項目包括報表、連結報表、資料夾、資源、模型以及資料來源。  

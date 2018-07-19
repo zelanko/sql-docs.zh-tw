@@ -4,25 +4,20 @@ ms.description: This article describes why and how to store and index JSON docum
 ms.custom: ''
 ms.date: 01/04/2018
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: json
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.assetid: ''
-caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 330e4d3bf4bf0059fc713d0b8969505e00d775c3
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 03ffe17d11f571f7f5a6b718d20396cbe8694f88
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34689196"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421517"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>將 JSON 文件儲存在 SQL Server 或 SQL Database
 SQL Server 和 Azure SQL Database 有原生 JSON 函式，可讓您使用標準 SQL 語言剖析 JSON 文件。 現在您可以在 SQL Server 或 SQL Database 中儲存 JSON 文件和查詢 JSON 資料，如同在 NoSQL 資料庫中一樣。 本文描述將 JSON 文件儲存在 SQL Server 或 SQL Database 中的選項。

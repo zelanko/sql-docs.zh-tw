@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44f0da4f969f145e66eb309f2cc90d7f5981d7f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308997"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>SQLSRV 驅動程式 API 參考
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="in-this-section"></a>本節內容  
 SQLSRV 驅動程式包含下列函數：  
   
-|函數|Description|  
+|函數|描述|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|開始交易。|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|取消陳述式；會捨棄陳述式任何擱置的結果。|  
@@ -58,7 +58,7 @@ SQLSRV 驅動程式包含下列函數：
 |[sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)|透過每個對函數的呼叫，將最多 8 KB 的資料傳送到伺服器。|  
 |[sqlsrv_server_info](../../connect/php/sqlsrv-server-info.md)|提供伺服器的相關資訊。|  
   
-## <a name="reference"></a>참조  
+## <a name="reference"></a>參考  
 [PHP 手冊](http://php.net/manual)  
   
 ## <a name="see-also"></a>另請參閱  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911633"
 ---
 # <a name="diagnostic-handling-rules"></a>診斷的處理規則
 下列規則可控制中的診斷處理**SQLGetDiagRec**和**SQLGetDiagField**。  

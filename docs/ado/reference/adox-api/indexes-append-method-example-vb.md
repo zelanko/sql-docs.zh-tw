@@ -2,7 +2,6 @@
 title: 索引附加方法範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e00d3b0e98e1bf276deab81ae90954f4771785f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af8185f252bedad63f2af7ebc75010b2321e1328
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285957"
 ---
 # <a name="indexes-append-method-example-vb"></a>索引附加方法範例 (VB)
 下列程式碼會示範如何建立新的索引。 索引是在資料表中的兩個資料行。  

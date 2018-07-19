@@ -21,11 +21,12 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689216"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>建立資料驅動訂閱 (SSRS 教學課程)
 本 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 教學課程將告訴您資料驅動訂閱概念，方法是逐步解說建立資料驅動訂閱的簡單範例來產生篩選過的報表輸出，並將其儲存至檔案共用。 

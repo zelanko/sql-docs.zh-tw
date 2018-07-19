@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908413"
 ---
 # <a name="commit-mode"></a>認可模式
 ODBC 中的交易可以處於兩種模式之一： 自動認可模式或手動認可模式。  

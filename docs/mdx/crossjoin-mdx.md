@@ -1,6 +1,6 @@
 ---
 title: Crossjoin (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7a3eb0bc9faadafbec91d327d4c0a4bd79882361
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: b68dafa89f8285f532fc6e92e80f9741be239f65
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577740"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740248"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回兩個集合的交叉乘積。  
   

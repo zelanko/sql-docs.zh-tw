@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910698"
 ---
 # <a name="establishing-a-connection"></a>建立連線
 配置環境和連接控制代碼，並設定任何連接屬性，應用程式之後可以連接至資料來源或驅動程式。 有三個不同的函數，應用程式可用來執行這項操作： **SQLConnect** （核心介面的一致性層級） **SQLDriverConnect** （核心），和**SQLBrowseConnect**(層級 1)。 每三個被為了在不同的案例中使用。 連接之前，先在應用程式可以判斷與支援的這些函式**ConnectFunctions**所傳回的關鍵字**SQLDrivers**。  

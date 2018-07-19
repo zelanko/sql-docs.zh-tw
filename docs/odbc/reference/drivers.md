@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915193"
 ---
 # <a name="drivers"></a>驅動程式
 *驅動程式*實作 ODBC API 函式的程式庫。 每一個都是特定 dbms 所特有。例如，Oracle 的驅動程式無法直接存取 Informix DBMS 中的資料。 驅動程式公開功能的基礎 Dbms 中;不需要它們實作不支援的 DBMS 功能。 例如，如果基礎 DBMS 不支援外部聯結中，則兩者都不應該驅動程式。 這僅重大例外狀況是 Dbms 沒有獨立的資料庫引擎、 Xbase，例如驅動程式必須實作至少支援最少量的 SQL 資料庫引擎。  

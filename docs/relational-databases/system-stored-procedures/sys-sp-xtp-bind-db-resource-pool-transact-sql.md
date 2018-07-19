@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_bind_db_resource_pool (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_xtp_bind_db_resource_pool & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ce8af4df2491d6b80acf931ae769b1a0299504b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38056086"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
   
  **資料庫不存在**  
  Database_name 必須參考現有的資料庫。 如果指定之識別碼的資料庫不存在，就會傳回下列訊息：   
-*資料庫識別碼 %d 不存在。請此繫結，使用有效的資料庫識別碼。*  
+*資料庫識別碼 %d 不存在。請這個繫結，使用有效的資料庫識別碼。*  
   
 ```  
 Msg 911, Level 16, State 18, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -88,7 +89,7 @@ Resource pool 'Pool_Hekaton' does not exist or resource governor has not been re
   
 **Pool_name 參考保留的系統集區**  
  集區名稱 “INTERNAL” 和 “DEFAULT” 已保留給系統集區。  將資料庫明確繫結至其中一個集區是無效的作法。  如果輸入系統集區名稱，就會傳回下列錯誤：  
-*資源集區 %s 是系統資源集區。系統資源集區可能不明確繫結至資料庫，使用此程序。*  
+*資源集區 %s 是系統資源集區。系統資源集區可能未明確繫結至資料庫，使用此程序。*  
   
 ```  
 Msg 41373, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
@@ -106,9 +107,9 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
   
  成功時，`sp_xtp_bind_db_resource_pool` 會傳回下列訊息。  
   
-**成功繫結**  
+**成功的繫結**  
  成功時，此函數會傳回下列成功訊息，並記錄在 SQL ERRORLOG 中  
-*具有識別碼 %d 資料庫與資源集區識別碼 %d 已成功建立資源繫結。*  
+*使用識別碼 %d 資料庫與資源集區識別碼 %d 之間已成功建立資源繫結。*  
   
 ## <a name="examples"></a>範例  
 A.  下列程式碼範例會將 Hekaton_DB 資料庫繫結至 Pool_Hekaton 資源集區。  
@@ -119,7 +120,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  繫結會在下一次資料庫重新上線時生效。  
  
- B. 展開的範例包括一些基本檢查上面的範例。  執行下列[!INCLUDE[tsql](../../includes/tsql-md.md)]中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. 上述範例，其中包含一些基本檢查的擴充的範例。  執行下列命令，[!INCLUDE[tsql](../../includes/tsql-md.md)]中 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -157,6 +158,6 @@ END
   
 ## <a name="see-also"></a>另請參閱  
  [將包含記憶體最佳化資料表的資料庫繫結至資源集區](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_bind_db_resource_pool & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_bind_db_resource_pool &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

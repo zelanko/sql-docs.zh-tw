@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900535"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 資料來源中發生的錯誤，ODBC 驅動程式會將傳回的自發性錯誤對應到適當的 SQLSTATE。 有錯誤，會偵測到的驅動程式或驅動程式管理員，ODBC 驅動程式或驅動程式管理員會產生適當的 SQLSTATE。

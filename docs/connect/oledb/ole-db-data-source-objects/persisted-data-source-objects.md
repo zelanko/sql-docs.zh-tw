@@ -2,10 +2,10 @@
 title: 保存資料來源物件 |Microsoft 文件
 description: 保存資料來源物件
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b67e2f2f4e588fabfe5f901e20401316081d3c18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665608"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server 的 OLE DB 驅動程式支援保存的資料來源物件與**IPersistFile**介面。  
   
@@ -233,6 +236,6 @@ HRESULT InitFromPersistedDS
  **Ipersistfile:: Save**方法呼叫之前或之後呼叫**idbinitialize:: Initialize**。 成功傳回之後呼叫此方法**idbinitialize:: Initialize**可確保會保存有效的資料來源規格。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源物件 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [資料來源物件&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

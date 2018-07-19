@@ -2,7 +2,6 @@
 title: EventStatusEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,21 +19,22 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1fa1f613008c12d684c0af7f65e13988c8baf16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20a5582eb8c8744e5d8a065c5fa8ce29c0d4b793
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278057"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 指定的事件執行的目前狀態。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|要求取消作業，導致發生此事件。|  
 |**adStatusCantDeny**|3|指出此作業無法要求取消的暫止的作業。|  
 |**adStatusErrorsOccurred**|2|指出造成事件的作業失敗，發生錯誤或錯誤。|  
-|**adStatusOK**|1|表示造成事件的作業成功。|  
+|**adStatusOK**|@shouldalert|表示造成事件的作業成功。|  
 |**adStatusUnwantedEvent**|5|事件方法已完成執行之前，可以防止後續的通知。|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC 對等項目  

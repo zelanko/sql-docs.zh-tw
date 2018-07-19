@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908713"
 ---
 # <a name="consistency-check"></a>一致性檢查
 一致性檢查驅動程式自動執行應用程式在設定 SQL_DESC_DATA_PTR 欄位 APD、 ARD，或 IPD 時。 每當設定此欄位時，驅動程式會檢查 SQL_DESC_TYPE 欄位的值以及適用於同一筆記錄中的 SQL_DESC_TYPE 欄位的值有效，而且一致。  

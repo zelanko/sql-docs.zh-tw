@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913273"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>捲動和提取資料列 (ODBC)
 當使用可捲動資料指標時，應用程式呼叫**SQLFetchScroll**來定位資料指標與提取資料列。 **SQLFetchScroll**支援相對捲動 (下一步、 前，而相對*n*資料列)，絕對捲動 (first、 last、 與資料列*n*)，和依書籤的位置。 *Sqlfetchscroll*和*FetchOffset*中的引數**SQLFetchScroll**指定哪些資料列集來擷取下, 圖所示。  

@@ -1,13 +1,12 @@
 ---
-title: SQL Server Native Client 程式設計 |Microsoft 文件
+title: SQL Server Native Client 程式設計 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SQLNCLI
 - native data access [SQL Server Native Client]
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
-caps.latest.revision: 66
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e7574f58ead9dc10afaf2cf6a9dc65c48a8c24f4
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: ec5afb149a2996deb33d3813ea627b73e2c95273
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34706876"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429187"
 ---
 # <a name="sql-server-native-client-programming"></a>SQL Server Native Client 程式設計
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,11 +36,11 @@ ms.locfileid: "34706876"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 是用於 OLE DB 和 ODBC 的獨立資料存取應用程式開發介面 (API) (在 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 中導入)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 將 SQL OLE DB 提供者和 SQL ODBC 驅動程式結合為單一的原生動態連結程式庫 (DLL)。 此介面也提供遠超過 Windows Data Access Components (Windows DAC，之前稱為 Microsoft Data Access Components，或稱 MDAC) 的新功能。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 可用於建立新的應用程式，或者加強需要利用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所推出之新功能 (例如，Multiple Active Result Set (MARS)、使用者定義資料類型 (UDT)、查詢通知、快照集隔離和 XML 資料類型支援) 的現有應用程式。  
   
 > [!NOTE]  
->  如需清單之間的差異[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端和 Windows DAC，加上有關問題的資訊來更新 Windows DAC 應用程式之前，請考慮[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端，請參閱[更新 SQL Server 的應用程式原生用戶端從 MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
+>  如需清單之間的差異[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端和 Windows DAC，以及問題的資訊來更新 Windows DAC 應用程式之前，請考慮[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client，請參閱[更新 SQL Server 的應用程式從 MDAC 的原生用戶端](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式一定會配合 Windows DAC 所提供的 ODBC 驅動程式管理員使用。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者可以配合 Windows DAC 所提供的 OLE DB Core Services 使用，但這並非必要條件；是否使用 Core Services 是依個別應用程式的需求而定 (例如，是否需要連接共用)。  
   
- ActiveX Data Object (ADO) 應用程式可能使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，但建議使用 ADO 搭配**DataTypeCompatibility**連接字串關鍵字 （或其對應的**資料來源**屬性)。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，ADO 應用程式可以利用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所推出的新功能，這些新功能可透過連接字串關鍵字或 OLE DB 屬性或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來使用。 如需有關使用搭配 ADO 使用這些功能，請參閱[使用 ADO 搭配 SQL Server Native Client](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)。  
+ 使用 ActiveX Data Object (ADO) 應用程式可能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者，但建議您搭配使用 ADO **DataTypeCompatibility**連接字串關鍵字 （或其對應**資料來源**屬性)。 使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者時，ADO 應用程式可以利用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 所推出的新功能，這些新功能可透過連接字串關鍵字或 OLE DB 屬性或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，透過 [!INCLUDE[tsql](../../includes/tsql-md.md)] 來使用。 如需有關使用搭配 ADO 使用這些功能，請參閱[使用與 SQL Server Native Client 的 ADO](../../relational-databases/native-client/applications/using-ado-with-sql-server-native-client.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 的設計目的是提供簡化的方式，讓您使用 OLE DB 或 ODBC 取得 SQL Server 的原生資料存取權。 這種方式的簡化之處在於將 OLE DB 和 ODBC 技術結合成一個程式庫，提供一種方法來改革及發展新的資料存取功能，而不需要變更目前的 Windows DAC 元件 (這些元件現在已經是 Microsoft Windows 平台的一部分)。  
   
@@ -80,7 +78,7 @@ ms.locfileid: "34706876"
   
 ## <a name="see-also"></a>另請參閱  
  [從 SQL Server 2005 Native Client 將應用程式更新](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
- [ODBC 使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [ODBC 的使用說明主題](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB 的使用說明主題](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

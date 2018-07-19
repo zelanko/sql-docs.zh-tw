@@ -18,9 +18,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f67ce7dafe849f82a964140ac1aa25ce220773f
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33076345"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>設定追蹤顯示預設值 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

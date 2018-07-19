@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020785"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>運算式參考 (報表產生器及 SSRS)
   報表運算式支援各種內建函數與內建集合的參考。 運算式必須具有有效的 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 語法，然後系統才能發行或處理報表。  

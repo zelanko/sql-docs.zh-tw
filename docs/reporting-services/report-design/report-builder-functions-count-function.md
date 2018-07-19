@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025145"
 ---
 # <a name="report-builder-functions---count-function"></a>報表產生器函式 - Count 函式
   傳回運算式指定的非 Null 值的計數 (在給定範圍的內容中評估)。  

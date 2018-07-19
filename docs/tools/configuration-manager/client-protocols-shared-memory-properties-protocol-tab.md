@@ -19,9 +19,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08a334b236fb50bb3d1cc959282e6377135b8657
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33066685"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>用戶端通訊協定 - 共用記憶體屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

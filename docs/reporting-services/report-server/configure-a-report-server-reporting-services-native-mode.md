@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027225"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>設定報表伺服器 (Reporting Services 原生模式)
   根據您在安裝期間選取的選項而定，報表伺服器可能需要其他組態設定才能使用。 報表伺服器組態至少要包含以下項目：  

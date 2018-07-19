@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917063"
 ---
 # <a name="using-data-sources"></a>使用資料來源
 建立資料來源通常會由終端使用者或程式的技術人員稱為*ODBC 管理員*。 ODBC 管理員會提示使用者輸入驅動程式來使用，然後再呼叫該驅動程式。 驅動程式會顯示對話方塊，要求需要連接到資料來源的資訊。 使用者輸入的資訊之後，驅動程式會將它儲存在系統上。  

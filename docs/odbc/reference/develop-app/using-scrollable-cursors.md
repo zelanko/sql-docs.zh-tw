@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915177"
 ---
 # <a name="using-scrollable-cursors"></a>使用可捲動資料指標
 使用可捲動資料指標需要這三個步驟：  

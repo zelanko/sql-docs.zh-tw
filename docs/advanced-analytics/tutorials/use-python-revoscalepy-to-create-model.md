@@ -7,18 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: d886466d7bf4f0c86c1cd9505480a3fadb6e66ef
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d549b06b9fe371dc2b1966c62776ec4e88c45726
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740827"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>使用 Python revoscalepy 建立模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 在這一課，您可以了解如何從遠端的開發用戶端，在 SQL Server 中建立線性迴歸模型中執行 Python 程式碼。 
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
 + 這一課使用不同的資料，比先前的課程。 您不需要先完成先前的課程。 不過，如果您已完成先前的課程，並已設定為執行 Python 的伺服器，使用該伺服器和資料庫做為運算環境。
 + 若要執行 Python 程式碼以計算中使用 SQL Server 內容需要 2017年或更新版本的 SQL Server。 此外，您必須明確地安裝並再啟用此功能**機器學習服務**，選擇 Python 語言選項。
@@ -82,7 +83,6 @@ from revoscalepy import RxComputeContext, RxInSqlServer, RxSqlServerData
 from revoscalepy import rx_lin_mod, rx_predict, rx_summary
 from revoscalepy import RxOptions, rx_import
 
-from pandas import Categorical
 import os
 
 def test_linmod_sql():

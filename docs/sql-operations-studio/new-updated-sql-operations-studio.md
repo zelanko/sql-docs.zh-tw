@@ -1,4 +1,4 @@
----
+﻿---
 title: 已更新-SQL Operations Studio 文件 |Microsoft 文件
 description: 針對 SQL Operations Studio，顯示文件中最近變更的更新內容程式碼片段。
 manager: craigg
@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32686518"
 ---
 # <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新增的與最近的更新： SQL Operations Studio 文件
 

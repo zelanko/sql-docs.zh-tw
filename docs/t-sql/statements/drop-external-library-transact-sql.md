@@ -3,11 +3,9 @@ title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/05/2018
 ms.prod: sql
-ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -17,15 +15,16 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP EXTERNAL LIBRARY
-author: jeannt
-ms.author: jeannt
-manager: craigg
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0b72dd7a41e4d7cca0988ac28efd0f9cb60ca739
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b28876a3e6724e680d2d1e92ba47704afbd14d14
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420883"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

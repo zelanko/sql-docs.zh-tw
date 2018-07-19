@@ -2,7 +2,6 @@
 title: 動態資料指標 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a5a7ee6573645ed4f65e087fa35283f352e6bdce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ab212d978f38a9e80435d0fae81a6664a8839b56
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270407"
 ---
 # <a name="dynamic-cursors"></a>動態資料指標
 動態資料指標偵測結果集中資料列，不論是否發生的變更從資料指標內或資料指標之外的其他使用者所做的變更。 所有的 insert、 update 和 delete 陳述式所做的所有使用者可透過資料指標。 動態資料指標可以偵測資料列、 順序和結果集資料指標開啟後的值所做的變更。 （除非資料指標交易隔離等級設定為 「 未認可 」），認可之前，不會顯示資料指標之外所做的更新。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aecfcaa81ea18d9c90d000d5370e8b93e7d4a979
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3b654ce6c261dd1049945306f19b2dd37dfe6a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406220"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>資料行統計資料設定檔要求選項 (資料分析工作)
   您可以使用 [設定檔要求] 頁面的 [要求屬性] 窗格，針對要求窗格中選取的 [資料行統計資料設定檔要求] 設定選項。 資料行統計資料設定檔會報告數值資料行的最小值、最大值、平均和標準差，以及 **datetime** 資料行的最小值和最大值等統計資料。 這個設定檔可協助您識別資料中的問題，例如無效的日期。 舉例來說，您分析了歷程記錄日期的資料行，並發現屬於未來的最大日期。  

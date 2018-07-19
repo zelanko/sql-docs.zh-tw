@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899393"
 ---
 # <a name="encryption-access-driver"></a>加密 （存取驅動程式）
 (此控制項是時才可使用第 4 版。*x*選取格式。)  

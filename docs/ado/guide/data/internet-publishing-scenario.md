@@ -2,7 +2,6 @@
 title: 發佈案例的網際網路 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a596bd0aa66f79bc45e7e6a51fe1251b42bd1f58
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fa78abc00e38c03b0d951e0b837bd4761c8edda
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271717"
 ---
 # <a name="internet-publishing-scenario"></a>網際網路發佈案例
 這個程式碼範例示範如何使用 Microsoft OLE DB 提供者的 ADO for Internet Publishing。 在此案例中，您將建立 Visual Basic 應用程式使用**資料錄集**，**記錄**，和**資料流**與發行的物件顯示資源的內容網際網路發行提供者。  

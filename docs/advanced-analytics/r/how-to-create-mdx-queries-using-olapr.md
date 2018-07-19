@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203590"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>如何建立 MDX 查詢中使用 olapR R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -180,7 +181,7 @@ explore(ocs, "Sales")
 
 #### <a name="to-return-all-members-of-the-specified-dimension-and-hierarchy"></a>傳回所指定維度和階層的所有成員
 
-定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目**->**代表上一個成員的子系。
+定義來源並建立控制代碼之後，請指定要傳回的 Cube、維度和階層。 在傳回的結果中，前面會加上的項目**->** 代表上一個成員的子系。
 
 ```R
 cnnstr <- "Data Source=localhost; Provider=MSOLAP;"

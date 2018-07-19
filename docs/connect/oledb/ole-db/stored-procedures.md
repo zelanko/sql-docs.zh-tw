@@ -2,10 +2,10 @@
 title: 預存程序 |Microsoft 文件
 description: 預存程序
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,15 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 65a78fddd455df4b04c06086beca808658879aed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32855333"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611543"
 ---
 # <a name="stored-procedures"></a>預存程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   預存程序 ([預存程序 &#40;Database engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援：  
   

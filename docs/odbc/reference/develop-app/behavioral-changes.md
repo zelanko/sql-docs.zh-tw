@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910913"
 ---
 # <a name="behavioral-changes"></a>行為變更
 行為變更會這些變更*語法*介面的維持不變，但*語意*已變更。 如需這些變更，ODBC 2 中使用的功能。*x*行為不同於相同的功能，在 ODBC 3 行為。*x*。  

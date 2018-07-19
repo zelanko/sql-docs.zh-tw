@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025525"
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>在報表中尋找文字、數字或日期
   您可以透過輸入想要尋找的單字或片語 (搜尋詞彙的最大值為 256 個字元)，搜尋報表中的內容。 搜尋是一項導覽技術，可尋找報表中相符的值並將焦點放在包含該值的報表內容上。  

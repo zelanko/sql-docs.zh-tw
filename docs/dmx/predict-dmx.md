@@ -1,36 +1,25 @@
 ---
-title: 預測 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Predict function
-ms.assetid: f02ff4b3-9bd7-409d-ad14-ead67b3206c4
-caps.latest.revision: 40
-author: Minewiskan
+title: 預測 (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f2aa8ba77b19aab0821777d669866409dbf01df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 733e3272bf67347f1e3459a0df5f13225488f677
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002100"
 ---
 # <a name="predict-dmx"></a>Predict (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  **預測**函式會傳回一組值，指定之資料行或預測的值。  
+  **Predict**函式會傳回預測的值或一組值，指定之資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,7 +35,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>傳回類型  
  \<純量資料行參考 >  
   
- 或  
+ 中的多個  
   
  \<資料表資料行參考 >  
   
@@ -59,27 +48,27 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
  選項包括 EXCLUDE_NULL (預設)、INCLUDE_NULL、INCLUSIVE、EXCLUSIVE (預設)、INPUT_ONLY，以及 INCLUDE_STATISTICS。  
   
 > [!NOTE]  
->  時間序列模型，預測函式不支援 INCLUDE_STATISTICS。  
+>  時間序列模型，Predict 函式不支援 INCLUDE_STATISTICS。  
   
  INCLUDE_NODE_ID 參數會在結果中傳回 $NODEID 資料行。 NODE_ID 是針對特定案例執行預測的內容節點。 資料表資料行上使用預測時，這個參數是選擇性的。  
   
- *n*參數適用於資料表資料行。 它會根據預測類型設定傳回的資料列數。 如果基礎資料行順序，它會呼叫**PredictSequence**函式。 如果基礎資料行是時間序列，它會呼叫**PredictTimeSeries**函式。 對於關聯類型的預測，它會呼叫**PredictAssociation**函式。  
+ *n*參數適用於資料表資料行。 它會根據預測類型設定傳回的資料列數。 如果基礎資料行是時序，它會呼叫**PredictSequence**函式。 如果基礎資料行是時間序列，則會呼叫**PredictTimeSeries**函式。 若是關聯的預測類型，它會呼叫**PredictAssociation**函式。  
   
- **預測**函數支援多型。  
+ **Predict**函式可支援多型。  
   
  下列是經常使用的替代縮寫格式：  
   
--   [Gender] 是的替代**預測**([Gender]，EXCLUDE_NULL)。  
+-   [Gender] 是針對替代**Predict**([Gender]，EXCLUDE_NULL)。  
   
--   [Products Purchases] 是的替代**預測**([Products Purchases]，EXCLUDE_NULL，EXCLUSIVE)。  
+-   [Products Purchases] 是針對替代**Predict**([Products Purchases]，EXCLUDE_NULL，EXCLUSIVE)。  
   
     > [!NOTE]  
-    >  這個函數的傳回類型本身視為資料行參考。 這表示**預測**函式可以當做其他接受資料行參考做為引數的函式的引數 (除了**預測**函式本身)。  
+    >  這個函數的傳回類型本身視為資料行參考。 這表示**Predict**函式可用來當做其他資料行參考做為引數的函式的引數 (除了**Predict**函式本身)。  
   
- 將 INCLUDE_STATISTICS 傳遞至預測中，資料表值的資料行上加入資料行 **$Probability**和 **$Support**加入產生的資料表。 這些資料行描述相關聯之巢狀資料表記錄存在的機率。  
+ 將 INCLUDE_STATISTICS 傳遞至預測中，資料表值的資料行上加入資料行 **$Probability**並 **$Support**加入產生的資料表。 這些資料行描述相關聯之巢狀資料表記錄存在的機率。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用預測函數，傳回最可能一起銷售的 Adventure Works 資料庫中的四項產品。 此函式針對在關聯規則採礦模型預測，因為它會自動使用**PredictAssociation**函式，如先前所述。  
+ 下列範例會使用 Predict 函式，傳回最可能一起銷售的 Adventure Works 資料庫中的四個產品。 此函式針對在關聯規則採礦模型預測，因為它會自動使用**PredictAssociation**函式，如先前所述。  
   
 ```  
 SELECT  
@@ -91,7 +80,7 @@ FROM     [Association]
   
  此查詢會傳回包含一個資料行 `Expression` 之資料的單一資料列，但是該資料行包含下列巢狀資料表。  
   
-|模型|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
+|[模型]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291283016331743|0.252695851192499|  
 |Water Bottle|2866|0.192620471805901|0.175205052318795|  
@@ -99,7 +88,7 @@ FROM     [Association]
 |Mountain Tire Tube|1992|0.133879965051415|0.125304947722259|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

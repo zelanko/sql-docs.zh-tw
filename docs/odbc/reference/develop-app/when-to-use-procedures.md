@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917373"
 ---
 # <a name="when-to-use-procedures"></a>當使用程序
 有使用程序的優點，所有基礎的使用程序的 SQL 陳述式從移到資料來源的應用程式。 應用程式中不會變是互通的程序呼叫。 這些優點包括：  

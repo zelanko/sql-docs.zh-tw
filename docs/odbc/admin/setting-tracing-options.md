@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899973"
 ---
 # <a name="setting-tracing-options"></a>設定追蹤選項
 **追蹤** 索引標籤**ODBC 資料來源管理員** 對話方塊可讓您設定追蹤 ODBC 函數呼叫的方法。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34029571"
 ---
 # <a name="discoverdatasources-rowset"></a>DISCOVER_DATASOURCES 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -21,7 +22,7 @@ ms.lasthandoff: 05/10/2018
   
  如果您呼叫[探索](../../../analysis-services/xmla/xml-elements-methods-discover.md)方法**DISCOVER_DATASOURCES**中的列舉值[RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md)項目，**探索**方法會傳回**DISCOVER_DATASOURCES**資料列集。  
   
- **適用於：**表格式模型、 多維度模型  
+ **適用於：** 表格式模型、 多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  用戶端會選取資料來源藉由設定**DataSourceInfo**屬性[屬性](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md)連同傳送的項目[命令](../../../analysis-services/xmla/xml-elements-properties/command-element-xmla.md)元素[Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。 用戶端不應該建構的內容**DataSourceInfo**屬性傳送到伺服器。 用戶端應該改用**探索**方法來尋找提供者支援的資料來源。 用戶端再傳送回相同的值**DataSourceInfo**屬性，它會從取得**DISCOVER_DATASOURCES**資料列集。  

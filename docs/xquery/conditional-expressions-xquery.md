@@ -1,5 +1,5 @@
 ---
-title: 條件式運算式 (XQuery) |Microsoft 文件
+title: 條件運算式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -26,15 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3634414fb0353c9152d317c718707c3ce26ec812
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979010"
 ---
 # <a name="conditional-expressions-xquery"></a>條件運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 支援下列條件**if-then-其他**陳述式：  
+  XQuery 支援下列的條件式**if--e**陳述式：  
   
 ```  
 if (<expression1>)  
@@ -58,9 +59,9 @@ else
   
 -   測試運算式必須在括號內。  
   
--   **Else**必須是運算式。 如果您不需要它，您可以傳回 " ( ) "，如本主題中的範例所說明。  
+-   **其他**必須是運算式。 如果您不需要它，您可以傳回 " ( ) "，如本主題中的範例所說明。  
   
- 例如，下列查詢針對指定**xml**類型變數。 **如果**SQL 變數的值來測試條件 (@v) 使用 XQuery 運算式中[: variable （） 函式](../xquery/xquery-extension-functions-sql-variable.md)擴充函式。 如果變數值是 "FirstName"，它會傳回 <`FirstName`> 元素。 否則它會傳回 <`LastName`> 元素。  
+ 例如，下列查詢針對所指定**xml**類型變數。 **如果**測試條件的 SQL 變數的值 (@v) 內使用中的 XQuery 運算式[（） 函數](../xquery/xquery-extension-functions-sql-variable.md)擴充程式函式。 如果變數值是 "FirstName"，它會傳回 <`FirstName`> 元素。 否則它會傳回 <`LastName`> 元素。  
   
 ```  
 declare @x xml  
@@ -109,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- 在上述查詢中的條件**如果**運算式會檢查是否有兩個以上的子元素中 <`Features`>。 如果是，它會傳回結果中的 `\<there-is-more/>` 元素。  
+ 在上一個查詢中中的條件**如果**運算式會檢查是否有兩個以上的子元素中 <`Features`>。 如果是，它會傳回結果中的 `\<there-is-more/>` 元素。  
   
  以下是結果：  
   

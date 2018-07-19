@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900523"
 ---
 # <a name="read-only-status-excel-driver"></a>唯讀狀態 （Excel 驅動程式）
 使用 Microsoft Excel 驅動程式時，會以唯讀狀態開啟依預設，資料來源資料表，並只有一位使用者可以開啟一次。 即使資料表有唯讀狀態，不過，應用程式可以執行插入和更新的 Microsoft Excel 資料表。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022505"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>將包含多個資料範圍的數列顯示在圖表上
 

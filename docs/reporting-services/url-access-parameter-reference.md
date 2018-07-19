@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036465"
 ---
 # <a name="url-access-parameter-reference"></a>URL 存取參數參考
   您可以使用下列參數當做 URL 的一部分，以設定 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]報表的外觀及操作。 本章節中將列出最常用的參數。 參數會區分大小寫，而且如果是導向至報表伺服器，則以參數前置字元 *rs:* 開頭，如果是導向至 HTML 檢視器，則以 *rc:* 開頭。 您也可以指定裝置或轉譯延伸模組特定的參數。 如需裝置特定參數的詳細資訊，請參閱 [在 URL 中指定裝置資訊設定](../reporting-services/specify-device-information-settings-in-a-url.md)。  

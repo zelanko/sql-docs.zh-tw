@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cbcde5a88ef2c1588ec0cd8495a7276a002f9ca5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf2cfae75152389455ec9ec5efa51d438ea1f738
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401420"
 ---
 # <a name="percentage-sampling-transformation"></a>百分比取樣轉換
   「百分比取樣」轉換會藉由選取轉換輸入資料列的一部分來建立取樣資料集。 取樣資料集是從轉換輸出隨機選取的資料列，用來製作輸入的結果取樣代表。  

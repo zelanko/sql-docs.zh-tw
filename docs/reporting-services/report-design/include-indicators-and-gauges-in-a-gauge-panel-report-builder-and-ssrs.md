@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023995"
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>在量測計面板中加入指標與量測計 (報表產生器及 SSRS)
   量測計面板是最上層的容器，其中保存一個或多個量測計和指標。 指標可以內嵌在量測計中，或置於量測計面板旁邊。  

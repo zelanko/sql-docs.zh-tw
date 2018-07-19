@@ -2,7 +2,6 @@
 title: Delete 方法 （ADOX 集合） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -35,11 +34,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c059ef4390f504363c9cfaa7f42bb99c6799a2da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8704e69c777c9426af158b9866ca89e70de054b5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285877"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 方法 （ADOX 集合）
 從集合中移除物件。  
@@ -52,7 +52,7 @@ Collection.Delete Name
 ```  
   
 #### <a name="parameters"></a>參數  
- *名稱*  
+ *[名稱]*  
  A **Variant**指定之名稱或要刪除之物件的序數位置 （索引）。  
   
 ## <a name="remarks"></a>備註  

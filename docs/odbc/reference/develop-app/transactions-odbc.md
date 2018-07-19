@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916293"
 ---
 # <a name="transactions-odbc"></a>ODBC 異動
 A*交易*是工作的單位以單一、 不可部分完成的作業完成; 也就是說，作業成功，或整個失敗。 例如，請考慮將從銀行帳戶的金錢傳送到另一個。 這牽涉到兩個步驟： 從第一個帳戶提款金額和存款中第二個。 很重要，這兩個步驟就會成功。不是可接受的一個步驟，才會成功，而另一個則失敗。 支援交易的資料庫就能確保這項目。  
@@ -32,7 +33,7 @@ A*交易*是工作的單位以單一、 不可部分完成的作業完成; 也�
   
  若要解決這個問題，有不同的配置，來找出與其他交易。 *交易隔離*通常實作鎖定的資料列，無法讓多個交易同時使用相同的資料列。 在某些資料庫中，鎖定資料列可能也鎖定的其他資料列。  
   
- 增加交易的隔離是降低*的並行存取，*或兩個交易同時使用相同的資料的能力。 如需詳細資訊，請參閱[設定交易隔離等級](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)。  
+ 增加交易的隔離是降低*的並行存取，* 或兩個交易同時使用相同的資料的能力。 如需詳細資訊，請參閱[設定交易隔離等級](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)。  
   
  此章節包含下列主題。  
   

@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84313f1bedd406c39a862c57bdc94436eb0c7cbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563796"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>SQL Server Data Tools 的客戶經驗改進計畫
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,23 +60,25 @@ ms.lasthandoff: 05/03/2018
   
  相關的登錄機碼與設定如下：  
   
- 機碼 = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
-  
- 登錄項目名稱 = OptIn  
-  
- 項目類型 DWORD：  
-  
--   0 為關閉  
-  
--   1 為開啟  
+- 64 位元作業系統，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- 32 位元作業系統，Key = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+啟用群組原則時，Key = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+Entry = OptIn
+
+Value = (DWORD)
+- 0 為選擇退出 (關閉 VSCEIP)
+- 1 為選擇加入 (開啟 VSCEIP)
+
   
 > [!CAUTION]  
 >  不當編輯登錄可能會造成系統嚴重受損。 在變更登錄之前，應備份電腦上的所有重要資料。 如果　貴用戶在套用手動變更之後遇到問題，也可以使用 [上次的正確設定] 啟動選項。  
   
  如需 CEIP 所收集、處理或傳輸之資訊的詳細資訊，請參閱 [Microsoft 客戶經驗改進計畫隱私權聲明](http://go.microsoft.com/fwlink/?LinkId=52143)。  
  
-### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>選擇與控制 CEIP 與 Visual Studio 2015 的 SQL Server Data Tools  
- Visual Studio 2015 的 SSDT 是隨附於 SQL Server 2016 的資料模型化工具。 它會使用內建於 Visual Studio 2015 的 CEIP 選項。 您可以從這份 [Visual Studio 的說明文件](http://go.microsoft.com/fwlink/?LinkId=517102)深入了解如何在 Visual Studio 2015 中透過 CEIP 提交回函。  
+### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>選擇和控制 CEIP 與 SQL Server Data Tools for Visual Studio 2015  
+ Visual Studio 2015 的 SSDT 是隨附於 SQL Server 2016 的資料模型化工具。 它會使用內建於 Visual Studio 2015 的 CEIP 選項。 您可以從這份 [Visual Studio 的說明文件](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)深入了解如何在 Visual Studio 2015 中透過 CEIP 提交意見反應。  
   
  如果是 SQL Server 2016 的預覽版本，預設會開啟 CEIP。 您可以依照下列指示來將它關閉或重新開啟。  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912423"
 ---
 # <a name="statement-attributes"></a>陳述式屬性
 陳述式屬性是陳述式的特性。 例如，使用書籤和什麼種類的設定資料指標使用陳述式的結果陳述式屬性。  

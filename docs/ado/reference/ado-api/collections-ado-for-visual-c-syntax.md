@@ -2,7 +2,6 @@
 title: 集合 (如需 Visual c + + 語法的 ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60bcd8f05c88e20fade932287a429e315f1d8e40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dc0c28d095c96fa94c13118ce6876a99a888dbc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276557"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>集合 (如需 Visual c + + 語法的 ADO)
 ## <a name="parameters"></a>參數  
@@ -39,7 +39,7 @@ Delete(VARIANT Index);
 Refresh(void);  
 ```  
   
- 如需詳細資訊，請參閱  
+ 如需相關資訊，請參閱  
   
 -   [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
@@ -54,7 +54,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, _ADOParameter **ppvObject);  
 ```  
   
- 如需詳細資訊，請參閱  
+ 如需相關資訊，請參閱  
   
 -   [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -70,7 +70,7 @@ Delete(VARIANT Index);
 Refresh(void);  
 ```  
   
- 如需詳細資訊，請參閱  
+ 如需相關資訊，請參閱  
   
 -   [Append 方法 (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
@@ -85,7 +85,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOField **ppvObject);  
 ```  
   
- 如需詳細資訊，請參閱  
+ 如需相關資訊，請參閱  
   
 -   [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -100,7 +100,7 @@ Clear(void);
 Refresh(void);  
 ```  
   
- 如需詳細資訊，請參閱  
+ 如需相關資訊，請參閱  
   
 -   [Clear 方法 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)  
   
@@ -113,7 +113,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOError **ppvObject);  
 ```  
   
- 如需詳細資訊，請參閱  
+ 如需相關資訊，請參閱  
   
 -   [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -127,7 +127,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
 Refresh(void);  
 ```  
   
- 如需詳細資訊，請參閱  
+ 如需相關資訊，請參閱  
   
 -   [Refresh 方法 (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
@@ -138,7 +138,7 @@ get_Count(long *c);
 get_Item(VARIANT Index, ADOProperty **ppvObject);  
 ```  
   
- 如需詳細資訊，請參閱  
+ 如需相關資訊，請參閱  
   
 -   [Count 屬性 (ADO)](../../../ado/reference/ado-api/count-property-ado.md)  
   

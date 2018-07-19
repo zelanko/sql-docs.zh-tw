@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -18,11 +17,12 @@ caps.latest.revision: 19
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7282fef44ccadfa78752822ad938ba4e99ea2bf0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd72922ceee07a5e55e0d8e4edca881f81265669
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403980"
 ---
 # <a name="learn-sql-server-master-data-services"></a>學習 SQL Server Master Data Services
 

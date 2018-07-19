@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913313"
 ---
 # <a name="fetching-a-row-of-data"></a>提取資料列
 若要擷取的資料列，應用程式呼叫**SQLFetch**。 **SQLFetch**可以使用任何一種資料指標，呼叫，但它只會以順向方向移動資料列集資料指標。 **SQLFetch**游標前進到下一個資料列，並傳回已繫結呼叫的任何資料行的資料**SQLBindCol**。 設定資料指標時達到結果的結尾， **SQLFetch**傳回 sql_no_data 為止。 如需呼叫的範例**SQLFetch**，請參閱[使用 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)。  

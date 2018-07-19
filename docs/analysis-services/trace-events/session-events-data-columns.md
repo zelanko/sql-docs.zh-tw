@@ -1,5 +1,5 @@
 ---
-title: 工作階段事件資料行 |Microsoft 文件
+title: 工作階段事件資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e3a0287edc3081273f2a3c3075f355e9b2b2493
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007240"
 ---
 # <a name="session-events-data-columns"></a>工作階段事件資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|事件的開始時間 (如果可以取得的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|事件所花費的時間量 (以毫秒為單位)。|  
 |CPUTime|6|2|事件所用的 CPU 時間 (以毫秒為單位)。|  
 |ConnectionID|25|1|唯一的連接識別碼。|  
 |DatabaseName|28|8|正在執行使用者之陳述式的資料庫名稱。|  

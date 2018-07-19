@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908845"
 ---
 # <a name="identifier-case"></a>識別項大小寫
 在 SQL 陳述式和類別目錄函式引數，識別項和引號的識別碼可以是區分大小寫或不是，選取應用程式可以呼叫來判斷**SQLGetInfo** SQL_QUOTED_ SQL_IDENTIFIER_CASE 與IDENTIFIER_CASE 選項。  

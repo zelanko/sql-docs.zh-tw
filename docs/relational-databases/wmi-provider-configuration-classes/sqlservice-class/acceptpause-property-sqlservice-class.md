@@ -1,5 +1,5 @@
 ---
-title: AcceptPause 屬性 （SqlService 類別） |Microsoft 文件
+title: AcceptPause 屬性 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 7eb9dc4df925b414974ea0c2f155bd7728392d87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063726"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ object.AcceptPause [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  表示此服務的 [SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

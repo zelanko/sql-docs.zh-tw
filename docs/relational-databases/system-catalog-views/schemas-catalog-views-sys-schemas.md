@@ -1,5 +1,5 @@
 ---
-title: sys.schemas (TRANSACT-SQL) |Microsoft 文件
+title: sys.schemas (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33178334"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049945"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>結構描述目錄檢視-sys.schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33178334"
 |**principal_id**|**int**|擁有這個結構描述之主體的識別碼。|  
   
 ## <a name="remarks"></a>備註  
- 資料庫結構描述做為命名空間或容器使用的物件，例如資料表、 檢視、 程序和函式，可以在中找到**sys.objects**目錄檢視。  
+ 資料庫結構描述做為命名空間或容器物件，例如資料表、 檢視、 程序和函式，可以在中找到**sys.objects**目錄檢視。  
   
 ## <a name="permissions"></a>Permissions  
  需要 **public** 角色的成員資格。 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

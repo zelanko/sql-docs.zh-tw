@@ -2,7 +2,6 @@
 title: PageCount 屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31eecabefdc56da6f4a252e974cc8ff97f9190c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51e970138985ae28bcad6ff9340bad40a886932c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280047"
 ---
 # <a name="pagecount-property-ado"></a>PageCount 屬性 (ADO)
 表示網頁的資料數量[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)包含物件。  

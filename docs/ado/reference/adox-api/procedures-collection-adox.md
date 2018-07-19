@@ -2,7 +2,6 @@
 title: 程序集合 (ADOX) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61b961bb722004c3a76ab6c44cbd878f03e801d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2690c2911fbd4824937c7153ba681cd5d77b703c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286657"
 ---
 # <a name="procedures-collection-adox"></a>程序集合 (ADOX)
 包含所有[程序](../../../ado/reference/adox-api/procedure-object-adox.md)的目錄物件。  

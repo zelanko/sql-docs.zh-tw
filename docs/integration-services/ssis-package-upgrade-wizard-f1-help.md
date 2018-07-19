@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3d5a99d26e02695c8c805e30f7a3bc9afb972178
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0595f04bd99e2cab2ef71694d170392fd505b76
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329182"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 封裝升級精靈 F1 說明
   使用 [SSIS 套件升級精靈] 將舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 所建立的套件升級為目前 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 版本的套件格式。  

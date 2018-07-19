@@ -2,7 +2,6 @@
 title: CacheSize 屬性範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 38d128a5b0eb9ace256ae87e8ab30505ff161c97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d388e259545c86dfa5ad700de1b192ec071d132f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276217"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize 屬性範例 （VC + +）
 這個範例會使用[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)屬性，以顯示作業的效能差異執行逾時或無 30 記錄快取。  

@@ -2,7 +2,6 @@
 title: onReadyStateChange 事件 (RDS) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 152acad43fbecebc5ee7808284a1d1fba90e1380
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66de98fbc8c78b194ce41f0f26bb5f1ed6c351c2
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288118"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange 事件 (RDS)
 **OnReadyStateChange**事件被呼叫時的值[ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)屬性變更。  

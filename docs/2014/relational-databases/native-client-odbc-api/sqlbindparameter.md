@@ -1,0 +1,65 @@
+---
+title: SQLBindParameter |Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: native-client
+ms.tgt_pltfrm: ''
+ms.topic: reference
+topic_type:
+- apiref
+helpviewer_keywords:
+- SQLBindParameter function
+ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
+caps.latest.revision: 46
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 50d2c364a6632052dbab387544e6c224d0bb1e05
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430687"
+---
+# <a name="sqlbindparameter"></a>SQLBindParameter
+  `SQLBindParameter` 可以排除資料轉換時用來提供資料的負擔[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，導致效能大幅提升應用程式的用戶端和伺服器元件。 其他優點包括插入或更新近似的數值資料類型時，降低有效位數的損失。  
+  
+> [!NOTE]  
+>  將 `char` 和 `wchar` 類型資料插入 image 資料行時，會使用傳入之資料的大小，而非轉換為二進位格式後的資料大小。  
+  
+ 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式在任何參數陣列的單一陣列元素上碰到錯誤，驅動程式會繼續執行其餘陣列元素的陳述式。 如果應用程式已經繫結陳述式的參數狀態元素陣列，可以從陣列判斷產生錯誤的參數資料列。  
+  
+ 如果使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，指定繫結輸入參數時的 SQL_PARAM_INPUT。 繫結使用 OUTPUT 關鍵字定義的預存程序參數時，只會指定 SQL_PARAM_OUTPUT 或 SQL_PARAM_INPUT_OUTPUT。  
+  
+ [SQLRowCount](sqlrowcount.md)是與不可靠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，如果繫結參數陣列的陣列項目會造成陳述式執行中的錯誤。 ODBC 陳述式屬性 SQL_ATTR_PARAMS_PROCESSED_PTR 會報告錯誤發生前處理的資料列數目。 接著，如果需要，此應用程式可以周遊其參數狀態陣列以探索成功執行的陳述式數目。  
+  
+## <a name="binding-parameters-for-sql-character-types"></a>SQL 字元類型的繫結參數  
+ 如果傳入的 SQL 資料類型是字元類型， *ColumnSize*是以字元為單位 （而不是個位元組） 的大小。 如果資料字串，以位元組為單位的長度大於 8000 *ColumnSize*應設為`SQL_SS_LENGTH_UNLIMITED`，表示為 SQL 類型的大小沒有限制。  
+  
+ 比方說，如果 SQL 資料類型是`SQL_WVARCHAR`， *ColumnSize*不能超過 4000。 如果實際資料長度大於 4000，然後*ColumnSize*應設為`SQL_SS_LENGTH_UNLIMITED`以便`nvarchar(max)`將驅動程式所使用。  
+  
+## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter 和資料表值參數  
+ 如同其他參數類型，資料表值參數是由 SQLBindParameter 繫結。  
+  
+ 繫結資料表值參數之後，也會一併繫結其資料行。 若要繫結資料行，請呼叫[SQLSetStmtAttr](sqlsetstmtattr.md)以便將 SQL_SOPT_SS_PARAM_FOCUS 設定為資料表值參數的序數。 接著，呼叫 SQLBindParameter 資料表值參數中的每一個資料行。 若要傳回到最上層參數繫結，將 SQL_SOPT_SS_PARAM_FOCUS 設定為 0。  
+  
+ 將參數對應到資料表值參數的描述項欄位的相關資訊，請參閱[繫結和 Data Transfer of Table-Valued 參數和資料行值](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)。  
+  
+ 如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)。  
+  
+## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter 對增強型日期和時間功能的支援  
+ 參數值的日期/時間類型轉換中所述[從 C 轉換成 SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md)。 請注意該型別參數的`time`和`datetimeoffset`必須要有*ValueType*指定為`SQL_C_DEFAULT`或`SQL_C_BINARY`如果及其對應的結構 (`SQL_SS_TIME2_STRUCT`和`SQL_SS_TIMESTAMPOFFSET_STRUCT`) 使用。  
+  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
+  
+## <a name="sqlbindparameter-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLBindParameter 支援  
+ `SQLBindParameter` 支援大型 CLR 使用者定義型別 (UDT)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+  
+## <a name="see-also"></a>另請參閱  
+ [ODBC API 實作詳細資料](odbc-api-implementation-details.md)   
+ [SQLBindParameter 函式](http://go.microsoft.com/fwlink/?LinkId=59328)  
+  
+  

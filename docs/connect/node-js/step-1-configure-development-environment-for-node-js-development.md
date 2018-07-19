@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: node-js
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,22 +14,23 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 313adb458786f009cd2cbd4fa86c09d7d5302b29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f918eead7fb0af9d28cd85b173e3e076c5ba9416
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288957"
 ---
 # <a name="step-1--configure-development-environment-for-nodejs-development"></a>步驟 1： 設定適用於 Node.js 開發的開發環境
 您必須設定開發環境的必要條件，才能開發使用 Node.js Driver for SQL Server 的應用程式。  最常見的方法是使用 node 封裝管理員 (npm) 安裝冗長的模組，但是您可以下載冗長的模組，直接在[Github](https://github.com/pekim/tedious)如果您偏好。  
   
 請注意 Node.js 驅動程式會使用 TDS 通訊協定，SQL Server 和 Azure SQL Database 中的預設會啟用。  不需要進行其他組態設定。  
   
-## <a name="windows"></a>視窗  
+## <a name="windows"></a>Windows  
   
 1. **安裝 Node.js 執行階段及 npm 封裝管理員**  
-a. 移至[Node.js](https://nodejs.org/en/download/)  
-b. 按一下適當的 Windows 安裝程式 msi 連結。   
+A. 移至[Node.js](https://nodejs.org/en/download/)  
+B. 按一下適當的 Windows 安裝程式 msi 連結。   
 c. 在下載後，執行 msi 安裝 Node.js  
   
 2. **開啟 cmd.exe**  
@@ -81,8 +81,8 @@ c. 在下載後，執行 msi 安裝 Node.js
 ## <a name="mac"></a>Mac  
   
 1. **安裝 Node.js 執行階段及 npm 封裝管理員**  
-a. 移至[Node.js](https://nodejs.org/en/download/)  
-b. 按一下適當的 Mac OS 安裝程式連結。  
+A. 移至[Node.js](https://nodejs.org/en/download/)  
+B. 按一下適當的 Mac OS 安裝程式連結。  
 c. 在下載後，執行安裝 Node.js dmg  
   
 2. **開啟終端機**  

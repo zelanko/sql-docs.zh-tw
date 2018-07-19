@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923063"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 函數
 **一致性**  
@@ -66,7 +67,7 @@ SQLRETURN SQLGetTypeInfo(
 |01000|一般警告|特定驅動程式告知性訊息。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |01S02|選項值已變更|指定的陳述式屬性不實作工作狀況，造成無效的因此暫時取代相似的值。 (呼叫**SQLGetStmtAttr**判斷暫時替代的值。)取代值無效， *StatementHandle*直到關閉資料指標。 您可以變更陳述式屬性是： SQL_ATTR_CONCURRENCY、 SQL_ATTR_CURSOR_TYPE、 SQL_ATTR_KEYSET_SIZE、 SQL_ATTR_MAX_LENGTH、 SQL_ATTR_MAX_ROWS sql_attr_query_timeout 時和 SQL_ATTR_SIMULATE_CURSOR。 （函式會傳回 SQL_SUCCESS_WITH_INFO）。|  
 |08S01|通訊連結失敗|功能已完成處理之前，驅動程式和驅動程式已連線到資料來源之間的通訊連結失敗。|  
-|24000|指標狀態無效|在開啟游標的*StatementHandle，*和**SQLFetch**或**SQLFetchScroll**如同呼叫。 傳回這個錯誤是由驅動程式管理員如果**SQLFetch**或**SQLFetchScroll**尚未傳回 sql_no_data 之後，以及如果驅動程式會傳回**SQLFetch**或**SQLFetchScroll**傳回 sql_no_data 為止。<br /><br /> 結果集是在開啟*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**尚未呼叫。|  
+|24000|指標狀態無效|在開啟游標的*StatementHandle，* 和**SQLFetch**或**SQLFetchScroll**如同呼叫。 傳回這個錯誤是由驅動程式管理員如果**SQLFetch**或**SQLFetchScroll**尚未傳回 sql_no_data 之後，以及如果驅動程式會傳回**SQLFetch**或**SQLFetchScroll**傳回 sql_no_data 為止。<br /><br /> 結果集是在開啟*StatementHandle*，但**SQLFetch**或**SQLFetchScroll**尚未呼叫。|  
 |40001|序列化失敗|交易已回復由於與另一個交易資源鎖死。|  
 |40003|未知的陳述式完成|此函式執行期間失敗的相關聯的連接，並無法決定交易的狀態。|  
 |HY000|一般錯誤|發生錯誤，其中沒有任何特定的 SQLSTATE 和定義沒有實作特定的 SQLSTATE。 所傳回的錯誤訊息**SQLGetDiagRec**中 *\*MessageText*緩衝區描述錯誤和其原因。|  

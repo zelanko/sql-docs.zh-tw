@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024715"
 ---
 # <a name="amo-other-classes-and-methods"></a>AMO 其他類別和方法
   本節包含一般類別不是 OLAP 或資料採礦特有以及屬於管理或管理中的物件時很有幫助[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]。 這些類別涵蓋如預存程序、追蹤、例外狀況以及備份與還原等功能。  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901953"
 ---
 # <a name="sql-92-compliance"></a>Sql-92 相容性
 ODBC 桌面資料庫驅動程式和基礎 Microsoft Jet 引擎不是以 sql-92 相容。 它們支援以 sql-92 定義的許多功能。 驅動程式中支援某些功能不支援以 sql-92。 如需詳細資訊，請參閱*Microsoft Jet 資料庫引擎程式設計人員指南*。 兩者之間的主要差異如下：  

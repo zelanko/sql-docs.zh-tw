@@ -2,7 +2,6 @@
 title: 字元集屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 972f090d648c94c3fab20f013eaa185fe3849f00
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9de51b96b78a7eccac34805ccc511754db3e393b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276297"
 ---
 # <a name="charset-property-ado"></a>字元集屬性 (ADO)
 指出字元集所在的文字內容[資料流](../../../ado/reference/ado-api/stream-object-ado.md)應轉譯的內部緩衝區中的儲存體**資料流**物件。  

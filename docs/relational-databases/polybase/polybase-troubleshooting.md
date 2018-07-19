@@ -3,9 +3,9 @@ title: PolyBase 疑難排解 | Microsoft Docs
 ms.custom: ''
 ms.date: 8/29/2017
 ms.prod: sql
+ms.technology: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: polybase
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cadcbeb8e0c81afb9d56df7bf03f17214e400b3c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 02348b877bfed6acf38487cc9f21b74e68fff195
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37167319"
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase, 疑難排解
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

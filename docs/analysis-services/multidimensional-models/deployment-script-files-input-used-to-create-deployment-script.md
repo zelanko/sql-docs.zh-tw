@@ -1,5 +1,5 @@
 ---
-title: 了解用來建立部署指令碼的輸入的檔案 |Microsoft 文件
+title: 了解用來建立部署指令碼的輸入的檔 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,22 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b75ec5d7433931a81a0fa6e2c648f85335fbedc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002190"
 ---
-# <a name="deployment-script-files---input-used-to-create-deployment-script"></a>部署指令碼檔案-輸入用來建立部署指令碼
+# <a name="deployment-script-files---input-used-to-create-deployment-script"></a>部署指令碼檔-輸入用來建立部署指令碼
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  當您建置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]產生之專案檔案。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 將這些檔案放入輸出資料夾的[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 依預設，輸出是放在 \Bin 資料夾中。 下表列出 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 建立的 XML 檔案。  
+  當您建置[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案，[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]會產生專案檔。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 將這些檔案放入輸出資料夾[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]專案。 依預設，輸出是放在 \Bin 資料夾中。 下表列出 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 建立的 XML 檔案。  
   
-|檔案|Description|  
+|檔案|描述|  
 |---------------|-----------------|  
-|\<*專案名稱*>.asdatabase|多維度或 1100年/1103年表格式模型專案、 XMLA 檔案或 JSON 檔案以供表格式 1200年以及更高版本的模型專案。 包含專案中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的宣告式定義。|  
-|\<*專案名稱*> placeholder>>.deploymenttargets|包含將建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和資料庫的名稱。|  
-|\<*專案名稱*> placeholder>>.configsettings|包含環境特定設定，例如資料來源連接資訊和物件儲存位置。 此檔案中的設定會覆寫設定\<*專案名稱*>.asdatabase 檔案。|  
-|\<*專案名稱*> 部署|包含部署選項，例如部署是否為交易式，以及部署之後是否應處理部署的物件。|  
+|\<*專案名稱*>.asdatabase|XMLA 檔案的多維度或 1100年/1103年的表格式模型專案或針對表格式 1200年和更高版本的模型專案的 JSON 檔案。 包含專案中所有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的宣告式定義。|  
+|\<*專案名稱*>.deploymenttargets|包含將建立 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體和資料庫的名稱。|  
+|\<*專案名稱*>.configsettings|包含環境特定設定，例如資料來源連接資訊和物件儲存位置。 此檔案中的設定會覆寫中的設定\<*專案名稱*>.asdatabase 檔案。|  
+|\<*專案名稱*>.deploymentoptions|包含部署選項，例如部署是否為交易式，以及部署之後是否應處理部署的物件。|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 絕不會將密碼儲存在專案檔中。  

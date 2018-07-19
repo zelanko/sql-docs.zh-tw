@@ -2,7 +2,6 @@
 title: 重新同步處理方法的範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc310864a557ae3157d047f0d6fc05dd3e24b729
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80a5e39daa31bd781fbeba0f2a3814fca05f5041
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281297"
 ---
 # <a name="resync-method-example-vc"></a>重新同步處理方法的範例 （VC + +）
 這個範例示範如何使用[重新同步處理](../../../ado/reference/ado-api/resync-method.md)靜態資料錄集中的資料重新整理方法。  

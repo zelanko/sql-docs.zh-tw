@@ -1,5 +1,5 @@
 ---
-title: 輸入元素 (XMLA) |Microsoft 文件
+title: 輸入元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ca05cb4bc5ea8951db028ed4da53ee3bfd7131dc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2a080a1af46df731befc8ab66ce925b961be9b16
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051596"
 ---
 # <a name="type-element-xmla"></a>Type 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,15 +31,15 @@ ms.lasthandoff: 05/10/2018
 </Process>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|字串 (列舉)|  
 |預設值|無|  
 |基數|1-1：只出現一次的必要元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
@@ -46,11 +47,11 @@ ms.lasthandoff: 05/10/2018
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 如需有關可用處理選項物件的執行個體上[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]，請參閱[處理多維度模型&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
+ Analysis Services 執行個體上物件可用處理選項的相關資訊，請參閱[處理多維度模型中&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)。  
   
- 值**類型**元素僅限於一個下表所列的字串。  
+ 值**型別**元素僅限於其中一個下表所列的字串。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*ProcessFull*|卸除受影響物件中的所有資料，然後處理受影響的物件。|  
 |*ProcessAdd*|將新的資料加入至受影響的物件。|  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/10/2018
 |*ProcessStructure*|只處理受影響物件的結構。|  
 |*ProcessClearStructureOnly*|只清除受影響物件中的資料。|  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

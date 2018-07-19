@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913913"
 ---
 # <a name="statement-handles"></a>陳述式控制代碼
 A*陳述式*最容易想像成 SQL 陳述式，例如**選取\*從員工**。 不過，在陳述式是不只是 SQL 陳述式，其中包含所有與該 SQL 陳述式，例如任何結果集的陳述式所建立和執行陳述式中使用的參數相關聯的資訊。 陳述式甚至不必有應用程式定義的 SQL 陳述式。 例如，當目錄函數例如**SQLTables**執行上一個陳述式，它會執行預先定義的 SQL 陳述式會傳回一份資料表的名稱。  

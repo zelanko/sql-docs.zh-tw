@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023385"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>群組運算式範例 (報表產生器及 SSRS)
   在資料區域中，您可以依據單一欄位來分組資料，或是建立較為複雜的運算式來識別分組的資料。 複雜運算式包含了多個欄位或參數、條件陳述式或自訂程式碼的參考。 當您為資料區定義群組時，您會將這些運算式加入到 **[群組]** 屬性。 如需詳細資訊，請參閱 [在資料區中加入或刪除群組 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)。  

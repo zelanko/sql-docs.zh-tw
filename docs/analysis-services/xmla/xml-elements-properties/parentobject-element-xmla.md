@@ -1,5 +1,5 @@
 ---
-title: ParentObject 元素 (XMLA) |Microsoft 文件
+title: ParentObject 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ff9ebc460691d9f97e5cfe64783574b00eab6915
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34576000"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007030"
 ---
 # <a name="parentobject-element-xmla"></a>ParentObject 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含用以建立父代所定義之物件的父物件的識別碼[建立](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)項目。  
+  包含用來建立父元素所定義之物件的父物件的識別碼[建立](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34576000"
 </Create>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -41,12 +41,12 @@ ms.locfileid: "34576000"
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
 |父元素|[建立](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|子元素|必要的「Analysis Services 指令碼語言」(ASSL) 元素。 指定清單項目指定 ID 的物件，而且其祖系 (但不包括**伺服器**物件。)例如，下列**ParentObject**項目會識別資料分割：<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
+|子元素|必要的「Analysis Services 指令碼語言」(ASSL) 元素。 指定清單項目指定 ID 的物件，而且其祖系 (不含**Server**物件。)例如，下列**ParentObject**項目會識別資料分割：<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
 ## <a name="remarks"></a>備註  
  識別碼出現的順序並不重要。  

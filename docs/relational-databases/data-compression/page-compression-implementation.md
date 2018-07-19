@@ -17,11 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a66084e2020225bc54a2b5b4419d6221db9c5814
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2e66e391c5d30097f714962d1f114fa2b324a5c0
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999894"
 ---
 # <a name="page-compression-implementation"></a>頁面壓縮實作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,18 +52,18 @@ ms.lasthandoff: 05/19/2018
   
  下列圖例顯示資料表範例頁面在前置詞壓縮前的狀況。  
   
- ![前置詞壓縮前的頁面](../../relational-databases/data-compression/media/skt-tblcompression1c.gif "前置詞壓縮前的頁面")  
+ ![前置詞壓縮前的頁面](media/skt-tblcompression1c.gif "前置詞壓縮前的頁面")  
   
  下列圖例顯示相同頁面在前置詞壓縮後的狀況。 前置詞會移到標頭，而資料行值則變更為前置詞的參考。  
   
- ![前置詞壓縮後的頁面](../../relational-databases/data-compression/media/tblcompression2.gif "前置詞壓縮後的頁面")  
+ ![前置詞壓縮後的頁面](media/tblcompression2.gif "前置詞壓縮後的頁面")  
   
  在第一個資料列的第一個資料行中，值 4b 指出該資料列會有前置詞 (aaab) 的前四個字元和字元 b。 這樣會產生結果值 aaabb，即為原始值。  
   
 ## <a name="dictionary-compression"></a>字典壓縮  
  在完成前置詞壓縮後，就會套用字典壓縮。 字典壓縮會搜尋頁面上的任何位置是否有重複的值，然後將它們儲存在 CI 區域中。 與前置詞壓縮不同的是，字典壓縮並不是限定於單一資料行。 字典壓縮可以取代頁面上任何位置的重複值。 下列圖例顯示相同頁面在字典壓縮後的狀況。  
   
- ![前置詞壓縮後的頁面](../../relational-databases/data-compression/media/tblcompression3.gif "前置詞壓縮後的頁面")  
+ ![前置詞壓縮後的頁面](media/tblcompression3.gif "前置詞壓縮後的頁面")  
   
  請注意，值 4b 已由頁面的不同資料行參考。  
   

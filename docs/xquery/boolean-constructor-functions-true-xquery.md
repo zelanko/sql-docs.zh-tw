@@ -1,5 +1,5 @@
 ---
-title: true 函數 (XQuery) |Microsoft 文件
+title: true 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 349b2f99f5db35ca9d44e3ac8459030b7f7ba55f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014028"
 ---
-# <a name="boolean-constructor-functions---true-xquery"></a>布林建構函式為 true (XQuery)
+# <a name="boolean-constructor-functions---true-xquery"></a>布林建構函式-true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   傳回 xs:boolean 值 True。 這相當於 `xs:boolean("1")`。  
@@ -41,7 +42,7 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. 使用 true() XQuery 布林函數  
  下列範例會查詢不具型別的**xml**變數。 中的運算式**value （)** 方法會傳回布林值**true （)** 如果"aaa"是屬性的值。 **Value （)** 方法**xml**資料類型轉換成位元的布林值，並傳回它。  
@@ -54,7 +55,7 @@ go
 -- result = 1  
 ```  
   
- 在下列範例中，指定的查詢是針對具類型**xml**資料行。 `if` 運算式會檢查 <`ROOT`> 元素的具類型布林值，並據此傳回建構的 XML。 本範例將執行下列動作：  
+ 在下列範例中，查詢會指定針對具型別**xml**資料行。 `if` 運算式會檢查 <`ROOT`> 元素的具類型布林值，並據此傳回建構的 XML。 本範例將執行下列動作：  
   
 -   建立 XML 結構描述集合，在其中定義 xs:boolean 類型的 <`ROOT`> 元素。  
   

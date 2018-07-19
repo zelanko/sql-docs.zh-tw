@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021605"
 ---
 # <a name="manage-shared-datasets"></a>管理共用資料集
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]中，共用資料集是從連接至外部資料來源的共用資料來源擷取資料。 共用資料集提供方法以共用查詢，可協助您為多個報表提供一致的資料集。 資料集查詢可以包含資料集參數。 您可以在第一次使用時或指定排程，設定共用資料集以快取特定參數組合的查詢結果。 您可以使用共用資料集快取，配合報表快取及報表資料摘要，協助管理資料來源的存取。  

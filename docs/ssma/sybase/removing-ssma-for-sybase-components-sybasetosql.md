@@ -3,8 +3,6 @@ title: 移除 SSMA for Sybase 元件 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d59d3d18b4eb5b5ec81cb12422cc16cf64592731
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a9434f0fbaab5188a275af279626832df528b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779305"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>移除 SSMA for Sybase 元件 (SybaseToSQL)
 當您完成將資料庫移轉從 Sybase Adaptive Server Enterprise (ASE) 至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可能想要解除安裝 SSMA 元件。 您可以在任何時候，解除安裝用戶端元件，但您不應該解除安裝的延伸模組組件，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]除非您確定您已移轉的資料庫不再使用中的函式**ssma_syb**的結構描述**sysdb**資料庫。  

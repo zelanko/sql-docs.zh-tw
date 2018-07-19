@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912893"
 ---
 # <a name="handles"></a>處理
 控制代碼是不透明，32 位元值，識別特定的項目。在 ODBC 中，這個項目可以是環境、 連接、 陳述式或描述元。 當應用程式呼叫**SQLAllocHandle**、 驅動程式管理員或驅動程式會建立指定類型的新項目和其控制代碼傳回至應用程式。 更新版本的應用程式會使用控制代碼，以便識別該項目時呼叫 ODBC 函數。 驅動程式與驅動程式管理員使用控點來尋找相關項目資訊。  

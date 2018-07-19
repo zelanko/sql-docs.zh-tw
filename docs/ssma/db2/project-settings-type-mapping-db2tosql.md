@@ -1,8 +1,6 @@
 ---
 title: 專案設定 （型別對應） (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 523486520f1698c841d9c3e7a09d06fc23978b82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8232193c56feb0a9403b9cebaad896c7dbef8ad9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775284"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>專案設定 （型別對應） (DB2ToSQL)
 類型對應 頁面**專案設定**對話方塊包含自訂 SSMA 如何轉換成的 DB2 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
@@ -35,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
 若要指定目前的物件或物件類別的設定，請使用**類型對應**主要 SSMA 視窗索引標籤中的。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 下表顯示**類型對應**索引標籤上選項：  
   
 **來源類型**  
@@ -46,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 請參閱下一節的 DB2 類型對應的預設值 SSMA 資料表。  
   
-**加入**  
+**[加入]**  
 按一下以新增的資料類型對應清單。  
   
 **編輯**  
@@ -69,7 +68,7 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|ssNoversion|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -77,13 +76,13 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |character|varchar(max)|  
 |character varying|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|日期|datetime2[0]|  
 |dec|dec[38][0]|  
-|decimal|float [53]|  
+|Decimal|float [53]|  
 |雙精度|float [53]|  
-|float|float [53]|  
-|int|int|  
-|integer|int|  
+|FLOAT|float [53]|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |長資料列|varbinary(max)|  
 |長資料列 [\*..8000]<sup>*</sup>|varbinary[*]|  
@@ -96,19 +95,19 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |NCHAR|nvarchar(max)|  
 |Nclob|nvarchar(max)|  
 |number|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |未經處理的|varbinary(max)|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |string|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
-|Urowid|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |varchar2|varchar(max)|  
 |xmltype|xml|  
@@ -133,19 +132,19 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |可變長度字元 [*..\*]|varchar[*]|  
 |字元 [*..\*]|char[*]|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|日期|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec [*..\*]|dec[*][0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|decimal|decimal[38][0]|  
+|Decimal|decimal[38][0]|  
 |小數 [*..\*]|decimal[*][0]|  
 |小數 [*..\*][\*..\*]|decimal[*][\*]|  
 |雙精度|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float [*..53]|float[*]|  
 |float[54..*]|float [53]|  
-|int|int|  
-|integer|int|  
+|ssNoversion|ssNoversion|  
+|integer|ssNoversion|  
 |long|varchar(max)|  
 |長資料列|varbinary(max)|  
 |長資料列 [*..8000]|varbinary[*]|  
@@ -165,22 +164,22 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |number|float [53]|  
 |數字 [*..\*]|numeric[*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |數字 [*..\*]|numeric[*]|  
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..\*]|nvarchar[*]|  
 |原始 [*..\*]|varbinary[*]|  
-|real|float [53]|  
-|Rowid|uniqueidentifier|  
-|smallint|smallint|  
-|timestamp|datetime2|  
+|REAL|float [53]|  
+|Rowid|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
+|TIMESTAMP|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset[*]|  
 |時區的時間戳記|datetimeoffset|  
 |時區的時間戳記 [*..\*]|datetimeoffset[*]|  
 |時間戳記 [*..\*]|datetime2[*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*..\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*..\*]|UNIQUEIDENTIFIER|  
 |varchar [*..\*]|varchar[*]|  
 |varchar2 [*..\*]|varchar[*]|  
 |Xmltype|xml|  
@@ -193,7 +192,7 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|ssNoversion|  
 |Blob|varbinary(max)|  
 |布林|bit|  
 |Char|char|  
@@ -207,19 +206,19 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |字元 [*..8000]|char[*]|  
 |character[8001..*]|varchar(max)|  
 |Clob|varchar(max)|  
-|date|datetime2[0]|  
+|日期|datetime2[0]|  
 |dec|dec[38][0]|  
 |dec [*..\*]|dec[*][0]|  
 |dec [*..\*][\*..\*]|dec[*][\*]|  
-|decimal|decimal[38][0]|  
+|Decimal|decimal[38][0]|  
 |小數 [*..\*]|decimal[*][0]|  
 |小數 [*..\*][\*..\*]|decimal[*][\*]|  
 |雙精度|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float [*..53]|float[*]|  
 |float[54..*]|float [53]|  
-|整數|int|  
-|Integer|int|  
+|int|ssNoversion|  
+|Integer|ssNoversion|  
 |整數 [*..\*]|numeric[*][0]|  
 |長整數|varchar(max)|  
 |長資料列|varbinary(max)|  
@@ -249,23 +248,23 @@ SSMA for DB2，在您可以設定引數、 資料行、 區域變數和傳回值
 |數字 [*..\*][\*..\*]|數字 [*][\*]|  
 |nvarchar2 [*..4000]|nvarchar[*]|  
 |nvarchar2[4001..*]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|ssNoversion|  
 |原始 [*..8000]|varbinary[*]|  
 |raw[8001..*]|varbinary(max)|  
 |Real|float [53]|  
-|Rowid|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|Rowid|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |字串 [*..8000]|varchar[*]|  
 |string[8001..*]|varchar(max)|  
-|timestamp|datetime2|  
+|TIMESTAMP|datetime2|  
 |使用本地時區的時間戳記|datetimeoffset|  
 |時區的時間戳記|datetimeoffset|  
 |使用本地時區的時間戳記 [*..\*]|datetimeoffset[*]|  
 |時區的時間戳記 [*..\*]|datetimeoffset[*]|  
 |時間戳記 [*..\*]|datetime2[*]|  
-|Urowid|uniqueidentifier|  
-|urowid [*..\*]|uniqueidentifier|  
+|Urowid|UNIQUEIDENTIFIER|  
+|urowid [*..\*]|UNIQUEIDENTIFIER|  
 |varchar [*..8000]|varchar[*]|  
 |varchar[8001..*]|varchar(max)|  
 |varchar2 [*..8000]|varchar[*]|  

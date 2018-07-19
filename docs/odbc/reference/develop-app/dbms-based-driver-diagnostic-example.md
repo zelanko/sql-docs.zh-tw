@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910843"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS 架構驅動程式診斷的範例
 DBMS 架構驅動程式將要求傳送至 DBMS，並傳回至應用程式透過驅動程式管理員的資訊。 驅動程式會是介面的驅動程式管理員元件，因為它已格式化，並傳回引數**SQLGetDiagRec**。  

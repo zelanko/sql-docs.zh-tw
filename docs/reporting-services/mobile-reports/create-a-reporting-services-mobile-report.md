@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018365"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>建立 Reporting Services 行動報表
 您可以使用 SQL Server 行動報表發行工具，在可調整格線列和格線欄且具有彈性行動報表項目的設計介面上，快速建立針對任何螢幕大小適當調整大小的 SQL Server 2016 Reporting Services 行動報表。  

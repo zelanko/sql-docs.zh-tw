@@ -2,7 +2,6 @@
 title: Append 方法 （ADOX 資料行） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0e53965f9a8c5602459a08f5c47e5719741bb648
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1bdaa9f13104ca2f56dd44c4b3a08dfd3c424c3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284827"
 ---
 # <a name="append-method-adox-columns"></a>Append 方法 （ADOX 資料行）
 將新[資料行](../../../ado/reference/adox-api/column-object-adox.md)物件[資料行](../../../ado/reference/adox-api/columns-collection-adox.md)集合。  
@@ -38,7 +38,7 @@ Columns.Append Column [,Type] [,DefinedSize]
 ```  
   
 #### <a name="parameters"></a>參數  
- *[資料行]*  
+ *資料行*  
  **資料行**来附加物件或建立並附加至資料行的名稱。  
   
  *型別*  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911113"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>插入 SQLBulkOperations 具有資料列
 使用插入資料**SQLBulkOperations**類似於更新具有資料**SQLBulkOperations**因為它會使用資料繫結應用程式緩衝區。  

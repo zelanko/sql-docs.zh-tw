@@ -3,24 +3,22 @@ title: 子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲) | Microsoft
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.prod_service: sql-data-warehouse, pdw
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
-caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: shkale-msft
+ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ab20f771fae4aa1ea5a31a11bc8c3e3f1e7c4ead
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: c400e4e78b223c61122d8b37fffcfa373b8ff0e7
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37788149"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>子查詢 (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909405"
 ---
 # <a name="alignment"></a>Alignment
 ODBC 應用程式中的對齊問題通常與並無不同它們位於其他任何應用程式。 也就是說，大部分的 ODBC 應用程式有少數或沒有對齊問題。 未將對齊位址罰款因為硬體和作業系統而不同，而且可能效能稍微降低做為次要或成嚴重執行階段錯誤。 因此，ODBC 應用程式和可攜式的 ODBC 應用程式特別的是，應該小心正確對齊的資料。  

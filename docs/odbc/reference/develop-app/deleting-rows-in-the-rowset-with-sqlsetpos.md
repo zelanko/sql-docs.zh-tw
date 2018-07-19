@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909343"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos 與資料列集刪除資料列
 刪除作業的**SQLSetPos** ，使得資料來源刪除一或多個選取的資料列的資料表。 若要刪除的資料列**SQLSetPos**，應用程式會呼叫**SQLSetPos**與*作業*設定為 SQL_DELETE 並*RowNumber*設為若要刪除的資料列數。 如果*RowNumber*是 0，則會刪除資料列集中的所有資料列。  

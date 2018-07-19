@@ -1,8 +1,6 @@
 ---
 title: 全域設定 （對話方塊） (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f7d514991dc7af4ef7c030b47ed471d0eb4cddeb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f561631a965704f6c3eea05365db2249b42d5bf4
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774134"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>全域設定 （對話方塊） (AccessToSQL)
 使用的對話方塊頁面**通用設定**對話方塊來指定的預設使用者動作和 SSMA 的警告設定。  
   
 若要存取對話方塊設定在**工具**功能表上，選取**通用設定**，按一下  **GUI**底部的左的窗格，然後選取**對話方塊**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **啟動時顯示移轉精靈**  
 SSMA for Access，在中，您可以選擇啟用或停用**移轉精靈**SSMA 應用程式啟動時。 這個選項是預設**True**。  
   

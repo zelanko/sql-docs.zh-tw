@@ -2,10 +2,10 @@
 title: 初始化和授權屬性 |Microsoft 文件
 description: 初始化和授權屬性
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-source-objects
+ms.component: oledb|ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a1387abeab92f44f606dc0817174a26d5ac84a1f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c7ec19619d5f3e8a8a62314131c5c9da7d2d035
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666448"
 ---
 # <a name="initialization-and-authorization-properties"></a>初始化和授權屬性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server OLE DB 驅動程式會解譯 OLE DB 初始化和授權屬性，如下所示：  
   
@@ -61,13 +64,13 @@ ms.lasthandoff: 05/03/2018
 |-----------------|-----------------|  
 |SSPROP_AUTH_OLD_PASSWORD|類型：VT_BSTR<br /><br /> R/W：寫入<br /><br /> 預設值：VT_EMPTY<br /><br /> 描述：目前或過期的密碼。 如需詳細資訊，請參閱[變更密碼以程式設計方式](../../oledb/features/changing-passwords-programmatically.md)。|  
 |SSPROP_INIT_APPNAME|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：用戶端應用程式名稱。|  
-|SSPROP_INIT_AUTOTRANSLATE|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：OEM/ANSI 字元轉換。<br /><br /> VARIANT_TRUE: SQL Server OLE DB 驅動程式會轉譯傳送用戶端與伺服器之間透過 Unicode 進行轉換中的字碼頁，在用戶端與伺服器之間的比對擴充字元問題降到最低的 ANSI 字元字串：<br /><br /> 用戶端 DBTYPE_STR 資料傳送至執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**， **varchar**，或**文字**從字元轉換成 Unicode 使用用戶端的 ANSI 字碼頁 (ACP)，然後從 Unicode 字元使用伺服器的 ACP 轉換變數、 參數或資料行。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**char**， **varchar**，或**文字**傳送到用戶端 DBTYPE_STR 變數的資料是從字元轉換成 Unicode 使用伺服器的 ACP，然後再轉換成字元使用用戶端的 ACP Unicode 從。<br /><br /> 適用於 SQL Server 這些轉換會在用戶端上執行的 OLE DB 驅動程式。 但是在伺服器上使用的相同 ACP 必須也可以在用戶端上使用。<br /><br /> 這些設定對於進行下列傳輸時所發生的轉換沒有作用：<br /><br /> Unicode DBTYPE_WSTR 用戶端資料傳送至**char**， **varchar**，或**文字**在伺服器上。<br /><br /> **char**， **varchar**，或**文字**伺服器傳送到用戶端上之 Unicode DBTYPE_WSTR 變數的資料。<br /><br /> 傳送至 Unicode 的 ANSI DBTYPE_STR 用戶端資料**nchar**， **nvarchar**，或**ntext**在伺服器上。<br /><br /> Unicode **char**， **varchar**，或**文字**伺服器傳送到用戶端上之 ANSI DBTYPE_STR 變數的資料。<br /><br /> VARIANT_FALSE: SQL Server OLE DB 驅動程式不會執行字元轉譯。<br /><br /> SQL Server OLE DB 驅動程式不會轉譯傳送到用戶端 ANSI 字元 DBTYPE_STR 資料**char**， **varchar**，或**文字**變數、 參數或資料行伺服器。 上執行任何轉譯**char**， **varchar**，或**文字**從伺服器傳送至用戶端 DBTYPE_STR 變數的資料。<br /><br /> 如果用戶端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體使用不同的 ACP，可能會將擴充字元解譯錯誤。|  
+|SSPROP_INIT_AUTOTRANSLATE|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_TRUE<br /><br /> 描述：OEM/ANSI 字元轉換。<br /><br /> VARIANT_TRUE: SQL Server OLE DB 驅動程式會轉譯傳送用戶端與伺服器之間透過 Unicode 進行轉換中的字碼頁，在用戶端與伺服器之間的比對擴充字元問題降到最低的 ANSI 字元字串：<br /><br /> 用戶端 DBTYPE_STR 資料傳送至執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**， **varchar**，或**文字**從字元轉換成 Unicode 使用用戶端的 ANSI 字碼頁 (ACP)，然後從 Unicode 字元使用伺服器的 ACP 轉換變數、 參數或資料行。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **char**， **varchar**，或**文字**傳送到用戶端 DBTYPE_STR 變數的資料是從字元轉換成 Unicode 使用伺服器的 ACP，然後再轉換成字元使用 Unicode 從用戶端的 ACP。<br /><br /> 適用於 SQL Server 這些轉換會在用戶端上執行的 OLE DB 驅動程式。 但是在伺服器上使用的相同 ACP 必須也可以在用戶端上使用。<br /><br /> 這些設定對於進行下列傳輸時所發生的轉換沒有作用：<br /><br /> Unicode DBTYPE_WSTR 用戶端資料傳送至**char**， **varchar**，或**文字**在伺服器上。<br /><br /> **char**， **varchar**，或**文字**伺服器傳送到用戶端上之 Unicode DBTYPE_WSTR 變數的資料。<br /><br /> 傳送至 Unicode 的 ANSI DBTYPE_STR 用戶端資料**nchar**， **nvarchar**，或**ntext**在伺服器上。<br /><br /> Unicode **char**， **varchar**，或**文字**伺服器傳送到用戶端上之 ANSI DBTYPE_STR 變數的資料。<br /><br /> VARIANT_FALSE: SQL Server OLE DB 驅動程式不會執行字元轉譯。<br /><br /> SQL Server OLE DB 驅動程式不會轉譯傳送到用戶端 ANSI 字元 DBTYPE_STR 資料**char**， **varchar**，或**文字**變數、 參數或資料行伺服器。 上執行任何轉譯**char**， **varchar**，或**文字**從伺服器傳送至用戶端 DBTYPE_STR 變數的資料。<br /><br /> 如果用戶端和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體使用不同的 ACP，可能會將擴充字元解譯錯誤。|  
 |SSPROP_INIT_CURRENTLANGUAGE|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 語言名稱。 識別系統訊息選取與格式所使用的語言。 此語言必須安裝在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的電腦上，否則資料初始化會失敗。|  
 |SSPROP_INIT_DATATYPECOMPATIBILITY|類型：VT_UI2<br /><br /> R/W：讀取/寫入<br /><br /> 預設值： 0<br /><br /> 描述：允許 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 ActiveX Data Object (ADO) 應用程式之間的資料類型相容性。 如果使用預設值 0，資料類型處理會預設為提供者所使用的資料類型。 如果使用值 80，資料類型處理僅會使用 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 資料類型。 如需詳細資訊，請參閱[使用 ADO 與 OLE DB 驅動程式的 SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。|  
 |SSPROP_INIT_ENCRYPT|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：若要加密通過網路的資料，SSPROP_INIT_ENCRYPT 屬性會設定為 VARIANT_TRUE。<br /><br /> 如果 [啟用通訊協定加密] 開啟，不管 SSPROP_INIT_ENCRYPT 的設定為何，永遠會進行加密。 如果關閉此設定，而且 SSPROP_INIT_ENCRYPT 設定為 VARIANT_TRUE，則會進行加密。<br /><br /> 如果關閉 [啟用通訊協定加密]，而且 SSPROP_INIT_ENCRYPT 設定為 VARIANT_FALSE，則不會進行加密。|  
 |SSPROP_INIT_FAILOVERPARTNER|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：指定要進行資料庫鏡像之容錯移轉夥伴的名稱。 這是初始化屬性，而且僅能在初始化之前設定。 初始化之後，它會傳回容錯移轉夥伴，如果有的話，則會由主要伺服器傳回。<br /><br /> 這可讓智慧型應用程式快取最近決定的備份伺服器，但是此類應用程式應該會注意到此資訊只會在第一次建立 (如果緩衝，則重設) 連接時更新，而且在長期連接後會變成過期。<br /><br /> 建立連接後，應用程式可以查詢此屬性來判斷容錯移轉夥伴的識別。 如果主要伺服器沒有容錯移轉夥伴，此屬性將會傳回空字串。 如需詳細資訊，請參閱[Using Database Mirroring](../../oledb/features/using-database-mirroring.md)。|  
 |SSPROP_INIT_FILENAME|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：指定可附加資料庫的主要檔案名稱。 此資料庫會附加，而且變成連接的預設資料庫。 若要使用 SSPROP_INIT_FILENAME，您必須將資料庫的名稱指定為初始化屬性 DBPROP_INIT_CATALOG 的值。 如果資料庫名稱不存在，則會尋找在 SSPROP_INIT_FILENAME 中指定的主要檔案名稱，並以 DBPROP_INIT_CATALOG 中指定的名稱附加該資料庫。 如果該資料庫先前已附加，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它。|  
-|SSPROP_INIT_MARSCONNECTION|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：指定是否要針對連接啟用 Multiple Active Result Sets (MARS)。 在連接到資料庫之前，必須將此選項設定為 True。 如需詳細資訊，請參閱[使用 Multiple Active Result Set & #40;MARS & #41;](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：指定是否要針對連接啟用 Multiple Active Result Sets (MARS)。 在連接到資料庫之前，必須將此選項設定為 True。 如需詳細資訊，請參閱[使用 Multiple Active Result Sets &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)。|  
 |SSPROP_INIT_NETWORKADDRESS|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：DBPROP_INIT_DATASOURCE 屬性所指定的執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路位址。|  
 |SSPROP_INIT_NETWORKLIBRARY|類型：VT_BSTR<br /><br /> R/W：讀取/寫入<br /><br /> 描述：與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體進行通訊所使用之網路程式庫 (DLL) 的名稱。 名稱不得包含路徑或 .dll 副檔名。<br /><br /> 預設值可以使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端組態公用程式自訂。<br /><br /> 注意： 只有 TCP 和具名管道支援這個屬性。 如果您搭配前置詞使用此屬性，結尾有雙前置詞時，會導致錯誤，因為此屬性用來在內部產生前置詞。|  
 |SSPROP_INIT_PACKETSIZE|類型：VT_I4<br /><br /> R/W：讀取/寫入<br /><br /> 描述：網路封包大小 (以位元組為單位)。 封包大小屬性值必須介於 512 和 32,767 之間。 預設 OLE DB 驅動程式的 SQL Server 網路封包大小為 4096。|  
@@ -90,6 +93,6 @@ Server=MyServer;UID=MyUserName;
  如需 SQL Server OLE DB 驅動程式提供的關鍵字的清單，請參閱[搭配 OLE DB 驅動程式的 SQL Server 中使用連接字串關鍵字](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料來源物件 & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [資料來源物件&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

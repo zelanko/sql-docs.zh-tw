@@ -1,5 +1,5 @@
 ---
-title: 系統安全性函數 |Microsoft 文件
+title: 系統安全性函數 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d4651dcea60ef0dcc20b6ef9f0779eb82c8d1dc9
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33227795"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066626"
 ---
 # <a name="system-security-functions"></a>系統安全性函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

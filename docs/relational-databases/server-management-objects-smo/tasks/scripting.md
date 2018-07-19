@@ -1,5 +1,5 @@
 ---
-title: 指令碼 |Microsoft 文件
+title: 指令碼 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -20,15 +20,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 722c8f75c8fe759e632a3cefc5960e49ad0519f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970590"
 ---
 # <a name="scripting"></a>指令碼
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO 中撰寫指令碼由<xref:Microsoft.SqlServer.Management.Smo.Scripter>物件及其子物件，或**指令碼**的個別物件的方法。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件會控制從物件的執行個體上的相依性關聯性對應[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  在 SMO 中撰寫指令碼會受到<xref:Microsoft.SqlServer.Management.Smo.Scripter>物件及其子物件，則**指令碼**個別物件的方法。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>物件可控制從相依性關聯性物件的執行個體上的對應[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  使用 <xref:Microsoft.SqlServer.Management.Smo.Scripter> 物件及其子物件所進行的進階指令碼作業是三階段的程序：  
   
@@ -47,9 +48,9 @@ ms.lasthandoff: 05/03/2018
  在第三個也就是最後階段時，會產生具有指定清單和指令碼選項的指令碼。 結果會以 <xref:System.Collections.Specialized.StringCollection> 系統物件傳回。 接下來在這個階段中會從 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> 物件的 Items 集合以及 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> 和 <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> 之類的屬性擷取相依物件的名稱。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
- 這個程式碼範例需要**匯入**System.Collections.Specialized 命名空間陳述式。 請在應用程式中，將這個陳述式與其他的 Imports 陳述式一同插入任何宣告之前。  
+ 此程式碼範例需要**匯入**System.Collections.Specialized 命名空間陳述式。 請在應用程式中，將這個陳述式與其他的 Imports 陳述式一同插入任何宣告之前。  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  

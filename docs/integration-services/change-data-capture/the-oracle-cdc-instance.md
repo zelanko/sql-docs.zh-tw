@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7b0aba8e2f75ab25794ace6d28fc0be05d7bd23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fb82bc6a8b06547c5e3eca8bd74a707ce288bb4
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400390"
 ---
 # <a name="the-oracle-cdc-instance"></a>Oracle CDC 執行個體
   Oracle CDC 執行個體是由 Oracle CDC 服務建立的一種處理序，可處理從單一 Oracle 來源資料庫擷取的變更。 Oracle CDC 執行個體會從 **cdc.xdbcdc_config** 資料表擷取其組態，並在 **cdc.xdbcdc_state** 資料表中維護其狀態。 這些資料表是 CDC 資料庫的一部分 (此資料庫會定義 Oracle CDC 執行個體)。 如需有關 xdbcdc 資料庫和資料表的詳細資訊，請參閱＜ [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase)＞。  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023355"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>格式化線條、色彩和影像 (報表產生器及 SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 讓您能夠格式化線條、色彩、資料區、影像和其他報表項目。  

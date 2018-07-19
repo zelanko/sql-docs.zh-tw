@@ -1,6 +1,6 @@
 ---
 title: SCOPE 陳述式 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c390d13d2f916dc287646f85def1513f910b635
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579960"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741767"
 ---
 # <a name="mdx-scripting---scope"></a>MDX 指令碼-範圍
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   將指定的多維度運算式 (MDX) 陳述式的範圍限制為指定的 Subcube。  
   

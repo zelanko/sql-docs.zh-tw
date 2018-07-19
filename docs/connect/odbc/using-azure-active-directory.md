@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852903"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>使用 Azure Active Directory 的 ODBC 驅動程式
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

@@ -1,14 +1,12 @@
 ---
 title: 執行 Integration Services (SSIS) 套件 | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2016
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -27,18 +25,20 @@ caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe9d96b588130d1b4bab8e611dc2e0143ab457c9
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: ee4b75d609690535d80331c3437cdf9ecbd9de9e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455601"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411130"
 ---
 # <a name="run-integration-services-ssis-packages"></a>執行 Integration Services (SSIS) 封裝
   若要執行 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝，您可以根據這些封裝的儲存位置使用數種工具的其中一種。 工具會列在下表中。  
 
 > [!NOTE]
-> 隨著 SQL Server for Linux 的發行，您可以在 Linux 上執行 SSIS 套件。 如需詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../../linux/sql-server-linux-migrate-ssis.md)。
+> 本文描述如何在一般情況下執行 SSIS 套件，以及如何在內部部署執行套件。 您也可以在下列平台上執行 SSIS 套件：
+> - **Microsoft Azure 雲端**。 如需詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)和[在 Azure 中執行 SSIS 套件](../lift-shift/ssis-azure-run-packages.md)。
+> - **Linux**。 如需詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../../linux/sql-server-linux-migrate-ssis.md)。
   
  若要將封裝儲存於 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，您可使用專案部署模型將專案部署到伺服器上。 如需資訊，請參閱[部署 Integration Services (SSIS) 專案和套件](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)。  
   

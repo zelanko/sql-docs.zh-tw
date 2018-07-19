@@ -3,7 +3,6 @@ title: 使用可用性群組精靈 (SQL Server Management Studio) | Microsoft Do
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -18,14 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 caps.latest.revision: 46
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ea8ef37daa8d723fab8fdf60f8b980e23c5cd63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9bd200483a8d778fd0f6f35d3ff12aea9f90fca7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770744"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>使用可用性群組精靈 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.lasthandoff: 05/03/2018
   
          如果您選取 **[完整]**，在建立可用性群組之後，精靈會將每個主要資料庫及其交易記錄備份至網路共用，並在裝載次要複本的每個伺服器執行個體上還原這些備份。 然後精靈會將每個次要資料庫聯結至可用性群組。  
   
-         在 **[指定所有複本可存取的共用網路位置:]** 欄位中，指定裝載複本的所有伺服器執行個體都有讀寫存取的備份共用。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  
+         在 **[指定所有複本可存取的共用網路位置:]** 欄位中，指定裝載複本的所有伺服器執行個體都有讀寫存取的備份共用。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。  在驗證步驟中，此精靈會執行測試以確定所提供的網路位置有效，測試會在主要複本上建立名為 "BackupLocDb_" 的資料庫，後面接著 GUID，並備份到所提供的網路位置，然後在次要複本上將它還原。 您可以放心地將此資料庫隨其備份歷程記錄和備份檔案一同刪除 (如果精靈無法將其刪除)。
   
     -   **僅聯結**  
   

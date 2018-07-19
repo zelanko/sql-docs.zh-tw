@@ -2,7 +2,6 @@
 title: 使用 CacheSize |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 043634736f9ad5f26ced4707349405793ff6e556
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f15c7ba0e954f6214670a3ba687094131e90a57
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273257"
 ---
 # <a name="using-cachesize"></a>使用 CacheSize
 使用**CacheSize**屬性，即可控制要從提供者的本機記憶體，一次擷取記錄數。 例如，如果**CacheSize**為 10 之後的第一個左,**資料錄集**物件，提供者擷取的前 10 個記錄到本機的記憶體。 隨著您瀏覽**資料錄集**物件，提供者傳回的資料從本機記憶體緩衝區。 一旦您跳過快取中的最後一筆記錄，則提供者會擷取從資料來源的接下來的 10 記錄至快取。  

@@ -2,10 +2,10 @@
 title: Blob 與 OLE 物件 |Microsoft 文件
 description: BLOB 與 OLE 物件
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-blobs
+ms.component: oledb|ole-db-blobs
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +20,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e78fe8db35684bb35e4111a38d3d0ba938891785
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cacbe007e9bf0187648ad1fd95c8b6616fb8a300
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666078"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 與 OLE 物件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server OLE DB 驅動程式會公開**ISequentialStream**介面，以支援取用者存取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**，**文字**，**映像**， **varchar （max)**， **nvarchar （max)**， **varbinary （max)**，及 xml 資料類型為二進位大型物件 (Blob)。 **讀取**方法**ISequentialStream**可讓取用者擷取更多可管理的區塊中的資料。  
   
- 如需示範這項功能的範例，請參閱[大型資料集 & #40; OLE DB & #41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
+ 如需示範這項功能的範例，請參閱[大型資料集&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)。  
   
  SQL Server OLE DB 驅動程式可以使用取用者實作**IStorage**介面，取用者提供的存取子中的介面指標時繫結的資料修改。  
   
@@ -69,6 +72,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 程式設計的 OLE DB 驅動程式](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
- [使用大型值型別](../../oledb/features/using-large-value-types.md)  
+ [使用大型實值型別](../../oledb/features/using-large-value-types.md)  
   
   

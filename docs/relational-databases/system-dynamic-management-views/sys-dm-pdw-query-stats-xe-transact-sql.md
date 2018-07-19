@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_query_stats_xe (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_pdw_query_stats_xe (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -18,25 +18,26 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 32d5cf452735bab9915afce6df6311dd6279a52d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000680"
 ---
 # <a name="sysdmpdwquerystatsxe-transact-sql"></a>sys.dm_pdw_query_stats_xe (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  此 DMV 已被取代，未來版本將移除。 在此版本中，它會傳回 0 個資料列。  
+  此 DMV 已被取代，並將在未來版本中移除。 在此版本中，它會傳回 0 個資料列。  
   
-|資料行名稱|資料類型|Description|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
 |event|**nvarchar(60)**|此檢視的索引鍵。||  
 |event_id|**nvarchar(36)**|||  
 |create_time|**datetime**|||  
 |session_id|**int**|工作階段識別碼。|請參閱中的 session_id [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)。|  
 |cpu|**int**|||  
-|reads|**int**|事件啟動之後的邏輯讀取數。||  
-|writes|**int**|邏輯寫入數開始之後的事件。||  
+|reads|**int**|自啟動後的事件的邏輯讀取數。||  
+|writes|**int**|自啟動後的事件的邏輯寫入數。||  
 |sql_text|**nvarchar(4000)**|||  
 |client_app_name|**nvarchar(255)**|||  
 |tsql_stack|**nvarchar(255)**|||  

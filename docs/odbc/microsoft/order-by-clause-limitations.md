@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899525"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 子句的限制
 如果 SELECT 陳述式包含 GROUP BY 子句和 ORDER BY 子句，ORDER BY 子句可以包含在結果集中資料行或 GROUP BY 子句中的運算式。

@@ -1,8 +1,6 @@
 ---
 title: 使用 SSMA for Oracle 主控台 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 04701daad7fd077a0ab29c8d1a9ade3629dc2f8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d80ae0d5124b5845292ceca2ff8de7659925e77f
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778254"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>使用 SSMA for Oracle 主控台 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 現在可透過在命令列主控台應用程式存取 Oracle 的移轉小幫手 (SSMA) 版本。 指令碼檔案會形成執行命令的應用程式的輸入。 是主控台應用程式，SSMA 啟用指令碼層級互動、 減少移轉循環和縮放移轉作業。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,14 +22,15 @@ helpviewer_keywords:
 - local language IDs [SQL Server]
 ms.assetid: 7a0fc089-2a48-4a81-9d78-2aaedb540d37
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bbfa1e51286c6856e8c89e70e272588893b1e5cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b1585a1a3e7135ba149ea8f277e222f8ab00832
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37791099"
 ---
 # <a name="x40x40langid-transact-sql"></a>&#x40;&#x40;LANGID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

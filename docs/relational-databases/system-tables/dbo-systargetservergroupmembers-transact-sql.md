@@ -1,5 +1,5 @@
 ---
-title: dbo.systargetservergroupmembers (TRANSACT-SQL) |Microsoft 文件
+title: dbo.systargetservergroupmembers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,17 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2585f8b21fad9d831acd2bc8b58f1d58a3592218
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063646"
 ---
 # <a name="dbosystargetservergroupmembers-transact-sql"></a>dbo.systargetservergroupmembers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   記錄在這個多伺服器群組中，目前編列了哪些目標伺服器。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|伺服器群組識別碼|  
 |**server_id**|**int**|伺服器識別碼|  

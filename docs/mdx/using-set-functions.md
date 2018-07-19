@@ -1,6 +1,6 @@
 ---
 title: 使用集合函數 |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a042092cfcddb985b29e7b0c98612f07c68ac2d0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582280"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743667"
 ---
 # <a name="using-set-functions"></a>使用集合函數
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   集合函數可以擷取維度、階層、層級的集合，或是在這些物件內成員的絕對與相對位置往返，以許多方式建構集合。  
   

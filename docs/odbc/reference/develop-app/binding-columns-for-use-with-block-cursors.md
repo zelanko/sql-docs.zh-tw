@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909643"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>繫結區塊資料指標搭配使用的資料行
 區塊資料指標會傳回多個資料列，因為它們使用的應用程式必須繫結變數的陣列，每個資料行，而不是單一的變數。 這些陣列統稱為*緩衝區資料列集*。 以下是繫結的兩種樣式：  

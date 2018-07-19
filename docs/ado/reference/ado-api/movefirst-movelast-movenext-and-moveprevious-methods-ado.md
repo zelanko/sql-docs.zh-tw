@@ -2,7 +2,6 @@
 title: MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -30,11 +29,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b127303e4b74a60e6ef839922bc911c31b360914
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cd50b23dbe8fb73b327db7f75ee25b062ee447c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279607"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst、 MoveLast、 MoveNext 和 MovePrevious 方法 (ADO)
 移至 [first、 last、 在指定的下一步]，或上一個記錄[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件，會記錄目前的記錄。  

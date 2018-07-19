@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905263"
 ---
 # <a name="using-the-extendedansisql-connection-string-attribute-access-driver"></a>使用 ExtendedAnsiSQL 連接字串屬性 （存取驅動程式）
 Jet 4.0 有數個 ODBC 桌面資料庫驅動程式 4.0 版中，預設不會啟用的新功能。 若要充分利用這些新功能，應用程式必須設定新的連接屬性，將新屬性加入至連接字串中，或在 DSN 中設定屬性。 呼叫 ExtendedAnsiSQL 以及適用於 Microsoft ODBC 桌面資料庫驅動程式 4.0 和更新版本的屬性。  

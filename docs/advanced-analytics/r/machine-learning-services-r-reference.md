@@ -11,7 +11,7 @@ ms.openlocfilehash: 8f0714f223145acd65a0dd57d02b105e5ec2aa0e
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563647"
 ---
 # <a name="api-reference-for-sql-server-machine-learning-services"></a>SQL Server 機器學習服務的 API 參考

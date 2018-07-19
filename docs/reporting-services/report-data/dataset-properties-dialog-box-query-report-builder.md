@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020825"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>資料集屬性對話方塊、查詢 (報表產生器)
   選取 **[資料集屬性]** 對話方塊上的 **[查詢]** ，從報表伺服器選擇共用資料集或是建立內嵌資料集。 如果是內嵌資料集，您必須選擇資料來源並建立查詢。  

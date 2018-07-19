@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912633"
 ---
 # <a name="level-2-interface-conformance"></a>層級 2 介面一致性
 層級 2 介面一致性層級包含層級 1 介面一致性層級功能以及下列功能：  

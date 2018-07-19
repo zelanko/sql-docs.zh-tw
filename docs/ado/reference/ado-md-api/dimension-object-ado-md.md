@@ -2,7 +2,6 @@
 title: 維度物件 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95fa6ce43c85ae474a9482e9fb76277960fe1a74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10378c62ec05008529e1d271208f3e5657d6a140
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283907"
 ---
 # <a name="dimension-object-ado-md"></a>維度物件 (ADO MD)
 代表其中一個多維度 cube，其中包含一或多個成員階層的維度。  
@@ -42,12 +42,12 @@ ms.lasthandoff: 05/03/2018
   
  **屬性**集合包含提供者提供的屬性。 下表列出可供使用的屬性。 實際的屬性清單可能與不同的提供者實作而定。 請參閱您的提供者，如需更完整清單可用內容的文件。  
   
-|名稱|Description|  
+|[屬性]|描述|  
 |----------|-----------------|  
 |CatalogName|此 cube 所屬的目錄的名稱。|  
 |CubeName|Cube 的名稱。|  
 |DefaultHierarchy|預設階層的唯一名稱。|  
-|Description|Cube 有意義的描述。|  
+|描述|Cube 有意義的描述。|  
 |DimensionCaption|標籤或標題與維度相關聯。|  
 |DimensionCardinality|在維度中的成員數目。|  
 |DimensionGUID|維度的 GUID。|  

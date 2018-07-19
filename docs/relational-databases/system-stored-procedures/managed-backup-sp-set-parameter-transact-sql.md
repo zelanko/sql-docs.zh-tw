@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_set_parameter (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.sp_set_parameter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,12 +26,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2a9f1d5eeec1fc5b24fbc1974d27e9f4b5efd00d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058826"
 ---
-# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
+# <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   設定指定的 Smart Admin 系統參數值。  
@@ -51,10 +52,10 @@ EXEC managed_backup.sp_set_parameter
   
 ##  <a name="Arguments"></a> 引數  
  @parameter_name  
- 您要設定值之參數的名稱。 @parameter_name 是 nvarchar （128）。 可用的參數名稱是**SSMBackup2WANotificationEmailIds**， **SSMBackup2WADebugXevent**， **SSMBackup2WAEnableUserDefinedPolicy**， **FileRetentionDebugXevent**，和**StorageOperationDebugXevent**。  
+ 您要設定值之參數的名稱。 @parameter_name 為 & lt;languagekeyword>nvarchar(128)</languagekeyword>。 可用的參數名稱都**SSMBackup2WANotificationEmailIds**， **SSMBackup2WADebugXevent**， **SSMBackup2WAEnableUserDefinedPolicy**， **FileRetentionDebugXevent**，並**StorageOperationDebugXevent**。  
   
  @parameter_value  
- 您要設定之參數的值。 @parameter 值為 nvarchar （128）。  以下是允許的參數名稱與值組：  
+ 您要設定之參數的值。 @parameter 值為 & lt;languagekeyword>nvarchar(128)</languagekeyword>。  以下是允許的參數名稱與值組：  
   
 -   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = 'email'  
   

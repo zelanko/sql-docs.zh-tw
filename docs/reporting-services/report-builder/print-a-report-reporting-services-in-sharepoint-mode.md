@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020025"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>列印報表 (SharePoint 模式的 Reporting Services)
   當報表伺服器以 SharePoint 模式執行時，您可以使用下列三種方法從 SharePoint Web 應用程式列印報表：  

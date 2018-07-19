@@ -1,8 +1,6 @@
 ---
 title: 建立伺服器連接檔案 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 79ae67368911f4535a320f87fec29a25b686c456
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773624"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>建立伺服器連接檔案 (AccessToSQL)
 伺服器的資訊可以是指定的指令碼檔案的 [伺服器] 區段中。 伺服器的資訊也可以指定不同的伺服器連接檔案中。 伺服器連接檔案的命令列參數是`-c <serverconnectionfile>`。 如果指令碼和伺服器的連接檔案中出現相同的伺服器識別碼，則會被視為指令碼檔案中的伺服器定義。  

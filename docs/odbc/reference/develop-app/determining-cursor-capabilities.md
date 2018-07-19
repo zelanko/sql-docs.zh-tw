@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908963"
 ---
 # <a name="determining-cursor-capabilities"></a>判斷資料指標的功能
 中的下列四個選項**SQLGetInfo**說明支援的資料指標類型和功能為何：  

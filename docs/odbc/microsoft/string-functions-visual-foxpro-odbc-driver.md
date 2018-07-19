@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904953"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>字串函式 （Visual FoxPro ODBC 驅動程式）
 下表列出 Visual FoxPro ODBC 驅動程式; 支援 ODBC 字串操作函數當相同的函式的 Visual FoxPro 文法與 ODBC 語法，會列出 Visual FoxPro 相等。  
@@ -44,6 +45,6 @@ ms.lasthandoff: 05/03/2018
 |右 *(string_exp 計數)*||  
 |RTRIM *(string_exp)*||  
 |SOUNDEX *(string_exp)*||  
-|空間*（計數）*||  
+|空間 *（計數）*||  
 |子字串 *(string_exp，開始時，長度)*|SUBSTR *(string_exp，開始時，長度)*|  
 |UCASE *(string_exp)*|上方 *(string_exp)*|

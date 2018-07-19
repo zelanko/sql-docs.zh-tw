@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024235"
 ---
 # <a name="polar-charts-report-builder-and-ssrs"></a>極座標圖 (報表產生器及 SSRS)
   極座標圖是在 360 度的圓形上，依據類別目錄群組，將數列顯示為一組點。 這些值是以點的長度 (從圓心開始測量) 表示。 從圓心到點的距離越遠，其值越大。 類別目錄標籤會顯示在圖表的周長上。 如需如何將資料新增至極座標圖的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

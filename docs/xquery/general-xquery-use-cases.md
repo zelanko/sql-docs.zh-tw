@@ -1,5 +1,5 @@
 ---
-title: 一般 XQuery 使用案例 |Microsoft 文件
+title: 一般 XQuery 使用案例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9a28080c682d40d1e08aaa96e594c96496d79026
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999830"
 ---
 # <a name="general-xquery-use-cases"></a>一般 XQuery 使用案例
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +62,11 @@ WHERE CatalogDescription is not null
   
  請注意下列項目是從上一個查詢而來：  
   
--   **命名空間**XQuery 初構中的關鍵字會定義命名空間前置詞是用在查詢主體中。  
+-   **命名空間**XQuery 初構中的關鍵字定義命名空間前置詞用於查詢主體中。  
   
 -   此查詢主體建構所需的 XML。  
   
--   在 WHERE 子句中， **exist （)** 方法用來尋找包含產品目錄描述的資料列。 也就是包含 <`ProductDescription`> 元素的 XML。  
+-   在 WHERE 子句中， **exist （)** 方法用來尋找只包含產品目錄描述的資料列。 也就是包含 <`ProductDescription`> 元素的 XML。  
   
  以下是結果：  
   
@@ -78,7 +79,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- 下列查詢擷取相同資訊，但只針對目錄描述中的規格 (<`Specifications`> 元素) 有包含重量 (<`Weight`> 元素) 的那些產品型號。 此範例使用 WITH XMLNAMESPACES 來宣告 pd 前置詞及其命名空間繫結。 如此一來，繫結都不描述**query （)** 方法和**exist （)** 方法。  
+ 下列查詢擷取相同資訊，但只針對目錄描述中的規格 (<`Specifications`> 元素) 有包含重量 (<`Weight`> 元素) 的那些產品型號。 此範例使用 WITH XMLNAMESPACES 來宣告 pd 前置詞及其命名空間繫結。 如此一來，繫結不會在描述兩者**query （)** 方法並在**exist （)** 方法。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -93,7 +94,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- 在上述查詢中， **exist （)** 方法**xml**資料型別中的 WHERE 子句會檢查以查看是否有 <`Weight`> 中的項目 <`Specifications`> 項目。  
+ 在上述查詢中， **exist （)** 方法**xml**資料類型中的 WHERE 子句會檢查以查看是否有 <`Weight`> 元素中的 <`Specifications`> 項目。  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. 尋找其目錄描述中含有正面角度和小圖片之產品型號的產品型號識別碼  
  XML 產品目錄描述包含產品圖片，即 <`Picture`> 元素。 每一張圖片有數個屬性。 這些屬性包括圖片角度 (<`Angle`> 元素) 和大小 (<`Size`> 元素)。  
@@ -124,9 +125,9 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  請注意下列項目是從上一個查詢而來：  
   
--   在 WHERE 子句中， **exist （)** 方法用來擷取包含產品目錄描述與資料列 <`Picture`> 項目。  
+-   在 WHERE 子句中， **exist （)** 方法來擷取包含產品目錄描述與資料列 <`Picture`> 項目。  
   
--   WHERE 子句使用**value （)** 方法兩次，來比較的值 <`Size`> 和 <`Angle`> 項目。  
+-   WHERE 子句使用**value （)** 方法兩次，若要比較的值 <`Size`> 和 <`Angle`> 項目。  
   
  以下是部份結果：  
   
@@ -142,8 +143,8 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 建立一份產品模型名稱與功能組，而且每一組置於\<功能 > 項目  
- 在產品型號目錄描述中，XML 包含數個產品功能。 所有這些功能都包含在 <`Features`> 元素中。 此查詢會使用[XML 建構 (XQuery)](../xquery/xml-construction-xquery.md)來建構必要的 XML。 大括號內的運算式由結果取代。  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. 建立一般清單的產品模型名稱與功能組，而且每一組置於\<功能 > 項目  
+ 在產品型號目錄描述中，XML 包含數個產品功能。 所有這些功能都包含在 <`Features`> 元素中。 此查詢會使用[XML 建構 (XQuery)](../xquery/xml-construction-xquery.md)建構必要的 XML。 大括號內的運算式由結果取代。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -166,7 +167,7 @@ WHERE ProductModelID=19
   
 -   兩個 FOR 迴圈產生一個 Cartesian 產品，並從中傳回產品名稱和個別功能。  
   
--   **ProductName**是屬性。 此查詢中的 XML 建構以元素傳回它。  
+-   **ProductName**是一個屬性。 此查詢中的 XML 建構以元素傳回它。  
   
  以下是部份結果：  
   
@@ -193,8 +194,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 產品型號目錄描述中，從清單中產品模型名稱、 模型識別碼，並內分組的功能\<產品 > 項目  
- 使用儲存的產品型號目錄描述中的資訊，下列查詢會列出產品型號名稱、 模型識別碼，並內分組的功能\<產品 > 項目。  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. 產品型號目錄描述中，從清單中的產品模型名稱、 模型識別碼，以及功能群組內\<產品 > 項目  
+ 使用儲存產品型號目錄描述中的資訊，下列查詢會列出產品型號名稱、 模型識別碼和功能群組內\<產品 > 項目。  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -230,7 +231,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. 擷取產品型號功能描述  
- 下列查詢會建構 XML，其中包含 <`Product`> 項目具有**ProducModelID**， **ProductModelName**屬性和前兩個產品功能。 尤其，前兩個產品功能是 <`Features`> 元素的前兩個子元素。 如果有更多功能，它會傳回空的 <`There-is-more/`> 元素。  
+ 下列查詢會建構 XML，其中包含 <`Product`> 項目**ProducModelID**， **ProductModelName**屬性和前兩個產品功能。 尤其，前兩個產品功能是 <`Features`> 元素的前兩個子元素。 如果有更多功能，它會傳回空的 <`There-is-more/`> 元素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -302,15 +303,15 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- 請注意，SELECT 查詢指定**query （)** 和**value （)** 方法**xml**資料型別。 因此，不在兩個不同的查詢初構中重複命名空間宣告兩次，而是在查詢中使用前置詞 pd，並且只使用 WITH XMLNAMESPACES 定義一次。  
+ 請注意，SELECT 查詢指定**query （)** 並**value （)** 方法**xml**資料型別。 因此，不在兩個不同的查詢初構中重複命名空間宣告兩次，而是在查詢中使用前置詞 pd，並且只使用 WITH XMLNAMESPACES 定義一次。  
   
  請注意下列項目是從上一個查詢而來：  
   
 -   WHERE 子句用來只擷取其目錄描述的 <`Summary`> 元素中包含 "Aerodynamic" 一字的資料列。  
   
--   **Contains （)** 函式用來查看文字，是否要包含在文字。  
+-   **Contains （)** 函數用來查看這個字是否包含在文字中。  
   
--   **Value （)** 方法**xml**資料型別會比較所傳回的值**contains （)** 設為 1。  
+-   **Value （)** 方法**xml**資料類型會比較所傳回的值**contains （)** 為 1。  
   
  以下是結果：  
   
@@ -349,7 +350,7 @@ AND     CatalogDescription.exist('declare namespace p1="http://schemas.microsoft
  [與階層有關的 Xquery](../xquery/xqueries-involving-hierarchy.md)   
  [與順序有關的 Xquery](../xquery/xqueries-involving-order.md)   
  [XQueries 處理關聯式資料](../xquery/xqueries-handling-relational-data.md)   
- [在 XQuery 中的字串搜尋](../xquery/string-search-in-xquery.md)   
+ [XQuery 中的字串搜尋](../xquery/string-search-in-xquery.md)   
  [處理 XQuery 中的命名空間](../xquery/handling-namespaces-in-xquery.md)   
  [使用 WITH XMLNAMESPACES 將命名空間加入至查詢](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML 資料 &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901273"
 ---
 # <a name="sorting-limitations"></a>排序的限制
 GROUP BY 子句、 ORDER BY 子句、 SELECT DISTINCT 陳述式或外部聯結中排序索引鍵的最大長度為 255 個位元組。所有的排序索引鍵排序資料列中的最大長度為 65500 位元組。

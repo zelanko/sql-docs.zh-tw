@@ -2,7 +2,6 @@
 title: 'RecordsetEvents （Visual c + + 語法索引與 #import） |Microsoft 文件'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9703ca2b2a3933842169a45efe5e0631bc002545
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17e3b604eac24fb1fa1393aed338703931a0ad6f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281277"
 ---
 # <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents （Visual c + + 語法索引與 #import）
 ## <a name="events"></a>事件  

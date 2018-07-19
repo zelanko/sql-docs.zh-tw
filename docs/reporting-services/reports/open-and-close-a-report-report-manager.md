@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025725"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>開啟及關閉報表 (報表管理員)
   您可以使用報表管理員來檢視已經發行至報表伺服器的報表。 根據預設，所有報表都會以 HTML 開啟。 開啟報表之後，您可以將它匯出，以便以其他應用程式格式檢視此報表。 如果此報表包含互動式功能，或者它是包含互動式資料的報表產生器報表，您就可以按一下連結，以便檢視其他報表或資料。  

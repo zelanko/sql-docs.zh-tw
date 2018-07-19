@@ -1,5 +1,5 @@
 ---
-title: 使用資料摘要 (Power Pivot for SharePoint) |Microsoft 文件
+title: 使用資料摘要 (Power Pivot for SharePoint) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac7d32ccb99776a85d82c3bc310bc29cdd82954b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 509d4a5293aef836f8ae9439ad7c8d315bbc790d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979862"
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>使用資料摘要 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/10/2018
   
  您必須具有以 Atom 1.0 格式提供資料的 Web 服務或資料服務。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 SharePoint 2010 都可以用這種格式提供資料。  
   
- 在您可以將 SharePoint 清單匯出為資料摘要之前，您必須在 SharePoint 伺服器上安裝 ADO.NET Data Services。 如需詳細資訊，請參閱 [安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
+ 在您可以將 SharePoint 清單匯出為資料摘要之前，您必須在 SharePoint 伺服器上安裝 ADO.NET Data Services。 如需詳細資訊，請參閱 [安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
   
 ##  <a name="sharepointlist"></a> 從 SharePoint 清單建立資料摘要  
  在 SharePoint 2010 伺服陣列中，SharePoint 清單在清單功能區上有一個 [匯出為資料摘要] 按鈕。 您可以按一下此按鈕，將清單匯出為摘要。 為了取得最佳結果，您在工作站上應該有 Excel 2010 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端應用程式。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端應用程式將會啟動，以回應資料摘要匯出，建立包含清單的新 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料表。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  如果您選擇 [開啟]，使用 [資料表匯入精靈] 將資料摘要匯入工作表中。 資料摘要將會當做新的資料表加入 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 視窗。  
   
- 如果 ADO.NET Data Services 3.5.1 未安裝在 SharePoint 伺服器上，則會發生錯誤。 如需錯誤及如何解決錯誤的詳細資訊，請參閱 [安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出](http://msdn.microsoft.com/en-us/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
+ 如果 ADO.NET Data Services 3.5.1 未安裝在 SharePoint 伺服器上，則會發生錯誤。 如需錯誤及如何解決錯誤的詳細資訊，請參閱 [安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出](http://msdn.microsoft.com/f32527ae-f623-4e08-adfb-6d3262f5c2ac)。  
   
 ##  <a name="rsreport"></a> 從 Reporting Services 報表建立資料摘要  
  如果您擁有 SQL Server 2008 R2 Reporting Services 的部署，您可以使用新的 Atom 轉譯延伸模組，從現有的報表中產生資料摘要。 為了取得最佳結果，您在工作站上應該有 Excel 2010 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 用戶端應用程式將會啟動，以回應資料摘要匯出，然後在進行串流時，自動加入資料表和資料行並使兩者相關。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/10/2018
   
     1.  [基底 URL] 是選擇性的。 如果資料服務文件提供多個摘要，則您應該指定它。 基底 URL 應該指定所有摘要通用的 URL 部分 (例如，伺服器名稱和網站)。 如果您要建立 Reporting Services 報表的資料服務文件，基底 URL 將是報表伺服器 URL 與報表。  
   
-    2.  [Web 服務 URL] 是必要的。 沒有基底 URL，這個值必須包含`http://`或`https://`地址。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL 是`http://adventure-works/inventory/today.aspx`，基底 URL 將是`http://adventure-works/inventory`，和 Web 服務 URL 將是 /today.aspx。  
+    2.  [Web 服務 URL] 是必要的。 沒有基底 URL，這個值必須包含`http://`或`https://`的位址。 如果您有指定基底 URL，Web 服務 URL 就是基底 URL 後面的部分。 例如，如果完整的 URL，則`http://adventure-works/inventory/today.aspx`，基底 URL 將是`http://adventure-works/inventory`，和 Web 服務 URL 將是 /today.aspx。  
   
          Web 服務 URL 可以包含篩選或選取資料子集的參數。 提供摘要的應用程式或服務必須支援您在 URL 中指定的參數。  
   

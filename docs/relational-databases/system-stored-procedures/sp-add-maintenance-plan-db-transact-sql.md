@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_db (TRANSACT-SQL) |Microsoft 文件
+title: sp_add_maintenance_plan_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 980bb14800bb346471cacb75e52022dde67b5d99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003041"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
 ## <a name="arguments"></a>引數  
  [  **@plan_id =**] **'***plan_id***'**  
- 指定維護計畫的計畫識別碼。 *plan_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
+ 指定維護計畫的計畫識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
   
  [ **@db_name =**] **'***database_name***'**  
  指定要加入維護計畫的資料庫名稱。 資料庫必須先建立好或已存在，才能加入計畫中。 *database_name* 為 **sysname**。  
@@ -65,7 +66,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_maintenance_plan_db**。  
   
 ## <a name="examples"></a>範例  
- 這個範例會將**AdventureWorks2012**資料庫中建立的維護計畫**sp_add_maintenance_plan**。  
+ 這個範例會新增**AdventureWorks2012**資料庫中建立的維護計畫**sp_add_maintenance_plan**。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',N'AdventureWorks2012';  

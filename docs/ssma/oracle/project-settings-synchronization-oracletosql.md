@@ -1,8 +1,6 @@
 ---
 title: 專案 Settings(Synchronization) (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5df187de582e8200a0df4c08da5ed0ba7ae42ba8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd1b299df5f14b08cfb379aaa8b85c808923e786
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777774"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>專案 Settings(Synchronization) (OracleToSQL)
 同步處理頁面**專案設定**對話方塊包含自訂如何 SSMA 載入並重新整理資料庫物件，例如資料表和預存程序，到設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  

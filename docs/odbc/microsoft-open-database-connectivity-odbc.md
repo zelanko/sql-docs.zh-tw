@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899823"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft 開啟資料庫連接 (ODBC)
 Microsoft 開放式資料庫連接 (ODBC) 介面是一個 C 程式設計語言介面，可讓應用程式從各種不同的資料庫管理系統 (Dbms) 存取資料。 ODBC 是特別針對關聯式資料存放區的低層級、 高效能介面。  

@@ -2,10 +2,10 @@
 title: 命令產生多個資料列集結果 |Microsoft 文件
 description: 產生多個資料列集結果的命令
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-commands
+ms.component: oledb|ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e0c3e581d5776e2f36756fc4bd09c1f76dd70841
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665514"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>產生多個資料列集結果的命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server OLE DB 驅動程式可傳回多個資料列集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]陳述式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
   

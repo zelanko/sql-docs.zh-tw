@@ -2,7 +2,6 @@
 title: FilterAxis 屬性 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7ba6b397879039064943fcb6264ef3dd76aa8fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f59eeff4dc01e2f881712ca2309a83e80d785b27
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283927"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis 屬性 (ADO MD)
 指出目前的篩選器資訊[資料格集](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)。  

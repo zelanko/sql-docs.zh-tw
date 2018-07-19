@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909203"
 ---
 # <a name="driver-manager-diagnostic-example"></a>驅動程式管理員診斷範例
 驅動程式管理員也可以產生診斷訊息。 例如，如果應用程式傳遞至無效的傳遞方向選項**SQLDataSources**，驅動程式管理員可能會格式化，並傳回下列值從**SQLGetDiagRec**:  

@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a382ceab3491cfbcd1b8d6dad564f6d8826c2d13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049496"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   變更 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入的預設語言。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)改。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,18 +49,18 @@ sp_defaultlanguage [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>引數  
  [ **@loginame =** ] **'***login***'**  
- 這是登入名稱。 *登入*是**sysname**，沒有預設值。 *登入*可以是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者或群組。  
+ 這是登入名稱。 *登入*已**sysname**，沒有預設值。 *登入*可以是現有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入或 Windows 使用者或群組。  
   
  [  **@language =** ] **'***語言***'**  
- 這是登入的預設語言。 *語言*是**sysname**，預設值是 NULL。 *語言*必須是有效的語言，在伺服器上。 如果*語言*未指定，*語言*設為伺服器的預設語言; 預設語言由定義**sp_configure**組態變數**預設語言**。 變更伺服器的預設語言，並不會變更現有登入的預設語言。  
+ 這是登入的預設語言。 *語言*已**sysname**，預設值是 NULL。 *語言*必須是有效的語言，在伺服器上。 如果*語言*未指定，則*語言*設定為伺服器的預設語言; 預設語言由定義**sp_configure**組態變數**預設語言**。 變更伺服器的預設語言，並不會變更現有登入的預設語言。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_defaultlanguage**呼叫 ALTER LOGIN，它支援其他選項。 如需變更其他登入的預設值的詳細資訊，請參閱[ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
+ **sp_defaultlanguage**呼叫 ALTER LOGIN，它支援其他選項。 如需變更其他登入的預設值的詳細資訊，請參閱 < [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)。  
   
- 請使用 SET LANGUAGE 陳述式來變更目前工作階段的語言。 使用 @@LANGUAGE函數來顯示目前的語言設定。  
+ 請使用 SET LANGUAGE 陳述式來變更目前工作階段的語言。 使用 @@LANGUAGE函式來顯示目前的語言設定。  
   
  如果登入的預設語言已從伺服器卸除，該登入便會取得伺服器的預設語言。 **sp_defaultlanguage**無法在使用者自訂交易內執行。  
   

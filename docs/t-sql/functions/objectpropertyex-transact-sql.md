@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -23,15 +22,16 @@ helpviewer_keywords:
 - objects [SQL Server], schema-scoped
 ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 caps.latest.revision: 76
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e9548f4174fbc2dc864785a17146d297044ef052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22af685a739c79d4782e4dd4f11b1a670af9c5e0
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789529"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -120,7 +120,7 @@ OBJECTPROPERTYEX ( id , property )
 |IsUniqueCnst|任何結構描述範圍物件|UNIQUE 條件約束。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsUserTable|Table|使用者自訂資料表。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
 |IsView|檢視|檢視表。<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> 基底資料類型：**int**|  
-|OwnerId|任何結構描述範圍物件|物件的擁有者。<br /><br /> **注意：**結構描述擁有者不一定是物件擁有者。 例如，子物件 (其 *parent_object_id* 非 Null) 一律會傳回與父系相同的擁有者識別碼。<br /><br /> Nonnull = 物件擁有者的資料庫使用者識別碼。<br /><br /> NULL = 不支援的物件類型，或物件識別碼無效。<br /><br /> 基底資料類型：**int**|  
+|OwnerId|任何結構描述範圍物件|物件的擁有者。<br /><br /> **注意：** 結構描述擁有者不一定是物件擁有者。 例如，子物件 (其 *parent_object_id* 非 Null) 一律會傳回與父系相同的擁有者識別碼。<br /><br /> Nonnull = 物件擁有者的資料庫使用者識別碼。<br /><br /> NULL = 不支援的物件類型，或物件識別碼無效。<br /><br /> 基底資料類型：**int**|  
 |SchemaId|任何結構描述範圍物件|與物件相關聯的結構描述識別碼。<br /><br /> Nonnull = 物件的結構描述識別碼。<br /><br /> 基底資料類型：**int**|  
 |SystemDataAccess|函數、檢視表|物件在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的本機執行個體中存取系統資料、系統目錄或虛擬系統資料表。<br /><br /> 0 = 無<br /><br /> 1 = 讀取<br /><br /> 基底資料類型：**int**|  
 |TableDeleteTrigger|Table|資料表有 DELETE 觸發程序。<br /><br /> >1 = 屬於指定類型的第一個觸發程序識別碼。<br /><br /> 基底資料類型：**int**|  

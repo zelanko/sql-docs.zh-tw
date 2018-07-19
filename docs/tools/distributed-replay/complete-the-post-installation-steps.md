@@ -1,26 +1,24 @@
 ---
-title: 完成安裝後步驟 |Microsoft 文件
+title: 完成安裝後步驟 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0a788a2a-9b4f-4bfc-b1b5-83eeb1ea9ab2
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12bdc7fbea96f7af42f7b2a1f175e58fc03c0b6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.openlocfilehash: 1b30c4ab640baca8ecfaaf39961038f2db98f599
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36927059"
 ---
 # <a name="complete-the-post-installation-steps"></a>完成安裝後步驟
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

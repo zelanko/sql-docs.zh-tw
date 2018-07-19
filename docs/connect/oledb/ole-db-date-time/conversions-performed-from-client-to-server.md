@@ -2,10 +2,10 @@
 title: 執行轉換，因此從用戶端到伺服器 |Microsoft 文件
 description: 從用戶端到伺服器執行的轉換
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a61001b562c982d4a6b5734f5840bf3b7e22b4ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b697052bf9de21671201ae840f828c0fc73481d
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666358"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>從用戶端到伺服器執行的轉換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   這篇文章描述之間執行的日期/時間轉換為 SQL Server 撰寫與 OLE DB 驅動程式的用戶端應用程式和[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更新版本）。  
   
@@ -35,26 +38,26 @@ ms.lasthandoff: 05/03/2018
 |目標 -><br /><br /> 來源|DBDATE (date)|DBTIME (time)|DBTIME2 (time)|DBTIMESTAMP (smalldatetime)|DBTIMESTAMP (datetime)|DBTIMESTAMP (datetime2)|DBTIMESTAMPOFFSET (datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
 |DATE|1, 2|1、 3、 4|4, 12|1, 12|1, 12|1, 12|1、 5、 12|1, 12|1, 12|1, 12<br /><br /> datetime2(0)|  
-|DBDATE|1|-|-|1, 6|1, 6|1, 6|1、 5、 6|1, 10|1, 10|1<br /><br /> date|  
-|DBTIME|-|1|1|1, 7|1, 7|1, 7|1、 5、 7|1, 10|1, 10|1<br /><br /> Time(0)|  
-|DBTIME2|-|1, 3|1|1、 7、 10、 14|1、 7、 10、 15|1，7 10|1、 5、 7、 10|1、 10、 11|1、 10、 11|1<br /><br /> Time(7)|  
+|DBDATE|@shouldalert|-|-|1, 6|1, 6|1, 6|1、 5、 6|1, 10|1, 10|@shouldalert<br /><br /> 日期|  
+|DBTIME|-|@shouldalert|@shouldalert|1, 7|1, 7|1, 7|1、 5、 7|1, 10|1, 10|@shouldalert<br /><br /> Time(0)|  
+|DBTIME2|-|1, 3|@shouldalert|1、 7、 10、 14|1、 7、 10、 15|1，7 10|1、 5、 7、 10|1、 10、 11|1、 10、 11|@shouldalert<br /><br /> Time(7)|  
 |DBTIMESTAMP|1, 2|1、 3、 4|1、 4、 10|1、 10、 14|1、 10、 15|1, 10|1、 5、 10|1 10,11|1、 10、 11|1, 10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1, 2, 8|1、 3、 4、 8|1、 4、 8、 10|1、 8、 10、 14|1、 8、 10、 15|1、 8、 10|1, 10|1、 10、 11|1、 10、 11|1, 10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1, 2|1、 3、 4|1、 4、 13|1, 13|1, 13|1, 13|1、 5、 13|1, 13|1, 10|1, 13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|해당 사항 없음|不適用|해당 사항 없음|  
-|VARIANT|1|1|1|1, 10|1, 10|1, 10|1, 10|해당 사항 없음|해당 사항 없음|1, 10|  
-|SSVARIANT|1 16|1 16|1 16|1、 10、 16|1、 10、 16|1、 10、 16|1、 10、 16|해당 사항 없음|해당 사항 없음|1 16|  
-|BSTR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|해당 사항 없음|不適用|해당 사항 없음|  
-|STR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|해당 사항 없음|不適用|해당 사항 없음|  
-|WSTR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|해당 사항 없음|不適用|N/A|  
+|BYTES|-|-|-|-|-|-|-|不適用|不適用|不適用|  
+|VARIANT|@shouldalert|@shouldalert|@shouldalert|1, 10|1, 10|1, 10|1, 10|不適用|不適用|1, 10|  
+|SSVARIANT|1 16|1 16|1 16|1、 10、 16|1、 10、 16|1、 10、 16|1、 10、 16|不適用|不適用|1 16|  
+|BSTR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|不適用|不適用|不適用|  
+|STR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|不適用|不適用|不適用|  
+|WSTR|1, 9|1, 9|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|1、 9、 10|不適用|不適用|不適用|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
 |-|不支援轉換。 如果繫結驗證時 iaccessor:: Createaccessor 呼叫時，就會傳回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 當存取子驗證延遲時，會設定 DBSTATUS_E_BADACCESSOR。|  
-|해당 사항 없음|不適用。|  
-|1|如果提供的資料無效，則會設定 DBSTATUS_E_CANTCONVERTVALUE。 輸入資料會在套用轉換之前進行驗證，因此，即使在後續轉換忽略元件時，該資料仍然必須有效，轉換才會成功。|  
+|不適用|不適用。|  
+|@shouldalert|如果提供的資料無效，則會設定 DBSTATUS_E_CANTCONVERTVALUE。 輸入資料會在套用轉換之前進行驗證，因此，即使在後續轉換忽略元件時，該資料仍然必須有效，轉換才會成功。|  
 |2|忽略時間欄位。|  
 |3|小數秒必須為，否則會設定 DBSTATUS_E_DATAOVERFLOW。|  
 |4|忽略日期元件。|  
@@ -73,7 +76,7 @@ ms.lasthandoff: 05/03/2018
   
 ||||  
 |-|-|-|  
-|型別|長度 (以字元為單位)|小數位數|  
+|類型|長度 (以字元為單位)|小數位數|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

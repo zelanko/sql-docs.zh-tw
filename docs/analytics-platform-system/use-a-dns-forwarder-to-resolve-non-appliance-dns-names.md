@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544940"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>使用 DNS 轉寄站 dns 名稱解析非應用裝置中 Analytics Platform System
 可以在 Active Directory 網域服務節點上設定 DNS 轉寄站 (***appliance_domain *-AD01**和 ***appliance_domain *-ad02 移**) 允許您 Analytics Platform System 應用裝置指令碼和存取外部伺服器的軟體應用程式。  

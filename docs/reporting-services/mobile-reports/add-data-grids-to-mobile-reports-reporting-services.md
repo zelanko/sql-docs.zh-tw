@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018975"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>將資料格加入行動報表 | Reporting Services
 有時候，資料本身就是最佳的視覺效果。 深入了解用於顯示 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] 中資料的三種「資料格」或資料表：

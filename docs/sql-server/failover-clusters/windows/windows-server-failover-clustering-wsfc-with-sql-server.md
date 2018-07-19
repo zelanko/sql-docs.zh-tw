@@ -3,7 +3,6 @@ title: SQL Server 的 Windows Server 容錯移轉叢集 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31c8079053cc729a5ca5445dc1aebd7ccf32e738
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43117124b43bf234f8d72c9e2974d6e42631d06c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772464"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>SQL Server 的 Windows Server 容錯移轉叢集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  實體或邏輯實體，可為節點所擁有、恢復上線及離線、在節點之間移動，並以叢集物件方式進行管理。 叢集資源在任何時間點只能由單一節點所擁有。  
   
  角色  
- 以單一叢集物件方式管理的叢集資源集合，用來提供特定功能。 針對 SQL Server，角色將是 AlwaysOn 可用性群組 (AG) 或 AlwaysOn 容錯移轉叢集執行個體 (FCI)。 角色包含 AG 或 FCI 需要的所有叢集資源。 容錯移轉和容錯移轉一律在角色的內容中運作。 針對 FCI，角色將包含 IP 位址資源、網路名稱資源和 SQL Server 資源。 AG 角色將包含 AG 資源；而且，如果設定接聽程式，則包含 networm 名稱和 IP 資源。 
+ 以單一叢集物件方式管理的叢集資源集合，用來提供特定功能。 針對 SQL Server，角色將是 AlwaysOn 可用性群組 (AG) 或 AlwaysOn 容錯移轉叢集執行個體 (FCI)。 角色包含 AG 或 FCI 需要的所有叢集資源。 容錯移轉和容錯移轉一律在角色的內容中運作。 針對 FCI，角色將包含 IP 位址資源、網路名稱資源和 SQL Server 資源。 AG 角色將包含 AG 資源；而且，如果設定接聽程式，則包含網路名稱和 IP 資源。 
 
  網路名稱資源  
  以叢集資源方式管理的邏輯伺服器名稱。 網路名稱資源必須與 IP 位址資源搭配使用。 這些項目可能需要 Active Directory Domain Services 和 (或) DNS 中的物件。 

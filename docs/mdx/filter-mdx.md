@@ -1,34 +1,23 @@
 ---
 title: 篩選器 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- filter
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Filter function
-ms.assetid: f2df51c8-6acb-4300-b71c-2a480c9fbdf8
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 66f71d8fe604eb2002b6c1ed47afaf5ef09b1eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740527"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回根據搜尋條件篩選指定集合後所得的集合。  
   
@@ -96,6 +85,6 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

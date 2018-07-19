@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909103"
 ---
 # <a name="fetching-data"></a>擷取資料
 從結果集內擷取資料列，然後將其傳回至應用程式的程序稱為*擷取*。 本章節描述如何擷取資料。  

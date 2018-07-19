@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -20,11 +19,12 @@ caps.latest.revision: 92
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 19c902b31503b91c11a2d976e695507c1e2d2e5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8d166d52b25b7c36f26f8d51556d118dbaf7480
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322657"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -134,7 +134,7 @@ ms.lasthandoff: 05/03/2018
   
 8.  安裝程式會合併組態檔中的設定。 使用目前安裝中的組態檔當做基礎，加入新的項目。 已過時的項目不會移除，但是報表伺服器在升級完成之後不會再讀取這些項目。 升級將不會刪除舊的記錄檔、過時的 RSWebApplication.config 檔，或是 IIS 中的虛擬目錄設定。 升級也不會移除舊版報表設計師、Management Studio 或其他用戶端工具。 如果您不再需要這些項目，請務必在升級完成之後移除這些檔案和工具。  
   
- **移轉：**將舊版的原生模式安裝移轉至 SQL Server Reporting Services 對於所有稍早在本主題中列出的支援版本而言是相同的步驟。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+ **移轉：** 將舊版的原生模式安裝移轉至 SQL Server Reporting Services 對於所有稍早在本主題中列出的支援版本而言是相同的步驟。 如需詳細資訊，請參閱[移轉 Reporting Services 安裝 &#40;原生模式&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
   
 ##  <a name="bkmk_native_scaleout"></a> 升級 Reporting Services 原生模式向外延展部署  
@@ -170,7 +170,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="includesssql14includessssql14-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 SQL Server Reporting Services  
  **起始環境：**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1、SharePoint 2010 或 SharePoint 2013。  
   
- **結束環境：**SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
+ **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
   
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支援從 SharePoint 2010 就地升級。 不過，支援 **資料庫附加升級**  的程序。
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="includesssql11includessssql11-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 SQL Server Reporting Services  
  **起始環境：**[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)]、SharePoint 2010。  
   
- **結束環境：**SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
+ **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。   
   
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支援從 SharePoint 2010 就地升級。 不過，支援 **資料庫附加升級**  的程序。
   
@@ -188,7 +188,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 至 SQL Server Reporting Services  
  **起始環境：**[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、SharePoint 2010。  
   
- **結束環境：**SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。  
+ **結束環境：** SQL Server Reporting Services、SharePoint 2013 或 SharePoint 2016。  
  
 -   **SharePoint 2013/2016：** SharePoint 2013/2016 不支援從 SharePoint 2010 就地升級。 不過，支援 **資料庫附加升級**  的程序。
 

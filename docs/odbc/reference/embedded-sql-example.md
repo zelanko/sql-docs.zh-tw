@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916353"
 ---
 # <a name="embedded-sql-example"></a>內嵌的 SQL 範例
 下列程式碼是簡單內嵌的 SQL 撰寫的程式，在 c 中。程式會說明許多，但不是所有的內嵌 SQL 技術。 程式會提示使用者輸入訂單號碼、 擷取客戶編號、 銷售人員，以及狀態的順序，以及在螢幕上顯示所擷取的資訊。  

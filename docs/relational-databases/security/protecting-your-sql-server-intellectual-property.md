@@ -3,12 +3,10 @@ title: 保護 SQL Server 智慧財產權 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
+ms.prod_service: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,14 +14,15 @@ helpviewer_keywords:
 - intellectual property
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 caps.latest.revision: 3
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlraba
 manager: craigg
-ms.openlocfilehash: 63143f1e22d2e1b3a17f168ee0a8170202ed78f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d04910135ab34ae95e8e94182ed88396400e89f
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942494"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保護 SQL Server 智慧財產權
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/30/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -41,15 +40,16 @@ helpviewer_keywords:
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 caps.latest.revision: 248
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1edf0ff22f56446faf5fa316723c4b2a525534cb
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 8e5980fea20deb2dc1e1c684cb8d354136182007
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36943134"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 陳述式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 05/07/2018
 
  如需有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 還原案例的詳細資訊，請參閱[還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)。  如需有關引數描述的詳細資訊，請參閱 [RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)。   從另一個執行個體還原資料庫時，請考慮 [在另一個伺服器執行個體上提供可用的資料庫時，管理中繼資料 (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)中的資訊。
   
-> **注意：**如需有關從 Windows Azure Blob 儲存體服務進行還原的詳細資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
+> **注意：** 如需有關從 Windows Azure Blob 儲存體服務進行還原的詳細資訊，請參閱[使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -275,11 +275,11 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   線上還原  
   
-    > **注意：**只有在 Enterprise 版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中才允許線上還原。  
+    > **注意：** 只有在 Enterprise 版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中才允許線上還原。  
   
      當支援線上還原時，如果資料庫在線上，檔案還原和分頁還原會自動成為線上還原，另外，也會在分次還原的初始階段之後，還原次要檔案群組。  
   
-    > **注意：**線上還原可能涉及[延遲交易](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。  
+    > **注意：** 線上還原可能涉及[延遲交易](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)。  
   
      如需詳細資訊，請參閱[線上還原 &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)。  
   
@@ -297,7 +297,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ### <a name="restore-log"></a>RESTORE LOG  
  RESTORE LOG 可以包括一份檔案清單，讓您在向前復原期間建立檔案。 如果記錄備份包含檔案加入資料庫時所撰寫的記錄檔記錄，便使用這個項目。  
   
-> **注意：**針對使用完整或大量記錄復原模式的資料庫，在大部分情況下，您必須先備份記錄結尾，再還原資料庫。 除非 RESTORE DATABASE 陳述式包含 WITH REPLACE 或 WITH STOPAT 子句 (必須指定在資料備份結束之後發生的時間或交易)，否則如果沒有先備份記錄結尾便還原資料庫，就會產生錯誤。 如需結尾記錄備份的詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+> **注意：** 針對使用完整或大量記錄復原模式的資料庫，在大部分情況下，您必須先備份記錄結尾，再還原資料庫。 除非 RESTORE DATABASE 陳述式包含 WITH REPLACE 或 WITH STOPAT 子句 (必須指定在資料備份結束之後發生的時間或交易)，否則如果沒有先備份記錄結尾便還原資料庫，就會產生錯誤。 如需結尾記錄備份的詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
 ### <a name="comparison-of-recovery-and-norecovery"></a>比較 RECOVERY 和 NORECOVERY  
  RESTORE 陳述式利用 [ RECOVERY | NORECOVERY ] 選項來控制回復：  
@@ -313,7 +313,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ## <a name="compatibility-support"></a>相容性支援  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 無法還原使用舊版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 來建立的 **master****model** 及 **msdb** 備份。  
   
-> **注意：**您無法將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份還原至比建立備份所用之版本還舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
+> **注意：** 您無法將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 備份還原至比建立備份所用之版本還舊的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每一個版本都會使用與舊版不同的預設路徑。 因此，若要還原在舊版備份之預設位置中所建立的資料庫，就必須使用 MOVE 選項。 如需有關新預設路徑的資訊，請參閱 [SQL Server 的預設和具名執行個體的檔案位置](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)。  
   
@@ -381,7 +381,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  您也可以利用 RESTORE 陳述式，將全文檢索資料還原到替代位置，以及執行全文檢索資料的差異還原、檔案和檔案群組還原及差異檔案和檔案群組還原。 另外，RESTORE 只能連同資料庫資料一起還原全文檢索檔案。  
   
-> **注意：**從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 匯入的全文檢索目錄仍然會視為資料庫檔案。 對於這些檔案而言，備份全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序會維持適用狀態，不過不再需要於備份作業期間暫停和繼續。 如需詳細資訊，請參閱[備份並還原全文檢索目錄](http://go.microsoft.com/fwlink/?LinkId=107381)。  
+> **注意：** 從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 匯入的全文檢索目錄仍然會視為資料庫檔案。 對於這些檔案而言，備份全文檢索目錄的 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 程序會維持適用狀態，不過不再需要於備份作業期間暫停和繼續。 如需詳細資訊，請參閱[備份並還原全文檢索目錄](http://go.microsoft.com/fwlink/?LinkId=107381)。  
   
 ## <a name="metadata"></a>中繼資料  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 包含備份與還原記錄資料表，以便用來為每個伺服器執行個體進行追蹤備份和還原活動。 當執行還原時，也會修改備份記錄資料表。 如需有關這些資料表的資訊，請參閱[備份記錄與標頭資訊 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)。  
@@ -466,7 +466,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   K. [從 Microsoft Azure Blob 儲存體服務進行還原](#Azure_Blob)  
   
-> **注意：**如需其他範例，請參閱[還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 中所列的還原做法主題。  
+> **注意：** 如需其他範例，請參閱[還原和復原概觀 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md) 中所列的還原做法主題。  
   
 ###  <a name="restoring_full_db"></a> A. 還原完整資料庫  
  下列範例會從 `AdventureWorksBackups` 邏輯備份裝置還原完整的資料庫備份。 如需有關建立這個裝置的範例，請參閱[備份裝置](../../relational-databases/backup-restore/backup-devices-sql-server.md)。  
@@ -476,7 +476,7 @@ RESTORE DATABASE AdventureWorks2012
    FROM AdventureWorks2012Backups;  
 ```  
   
-> **注意：**針對使用完整或大量記錄復原模式的資料庫，在大部分情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會要求您先備份記錄結尾，再還原資料庫。 如需詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
+> **注意：** 針對使用完整或大量記錄復原模式的資料庫，在大部分情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 都會要求您先備份記錄結尾，再還原資料庫。 如需詳細資訊，請參閱[結尾記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)。  
   
  [&#91;範例頂端&#93;](#examples)  
   
@@ -621,7 +621,7 @@ RESTORE DATABASE AdventureWorks2012
   
  資料庫備份是在名為 `MyDatabaseBackups` 的邏輯備份裝置上，媒體集中的第九個備份組。 接下來是三個記錄備份，它們分別位於 `10` 裝置的後三個備份組中 (`11`、`12` 和 `MyDatabaseBackups`)，並且利用 `WITH NORECOVERY` 而還原。 在還原最後一個記錄備份之後，資料庫就可以復原。  
   
-> **注意：**復原會以個別步驟執行，以降低過早復原的可能性，也就是在所有記錄備份都復原之前就進行復原。  
+> **注意：** 復原會以個別步驟執行，以降低過早復原的可能性，也就是在所有記錄備份都復原之前就進行復原。  
   
  請注意，在 `RESTORE DATABASE` 中有兩種 `FILE` 選項類型。 在備份裝置名稱之前的 `FILE` 選項指定要從備份組還原之資料庫檔案的邏輯檔案名稱；例如，`FILE = 'MyDatabase_data_1'`。 這個備份組並非媒體集中的第一個資料庫備份；因此，它在媒體集中的位置是利用 `FILE` 子句中的 `WITH` 選項 `FILE=9` 指出。  
   
@@ -661,7 +661,7 @@ GO
 ###  <a name="reverting_from_db_snapshot"></a> J. 從資料庫快照集還原  
  下列範例會將資料庫還原到某個資料庫快照集。 這個範例假設資料庫目前只有一個快照集。 如需如何建立這個資料庫快照集的範例，請參閱[建立資料庫快照集 &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)。  
   
-> **注意：**還原至快照集會卸除所有全文檢索目錄。  
+> **注意：** 還原至快照集會卸除所有全文檢索目錄。  
   
 ```  
 USE master;    

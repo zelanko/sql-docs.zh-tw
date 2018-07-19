@@ -1,5 +1,5 @@
 ---
-title: 探索事件資料行 |Microsoft 文件
+title: 探索事件資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 064bfcc90845082ad47caea23fa671152af486a2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042546"
 ---
 # <a name="discover-events-data-columns"></a>探索事件資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|包含探索事件的目前時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|包含啟動探索結束事件的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|包含事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|包含探索事件所花費的大約時間量 (毫秒)。|  
+|Duration|5|2|包含探索事件所花費的大約時間量 (毫秒)。|  
 |CPUTime|6|2|包含事件所使用的 CPU 時間量 (以毫秒為單位)。|  
 |Severity|22|1|包含例外狀況的嚴重性層級。|  
 |成功|23|1|包含探索事件的成功或失敗。 值為：<br /><br /> 0 = 失敗<br /><br /> 1 = 成功|  
@@ -76,6 +77,6 @@ ms.lasthandoff: 05/10/2018
 |RequestProperties|45|9|包含 XMLA 要求中的屬性。|  
   
 ## <a name="see-also"></a>另請參閱  
- [探索事件類別目錄](../../analysis-services/trace-events/discover-events-event-category.md)  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

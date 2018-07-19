@@ -3,8 +3,6 @@ title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/13/2017
 ms.prod: sql
-ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,15 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CREATE EXTERNAL RESOURCE POOL statement
 ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
-caps.latest.revision: 12
-author: jeannt
-ms.author: edmaca
-manager: craigg
-ms.openlocfilehash: 7bcf757af91eed9b56a43cb6be4da1390b3f8605
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+author: HeidiSteen
+ms.author: heidist
+manager: cgronlund
+ms.openlocfilehash: 7e4ae3239332c004ad6ceda624b641b7bf7603be
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37415377"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

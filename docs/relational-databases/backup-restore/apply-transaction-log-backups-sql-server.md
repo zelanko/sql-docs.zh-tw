@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921043"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>套用異動記錄備份 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/03/2018
 |下午 8:00|備份交易記錄。|  
 |下午 9:45|發生故障。|  
   
-> **注意：**如需這個備份順序範例的說明，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
+> **注意：** 如需這個備份順序範例的說明，請參閱[交易記錄備份 &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)。  
   
  若要將資料庫還原至下午 9:45 的狀態 (失敗點)，您可以使用下列任何一個替代程序：  
   

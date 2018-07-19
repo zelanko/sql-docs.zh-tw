@@ -1,14 +1,13 @@
 ---
-title: sys.pdw_replicated_table_cache_state (TRANSACT-SQL) |Microsoft 文件
+title: sys.pdw_replicated_table_cache_state (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse
 ms.service: sql-data-warehouse
-ms.component: system-catalog-views
+ms.component: system-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -17,24 +16,25 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9d3d2880c390dc627db7009662f72ccec6e9700f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8d78a537bb2de2ee880551afd3667f308b49ce83
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985104"
 ---
-# <a name="syspdwreplicatedtablecachestate-transact-sql"></a>sys.pdw_replicated_table_cache_state (TRANSACT-SQL)
+# <a name="syspdwreplicatedtablecachestate-transact-sql"></a>sys.pdw_replicated_table_cache_state & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  傳回快取使用的複寫資料表相關聯的狀態**object_id**。  
+  傳回與所複寫的資料表相關聯的快取的狀態**object_id**。  
   
-|資料行名稱|資料類型|Description|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|資料表物件識別碼。 請參閱[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。<br /><br /> **object_id**針對此檢視的索引鍵。||  
-|state|**nvarchar(40)**|這份資料表的複寫的資料表快取狀態。|'NotReady','Ready'|  
+|object_id|**int**|資料表的物件識別碼。 請參閱[j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。<br /><br /> **object_id**是此檢視的索引鍵。||  
+|state|**nvarchar(40)**|這個資料表的複寫的資料表快取狀態。|'NotReady','Ready'|  
   
 ## <a name="example"></a>範例
-這個範例會聯結 sys.pdw_replicated_table_cache_state 與 sys.tables 來擷取資料表名稱和複寫的資料表快取的狀態。
+此範例會聯結 sys.pdw_replicated_table_cache_state 與 sys.tables 來擷取資料表名稱和複寫的資料表快取的狀態。
 
 ```sql
 SELECT t.[name], p.[object_id], p.[state]
@@ -45,5 +45,5 @@ SELECT t.[name], p.[object_id], p.[state]
 
 
 ## <a name="next-steps"></a>後續的步驟  
- 如需所有 SQL 資料倉儲和平行處理資料倉儲的目錄檢視的清單，請參閱[SQL 資料倉儲和平行資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。   
+ 如需所有 SQL 資料倉儲和平行資料倉儲的目錄檢視的清單，請參閱 < [SQL 資料倉儲和平行資料倉儲目錄檢視](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)。   
   

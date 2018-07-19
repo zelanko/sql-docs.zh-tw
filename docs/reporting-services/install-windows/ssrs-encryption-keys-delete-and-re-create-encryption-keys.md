@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -22,11 +21,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f179b9474d715ad0e94cb0261af35c4829f947c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 012333e2584041c42c3901ef22be90f7591fdffb
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322267"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 加密金鑰 - 刪除和重新建立加密金鑰
   刪除和重新建立加密金鑰是例行加密金鑰維護範圍之外的活動。 執行這些工作是為了因應報表伺服器所受的特定威脅，或者當您無法存取報表伺服器資料庫時的最後手段。  

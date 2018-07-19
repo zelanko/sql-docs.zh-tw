@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539498"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>傳送遙測意見反應給 Microsoft Analytics Platform System
 Analytics Platform System 具有選擇性的遙測功能，系統管理員主控台資料傳送給 Microsoft。 

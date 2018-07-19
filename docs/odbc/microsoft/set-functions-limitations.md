@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899055"
 ---
 # <a name="set-functions-limitations"></a>設定函式限制
 Set 函式 （AVG、 MAX、 MIN、 和總和） 不支援 DISTINCT 關鍵字。

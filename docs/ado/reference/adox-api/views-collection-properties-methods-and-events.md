@@ -1,11 +1,8 @@
 ---
 title: 檢視集合的屬性、 方法和事件 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e88818144a3d03fc67f9fc50d324ceef761db86f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1cfd32e16bf0aee91066924dcf04b0af7ee4b492
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287357"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>檢視集合的屬性、 方法和事件
 ## <a name="properties"></a>屬性  

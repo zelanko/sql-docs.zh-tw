@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -39,11 +38,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2cf23ffc6cceaf92f80eb75dbe9da1179e9e4a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b40c02d7118b1d844263b1c298f256b74d95fea
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36255570"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,9 +125,9 @@ JOIN sys.dm_exec_connections AS conn
  您可以重複使用不含 WITH STATUSONLY 選項的相同 KILL *session ID*|*UOW* 陳述式來取得相同的狀態報告，但建議您不要這樣做。 如果復原已完成，且在執行新的 KILL 陳述式之前，已將工作階段識別碼重新指派給新的工作，則重複使用 KILL *session ID* 陳述式可能會終止新的處理序。 指定 WITH STATUSONLY 會防止發生這個情況。  
   
 ## <a name="permissions"></a>Permissions  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：**需要 ALTER ANY CONNECTION 權限。 ALTER ANY CONNECTION 隨附在系統管理員 (sysadmin) 或處理序管理員 (processadmin) 固定伺服器角色的成員資格中。  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]：** 需要 ALTER ANY CONNECTION 權限。 ALTER ANY CONNECTION 隨附在系統管理員 (sysadmin) 或處理序管理員 (processadmin) 固定伺服器角色的成員資格中。  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]：**需要 KILL DATABASE CONNECTION 權限。 伺服器層級主體登入具備 KILL DATABASE CONNECTION。  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]：** 需要 KILL DATABASE CONNECTION 權限。 伺服器層級主體登入具備 KILL DATABASE CONNECTION。  
   
 ## <a name="examples"></a>範例  
   

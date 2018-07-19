@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901233"
 ---
 # <a name="set-null-command"></a>SET NULL 命令
 決定如何 ALTER TABLE SQL、 CREATE TABLE SQL 和插入-支援 null 值的 SQL 命令。  

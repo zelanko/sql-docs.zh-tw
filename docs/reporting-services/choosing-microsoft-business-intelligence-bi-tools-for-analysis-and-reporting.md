@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016075"
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>選擇用於分析及報告的 Microsoft 商業智慧 (BI) 工具
 選擇適當的商業智慧工具可能勢在必行。 了解不同的 Microsoft 產品，並找出最適合您需求的一種。

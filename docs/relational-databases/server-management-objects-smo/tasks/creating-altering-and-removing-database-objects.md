@@ -1,5 +1,5 @@
 ---
-title: 使用資料庫物件 |Microsoft 文件
+title: 使用資料庫物件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 37b8491bc441db0a2457ea4d87e6bb372326cafb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040196"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>建立、 改變和移除資料庫物件
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -40,11 +41,11 @@ ms.lasthandoff: 05/03/2018
   
 5.  建立物件。  
   
- SMO 物件的執行個體建立時在 SMO 應用程式，它們不存在的執行個體上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]直到**建立**發出方法。 不過，不需要發出**建立**每個個別物件的方法。 如果物件具有一組子物件，父物件，才能執行**建立**方法。 例如，資料表的定義要求資料表至少要包含一個資料行才能存在。 同時，如果沒有資料表，資料行無法獨立存在。 在資料表及其資料行之間有一個共同相依的關聯性。  
+ SMO 物件的執行個體建立時在 SMO 應用程式，它們不存在的執行個體上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]直到**建立**方法發出。 不過，不需要發出**建立**每個個別物件的方法。 如果物件具有一組子物件，父物件，才能執行**建立**方法。 例如，資料表的定義要求資料表至少要包含一個資料行才能存在。 同時，如果沒有資料表，資料行無法獨立存在。 在資料表及其資料行之間有一個共同相依的關聯性。  
   
- <xref:Microsoft.SqlServer.Management.Dmf.Policy.Alter%2A> 方法可讓您對物件進行變更。 對於物件的數個變更 (例如，將子物件加入到其中一個物件的集合，或變更屬性值)，會一起進行批次處理，並當做一個變更來執行。 **Alter**方法可減少網路流量並改善整體效能。  
+ <xref:Microsoft.SqlServer.Management.Dmf.Policy.Alter%2A> 方法可讓您對物件進行變更。 對於物件的數個變更 (例如，將子物件加入到其中一個物件的集合，或變更屬性值)，會一起進行批次處理，並當做一個變更來執行。 **Alter**方法會減少網路流量並改善整體效能。  
   
- **卸除**陳述式用來移除物件和其所有共同相依子物件所需一開始建立物件。  
+ **卸除**陳述式來移除物件和其所有共同相依子物件所需的一開始建立物件。  
   
 ## <a name="see-also"></a>另請參閱  
  [SMO 物件模型](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  

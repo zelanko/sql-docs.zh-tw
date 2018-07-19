@@ -1,5 +1,5 @@
 ---
-title: sys.sysusers (TRANSACT-SQL) |Microsoft 文件
+title: sys.sysusers & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,20 +27,21 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0561ed37fa705f0952ae2a6e7cfd012d81364432
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000960"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  包含一個資料列，每個[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 使用者、 Windows 群組、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的角色。  
+  每個包含一個資料列[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows 使用者、 Windows 群組[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用者，或[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫中的角色。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**uid**|**smallint**|使用者識別碼，在這個資料庫中是唯一的。<br /><br /> 1 = 資料庫擁有者<br /><br /> 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
 |**updatedate**|**datetime**|上次變更帳戶的日期。|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 如果使用者和角色數目超過 32,767 個，則會造成溢位或傳回 NULL。|  
 |**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**gid**|**smallint**|這位使用者所屬的群組識別碼。 如果**uid**相同**gid**，這個項目會定義一組。 如果群組和使用者結合的數目超過 32,767，則會造成溢位或傳回 NULL。|  
+|**gid**|**smallint**|這位使用者所屬的群組識別碼。 如果**uid**等同於**gid**，此項目定義群組。 如果群組和使用者結合的數目超過 32,767，則會造成溢位或傳回 NULL。|  
 |**environ**|**varchar(255)**|已保留。|  
 |**hasdbaccess**|**int**|1 = 帳戶有資料庫存取權。|  
 |**islogin**|**int**|1 = 帳戶是具有登入帳戶的 Windows 群組、Windows 使用者或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用者。|  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027025"
 ---
 # <a name="create-and-manage-role-assignments"></a>建立和管理角色指派
   *「角色指派」* (Role assignment) 是一種安全性原則，可決定使用者或群組是否能夠存取特定的報表伺服器項目或執行作業。 角色指派是由單一使用者或群組帳戶名稱以及一或多個角色定義所組成。  

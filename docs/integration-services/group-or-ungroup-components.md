@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +19,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d46c384df741705288b2a57f7d5759ee6455393c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57eb555ab40ba1a35b771fd67da15e2013ffd257
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409050"
 ---
 # <a name="group-or-ungroup-components"></a>將元件分組或取消分組
   **設計師中的**[控制流程] **、**[資料流程] **和** [事件處理常式] [!INCLUDE[ssIS](../includes/ssis-md.md)] 索引標籤都支援可摺疊的群組。 如果封裝具有許多元件，這些索引標籤可能會變得十分擁擠，因而難以同時檢視所有元件並找到您要使用的項目。 可摺疊的群組功能可以節省工作介面的空間，讓您更輕易地使用大型封裝。  

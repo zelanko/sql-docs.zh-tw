@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915583"
 ---
 # <a name="file-data-sources"></a>檔案資料來源
 *檔案資料來源*儲存在檔案，並允許重複使用由單一使用者或數個使用者之間共用的連接資訊。 使用檔案資料來源時，驅動程式管理員會建立使用.dsn 檔案中的資訊的資料來源的連線。 這個檔案，即可像任何其他檔案一樣操作。 檔案資料來源沒有資料來源名稱，不會機器資料來源，以及未登錄至任何一個使用者或電腦。  

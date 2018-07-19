@@ -2,7 +2,6 @@
 title: MoveRecord 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 103206f4f4fe731da23a194cf89a54a404545f0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279617"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 方法 (ADO)
 移動所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)到另一個位置。  
@@ -50,7 +50,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *密碼*  
  選擇性。 A**字串**其中包含的密碼，如有需要驗證*UserName*。  
   
- *選項。*  
+ *選項*  
  選擇性。 A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md)值，其預設值是**adMoveUnspecified**。 指定此方法的行為。  
   
  *非同步*  

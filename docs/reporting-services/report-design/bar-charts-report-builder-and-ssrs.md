@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021825"
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>橫條圖 (報表產生器及 SSRS)
   橫條圖是以數條水平橫條來顯示數列。 一般橫條圖與直條圖相當有關聯，後者會將數列顯示為數條垂直線，而範圍橫條圖則會將數列顯示為數條水平橫條，其中包含各種起點與終點。  

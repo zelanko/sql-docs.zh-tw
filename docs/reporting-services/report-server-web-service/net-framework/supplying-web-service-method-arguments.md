@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025405"
 ---
 # <a name="supplying-web-service-method-arguments"></a>提供 Web 服務方法引數
   報表伺服器 Web 服務方法會透過 HTTP 使用 SOAP 在指定的 URL 傳送要求給服務。 服務會接收要求、處理要求，然後傳回回應。 這些要求和回應是 XML 文件的形式。  

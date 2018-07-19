@@ -1,5 +1,5 @@
 ---
-title: 在範例 ASP 應用程式 (SQLXML 4.0) 中使用 Updategram |Microsoft 文件
+title: 在範例 ASP 應用程式 (SQLXML 4.0) 中使用 Updategram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 3e6ab461bc1916394b53e5b8c0017bbef71eabe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049913"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>在範例 ASP 應用程式中使用 Updategram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
   
  然後，使用者就可以更新連絡資訊，但無法更新連絡識別碼 (因為 ContactID 是主索引鍵)。 在使用者提交資訊之後，系統就會執行 Updategram 並且將所有表單參數傳遞給 Updategram。  
   
- 下列範本是第一個範本 (GetContact.xml)。 儲存此範本的虛擬名稱相關聯的目錄中**範本**型別。  
+ 下列範本是第一個範本 (GetContact.xml)。 儲存此範本中的虛擬名稱相關聯的目錄**範本**型別。  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -54,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 </root>  
 ```  
   
- 下列範本是第二個範本 (UpdateContact.xml)。 儲存此範本的虛擬名稱相關聯的目錄中**範本**型別。  
+ 下列範本是第二個範本 (UpdateContact.xml)。 儲存此範本中的虛擬名稱相關聯的目錄**範本**型別。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

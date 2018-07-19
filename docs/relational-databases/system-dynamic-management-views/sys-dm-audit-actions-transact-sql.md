@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_actions (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_audit_actions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,20 +22,21 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 34a180e8b337ea984e320d41f77284ee9833b624
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 864072a00f2db088b03ce280bf0ad137627b6a7c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987270"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稽核，請參閱[SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稽核，請參閱 < [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**varchar(4)**|稽核動作的識別碼。 相關**action_id**每一筆稽核記錄寫入的值。 可為 Null。 稽核群組為 NULL。|  
+|**action_id**|**varchar(4)**|稽核動作的識別碼。 與相關**action_id**每一筆稽核記錄寫入值。 可為 Null。 稽核群組為 NULL。|  
 |**action_in_log**|**bit**|指示動作是否可寫入稽核記錄檔。 其值如下：<br /><br /> 1 = 是<br /><br /> 0 = 否|  
 |**name**|**sysname**|稽核動作或稽核群組的名稱。 不可為 Null。|  
 |**class_desc**|**nvarchar(120)**|稽核動作套用之物件的類別名稱。 可以是任何一個伺服器、資料庫或結構描述範圍物件，但是不包括結構描述物件。 不可為 Null。|  

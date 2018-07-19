@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 508deeca800867cfb24afc636d035f34f00ee98e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f7d21248c998d4d2d1be7470c77d2c7e18c05d1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410600"
 ---
 # <a name="use-a-recordset-destination"></a>使用資料錄集目的地
   資料錄集目的地不會將資料儲存到外部資料來源， 而是將資料儲存到資料類型為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **之** 封裝變數內儲存的資料錄集記憶體中。 當資料錄集目的地儲存資料之後，您通常要使用具有 Foreach ADO 列舉值的 Foreach 迴圈容器來一次處理資料錄集的一個資料列。 Foreach ADO 列舉值會將目前資料列的每一資料行值儲存到個別封裝變數之中。 接著，您在 Foreach 迴圈容器中設定的工作會讀取這些變數中的值，然後對它們執行一些動作。  

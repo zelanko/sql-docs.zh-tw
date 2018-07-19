@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911773"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>驅動程式管理員&#39;s 角色在連線程序
 請記住，應用程式不驅動程式函式會直接呼叫。 相反地，它們呼叫驅動程式管理員函式具有相同名稱和驅動程式管理員呼叫驅動程式函式。 通常，這是幾乎立即。 例如，應用程式呼叫**SQLExecute**驅動程式管理員在驅動程式管理員及完成後一些錯誤檢查，呼叫**SQLExecute**驅動程式中。  

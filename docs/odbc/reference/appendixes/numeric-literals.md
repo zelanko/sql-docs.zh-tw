@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906443"
 ---
 # <a name="numeric-literals"></a>數值常值
 數值資料值會儲存在字元字串時，會使用數值常值。 為 SQL_C_CHAR 字串，數值 SQL 資料的轉換或轉換的數字的 C 資料設為 SQL_CHAR 或 SQL_VARCHAR 字串，數值常值的語法用來指定目標中儲存的內容。 轉換的數字儲存為 SQL_C_CHAR 字串為數值的 SQL 資料或儲存為 SQL_CHAR 字串至數值的 C 資料數值，此語法用來驗證來源中儲存的內容。  

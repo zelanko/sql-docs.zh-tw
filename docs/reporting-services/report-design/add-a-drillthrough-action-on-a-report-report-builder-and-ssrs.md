@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020015"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>在報表上加入鑽研動作 (報表產生器及 SSRS)
   當您按一下主報表中的連結所開啟的報表稱為 *「鑽研報表」*(Drillthrough Report)。 此鑽研連結會啟用一個鑽研動作。  

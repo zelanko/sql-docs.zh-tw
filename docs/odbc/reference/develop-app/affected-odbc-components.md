@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910133"
 ---
 # <a name="affected-odbc-components"></a>受影響的 ODBC 元件
 回溯相容性會描述如何影響所引進的新版本的驅動程式管理員中的應用程式、 驅動程式管理員，以及驅動程式。 這會影響應用程式和驅動程式時一個或兩個它們留在舊版本。 有，因此，三種類型的回溯相容性，需要考慮下表所示。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34019245"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>設定 Analysis Services 及 Kerberos 限制委派 (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -175,7 +176,7 @@ ms.lasthandoff: 05/10/2018
   
 4.  請對 Analysis Services PowerPivot 執行個體的 Office Online Server 帳戶**設定限制委派** 。 這必須是執行 Office Online Server 的電腦帳戶。 我們想確定下列項目在 Office Online Service 帳戶已完成設定。  
   
-     **注意︰**若您在 [Active Directory 使用者和電腦] 中看不到帳戶的 [委派] 索引標籤，是因為該帳戶上沒有 SPN。  您可以新增假的 SPN (例如 `my/spn`) 使其出現。  
+     **注意︰** 若您在 [Active Directory 使用者和電腦] 中看不到帳戶的 [委派] 索引標籤，是因為該帳戶上沒有 SPN。  您可以新增假的 SPN (例如 `my/spn`) 使其出現。  
   
      **信任這個使用者，但只委派指定的服務** ，並 **使用任何驗證通訊協定**。  
   

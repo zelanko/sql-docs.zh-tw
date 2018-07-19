@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027455"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>使用規則與分析資料更改多邊形、線條與點顯示
   地圖圖層上多邊形、線條與點的顯示選項是透過設定圖層的選項、設定圖層上地圖元素的規則，或是覆寫圖層上特定內嵌地圖元素的選項來控制。  

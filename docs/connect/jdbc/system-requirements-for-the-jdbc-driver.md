@@ -18,7 +18,7 @@ ms.openlocfilehash: 306c7bcd764ed70f23c51667580fb9f8e79f0e65
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563946"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 驅動程式的系統需求

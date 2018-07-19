@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910474"
 ---
 # <a name="data-buffer-type"></a>資料緩衝區類型
 應用程式所指定之緩衝區的 C 資料類型。 使用單一的變數，這發生在應用程式會將變數配置。 與一般記憶體 — 也就是記憶體所指向的類型 void 的指標，這發生在應用程式會轉換成特定類型的記憶體。 驅動程式會探索此類型有兩種：  

@@ -2,10 +2,10 @@
 title: 大型 CLR 使用者定義型別 (OLE DB) |Microsoft 文件
 description: 大型 CLR 使用者定義型別 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611983"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>大型 CLR 使用者定義型別 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本主題討論 OLE DB 驅動程式以支援大型 common language runtime (CLR) 使用者定義型別 (Udt) 的 SQL Server 中的 OLE DB 的變更。  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  下表顯示參數和資料列集內的資料類型對應：  
   
-|SQL Server 資料類型|OLE DB 資料類型|記憶體配置|Value|  
+|SQL Server 資料類型|OLE DB 資料類型|記憶體配置|ReplTest1|  
 |--------------------------|----------------------|-------------------|-----------|  
 |CLR UDT|DBTYPE_UDT|BYTE [] （位元組陣列\)|132 (oledb.h)|  
   
@@ -82,7 +85,7 @@ ms.lasthandoff: 05/03/2018
   
  下列資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|型別|Description|  
+|資料行識別碼|類型|描述|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -107,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
  下列其他資料行也會針對 UDT 而定義：  
   
-|資料行識別碼|型別|Description|  
+|資料行識別碼|類型|描述|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之目錄的名稱。|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|對於 UDT 資料行而言，此為定義 UDT 之結構描述的名稱。|  
@@ -123,19 +126,19 @@ ms.lasthandoff: 05/03/2018
 |繫結資料類型|UDT 到伺服器|非 UDT 到伺服器|從伺服器中的 UDT|從伺服器中的非 UDT|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|支援 (5)|錯誤 (1)|支援 (5)|錯誤 (4)|  
-|DBTYPE_BYTES|支援 (5)|해당 사항 없음|支援 (5)|해당 사항 없음|  
-|DBTYPE_WSTR|支援 (2)、(5)|해당 사항 없음|支援 (3)、(5)、(6)|해당 사항 없음|  
-|DBTYPE_BSTR|支援 (2)、(5)|해당 사항 없음|支援 (3)、 (5)|해당 사항 없음|  
-|DBTYPE_STR|支援 (2)、(5)|해당 사항 없음|支援 (3)、 (5)|해당 사항 없음|  
-|DBTYPE_IUNKNOWN|支援 (6)|해당 사항 없음|支援 (6)|해당 사항 없음|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援 (5)|해당 사항 없음|支援 (3)、 (5)|해당 사항 없음|  
-|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|해당 사항 없음|不適用|N/A|  
+|DBTYPE_BYTES|支援 (5)|不適用|支援 (5)|不適用|  
+|DBTYPE_WSTR|支援 (2)、(5)|不適用|支援 (3)、(5)、(6)|不適用|  
+|DBTYPE_BSTR|支援 (2)、(5)|不適用|支援 (3)、 (5)|不適用|  
+|DBTYPE_STR|支援 (2)、(5)|不適用|支援 (3)、 (5)|不適用|  
+|DBTYPE_IUNKNOWN|支援 (6)|不適用|支援 (6)|不適用|  
+|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|支援 (5)|不適用|支援 (3)、 (5)|不適用|  
+|DBTYPE_VARIANT (VT_BSTR)|支援 (2)、(5)|不適用|不適用|不適用|  
   
 ### <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
-|1|如果您的伺服器類型與指定了 DBTYPE_UDT 以外**icommandwithparameters:: Setparameterinfo**而且存取子類型為 DBTYPE_UDT，陳述式時發生錯誤。  此錯誤將是 DB_E_ERRORSOCCURRED，而參數狀態將是 DBSTATUS_E_BADACCESSOR。<br /><br /> 針對不是 UDT 的伺服器參數指定 UDT 類型的參數是一項錯誤。|  
+|@shouldalert|如果您的伺服器類型與指定了 DBTYPE_UDT 以外**icommandwithparameters:: Setparameterinfo**而且存取子類型為 DBTYPE_UDT，陳述式時發生錯誤。  此錯誤將是 DB_E_ERRORSOCCURRED，而參數狀態將是 DBSTATUS_E_BADACCESSOR。<br /><br /> 針對不是 UDT 的伺服器參數指定 UDT 類型的參數是一項錯誤。|  
 |2|資料會從十六進位字串轉換成二進位資料。|  
 |3|資料會從二進位資料轉換成十六進位字串。|  
 |4|使用時，可能會發生驗證**CreateAccessor**或**GetNextRows**。 錯誤是 DB_E_ERRORSOCCURRED。 繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。|  

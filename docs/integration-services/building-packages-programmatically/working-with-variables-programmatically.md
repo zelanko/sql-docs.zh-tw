@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -29,11 +28,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f83f7de764d9f939b06611a38140941ca6c47e8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c58e7f7d60e0e49422abc8192f7d90a33a394c6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35313137"
 ---
 # <a name="working-with-variables-programmatically"></a>以程式設計方式使用變數
   變數是在封裝、容器、工作及事件處理常式中動態設定值和控制處理序的方式。 優先順序條件約束也可以使用變數，以控制資料流向不同工作的方向。 變數有各種不同的用途：  

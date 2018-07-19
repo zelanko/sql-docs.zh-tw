@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33002155"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +72,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  建議您停止發行集和訂閱資料庫的所有更新，但您不一定需要如此。 如果繼續更新，當發行集重新初始化時，您將失去自上次合併之後，在訂閱者端進行的任何更新，但仍會維護資料的聚合。  
   
-2.  執行合併代理程式來執行合併。 我們建議您改用**– 驗證**代理程式命令列選項，當您執行 「 合併代理程式的每個訂閱者端。 如果您在執行連續模式合併，請參閱*連續模式合併的特殊考量*本章節稍後。  
+2.  執行合併代理程式來執行合併。 我們建議您改用 **– 驗證**代理程式命令列選項，當您執行 「 合併代理程式的每個訂閱者端。 如果您在執行連續模式合併，請參閱*連續模式合併的特殊考量*本章節稍後。  
   
 3.  所有合併都完成之後，執行**sp_mergecleanupmetadata**。  
   
@@ -87,7 +88,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 1.  停止**所有**發行集和訂閱資料庫的更新。  
   
-2.  執行合併代理程式來執行合併。 我們建議您改用**– 驗證**代理程式命令列選項，當您執行 「 合併代理程式的每個訂閱者端。 如果您在執行連續模式合併，請參閱*連續模式合併的特殊考量*本章節稍後。  
+2.  執行合併代理程式來執行合併。 我們建議您改用 **– 驗證**代理程式命令列選項，當您執行 「 合併代理程式的每個訂閱者端。 如果您在執行連續模式合併，請參閱*連續模式合併的特殊考量*本章節稍後。  
   
 3.  所有合併都完成之後，執行**sp_mergecleanupmetadata**。  
   
@@ -111,7 +112,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
  當您完成步驟 3 之執行**sp_mergecleanupmetadata**，繼續根據您如何停止連續模式合併。 다음 중 하나를 실행하십시오.  
   
--   新增**– 連續**回合併代理程式的參數。  
+-   新增 **– 連續**回合併代理程式的參數。  
   
 -   重新啟動具有發行集**sp_changemergepublication。**  
   

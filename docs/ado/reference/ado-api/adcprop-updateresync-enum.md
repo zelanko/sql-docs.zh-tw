@@ -2,7 +2,6 @@
 title: ADCPROP_UPDATERESYNC_ENUM |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b52a759dd734fc49aae9684a4a8e1310b153373
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44358b333ce099281197512ec23f58b3a11f575a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275257"
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 指定是否[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)方法後面的隱含[重新同步處理](../../../ado/reference/ado-api/resync-method.md)方法作業而且如果是，該作業的範圍。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|叫用**重新同步處理**結合其他 ADCPROP_UPDATERESYNC_ENUM 成員的值。|  
-|**adResyncAutoIncrement**|1|預設值。 嘗試擷取自動遞增或是資料來源，例如 Microsoft Jet 自動編號欄位或 Microsoft SQL Server Identity 資料行所產生的資料行的新識別值。|  
+|**adResyncAutoIncrement**|@shouldalert|預設值。 嘗試擷取自動遞增或是資料來源，例如 Microsoft Jet 自動編號欄位或 Microsoft SQL Server Identity 資料行所產生的資料行的新識別值。|  
 |**adResyncConflicts**|2|叫用**重新同步處理**的所有資料列中更新或刪除作業失敗，因為發生並行衝突。|  
 |**adResyncInserts**|8|叫用**重新同步處理**所有成功插入資料列。 不過，不會重新同步 AutoIncrement 資料行值。 相反地，新插入的資料列的內容會重新同步化依據現有主索引鍵值。 主索引鍵是否為自動遞增的值，**重新同步處理**將不會擷取預期的資料列的內容。 若為自動遞增自動遞增主索引鍵值，呼叫**UpdateBatch**結合值**adResyncAutoIncrement** + **adResyncInserts**.|  
 |**adResyncNone**|0|不會呼叫**重新同步處理**。|  

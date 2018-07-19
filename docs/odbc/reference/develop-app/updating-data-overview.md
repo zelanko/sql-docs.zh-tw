@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915893"
 ---
 # <a name="updating-data-overview"></a>更新資料概觀
 執行 SQL 陳述式，或呼叫應用程式可以更新資料**SQLSetPos**或**SQLBulkOperations**。 **更新**，**刪除**，和**插入**陳述式會直接處理資料來源和驅動程式通常都支援。 搜尋 update 和 delete 陳述式包含要變更的資料列的規格。 定位 update 和 delete 陳述式和**SQLSetPos**透過資料指標的資料來源並較廣受支援。  

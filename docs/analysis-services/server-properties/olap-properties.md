@@ -1,6 +1,6 @@
 ---
 title: OLAP 屬性 |Microsoft 文件
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5739c93f7a3c20960f5470c3fd2cdb24c72cf09d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0e98fb016ff43ff34456fd02e43fa710c9156334
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239288"
 ---
 # <a name="olap-properties"></a>OLAP 屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的 OLAP 伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **適用於** ：僅限於多維度伺服器模式  
@@ -243,12 +245,13 @@ ms.lasthandoff: 05/10/2018
   
 -   會影響伺服器上的所有資料庫。 **DimensionPropertyCachesize** 是伺服器範圍屬性。 變更此屬性會影響在目前執行個體上執行的所有資料庫。  
   
- 估計維度快取需求的方式：  
+估計維度快取需求的方式：  
   
 1.  一開始大量增加大小，決定增加維度快取大小是否有利。 例如，您可能會想要在初始步驟中將預設值加倍。  
   
 2.  如果效能明顯改善，請逐步遞減值，直到達到效能和記憶體使用量之間的平衡。  
-  
+
+
  **ExpressNonEmptyUseEnabled**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
@@ -345,7 +348,7 @@ ms.lasthandoff: 05/10/2018
  **DataCache\ MemoryModel\ Tax**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   
-## <a name="jobs"></a>作業  
+## <a name="jobs"></a>中稱為  
  **ProcessAggregation\ MemoryModel\ Income**  
  此為進階屬性，除非在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 技術支援的指導之下，否則不應隨意變更。  
   

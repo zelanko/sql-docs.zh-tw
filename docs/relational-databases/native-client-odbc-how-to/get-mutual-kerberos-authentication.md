@@ -1,13 +1,12 @@
 ---
-title: 取得相互 Kerberos 驗證 |Microsoft 文件
+title: 取得相互 Kerberos 驗證 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
@@ -16,11 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 775d451ed687ceae2a3e78f2bb8ddd3f6b76216e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7e74821d3981c5015e0d17d5019a40c4cc5b7a1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416037"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>取得相互 Kerberos 驗證
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
  此範例不適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之前的任何 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 版本。  
   
- 如需詳細資訊，請參閱[服務主要名稱 & #40;SPN & #41;在用戶端連接中的支援](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 服務主體名稱&#40;SPN&#41;用戶端連接中的支援](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)。</c0>  
   
 ## <a name="example"></a>範例  
  如果您要建立並執行此範例，當做 64 位元作業系統上的 32 位元應用程式，您必須利用 %windir%\SysWOW64\odbcad32.exe，以 ODBC 管理員身分建立 ODBC 資料來源。  

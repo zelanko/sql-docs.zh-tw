@@ -1,5 +1,5 @@
 ---
-title: 資料存取子函式 |Microsoft 文件
+title: 資料存取子函式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6ffe984949061ac58b80e2ee82335927fdacc1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026865"
 ---
 # <a name="data-accessor-functions"></a>Data Accessor 函數
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +39,13 @@ ms.lasthandoff: 05/03/2018
   
 -   不具類型的 XML：路徑運算式 /age/text() 會傳回文字節點 "12"。 函數 fn:data(/age) 會傳回字串值 "12"，而 fn:string(/age) 也是。  
   
--   具類型的 XML： 運算式 /age/text （） 傳回靜態錯誤的任何簡單類型\<age > 項目。 在另一方面，fn:data(/age) 會傳回整數 12。 fn:string(/age) 會產生字串 "12"。  
+-   具類型的 XML： 運算式 /age/text （） 傳回的任何簡單類型的靜態錯誤\<age > 項目。 在另一方面，fn:data(/age) 會傳回整數 12。 fn:string(/age) 會產生字串 "12"。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [字串函式&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
+-   [string 函式&#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md)  
   
--   [data 函數&#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
+-   [資料函式&#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  

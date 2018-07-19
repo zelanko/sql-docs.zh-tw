@@ -1,5 +1,5 @@
 ---
-title: 用戶端和伺服器端格式 (SQLXML 4.0) |Microsoft 文件
+title: 用戶端和伺服器端格式 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a387f27bee5a4325709b3268c7e2deb6157768e3
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708456"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003381"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>用戶端和伺服器端格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34708456"
   
 -   用戶端格式  
   
- 本節包含有關格式化 XML 文件上的用戶端或伺服器端上，從針對資料庫中執行的查詢產生的資料列集資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+ 本節包含格式化 XML 文件上的用戶端或伺服器端上，從針對資料庫中執行的查詢產生的資料列集的相關資訊[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
 ## <a name="in-this-section"></a>本節內容  
  [用戶端和伺服器端 XML 格式化架構&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  

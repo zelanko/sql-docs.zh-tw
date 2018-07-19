@@ -1,5 +1,5 @@
 ---
-title: .NET 環境中使用 SQLXML 大量載入 |Microsoft 文件
+title: 在.NET 環境中使用 SQLXML 大量載入 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,19 +22,20 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 270abbb40bdf6081b7409cf76a97925a1cd2b3d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053736"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>SQLXML 4.0.NET Framework 支援-使用大量載入
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本主題說明如何在 .NET 環境中使用 XML 大量載入功能。 如需 XML 大量載入的詳細資訊，請參閱[執行大量載入的 XML 資料 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
+  本主題說明如何在 .NET 環境中使用 XML 大量載入功能。 如需 XML 大量載入的詳細資訊，請參閱[執行大量載入的 XML 資料&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)。  
   
  若要從 Managed 環境使用 SQLXML 大量載入 COM 物件，您需要將專案參考加入到此物件中。 這會在大量載入 COM 物件周圍產生 Managed 包裝函數介面。  
   
 > [!NOTE]  
->  Managed XML 大量載入不會使用 Managed 資料流，而且在原生資料流周圍需要使用包裝函數。 SQLXML 大量載入元件將不會在多執行緒環境 ('[MTAThread]' 屬性) 下執行。 如果您嘗試在多執行緒環境中執行大量載入元件，您會收到與下列其他資訊 InvalidCastException 例外狀況: 「 介面 SQLXMLBULKLOADLib.ISQLXMLBulkLoad 的 QueryInterface 失敗 」。 因應措施是對包含大量載入物件單一執行緒的可存取的物件 (例如，藉由使用 **[STAThread]** 屬性，如範例所示)。  
+>  Managed XML 大量載入不會使用 Managed 資料流，而且在原生資料流周圍需要使用包裝函數。 SQLXML 大量載入元件將不會在多執行緒環境 ('[MTAThread]' 屬性) 下執行。 如果您嘗試在多執行緒環境中執行大量載入元件時，您會收到 InvalidCastException 例外狀況包含下列的其他資訊: 「 介面 SQLXMLBULKLOADLib.ISQLXMLBulkLoad 的 QueryInterface 失敗 」。 因應措施是對包含大量載入物件單一執行緒存取的物件 (例如，藉由使用 **[STAThread]** 屬性，如範例所示)。  
   
  本主題提供 C# 工作範例應用程式，將 XML 資料大量載入到資料庫中。 若要建立工作範例，按照下列步驟進行：  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/03/2018
   
 6.  從**專案**功能表上，選取**加入參考**。  
   
-7.  在**COM**索引標籤上，選取**Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll)，按一下 **確定**。 您會看到**Interop.SQLXMLBULKLOADLib**專案中建立的組件。  
+7.  在  **COM**索引標籤上，選取**Microsoft SQLXML Bulkload 4.0 Type Library** (xblkld4.dll)，按一下 **確定**。 您會看到**Interop.SQLXMLBULKLOADLib**專案中建立的組件。  
   
 8.  將 Main() 方法取代成下列程式碼。 更新**ConnectionString**屬性和結構描述和資料檔案的檔案路徑。  
   
@@ -154,6 +155,6 @@ ms.lasthandoff: 05/03/2018
      這會建立您可以在 .NET Framework 專案中使用的 Managed 包裝函數 DLL (SQLXMLBULKLOADLib.dll)。 在 .NET Framework 中，您可以將專案參考加入到新建立的 DLL。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量載入 XML 資料 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [執行大量載入 XML 資料的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

@@ -2,7 +2,6 @@
 title: 參數化命令的作業 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea5f45e5f7fa1b60bb9f6b4884fcb1e480534d00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272167"
 ---
 # <a name="operation-of-parameterized-commands"></a>參數化命令的作業
 如果您正在使用大量子**資料錄集**，特別是相較於父代的大小**資料錄集**，但是需要存取只有少數子章節，可能會發現使用更有效率參數化的命令。  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 父和子資料表有資料行名稱中不常見，cust_id*。* *子命令*具有"？"預留位置，在 RELATE 子句參考 (也就是"...參數 0"）。  
+ 父和子資料表有資料行名稱中不常見，cust_id *。* *子命令*具有"？"預留位置，在 RELATE 子句參考 (也就是"...參數 0"）。  
   
 > [!NOTE]
 >  參數子句僅屬於圖形命令語法。 不是相關聯之任一 ADO[參數](../../../ado/reference/ado-api/parameter-object.md)物件或[參數](../../../ado/reference/ado-api/parameters-collection-ado.md)集合。  

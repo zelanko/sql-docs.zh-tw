@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_buffer_pool_extension_configuration (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ecc569a1f112bba0ec49c46da77c1dbc29fcddab
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020016"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +36,11 @@ ms.lasthandoff: 05/23/2018
   
 
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |路徑|**nvarchar**(256)|緩衝集區延伸模組快取的路徑和檔案名稱。 可為 Null。|  
 |file_id|**int**|緩衝集區延伸模組檔案的識別碼。 不可為 Null。|  
-|state|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供未來使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
+|state|**int**|緩衝集區延伸模組功能的狀態。 不可為 Null。<br /><br /> 0 - 緩衝集區延伸模組已停用<br /><br /> 1 - 緩衝集區延伸模組停用中<br /><br /> 2-保留供日後使用<br /><br /> 3 - 緩衝集區延伸模組啟用中<br /><br /> 4 - 保留供日後使用<br /><br /> 5 - 緩衝集區延伸模組已啟用|  
 |state_description|**nvarchar**(60)|描述緩衝集區延伸模組功能的狀態。 可為 Null。<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 1 = BUFFER POOL EXTENSION ENABLED|  
 |current_size_in_kb|**bigint**|緩衝集區延伸模組檔案的目前大小。 不可為 Null。|  
   
@@ -67,7 +68,7 @@ WHERE is_in_bpool_extension <> 0
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [緩衝集區擴充](../../database-engine/configure-windows/buffer-pool-extension.md)   
- [sys.dm_os_buffer_descriptors & #40;TRANSACT-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
+ [緩衝集區延伸模組](../../database-engine/configure-windows/buffer-pool-extension.md)   
+ [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql.md)  
   
   

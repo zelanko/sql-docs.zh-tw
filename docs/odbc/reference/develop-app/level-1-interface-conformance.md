@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913083"
 ---
 # <a name="level-1-interface-conformance"></a>層級 1 介面一致性
 層級 1 介面一致性層級包含核心介面一致性層級功能，以及其他功能，例如 OLTP 關聯式 DBMS 中通常可用的交易。 層級 1 介面標準驅動程式可讓應用程式執行下列作業，除了核心介面的一致性層級中的功能：  

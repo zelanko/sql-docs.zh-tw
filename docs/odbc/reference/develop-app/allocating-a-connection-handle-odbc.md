@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908583"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>配置連接控制代碼 ODBC
 應用程式可以連接到資料來源或驅動程式之前，必須配置連接控制代碼，如下所示：  

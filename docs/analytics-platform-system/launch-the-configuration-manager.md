@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544780"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>啟動 Configuration Manager 中 Analytics Platform System
 本主題提供指示來啟動**Configuration Manager** Analytics Platform System 應用裝置。  

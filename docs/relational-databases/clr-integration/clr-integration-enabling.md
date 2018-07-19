@@ -1,14 +1,11 @@
 ---
-title: 啟用 CLR 整合 |Microsoft 文件
+title: 啟用 CLR 整合 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - clr enabled option
@@ -18,11 +15,12 @@ caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d7bec99220df05a5414bce2dcec6fd86235a4fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cf4d327ecc82f047d80eba8da709fea1fd7e82dd
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358210"
 ---
 # <a name="clr-integration---enabling"></a>CLR 整合-啟用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,18 +41,18 @@ GO
  您可以藉由設定停用 CLR 整合**clr 已啟用**選項設為 0。 當您停用 CLR 整合時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會停止執行所有 CLR 常式，並卸載所有應用程式網域。  
   
 > [!NOTE]  
->  若要啟用 CLR 整合，您必須有 ALTER SETTINGS 伺服器層級權限，其中的成員隱含地擁有**sysadmin**和**serveradmin**固定伺服器角色。  
+>  若要啟用 CLR 整合，您必須有 ALTER SETTINGS 伺服器層級權限，其中的成員會隱含地擁有**sysadmin**並**serveradmin**固定伺服器角色。  
   
 > [!NOTE]  
->  啟動伺服器時，以大量記憶體及大量處理器設定的電腦可能無法載入 SQL Server 的 CLR 整合功能。 若要解決此問題，請啟動伺服器使用 **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務啟動選項，並指定夠大的記憶體值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
+>  啟動伺服器時，以大量記憶體及大量處理器設定的電腦可能無法載入 SQL Server 的 CLR 整合功能。 若要解決此問題，請使用，伺服器啟動 **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]服務啟動選項，並指定夠大的記憶體值。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)。  
   
 > [!NOTE]  
 >  輕量型共用不支援 Common Language Runtime (CLR) 的執行。 在啟用 CLR 整合以前，您必須停用輕量型共用。 如需詳細資訊，請參閱 [輕量型共用伺服器組態選項](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [clr 已啟用伺服器組態選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
- [RECONFIGURE & #40;TRANSACT-SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [CLR 已啟用伺服器組態選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [伺服器層級角色](../../relational-databases/security/authentication-access/server-level-roles.md)  
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915843"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>非同步函式完成的通知
 在 Windows 8 SDK 中，ODBC 會加入非同步作業完成時，我們將為 「 通知完成 」 的通知應用程式的機制。 (請參閱[非同步執行 （通知方法）](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)如需詳細資訊。)本主題會討論的一些問題的驅動程式開發人員。  

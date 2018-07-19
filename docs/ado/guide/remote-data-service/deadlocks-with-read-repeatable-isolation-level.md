@@ -2,7 +2,6 @@
 title: 讀取可重複的隔離層級的死結 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6fc1621022758189925587e32059a3e26a1de4a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c871d2786202c74945aeec84c3de06a361d54801
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273977"
 ---
 # <a name="deadlocks-with-read-repeatable-isolation-level"></a>讀取可重複的隔離層級的死結
 如果自訂的商務物件使用 read repeatable 隔離等級來存取 SQL Server，並由傳送查詢，並在相同交易中更新的兩個用戶端同時呼叫的商務物件時，死結有可能。 遠端資料服務的設計可讓其中一個程序來釋放死結，逾時的時候，但該用戶端將會失敗的更新。  

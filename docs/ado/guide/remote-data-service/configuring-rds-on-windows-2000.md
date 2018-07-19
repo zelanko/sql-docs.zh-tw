@@ -2,7 +2,6 @@
 title: 在 Windows 2000 上設定 RDS |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1efc5f21b829e85e063dbbd3dbb3d72131d43149
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 774309f4b120f3c475645574429d1b08af627f8b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273767"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>在 Windows 2000 設定的 RDS
 如果您遇到取得 RDS 升級為 Windows 2000 之後正常運作的問題，請遵循下列步驟來疑難排解此問題：  

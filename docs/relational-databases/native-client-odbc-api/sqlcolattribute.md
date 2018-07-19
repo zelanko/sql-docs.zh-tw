@@ -1,13 +1,12 @@
 ---
-title: SQLColAttribute |Microsoft 文件
+title: SQLColAttribute |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -19,22 +18,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a846851ac4558c3b39bd821f32f32c20a0993f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f00392098f45068d1ee0f19c31f7d1b0fdbe2b2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429937"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  您可以使用**SQLColAttribute**來擷取已備妥或已執行的 ODBC 陳述式的結果集資料行的屬性。 呼叫**SQLColAttribute**上備妥的陳述式原因往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式接收結果集資料行資料做為陳述式執行，因此呼叫的一部分**SQLColAttribute**完成後**SQLExecute**或**SQLExecDirect**不造成伺服器往返。  
+  您可以使用**SQLColAttribute**來擷取已備妥或已執行的 ODBC 陳述式的結果集資料行的屬性。 呼叫**SQLColAttribute**上備妥陳述式造成的往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會接收結果集資料行資料做為陳述式執行，因此，呼叫的一部分**SQLColAttribute**完成後**SQLExecute**或**SQLExecDirect**不造成伺服器往返。  
   
 > [!NOTE]  
 >  ODBC 資料行識別碼屬性並非在所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 結果集上都有提供。  
   
-|欄位識別碼|Description|  
+|欄位識別碼|描述|  
 |----------------------|-----------------|  
 |SQL_COLUMN_TABLE_NAME|可用於擷取自產生伺服器資料指標之陳述式的結果集，或包含 FOR BROWSE 子句之已執行 SELECT 陳述式。|  
 |SQL_DESC_BASE_COLUMN_NAME|可用於擷取自產生伺服器資料指標之陳述式的結果集，或包含 FOR BROWSE 子句之已執行 SELECT 陳述式。|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
  對於所有版本，當已備妥的 SQL 陳述式批次產生多個結果集時，只有第一個結果集會報告資料行屬性。  
   
- 下列資料行屬性是擴充功能所公開[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會傳回中的所有值*NumericAttrPtr*參數。 除了 SQL_CA_SS_COMPUTE_BYLIST (WORD 陣列的指標) 之外，這些值會當做 SDWORD (signed long) 傳回。  
+ 下列資料行屬性是公開的延伸模組[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式傳回所有的值，以*Numericattrptr&lt*參數。 除了 SQL_CA_SS_COMPUTE_BYLIST (WORD 陣列的指標) 之外，這些值會當做 SDWORD (signed long) 傳回。  
   
 |欄位識別碼|傳回的值|  
 |----------------------|--------------------|  
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_CA_SS_COLUMN_UTYPE|SQL Server 資料行之使用者定義資料類型的基底資料類型。 類型值的定義位於 sqlncli.h。|  
 |SQL_CA_SS_COLUMN_VARYLEN|如果資料行的資料長度可以改變，則為 TRUE，否則為 FALSE。|  
 |SQL_CA_SS_COMPUTE_BYLIST|WORD (unsigned short) 陣列的指標，指定在 COMPUTE 子句之 BY 片語中所使用的資料行。 如果 COMPUTE 子句沒有指定 BY 片語，則會傳回 NULL 指標。<br /><br /> 陣列的第一個元素包含 BY 清單資料行的計數。 其他元素為資料行序數。|  
-|SQL_CA_SS_COMPUTE_ID|*computeid*是目前的 TRANSACT-SQL SELECT 陳述式中的 COMPUTE 子句結果之資料列。|  
+|SQL_CA_SS_COMPUTE_ID|*computeid*中目前的 TRANSACT-SQL SELECT 陳述式的 COMPUTE 子句結果資料列。|  
 |SQL_CA_SS_NUM_COMPUTES|在目前的 Transact-SQL SELECT 陳述式中指定的 COMPUTE 子句數目。|  
 |SQL_CA_SS_NUM_ORDERS|在 ODBC 或 Transact-SQL SELECT 陳述式的 ORDER BY 子句中指定之資料行的數目。|  
   
@@ -83,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 導入驅動程式專屬描述項欄位來提供其他資訊，分別代表 XML 結構描述集合名稱、 結構描述名稱，以及目錄名稱。 如果這些屬性包含非英數字元，則它們不需要引號或逸出字元。 下表列出這些新的描述項欄位：  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_CATALOG_NAME|CharacterAttributePtr|定義 XML 結構描述集合名稱所在目錄的名稱。 如果找不到目錄名稱，則此變數包含空字串。<br /><br /> 此資訊會從 IRD 的 SQL_DESC_SS_XML_SCHEMACOLLECTION_CATALOG_NAME 記錄欄位傳回，該欄位為唯讀欄位。|  
 |SQL_CA_SS_XML_SCHEMACOLLECTION_SCHEMA_NAM E|CharacterAttributePtr|定義 XML 結構描述集合名稱所在結構描述的名稱。 如果找不到結構描述名稱，則此變數包含空字串。<br /><br /> 此資訊會從 IRD 的 SQL_DESC_SS_XML_SCHEMACOLLECTION_SCHEMA_NAME 記錄欄位傳回，該欄位為唯讀欄位。|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  同時，[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 推出新的驅動程式專屬描述項欄位，針對結果集的使用者定義型別 (UDT) 資料行或預存程序或參數化查詢的 UDT 參數，提供額外的資訊。 如果這些屬性包含非英數字元，則它們不需要引號或逸出字元。 下表列出這些新的描述項欄位：  
   
-|資料行名稱|型別|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |SQL_CA_SS_UDT_CATALOG_NAME|CharacterAttributePtr|包含 UDT 之目錄的名稱。|  
 |SQL_CA_SS_UDT_SCHEMA_NAME|CharacterAttributePtr|包含 UDT 之結構描述的名稱。|  
@@ -101,17 +101,17 @@ ms.lasthandoff: 05/03/2018
  現有的描述項欄位識別碼 SQL_DESC_TYPE_NAME 用來表示 UDT 的名稱。 適用於 UDT 類型資料行的 SQL_DESC_TYPE 欄位為 SQL_SS_UDT。  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>增強型日期和時間功能的 SQLColAttribute 支援  
- 針對日期/時間類型傳回的值，請參閱中的 「 資訊 IRD 欄位中傳回 」 一節[and Result Metadata<](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)。  
+ 針對日期/時間類型傳回的值，請參閱 「 資訊 IRD 欄位中傳回 」 一節[參數和結果中繼資料](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md)。  
   
- 如需詳細資訊，請參閱[日期和時間增強功能 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 日期和時間改善&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)。</c0>  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>大型 CLR UDT 的 SQLColAttribute 支援  
- **SQLColAttribute**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱[Large CLR User-Defined 類型 & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
+ **SQLColAttribute**支援大型 CLR 使用者定義型別 (Udt)。 如需詳細資訊，請參閱 < [Large CLR User-Defined 類型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)。  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>疏鬆資料行的 SQLColAttribute 支援  
- SQLColAttribute 查詢新實作資料列描述項 (IRD) 欄位 SQL_CA_SS_IS_COLUMN_SET 來判斷資料行是否為**column_set**資料行。  
+ SQLColAttribute 查詢新實作資料列描述項 (IRD) 欄位 SQL_CA_SS_IS_COLUMN_SET 來判斷資料行是否**column_set**資料行。  
   
- 如需詳細資訊，請參閱[疏鬆資料行支援&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。  
+ 如需詳細資訊，請參閱 <<c0> [ 疏鬆資料行支援&#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md)。</c0>  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLColAttribute 函數](http://go.microsoft.com/fwlink/?LinkId=59334)   

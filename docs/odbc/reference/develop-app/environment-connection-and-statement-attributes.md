@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911083"
 ---
 # <a name="environment-connection-and-statement-attributes"></a>環境、 連接和陳述式屬性
 ODBC 定義環境、 連線或陳述式相關聯的屬性的數目。  

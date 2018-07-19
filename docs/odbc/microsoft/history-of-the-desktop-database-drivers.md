@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902233"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>桌面資料庫驅動程式的歷程記錄
 下表顯示桌面資料庫驅動程式版本歷程記錄。  

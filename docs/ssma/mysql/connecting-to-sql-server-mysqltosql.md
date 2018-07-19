@@ -1,8 +1,6 @@
 ---
 title: 連接到 SQL Server (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d946b7c6d5fed230fab2daed139421c43d814566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20c11888d58557fc340ad39dbeec293e15c555e0
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775904"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>連接到 SQL Server (MySQLToSQL)
 若要將 MySQL 資料庫移轉至 SQL Server，您必須連接到目標 SQL Server 執行個體。 連線時，SSMA 取得 SQL Server 執行個體中的所有資料庫的相關中繼資料，並在 SQL Server 中繼資料總管 會顯示資料庫中繼資料。 SSMA 會儲存您連線到，但不會儲存密碼的 SQL Server 執行個體的資訊。  

@@ -13,7 +13,7 @@ ms.openlocfilehash: 2c56749bab8c2318d0394ceca1b11d371fa6d23d
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573560"
 ---
 # <a name="database-element-xmla"></a>Database 元素 (XMLA)

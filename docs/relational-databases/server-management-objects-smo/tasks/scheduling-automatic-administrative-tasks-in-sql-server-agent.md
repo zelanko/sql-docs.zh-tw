@@ -1,5 +1,5 @@
 ---
-title: 排程 Automatic Administrative Tasks in SQL Server Agent |Microsoft 文件
+title: 排程 SQL Server Agent 中的自動管理工作 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e03ca384c3e425eead6663537031411ca8583af9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029836"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>使用 SQL Server Agent 排程自動管理工作
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -42,9 +43,9 @@ ms.lasthandoff: 05/03/2018
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 物件位於 <xref:Microsoft.SqlServer.Management.Smo.Agent> 命名空間中。  
   
 ## <a name="examples"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
-程式使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式，您必須包含**使用**陳述式來限定 Agent 命名空間。 Insert 陳述式之後的其他**使用**應用程式、 任何宣告之前的陳述式，例如：
+程式使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]代理程式，您必須包含**使用**陳述式來限定 Agent 命名空間。 Insert 陳述式逐一**使用**應用程式中的任何宣告之前的陳述式，例如：
   
  ```
 using Microsoft.SqlServer.Management.Smo;

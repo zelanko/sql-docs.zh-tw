@@ -2,7 +2,7 @@
 title: 使用 Multiple Active Result Set (MARS) |Microsoft 文件
 description: 使用 Multiple Active Result Sets (MARS)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -21,14 +21,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c086df79bff70013540b8b3c0c31a1a6216972df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd0254bfd632c9ae0d3145e745c932757fd6d808
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612083"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>使用 Multiple Active Result Sets (MARS)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中導入支援對 multiple active result sets (MARS) 應用程式存取[!INCLUDE[ssDE](../../../includes/ssde-md.md)]。 在舊版的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，資料庫應用程式無法在連接上維持多個作用中陳述式。 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預設結果集時，應用程式必須從一個批次處理或取消所有結果集，然後才能夠在該連接上執行任何其他批次。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入了新的連接屬性，好讓應用程式在每個連接上可以有一個以上的暫止要求，而且特別是每個連接上可以有一個以上的使用中預設結果集。  
   
@@ -55,11 +58,11 @@ ms.lasthandoff: 05/03/2018
   
  OLE DB 驅動程式的 SQL Server 不會限制在連接上作用中陳述式數目。  
   
- 不需要有多個單一多重陳述式批次或預存程序同時執行的一般應用程式將會因為 MARS 而受益，而不必了解 MARS 的實作方式。 但是，具有更複雜需求的應用程式確實需要考量這件事。  
+ 不需要有多個單一多重陳述式的批次或預存程序執行一次將受益於 MARS 不必了解 MARS 的實作方式的一般應用程式。 但是，具有更複雜需求的應用程式確實需要考量這件事。  
   
  MARS 可啟用單一連接內多個要求的交錯執行。 也就是說，它可允許批次執行，而且當它執行時，可允許其他要求執行。 但是請注意，MARS 是以交錯來定義，而不是以平行執行來定義。  
   
- MARS 基礎結構可讓多個批次以交錯方式執行，但是只能在定義良好的點上切換執行。 此外，大多數的陳述式都必須在批次內自動執行。 陳述式會傳回資料列至用戶端，有時稱為*產生點*，才能完成以前交錯執行時的資料列會傳送至用戶端，例如：  
+ MARS 基礎結構可讓多個批次以交錯的方式執行，不過，執行僅可以切換在妥善定義的點。 此外，大多數的陳述式都必須在批次內自動執行。 傳回至用戶端，有時稱為資料列的陳述式*產生點*，才能完成以前交錯執行時的資料列會傳送至用戶端，例如：  
   
 -   SELECT  
   
@@ -79,7 +82,7 @@ ms.lasthandoff: 05/03/2018
  如需從 ADO 使用 MARS 的範例，請參閱[使用 ADO 與 OLE DB 驅動程式的 SQL Server](../../oledb/applications/using-ado-with-oledb-driver-for-sql-server.md)。  
   
 ## <a name="in-memory-oltp"></a>In-Memory OLTP  
- 記憶體中 OLTP 支援 MARS 使用查詢和原生編譯的預存程序。 MARS 可讓您從多個查詢，而不需要完全擷取每個結果集之前從新的結果集提取資料列將要求傳送要求資料。 為了能夠成功讀取從多個開啟的結果集，您必須使用 MARS 啟用連接。  
+ 記憶體中 OLTP 支援 MARS 使用查詢和原生編譯的預存程序。 MARS 可讓您從多個查詢，而不需要完全擷取每個結果集之前從新的結果集提取資料列將要求傳送要求資料。 為了能夠成功讀取多個開啟的結果集，您必須使用啟用 MARS 的連接。  
   
  MARS 預設會停用，必須明確啟用它藉由新增`MultipleActiveResultSets=True`的連接字串。 下列範例會示範如何連接到 SQL server 執行個體，並指定已啟用 MARS:  
   
@@ -107,7 +110,7 @@ Data Source=MSSQL; Initial Catalog=AdventureWorks; Integrated Security=SSPI; Mul
   
  陳述式和為交錯的 atomic 區塊所做的變更會互相隔離。 比方說，如果一個陳述式或不可部分完成的區塊會進行一些變更，並接著就會產生另一個陳述式的執行，新的陳述式將不會看到第一個陳述式所做的變更。 此外，當第一個陳述式繼續執行時，它不會看到任何其他陳述式所做的任何變更。 陳述式只會看到，已完成並且陳述式開始之前認可的變更。  
   
- 可以使用 BEGIN TRANSACTION 陳述式在目前的使用者交易中啟動新的使用者交易 – 這是支援只能在 interop 模式中，因此只能從 T-SQL 陳述式，呼叫 BEGIN TRANSACTION，不從內原生編譯預存程序。您可以建立儲存點使用 SAVE TRANSACTION 或應用程式開發介面呼叫交易的交易。Save(save_point_name) 回復到儲存點。 這項功能也會啟用只會從 T-SQL 陳述式，並不是從在原生編譯的預存程序。  
+ 可以使用 BEGIN TRANSACTION 陳述式在目前的使用者交易中啟動新的使用者交易 – 這是支援只能在 interop 模式中，因此只能從 T-SQL 陳述式，呼叫 BEGIN TRANSACTION，不從內原生編譯預存程序。 您可以建立儲存點使用 SAVE TRANSACTION 或應用程式開發介面呼叫交易的交易。Save(save_point_name) 回復到儲存點。 這項功能也會啟用只會從 T-SQL 陳述式，並不是從在原生編譯的預存程序。  
   
  **MARS 和資料行存放區索引**  
   

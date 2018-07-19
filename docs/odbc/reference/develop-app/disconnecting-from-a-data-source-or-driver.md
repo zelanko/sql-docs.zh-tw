@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909847"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>中斷連接資料的資料來源或驅動程式
 當應用程式已經完成使用資料來源時，它會呼叫**SQLDisconnect**。 **SQLDisconnect**釋放連接配置的任何陳述式，並從資料來源中斷驅動程式。 如果交易中處理程序，它會傳回錯誤。  

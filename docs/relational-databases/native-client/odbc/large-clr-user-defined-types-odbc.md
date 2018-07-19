@@ -1,5 +1,5 @@
 ---
-title: 大型 CLR 使用者定義型別 (ODBC) |Microsoft 文件
+title: 大型 CLR 使用者定義型別 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,11 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ec957ad4bc1ea32c885b51a940a793f84dbc6b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14dcac32a0e8e6af89cf3f9dc87b2458a986a2ef
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414417"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大型 CLR 使用者定義型別 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +32,9 @@ ms.lasthandoff: 05/03/2018
 
   本主題討論 SQL Server Native Client 中 ODBC 的變更，以支援大型 Common Language Runtime (CLR) 使用者定義型別 (UDT)。  
   
- 如需示範 ODBC 對於大型 CLR Udt 支援的範例，請參閱[支援大型 Udt 的](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)。  
+ 如需示範 ODBC 對於大型 CLR Udt 支援範例，請參閱[支援大型 Udt](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)。  
   
- 如需 SQL Server Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱[Large CLR User-Defined 類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
+ 如需有關 SQL Server Native Client 中大型 CLR Udt 支援的詳細資訊，請參閱[Large CLR User-Defined 類型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)。  
   
 ## <a name="data-format"></a>資料格式  
  SQL Server Native Client 會使用 SQL_SS_LENGTH_UNLIMITED 來表示大型物件 (LOB) 類型的資料行大小大於 8,000 個位元組。 從 SQL Server 2008 開始，當 CLR UDT 的值大於 8,000 個位元組時，將會針對 CLR UDT 使用相同的值。  
@@ -42,15 +43,15 @@ ms.lasthandoff: 05/03/2018
   
  下表顯示參數和結果集內的資料類型對應：  
   
-|SQL Server 資料類型|SQL 資料類型|Value|  
+|SQL Server 資料類型|SQL 資料類型|值|  
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- 下表討論對應的結構和 ODBC C 類型。 基本上，CLR UDT 是**varbinary**具有額外中繼資料的類型。  
+ 下表討論對應的結構和 ODBC C 類型。 基本上，是 CLR UDT **varbinary**具有額外的中繼資料型別。  
   
 |SQL 資料類型|記憶體配置|C 資料類型|值 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR * (char 不帶正負號\*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>參數的描述項欄位  
  IPD 欄位中傳回的資訊如下所示：  
@@ -128,7 +129,7 @@ ms.lasthandoff: 05/03/2018
 |SS_UDT_SCHEMA_NAME|包含 UDT 的結構描述名稱。|包含 UDT 的結構描述名稱。|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT 的完整名稱。|UDT 的完整名稱。|  
   
- 最後三個資料行是驅動程式特有的資料行。 使用者會新增任何 ODBC 定義的資料行之後，但任何現有驅動程式特有的資料行的 SQLColumns 或 SQLProcedureColumns 的結果集之前。  
+ 最後三個資料行是驅動程式特有的資料行。 它們會加入任何 ODBC 定義的資料行之後, 但在任何現有的驅動程式專用資料行的 SQLColumns 或 SQLProcedureColumns 的結果集之前。  
   
  針對個別 Udt 或泛型類型"udt"SQLGetTypeInfo，會不傳回任何資料列。  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 05/03/2018
 |來回轉換：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|支援 *|  
-|SQL_C_BINARY|Supported|  
+|SQL_C_BINARY|支援|  
 |SQL_C_CHAR|支援 *|  
   
  \* 二進位資料會轉換成十六進位字串。  
@@ -148,7 +149,7 @@ ms.lasthandoff: 05/03/2018
 |來回轉換：|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|支援 *|  
-|SQL_C_BINARY|Supported|  
+|SQL_C_BINARY|支援|  
 |SQL_C_CHAR|支援 *|  
   
  \* 二進位資料轉換成十六進位字串，就會發生。  
@@ -218,7 +219,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  針對 UDT 傳回的值如下所示：  
   
-|SQL 資料類型|型別|子類型|長度|有效位數|小數位數|  
+|SQL 資料類型|類型|子類型|長度|有效位數|小數位數|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -238,7 +239,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT 允許的值如下所示：  
   
-|SQL 資料類型|型別|子類型|長度|有效位數|小數位數|  
+|SQL 資料類型|類型|子類型|長度|有效位數|小數位數|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (長度小於或等於 8,000 個位元組)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (長度大於 8,000 個位元組)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

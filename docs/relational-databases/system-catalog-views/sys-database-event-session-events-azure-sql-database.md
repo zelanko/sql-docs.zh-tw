@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_events (Azure SQL Database) |Microsoft 文件
+title: sys.database_event_session_events (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9287bfe2f99e4bebc7a57b9ac527c04ada95bf9b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38065476"
 ---
 # <a name="sysdatabaseeventsessionevents-azure-sql-database"></a>sys.database_event_session_events (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/04/2018
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及任何更新的版本。|  
+|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及更新的版本。|  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|事件工作階段的識別碼。 不可為 Null。|  
 |event_id|**int**|事件的識別碼。 這個識別碼在事件工作階段物件中是唯一的。 不可為 Null。|  
-|name|**sysname**|事件的名稱。 不可為 Null。|  
+|NAME|**sysname**|事件的名稱。 不可為 Null。|  
 |封裝|**sysname**|包含此事件之事件封裝的名稱。 不可為 Null。|  
 |module|**sysname**|包含此事件之模組的名稱。 不可為 Null。|  
 |predicate|**nvarchar(3000)**|套用至事件的述詞運算式。 可為 Null。|  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917123"
 ---
 # <a name="introduction-to-odbc"></a>ODBC 的簡介
 本節提供簡短的結構化查詢語言和 ODBC，歷程記錄，並包含 ODBC 介面的概念性資訊。  

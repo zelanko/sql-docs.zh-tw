@@ -2,7 +2,6 @@
 title: 資料區段 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,16 +16,17 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc7a8e66765d35d4c8a8a7f74f63720dec4d9429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b861ce91ec8b7007e168cbdb7d0dae3f0ce48e9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270097"
 ---
 # <a name="data-section"></a>資料區段
 資料區段定義以及任何暫止的更新、 插入或刪除資料列集的資料。 資料區段可以包含零或多個資料列。 它只能包含一個資料列集結構描述所定義的資料列所在的資料。 此外，如之前所述，就可以省略資料行沒有任何資料。 如果屬性或子元素用於資料區段中，而且尚未在結構描述 」 一節中定義該建構，則會以無訊息模式忽略。  
   
-## <a name="string"></a>字串  
+## <a name="string"></a>String  
  必須使用適當字元實體取代文字資料中保留的 XML 字元。 比方說，在 公司名稱"Joe 的機庫"單引號必須由實體取代。 實際的資料列，如下所示：  
   
 ```  

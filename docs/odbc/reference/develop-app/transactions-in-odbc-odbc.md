@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915475"
 ---
 # <a name="transactions-in-odbc-odbc"></a>ODBC ODBC 中的交易
 ODBC 中的交易完成在連接層級;也就是說，當應用程式完成交易時，它認可或回復透過該連接上的所有陳述式控制代碼的所有工作。  

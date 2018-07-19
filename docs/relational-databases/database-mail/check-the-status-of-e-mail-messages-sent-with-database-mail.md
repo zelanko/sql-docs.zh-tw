@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32924243"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>檢查使用 Database Mail 傳送之電子郵件訊息的狀態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
 -   **若要檢視使用 Database Mail 傳送之電子郵件的狀態，請使用：**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 開始之前  
- Database Mail 會保留外寄電子郵件訊息的副本，並在 **msdb**資料庫的 **sysmail_allitems**、 **sysmail_sentitems**、 **sysmail_unsentitems** 、 **sysmail_faileditems** 檢視中顯示它們。 Database Mail 外部程式會記錄活動，並透過「Windows 應用程式事件記錄檔」和 **msdb** 資料庫中的 **sysmail_event_log** 檢視來顯示記錄檔。 若要檢查電子郵件訊息的狀態，請對此檢視執行查詢。 電子郵件訊息狀態可為下列四種之一： **「已傳送」**、 **「未傳送」**、 **「正在重試」**及 **「失敗」**。  
+ Database Mail 會保留外寄電子郵件訊息的副本，並在 **msdb**資料庫的 **sysmail_allitems**、 **sysmail_sentitems**、 **sysmail_unsentitems** 、 **sysmail_faileditems** 檢視中顯示它們。 Database Mail 外部程式會記錄活動，並透過「Windows 應用程式事件記錄檔」和 **msdb** 資料庫中的 **sysmail_event_log** 檢視來顯示記錄檔。 若要檢查電子郵件訊息的狀態，請對此檢視執行查詢。 電子郵件訊息狀態可為下列四種之一： **「已傳送」**、 **「未傳送」**、 **「正在重試」** 及 **「失敗」**。  
   
 ##  <a name="TsqlProcedure"></a> 使用 Transact-SQL  
  **若要檢視使用 Database Mail 傳送之電子郵件的狀態**  

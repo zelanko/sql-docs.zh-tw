@@ -13,7 +13,7 @@ ms.openlocfilehash: 1ba73a6ea5926de6f445c5ca5cec8142b3e196bd
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34576270"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Cell 元素 (MDDataSet) (XMLA)

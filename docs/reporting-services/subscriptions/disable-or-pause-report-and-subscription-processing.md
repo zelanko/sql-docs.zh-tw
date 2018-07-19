@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33035525"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>停用或暫停報表與訂閱處理
   有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 本主題中的方法涵蓋了停用訂閱、中斷資料來源連接等範圍。 並非所有的方法都適用於兩種 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式。下表摘要說明這些方法和支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式：  
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
  `library!ReportServer_0-1!2eec!10/16/2014-16:44:18:: i INFO: Call to EnableSubscriptionAction(SubscriptionID=e843bc2b-023e-45a3-ba23-22f9dc9a0934).`  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 停用單一訂閱：**使用下列 PowerShell 指令碼停用特定的訂閱。 更新伺服器名稱和訂閱識別碼。  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 停用單一訂閱：** 使用下列 PowerShell 指令碼停用特定的訂閱。 更新伺服器名稱和訂閱識別碼。  
   
 ```  
 #disable specific subscription  
@@ -85,7 +86,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有已停用的訂閱：**使用下列 PowerShell 指令碼來列出目前的原生模式報表伺服器上所有已停用的訂閱。 更新伺服器名稱。  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有已停用的訂閱：** 使用下列 PowerShell 指令碼來列出目前的原生模式報表伺服器上所有已停用的訂閱。 更新伺服器名稱。  
   
 ```  
 #list all disabled subscriptions  
@@ -96,7 +97,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有已停用的訂閱：**使用下列 PowerShell 指令碼來列出目前的原生模式報表伺服器上所有已停用的訂閱。 更新伺服器名稱。  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 列出所有已停用的訂閱：** 使用下列 PowerShell 指令碼來列出目前的原生模式報表伺服器上所有已停用的訂閱。 更新伺服器名稱。  
   
 ```  
 #enable all subscriptions  
@@ -110,7 +111,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 停用所有訂閱：**使用下列 PowerShell 指令碼列出停用**所有**訂閱。  
+ ![PowerShell 相關內容](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 相關內容") **使用 Windows PowerShell 停用所有訂閱：** 使用下列 PowerShell 指令碼列出停用**所有**訂閱。  
   
 ```  
 #DISABLE all subscriptions  

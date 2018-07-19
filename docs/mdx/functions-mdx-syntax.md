@@ -1,41 +1,30 @@
 ---
 title: 函式 （MDX 語法） |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- MDX [Analysis Services], functions
-- Multidimensional Expressions [Analysis Services], functions
-- functions [MDX]
-ms.assetid: 74ca5e79-1f33-4795-9d68-98eff9c190c1
-caps.latest.revision: 25
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: cf28303c1ffedf36354fd0fb1489666ad68d519c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740727"
 ---
 # <a name="functions-mdx-syntax"></a>函數 (MDX 語法)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   多維度運算式 (MDX) 有數個內建函數類別，以執行特定作業。 下表列出 MDX 中可用的函數類別。  
   
 > [!NOTE]  
 >  如需個別函數的詳細資訊，請參閱[MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)。  
   
-|函數類別|Description|  
+|函數類別|描述|  
 |-----------------------|-----------------|  
 |陣列函數|提供可在預存程序中使用的陣列。<br /><br /> 如需詳細資訊，請參閱[使用預存程序&#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)。|  
 |維度函數|傳回階層、層級或成員維度的參考。<br /><br /> 如需詳細資訊，請參閱[使用維度、 階層和層級函數](../mdx/using-dimension-hierarchy-and-level-functions.md)。|  

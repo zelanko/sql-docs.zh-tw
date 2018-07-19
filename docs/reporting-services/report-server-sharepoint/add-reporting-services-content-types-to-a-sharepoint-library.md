@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027795"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>將 Reporting Services 內容類型新增至 SharePoint 文件庫
 

@@ -13,7 +13,7 @@ ms.openlocfilehash: fd628eb44324dd76c9def9c0dff8668e0aa0fa07
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575770"
 ---
 # <a name="databaseid-element-xmla"></a>DatabaseID 元素 (XMLA)

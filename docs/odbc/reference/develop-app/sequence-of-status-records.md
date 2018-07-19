@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911093"
 ---
 # <a name="sequence-of-status-records"></a>狀態記錄的序列
 如果傳回兩個或多個狀態記錄，在驅動程式管理員和驅動程式進行排名，根據下列規則。 具有最高等級的記錄是第一筆記錄。 資料錄 （驅動程式管理員、 驅動程式、 閘道和等等） 的來源不會被視為時排序記錄。  

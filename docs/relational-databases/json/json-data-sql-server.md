@@ -20,19 +20,19 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 86b80d4706adbbf298df34a74d6c923bb4f56161
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a83e36e7f62f9b8ca38c11e5113dae1c8fc4f5d3
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586020"
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612213"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server 中的 JSON 資料
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 JSON 是種熱門的文字資料格式，用於在新式 Web 和行動應用程式中交換資料。 其也可用於將非結構化的資料儲存在記錄檔或是類似 Microsoft Azure Cosmos DB 的 NoSQL 資料庫中。 許多 REST Web 服務會傳回已格式化為 JSON 文字的結果，或接受已格式化為 JSON 的資料。 例如，大部分的 Azure 服務 (例如 Azure 搜尋服務、Azure 儲存體和 Azure Cosmos DB) 都具有傳回或取用 JSON 的 REST 端點。 JSON 也是用於透過 AJAX 呼叫在網頁和 Web 伺服器之間交換資料的主要格式。 
 
-SQL Server 中的 JSON 函數可讓您將 NoSQL 與關聯式概念結合在同一個資料庫中。 現在，您可以將傳統關聯式資料行與包含採用 JSON 文字格式之文件的資料行結合在同一個資料表中、剖析並匯入關聯式結構中的 JSON 文件，或讓關聯式資料採用 JSON 文字格式。 在下列影片中，您將了解在 SQL Server 和 Azure SQL Database 中，JSON 函數如何將關聯式與 NoSQL 概念連接：
+SQL Server 中的 JSON 函數可讓您將 NoSQL 與關聯式概念結合在同一個資料庫中。 現在，您可以將傳統關聯式資料行與包含採用 JSON 文字格式之文件的資料行結合在同一個資料表中、剖析並匯入關聯式結構中的 JSON 文件，或讓關聯式資料採用 JSON 文字格式。 在下列影片中，您將了解在 SQL Server 和 Azure SQL Database 中，JSON 函式如何連接關聯式與 NoSQL 概念：
 
 *NoSQL 與關聯式領域之間的橋樑 JSON*
 > [!VIDEO https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds/player]

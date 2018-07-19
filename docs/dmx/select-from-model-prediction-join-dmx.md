@@ -1,46 +1,25 @@
 ---
-title: SELECT FROM&lt;模型&gt;預測 JOIN (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICTION
-- PREDICTION_JOIN
-- SELECT
-- join
-- FROM
-- PREDICTION JOIN
-dev_langs:
-- DMX
-helpviewer_keywords:
-- prediction joins [DMX]
-- PREDICTION JOIN statement
-- natural prediction joins [DMX]
-- open query predictions
-- singleton query predictions [DMX]
-- SELECT FROM <model> PREDICTION JOIN statement
-ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
-author: Minewiskan
+title: SELECT FROM&lt;模型&gt;預測 JOIN (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 7014d546d0484dcd5d741844a98c8060f925c96c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37989510"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM&lt;模型&gt;預測 JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  使用採礦模型預測外部資料來源中的資料行狀態。 **PREDICTION JOIN**陳述式符合來源查詢中每個案例的模型。  
+  使用採礦模型預測外部資料來源中的資料行狀態。 **PREDICTION JOIN**陳述式符合來源查詢中每個案例中的模型。  
   
 ## <a name="syntax"></a>語法  
   
@@ -79,7 +58,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  選擇性。 傳回純量值的運算式。  
   
 ## <a name="remarks"></a>備註  
- ON 子句會定義來源查詢中的資料行與採礦模型中的資料行之間的對應。 這個對應用於將來源查詢中的資料行導向採礦模型中的資料行，使資料行能做為建立預測時的輸入。 中的資料行\<*聯結的對應清單*> 相關使用等號 （=），如下列範例所示：  
+ ON 子句會定義來源查詢中的資料行與採礦模型中的資料行之間的對應。 這個對應用於將來源查詢中的資料行導向採礦模型中的資料行，使資料行能做為建立預測時的輸入。 中的資料行\<*聯結的對應清單*> 相關的使用等號 （=），如下列範例所示：  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -91,9 +70,9 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  預測聯結的來源查詢可以是資料表或單一查詢。  
   
- 您可以指定不會傳回資料表運算式中的預測函數\< *select 運算式清單*> 而\<*條件運算式*>。  
+ 您可以指定不會傳回資料表運算式中的預測函數\< *select 運算式清單*>， \<*條件運算式*>。  
   
- **NATURAL PREDICTION JOIN**會自動對應在一起的來源查詢中的資料行名稱符合模型中的資料行名稱。 如果您使用**自然預測**，您可以省略 ON 子句。  
+ **NATURAL PREDICTION JOIN**會自動對應在一起的來源查詢從模型中的資料行名稱相符的資料行名稱。 如果您使用**自然預測**，您可以省略 ON 子句。  
   
  WHERE 條件僅能套用到可預測的資料行或相關的資料行。  
   
@@ -110,7 +89,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   家裡有兩個小孩  
   
- 查詢使用 TM Decision Tree 採礦模型和關於主體的已知的特性，會傳回布林值，描述個人是否購買自行車，以及一組表格式值，傳回[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函式，說明如何進行預測。  
+ 查詢使用 TM Decision Tree 採礦模型和關於主體的已知的特性，傳回布林值，描述個人是否購買自行車，以及一組表格式值，傳回[PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)函式，描述如何進行預測。  
   
 ```  
 SELECT  
@@ -127,7 +106,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>範例 2：使用 OPENQUERY  
- 下列範例顯示如何使用儲存在外部資料集中的潛在客戶清單，建立批次預測查詢。 因為資料表已定義的執行個體的資料來源檢視的一部分[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，查詢就可以使用[OPENQUERY](../dmx/source-data-query-openquery.md)來擷取資料。 因為資料表中的資料行名稱不同的採礦模型**ON**子句必須用來在資料表中的資料行對應到模型中的資料行。  
+ 下列範例顯示如何使用儲存在外部資料集中的潛在客戶清單，建立批次預測查詢。 因為資料表已定義的執行個體的資料來源檢視的一部分[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，可以使用查詢[OPENQUERY](../dmx/source-data-query-openquery.md)來擷取資料。 因為資料表中的資料行名稱不同採礦模型中的那些**ON**子句必須用來在資料表中的資料行對應到模型中的資料行。  
   
  查詢會傳回資料表中每個人的名字與姓氏，以及表示每個人是否可能購買自行車，其中 0 表示「可能不會購買自行車」，而 1 表示「可能會購買自行車」。 最後一個資料行包含預測結果的機率。  
   
@@ -184,7 +163,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- [預測&#40;DMX&#41; ](../dmx/predict-dmx.md)函式是多型態類型，並可以搭配所有模型類型。 您可以使用 value3 做為函數的引數，以限制查詢所傳回的項目數目。 **選取**遵循 NATURAL PREDICTION JOIN 子句的清單提供要用於預測做為輸入的值。  
+ [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md)函式是多型，並可以搭配所有模型類型。 您可以使用 value3 做為函數的引數，以限制查詢所傳回的項目數目。 **選取**遵循 NATURAL PREDICTION JOIN 子句的清單會提供要做為輸入用於預測的值。  
   
 ```  
 SELECT FLATTENED  
@@ -205,12 +184,12 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set - Mountain|  
   
- 包含可預測屬性 `[v Assoc Seq Line Items]` 的資料行是資料表資料行，因此，查詢會傳回包含巢狀資料表的單一資料行。 根據預設，巢狀資料表資料行的名稱為 `Expression`。 如果您的提供者不支援階層式資料列集，您可以使用**FLATTENED**關鍵字，讓結果更容易檢視，在此範例所示。  
+ 包含可預測屬性 `[v Assoc Seq Line Items]` 的資料行是資料表資料行，因此，查詢會傳回包含巢狀資料表的單一資料行。 根據預設，巢狀資料表資料行的名稱為 `Expression`。 如果您的提供者不支援階層式資料列集，您可以使用**FLATTENED**關鍵字，讓結果更容易檢視在此範例中所示。  
   
 ## <a name="see-also"></a>另請參閱  
  [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

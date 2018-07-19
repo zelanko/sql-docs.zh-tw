@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 520dc05b-83de-4668-8d27-07ee0ef08185
@@ -16,11 +14,12 @@ caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8a415bc17a50991c493b08bb44b9297e51bb7468
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5db4a70b5393e1e2da8fe614186cbcedda0e9f11
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330032"
 ---
 # <a name="change-data-capture-for-oracle-by-attunity"></a>Change Data Capture for Oracle by Attunity
 Change Data Capture for Oracle by Attunity 下載包含下列 2 個元件。

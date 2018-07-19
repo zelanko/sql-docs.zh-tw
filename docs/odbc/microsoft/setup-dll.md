@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899323"
 ---
 # <a name="setup-dll"></a>安裝程式 DLL
 ODBC 管理員呼叫函式**ConfigDSN**當使用者設定資料來源。

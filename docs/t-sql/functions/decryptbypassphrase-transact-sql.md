@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - DECRYPTBYPASSPHRASE function
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 01e01348ab88ef33ab38a9fd9040d5ff0174cb26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ee0265d9974883cd0d61ac1b8f0514f97d1b3a04
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787749"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  將以複雜密碼加密的資料解密。  
+此函式會將原本以複雜密碼加密的資料解密。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,43 +49,51 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
   
 ## <a name="arguments"></a>引數  
  *passphrase*  
- 這是要用來產生解密金鑰的複雜密碼。  
+用來產生解密金鑰的複雜密碼。  
   
  @passphrase  
- 為 **nvarchar**、**char**、**varchar** 或 **nchar** 類型的變數，其中包含用來產生解密金鑰的複雜密碼。  
+變數，其類型為
+
++ **char**
++ **nchar**
++ **nvarchar**
+
+中的多個
+
++ **varchar**
+
+其中包含用來產生解密金鑰的複雜密碼。  
   
- '*ciphertext*'  
- 這是要解密的加密文字。  
+'*ciphertext*'  
+以金鑰加密的資料字串。 *ciphertext* 具有 **varbinary** 資料類型。  
+ 
+@ciphertext  
+**varbinary** 類型的變數，其中包含以金鑰加密的資料。 *@ciphertext* 變數的大小上限為 8,000 個位元組。  
   
- @ciphertext  
- 為包含加密文字之 **varbinary** 類型的變數。 大小上限是 8,000 位元組。  
+*add_authenticator*  
+指出原始加密程序是否隨純文字一同包含及加密驗證器。 如果加密程序使用驗證器，則 *add_authenticator* 的值為 1。 *add_authenticator* 具有 **int** 資料類型。  
   
- *add_authenticator*  
- 指出驗證器是否要與純文字一起加密。 如果使用驗證器，則為 1。 **int**.  
+@add_authenticator  
+指出原始加密程序是否隨純文字一同包含及加密驗證器的變數。 如果加密程序使用驗證器，則 *@add_authenticator* 的值為 1。 *@add_authenticator* 具有 **int** 資料類型。  
+
+*authenticator*  
+作為驗證器產生基礎使用的資料。 *authenticator* 具有 **sysname** 資料類型。  
   
- @add_authenticator  
- 指出驗證器是否要與純文字一起加密。 如果使用驗證器，則為 1。 **int**.  
-  
- *authenticator*  
- 這是驗證器資料。 **sysname**.  
-  
- @authenticator  
- 這是含有要衍生驗證器之資料的變數。  
+@authenticator  
+變數，其中包含作為驗證器產生基礎使用的資料。 *@authenticator* 具有 **sysname** 資料類型。  
   
 ## <a name="return-types"></a>傳回類型  
- **varbinary**，大小上限為 8,000 位元組。  
+**varbinary**，大小上限為 8,000 個位元組。  
   
 ## <a name="remarks"></a>Remarks  
- 執行這個函數不需要任何權限。  
+執行 `DECRYPTBYPASSPHRASE` 不需要任何權限。 如果收到錯誤的複雜密碼或錯誤的驗證器資訊，則 `DECRYPTBYPASSPHRASE` 會傳回 NULL。  
   
- 如果使用錯誤的複雜密碼或驗證器資訊，則傳回 NULL。  
+`DECRYPTBYPASSPHRASE` 使用複雜密碼來產生解密金鑰。 此解密金鑰不會保存。  
   
- 複雜密碼是用來產生解密金鑰，它不會保存下來。  
-  
- 如果對加密文字進行加密時包含了驗證器，則解密時必須提供驗證器。 如果在解密時提供的驗證器值不符合與資料一起加密的驗證器值，則解密會失敗。  
+如果對加密文字進行加密時包含了驗證器，`DECRYPTBYPASSPHRASE` 必須收到該相同的驗證器以用於解密程序。 如果提供給解密程序的驗證器值不符合原本用來加密的驗證器值，`DECRYPTBYPASSPHRASE` 作業會失敗。  
   
 ## <a name="examples"></a>範例  
- 下列範例會將 [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) 中更新的記錄解密。  
+此範例會將 [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md) 中更新的記錄解密。  
   
 ```  
 USE AdventureWorks2012;  

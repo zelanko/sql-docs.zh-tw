@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020375"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>加入、移動或刪除文字方塊 (報表產生器及 SSRS)
   文字方塊是 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中最常使用的報表項目。 您可以將文字方塊加入至報表主體，以便顯示標題、參數選擇、內建欄位和日期等資訊。  

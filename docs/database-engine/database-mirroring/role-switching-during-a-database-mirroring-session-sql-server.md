@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -24,15 +23,16 @@ caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bc5dee1f04cafe2298064549370e4d14e98f87a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6683b8bfd18385579307b173cc0af5a9fe9c3e1
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312377"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>資料庫鏡像工作階段期間的角色切換 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  在資料庫鏡像工作階段的內容中，主體與鏡像角色通常可以用一種稱為 *「角色切換」*的程序交換。 在角色切換中，鏡像伺服器將充當主體伺服器的「容錯移轉夥伴」、接替主體角色、復原其資料庫副本，並使其上線以作為新的主體資料庫。 先前的主體伺服器可用時，會擔任鏡像角色，而其資料庫即成為新的鏡像資料庫。 原則上，這些角色可以來回切換，以回應多項失敗或達成管理目的。  
+  在資料庫鏡像工作階段的內容中，主體與鏡像角色通常可以用一種稱為 *「角色切換」* 的程序交換。 在角色切換中，鏡像伺服器將充當主體伺服器的「容錯移轉夥伴」、接替主體角色、復原其資料庫副本，並使其上線以作為新的主體資料庫。 先前的主體伺服器可用時，會擔任鏡像角色，而其資料庫即成為新的鏡像資料庫。 原則上，這些角色可以來回切換，以回應多項失敗或達成管理目的。  
   
 > [!NOTE]  
 >  本主題假設您已熟悉資料庫鏡像作業模式。 如需詳細資訊，請參閱 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)。  

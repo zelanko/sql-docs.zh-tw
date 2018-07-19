@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914283"
 ---
 # <a name="driver-manager-connection-pooling"></a>驅動程式管理員連接共用
 連接共用可讓應用程式不需要重新建立每次使用的連接集區使用的連接。 一旦已經建立連接，並放在集區中，應用程式可以重複使用該連接，而不執行完整的連線程序。  

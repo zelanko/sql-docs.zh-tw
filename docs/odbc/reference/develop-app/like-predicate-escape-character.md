@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911863"
 ---
 # <a name="like-predicate-escape-character"></a>像述詞的逸出字元
 在**像**述詞，百分比符號 （%） 比對零個或多個任意字元和底線 (_) 符合任何一個字元。 符合實際的百分比符號或底線中**像**述詞，逸出字元必須放在之前的百分比符號或底線。 定義的逸出序列**像**述詞的逸出字元是：  

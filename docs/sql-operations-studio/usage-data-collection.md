@@ -1,5 +1,5 @@
----
-title: 啟用或停用 SQL Operations Studio （預覽）的使用量資料收集與損毀報表  |Microsoft 文件
+﻿---
+title: 啟用或停用 SQL Operations Studio （預覽）的使用量資料收集與損毀報表 |Microsoft 文件
 description: 本文說明如何控制是否收集使用量與損毀報告資料並傳送給 Microsoft。
 ms.custom: tools|sos
 ms.date: 11/15/2017
@@ -18,8 +18,9 @@ ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34306457"
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>啟用或停用[!INCLUDE[name-sos](../includes/name-sos-short.md)]的使用量資料收集 
+# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>啟用或停用[!INCLUDE[name-sos](../includes/name-sos-short.md)]的使用量資料收集
 
 ## <a name="how-to-disable-telemetry-reporting"></a>如何停用遙測報告
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 05/18/2018
 
 如果您不想要使用狀況資料傳送給 Microsoft，您可以設定*telemetry.enableTelemetry*設定值為*false*。
 
-若要從 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 將所有遙測事件設為無回應，請從**檔案** > **喜好設定** > **設定**，新增下列選項：
+若要從 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 將所有遙測事件設為無回應，請從**檔案**  >  **喜好設定**  >  **設定**，新增下列選項：
 
 ```json
     "telemetry.enableTelemetry": false

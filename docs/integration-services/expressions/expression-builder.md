@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50004539743949c565e6fb7c7896e09cce9c1788
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6fa0570be84df74f8e4cd0a602134f5da6f7b942
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334342"
 ---
 # <a name="expression-builder"></a>運算式產生器
   使用 [運算式產生器] 對話方塊，即可藉由使用圖形化使用者介面列出變數以及提供函數的內建參考、類型轉換和 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語言所包含的運算子，來建立和編輯屬性運算式或撰寫可設定變數值的運算式。  

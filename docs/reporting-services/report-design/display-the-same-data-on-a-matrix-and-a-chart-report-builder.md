@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022085"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>在矩陣和圖表上顯示相同的資料 (報表產生器)
   當您想要在矩陣和圖表中顯示相同的資料時，必須針對兩個資料區設定屬性來指定相同的資料集，也必須針對篩選、群組、排序和資料設定相同的運算式。  

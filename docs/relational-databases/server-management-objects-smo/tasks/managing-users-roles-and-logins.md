@@ -1,5 +1,5 @@
 ---
-title: 管理使用者、 角色和登入 |Microsoft 文件
+title: 管理使用者、 角色和登入 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a803aa9d6443c8aa62d7ebca7d7ac5bd3abf990e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061806"
 ---
 # <a name="managing-users-roles-and-logins"></a>管理使用者、角色和登入
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,15 +34,15 @@ ms.lasthandoff: 05/03/2018
   
  伺服器層級相關聯的權限會列為屬性<xref:Microsoft.SqlServer.Management.Smo.ServerPermission>物件。 伺服器層級權限可授與個別的登入帳戶，也可從這些帳戶拒絕或撤銷。  
   
- 每個<xref:Microsoft.SqlServer.Management.Smo.Database>物件具有<xref:Microsoft.SqlServer.Management.Smo.UserCollection>指定所有使用者資料庫中的物件。 每個使用者都與一個登入相關聯。 單一的登入可以與一個以上資料庫中的使用者產生關聯。 <xref:Microsoft.SqlServer.Management.Smo.Login>物件的<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>方法可以用來列出與登入相關聯的每個資料庫中所有使用者。 或者，<xref:Microsoft.SqlServer.Management.Smo.User> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 屬性也可指定與該使用者相關的登入。  
+ 每隔<xref:Microsoft.SqlServer.Management.Smo.Database>物件具有<xref:Microsoft.SqlServer.Management.Smo.UserCollection>指定資料庫中的所有使用者的物件。 每個使用者都與一個登入相關聯。 單一的登入可以與一個以上資料庫中的使用者產生關聯。 <xref:Microsoft.SqlServer.Management.Smo.Login>物件的<xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A>方法可用來列出與登入相關聯的每個資料庫中的所有使用者。 或者，<xref:Microsoft.SqlServer.Management.Smo.User> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 屬性也可指定與該使用者相關的登入。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫也具有指定一組可讓使用者執行特定工作的資料庫層級權限的角色。 與伺服器角色不同的是，資料庫角色不是固定的。 這些角色可以建立、修改和移除。 若要進行大量管理，可以為資料庫角色指派權限和使用者。  
   
 ## <a name="example"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>在 Visual C# 中列舉登入和關聯的使用者  
- 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
+ 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者在[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
   
 ```csharp  
 {   
@@ -67,7 +68,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>在 PowerShell 中列舉登入和相關聯的使用者  
- 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
+ 資料庫中的每個使用者都與一個登入相關聯。 此登入可以與一個以上資料庫中的使用者產生關聯。 此程式碼範例示範如何呼叫 <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.Login> 方法來列出與登入相關聯的所有資料庫使用者。 此範例會建立登入和使用者在[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]以確保有可以列舉的對應資訊的資料庫。  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  
@@ -95,7 +96,7 @@ CD \sql\localhost\Default\Databases
 ```  
   
 ## <a name="managing-roles-and-users"></a>管理角色和使用者  
- 此範例示範如何管理角色和使用者。 若要執行此範例，您必須參考下列組件：  
+ 此範例示範如何管理角色和使用者。 若要執行此範例必須參考下列組件：  
   
 -   Microsoft.SqlServer.Smo.dll  
   

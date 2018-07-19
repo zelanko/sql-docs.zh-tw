@@ -23,9 +23,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 250ea8227a4bd045883322ba2fec3e923336a5e2
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33076818"
 ---
 # <a name="run-sql-server-profiler"></a>執行 SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

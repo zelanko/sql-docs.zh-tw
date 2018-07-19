@@ -1,0 +1,41 @@
+---
+title: 在 屬性關聯性圖表中排列形狀 |Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- attribute relationships [Analysis Services]
+ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
+caps.latest.revision: 10
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: e99f3b4bc7687c70321874cce87b567acbbe5771
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37330528"
+---
+# <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>在屬性關聯性圖表中排列形狀
+  您可以在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中維度設計師之 [維度結構] 檢視的 [屬性關聯性] 索引標籤中，變更形狀的配置。  
+  
+### <a name="to-arrange-shapes-in-the-attribute-relationship-diagram"></a>在屬性關聯性圖表中排列形狀  
+  
+1.  在 [維度設計師] 中，開啟包含您想要建立屬性關聯性之屬性的維度。  
+  
+2.  在 [屬性關聯性] 索引標籤的圖表中，按一下以選取形狀，然後從上邊緣抓取形狀並將它拖曳至新的位置。  
+  
+     此外，您也可以按一下 [排列形狀]，以便根據維度設計師所使用的配置演算法來自動排列所有形狀。  
+  
+## <a name="see-also"></a>另請參閱  
+ [屬性關聯性](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   
+ [定義屬性關聯性](attribute-relationships-define.md)  
+  
+  

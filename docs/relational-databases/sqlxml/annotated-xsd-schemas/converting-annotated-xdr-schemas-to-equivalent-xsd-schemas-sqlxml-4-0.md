@@ -1,5 +1,5 @@
 ---
-title: 轉換註解式 XDR 結構描述為對等的 XSD 結構描述 (SQLXML 4.0) |Microsoft 文件
+title: 註解式轉換為相等的 XSD 結構描述 (SQLXML 4.0) 的 XDR 結構描述 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a841cf9e5bcfe3c1de5c199fa29984c709631598
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047276"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>將註解式 XDR 結構描述轉換為等效 XSD 結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  其中：  
   
  XDRFileName  
- 這是要轉換成 XSD 之 XDR 檔案的名稱。 此工具會讀取輸入 XDR 檔案並且在目前的工作目錄中建立 XSD 輸出檔案。 如果輸入檔案具有 .xdr 或 .xml 副檔名，系統就會使用相同的名稱與 .xsd 副檔名來建立輸出 XSD 檔案。 如果輸入的檔案名稱的副檔名為.xml 或.xdr （或如果遺漏副檔名） 以外，建立輸出檔案具有相同名稱與.xsd 副檔名附加至輸入的檔案名稱。 例如，如果輸入 XDR 檔案名稱為 SampleFile.abc，產生的 XSD 就會儲存成 SampleFile.abc.xsd。  
+ 這是要轉換成 XSD 之 XDR 檔案的名稱。 此工具會讀取輸入 XDR 檔案並且在目前的工作目錄中建立 XSD 輸出檔案。 如果輸入檔案具有 .xdr 或 .xml 副檔名，系統就會使用相同的名稱與 .xsd 副檔名來建立輸出 XSD 檔案。 如果輸入的副檔名是.xml 或.xdr （或以外的延伸模組是否遺漏），具有相同名稱建立輸出檔案和.xsd 副檔名附加至輸入的檔案名稱。 例如，如果輸入 XDR 檔案名稱為 SampleFile.abc，產生的 XSD 就會儲存成 SampleFile.abc.xsd。  
   
  -y  
  (選擇性) 使用轉換器工具所產生的 XSD 檔案來覆寫現有的 XSD 檔案。 如果沒有指定旗標，此工具會提示您指定是否要覆寫現有的 XSD 檔案，並提供變更輸出檔案名稱的選項。  
@@ -59,10 +60,10 @@ cvtschema XDRFileName, [-y], [-w] [-?]
  (選擇性) 傳回在轉換程序中由此工具產生的非嚴重警告。 根據預設，此工具只會針對嚴重錯誤顯示訊息。  
   
  -?  
- 傳回您可以使用指定的選項清單**cvt**，以及相關說明。  
+ 傳回一份您可以使用指定的選項**cvt**，以及相關說明。  
   
 ## <a name="see-also"></a>另請參閱  
- [將 XSD 資料類型對應到 XPath 資料型別&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
+ [將 XSD 資料類型對應到 XPath 資料類型&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
  [XSD 註解&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

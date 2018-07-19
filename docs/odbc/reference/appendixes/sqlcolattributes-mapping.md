@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907310"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 對應
 當應用程式呼叫**SQLColAttributes**透過 ODBC 3 *.x*驅動程式，會呼叫**SQLColAttributes**對應至**SQLColAttribute** ，如下所示：  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  如果應用程式的 ODBC 2。*x*應用程式， *fDescType* SQL_COLUMN_TYPE，且傳回型別是精簡 DATETIME 類型，傳回值之日期、 時間和時間戳記代碼的驅動程式管理員對應。  
   
-2.  如果*fDescType* SQL_COLUMN_NAME、 SQL_COLUMN_NULLABLE，或 SQL_COLUMN_COUNT，驅動程式管理員呼叫**SQLColAttribute**與驅動程式中*FieldIdentifier*引數對應到 SQL_DESC_NAME、 SQL_DESC_NULLABLE 或 SQL_DESC_COUNT，適當地*。* 所有其他的值*fDescType*會傳遞給驅動程式。  
+2.  如果*fDescType* SQL_COLUMN_NAME、 SQL_COLUMN_NULLABLE，或 SQL_COLUMN_COUNT，驅動程式管理員呼叫**SQLColAttribute**與驅動程式中*FieldIdentifier*引數對應到 SQL_DESC_NAME、 SQL_DESC_NULLABLE 或 SQL_DESC_COUNT，適當地 *。* 所有其他的值*fDescType*會傳遞給驅動程式。  
   
  ODBC 3 *.x*驅動程式必須支援所有 ODBC 3 *.x* *FieldIdentifiers*列出**SQLColAttribute**。  
   

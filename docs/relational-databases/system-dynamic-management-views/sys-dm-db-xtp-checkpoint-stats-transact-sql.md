@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_xtp_checkpoint_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 183970c09d23304553167b20366e0751d5f35207
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993860"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,54 +43,54 @@ ms.lasthandoff: 05/23/2018
 SELECT * FROM db.sys.dm_db_xtp_checkpoint_stats;  
 ```  
   
-**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 本質上與較新的版本不同，會在主題中的較低討論[SQL Server 2014](#bkmk_2014)。**
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 本質上不同於較新版本，在主題中較低討論[SQL Server 2014](#bkmk_2014)。**
   
-## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 及更新版本  
- 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`開始**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
+## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更新版本  
+ 下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，與開頭**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|控制器所看到的最後一個 LSN。|  
 |end_of_log_lsn|**numeric(38)**|記錄檔結束 LSN。|  
-|bytes_to_end_of_log|**bigint**|記錄未處理的控制站，對應至不同的位元組的位元組`last_lsn_processed`和`end_of_log_lsn`。|  
+|bytes_to_end_of_log|**bigint**|記錄未處理的控制站，對應到記憶體位元組之間的位元組`last_lsn_processed`和`end_of_log_lsn`。|  
 |log_consumption_rate|**bigint**|交易記錄檔的耗用量 （以 KB/秒） 控制站的速率。|  
 |active_scan_time_in_ms|**bigint**|正在掃描交易記錄檔中的控制站所花費的時間。|  
 |total_wait_time_in_ms|**bigint**|控制器的累計等候時間時不會掃描記錄檔。|  
-|waits_for_io|**bigint**|等候記錄 IO 控制器執行緒所造成的數目。|  
+|waits_for_io|**bigint**|記錄產生的控制器執行緒的 IO 等候的數目。|  
 |io_wait_time_in_ms|**bigint**|等候記錄 IO 控制器執行緒所花費的累計時間。|  
-|waits_for_new_log_count|**bigint**|要產生新的記錄檔的控制器執行緒所造成的等候次數。|  
-|new_log_wait_time_in_ms|**bigint**|控制器執行緒等候新記錄檔所花費的累計時間。|  
-|idle_attempts_count|**bigint**|控制器已轉換為閒置狀態的次數。|  
-|tx_segments_dispatched|**bigint**|看到控制器，並分派至序列化程式的區段數目。 區段是連續記錄的部分構成序列化的單位。 它目前的大小調整成 1 MB，但可以在未來變更。|  
-|segment_bytes_dispatched|**bigint**|資料庫重新啟動之後，由序列化程式，以控制站分派位元組的總位元組計數。|  
+|waits_for_new_log_count|**bigint**|要產生新的記錄檔的控制器執行緒所產生的等候次數。|  
+|new_log_wait_time_in_ms|**bigint**|控制器執行緒等候新的記錄檔所花費的累計時間。|  
+|idle_attempts_count|**bigint**|控制器轉換到閒置狀態的次數。|  
+|tx_segments_dispatched|**bigint**|看到的控制器，並分派至序列化程式的區段數目。 區段是連續構成序列化的單位的記錄檔的一部分。 它的目前大小為 1 MB，大小，但可以在未來變更。|  
+|segment_bytes_dispatched|**bigint**|由於資料庫重新啟動，序列化程式，以控制站所發送的位元組總位元組數。|  
 |bytes_serialized|**bigint**|序列化，因為資料庫重新啟動的位元組總數。|  
 |serializer_user_time_in_ms|**bigint**|在使用者模式中的序列化程式所花費的時間。|  
 |serializer_kernel_time_in_ms|**bigint**|在核心模式中的序列化程式所花費的時間。|  
 |xtp_log_bytes_consumed|**bigint**|從資料庫重新啟動以來耗用的記錄檔位元組總數。|  
-|checkpoints_closed|**bigint**|資料庫重新啟動之後，已關閉的檢查點計數。|  
+|checkpoints_closed|**bigint**|由於資料庫重新啟動，就會關閉的檢查點計數。|  
 |last_closed_checkpoint_ts|**bigint**|最近已關閉的檢查點的時間戳記。|  
 |hardened_recovery_lsn|**numeric(38)**|復原會從這個 LSN 開始。|  
-|hardened_root_file_guid|**uniqueidentifier**|因為最後一個已完成檢查點強行寫入的根檔案的 GUID。|  
-|hardened_root_file_watermark|**bigint**|**內部只**。 正值是有效的最多讀取根檔案 （這是內部相關只對型別 – 呼叫 BSN）。|  
+|hardened_root_file_guid|**uniqueidentifier**|因為最後一個已完成的檢查點強行寫入的根檔案的 GUID。|  
+|hardened_root_file_watermark|**bigint**|**內部只**。 正值是有效最多可讀取的根檔案 （這是在內部相關型別只 – 呼叫 BSN）。|  
 |hardened_truncation_lsn|**numeric(38)**|截斷點的 LSN。|  
 |log_bytes_since_last_close|**bigint**|從最後一個位元組會關閉目前的記錄結尾。|  
 |time_since_last_close_in_ms|**bigint**|自上次關閉的檢查點的時間。|  
-|current_checkpoint_id|**bigint**|目前新的區段會被指派給這個檢查點。 檢查點系統是管線。 目前的檢查點是要指派給記錄檔中的區段。 一旦它已達到限制，檢查點會依控制站和一個新建立為目前釋出。|  
-|current_checkpoint_segment_count|**bigint**|區段中目前的檢查點的計數。|  
-|recovery_lsn_candidate|**bigint**|**只有在內部**。 要挑選為 recoverylsn current_checkpoint_id 關閉時的候選。|  
+|current_checkpoint_id|**bigint**|目前新的區段會指派給這個檢查點。 檢查點系統是管線。 目前的檢查點是要指派給記錄檔中的區段。 一旦它已達到限制，控制器和一個新建立為目前所發行的檢查點。|  
+|current_checkpoint_segment_count|**bigint**|在目前的檢查點的區段數目。|  
+|recovery_lsn_candidate|**bigint**|**內部唯一**。 Current_checkpoint_id 關閉時，為 recoverylsn 挑選的候選。|  
 |outstanding_checkpoint_count|**bigint**|在等候關閉管線中的檢查點的數目。|  
-|closing_checkpoint_id|**bigint**|關閉檢查點的識別碼。<br /><br /> 序列化程式會使用以平行方式，因此一旦完成後檢查點是由關閉執行緒即將關閉的候選項目。 但是關閉執行緒可以只關閉一次，而且它必須按照順序，因此關閉檢查點是關閉的執行緒目前正在處理的一個。|  
-|recovery_checkpoint_id|**bigint**|若要復原中使用檢查點的識別碼。|  
+|closing_checkpoint_id|**bigint**|關閉檢查點的識別碼。<br /><br /> 序列化程式會使用以平行方式，因此一旦他們完成檢查點是由關閉執行緒即將關閉的候選項目。 關閉執行緒可以只關閉一次一個，但它必須按照順序排列，因此關閉檢查點就是正在關閉執行緒。|  
+|recovery_checkpoint_id|**bigint**|要用於復原檢查點的識別碼。|  
 |recovery_checkpoint_ts|**bigint**|復原檢查點的時間戳記。|  
-|bootstrap_recovery_lsn|**numeric(38)**|啟動安裝程式復原 LSN。|  
-|bootstrap_root_file_guid|**uniqueidentifier**|啟動安裝程式的根檔案的 GUID。|  
-|internal_error_code|**bigint**|所有控制器、 關閉、 序列化和 merge 執行緒所都看到的錯誤。|
+|bootstrap_recovery_lsn|**numeric(38)**|啟動的復原 LSN。|  
+|bootstrap_root_file_guid|**uniqueidentifier**|啟動程序的根檔案的 GUID。|  
+|internal_error_code|**bigint**|任何控制器、 關閉、 序列化程式和合併執行緒所看到的錯誤。|
 |bytes_of_large_data_serialized|**bigint**|已序列化的資料量。 |  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  下表描述的資料行`sys.dm_db_xtp_checkpoint_stats`，如**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|執行緒目前的記錄序號 (LSN) 和記錄檔結束之間的記錄位元組數目。|  
 |total_log_blocks_processed|**bigint**|伺服器啟動後處理的記錄區塊總數。|  

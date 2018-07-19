@@ -2,7 +2,6 @@
 title: 將屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c931d220a9418a790ff79d6b61c89004800a0061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 407ef25ebc55685436f61acaa42cbdf964619b09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280685"
 ---
 # <a name="position-property-ado"></a>Position 屬性 (ADO)
 指出目前的位置內[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852593"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>可用的選項
 在目前版本中，下列語法和選項可用：  
 
-[*資料庫 ***。**]* 結構描述***。***資料表 ***中** *data_file* | **出** *data_file*
+[*資料庫 ***。**]* 結構描述 ***。*** 資料表 ***中** *data_file* | **出** *data_file*
 
 - -a *packet_size*  
 指定伺服器所收送之每個網路封包的位元組數。  

@@ -1,6 +1,6 @@
 ---
 title: 上階 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb15caffbe8461da0ce04385bc58d7f1815483b5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0c108ea102e03000481d18bfc69f657e6bd8a0ce
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577000"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740047"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  會傳回指定層級上指定之成員的所有上階集合或離該成員指定距離之所有上階集合的函數。 與[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，傳回集將會永遠包含單一成員-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不支援多個父代的單一成員。  
+
+  會傳回指定層級上指定之成員的所有上階集合或離該成員指定距離之所有上階集合的函數。 與[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]，傳回集將會永遠包含單一成員-[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]不支援多個父代的單一成員。  
   
 ## <a name="syntax"></a>語法  
   

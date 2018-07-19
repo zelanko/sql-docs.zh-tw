@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: run-manage-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -23,11 +22,12 @@ caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ebf3f8cb5102df9db80e45bc148ae0a799d5319a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1940d38858bd1a658abe33fe987dc148834362f1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402330"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>載入本機封裝的輸出
   使用 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 將輸出儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 目的地時，或使用 **System.IO** 命名空間，將輸出儲存到一般檔案目的地時，用戶端應用程式可以讀取 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 套件的輸出。 但用戶端應用程式也可直接從記憶體讀取封裝的輸出，而無須在程序中間執行保存資料的步驟。 此解決方案的關鍵在於 **Microsoft.SqlServer.Dts.DtsClient** 命名空間，其中包含 **System.Data** 命名空間中的 **IDbConnection**、**IDbCommand** 和 **IDbDataParameter** 介面的特殊實作。 預設會在 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn** 中安裝 Microsoft.SqlServer.Dts.DtsClient.dll 組件。  

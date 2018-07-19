@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538618"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Analytics Platform System 的應用裝置安裝和設定
 將逐步引導 Analytics Platform System (APS) 應用裝置系統管理員可以透過設定和開始使用新的裝置的初始步驟。  

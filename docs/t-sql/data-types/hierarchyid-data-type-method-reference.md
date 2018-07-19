@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 7/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,14 +19,15 @@ helpviewer_keywords:
 - hierarchyid data type
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e1353b3de952999f647010d38c1e7afe86ef2b30
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bccbbf08ea36d3bf146459fa7aeadc449b9d812d
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421407"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid 資料類型方法參考
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

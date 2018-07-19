@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905343"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Visual FoxPro 欄位資料類型
 下表列出的值*FieldType* ALTER TABLE 和 CREATE TABLE 中的引數，並指出是否*nFieldWidth*和*nPrecision*引數必要項。  

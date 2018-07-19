@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899416"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>刪除 Visual FoxPro 資料來源
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>若要刪除 Visual FoxPro 資料來源  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907713"
 ---
 # <a name="closing-the-cursor"></a>關閉資料指標
 當使用資料指標完成應用程式時，它會呼叫**SQLCloseCursor**來關閉資料指標。 例如：  

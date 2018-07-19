@@ -2,7 +2,6 @@
 title: 使用 ADO 搭配 Microsoft Visual c + + |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f43804f1df7b7302acfc368c7ea67ebb097c91be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15fcf82b5a1ce0edd3b20d1784bfd8f4f61a5dd1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270417"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>使用 ADO 搭配 Microsoft Visual c + +
 如需使用 ADO 搭配 Visual c + +，請參閱下列各節：  

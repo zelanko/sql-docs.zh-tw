@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914883"
 ---
 # <a name="unicode-drivers"></a>Unicode 驅動程式
 驅動程式是否應該是 Unicode 驅動程式或 ANSI 驅動程式完全取決於資料來源的本質。 如果資料來源支援 Unicode 資料，此驅動程式應該是 Unicode 驅動程式。 如果資料來源只支援 ANSI 資料，此驅動程式應保留 ANSI 驅動程式。  

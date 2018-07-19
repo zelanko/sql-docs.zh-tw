@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914183"
 ---
 # <a name="sql-data-types"></a>SQL 資料類型
 每個 DBMS 定義自己的 SQL 型別。 每個 ODBC 驅動程式會顯示只有這些 SQL 資料型別相關聯的 DBMS 所定義。 ODBC 定義的 SQL 類型識別項類型的資訊關於如何將驅動程式對應 DBMS SQL 和驅動程式將 DBMS SQL 類型對應至它自己的驅動程式專屬 SQL 類型識別項的方式透過呼叫傳回**SQLGetTypeInfo**。 驅動程式也會傳回 SQL 資料類型描述的資料行及透過呼叫參數的資料型別時**SQLColAttribute**， **SQLColumns**， **SQLDescribeCol**，**SQLDescribeParam**， **SQLProcedureColumns**，和**SQLSpecialColumns**。  

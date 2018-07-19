@@ -2,7 +2,6 @@
 title: Requery 方法 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63c63ce0a4fd42b5cfe784793d76c68a5f23d083
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0473cd2c2e8faae5f5ca5805a4cf4e141225f9f9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281307"
 ---
 # <a name="requery-method"></a>Requery 方法
 更新中的資料[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)重新執行查詢所依據之物件的物件。  
@@ -38,7 +38,7 @@ recordset.Requery Options
 ```  
   
 #### <a name="parameters"></a>參數  
- *選項。*  
+ *選項*  
  選擇性。 位元遮罩，其中包含[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)和[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)值會影響這項作業。  
   
 > [!NOTE]

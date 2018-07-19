@@ -1,5 +1,5 @@
 ---
-title: 'sql: limit-value-欄位和 sql: limit-value-值 (SQLXML 4.0) |Microsoft 文件'
+title: 'sql: limit-value-欄位和 sql: limit-value-值 (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,14 +24,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: fb356e56bdd4453df6d0b62d921efafbde2dfdea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050091"
 ---
-# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>註解的解譯-sql: limit-value-欄位和 sql: limit-value-值
+# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>註解解譯-sql: limit-value-欄位和 sql: limit-value-值
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大量載入處理序**sql: limit-value-欄位**和**sql: limit-value-值**根據其定義的註解。 如需詳細資訊，請參閱[篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。  
+  XML 大量載入處理序**sql: limit-value-欄位**並**sql: limit-value-值**其定義的註解。 如需詳細資訊，請參閱 <<c0> [ 篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。</c0>  
   
  例如，假設資料庫包含下列資料表：  
   

@@ -2,7 +2,6 @@
 title: InternetTimeout 屬性範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6ea81924a976b47cae193acb8e57d94476cfd23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bfc664d024026447b83cf443002b4fe2642d06b5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288107"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout 屬性範例 （VC + +）
 > [!IMPORTANT]

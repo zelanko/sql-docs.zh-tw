@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904963"
 ---
 # <a name="about-drivers-and-data-sources"></a>關於驅動程式與資料來源
 *驅動程式*是可處理 ODBC 要求，以及將資料傳回給應用程式的元件。 必要時，驅動程式會修改成格式以了解資料來源的應用程式的要求。 您必須新增或刪除從您的電腦的驅動程式使用驅動程式的安裝程式。  

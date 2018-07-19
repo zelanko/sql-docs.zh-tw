@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.sp_backup_on_demand (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,12 +26,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d95bdd7fa337598c289aaa7a958c33513eec12d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058036"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (TRANSACT-SQL)
+# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   要求[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]執行指定資料庫的備份。  
@@ -54,10 +55,10 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="Arguments"></a> 引數  
  @database_name  
- 執行備份所在之資料庫的名稱。 @database_name是**SYSNAME**。  
+ 執行備份所在之資料庫的名稱。 @database_name已**SYSNAME**。  
   
  @type  
- 要執行的備份類型：資料庫或記錄。 @type參數是**nvarchar （32)**。  
+ 要執行的備份類型：資料庫或記錄。 @type參數是**NVARCHAR(32)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -65,7 +66,7 @@ EXEC managed_backup.sp_backup_on_demand
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
- 需要的成員資格**db_backupoperator**與資料庫角色， **ALTER ANY CREDENTIAL**權限，和**EXECUTE**權限**sp_delete_backuphistory**預存程序。  
+ 需要的成員資格**db_backupoperator**資料庫角色，使用**ALTER ANY CREDENTIAL**權限，並**EXECUTE**的權限**sp_delete_backuphistory**預存程序。  
   
 ## <a name="examples"></a>範例  
  下列範例提出資料庫 'TestDB' 的資料庫備份要求。 此資料庫已啟用[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  

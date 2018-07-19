@@ -1,34 +1,33 @@
 ---
-title: 處理結果 (ODBC) |Microsoft 文件
+title: 處理結果 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41cca358deb729fda5d9659b9b76040cf8c3cc50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 175b92969e9ce7515820a7aa3d9e4600e411bfb1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408231"
 ---
-# <a name="processing-results---process-results"></a>處理結果的程序結果
+# <a name="processing-results---process-results"></a>處理結果-處理結果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-ODBC 應用程式中處理結果牽涉到先決定結果集的特性，然後將資料擷取到程式變數，使用[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md)。  
+ODBC 應用程式中處理結果牽涉到先決定結果集的特性，然後將資料擷取到程式變數，使用其中一種[SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md)或是[SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
 ### <a name="to-process-results"></a>處理結果  
   
@@ -67,6 +66,6 @@ ODBC 應用程式中處理結果牽涉到先決定結果集的特性，然後將
 >  若要在 [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) 傳回 SQL_NO_DATA 之前取消結果集的處理，請呼叫 [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[擷取結果集資訊 & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
+[擷取結果集資訊&#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

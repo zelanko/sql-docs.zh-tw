@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025795"
 ---
 # <a name="report-server-namespace-management-methods"></a>報表伺服器命名空間管理方法
   報表伺服器管理 Web 服務中包含許多方法，可用來管理報表伺服器資料庫中的報表、資料夾和資源。  

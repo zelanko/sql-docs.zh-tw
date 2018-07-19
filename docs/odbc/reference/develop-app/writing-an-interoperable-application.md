@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915883"
 ---
 # <a name="writing-an-interoperable-application"></a>撰寫可互通的應用程式
 每當應用程式使用多個驅動程式針對相同的程式碼，該程式碼必須在這些驅動程式之間的互通。 在大部分情況下，這是容易的工作。 例如，擷取使用順向資料指標的資料列的程式碼也適用於所有的驅動程式。 在某些情況下，這可能會比較困難。 例如，建構 SQL 陳述式中使用的識別項的程式碼需要考慮識別碼案例中，用引號括住，和一段、 兩部分和三部分命名慣例。  

@@ -18,9 +18,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc1bf91650cd45f3bdc3c7a17a6e907205c7c258
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33073145"
 ---
 # <a name="replay-trace-data"></a>重新執行追蹤資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 ### <a name="to-replay-the-trace"></a>若要重新執行追蹤  
   
-1.  **(選擇性) 修改重新執行組態設定：**如果您想要修改重新執行組態設定 (例如順序模式和各種調整值)，您必須修改以 XML 為基礎之重新執行組態檔 `<ReplayOptions>` 的 `DReplay.exe.replay.config`元素。 此外，您也可以修改 `<OutputOptions>` 元素來指定輸出設定，例如是否要記錄資料列計數。 如果您要修改重新執行組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
+1.  **(選擇性) 修改重新執行組態設定：** 如果您想要修改重新執行組態設定 (例如順序模式和各種調整值)，您必須修改以 XML 為基礎之重新執行組態檔 `<ReplayOptions>` 的 `DReplay.exe.replay.config`元素。 此外，您也可以修改 `<OutputOptions>` 元素來指定輸出設定，例如是否要記錄資料列計數。 如果您要修改重新執行組態檔，我們建議您修改複本，而不是原始版本。 若要修改設定，請執行下列步驟：  
   
     1.  建立預設重新執行組態檔 `DReplay.exe.replay.config`的複本，並重新命名新的檔案。 預設重新執行組態檔位於管理工具的安裝資料夾。  
   

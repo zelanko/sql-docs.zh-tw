@@ -61,6 +61,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023475"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>格式化圖表 (報表產生器及 SSRS)
   在定義了圖表的資料且資料也以所要的方式顯示之後，您就可以加入格式設定，以改善整體外觀並強調關鍵的資料點。 您可以從 [屬性] 對話方塊修改最常見的格式設定選項，當您以滑鼠右鍵按一下圖表元素以顯示其快速鍵功能表時，此對話方塊就會顯示。 每個圖表元素都有它自己的對話方塊。 如需圖表元素的詳細資訊，請參閱 [圖表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)。  

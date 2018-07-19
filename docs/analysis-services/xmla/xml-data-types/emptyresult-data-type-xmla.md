@@ -13,7 +13,7 @@ ms.openlocfilehash: 7155c03203ad852573318056ab4e194fe19e7113
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573900"
 ---
 # <a name="emptyresult-data-type-xmla"></a>EmptyResult 資料類型 (XMLA)

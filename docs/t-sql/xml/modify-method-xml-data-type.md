@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|xml
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -20,11 +19,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01ad2afc24c09cdd6a05189335f1e0d6827d24c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca8c4e82cbe4788b7eb3fda179daa4e6c63fe70e
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36258375"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() 方法 (xml 資料類型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -1,14 +1,11 @@
 ---
-title: 設計組件 |Microsoft 文件
+title: 設計組件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
@@ -18,13 +15,14 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33519a8494be8f6a062227b81999f58c4f053071
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c26b6d0671feaf1638fecf9afe60744c5a2d1da
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37353510"
 ---
-# <a name="assemblies---designing"></a>組件的設計
+# <a name="assemblies---designing"></a>組件-設計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述以下在設計組件時應該考慮的因數：  
   
@@ -39,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  將程式碼封裝到組件時，應該要考慮以下事項：  
   
--   CLR 使用者定義型別及相依於 CLR 使用者自訂函數的索引，會導致保留的資料放在相依於組件的資料庫中。 資料庫中有相依於組件的保存資料時，修改組件的程式碼通常更為複雜。 因此，一般最好將保存資料相依性所依賴的程式碼 (例如，使用者定義型別及使用使用者自訂函數的索引)，跟沒有這類保存資料相依性的程式碼分開。 如需詳細資訊，請參閱[實作的組件](../../relational-databases/clr-integration/assemblies-implementing.md)和[ALTER ASSEMBLY &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。  
+-   CLR 使用者定義型別及相依於 CLR 使用者自訂函數的索引，會導致保留的資料放在相依於組件的資料庫中。 資料庫中有相依於組件的保存資料時，修改組件的程式碼通常更為複雜。 因此，一般最好將保存資料相依性所依賴的程式碼 (例如，使用者定義型別及使用使用者自訂函數的索引)，跟沒有這類保存資料相依性的程式碼分開。 如需詳細資訊，請參閱 <<c0> [ 實作的組件](../../relational-databases/clr-integration/assemblies-implementing.md)並[ALTER ASSEMBLY &#40;-&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)。</c0>  
   
 -   如果有段 Managed 程式碼需要更高的權限，最好將那個程式碼跟不需要較高權限的程式碼分隔，放在個別的組件。  
   
@@ -88,7 +86,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>不允許的 .NET Framework API  
- 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]註解的其中一個，以不允許應用程式開發介面**HostProtectionAttributes**不能從 SAFE 和 EXTERNAL_ACCESS 組件呼叫。  
+ 任何[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API，而不允許其中一項**HostProtectionAttributes** SAFE 和 EXTERNAL_ACCESS 組件無法呼叫。  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -122,7 +120,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [組件 & #40; Database engine& #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [組件&#40;Database Engine&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [CLR 整合安全性](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018448"
 ---
 # <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>建立 Reporting Services 行動報表時設計優先還是資料優先
   

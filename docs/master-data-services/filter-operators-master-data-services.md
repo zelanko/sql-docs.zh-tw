@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 11
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f4d3785155a0027f374b25f22b9586a215fd4ae9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e14ee29906ca9773aa88e9d400f17416ee8cd0a1
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402610"
 ---
 # <a name="filter-operators-master-data-services"></a>篩選運算子 (Master Data Services)
 

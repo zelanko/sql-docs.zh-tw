@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -17,11 +16,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5bc15384a80a29bed2b70ba9036f354fb0d11693
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69a1e38fe5b14bc67af8e156d3f88fa0a6d7b3dc
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322757"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>組態檔中的 URL (SSRS 組態管理員)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 會將應用程式設定儲存在 RSReportServer.config 檔案中。 在這個檔案中，URL 和 URL 保留項目都有組態設定。 這些組態設定的用途與修改規則大不相同。 如果您習慣修改組態檔來微調部署，本主題將可幫助您了解每一個 URL 設定的使用方式。  

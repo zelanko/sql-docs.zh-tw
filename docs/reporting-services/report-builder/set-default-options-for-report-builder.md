@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018725"
 ---
 # <a name="set-default-options-for-report-builder"></a>設定報表產生器的預設選項
   在報表產生器中，您可以設定許多實用的預設值，來更輕鬆快速地撰寫報表。  例如，如果您設定或變更預設報表伺服器，除非您另外指定，否則報表產生器會自動將您的報表儲存到相同的報表伺服器。  

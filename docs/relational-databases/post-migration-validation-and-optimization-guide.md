@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32956423"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移轉後驗證和最佳化指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="ParameterSniffing"></a> 參數探查的敏感度
 
-**適用於：**外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
+**適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
 > 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。 
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="MissingIndexes"></a> 遺漏索引
 
-**適用於：**外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
+**適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 索引不正確或遺漏會造成額外的 I/O，而導致額外的記憶體和 CPU 浪費。 這可能是因為工作負載設定檔已變更，例如使用不同的述詞，而使現有索引設計失效。 索引策略不佳或工作負載設定檔變更的辨識項包括：
 -   尋找重複、多餘、很少使用和完全未使用的索引。
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="InabilityPredicates"></a>無法使用述詞來篩選資料
 
-**適用於：**外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
+**適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
 > 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。
@@ -120,7 +121,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="TableValuedFunctions"></a>　使用資料表值函數 (多重陳述式與內嵌)
 
-**適用於：**外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
+**適用於：** 外部平台 (例如 Oracle、DB2、MySQL 及 Sybase) 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉。
 
 > [!NOTE]
 > 若為 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 至 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的移轉，如果此問題存在於來源 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，依現況移轉至較新版本的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 無法解決這種情況。

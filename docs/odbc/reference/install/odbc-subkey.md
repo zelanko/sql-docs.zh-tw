@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916233"
 ---
 # <a name="odbc-subkey"></a>ODBC 子機碼
 ODBC 子機碼下的值會指定 ODBC 追蹤選項。 透過 ODBC 資料來源管理員 對話方塊，即可顯示 追蹤 索引標籤設定這些選項**SQLManageDataSources**。 在 ODBC 子機碼本身是選擇性的。 這些值的格式為下表所示。  

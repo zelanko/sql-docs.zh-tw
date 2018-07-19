@@ -17,11 +17,12 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f069b1f4303566aed0bcb486717b7f254691553d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6da904a6bcc7f70ca5185c0e59a6075b651ce1b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550799"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 在本教學課程中，您會將群組和總計新增至 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表以組織和摘要資料。  
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="bkmk_publishreport"></a>若要將報表發行至報表伺服器 (選擇性)  
   
-1.  選擇性步驟是將已完成的報表發行至原生模式報表伺服器，讓您能夠從報表管理員檢視報表。  
+1.  選擇性步驟是將已完成的報表發行至原生模式報表伺服器，讓您能夠在入口網站中檢視報表。  
   
 2.  按一下 [專案] 功能表，然後按一下 [Tutorial 屬性...]  
   

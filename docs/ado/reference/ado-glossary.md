@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d38ec14d124bcf45c4eb22188f86849d95f0275
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283407"
 ---
 # <a name="ado-glossary"></a>ADO 詞彙
 本主題定義適用於 ADO 的詞彙。  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
  商務規則  
  驗證的編輯、 登入驗證、 資料庫查閱、 原則和構成企業的方式進行商務交易的演算式轉換組合。 也稱為*商務邏輯*。  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  計算的運算式  
  運算式不是常數，但其值取決於其他值。 要評估導出的運算式必須取得並計算從其他來源，通常是在其他欄位或資料列的值。  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 05/03/2018
  從資料來源，全部都具有相同的欄位結構描述資料列的一組。 資料列集可以代表資料表中的所有或部分欄位。 資料列集也可以表示虛擬資料表，由一個或兩個或多個資料表的聯結。 在 ADO 中，資料列集都由**資料錄集**物件。  
   
 ## <a name="s"></a>S  
- 범위  
+ 範圍。  
  參考的物件或變數或檢視表或資料表中的記錄範圍的範圍。 例如，本機變數可以參考只有在所定義的程序內。 公用變數是可從應用程式的任何位置存取。 物件，例如目前的資料庫，是在範圍內，如果它們是在定義的搜尋路徑。 記錄的範圍可以指定範圍子句中的許多命令。  
   
  服務提供者  
@@ -292,7 +292,7 @@ ms.lasthandoff: 05/03/2018
  作業完成之前可能會啟動下一個作業的程式碼所起始。 另請參閱非同步作業。  
   
 ## <a name="t-z"></a>T-Z  
- 樹狀  
+ trEE  
  結構，代表項目 （節點） 之間的階層式關聯性。 沒有最上層 （根） 樹狀結構的一個節點。 下方根目錄中，可以有多個子系。 每個子系又可能是其他子系，因此類似樹分支的父代。 包含文件及其他資料夾的資料夾是樹狀結構的典型範例。 另請參閱階層、 節點、 根、 子系、 父系。  
   
  網頁伺服器  

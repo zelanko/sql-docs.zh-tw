@@ -1,7 +1,7 @@
 ---
 title: SQL Server Data Tools (SSDT) 的變更記錄 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7e2348aa63bce657c85ce0b9d6644be471e1f487
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f97f60a4315f7a4adc0630b386ffb250a54a37
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773574"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) 的變更記錄
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,6 +29,28 @@ ms.lasthandoff: 05/03/2018
   
 如需新功能和已變更功能的詳細文章，請參閱 [SSDT 小組部落格](https://blogs.msdn.microsoft.com/ssdt/)。
 
+## <a name="ssdt-for-visual-studio-2017-1570"></a>SSDT for Visual Studio 2017 (15.7.0)
+組建編號：14.0.16165.0  
+發行日期：2018 年 6 月 4 日  
+  
+### <a name="whats-new"></a>新功能
+
+**SSIS：**
+
+- 修正 [選項] 對話方塊中的 [Integration Services 設計師] 頁面無法正確顯示的問題。  
+- 修正出現在 [排序轉換編輯器] 編輯器中文字亮度比的問題。  
+- 修正嘗試編輯下拉式方塊時 [解析參考] 對話方塊消失的問題。  
+- 修正 [Hadoop 連線管理員] 的 F1 說明連結無法運作的問題。  
+- 修正如果指令碼工作程式碼位於以 SQL Server 2016 為目標的容器中則會遺失的問題。  
+
+
+**安裝程式：**
+
+- 修正在 VS 15.7.2 中安裝 SSRS 和 SSIS 之前無法安裝 SSAS 的問題。
+
+### <a name="known-issues"></a>已知問題：
+
+- 當 *ExecuteOutOfProcess* 設定為 *True* 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
 
 
 ## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT for Visual Studio 2017 (15.6.0)
@@ -38,24 +61,24 @@ ms.lasthandoff: 05/03/2018
 
 **SSIS：**
 
-1.  修正自發的系統處理工作在目標為 SQLServer2016 和 SQLServer2017 時，不會記錄任何處理步驟的問題
-2.  修正在 SSDT 中以非常長的英文工作名稱開啟 dtsx 時，會發生存取違規的問題
-3.  修正 ScriptTask 的變數清單有時候會從工作 UI 消失的問題
-4.  修正當套件位置為 SQL Server 時，新增現有套件複本會失敗的問題
-5.  修正在某些編輯器對話方塊中存取下拉式方塊時，焦點會卡住的問題。
-6.  修正切換 VS 佈景主題時，背景不會變更的問題。
-7.  修正在深色佈景主題中看不到註釋與載入標籤的問題。
-8.  修正已停用 SSIS 工具箱之項目的狀態屬性未正確定義的問題。
-9.  修正執行 WebServiceTask 時總是失敗的問題。
-10. 修正當連接字串設定為具有相依於專案參數之運算式的變數時，套件部署會失敗的問題。
+- 修正自發的系統處理工作在目標為 SQLServer2016 和 SQLServer2017 時，不會記錄任何處理步驟的問題
+- 修正在 SSDT 中以非常長的英文工作名稱開啟 dtsx 時，會發生存取違規的問題
+- 修正 ScriptTask 的變數清單有時候會從工作 UI 消失的問題
+- 修正當套件位置為 SQL Server 時，新增現有套件複本會失敗的問題
+- 修正在某些編輯器對話方塊中存取下拉式方塊時，焦點會卡住的問題。
+- 修正切換 VS 佈景主題時，背景不會變更的問題。
+- 修正在深色佈景主題中看不到註釋與載入標籤的問題。
+- 修正已停用 SSIS 工具箱之項目的狀態屬性未正確定義的問題。
+- 修正執行 WebServiceTask 時總是失敗的問題。
+- 修正當連接字串設定為具有相依於專案參數之運算式的變數時，套件部署會失敗的問題。
 
 **安裝程式：**
 
-1.  在隱私權免責聲明中新增「適用於 SQL Server Data Tools 的客戶經驗改進計畫」的連結。
-2.  修正選取 [為 Visual Studio 2017 執行個體安裝新的 SQL Server Data Tools] 時，VS 安裝程式視窗會彈出的問題
+- 在隱私權免責聲明中新增「適用於 SQL Server Data Tools 的客戶經驗改進計畫」的連結。
+- 修正選取 [為 Visual Studio 2017 執行個體安裝新的 SQL Server Data Tools] 時，VS 安裝程式視窗會彈出的問題
 
 ### <a name="known-issues"></a>已知問題：
-1.  當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
+- 當 ExecuteOutOfProcess 設定為 True 時，SSIS 執行套件工作不支援偵錯。 此問題僅適用偵錯。 透過 DTExec.exe 或 SSIS 目錄進行的儲存、部署及執行則不受到影響。
 
 
 
@@ -65,14 +88,14 @@ ms.lasthandoff: 05/03/2018
 ### <a name="whats-new"></a>新功能
 
 **SSIS**
-1.  修正當 SSAS 與 SSIS 都安裝在相同的 VS 2017 執行個體時，移轉 SSIS 2008 專案會失敗的問題。
-2.  修正將 RDLC 報表設計師和 SSIS 安裝到相同 VS 2017 執行個體時不能建立 RDLC 專案的問題。
-3.  修正無法更新註解色彩的問題。
-4.  修正 Hadoop 連線管理員編輯器會截斷其他語言某些字串的問題。
-5.  修正 OData 連線管理員編輯器會截斷某些字串的問題。
-6.  修正 [Integration Services 匯入專案精靈] 視窗會截斷某些字串的問題。
-7.  修正 SSIS 工具箱資訊視窗中的標題問題。
-8.  修正 [Integration Services 部署精靈] 視窗會截斷某些字串的問題。 
+- 修正當 SSAS 與 SSIS 都安裝在相同的 VS 2017 執行個體時，移轉 SSIS 2008 專案會失敗的問題。
+- 修正將 RDLC 報表設計師和 SSIS 安裝到相同 VS 2017 執行個體時不能建立 RDLC 專案的問題。
+- 修正無法更新註解色彩的問題。
+- 修正 Hadoop 連線管理員編輯器會截斷其他語言某些字串的問題。
+- 修正 OData 連線管理員編輯器會截斷某些字串的問題。
+- 修正 [Integration Services 匯入專案精靈] 視窗會截斷某些字串的問題。
+- 修正 SSIS 工具箱資訊視窗中的標題問題。
+- 修正 [Integration Services 部署精靈] 視窗會截斷某些字串的問題。 
 
 **安裝程式**
 - 修正有時無法下載承載並會出現「系統找不到指定的檔案 (0x80070002)」錯誤的問題。  
@@ -631,8 +654,8 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 
 **新功能**
 
-- **發行版本控制與編號︰**發行版本現在以數值標記而不是依月份標記。 這與新的 SSMS 原則一致，並簡化在一個月中有多個版本或 hotfix 時的情況。 此版本是 16.3，表示在 RTM 版本之後的第三個更新。 任何 hotfix 將是 16.3.1，依此類推，下一個更新 (下個月的計劃) 將是 16.4。
-- **Analysis Services - 表格式模型總管：**表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
+- **發行版本控制與編號︰** 發行版本現在以數值標記而不是依月份標記。 這與新的 SSMS 原則一致，並簡化在一個月中有多個版本或 hotfix 時的情況。 此版本是 16.3，表示在 RTM 版本之後的第三個更新。 任何 hotfix 將是 16.3.1，依此類推，下一個更新 (下個月的計劃) 將是 16.4。
+- **Analysis Services - 表格式模型總管：** 表格式模型總管可讓您在模型中方便瀏覽各種中繼資料物件，例如資料來源、資料表、量值和關聯性。 它會實作為獨立的工具視窗，您可以在 Visual Studio 中開啟 [檢視] 功能表，指向 [其他視窗]，然後按一下 [表格式模型總管] 來顯示。 表格式模型總管預設會出現在方案總管區域的另一個索引標籤上。表格式模型總管會將中繼資料物件組織在與表格式 1200 模型結構描述十分類似的樹狀結構中，而且有更多新功能。
 - **資料庫工具 - Always Encrypted**︰此版本提供新的[Always Encrypted 金鑰管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)對話方塊，可輕鬆地將資料行主要金鑰或資料行加密金鑰加入至資料庫專案或 SQL Server 物件總管中的即時資料庫。 此版本支援 Windows 憑證存放區中的憑證。 未來的版本將會支援 Azure 金鑰保存庫和 CNG 提供者。
     - 在建立資料行主要金鑰或資料行加密金鑰時，您可能會發現按一下 [更新資料庫] 之後，SQL Server 物件總管無法立即反映所做的變更。 若要解決這個問題，請重新整理 SQL Server 物件總管中的資料庫節點。
     - 如果您嘗試加密的資料表資料行含有來自 SQL Server 物件總管的資料，您可能會失敗。 目前只有在 SSDT 資料庫專案和 SSMS 中才支援這項功能。 未來版本中將會支援 SQL Server 物件總管。
@@ -670,9 +693,9 @@ SSDT 表格式現在包含內部的 SSAS 執行個體，若啟用整合式工作
 組建編號︰14.0.60629.0  
   
 **新功能**  
-* **Always Encrypted 支援︰**對於包含 Always Encrypted 資料行的資料庫，此版本透過我們的核心 API 和命令列工具 (SqlPackage.exe) 加入 Always Encrypted 的完整支援。 您可以利用所有完整支援的 Always Encrypted 功能，建置及發行資料庫專案。  
-* **時態表增強支援︰**透過在改變之前取消連結時態表，然後在完成之後再重新連結來簡化體驗。 這表示時態表在支援的作業方面有其他資料表類型 (標準、記憶體內部) 的同位。 
-* **SqlPackage.exe 和安裝變更︰**從 SQL Server 引擎隔離出 SSDT 的變更以及 SSMS 更新。 如需詳細資訊，請參閱 [SSDT 和 SqlPackage.exe 安裝和更新的變更 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)。
+* **Always Encrypted 支援︰** 對於包含 Always Encrypted 資料行的資料庫，此版本透過我們的核心 API 和命令列工具 (SqlPackage.exe) 加入 Always Encrypted 的完整支援。 您可以利用所有完整支援的 Always Encrypted 功能，建置及發行資料庫專案。  
+* **時態表增強支援︰** 透過在改變之前取消連結時態表，然後在完成之後再重新連結來簡化體驗。 這表示時態表在支援的作業方面有其他資料表類型 (標準、記憶體內部) 的同位。 
+* **SqlPackage.exe 和安裝變更︰** 從 SQL Server 引擎隔離出 SSDT 的變更以及 SSMS 更新。 如需詳細資訊，請參閱 [SSDT 和 SqlPackage.exe 安裝和更新的變更 (英文)](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)。
 
  
 

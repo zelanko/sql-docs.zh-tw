@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909603"
 ---
 # <a name="connecting-with-sqlconnect"></a>使用 SQLConnect 的連接
 **SQLConnect**是最簡單的連線函式。 它需要資料來源名稱，並接受選擇性的使用者識別碼和密碼。 它適用於應用程式的硬式編碼的資料來源名稱，且不需要使用者識別碼或密碼。 它也可以運作良好的應用程式想要控制自己 」 外觀及操作 」 或不有任何使用者介面。 這類應用程式可以建立一份使用資料來源**SQLDataSources**、 提示使用者輸入資料來源、 使用者識別碼和密碼，然後再呼叫**SQLConnect**。  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_incremental_stats_properties (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -25,17 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6dd64a9c7b4171ad8024f2b86c07cb318fa81ad8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997870"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   針對目前 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的指定資料庫物件 (資料表) 傳回累加統計資料的屬性。 `sys.dm_db_incremental_stats_properties` (其中包含資料分割編號) 的使用類似於用於非累加統計資料的 `sys.dm_db_stats_properties` 。 
   
-  此函式中引進了[!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]Service Pack 2 和[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]Service Pack 1。
+  此函式首見於[!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]Service Pack 2 和[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]Service Pack 1。
   
 ## <a name="syntax"></a>語法  
   
@@ -52,7 +53,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|要傳回統計資料物件屬性之物件 (資料表) 的識別碼。|  
 |stats_id|**int**|統計資料物件的識別碼。 在資料表中，這是唯一的。 如需詳細資訊，請參閱 [sys並未包含檢視。stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)並未包含檢視。|
@@ -74,7 +75,7 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
  
  此行為可讓您在交叉套用至例如 `sys.dm_db_incremental_stats_properties` 和 `sys.objects` 等檢視中的資料列時，安全地使用 `sys.stats`。 這個方法可以傳回對應每個資料分割的統計資料屬性。 若要查看跨所有資料分割合併的合併統計資料屬性，請改用 sys.dm_db_stats_properties。 
 
-統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 讀取任何資料時產生統計資料，就不會建立統計資料的 blob，日期無法使用，而*last_updated*資料行是 NULL。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
+統計資料更新日期儲存在[統計資料 Blob 物件](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics)中，其中還有[長條圖](../../relational-databases/statistics/statistics.md#histogram)和[密度向量](../../relational-databases/statistics/statistics.md#density)，不是儲存在中繼資料中。 讀取任何資料時，以產生統計資料，不會建立統計 blob、 沒有日期，而*last_updated*資料行是 NULL。 這是已篩選統計資料的情況，其中述詞未傳回任何資料列，或為新的空白資料表的情況。
 
 ## <a name="permissions"></a>Permissions  
  要求使用者對於統計資料資料行擁有選取權限，或是使用者擁有資料表，或使用者是 `sysadmin` 固定伺服器角色、`db_owner` 固定資料庫角色或 `db_ddladmin` 固定資料庫角色的成員。  

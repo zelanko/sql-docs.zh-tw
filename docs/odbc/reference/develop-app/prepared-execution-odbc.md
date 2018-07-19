@@ -23,9 +23,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913173"
 ---
 # <a name="prepared-execution-odbc"></a>備妥的執行 ODBC
-備妥的執行是有效的方式執行的陳述式一次以上。 第一次編譯的陳述式，或*備妥，*成存取計畫。 就執行一或多次於稍後存取計劃。 如需存取計劃的詳細資訊，請參閱[處理 SQL 陳述式](../../../odbc/reference/processing-a-sql-statement.md)。  
+備妥的執行是有效的方式執行的陳述式一次以上。 第一次編譯的陳述式，或*備妥，* 成存取計畫。 就執行一或多次於稍後存取計劃。 如需存取計劃的詳細資訊，請參閱[處理 SQL 陳述式](../../../odbc/reference/processing-a-sql-statement.md)。  
   
  垂直和自訂應用程式通常會使用備妥的執行來重複執行相同且參數化 SQL 陳述式。 例如，下列程式碼會準備陳述式來更新不同部分的價格。 接著，它會執行陳述式多次使用不同的參數值每次。  
   

@@ -23,10 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 34c26b529aeaee5e9f80ecc0a1a07d3cb8cedbf4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048736"
 ---
 # <a name="sequence-expressions-xquery"></a>序列運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +94,7 @@ select @x.query('for $i in ((1,2),10,(),(4, 5, 6))
 go  
 ```  
   
- 您可以使用計算序列中的項目**fn**函式。  
+ 您可以使用，以計算序列中的項目**fn**函式。  
   
 ```  
 declare @x xml  
@@ -104,7 +105,7 @@ go
 ```  
   
 ### <a name="example-c"></a>範例 C  
- 下列查詢針對 AdditionalContactInfo 資料行指定**xml** Contact 資料表中的型別。 這個資料行會儲存其他的連絡資訊，例如一或多個其他的電話號碼、呼叫器號碼和地址。 \<TelephoneNumber >，\<頁面巡覽區 >，且其他節點可以任何位置出現在文件。 此查詢會建構序列，其中包含所有\<telephoneNumber > 子系內容節點，後面接著\<頁面巡覽區 > 子系。 請注意，在 return 運算式 (`($a//act:telephoneNumber, $a//act:pager)`) 中使用逗號序列運算子。  
+ 下列查詢針對 AdditionalContactInfo 資料行的指定**xml** Contact 資料表中的型別。 這個資料行會儲存其他的連絡資訊，例如一或多個其他的電話號碼、呼叫器號碼和地址。 \<TelephoneNumber >，\<頁面巡覽區 >，且其他節點可以任何位置出現在文件。 此查詢會建構序列，其中包含所有\<telephoneNumber > 子系內容節點，後面接著\<頁面巡覽區 > 子系。 請注意，在 return 運算式 (`($a//act:telephoneNumber, $a//act:pager)`) 中使用逗號序列運算子。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -136,7 +137,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>篩選序列  
- 您可以將述詞加入到運算式中，來篩選運算式傳回的序列。 如需詳細資訊，請參閱[路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。 例如，下列查詢傳回的序列包含三個 <`a`> 元素節點：  
+ 您可以將述詞加入到運算式中，來篩選運算式傳回的序列。 如需詳細資訊，請參閱 <<c0> [ 路徑運算式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)。</c0> 例如，下列查詢傳回的序列包含三個 <`a`> 元素節點：  
   
 ```  
 declare @x xml  
@@ -174,7 +175,7 @@ SELECT @x.query('/root/a[@attrA]')
 <a attrA="1">111</a>  
 ```  
   
- 如需如何在路徑運算式中指定述詞的詳細資訊，請參閱[路徑運算式步驟中指定的述詞](../xquery/path-expressions-specifying-predicates.md)。  
+ 如需如何指定路徑運算式中的述詞的詳細資訊，請參閱[路徑運算式步驟中指定的述詞](../xquery/path-expressions-specifying-predicates.md)。  
   
  下列範例會建立一個子樹的序列運算式，然後將篩選套用到序列中。  
   

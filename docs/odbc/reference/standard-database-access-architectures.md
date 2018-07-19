@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915033"
 ---
 # <a name="standard-database-access-architectures"></a>標準資料庫存取架構
 查看上一節中所述的資料庫存取元件，其實其中有兩個 — 程式設計介面與資料串流處理通訊協定 — 適合用來標準化。 其他兩個元件 — IPC 機制和網路通訊協定 — 不只位於層級太低，但多半取決於網路與作業系統兩者都。 沒有第三個方法也 — 閘道 — 標準化針對提供的可能性。  

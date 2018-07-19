@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
@@ -20,12 +19,12 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b6651f84ac219330b2b236f3ee6537cc754b45c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 672b5c5f8011572994c6c611430f72982c418101
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32964723"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37350380"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>教學課程：準備 SQL Server 進行複寫 (發行者、散發者、訂閱者)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "32964723"
 > * 準備快照集資料夾。
 > * 設定散發。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 本教學課程是特別提供給熟悉基本資料庫作業但只稍微涉獵複寫作業的使用者。 
 
 若要完成本教學課程，您需要 SQL Server、SQL Server Management Studio (SSMS) 以及 AdventureWorks 資料庫：  

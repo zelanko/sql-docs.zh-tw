@@ -13,7 +13,7 @@ ms.openlocfilehash: 5d3b8c0fed80f566966cdb2cd84019d00e65a995
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574011"
 ---
 # <a name="update-element-xmla"></a>Update 元素 (XMLA)

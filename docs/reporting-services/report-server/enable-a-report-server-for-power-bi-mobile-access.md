@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025355"
 ---
 # <a name="enable-a-report-server-for-power-bi-mobile-access"></a>啟用報表伺服器進行 Power BI 行動存取
 您可以使用 Power BI 行動應用程式使用行動報表。 您必須設定幾個項目，允許 Power BI 行動應用程式連接到 Reporting Services。  

@@ -2,7 +2,6 @@
 title: SeekEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fcf7dabb3c12f7919c317c7ecabeaf51995fe85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f61e71b03a05a8e13c1b069e4880f362ff0985a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281587"
 ---
 # <a name="seekenum"></a>SeekEnum
 指定的型別[搜尋](../../../ado/reference/ado-api/seek-method.md)來執行。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
-|**adSeekFirstEQ**|1|搜尋第一個索引鍵等於*Parentkeyvalue*。|  
+|**adSeekFirstEQ**|@shouldalert|搜尋第一個索引鍵等於*Parentkeyvalue*。|  
 |**adSeekLastEQ**|2|搜尋的最後一個索引鍵等於*Parentkeyvalue*。|  
 |**adSeekAfterEQ**|4|搜尋等於任一金鑰*Parentkeyvalue*或只在其中可能發生的相符項目之後。|  
 |**adSeekAfter**|8|只在位置之後搜尋索引鍵相符*Parentkeyvalue*可能發生。|  

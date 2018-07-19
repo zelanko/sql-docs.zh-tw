@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,17 +26,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2b2f8c78b1802ff177040352cd7342b51b035c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051316"
 ---
-# <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (TRANSACT-SQL)
+# <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回 Smart Admin 記錄的擴充事件。  
   
- 使用此預存程序來監視 Smart admin 記錄的擴充事件[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]事件會記錄在此系統，可以檢閱和使用這個預存程序監視。  
+ 使用此預存程序來監視 Smart admin 記錄的擴充事件[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]事件會記錄在此系統中和您可以檢閱和監視使用這個預存程序。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,9 +49,9 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 引數  
  @xevent_channel  
- 擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整事件名稱，或指定子字串，例如： **'Admin'**， **'Analytic'**， **'Operational'**，和 **'Debug'**. @event_channel是**VARCHAR (255)**。  
+ 擴充事件類型。 預設值會設定為傳回過去 30 分鐘內記錄的所有事件。 記錄的事件會視啟用的擴充事件類型而定。 您可以使用此參數篩選預存程序，僅顯示特定類型的事件。 您可以指定完整事件名稱，或指定子字串，例如： **'Admin'**， **'Analytic'**， **'Operational'**，以及 **'Debug'**. @event_channel已**VARCHAR (255)**。  
   
- 若要取得事件類型目前已啟用，請使用清單**managed_backup.fn_get_current_xevent_settings**函式。  
+ 若要取得事件類型目前已啟用使用一份**managed_backup.fn_get_current_xevent_settings**函式。  
   
  [@begin_time  
  應顯示事件這段期間的起始時間點。 @begin_time參數為 DATETIME，預設值是 NULL。 如果未指定此參數，則會顯示過去 30 分鐘的事件。  
@@ -63,15 +64,15 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |event_type|NVARCHAR(512)|擴充事件類型。|  
 |事件|NVARCHAR(512)|事件記錄的摘要。|  
-|時間戳記|TIMESTAMP|顯示事件引發時間的事件時間戳記。|  
+|時間戳記|timestamp|顯示事件引發時間的事件時間戳記。|  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Permissions  
- 需要**EXECUTE**預存程序的權限。 它也需要**VIEW SERVER STATE**權限，因為它在內部呼叫其他系統物件，需要此權限。  
+ 需要**EXECUTE**預存程序的權限。 它也需要**VIEW SERVER STATE**權限，因為它會在內部呼叫其他系統物件，需要此權限。  
   
 ## <a name="examples"></a>範例  
  下列範例傳回過去 30 分鐘內記錄的所有事件。  

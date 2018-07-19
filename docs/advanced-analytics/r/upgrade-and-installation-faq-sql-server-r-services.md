@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31204210"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server 機器學習或 R Server 升級及安裝常見問題集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -107,7 +108,7 @@ ms.lasthandoff: 04/16/2018
 
 3. 執行的 SQL Server 安裝程式一次的詳細資訊，以及這一次選取**將功能加入至現有的 SQL Server**。
 
-4. 選擇在執行個體，然後選取**R 服務 （資料庫）**選項來加入。
+4. 選擇在執行個體，然後選取**R 服務 （資料庫）** 選項來加入。
 
 如果此程序無法解決問題，請嘗試下列因應措施：
 

@@ -1,8 +1,6 @@
 ---
 title: MySQL 及 SQL Server 字元對應設定 (MySQLToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5c31cdc9bab3881452c3a03cc0a97cc382481587
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94764ed6777b4310ebc38bbf8375089a0ac00c92
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776414"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL 及 SQL Server 字元對應設定 (MySQLToSQL)
 字元集 (Charset) 可以指定之 MySQL 字元資料類型、 運算式和常值。  
@@ -63,11 +62,11 @@ ms.lasthandoff: 05/03/2018
 >   
 > 其中包括：  
 >   
-> 1.  **適用於：**適用於由使用者啟用只有在字元集對應是編輯而尚未儲存所做的變更。  
-> 2.  **取消：**取消使用者所做的變更。 字元集對應編輯，但不是會儲存時，取得啟用按鈕。  
-> 3.  **重設預設值：**重設為預設值的所有對應。  
+> 1.  **適用於：** 適用於由使用者啟用只有在字元集對應是編輯而尚未儲存所做的變更。  
+> 2.  **取消：** 取消使用者所做的變更。 字元集對應編輯，但不是會儲存時，取得啟用按鈕。  
+> 3.  **重設預設值：** 重設為預設值的所有對應。  
   
-1.  **在根層級中繼資料節點：**字元集對應格線包含具有個別的資料行的每個字元集的字集方格。 方格的資料行如下：  
+1.  **在根層級中繼資料節點：** 字元集對應格線包含具有個別的資料行的每個字元集的字集方格。 方格的資料行如下：  
   
     1.  名為方格的第一個資料行**字元集名稱**包含字元集的名稱。  
   
@@ -124,7 +123,7 @@ ms.lasthandoff: 05/03/2018
     |cp932|對於 Windows 日文 SJIS|NCHAR/NVARCHAR （預設值）|  
     |eucjpms|對於 Windows 日文 UJIS|NCHAR/NVARCHAR （預設值）|  
   
-2.  **在資料庫、 類別或物件節點層級：**資料庫、 類別或物件節點層級中，字元集對應格線包含根中繼資料節點層級上相同的資料列 viz。:  
+2.  **在資料庫、 類別或物件節點層級：** 資料庫、 類別或物件節點層級中，字元集對應格線包含根中繼資料節點層級上相同的資料列 viz。:  
   
     1.  方格標題的第一個資料行**字元設定名稱**包含字元集的名稱。  
   

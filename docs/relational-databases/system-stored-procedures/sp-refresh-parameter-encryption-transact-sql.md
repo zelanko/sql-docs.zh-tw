@@ -1,5 +1,5 @@
 ---
-title: sp_refresh_parameter_encryption (TRANSACT-SQL) |Microsoft 文件
+title: sp_refresh_parameter_encryption (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -25,15 +25,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 1af1ab9933bab98ab0679749d47f4c6ec4a86bc2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993740"
 ---
-# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (TRANSACT-SQL)
+# <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-更新指定的非結構描述繫結預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序，或目前資料庫中的伺服器層級 DDL 觸發程序參數的永遠加密中繼資料。 
+更新指定的非結構描述繫結預存程序、 使用者定義函數、 檢視、 DML 觸發程序、 資料庫層級 DDL 觸發程序，或目前資料庫中的伺服器層級 DDL 觸發程序參數的 Always Encrypted 中繼資料。 
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,11 +51,11 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="arguments"></a>引數
 
-[  **@name =** ] **'***適於***'**   
-這是預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *適於*不能在 common language runtime (CLR) 預存程序或 CLR 函數。 *適於*無法結構描述繫結。 *適於*是`nvarchar`，沒有預設值。 *適於*可以是多重部分識別碼，但只能參考目前資料庫中的物件。
+[  **@name =** ] **'***module_name***'**   
+這是預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *module_name*不能是 common language runtime (CLR) 預存程序或 CLR 函式。 *module_name*不可進行結構描述繫結。 *module_name*是`nvarchar`，沒有預設值。 *module_name*可以是多重部分識別碼，但只能參考目前資料庫中的物件。
 
 [  **@namespace =** ] **'** < 類別 > **'**   
-這是指定之模組的類別。 當*適於*DDL 觸發程序，`<class>`需要。 `<class>` 為 `nvarchar(20)`。 有效輸入如下：`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
+這是指定之模組的類別。 當*module_name* DDL 觸發程序，`<class>`需要。 `<class>` 為 `nvarchar(20)`。 有效輸入如下`DATABASE_DDL_TRIGGER`和`SERVER_DDL_TRIGGER`。    
 
 ## <a name="return-code-values"></a>傳回碼值  
 
@@ -63,11 +64,11 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 ## <a name="remarks"></a>備註
 
-如果也可能會過期，模組的參數加密中繼資料：   
-* 加密內容的模組參考，已更新資料表中的資料行。 例如，已卸除資料行，且已新增具有相同的名稱，但不同的加密類型加密金鑰的加密演算法的新資料行。  
-* 模組參考另一個模組的過時的參數加密中繼資料。  
+如果也可能會過期，加密中繼資料模組的參數：   
+* [加密] 屬性已更新模組參考的資料表中的資料行。 比方說，已經卸除資料行，並已新增新的資料行，與相同的名稱，但不同的加密類型、 加密金鑰或加密演算法。  
+* 模組參考另一個模組使用過期的參數加密中繼資料。  
 
-資料表的加密屬性修改時，`sp_refresh_parameter_encryption`應該執行的任何直接或間接參考資料表的模組。 這個預存程序可以呼叫這些模組，依任何順序，而不需要再移至它的呼叫端的使用者第一次重新整理內部的模組。
+修改資料表的加密屬性，當`sp_refresh_parameter_encryption`應該執行的任何直接或間接參考資料表的模組。 這個預存程序可以呼叫這些模組，依任何順序，而不需要再移至其呼叫端的使用者第一次重新整理的內部模組。
 
 `sp_refresh_parameter_encryption` 不會影響任何權限，擴充屬性，或`SET`與物件相關聯的選項。 
 
@@ -84,11 +85,11 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 伺服器層級 DDL 觸發程序指定的模組時，需要`CONTROL SERVER`權限。
 
-模組所定義的`EXECUTE AS`子句，`IMPERSONATE`需要權限指定的主體。 一般而言，重新整理物件不會變更其`EXECUTE AS`主體，除非模組與定義`EXECUTE AS USER`和主體現在解析成不同的使用者相比，它在階段模組已建立的使用者名稱。
+針對模組，以定義`EXECUTE AS`子句，`IMPERSONATE`指定的主體需要權限。 一般而言，重新整理物件不會變更其`EXECUTE AS`主體，除非模組以定義`EXECUTE AS USER`和主體現在解析成不同的使用者來得當時模組所建立的使用者名稱。
  
 ## <a name="examples"></a>範例
 
-下列範例會建立資料表和參考資料表的程序、 設定永遠加密，並接著示範改變資料表，並執行`sp_refresh_parameter_encryption`程序。  
+下列範例會建立資料表和參考資料表的程序、 設定永遠加密，並再示範改變資料表，以及執行`sp_refresh_parameter_encryption`程序。  
 
 先建立初始的資料表和參考資料表的預存程序。
 ```sql
@@ -141,7 +142,7 @@ GO
 ```
 
 
-最後我們取代 SSN 資料行加密的資料行，然後執行`sp_refresh_parameter_encryption`程序來更新的永遠加密的元件。
+最後，我們將取代 SSN 資料行加密的資料行，然後再執行`sp_refresh_parameter_encryption`程序來更新 Always Encrypted 的元件。
 ```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
@@ -161,6 +162,6 @@ GO
 
 ## <a name="see-also"></a>另請參閱 
 
-[永遠加密](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
 [Always Encrypted 精靈](../../relational-databases/security/encryption/always-encrypted-wizard.md)   
 

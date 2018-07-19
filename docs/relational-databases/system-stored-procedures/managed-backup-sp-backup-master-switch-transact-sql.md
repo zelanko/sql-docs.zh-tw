@@ -1,5 +1,5 @@
 ---
-title: managed_backup.sp_ backup_master_switch (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.sp_ backup_master_switch (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,12 +26,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 64d6681203962b54f1f3daae2de26e695cec240c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995549"
 ---
-# <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch (TRANSACT-SQL)
+# <a name="managedbackupsp-backupmasterswitch-transact-sql"></a>managed_backup.sp_ backup_master_switch & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   暫停或繼續執行[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。  
@@ -60,7 +61,7 @@ EXEC managed_backup.sp_backup_master_switch
  描述與陳述式相關的安全性問題。加入＜權限＞小節 (H3 標題)。 考慮加入＜擁有權鏈結＞和＜稽核＞小節 (如果適用)。  
   
 ### <a name="permissions"></a>Permissions  
- 需要的成員資格**db_backupoperator**與資料庫角色， **ALTER ANY CREDENTIAL**權限，和**EXECUTE**權限**sp_delete_backuphistory**預存程序。  
+ 需要的成員資格**db_backupoperator**資料庫角色，使用**ALTER ANY CREDENTIAL**權限，並**EXECUTE**的權限**sp_delete_backuphistory**預存程序。  
   
 ## <a name="examples"></a>範例  
  下列範例可用來暫停在執行個體上執行的[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]：  

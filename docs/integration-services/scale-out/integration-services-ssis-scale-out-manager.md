@@ -1,26 +1,24 @@
 ---
 title: SQL Server Integration Services Scale Out 管理員 | Microsoft Docs
-ms.description: This article describes the Scale Out Manager tool which you can use to manager SSIS Scale Out
-ms.custom: ''
+description: 本文描述您可以用來管理 SSIS Scale Out 的 Scale Out Manager
+ms.custom: performance
 ms.date: 12/19/2017
 ms.prod: sql
-ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f5ea5696c99a10b2e9b64a92c91c38e117430cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3023b3d2847e206aa5646a14aa8a5ee5eff68a9c
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331252"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out 管理員
 

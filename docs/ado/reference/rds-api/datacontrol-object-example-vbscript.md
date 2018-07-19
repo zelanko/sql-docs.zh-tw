@@ -2,7 +2,6 @@
 title: DataControl 物件範例 (VBScript) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e4e3c330b4e66b40704ddaa6d2bcc06b9a7aead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13fb982f47f9990cf34be9445c6acbb139704ec8
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287537"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl 物件範例 (VBScript)
 > [!IMPORTANT]

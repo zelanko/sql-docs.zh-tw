@@ -22,11 +22,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d32ef0b368c0e3c5a0de1cbb9c0a2f60110050
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 9799cc3ed5f33e1260c6d4b1907329a9a01b3ffc
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262332"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +41,10 @@ ms.lasthandoff: 05/23/2018
 > [!NOTE]  
 >  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_memory_brokers**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|如果與資源管理員集區相關聯，則是資源集區的識別碼。|  
-|**memory_broker_type**|**nvarchar(60)**|記憶體 Broker 的類型。 目前有三種記憶體 broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 列出以下與它們的描述。<br /><br /> **MEMORYBROKER_FOR_CACHE** ： 以供配置的記憶體快取物件。<br /><br /> **MEMORYBROKER_FOR_STEAL** ： 從緩衝集區奪取的記憶體。 在目前的擁有者釋放這種記憶體前，其他元件無法重複使用它。<br /><br /> **MEMORYBROKER_FOR_RESERVE** ： 保留供未來使用的目前正在執行要求的記憶體。|  
+|**memory_broker_type**|**nvarchar(60)**|記憶體 Broker 的類型。 目前有三種記憶體 broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 列出以下與它們的描述。<br /><br /> **MEMORYBROKER_FOR_CACHE** ： 以供配置的記憶體快取物件 （緩衝集區快取）。<br /><br /> **MEMORYBROKER_FOR_STEAL** ： 從緩衝集區奪取的記憶體。 在目前的擁有者釋放這種記憶體前，其他元件無法重複使用它。<br /><br /> **MEMORYBROKER_FOR_RESERVE** ： 保留供未來使用的目前正在執行要求的記憶體。|  
 |**allocations_kb**|**bigint**|已經配置給此類型 Broker 的記憶體數量 (以 KB 為單位)。|  
 |**allocations_kb_per_sec**|**bigint**|每秒的記憶體配置率 (以 KB 為單位)。 對於記憶體取消配置，這個值可以是負值。|  
 |**predicted_allocations_kb**|**bigint**|預測 Broker 所配置的記憶體數量。 這是以記憶體使用量模式為基礎。|  

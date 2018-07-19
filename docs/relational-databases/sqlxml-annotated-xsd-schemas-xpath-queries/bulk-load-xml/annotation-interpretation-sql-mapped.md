@@ -1,5 +1,5 @@
 ---
-title: sql： 對應 (SQLXML 4.0) |Microsoft 文件
+title: sql： 對應 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,16 +24,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050146"
 ---
-# <a name="annotation-interpretation---sqlmapped"></a>註解的解譯-sql： 對應
+# <a name="annotation-interpretation---sqlmapped"></a>註解解譯-sql： 對應
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 大量載入處理序**sql： 對應**如預期般在 XSD 結構描述中的註釋，亦即，如果對應結構描述指定**sql： 對應 ="false"** 任何項目或屬性，XML 大量載入不嘗試將對應的資料行中儲存相關聯的資料。  
+  XML 大量載入處理序**sql： 對應**如預期般的 XSD 結構描述中的註釋，也就是，如果對應結構描述指定**sql： 對應 ="false"** 任何項目或屬性，XML 大量載入不嘗試將相關聯的資料儲存在對應的資料行。  
   
- XML 大量載入會忽略未對應的元素和屬性 (因為它們不在結構描述中，或在與 XSD 結構描述註解**sql： 對應 ="false"**)。 所有未對應的資料便會進入溢位資料行，如果這類資料行指定使用**sql: overflow-field-欄位**。  
+ XML 大量載入會忽略未對應的元素和屬性 (因為它們不在結構描述中，或是因為它們註解式 XSD 結構描述中**sql： 對應 ="false"**)。 所有未對應的資料進入溢位資料行中，如果這類資料行指定使用**sql: overflow-field-欄位**。  
   
  例如，請考慮下列 XSD 結構描述：  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/03/2018
 </xsd:schema>  
 ```  
   
- 因為**HomePhone**屬性會指定**sql： 對應 ="false"**，XML 大量載入未對應到對應的資料行的這個屬性。 XSD 結構描述識別溢位資料行 (**OverflowColumn**) XML 大量載入會儲存此未耗用的資料。  
+ 因為**HomePhone**屬性會指定**sql： 對應 ="false"**，XML 大量載入未將此屬性對應至對應的資料行。 XSD 結構描述識別為溢位資料行 (**OverflowColumn**) XML 大量載入會儲存此未耗用的資料。  
   
 ### <a name="to-test-a-working-sample"></a>測試工作範例  
   

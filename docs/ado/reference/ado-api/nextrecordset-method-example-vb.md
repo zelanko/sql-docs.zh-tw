@@ -2,7 +2,6 @@
 title: NextRecordset 方法範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bed23dcb6254c6c3abd083a4cff037ff0501c005
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28c553c49a658be1882b48cc0b18a39a21b607ad
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279887"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset 方法範例 (VB)
 這個範例會使用[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)方法，以檢視中使用複合命令陳述式組成三個不同的資料錄集的資料**選取**陳述式。  

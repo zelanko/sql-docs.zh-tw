@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019415"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>在行動報表中加入量測計 | Reporting Services
 量測計是行動報表中使用最廣泛的基本視覺效果。 它們顯示資料集中的單一值，只有值或和目標比較的值。

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026415"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 傳遞延伸模組設定
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 包括電子郵件傳遞延伸模組以及檔案共用傳遞延伸模組。 電子郵件傳遞提供一個透過電子郵件傳送報表給個別使用者或群組的方法。 檔案共用傳遞可讓您將轉譯的報表自動傳送給網路上的共用。 您可以使用其中一個支援的傳遞延伸模組搭配標準訂閱或資料驅動訂閱來傳送。 每當您呼叫 <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>、<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>、<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> 和 <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A> 方法時，會傳遞特屬傳遞延伸模組類型的傳遞設定。 若要以程式設計的方式擷取傳遞設定清單，請使用 <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A> 方法。  

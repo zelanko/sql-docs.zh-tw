@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021555"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>將串聯參數加入至報表 (報表產生器及 SSRS)
   串聯參數會提供管理大量報表資料的方法。 您可以定義一組相關的參數，讓某一個參數的值清單會視另一個參數所選擇的值而定。 例如，第一個參數是獨立的，而且可能代表一個產品類別目錄的清單。 使用者選取類別目錄時，第二個參數會相依於第一個參數的值。 其值會隨著所選類別目錄內的子類別目錄清單更新。 當使用者檢視報表時，類別目錄與子類別目錄參數的值都用於篩選報表資料。  

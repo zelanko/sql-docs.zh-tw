@@ -2,7 +2,6 @@
 title: RowPosition 屬性 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2566a5965b0170fddf5dfd08744db1bb141a0d14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b852ff5fab54e11f3fd39c2ca92266c95587987
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281337"
 ---
 # <a name="rowposition-property-ado"></a>RowPosition 屬性 (ADO)
 取得或設定 OLE DB **RowPosition**物件上從 / **ADORecordsetConstruction**物件。 當您使用**put_RowPosition**設定**RowPosition**物件，產生**資料錄集**物件會使用**RowPosition**物件判斷目前的資料列。  

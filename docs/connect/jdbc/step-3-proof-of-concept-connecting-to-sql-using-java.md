@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32851793"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>步驟 3： 連接到 SQL 使用 Java 的概念證明
   

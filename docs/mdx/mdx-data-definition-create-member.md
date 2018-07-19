@@ -1,6 +1,6 @@
 ---
 title: CREATE MEMBER 陳述式 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4458554d8b3aa6b0cb87d59629c70a18b609df44
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579360"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742248"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX 資料定義-建立成員
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   建立導出成員。  
   
@@ -106,14 +106,14 @@ WHERE ProfitRatio
 ```  
   
 ## <a name="standard-properties"></a>標準屬性  
- 每個導出成員都有一組預設屬性。 當用戶端應用程式連接至[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的預設屬性是直接或可以受到支援，由系統管理員決定。  
+ 每個導出成員都有一組預設屬性。 當用戶端應用程式連接至[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]的預設屬性是直接或可以受到支援，由系統管理員決定。  
   
  可能會有其他的成員屬性可用，視 Cube 定義而定。 以下屬性代表與 Cube 中維度層級相關的資訊。  
   
 |屬性識別碼|意義|  
 |-------------------------|-------------|  
 |SOLVE_ORDER|當導出成員參考另一個導出成員 (亦即，導出成員彼此交叉) 時，解析導出成員的順序。|  
-|FORMAT_STRING|用戶端應用程式可在顯示資料格值時使用的 [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 樣式格式字串。|  
+|FORMAT_STRING|Office 樣式格式字串，用戶端應用程式可以顯示資料格的值時使用。|  
 |VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 可見的導出成員可以加入至一組與[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函式。 非零的值代表可以看見導出成員。 這個屬性的預設值是*看得見*。<br /><br /> 不可見的導出成員 (此值會設為零) 一般會在較為複雜的導出成員中作為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
 |NON_EMPTY_BEHAVIOR|解析空白資料格時，用以決定導出成員行為的量值或集合。<br /><br /> **\*\* 警告\* \*** 這個屬性已被取代。 請勿設定。 如需詳細資訊，請參閱 [SQL Server 2016 中已被取代的 Analysis Services 功能](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)。|  
 |CAPTION|用戶端應用程式當做成員標題使用的字串。|  

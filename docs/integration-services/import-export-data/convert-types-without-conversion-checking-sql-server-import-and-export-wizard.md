@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c493d453d11648f75eddd4a426ec3d9bdd26a45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2dc031b041a12493c8925bfc6a7d12209e013d56
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329062"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>轉換類型但不檢查轉換 (SQL Server 匯入和匯出精靈)
   選取現有資料表和檢視，以複製或檢視您所提供的查詢之後，[ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 匯入和匯出精靈] 可能會顯示 [轉換類型但不檢查轉換] 。 當精靈找不到對應來源和目的地間資料類型所需的一或多個資料類型轉換和對應檔時，就會顯示此頁面。 此頁面包含可協助您了解遺漏項目的資訊。

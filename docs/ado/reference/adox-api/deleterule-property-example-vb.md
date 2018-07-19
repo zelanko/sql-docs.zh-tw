@@ -2,7 +2,6 @@
 title: DeleteRule 屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52fc30edffdfbad883f28c921e88df4154272154
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 388f98e0ae32c4b3fd139526da78b743466fbd58
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285887"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule 屬性範例 (VB)
 這個範例會示範[DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)屬性[金鑰](../../../ado/reference/adox-api/key-object-adox.md)物件。 程式碼會將附加新[資料表](../../../ado/reference/adox-api/table-object-adox.md)然後定義新的主要金鑰，設定**DeleteRule**至**adRICascade**。  

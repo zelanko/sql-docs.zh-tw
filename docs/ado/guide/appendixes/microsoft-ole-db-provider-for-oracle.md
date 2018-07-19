@@ -1,8 +1,7 @@
 ---
-title: Microsoft OLE DB Provider for Oracle |Microsoft 文件
+title: Microsoft OLE DB Provider for Oracle |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,28 +18,29 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de312ff17a7d66bf58a5b8f1fb7a6c33aa27acec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66e2994479c222c5f050ce13e19eb3a9ed5c01e8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979210"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Microsoft OLE DB Provider for Oracle 概觀
 > [!IMPORTANT]
->  將移除這項功能，在未來的版本的 Windows。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用 Oracle 的 OLE DB 提供者。
+>  Windows 的未來版本將移除這項功能。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 相反地，使用 Oracle OLE DB 提供者。
 
- Microsoft OLE DB Provider for Oracle 可讓 ADO 存取 Oracle 資料庫。
+ Microsoft OLE DB Provider for Oracle 可讓 ADO 可以存取 Oracle 資料庫。
 
 ## <a name="connection-string-parameters"></a>連接字串參數
- 若要連接到此提供者，設定*提供者*引數的[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
+ 若要連接到此提供者，將*提供者*引數[ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)屬性：
 
 ```
 MSDAORA
 ```
 
- 讀取[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性會傳回這個字串以及。
+ 讀取[提供者](../../../ado/reference/ado-api/provider-property-ado.md)屬性會傳回此字串以及。
 
- 如果 Oracle 資料庫中執行的聯結查詢 keyset 或 dynamic 資料指標，則會發生錯誤。 Oracle 僅支援靜態的唯讀資料指標。
+ 如果 Oracle 資料庫中執行聯結查詢與 keyset 或 dynamic 資料指標，便會發生錯誤。 Oracle 僅支援靜態唯讀資料指標。
 
 ## <a name="typical-connection-string"></a>一般連接字串
  此提供者的一般連接字串是：
@@ -49,30 +49,30 @@ MSDAORA
 "Provider=MSDAORA;Data Source=serverName;User ID=MyUserID; Password=MyPassword;"
 ```
 
- 字串，包含這些關鍵字：
+ 字串是由這些關鍵字所組成：
 
-|關鍵字|Description|
+|關鍵字|描述|
 |-------------|-----------------|
 |**提供者**|指定 OLE DB Provider for Oracle。|
 |**資料來源**|指定伺服器的名稱。|
 |**使用者識別碼**|指定使用者名稱。|
-|**密碼**|指定的使用者密碼。|
+|**密碼**|指定使用者密碼。|
 
 > [!NOTE]
->  如果您要連接至資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或**Integrated Security = SSPI**而不是使用者識別碼和密碼連接字串中的資訊。
+>  如果您要連接到資料來源提供者支援 Windows 驗證，您應該指定**Trusted_Connection = yes**或是**Integrated Security = SSPI**而非使用者 ID 和密碼連接字串中的資訊。
 
 ## <a name="provider-specific-connection-parameters"></a>提供者特有的連接參數
- 提供者支援數個提供者特有的連接參數，除了由 ADO 所定義。 可以透過設定 ADO 連接屬性中，使用這些提供者特定屬性為[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合[連接](../../../ado/reference/ado-api/connection-object-ado.md)或做為一部分**ConnectionString**.
+ 提供者支援除了 ADO 所定義的數個提供者特有的連接參數。 因為 ADO 連接屬性，這些提供者特有的屬性可設透過[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)的集合[連線](../../../ado/reference/ado-api/connection-object-ado.md)或是一部分**ConnectionString**.
 
- 這些參數是以完整描述[OLE DB 程式設計人員參考](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)。 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)提供這些參數名稱和對應的 OLE DB 屬性之間的交互參考。
+ 這些參數中的完整說明[OLE DB 程式設計人員參考](http://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)。 [ADO 動態屬性索引](../../../ado/reference/ado-api/ado-dynamic-property-index.md)提供這些參數名稱和對應的 OLE DB 屬性之間的交互參考。
 
-|매개 변수|Description|
+|參數|描述|
 |---------------|-----------------|
-|**視窗控制代碼**|表示要用於提示您輸入其他資訊的視窗控制代碼。|
-|**地區設定識別碼**|表示唯一 32 位元數字 （例如，1033年），指定與使用者的語言喜好設定。 這些喜好設定指出如何格式化日期和時間，依字母順序排序項目，字串比較時，依此類推。|
-|**OLE DB 服務**|表示位元遮罩，指定啟用或停用 OLE DB 服務。|
-|**提示字元**|指出是否要建立連接時提示使用者。|
-|**擴充的屬性**|字串，包含提供者特定、 擴充連接資訊。 這個屬性只用於無法透過屬性機制中所述的提供者特定連接資訊。|
+|**視窗控制代碼**|表示將提示您輸入其他資訊的視窗控制代碼。|
+|**地區設定識別碼**|表示唯一 32 位元指定的數字 （例如，1033年） 的相關使用者的語言喜好設定。 這些喜好設定會指出如何格式化日期和時間，依字母順序排序項目，字串比較時，依此類推。|
+|**OLE DB 服務**|表示位元遮罩，指定啟用或停用的 OLE DB 服務。|
+|**提示**|指出是否要建立連接時提示使用者。|
+|**擴充的屬性**|字串，包含提供者特定、 擴充連接資訊。 這個屬性僅適用於無法透過屬性機制中所述的提供者特有的連接資訊。|
 
 ## <a name="see-also"></a>另請參閱
  [ConnectionString 屬性 (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [提供者屬性 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [資料錄集物件 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -2,23 +2,21 @@
 title: 如何參與編輯 SQL Server 文件集 | Microsoft Docs
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52bc0371c7f60b7b6fcff5c64c5972d7a178b629
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926529"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>如何參與編輯 SQL Server 文件集
 
@@ -75,7 +73,7 @@ ms.lasthandoff: 05/03/2018
 - [建立 GitHub 帳戶](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [安裝內容撰寫工具](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [本機設定 Git 存放庫](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [使用工具來參與編輯](https://docs.microsoft.com/contribute/full-workflow)
+- [使用工具來參與編輯](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 如果您送出對文件集的重大變更提取要求時，就會收到一個 GitHub 註解，要求您提交線上的**貢獻授權合約 (CLA)**。 您必須填妥線上表單，系統才會接受您的提取要求。
 
@@ -138,5 +136,3 @@ ms.lasthandoff: 05/03/2018
 尋找文章、送出變更，並協助 SQL Server 社群。 
 
 感謝您！
-
-

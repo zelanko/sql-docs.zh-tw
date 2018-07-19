@@ -2,7 +2,6 @@
 title: ExecuteComplete 事件 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab8c0b33fe31499999cc73d2ebc03ef0d32ace70
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0af3666e4f5aecf897bdd6b93f756c2d251fa40
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278167"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete 事件 (ADO)
 **ExecuteComplete**命令已完成執行之後，會呼叫事件。  

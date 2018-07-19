@@ -1,32 +1,20 @@
 ---
-title: 匯入 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- IMPORT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- IMPORT statement
-- mining structures [DMX], importing
-ms.assetid: c053bc88-2daf-4ebb-81d7-5a330250536d
-caps.latest.revision: 42
-author: Minewiskan
+title: 匯入 (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ae93e70bb0e5672ada244064feb12750a96d4ffd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 4987701deb466148253c8418c88683d2dbfbc16b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061022"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,8 +47,8 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [資料採礦延伸模組&#40;DMX&#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
  [匯出&AMP;#40;DMX&AMP;#41;](../dmx/export-dmx.md)   
- [匯出和匯入資料採礦物件](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+ [匯出及匯入資料採礦物件](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

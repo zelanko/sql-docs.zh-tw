@@ -3,9 +3,7 @@ title: SQL Server 2014 版本資訊 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
-ms.technology: server-general
+ms.technology: install
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -16,11 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: f9a8d57f209e5c8c813fd08c8faff6ce5504c97b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926969"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]

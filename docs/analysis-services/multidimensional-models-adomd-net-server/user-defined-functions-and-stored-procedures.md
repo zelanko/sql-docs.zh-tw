@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024625"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>使用者定義函數和預存程序
   透過 ADOMD.NET 伺服器物件，您可以建立使用者定義函數 (UDF) 或是預存程序[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ，與中繼資料和來自伺服器的資料互動。 這些同處理序 (In-Process) 方法是透過「多維度運算式」(Multidimensional Expressions，MDX) 或「資料採礦延伸模組」(Data Mining Extensions，DMX) 陳述式來呼叫，以提供附加功能，並不會有與網路通訊關聯的延遲。  

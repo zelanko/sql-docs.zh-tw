@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/27/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|language-elements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,11 +25,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d84d2f8ae7326e610f140a5f0ae2ed20a2e2e1a4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2d0715b04741df2ed6223261923e23c8058bb41
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36260410"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server 公用程式陳述式 - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -11,7 +11,7 @@ ms.openlocfilehash: 5aa19e54917a421567c5ede2013e019de609d8b6
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34585224"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>SQL Server 的 R 封裝同步處理

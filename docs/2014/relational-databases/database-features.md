@@ -1,0 +1,43 @@
+---
+title: 資料庫功能 | Microsoft 文件
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
+caps.latest.revision: 5
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: d1f3b7908e0ea58dad3f91b7a877fe5d64a1762a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37292688"
+---
+# <a name="database-features"></a>資料庫功能
+  本節包含與資料庫相關聯的功能和工作、資料庫物件、資料類型及用於處理或管理資料的機制。  
+  
+## <a name="in-this-section"></a>本節內容  
+  
+|||
+|--|--|
+|[資料庫](databases/databases.md)|[SQL Server 資料庫的備份與還原](backup-restore/back-up-and-restore-of-sql-server-databases.md)|  
+|[資料表](tables/tables.md)|[序號](sequence-numbers/sequence-numbers.md)|[資料的大量匯入及匯出 &#40;SQL Server&#41;](import-export/bulk-import-and-export-of-data-sql-server.md)|  
+|[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)|[DDL 觸發程序](triggers/ddl-triggers.md)|[資料壓縮](data-compression/data-compression.md)|  
+|[[索引]](indexes/indexes.md)|[DML 觸發程序](triggers/dml-triggers.md)|[Transact-SQL 中的 OLE Automation 物件](stored-procedures/ole-automation-objects-in-transact-sql.md)|  
+|[Partitioned Tables and Indexes](partitions/partitioned-tables-and-indexes.md)|[同義字 &#40;Database Engine&#41;](synonyms/synonyms-database-engine.md)|[事件通知](service-broker/event-notifications.md)|  
+|[檢視](views/views.md)|[XML 資料 &#40;SQL Server&#41;](xml/xml-data-sql-server.md)|[效能的監視與微調](performance/monitor-and-tune-for-performance.md)|  
+|[預存程序 &#40;Database Engine&#41;](stored-procedures/stored-procedures-database-engine.md)|[空間資料 &#40;SQL Server&#41;](spatial/spatial-data-sql-server.md)||  
+|[搜尋&#40;SQL Server&#41;](../database-engine/search-sql-server.md)|[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
+|[使用者定義的函式](user-defined-functions/user-defined-functions.md)|[資料層應用程式](data-tier-applications/data-tier-applications.md)||  
+|[統計資料](statistics/statistics.md)|[交易記錄 &#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
+|[計畫指南](performance/plan-guides.md)|[資料庫檢查點&#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
+  
+  

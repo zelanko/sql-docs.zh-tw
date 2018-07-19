@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97d4ef0cb4c18f67a57c26fd02f25ed5ea230d11
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: cbd4dd56bedf53d4f0bc7374e9389221acb092d7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576750"
 ---
 # <a name="value-element-parameter-xmla"></a>Value 元素 (Parameter) (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|說明|  
+|特性|描述|  
 |--------------------|-----------------|  
 |資料類型和長度|任意|  
 |預設值|無|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/10/2018
 ## <a name="remarks"></a>備註  
  **值**項目可以儲存任何簡單 XML 類型，以及 XML for Analysis (XMLA)**資料列集**參數中的 XMLA 命令所使用的資料型別， [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md)方法。  
   
-## <a name="see-also"></a>另請參閱  
- [屬性 & #40;XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>另請參閱
+ [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

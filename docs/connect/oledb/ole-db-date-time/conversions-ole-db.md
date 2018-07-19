@@ -2,10 +2,10 @@
 title: 繫結和轉換 (OLE DB) |Microsoft 文件
 description: 繫結和轉換 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 79887c62b3cd26c194bf140b29b836bf9140eb85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c653bc4f79e9f54b96fa86fc5c0b65756b23216
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666018"
 ---
 # <a name="conversions-ole-db"></a>轉換 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本章節將討論如何將轉換之間**datetime**和**datetimeoffset**值。 本節中所描述的轉換已由 OLE DB 提供，或是一致的 OLE DB 延伸模組。  
   
@@ -74,6 +77,6 @@ ms.lasthandoff: 05/03/2018
  描述之間執行的日期/時間轉換[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更新版本） 和 SQL Server 的撰寫與 OLE DB 驅動程式的用戶端應用程式。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能 & #40; OLE DB & #41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和時間增強功能&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

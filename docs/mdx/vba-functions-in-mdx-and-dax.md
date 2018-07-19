@@ -1,6 +1,6 @@
 ---
 title: MDX 和 DAX 中的 VBA 函數 |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a9764d4e302a663800bd71a5c7083d985ea230bc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582520"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743887"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 和 DAX 中的 VBA 函數
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   本文件包含之所有 VBA 函數中可用的交互的參考[應用程式函式的 Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) MDX 支援; 此外，此清單包含附註和 DAX 語言的功能等價時.  
   

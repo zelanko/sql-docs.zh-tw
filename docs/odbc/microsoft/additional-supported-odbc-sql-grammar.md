@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898923"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>其他支援的 ODBC SQL 文法
 ODBC 驅動程式完全支援的最小值 ODBC 2.5 文法和下列子句核心和擴充 ODBC 2.5 文法中。 會顯示其他資訊，請跳至[ALTER TABLE 陳述式](../../odbc/microsoft/alter-table-statement.md)，[相互關聯名稱](../../odbc/microsoft/correlation-names.md)，和[程序引動過程](../../odbc/microsoft/procedure-invocation.md)主題。  

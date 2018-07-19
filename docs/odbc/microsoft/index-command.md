@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904413"
 ---
 # <a name="index-command"></a>INDEX 命令
 建立索引來顯示和存取資料表會依照邏輯順序記錄檔。  

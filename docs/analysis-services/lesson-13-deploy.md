@@ -1,5 +1,5 @@
 ---
-title: 第 14 課： 部署 |Microsoft 文件
+title: 第 14 課： 部署 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,56 +10,57 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 533b6197c72d03876b928f4024fc5eb4fb0f2fc0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38034733"
 ---
 # <a name="lesson-13-deploy"></a>第 13 課： 部署
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在這一課，您將設定部署屬性;指定內部部署或 Azure 的伺服器執行個體，以及模型的名稱。 然後您將模型部署至該執行個體中。 部署模型之後，使用者可以使用報表用戶端應用程式連線到它。 若要了解有關部署的詳細資訊，請參閱[表格式模型方案部署](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)和[部署至 Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)。  
+在這一課，您將設定部署屬性，指定於內部部署或 Azure 的伺服器執行個體，以及模型的名稱。 您接著會將模型部署至該執行個體。 部署您的模型之後，使用者可以使用報表用戶端應用程式連線到它。 若要深入了解部署，請參閱[表格式模型方案部署](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)並[部署至 Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy)。  
   
 完成本課程的估計時間： **5 分鐘**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
-本主題是表格式模型教學課程的一部分，必須依序完成。 然後再執行工作，在這一課，您應已完成上一課：[第 12 課： 在 Excel 中分析](../analysis-services/lesson-12-analyze-in-excel.md)。  
+## <a name="prerequisites"></a>先決條件  
+本主題是表格式模型教學課程的一部分，必須依序完成。 執行工作之前在這一課，您應已完成上一課：[第 12 課： 在 Excel 中分析](../analysis-services/lesson-12-analyze-in-excel.md)。  
   
 ## <a name="deploy-the-model"></a>部署模型  
   
 #### <a name="to-configure-deployment-properties"></a>若要設定部署屬性  
   
-1.  在**方案總管 中**，以滑鼠右鍵按一下**AW Internet Sales**專案，然後再按一下**屬性**。  
+1.  在 **方案總管**，以滑鼠右鍵按一下**AW 網際網路銷售**專案，然後再按一下**屬性**。  
   
-2.  在**AW Internet Sales 屬性頁**對話方塊的 **部署伺服器**，請在**伺服器**屬性中，輸入 Azure Analysis Services 伺服器的名稱或在內部部署伺服器執行個體以表格式模式執行。 這會是您的模型將會部署到伺服器執行個體。  
+2.  在  **AW 網際網路銷售屬性頁**對話方塊的 **部署伺服器**，請在**Server**屬性，輸入 Azure Analysis Services 伺服器的名稱或在內部部署伺服器執行個體以表格式模式執行。 這會是您的模型將會部署到伺服器執行個體。  
 
     ![aas-部署-部署-伺服器-屬性](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
-    > 系統管理員權限必須在遠端 Analysis Services 執行個體中才能部署它。  
+    > 您必須在遠端 Analysis Services 執行個體才能對它進行部署中具有管理員權限。  
   
-3.  在**資料庫**屬性中，輸入**Adventure Works Internet Sales**。  
+3.  在 **資料庫**屬性中，輸入**Adventure Works Internet Sales**。  
   
-4.  在**模型名稱**屬性中，輸入**Adventure Works Internet Sales Model**。  
+4.  在 **模型名稱**屬性中，輸入**Adventure Works Internet Sales Model**。  
   
 5.  確認您的選取，然後按一下 [確定]。  
   
 #### <a name="to-deploy-the-adventure-works-internet-sales-tabular-model"></a>若要部署 Adventure Works Internet Sales 表格式模型  
   
-1.  在**方案總管 中**，以滑鼠右鍵按一下**AW Internet Sales**專案 >**建置**。  
+1.  在 **方案總管**，以滑鼠右鍵按一下**AW 網際網路銷售**專案 >**建置**。  
 
-2.  以滑鼠右鍵按一下**AW Internet Sales**專案 >**部署**。
+2.  以滑鼠右鍵按一下**AW 網際網路銷售**專案 >**部署**。
 
-    當部署至 Azure Analysis Services，將可能會提示您輸入您的帳戶。 輸入您的組織帳戶和 passsword，例如nancy@adventureworks.com。此帳戶必須是系統管理員中，伺服器執行個體上。
+    部署到 Azure Analysis Services 時，將可能會提示您輸入您的帳戶。 輸入您的組織帳戶和 passsword，例如nancy@adventureworks.com。 此帳戶必須位於伺服器執行個體上系統管理員。
   
     [部署] 對話方塊隨即出現，並且顯示中繼資料以及模型中每個資料表的部署狀態。  
     
-    ![aas 部署狀態](../analysis-services/media/aas-deploy-status.png)
+    ![以部署狀態](../analysis-services/media/aas-deploy-status.png)
   
 3. 當部署順利完成時，就可以按一下 [關閉]。  
   
 ## <a name="conclusion"></a>結論  
-恭喜！ 您完成撰寫和部署您的第一個 Analysis Services 表格式模型。 本教學課程已幫助您完成建立表格式模型最常執行的工作。 現在您已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 管理此模型，並且建立處理序指令碼及備份計畫。 使用者現在也可以連線至使用報表用戶端應用程式，例如 Microsoft Excel 或 Power BI 模型。  
+恭喜！ 您完成撰寫和部署第一個 Analysis Services 表格式模型。 本教學課程已幫助您完成建立表格式模型最常執行的工作。 現在您已部署了 Adventure Works Internet Sales Model，就可以使用 SQL Server Management Studio 管理此模型，並且建立處理序指令碼及備份計畫。 使用者現在也可以連接到使用 Microsoft Excel 或 Power BI 等報表用戶端應用程式模型中。  
 
 ![做為表格式-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
@@ -73,4 +74,4 @@ ms.lasthandoff: 05/10/2018
   ## <a name="whats-next"></a>下一步
 *  [補充課程-使用資料列篩選實作動態安全性](../analysis-services/supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)。
 
-*  [補充課程-設定 Power View 報表的報表屬性](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)。
+*  [補充課程-Power View 報表的設定報表屬性](../analysis-services/supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)。

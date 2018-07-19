@@ -2,10 +2,10 @@
 title: 資料列集和參數中的資料類型對應 |Microsoft 文件
 description: 資料列集和參數中的資料類型對應
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-data-types
+ms.component: oledb|ole-db-data-types
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -25,14 +25,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4e44de3f10573d9ef892999ad933756cfa737863
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5814771fe9ea11adc0908d2791af4e1b4f7dd881
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666118"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   SQL Server OLE DB 驅動程式中資料列集和參數值，表示[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料使用下列的 OLE DB 定義的資料類型，函數中報告**icolumnsinfo:: Getcolumninfo**和**Icommandwithparameters:: Getparameterinfo**。  
   
@@ -97,6 +100,6 @@ ms.lasthandoff: 05/03/2018
 |SSPROP_ALLOWNATIVEVARIANT|類型：VT_BOOL<br /><br /> R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：決定所提取的資料是否為 DBTYPE_VARIANT 或 DBTYPE_SQLVARIANT。<br /><br /> VARIANT_TRUE：資料行類型是以 DBTYPE_SQLVARIANT 傳回，在此種情況下，緩衝區會保存 SSVARIANT 結構。<br /><br /> VARIANT_FALSE：資料行類型是以 DBTYPE_VARIANT 傳回，而且緩衝區將具有 VARIANT 結構。|  
   
 ## <a name="see-also"></a>另請參閱  
- [資料類型 & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
+ [資料型別&#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

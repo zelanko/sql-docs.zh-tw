@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235842"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>什麼是[!INCLUDE[name-sos](../includes/name-sos.md)]？
 
@@ -41,7 +42,7 @@ T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料
 
 建立豐富可自訂的儀表板來監視和快速疑難排解您的資料庫中的效能瓶頸。 若要深入了解 insight widget 和資料庫 （和伺服器）的儀表板，請參閱[透過 insight widget 管理伺服器和資料庫](insight-widgets.md)。
 
-## <a name="connection-management-server-groups"></a>連接管理（伺服器群組）
+## <a name="connection-management-server-groups"></a>（伺服器群組） 的連接管理
 
 伺服器群組提供組織伺服器及您使用的資料庫連接資訊的方式。 如需詳細資訊，請參閱[伺服器群組](server-groups.md)。
 
@@ -53,3 +54,4 @@ T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料
 - [下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [連接及查詢 SQL Server](quickstart-sql-server.md)
 - [連接及查詢 Azure SQL Database](quickstart-sql-database.md)
+

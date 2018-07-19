@@ -1,6 +1,6 @@
 ---
 title: 運算式 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 79909f574d818a599f30ad051be9cf6a980430a9
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579480"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740837"
 ---
 # <a name="expressions-mdx"></a>運算式 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  運算式是識別碼、 數值與運算子的組合， [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可以評估而取得結果。 在存取或變更資料時，資料可以用在許多不同的地方。 例如，您可以使用運算式做為查詢所要擷取之資料的一部份、或是做為搜尋條件來尋找符合一組條件的資料。  
+
+  運算式是識別碼、 數值與運算子可以評估以取得結果的組合。 在存取或變更資料時，資料可以用在許多不同的地方。 例如，您可以使用運算式做為查詢所要擷取之資料的一部份、或是做為搜尋條件來尋找符合一組條件的資料。  
   
 ## <a name="simple-and-complex-expressions"></a>簡單及複雜運算式  
  MDX 中的運算式可能很簡單或很複雜：  

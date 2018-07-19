@@ -2,7 +2,6 @@
 title: 移動方法範例 (VBScript) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c73be1d871e1354f5c545ac44bf9feedad62c6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93f06ddfa78d0054ec08882b30f16047a842c833
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279457"
 ---
 # <a name="move-method-example-vbscript"></a>Move 方法範例 (VBScript)
 這個範例會使用[移動](../../../ado/reference/ado-api/move-method-ado.md)方法，將記錄指標，以根據使用者輸入。  

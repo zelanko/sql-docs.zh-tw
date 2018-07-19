@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029015"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>角色與權限 (Reporting Services)
   Reporting Services 會提供驗證子系統和以角色為基礎的授權模型。 驗證和授權模型會因報表伺服器是以原生模式或 SharePoint 模式執行而不同。 如果報表伺服器屬於 SharePoint 部署的一部分，SharePoint 權限將決定擁有報表伺服器存取權的人員。  

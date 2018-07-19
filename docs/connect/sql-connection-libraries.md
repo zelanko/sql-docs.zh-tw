@@ -2,28 +2,28 @@
 title: Microsoft SQL 資料庫的連線庫 |Microsoft 文件
 description: 提供的模組可讓連接到 Microsoft SQL Server 和 Azure SQL Database 中，從各種不同的程式設計語言的用戶端下載的連結。
 author: MightyPen
-ms.component: connect
 ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.topic: article
-ms.date: 04/10/2018
+ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 212558cc1a9715e971e19fd4e637dcd6c089e1bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7d00ed25392e979cc0d5037bef6b7d8eccc66bf
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36246840"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Microsoft SQL 資料庫的連接模組
 
 本文提供連接模組的下載連結或*驅動程式*，可以使用用戶端程式與互動[Microsoft SQL Server](../relational-databases/database-features.md)，並使用其雲端中的兩個[AzureSQL Database](http://docs.microsoft.com/azure/sql-database/)。 驅動程式可供各種不同的程式語言中，執行下列作業系統上：
 
 - Linux (Ubuntu)
-- MacOS
-- 視窗
+- macOS
+- Windows
 
 #### <a name="oop-to-relational-mismatch"></a>OOP 到關聯式的不相符
 
@@ -52,7 +52,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | 語言 | 下載 SQL 驅動程式 |
 | :------- | :---------------------- |
 | C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core，for Linux Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core，如 MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core for Windows](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/download-oledb-driver-for-sql-server.md) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js 驅動程式、 安裝指示](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |

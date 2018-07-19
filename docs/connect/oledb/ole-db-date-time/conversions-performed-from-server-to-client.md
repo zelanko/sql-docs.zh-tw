@@ -2,10 +2,10 @@
 title: 執行轉換，從伺服器到用戶端 |Microsoft 文件
 description: 從伺服器到用戶端執行的轉換
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-date-time
+ms.component: oledb|ole-db-date-time
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 91d3e482964b706f603ba3648c307414978fbaee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a90953e9ee026f4f2c941520b1fe94bcf74eb1d5
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35666408"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>從伺服器到用戶端執行的轉換
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   這篇文章描述之間執行的日期/時間轉換[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]（或更新版本） 和 SQL Server 的撰寫與 OLE DB 驅動程式的用戶端應用程式。  
   
@@ -32,27 +35,27 @@ ms.lasthandoff: 05/03/2018
   
 |目標 -><br /><br /> 來源|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|日期|1, 7|確定|-|-|1|1, 3|1, 7|-|[確定] (VT_BSTR)|確定|確定|4|4|  
-|Time|5、 6、 7|-|9|確定|6|3, 6|5、 6|-|[確定] (VT_BSTR)|確定|確定|4|4|  
-|Smalldatetime|7|8|9, 10|10|確定|3|7|-|7 (VT_DATE)|確定|確定|4|4|  
-|Datetime|5、 7|8|9, 10|10|確定|3|7|-|7 (VT_DATE)|確定|確定|4|4|  
-|Datetime2|5、 7|8|9, 10|10|7|3|5、 7|-|[確定] (VT_BSTR)|確定|確定|4|4|  
-|Datetimeoffset|5、 7、 11|8, 11|9、 10、 11|10、 11|7, 11|確定|5、 7、 11|-|[確定] (VT_BSTR)|確定|確定|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12 9|12|12|12|7, 13|해당 사항 없음|不適用|不適用|不適用|不適用|해당 사항 없음|  
-|Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|確定|3|7|-|7 (VT_DATE)|確定|確定|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|確定|3|7|-|7 (VT_DATE)|確定|確定|4|4|  
-|Sql_variant<br /><br /> (date)|1, 7|確定|2|2|1|1, 3|1, 7|-|OK(VT_BSTR)|確定|確定|4|4|  
-|Sql_variant<br /><br /> (time)|5、 6、 7|2|6|確定|6|3, 6|5、 6|-|OK(VT_BSTR)|確定|確定|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5、 7|8|9, 10|10|確定|3|5、 7|-|OK(VT_BSTR)|確定|確定|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5、 7、 11|8, 11|9、 10、 11|10、 11|7, 11|確定|5、 7、 11|-|OK(VT_BSTR)|確定|確定|4|4|  
+|date|1, 7|[確定]|-|-|@shouldalert|1, 3|1, 7|-|[確定] (VT_BSTR)|[確定]|[確定]|4|4|  
+|Time|5、 6、 7|-|9|[確定]|6|3, 6|5、 6|-|[確定] (VT_BSTR)|[確定]|[確定]|4|4|  
+|Smalldatetime|7|8|9, 10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
+|DATETIME|5、 7|8|9, 10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
+|Datetime2|5、 7|8|9, 10|10|7|3|5、 7|-|[確定] (VT_BSTR)|[確定]|[確定]|4|4|  
+|Datetimeoffset|5、 7、 11|8, 11|9、 10、 11|10、 11|7, 11|[確定]|5、 7、 11|-|[確定] (VT_BSTR)|[確定]|[確定]|4|4|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12 9|12|12|12|7, 13|不適用|不適用|不適用|不適用|不適用|不適用|  
+|Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|[確定]|3|7|-|7 (VT_DATE)|[確定]|[確定]|4|4|  
+|Sql_variant<br /><br /> (date)|1, 7|[確定]|2|2|@shouldalert|1, 3|1, 7|-|OK(VT_BSTR)|[確定]|[確定]|4|4|  
+|Sql_variant<br /><br /> (time)|5、 6、 7|2|6|[確定]|6|3, 6|5、 6|-|OK(VT_BSTR)|[確定]|[確定]|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5、 7|8|9, 10|10|[確定]|3|5、 7|-|OK(VT_BSTR)|[確定]|[確定]|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5、 7、 11|8, 11|9、 10、 11|10、 11|7, 11|[確定]|5、 7、 11|-|OK(VT_BSTR)|[確定]|[確定]|4|4|  
   
 ## <a name="key-to-symbols"></a>符號的索引鍵  
   
 |符號|意義|  
 |------------|-------------|  
-|確定|不需要任何轉換。|  
+|[確定]|不需要任何轉換。|  
 |-|不支援轉換。 如果繫結驗證時 iaccessor:: Createaccessor 呼叫時，就會傳回 DBBINDSTATUS_UPSUPPORTEDCONVERSION *rgStatus*。 當存取子驗證延遲時，會設定 DBSTATUS_E_BADACCESSOR。|  
-|1|時間欄位會設定為零。|  
+|@shouldalert|時間欄位會設定為零。|  
 |2|DBSTATUS_E_CANTCONVERTVALUE 已設定。|  
 |3|時區會設定為零。|  
 |4|如果用戶端緩衝區不夠大，會設定 DBSTATUS_S_TRUNCATED。 當伺服器類型包含小數秒時，結果字串中的位數會完全符合伺服器類型的小數位數。|  

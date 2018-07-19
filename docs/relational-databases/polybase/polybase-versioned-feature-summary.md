@@ -3,24 +3,22 @@ title: PolyBase 建立版本的功能摘要 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.component: polybase
+ms.technology: polybase
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: database
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: 10
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1374b8620a469fef746a71e20ca938b4736f096
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: df01d5e4503aeb4004f06ec0310ac613a6318d8b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278044"
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 建立版本的功能摘要
 [!INCLUDE[appliesto-ss2016-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

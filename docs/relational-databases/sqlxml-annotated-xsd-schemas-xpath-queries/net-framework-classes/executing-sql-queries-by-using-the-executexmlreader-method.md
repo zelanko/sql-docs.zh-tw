@@ -1,5 +1,5 @@
 ---
-title: 使用 ExecuteXMLReader 方法執行 SQL 查詢 |Microsoft 文件
+title: 使用 ExecuteXMLReader 方法執行 SQL 查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9a219162953134810976461ba682359193246ad8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053756"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>使用 ExecuteXMLReader 方法執行 SQL 查詢
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  不使用 ExecuteToStream 方法，您可以使用 SqlXmlCommand 物件 ExecuteXmlReader 方法執行命令。 這個方法會傳回 XmlReader 物件可用來進一步處理結果 （在此範例中列印元素或屬性名稱和值）。  
+  而不是使用 ExecuteToStream 方法，您可以使用 SqlXmlCommand 物件 ExecuteXmlReader 方法執行命令。 這個方法會傳回 XmlReader 物件，可用來進一步處理結果 （在此範例中列印元素或屬性名稱和值）。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

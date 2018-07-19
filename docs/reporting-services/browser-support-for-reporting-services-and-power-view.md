@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017185"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的瀏覽器支援
 

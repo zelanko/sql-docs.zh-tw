@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912003"
 ---
 # <a name="setting-descriptor-fields"></a>設定描述項欄位
 若要修改的描述項欄位，應用程式可以呼叫**SQLSetDescField**。 某些欄位是唯讀而且無法設定。 (請參閱[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)函式描述。)  

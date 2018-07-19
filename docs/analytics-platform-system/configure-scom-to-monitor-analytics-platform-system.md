@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539400"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>設定 System Center Operations Manager (SCOM)，來監視 Analytics Platform System
 請遵循下列步驟來設定 Analytics Platform System for System Center Operations Manager (SCOM) 管理組件。 監視從 SCOM Analytics Platform System 所需的管理組件。  

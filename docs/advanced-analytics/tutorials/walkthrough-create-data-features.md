@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203300"
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>建立資料的功能使用 R 和 SQL （逐步解說）
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -210,7 +211,7 @@ R 語言已知有各種豐富的統計程式庫，但您可能仍然需要自訂
     ```
 
     > [!NOTE]
-    > 在某些情況下，您可能會收到這類錯誤： *EXECUTE 權限遭拒的物件 'fnCalculateDistance'*若是如此，請確定您使用的登入有執行指令碼，以及在資料庫上建立物件的權限不只是根據執行個體。
+    > 在某些情況下，您可能會收到這類錯誤： *EXECUTE 權限遭拒的物件 'fnCalculateDistance'* 若是如此，請確定您使用的登入有執行指令碼，以及在資料庫上建立物件的權限不只是根據執行個體。
     > 請檢查該物件，fnCalculateDistance 結構描述。 如果物件已建立資料庫擁有者，而且您登入都屬於角色 db_datareader，您需要執行此指令碼的明確權限授與登入。
 
 ## <a name="comparing-r-functions-and-sql-functions"></a>比較 R 函式和 SQL 函式

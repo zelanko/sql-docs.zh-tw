@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907843"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>覆寫間隔資料類型的預設前置和秒數有效位數
 當 ARD 的 SQL_DESC_TYPE 欄位設定為日期時間或間隔 C 類型時，藉由呼叫**SQLBindCol**或**SQLSetDescField**，SQL_DESC_PRECISION 欄位 （其中包含間隔秒數有效位數） 設定為下列的預設值：  

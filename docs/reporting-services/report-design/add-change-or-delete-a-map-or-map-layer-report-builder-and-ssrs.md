@@ -1,7 +1,7 @@
 ---
 title: 新增、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -32,11 +32,12 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8e627e570e310239c1973b8b24a44499b0bd47e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 459aa9dde1f5c148257323d80e9d26841ecb9a53
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550669"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>加入、變更或刪除地圖或地圖圖層 (報表產生器及 SSRS)
   地圖是圖層的集合。 將地圖加入至 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表時，您會定義第一個圖層。 您可以使用地圖圖層精靈建立其他圖層。  
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/03/2018
 4.  在 [檔案名稱] 中，鍵入 ESRI 形狀檔的位置，或按一下 [瀏覽] 以選取 ESRI 形狀檔。  
   
     > [!NOTE]  
-    >  如果此形狀檔在您的本機電腦上，空間資料會內嵌在報表定義中。 若要在處理報表時動態擷取資料，您必須將 ESRI .shp 檔及其支援檔案 .dbf 上傳至報表伺服器。 如需詳細資訊，請參閱《SQL Server 線上叢書》中 [Reporting Services 文件](http://go.microsoft.com/fwlink/?linkid=121312) 的＜如何：上傳檔案或報表 (報表管理員)＞。  
+    >  如果此形狀檔在您的本機電腦上，空間資料會內嵌在報表定義中。 若要在處理報表時動態擷取資料，您必須將 ESRI .shp 檔及其支援檔案 .dbf 上傳至報表伺服器。 如需詳細資訊，請參閱[上傳檔案或報表](../reports/upload-a-file-or-report-report-manager.md)。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

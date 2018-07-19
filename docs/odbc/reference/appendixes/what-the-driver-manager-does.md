@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914233"
 ---
 # <a name="what-the-driver-manager-does"></a>驅動程式管理員的功用為何
 下表摘要說明如何 ODBC 3 *.x*驅動程式管理員將呼叫對應至 ODBC 2。*x*而 ODBC 3.<placeholder>x<*.x*驅動程式。  

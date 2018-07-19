@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915553"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、 DELETE 和 INSERT 陳述式
 以 SQL 為基礎的應用程式對資料表進行變更，藉由執行**更新**，**刪除**，和**插入**陳述式。 下列陳述式是 Minimum SQL 文法一致性層級的一部分，而且必須支援的所有驅動程式和資料來源。  

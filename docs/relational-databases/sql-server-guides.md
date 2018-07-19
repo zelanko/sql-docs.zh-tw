@@ -7,24 +7,23 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide
 - guide, list
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 781d690d6274ddfc6e74dd3fb0705832185625fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6cfb78af5f95e4c0c01c39ccad3656f818efa54
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37286224"
 ---
 # <a name="sql-server-guides"></a>SQL Server 指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

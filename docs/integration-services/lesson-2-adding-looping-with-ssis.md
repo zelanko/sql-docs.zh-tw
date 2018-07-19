@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
@@ -18,11 +16,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a17dbabd2998f4578da9faca1d217fdee00b559d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba491a3ca7cec145f8b891c1b08d7d491b2c768d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403060"
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>第 2 課：使用 SSIS 新增迴圈
 在 [第 1 課：使用 SSIS 建立專案和基本套件](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)中，您建立了一個從單個一般檔案來源中擷取資料的套件、利用查閱轉換來轉換資料，最後將資料載入 **AdventureWorksDW2012** 範例資料庫的 **FactCurrency** 事實資料表中。  

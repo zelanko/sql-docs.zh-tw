@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908933"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>編譯內嵌的 SQL 程式
 內嵌的 SQL 程式包含 SQL 和主機語言陳述式混用，因為它無法直接提交給主機語言的編譯器。 相反地，它會編譯到包含多個步驟的程序。 雖然這個程序不同的產品，但步驟都大致上相同的所有產品。  

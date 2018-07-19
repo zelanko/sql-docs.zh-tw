@@ -13,7 +13,7 @@ ms.openlocfilehash: 3c831c286de105f10762bbd8b926df7b4bb33623
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575320"
 ---
 # <a name="lname-element-xmla"></a>LName 元素 (XMLA)

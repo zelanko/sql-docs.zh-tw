@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025345"
 ---
 # <a name="report-builder-functions---sum-function"></a>報表產生器函式 - Sum 函式
   傳回運算式指定之所有非 Null 數值的總和 (在給定範圍中評估)。  

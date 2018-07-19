@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897053"
 ---
 # <a name="base-address-of-drivers"></a>驅動程式的起始位址
 每個 ODBC 桌面資料庫驅動程式具有基底位址 0x04c0000 連結。

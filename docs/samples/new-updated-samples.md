@@ -17,6 +17,7 @@ ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32685398"
 ---
 # <a name="new-and-recently-updated-samples-for-sql-server"></a>新增和更新最近： SQL Server 的範例
 

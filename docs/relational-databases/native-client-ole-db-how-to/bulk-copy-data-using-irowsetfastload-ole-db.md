@@ -1,13 +1,12 @@
 ---
-title: 大量複製資料使用 IRowsetFastLoad (OLE DB) |Microsoft 文件
+title: 大量複製資料，使用 IRowsetFastLoad (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: af3f6047543563dddbf85fdb53f1f8d3fdaf33ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 684ef570f471e4e580ac1c720e30022da3e1293f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408627"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  完整的範例會說明如何使用**IRowsetFastLoad**記錄大量複製到資料表。 在此範例中，10 筆記錄會加入至資料表**IRFLTable**。 您需要建立資料表**IRFLTable**資料庫中。  
   
- 這個範例需要 AdventureWorks 範例資料庫，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫中，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -46,24 +46,24 @@ ms.lasthandoff: 05/03/2018
   
 1.  建立資料來源的連接。  
   
-2.  將 SQLOLEDB 提供者特有的資料來源屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 此屬性設定為 VARIANT_TRUE，新建立的工作階段可讓取用者存取**IRowsetFastLoad**。  
+2.  將 SQLOLEDB 提供者特有的資料來源屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE。 這個屬性中，設定為 VARIANT_TRUE，新建立的工作階段可讓取用者存取**IRowsetFastLoad**。  
   
-3.  建立工作階段要求**IOpenRowset**介面。  
+3.  建立工作階段，要求**IOpenRowset**介面。  
   
-4.  呼叫**iopenrowset:: Openrowset**開啟資料列集，其中包含從資料表 （在其中的資料會使用大量複製作業複製） 的所有資料列。  
+4.  呼叫**iopenrowset:: Openrowset**開啟資料列集，其中包含從資料表 （在其中的資料是使用大量複製作業複製） 的所有資料列。  
   
-5.  必要的繫結，並建立存取子使用**iaccessor:: Createaccessor**。  
+5.  執行必要的繫結，並建立使用存取子**iaccessor:: Createaccessor**。  
   
 6.  設定要將資料複製到資料表的來源記憶體緩衝區。  
   
-7.  呼叫**irowsetfastload:: Insertrow**來大量複製到資料表中的資料。  
+7.  呼叫**irowsetfastload:: Insertrow**成大量複製到資料表中的資料。  
   
 ## <a name="example"></a>範例  
  在這個範例中，10 筆記錄會加入至資料表 IRFLTable。 您必須在資料庫中建立資料表 IRFLTable。 IA64 不支援此範例。  
   
  執行第一個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的資料表。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 「 以 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 sqlncli.h。  
   
  執行第三個 ([!INCLUDE[tsql](../../includes/tsql-md.md)]) 程式碼清單，以便刪除應用程式所使用的資料表。  
   

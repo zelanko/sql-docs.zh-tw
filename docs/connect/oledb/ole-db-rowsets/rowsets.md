@@ -2,10 +2,10 @@
 title: 資料列集 |Microsoft 文件
 description: SQL Server 的 OLE DB 驅動程式中資料列集
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-rowsets
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,18 +20,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d3f187118cd273712ed8145bbfef3af712091028
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ffead535df47ea3f6937e11fa16f5e32318ecf3
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690171"
 ---
 # <a name="rowsets"></a>資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   資料列集是一組資料列，其中包含資料的資料行。 資料列集是能讓所有 OLE DB 資料提供者公開表格形式結果集資料的核心物件。  
   
- 取用者使用建立工作階段之後 **:: Createsession**方法中，取用者可以使用**IOpenRowset**或**IDBCreateCommand**上要建立資料列集的工作階段的介面。 SQL Server 的 OLE DB 驅動程式支援這兩種介面。 此處描述這兩種方法。  
+ 取用者使用建立工作階段之後 **:: Createsession**方法中，取用者可以使用**IOpenRowset**或**IDBCreateCommand**若要建立資料列集的工作階段上的介面。 SQL Server 的 OLE DB 驅動程式支援這兩種介面。 此處描述這兩種方法。  
   
 -   建立資料列集呼叫**iopenrowset:: Openrowset**方法。  
   
@@ -53,19 +56,19 @@ ms.lasthandoff: 05/03/2018
   
 -   [以 IOpenRowset 建立資料列集](../../oledb/ole-db-rowsets/creating-a-rowset-with-iopenrowset.md)  
   
--   [使用 icommand:: Execute 建立資料列集](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
+-   [使用 ICommand:: Execute 建立資料列集](../../oledb/ole-db-rowsets/creating-rowsets-with-icommand-execute.md)  
   
 -   [資料列集屬性和行為](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
 -   [資料列集和 SQL Server 資料指標](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md)  
   
--   [提取資料列](../../oledb/ole-db-rowsets/fetching-rows.md)  
+-   [擷取資料列](../../oledb/ole-db-rowsets/fetching-rows.md)  
   
--   [擷取單一資料列使用 irow 來](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+-   [使用 IRow 擷取單一資料列](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
 -   [書籤](../../oledb/ole-db-rowsets/bookmarks.md)  
   
--   [更新資料集中的資料列集](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
+-   [更新資料列集中的資料](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

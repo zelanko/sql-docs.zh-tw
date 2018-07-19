@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026135"
 ---
 # <a name="designing-aggregations-xmla"></a>設計彙總 (XMLA)
   彙總設計會與特定量值群組的資料分割關聯，以確保資料分割在儲存彙總時會使用相同的結構。 資料分割使用相同的儲存體結構可讓您輕鬆地定義合併資料分割可以稍後使用[MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md)命令。 如需彙總設計的詳細資訊，請參閱[彙總和彙總設計](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910373"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>以檔案為基礎的驅動程式診斷的範例
 以檔案為基礎的驅動程式可同時作為 ODBC 驅動程式和資料來源。 它可因此產生錯誤和警告同時做為元件中的 ODBC 連接，並做為資料來源。 它也是介面的驅動程式管理員元件，因為格式化，並傳回引數**SQLGetDiagRec**。  

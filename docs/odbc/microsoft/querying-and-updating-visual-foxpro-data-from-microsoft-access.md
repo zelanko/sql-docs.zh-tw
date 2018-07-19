@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904063"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>查詢和更新 Visual FoxPro 資料從 Microsoft Access
 您可以查詢和更新資料庫中儲存資料 Visual FoxPro 從 Microsoft Access 資料庫使用連結資料表選項。  

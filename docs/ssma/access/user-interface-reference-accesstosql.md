@@ -1,8 +1,6 @@
 ---
 title: 使用者介面參考 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
@@ -21,18 +19,19 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 42a81d87eb391621f837a04025ec093fac6f3b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd67eb89a9efb22c38d7b9318e8ac562fa6d7264
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774214"
 ---
 # <a name="user-interface-reference-accesstosql"></a>使用者介面參考 (AccessToSQL)
 本節包含說明主題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]移轉小幫手 (SSMA) 進行存取。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[進階物件選取項目&#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|使用**進階物件選取**對話方塊來尋找資料庫物件所使用的篩選準則，然後選取或清除這些物件。|  
 |[評估報表&#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|使用**評估報表**分析存取資料庫物件的轉換，以及評估移轉大約需要多久的對話方塊。|  

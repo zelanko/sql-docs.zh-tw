@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023905"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>設定同步處理範圍 (報表產生器及 SSRS)
   在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，指標會在指定的範圍內，跨指標值的範圍進行同步處理，藉以傳達資料值。   

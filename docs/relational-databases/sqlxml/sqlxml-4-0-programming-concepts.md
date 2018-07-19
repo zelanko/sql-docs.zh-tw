@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 程式設計概念 |Microsoft 文件
+title: SQLXML 4.0 程式設計概念 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,10 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0071c9f56d118c3d80a92d556c29b813a25cdee1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003390"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0 程式設計概念
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/03/2018
  [執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)  
  描述從所提供的 SQLXML 範例建立工作範例的需求。  
   
- [用戶端和伺服器端格式&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [用戶端和伺服器端格式設定&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  提供用戶端和伺服器端之格式設定的相關資訊和比較，包括用來建構 XML 文件的 FOR XML 命令。  
   
  [SQLXML 4.0 中的註解式 XSD 結構描述](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -57,16 +58,16 @@ ms.lasthandoff: 05/03/2018
  [在 SQLXML 4.0 中使用 XPath 查詢](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  描述如何使用 XPath 語言的子集來查詢由註解 XSD 結構描述所建立的 XML 檢視，並且提供範例。  
   
- [使用 Updategram 來修改 SQLXML 4.0 中的資料](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [使用 Updategram 修改 SQLXML 4.0 中的資料](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  提供有關 Updategram 的相關資訊，Updategram 會針對 XSD (或 XDR) 註解結構描述所提供的 XML 檢視進行作業，以修改資料庫中的資料。  
   
- [執行大量載入 XML 資料 & #40;SQLXML 4.0 & #41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [執行大量載入 XML 資料的&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  描述如何在 SQLXML 4.0 中大量載入 XML。  
   
- [SQLXML 4.0 資料存取元件](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
+ [SQLXML 4.0 Data Access Components](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
  提供 SQLXMLOLEDB 提供者的說明以及其他 SQLXML 4.0 資料存取元件的連結。  
   
- [SQLXML 4.0.NET Framework 支援](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
+ [SQLXML 4.0 .NET Framework 支援](http://msdn.microsoft.com/library/c18cf801-f893-4fbc-8e2b-c563f6108acf)  
  描述 .NET Framework 的 SQLXML 4.0 支援。  
   
  [快取範本、 XSL 和結構描述&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  

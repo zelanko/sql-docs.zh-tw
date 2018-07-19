@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030895"
 ---
 # <a name="configurationsetting-property---databaselogonaccount"></a>ConfigurationSetting 屬性 - DatabaseLogonAccount
   指定連接至報表伺服器資料庫時報表伺服器所使用的登入帳戶。 唯讀。  

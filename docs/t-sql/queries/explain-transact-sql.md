@@ -3,24 +3,22 @@ title: EXPLAIN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
-ms.prod_service: sql-data-warehouse, pdw
-ms.component: t-sql|queries
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
-caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: shkale-msft
+ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f5dfb29ff0e824ebb596a3d7c2a483e7445d2a42
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: a7b8a9ee85c7f3d04bc45c21d2605c839bdff01a
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37783579"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]

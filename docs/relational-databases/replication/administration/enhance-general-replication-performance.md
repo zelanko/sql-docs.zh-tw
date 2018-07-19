@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +26,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fa663e269559fb2eb87d599723734639a717d2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 894f01b89dba015f0543df7c810a590c9359ff7a
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37355120"
 ---
 # <a name="enhance-general-replication-performance"></a>增強一般複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ ms.lasthandoff: 05/03/2018
   
 -   考慮手動初始化訂閱。  
   
-     在某些情況下，例如涉及大型初始資料集，最好是使用快照集之外的方法初始化訂閱。 如需詳細資訊，請參閱 [Initialize a Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
+     在某些情況下，例如涉及大型初始資料集，最好是使用快照集之外的方法初始化訂閱。 如需詳細資訊，請參閱 [不使用快照集初始化交易式訂閱](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)中手動初始化訂閱。  
   
 ## <a name="agent-parameters"></a>代理程式參數  
   

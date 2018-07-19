@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248133"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  [ **@job_name=** ] **'***job_name***'**  
  將從中移除步驟之作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
   
-> **注意：**任一*job_id*或*job_name*必須指定; 不可同時指定兩者。  
+> **注意：** 任一*job_id*或*job_name*必須指定; 不可同時指定兩者。  
   
  [ **@step_id=** ] *step_id*  
  這是要移除的步驟識別碼。 *step_id*是**int**，沒有預設值。  
@@ -67,7 +68,7 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  如需特定工作相關聯之步驟的詳細資訊，請執行**sp_help_jobstep**。  
   
-> **注意：**呼叫**sp_delete_jobstep**與*step_id*零值的刪除作業的所有作業步驟。  
+> **注意：** 呼叫**sp_delete_jobstep**與*step_id*零值的刪除作業的所有作業步驟。  
   
  Microsoft SQL Server Management Studio 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   

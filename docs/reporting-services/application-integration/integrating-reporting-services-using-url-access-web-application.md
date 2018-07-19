@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33014885"
 ---
 # <a name="integrating-reporting-services-using-url-access---web-application"></a>使用 URL 存取整合 Reporting Services - Web 應用程式
   在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 中的 URL 存取是特別針對可透過網路存取個別報表所設計。 這種類型的存取最適於將報表檢視與導覽整合到自訂 Web 應用程式。 若要在 Web 應用程式中使用 URL 存取，您可以：  

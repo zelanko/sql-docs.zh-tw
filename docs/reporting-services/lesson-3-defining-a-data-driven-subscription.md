@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016863"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 在這個 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 教學課程中，您將利用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 入口網站資料驅動訂閱頁面來連接訂閱資料來源、建立擷取訂閱資料的查詢，以及將結果集對應至報表和傳遞選項。  

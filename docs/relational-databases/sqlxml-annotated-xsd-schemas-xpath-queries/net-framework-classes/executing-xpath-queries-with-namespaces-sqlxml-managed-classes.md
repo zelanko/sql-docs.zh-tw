@@ -1,5 +1,5 @@
 ---
-title: 執行含有命名空間的 XPath 查詢 (SQLXML Managed 類別) |Microsoft 文件
+title: 執行含有命名空間的 XPath 查詢 (SQLXML Managed 類別) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b068d1d9848a7c462833d54fa6e92268fc83433f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051487"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>執行含有命名空間的 XPath 查詢 (SQLXML Managed 類別)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/03/2018
   
  由於 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 不支援萬用字元 (*)，所以您必須使用命名空間前置詞來指定 XPath 查詢。 若要解析此前置詞，使用命名空間屬性來指定命名空間繫結。  
   
- 在下列範例中，XPath 查詢，請指定使用萬用字元的命名空間 (\*) 和 local-name （) and namespace-uri （) XPath 函式。 此 XPath 查詢傳回的所有項目所在的區域名稱**員工**和命名空間 URI 為**urn: myschema:Contacts**:  
+ 在下列範例中，XPath 查詢，請指定使用萬用字元的命名空間 (\*) 和 local-name （) and namespace-uri （) XPath 函式。 此 XPath 查詢會傳回所有項目所在的區域名稱**員工**和命名空間 uri **urn: myschema:Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- 在 SQLXML 4.0 中，使用命名空間前置詞來指定這個 XPath 查詢。 範例是**x: Contact**，其中**x**是命名空間前置詞。 請考慮下列 XSD 結構描述：  
+ 在 SQLXML 4.0 中，使用命名空間前置詞來指定這個 XPath 查詢。 例如， **x: Contact**，其中**x**是命名空間前置詞。 請考慮下列 XSD 結構描述：  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
  由於這個結構描述會定義目標命名空間，所以針對此結構描述進行的 XPath 查詢 (例如 "Employee") 必須包含該命名空間。  
   
- 下列 C# 範例應用程式會針對先前的 XSD 結構描述 (MySchema.xml) 執行 XPath 查詢。 若要解析此前置詞，指定命名空間繫結使用 SqlXmlCommand 物件的命名空間屬性。  
+ 下列 C# 範例應用程式會針對先前的 XSD 結構描述 (MySchema.xml) 執行 XPath 查詢。 若要解析此前置詞，請使用 SqlXmlCommand 物件的命名空間屬性以指定的命名空間繫結。  
   
 > [!NOTE]  
 >  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。  

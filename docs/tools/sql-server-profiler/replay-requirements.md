@@ -21,9 +21,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ac0df42a9598c8b246c90a17407558888db71734
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33076775"
 ---
 # <a name="replay-requirements"></a>重新執行需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

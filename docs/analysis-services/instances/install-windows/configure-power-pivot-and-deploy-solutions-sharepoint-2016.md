@@ -1,5 +1,5 @@
 ---
-title: 設定 Power Pivot 及部署方案 (SharePoint 2016) |Microsoft 文件
+title: 設定 Power Pivot 及部署方案 (SharePoint 2016) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58315c0a956a4d9ecadfdfee8e9c1a0adbbc2c22
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: e464a6863a45bc654b3874a5ea86945b9041c7aa
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984060"
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>設定 PowerPivot 及部署方案 (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/10/2018
   
 -   如需後端服務以及在 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 模式下安裝 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 伺服器的資訊，請參閱 [以 PowerPivot 模式安裝 Analysis Services](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)。  
   
- 如需有關安裝[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2016 組態工具，請參閱[安裝或解除安裝 Powerpivot for SharePoint 增益集 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)。  
+ 如需安裝資訊[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]for SharePoint 2016 組態工具，請參閱[安裝或解除安裝 Powerpivot for SharePoint 增益集 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)。  
   
 ##  <a name="bkmk_run_configuration_tool"></a> 執行 PowerPivot for SharePoint 2016 組態  
  **注意：** 若要完成下列步驟，您必須是伺服器陣列管理員。 如果您看到類似下列的錯誤訊息：  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/10/2018
   
     4.  按一下左邊視窗中的 **[建立網站集合]** 。 請記下 **[網站 URL]** ，以便在後續步驟中參考。 如果尚未設定 SharePoint 伺服器，組態精靈會將 Web 應用程式和網站集合 URL 預設為 `http://[ServerName]`的根目錄。 若要修改預設值，請在左邊視窗中檢閱下列頁面： **[建立預設 Web 應用程式]** 和 **[部署 Web 應用程式方案]**  
   
-5.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 按一下左邊視窗中的每個動作，查看並檢閱動作的詳細資料。 如需每個輸入值的詳細資訊，請參閱本主題中 [設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046) 的＜用於設定伺服器的輸入值＞一節。  
+5.  (選擇性) 檢閱用來完成每個動作的其餘輸入值。 按一下左邊視窗中的每個動作，查看並檢閱動作的詳細資料。 如需每個輸入值的詳細資訊，請參閱本主題中 [設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046) 的＜用於設定伺服器的輸入值＞一節。  
   
 6.  選擇性地移除您不想在此時處理的任何動作。 例如，如果您想要在稍後設定 Secure Store Service，請選取 [設定 Secure Store Service] ，然後清除 [在工作清單中包含這個動作] 核取方塊。  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
   
 8.  選取 [執行]  ，處理工作清單中的所有動作。 請注意， **[執行]** 只在驗證動作之後才可供使用。 如果未啟用 [執行]  ，請先選取 [驗證]  。  
   
- 如需詳細資訊，請參閱 [設定或修復 PowerPivot for SharePoint 2010 (PowerPivot 組態工具)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)  
+ 如需詳細資訊，請參閱 [設定或修復 Power Pivot for SharePoint 2010 (Power Pivot 組態工具)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)。  
   
 ##  <a name="bkmk_verify_powerpivot"></a> 驗證 PowerPivot 組態  
  **服務：**  
@@ -77,7 +78,7 @@ ms.lasthandoff: 05/10/2018
   
 1.  瀏覽至組態工具所建立的網站 URL。  
   
-     選取**設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")，然後按一下 **站台設定**。  
+     選取 **設定**![SharePoint 設定](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")，然後按一下**站台設定**。  
   
      選取 [網站集合功能] 。  
   
@@ -116,7 +117,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  選取 [確定]。  
   
- 如需有關疑難排解資料重新整理的詳細資訊，請參閱[疑難排解 Power Pivot Data Refresh](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
+ 如需有關疑難排解資料重新整理的詳細資訊，請參閱 < [Power Pivot 資料重新整理疑難排解](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)(http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)。  
   
  如需組態工具的詳細資訊，請參閱 [PowerPivot 組態工具](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)。  
   

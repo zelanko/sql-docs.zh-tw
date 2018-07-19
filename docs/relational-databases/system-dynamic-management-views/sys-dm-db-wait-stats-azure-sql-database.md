@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_wait_stats (Azure SQL Database) |Microsoft 文件
+title: sys.dm_db_wait_stats (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
@@ -27,10 +27,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: af54ac9890cf903e0646d9b6d8eefe031924ffce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051399"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +40,9 @@ ms.lasthandoff: 05/23/2018
   
  在執行查詢時，特定類型的等候時間可以指出查詢中的瓶頸或拋錨點。 同樣地，等候時間很長或伺服器等候計數很大，也代表伺服器執行個體中互動查詢互動的瓶頸或熱點。 例如，鎖定等候表示查詢在競爭資料；資料頁 IO 閂鎖等候表示 IO 回應時間很慢；資料頁閂鎖更新等候表示檔案配置不正確。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|等候類型的名稱。 如需詳細資訊，請參閱[等候類型](#WaitTypes)稍後在本主題中。|  
+|wait_type|**nvarchar(60)**|等候類型的名稱。 如需詳細資訊，請參閱 <<c0> [ 等候的類型](#WaitTypes)稍後在本主題中。|  
 |waiting_tasks_count|**bigint**|這個等候類型的等候次數。 這個計數器是從每次開始等候時逐量遞增計算。|  
 |wait_time_ms|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這個時間包括 signal_wait_time_ms 在內。|  
 |max_wait_time_ms|**bigint**|這個等候類型的等候時間上限。|  
@@ -80,11 +81,11 @@ ms.lasthandoff: 05/23/2018
   
  雖然執行緒已經不在等候中，執行緒也不必立即開始執行。 因為這類執行緒會先置於可執行之工作者的佇列上，而且必須等候排程器執行某個配量才行。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，等候時間計數器是**bigint**值，並因此不太計數器換用較舊版本中的對等計數器為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]等候時間計數器**bigint**值，並因此不太一樣計數器換用為在舊版的對等計數器[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
  下表列出工作會遇到的等候類型。  
   
-|等候類型|Description|  
+|等候類型|描述|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|在組件載入的獨佔存取期間發生。|  
@@ -256,14 +257,14 @@ ms.lasthandoff: 05/23/2018
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|當 SQLOS 排程器切換到先佔式模式，以便關閉虛擬備份裝置時發生。|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|當 SQLOS 排程器切換到先佔式模式，以便執行 Windows 容錯移轉叢集作業時發生。|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|當 SQLOS 排程器切換到先佔式模式，以便建立 COM 物件時發生。|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Alwayson 可用性群組租用管理員排程 CSS 診斷。|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Always On 可用性群組租用管理員排程 CSS 診斷。|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|用於使用者處理序在已經使用 ALTER DATABASE 終止子句加以轉換的資料庫中結束時等候。 如需詳細資訊，請參閱 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)。|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|在背景工作正在等候接收 (經由輪詢) Windows Server 容錯移轉叢集通知的背景工作終止時發生。  僅供內部使用。|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|附加、 取代及/或移除作業正在等候擷取 Alwayson 內部清單 （例如網路、 網路位址或可用性群組接聽程式的清單） 的寫入鎖定。  僅供內部使用。|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|附加、 取代和/或移除作業正在等候擷取 Alwayson 內部清單 （例如網路、 網路位址或可用性群組接聽程式的清單） 的寫入鎖定。  僅供內部使用。|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Alwayson 卸除可用性群組作業正在等候目標可用性群組離線，然後再終結 Windows Server 容錯移轉叢集的物件。|  
 |PWAIT_HADR_ONLINE_COMPLETED|Alwayson 建立或容錯移轉可用性群組作業正在等候目標可用性群組上線。|  
 |PWAIT_HADR_POST_ONLINE_COMPLETED|Alwayson 卸除可用性群組作業正在等候先前命令中排程任何背景工作終止。 例如，可能會存在將可用性資料庫轉換成主要角色的背景工作。 DROP AVAILABILITY GROUP DDL 必須等候此背景工作終止，才能避免競爭情形。|  

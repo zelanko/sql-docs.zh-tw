@@ -11,7 +11,7 @@ ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34563756"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services-資料最佳化的效能

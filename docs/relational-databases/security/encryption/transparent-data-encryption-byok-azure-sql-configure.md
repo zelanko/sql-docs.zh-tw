@@ -11,18 +11,18 @@ ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.component: security
 ms.tgt_pltfrm: ''
 ms.devlang: azurecli, powershell
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7b930486b624244ea0863ee1fd059fafd1e8598f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 966d391f1c4fbd5dddf90cc2db1307b45ef0f362
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696219"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell 與 CLI：使用 Azure Key Vault 中您自己的金鑰來啟用透明資料加密
 

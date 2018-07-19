@@ -1,6 +1,6 @@
 ---
 title: 運算子 （MDX 語法） |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 309311bfcef0ada531e391e99091a788715c8e2d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580660"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742747"
 ---
 # <a name="operators-mdx-syntax"></a>運算子 (MDX 語法)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   在多維度運算式 (MDX) 中，您可以使用運算子來執行以下動作：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "34580660"
  使用多個運算子時，MDX 評估運算子的順序很重要。 同樣地，運算子的使用者可能必須將一個資料類型轉換成另一個資料類型，才能評估運算子。  
   
 ## <a name="evaluating-complex-expressions"></a>評估複雜的運算式  
- 您可以使用運算子來結合數個較小的運算式，來建立一個運算式。 在這些複雜的運算式，MDX 評估運算子的順序是根據所使用的運算子優先順序定義[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 MDX 會先執行優先順序較高的運算子，之後才會執行優先順序較低的運算子。  
+ 您可以使用運算子來結合數個較小的運算式，來建立一個運算式。 在這些複雜的運算式，MDX 評估運算子的順序是根據所使用的運算子優先順序定義[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 MDX 會先執行優先順序較高的運算子，之後才會執行優先順序較低的運算子。  
   
 ### <a name="understanding-operator-precedence"></a>了解運算子優先順序  
  以下清單會顯示運算子優先順序，從最高顯示到最低。 位於同一行的運算子會有相同的優先順序，而且除非利用括號強制執行，否則會由左至右進行評估。  

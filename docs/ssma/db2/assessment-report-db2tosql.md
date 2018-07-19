@@ -1,8 +1,6 @@
 ---
 title: 評估報表 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,18 +16,19 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b599255141505f7d354863006f4ec2aa2e2fdea1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2340a2484fa11ade7aac4d4427fee9755cd3618e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774334"
 ---
 # <a name="assessment-report-db2tosql"></a>評估報表 (DB2ToSQL)
 評估報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，並且也可幫助您評估複雜度及成本的移轉專案。  
   
 若要存取評估的報表，在來源中繼資料總管，轉換選取的物件上按一下滑鼠右鍵**結構描述**或**同義字**，然後選取**建立報表**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
   
 |||  
 |-|-|  

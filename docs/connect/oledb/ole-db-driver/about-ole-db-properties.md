@@ -2,10 +2,10 @@
 title: 關於 OLE DB 屬性 |Microsoft 文件
 description: 關於 OLE DB 屬性
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb-driver-for-sql-server
+ms.component: oledb|oledb-driver-for-sql-server
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,14 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: baeb2e6e9bbc565b705d22110deae918c07b5dbf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93bc309da576917777f0eddea01857ceb9702075
+ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/15/2018
+ms.locfileid: "35665188"
 ---
 # <a name="about-ole-db-properties"></a>關於 OLE DB 屬性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   取用者會設定屬性值來要求特定的物件行為。 例如，取用者會使用屬性來指定要由某個資料列集公開的介面。 取用者會取得屬性值來判斷物件 (例如資料列集、工作階段或資料來源物件) 的功能。  
   

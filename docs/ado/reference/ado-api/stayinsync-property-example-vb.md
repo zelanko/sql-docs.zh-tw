@@ -2,7 +2,6 @@
 title: StayInSync 屬性範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cad6d7a6187430e8243695a07fe1b0752074a6df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3c5ec82ff3481ab8e6adf11a41f61aa149fe604
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281897"
 ---
 # <a name="stayinsync-property-example-vb"></a>StayInSync 屬性範例 (VB)
 這個範例會示範如何[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)屬性有助於進行存取的資料列，以階層[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。  

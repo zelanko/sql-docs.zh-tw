@@ -1,5 +1,5 @@
 ---
-title: sp_attach_single_file_db (TRANSACT-SQL) |Microsoft 文件
+title: sp_attach_single_file_db (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae97ca9a273b7467bd5ec6e35f68602ec1c7c101
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981870"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   將只有一個資料檔的資料庫附加至目前的伺服器。 **sp_attach_single_file_db**不能與多個資料檔案。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 CREATE DATABASE *database_name* FOR ATTACH 改為。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 請勿在複寫資料庫上使用此程序。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 我們建議您改用 CREATE DATABASE *database_name* FOR ATTACH 改。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。 請勿在複寫資料庫上使用此程序。  
   
 > [!IMPORTANT]  
 >  建議您不要附加或還原來源不明或來源不受信任的資料庫。 這種資料庫可能包含惡意程式碼，因此可能執行非預期的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，或是修改結構描述或實體資料庫結構而造成錯誤。 使用來源不明或來源不受信任的資料庫之前，請先在非實際執行伺服器的資料庫上執行 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) ，同時檢查資料庫中的程式碼，例如預存程序或其他使用者定義程式碼。  
@@ -51,10 +52,10 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
   
 ## <a name="arguments"></a>引數  
  [ **@dbname=** ] **'***dbname***'**  
- 這是要附加至伺服器的資料庫名稱。 名稱必須是唯一的。 *dbname*是**sysname**，預設值是 NULL。  
+ 這是要附加至伺服器的資料庫名稱。 名稱必須是唯一的。 *dbname*已**sysname**，預設值是 NULL。  
   
  [ **@physname=** ] **'***physical_name***'**  
- 這是資料庫檔案的實體名稱，其中包括路徑。 *physical_name*是**nvarchar （260)**，預設值是 NULL。  
+ 這是資料庫檔案的實體名稱，其中包括路徑。 *physical_name*已**nvarchar(260)**，預設值是 NULL。  
   
 > [!NOTE]  
 >  這個引數對應到 CREATE DATABASE 陳述式的 FILENAME 參數。 如需詳細資訊，請參閱 [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
@@ -68,9 +69,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  無  
   
 ## <a name="remarks"></a>備註  
- 使用**sp_attach_single_file_db**只在先前卸離從伺服器使用明確的資料庫上**sp_detach_db**作業或對已複製的資料庫。  
+ 使用**sp_attach_single_file_db**只能在先前卸離從伺服器使用明確的資料庫上**sp_detach_db**作業或對已複製的資料庫。  
   
- **sp_attach_single_file_db**只適用於具有單一記錄檔的資料庫。 當**sp_attach_single_file_db**將資料庫附加至伺服器，它會建立新的記錄檔。 如果資料庫是唯讀的，就會在先前的位置建立記錄檔。  
+ **sp_attach_single_file_db**只適用於具有單一記錄檔的資料庫。 當**sp_attach_single_file_db**將資料庫附加到伺服器，它會建置新的記錄檔。 如果資料庫是唯讀的，就會在先前的位置建立記錄檔。  
   
 > [!NOTE]  
 >  無法卸離或附加資料庫快照集。  
@@ -78,7 +79,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
  請勿在複寫資料庫上使用此程序。  
   
 ## <a name="permissions"></a>Permissions  
- 如需附加資料庫時，如何處理權限資訊，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&AMP;&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
+ 如需附加資料庫時，如何處理權限資訊，請參閱[CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會卸離 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]，再從 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 中，將一個檔案附加至目前的伺服器。  

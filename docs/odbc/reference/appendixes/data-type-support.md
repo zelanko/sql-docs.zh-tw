@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905833"
 ---
 # <a name="data-type-support"></a>資料類型支援
 ODBC 驅動程式必須支援至少一個 SQL_CHAR 和 SQL_VARCHAR。 其他資料類型的支援取決於驅動程式或資料來源的 SQL 92 一致性層級。 應用程式應該呼叫**SQLGetTypeInfo**判斷驅動程式所支援的資料類型。  

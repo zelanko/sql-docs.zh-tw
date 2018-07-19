@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916673"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>ODBC 服務提供者介面摘要
 下表描述 ODBC 服務提供者介面函式。 如需語法和語意，每個函式的詳細資訊，請參閱[ODBC 服務提供者介面 (SPI) 參考](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)。  

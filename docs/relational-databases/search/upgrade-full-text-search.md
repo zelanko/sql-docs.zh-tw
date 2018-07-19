@@ -27,6 +27,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33182294"
 ---
 # <a name="upgrade-full-text-search"></a>升級全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -128,7 +129,7 @@ ms.lasthandoff: 05/04/2018
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]：使用 [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md) 的 **upgrade\_option** 動作  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**：**使用 [伺服器屬性] 對話方塊的 [全文檢索升級選項]。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**：** 使用 [伺服器屬性] 對話方塊的 [全文檢索升級選項]。 如需詳細資訊，請參閱 [管理及監視伺服器執行個體的全文檢索搜尋](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)。  
   
 ##  <a name="Considerations_for_Restore"></a> 還原 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 全文檢索目錄的考量 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  將全文檢索資料從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 資料庫升級為 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的其中一種方法是將完整資料庫備份還原至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  

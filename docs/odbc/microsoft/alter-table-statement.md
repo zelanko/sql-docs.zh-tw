@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903143"
 ---
 # <a name="alter-table-statement"></a>ALTER TABLE 陳述式
 使用 Microsoft Access、 dBASE 或 Paradoxdriver 時，ALTER TABLE 陳述式僅支援加入和卸除資料表條件約束定義子句。 （ALTER TABLE 陳述式不支援 Microsoft Excel 或文字的驅動程式）。  

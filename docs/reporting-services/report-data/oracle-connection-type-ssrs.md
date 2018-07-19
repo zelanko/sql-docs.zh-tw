@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021625"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Oracle 連接類型 (SSRS)
 若要在報表中使用來自 Oracle 資料庫的資料，您必須具有以 Oracle 類型的報表資料來源為基礎的資料集。 此內建資料來源類型會直接使用 Oracle 資料提供者，並且需要 Oracle 用戶端軟體元件。

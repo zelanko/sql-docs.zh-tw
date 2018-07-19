@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914143"
 ---
 # <a name="binding-arrays-of-parameters"></a>繫結參數陣列
 使用參數陣列的應用程式會將陣列中的 SQL 陳述式的參數繫結。 有兩種繫結樣式：  

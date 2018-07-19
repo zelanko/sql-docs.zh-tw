@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 541066ac00efc1b15f8cae838097cfd8ee49df3d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 754140cbc1c2b35338794b6919076b99c3052562
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249731"
 ---
 # <a name="step-1-download-the-sample-data"></a>步驟 1： 下載範例資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +47,7 @@ Github 上共用資料，此教學課程中的指令碼。 在此步驟中，您
 
 3. 根據您的網際網路連線，下載可能需要一些時間。 
 
-## <a name="view-the-results"></a>檢視結果
+## <a name="view-results"></a>檢視結果
 
 當所有檔案皆已下載時，PowerShell 指令碼會開啟  *DestDir*所指定的資料夾。 
 

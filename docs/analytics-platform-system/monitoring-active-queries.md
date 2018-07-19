@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538698"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>監視使用中查詢的平行處理資料倉儲
 這篇文章會示範如何使用管理主控台和 SQL Server PDW 系統檢視表來監視使用中的查詢。 請參閱[使用管理主控台來監視設備](monitor-the-appliance-by-using-the-admin-console.md)和[系統檢視表](tsql-system-views.md)如需這些工具。  

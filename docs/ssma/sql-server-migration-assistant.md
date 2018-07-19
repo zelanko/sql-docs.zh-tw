@@ -3,8 +3,6 @@ title: SQL Server 移轉小幫手 |Microsoft 文件
 ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1a49b3e1d9516d0276c689b7c61defc80bd2cb9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778104"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 移轉小幫手
 Microsoft SQL Server 移轉小幫手 (SSMA) 是要從 Microsoft Access、 DB2、 MySQL、 Oracle 和 SAP ASE 自動化 SQL Server 資料庫移轉所設計的工具。  
@@ -104,4 +103,3 @@ SQL Server 文件集中的內容均經過充分測試才發佈。 《SQL Server 
 客戶不得使用未記載的 API，包括 (但不限於)：預存程序、擴充預存程序、函式、檢視、資料表、資料行、屬性或中繼資料。 Microsoft 客戶支援服務不支援資料庫或應用程式利用或使用未記載之的進入點。  
   
 對於利用及使用未記載之進入點的應用程式或資料庫，則不保證能夠升級至 SQL Server 未來版本的伺服器或資料庫。 SQL Server 功能的用途不得超出 Microsoft SQL Server 文件集所含內容。 如果某功能未記載於 Microsoft SQL Server 文件集，即屬於 SQL Server 不支援的部分。  
-  

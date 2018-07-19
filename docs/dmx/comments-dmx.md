@@ -1,40 +1,20 @@
 ---
 title: 註解 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- comments [DMX]
-- Data Mining Extensions [Analysis Services], comments
-- double forward slashes
-- commenting characters
-- text strings [SQL Server]
-- remarks [DMX]
-- forward slash-asterisk character pairs
-- DMX [Analysis Services], comments
-- /*...*/ (comment)
-- double hyphens
-- // (comment)
-- -- (comment character)
-ms.assetid: 64d10eb5-4fe8-42c6-b387-eff336315e56
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: eb8bb33e09514117ec2b7f8f8ea8f96f4de3be63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f319457da85378000ef974c3ace1ddbba87d18e1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842951"
 ---
 # <a name="comments-dmx"></a>註解 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,10 +38,10 @@ ms.lasthandoff: 05/03/2018
 -   **/\* ...\*/ （正斜線-星號字元配對）。** 使用這些註解字元在要執行之程式碼的同一行撰寫註解，或者單獨一行撰寫註解，甚至在可執行程式碼中撰寫註解。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 評估所有內容都將開啟註解配對 (/ *) 到關閉註解配對 (\*/) 做為註解的一部分。 若要建立多行註解，開始註解的註解字元配對 (/\*)，且結尾註解與關閉註解字元配對 (\*/)。 任一行註解中不應包含其他任何註解字元。 如需有關這個註解字元的詳細資訊，請參閱[斜線星狀&#40;註解&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組 & #40; DMX & #41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;參考](../dmx/data-mining-extensions-dmx-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [資料採礦延伸模組&#40;DMX&#41;運算子參考](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
+ [資料採礦延伸模組&#40;DMX&#41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)   
  [資料採礦延伸模組&#40;DMX&#41;語法慣例](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [資料採礦延伸模組&#40;DMX&#41;語法元素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

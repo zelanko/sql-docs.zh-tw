@@ -2,7 +2,7 @@
 title: 適用於 SQL Server 的 OLE DB 驅動程式的系統需求 |Microsoft 文件
 description: 適用於 SQL Server OLE DB 驅動程式的需求
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -19,14 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e109f228d8b902e5c34b4ed5731b80e315fffe3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 485693e8f350370a293696a09f11ba036397b15e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689461"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>適用於 SQL Server 的 OLE DB 驅動程式的系統需求
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -72,11 +73,11 @@ ms.lasthandoff: 05/03/2018
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
-|varchar(max)|varchar|varchar|varchar|Text|  
-|nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
+|varchar(max)|varchar|varchar|varchar|文字|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|varbinary|udt|udt|image|  
-|date|varchar|date|date|Varchar|  
+|日期|varchar|日期|日期|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  

@@ -1,6 +1,6 @@
 ---
-title: 應用裝置網路組態 Analytics Platform System |Microsoft 文件
-description: 建置和設定的 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組 Analytics Platform System (APS) 的應用裝置。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。
+title: 設備網路設定 Analytics Platform System |Microsoft Docs
+description: Analytics Platform System (APS) 設備是內建，而且修正一份在所有伺服器和 IHV 的工廠適用於裝置的 IP 位址設定。 設備的傳遞，就必須重新設定外部 （乙太網路） IP 位址以符合特定的客戶資料中心的需求。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,40 +9,41 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: d11184c1fd12ae40188ef4e4442e7f9b7fb6b04a
+ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/07/2018
+ms.locfileid: "37909808"
 ---
-# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System 應用裝置網路組態
-建置和設定的 IP 位址在所有伺服器和從 IHV 工廠，在適用裝置修正組 Analytics Platform System (APS) 的應用裝置。 一傳遞應用裝置，則必須重新 （乙太網路） 的外部 IP 位址設定為符合特定客戶的資料中心的需求。  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Analytics Platform System 的設備網路設定
+Analytics Platform System (APS) 設備是內建，而且修正一份在所有伺服器和 IHV 的工廠適用於裝置的 IP 位址設定。 設備的傳遞，就必須重新設定外部 （乙太網路） IP 位址以符合特定的客戶資料中心的需求。  
   
 > [!NOTE]  
-> PDW V1 需要 8 IP 外部 (*客戶對向*) 位址提供給每個控制項的外部連線能力機架的節點。 PDW 2012 (V2) 增強網路通訊，藉由公開從外部透過 IP 位址應用裝置的每個元件。 此方法提供更強固的設計以減少成本，並增加彈性，和可增強資料移動、 載入資料，與 Hadoop 整合。 所需的 IP 位址數目取決於應用裝置中的節點數目和功能，例如 HDInsight 存在。 為了符合這個較大的 IP 位址區塊，客戶應該設定不同的子網路的 PDW。 此子網路中，會有足夠 IP 位址空間 （最多 250 個位址） 可容納多達 5 PDW 機架的元件。  
+> PDW V1 需要 8 IP 外部 (*客戶面向*) 位址，以提供每個控制項的外部連線能力機架的節點。 PDW 2012 (V2) 增強網路通訊，藉由公開透過 IP 位址從外部應用裝置的每個元件。 此方法提供更強大的設計可以降低成本、 增加彈性，以及可增強資料移動、 載入資料，與 Hadoop 整合。 所需的 IP 位址數目取決於設備中的節點數目。 為了符合這個較大的 IP 位址區塊，客戶應該設定不同的子網路，適用於 PDW。 在這個子網路中，會有足夠 IP 位址空間 （最多 250 個位址） 可容納最多 5 個 PDW 機架的元件。  
   
-**網路組態**頁面可讓您檢視 Analytics Platform System 應用裝置上的節點對外開放的網路設定。 此頁面是唯讀的。  
+**網路組態**頁面可讓您檢視 Analytics Platform System appliance 對外公開的網路設定的節點。 此頁面會處於唯讀狀態。  
   
 ![DWConfig 應用裝置網路](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>若要更新您的應用裝置上的網路設定  
-藉由編輯變更網狀架構網域、 工作負載網域和 HDInsight 網域的 IP 位址**AplianceInfo.xml**檔案，然後執行安裝程式。 這是一種離線作業。 PDW 和 （如果有的話） 的 HDInsight 區域將 IP 位址變更時自動停止。  
+變更的網狀架構網域和工作負載網域的 IP 位址，藉由編輯**AplianceInfo.xml**檔案，然後執行 安裝程式。 這是一種離線作業。 PDW 區域將 IP 位址變更期間會自動停止。  
   
 > [!NOTE]  
-> 網域名稱在安裝期間所提供且已指定最多 6 的英數字元、 以字母開頭。 命名系統經常建立網狀架構定義域啟動 F、 P、 從 PDW 工作負載網域與開頭 H.HDInsight 網域此格式會假設整個說明檔主題，但不是必要。 <!-- MISSING LINKS For more information about the domain structure, see [PDW Domain Security &#40;SQL Server PDW&#41;](../sqlpdw/pdw-domain-security-sql-server-pdw.md) and [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region.md)  -->  
+> 網域名稱會提供在安裝期間，並指定最多 6 個的英數字元、 以字母開頭。 命名系統經常會建立網狀架構網域開始使用 f #，開頭為 p 的 PDW 工作負載網域此格式會假設整個說明檔主題，但並非必要。 <!-- MISSING LINKS For more information about the domain structure, see [PDW Domain Security &#40;SQL Server PDW&#41;](../sqlpdw/pdw-domain-security-sql-server-pdw.md) and [Understanding the Security Model of the HDInsight Region &#40;Analytics Platform System&#41;](../hdinsight/understanding-the-security-model-of-the-hdinsight-region.md)  -->  
   
-#### <a name="to-change-the-ip-addresses-of-the-analytics-platform-system"></a>若要變更 Analytics Platform System 的 IP 位址  
+#### <a name="to-change-the-ip-addresses-of-the-analytics-platform-system"></a>若要變更分析平台系統的 IP 位址  
   
 1.  使用**遠端桌面**應用程式中，連接到**HST01**使用工作負載的網域系統管理員帳戶。  
   
-2.  上 HST01 節點中，開啟應用裝置資訊檔案在**c:\pdwinst\media\AplianceInfo.xml**。  
+2.  HST01 在節點上，開啟應用裝置資訊檔案，在**c:\pdwinst\media\AplianceInfo.xml**。  
   
     > [!NOTE]  
     > 如果檔案不存在，可能需要建立新的檔案。  
   
-3.  乙太網路的 IP 值依需要更新，然後儲存檔案。  
+3.  視需要更新的乙太網路的 IP 值並儲存檔案。  
   
-4.  在命令提示字元視窗中，執行下列安裝程式命令來更新 IP 位址的 PDW 區域，使用 P/F H 網域名稱和系統管理員密碼。  
+4.  在命令提示字元視窗中，執行下列安裝命令來更新 IP 位址的 PDW 區域中，使用 P/F/H 網域名稱和系統管理員密碼。  
   
     ```  
     c:\pdwinst\media\setup.exe /action="ConfigureEthernet" /DomainAdminPassword="<password>" /ApplianceInfoFile="C:\PDWINST\media\ApplianceInfo.xml"  
@@ -53,10 +54,10 @@ ms.lasthandoff: 04/19/2018
   
 -   PowerConnect 參數指示[Dell PowerConnect 6200 系列系統 CLI 參考指南](http://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
   
--   iDRAC/BMC[整合 Dell 遠端存取控制站 7 (iDRAC7) 版本 1.30.30 使用者手冊](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
+-   iDRAC/BMC[整合 Dell 遠端存取控制器 7 (iDRAC7) 版本 1.30.30 使用者指南](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
   
--   PDU 的**Dell 計量機架 PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
+-   PDU 的**Dell 計量 Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
 ## <a name="see-also"></a>另請參閱  
-[啟動 Configuration Manager &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
+[啟動組態管理員 &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

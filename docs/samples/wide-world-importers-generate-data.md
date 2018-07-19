@@ -1,5 +1,5 @@
 ---
-title: WideWorldImporters 產生資料-SQL 範例資料庫 |Microsoft 文件
+title: WideWorldImporters 產生的資料-SQL 範例資料庫 |Microsoft Docs
 ms.custom: ''
 ms.date: 04/04/2018
 ms.reviewer: ''
@@ -13,14 +13,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ace1f771ef3a77a6f7db0072442affe181d7872
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988942"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters 資料產生
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-WideWorldImporters 和 WideWorldImportersDW 資料庫發行的版本有從 2013 年 1 月 1 日到整天資料庫所產生的資料。
+WideWorldImporters 和 WideWorldImportersDW 資料庫發行的版本已從 2013 年 1 月 1 日到最多天的資料庫所產生的資料。
 
 當您使用這些範例資料庫時，您可能想要包含較新的範例資料。
 
@@ -28,7 +29,7 @@ WideWorldImporters 和 WideWorldImportersDW 資料庫發行的版本有從 2013 
 
 若要產生到目前日期為止的範例資料：
 
-1. 如果您尚未這樣做，請安裝 WideWorldImporters 資料庫的全新版本。 如需安裝指示，請參閱[安裝和設定](wide-world-importers-oltp-install-configure.md)。
+1. 如果您還沒有這麼做，請安裝 WideWorldImporters 資料庫的全新版本。 如需安裝指示，請參閱[安裝和設定](wide-world-importers-oltp-install-configure.md)。
 2. 在資料庫中執行下列陳述式：
 
     ```
@@ -40,31 +41,31 @@ WideWorldImporters 和 WideWorldImportersDW 資料庫發行的版本有從 2013 
             @AreDatesPrinted = 1;
     ```
 
-    這個陳述式將加入資料庫，到目前日期為止的範例銷售和訂單資料。 它將顯示進度資料產生的一天。 產生資料可能需要大約 10 分鐘讓需要資料每年。 資料產生的隨機因素，因為有一些差異會產生執行之間的資料。
+    此陳述式會將範例銷售和採購資料加入至資料庫，到目前日期為止。 它會顯示進度的資料產生每日。 產生資料可能需要約 10 分鐘每年所需的資料。 因為資料產生的隨機因素，有一些差異會產生執行之間的資料。
 
-    若要增加或減少資料產生的每日的訂單數量，將變更參數的值`@AverageNumberOfCustomerOrdersPerDay`。 您可以使用參數`@SaturdayPercentageOfNormalWorkDay`和`@SundayPercentageOfNormalWorkDay`判斷週末訂單量。
+    若要增加或減少所產生的每日的訂單資料，請變更參數的值`@AverageNumberOfCustomerOrdersPerDay`。 使用參數`@SaturdayPercentageOfNormalWorkDay`和`@SundayPercentageOfNormalWorkDay`來判斷週末日期的訂單數量。
 
-## <a name="import-generated-data-in-wideworldimportersdw"></a>產生的匯入 WideWorldImportersDW 資料
+## <a name="import-generated-data-in-wideworldimportersdw"></a>WideWorldImportersDW 中產生的匯入資料
 
 若要匯入到 WideWorldImportersDW OLAP 資料庫中目前的日期為止的範例資料：
 
-1. 使用上一節中的步驟，WideWorldImporters OLTP 資料庫中執行的資料產生邏輯。
-2. 如果您尚未尚未這麼做，請安裝 WideWorldImportersDW 資料庫的全新版本。 如需安裝指示，請參閱[安裝和設定](wide-world-importers-oltp-install-configure.md)。
-3. Reseed OLAP 資料庫的資料庫中執行下列陳述式：
+1. 使用上一節中的步驟，WideWorldImporters OLTP 資料庫中執行資料產生邏輯。
+2. 如果您還尚未這麼做，請安裝 WideWorldImportersDW 資料庫的全新版本。 如需安裝指示，請參閱[安裝和設定](wide-world-importers-oltp-install-configure.md)。
+3. Reseed OLAP 資料庫，藉由在資料庫中執行下列陳述式：
 
     ```sql
     EXECUTE [Application].Configuration_ReseedETL
     ```
 
-4. 執行*每日 ETL.ispac* OLAP 資料庫將資料匯入的 SQL Server Integration Services 封裝。 若要了解如何執行 ETL 工作，請參閱[WideWorldImporters ETL 工作流程](wide-world-importers-perform-etl.md)。
+4. 執行*每日 ETL.ispac*匯入資料至 OLAP 資料庫的 SQL Server Integration Services 封裝。 若要了解如何執行 ETL 作業，請參閱[WideWorldImporters ETL 工作流程](wide-world-importers-perform-etl.md)。
 
-## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>產生 WideWorldImportersDW 中的資料效能測試
+## <a name="generate-data-in-wideworldimportersdw-for-performance-testing"></a>WideWorldImportersDW 中產生資料的效能測試
 
-WideWorldImportersDW 可以任意增加效能測試的資料的大小。 例如，它可以增加要使用具有叢集資料行存放區索引的資料大小。
+WideWorldImportersDW 可以任意增加效能測試的資料的大小。 比方說，它可以增加資料大小，以搭配叢集資料行存放區索引。
 
-挑戰之一就是將下載的大小夠小，無法下載輕鬆，但大足以示範 SQL Server 效能功能。 比方說，只有當您使用較大的數字的資料列時，可達到重要的資料行存放區索引的優點。 
+其中一項挑戰是將下載的大小夠小，無法下載輕鬆，但大型足以示範 SQL Server 效能功能。 比方說，只有當您使用較大的數字的資料列時，才會來達成顯著的優點，資料行存放區索引。 
 
-您可以使用`Application.Configuration_PopulateLargeSaleTable`程序中的資料列數目增加`Fact.Sale`資料表。 若要避免正在與現有開始 2013 年 1 月 1 日的 World Wide Importers 資料 2012年日曆年度中插入資料列。
+您可以使用`Application.Configuration_PopulateLargeSaleTable`程序中的資料列數目增加`Fact.Sale`資料表。 資料列會插入在 2012年行事曆年，以避免與現有開始 2013 年 1 月 1 日的 World Wide Importers 資料衝突。
 
 ### <a name="procedure-details"></a>程序的詳細資料
 

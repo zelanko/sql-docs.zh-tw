@@ -1,6 +1,6 @@
 ---
-title: 功能屬性 |Microsoft 文件
-ms.date: 05/03/2018
+title: 功能屬性 |Microsoft Docs
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bec4d89fd1135ecc7bfdbc563547b9d3dbbdfa47
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8ee5a58d5c04cbfbb1f47f0d073ba6614490970c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033316"
 ---
 # <a name="feature-properties"></a>功能屬性
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   與產品功能有關的功能屬性，大部分是進階屬性，包含控制伺服器執行個體間之連結的屬性。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
@@ -25,7 +27,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="properties"></a>屬性  
   
-|屬性|預設值|Description|  
+|屬性|預設|描述|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|此為布林值屬性，指出是否啟用 CLR 儲存程序。|  
 |**LinkInsideInstanceEnabled**|1|此為布林值屬性，指出是否可以在相同的伺服器執行個體內建立連結物件。|  
@@ -40,6 +42,6 @@ ms.lasthandoff: 05/10/2018
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [判斷 Analysis Services 執行個體的伺服器模式](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [使用動態管理檢視 & #40; Dmv & #41;監視 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [使用動態管理檢視 &#40;DMV&#41; 監視 Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

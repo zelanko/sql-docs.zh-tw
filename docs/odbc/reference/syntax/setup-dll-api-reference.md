@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916503"
 ---
 # <a name="setup-dll-api-reference"></a>安裝程式 DLL 應用程式開發介面參考
 本章節描述驅動程式安裝 DLL 應用程式開發介面，其中包含兩個函式的語法 (**ConfigDriver**和**ConfigDSN**)。 **ConfigDriver**和**ConfigDSN**可以是驅動程式 DLL 中或在個別安裝程式 DLL。  

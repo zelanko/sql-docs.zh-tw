@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 09/05/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 caps.latest.revision: 154
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f16195a10c186e406571f65d8d79e2809f23dbad
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: d76099a9ac6cac338a176836ef483dbb37938736
+ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36942274"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>RESTORE 陳述式 - 引數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ FILE **=** { *logical_file_name_in_backup*| **@***logical_file_name_in_backup_va
 FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
  命名要包括在資料庫還原中的檔案群組。  
   
- **注意：**只有在指定的檔案群組是唯讀的，且這是部分還原 (也就是使用 WITH PARTIAL) 時，才能在簡單復原模式中使用 FILEGROUP。 任何未還原的讀寫檔案群組都會標示為已解除功能，且以後無法還原到結果資料庫中。  
+ **注意：** 只有在指定的檔案群組是唯讀的，且這是部分還原 (也就是使用 WITH PARTIAL) 時，才能在簡單復原模式中使用 FILEGROUP。 任何未還原的讀寫檔案群組都會標示為已解除功能，且以後無法還原到結果資料庫中。  
   
 READ_WRITE_FILEGROUPS  
  選取所有讀寫檔案群組。 如果您有唯讀檔案群組要在讀寫檔案群組之後，在唯讀檔案群組之前還原，這個選項特別有用。  

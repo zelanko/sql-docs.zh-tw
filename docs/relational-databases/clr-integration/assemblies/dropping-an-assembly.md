@@ -1,14 +1,11 @@
 ---
-title: 卸除組件 |Microsoft 文件
+title: 卸除組件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - removing assemblies
@@ -20,11 +17,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 46be0c285631013e3847e7ad7c0e8f03a543ad8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6efb9fe4c000e0fccf221a365c8c7cd5bc8050e
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37356920"
 ---
 # <a name="dropping-an-assembly"></a>卸除組件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +46,7 @@ DROP ASSEMBLY MyDotNETAssembly
 -   使用 WITH SCHEMABINDING 子句在資料庫中建立的函數、預存程序或觸發程序 (這些項目會使用 UDT 變數或參數)。  
   
 ### <a name="finding-udt-dependencies"></a>尋找 UDT 相依性  
- 您必須先卸除所有相依物件，然後再執行 DROP TYPE 陳述式。 下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢找出使用 UDT 的參數與資料行的所有**AdventureWorks**資料庫。  
+ 您必須先卸除所有相依物件，然後再執行 DROP TYPE 陳述式。 下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢找出使用 UDT 中的參數與資料行的所有**AdventureWorks**資料庫。  
   
 ```  
 USE Adventureworks;  
@@ -74,7 +72,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  [建立組件](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   
  [卸除彙總&#40;Transact SQL&#41;](../../../t-sql/statements/drop-aggregate-transact-sql.md)   
  [DROP FUNCTION &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-function-transact-sql.md)   
- [卸除程序 & #40;TRANSACT-SQL & #41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
+ [DROP PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-procedure-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-trigger-transact-sql.md)   
  [卸除類型&#40;Transact SQL&#41;](../../../t-sql/statements/drop-type-transact-sql.md)  
   

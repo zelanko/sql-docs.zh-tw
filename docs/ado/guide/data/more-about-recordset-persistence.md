@@ -2,7 +2,6 @@
 title: 深入了解資料錄集持續性 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a5c0d8bda0d3d881dfcb1dfd99706b28e5fb733
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a4bf42cb3b915f66cd3c9249ada5fffa7f5da6d7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272147"
 ---
 # <a name="more-about-recordset-persistence"></a>深入了解資料錄集持續性
 ADO 資料錄集物件支援儲存內容**資料錄集**使用檔案中的物件及其[儲存](../../../ado/reference/ado-api/save-method.md)方法。 持續儲存的檔案可能存在於本機磁碟機，伺服器，或做為 URL 在 Web 上站台。 更新版本中，還原檔案，其中一種[開啟](../../../ado/reference/ado-api/open-method-ado-recordset.md)方法**資料錄集**物件或[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)方法[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。  

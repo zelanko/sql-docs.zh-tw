@@ -1,5 +1,5 @@
 ---
-title: sys.dm_audit_class_type_map (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_audit_class_type_map (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,20 +22,21 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1a40f06ca9d012553556c68fca238f6f9a609f04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 8eba7e0e1e949883f2af30999b93b290e00e07f2
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968942"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  傳回一個資料表，它會將稽核記錄檔中的 class_type 欄位對應到 sys.dm_audit_actions 中的 class_desc 欄位。 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稽核，請參閱[SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
+  傳回一個資料表，它會將稽核記錄檔中的 class_type 欄位對應到 sys.dm_audit_actions 中的 class_desc 欄位。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]稽核，請參閱 < [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)。  
 
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**class_type**|**char(2)**|所稽核之實體的類別類型。 對應到寫入稽核記錄檔，且傳回的 class_type **get_audit_file （)** 函式。 不可為 Null。|  
+|**class_type**|**char(2)**|所稽核之實體的類別類型。 對應到寫入稽核記錄檔，並由傳回之 class_type **get_audit_file （)** 函式。 不可為 Null。|  
 |**class_type_desc**|**nvarchar(120)**|可稽核的實體名稱。 不可為 Null。|  
 |**securable_class_desc**|**nvarchar(120)**|對應到正在稽核之 class_type 的安全性實體物件。 如果 class_type 未對應到安全性實體物件，則為 NULL。 可以與 sys.dm_audit_actions 中的 class_desc 產生關聯。|  
   

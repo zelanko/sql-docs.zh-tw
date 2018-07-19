@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911283"
 ---
 # <a name="executing-statements-odbc"></a>執行 ODBC 陳述式
 ODBC 應用程式來執行幾乎所有資料庫存取執行 SQL 陳述式。 一般事件序列是配置陳述式控制代碼、 設定任何陳述式屬性，執行陳述式、 擷取任何結果，並釋放陳述式控制代碼。  

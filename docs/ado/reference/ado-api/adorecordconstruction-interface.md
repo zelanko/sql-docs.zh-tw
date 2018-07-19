@@ -2,7 +2,6 @@
 title: ADORecordConstruction 介面 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76a13ea05920d1a479734b26bdc57bedfe2d6817
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275627"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 介面
 **ADORecordConstruction**介面用來建構 ADO**記錄**從 OLE DB 物件**列**C/c + + 應用程式中的物件。  

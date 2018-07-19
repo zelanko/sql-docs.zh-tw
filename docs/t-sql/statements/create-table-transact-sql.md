@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -48,14 +47,15 @@ helpviewer_keywords:
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 caps.latest.revision: 256
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3768086c0c4e959586eb1ab8620dbdfda4cabe9a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1db17ce1dcf7cbc0c14c3ef1cf0edeaf3441e539
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37786009"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -259,6 +259,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
   | FILLFACTOR = fillfactor   
   | IGNORE_DUP_KEY = { ON | OFF }   
   | STATISTICS_NORECOMPUTE = { ON | OFF }   
+  | STATISTICS_INCREMENTAL = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF}   
   | ALLOW_PAGE_LOCKS ={ ON | OFF}   
   | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -429,7 +430,7 @@ TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存�
   
 -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 陳述式會將叢集索引轉換成堆積。 在此情況中，您就可以指定不同的 FILESTREAM 檔案群組、分割區配置或 **"** default **"** 。  
   
- `FILESTREAM_ON <filegroup>` 子句中的檔案群組或在分割區配置中指定的每個 FILESTREAM 檔案群組都必須具有一個針對該檔案群組定義的檔案。 您必須使用 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來定義這個檔案。否則，就會引發錯誤。  
+ `FILESTREAM_ON <filegroup>` 子句中的檔案群組或在分割區配置中指定的每個 FILESTREAM 檔案群組都必須具有一個針對該檔案群組定義的檔案。 您必須使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式來定義這個檔案。否則，就會引發錯誤。  
   
  如需相關的 FILESTREAM 主題，請參閱[二進位大型物件 &#40;Blob&#41; 資料 &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)。  
   
@@ -549,7 +550,7 @@ TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存�
 
  指定在建立叢集索引時，資料表之 FILESTREAM 資料的位置。 FILESTREAM_ON 子句允許將 FILESTREAM 資料移到不同的 FILESTREAM 檔案群組或分割區配置。  
   
- *filestream_filegroup_name* 是 FILESTREAM 檔案群組的名稱。 此檔案群組必須有一個使用 [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式針對此檔案群組定義的檔案，否則會引發錯誤。  
+ *filestream_filegroup_name* 是 FILESTREAM 檔案群組的名稱。 此檔案群組必須有一個使用 [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver) 或 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 陳述式針對此檔案群組定義的檔案，否則會引發錯誤。  
   
  如果分割此資料表，則必須包含 FILESTREAM_ON 子句，而且必須指定 FILESTREAM 檔案群組的分割區配置，此配置會使用與資料表之分割區配置相同的分割區函數和分割區資料行。 否則，就會引發錯誤。  
   

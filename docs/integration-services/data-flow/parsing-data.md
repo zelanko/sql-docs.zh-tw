@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,14 +17,15 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 00a315fb09417886c13e1f102673851ca961ab16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bd4bc0bfa30ee2df9b66de66f7002233426fa8f6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407420"
 ---
 # <a name="parsing-data"></a>剖析資料
-  封裝中的資料流程會在異質資料存放區之間擷取和載入資料，這樣可以使用各種不同的標準和自訂資料類型。 在一個資料流程中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源執行擷取資料、剖析字串資料並將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的工作。 後續轉換可以剖析資料以便將其轉換成不同的資料類型，或者建立資料類型不同的資料行副本。 元件中使用的運算式同樣可以將引數和運算元轉換成不同的資料類型。 最後，當資料載入資料存放區時，目的地則可以剖析資料以便將其轉換成目的地使用的資料類型。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+  封裝中的資料流程會在異質資料存放區之間擷取和載入資料，這樣可以使用各種不同的標準和自訂資料類型。 在一個資料流程中， [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來源執行擷取資料、剖析字串資料並將資料轉換為 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 資料類型的工作。 後續轉換可以剖析資料以便將其轉換成不同的資料類型，或者建立資料類型不同的資料行副本。 元件中使用的運算式同樣可以將引數和運算元轉換成不同的資料類型。 最後，當資料載入資料存放區時，目的地則可以剖析資料以便將其轉換成目的地使用的資料類型。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="two-types-of-parsing"></a>兩種剖析類型  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供兩種用於轉換資料的剖析類型：快速剖析和標準剖析。  
@@ -53,7 +52,7 @@ ms.lasthandoff: 05/03/2018
 快速剖析提供一組快速、簡易且區分區域設定的常式集，以剖析資料。 快速剖析僅支援整數資料類型的有限格式集。  
   
 ### <a name="integer-data-type"></a>整數資料類型
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所提供的整數資料類型為 DT_I1、DT_UI1、DT_I2、DT_UI2、DT_I4、DT_UI4、DT_I8 及 DT_UI8。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 所提供的整數資料類型為 DT_I1、DT_UI1、DT_I2、DT_UI2、DT_I4、DT_UI4、DT_I8 及 DT_UI8。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
  快速剖析支援整數資料類型的下列格式：  
   
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
   
  快速剖析會以 DT_DBDATE 輸出資料。 將填補以截斷格式表示的日期值。 例如，YYYY 會變為 YYYY0101。  
   
- 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ### <a name="time-data-type"></a>時間資料類型
  快速剖析支援下列字串格式的時間資料：  
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
     |-HH|截斷格式，指出要從 UTC 減去以取得本地時間的小時數。|  
     |Z|0 的值，指出時間是以 UTC 表示。|  
   
-     所有時間和日期/時間資料的格式都可以包含時區元素。 不過，除非資料是 DT_DBTIMESTAMPOFFSET 類型，否則系統會忽略時區值。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+     所有時間和日期/時間資料的格式都可以包含時區元素。 不過，除非資料是 DT_DBTIMESTAMPOFFSET 類型，否則系統會忽略時區值。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
      在包含時區元素的格式中，在時間元素和時區元素之間沒有空格，如以下範例所示：  
   
@@ -166,7 +165,7 @@ ms.lasthandoff: 05/03/2018
   
  快速剖析會以 DT_DBTIME 和 DT_DBTIME2 輸出字串。 將填補以截斷格式表示的時間值。 例如，HH:MI 會變為 HH:MM:00.000。  
   
- 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ### <a name="datetime-data-type"></a>日期/時間資料類型  
  快速剖析支援下列字串格式的日期/時間資料：  
@@ -187,7 +186,7 @@ ms.lasthandoff: 05/03/2018
 |Day|加入 01 做為此月的某個日期。|  
 |Month|加入 01 做為此年份的某個月份。|  
   
- 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="enable-fast-parse"></a>啟用快速剖析
 使用快速剖析的來源或轉換，其每一個資料行都必須設定快速剖析屬性。 若要設定屬性，請使用「一般檔案」來源或「資料轉換」的進階編輯器。  

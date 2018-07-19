@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908003"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>將二進位格式的資料傳輸
 應用程式可以安全地在兩個資料來源使用相同的 DBMS 和硬體平台之間傳輸資料 （在指定的 DBMS 所使用的內部形式）。 給定的資料片段，SQL 資料類型必須是相同的來源和目標資料來源。 C 資料類型是 SQL_C_BINARY。  

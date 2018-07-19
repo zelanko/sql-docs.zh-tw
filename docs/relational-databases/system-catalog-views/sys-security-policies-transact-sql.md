@@ -1,5 +1,5 @@
 ---
-title: sys.security_policies (TRANSACT-SQL) |Microsoft 文件
+title: sys.security_policies & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,13 +30,13 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dae89c39aa55f8139ce76942f0bdda660b645241
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "33221129"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993800"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (TRANSACT-SQL)
+# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   傳回資料庫中的每個安全性原則的資料列。  
@@ -59,7 +59,7 @@ ms.locfileid: "33221129"
 |is_schemabinding_enabled|**bit**|安全性原則的 Schemabinding 狀態：<br /><br /> 0 或 NULL = 啟用<br /><br /> 1 = 已停用|  
   
 ## <a name="permissions"></a>Permissions  
- 具有主體**ALTER ANY SECURITY POLICY**權限可以存取這份目錄檢視，以及任何人使用中的所有物件**VIEW DEFINITION**物件上。  
+ 具有主體**ALTER ANY SECURITY POLICY**權限可以存取所有的物件，在這份目錄檢視，以及任何人都**VIEW DEFINITION**物件上。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料列層級安全性](../../relational-databases/security/row-level-security.md)   

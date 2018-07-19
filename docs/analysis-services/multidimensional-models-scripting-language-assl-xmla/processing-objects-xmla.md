@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34025415"
 ---
 # <a name="processing-objects-xmla"></a>處理物件 (XMLA)
   在[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 處理是在步驟或一系列的步驟將資料轉換成供商務分析資訊。 處理會因物件類型而異，但是處理永遠都是將資料轉換為資訊的一部分。  

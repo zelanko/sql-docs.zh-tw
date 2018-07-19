@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906593"
 ---
 # <a name="update-statement-limitations"></a>UPDATE 陳述式的限制
 Paradox 驅動程式來更新資料表時，該資料表必須有唯一的索引 （Paradox 主索引鍵）。 當您使用 Paradox 驅動程式而不需要實作 Borland Database Engine 時，它不更新 Paradox 資料表。  

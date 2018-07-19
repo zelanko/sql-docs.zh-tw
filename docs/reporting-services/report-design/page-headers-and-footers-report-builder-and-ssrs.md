@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027035"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>頁首和頁尾 (報表產生器及 SSRS)
   報表可以包含分別在每個頁面的頂端和底端邊緣處的頁首和頁尾。 頁首和頁尾可以包含靜態文字、影像、線條、矩形、框線、背景色彩、背景影像和運算式。 運算式包含剛好具有一個資料集之報表的資料集欄位參考，以及包含該資料集做為範圍的彙總函式呼叫。  

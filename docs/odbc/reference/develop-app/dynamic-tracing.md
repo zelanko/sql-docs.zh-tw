@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909883"
 ---
 # <a name="dynamic-tracing"></a>動態追蹤
 您可以啟用或停用在任何時間點執行的應用程式中追蹤。 這可讓應用程式以追蹤任何數目的函式呼叫。  

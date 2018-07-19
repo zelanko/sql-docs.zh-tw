@@ -1,5 +1,5 @@
 ---
-title: sys.fn_check_object_signatures (TRANSACT-SQL) |Microsoft 文件
+title: sys.fn_check_object_signatures (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,10 +26,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015150"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,15 +57,15 @@ fn_ check_object_signatures (
   
 -   'asymmetric key'  
   
- @*類別*是**sysname**。  
+ @*類別*已**sysname**。  
   
  {@*指紋*}  
- 用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 @*憑證指紋*是**varbinary(20)**。  
+ 用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 @*憑證指紋*已**varbinary(20)**。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
  下表列出的資料行， **fn_check_object_signatures**傳回。  
   
-|資料行|型別|Description|  
+|「資料行」|類型|描述|  
 |------------|----------|-----------------|  
 |型別|**nvarchar(120)**|傳回類型描述或組件。|  
 |entity_id|**int**|傳回所評估之物件的物件識別碼。|  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31203470"
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>步驟 6： 實施 Python 模型使用 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +25,8 @@ ms.lasthandoff: 04/16/2018
 
 這一課會示範兩種建立 Python 模型為基礎的預測方法： 批次計分，和計分的資料列。
 
-- **批次計分：**若要提供多個輸入資料列，將選取的查詢當做引數傳遞至預存程序。 結果會是對應於輸入案例的觀察值的資料表。
-- **個別計分：**將一組個別的參數值傳遞做為輸入。  此預存程序會傳回單一資料列或值。
+- **批次計分：** 若要提供多個輸入資料列，將選取的查詢當做引數傳遞至預存程序。 結果會是對應於輸入案例的觀察值的資料表。
+- **個別計分：** 將一組個別的參數值傳遞做為輸入。  此預存程序會傳回單一資料列或值。
 
 所需的計分的 Python 程式碼會提供預存程序的一部分。
 

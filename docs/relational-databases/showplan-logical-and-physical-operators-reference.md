@@ -142,11 +142,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 75aeadbf83ba580545ed97e9c7d5f13ea24ecda5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e58c4d90d88f37ebcf34969693cc8f19b67f080f
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812122"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>執行程序邏輯和實體運算子參考
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -254,7 +255,7 @@ ms.lasthandoff: 05/03/2018
 |![非叢集索引多工緩衝處理運算子圖示](../relational-databases/media/index-spool-32x.gif "非叢集索引多工緩衝處理運算子圖示")|**索引多工緩衝處理**|「索引多工緩衝處理」實體運算子在 **Argument** 資料行中包含 SEEK:() 述詞。 「索引多工緩衝處理」運算子會掃描其輸入資料列，將每一列的副本放入隱藏的多工緩衝處理檔中 (儲存在 **tempdb** 資料庫中，直到查詢結束就不再存在)，並對資料列建立非叢集索引。 這讓您可以使用索引的搜尋能力來輸出滿足 SEEK:() 述詞的資料列。 如果倒轉運算子 (例如，利用「巢狀迴圈」運算子)，但是不需要重新繫結，會使用多工緩衝處理資料，而非重新掃描輸入。|  
 |![非叢集索引更新運算子圖示](../relational-databases/media/nonclust-index-update-32x.gif "非叢集索引更新運算子圖示")|**非叢集索引更新**|「非叢集索引更新」實體運算子會在 **Argument** 資料行中指定的非叢集索引內，從它的輸入更新資料列。 如果出現 SET:() 述詞，則每個更新的資料行都會設為這個值。 「非叢集索引更新」是實體運算子。|  
 |![線上索引插入運算子圖示](../relational-databases/media/online-index-32x.gif "線上索引插入運算子圖示")|**線上索引插入**|「線上索引插入」實體運算子指出索引之建立、改變或卸除作業將於線上進行。 也就是說，基礎資料表資料在索引操作期間仍然可供使用者使用。|  
-|無|**平行處理原則**|**平行處理原則**運算子 (或交換迭代器) 會執行散發資料流、蒐集資料流及重新分割資料流的邏輯作業。 **Argument** 資料行可以包含 PARTITION COLUMNS:() 述詞，以及被分割的資料行清單 (以逗點分隔)。 **Argument** 資料行也可以包含 ORDER BY:() 述詞，用以列出分割期間要保留排序順序的資料行。 「平行處理原則」是實體運算子。 如需平行處理原則運算子的詳細資訊，請參閱 [Craig Freedman 的部落格系列](http://blogs.msdn.microsoft.com/craigfr/tag/parallelism/) \(英文\)。<br /><br />**注意：**如果查詢已經編譯為平行查詢，但在執行階段是以序列查詢的方式執行，則由 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之 [包括實際執行計劃] 選項所產生的「執行程序表」輸出中，將不會包含**平行處理原則**運算子的 **RunTimeInformation** 元素。 在 SET STATISTICS PROFILE 輸出中，「平行處理原則」運算子的實際資料列計數和實際執行次數會顯示為零。 不論發生的情況為何，都表示「平行處理原則」運算子只用於查詢編譯期間，而不用於執行階段查詢計畫。 請注意，如果伺服器上有大量的並行載入，平行查詢計畫有時會以序列方式執行。|  
+|無|**平行處理原則**|<a name="exchange"></a> **平行處理原則**運算子 (或 Exchange 迭代器) 會執行散發資料流、收集資料流及重新分割資料流的邏輯作業。 **Argument** 資料行可以包含 PARTITION COLUMNS:() 述詞，以及被分割的資料行清單 (以逗點分隔)。 **Argument** 資料行也可以包含 ORDER BY:() 述詞，用以列出分割期間要保留排序順序的資料行。 「平行處理原則」是實體運算子。 如需平行處理原則運算子的詳細資訊，請參閱 [Craig Freedman 的部落格系列](http://blogs.msdn.microsoft.com/craigfr/tag/parallelism/) \(英文\)。<br /><br />**注意：** 如果查詢已經編譯為平行查詢，但在執行階段是以序列查詢的方式執行，則由 SET STATISTICS XML 或使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 之 [包括實際執行計劃] 選項所產生的「執行程序表」輸出中，將不會包含**平行處理原則**運算子的 **RunTimeInformation** 元素。 在 SET STATISTICS PROFILE 輸出中，「平行處理原則」運算子的實際資料列計數和實際執行次數會顯示為零。 不論發生的情況為何，都表示「平行處理原則」運算子只用於查詢編譯期間，而不用於執行階段查詢計畫。 請注意，如果伺服器上有大量的並行載入，平行查詢計畫有時會以序列方式執行。|  
 |![參數資料表掃描運算子圖示](../relational-databases/media/parameter-table-scan-32x.gif "參數資料表掃描運算子圖示")|**參數資料表掃描**|「參數資料表掃描」運算子會掃描在目前的查詢中當做參數使用的資料表。 一般而言，這是用於預存程序中的 INSERT 查詢。 「參數資料表掃描」是邏輯與實體運算子。|  
 |無|**部分彙總**|「部分彙總」用於平行計畫。 它將彙總函式套用至盡可能最多的輸入資料列，因此不需要寫入磁碟 (稱為「溢出」)。 「雜湊比對」是唯一可以實作資料分割彙總的實體運算子 (Iterator)。 **部分彙總** 是邏輯運算子。|  
 |![母體擴展查詢資料指標運算子圖示](../relational-databases/media/poulation-query-32x.gif "母體擴展查詢資料指標運算子圖示")|**母體擴展查詢**|「母體擴展查詢」運算子會在開啟資料指標時，擴展資料指標的工作資料表。|  

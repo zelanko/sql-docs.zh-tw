@@ -2,7 +2,6 @@
 title: ExecuteOptions 屬性 (RDS) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e44be9cb2b46b91d536d5a90cbb589365ad7d2c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e054a4ea0ad6a485f0b1d1dedfd53cdf9b07d944
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288150"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions 屬性 (RDS)
 指出是否已啟用非同步執行。  
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="settings-and-return-values"></a>設定和傳回值  
  設定或傳回下列值之一。  
   
-|常數|Description|  
+|常數|描述|  
 |--------------|-----------------|  
 |**adcExecSync**|執行在下次重新整理[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)同步。|  
 |**adcExecAsync**|預設值。 執行在下次重新整理**資料錄集**以非同步的方式。|  

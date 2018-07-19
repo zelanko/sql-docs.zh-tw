@@ -3,8 +3,6 @@ title: PolyBase 組態 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: polybase
@@ -13,11 +11,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c2e53e939a1431664ea0a8446983a22879a913ad
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 848ac4ee465ad0c7461734fbcd7478eaff6af531
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37173539"
 ---
 # <a name="polybase-configuration"></a>PolyBase 設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

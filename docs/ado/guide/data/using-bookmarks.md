@@ -2,7 +2,6 @@
 title: 使用書籤 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46ea739c431005f8409b2c2680f15e55b077c086
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 643d07d49e2e2ec0e31f9a677796f309fedd0d1d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273217"
 ---
 # <a name="using-bookmarks"></a>使用書籤
 通常會很有用後需要移動直接到特定的記錄傳回**資料錄集**而不需要捲動每一筆記錄，並比較值。 例如，如果您嘗試使用記錄搜尋**尋找**方法，但搜尋會傳回任何記錄，您會自動放置的任一端**資料錄集**。 如果您的提供者支援，可以使用書籤來標示程式的位置之前使用**尋找**方法，使您可以回到您的位置。 書籤是**Variant**輸入可唯一識別中的記錄值**資料錄集**物件。  

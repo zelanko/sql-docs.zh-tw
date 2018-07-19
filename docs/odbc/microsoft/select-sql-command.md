@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904743"
 ---
 # <a name="select---sql-command"></a>選取的 SQL 命令
 從一或多個資料表中擷取資料。  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -39,11 +37,12 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4d43876a38188ce181c80bd625c50128bbc608c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7584d87a0080b10cf5e0ab4d20172a20ea778fa0
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35406060"
 ---
 # <a name="fuzzy-lookup-transformation"></a>模糊查閱轉換
   「模糊查閱」轉換會執行資料清除工作，例如標準化資料、更正資料及提供遺漏值。  
@@ -59,7 +58,7 @@ ms.lasthandoff: 05/03/2018
   
  此轉換有一個輸入和一個輸出。  
   
- 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
+ 只有具有 **DT_WSTR** 和 **DT_STR** 資料類型的資料行可用於模糊比對。 完全比對可使用任何 DTS 資料類型，但 **DT_TEXT**、 **DT_NTEXT**和 **DT_IMAGE**除外。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../../integration-services/data-flow/integration-services-data-types.md)。 參與輸入與參考資料表之間聯結的資料行必須具有相容的資料類型。 例如，將具有 DTS **DT_WSTR** 資料類型的資料行聯結到具有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **nvarchar** 資料類型的資料行是有效的，但將具有 **DT_WSTR** 資料類型的資料行聯結到具有 **int** 資料類型的資料行則是無效的。  
   
  您可以指定最大記憶體數量、資料列比較演算法，以及轉換使用的索引和參考資料表快取，以自訂此轉換。  
   

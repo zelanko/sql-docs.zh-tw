@@ -1,27 +1,26 @@
 ---
-title: 將 SQL Server Integration Services 工作負載隨即轉移至雲端 | Microsoft Docs
-ms.date: 05/22/2018
+title: 在 Azure 中部署和執行 SSIS 套件 | Microsoft Docs
+description: 了解您如何將 SQL Server Integration Services (SSIS) 專案、套件和工作負載移至 Microsoft Azure 雲端。
+ms.date: 06/07/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3c8b39ac59f3ac6bddd985de12602f498e1ed97
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 0fa7a72e86f596cd0e5d18a0c0dbeb1015233f20
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455462"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403290"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>將 SQL Server Integration Services 工作負載隨即轉移至雲端
-您現在可以將 SQL Server Integration Services (SSIS) 套件和工作負載移至 Azure 雲端。
--   在 Azure SQL Database 或 SQL Database 受控執行個體 (預覽) 的 SSIS 目錄資料庫 (SSISDB) 中，儲存並管理 SSIS 專案和套件。
+您現在可以將 SQL Server Integration Services (SSIS) 專案、套件和工作負載移至 Azure 雲端。
+-   在 Azure SQL Database 或 SQL Database 受控執行個體 (預覽) 的 SSIS 目錄 (SSISDB) 中，儲存並管理 SSIS 專案和套件。
 -   在 Azure SSIS Integration Runtime (Azure Data Factory 的元件) 執行個體中執行套件。
 -   使用熟悉的工具 (例如 SQL Server Management Studio，SSMS) 進行一般工作。
 
@@ -54,21 +53,21 @@ ms.locfileid: "34455462"
 -   針對 Visual Studio 2017 15.3 版或更新版本。
 -   針對 Visual Studio 2015 17.2 版或更新版本。
 
-如需 Azure SSIS Integration Runtime 必要條件的資訊，請參閱[將 SQL Server Integration Services 套件部署至 Azure - 必要條件](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure#prerequisites)。
+如需 Azure SSIS Integration Runtime 必要條件的資訊，請參閱[在 Azure 中部署和執行 SSIS 套件 - 必要條件](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure#prerequisites)。
 
 > [!NOTE]
 > 在此公開預覽期間，所有區域都還無法使用 Azure SSIS Integration Runtime。 如需所支援區域的資訊，請參閱[區域可用的產品 - Microsoft Azure](https://azure.microsoft.com/regions/services/)。
 
 ## <a name="provision-ssis-on-azure"></a>在 Azure 上佈建 SSIS
 
-您必須先佈建 SSIS 目錄資料庫 (SSISDB) 與 Azure-SSIS Integration Runtime，才可在 Azure 中部署及執行 SSIS 套件。 請遵循本文中的佈建步驟：[將 SQL Server Integration Services (SSIS) 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
+**佈建**。 您必須先佈建 SSIS 目錄 (SSISDB) 與 Azure-SSIS Integration Runtime，才能在 Azure 中部署和執行 SSIS 套件。 請遵循本文中的佈建步驟：[在 Azure 中部署和執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)。
 
-當您佈建 Azure SSIS IR 時，可以指定下列選項的值來相應增加和相應放大：
+**相應增加和相應放大**。當您佈建 Azure SSIS IR 時，可以指定下列選項的值來相應增加和相應放大：
 -   節點大小 (包含核心數目) 以及叢集中的節點數目。
 -   裝載 SSIS 目錄資料庫 (SSISDB) 的現有 Azure SQL Database 執行個體，以及資料庫的服務層。
 -   每個節點的最大平行執行。
 
-如需效能的詳細資訊，請參閱[設定 Azure SSIS Integration Runtime 以獲得高效能](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance)。
+**改善效能**。 如需詳細資訊，請參閱[設定 Azure SSIS Integration Runtime 以獲得高效能](https://docs.microsoft.com/azure/data-factory/configure-azure-ssis-integration-runtime-performance)。
 
 ## <a name="design-packages"></a>設計套件
 
@@ -76,15 +75,15 @@ ms.locfileid: "34455462"
 
 ### <a name="connect-to-data-sources"></a>連線到資料來源
 
-如需如何使用 **Windows 驗證**從雲端連線至內部部署資料來源的相關資訊，請參閱[使用 Windows 驗證連線至內部部署資料來源與 Azure 檔案共用](ssis-azure-connect-with-windows-auth.md)。
+如需如何使用 **Windows 驗證**從雲端連線至內部部署資料來源的資訊，請參閱[使用 Windows 驗證連線至資料和檔案共用](ssis-azure-connect-with-windows-auth.md)。
 
-如需如何連線至檔案與檔案共用的相關資訊，請參閱[使用 SSIS 儲存及擷取內部部署和 Azure 中檔案共用上的檔案](ssis-azure-files-file-shares.md)。
+如需如何連線至檔案和檔案共用的資訊，請參閱[在 SSIS 套件部署於 Azure 的情況下開啟和儲存檔案](ssis-azure-files-file-shares.md)。
 
 ### <a name="available-ssis-components"></a>可用的 SSIS 元件
 
 當您佈建 SQL Database 執行個體來裝載 SSISDB 時，也會安裝 Azure Feature Pack for SSIS 以及 Access 可轉散發套件。 除了內建元件所支援的資料來源之外，這些元件還會提供與各種 **Azure** 資料來源及 **Excel 和 Access** 檔案的連線。
 
-您也可以安裝其他元件。 如需詳細資訊，請參閱[自訂 Azure-SSIS 整合執行階段的安裝程式](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md)。
+您也可以安裝其他元件。例如，您可以安裝預設不會安裝的驅動程式。 如需詳細資訊，請參閱[自訂 Azure-SSIS 整合執行階段的安裝程式](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup)。
 
 如果您是 ISV，可以更新授權元件的安裝，使其可在 Azure 上使用。 如需詳細資訊，請參閱[開發 Azure SSIS Integration Runtime 的付費或授權自訂元件](https://docs.microsoft.com/azure/data-factory/how-to-develop-azure-ssis-ir-licensed-components)。
 
@@ -96,18 +95,33 @@ ms.locfileid: "34455462"
 
 ## <a name="deploy-and-run-packages"></a>部署和執行套件
 
-**部署模型**。 當您將您專案部署至 Azure 上的 SSISDB 時，必須使用**專案部署模型**，而非套件部署模型。
+若要開始使用，請參閱[在 Azure 中部署和執行 SSIS 套件](ssis-azure-deploy-run-monitor-tutorial.md)。
 
-**部署和執行選項**。 若要在 Azure 上部署專案及執行套件，您可以使用數個熟悉的工具與指令碼選項中的其中一個：
+### <a name="connect-to-ssisdb"></a>連線至 SSISDB
+
+裝載 SSISDB 的 **SQL Database 名稱**會變成要在部署及執行 SSDT 和 SSMS 中的套件時使用之名稱 (共由四個部分組成) 的第一個部分，格式如下 - `<sql_database_name>.database.windows.net`。 如需如何在 Azure 中連線至 SSIS 目錄資料庫的資訊，請參閱[連線至 Azure 中的 SSIS 目錄 (SSISDB)](ssis-azure-connect-to-catalog-database.md)。
+
+### <a name="deploy-projects-and-packages"></a>部署專案和套件
+
+當您將您專案部署至 Azure 上的 SSISDB 時，必須使用**專案部署模型**，而非套件部署模型。
+
+若要在 Azure 上部署專案，您可以使用數個熟悉的工具與指令碼選項中的其中一個：
 -   SQL Server Management Studio (SSMS)
 -   Transact-SQL (從 SSMS、Visual Studio Code 或另一個工具)
 -   命令列工具
--   PowerShell
--   C# 和 SSIS 管理物件模型
+-   PowerShell 或 C# 和 SSIS 管理物件模型
 
-**連線到 SSISDB**。 裝載 SSISDB 的 **SQL Database 名稱**會變成要在部署及執行 SSDT 和 SSMS 中的套件時使用之名稱 (共由四個部分組成) 的第一個部分，格式如下 - `<sql_database_name>.database.windows.net`。 如需如何在 Azure 中連線至 SSIS 目錄資料庫的資訊，請參閱[連線至 Azure 上的 SSISDB 目錄資料庫](ssis-azure-connect-to-catalog-database.md)。
+如需使用 SSMS 和 [Integration Services 部署精靈] 的部署範例，請參閱[在 Azure 中部署和執行 SSIS 套件](ssis-azure-deploy-run-monitor-tutorial.md)。
 
-若要開始使用，請參閱[在 Azure 上部署、執行及監視 SSIS 套件](ssis-azure-deploy-run-monitor-tutorial.md)。
+### <a name="run-packages"></a>執行套件
+
+如需您可用來執行已部署至 Azure 之 SSIS 套件的方法概觀，請參閱[在 Azure 中執行 SSIS 套件](ssis-azure-run-packages.md)。
+
+## <a name="pass-runtime-values-with-environments"></a>使用環境傳遞執行階段值
+
+若要將一或多個執行階段值傳遞給作為 Azure Data Factory 管線一部分執行的套件，請使用 SQL Server Management Studio (SSMS) 在 SSISDB 中建立 SSIS 執行環境。 在每個環境中，建立變數並指派與專案或套件參數相對應的值。 請在 SSMS 中設定您的 SSIS 套件，將這些環境變數與專案或套件參數建立關聯。 當您在 Data Factory 管線中執行套件時，藉由在執行 SSIS 套件活動 UI 的 [設定] 索引標籤上指定不同的環境路徑，即可在環境之間進行切換。
+
+如需 SSIS 環境的詳細資訊，請參閱[建立和對應伺服器環境](../packages/deploy-integration-services-ssis-projects-and-packages.md#create-and-map-a-server-environment)。 如需執行套件作為 Azure Data Factory 管線一部分的詳細資訊，請參閱[在 Azure Data Factory 中使用執行 SSIS 套件活動執行 SSIS 套件](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity)。
 
 ## <a name="monitor-packages"></a>監視套件
 若要監視 SSMS 中的執行中套件，您可以在 SSMS 中使用下列報告工具。
@@ -117,9 +131,9 @@ ms.locfileid: "34455462"
 若要監視 Azure SSIS Integration Runtime，請參閱[監視 Azure SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
 
 ## <a name="schedule-packages"></a>排程套件
-您可以使用各種工具來排程執行儲存在 Azure SQL Database 中的套件。 如需詳細資訊，請參閱[排程 Azure 上的 SSIS 套件執行](ssis-azure-schedule-packages.md)。
+您可以使用各種工具來排程執行儲存在 Azure SQL Database 中的套件。 如需詳細資訊，請參閱[在 Azure 中排程 SSIS 套件](ssis-azure-schedule-packages.md)。
 
 ## <a name="next-steps"></a>後續步驟
 若要在 Azure 上開始使用 SSIS 工作負載，請參閱下列文章：
 -   [將 SQL Server Integration Services 套件部署到 Azure](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)
--   [部署、執行和監視 Azure 上的 SSIS 套件](ssis-azure-deploy-run-monitor-tutorial.md)
+-   [在 Azure 中部署和執行 SSIS 套件](ssis-azure-deploy-run-monitor-tutorial.md)

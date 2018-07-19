@@ -1,5 +1,5 @@
 ---
-title: 連接到 SQL server 執行個體 |Microsoft 文件
+title: 連接到 SQL server 執行個體 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -22,27 +22,28 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b1e22218bc0d30bcb06b5d170c2403e4e5785e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058856"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>連接到 SQL Server 的執行個體
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  中的第一個程式設計步驟[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理物件 (SMO) 的應用程式會建立的執行個體<xref:Microsoft.SqlServer.Management.Smo.Server>物件，並建立其連線到的執行個體[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  中的第一個程式設計步驟[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Management Objects (SMO) 應用程式是要建立的執行個體<xref:Microsoft.SqlServer.Management.Smo.Server>物件，並建立它的執行個體的連線[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
   
  您可以用三種方式建立 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件的執行個體，並建立 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連接。 第一種方式是，使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件變數來提供連接資訊。 第二種方式是，明確地設定 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件屬性來提供連接資訊。 第三種方式是，在 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件建構函式中傳遞 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 
   
  **使用 ServerConnection 物件**  
   
- 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件變數的優點是，連接資訊可以重複使用。 宣告 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件變數。 接著，宣告 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件，並利用連接資訊 (例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱與驗證模式) 設定屬性。 然後，傳遞<xref:Microsoft.SqlServer.Management.Common.ServerConnection>物件變數當做參數<xref:Microsoft.SqlServer.Management.Smo.Server>物件建構函式。 不建議同時在不同的伺服器物件之間共用連接。 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來取得現有連接設定的複本。  
+ 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件變數的優點是，連接資訊可以重複使用。 宣告 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件變數。 接著，宣告 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件，並利用連接資訊 (例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱與驗證模式) 設定屬性。 然後，將傳遞<xref:Microsoft.SqlServer.Management.Common.ServerConnection>做為參數的物件變數<xref:Microsoft.SqlServer.Management.Smo.Server>物件建構函式。 不建議同時在不同的伺服器物件之間共用連接。 使用 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 方法來取得現有連接設定的複本。  
   
- **明確地設定伺服器物件屬性**  
+ **明確地設定 Server 物件屬性**  
   
  或者，您可以宣告 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件變數，並呼叫預設的建構函式。 同時，<xref:Microsoft.SqlServer.Management.Smo.Server> 物件會嘗試利用所有預設的連接設定，連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的預設執行個體。  
   
- **提供 SQL Server 執行個體名稱中伺服器物件的建構函式**  
+ **提供 SQL Server 執行個體名稱，在 伺服器物件的建構函式**  
   
  宣告 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件變數，然後傳遞 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體名稱，做為建構函式中的字串參數。 <xref:Microsoft.SqlServer.Management.Smo.Server> 物件會利用包含預設連接設定的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體建立連接。  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>連接到 SQL Server for RMO 的執行個體  
  Replication Management Objects (RMO) 會使用與 SMO 稍微不同的方法來連接到複寫伺服器。  
   
- RMO 程式設計物件需要的執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]由使用<xref:Microsoft.SqlServer.Management.Common.ServerConnection>物件所實作**Microsoft.SqlServer.Management.Common**命名空間。 這個伺服器連接會獨立於 RMO 程式設計物件之外建立。 接著會在執行個體建立期間，或是將它指派到物件的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性，藉以將它傳遞到 RMO 物件。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
+ RMO 程式設計物件需要的執行個體的連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會使用<xref:Microsoft.SqlServer.Management.Common.ServerConnection>所實作的物件**Microsoft.SqlServer.Management.Common**命名空間。 這個伺服器連接會獨立於 RMO 程式設計物件之外建立。 接著會在執行個體建立期間，或是將它指派到物件的 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 屬性，藉以將它傳遞到 RMO 物件。 以此方式，就可以個別建立和管理 RMO 程式設計物件與連接物件執行個體，而且多個 RMO 程式設計物件可以重複使用單一連接物件。 下列規則適用於應用程式伺服器的連接：  
   
 -   連接的所有屬性是針對指定的 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件所定義。  
   
@@ -68,12 +69,12 @@ ms.lasthandoff: 05/03/2018
 -   您必須明確地呼叫 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 方法，才能將連接傳遞到任何 RMO 程式設計物件。  
   
 ## <a name="examples"></a>範例  
-如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="connecting-to-the-local-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>在 Visual Basic 中使用 Windows 驗證連接到 SQL Server 的本機執行個體  
  連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的本機執行個體不需要太多程式碼。 而是依賴驗證方法和伺服器的預設值。 需要擷取資料的第一個作業將會導致連接建立。  
  
-這個範例是使用 Windows 驗證連接到 SQL Server 的本機執行個體的 Visual Basic.NET 程式碼。 
+這個範例是 Visual Basic.NET 程式碼，會使用 Windows 驗證連接到 SQL Server 的本機執行個體。 
 
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -103,7 +104,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>在 Visual Basic 中使用 Windows 驗證連接到 SQL Server 的遠端執行個體  
  當您使用 Windows 驗證連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體時，您不需要指定驗證類型。 Windows 驗證是預設值。  
   
- 這個範例是[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]會連接到遠端執行個體的.NET 程式碼[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]使用 Windows 驗證。 字串變數*strServer*包含遠端執行個體的名稱。  
+ 此範例中是[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]連接到遠端執行個體的.NET 程式碼[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]藉由使用 Windows 驗證。 字串變數*strServer*包含遠端執行個體的名稱。  
   
 ```VBNET   
 'Connect to a remote instance of SQL Server.
@@ -135,7 +136,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-basic"></a>在 Visual Basic 中使用 SQL Server 驗證連接到 SQL Server 的執行個體  
  當您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體時，您必須指定驗證類型。 此範例示範宣告 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件變數的替代方法，讓連接資訊得以重複使用。  
   
- 此範例是[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].NET 程式碼示範如何連接到遠端和*vPassword*包含登入和密碼。  
+ 此範例是[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]示範如何連接到遠端的.NET 程式碼和*Vpassword&lt*包含登入和密碼。  
   
 ```VBNET  
 ' compile with:   
@@ -183,7 +184,7 @@ End Class
 ## <a name="connecting-to-an-instance-of-sql-server-by-using-sql-server-authentication-in-visual-c"></a>在 Visual C# 中使用 SQL Server 驗證連接到 SQL Server 的執行個體  
  當您使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的執行個體時，您必須指定驗證類型。 此範例示範宣告 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 物件變數的替代方法，讓連接資訊得以重複使用。  
   
- 此範例會示範如何連接到遠端的 Visual C#.NET 程式碼和*vPassword*包含登入和密碼。  
+ 此範例會示範如何連接到遠端的 Visual C#.NET 程式碼並*Vpassword&lt*包含登入和密碼。  
   
 ```csharp  
 // compile with:   

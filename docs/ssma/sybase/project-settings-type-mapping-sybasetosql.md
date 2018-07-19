@@ -3,8 +3,6 @@ title: 專案設定 （型別對應） (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 93d23239f4dc60dc419dde62ab0a4923f286669d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779444"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>專案設定 （型別對應） (SybaseToSQL)
 類型對應 頁面**專案設定**對話方塊包含自訂 SSMA 如何轉換成 Sybase Adaptive Server Enterprise (ASE) 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
@@ -33,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
 -   若要指定目前的專案中，設定**工具**功能表上，選取**專案設定**，然後選取**類型對應**在左窗格底部。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **來源類型**  
 對應的 ASE 資料類型。  
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
   
 請參閱下節以取得預設 SSMA for Sybase 型別對應中的資料表。  
   
-**加入**  
+**[加入]**  
 按一下以新增的資料類型對應清單。  
   
 **編輯**  

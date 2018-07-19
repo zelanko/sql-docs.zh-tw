@@ -2,7 +2,6 @@
 title: 記錄物件 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bd0c6e6e5ad0e9d5ff059e0e9f4125137fb08fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1be0a2d0f3124f4f0718fd9f8063f23eb46c9deb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280877"
 ---
 # <a name="record-object-ado"></a>記錄物件 (ADO)
 代表從一個資料列[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)或資料提供者或傳回為半結構化的資料提供者，例如檔案或目錄的物件。  

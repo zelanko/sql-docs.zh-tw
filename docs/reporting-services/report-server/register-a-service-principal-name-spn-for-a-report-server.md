@@ -15,17 +15,18 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2c81e169faf3a9f1e85fc6fa85648ae1faa97e62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3f64622d7b0a2a8a2679624e0662f33804650c3d
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238858"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>為報表伺服器註冊服務主要名稱 (SPN)
   如果您在使用 Kerberos 通訊協定進行相互驗證的網路中部署 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，當您想要將報表伺服器服務設定為以網域使用者帳戶的身分執行時，必須為此服務建立服務主要名稱 (SPN)。  
   
 ## <a name="about-spns"></a>關於 SPN  
- SPN 是使用 Kerberos 驗證之網路上某項服務的唯一識別碼。 它是由服務類別、主機名稱和通訊埠所組成。 在使用 Kerberos 驗證的網路上，伺服器的 SPN 必須在內建的電腦帳戶 (如 NetworkService 或 LocalSystem) 或使用者帳戶下註冊。 內建帳戶會自動註冊 SPN。 但是，當您在網域使用者帳戶下執行服務時，您必須針對您想要使用的帳戶手動註冊 SPN。  
+ SPN 是使用 Kerberos 驗證之網路上某項服務的唯一識別碼。 它是由服務類別、主機名稱所組成，有時也包含連接埠。 HTTP SPN 不需要連接埠。 在使用 Kerberos 驗證的網路上，伺服器的 SPN 必須在內建的電腦帳戶 (如 NetworkService 或 LocalSystem) 或使用者帳戶下註冊。 內建帳戶會自動註冊 SPN。 但是，當您在網域使用者帳戶下執行服務時，您必須針對您想要使用的帳戶手動註冊 SPN。  
   
  若要建立 SPN，可以使用 **SetSPN** 命令列公用程式。 如需詳細資訊，請參閱下列內容：  
   
@@ -39,14 +40,14 @@ ms.lasthandoff: 05/03/2018
  使用 SetSPN 公用程式來建立報表伺服器之 SPN 的命令語法如下：  
   
 ```  
-Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>  
+Setspn -s http/<computername>.<domainname> <domain-user-account>  
 ```  
   
  Windows Server 上提供**SetSPN** 。 **-s** 引數會在確認沒有重複存在之後加入 SPN。 **注意：-s** 從 Windows Server 2008 開始已可於 Windows Server 中使用。  
   
  **HTTP** 為服務類別。 報表伺服器 Web 服務會在 HTTP.SYS 中執行。 依據產品建立適用於 HTTP 的 SPN 就是指相同電腦上在 HTTP.SYS 中執行的所有 Web 應用程式 (包括 IIS 內主控的應用程式) 都將根據網域使用者帳戶來被授與票證。 如果這些服務在不同的帳戶下執行，驗證要求將會失敗。 為了避免這個問題，請務必在相同的帳戶下設定所有要執行的 HTTP 應用程式，或是考慮為每一個應用程式建立主機標頭，然後再為每一個主機標頭建立個別的 SPN。 當您設定主機標頭時，不論 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 組態為何，都需要進行 DNS 變更。  
   
- 您為 \<電腦名稱>、\<網域名稱> 和 \<連接埠> 指定的值，可識別裝載報表伺服器之電腦的唯一網路位址。 這個值可以是本機主機名稱或完整網域名稱 (FQDN)。 如果您只有一個網域，而且使用連接埠 80，即可在命令列中省略 \<網域名稱> 和 \<連接埠>。 \<網域使用者帳戶> 是用以執行報表伺服器服務以及必須註冊 SPN 的使用者帳戶。  
+ 您為 \<電腦名稱> 和 \<網域名稱> 指定的值，可識別裝載報表伺服器之電腦的唯一網路位址。 這個值可以是本機主機名稱或完整網域名稱 (FQDN)。 如果您只有一個網域，即可在命令列中省略 \<網域名稱>。 \<網域使用者帳戶> 是用以執行報表伺服器服務以及必須註冊 SPN 的使用者帳戶。  
   
 ## <a name="register-an-spn-for-domain-user-account"></a>為網域使用者帳戶註冊 SPN  
   
@@ -61,16 +62,16 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
 4.  複製下列命令，使用對您的網路有效的實際值來取代預留位置值：  
   
     ```  
-    Setspn -s http/<computer-name>.<domain-name>:<port> <domain-user-account>  
+    Setspn -s http/<computer-name>.<domain-name> <domain-user-account>  
     ```  
   
-     例如： `Setspn -s http/MyReportServer.MyDomain.com:80 MyDomainUser`  
+     例如： `Setspn -s http/MyReportServer.MyDomain.com MyDomainUser`  
   
 5.  執行此命令。  
   
 6.  開啟 **RsReportServer.config** 檔，並找出 `<AuthenticationTypes>` 區段。  
   
-7.  加入 `<RSWindowsNegotiate/>` 當做此區段的第一個項目，以便啟用 NTLM。  
+7.  新增 `<RSWindowsNegotiate/>` 當作此區段的第一個項目，以便啟用 Kerberos。  
   
 ## <a name="see-also"></a>另請參閱  
  [設定服務帳戶 &#40;SSRS 組態管理員&#41;](http://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   

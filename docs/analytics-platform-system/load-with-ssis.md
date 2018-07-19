@@ -13,7 +13,7 @@ ms.openlocfilehash: 718a076822a4304e0ba951f3ca1903bb7c009e17
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34586060"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>載入資料到 Parallel Data Warehouse 的 Integration services

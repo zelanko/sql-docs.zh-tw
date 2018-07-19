@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912323"
 ---
 # <a name="odbc-sql-grammar"></a>ODBC SQL 文法
 互通的應用程式一定要在 SQL 陳述式中使用 ODBC SQL 文法。 不過，相當大的變化中，有可能甚至此文法。 如需詳細資訊，請參閱[互通性的 SQL 陳述式](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)。

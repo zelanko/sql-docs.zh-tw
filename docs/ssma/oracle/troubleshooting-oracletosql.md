@@ -1,8 +1,6 @@
 ---
 title: 疑難排解 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a1652278a5bc89fb702321a8f07d0e6af749208c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c42002b789eb9572ddcd5a653af16798d6d2297
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778004"
 ---
 # <a name="troubleshooting-oracletosql"></a>疑難排解 (OracleToSQL)
 不是屢見不鮮主控台指令碼或命令執行的移轉問題入該值。  

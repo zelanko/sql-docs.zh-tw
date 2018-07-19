@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33027995"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>設定報表伺服器應用程式的可用記憶體
   雖然 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 可以使用所有可用的記憶體，但是您可以透過針對配置給 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器應用程式的記憶體資源總數設定上限，覆寫預設行為。 此外，您也可以設定臨界值，讓報表伺服器根據系統處於低度、中度或嚴重記憶體不足壓力的情況，變更其設定優先權和處理要求的方式。 在低度記憶體不足壓力層級時，報表伺服器的回應方式為提供稍高優先權給互動式或視需要報表處理。 在高度記憶體不足壓力層級時，報表伺服器會運用有限的資源並使用多種技術來維持運作。  

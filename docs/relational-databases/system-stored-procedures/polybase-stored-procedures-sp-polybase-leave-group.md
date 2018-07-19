@@ -1,5 +1,5 @@
 ---
-title: sp_polybase_leave_group (TRANSACT-SQL) |Microsoft 文件
+title: sp_polybase_leave_group & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +19,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8ad3a202ff910d19ea70192eb9cc5e114a8a4cb9
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984207"
 ---
-# <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (TRANSACT-SQL)
+# <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  從 PolyBase 向外延展計算群組中移除的 SQL Server 執行個體。 
+  移除 PolyBase 向外延展計算群組中的 SQL Server 執行個體。 
  
- SQL Server 執行個體必須具有[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)安裝功能。  PolyBase 可讓非 SQL Server 資料來源，例如 Hadoop 和 Azure blob 儲存體的整合。 另請參閱[sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)。  
+ SQL Server 執行個體必須具有[PolyBase 指南](../../relational-databases/polybase/polybase-guide.md)安裝的功能。  PolyBase 可讓非 SQL Server 資料來源，例如 Hadoop 和 Azure blob 儲存體的整合。 另請參閱[sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,12 +49,12 @@ sp_polybase_leave_group;
  需要 CONTROL SERVER 權限。  
   
 ## <a name="remarks"></a>備註  
- 您只能從群組移除計算節點。  
+ 您只可以從群組移除計算節點。  
   
  執行預存程序之後, 重新啟動電腦上的 PolyBase 引擎和 PolyBase Data Movement Service。 若要確認在前端節點上執行下列 DMV: **sys.dm_exec_compute_nodes**。  
   
 ## <a name="example"></a>範例  
- 此範例會移除目前的電腦從 PolyBase 群組。  
+ 此範例從 PolyBase 群組中移除目前的電腦。  
   
 ```sql  
 EXEC sp_polybase_leave_group ;  

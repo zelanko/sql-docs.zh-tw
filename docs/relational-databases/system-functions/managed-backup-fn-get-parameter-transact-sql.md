@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_parameter (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.fn_get_parameter (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -26,12 +26,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2420c689dff7e344c06a6667c15e08d3d4769872
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047256"
 ---
-# <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (TRANSACT-SQL)
+# <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回內含 0、1 或更多資料列參數和值組的資料表。  
@@ -50,11 +51,11 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ##  <a name="Arguments"></a> 引數  
  parameter_name  
- 參數的名稱。 parameter_name 為**nvarchar （128)**。 如果將 NULL 或空字串當做引數提供給函數，則會傳回所有設定之 Smart Admin 參數的名稱/值組。  
+ 參數的名稱。 是 parameter_name **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。 如果將 NULL 或空字串當做引數提供給函數，則會傳回所有設定之 Smart Admin 參數的名稱/值組。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |parameter_name|NVARCHAR(128)|參數的名稱。 以下是傳回的目前參數清單：<br/><br/>**FileRetentionDebugXevent**<br/><br/>**SSMBackup2WADebugXevent**<br/><br/>**SSMBackup2WANotificationEmailIds**<br/><br/>**SSMBackup2WAEnableUserDefinedPolicy**<br/><br/>**SSMBackup2WAEverConfigured**<br/><br/>**StorageOperationDebugXevent**|  
 |parameter_value|NVARCHAR(128)|參數的目前設定值。|  

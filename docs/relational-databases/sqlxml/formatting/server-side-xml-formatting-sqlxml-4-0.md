@@ -1,5 +1,5 @@
 ---
-title: 伺服器端 XML 格式化 (SQLXML 4.0) |Microsoft 文件
+title: 伺服器端 XML 格式化 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,10 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd37f50bb838717d9a245b038f624dee57bbf7d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003406"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>伺服器端 XML 格式 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/03/2018
   
  在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中，您可以將 XML 文件儲存到資料庫資料表中，以及從資料庫資料表中擷取 XML 文件。 若要擷取 XML 文件，請在 SELECT 查詢中使用 FOR XML 查詢延伸模組。  
   
- 例如，假設用戶端應用程式執行的命令，針對[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，包含下列項目[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢：  
+ 例如，假設用戶端應用程式針對執行命令[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，包含下列[!INCLUDE[tsql](../../../includes/tsql-md.md)]查詢：  
   
 ```  
 SELECT FirstName, LastName  
@@ -56,7 +57,7 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- 如需 FOR XML 子句的詳細資訊，請參閱[使用 FOR XML 建構 XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
+ 如需有關 FOR XML 子句的詳細資訊，請參閱 <<c0> [ 使用 FOR XML 建構 XML](../../../relational-databases/xml/for-xml-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [用戶端和伺服器端 XML 格式化架構&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   

@@ -4,13 +4,11 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: conceptual
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
@@ -18,11 +16,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d50777afbba77d87e6988338835f3cec023ee4d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a66649974ee1821388ad362aedb14cfd1d20f1c7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400210"
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>課程 4-4 - 新增一般檔案目的地
 [查閱貨幣索引鍵] 轉換的錯誤輸出，將使得查閱作業失敗的任何資料列重新導向至 [指令碼] 轉換。 為了加強所發生錯誤的相關資訊，[指令碼] 轉換執行一個取得錯誤描述的指令碼。  

@@ -2,7 +2,6 @@
 title: EditModeEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,19 +19,20 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba6822bfbb45ee547b87c56388b55d95195a7b63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a98b8dd5b82665aa7416bba67c8a04e46a75babb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277977"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 指定記錄的編輯狀態。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|表示未編輯的作業正在進行中。|  
-|**adEditInProgress**|1|指出目前記錄中的資料已修改但尚未儲存。|  
+|**adEditInProgress**|@shouldalert|指出目前記錄中的資料已修改但尚未儲存。|  
 |**adEditAdd**|2|表示[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)已呼叫方法，並複製緩衝區中目前的記錄是尚未儲存在資料庫中的新記錄。|  
 |**adEditDelete**|4|指出目前的記錄已被刪除。|  
   

@@ -13,11 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 65999c781c4e13dc42b40c6e47ecd82a18a5fead
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8965d870164a146156031232d050bbee0a35e9ad
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812152"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>資料行存放區索引 - 新功能
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,15 +26,15 @@ ms.lasthandoff: 05/03/2018
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的每個版本以及 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 的最新版本，皆可使用資料行存放區功能的摘要。  
 
  > [!NOTE]
- > 若是 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，SQL Database 進階層、標準層 - S3 及更新版本，和所有 vCore 層可使用資料行存放區索引。 若是 SQL Server (2016 SP1 及更新版本)，則所有版本皆可使用資料行存放區索引。 若是 SQL Server (2016 SP1 及更早的版本)，則只有 Enterprise Edition 才可使用資料行存放區索引。
+ > 針對 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]，[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 進階層、標準層 - S3 及更新版本，和所有 vCore 層可使用資料行存放區索引。 針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 及更新版本，則所有版本皆可使用資料行存放區索引。 針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (SP1 以前) 及舊版，則只有 Enterprise Edition 才可使用資料行存放區索引。
  
 ## <a name="feature-summary-for-product-releases"></a>產品版本的功能摘要  
  本表會摘要說明資料行存放區索引的重要功能以及提供它們的產品。  
 
 |資料行存放區索引功能|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]|[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]|  
 |-------------------------------|---------------------------|---------------------------|---------------------------|--------------------------------------------|-------------------------|---|  
-|批次執行多執行緒查詢|是|是|是|是|是|是| 
-|批次執行單一執行緒查詢|||是|是|是|是|  
+|多執行緒查詢的批次模式執行|是|是|是|是|是|是| 
+|單一執行緒查詢的批次模式執行|||是|是|是|是|  
 |封存壓縮選項||是|是|是|是|是|  
 |快照集隔離和讀取認可快照集隔離|||是|是|是|是| 
 |建立資料表時指定資料行存放區索引|||是|是|是|是|  

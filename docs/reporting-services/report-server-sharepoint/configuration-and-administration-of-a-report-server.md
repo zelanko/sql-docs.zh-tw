@@ -1,7 +1,7 @@
 ---
-title: 設定和管理 SQL Server Reporting Services 報表伺服器 | Microsoft Docs
+title: 報表伺服器的設定及管理 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-server-sharepoint
@@ -13,13 +13,14 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bee75418d6c2ede62169ec1ef3b42770881499e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7959539dde52351bc9679b9b4629e2d1a4105562
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550519"
 ---
-# <a name="configuration-and-administration-of-a-sql-server-reporting-services-report-server"></a>設定和管理 SQL Server Reporting Services 報表伺服器
+# <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>設定和管理 SQL Server Reporting Services (SSRS) 報表伺服器
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -45,8 +46,6 @@ SQL Server Reporting Services 是一種伺服器報表平台，提供齊全的�
     -   [在已發行的報表上設定參數 &#40;SharePoint 整合模式中的 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)  
   
     -   [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
-  
-    -   [快取重新整理選項 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
 -   [Reporting Services 網站集合功能](../../reporting-services/report-server-sharepoint/site-collection-features-reporting-services.md)  
   

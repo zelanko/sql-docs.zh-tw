@@ -2,7 +2,6 @@
 title: ADO 屬性 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6f2c0bee80ae3f8b59a9b8241226facc89edb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d8df3fdea1c8e5666593dfa63666ed2c051c3b4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275577"
 ---
 # <a name="ado-properties"></a>ADO 屬性
 |||  
@@ -44,14 +44,14 @@ ms.lasthandoff: 05/03/2018
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|表示的類型**命令**物件。|  
 |[ConnectionString 屬性](../../../ado/reference/ado-api/connectionstring-property-ado.md)|表示用來連接到資料來源的資訊。|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|表示在終止嘗試並產生錯誤之前，建立連接時要等待的時間。|  
-|[Count](../../../ado/reference/ado-api/count-property-ado.md)|指出集合中的物件數目。|  
+|[計數](../../../ado/reference/ado-api/count-property-ado.md)|指出集合中的物件數目。|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|指出資料指標服務的位置。|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|表示使用中的資料指標類型**資料錄集**物件。|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|表示將會從所參考的物件擷取的資料成員名稱**DataSource**屬性。|  
 |[DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)|表示物件，包含表示為資料**資料錄集**物件。|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|表示的預設資料庫**連接**物件。|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|表示的資料容量**欄位**物件。|  
-|[說明](../../../ado/reference/ado-api/description-property.md)|描述**錯誤**物件。|  
+|[描述](../../../ado/reference/ado-api/description-property.md)|描述**錯誤**物件。|  
 |[方言](../../../ado/reference/ado-api/dialect-property.md)|表示語法和一般的規則，提供者將用來剖析**CommandText**或**CommandStream**屬性。|  
 |[方向](../../../ado/reference/ado-api/direction-property.md)|指出是否**參數**代表輸入的參數、 輸出參數，或兩者，或如果參數是預存程序的傳回值。|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|指出目前記錄的編輯狀態。|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|表示要封送處理至伺服器的記錄。|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|表示要傳回的記錄數目上限**資料錄集**從查詢。|  
 |[模式](../../../ado/reference/ado-api/mode-property-ado.md)|表示可用的權限中修改資料**連接**，**記錄**，或**資料流**物件。|  
-|[名稱](../../../ado/reference/ado-api/name-property-ado.md)|表示物件的名稱。|  
+|[[名稱]](../../../ado/reference/ado-api/name-property-ado.md)|表示物件的名稱。|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|表示為特定的提供者特有的錯誤程式碼**錯誤**物件。|  
 |[數字](../../../ado/reference/ado-api/number-property-ado.md)|表示唯一識別數字**錯誤**物件。|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|表示中的數值小數位數**參數**或**欄位**物件。|  

@@ -2,7 +2,6 @@
 title: 讀取、 ReadText、 寫入和 WriteText 方法範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5a6478b0df357d4c4c23398733c1a9d76b3eb95b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4c4f2c4ed48a8a388f770e41d12488594124353
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280787"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>讀取、 ReadText、 寫入和 WriteText 方法範例 (VB)
 這個範例示範如何以文字方塊的內容讀取到這兩個文字[資料流](../../../ado/reference/ado-api/stream-object-ado.md)和二進位**資料流**。 其他屬性和方法，顯示包含[位置](../../../ado/reference/ado-api/position-property-ado.md)，[大小](../../../ado/reference/ado-api/size-property-ado-parameter.md)， [Charset](../../../ado/reference/ado-api/charset-property-ado.md)，和[SetEOS](../../../ado/reference/ado-api/seteos-method.md)。  

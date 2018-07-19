@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900193"
 ---
 # <a name="drop-table-command"></a>DROP TABLE 命令
 從指定的資料來源的資料庫中移除資料表，並從磁碟中刪除。  

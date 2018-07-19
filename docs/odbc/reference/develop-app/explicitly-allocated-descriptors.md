@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909406"
 ---
 # <a name="explicitly-allocated-descriptors"></a>明確配置描述元
 應用程式可以明確地配置隨時連線到資料庫的連接上的應用程式描述元。 藉由指定該描述元控制代碼，以在陳述式的屬性可讓您處理使用**SQLSetStmtAttr**，應用程式會引導驅動程式使用該描述元取代對應的隱含地配置應用程式描述元。 應用程式無法指定替代的實作描述元。  

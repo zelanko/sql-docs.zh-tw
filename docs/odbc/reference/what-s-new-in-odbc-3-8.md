@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920873"
 ---
 # <a name="what39s-new-in-odbc-38"></a>什麼&#39;s ODBC 3.8 的新功能
 Windows 8 包含 ODBC 3.8 的更新的版本。 Windows 8 中的 ODBC 3.8 包括下列功能：  

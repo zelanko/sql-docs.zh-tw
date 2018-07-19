@@ -2,7 +2,7 @@
 title: SQL Server 的 OLE DB 驅動程式中的疏鬆資料行支援 |Microsoft 文件
 description: SQL Server 的 OLE DB 驅動程式中的疏鬆資料行支援
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -17,14 +17,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 616dfb431456099749250c7cc61540f6b36e7926
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d8e0139f126760cd62b44d699d8a0eef4fbaee38
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612004"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>SQL Server 的 OLE DB 驅動程式中的疏鬆資料行支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   OLE DB 驅動程式的 SQL Server 支援疏鬆資料行。 如需有關疏鬆資料行中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱[使用疏鬆資料行](../../../relational-databases/tables/use-sparse-columns.md)和[使用資料行集](../../../relational-databases/tables/use-column-sets.md)。  
   

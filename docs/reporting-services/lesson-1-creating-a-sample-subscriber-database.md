@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016615"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>第 1 課：建立範例訂閱者資料庫
 

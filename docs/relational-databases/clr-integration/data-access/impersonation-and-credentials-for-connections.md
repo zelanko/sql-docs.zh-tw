@@ -1,14 +1,11 @@
 ---
-title: 連接的模擬和認證 |Microsoft 文件
+title: 連接的模擬和認證 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -24,11 +21,12 @@ caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 09e9a65b9a6be2e1dc9de9153054f9b024818d0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 828357e883ddcf1b1aa1792878d1aedc52105f99
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358890"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>連接的模擬和認證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +34,11 @@ ms.lasthandoff: 05/03/2018
   
  根據預設，連接到 Windows 的 SQL Server 處理序需要 SQL Server Windows 服務帳戶的安全性內容。 但是，可將 CLR 函數對應到 Proxy 識別，好讓它的傳出連接具有與 Windows 服務帳戶不同的安全性內容。  
   
- 在某些情況下，您可能想要使用模擬呼叫者**SqlContext.WindowsIdentity**屬性而不是服務帳戶的身分執行。 **WindowsIdentity**執行個體代表叫用呼叫的程式碼，和用戶端使用 Windows 驗證時才可用的用戶端的身分識別。 取得後**WindowsIdentity**執行個體，您可以呼叫**Impersonate**變更執行緒的安全性權杖，然後開啟 ADO.NET 連接，代表用戶端。  
+ 在某些情況下，您可能想要使用模擬呼叫端**SqlContext.WindowsIdentity**屬性而不是服務帳戶身分執行。 **WindowsIdentity**執行個體代表叫用呼叫的程式碼，並只有當用戶端使用 Windows 驗證時使用的用戶端的身分識別。 取得後**WindowsIdentity**執行個體，您可以呼叫**Impersonate**變更執行緒的安全性權杖，然後開啟 ADO.NET 連線，代表用戶端。  
   
- 呼叫 SQLContext.WindowsIdentity.Impersonate 之後，您無法存取本機資料，而且您無法存取系統資料。 若要存取資料，必須呼叫 WindowsImpersonationContext.Undo。  
+ 呼叫 SQLContext.WindowsIdentity.Impersonate 之後，您無法存取本機資料，而且您無法存取系統資料。 若要存取的資料同樣地，您必須呼叫 WindowsImpersonationContext.Undo。  
   
- 下列範例示範如何使用模擬呼叫者**SqlContext.WindowsIdentity**屬性。  
+ 下列範例示範如何使用模擬呼叫端**SqlContext.WindowsIdentity**屬性。  
   
  Visual C#  
   
@@ -76,9 +74,9 @@ catch
 ```  
   
 > [!NOTE]  
->  如需模擬中行為變更的資訊，請參閱[SQL Server 2016 中對於 Database Engine 功能的突破性變更](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
+>  如需模擬中行為變更的資訊，請參閱[SQL Server 2016 中的 Database Engine 功能的突破性變更](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
- 此外，如果您已經取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 識別執行個體，在預設情況下您無法將該執行個體傳播至另一部電腦；Windows 安全性基礎結構會根據預設來限制這項作業。 但是，有一項機制稱為「委派」，它可啟用多部受信任電腦之間的 Windows 識別傳播。 您可以進一步了解 TechNet 文章中的委派"[Kerberos 通訊協定轉換與限制委派](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
+ 此外，如果您已經取得 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 識別執行個體，在預設情況下您無法將該執行個體傳播至另一部電腦；Windows 安全性基礎結構會根據預設來限制這項作業。 但是，有一項機制稱為「委派」，它可啟用多部受信任電腦之間的 Windows 識別傳播。 您可以深入了解委派，在 TechNet 文章中，「[Kerberos 通訊協定轉換與限制委派](http://go.microsoft.com/fwlink/?LinkId=50419)"。  
   
 ## <a name="see-also"></a>另請參閱  
  [SqlContext 物件](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  

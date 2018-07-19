@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33036415"
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>針對 Reporting Services 的伺服器與資料庫連線問題進行疑難排解
 使用此主題，即可對在連接到報表伺服器時遇到的問題進行疑難排解。 此主題也提供有關「意外的錯誤」訊息的資訊。 如需資料來源組態和設定報表伺服器連接的詳細資訊，請參閱 [指定報表資料來源的認證和連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 和 [設定報表伺服器資料庫連接 (SSRS 組態管理員)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)。  

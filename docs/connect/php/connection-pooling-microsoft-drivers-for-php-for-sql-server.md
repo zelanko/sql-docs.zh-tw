@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 07/10/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e4a4718a252a13d6634ce7515b0580b8ce19dd6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb23d95aeebfbc44db876d64a96add890d17e806
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307177"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>連接共用 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 如需連接共用的詳細資訊，請參閱[驅動程式管理員連接共用](../../odbc/reference/develop-app/driver-manager-connection-pooling.md)。  
   
 ## <a name="enablingdisabling-connection-pooling"></a>啟用/停用連接共用
-### <a name="windows"></a>視窗
+### <a name="windows"></a>Windows
 您可以強制驅動程式所設定的值建立新的連接 （而不是相同的連接，連接集區中尋找） *ConnectionPooling*中的連接字串屬性**false** （或 0）。  
   
 如果*ConnectionPooling*省略從連接字串屬性，或者如果它設定為**true** （或 1） 驅動程式只會建立新的連接中沒有相同的連接連接集區。  

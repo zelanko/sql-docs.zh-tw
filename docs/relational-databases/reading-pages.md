@@ -7,22 +7,21 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: relational-databases-misc
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- server-general
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - pages
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
-caps.latest.revision: 3
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 34fc49117e2d406b58a8dce9731b8fdf89634c52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf9ae52e2854639cbd5ec41a3ec0db330ed911fd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37306298"
 ---
 # <a name="reading-pages"></a>讀取分頁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

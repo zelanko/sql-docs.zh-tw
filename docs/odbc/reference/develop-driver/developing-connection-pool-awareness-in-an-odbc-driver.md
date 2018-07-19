@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922063"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>開發中的 ODBC 驅動程式的連接集區感知
 本主題討論開發的 ODBC 驅動程式會包含驅動程式應如何提供連線共用服務的相關資訊的詳細資料。  

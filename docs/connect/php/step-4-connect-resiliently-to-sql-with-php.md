@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 07394d39ca6a6544cc45fc99a1601874230345f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b422ab79b0a0cec89683835f592d4813edc99d0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309997"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>步驟 4︰使用 PHP 彈性地連接到 SQL
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,34 +1,23 @@
 ---
 title: 產生 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- GENERATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Generate function
-ms.assetid: 696a229d-c2f1-47b7-9dca-7b0a6b547d9b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be6b05c0738b2407d6d803bae471a73ead15e353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740887"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   套用一個集合到另一個集合的每個成員，然後以聯集的方式將結果集聯結。 或者，針對集合進行字串運算式評估之後，傳回所產生的串連字串。  
   
@@ -57,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  以字串運算式表示的有效分隔符號。  
   
 ## <a name="remarks"></a>備註  
- 如果未指定第二個集合，則**產生**函式會傳回第二個集合的 tuple 套用第一個集合中的每個 tuple 所產生的集合*，*和聯集，然後將聯結所產生的設定。 如果**所有**指定，則此函式會保留在結果集中的重複項。  
+ 如果未指定第二個集合，則**產生**函式會傳回第二個集合的 tuple 套用第一個集合中的每個 tuple 所產生的集合 *，* 和聯集，然後將聯結所產生的設定。 如果**所有**指定，則此函式會保留在結果集中的重複項。  
   
- 如果指定的字串運算式，則**產生**函式會傳回產生評估指定的字串運算式，對每個 tuple 中第一個集合的字串*，*然後串連結果。 另外，也可以選擇字串分隔符號，在產生的串連字串中分隔每個結果。  
+ 如果指定的字串運算式，則**產生**函式會傳回產生評估指定的字串運算式，對每個 tuple 中第一個集合的字串 *，* 然後串連結果。 另外，也可以選擇字串分隔符號，在產生的串連字串中分隔每個結果。  
   
 ## <a name="examples"></a>範例  
   
@@ -116,7 +105,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>字串  
+### <a name="string"></a>String  
  下列範例示範使用**產生**傳回的字串：  
   
 ```  
@@ -139,6 +128,6 @@ FROM [Adventure Works]
 >  這種形式的**產生**函式有助於進行偵錯計算，因為它可讓您傳回一個字串來顯示集合中所有成員的名稱。 這可能是一組的嚴格 MDX 表示比閱讀， [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md)函式會傳回。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 函數參考 & #40;MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 函數參考&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

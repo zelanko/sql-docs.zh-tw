@@ -1,6 +1,6 @@
 ---
 title: MDX 函數參考 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7fd5b9ee4a70ac58ab44a056f0abfb1086d24b76
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 9137655ce59efbfa13466fe50f8142987b0ec81a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580030"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742007"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 函數參考 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 提供在多維度運算式 (MDX) 語法中的函式的使用。 函數可以用於任何有效的 MDX 陳述式，且通常是用於查詢、自訂積存定義以及其他計算。 本章節提供有關 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 內含的 MDX 函數的資訊。  
+
+  Analysis Services 提供使用多維度運算式 (MDX) 語法中的函式。 函數可以用於任何有效的 MDX 陳述式，且通常是用於查詢、自訂積存定義以及其他計算。 本節提供有關 MDX 函數的資訊。  
   
  您可以利用下表按照傳回值的類別目錄尋找函數，或者從目錄中按照字母順序排列的名單中選取函數。  
   

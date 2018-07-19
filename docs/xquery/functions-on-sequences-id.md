@@ -1,5 +1,5 @@
 ---
-title: id 函數 (XQuery) |Microsoft 文件
+title: id 函數 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004620"
 ---
-# <a name="functions-on-sequences---id"></a>函式上順序-識別碼
+# <a name="functions-on-sequences---id"></a>對序列-函式識別碼
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回含有 xs: id 值的一或多個 xs: idref 值中提供的值相符的元素節點序列 *$arg*。  
@@ -51,20 +52,20 @@ fn:id($arg as xs:IDREF*) as element()*
  如果 xs:IDREF 值與任何元素不相符，函數會傳回空白時序。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]資料庫。  
   
 ### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. 根據 IDREF 屬性值擷取元素  
  下列範例是根據 IDREF 經理屬性來使用 fn:id 以擷取 <`employee`> 元素。 在此範例中，經理屬性是 IDREF 類型屬性，而且 eid 屬性是 ID 類型屬性。  
   
- 為特定的經理屬性值， **id （)** 函數會尋找 <`employee`> 元素，其 ID 類型屬性值符合輸入的 IDEF 值。 換句話說，針對特定員工， **id （)** 函式會傳回員工的經理。  
+ 對於特定的經理屬性值， **id （)** 函數會尋找 <`employee`> 元素，其 ID 類型屬性值符合輸入的 IDEF 值。 換句話說，針對特定的員工而言**id （)** 函式會傳回員工主管。  
   
  在範例中執行了下列動作：  
   
 -   建立 XML 結構描述集合。  
   
--   具型別的**xml**變數由使用 XML 結構描述集合。  
+-   具型別**xml**變數由使用 XML 結構描述集合。  
   
--   此查詢會擷取含有 ID 屬性值所參考的項目**管理員**IDREF 屬性的 <`employee`> 項目。  
+-   此查詢會擷取含有 ID 屬性值所參考的項目**經理**IDREF 屬性的 <`employee`> 項目。  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -107,7 +108,7 @@ Go
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. 根據 OrderList IDREFS 屬性值擷取元素  
  在下列範例中，<`Customer`> 元素的 OrderList 屬性是 IDREFS 類型屬性。 它列出特定客戶的 id 順序。 對於每個 id 順序，在 <`Customer`> 之下有一個 <`Order`> 元素子系以提供順序值。  
   
- 查詢運算式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 會從第一個客戶的 IDRES 清單擷取第一個值。 此值接著會傳遞至**id （)** 函式。 函數接著會尋找 <`Order`> 元素，它的 OrderID 屬性值符合輸入**id （)** 函式。  
+ 查詢運算式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` 會從第一個客戶的 IDRES 清單擷取第一個值。 此值接著會傳遞給**id （)** 函式。 函數接著會尋找 <`Order`> 元素的 OrderID 屬性值符合的輸入**id （)** 函式。  
   
 ```  
 drop xml schema collection SC  
@@ -185,9 +186,9 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的兩個引數版本**id （)**。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要的引數類型**id （)** 是 xs: idref * 的子類型。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 需要的引數類型**id （)** 是 xs: idref * 的子型別。  
   
 ## <a name="see-also"></a>另請參閱  
- [序列的相關函數](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
+ [在序列上的函式](http://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

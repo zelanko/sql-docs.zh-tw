@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910353"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>取得和設定的描述項欄位
 本章節描述應用程式可用來擷取或設定描述項欄位中值的方法。  

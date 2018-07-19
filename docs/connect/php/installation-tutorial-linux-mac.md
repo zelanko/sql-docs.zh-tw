@@ -3,7 +3,6 @@ title: Linux 及 macOS Microsoft Drivers for PHP for SQL Server 安裝教學課�
 ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: c1115eaf304fa360cf446b67fe98157d324c2347
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 70811e91fc24d96ee311ab149b1124b570845f27
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307927"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux 及 macOS Microsoft Drivers for PHP for SQL Server 安裝教學課程
 下列指示假設乾淨的環境，並示範如何安裝 PHP 7.x、 Microsoft ODBC 驅動程式、 Apache 和 Microsoft Drivers for PHP for Ubuntu 16.04 和 17.10，RedHat 7 上的 SQL Server、 Debian 8 和 9、 Suse 12 及 macOS X 10.11 和 10.12。 這些指示建議安裝的驅動程式使用 PECL，但您也可以下載預先建置的二進位檔案從[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 頁面的專案，並將其中的指示安裝[載入 Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)。 載入擴充功能，以及為什麼我們不會將擴充功能加入 php.ini 的說明，請參閱上節[載入驅動程式](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)。
@@ -328,7 +328,7 @@ function FormatErrors( $errors )
 }
 ?>
 ```
-指向您的瀏覽器http://localhost/testsql.php(http://localhost:8080/testsql.php macOS 上)。 您現在應該能夠連線到您的 SQL Server/Azure SQL database。
+指向您的瀏覽器 http://localhost/testsql.php (http://localhost:8080/testsql.php macOS 上)。 您現在應該能夠連線到您的 SQL Server/Azure SQL database。
 
 ## <a name="see-also"></a>另請參閱  
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

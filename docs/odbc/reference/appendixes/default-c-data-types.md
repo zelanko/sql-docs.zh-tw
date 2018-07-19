@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906413"
 ---
 # <a name="default-c-data-types"></a>預設 C 資料類型
 如果應用程式指定 SQL_C_DEFAULT 中的**SQLBindCol**， **SQLGetData**，或**SQLBindParameter**，驅動程式會假設 C 資料類型的輸出或輸入的緩衝區對應至 SQL 資料類型之資料行的緩衝區繫結的參數。  

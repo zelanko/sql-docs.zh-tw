@@ -2,7 +2,6 @@
 title: ADO 程式碼範例 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0cb5171e41b77878aa3d7e04567330a2bb457a14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 89a5b8a91481fd11a22c6a429065c9b8ccb46fe5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275403"
 ---
 # <a name="ado-code-examples"></a>ADO 程式碼範例
 使用下列程式碼範例以了解如何使用 ADO 物件、 方法、 屬性和事件。  

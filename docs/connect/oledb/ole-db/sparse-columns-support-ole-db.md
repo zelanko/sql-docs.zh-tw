@@ -2,10 +2,10 @@
 title: 疏鬆資料行支援 (OLE DB) |Microsoft 文件
 description: 疏鬆資料行支援 (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d505ef702a1fda4b3896b51efb23c2b3b761bf33
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5acd9fc1a368f9f7701468887263129495b046e1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611923"
 ---
 # <a name="sparse-columns-support-ole-db"></a>疏鬆資料行支援 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本主題提供 SQL Server 支援疏鬆資料行的 OLE DB 驅動程式的相關資訊。 如需有關疏鬆資料行的詳細資訊，請參閱[OLE DB 驅動程式的 SQL Server 中的疏鬆資料行支援](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。 如需範例，請參閱[顯示資料行與疏鬆資料行的目錄中繼資料&#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)。  
   
@@ -52,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="ole-db-support-for-sparse-columns"></a>疏鬆資料行的 OLE DB 支援  
  下列的 OLE DB 介面已修改 OLE DB 驅動程式中的 SQL Server 以支援疏鬆資料行：  
   
-|類型或成員函數|Description|  
+|類型或成員函數|描述|  
 |-----------------------------|-----------------|  
 |IColumnsInfo::GetColumnsInfo|新 DBCOLUMNFLAGS 旗標的值 DBCOLUMNFLAGS_SS_ISCOLUMNSET 設定**column_set**中的資料行*dwFlags*。<br /><br /> 資料行會設定 DBCOLUMNFLAGS_WRITE **column_set**資料行。|  
 |IColumsRowset::GetColumnsRowset|設定新 DBCOLUMNFLAGS 旗標值 DBCOLUMNFLAGS_SS_ISCOLUMNSET **column_set** DBCOLUMN_FLAGS 中的資料行。<br /><br /> Dbcolumn_computemode 會設為 DBCOMPUTEMODE_DYNAMIC **column_set**資料行。|  

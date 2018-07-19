@@ -1,5 +1,5 @@
 ---
-title: sys.server_role_members (TRANSACT-SQL) |Microsoft 文件
+title: sys.server_role_members (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -26,25 +26,26 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 83d2548be09bc19a664dab70f18da8611bc31bc5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039011"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   針對每個固定和使用者定義伺服器角色的每個成員，各傳回一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|角色的伺服器主體識別碼。|  
 |**member_principal_id**|**int**|成員的伺服器主體識別碼。|  
   
- 若要新增或移除伺服器角色成員資格，使用[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)陳述式。  
+ 若要新增或移除伺服器角色成員資格，請使用[ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)陳述式。  
   
 ## <a name="permissions"></a>Permissions  
- 登入可以檢視本身所屬的伺服器角色成員資格，也可以檢視固定伺服器角色成員的 principal_id。 若要檢視所有伺服器角色成員資格，需要**都檢視 DEFINITION ON SERVER ROLE**權限或成員資格**securityadmin**固定的伺服器角色。  
+ 登入可以檢視本身所屬的伺服器角色成員資格，也可以檢視固定伺服器角色成員的 principal_id。 若要檢視所有的伺服器角色成員資格，需要**檢視 DEFINITION ON SERVER ROLE**權限或成員資格**securityadmin**固定的伺服器角色。  
   
  如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  
   

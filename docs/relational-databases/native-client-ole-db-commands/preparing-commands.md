@@ -1,13 +1,12 @@
 ---
-title: 準備命令 |Microsoft 文件
+title: 準備命令 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-commands
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - commands [OLE DB]
 - command preparation [SQL Server Native Client]
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c8eb50b7d5cb34fcc7611fb57a5d42d7f37b1396
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0bb783907259eeb5ba40ed90a71671887cab3a74
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418317"
 ---
 # <a name="preparing-commands"></a>準備命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,17 +46,17 @@ ms.lasthandoff: 05/03/2018
   
  暫存預存程序建立是由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者特有的初始化屬性 SSPROP_INIT_USEPROCFORPREP 所控制。 如果屬性值為 SSPROPVAL_USEPROCFORPREP_ON 或 SSPROPVAL_USEPROCFORPREP_ON_DROP，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者就會在準備命令時嘗試建立預存程序。 如果應用程式使用者具有足夠的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 權限，預存程序建立就會成功。  
   
- 不常中斷連接的取用者，建立暫存預存程序可能需要大量資源的**tempdb**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立暫存物件的系統資料庫。 如果 SSPROP_INIT_USEPROCFORPREP 的值為 SSPROPVAL_USEPROCFORPREP_ ON，只有當建立此命令的工作階段中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接時，才會卸除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者所建立的暫存預存程序。 如果該連接是針對資料來源初始化所建立的預設連接，只有當資料來源成為未初始化時，才會卸除暫存預存程序。  
+ 不常中斷連接的取用者，建立暫存預存程序可能需要大量資源**tempdb**，則[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]建立暫存物件的系統資料庫。 如果 SSPROP_INIT_USEPROCFORPREP 的值為 SSPROPVAL_USEPROCFORPREP_ ON，只有當建立此命令的工作階段中斷與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的連接時，才會卸除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者所建立的暫存預存程序。 如果該連接是針對資料來源初始化所建立的預設連接，只有當資料來源成為未初始化時，才會卸除暫存預存程序。  
   
  如果 SSPROP_INIT_USEPROCFORPREP 的值為 SSPROPVAL_USEPROCFORPREP_ON_DROP，發生下列其中一種狀況時，就會卸除 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者的暫存預存程序：  
   
 -   取用者使用**icommandtext:: Setcommandtext**表示新的命令。  
   
--   取用者使用**icommandprepare:: Unprepare**來指出它不再需要命令文字。  
+-   取用者使用**Icommandprepare**來指出它不再需要命令文字。  
   
 -   取用者使用暫存預存程序來釋放命令物件的所有參考。  
   
- 在命令物件具有最多一個暫存預存程序**tempdb**。 任何現有的暫存預存程序都代表特定命令物件的目前命令文字。  
+ 命令物件具有最多一個暫存預存程序**tempdb**。 任何現有的暫存預存程序都代表特定命令物件的目前命令文字。  
   
 ## <a name="see-also"></a>另請參閱  
  [命令](../../relational-databases/native-client-ole-db-commands/commands.md)  

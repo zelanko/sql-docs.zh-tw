@@ -1,6 +1,6 @@
 ---
 title: UPDATE MEMBER 陳述式 (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cd74ca9c5ebe5195dd65c88f657587583be55e92
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579840"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742707"
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX 資料定義更新成員
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   更新現有導出成員。  
   
@@ -61,7 +61,7 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |屬性識別碼|意義|  
 |-------------------------|-------------|  
-|FORMAT_STRING|A [!INCLUDE[msCoName](../includes/msconame-md.md)] Office 樣式格式字串，用戶端應用程式可用來顯示資料格值。|  
+|FORMAT_STRING|Office 樣式格式字串，用戶端應用程式可用來顯示資料格值。|  
 |VISIBLE|指出是否可以看見結構描述資料列集中導出成員的值。 可見的導出成員可以加入至一組與[AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)函式。 非零的值代表可以看見導出成員。 這個屬性的預設值是*看得見*。<br /><br /> 不可見的導出成員一般會在較為複雜的導出成員中做為中間步驟。 其他成員類型 (例如，量值) 也可以參考這些導出成員。|  
 |NON_EMPTY_BEHAVIOR|解析空白資料格時，MDX 用以決定導出成員行為的量值或集合。|  
 |CAPTION|指定用戶端應用程式用於顯示成員之標題的字串值。|  

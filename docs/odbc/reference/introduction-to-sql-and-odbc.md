@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915205"
 ---
 # <a name="introduction-to-sql-and-odbc"></a>SQL 和 ODBC 簡介
 建立 ODBC 提供一致的方法不同，或異質，資料庫管理系統 (Dbms) 存取。 本簡介討論 ODBC 的開發與相關的概念。  

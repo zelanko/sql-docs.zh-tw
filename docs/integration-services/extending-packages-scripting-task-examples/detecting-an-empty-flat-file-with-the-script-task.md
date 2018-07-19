@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +22,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef17791f7bbd34977a50820dec1424ff8e8de66e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2553da2693a51dcec0874a7ba35f919afc1b44a3
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402200"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>以指令碼工作偵測空的一般檔案
   一般檔案來源不會在嘗試處理一般檔案之前，判斷它是否包含資料列。 您可能會想要略過不包含任何資料列的檔案，藉以改善封裝的效率，尤其是逐一查看許多一般檔案的封裝。 指令碼工作可以在封裝開始處理資料流程之前，尋找空白的一般檔案。  

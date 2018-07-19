@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_workers (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_workers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2ea9d2aa6365c421bcf8e04920c2cf1bd4ab415a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052377"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,9 +37,9 @@ ms.lasthandoff: 05/23/2018
   針對系統中每一個工作者，各傳回一個資料列。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_workers**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_workers**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|工作者的記憶體位址。|  
 |status|**int**|僅供內部使用。|  
@@ -48,36 +49,36 @@ ms.lasthandoff: 05/23/2018
 |is_in_cc_exception|**bit**|1 = 工作者目前正在處理非 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 例外狀況。|  
 |is_fatal_exception|**bit**|指定這個工作者是否接收嚴重例外狀況。|  
 |is_inside_catch|**bit**|1 = 工作者目前處理例外狀況。|  
-|is_in_polling_io_completion_routine|**bit**|1 = 工作者目前針對暫止 I/O 執行 I/O 完成常式。 如需詳細資訊，請參閱[sys.dm_io_pending_io_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md)。|  
+|is_in_polling_io_completion_routine|**bit**|1 = 工作者目前針對暫止 I/O 執行 I/O 完成常式。 如需詳細資訊，請參閱 < [sys.dm_io_pending_io_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md)。|  
 |context_switch_count|**int**|這個工作者執行的排程器內容切換數目。|  
 |pending_io_count|**int**|此工作者執行的實體 I/O 數目。|  
 |pending_io_byte_count|**bigint**|這個工作者之所有暫止實體 I/O 的總位元組數。|  
 |pending_io_byte_average|**int**|這個工作者之實體 I/O 的平均位元組數。|  
-|wait_started_ms_ticks|**bigint**|在時間點[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，當這個工作者進入 SUSPENDED 狀態。 減去此值中的 ms_ticks [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)傳回工作者等候的毫秒數。|  
-|wait_resumed_ms_ticks|**bigint**|在時間點[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，當這個工作者進入 RUNNABLE 狀態。 減去此值中的 ms_ticks [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)傳回工作者已在可執行佇列中的毫秒數。|  
-|task_bound_ms_ticks|**bigint**|在時間點[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，當工作繫結至這個背景工作。|  
-|worker_created_ms_ticks|**bigint**|在時間點[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)、 背景工作建立時。|  
+|wait_started_ms_ticks|**bigint**|以時間點[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，當這個工作者進入 SUSPENDED 狀態。 減去此值中的 ms_ticks [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)會傳回工作者等候的毫秒數。|  
+|wait_resumed_ms_ticks|**bigint**|以時間點[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，當這個工作者進入 RUNNABLE 狀態。 減去此值中的 ms_ticks [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)會傳回工作者已在可執行佇列中的毫秒數。|  
+|task_bound_ms_ticks|**bigint**|以時間點[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)，當工作繫結至這個背景工作。|  
+|worker_created_ms_ticks|**bigint**|以時間點[ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)、 背景工作建立時。|  
 |exception_num|**int**|此工作者遇到之最後例外狀況的錯誤號碼。|  
 |exception_severity|**int**|這個工作者遇到之最後例外狀況的嚴重性。|  
 |exception_address|**varbinary(8)**|擲出例外狀況的程式碼位址|  
-|affinity|**bigint**|工作者的執行緒相似性。 比對中執行緒的相似性[sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
-|state|**nvarchar(60)**|工作者狀態。 可以是下列其中一個值：<br /><br /> INIT = 目前正在初始化的工作者。<br /><br /> RUNNING = 工作者目前以非先佔式或先佔式執行。<br /><br /> RUNNABLE = 工作者準備在排程器執行。<br /><br /> SUSPENDED = 工作者目前暫停，等待事件傳送信號給它。|  
+|affinity|**bigint**|工作者的執行緒相似性。 比對中的執行緒的相似性[sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
+|state|**nvarchar(60)**|工作者狀態。 可為下列其中一個值：<br /><br /> INIT = 目前正在初始化的工作者。<br /><br /> RUNNING = 工作者目前以非先佔式或先佔式執行。<br /><br /> RUNNABLE = 工作者準備在排程器執行。<br /><br /> SUSPENDED = 工作者目前暫停，等待事件傳送信號給它。|  
 |start_quantum|**bigint**|此工作者目前執行的開始時間 (以毫秒為單位)。|  
 |end_quantum|**bigint**|此工作者目前執行的結束時間 (以毫秒為單位)。|  
-|last_wait_type|**nvarchar(60)**|最後等待的類型。 如需等候類型的清單，請參閱[sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
-|return_code|**int**|從最後等待傳回值。 可以是下列其中一個值：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|last_wait_type|**nvarchar(60)**|最後等待的類型。 如需等候類型的清單，請參閱 < [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)。|  
+|return_code|**int**|從最後等待傳回值。 可為下列其中一個值：<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|僅供內部使用。|  
 |max_quantum|**bigint**|僅供內部使用。|  
 |boost_count|**int**|僅供內部使用。|  
 |tasks_processed_count|**int**|這個工作者所處理的工作數。|  
 |fiber_address|**varbinary(8)**|這個工作者相關聯之 Fiber 的記憶體位址。<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 未設定為輕量型共用。|  
-|task_address|**varbinary(8)**|目前工作的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。|  
-|memory_object_address|**varbinary(8)**|工作者記憶體物件的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
-|thread_address|**varbinary(8)**|與這個工作者相關聯之執行緒的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
-|signal_worker_address|**varbinary(8)**|最後立即通知這個物件之工作者的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
-|scheduler_address|**varbinary(8)**|排程器的記憶體位址。 如需詳細資訊，請參閱[sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
+|task_address|**varbinary(8)**|目前工作的記憶體位址。 如需詳細資訊，請參閱 < [sys.dm_os_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。|  
+|memory_object_address|**varbinary(8)**|工作者記憶體物件的記憶體位址。 如需詳細資訊，請參閱 < [sys.dm_os_memory_objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)。|  
+|thread_address|**varbinary(8)**|與這個工作者相關聯之執行緒的記憶體位址。 如需詳細資訊，請參閱 < [sys.dm_os_threads &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)。|  
+|signal_worker_address|**varbinary(8)**|最後立即通知這個物件之工作者的記憶體位址。 如需詳細資訊，請參閱 < [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)。|  
+|scheduler_address|**varbinary(8)**|排程器的記憶體位址。 如需詳細資訊，請參閱 < [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)。|  
 |processor_group|**smallint**|儲存指派給這個執行緒的處理器群組識別碼。|  
-|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  如果工作者狀態是 RUNNING，且工作者是以非先佔式執行，則工作者位址會符合 sys.dm_os_schedulers 中的 active_worker_address。  
@@ -86,8 +87,8 @@ ms.lasthandoff: 05/23/2018
   
 ## <a name="permissions"></a>Permissions
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
 
 ## <a name="examples"></a>範例  
  您可以使用下列查詢來查明工作者在 SUSPENDED 或 RUNNABLE 狀態下執行的時間長度。  

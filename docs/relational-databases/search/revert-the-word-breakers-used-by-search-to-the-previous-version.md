@@ -21,6 +21,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33182504"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>將搜索所使用的斷詞工具還原為舊版
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

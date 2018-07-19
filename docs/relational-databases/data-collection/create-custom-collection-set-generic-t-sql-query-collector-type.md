@@ -21,6 +21,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33145441"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>建立自訂收集組 - 一般 T-SQL 查詢收集器類型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

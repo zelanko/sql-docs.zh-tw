@@ -1,10 +1,9 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 5/14/2018
+ms.date: 6/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -22,15 +21,16 @@ helpviewer_keywords:
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ea81621b94490c267b6d7c9f3e010bd22279610
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: f305bf60f682ee9da175191b785b73d5e363c7c5
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37789599"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -514,24 +514,29 @@ WITH (TYPE = HADOOP,
 
 
 CREATE EXTERNAL FILE FORMAT TextFileFormat 
-WITH ( FORMATTYPE = DELIMITEDTEXT 
-     , FORMATOPTIONS ( FIELDTERMINATOR = '|' 
+WITH
+(
+    FORMAT_TYPE = DELIMITEDTEXT 
+    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|' 
                      , STRINGDELIMITER = '' 
                      , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff' 
                      , USETYPE_DEFAULT = FALSE 
                      ) 
-    )
+)
 
 
 CREATE EXTERNAL TABLE [dbo].[DimProductexternal] 
 ( [ProductKey] [int] NOT NULL, 
   [ProductLabel] nvarchar NULL, 
   [ProductName] nvarchar NULL ) 
-WITH ( LOCATION='/DimProduct/' , 
-       DATA_SOURCE = AzureDataLakeStore , 
-       FILE_FORMAT = TextFileFormat , 
-       REJECT_TYPE = VALUE ,
-       REJECT_VALUE = 0 ) ;
+WITH
+(
+    LOCATION='/DimProduct/' , 
+    DATA_SOURCE = AzureDataLakeStore , 
+    FILE_FORMAT = TextFileFormat , 
+    REJECT_TYPE = VALUE ,
+    REJECT_VALUE = 0
+) ;
 
 
 CREATE TABLE [dbo].[DimProduct] 

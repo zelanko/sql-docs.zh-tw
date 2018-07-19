@@ -1,5 +1,5 @@
 ---
-title: sp_sequence_get_range (TRANSACT-SQL) |Microsoft 文件
+title: sp_sequence_get_range (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2015
 ms.prod: sql
@@ -25,17 +25,18 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6b34171cf9300454dfe35e6f0961eaacff182b4a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015075"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   從順序物件傳回順序值的範圍。 順序物件會產生及發出要求的值數目，並將範圍相關的中繼資料提供給應用程式。  
   
- 有關序號的詳細資訊，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+ 如有關序號的詳細資訊，請參閱 <<c0> [ 序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,35 +56,35 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@sequence_name** =] **N**'*順序*'  
- 順序物件的名稱。 此結構描述是選擇性的。 *sequence_name*是**nvarchar(776)**。  
+ [ **@sequence_name** =] **N**'*序列*'  
+ 順序物件的名稱。 此結構描述是選擇性的。 *sequence_name*已**nvarchar(776)**。  
   
  [ **@range_size** =] *range_size*  
- 要從順序擷取的值數目。 **@range_size** 是**bigint**。  
+ 要從順序擷取的值數目。 **@range_size** 已**bigint**。  
   
  [ **@range_first_value** = ] *range_first_value*  
- 輸出參數會傳回用以計算要求範圍的順序物件之第一個值 (最小值或最大值)。 **@range_first_value** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 輸出參數會傳回用以計算要求範圍的順序物件之第一個值 (最小值或最大值)。 **@range_first_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
  [ **@range_last_value** = ] *range_last_value*  
- 選擇性輸出參數會傳回所要求的範圍的最後一個值。 **@range_last_value** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 選擇性輸出參數會傳回所要求的範圍的最後一個值。 **@range_last_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
  [ **@range_cycle_count** =] range_cycle_count  
- 選擇性輸出參數會傳回順序物件循環次數，以傳回要求的範圍。 **@range_cycle_count** 是**int**。  
+ 選擇性輸出參數會傳回順序物件循環次數，以傳回要求的範圍。 **@range_cycle_count** 已**int**。  
   
  [ **@sequence_increment** = ] *sequence_increment*  
- 選擇性輸出參數會傳回順序物件的增量，用來計算要求的範圍。 **@sequence_increment** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 選擇性輸出參數會傳回順序物件的增量，用來計算要求的範圍。 **@sequence_increment** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
  [ **@sequence_min_value** = ] *sequence_min_value*  
- 選擇性輸出參數會傳回順序物件的最小值。 **@sequence_min_value** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 選擇性輸出參數會傳回順序物件的最小值。 **@sequence_min_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
  [ **@sequence_max_value** = ] *sequence_max_value*  
- 選擇性輸出參數會傳回順序物件的最大值。 **@sequence_max_value** 是**sql_variant**與要求中所用順序物件的基底類型相同。  
+ 選擇性輸出參數會傳回順序物件的最大值。 **@sequence_max_value** 已**sql_variant**與要求中使用順序物件的基底類型相同。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="remarks"></a>備註  
- 在 y sp_sequence_get_rangeis。 結構描述，而且可以當做 sys.sp_sequence_get_range 參考。  
+ 在 sys sp_sequence_get_rangeis。 結構描述，而且可以當做 sys.sp_sequence_get_range 參考。  
   
 ### <a name="cycling-sequences"></a>循環的順序  
  必要時，順序物件會以適當次數循環，以提供要求的範圍。 循環次數是透過 `@range_cycle_count` 參數傳回給呼叫端。  
@@ -100,7 +101,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
  需要順序物件或順序物件之結構描述的 UPDATE 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用名為 Test.RangeSeq 順序物件。 您可以使用下列陳述式來建立 Test.RangeSeq 順序。  
+ 下列範例會使用名為 Test.RangeSeq 的順序物件。 您可以使用下列陳述式來建立 Test.RangeSeq 順序。  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -118,7 +119,7 @@ CREATE SEQUENCE Test.RangeSeq
 ```  
   
 ### <a name="a-retrieving-a-range-of-sequence-values"></a>A. 擷取序列值的範圍  
- 下列陳述式會從 Test.RangeSeq 順序物件取得四個序號，並傳回給使用者的第一個數字。  
+ 下列陳述式從 Test.RangeSeq 順序物件取得四個序號，並傳回數字的第一個給使用者。  
   
 ```  
 DECLARE @range_first_value sql_variant ,   
@@ -134,7 +135,7 @@ SELECT @range_first_value_output AS FirstNumber ;
 ```  
   
 ### <a name="b-returning-all-output-parameters"></a>B. 傳回所有輸出參數  
- 下列範例會傳回所有輸出值從 sp_sequence_get_range 程序。  
+ 下列範例會傳回所有輸出值，從 sp_sequence_get_range 程序。  
   
 ```  
 DECLARE    

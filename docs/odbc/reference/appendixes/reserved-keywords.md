@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912817"
 ---
 # <a name="reserved-keywords"></a>保留關鍵字
 以下是 ODBC 函數呼叫所用的保留字。 這些字並不會限制最小的 SQL 文法;不過，為了確保與支援核心 SQL 文法的驅動程式的相容性，應用程式應該避免使用這些關鍵字。 #**定義**值 SQL_ODBC_KEYWORDS 包含這些關鍵字的逗號分隔清單。  

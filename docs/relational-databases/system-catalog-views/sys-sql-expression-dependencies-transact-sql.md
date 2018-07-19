@@ -26,15 +26,16 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: cc3d777c55d7591f880317bc0f9d701b0cb59ad0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982030"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  針對在目前資料庫中使用者自訂實體的每個依據名稱相依性，各包含一個資料列。 這包括原生編譯純量使用者定義函數和其他的之間的相依性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]模組。 一個實體，呼叫時，會建立兩個實體之間的相依性*受參考實體*，會出現在另一個實體，稱為的保存 SQL 運算式中依名稱*參考實體*。 例如，在某個檢視的定義中參考資料表時，該檢視 (參考實體) 就會相依於資料表 (受參考的實體)。 如果資料表遭卸除，檢視便無法使用。  
+  針對在目前資料庫中使用者自訂實體的每個依據名稱相依性，各包含一個資料列。 這包括原生編譯的純量使用者定義的函式和其他之間的相依性[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]模組。 一個實體，呼叫時，會建立兩個實體之間的相依性*受參考實體*，另一個實體，稱為的保存 SQL 運算式中的名稱會出現*參考實體*。 例如，在某個檢視的定義中參考資料表時，該檢視 (參考實體) 就會相依於資料表 (受參考的實體)。 如果資料表遭卸除，檢視便無法使用。  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
   
 -   伺服器層級 DDL 觸發程序 (在 master 資料庫的內容時)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |referencing_id|**int**|參考實體的識別碼。 不可為 Null。|  
 |referencing_minor_id|**int**|當參考實體是資料行時，就是資料行識別碼，否則便是 0。 不可為 Null。|  
@@ -59,14 +60,14 @@ ms.lasthandoff: 05/04/2018
 |is_schema_bound_reference|**bit**|1 = 受參考的實體是結構描述繫結。<br /><br /> 0 = 受參考的實體非結構描述繫結。<br /><br /> 不可為 Null。|  
 |referenced_class|**tinyint**|受參考實體的類別。<br /><br /> 1 = 物件或資料行<br /><br /> 6 = 類型<br /><br /> 10 = XML 結構描述集合<br /><br /> 21 = 資料分割函數<br /><br /> 不可為 Null。|  
 |referenced_class_desc|**nvarchar(60)**|受參考實體之類別的描述。<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> 不可為 Null。|  
-|referenced_server_name|**sysname**|受參考實體之伺服器的名稱。<br /><br /> 這個資料行會因透過指定有效的四部分名稱所達成的跨伺服器相依性而擴展。 多部分名稱的相關資訊，請參閱[TRANSACT-SQL 語法慣例&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 若為參考了實體的非結構描述繫結實體，但沒有指定四部分名稱，則為 NULL。<br /><br /> 結構描述繫結的實體為 NULL; 因為它們必須位於相同的資料庫，因此只能定義使用兩部分 (*schema.object*) 名稱。|  
-|referenced_database_name|**sysname**|受參考實體之資料庫的名稱。<br /><br /> 這個資料行會因透過指定有效的三部分或四部分名稱所達成的跨資料庫或跨伺服器參考而擴展。<br /><br /> 在使用一部分或兩部分名稱指定時，若為非結構描述繫結參考，則為 NULL。<br /><br /> 結構描述繫結的實體為 NULL; 因為它們必須位於相同的資料庫，因此只能定義使用兩部分 (*schema.object*) 名稱。|  
+|referenced_server_name|**sysname**|受參考實體之伺服器的名稱。<br /><br /> 這個資料行會因透過指定有效的四部分名稱所達成的跨伺服器相依性而擴展。 如需有關多部分名稱的資訊，請參閱[TRANSACT-SQL 語法慣例&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。<br /><br /> 若為參考了實體的非結構描述繫結實體，但沒有指定四部分名稱，則為 NULL。<br /><br /> 結構描述繫結的實體為 NULL; 因為它們必須位於相同的資料庫，因此只能定義使用兩段式 (*schema.object*) 名稱。|  
+|referenced_database_name|**sysname**|受參考實體之資料庫的名稱。<br /><br /> 這個資料行會因透過指定有效的三部分或四部分名稱所達成的跨資料庫或跨伺服器參考而擴展。<br /><br /> 在使用一部分或兩部分名稱指定時，若為非結構描述繫結參考，則為 NULL。<br /><br /> 結構描述繫結的實體為 NULL; 因為它們必須位於相同的資料庫，因此只能定義使用兩段式 (*schema.object*) 名稱。|  
 |referenced_schema_name|**sysname**|受參考實體所屬的結構描述。<br /><br /> 若為參考了實體的非結構描述繫結參考，但沒有指定結構描述名稱，則為 NULL。<br /><br /> 若為結構描述繫結的參考，則永遠不會是 NULL；因為您必須使用兩部分名稱來定義和參考結構描述繫結的實體。|  
 |referenced_entity_name|**sysname**|受參考實體的名稱。 不可為 Null。|  
-|referenced_id|**int**|受參考實體的識別碼。 此資料行的值絕不會是 NULL 的結構描述繫結參考。 此資料行的值一律是跨伺服器和跨資料庫參考為 NULL。<br /><br /> 無法判斷識別碼時，若為資料庫中的參考，則為 NULL。 若為非結構描述繫結參考，便無法在下列情況中解析識別碼：<br /><br /> 受參考實體不存在資料庫中。<br /><br /> 受參考實體的結構描述會相依於呼叫端的結構描述，而且會在執行階段解析。 在此情況下，is_caller_dependent 會設定為 1。|  
+|referenced_id|**int**|受參考實體的識別碼。 此資料行的值絕不會是 NULL 的結構描述繫結參考的。 此資料行的值一律是跨伺服器和跨資料庫參考為 NULL。<br /><br /> 無法判斷識別碼時，若為資料庫中的參考，則為 NULL。 若為非結構描述繫結參考，便無法在下列情況中解析識別碼：<br /><br /> 受參考實體不存在資料庫中。<br /><br /> 受參考實體的結構描述會相依於呼叫端的結構描述，而且會在執行階段解析。 在此情況下，is_caller_dependent 會設定為 1。|  
 |referenced_minor_id|**int**|當參考實體是資料行時，就是受參考資料行的識別碼，否則便是 0。 不可為 Null。<br /><br /> 當資料行在參考實體中由名稱所識別，或者父實體用於 SELECT * 陳述式時，受參考的實體就是資料行。|  
 |is_caller_dependent|**bit**|指出在執行階段發生之受參考實體的結構描述繫結。因此，實體識別碼的解析會相依於呼叫端的結構描述。 當受參考的實體為預存程序、擴充預存程序，或在 EXECUTE 陳述式內部呼叫的非結構描述繫結使用者定義函數時，就會發生這個事件。<br /><br /> 1 = 受參考的實體是呼叫端相依，而且在執行階段解析。 在此情況下，referenced_id 是 NULL。<br /><br /> 0 = 受參考的實體識別碼不是呼叫端相依。<br /><br /> 若為結構描述繫結參考，以及明確指定結構描述名稱的跨資料庫和跨伺服器參考，則一律是 0。 例如，採用 `EXEC MyDatabase.MySchema.MyProc` 格式的實體參考與呼叫端無關。 不過，採用 `EXEC MyDatabase..MyProc` 格式的參考即與呼叫端相關。|  
-|is_ambiguous|**bit**|指出參考模稜兩可，而且可以在執行階段解析成的使用者定義函數、 使用者定義型別 (UDT) 或類型的資料行的 xquery 參考**xml**。<br /><br /> 例如，假設 `SELECT Sales.GetOrder() FROM Sales.MySales` 陳述式定義於預存程序中。 在執行該預存程序之前，不知道 `Sales.GetOrder()` 是 `Sales` 結構描述中的使用者自訂函數，還是名為 `Sales`、類型是 UDT 而且具有名為 `GetOrder()` 之方法的資料行。<br /><br /> 1 = 參考模糊不清。<br /><br /> 0 = 參考不會模糊不清，或者在呼叫檢視時，可成功繫結實體。<br /><br /> 若為結構描述繫結的參考，則一律是 0。|  
+|is_ambiguous|**bit**|指出參考模稜兩可，而且可以在執行階段的使用者定義函數、 使用者定義型別 (UDT) 或類型的資料行的 xquery 參考解析**xml**。<br /><br /> 例如，假設 `SELECT Sales.GetOrder() FROM Sales.MySales` 陳述式定義於預存程序中。 在執行該預存程序之前，不知道 `Sales.GetOrder()` 是 `Sales` 結構描述中的使用者自訂函數，還是名為 `Sales`、類型是 UDT 而且具有名為 `GetOrder()` 之方法的資料行。<br /><br /> 1 = 參考模糊不清。<br /><br /> 0 = 參考不會模糊不清，或者在呼叫檢視時，可成功繫結實體。<br /><br /> 若為結構描述繫結的參考，則一律是 0。|  
   
 ## <a name="remarks"></a>備註  
  下表將列出建立並維護相依性資訊的實體類型。 系統不會針對規則、預設值、暫存資料表、暫存預存程序或系統物件建立或維護相依性資訊。  
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/04/2018
 |XML 結構描述集合|否|是|  
 |分割區函數|否|是|  
   
- \* 資料表參考時，才會追蹤當做參考實體[!INCLUDE[tsql](../../includes/tsql-md.md)]模組、 使用者定義型別或定義中的計算資料行、 CHECK 條件約束或 DEFAULT 條件約束的 XML 結構描述集合。  
+ \* 資料表會追蹤當做參考實體，它會參考時，才[!INCLUDE[tsql](../../includes/tsql-md.md)]模組、 使用者定義型別或在定義中的計算資料行、 CHECK 條件約束或 DEFAULT 條件約束的 XML 結構描述集合。  
   
  ** 篩選述詞中使用的每一個資料行都會當做參考實體來追蹤。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 資料存取元件 |Microsoft 文件
+title: SQLXML 4.0 資料存取元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e825d46a60fe8a0d27e54e1989658861f77a7c9a
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34708186"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049986"
 ---
-# <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 資料存取元件 SQLXMLOLEDB 提供者
+# <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 資料存取元件-SQLXMLOLEDB 提供者
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 包含三個資料提供者，可針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中的資料庫插入及擷取 XML 資料：  
   
@@ -40,7 +40,7 @@ ms.locfileid: "34708186"
   
 -   SQLXML Managed 類別  
   
-     可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內公開 SQLXML 功能。 如需詳細資訊，請參閱[SQLXML Managed 類別](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)。  
+     可在 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 內公開 SQLXML 功能。 如需詳細資訊，請參閱 < [SQLXML Managed 類別](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)。  
   
 -   SQL Server Native Client (SQLNCLI11)  
   

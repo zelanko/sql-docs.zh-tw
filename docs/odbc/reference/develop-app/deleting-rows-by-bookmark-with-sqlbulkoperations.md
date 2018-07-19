@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909133"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>刪除具有 SQLBulkOperations 書籤的資料列
 當刪除資料列的書籤， **SQLBulkOperations** ，使得資料來源刪除一或多個選取的資料列的資料表。 資料列識別的繫結的書籤資料行中的書籤。  

@@ -1,8 +1,6 @@
 ---
 title: 重新整理從資料庫 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4ce7ef56e02e3d9fac5aabf6251e5cfac9dd93cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 213fe8ba8569c043ca19c6737be8992da79a17de
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777884"
 ---
 # <a name="refresh-from-database-oracletosql"></a>從資料庫 (OracleToSQL) 重新整理
 **從資料庫重新整理** 對話方塊可讓您選取要從 Oracle 資料庫重新整理的物件。 在對話方塊中的資料列會以色彩標示在中繼資料的狀態：  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 若要存取**從資料庫重新整理**對話方塊中，以滑鼠右鍵按一下物件中的 Oracle 中繼資料總管] 按一下 [**從資料庫重新整理**。  
   
-## <a name="options"></a>選項  
+## <a name="options"></a>選項。  
 **摺疊 （-）**  
 摺疊以隱藏個別物件的所有物件群組。  
   

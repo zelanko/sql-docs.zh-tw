@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34026875"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>設定使用量資料收集的對象 (PowerPivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -143,7 +144,7 @@ ms.lasthandoff: 05/10/2018
   
 5.  在 [長回應時間上限] 中，輸入以毫秒為單位的值，以設定完成長時間執行回應時間的上限。 歸類到此類別目錄的要求會比預期的執行時間還長，但仍在可接受的範圍內。 預設值為 10000 毫秒 (或 10 秒)。  
   
-     任何超過此限制的要求都會被分類為 *「已超過」*。 *「已超過」*沒有可設定的臨界值。 它會從您在 [長時間要求上限] 指定的上限來推斷。 歸類為「已超過」類別的要求，執行的時間超過您已定義的 SLA 所允許的時間。  
+     任何超過此限制的要求都會被分類為 *「已超過」*。 *「已超過」* 沒有可設定的臨界值。 它會從您在 [長時間要求上限] 指定的上限來推斷。 歸類為「已超過」類別的要求，執行的時間超過您已定義的 SLA 所允許的時間。  
   
 6.  按一下 **[確定]**。  
   

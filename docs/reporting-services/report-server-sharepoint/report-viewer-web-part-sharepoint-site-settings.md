@@ -12,11 +12,12 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: jt000
 ms.author: jasontre
-ms.openlocfilehash: 57e0e7ca8aa76570f70ae2279964d47f50da31aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc85547d213367d3a754e40764fa4335a45c5ce7
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926319"
 ---
 # <a name="sharepoint-site-settings-for-the-report-viewer-web-part---reporting-services"></a>報表檢視器網頁組件的 SharePoint 網站設定 - Reporting Services
 
@@ -41,5 +42,5 @@ ms.lasthandoff: 05/03/2018
 
 |設定|註解|  
 |-------------|--------------|  
-|收集使用量資料|允許將錯誤和使用方式資訊傳送至 Microsoft，以協助改善我們的產品。 如需 Microsoft 錯誤報告資料收集原則，請參閱 [Microsoft SQL Server 隱私權聲明](https://go.microsoft.com/fwlink/?linkid=860782&clcid=0x409)。|  
+|收集使用量資料|允許將錯誤和使用方式資訊傳送至 Microsoft，以協助改善我們的產品。 如需 Microsoft 錯誤報告資料收集原則，請參閱 [Microsoft SQL Server 隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)。|  
 |啟用報表的可存取性中繼資料|設定已轉譯報表的 [`AccessibleTablix` 裝置資訊](../html-device-information-settings.md)。| 

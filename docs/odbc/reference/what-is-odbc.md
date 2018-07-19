@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917405"
 ---
 # <a name="what-is-odbc"></a>什麼是 ODBC？
 關於 ODBC 許多多疑存在於電腦的世界。 給使用者，它是 Microsoft® Windows® 控制台 中的圖示。 應用程式的程式設計人員，它是包含資料存取常式的程式庫。 許多其他人，所以曾經想像的所有資料庫的存取問題的答案。  

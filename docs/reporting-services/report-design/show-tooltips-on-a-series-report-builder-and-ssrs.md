@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023725"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>在數列上顯示工具提示 (報表產生器及 SSRS)
   您可以將工具提示加入圖表數列上的每個資料點，以顯示與資料點相關的資訊，例如，群組名稱、資料點的值，或相對於數列總數之資料點的百分比。 在使用者將滑鼠指標停留在已轉譯之分頁報表中的資料點時，就會看到這項資訊。  

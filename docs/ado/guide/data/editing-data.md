@@ -2,7 +2,6 @@
 title: 編輯資料 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915e96df957b3f81c1b9a6d6731ca942b69e8f1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80e6fe9c0e615311bfbc7ee9602aae9ed929a38d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270267"
 ---
 # <a name="editing-data"></a>編輯資料
 我們解釋如何使用 ADO 連接到資料來源、 執行命令，取得結果**資料錄集**物件，並在瀏覽**資料錄集**。 本節著重於下一個基本的 ADO 作業： 編輯資料。  

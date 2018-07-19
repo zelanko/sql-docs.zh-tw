@@ -1,5 +1,5 @@
 ---
-title: 使用訊息 |Microsoft 文件
+title: 使用訊息 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,20 +19,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6d1b0f54854c6eebcbdfdf28d93e7df700cf4eb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037846"
 ---
 # <a name="using-messages"></a>使用訊息
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  在 SMO 中，系統訊息由<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>所屬物件**伺服器**物件。 無法修改系統訊息，因為**SystemMessage**物件屬性是唯讀狀態。  
+  在 SMO 中，系統訊息由<xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection>所屬的物件**Server**物件。 無法修改系統訊息，因為**SystemMessage**物件屬性是唯讀。  
   
  在 SMO 中，使用者定義的訊息是由 <xref:Microsoft.SqlServer.Management.Smo.UserDefinedMessageCollection> 物件以程式設計的方式表示。 現有的使用者定義的訊息可以藉由反覆運算集合而找到。 您可以建立新的使用者定義訊息具現化新**UserDefinedMessage**物件和設定適當的屬性。  
   
 ## <a name="examples"></a>範例  
- 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 在下列的程式碼範例中，您必須選取用於建立應用程式的程式設計環境、程式設計範本和程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="finding-a-particular-system-message-in-visual-basic"></a>在 Visual Basic 中尋找特定的系統訊息  
  此程式碼範例示範如何依識別碼辨識系統訊息並加以顯示。  

@@ -2,7 +2,6 @@
 title: 檢查資料的範例資料錄集 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca05161aad6aaaf79f1e1af85d7e83d55e6997ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a6bb3eb784c3979dd136f237c5d153547d30027
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272487"
 ---
 # <a name="sample-recordset-for-examining-data"></a>檢查資料的範例資料錄集
 首先，讓我們看看**資料錄集**使用執行針對 Northwind 範例資料的 Microsoft SQL Server 中的基底的下列 SQL 查詢傳回的物件。  

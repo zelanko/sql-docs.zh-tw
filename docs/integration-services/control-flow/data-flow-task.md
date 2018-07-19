@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 75
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a0877a6de516ccc95b6b2ad403525437592f4d82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b241a695b63bd7de59e490bb67686d7e53e3f625
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403080"
 ---
 # <a name="data-flow-task"></a>資料流程工作
   資料流程工作會封裝在來源與目的地之間移動資料的資料流程引擎，並讓使用者在資料移動時轉換、清除及修改資料。 將資料流程工作加入封裝控制流程，使得封裝擷取、轉換和載入資料成為可能。  

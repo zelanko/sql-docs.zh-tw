@@ -1,7 +1,7 @@
 ---
-title: 上傳檔案或報表 (報表管理員) | Microsoft Docs
+title: 在報表伺服器中上傳檔案或報表 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: reports
@@ -21,30 +21,25 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d5485f3c29c394655371ff42b690ccbacdcdd53d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f0406d711dfb04e553cb7ba8f8c27ede209a5f2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550099"
 ---
-# <a name="upload-a-file-or-report-report-manager"></a>上傳檔案或報表 (報表管理員)
-  報表管理員會提供一項上傳功能，讓您可以將報表、模型和其他檔案加入至報表伺服器，而不需要從用戶端應用程式發行這些項目。 您從檔案系統上傳的檔案會當做項目儲存在報表伺服器上。 您所上傳的檔案類型會決定其儲存方式：  
+# <a name="upload-a-file-or-report-in-the-report-server"></a>在報表伺服器中上傳檔案或報表
+報表伺服器的 Web 入口網站會提供一項上傳功能，讓您可以將報表和其他檔案新增至報表伺服器，而不需要從用戶端應用程式發行這些項目。 您從檔案系統上傳的檔案會當做項目儲存在報表伺服器上。 您所上傳的檔案類型會決定其儲存方式：  
   
--   .rdl 檔案會儲存成報表。  
+-   .rdl 檔案會儲存成分頁報表。  
   
--   .smdl 檔案會儲存成報表模型。  
-  
--   所有其他檔案 (包括共用資料來源 (.rds) 檔案) 則會當做資源上傳。 雖然報表伺服器不會處理資源，但是如果報表伺服器支援檔案的 MIME 類型，您就可以在報表管理員中檢視資源。  
+-   所有其他檔案 (包括共用資料來源 (.rds) 檔案) 則會當做資源上傳。 雖然報表伺服器不會處理資源，但是如果報表伺服器支援檔案的 MIME 類型，您就可以在 Web 入口網站中檢視資源。  
   
 ### <a name="to-upload-a-file-or-report"></a>若要上傳檔案或報表  
   
-1.  啟動 [報表管理員 &#40;SSRS 原生模式&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)。  
+1.  在 Web 入口網站中，按一下 [上傳]。  
   
-2.  在報表管理員中，導覽至 **[內容]** 頁面。 導覽至您要加入項目的資料夾。  
-  
-3.  按一下 [上傳檔案]。  
-  
-4.  按一下 [瀏覽] 選取要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
+4.  瀏覽至您想要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
   
 5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : @ & = + , $ / * < > |.  
   
@@ -52,10 +47,8 @@ ms.lasthandoff: 05/03/2018
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>另請參閱  
- [建立、刪除或修改共用資料來源 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [內容頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [上傳檔案頁面 &#40;報表管理員&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
- [上傳檔案到資料夾](../../reporting-services/report-server/upload-files-to-a-folder.md)  
+## <a name="see-also"></a>另請參閱   
+[建立、修改及刪除共用資料來源](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)
+[上傳檔案至資料夾](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
   

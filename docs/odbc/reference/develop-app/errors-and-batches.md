@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909353"
 ---
 # <a name="errors-and-batches"></a>錯誤和批次
 發生錯誤時執行的 SQL 陳述式批次時，下列四種結果可能會。 （每個可能的結果是資料來源專用伺服器，甚至可能會相依於批次中包含的陳述式。）  

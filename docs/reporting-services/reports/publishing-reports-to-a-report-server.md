@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026665"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>將報表發行至報表伺服器
   在您設計和測試完報表或報表集之後，您可以使用 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 中的部署功能，將報表發行至報表伺服器。 您可以發行個別報表，或可包含多個報表和資料來源的報表伺服器專案。 發行報表伺服器專案是發行多份報表最簡單的方式。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用「部署」一詞，而不是「發行」一詞。 這兩個詞可以互換。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022615"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>新增資料集篩選、資料區篩選和群組篩選
   在報表中，篩選屬於資料集、資料區域或資料區域群組的一部分，您可以篩選來限制報表中所要使用的資料。 如果您無法變更資料集查詢，那麼篩選便是協助您控制報表資料的好辦法，例如，如果您正在使用共用的資料集。  

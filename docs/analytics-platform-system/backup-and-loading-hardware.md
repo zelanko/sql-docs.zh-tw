@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544730"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>備份及載入硬體概觀-Parallel Data Warehouse
 若要部署您端對端的資料倉儲方案 Analytics Platform System (AP) Parallel Data Warehouse (PDW)，您需要建立計畫來備份資料倉儲及載入資料。 您可以使用該指引來取得和設定備份及載入的伺服器，以滿足您的業務需求。  

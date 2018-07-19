@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021805"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 清單查詢設計工具 (報表產生器)
   報表產生器和報表設計師同時提供了圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，以便指定要從報表資料集之 SharePoint 網站中擷取的資料。 您可以使用圖形化查詢設計工具來瀏覽 SharePoint 清單中繼資料、以互動方式建立查詢以及檢視查詢的結果。 您可以使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢、修改查詢，或輸入查詢命令。 您也可以從檔案或報表匯入現有的查詢。  

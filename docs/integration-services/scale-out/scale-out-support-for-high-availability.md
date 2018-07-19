@@ -1,26 +1,25 @@
 ---
 title: SQL Server Integration Services (SSIS) Scale Out 高可用性支援 | Microsoft Docs
-ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: ''
-ms.date: 12/19/2017
+description: 本文描述如何設定 SSIS Scale Out 的高可用性
+ms.custom: performance
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: scale-out
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411800"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性的 Scale Out 支援
 
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 在 Scale Out Master 憑證的 CN 中包含 Scale Out Master 服務的 DNS 主機名稱
 
-此主機名稱用於 Scale Out Master 端點中。 
+此主機名稱用於 Scale Out Master 端點中。 (請務必提供 DNS 主機名稱而非伺服器名稱。)
 
 ![HA 主要設定](media/ha-master-config.PNG)
 
@@ -61,9 +60,9 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]
 > 您可以對其他次要節點上的 Scale Out Master 重複這些作業，來設定多個備份 Scale Out Master。
 
-## <a name="4-set-up-ssisdb-always-on"></a>4.設定 SSISDB AlwaysOn
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4.安裝和設定適用於 AlwaysOn 的 SSIS 支援
 
-遵循 [AlwaysOn for SSIS 目錄 (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 中設定 AlwaysOn for SSISDB 的指示。
+遵循 [AlwaysOn for SSIS 目錄 (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) 中安裝和設定 AlwaysOn for SSISDB 的指示。
 
 此外，您還需要建立在其中新增 SSISDB 之可用性群組的可用性群組接聽程式。 請參閱[建立或設定可用性群組接聽程式](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)。
 
@@ -85,7 +84,7 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7.設定 Windows 容錯移轉叢集的 Scale Out Master 服務角色
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7.設定 Windows 伺服器容錯移轉叢集的 Scale Out Master 服務角色
 
 1.  在容錯移轉叢集管理員中，連線至 Scale Out 的叢集。選取叢集。 選取功能表中的 [動作]，然後選取 [設定角色]。
 
@@ -96,6 +95,12 @@ SSISDB 中的記錄是透過自動產生其密碼來登入 **##MS_SSISLogDBWorke
     ![HA 精靈 1](media/ha-wizard1.PNG)
 
 4.  完成精靈。
+
+在 Azure 虛擬機器中，此設定步驟需要額外的步驟。 這些概念和步驟的完整說明不在本文範圍內。
+
+1.  您必須設定 Azure 網域。 Windows Server 容錯移轉叢集需要叢集中之所有電腦皆為相同網域中的成員。 如需詳細資訊，請參閱[使用 Azure 入口網站啟用 Azure Active Directory Domain Services](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)。
+
+2. 您必須設定 Azure Load Balancer。 這是可用性群組接聽程式的需求。 如需詳細資訊，請參閱[教學課程：在 Azure 入口網站中使用基本負載平衡器，將內部流量負載平衡到 VM](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)。
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8.更新 SSISDB 中的 Scale Out Master 位址
 

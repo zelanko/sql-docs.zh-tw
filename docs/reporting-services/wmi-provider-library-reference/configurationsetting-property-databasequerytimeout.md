@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030675"
 ---
 # <a name="configurationsetting-property---databasequerytimeout"></a>ConfigurationSetting 屬性 - DatabaseQueryTimeout
   指定在報表伺服器認定命令失敗，或是花太多時間執行之前必須經過的秒數。 報表伺服器會針對 SQL 目錄，而不是報表資料來源排定查詢的時間。 讀取/寫入  

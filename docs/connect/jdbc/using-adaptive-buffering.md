@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32853323"
 ---
 # <a name="using-adaptive-buffering"></a>使用適應性緩衝
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,9 +30,9 @@ ms.lasthandoff: 05/03/2018
   
  為了允許應用程式處理非常龐大的結果，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供了適應性緩衝。 利用適應性緩衝，驅動程式會擷取從陳述式執行結果[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]應用程式需要時，而非一次。 只要應用程式不再存取這些結果，驅動程式也可以捨棄它們。 下面是適應性緩衝可能有用的部分範例：  
   
--   **此查詢會產生非常龐大的結果集：**應用程式可以執行產生比應用程式可以儲存在記憶體中的資料列的 SELECT 陳述式。 在舊版中，應用程式必須使用伺服器資料指標，以避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。  
+-   **此查詢會產生非常龐大的結果集：** 應用程式可以執行產生比應用程式可以儲存在記憶體中的資料列的 SELECT 陳述式。 在舊版中，應用程式必須使用伺服器資料指標，以避免 OutOfMemoryError。 適應性緩衝可以針對任意大的結果集進行順向唯讀行程，而不需要伺服器資料指標。  
   
--   **此查詢會產生非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**資料行或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT 參數值：**應用程式可以擷取單一值 (資料行或 OUT 參數) 太大而無法完整納入應用程式的記憶體。         適應性緩衝可讓用戶端應用程式使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法擷取資料流，這類值。 應用程式擷取的值從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]從資料流讀取。  
+-   **此查詢會產生非常大**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**資料行或**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT 參數值：** 應用程式可以擷取單一值 (資料行或 OUT 參數) 太大而無法完整納入應用程式的記憶體。         適應性緩衝可讓用戶端應用程式使用 getAsciiStream、 getBinaryStream 或 getCharacterStream 方法擷取資料流，這類值。 應用程式擷取的值從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]從資料流讀取。  
   
 > [!NOTE]  
 >  透過適應性緩衝，JDBC Driver 只會緩衝處理它所需的資料量。 此驅動程式不會提供任何公用方法來控制或限制緩衝區的大小。  

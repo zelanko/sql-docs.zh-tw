@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_gc_cycle_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_xtp_gc_cycle_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: cf11f8672c16b1a8c6ae3fd4676f69381d74bc72
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061386"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/23/2018
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|記憶體回收循環的唯一識別碼。|  
 |ticks_at_cycle_start|**bigint**|循環開始時的時間刻度。|  

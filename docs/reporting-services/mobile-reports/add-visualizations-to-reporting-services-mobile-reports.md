@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021685"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>將視覺效果新增至 Reporting Services 行動報表
 圖表是資料視覺效果中不可或缺的一部分。 了解可在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 行動報表中用來涵蓋各種案例的圖表。 

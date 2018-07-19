@@ -1,14 +1,12 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) |Microsoft 文件'
+title: 'Issasynchstatus:: Abort (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf05d99617114059dac55794b68ca7bf2222ca4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3edaceb5802299ec8637634bf0006fb66d5d6851
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408677"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ HRESULT Abort(
   
 ## <a name="arguments"></a>引數  
  *hChapter*[in]  
- 要中止作業之章節的控制代碼。 如果所呼叫的物件不是資料列集物件或作業不適用於章節，呼叫端必須將*hChapter*為 DB_NULL_HCHAPTER。  
+ 要中止作業之章節的控制代碼。 如果所呼叫的物件不是資料列集物件或者作業不適用於章節，呼叫端必須將*hChapter*為 DB_NULL_HCHAPTER。  
   
  *eOperation*[in]  
  要中止的作業。 這應該為下列值：  
@@ -69,18 +68,18 @@ HRESULT Abort(
  *HChapter*參數不是 DB_NULL_HCHAPTER 或*eOperation*不是 DBASYNCH_OPEN。  
   
  E_UNEXPECTED  
- **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**未呼叫，或尚未完成。  
+ **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**尚未呼叫，或尚未完成。  
   
- **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**後續取消之前初始化，但呼叫，或已逾時。此資料來源物件仍未初始化。  
+ **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**已呼叫，但後來取消之前的初始化，或已逾時。此資料來源物件仍未初始化。  
   
- **Issasynchstatus:: Abort**所在的資料列集上呼叫**itransaction:: Commit**或**itransaction:: Abort**之前呼叫和資料列集沒有未被認可或中止，且處於廢止狀態。  
+ **Issasynchstatus:: Abort**所在的資料列集上呼叫**itransaction:: Commit**或**itransaction:: Abort**先前已呼叫，以及資料列集未存留在認可或中止，且在廢止狀態。  
   
- **Issasynchstatus:: Abort**已非同步地取消其初始化階段中的資料列集上呼叫。 此資料列集處於廢止狀態。  
+ **Issasynchstatus:: Abort**在其初始化階段已非同步地取消資料列集上呼叫。 此資料列集處於廢止狀態。  
   
 ## <a name="remarks"></a>備註  
- 中止資料列集或資料來源物件的初始化可能會使保留的資料列集或資料來源物件處於廢止狀態，使得以外的所有方法**IUnknown**方法會傳回 E_UNEXPECTED。 當發生這個情況時，取用者唯一可行的動作就是釋放此資料列集或資料來源物件。  
+ 中止資料列集或資料來源物件的初始化可能會讓資料列集或資料來源物件處於廢止狀態，使得以外的所有方法**IUnknown**方法會傳回 E_UNEXPECTED。 當發生這個情況時，取用者唯一可行的動作就是釋放此資料列集或資料來源物件。  
   
- 呼叫**issasynchstatus:: Abort**傳遞的值和*eOperation*以外 DBASYNCHOP_OPEN 傳回 S_OK。 這不表示此作業已被取消或完成。  
+ 呼叫**issasynchstatus:: Abort**傳遞的值並*eOperation*以外 DBASYNCHOP_OPEN 傳回 S_OK。 這不表示此作業已被取消或完成。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行非同步作業](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  

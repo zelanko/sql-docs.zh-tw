@@ -1,31 +1,20 @@
 ---
-title: StructureColumn (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- StructureColumn
-dev_langs:
-- DMX
-helpviewer_keywords:
-- StructureColumn function
-ms.assetid: 57557536-4bfa-4fa7-bf7a-fb8722ca200d
-caps.latest.revision: 15
-author: Minewiskan
+title: StructureColumn (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8dbf127092a2fc15e8c113f42249bc4fb0d49bdf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992408"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,18 +33,18 @@ StructureColumn('structure column name')
  案例或巢狀資料表採礦結構資料行的名稱。  
   
 ## <a name="result-type"></a>結果類型  
- 傳回類型取決於資料行中所參考的類型\<結構資料行名稱 > 參數。 例如，如果所參考的採礦結構資料行包含純量值，此函數會傳回純量值。  
+ 傳回類型取決於資料行中所參考的型別\<結構資料行名稱 > 參數。 例如，如果所參考的採礦結構資料行包含純量值，此函數會傳回純量值。  
   
  如果所參考的採礦結構資料行是巢狀資料表，此函數會傳回資料表值。 傳回的資料表值可用於子 SELECT 陳述式的 FROM 子句中。  
   
 ## <a name="remarks"></a>備註  
  此函數為多型，而且可用於允許運算式之陳述式內的任何地方，包括 SELECT 運算式清單、WHERE 條件運算式及 ORDER BY 運算式。  
   
- 採礦結構中的資料行的名稱是字串值，因此必須括在單引號： 例如， `StructureColumn('`**資料行 1**`')`。 如果有多個資料行同名，則會在括住 SELECT 陳述式的內容中解析名稱。  
+ 採礦結構中的資料行名稱是字串值，因此必須括在單引號： 例如， `StructureColumn('`**資料行 1**`')`。 如果有多個資料行同名，則會在括住 SELECT 陳述式的內容中解析名稱。  
   
  從查詢傳回的結果**StructureColumn**函式會受到模型上的任何篩選器的目前狀態。 也就是說，模型篩選會控制採礦模型內所包含的案例。 因此，結構資料行上的查詢只能傳回採礦模型內使用的案例。 請參閱本主題的「範例」一節，以取得可顯示採礦模型篩選對案例資料表和巢狀資料表之影響的程式碼範例。  
   
- 如需如何在 DMX SELECT 陳述式中使用此函式的詳細資訊，請參閱[SELECT FROM&#60;模型&#62;。案例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)或[SELECT FROM&#60;結構&#62;。案例](../dmx/select-from-structure-cases.md)。  
+ 如需如何使用 DMX SELECT 陳述式中的這個函式的詳細資訊，請參閱[FROM&#60;模型&#62;。案例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)或是[選取 從&#60;結構&#62;。案例](../dmx/select-from-structure-cases.md)。  
   
 ## <a name="error-messages"></a>錯誤訊息  
  如果使用者沒有父採礦結構的鑽研權限，就會引發下列安全性錯誤：  
@@ -124,10 +113,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn(‘Occupation’) = ‘Architect’  
 ```  
   
- 請注意，在此範例中，篩選會套用到結構資料行，將案例限制為職業是 '' 的客戶 (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`)。 因為在建立模型時，模型篩選條件一定會套用到案例中，所以只有在 `Products` 資料表內至少包含一個限定資料列的案例才會包含在模型案例中。 因此，巢狀資料表 `Products` 的篩選及案例 `(‘Occupation’)` 的篩選都會套用。  
+ 請注意，在此範例中，篩選會套用到結構資料行，將案例限制為職業是 'Architect' 的客戶 (`WHERE StructureColumn(‘Occupation’) = ‘Architect’`)。 因為在建立模型時，模型篩選條件一定會套用到案例中，所以只有在 `Products` 資料表內至少包含一個限定資料列的案例才會包含在模型案例中。 因此，巢狀資料表 `Products` 的篩選及案例 `(‘Occupation’)` 的篩選都會套用。  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>範例查詢 3：從巢狀資料表選取資料行  
- 下列範例查詢會傳回當做模型中之定型案例使用的客戶名稱。 對於每一位客戶而言，此查詢也會傳回包含購買詳細資料的巢狀資料表。 雖然此模型包含`ProductName`資料行，此模型未使用的值`ProductName`資料行。 此模型只會檢查規則是否購買產品 (`NOT``OnSale`) 價格。 此查詢不但會傳回產品名稱，也會傳回所購買的數量 (此模型中未包含數量)。  
+ 下列範例查詢會傳回當做模型中之定型案例使用的客戶名稱。 對於每一位客戶而言，此查詢也會傳回包含購買詳細資料的巢狀資料表。 雖然此模型包含`ProductName`資料行，模型不會使用的值`ProductName`資料行。 此模型只會檢查一般是否購買的產品 (`NOT``OnSale`) 價格。 此查詢不但會傳回產品名稱，也會傳回所購買的數量 (此模型中未包含數量)。  
   
 ```  
 SELECT CustomerName,    
@@ -148,7 +137,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [資料採礦延伸模組&#40;DMX&#41;函數參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [資料採礦延伸模組&#40;DMX&#41;函式參考](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般預測函數&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

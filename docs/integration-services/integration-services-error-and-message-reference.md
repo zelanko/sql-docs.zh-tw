@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55b664bda08e6842333fed67dafeab6e58a605e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b6444d370a8eecec4df7d1a702354851892d007d
+ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35619555"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
@@ -1047,7 +1046,7 @@ ms.lasthandoff: 05/03/2018
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|這個緩衝區已經被遺棄。 緩衝區管理員已關閉，留下尚未處理完畢的緩衝區，將不會清除緩衝區。 可能會發生記憶體遺漏或其他問題。|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|嘗試尋找名稱為 "%1" 的輸入資料行失敗，錯誤碼為 0x%2!8.8X!。 在輸入資料行集合中找不到指定的輸入資料行。|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|嘗試尋找歷程識別碼為 %1!d! 的輸入資料行失敗，錯誤碼為 0x%2!8.8X! 。 在輸入資料行集合中找不到此輸入資料行。|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|運算式包含無法辨識的 Token "%1"。 如果 "%1" 是變數，則必須以 "@%1" 表示。 指定的 Token 無效。 如果 Token 要做為變數名稱，則必須以 @ 符號為字首。|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|運算式包含無法辨識的 Token "%1"。 如果 "%1" 是變數，則必須以 "\@%1" 表示。 指定的 Token 無效。 如果 Token 要做為變數名稱，則必須以 @ 符號為字首。|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|運算式包含無法辨識的 Token "#%1!d!"。|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|在 Variables 集合中找不到變數 "%1"。 變數可能不存在於正確的範圍中。|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|嘗試剖析運算式 "%1" 失敗。 運算式可能包含無效 Token、不完整的 Token 或無效元素， 可能是格式不正確，或遺漏部分必要元素，例如括號。|  
@@ -2081,8 +2080,8 @@ ms.lasthandoff: 05/03/2018
 |0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|工作無法執行作業 "%1"。|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|檔案/處理序 "%1" 不在路徑中。|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|主旨是空的。|  
-|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|[收件者] 欄位的位址格式不正確。 可能遺漏 "@" 符號或無效。|  
-|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|[寄件者] 欄位的位址格式不正確。 可能遺漏 "@" 符號或無效。|  
+|0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|[收件者] 欄位的位址格式不正確。 可能遺漏 "\@" 符號或無效。|  
+|0x800291C8|-2147315256|DTS_W_SENDMAILTASK_AT_MISSING_IN_FROM|[寄件者] 欄位的位址格式不正確。 可能遺漏 "\@" 符號或無效。|  
 |0x8002927A|-2147315078|DTS_W_XMLTASK_DIFFFAILURE|兩個 XML 文件不相同。|  
 |0x8002928C|-2147315060|DTS_W_XMLTASK_DTDVALIDATIONWARNING|DTD 驗證將使用 XML 文件中 DOCTYPE 行所定義的 DTD 檔案， 不會使用指派給屬性 "%1" 的內容。|  
 |0x8002928D|-2147315059|DTS_W_XMLTASK_VALIDATIONFAILURE|工作無法驗證 "%1"。|  

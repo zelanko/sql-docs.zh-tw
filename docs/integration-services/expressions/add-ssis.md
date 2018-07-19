@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: expressions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +18,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aeb18618563eb24e9e44d2f92ec13e7eb1a12db2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 127f311e284cec40bf1fda3e38398a1959e0226b
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411770"
 ---
 # <a name="-add-ssis"></a>+ (加) (SSIS)
   加入兩個數值運算式。  
@@ -42,7 +41,7 @@ numeric_expression1 + numeric_expression2
  任何有效的數值資料類型運算式。  
   
 ## <a name="result-types"></a>結果類型  
- 由兩個引數的資料類型決定。 如需相關資訊，請參閱 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)。  
+ 由兩個引數的資料類型決定。 如需詳細資訊，請參閱 [Integration Services 資料類型](../../integration-services/data-flow/integration-services-data-types.md)。  
   
 ## <a name="remarks"></a>Remarks  
  如果任一個運算元為 Null，則結果為 Null。  

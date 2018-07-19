@@ -1,5 +1,5 @@
 ---
-title: sp_addrolemember (TRANSACT-SQL) |Microsoft 文件
+title: sp_addrolemember (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 147547c7392acaf528b7aef98c88affb8487fe99
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032336"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   在目前資料庫的資料庫角色中，加入資料庫使用者、資料庫角色、Windows 登入或 Windows 群組。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md)改。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,10 +57,10 @@ sp_addrolemember 'role', 'security_account'
   
 ## <a name="arguments"></a>引數  
  [ @rolename=] '*角色*'  
- 這是目前資料庫中的資料庫角色名稱。 *角色*是**sysname**，沒有預設值。  
+ 這是目前資料庫中的資料庫角色名稱。 *角色*已**sysname**，沒有預設值。  
   
  [ @membername=] '*security_account*'  
- 這是加入角色的安全性帳戶。 *security_account*是**sysname**，沒有預設值。 *security_account*可以是資料庫使用者、 資料庫角色、 Windows 登入或 Windows 群組。  
+ 這是加入角色的安全性帳戶。 *security_account*已**sysname**，沒有預設值。 *security_account*可以是資料庫使用者、 資料庫角色、 Windows 登入或 Windows 群組。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -71,7 +72,7 @@ sp_addrolemember 'role', 'security_account'
   
  sp_addrolemember 不能將固定的資料庫角色、 固定的伺服器角色或 dbo 加入角色。 sp_addrolemember 無法在使用者自訂交易內執行。  
   
- 您只能使用 sp_addrolemember 將成員加入資料庫角色中。 若要新增至伺服器角色的成員，使用[sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
+ 您只能使用 sp_addrolemember 將成員加入資料庫角色中。 若要新增至伺服器角色的成員，請使用[sp_addsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)。  
   
 ## <a name="permissions"></a>Permissions  
  將成員加入彈性資料庫角色中需要下列其中一項：  
@@ -87,7 +88,7 @@ sp_addrolemember 'role', 'security_account'
 ## <a name="examples"></a>範例  
   
 ### <a name="a-adding-a-windows-login"></a>A. 加入 Windows 登入  
- 下列範例會將 Windows 登入`Contoso\Mary5`至`AdventureWorks2012`資料庫使用者身分`Mary5`。 然後會將 `Mary5` 使用者加入到 `Production` 角色。  
+ 下列範例會將 Windows 登入`Contoso\Mary5`要`AdventureWorks2012`資料庫使用者作為`Mary5`。 然後會將 `Mary5` 使用者加入到 `Production` 角色。  
   
 > [!NOTE]  
 >  由於 `Contoso\Mary5` 也稱為 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的資料庫使用者 `Mary5`，因此必須指定 `Mary5` 使用者名稱。 除非 `Contoso\Mary5` 登入存在，否則此陳述式會失敗。 請從您的網域使用登入來測試。  
@@ -109,10 +110,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. 加入 Windows 登入  
- 下列範例會將登入`LoginMary`至`AdventureWorks2008R2`資料庫使用者身分`UserMary`。 然後會將 `UserMary` 使用者加入到 `Production` 角色。  
+ 下列範例會將登入`LoginMary`要`AdventureWorks2008R2`資料庫使用者作為`UserMary`。 然後會將 `UserMary` 使用者加入到 `Production` 角色。  
   
 > [!NOTE]  
->  因為登入`LoginMary`又稱為資料庫使用者`UserMary`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫、 使用者名稱`UserMary`必須指定。 除非 `Mary5` 登入存在，否則此陳述式會失敗。 登入和使用者通常會有相同的名稱。 這個範例會使用不同的名稱來區分影響與使用者登入的動作。  
+>  因為登入`LoginMary`又稱為資料庫使用者`UserMary`中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]資料庫，使用者名稱`UserMary`必須指定。 除非 `Mary5` 登入存在，否則此陳述式會失敗。 登入和使用者通常會有相同的名稱。 此範例會使用不同的名稱來區分會影響使用者與登入的動作。  
   
 ```  
 -- Uses AdventureWorks  
@@ -132,7 +133,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
- [sp_droprolemember & #40;TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [資料庫層級角色](../../relational-databases/security/authentication-access/database-level-roles.md)  

@@ -4,25 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: conceptual
+ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 910d7759a7298e7285eb90c6d9e0d165245ec799
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d374f336d2fe70d62bdca2194cfe5ac3250e0d91
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334092"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>課程 1-3 - 加入封裝和其他檔案
 在這項工作中，您會將現有的封裝、支援個別封裝的輔助檔案以及讀我檔案，加入至前一項工作所建立的「部署教學課程」專案中。 例如，您將會加入包含封裝資料的 XML 資料檔，還會加入一個文字檔，以提供有關專案中所有封裝的讀我資訊。  

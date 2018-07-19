@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 950500222d6203389b489660f2feb7ea65423cb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 138ef6e929c3b59fd60c1df11fcd03a43e4b2c68
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331292"
 ---
 # <a name="select-objects-to-transfer"></a>選取要傳送的物件
   使用此對話方塊，即可透過 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 傳輸工作，選取要從 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 執行個體傳輸到其他執行個體的物件。  

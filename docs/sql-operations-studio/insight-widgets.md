@@ -1,4 +1,4 @@
----
+﻿---
 title: 使用 Insight 小工具來監視 SQL Operations Studio （預覽）中的伺服器與資料庫 |Microsoft 文件
 description: 了解 SQL Operations Studio（預覽）中的 Insight 小工具。
 ms.custom: tools|sos
@@ -18,12 +18,13 @@ ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235927"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用 insight 小工具管理資料庫與伺服器
 
 Insight 小工具採用您所用的 Transact-SQL (T-SQL) 查詢，以監控伺服器與資料庫並將它們轉換為可深入解析的視覺圖表。 
 
-Insights 是可以新增至伺服器與資料庫監控儀表板的客製圖表與圖形。一目了然地檢視您的伺服器與資料庫，進而深入了解更多細節，並啟動您自定義的管理操作。
+Insights 是可以新增至伺服器與資料庫監控儀表板的客製圖表與圖形。 一目了然地檢視您的伺服器與資料庫，進而深入了解更多細節，並啟動您自定義的管理操作。 
 
 您可以建立類似下列範例的絕佳伺服器和資料庫管理儀表板：
 

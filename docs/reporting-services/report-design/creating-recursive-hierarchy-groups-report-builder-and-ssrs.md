@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020595"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>建立遞迴階層群組 (報表產生器及 SSRS)
 若要在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 編頁報表中顯示遞迴資料，也就是父子關聯性是以資料集中的欄位來表示的情況，請根據子欄位來設定資料區群組運算式，並根據父欄位來設定 Parent 屬性。  

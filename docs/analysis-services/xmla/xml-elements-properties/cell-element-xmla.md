@@ -13,7 +13,7 @@ ms.openlocfilehash: 38d9954c50f13a78c0c0d13d0d83989a4e31224a
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575090"
 ---
 # <a name="cell-element-xmla"></a>Cell 元素 (XMLA)

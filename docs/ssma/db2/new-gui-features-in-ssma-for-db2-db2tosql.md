@@ -1,8 +1,6 @@
 ---
 title: SSMA for DB2 中的新 GUI 功能 (DB2ToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 951a4d95edd9158b385f819fc4662ea13eeddf63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4f448f67302168a017ed6ef7c354a83f3c79f38
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775064"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 中的新 GUI 功能 (DB2ToSQL)
 本章節描述 SSMA 使用者介面的新功能。  

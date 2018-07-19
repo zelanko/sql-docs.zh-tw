@@ -13,7 +13,7 @@ ms.openlocfilehash: 7bc3cd9330261d0ec4e13a715612d73e6ecb44eb
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574870"
 ---
 # <a name="cancel-element-xmla"></a>Cancel 元素 (XMLA)

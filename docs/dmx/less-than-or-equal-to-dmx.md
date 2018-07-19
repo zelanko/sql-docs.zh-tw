@@ -1,30 +1,20 @@
 ---
-title: '&lt;= （小於或等於） (DMX) |Microsoft 文件'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- <= (less than or equal to operator)
-- less than or equal to operator (<=)
-ms.assetid: 4f7135e8-1e27-4568-a9df-668454b4cdde
-caps.latest.revision: 13
-author: Minewiskan
+title: '&lt;= （小於或等於） (DMX) |Microsoft Docs'
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ce5116339f27157a817a002298684389dde7e9e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 12dc7ca07dba7d36e7f65c9c6097b8b42457d3da
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054006"
 ---
 # <a name="lt-less-than-or-equal-to-dmx"></a>&lt;= （小於或等於） (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

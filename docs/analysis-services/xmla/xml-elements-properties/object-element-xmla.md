@@ -13,7 +13,7 @@ ms.openlocfilehash: f9ef2f645895e567d69d06e4e1383e0c477b6ed1
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34575910"
 ---
 # <a name="object-element-xmla"></a>Object 元素 (XMLA)

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539588"
 ---
 # <a name="analytics-platform-system-high-availability"></a>分析平台系統的高可用性
 了解如何 Analytics Platform System (APS) 的高可用性架構。  

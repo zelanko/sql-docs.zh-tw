@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915003"
 ---
 # <a name="step-6-disconnect-from-the-data-source"></a>步驟 6： 中斷與資料來源
 最後一個步驟是中斷連接資料來源，在下圖所示。 首先，應用程式會釋放任何陳述式控制代碼藉由呼叫**SQLFreeHandle**。 如需詳細資訊，請參閱[釋放陳述式控制代碼](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)。  

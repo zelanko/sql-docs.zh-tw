@@ -19,13 +19,14 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32832613"
 ---
 # <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密連接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   本主題的範例描述如何在 Java 應用程式中使用連接字串屬性，好讓應用程式使用安全通訊端層 (SSL) 加密。 如需有關這些新的連接字串屬性例如**加密**， **trustServerCertificate**， **trustStore**， **trustStorePassword**，和**hostNameInCertificate**，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 當**加密**屬性設定為**true**和**trustServerCertificate**屬性設定為**，則為 true**、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]將不會驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSL 憑證。 這是在測試環境中，例如位置允許連線通常需要進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]執行個體有只有自我簽署的憑證。  
+ 當**加密**屬性設定為**true**和**trustServerCertificate**屬性設定為 **，則為 true**、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]將不會驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSL 憑證。 這是在測試環境中，例如位置允許連線通常需要進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]執行個體有只有自我簽署的憑證。  
   
  下列程式碼範例示範如何設定**trustServerCertificate**連接字串中的屬性：  
   

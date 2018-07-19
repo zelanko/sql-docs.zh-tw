@@ -1,26 +1,26 @@
 ---
-title: SQL Server 共用管理物件 (SMO) 的授權合約 |Microsoft 文件
+title: SQL Server 共用管理物件 (SMO)-授權條款 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology: ssms
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd92f1a4d3dd24e4eab1c4f886b28dad158d9fd1
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040426"
 ---
-# <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共用管理物件 (SMO) 的授權條款
+# <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共用管理物件 (SMO) 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="microsoft-software-license-terms"></a>MICROSOFT 軟體授權條款
@@ -42,7 +42,7 @@ ms.lasthandoff: 05/17/2018
 
 **1.安裝與使用權利。**
 
-&nbsp;&nbsp;您可能會安裝並在您的裝置上使用任何數量之軟體拷貝，以設計、 開發和測試您的程式。
+&nbsp;&nbsp;您可能會安裝並在您裝置上使用任何數目之軟體拷貝，以設計、 開發和測試您的程式。
 
 **2.  其他授權要件及/或使用權利。**
 
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/17/2018
 
 &nbsp;&nbsp;&nbsp;&nbsp;**ii. 散布要件。針對　貴用戶散布的任何「可散布程式碼」，　貴用戶必須**
 * 在　貴用戶的程式中加入重要的主要功能；
-* 具有副檔名為.dll 任何可散布程式碼，將發佈的連結器的程式中; 透過執行這類可散布程式碼的結果
+* 針對任何可散發程式碼的.dll 檔案的副檔名，將只能透過您的程式; 之連結器執行這類可散發程式碼的結果
 * 要求散布者及外部終端使用者同意保護可散布程式碼的程度不得低於本合約之相關條款； 
 * 在程式中顯示有效的著作權標示；以及
 * 若因散布或使用 貴用戶之程式而使 Microsoft 遭他人提出索賠時， 貴用戶應賠償 Microsoft 之損失 (包括律師費)，使之免遭損害，並出面代為辯護。

@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909563"
 ---
 # <a name="interval-data-types"></a>Interval 資料類型
 間隔會定義為兩個日期和時間之間的差異。 間隔被以兩種不同方式的其中一個。 其中一個是*年-月*表示根據年份和月份的整數間隔的間隔。 另一個則*天時間*表達方面天、 分和秒的時間間隔的間隔。 這兩種類型的間隔相異，且不能混用，因為月份中可以擁有不同數字的天數。  

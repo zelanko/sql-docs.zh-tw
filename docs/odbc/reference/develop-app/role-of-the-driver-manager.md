@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913193"
 ---
 # <a name="role-of-the-driver-manager"></a>驅動程式管理員的角色
 驅動程式管理員會決定最終的順序，以傳回它產生的狀態記錄。 特別是，它會判斷哪一筆記錄具有最高的等級，且會傳回第一次。 驅動程式會負責排序它所產生的狀態記錄。 狀態記錄所公佈的驅動程式管理員和驅動程式，驅動程式管理員會負責排序它們。 如需詳細資訊，請參閱[狀態記錄順序](../../../odbc/reference/develop-app/sequence-of-status-records.md)。  

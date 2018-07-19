@@ -1,5 +1,5 @@
 ---
-title: 設定 Power View 報表的報表屬性 |Microsoft 文件
+title: 設定 Power View 報表的報表屬性 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,24 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27698f0431a11b73c1ebacd532769269458f1225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38033427"
 ---
-# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>補充課程-設定 Power View 報表的報表屬性
+# <a name="supplemental-lesson---configure-reporting-properties-for-power-view-reports"></a>補充課程-Power View 報表的設定報表屬性
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
-在這個補充課程中，您將設定報告 AW Internet Sales 專案的屬性。 報表屬性讓使用者能夠更輕鬆地在 Power View 中選取及顯示模型資料。 您也會設定屬性來隱藏某些資料行和資料表，並建立新的資料供圖表使用。   
+在此補充課程中，您將設定報告 AW 網際網路銷售專案的屬性。 報表屬性讓使用者能夠更輕鬆地在 Power View 中選取及顯示模型資料。 您也會設定屬性來隱藏某些資料行和資料表，並建立新的資料供圖表使用。   
   
 完成本課程的估計時間： **30 分鐘**  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>先決條件  
 這個補充課程是表格式模型教學課程的一部分，必須依序完成。 在執行本補充課程中的工作之前，您應已完成之前所有課程。  
 為了完成這個特殊補充課程，您也必須具備以下條件：  
   
--   （在本教學課程已完成） AW Internet Sales 專案準備好要部署或是已經部署到 Analysis Services 伺服器。  
+-   （已完成本教學課程） AW 網際網路銷售專案準備好要部署或已部署到 Analysis Services 伺服器。  
   
   
 ## <a name="model-properties-that-affect-reporting"></a>影響報表的模型屬性  
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/10/2018
     |Year Month|=[Calendar Year] & FORMAT([Month],"#00")|  
   
 ## <a name="default-field-set"></a>預設欄位集  
-預設欄位集是預先定義的資料行和資料表的資料表上按一下報表欄位清單中時會自動加入至報表畫布的量值清單。 基本上來說，當此資料表在 Power View 報表中視覺化時，您可以指定使用者想要看到的預設資料行、量值和欄位順序。  在 Internet Sales 模型中，您將會針對 Customer、Geography 和 Product 資料表定義預設欄位集和順序。 只包含使用者在使用 Power View 報表分析 Adventure Works Internet Sales 資料時，想要看到的最常見資料行。  
+預設欄位集是預先定義的資料行和資料表會自動加入報表畫布時在報表欄位清單中按一下資料表的量值清單。 基本上來說，當此資料表在 Power View 報表中視覺化時，您可以指定使用者想要看到的預設資料行、量值和欄位順序。  在 Internet Sales 模型中，您將會針對 Customer、Geography 和 Product 資料表定義預設欄位集和順序。 只包含使用者在使用 Power View 報表分析 Adventure Works Internet Sales 資料時，想要看到的最常見資料行。  
   
 如需預設欄位集的詳細資訊，請參閱[設定預設欄位集 Power View 報表的](../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)SQL Server 線上叢書 》 中。  
   
@@ -146,19 +147,19 @@ ms.lasthandoff: 05/10/2018
   
     **客戶**  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|值|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Birth Date|資料格式|簡短日期|  
   
-    **日期**  
+    **Date**  
   
     > [!NOTE]  
-    > 因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需有關指定日期資料表的詳細資訊，請參閱[指定標記為日期資料表的使用時間智慧使用](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server 線上叢書 》 中。  
+    > 因為在第 7 課：＜標記為日期資料表＞中 [Date] 資料表已使用 [標記為日期資料表] 設定選取為模型日期資料表，而且 [Date] 資料表中的 [Date] 資料行會當做唯一識別碼的資料行使用，所以 [Date] 資料行的 [資料列識別碼] 屬性將會自動設定為 True 而且無法變更。 當您在 DAX 公式中使用時間智慧函數時，您必須指定日期資料表。 在此模型中，您已使用時間智慧函數建立許多量值，以計算各個不同期間的銷售資料 (例如上一季和當季) 並用於 KPI 中。 如需指定日期資料表的詳細資訊，請參閱[指定標記為日期資料表用於搭配時間智慧](../analysis-services/tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md)SQL Server 線上叢書 》 中。  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|值|  
     |----------|------------|---------|  
-    |日期|資料格式|簡短日期|  
+    |date|資料格式|簡短日期|  
     |Day Number of Week|Hidden|True|  
     |Day Name|依資料行排序|Day Number of Week|  
     |Day of Week|Hidden|True|  
@@ -173,14 +174,14 @@ ms.lasthandoff: 05/10/2018
   
     **地理位置**  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|值|  
     |----------|------------|---------|  
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
     **產品**  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|值|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Product Alternate Id|預設標籤|True|  
@@ -190,7 +191,7 @@ ms.lasthandoff: 05/10/2018
   
     **Internet Sales**  
   
-    |資料行|屬性|Value|  
+    |「資料行」|屬性|值|  
     |----------|------------|---------|  
     |Product Id|Hidden|True|  
     |Customer Id|Hidden|True|  
@@ -207,7 +208,7 @@ ms.lasthandoff: 05/10/2018
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>若要重新部署 Adventure Works Internet Sales 表格式模型  
   
--   在 SSDT 中，按一下 **建置**功能表，然後再按一下**部署 Adventure Works Internet Sales Model**。  
+-   在 SSDT 中，按一下**建置**功能表，然後再按一下**部署 Adventure Works Internet Sales Model**。  
   
     [部署] 對話方塊隨即出現，並且顯示中繼資料以及模型中每個資料表的部署狀態。  
   

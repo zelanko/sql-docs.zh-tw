@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34020225"
 ---
 # <a name="adomdnet-client-programming"></a>ADOMD.NET 用戶端程式設計
   ADOMD.NET 用戶端元件位**Microsoft.AnalysisServices.AdomdClient**命名空間 （在 microsoft.analysisservices.adomdclient.dll 中)。 這些用戶端元件提供用戶端的功能與中介層應用程式輕鬆地查詢資料和中繼資料的分析資料存放區中，從這類[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]。  

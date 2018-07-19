@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919283"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>刪除擁有使用中租用的備份 Blob 檔案
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,14 +34,14 @@ ms.lasthandoff: 05/03/2018
 ## <a name="manage-orphaned-blobs"></a>管理孤立的 Blob  
  下列步驟將說明如何在備份或還原活動失敗之後進行清除。 您可以使用 PowerShell 指令碼來完成所有步驟。 下一個章節包含範例 PowerShell 指令碼：  
   
-1.  **識別擁有租用的 Blob：**如果您有執行備份程序的指令碼或處理序，就可以在指令碼或處理序內部擷取失敗，並將其用於清除 Blob。  您也可以使用 LeaseStats 和 LeastState 屬性來識別擁租用的 Blob。 識別出 Blob 之後，請在刪除 Blob 之前先驗證備份檔案的有效性。  
+1.  **識別擁有租用的 Blob：** 如果您有執行備份程序的指令碼或處理序，就可以在指令碼或處理序內部擷取失敗，並將其用於清除 Blob。  您也可以使用 LeaseStats 和 LeastState 屬性來識別擁租用的 Blob。 識別出 Blob 之後，請在刪除 Blob 之前先驗證備份檔案的有效性。  
   
-2.  **中斷租用：**授權的要求不必提供租用識別碼就可以中斷租用。 如需詳細資訊，請參閱 [此處](http://go.microsoft.com/fwlink/?LinkID=275664) 。  
+2.  **中斷租用：** 授權的要求不必提供租用識別碼就可以中斷租用。 如需詳細資訊，請參閱 [此處](http://go.microsoft.com/fwlink/?LinkID=275664) 。  
   
     > [!TIP]  
     >  SQL Server 會發出租用識別碼，以便在還原作業期間確立獨佔存取權。 還原租用識別碼為 BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2。  
   
-3.  **刪除 Blob：**若要刪除擁有使用中租用的 Blob，必須先中斷租用。  
+3.  **刪除 Blob：** 若要刪除擁有使用中租用的 Blob，必須先中斷租用。  
   
 ###  <a name="Code_Example"></a> PowerShell 指令碼範例  
   

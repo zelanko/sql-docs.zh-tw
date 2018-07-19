@@ -2,7 +2,6 @@
 title: WillMove 和 MoveComplete 事件 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ab75264b6cbd3fe8e3ef99b5339763ea469a4f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30394da01328ad1f533834081cd33f6620c54dd4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282887"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove 和 MoveComplete 事件 (ADO)
 **WillMove**事件被呼叫之前暫止的作業變更的目前位置[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)。 **MoveComplete**事件中的目前位置之後呼叫**資料錄集**變更。  

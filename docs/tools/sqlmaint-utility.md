@@ -26,9 +26,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077895"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +87,7 @@ number[minutes | hours | days | weeks | months]
  指定傳回 **sqlmaint** 的語法圖。 這個參數必須單獨使用。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 *server_name***\\*** instance_name*，即可連線到該伺服器之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
+ 指定 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的目標執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 的預設執行個體。 指定 *server_name***\\***instance_name*，即可連線到該伺服器之 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的具名執行個體。 如果未指定伺服器， **sqlmaint** 會連接到本機電腦中 [!INCLUDE[ssDE](../includes/ssde-md.md)] 的預設執行個體。  
   
  **-U** *login_ID*  
  指定連接伺服器時所用的登入識別碼。 如果未提供， **sqlmaint** 會嘗試使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 驗證。 如果 *login_ID* 包含特殊字元，則必須以雙引號 (") 括住；否則可省略雙引號。  

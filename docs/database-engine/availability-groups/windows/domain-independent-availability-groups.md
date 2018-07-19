@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
 caps.latest.revision: ''
-author: allanhirt
+author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa797a16af678c09f487c1684915ce0e9c7cd08c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ffd51f770d9f834ac89fc29cf4f7110e23638bf8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769454"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297394"
 ---
 # <a name="domain-independent-availability-groups"></a>網域獨立的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

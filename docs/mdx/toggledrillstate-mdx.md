@@ -1,6 +1,6 @@
 ---
 title: ToggleDrillState (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bcd09f9c7ea8be177112e2a70ef04380ebc00146
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a2ed3251b5bf8bc17e832f87947cfc41231d35c0
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582380"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743427"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   切換成員的鑽研模式 (向下鑽研及向上鑽研模式)。  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7a33e3b2a6963ffeb84d0cda842e3ad784fd416e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f16887f4ed7c5df24f331fbec71d978da1c2647c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35403870"
 ---
 # <a name="business-rules-master-data-services"></a>商務規則 (Master Data Services)
 

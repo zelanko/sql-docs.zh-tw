@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913513"
 ---
 # <a name="parameter-binding-offsets"></a>參數繫結位移
 應用程式可以指定位移，加入繫結參數緩衝區位址和對應的長度/指標緩衝區位址時**SQLExecDirect**或**SQLExecute**呼叫。 這些加入作業的結果判斷這些作業中使用的位址。  

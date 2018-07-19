@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917903"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 函式
 **一致性**  

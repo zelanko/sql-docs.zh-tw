@@ -2,7 +2,6 @@
 title: ConnectPromptEnum |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,18 +19,19 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b8f01de20cabf1ec5d7cefdb645fb1fc08b69d31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62b1bb38789dcfb2fd15b80501315d9c1be38a66
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277237"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 指定是否應該顯示的對話方塊開啟資料來源的連接時，遺漏的參數提示。  
   
-|常數|Value|Description|  
+|常數|ReplTest1|描述|  
 |--------------|-----------|-----------------|  
-|**adPromptAlways**|1|永遠會提示。|  
+|**adPromptAlways**|@shouldalert|永遠會提示。|  
 |**adPromptComplete**|2|如果您需要更多的資訊，會提示。|  
 |**adPromptCompleteRequired**|3|如果您需要更多的資訊，但不是允許有選擇性參數，則會提示。|  
 |**adPromptNever**|4|永遠不會提示。|  

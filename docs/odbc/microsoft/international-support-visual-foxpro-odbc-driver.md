@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899913"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>多語系支援 （Visual FoxPro ODBC 驅動程式）
 Microsoft Visual FoxPro ODBC 驅動程式支援：  

@@ -13,7 +13,7 @@ ms.openlocfilehash: e86dc93e6d7c2c4f8844f31d633fd95fdfa91463
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574344"
 ---
 # <a name="cellordinal-element-xmla"></a>CellOrdinal 元素 (XMLA)

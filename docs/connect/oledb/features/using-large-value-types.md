@@ -2,7 +2,7 @@
 title: 使用大型值型別 |Microsoft 文件
 description: 大型值型別使用的 SQL Server 的 OLE DB 驅動程式
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -20,14 +20,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6c610ff761a2b1af3ee4f0feda402346efc1dcd6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e41b35c8ea552708aa53f3cb8810bbaae06ca680
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612093"
 ---
 # <a name="using-large-value-types"></a>使用大數值類型
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，使用大數值資料類型時需要進行特殊處理。 大數值資料類型會是最大資料列大小超過 8 KB 的型別。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入**max**規範**varchar**， **nvarchar**，和**varbinary**資料類型，以允許的值儲存大可達 2 ^31-1個位元組。 資料表資料行和[!INCLUDE[tsql](../../../includes/tsql-md.md)]變數可以指定**varchar （max)**， **nvarchar （max)**，或**varbinary （max)** 資料型別。  
   

@@ -1,14 +1,11 @@
 ---
-title: CLR 整合安全性 |Microsoft 文件
+title: CLR 整合安全性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
 - security [CLR integration]
@@ -20,11 +17,12 @@ caps.latest.revision: 55
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a7df2bb8e3620b374fa534326b9195b7b2887f91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cef01a53327a0487119dd8c450da26f9fd0111c
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37352120"
 ---
 # <a name="clr-integration-security"></a>CLR 整合安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +54,7 @@ ms.lasthandoff: 05/03/2018
  [模擬和 CLR 整合安全性](http://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  討論 Managed 程式碼如何使用模擬來存取外部資源。  
   
- [允許部分信任呼叫端](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [允許部分信任的呼叫端](http://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  討論 Managed 方法叫用其他組件所包含之類別中的方法時所引發的問題。  
   
  [應用程式定義域和 CLR 整合安全性](http://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  

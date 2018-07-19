@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903313"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Microsoft ODBC 桌面資料庫驅動程式
 ODBC 是應用程式開發介面使用結構化查詢語言 (SQL) 資料庫存取語言。 您可以存取各種資料庫管理系統 (Dbms) 具有相同 ODBC 來源的程式碼直接併入應用程式的原始程式碼。 Microsoft ODBC 桌面資料庫驅動程式，可以開啟，查詢中，並更新透過 ODBC 介面的桌面資料庫啟用 ODBC 的應用程式的使用者。  

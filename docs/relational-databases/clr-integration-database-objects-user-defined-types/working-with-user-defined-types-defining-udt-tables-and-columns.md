@@ -1,13 +1,11 @@
 ---
-title: 定義 UDT 資料表及資料行 |Microsoft 文件
+title: 定義 UDT 資料表及資料行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: clr
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -27,18 +25,19 @@ caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7fb463a9cf7cde943357ae7b1f3da8ed1dbfb253
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0225bb7be9cc100e05f3c5119a0b87db6b2d7be7
+ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37358180"
 ---
-# <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>使用使用者定義型別為定義 UDT 資料表及資料行
+# <a name="working-with-user-defined-types---defining-udt-tables-and-columns"></a>使用使用者定義型別-定義 UDT 資料表及資料行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  一旦包含使用者定義型別 (UDT) 的組件定義已經註冊在[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，才能使用資料行定義中。  
+  一旦包含使用者定義的型別 (UDT) 的組件定義中已註冊[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫，它可以用在資料行定義。  
   
 ## <a name="creating-tables-with-udts"></a>建立具有 UDT 的資料表  
- 在資料表中建立 UDT 資料行沒有特殊的語法。 您可以在資料行定義中使用 UDT 名稱，就像它是其中一個內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型一樣。 下列 CREATE TABLE[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式會建立名為**點**，具有名為資料行**識別碼**其定義為**int**識別資料行，資料表的主索引鍵。 第二個資料行名為**PointValue**，資料類型為**點**。 在此範例中使用的結構描述名稱是**dbo**。 請注意，您必須具有指定結構描述名稱的必要使用權限。 如果省略了結構描述名稱，則會使用資料庫使用者的預設結構描述。  
+ 在資料表中建立 UDT 資料行沒有特殊的語法。 您可以在資料行定義中使用 UDT 名稱，就像它是其中一個內部 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型一樣。 下列 CREATE TABLE[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式會建立一個名為資料表**點**，具有名為資料行**識別碼**其定義為**int**身分識別資料行，資料表的主索引鍵。 第二個資料行稱為**PointValue**，資料類型為**點**。 在此範例中使用的結構描述名稱是**dbo**。 請注意，您必須具有指定結構描述名稱的必要使用權限。 如果省略了結構描述名稱，則會使用資料庫使用者的預設結構描述。  
   
 ```  
 CREATE TABLE dbo.Points   
@@ -52,9 +51,9 @@ CREATE TABLE dbo.Points
   
 -   索引 UDT 運算式。 您可透過 UDT 運算式在保存的計算資料行上建立索引。 UDT 運算式可以是 UDT 的欄位、方法或屬性。 該運算式必須具有決定性，且不能執行資料存取。  
   
- 如需詳細資訊，請參閱[clr 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)和[CREATE INDEX & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-index-transact-sql.md).  
+ 如需詳細資訊，請參閱 < [clr 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)並[CREATE INDEX &#40;-&#41;](../../t-sql/statements/create-index-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 SQL Server 中的 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
+ [在 SQL Server 中使用使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

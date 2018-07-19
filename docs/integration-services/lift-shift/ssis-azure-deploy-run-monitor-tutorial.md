@@ -1,25 +1,26 @@
 ---
 title: 在 Azure 中部署和執行 SSIS 套件 | Microsoft Docs
+description: 了解如何將 SQL Server Integration Services (SSIS) 專案部署至 Azure SQL Database 上的 SSIS 目錄、執行套件
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
-author: douglaslMS
-ms.author: douglasl
+ms.technology: integration-services
+author: swinarko
+ms.author: sawinark
+ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 3bd32f6f60342a0224ebf353de6cda15696d8900
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262492"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>在 Azure 中部署和執行 SSIS 套件
-本教學課程示範如何將 SQL Server Integration Services 專案部署至 Azure SQL Database 上的 SSISDB 目錄資料庫、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>教學課程：在 Azure 中部署和執行 SQL Server Integration Services (SSIS) 套件
+本教學課程示範如何將 SQL Server Integration Services (SSIS) 專案部署至 Azure SQL Database 中的 SSIS 目錄、在 Azure SSIS Integration Runtime 中執行套件，以及監視執行中的套件。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/23/2018
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>若是 Azure SQL Database，請取得連線資訊
 
-若要在 Azure SQL Database 執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
+若要在 Azure SQL Database 上執行套件，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 
 1. 登入 [Azure 入口網站](https://portal.azure.com/)。
 2. 從左側功能表中選取 [SQL 資料庫]，然後選取 [SQL 資料庫] 頁面上的 SSISDB 資料庫。 
@@ -101,7 +102,8 @@ ms.lasthandoff: 05/23/2018
     -   您可以選取 **[上一步]**，或選取左窗格中的任何步驟來變更您的選取項目。
     -   選取 [部署]  開始部署程序。
 
-    > ![注意] 如果您收到**沒有使用中的背景工作代理程式。(.Net SqlClient 資料提供者)** 錯誤訊息，請確認 Azure-SSIS Integration Runtime 正在執行。 如果您在 Azure SSIS IR 處於停止狀態時嘗試部署，就會發生這個錯誤。
+    > [!NOTE]
+    > 如果您收到**沒有使用中的背景工作代理程式。(.Net SqlClient 資料提供者)** 錯誤訊息，請確認 Azure-SSIS Integration Runtime 正在執行。 如果您在 Azure SSIS IR 處於停止狀態時嘗試部署，就會發生這個錯誤。
 
 5.  完成部署程序之後，會開啟 [結果] 頁面。 此頁面會顯示每個動作執行成功或失敗。
     -   如果動作失敗，請選取 [結果] 資料行中的 [失敗] 以顯示錯誤的說明。
@@ -190,9 +192,17 @@ Write-Host "All done."
 
 如需如何監視 SSMS 之執行中套件的詳細資訊，請參閱[監視執行中的套件和其他作業](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations)。
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>監視執行 SSIS 套件活動
+
+如果您正在使用執行 SSIS 套件活動執行套件作為 Azure Data Factory 管線的一部分，您可以監視 Data Factory UI 中的管線執行。 接著，您可以從活動執行的輸出取得 SSISDB 執行識別碼，並使用該識別碼來檢查 SSMS 中更完整的執行記錄和錯誤訊息。
+
+![取得 Data Factory 中的套件執行識別碼](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>監視 Azure SSIS Integration Runtime
 
-若要取得執行套件的 SSIS Integration Services 相關狀態資訊，請使用下列 PowerShell 命令。 請為各個命令提供 Data Factory 名稱、Azure SSIS IR 及資源群組。 如需詳細資訊，請參閱[監視 Azure SSIS 整合執行階段](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
+若要取得執行套件的 SSIS Integration Services 相關狀態資訊，請使用下列 PowerShell 命令。 請為各個命令提供 Data Factory 名稱、Azure SSIS IR 及資源群組。
+
+如需詳細資訊，請參閱[監視 Azure SSIS 整合執行階段](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)。
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>取得 Azure SSIS Integration Runtime 的相關中繼資料
 

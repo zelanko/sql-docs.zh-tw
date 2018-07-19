@@ -2,7 +2,6 @@
 title: ADO 方法 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a774f4be083e87b81f2200305faaa1802c84c52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c07679210b359517815a245069db95eb6e15b84e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275557"
 ---
 # <a name="ado-methods"></a>ADO 方法
 |||  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |[附加](../../../ado/reference/ado-api/append-method-ado.md)|將物件附加至集合。 如果集合是**欄位**，新**欄位**在附加至集合之前，可能會建立物件。|  
 |[AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)|將資料附加至大型文字或二進位資料**欄位**，或**參數**物件。|  
 |[BeginTrans、 CommitTrans 和 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|管理交易中處理**連接**物件，如下所示：<br /><br /> **BeginTrans** — 開始新交易。<br /><br /> **CommitTrans** — 儲存任何變更，並結束目前的交易。 它也可能會啟動新交易。<br /><br /> **RollbackTrans** — 取消任何變更並結束目前的交易。 它也可能會啟動新交易。|  
-|[[取消]](../../../ado/reference/ado-api/cancel-method-ado.md)|取消執行暫止狀態，非同步方法呼叫。|  
+|[取消](../../../ado/reference/ado-api/cancel-method-ado.md)|取消執行暫止狀態，非同步方法呼叫。|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|取消暫止的批次更新。|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|取消目前的或新資料列所做的任何變更**資料錄集**物件，或**欄位**集合**記錄**物件，然後再呼叫**更新**方法。|  
 |[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|移除所有**錯誤**物件從**錯誤**集合。|  
@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 |[put_OLEDBCommand 方法](../../../ado/reference/ado-api/put-oledbcommand-method.md)|這個方法會執行任何作業-它會一律傳回 S_OK。|  
 |[讀取](../../../ado/reference/ado-api/read-method.md)|讀取指定的數目的位元組**資料流**物件。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|從文字中讀取指定的字元數**資料流**物件。|  
-|[重新整理](../../../ado/reference/ado-api/refresh-method-ado.md)|更新的物件集合，以反映，從可用的物件和特定給提供者。|  
+|[[重新整理]](../../../ado/reference/ado-api/refresh-method-ado.md)|更新的物件集合，以反映，從可用的物件和特定給提供者。|  
 |[重新查詢](../../../ado/reference/ado-api/requery-method.md)|更新中的資料**資料錄集**重新執行查詢所依據之物件的物件。|  
 |[重新同步處理](../../../ado/reference/ado-api/resync-method.md)|在目前的資料重新整理**資料錄集**物件，或**欄位**集合**記錄**物件，從基礎資料庫。|  
 |[儲存](../../../ado/reference/ado-api/save-method.md)|將儲存**資料錄集**檔案中或**資料流**物件。|  

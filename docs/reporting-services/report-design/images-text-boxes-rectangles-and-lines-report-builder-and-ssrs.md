@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023435"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>影像、文字方塊、矩形和線條 (報表產生器及 SSRS)
   除了資料表、矩陣和圖表之類的資料區外， [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表也會使用其他的報表項目 (例如影像、文字方塊和矩形) 來加入視覺趣味、反白顯示主要資訊，或提供相關的資訊。 您可以變更報表項目的格式。 例如，您可以加入框線或填補、變更初始的可見性或方向，或指定項目的精確大小及位置。  

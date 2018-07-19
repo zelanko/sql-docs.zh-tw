@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_transactions (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_xtp_transactions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd5be6e6617172755f1ac293d94ddfe406b11a04
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997840"
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/23/2018
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
     
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |xtp_transaction_id|**bigint**|XTP 異動管理員中這項交易的內部識別碼。|  
 |transaction_id|**bigint**|交易識別碼。 在其他交易相關 DMV 中透過交易識別碼聯結，例如 sys.dm_tran_active_transactions。<br /><br /> 0 代表僅限 XTP 交易，例如，原生編譯的預存程序啟動的交易。|  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/23/2018
 |state|**int**|交易的狀態：<br /><br /> 0=ACTIVE<br /><br /> 1=COMMITTED<br /><br /> 2=ABORTED<br /><br /> 3=VALIDATING|  
 |state_desc|**nvarchar**|交易狀態的描述。|  
 |result|**int**|此交易的結果。 以下是可能的值。<br /><br /> 0 - IN PROGRESS<br /><br /> 1 - SUCCESS<br /><br /> 2 - ERROR<br /><br /> 3 - COMMIT DEPENDENCY<br /><br /> 4 - VALIDATION FAILED (RR)<br /><br /> 5 - VALIDATION FAILED (SR)<br /><br /> 6 - ROLLBACK|  
-|result_desc|**nvarchar**|此交易的結果。 以下是可能的值。<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> ERROR<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
+|result_desc|**nvarchar**|此交易的結果。 以下是可能的值。<br /><br /> IN PROGRESS<br /><br /> SUCCESS<br /><br /> error<br /><br /> COMMIT DEPENDENCY<br /><br /> VALIDATION FAILED (RR)<br /><br /> VALIDATION FAILED (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|僅供內部使用|  
 |is_speculative|**bit**|僅供內部使用|  
 |is_prepared|**bit**|僅供內部使用|  

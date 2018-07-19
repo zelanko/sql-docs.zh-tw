@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911793"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>對資料指標和已備妥的陳述式的交易影響
 認可或回復的交易具有下列資料指標和存取計劃作用：  

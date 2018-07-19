@@ -4,20 +4,18 @@ ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f1bd8e0279da97974a4a1b420c7eea592931c6a
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455303"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335862"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>從命令提示字元中使用 ISDeploymentWizard.exe 部署 SSIS 專案
 本快速入門示範如何執行 [Integration Servicess 部署精靈]`ISDeploymentWizard.exe`，從命令提示字元中部署 SSIS 專案。
@@ -40,7 +38,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Linux 上的 SQL Server。 如需在 Linux 上執行套件詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
-## <a name="for-azure-sql-database-get-the-connection-info"></a>若是 Azure SQL Database，請取得連線資訊
+## <a name="for-azure-sql-database-get-the-connection-info"></a>針對 Azure SQL Database，請取得連線資訊
 
 若要將專案部署到 Azure SQL Database，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 

@@ -2,7 +2,6 @@
 title: 註解 HelloData |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e50dae422b42c365d6f72a9ee1b694c4ac9a4cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5156c6faacb9714faa40073d2a0f78102663b4b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271437"
 ---
 # <a name="comments-on-hellodata"></a>HelloData 的註解
 HelloData 應用程式逐步執行一般的 ADO 應用程式的基本作業： 取得、 檢視、 編輯和更新的資料。 當您啟動應用程式時，按一下第一個 按鈕，**取得資料**。 這樣將會執行**GetData**副程式。  

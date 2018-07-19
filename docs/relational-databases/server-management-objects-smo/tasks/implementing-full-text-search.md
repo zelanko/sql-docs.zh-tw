@@ -1,5 +1,5 @@
 ---
-title: 實作全文檢索搜尋 |Microsoft 文件
+title: 實作全文檢索搜尋 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,22 +19,23 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f3ebf00ddb3cecd9413bb2780369b33b720dd43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987300"
 ---
 # <a name="implementing-full-text-search"></a>實作全文檢索搜尋
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  全文檢索搜尋可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的每個執行個體，在 SMO 中是由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService>物件位於**伺服器**物件。 可用於管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文檢索搜尋服務的組態選項。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 物件屬於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件，且為 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 物件的集合 (這些物件表示針對資料庫所定義的全文檢索目錄)。 與一般索引不同的是，您只能為每個資料表定義一個全文檢索索引， 這是由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 物件中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 物件表示。  
+  全文檢索搜尋可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的每個執行個體，在 SMO 中是由 <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A> 物件表示。 <xref:Microsoft.SqlServer.Management.Smo.FullTextService>物件位於**Server**物件。 可用於管理 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 全文檢索搜尋服務的組態選項。 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> 物件屬於 <xref:Microsoft.SqlServer.Management.Smo.Database> 物件，且為 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 物件的集合 (這些物件表示針對資料庫所定義的全文檢索目錄)。 與一般索引不同的是，您只能為每個資料表定義一個全文檢索索引， 這是由 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 物件中的 <xref:Microsoft.SqlServer.Management.Smo.Table> 物件表示。  
   
  若要建立全文檢索搜尋服務，您必須在資料庫上定義全文檢索目錄，並在資料庫的其中一個資料表上定義全文檢索搜尋索引。  
   
  首先，請呼叫 <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog> 建構函式並指定目錄名稱，以在資料庫上建立全文檢索目錄。 接著再呼叫建構函式，並指定要在其上建立全文檢索索引的資料表，以建立全文檢索索引。 接下來可以使用 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> 物件並且提供資料表內資料行的名稱，以加入全文檢索索引的索引資料行。 然後再將 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.CatalogName%2A> 屬性設定為已建立的目錄。 最後呼叫 <xref:Microsoft.SqlServer.Management.Smo.FullTextIndex.Create%2A> 方法，並在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體上建立全文檢索索引。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="creating-a-full-text-search-service-in-visual-basic"></a>在 Visual Basic 中建立全文檢索搜尋服務  
  此程式碼範例會針對 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 範例資料庫中的 `ProductCategory` 資料表建立全文檢索搜尋目錄。 然後在 `ProductCategory` 資料表的 Name 資料行上建立全文檢索搜尋索引。 全文檢索搜尋索引需要資料行上已定義了唯一索引。  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f46806b705a069164d01accf4efd2169563442db
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b97944a4756600d62cc770e337c5477b1ee748e6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307977"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>用於 SQL Server 之 PHP 的 Microsoft 驅動程式
 
@@ -27,14 +27,14 @@ ms.lasthandoff: 05/03/2018
 
 Microsoft Drivers for PHP for SQL Server 讓 PHP 應用程式與 SQL Server 的整合。 驅動程式會允許讀取和寫入 SQL Server 資料從 PHP 指令碼中的 PHP 延伸模組。 驅動程式會提供介面以存取所有版本的 SQL Server 2005 和更新版本 （包括 Express Edition) 和 Azure SQL Database 中的資料。 驅動程式會讓使用 PHP 功能，包括 PHP 資料流，讀取及寫入大型物件。  
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
 * [步驟 1︰設定 PHP 開發的開發環境](step-1-configure-development-environment-for-php-development.md)  
 * [步驟 2： 建立 PHP 開發的資料庫](step-2-create-a-sql-database-for-php-development.md)  
 * [步驟 3︰使用 PHP 連線到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
 * [步驟 4︰使用 PHP 彈性地連線到 SQL](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>文件集  
-* [使用者入門](getting-started-with-the-php-sql-driver.md)
+* [快速入門](getting-started-with-the-php-sql-driver.md)
 * [概觀](overview-of-the-php-sql-driver.md)
 * [程式設計指南](programming-guide-for-php-sql-driver.md) 
 * [安全性考量](security-considerations-for-php-sql-driver.md)

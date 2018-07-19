@@ -2,7 +2,6 @@
 title: 註冊自訂的商務物件 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0102bc6f817c67bc61ef2c4f73d05f1bf86d099
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ac3e25b0770ae2e7617f8cb10ff35496d26a5c0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274257"
 ---
 # <a name="registering-a-custom-business-object"></a>註冊自訂的商務物件
 若要成功地透過 Web 伺服器啟動自訂的商務物件 （.dll 或.exe），商務物件的 ProgID 必須輸入登錄到此程序中所述。 此 RDS 功能會執行可執行檔保障只能用來保護 Web 伺服器的安全性。  

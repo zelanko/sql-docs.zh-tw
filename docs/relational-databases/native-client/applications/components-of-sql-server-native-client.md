@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client 的元件 |Microsoft 文件
+title: SQL Server Native Client 的元件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bd7b13b22fe5857f0832bee6f4c3d70ba27327
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 59a116cf1390786c208ce978348917d366a60d14
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37428457"
 ---
 # <a name="components-of-sql-server-native-client"></a>SQL Server Native Client 的元件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,14 +32,14 @@ ms.lasthandoff: 05/03/2018
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 包含下列元件：  
   
-|元件|Description|  
+|元件|描述|  
 |---------------|-----------------|  
 |sqlncli11.dll|包含所有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 功能的動態連結程式庫 (DLL) 檔案。 這包括 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式。|  
 |sqlnclir11.rll|隨附 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 程式庫的資源檔。|   
-|sqlncli.h|包含使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 所需之所有新定義的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔。 此標頭檔會同時取代 odbcss.h 和 sqloledb.h 標頭檔。<br /><br /> 注意： 您無法參考 sqlncli.h 和 odbcss.h 中相同的程式，但是您只要先定義 sqloledb.h 可以參考 sqlncli.h 和 sqloledb.h 相同程式中。|  
-|sqlncli11.lib|需要直接呼叫的程式庫檔案**bcp**屬於公用程式函式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。<br /><br /> 注意： 如果您在程式碼中參考 sqlncli11.lib 檔，您必須先確認 sqlncli11.dll 檔位於您的系統路徑，以及讓使用者的系統路徑的應用程式使用。|  
+|sqlncli.h|包含使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 所需之所有新定義的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 標頭檔。 此標頭檔會同時取代 odbcss.h 和 sqloledb.h 標頭檔。<br /><br /> 注意： 您無法參考 sqlncli.h 和 odbcss.h 中相同的程式，但您只要先定義 sqloledb.h 可以參考 sqlncli.h 和 sqloledb.h 相同程式中。|  
+|sqlncli11.lib|需要直接呼叫的程式庫檔案**bcp**公用程式函式屬於[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式。<br /><br /> 注意： 如果您在程式碼中參考 sqlncli11.lib 檔，您必須先確認 sqlncli11.dll 檔位於您系統路徑，以及在系統路徑中之使用者的應用程式。|  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 SQL Server Native Client 建立應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [使用 SQL Server Native Client 建置應用程式](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

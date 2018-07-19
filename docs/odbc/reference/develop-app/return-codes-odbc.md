@@ -22,9 +22,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913213"
 ---
 # <a name="return-codes-odbc"></a>ODBC 的傳回碼
-在 ODBC 中的每個函式會傳回程式碼，稱為其*傳回碼，*指出整體成功或失敗函式。 程式邏輯通常會以傳回碼為基礎。  
+在 ODBC 中的每個函式會傳回程式碼，稱為其*傳回碼，* 指出整體成功或失敗函式。 程式邏輯通常會以傳回碼為基礎。  
   
  例如，下列程式碼呼叫**SQLFetch**擷取結果集的資料列。 它會檢查以判斷結果集已到達結尾 (SQL_NO_DATA)，如果傳回任何警告資訊 (SQL_SUCCESS_WITH_INFO)，或發生錯誤 (SQL_ERROR) 函式的傳回碼。  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024515"
 ---
 # <a name="managing-report-parts"></a>管理報表組件
   報表組件可以由多個使用者在分頁報表中重複使用，也可以在多個報表中重複使用。 使用者可以搜尋伺服器上的報表組件，並將其加入至報表中。  使用者也可以收到伺服器上報表組件更新的通知，然後重新發行新版本的報表組件。 這些報表撰寫動作可能會受報表服務安全性權限影響及控制。  本主題會檢閱報表組件位於伺服器上之後的屬性和行為。  

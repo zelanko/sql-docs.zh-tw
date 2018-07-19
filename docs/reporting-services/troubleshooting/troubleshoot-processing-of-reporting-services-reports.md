@@ -15,11 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8e7e4ac8f6bcd7caa3267ee783befd65d0855257
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d24a053e325bda0be8ca5e9f2797922e4d85b2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37299068"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>疑難排解 Reporting Services 報表的處理
 擷取報表資料之後，報表處理器會結合資料與配置資訊。 包含運算式的每一個報表項目屬性，都會在結合資料與配置的內容中進行評估。 您可以使用本主題來協助疑難排解這些問題。   
@@ -54,6 +55,6 @@ ms.lasthandoff: 05/03/2018
   
   
 ## <a name="see-also"></a>另請參閱  
-[錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)
+[錯誤和事件 (Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
 

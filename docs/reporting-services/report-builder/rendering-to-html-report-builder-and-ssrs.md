@@ -15,17 +15,16 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 63f7f18921d856753162a22e8fbf079834105164
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ce0a1a62d294f510a9521ef38d178157244f1de2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703299"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>轉譯為 HTML (報表產生器及 SSRS)
   HTML 轉譯延伸模組會轉譯 HTML 格式的分頁報表。 轉譯延伸模組也可產生完整的 HTML 頁面，或內嵌在其他 HTML 頁面中的 HTML 片段。 所有 HTML 均以 UTF-8 編碼產生。  
-  
- HTML 轉譯延伸模組是在瀏覽器中檢視之報表的預設轉譯延伸模組，包括在 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 入口網站中執行時。  
-  
+
  HTML 轉譯延伸模組是在瀏覽器中檢視之報表的預設轉譯延伸模組，包括在 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 入口網站中執行時。 HTML 轉譯延伸模組可以將 HTML 轉譯成片段，或完整的 HTML 文件。 如果 HTML 是片段，則會移除 HTML 文件的 **HEAD**、 **HTML**和 **BODY** 標記。 系統只會轉譯 **BODY** 標記的內容。 這很適合用於將 HTML 內嵌於其他應用程式所產生的 HTML 中。  
   
  在某些情況下，當報表轉譯為 HTML 時，報表參數可能會被用來發動指令碼資料隱碼攻擊。 如需保護報表安全的詳細資訊，請參閱 [保護報表和資源的安全](../../reporting-services/security/secure-reports-and-resources.md)。  

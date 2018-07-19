@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32851553"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>此驅動程式版本的已知問題
 

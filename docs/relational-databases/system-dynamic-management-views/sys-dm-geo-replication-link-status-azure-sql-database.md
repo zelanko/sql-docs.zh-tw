@@ -25,39 +25,40 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: ac416ef7d48655e25002646b6e364d04982688b2
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046046"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  包含每個複寫連結進行異地複寫合作關係中的主要和次要資料庫之間的資料列。 這包括主要和次要資料庫。 如果在給定主要資料庫有一個以上的連續複寫連結，此資料表會包含一個資料列，每個關聯性。 在所有資料庫，包括邏輯 master 中建立檢視。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
+  包含每個複寫連結中的異地複寫合作關係的主要和次要資料庫之間的資料列。 這包括主要和次要資料庫。 如果給定主要資料庫有一個以上的連續複寫連結，此資料表會包含一個資料列，每個關聯性。 在所有資料庫，包括邏輯主機中建立檢視。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|複寫連結的唯一識別碼。|  
 |partner_server|**sysname**|包含連結的資料庫的邏輯伺服器的名稱。|  
 |partner_database|**sysname**|連結的邏輯伺服器上所連結資料庫的名稱。|  
-|last_replication|**datetimeoffset**|由次要的主要資料庫的最後一個交易的認可時間戳記。 只有在主要資料庫上使用此值。|  
-|replication_lag_sec|**int**|以秒為單位的時間差異 last_replication 值之間的主要資料庫在主要伺服器上的該交易的認可時間戳記。  只有在主要資料庫上使用此值。|  
-|replication_state|**tinyint**|此資料庫，其中的地理複寫的狀態:。<br /><br /> 1 = 植入。 地理複寫目標正在植入，但兩個資料庫都尚未同步處理。 植入完成之前，您無法連接到次要資料庫。 移除次要資料庫從主要會取消植入作業。<br /><br /> 2 = 更新。 次要資料庫處於交易一致的狀態，並正在經常同步處理與主要資料庫。<br /><br /> 4 = 已暫停。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  
+|last_replication|**datetimeoffset**|由次要的主要資料庫時鐘為基礎的最後一個交易的認可時間戳記。 只有在主要資料庫上使用此值。|  
+|replication_lag_sec|**int**|時間之間的時差 last_replication 值與該交易的認可，在主要伺服器上，根據主要資料庫的時鐘的時間戳記。  只有在主要資料庫上使用此值。|  
+|replication_state|**tinyint**|此資料庫，其中的異地複寫的狀態:。<br /><br /> 1 = 植入。 異地複寫目標正在植入，但兩個資料庫都尚未同步處理。 植入完成之前，您無法連接到次要資料庫。 從主要中移除次要資料庫，將會取消植入作業。<br /><br /> 2 = 更新。 次要資料庫處於交易一致的狀態，並且與主要資料庫持續同步處理。<br /><br /> 4 = 已暫停。 這表示沒有作用中的連續複製關聯性。 這個狀態通常表示互連可用的頻寬對於主要資料庫上的交易活動層級而言不足。 不過，連續複製關聯性仍保持不變。|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|角色 (role)|**tinyint**|地理複寫角色，其中一個：<br /><br /> 0 = 主要。 Database_id 指地理複寫合作關係中的主要資料庫。<br /><br /> 1 = 次要資料庫。  Database_id 指地理複寫合作關係中的主要資料庫。|  
+|角色 (role)|**tinyint**|異地複寫角色，其中一個：<br /><br /> 0 = 主要。 Database_id 指的是 「 異地複寫 」 合作關係中的主要資料庫。<br /><br /> 1 = 次要資料庫。  Database_id 指的是 「 異地複寫 」 合作關係中的主要資料庫。|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
-|secondary_allow_connections|**tinyint**|次要類型，其中一個：<br /><br /> 0 = 不直接允許連接次要資料庫與資料庫不是可讀取權限。<br /><br /> 2 = 所有次要 repl; 中的資料庫允許連接 ication 進行唯讀存取。|  
-|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> 全部|  
-|last_commit|**datetimeoffset**|對資料庫認可的最後一個交易的時間。 如果擷取主要資料庫上，它會指出在主要資料庫上的上次認可時間。 如果擷取次要資料庫上，它會指出在次要資料庫上的上次認可時間。 如果擷取次要資料庫上的主要複寫連結已關閉時，它會指出哪個時間點的次要資料庫趕上之後之前。|
+|secondary_allow_connections|**tinyint**|次要類型，其中一個：<br /><br /> 0 = 不直接允許連接次要資料庫，而且資料庫不是可讀取權限。<br /><br /> 2 = all 允許次要的 repl; 中的資料庫連接 ication 進行唯讀存取。|  
+|secondary_allow_connections_desc|**nvarchar(256)**|否<br /><br /> All|  
+|last_commit|**datetimeoffset**|認可至資料庫的最後一個交易的時間。 如果擷取主要資料庫上，它會指出主要資料庫的上次認可時間。 如果擷取次要資料庫上，它會指出在次要資料庫上的最後一個認可時間。 如果擷取次要資料庫上的複寫連結的主要已關閉時，它會指出直到哪個時間點的次要資料庫趕上之後。|
   
 > [!NOTE]  
->  如果終止複寫關聯性中移除次要資料庫 （區段 4.2）、 該資料庫中的資料列**sys.dm_geo_replication_link_status**檢視就會消失。  
+>  如果藉由移除次要資料庫 （一節 4.2），該資料庫中的資料列，就會終止複寫關聯性**sys.dm_geo_replication_link_status**檢視就會消失。  
   
 ## <a name="permissions"></a>Permissions  
  任何具有 view_database_state 權限的帳戶可以查詢**sys.dm_geo_replication_link_status**。  
   
 ## <a name="example"></a>範例  
- 顯示複寫延遲和我的次要資料庫上一次複寫時間。  
+ 顯示複寫落後和我的次要資料庫的上次複寫時間。  
   
 ```  
 SELECT   

@@ -2,7 +2,6 @@
 title: 群組和使用者附加、 ChangePassword 方法範例 （VC + +） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 253662aaa0f429b6f545fe14007f89320cc3b4a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c10ea386293fc3e1150e7e70e83d66502eeb574
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285927"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>群組和使用者附加、 ChangePassword 方法範例 （VC + +）
 這個範例會示範[附加](../../../ado/reference/adox-api/append-method-adox-groups.md)方法[群組](../../../ado/reference/adox-api/groups-collection-adox.md)，並將[附加](../../../ado/reference/adox-api/append-method-adox-users.md)方法[使用者](../../../ado/reference/adox-api/users-collection-adox.md)藉由新增新[群組](../../../ado/reference/adox-api/group-object-adox.md)和新[使用者](../../../ado/reference/adox-api/user-object-adox.md)系統。 新**群組**附加至**群組**的新集合**使用者**。 因此，新**使用者**加入至**群組**。 此外， [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)方法用來指定**使用者**密碼。  

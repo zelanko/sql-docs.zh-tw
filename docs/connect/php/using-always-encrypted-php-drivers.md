@@ -3,7 +3,6 @@ title: 使用 SQL Server 的一律加密的 PHP 驅動程式與 |Microsoft 文�
 ms.date: 01/08/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
@@ -11,11 +10,12 @@ ms.topic: conceptual
 author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
-ms.openlocfilehash: 93b14d81411e3045d9d6f3a67ce03db281f41f68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f5035dc42b130afe7da8c27a1c6036e79e2fa0a
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309907"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>使用 SQL Server 的一律加密與 PHP 驅動程式
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 05/03/2018
 
 [永遠加密] 可讓用戶端應用程式加密敏感性資料，且永遠不會顯示資料或 SQL Server 或 Azure SQL Database 的加密金鑰。 啟用 永遠加密驅動程式，例如 ODBC Driver for SQL Server，以透明的方式來加密和解密用戶端應用程式中的機密資料。 驅動程式會自動判斷哪一個查詢參數對應至敏感性資料庫資料行 (使用 [永遠加密] 保護)，然後加密這些參數值後再將資料傳遞至 SQL Server 或 Azure SQL Database。 同樣地，驅動程式會以清晰簡明的方式，將擷取自查詢結果的加密資料庫資料行資料進行解密。 如需詳細資訊，請參閱 [一律加密 (Database Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)。 SQL Server 的 PHP 驅動程式利用 ODBC Driver for SQL Server，來加密機密資料。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>必要條件
 
  -   在資料庫中設定永遠加密。 這項設定包括佈建永遠加密金鑰，並設定選取的資料庫資料行加密。 如果您的資料庫尚未設定 [永遠加密]，請遵循 [Getting Started with Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted)(永遠加密快速入門) 中的指示操作。 特別是，您的資料庫應該包含資料行主要金鑰 (CMK)、 資料行加密金鑰 (CEK) 和資料表包含一個或多個使用該 CEK 加密的資料行的中繼資料定義。
  -   請確定您的開發電腦上已安裝 ODBC Driver for SQL Server 17 或更高版本。 如需詳細資訊，請參閱[ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)。

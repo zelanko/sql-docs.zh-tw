@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911723"
 ---
 # <a name="c-data-types-in-odbc"></a>在 ODBC C 資料類型
 ODBC 定義應用程式變數和其相對應的類型識別項所使用的 C 資料類型。 會使用這些繫結至結果集資料行和陳述式的參數緩衝區。 例如，假設應用程式想要擷取成字元格式的結果集資料行的資料。 它會宣告一個變數以 SQLCHAR * 資料類型，並將此變數繫結至類型識別碼為 SQL_C_CHAR 的結果集資料行。 C 資料類型和類型識別碼的完整清單，請參閱[附錄 d： 資料型別](../../../odbc/reference/appendixes/appendix-d-data-types.md)。  

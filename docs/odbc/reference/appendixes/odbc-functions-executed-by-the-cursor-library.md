@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907753"
 ---
 # <a name="odbc-functions-executed-by-the-cursor-library"></a>資料指標程式庫所執行的 ODBC 函數
 > [!IMPORTANT]  

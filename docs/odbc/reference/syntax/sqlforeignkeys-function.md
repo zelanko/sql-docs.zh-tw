@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32923403"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 函數
 **一致性**  
@@ -160,7 +161,7 @@ SQLRETURN SQLForeignKeys(
   
  VARCHAR 資料行的長度不會顯示資料表。實際長度取決於資料來源。 若要判斷 PKTABLE_CAT 或 FKTABLE_CAT、 PKTABLE_SCHEM 或 FKTABLE_SCHEM 的實際長度，b l e _ 或 FKTABLE_NAME 和 PKCOLUMN_NAME 或 FKCOLUMN_NAME 資料行，應用程式可以呼叫**SQLGetInfo** SQL_MAX_ 與CATALOG_NAME_LEN、 SQL_MAX_SCHEMA_NAME_LEN、 SQL_MAX_TABLE_NAME_LEN 和 SQL_MAX_COLUMN_NAME_LEN 選項。  
   
- 下列資料行已重新命名為 ODBC 3*。 x。* 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
+ 下列資料行已重新命名為 ODBC 3 *。 x。* 因為應用程式繫結的資料行編號的資料行名稱變更不會影響回溯相容性。  
   
 |ODBC 2.0 資料行|ODBC 3 *.x*資料行|  
 |---------------------|-----------------------|  

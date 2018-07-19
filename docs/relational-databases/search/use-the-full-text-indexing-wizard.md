@@ -34,6 +34,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33182084"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
 4. **斷詞工具的語言。** 從下拉式清單中選取語言。 將使用這個選項來識別索引的正確斷詞工具。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用斷詞工具來識別全文檢索索引資料中的字詞界限。  
   
 5.  **類型資料行。** 選取資料行的名稱，其中包含要建立全文檢索索引之資料行的文件類型。  
-> **注意：**只有在 [可用的資料行] 資料行中命名的資料行類型為 **varbinary(max)** 或 **image** 時，才會啟用 [類型資料行]。  
+> **注意：** 只有在 [可用的資料行] 資料行中命名的資料行類型為 **varbinary(max)** 或 **image** 時，才會啟用 [類型資料行]。  
   
 6. **統計語意。** 選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱[語意搜尋 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)。  
   

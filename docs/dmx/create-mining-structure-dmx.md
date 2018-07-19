@@ -1,34 +1,20 @@
 ---
 title: 建立採礦結構 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_MINING_STRUCTURE
-- CREATE MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- CREATE MINING STRUCTURE statement
-- mining structures [DMX], creating
-- RELATED TO column
-ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be83f470de9f72c74d5dc00403684a9ca6aa66f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842751"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -110,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  如需可用於定義結構資料行之資料類型、內容類型、資料行散發，以及模型旗標的清單，請參閱下列主題：  
   
--   [資料類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [資料型別&#40;資料採礦&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [內容類型 & #40; 資料採礦 & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [內容類型&#40;資料採礦&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [資料行散發&#40;資料採礦&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [模型旗標 & #40; 資料採礦 & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [模型旗標&#40;資料採礦&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  您可以為一個資料行定義多個模型旗標值。 不過，對於一個資料行，您僅能擁有一個內容類型和一個資料類型。  
   
@@ -195,6 +181,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907763"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>資料行大小、 十進位數字，傳送 8 位元長度和顯示大小-ODBC
 資料類型的特性在於其資料行 （或參數） 的大小、 小數位數、 長度和顯示大小。 下列 ODBC 函數會傳回這些屬性中的 SQL 陳述式的參數或 SQL 資料型別上的資料來源。 每個 ODBC 函式會傳回一組不同的這些屬性，如下所示：  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_memory_nodes (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_memory_nodes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -25,26 +25,27 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: bc43a4088f2186b316616578bb71c0f31f32836a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005696"
 ---
 # <a name="sysdmosmemorynodes-transact-sql"></a>sys.dm_os_memory_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部的配置會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員。 追蹤從處理序記憶體計數器之間的差異**sys.dm_os_process_memory**與內部計數器可以指出記憶體內外部元件的使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記憶體空間。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 內部的配置會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員。 追蹤處理序記憶體計數器之間的差異**sys.dm_os_process_memory**內部的計數器可以指出記憶體的使用中的外部元件和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]記憶體空間。  
   
- 每個實體 NUMA 記憶體節點都會建立一些節點。 這些可能與中的 CPU 節點不同**sys.dm_os_nodes**。  
+ 每個實體 NUMA 記憶體節點都會建立一些節點。 這些可能是中的 CPU 節點不同**sys.dm_os_nodes**。  
   
  系統不會追蹤直接透過 Windows 記憶體配置常式完成的配置。 下表將提供僅使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 記憶體管理員介面所完成之記憶體配置的相關資訊。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_memory_nodes**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_memory_nodes**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**memory_node_id**|**smallint**|指定記憶體節點的識別碼。 相關**sys.dm_os_memory_clerks**的**sys.dm_os_memory_clerks**。 不可為 Null。|  
+|**memory_node_id**|**smallint**|指定記憶體節點的識別碼。 與相關**sys.dm_os_memory_clerks&lt**的**sys.dm_os_memory_clerks**。 不可為 Null。|  
 |**virtual_address_space_reserved_kb**|**bigint**|指出未經認可也沒有對應至實體頁面的虛擬位址保留數目 (以 KB 為單位)。 不可為 Null。|  
 |**virtual_address_space_committed_kb**|**bigint**|指定已經認可或對應至實體頁面的虛擬位址數量 (以 KB 為單位)。 不可為 Null。|  
 |**locked_page_allocations_kb**|**bigint**|指定已經由 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定的實體記憶體數量 (以 KB 為單位)。 不可為 Null。|  
@@ -57,13 +58,13 @@ ms.lasthandoff: 05/23/2018
 |**online_scheduler_mask**|**bigint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 僅供內部使用。 不可為 Null。|  
 |**processor_group**|**smallint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 僅供內部使用。 不可為 Null。|  
 |**foreign_committed_kb**|**bigint**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 指定來自其他記憶體節點的認可記憶體數量 (以 KB 為單位)。 不可為 Null。|  
-|**target_kb** |**bigint** |**適用對象**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指定的記憶體節點的記憶體目標 （kb）。 |   
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**target_kb** |**bigint** |**適用對象**：[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指定 [記憶體] 節點的記憶體目標 （kb）。 |   
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
 
 ## <a name="see-also"></a>另請參閱  
   [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  

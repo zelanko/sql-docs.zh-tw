@@ -1,7 +1,7 @@
 ---
 title: 舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/10/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,17 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2817c4ee9726e4b58f38568f94cbfde2e0c45915
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d5736a208d4eb0346c79008fc4e03c6bc26bbb9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773344"
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>舊版的 SQL Server Data Tools (SSDT 和 SSDT-BI)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 SQL Server Data Tools (SSDT) 提供專案範本及設計介面以建置 SQL Server 內容類型，包括關聯式資料庫、Analysis Services 模型、Reporting Services 報表以及整合服務套件。  
-  
-此版本是以 Visual Studio Shell 為基礎，並且與 SQL Server 共同發行。 新版的 SSDT 會整合最新的 SQL Server 功能。 較舊版本包括目前版本中的範本及設計環境。  
   
 SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-sql-server-data-tools-ssdt.md) 設計及部署要在舊版 SQL Server 上執行的資料庫、模型、報表及套件。  
   
@@ -37,23 +36,20 @@ SSDT 可以回溯相容，亦即您可以隨時使用[最新的 SSDT](download-s
 
 我們提供最近幾次下載的相關資訊，以便您在不幸遇到[最新版本](download-sql-server-data-tools-ssdt.md)相關問題時可參考 (雖然這非常不可能發生)。 
 
-|版本| Visual Studio 2017|
+|SSDT 版本| Visual Studio 2017|
 |:---|:---|
+|15.6.0|[SSDT for VS2017 15.6.0](https://go.microsoft.com/fwlink/?LinkId=871368)|
 |15.5.2|[SSDT for VS2017 15.5.2](https://go.microsoft.com/fwlink/?LinkId=866452)|
-|15.5.1|[SSDT for VS2017 15.5.1](https://go.microsoft.com/fwlink/?LinkId=865748)|  
 <br>
 
 
-|版本| Visual Studio 2015|
+|SSDT 版本| Visual Studio 2015|
 |:---|:---|
 |17.3|[適用於 VS2015 17.3 的 SSDT](https://go.microsoft.com/fwlink/?linkid=858660)| 
-|17.2|[適用於 VS2015 17.2 的 SSDT](https://go.microsoft.com/fwlink/?linkid=852922)| 
-|17.1|[SSDT for VS2015 17.1](https://go.microsoft.com/fwlink/?linkid=849393)|
-|17.0|[SSDT for VS2015 17.0](https://go.microsoft.com/fwlink/?linkid=846626)| 
 |16.5|[SSDT for VS2015 16.5](https://go.microsoft.com/fwlink/?LinkID=832313)|  
 <br>
 
-|版本| Visual Studio 2013|
+|SSDT 版本| Visual Studio 2013|
 |:---|:---|
 |16.5|[SSDT for VS2013 16.5](https://go.microsoft.com/fwlink/?LinkID=832308)|  
 <br>

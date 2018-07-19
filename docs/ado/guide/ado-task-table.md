@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aa4791a78f2ec2aa8accb0f85897d24ffe5e5c76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e712ed9938037909f589243bf4d7f7ddd2a638e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270887"
 ---
 # <a name="ado-programming-task-table"></a>ADO 程式設計工作表
 下表列出中所包含的程式設計工作*ADO 程式設計人員指南*並提供每個工作的參考。 這些參考可以是文字內容或程式碼範例，您可以在其中找到 ADO 功能之工作的相關資訊。

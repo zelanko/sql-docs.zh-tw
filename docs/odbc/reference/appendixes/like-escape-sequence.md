@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906503"
 ---
 # <a name="like-escape-sequence"></a>要逸出序列
 ODBC 會逸出序列使用 LIKE 子句。 此逸出序列語法如下所示：  

@@ -1,5 +1,5 @@
 ---
-title: 設定容錯移轉叢集執行個體的 SQL Server 上 Linux (RHEL) |Microsoft 文件
+title: 設定容錯移轉叢集執行個體-SQL Server 上 Linux (RHEL) |Microsoft Docs
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,43 +13,44 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 2550c2d53f50f2c5647ed0ab61d4d73e586495e2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001810"
 ---
-# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體的 SQL Server 上 Linux (RHEL)
+# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>設定容錯移轉叢集執行個體-SQL Server 上 Linux (RHEL)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可用性的伺服器層級的備援性。 在本教學課程中，您可以了解如何在 Linux 上建立 SQL Server 的雙節點容錯移轉叢集執行個體。 您將完成的特定步驟包括：
+SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可用性的伺服器層級備援。 在本教學課程中，您將了解如何在 Linux 上建立 SQL Server 的雙節點容錯移轉叢集執行個體。 您將完成的特定步驟包括：
 
 > [!div class="checklist"]
-> * 安裝及設定 Linux
-> * 安裝及設定 SQL Server
-> * 設定主機檔案。
+> * 安裝和設定 Linux
+> * 安裝和設定 SQL Server
+> * 設定主機檔案
 > * 設定共用存放裝置，並移動資料庫檔案
-> * 安裝和設定每個叢集節點上 Pacemaker
+> * 安裝並在每個叢集節點上設定 Pacemaker
 > * 設定容錯移轉叢集執行個體
 
-本文說明如何建立 SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體 (FCI)。 本文包括指示和範例指令碼 Red Hat Enterprise Linux (RHEL)。 Ubuntu 分佈是 RHEL 類似，因此指令碼範例將通常 Ubuntu 上也能運作。 
+這篇文章說明如何建立 SQL Server 的兩個節點的共用的磁碟容錯移轉叢集執行個體 (FCI)。 本文說明和指令碼範例包含 Red Hat Enterprise Linux (RHEL)。 Ubuntu 散發套件在指令碼範例通常會很類似於 RHEL 也在 Ubuntu 上運作。 
 
-概念性資訊，請參閱[SQL Server 容錯移轉叢集執行個體 (FCI) 在 Linux 上](sql-server-linux-shared-disk-cluster-concepts.md)。
+如需概念性資訊，請參閱 < [SQL Server 容錯移轉叢集執行個體 (FCI) 在 Linux 上](sql-server-linux-shared-disk-cluster-concepts.md)。
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>先決條件
 
-若要完成下列端對端案例中，您需要將兩個節點叢集和儲存體的另一部伺服器部署的兩部電腦。 下列步驟概述這些伺服器設定的方式。
+若要完成下列的端對端案例中，您需要將兩個節點叢集和儲存體的另一部伺服器部署的兩部機器。 下列步驟概述這些伺服器設定的方式。
 
-## <a name="set-up-and-configure-linux"></a>安裝及設定 Linux
+## <a name="set-up-and-configure-linux"></a>安裝和設定 Linux
 
-第一個步驟是設定叢集節點上的作業系統。 在叢集中每個節點，設定 linux 散發套件。 兩個節點上使用相同的通訊群組和版本。 使用一或其他的下列發佈：
+第一個步驟是設定叢集節點上的作業系統。 在叢集中的每個節點上設定 linux 散發套件。 在這兩個節點上使用相同的散發套件和版本。 使用其中一種下列散發套件：
     
-* RHEL HA 附加元件的有效訂用帳戶
+* RHEL 與有效的訂用帳戶，為 HA 附加元件
 
-## <a name="install-and-configure-sql-server"></a>安裝及設定 SQL Server
+## <a name="install-and-configure-sql-server"></a>安裝和設定 SQL Server
 
-1. 安裝和設定兩個節點上的 SQL Server。  如需詳細指示，請參閱[安裝 SQL Server on Linux](sql-server-linux-setup.md)。
-1. 將一個節點指定為主要伺服器與另一個則為次要，基於的組態。 使用下列這些詞彙本指南。  
+1. 安裝和設定兩個節點上的 SQL Server。  如需詳細指示，請參閱 < [Linux 上安裝 SQL Server](sql-server-linux-setup.md)。
+1. 將一個節點指定為主要，另一個則設為次要，基於的組態。 使用下列這些詞彙本指南。  
 1. 在次要節點，停止並停用 SQL Server。
     下列範例會停止，並停用 SQL Server: 
     ```bash
@@ -58,15 +59,15 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
     ```
 
     > [!NOTE] 
-    > 在時間設定，伺服器主要金鑰產生 SQL Server 執行個體，而且位於`var/opt/mssql/secrets/machine-key`。 On Linux，一律以呼叫 mssql 本機帳戶執行 SQL Server。 因為它是本機帳戶，其識別身分不被共用在節點之間。 因此，您要複製的加密金鑰從主要節點，每個次要節點讓每個本機 mssql 帳戶可以存取它來解密 Server 主要金鑰。 
+    > 在設定的時間，伺服器主要金鑰會產生 SQL Server 執行個體，並放在`var/opt/mssql/secrets/machine-key`。 在 Linux 上，一律以呼叫 mssql 的本機帳戶執行 SQL Server。 因為它是本機帳戶時，不會在節點之間共用其身分識別。 因此，您要複製的加密金鑰從主要節點，每個次要節點以便每個本機 mssql 帳戶可以存取它來解密伺服器主要金鑰。 
 
-1.  主要節點上，為 Pacemaker 建立 SQL server 登入並授與登入執行的權限`sp_server_diagnostics`。 Pacemaker 來確認哪一個節點正在執行 SQL Server 使用此帳戶。 
+1.  主要節點上，為 Pacemaker 建立 SQL server 登入，並授與登入執行的權限`sp_server_diagnostics`。 Pacemaker 會使用此帳戶，來確認哪一個節點正在執行 SQL Server。 
 
     ```bash
     sudo systemctl start mssql-server
     ```
    
-   連接到 SQL Server `master` sa 帳戶的資料庫中，執行下列命令：
+   連接到 SQL Server`master`資料庫與 sa 帳戶，然後執行下列命令：
 
    ```sql
    USE [master]
@@ -75,13 +76,13 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   或者，您可以以更細微的層級設定權限。 Pacemaker 登入需要`VIEW SERVER STATE`sp_server_diagnostics，與查詢健全狀況狀態`setupadmin`和`ALTER ANY LINKED SERVER`執行 sp_dropserver 和 sp_addserver 更新 FCI 執行個體名稱的資源名稱。 
+   或者，您可以以更細微的層級設定權限。 Pacemaker 登入需要對於`VIEW SERVER STATE`sp_server_diagnostics，與查詢健全狀況狀態`setupadmin`和`ALTER ANY LINKED SERVER`執行 sp_dropserver 和 sp_addserver 更新 FCI 執行個體名稱的資源名稱。 
 
 1. 主要節點上，停止並停用 SQL Server。 
 
-## <a name="configure-the-hosts-file"></a>設定主機檔案。
+## <a name="configure-the-hosts-file"></a>設定主機檔案
 
-每個叢集節點上，設定主機檔案。 主機檔案必須包含每個叢集節點名稱與 IP 位址。
+每個叢集節點，設定主機檔案。 主機檔案必須包含的每個叢集節點名稱與 IP 位址。
 
 1. 檢查每個節點的 IP 位址。 下列指令碼會顯示目前節點的 IP 位址。 
 
@@ -89,12 +90,12 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
     sudo ip addr show
     ```
 
-1. 每個節點上設定的電腦名稱。 為每個節點指定唯一的名稱是 15 個字元或更少。 將電腦名稱，將它加入至`/etc/hosts`。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
+1. 每個節點上設定的電腦名稱。 為每個節點指定唯一的名稱為 15 個字元或更少。 將電腦名稱，將它加入至`/etc/hosts`。 下列指令碼可讓您使用 `vi` 編輯 `/etc/hosts`。 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   下列範例所示`/etc/hosts`具有名為兩個節點新增`sqlfcivm1`和`sqlfcivm2`。
+   下列範例所示`/etc/hosts`新增名為兩個節點項目`sqlfcivm1`和`sqlfcivm2`。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -103,15 +104,15 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
    10.128.16.77 sqlfcivm2
    ```
 
-## <a name="configure-storage--move-database-files"></a>設定存放裝置 （& s) 移動資料庫檔案  
+## <a name="configure-storage--move-database-files"></a>設定儲存體，並移動資料庫檔案  
 
-您要提供給這兩個節點均可存取的儲存體。 您可以使用 iSCSI、 NFS 或 SMB。 設定存放裝置、 儲存體呈現給叢集節點，並再將資料庫檔案移至新的存放裝置。 下列文件說明的步驟，針對每一個儲存類型：
+您需要提供兩個節點均可存取的儲存體。 您可以使用 iSCSI、 NFS、 或 SMB。 設定儲存體，呈現到叢集節點中，儲存體，然後將資料庫檔案移到新的存放裝置。 下列文章會說明每個儲存體類型的步驟：
 
-- [設定容錯移轉叢集執行個體-iSCSI-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [設定容錯移轉叢集執行個體-NFS-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [設定容錯移轉叢集執行個體-SMB-SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [設定容錯移轉叢集執行個體-iSCSI-Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [設定容錯移轉叢集執行個體-NFS-Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [設定容錯移轉叢集執行個體-SMB-Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>安裝和設定每個叢集節點上 Pacemaker
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>安裝並在每個叢集節點上設定 Pacemaker
 
 1. 在這兩個叢集節點上，建立檔案以儲存 SQL Server 使用者名稱和密碼，以供 Pacemaker 登入使用。 
 
@@ -163,15 +164,15 @@ SQL Server 共用的磁碟的雙節點容錯移轉叢集執行個體提供高可
 
 ## <a name="configure-the-failover-cluster-instance"></a>設定容錯移轉叢集執行個體
 
-FCI 會建立資源群組中。 這是有點更容易，因為資源群組的必要性的條件約束。 不過，將資源新增到資源群組，他們應該啟動的順序。 它們應該開始的順序為： 
+FCI 會建立資源群組中。 這是有點更容易，因為資源群組不需要條件約束。 不過，將資源新增到資源群組，他們應啟動的順序。 它們應該啟動的順序為： 
 
 1. 儲存體資源
 2. 網路資源
 3. 應用程式資源
 
-這個範例會建立群組 NewLinFCIGrp FCI。 資源群組的名稱必須是唯一從 Pacemaker 中建立任何資源。
+此範例會建立 FCI NewLinFCIGrp 群組中。 資源群組的名稱必須是唯一從在 Pacemaker 中建立的任何資源。
 
-1.  建立磁碟資源。 如果不是問題，您會收到任何回應。 若要建立的磁碟資源的方式取決於儲存類型。 以下是每個儲存類型的範例。 使用適用於您叢集的存放裝置的存放裝置類型的範例。
+1.  建立的磁碟資源。 如果不是問題，您會收到任何回應。 若要建立的磁碟資源的方式取決於儲存體類型。 以下是每個儲存體類型的範例。 使用適用於您叢集的儲存體的儲存體類型的範例。
 
     **iSCSI**
 
@@ -183,11 +184,11 @@ FCI 會建立資源群組中。 這是有點更容易，因為資源群組的必
 
     \<VolumeGroupName > 磁碟區群組的名稱  
 
-    \<LogicalVolumeName > 是建立邏輯磁碟區的名稱  
+    \<LogicalVolumeName > 是已建立的邏輯磁碟區的名稱  
 
-    \<FolderToMountiSCSIDIsk > 是要掛接磁碟的資料夾 （如系統資料庫和預設位置，它會是 /var/opt/mssql/data）
+    \<FolderToMountiSCSIDIsk > 是要掛接磁碟的資料夾 （若是系統資料庫和預設位置，它會是 /var/opt/mssql/data）
 
-    \<FileSystemType > 會根據項目格式化的方式，以及支援哪些發佈是 EXT4 或 XFS。 
+    \<FileSystemType > 會根據項目格式化的方式和支援何種分佈是 EXT4 或 XFS。 
 
     **NFS**
 
@@ -200,9 +201,9 @@ FCI 會建立資源群組中。 這是有點更容易，因為資源群組的必
 
     \<IPAddressOfNFSServer > 是您要使用的 NFS 伺服器的 IP 位址
 
-    \<FolderOnNFSServer > NFS 共用的名稱
+    \<FolderOnNFSServer > 是的 NFS 共用名稱
 
-    \<FolderToMountNFSShare > 是要掛接磁碟的資料夾 （如系統資料庫和預設位置，它會是 /var/opt/mssql/data）
+    \<FolderToMountNFSShare > 是要掛接磁碟的資料夾 （若是系統資料庫和預設位置，它會是 /var/opt/mssql/data）
 
     以下顯示一個範例：
 
@@ -220,21 +221,21 @@ FCI 會建立資源群組中。 這是有點更容易，因為資源群組的必
 
     \<共用名稱 > 是共用的名稱
 
-    \<資料夾名稱 > 的最後一個步驟中建立的資料夾名稱
+    \<資料夾名稱 > 是的最後一個步驟中建立的資料夾名稱
     
-    \<使用者名稱 > 是要存取此共用的使用者名稱
+    \<使用者名稱 > 是要存取共用的使用者名稱
 
     \<密碼 > 使用者的密碼
 
-    \<ADDomain > 是 AD DS 網域 （如果使用 Windows Server 為基礎的 SMB 共用時適用）
+    \<ADDomain > （如果使用 Windows Server 為基礎的 SMB 共用時適用） 是 AD DS 網域
 
     \<mssqlUID > 是 mssql 使用者的 UID
 
     \<mssqlGID > 是在 mssql 使用者 GID
 
-    \<RGName > 的資源群組名稱
+    \<RGName > 是的資源群組名稱
  
-2.  建立將由 FCI 的 IP 位址。 如果不是問題，您會收到任何回應。
+2.  建立可供 FCI 的 IP 位址。 如果不是問題，您會收到任何回應。
 
     ```bash
     sudo pcs resource create <IPResourceName> ocf:heartbeat:IPaddr2 ip=<IPAddress> nic=<NetworkCard> cidr_netmask=<NetMask> --group <RGName>
@@ -242,13 +243,13 @@ FCI 會建立資源群組中。 這是有點更容易，因為資源群組的必
 
     \<IPResourceName > 是的 IP 位址相關聯的資源名稱
 
-    \<IPAddress > 是適用於 FCI 的 IP 位址
+    \<IPAddress > 為 FCI 中的 IP 位址
 
     \<NetworkCard > 是子網路 (也就是 eth0) 相關聯的網路卡
 
-    \<網路遮罩 > 是子網路 （也就是 24 小時） 的網路遮罩
+    \<網路遮罩 > 是子網路 (也就是 24) 的網路遮罩
 
-    \<RGName > 的資源群組名稱
+    \<RGName > 是的資源群組名稱
  
 3.  建立 FCI 資源。 如果不是問題，您會收到任何回應。
 
@@ -256,21 +257,21 @@ FCI 會建立資源群組中。 這是有點更容易，因為資源群組的必
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName > 不僅資源的名稱，但是 FCI 與相關聯的易記名稱。 這是什麼使用者和應用程式將用來連接。 
+    \<FCIResourceName > 不僅資源的名稱，而且 FCI 與相關聯的易記名稱。 這是什麼使用者和應用程式將用來連接。 
 
-    \<RGName > 資源群組的名稱。
+    \<RGName > 是資源群組的名稱。
  
 4.  執行命令`sudo pcs resource`。 FCI 應在線上。
  
-5.  連接到使用 SSMS 或 sqlcmd 使用 DNS/資源名稱，在 FCI 的 FCI。
+5.  連接到使用 SSMS 或 sqlcmd 使用 DNS/資源的名稱，在 FCI 的 FCI。
 
 6.  發出陳述式`SELECT @@SERVERNAME`。 它應該會傳回 FCI 的名稱。
 
-7.  發出陳述式`SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`。 它應該會傳回 FCI 執行之節點的名稱。
+7.  發出陳述式`SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`。 它應該會傳回 FCI 所在節點的名稱。
 
-8.  手動容錯 FCI 在節點上。 請參閱底下指示[營運的 Fedramp 容錯移轉叢集執行個體-SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)。
+8.  手動容錯 FCI 在節點上。 請參閱底下指示[操作容錯移轉叢集執行個體-在 Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-operate.md)。
 
-9.  最後，回到原始節點 FCI 會失敗，並移除共置條件約束。
+9.  最後，容錯回復至原始節點 FCI，並移除共置條件約束。
 
 <!---
 |Distribution |Topic 
@@ -280,18 +281,18 @@ FCI 會建立資源群組中。 這是有點更容易，因為資源群組的必
 -->
 ## <a name="summary"></a>摘要
 
-在本教學課程中，當您完成下列工作。
+在本教學課程中，您已完成下列工作的內容。
 
 > [!div class="checklist"]
-> * 安裝及設定 Linux
-> * 安裝及設定 SQL Server
-> * 設定主機檔案。
+> * 安裝和設定 Linux
+> * 安裝和設定 SQL Server
+> * 設定主機檔案
 > * 設定共用存放裝置，並移動資料庫檔案
-> * 安裝和設定每個叢集節點上 Pacemaker
+> * 安裝並在每個叢集節點上設定 Pacemaker
 > * 設定容錯移轉叢集執行個體
 
 ## <a name="next-steps"></a>後續的步驟
 
-- [操作容錯移轉叢集執行個體-SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)
+- [操作容錯移轉叢集執行個體-在 Linux 上的 SQL Server](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->

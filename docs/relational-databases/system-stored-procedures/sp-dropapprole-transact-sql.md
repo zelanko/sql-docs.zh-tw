@@ -1,5 +1,5 @@
 ---
-title: sp_dropapprole (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropapprole (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 56752702ef62ad4afae65bf2a935757e72c189d8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047203"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
   從目前資料庫移除應用程式角色。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[DROP APPLICATION ROLE](../../t-sql/statements/drop-application-role-transact-sql.md)改為。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[DROP APPLICATION ROLE](../../t-sql/statements/drop-application-role-transact-sql.md)改。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +48,7 @@ sp_dropapprole [@rolename = ] 'role'
   
 ## <a name="arguments"></a>引數  
  [  **@rolename =** ] **'***角色***'**  
- 這是要移除的應用程式角色。 *角色*是**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
+ 這是要移除的應用程式角色。 *角色*已**sysname**，沒有預設值。 *角色*必須存在於目前的資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -69,9 +70,9 @@ EXEC sp_dropapprole 'SalesApp';
   
 ## <a name="see-also"></a>另請參閱  
  [安全性預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addapprole &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
+ [sp_addapprole &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
- [sp_changeobjectowner &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
+ [sp_changeobjectowner &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-changeobjectowner-transact-sql.md)   
  [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

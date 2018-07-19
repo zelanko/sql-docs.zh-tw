@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eff340f63fed18cc70fe02a0b36ec6423365e855
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 878ea8dde5e6cbccf4d87e4a3b4b98fbf06f557b
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309507"
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>傳回值  
 具有下列索引鍵的關聯陣列：  
   
-|索引鍵|Description|  
+|索引鍵|描述|  
 |-------|---------------|  
 |CurrentDatabase|目前做為目標的資料庫。|  
 |SQLServerVersion|SQL Server 的版本。|  

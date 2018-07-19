@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,18 +14,19 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 25db1f9d16bf1a6134976639912dcb622ca1b4d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2a5c6e90b1c2cfc3b7b737c68a0750497e5e36c
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307817"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>開始使用 Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本節提供使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]以及將驅動程式載入 PHP 程序空間中的系統需求相關資訊。  
   
-## <a name="getting-started"></a>快速入門  
+## <a name="getting-started"></a>使用者入門  
 * [步驟 1︰設定 PHP 開發的開發環境](../../connect/php/step-1-configure-development-environment-for-php-development.md)  
 * [步驟 2︰建立 PHP 開發的資料庫](../../connect/php/step-2-create-a-sql-database-for-php-development.md)  
 * [步驟 3︰使用 PHP 連接到 SQL 的概念證明](../../connect/php/step-3-proof-of-concept-connecting-to-sql-using-php.md)  

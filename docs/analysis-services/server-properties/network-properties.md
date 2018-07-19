@@ -1,6 +1,6 @@
 ---
-title: 網路內容 |Microsoft 文件
-ms.date: 05/03/2018
+title: 網路內容 |Microsoft Docs
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 40399d8e40a3bf44a914c3f9783885a25db94384
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a7fdeb553473c3a7ef560cce914e0c3e5612f287
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991600"
 ---
 # <a name="network-properties"></a>網路屬性
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 支援下表列出的伺服器屬性。 如需其他伺服器屬性以及如何設定伺服器屬性的詳細資訊，請參閱 [Analysis Services 中的伺服器屬性](../../analysis-services/server-properties/server-properties-in-analysis-services.md)。  
   
  **適用於：** 多維度與表格式伺服器模式  
@@ -29,7 +31,7 @@ ms.lasthandoff: 05/10/2018
  **IPV4Support**  
  此為帶正負號的 32 位元整數屬性，定義 IPv4 通訊協定的支援。 此屬性的值為下表列出的值之一：  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*0*|IPv4 已停用；用戶端無法連接。|  
 |*1*|(預設值) 需要有 IPv4；如果伺服器無法接聽 IPv4 將無法啟動。|  
@@ -38,7 +40,7 @@ ms.lasthandoff: 05/10/2018
  **IPV6Support**  
  此為帶正負號的 32 位元整數屬性，定義 IPv6 通訊協定的支援。 此屬性的值為下表列出的值之一：  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |*0*|IPv6 已停用；用戶端無法連接。|  
 |*1*|(預設值) 需要有 IPv6；如果伺服器無法接聽 IPv6 將無法啟動。|  

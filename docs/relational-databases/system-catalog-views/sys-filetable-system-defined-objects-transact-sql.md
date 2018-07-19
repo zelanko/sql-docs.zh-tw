@@ -1,5 +1,5 @@
 ---
-title: sys.filetable_system_defined_objects (TRANSACT-SQL) |Microsoft 文件
+title: sys.filetable_system_defined_objects & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: a9d4cdb95349c9af9416caca7ca8dcf8893c0b4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970630"
 ---
 # <a name="sysfiletablesystemdefinedobjects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/04/2018
   
  如需有關 FileTable 的詳細資訊，請參閱 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)。  
   
-|資料行|資料類型|Description|  
+|「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**object_id**|**int**|與 FileTable 相關的系統定義物件的物件識別碼。<br /><br /> 參考中的物件**sys.objects**。|  
 |**parent_object_id**|**int**|父 FileTable 的物件識別碼。<br /><br /> 參考中的物件**sys.objects**。|  

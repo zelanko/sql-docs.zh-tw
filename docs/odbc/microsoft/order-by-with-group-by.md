@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898803"
 ---
 # <a name="order-by-with-group-by"></a>ORDER BY 使用 GROUP BY
 ORDER BY 可對任何運算式中 GROUP BY*運算式清單*或任何資料行在結果集。

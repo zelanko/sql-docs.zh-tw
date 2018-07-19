@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f374b1b0c67c151d7ae7d2da7e5dce9a8b09222d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44d58351f0a120268983500166aeafdbfa773ee0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306847"
 ---
 # <a name="converting-data-types"></a>轉換資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[預設 SQL Server 資料類型](../../connect/php/default-sql-server-data-types.md)|提供將資料傳送至伺服器時的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型的相關資訊。|  
 |[預設 PHP 資料類型](../../connect/php/default-php-data-types.md)|提供從伺服器擷取資料時的預設 PHP 資料類型的相關資訊。|  

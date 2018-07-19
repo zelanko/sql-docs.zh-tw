@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019945"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>資料處理延伸模組與 .NET Framework Data Provider (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 資料處理延伸模組是與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起安裝的元件，它的設計目的是要從特定類型的資料來源擷取資料，以及提供額外功能來支援報表設計和報表處理。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 資料提供者是 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 或支援 <xref:System.Data> 介面的協力廠商所提供的元件，讓您可以從特定類型的資料來源擷取和修改資料。  

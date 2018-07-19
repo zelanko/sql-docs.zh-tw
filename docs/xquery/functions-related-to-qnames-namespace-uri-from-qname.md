@@ -1,5 +1,5 @@
 ---
-title: 命名空間 uri-從-QName (XQuery) |Microsoft 文件
+title: 命名空間 uri-從-QName (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,12 +24,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 67475f0f7e10f8d49e4adefab8b44c2d4cefc272
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999800"
 ---
-# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>函式與 QNames 相關的命名空間 uri-從-QName
+# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>與 QNames 命名空間 uri-從-QName 相關的函式
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   傳回字串，代表所指定之 QName 的命名空間 uri *$arg*。 結果是空的序列，如果 *$arg*是空的序列。  
@@ -45,10 +46,10 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
  是傳回其命名空間 URI 的 QName。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. 從 QName 擷取命名空間 URI  
- 如需實用範例，請參閱[本機名稱-從-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md)。  
+ 如需實用範例，請參閱 <<c0> [ 本機-名稱-從-QName &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md)。</c0>  
   
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
@@ -56,6 +57,6 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
 -   **Namespace-uri-from-qname （)** 函式會傳回 xs: string，而不是 xs: anyuri 的執行個體。  
   
 ## <a name="see-also"></a>另請參閱  
- [函式與 QNames 相關的&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
+ [與 QNames 相關的函式&#40;XQuery&#41;](http://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

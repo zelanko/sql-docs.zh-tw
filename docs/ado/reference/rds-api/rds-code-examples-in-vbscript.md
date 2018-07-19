@@ -2,7 +2,6 @@
 title: RDS 的程式碼中 VBScript 範例 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d5cb6a687bec80175c2fa70102cf4f824bfac24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 34b8e900101d958a0ad7cbc94c5caf681bc4dae4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288386"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>RDS VBScript 中的程式碼範例
 > [!IMPORTANT]

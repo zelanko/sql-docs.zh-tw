@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32847113"
 ---
 # <a name="step-2-create-a-sql-database-for-java-development"></a>步驟 2： 建立 SQL database 的 Java 開發
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

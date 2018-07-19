@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914443"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>支援的資料類型 （Visual FoxPro ODBC 驅動程式）
 透過 ODBC API 及 Microsoft 查詢中，會呈現的驅動程式支援的資料類型清單。  

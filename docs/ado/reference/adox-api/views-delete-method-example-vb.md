@@ -2,7 +2,6 @@
 title: 檢視刪除方法的範例 (VB) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2add4b586c94c8eaf56fae7d66de04c9002ccea0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f4fc8e6b20daf215a9ef16bd1bc86dd49946f7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287308"
 ---
 # <a name="views-delete-method-example-vb"></a>檢視刪除方法的範例 (VB)
 下列程式碼示範如何使用[刪除](../../../ado/reference/adox-api/delete-method-adox-collections.md)從類別目錄中刪除檢視的方法。  

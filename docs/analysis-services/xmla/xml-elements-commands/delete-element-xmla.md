@@ -13,7 +13,7 @@ ms.openlocfilehash: 30149ab2eacae34f3f90de68772821e5d2f0232c
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574940"
 ---
 # <a name="delete-element-xmla"></a>Delete 元素 (XMLA)

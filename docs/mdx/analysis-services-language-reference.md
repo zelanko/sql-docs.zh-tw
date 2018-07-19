@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 語言參考 |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 72d048f69e262c746ab82a00ff2fdd2dad0e65d5
-ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.openlocfilehash: 6bee192e46a8e36492363b555d5de5f2626fad99
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34706776"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739377"
 ---
 # <a name="analysis-services-language-reference"></a>Analysis Services 語言參考
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   [Data Analysis Expressions (DAX) 參考](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)  
   

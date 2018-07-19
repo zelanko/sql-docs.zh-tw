@@ -1,23 +1,21 @@
 ---
 title: 使用 .NET 程式碼部署 SSIS 專案 (C#) | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eaac43b601808460fad9714a98bb1f444df67546
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 7e1ef56dc0d535cde833f1267c681f9a33e14c98
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455402"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405500"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>在 .NET 應用程式中使用 C# 程式碼部署 SSIS 專案
 本快速入門示範如何撰寫 C# 程式碼，來連線至資料庫伺服器並部署 SSIS 專案。
@@ -40,7 +38,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Linux 上的 SQL Server。 如需在 Linux 上執行套件詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 
-## <a name="for-azure-sql-database-get-the-connection-info"></a>若是 Azure SQL Database，請取得連線資訊
+## <a name="for-azure-sql-database-get-the-connection-info"></a>針對 Azure SQL Database，請取得連線資訊
 
 若要將專案部署到 Azure SQL Database，請取得連線至 SSIS 目錄資料庫 (SSISDB) 所需的連線資訊。 在下列程序中，您需要完整伺服器名稱和登入資訊。
 

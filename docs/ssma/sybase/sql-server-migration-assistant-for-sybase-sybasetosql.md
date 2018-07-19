@@ -3,8 +3,6 @@ title: Sybase (SybaseToSQL) 的 SQL Server 移轉小幫手 |Microsoft 文件
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 40deaa88c168a20001c7c44b99ad3dac8a44f992
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a16d5bb216a1ce1bc688971068debe3576434e1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779310"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Sybase (SybaseToSQL) 的 SQL Server 移轉小幫手
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 的 Sybase Adaptive Server Enterprise (ASE) 是一個工具，將 ASE 資料庫移轉至[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016年或[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 上 Windows 和 Linux （預覽） 或[!INCLUDE[msCoName](../../includes/msconame_md.md)]Azure SQL DB。 SSMA for Sybase 轉換 ASE 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫物件，會建立這些物件中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 中，然後再移轉資料至 ASE 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL。  
@@ -31,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="contents"></a>目錄  
   
-|章節|Description|  
+|章節|描述|  
 |-----------|---------------|  
 |[SSMA for Sybase 中最新消息&#40;SybaseToSQL&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|列出 SSMA 版本所做的變更。|  
 |[安裝 SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|包含的主題將提供的必要條件和安裝的 SSMA for Sybase 用戶端和必要的元件正在執行的電腦上的指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]執行個體。|  

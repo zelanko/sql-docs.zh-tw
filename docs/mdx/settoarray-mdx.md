@@ -1,6 +1,6 @@
 ---
 title: SetToArray (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2239249c7372c7132861fbcb74dbe5079a4ae4eb
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 0e545cb4b41f1a0d60e471c15753a82079978ee5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34581000"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743307"
 ---
 # <a name="settoarray-mdx"></a>SetToArray (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   將一個 (含) 以上集合轉換成陣列，以便用在使用者自訂的函數中。  
   

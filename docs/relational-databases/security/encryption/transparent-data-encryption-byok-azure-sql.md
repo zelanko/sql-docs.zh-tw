@@ -12,17 +12,17 @@ ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
 ms.custom: ''
-ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5031c7e0b17177bb09ee91845626c9c32bd1bcc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698329"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -140,7 +140,7 @@ ms.lasthandoff: 05/03/2018
 - 選取邏輯伺服器 TDE 窗格，且為每個邏輯 SQL 伺服器：  
    - 選取相同區域中的 AKV 
    - 選取要用作為 TDE 保護裝置的金鑰 – 每部伺服器都會使用 TED 保護裝置的本機複本。 
-   - 在入口網站中執行此作業，將會建立邏輯 SQL 伺服器的 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限 - 請勿刪除此身分識別。  改為在 Azure Key Vault 中移除權限，即可撤銷存取權。 對於邏輯 SQL Server 來說，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限。
+   - 在入口網站中執行此作業，將會建立邏輯 SQL 伺服器的 [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview)，其可用於指派存取金鑰保存庫的邏輯 SQL Server 權限 - 請勿刪除此身分識別。 存取權可藉由移除 Azure Key Vault 中的權限來撤銷，而非邏輯 SQL 伺服器 (用於指派存取金鑰保存庫的邏輯 SQL Server 權限)。
 - 建立主要資料庫。 
 - 請遵循[作用中地理複寫指引](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview)完成該案例，這個步驟將會建立次要資料庫。
 

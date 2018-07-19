@@ -2,7 +2,6 @@
 title: Microsoft 資料成形 OLE DB （ADO 服務提供者） 的服務 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3020789835820519e07ac3e465899c3ac93b0ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b661ac56f26ffa1a467c65f332ec4b506b2e09e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271347"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Microsoft 資料成形服務 OLE DB 概觀
 > [!IMPORTANT]
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="dynamic-properties"></a>動態屬性
  叫用此服務提供者時，已加入下列的動態屬性[屬性](../../../ado/reference/ado-api/properties-collection-ado.md)集合[連接](../../../ado/reference/ado-api/connection-object-ado.md)物件。
 
-|動態屬性名稱|Description|
+|動態屬性名稱|描述|
 |---------------------------|-----------------|
 |**唯一的重繪名稱**|指出是否**資料錄集**具有重複值的物件及其**重繪名稱**不允許屬性。 如果此動態屬性是**True**和新**資料錄集**建立與使用者指定的重繪同名的現有**資料錄集**，然後新**資料錄集**修改物件的重繪名稱成為唯一。 如果這個屬性是**False**和新**資料錄集**建立與使用者指定的重繪同名的現有**資料錄集**，這兩個**資料錄集**物件會具有相同的重繪名稱。 因此，兩者皆非**資料錄集**可重繪，只要存在兩個資料錄集。<br /><br /> 屬性的預設值是**False**。|
 |**資料提供者**|表示將會提供圖形化的資料列的提供者的名稱。 如果提供者不會使用提供的資料列，這個值可以無。|

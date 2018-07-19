@@ -1,30 +1,20 @@
 ---
-title: '* （乘）(DMX) |Microsoft 文件'
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- '* (multiply operator)'
-- multiply operator (*)
-ms.assetid: cfab1581-7818-427b-b8b2-cec0b5e3a0cd
-caps.latest.revision: 12
-author: Minewiskan
+title: '* （乘）(DMX) |Microsoft Docs'
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 4da89434e43eae0c6799ff77a56c94ee9f85f52d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f73e3e55045dd4ea9d4c2476540d2f7223d16eb0
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037346"
 ---
 # <a name="-multiply-dmx"></a>* (乘) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

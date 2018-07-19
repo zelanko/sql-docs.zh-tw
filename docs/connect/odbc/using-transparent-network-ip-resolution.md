@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32852226"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>使用透明網路 IP 解析
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

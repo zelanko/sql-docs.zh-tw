@@ -1,5 +1,5 @@
 ---
-title: 通知事件資料行 |Microsoft 文件
+title: 通知事件資料行 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf7695ec7dbbe7361641fb939718724f611e6c1e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38017761"
 ---
 # <a name="notification-events-data-columns"></a>通知事件資料行
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/10/2018
 |CurrentTime|2|5|包含通知事件的目前時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |StartTime|3|5|包含事件開始的時間 (如果有的話)。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
 |EndTime|4|5|包含事件結束的時間。 此資料行不會因啟動的事件類別 (如 SQL:BatchStarting 或 SP:Starting) 而擴展。 篩選所需的格式為 'YYYY-MM-DD' 與 'YYYY-MM-DD HH:MM:SS'。|  
-|有效期間|5|2|包含事件所花費的時間量 (以毫秒為單位)。|  
+|Duration|5|2|包含事件所花費的時間量 (以毫秒為單位)。|  
 |IntegerData|10|1|包含與通知事件相關聯的整數資料。 當 EventSubclass 資料行為 8 時，其值如下：<br /><br /> 1 = 已建立<br /><br /> 2 = 已刪除<br /><br /> 3 = 已變更物件的屬性<br /><br /> 4 = 已變更物件之子系的屬性<br /><br /> 6 = 已加入子系<br /><br /> 7 = 已刪除子系<br /><br /> 8 = 已完全處理物件<br /><br /> 9 = 已部份處理物件<br /><br /> 10 = 未處理物件<br /><br /> 11 = 完全最佳化物件<br /><br /> 12 = 部分最佳化物件<br /><br /> 13 = 物件未最佳化|  
 |ObjectID|11|8|包含為其發出此通知的物件識別碼；這是一個字串值。|  
 |ObjectType|12|1|包含與通知事件相關聯的物件類型。|  
@@ -74,6 +75,6 @@ ms.lasthandoff: 05/10/2018
 |ServerName|43|8|包含發生通知事件之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的名稱。|  
   
 ## <a name="see-also"></a>另請參閱  
- [通知事件類別目錄](../../analysis-services/trace-events/notification-events-event-category.md)  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

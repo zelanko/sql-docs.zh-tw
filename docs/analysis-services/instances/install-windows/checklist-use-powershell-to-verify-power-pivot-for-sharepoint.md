@@ -1,5 +1,5 @@
 ---
-title: 檢查清單： 使用 PowerShell 驗證 Powerpivot for SharePoint |Microsoft 文件
+title: 檢查清單： 使用 PowerShell 驗證 Power Pivot for SharePoint |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3bf217aee4222aec601c1dde08ffcb2e264eb31f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ce55062f33739f4f27769e4c3851cede820f6423
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985410"
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![powerpivot for sharepoint 一般應用程式集](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 一般應用程式集合中的 powerpivot")|您可以選擇使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板來驗證管理中心的大多數元件。 若要在管理中心開啟儀表板，請按一下 [一般應用程式設定]，然後按一下 [[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]] 中的 [管理儀表板]。 如需儀表板的詳細資訊，請參閱 [Power Pivot 管理儀表板和使用量資料](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
+|![sharepoint 一般應用程式集合中的 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 一般應用程式集合中的 powerpivot")|您可以選擇使用 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板來驗證管理中心的大多數元件。 若要在管理中心開啟儀表板，請按一下 [一般應用程式設定]，然後按一下 [[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]] 中的 [管理儀表板]。 如需儀表板的詳細資訊，請參閱 [Power Pivot 管理儀表板和使用量資料](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)。|  
   
 ##  <a name="bkmk_symptoms"></a> 徵兆和建議的動作  
  下表是徵兆或問題清單以及這個主題的建議章節，您可參考這些章節來幫助您解決問題。  
@@ -56,7 +57,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
 |-------------|-----------------|  
 |資料重新整理並未執行|請參閱 [計時器工作](#bkmk_timer_jobs) 一節，並確認 **線上 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 資料重新整理計時器工作** 在線上。|  
 |管理儀表板資料是舊的|請參閱＜ [計時器工作](#bkmk_timer_jobs) ＞一節，並確認 **管理儀表板處理計時器工作** 在線上。|  
-|管理儀表板的某些部分|如果您將 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安裝到具有管理中心拓撲的伺服陣列中，但沒有 Excel Services 或 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint，如果您想要完整存取 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板中的內建報表，您必須下載及安裝 Microsoft ADOMD.NET 用戶端程式庫。 儀表板中的某些報表會使用 ADOMD.NET 來存取內部資料，這些資料會提供關於在伺服陣列中 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 查詢處理和伺服器健全狀況的報告資料。 請參閱 [ADOMD.Net 用戶端程式庫](#bkmk_adomd) 一節和 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)主題。|  
+|管理儀表板的某些部分|如果您將 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 安裝到具有管理中心拓撲的伺服陣列中，但沒有 Excel Services 或 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint，如果您想要完整存取 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理儀表板中的內建報表，您必須下載及安裝 Microsoft ADOMD.NET 用戶端程式庫。 儀表板中的某些報表會使用 ADOMD.NET 來存取內部資料，這些資料會提供關於在伺服陣列中 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 查詢處理和伺服器健全狀況的報告資料。 請參閱 [ADOMD.Net 用戶端程式庫](#bkmk_adomd) 一節和 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)主題。|  
   
 ##  <a name="bkmk_windows_service"></a> Analysis Services Windows 服務  
  本節的指令碼會在 SharePoint 模式下驗證 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 的執行個體。 確認此服務 **正在執行**。  
@@ -166,7 +167,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![請注意](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")應用程式集區也可以在 [管理中心] 頁面上驗證**管理服務應用程式**。 按一下服務應用程式的名稱，然後按一下功能區中的 **[屬性]** 。  
+ ![附註](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注意")也可以在 [管理中心] 頁面上驗證應用程式集區**管理服務應用程式**。 按一下服務應用程式的名稱，然後按一下功能區中的 **[屬性]** 。  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 與 Excel 服務應用程式 Proxy**  
   
@@ -270,7 +271,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows 和 ULS 記錄  
  **Windows 事件記錄檔**  
   
- 下列命令將會搜尋 Windows 事件記錄檔，以便找出 SharePoint 模式下與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體有關的事件。 如需停用事件或變更事件層級資訊，請參閱[設定及檢視 SharePoint 記錄檔和診斷記錄&#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 下列命令將會搜尋 Windows 事件記錄檔，以便找出 SharePoint 模式下與 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 執行個體有關的事件。 如需停用事件或變更事件層級的詳細資訊，請參閱[設定及檢視 SharePoint 記錄檔和診斷記錄&#40;Power Pivot for SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
  **服務名稱** ：MSOLAP$POWERPIVOT  
   
@@ -349,7 +350,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](http://technet.microsoft.com/library/hh758436.aspx)。  
+ 如需詳細資訊，請參閱 [在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859) 和 [加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者](http://technet.microsoft.com/library/hh758436.aspx)。  
   
 ##  <a name="bkmk_adomd"></a> ADOMD.Net 用戶端程式庫  
   
@@ -366,7 +367,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- 如需詳細資訊，請參閱 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)。  
+ 如需詳細資訊，請參閱 [在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET](http://msdn.microsoft.com/c2372180-e847-4cdb-b267-4befac3faf7e)。  
   
 ##  <a name="bkmk_health_collection"></a> 健全狀況資料收集規則  
  確認 **[狀態]** 為線上，而且 **[已啟用]** 成立。  

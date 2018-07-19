@@ -2,7 +2,6 @@
 title: 在 Visual Basic 中的 ADO 程式碼範例 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44bbaccea787e3afb3a4fbef9f0d6c1d8e110483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ff4fd4a745ce98f0716039cffad448d60be3aa1
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275317"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>在 Visual Basic 中的 ADO 程式碼範例
 若要了解如何使用 ADO 方法、 屬性和事件時寫入在 Visual Basic 中使用下列程式碼範例。  

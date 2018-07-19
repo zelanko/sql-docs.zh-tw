@@ -1,5 +1,5 @@
 ---
-title: 資料採礦概念 |Microsoft 文件
+title: 資料採礦概念 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ae6b7a5014cd9d8c669a75a5ea1a6d86f8d0e225
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 6dc15187198b5355d9e6f5a2171e57d52406e839
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982000"
 ---
 # <a name="data-mining-concepts"></a>資料採礦概念
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +54,7 @@ ms.lasthandoff: 05/10/2018
   
  Microsoft SQL Server 資料採礦提供一個用於建立和使用資料採礦模型的整合式環境。 此環境包含 SQL Server Development Studio 和 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]，前者含有資料採礦演算法和查詢工具，可讓您輕鬆建立各種專案的完整方案，後者含有用於瀏覽模型及管理資料採礦物件的工具。 如需詳細資訊，請參閱[使用 SQL Server 資料工具建立多維度模型 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)。  
   
- 如需如何將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具套用到商務案例的範例，請參閱[資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
+ 如需如何將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具套用到商務案例的範例，請參閱 [資料採礦基本教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。  
   
 ##  <a name="DefiningTheProblem"></a> 定義問題  
  資料採礦程序中的第一個步驟 (在下圖中以反白顯示) 是要明確定義問題，並考慮利用資料以提供問題解答的方式。  
@@ -81,7 +82,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="PreparingData"></a> 準備資料  
  資料採礦程序中的第個二步驟 (在下列圖表中以反白顯示) 是要合併及清理在 [定義問題](#DefiningTheProblem) 步驟中所識別的資料。  
   
- ![資料採礦的第二個步驟： 準備資料](../../analysis-services/data-mining/media/dmprocess-preparing.gif "資料採礦的第二個步驟： 準備資料")  
+ ![資料採礦的第二個步驟︰ 準備資料](../../analysis-services/data-mining/media/dmprocess-preparing.gif "資料採礦的第二個步驟︰ 準備資料")  
   
  資料可能散佈於公司各處並以不同格式儲存，也可能會不一致，例如有不正確或遺漏的項目。 例如，資料可能會顯示某客戶在產品上市之前購買該產品，或該客戶定期購物的商店竟然距離她的家 2,000 英里。  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 05/10/2018
 ##  <a name="ExploringData"></a> 瀏覽資料  
  資料採礦程序中的第三個步驟 (在下列圖表中以反白顯示) 是要瀏覽已經準備好的資料。  
   
- ![資料採礦第三個步驟： 瀏覽資料](../../analysis-services/data-mining/media/dmprocess-exploring.gif "資料採礦第三個步驟： 瀏覽資料")  
+ ![資料採礦的第三個步驟： 探索資料](../../analysis-services/data-mining/media/dmprocess-exploring.gif "資料採礦的第三個步驟： 瀏覽資料")  
   
  當您建立採礦模型時，您必須了解資料才能做出適當的決策。 瀏覽技巧包括計算最小值和最大值、計算平均差和標準差，以及查看資料的散發。 例如，您可以會透過檢閱最大值、最小值和平均值來判定資料無法代表您的客戶或商務流程，因此，您必須取得更對稱的資料，或檢閱您期望基礎的假設。 標準差和其他散發值可以提供結果之穩定性和正確性的實用資訊。 標準差大表示加入更多資料可能有助於改良模型。 與標準散發強烈偏差的資料可能會扭曲，或者可能代表真實問題的正確圖片，但是會變成難以讓模型配合資料。  
   
@@ -119,7 +120,7 @@ ms.lasthandoff: 05/10/2018
   
  您可以建立採礦結構以定義要使用的資料行。 採礦結構會連結至資料的來源，但是在處理資料前，不會真的包含任何資料。 當您處理採礦結構時， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會產生可用於分析的彙總與其他統計資訊。 此資訊可根據結構，透過任何採礦模型使用。 如需採礦結構如何與採礦模型產生關聯的詳細資訊，請參閱[邏輯架構 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)。  
   
- 處理結構和模型之前，資料採礦模型也只是一個容器，可指定用於輸入的資料行、您要預測的屬性，以及告知演算法如何處理資料的參數。 處理模型通常稱為 *「定型」*(Training)。 定型指的是將特定數學演算法套用到結構中的資料以擷取模式的程序。 您在定型程序中找到的模式取決於選取的定型資料、選擇的演算法，以及設定演算法的方式。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]包含許多不同的演算法，每個適合不同類型的工作，以及建立不同類型的模型。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中所提供的演算法清單，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
+ 處理結構和模型之前，資料採礦模型也只是一個容器，可指定用於輸入的資料行、您要預測的屬性，以及告知演算法如何處理資料的參數。 處理模型通常稱為 *「定型」*(Training)。 定型指的是將特定數學演算法套用到結構中的資料以擷取模式的程序。 您在定型程序中找到的模式取決於選取的定型資料、選擇的演算法，以及設定演算法的方式。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 包含許多不同的演算法，每個演算法都適合不同類型的工作，而且每個演算法都會建立不同類型的模型。 如需 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 中所提供的演算法清單，請參閱[資料採礦演算法 &#40;Analysis Services - 資料採礦&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)。  
   
  您也可以使用參數調整每個演算法，而且您可以將篩選套用到定型資料，只使用資料的子集以建立不同的結果。 將資料傳遞到模型之後，採礦模型物件就包含可以進行查詢或用於預測的摘要和模型。  
   
@@ -134,9 +135,9 @@ ms.lasthandoff: 05/10/2018
   
  在您將模型部署到實際執行環境之前，您會想要先測試模型的執行效能。 同時，當您建立模型時，通常會建立包含不同組態的多個模型，然後測試所有模型以查看哪個模型會針對您的問題和資料產生最佳的效果。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]提供工具，協助您將資料分成定型集和測試資料集，您可以正確評估所有模型相同的資料上的效能。 您會使用訓練資料集來建立模型，並建立預測查詢，使用測試資料集來測試模型的精確度。 此資料分割，才可以建立採礦模型時自動。 如需詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 提供的工具可協助您將資料分割為訓練資料集與測試資料集，讓您可以針對相同的資料，正確評估所有模型的效能。 您會使用訓練資料集來建立模型，並建立預測查詢，使用測試資料集來測試模型的精確度。 此資料分割可以在建立採礦模型時自動。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
- 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用資料採礦設計師的檢視器，來瀏覽演算法所探索的趨勢和模式。 如需詳細資訊，請參閱 [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)。 您也可以使用設計師中的工具 (例如增益圖和分類矩陣)，來測試模型建立預測的效能。 若要確認模型是否專屬於您的資料，或者模型是否可用於針對一般母體進行推斷，您可以使用稱為*「交叉驗證」*(Cross-Validation) 的統計技巧，自動建立資料的子集，並對照每個子集測試模型。 如需詳細資訊，請參閱[測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
+ 您可以在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用資料採礦設計師的檢視器，來瀏覽演算法所探索的趨勢和模式。 如需詳細資訊，請參閱 [資料採礦模型檢視器](../../analysis-services/data-mining/data-mining-model-viewers.md)。 您也可以使用設計師中的工具 (例如增益圖和分類矩陣)，來測試模型建立預測的效能。 若要確認模型是否專屬於您的資料，或者模型是否可用於針對一般母體進行推斷，您可以使用稱為 *「交叉驗證」*(Cross-Validation) 的統計技巧，自動建立資料的子集，並對照每個子集測試模型。 如需詳細資訊，請參閱 [測試和驗證 &#40;資料採礦&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)。  
   
  如果您在 [建立模型](#BuildingModels) 步驟中所建立的模型沒有一個有好的執行效能，您可能必須要回到程序的上一個步驟，並重新定義問題或重新調查原始資料集內的資料。  
   
@@ -147,13 +148,13 @@ ms.lasthandoff: 05/10/2018
   
  當採礦模型存在於實際執行環境之後，您可以執行許多工作，視您自己的需要而定。 以下是您可以執行的一些工作：  
   
--   使用模型可建立預測，以供您接著用來制定企業決策。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供 DMX 語言，可用來建立預測查詢; 而預測查詢產生器，可協助您建立查詢。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)。  
+-   使用模型可建立預測，以供您接著用來制定企業決策。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供 DMX 語言，可讓您用來建立預測查詢；而預測查詢產生器則可以協助您建立查詢。 如需詳細資訊，請參閱[資料採礦延伸模組 &#40;DMX&#41; 參考](../../dmx/data-mining-extensions-dmx-reference.md)。  
   
 -   建立內容查詢以便從模型擷取統計資料、規則或公式。 如需詳細資訊，請參閱 [資料採礦查詢](../../analysis-services/data-mining/data-mining-queries.md)。  
   
 -   直接將資料採礦功能內嵌於應用程式中。 您可以包括分析管理物件 (AMO)，其中包含一組物件，可讓應用程式用於建立、改變、處理以及刪除採礦結構和採礦模型。 另外，您可以將 XML for Analysis (XMLA) 訊息直接傳送到 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的執行個體。 如需詳細資訊，請參閱 [開發 (Analysis Services - 資料採礦)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx)。  
   
--   使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來建立封裝，其中會使用採礦模型，有智慧地將內送資料分成多個資料表。 例如，若資料庫因為潛在客戶而不斷更新，您可以同時使用採礦模型與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，將內送資料分成可能購買產品的客戶和可能不購買產品的客戶。 如需詳細資訊，請參閱 [Integration Services 的一般用途](http://msdn.microsoft.com/en-us/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca)。  
+-   使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 來建立封裝，其中會使用採礦模型，有智慧地將內送資料分成多個資料表。 例如，若資料庫因為潛在客戶而不斷更新，您可以同時使用採礦模型與 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ，將內送資料分成可能購買產品的客戶和可能不購買產品的客戶。 如需詳細資訊，請參閱 [Integration Services 的一般用途](http://msdn.microsoft.com/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca)。  
   
 -   建立可讓使用者直接查詢現有之採礦模型的報表。 如需詳細資訊，請參閱 [SQL Server 資料工具中的 Reporting Services &#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)。  
   

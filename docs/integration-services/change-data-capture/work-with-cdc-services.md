@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: change-data-capture
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1a4408461461a10576f1062fea4dfa5c09a66674
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60c16c856f0d5d55add6bedb33707834c244cdbd
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335042"
 ---
 # <a name="work-with-cdc-services"></a>使用 CDC 服務
   您可以使用 CDC 服務組態主控台來建立新的 CDC 服務並為 CDC 準備 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫。  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024375"
 ---
 # <a name="report-builder-functions---countrows-function"></a>報表產生器函式 - CountRows 函式
   傳回指定之範圍中的資料列數目，包括具有 Null 值的資料列。  

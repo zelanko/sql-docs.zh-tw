@@ -2,7 +2,6 @@
 title: LevelName 屬性 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efef084d03cee1787142071a4b2d1242af803170
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0a9b5ce969bb65f04ea8078b1c4f45952c0fdb3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283977"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName 屬性 (ADO MD)
 表示層級名稱[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)。  

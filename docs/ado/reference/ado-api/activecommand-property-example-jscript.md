@@ -2,7 +2,6 @@
 title: ActiveCommand 屬性範例 (JScript) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a45371bc6ab4a03df228632a081f9b3cc791aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4272cda6ce23406661c216944a155b2de6d61349
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275007"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand 屬性範例 (JScript)
 這個範例會示範[ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)屬性。 剪下並貼到 [記事本] 或其他文字編輯器，下列程式碼，然後將它儲存成**ActiveCommandJS.asp**。  

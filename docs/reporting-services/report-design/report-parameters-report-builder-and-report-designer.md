@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028285"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>報表參數 (報表產生器和報表設計師)
   本主題說明 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表參數的一般用法、您可以設定的屬性，以及其他資訊。 報表參數可讓您控制報表資料、將相關的報表連接在一起，以及變更報表呈現方式。 報表參數可以使用於您在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 和報表設計師中建立的分頁報表中，也可以使用於您在 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]中建立的行動報表。 深入了解 [報表參數概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)。  

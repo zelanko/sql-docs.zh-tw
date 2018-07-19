@@ -3,8 +3,6 @@ title: 選取並設定受影響的物件 (SybaseToSQL) |Microsoft 文件
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d3e5c6c428668ee3b705da29883f1f8769064a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eda0bd642fa3b6c3524b785e8509d31908ae2bef
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779235"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>選取並設定受影響的物件 (SybaseToSQL)
 在此頁面中，您可以選取資料表和外部索引鍵，在其中變更應該比較當 SSMA 確認上一個步驟中所選擇的物件執行的結果。 此外，您可以自訂的驗證參數。  
@@ -47,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 -   規則  
   
--   預設值  
+-   預設  
   
 -   識別  
   
@@ -56,7 +55,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sql"></a>Sql  
 SQL 索引標籤包含 「 建立資料表 」 選取的資料表的 SQL。  
   
-## <a name="data"></a>資料  
+## <a name="data"></a>data  
 資料索引標籤會顯示選取的資料表中存在的資料。  
   
 ## <a name="properties"></a>屬性  
@@ -127,5 +126,5 @@ SQL 索引標籤包含 「 建立資料表 」 選取的資料表的 SQL。
   
 ## <a name="see-also"></a>另請參閱  
 [執行測試案例&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[測試移轉的資料庫物件 &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[測試移轉的資料庫物件&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

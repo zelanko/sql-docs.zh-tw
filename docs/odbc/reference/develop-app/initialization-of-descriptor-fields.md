@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910833"
 ---
 # <a name="initialization-of-descriptor-fields"></a>描述項欄位的初始設定
 當應用程式的資料列描述項配置時，其欄位接收起始值所示[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。 SQL_DESC_TYPE 欄位的初始值為 SQL_DEFAULT。 如此可提供標準的處理方式來呈現給應用程式的資料庫資料。 應用程式可以設定欄位的描述項記錄，以指定不同的處理方式的資料。  

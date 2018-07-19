@@ -2,7 +2,6 @@
 title: CopyRecord 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1af576e7aab76c6e505b2346a74924d8b2ec843e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7da84b8922306f5aa7c51fa10fe023eec06a5414
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277307"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord 方法 (ADO)
 複製所代表的實體[記錄](../../../ado/reference/ado-api/record-object-ado.md)到另一個位置。  
@@ -50,7 +50,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *密碼*  
  選擇性。 A**字串**包含，如有需要驗證的密碼值*UserName*。  
   
- *選項。*  
+ *選項*  
  選擇性。 A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)具有預設值是值**adCopyUnspecified**。 指定此方法的行為。  
   
  *非同步*  

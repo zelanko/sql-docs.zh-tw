@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -21,19 +20,20 @@ helpviewer_keywords:
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 789afb1973a38b877c8fec60b1603d23166acaec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d94bc1ba7a11f9d934118ba649bff58e84b9fb3
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787089"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用憑證的私密金鑰為資料解密。  
+此函式會使用憑證的私密金鑰為加密資料解密。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,32 +47,32 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>引數  
  *certificate_ID*  
- 這是資料庫中憑證的識別碼。 *certificate*_ID 為 **int**。  
+資料庫中的憑證識別碼。 *certificate_ID* 具有 **int** 資料類型。  
   
  *ciphertext*  
- 這是已經利用憑證私密金鑰加密的資料字串。  
+以憑證公開金鑰加密的資料字串。  
   
  @ciphertext  
- 為 **varbinary** 類型的變數，其中包含已利用憑證加密的資料。  
+**varbinary** 類型的變數，其中包含以憑證加密的資料。  
   
  *cert_password*  
- 這是為憑證的私密金鑰加密所用的密碼。 它必須是 Unicode。  
+用來加密憑證私密金鑰的密碼。 *cert_password* 必須具有 Unicode 資料格式。  
   
  @cert_password  
- 為 **nchar** 或 **nvarchar** 類型的變數，其中包含用來加密憑證私密金鑰的密碼。 它必須是 Unicode。  
-  
+**nchar** 或 **nvarchar** 類型的變數，其中包含用來加密憑證私密金鑰的密碼。 *@cert_password* 必須具有 Unicode 資料格式。  
+
 ## <a name="return-types"></a>傳回類型  
- **varbinary**，大小上限為 8,000 位元組。  
+**varbinary**，大小上限為 8,000 個位元組。  
   
 ## <a name="remarks"></a>Remarks  
- 這個函數是利用憑證的私密金鑰為資料解密。 使用非對稱金鑰來轉換密碼編譯，會耗用大量資源。 因此，EncryptByCert 和 DecryptByCert 不適用於使用者資料的常式加密。  
-  
+這個函數是利用憑證的私密金鑰為資料解密。 使用非對稱金鑰來轉換密碼編譯，會耗用大量資源。 因此，建議開發人員避免使用 [ENCRYPTBYCERT](./encryptbycert-transact-sql.md) 和 DECRYPTBYCERT 對常式使用者資料進行加密/解密。  
+
 ## <a name="permissions"></a>Permissions  
- 需要憑證的 CONTROL 權限。  
+`DECRYPTBYCERT` 需要憑證的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會從標示為 `[AdventureWorks2012].[ProtectedData04]` 的 `data encrypted by certificate JanainaCert02` 選取資料列。 這個範例使用憑證 `JanainaCert02` 的私密金鑰將加密文字解密；一開始先以憑證的密碼 `pGFD4bb925DGvbd2439587y` 將憑證解密。 解密的資料會從 **varbinary** 轉換為 **nvarchar**。  
-  
+此範例會從 `[AdventureWorks2012].[ProtectedData04]` 選取標示為憑證 `JanainaCert02` 原本加密之資料的資料列。 此範例會先使用憑證密碼 `pGFD4bb925DGvbd2439587y` 為憑證 `JanainaCert02` 的私密金鑰解密。 然後，此範例會使用此私密金鑰為加密文字解密。 此範例會將解密資料從 **varbinary** 轉換成 **nvarchar**。  
+
 ```  
 SELECT convert(nvarchar(max), DecryptByCert(Cert_Id('JanainaCert02'),  
     ProtectedData, N'pGFD4bb925DGvbd2439587y'))  

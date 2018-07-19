@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539608"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>分析平台系統平行資料倉儲的系統檢視表
 系統檢視表的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025735"
 ---
 # <a name="data-sources-and-connection-methods"></a>資料來源和連接方法
   您可以使用這些方法來設定和管理資料來源連接與認證。  

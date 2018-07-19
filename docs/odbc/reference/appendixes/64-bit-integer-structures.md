@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905323"
 ---
 # <a name="64-bit-integer-structures"></a>64 位元整數的結構
 SQL_C_SBIGINT 和 SQL_C_UBIGINT 資料類型識別項在 Microsoft C 編譯器的 C 類型是 _int64。 使用其他比 Microsoft （) C 編譯器的編譯器時，C 類型可能會不同。 如果編譯器原生支援 64 位元整數，驅動程式或應用程式應該定義 ODBCINT64 原生 64 位元整數型別。 編譯器不原生支援 64 位元整數，如果應用程式或驅動程式可以定義下列的結構，以確定它擁有這項資料的存取：  

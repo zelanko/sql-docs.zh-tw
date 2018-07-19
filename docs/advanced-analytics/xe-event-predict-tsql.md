@@ -12,6 +12,7 @@ ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31201870"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>擴充的事件監視預測陳述式
 

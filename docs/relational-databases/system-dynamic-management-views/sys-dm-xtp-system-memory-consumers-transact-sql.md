@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_system_memory_consumers (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_xtp_system_memory_consumers & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3363fa2208f735c38ebd696b782fced80e5c49ce
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015188"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +41,10 @@ select * from sys.dm_xtp_system_memory_consumers
   
  如需詳細資訊，請參閱[記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|記憶體取用者的內部識別碼。|  
-|memory_consumer_type|**int**|整數，代表類型的記憶體取用者具有下列值之一：<br /><br /> 0 – 它不應該顯示。 彙總兩個以上取用者的記憶體使用量。<br /><br /> 1 – 對應： 追蹤系統對應的記憶體耗用量。<br /><br /> 2-VARHEAP： 追蹤可變長度堆積的記憶體耗用量。<br /><br /> 4-IO 分頁集區： 追蹤用於 IO 作業之系統分頁集區的記憶體耗用量。|  
+|memory_consumer_type|**int**|整數，代表類型的記憶體取用者具有下列值之一：<br /><br /> 0 – 它不應該顯示。 彙總兩個以上取用者的記憶體使用量。<br /><br /> 1 – 對應： 會追蹤系統對應的記憶體耗用量。<br /><br /> 2-VARHEAP： 追蹤可變長度堆積的記憶體耗用量。<br /><br /> 4-IO 分頁集區： 追蹤用於 IO 作業之系統分頁集區的記憶體耗用量。|  
 |memory_consumer_type_desc|**nvarchar(16)**|記憶體取用者類型的描述：<br /><br /> 0 – 它不應該顯示。<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
 |memory_consumer_desc|**nvarchar(64)**|記憶體取用者執行個體的描述：<br /><br /> VARHEAP: <br />系統堆積。 一般用途。 目前只用來配置記憶體回收工作項目。<br />-或-<br />對應堆積。 當對應清單中包含的項目數達到預先決定的上限時 (通常大約 5,000 個項目)，對應就會加以使用。<br /><br /> PGPOOL： 針對 IO 系統集區有是三個不同大小系統 4k 分頁集區、 系統 64k 分頁集區和系統 256k 分頁集區。|  
 |lookaside_id|**bigint**|執行緒本機、對應記憶體提供者的識別碼。|  

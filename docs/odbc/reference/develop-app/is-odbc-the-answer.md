@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911673"
 ---
 # <a name="is-odbc-the-answer"></a>答案是 ODBC？
 在深入之前的互通性問題，請考慮下列問題： 應用程式應該使用 ODBC 完全嗎？ 這似乎很奇怪 ODBC，指南中詢問問題，但很，事實上，合法。 ODBC 的設計無法完全取代原生資料庫應用程式開發介面，也就設計來提供在所有情況下的資料庫存取權。 它設計來提供資料庫的通用介面，其目的是要釋放應用程式設計人員必須了解和維護多個資料庫的連結。  

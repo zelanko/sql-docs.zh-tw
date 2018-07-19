@@ -1,5 +1,5 @@
 ---
-title: 其他註解 (SQLXML 4.0) |Microsoft 文件
+title: 其他註解 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,12 +28,13 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6f3941965ceadbc98f4215d646dda4e87fea752b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053968"
 ---
-# <a name="annotation-interpretation---other-annotations"></a>註解的解譯-其他註解
+# <a name="annotation-interpretation---other-annotations"></a>註解解譯-其他註解
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   除了本章節先前的主題所討論的註解以外，XML 大量載入還會解譯這些其他註解，如下所示：  
   
@@ -56,6 +57,6 @@ ms.lasthandoff: 05/03/2018
  XML 大量載入一定會忽略此註解。  
   
 ## <a name="see-also"></a>另請參閱  
- [註解的解譯 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [註解解譯&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

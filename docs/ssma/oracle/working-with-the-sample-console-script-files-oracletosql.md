@@ -1,8 +1,6 @@
 ---
 title: 使用範例主控台指令碼檔案 (OracleToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,11 +17,12 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1f95cff5d19282f32017786851d04a3d3322dc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f18acd6f1bac8c418c4d3e67845cce52faf0412e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778044"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>使用範例主控台指令碼檔案 (OracleToSQL)
 幾個範例檔案與產品一起提供給使用者參考和使用方式。 本章節描述的方式，輕鬆地自訂這些指令碼，以符合使用者需求。  
@@ -84,7 +83,7 @@ ms.lasthandoff: 05/03/2018
   
     目標結構描述的來源資料庫的結構描述對應。  
   
-    **屬性**  
+    **Attribute**  
   
     -   `source-schema:` 指定轉換所需的來源資料庫。  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`convert-schema`命令的範例 4 的範例主控台指令碼檔案。  
   
-    **屬性**  
+    **Attribute**  
   
     `object-name`： 指定來源資料庫/將物件轉換所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
   
@@ -110,7 +109,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`synchronize-target`命令的範例主控台指令碼檔案的範例 3。  
   
-    **屬性**  
+    **Attribute**  
   
     `object-name:` 指定 sql server 資料庫/物件建立所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
   
@@ -122,7 +121,7 @@ ms.lasthandoff: 05/03/2018
   
     -   如果使用者以評估多個物件具有 / 資料庫他可以指定多個`metabase-object`節點中所示`migrate-data`命令的範例 2 的範例主控台指令碼檔案。  
   
-    **屬性**  
+    **Attribute**  
   
     `object-name:` 指定來源資料庫/資料表移轉所需的名稱。 請確認對應`object-type`會依據物件中指定的類型變更 `object-name`  
   

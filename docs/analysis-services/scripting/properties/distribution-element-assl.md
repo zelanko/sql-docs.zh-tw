@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34030929"
 ---
 # <a name="distribution-element-assl"></a>Distribution 元素 (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 |子元素|無|  
   
 ## <a name="remarks"></a>備註  
- 可用的值**發佈**項目，例如*一般*或*統一，*專屬於每個採礦演算法提供者。 如需有關有效**發佈**值，請參閱採礦演算法提供者的文件集。  
+ 可用的值**發佈**項目，例如*一般*或*統一，* 專屬於每個採礦演算法提供者。 如需有關有效**發佈**值，請參閱採礦演算法提供者的文件集。  
   
  對應至父系的項目**發佈**在 「 分析管理物件 (AMO) 物件模型而言， <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>。  
   

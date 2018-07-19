@@ -1,5 +1,5 @@
 ---
-title: 主要運算式 (XQuery) |Microsoft 文件
+title: 主要運算式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -28,10 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d7f9fdcd3eaa54b74366f90891893c88cbf1aa32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031436"
 ---
 # <a name="primary-expressions-xquery"></a>主要運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |&quot;|"|  
 |&apos;|'|  
   
- 字串常也可以包含字元參考、Unicode 字元的 XML 樣式參考，是由十進位或十六進位的字碼指標所識別。 歐元符號，例如由字元參考 」 （& s)\#8364;"。  
+ 字串常也可以包含字元參考、Unicode 字元的 XML 樣式參考，是由十進位或十六進位的字碼指標所識別。 例如，代表歐元符號，字元參考，「 &\#8364;"。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 使用 XML 1.0 版做為剖析的基礎。  
@@ -100,7 +101,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 內建布林函數， **true （)** 和**false （)**，可用來代表布林值，如下列範例所示。  
+ 內建布林函數**true （)** 並**false （)**，可用來代表布林值，如下列範例所示。  
   
 ```  
 DECLARE @var XML  
@@ -137,7 +138,7 @@ for $x:i in /root return data($x:i)')
 GO  
 ```  
   
- 下列查詢中所示，您可以使用： variable （） 延伸模組函數參考 SQL 變數。  
+ 下列查詢所示，您可以使用 （） 延伸模組函數參考 SQL 變數。  
   
 ```  
 DECLARE @price money  
@@ -158,10 +159,10 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
   
 -   不支援模組匯入。  
   
--   不支援外部變數宣告。 對此的解決方案是使用[: variable （） 函式](../xquery/xquery-extension-functions-sql-variable.md)。  
+-   不支援外部變數宣告。 此解決方案是使用[（） 函數](../xquery/xquery-extension-functions-sql-variable.md)。  
   
 ## <a name="context-item-expressions"></a>內容項目運算式  
- 內容項目是路徑運算式內容中目前所處理的項目。 會在具有文件節點的非 NULL XML 資料類型執行個體中初始化它。 它也可使用 nodes （） 方法，XPath 運算式的內容或 [] 述詞中變更。  
+ 內容項目是路徑運算式內容中目前所處理的項目。 會在具有文件節點的非 NULL XML 資料類型執行個體中初始化它。 它也可以變更 nodes （） 方法，XPath 運算式的內容或 [] 述詞中。  
   
  內容項目是由包含點 (.) 的運算式所傳回的內容項目。 例如，下列查詢會評估每個元素 <`a`>，是否存在 `attr` 屬性。 如果該屬性存在，就會傳回元素。 請注意，在述詞中的條件指定了單一句號所指定的內容節點。  
   
@@ -179,7 +180,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>函數呼叫  
- 您可以呼叫內建 XQuery 函數和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: variable （） 和： column （） 函式。 如需實作的函式的清單，請參閱[針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)。  
+ 您可以呼叫內建 XQuery 函數和[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]variable 和： column （） 函式。 如需實作的函式的清單，請參閱 <<c0> [ 針對 xml 資料類型的 XQuery 函數](../xquery/xquery-functions-against-the-xml-data-type.md)。  
   
 #### <a name="implementation-limitations"></a>實作限制  
  以下為實作限制：  

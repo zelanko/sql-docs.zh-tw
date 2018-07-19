@@ -1,7 +1,7 @@
 ---
-title: 列印報表 (報表產生器及 SSRS) | Microsoft Docs
+title: 列印報表 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-builder
@@ -15,14 +15,15 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f5e5e9cd47e550db2e4c68739832c6815d4ec660
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5973ae6180a138a56c6c130755c699a7b23c918
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34709046"
 ---
-# <a name="print-reports-report-builder-and-ssrs"></a>列印報表 (報表產生器及 SSRS)
-  將報表儲存至報表伺服器之後，您就可以從瀏覽器、報表管理員或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
+# <a name="print-reports---reporting-services-ssrs"></a>列印報表 - Reporting Services (SSRS)
+  將報表儲存至報表伺服器之後，您就可以從入口網站或任何用來檢視所匯出報表的應用程式，檢視及列印報表。 儲存報表之前，您可以在預覽報表時將它列印出來。  
   
  所有列印程序都可以視需要，直接在用戶端電腦上執行。 目前沒有伺服器端列印功能，可讓您從報表伺服器直接將列印工作傳送到連接 Web 伺服器的印表機。 印表機及列印選項是由個別的報表使用者，透過標準 **[列印]** 對話方塊加以選取。  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>本節內容  
  [使用列印控制項從瀏覽器列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)  
- 描述如何使用用戶端列印功能，從網頁瀏覽器或報表管理員進行報表的列印。  
+ 描述如何使用用戶端列印功能，從入口網站進行報表的列印。  
   
  [從其他應用程式列印報表 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-builder/print-reports-from-other-applications-report-builder-and-ssrs.md)  
  描述如何列印已匯出至另一個應用程式的報表。  

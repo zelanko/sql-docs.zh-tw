@@ -3,11 +3,9 @@ title: 建立登入 | Microsoft 文件
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: t-sql
+ms.technology: t-sql
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -15,16 +13,16 @@ applies_to:
 helpviewer_keywords:
 - creating a login
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32fc25ba0eca6fa991f4bdccdea393d19685839c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75c029fef31b5406920dd9998460648e9df1ea57
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37429107"
 ---
 # <a name="lesson-2-1---creating-a-login"></a>課程 2-1 - 建立登入
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

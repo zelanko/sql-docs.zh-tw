@@ -1,5 +1,5 @@
 ---
-title: 什麼是 SQL Server 2017 Analysis Services 的新功能 |Microsoft 文件
+title: 什麼是 SQL Server 2017 Analysis Services 的新功能 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,62 +10,63 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c05e5d59dd303f6f0c74eaab0e749fe6c8252f32
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042356"
 ---
-# <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services 中最新消息
+# <a name="whats-new-in-sql-server-2017-analysis-services"></a>什麼是 SQL Server 2017 Analysis Services 的新功能
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
 
-SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL Server 2012。 這一版為基礎的表格式模式 （SQL Server 2012 Analysis Services 中首次引進） 成功，可讓表格式模型比以往更強大。
+SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL Server 2012。 建置成功時的表格式模式中 （先在 SQL Server 2012 Analysis Services 中引進），此版本可讓表格式模型的功能比以往更強大。
 
-多維度模式和 Power Pivot for SharePoint 模式是許多 Analysis Services 部署裝訂。 Analysis Services 產品開發週期中，這些模式才成熟。 沒有這些模式，在此版本中的任何新功能。 然而，在錯誤修正和效能增強功能會加入。
+多維度模式與 Power Pivot for SharePoint 模式是許多 Analysis Services 部署的裝訂。 在 Analysis Services 產品生命週期中，這些模式是成熟。 沒有任一種模式，在此版本中的新功能。 不過，bug 修正和效能改良都包含在內。
 
-這裡說明的功能會包含在 SQL Server 2017 Analysis Services。 若要利用它們，您也必須使用的最新版本，但是[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) 和[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT 和 SSMS 會隨每月新功能和改進功能通常符合 SQL Server 中的新功能。  
+此處所述的功能會包含在 SQL Server 2017 Analysis Services。 若要利用它們，您也必須使用最新版本，但是[SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) 和[SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS)。 SSDT 和 SSMS，則會使用通常符合 SQL Server 中的新功能的全新和改進功能每月更新。  
 
-時請務必了解所有新功能，也很重要知道什麼被取代，而且在此版本和未來的版本中已停止。 請務必查看[回溯相容性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)。
+時請務必了解所有新的功能，還有一定要知道項目正被取代，而且此版本與未來的版本中，停用。 請務必查看[回溯相容性 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)。
 
 在此版本中，讓我們看看一些重要的新功能。
 
 ## <a name="1400-compatibility-level-for-tabular-models"></a>表格式模型的 1400 相容性層級
-  若要使用的許多新功能與功能所述的以下，必須設定或升級 1400年相容性層級為新的或現有的表格式模型。 使用 1400 相容性層級的模型無法部署到 SQL Server 2016 SP1 或更早版本，或降級為較低的相容性層級。 若要進一步了解，請參閱[Analysis Services 表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。
+  若要利用許多的新特色與功能所述的以下，新的或現有的表格式模型必須設定或升級至 1400年相容性層級。 使用 1400 相容性層級的模型無法部署到 SQL Server 2016 SP1 或更早版本，或降級為較低的相容性層級。 若要進一步了解，請參閱[Analysis Services 表格式模型的相容性層級](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)。
   
 在 SSDT 中，您可以在建立新的表格式模型專案時，選取新的 1400 相容性層級。 
 
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-若要升級現有的表格式模型在 SSDT 中，在 [方案總管] 中，以滑鼠右鍵按一下**Model.bim**，然後在**屬性**，將**相容性層級**屬性**SQL Server 2017 (1400)**。 
+若要升級現有的表格式模型，在 SSDT 中，在 [方案總管] 中，以滑鼠右鍵按一下**Model.bim**，然後在**屬性**，將**相容性層級**屬性**SQL Server 2017 (1400)**。 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
-請務必記住，一旦您 1400年来升級現有的模型，您無法降級。 請務必保留 1200年模型資料庫的備份。
+請務必記住，一旦您升級現有的模型至 1400年時，您無法降級。 請務必將 1200年模型資料庫的備份保留。
 
 ## <a name="modern-get-data-experience"></a>新式取得資料經驗
-從資料來源匯入資料到您的表格式模型時，SQL Server Data Tools (SSDT) 導入了現代**取得資料**遇到 1400年相容性層級的模型。 這項新功能是以 Power BI Desktop 和 Microsoft Excel 2016 中類似的功能為基礎。 現代的 取得資料 功能提供廣大資料轉換和資料 mashup 功能，透過 取得資料的查詢產生器 」 和 「 M 運算式。
+談到資料來源將資料匯入至您的表格式模型時，SQL Server Data Tools (SSDT) 導入了現代化**取得資料**體驗 1400年相容性層級的模型。 這項新功能是以 Power BI Desktop 和 Microsoft Excel 2016 中類似的功能為基礎。 新式 Get Data 經驗提供龐大的資料轉換和資料混搭功能，使用 取得資料的查詢產生器和 M 運算式。
 
-現代的 [取得資料] 功能提供支援各種不同的資料來源。 接下來，更新會包含更多的支援。
+新式 Get Data 經驗提供各種不同的資料來源的支援。 接下來，更新會包含更多的支援。
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
- 功能強大且直覺式使用者介面可讓您選取您的資料和資料轉換/mashup 功能比以往更為容易。
+ 功能強大且直覺式的使用者介面可讓您選取您的資料和資料轉換/混搭功能比以往更容易。
 
-![進階的 mashup](../analysis-services/media/as-get-data-advanced.png)
+![進階的混搭](../analysis-services/media/as-get-data-advanced.png)
 
 
-現代的 取得資料體驗，M mashup 功能不會套用到現有的表格式模型 upraded 從 1400年 1200年相容性層級。 1400 相容性層級建立新的模型僅適用於新的體驗。
+新式的取得資料經驗，以及 M 混搭功能不會套用到現有的表格式模型 upraded 從 1400年 1200年相容性層級。 新的體驗僅適用於 1400年相容性層級所建立的新模型。
 
-## <a name="encoding-hints"></a>編碼的提示
-此版本導入編碼提示，並用來最佳化的大型記憶體中的表格式模型的處理 （資料重新整理） 的進階功能。 若要進一步了解編碼方式，請參閱[效能微調的表格式模型 SQL Server 2012 Analysis Services 中](https://msdn.microsoft.com/library/dn393915.aspx)以深入了解編碼方式的技術白皮書。
+## <a name="encoding-hints"></a>編碼提示
+此版本引進編碼提示，並用來最佳化的大型記憶體內部表格式模型的處理 （資料重新整理） 的進階功能。 若要進一步了解編碼方式，請參閱[效能微調的表格式模型 SQL Server 2012 Analysis Services 中](https://msdn.microsoft.com/library/dn393915.aspx)白皮書以深入了解編碼方式。
 
-* 編碼值提供較佳的查詢效能，通常僅適用於彙總的資料行。
+* 值的編碼方式提供更佳的查詢效能，通常僅適用於彙總的資料行。
 
-* 雜湊編碼，最好群組依據資料行 （通常是維度資料表值） 和外部索引鍵。 字串資料行一律會編碼的雜湊。
+* 雜湊編碼十分適用於分組的資料行 （通常是維度資料表值） 和外部索引鍵。 字串資料行一律是編碼的雜湊。
 
-數值資料行可以使用其中一種編碼的方法。 當 Analysis Services 開始處理資料表時，如果任一個資料表是空的 （或如果沒有資料分割） 或正在執行完整資料表處理操作時，每個數值資料行來判斷是否要套用的值或雜湊編碼採取範例值. 根據預設，值編碼選擇是當資料行中相異值的範例是夠大，否則雜湊編碼通常會提供更好的壓縮。 您可根據 進一步了解資料的分佈，部分處理的資料行之後，變更編碼方式，並重新啟動在編碼程序; Analysis services不過，這會增加處理時間，並沒有效率。 效能微調技術白皮書討論更多詳細資料中重新編碼，並說明如何使用 SQL Server Profiler 會偵測到。
+數值資料行可以使用其中一種編碼的方法。 當 Analysis Services 開始處理資料表時，如果其中一個資料表是空的 （不論有無分割區） 或正在執行完整資料表處理操作時，會每個數值資料行來判斷是否要套用的值或雜湊編碼範例值. 根據預設，值的編碼方式是選擇當資料行中相異值的範例是夠大，否則雜湊編碼通常會提供更好的壓縮。 您可根據資料分佈，進一步資訊部分處理之資料行之後，變更編碼方式，並重新啟動編碼的程序; Analysis services不過，這會增加處理時間，而且是效率不佳。 效能微調技術白皮書會討論更詳細地重新編碼，並說明如何偵測到它使用 SQL Server Profiler。
 
-編碼提示允許指定之提供背景知識從資料分析和 （或） 重新編碼追蹤事件的回應編碼方式的喜好設定模型師 」。 因為雜湊編碼的資料行的彙總為速度較慢，超過值編碼的資料行值編碼可指定做為這類資料行的提示。 不保證會套用喜好設定。 這是相對於設定的提示。 若要指定編碼的提示，請在資料行上設定 EncodingHint 屬性。 可能的值為 「 預設 」、 「 值 」 和 「 雜湊 」。 下列程式碼片段的 JSON 型 Model.bim 檔案中的中繼資料指定編碼 Sales Amount 資料行的值。
+編碼提示可讓針對指定喜好設定提供背景知識，從資料分析和 （或） 重新編碼追蹤事件的回應編碼方式模組工具。 因為雜湊編碼的資料行的彙總為速度較慢，比透過值編碼的資料行值的編碼方式可指定做為這類資料行的提示。 不保證會套用喜好設定。 這是提示，而不是一項設定。 若要指定一個編碼提示，請在資料行上設定 EncodingHint 屬性。 可能的值為 「 預設 」、 「 值 」 和 「 雜湊 」。 下列程式碼片段的 JSON 型 Model.bim 檔案中的中繼資料指定編碼 Sales Amount 資料行的值。
 
 ```
 {
@@ -109,7 +110,7 @@ SQL Server 2017 Analysis Services 會看到一些最重要的增強功能自 SQL
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 函數通常用在詳細資料列運算式中。 下例會定義範例 Adventure Works 表格式模型的 Internet Sales 資料表中，資料列要傳回的資料行︰
+[SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX 函數常用的詳細資料列運算式。 下例會定義範例 Adventure Works 表格式模型的 Internet Sales 資料表中，資料列要傳回的資料行︰
 
 ```
 SELECTCOLUMNS(
@@ -126,7 +127,7 @@ SELECTCOLUMNS(
 ![AS_Detail_Rows](../analysis-services/media/as-detail-rows.png)
 
 #### <a name="default-detail-rows-expression-property-for-tables"></a>資料表的預設 Detail Rows Expression (詳細資料列運算式) 屬性
-除量值之外，資料表也有定義詳細資料列運算式的屬性。 **Default Detail Rows Expression** (預設詳細資料列運算式) 屬性的作用如同資料表中所有量值的預設值。 沒有自己的運算式定義的量值運算式會繼承資料表，並顯示在資料列集定義的資料表。 這可讓重複使用運算式，以及新的量值加入至資料表稍後會自動繼承運算式。
+除量值之外，資料表也有定義詳細資料列運算式的屬性。 **Default Detail Rows Expression** (預設詳細資料列運算式) 屬性的作用如同資料表中所有量值的預設值。 並沒有定義本身運算式的量值會繼承資料表的運算式，而且顯示的資料列集為資料表定義。 這可讓重複使用運算式，以及新的量值加入至資料表稍後會自動繼承運算式。
 
 ![AS_Default_Detail_Rows_Expression](../analysis-services/media/as-default-detail-rows-expression.png)
  
@@ -140,9 +141,9 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="object-level-security"></a>物件層級安全性
-此版本導入[物件層級安全性](../analysis-services/tabular-models/object-level-security.md)資料表和資料行。 除了限制存取資料表和資料行的資料，您可以保護敏感的資料表和資料行名稱。 這有助於防止惡意使用者探查是否有這類資料表。
+此版本導入了[物件層級安全性](../analysis-services/tabular-models/object-level-security.md)資料表和資料行。 除了限制存取資料表和資料行的資料，可以保護敏感的資料表和資料行名稱。 這有助於防止惡意使用者探查是否有這類資料表。
 
-物件層級安全性必須使用 JSON 基礎之中繼資料、 Tabular Model Scripting Language (TMSL) 或表格式物件模型 (TOM) 設定。 
+物件層級安全性，必須使用 JSON 為基礎的中繼資料、 表格式模型指令碼語言 (TMSL) 或表格式物件模型 (TOM) 來設定。 
 
 例如，下列程式碼將 **TablePermission** 類別的 **MetadataPermission** 屬性設為 [無] ，協助保護範例 Adventure Works 表格式模型中的 Product 資料表。
 
@@ -169,17 +170,17 @@ db.Update(UpdateOptions.ExpandFull);
 ```
 
 ## <a name="dynamic-management-views-dmvs"></a>動態管理檢視 (DMV)
-[Dmv](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)傳回本機伺服器作業和伺服器健全狀況的相關資訊的查詢在 SQL Server Profiler。
-此版本包含改良[動態管理檢視](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services)(DMV) 1200年和 1400年相容性層級的表格式模型。
+[Dmv](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)是 SQL Server Profiler 中傳回本機伺服器作業和伺服器健全狀況的相關資訊的查詢。
+此版本包括改善[動態管理檢視](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services)(DMV) 1200年和 1400年相容性層級的表格式模型。
 
-[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)現在可搭配表格式 1200年模型和 1400年模型。 1400 的表格式模型顯示 M 磁碟分割、 M 運算式和結構化的資料來源之間的相依性。 若要進一步了解，請參閱[Analysis Services 部落格](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)。
+[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md)現在適用於表格式 1200年和 1400年模型。 表格式 1400年模型顯示 M 資料分割、 M 運算式和結構化的資料來源之間的相依性。 若要進一步了解，請參閱[Analysis Services 部落格](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)。
 
-[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)增強功能是針對這個 DMV，可由各種用戶端工具來顯示量值維度性。 比方說，在 Excel 樞紐分析表中的瀏覽功能可讓使用者跨-向下切入至與選取的量值相關的維度。 此版本中修正基數資料行，先前所顯示不正確的值。
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md)增強功能會包含此 dmv，各種用戶端工具用來顯示量值維度性。 比方說，在 Excel 樞紐分析表中的 [瀏覽] 功能可讓使用者跨-向下切入至選取的量值與相關維度。 此版本中修正的基數的資料行，先前已顯示不正確的值。
 
 ## <a name="dax-enhancements"></a>DAX 增強功能
-本版包含新的 DAX 函數和功能的支援。 若要利用，您必須使用最新版的 SSDT。 若要進一步了解，請參閱[新的 DAX 函數](https://msdn.microsoft.com/library/mt704075.aspx)。
+此版本包含新的 DAX 函數和功能的支援。 若要利用，您需要使用最新版的 SSDT。 若要進一步了解，請參閱[新的 DAX 函數](https://msdn.microsoft.com/library/mt704075.aspx)。
 
-其中一個新的 DAX 功能的最重要項目是新[IN 運算子 / 函式 CONTAINSROW](https://msdn.microsoft.com/library/mt842621.aspx) DAX 運算式。 這類似於 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 子句中常用來指定多個值的 `WHERE` 運算子。
+其中一個新的 DAX 功能的最重要的項目是新[IN 運算子 / 函式 CONTAINSROW](https://msdn.microsoft.com/library/mt842621.aspx) DAX 運算式。 這類似於 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 子句中常用來指定多個值的 `WHERE` 運算子。
 
 過去通常使用邏輯 `OR` 運算子指定多重值的篩選條件，如下列量值運算式中所示︰
 
@@ -234,13 +235,13 @@ Filtered Sales:=CALCULATE (
 ## <a name="additional-improvements"></a>其他增強功能
 除了所有新的功能，Analysis Services、 SSDT 和 SSMS 也會包含下列增強功能：
 
-* 階層和資料行重複使用形式出現在 Power BI 的欄位清單中更有用的位置。
-* 若要輕鬆地建立與日期欄位為基礎的日期維度關聯性的日期關聯性。
-* Analysis Services 的預設安裝選項現在是為表格式模式。
-* 新資料來源取得資料 (Power Query)。
+* 更多有用的位置，在 Power BI 的 [欄位] 清單中，顯示階層和資料行重複使用。
+* 若要輕鬆地建立關聯性，以根據日期欄位的日期維度的日期關聯性。
+* Analysis Services 的預設安裝選項現為表格式模式中。
+* 新取得的資料 (Power Query) 資料來源。
 * SSDT 的 DAX 編輯器。
-* 現有 DirectQuery 資料來源支援的 M 查詢。
-* SSMS 增強功能，例如檢視、 編輯和指令碼支援的結構化的資料來源。
+* M 查詢支援現有 DirectQuery 資料來源。
+* SSMS 的改善發生問題，例如檢視、 編輯和指令碼的結構化的資料來源的支援。
 
 
 

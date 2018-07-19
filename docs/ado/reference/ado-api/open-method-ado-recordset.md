@@ -2,7 +2,6 @@
 title: Open 方法 （ADO 資料錄集） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e562f329f6f95a36777fc4db9131091003be37e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9689d9068af961c5935c9447acb07bea4dc38b0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280617"
 ---
 # <a name="open-method-ado-recordset"></a>Open 方法 （ADO 資料錄集）
 開啟資料指標上[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。  
@@ -50,7 +50,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
  *LockType*  
  選擇性。 A [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)值，決定使用哪種類型的鎖定 (concurrency) 提供者應該開啟時**資料錄集**。 預設值是**Recordset**。  
   
- *選項。*  
+ *選項*  
  選擇性。 A**長**值，指出提供者應該如何評估*來源*引數，如果它不是代表項目**命令**物件，或**資料錄集**應該還原先前儲存的位置的檔案。 可以是一個或多個[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)或[的執行方式](../../../ado/reference/ado-api/executeoptionenum.md)可以與位元 OR 運算子結合的值。  
   
 > [!NOTE]

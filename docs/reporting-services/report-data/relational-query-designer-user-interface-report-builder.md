@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022427"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>關聯式查詢設計工具使用者介面 (報表產生器)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中的報表產生器和報表設計師同時提供圖形化查詢設計工具和以文字為基礎的查詢設計工具，可協助您建立查詢，用來指定從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 和 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 中針對報表資料集擷取的資料。 使用圖形化查詢設計工具來瀏覽中繼資料、以互動方式建立查詢以及檢視查詢的結果。 使用以文字為基礎的查詢設計工具來檢視圖形化查詢設計工具所建立的查詢，或是修改查詢。 您也可以從檔案或報表匯入現有的查詢。  
@@ -151,7 +152,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **編輯欄位**：開啟 [編輯相關欄位] 對話方塊，您可以在其中新增和修改資料表之間的關聯性。 您已在右側和左側資料表中選擇要聯結的欄位。 您可以聯結左側資料表和右側資料表中的多個欄位，以便在關聯性中指定多項聯結條件。 聯結左側和右側資料表的兩個欄位不需要擁有相同名稱。 聯結的欄位必須具有相容的資料類型。  
   
--   **刪除關聯性**  ：刪除選取的關聯性**。**  
+-   **刪除關聯性**  ：刪除選取的關聯性 **。**  
   
 -   **上移**和**下移**：在 [關聯性] 清單中上下移動關聯性。 關聯性在查詢中放置的順序可能會影響查詢的結果。 關聯性是依照出現在 [關聯性] 清單中的順序新增至查詢。  
   

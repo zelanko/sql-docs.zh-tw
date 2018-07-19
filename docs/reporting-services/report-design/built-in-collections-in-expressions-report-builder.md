@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021209"
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>運算式中的內建集合 (報表產生器)
   在報表的運算式中，您可以包含下列內建集合的參考：ReportItems、Parameters、Fields、DataSets、DataSources、Variables，以及類似報表名稱等全域資訊的內建欄位。 並不是所有的集合都會顯示在 **[運算式]** 對話方塊中。 只有報表伺服器上已發行的報表，才可以在執行階段使用 DataSets 和 DataSources 集合。 ReportItems 集合是報表區域中的文字方塊集合，例如在頁面或頁首中的文字方塊。  

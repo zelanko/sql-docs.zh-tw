@@ -2,7 +2,6 @@
 title: 參數集合 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b9976679454881af9279dc74ff86eacdb01d2a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c59411e1aeeaa32e2b1904e2503b26a92c829b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280653"
 ---
 # <a name="parameters-collection-ado"></a>參數集合 (ADO)
 包含所有[參數](../../../ado/reference/ado-api/parameter-object.md)物件[命令](../../../ado/reference/ado-api/command-object-ado.md)物件。  

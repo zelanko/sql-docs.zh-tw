@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544720"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>硬體組態]-[Analytics Platform System
 讓您根據業務需求購買適合的處理和儲存體容量，Analytics Platform System (APS) 硬體的架構與可延展單位。 應用裝置縮放儲存體的 SQL Server Parallel Data Wareouse (PDW) 從幾個 Tb 到超過 6 pb 計的資料。  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914753"
 ---
 # <a name="vertical-applications"></a>垂直應用程式
 垂直應用程式通常會執行完整定義的工作，針對單一 DBMS。 例如，訂單輸入應用程式會追蹤在公司的訂單。 什麼這些類型的應用程式都有通用是通常會由應用程式開發人員設計用資料庫結構描述，當應用程式可能使用的不同 Dbms 的數字，它使用單一的 DBMS 單一客戶。  

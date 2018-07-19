@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911703"
 ---
 # <a name="result-set-metadata"></a>結果集中繼資料
 *中繼資料*是描述其他資料的資料。 例如，結果集中繼資料描述結果集，例如在結果集中的資料行數目、 資料類型的這些資料行，其名稱、 有效位數、 null 屬性，以及等等。  

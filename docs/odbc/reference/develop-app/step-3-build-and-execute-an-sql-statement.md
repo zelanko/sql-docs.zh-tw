@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915503"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>步驟 3： 建立和執行 SQL 陳述式
 第三個步驟是建置和執行 SQL 陳述式，如下圖所示。 用來執行此步驟的方法很可能會不同極大的差異。 應用程式可能會提示使用者輸入 SQL 陳述式，並建立根據使用者輸入 SQL 陳述式，或使用硬式編碼的 SQL 陳述式。 如需詳細資訊，請參閱[建構 SQL 陳述式](../../../odbc/reference/develop-app/constructing-sql-statements.md)。  

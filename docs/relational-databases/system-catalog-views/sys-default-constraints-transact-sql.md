@@ -25,22 +25,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81fbef54212e53ae2e99ec3d6d0d73b630e50862
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9da755e03c4cbdf9390db34e167da20ad3b78a61
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239358"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   包含一個資料列的是預設定義 （而不是 CREATE DEFAULT 陳述式的 CREATE TABLE 或 ALTER TABLE 陳述式建立），每個物件具有**sys.objects.type** = d。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
 |**parent_column_id**|**int**|中的資料行的識別碼**parent_object_id**所屬這個預設值。|  
-|**[定義]**|**nvarchar(max)**|定義這個預設值的 SQL 運算式。|  
+|**定義**|**nvarchar(max)**|定義這個預設值的 SQL 運算式。|  
 |**is_system_named**|**bit**|1 = 名稱是系統所產生。<br /><br /> 0 = 名稱是使用者所提供。|  
   
 ## <a name="permissions"></a>Permissions  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032265"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>使用外部資料來源以取得訂閱者資料 (資料驅動訂閱)
   在資料驅動訂閱中，動態訂閱資料是由從外部資料來源擷取資料的查詢或命令所提供。 訂閱資料可以從任何支援的資料來源 (符合資料驅動訂閱處理的需求) 中擷取。 查詢或命令語法必須對安裝在您報表伺服器上的資料處理延伸模組有效。  

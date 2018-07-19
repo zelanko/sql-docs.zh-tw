@@ -1,6 +1,6 @@
 ---
 title: UnknownMember (MDX) |Microsoft 文件
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b74454c00f48a36b963e6c7f5b7b1bdf4e2ea44e
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34582210"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743357"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   傳回與層級或成員相關的未知的成員。  
   
@@ -40,7 +40,7 @@ Hierarchy_Expression.UnknownMember
  傳回階層的有效多維度運算式 (MDX) 運算式。  
   
 ## <a name="remarks"></a>備註  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 建立事實資料表資料與階層產生關聯，當在階層未知時未知的成員。 未知的成員可位於以下其中一個層級：  
+ Analysis Services 建立事實資料表資料與階層產生關聯，當在階層未知時未知的成員。 未知的成員可位於以下其中一個層級：  
   
 -   無法彙總之屬性階層的最上層。  
   

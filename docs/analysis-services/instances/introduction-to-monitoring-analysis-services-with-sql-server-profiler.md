@@ -1,5 +1,5 @@
 ---
-title: 監視 Analysis Services with SQL Server Profiler 簡介 |Microsoft 文件
+title: 若要使用 SQL Server Profiler 監視 Analysis Services 簡介 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b3c2dcec84956cd83c09a6c9be1d70975df67cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040846"
 ---
 # <a name="introduction-to-monitoring-analysis-services-with-sql-server-profiler"></a>使用 SQL Server Profiler 監視 Analysis Services 簡介
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體產生的事件。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
+  您可以使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 來監視由 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體產生的事件。 使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]，您可以執行下列動作：  
   
 -   監視 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]執行個體的效能。  
   
@@ -54,6 +55,6 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="see-also"></a>另請參閱  
  [Analysis Services 追蹤事件](../../analysis-services/trace-events/analysis-services-trace-events.md)   
- [建立 Profiler 追蹤以重新顯示 & #40;Analysis Services & #41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
+ [建立 Profiler 追蹤以重新執行 &#40;Analysis Services&#41;](../../analysis-services/instances/create-profiler-traces-for-replay-analysis-services.md)  
   
   

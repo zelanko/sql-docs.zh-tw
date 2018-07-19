@@ -1,5 +1,5 @@
 ---
-title: sys.credentials (TRANSACT-SQL) |Microsoft 文件
+title: sys.credentials (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2017
 ms.prod: sql
@@ -26,31 +26,32 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ac0d1322be8e6c65d066c9de20d9a117b08f981a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031356"
 ---
 # <a name="syscredentials-transact-sql"></a>sys.credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   傳回一個資料列的每個伺服器層級的認證。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|認證的識別碼。 這在伺服器中是唯一的。|  
-|name|**sysname**|認證的名稱。 這在伺服器中是唯一的。|  
+|NAME|**sysname**|認證的名稱。 這在伺服器中是唯一的。|  
 |credential_identity|**nvarchar(4000)**|要使用之識別的名稱。 這通常是 Windows 使用者。 這不需要是唯一的。|  
 |create_date|**datetime**|建立認證的時間。|  
 |modify_date|**datetime**|上次修改認證的時間。|  
-|target_type|**nvarchar(100)**|認證的類型。 針對傳統的認證傳回 NULL，針對對應至密碼編譯提供者的認證傳回 CRYPTOGRAPHIC PROVIDER。 如需有關外部金鑰管理提供者的詳細資訊，請參閱[Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
-|target_id|**int**|此認證對應之物件的識別碼。 針對傳統的認證傳回 0，針對對應至密碼編譯提供者的認證傳回非 0 值。 如需有關外部金鑰管理提供者的詳細資訊，請參閱[Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
+|target_type|**nvarchar(100)**|認證的類型。 針對傳統的認證傳回 NULL，針對對應至密碼編譯提供者的認證傳回 CRYPTOGRAPHIC PROVIDER。 如需有關外部金鑰管理提供者的詳細資訊，請參閱 < [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
+|target_id|**int**|此認證對應之物件的識別碼。 針對傳統的認證傳回 0，針對對應至密碼編譯提供者的認證傳回非 0 值。 如需有關外部金鑰管理提供者的詳細資訊，請參閱 < [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)。|  
 
 ## <a name="remarks"></a>備註  
 資料庫層級的認證，請參閱[sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)。
   
 ## <a name="permissions"></a>Permissions  
- 需要`VIEW ANY DEFINITION`權限或`ALTER ANY CREDENTIAL`權限。 此外，主體必須不應遭到拒絕`VIEW ANY DEFINITION`權限。  
+ 需要`VIEW ANY DEFINITION`權限或`ALTER ANY CREDENTIAL`權限。 此外，不應拒絕主體`VIEW ANY DEFINITION`權限。  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   

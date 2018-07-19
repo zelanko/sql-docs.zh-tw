@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_profiles (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_exec_query_profiles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 4b3acec798d858f31aac79231060d0533a3499b3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046136"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/23/2018
 ## <a name="table-returned"></a>傳回的資料表  
  傳回的計數器是以每個執行緒的每個運算子為基礎。 這些結果是動態的，而且不符合現有選項的結果，例如只在查詢完成時建立輸出的 SET STATISTICS XML ON。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|識別此查詢執行所在的工作階段。 參考 dm_exec_sessions.session_id。|  
 |request_id|**int**|識別目標要求。 參考 dm_exec_sessions.request_id。|  
@@ -74,8 +75,8 @@ ms.lasthandoff: 05/23/2018
 |lob_read_ahead_count|**bigint**|目前為止的 LOB 預先讀取數目。|  
 |segment_read_count|**int**|目前為止的區段預先讀取數目。|  
 |segment_skip_count|**int**|目前為止略過的區段數目。| 
-|actual_read_row_count|**bigint**|讀取運算子在套用之前出現殘餘述詞的資料列數目。| 
-|estimated_read_row_count|**bigint**|**適用於：** 開頭[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>出現殘餘述詞套用之前讀取以運算子的估計資料列數目。|  
+|actual_read_row_count|**bigint**|殘餘述詞套用之前的運算子所讀取的資料列數目。| 
+|estimated_read_row_count|**bigint**|**適用於：** 開頭[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。 <br/>估計的殘餘述詞套用之前，運算子來讀取的資料列數目。|  
   
 ## <a name="general-remarks"></a>一般備註  
  如果查詢計畫節點沒有任何 IO，所有與 IO 相關的計數器都會設定為 NULL。  
@@ -86,20 +87,20 @@ ms.lasthandoff: 05/23/2018
   
 -   如果有平行掃描，此 DMV 會針對掃描上運作的每個平行執行緒報告計數器。
  
- 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]SP1，分析基礎結構的標準查詢執行統計資料來並行有分析基礎結構的輕量級的查詢執行統計資料。 新的查詢執行分析統計資料基礎結構可大幅減少收集每個運算子查詢執行統計資料，例如實際資料列數目的效能負擔。 可以啟用這項功能，請使用 全域啟動[追蹤旗標 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，或使用 query_thread_profile 擴充的事件，會自動開啟。
+ 從開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]了 sp1 之後，分析基礎結構的標準查詢執行統計資料會有分析基礎結構的輕量型查詢執行統計資料中的並排顯示。 新的查詢執行程式碼剖析的統計資料基礎結構會大幅減少效能額外負荷，收集每個運算子的資料列的實際數目，查詢執行統計資料。 可以啟用這項功能，請使用 全域啟始[追蹤旗標 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)，或使用 query_thread_profile 擴充的事件，會自動開啟。
 
 >[!NOTE]
-> CPU 和已耗用時間，不支援在輕量級的查詢執行統計資料分析基礎結構，以降低對效能的影響。
+> CPU 和已耗用時間，不支援輕量型查詢執行統計資料分析基礎結構下以減少效能的影響。
 
- 設定 XML ON 和 SET STATISTICS PROFILE ON 一律使用 基礎結構程式碼剖析的舊版的查詢執行統計資料的統計資料。
+ 設定 XML ON 和 SET STATISTICS PROFILE ON 一律使用舊版查詢執行統計資料基礎結構程式碼剖析的統計資料。
   
 ## <a name="permissions"></a>Permissions  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
    
 ## <a name="examples"></a>範例  
- 步驟 1： 登入您打算使用 sys.dm_exec_query_profiles 執行分析的查詢的工作階段。 若要設定程式碼剖析的查詢會使用 SET STATISTICS PROFILE 上。 在此相同工作階段中執行查詢。  
+ 您打算使用 sys.dm_exec_query_profiles 執行分析的查詢的工作階段的步驟 1： 登入。 若要設定程式碼剖析的查詢會使用 SET STATISTICS PROFILE 上。 在此相同工作階段中執行查詢。  
   
 ```  
 --Configure query for profiling with sys.dm_exec_query_profiles  
@@ -113,7 +114,7 @@ GO
 --Next, run your query in this session, or in any other session if query profiling has been enabled globally 
 ```  
   
- 步驟 2： 登入到不同於您的查詢執行所在的工作階段的第二個工作階段。  
+ 不同於您的查詢執行所在工作階段的第二個工作階段的步驟 2： 登入。  
   
  下列陳述式摘要目前正在工作階段 54 中執行的查詢進度。 為了達成目的，它會計算每個節點所有執行緒的輸出資料列總數，並且將它和該節點的輸出資料列預估數比較。  
   
@@ -131,7 +132,7 @@ ORDER BY node_id;
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [執行相關的動態管理檢視和函式 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

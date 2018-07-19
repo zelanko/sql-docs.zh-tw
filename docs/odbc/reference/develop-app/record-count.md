@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911333"
 ---
 # <a name="record-count"></a>記錄計數
 SQL_DESC_COUNT 標頭欄位的描述元是 1 為基底的索引包含資料的最高編號記錄。 此欄位不是所有的資料行或繫結的參數計數。 當配置描述元時，SQL_DESC_COUNT 的初始值為 0。  

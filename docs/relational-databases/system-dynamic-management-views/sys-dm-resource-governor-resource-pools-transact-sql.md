@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_resource_pools (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_resource_governor_resource_pools (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0317d8dbebebe43cf23c1f97299c9f81098f08e3
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980802"
 ---
 # <a name="sysdmresourcegovernorresourcepools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -36,12 +37,12 @@ ms.lasthandoff: 05/23/2018
   傳回目前資源集區狀態的相關資訊、資源集區的目前組態和資源集區統計資料。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_resource_governor_resource_pools**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_resource_governor_resource_pools**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|資源集區的識別碼。 不可為 Null。|  
-|name|**sysname**|資源集區的名稱。 不可為 Null。|  
+|NAME|**sysname**|資源集區的名稱。 不可為 Null。|  
 |statistics_start_time|**datetime**|重設此集區統計資料時的時間。 不可為 Null。|  
 |total_cpu_usage_ms|**bigint**|重設資源管理員統計資料之後的累計 CPU 使用量 (以毫秒為單位)。 不可為 Null。|  
 |cache_memory_kb|**bigint**|目前的快取記憶體總使用量 (以 KB 為單位)。 不可為 Null。|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 05/23/2018
 |write_io_stall_queued_ms|**bigint**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 寫入 IO 從抵達到發行的總時間 (以毫秒為單位)。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。<br /><br /> 這是 IO 資源管理導入的延遲。|  
 |io_issue_violations_total|**int**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> IO 發出違規總數。 也就是說，在 IO 發出率低於保留率時的次數。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
 |io_issue_delay_total_ms|**bigint**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 排程發出 IO 到實際發出 IO 的總時間 (以毫秒為單位)。 可為 Null。 如果資源集區不受 IO 管制，則為 NULL。 也就是說，資源集區的 MIN_IOPS_PER_VOLUME 和 MAX_IOPS_PER_VOLUME 設定為 0。|  
-|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="remarks"></a>備註  
  資源管理員工作負載群組和資源管理員資源集區擁有多對一的對應。 因此，許多資源集區統計資料會從工作負載群組統計資料衍生。  
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/23/2018
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.resource_governor_resource_pools &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys.resource_governor_resource_pools &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

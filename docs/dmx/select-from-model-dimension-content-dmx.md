@@ -1,39 +1,25 @@
 ---
-title: SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-- DIMENSION_CONTENT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining models [Analysis Services], dimension content
-- SELECT FROM <model>.DIMENSION_CONTENT statement
-ms.assetid: 907fb3fb-2131-4a10-8635-2a39b9a805aa
-caps.latest.revision: 42
-author: Minewiskan
+title: SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX) |Microsoft Docs
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: e733881415d997a7a8d9e120963f625a042f3294
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 29f730f0bdff985ffceb849c429e5d1b02f70d5f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992622"
 ---
 # <a name="select-from-ltmodelgtdimensioncontent-dmx"></a>SELECT FROM&lt;模型&gt;。DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  採礦模型可用來做為 OLAP Cube 中的維度，而模型中的每個節點都代表該維度的成員。 **SELECT FROM\<模型 >。Dimension_CONTENT**陳述式會傳回模型的維度做為相關的內容。  
+  採礦模型可用來做為 OLAP Cube 中的維度，而模型中的每個節點都代表該維度的成員。 **SELECT FROM\<模型 >。Dimension_CONTENT**陳述式會傳回與做為維度模型的內容。  
   
 ## <a name="syntax"></a>語法  
   
@@ -83,7 +69,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.Dimension_CONTENT
   
 ## <a name="examples"></a>範例  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>描述  
  範例選取所有來自 `[TM Decision Tree]` 模型內容的資料行，其中均為使用模型作為維度的相關內容。  
   
 ### <a name="code"></a>程式碼  
@@ -97,6 +83,6 @@ FROM [TM Decision Tree].Dimension_Content
  [選取&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

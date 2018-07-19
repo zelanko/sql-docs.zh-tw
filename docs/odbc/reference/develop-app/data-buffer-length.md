@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910203"
 ---
 # <a name="data-buffer-length"></a>資料緩衝區長度
 應用程式傳遞引數，名為的驅動程式的資料緩衝區的位元組長度*Columnsize*或類似的名稱。 例如，在下列呼叫**SQLBindCol**，應用程式指定的長度*ValuePtr*緩衝區 (**sizeof (***ValuePtr***)**):  

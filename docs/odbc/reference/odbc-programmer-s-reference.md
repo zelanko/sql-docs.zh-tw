@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921683"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 程式設計人員&#39;s 參考
 *ODBC 程式設計人員參考*包含下列各節。  

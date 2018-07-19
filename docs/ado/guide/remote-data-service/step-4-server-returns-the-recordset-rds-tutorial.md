@@ -2,7 +2,6 @@
 title: 步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程） |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7307eeef65ce29f02d864396100134a8082a754d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dec3b614f0401160df1310d80265d4a10798eb08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274487"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>步驟 4： 伺服器傳回的資料錄集 （RDS 教學課程）
 > [!IMPORTANT]

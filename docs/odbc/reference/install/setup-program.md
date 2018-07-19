@@ -21,9 +21,10 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916583"
 ---
 # <a name="setup-program"></a>安裝程式
-> **注意：**開頭為 Windows XP 和 Windows Server 2003、 **ODBC 隨附於 Windows 作業系統**。 您只明確應該在舊版 Windows 上安裝 ODBC。  
+> **注意：** 開頭為 Windows XP 和 Windows Server 2003、 **ODBC 隨附於 Windows 作業系統**。 您只明確應該在舊版 Windows 上安裝 ODBC。  
   
  使用者執行安裝程式，以啟動安裝程序。 安裝程式會寫入應用程式或驅動程式的開發人員。 除了安裝 ODBC 元件，它可以安裝其他軟體。 例如，應用程式開發人員可能使用相同的安裝程式來安裝 ODBC 元件並安裝他們的應用程式。  
   

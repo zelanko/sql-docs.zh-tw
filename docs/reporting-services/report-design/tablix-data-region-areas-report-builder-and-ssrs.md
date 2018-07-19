@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025885"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Tablix 資料區的區域 (報表產生器及 SSRS)
  在 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 分頁報表中，Tablix 資料區具有四個包含 Tablix 資料格的區域︰   

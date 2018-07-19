@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908353"
 ---
 # <a name="automatic-population-of-the-ipd"></a>IPD 中的自動擴展
 有些驅動程式都能參數化的查詢已備妥之後，設定 IPD 欄位。 描述項欄位會自動填入參數，包括資料類型、 有效位數、 小數位數和其他特性的相關資訊。 這相當於支援**SQLDescribeParam**。 當它有沒有其他方法來探索它，例如臨機操作查詢執行的應用程式不知道參數時，這項資訊可以是尤其有價值的應用程式。  

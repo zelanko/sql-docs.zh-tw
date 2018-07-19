@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_objects_disabled_on_compatibility_level_change (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 083af55f2629a14f2ad28b293bb84ea9184a0345
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37998140"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間資料-sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,11 +46,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="Arguments"></a> 引數  
  *compatibility_level*  
- **int**識別您打算設定的相容性層級。  
+ **int** ，識別您打算設定的相容性層級。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = 條件約束<br /><br /> 7 = 索引和堆積|  
 |**class_desc**|**nvarchar(60)**|條件約束的 OBJECT 或 COLUMN<br /><br /> 索引和堆積的 INDEX|  
@@ -114,13 +115,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 -   **Geography:: 減少**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>停用物件的行為  
- **索引**  
+ **[索引]**  
   
- 如果叢集的索引已停用，或如果進行強制的非叢集索引，就會引發下列錯誤: 「 查詢處理器會無法產生計畫，因為索引 ' %。\*ls' 在資料表或檢視表 ' %。\*ls' 已停用。 」 若要重新啟用這些物件，升級之後重建索引藉由呼叫**ALTER INDEX ON...重建**。  
+ 如果叢集的索引已停用，或如果進行強制的非叢集索引，就會引發下列錯誤: 「 查詢處理器會無法產生計畫，因為索引 ' %。\*ls' 在資料表或檢視表 ' %。\*ls' 已停用。 」 若要重新啟用這些物件，重建索引在升級之後藉由呼叫**ALTER INDEX ON...重建**。  
   
  **堆積**  
   
- 如果使用了內含停用之堆積的資料表，將會引發下列錯誤。 若要重新啟用這些物件，升級之後重建藉由呼叫**ALTER INDEX 所有 ON...重建**。  
+ 如果使用了內含停用之堆積的資料表，將會引發下列錯誤。 若要重新啟用這些物件，在升級後呼叫重建**ALTER INDEX 所有 ON...重建**。  
   
 ```  
 // ErrorNumber: 8674  
@@ -133,11 +134,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 // ErrorFirstProduct: SQL11  
 ```  
   
- 如果您嘗試在線上作業期間，重建堆積時，會引發錯誤。  
+ 如果您嘗試在線上作業期間重建堆積時，會引發錯誤。  
   
  **Check 條件約束和外部索引鍵**  
   
- 停用檢查條件約束和外部索引鍵不會引發錯誤。 但資料列如果有所修改，將不會強制執行條件約束。 若要重新啟用這些物件，請在升級後呼叫檢查的條件約束**ALTER TABLE...檢查條件約束**。  
+ 停用檢查條件約束和外部索引鍵不會引發錯誤。 但資料列如果有所修改，將不會強制執行條件約束。 若要重新啟用這些物件，請在升級後呼叫中檢查的條件約束**ALTER TABLE...檢查條件約束**。  
   
  **保存計算資料行**  
   
@@ -149,7 +150,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  需要 VIEW DATABASE STATE 權限。  
   
 ## <a name="example"></a>範例  
- 下列範例示範查詢**sys.dm_db_objects_disabled_on_compatibility_level_change**尋找受到變更為 120 的相容性層級的物件。  
+ 下列範例示範查詢**sys.dm_db_objects_disabled_on_compatibility_level_change**以尋找受到變更為 120 的相容性層級的物件。  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  

@@ -1,23 +1,21 @@
 ---
 title: 使用 PowerShell 部署 SSIS 專案 | Microsoft Docs
 ms.date: 05/21/2018
-ms.topic: conceptual
+ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: quick-start
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f245553e318ccdba4f8f5d212e5c4c92ec5564ca
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: eaa4be65ce76caaf8a772ff15805a1b8976068fc
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455121"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329192"
 ---
 # <a name="deploy-an-ssis-project-with-powershell"></a>使用 PowerShell 部署 SSIS 專案
 本快速入門示範如何使用 PowerShell 指令碼連線至資料庫伺服器，並將 SSIS 專案部署到 SSIS 目錄。
@@ -32,7 +30,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 
 -   Windows 上的 SQL Server。
 
--   Azure SQL Database。 如需在 Azure 部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
+-   Azure SQL Database。 如需在 Azure 中部署和執行套件的詳細資訊，請參閱[將 SQL Server Integration Services 工作負載隨即轉移至雲端](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)。
 
 您無法使用本快速入門中的資訊，將 SSIS 套件部署到 Linux 上的 SQL Server。 如需在 Linux 上執行套件詳細資訊，請參閱[使用 SSIS 在 Linux 上擷取、轉換和載入資料](../linux/sql-server-linux-migrate-ssis.md)。
 

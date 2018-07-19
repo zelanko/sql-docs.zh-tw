@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
@@ -16,11 +14,12 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4dbce50af5c97ec3912ff7251bc56d2e3ea6db9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b15b88320c48a711539c952ea749c21d85ab6e15
+ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042588"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   下表將描述 ODBC 來源的自訂屬性。 所有屬性都可從 SSIS 屬性運算式設定。  
@@ -36,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 |ExposeCharColumnsAsUnicode|布林|此屬性決定元件如何公開 CHAR 資料行。 預設值為 False，表示 CHAR 資料行公開為多位元組字串 (DT_STR)。 如果為 True，則 CHAR 資料行公開為寬字元字串 (DT_WSTR)。<br /><br /> **注意**：雖然您無法在 **[ODBC 來源編輯器]** 中使用這個屬性，但是可以使用 **[進階編輯器]** 來設定這個屬性。|  
 |FetchMethod|整數 (列舉)|用於取得資料的方法。 可能的選項為逐列 (0) 和批次 (1)。 預設值為批次 (1)。<br /><br /> 如需這些選項的詳細資訊，請參閱 [ODBC Source](../../integration-services/data-flow/odbc-source.md)。<br /><br /> **注意**：雖然您無法在 **[ODBC 來源編輯器]** 中使用這個屬性，但是可以使用 **[進階編輯器]** 來設定這個屬性。|  
 |SqlCommand|String|當 AccessMode 設為 [SQL 命令] 時要執行的 SQL 命令。|  
-|StatementTimeout|Integer|在傳回至應用程式並出現錯誤之前等候 SQL 陳述式執行的秒數。 預設值為 120。 值為 0 表示系統不會逾時。|  
+|StatementTimeout|Integer|在傳回至應用程式並出現錯誤之前等候 SQL 陳述式執行的秒數。 預設值是 0。 值為 0 表示系統不會逾時。|  
 |TableName|String|當 AccessMode 設為 [資料表名稱] 時所使用之資料的資料表名稱。|  
 |LobChunckSize|Integer|LOB 資料行的區塊大小配置。|  
 ||||  

@@ -2,7 +2,6 @@
 title: 資料提供者 |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddd360c49c3cbd10b76dc39e6c161a523a93b1bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 26f220f166e2269e59665a64c6e69504f298c5a9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270697"
 ---
 # <a name="data-providers"></a>資料提供者
 資料提供者會代表不同來源的資料，例如 SQL 資料庫、 編製索引循序性的檔案、 試算表、 文件儲存與郵件檔案。 提供者會公開一致地使用一般的抽象概念，稱為資料列集的資料。  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34044452"
 ---
 # <a name="install-distribute-and-reference-the-tabular-object-model"></a>安裝、 散佈及參考表格式物件模型
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -79,7 +80,7 @@ Json<br/>Microsoft.AnalysisServices.Tabular.Json.dll | 協助程式 DLL 包裝 N
   
 2. 按一下 [下載]。  
   
-3. 選取  **\X64\SQL_AS_AMO.msi**或 **\X86\SQL_AS_AMO.msi**。 您可以選擇其中一個： AMO 和 TOM 組件是平台限制。
+3. 選取  **\X64\SQL_AS_AMO.msi**或**\X86\SQL_AS_AMO.msi**。 您可以選擇其中一個： AMO 和 TOM 組件是平台限制。
   
 4. 按一下**下一步**以便進行下載。 您會發現.msi 檔案中的您**下載**資料夾。  
   

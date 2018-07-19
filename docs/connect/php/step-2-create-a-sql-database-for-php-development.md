@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f368f17e2c7492dec250341a43936a94ad08a4e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8c3a90464de49e5d0ca59b737e9fb6a567ac0605
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309607"
 ---
 # <a name="step-2-create-a-sql-database-for-php-development"></a>步驟 2： 建立 PHP 開發的 SQL 資料庫
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

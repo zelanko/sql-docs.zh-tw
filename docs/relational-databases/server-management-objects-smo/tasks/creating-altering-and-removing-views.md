@@ -1,5 +1,5 @@
 ---
-title: 建立、 改變和移除檢視 |Microsoft 文件
+title: 建立、 改變和移除檢視 |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -19,10 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2f0df94a2e52f1c8e4287246d8e1917db80b787d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995868"
 ---
 # <a name="creating-altering-and-removing-views"></a>建立、改變和移除檢視
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,10 +32,10 @@ ms.lasthandoff: 05/03/2018
  <xref:Microsoft.SqlServer.Management.Smo.View.TextBody%2A> 物件的 <xref:Microsoft.SqlServer.Management.Smo.View> 屬性會定義檢視。 它相當於[!INCLUDE[tsql](../../../includes/tsql-md.md)]建立檢視的 SELECT 陳述式。  
   
 ## <a name="example"></a>範例  
- 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[建立 Visual C&#35; SMO Project in Visual Studio](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  
+ 如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-basic"></a>在 Visual Basic 中建立、改變和移除檢視  
- 此程式碼範例示範如何使用內部聯結建立兩個資料表的檢視。 建立檢視時使用文字模式下，所以<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>屬性必須設定。  
+ 此程式碼範例示範如何使用內部聯結建立兩個資料表的檢視。 檢視由使用文字模式中，因此<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>屬性必須設定。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -56,7 +57,7 @@ myview.Drop()
 ```
   
 ## <a name="creating-altering-and-removing-a-view-in-visual-c"></a>在 Visual C# 中建立、改變和移除檢視  
- 此程式碼範例示範如何使用內部聯結建立兩個資料表的檢視。 建立檢視時使用文字模式下，所以<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>屬性必須設定。  
+ 此程式碼範例示範如何使用內部聯結建立兩個資料表的檢視。 檢視由使用文字模式中，因此<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>屬性必須設定。  
   
 ```csharp  
 {  
@@ -80,7 +81,7 @@ myview.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-view-in-powershell"></a>在 PowerShell 中建立、改變和移除檢視  
- 此程式碼範例示範如何使用內部聯結建立兩個資料表的檢視。 建立檢視時使用文字模式下，所以<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>屬性必須設定。  
+ 此程式碼範例示範如何使用內部聯結建立兩個資料表的檢視。 檢視由使用文字模式中，因此<xref:Microsoft.SqlServer.Management.Smo.View.TextHeader%2A>屬性必須設定。  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

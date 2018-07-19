@@ -2,7 +2,6 @@
 title: AppendChunk 方法 (ADO) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ba8020b9bf2666ba3b2ab0ffe9156c771360c95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3446061f98047d6af28725095ede2a30208969a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275907"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk 方法 (ADO)
 將資料附加至大型文字或二進位資料[欄位](../../../ado/reference/ado-api/field-object.md)，或[參數](../../../ado/reference/ado-api/parameter-object.md)物件。  
@@ -38,7 +38,7 @@ object.AppendChunk Data
 ```  
   
 #### <a name="parameters"></a>參數  
- *物件*  
+ *object*  
  A**欄位**或**參數**物件。  
   
  *資料*  
@@ -57,7 +57,7 @@ object.AppendChunk Data
 > [!NOTE]
 >  **AppendChunk**方法不能進行**欄位**物件[記錄 Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)物件。 它不會執行任何作業，並會產生執行階段錯誤。  
   
-## <a name="parameter"></a>매개 변수  
+## <a name="parameter"></a>參數  
  如果**adParamLong**位元**屬性**屬性**參數**物件設定為**true**，您可以使用**AppendChunk**該參數的方法。  
   
  第一個**AppendChunk**上呼叫**參數**物件會將資料寫入至參數，覆寫任何現有的資料。 後續**AppendChunk**上呼叫**參數**物件加入至現有的參數資料。 **AppendChunk**傳遞 null 值的呼叫就會捨棄所有參數的資料。  

@@ -1,5 +1,5 @@
 ---
-title: Members 元素 (XMLA) |Microsoft 文件
+title: Members 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ae4326e00ba98075a86079157484c5963d0147d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579100"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994710"
 ---
 # <a name="members-element-xmla"></a>Members 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含集合[成員](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)父元素所包含[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)項目。  
+  包含的集合[成員](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)父元素所包含的項目[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md)項目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -32,7 +32,7 @@ ms.locfileid: "34579100"
 </CrossProduct>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "34579100"
 |預設值|無|  
 |基數|0-n：出現一次以上的選擇性元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "34579100"
   
 |attribute|描述|  
 |---------------|-----------------|  
-|階層|需要**字串**屬性。 所包含的成員的階層名稱**成員**所屬項目。|  
+|階層|所需**字串**屬性。 階層的成員包含所要的名稱**成員**所屬項目。|  
   
 ## <a name="remarks"></a>備註  
- 當用戶端應用程式設定**AxisFormat**屬性*ClusterFormat*，每個座標軸上的成員會分成的叢集，其中每個叢集代表已排序集合之間的交叉乘積每個階層的成員。 每個**軸**元素都包含一或多個**CrossProduct**項目。 每個**CrossProduct**元素包含**成員**軸上每個階層的項目。 **成員**項目，依序包含一個**成員**交叉乘積中包含指定階層的每個成員的項目。  
+ 當用戶端應用程式設定**AxisFormat**屬性設*ClusterFormat*，每個座標軸上的為成員會分成的叢集，其中每個叢集代表已排序集合之間的交叉乘積每個階層的成員。 每個**軸**項目包含一個或多個**CrossProduct**項目。 每隔**CrossProduct**項目包含**成員**軸上每個階層的項目。 **成員**項目，依序包含一個**成員**交叉乘積中包含指定階層的每個成員的項目。  
   
 ## <a name="example"></a>範例  
- 下列範例說明結構**成員**時用戶端指定項目*ClusterFormat*如**AxisFormat**指定的 XMLA 屬性軸的下列成員：  
+ 下列範例說明的結構**成員**用戶端指定的項目*ClusterFormat* for **AxisFormat** XMLA 屬性軸的下列成員：  
   
 ||||||  
 |-|-|-|-|-|  

@@ -1,8 +1,7 @@
 ---
 title: Read 方法 |Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 53e3f6c3b780d9d78697fb33dfea5574457a6b2c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 371574fdaa0f6f9f82a40f8caf5f622633f4fa19
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280807"
 ---
 # <a name="read-method"></a>Read 方法
 從二進位檔中讀取指定的位元組數目[資料流](../../../ado/reference/ado-api/stream-object-ado.md)物件。  

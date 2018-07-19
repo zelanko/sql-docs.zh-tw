@@ -1,5 +1,5 @@
 ---
-title: 狀態屬性 （SqlService 類別） |Microsoft 文件
+title: 狀態屬性 （SqlService 類別） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,10 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 350d59fa026f16007cffd279f4f6298eeca86e6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005378"
 ---
 # <a name="state-property-sqlservice-class"></a>State 屬性 (SqlService 類別)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ object.State [= value]
 ```  
   
 ## <a name="parts"></a>組件  
- *物件*  
+ *object*  
  表示此服務的 [SqlService 類別](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) 物件。  
   
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值  

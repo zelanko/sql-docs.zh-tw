@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908493"
 ---
 # <a name="data-buffer-address"></a>資料緩衝區的位址
 應用程式會將資料緩衝區的位址傳遞給引數，通常名為的驅動程式*ValuePtr*或類似的名稱。 例如，在下列呼叫**SQLBindCol**，應用程式指定的位址*日期*變數：  

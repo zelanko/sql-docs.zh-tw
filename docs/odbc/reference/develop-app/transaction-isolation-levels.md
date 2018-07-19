@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32919043"
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級
 *交易隔離等級*是交易成功隔離程度的量值。 特別是，交易隔離等級的定義方式下列現象存在：  

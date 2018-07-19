@@ -13,7 +13,7 @@ ms.openlocfilehash: bdba96bec45395e1a3aa0cd5f99ce12d417f404f
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34573550"
 ---
 # <a name="caption-element-xmla"></a>Caption 元素 (XMLA)

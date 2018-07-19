@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912287"
 ---
 # <a name="multithreading"></a>多執行緒處理
 多執行緒在作業系統上，驅動程式必須具備執行緒安全。 也就是說，必須是可將多個執行緒上使用相同的控制代碼的應用程式。 這達成特定驅動程式和它可能會驅動程式會序列化任何嘗試同時在兩個不同的執行緒上使用相同的控制代碼。  

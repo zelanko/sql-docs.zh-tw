@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32796511"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO 動態屬性的索引
 資料提供者、 服務提供者，以及服務元件可以加入至動態屬性**屬性**集合未開啟[連接](../../../ado/reference/ado-api/connection-object-ado.md)和[資料錄集](../../../ado/reference/ado-api/recordset-object-ado.md)物件。 這些物件會在開啟時，給定的提供者可能也會插入額外的屬性。 其中某些屬性中所列[ADO 動態屬性](../../../ado/reference/ado-api/ado-dynamic-properties.md)> 一節。 多列中的特定提供者在[附錄 a： 提供者](../../../ado/guide/appendixes/appendix-a-providers.md)> 一節。  

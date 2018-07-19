@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xe_database_session_object_columns (Azure SQL Database) |Microsoft 文件
+title: sys.dm_xe_database_session_object_columns (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: ''
@@ -17,10 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 863b6d2c274c76919455a4ea68ba0e944d64f16e
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38029404"
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -29,15 +30,15 @@ ms.lasthandoff: 05/23/2018
   
 ||  
 |-|  
-|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及任何更新的版本。|  
+|**適用於**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 及更新的版本。|  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|事件工作階段的記憶體位址。 具有多對一關係 sys.dm_xe_database_sessions.address。 不可為 Null。|  
 |column_name|**nvarchar(60)**|組態值的名稱。 不可為 Null。|  
 |column_id|**int**|資料行的識別碼。 在物件中，這是唯一的。 不可為 Null。|  
 |column_value|**nvarchar(2048)**|資料行的設定值。 可為 Null。|  
-|object_type|**nvarchar(60)**|物件的型別。  不是 nullable.object_type 是下列之一：<br /><br /> event<br /><br /> target|  
+|object_type|**nvarchar(60)**|物件的型別。  不是 nullable.object_type 是其中一個：<br /><br /> event<br /><br /> 目標|  
 |object_name|**nvarchar(60)**|這個資料行所屬之物件的名稱。 不可為 Null。|  
 |object_package_guid|**uniqueidentifier**|包含物件之封裝的 GUID。 不可為 Null。|  
   

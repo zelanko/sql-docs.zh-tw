@@ -3,23 +3,22 @@ title: 使用 PowerShell 設定 Always Encrypted 金鑰 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
-ms.prod_service: security, sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b7f4f56828e8c1ec44c58feda21e5f061364b4b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f62c065e3545ae731ecefbb91d3755e7f3d006b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37295588"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>使用 PowerShell 設定永遠加密金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

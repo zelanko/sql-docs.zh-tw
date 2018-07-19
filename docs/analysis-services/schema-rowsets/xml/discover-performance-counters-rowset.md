@@ -14,12 +14,13 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34031749"
 ---
 # <a name="discoverperformancecounters-rowset"></a>DISCOVER_PERFORMANCE_COUNTERS 資料列集
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   傳回一個或多個效能計數器的值。 它不支援隨著時間傳回使用量相關資訊的計數器 (例如每秒磁碟讀取次數以及 CPU 使用量的百分比)。  
   
- **適用於：**表格式模型、 多維度模型  
+ **適用於：** 表格式模型、 多維度模型  
   
 ## <a name="rowset-columns"></a>資料列集資料行  
  **DISCOVER_PERFORMANCE_COUNTERS**資料列集包含下列資料行。  

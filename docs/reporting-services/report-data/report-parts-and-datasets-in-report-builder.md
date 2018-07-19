@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020665"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>報表產生器中的報表組件和資料集
   在報表產生器中，在報表內包含資料最簡單的方式，就是從報表組件庫加入報表組件。 報表組件包含相依的資料集，稱為 *「相依資料集」*(Dependent Dataset)。 相依資料集是以共用資料來源為基礎，而且可以是內嵌資料集或共用資料集。 深入了解 [報表組件](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)。  

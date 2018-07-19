@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 433635c8260ca4ae2d3a3132f093f8eb5341fad0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309187"
 ---
 # <a name="retrieving-data"></a>擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ PDO_SQLSRV 驅動程式的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
+|主題|描述|  
 |---------|---------------|  
 |[以資料流的形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|概略說明如何從伺服器串流處理資料，並提供特定使用案例的連結。|  
 |[使用方向參數](../../connect/php/using-directional-parameters.md)|說明如何在呼叫預存程序時使用參數方向。|  

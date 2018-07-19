@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -28,11 +27,12 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aacecfc425af980274435584a191614a0f9536a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74ab3804f6f62d6aadb9e45a57bd7169aa1d1e96
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409210"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>開發自訂工作的使用者介面
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 物件模型會提供自訂工作開發人員能夠輕鬆地針對工作建立自訂使用者介面的能力 (該介面之後可以在 [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] 中整合及顯示)。 使用者介面可在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中提供有用的資訊給使用者，然後指引使用者正確地設定自訂工作的屬性和設定。  

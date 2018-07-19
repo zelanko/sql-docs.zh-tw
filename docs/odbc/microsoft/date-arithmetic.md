@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899153"
 ---
 # <a name="date-arithmetic"></a>日期算術
 此驅動程式支援加入和減去的日期、 時間戳記資料行的整數。 日期資料行的整數會指定加上或減去的天數。 針對時間戳記資料行中，整數會指定要加上或減去秒的數。

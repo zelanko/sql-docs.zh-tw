@@ -1,5 +1,5 @@
 ---
-title: M (TRANSACT-SQL) |Microsoft 文件
+title: MSpublisher_databases (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,17 +26,18 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 130a176655a7574903e85aa6cfa55037ca977448
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993500"
 ---
 # <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSpublisher_databases**資料表包含每個發行者/發行者資料庫組本機散發者所服務的一個資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  

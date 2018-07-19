@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913073"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server 瀏覽範例
 下列範例會示範如何**SQLBrowseConnect**可能用來瀏覽 SQL server 驅動程式可用的連接。 首先，應用程式要求連接控制代碼：  

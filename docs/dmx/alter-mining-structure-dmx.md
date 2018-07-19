@@ -1,36 +1,20 @@
 ---
 title: 改變採礦結構 (DMX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ALTER_MINING_STRUCTURE
-- ALTER MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining structures [DMX], creating
-- WITH DRILLTHROUGH clause
-- column definition lists [DMX]
-- parameter lists [DMX]
-- ALTER MINING STRUCTURE statement
-ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05d1a7c0d1e28ae380be05058661221a4952228c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842691"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +112,7 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |詞彙|定義|  
-|**迴歸輸入變數**|指示演算法可以在迴歸演算法的迴歸公式中使用指定的資料行。|  
+|**REGRESSOR**|指示演算法可以在迴歸演算法的迴歸公式中使用指定的資料行。|  
 |**MODEL_EXISTENCE_ONLY**|指出屬性資料行的值是否比屬性的存在更重要。|  
   
  您可以為一個資料行定義多個模型旗標。 如需如何使用模型旗標的詳細資訊，請參閱[模型旗標&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)。  
@@ -220,6 +204,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>另請參閱  
  [資料採礦延伸模組&#40;DMX&#41;資料定義陳述式](../dmx/dmx-statements-data-definition.md)   
  [資料採礦延伸模組&#40;DMX&#41;資料操作陳述式](../dmx/dmx-statements-data-manipulation.md)   
- [資料採礦延伸模組 & #40; DMX & #41;陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
+ [資料採礦延伸模組 &#40;DMX&#41; 陳述式參考](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

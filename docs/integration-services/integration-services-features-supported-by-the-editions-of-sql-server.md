@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
@@ -16,11 +14,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aa387b2a7e53e104604545ed7f35dde6105701b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c7865910ffb00b654c8be47f87bef752df1368a
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411400"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 各版本支援的 Integration Services 功能
  本主題提供不同 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]版本所支援之 SQL Server Integration Services (SSIS) 功能的詳細資訊。  

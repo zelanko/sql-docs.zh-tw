@@ -1,5 +1,5 @@
 ---
-title: sp_help_spatial_geography_index_xml (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_spatial_geography_index_xml (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,15 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.openlocfilehash: 13c388b03208c015ab8f0f6405b33b8ac3bd4a80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000710"
 ---
 # <a name="sphelpspatialgeographyindexxml-transact-sql"></a>sp_help_spatial_geography_index_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  名稱和指定的屬性集的值會傳回有關**geography**空間索引。 您可以選擇傳回核心屬性集或索引的所有屬性。  
+  傳回有關的名稱和一組指定的屬性值**地理區**空間索引。 您可以選擇傳回核心屬性集或索引的所有屬性。  
   
  結果會以 XML 片段傳回，該片段會顯示所選取屬性的名稱和值。  
   
@@ -61,7 +62,7 @@ sp_help_spatial_geography_index_xml [ @tabname =] 'tabname'
  包含 NULL 值的屬性不會包含在傳回集合中。  
   
 ## <a name="example"></a>範例  
- 下列範例會使用`sp_help_spatial_geography_index_xml`來調查空間索引**SIndx_SpatialTable_geography_col2**資料表上定義**該索引是針對**的給定的查詢範例**@qs**. 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
+ 下列範例會使用`sp_help_spatial_geography_index_xml`來調查空間索引**SIndx_SpatialTable_geography_col2**資料表上定義**geography_col&lt**給定的查詢範例**@qs**. 此範例以 XML 片段傳回指定索引的核心屬性，該片段會顯示所選取屬性的名稱和值。  
   
  [XQuery](../../xquery/xquery-basics.md)接著會在結果集，傳回特定的屬性上執行。  
   
@@ -73,9 +74,9 @@ exec sp_help_spatial_geography_index_xml 'geography_col', 'SIndx_SpatialTable_ge
 select @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');  
 ```  
   
- 類似於[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)，此預存程序提供簡單的屬性以程式設計方式存取**geography**空間索引，並報告中 XML 的結果集。  
+ 類似於[sp_help_spatial_geography_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)，此預存程序提供更簡單的屬性以程式設計方式存取**geography**空間索引，並報告中 XML 的結果集。  
   
- 週框方塊的**geography**是整個地球。  
+ 週框方塊**地理區**是整個地球。  
   
 ## <a name="requirements"></a>需求  
   

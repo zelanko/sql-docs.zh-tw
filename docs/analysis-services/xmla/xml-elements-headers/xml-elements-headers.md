@@ -13,7 +13,7 @@ ms.openlocfilehash: e4a26e9545f08b85a0517379e4e45fc782c6c5c5
 ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/02/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34574040"
 ---
 # <a name="xml-elements---headers"></a>XML 項目-標頭

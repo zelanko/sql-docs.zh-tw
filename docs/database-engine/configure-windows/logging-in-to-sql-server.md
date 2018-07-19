@@ -25,11 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 769bb9418b3d631648f6f493aeb084b5fea0a619
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324432"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 |指定正在使用的通訊埠 (在此情況下，是 2828)，以連接至未接聽預設 TCP 通訊埠的預設執行個體 (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽預設通訊埠 (1433)，則不需要進行此作業)。|APPHOST,2828|  
 |連接至所指定 TCP 通訊埠 (在此情況下，是 2828) 的具名執行個體 (如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務不是在主機電腦上執行，通常會需要進行此作業)。|APPHOST,2828|  
 |指定正在使用的 IP 位址和 TCP 通訊埠 (在此情況下，是 2828)，以連接至未接聽預設 TCP 通訊埠的預設執行個體。|192.168.17.28,2828|  
-|指定正在使用的 IP 位址和 TCP 通訊埠 (在此情況下，是 2828)，以連接至具名執行個體。|192.168.17.28,2828|  
+|指定正在使用的 IP 位址和 TCP 通訊埠 (在此情況下，是 2828)，以連接至具名執行個體。|192.168.17.28\SQLEXPRESS,2828|  
 |依名稱連接至預設執行個體，強制進行 TCP 連接。|tcp:APPHOST|  
 |依名稱連接至具名執行個體，強制進行 TCP 連接。|tcp:APPHOST\SQLEXPRESS|  
 |指定具名管道名稱，以連接至預設執行個體。|\\\APPHOST\pipe\unit\app|  

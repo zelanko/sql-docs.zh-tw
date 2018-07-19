@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910653"
 ---
 # <a name="where-clause-limitations"></a>其中子句限制
 子句 WHERE 子句中的最大數目為 40。  

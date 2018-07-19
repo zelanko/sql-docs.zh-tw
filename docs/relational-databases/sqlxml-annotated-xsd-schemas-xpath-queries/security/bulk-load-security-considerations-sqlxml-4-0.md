@@ -1,5 +1,5 @@
 ---
-title: 大量載入安全性考量 (SQLXML 4.0) |Microsoft 文件
+title: 大量載入安全性考量 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,16 +22,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd240ede23b5ff4845531bebf24529bd0219c5ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971840"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>大量載入安全性考量 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   下面是使用 XML 大量載入的安全性指導方針：  
   
--   當您指定您使用大量載入作業當做交易執行， **TempFilePath**屬性來指定要在其中建立暫存檔的資料夾。  
+-   當您指定大量載入作業當做交易執行，建議您使用**TempFilePath**屬性來指定要在其中建立暫存檔的資料夾。  
   
      大量載入處理序會使用下列權限來建立這些暫存檔：  
   
@@ -60,6 +61,6 @@ ms.lasthandoff: 05/03/2018
 -   如果使用者設定了讓 SQLXML 寫入錯誤的錯誤記錄檔，每次執行大量載入時，系統都會使用上一個大量載入處理序的資料來覆寫該檔案。  
   
 ## <a name="see-also"></a>另請參閱  
- [執行大量載入 XML 資料 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [執行大量載入 XML 資料的&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025745"
 ---
 # <a name="subscription-and-delivery-methods"></a>訂閱與傳遞方法
   您可以使用這些方法來建立及管理目錄項目的訂閱與傳遞。  

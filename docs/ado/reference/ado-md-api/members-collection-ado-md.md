@@ -2,7 +2,6 @@
 title: 成員集合 (ADO MD) |Microsoft 文件
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18a3fac9cff0a41c9d1e7dc820d68ae77c294d4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d6b4a6902ebf9efae5b02eccb14f1d06e9279cc6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284623"
 ---
 # <a name="members-collection-ado-md"></a>成員集合 (ADO MD)
 包含[成員](../../../ado/reference/ado-md-api/member-object-ado-md.md)物件層級或沿座標軸的位置。  

@@ -3,27 +3,24 @@ title: Always Encrypted (用戶端開發) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2016
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f34940fce129a4a2d4921751d7691af99c071f9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5fc16ae7a4e051d7085cb4d6229da9b23824a761
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37272304"
 ---
 # <a name="always-encrypted-client-development"></a>永遠加密 (用戶端開發)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

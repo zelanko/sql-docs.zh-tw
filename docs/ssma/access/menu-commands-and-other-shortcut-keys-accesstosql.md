@@ -1,8 +1,6 @@
 ---
 title: 功能表命令和其他的快速鍵 (AccessToSQL) |Microsoft 文件
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c9119662915a4c2b83d8e50b33ab041f1fd248bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2735835c3eb0ca0a3e6a1f25e81182107a863e57
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774734"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>功能表命令和其他的快速鍵 (AccessToSQL)
 下列章節說明的鍵盤快速鍵，來存取功能表命令和其他的 SSMA 的各種對話方塊中用來存取應用程式的快速鍵。  

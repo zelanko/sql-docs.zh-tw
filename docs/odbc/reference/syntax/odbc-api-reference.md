@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921943"
 ---
 # <a name="odbc-api-reference"></a>ODBC 應用程式開發介面參考
 本節中的主題會描述每個 ODBC 函數，依字母順序。 每個函式定義為 C 程式設計語言的函式。 描述包含下列各項：  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920393"
 ---
 # <a name="driver-specification-subkeys"></a>驅動程式規格子機碼
 ODBC 驅動程式的子機碼中列出的每個驅動程式都有自己的子機碼。 這個子機碼有同名的 ODBC 驅動程式的子機碼下的對應值。 這個子機碼下的值清單之驅動程式和驅動程式安裝程式所傳回的驅動程式關鍵字值的 Dll 的完整路徑**SQLDrivers**，和使用方式計數。 值的格式是下表所示。  

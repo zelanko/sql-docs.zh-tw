@@ -1,40 +1,25 @@
 ---
 title: 識別項 (MDX) |Microsoft 文件
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- formats [Analysis Services]
-- Multidimensional Expressions [Analysis Services], identifiers
-- identifiers [MDX]
-- MDX [Analysis Services], identifiers
-- delimited identifiers [MDX]
-- regular identifiers [MDX]
-- formats [Analysis Services], identifiers
-ms.assetid: 739a8a67-bef3-4b56-961d-ee96cfc36b5b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: a04d387c0ee40d825fddf3c50f02793e722cdbc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 7562beb2cccd94853c346aaf2f1be1886a2e3ac5
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740807"
 ---
 # <a name="identifiers-mdx"></a>識別碼 (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  識別項是名稱[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]物件。 每個 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 物件都必須要擁有一個識別碼。 這包括 Cube、維度、階層、層級、成員等等。 您可以使用物件的識別碼，以參考多維度運算式 (MDX) 陳述式中的物件。  
+
+  識別項是 Analysis Services 物件的名稱。 每個物件也必須有識別碼。 這包括 Cube、維度、階層、層級、成員等等。 您可以使用物件的識別碼，以參考多維度運算式 (MDX) 陳述式中的物件。  
   
  根據您如何命名物件，物件識別碼的識別碼將會是一般識別碼或是分隔識別碼。  
   
@@ -95,7 +80,7 @@ ms.lasthandoff: 05/03/2018
   
 -   當物件名稱或名稱的一部份使用保留關鍵字時。  
   
-     建議您不要使用保留關鍵字作為物件名稱。 從舊版升級的資料庫[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能會包含在先前的版本中包含不是保留字的識別項，但是是保留的字的[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 您可以使用分隔識別碼參考物件，直到您變更了物件的識別碼。  
+     建議您不要使用保留關鍵字作為物件名稱。 從舊版升級的資料庫[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]可能包含在先前的版本中包含不是保留字的識別項，但目前保留。 您可以使用分隔識別碼參考物件，直到您變更了物件的識別碼。  
   
 -   當物件名稱使用未列為限定識別碼的字元時。  
   
@@ -139,8 +124,8 @@ ms.lasthandoff: 05/03/2018
  此外，前例中的 Measures 識別碼已經進行分隔，以示範如何分隔多個識別碼。  
   
 ## <a name="see-also"></a>另請參閱  
- [MDX 語言參考 & #40;MDX & #41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 查詢基礎觀念 & #40;Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 語言參考&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [MDX 查詢基礎觀念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX 語法元素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

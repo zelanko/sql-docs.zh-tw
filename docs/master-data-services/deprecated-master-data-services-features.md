@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 18
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 521fe7bee8ca499c7900277b433a02669883dddd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edc5d786ebfd5093c1caf284122345cfb344f07e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401160"
 ---
 # <a name="deprecated-master-data-services-features"></a>取代的 Master Data Services 功能
 

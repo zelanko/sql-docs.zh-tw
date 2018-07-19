@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911643"
 ---
 # <a name="ordinary-arguments"></a>一般引數
 目錄函式的字串引數時的一般引數，則會視為常值字串。 一般的引數會接受字串的搜尋模式都值的清單。 一般的引數的情況下會很可觀，並在字串中的引號字元字面。 這些引數會被視為一般引數如果 SQL_ATTR_METADATA_ID 陳述式屬性設定為 SQL_FALSE。它們會被視為識別碼引數而如果此屬性設定為 SQL_TRUE。  

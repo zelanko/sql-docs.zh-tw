@@ -1,11 +1,8 @@
 ---
 title: 建立和執行簡單的命令，|Microsoft 文件
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: ado
-ms.technology:
-- drivers
+ms.prod_service: connectivity
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +17,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 147ae6b84bb3b40b7737bf99ee427a73bff33eb6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 1ea6ec81992ba286d589f83bcd1c23f751249f89
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270907"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>建立和執行簡單的命令
 簡單的命令是指未參數化，而且需要沒有持續性。 有三種方式，來建立和執行簡單的命令。  

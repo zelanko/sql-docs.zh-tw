@@ -1,10 +1,9 @@
 ---
 title: 設定原生模式報表伺服器向外延展部署 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: install-windows
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
@@ -19,17 +18,22 @@ caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5c832e283da1b853cf135e7f6d9dba8af042effb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 344c748b915ff8db4ce8a58267ab5e343a03c4f5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35322427"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>設定原生模式報表伺服器向外延展部署
 
-  Reporting Services 原生模式支援向外延展部署模型，它可讓您在執行多個報表伺服器執行個體時共用單一報表伺服器資料庫。 向外延展部署是用來提高報表伺服器的延展性，以便處理更多的並行使用者及更大量的報表執行負載。 它也可以給特定伺服器專用，以處理互動式或已排程的報表。  
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+Reporting Services 原生模式支援向外延展部署模型，它可讓您在執行多個報表伺服器執行個體時共用單一報表伺服器資料庫。 向外延展部署是用來提高報表伺服器的延展性，以便處理更多的並行使用者及更大量的報表執行負載。 它也可以給特定伺服器專用，以處理互動式或已排程的報表。
+
+若為 Power BI 報表伺服器，您需要在負載平衡器上針對所有向外延展環境設定用戶端親和性 (有時稱為黏性工作階段)，以確保適當的效能。  
   
- SharePoint 模式報表伺服器會利用 SharePoint 產品基礎結構進行向外延展。SharePoint 模式向外延展是透過將其他 SharePoint 模式報表伺服器加入至 SharePoint 伺服器陣列來執行。 如需 SharePoint 模式中向外延展的資訊，請參閱[將其他報表伺服器新增至伺服器陣列 &#40;SSRS 向外延展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
+若為 SQL Server 2016 Reporting Services，SharePoint 模式報表伺服器會利用 SharePoint 產品基礎結構進行向外延展。SharePoint 模式向外延展是透過將其他 SharePoint 模式報表伺服器加入至 SharePoint 伺服器陣列來執行。 如需 SharePoint 模式中向外延展的資訊，請參閱[將其他報表伺服器新增至伺服器陣列 &#40;SSRS 向外延展&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)。  
  
   *「向外延展部署」* (Scale-out Deployment) 的使用案例如下：  
   
@@ -75,9 +79,9 @@ ms.lasthandoff: 05/03/2018
 
 用於 Reporting Services 執行個體的服務帳戶在處理向外延展部署時很重要。 您應該在部署 Reporting Services 執行個體時，執行下列其中一項。
 
-**選項 1：**所有 Reporting Services 執行個體都應該設定為使用服務帳戶的相同網域使用者帳戶。
+**選項 1：** 所有 Reporting Services 執行個體都應該設定為使用服務帳戶的相同網域使用者帳戶。
 
-**選項 2：**每個服務帳戶不論是否為網域帳戶，都必須授與主控 ReportServer 目錄資料庫之 SQL Server 資料庫執行個體的 dbadmin 權限。
+**選項 2：** 每個服務帳戶不論是否為網域帳戶，都必須授與主控 ReportServer 目錄資料庫之 SQL Server 資料庫執行個體的 dbadmin 權限。
 
 如果您已設定與上述兩個選項不同的設定，則可能會修改 SQL Agent 工作時發生斷斷續續的失敗。 編輯報表訂閱時，這會同時在 Reporting Services 記錄和入口網站上顯示為一個錯誤。
 

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_maintenance_plan (TRANSACT-SQL) |Microsoft 文件
+title: sp_delete_maintenance_plan (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,10 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4baa06f92e9f12b1b46e888b298eb1b90ef4fe70
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049536"
 ---
 # <a name="spdeletemaintenanceplan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
   
 ## <a name="arguments"></a>引數  
  [  **@plan_id =**] **'***plan_id***'**  
- 指定要刪除之維護計畫的識別碼。 *plan_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
+ 指定要刪除之維護計畫的識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  

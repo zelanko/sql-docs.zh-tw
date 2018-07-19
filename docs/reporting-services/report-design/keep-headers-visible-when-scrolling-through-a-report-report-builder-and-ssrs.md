@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023405"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>在報表中捲動時將標頭保持可見 (報表產生器及 SSRS)
   若要避免資料列和資料行的標籤在轉譯報表之後捲動到檢視畫面以外，可以將資料列或資料行的標題凍結。  
