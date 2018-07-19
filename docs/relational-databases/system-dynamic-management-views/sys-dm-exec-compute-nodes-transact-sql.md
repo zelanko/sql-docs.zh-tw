@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_compute_nodes (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_exec_compute_nodes & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -27,27 +27,28 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2e0c2b19e9d790e25f78b88160b96a5f0d4d9eb8
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061556"
 ---
-# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (TRANSACT-SQL)
+# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  保留和 PolyBase 資料管理搭配使用的節點相關資訊。 它會列出每個節點的一個資料列。  
+  含有 PolyBase 的資料管理搭配使用的節點相關資訊。 它會列出每個節點的一個資料列。  
   
- 您可以使用這個 DMV，查看其角色、 名稱和 IP 位址與向外延展叢集中所有節點的清單。  
+ 您可以使用此 DMV，查看與他們的角色、 名稱和 IP 位址向外延展叢集中所有節點的清單。  
   
-|資料行名稱|資料類型|Description|範圍|  
+|資料行名稱|資料類型|描述|範圍|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**int**|與節點相關聯的唯一數值識別碼。 此檢視的索引鍵。|不論類型為何的相應放大叢集之間是唯一的。|  
-|型別|**nvarchar(32)**|節點的類型。|' COMPUTE'、 '標頭'|  
-|name|**nvarchar(32)**|節點的邏輯名稱。|任何適當的長度的字串。|  
+|compute_node_id|**int**|與節點相關聯的唯一數值識別碼。 此檢視的索引鍵。|跨相應放大叢集，無論何種類型是唯一的。|  
+|型別|**nvarchar(32)**|節點型別。|' COMPUTE'、 'HEAD'|  
+|NAME|**nvarchar(32)**|節點的邏輯名稱。|任何適當的長度的字串。|  
 |address|**nvarchar(32)**|此節點的 P 位址。|IP 位址範圍|  
   
 ## <a name="see-also"></a>另請參閱  
- [PolyBase，疑難排解動態管理檢視](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [PolyBase 疑難排解動態管理檢視](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   

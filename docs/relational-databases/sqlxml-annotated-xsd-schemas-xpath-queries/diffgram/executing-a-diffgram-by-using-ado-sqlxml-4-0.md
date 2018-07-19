@@ -1,5 +1,5 @@
 ---
-title: 使用 ADO (SQLXML 4.0) 執行 DiffGram |Microsoft 文件
+title: 使用 ADO (SQLXML 4.0) 中執行 DiffGram |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 02796c6cfe29817c48541a6b42b660ca7b2b0b57
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969105"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053716"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>使用 ADO 執行 DiffGram (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "32969105"
   
 -   DiffGram 會複製到命令資料流 (**strmIn**) 檔案。  
   
--   命令的輸出資料流設**StrmOut**物件 (**ADODB。資料流**) 才能接受任何傳回的資料。  
+-   命令的輸出資料流設定為**StrmOut**物件 (**ADODB。Stream**) 才能接受任何傳回的資料。  
   
--   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要搭配 SQLOLEDB 提供者使用 Sqlxml4.dll **SQLXML Version**屬性必須設定為**SQLXML.4.0** SQLOLEDB 提供者上**連接**物件。  
+-   當您使用 SQLOLEDB 提供者時，根據預設，您會取得 Sqlxmlx.dll 提供的 Microsoft SQLXML 功能。 若要搭配 SQLOLEDB 提供者使用 Sqlxml4.dll **SQLXML Version**屬性必須設為**SQLXML.4.0** SQLOLEDB 提供者**連接**物件。  
   
 -   執行命令 (DiffGram)。  
   
@@ -101,7 +101,7 @@ End Sub
     Microsoft ActiveX Data Objects 2.8 Library  
     ```  
   
-4.  在工具箱中，按一下  **CommandButton**，然後在表單上繪製一個按鈕。  
+4.  在 [工具箱] 中，按一下**CommandButton**，然後在表單上繪製一個按鈕。  
   
 5.  按兩下該按鈕來編輯程式碼，然後加入主題中提供之應用程式的程式碼。  
   

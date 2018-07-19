@@ -19,16 +19,16 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a109d7f23ad475fa9d8f1229be5011495f94354f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236023"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060366"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  取得**stmt_sql_handle**如[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式指定參數化類型 （簡單或強制）。 這可讓您使用儲存在查詢存放區中的查詢是指其**stmt_sql_handle**當您知道它們的文字。  
+  取得**stmt_sql_handle**如[!INCLUDE[tsql](../../includes/tsql-md.md)]底下的陳述式指定參數化類型 （簡單或強制）。 這可讓您使用在查詢存放區中儲存的查詢，請參閱其**stmt_sql_handle**當您知道它們的文字。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,29 +44,29 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>引數  
  *query_sql_text*  
- 這是查詢的您想要的控制代碼的查詢存放區中文字。 *query_sql_text*是**nvarchar （max)**，沒有預設值。  
+ 這是查詢的您想要的控制代碼的查詢存放區中的文字。 *query_sql_text*已**nvarchar （max)**，沒有預設值。  
   
  *query_param_type*  
- 為查詢的參數型別。 *query_param_type*是**tinyint**。 可能的值為：  
+ 是查詢的參數類型。 *query_param_type*已**tinyint**。 可能的值為：  
   
--   NULL-預設值為 0  
+-   NULL – 預設為 0  
   
 -   0 – 無  
   
--   1 – 使用者  
+-   1-使用者  
   
--   2-簡單  
+-   2 – 簡單  
   
 -   3 – 強制  
   
 ## <a name="columns-returned"></a>傳回的資料行  
  下表列出的資料行傳回該 sys.fn_stmt_sql_handle_from_sql_stmt。  
   
-|資料行名稱|類型|Description|  
+|資料行名稱|類型|描述|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL 控制代碼。|  
 |**query_sql_text**|**nvarchar(max)**|文字[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。|  
-|**query_parameterization_type**|**tinyint**|查詢參數化類型。|  
+|**query_parameterization_type**|**tinyint**|查詢參數化型別。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -74,17 +74,17 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>Permissions  
- 需要**EXECUTE**資料庫的權限和**刪除**查詢存放區目錄檢視 」 權限。  
+ 需要**EXECUTE**的資料庫上的權限並**刪除**查詢存放區目錄檢視的權限。  
   
 ## <a name="examples"></a>範例  
- 下列範例會執行陳述式，並接著會使用`sys.fn_stmt_sql_handle_from_sql_stmt`傳回該陳述式的 SQL 控制代碼。  
+ 下列範例會執行陳述式，然後使用`sys.fn_stmt_sql_handle_from_sql_stmt`傳回該陳述式的 SQL 控制代碼。  
   
 ```  
 SELECT * FROM sys.databases;   
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- 您可以使用函數來相互關聯查詢存放區資料與其他動態管理檢視。 下列範例中：  
+ 使用其他動態管理檢視與相互關聯查詢存放區資料的函數。 下列範例：  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  
@@ -102,8 +102,8 @@ JOIN sys.dm_exec_query_stats AS qs
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
- [sp_query_store_remove_query &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_flush_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_remove_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

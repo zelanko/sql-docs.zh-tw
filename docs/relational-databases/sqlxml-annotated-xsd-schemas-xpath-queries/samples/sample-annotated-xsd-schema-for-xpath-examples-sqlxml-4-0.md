@@ -1,5 +1,5 @@
 ---
-title: XPath 範例 (SQLXML 4.0) 的範例註解的 XSD 結構描述 |Microsoft 文件
+title: 範例的註解式 XSD 結構描述 XPath 範例 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,21 +21,21 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6af6bcbd760cb74c55bda4caa3164bc304dadcd8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968603"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053726"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>XPath 範例的範例註解式 XSD 結構描述 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  本章節的範例 XPath 查詢會參考對應結構描述。 此對應結構描述是註解式 XML 結構描述 (XSD) 檔案。 如需有關對應結構描述的詳細資訊，請參閱[註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。  
+  本章節的範例 XPath 查詢會參考對應結構描述。 此對應結構描述是註解式 XML 結構描述 (XSD) 檔案。 如需有關對應結構描述的詳細資訊，請參閱 <<c0> [ 註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。</c0>  
   
  以下是針對註解式 XSD 結構描述執行 XPath 查詢所需的處理：  
   
--   建立包含 XPath 查詢的範本。 在此範本中，您會指定 XPath 查詢執行時所要針對的對應結構描述。 在此情況下，對應結構描述必須儲存在目錄中 (或其子目錄，其中將相對路徑指定的值為**對應結構描述**範本中的屬性) 範本檔案相關聯。  
+-   建立包含 XPath 查詢的範本。 在此範本中，您會指定 XPath 查詢執行時所要針對的對應結構描述。 在此案例中，對應結構描述必須儲存在目錄中 (或其子目錄，其中將相對路徑指定的值的其中一個**對應結構描述**範本中的屬性) 的範本檔案相關聯。  
   
--   建立一個將 SQLXML 延伸模組用於 ADO 來執行查詢的測試應用程式。 如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+-   建立一個將 SQLXML 延伸模組用於 ADO 來執行查詢的測試應用程式。 如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  在本章節的所有範例中，為了加以說明，將會在範本中指定 XPath 查詢，而且會使用 ADO 來執行此範本。 因此，您必須使用下列的對應結構描述檔案 SampleSchema1.xml。 將這個檔案儲存在您存放範本的目錄中。  
   

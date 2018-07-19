@@ -1,5 +1,5 @@
 ---
-title: sys.sp_flush_log (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_flush_log & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 010870b0364cd302928fd9e0cc8491133f2283b4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253819"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060235"
 ---
 # <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33253819"
   
  如果您是因為效能優勢而選擇要使用延遲的交易持久性，但又想要確保伺服器當機或容錯移轉時遺失的資料量有所限制，請定期執行 `sys.sp_flush_log`。 例如，假設您想要確保遺失的資料量不超過 x 秒，就應該每隔 x 秒執行 `sp_flush_log`。  
   
- 執行 `sys.sp_flush_log` 可保證所有先前認可的延遲持久交易都會變成持久。 請參閱觀念性主題[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)如需詳細資訊。  
+ 執行 `sys.sp_flush_log` 可保證所有先前認可的延遲持久交易都會變成持久。 請參閱概念性主題[控制交易持久性](../../relational-databases/logs/control-transaction-durability.md)如需詳細資訊。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: SMO 語法慣例 |Microsoft 文件
+title: SMO 語法慣例 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +22,16 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 623117b4906e00096788fc1f7746a7fe715c7379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062099"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 語法慣例
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理物件 (SMO) 印刷慣例根據所使用的[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio.NET 參考資料。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理物件 (SMO) 印刷慣例根據所使用的[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio.NET 參考資料。  
   
 |慣例|用於|  
 |----------------|--------------|  

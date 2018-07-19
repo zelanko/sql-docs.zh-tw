@@ -1,5 +1,5 @@
 ---
-title: sys.dm_continuous_copy_status (Azure SQL Database) |Microsoft 文件
+title: sys.dm_continuous_copy_status (Azure SQL Database) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -27,20 +27,21 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 478e5ed025fb371d7b615e39580865346413d4b6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061796"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  傳回資料列的每個使用者資料庫 (V11) 目前參與異地備援連續複製關聯性。 如果給定的主要資料庫起始一個以上的連續複製關聯性，這個資料表會針對每個使用中的次要資料庫各包含一個資料列。  
+  傳回一個資料列的每個使用者資料庫 (V11) 目前參與異地複寫連續複製關聯性。 如果給定的主要資料庫起始一個以上的連續複製關聯性，這個資料表會針對每個使用中的次要資料庫各包含一個資料列。  
   
-如果您使用 SQL Database V12 您應該使用[sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (因為*sys.dm_continuous_copy_status*只適用於 V11)。
+您應該使用 如果您使用 SQL Database V12 [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (因為*sys.dm_continuous_copy_status*只會套用至 V11)。
 
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|複本資料庫的唯一識別碼。|  
 |**partner_server**|**sysname**|連結的 SQL Database 伺服器的名稱。|  
@@ -54,17 +55,17 @@ ms.lasthandoff: 05/23/2018
 |**is_interlink_connected**|**bit**|1 = 互連已連接。<br /><br /> 0 = 互連中斷連接。|  
   
 ## <a name="permissions"></a>Permissions  
- 要擷取資料，需要的成員資格**db_owner**資料庫角色。 Dbo 使用者、 成員的**dbmanager**資料庫角色和 sa 登入全都可以查詢此檢視也。  
+ 若要擷取資料，需要的成員資格**db_owner**資料庫角色。 成員、 dbo 使用者**dbmanager**資料庫角色，以及 sa 登入全都可以查詢此檢視也。  
   
 ## <a name="remarks"></a>備註  
- **Sys.dm_continuous_copy_status**中建立檢視**資源**資料庫中，會顯示在所有資料庫，包括邏輯 master 中。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
+ **Sys.dm_continuous_copy_status**中建立檢視**資源**資料庫，並會出現在所有資料庫，包括邏輯 master。 不過，在邏輯 master 中查詢這個檢視表會傳回空集。  
   
  如果在資料庫上，該資料庫中的資料列的連續複製關聯性終止**sys.dm_continuous_copy_status**檢視就會消失。  
   
- 像**sys.dm_database_copies**  檢視中， **sys.dm_continuous_copy_status**會反映連續複製關聯性中資料庫的主要或作用中次要資料庫的狀態. 不同於**sys.dm_database_copies**， **sys.dm_continuous_copy_status**包含數個資料行提供有關作業與效能的詳細資料。 這些資料行包含**last_replication**，和**replication_lag_sec**...  
+ 像是**sys.dm_database_copies**檢視中， **sys.dm_continuous_copy_status**反映資料庫的其中一個主要或作用中次要資料庫的連續複製關聯性的狀態. 不同於**sys.dm_database_copies**， **sys.dm_continuous_copy_status**包含數個資料行提供有關作業與效能的詳細資料。 這些資料行包含**last_replication**，並**replication_lag_sec**...  
   
 ## <a name="see-also"></a>另請參閱  
  [sys.dm_database_copies &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)   
- [作用中地理複寫預存程序&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
+ [作用中異地複寫預存程序&#40;Transact SQL&#41;](http://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)  
   
   

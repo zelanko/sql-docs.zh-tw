@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_log_info (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -24,16 +24,16 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e2b99ce1a417c31b4ca81eb9f538acda0edfc517
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464654"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061516"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-傳回[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)交易記錄的資訊。 請注意，所有交易記錄檔會都併入資料表輸出。 在輸出中的每個資料列代表 VLF 中的交易記錄檔，並提供該記錄檔中的 VLF 的相關資訊。
+傳回[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)交易記錄的資訊。 請注意，所有交易記錄檔會都結合資料表輸出中。 在輸出中的每個資料列代表交易記錄檔中的 VLF，並提供該記錄檔中的 VLF 的相關資訊。
 
 ## <a name="syntax"></a>語法  
   
@@ -43,26 +43,26 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="arguments"></a>引數  
  *database_id* |NULL |預設值  
- 資料庫的識別碼。 *database_id* 為 **int**。有效輸入如下的資料庫、 NULL 或預設的識別碼。 預設值是 NULL。 NULL 和 DEFAULT 是目前資料庫內容中的對等值。
+ 資料庫的識別碼。 *database_id* 為 **int**。有效輸入如下的資料庫、 NULL 或預設的 ID 編號。 預設值是 NULL。 NULL 和 DEFAULT 是目前資料庫內容中的對等值。
  
  請指定 NULL 來傳回目前資料庫的 VLF 資訊。
 
- 內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 當使用`DB_ID`如果不指定資料庫名稱，在目前資料庫的相容性層級必須是 90 或更高。  
+ 內建函式[DB_ID](../../t-sql/functions/db-id-transact-sql.md)可以指定。 當使用`DB_ID`如果沒有指定資料庫名稱，目前資料庫的相容性層級必須是 90 （含） 更高。  
 
 ## <a name="table-returned"></a>傳回的資料表  
 
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|資料庫識別碼。|
 |file_id|**smallint**|交易記錄檔的檔案識別碼。|  
-|vlf_begin_offset|**bigint** |位移位置的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)從交易記錄檔的開頭。|
+|vlf_begin_offset|**bigint** |位移的位置[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)從交易記錄檔的開頭。|
 |vlf_size_mb |**float** |[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)大小以 mb 為單位，四捨五入為 2 的小數位數。|     
-|vlf_sequence_number|**bigint** |[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)建立順序的序號。 用來唯一識別記錄檔中的 Vlf。|
-|vlf_active|**bit** |指出是否[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)是否為使用中。 <br />0-VLF 不在使用中。<br />1-VLF 為作用中。|
-|vlf_status|**int** |狀態[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。 可能值包括： <br />0-VLF 為非使用中 <br />1-VLF 已初始化但未使用 <br /> 2-VLF 為作用中。|
-|vlf_parity|**tinyint** |同位檢查的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。內部用來判斷 VLF 中的記錄檔的結尾。|
-|vlf_first_lsn|**nvarchar(48)** |[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)中的第一筆記錄的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
-|vlf_create_lsn|**nvarchar(48)** |[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)記錄檔的記錄建立[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
+|vlf_sequence_number|**bigint** |[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)的建立順序的序號。 用來唯一識別記錄檔中的 Vlf。|
+|vlf_active|**bit** |指出是否[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)是否正在使用中。 <br />0-VLF 不在使用中。<br />1-VLF 為作用中。|
+|vlf_status|**int** |狀態[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。 可能值包括： <br />0-VLF 處於非使用中 <br />1-VLF 已初始化但未使用 <br /> 2-VLF 為作用中。|
+|vlf_parity|**tinyint** |同位檢查[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。內部用來判斷 VLF 中的記錄檔的結尾。|
+|vlf_first_lsn|**nvarchar(48)** |[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)第一筆記錄中的[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
+|vlf_create_lsn|**nvarchar(48)** |[記錄序號 (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)記錄檔記錄建立[虛擬記錄檔 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)。|
 
 ## <a name="remarks"></a>備註
 `sys.dm_db_log_info`動態管理函數會取代`DBCC LOGINFO`陳述式。    
@@ -72,8 +72,8 @@ sys.dm_db_log_info ( database_id )
   
 ## <a name="examples"></a>範例  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. 判斷 tempdb 資料庫中有大量的 Vlf 的 SQL Server 執行個體
-下列查詢會判斷資料庫有超過 100 個 Vlf 中的記錄檔，這可能會影響資料庫啟動、 還原及復原時間。
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. 判斷 SQL Server 執行個體大量 Vlf 中的資料庫
+下列查詢會判斷資料庫中的記錄檔，這可能會影響資料庫啟動、 還原和復原時間超過 100 個 Vlf。
 
 ```sql
 SELECT [name], COUNT(l.database_id) AS 'vlf_count' 
@@ -83,9 +83,9 @@ GROUP BY [name]
 HAVING COUNT(l.database_id) > 100
 ```
 
-### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 判斷 tempdb 的最後位置`VLF`之前記錄檔壓縮交易記錄檔中
+### <a name="b-determing-the-position-of-the-last-vlf-in-transaction-log-before-shrinking-the-log-file"></a>B. 判斷的最後一個位置`VLF`壓縮記錄檔之前的交易記錄檔中
 
-下列查詢可用來判斷交易記錄，以判斷是否可以壓縮交易記錄檔上執行 shrinkfile 之前的最後一個使用中的 VLF 的位置。
+下列查詢可用來判斷交易記錄檔，以判斷是否可以壓縮交易記錄檔上執行 shrinkfile 之前的最後一個使用中 VLF 的位置。
 
 ```sql
 USE AdventureWorks2016

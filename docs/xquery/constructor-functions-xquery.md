@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6db36cc2dbd664869633d1d2f198684098ba29b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077719"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38059728"
 ---
 # <a name="constructor-functions-xquery"></a>建構函式函數 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  任何內建的 XSD 類型。  
   
 ## <a name="remarks"></a>備註  
- 基本及衍生的不可部份完成 XSD 類型都可以支援建構函式。 不過，類型的子**xs: duration**，其中包括**xdt: yearmonthduration 和 xdt: daytimeduration**，和**xs: qname**， **xs**，和**xs: notation**不支援。 假如使用者自訂的不可部份完成類型是由以下的類型直接或間接衍生，您也可以使用可在相關結構描述中取得的這種類型。  
+ 基本及衍生的不可部份完成 XSD 類型都可以支援建構函式。 不過的子**xs: duration**，其中包括**xdt: yearmonthduration 和 xdt: daytimeduration**，並**xs: qname**， **xs**，並**xs: notation**不支援。 假如使用者自訂的不可部份完成類型是由以下的類型直接或間接衍生，您也可以使用可在相關結構描述中取得的這種類型。  
   
 #### <a name="supported-base-types"></a>支援的基本類型  
  以下是支援的基本類型：  
@@ -143,7 +143,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   如果引數是其他類型的常值，則將會在編譯期間評估運算式。 當該值無法滿足類型條件約束時，就會傳回空白時序。  
   
 ## <a name="examples"></a>範例  
- 本主題提供 XQuery 範例，針對 XML 執行個體儲存在各種**xml**類型 AdventureWorks 資料庫中的資料行。  
+ 本主題提供 XQuery 範例，針對 XML 執行個體儲存於各種**xml**類型資料行中的 AdventureWorks 資料庫。  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. 使用 dateTime() XQuery 函數擷取較舊的產品描述  
  在此範例中，範例 XML 文件會先指派給**xml**類型變數。 此文件包含三個範例 <`ProductDescription`> 元素，而每個元素都包含一個 <`DateCreated`> 子元素。  
@@ -181,9 +181,9 @@ select @x.query('
   
  請注意下列項目是從上一個查詢而來：  
   
--   FOR ...WHERE 迴圈結構用來擷取\<ProductDescription > 滿足 WHERE 子句中指定之條件的項目。  
+-   FOR ...WHERE 迴圈結構用以擷取\<ProductDescription > 滿足 WHERE 子句中指定之條件的項目。  
   
--   **Datetime （)** 建構函式用來建構**dateTime**類型值，因此它們可以適當地比較。  
+-   **Datetime （)** 建構函式用來建構**dateTime**型別值，因此它們可以進行適當地進行比較。  
   
 -   然後查詢會建構產生的 XML。 因為您正在建構一連串的屬性，所以 XML 建構中會使用逗號及括號。  
   
