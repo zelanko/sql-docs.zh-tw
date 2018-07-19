@@ -1,5 +1,5 @@
 ---
-title: sys.dm_io_virtual_file_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_io_virtual_file_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
 ms.prod: sql
@@ -25,10 +25,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 2720aba7dc9b3d8c1a6e34db5a588829245ed97a
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066829"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/23/2018
   傳回資料和記錄檔的 I/O 統計資料。 這個動態管理檢視會取代[fn_virtualfilestats](../../relational-databases/system-functions/sys-fn-virtualfilestats-transact-sql.md)函式。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，使用名稱**sys.dm_pdw_nodes_io_virtual_file_stats**。 
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]，使用名稱**sys.dm_pdw_nodes_io_virtual_file_stats**。 
 
 ## <a name="syntax"></a>語法  
   
@@ -72,13 +73,13 @@ sys.dm_pdw_nodes_io_virtual_file_stats
  
 檔案識別碼。 *file_id*是 int，沒有預設值。 有效輸入是檔案的識別碼或 NULL。 如果指定 NULL，則會傳回資料庫中所有的檔案。  
   
- 內建函式[FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)可以指定，而是指目前資料庫中的檔案。  
+ 內建函式[FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md)指定，且參考目前資料庫中的檔案。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|資料庫名稱。</br></br>SQL 資料倉儲，這是儲存在 pdw_node_id 所識別的節點上的資料庫名稱。 每個節點都有一個具有 13 個檔案的 tempdb 資料庫。 每個節點也有分佈，每一個資料庫，而每個散發資料庫有 5 的檔案。 例如，如果每個節點包含 4 分佈，結果會顯示 pdw_node_id 每 20 個散發資料庫檔案。 
+|**database_name**|**sysname**|資料庫名稱。</br></br>針對 SQL 資料倉儲，這是儲存在由 pdw_node_id 的節點上的資料庫名稱。 每個節點都有 13 個檔案的一個 tempdb 資料庫。 每個節點也有一個資料庫，每個散發，而且每個散發資料庫中有 5 個檔案。 比方說，如果每個節點包含 4 個散發套件，結果會顯示 pdw_node_id 每 20 個散發資料庫檔案。 
 |**database_id**|**smallint**|資料庫的識別碼。|  
 |**file_id**|**smallint**|檔案的識別碼。|  
 |**sample_ms**|**bigint**|自電腦啟動之後的毫秒數。 這個資料行可用來比較這個函數的不同輸出。</br></br>資料類型是**int**如[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -91,19 +92,19 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**io_stall**|**bigint**|使用者等候檔案完成 I/O 的總時間 (以毫秒為單位)。|  
 |**size_on_disk_bytes**|**bigint**|該檔案在磁碟上所用的位元組數。 如果是疏鬆檔案，這個數字就是資料庫快照集在磁碟上所用的實際位元組數。|  
 |**file_handle**|**varbinary**|這個檔案的 Windows 檔案控制代碼。|  
-|**io_stall_queued_read_ms**|**bigint**|**不適用：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
-|**io_stall_queued_write_ms**|**bigint**|**不適用：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
+|**io_stall_queued_read_ms**|**bigint**|**不適用於：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br /> IO 資源管理針對讀取導入的總 IO 延遲。 不可為 Null。 如需詳細資訊，請參閱 < [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)。|  
+|**io_stall_queued_write_ms**|**bigint**|**不適用於：**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]透過[!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]。<br /><br />  IO 資源管理針對寫入導入的總 IO 延遲。 不可為 Null。|
 |**pdw_node_id**|**int**|**適用於：**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>發佈節點的識別碼。
  
   
 ## <a name="permissions"></a>Permissions  
- 需要 VIEW SERVER STATE 權限。 如需詳細資訊，請參閱[動態管理檢視和函數&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。  
+ 需要 VIEW SERVER STATE 權限。 如需詳細資訊，請參閱 <<c0> [ 動態管理檢視和函式&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)。</c0>  
   
 ## <a name="examples"></a>範例  
 
 ### <a name="a-return-statistics-for-a-log-file"></a>A. 傳回記錄檔的統計的資料
 
-**適用於：** （從 2008年起） 的 SQL Server、 Azure SQL Database
+**適用於：** （從 2008年開始） 的 SQL Server、 Azure SQL Database
 
  下列範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中記錄檔的統計資料。  
   
@@ -112,7 +113,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B. 傳回的統計資料在 tempdb 中的檔案
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. 在 tempdb 中傳回檔案的統計資料
 
 **適用於：** Azure SQL 資料倉儲
 

@@ -1,5 +1,5 @@
 ---
-title: Warning 元素 (XMLA) |Microsoft 文件
+title: Warning 元素 (XMLA) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 73662315d294cade8b344f8967923fe15e94f886
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34576730"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062626"
 ---
 # <a name="warning-element-xmla"></a>Warning 元素 (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  包含 Analysis Services 的執行個體所傳回之警告的相關資訊。  
+  包含 Analysis services 執行個體所傳回之警告的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34576730"
 </Message>  
 ```  
   
-## <a name="element-characteristics"></a>元素特性  
+## <a name="element-characteristics"></a>項目特性  
   
 |特性|描述|  
 |--------------------|-----------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "34576730"
 |預設值|無|  
 |基數|0-1：只能出現一次的選擇性元素。|  
   
-## <a name="element-relationships"></a>元素關聯性  
+## <a name="element-relationships"></a>項目關聯性  
   
 |關聯性|元素|  
 |------------------|-------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "34576730"
 ## <a name="remarks"></a>備註  
   
 ## <a name="see-also"></a>另請參閱
- [Error 元素&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)   
+ [錯誤項目&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md)   
  [屬性&#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: IsTestCase (DMX) |Microsoft 文件
+title: IsTestCase (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eefb9269a3eb0dc7a6b95e84accb4c68c6737a13
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841791"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063948"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ IsTestCase()
 ```  
   
 ## <a name="result-type"></a>結果類型  
- 傳回**true**如果案例屬於測試資料集; 否則**false**。  
+ 傳回 **，則為 true**案例是否屬於測試資料集; 否則為**false**。  
   
 ## <a name="remarks"></a>備註  
  如果您使用資料採礦精靈建立採礦結構和相關的採礦模型，則預設會將百分之 30 的案例擱置一旁，當做測試資料集使用。 其餘案例會用於定型資料採礦模型。 可以搭配以該結構為基礎的所有模型來使用相同的資料集。 但是，如果您使用 DMX 建立採礦模型，則預設會使用所有資料來定型此模型，而且不會建立測試集。 若要啟用測試資料集的建立，您必須設定 WITH HOLDOUT 子句的參數。  
@@ -37,12 +37,12 @@ IsTestCase()
  您可以藉由檢視 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> 和 <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A> 屬性的值，判斷是否已經在特定的採礦結構上建立測試集。  
   
 > [!NOTE]  
->  如果您想要使用 IsTrainingCase 或 IsTestCase 函數來傳回在特定模型中案例的相關詳細資料，必須在模型上啟用鑽研。 如需詳細資訊，請參閱 [針對採礦模型啟用鑽研](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)。  
+>  如果您想要使用 IsTrainingCase 或 IsTestCase 函數傳回特定模型中案例的相關的詳細資料，就必須在模型上啟用鑽研。 如需詳細資訊，請參閱 [針對採礦模型啟用鑽研](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)。  
   
- 若要傳回屬於訓練資料集的情況下，使用函數[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)。  
+ 若要傳回屬於訓練資料集的情況下，使用 函式[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)。  
   
 ## <a name="examples"></a>範例  
- 下列範例會使用`Targeted Mailing`中建立的採礦結構[基本資料採礦教學課程](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 此查詢會傳回此結構中用於測試的所有案例。  
+ 下列範例會使用`Targeted Mailing`中建立的採礦結構[Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)。 此查詢會傳回此結構中用於測試的所有案例。  
   
 ```  
 SELECT *  
@@ -50,7 +50,7 @@ FROM [Targeted Mailing].CASES
 WHERE IsTestCase()  
 ```  
   
- 如需如何查詢資料採礦中使用的案例的詳細資訊，請參閱[SELECT FROM&#60;模型&#62;。案例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)和[SELECT FROM&#60;結構&#62;。案例](../dmx/select-from-structure-cases.md)。  
+ 如需如何查詢資料採礦中使用的案例的詳細資訊，請參閱[FROM&#60;模型&#62;。案例&#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md)並[選取 從&#60;結構&#62;。案例](../dmx/select-from-structure-cases.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [函式&#40;DMX&#41;](../dmx/functions-dmx.md)   
