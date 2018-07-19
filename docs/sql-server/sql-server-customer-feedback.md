@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 07/12/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.suite: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 6684d58710b8be2cf96e06029792836cab9c69a3
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 21461642f4e45faaab365ab5bb30ecc7cc93e64e
+ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/12/2018
-ms.locfileid: "34074301"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36926409"
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>設定 SQL Server 以將意見反應傳送給 Microsoft
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +60,7 @@ AND instance_name = '_Total'
 安裝後，可以透過 [錯誤和使用方式報表] 應用程式變更 SQL Server 元件和執行個體的使用量資料收集設定。 此應用程式包含在 SQL Server 安裝之中。 此工具可讓每個 SQL Server 執行個體設定自己的使用量資料設定。
 
 > [!NOTE]
-> [錯誤和使用方式報表] 應用程式會列出於 SQL Server 的 [組態工具] 底下。 您可以利用與 SQL Server 2017 中相同的方式，使用此工具管理您針對收集「錯誤報告」和「使用意見反應」的喜好設定。 「錯誤報告」有別於「使用意見反應」的收集，因此可以獨立於「使用意見反應」收集進行開啟或關閉。 「錯誤報告」會收集要傳送給 Microsoft 的損毀傾印，其中可能包含＜隱私權聲明＞中所述的機密資訊。
+> [錯誤和使用方式報表] 應用程式會列出於 SQL Server 的 [組態工具] 底下。 您可以利用與 SQL Server 2017 中相同的方式，使用此工具管理您針對收集「錯誤報告」和「使用意見反應」的喜好設定。 「錯誤報告」有別於「使用意見反應」的收集，因此可以獨立於「使用意見反應」收集進行開啟或關閉。 「錯誤報告」會收集要傳送給 Microsoft 的損毀傾印，其中可能包含[隱私權聲明](http://go.microsoft.com/fwlink/?LinkID=868444)中所述的機密資訊。
 
 若要啟動 [SQL Server 錯誤和使用方式報表]，請按一下或點選 [開始]，然後在搜尋方塊中搜尋「錯誤」。 隨即顯示 [SQL Server 錯誤和使用方式報表] 項目。 啟動工具之後，您可以管理針對該電腦上所安裝之執行個體和元件所收集的使用意見反應及嚴重錯誤。
 

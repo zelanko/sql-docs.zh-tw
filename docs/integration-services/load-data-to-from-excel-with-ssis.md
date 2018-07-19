@@ -1,7 +1,7 @@
 ---
 title: 使用 SSIS 從 Excel 匯入或匯出至 Excel | Microsoft Docs
 description: 了解如何使用 SQL Server Integration Services (SSIS) 匯入或匯出 Excel 資料，以及必要條件、已知問題和限制。
-ms.date: 04/10/2018
+ms.date: 06/29/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,51 +13,62 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0230dd81a704ce0d9ada34eecea205e153ebb78b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
+ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403390"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137927"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
-本文描述如何使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel。 本文也描述必要條件、限制和已知問題。
+本文說明您必須提供的連線資訊，以及必須使用 SQL Server Integration Services (SSIS) 設定以從 Excel 匯入資料，或將資料匯出至 Excel 的設定。
 
-您可以藉由建立 SSIS 套件，並使用 Excel 連線管理員和 Excel 來源或 Excel 目的地，從 Excel 匯入資料，或將資料匯出至 Excel。 您也可以使用建立在 SSIS 上的 [SQL Server 匯入和匯出精靈]。
+下列各節包含成功利用 SSIS 使用 Excel，或要了解及針對常見問題進行疑難排解所需的資訊：
 
-本文包含成功從 SSIS 使用 Excel，或要了解及針對常見問題進行疑難排解所需的三組資訊：
-1.  [您需要的檔案](#files-you-need)。
-2.  當您使用 Excel 載入或取出資料時，您必須提供的資訊。
+1.  您可以使用的[工具](#tools)。
+
+2.  您需要的[檔案](#files-you-need)。
+
+3.  您必須提供的連線資訊，以及當您將 Excel 作為來源或目標載入資料必須設定的設定。
     -   [指定 Excel](#specify-excel) 作為資料來源。
     -   提供 [Excel 檔案名稱和路徑](#excel-file)。
     -   選取 [Excel 版本](#excel-version)。
     -   指定是否在[第一個資料列包含資料行名稱](#first-row)。
     -   提供[包含資料的工作表或範圍](#sheets-ranges)。
-3.  已知問題和限制。
+
+4.  已知問題和限制。
     -   [資料類型](#issues-types)的問題。
     -   [匯入](#issues-importing)的問題。
     -   [匯出](#issues-exporting)的問題。
+
+## <a name="tools"></a> 您可以使用的工具
+
+您可以使用下列其中一種工具，從 Excel 匯入資料或將資料匯出至 Excel：
+
+-   **SQL Server Integration Services (SSIS)**。 使用 Excel 連接管理員，建立使用 Excel 來源或 Excel 目的地的 SSIS 套件。 (本文不會說明如何設計 SSIS 套件。)
+
+-   SSIS 上建置的 [SQL Server 匯入和匯出精靈]。 如需詳細資訊，請參閱[使用 SQL Server 匯入和匯出精靈來匯入或匯出資料](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)與[連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="files-you-need"></a> 取得連線至 Excel 所需的檔案
 
 您可能必須下載適用於 Excel 的連線元件，如果它們尚未安裝的話，然後才能從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
 
-在這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。
-  
-最新版的元件可以開啟舊版 Excel 所建立的檔案。
+在這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版的元件可以開啟舊版 Excel 所建立的檔案。
 
-請確定下載 Access Database Engine 2016「可轉散發套件」，而非 Microsoft Access 2016 *Runtime*。
+### <a name="notes-about-the-download-and-installation"></a>關於下載與安裝的注意事項
 
-如果電腦已有 32 位元版的 Office，您就必須安裝 32 位元版的元件。 您也必須確定您在 32 位元模式中執行 SSIS 套件，或執行 [匯入和匯出精靈] 的 32 位元版本。
+-   請確定下載 Access Database Engine 2016「可轉散發套件」，而非 Microsoft Access 2016 *Runtime*。
 
-如果您有 Office 365 訂閱，可能會在執行安裝程式時看到一則錯誤訊息。 錯誤訊息指出您無法使用 Office 隨選即用元件並存安裝下載。 若要略過此錯誤訊息，請開啟 [命令提示字元] 視窗並執行使用 `/quiet` 參數所下載的 .EXE 檔案，以無訊息模式執行安裝。 例如：
+-   如果電腦已有 32 位元版的 Office，您就必須安裝 32 位元版的元件。 您也必須確定您在 32 位元模式中執行 SSIS 套件，或執行 [匯入和匯出精靈] 的 32 位元版本。
 
-`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
+-   如果您有 Office 365 訂閱，可能會在執行安裝程式時看到一則錯誤訊息。 錯誤訊息指出您無法使用 Office 隨選即用元件並存安裝下載。 若要略過此錯誤訊息，請開啟 [命令提示字元] 視窗並執行使用 `/quiet` 參數所下載的 .EXE 檔案，以無訊息模式執行安裝。 例如：
 
-如果您無法安裝 2016 可轉散發套件，請改為從這裡安裝 2010 可轉散發套件：[Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) (Microsoft Access 資料庫引擎 2010 可轉散發套件)。 (沒有任何適用於 Excel 2013 的可轉散發套件。)
+    `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="specify-excel"></a> 指定 Excel
+    如果您無法安裝 2016 可轉散發套件，請改為從這裡安裝 2010 可轉散發套件：[Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255) (Microsoft Access 資料庫引擎 2010 可轉散發套件)。 (沒有任何適用於 Excel 2013 的可轉散發套件。)
+
+## <a name="specify-excel"></a> 指定 Excel 作為資料來源
 
 第一個步驟是指出您想要連接至 Excel。
 

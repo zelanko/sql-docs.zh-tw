@@ -16,12 +16,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6735e372f7c1a4b49cdf57e73ee5cd82b2930bba
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 57cadee90ac69a76942c6b3c763ffb9900c4f8d8
+ms.sourcegitcommit: 7d2b34c64f97206861ec9ad8d6a6201ac20a4af1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332732"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36297404"
 ---
 # <a name="lesson-1-6---adding-and-configuring-the-lookup-transformations"></a>課程 1-6 - 新增和設定查詢轉換
 在設定一般檔案來源從來源檔擷取資料之後，下一項工作是要定義所需要的查閱轉換來取得 **CurrencyKey** 和 **DateKey**的值。 查閱轉換是藉由聯結指定輸入資料行中的資料與參考資料集內的資料行來執行查閱。 參考資料集可以是現有的資料表或檢視、新資料表，或 SQL 陳述式的結果。 在此教學課程中，查閱轉換使用 OLE DB 連接管理員來連接到資料庫，該資料庫包含的資料就是參考資料集的來源。  
@@ -41,7 +41,7 @@ ms.locfileid: "35332732"
   
 1.  在 [SSIS 工具箱] 中，展開 [通用]，然後將 [查閱] 拖曳至 [資料流程] 索引標籤的設計介面中。將 [查閱] 直接放在 [Extract Sample Currency Data (擷取範例貨幣資料)] 來源下面。  
   
-2.  按一下 [Extract Sample Currency Data (擷取範例貨幣資料)] 一般檔案來源，將綠色箭頭拖曳至新增的 [查閱] 轉換來連接兩個元件。  
+2.  按一下 [Extract Sample Currency Data (擷取範例貨幣資料)] 一般檔案來源，將藍色箭頭拖曳至新增的 [查閱] 轉換來連接兩個元件。  
   
 3.  在 [資料流程] 設計介面中，按一下 [查閱] 轉換中的 [查閱]，將名稱變更為 [Lookup Currency Key (查閱貨幣索引鍵)]。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35332732"
 12. 在 [屬性] 視窗中，確認 [LocaleID] 屬性是設為 [英文 (美國)]，[DefaultCodePage] 屬性是設為 [1252]。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 7：加入及設定 OLE DB 目的地](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+[步驟 7：新增及設定 OLE DB 目的地](../integration-services/lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [Lookup Transformation](../integration-services/data-flow/transformations/lookup-transformation.md)  

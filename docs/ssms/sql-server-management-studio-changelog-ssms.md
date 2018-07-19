@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - 變更記錄 (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/09/2018
+ms.date: 06/26/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,23 +15,97 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84073aa122fbb4654e183fefa3c6b7977b751b1e
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
+ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619535"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957721"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 本文提供目前版本和舊版本之 SSMS 的更新、改善和 Bug 修正詳細資料。 下載[下面的舊版 SSMS](#previous-ssms-releases)。
 
 
-## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-版本號碼：17.7<br>
+
+## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+17.8 中發現一個與佈建 SQL 資料庫有關的 BUG，因此以 SSMS 17.8.1 取代 17.8。
+
+
+組建編號：14.0.17277.0<br>
+發行日期：2018 年 6 月 26 日
+
+
+### <a name="whats-new"></a>新功能
+
+**一般 SSMS**
+
+資料庫屬性：
+
+- 這項改進會公開檔案群組的 **AUTOGROW_ALL_FILES** 設定選項。 這個新的設定選項已新增至 [資料庫屬性] > [檔案群組] 視窗之下，採用的形式是為每個可用檔案群組 (除了 Filestream 和記憶體最佳化檔案群組之外) 提供新的核取方塊資料行 ([所有檔案自動成長])。 使用者只要切換對應的 Autogrow_All_Files 核取方塊，就能啟用或停用特定檔案群組的 AUTOGROW_ALL_FILES。 同樣地，針對資料庫 (SQL2016 和更新版本) 的 CREATE (建立)/產生指令碼，編寫資料庫指令碼時也已正確地編寫 **AUTOGROW_ALL_FILES** 選項的指令碼。
+    
+SQL 編輯器：
+
+- 已改善當使用者沒有 master 存取權時，在 Azure SQL Database 中的 IntelliSense 體驗。
+
+指令碼：
+
+- 一般效能改進，特別是透過高延遲連線的情況。
+    
+**Analysis Servics (AS)**
+
+- Analysis Services 用戶端程式庫與資料提供者已更新至最新版本，其中加入了對新 Azure Government AAD 授權單位 (login.microsoftonline.us) 的支援。
+
+
+
+### <a name="bug-fixes"></a>錯誤修正
+
+**一般 SSMS**
+    
+維護計畫：
+
+- 已修正搭配 SQL 驗證編輯維護計畫時，「通知操作員工作」會在使用 SQL 驗證時失敗的問題。
+    
+指令碼：
+
+- 已修正 SMO 中的 PostProcess 動作導致資源耗盡及 SQL 登入失敗的問題
+    
+SMO：
+
+- 已修正新增包含預設條件約束的資料行且資料表已經有資料時，Table.Alter() 會失敗的問題。 如需詳細資訊，請參閱[新增資料行至已含有資料的資料表時 sql server smo 會產生內嵌預設條件約束](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625)。
+    
+Always Encrypted：
+
+- 已修正在分割的資料表上啟用 Always Encrypted 時會造成鎖定逾時錯誤的問題 (在 DacFx 中)
+    
+
+**Analysis Services (AS)**
+
+- 已修正在 Tabular Analysis Services 1400 層級相容性模型中修改 OAuth 資料來源時發生的問題，該問題會造成在 OAuth 權杖中所做的變更不會在資料來源中更新。
+- 已修正在 Analysis Services Tabular 1400 層級相容性模型的 Power Query (例如，Oracle) 中，使用某些無效的資料來源認證，或編輯不支援變更資料來源移轉的資料來源時，SSMS 中可能發生損毀的問題。
+
+
+### <a name="known-issues"></a>已知問題
+
+- 在 [特性] 視窗中修改任何檔案群組特性之後按一下 [指令碼] 按鈕，會產生兩個指令碼：其中一個指令碼會包含 *USE <database>* 陳述式，另一個指令碼則會包含 *USE master* 陳述式。  產生包含 *USE master* 的指令碼是一項錯誤，而且應予捨棄。 執行包含 *USE <database>* 陳述式的指令碼。
+- 使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
+- 可觀察到 XEvents 檢視器中的一些延遲。 這是 [.Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql) 中的已知問題。 請考慮升級到 NetFx 4.7.2。
+
+
+
+## <a name="previous-ssms-releases"></a>舊版 SSMS
+
+按一下下列各節中的標題連結，以下載舊版 SSMS。
+
+
+## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![下載](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)
+
 組建編號：14.0.17254.0<br>
 發行日期：2018 年 5 月 9 日
+
+[中文 (中華人民共和國)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [中文 (台灣)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [英文 (美國)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [法文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [德文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [義大利文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [日文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [韓文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [葡萄牙文 (巴西)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [俄文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [西班牙文](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+
 
 ### <a name="whats-new"></a>新功能
 
@@ -178,9 +252,7 @@ Database Mail：
 > [!WARNING]
 > 已知問題：當使用[維護計劃](../relational-databases/maintenance-plans/maintenance-plans.md)時，SSMS 17.6 會變得不穩定且會當機的問題。 若您使用維護計劃，請勿安裝 SSMS 17.6。 若您已經安裝 17.6 且有這項問題的影響，請降級至 SSMS 17.5。 
 
-## <a name="previous-ssms-releases"></a>舊版 SSMS
 
-按一下下列各節中的標題連結，以下載舊版 SSMS。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![下載](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 正式運作 | 組建編號：14.0.17224.0
@@ -427,7 +499,7 @@ XE 分析工具：
 **一般 SSMS**
 
 - 使用具 MFA 之 UA 的 Azure AD 驗證不支援下列 SSMS 功能：
-   - Azure AD 驗證不支援 Database Engine Tuning Advisor；有一個已知問題，其向使用者呈現的錯誤訊息不太容易了解：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'…」 而不是預期的「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database (DTAClient)」。
+   - Azure AD 驗證不支援 Database Engine Tuning Advisor；有一個已知問題，亦即向使用者呈現不太容易了解的錯誤訊息：「無法載入檔案或組件 'Microsoft.IdentityModel.Clients.ActiveDirectory'…」，而非預期的：「Database Engine Tuning Advisor 不支援 Microsoft Azure SQL Database。 (DTAClient)」。
 - 嘗試分析 DTA 中的查詢會導致錯誤：「物件必須實作 IConvertible (mscorlib)」。
 - 物件總管中報表的 [查詢存放區] 清單遺漏「迴歸查詢」。
    - 因應措施：以滑鼠右鍵按一下 [查詢存放區] 節點，然後選取 [檢視迴歸查詢]。
@@ -728,7 +800,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 未正確處理加密後來自重新整理模組的 Always Encrypted 錯誤。
 - 將 OLTP 與 OLAP 的預設連線逾時從 15 秒變更為 30 秒，以修正略過連線的這類失敗。 
 - 修正自訂報表啟動時，SSMS 中的損毀。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3118856)
-- 修正 [產生指令碼...] 在 Azure SQL 資料庫失敗的問題。
+- 已修正在 Azure SQL 資料庫中「產生指令碼...」會失敗的問題。
 - 修正 [編寫指令碼為] 及 [產生指令碼精靈]，不要在編寫預存程序等物件的指令碼時新增額外新行。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3115850)
 - SQLAS PowerShell 提供者：將 LastProcessed 屬性新增到 Dimension 及 MeasureGroup 資料夾。 [Connect 項目](http://connect.microsoft.com/SQLServer/feedback/details/3111879)
 - 即時查詢統計資料：修正其只顯示批次中第一個查詢的問題。 [Connect 項目] (http://connect.microsoft.com/SQLServer/feedback/details/3114221)  

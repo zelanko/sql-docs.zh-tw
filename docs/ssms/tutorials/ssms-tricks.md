@@ -18,12 +18,15 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+- Find SQL Server Instance
+- find instance name
+- find sql server instance name
+ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
+ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455252"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080096"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
 本教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 本文示範如何： 
@@ -201,7 +204,7 @@ ms.locfileid: "34455252"
 
 6. 在 [記事本] 中開啟 errorlog.log 檔案。 
 
-## <a name="determine-sql-server-name"></a>尋找您的 SQL Server 名稱
+## <a name="determine-sql-server-name"></a>尋找 SQL Server 執行個體名稱
 您有一些選項可用來在連線到 SQL Server 之前和之後尋找您的 SQL Server 名稱。  
 
 ### <a name="before-you-connect-to-sql-server"></a>連線到 SQL Server 之前

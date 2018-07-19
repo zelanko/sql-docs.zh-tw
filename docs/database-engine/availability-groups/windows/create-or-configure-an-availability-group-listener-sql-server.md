@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 51db3ea10ef3c4f074dbf0b6aaae2a80aac8d458
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
+ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769674"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37065998"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "34769674"
 >  在建立第一個接聽程式之前，強烈建議您閱讀 [AlwaysOn 用戶端連接性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)。  
   
 ###  <a name="DNSnameReqs"></a> 可用性群組接聽程式之 DNS 名稱的需求  
- 每個可用性群組接聽程式都需要一個 DNS 主機名稱，該名稱在網域中和 NetBIOS 中必須是唯一的。 DNS 名稱是字串值。 此名稱只能包含英數字元、虛線 (-) 和連字號 (_) (順序不拘)。 DNS 主機名稱不區分大小寫。 長度上限是 63 個字元，但是在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，您可以將長度上限指定為 15 個字元。  
+ 每個可用性群組接聽程式都需要一個 DNS 主機名稱，該名稱在網域中和 NetBIOS 中必須是唯一的。 DNS 名稱是字串值。 此名稱只能包含英數字元、虛線/連字號 (-) 和底線 (_) (順序不拘)。 DNS 主機名稱不區分大小寫。 長度上限是 63 個字元，但是在 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]中，您可以將長度上限指定為 15 個字元。  
   
  我們建議您指定一個有意義的字串。 例如，如果是名為 `AG1`的可用性群組，有意義的 DNS 主機名稱會是 `ag1-listener`。  
   

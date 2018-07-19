@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b00b3fbfeeff2fa7c99ac8f69e3c46c79e4ed796
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
+ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334702"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "36964350"
 ---
 # <a name="azure-blob-source"></a>Azure Blob 來源
   **Azure Blob 來源** 元件可讓 SSIS 封裝從 Azure Blob 讀取資料。 支援的檔案格式：CSV 與 AVRO。
@@ -37,10 +37,14 @@ ms.locfileid: "35334702"
   
 3.  針對 [Blob 名稱] 欄位，請指定 Blob 的路徑。  
   
-4.  針對 [Blob 檔案格式] 欄位，請指定要使用的 Blob 格式。  
+4.  針對 [Blob 檔案格式] 欄位，請指定要使用 [文字] 或 [Avro] 的 Blob 格式。  
   
-5.  若檔案格式為 CSV，則您必須指定 [資料行分隔符號字元] 值。 若檔案中第一個資料列包含資料行名稱，請選取 [第一個資料列的資料行名稱]。  
+5.  檔案格式若為 [文字]，則您必須指定 [資料行分隔符號字元] 值。 若檔案中第一個資料列包含資料行名稱，請選取 [第一個資料列的資料行名稱]  。
+
+6.  如果檔案已壓縮，請選取 [解壓縮檔案]。
+
+7.  如果檔案已壓縮，請選取 [壓縮類型]：**GZIP**、**DEFLATE** 或 **BZIP2**。 請注意，不支援 Zip 格式。
   
-6.  指定連接資訊後，請切換至 [資料行]  頁面，將來源資料行對應至 SSIS 資料流程的目的地資料行。  
+8.  指定連線資訊後，請切換至 [資料行] 頁面，將來源資料行對應至 SSIS 資料流程的目的地資料行。  
   
   

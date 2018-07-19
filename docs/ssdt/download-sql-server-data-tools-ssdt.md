@@ -1,7 +1,7 @@
 ---
 title: 下載 SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 07/02/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6794784b2339fe9c246dc4aec017e4e7cbb93311
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 78eb769a8f37ca055628a89aeebe7dd444673434
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773334"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37332968"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>下載並安裝 SQL Server Data Tools (SSDT) for Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,18 +48,19 @@ ms.locfileid: "34773334"
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (獨立安裝程式)
 
-[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.7.0) ](https://go.microsoft.com/fwlink/?linkid=874716) 
+[![下載](../ssdt/media/download.png) 下載 SSDT for Visual Studio 2017 (15.7.1) ](https://go.microsoft.com/fwlink/?linkid=875613) 
 
 > [!IMPORTANT]
-> 請先解除安裝「Microsoft Analysis Services 專案」和「Microsoft Reporting Services 專案」延伸模組 (如果已安裝)，並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.7.0)。 
+> - 請先解除安裝「Analysis Services 專案」和「Reporting Services 專案」延伸模組 (如果已安裝)，並關閉所有 VS 執行個體，再安裝 SSDT for Visual Studio 2017 (15.7.1)。
+> - 在 Windows 10 上安裝 SSDT 並選擇 [安裝適用於 Visual Studio 2017 執行個體的新 SQL Server Data Tools] 時，請清除任何核取方塊，然後先安裝新的執行個體。 安裝新的執行個體之後，請重新啟動電腦，並再次開啟 SSDT 安裝程式，以繼續安裝。  
 
 
 
 **版本資訊**  
   
-版本號碼：15.7.0  
-組建編號：14.0.16165.0  
-發行日期：2018 年 6 月 1 日  
+版本號碼：15.7.1  
+組建編號：14.0.16167.0  
+發行日期：2018 年 7 月 2 日  
 
 如需變更的完整清單，請參閱[變更記錄](changelog-for-sql-server-data-tools-ssdt.md)。
 
@@ -69,17 +70,17 @@ SSDT for Visual Studio 2017 與 Visual Studio 具有相同的[系統需求](http
 
 這版**適用於 VS 2017 的 SSDT** 提供下列語言版本：  
 
-[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x804) | 
-[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x404) | 
-[英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x409) | 
-[法文]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x40c)  
-[德文]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x407) | 
-[義大利文]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x410) | 
-[日文]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x411) | 
-[韓文]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x412) | 
-[葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x416) | 
-[俄文]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x419) | 
-[西班牙文]( https://go.microsoft.com/fwlink/?linkid=874716&clcid=0x40a)  
+[中文 (中華人民共和國)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x804) | 
+[中文 (台灣)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x404) | 
+[英文 (美國)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x409) | 
+[法文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40c)  
+[德文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x407) | 
+[義大利文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x410) | 
+[日文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x411) | 
+[韓文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x412) | 
+[葡萄牙文 (巴西)]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x416) | 
+[俄文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x419) | 
+[西班牙文]( https://go.microsoft.com/fwlink/?linkid=875613&clcid=0x40a)  
 
 
 
@@ -147,7 +148,7 @@ SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都會使用 DacFx 1
 ## <a name="next-steps"></a>後續步驟  
 安裝 SSDT 後，請逐步完成這些教學課程，了解如何使用 SSDT 建立資料庫、封裝、資料模型及報表：  
 
-- [專案導向的離線資料庫開發](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
+- [專案導向的離線資料庫開發](project-oriented-offline-database-development.md)  
 - [SSIS 教學課程：建立簡易 ETL 封裝](../integration-services/ssis-how-to-create-an-etl-package.md)  
 - [Analysis Services 教學課程](../analysis-services/analysis-services-tutorials-ssas.md)  
 - [建立基本資料表報表 (SSRS 教學課程)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
@@ -156,9 +157,7 @@ SSDT for Visual Studio 2015 和 SSDT for Visual Studio 2017 都會使用 DacFx 1
 
 
 ## <a name="see-also"></a>另請參閱  
-[Visual Studio 中的 SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN 論壇](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 團隊部落格](http://blogs.msdn.com/b/ssdt/)  
-[SSDT 文件](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [DACFx API 參考](https://msdn.microsoft.com/library/dn645454.aspx)  
 [下載 SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

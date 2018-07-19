@@ -15,12 +15,12 @@ ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df45518dc367d3b2a2c980ba39cad09084c30ecf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d433843076a83c8a09319c118bbd44e7f89a24d1
+ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401260"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36262302"
 ---
 # <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>課程 1-2 - 新增和設定一般檔案連線管理員
 在這項工作中，您將一般檔案連接管理員加入您剛才建立的封裝中。 一般檔案連接管理員可讓封裝從一般檔案擷取資料。 使用一般檔案連接管理員，您可以指定當封裝從一般檔案擷取資料時，要套用的檔案名稱和位置、地區設定和字碼頁及檔案格式 (包括資料行分隔符號)。 此外，您可以手動指定個別資料行的資料類型，或使用 [建議資料行類型] 對話方塊，將所擷取資料的資料行自動對應至 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 資料類型。  
@@ -95,7 +95,7 @@ ms.locfileid: "35401260"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|日期|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-    對 [CurrencyID] 資料行建議的資料類型與目的地資料表中的欄位資料類型不相容。 因為 `DimCurrency.CurrencyAlternateKey` 的資料類型是 nchar (3)，所以 [CurrencyID] 必須從 [DT_STR] 字串變更為 [DT_WSTR] 字串。 另外，`DimDate.FullDateAlternateKey` 欄位定義為日期資料類型，因此 [CurrencyDate] 需要從日期 [DT_Date] 變更為資料庫日期 [DT_DBDATE]。  
+    對 [CurrencyID] 資料行建議的資料類型與目的地資料表中的欄位資料類型不相容。 因為 `DimCurrency.CurrencyAlternateKey` 的資料類型是 Nchar (3)，所以 [CurrencyID] 必須從 [DT_STR] 字串變更為 [DT_WSTR] Unicode 字串。 另外，`DimDate.FullDateAlternateKey` 欄位定義為日期資料類型，因此 [CurrencyDate] 需要從日期 [DT_Date] 變更為資料庫日期 [DT_DBDATE]。  
   
 2.  在此清單中選取 [CurrencyID] 資料行，並在屬性窗格中將資料行 [CurrencyID] 的資料類型從字串 [DT_STR] 變更為 Unicode 字串 [DT_WSTR]。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "35401260"
 4.  按一下 [確定] 。  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
-[步驟 3：加入和設定 OLE DB 連接管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+[步驟 3：新增和設定 OLE DB 連線管理員](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [一般檔案連接管理員](../integration-services/connection-manager/flat-file-connection-manager.md)  
