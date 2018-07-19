@@ -1,5 +1,5 @@
 ---
-title: 資料分割表示法 （表格式） |Microsoft 文件
+title: 資料分割表示法 （表格式） |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 289b58b5547b515dbc82cb0823def8c6087a9bb3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34038995"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054706"
 ---
-# <a name="tables---partition-representation"></a>資料表的資料分割表示法
+# <a name="tables---partition-representation"></a>資料表-資料分割表示法
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   您可以基於作業目的，將資料表分割成不同的資料列子集 (結合在一起時就會構成資料表)。其中每個子集都是資料表的資料分割。  
   

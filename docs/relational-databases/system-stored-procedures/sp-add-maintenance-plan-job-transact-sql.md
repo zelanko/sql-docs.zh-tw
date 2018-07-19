@@ -1,5 +1,5 @@
 ---
-title: sp_add_maintenance_plan_job (TRANSACT-SQL) |Microsoft 文件
+title: sp_add_maintenance_plan_job (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 200638dc2e227ad2b8428f668deb424ab3a277c2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238345"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041086"
 ---
 # <a name="spaddmaintenanceplanjob-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
   
 ## <a name="arguments"></a>引數  
  [  **@plan_id =**] **'***plan_id***'**  
- 指定維護計畫的識別碼。 *plan_id*是**uniqueidentifier**，而且必須是有效的識別碼。  
+ 指定維護計畫的識別碼。 *plan_id*已**uniqueidentifier**，而且必須是有效的識別碼。  
   
  [ **@job_id =**] **'***job_id***'**  
- 指定要與維護計畫相關聯的作業識別碼。 *job_id*是**uniqueidentifier**，而且必須是有效的識別碼。 若要建立作業，請執行**sp_add_job**，或使用 SQL Server Management Studio。  
+ 指定要與維護計畫相關聯的作業識別碼。 *job_id*已**uniqueidentifier**，而且必須是有效的識別碼。 若要建立作業，請執行**sp_add_job**，或使用 SQL Server Management Studio。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -65,7 +65,7 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
  只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_maintenance_plan_job**。  
   
 ## <a name="examples"></a>範例  
- 此範例會使用建立的維護計畫加工作"移除 B8FCECB1-E22C-11D2-AA64-00C04F688EAE" **sp_add_maintenance_plan_job**。  
+ 此範例會建立使用的維護計畫工作 「 B8FCECB1-E22C-11D2-AA64-00C04F688EAE" **sp_add_maintenance_plan_job**。  
   
 ```  
 EXECUTE   sp_add_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  

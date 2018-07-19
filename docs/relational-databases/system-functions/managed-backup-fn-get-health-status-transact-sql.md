@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_health_status (TRANSACT-SQL) |Microsoft 文件
+title: managed_backup.fn_get_health_status (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,13 +26,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fa9a510f2be08329173898b7e0e6794458ea8fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229500"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041966"
 ---
-# <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (TRANSACT-SQL)
+# <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   傳回擴充事件針對一段指定期間所報告，包含 0 個、一個或多個彙總錯誤計數資料列的資料表。  
@@ -57,18 +57,18 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|程式連接到 Windows Azure 儲存體帳戶時的連接錯誤數目。|  
-|number_of_sql_errors|int|程式連接到 SQL Server 引擎時傳回的錯誤數目。|  
-|number_of_invalid_credential_errors|int|程式嘗試使用 SQL 認證進行驗證時傳回的錯誤數目。|  
-|number_of_other_errors|int|除了連接、SQL 或認證以外其他類別目錄中的錯誤數目。|  
-|number_of_corrupted_or_deleted_backups|int|已刪除或損毀的備份檔案數目。|  
-|number_of_backup_loops|int|備份代理程式掃描[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所設定的全部資料庫的次數。|  
-|number_of_retention_loops|int|掃描資料庫以評估所設定保留週期的次數。|  
+|number_of_storage_connectivity_errors|ssNoversion|程式連接到 Windows Azure 儲存體帳戶時的連接錯誤數目。|  
+|number_of_sql_errors|ssNoversion|程式連接到 SQL Server 引擎時傳回的錯誤數目。|  
+|number_of_invalid_credential_errors|ssNoversion|程式嘗試使用 SQL 認證進行驗證時傳回的錯誤數目。|  
+|number_of_other_errors|ssNoversion|除了連接、SQL 或認證以外其他類別目錄中的錯誤數目。|  
+|number_of_corrupted_or_deleted_backups|ssNoversion|已刪除或損毀的備份檔案數目。|  
+|number_of_backup_loops|ssNoversion|備份代理程式掃描[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所設定的全部資料庫的次數。|  
+|number_of_retention_loops|ssNoversion|掃描資料庫以評估所設定保留週期的次數。|  
   
 ## <a name="best-practices"></a>最佳作法  
- 這些彙總計算可用來監視系統健全狀況。 例如，如果 number_of_retention_loops 資料行在 30 分鐘內為 0，則保留管理可能需要耗費長時間運作，或甚至運作不正確。 非零的錯誤資料行可能表示出現問題，應檢查擴充事件記錄來了解任何問題。 或者，使用預存程序**managed_backup.sp_get_backup_diagnostics**以取得擴充的事件，以尋找錯誤的詳細資料的清單。  
+ 這些彙總計算可用來監視系統健全狀況。 例如，如果 number_of_retention_loops 資料行在 30 分鐘內為 0，則保留管理可能需要耗費長時間運作，或甚至運作不正確。 非零的錯誤資料行可能表示出現問題，應檢查擴充事件記錄來了解任何問題。 或者，使用預存程序**managed_backup.sp_get_backup_diagnostics**以取得尋找錯誤的詳細資料的擴充事件的清單。  
   
 ## <a name="security"></a>Security  
   

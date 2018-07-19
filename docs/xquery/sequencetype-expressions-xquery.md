@@ -1,5 +1,5 @@
 ---
-title: SequenceType 運算式 (XQuery) |Microsoft 文件
+title: SequenceType 運算式 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,32 +26,32 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2be9250c77c23e00a302d57f0148507f0db41bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078015"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041626"
 ---
 # <a name="sequencetype-expressions-xquery"></a>時序類型運算式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   在 XQuery 中，值永遠是一種時序。 值的類型又稱為時序類型。 序列類型可用於**的執行個體**XQuery 運算式。 當您需要參考 XQuery 運算式中的類型時，就會使用 XQuery 規格中所描述的 SequenceType 語法。  
   
- 不可部份完成類型名稱也可用在**轉換為**XQuery 運算式。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、**的執行個體**和**轉換為**部分支援在 SequenceTypes 上的 XQuery 運算式。  
+ 不可部分完成的型別名稱也可用在**轉換為**XQuery 運算式。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，則**的執行個體**並**轉換為**部分支援在 SequenceTypes 上的 XQuery 運算式。  
   
 ## <a name="instance-of-operator"></a>運算子的執行個體  
- **的執行個體**運算子可用來判斷指定的運算式值的動態或執行階段型別。 例如：  
+ **的執行個體**運算子可以用來判斷指定之運算式的值的動態或執行階段型別。 例如：  
   
 ```  
   
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 請注意，`instance of`運算子， `Occurrence indicator`，指定基數，所產生的順序中的項目數。 若未指定，會將基數假設為 1。 在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，只有問號 (**？)** 支援發生指標。 **嗎？** 發生指標指出`Expression`可以傳回零個或一個項目。 如果**嗎？** 指定發生指標，則`instance of`，則傳回 True 時`Expression`類型符合指定`SequenceType`，無論是否`Expression`傳回單一值或空的序列。  
+ 請注意，`instance of`運算子， `Occurrence indicator`，指定基數，也就是產生的序列中的項目數。 若未指定，會將基數假設為 1。 在  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]，只在問號 (**？)** 支援發生指標。 **嗎？** 發生指標指出`Expression`可以傳回零個或一個項目。 如果**嗎？** 指定發生指標，則`instance of`，則傳回 True 時`Expression`符合指定的型別`SequenceType`，而不論是否`Expression`傳回單一值或空的序列。  
   
- 如果**嗎？** 未指定發生指標， `sequence of` ，則傳回 True 時，才`Expression`輸入符合`Type`指定和`Expression`傳回單一值。  
+ 如果**嗎？** 未指定發生指標，則`sequence of`，則傳回 True 時，才`Expression`輸入相符項目`Type`指定和`Expression`傳回單一值。  
   
- **請注意**加號 (**+**) 和星號 (**\***) 中不支援項目指標[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+ **附註**加號 (**+**) 和星號 (**\***) 相符項目並不支援在[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  下列範例說明使用**的執行個體**XQuery 運算子。  
   
@@ -196,7 +196,7 @@ go
 ```  
   
 ### <a name="example-d"></a>範例 D  
- 在此範例中，您先建立 XML 結構描述集合並用它來輸入**xml**變數。 具型別的**xml**變數然後查詢以說明`instance of`功能。  
+ 在此範例中，您先建立 XML 結構描述集合並用它來鍵入**xml**變數。 具型別的**xml**變數接著會查詢來說明`instance of`功能。  
   
  下列 XML 結構描述集合會定義簡單的類型、myType 以及 myType 類型的 <`root`> 元素：  
   
@@ -217,7 +217,7 @@ xmlns:s="http://schemas.microsoft.com/sqlserver/2004/sqltypes">
 Go  
 ```  
   
- 現在建立具類型**xml**變數並查詢它：  
+ 現在，建立具型別**xml**變數並查詢它：  
   
 ```  
 DECLARE @var XML(SC)  
@@ -244,7 +244,7 @@ go
   
 -   在其中建立 XML 結構描述集合 <`Customer`> 項目具有**OrderList** IDREFS 類型屬性，而 <`Order`> 項目具有**OrderID** ID 類型屬性。  
   
--   建立具型別的**xml**變數並指派 XML 範例執行個體。  
+-   建立具型別**xml**變數並指派 XML 範例執行個體給它。  
   
 -   針對變數指定查詢。 查詢運算式會先從第一個  <`Customer`> 的 OrderList IDRERS 類型屬性擷取第一個訂單識別碼值。 所擷取的值是 IDREF 類型。 因此，`instance of` 會傳回 True。  
   
@@ -316,11 +316,11 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>實作限制  
  以下為其限制：  
   
--   **Schema-element()** 和**schema-attribute()** 序列類型不支援比較`instance of`運算子。  
+-   **Schema-element （)** 並**schema-attribute()** 序列類型不支援比較`instance of`運算子。  
   
 -   例如，完整時序不支援 `(1,2) instance of xs:integer*`。  
   
--   當您使用一種**element()** 時序類型的指定類型名稱，例如`element(ElementName, TypeName)`，此型別必須以問號 （？） 限定。 例如，`element(Title, xs:string?)` 指出元素可能為 Null。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的執行階段偵測**xsi: nil**屬性使用`instance of`。  
+-   當您使用一種**element()** 時序類型的指定類型名稱，例如`element(ElementName, TypeName)`，必須以問號 （？） 限定型別。 例如，`element(Title, xs:string?)` 指出元素可能為 Null。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 不支援的執行階段偵測**xsi: nil**屬性使用`instance of`。  
   
 -   如果在 `Expression` 中的值是源自於聯集類型的元素或屬性，則 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 只能識別基本類型，而無法識別衍生值類型的衍生類型。 例如，如果 <`e1`> 是定義為具有靜態類型的 (xs:integer | xs:string)，下列程式碼將會傳回 False。  
   
@@ -330,10 +330,10 @@ select @x.query(' declare namespace CustOrders="Customers";
   
      然而，`data(<e1>123</e1>) instance of xs:decimal` 將會傳回 True。  
   
--   如**p**和**d**序列類型允許只有不含引數的表單。 例如，允許 `processing-instruction()` 但不允許 `processing-instruction('abc')`。  
+-   針對**processing-instruction**並**document-node**時序類型，允許不含引數的表單。 例如，允許 `processing-instruction()` 但不允許 `processing-instruction('abc')`。  
   
 ## <a name="cast-as-operator"></a>cast as 運算子  
- **轉換為**運算式可用來將值轉換成特定資料類型。 例如：  
+ **轉換為**運算式可用來將值轉換成特定的資料類型。 例如：  
   
 ```  
   
@@ -348,7 +348,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- 在下列查詢中， **data （)** 傳回 ProductModelID 屬性，字串類型的具類型的值。 `cast as`運算子會將值轉換為 xs: integer。  
+ 在下列查詢中， **data （)** 傳回的字串類型的 ProductModelID 屬性具類型的值。 `cast as`運算子會將值轉換為 xs: integer。  
   
 ```  
 WITH XMLNAMESPACES ('http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -362,7 +362,7 @@ WHERE ProductModelID = 19
  明確使用**data （)** 不一定要在此查詢。 `cast as` 運算式可在輸入運算式上執行隱含的不可部份完成。  
   
 ### <a name="constructor-functions"></a>建構函式  
- 您可以使用不可部份完成類型的建構函式。 例如，而不是使用`cast as`運算子， `"2" cast as xs:integer?`，您可以使用**xs:integer()** 建構函式，如下列範例所示：  
+ 您可以使用不可部份完成類型的建構函式。 比方說，而不是使用`cast as`運算子`"2" cast as xs:integer?`，您可以使用**xs:integer()** 建構函式，如下列範例所示：  
   
 ```  
 declare @x xml  
@@ -382,13 +382,13 @@ select @x.query('xs:date("2000-01-01Z")')
   
 #### <a name="implementation-limitations"></a>實作限制  
   
--   XQuery 運算式**typeswitch**，**可轉換**，和**視為**不支援。  
+-   XQuery 運算式**typeswitch**，**可轉換**，並**視為**不支援。  
   
--   **轉換為**需要問號 （？）之後的不可部分完成的類型。  
+-   **轉換為**需要問號 （？）之後的不可部分完成的型別。  
   
--   **xs: qname**不支援做為轉換的類型。 使用**Expanded-qname**改為。  
+-   **xs: qname**不支援做為轉換的類型。 使用**Expanded-qname**改。  
   
--   **xs: date**， **xs: time**，和**xs: datetime**需要時區，為 Z 所指定。  
+-   **xs: date**， **xs: time**，以及**xs: datetime**需要時區，這 Z 所指定。  
   
      下列查詢會失敗，因為未指定時區。  
   
@@ -416,6 +416,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>另請參閱  
  [XQuery 運算式](../xquery/xquery-expressions.md)   
- [類型系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
+ [型別系統&#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

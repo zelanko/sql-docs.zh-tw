@@ -1,5 +1,5 @@
 ---
-title: 使用 SSMS 管理角色 |Microsoft 文件
+title: 使用 SSMS 管理角色 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08cd1e2c1244304f0a6310485b4cac49d3174e33
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045212"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38045346"
 ---
 # <a name="manage-roles-by-using-ssms"></a>使用 SSMS 管理角色 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  對於部署的表格式模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 建立、編輯和管理角色。  
+  對於部署的表格式模型，可以使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]建立、編輯和管理角色。  
   
  本主題的工作：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "34045212"
   
 4.  在 [為這個角色設定資料庫權限] 中，選取下列其中一個權限選項：  
   
-    |權限|說明|  
+    |權限|描述|  
     |----------------|-----------------|  
     |**完整控制權 (管理員)**|成員可以對模型結構描述進行修改，也可以檢視所有資料。|  
     |**處理資料庫**|成員可以執行「處理」和「全部處理」作業。 無法修改模型結構描述，也無法檢視資料。|  
@@ -58,12 +58,12 @@ ms.locfileid: "34045212"
   
 6.  在成員資格設定視窗中，按一下 [加入]，然後在 [選取使用者或群組] 對話方塊中，加入您要當做成員加入的 Windows 使用者或群組。  
   
-7.  如果您建立的角色具有「讀取」權限，您可以使用 DAX 公式加入任何資料表的資料列篩選。 在中加入資料列篩選，**角色屬性- \<rolename >** 對話方塊中，於**選取頁面**，按一下**資料列篩選器**。  
+7.  如果您建立的角色具有「讀取」權限，您可以使用 DAX 公式加入任何資料表的資料列篩選。 在新增資料列篩選**角色屬性- \<rolename >** 對話方塊的 **選取頁面**，按一下**資料列篩選器**。  
   
-8.  在 [資料列篩選] 視窗中，選取資料表，然後按一下 [ **DAX 篩選**] 欄位中，然後在**DAX 篩選- \<tablename >** 欄位中，輸入 DAX 公式。  
+8.  在 資料列篩選 視窗中，選取資料表，然後按一下  **DAX 篩選**欄位中，然後在**DAX 篩選- \<tablename >** 欄位中輸入 DAX 公式。  
   
     > [!NOTE]  
-    >  [DAX 篩選- \<tablename >] 欄位不包含自動完成查詢編輯器或插入函數功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 中使用 DAX 公式編輯器。  
+    >  [DAX 篩選-\<資料表名稱 >] 欄位不包含自動完成查詢編輯器或插入函數功能。 若要在撰寫 DAX 公式時使用自動完成功能，您必須在 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]中使用 DAX 公式編輯器。  
   
 9. 按一下 [確定]，儲存角色。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "34045212"
   
 -   在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，展開包含您要編輯之角色的表格式模型資料庫，然後展開 [角色]，再以滑鼠右鍵按一下此角色，然後按一下 [屬性]。  
   
-     在**角色屬性** \<rolename > 對話方塊中，您可以變更權限、 加入或移除成員，並新增/編輯資料列篩選。  
+     在 [**角色屬性** \<rolename >] 對話方塊中，您可以變更權限、 加入或移除成員，以及新增/編輯資料列篩選。  
   
 ###  <a name="bkmk_deletet_role"></a> 若要刪除角色  
   

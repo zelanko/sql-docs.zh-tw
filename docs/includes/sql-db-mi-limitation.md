@@ -1,2 +1,2 @@
 > [!IMPORTANT]  
-> 在[Azure SQL Database 管理執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)，此 T-SQL 功能有特定的行為變更。 請參閱[從 SQL Server 的 Azure SQL Database 管理執行個體 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)如需詳細資訊，所有的 T-SQL 的行為變更。
+> 在 [Azure SQL Database 受控執行個體](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)上，此 T-SQL 功能有特定的行為變更。 如需所有 T-SQL 行為變更的詳細資料，請參閱 [Azure SQL Database 受控執行個體與 SQL Server 之間的 T-SQL 差異](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information)。

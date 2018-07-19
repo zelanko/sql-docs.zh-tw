@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_stats_histogram (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_stats_histogram (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,18 +25,19 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: af1930b1cd5f8536c9e9f196a8ea739538042ca0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042766"
 ---
-# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
+# <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 傳回在目前指定的資料庫物件 （資料表或索引檢視表） 之統計資料長條圖[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 類似於`DBCC SHOW_STATISTICS WITH HISTOGRAM`。
 
 > [!NOTE] 
-> 此 DMF 是開始可用之[!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]SP1 CU2
+> 此 DMF 開始才提供[!INCLUDE[ssSQL15](../../includes/ssSQL15-md.md)]SP1 cu2 開始
 
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +54,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |object_id |**int**|要傳回統計資料物件屬性之物件 (資料表或索引檢視表) 的識別碼。|  
 |stats_id |**int**|統計資料物件的識別碼。 這在資料表或索引檢視表中是唯一的。 如需詳細資訊，請參閱 [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)。|  
@@ -62,13 +63,13 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |range_rows |**real** |資料行值在長條圖步驟內的預估資料列數，不包括上限。 |
 |equal_rows |**real** |資料行值等於長條圖步驟之上限的預估資料列數。 |
 |distinct_range_rows |**bigint** |在長條圖步驟內具有相異資料行值的預估資料列數，不包括上限。 |
-|average_range_rows |**real** |不包括上限長條圖步驟內重複的資料行值的資料列的平均數目 (`RANGE_ROWS / DISTINCT_RANGE_ROWS`如`DISTINCT_RANGE_ROWS > 0`)。 |
+|average_range_rows |**real** |平均數目，上限不包括長條圖步驟內重複的資料行值的資料列 (`RANGE_ROWS / DISTINCT_RANGE_ROWS`針對`DISTINCT_RANGE_ROWS > 0`)。 |
   
  ## <a name="remarks"></a>備註  
  
- 結果集`sys.dm_db_stats_histogram`傳回類似資訊`DBCC SHOW_STATISTICS WITH HISTOGRAM`也包括`object_id`， `stats_id`，和`step_number`。
+ 結果集`sys.dm_db_stats_histogram`會傳回類似資訊`DBCC SHOW_STATISTICS WITH HISTOGRAM`還包含`object_id`， `stats_id`，和`step_number`。
 
- 因為資料行`range_high_key`是 sql_variant 資料類型，您可能需要使用`CAST`或`CONVERT`如果述詞與非字串常數的比較。
+ 因為資料行`range_high_key`sql_variant 資料類型，您可能需要使用`CAST`或`CONVERT`如果述詞與非字串常數的比較。
 
 ### <a name="histogram"></a>長條圖
   
@@ -97,7 +98,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 ## <a name="examples"></a>範例  
 
 ### <a name="a-simple-example"></a>A. 簡單範例    
-下列範例會建立，並於其中填入簡單的資料表。 然後上建立統計資料`Country_Name`資料行。
+下列範例會建立，並填入簡單的資料表。 然後會建立統計資料`Country_Name`資料行。
 
 ```sql
 CREATE TABLE Country
@@ -108,12 +109,12 @@ INSERT Country (Country_Name) VALUES ('Canada'), ('Denmark'), ('Iceland'), ('Per
 CREATE STATISTICS Country_Stats  
     ON Country (Country_Name) ;  
 ```   
-主索引鍵所佔`stat_id`數字 1，因此呼叫`sys.dm_db_stats_histogram`如`stat_id`編號 2，則可傳回統計資料長條圖`Country`資料表。    
+主索引鍵會佔用`stat_id`數字 1，因此呼叫`sys.dm_db_stats_histogram`for`stat_id`數字 2，則可傳回統計資料長條圖`Country`資料表。    
 ```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-### <a name="b-useful-query"></a>B. 有用的查詢：   
+### <a name="b-useful-query"></a>B. 實用的查詢：   
 ```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
@@ -122,15 +123,15 @@ CROSS APPLY sys.dm_db_stats_histogram(s.[object_id], s.stats_id) AS hist
 WHERE s.[name] = N'<statistic_name>';
 ```
 
-### <a name="c-useful-query"></a>C. 有用的查詢：
-下列範例會從資料表選取`Country`與資料行上的述詞`Country_Name`。
+### <a name="c-useful-query"></a>C. 實用的查詢：
+下列範例會從資料表選取`Country`資料行上的述詞與`Country_Name`。
 
 ```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
-下例會查看資料表上先前建立的統計資料`Country`和資料行`Country_Name`長條圖步驟符合上述查詢中的述詞。
+下列範例會查看先前建立的統計資料，資料表上`Country`和資料行`Country_Name`長條圖步驟符合上述查詢中的述詞。
 
 ```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
@@ -148,6 +149,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>另請參閱  
-[DBCC SHOW_STATISTICS (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
-[物件相關的動態管理檢視和函數 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
+[DBCC SHOW_STATISTICS & Amp;#40;transact-SQL&AMP;#41](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
+[物件相關的動態管理檢視和函數 & Amp;#40;transact-SQL&AMP;#41](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

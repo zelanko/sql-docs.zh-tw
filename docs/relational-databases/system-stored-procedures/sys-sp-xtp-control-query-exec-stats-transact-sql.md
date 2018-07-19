@@ -1,5 +1,5 @@
 ---
-title: sys.sp_xtp_control_query_exec_stats (TRANSACT-SQL) |Microsoft 文件
+title: sys.sp_xtp_control_query_exec_stats & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2015
 ms.prod: sql
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23301458684008945c057aa1d7f9f97380a9cb68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257569"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055846"
 ---
 # <a name="sysspxtpcontrolqueryexecstats-transact-sql"></a>sys.sp_xtp_control_query_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33257569"
   
  啟用統計資料收集時，效能會降低。 如果您只需要對一個或少數幾個原生編譯的預存程序進行疑難排解，可以只針對這幾個原生編譯的預存程序啟用統計資料收集。  
   
- 若要啟用統計資料集合程序層級的所有原生編譯的預存程序，請參閱[sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
+ 若要啟用所有原生編譯的預存程序的程序層級的統計資料收集，請參閱[sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +56,7 @@ sp_xtp_control_query_exec_stats [ [ @new_collection_value = ] collection_value ]
  @database_id = = *database_id*， @xtp_object_id = *procedure_id*  
  原生編譯預存程序的資料庫識別碼和物件識別碼。 如果啟用統計資料收集執行個體 ([sys.sp_xtp_control_proc_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md))，會收集原生編譯的預存程序的統計資料。 關閉執行個體上的統計資料收集並不會關閉個別原生編譯預存程序的統計資料收集。  
   
- 使用[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)， [sys.procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)， [DB_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)，或[OBJECT_ID &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md)若要取得資料庫和預存程序的 Id。  
+ 使用[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)， [sys.procedures &#40;-&#41;](../../relational-databases/system-catalog-views/sys-procedures-transact-sql.md)， [DB_ID &#40;-&#41;](../../t-sql/functions/db-id-transact-sql.md)，或是[OBJECT_ID &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/object-id-transact-sql.md)若要取得資料庫和預存程序識別碼。  
   
  @old_collection_value =*值*  
  傳回目前狀態。  

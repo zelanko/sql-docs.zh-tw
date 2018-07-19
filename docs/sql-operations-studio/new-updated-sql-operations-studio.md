@@ -1,5 +1,5 @@
-﻿---
-title: 已更新-SQL Operations Studio 文件 |Microsoft 文件
+---
+title: 已更新-SQL 作業 Studio 文件 |Microsoft 文件
 description: 針對 SQL Operations Studio，顯示文件中最近變更的更新內容程式碼片段。
 manager: craigg
 author: MightyPen
@@ -14,7 +14,7 @@ ms.component: ssops
 ms.date: 04/28/2018
 ms.openlocfilehash: 074ed6176480655d9d87a55eb87cbb76b3011b7e
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
 ms.locfileid: "32686518"
@@ -127,7 +127,7 @@ ms.locfileid: "32686518"
 
 ### <a name="2-nbsp-sql-operations-studio-preview-release-notesrelease-notesmd"></a>2.&nbsp; [SQL Operations Studio （預覽） 版本資訊](release-notes.md)
 
-*更新日期︰ 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_1) | [下一步](#TitleNum_3))
+*更新日期︰ 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_1))  |  [下一步](#TitleNum_3))
 
 <!-- Source markdown line 20.  ms.author= "sstein".  -->
 
@@ -141,7 +141,7 @@ ms.locfileid: "32686518"
 **[下載 4 月公開預覽]**
 
 
-**2018 年 4 月  （4 月公開預覽）**
+**2018 年 4 月 （4 月公開預覽）**
 
 
 發行日期： 2018 年 4 月 25 日，版本： 0.28.6

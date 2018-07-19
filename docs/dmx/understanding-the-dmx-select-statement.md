@@ -1,5 +1,5 @@
 ---
-title: 了解 DMX Select 陳述式 |Microsoft 文件
+title: 了解 DMX Select 陳述式 |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a63354280ef9c955c081d34d87d337ba0c9d4f87
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842601"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042046"
 ---
 # <a name="understanding-the-dmx-select-statement"></a>了解 DMX Select 陳述式
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [選取](../dmx/select-dmx.md)陳述式是您建立與資料採礦延伸模組 (DMX) 中的大多數查詢的基礎[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 它可以執行許多不同種類的工作，例如瀏覽及針對資料採礦模型預測。  
+  [選取 ](../dmx/select-dmx.md)陳述式是您建立使用資料採礦延伸模組 (DMX) 中的大多數查詢的基礎[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]。 它可以執行許多不同種類的工作，例如瀏覽及針對資料採礦模型預測。  
   
  以下是您可以使用完成工作**選取**陳述式：  
   
@@ -33,7 +33,7 @@ ms.locfileid: "34842601"
   
 -   複製採礦模型。  
   
- 這些工作會使用一組不同的資料，我們將稱之為*資料網域*。 定義資料網域中的**FROM**陳述式子句。  
+ 每個工作會使用一組不同的資料，我們將稱之為*資料網域*。 您定義資料網域中的**FROM**陳述式子句。  
   
 -   您想要尋找資料採礦模型本身中的物件，例如定義資料集的規則，或用來進行預測的公式。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34842601"
   
      在此情況下，您需要鑽研採礦結構 (也就是您的資料網域)，並查看 [Gender]、[Bike Buyer] 等資料行中的個別資料列。  
   
- **重要事項：** 任何內容，都包含在運算式清單或**其中**子句都必須來自所定義的資料網域**FROM**子句。 您不能混用資料網域。  
+ **重要事項︰** 任何項目是否包含在運算式清單，或在**所在**子句都必須來自所定義的資料網域**FROM**子句。 您不能混用資料網域。  
   
 ##  <a name="Select_Types"></a> 選取類型  
  語法**選取**陳述式支援許多不同的工作。 請使用下列模式執行這些工作：  
@@ -59,11 +59,11 @@ ms.locfileid: "34842601"
 ###  <a name="Predicting"></a> 預測  
  您可以使用下列查詢類型，根據採礦模型執行預測。  
   
- 您可以包含任何一個瀏覽或預測**選取**內的陳述式**FROM**和**其中**預測聯結子句**選取**陳述式。  
+ 您可以包含任何一個瀏覽或預測**選取**內的陳述式**FROM**並**其中**預測聯結子句**選取**陳述式。  
   
 |查詢類型|描述|  
 |----------------|-----------------|  
-|選取從 [自然] 預測聯結|傳回將採礦模型中的資料行聯結至內部資料來源的資料行所建立的預測。<br /><br /> 這種查詢類型的網域是模型中的可預測資料行，以及輸入資料來源中的資料行。<br /><br /> [SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [預測查詢&#40;資料採礦&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
+|選取 [自然] 預測聯結|傳回將採礦模型中的資料行聯結至內部資料來源的資料行所建立的預測。<br /><br /> 這種查詢類型的網域是模型中的可預測資料行，以及輸入資料來源中的資料行。<br /><br /> [SELECT FROM&#60;模型&#62;PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)<br /><br /> [預測查詢&#40;資料採礦&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
 |SELECT FROM *\<模型 >*|只根據採礦模型傳回可預測資料行的最可能狀態。 這種查詢類型是建立具有空白預測聯結之預測的捷徑。<br /><br /> 這種查詢類型的網域是模型中的可預測資料行。<br /><br /> [SELECT FROM&#60;模型&#62; &#40;DMX&#41;](../dmx/select-from-model-dmx.md)<br /><br /> [預測查詢&#40;資料採礦&#41;](../analysis-services/data-mining/prediction-queries-data-mining.md)|  
   
  [回到選取類型](#Select_Types)  
