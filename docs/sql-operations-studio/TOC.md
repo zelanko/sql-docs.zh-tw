@@ -14,6 +14,8 @@
 # 使用說明指南
 ## [儀表板與深入解析小工具](insight-widgets.md)
 ## [延伸模組](extensions.md)
+### [SQL Server Agent](sql-server-agent-extension.md)
+### [SQL Server Profiler](sql-server-profiler-extension.md)
 ## [程式碼片段](code-snippets.md)
 ## [整合式終端機 (PowerShell、Bash)](integrated-terminal.md)
 ## [鍵盤快速鍵](keyboard-shortcuts.md)
