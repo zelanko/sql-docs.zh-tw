@@ -1,5 +1,5 @@
 ---
-title: cdc.captured_columns (TRANSACT-SQL) |Microsoft 文件
+title: cdc.captured_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 - cdc.captured_columns
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 51cd038691edf6a89382d4bb588646d70792678c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 144bf49651013b55ec1b515da1ecec156dd375c6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260834"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103276"
 ---
 # <a name="cdccapturedcolumns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  針對在擷取執行個體中追蹤的每個資料行，各傳回一個資料列。 根據預設，系統會擷取來源資料表的所有資料行。 不過，當來源資料表啟用異動資料擷取時，您可以透過指定資料行清單，加入或排除資料行。 如需詳細資訊，請參閱[sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
+  針對在擷取執行個體中追蹤的每個資料行，各傳回一個資料列。 根據預設，系統會擷取來源資料表的所有資料行。 不過，當來源資料表啟用異動資料擷取時，您可以透過指定資料行清單，加入或排除資料行。 如需詳細資訊，請參閱 < [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)。  
   
- 我們建議您**不直接查詢系統資料表**。 請改為執行[sys.sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)預存程序。  
+ 我們建議您**請勿直接查詢系統資料表**。 請改為執行[sys.sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md)預存程序。  
    
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|擷取資料行所屬之來源資料表的識別碼。|  
 |**column_name**|**sysname**|擷取資料行的名稱。|  
@@ -46,6 +46,6 @@ ms.locfileid: "33260834"
 |**sys.computer_columns**|**bit**|指出擷取資料行是來源資料表中的計算資料行。|  
   
 ## <a name="see-also"></a>另請參閱  
- [cdc.change_tables &#40;Transact SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
+ [cdc.change_tables &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

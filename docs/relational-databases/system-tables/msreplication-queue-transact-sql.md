@@ -1,5 +1,5 @@
 ---
-title: MSreplication_queue (TRANSACT-SQL) |Microsoft 文件
+title: MSreplication_queue & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSreplication_queue system table
 ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1230ab84f1d5082fd1f8b9482702a9361b7b9f2e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 663a07279a7bfe0ba9afe8ce6dc37cd74c71434c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005505"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102136"
 ---
 # <a name="msreplicationqueue-transact-sql"></a>MSreplication_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_queue**資料表由複寫程序來儲存發行所有使用 SQL 架構佇列更新訂閱佇列的佇列的命令。 這份資料表儲存在訂閱資料庫中。  
+  **MSreplication_queue**資料表由複寫程序來儲存公布的所有使用 SQL 架構佇列更新訂閱已排入佇列的佇列的命令。 這份資料表儲存在訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
-|**Tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  
+|**tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  
 |**data**|**varbinary(8000)**|儲存佇列命令相關資訊的壓縮位元組資料流。|  
 |**datalen**|**int**|資料長度 (以位元組為單位)。|  
 |**commandtype**|**int**|目前置於佇列中的命令類型：<br /><br /> 1 = 交易中的使用者命令。<br /><br /> 2 = 訂閱同步處理命令。|  

@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 401eb2569a1da86964543f9122d213398f39eff4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f9207a9ccee4917b8c2aa1e7731da4afe6e15658
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38021204"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085840"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
 
@@ -284,6 +284,6 @@ sudo zypper update mssql-server-fts
     GO
     ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 全文檢索搜尋的相關資訊，請參閱[SQL Server 全文檢索搜尋](../relational-databases/search/full-text-search.md)。 

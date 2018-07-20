@@ -1,5 +1,5 @@
 ---
-title: Y (TRANSACT-SQL) |Microsoft 文件
+title: MStracer_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MStracer_history system table
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8c7755a6a09be5aebe2d815a8b4dfe9178bab04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6530c5da824206efb907999ffc3ae16e77399fca
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004765"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101246"
 ---
 # <a name="mstracerhistory-transact-sql"></a>MStracer_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MStracer_history**資料表會維護所有已在訂閱者端接收的追蹤 token 記錄。 這份資料表儲存在散發資料庫中，並且由複寫用來監視效能之用。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**parent_tracer_id**|**int**|唯一識別追蹤 Token。|  
 |**agent_id**|**int**|識別處理追蹤 Token 記錄的代理程式。|  

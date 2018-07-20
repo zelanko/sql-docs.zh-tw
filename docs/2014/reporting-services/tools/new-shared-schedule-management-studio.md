@@ -16,12 +16,12 @@ caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 107c05439db3016618a84c5ad4ea389e23231286
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b98f6b18b4cf979e8345eaa601ee49f08113101b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204798"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083150"
 ---
 # <a name="new-shared-schedule-management-studio"></a>新增共用排程 (Management Studio)
   您可以使用這個頁面來建立共用排程，以便執行已發行的報表和訂閱。 共用排程可以用來取代報表特定或訂閱特定的排程。 集中式排程資訊以及暫停和繼續排程作業的能力是區別共用排程與項目特有排程的兩個重要功能。  
@@ -39,7 +39,7 @@ ms.locfileid: "37204798"
  **名稱**  
  鍵入共用排程的名稱。 當使用者針對報表和訂閱選取共用排程時，這個名稱會顯示在下拉式清單中。 請務必提供可輕易地容納在清單中而且可輕易地區別共用排程的描述性名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : @ & = +，$ / * \< >  
+ ; ? : \@ & = +，$ / * \< >  
   
  " /  
   

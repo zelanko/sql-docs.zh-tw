@@ -1,5 +1,5 @@
 ---
-title: M (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_errorlineage (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSmerge_errorlineage system table
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d147e8e73ee7b153ce14d3ffd6d9082095ac1a68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3bdae242526c6985cc428d332be92e0b810f3a6c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004725"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101926"
 ---
 # <a name="msmergeerrorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_errorlineage**資料表包含已刪除 「 訂閱者 」，但刪除動作不會傳播到 「 發行者 」 的資料列。 這份資料表儲存在發行集和訂閱資料庫中。  
+  **MSmerge_errorlineage**資料表包含已刪除訂閱，但其的刪除動作尚未傳播到 「 發行者 」 的資料列。 這份資料表儲存在發行集和訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**int**|指派給進行合併式複寫發行之資料表的整數值。 對應中的暱稱欄位**sysmergearticles**資料表。|  
+|**tablenick**|**int**|指派給進行合併式複寫發行之資料表的整數值。 中的暱稱欄位對應**sysmergearticles**資料表。|  
 |**rowguid**|**uniqueidentifier**|資料列識別碼。|  
 |**歷程**|**varbinary(501)**|儲存訂閱者和發行者的資料列更新記錄清單。 它用來偵測和解決衝突狀況。|  
   

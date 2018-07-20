@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: a1b6b4bb4c99a3b991120d57b8cf25cc91686957
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: e198ae15b5f618b25f7d4391a0a09be33621c2da
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982140"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085730"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows 上使用 PowerShell 來管理 SQL Server on Linux
 

@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_loginconfig
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 950a01041db936c83a5a3c799f1055ab3996aa34
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 563893d516e5b6349008dd0a0641c38beacbc849
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38003170"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102896"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ xp_loginconfig ['config_name']
   
  若要設定登入模式和稽核層級，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  在需要 CONTROL 權限**主要**資料庫。  
   
 ## <a name="examples"></a>範例  

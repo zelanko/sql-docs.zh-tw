@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: af67d79616f2223f62998494122787460eaa3a41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d57525fb8ed9ca6718f072ef20c9e2cefe8e7ba9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193108"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084030"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>在 OPENXML 中指定中繼屬性
   XML 文件的中繼屬性 (Metaproperty) 之屬性 (Attribute)，是描述 XML 項目 (例如元素、屬性或任何其他 DOM 節點) 屬性 (Property) 的屬性 (Attribute)。 這些屬性實際上不存在於 XML 文件文字中。 不過，OPENXML 會提供這些中繼屬性給所有的 XML 項目。 這些中繼屬性可讓您擷取 XML 節點的資訊，例如本機定位和命名空間資訊。 此資訊可提供您所呈現文字以外更詳細的資料。  
@@ -43,21 +43,21 @@ ms.locfileid: "37193108"
   
 |中繼屬性的屬性|描述|  
 |----------------------------|-----------------|  
-|**@mp:id**|提供 DOM 節點的全文件識別碼 (由系統產生)。 只要文件未經過重新分析，此識別碼就會參照相同的 XML 節點。<br /><br /> XML 識別碼為 **0** ，表示元素為根元素。 其父系 XML 識別碼為 NULL。|  
-|**@mp:localname**|儲存節點名稱的本機部份。 它會和前置詞及命名空間 URI 一起用來命名元素或屬性節點。|  
-|**@mp:namespaceuri**|提供目前元素的命名空間 URI。 若此屬性值為 NULL，則沒有命名空間|  
-|**@mp:prefix**|儲存現行元素名稱的命名空間前置詞。<br /><br /> 若無前置詞 (NULL) 但提供了 URI，表示指定的命名空間是預設命名空間。 若未提供 URI，則不附加任何命名空間。|  
-|**@mp:prev**|儲存相對於節點的前一個同層級。 這提供了文件中元素排序的相關資訊。<br /><br /> **@mp:prev** 含有具相同父元素的之前同層級 XML 識別碼。 若元素是位於同層級清單之前，則 **@mp:prev** 為 NULL。|  
-|**@mp:xmltext**|用來進行處理。 它是元素及其屬性 (還有子元素) 的文字序列化，會用在 OPENXML 的溢位處理。|  
+|**\@mp:id**|提供 DOM 節點的全文件識別碼 (由系統產生)。 只要文件未經過重新分析，此識別碼就會參照相同的 XML 節點。<br /><br /> XML 識別碼為 **0** ，表示元素為根元素。 其父系 XML 識別碼為 NULL。|  
+|**\@mp:localname**|儲存節點名稱的本機部份。 它會和前置詞及命名空間 URI 一起用來命名元素或屬性節點。|  
+|**\@mp:namespaceuri**|提供目前元素的命名空間 URI。 若此屬性值為 NULL，則沒有命名空間|  
+|**\@mp:prefix**|儲存現行元素名稱的命名空間前置詞。<br /><br /> 若無前置詞 (NULL) 但提供了 URI，表示指定的命名空間是預設命名空間。 若未提供 URI，則不附加任何命名空間。|  
+|**\@mp:prev**|儲存相對於節點的前一個同層級。 這提供了文件中元素排序的相關資訊。<br /><br /> **\@mp:prev**含有具相同父元素的之前同層級 XML 識別碼。 如果元素是位於同層級 清單中，前端 **\@mp:prev**是 NULL。|  
+|**\@mp:xmltext**|用來進行處理。 它是元素及其屬性 (還有子元素) 的文字序列化，會用在 OPENXML 的溢位處理。|  
   
  下表顯示所提供的其他父屬性，可讓您擷取關於階層的資訊。  
   
 |父系中繼屬性的屬性|描述|  
 |-----------------------------------|-----------------|  
-|**@mp:parentid**|對應至 **../@mp:id**|  
-|**@mp:parentlocalname**|對應至 **../@mp:localname**|  
-|**@mp:parentnamespacerui**|對應至 **../@mp:namespaceuri**|  
-|**@mp:parentprefix**|對應至 **../@mp:prefix**|  
+|**\@mp:parentid**|對應至 **.../\@mp:id**|  
+|**\@mp:parentlocalname**|對應至 **.../\@mp:localname**|  
+|**\@mp:parentnamespacerui**|對應至 **.../\@mp:namespaceuri**|  
+|**\@mp:parentprefix**|對應至 **.../\@mp:prefix**|  
   
 ## <a name="examples"></a>範例  
  下列範例說明如何使用 OPENXML 來建立不同的資料列集檢視。  
@@ -67,11 +67,11 @@ ms.locfileid: "37193108"
   
  OPENXML 陳述式說明下列各項：  
   
--   **id** 資料行會對應到 **@mp:id** 中繼屬性的屬性，表示該資料行包含項目的唯一 XML 識別碼 (由系統產生)。  
+-   **識別碼**資料行對應到 **\@mp:id**中繼屬性的屬性，表示資料行包含系統產生的唯一 XML 識別碼的項目。  
   
--   **parent** 資料行會對應到 **@mp:parentid**，表示該資料行包含項目父系的 XML 識別碼。  
+-   **父代**資料行對應到 **\@mp:parentid** ，表示資料行包含元素父系 XML 識別碼。  
   
--   **parentLocalName** 資料行會對應到 **@mp:parentlocalname**，表示該資料行包含父系的本機名稱。  
+-   **ParentLocalName**資料行對應到 **\@mp:parentlocalname** ，表示資料行包含父系的本機名稱。  
   
  然後，SELECT 陳述式會傳回 OPENXML 所提供的資料列集：  
   
@@ -164,13 +164,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. 指定 xmltext 中繼屬性來擷取資料行中未耗用的資料  
  此範例使用 OPENXML 來建立範例 XML 文件的資料列集檢視。 範例中將說明如何將 **xmltext** 中繼屬性的屬性對應到 OPENXML 中的資料列集資料行，以擷取未消耗的 XML 資料。  
   
- **comment** 資料行藉由對應到 **@mp:xmltext** 中繼屬性，而被識別為溢位資料行。 *flags* 參數是設為 **9** (XML_ATTRIBUTE 和 XML_NOCOPY)。 這表示 **屬性中心** 對應，並表示只有未耗用的資料才要複製到溢位資料行。  
+ **註解**資料行，會藉由對應到識別為溢位資料行 **\@mp:xmltext**中繼屬性。 *flags* 參數是設為 **9** (XML_ATTRIBUTE 和 XML_NOCOPY)。 這表示 **屬性中心** 對應，並表示只有未耗用的資料才要複製到溢位資料行。  
   
  然後 SELECT 陳述式將傳回由 OPENXML 所提供的資料列集。  
   
- 在此範例中， **@mp:parentlocalname** 中繼屬性是針對 OPENXML 所產生資料列集的資料行 **ParentLocalName**來設定的。 因此，此資料行含有父元素的本機名稱。  
+ 在此範例中，  **\@mp:parentlocalname**中繼屬性設定資料行**ParentLocalName**，OPENXML 所產生的資料列集中。 因此，此資料行含有父元素的本機名稱。  
   
- 資料列集內還指定了另外兩個資料行： **parent** 及 **comment**。 **parent** 資料行會對應到 **@mp:parentid**，表示該資料行包含項目之父系項目的 XML 識別碼。 comment 資料行藉由對應到 **@mp:xmltext** 中繼屬性除外)。  
+ 資料列集內還指定了另外兩個資料行： **parent** 及 **comment**。 **父代**資料行對應到 **\@mp:parentid** ，表示資料行包含之元素的父元素的 XML 識別碼。 註解資料行，會藉由對應到識別為溢位資料行 **\@mp:xmltext**中繼屬性。  
   
 ```  
 DECLARE @idoc int  

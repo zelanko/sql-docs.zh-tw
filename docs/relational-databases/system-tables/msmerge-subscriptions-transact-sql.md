@@ -1,5 +1,5 @@
 ---
-title: M (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_subscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_subscriptions system table
 ms.assetid: cafd954a-92f8-44cb-a5d0-dce9aafa5ee1
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e985f871e1409dc9e837fcbc192b136365d212d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 825b41072c6114271c295488ff0ff700a8de74c6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004785"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102926"
 ---
 # <a name="msmergesubscriptions-transact-sql"></a>MSmerge_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_subscriptions**資料表包含一個資料列，針對每個訂閱者的合併代理程式所服務的訂閱。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_subscriptions**資料表包含訂閱者的合併代理程式所服務的每個訂用帳戶的一個資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  

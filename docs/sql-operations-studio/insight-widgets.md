@@ -1,24 +1,23 @@
-﻿---
+---
 title: 使用 Insight 小工具來監視 SQL Operations Studio （預覽）中的伺服器與資料庫 |Microsoft 文件
 description: 了解 SQL Operations Studio（預覽）中的 Insight 小工具。
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
+ms.technology: ssops
 ms.reviewer: alayu; sstein
 ms.suite: sql
-ms.prod_service: sql-tools
-ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article"
+ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77f34ceebb4f02c829b2df3efcae5e64c2eaa1bf
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 79918d899fa978404dde63bf9257ffb9fc52d185
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235927"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082850"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用 insight 小工具管理資料庫與伺服器
 
@@ -36,12 +35,12 @@ Insights 是可以新增至伺服器與資料庫監控儀表板的客製圖表�
 - [建置自訂的 Insight 小工具](tutorial-build-custom-insight-sql-server.md)
 - *啟用內建的 Insight 小工具*
    - [啟用效能監視 insight](tutorial-qds-sql-server.md)
-   - [啟用資料表空間使用量深入資訊](tutorial-table-space-sql-server.md)
+   - [啟用資料表空間使用量的深入解析](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>SQL 查詢 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 若要避免引進其他語言或大量的使用者介面，因此它會嘗試使用 T-SQL 盡可能以最小的 JSON 組態尚未嘗試。 使用 T-SQL 設定深入了解 widget 會利用無數的有用可以轉換成具洞察力的 widget 的 T-SQL 查詢現有來源的數目。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] 會嘗試以避免產生但另一個語言或大量的使用者介面，如此它便會嘗試使用 T-SQL 盡可能以最低的 JSON 組態。 使用 T-SQL 設定深入解析小工具會利用現有的來源，可以轉換成具洞察力的小工具的實用 T-SQL 查詢的無數的數目。
 
 Insight 小工具是由一個或兩個 T-SQL 查詢所組成：
 * *Insight 小工具查詢*是必要的且查詢會傳回小工具中出現的資料。

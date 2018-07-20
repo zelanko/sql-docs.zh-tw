@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 1dab0dcc403a7e0f85cd78e69e9461ef0d566b0c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 7bb600d59e104fcc8e69307dd523f17452d95fef
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006786"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085190"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 用戶端 SDK 規格上的 SQL Server
 
@@ -220,7 +220,7 @@ ms.locfileid: "38006786"
 
 | 參數 | 引數 | 說明
 | ----- | ----- | ------ |
-| |無 | 不適用
+| |None | 不適用
         
 | 傳回值 | 引數 | 說明
 | ----- | ----- | ------ |
@@ -240,7 +240,7 @@ ms.locfileid: "38006786"
 
 | 參數 | 引數 | 說明
 | ----- | ----- | ------ |
-| |無 |不適用
+| |None |不適用
         
 | 傳回值 | 引數 | 說明
 | ----- | ----- | ------ |

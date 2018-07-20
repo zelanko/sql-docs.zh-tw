@@ -1,5 +1,5 @@
 ---
-title: 擴充預存程序的執行特性 |Microsoft 文件
+title: 擴充預存程序的執行特性 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 276efd6941012857820607d51e08ad309e581e94
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11ce9088d6f6e9cde45eb080b1c12f3c4d434b18
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32936463"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087890"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>擴充預存程序的執行特性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32936463"
   
  擴充預存程序的執行具有下列特性：  
   
--   擴充預存程序函式的安全性內容下執行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   安全性內容下執行擴充預存程序函式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 -   擴充預存程序函數會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的處理序空間中執行。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "32936463"
   
 -  
   
- 擴充預存程序在載入 DLL 之後，DLL 仍保持載入狀態直到伺服器的位址空間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已停止或系統管理員明確地卸載 DLL 使用 DBCC *DLL_name* (FREE)。  
+ 擴充預存程序載入 DLL 之後，DLL 仍保持載入狀態之前的伺服器的位址空間[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]已停止或系統管理員明確卸載 DLL 使用 DBCC *DLL_name* （免費）。  
   
  擴充預存程序可以使用 EXECUTE 陳述式，從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 當做預存程序執行：  
   
@@ -53,13 +53,13 @@ EXECUTE @retval = xp_extendedProcName @param1, @param2 OUTPUT
 ```  
   
 ## <a name="parameters"></a>參數  
- @ *retval*  
+ \@ *retval*  
  這是傳回值。  
   
- @ *param1*  
+ \@ *param1*  
  這是輸入參數。  
   
- @ *param2*  
+ \@ *param2*  
  這是輸入/輸出參數。  
   
 > [!CAUTION]  

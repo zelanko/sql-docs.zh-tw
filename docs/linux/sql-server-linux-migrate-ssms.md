@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 7a7c1c73ca70e0d42104e74c868d6acd32cc01b1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1ce94cb159e552b147ad1798eeacf60b9c7ff25a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020126"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085090"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>匯出和匯入使用 SSMS 或 SqlPackage.exe 在 Windows 上的 Linux 上的資料庫
 
@@ -34,7 +34,7 @@ ms.locfileid: "38020126"
 
 1. 輸入啟動 SSMS **Microsoft SQL Server Management Studio**在 Windows 搜尋方塊，，然後按一下 傳統型應用程式。
 
-    ![Transact-SQL](./media/sql-server-linux-manage-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. 連接到您的來源資料庫，在 [物件總管] 中。 來源資料庫可以是內部部署上執行的 Microsoft SQL Server 中或在雲端、 Linux、 Windows 或 Docker 和 Azure SQL Database 或 Azure SQL 資料倉儲上。
 
@@ -52,7 +52,7 @@ ms.locfileid: "38020126"
 
 1. 輸入啟動 SSMS **Microsoft SQL Server Management Studio**在 Windows 搜尋方塊，，然後按一下 傳統型應用程式。
 
-    ![Transact-SQL](./media/sql-server-linux-manage-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. 連接到您的目標伺服器，在 [物件總管] 中。 目標伺服器可以是 Microsoft SQL Server 執行於內部部署或雲端，在 Linux、 Windows 或 Docker 和 Azure SQL Database 或 Azure SQL 資料倉儲中。
 

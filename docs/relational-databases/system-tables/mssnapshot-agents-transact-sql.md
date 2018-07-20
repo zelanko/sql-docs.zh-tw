@@ -1,5 +1,5 @@
 ---
-title: MSsnapshot_agents (TRANSACT-SQL) |Microsoft 文件
+title: MSsnapshot_agents (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5ef7538fa8b7066397804b1b58521f090a44a3d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb9d1fd6367762ca6cb8472d964568bd207f83a0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006435"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102536"
 ---
 # <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsnapshot_agents**資料表包含一個資料列與本機散發者相關聯的每個快照集代理程式。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|快照集代理程式的識別碼。|  
 |**name**|**nvarchar(100)**|快照集代理程式的名稱。|  
@@ -52,8 +52,10 @@ ms.locfileid: "33006435"
 |**dynamic_filter_hostname**|**sysname**|值，用來評估[HOST_NAME &#40;TRANSACT-SQL&#41; ](../../t-sql/functions/host-name-transact-sql.md)定義資料分割的參數化篩選中的函式。 這個資料行供資料分割快照集使用。|  
 |**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**publisher_login**|**sysname**|連接到發行者時所用的登入。|  
-|**publisher_password**|**nvarchar （524)**|連接到發行者時，所用之密碼的加密值。|  
+|**publisher_password**|**nvarchar(524)**|連接到發行者時，所用之密碼的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|用來啟動代理程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的唯一識別碼。|  
+|**job_login**|**sysname**||  
+|**job_password**|**nvarchar(524)**||  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

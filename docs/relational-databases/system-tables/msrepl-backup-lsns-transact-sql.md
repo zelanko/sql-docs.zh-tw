@@ -1,5 +1,5 @@
 ---
-title: MSrepl_backup_lsns (TRANSACT-SQL) |Microsoft 文件
+title: MSrepl_backup_lsns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSrepl_backup_Isns system table
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4223b1bac4bd9990d328fd00092be2630b8cf736
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2978827ac47e46e7d9a5af7770101be52981b41f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004945"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101436"
 ---
 # <a name="msreplbackuplsns-transact-sql"></a>MSrepl_backup_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSrepl_backup_lsns**資料表包含支援散發資料庫 'sync with backup' 選項的交易記錄序號 (LSN)。 這份資料表儲存在散發資料庫中。  
+  **Msrepl_backup_lsns&lt**資料表包含支援散發資料庫 'sync with backup' 選項的交易記錄序號 (LSN)。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|發行者資料庫的識別碼。|  
 |**valid_xact_id**|**varbinary(16)**|要傳給發行者來標示記錄截斷點的交易識別碼。 只有在散發資料庫是 'sync with backup' 模式時，才使用這個項目。 包含已備份的散發資料庫中，最新的複寫交易的識別碼。 記錄讀取器會將它傳給發行者來標示記錄截斷點。|  

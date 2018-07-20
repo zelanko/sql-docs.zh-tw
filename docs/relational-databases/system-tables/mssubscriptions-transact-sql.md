@@ -1,5 +1,5 @@
 ---
-title: M (TRANSACT-SQL) |Microsoft 文件
+title: MSsubscriptions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSsubscriptions system table
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05f5100843227093cd11909adede12f449cf0051
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8d580a5164595a12d96ae8f7b491bc896d451fa8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33007755"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102966"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSsubscriptions**資料表包含一個資料列，每個已發行文章在本機散發者所服務的訂閱。 這份資料表儲存在散發資料庫中。  
+  **MSsubscriptions**資料表包含一個資料列，每個已發行文章在本機散發者所服務的訂用帳戶中。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|發行者資料庫的識別碼。|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
@@ -48,9 +48,9 @@ ms.locfileid: "33007755"
 |**subscriber_db**|**sysname**|訂閱資料庫的名稱。|  
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> **0** = 發送。<br /><br /> **1** = 提取。<br /><br /> **2** = 匿名。|  
 |**sync_type**|**tinyint**|同步處理的類型：<br /><br /> **1** = 自動。<br /><br /> **2** = 無同步處理。|  
-|**status**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 訂閱。<br /><br /> **2** = 使用。|  
+|**status**|**tinyint**|訂閱的狀態：<br /><br /> **0** = 非使用中。<br /><br /> **1** = 訂閱。<br /><br /> **2** = 作用。|  
 |**subscription_seqno**|**varbinary(16)**|快照集交易序號。|  
-|**snapshot_seqno_flag**|**bit**|值，表示快照集交易序號的來源**1**表示**subscription_seqno**是快照集序號。|  
+|**snapshot_seqno_flag**|**bit**|值，表示來源的快照集交易序號**1**表示**subscription_seqno**是快照集序號。|  
 |**independent_agent**|**bit**|指出這個發行集是否有獨立的散發代理程式。|  
 |**subscription_time**|**datetime**|僅供內部使用。|  
 |**loopback_detection**|**bit**|適用於雙向異動複寫拓撲中的訂閱。 回送偵測會判斷散發代理程式是否將起源於訂閱者端的交易傳回給訂閱者：<br /><br /> **1** = 不傳回。<br /><br /> **0** = 傳回。<br /><br /> 注意： 此資料行支援僅針對回溯相容性的雙向複寫功能[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新版本中，應該改用點對點複寫。 如需相關資訊，請參閱 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。|  
@@ -62,6 +62,6 @@ ms.locfileid: "33007755"
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

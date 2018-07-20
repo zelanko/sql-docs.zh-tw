@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 05/21/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: sql-linux
-ms.openlocfilehash: 2b6293e7c0d80eb1ebe02d6cd03f17626d793c05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: b0a16d3818195da0a98557025d0fe96c3d5333ee
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001660"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086770"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>在 Windows 上使用 SQL Server Management Studio，來管理 SQL Server on Linux
 
@@ -55,7 +55,7 @@ SSMS for SQL Server，包括工具，可提供一組廣泛的開發和管理功�
 
 1. 輸入啟動 SSMS **Microsoft SQL Server Management Studio**在 Windows 搜尋方塊，，然後按一下 傳統型應用程式。
 
-    ![Transact-SQL](./media/sql-server-linux-manage-ssms/ssms.png)
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png)
 
 1. 在**連接到伺服器** 視窗中，輸入下列資訊 (如果已經執行 SSMS，請按一下**Connect > Database Engine**以開啟**連接到伺服器**視窗）：
 

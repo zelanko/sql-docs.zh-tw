@@ -5,18 +5,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9412c7ed24bd37d96c1519ea30b96c42a7b53e0c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a1a60bf7de7a3df4ff84cb5a7831c081100d52a8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37407938"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085200"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux 的範例： 無人看管的 SQL Server 安裝指令碼
 
@@ -202,7 +202,7 @@ Bash 指令碼會執行第一件事是設定一些變數。  這些可以是指�
 
 1. 建立新的伺服器系統管理員使用者，如果```SQL_INSTALL_USER```和```SQL_INSTALL_USER_PASSWORD```同時設定。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 簡化多個自動的安裝和建立獨立的 Bash 指令碼，以設定適當的環境變數。  您可以移除任何變數的範例指令碼使用，並將它們放在自己的 Bash 指令碼。
 

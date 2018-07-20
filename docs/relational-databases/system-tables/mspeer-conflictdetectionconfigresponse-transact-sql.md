@@ -1,5 +1,5 @@
 ---
-title: MSpeer_conflictdetectionconfigresponse (TRANSACT-SQL) |Microsoft 文件
+title: MSpeer_conflictdetectionconfigresponse (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - MSpeer_conflictdetectionconfigureresponse
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
 caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb1251432bed74cd95368dc02e61f1f42b6e1807
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 65d192cbf84ab41c0ffe9ee6dee47f7a9468e45d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006375"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103546"
 ---
 # <a name="mspeerconflictdetectionconfigresponse-transact-sql"></a>MSpeer_conflictdetectionconfigresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   用於點對點複寫中，以儲存每一個節點對於全拓撲組態要求的回應。 這份資料表儲存在發行集資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|request_id|**int**|識別衝突組態要求項目中的[m](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md)資料表。|  
+|request_id|**int**|識別衝突組態要求項目中的[MSpeer_conflictdetectionconfigrequest](../../relational-databases/system-tables/mspeer-conflictdetectionconfigrequest-transact-sql.md)資料表。|  
 |peer_node|**sysname**|產生回應的伺服器執行個體名稱。|  
 |peer_db|**sysname**|產生回應之對等的訂閱資料庫。|  
 |peer_version|**sysname**|識別發行者的版本號碼。|  
@@ -49,7 +49,7 @@ ms.locfileid: "33006375"
 |originator_id|**varbinary(16)**|針對衝突偵測的目的，識別拓撲中的每個節點。 如需詳細資訊，請參閱 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)。|  
 |peer_conflict_retention|**int**|該中繼資料儲存在衝突資料表內的期間 (天數)。|  
 |peer_subscriptions|**XML**|有關回應要求之節點的資訊。|  
-|progress_phase|**nvarchar(32)**|使用下列其中一個值，識別處理的目前階段：<br /><br /> 시작됨<br /><br /> 已收集對等版本<br /><br /> 已收集狀態|  
+|progress_phase|**nvarchar(32)**|使用下列其中一個值，識別處理的目前階段：<br /><br /> Started<br /><br /> 已收集對等版本<br /><br /> 已收集狀態|  
 |modified_date|**datetime**|完成階段的日期和時間。|  
   
 ## <a name="see-also"></a>另請參閱  

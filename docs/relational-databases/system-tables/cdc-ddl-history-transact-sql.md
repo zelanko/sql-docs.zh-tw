@@ -1,5 +1,5 @@
 ---
-title: cdc.ddl_history (TRANSACT-SQL) |Microsoft 文件
+title: cdc.ddl_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - cdc.ddl_history
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c65fd834ac53f7d1835e9c7641dbe6d6fb78d082
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 08d05d0f9064db1a536bd53e7ab2552eecda7080
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258643"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101636"
 ---
 # <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33258643"
   
  我們建議您不要直接查詢系統資料表。 請改為執行[sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)預存程序。  
    
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**source_object_id**|**int**|套用 DDL 變更之來源資料表的識別碼。|  
 |**object_id**|**int**|與來源資料表擷取執行個體相關聯之變更資料表的識別碼。|  
@@ -46,7 +46,7 @@ ms.locfileid: "33258643"
 |**ddl_time**|**datetime**|對來源資料表進行 DDL 變更的日期和時間。|  
   
 ## <a name="see-also"></a>另請參閱  
- [sys.sp_cdc_help_change_data_capture &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

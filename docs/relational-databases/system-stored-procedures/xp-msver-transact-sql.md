@@ -1,5 +1,5 @@
 ---
-title: xp_msver (TRANSACT-SQL) |Microsoft 文件
+title: xp_msver & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,20 @@ dev_langs:
 helpviewer_keywords:
 - xp_msver
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: eb4961a51a7a4104fd47b64544727eb609618da4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d35365cc3c1891521635b463d795c98af97f1ea
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261164"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103646"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  傳回版本資訊有關[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **xp_msver**也會傳回資訊的伺服器之實際組建編號以及伺服器環境的相關資訊。 資訊的**xp_msver**傳回可用於[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式、 批次、 預存程序，依此類推，以加強平台獨立程式碼的邏輯。  
+  傳回有關的版本資訊[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 **xp_msver**也會傳回伺服器的實際組建編號的相關資訊以及有關伺服器環境的資訊。 資訊的**xp_msver**傳回可用於[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式、 批次、 預存程序，並依此類推，以加強平台獨立程式碼邏輯。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,9 +46,9 @@ xp_msver [ optname ]
  *optname*  
  這是選項的名稱，它可以是下列值之一。  
   
-|選項/資料行名稱|Description|  
+|選項/資料行名稱|描述|  
 |-------------------------|-----------------|  
-|**產品名稱**|產品名稱;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
+|**ProductName**|產品名稱;例如， [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。|  
 |**ProductVersion**|產品版本。|  
 |**語言**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的語言版本。|  
 |**平台**|執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之電腦的作業系統名稱、製造商名稱和晶片家族名稱。|  
@@ -76,8 +75,8 @@ xp_msver [ optname ]
 ## <a name="result-sets"></a>結果集  
  **xp_msver**，不含任何參數，會傳回四資料行結果集，其中列出所有選項值。 **xp_msver**，針對任何參數，會傳回四資料行結果集使用該選項的值。  
   
-## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+## <a name="permissions"></a>[權限]  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統函數 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   

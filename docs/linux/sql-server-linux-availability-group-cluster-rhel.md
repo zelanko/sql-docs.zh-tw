@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/14/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 784f98acb1e8223e14d3f1e1a74e73cfdc3561bc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 0d9718280242b82a256d7f1f1a1576fdd6032da2
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057206"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083870"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 RHEL 叢集
 
@@ -218,6 +218,6 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 
 手動容錯移轉之可用性群組的`pcs`。 不會起始與 TRANSACT-SQL 的容錯移轉。 如需相關指示，請參閱 <<c0> [ 容錯移轉](sql-server-linux-availability-group-failover-ha.md#failover)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [操作 HA 可用性群組](sql-server-linux-availability-group-failover-ha.md)

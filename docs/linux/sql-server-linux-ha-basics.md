@@ -5,18 +5,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f311d9c3116083120b97fa78486242939a438de9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 2a4d4eed76e57d8ae8ebe7886ca8796a6e5e8ea7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006100"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085283"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux 部署的 SQL Server 可用性基本概念
 
@@ -247,5 +247,5 @@ STONITH 是為了支援的 Pacemaker 叢集。 使用 從發佈文件來設定 S
 #### <a name="other-linux-distributions"></a>其他 Linux 散發套件
 在 Linux 上的 Pacemaker 叢集的所有節點都必須在相同的散發。 比方說，這表示，RHEL 節點不能有 SLES 節點的 Pacemaker 叢集的一部分。 主要的原因先前所述： 散發套件可能會有不同的版本和功能，讓項目可能無法正確運作。 混合的散發有相同的 story 混合使用 Wsfc 和 Linux： 使用 [無] 或分散式 Ag。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 [Pacemaker 叢集部署的 SQL Server on Linux](sql-server-linux-deploy-pacemaker-cluster.md)

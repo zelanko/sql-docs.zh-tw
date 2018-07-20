@@ -17,12 +17,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea9f0725d595db5e62b064eb6e950a280e82913b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc633915c27d2e604db110b3c118c0b1c287029f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228928"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084050"
 ---
 # <a name="specify-parameters"></a>指定參數
   藉由指定程序參數，呼叫端程式就能夠將值傳入程序的主體。 這些值在程序執行期間可用於各種用途。 如果程序參數標示為 OUTPUT 參數，程序參數也可以將值傳回給呼叫端程式。  
@@ -32,7 +32,7 @@ ms.locfileid: "37228928"
  下節提供有關傳遞值至參數，以及在程序呼叫期間如何使用每個參數屬性的詳細資訊。  
   
 ## <a name="passing-values-into-parameters"></a>將值傳遞至參數  
- 以程序呼叫提供的參數值必須是常數或變數，函數名稱不可做為參數值。 變數可以是使用者自訂變數或系統變數，如 @@spid。  
+ 以程序呼叫提供的參數值必須是常數或變數，函數名稱不可做為參數值。 變數可以是使用者自訂變數或系統變數，例如\@ \@spid。  
   
  下列範例示範傳遞參數值至 `uspGetWhereUsedProductID`程序。 這些範例說明如何以常數和變數方式傳遞參數，以及如何使用變數傳遞函數值。  
   
@@ -60,15 +60,15 @@ GO
 ```  
   
 ## <a name="specifying-parameter-names"></a>指定參數名稱  
- 在建立程序及宣告參數名稱時，參數名稱必須以一個 @ 字元開始，而且在程序範圍中必須是唯一的。  
+ 當建立程序及宣告參數名稱，則參數名稱必須以一個開始\@字元，且必須是唯一的範圍中的程序。  
   
- 明確為參數命名以及在程序呼叫中指定適當值給每個參數，就能以任何順序提供參數。 例如，如果 **my_proc** 程式預期有三個參數，名稱分別為 **@first**、 **@second**和 **@third**，您可以將傳給程序的數值指定給參數名稱，例如： `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
+ 明確為參數命名以及在程序呼叫中指定適當值給每個參數，就能以任何順序提供參數。 比方說，如果程序**my_proc**必須要有三個參數，叫做**\@第一個**， **\@第二個**，和 **\@第三個**，傳遞至程序可以將值指派給參數名稱，例如： `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  如果以 **@parameter =** <值>** 的形式提供參數值，後續所有參數也必須比照此方式。 如果不是以 **@parameter =** <值>** 的形式傳遞參數值，提供值的順序就必須與 CREATE PROCEDURE 陳述式中參數列出的順序一樣 (由左到右)。  
+>  如果以 **/@parameter =** <值>** 的形式提供參數值，後續所有參數也必須比照此方式。 如果參數值不會在表單中 **\@參數 = * * * 值*，值必須在 （由左到右） 的相同順序列出參數的 CREATE PROCEDURE 陳述式中。  
   
 > [!WARNING]  
->  任何以 **@parameter =** <值>** 形式傳遞的參數如果有拼字錯誤，會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生錯誤並使得程序無法執行。  
+>  任何參數形式傳遞 **\@參數 = * * * 值*拼字錯誤的參數，會導致[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產生錯誤，並防止程序執行。  
   
 ## <a name="specifying-parameter-data-types"></a>指定參數資料類型  
  在 CREATE PROCEDURE 陳述式中宣告時，參數必須定義一種資料類型。 參數的資料類型將決定在呼叫程序時參數可接受的值類型和範圍。 例如，若將參數定義為 `tinyint` 資料類型，在傳遞數值至該參數時，只能接受 0 到 255 範圍內的數值。 執行程序時，如果值與資料類型不相容的話，就會傳回錯誤。  
@@ -128,7 +128,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- 雖然可以省略已提供預設值的參數，但只能截斷參數清單。 例如，如果程序有五個參數，第四個和第五個參數可以省略。 但除非以 **@parameter =** <值>** 的形式提供參數，否則只要包含第五個參數，就不能跳過第四個參數。  
+ 雖然可以省略已提供預設值的參數，但只能截斷參數清單。 例如，如果程序有五個參數，第四個和第五個參數可以省略。 不過第四個參數不能省略第五個參數會包含在內，因為除非形式提供參數 **\@參數 = * * * 值*。  
   
 ## <a name="specifying-parameter-direction"></a>指定參數方向  
  參數的方向可以是輸入或輸出，前者指將值傳入程序的主體，後者則指程序傳回值給呼叫端程式。 預設是輸入參數。  
@@ -166,10 +166,10 @@ GO
   
 ```  
   
- 執行 `usp_GetList` 以傳回成本低於 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 搭配流程控制語言使用 OUTPUT 參數 **@cost** 和 **@compareprices**，即可在 [訊息] 視窗中傳回訊息。  
+ 執行 `usp_GetList` 以傳回成本低於 $700 的 [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 產品 (自行車) 清單。 輸出參數**\@成本**並 **\@compareprices**會搭配流程控制語言使用，以傳回中的訊息**訊息**視窗。  
   
 > [!NOTE]  
->  在建立程序過程以及在使用變數過程中，必須定義 OUTPUT 變數。 參數名稱和變數名稱不一定要相符。 但是，資料類型和參數定位必須相符 (除非使用 **@listprice=** <變數>)。  
+>  在建立程序過程以及在使用變數過程中，必須定義 OUTPUT 變數。 參數名稱和變數名稱不一定要相符。 但是，資料類型和參數定位必須相符 (除非 **\@listprice =** *變數*用)。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

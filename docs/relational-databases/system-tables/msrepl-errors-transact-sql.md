@@ -1,5 +1,5 @@
 ---
-title: MSrepl_errors (TRANSACT-SQL) |Microsoft 文件
+title: MSrepl_errors (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSrepl_errors system table
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48346fe7e8beb4c1885507de48d14889bd6ffee6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 992e5594f208cd64ef48d90f2b29e7018719a6da
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005395"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103716"
 ---
 # <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSrepl_errors**資料表包含資料列含有擴充散發代理程式 」 和 「 合併代理程式失敗的資訊。 這份資料表儲存在散發資料庫中。  
+  **MSrepl_errors**資料表包含含有擴充散發代理程式 」 和 「 合併代理程式失敗資訊的資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|錯誤的識別碼。|  
 |**time**|**datetime**|發生錯誤的時間。|  

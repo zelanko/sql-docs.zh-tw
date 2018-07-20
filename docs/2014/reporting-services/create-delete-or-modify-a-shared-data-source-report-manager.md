@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e48edf78d8b0a73c01871b47ac24fa1f0bf8babb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ace3f33f02be295fbaf22fcd8f0e9d82480db2d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202688"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085080"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>建立、刪除或修改共用資料來源 (報表管理員)
   共用資料來源會指定資料來源的連接屬性。 如果您擁有大量報表、模型或資料驅動訂閱所使用的資料來源，請考慮建立共用資料來源，以便排除必須在多個位置維護相同連接資訊的負擔。  
@@ -43,7 +43,7 @@ ms.locfileid: "37202688"
   
 3.  按一下 **[新增資料來源]**。 [新增資料來源] 頁面隨即開啟。  
   
-4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ? : @ & = +，$ / * \< > |" /.  
+4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ? : \@ & = +，$ / * \< > |" /.  
   
 5.  選擇性地輸入描述，以提供使用者有關連接的資訊。 此描述會出現在報表管理員的 [內容] 頁面上。  
   

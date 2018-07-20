@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_identity_range (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ helpviewer_keywords:
 - MSmerge_identity_range system table
 ms.assetid: 493a2028-88a0-4e83-ad89-ae5661d9f477
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 026774d2eae738f8641c56f923bcabc981fded1e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bbd06dae4c34b2b5c77b81db64f9d12408539b01
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005125"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101226"
 ---
 # <a name="msmergeidentityrange-transact-sql"></a>MSmerge_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_identity_range**資料表用來追蹤指派給識別欄位以訂閱發行集的數值範圍而複寫會自動管理這些範圍指派。 這份資料表儲存在發行集和訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|給定訂閱的唯一識別碼。|  
-|**artid**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
+|**artid&lt**|**uniqueidentifier**|給定發行項的唯一識別碼。|  
 |**: range_begin**|**numeric(38)**|在目前範圍開頭的識別值。|  
 |**range_end**|**numeric(38)**|在目前範圍結尾的識別值。|  
 |**next_range_begin**|**numeric(38)**|在下一個要指派之範圍開頭的識別值。|  
 |**next_range_end**|**numeric(38)**|在下一個要指派之範圍結尾的識別值。|  
-|**is_pub_range**|**bit**|值為**1**的識別範圍指派給發行集。|  
+|**is_pub_range**|**bit**|值為**1**如果識別範圍指派給發行集。|  
 |**max_used**|**numeric(38)**|所能指派的最大識別值。|  
   
 ## <a name="see-also"></a>另請參閱  

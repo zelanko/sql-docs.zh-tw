@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2d857f5c04318c88050f9aa63706f75902c8b445
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69d6d5352c2f537add31fe2481166bb3a7982d56
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200828"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084040"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>教學課程：建立鑽研及主報表 (報表產生器)
   本教學課程將教導您如何建立兩種報表：鑽研報表與主報表。 這些報表中使用的範例銷售資料是從 Analysis Services Cube 擷取的。 下圖顯示您將建立的報表。  
@@ -344,10 +344,10 @@ ms.locfileid: "37200828"
   
 1.  在 [報表資料] 窗格中，展開 **[參數]**。  
   
-2.  以滑鼠右鍵按一下 @ProductProductCategoryName，然後按一下 [參數屬性]。  
+2.  以滑鼠右鍵按一下\@ProductProductCategoryName，然後按一下**參數屬性**。  
   
     > [!NOTE]  
-    >  名稱旁邊的 @ 字元表示這是一個參數。  
+    >  \@名稱旁邊的字元表示這是否為參數。  
   
 3.  在 **[一般]** 索引標籤上，按一下 **[隱藏]**。  
   

@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 810f73e16599f153c604c605e33ad1b6f282811b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974493"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085470"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_describe_parameter_encryption
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @tsql =] ' 交易 SQL_batch'  
+ [ \@tsql =] ' Transact SQL_batch'  
  一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 Transact SQL_batch 可能是 nvarchar （n） 或 nvarchar （max）。  
   
- [ @params =] N'parameters'  
- *@params* 提供 TRANSACT-SQL 批次，類似於 sp_executesql 的參數宣告字串。 參數可能是 nvarchar （n） 或 nvarchar （max）。  
+ [ \@params =] N'parameters'  
+ *\@params*提供 TRANSACT-SQL 批次，類似於 sp_executesql 的參數宣告字串。 參數可能是 nvarchar （n） 或 nvarchar （max）。  
   
- 是一個字串，其中包含之所有參數的已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)]_batch&lt。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 陳述式中指定的每個參數必須定義在*@params*。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數， *@params*並非必要。 這個參數的預設值是 NULL。  
+ 是一個字串，其中包含之所有參數的已內嵌在定義[!INCLUDE[tsql](../../includes/tsql-md.md)]_batch&lt。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 陳述式中指定的每個參數必須定義在 *\@params*。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數，  *\@params*並非必要。 這個參數的預設值是 NULL。  
   
 ## <a name="return-value"></a>傳回值  
  0 表示成功。 任何其他項目表示失敗。  
@@ -82,7 +82,7 @@ sp_describe_parameter_encryption
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int**|在結果集中的資料列的識別碼。|  
-|**parameter_name**|**sysname**|其中一個指定的參數名稱*@params*引數。|  
+|**parameter_name**|**sysname**|其中一個指定的參數名稱 *\@params*引數。|  
 |**column_encryption_algorithm**|**tinyint**|指出資料行，此參數設定的加密演算法的程式碼會對應至。 目前支援的值為： 2 **AEAD_AES_256_CBC_HMAC_SHA_256**。|  
 |**column_encryption_type**|**tinyint**|指出資料行，此參數設定的加密類型的程式碼會對應至。 支援的值為：<br /><br /> 0 – 純文字 （未加密的資料行）<br /><br /> 1 – 隨機化加密進行加密<br /><br /> 2 – 決定性加密。|  
 |**column_encryption_key_ordinal**|**int**|程式碼中的第一個結果的資料列的設定。 參考的資料列描述資料行設定資料行加密金鑰，將參數對應至。|  
@@ -91,7 +91,7 @@ sp_describe_parameter_encryption
 ## <a name="remarks"></a>備註  
  A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端驅動程式，支援 Always Encrypted，會自動呼叫**sp_describe_parameter_encryption**來擷取應用程式所發出的參數化查詢的加密中繼資料。 接下來，驅動程式用以加密的參數對應到以 Always Encrypted 保護的資料庫資料行值的加密中繼資料，並會取代送出的應用程式，以將加密的純文字參數值參數值，再將查詢傳送至 database engine。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要**VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**並**VIEW ANY COLUMN MASTER KEY DEFINITION**資料庫中的權限。  
   
 ## <a name="examples"></a>範例  
@@ -160,7 +160,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|@c1|1|1|  
+|1|\@c1|1|1|  
   
  （結果繼續）。  
   

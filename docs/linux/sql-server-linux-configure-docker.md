@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 07/02/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
-ms.openlocfilehash: 433da2ba98a47ec5dc4be64cd1d6b1ea52068c04
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 420a7577a526ed07f564b762c48e6528db323f08
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352750"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085870"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>在 Docker 上設定 SQL Server 容器映像
 
@@ -40,7 +40,7 @@ ms.locfileid: "37352750"
 
 快速入門中的上一節中會執行免費的 SQL Server 的開發人員版本，從 Docker Hub。 如果您想要執行生產容器映像，例如 Enterprise、 Standard 或 Web 版本，仍然適用於大部分的資訊。 不過，有幾個此處概述的差異。
 
-- 如果您有有效的授權，可以只在生產環境中使用 SQL Server。 您可以取得免費的 SQL Server Express 生產授權[此處](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard 和 Enterprise Edition 授權都是透過[Microsoft 大量授權](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)。
+- 如果您有有效的授權，可以只在生產環境中使用 SQL Server。 您可以取得免費的 SQL Server Express 生產授權[此處](https://go.microsoft.com/fwlink/?linkid=857693)。 SQL Server Standard 和 Enterprise Edition 授權都是透過[Microsoft 大量授權](https://www.microsoft.com/en-us/licensing/default.aspx)。
 
 - 實際執行 SQL Server 容器映像必須取自[Docker 存放區](https://store.docker.com)。 如果您還沒有一個 Docker 存放區上建立帳戶。
 
@@ -492,7 +492,7 @@ cat errorlog
 > [!TIP]
 > 如果掛接主機目錄來 **/var/opt/mssql**當您建立您的容器，您可以改為查看**記錄**主機上的對應路徑的子目錄。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 開始使用 Docker 上的 SQL Server 2017 容器映像經過[快速入門](quickstart-install-connect-docker.md)。
 

@@ -6,18 +6,18 @@ ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 01/09/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0fc4e01f4bdd5eb56c41b1e85b7e96ba869f5454
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1b01cfea93b2348d912b726bbad38f7e97dd0d94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057445"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086840"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>擷取、 轉換和載入使用 SSIS 在 Linux 上的資料
 

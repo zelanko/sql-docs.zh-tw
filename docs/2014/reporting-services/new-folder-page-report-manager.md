@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3464ba51b74343fdb7349b7622f08a68b3f25611
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162289"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083400"
 ---
 # <a name="new-folder-page-report-manager"></a>新增資料夾頁面 (報表管理員)
   使用 [新增資料夾] 頁面，即可在報表伺服器資料夾階層中建立新的資料夾。 您建立的資料夾是儲存在報表伺服器資料庫中的虛擬資料夾。 這個資料夾並不是在電腦的檔案系統中建立的。  
@@ -39,7 +39,7 @@ ms.locfileid: "37162289"
   
 ## <a name="options"></a>選項。  
  **名稱**  
- 指定資料夾的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : @ & = +，$ / * \< > |"或 / 來指定名稱。  
+ 指定資料夾的名稱。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
   
  **說明**  
  輸入資料夾內容的描述。 此描述會顯示在有權存取此資料夾之使用者的 [內容] 頁面中。  

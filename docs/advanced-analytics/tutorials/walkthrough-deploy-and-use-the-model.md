@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 290659402622ab04de85e81f05328778b0f0c1eb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 74a5d8b7ac8bd36a6ce76b895b2dde4a07f5ea96
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983010"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085350"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>部署 R 模型，然後在 SQL 中使用它
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,9 +59,9 @@ ms.locfileid: "38983010"
     END
     ```
 
-    + 您可以使用 SELECT 陳述式來呼叫預存的模型，從 SQL 資料表。 從資料表擷取模型**varbinary （max)** 儲存在 SQL 變數的資料_@lmodel2_，並做為參數傳遞*mod*儲存系統程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
+    + 您可以使用 SELECT 陳述式來呼叫預存的模型，從 SQL 資料表。 從資料表擷取模型**varbinary （max)** 儲存在 SQL 變數的資料 _\@lmodel2_，並做為參數傳遞*mod*系統預存程序[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)。
 
-    + 計分是定義為 SQL 查詢，並儲存為字串，以在 SQL 變數，當做輸入使用的資料_@input_。 從資料庫擷取資料時，它會儲存在名為資料框架*InputDataSet*，這是預設名稱的輸入資料來[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義另一個變數的名稱視使用的參數*_@input_data_1_name_*。
+    + 計分是定義為 SQL 查詢，並儲存為字串，以在 SQL 變數，當做輸入使用的資料_\@輸入_。 從資料庫擷取資料時，它會儲存在名為資料框架*InputDataSet*，這是預設名稱的輸入資料來[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)程序，您可以定義另一個變數的名稱視使用的參數  *_\@input_data_1_name_*。
 
     + 預存程序會從 `rxPredict` RevoScaleR **程式庫呼叫** 函數以產生分數。
 
@@ -213,7 +213,7 @@ ms.locfileid: "38983010"
 
 [建立 R 模型，並將它儲存在 SQL Server](walkthrough-build-and-save-the-model.md)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [SQL Server R 教學課程](sql-server-r-tutorials.md)
 

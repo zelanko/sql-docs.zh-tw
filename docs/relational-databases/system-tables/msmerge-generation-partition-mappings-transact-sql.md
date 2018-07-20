@@ -1,5 +1,5 @@
 ---
-title: MSmerge_generation_partition_mappings (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_generation_partition_mappings (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_generation_partition_mappings system table
 ms.assetid: 443a4024-ce48-4772-9ee5-95bd6fb6476b
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 188eb1b18d46743d6a2727f28b272e658eca8bdc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 532297bc31a740a16a520f89571a00fed4b306d3
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004145"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102086"
 ---
 # <a name="msmergegenerationpartitionmappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_generation_partition_mappings**資料表用來追蹤變更，合併式發行集中的資料分割。 這份資料表儲存在發行集和訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|識別合併式發行集|  
 |**產生**|**bigint**|層代 (Generation) 值。|  

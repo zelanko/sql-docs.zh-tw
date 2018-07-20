@@ -16,12 +16,12 @@ caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0101ea532307b4e3dd06d1dc22879f59a682f867
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 052ea58263c2167035f09d7c81c0e1732c530e03
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280664"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082720"
 ---
 # <a name="general-properties-page-models-report-manager"></a>一般屬性頁面，模型 (報表管理員)
   您可以使用報表模型的 [一般屬性] 頁面來重新命名、刪除、移動或取代模型定義 (.smdl) 檔案。 有關模型建立者與修改者及變更日期的詳細資料都會顯示在頁面頂端。  
@@ -41,7 +41,7 @@ ms.locfileid: "37280664"
  **名稱**  
  指定模型的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : @ & = +，$ / * \< > |" /  
+ ; ? : \@ & = +，$ / * \< > |" /  
   
  **說明**  
  輸入模型的描述。 這項描述會顯示在有權存取此模型之使用者的 [內容] 頁面上。  

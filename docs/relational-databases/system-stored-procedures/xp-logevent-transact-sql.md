@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_logevent
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ce0b2c462148cfb75da52897f2b453158284fea3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: ddec196efe5022e0cfbbdf13c117a35beeba29ed
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854260"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102836"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ## <a name="remarks"></a>備註  
  當您將傳送來自[!INCLUDE[tsql](../../includes/tsql-md.md)]程序、 觸發程序、 批次，並依此類推，而不是 xp_logevent 中使用 RAISERROR 陳述式。 xp_logevent 不會呼叫用戶端的訊息處理常式或 set @@ERROR。 若要將訊息寫入 Windows 事件檢視器和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體內的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中，請執行 RAISERROR 陳述式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 master 資料庫中 db_owner 固定資料庫角色中的成員資格，或系統管理員 (sysadmin) 固定伺服器角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

@@ -5,20 +5,20 @@ author: rgward
 ms.author: bobward
 manager: craigg
 ms.date: 09/14/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4725a8043be3aad99f3432f99d00f6279a9d814d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f27cda67baa5d4101f94a8351bacd1ef3ecbff05
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057412"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101136"
 ---
-# <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>效能最佳做法和 SQL Server 2017 Linux 上的設定指導方針
+# <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>效能最佳做法和 Linux 上的 SQL Server 組態指導方針
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -110,7 +110,7 @@ sysctl -w vm.max_map_count=262144
 
 如果您執行在 Linux 上的 SQL Server 虛擬機器中，請確定您選取選項來修正虛擬機器保留的記憶體數量。 請勿使用像是 HYPER-V 動態記憶體功能。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 若要深入了解 SQL Server 功能可改善效能，請參閱[開始使用效能功能](sql-server-linux-performance-get-started.md)。
 

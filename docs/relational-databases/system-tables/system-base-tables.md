@@ -1,5 +1,5 @@
 ---
-title: 系統基底資料表 |Microsoft 文件
+title: 系統基底資料表 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ helpviewer_keywords:
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c15a0e42091cffb8010cae36ad43322d361f91fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6804649b60a1617def415ce35113685ef43902f5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263031"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102206"
 ---
 # <a name="system-base-tables"></a>系統基底資料表
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  系統基底資料表其實是儲存特定資料庫之中繼資料的基礎資料表。 **主要**資料庫是特殊在這一方面，因為它包含的任何其他資料庫中找不到某些其他資料表。 這些資料表包含整個伺服器範圍所保存的中繼資料。  
+  系統基底資料表其實是儲存特定資料庫之中繼資料的基礎資料表。 **主要**資料庫是在這方面的特殊，因為它包含的任何其他資料庫中找不到某些其他資料表。 這些資料表包含整個伺服器範圍所保存的中繼資料。  
   
 > [!IMPORTANT]  
 >  系統基底資料表僅用於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 內部，不供一般客戶使用。 它們隨時可以變更，而且不保證其相容性。  
   
 ## <a name="system-base-table-metadata"></a>系統基底資料表中繼資料  
- 在資料庫上具有 CONTROL、 ALTER 或 VIEW DEFINITION 權限授與者可以看到系統基底資料表的中繼資料中**sys.objects**目錄檢視。 被授與者也可以解析名稱，並且使用內建函數，例如物件的系統基底資料表的識別碼[OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)和[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)。  
+ 在資料庫上具有 CONTROL、 ALTER 或 VIEW DEFINITION 權限授與者可以看到系統基底資料表中繼資料**sys.objects**目錄檢視。 被授與者也可以解析名稱，及藉由使用內建函式，例如物件的系統基底資料表的識別碼[OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)並[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)。  
   
  若要繫結至系統基底資料表，使用者必須使用專用管理員連接 (DAC)，連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體。 嘗試在不使用 DAC 連接的情況下，從系統基底資料表執行 SELECT 查詢時，會產生錯誤。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33263031"
 ## <a name="system-base-tables"></a>系統基底資料表  
  下表列出並描述 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每個系統基底資料表。  
   
-|基底資料表|Description|  
+|基底資料表|描述|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|存在於每個資料庫中。 每一個資料列都代表資料庫中的一個物件。|  
 |**sys.sysbinobjs**|存在於每個資料庫中。 資料庫中的每個 Service Broker 實體都包含一個資料列。 Service Broker 實體包括下列各項：<br /><br /> 訊息類型<br /><br /> 服務合約<br /><br /> 服務<br /><br /> 名稱和類型會使用修復過的二進位定序。|  
@@ -55,7 +55,7 @@ ms.locfileid: "33263031"
 |**sys.sysnsobjs**|存在於每個資料庫中。 每個命名空間範圍的實體都包含一個資料列。 此資料表用於儲存 XML 集合實體。|  
 |**sys.syscolpars**|存在於每個資料庫中。 資料表、檢視或資料表值函數中的每個資料行都包含一個資料列。 對於程序或函數的每個參數，它也包含資料列。|  
 |**sys.systypedsubobjs**|存在於每個資料庫中。 每個輸入的子實體都包含一個資料列。 只有資料分割函數的參數屬於這個類別目錄。|  
-|**sys.sysidxstats**|存在於每個資料庫中。 針對資料表和索引檢視的每個索引或統計資料，各包含一個資料列。<br /><br /> 注意： 每個索引 （堆積除外） 是與具有相同名稱做為索引的統計資料相關聯。|  
+|**sys.sysidxstats**|存在於每個資料庫中。 針對資料表和索引檢視的每個索引或統計資料，各包含一個資料列。<br /><br /> 注意： 每個索引 （堆積除外） 都具有相同名稱做為索引的統計相關聯。|  
 |**sys.sysiscols**|存在於每個資料庫中。 每個保存的索引和統計資料資料行都包含一個資料列。|  
 |**sys.sysscalartypes**|存在於每個資料庫中。 每個使用者自訂或系統類型都包含一個資料列。|  
 |**sys.sysdbreg**|存在於**主要**只有資料庫。 每個註冊的資料庫都包含一個資料列。|  
@@ -63,9 +63,9 @@ ms.locfileid: "33263031"
 |**sys.sysrmtlgns**|此系統基底資料表存在於**主要**只有資料庫。 每個遠端登入對應都包含一個資料列。 這用來將宣告為來自對應伺服器的內送登入對應至實際的本機登入。|  
 |**sys.syslnklgns**|存在於**主要**只有資料庫。 每個連結登入對應都包含一個資料列。 連結登入對應是由從遠端伺服器發出到對應連結伺服器的遠端程序呼叫和分散式查詢所使用。|  
 |**sys.sysxlgns**|存在於**主要**只有資料庫。 每個伺服器主體都包含一個資料列。|  
-|**sys.sysdbfiles**|存在於每個資料庫中。 如果資料行**dbid**為零，資料列代表屬於此資料庫的檔案。 在**主要**資料庫、 資料行**dbid**可以是非零。 如果是這個情況，資料列代表主檔案。|  
+|**sys.sysdbfiles**|存在於每個資料庫中。 如果資料行**dbid**為零，資料列代表屬於這個資料庫的檔案。 在 **主要**資料庫、 資料行**dbid**可以是非零。 如果是這個情況，資料列代表主檔案。|  
 |**sys.sysusermsg**|存在於**主要**只有資料庫。 每個資料列都代表一個使用者自訂的錯誤訊息。|  
-|**sys.sysprivs**|存在於每個資料庫中。 每個資料庫或伺服器層級的權限都包含一個資料列。<br /><br /> 附註： 伺服器層級權限儲存在**主要**資料庫。|  
+|**sys.sysprivs**|存在於每個資料庫中。 每個資料庫或伺服器層級的權限都包含一個資料列。<br /><br /> 注意： 伺服器層級權限會儲存在**主要**資料庫。|  
 |**sys.sysowners**|存在於每個資料庫中。 每個資料列都代表一個資料庫主體。|  
 |**sys.sysobjkeycrypts**|存在於每個資料庫中。 與物間相關聯的每個對稱金鑰、加密或密碼編譯屬性都包含一個資料列。|  
 |**sys.syscerts**|存在於每個資料庫中。 資料庫中的每個憑證都包含一個資料列。|  

@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL Server 資料使用 R （SQL 與 R 深入探討） |Microsoft 文件
+title: 使用 SQL Server 資料使用 R （SQL 和 R 深入探討） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,19 +7,19 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e57e94d1d7856bfc9082c1a73a13a5c0a620b5ed
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ea8fee364cd69580b8b7d0b6438349dbf2b1298c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202991"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084180"
 ---
-# <a name="work-with-sql-server-data-using-r-sql-and-r-deep-dive"></a>使用 SQL Server 資料使用 R （SQL 與 R 深入探討）
+# <a name="lesson-1-create-a-database-and-permissions"></a>第 1 課： 建立資料庫和權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文是資料科學深入探討教學課程中，有關如何使用一部分[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
+這篇文章是屬於[RevoScaleR 教學課程](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)如何使用[RevoScaleR 函數](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)與 SQL Server。
 
-在這一課，您可以設定環境和新增您需要用於定型模型的資料並執行資料的部分快速摘要。 處理程序的一部分，您必須完成這些工作：
+在這一課，您可以設定環境並新增所需的定型模型的資料並執行之資料的一些快速摘要。 此程序的一部分，您必須完成下列工作：
   
 - 建立新的資料庫來儲存資料，以定型和評分兩個 R 模型。
   
@@ -33,16 +33,16 @@ ms.locfileid: "31202991"
   
 - 建立計算內容，以遠端執行 R 程式碼。
   
-- （選擇性）啟用遠端計算內容上的追蹤。
+- （選擇性）啟用遠端計算內容的追蹤。
   
 ## <a name="create-the-database-and-user"></a>建立資料庫和使用者
 
-這個逐步解說中，建立新的資料庫中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，並加入寫入和讀取資料，以及執行 R 指令碼的權限的 SQL 登入。
+這個逐步解說中，建立新的資料庫中[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]，並新增具有 SQL 登入的權限來寫入和讀取資料，以及執行 R 指令碼。
 
 > [!NOTE]
-> 如果您只會讀取資料，執行 R 指令碼的帳戶需要 SELECT 權限 (**db_datareader**角色) 上指定的資料庫。 不過，在本教學課程中，您必須具有 DDL 管理員權限來準備資料庫，以及建立計分結果儲存的資料表。
+> 執行 R 指令碼的帳戶，如果您僅讀取資料，需要 SELECT 權限 (**db_datareader**角色) 上指定的資料庫。 不過，在本教學課程中，您必須具有 DDL 系統管理員權限以準備資料庫，並建立資料表來儲存評分結果。
 > 
-> 此外，如果您不是資料庫擁有者，您需要有使用權限，EXECUTE ANY EXTERNAL SCRIPT，才能執行 R 指令碼。
+> 此外，如果您不是資料庫擁有者，您會需要權限 EXECUTE ANY EXTERNAL SCRIPT，若要執行 R 指令碼。
 
 1. 在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中，選取已啟用 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 的執行個體，再以滑鼠右鍵按一下 [資料庫]，然後選取 [新增資料庫]。
   
@@ -95,25 +95,25 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
   
     如果您不想安裝其他資料庫管理工具，可以使用控制台的 [ODBC 資料來源管理員](https://msdn.microsoft.com/library/ms714024.aspx) ，建立與 SQL Server 執行個體的測試連線。 如果資料庫已正確設定且輸入的使用者名稱和密碼皆無誤時，您應可看到剛建立的資料庫，並可將其選取為預設資料庫。
   
-    如果您無法連接到資料庫，請確認伺服器已啟用遠端連線，亦已啟用具名管道通訊協定。 這篇文章中所提供的其他疑難排解提示：[疑難排解連接到 SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)。
+    如果您無法連接到資料庫，請確認伺服器已啟用遠端連線，亦已啟用具名管道通訊協定。 這篇文章中所提供的其他疑難排解提示：[疑難排解連線到 SQL Server Database Engine](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)。
   
 - **為什麼我的資料表名稱前會加上資料讀取元？**
   
-    當您指定做為此使用者的預設結構描述**db_datareader**，前面加上所有資料表和其他新的物件，此使用者建立的*結構描述*名稱。 結構描述就像是一個資料夾，您可以新增到資料庫以便組織物件。 結構描述也可定義資料庫內的使用者權限。
+    當您指定做為這位使用者的預設結構描述**db_datareader**，所有資料表和其他新的物件，此使用者建立的前面會加上*結構描述*名稱。 結構描述就像是一個資料夾，您可以新增到資料庫以便組織物件。 結構描述也可定義資料庫內的使用者權限。
   
-    一個特定的使用者名稱與相關聯的結構描述時，使用者是_結構描述擁有者_。 在建立物件時，除非您特別要求要以另一個結構描述來建立，否則一律會以您自己的結構描述來建立物件。
+    與一個特定的使用者名稱相關聯的結構描述時，使用者是_結構描述擁有者_。 在建立物件時，除非您特別要求要以另一個結構描述來建立，否則一律會以您自己的結構描述來建立物件。
   
-    例如，如果您建立的資料表名稱`*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `.db_datareader < 資料庫名稱 >。TestData'。
+    例如，如果您建立的資料表名稱`*`TestData`, and your default schema is **db\_datareader**, the table is created with the name `< 資料庫名稱 >.db_datareader。TestData'。
   
     因此，資料庫可以包含多個具有相同名稱的資料表，只要資料表屬於不同的結構描述即可。
    
-    如果您要尋找的資料表，並不指定結構描述，您所擁有的結構描述會尋找資料庫伺服器。 因此，如果資料表含有與您的登入相關聯的結構描述，存取這類資料表時就不需要指定結構描述名稱。
+    如果您要尋找資料表，但不指定結構描述，資料庫伺服器會尋找您所擁有的結構描述。 因此，如果資料表含有與您的登入相關聯的結構描述，存取這類資料表時就不需要指定結構描述名稱。
   
 - **我沒有 DDL 權限，是否仍可以執行本教學課程？**
   
-    是；不過您應該先請使用者預先載入資料至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，並跳過呼叫建立新資料表的區段。 需要 DDL 的權限的函式會呼叫在本教學課程中可能的情況下。
+    是；不過您應該先請使用者預先載入資料至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料表，並跳過呼叫建立新資料表的區段。 需要 DDL 權限的函式會反映在本教學課程可能的情況下。
 
-    此外，請要求您的系統管理員授與您的權限，EXECUTE ANY EXTERNAL SCRIPT。 在需要執行 R 指令碼，遠端還是使用`sp_execute_external_script`。
+    此外，要求您的系統管理員授與您的權限 EXECUTE ANY EXTERNAL SCRIPT。 遠端，還是使用，執行 R 指令碼，為所需`sp_execute_external_script`。
 
 ## <a name="next-step"></a>下一步
 

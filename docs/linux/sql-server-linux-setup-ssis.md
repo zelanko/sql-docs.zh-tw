@@ -6,18 +6,18 @@ ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
 ms.date: 01/09/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: d2e72c77ad5f200c07a6e71025a3461d6397032a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: bac0933cc8b27159a95a9b99014a43e9fab966b5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38062047"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086040"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>在 Linux 上安裝 SQL Server Integration Services (SSIS)
 
@@ -141,7 +141,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | **SSIS_PID** | 設定 SQL Server 版本或產品金鑰。 以下是可能的值：<br/>Evaluation<br/>Developer<br/>Express <br/>Web <br/>Standard<br/>Enterprise <br/>產品金鑰<br/><br/>如果您指定產品金鑰，必須在表單中的產品金鑰`#####-#####-#####-#####-#####`，其中`#`是字母或數字。  |
 | | |
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 若要在 Linux 上執行 SSIS 套件，請參閱[擷取、 轉換及載入資料，使用 SSIS 在 Linux 上的 SQL server](sql-server-linux-migrate-ssis.md)。
 

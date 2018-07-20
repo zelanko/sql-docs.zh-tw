@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 6a5625563e32923abefe3dee3bcb29a694303d42
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: ac69b80773b1554c6f0b920aaff146871beb40ab
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981739"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086410"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Sqlcmd 和 bcp 的 SQL Server 命令列工具在 Linux 上安裝
 
@@ -260,7 +260,7 @@ brew install --no-sandbox mssql-tools
     dpkg -I mssql-tools_14.0.5.0-1_amd64.deb | grep "Depends:"
     ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 如需如何使用的範例**sqlcmd**若要連接到 SQL Server，並建立資料庫，請參閱下列快速入門：
 

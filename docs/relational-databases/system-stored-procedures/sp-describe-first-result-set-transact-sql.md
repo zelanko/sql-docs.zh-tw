@@ -23,12 +23,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12890dc6282f879259730530b3ff8f03fc6de8b9
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 33754b46bbad95b3194ca9e8c0087e93bba2d93c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970714"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087270"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,15 +47,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ [  **\@tsql =** ] **'***Transact SQL_batch***'**  
  一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)**。  
   
- [  **@params =** ] **N'***參數***'**  
- @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，也就是類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)**。  
+ [  **\@params =** ] **N'***參數***'**  
+ \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，也就是類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)**。  
   
- 是一個字串，其中包含已內嵌在的所有參數的定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch&lt*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 陳述式中指定的每個參數必須定義在@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
+ 是一個字串，其中包含已內嵌在的所有參數的定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch&lt*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 陳述式中指定的每個參數必須定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
- [ **@browse_information_mode =** ] *tinyint*  
+ [  **\@browse_information_mode =** ] *tinyint*  
  指定是否會傳回其他索引鍵資料行和來源資料表資訊。 如果設定為 1，就會分析每個查詢，如同查詢上包含 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
   
 -   如果設為 0，則不會傳回資訊。  
@@ -121,11 +121,11 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**任何下列的情況下會傳回錯誤。  
   
--   如果輸入@tsql不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 有效性取決於的剖析和分析[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 決定時，不會考慮任何批次在查詢最佳化期間，或在執行期間造成的錯誤是否[!INCLUDE[tsql](../../includes/tsql-md.md)]批次是否有效。  
+-   如果輸入\@tsql 不是有效[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 有效性取決於的剖析和分析[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 決定時，不會考慮任何批次在查詢最佳化期間，或在執行期間造成的錯誤是否[!INCLUDE[tsql](../../includes/tsql-md.md)]批次是否有效。  
   
--   如果@params不是 NULL，並且包含字串，不是句法有效的參數宣告字串，或如果它包含的字串，宣告任何參數一次以上。  
+-   如果\@參數不是 NULL，並且包含字串不是句法有效的參數宣告字串，或如果它包含的字串，宣告任何參數一次以上。  
   
--   如果輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次中宣告的參數，宣告相同名稱的本機變數@params。  
+-   如果輸入[!INCLUDE[tsql](../../includes/tsql-md.md)]批次中宣告的參數，宣告相同名稱的本機變數\@params。  
   
 -   如果陳述式使用暫存資料表。  
   
@@ -159,8 +159,8 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set**不支援間接遞迴。  
   
-## <a name="permissions"></a>Permissions  
- 需要權限來執行@tsql引數。  
+## <a name="permissions"></a>[權限]  
+ 需要權限來執行\@tsql 引數。  
   
 ## <a name="examples"></a>範例  
   

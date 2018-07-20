@@ -19,12 +19,12 @@ caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12739be23eb0a2104f73d9ad1c1240b3c235259c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 057d80ade08d7d5266208b2d417e08d530a8d8df
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252330"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083890"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>執行 SQL 工作中的參數和傳回碼
   SQL 陳述式和預存程序經常使用`input`參數，`output`參數和傳回碼。 在 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 中，執行 SQL 工作支援 `Input`、`Output` 和 `ReturnValue` 等參數類型。 您使用`Input`類型當做輸入參數，`Output`當做輸出參數，和`ReturnValue`當做傳回碼。  
@@ -49,16 +49,16 @@ ms.locfileid: "37252330"
 -   [設定參數和傳回碼在執行 SQL 工作編輯器](#Configure_parameters_and_return_codes)  
   
 ##  <a name="Parameter_names_and_markers"></a> 使用參數名稱和標記  
- 依據執行 SQL 工作使用的連接類型，SQL 命令的語法會使用不同的參數標記。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員類型要求 SQL 命令必須使用格式為 **@varParameter** 的參數標記，而 OLE DB 連線類型則需要使用問號 (?)。  
+ 依據執行 SQL 工作使用的連接類型，SQL 命令的語法會使用不同的參數標記。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)]連接管理員類型要求 SQL 命令必須使用格式的參數標記 **\@varParameter**，而 OLE DB 連接類型需要使用問號 （？） 參數標記。  
   
- 在變數與參數的對應中，可以用來當做參數名稱的名稱也會隨著連線管理員的類型而異。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線管理員類型使用具有 @ 前置詞的使用者自訂名稱，而 OLE DB 連線管理員類型則要求您必須使用以 0 為基底的序數數值做為參數名稱。  
+ 在變數與參數的對應中，可以用來當做參數名稱的名稱也會隨著連線管理員的類型而異。 例如，[!INCLUDE[vstecado](../includes/vstecado-md.md)]連線管理員類型使用的使用者定義名稱\@前置詞，而 OLE DB 連接管理員類型則需要您使用 0 為基底的序數數值做為參數名稱。  
   
  下表摘要說明執行 SQL 工作可以使用之連線管理員類型的 SQL 命令需求。  
   
 |連接類型|參數標記|參數名稱|範例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|@\<參數名稱>|@\<參數名稱>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<參數名稱>|\@\<參數名稱>|選取 FirstName、 LastName、 標題從 Person.Contact 其中 ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -151,7 +151,7 @@ ms.locfileid: "37252330"
   
 -   ADO 連接類型可以使用任何兩個參數名稱，例如 Param1 和 Param2，但這些名稱必須對應它們在參數清單中的序數位置。  
   
--   [!INCLUDE[vstecado](../includes/vstecado-md.md)] 連線類型使用參數名稱 @parmMinProductID 和 @parmMaxProductID。  
+-   [!INCLUDE[vstecado](../includes/vstecado-md.md)]連線類型使用參數名稱\@parmMinProductID 和\@parmMaxProductID。  
   
 ##  <a name="Stored_procedures"></a> 搭配預存程序使用參數  
  執行預存程序的 SQL 命令亦可使用參數對應。 如何使用參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定，這一點與參數化查詢的規則相同。  

@@ -1,5 +1,5 @@
 ---
-title: Y (TRANSACT-SQL) |Microsoft 文件
+title: MSdistribution_history (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - MSdistribution_history system table
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7196fcd36a995b0e1e8feb3f7436d1f634da375c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 11e5be7e9f65c0df2cadc1d27ed0af85b214d7fc
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005935"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102756"
 ---
 # <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "33005935"
   
 ## <a name="definition"></a>定義  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|散發代理程式的識別碼。|  
-|**runstatus**|**int**|執行狀態：<br /><br /> **1** = 開始。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
+|**runstatus**|**int**|執行狀態：<br /><br /> **1** = 開始時間。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
 |**start_time**|**datetime**|開始執行作業的時間。|  
 |**time**|**datetime**|記錄訊息的時間。|  
 |**duration**|**int**|訊息工作階段的持續時間 (以秒為單位)。|  

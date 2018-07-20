@@ -1,8 +1,8 @@
-﻿---
+---
 title: SQL 作業 Studio （預覽）的擴充功能 |Microsoft 文件
 description: 加入擴充功能至 SQL 作業 Studio （預覽）
 ms.custom: tools|sos
-ms.date: 03/28/2018
+ms.date: 07/19/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.suite: sql
@@ -13,14 +13,14 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2df3a0c5b060e9a4e89f5ce425e522cdd3b37e24
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 1e7cbb6a45c45fc0b0e901890c1f181400f0da5e
+ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34235498"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39146808"
 ---
-# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>的擴充模組 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]的擴充模組
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]提供了一種對基本的 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 安裝更多功能的簡單方法。 
 
@@ -34,7 +34,7 @@ ms.locfileid: "34235498"
 
    ![擴充管理員](media/extensions/extension-manager.png)
 
-1. 選取您想要的擴充功能和**安裝**它。
+1. 選取您想要的延伸模組並**安裝**它。
 2. 選取**重新載入**以啟用該擴充功能 (只有第一次安裝擴充功能時需要)。
 1. 透過滑鼠右鍵點選伺服器或資料庫並點選**管理**，瀏覽您的管理儀表板。
 

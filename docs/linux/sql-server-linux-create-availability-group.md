@@ -5,18 +5,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 06/28/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 69b3e30c39d8b9947cf4c2f7d675920f0c2a2094
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 21ca1eea093121107b2e04cff40b6f749a6c6bda
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107226"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083490"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>建立和設定 Linux 上的 SQL Server 可用性群組
 
@@ -675,7 +675,7 @@ Pacemaker 高可用性叢集基礎[!INCLUDE[ssnoversion-md](../includes/ssnovers
     
     何處*NameForIPResource* IP 資源，名稱*NameForAGResource*是針對 AG 資源，而且 SLES，名稱*NameForConstraint*的名稱條件約束。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您已了解如何建立及設定可用性群組的[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]Linux 上。 您已學到如何以：
 > [!div class="checklist"]

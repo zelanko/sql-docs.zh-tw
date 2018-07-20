@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 60e1bc6b899861958aba64b0eede3ceb2ab9e94b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 3ed5e8ee42792d4308b3ccecb41bfcbe064dafd9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38059166"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086390"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ```  
   
 ## <a name="arguments"></a>引數  
- *@tsql*  
+ *\@tsql*  
  一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。 *Transact SQL_batch*可能**nvarchar (***n***)** 或是**nvarchar （max)**。  
   
- *@params*  
- @params 提供的參數宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)**。  
+ *\@params*  
+ \@params 參數提供的宣告字串[!INCLUDE[tsql](../../includes/tsql-md.md)]批次，類似於 sp_executesql。 參數可能**nvarchar （n)** 或是**nvarchar （max)**。  
   
- 是一個字串，其中包含已內嵌在的所有參數的定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch&lt*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 Stmt 所指定的每個參數必須定義在@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數，@params並非必要。 這個參數的預設值是 NULL。  
+ 是一個字串，其中包含已內嵌在的所有參數的定義[!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch&lt*。 此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 Stmt 所指定的每個參數必須定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或陳述式中的批次不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
- *@include_browse_information*  
+ *\@include_browse_information*  
  如果設定為 1，就會分析每個查詢，如同查詢上有 FOR BROWSE 選項一樣。 會傳回其他索引鍵資料行和來源資料表資訊。  
   
 ## <a name="table-returned"></a>傳回的資料表  
@@ -123,11 +123,11 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |9|RECURSION|因為批次包含遞迴陳述式，無法判定結果。|  
 |10|TEMPORARY_TABLE|無法判斷結果，因為批次包含暫存資料表，並不支援**sp_describe_first_result_set** 。|  
 |11|UNSUPPORTED_STATEMENT|無法判斷結果，因為批次中包含不支援的陳述式**sp_describe_first_result_set** (例如，FETCH、 REVERT 等。)。|  
-|12|OBJECT_TYPE_NOT_SUPPORTED|@object_id傳遞至函式不是支援 （也就是不是預存程序）|  
-|13|OBJECT_DOES_NOT_EXIST|@object_id傳遞至系統目錄中找不到函式。|  
+|12|OBJECT_TYPE_NOT_SUPPORTED|\@Object_id 傳遞至函式不支援 （也就是不是預存程序）|  
+|13|OBJECT_DOES_NOT_EXIST|\@系統目錄中找不到傳遞至函式的 object_id。|  
   
-## <a name="permissions"></a>Permissions  
- 需要權限來執行@tsql引數。  
+## <a name="permissions"></a>[權限]  
+ 需要權限來執行\@tsql 引數。  
   
 ## <a name="examples"></a>範例  
  本主題中的其他範例[sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)可使用適用於**sys.dm_exec_describe_first_result_set**。  

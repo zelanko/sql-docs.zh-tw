@@ -1,5 +1,5 @@
 ---
-title: MSmerge_articlehistory (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_articlehistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,25 +22,25 @@ helpviewer_keywords:
 - MSmerge_articlehistory system table
 ms.assetid: 2870e7ea-dbec-4636-9171-c2cee96018ac
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44f758d3f56b595407b15077031a911a828ff48f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a271583707ee57335a04f02f7a3569752e4f289
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006345"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101966"
 ---
 # <a name="msmergearticlehistory-transact-sql"></a>MSmerge_articlehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_articlehistory**資料表會追蹤合併代理程式同步處理工作階段，有一個資料列，每個發行項的變更發行項所做的變更。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_articlehistory**資料表會追蹤對合併代理程式同步處理工作階段，有一個資料列所做變更的每個發行項的發行項。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|中的合併代理程式作業工作階段識別碼[MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md)系統資料表。|  
-|**phase_id**|**int**|同步處理工作階段的階段，它可以是下列項目之一：<br /><br /> **1** = 上傳。<br /><br /> **2** = 下載。<br /><br /> **4** = 清除。<br /><br /> **5** = 關機。<br /><br /> **6** = 結構描述變更。<br /><br /> **7** = BCP。|  
+|**session_id**|**int**|中的合併代理程式作業工作階段的識別碼[MSmerge_sessions](../../relational-databases/system-tables/msmerge-sessions-transact-sql.md)系統資料表。|  
+|**phase_id**|**int**|同步處理工作階段的階段，它可以是下列項目之一：<br /><br /> **1** = 上傳。<br /><br /> **2** = 下載。<br /><br /> **4** = 清除。<br /><br /> **5** = 關閉。<br /><br /> **6** = 結構描述變更。<br /><br /> **7** = BCP。|  
 |**article_name**|**sysname**|更改過的發行項名稱。|  
 |**start_time**|**datetime**|代理程式開始處理發行項的時間。|  
 |**duration**|**int**|代理程式處理發行項所花的時間 (以秒計)。|  

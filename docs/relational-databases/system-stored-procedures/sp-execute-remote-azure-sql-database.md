@@ -23,12 +23,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4e80528b6a8ce0e6f470a0fc5fbc0152ee8f8007
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 319eee940c5f5d90d6cfe9442c66f506670c26a0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038746"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082570"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -51,22 +51,22 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @data_source_name =] *datasourcename*  
+ [ \@data_source_name =] *datasourcename*  
  識別執行陳述式的外部資料來源。 請參閱[建立外部資料來源&#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部資料來源可以是類型的"RDBMS"或"SHARD_MAP_MANAGER"。  
   
- [ @stmt=]*陳述式*  
- 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 @stmt 必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。比方說，Unicode 常數**N'SP_WHO '** 有效，但字元常數 **'sp_who'** 不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上字串的大小會限制為 2 GB，最大的大小**nvarchar （max)**。  
+ [ \@stmt =]*陳述式*  
+ 是 Unicode 字串，包含[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次。 \@陳述式必須是 Unicode 常數或 Unicode 變數。 不允許使用比較複雜的 Unicode 運算式，如用 + 運算子來串連兩個字串。 不允許使用字元常數。 如果指定了 Unicode 常數，它必須在前面加上**N**。比方說，Unicode 常數**N'SP_WHO '** 有效，但字元常數 **'sp_who'** 不是。 字串大小只受到可用資料庫伺服器記憶體的限制。 在 64 位元伺服器上字串的大小會限制為 2 GB，最大的大小**nvarchar （max)**。  
   
 > [!NOTE]  
->  @stmt 可以包含參數擁有相同的格式，做為變數的名稱，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@陳述式可以包含參數擁有相同的格式，做為變數的名稱，例如： `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- 在 @stmt 參數定義清單和參數值清單中，@params 所包含的每個參數都必須有對應的項目。  
+ 包含在每個參數\@陳述式必須有對應的項目中都\@params 參數定義清單和參數值清單。  
   
- [ @params=] N'@*parameter_name * * data_type* [，...*n* ] '  
- 這是包含 @stmt 的所有內嵌參數定義的字串。此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 每個指定的參數@stmtmust定義在@params。 如果 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次不包含參數，就不需要 @params。 這個參數的預設值是 NULL。  
+ [ \@params =] N'\@*parameter_name * * data_type* [，...*n* ] '  
+ 是一個字串，其中包含之所有參數的已內嵌在定義\@陳述式。此字串必須是 Unicode 常數或 Unicode 變數。 每個參數定義都由參數名稱和資料類型組成。 *n*是指出其他參數定義的預留位置。 每個指定的參數\@stmtmust 定義在\@params。 如果[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次都在\@陳述式不包含參數， \@params 並非必要。 這個參數的預設值是 NULL。  
   
- [ @param1= ] '*value1*'  
- 這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 @stmt 所包含的每個參數都必須有提供的參數值。當 @stmt 中的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式或批次沒有參數時，便不需要值。  
+ [ \@param1 =] '*value1*'  
+ 這是參數字串所定義的第一個參數的值。 這個值可以是 Unicode 常數或 Unicode 變數。 必須提供每個參數中包含的參數值\@陳述式。值不是必要的時機[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式或批次都在\@陳述式沒有任何參數。  
   
  *n*  
  這是其他參數值的預留位置。 這些值只能是常數或變數。 這些值不能是比較複雜的運算式，如函數或利用運算子來建立的運算式。  
@@ -77,13 +77,13 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="result-sets"></a>結果集  
  傳回的結果集第一個 SQL 陳述式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 `ALTER ANY EXTERNAL DATA SOURCE` 權限。  
   
 ## <a name="remarks"></a>備註  
  `sp_execute_remote` 上述語法 」 一節中所述，必須以特定順序輸入參數。 如果未按順序輸入參數，就會出現錯誤訊息。  
   
- `sp_execute_remote` 具有相同的行為[EXECUTE &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md)批次和名稱的範圍。 TRANSACT-SQL 陳述式或批次都在 sp_execute_remote *@stmt* sp_execute_remote 陳述式執行之前，不會編譯參數。  
+ `sp_execute_remote` 具有相同的行為[EXECUTE &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md)批次和名稱的範圍。 TRANSACT-SQL 陳述式或批次都在 sp_execute_remote  *\@stmt* sp_execute_remote 陳述式執行之前，不會編譯參數。  
   
  `sp_execute_remote` 將額外的資料行加入至名為 '$ShardName'，其中包含遠端資料庫產生的資料列名稱的結果集。  
   

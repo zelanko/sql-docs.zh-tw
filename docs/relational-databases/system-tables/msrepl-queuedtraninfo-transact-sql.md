@@ -1,5 +1,5 @@
 ---
-title: MSrepl_queuedtraninfo (TRANSACT-SQL) |Microsoft 文件
+title: MSrepl_queuedtraninfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSrepl_queuedtraninfo system table
 ms.assetid: af7a5baf-32ea-475f-b6b9-68c557b4980c
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8dfae0143bf2c9841166220ff32b898cec601d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f71452985e4f386cd3ee7f4b74cd8bdba96edc0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004925"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101386"
 ---
 # <a name="msreplqueuedtraninfo-transact-sql"></a>MSrepl_queuedtraninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **q**資料表由複寫處理程序來儲存所有佇列更新訂閱所使用 SQL 架構佇列更新所發出的佇列命令相關資訊。 這份資料表儲存在訂閱資料庫中。  
+  **MSreplication_queuedtraninfo**資料表由複寫程序來儲存所有已排入佇列更新訂閱所使用 SQL 架構佇列更新所發出的佇列命令相關的資訊。 這份資料表儲存在訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  
 |**發行集**|**sysname**|發行集的名稱。|  
-|**Tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  
+|**tranid**|**sysname**|執行佇列命令所用的交易識別碼。|  
 |**maxorderkey**|**bigint**|僅供內部使用。|  
 |**commandcount**|**bigint**|僅供內部使用。|  
   

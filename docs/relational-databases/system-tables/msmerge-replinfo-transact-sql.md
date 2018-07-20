@@ -1,5 +1,5 @@
 ---
-title: M (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_replinfo (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ helpviewer_keywords:
 - MSmerge_replinfo system table
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44bd1de5c31f43c56e2fe7cb90bfe8e6585ad45d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 120141183f975a96168254bbd9a680aa6bb54a9d
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005525"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103026"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_replinfo**資料表包含一個資料列，每個訂用帳戶。 這個資料表會追蹤訂閱的資訊。 這份資料表儲存在發行集和訂閱資料庫中。  
+  **MSmerge_replinfo**資料表包含每個訂用帳戶的一個資料列。 這個資料表會追蹤訂閱的資訊。 這份資料表儲存在發行集和訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**repid**|**uniqueidentifier**|複本的唯一識別碼。|  
 |**use_interactive_resolver**|**bit**|指定是否在重新調整期間使用互動式解析程式。<br /><br /> **0** = 使用互動式解析程式。<br /><br /> **1** = 使用互動式解析程式。|  
 |**validation_level**|**int**|在訂閱執行的類型驗證。 指定的驗證層級可以是下列值之一：<br /><br /> **0** = 沒有驗證。<br /><br /> **1** = 僅限資料列計數驗證。<br /><br /> **2** = 資料列計數與總和檢查碼驗證。<br /><br /> **3** = 資料列計數及二進位總和檢查碼驗證。|  
-|**resync_gen**|**bigint**|用於重新同步訂閱的層代 (Generation) 號碼。 值為 **– 1**表示訂用帳戶未標示為重新同步處理。|  
+|**resync_gen**|**bigint**|用於重新同步訂閱的層代 (Generation) 號碼。 值為**為-1**指出訂用帳戶未標示為要重新同步處理。|  
 |**login_name**|**sysname**|建立訂閱的使用者名稱。|  
 |**主機名稱**|**sysname**|在產生訂閱用的資料分割時，參數化資料列篩選器所用的值。|  
 |**merge_jobid**|**binary(16)**|這個訂閱的合併作業識別碼。|  

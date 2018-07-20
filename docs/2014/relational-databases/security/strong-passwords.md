@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5dca0aafb208835a270be3192f8d3c6020229154
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58aea76071a92e1ea9638a745d7a8493f9b778ec
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227164"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083010"
 ---
 # <a name="strong-passwords"></a>增強式密碼
   密碼會是伺服器安全性部署中最薄弱的連結。 您在選取密碼的時候，應該始終保持小心謹慎的態度。 增強式密碼具有下列特性：  
@@ -53,9 +53,9 @@ ms.locfileid: "37227164"
   
 -   包含空白字元，或以空白字元開始。  
   
--   以 $ 或 @ 字元開始。  
+-   以 $ 開頭或\@字元。  
   
- 如果是用在 OLE DB 或 ODBC 連接字串中，則登入或密碼中不能包含下列字元：[] {}() , ; ? * ! @。 這些字元是用來初始化連接或分隔連接值。  
+ 如果是用在 OLE DB 或 ODBC 連接字串中，則登入或密碼中不能包含下列字元：[] {}() , ; ? * ! \@。 這些字元是用來初始化連接或分隔連接值。  
   
 ## <a name="related-content"></a>相關內容  
  [密碼原則](password-policy.md)  

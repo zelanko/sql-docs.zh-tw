@@ -19,12 +19,12 @@ caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30eb0721d6d5191a6b39aa6dd20c68b8d8d54d63
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 476a0798431b05e939ff2f0f493a3023b44b5826
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422407"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083460"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>從 MDAC 將應用程式更新至 SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 與 Microsoft Data Access Components 之間有一些差異 (MDAC；從 Windows Vista 開始，資料存取元件現在稱為 Windows Data Access Components 或 Windows DAC)。 雖然兩者都提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的原生資料存取權，但是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 是專為公開 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的新功能而設計，同時還保留了與舊版的回溯相容性。  
@@ -63,7 +63,7 @@ ms.locfileid: "37422407"
   
 -   警告和錯誤發生了些微的變更。 伺服器傳回的警告和錯誤現在保持與傳遞給 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時相同的嚴重性。 如果您依賴特定警告和錯誤的截獲，您應該確定您已經徹底測試過您的應用程式。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的錯誤檢查要比 MDAC 嚴格，這表示未嚴謹符合 ODBC 和 OLE DB 規格的某些應用程式可能會有不同的行為。 例如，SQLOLEDB 提供者並未強制「參數名稱必須以 '@' 開頭來代表結果參數」的規則，但是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者則會強制此規則。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 的錯誤檢查要比 MDAC 嚴格，這表示未嚴謹符合 ODBC 和 OLE DB 規格的某些應用程式可能會有不同的行為。 例如，SQLOLEDB 提供者未強制執行規則的參數名稱開頭必須 '\@' 結果的參數，但[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 對於失敗連接方面的行為與 MDAC 不同。 例如，MDAC 會針對失敗的連接傳回快取屬性值，而 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會報告錯誤給呼叫的應用程式。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "37422407"
   
 -   基於回溯相容性的理由，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 允許模稜兩可的連接字串 (例如，某些關鍵字可能會指定一次以上，而且可能會允許衝突的關鍵字，好讓解決方法以位置或優先順序為根據)。 未來的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 版本可能不允許模稜兩可的連接字串。 當修改應用程式，以便使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 來移除對於模稜兩可之連接字串的任何相依性時，這就是很好的作法。  
   
--   如果您使用 ODBC 或 OLE DB 呼叫來開始交易，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 與 MDAC 之間會有行為上的差異；使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時會立即開始交易，但是使用 MDAC 時會在初次存取資料庫之後開始交易。 這會影響預存程序和批次的行為，因為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]需要@TRANCOUNT批次或預存程序完成執行時的批次或預存程序啟動之後必須相同。  
+-   如果您使用 ODBC 或 OLE DB 呼叫來開始交易，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 與 MDAC 之間會有行為上的差異；使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時會立即開始交易，但是使用 MDAC 時會在初次存取資料庫之後開始交易。 這會影響預存程序和批次的行為，因為[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]需要\@ \@TRANCOUNT 批次或預存程序完成執行時的批次或預存程序啟動之後必須相同。  
   
 -   使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，ITransactionLocal::BeginTransaction 會導致立即開始交易。 當使用 MDAC 時，交易會延遲到應用程式執行陳述式之後才開始，這需要交易處於隱含交易模式中。 如需詳細資訊，請參閱 [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql)。  
   

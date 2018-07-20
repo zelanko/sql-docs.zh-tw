@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: a10eb1c869af5268868f388197e3e160ad542d96
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 7a2f02323a3fb02cb74da3112c084609c5fe2b34
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982810"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085010"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>連線程式庫和 Microsoft SQL server 的架構
 

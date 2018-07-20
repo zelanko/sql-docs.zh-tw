@@ -18,19 +18,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 780f289ae9ecd7ccfaeba41d5a9dd07e594441f0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 37eaf9824ac36333208ba538f36a5016ca6b87c8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38029772"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084100"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>建立、改變和移除預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理物件 (SMO) 預存程序由<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件。  
   
- 建立<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>在 SMO 中的物件需要設定<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>屬性設[!INCLUDE[tsql](../../../includes/tsql-md.md)]定義預存程序的指令碼。 參數需要 @ 前置詞，且必須藉由使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 物件以及加入至 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 物件的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合來個別地建立。  
+ 建立<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>在 SMO 中的物件需要設定<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>屬性設[!INCLUDE[tsql](../../../includes/tsql-md.md)]定義預存程序的指令碼。 參數需要\@前置詞，且必須建立使用的個別<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>物件以及加入至<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>的集合<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件。  
   
 ## <a name="example"></a>範例  
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱 <<c0> [ 建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。</c0>  

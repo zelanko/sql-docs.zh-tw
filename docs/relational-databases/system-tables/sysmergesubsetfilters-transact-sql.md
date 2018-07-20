@@ -1,5 +1,5 @@
 ---
-title: sysmergesubsetfilters (TRANSACT-SQL) |Microsoft 文件
+title: sysmergesubsetfilters (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,27 +20,27 @@ helpviewer_keywords:
 - sysmergesubsetfilters system table
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c26608c25b2bd5d9778f076a4f5ee1054730b836
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b0aa867181b09dfd3f30ca83f555e2b8de9fde0
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33009582"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101746"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   包含資料分割發行項的聯結篩選資訊。 這份資料表儲存在發行集和訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**filtername**|**sysname**|用來建立發行項的篩選名稱。|  
 |**join_filterid**|**int**|代表聯結篩選的物件識別碼。|  
 |**pubid**|**uniqueidentifier**|發行集的識別碼。|  
-|**artid**|**uniqueidentifier**|發行項的識別碼。|  
+|**artid&lt**|**uniqueidentifier**|發行項的識別碼。|  
 |**art_nickname**|**int**|發行項的暱稱。|  
 |**join_articlename**|**sysname**|要加以聯結以便判斷資料列是否屬於它的資料表名稱。|  
 |**join_nickname**|**int**|要加以聯結以便判斷資料列是否屬於它的資料表暱稱。|  

@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumnindexes (TRANSACT-SQL) |Microsoft 文件
+title: IHpublishercolumnindexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IHpublishercolumnindexes system table
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d54f286215d34974f1ca10ecd08d3eb7413c95c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38b21617981b7db9bde8ded481b1d403ba628e31
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000785"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103242"
 ---
 # <a name="ihpublishercolumnindexes-transact-sql"></a>IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "33000785"
   
 ## <a name="definition"></a>定義  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|識別資料行從[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)具有相關聯的索引。|  
-|**publisherindex_id**|**int**|識別從索引[IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)資料表資料行相關聯。|  
+|**publisherindex_id**|**int**|識別從索引[IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md)資料行相關聯的資料表。|  
 |**indid**|**int**|指出該資料行在已發行資料表中的位置。|  
   
 ## <a name="see-also"></a>另請參閱  

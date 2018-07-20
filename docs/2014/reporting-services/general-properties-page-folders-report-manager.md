@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4ee15c703cab10ced93359c91f170e7de0768e3d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9418474fed667dade02caaa7eb809ee8d2e16042
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255820"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083900"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>一般屬性頁面，資料夾 (報表管理員)
   使用資料夾的 [一般] 屬性頁面來檢視和設定您建立之資料夾的屬性。 有關誰建立和修改資料夾及何時修改資料夾的資訊顯示會在 [一般] 屬性頁面上方。  
@@ -39,7 +39,7 @@ ms.locfileid: "37255820"
   
 ## <a name="options"></a>選項。  
  **名稱**  
- 指定資料夾的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 請勿使用 ; ? : @ & = +，$ * \< > |"或 / 來指定名稱。  
+ 指定資料夾的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 請勿使用 ; ? : \@ & = +，$ * \< > |"或 / 來指定名稱。  
   
  **說明**  
  輸入資料夾內容的描述。 此描述會出現在有權存取此資料夾之使用者的 [內容] 頁面上。  

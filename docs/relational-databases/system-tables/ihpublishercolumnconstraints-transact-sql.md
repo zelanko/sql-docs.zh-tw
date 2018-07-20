@@ -1,5 +1,5 @@
 ---
-title: IHpublishercolumnconstraints (TRANSACT-SQL) |Microsoft 文件
+title: IHpublishercolumnconstraints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - IHpublishercolumnconstraints system table
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4b764ec9638f207d504052598f6867a9123f945
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b5e927ce418b1f556a9529823a389f8d2cce54c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000341"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101696"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "33000341"
   
 ## <a name="definition"></a>定義  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**publishercolumn_id**|**int**|識別資料行從[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)具有相關聯的條件約束。|  
-|**publisherconstraint_id**|**int**|識別的條件約束[IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)資料行相關聯。|  
+|**publishercolumn_id**|**int**|識別資料行從[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)由相關聯的條件約束。|  
+|**publisherconstraint_id**|**int**|識別條件約束[IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)資料行相關聯。|  
 |**indid**|**int**|指出該資料行在已發行資料表中的位置。|  
   
 ## <a name="see-also"></a>另請參閱  

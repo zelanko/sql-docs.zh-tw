@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 01/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: d792a7dfd4481d5c5cce3e2517559dcb0b3e22be
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 3542ee739d2c5e47a2203b8c2eed9d243f0cb5d8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984165"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086470"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>使用 Linux 上的 SQL Server 的 bcp 大量複製資料
 

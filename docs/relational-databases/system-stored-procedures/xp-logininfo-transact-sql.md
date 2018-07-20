@@ -1,5 +1,5 @@
 ---
-title: xp_logininfo (TRANSACT-SQL) |Microsoft 文件
+title: xp_logininfo & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_logininfo
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ae6820bc76ff2bb98360a77c4c3a5432d1e18af5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0638bf40e5edfea83c50c34a1aae67cfb5954bb1
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263234"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103126"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,46 +46,46 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="arguments"></a>引數  
  [  **@acctname =** ] **'***account_name***'**  
- 這是獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權之 Windows 使用者或群組的名稱。 *account_name*是**sysname**，預設值是 NULL。 如果*account_name*未指定，所有的 Windows 群組和 Windows 使用者之已被明確授與登入權限會報告。 *account_name*必須是完整名稱。 例如，'ADVWKS4\macraes' 或 'BUILTIN\Administrators'。  
+ 這是獲得 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權之 Windows 使用者或群組的名稱。 *account_name*已**sysname**，預設值是 NULL。 如果*account_name*未指定，所有 Windows 群組和 Windows 使用者已被明確授都與登入權限會報告。 *account_name*必須是完整名稱。 例如，'ADVWKS4\macraes' 或 'BUILTIN\Administrators'。  
   
  **'all'** | **'members'**  
- 指定是要報告有關帳戶所有權限路徑的資訊，或是要報告有關 Windows 群組成員的資訊。 **@option** 是**varchar （10)**，預設值是 NULL。 除非**所有**指定，會顯示的第一個權限路徑。  
+ 指定是要報告有關帳戶所有權限路徑的資訊，或是要報告有關 Windows 群組成員的資訊。 **@option** 已**varchar(10)**，預設值是 NULL。 除非**所有**指定，會顯示的第一個權限路徑。  
   
  [  **@privilege =** ] *variable_name*  
- 這是傳回指定 Windows 帳戶權限層級的輸出參數。 *variable_name*是**varchar （10)**，預設值是 'Not wanted'。 權限層級傳回為**使用者**， **admin**，或**null**。  
+ 這是傳回指定 Windows 帳戶權限層級的輸出參數。 *variable_name*已**varchar(10)**，預設值是 'Not wanted'。 傳回的權限等級**使用者**， **admin**，或**null**。  
   
  OUTPUT  
- 當指定，會將置於*variable_name*輸出參數。  
+ 指定時，會將放*variable_name*輸出參數。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**帳戶名稱**|**sysname**|完整的 Windows 帳戶名稱。|  
-|**type**|**char （8)**|Windows 帳戶的類型。 有效值為**使用者**或**群組**。|  
-|**權限**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。 有效值為**admin**，**使用者**，或**null**。|  
-|**對應的登入名稱**|**sysname**|針對具有使用者權限，使用者帳戶**對應登入名稱**顯示對應的登入名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]便會嘗試使用時所使用的網域名稱的對應的規則，此帳戶登入加在它前面。|  
+|**type**|**char(8)**|Windows 帳戶的類型。 有效值**使用者**或是**群組**。|  
+|**權限**|**char(9)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的存取權限。 有效值**系統管理員**，**使用者**，或**null**。|  
+|**對應的登入名稱**|**sysname**|使用者帳戶，具有使用者權限，如**對應登入名稱**會顯示對應的登入名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時它前面加上這個對應的規則使用的網域名稱的帳戶登入嘗試使用。|  
 |**權限路徑**|**sysname**|允許帳戶存取權的群組成員資格。|  
   
 ## <a name="remarks"></a>備註  
- 如果*account_name*指定，則**xp_logininfo**報告指定之 Windows 使用者或群組的最高的權限層級。 如果 Windows 使用者具有系統管理員和網域使用者的存取權，系統將回報這位使用者是系統管理員。 如果使用者是權限層級相等的多個 Windows 群組的成員，則只會回報第一個被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權的群組。  
+ 如果*account_name*指定，則**xp_logininfo**報告指定的 Windows 使用者或群組的最高的權限層級。 如果 Windows 使用者具有系統管理員和網域使用者的存取權，系統將回報這位使用者是系統管理員。 如果使用者是權限層級相等的多個 Windows 群組的成員，則只會回報第一個被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 存取權的群組。  
   
  如果*account_name*是有效的 Windows 使用者或群組不是與相關聯[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入，會傳回空的結果集。 如果*account_name*無法識別為有效的 Windows 使用者或群組，傳回錯誤訊息。  
   
- 如果*account_name*和**所有**所指定，會傳回 Windows 使用者或群組的所有權限路徑。 如果*account_name*是已授與所有的存取權的多個群組，成員[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，會傳回多個資料列。 **Admin**權限資料列之前傳回則**使用者**權限資料列，並在權限層級來傳回資料列的順序對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]之前建立登入。  
+ 如果*account_name*並**所有**所指定，會傳回 Windows 使用者或群組的所有權限路徑。 如果*account_name*成員的多個群組，全部都已被授權存取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，會傳回多個資料列。 **系統管理員**權限的資料列之前傳回**使用者**權限資料列，並在權限層級來傳回資料列的順序對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入所建立。  
   
- 如果*account_name*和**成員**所指定，會傳回下一個層級成員的群組清單。 如果*account_name*是本機群組，則清單會包含本機使用者、 網域使用者和群組。 如果*account_name*是網域帳戶，清單由網域使用者所組成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須連接到網域控制器，才能擷取群組成員資格資訊。 如果伺服器無法連上網域控制器，就不會傳回任何資訊。  
+ 如果*account_name*並**成員**所指定，則傳回的下一個層級群組的成員的清單。 如果*account_name*是本機群組，則清單會包含本機使用者、 網域使用者和群組。 如果*account_name*是網域帳戶，清單由網域使用者所組成。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 必須連接到網域控制器，才能擷取群組成員資格資訊。 如果伺服器無法連上網域控制器，就不會傳回任何資訊。  
   
- **xp_logininfo**資訊只會傳回來自 Active Director 全域群組，非萬用群組。  
+ **xp_logininfo**只會傳回來自 Active Director 全域群組，非萬用群組的資訊。  
   
-## <a name="permissions"></a>Permissions  
- 需要的成員資格**sysadmin**固定伺服器角色或中的成員資格**公用**固定的資料庫角色中**主要**具有 EXECUTE 權限授與資料庫。  
+## <a name="permissions"></a>[權限]  
+ 需要的成員資格**sysadmin**固定伺服器角色或成員資格**公用**固定的資料庫角色中**主要**具有 EXECUTE 權限授與的資料庫。  
   
 ## <a name="examples"></a>範例  
- 下列範例會顯示有關的資訊`BUILTIN\Administrators`Windows 群組。  
+ 下列範例會顯示相關的資訊`BUILTIN\Administrators`Windows 群組。  
   
 ```  
 EXEC xp_logininfo 'BUILTIN\Administrators';  

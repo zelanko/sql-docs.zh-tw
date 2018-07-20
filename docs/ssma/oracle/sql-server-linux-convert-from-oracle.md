@@ -5,17 +5,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.suite: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: c80a67028d1bb0d46596287b4ff168ce994af2a0
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 9a556b8b800a03808def02c2953107faa90d7e34
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36927109"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086070"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 結構描述移轉至 SQL Server 2017 Linux 上使用 SQL Server 移轉小幫手
 
@@ -125,7 +125,7 @@ SSMA for Oracle 不會使用預設的 Oracle 範例結構描述。 若要啟用 
 
    ![資料移轉報告](./media/sql-server-linux-convert-from-oracle/DataMigrationReport.png)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 針對更複雜的 Orcale 結構描述中，轉換程序牽涉到更多時間、 測試和用戶端應用程式可能發生的變更。 本教學課程的目的是示範如何使用 SSMA for Oracle 整體移轉程序的一部分。
 

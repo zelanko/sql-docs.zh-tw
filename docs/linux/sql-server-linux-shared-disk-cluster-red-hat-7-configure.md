@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 7ddd34e56d8f8499715c535de21ae6f23bd282b1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4ab3db647ea96ce926d51c7dcf94c2e17e633c22
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001630"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086440"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>設定 SQL Server 的 Red Hat Enterprise Linux 共用的磁碟叢集
 
@@ -393,6 +393,6 @@ NFS 伺服器上執行下列作業：
 
 * [叢集從頭](http://clusterlabs.org/doc/Cluster_from_Scratch.pdf)從 Pacemaker 的指南
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [操作在 Red Hat Enterprise Linux 共用的磁碟叢集上的 SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)

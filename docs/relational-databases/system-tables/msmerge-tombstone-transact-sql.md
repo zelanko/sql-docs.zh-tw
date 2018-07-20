@@ -1,5 +1,5 @@
 ---
-title: MSmerge_tombstone (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_tombstone (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_tombstone system table
 ms.assetid: 8b3fc7bf-729b-40f2-8a26-e7dfbe8ddb38
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 99823a19970cf5732aa4e68b3588c6b5a6934a07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af64c598ccb092a5c0e408496ceba8d97f609124
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33004815"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102066"
 ---
 # <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_tombstone**資料表包含已刪除資料列的相關資訊，可讓刪除動作傳播到其他訂閱者。 這份資料表儲存在發行集和訂閱資料庫中。  
+  **MSmerge_tombstone**資料表包含已刪除資料列的資訊，可讓刪除動作傳播到其他訂閱者。 這份資料表儲存在發行集和訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**rowguid**|**uniqueidentifier**|資料列識別碼。|  
 |**tablenick**|**int**|資料表的暱稱。|  

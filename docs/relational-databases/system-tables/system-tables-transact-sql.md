@@ -24,15 +24,15 @@ helpviewer_keywords:
 - retrieving system table information
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2658b6ab0687a3eb3c63d6d658f93ff2c25b55c6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: b127fb908fc37ccfba53e57fe388e7c4815854f6
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047213"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103356"
 ---
 # <a name="system-tables-transact-sql"></a>系統資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

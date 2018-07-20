@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/28/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0275d0004bc02f1e32e7da3630c8a0bd15532d18
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 0497e1894c60e251a9cfb0d6229f1ace65b2476e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982797"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086270"
 ---
 # <a name="failover-cluster-instances---sql-server-on-linux"></a>容錯移轉叢集執行個體-在 Linux 上的 SQL Server
 

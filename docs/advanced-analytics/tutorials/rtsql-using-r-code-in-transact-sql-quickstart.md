@@ -1,55 +1,50 @@
 ---
-title: 使用 TRANSACT-SQL (R SQL 快速入門) 中的 R 程式碼 |Microsoft 文件
+title: "\"Hello World\"基本 R 程式碼執行 T-SQL (SQL Server Machine Learning) 中的快速入門 |Microsoft Docs"
+description: 在此快速入門中的 SQL Server 中的 R 指令碼，了解與 hello world 練習 sp_execute_external_script 系統預存程序的基本概念。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c11e2bba73cef8a8b6f59d5a92de22cddb19ccd9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e738289b39f6d390bc4d6196606d242fa4803865
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203240"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086881"
 ---
-# <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>使用 TRANSACT-SQL (R SQL 快速入門) 中的 R 程式碼
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>快速入門： 在 SQL Server 中的"Hello world"的 R 指令碼 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本教學課程會逐步引導您完成從 T-SQL 預存程序呼叫 R 指令碼的基本機制。
+SQL Server 包含內建的 SQL Server 資料的資料庫內分析的 R 語言功能支援。 您可以使用開放原始碼 R 函數、 第三方套件，以及內建的 Microsoft R 套件，進行大規模的預測性分析。
 
-**您將學習**
+在本快速入門中，您將了解重要的概念，透過執行"Hello World"R 指令碼 inT SQL，簡介**sp_execute_external_script**系統預存程序。 執行 R 指令碼是透過預存程序。 您可以使用[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)預存程序並傳入 R 指令碼中，做為示範在本快速入門中，為輸入參數或換行中的 R 指令碼[之自訂預存程序](sqldev-in-database-r-for-sql-developers.md)。 
 
-+ 如何在 T-SQL 函式中內嵌 R
-+ 使用 R 和 SQL 資料類型和資料物件的一些秘訣
-+ 如何建立簡單的模型，並將它儲存到 SQL Server
-+ 如何建立預測和使用模型 R 繪圖
+## <a name="prerequisites"></a>先決條件
 
-**預估的時間**
+這個練習需要存取 SQL server 執行個體與其中一個已安裝下列項目：
 
-30 分鐘 (不包括設定)
++ [SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)，與安裝的 R 語言
++ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-## <a name="prerequisites"></a>필수 구성 요소
+  您的 SQL Server 執行個體可位於 Azure 虛擬機器或內部部署。 要小心，外部指令碼功能預設為停用，因此您可能需要[啟用外部指令碼](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)，並確認**SQL Server Launchpad 服務**開始之前執行。
 
-您必須具有存取 SQL server 執行個體已經安裝下列其中一種：
++ 執行 SQL 查詢工具。 您可以使用任何應用程式可以連接到 SQL Server 資料庫並執行 T-SQL 程式碼。 SQL 專業人員可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio。
 
-+ SQL Server 2017 機器學習服務，與安裝的 R 語言
-+ SQL Server 2016 R Services
-
-您的 SQL Server 執行個體可以是 Azure 虛擬機器或在內部部署。 只是知道，外部指令碼功能預設為停用，因此您可能需要執行一些額外的步驟，讓它運作。
-
-若要執行 SQL 查詢，以包含 R 指令碼，您可以使用其他任何應用程式可以連接到資料庫並執行 T-SQL 程式碼。 SQL 專業人員可以使用 SQL Server Management Studio (SSMS) 或 Visual Studio。
-
-此教學課程中，以顯示 執行 R SQL 伺服器內是多麼的輕鬆我們使用新**mssql 擴充 Visual Studio 程式碼**。 VS Code 是免費的開發環境可以在 Linux、 macOS、 或 Windows 上執行。 **Mssql**延伸模組是輕量型的延伸模組執行 T-SQL 查詢。 若要安裝它，請參閱這篇文章︰[使用適用於 Visual Studio Code 的 mssql 擴充功能 (英文)](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
+本教學課程中，以顯示 執行 R 在 SQL Server 內是多麼我們使用新**適用於 Visual Studio Code 的 mssql 擴充功能**。 VS Code 是免費的開發環境可在 Linux、 macOS 或 Windows 上執行。 **Mssql**延伸模組是執行 T-SQL 查詢的輕量級擴充功能。 若要取得 Visual Studio Code，請參閱[下載並安裝 Visual Studio Code (英文)](https://code.visualstudio.com/Download)。 若要新增**mssql**延伸模組，請參閱這篇文章：[使用 Visual Studio Code 的 mssql 擴充功能](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode)。
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>連線到資料庫並執行 Hello World 測試指令碼
 
 1. 在 Visual Studio Code 中，建立新的文字檔案並將它命名為 BasicRSQL.sql。
-2. 開啟此檔案時，請按 CTRL+SHIFT+P (macOS 上為 COMMAND + P)，輸入 **sql** 以列出 SQL 命令，並選取 [連線]。 Visual Studio 程式碼會提示您建立要連接到特定的資料庫時使用的設定檔。 這是選擇性的但可讓您更輕鬆地切換資料庫和登入。
-    + 選擇伺服器或已安裝 SQL Server 中的 R 執行個體。
+
+2. 開啟此檔案時，請按 CTRL+SHIFT+P (macOS 上為 COMMAND + P)，輸入 **sql** 以列出 SQL 命令，並選取 [連線]。 Visual Studio Code 會提示您建立設定檔，連接到特定的資料庫時使用。 這是選擇性的但可讓您更輕鬆地切換資料庫和登入。
+    + 選擇伺服器或已安裝 SQL Server 中的 R 的執行個體。
     + 使用具有建立新資料庫權限的帳戶執行 SELECT 陳述式，並檢視資料表定義。
+
 2. 如果連線成功，您應該能在狀態列中看到伺服器和資料庫名稱，以及您目前的認證。 如果連線失敗，請檢查電腦名稱和伺服器名稱是否正確。
+
 3. 貼上此陳述式並加以執行。
 
     ```sql
@@ -57,36 +52,34 @@ ms.locfileid: "31203240"
       @language =N'R',
       @script=N'OutputDataSet<-InputDataSet',
       @input_data_1 =N'SELECT 1 AS hello'
-      WITH RESULT SETS (([hello] int not null));
+      WITH RESULT SETS (([Hello World] int));
     GO
     ```
 
-    在 Visual Studio Code 中，您可以將想要執行的程式碼醒目提示，並按下 CTRL+SHIFT+E。 如果這很難記住，您可以變更它！ 請參閱[自訂快速鍵繫結 (英文)](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts)。
+這個預存程序的輸入包括：
 
-    ![rsql basictut_hello1code](media/rsql-basictut-hello1code.PNG)
++ *@language* 參數會定義要呼叫，在此情況下，r 語言擴充功能
++ *@script* 參數會定義傳遞至 R 執行階段的命令。 您的整個 R 指令碼必須以 Unicode 文字的格式包含在此引數中。 您也可以將文字新增至 **nvarchar** 類型的變數，並呼叫該變數。
++ *@input_data_1* 會傳回查詢所傳遞至 R 執行階段，將資料傳回給 SQL Server 做為資料框架的資料。
++ 結果集子句會定義傳回的資料表的結構描述 SQL Server，將"Hello World"新增為資料行名稱，如**int**資料類型。
 
 **結果**
 
 ![rsql_basictut_hello1](media/rsql-basictut-hello1.PNG)
 
-## <a name="troubleshooting"></a>疑難排解
+如果您收到任何錯誤，此查詢，排除任何安裝問題。 若要啟用外部程式碼程式庫需要後續安裝設定。 請參閱[安裝 SQL Server 2017 Machine Learning 服務](../install/sql-machine-learning-services-windows-install.md)或是[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。同樣地，請確定 Launchpad 服務正在執行。 
 
-+ 如果此查詢的任何錯誤，安裝可能不完整。 使用 SQL Server 安裝精靈新增該功能之後，您必須採取一些額外的步驟才能使用外部程式碼程式庫。  請參閱[安裝 SQL Server 2017 機器學習服務](../install/sql-machine-learning-services-windows-install.md)或[安裝 SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)。
+根據您的環境，您可能需要啟用 R 背景工作帳戶以連線到 SQL Server、安裝額外的網路程式庫、啟用遠端程式碼執行，或在一切已設定完畢後重新啟動執行個體。 如需詳細資訊，請參閱[R Services 安裝和升級常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-+ 請確定 Launchpad 服務正在執行。 根據您的環境，您可能需要啟用 R 背景工作帳戶以連線到 SQL Server、安裝額外的網路程式庫、啟用遠端程式碼執行，或在一切已設定完畢後重新啟動執行個體。 請參閱 [R 服務安裝和升級常見問題集](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> [!TIP]
+> 在 Visual Studio Code 中，您可以將想要執行的程式碼醒目提示，並按下 CTRL+SHIFT+E。 如果這很難記住，您可以變更它！ 請參閱[自訂快速鍵繫結 (英文)](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts)。
+> 
+> ![rsql basictut_hello1code](media/rsql-basictut-hello1code.PNG)
+> 
 
-+ 若要取得 Visual Studio Code，請參閱[下載並安裝 Visual Studio Code (英文)](https://code.visualstudio.com/Download)。
+## <a name="next-steps"></a>後續步驟
 
-## <a name="next-lesson"></a>下一課
+現在您確認您的執行個體已準備好使用 R 時，看看建構輸入和輸出。
 
-現在，您的執行個體已準備好使用 R，讓我們開始。
-
-第 1 課：[處理輸入和輸出](rtsql-working-with-inputs-and-outputs.md)
-
-第 2 課： [R 與 SQL 資料類型和資料物件](rtsql-r-and-sql-data-types-and-data-objects.md)
-
-第 3 課：[使用 R 與 SQL Server 資料的函式](rtsql-using-r-functions-with-sql-server-data.md)
-
-第 4 課：[建立預測模型](rtsql-create-a-predictive-model-r.md)
-
-第 5 課：[預測和模型中的繪圖](rtsql-predict-and-plot-from-model.md)
+> [!div class="nextstepaction"]
+> [快速入門： 處理輸入和輸出](rtsql-working-with-inputs-and-outputs.md)

@@ -5,7 +5,7 @@ author: tmullaney
 ms.date: 01/30/2018
 ms.author: meetb
 manager: craigg
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: f7b1dd57af300fc3e3fa61e469646211536b4653
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001820"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085030"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>將 Linux 上的 SQL Server 連線加密
 

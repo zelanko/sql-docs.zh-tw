@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4e910172bc11137f2691e1e7dda492b78bd78b26
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164173"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082902"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>一般屬性頁面，資源 (報表管理員)
   使用資源的 [一般] 屬性頁面，即可重新命名、刪除、移動或取代資源。 有關誰新增資源或修改屬性的資訊顯示在頁面上方。  
@@ -39,7 +39,7 @@ ms.locfileid: "37164173"
   
 ## <a name="options"></a>選項。  
  **名稱**  
- 指定資源的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 請勿使用 ; ? : @ & = +，$ / * \< > |"或 / 來指定名稱。  
+ 指定資源的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 請勿使用 ; ? : \@ & = +，$ / * \< > |"或 / 來指定名稱。  
   
  **說明**  
  輸入資源的描述。 此描述顯示在有權存取此資源的使用者的 [內容] 頁面上。  

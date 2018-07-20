@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 01/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 259f1d466a5d05f882bd7d53041d58b8d85c5e32
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 7d8d0120093c1a71d1cbed088901cc3100ae56bc
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020294"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082932"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性限制
 
@@ -32,6 +32,6 @@ ms.locfileid: "38020294"
 
 如需有關 SQL Server 中可用的安全性功能的詳細資訊，請參閱 < [SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 如需常見安全性工作，請參閱[開始使用 Linux 上的 SQL Server 的安全性功能](sql-server-linux-security-get-started.md)。 如需指令碼來變更 TCP 連接埠號碼，SQL Server 目錄中，並設定追蹤旗標或定序，請參閱[設定 SQL Server on Linux 使用 mssql-conf](sql-server-linux-configure-mssql-conf.md)。

@@ -5,18 +5,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 12/11/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 239d4418c5e7d59a980d9028e2533dd9d7a2c566
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: afb076c2883751728c6528dc1a2266b8ec214895
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001830"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087230"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>部署在 Linux 上的 SQL server 的 Pacemaker 叢集
 
@@ -226,7 +226,7 @@ sudo zypper install mssql-server-ha mssql-server-agent
 sudo systemctl restart mssql-server
 ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您已了解如何部署 Linux 上的 SQL Server 的 Pacemaker 叢集。 您已學到如何以：
 > [!div class="checklist"]

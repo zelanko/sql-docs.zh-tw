@@ -1,29 +1,34 @@
 ---
-title: R 函式中使用 SQL Server 資料 (SQL 快速入門中的 R) |Microsoft 文件
+title: 說明 R 的快速入門函式與 SQL Server 資料 （SQL Server 機器學習服務） |Microsoft Docs
+description: 在本快速入門，了解如何撰寫使用 SQL Server 資料的 R 函數。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 52b03b16c55b4ae8a772c2c12861fcc4b184d1f4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 5785b8b8162fdde25dea13eb3aead55c10dbfc3b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585740"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086670"
 ---
-# <a name="using-r-functions-with-sql-server-data-r-in-sql-quickstart"></a>R 函式中使用 SQL Server 資料 (SQL 快速入門中的 R)
+# <a name="quickstart-using-r-functions-with-sql-server-data"></a>快速入門： 使用 R 函式搭配 SQL Server 資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-您已經熟悉基本的作業，現在可以開始使用 R。例如，許多進階統計函式若使用 T-SQL 來實作可能會很複雜，但卻只需要單行的 R 程式碼。  透過 R 服務，您可以輕鬆地在預存程序中內嵌 R 公用程式指令碼。
+如果您已完成先前的快速入門，您已熟悉基本作業，而且準備好進行更為複雜，例如統計函數。 在 T-SQL 中實作複雜的進階統計函式可以在 R 中使用只有一行程式碼。
 
-在這些範例中，您將會在 SQL Server 預存程序中內嵌 R 數學和公用程式函式。
+在本快速入門中，您將內嵌 R 數學和公用程式函式，在 SQL Server 預存程序。
+
+## <a name="prerequisites"></a>先決條件
+
+先前的快速入門中， [Hello World R 與 SQL](rtsql-using-r-code-in-transact-sql-quickstart.md)，提供資訊並連結設定本快速入門所需的 R 環境。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>建立預存程序來產生亂數
 
-為了簡單起見，我們使用 R`stats`套件，如此已安裝並與 R Services 的預設載入。 該套件包含數百個用來進行一般統計工作的函式，其中 `rnorm` 函式會在指定標準差和平均值的情況下，使用常態分佈產生指定數目的亂數。
+為了簡單起見，讓我們使用 R`stats`套件會安裝並載入根據預設，當您安裝 SQL Server 中的 R 功能的支援。 該套件包含數百個用來進行一般統計工作的函式，其中 `rnorm` 函式會在指定標準差和平均值的情況下，使用常態分佈產生指定數目的亂數。
 
 例如，這個 R 程式碼會在指定標準差為 3 的情況下，傳回平均值為 50 的 100 個數字。
 
@@ -44,7 +49,7 @@ EXEC sp_execute_external_script
 
 想要更輕鬆地產生一組不同的亂數？
 
-與 SQL Server 結合簡單： 定義從使用者取得的引數的預存程序。 然後，將那些引數做為變數傳入 R 指令碼中。
+很簡單，結合 SQL Server 時： 定義從使用者取得的引數的預存程序。 然後，將那些引數做為變數傳入 R 指令碼中。
 
 ```sql
 CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
@@ -75,7 +80,7 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>使用 R 公用程式函式進行疑難排解
 
-根據預設，包括 R 安裝`utils`套件，調查目前的 R 環境提供各種不同的公用程式函式。 如果您發現您的 R 程式碼在 SQL Server 和外部環境中的執行方式不一致，這會非常有用。
+根據預設，R 的安裝包含`utils`套件，其提供用於調查目前 R 環境的各種不同的公用程式函式。 如果您發現您的 R 程式碼在 SQL Server 和外部環境中的執行方式不一致，這會非常有用。
 
 例如，您可以使用 R `memory.limit()` 函式來取得目前 R 環境的記憶體。 由於 `utils` 套件預設會安裝但不會載入，您必須使用 `library()` 函式先載入它。
 
@@ -90,12 +95,13 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));
 ```
 
-許多使用者要在 R 中使用系統計時函式，例如`system.time`和`proc.time`，來擷取 R 處理序所使用的時間和分析的效能問題。
+許多使用者想要在 R 中使用系統時間函式，例如`system.time`和`proc.time`，以擷取 R 處理序所使用的時間，並分析效能問題。
 
 如需範例，請參閱此教學課程︰[建立資料功能](../tutorials/walkthrough-create-data-features.md)。 在此逐步解說中，R 計時函式會內嵌在方案中，以比較 R 函式與T-SQL 函式從資料建立功能的效能。
 
-## <a name="next-lesson"></a>下一課
+## <a name="next-steps"></a>後續步驟
 
 接下來，您將在 SQL Server 中使用 R 建置預測模型。
 
-[建立預測模型](../tutorials/rtsql-create-a-predictive-model-r.md)
+> [!div class="nextstepaction"]
+> [快速入門： 建立預測模型](rtsql-create-a-predictive-model-r.md)

@@ -1,5 +1,5 @@
 ---
-title: M (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_sessions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_sessions system table
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dded9db18b0a3048c3a4eb8a56869946fca8a1ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1b825cb12e7d95615120b1418061b6106047c46
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010725"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103326"
 ---
 # <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_sessions**資料表包含記錄資料列先前合併代理程式作業工作階段的結果。 每次執行合併代理程式時，都會在這個資料中加入一個新的資料列。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_sessions**資料表包含記錄資料列先前的合併代理程式作業工作階段的結果。 每次執行合併代理程式時，都會在這個資料中加入一個新的資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|合併代理程式作業工作階段的識別碼。|  
 |**agent_id**|**int**|合併代理程式的識別碼。|  
@@ -64,7 +64,7 @@ ms.locfileid: "33010725"
 |**download_rows_retried**|**int**|下載到訂閱者且已重試的資料列數。|  
 |**schema_changes**|**int**|工作階段期間所套用的結構描述變更數目。|  
 |**metadata_rows_cleanedup**|**int**|工作階段期間在期間，清除中繼資料的資料列數。|  
-|**runstatus**|**int**|執行狀態如下：<br /><br /> **1** = 開始。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
+|**runstatus**|**int**|執行狀態如下：<br /><br /> **1** = 開始時間。<br /><br /> **2** = 成功。<br /><br /> **3** = 進行中。<br /><br /> **4** = 閒置。<br /><br /> **5** = 重試。<br /><br /> **6** = 失敗。|  
 |**estimated_upload_changes**|**int**|發行者端必須套用的估計變更數目。|  
 |**estimated_download_changes**|**int**|訂閱者端必須套用的估計變更數目。|  
 |**connection_type**|**int**|上傳期間所用的連接：<br /><br /> **1** = 區域網路 (LAN)。<br /><br /> **2** = 撥號網路連接。<br /><br /> **3** = web 同步處理。|  

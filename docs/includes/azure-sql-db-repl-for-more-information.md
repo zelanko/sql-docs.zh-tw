@@ -1,0 +1,1 @@
+Azure SQL Database 上的發行者和散發者資料庫都需要[受控執行個體](http://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)如需詳細資訊，請參閱[複寫使用 Azure SQL Database](http://docs.microsoft.com/sql/relational-databases/replication/replication-to-sql-database)。

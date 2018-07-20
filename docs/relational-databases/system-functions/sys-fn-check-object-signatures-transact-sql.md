@@ -25,12 +25,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d516472fb5ccec63498d7ab13401e2df1f4bf10
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 1473ca4fd7f29992c74c035c9ce649dfc96c5d0b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015150"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088090"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,17 +50,17 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>引數  
- {' @*類別*'}  
+ {'\@*類別*'}  
  識別所提供之指模的類型：  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- @*類別*已**sysname**。  
+ \@*類別*已**sysname**。  
   
- {@*指紋*}  
- 用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 @*憑證指紋*已**varbinary(20)**。  
+ { \@*指紋*}  
+ 用來加密金鑰的憑證 SHA-1 雜湊，或用來加密金鑰的非對稱金鑰 GUID。 \@*憑證指紋*已**varbinary(20)**。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
  下表列出的資料行， **fn_check_object_signatures**傳回。  
@@ -75,7 +75,7 @@ fn_ check_object_signatures (
 ## <a name="remarks"></a>備註  
  使用**fn_check_object_signatures**確認惡意使用者有尚未竄改物件。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要憑證或非對稱金鑰的 VIEW DEFINITION。  
   
 ## <a name="examples"></a>範例  

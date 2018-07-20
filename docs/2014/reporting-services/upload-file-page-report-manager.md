@@ -14,12 +14,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8bc5efd9e45b875e66b9ffd1a223a5b375740381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272314"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083025"
 ---
 # <a name="upload-file-page-report-manager"></a>上傳檔案頁面 (報表管理員)
   您可以使用 [上傳檔案] 頁面，將檔案從檔案系統發行至報表伺服器資料庫。 在報表伺服器資料夾階層中，上傳的檔案會以項目來表示。  
@@ -54,7 +54,7 @@ ms.locfileid: "37272314"
  按一下即可從檔案系統選擇檔案。  
   
  **名稱**  
- 輸入檔案名稱，此名稱將顯示在報表伺服器命名空間中。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : @ & = +，$ * \< > |"或 / 來指定項目名稱。  
+ 輸入檔案名稱，此名稱將顯示在報表伺服器命名空間中。 名稱必須至少包含一個英數字元。 也可以包含空格和特定符號。 請勿使用 ; ? : \@ & = +，$ * \< > |"或 / 來指定項目名稱。  
   
  **如果它存在於項目覆寫**  
  若要以新版本取代現有的項目，請選取此核取方塊。 若要覆寫現有的版本，新項目的名稱與現有項目的名稱必須完全相符。  

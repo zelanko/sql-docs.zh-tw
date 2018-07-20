@@ -16,12 +16,12 @@ caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c396a380d0198680391c73bfaa7fd31b8ede5799
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d23cf7a0b557b4bbc687514b120af7a93cbf375
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218728"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083021"
 ---
 # <a name="new-system-role-management-studio"></a>新增系統角色 (Management Studio)
   使用此頁面，即可建立系統層級角色定義。 系統角色定義會指定一組整個套用至報表伺服器的系統層級工作。  
@@ -33,7 +33,7 @@ ms.locfileid: "37218728"
  **名稱**  
  鍵入角色定義的名稱。 角色定義名稱在報表伺服器命名空間內必須是唯一的。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : @ & = +，$ / * \< >  
+ ; ? : \@ & = +，$ / * \< >  
   
  " /  
   

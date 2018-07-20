@@ -1,5 +1,5 @@
 ---
-title: MSrepl_transactions (TRANSACT-SQL) |Microsoft 文件
+title: MSrepl_transactions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - MSrepl_transactions system table
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 759731cb732df806915e6da23cbec80ad1f222f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94b926dbb7f12aba50a7147cbb3782d569b87975
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103266"
 ---
 # <a name="msrepltransactions-transact-sql"></a>MSrepl_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_transactions**資料表包含每個複寫交易的一個資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|發行者資料庫的識別碼。|  
 |**xact_id**|**varbinary(16)**|交易的識別碼。|  

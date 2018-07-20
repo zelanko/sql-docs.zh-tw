@@ -30,12 +30,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 36f090abe358adab3075693e63ab4fe95cbbbadb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 60c004e7bf1deaf2e51a11e9e558884b2ca684f5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248328"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084020"
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
   在此主題下的範例將說明如何使用 OPENXML 來建立 XML 文件的資料列集檢視。 如需 OPENXML 語法的相關資訊，請參閱 [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)。 範例中將說明 OPENXML 的各個方面，但是不指定 OPENXML 的中繼屬性。 如需如何指定 OPENXML 的中繼屬性的詳細資訊，請參閱 [在 OPENXML 中指定中繼屬性](specify-metaproperties-in-openxml.md)。  
@@ -472,7 +472,7 @@ EXEC sp_xml_removedocument @docHandle
   
  OPENXML 陳述式說明下列各項：  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) 的結尾為 XML 屬性 **ProductID**。 在結果資料列集中，為每個在 XML 文件中選取的屬性節點建立資料列。  
+-   *rowpattern* (/root/customer/順序 OrderDetail/\@ProductID) 結束於 XML 屬性中， **ProductID**。 在結果資料列集中，為每個在 XML 文件中選取的屬性節點建立資料列。  
   
 -   在此範例中，未指定 *flags* 參數。 相反地，由 *ColPattern* 參數指定對應。  
   
@@ -480,9 +480,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   針對資料列集內的 **ProdID** 資料行指定為 *ColPattern* 的 XPath 模式 (**.**) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 <`OrderDetail`> 元素的 **ProductID** 屬性。  
   
--   針對資料列集內的 **Qty** 資料行所指定的 *ColPattern* (**../@Quantity**)，識別內容節點 \<品識別碼> 之父節點 <`OrderDetail`> 的 **Quantity** 屬性。  
+-   *ColPattern*， **.../\@數量**指定**Qty**資料列集中的資料行識別**Quantity**屬性之父 <`OrderDetail`>，節點的內容節點， \<ProductID >。  
   
--   同樣地，針對資料列集內的 **OID** 資料行所指定的 *ColPattern* (**../../@OrderID**)，識別內容節點的父節點之父系 <`Order`> 的 **OrderID** 屬性。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
+-   同樣地， *ColPattern*， **.../../\@OrderID**指定**OID**資料列集中的資料行識別**OrderID**屬性之父 <`Order`> 的父節點[內容] 節點中。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   
@@ -580,7 +580,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- 特別是，您要將 **ML** 類型變數 (@x) 傳遞至 **sp_xml_preparedocument()** 函式。  
+ 具體來說，您會傳遞**xml**類型變數 (\@x) 來**sp_xml_preparedocument （)** 函式。  
   
  以下是結果：  
   

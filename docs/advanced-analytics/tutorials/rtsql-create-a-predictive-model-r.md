@@ -1,23 +1,28 @@
 ---
-title: 建立預測模型 (SQL 快速入門中的 R) |Microsoft 文件
+title: 若要建立預測模型，在 SQL Server Machine Learning 中使用 R 的快速入門 |Microsoft Docs
+description: 在本快速入門，了解如何建置在 R 中使用 SQL Server 資料來繪製預測模型。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
-ms.topic: tutorial
+ms.date: 07/15/2018
+ms.topic: quickstart
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3a56ddd95f0282550662cc559ff5a393d0bd236b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7ca2fcac5bef63a4abf2449b56c25a600b9255c3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202640"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086820"
 ---
-# <a name="create-a-predictive-model-r-in-sql-quickstart"></a>建立預測模型 (SQL 快速入門中的 R)
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>快速入門： 建立 SQL Server 中使用 R 的預測性模型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-在此步驟中，您將了解如何使用 R 來訓練模型，然後將該模型儲存至 SQL Server 中的資料表。 此模型是一個簡單的迴歸模型，可根據速度預測汽車的停止距離。 您將使用`cars`資料集包含使用 R，因為它是小型且容易理解。
+在本快速入門中，您將了解如何使用 R 來定型模型，並再將模型儲存至 SQL Server 中的資料表。 此模型是一個簡單的迴歸模型，可根據速度預測汽車的停止距離。 您將使用`cars`隨附 R，因為它是小型且簡單易懂的資料集。
+
+## <a name="prerequisites"></a>先決條件
+
+先前的快速入門中， [Hello World R 與 SQL](rtsql-using-r-code-in-transact-sql-quickstart.md)，提供資訊並連結設定本快速入門所需的 R 環境。
 
 ## <a name="create-the-source-data"></a>建立來源資料
 
@@ -33,7 +38,7 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'car_speed'
 ```
 
-+ 有些人喜歡使用暫存資料表，但請留意某些 R 用戶端中斷連接批次之間的工作階段。
++ 有些人喜歡使用暫存資料表，但請注意，有些 R 用戶端中斷連線工作階段之間的批次。
 
 + R 執行階段隨附許多大大小小的資料集。 若要取得隨 R 一起安裝的資料集清單，請從 R 命令提示字元處，輸入 `library(help="datasets")`。
 
@@ -48,7 +53,7 @@ EXEC sp_execute_external_script
 + 提供要用於訓練模型的輸入資料
 
 > [!TIP]
-> 如果您需要在線性模型上的重新整理程式，我們建議此教學課程，其中描述使用 rxLinMod 將模型配適的程序：[調整線性模型](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> 如果您需要複習一下線性模型，我們建議您使用本教學課程說明使用 rxlinmod 來將模型配適的程序：[契合線性模型](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 若要實際建置該模型，您需在 R 程式碼中定義該公式，然後將資料當作輸入參數來傳遞。
 
@@ -75,7 +80,7 @@ GO
 
 ## <a name="create-a-table-for-storing-the-model"></a>建立用以儲存模型的資料表
 
-接下來，儲存模型，所以您可以重新定型，或用於預測。 R 套件如果會建立模型，其輸出通常會是「二進位物件」。 因此，您儲存模型的資料表必須提供一個 **varbinary** 類型的資料行。
+接下來，儲存模型，以便您可以重新定型或預測中使用它。 R 套件如果會建立模型，其輸出通常會是「二進位物件」。 因此，您儲存模型的資料表必須提供一個 **varbinary** 類型的資料行。
 
 ```sql
 CREATE TABLE stopping_distance_models (
@@ -112,7 +117,7 @@ WHERE model_name = 'default model'
 
 不過，除了資料框架之外，您還可以傳回其他類型 (例如純量) 的輸出。
 
-例如，假設您想要訓練模型，但要從該模型立即檢視係數資料表。 您可以將該係數資料表建立成主要結果集，然後以 SQL 變數輸出訓練過的模型。 您無法立即重新使用模型，透過呼叫變數，或您無法將模型儲存至資料表，如下所示。
+例如，假設您想要訓練模型，但要從該模型立即檢視係數資料表。 您可以將該係數資料表建立成主要結果集，然後以 SQL 變數輸出訓練過的模型。 您可以立即重複使用該模型藉由呼叫的變數，或您無法將模型儲存至資料表，如下所示。
 
 ```sql
 DECLARE @model varbinary(max), @modelname varchar(30)
@@ -139,16 +144,15 @@ VALUES ('latest model', @model)
 
 ### <a name="summary"></a>摘要
 
-請記住這些規則使用的 SQL 參數與 R 變數中的`sp_execute_external_script`:
+請記住下列規則使用 SQL 參數和中的 R 變數`sp_execute_external_script`:
 
-+ 名稱中所有的 SQL 參數對應至 R 指令碼會列出_@params_引數。
-+ 若要輸出這其中一個參數，請在 _@params_ 清單中新增 OUTPUT 關鍵字。
-+ 列出對應的參數之後，請緊接在 _@params_ 清單之後，逐行提供 SQL 參數與 R 變數的對應。
++ 中的名稱對應至 R 指令碼的所有 SQL 參數會都列出 _\@params_引數。
++ 其中一個參數的輸出，加入在 OUTPUT 關鍵字 _\@params_清單。
++ 之後列出對應的參數，提供對應，也就是一行一行地，SQL 參數與 R 變數，立即在後 _\@params_清單。
 
-## <a name="next-lesson"></a>下一課
+## <a name="next-steps"></a>後續步驟
 
-既然您已有模型，您將了解如何從該模型產生預測並繪製結果。
+現在，您就會以模型中，在最後的快速入門中，您將了解如何從它產生預測並繪製結果。
 
-[從模型預測及繪製](../tutorials/rtsql-predict-and-plot-from-model.md)
-
-
+> [!div class="nextstepaction"]
+> [快速入門： 從預測並繪製模型](../tutorials/rtsql-predict-and-plot-from-model.md)

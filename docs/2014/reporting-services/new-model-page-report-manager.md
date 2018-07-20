@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 78ce09a93d36daf74150750f3f13ce6cbdb242a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5bc389fff162d5e04aabb1bd9e4be85590eaab30
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292188"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083250"
 ---
 # <a name="new-model-page-report-manager"></a>新增模型頁面 (報表管理員)
   您可以使用這個頁面，從共用資料來源產生預設報表模型。 您只能從 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多維度資料來源、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 關聯式資料來源和 Oracle 關聯式資料來源產生報表模型。  
@@ -45,7 +45,7 @@ ms.locfileid: "37292188"
  **名稱**  
  指定模型的名稱。 名稱必須至少包含一個英數字元。 它也可以包含空格和某些符號。 指定名稱時，請勿使用下列字元：  
   
- ; ? : @ & = +，$ / * \< > |" /  
+ ; ? : \@ & = +，$ / * \< > |" /  
   
  **說明**  
  顯示模型的描述。 透過報表管理員檢視這個項目的使用者會在瀏覽資料夾階層時看到此描述。  

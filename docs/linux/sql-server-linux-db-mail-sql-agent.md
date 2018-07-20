@@ -5,19 +5,19 @@ author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.date: 02/20/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: f9ce71d799414171019143912bde19330742ec27
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 5fe92ec146b5e65491cfb61a06609e0f74db3b2f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984260"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082221"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB Mail 和 Linux 上的 SQL 代理程式的電子郵件警示
 
@@ -125,5 +125,5 @@ EXEC msdb.dbo.sp_update_job
 GO
 ```
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 如需有關如何使用 SQL Server Agent 來建立、 排程及執行工作的詳細資訊，請參閱 <<c0> [ 在 Linux 上執行的 SQL Server Agent 作業](sql-server-linux-run-sql-server-agent-job.md)。

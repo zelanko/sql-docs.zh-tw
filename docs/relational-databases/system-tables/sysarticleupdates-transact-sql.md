@@ -1,5 +1,5 @@
 ---
-title: sysarticleupdates (TRANSACT-SQL) |Microsoft 文件
+title: sysarticleupdates (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - sysarticleupdates system table
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 384e6abd93369bd1913bddf31b8dec6f8541e0d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72316742aeb0674af092605609b870f0b412aded
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005575"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101616"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   針對每個支援立即更新訂閱的發行項，各包含一個資料列。 這份資料表儲存在複寫的資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**artid**|**int**|提供發行項唯一識別碼的識別欄位。|  
+|**artid&lt**|**int**|提供發行項唯一識別碼的識別欄位。|  
 |**pubid**|**int**|發行項所屬發行集的識別碼。|  
 |**sync_ins_proc**|**int**|處理「插入同步交易」之預存程序的識別碼。|  
 |**sync_upd_proc**|**int**|處理「更新同步交易」之預存程序的識別碼。|  
@@ -48,7 +48,7 @@ ms.locfileid: "33005575"
 |**sync_upd_trig**|**int**|發行項資料表之自動版本控制觸發程序的識別碼。|  
 |**conflict_tableid**|**int**|衝突資料表的識別碼。|  
 |**ins_conflict_proc**|**int**|用來將衝突寫入程序的識別碼**conflict_table**。|  
-|**identity_support**|**bit**|指定在使用佇列更新時，是否啟用自動識別範圍處理。 **0**表示沒有識別範圍支援。|  
+|**identity_support**|**bit**|指定在使用佇列更新時，是否啟用自動識別範圍處理。 **0**表示沒有任何身分識別支援範圍。|  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -5,7 +5,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 01/31/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ccd5cb5fdc7d5c5bc6ff62b203bee0bbce6e5e8
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: a0c426f90f53c07577fc55311f4110e3f2a4a341
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983910"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083930"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>設定 SQL Server Always On 可用性群組上 Windows 和 Linux （跨平台）
 
@@ -248,7 +248,7 @@ ms.locfileid: "38983910"
 
 這篇文章會檢閱建立以支援移轉或讀取級別的工作負載的跨平台 AG 的步驟。 它可以用手動的災害復原。 它也會說明如何將 AG 容錯移轉。 跨平台 AG 會使用叢集類型`NONE`，而且不支援高可用性，因為沒有任何叢集工具跨平台。 
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 [Alwayson 可用性群組概觀](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 

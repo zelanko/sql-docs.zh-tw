@@ -17,17 +17,17 @@ caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d7e4ddf95dc9fa08e52c9a312d3cc83c3c04bd05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3dbd0c9ac5bf18d4c0f53d33cba8ab54f276985
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223178"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082860"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>建立、改變和移除預存程序
   在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]管理物件 (SMO) 預存程序由<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件。  
   
- 建立<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>在 SMO 中的物件需要設定<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>屬性設[!INCLUDE[tsql](../../../includes/tsql-md.md)]定義預存程序的指令碼。 參數需要 @ 前置詞，且必須藉由使用 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 物件以及加入至 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 物件的 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 集合來個別地建立。  
+ 建立<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>在 SMO 中的物件需要設定<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A>屬性設[!INCLUDE[tsql](../../../includes/tsql-md.md)]定義預存程序的指令碼。 參數需要\@前置詞，且必須建立使用的個別<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>物件以及加入至<xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter>的集合<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>物件。  
   
 ## <a name="example"></a>範例  
  如果要使用所提供的任何程式碼範例，您必須選擇建立應用程式用的程式設計環境、程式設計範本，及程式設計語言。 如需詳細資訊，請參閱[Visual Studio.NET 中建立 Visual Basic SMO Project](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)或是[建立 Visual C&#35; Visual Studio.NET 中的 SMO 專案](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)。  

@@ -1,23 +1,21 @@
 ---
-title: 已更新-SQL 作業 Studio 文件 |Microsoft 文件
+title: 已更新-SQL Operations Studio 文件 |Microsoft Docs
 description: 針對 SQL Operations Studio，顯示文件中最近變更的更新內容程式碼片段。
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: ssops
 ms.date: 04/28/2018
-ms.openlocfilehash: 074ed6176480655d9d87a55eb87cbb76b3011b7e
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 84ee3d7d346c8cddbf5251e0d63bb2ae222defb3
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32686518"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083450"
 ---
 # <a name="new-and-recently-updated-sql-operations-studio-docs"></a>新增的與最近的更新： SQL Operations Studio 文件
 
@@ -73,7 +71,7 @@ ms.locfileid: "32686518"
 
 1. [下載並安裝 SQL Operations Studio （預覽）](#TitleNum_1)
 2. [SQL Operations Studio （預覽） 版本資訊](#TitleNum_2)
-3. [教學課程： 將*5 名最慢的查詢*範例資料庫儀表板的小工具](#TitleNum_3)
+3. [教學課程： 新增*五個最慢的查詢*資料庫儀表板的範例小工具](#TitleNum_3)
 
 
 
@@ -113,7 +111,7 @@ ms.locfileid: "32686518"
    sqlops
 ```
 
-   **.tar.gz 安裝：**
+   **.tar.gz 下載安裝：**
 
 
 
@@ -148,19 +146,19 @@ ms.locfileid: "32686518"
 
 *4 月公開預覽版*包含 bug 修正和增強功能。
 
-- SQL 代理程式預覽擴充功能的增強功能。
+- SQL 代理程式預覽延伸模組的功能改進。
 - 針對在 SQL Operations Studio 內儲存受系統管理保護與大於 256M 的檔案，改善大型和受保護檔案的支援。
-- 若要同時使用多個開啟的終端機分割整合式的終端機。
-- 降低的安裝磁碟上檔案計數呎列印更快的安裝和啟動時間。
-- 繼續以修正 GitHub 問題：
-   - 修正[發出 37](https://github.com/Microsoft/sqlopsstudio/issues/37)： 當圖表檢視器擲回錯誤時，就會發生未預期的行為。
-   - 修正[發出 462](https://github.com/Microsoft/sqlopsstudio/issues/462)： 功能要求： 根據預設展開伺服器群組的選項。
-   - 修正[發出 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense-'update' 命令的錯誤提供建議。
-   - 修正[發出 967](https://github.com/Microsoft/sqlopsstudio/issues/967)： 預期的查詢計劃當結果方格中選取 XML 顯示計畫。
-   - 修正[發出 1023年](https://github.com/Microsoft/sqlopsstudio/issues/1023)： 從 flyfishingdba 新增 ms_foreachdb 呼叫的方括號。
-   - 修正[發出 1048年](https://github.com/Microsoft/sqlopsstudio/issues/1048)： 登入前 SSL/TLS 信號交換時發生錯誤。
-   - 修正[發出 1050年](https://github.com/Microsoft/sqlopsstudio/issues/1050)： 清除 insights 檢視之前顯示錯誤。
-   - 修正[發出 1057年](https://github.com/Microsoft/sqlopsstudio/issues/1057)： 還原和檔案總管 widget 中的新查詢動作已中斷。
+- 分割一次使用多個開啟的終端機的整合式終端機。
+- 降低的安裝磁碟上的檔案計數英呎列印更快速的安裝和啟動時間。
+- 若要修正之 GitHub 問題繼續：
+   - 修正[問題 37](https://github.com/Microsoft/sqlopsstudio/issues/37)： 當圖表檢視器擲回錯誤時，就會發生未預期的行為。
+   - 修正[問題 462](https://github.com/Microsoft/sqlopsstudio/issues/462)： 功能要求： 根據預設展開伺服器群組的選項。
+   - 修正[問題 606](https://github.com/Microsoft/sqlopsstudio/issues/606): intellisense-'update' 命令的錯誤提供建議。
+   - 修正[問題 967](https://github.com/Microsoft/sqlopsstudio/issues/967)： 預期的查詢計劃當結果方格中選取 XML 顯示計畫。
+   - 修正[問題 1023](https://github.com/Microsoft/sqlopsstudio/issues/1023)： 從 flyfishingdba 新增 ms_foreachdb 呼叫的方括號。
+   - 修正[問題 1048](https://github.com/Microsoft/sqlopsstudio/issues/1048)： 登入前 SSL/TLS 信號交換時發生錯誤。
+   - 修正[問題 1050](https://github.com/Microsoft/sqlopsstudio/issues/1050)： 清除 insights 檢視之前顯示錯誤。
+   - 修正[問題 1057](https://github.com/Microsoft/sqlopsstudio/issues/1057)： 還原和檔案總管 widget 中的新查詢動作已中斷。
 
 
 
@@ -172,7 +170,7 @@ ms.locfileid: "32686518"
 
 <a name="TitleNum_3"/>
 
-### <a name="3-nbsp-tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboardtutorial-qds-sql-servermd"></a>3.&nbsp; [教學課程： 將*5 名最慢的查詢*範例資料庫儀表板的小工具](tutorial-qds-sql-server.md)
+### <a name="3-nbsp-tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboardtutorial-qds-sql-servermd"></a>3.&nbsp; [教學課程： 新增*五個最慢的查詢*資料庫儀表板的範例小工具](tutorial-qds-sql-server.md)
 
 *更新日期︰ 2018-04-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([先前](#TitleNum_2))
 

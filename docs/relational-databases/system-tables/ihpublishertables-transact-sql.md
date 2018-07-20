@@ -1,5 +1,5 @@
 ---
-title: IHpublishertables (TRANSACT-SQL) |Microsoft 文件
+title: IHpublishertables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - IHpublishertables system table
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d4ed8a7ceaab4869eab483b8d3ff197db217683
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2b2abee0e4ff135e778360a7985f7fc89f02bfd
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003975"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103476"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishertables**系統資料表代表儲存在發行者端的中繼資料。 此資料表包含一個資料列，從非 SQL Server 發行者發行使用目前散發者的每個來源資料表。 這份資料表儲存在散發資料庫中。  
+  **IHpublishertables**系統資料表代表儲存在發行者端的中繼資料。 此資料表包含從非 SQL Server 發行者發行使用目前散發者的每個來源資料表的一個資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|識別已發行的資料表。|  
 |**publisher_id**|**smallint**|識別非 SQL Server 發行者資料表正在發行。|  

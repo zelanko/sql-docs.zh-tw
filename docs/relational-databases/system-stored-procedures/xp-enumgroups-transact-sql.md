@@ -1,5 +1,5 @@
 ---
-title: xp_enumgroups (TRANSACT-SQL) |Microsoft 文件
+title: xp_enumgroups & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_enumgroups
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0ca84dd52786613e7489ae3272d014e819fe4f04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 844460db0fd4cec42b8b89bf70deb72098d3ce6a
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257139"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101546"
 ---
 # <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,24 +44,24 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="arguments"></a>引數  
  **'** *domain_name* **'**  
- 這是要列舉全域群組清單的 Windows 網域名稱。 *domain_name*是**sysname**，預設值是 NULL。  
+ 這是要列舉全域群組清單的 Windows 網域名稱。 *domain_name*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**群組**|**sysname**|Windows 群組的名稱|  
 |**註解**|**sysname**|Windows 提供的 Windows 群組描述|  
   
 ## <a name="remarks"></a>備註  
- 如果*domain_name*是與 Windows 型電腦的名稱，執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是指定執行，或沒有網域名稱，則**xp_enumgroups**列舉從電腦的本機群組執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+ 如果*domain_name*是以 Windows 為基礎的電腦名稱的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]是指定執行，或沒有網域名稱，則**xp_enumgroups**列舉從電腦的本機群組執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
- **xp_enumgroups**的執行個體時，無法使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Windows 98 上執行。  
+ **xp_enumgroups**的執行個體時，無法使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 Windows 98 上執行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要的成員資格**db_owner**固定的資料庫角色中**主要**資料庫或中的成員資格**sysadmin**固定的伺服器角色。  
   
 ## <a name="examples"></a>範例  
@@ -77,7 +76,7 @@ EXEC xp_enumgroups 'sales';
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [一般擴充預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_loginconfig &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
- [xp_logininfo &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_loginconfig &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)   
+ [xp_logininfo &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

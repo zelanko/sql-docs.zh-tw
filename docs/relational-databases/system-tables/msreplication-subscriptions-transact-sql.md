@@ -1,5 +1,5 @@
 ---
-title: MSreplication_subscriptions (TRANSACT-SQL) |Microsoft 文件
+title: MSreplication_subscriptions & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,22 +20,22 @@ helpviewer_keywords:
 - MSreplication_subscriptions system table
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74fed5b79386ae09b3733a23980d0a1b32bd1c39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1caaedff89c120cc9607d06976f26a10d780a12c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005465"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103376"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_subscriptions**資料表包含一個資料列的每個散發代理程式服務本機訂閱者資料庫的複寫資訊。 這份資料表儲存在訂閱資料庫中。  
+  **MSreplication_subscriptions**資料表包含一個資料列的每個服務本機訂閱者資料庫的散發代理程式的複寫資訊。 這份資料表儲存在訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
@@ -44,7 +44,7 @@ ms.locfileid: "33005465"
 |**subscription_type**|**int**|訂閱的類型：<br /><br /> 0 = 發送。<br /><br /> 1 = 提取。<br /><br /> 2 = 匿名。|  
 |**distribution_agent**|**sysname**|散發代理程式的名稱。|  
 |**Time**|**smalldatetime**|前次由散發代理程式更新的時間。|  
-|**描述**|**nvarchar(255)**|訂閱的描述。|  
+|**description**|**nvarchar(255)**|訂閱的描述。|  
 |**transaction_timestamp**|**varbinary(16)**|僅供內部使用。|  
 |**update_mode**|**tinyint**|更新的類型。|  
 |**agent_id**|**binary(16)**|代理程式的識別碼。|  
@@ -55,6 +55,6 @@ ms.locfileid: "33005465"
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [複寫檢視&#40;Transact SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

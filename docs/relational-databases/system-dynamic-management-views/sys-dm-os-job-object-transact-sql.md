@@ -26,12 +26,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8ab408179388ca10821ad79e855e39fd3ec7eb01
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
+ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968760"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39164209"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,6 @@ ms.locfileid: "37968760"
 傳回單一資料列描述管理 SQL Server 處理序，以及特定作業物件層級的資源耗用量統計資料的工作物件的組態。 如果 SQL Server 未執行中工作物件，則傳回空集合。 
 
 工作物件是一種 Windows 建構，會實作在作業系統層級的 CPU、 記憶體和 IO 資源管理。 如需工作物件的詳細資訊，請參閱[工作物件](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx)。 
-
-> [!NOTE]
-> Sys.dm_os_job_object DMV 可能目前會顯示為 sys.dm_job_object。 這是暫時性：`sys.dm_os_job_object`將會永久此 DMV 的名稱。 
   
 |[資料行]|資料類型|描述|  
 |-------------|---------------|-----------------|  
@@ -60,7 +57,7 @@ ms.locfileid: "37968760"
 |peak_process_memory_used_mb|**bigint**|建立工作物件之後，已使用之記憶體尖峰數量，以 mb 為單位的工作物件，例如 SQL Server 中的單一處理。| 
 |peak_job_memory_used_mb|**bigint**|已建立之記憶體尖峰數量，以 mb 為單位，因為工作物件累積使用工作物件中的所有處理程序。|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 SQL Database 受控執行個體，需要`VIEW SERVER STATE`權限。 在 SQL Database 上需要`VIEW DATABASE STATE`資料庫的權限。  
  
 ## <a name="see-also"></a>另請參閱  

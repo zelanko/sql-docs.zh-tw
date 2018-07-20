@@ -1,5 +1,5 @@
 ---
-title: MSpeer_lsns (TRANSACT-SQL) |Microsoft 文件
+title: MSpeer_lsns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,23 +22,24 @@ helpviewer_keywords:
 - MSpeer_lsns system table
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e4c68b32d5b6c86fad158962deb360e64fa129d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de37f4de25bef419c67af1ff858251bec4b5e543
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101996"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Mspeer_lsns**資料表用來將每個交易對應至對等複寫拓撲中的訂閱。 這份資料表儲存在點對點複寫拓撲的每個發行集資料庫中，以及點對點發行集的所有訂閱者之訂閱資料庫中。 如需這種類型的異動複寫拓撲的詳細資訊，請參閱[Peer to Peer 異動複寫](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。 這份資料表儲存在發行集資料庫中。  
+  **Mspeer_lsns**資料表用來將每個交易對應至對等複寫拓撲中的訂用帳戶。 這份資料表儲存在點對點複寫拓撲的每個發行集資料庫中，以及點對點發行集的所有訂閱者之訂閱資料庫中。 如需有關這種類型的異動複寫拓撲的詳細資訊，請參閱[對等項目-異動複寫](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)。 這份資料表儲存在發行集資料庫中。  
   
 ## <a name="definition"></a>定義  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|識別點對點 LSN。|  
 |**last_updated**|**datetime**|**Datetime**在進行最後一個資料列更新。|  

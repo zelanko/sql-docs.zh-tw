@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8cb0fb56cd1715331c5c3f0e09c4319e0b82335
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d20d074f30f15acaec3065bc45ecd4ac92da8f4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254110"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083161"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>在應用程式的程式碼中使用 FOR XML 結果
   藉由在 SQL 查詢中使用 FOR XML 子句，您就可以將查詢結果擷取為 XML 資料，以及將其轉換為 XML 資料。 如果可以在 XML 應用程式的程式碼中使用 FOR XML 查詢結果，此功能便能讓您執行下列功能：  
@@ -143,7 +143,7 @@ ms.locfileid: "37254110"
  產生的 HTML 頁面結果類似下列範例輸出：  
   
 ##### <a name="server-side-processing"></a>伺服器端處理  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ 產生頁面\@3/11/2006年下午 3:36:02  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
   

@@ -1,5 +1,5 @@
 ---
-title: MSrepl_identity_range (TRANSACT-SQL) |Microsoft 文件
+title: MSrepl_identity_range (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSrepl_identity_range system table
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6e439f85f10242d8c11fa24ba74326f8986bdc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cb090c20142a1e081b5af3401ba8e7a35a5a6c8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005985"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101666"
 ---
 # <a name="msreplidentityrange-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_identity_range**資料表提供識別範圍管理支援。 這份資料表儲存在發行集、散發和訂閱資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**發行者**|**sysname**|發行者的名稱。|  
 |**publisher_db**|**sysname**|發行集資料庫的名稱。|  

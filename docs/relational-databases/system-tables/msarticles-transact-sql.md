@@ -1,5 +1,5 @@
 ---
-title: M (TRANSACT-SQL) |Microsoft 文件
+title: MSarticles (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSarticles system table
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d25dfc3adb779e3ad1387783f7a057637b266a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8a4dae91f62b763ae7f515b551be122b95e5ef1b
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005495"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101316"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSarticles**資料表包含每個發行項所複寫的 「 發行者 」 的一個資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|發行者的識別碼。|  
 |**publisher_db**|**sysname**|發行者資料庫的名稱。|  
@@ -47,7 +47,7 @@ ms.locfileid: "33005495"
 |**destination_object**|**sysname**|在訂閱者端建立之資料表的名稱。|  
 |**source_owner**|**sysname**|在發行者端的來源資料表之結構描述名稱。|  
 |**source_object**|**sysname**|加入發行項的來源物件名稱。|  
-|**描述**|**nvarchar(255)**|發行項的描述。|  
+|**description**|**nvarchar(255)**|發行項的描述。|  
 |**destination_owner**|**sysname**|在訂閱者端建立的資料表之結構描述名稱。|  
   
 ## <a name="see-also"></a>另請參閱  

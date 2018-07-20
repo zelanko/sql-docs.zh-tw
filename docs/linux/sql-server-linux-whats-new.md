@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 02/20/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: f0e20a06faed4b2d6cda1b80f5be9d41aa2c14f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c4390990701f95dddf19ca53354ffcb5af241d30
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982829"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083530"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>有關 Linux 上的 SQL Server 2017 的新功能
 
@@ -58,7 +58,7 @@ ms.locfileid: "37982829"
 - 跨平台指令碼產生器中， [mssql scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md)。
 - 跨平台的動態管理檢視 (DMV) 監視[DBFS 工具](https://github.com/Microsoft/dbfs)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 若要在 Linux 上安裝 SQL Server，使用下列的教學課程中的其中一個：
 

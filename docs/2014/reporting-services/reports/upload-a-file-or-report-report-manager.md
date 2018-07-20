@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2875701f8b058974df7abf993b1bcc44bf8d08bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44dd1787da648e332c2234b83323990784b0d4bc
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315208"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085440"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>上傳檔案或報表 (報表管理員)
   報表管理員會提供一項上傳功能，讓您可以將報表、模型和其他檔案加入至報表伺服器，而不需要從用戶端應用程式發行這些項目。 您從檔案系統上傳的檔案會當做項目儲存在報表伺服器上。 您所上傳的檔案類型會決定其儲存方式：  
@@ -46,7 +46,7 @@ ms.locfileid: "37315208"
   
 4.  按一下 [瀏覽] 選取要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
   
-5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : @ & = +，$ / * \< > |。  
+5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : \@ & = +，$ / * \< > |。  
   
 6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]。  
   

@@ -1,5 +1,5 @@
 ---
-title: MSpeer_request (TRANSACT-SQL) |Microsoft 文件
+title: MSpeer_request (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSpeer_request system table
 ms.assetid: ed048c46-7a2f-4ad0-bc7c-c2d65e83b4fb
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00873769699c217a3efc2b20458e3e8b594f68af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c1a2f38666d48127b68211fc62b7de9ebaf5aa8
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005725"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103676"
 ---
 # <a name="mspeerrequest-transact-sql"></a>MSpeer_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   MSpeer_request 資料表用於點對點複寫，以便追蹤某個給定發行集的狀態要求。 這份資料表儲存在發行集資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |id|**int**|識別要求。|  
 |publication|**sysname**|起始狀態要求的發行集名稱。|  

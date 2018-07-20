@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: 0d7f2244a20f117d2886cdee59d54adfa4029721
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 6df990176c63efb6c42181d013a4e77c81f3c4b2
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020331"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083430"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>在 Linux 上的 SQL Server 的安全性功能的逐步解說
 
@@ -287,6 +287,6 @@ GO
 如需詳細資訊，請參閱 <<c0> [ 備份加密](../relational-databases/backup-restore/backup-encryption.md)。
 
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 如需詳細的 SQL Server 的安全性功能的相關資訊，請參閱[SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)。

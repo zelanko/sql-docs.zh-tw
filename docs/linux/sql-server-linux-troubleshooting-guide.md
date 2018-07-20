@@ -5,19 +5,19 @@ author: annashres
 ms.author: anshrest
 manager: craigg
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 2877b068569d409e20417ab9b535fd1ba8fd1017
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: 7d8f392177bd83a8fc8764eac080fcc7b76739ed
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981290"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102196"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>疑難排解 SQL Server on Linux
 
@@ -192,6 +192,14 @@ SQL 傾印
    ```bash
    sudo systemctl start mssql-server
    ```
+
+## <a name="improve-performance"></a>改善效能
+
+有許多因素會影響效能，包括資料庫設計、 硬體和工作負載需求。 如果您想要改善效能，一開始會檢閱本文件的最佳作法[效能最佳做法和 Linux 上的 SQL Server 組態指導方針](sql-server-linux-performance-best-practices.md)。 然後探索一些效能問題疑難排解的可用工具。
+
+- [查詢存放區](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [系統動態管理檢視 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+- [SQL Server Management Studio 中的效能儀表板](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
 
 ## <a name="common-issues"></a>常見的問題
 

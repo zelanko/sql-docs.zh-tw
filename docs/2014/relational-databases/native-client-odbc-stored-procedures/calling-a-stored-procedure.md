@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11c8c691cf605942ef226927c9f0c2e940b28d63
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 3ec1897886a968f15eb67210f060399225317b55
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411537"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083411"
 ---
 # <a name="calling-a-stored-procedure"></a>呼叫預存程序
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式同時支援 ODBC CALL 逸出序列和[!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)陳述式執行預存程序; ODBC CALL 逸出序列是慣用的方法。 使用 ODBC 語法可讓應用程式擷取預存程序的傳回碼，而且會最佳化 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式，使用最初開發的通訊協定，在執行 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦之間傳送遠端程序 (RPC) 呼叫。 此 RPC 通訊協定會排除在伺服器上完成的許多參數處理與陳述式剖析，藉以增加效能。  
   
 > [!NOTE]  
->  呼叫時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序搭配 ODBC 使用具名的參數 (如需詳細資訊，請參閱 <<c2> [ 依名稱 （具名參數） 的繫結參數](http://go.microsoft.com/fwlink/?LinkID=209721))，參數名稱必須以開頭 ' @' 字元。 這是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會比 Microsoft Data Access Components (MDAC) 更嚴格地強制執行此限制。  
+>  呼叫時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序搭配 ODBC 使用具名的參數 (如需詳細資訊，請參閱 <<c2> [ 繫結依名稱 （具名參數） 的參數](http://go.microsoft.com/fwlink/?LinkID=209721))，參數名稱必須以開頭 '\@' 字元。 這是一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 特定的限制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式會比 Microsoft Data Access Components (MDAC) 更嚴格地強制執行此限制。  
   
  用來呼叫程序的 ODBC CALL 逸出序列為：  
   

@@ -1,5 +1,5 @@
 ---
-title: MSlogreader_agents (TRANSACT-SQL) |Microsoft 文件
+title: MSlogreader_agents (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSlogreader_agents system table
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ca82b27fa19c0649cf543c5964b8527f2176982
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c4f075b71494c311b4ba7572a9615bdbc0a7dfe
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005595"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102146"
 ---
 # <a name="mslogreaderagents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSlogreader_agents**資料表包含一個資料列在本機散發者端執行每個記錄讀取器代理程式。 這份資料表儲存在散發資料庫中。  
+  **MSlogreader_agents**資料表針對本機散發者端執行每個記錄讀取器代理程式包含一個資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|記錄讀取器代理程式的識別碼。|  
 |**name**|**nvarchar(100)**|記錄讀取器代理程式的名稱。|  
@@ -49,8 +49,10 @@ ms.locfileid: "33005595"
 |**profile_id**|**int**|設定識別碼，從[MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)資料表。|  
 |**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**publisher_login**|**sysname**|連接到發行者時所用的登入。|  
-|**publisher_password**|**nvarchar （524)**|連接到發行者時，所用之密碼的加密值。|  
+|**publisher_password**|**nvarchar(524)**|連接到發行者時，所用之密碼的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|用來啟動代理程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的唯一識別碼。|  
+|**job_login**|**sysname**||  
+|**job_password**|**nvarchar(524)**||  
   
 ## <a name="see-also"></a>另請參閱  
  [複寫資料表&#40;Transact SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

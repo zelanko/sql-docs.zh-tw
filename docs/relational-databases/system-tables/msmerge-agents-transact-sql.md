@@ -1,5 +1,5 @@
 ---
-title: MSmerge_agents (TRANSACT-SQL) |Microsoft 文件
+title: MSmerge_agents (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ helpviewer_keywords:
 - MSmerge_agents system table
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2199793fc6bc8d7822468d1fc0984347946277c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23204288fc2bfb3358feb11ccb77c59a393c68b5
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005895"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102307"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_agents**資料表包含訂閱者端執行每個合併代理程式的一個資料列。 這份資料表儲存在散發資料庫中。  
+  **MSmerge_agents**資料表包含一個資料列在訂閱者端執行每個合併代理程式。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|合併代理程式的識別碼。|  
 |**name**|**nvarchar(100)**|合併代理程式的名稱。|  
@@ -57,10 +57,10 @@ ms.locfileid: "33005895"
 |**sid**|**varbinary(85)**|散發代理程式或合併代理程式在第一次執行期間的安全性識別碼 (SID)。|  
 |**subscriber_security_mode**|**smallint**|當連接到訂閱者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**subscriber_login**|**sysname**|連接到訂閱者時所用的登入。|  
-|**subscriber_password**|**nvarchar （524)**|連接到訂閱者時，所用之密碼的加密值。|  
+|**subscriber_password**|**nvarchar(524)**|連接到訂閱者時，所用之密碼的加密值。|  
 |**publisher_security_mode**|**smallint**|連接到發行者時，代理程式所用的安全性模式，它可以是下列項目之一：<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 驗證。|  
 |**publisher_login**|**sysname**|連接到發行者時所用的登入。|  
-|**publisher_password**|**nvarchar （524)**|連接到發行者時，所用之密碼的加密值。|  
+|**publisher_password**|**nvarchar(524)**|連接到發行者時，所用之密碼的加密值。|  
 |**job_step_uid**|**uniqueidentifier**|用來啟動代理程式之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業步驟的唯一識別碼。|  
   
 ## <a name="see-also"></a>另請參閱  

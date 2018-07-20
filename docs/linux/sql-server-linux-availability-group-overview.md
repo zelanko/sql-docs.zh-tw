@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 11/27/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 7de4097fdc843097cbd2865e4a4f3986c392ac04
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 892b13610d1a6acd9576ba79499fc4b89cca0cd0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38045096"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082980"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On Linux 上的可用性群組
 
@@ -158,7 +158,7 @@ None 叢集類型 AG 可以跨 OS 界限，因此在相同 AG 中可能有兩個
 If using automatic seeding with a distributed availability group that crosses OSes, it can handle the differences in folder structure. How this works is described in [the documentation for automatic seeding].
 -->
  
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 [設定 Linux 上的 SQL Server 可用性群組](sql-server-linux-availability-group-configure-ha.md)
 
 [Linux 上的 SQL Server 設定讀取級別可用性群組](sql-server-linux-availability-group-configure-rs.md)

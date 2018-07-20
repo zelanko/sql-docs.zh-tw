@@ -1,5 +1,5 @@
 ---
-title: 準備資料使用 PowerShell （逐步解說） |Microsoft 文件
+title: 準備資料，使用 PowerShell （逐步解說） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,32 +7,32 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ccdccaf4a3624bef365cec85e452a88526b9fd6b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 416df50128170da643f3a6c3e4fabf8cfe9d3b42
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585930"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085050"
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>準備要使用 PowerShell （逐步解說） 的資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-此時，您應該會安裝下列其中之一：
+此時，您應該安裝下列其中之一：
 
 + SQL Server 2016 R Services
-+ SQL Server 2017 機器學習服務，啟用之 R 語言
++ SQL Server 2017 Machine Learning 服務，以啟用 R 語言
 
-在這一課，您可以下載資料、 R 封裝和 R 指令碼 Github 儲存機制從逐步解說中使用。 您可以下載使用的 PowerShell 指令碼，以方便使用的所有項目。
+在這一課，您可以下載資料、 R 封裝和逐步解說中，從 Github 存放庫中使用的 R 指令碼。 您可以下載為了方便起見，使用 PowerShell 指令碼的所有項目。
 
-您也需要安裝某些其他的 R 封裝，在伺服器和 R 工作站上。 說明的步驟。
+您也需要一些其他的 R 套件，同時安裝在伺服器上與 R 工作站上。 說明的步驟。
 
-然後，您可以使用第二個 PowerShell 指令碼，RunSQL_R_Walkthrough.ps1，設定用來模型化和計分的資料庫。 指令碼執行的程式資料的大量載入到資料庫，並接著會建立一些 SQL 函式和預存程序，可簡化資料科學工作。
+然後，您可以使用第二個 PowerShell 指令碼 RunSQL_R_Walkthrough.ps1，設定用於模型化和評分的資料庫。 指令碼會執行大量載入的資料，到資料庫，並接著會建立一些 SQL 函數與預存程序，可簡化資料科學工作。
 
 讓我們開始吧 ！
 
-## <a name="1-download-the-data-and-scripts"></a>1.下載的資料和指令碼
+## <a name="1-download-the-data-and-scripts"></a>1.下載資料和指令碼
 
-GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 PowerShell 指令碼來產生檔案的本機複本。
+GitHub 存放庫中已提供所需的所有程式碼。 您可以使用 PowerShell 指令碼來產生檔案的本機複本。
 
 1.  在資料科學用戶端電腦上，以系統管理員身分開啟 Windows PowerShell 命令提示字元。
 
@@ -42,7 +42,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
     Set-ExecutionPolicy Unrestricted -Scope Process -Force
     ```
       
-3.  執行下列 Powershell 命令，以將指令碼檔案下載至本機目錄。 如果您未指定不同的目錄，依預設資料夾`C:\tempR`建立及儲存至該處的所有檔案。
+3.  執行下列 Powershell 命令，以將指令碼檔案下載至本機目錄。 如果您未指定不同的目錄，預設資料夾`C:\tempR`建立及儲存在該處的所有檔案。
   
     ```
     $source = 'https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_R_Walkthrough.ps1'  
@@ -52,17 +52,17 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
     .\Download_Scripts_R_Walkthrough.ps1 –DestDir 'C:\tempR'
     ```
   
-    如果您想要將檔案儲存至不同的目錄，請編輯 *DestDir* 參數的值，並指定電腦上的不同資料夾。 如果您輸入資料夾名稱不存在時，PowerShell 指令碼會為您建立的資料夾。
+    如果您想要將檔案儲存至不同的目錄，請編輯 *DestDir* 參數的值，並指定電腦上的不同資料夾。 如果您輸入資料夾名稱不存在，PowerShell 指令碼會為您建立的資料夾。
   
 4.  下載可能需要一些時間。 完成之後，Windows PowerShell 命令主控台應該如下︰
   
     ![PowerShell 指令碼完成之後](media/rsql-e2e-psscriptresults.PNG "PowerShell 指令碼完成之後")
   
-5.  在 PowerShell 主控台中，您可以執行 `ls` 命令，來檢視已下載至 *DestDir*的檔案清單。  如需檔案的說明，請參閱[包含的內容](#whats-included-in-the-sample)。
+5.  在 PowerShell 主控台中，您可以執行 `ls` 命令，來檢視已下載至 *DestDir*的檔案清單。  如需檔案的說明，請參閱 <<c0> [ 包含的內容](#whats-included-in-the-sample)。
 
-## <a name="2-install-required-r-packages"></a>2.安裝必要的 R 封裝
+## <a name="2-install-required-r-packages"></a>2.安裝必要的 R 套件
 
-這個逐步解說需要一些預設不會安裝為 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]一部份的 R 程式庫。 您開發方案，以及上，您必須在用戶端上安裝這兩個封裝[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您用來部署解決方案的電腦。
+這個逐步解說需要一些預設不會安裝為 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]一部份的 R 程式庫。 您開發方案，以及在上，您必須在用戶端上安裝這兩個套件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]您用來部署解決方案的電腦。
 
 ### <a name="install-required-packages-on-the-client"></a>在用戶端上安裝必要套件
 
@@ -80,14 +80,14 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
     if (!('RODBC' %in% rownames(installed.packages()))){install.packages('RODBC')}
     ```
     
-    有些封裝也會安裝必要的封裝。 總共大約需要 32 個套件。
+    有些套件也會安裝必要的套件。 總共大約需要 32 個套件。
 
 ### <a name="install-required-packages-on-the-server"></a>在伺服器上安裝必要套件
 
-有許多不同的方式，您可以在 SQL Server 上安裝封裝。 例如，SQL Server 提供[R 封裝管理](../r/install-additional-r-packages-on-sql-server.md)功能，可讓資料庫管理員建立的封裝儲存機制，並將使用者指派的權限安裝自己的封裝。 不過，如果您是電腦上的系統管理員，您可以在安裝新的封裝使用 R，只要您將安裝到正確的程式庫。
+有許多不同的方式，您可以在 SQL Server 上安裝套件。 例如，SQL Server 提供[R 套件管理](../r/install-additional-r-packages-on-sql-server.md)功能，可讓資料庫管理員建立套件存放庫，並將使用者指派的權限安裝自己的封裝。 不過，如果您是電腦的系統管理員，您可以在安裝新的套件使用 R，只要您將安裝到正確的程式庫。
 
 > [!NOTE]
-> 在伺服器上，**不**即使提示您安裝至使用者的文件庫。 如果您安裝至使用者的文件庫時，SQL Server 執行個體無法找到或執行封裝。 如需詳細資訊，請參閱 [在 SQL Server 上安裝新的 R 封裝](../r/install-additional-r-packages-on-sql-server.md)。
+> 在伺服器上，**沒有**安裝到使用者程式庫，即使出現提示。 如果您安裝到使用者程式庫時，SQL Server 執行個體找不到或執行封裝。 如需詳細資訊，請參閱 [在 SQL Server 上安裝新的 R 封裝](../r/install-additional-r-packages-on-sql-server.md)。
 
 1. 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦上，**以系統管理員身分**開啟 RGui.exe。  如果您已使用預設值來安裝 SQL Server R 服務，則可以在 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64 中找到 RGui.exe。
 
@@ -100,13 +100,13 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - 這個範例會使用 R grep 函式，來搜尋可用的路徑的向量，並尋找包含"Program Files"路徑。 如需詳細資訊，請參閱[ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep)。
+    - 此範例會使用 R grep 函數來搜尋可用路徑的向量，並尋找包含"Program Files"路徑。 如需詳細資訊，請參閱 < [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep)。
 
-    - 如果您認為已安裝的封裝，請檢查已安裝的封裝清單執行`installed.packages()`。
+    - 如果您認為已經安裝的套件，來檢查已安裝的封裝清單執行`installed.packages()`。
 
-## <a name="3-prepare-the-environment-using-runsqlrwalkthroughps1"></a>3.準備使用 RunSQL_R_Walkthrough.ps1 環境
+## <a name="3-prepare-the-environment-using-runsqlrwalkthroughps1"></a>3.準備環境使用 RunSQL_R_Walkthrough.ps1
 
-資料檔、 R 指令碼，以及 T-SQL 指令碼，以及此下載包含 PowerShell 指令碼`RunSQL_R_Walkthrough.ps1`。 指令碼會執行下列動作：
+資料檔案、 R 指令碼及 T-SQL 指令碼，以下載包含 PowerShell 指令碼`RunSQL_R_Walkthrough.ps1`。 指令碼會執行下列動作：
 
 - 確認是否已安裝適用於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的 SQL Native Client 和 SQL 命令列公用程式。 需要有命令列工具，才能執行 [bcp 公用程式](../../tools/bcp-utility.md)，用來將資料快速大量載入至 SQL 資料表。
 
@@ -118,9 +118,9 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
 
 - 重寫 R 指令碼檔案中的引數，以使用您所指定的資料庫名稱。
 
-您用來建置此方案的電腦上執行此指令碼： 例如，膝上型電腦開發和測試您的 R 程式碼的位置。 這部電腦 (我們稱為資料科學用戶端) 必須能夠使用「具名管道」通訊協定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦。
+您用來建置方案的電腦上執行此指令碼： 例如，膝上型電腦開發及測試 R 程式碼。 這部電腦 (我們稱為資料科學用戶端) 必須能夠使用「具名管道」通訊協定連接到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 電腦。
 
-1. 開啟 PowerShell 命令列**以系統管理員身分**。
+1. 開啟 PowerShell 命令列**系統管理員身分**。
   
 2.  巡覽至您已下載指令碼的資料夾，並輸入所顯示的指令碼名稱。 按 ENTER 鍵。
 
@@ -128,7 +128,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
     .\RunSQL_R_Walkthrough.ps1
     ```
   
-3.  系統提示您針對每個下列參數：
+3.  系統會提示您針對每個下列參數：
   
     **資料庫伺服器名稱**： 機器學習服務或 R 服務安裝所在的 SQL Server 執行個體的名稱。
 
@@ -140,10 +140,10 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
     
     + 輸入具有 CREATE DATABASE 權限的 SQL 登入名稱，然後在後續提示中提供 SQL 密碼。
     + 按 ENTER 鍵而不輸入任何名稱，即使用您自己的 Windows 身分識別，並在安全提示中輸入您的 Windows 密碼。 PowerShell 不支援輸入不同的 Windows 使用者名稱。
-    + 如果您無法指定有效的使用者，指令碼會預設為使用整合式的 Windows 驗證。
+    + 如果您無法指定有效的使用者，指令碼預設會使用整合式的 Windows 驗證。
     
       > [!WARNING]
-      > 當您使用 PowerShell 指令碼中的提示來提供認證時，密碼會寫入至更新的指令碼檔案，以純文字。 在您建立所需的 R 物件之後，請立即編輯檔案以移除認證。
+      > 當您使用 PowerShell 指令碼的提示您提供認證時，以純文字的已更新的指令碼檔案寫入密碼。 在您建立所需的 R 物件之後，請立即編輯檔案以移除認證。
       
     **csv 檔案的路徑**：提供資料檔案的完整路徑。 預設的路徑和檔案名稱為 `C:\tempR\nyctaxi1pct.csv`。
   
@@ -151,7 +151,7 @@ GitHub 儲存機制中已提供所需的所有程式碼。 您可以使用 Power
 
     指令碼應該會自動下載檔案，並自動將資料載入資料庫。 這可能需要一段時間。 請注意 PowerShell 視窗中的狀態訊息。
       
-    如果大量匯入或任何其他步驟失敗，您可以將資料載入以手動方式中所述[疑難排解](#bkmk_Troubleshooting)> 一節。
+    如果大量匯入或任何其他步驟失敗，您可以載入資料，以手動方式中所述[疑難排解](#bkmk_Troubleshooting)一節。
 
 **結果 (成功完成)**
 
@@ -163,11 +163,11 @@ Plug in the database server name, database name, user name and password into the
 This step (plugging in database information) takes 0.48 seconds.
 ```
 
-按一下此連結可跳至下一課：[檢視和瀏覽使用 SQL 資料](walkthrough-view-and-explore-the-data.md)
+按一下此連結可跳至下一課：[檢視及瀏覽使用 SQL 資料](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="bkmk_Troubleshooting"></a>疑難排解
 
-如果您有使用 PowerShell 指令碼的任何問題，您可以執行任何或所有步驟以手動方式，使用 PowerShell 指令碼的行，做為範例。 本節列出一些常見的問題及因應措施。
+如果您有任何 PowerShell 指令碼的問題，您可以執行全部或任何步驟以手動的方式，使用 PowerShell 指令碼行，做為範例。 本節列出一些常見的問題和因應措施。
 
 ### <a name="powershell-script-didnt-download-the-data"></a>PowerShell 指令碼不會下載資料
 
@@ -179,7 +179,7 @@ This step (plugging in database information) takes 0.48 seconds.
 
 ### <a name="unable-to-download-the-data"></a>無法下載資料
 
-資料檔案太大。 您必須使用具有相對較佳的網際網路連線的電腦，或可能會逾時下載。
+資料檔案太大。 您必須使用具有相對較佳的網際網路連線的電腦，或者下載可能逾時。
 
 ### <a name="could-not-connect-or-script-failed"></a>無法連接，或指令碼失敗
 
@@ -225,7 +225,7 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 + 如果要使用 SQL 登入執行 bcp，使用 **-U** 和 **-P** 引數。
 + 如果要使用 Windows 整合式驗證，使用 **-T** 引數。
 
-如果指令碼未載入資料，請檢查語法，並確認已經為網路指定正確的伺服器名稱。 例如，如果您連線到具名執行個體，請務必包含任何的子網路及電腦名稱。 請確認登入有執行大量上傳的能力。
+如果指令碼未載入資料，請檢查語法，並確認已經為網路指定正確的伺服器名稱。 例如，如果您連線到具名執行個體，請務必包含任何的子網路及電腦名稱。 確認登入有執行大量上傳的能力。
 
 ### <a name="i-want-to-run-the-script-without-prompts"></a>我想執行指令碼，但不出現提示
 
@@ -247,15 +247,15 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 ### <a name="the-data-loaded-but-it-contains-duplicates"></a>資料已載入，但包含重複項目
 
-如果資料庫包含現有資料表的相同名稱和相同的結構描述， **bcp**插入新的資料，而非覆寫現有的資料複本。
+如果您的資料庫包含相同的名稱和相同的結構描述中，現有的資料表**bcp**插入新的資料，而不是覆寫現有的資料複本。
 
-若要避免重複的資料，請再次執行指令碼之前截斷任何現有的資料表。
+若要避免重複的資料，截斷任何現有的資料表，然後再次執行指令碼。
 
 ## <a name="whats-included-in-the-sample"></a>在此範例中包含的內容
 
-當您從 GitHub 儲存機制下載的檔案時，您會得到下列：
+當您從 GitHub 存放庫下載的檔案時，您會收到下列：
 
-+ CSV 格式; 中的資料請參閱[定型和計分資料](#bkmk_data)如需詳細資訊
++ 以 CSV 格式; 資料請參閱[訓練和評分資料](#bkmk_data)如需詳細資訊
 + 準備環境所需的 PowerShell 指令碼
 + 使用 bcp 將資料匯入 SQL Server 的 XML 格式檔案
 + 多個 T-SQL 指令碼
@@ -263,23 +263,23 @@ bcp TutorialDB.dbo.nyctaxi_sample in c:\tempR\nyctaxi1pct.csv -t ',' -S rtestser
 
 ### <a name="bkmk_data"></a>定型和計分的資料
 
-資料是包含 2013 年超過 173,000,000 筆個別車程記錄的紐約市計程車資料集的代表性取樣 (包含針對每個車程所付的費用和小費金額)。 為了讓您輕鬆地使用資料，Microsoft 資料科學小組已執行縮小取樣，只取得 1% 的資料。  這項資料已共用於 Azure 中的公用 Blob 儲存容器，格式為 .CSV。 來源資料是壓縮的檔，只在 350 MB。
+資料是包含 2013 年超過 173,000,000 筆個別車程記錄的紐約市計程車資料集的代表性取樣 (包含針對每個車程所付的費用和小費金額)。 為了讓您輕鬆地使用資料，Microsoft 資料科學小組已執行縮小取樣，只取得 1% 的資料。  這項資料已共用於 Azure 中的公用 Blob 儲存容器，格式為 .CSV。 來源資料是未壓縮的檔案，低於 350 MB。
 
-+ 公用資料集: [NYC 計程車和 Limousine 佣金] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ 公用資料集: [NYC 計程車和禮車委託] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [建立 Azure ML 模型 NYC 計程車資料集](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [建立 Azure ML 模型的 NYC 計程車資料集](https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>PowerShell 和 R 指令碼檔案
 
-+ **RunSQL_R_Walkthrough.ps1**您執行這個指令碼首先，使用 PowerShell。 它會呼叫 SQL 指令碼，以將資料載入至資料庫。
++ **RunSQL_R_Walkthrough.ps1**您執行此指令碼首先，使用 PowerShell。 它會呼叫 SQL 指令碼，以將資料載入至資料庫。
 
 + **taxiimportfmt.xml** BCP 公用程式用來將資料載入至資料庫中的格式定義檔案。
 
-+ **RSQL_R_Walkthrough.R**這是核心 R 指令碼中進行資料分析和模型的課程的其餘部分使用。 它會提供瀏覽 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料、建立分類模型以及建立繪圖所需的所有 R 程式碼。
++ **RSQL_R_Walkthrough.R**這是核心 R 指令碼，是用於執行資料分析和模型化之課程的其餘部分。 它會提供瀏覽 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料、建立分類模型以及建立繪圖所需的所有 R 程式碼。
 
 ### <a name="t-sql-script-files"></a>T-SQL 指令碼檔案
 
-PowerShell 指令碼會執行多個[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL Server 執行個體上的指令碼。 下表列出[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼和它們的功用。
+PowerShell 指令碼執行多個[!INCLUDE[tsql](../../includes/tsql-md.md)]SQL Server 執行個體上的指令碼。 下表列出[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼和執行的動作。
 
 |SQL 指令碼檔案名稱|描述|
 |------------------------|----------------|
@@ -290,17 +290,16 @@ PowerShell 指令碼會執行多個[!INCLUDE[tsql](../../includes/tsql-md.md)]SQ
 |fnCalculateDistance.sql|建立 SQL 純量值函式，以計算上車與下車位置之間的直線距離。|
 |fnEngineerFeatures.sql|建立 SQL 資料表值函數，以建立用於定型分類模型的特徵|
 
-本逐步解說中使用的 T-SQL 查詢已通過測試，並可以當做執行的 R 程式碼中。 不過，如果您想要進一步實驗或開發專屬方案，則建議您先使用專用的 SQL 開發環境來測試和微調查詢，再將它們新增至您的 R 程式碼。
+在本逐步解說使用的 T-SQL 查詢已經過測試，並可以當做執行-R 程式碼中。 不過，如果您想要進一步實驗或開發專屬方案，則建議您先使用專用的 SQL 開發環境來測試和微調查詢，再將它們新增至您的 R 程式碼。
 
 + 適用於 [Visual Studio Code](https://code.visualstudio.com/) 的 [mssql 擴充功能](https://code.visualstudio.com/docs/languages/tsql)是可以執行查詢的免費、輕量型環境，而且還支援大多數的資料庫開發工作。
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 是功能強大但免費的工具，可用來開發及管理 SQL Server 資料庫。
 
 ## <a name="next-lesson"></a>下一課
 
-[檢視及瀏覽的資料，使用 R 和 SQL](walkthrough-view-and-explore-the-data.md)
+[檢視及瀏覽使用 R 和 SQL 資料](walkthrough-view-and-explore-the-data.md)
 
 ## <a name="previous-lesson"></a>上一課
 
 [R 和 SQL Server 的端對端資料科學逐步解說](walkthrough-data-science-end-to-end-walkthrough.md)
 
-[資料科學逐步解說的必要條件](walkthrough-prerequisites-for-data-science-walkthroughs.md)

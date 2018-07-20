@@ -5,19 +5,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 08/16/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 559ae24a819cfff1172d1829ef3ca5e679a40122
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 8cc1010f2492054a467abfc53e859d39a86e1c78
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020186"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086700"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>從 Windows 的 SQL Server 資料庫移轉至 Linux 使用備份與還原
 
@@ -184,7 +184,7 @@ SQL Server 的備份和還原功能會從在 Windows 上的 SQL Server 的資料
 
 1. 當您完成在遠端工作**ssh**工作階段中，輸入`exit`一次。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您已了解如何在 Windows 上的資料庫備份，並將它移到執行 SQL Server 2017 的 Linux 伺服器。 您已學到如何以：
 > [!div class="checklist"]

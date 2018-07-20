@@ -5,18 +5,18 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 3aa4693e60e173e0dda4a3b7239d659d716867a7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 85724425661945fbd0e8c58860ce9b08b06fc167
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041206"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086430"
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>在 Linux Docker 容器中的 SQL Server 資料庫還原
 
@@ -391,7 +391,7 @@ docker exec -it sql1 /opt/mssql-tools/bin/sqlcmd `
    > [!NOTE]
    > SA 密碼不是您指定的密碼**sql2**容器， `MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>`。 從還原的 SQL Server 資料的所有**sql1**，稍早在本教學課程中，包括從已變更的密碼。 作用中，像這樣的一些選項會被忽略，因為還原 /var/opt/mssql 中的資料。 基於這個理由，密碼是`<YourNewStrong!Passw0rd>`如下所示。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，您已了解如何在 Windows 上的資料庫備份，並將它移到執行 SQL Server 2017 RC2 的 Linux 伺服器。 您已學到如何以：
 > [!div class="checklist"]

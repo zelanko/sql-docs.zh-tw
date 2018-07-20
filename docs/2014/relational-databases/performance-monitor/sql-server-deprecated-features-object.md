@@ -19,12 +19,12 @@ caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f0a511e928fdd4d010bba5d756ef92b569295301
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c96bcc524d3c9fc6a37f252b1221bbfaab36410
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227408"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084060"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server、Deprecated Features 物件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 SQLServer:Deprecated Features 物件提供了計數器來監視指定為已被取代的功能。 在每一個案例中，此計數器都會提供一個使用計數，列出上一次啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 之後所遇到之已被取代功能的次數。  
@@ -35,7 +35,7 @@ ms.locfileid: "37227408"
 |------------------------------------------------------|-----------------|  
 |做為暫存資料表和預存程序名稱的 '#' 和 '##'。|遇到一個不包含 # 以外之任何字元的識別碼。 請至少使用一個其他字元。 每次編譯時發生一次。|  
 |'::' 函數呼叫語法|資料表值函式遇到 :: 函式呼叫語法。 取代`SELECT column_list FROM`  *\< function_name >*`()`。 例如，以 `SELECT * FROM ::fn_virtualfilestats(2,1)`取代 `SELECT * FROM sys.fn_virtualfilestats(2,1)`。 每次編譯時發生一次。|  
-|'@' 以及以 '@@' 當做 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼開頭的名稱|遇到了以 @ 或 @@ 開頭的識別碼。 請勿使用 @ 或 @@ 或是以 @@ 當做識別碼開頭的名稱。 每次編譯時發生一次。|  
+|'\@' 和以 '\@\@' 開頭的名稱作為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 識別碼|出現了以 \@ 或 \@\@ 開頭的識別碼。 請勿使用 \@ 或 \@\@，或是以 \@\@ 開頭的名稱，作為識別碼。 每次編譯時發生一次。|  
 |ADDING TAPE DEVICE|已被取代的功能 sp_addumpdevice'`tape`' 發現。 Sp_addumpdevice '`disk`' 改為。 每次使用時發生一次。|  
 |ALL 權限|遇到 GRANT ALL、DENY ALL 或 REVOKE ALL 語法的總次數。 請修改語法來拒絕特定權限。 每次查詢時發生一次。|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|上一次啟動伺服器執行個體之後，已經使用 ALTER DATABASE 的已被取代功能 TORN_PAGE_DETECTION 選項的總次數。 請改用 PAGE_VERIFY 語法。 每次在 DDL 陳述式中使用時發生一次。|  
@@ -174,7 +174,7 @@ ms.locfileid: "37227408"
 |sp_defaultlanguage|遇到 sp_defaultlanguage 程序。 請改用 ALTER LOGIN。 每次編譯時發生一次。|  
 |sp_denylogin|遇到 sp_denylogin 程序。 請改用 ALTER LOGIN DISABLE。 每次查詢時發生一次。|  
 |sp_depends|遇到 sp_depends 程序。 請改用 sys.dm_sql_referencing_entities 和 sys.dm_sql_referenced_entities。 每次查詢時發生一次。|  
-|sp_detach_db @keepfulltextindexfile|在 sp_detach_db 陳述式中遇到 @keepfulltextindexfile 引數。 請勿使用這個引數。|  
+|sp_detach_db \@keepfulltextindexfile|在 sp_detach_db 陳述式中出現 \@keepfulltextindexfile 引數。 請勿使用這個引數。|  
 |sp_dropalias|遇到 sp_dropalias 程序。 以使用者帳戶和資料庫角色的組合來取代別名。 請使用 sp_dropalias，在升級的資料庫中移除別名。 每次編譯時發生一次。|  
 |sp_dropapprole|遇到 sp_dropapprole 程序。 請改用 DROP APPLICATION ROLE。 每次查詢時發生一次。|  
 |sp_dropextendedproc|遇到 sp_dropextendedproc 程序。 請改用 CLR。 每次編譯時發生一次。|  
@@ -187,10 +187,10 @@ ms.locfileid: "37227408"
 |sp_fulltext_catalog|遇到 sp_fulltext_catalog 程序。 請改用 CREATE/ALTER/DROP FULLTEXT CATALOG。 每次編譯時發生一次。|  
 |sp_fulltext_column|遇到 sp_fulltext_column 程序。 請改用 ALTER FULLTEXT INDEX。 每次編譯時發生一次。|  
 |sp_fulltext_database|遇到 sp_fulltext_database 程序。 請改用 ALTER DATABASE。 每次編譯時發生一次。|  
-|sp_fulltext_service @action=clean_up|遇到 sp_fulltext_service 程序的 clean_up 選項。 每次查詢時發生一次。|  
-|sp_fulltext_service @action=connect_timeout|遇到 sp_fulltext_service 程序的 connect_timeout 選項。 每次查詢時發生一次。|  
-|sp_fulltext_service @action=data_timeout|遇到 sp_fulltext_service 程序的 data_timeout 選項。 每次查詢時發生一次。|  
-|sp_fulltext_service @action=resource_usage|遇到 sp_fulltext_service 程序的 resource_usage 選項。 這個選項沒有函數。 每次查詢時發生一次。|  
+|sp_fulltext_service \@action=clean_up|遇到 sp_fulltext_service 程序的 clean_up 選項。 每次查詢時發生一次。|  
+|sp_fulltext_service \@action=connect_timeout|遇到 sp_fulltext_service 程序的 connect_timeout 選項。 每次查詢時發生一次。|  
+|sp_fulltext_service \@action=data_timeout|遇到 sp_fulltext_service 程序的 data_timeout 選項。 每次查詢時發生一次。|  
+|sp_fulltext_service \@action=resource_usage|遇到 sp_fulltext_service 程序的 resource_usage 選項。 這個選項沒有函數。 每次查詢時發生一次。|  
 |sp_fulltext_table|遇到 sp_fulltext_table 程序。 請改用 CREATE/ALTER/DROP FULLTEXT INDEX。 每次編譯時發生一次。|  
 |sp_getbindtoken|遇到 sp_getbindtoken 程序。 請改用 Multiple Active Result Set (MARS) 或分散式交易。 每次編譯時發生一次。|  
 |sp_grantdbaccess|遇到 sp_grantdbaccess 程序。 請改用 CREATE USER。 每次查詢時發生一次。|  
