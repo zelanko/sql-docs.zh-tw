@@ -1,4 +1,4 @@
-﻿---
+---
 title: SQL Operations Studio （預覽） 常見問題集 |Microsoft 文件
 description: 常見問題集 (FAQ) 的 SQL Operations Studio （預覽）。
 ms.custom: tools|sos
@@ -28,7 +28,7 @@ ms.locfileid: "34235682"
 
 ## <a name="where-can-i-get-includename-sosincludesname-sos-shortmd"></a>哪裡可以取得[!INCLUDE[name-sos](../includes/name-sos-short.md)]？
 
-從[http://aka.ms/sqlopsstudio](download.md)下載SQL Operations Studio (preview)的[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows、 macOS，和Linux版本。
+從 [http://aka.ms/sqlopsstudio](download.md) 下載 SQL Operations Studio (preview) [!INCLUDE[name-sos](../includes/name-sos-short.md)] 的 Windows、 macOS，和 Linux 版本。
 
 ## <a name="how-much-does-includename-sosincludesname-sos-shortmd-cost"></a>多少[!INCLUDE[name-sos](../includes/name-sos-short.md)]成本？
 
