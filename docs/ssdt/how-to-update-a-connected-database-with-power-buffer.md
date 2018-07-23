@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.commitpreview.dialog
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37bd259c8f4925a222d5e4b5aac47ca882ed2a6e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4a9da9c532e20375581a425e8072280cf892ce67
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093878"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088060"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>如何：使用 Power Buffer 更新連接的資料庫
 SQL Server Data Tools Power Buffer 技術讓您可以輕易地儲存目前工作階段的所有編輯，以套用對連接的資料庫所做的變更。 在 Power Buffer 視窗 (如 Transact\-SQL 編輯器或資料表設計工具) 中編輯所造成的任何錯誤會立即顯示在 [錯誤清單] 窗格，這可讓您追蹤識別的錯誤以進行進一步疑難排解。 您可以驗證暫止變更，直到準備好將其套用到資料庫為止。 在進行更新程序期間，SSDT 會依據您的編輯來自動建立 ALTER 指令碼，並提醒您注意任何可能發生的問題。 然後，您可以將所有開啟中 Power Buffer 視窗至今累積的一切變更套用到相同資料庫，或是儲存 ALTER 指令碼以供日後部署。  
@@ -30,7 +30,7 @@ SSDT 也會分辨在 Visual Studio 之外對資料庫結構描述所做的變更
   
 下列程序將利用先前在[連接的資料庫開發](../ssdt/connected-database-development.md)小節的程序中所建立的實體。  
   
-### <a name="to-apply-the-changes-made-in-the-previous-procedures"></a>套用先前的程序所做的變更  
+### <a name="to-apply-the-changes-made-in-the-previous-procedures"></a>若要套用先前的程序所做的變更  
   
 1.  按一下工具列上的綠色 [更新] 按鈕 (如果您將滑鼠游標停留在該按鈕上方，就會顯示 [更新資料庫] 工具提示)。 工具列位於資料表設計工具的資料行格線上。  
   

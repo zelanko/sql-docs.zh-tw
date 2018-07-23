@@ -17,12 +17,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ef5f8812dd3e0a5c40f38d2f59caf65df038675
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b62e2c90195cf2dd1e834c57c4ad3ceb8478bcc3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33049035"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982050"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>全文檢索索引資料行對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "33049035"
 列出可用的語言。 從下拉式清單選擇適合您資料行資料的語言。 例如，如果您使用英文作業系統，但您要索引含有德文文字的資料行，則請從下拉式清單中選擇 [德文]，以提升索引的效能。  
   
 **統計語意**  
-選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](http://msdn.microsoft.com/en-us/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
+選取是否要針對選取的資料行啟用語意索引。 如需詳細資訊，請參閱 [語意搜尋預留位置](http://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97)。  
   
 如果您在選取 **[統計語意]** 之前選取 **[語言]**，而且選取的語言沒有相關聯的語意語言模型，則會停用 **[統計語意]** 核取方塊。 如果您在選取 [語言] 之前選取 [統計語意]，則下拉式方塊中提供的語言將受限為有語意語言模型支援的語言。  
   

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12d00de1babd39b303e235e2f6d7abb6b5003800
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9483de763583782518a75d728deec54c50ee5cb
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042685"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984800"
 ---
 # <a name="delete-a-job-category"></a>刪除作業類別目錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "33042685"
   
 -   **若要使用下列項目刪除作業類別目錄：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "33042685"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_delete_category (Transact-SQL)](http://msdn.microsoft.com/en-us/63ea7d0d-a567-456e-a778-bee99e21d16c)。  
+如需詳細資訊，請參閱 [sp_delete_category (Transact-SQL)](http://msdn.microsoft.com/63ea7d0d-a567-456e-a778-bee99e21d16c)。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要刪除作業類別目錄**  

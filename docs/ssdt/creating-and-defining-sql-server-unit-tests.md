@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.DatabaseMethodNameDialog
 - sql.data.tools.unittesting.designer
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e197b3aa5a5383a40e20e366edb4d5b9c6f98c4b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4b52fc60f3102e7b6a38d254fba682ab4321d804
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093873"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088330"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>建立和定義 SQL Server 單元測試
 您可以執行 SQL Server 單元測試，來驗證結構描述中一個或多個資料庫物件的變更是否中斷了資料庫應用程式中的現有功能。 這些測試會補充軟體開發人員所建立的單元測試。 您必須執行這兩種測試以驗證應用程式的行為。  

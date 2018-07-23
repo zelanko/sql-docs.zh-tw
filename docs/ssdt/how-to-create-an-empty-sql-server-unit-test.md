@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.unittesting.createtest
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
@@ -16,14 +16,14 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1476ab23a36faee220445218470c25713a47ebac
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: dead1b79e36fbda2565eaf64cb26dc63db0a7af7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093896"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088440"
 ---
-# <a name="how-to-create-an-empty-sql-server-unit-test"></a>如何：建立空白 SQL Server 單元測試
+# <a name="how-to-create-an-empty-sql-server-unit-test"></a>HOW TO：建立空白 SQL Server 單元測試
 將單元測試包含在資料庫專案中來驗證您對資料庫物件所做的變更，並不會中斷現有的功能。 下列程序說明如何為任何資料庫物件建立 SQL Server 單元測試。 SQL Server Data Tools 包括一些對資料庫函數、觸發程序和預存程序的額外支援。 如需詳細資訊，請參閱[如何：建立函式、觸發程序和預存程序的 SQL Server 單元測試](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)。  
   
 當您使用第一個程序建立 SQL Server 單元測試時，如果沒有測試專案存在，則會自動為您建立一個測試專案。 如果測試專案已經存在，您可以選擇將新的測試加入到其中一個專案，也可以建立新的測試專案。 如需有關測試專案的詳細資訊，請參閱[如何：建立 SQL Server 資料庫單元測試的測試專案](../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md)。  
@@ -50,7 +50,7 @@ ms.locfileid: "37093896"
   
 4.  在 [加入至測試專案] 底下，選取要將這個測試加入其中的現有測試專案。 如果沒有任何測試專案存在，或是您想要建立新的測試專案，請選取 [建立新的 <language> 測試專案]。  
   
-5.  按一下 [確定]。  
+5.  按一下 [確定] 。  
   
     如果您的測試專案是新的，則會出現 [新增測試專案] 對話方塊。 為專案命名，然後按一下 [確定]。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "37093896"
 -   加入測試條件或其他判斷提示陳述式來驗證指令碼的結果。  
   
 > [!NOTE]  
-> 結果不明測試條件是加入到每一個測試中的預設條件。 包含這個測試條件的目的為要指出尚未實作測試驗證。 當您已經加入其他測試條件之後，請從測試中刪除這個測試條件。 如需詳細資訊，請參閱[如何：將測試條件加入至資料庫單元測試](http://msdn.microsoft.com/library/aa833242(VS.100).aspx)。  
+> 結果不明的測試條件是加入到每一個測試中的預設條件。 包含這個測試條件的目的為要指出尚未實作測試驗證。 當您已經加入其他測試條件之後，請從測試中刪除這個測試條件。 如需詳細資訊，請參閱[如何：將測試條件加入至資料庫單元測試](http://msdn.microsoft.com/library/aa833242(VS.100).aspx)。  
   
 ## <a name="see-also"></a>另請參閱  
 [如何：執行 SQL Server 單元測試](../ssdt/how-to-run-sql-server-unit-tests.md)  

@@ -5,7 +5,7 @@ services: sql-server
 documentationcenter: NA
 ms.suite: sql
 ms.devlang: NA
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 11/02/2017
@@ -13,12 +13,12 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: f5251195c95036abb741672c593dbd82e8817fca
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: e116d80b61208d6a75b05c381117207844c0c565
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926209"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087630"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 監視夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "36926209"
 -->
 
 ## <a name="microsoft-monitoring-partners"></a>Microsoft 監視夥伴
-| Partner | 描述 | 連結 |
+| Partner | Description | 連結 |
 | --- | --- | --- | --- |
 |[![idera][1]][idera_website] |**IDERA**<br>SQL 診斷管理員是功能強大的效能監視和診斷解決方案，會主動從中央主控台警示系統管理員 SQL Server 環境內部的健康情況、效能和可用性問題。<br><br>[系統需求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[網站][idera_website]<br>[Twitter][idera_twitter]<br>[影片][idera_youtube] | |
 |[![quest][3]][quest_website] |**Quest**<br>SQL Server Enterprise 上的 Spotlight - 提供 SQL Server 環境無與倫比的監視、診斷和最佳化，確保尖峰效能不間斷。 Spotlight 可讓您存取所需的詳細資料，讓您的 SQL Server 資料庫發揮最佳狀態。 取得健康情況和效能的直覺式概觀、自動化的警示和動作，以及行動裝置支援。|[Marketplace][quest_marketplace]<br>[網站][quest_website]<br>[影片][quest_video] | |

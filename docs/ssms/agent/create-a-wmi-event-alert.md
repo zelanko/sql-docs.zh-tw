@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95bd019c2445f787a54185dacf314df8d81d1473
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 62474c013c8d70f32f81c68afcb74e5f5c655535
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045045"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983660"
 ---
 # <a name="create-a-wmi-event-alert"></a>建立 WMI 事件警示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "33045045"
 
 此主題描述如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ，在 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 中建立在伺服器事件的 WMI 提供者所監視的特定 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 事件發生時，所引發的 [!INCLUDE[tsql](../../includes/tsql_md.md)]Agent 警示。  
   
-如需使用 WMI 提供者監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件的詳細資訊，請參閱 [伺服器事件類別和屬性的 WMI 提供者](http://msdn.microsoft.com/en-us/80767fe0-32ac-406a-81a0-8212cd6ce7e4)。 如需接收 WMI 事件警示通知所需權限的詳細資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。 如需 WQL 的詳細資訊，請參閱 [搭配伺服器事件的 WMI 提供者使用 WQL](http://msdn.microsoft.com/en-us/58b67426-1e66-4445-8e2c-03182e94c4be)。  
+如需使用 WMI 提供者監視 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 事件的詳細資訊，請參閱 [伺服器事件類別和屬性的 WMI 提供者](http://msdn.microsoft.com/80767fe0-32ac-406a-81a0-8212cd6ce7e4)。 如需接收 WMI 事件警示通知所需權限的詳細資訊，請參閱 [選取 SQL Server Agent 服務的帳戶](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)。 如需 WQL 的詳細資訊，請參閱 [搭配伺服器事件的 WMI 提供者使用 WQL](http://msdn.microsoft.com/58b67426-1e66-4445-8e2c-03182e94c4be)。  
   
 **本主題內容**  
   
@@ -113,5 +113,5 @@ ms.locfileid: "33045045"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09)。  
+如需詳細資訊，請參閱 [sp_add_alert (Transact-SQL)](http://msdn.microsoft.com/d9b41853-e22d-4813-a79f-57efb4511f09)。  
   

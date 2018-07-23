@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0423093ee0870b1c10ec938f4c8aac66beb3b76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e7a19e301fa363f3349c4f2f9de27e26d210721f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044865"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983550"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Synchronize Target Server Clocks (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -95,5 +95,5 @@ ms.locfileid: "33044865"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_resync_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/40e44df7-d3e3-44ee-b149-08aba629a21f)。  
+如需詳細資訊，請參閱 [sp_resync_targetserver (Transact-SQL)](http://msdn.microsoft.com/40e44df7-d3e3-44ee-b149-08aba629a21f)。  
   

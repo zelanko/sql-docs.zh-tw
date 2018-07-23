@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.errortask.generichelp
 ms.assetid: 5f08f15a-851d-4026-a557-28b3c6492efe
@@ -16,12 +16,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2efa5ef66c489365099c6d0190ea3b08cffbe671
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 51d357bb7fdb953f279a196723dd72ad713b127f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137947"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083380"
 ---
 # <a name="sql-server-data-tools"></a>SQL Server Data Tools
 SQL Server Data Tools (SSDT) 透過導入常見的宣告式模型轉換資料庫開發，此模型橫跨 Visual Studio 內的所有資料庫開發階段。 您可以使用 SSDT Transact\-SQL 設計功能建置、偵錯、維護和重構資料庫。 您可以使用資料庫專案，或直接使用位於內部或外部部署之連接的資料庫執行個體。  
@@ -32,7 +32,7 @@ Visual Studio 中的 SQL Server 物件總管提供資料庫物件的檢視，類
   
 以下主題和章節討論 SSDT 如何有助於資料庫開發工作。 加入 HOW TO 主題的目的是要協助引導您完成資料庫專案工作。 這些工作 (撰寫方式像教學課程而且依序完成) 使用 Northwind Traders，這是一家進出口特色食品的虛構公司。  
   
-|主題/章節|描述|  
+|主題/章節|Description|  
 |-------------------|---------------|  
 |[專案導向的離線資料庫開發](../ssdt/project-oriented-offline-database-development.md)|本節的主題將說明用於撰寫、建置、偵錯及發行資料庫專案的 SQL Server Data Tools 功能。|  
 |[使用命令列工具進行專案導向的資料庫開發](../ssdt/project-oriented-database-development-using-command-line-tools.md)|本節的主題將說明讓您應用於一些專案導向之資料庫開發狀況的命令列工具。|  

@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a672a845e28cd3d8a005603b5ccdc1871761e7b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01d245a9ac6eb32bd38978bd2ed4189f774332ca
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042825"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982410"
 ---
 # <a name="use-performance-objects"></a>使用效能物件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.locfileid: "33042825"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 包含 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 的下列效能物件。  
   
-|物件名稱|描述|  
+|物件名稱|Description|  
 |---------------|---------------|  
-|[SQLAgent:Jobs](http://msdn.microsoft.com/en-us/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|有關已啟動作業、成功率及目前狀態的效能資訊|  
-|[SQLAgent:JobSteps](http://msdn.microsoft.com/en-us/44f9983c-1753-4fe0-8475-973aa2460b3a)|作業步驟的狀態資訊|  
-|[SQLAgent:Alerts](http://msdn.microsoft.com/en-us/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|警示及通知數的相關資訊|  
-|[SQLAgent:Statistics](http://msdn.microsoft.com/en-us/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|一般效能資訊|  
+|[SQLAgent:Jobs](http://msdn.microsoft.com/225b5e2d-4a78-4178-b2b6-b419df83c4aa)|有關已啟動作業、成功率及目前狀態的效能資訊|  
+|[SQLAgent:JobSteps](http://msdn.microsoft.com/44f9983c-1753-4fe0-8475-973aa2460b3a)|作業步驟的狀態資訊|  
+|[SQLAgent:Alerts](http://msdn.microsoft.com/e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a)|警示及通知數的相關資訊|  
+|[SQLAgent:Statistics](http://msdn.microsoft.com/ebe92bfa-0721-48aa-9ba6-e7904ad265a1)|一般效能資訊|  
   
 ## <a name="see-also"></a>另請參閱  
-[效能的監視與微調](http://msdn.microsoft.com/en-us/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
-[如何：啟動系統監視器 (Windows)](http://msdn.microsoft.com/en-us/5e51bb79-5737-470b-9c47-fac330c001c5)  
+[效能的監視與微調](http://msdn.microsoft.com/87f23f03-0f19-4b2e-bfae-efa378f7a0d4)  
+[如何：啟動系統監視器 (Windows)](http://msdn.microsoft.com/5e51bb79-5737-470b-9c47-fac330c001c5)  
   

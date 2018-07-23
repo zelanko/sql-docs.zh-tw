@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.codeanalysis.configuring
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6c6ca69968791ecda89274851bd8c6284f68ee8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ba3c41e2366643e07f07307537e735ec8d259d0e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093867"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086030"
 ---
 # <a name="analyze-script-performance"></a>分析指令碼效能
 您可以使用 SQL Server Data Tools 提供的工具，判斷是否能提升查詢、預存程序或指令碼的效能。 例如，監視用戶端統計資料 (例如常用查詢的回應時間)，您可以判斷是否需要變更資料表的查詢或索引。 這類統計資料可以包含用戶端執行時間、查詢設定檔、以及傳送和接收的封包/位元組。  

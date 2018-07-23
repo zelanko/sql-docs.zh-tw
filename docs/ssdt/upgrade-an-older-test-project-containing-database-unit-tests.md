@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 42782ff3-e8cf-4c9d-8dac-a95b236edfc4
 caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7cfc482daed9c150079a8a5b29d32ee319f54745
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: bfe8116a8467a30fb90399b292847cf20e7010f7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093876"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086870"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>升級包含資料庫單元測試的舊版測試專案
 您可以升級在 Visual Studio 2010 中建立且包含資料庫單元測試的舊版測試專案，以使用新的 SQL Server Data Tools 資料庫單元測試執行階段和工具。 升級舊版專案之後，您可以將 SQL Server 單元測試加入至專案 (如需詳細資訊，請參閱[建立並定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md))。  

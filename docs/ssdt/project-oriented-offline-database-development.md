@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.general
 - sql.data.tools.dbprojectwizard.summary
@@ -17,12 +17,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eecb9e54dcbf43a359130e58dc4769279710b3c
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 6cdd7e27cfba54215f3f2eda52c9132c0b366325
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093848"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088010"
 ---
 # <a name="project-oriented-offline-database-development"></a>專案導向的離線資料庫開發
 本節將說明 SQL Server Data Tools (SSDT) 所提供用於撰寫、建置、偵錯及發行資料庫專案的功能。  
@@ -34,7 +34,7 @@ ms.locfileid: "37093848"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[匯入資料庫專案中](../ssdt/import-into-a-database-project.md)|說明如何從即時資料庫、.dacpac 或指令碼匯入物件。|  
 |[加入資料庫參考對話方塊](../ssdt/add-database-reference-dialog-box.md)|描述各種新增資料庫參考的方式。|  

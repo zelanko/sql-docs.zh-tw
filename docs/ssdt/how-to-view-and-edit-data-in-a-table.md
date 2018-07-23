@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.QUERYRESULTS.F1
 - sql.data.tools.queryresults.executequerydeletingrow
@@ -17,12 +17,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f80c25467c24d6cb0e47d36b4cde78152bc2b569
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a52c3875e5b6368a8f5f229dd3309f60bd078fe7
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093897"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085330"
 ---
 # <a name="how-to-view-and-edit-data-in-a-table"></a>如何：檢視及編輯資料表中的資料
 您可以使用視覺化資料編輯器來檢視、編輯及刪除現有資料表的資料。  

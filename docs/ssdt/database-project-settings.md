@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.DebugProperties
 - sql.data.tools.dacsettings.dialog
@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cdf95f469cd5a94514d0e91d13ef7b9125c1531f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093917"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087190"
 ---
 # <a name="database-project-settings"></a>資料庫專案設定
 您可以使用資料庫專案設定，控制資料庫、偵錯與組建組態的各個部分。 這些設定可分類如下：  
@@ -87,7 +87,7 @@ ms.locfileid: "37093917"
 ## <a name="bkmk_proj_settings"></a>專案設定  
 下列表格中的設定會套用至這個資料庫專案的所有組態。  
   
-|欄位|預設值|描述|  
+|欄位|預設值|Description|  
 |---------|-----------------|---------------|  
 |目標平台|Microsoft SQL Server 2012|指定這個資料庫專案所設定的目標 SQL Server 版本。|  
 |為一般物件啟用擴充的 Transact\-SQL 驗證。|當您建立新專案時，不會啟用。<br /><br />當您從 [SQL Server 物件總管] 連接至 SQL Azure 以建立專案、將 SQL Azure 資料庫匯入專案或將專案的目標平台變更為 SQL Azure 時，則會啟用。|一旦啟用此選項，將報告在專案中所發現造成 SQL Server 編譯器驗證失敗的錯誤。 如果您將目標平台變更為 SQL Azure，擴充驗證就會變成啟用狀態。 儘管您變更目標平台，也不會取消勾選此選項。<br /><br />您可以對其他版本的 SQL Server 啟用此選項，但是驗證只限於 Microsoft SQL Server 2012 部分自主資料庫和 SQL Azure。 並非所有 SQL Server 版本都支援全部的 Transact\-SQL 語法。<br /><br />如需詳細資訊，請參閱本主題稍後的[擴充的 Transact-SQL 驗證](#bkmk_evf)|  
@@ -194,7 +194,7 @@ Compiler Service 具有兩種限制分類。
   
 下列表格中的設定會套用至這個資料庫專案的建置組態。  
   
-|欄位|預設值|描述|  
+|欄位|預設值|Description|  
 |---------|-----------------|---------------|  
 |建置輸出路徑|bin\Debug\|指定當您建置或部署資料庫專案時，產生建置輸出的位置。 如果指定相對路徑，您必須指定該路徑會相對於資料庫專案路徑。 如果路徑不存在，則會建立路徑。|  
 |建置輸出檔名稱|*DatabaseProjectName*|指定當您建置資料庫專案時，要賦予所產生之輸出的名稱。|  
@@ -211,18 +211,18 @@ Compiler Service 具有兩種限制分類。
 ## <a name="bkmk_build_events"></a>建置事件  
 您可以使用這些設定指定命令列在建置作業開始前執行，同時指定另一個命令列在建置作業完成後執行。  
   
-|欄位|預設值|描述|  
+|欄位|預設值|Description|  
 |---------|-----------------|---------------|  
-|建置前事件命令列|無|指定建置專案前執行的命令列。 按一下 [建置前進行編輯] 可修改命令列。|  
-|建置後事件命令列|無|指定建置專案後執行的命令列。 按一下 [建置後進行編輯] 可修改命令列。|  
+|建置前事件命令列|None|指定建置專案前執行的命令列。 按一下 [建置前進行編輯] 可修改命令列。|  
+|建置後事件命令列|None|指定建置專案後執行的命令列。 按一下 [建置後進行編輯] 可修改命令列。|  
 |執行建置後事件|建置成功時|指定建置後命令列應永遠執行、只有在建置成功時執行，或只有在建置更新專案輸出 (建置指令碼) 時執行。|  
   
 ## <a name="bkmk_debug"></a>偵錯  
 您可以使用下列設定來控制資料庫專案的偵錯。  
   
-|欄位|預設值|描述|  
+|欄位|預設值|Description|  
 |---------|-----------------|---------------|  
-|啟動執行|無|指定對專案進行偵錯時要執行的指令碼或外部程式。|  
+|啟動執行|None|指定對專案進行偵錯時要執行的指令碼或外部程式。|  
 |目標連接字串|Data Source=(localdb)\\*SolutionName*;Initial Catalog=*DatabaseProjectName*;Integrated Security=True;Pooling=False;Connect Timeout=30|指定連接資訊，以連接所指定建置組態的目標資料庫伺服器。 預設連接字串的對象為動態建立的 SQL Server LocalDB 執行個體和資料庫。|  
 |部署資料庫屬性|是|指定當您部署資料庫專案時，是否要部署或更新 DatabaseProerties.DatabaseProperties 設定。|  
 |永遠重新建立資料庫|否|指定是否要卸除並重新建立資料庫，而不執行累加式升級。 例如，如果要對全新部署的資料庫執行資料庫單元測試，您可能想要選取這個核取方塊。 如果清除這個核取方塊，則會更新現有的資料庫，而不會捨棄並重新建立資料庫。|  

@@ -5,7 +5,7 @@ services: sql-server
 documentationcenter: NA
 ms.suite: sql
 ms.devlang: NA
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 17/09/2017
@@ -13,19 +13,19 @@ ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 6307fa14838afc49545875d56fed0bc2978b92ae
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 5c654f04c97049020dbb603d47095de16cc30fed
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926389"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084230"
 ---
 # <a name="sql-server-managing-partners"></a>SQL Server 管理夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 若要管理您的 SQL Server 服務，您可以從各種領先業界的工具中選擇。  本文章特別介紹提供 Microsoft SQL Server 管理解決方案支援的 Microsoft 夥伴公司。
 
 ## <a name="our-management-partners"></a>我們的管理夥伴
-| Partner | 描述 | 連結 |
+| Partner | Description | 連結 |
 | --- | --- | --- | --- |
 |![idera][1] |**IDERA**<br>SQL 合規性管理員是全方位的稽核解決方案，會顯示執行者在 SQL Server 上執行的事項、時機和方式，以協助確保法規和資料安全性需求的合規性。<br><br>[系統需求][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[網站][idera_website]<br>[Twitter][idera_twitter]<br>[影片][idera_youtube] | |
 

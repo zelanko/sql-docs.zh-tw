@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5a6443c6-857e-4756-8d87-ae520953335b
 caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd49a4d9d5370f1b5834f285831387323d9e0114
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 406940e534252c1118e4cbeb4b5b16166ec02b6a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093883"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088170"
 ---
 # <a name="how-to-browse-objects-in-a-sql-server-database-project"></a>HOW TO：瀏覽 SQL Server 資料庫專案中的物件
 Visual Studio 的 SQL Server 物件總管現在包含專用的 [專案] 節點，在這個節點下方案的所有 SQL Server 資料庫專案都依 SQL Server Management Studio 類的階層分組。  

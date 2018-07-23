@@ -18,19 +18,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5a139725bdc5a0bbde74478ad1a2465e8b3ea9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053795"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984990"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>索引 - 索引鍵對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 使用此對話方塊可建立或修改索引、主索引鍵和唯一鍵。 若要存取此對話方塊，請開啟具有索引或索引鍵之資料表的資料表定義，在資料表定義方格上按一下滑鼠右鍵，再按一下 [索引/索引鍵]。  
   
 > [!NOTE]  
-> 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
+> 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
 ## <a name="options"></a>選項。  
 **選取的主/唯一索引鍵或索引**  
@@ -67,7 +67,7 @@ ms.locfileid: "33053795"
 展開時會顯示 [建立成 CLUSTERED] 的資訊。  
   
 **建立成 CLUSTERED**  
-使索引鍵或索引成為叢集。 資料表中只能有一個叢集索引。 資料表中的資料會依照叢集索引的順序儲存。 如需詳細資訊，請參閱 [建立叢集索引](http://msdn.microsoft.com/en-us/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 和 [建立非叢集索引](http://msdn.microsoft.com/en-us/9402029a-1227-46c4-93aa-c2122eb1b943)。  
+使索引鍵或索引成為叢集。 資料表中只能有一個叢集索引。 資料表中的資料會依照叢集索引的順序儲存。 如需詳細資訊，請參閱 [建立叢集索引](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) 和 [建立非叢集索引](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943)。  
   
 **資料空間規格**  
 展開時會顯示 [(資料空間類型)]、[檔案群組或資料分割配置名稱] 和 [資料分割資料行清單] 的資訊。  
@@ -120,6 +120,6 @@ ms.locfileid: "33053795"
 指定是否在此索引中允許資料列層級的鎖定。 允許或不允許資料列層級的鎖定會影響資料庫效能。 建議設定為 [是]。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用條件約束 (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[使用索引鍵 (Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
+[使用條件約束 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
+[使用索引鍵 (Visual Database Tools)](http://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

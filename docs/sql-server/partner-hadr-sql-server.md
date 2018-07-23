@@ -5,7 +5,7 @@ services: sql-server
 documentationcenter: NA
 ms.suite: sql
 ms.devlang: NA
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: ''
 ms.date: 09/17/2017
@@ -14,12 +14,12 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: 033e25bcb5b338e1e74c12696d666663c17f87c1
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 2100ee4e5b80ba23593f39418c7df2b6c2d9e1d8
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36927069"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085541"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 高可用性和災害復原夥伴
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "36927069"
 <!--|![PartnerShortName][1] |**PartnerShortName**<br>PartnerShortName Brief description of the type of products that partner provides. <br><br>List of supported versions of SQL Server, OS, OS platforms/distros  Server 2005 SP4 – SQL Server 2016 on Windows |[Datasheet][PartnerShortName_datasheet]<br>[Marketplace][PartnerShortName_marketplace]<br>[Website][PartnerShortName_website]<br>[Twitter][PartnerShortName_twitter]<br>[Video][PartnerShortName_youtube]|[![veem_video](./media/partner-hadr-sql-server/PartnerShortName_video.png)](https://www.youtube.com/channel/**************)
 -->
 
-| Partner | 描述 | 連結 | 
+| Partner | Description | 連結 | 
 | --- | --- | --- |
 |![Azure][5] |**Azure Site Recovery**<br>Site Recovery 會複寫在虛擬機器或實體伺服器上執行的工作負載，讓這些工作負載無法在主要站台使用時，仍可在次要位置使用。 您可以將 SQL Server 虛擬機器從內部部署資料中心複寫及容錯移轉到 Azure 或其他內部部署資料中心，或從一個 Azure 資料中心複寫及容錯移轉到另一個 Azure 資料中心。<br><br> Enterprise 和 Standard 版的 SQL Server 2008 R2 - SQL Server 2016|[網站][azure_website]<br>[Marketplace][azure_marketplace]<br>[資料工作表][azure_datasheet]<br>[Twitter][azure_twitter]<br>[影片][azure_youtube]|
 |![DH2i][2] |**DH2i**<br>DxEnterprise 是適用於 Windows、Linux 和 Docker 的智慧型可用性軟體，有助於您幾乎完全避免規劃和未規劃的停機、節省大量成本、大幅簡化管理，並讓您兼具實體和邏輯彙總。<br><br>SQL Server 2005+、Windows Server 2008R2+、Ubuntu 16+、RHEL 7+、CentOS 7+|[網站][dh2i_website]<br>[資料工作表][dh2i_datasheet]<br>[Twitter][dh2i_twitter]<br>[影片][dh2i_youtube]|

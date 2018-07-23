@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0262ff33df1f98283c7eb5ebdc63256c69f0f88
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045185"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981900"
 ---
 # <a name="manage-events"></a>管理事件
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "33045185"
   
 -   [Transact-SQL](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
--   [Transact-SQL](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
+-   [Transact-SQL](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
 ## <a name="running-event-triggered-jobs"></a>執行事件觸發作業  
 您可以定義執行一個作業來回應警示。 例如，您可以執行一個作業來更正或進一步診斷由警示所偵測到的問題。  
@@ -99,5 +99,5 @@ ms.locfileid: "33045185"
 > 因為作業可能引發事件，請小心不要建立遞迴式警示作業迴圈。  
   
 ## <a name="see-also"></a>另請參閱  
-[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/en-us/44bee7d9-7517-4071-99be-8b36f979c7cc)  
+[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/44bee7d9-7517-4071-99be-8b36f979c7cc)  
   

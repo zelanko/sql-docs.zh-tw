@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5409db44220e0c6b40b16752329c7df54bc54f0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: ced224db1a1826effe84dd713abe64c3cddf1b94
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093872"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085930"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>如何：建置及部署至本機資料庫
 Microsoft SQL Server 2012 提供本機指定的伺服器執行個體，稱為 SQL Server Express 本機資料庫執行階段，在偵錯 SQL Server 資料庫專案時會啟動這個執行個體。 這個本機伺服器執行個體可做為建置、測試及偵錯專案的沙箱。 它獨立於任何已安裝的 SQL Server 執行個體，而且無法從 SQL Server Data Tools (SSDT) 外部存取。 這種配置適用於有限存取或無法存取生產資料庫，但想要在授權人員將專案部署到生產環境之前先在本機測試專案的開發人員。 此外，開發 SQL Azure 的資料庫方案時，您可以利用這個本機伺服器的便利性，先在本機開發及測試資料庫專案，再將其部署至雲端上。  

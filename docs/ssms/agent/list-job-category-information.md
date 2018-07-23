@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64f34c627a8d57f1eb85948f3f8a013833db80af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cb76fa7eb6f67134c4066ebdc8af3a935516dc9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042075"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984780"
 ---
 # <a name="list-job-category-information"></a>列出作業類別目錄資訊
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "33042075"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_help_category (Transact-SQL)](http://msdn.microsoft.com/en-us/8cad1dcc-b43e-43bd-bea0-cb0055c84169)。  
+如需詳細資訊，請參閱 [sp_help_category (Transact-SQL)](http://msdn.microsoft.com/8cad1dcc-b43e-43bd-bea0-cb0055c84169)。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要列出作業類別目錄資訊**  

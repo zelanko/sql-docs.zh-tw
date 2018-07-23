@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f7b6ed8c-a4e0-4e33-9858-a8aa40aef309
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: baa63538993f31d97668cc02f36b55f50bb6adad
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 3aa41b2ae420f626b2749f55a07f4dfa9eefb926
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093920"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086450"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
 此逐步解說示範用來建立 SQL Server 程式碼分析規則的步驟。 在此逐步解說中建立的規則是用來避開預存程序、觸發程序和函數中的 WAITFOR DELAY 陳述式。  

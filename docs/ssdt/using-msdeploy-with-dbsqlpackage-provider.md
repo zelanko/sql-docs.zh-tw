@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: db2861b82adfa29fc0141a326b0c54b4d0ff09aa
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: fc94964bdb6c0f18eb6fc935e12efef3ff0cece2
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093916"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085760"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>搭配 dbSqlPackage 提供者使用 MSDeploy
 **DbSqlPackage** 是一種 **MSDeploy** 提供者，可讓您與 SQL Server/SQL Azure 資料庫進行互動。 **DbSqlPackage** 支援下列動作：  
@@ -48,7 +48,7 @@ MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-sou
 ## <a name="ms-deploy-verbs"></a>MS-Deploy 動詞命令  
 透過在 MS-Deploy 命令列上使用 **–verb** 參數，指定 MS-Deploy 動詞命令。 **dbSqlPackage** 提供者支援下列 **MSDeploy** 動詞命令：  
   
-|動詞命令|描述|  
+|動詞命令|Description|  
 |--------|---------------|  
 |dump|提供有關 .dacpac 檔案中所含來源資料庫的資訊，包括名稱、版本號碼和描述。 在命令列上使用下列格式來指定來源資料庫：<br /><br />**msdeploy –verb:dump –source:dbSqlPackage=”***.dacpac-file-path***”**|  
 |sync|在命令列上使用下列格式來指定 dbSqlPackage 動作：<br /><br />**msdeploy –verb:sync –source:dbSqlPackage**=”input” *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**=”input” *[,DbSqlPackage-destination-parameters]*<br /><br />請參閱下列各節以了解 sync 動詞命令的有效來源和目的參數。|  
@@ -56,7 +56,7 @@ MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-sou
 ## <a name="dbsqlpackage-source"></a>dbSqlPackage 來源  
 **dbSqlPackage** 提供者可接受的輸入包括有效的 SQL Server/SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。  針對提供者指定輸入來源的語法如下：  
   
-|輸入|預設|描述|  
+|輸入|預設|Description|  
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=**{*input*}|**N/A**|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的路徑。<br /><br />**注意：** 當您使用連接字串當作輸入來源時，支援的連接字串屬性只有 *InitialCatalog、DataSource、UserID、Password、IntegratedSecurity、Encrypt、TrustServerCertificate* 和 *ConnectionTimeout*。|  
   
@@ -64,7 +64,7 @@ MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-sou
   
 **來源**參數包括：  
   
-|參數|預設|描述|  
+|參數|預設|Description|  
 |-------------|-----------|---------------|  
 |**Profile**:{ *string*}|不適用|指定 DAC 發行設定檔的檔案路徑。 設定檔會定義產生結果 dacpac 時要使用之屬性及變數的集合。 發行設定檔會傳遞給目的地，並且在執行 **Publish**、**Script** 或 **DeployReport** 動作時當作預設選項使用。|  
 |**DacApplicationName**={ *string* }|資料庫名稱|定義要儲存在 DACPAC 中繼資料中的應用程式名稱。 預設字串為資料庫名稱。|  
@@ -81,13 +81,13 @@ MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-sou
 ## <a name="dbsqlpackage-destination"></a>DbSqlPackage 目的地  
 **dbSqlPackage** 提供者可接受有效的 SQL Server/SQL Azure 連接字串或磁碟上 .dacpac 檔案的路徑做為目的輸入。  針對提供者指定目的地的語法如下：  
   
-|輸入|預設|描述|  
+|輸入|預設|Description|  
 |---------|-----------|---------------|  
 |-**dest:dbSqlPackage**={*input*}|不適用|*input* 是有效的 SQL Server 或 SQL Azure 連接字串，或是磁碟上 .dacpac 檔案的完整或部分路徑。 如果 *input* 是檔案路徑，就不得指定其他參數。|  
   
 下列的**目的地**參數可供所有 **dbSqlPackage** 作業使用：  
   
-|屬性|預設|描述|  
+|屬性|預設|Description|  
 |------------|-----------|---------------|  
 |**Action={Publish&#124;DeployReport&#124;Script}**|不適用|指定要在**目的地**執行之動作的選擇性參數。|  
 |**AllowDropBlockingAssemblies ={True &#124; False}**|**False**|指定 **SqlClr** 發行是否會在部署計畫中卸除封鎖的組件。 根據預設，如果必須卸除任何參考組件，則該封鎖或參考組件會封鎖組件更新。|  
@@ -126,7 +126,7 @@ MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-sou
 |**IgnoreFileSize= {True &#124; False}**|**True**|指定當您發行至資料庫時，應該忽略或更新檔案大小的差異。|  
 |**IgnoreFillFactor= {True &#124; False}**|**True**|指定當您發行至資料庫時，應該忽略或更新填滿因數的差異。|  
   
-|屬性|預設|描述|  
+|屬性|預設|Description|  
 |------------|-----------|---------------|  
 |**IgnoreFullTextCatalogFilePath= {True &#124; False}**|**True**|指定當您發行至資料庫時，應該忽略或更新全文檢索索引檔案之路徑的差異。|  
 |**IgnoreIdentitySeed= {True &#124; False}**|**False**|指定當您發行至資料庫時，應該忽略或更新識別欄位之種子的差異。|  
@@ -175,7 +175,7 @@ MSDeploy –verb: MSDeploy-verb –source:dbSqlPackage="Input"[,dbSqlPackage-sou
   
 下列的**目的地**參數只提供 **DeployReport** 和 **Script** 作業使用：  
   
-|參數|預設|描述|  
+|參數|預設|Description|  
 |-------------|-----------|---------------|  
 |**OutputPath**={ *string* }|不適用|選擇性參數，告知 **dbSqlPackage** 在 *string* 所指定的磁碟位置建立 DeployReport XML 輸出檔或 Script SQL 輸出檔。 這個動作會覆寫目前在 string 所指定位置上的任何指令碼。|  
   

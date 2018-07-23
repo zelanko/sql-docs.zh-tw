@@ -17,19 +17,19 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b72dfc8b97dfdf80e692abac8f0fc142cec5be9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1bd2857f56f57d0c23f9476c52b1881eb598fc1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048605"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982760"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>檢查條件約束對話方塊 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 當您在資料表設計工具的資料表定義方格上按一下滑鼠右鍵，再按 [檢查條件約束] 時，這個對話方塊便會出現。 此對話方塊包含一組附加至資料庫資料表的非唯一條件約束的屬性。 套用至唯一條件約束的屬性會出現在 [索引/索引鍵] 對話方塊中。  
   
 > [!NOTE]  
-> 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
+> 如果資料表是要發佈以進行複寫，則必須使用 Transact-SQL 陳述式 [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) 或 SQL Server 管理物件 (SMO) 變更結構描述。 使用 [資料表設計工具] 或 [資料庫圖表設計工具] 變更結構描述時，會嘗試卸除並重新建立資料表。 您無法卸除已發行的物件，因此結構描述變更將會失敗。  
   
 ## <a name="options"></a>選項。  
 **選取的檢查條件約束**  
@@ -45,7 +45,7 @@ ms.locfileid: "33048605"
 展開以顯示 [運算式] 屬性欄位。  
   
 **運算式**  
-顯示已選取之檢查條件約束的運算式。 對於新的條件約束，退出此方塊之前必須先輸入運算式。 您也可以編輯現有的檢查條件約束。 如需詳細資訊，請參閱 [使用條件約束 (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)。  
+顯示已選取之檢查條件約束的運算式。 對於新的條件約束，退出此方塊之前必須先輸入運算式。 您也可以編輯現有的檢查條件約束。 如需詳細資訊，請參閱 [使用條件約束 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)。  
   
 **識別類別目錄**  
 展開以顯示 [名稱] 與 [描述] 屬性。  
@@ -69,6 +69,6 @@ ms.locfileid: "33048605"
 指示當複寫代理程式在此資料表上執行插入或更新時，是否要強制使用條件約束。  
   
 ## <a name="see-also"></a>另請參閱  
-[使用條件約束 (Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
+[使用條件約束 (Visual Database Tools)](http://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [索引 - 鍵對話方塊 &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   

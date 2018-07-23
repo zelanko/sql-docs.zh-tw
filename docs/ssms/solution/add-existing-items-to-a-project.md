@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0d1bcd6432154b0b801b9f098fa22308a4fc0dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a1a91241ad235c62a88dc97596b073f7abf834af
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044655"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982750"
 ---
 # <a name="add-existing-items-to-a-project"></a>將現有的項目加入至專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 有兩種專案類型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql_md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要使副檔名與專案類型相關聯，請參閱 [如何：使副檔名與程式碼編輯器相關聯](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)。  
+請將新的項目加入專案中，來延伸應用程式功能。 現有項目可以是查詢或其他檔案。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 有兩種專案類型： [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 指令碼專案和 Analysis Services 指令碼專案。 專案類型決定了可以加入專案中的查詢檔。 例如，您可以將 [!INCLUDE[tsql](../../includes/tsql_md.md)] 查詢 (副檔名是 .sql 的檔案) 加入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 指令碼專案中，但您不能將它加入 Analysis Services 指令碼專案中。 若要使副檔名與專案類型相關聯，請參閱 [如何：使副檔名與程式碼編輯器相關聯](http://msdn.microsoft.com/193630f4-93de-4950-8f36-68702531f925)。  
   
 ### <a name="to-add-an-existing-query-or-a-miscellaneous-file-to-a-project"></a>將現有的查詢或其他檔案加入專案中  
   

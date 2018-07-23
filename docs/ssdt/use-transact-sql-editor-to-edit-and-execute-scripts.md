@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eccaf60d648824e2f170bf1fd78b8a8f1a16dc28
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4bdca5a6c8ea949e9106bd8d62b8fa6868577d13
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093864"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082960"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>使用 Transact-SQL 編輯器，編輯及執行指令碼
 Transact\-SQL 編輯器為您在使用指令碼時提供豐富的編輯和偵錯體驗。 使用 [檢視程式碼] 快顯功能表開啟連線的資料庫或專案中的資料庫實體時，會叫用這個編輯器。 從 [SQL Server 物件總管] 使用 [新增查詢] 快顯功能表，或將新的指令碼物件加入至資料庫專案時，也會自動開啟這個編輯器。  
@@ -32,7 +32,7 @@ Transact\-SQL 編輯器包含撰寫及編輯 Transact\-SQL 指令碼的主要 [T
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[如何：在 Transact-SQL 指令碼中設定大綱及加入程式碼片段](../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md)|使用程式碼片段選擇器，將現成的 Transact\-SQL 程式碼插入查詢。|  
 |[如何：在指令碼之間巡覽](../ssdt/how-to-navigate-between-scripts.md)|使用 [移至定義] 和 [尋找所有參考]，在指令碼之間巡覽。|  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48b5e195f437b3bc173869ac7d8a7334c741e2b2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042005"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985310"
 ---
 # <a name="create-a-multiserver-environment"></a>建立多伺服器環境
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,14 +60,14 @@ ms.locfileid: "33042005"
 ## <a name="related-tasks"></a>相關工作  
 下列主題說明建立多伺服器環境的常見工作。  
   
-|描述|主題|  
+|Description|主題|  
 |---------------|---------|  
 |描述如何建立主要伺服器。|[設為主要伺服器](../../ssms/agent/make-a-master-server.md)|  
 |描述如何建立目標伺服器。|[設為目標伺服器](../../ssms/agent/make-a-target-server.md)|  
 |描述如何將目標伺服器編列到主要伺服器中。|[將目標伺服器編列至主要伺服器](../../ssms/agent/enlist-a-target-server-to-a-master-server.md)|  
 |描述如何使目標伺服器脫離主要伺服器，|[使目標伺服器脫離主要伺服器](../../ssms/agent/defect-a-target-server-from-a-master-server.md)|  
 |描述如何從主要伺服器脫離多部目標伺服器。|[從主要伺服器脫離多個目標伺服器](../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)|  
-|描述如何檢查目標伺服器的狀態。|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/en-us/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/en-us/ec3a4a68-b591-431c-9518-053ede522d0c)|  
+|描述如何檢查目標伺服器的狀態。|[sp_help_targetserver (Transact-SQL)](http://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)<br /><br />[sp_help_targetservergroup (Transact-SQL)](http://msdn.microsoft.com/ec3a4a68-b591-431c-9518-053ede522d0c)|  
   
 ## <a name="see-also"></a>另請參閱  
 [為使用 Proxy 的多伺服器作業疑難排解](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md)  

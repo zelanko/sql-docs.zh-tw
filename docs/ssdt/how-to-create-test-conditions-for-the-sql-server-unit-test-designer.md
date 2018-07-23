@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5ef4c7f272cc66003051a395b93e119f153640a
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 90e82370a658109ae6a8ccc653affc5e15614a55
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093874"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087170"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>HOW TO：建立 SQL Server 單元測試設計工具的測試條件
 您可以使用可延伸的 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 類別，建立新的測試條件。 例如，您可以建立新的測試條件，驗證結果集中的資料行數目或值。  
@@ -179,7 +179,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 [ExportTestConditionAttribute](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.exporttestconditionattribute(v=vs.103).aspx) 必須加入至擴充 [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) 的類別。 此屬性可讓 SQL Server Data Tools 發現類別，並在單元測試設計和執行期間使用。 這個屬性接受兩個參數：  
   
-|屬性參數|位置|描述|  
+|屬性參數|位置|Description|  
 |-----------------------|------------|---------------|  
 |DisplayName|@shouldalert|識別 [測試條件] 下拉式方塊中的字串。 這個名稱必須是唯一的。 如果兩個條件有相同的顯示名稱，第一個找到的條件會向使用者顯示，並在 Visual Studio 錯誤管理員中顯示警告。|  
 |ImplementingType|2|這個參數是用來唯一識別擴充功能。 您必須變更它，以符合屬性放置所在的型別。 此範例會使用 **ResultSetColumnCountCondition** 類型，因此請使用 **typeof(ResultSetColumnCountCondition)**。 如果您的類型是 **NewTestCondition**，則使用 **typeof(NewTestCondition)**。|  

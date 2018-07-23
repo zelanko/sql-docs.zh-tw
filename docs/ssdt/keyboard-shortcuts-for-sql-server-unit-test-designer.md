@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8285a24e6f2e64bdba9c19dd511c08dcd93838a6
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 6d6612cd53f826917e784c20a5bd6c1a3509da1a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093871"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083440"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>SQL Server 單元測試設計工具的鍵盤快速鍵
 您可以使用下列鍵盤快速鍵，在 SQL Server 單元測試設計工具內瀏覽。  

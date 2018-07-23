@@ -23,11 +23,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d59e3448b3e833adacab7b37708725e8ff36864
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984020"
 ---
 # <a name="object-explorer-details-pane"></a>物件總管詳細資料窗格
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -92,7 +93,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="sql-server-object-search"></a>SQL Server 物件搜尋  
 萬用字元  
   
--   支援標準的萬用字元。 例如，搜尋 **dm_os%counters** 就會傳回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 如需詳細資訊，請參閱 [如何：用萬用字元搜尋](http://msdn.microsoft.com/en-us/449600f8-cc87-4b3f-878a-59c158a88a40)。  
+-   支援標準的萬用字元。 例如，搜尋 **dm_os%counters** 就會傳回 dm_os_memory_cache_counters 和 dm_os_performance_counters。 如需詳細資訊，請參閱 [如何：用萬用字元搜尋](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40)。  
   
 搜尋範圍  
   

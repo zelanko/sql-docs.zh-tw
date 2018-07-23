@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3d6d4c85a287dc000d761df1eafeb49e4261336
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 078e69c2df09253141aa55d66e387f7972ce8b2e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093862"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087880"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>如何：安裝和管理擴充功能
 您可以新增規則，以分析資料庫程式碼、資料庫單元測試的條件，以及建置/部署參與者，來增加 Visual Studio 版本 (包括 SQL Server Data Tools) 提供的功能。 不過，無論您已建立擴充功能或已安裝其他人建立的擴充功能，都必須先安裝擴充功能，才能使用它。  
@@ -56,7 +56,7 @@ ms.locfileid: "37093862"
   
 為了降低您的風險，只在擴充功能來自已知來源時，才予以安裝。 如果您從未受信任的來源取得擴充功能，應該檢查該擴充功能的原始程式碼及其安裝程式 (如果有)，然後進行安裝並使用該擴充功能。  
   
-## <a name="to-install-a-custom-feature-extension"></a>安裝自訂擴充功能  
+## <a name="to-install-a-custom-feature-extension"></a>若要安裝自訂擴充功能  
 將已簽署的組件 (.dll) 複製至正確的安裝資料夾。 關閉並重新開啟 Visual Studio。 現在應該可以使用擴充功能。  
   
 ## <a name="see-also"></a>另請參閱  

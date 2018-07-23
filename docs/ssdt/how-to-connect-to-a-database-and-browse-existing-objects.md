@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.connectionpicker.f1
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
@@ -16,12 +16,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 720328a32aae8287134fa0a7b76757fb66bed70d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: f342f1427b9943d14216fc5b785036036dd57345
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093903"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082680"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>如何：連接到資料庫及瀏覽現有的物件
 資料庫管理員與開發人員經常需要連接到即時資料庫，設計或瀏覽其結構描述，並查詢其物件。 Visual Studio 的 [SQL Server 物件總管] 現在包含專用的 [SQL Server] 節點，在這個節點下所有連接的 SQL Server 執行個體及其資料庫都依照與 SSMS 類似的階層分組。 連接的 SQL Server 執行個體可以是內部部署執行個體 (例如執行中的 SQL Server 2008 伺服器)，或是外部部署 SQL Azure 執行個體。  

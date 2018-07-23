@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43273f37f9ca8b8b1ef11af43d4f40cee1b1cbab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c0d13e8aced6ea882ebcc393418d4be1c09c03fd
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044045"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981950"
 ---
 # <a name="delete-one-or-more-jobs"></a>刪除一個或多個作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33044045"
   
 -   **若要使用下列項目刪除作業：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -97,7 +97,7 @@ ms.locfileid: "33044045"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_delete_job (Transact-SQL)](http://msdn.microsoft.com/en-us/b85db6e4-623c-41f1-9643-07e5ea38db09)。  
+如需詳細資訊，請參閱 [sp_delete_job (Transact-SQL)](http://msdn.microsoft.com/b85db6e4-623c-41f1-9643-07e5ea38db09)。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要刪除多個作業**  

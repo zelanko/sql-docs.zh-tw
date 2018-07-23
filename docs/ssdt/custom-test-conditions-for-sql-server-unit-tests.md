@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 807b718aaf84ed3760ba6b4bcece880ca73e6bc6
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 8f42e25023a989489000b124a653beb69c1afb33
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093860"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082560"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>SQL Server 單元測試的自訂測試條件
 您可以新增 SQL Server 單元測試的自訂測試條件。 不過，無論您已建立擴充功能或要安裝其他人建立的擴充功能，都必須先安裝測試條件，才能使用它。  

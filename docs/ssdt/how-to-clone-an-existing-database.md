@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1f46c4fd8164266394994260244dcbe81cde9c8
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 1037250907c897ce08f85da5af1c739849091338
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093870"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085920"
 ---
 # <a name="how-to-clone-an-existing-database"></a>如何：複製現有的資料庫
 這個工作將使用一些您在先前的程序中所學到的步驟，建立新的資料庫並移植現有的資料。 此外，它還使用[如何：使用結構描述比較，比較不同的資料庫定義](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)中所述的步驟，來同步處理來源和專案資料庫的結構描述。  

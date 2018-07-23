@@ -8,20 +8,20 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fc026287cb292f3074afe4392d38088b3ba456d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093915"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087140"
 ---
-# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>如何：從 Team Foundation Build 執行 SQL Server 單元測試
+# <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
 您可以使用 Team Foundation Build，在執行組建驗證測試 (BVT) 時執行 SQL Server 單元測試。 您可以設定單元測試以部署資料庫、產生測試資料，然後執行選取的測試。 如果您不熟悉 Team Foundation Build，就應該先檢閱下列資訊，然後再依照本主題的程序進行：  
   
 -   [建立和定義 SQL Server 單元測試](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
@@ -73,7 +73,7 @@ ms.locfileid: "37093915"
 ## <a name="ConfigureX64"></a>設定測試設定以在 x64 組建代理程式上執行 SQL Server 單元測試  
 針對 x64 組建代理程式執行單元測試之前，您必須先進行測試設定以變更主機處理序平台。  
   
-#### <a name="to-specify-the-host-process-platform"></a>指定主機處理序平台  
+#### <a name="to-specify-the-host-process-platform"></a>若要指定主機處理序平台  
   
 1.  開啟包含您想要進行設定之測試專案的方案。  
   
@@ -85,12 +85,12 @@ ms.locfileid: "37093915"
   
 4.  在詳細資料窗格的 [主機處理序平台] 中，按一下 [MSIL] 以設定在 x64 組建代理程式上執行測試。  
   
-5.  按一下 [套用]。  
+5.  按一下 **[套用]**。  
   
 ## <a name="CreateATestList"></a>將測試指派給測試分類 (選擇性)  
 一般而言，當您建立組建定義以執行單元測試時，可以指定一個或多個測試分類。 指定之分類中的所有測試都會在組建執行時執行。  
   
-#### <a name="to-assign-tests-to-a-test-category"></a>將測試指派給測試分類  
+#### <a name="to-assign-tests-to-a-test-category"></a>若要將測試指派給測試分類  
   
 1.  開啟 [測試檢視] 視窗。  
   
@@ -105,12 +105,12 @@ ms.locfileid: "37093915"
     新的測試分類將會指派給您的測試，而且將透過屬性提供給其他測試。  
   
 ## <a name="ModifyTestProject"></a>修改測試專案  
-根據預設，Team Foundation Build 會在建置單元測試專案時，根據專案的 app.config 檔案建立組態檔。 資料庫專案的路徑在 app.config 檔案中是儲存為相對路徑。 可在 Visual Studio 中運作的相對路徑將無法運作，因為 Team Foundation Build 會將建置的檔案放入相對於單元測試執行位置的不同位置。 此外，您的 app.config 檔案包含指定要測試之資料庫的連接字串。 如果單元測試必須連接的資料庫與建立測試專案時使用的資料庫不同，您也需要針對 Team Foundation Build 建立個別的 app.config 檔案。 藉由進行下一個程序的修改，您可以設定測試專案和組建伺服器，讓 Team Foundation Build 使用不同的組態。  
+根據預設，Team Foundation Build 會在建置單元測試專案時，根據專案的 app.config 檔案建立組態檔。 資料庫專案的路徑在 app.config 檔案中是儲存為相對路徑。 可在 Visual Studio 中運作的相對路徑將無法運作，因為 Team Foundation Build 會將建置的檔案放入相對於單元測試執行位置的不同位置。 此外，您的 app.config 檔案包含指定要測試之資料庫的連接字串。 如果單元測試必須連接的資料庫與建立測試專案時使用的資料庫不同，您也需要針對 Team Foundation Build 建立個別的 app.config 檔案。 藉由進行下一項程序的修改，您可以設定測試專案和組建伺服器，讓 Team Foundation Build 使用不同的組態。  
   
 > [!IMPORTANT]  
 > 您必須針對每個測試專案 (.vbproj 或 .vsproj) 執行這個程序。  
   
-#### <a name="to-specify-an-appconfig-file-for-team-foundation-build"></a>指定 Team Foundation Build 的 app.config 檔案  
+#### <a name="to-specify-an-appconfig-file-for-team-foundation-build"></a>若要指定 Team Foundation Build 的 app.config 檔案  
   
 1.  在 [方案總管] 中，以滑鼠右鍵按一下 app.config 檔案，然後按一下 [複製]。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "37093915"
     <DatabaseDeployment DatabaseProjectFileName="..\..\..\Database3\Database3.sqlproj"      Configuration="Debug" />  
     ```  
   
-    更新檔案為下列內容：  
+    請更新檔案為下列內容：  
   
     ```  
     <DatabaseDeployment DatabaseProjectFileName="..\..\..\Database3\Database3.sqlproj"      Configuration="Debug" />  
@@ -166,7 +166,7 @@ ms.locfileid: "37093915"
   
 7.  更新 ExecutionContext 和 PrivilegedContext 的 ConnectionString 屬性以指定您想要部署之目標資料庫的連接。  
   
-8.  按一下 [檔案] 功能表上的 [全部儲存]。  
+8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
 9. 在 [方案總管] 中，按兩下 app.config。  
   
@@ -180,13 +180,13 @@ ms.locfileid: "37093915"
     <SqlUnitTesting_VS2012 AllowConfigurationOverride="true">  
     ```  
   
-    透過進行此變更，您便允許 Team Foundation Build 使用已建立的取代組態檔。  
+    透過進行這項變更，您便允許 Team Foundation Build 使用已建立的取代組態檔。  
   
-11. 按一下 [檔案] 功能表上的 [全部儲存]。  
+11. 按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
     接下來，您必須更新 Local.testsettings 以包含自訂的組態檔。  
   
-#### <a name="to-customize-localtestsettings-to-deploy-the-customized-configuration-file"></a>自訂 Local.testsettings 以部署自訂的組態檔  
+#### <a name="to-customize-localtestsettings-to-deploy-the-customized-configuration-file"></a>若要自訂 Local.testsettings 以部署自訂的組態檔  
   
 1.  在 [方案總管] 中，按兩下 Local.testsettings。  
   
@@ -200,11 +200,11 @@ ms.locfileid: "37093915"
   
 5.  在 [加入部署檔案] 對話方塊中，指定您建立的 *BuildComputer*.sqlunitttest.config 檔案。  
   
-6.  按一下 [套用]。  
+6.  按一下 **[套用]**。  
   
-7.  按一下 [關閉]。  
+7.  按一下 [ **關閉**]。  
   
-8.  按一下 [檔案] 功能表上的 [全部儲存]。  
+8.  按一下 [ **檔案** ] 功能表上的 [ **全部儲存**]。  
   
     接下來，您必須將方案簽入至版本控制。  
   
@@ -214,7 +214,7 @@ ms.locfileid: "37093915"
 > [!NOTE]  
 > 這個程序所描述的步驟適用於 Team Foundation 版本控制。 如果您使用不同的版本控制軟體，就必須依照該軟體適用的步驟進行。  
   
-#### <a name="to-check-in-the-solution"></a>簽入方案  
+#### <a name="to-check-in-the-solution"></a>若要簽入方案  
   
 1.  連接到執行 Team Foundation Server 的電腦。  
   
@@ -239,7 +239,7 @@ ms.locfileid: "37093915"
   
 ## <a name="CreateBuildDef"></a>建立組建定義  
   
-#### <a name="to-create-a-build-definition"></a>建立組建定義  
+#### <a name="to-create-a-build-definition"></a>若要建立組建定義  
   
 1.  在 Team Explorer 中，按一下您的 Team 專案、以滑鼠右鍵按一下 [組建] 節點，然後按一下 [新增組建定義]。  
   
@@ -263,7 +263,7 @@ ms.locfileid: "37093915"
   
     此方案就會顯示在 [要建置的專案或方案檔] 清單中。  
   
-9. 按一下 [確定]。  
+9. 按一下 [確定] 。  
   
 10. 在 [基本] 群組的 [自動化測試] 中，指定您要執行的測試。 根據預設，系統將會執行方案中名為 *test\*.dll 之檔案所包含的測試。  
   
@@ -273,9 +273,9 @@ ms.locfileid: "37093915"
   
 ## <a name="RunBuild"></a>執行新的組建定義  
   
-#### <a name="to-run-the-new-build-type"></a>執行新的組建類型  
+#### <a name="to-run-the-new-build-type"></a>若要執行新的組建類型  
   
-1.  在 Team Explorer 中，展開 Team 專案節點、展開 [組建] 節點、以滑鼠右鍵按一下您想要執行的組建定義，然後按一下 [佇列新組建]。  
+1.  在 [Team 總管] 中，展開 Team 專案節點、展開 [組建] 節點、以滑鼠右鍵按一下您想要執行的組建定義，然後按一下 [佇列新組建]。  
   
     [佇列組建 {***TeamProjectName***}] 對話方塊隨即出現，並列出所有現有的組建類型。  
   

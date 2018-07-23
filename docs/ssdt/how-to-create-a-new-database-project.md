@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
 - sql.data.tools.SqlProjectImportDatabaseDialog.dialog
@@ -21,12 +21,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2482967c3001377a803b87e6bcd46c3cc9183b82
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 4fdaca995e96116b1268916d008b565454511489
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093900"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088480"
 ---
 # <a name="how-to-create-a-new-database-project"></a>如何：建立新的資料庫專案
 您可以建立新的資料庫專案，並從現有的資料庫、.sql 指令碼檔案或資料層應用程式 (.dacpac) 匯入資料庫結構描述。 接著，您可以叫用相同的視覺化設計工具 (Transact\-SQL 編輯器、資料表設計工具)，讓連接的資料庫開發工作變更離線資料庫專案，並將變更發行回生產資料庫。 變更也可以另存成指令碼，等以後再發行。 使用 [專案屬性] 窗格，您可以將目標平台變更為其他版本的 SQL Server (包括 SQL Azure)。  

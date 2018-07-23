@@ -8,18 +8,18 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd81ffb8d1530478147147c7aecddd39a368cd9b
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a7997f7b2acf88ea358c9ddd42df5cca073a8f28
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093850"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087120"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>HOW TO：建立 SQL Server 資料庫單元測試的測試專案
 在您開始撰寫評估資料庫物件的單元測試之前，必須先建立測試專案。 這個專案會包含 SQL Server 單元測試，但是它可以包含其他類型的測試。  

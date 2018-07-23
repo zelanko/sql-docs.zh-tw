@@ -18,12 +18,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 024175506b041ae9c62585dbdcc05da4b84bea02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f0cabc48571c7b3656086d918b649bb5bb305e23
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039635"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985370"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>利用 SQL Server Management Studio 管理伺服器
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33039635"
 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 的工具元件包括已註冊的伺服器、物件總管、方案總管、範本總管、物件總管詳細資料頁面，以及文件視窗。 若要顯示工具，請在 [檢視] 功能表上按一下工具名稱。 若要顯示查詢編輯器工具，請在工具列上按一下 [新增查詢] 按鈕。  
   
 > [!IMPORTANT]  
-> 依預設，不會加密 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 之間的網路傳輸。 除非您已建立加密連接，否則，請勿在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中使用機密資料 (包括密碼)。 如需詳細資訊，請參閱 [如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)](http://msdn.microsoft.com/en-us/e1e55519-97ec-4404-81ef-881da3b42006)。  
+> 依預設，不會加密 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 和 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 之間的網路傳輸。 除非您已建立加密連接，否則，請勿在 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 中使用機密資料 (包括密碼)。 如需詳細資訊，請參閱 [如何：啟用 Database Engine 的加密連接 (SQL Server 組態管理員)](http://msdn.microsoft.com/e1e55519-97ec-4404-81ef-881da3b42006)。  
   
 請利用 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 來執行下列動作：  
   
@@ -66,5 +66,5 @@ ms.locfileid: "33039635"
   
 ## <a name="see-also"></a>另請參閱  
 [使用 SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[如何：檢視伺服器屬性 (SQL Server Management Studio)](http://msdn.microsoft.com/en-us/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
+[如何：檢視伺服器屬性 (SQL Server Management Studio)](http://msdn.microsoft.com/55f3ac04-5626-4ad2-96bd-a1f1b079659d)  
   

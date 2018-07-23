@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_RESULTS.RESULTS_TO_GRID
 - sql.data.tools.SqlExecutionAdvancedSettingsOption
@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4e626e50cebf0aba8acde865bfcfd78f1023f978
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093923"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085940"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 編輯器選項
 本主題包含 Transact-SQL 編輯器部分選項的相關資訊。 若要設定這些選項，請透過 [工具\選項] 功能表巡覽至 [選項] 對話方塊。  
@@ -47,7 +47,7 @@ ms.locfileid: "37093923"
   
 ## <a name="QueryExecution"></a>查詢執行  
   
-|屬性|描述|  
+|屬性|Description|  
 |------------|---------------|  
 |**SET ROWCOUNT**|預設值 0 表示 SQL Server 將等候結果，直到所有結果都收到為止。 如果您要 SQL Server 在取得指定的資料列數後停止查詢，請提供大於 0 的值。 若要關閉此選項 (以便傳回所有資料列)，請指定 SET ROWCOUNT 0。|  
 |**SET TEXTSIZE**|2,147,483,647 個位元組的預設值表示 SQL Server 將提供完整的資料欄位，直到 text、ntext、nvarchar(max) 及 varchar(max) 資料欄位的上限。 這不會影響 XML 資料類型。 提供較小的數值，即可在有大量數值時，限制傳回的結果數量。 資料行若大於提供的數值，就會被截斷。|  
@@ -75,7 +75,7 @@ ms.locfileid: "37093923"
   
 ## <a name="QueryResults"></a>查詢結果  
   
-|屬性|描述|  
+|屬性|Description|  
 |------------|---------------|  
 |**在結果集裡包含查詢**|將查詢的文字當成結果集的一部分傳回。|  
 |**複製或儲存結果時包含資料行標頭**|將結果複製到剪貼簿或儲存在檔案中時，請包含資料行標頭 (標題)。 如果您不想將結果資料儲存或複製為只有資料而沒有資料行標題，請清除此核取方塊。|  

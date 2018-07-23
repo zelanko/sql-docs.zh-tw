@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a22cd85838246c77263fa2794b2a45bea5b48c12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d92382ab70a380eb85659e728e1e83d8380d153d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043875"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985200"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -101,5 +101,5 @@ ms.locfileid: "33043875"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_update_proxy (Transact-SQL)](http://msdn.microsoft.com/en-us/864fd0e6-9d61-4f07-92ef-145318d2f881)。  
+如需詳細資訊，請參閱 [sp_update_proxy (Transact-SQL)](http://msdn.microsoft.com/864fd0e6-9d61-4f07-92ef-145318d2f881)。  
   

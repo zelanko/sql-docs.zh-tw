@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.SqlProjectImportSnapshotSummaryDialog.dialog
 - sql.data.tools.SqlProjectImportSnapshotDialog.dialog
@@ -17,12 +17,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab9468ad6bc1e8d29ce040ceb66392dff3764fe4
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 34430ec8b9da41806e86a0b7fa6de99057765aca
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093889"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088300"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>如何：建立專案的快照集
 **資料層應用程式**檔案提供了資料庫結構描述建立當時的唯讀表示。 其本質上被視為資料庫結構描述，您可以從中將結構描述物件匯回專案。 您也可以將它與資料庫或專案的結構描述進行比較，然後更新資料庫或專案以反映快照集之中定義的結構描述。  
