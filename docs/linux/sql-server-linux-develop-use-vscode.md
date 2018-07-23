@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
-ms.openlocfilehash: 3291767b4fa1f7b18e751661f9beeb0e061f8146
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: be5a40a904389979c1646aab9d8b4420ac71356a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984330"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084740"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>使用 Visual Studio Code 來建立和執行 SQL Server 的 TRANSACT-SQL 指令碼
 
@@ -248,7 +248,7 @@ Visual Studio Code 是適用於 Linux、 macOS 和支援擴充功能的 Windows 
 
    <img src="./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png" alt="Save as Json" style="width: 500px;" />
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 在真實世界案例中，您所建立的指令碼，可能會先儲存之後再執行 (無論用於系統管理或做為更大型的開發專案的一部分)。 在此情況下，您可以使用 **.sql** 為副檔名的方式儲存指令碼。
 
