@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: 6f5a4b479c9ca217d0bde9535c28b301ea7715bc
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38978900"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086970"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>使用 Visual Studio 來建立 Linux 上的 SQL Server 資料庫
 
@@ -107,7 +107,7 @@ Linux 上的 SQL Server 2017 的 SSDT 17.0 RC 或更新版本的版本支援。
 
 在您順利在 Linux 上的 SQL Server 執行個體上建立新的資料庫並了解開發資料庫與原始檔控制資料庫專案的基本概念。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 如果您還不熟悉 T-SQL，請參閱[教學課程：撰寫國際性通用的 Transact-SQL 陳述式]並[TRANSACT-SQL 參考 (Database Engine)]。
 

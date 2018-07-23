@@ -1,7 +1,7 @@
 ---
 title: sp_execute_external_script (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2018
+ms.date: 07/14/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -24,17 +24,17 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 5660860a3a03a268b0903a0222753f1ea9bc5382
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: f106a4ed11658856412e3e874f1f57af87e22211
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974090"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086170"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  執行與位於外部位置引數提供的指令碼。 必須在支援的和已註冊的語言中撰寫指令碼。 若要執行**sp_execute_external_script**，您必須先啟用外部指令碼使用陳述式， `sp_configure 'external scripts enabled', 1;`。  
+  執行與位於外部位置引數提供的指令碼。 必須在支援的和已註冊的語言 （R 或 Python） 中撰寫指令碼。 若要執行**sp_execute_external_script**，您必須先啟用外部指令碼使用陳述式， `sp_configure 'external scripts enabled', 1;`。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,28 +53,30 @@ sp_execute_external_script
 ```
 
 ## <a name="arguments"></a>引數
- @language = N'*語言*'  
+ \@語言 = N'*語言*'  
  表示指令碼語言。 *語言*已**sysname**。  
 
  有效值`Python`或`R`。 
   
- @script = N'*指令碼*'  
+ \@指令碼 = N'*指令碼*'  
  指定為常值或變數輸入的外部語言指令碼。 *指令碼*已**nvarchar （max)**。  
   
- [ @input_data_1_name = N'*input_data_1_name*']  
- 指定用來代表查詢所定義的變數名稱@input_data_1。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 *input_data_1_name*已**sysname**。  
+ [ \@input_data_1_name = N'*input_data_1_name*']  
+ 指定用來代表查詢所定義的變數名稱\@input_data_1。 在 外部指令碼變數的資料類型會因語言而定。 如果 R 輸入的變數會是資料框架。 在 Python 中，輸入必須是表格式。 *input_data_1_name*已**sysname**。  
   
  預設值是`InputDataSet`。  
   
- [ @input_data_1 = N'*input_data_1*']  
+ [ \@input_data_1 = N'*input_data_1*']  
  指定的表單中的外部指令碼所使用的輸入的資料[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢。 資料類型*input_data_1*是**nvarchar （max)**。
   
- [ @output_data_1_name = N'*output_data_1_name*']  
+ [ \@output_data_1_name = N'*output_data_1_name*']  
  包含要傳回之資料的外部指令碼中指定的變數名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]預存程序呼叫完成時。 在 外部指令碼變數的資料類型會因語言而定。 針對 R，輸出必須是資料框架。 對於 Python，輸出必須是 pandas 資料框架。 *output_data_1_name*已**sysname**。  
   
  預設值為"OutputDataSet 」。  
   
- [ @parallel = 0 | 1] 啟用平行執行 R 指令碼，藉由設定`@parallel`參數設為 1。 此參數的預設值為 0 (沒有 parallelism)。  
+ [\@平行 = 0 | 1]
+
+ 藉由設定啟用平行執行 R 指令碼`@parallel`參數設為 1。 此參數的預設值為 0 (沒有 parallelism)。  
   
  針對未使用 RevoScaleR 函式，使用 R 指令碼`@parallel`參數可以是有幫助處理大型資料集，假設指令碼可透過極簡方式平行處理。 例如，當使用 R`predict`函式使用的模型，來產生新預測，請將設定`@parallel = 1`以做為查詢引擎的提示。 如果可以平行處理查詢，資料列會根據散發**MAXDOP**設定。  
   
@@ -82,10 +84,11 @@ sp_execute_external_script
   
  使用 RevoScaleR 函數的 R 指令碼，平行處理會自動處理，您不應指定`@parallel = 1`要**sp_execute_external_script**呼叫。  
   
- [ @params = N' *@parameter_name data_type* [OUT |輸出] [，......n]']  
+ [ \@params = N'*\@parameter_name data_type* [OUT |輸出] [，......n]']  
  外部指令碼中使用的輸入的參數宣告的清單。  
   
- [ @parameter1 = '*value1*' [OUT |輸出] [，......n]]  
+ [ \@parameter1 = '*value1*' [OUT |輸出] [，......n]]  
+
  外部指令碼所使用的輸入參數的值清單。  
 
 ## <a name="remarks"></a>備註
@@ -119,7 +122,7 @@ sp_execute_external_script
 
 ### <a name="data-types"></a>資料類型
 
-使用中，輸入的查詢或參數時，不支援下列資料類型`sp_execute_external_script`程序，並傳回不支援的類型錯誤。  
+使用中，輸入的查詢或參數時，不支援下列資料類型**sp_execute_external_script**程序，並傳回不支援的類型錯誤。  
 
 因應措施， **CAST**資料行或值中的支援型別[!INCLUDE[tsql](../../includes/tsql-md.md)]再將它傳送至外部指令碼。  
   
@@ -147,7 +150,7 @@ sp_execute_external_script
 
 浮點數的值 (例如`+Inf`， `-Inf`， `NaN`) 中不支援[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]即使這兩種語言使用 IEEE 754。 目前的行為只會將值傳送至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]直接; 如此一來中的 SQL 用戶端[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]擲回錯誤。 因此，這些值會轉換成**NULL**。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>[權限]
 
 需要**EXECUTE ANY EXTERNAL SCRIPT**資料庫權限。  
 

@@ -1,9 +1,9 @@
 ---
-redirect_url: /sql/connect/jdbc/reference/datetimeoffset-class
-ms.openlocfilehash: 02d829b8eb38b37ad5713d43d51a72cbe6be2cdb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+redirect_url: /sql/connect/jdbc/reference/jdbc-driver-api-reference
+ms.openlocfilehash: 410dfc24b4642220467ce98e1a6e23aab29a6538
+ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2017
-ms.locfileid: "24110888"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39174915"
 ---

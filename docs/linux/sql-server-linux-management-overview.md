@@ -5,19 +5,19 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.date: 03/17/2017
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: sql-linux
-ms.openlocfilehash: 89b670f6b4dd815744f505d1aa4f60a29d25bcaa
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 26123d12c48c6c8abd51590d3f6d42c7476acd29
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984143"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102416"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>選擇正確的工具來管理 SQL Server on Linux
 
@@ -26,6 +26,7 @@ ms.locfileid: "37984143"
 有幾種方式來管理 Linux 上的 SQL Server 2017。 下一節提供不同的管理工具和技術，具有更多資源的指標的快速概觀。
 
 ## <a name="mssql-conf"></a>mssql-conf 
+
 **Mssql conf**工具在 Linux 上設定 SQL Server。 如需詳細資訊，請參閱 <<c0> [ 設定 SQL Server on Linux 使用 mssql-conf](sql-server-linux-configure-mssql-conf.md)。
 
 ## <a name="transact-sql"></a>Transact-SQL
@@ -48,6 +49,6 @@ Microsoft 已發行新的跨平台指令碼工具，適用於 SQL Server [mssql 
 
 PowerShell 提供豐富的命令列環境，來管理 SQL Server on Linux。 如需詳細資訊，請參閱 <<c0> [ 使用 PowerShell 管理 SQL Server on Linux](sql-server-linux-manage-powershell.md)。
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 在 Linux 上 SQL Server 的相關資訊，請參閱[在 Linux 上的 SQL Server](sql-server-linux-overview.md)。

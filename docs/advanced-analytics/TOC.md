@@ -29,7 +29,7 @@
 ## SQL Server 2016
 ### [R Services (資料庫內)](install/sql-r-services-windows-install.md)
 ### [R Server (獨立式)](install/sql-r-standalone-windows-install.md)
-## [預先訓練模型](r/install-pretrained-models-sql-server.md)
+## [預先訓練模型](install/sql-pretrained-models-install.md)
 ## [命令提示字元安裝程式](install/sql-ml-component-commandline-install.md)
 ## [離線安裝程式 (不連線到網際網路)](install/sql-ml-component-install-without-internet-access.md)
 ## [升級 R 與 Python](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
