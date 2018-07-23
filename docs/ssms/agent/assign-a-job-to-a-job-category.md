@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6a0bc7d845f4132483c17de9d68d202cc4e1c088
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c4fe6ebbe8b2ba0d9953be796de944b225b869b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042645"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981670"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>將作業指派至作業類別目錄
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "33042645"
   
 -   **若要使用下列項目將作業指派至作業類別目錄：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "33042645"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/en-us/cbdfea38-9e42-47f3-8fc8-5978b82e2623)。  
+如需詳細資訊，請參閱 [sp_update_job (Transact-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623)。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要將作業指派至作業類別目錄**  

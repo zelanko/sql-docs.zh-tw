@@ -17,11 +17,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 413ee4cac6f8cb6ca60ad92165f50177e4801cf1
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987940"
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 版本資訊
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "36926499"
 SQL Server 2016 SP2 安裝在安裝之後可能需要重新開機。 最佳做法是在 SQL Server 2016 SP2 安裝後規劃和執行重新開機。
 
 SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
-|功能|描述|詳細資訊|
+|功能|Description|詳細資訊|
 |   --- |   --- |   --- |
 |已改善散發 DB 清除程序 |   過度龐大的散發資料庫資料表會造成封鎖和死結情況。 改善的清除程序旨在排除其中一些封鎖或死結情況。 |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding) \(機器翻譯\)  |
 |變更追蹤清除    |   已改善針對變更追蹤資料表的變更追蹤清除效能和效率。    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) \(機器翻譯\) |
@@ -55,7 +55,7 @@ SQL Server 2016 SP2 中包含有關效能和規模調整的改善。
 |針對累加統計資料改善自動統計資料更新 |    在特定案例下，當資料表中的多個分割區發生數個資料變更，且累加統計資料的總修改計數器超過自動更新閾值，但沒有任何個別分割區超過自動更新閾值時，統計資料更新可能會延遲，直到資料表中發生更多修改為止。 此行為已在追蹤旗標 11024 下修正。   |       |
 
 SQL Server 2016 SP2 中已包含支援能力和診斷相關的改善。
-|功能 |描述   |詳細資訊   |
+|功能 |Description   |詳細資訊   |
 |   --- |   --- |   --- |
 |針對可用性群組中資料庫的完整 DTC 支援    |   SQL Server 2016 中目前不支援可用性群組中資料庫的跨資料庫交易。 在 SQL Server 2016 SP2 中，我們針對可用性群組資料庫的分散式交易推出完整支援。   |       |
 |更新 sys.databases 的 is_encrypted 資料行，以正確反映 TempDB 的加密狀態 |   TempDB 之 sys.databases 中的 is_encryptedcolumn 資料行的值為 1，即使在您關閉所有使用者資料庫的加密並重新啟動 SQL Server 之後也一樣。 預期的行為是該值為 0，因為在此情況下 TempDB 已經不再加密。 從 SQL Server 2016 SP2 開始，sys.databases.is_encrypted 現在會正確地反映 TempDB 的加密狀態。  |       |
@@ -106,7 +106,7 @@ SQL Server SP1 Standard、Web、Express 和 Local DB 版本提供下列功能 (�
 
 下表摘要說明 SQL Server 2016 SP1 中提供的重要改善。
 
-|功能|描述|如需詳細資訊|
+|功能|Description|如需詳細資訊|
 |---|---|---|
 |在 TF 715 下，使用自動 TABLOCK 大量插入堆積| 追蹤旗標 715 可啟用資料表鎖定，以大量載入作業到不含非叢集索引的堆積。|[將 SAP 工作負載移轉至 SQL Server 的速度加快 2.5 倍](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE 或 ALTER|部署預存程序、觸發程序、使用者定義的函式和檢視等物件。|[SQL Server 資料庫引擎部落格](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|

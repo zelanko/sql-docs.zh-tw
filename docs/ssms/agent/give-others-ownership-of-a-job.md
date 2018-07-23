@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ba025ae882c1779cc4022b4cb75d323384a2708
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d795f709f37772c22cfcffb2b9f0d98c77a7501e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044495"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980030"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "33044495"
   
 2.  在工具列上，按一下 **[新增查詢]**。  
   
-3.  在查詢視窗中，輸入下列使用 [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/en-us/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) 系統預存程序的陳述式。 下列範例會將 `danw` 的所有作業重新指派給 `françoisa`。  
+3.  在查詢視窗中，輸入下列使用 [sp_manage_jobs_by_login (Transact-SQL)](http://msdn.microsoft.com/832ec15a-6e92-4eb5-8c4a-af4dba79fbaa) 系統預存程序的陳述式。 下列範例會將 `danw` 的所有作業重新指派給 `françoisa`。  
   
     ```  
     USE msdb ;  
@@ -97,7 +97,7 @@ ms.locfileid: "33044495"
 ## <a name="SMOProc2"></a>使用 SQL Server 管理物件  
 **若要賦予作業擁有權給其他人**  
   
-1.  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 **Job** 類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](http://msdn.microsoft.com/en-us/900242ad-d6a2-48e9-8a1b-f0eea4413c16)。  
+1.  使用所選的程式語言，例如 Visual Basic、Visual C# 或 PowerShell，呼叫 **Job** 類別。 如需範例程式碼，請參閱 [使用 SQL Server Agent 排程自動管理工作](http://msdn.microsoft.com/900242ad-d6a2-48e9-8a1b-f0eea4413c16)。  
   
 ## <a name="see-also"></a>另請參閱  
 [實作作業](../../ssms/agent/implement-jobs.md)  

@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708936"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975193"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -135,7 +135,7 @@ ms.locfileid: "34708936"
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 定義了下表所列的子系統：  
   
-|子系統名稱|描述|  
+|子系統名稱|Description|  
 |--------------|-----------|  
 |Microsoft ActiveX Script|執行 ActiveX Scripting 作業步驟。<br /><br />**警告** [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 之後的版本會將 ActiveX Scripting 子系統從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 中移除。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |作業系統 (**CmdExec**)|執行可執行的程式。|  
@@ -175,7 +175,7 @@ ms.locfileid: "34708936"
   
 若要開始使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent，請使用下列工作：  
   
-|描述|主題|  
+|Description|主題|  
 |-----------|-----|  
 |描述如何設定 SQL Server Agent。|[設定 SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
 |描述如何啟動、停止和暫停 SQL Server Agent 服務。|[啟動、停止或暫停 SQL Server Agent 服務](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  

@@ -14,11 +14,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: 79e09b64fc044aaa6da89f34a4fa81d892fc6c5f
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36848656"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041006"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 版本資訊
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

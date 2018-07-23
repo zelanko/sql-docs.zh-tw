@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 359126ee294db0c10c9c738abdd195ea999f9fa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52f6f4c0406bd1aa90585723025ce5456c34c1e9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33044935"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980130"
 ---
 # <a name="create-an-analysis-services-job-step"></a>Create an Analysis Services Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33044935"
   
 -   **若要透過下列項目，建立使用 Analysis Services 命令和/或查詢的 SQL Server 作業步驟：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "33044935"
   
 -   如果作業步驟使用 Analysis Services 命令，命令陳述式必須是 XML for Analysis Services **Execute** 方法。 此陳述式可能不包含完整的簡易物件存取通訊協定 (SOAP) Envelope 或 XML for Analysis **Discover** 方法。 雖然 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 支援完整的 SOAP Envelope 與 **Discover** 方法，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 作業步驟則不支援。 如需有關 XML for Analysis Services 的詳細資訊，請參閱 [XML for Analysis 概觀 (XMLA)](http://msdn.microsoft.com/library/ms187190.aspx)。  
   
--   如果作業步驟使用 Analysis Services 查詢，查詢陳述式必須是多維度運算式 (MDX) 查詢。 如需 MDX 的詳細資訊，請參閱 [MDX 陳述式基礎觀念 (MDX)](http://msdn.microsoft.com/en-us/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
+-   如果作業步驟使用 Analysis Services 查詢，查詢陳述式必須是多維度運算式 (MDX) 查詢。 如需 MDX 的詳細資訊，請參閱 [MDX 陳述式基礎觀念 (MDX)](http://msdn.microsoft.com/a560383b-bb58-472e-95f5-65d03d8ea08b)。  
   
 ### <a name="Security"></a>Security  
   
@@ -150,7 +150,7 @@ ms.locfileid: "33044935"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)。  
+如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
   
 #### <a name="to-create-an-analysis-services-query-job-step"></a>若要建立 Analysis Services 查詢作業步驟  
   
@@ -177,7 +177,7 @@ ms.locfileid: "33044935"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)。  
+如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **建立 PowerShell 指令碼作業步驟**  

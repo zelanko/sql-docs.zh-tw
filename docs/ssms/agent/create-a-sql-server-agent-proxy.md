@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 90acdf01a88ad5ae7e85775b5229df1a152a3669
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de162af663c3de079e23283d3a3ec19c4e5c176c
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045055"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979990"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>建立 SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -128,9 +128,9 @@ ms.locfileid: "33045055"
   
 如需詳細資訊，請參閱：  
   
--   [CREATE CREDENTIAL (Transact-SQL)](http://msdn.microsoft.com/en-us/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)  
+-   [CREATE CREDENTIAL (Transact-SQL)](http://msdn.microsoft.com/d5e9ae69-41d9-4e46-b13d-404b88a32d9d)  
   
--   [sp_add_proxy (Transact-SQL)](http://msdn.microsoft.com/en-us/cb59df37-f103-439b-bec1-2871fb669a8b)  
+-   [sp_add_proxy (Transact-SQL)](http://msdn.microsoft.com/cb59df37-f103-439b-bec1-2871fb669a8b)  
   
--   [sp_grant_proxy_to_subsystem (Transact-SQL)](http://msdn.microsoft.com/en-us/866aaa27-a1e0-453a-9b1b-af39431ad9c2)  
+-   [sp_grant_proxy_to_subsystem (Transact-SQL)](http://msdn.microsoft.com/866aaa27-a1e0-453a-9b1b-af39431ad9c2)  
   

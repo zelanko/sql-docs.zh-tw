@@ -13,11 +13,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 49f29fe95801b792444dcd69edfc630b78fe580b
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926979"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970320"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>解除安裝 PowerPivot for SharePoint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

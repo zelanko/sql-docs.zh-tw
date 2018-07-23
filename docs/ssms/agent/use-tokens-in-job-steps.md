@@ -23,11 +23,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 01eb7c21ff82d25e49982d5acd700ed9226f53bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971360"
 ---
 # <a name="use-tokens-in-job-steps"></a>在作業步驟中使用 Token
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "33046035"
   
 ### <a name="sql-server-agent-tokens"></a>SQL Server Agent Token  
   
-|Token|描述|  
+|Token|Description|  
 |---------|---------------|  
 |**(A-DBN)**|資料庫名稱。 若作業是由警示執行，則資料庫名稱值會自動取代作業步驟中的此 Token。|  
 |**(A-SVR)**|伺服器名稱。 若作業是由警示執行，則伺服器名稱值會自動取代作業步驟中的此 Token。|  
@@ -97,7 +97,7 @@ ms.locfileid: "33046035"
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server Agent 逸出巨集  
   
-|逸出巨集|描述|  
+|逸出巨集|Description|  
 |-----------------|---------------|  
 |**$(ESCAPE_SQUOTE(***token_name***))**|在 Token 取代字串中逸出單引號 (')。 使用兩個單引號來取代一個單引號。|  
 |**$(ESCAPE_DQUOTE(***token_name***))**|在 Token 取代字串中逸出雙引號 (")。 使用兩個雙引號來取代一個雙引號。|  

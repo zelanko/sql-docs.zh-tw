@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 02bb00f5a9edc2a0dcf00a489a1471fa06ba181e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4da622bd856de2c2eabf22a9f7f2fbef1f64144
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043475"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979866"
 ---
 # <a name="external-tools-dialog-box"></a>外部工具對話方塊
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "33043475"
 在功能表上選取工具時，指定會傳遞至該工具的變數。 啟動工具或命令時，引數可以指定會傳遞至該工具或命令的值。 例如，值可以指定檔案名稱或目錄。 請利用箭頭按鈕，從預先定義的引數清單中選取。 您可以加入一個以上。 如需預先定義的引數及其定義的完整清單，請參閱 [外部工具的引數](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)。 您也可以視所使用的命令或工具來輸入自訂引數 (例如，命令列參數)。  
   
 **使用輸出視窗**  
-開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 的 [輸出] 視窗以顯示執行命令的輸出。 並非所有的工具都能以 [輸出] 視窗中所顯示的格式來輸出。 如需詳細資訊，請參閱 [輸出視窗](http://msdn.microsoft.com/en-us/9808e00c-c8f6-45cc-896e-192b8420f747)。  
+開啟 [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] 的 [輸出] 視窗以顯示執行命令的輸出。 並非所有的工具都能以 [輸出] 視窗中所顯示的格式來輸出。 如需詳細資訊，請參閱 [輸出視窗](http://msdn.microsoft.com/9808e00c-c8f6-45cc-896e-192b8420f747)。  
   
 **將輸出視為 Unicode**  
 將輸出解譯為 Unicode。  

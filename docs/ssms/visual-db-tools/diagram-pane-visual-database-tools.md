@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a749cafa34c8db9d7cf2bc81c97e90da39e1bed3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33055295"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066586"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>圖表窗格 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "33055295"
   
 下表列出每一個資料表或資料表值物件矩形所使用的核取方塊和符號。  
   
-|核取方塊或符號|描述|  
+|核取方塊或符號|Description|  
 |-----------------------|---------------|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools 圖示")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools 圖示")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools 圖示")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools 圖示")|指定查詢結果集 (選取查詢) 中是否使用資料欄，或者是否在 UPDATE、INSERT FROM、製成資料表 (Make Table) 或 INSERT INTO 查詢中使用資料欄。 選取要新增到結果的資料行。 如果選取 [(所有資料行)]，所有資料行都將出現在輸出中。<br /><br />核取方塊所使用的圖示將根據您建立的查詢類型而有所改變。 建立刪除查詢時，您無法選取個別的資料行。|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools 圖示")<br /><br />![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools 圖示")|指示用來排列查詢結果 (ORDER BY 子句的一部分) 的資料欄。 如果排列順序為遞增，則圖示將以 A-Z 的方法呈現，如果為遞減排序，則為 Z-A。|  
@@ -85,7 +85,7 @@ ms.locfileid: "33055295"
   
 聯結線中間的圖示形狀即表示資料表或表格化物件的聯結方式。 如果聯結子句使用等號 (=) 以外的運算子，聯結線圖示將顯示使用的運算子。 下表即說明聯結線使用的圖示。  
   
-|聯結線圖示|描述|  
+|聯結線圖示|Description|  
 |------------------|---------------|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbih.gif "Visual Database Tools 圖示")|內部聯結 (使用等號建立)。|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 圖示")|使用「大於」運算子的內部聯結。 (聯結線圖式顯示的運算子即為聯結使用的運算子)|  
@@ -95,7 +95,7 @@ ms.locfileid: "33055295"
   
 聯結線結束部分的圖示表示聯結的類型。 下表將列出聯結類型和聯結線結束部分顯示的圖示。  
   
-|聯結線結束部分所顯示的圖示|描述|  
+|聯結線結束部分所顯示的圖示|Description|  
 |-----------------------------|---------------|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbim.gif "Visual Database Tools 圖示")|一對一聯結|  
 |![Visual Database Tools 圖示](../../ssms/visual-db-tools/media/dv3wbin.gif "Visual Database Tools 圖示")|一對多聯結|  

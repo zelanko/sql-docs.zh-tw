@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c43f3a3e6c717947859e9cbfc1b2de0197129c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b97950c37c5cff52f049253bbd85a60d5373d724
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33039955"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980050"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>連接到 Microsoft Azure 儲存體
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33039955"
 1.  **儲存體帳戶** - 指定儲存體帳戶名稱。
 
    >[!NOTE]
-   > 您只能連線到[一般目的儲存體帳戶](https://docs.microsoft.com/en-us/azure/storage/storage-introduction#introducing-the-azure-storage-services)。 連線到其他類型的儲存體帳戶可能會造成類似下面的錯誤：
+   > 您只能連線到[一般目的儲存體帳戶](https://docs.microsoft.com/azure/storage/storage-introduction#introducing-the-azure-storage-services)。 連線到其他類型的儲存體帳戶可能會造成類似下面的錯誤：
    >
    >  其中一個 HTTP 標頭之值的格式不正確。 (Microsoft.SqlServer.StorageClient)。
    >

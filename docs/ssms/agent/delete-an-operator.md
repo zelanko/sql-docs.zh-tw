@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 147252102c3428fe88bd143cce9c6b0be5ee8e9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 560e9328d4920b7cf4d9268f368eb39a03289278
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041995"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979200"
 ---
 # <a name="delete-an-operator"></a>刪除操作員
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -98,5 +98,5 @@ ms.locfileid: "33041995"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_delete_operator (Transact-SQL)](http://msdn.microsoft.com/en-us/ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95)。  
+如需詳細資訊，請參閱 [sp_delete_operator (Transact-SQL)](http://msdn.microsoft.com/ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95)。  
   

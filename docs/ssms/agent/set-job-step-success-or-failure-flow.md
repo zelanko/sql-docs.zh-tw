@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 82081372cc3f5567eba788676a32e554d1f9ef18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0988084d539c6e6b581bbde831be10789fcd923a
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046025"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981460"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>設定作業步驟成功或失敗的流程
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33046025"
   
 -   **若要使用下列項目，設定作業步驟成功或失敗的流程：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "33046025"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)。  
+如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要設定作業步驟成功或失敗的流程**  

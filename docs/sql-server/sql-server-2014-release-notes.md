@@ -15,11 +15,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 68caa38874e4afb83f8babf5bc56737a6c8f4cc1
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926969"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051936"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ SQL Server 2014 SP2 包含適用於 SQL Server 2014 SP1 CU7 的已發行 Hotfix 
 
 ### <a name="performance-and-scalability-improvements-in-sp2"></a>SP2 的效能及延展性改善
 
-|功能|描述|如需詳細資訊|
+|功能|Description|如需詳細資訊|
 |---|---|---|
 |自動軟體式 NUMA 資料分割|您可以在回報每一 NUMA 節點含 8 個以上 CPU 的系統上自動設定軟體式 NUMA。|[軟體式 NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)|
 |緩衝集區擴充|可讓 SQL Server 緩衝集區擴充到 8 TB 以上。|[緩衝集區擴充](https://docs.microsoft.com/sql/database-engine/configure-windows/buffer-pool-extension)|
@@ -42,7 +42,7 @@ SQL Server 2014 SP2 包含適用於 SQL Server 2014 SP1 CU7 的已發行 Hotfix 
 
 ### <a name="supportability-and-diagnostics-improvements-in-sp2"></a>SP2 的可支援性和診斷改善
 
-|功能|描述|如需詳細資訊|
+|功能|Description|如需詳細資訊|
 |---|---|---|
 |AlwaysOn 逾時記錄|已新增「租用逾時」訊息的記錄功能，以便記錄目前的時間和預期的續約時間。 |[已改善 AlwaysOn 可用性群組租用逾時的診斷](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)
 |AlwaysOn XEvent 和效能計數器|全新的 AlwaysOn XEvent 和效能計數器，可改善對 AlwaysOn 延遲問題進行疑難排解時的診斷。 |[KB 3107172](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve) 和 [KB 3107400](https://support.microsoft.com/help/3107400/improved-tempdb-spill-diagnostics-in-showplan-xml-schema-in-sql-server)

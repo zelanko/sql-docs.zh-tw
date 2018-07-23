@@ -20,12 +20,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58bd639a16003fe718a226b1aea7a3bb3bf5b470
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a30dd4d3eedea208255e02b6cbef6a842ad81906
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042451"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981490"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>從 SQL Server Management Studio 連接到任何 SQL Server 元件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33042451"
 雖然 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 可讓您在沒有先建立資料來源連接的情況下，直接使用查詢，但大部分其他工作都需要連接。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 提供 [連接到伺服器] 對話方塊，可讓您設定對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 元件的連線屬性。 當 [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 啟動時，便會開啟 [連接到伺服器] 對話方塊，提示您連線到伺服器。 [連接到伺服器] 對話方塊會保留上次使用的連線設定。  
   
 > [!NOTE]  
-> 您可以關閉這項功能，因此，不會自動起始任何連接。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](http://msdn.microsoft.com/en-us/d373298b-f6cf-458a-849d-7083ecb54ef5)。  
+> 您可以關閉這項功能，因此，不會自動起始任何連接。 如需詳細資訊，請參閱 [Database Engine Service Startup Options](http://msdn.microsoft.com/d373298b-f6cf-458a-849d-7083ecb54ef5)。  
   
 ## <a name="saving-connections"></a>儲存連接  
 您可以儲存通往「已註冊的伺服器」中之特定伺服器的連接，也可以利用 [方案總管] 來儲存專案中的連接。  

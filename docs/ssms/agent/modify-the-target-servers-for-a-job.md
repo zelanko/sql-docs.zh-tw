@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 03a679468f7f959e125c77c2decb1928de966562
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80af4eee06874191adbb07b3494479c5016161e2
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042175"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981111"
 ---
 # <a name="modify-the-target-servers-for-a-job"></a>Modify the Target Servers for a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-如需詳細資訊，請參閱 [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286)。  
+如需詳細資訊，請參閱 [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286)。  
   
 ## <a name="see-also"></a>另請參閱  
 [將整個企業的管理自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)  

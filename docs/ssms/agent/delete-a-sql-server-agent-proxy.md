@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73c929f0935cc5461eed6a7ac043ab24c2b4cf32
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 407db08417a3226b4e5b58e3c1758504ecc0ec79
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045125"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980850"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,5 +103,5 @@ ms.locfileid: "33045125"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_delete_proxy (Transact-SQL)](http://msdn.microsoft.com/en-us/44a1db13-b7f2-4dab-a1b5-b8dafb41737c)。  
+如需詳細資訊，請參閱 [sp_delete_proxy (Transact-SQL)](http://msdn.microsoft.com/44a1db13-b7f2-4dab-a1b5-b8dafb41737c)。  
   

@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d711ee612a0189fa6ac2dd7b2a51e73cad325ac1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1514151a2ccfee9e60dc11fe02e85117ae651e27
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043405"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38978910"
 ---
 # <a name="create-a-cmdexec-job-step"></a>建立 CmdExec 作業步驟
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "33043405"
   
 -   **若要使用下列項目建立 CmdExec 作業步驟：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "33043405"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755)  
+如需詳細資訊，請參閱 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **建立 CmdExec 作業步驟**  

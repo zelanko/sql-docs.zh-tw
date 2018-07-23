@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9aa5c92c0579fdcda7ca336e4893b1a5417dfaa0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e972f506f9b805d0cca28e0dfe3340e2ee28cd57
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045075"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979710"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>建立及附加排程至作業
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "33045075"
   
 定義作業在 CPU 閒置時間執行之前，請先判斷正常處理時的 CPU 負載。 如果要判斷負載，請使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] 或效能監視器來監視伺服器流量並收集統計資料。 您可以使用所收集的資訊來設定 CPU 閒置時間百分比與期間。  
   
-定義 CPU 閒置條件時，請以低於正常 CPU 使用量 (在指定時間) 的百分比來指定。 接著，設定時間量。 當 CPU 使用量在指定的時間內低於指定的百分比時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會啟動所有具有 CPU 閒置時間排程的作業。 如需使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] 或「效能監視器」來監視 CPU 使用量的詳細資訊，請參閱 [監視 CPU 使用量](http://msdn.microsoft.com/en-us/2a02a3b6-07b2-4ad0-8a24-670414d19812)。  
+定義 CPU 閒置條件時，請以低於正常 CPU 使用量 (在指定時間) 的百分比來指定。 接著，設定時間量。 當 CPU 使用量在指定的時間內低於指定的百分比時， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 會啟動所有具有 CPU 閒置時間排程的作業。 如需使用 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] 或「效能監視器」來監視 CPU 使用量的詳細資訊，請參閱 [監視 CPU 使用量](http://msdn.microsoft.com/2a02a3b6-07b2-4ad0-8a24-670414d19812)。  
   
 ## <a name="related-tasks"></a>相關工作  
   
@@ -102,6 +102,6 @@ ms.locfileid: "33045075"
 |說明如何定義伺服器的 CPU 閒置條件。|[設定 CPU 閒置與持續時間 &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>另請參閱  
-[sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/en-us/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](http://msdn.microsoft.com/2cded902-9272-4667-ac4b-a4f95a9f008e)  
+[sysjobschedules](http://msdn.microsoft.com/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
   

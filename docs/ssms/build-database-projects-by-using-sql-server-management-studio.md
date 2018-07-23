@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3dda4b94a26b0a2e88d6ad9be75abfa6721cd77
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046615"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983894"
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 建置資料庫專案
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 資料庫指令碼專案是一組有組織的指令碼、連接資訊及範本，而且全都與資料庫或資料庫某一部分有所關聯。 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 提供 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] ，用以在指令碼專案的內容中管理及設計 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] 資料庫。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 包含設計工具、編輯器、指南及精靈，可協助使用者開發、部署及維護資料庫。  
   
-## <a name="sql-server-management-studio"></a>Transact-SQL  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 是一套系統管理工具，用以管理屬於 [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]的元件。 這個整合式環境可讓使用者執行各種工作，如備份資料、編輯查詢，以及自動執行單一介面內的一般功能。  
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] 包括下列工具：  

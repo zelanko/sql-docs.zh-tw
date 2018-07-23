@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fea501b8db8aad3118c7d915e9bb7fbabea6bfa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06edea33c572f0534e76a9425de56a73ebee53ae
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045195"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979100"
 ---
 # <a name="modify-a-job"></a>Modify a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33045195"
   
 -   **若要使用下列項目修改作業：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -79,21 +79,21 @@ ms.locfileid: "33045195"
   
 3.  在查詢視窗中，使用下列系統預存程序修改作業。  
   
-    -   執行 [sp_update_job (TRANSACT-SQL)](http://msdn.microsoft.com/en-us/cbdfea38-9e42-47f3-8fc8-5978b82e2623) 變更作業的屬性。  
+    -   執行 [sp_update_job (TRANSACT-SQL)](http://msdn.microsoft.com/cbdfea38-9e42-47f3-8fc8-5978b82e2623) 變更作業的屬性。  
   
-    -   執行 [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/en-us/97b3119b-e43e-447a-bbfb-0b5499e2fefe) 變更作業定義的排程詳細資料。  
+    -   執行 [sp_update_schedule (Transact-SQL)](http://msdn.microsoft.com/97b3119b-e43e-447a-bbfb-0b5499e2fefe) 變更作業定義的排程詳細資料。  
   
-    -   執行 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/97900032-523d-49d6-9865-2734fba1c755) 新增作業步驟。  
+    -   執行 [sp_add_jobstep (Transact-SQL)](http://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755) 新增作業步驟。  
   
-    -   執行 [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/en-us/e158802c-c347-4a5d-bf75-c03e5ae56e6b) 變更已存在的作業步驟。  
+    -   執行 [sp_update_jobstep (Transact-SQL)](http://msdn.microsoft.com/e158802c-c347-4a5d-bf75-c03e5ae56e6b) 變更已存在的作業步驟。  
   
-    -   執行 [sp_delete_jobstep (TRANSACT-SQL)](http://msdn.microsoft.com/en-us/421ede8e-ad57-474a-9fb9-92f70a3e77e3) 從作業移除作業步驟。  
+    -   執行 [sp_delete_jobstep (TRANSACT-SQL)](http://msdn.microsoft.com/421ede8e-ad57-474a-9fb9-92f70a3e77e3) 從作業移除作業步驟。  
   
     -   修改任何 SQL Server Agent 主要作業的其他預存程序：  
   
-        -   執行 [sp_delete_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) 刪除目前與作業相關聯的伺服器。  
+        -   執行 [sp_delete_jobserver (Transact-SQL)](http://msdn.microsoft.com/6d63ed32-68cf-4d8f-aa40-05a3826e05b8) 刪除目前與作業相關聯的伺服器。  
   
-        -   執行 [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/en-us/485252cc-0081-490a-9bd1-cbbd68eea286) 讓伺服器與目前作業產生關聯。  
+        -   執行 [sp_add_jobserver (Transact-SQL)](http://msdn.microsoft.com/485252cc-0081-490a-9bd1-cbbd68eea286) 讓伺服器與目前作業產生關聯。  
   
 ## <a name="SMO"></a>使用 SQL Server 管理物件  
 **若要修改作業**  

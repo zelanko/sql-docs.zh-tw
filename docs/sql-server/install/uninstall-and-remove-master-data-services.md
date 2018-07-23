@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c210840b717f5cc13fac3fe0ca2e9c9e7f763952
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772554"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37970690"
 ---
 # <a name="uninstall-and-remove-master-data-services"></a>解除安裝及移除 Master Data Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34772554"
   
  為避免資料遺失且避免影響系統中的其他電腦，解除安裝程序不會移除或變更某些項目。 請檢閱下表，判斷要保留或移除項目。  
   
-|項目|描述|  
+|項目|Description|  
 |----------|-----------------|  
 |資料夾和檔案|解除安裝程序會從安裝路徑移除大部分資料夾和檔案。<br /><br /> 解除安裝程序不會從安裝位置移除 Master Data Services 和 MDSTempDir 資料夾。 解除安裝程序完成之後，您可以從檔案系統手動刪除這些資料夾。 如需詳細資訊，請參閱[資料夾和檔案的權限 &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 組件|解除安裝程序會從全域組件快取 (GAC) 移除 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 組件。|  

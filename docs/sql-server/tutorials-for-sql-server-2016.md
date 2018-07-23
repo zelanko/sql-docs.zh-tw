@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ce093e33e944e84b3985bbf79e0e3c895aa3ebdc
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36925959"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063626"
 ---
 # <a name="tutorials-for-sql-server"></a>適用於 SQL Server 的教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "36925959"
  
 ## <a name="current-tutorials"></a>目前的教學課程  
   
-|技術|描述|  
+|技術|Description|  
 |--------------|---------------|  
 |[Analysis Services 教學課程 &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|了解如何開發和部署 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 表格式或多維度模型。 同時學習如何使用 PowerPivot 之類的工具來分析模型中的資料。|  
 |[Database Engine 教學課程](../relational-databases/database-engine-tutorials.md)|了解如何連接到 Database Engine 的執行個體，然後建立及執行 Transact-SQL 陳述式。|  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 873e440ad2af6f76cebbec44c0b574f47262164e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eed58dde1580a4e05fa6f2c2103661747563c114
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045325"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981060"
 ---
 # <a name="view-job-activity"></a>檢視作業活動
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33045325"
   
 -   **若要使用下列項目檢視作業活動：**  
   
-    [SQL Server Management Studio](#SSMS)  
+    [Transact-SQL](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -90,5 +90,5 @@ ms.locfileid: "33045325"
     GO  
     ```  
   
-如需詳細資訊，請參閱 [sp_help_jobactivity (TRANSACT-SQL)](http://msdn.microsoft.com/en-us/d344864f-b4d3-46b1-8933-b81dec71f511)。  
+如需詳細資訊，請參閱 [sp_help_jobactivity (TRANSACT-SQL)](http://msdn.microsoft.com/d344864f-b4d3-46b1-8933-b81dec71f511)。  
   

@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13e5366037f3f399325d1a453601314f46ae6a67
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772964"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049006"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>開始執行啟用資料庫的延展功能精靈
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "34772964"
   
  ![Stretch Database 精靈的 [選取資料表] 頁面](../../sql-server/stretch-database/media/stretch-wizard-2.png "Stretch Database 精靈的 [選取資料表] 頁面")  
   
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |(沒有標題)|檢查此資料行的核取方塊，以啟用針對 Stretch 選取的資料表。|  
 |**名稱**|指定資料庫中資料表的名稱。|  
