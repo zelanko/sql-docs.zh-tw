@@ -15,10 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fd80dc99a6c473cf04646f17fc161475b8b2faf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057616"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>用戶端通訊協定 (SQL Server 組態管理員)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

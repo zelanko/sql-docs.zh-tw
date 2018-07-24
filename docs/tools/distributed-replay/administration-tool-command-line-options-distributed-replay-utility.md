@@ -17,10 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f939ad0cc8f8711b69a7e67401954c20690e7b7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999880"
 ---
 # <a name="administration-tool-command-line-options-distributed-replay-utility"></a>管理工具命令列選項 (Distributed Replay Utility)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +76,7 @@ Usage:
   
  RPC 以 RPC 形式重新執行，而不是以語言事件的形式重新執行。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  您必須以互動使用者、本機使用者或網域使用者帳戶來執行管理工具。 若要使用本機使用者帳戶，管理工具和控制器必須在同一部電腦上執行。  
   
  如需詳細資訊，請參閱 [Distributed Replay 安全性](../../tools/distributed-replay/distributed-replay-security.md)。  

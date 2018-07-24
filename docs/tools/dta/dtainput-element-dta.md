@@ -1,5 +1,5 @@
 ---
-title: DTAInput 元素 (DTA) |Microsoft 文件
+title: DTAInput 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e5de4ebe29049c40e3fd9b235062854722a1c3ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33071435"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058559"
 ---
 # <a name="dtainput-element-dta"></a>DTAInput 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33071435"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |---------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  

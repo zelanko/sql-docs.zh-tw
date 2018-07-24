@@ -36,11 +36,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7f22e6ca9f21a4d40ec5b4a0839c3c308414f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078065"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004580"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

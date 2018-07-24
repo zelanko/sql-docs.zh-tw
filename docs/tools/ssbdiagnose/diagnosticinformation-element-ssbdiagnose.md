@@ -1,5 +1,5 @@
 ---
-title: DiagnosticInformation 元素 (ssbdiagnose) |Microsoft 文件
+title: DiagnosticInformation 元素 (ssbdiagnose) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9887264fb9715697e94fabfc41150ff988580b50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075955"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057605"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 元素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ ms.locfileid: "33075955"
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**無**|不適用|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  

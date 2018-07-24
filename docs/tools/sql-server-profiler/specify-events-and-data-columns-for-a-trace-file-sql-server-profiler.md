@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 60ee14bec276918fe402180503688cbc0ff7255d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076835"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38004606"
 ---
 # <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>指定追蹤檔案的事件及資料行 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

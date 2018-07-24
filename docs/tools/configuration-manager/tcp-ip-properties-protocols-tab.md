@@ -1,5 +1,5 @@
 ---
-title: TCP/IP 屬性 （通訊協定索引標籤） |Microsoft 文件
+title: TCP/IP 屬性 （通訊協定索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -17,10 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34f6d026e29da596afaa6c812a726a64fb7e828f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002680"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 屬性 (通訊協定索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,6 +44,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>另請參閱  
  [選擇網路通訊協定](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)  
+ [使用 TCP IP 建立有效的連接字串](creating-a-valid-connection-string-using-tcp-ip.md)  
   
   

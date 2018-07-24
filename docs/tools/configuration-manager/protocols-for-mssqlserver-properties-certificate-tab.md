@@ -19,10 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eb3df3e09379d0a99dea7660d210fc9bccd5f5fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053916"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>MSSQLSERVER 的通訊協定內容 (憑證索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

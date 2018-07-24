@@ -31,10 +31,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c4f0f070a9f8644fe8198adb7ed6c11559932c40
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002600"
 ---
 # <a name="osql-utility"></a>osql 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,7 +102,7 @@ C:\>osql
  使用信任連接，不要求密碼。  
   
  **-S** *server_name*[ **\\***instance_name*]  
- 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 *server_name***\\*** instance_name*，即可連線到該伺服器之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 若未指定伺服器，則 **osql** 會連接到本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 從網路中的遠端電腦執行 **osql** 時，需要使用此選項。  
+ 指定要連接的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體。 指定 *server_name* ，即可連接至該伺服器上之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的預設執行個體。 指定 *server_name***\\***instance_name*，即可連線到該伺服器之 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的具名執行個體。 若未指定伺服器，則 **osql** 會連接到本機電腦的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 預設執行個體。 從網路中的遠端電腦執行 **osql** 時，需要使用此選項。  
   
  **-H** *wksta_name*  
  這是一個工作站名稱。 工作站名稱儲存在 **sysprocesses.hostname** 中， **sp_who**會顯示它。 如果未指定這個選項，就會假設目前的電腦名稱。  
@@ -213,7 +214,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="osql-commands"></a>OSQL 命令  
  除了 [!INCLUDE[tsql](../includes/tsql-md.md)] osql **內的**陳述式，您也可以使用這些命令。  
   
-|命令|描述|  
+|命令|Description|  
 |-------------|-----------------|  
 |GO|執行在上一個 GO 之後輸入的所有陳述式。|  
 |RESET|清除您已輸入的任何陳述式。|  

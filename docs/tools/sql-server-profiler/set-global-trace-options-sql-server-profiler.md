@@ -1,5 +1,5 @@
 ---
-title: 設定全域追蹤選項 (SQL Server Profiler) |Microsoft 文件
+title: 設定全域追蹤選項 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea73582b99e4b76edeacbb8e6da1ef68dbe5fec8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076465"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38057655"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>設定全域追蹤選項 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "33076465"
   
     -   [預設重新執行執行緒數目] 控制重新執行期間要使用的處理器執行緒數目。 執行緒數目較多可使重新執行更快速完成，但會導致重新執行期間的伺服器效能降低。 建議設定是 **4**。 下表列出可用選項：  
   
-        |ReplTest1|描述|  
+        |ReplTest1|Description|  
         |-----------|-----------------|  
         |**2**|最小值。 使用兩個執行緒重新執行。|  
         |**4**|預設值。|  
@@ -57,7 +57,7 @@ ms.locfileid: "33076465"
   
     -   [預設健全狀況監視器等候間隔 (秒)] 設定重新執行的執行緒可封鎖其他處理序的最長時間量 (以秒為單位)。 下表會說明這些值。  
   
-        |ReplTest1|描述|  
+        |ReplTest1|Description|  
         |-----------|-----------------|  
         |**0**|最小值。 設為 **0** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 永遠不會停止封鎖處理序。|  
         |**3600**|預設值。 允許封鎖處理序，封鎖時間不超過 **3600** 秒或一小時。|  
@@ -65,7 +65,7 @@ ms.locfileid: "33076465"
   
     -   [預設健全狀況監視器輪詢間隔 (秒)] 設定輪詢重新執行的執行緒是否有封鎖處理序的頻率。 下表會說明這些值。  
   
-        |ReplTest1|描述|  
+        |ReplTest1|Description|  
         |-----------|-----------------|  
         |**1**|最小值。 設為 **1** 代表 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 會每秒輪詢封鎖處理序一次。|  
         |**60**|預設值。 每分鐘輪詢封鎖處理序一次。|  

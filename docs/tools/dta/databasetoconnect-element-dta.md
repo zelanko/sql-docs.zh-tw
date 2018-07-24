@@ -1,5 +1,5 @@
 ---
-title: DatabaseToConnect 元素 (DTA) |Microsoft 文件
+title: DatabaseToConnect 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca44a74b5499eea7491741be33b41fa543b685ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048796"
 ---
 # <a name="databasetoconnect-element-dta"></a>DatabaseToConnect 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**string**，沒有長度限制。|  
 |**預設值**|無。|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[TuningOptions 元素 &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**子元素**|無|  
+|**子元素**|None|  
   
 ## <a name="remarks"></a>Remarks  
  請利用 **DatabaseToConnect** 來指定 Database Engine Tuning Advisor 開始微調工作階段時，所要連接的第一個資料庫的名稱。 您只能利用這個元素來指定一個資料庫。 如果指定了多個資料庫名稱，Database Engine Tuning Advisor 就會傳回錯誤。  

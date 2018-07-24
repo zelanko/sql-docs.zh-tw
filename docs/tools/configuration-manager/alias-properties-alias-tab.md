@@ -1,5 +1,5 @@
 ---
-title: '&lt;別名&gt;屬性 （別名索引標籤） |Microsoft 文件'
+title: '&lt;別名&gt;屬性 （別名索引標籤） |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5e2ed13706eb817c9603c354ee268ba188e7c3d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999910"
 ---
 # <a name="ltaliasgt-properties-alias-tab"></a>&lt;Alias&gt; 屬性 ([別名] 索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

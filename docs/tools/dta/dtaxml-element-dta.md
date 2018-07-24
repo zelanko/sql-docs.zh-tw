@@ -1,5 +1,5 @@
 ---
-title: DTAXML 元素 (DTA) |Microsoft 文件
+title: DTAXML 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d08c99cc52515bfc999b686edb9f8afaa61f986c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048278"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +44,14 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**xmlns:xsi**|必要。 識別 XML 結構描述執行個體命名空間。 這個命名空間的屬性用來參考驗證 Database Engine Tuning Advisor XML 檔時所用的結構描述。<br /><br /> 必要值：[http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|必要。 識別 Database Engine Tuning Advisor 命名空間。<br /><br /> 如果您利用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中的 XML 編輯器來編輯 Database Engine Tuning Advisor，[F1 說明和動態說明] 便會利用這個值，在《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中，尋找可能的參考主題。<br /><br /> 必要值：<br /><br /> [Database Engine Tuning Advisor XML 結構描述](http://go.microsoft.com/fwlink/?LinkId=43100) 命名空間|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 05/03/2018
   
 |關聯性|元素|  
 |------------------|--------------|  
-|**父元素**|無|  
+|**父元素**|None|  
 |**子元素**|[DTAInput 元素 &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput** 元素 (相關資訊請參閱 [Database Engine Tuning Advisor XML 結構描述](http://schemas.microsoft.com/sqlserver/))|  
   
 ## <a name="remarks"></a>Remarks  

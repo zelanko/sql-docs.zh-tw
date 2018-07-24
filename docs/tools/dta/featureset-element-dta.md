@@ -1,5 +1,5 @@
 ---
-title: FeatureSet 元素 (DTA) |Microsoft 文件
+title: FeatureSet 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3873cf36250bf29f421e27d5285fefb7fc8d23ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069377"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058656"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33069377"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**字串**，沒有最大長度。|  
 |**允許的值**|**IDX_IV**<br /> 索引和索引檢視表。<br /><br /> **IDX**<br /> 只有索引。<br /><br /> **IV**<br /> 只有索引檢視表。<br /><br /> **NCL_IDX**<br /> 只有非叢集索引。<br /><br /> 這個元素使用這些值的其中之一。|  

@@ -1,5 +1,5 @@
 ---
-title: Issue 元素 (ssbdiagnose) |Microsoft 文件
+title: Issue 元素 (ssbdiagnose) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4c221d40c9f4a182f82ea241bf1acd7741286279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075865"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002630"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 元素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "33075865"
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**type**|識別 Issue 元素所報告的問題類別：<br /><br /> **「診斷」** ：報告在您分析 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 設定時發現的設定問題。<br /><br /> **「問題」** ：報告讓 **ssbdiagnose** 無法完成其分析的問題。 請更正問題並重新執行 **ssbdiagnose**。<br /><br /> **「事件」** ：報告在您執行 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -RUNTIME **檢查時發現的** 事件。 只有在您指定 **-SHOWEVENTS** 時才會報告事件。|  
 |**代碼**|識別訊息的錯誤號碼。|  
@@ -57,7 +57,7 @@ ms.locfileid: "33075865"
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**string**，沒有長度限制。|  
 |**ReplTest1**|傳回錯誤訊息的文字。|  
@@ -68,7 +68,7 @@ ms.locfileid: "33075865"
 |關聯性|元素|  
 |------------------|--------------|  
 |**父元素**|[DiagnosticInformation 元素 &#40;ssbdiagnose&#41;](../../tools/ssbdiagnose/diagnosticinformation-element-ssbdiagnose.md)|  
-|**子元素**|無|  
+|**子元素**|None|  
   
 ## <a name="example"></a>範例  
  這個元素會針對沒有主要金鑰的資料庫報告 1102 錯誤，而這項錯誤是在您分析 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 組態時發現的。  
