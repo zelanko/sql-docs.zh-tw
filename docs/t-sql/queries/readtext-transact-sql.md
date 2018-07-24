@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 3e98fba7617c3b1a46b64d07f2b7efa0e51b9ad2
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258377"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37980556"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ READTEXT { table.column text_ptr offset size } [ HOLDLOCK ]
   
  如果 @@TEXTSIZE 函數的值小於為 READTEXT 指定的大小，它就會取代為 READTEXT 指定的大小。 @@TEXTSIZE 函數會指定 SET TEXTSIZE 陳述式所設定要傳回之資料位元組數的限制。 如需有關如何設定 TEXTSIZE 之工作階段設定的詳細資訊，請參閱 [SET TEXTSIZE &#40;Transact-SQL&#41;](../../t-sql/statements/set-textsize-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  READTEXT 權限預設為授與有指定資料表之 SELECT 權限的使用者。 當傳送 SELECT 權限時，可以傳送權限。  
   
 ## <a name="examples"></a>範例  

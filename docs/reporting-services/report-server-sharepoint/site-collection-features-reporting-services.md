@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 100ec0e739dc397b8173259abcfaf7c8e6cdfd9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024948"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982410"
 ---
 # <a name="reporting-services-site-collection-features"></a>Reporting Services 網站集合功能
 
@@ -35,7 +35,7 @@ Reporting Services SharePoint 模式提供了三個 SharePoint 網站集合功�
 
  下表描述 Reporting Services 網站集合功能。  
   
-|功能|描述|  
+|功能|Description|  
 |-------------|-----------------|  
 |**報表伺服器管理中心功能**|啟用管理與 Reporting Services 報表伺服器整合的功能。 此功能只在 SharePoint 管理中心網站集合中安裝及使用。<br /><br /> 在安裝適用於 SharePoint 產品的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 增益集後，SharePoint 管理中心網站集合中會自動啟用報表伺服器整合功能。 在某些情況下，您必須手動啟動此功能。 若要啟用報表伺服器功能，請使用 SharePoint 管理中心內 [網站設定] 頁面中的 Reporting Services 頁面。<br /><br /> 適用於 SharePoint 產品的 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services 版及以後版本的增益集，會在安裝增益集時，針對所有現有的網站集合啟用報表伺服器整合功能。 此外，新的網站集合會自動啟用這項功能。|  
 |**報表伺服器整合功能**|使用 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services 可擁有豐富的報表功能<br /><br /> 此功能預設為使用中。|  

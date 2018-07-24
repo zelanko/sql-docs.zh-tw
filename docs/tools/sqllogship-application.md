@@ -1,5 +1,5 @@
 ---
-title: sqllogship 應用程式 |Microsoft 文件
+title: sqllogship 應用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ce23bc4217f4bc538de0ddc1dbbaf8284a3c177
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077742"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969084"
 ---
 # <a name="sqllogship-application"></a>sqllogship 應用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** 應用程式會對記錄傳送組態執行備份、複製或還原作業，以及相關的清除工作。 這些作業是在 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的特定執行個體上對特定資料庫執行。  
   
- ![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")語法慣例，請參閱[命令提示字元公用程式參考&#40;Database Engine&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
+ ![主題連結圖示](../database-engine/configure-windows/media/topic-link.gif "主題連結圖示")如需語法慣例，請參閱[命令提示字元公用程式參考&#40;資料庫引擎&#41;](../tools/command-prompt-utility-reference-database-engine.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,7 +60,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  指定要加入記錄傳送記錄的訊息層級。 *level* 是下列其中一個整數：  
   
-|level|描述|  
+|level|Description|  
 |-----------|-----------------|  
 |0|輸出不追蹤和偵錯的訊息。|  
 |@shouldalert|輸出錯誤處理訊息。|  
@@ -81,10 +81,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
   
  **sqllogship** 應用程式 (SqlLogShip.exe) 安裝在 x:\Program Files\Microsoft SQL Server\130\Tools\Binn 目錄中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  **sqllogship** 使用「Windows 驗證」。 執行命令的「Windows 驗證」帳戶必須擁有 Windows 目錄存取權和 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 需求取決於 **sqllogship** 命令是指定 **-backup**、 **-copy**或 **-restore** 選項。  
   
-|選項|目錄存取|Permissions|  
+|選項|目錄存取|[權限]|  
 |------------|----------------------|-----------------|  
 |**-backup**|需要讀取/寫入權限才能備份目錄。|需要與 BACKUP 陳述式相同的權限。 如需詳細資訊，請參閱 [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)。|  
 |**-copy**|需要讀取權限才能備份目錄，以及需要寫入權限才能複製目錄。|需要與 [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) 預存程序相同的權限。|  

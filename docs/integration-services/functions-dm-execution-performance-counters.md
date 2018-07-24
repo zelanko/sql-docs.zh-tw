@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: f60130ee43309e89ccc39fa2f4c3be42e928ca5a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332182"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994314"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>函式 - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="remarks"></a>Remarks  
  下表列出 dm_execution_performance_counter 函數傳回的計數器名稱值。  
   
-|計數器名稱|描述|  
+|計數器名稱|Description|  
 |------------------|-----------------|  
 |BLOB bytes read|資料流程引擎從所有來源讀取之二進位大型物件 (BLOB) 資料的位元組數目。|  
 |BLOB bytes written|資料流程引擎寫入至所有目的地的 BLOB 資料位元組數目。|  
@@ -60,7 +60,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>傳回  
  dm_execution_performance_counters 函數會針對執行中的執行，傳回含有下列資料行的資料表。 傳回的資訊適用於執行中包含的所有封裝。 如果沒有執行中的執行，就會傳回空的資料表。  
   
-|資料行名稱|資料行類型|描述|Remarks|  
+|資料行名稱|資料行類型|Description|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** 是無效的值。|包含封裝之執行的唯一識別碼。||  
 |counter_name|**nvarchar(128)**|計數器的名稱。|請參閱值的**備註**一節。|  
@@ -81,7 +81,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個函數需要下列其中一個權限：  
   
 -   執行的執行個體之 READ 和 MODIFY 權限  

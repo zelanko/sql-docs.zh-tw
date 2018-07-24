@@ -17,11 +17,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: e26743a1020bc71e20e17d64aad7c14ccd29c325
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328149"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978606"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>原生程序中不可部分完成的區塊
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -138,14 +138,14 @@ GO
   
  **BEGIN ATOMIC**需要以下選項：  
   
-|必要設定|描述|  
+|必要設定|Description|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|支援的值為 **SNAPSHOT**、 **REPEATABLEREAD**和 **SERIALIZABLE**。|  
 |**LANGUAGE**|判斷日期和時間格式及系統訊息。 [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 中的所有語言和別名都受到支援。|  
   
  以下是選擇性設定：  
   
-|選擇性設定|描述|  
+|選擇性設定|Description|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 日期格式都受到支援。 當指定時， **DATEFORMAT** 會覆寫與 **LANGUAGE**相關聯的預設日期格式。|  
 |**DATEFIRST**|當指定時， **DATEFIRST** 會覆寫與 **LANGUAGE**相關聯的預設值。|  

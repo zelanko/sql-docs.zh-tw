@@ -21,11 +21,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dcb886bee40d358bf0b2815e8fb669876f32d3a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012855"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978227"
 ---
 # <a name="thread-and-task-architecture-guide"></a>執行緒和工作架構指南
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ SQL Server 不會在新增 CPU 之後自動開始使用這些 CPU。 這樣可�
 |Service Broker |Sb.exe |否 |  
 |全文檢索搜尋   |Fts.exe    |否 |  
 |SQL Server Agent   |Sqlagent.exe   |否 |  
-|Transact-SQL   |Ssms.exe   |否 |  
+|SQL Server Management Studio   |Ssms.exe   |否 |  
 |SQL Server 安裝程式   |Setup.exe  |否 |  
 
 

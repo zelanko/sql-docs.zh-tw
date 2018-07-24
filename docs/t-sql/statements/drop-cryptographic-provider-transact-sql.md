@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 642e402a103e207111b5f8b38703337920f5e164
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786121"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974045"
 ---
 # <a name="drop-cryptographic-provider-transact-sql"></a>DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
   
  如果卸除 EKM 提供者時有金鑰對應到該 EKM 提供者，該金鑰的 GUID 仍然會儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中。 如果稍候使用相同的金鑰 GUID 建立提供者，將會重複使用這些金鑰。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要對稱金鑰的 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

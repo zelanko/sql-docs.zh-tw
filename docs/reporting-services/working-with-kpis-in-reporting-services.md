@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 74c0cd02499ab10f2aeded7cc528c7db244cd2cb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032935"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971698"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>使用 Reporting Services 中的 KPI
 
@@ -57,7 +57,7 @@ KPI 只會使用共用資料集的第一列資料。 請確定您想要使用的
   
 您可以指派靜態值，或使用共用資料集的資料。 當您建立新的 KPI 時，即會填入一組隨機的手動資料。  
   
-|欄位|描述|  
+|欄位|Description|  
 |---|---|  
 |值格式|  用來變更顯示值的格式。|   
 |ReplTest1|針對 KPI 顯示的值。|  

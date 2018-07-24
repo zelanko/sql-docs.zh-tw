@@ -25,11 +25,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 699df374b814c1332fa32a16b42974355e569e7a
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790449"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971110"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Text 和 Image 函式 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ TEXTPTR ( column )
   
  另外，當您使用 **text**、**ntext** 和 **image** 資料時，這些函式和陳述式也很有用。  
   
-|函數或陳述式|描述|  
+|函數或陳述式|Description|  
 |---------------------------|-----------------|  
 |PATINDEX **('***%pattern%***' ,** *expression***)**|傳回指定字元字串在 **text** 或 **ntext** 資料行中的字元位置。|  
 |DATALENGTH **(***expression***)**|傳回 **text**、**ntext** 和 **image** 資料行中資料的長度。|  

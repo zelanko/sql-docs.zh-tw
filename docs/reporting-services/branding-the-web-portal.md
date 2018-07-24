@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 6f4893d2044676078d102cbd776de03815b8354e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968842"
 ---
 # <a name="branding-the-web-portal"></a>建立入口網站品牌形象
 
@@ -96,7 +96,7 @@ LESS 樣式表所包含的區塊會參考某些預先定義的 LESS 變數，如
   
 介面區段分成下列群組。  
   
-|章節|描述|  
+|章節|Description|  
 |---|---|  
 |primary|按鈕和暫留色彩。|  
 |次要|標題列、搜尋列、左邊功能表 (如果顯示) 及這些項目的文字色彩|  

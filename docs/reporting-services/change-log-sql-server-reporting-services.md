@@ -14,10 +14,11 @@ author: casualoak
 ms.author: edugonz
 manager: kfile
 ms.openlocfilehash: ee37f4445a02925c0017f67d3f25056b047a1f05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37968650"
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>SQL Server Reporting Services 的變更記錄檔
 

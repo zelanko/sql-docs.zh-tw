@@ -29,11 +29,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5276c3016382fbca1521f3417ad9095d92dea1e2
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981260"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -484,7 +484,7 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>[權限]  
  需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  
@@ -492,7 +492,7 @@ CREATE AVAILABILITY GROUP group_name
 ### <a name="a-configuring-backup-on-secondary-replicas-flexible-failover-policy-and-connection-access"></a>A. 設定次要複本上的備份、具彈性的容錯移轉原則和連接存取  
  下列範例會針對兩個使用者資料庫 `MyAg` 和 `ThisDatabase` 建立名為 `ThatDatabase` 的可用性群組。 下表摘要說明針對選項指定的值，這些選項是針對整個可用性群組所設定。  
   
-|群組選項|設定|描述|  
+|群組選項|設定|Description|  
 |------------------|-------------|-----------------|  
 |AUTOMATED_BACKUP_PREFERENCE|SECONDARY|這個自動備份喜好設定會指示應該在次要複本上進行備份，但是主要複本是唯一線上複本 (這是預設行為) 的情況例外。 若要讓 AUTOMATED_BACKUP_PREFERENCE 設定有任何效果，您必須在可用性資料庫上撰寫備份工作的指令碼，以便將自動備份喜好設定納入考量。|  
 |FAILURE_CONDITION_LEVEL|3|這個失敗狀況層級會指定應該在嚴重 SQL Server 內部錯誤發生時起始自動容錯移轉，例如執行緒同步鎖定遭到遺棄、嚴重的寫入存取違規或是傾印過多。|  
@@ -500,7 +500,7 @@ CREATE AVAILABILITY GROUP group_name
   
  三個可用性複本會由 `COMPUTER01`、`COMPUTER02` 和 `COMPUTER03` 電腦上的預設伺服器執行個體所主控。 下表摘要說明針對每個複本之複本選項所指定的值。  
   
-|複本選項|`COMPUTER01` 的設定|`COMPUTER02` 的設定|`COMPUTER03` 的設定|描述|  
+|複本選項|`COMPUTER01` 的設定|`COMPUTER02` 的設定|`COMPUTER03` 的設定|Description|  
 |--------------------|-----------------------------|-----------------------------|-----------------------------|-----------------|  
 |ENDPOINT_URL|TCP://*COMPUTER01:5022*|TCP://*COMPUTER02:5022*|TCP://*COMPUTER03:5022*|在此範例中，這些系統是相同的網域，因此端點 URL 可以使用電腦系統的名稱做為系統位址。|  
 |AVAILABILITY_MODE|SYNCHRONOUS_COMMIT|SYNCHRONOUS_COMMIT|ASYNCHRONOUS_COMMIT|其中兩個複本會使用同步認可模式。 同步時，它們支援容錯移轉，但不會失去資料。 使用非同步認可可用性模式的第三個複本。|  

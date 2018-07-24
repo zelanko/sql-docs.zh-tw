@@ -33,11 +33,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: c22de5fea09017e7ebe1dc43de7a843685f184fb
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242550"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979500"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL 語法慣例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "36242550"
   
 若要省略中繼節點，請利用句點來表示這些位置。 下表顯示物件名稱的有效格式。  
   
-|物件參考格式|描述|  
+|物件參考格式|Description|  
 |-----------------------------|-----------------|  
 |*server* **.** *database* **.** *schema* **.** *object*|四部分名稱。|  
 |*server* **.** *database* **..** *object*|省略結構描述名稱。|  

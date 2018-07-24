@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: eb393de5e17aa9b10cef656e83b7f76460eb991f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785969"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975213"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ ALTER MASTER KEY <alter_option>
   
  ADD ENCRYPTION BY SERVICE MASTER KEY 會造成利用服務主要金鑰來加密主要金鑰的副本，並將該副本同時儲存在目前資料庫和 master 中。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要資料庫的 CONTROL 權限。 如果已利用密碼加密資料庫主要金鑰，則還需要知道該密碼。  
   
 ## <a name="examples"></a>範例  

@@ -51,11 +51,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d193ca55d720bb8c843280b553a2ef01e5c742a7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790419"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990460"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -444,7 +444,7 @@ GO
 ## <a name="metadata"></a>中繼資料  
  下表列出可用於傳回預存程序之詳細資訊的目錄檢視和動態管理檢視。  
   
-|檢視|描述|  
+|檢視|Description|  
 |----------|-----------------|  
 |[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)|傳回 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程序的定義。 您無法使用 **sys.sql_modules** 目錄檢視來檢視以 ENCRYPTION 選項建立的程序文字。|  
 |[sys.assembly_modules](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|傳回 CLR 程序的詳細資訊。|  
@@ -463,7 +463,7 @@ GO
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>[權限]  
  需要資料庫的 **CREATE PROCEDURE** 權限，以及要在其中建立程序之結構描述的 **ALTER** 權限，或者需要 **db_ddladmin** 固定資料庫角色的成員資格。  
   
  如果是 CLR 預存程序，需要 EXTERNAL NAME 子句中所參考組件的擁有權，或該組件的 **REFERENCES** 權限。  

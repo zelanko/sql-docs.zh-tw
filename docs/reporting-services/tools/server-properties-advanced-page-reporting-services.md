@@ -18,11 +18,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550399"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999450"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>伺服器屬性 (進階頁面) - Reporting Services
 
@@ -76,7 +76,7 @@ ms.locfileid: "34550399"
 **SnapshotCompression**  
 定義快照集的壓縮方式。 預設值是 **SQL**秒。 有效值如下：
 
-|值|描述|
+|值|Description|
 |---------|---------|
 |**SQL**|快照集在儲存於報表伺服器資料庫時會進行壓縮。 此壓縮為目前的行為。|
 |**無**|系統不會壓縮快照集。|
@@ -91,7 +91,7 @@ ms.locfileid: "34550399"
 **EnableIntegratedSecurity**  
 決定 Windows 整合式安全性是否支援報表資料來源連接。 預設值為 **True**。 有效值如下：
 
-|值|描述|
+|值|Description|
 |---------|---------|
 |**True**|已啟用 Windows 整合式安全性。|
 |**False**|未啟用 Windows 整合式安全性。 設定為使用 Windows 整合式安全性的報表資料來源不會執行。|

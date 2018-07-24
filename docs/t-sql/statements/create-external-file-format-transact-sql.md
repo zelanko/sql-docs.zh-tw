@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b8a39d64854d6cc63f0b607b9eaa5084ab250313
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784669"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999420"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -186,7 +186,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
   
 -   Am、pm (tt) 不是必要的。 預設值是 AM。
   
-|日期類型|範例|描述|  
+|日期類型|範例|Description|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|除了年、月及日之外，此日期格式包含 00-24 時、00-59 分、00-59 秒，以及 3 位數的毫秒。|  
 |DateTime|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|除了年、月及日之外，此日期格式包含 00-12 時、00-59 分、00-59 秒、3 位數的毫秒，以及 AM、am、PM 或 pm。 |  
@@ -275,7 +275,7 @@ PolyBase 只會使用自訂日期格式來匯入資料。 它不會使用自訂�
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 ALTER ANY EXTERNAL FILE FORMAT 權限。
   
 ## <a name="general-remarks"></a>一般備註

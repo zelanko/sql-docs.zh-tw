@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 49c9a6cb53983c56b0d5a35c41f298f88efb13db
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000102"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ROLLBACK [ WORK ]
   
  建立巢狀交易時，ROLLBACK WORK 一律會回復到最外層的 BEGIN TRANSACTION 陳述式，並將 @@TRANCOUNT 系統函數減至 0。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  ROLLBACK WORK 權限預設會授與任何有效的使用者。  
   
 ## <a name="see-also"></a>另請參閱  

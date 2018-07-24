@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 421bc54759f8390ecb866f9e3ec95ded4f1c47cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022865"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969410"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>資料連接、資料來源及連接字串 (報表產生器和 SSRS)
 
@@ -48,7 +48,7 @@ ms.locfileid: "33022865"
   
  下表摘要列出內嵌與共用資料來源之間的差異。  
   
-|描述|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
+|Description|內嵌<br /><br /> 資料來源|共用<br /><br /> 資料來源|  
 |-----------------|------------------------------|----------------------------|  
 |資料連接會內嵌在報表定義中。|![可用](../../reporting-services/report-data/media/greencheck.gif "可用")||  
 |報表伺服器上資料連接的指標會內嵌在報表定義中。||![可用](../../reporting-services/report-data/media/greencheck.gif "可用")|  

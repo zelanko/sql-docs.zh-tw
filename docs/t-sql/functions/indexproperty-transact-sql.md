@@ -25,11 +25,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 96d8d07ea3e0c3f57e00b33fc75e88e42062882b
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790369"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983916"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  除非另有說明，否則當 *property* 不是有效屬性的名稱、*object_ID* 不是有效的物件識別碼、*object_ID* 不是指定屬性所支援的物件類型，或呼叫者沒有檢視物件中繼資料的權限時，便會傳回 NULL。  
   
-|屬性|描述|ReplTest1|  
+|屬性|Description|ReplTest1|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|索引的深度。|索引層級的數目。<br /><br /> NULL = XML 索引或輸入無效。|  
 |**IndexFillFactor**|當建立索引或上次重建索引時，所用的填滿因數值。|填滿因數|  

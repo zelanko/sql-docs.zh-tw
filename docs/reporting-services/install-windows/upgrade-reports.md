@@ -24,11 +24,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 183606badd9953a7f6fdd8a9e1792f386802e9c2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322777"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993452"
 ---
 # <a name="upgrade-reports-ssrs"></a>升級報表 (SSRS)
 

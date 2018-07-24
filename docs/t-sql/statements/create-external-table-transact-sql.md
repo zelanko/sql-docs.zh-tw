@@ -26,11 +26,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f305bf60f682ee9da175191b785b73d5e363c7c5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789599"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999390"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -272,7 +272,7 @@ REJECTED_ROW_LOCATION = *Directory Location*
  DISTRIBUTION  
  選擇性。 只有類型為 SHARD_MAP_MANAGER 的資料庫才需要此項目。 這能控制資料表是否會被視為分區資料表或複寫資料表。 針對 **SHARDED** (*資料行名稱*) 資料表，來自不同資料表的資料不會彼此重疊。 **REPLICATED** 指定資料表在每個分區上都有相同的資料。 **ROUND_ROBIN** 指出系統會使用應用程式特定的方法來散發資料。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要下列使用者權限：  
   
 -   **CREATE TABLE**  

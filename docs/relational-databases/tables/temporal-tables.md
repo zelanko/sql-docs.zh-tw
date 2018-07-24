@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b7e70190afc73d0dbad741f89e7d1dfc47404c87
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012595"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38000670"
 ---
 # <a name="temporal-tables"></a>時態表
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ SELECT * FROM Employee
   
  在下表中，合格資料列資料行中的 SysStartTime 代表所查詢資料表中 **SysStartTime** 資料行中的值，而 **SysEndTime** 代表所查詢資料表中 **SysEndTime** 資料行中的值。 如需完整的語法和範例，請參閱 [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 和 [查詢系統建立版本時態表中的資料](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)現在可加以支援。  
   
-|運算式|查詢資料列|描述|  
+|運算式|查詢資料列|Description|  
 |----------------|---------------------|-----------------|  
 |**AS OF**<日期時間>|SysStartTime \<= date_time AND SysEndTime > date_time|傳回含有資料列的資料表，資料列內含的值是過去指定時間點的實際 (目前) 值。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回資料列中的值，該資料列在 *<date_time>* 參數所指定的時間點為有效。 當 *system_start_time_column_name* 的值小於或等於 *<date_time>* 參數的值，且 *system_end_time_column_name* 的值大於 *<date_time>* 參數的值，資料列的值即視為有效。|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|傳回資料表，其中內含所有資料列版本的值，該值在所指定的時間範圍內有效，而不論其是否在 FROM 引數的 *<start_date_time>* 參數值之前為作用中，或是在 TO 引數的 *<end_date_time>* 參數值之後就不在作用中。 就內部而言，時態表和其歷程記錄資料表之間會執行等位，且會將結果篩選為傳回所有資料列版本的值，該值在指定的時間範圍任何時間點內皆為作用中。 不包含恰好在 FROM 端點所定義的範圍下限變為作用中的資料列，也不包含恰好在 TO 端點所定義的範圍上限變為作用中的資料列。|  

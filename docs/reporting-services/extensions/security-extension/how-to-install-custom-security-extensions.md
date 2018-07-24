@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 7b344fb4320af3ca9c4778740c6a5055481d6fce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016905"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971747"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>如何安裝自訂安全性延伸模組
 

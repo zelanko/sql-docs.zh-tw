@@ -39,11 +39,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 7f270fd58e58b7e6c850a520dff4cd37e2ddb4ec
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262941"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988492"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -217,7 +217,7 @@ DBCC CHECKDB 使用內部資料庫快照集來維護執行這些檢查時所需�
 ## <a name="understanding-dbcc-error-messages"></a>了解 DBCC 錯誤訊息    
 DBCC CHECKDB 命令執行完成之後，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔中會寫入一則訊息。 如果 DBCC 命令執行成功，該訊息將指出命令已順利完成，並顯示命令執行的時間量。 如果 DBCC 命令由於發生錯誤而在完成檢查之前停止執行，則訊息會指出命令已經結束，並顯示狀態值以及命令執行的時間量。 下表列出並描述可以包含在訊息中的狀態值。
     
-|State|描述|    
+|State|Description|    
 |-----------|-----------------|    
 |0|已引發錯誤號碼 8930。 這表示中繼資料中的損毀導致 DBCC 命令結束。|    
 |@shouldalert|已引發錯誤號碼 8967。 發生內部 DBCC 錯誤。|    
@@ -368,7 +368,7 @@ DBCC CHECKDB 會傳回下列結果集。 這些值可能會不同，除非指定
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>[權限]    
 需要系統管理員 (sysadmin) 固定伺服器角色或 db_owner 固定資料庫角色中的成員資格。
     
 ## <a name="examples"></a>範例    

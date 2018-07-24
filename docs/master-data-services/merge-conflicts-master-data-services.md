@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3a96ad7621c8db45d53c211976b24a088376dcd8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335922"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990602"
 ---
 # <a name="merge-conflicts-master-data-services"></a>合併衝突 (Master Data Services)
 

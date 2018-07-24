@@ -15,11 +15,11 @@ ms.author: haoqian
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 50953f913101cf4ec08bf492034abb1d5e43da40
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35406920"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999690"
 ---
 # <a name="catalogupdatemasteraddress-ssisdb-database"></a>catalog.update_master_address (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ Scale Out 主端點。 *masterAddress* 是 **nvarchar**。
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個預存程序需要下列其中一個權限：  
    
 -   **ssis_admin** 資料庫角色的成員資格  

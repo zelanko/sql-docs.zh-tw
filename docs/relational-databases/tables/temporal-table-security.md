@@ -16,11 +16,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 8ee27537dd58803a79291ea75a47e51d1cd53936
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011875"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37993510"
 ---
 # <a name="temporal-table-security"></a>時態表安全性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "33011875"
 ## <a name="security-principles"></a>安全性原則  
  下表描述適用於時態表的安全性原則︰  
   
-|原則|描述|  
+|原則|Description|  
 |---------------|-----------------|  
 |啟用/停用系統建立版本功能需要受影響物件上的最高權限|啟用和停用 SYSTEM_VERSIONING 需要目前和記錄資料表上的 CONTROL 權限|  
 |無法直接修改記錄資料|當 SYSTEM_VERSIONING 為 ON 時，使用者無法變更記錄資料，而不論其在目前或記錄資料表上的實際權限為何。 這包括資料和結構描述修改。|  

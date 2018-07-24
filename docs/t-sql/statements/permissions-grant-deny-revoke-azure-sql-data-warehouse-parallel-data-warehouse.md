@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 801281b337586d298af8bd8b2dbe42b22be2d3d5
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941804"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37969280"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +109,7 @@ REVOKE
 > [!IMPORTANT]  
 >  如果主體擁有不含 **GRANT** 選項的指定權限，則會撤銷權限本身。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要授與權限，授與者必須具有含 **WITH GRANT OPTION** 的權限本身，或具有隱含所要授與之權限的更高權限。  物件擁有者可以授與他們所擁有之物件的權限。 具有安全性實體之 **CONTROL** 權限的主體可以授與該安全性實體的權限。  **db_owner** 和 **db_securityadmin** 固定資料庫角色的成員可以授與資料庫中的任何權限。  
   
 ## <a name="general-remarks"></a>一般備註  

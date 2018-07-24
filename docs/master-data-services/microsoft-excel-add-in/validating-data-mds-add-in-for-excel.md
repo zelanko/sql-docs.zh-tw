@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 94fd34fa9224f7de468a6e89dd91c20903e96cb8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335782"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985141"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>驗證資料 (適用於 Excel 的 MDS 增益集)
 
@@ -43,7 +43,7 @@ ms.locfileid: "35335782"
   
  如需其他狀態的資訊，請參閱[驗證狀態 &#40;Master Data Services&#41;](../../master-data-services/validation-statuses-master-data-services.md)。  
   
-|[狀態]|描述|  
+|[狀態]|Description|  
 |------------|-----------------|  
 |驗證失敗|對 MDS 管理員所定義的商務規則，資料列中一個或多個值的驗證失敗。|  
 |驗證成功|資料列中的所有值已經通過商務規則驗證。|  
@@ -51,7 +51,7 @@ ms.locfileid: "35335782"
 ## <a name="input-statuses"></a>輸入狀態  
  在 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]中，可能出現下列幾種輸入狀態：  
   
-|[狀態]|描述|  
+|[狀態]|Description|  
 |------------|-----------------|  
 |錯誤|資料列中一個或多個值不符合系統需求，如長度或資料類型。 MDS 儲存機制中的值未更新。|  
 |新資料列|資料列中的值尚未發行到 MDS 儲存機制。|  

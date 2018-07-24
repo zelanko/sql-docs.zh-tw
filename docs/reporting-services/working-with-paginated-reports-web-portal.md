@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: e7036050c715f1c53275cdad4cd2f3069d7b6f8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036145"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971757"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>使用分頁報表 (Web 入口網站)
 

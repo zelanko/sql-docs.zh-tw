@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2520b75495006760b5755ed57ab109d6ef99573a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941954"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991720"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "36941954"
 ## <a name="determining-the-original-login"></a>決定原始登入  
  使用 [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 函式時，可傳回連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的登入名稱。 您可以利用這個函數來傳回有許多明確或隱含內容切換的工作階段中原始登入的識別。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要指定某項登入的 **EXECUTE AS**，呼叫者必須具有指定登入名稱的 **IMPERSONATE** 權限，而且不應拒絕其 **IMPERSONATE ANY LOGIN** 權限。 若要指定資料庫使用者的 **EXECUTE AS** 權限，呼叫者必須具有指定使用者名稱的 **IMPERSONATE** 權限。 指定 **EXECUTE AS CALLER** 時，不需要 **IMPERSONATE** 權限。  
   
 ## <a name="examples"></a>範例  
