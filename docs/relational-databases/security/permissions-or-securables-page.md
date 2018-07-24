@@ -18,15 +18,15 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 caps.latest.revision: 39
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5c5020b57bd7a5fcd120b097a43961c35330733
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 2ec3eabf71e7683b83f7d5de2a02c69618fe2d62
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941394"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106974"
 ---
 # <a name="permissions-or-securables-page"></a>權限或安全性實體頁面
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

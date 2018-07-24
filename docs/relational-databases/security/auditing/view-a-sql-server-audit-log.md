@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 caps.latest.revision: 12
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 347fd361fb932cde5a1351d5597c15ab10b2e0fb
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: c6f6971dff7d4529fc650b711380ee2ec1dbe816
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940694"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105304"
 ---
 # <a name="view-a-sql-server-audit-log"></a>檢視 SQL Server Audit 記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

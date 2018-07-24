@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 caps.latest.revision: 5
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 511b4f5b6cb684af31d09ab6758ccf9b7a3db112
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 23b4a12c0c2d027ea36c5990deade999d42c330f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941495"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108160"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>判斷有效的 Database Engine 權限
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

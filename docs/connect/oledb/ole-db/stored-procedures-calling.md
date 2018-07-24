@@ -22,15 +22,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: adf1023b7975e788fc460756c0eb6d16f40ba2ef
-ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
+ms.openlocfilehash: 964831d28c7b0bc761b740489d1c528099e53e93
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042628"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106764"
 ---
 # <a name="stored-procedures---calling"></a>預存程序 - 呼叫
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

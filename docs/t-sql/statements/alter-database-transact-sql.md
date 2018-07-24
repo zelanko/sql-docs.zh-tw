@@ -3,7 +3,6 @@ title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2018
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - collations [SQL Server], modifying
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
-caps.latest.revision: 282
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bc109184f7678f48205c66b4c47684eecde9e4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c97a6b7e9735c7db5be82187767486bff93a6f92
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786539"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102546"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -212,7 +210,7 @@ ALTER DATABASE 陳述式必須執行自動認可模式 (預設的交易管理模
 ## <a name="viewing-database-information"></a>檢視資料庫資訊  
 您可以利用目錄檢視、系統函數和系統預存程序，以傳回資料庫、檔案和檔案群組的相關資訊。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要資料庫的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  
@@ -531,7 +529,7 @@ ALTER DATABASE 陳述式必須執行自動認可模式 (預設的交易管理模
 
 您可以利用目錄檢視、系統函數和系統預存程序，以傳回資料庫、檔案和檔案群組的相關資訊。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 
 只有伺服器層級主體登入 (由佈建程序所建立) 或 `dbmanager` 資料庫角色成員可以改變資料庫。  
   
@@ -681,7 +679,7 @@ ALTER DATABASE 陳述式必須執行自動認可模式 (預設的交易管理模
 
 您可以利用目錄檢視、系統函數和系統預存程序，以傳回資料庫、檔案和檔案群組的相關資訊。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 
 只有伺服器層級主體登入 (由佈建程序所建立) 或 `dbmanager` 資料庫角色成員可以改變資料庫。  
   
@@ -761,7 +759,7 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 指定效能等級。 如需 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 服務目標的詳細資訊，請參閱[效能層級](https://azure.microsoft.com/documentation/articles/performance-tiers/)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要下列權限：  
   
 - 由佈建程序建立的伺服器層級主體登入，或  
@@ -885,7 +883,7 @@ SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 非同步統計資料更新選項 
 
 如需統計資料的詳細資訊，請參閱[統計資料](/sql/relational-databases/statistics/statistics)。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要資料庫上的 ALTER 權限。  
   
 ## <a name="error-messages"></a>錯誤訊息

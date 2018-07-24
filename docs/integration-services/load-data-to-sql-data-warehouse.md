@@ -5,19 +5,19 @@ documentationcenter: NA
 ms.service: sql-data-warehouse
 ms.component: data-movement
 ms.devlang: NA
-ms.topic: article
+ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
 ms.date: 04/04/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 84295d9d1e43a9d10724ab8381aa4308f50c8513
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 75a352ff4bb1f074a89ad4cc007844261d20c431
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36887404"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087580"
 ---
 # <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料從 SQL Server 載入 Azure SQL 資料倉儲
 

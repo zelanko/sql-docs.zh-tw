@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 caps.latest.revision: 31
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f24ef4f66069b19174e36ba4799639da9ef5e6a4
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: cb730474b859254846e06013c61e99227ef091dc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941464"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107330"
 ---
 # <a name="application-roles"></a>應用程式角色
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

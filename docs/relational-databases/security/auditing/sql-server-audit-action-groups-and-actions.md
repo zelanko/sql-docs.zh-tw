@@ -23,14 +23,14 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7c819f291b09620a7151a8f6c6e9f5ba1a2cd26a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 2822242b7b28fc207d01a9a0c56afb1411772631
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942104"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108020"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit 動作群組和動作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "36942104"
   
  下表說明伺服器層級的稽核動作群組，並提供適用的同等 SQL Server 事件類別。  
   
-|動作群組名稱|描述|  
+|動作群組名稱|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|每當變更應用程式角色的密碼時，就會引發這個事件。 等於＜ [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)＞。|  
 |AUDIT_CHANGE_GROUP|每當建立、修改或刪除稽核時，就會引發這個事件。 每當建立、修改或刪除任何稽核規格時，就會引發這個事件。 稽核的任何變更都會在該稽核中進行稽核。 等於＜ [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)＞。|  
@@ -131,7 +131,7 @@ ms.locfileid: "36942104"
   
  下表說明資料庫層級的稽核動作群組，並提供適用的同等 SQL Server 事件類別。  
   
-|動作群組名稱|描述|  
+|動作群組名稱|Description|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|每當變更應用程式角色的密碼時，就會引發這個事件。 等於＜ [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md)＞。|  
 |AUDIT_CHANGE_GROUP|每當建立、修改或刪除稽核時，就會引發這個事件。 每當建立、修改或刪除任何稽核規格時，就會引發這個事件。 稽核的任何變更都會在該稽核中進行稽核。 等於＜ [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md)＞。|  
@@ -161,7 +161,7 @@ ms.locfileid: "36942104"
 ## <a name="database-level-audit-actions"></a>資料庫層級的稽核動作  
  資料庫層級的動作支援直接在資料庫結構描述和結構描述物件上稽核特定的動作，例如資料表、檢視表、預存程序、函數、擴充預存程序、佇列、同義字。 類型、XML 結構描述集合、資料庫和結構描述則不會稽核。 可在結構描述和資料庫上設定結構描述物件的稽核，這表示指定之結構描述或資料庫包含的所有結構描述物件上的事件都會稽核。 下表說明資料庫層級的稽核動作。  
   
-|動作|描述|  
+|動作|Description|  
 |------------|-----------------|  
 |SELECT|每當發出 SELECT 時，就會引發這個事件。|  
 |UPDATE|每當發出 UPDATE 時，就會引發這個事件。|  
@@ -181,7 +181,7 @@ ms.locfileid: "36942104"
 ## <a name="audit-level-audit-action-groups"></a>稽核層級的稽核動作群組  
  您也可以在稽核程序中稽核動作， 這可以是伺服器範圍或資料庫範圍。 在資料庫範圍中，只發生於資料庫稽核規格。 下表說明稽核層級的稽核動作群組。  
   
-|動作群組名稱|描述|  
+|動作群組名稱|Description|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|每當發出下列其中一個命令時，就會引發這個事件：<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   

@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 caps.latest.revision: 79
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fc9a696c7141f87400eea7d962718aa0718a32fb
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: c53853cc6a87e9dcef674245581446a4cf54f540
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940794"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108110"
 ---
 # <a name="surface-area-configuration"></a>介面區組態
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

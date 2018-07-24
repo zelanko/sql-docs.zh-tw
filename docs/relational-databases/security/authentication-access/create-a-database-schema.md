@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 caps.latest.revision: 11
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 678f19f8f6eaf3e959ef7c51f966212d723f674d
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: c1ae0532e6332ee3412e2d2f767ad46bc26b878b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943074"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105354"
 ---
 # <a name="create-a-database-schema"></a>建立資料庫結構描述
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

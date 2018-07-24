@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d66ca1a1b7c76d70f97d3bc4e769403c8ef939a6
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: ca993152f2c79598b68f5aaa124b60c061631fbe
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943124"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107700"
 ---
 # <a name="row-level-security"></a>資料列層級安全性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

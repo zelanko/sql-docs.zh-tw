@@ -8,16 +8,16 @@ ms.suite: sql
 ms.custom: ''
 ms.tgt_pltfrm: na
 ms.devlang: ''
-ms.topic: article
+ms.topic: conceptual
 ms.date: 07/19/2017"
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: f4786785dd046fea0c8758d2739c645c9a2312c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16c94dcda446f4c498c5b9ca9ea55ff5123bbdbc
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151299"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087210"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>對 PolyBase Kerberos 的連線問題進行疑難排解
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ PolyBase 具備多個組態 XML，這些 XML 包含 Hadoop 叢集的屬性。 �
 ```
 
 ## <a name="arguments"></a>引數
-| 引數 | 描述|
+| 引數 | Description|
 | --- | --- |
 | *Name Node Address* | 名稱節點的 IP 或 FQDN。 也就是 CREATE EXTERNAL DATA SOURCE T-SQL 中的 "LOCATION" 引數。|
 | *Name Node Port* | 名稱節點的連接埠。 也就是 CREATE EXTERNAL DATA SOURCE T-SQL 中的 "LOCATION" 引數。 這通常是 8020。 |

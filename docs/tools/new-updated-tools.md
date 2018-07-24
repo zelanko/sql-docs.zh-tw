@@ -4,22 +4,20 @@ description: 針對 Tools for Microsoft SQL Server，顯示文件最新變更之
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
 ms.prod: sql
-ms.prod_service: sql-non-specified
-ms.component: tools
 ms.date: 04/28/2018
-ms.openlocfilehash: 0547653c4fc2d8bd04f851b843e74fd9ec78d2ea
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 31df25173ad475c733bc7239366a6c2ce820289e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32739160"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088180"
 ---
-# <a name="new-and-recently-updated-tools-for-sql-server"></a>新增和更新最近： Tools for SQL Server
+# <a name="new-and-recently-updated-tools-for-sql-server"></a>新增和最近更新： 適用於 SQL Server 工具
 
 
 
@@ -44,7 +42,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 下列連結會跳至最近新增的新文章。
 
 
-- [SQL Server 的 mssql cli 命令列的查詢工具](mssql-cli.md)
+- [SQL Server mssql cli 命令列查詢工具](mssql-cli.md)
 
 
 
@@ -94,16 +92,16 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 
 
-**-G**<a name="G"></a> 用戶端在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時會使用這個參數，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要[14.0.3008.27 版本或更新版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證的驗證的 SQL 資料庫或 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
+**-G**<a name="G"></a> 用戶端在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時會使用這個參數，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要[14.0.3008.27 版或更新版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱 <<c0> [ 使用 Azure Active Directory 驗證來驗證與 SQL Database 或 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。
 
 > [!TIP]
->  若要檢查您的 bcp 版本是否包含 Azure Active Directory 驗證 (AAD) 類型的支援**bcp-** (bcp\<空間 >\<虛線 >\<虛線 >)，並確認您看到-G 的清單中提供的引數。
+>  若要檢查您的 bcp 版本若包含 Azure Active Directory 驗證 (AAD) 類型的支援**bcp-** (bcp\<空間 >\<dash >\<dash >)，並確認您看到-G 的清單中可用的引數。
 
 - **Azure Active Directory 使用者名稱和密碼：**
 
     當您想要使用 Azure Active Directory 使用者名稱和密碼時，您可以提供 **-G** 選項，並同時提供 **-U** 和 **-P** 選項來使用使用者名稱和密碼。
 
-    下列範例會匯出資料，使用 Azure AD 使用者名稱和使用者名稱和密碼是 AAD 認證的密碼。 此範例會將匯出資料表`bcptest`從資料庫`testdb`從 Azure 伺服器`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data1.dat`:
+    下列範例會匯出資料使用 Azure AD 的使用者名稱和使用者名稱和密碼是 AAD 認證的密碼。 此範例會將匯出資料表`bcptest`從資料庫`testdb`從 Azure 伺服器`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data1.dat`:
 ```
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
 ```
@@ -117,7 +115,7 @@ Microsoft 幾乎每天都會在其 [Docs.Microsoft.com](http://docs.microsoft.co
 
 - **Azure Active Directory 整合式**
 
-    若是 Azure Active Directory 整合式驗證，請提供 **-G** 選項，但不提供使用者名稱或密碼。 此設定會假設目前的 Windows 使用者帳戶 （帳戶下執行的 bcp 命令） 會與 Azure AD 同盟：
+    若是 Azure Active Directory 整合式驗證，請提供 **-G** 選項，但不提供使用者名稱或密碼。 此設定會假設目前的 Windows 使用者帳戶 （帳戶下執行 bcp 命令） 會與 Azure AD 同盟：
 
 
 

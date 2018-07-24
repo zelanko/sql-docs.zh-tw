@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 caps.latest.revision: 52
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8e51950aace311b2e4a1a1bbc9e4591e87a9cb2
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 47fa9c0e7cffa70988f75ff0cd6707c452d7264c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942564"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107340"
 ---
 # <a name="server-level-roles"></a>伺服器層級角色
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "36942564"
 ## <a name="fixed-server-level-roles"></a>固定伺服器層級角色  
  下表顯示固定伺服器層級角色及其功能。  
   
-|固定伺服器層級角色|描述|  
+|固定伺服器層級角色|Description|  
 |------------------------------|-----------------|  
 |**sysadmin**|**sysadmin** 固定伺服器角色的成員可以執行伺服器中的所有活動。|  
 |**serveradmin**|**serveradmin** 固定伺服器角色的成員可以變更全伺服器組態選項及關閉伺服器。|  
@@ -81,7 +81,7 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>處理伺服器層級角色  
  下表將說明可用來處理伺服器層級角色的命令、檢視和函數。  
   
-|功能|類型|描述|  
+|功能|類型|Description|  
 |-------------|----------|-----------------|  
 |[sp_helpsrvrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql.md)|中繼資料|傳回伺服器層級角色的清單。|  
 |[sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)|中繼資料|傳回伺服器層級角色成員的相關資訊。|  

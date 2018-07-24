@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 caps.latest.revision: 17
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6e37d5ca1815bb3c6f03108a2f9ee7352313a12e
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 8d43374fb5ef49e7674ccf518b694cc62cf70c44
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941884"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105917"
 ---
 # <a name="create-a-credential"></a>建立認證
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

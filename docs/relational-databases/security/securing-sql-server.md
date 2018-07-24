@@ -20,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 caps.latest.revision: 31
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ce13cdcd9d757d0529b282ae1a4cb9e9dc67c6d4
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 6638cb6f3a2b9385b527cad9b3efd07addc5c62c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942974"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106384"
 ---
 # <a name="securing-sql-server"></a>保護 SQL Server 的安全
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

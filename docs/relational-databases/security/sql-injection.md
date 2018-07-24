@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 caps.latest.revision: 7
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2262261116339a5ce25be064911f3a266c0583db
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 431577fb3edd5406484f405a83bf16585721e8cb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941524"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106654"
 ---
 # <a name="sql-injection"></a>SQL 資料隱碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

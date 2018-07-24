@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 caps.latest.revision: 51
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1642fa5435a92383390caabbfb2c35690222f952
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: f33f3d2a3bba860e943bac52f00912fcde3478cb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942914"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106934"
 ---
 # <a name="metadata-visibility-configuration"></a>中繼資料可見性組態
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,15 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 52ff1c2e1e994e103b216af60fe54c85ae033cb3
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 54df4f5e1e88c5a95ee1918003b482bd73f34680
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942634"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106294"
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.locfileid: "36942634"
 ## <a name="defining-a-dynamic-data-mask"></a>定義動態資料遮罩  
  您可以在資料庫中的資料行定義遮罩規則，以模糊該資料行中的資料。 遮罩有四種類型。  
   
-|函數|描述|範例|  
+|函數|Description|範例|  
 |--------------|-----------------|--------------|  
 |預設|請依據指定欄位的資料類型進行完整遮罩。<br /><br /> 對於字串資料類型，請使用 XXXX，或在欄位大小少於 4 個字元時使用較少的 X (**char**、**nchar**、**varchar**、**nvarchar**、**text**、**ntext**)。  <br /><br /> 對於數值資料類型，請使用零值 (**bigint**、**bit**、**decimal**、**int**、**money****numeric****smallint**、**smallmoney**、**tinyint**、**float**、**real**)。<br /><br /> 對於日期與時間資料類型，請使用 01.01.1900 00:00:00.0000000 (**date**、**datetime2**、**datetime**、**datetimeoffset**、**smalldatetime**、**time**)。<br /><br />對於二進位資料類型，請使用單一位元組的 ASCII 值 0 (**binary**、 **varbinary**、 **image**)。|範例資料行定義語法： `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> 範例替代語法： `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|此遮罩方法可讓電子郵件地址的第一個字母和常數後置詞 ".com" 曝光，形式為電子郵件地址。 執行個體時提供 SQL Server 登入。 `aXXX@XXXX.com`。|範例定義語法： `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> 範例替代語法： `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
 |隨機|此隨機遮罩函數可用在任何數值類型，會以指定範圍內隨機的值遮罩原始值。|範例定義語法： `Account_Number bigint MASKED WITH (FUNCTION = 'random([start range], [end range])')`<br /><br /> 範例替代語法： `ALTER COLUMN [Month] ADD MASKED WITH (FUNCTION = 'random(1, 12)')`|  
 |自訂字串|此遮罩方法會讓第一個及最後一個字母曝光，並在中間加入自訂填補字串。 `prefix,[padding],suffix`<br /><br /> 注意：如果原始的值過短，而無法完成整個遮罩，一部分的前置詞或後置詞就不會曝光。|範例定義語法： `FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(prefix,[padding],suffix)') NULL`<br /><br /> 範例替代語法： `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)')`<br /><br /> 其他範例：<br /><br /> `ALTER COLUMN [Phone Number] ADD MASKED WITH (FUNCTION = 'partial(5,"XXXXXXX",0)')`<br /><br /> `ALTER COLUMN [Social Security Number] ADD MASKED WITH (FUNCTION = 'partial(0,"XXX-XX-",4)')`|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  您不需要任何特殊權限，只要有結構描述的標準 **CREATE TABLE** 和 **ALTER** 權限，就能建立含有動態資料遮罩的資料表。  
   
  新增、取代或移除資料行遮罩則需要資料表的 **ALTER ANY MASK** 權限和 **ALTER** 權限。 將 **ALTER ANY MASK** 授與資訊安全人員是適當作法。  

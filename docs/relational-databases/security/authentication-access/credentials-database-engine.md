@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: c8df6022-e0b4-46b8-9670-3f86938d3177
 caps.latest.revision: 31
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eb72ba7d2fb141a0a1df7a7f3553ac0c65857e5a
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 84d3e9760e2dc30c90c892f0554fad9e72df1f32
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943084"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105385"
 ---
 # <a name="credentials-database-engine"></a>認證 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

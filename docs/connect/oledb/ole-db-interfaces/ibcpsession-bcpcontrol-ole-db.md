@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 23e0ec1a5e6bef63ad0ff9bf3af03bfdcbe8f917
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: f818cbefeb7bf6633a43344400ac4fbe476b0c11
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872808"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109640"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -50,7 +50,7 @@ HRESULT BCPControl(
   
  可能值為*eOption*是：  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |BCP_OPTION_ABORT|停止已經進行的大量複製作業。 您可以用 BCP_OPTION_ABORT 的 *eOption* 引數來呼叫 **BCPControl** 方法，從另一個執行緒停止正在執行的大量複製作業。 *IValue*引數會被忽略。|  
 |BCP_OPTION_BATCH|每一批次中的資料列數目。 預設值為 0，表示資料擷取時，會指出資料表中的所有資料列，或資料複製到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時，會指出使用者資料檔案中的所有資料列。 小於 1 的值會將 BCP_OPTION_BATCH 重設為預設值。|  

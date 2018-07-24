@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 caps.latest.revision: 17
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2330fb7c15b0c5863e40343d3c376df3a30f9708
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 774e33ab64b88b792fd7fe857ec8658a62ef3df4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941184"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106304"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>建立伺服器稽核和資料庫稽核規格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aaad8cc4ad7f35c19ddc1f48332955401f742bcc
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: e6c9eaaeb59f2525a4887937e3716495cff7576d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942254"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107990"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "36942254"
 ### <a name="dynamic-views-and-functions"></a>動態檢視和函數  
  下表列出可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核的動態檢視和函數。  
   
-|動態檢視和函數|描述|  
+|動態檢視和函數|Description|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|傳回稽核記錄檔中可報告的每一個稽核動作及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 中可設定之每一個稽核動作群組的資料列。|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|提供有關稽核之目前狀態的資訊。|  
@@ -167,7 +167,7 @@ ms.locfileid: "36942254"
 ### <a name="catalog-views"></a>目錄檢視  
  下表列出可用於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核的目錄檢視。  
   
-|目錄檢視|描述|  
+|目錄檢視|Description|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|包含所有資料庫伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之資料庫稽核規格的資訊。|  
@@ -176,7 +176,7 @@ ms.locfileid: "36942254"
 |[sys.server_audit_specifications_details](../../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)|包含伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之伺服器稽核規格詳細資料 (動作) 的資訊。|  
 |[sys.server_file_audits](../../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)|包含有關伺服器執行個體上 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 稽核內之檔案稽核類型的存放區擴充資訊。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 的每一個功能和命令都有個別的權限需求。  
   
  若要建立、改變或卸除伺服器稽核或伺服器稽核規格，伺服器主體需要 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。 若要建立、改變或卸除資料庫稽核規格，資料庫主體需要資料庫的 ALTER ANY DATABASE AUDIT 權限或是 ALTER 或 CONTROL 權限。 此外，主體還必須擁有連接資料庫的權限，或 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  

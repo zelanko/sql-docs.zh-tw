@@ -3,7 +3,6 @@ title: DBCC SHRINKLOG (平行資料倉儲) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2018
 ms.prod: sql
-ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: t-sql
@@ -11,17 +10,16 @@ ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
-caps.latest.revision: 11
-author: edmacauley
+author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75fe950d32310a38a75660bccaca0f5b98689572
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: b43cf61d272249e38b6741ec7afd3fe17ed4d83c
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33701403"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39101936"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (平行資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -48,7 +46,7 @@ SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**。
 WITH NO_INFOMSGS  
 DBCC SHRINKLOG 結果中不會顯示資訊訊息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要 ALTER SERVER STATE 權限。
   
 ## <a name="general-remarks"></a>一般備註  

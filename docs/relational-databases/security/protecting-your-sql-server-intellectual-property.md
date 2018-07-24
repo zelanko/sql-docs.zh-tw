@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 caps.latest.revision: 3
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4d04910135ab34ae95e8e94182ed88396400e89f
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 7bd6b30cef47c9501098424745fe936ed77f0b77
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942494"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107260"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>保護 SQL Server 智慧財產權
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 824a83a460688e3aecb8f0be984b45995ad8328f
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 8ab41756217a180fbd5a12e388abdcd77511e905
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942264"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107165"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>資料庫引擎權限使用者入門
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

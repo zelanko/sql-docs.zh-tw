@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 caps.latest.revision: 18
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16c36b568128871b15533a55a6b14d2c59a45efe
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 8c3706dff7bdf98beb8eddd6714b4cda955f0b84
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942534"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108850"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server 憑證與非對稱金鑰
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "36942534"
 ### <a name="using-a-certificate-in-sql-server"></a>在 SQL Server 中使用憑證  
  憑證可用來維護連接的安全、在資料庫鏡像中用來簽署封裝和其他物件，或是加密資料或連接。 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中憑證的其他資源。  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|說明用來建立憑證的命令。|  
 |[使用數位簽章來識別封裝的來源](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|顯示有關如何使用憑證來簽署軟體封裝的資訊。|  
@@ -62,7 +62,7 @@ ms.locfileid: "36942534"
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>在 SQL Server 中使用非對稱金鑰  
  非對稱金鑰可用來維護資料的安全或是簽署純文字。 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中非對稱金鑰的其他資源。  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|說明用來建立非對稱金鑰的命令。|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|顯示用來簽署物件的選項。|  

@@ -17,15 +17,15 @@ ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fa1d89d7fa17fb09ffedd054524be178918796e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c12464c584e667e66dfdf3de3c13278ef1732e55
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423178"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108360"
 ---
 # <a name="logon-triggers"></a>登入觸發程序
-[!INCLUDE[tsql-appliesto-ss2008-xxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   登入觸發程序會引發預存程序來回應 LOGON 事件。 當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體建立使用者工作階段時，就會引發這個事件。 登入觸發程序會在登入驗證階段結束之後，但在使用者工作階段實際建立之前引發。 因此，從觸發程序內產生且一般會顯示給使用者的所有訊息，例如錯誤訊息和來自 PRINT 陳述式的訊息，都會轉至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 錯誤記錄檔。 如果驗證失敗，登入觸發程序就不會引發。  
   
  您可以使用登入觸發程序稽核和控制伺服器工作階段，例如追蹤登入活動、限制登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，或限制特定登入的工作階段數。 例如，在下列程式碼中，如果登入 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login_test *已經建立三個使用者工作階段，登入觸發程序就會拒絕該登入對* 所起始的登入嘗試。  

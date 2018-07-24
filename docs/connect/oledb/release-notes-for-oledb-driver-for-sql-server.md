@@ -7,15 +7,15 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: 698ac0a38edb55bca36c2d7dc15c9c7c2faf3efe
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
-ms.translationtype: HT
+ms.openlocfilehash: ec5abfce888f0af956f1b72f509ef298ee7405a0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872888"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109370"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver for SQL Server 的版本資訊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

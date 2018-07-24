@@ -34,14 +34,14 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dd1290ae21bdb7c8094fbb7738d2749bbd9c33f
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 1b8e64b2cd5927da175ba447cb5a99bc37d66c4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941134"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108350"
 ---
 # <a name="password-policy"></a>密碼原則
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

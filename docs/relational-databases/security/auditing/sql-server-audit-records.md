@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a2461c6da5edd6bb8cd9af720c7600eac2562366
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: ef54c0d2261dfa24b35feba932834b283ee20209
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941874"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108670"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 記錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "36941874"
   
  稽核是由零或多個稽核動作項目所組成，這些項目會記錄到稽核 *「目標」*(Target)。 稽核目標可以是二進位檔案、Windows 應用程式事件記錄檔或 Windows 安全性事件記錄檔。 傳送給目標的記錄包含下表所述的項目：  
   
-|資料行名稱|描述|類型|永遠可使用|  
+|資料行名稱|Description|類型|永遠可使用|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|可稽核的動作引發時的日期/時間。|**datetime2**|是|  
 |**sequence_no**|追蹤單一稽核記錄中太長而無法納入稽核寫入緩衝區內的記錄順序。|**int**|是|  

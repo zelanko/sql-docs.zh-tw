@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6b2c3ba7bc7ea16a4079cb247b4e7159b40eeb1a
-ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
-ms.translationtype: HT
+ms.openlocfilehash: 173b49bb4c63c124579153585f07993c9a5ba691
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042668"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106774"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>將應用程式從 MDAC 更新為適用於 SQL Server 的 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
