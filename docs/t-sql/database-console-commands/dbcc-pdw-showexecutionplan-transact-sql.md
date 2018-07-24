@@ -17,11 +17,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 83826259d76cbe27cad4451baed07221e6afed2c
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36895881"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052924"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *spid*  
  執行查詢計劃之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工作階段的識別碼。 此為整數，而且不得為 NULL。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 的 CONTROL 權限。  
   
 需要設備的 VIEW-SERVER-STATE 權限。

@@ -23,11 +23,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32c4039457be6660d837bbc0f3a41da91ab08b4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32974213"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046206"
 ---
 # <a name="filter-a-trace"></a>篩選追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "32974213"
   
  篩選的可用性視資料行而定。 部份資料行無法篩選。 可篩選的資料行只能由特定關聯式運算子進行篩選，如下表所示。  
   
-|關聯式運算子|運算子符號|描述|  
+|關聯式運算子|運算子符號|Description|  
 |-------------------------|---------------------|-----------------|  
 |相似|相似|指定追蹤事件資料必須和輸入的文字相似。 允許多值。|  
 |不相似|不相似|指定追蹤事件資料絕對必須和輸入的文字不相似。 允許多值。|  

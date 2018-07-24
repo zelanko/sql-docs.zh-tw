@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d66d89496ad0c411da75a76fad392926e6c87f30
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790229"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039986"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 > [!CAUTION]  
 >  從與超過一個工作負載群組相關聯的資源集區清除已快取的計劃，會影響包含以 *pool_name* 所識別使用者定義資源集區的所有工作負載群組。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 CONTROL SERVER 權限。  
   
 ## <a name="examples"></a>範例  

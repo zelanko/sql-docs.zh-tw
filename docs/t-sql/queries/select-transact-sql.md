@@ -30,11 +30,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0dbee4b5b28b2dd72c4c6bdb7cc91eb07272cbf5
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36242250"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054017"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT <select_criteria>
 >
 > 例如，假設您在檢視表上有叢集索引，而該檢視表排除某些資料表資料列，且檢視表的 SELECT 資料行清單使用 CONVERT 將資料類型從 *varchar* 變更為 *integer*。 在此情況下，CONVERT 的執行順序可能會在 WHERE 子句之前。 這確實是不常見的情況。 如果在您的案例中順序相當重要，通常可以修改您的檢視表來避免順序不同。 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  選取資料需要資料表或檢視的 **SELECT** 權限；此權限可從較高的範圍繼承而來，例如結構描述的 **SELECT** 權限或資料表的 **CONTROL** 權限。 或是需要 **db_datareader** 或 **db_owner** 固定資料庫角色中的成員資格，或 **sysadmin** 固定伺服器角色中的成員資格。 使用 **SELECTINTO** 來建立新資料表也需要 **CREATETABLE** 權限，以及擁有新資料表之結構描述上的 **ALTERSCHEMA** 權限。  
   
 ## <a name="examples"></a>範例:   

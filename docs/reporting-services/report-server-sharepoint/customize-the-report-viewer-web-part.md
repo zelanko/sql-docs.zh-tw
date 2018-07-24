@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d2a9368b1617c89dcc85cfddd7fe2ac998a18579
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028585"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052179"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>自訂報表檢視器 Web 組件
 
@@ -69,7 +69,7 @@ ms.locfileid: "33028585"
   
  報表檢視器 Web 組件的自訂屬性如下所列。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |報表|報表的完整路徑，此報表位於目前的 SharePoint 網站上，或是相同 Web 應用程式或伺服陣列內的網站上。 若要在設定其他屬性時獲得最佳結果，請在指定報表 URL 之後按一下 [套用]。|  
 |超連結目標|標準 HTML，此 HTML 會指定在目前文件內顯示連結內容的目標框架。 如果是包含外部網站超連結的報表，您可以指定目標文件會取代目前視窗內現有的報表，或是在新的瀏覽器視窗中開啟。 有效值包括 **_Top**、 **_Blank**和 **_Self**。 **_Top** 會使用目前的視窗， **_Blank** 則會在新的瀏覽器視窗中載入文件，而 **_Self** 會在目前的框架內開啟文件。 雖然 **_Parent** 是 HTML 中目標屬性的有效值，但是請不要在報表檢視器 Web 組件內嵌於頁面中時使用。|  

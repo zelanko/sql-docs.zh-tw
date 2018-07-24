@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: aaf54bd6441a7502024ed41f4904c928ccc14c2b
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783459"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053956"
 ---
 # <a name="set-statistics-profile-transact-sql"></a>SET STATISTICS PROFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,12 +53,12 @@ SET STATISTICS PROFILE { ON | OFF }
   
  其他結果集包含查詢的 SHOWPLAN_ALL 資料行及這些其他資料行。  
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |**資料列**|每個運算子所產生的實際資料列數|  
 |**Executes**|運算子已執行的次數|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要使用 SET STATISTICS PROFILE 和檢視輸出，使用者必須有下列許可權：  
   
 -   執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的適當許可權。  

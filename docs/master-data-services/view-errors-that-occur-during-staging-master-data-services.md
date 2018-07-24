@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 601c1eace25a33afff104370c2ff0c35549783de
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400830"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046253"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>檢視暫存期間發生的錯誤 (Master Data Services)
 

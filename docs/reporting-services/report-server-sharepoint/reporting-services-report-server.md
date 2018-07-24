@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028395"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053346"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 報表伺服器
 
@@ -103,7 +103,7 @@ Reporting Services 報表伺服器會在兩種部署模式的其中一種模式�
   
  ![SSRS SharePoint 功能架構](../../reporting-services/report-server-sharepoint/media/rs-sharepoint-architecture.gif "SSRS SharePoint 功能架構")  
   
-||描述|  
+||Description|  
 |-|-----------------|  
 |**(1)**|Web 伺服器或 Web 前端 (WFE)。 Reporting Services 增益集必須安裝在您想要從中使用 Web 應用程式功能 (例如檢視報表) 或使用 Reporting Services 管理頁面進行工作 (例如管理資料來源或訂用帳戶) 的每部 Web 伺服器上。|  
 |**(2)**|此增益集會安裝 URL 和 SOAP 端點，讓用戶端能夠透過 Reporting Services 服務 Proxy 與應用程式伺服器通訊。|  

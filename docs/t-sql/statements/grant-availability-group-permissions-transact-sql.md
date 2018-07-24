@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1acab0935afabb7dc0d06455ce58a752a4461d37
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786609"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038090"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>授與可用性群組權限 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
  如需所有 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 權限的圖表，請參閱 [Database Engine Permission Poster](https://aka.ms/sql-permissions-poster) (資料庫引擎權限海報)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要可用性群組的 CONTROL 權限或伺服器的 ALTER ANY AVAILABILTIY GROUP 權限。  
   
 ## <a name="examples"></a>範例  

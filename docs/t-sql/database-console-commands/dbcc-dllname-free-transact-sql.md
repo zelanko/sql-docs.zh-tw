@@ -31,11 +31,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 24a49dae91a5b37743d223cf1e7cbdaaa952aa46
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260421"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052903"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  

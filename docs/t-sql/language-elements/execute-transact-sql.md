@@ -36,11 +36,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 49a9a6bdbd2b952614dff3c1095847a434803c78
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251030"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052036"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -375,7 +375,7 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="best-practices"></a>最佳作法  
  指定一個登入或使用者，它具有執行在陳述式或模組中定義的作業時所需要的最低權限。 例如，如果只需要資料庫層級權限，就不要指定具有伺服器層級權限的登入名稱；或者除非需要其權限，否則不要指定資料庫擁有者帳戶。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  執行 EXECUTE 陳述式不需要任何權限。 不過，您必須對 EXECUTE 字串內所參考的安全性實體具備權限。 例如，如果字串包含 INSERT 陳述式，EXECUTE 陳述式的呼叫端就必須有目標資料表的 INSERT 權限。 遇到 EXECUTE 陳述式時會檢查權限，即使模組內包含 EXECUTE 陳述式也一樣。  
   
  模組的 EXECUTE 權限預設會授與模組的擁有者，這位擁有者可以將這些權限轉讓給其他使用者。 當您執行某個模組來執行字串時，將會檢查執行此模組之使用者內容中的權限，不過不會檢查建立模組之使用者內容中的權限。 然而，如果同一位使用者擁有呼叫模組，而該模組正被呼叫時，第二個模組就不會再檢查一次 EXECUTE 權限。  

@@ -32,11 +32,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8fb4045343c17ffea8d132edc22cbd7898f4ec00
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941924"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038356"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -151,7 +151,7 @@ DENY
 > [!CAUTION]  
 >  拒絕 CONTROL SERVER 權限隱含著拒絕伺服器的 CONNECT SQL 權限。 被拒絕伺服器 CONTROL SERVER 權限的主體將無法連接至該伺服器。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  呼叫端 (或指定了 AS 選項的主體) 必須具有安全性實體的 CONTROL 權限，或是具有隱含安全性實體 CONTROL 權限的更高權限。 如果使用 AS 選項，指定的主體必須擁有要拒絕其權限的類型。  
   
  CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺服器角色的成員)，可以拒絕伺服器中任何安全性實體的任何權限。 資料庫之 CONTROL 權限的被授與者 (例如 db_owner 固定資料庫角色的成員)，可以拒絕資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以拒絕結構描述中任何物件的任何權限。 如果使用 AS 子句，指定的主體必須擁有要拒絕其權限的類型。  

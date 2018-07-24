@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 972788ef2369c8b885e9c736b2b2e71ebc89470c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787729"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052956"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ FOR DATABASE_MIRRORING (
 >   
 >  RC4 是相對的弱式演算法，而 AES 則是相對的強式演算法。 但是 AES 的速度顯著較 RC4 的速度慢。 如果您認為安全性比速度更重要，建議您使用 AES。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  使用者必須是系統管理員 (**sysadmin**) 固定伺服器角色的成員、端點擁有者，或者已被授與 ALTER ANY ENDPOINT 權限。  
   
  若要變更現有端點的擁有權，必須使用 ALTER AUTHORIZATION 陳述式。 如需詳細資訊，請參閱 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)。  

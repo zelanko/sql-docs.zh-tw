@@ -1,5 +1,5 @@
 ---
-title: 設定 Distributed 的 Replay |Microsoft 文件
+title: 設定 Distributed 的 Replay |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074185"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038479"
 ---
 # <a name="configure-distributed-replay"></a>設定 Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "33074185"
   
  控制器組態檔所指定的記錄層次包括：  
   
-|設定|XML 元素|描述|允許的值|必要項|  
+|設定|XML 元素|Description|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |記錄層級|`<LoggingLevel>`|指定控制器服務的記錄層次。|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|資料分割 根據預設，此值為 `CRITICAL`。|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33074185"
   
  用戶端組態檔所指定的設定包括：  
   
-|設定|XML 元素|描述|允許的值|必要項|  
+|設定|XML 元素|Description|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |控制器|`<Controller>`|指定控制器的電腦名稱。 用戶端會嘗試連絡控制器，藉以向 Distributed Replay 環境註冊。|您可以使用 "`localhost`" 或 "`.`" 表示本機電腦。|資料分割 根據預設，用戶端會嘗試向本機執行的 Controller 執行個體 ("`.`") 註冊 (如果它存在的話)。|  
 |用戶端工作目錄|`<WorkingDirectory>`|這是在用戶端上儲存分派檔案的本機路徑。<br /><br /> 下一次重新執行時，就會覆寫這個目錄中的檔案。|完整目錄名稱，以磁碟機代號為開頭。|否。 如果未指定值，則分派檔案與預設用戶端組態檔會儲存在相同的位置。 如果有指定值，而且該資料夾不存在用戶端上，用戶端服務就不會啟動。|  
@@ -94,7 +94,7 @@ ms.locfileid: "33074185"
   
  前置處理組態設定指定於前置處理組態檔中屬於 `<PreprocessModifiers>` 元素子系的 XML 元素中。 這些設定包括：  
   
-|設定|XML 元素|描述|允許的值|必要項|  
+|設定|XML 元素|Description|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |包含系統工作階段活動|`<IncSystemSession>`|指出是否要在重新執行期間包含擷取期間進行的系統工作階段活動。|`Yes` &#124; `No`|資料分割 根據預設，此值為 `No`。|  
 |最大閒置時間|`<MaxIdleTime>`|將閒置時間的上限設定為絕對數字 (以秒為單位)。|>= -1 的整數。<br /><br /> `-1` 表示沒有變更原始追蹤檔案的原始值。<br /><br /> `0` 表示在任何給定的時間點有某個活動進行中。|資料分割 根據預設，此值為 `-1`。|  
@@ -126,7 +126,7 @@ ms.locfileid: "33074185"
 ### <a name="replayoptions-element"></a>\<P > 項目  
  重新執行組態檔在 `<ReplayOptions>` 元素中指定的設定如下：  
   
-|設定|XML 元素|描述|允許的值|必要項|  
+|設定|XML 元素|Description|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的目標執行個體 (測試伺服器)|`<Server>`|指定伺服器名稱以及要連接的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。|*server_name*[\\*instance_name*]<br /><br /> 您無法使用 "`localhost`" 或 "`.`" 來代表本機主機。|否，如果已經搭配使用 **-s***target server* 參數與管理工具的 [重新執行] 選項來指定伺服器名稱。|  
 |順序模式|`<SequencingMode>`|指定用於事件排程的模式。|`synchronization` &#124; `stress`|資料分割 根據預設，此值為 `stress`。|  
@@ -138,10 +138,10 @@ ms.locfileid: "33074185"
 |查詢逾時|`<QueryTimeout>`|指定查詢逾時值 (以秒為單位)。 此值只在傳回第一個資料列之前有效。|>= 1 的整數<br /><br /> (`-1` 表示停用)|資料分割 根據預設，此值為 `3600`。|  
 |每個用戶端的執行緒|`<ThreadsPerClient>`|指定要用於每個重新執行用戶端的重新執行執行緒數目。|介於 `1` 與 `512`之間的整數。|資料分割 如果未指定，則 Distributed Replay 會使用值 `255`。|  
   
-### <a name="outputoptions-element"></a>\<P > 項目  
+### <a name="outputoptions-element"></a>\<O > 元素  
  重新執行組態檔在 `<OutputOptions>` 元素中指定的設定如下：  
   
-|設定|XML 元素|描述|允許的值|必要項|  
+|設定|XML 元素|Description|允許的值|必要項|  
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |記錄資料列計數|`<RecordRowCount>`|指出是否應該針對每個結果集記錄資料列計數。|`Yes` &#124; `No`|資料分割 根據預設，此值為 `Yes`。|  
 |記錄結果集|`<RecordResultSet>`|指出是否應該記錄所有結果集的內容。|`Yes` &#124; `No`|資料分割 根據預設，此值為 `No`。|  

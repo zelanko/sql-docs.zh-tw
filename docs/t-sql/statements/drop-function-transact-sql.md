@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 2b21d850297315939cfa696c7076329d53375b79
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782019"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051876"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ DROP FUNCTION [ schema_name. ] function_name
   
  如果有計算資料行參考這個函數，而且已經產生索引，DROP FUNCTION 就不會成功。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要執行 DROP FUNCTION，使用者至少必須對該函數所屬的結構描述具備 ALTER 權限，或是對該函數具備 CONTROL 權限。  
   
 ## <a name="examples"></a>範例  

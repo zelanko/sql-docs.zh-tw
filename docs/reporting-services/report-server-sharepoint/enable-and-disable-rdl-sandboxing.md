@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 842c02dfb20f6e39e186937bad25f07c40e7b533
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027655"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38049146"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>以 SharePoint 整合模式啟用和停用 Reporting Services 的 RDL 沙箱功能
 
@@ -71,7 +71,7 @@ RDL (報表定義語言) 沙箱功能可在多個租用戶使用報表伺服器�
 
  下表提供有關組態設定的資訊。 設定會依其出現在組態檔的順序顯示。  
   
-|設定|描述|  
+|設定|Description|  
 |-------------|-----------------|  
 |**MaxExpressionLength**|RDL 運算式中允許的最大字元數。<br /><br /> 預設值：1000|  
 |**MaxResourceSize**|外部資源允許的最大 KB 數。<br /><br /> 預設值：100|  

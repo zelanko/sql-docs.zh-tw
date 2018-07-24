@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 7a269185b576f22ddb9f764dac2babeda65b6364
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941114"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036936"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 陳述式 - FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -89,7 +89,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>結果集  
  用戶端可以利用 RESTORE FILELISTONLY 來取得備份組所包含的檔案清單。 這項資訊會當做結果集傳回，其中針對每個檔案各包含一個資料列。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|檔案的邏輯名稱。|  
 |PhysicalName|**nvarchar(260)**|檔案的實體或作業系統名稱。|  
@@ -120,7 +120,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  這個密碼所提供的保護很弱。 這是為了防止已獲授權或未獲授權的使用者使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 工具進行不正確的還原。 它無法防止透過其他方式或以取代密碼的方式來讀取備份資料。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 保護備份的最佳作法是將備份磁帶存放在安全位置，或備份至適當的存取控制清單 (ACL) 所保護的磁碟檔案中。 ACL 應該設在備份建立所在的根目錄下。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>[權限]  
  從 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 開始，取得有關備份組或備份裝置的資訊需要 CREATE DATABASE 權限。 如需詳細資訊，請參閱 [GRANT 資料庫權限 &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)。  
   
 ## <a name="examples"></a>範例  

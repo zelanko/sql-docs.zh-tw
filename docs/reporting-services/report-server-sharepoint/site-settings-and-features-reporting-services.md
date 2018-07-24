@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: d376ca984ee2666c8f84a46d3a7895c911d0c719
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38053336"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services 網站設定和網站功能 (SharePoint 模式)
 
@@ -31,7 +31,7 @@ Reporting Services SharePoint 模式有幾個網站層級自訂功能和網站�
 > [!NOTE]
 > SQL Server 2016 後即不再提供 Reporting Services 與 SharePoint 的整合。
 
-|網站設定|描述|  
+|網站設定|Description|  
 |------------------|-----------------|  
 |Reporting Services 網站設定|本主題描述全網站的設定。|  
 |管理資料警示|管理資料警示功能。|  
@@ -45,7 +45,7 @@ Reporting Services SharePoint 模式有幾個網站層級自訂功能和網站�
   
 ## <a name="options-for-reporting-services-site-settings"></a>Reporting Services 網站設定的選項
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |**啟用 RSClientPrint ActiveX 控制項下載**|控制項會顯示自訂列印對話方塊，其中支援與其他列印對話方塊一樣的一般功能，包括預覽列印、可指定要列印的特定頁面及範圍、頁面邊界和列印方向等選擇。 如需控制項的詳細資訊，請參閱 [在自訂應用程式中使用 RSClientPrint 控制項](../../reporting-services/report-server-web-service/net-framework/using-the-rsclientprint-control-in-custom-applications.md)|  
 |**在本機模式中啟用遠端錯誤**|顯示或隱藏當遠端電腦在本機模式執行時的詳細錯誤訊息。 如果您看到類似以下的錯誤訊息，則啟用遠端錯誤可能會很實用：<br /><br /> `For more information about this error navigate to the report server on the local server machine or enable remote errors`|  

@@ -36,11 +36,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: d230ee2c430d753573687502175f0fbc711f0e83
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252910"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38048726"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +70,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  這是要在 *match_expression* 中搜尋的特定字元字串，可包含下列有效的萬用字元。 *pattern* 最多可有 8,000 個位元組。  
   
-|萬用字元|描述|範例|  
+|萬用字元|Description|範例|  
 |------------------------|-----------------|-------------|  
 |%|任何含有零或多個字元的字串。|WHERE title LIKE '%computer%' 可找出書名中含有 'computer' 這個字的所有書名。|  
 |_ (底線)|任何單一字元。|WHERE au_fname LIKE '_ean' 可找出所有以 ean 結尾的四個字母的名字 (如 Dean、Sean 等)。|  

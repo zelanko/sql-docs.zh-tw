@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 58adbb48cc2aab8df98d637a4d9956f2ddfa0978
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786429"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050756"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ DROP CONTRACT contract_name
   
  當您卸除合約時，[!INCLUDE[ssSB](../../includes/sssb-md.md)] 會結束使用這份合約的任何現有交談，且會出現一則錯誤。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  卸除合約的權限預設為此合約的擁有者、db_ddladmin 或 db_owner 固定資料庫角色的成員，以及系統管理員 (sysadmin) 固定伺服器角色的成員。  
   
 ## <a name="examples"></a>範例  

@@ -28,11 +28,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: d473c726aefc9f0f2975e975027bb8cfcd008d24
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263320"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040046"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資訊。
   
-|統計資料|描述|  
+|統計資料|Description|  
 |---|---|
 |**掃描頁數**|資料表或索引中的頁數。|  
 |**掃描範圍**|資料表或索引中的範圍數目。|  
@@ -114,7 +114,7 @@ DBCC SHOWCONTIG
   
 當指定 TABLERESULTS 時，DBCC SHOWCONTIG 會傳回下列資料行以及上一表格所描述的 9 個資料行。
   
-|統計資料|描述|  
+|統計資料|Description|  
 |---|---|
 |**Object Name**|所處理之資料表或檢視的名稱。|  
 |**ObjectId**|物件名稱的識別碼。|  
@@ -188,7 +188,7 @@ DBCC SHOWCONTIG 會判斷資料表是否嚴重片段化。 資料表的片段化
     > [!NOTE]  
     >  如果索引跨越多個檔案，**範圍掃描片段化**值會比較高。 若要縮減這些值，您必須減少索引片段化。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 使用者必須擁有資料表，或是**系統管理員 (sysadmin)** 固定伺服器角色、**db_owner** 固定資料庫角色，或 **db_ddladmin** 固定資料庫角色的成員。
   
 ## <a name="examples"></a>範例  

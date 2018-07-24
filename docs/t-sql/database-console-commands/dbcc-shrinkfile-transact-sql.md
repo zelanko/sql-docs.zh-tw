@@ -34,11 +34,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: a771f30b82a81fa05ea65409bce9a132cbb42dad
-ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34300336"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040036"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>結果集  
 下表描述結果集中的資料行。
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |---|---|
 |**DbId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的資料庫識別碼。|  
 |**FileId**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 試圖壓縮之檔案的檔案識別碼。|  
@@ -163,7 +163,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   結束壓縮作業。 如果結束壓縮作業，則所有已完成的工作都會保留。  
 -   不執行任何動作，並允許壓縮作業等到封鎖交易完成。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要 **系統管理員** 固定伺服器角色或 **db_owner** 固定資料庫角色中的成員資格。
   
 ## <a name="examples"></a>範例  

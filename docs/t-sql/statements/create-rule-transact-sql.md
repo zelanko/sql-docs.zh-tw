@@ -34,11 +34,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8e0ef2de168411dbd4662a7fabd88ec0b6ad141f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781709"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042486"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ AS condition_expression
   
  如果資料行有預設值及其相關聯的規則，預設值必須在規則所定義的網域內。 永遠不會插入與規則衝突的預設值。 SQL Server Database Engine 每次嘗試插入這類預設值時，都會產生一則錯誤訊息。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要執行 CREATE RULE，使用者至少必須有目前資料庫中的 CREATE RULE 權限，以及正在建立規則之結構描述的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  

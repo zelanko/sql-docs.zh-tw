@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 6263a1ad69b1c7bac5511a5fc3433b2517d1f3d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665458"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040246"
 ---
 # <a name="change-column-order-in-a-table"></a>變更資料表中的資料行順序
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

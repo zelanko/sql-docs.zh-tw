@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 974155cff19984223d015c5ef38165ece3517c97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180534"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038456"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "33180534"
 ##  <a name="wellknown"></a> 尋找廣泛使用之已知 Microsoft 屬性的詳細資訊  
  Microsoft 定義了數百個文件屬性可用於許多內容，但是每一種檔案格式只會使用其中一小部分可用屬性。 常用的 Windows 屬性包括少數泛型屬性。 下表將顯示已知泛型屬性的部分範例。 下表顯示了已知名稱、Windows 正式名稱 (根據 Microsoft 發行的屬性描述)、屬性集 GUID、屬性整數識別碼和簡短說明。  
   
-|已知名稱|Windows 正式名稱|屬性集 GUID|整數識別碼|描述|  
+|已知名稱|Windows 正式名稱|屬性集 GUID|整數識別碼|Description|  
 |----------------------|----------------------------|-----------------------|----------------|-----------------|  
 |Authors|**System.Author**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|給定項目的一位或多位作者。|  
 |Tags|**System.Keywords**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|指派給項目的關鍵字集合 (也稱為標記)。|  

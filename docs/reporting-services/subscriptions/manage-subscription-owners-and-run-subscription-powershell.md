@@ -16,11 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 149c5e9142dc87cc538b0ae6521d0754b5d03d42
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585520"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038279"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>管理訂閱擁有者及執行訂閱
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34585520"
   
 ##  <a name="bkmk_how_to"></a> 如何使用指令碼  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>[權限]  
  本節針對原生及 SharePoint 模式 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]，摘要說明使用每個方法所需的權限等級。 本主題中的指令碼使用下列 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 方法：  
   
 -   [ReportingService2010.ListSubscriptions 方法](http://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  

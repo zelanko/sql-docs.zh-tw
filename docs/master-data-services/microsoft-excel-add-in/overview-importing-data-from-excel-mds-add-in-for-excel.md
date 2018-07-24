@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9af12b09b1bcfb74990fcfcd5471e4e9e0b74569
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328942"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38051516"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概觀：從 Excel 匯入資料 (適用於 Excel 的 MDS 增益集)
 

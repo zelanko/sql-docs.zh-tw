@@ -19,11 +19,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 86015ca5563e15bdac6f41b76f2d824bc7079b70
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409440"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046356"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>建立訂閱檢視以匯出資料 (Master Data Services)
 
@@ -70,7 +70,7 @@ ms.locfileid: "35409440"
 ## <a name="view-information"></a>檢視資訊  
  對於每個建立的檢視，會將含十個資料行的資料列加入方格中。 下表描述該資料行。  
   
-|「資料行」|描述|  
+|「資料行」|Description|  
 |------------|-----------------|  
 |[狀態]|檢視狀態。<br /><br /> 當您按一下 [儲存] 時，會顯示![正在更新狀態圖示](../master-data-services/media/mds-statusicon-updating.png "正在更新狀態圖示")影像，表示正在更新檢視。<br /><br /> 如果建立或編輯檢視時發生錯誤，則會顯示![錯誤狀態圖示](../master-data-services/media/mds-statusicon-error.png "錯誤狀態圖示")影像。<br /><br /> 否則，狀態為正常，並顯示![正常狀態圖示](../master-data-services/media/mds-statusicon-ok.png "正常狀態圖示")影像。|  
 |[屬性]|訂閱檢視名稱。|  

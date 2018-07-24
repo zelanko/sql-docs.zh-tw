@@ -1,5 +1,5 @@
 ---
-title: 連接到伺服器 |Microsoft 文件
+title: 連接到伺服器 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03f3e44683ab329e67360be3992fb942c3799165
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307807"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062471"
 ---
 # <a name="connecting-to-the-server"></a>連接到伺服器
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "35307807"
 
 ## <a name="in-this-section"></a>本節內容  
 
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[如何：使用 Windows 驗證進行連接](../../connect/php/how-to-connect-using-windows-authentication.md)|描述如何使用 Windows 驗證建立連接。|  
 |[如何：使用 SQL Server 驗證進行連接](../../connect/php/how-to-connect-using-sql-server-authentication.md)|描述如何使用 SQL Server 驗證建立連接。|  
@@ -40,11 +40,11 @@ ms.locfileid: "35307807"
 |[如何：停用 Multiple Active Result Set (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|描述如何在進行連接時停用 MARS 功能。|  
 |[連線選項](../../connect/php/connection-options.md)|列出包含連接屬性的關聯陣列中允許的選項。|  
 |[LocalDB 的支援](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|描述 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 對 LocalDB 功能的支援 (已加入 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]中)。|  
-|[高可用性與災害復原的支援](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|討論如何設定您的應用程式，以利用加入功能的高可用性、 嚴重損壞修復的[!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]。|  
-|[連線到 Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|討論如何連接到 Azure SQL Database。|  
+|[高可用性與災害復原的支援](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|討論如何設定應用程式以利用 [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] 中加入的高可用性災害復原功能。|  
+|[連線到 Microsoft Azure SQL Database](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|請參閱＜如何連接到 Azure SQL 資料庫＞|  
 |[連線恢復功能](../../connect/php/connection-resiliency.md)|討論將重新建立連線中斷連接恢復功能。|  
 
 ## <a name="see-also"></a>另請參閱  
-[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [範例應用程式 &#40;SQLSRV 驅動程式&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 968ea430a01bddf25ccf0e477da2096b4019c7cf
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942574"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38050766"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ SHUTDOWN
   
  CREATE SERVER AUDIT 陳述式位於交易的範圍內。 如果回復交易，也會回復此陳述式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要建立、更改或卸除伺服器稽核，主體需要使用 ALTER ANY SERVER AUDIT 或 CONTROL SERVER 權限。  
   
  當您將稽核資訊儲存到檔案時，為了避免遭到篡改，您可以限制對檔案位置的存取：  

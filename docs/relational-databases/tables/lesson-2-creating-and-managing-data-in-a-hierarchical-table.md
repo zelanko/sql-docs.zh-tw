@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8b8280433ebe9cd3248c9534e627518694b95d9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33005885"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38037156"
 ---
 # <a name="lesson-2-creating-and-managing-data-in-a-hierarchical-table"></a>第 2 課：在階層式資料表中建立與管理資料
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

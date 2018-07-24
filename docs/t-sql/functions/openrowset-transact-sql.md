@@ -30,11 +30,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 6e8ab694f484fe0679c4e41c162b7c482560c663
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782639"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042636"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ OPENROWSET
 > [!NOTE]  
 >  除非您希望 65001 選項的優先順序高於定序/字碼頁指定值，否則建議您在格式檔案中指定每個資料行的定序名稱。  
   
-|CODEPAGE 值|描述|  
+|CODEPAGE 值|Description|  
 |--------------------|-----------------|  
 |ACP|將 **char****varchar**或 **text** 資料類型的資料行，從 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 字碼頁 (ISO 1252) 轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|  
 |OEM (預設值)|將 **char****varchar** 或 **text** 資料類型的資料行，從系統 OEM 字碼頁轉換成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 字碼頁。|  
@@ -278,7 +278,7 @@ FIELDQUOTE **=** 'field_quote'
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式傳送這份資料。|  
 |SQLBINARY 或 SQLVARYBIN|未經任何轉換即傳送這份資料。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  `OPENROWSET` 權限是由傳遞給 OLE DB 提供者之使用者名稱的權限所決定。 若要使用 `BULK` 選項，需要 `ADMINISTER BULK OPERATIONS` 權限。  
   
 ## <a name="examples"></a>範例  

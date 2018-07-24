@@ -22,11 +22,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: e4b791188a0af8143ed25841906f7192f0417546
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028085"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038426"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>將報表伺服器的存取權授與使用者
 

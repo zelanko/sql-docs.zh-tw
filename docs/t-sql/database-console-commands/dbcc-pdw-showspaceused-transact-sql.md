@@ -18,11 +18,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 24a2eb0a69a6fcbedf1d5323caa97cdccd180fd5
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36915029"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039773"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,13 +47,13 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  要顯示的資料表的一段式、兩段式或三段式名稱。 兩段式或三段式的資料表名稱必須以雙引號 ("") 括住。 您可以選擇是否使用引號括住一段式資料表名稱。 未指定資料表名稱時，會顯示目前資料庫的資訊。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要 VIEW SERVER STATE 權限。
   
 ## <a name="result-sets"></a>結果集  
 這是所有資料表的結果集。
   
-|「資料行」|資料類型|描述|  
+|「資料行」|資料類型|Description|  
 |------------|---------------|-----------------|  
 |reserved_space|BIGINT|資料庫使用的總空間 (KB)。|  
 |data_space|BIGINT|資料使用的空間 (KB)。|  
@@ -63,7 +63,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 這是單一資料表的結果集。
   
-|「資料行」|資料類型|描述|範圍|  
+|「資料行」|資料類型|Description|範圍|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|資料列數目。||  
 |reserved_space|BIGINT|為物件保留的總空間 (KB)。||  
