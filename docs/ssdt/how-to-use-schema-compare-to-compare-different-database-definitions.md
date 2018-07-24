@@ -8,7 +8,7 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.schemacompare.SchemaCompareOptionsDialog
 - sql.data.tools.schemacompare.watermark.f1
@@ -20,12 +20,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b3b52f87fe2c144a71d5826cc66970c0f18e5d1
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: b146c1dcd31cc6e45fbbd794392249aa9ffa0447
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093877"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088580"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>如何：使用結構描述比較，比較不同的資料庫定義
 SQL Server Data Tools (SSDT) 包含結構描述比較公用程式，可讓您用來比較兩項資料庫定義。  比較的來源與目標可以是下列項目的任意組合：連接的資料庫、SQL Server 資料庫專案或快照集，或是 .dacpac 檔案。  比較的結果會顯示為必須對目標採取的一組動作，以讓目標能與來源相同。  比較完成之後，您就可以直接更新目標 (若目標為專案或資料庫) 或產生具有相同效果的更新指令碼。  
