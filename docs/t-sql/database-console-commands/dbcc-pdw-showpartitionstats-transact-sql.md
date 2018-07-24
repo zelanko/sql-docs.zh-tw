@@ -17,11 +17,11 @@ ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 8282b2e24fbc3a0c1b69d2410e7df5484eb54d3f
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926229"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023174"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,13 +42,13 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
  [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  要顯示的資料表的一段式、兩段式或三段式名稱。  兩段式或三段式的資料表名稱必須以雙引號 ("") 括住。 您可以選擇是否使用引號括住一段式資料表名稱。  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>[權限]
 需要 **VIEW SERVER STATE** 權限。
   
 ## <a name="result-sets"></a>結果集  
 這是 DBCC PDW_SHOWPARTITIONSTATS 命令的結果。
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |partition_number|ssNoversion|資料分割編號。|  
 |used_page_count|BIGINT|資料的使用頁數。|  

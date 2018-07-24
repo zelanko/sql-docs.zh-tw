@@ -31,11 +31,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dbeb752920a1d3cab1be4a52e2b9abf213b7b119
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788889"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38014214"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,13 +62,13 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT 會在一組資料列中傳回資訊，使這些資料列形成階層式樹狀結構，呈現出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢處理器在執行每個陳述式時所採取的步驟。 輸出中所反映的每個陳述式都包含單一資料列，其中含有陳述式的文字，後面再接著幾個資料列，其中含有執行步驟的詳細資料。 下表顯示輸出所包含的資料行。  
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |**StmtText**|對於每個類型不是 PLAN_ROW 的資料列，這個資料行都包含 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的文字。 對於類型是 PLAN_ROW 的資料列，這個資料行包含作業的說明。 這個資料行包含實體運算子，也可能選擇性地包含邏輯運算子。 這個資料行後面可能接著取決於實體運算子的說明。 如需實體運算子的詳細資訊，請參閱 [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md) 中**引數**資料行的詳細資訊。|  
   
  如需在顯示計畫輸出中所能見到之實體和邏輯運算子的詳細資訊，請參閱[執行程序表邏輯及實體運算子參考](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要使用 SET SHOWPLAN_TEXT，您必須有執行 SET SHOWPLAN_TEXT 所針對的陳述式之適當權限，且您必須有包含所參考物件的所有資料庫之 SHOWPLAN 權限。  
   
  對於 SELECT、INSERT、UPDATE、DELETE、EXEC *stored_procedure* 和 EXEC *user_defined_function* 陳述式，若要產生執行程序表，使用者必須：  

@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b8d166d52b25b7c36f26f8d51556d118dbaf7480
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322657"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38003000"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 

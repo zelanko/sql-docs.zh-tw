@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f508e0f2fc0dbb79d9027ce0a1522c48387843eb
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333712"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015562"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>訂閱檢視格式 (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "35333712"
   
 ## <a name="subscription-view-formats"></a>訂閱檢視格式  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |**分葉成員**|包含分葉成員及其相關聯的屬性值。|  
 |**分葉成員歷程記錄**|包含分葉成員的歷程記錄資料及其相關聯的屬性值。 檢視格式是「緩時變維度類型 4」樣式。|  

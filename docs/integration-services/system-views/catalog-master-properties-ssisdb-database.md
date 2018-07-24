@@ -15,18 +15,18 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 5614a15df481602ee0bdaa755afd53b522e79e47
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404530"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020654"
 ---
 # <a name="catalogmasterproperties-ssisdb-database"></a>catalog.master_properties (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 顯示 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master 的屬性。
 
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |property_name|**nvarchar(256)**|相應放大主要屬性的名稱。|  
 |property_value|**nvarchar(max)**|相應放大主要屬性的值。|
@@ -34,7 +34,7 @@ ms.locfileid: "35404530"
 ## <a name="remarks"></a>Remarks
 這個檢視會顯示每個相應放大主要屬性的資料列。 這個檢視會顯示的屬性包括：
 
-|屬性名稱|描述|  
+|屬性名稱|Description|  
 |-------------------|-----------------| 
 |**CLUSTER_LOGDB_SERVER**|記錄資料庫所在的 SQL Server。|
 |**LAST_ONLINE_TIME**|Scale Out Master 上次上線的時間。|
@@ -44,5 +44,5 @@ ms.locfileid: "35404530"
 |**MASTER_SERVICE_PORT**|Scale Out Master 端點中的埠。|
 |**SSLCERT_THUMBPRINT**|Scale Out Master 憑證的指紋。|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>[權限]
 Public 資料庫角色的所有成員都擁有此檢視的讀取權限。 

@@ -30,11 +30,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a84d8fc9021ad80798b921cdf0ecc799afcb3392
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784489"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026971"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  系統會在執行對應的 DML 作業後評估封鎖述詞。 因此，READ UNCOMMITTED 查詢可以查看之後會回復的暫時性值。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要結構描述的 ALTER ANY SECURITY POLICY 權限和 ALTER 權限。  
   
  此外，每個加入的述詞還需要下列權限：  

@@ -30,11 +30,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e56add649edbc14bcc94f19e02034301d6b2bf6c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790759"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023043"
 ---
 # <a name="hasdbaccess-transact-sql"></a>HAS_DBACCESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ HAS_DBACCESS ( 'database_name' )
   
  如果資料庫處於單一使用者模式，而且資料庫正由其他使用者使用中，則 HAS_DBACCESS 會傳回 0。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 public 角色中的成員資格。  
   
 ## <a name="examples"></a>範例  

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: e17f06c01e432d240506e99df57cd423876ab1df
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400940"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006120"
 ---
 # <a name="catalogsetcustomizedloggingleveldescription"></a>catalog.set_customized_logging_level_description
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,9 @@ catalog.set_customized_logging_level_description [ @level_name = ] level_name
  當預存程序失敗時，會擲回錯誤。  
   
 ## <a name="result-set"></a>結果集  
- 無  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個預存程序需要下列其中一個權限：  
   
 -   **ssis_admin** 資料庫角色中的成員資格  

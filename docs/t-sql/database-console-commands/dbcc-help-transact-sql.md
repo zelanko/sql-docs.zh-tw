@@ -23,11 +23,11 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 83411da2404093e7187bedc26cfd72ddb3dc4341
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260774"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023148"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ## <a name="result-sets"></a>結果集  
 DBCC HELP 會傳回結果集，顯示指定 DBCC 命令的語法。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。
   
 ## <a name="examples"></a>範例  

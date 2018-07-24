@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d69702ab9c87a41a87b1c9ead6dd8c567f197c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008035"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005039"
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>第 1-2 課：使用現有的階層式資料填入資料表
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

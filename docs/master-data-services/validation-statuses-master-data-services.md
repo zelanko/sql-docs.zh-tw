@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 22b46e1df8a1fd11857b75d266a88ba72949b20e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333882"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001650"
 ---
 # <a name="validation-statuses-master-data-services"></a>驗證狀態 (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "35333882"
 
   在 **[版本管理]** 功能區域的 **[驗證版本]** 頁面上，可能會出現下列狀態。  
   
-|[狀態]|描述|  
+|[狀態]|Description|  
 |------------|-----------------|  
 |等候驗證|正在等候驗證的所有新建成員。|  
 |等候重新驗證|正在等候重新驗證的現有成員。|  

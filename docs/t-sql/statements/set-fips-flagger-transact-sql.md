@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4b3d11967ea4aca8fee3c72784cf1353c984a5cb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792079"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38026991"
 ---
 # <a name="set-fipsflagger-transact-sql"></a>SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  *level* 必須是下列值之一。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |ENTRY|符合 ISO 入門層級的標準檢查。|  
 |FULL|完全符合 ISO 的標準檢查。|  
@@ -63,7 +63,7 @@ SET FIPS_FLAGGER ( 'level' |  OFF )
   
  如果 `SET FIPS_FLAGGER` 設在預存程序中，從預存程序傳回控制權之後，會還原 `SET FIPS_FLAGGER` 的值。 因此，動態 SQL 中所指定的 `SET FIPS_FLAGGER` 陳述式完全不會影響在動態 SQL 陳述式之後的任何陳述式。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 **public** 角色的成員資格。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -20,11 +20,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: fa9eb1ee19e689fd34285c0ee3fb4dd2ba5095f7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322447"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38005062"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>SSRS 加密金鑰 - 備份與還原加密金鑰
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

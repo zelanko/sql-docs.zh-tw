@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 5d9eb107d1355a15d15c22fc3b24824cae009075
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025165"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38002932"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>將報表檢視器網頁組件新增至網頁
 

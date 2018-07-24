@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 14f7dc1176ff57705775ae6c23e30b49202533f7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181544"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38001480"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>建立及管理全文檢索目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ GO
   
 下表列出與全文檢索目錄相關的屬性。 此資訊適用於管理全文檢索搜尋並對其進行疑難排解。 
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|區分腔調字設定。|
 |**ImportStatus**|是否正在匯入全文檢索目錄。|  

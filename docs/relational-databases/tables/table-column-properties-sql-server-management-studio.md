@@ -20,10 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: a435872914c99990d57804aef0e7e869e1d4737e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020474"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>資料表資料行屬性 (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -95,7 +96,7 @@ ms.lasthandoff: 05/03/2018
   
 -   **已全文檢索索引**：指出這個資料行是否已全文檢索索引。 只有在此資料行的資料類型能以全文檢索搜尋，以及此資料行所屬的資料表具有為其指定的全文檢索索引時，才能將這個屬性設定為 [是]。 若要編輯這個屬性，請按一下屬性的值、展開下拉式清單，然後選擇一個值。  
   
--   **全文檢索型別資料行：**顯示執行這個資料行的全文檢索索引所依據的資料行名稱。 如果這個資料行的 [資料類型]  屬性為 image  或 varbinary ，則必須設定這個屬性。 在這個屬性中命名的資料行必須為 **[n]char、[n]varchar** 或 **xml** 類型，且這個屬性的下拉式清單中包含的資料行只能是這三種資料類型中的其中一種。 這個屬性所命名的資料行中的資料列，會指示可全文檢索搜尋的資料行中對應資料列的文件類型。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
+-   **全文檢索型別資料行：** 顯示執行這個資料行的全文檢索索引所依據的資料行名稱。 如果這個資料行的 [資料類型]  屬性為 image  或 varbinary ，則必須設定這個屬性。 在這個屬性中命名的資料行必須為 **[n]char、[n]varchar** 或 **xml** 類型，且這個屬性的下拉式清單中包含的資料行只能是這三種資料類型中的其中一種。 這個屬性所命名的資料行中的資料列，會指示可全文檢索搜尋的資料行中對應資料列的文件類型。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
   
 -   [語言] ：指示用來索引資料行的文字分隔語言。 屬性中儲存的值實際上是文字分隔的地區設定識別碼。 如需有關文字分隔和 LCID 的詳細資訊，請參閱＜文字分隔與字幹分析器＞(Word Breakers and Stemmers)。 若要編輯這個屬性，請按一下該屬性的值，並展開下拉式清單，然後選擇另一個值。  
   
