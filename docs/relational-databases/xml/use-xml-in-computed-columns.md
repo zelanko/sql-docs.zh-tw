@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9cf53690a4eaae5b73e316b20088f0541e50e4e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33014515"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028786"
 ---
 # <a name="use-xml-in-computed-columns"></a>使用計算資料行中的 XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ FROM T
   
 ### <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[使用計算資料行升級常用的 XML 值](../../relational-databases/xml/promote-frequently-used-xml-values-with-computed-columns.md)|描述如何搭配計算資料行和屬性資料表使用屬性升級。|  
   

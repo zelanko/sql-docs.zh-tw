@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e6b636d170432c1c5eb3b784b0f29e06f412c5ec
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781789"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031066"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ MOVE CONVERSATION conversation_handle
   
  在使用者自訂函數中，MOVE CONVERSATION 無效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要移動交談，目前使用者必須是該交談和交談群組的擁有者，或是系統管理員 (sysadmin) 固定伺服器角色的成員，或是 db_owner 固定資料庫角色的成員。  
   
 ## <a name="examples"></a>範例  

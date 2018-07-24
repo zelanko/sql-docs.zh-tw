@@ -29,11 +29,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d55da07e2011cf611525f1ba5edd904ad5d6095c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786219"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38028980"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,7 +289,7 @@ SET
   
  如果在 *target_table* 上定義任何 INSTEAD OF INSERT 觸發程序，則不會執行插入作業。 反而會引發觸發程序，並據此填入 **inserted** 資料表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  來源資料表需要 SELECT 權限，目標資料表則需要 INSERT、UPDATE 或 DELETE 權限。 如需詳細資訊，請參閱 [SELECT](../../t-sql/queries/select-transact-sql.md)、[INSERT](../../t-sql/statements/insert-transact-sql.md)、[UPDATE](../../t-sql/queries/update-transact-sql.md) 和 [DELETE](../../t-sql/statements/delete-transact-sql.md) 主題中的＜權限＞一節。  
   
 ## <a name="examples"></a>範例  

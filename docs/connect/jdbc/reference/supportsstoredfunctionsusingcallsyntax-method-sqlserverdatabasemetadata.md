@@ -1,5 +1,5 @@
 ---
-title: supportsStoredFunctionsUsingCallSyntax 方法 |Microsoft 文件
+title: supportsStoredFunctionsUsingCallSyntax 方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c09d5fad34a20caefb670e3dbaed17b50e53215
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848033"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988380"
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>supportsStoredFunctionsUsingCallSyntax 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,12 +34,12 @@ public boolean supportsStoredFunctionsUsingCallSyntax()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**受支援。 否則為 **false**。  
+ **true**如果支援。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 supportsStoredFunctionsUsingCallSyntax 方法是由 java.sql.DatabaseMetaData 介面中 supportsStoredFunctionsUsingCallSyntax 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

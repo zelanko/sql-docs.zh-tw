@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: acfd6de2177d94b78296332e2de68cafc6f083d8
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942934"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035905"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ DROP ROLE role_name
   
  若要移除伺服器角色，請使用 [DROP SERVER ROLE & #40;TRANSACT-SQL & #41;](../../t-sql/statements/drop-server-role-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要資料庫的 **ALTER ANY ROLE** 權限、角色的 **CONTROL** 權限，或 **db_securityadmin** 的成員資格。  
   
 ## <a name="examples"></a>範例  

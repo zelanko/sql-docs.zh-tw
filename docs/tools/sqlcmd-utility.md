@@ -34,25 +34,25 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582130"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37990410"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > 如需 SQL Server 2014 和較低，請參閱[sqlcmd 公用程式](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)。
+ > SQL Server 2014 及更低，請參閱[sqlcmd 公用程式](https://msdn.microsoft.com/en-US/library/ms162773(SQL.120).aspx)。
 
- > 使用 sqlcmd 在 Linux 上，請參閱[Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+ > 使用 sqlcmd 在 Linux 上，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
-  您可使用 **sqlcmd** 公用程式在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令碼檔案中，或是在 SQL Server  Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 Transact-SQL 陳述式、系統程序與指令碼檔案。 此公用程式利用 ODBC 執行 TRANSACT-SQL 批次。 
+  您可使用 **sqlcmd** 公用程式在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令碼檔案中，或是在 SQL Server  Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 Transact-SQL 陳述式、系統程序與指令碼檔案。 此公用程式會使用 ODBC 來執行 TRANSACT-SQL 批次。 
   
 > [!NOTE]
-> sqlcmd 公用程式的最新版本 (Web 版本) 可從 [下載中心](http://go.microsoft.com/fwlink/?LinkID=825643)取得。 您需要的版本 13.1 或更高版本支援永遠加密 (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
+> sqlcmd 公用程式的最新版本 (Web 版本) 可從 [下載中心](http://go.microsoft.com/fwlink/?LinkID=825643)取得。 您需要的版本，13.1 或更新版本，才能支援 Always Encrypted (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
 
-因為預設預先安裝，您可以嘗試從 Azure 雲端殼層 sqlcmd 公用程式： [![啟動雲端殼層](https://shell.azure.com/images/launchcloudshell.png "啟動雲端殼層")](https://shell.azure.com)
+您可以嘗試 sqlcmd 公用程式從 Azure Cloud Shell，因為它會預先安裝預設： [![啟動 Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "啟動 Cloud Shell")](https://shell.azure.com)
 
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
@@ -121,7 +121,7 @@ sqlcmd
 ## <a name="command-line-options"></a>命令列選項  
  **登入相關選項**  
   **-A**  
- 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 只有在支援 DAC 的伺服器電腦上才可進行。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -A 選項不支援使用-G 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的了。
+ 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 只有在支援 DAC 的伺服器電腦上才可進行。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -G 選項不支援-A 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的使用。
   
  **-C**  
  這個參數由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.NET 選項 `TRUSTSERVERCERTIFICATE = true`。  
@@ -141,7 +141,7 @@ sqlcmd
 將 [資料行加密設定] 設定為 `Enabled`。 如需詳細資訊，請參閱 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)。 僅支援儲存在 Windows 憑證存放區中的主要金鑰。 -g 參數至少需要 **sqlcmd** [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)版。 若要判斷您的版本，請執行 `sqlcmd -?`。
 
  **-G**  
- 這個參數在連線到 SQL Database 或 SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDUSEAAD = true。 -G 參數至少需要 **sqlcmd** [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)版。 若要判斷您的版本，請執行 `sqlcmd -?`。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 -A 選項不支援使用-G 選項。
+ 這個參數在連線到 SQL Database 或 SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDUSEAAD = true。 -G 參數至少需要 **sqlcmd** [13.1](http://go.microsoft.com/fwlink/?LinkID=825643)版。 若要判斷您的版本，請執行 `sqlcmd -?`。 如需詳細資訊，請參閱 [使用 Azure Active Directory 驗證連線到 SQL Database 或 SQL 資料倉儲](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)。 -G 選項不支援-A 選項。
 
 > [!IMPORTANT]
 > **-G** 選項只適用於 Azure SQL Database 和 Azure 資料倉儲。 
@@ -186,7 +186,7 @@ sqlcmd
  宣告連接到伺服器時的應用程式工作負載類型。 目前唯一支援的值是 **ReadOnly**。 若未指定 **-K** ，sqlcmd 公用程式將無法支援在 AlwaysOn 可用性群組中連接至次要複本。 如需詳細資訊，請參閱[使用中次要：可讀取的次要複本 (AlwaysOn 可用性群組)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
  **-M** *multisubnet_failover*  
- 在連線到 SQL Server 可用性群組的可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊 [！包含[Hadr](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[建立和設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)，和[使用中次要： 可讀取的次要複本 (Alwayson 可用性群組）](https://msdn.microsoft.com/library/ff878253.aspx)。  
+ 在連線到 SQL Server 可用性群組的可用性群組接聽程式或 SQL Server 容錯移轉叢集執行個體時，一律指定 **-M**。 **-M** 可提供對 (目前) 作用中伺服器更快速的偵測與連接。 如果未指定 **–M** ，則會關閉 **-M** 。 如需詳細資訊 [！包含[Sshadr&lt](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)，[建立及設定可用性群組&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)，[容錯移轉叢集和 Alwayson 可用性群組 (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)，並[使用中次要： 可讀取的次要複本 (Always On 可用性群組）](https://msdn.microsoft.com/library/ff878253.aspx)。  
   
  **-N**  
  用戶端會用這個參數要求加密的連接。  
@@ -218,7 +218,7 @@ sqlcmd
   
  如果 **-P** 選項後面有多個引數，便會產生錯誤訊息，而且程式將會結束。  
   
- **-S** [*通訊協定*:]*伺服器*[**\\***instance_name*] [**，* **連接埠*]  
+ **-S** [*通訊協定*:]*server*[**\\***instance_name*] [**，* **連接埠*]  
  指定要連線的 SQL Server 執行個體。 它會設定 **sqlcmd** 指令碼變數 SQLCMDSERVER。  
   
  指定 *server_name*，即可連線至該伺服器電腦上之 SQL Server 的預設執行個體。 指定 *server_name* [ **\\***instance_name* ]，即可連線到該伺服器電腦的 SQL Server 具名執行個體。 如果未指定伺服器電腦，**sqlcmd** 會連線到本機電腦上 SQL Server 的預設執行個體。 當您從網路的遠端電腦執行 **sqlcmd** 時，需要這個選項。  
@@ -580,7 +580,7 @@ sqlcmd
  列印陳述式快取內容。  
   
  **變數**  
-  **: Setvar** \< **var**> [ **"***值***"** ]  
+  **: Setvar** \< **var**> [ **」***值***"** ]  
  定義 **sqlcmd** 指令碼變數。 指令碼變數的格式如下： `$(VARNAME)`。  
   
  變數名稱不區分大小寫。  
@@ -680,7 +680,7 @@ sqlcmd
   
  SQL Server 會保留傳回值 -1 至 -99；**sqlcmd** 定義了下列其他傳回值：  
   
-|傳回值|描述|  
+|傳回值|Description|  
 |-------------------|-----------------|  
 |-100|在選取傳回值之前發生錯誤。|  
 |-101|在選取傳回值時，找不到任何資料列。|  

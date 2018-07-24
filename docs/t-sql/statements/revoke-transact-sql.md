@@ -34,11 +34,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 9630b7e56f2e741c96f370069ad00fc2f7721f5f
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942074"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031776"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -158,7 +158,7 @@ REVOKE
   
  從被授與指定了 GRANT OPTION 之權限的主體撤銷權限時，如果未指定 CASCADE，REVOKE 陳述式便會失敗。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  具有安全性實體之 CONTROL 權限的主體可以撤銷安全性實體的權限。 物件擁有者可以撤銷他們所擁有之物件的權限。  
   
  CONTROL SERVER 權限的被授與者 (例如系統管理員 (sysadmin) 固定伺服器角色的成員)，可以撤銷伺服器中任何安全性實體的任何權限。 資料庫之 CONTROL 權限的被授與者 (例如 db_owner 固定資料庫角色的成員)，可以撤銷資料庫中任何安全性實體的任何權限。 結構描述之 CONTROL 權限的被授與者，可以撤銷結構描述中任何物件的任何權限。  

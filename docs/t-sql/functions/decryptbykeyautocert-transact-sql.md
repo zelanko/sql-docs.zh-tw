@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7541b3f935ab66997315f04f43980beae24698d
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790209"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031946"
 ---
 # <a name="decryptbykeyautocert-transact-sql"></a>DECRYPTBYKEYAUTOCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ DecryptByKeyAutoCert ( cert_ID , cert_password
 ## <a name="remarks"></a>Remarks  
 `DECRYPTBYKEYAUTOCERT` 會結合 `OPEN SYMMETRIC KEY` 和 `DECRYPTBYKEY` 的功能。 在單一作業中，它會先將對稱金鑰解密，再使用該金鑰將加密文字解密。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 需要對稱金鑰的 `VIEW DEFINITION` 權限和憑證的 `CONTROL` 權限。   
   
 ## <a name="examples"></a>範例  
