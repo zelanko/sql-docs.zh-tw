@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 537b5ed189edfb66b2842179ad44b2da81a064dc
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926099"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036016"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>SQL Server 離線說明和說明檢視器
 
@@ -94,7 +94,7 @@ SSMS 17.x 以及 VS 2015 和 2017 使用說明檢視器 2.x，其支援 SQL Serv
 |Data Analysis Expressions (DAX) 參考 | Data Analysis Expressions (DAX) 參考|
 |資料採礦延伸模組 (DMX) 參考 | 資料採礦延伸模組 (DMX) 參考|
 |適用於 SQL Server 的開發人員指南 | SQL Server 開發人員參考資料|
-|下載 SQL Server Management Studio | Transact-SQL|
+|下載 SQL Server Management Studio | SQL Server Management Studio|
 |開始使用 SQL Server 中的機器學習 | Microsoft Machine Learning 服務|
 |Power Query M 參考 | Power Query M 參考|
 |SQL Server 驅動程式 | SQL Server 連線驅動程式|
