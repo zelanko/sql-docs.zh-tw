@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 31326b03aa3f1321dcfc890020053b83e09e28a4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411900"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063816"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +67,9 @@ catalog.validate_package [ @folder_name = ] folder_name
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個預存程序需要下列其中一個權限：  
   
 -   專案的 READ 權限，以及 (如果適用的話) 參考環境的 READ 權限  

@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 450de8b521cbbec33375a429bcfc7fb1035194a5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788459"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063461"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.locfileid: "37788459"
 ## <a name="queue-columns"></a>佇列資料行  
  下表列出佇列中的資料行：  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**status**|**tinyint**|訊息狀態。 針對 RECEIVE 命令傳回的訊息，狀態一律是 **0**。 佇列中的訊息可能會包含下列其中一個值：<br /><br /> **0**=備妥**1**=接收的訊息**2**=尚未完成**3**=保留的傳送訊息|  
 |**priority**|**tinyint**|套用到訊息的交談優先權等級。|  
@@ -180,7 +180,7 @@ ms.locfileid: "37788459"
 |**validation**|**nchar(2)**|用於訊息的驗證。<br /><br /> **E**=空白**N**=無**X**=XML|  
 |**message_body**|**varbinary(MAX)**|訊息內容。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要接收訊息，目前的使用者必須有佇列的 RECEIVE 權限。  
   
 ## <a name="examples"></a>範例  

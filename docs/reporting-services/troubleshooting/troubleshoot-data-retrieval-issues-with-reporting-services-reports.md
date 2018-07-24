@@ -16,10 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066666"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>搭配 Reporting Services 報表為資料擷取問題疑難排解
 在報表處理期間，第一個步驟是執行資料集查詢以擷取各資料集的報表資料。 在本機預覽報表時，您的資料來源連接和認證必須使用足夠的權限，才能將資料擷取到電腦上。 在報表伺服器上執行報表時，資料來源連接和認證也必須使用足夠的權限，才能將資料擷取到報表伺服器上。 您可以使用本主題來協助疑難排解有關報表資料擷取的問題。   

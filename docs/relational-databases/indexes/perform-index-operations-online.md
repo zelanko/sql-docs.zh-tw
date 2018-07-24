@@ -6,7 +6,7 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - index online operations [SQL Server]
 - online index operations
@@ -19,12 +19,12 @@ manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 732c0510f2744df1dd361fa5e32077c571d47c9c
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d9494e5aec89a7a5d3b68e214b9561561aa9c07
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33698541"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087320"
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -34,11 +34,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f835fc61aea7474d9c31f33b070d96da1afa3033
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36241060"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061456"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  這是決定替代值之間距與對齊的程式碼。  
   
-|程式碼|前置詞或對齊|描述|  
+|程式碼|前置詞或對齊|Description|  
 |----------|-----------------------------|-----------------|  
 |- (減號)|靠左對齊|給定欄位寬度內的引數值靠左對齊。|  
 |+ (加號)|符號前置詞|如果值為帶正負號的類型，則在引數值前加上正號 (+) 或負號 (-)。|  
@@ -161,7 +161,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *選項*  
  這是錯誤的自訂選項，可以是下表中的值之一。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |LOG|在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體的錯誤記錄檔和應用程式記錄檔中記錄錯誤。 記錄在錯誤記錄檔中的錯誤目前最大限制為 440 位元組。 只有系統管理員 (sysadmin) 固定伺服器角色成員，或具有 ALTER TRACE 權限的使用者，才可以指定 WITH LOG。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|立即傳送訊息給用戶端。<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

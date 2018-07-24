@@ -27,11 +27,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 031bfb83581d84095826cb3ce2593170dd2eb8ef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782929"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066426"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  資料庫稽核規格是位於給定資料庫內的非安全性實體物件。 當建立資料庫稽核規格之後，它就會處於停用狀態。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  具有 `ALTER ANY DATABASE AUDIT` 權限的使用者可以建立資料庫稽核規格，並將其繫結至任何稽核。  
   
  建立資料庫稽核規格之後，具有 `CONTROL SERVER`、`ALTER ANY DATABASE AUDIT` 權限的主體或 `sysadmin` 帳戶就可以檢視此規格。  

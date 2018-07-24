@@ -17,10 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5517458968f64bab9a64b0692deaa973022d9109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062061"
 ---
 # <a name="sql-trace"></a>SQL 追蹤
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="use-data-columns-to-describe-returned-events"></a>使用資料行描述傳回的事件  
  SQL 追蹤使用追蹤輸出的資料行來描述追蹤執行時傳回的事件。 下表描述的是 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 資料行，這些資料行與 SQL 追蹤使用的資料行相同，同時也會指出預設會選取的資料行。  
   
-|資料行|資料行編號|描述|  
+|資料行|資料行編號|Description|  
 |-----------------|-------------------|-----------------|  
 |**ApplicationName***|10|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的名稱。|  
 |**BigintData1**|52|值 (**bigint** 資料類型)，會視追蹤指定的事件類別而定。|  

@@ -29,11 +29,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9557a9576f214dcc84aa47e474797da9c570ff85
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36254360"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38061626"
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -72,7 +72,7 @@ SET SHOWPLAN_XML { ON | OFF }
 > [!NOTE]  
 >  如果已在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 中選取了 [包括實際執行計畫]，這個 SET 選項將不會產生 XML 執行程序表輸出。 在使用這個 SET 選項之前，請清除 [包括實際執行計畫] 按鈕。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要使用 SET SHOWPLAN_XML，您必須有執行 SET SHOWPLAN_XML 所針對的陳述式之充份權限，且您必須有包含所參考物件的所有資料庫之 SHOWPLAN 權限。  
   
  對於 SELECT、INSERT、UPDATE、DELETE、EXEC *stored_procedure* 和 EXEC *user_defined_function* 陳述式，若要產生執行程序表，使用者必須：  

@@ -41,11 +41,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: bb4aadeab22932e1d50792cd2f812b7368f488cb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909538"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064384"
 ---
 # <a name="hints-transact-sql---table"></a>提示 (Transact-SQL) - 資料表
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -197,7 +197,7 @@ FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]
   
 您可以使用下列方式指定 FORCESEEK 提示。  
   
-|語法|範例|描述|  
+|語法|範例|Description|  
 |------------|-------------|-----------------|  
 |沒有索引或 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK)`|查詢最佳化工具只會考慮透過任何相關索引的索引搜尋作業存取資料表或檢視表。|  
 |結合 INDEX 提示|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|查詢最佳化工具只會考慮利用指定索引的索引搜尋作業存取資料表或檢視表。|  
@@ -416,7 +416,7 @@ NOEXPAND 只適用於*索引檢視表*。 索引檢視表是建立了唯一叢�
 ## <a name="using-a-table-hint-as-a-query-hint"></a>將資料表提示當做查詢提示使用  
  也可以使用 OPTION (TABLE HINT) 子句將*資料表提示*指定為查詢提示。 我們建議您只在 [計劃指南](../../relational-databases/performance/plan-guides.md)的內容中，才將資料表提示當做查詢提示使用。 如果是特定的查詢，只將這些提示指定為資料表提示。 如需詳細資訊，請參閱[查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  KEEPIDENTITY、IGNORE_CONSTRAINTS 和 IGNORE_TRIGGERS 提示需要資料表的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  

@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0241f143d73a1b97ef9579f45b110a82e529a2b9
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940754"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066420"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 > [!NOTE]  
 >  如果使用 SETUSER WITH NORESET，資料庫擁有者或系統管理員必須登出，再重新登入，以便重新建立他們自己的權利。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 **sysadmin** 固定伺服器角色的成員資格，或必須為資料庫的擁有者。 **db_owner** 固定資料庫角色中的成員資格不足  
   
 ## <a name="examples"></a>範例  

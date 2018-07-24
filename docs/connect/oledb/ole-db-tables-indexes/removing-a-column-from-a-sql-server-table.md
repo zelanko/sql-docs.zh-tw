@@ -1,6 +1,6 @@
 ---
-title: 從 SQL Server 資料表移除資料行 |Microsoft 文件
-description: 從使用適用於 SQL Server 的 OLE DB 驅動程式的 SQL Server 資料表移除資料行
+title: 從 SQL Server 資料表中移除資料行 |Microsoft Docs
+description: 從使用 OLE DB Driver for SQL Server 的 SQL Server 資料表中移除資料行
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 962e36bf135c6f01594652f4549b7e0216cd063f
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 007f4a21096dfc2e933ed7777c5bd407a6d40eb1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689081"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109738"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>從 SQL Server 資料表中移除資料行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server OLE DB 驅動程式會公開**itabledefinition:: Dropcolumn**函式。 這可讓取用者移除的資料行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。  
+  OLE DB Driver for SQL Server 會公開**itabledefinition:: Dropcolumn**函式。 如此可讓取用者從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中移除資料行。  
   
- 取用者指定的資料表名稱中的 Unicode 字元字串*pwszName*隸屬*uName*聯集*Createtable*參數。 *EKind*隸屬*Createtable*必須是 DBKIND_NAME。  
+ 取用者會在 pTableID *參數中，將資料表名稱指定為 uName* 聯集之 pwszName *成員中的 Unicode 字元字串。 pTableID *的 eKind* 成員必須是 DBKIND_NAME。  
   
- 取用者表示中的資料行名稱*pwszName*隸屬*uName*聯集*Ekind*參數。 資料行名稱是一個 Unicode 字元字串。 *EKind*隸屬*Ekind*必須是 DBKIND_NAME。  
+ 取用者表示中的資料行名稱*pwszName*隸屬*uName*聯集*Ekind*參數。 資料行名稱是一個 Unicode 字元字串。 pTableID *的 eKind* 成員必須是 DBKIND_NAME。  
   
 ## <a name="example"></a>範例  
   

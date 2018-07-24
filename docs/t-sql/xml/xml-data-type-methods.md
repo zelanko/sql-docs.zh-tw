@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1f9acb4f53526fec5c12e261475f32f16d7e685f
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36251950"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055156"
 ---
 # <a name="xml-data-type-methods"></a>xml 資料類型方法
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "36251950"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[query&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/query-method-xml-data-type.md)|描述如何使用 query() 方法來查詢 XML 執行個體。|  
 |[value&#40;&#41; 方法 &#40;xml 資料類型&#41;](../../t-sql/xml/value-method-xml-data-type.md)|描述如何使用 value() 方法來擷取 XML 執行個體中的 SQL 類型值。|  

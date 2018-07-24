@@ -16,10 +16,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38055833"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>疑難排解 Reporting Services 的報表設計問題
 當您在報表撰寫應用程式中，以 [設計] 檢視建立報表配置時，可能會發生報表設計問題。 您可以使用本主題來協助疑難排解這些問題。   

@@ -30,11 +30,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: dec794a04d383d2727de58e0b70ab9e663fce8af
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789549"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38063561"
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -117,7 +117,7 @@ DROP DATABASE database_name [;]
   
  DROP DATABASE 陳述式必須是 SQL 批次中的唯一陳述式，而且您一次只能卸除一個資料庫。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  需要資料庫的 **CONTROL** 權限，或是 **ALTER ANY DATABASE** 權限，或 **db_owner** 固定資料庫角色的成員資格。  

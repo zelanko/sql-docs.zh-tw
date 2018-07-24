@@ -25,11 +25,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 93ac6dbb87046bcd10ffb010266d36f926de1257
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782606"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064616"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -55,7 +55,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="return-types"></a>傳回類型  
  **int**  
   
-|傳回值|描述|  
+|傳回值|Description|  
 |------------------|-----------------|  
 |0|*database_principal* 不是 *role* 的成員。|  
 |@shouldalert|*database_principal* 是 *role* 的成員。|  
@@ -83,7 +83,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
 ## <a name="related-functions"></a>相關函數  
  若要判斷目前使用者是否為指定之 Windows 群組或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫角色的成員，請使用 [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)。 若要判斷另一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入是否為伺服器角色的成員，請使用 [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要資料庫角色的 VIEW DEFINITION 權限。  
   
 ## <a name="examples"></a>範例  

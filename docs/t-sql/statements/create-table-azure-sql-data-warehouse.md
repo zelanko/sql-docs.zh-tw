@@ -18,11 +18,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 3a8992b85126a899f3bb35fa2c34ab0eba4c36ad
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942174"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38058746"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL 資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -274,7 +274,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  這是 16 位元組的 GUID。  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  建立資料表時需要 `db_ddladmin` 固定資料庫角色的權限，或：
  - 資料庫的 `CREATE TABLE` 權限
  - 將包含資料表之結構描述的 `ALTER SCHEMA` 權限。 
