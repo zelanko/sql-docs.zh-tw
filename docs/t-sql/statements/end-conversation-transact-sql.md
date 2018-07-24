@@ -29,11 +29,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3b2afef78504eb1fda2994bf1aca64b964ca05fb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791065"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991670"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ END CONVERSATION conversation_handle
   
  在使用者自訂函數中，END CONVERSATION 無效。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要結束使用中的交談，目前使用者必須是交談的擁有者、系統管理員 (sysadmin) 固定伺服器角色的成員，或 db_owner 固定資料庫角色的成員。  
   
  系統管理員 (sysadmin) 固定伺服器角色的成員或 db_owner 固定資料庫角色的成員，可以利用 WITH CLEANUP 來移除已完成之交談的中繼資料。  

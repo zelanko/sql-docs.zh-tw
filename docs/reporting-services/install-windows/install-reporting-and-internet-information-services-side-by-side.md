@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 6163dcad3fcc755b6d75a0758fce42afed2320cf
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322727"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978000"
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>並存安裝 Reporting Services 和 Internet Information Services
 
@@ -31,7 +31,7 @@ ms.locfileid: "35322727"
 
 您可以在同一部電腦上安裝和執行 SQL Server Reporting Services (SSRS) 與 Internet Information Services (IIS)。 您所使用的 IIS 版本會決定必須處理的互通性問題。  
   
-|IIS 版本|問題|描述|  
+|IIS 版本|問題|Description|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|適用於某個應用程式的要求被不同的應用程式所接受。<br /><br /> HTTP.SYS 會針對 URL 保留項目強制執行優先順序規則。 如果 URL 保留項目比另一個應用程式的 URL 保留項目更弱，傳送至具有相同虛擬目錄名稱而且共同監視通訊埠 80 之應用程式的要求可能無法送達預期的目標。|在特定條件底下，在 URL 保留項目配置中取代另一個 URL 端點的已註冊端點可能會收到適用於其他應用程式的 HTTP 要求。<br /><br /> 針對報表伺服器 Web 服務和 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 使用唯一的虛擬目錄名稱可協助您避免這項衝突。<br /><br /> 本主題將提供有關這個狀況的詳細資訊。|  
   
@@ -59,7 +59,7 @@ ms.locfileid: "35322727"
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>IIS 8.0、8.5 與 SQL Server Reporting Services 的 URL 保留項目  
  根據上一節所描述的優先順序規則，您可以開始了解針對 Reporting Services 和 IIS 所定義的 URL 保留項目如何提升互通性。 Reporting Services 會接收明確指定其應用程式之虛擬目錄名稱的要求。IIS 會接收所有其餘要求，然後您可以將這些要求導向至 IIS 處理模型內部執行的應用程式。  
   
-|應用程式|URL 保留項目|描述|要求接收|  
+|應用程式|URL 保留項目|Description|要求接收|  
 |-----------------|---------------------|-----------------|---------------------|  
 |報表伺服器|`http://+:80/ReportServer`|通訊埠 80 的強式萬用字元，以及報表伺服器虛擬目錄。|在通訊埠 80 上接收指定報表伺服器虛擬目錄的所有要求。 報表伺服器 Web 服務會接收 http://\<電腦名稱>/reportserver 的所有要求。|  
 |入口網站|`http://+:80/Reports`|通訊埠 80 的強式萬用字元，以及 Reports 虛擬目錄。|在通訊埠 80 上接收指定 Reports 虛擬目錄的所有要求。 [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] 會接收 http://\<電腦名稱>/reports 的所有要求。|  

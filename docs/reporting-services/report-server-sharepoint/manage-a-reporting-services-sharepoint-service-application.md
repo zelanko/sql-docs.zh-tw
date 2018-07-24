@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1414b6cbf166c136dd942d974d6cb1aea866bc8d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028065"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37971780"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>管理 Reporting Services SharePoint 服務應用程式
 
@@ -114,7 +114,7 @@ ms.locfileid: "33028065"
 > [!IMPORTANT]  
 >  定期變更 Reporting Services 加密金鑰是安全性最佳作法。 建議您在進行 Reporting Services 的主要版本升級之後，立即變更金鑰。 在升級之後變更金鑰可將升級循環以外，由變更 Reporting Services 加密金鑰所造成的其他服務中斷減至最少。  
   
-|頁面|描述|  
+|頁面|Description|  
 |----------|-----------------|  
 |備份加密金鑰|1) 在 [密碼:] 與 [確認密碼:] 方塊中鍵入密碼，然後按一下 [匯出]。 如果您輸入的密碼不符合網域原則的複雜性需求，則會顯示警告。<br /><br /> 2) 系統會提示您提供儲存金鑰檔的檔案位置。 您應考慮將金鑰檔儲存到與執行 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]。 預設檔案名稱與服務應用程式的名稱相同。|  
 |還原加密金鑰|1) 在 [檔案位置] 方塊中鍵入或瀏覽至金鑰檔。<br /><br /> 2) 在 [密碼] 方塊中，鍵入要用來備份加密檔案的密碼。<br /><br /> 3) 按一下 [確定]。|  
