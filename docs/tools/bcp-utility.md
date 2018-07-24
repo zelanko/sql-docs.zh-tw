@@ -35,22 +35,22 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: f54b14989ac5df37bbb8ee386c783c9721a32206
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075665"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974277"
 ---
 # <a name="bcp-utility"></a>bcp 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
  > 如需舊版 SQL Server 的相關內容，請參閱 [bcp 公用程式](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx)。
 
- > Bcp 公用程式最新版本，請參閱[for SQL Server 的 Microsoft 命令列公用程式 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
+ > Bcp 公用程式的最新版本，請參閱[適用於 SQL Server 的 Microsoft 命令列公用程式 14.0 ](http://go.microsoft.com/fwlink/?LinkID=825643)
 
- > 使用 bcp on Linux，請參閱[Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
+ > 在 Linux 上使用 bcp，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
- > 如需使用 Azure SQL 資料倉儲中的 bcp 的詳細資訊，請參閱[載入資料有 bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
+ > 如需使用 Azure SQL 資料倉儲中的 bcp 的詳細資訊，請參閱[使用 bcp 載入資料](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)。
 
   **b**ulk **c**opy **p**rogram 公用程式 (**bcp**) 會以使用者指定格式，在 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 執行個體與資料檔案之間大量複製資料。 您可以利用 **bcp** 公用程式，將大量的新資料列匯入 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資料表，或將資料表的資料匯出至資料檔案。 除了搭配 **bcp** 選項使用之外，此公用程式不需要任何 [!INCLUDE[tsql](../includes/tsql-md.md)]方面的知識。 若要將資料匯入資料表中，您必須使用專為這份資料表而建立的格式檔，或了解資料表的結構及其資料行的有效資料類型。  
   
@@ -150,7 +150,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 > [!NOTE]
 > 除非您希望 65001 選項的優先順序高於定序/字碼頁規格，否則建議您在格式檔案中指定每個資料行的定序名稱。
   
-|字碼頁值|描述|  
+|字碼頁值|Description|  
 |---------------------|-----------------|  
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252)。|  
 |OEM|用戶端所用的預設字碼頁。 如果未指定 **-C** ，這是預設字碼頁。|  
@@ -190,21 +190,21 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* 可以是值高達 2^63-1 的正整數。 **-F** *first_row* 是以 1 為基底。  
 
 **-G**<a name="G"></a>  
- 這個參數在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要[14.0.3008.27 版本或更新版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱[使用 Azure Active Directory 驗證的驗證的 SQL 資料庫或 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
+ 這個參數在連線到 Azure SQL Database 或 Azure SQL 資料倉儲時由用戶端使用，以指定使用 Azure Active Directory 驗證來驗證使用者。 -G 參數需要[14.0.3008.27 版或更新版本](http://go.microsoft.com/fwlink/?LinkID=825643)。 若要判斷您的版本，請執行 bcp -v。 如需詳細資訊，請參閱 <<c0> [ 使用 Azure Active Directory 驗證來驗證與 SQL Database 或 SQL 資料倉儲](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)。 
 
 > [!TIP]
->  若要檢查您的 bcp 版本是否包含 Azure Active Directory 驗證 (AAD) 類型的支援**bcp-** (bcp\<空間 >\<虛線 >\<虛線 >)，並確認您看到-G 的清單中提供的引數。
+>  若要檢查您的 bcp 版本若包含 Azure Active Directory 驗證 (AAD) 類型的支援**bcp-** (bcp\<空間 >\<dash >\<dash >)，並確認您看到-G 的清單中可用的引數。
 
 - **Azure Active Directory 使用者名稱和密碼：** 
 
     當您想要使用 Azure Active Directory 使用者名稱和密碼時，您可以提供 **-G** 選項，並同時提供 **-U** 和 **-P** 選項來使用使用者名稱和密碼。 
 
-    下列範例會匯出資料，使用 Azure AD 使用者名稱和使用者名稱和密碼是 AAD 認證的密碼。 此範例會將匯出資料表`bcptest`從資料庫`testdb`從 Azure 伺服器`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data1.dat`:
+    下列範例會匯出資料使用 Azure AD 的使用者名稱和使用者名稱和密碼是 AAD 認證的密碼。 此範例會將匯出資料表`bcptest`從資料庫`testdb`從 Azure 伺服器`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data1.dat`:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    下列範例會使用 Azure AD 使用者名稱的資料匯入和使用者名稱和密碼是 AAD 認證的密碼。 此範例從檔案匯入資料`c:\last\data1.dat`插入資料表`bcptest`資料庫`testdb`Azure 伺服器上`aadserver.database.windows.net`使用 Azure AD 使用者/密碼：
+    下列範例會使用 Azure AD 的使用者名稱的資料匯入和使用者名稱和密碼是 AAD 認證的密碼。 此範例從檔案匯入資料`c:\last\data1.dat`插入資料表`bcptest`資料庫`testdb`Azure 伺服器上`aadserver.database.windows.net`使用 Azure AD 使用者/密碼：
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -213,15 +213,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 整合式** 
  
-    若是 Azure Active Directory 整合式驗證，請提供 **-G** 選項，但不提供使用者名稱或密碼。 此設定會假設目前的 Windows 使用者帳戶 （帳戶下執行的 bcp 命令） 會與 Azure AD 同盟： 
+    若是 Azure Active Directory 整合式驗證，請提供 **-G** 選項，但不提供使用者名稱或密碼。 此設定會假設目前的 Windows 使用者帳戶 （帳戶下執行 bcp 命令） 會與 Azure AD 同盟： 
 
-    下列範例會匯出資料，使用 Azure AD 整合的帳戶。 此範例會將匯出資料表`bcptest`從資料庫`testdb`使用從 Azure 伺服器的 Azure AD 整合式驗證`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data2.dat`:
+    下列範例將使用 Azure AD 的整合的帳戶的資料匯出。 此範例會將匯出表格`bcptest`從資料庫`testdb`使用從 Azure 伺服器的 Azure AD 整合式驗證`aadserver.database.windows.net`，並將資料儲存在檔案中`c:\last\data2.dat`:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    下列範例會匯入資料，使用 Azure AD 整合式的驗證此範例從檔案匯入資料`c:\last\data2.txt`插入資料表`bcptest`資料庫`testdb`Azure 伺服器上`aadserver.database.windows.net`使用 Azure AD 整合式的驗證：
+    下列範例會使用 Azure AD 整合式的驗證的資料匯入此範例從檔案匯入資料`c:\last\data2.txt`插入資料表`bcptest`資料庫`testdb`Azure 伺服器上`aadserver.database.windows.net`使用 Azure AD 整合式的驗證：
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -446,7 +446,7 @@ Bcp 公用程式也可以從 [Microsoft SQL Server 2016 功能套件](https://ww
 |SQLNCHAR 或 SQLNVARCHAR|以 Unicode 格式傳送這份資料。 其效果與指定 **-w** 參數但不指定格式檔案相同。|  
 |SQLBINARY 或 SQLVARYBIN|未經任何轉換即傳送這份資料。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  **bcp out** 作業需要來源資料表的 SELECT 權限。  
   
  **bcp in** 作業至少需要目標資料表的 SELECT/INSERT 權限。 另外，如果符合下列中的任何狀況，便需要 ALTER TABLE 權限：  

@@ -20,16 +20,16 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a7509cdfe26c95bb9122fb776aeaf444e218568
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870153"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984500"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱 [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/en-US/library/hh510202(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱 [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx)。
 
 Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) 的功能，專供開發人員使用。 SQL Server 2016 Express with Advanced Services 中也會提供。  
 
@@ -40,7 +40,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](https://m
   
 -   若要下載並安裝 SQL Server 2016 Express，請移至 **[SQL Server 下載](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**。 LocalDB 是您在安裝期間選取的功能，而且可以在下載媒體時使用。 如果您下載媒體，請選擇 [Express Advanced] 或 [LocalDB] 套件。 
   
--   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** ，來加速已安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虛擬機器。  
+-   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/)** ，來加速已安裝 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 的虛擬機器。  
   
 ## <a name="install-localdb"></a>安裝 LocalDB  
  透過安裝精靈或使用 SqlLocalDB.msi 程式來安裝 **LocalDB** 。 **LocalDB** 是安裝 [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] 時的選項。 
@@ -49,7 +49,7 @@ Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](https://m
 
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 的執行個體是使用 **SqlLocalDB.exe** 公用程式來管理。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** 應該用來取代已被取代的 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 使用者執行個體功能。 
   
-## <a name="description"></a>描述  
+## <a name="description"></a>Description  
  **LocalDB** 安裝程式使用 SqlLocalDB.msi 程式在電腦上安裝必要的檔案。 在安裝後， **LocalDB** 就是可建立及開啟 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 資料庫的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 資料庫的系統資料庫檔案儲存在使用者本機上通常處於隱藏狀態的 AppData 路徑。 例如 **C:\Users\\<使用者\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**。 使用者資料庫檔案儲存在使用者指定的位置，通常是在 **C:\Users\\<使用者\>\Documents\\** 資料夾中的某個位置。  
   
  如需在應用程式中併入 **LocalDB** 的詳細資訊，請參閱 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 文件：[Local Data Overview](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx) (本機資料概觀)、[Walkthrough: Creating a SQL Server LocalDB Database](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) (逐步解說：建立 SQL Server LocalDB 資料庫) 與 [Walkthrough: Connecting to Data in a SQL Server LocalDB Database (Windows Forms)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx) (逐步解說：連接至 SQL Server LocalDB 資料庫中的資料 (Windows Form))。  
@@ -125,7 +125,7 @@ REM Gather information about the instance of LocalDB
 ## <a name="troubleshooting"></a>疑難排解  
  如需有關疑難排解 **LocalDB**的詳細資訊，請參閱＜ [疑難排解 SQL Server 2012 Express LocalDB](http://social.technet.microsoft.com/wiki/contents/articles/4609.aspx)＞。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]**LocalDB** 執行個體是使用者建立、專供其使用的執行個體。 電腦上的任何使用者都可以使用 **LocalDB**執行個體建立資料庫、在其使用者設定檔之下儲存檔案，並在其認證之下執行此處理序。 根據預設，對 **LocalDB** 執行個體的存取只限其擁有者。 **LocalDB** 中所容納的資料受到資料庫檔案之檔案系統存取的保護。 如果使用者資料庫檔案儲存在共用位置，擁有該位置之檔案系統存取權的任何人都可以使用其擁有的 **LocalDB** 執行個體開啟資料庫。 如果資料庫檔案位於受保護的位置，例如使用者資料夾，則只有該使用者和擁有該資料夾存取權的任何系統管理員才可以開啟資料庫。 **LocalDB** 檔案一次只能由一個 **LocalDB** 執行個體開啟。  
   
 > [!NOTE]  

@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: af9dd51130cd21ff188af473d66f78adfc54be8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3df5a6e48c644c43082508805d28eb38624e6f0e
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013185"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038105"
 ---
 # <a name="modifying-data-in-a-system-versioned-temporal-table"></a>修改系統建立版本時態表中的資料
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ CREATE TABLE [dbo].[CompanyLocation]
    , [City] [varchar](50) NOT NULL  
    , [SysStartTime] [datetime2](0) GENERATED ALWAYS AS ROW START HIDDEN NOT NULL   
    , [SysEndTime] [datetime2](0) GENERATED ALWAYS AS ROW END HIDDEN NOT NULL   
-PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime])   
+   , PERIOD FOR SYSTEM_TIME ([SysStartTime], [SysEndTime])   
 )    
 WITH ( SYSTEM_VERSIONING = ON );   
 GO   

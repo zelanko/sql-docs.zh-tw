@@ -23,16 +23,16 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c7dfed0144de73aa7bf84db9999e4b6a5aec6c8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bed6a93030c854c89ec32658ed086d6b0092a8c9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947743"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984480"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>建立連結的伺服器 (SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱[建立連結的伺服器 (SQL Server 資料庫引擎)](https://msdn.microsoft.com/en-US/library/ff772782(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[建立連結的伺服器 (SQL Server 資料庫引擎)](https://msdn.microsoft.com/library/ff772782(SQL.120).aspx)。
 
   此主題說明如何使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，建立連結的伺服器以及存取來自其他 [!INCLUDE[tsql](../../includes/tsql-md.md)]的資料。 透過建立連結的伺服器，您可以處理多個來源的資料。 連結的伺服器不必是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的另一個執行個體，但那是常見狀況。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32947743"
   
 ##  <a name="Security"></a> 安全性  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>[權限]  
  使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式時，需要伺服器的 **ALTER ANY LINKED SERVER** 權限或 **setupadmin** 固定伺服器角色的成員資格。 使用 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 時，需要 **CONTROL SERVER** 權限或 **系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
 ##  <a name="Procedures"></a> 如何建立連結的伺服器  

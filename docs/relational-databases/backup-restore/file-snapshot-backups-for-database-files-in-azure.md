@@ -14,12 +14,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 50d1845e0df6c508aaa6f4312403aa3d5231935e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 712e6a6b6f847bb781a121f8ab9944a3614828a3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923633"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979080"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure 中資料庫檔案的檔案快照集備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "32923633"
   
 -   若要下載 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**。  
   
--   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** ，來加速已安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的虛擬機器。  
+-   有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/)** ，來加速已安裝 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 的虛擬機器。  
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>使用 Azure 快照集備份儲存在 Azure 的資料庫檔案  
   

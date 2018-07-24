@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ea8eaee6227db90dcc6696cb60d09c7fa4261fb
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+ms.openlocfilehash: cd599eb85988501d9d7919ecb40f7d080406d926
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239117"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985610"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>管理系統設定版本之時態表中的歷程記錄資料保留
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -504,7 +504,7 @@ ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 
 卓越的資料壓縮和有效率的保留清除，可讓叢集資料行存放區索引成為您的工作負載快速產生大量歷程記錄資料時的完美選擇。 此模式一般適用於使用時態表進行變更追蹤和稽核、趨勢分析或 IoT 資料擷取的大量交易處理工作負載。
 
-如需更多詳細資料，請參閱[使用保留原則管理時態資料表中的歷程記錄資料](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)。
+如需更多詳細資料，請參閱[使用保留原則管理時態資料表中的歷程記錄資料](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)。
 
 ## <a name="see-also"></a>另請參閱  
  [時態表](../../relational-databases/tables/temporal-tables.md)   

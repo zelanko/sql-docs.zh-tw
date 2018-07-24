@@ -16,17 +16,17 @@ caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1795e19eb13aaac59009ea610b0d261d3dc4d649
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd86be05457d2596d1b17e29bd093c050bef8822
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947113"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979820"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>第 1 課：連接到 Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
- > 如需舊版 SQL Server 的相關內容，請參閱[第 1 課：連接到資料庫引擎](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[第 1 課：連接到資料庫引擎](https://msdn.microsoft.com/library/ms345332(SQL.120).aspx)。
 
 當您安裝 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]時，所安裝的工具視版本和安裝選項而定。 這一課檢閱主要工具，顯示您如何連接及執行基本功能 (授權更多使用者)。  
 

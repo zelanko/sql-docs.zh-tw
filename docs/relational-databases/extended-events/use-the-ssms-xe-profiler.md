@@ -19,12 +19,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8d7a1aad6ccaa2b948799293d68137aac44a56b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ddbd649824694e4ef5be130b178014ea30f1b149
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32934723"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980770"
 ---
 # <a name="use-the-ssms-xevent-profiler"></a>使用 SSMS XEvent 分析工具
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ XEvent 分析工具是一項 SQL Server Management Studio (SSMS) 功能，其可
 XEvent 分析工具不同於 SQL Profiler，其可直接整合到 SSMS，並以 SQL 引擎中可調式擴充事件技術作為基礎建置而成。 您可利用這項功能在 SQL 伺服器上快速存取診斷事件的即時串流檢視。 您可自訂此檢視，讓這些自訂內容以 .viewsettings 檔案的形式與其他 SSMS 使用者共用。 XE 分析工具建立的工作階段，對運作中 SQL 伺服器所造成的干擾，低於類似 SQL 追蹤使用 SQL Profiler 所造成的干擾。 使用者也可使用現有的 XE 工作階段屬性 UI 或是 TSQL，自訂此工作階段。
 
 ## <a name="prerequisites"></a>Prerequisites
-只有 SQL Server Management Studio (SSMS) v17.3 或更新版本才提供此功能。 請確認目前使用的是最新版本。 您可以於[這裡](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
+只有 SQL Server Management Studio (SSMS) v17.3 或更新版本才提供此功能。 請確認目前使用的是最新版本。 您可以於[這裡](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)找到最新版本。
 
 ## <a id="getting-started"></a>使用者入門
 若要存取 XEvent 分析工具，請遵循下列步驟進行：

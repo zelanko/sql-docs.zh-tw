@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26e3fcd0f7959f5b659468f943a321d30c75cce9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075365"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066841"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "33075365"
 ## <a name="showplan-events"></a>顯示計畫事件  
  下表列出並說明顯示計畫追蹤事件。  
   
-|事件名稱|描述|  
+|事件名稱|Description|  
 |----------------|-----------------|  
 |**Performance statistics**|指出第一次快取已編譯顯示計畫的時間、其重新編譯的時間，以及從計畫快取中卸除的時間。 **TextData** 資料行中包含了 XML 格式的顯示計畫。 如需詳細資訊，請參閱 [Performance Statistics 事件類別](../../relational-databases/event-classes/performance-statistics-event-class.md)。|  
 |**Showplan All**|所顯示的查詢計畫，含有已執行之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式的完整編譯詳細資料。 例如，其中可能會顯示成本估計與資料行清單。 如需詳細資訊，請參閱 [Showplan All 事件類別](../../relational-databases/event-classes/showplan-all-event-class.md)。|  

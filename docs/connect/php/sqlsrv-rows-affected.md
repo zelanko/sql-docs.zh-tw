@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_rows_affected |Microsoft 文件
+title: sqlsrv_rows_affected |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f416bf1633909e548572f8f90c7fac7e188ecf75
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309347"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991380"
 ---
 # <a name="sqlsrvrowsaffected"></a>sqlsrv_rows_affected
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_rows_affected( resource $stmt)
 一個整數，表示上次執行的陳述式所修改的資料列數目。 如果未修改任何資料列，則會傳回零 (0)。 如果已修改的資料列數目沒有相關資訊可供參考，則會傳回負一 (-1)。 如果在擷取已修改的資料列數目時發生錯誤，則會傳回 **false** 。  
   
 ## <a name="example"></a>範例  
-下列範例顯示 UPDATE 陳述式所修改的資料列數目。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例顯示 UPDATE 陳述式所修改的資料列數目。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

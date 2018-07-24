@@ -1,5 +1,5 @@
 ---
-title: EventString 元素 (DTA) |Microsoft 文件
+title: EventString 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c90feb22a7850c024b355816a693542a417d31c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33069015"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37987410"
 ---
 # <a name="eventstring-element-dta"></a>EventString 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,13 @@ ms.locfileid: "33069015"
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**Weight**|選擇性。 針對指定事件來指定查詢加權因數 (重要性因數)。 請利用 **float** 資料類型來指定加權。 例如， **Weight**="100.01"。 **Weight** 所能指定的最小值是 "0"。|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**string**，沒有長度限制。|  
 |**預設值**|無。|  

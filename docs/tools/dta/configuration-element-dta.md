@@ -1,5 +1,5 @@
 ---
-title: Configuration 元素 (DTA) |Microsoft 文件
+title: Configuration 元素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 50e3fc0edbc43eff14fa9cfec5e4bf5d8326b0e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997120"
 ---
 # <a name="configuration-element-dta"></a>Configuration 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +47,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|組態屬性|描述|  
+|組態屬性|Description|  
 |-----------------------------|-----------------|  
 |**SpecificationMode**|選擇性。 指定 Database Engine Tuning Advisor 應該關聯於目前現有的組態來分析指定的組態，或將它當作全新的獨立組態來進行分析。 請利用 **string** 資料類型和下列其中一個允許的值，來指定這個屬性：<br /><br /> **Relative**：<br />                  關聯於正在微調的資料庫其中之實體設計結構 (索引、索引檢視、資料分割) 目前現有的組態來評估指定的組態。 例如：<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**：<br />                  將指定的組態當作獨立組態來評估。 當指定 Absolute 時，Database Engine Tuning Advisor 不會考慮現有的組態。 例如：<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**資料類型和長度**|無。|  
 |**預設值**|無。|  

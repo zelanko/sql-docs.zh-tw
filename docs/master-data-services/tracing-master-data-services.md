@@ -15,12 +15,12 @@ caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: b4ac3f71827d48a42953f5d1fc65ed1ec05c5a31
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: d7c90b45352ff3afe78891c6849b04d69ab58175
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334882"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984690"
 ---
 # <a name="tracing-master-data-services"></a>追蹤 (Master Data Services)
 
@@ -31,7 +31,7 @@ ms.locfileid: "35334882"
 ```  
 <sources>  
       <!-- Adjust the switch value to control the types of messages that should be logged.   
-           http://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels  
+           http://msdn.microsoft.com/library/system.diagnostics.sourcelevels  
            Use the a switchValue of Verbose to generate a full log. Please be aware that   
            the trace file can get quite large very quickly -->  
       <source name="MDS" switchType="System.Diagnostics.SourceSwitch" switchValue="Warning, ActivityTracing">  
@@ -54,7 +54,7 @@ ms.locfileid: "35334882"
   
 -   警告和 ActivityTracing 訊息會啟用追蹤。  
   
-     如需詳細資訊，請參閱 [SourceLevels 列舉類型](https://msdn.microsoft.com/en-us/library/system.diagnostics.sourcelevels)。  
+     如需詳細資訊，請參閱 [SourceLevels 列舉類型](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels)。  
   
 -   記錄會儲存在 WebApplication 資料夾下的 Logs 資料夾中。 預設位置是 C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "35334882"
   
 -   記錄格式是 CSV。 下表描述記錄格式。  
   
-    |元素|描述|  
+    |元素|Description|  
     |-------------|-----------------|  
     |Time|追蹤項目的發生時間。|  
     |CorrelationID|每個要求會指派一個相互關聯識別碼。 此要求觸發的所有追蹤會共用相同的相互關聯識別碼。<br /><br /> 當 UI 中發生錯誤時，相互關聯識別碼會出現在錯誤訊息中。|  

@@ -1,5 +1,5 @@
 ---
-title: 指定資料指標類型及選取資料列 |Microsoft 文件
+title: 指定資料指標類型，然後選取資料列 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca3edbf7831789209b21a39b20d428cc5afe94d9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309057"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983330"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>指定資料指標類型及選取資料列
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

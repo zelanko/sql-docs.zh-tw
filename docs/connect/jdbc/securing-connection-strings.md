@@ -1,5 +1,5 @@
 ---
-title: 保護連接字串 |Microsoft 文件
+title: 保護連接字串 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dbe0ac21775b41116f367ab688310fcb7c2b678f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850823"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021232"
 ---
 # <a name="securing-connection-strings"></a>保護連接字串的安全
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

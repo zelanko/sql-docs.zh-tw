@@ -17,17 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 064d6fb77dad0dd906c8783ebe82f99c48b14f2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979974"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 組態管理員說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   您可以使用「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」來設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務以及設定網路連接性。 若要建立或管理資料庫物件、設定安全性以及撰寫 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢，請使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 如需有關 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]的詳細資訊，請參閱《 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》。  
 
  > [!TIP]
- > 如果您需要設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 Linux 上使用**mssql conf**工具。 如需詳細資訊，請參閱[設定 SQL Server on Linux mssql conf 工具](../../linux/sql-server-linux-configure-mssql-conf.md)。
+ > 如果您需要設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]在 Linux 上，使用**mssql conf**工具。 如需詳細資訊，請參閱 <<c0> [ 在 Linux 上使用 mssql-conf 工具的 設定 SQL Server](../../linux/sql-server-linux-configure-mssql-conf.md)。
 
  本節包含關於「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員」中對話方塊的 F1 說明主題。  
   

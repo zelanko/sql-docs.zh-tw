@@ -24,12 +24,12 @@ caps.latest.revision: 121
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8a1dfae6233ddf9c8c4a736d7d2fb4c640ce196a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4e5fbe77dc85496fd51100c496467a4672c254e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017185"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984150"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 和 Power View 的瀏覽器支援
 
@@ -155,7 +155,7 @@ ms.locfileid: "33017185"
 
 [在入口網站中尋找和檢視報表](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 工具](../reporting-services/tools/reporting-services-tools.md)  
-[入口網站 (SSRS 原生模式)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[入口網站 (SSRS 原生模式)](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [URL 存取參數參考](../reporting-services/url-access-parameter-reference.md)  
 

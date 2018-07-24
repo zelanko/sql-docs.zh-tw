@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bd476ff279b30d79f4f096f3978ec96c9333dce3
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c25dc5d5d45b713f284cd6505db71320c0cf3234
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789289"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980201"
 ---
 # <a name="create-primary-keys"></a>建立主索引鍵
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > 如需舊版 SQL Server 的相關內容，請參閱[建立主索引鍵](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[建立主索引鍵](https://msdn.microsoft.com/library/ms189039(SQL.120).aspx)。
 
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中定義主索引鍵。 建立主索引鍵會自動建立對應的唯一叢集索引，或若依此指定則建立非叢集索引。  
   

@@ -1,5 +1,5 @@
 ---
-title: updateRef 方法 （int，java.sql.Ref） |Microsoft 文件
+title: updateRef 方法 （int，java.sql.Ref） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e08f3912e3a688e12b9e568a8974f55aef281586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850643"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036266"
 ---
 # <a name="updateref-method-int-javasqlref"></a>updateRef 方法 (int, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,8 +51,8 @@ public void updateRef(int columnIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateRef 方法 java.sql.ResultSet 介面中所指定此 updateRef 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 updateRef 方法是由 java.sql.ResultSet 介面中的 updateRef 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateRef 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   

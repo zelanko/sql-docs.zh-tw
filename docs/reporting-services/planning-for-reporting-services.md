@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: bad05c05805557c218fe372298c8840be3df9bb6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 63f6cce007ec4586a31e9acd7b170c7c826e708f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018535"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985150"
 ---
 # <a name="planning-for-reporting-services"></a>規劃 Reporting Services
   使用這些主題可更佳了解 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]。 了解如何安裝及設定 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 環境，使其最符合您的需要。  
@@ -28,7 +28,7 @@ ms.locfileid: "33018535"
  ![小型檔案資料夾圖示](../analysis-services/media/filefolder-small.png "小型檔案資料夾圖示") **一般 Reporting Services 功能規劃和架構**  
  [Reporting Services 和 Power View 的瀏覽器支援](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
- [規劃報表設計與報表部署 | Reporting Services](http://msdn.microsoft.com/en-us/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
+ [規劃報表設計與報表部署 | Reporting Services](http://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
  [在 Microsoft Surface 裝置及 Apple iOS 裝置上檢視 Reporting Services 報表](http://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
   

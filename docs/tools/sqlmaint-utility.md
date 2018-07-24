@@ -1,5 +1,5 @@
 ---
-title: sqlmaint 公用程式 |Microsoft 文件
+title: sqlmaint 公用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077895"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37997140"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint 公用程式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -209,7 +209,8 @@ dbname_log_yyyymmddhhmm.BAK
  對於磁碟備份，指定如果建立備份之後的時間間隔超出 \<*time_period*>，便會刪除備份目錄中的任何備份檔案。  
   
  **-CrBkSubDir**  
- 對於磁碟備份，指定如果也指定了 *-UseDefDir*，便會在 [ **backup_path** ] 目錄或預設備份目錄中建立一個子目錄。 子目錄的名稱是從 **-D**指定的資料庫名稱所產生。 **-CrBkSubDir** 提供一種簡單的方式，讓您不需要變更 *backup_path* 參數，就能將不同資料庫的所有備份放在個別子目錄中。  
+ 對於磁碟備份，指定如果也指定了 *-UseDefDir*，便會在 [ **backup_path** ] 目錄或預設備份目錄中建立一個子目錄。 子目錄的名稱是從 **-D**指定的資料庫名稱所產生。 
+  **-CrBkSubDir** 提供一種簡單的方式，讓您不需要變更 *backup_path* 參數，就能將不同資料庫的所有備份放在個別子目錄中。  
   
  **backup_path**  
  對於磁碟備份，指定在預設備份目錄中建立備份檔。 如果同時指定這兩者，則**UseDefDir** 會覆寫 *backup_path* 。 當採用預設的 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 安裝時，預設備份目錄是 C:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\Backup。  
@@ -245,7 +246,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   如果發生一般失敗。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  **sqlmaint** 公用程式可以由任何對於 **具有** 讀取和執行 `sqlmaint.exe`權限的 Windows 使用者執行，依預設，其會儲存於 `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` 資料夾內。 另外，以 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -login_ID **指定的** 登入必須擁有執行指定動作的必要 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。 如果 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的連接是使用 Windows 驗證，則對應到已驗證之 Windows 使用者的 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 登入必須有執行指定動作的必要 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 權限。  
   
  例如，使用 **-BkUpDB** 需要有執行 BACKUP 陳述式的權限。 使用 **-UpdOptiStats** 引數需要有執行 UPDATE STATISTICS 陳述式的權限。 如需詳細資訊，請參閱線上叢書中對應主題的＜權限＞章節。  

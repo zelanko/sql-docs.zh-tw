@@ -15,12 +15,12 @@ caps.latest.revision: 44
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0eeea06688707eb143254d62bbfaf59ef5d7d800
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f26803afed7f38e00c87db06e1c3c6398d346b5e
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335502"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980480"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 安裝和組態
 
@@ -40,7 +40,7 @@ ms.locfileid: "35335502"
   
 > **下載**  
 >-   若要下載 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]，請前往  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**。  
->-   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 來啟動已安裝 SQL Server 的虛擬機器。  
+>-   有 Azure 帳戶嗎？  接著前往**[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** 來啟動已安裝 SQL Server 的虛擬機器。  
  
 > **無法建立 MDS 網站？**
 >>如需如何解決此問題的指示，請參閱這份 Microsoft 技術支援文件。

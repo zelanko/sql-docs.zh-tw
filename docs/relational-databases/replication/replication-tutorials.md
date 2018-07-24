@@ -21,12 +21,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce86448f4266da763c96c5b7f934aa8acaefd861
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a3c3eb131de8f0786bf72fc09da244b4bb542dd4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37351430"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981730"
 ---
 # <a name="replication-tutorials"></a>複寫教學課程
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ ms.locfileid: "37351430"
 ## <a name="see-also"></a>另請參閱  
 [複寫的安全性與保護](../../relational-databases/replication/security/security-and-protection-replication.md) 
 
-[異動複寫概觀](https://docs.microsoft.com/en-us/sql/relational-databases/replication/transactional/transactional-replication) 
+[異動複寫概觀](https://docs.microsoft.com/sql/relational-databases/replication/transactional/transactional-replication) 
 
-[合併式複寫概觀](https://docs.microsoft.com/en-us/sql/relational-databases/replication/merge/merge-replication)
+[合併式複寫概觀](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication)
 
   

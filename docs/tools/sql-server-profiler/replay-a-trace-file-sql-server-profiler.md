@@ -1,5 +1,5 @@
 ---
-title: 重新執行追蹤檔案 (SQL Server Profiler) |Microsoft 文件
+title: 重新執行追蹤檔案 (SQL Server Profiler) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0dc2625cfeae43ef4c524c460df5f2723130eb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076550"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38035491"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>重新執行追蹤檔案 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "33076550"
   
 5.  選擇 [以追蹤事件的順序重新執行事件] 或 [使用多執行緒重新執行事件]。 下列資料表說明這些設定之間的差異。  
   
-    |選項|描述|  
+    |選項|Description|  
     |------------|-----------------|  
     |**依照追蹤的順序重新執行事件**|以記錄事件的順序重新執行事件。 此選項會啟動偵錯。|  
     |**使用多執行緒重新執行事件**|這個選項使用多個執行緒重新執行每個事件，不受順序的限制。 這個選項會將效能最佳化。|  

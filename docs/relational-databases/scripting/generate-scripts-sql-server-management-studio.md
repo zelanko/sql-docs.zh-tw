@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d3d77c77be6e16e6d4deb5fd968774717230f88
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 17167b89180bd8af491d20c6ef3785dba238ad7f
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333935"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983260"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>產生指令碼 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供兩種產生 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼的機制。 您可以使用 [產生和發佈指令碼精靈] 來建立多個物件的指令碼。 您也可以使用**物件總管**中的 [編寫組件的指令碼為] 功能表，為個別物件或多個物件產生指令碼。  
 
-如需使用 SQL Server Management Studio (SSMS) 撰寫各種物件指令碼的詳細教學課程，請參閱[教學課程：在 SSMS 中撰寫指令碼](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms)。
+如需使用 SQL Server Management Studio (SSMS) 撰寫各種物件指令碼的詳細教學課程，請參閱[教學課程：在 SSMS 中撰寫指令碼](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms)。
 
   
 ## <a name="before-you-begin"></a>開始之前  

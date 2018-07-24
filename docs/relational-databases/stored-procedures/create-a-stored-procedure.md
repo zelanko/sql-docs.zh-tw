@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3651eca0e06a0c0b91ba8f12ca0e66a49c906037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae4de7aad9a404b900c47c4067a8266410e44379
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278374"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981390"
 ---
 # <a name="create-a-stored-procedure"></a>建立預存程序
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱[建立預存程序](https://msdn.microsoft.com/en-US/library/ms345415(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[建立預存程序](https://msdn.microsoft.com/library/ms345415(SQL.120).aspx)。
 
   此主題描述如何使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 及 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE PROCEDURE 陳述式來建立 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "37278374"
     |---------------|-----------|  
     |作者|*您的名字*|  
     |建立日期|*今天的日期*|  
-    |描述|傳回員工資料。|  
+    |Description|傳回員工資料。|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  

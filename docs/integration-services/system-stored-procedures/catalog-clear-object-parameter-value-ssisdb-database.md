@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524356687337eb962c262ea1e503fd2b40856623
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8288e93ff860e79116815f5b5d5417d05786d262
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410550"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082370"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (SSISDB 資料庫)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,28 +37,28 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @folder_name = ] *folder_name*  
+ [ \@folder_name = ] *folder_name*  
  包含專案之資料夾的名稱。 *folder_name* 是 **nvarchar(128)**。  
   
- [ @project_name = ] *project_name*  
+ [ \@project_name = ] *project_name*  
  專案的名稱。 *project_name* 是 **nvarchar(128)**。  
   
- [ @object_type = ] *object_type*  
+ [ \@object_type = ] *object_type*  
  物件的類型。 有效的值包括 `20` (專案) 和 `30` (封裝)。 *object_type* 是 **smallInt**。  
   
- [ @ object _name = ] *object _name*  
+ [ \@ object _name = ] *object _name*  
  封裝名稱。 *object _name* 是 **nvarchar(260)**。  
   
- [ @parameter_ name = ] *parameter_name*  
+ [ \@parameter_ name = ] *parameter_name*  
  參數的名稱。 *parameter_ name* 是 **nvarchar(128)**。  
   
 ## <a name="return-code-value"></a>傳回碼值  
  0 (成功)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  這個預存程序需要下列其中一個權限：  
   
 -   專案的 READ 和 MODIFY 權限  

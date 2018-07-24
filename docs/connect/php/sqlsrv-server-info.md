@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_server_info | Microsoft Docs
+title: sqlsrv_server_info |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 878ea8dde5e6cbccf4d87e4a3b4b98fbf06f557b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309507"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983603"
 ---
 # <a name="sqlsrvserverinfo"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>傳回值  
 具有下列索引鍵的關聯陣列：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
 |CurrentDatabase|目前做為目標的資料庫。|  
 |SQLServerVersion|SQL Server 的版本。|  

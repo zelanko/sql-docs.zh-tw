@@ -18,12 +18,12 @@ caps.latest.revision: 13
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ce3d934327706eaf7733c5fec22b8e46311aed5a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 77fd3fcab52fef8b030846571fb5eb42429a0f37
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400410"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983530"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>建立日期屬性 (Master Data Services)
 
@@ -92,7 +92,7 @@ ms.locfileid: "35400410"
   
  當您在 mdm.tblList 資料表中輸入包含上述值的資料列之後，[輸入遮罩] 清單方塊中將會提供 "dd/MM/yyyy hh:mm:ss tt" 遮罩。 然後，您可以選取該遮罩，在 MDS Explorer 中實體的日期時間屬性資料行中顯示日期和時間。  
   
- 輸入遮罩是自訂的 .NET DateTime 格式字串。 如需詳細資訊，請參閱 [自訂日期和時間格式字串](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)  
+ 輸入遮罩是自訂的 .NET DateTime 格式字串。 如需詳細資訊，請參閱 [自訂日期和時間格式字串](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
 ## <a name="see-also"></a>另請參閱  
  [屬性 &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   

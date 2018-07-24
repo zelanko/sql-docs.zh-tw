@@ -17,12 +17,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c6b667bf8be87561461c1ceec2543dcce051b93e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332489"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981420"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "34332489"
   
 ##  <a name="SSMS"></a> 使用最新版 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 擁有一組針對設定查詢存放區，以及耗用有關工作負載之收集資料所設計的使用者介面。  
-[在此](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)下載最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
+[在此](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)下載最新版 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。  
   
- 如需有關如何在疑難排解案例中使用查詢存放區的快速說明，請參閱[查詢存放區@Azure部落格](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)。  
+ 如需有關如何在疑難排解案例中使用查詢存放區的快速說明，請參閱[查詢存放區@Azure部落格](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)。  
   
 ##  <a name="Insight"></a> 在 Azure SQL 資料庫中使用查詢效能深入解析  
  如果您在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中執行查詢存放區，您可以使用「查詢效能深入解析」  分析經過一段時間的 DTU 耗用量。  

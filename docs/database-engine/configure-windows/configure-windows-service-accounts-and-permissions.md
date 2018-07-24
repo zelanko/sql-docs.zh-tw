@@ -54,16 +54,16 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59306ab48061fe2c759b4cb2dac784e7a24cb325
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: c409047c510bb97c6e915140758a304e145747ad
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33989356"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981350"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > 如需舊版 SQL Server 的相關內容，請參閱[設定 Windows 服務帳戶與權限](https://msdn.microsoft.com/en-US/library/ms143504(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[設定 Windows 服務帳戶與權限](https://msdn.microsoft.com/library/ms143504(SQL.120).aspx)。
 
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每項服務代表一個或一組處理序，用以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業對 Windows 的驗證。 本主題描述此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的預設服務組態，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間和安裝完成後設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務組態選項。 本主題可協助進階使用者了解服務帳戶的詳細資料。  
@@ -404,7 +404,7 @@ ms.locfileid: "33989356"
 
 某些存取控制權限可能必須授與給內建帳戶或其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務帳戶。 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式所設定的其他 ACL。  
   
-|要求元件|帳戶|資源|Permissions|  
+|要求元件|帳戶|資源|[權限]|  
 |--------------------------|-------------|--------------|-----------------|  
 |MSSQLServer|效能記錄使用者|Instid\MSSQL\binn|列出資料夾內容|  
 ||效能監視器使用者|Instid\MSSQL\binn|列出資料夾內容|  

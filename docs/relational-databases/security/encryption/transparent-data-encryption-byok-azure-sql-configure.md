@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 5b6a5d6eafc76b80a169332f8c71309440c4ef0f
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: d9419443e554c225bd2ee6708c8448787160b6de
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093312"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979172"
 ---
 # <a name="powershell-and-cli-enable-transparent-data-encryption-using-your-own-key-from-azure-key-vault"></a>PowerShell 與 CLI：使用 Azure Key Vault 中您自己的金鑰來啟用透明資料加密
 
@@ -39,8 +39,8 @@ ms.locfileid: "37093312"
    - [Key Vault 中的 PowerShell 指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started)
    - [使用硬體安全性模組 (HSM) 與 Key Vault 的指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - 金鑰保存庫必須具有以下屬性才能供 TDE 使用：
-   - [虛刪除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [如何透過 PowerShell 使用金鑰保存庫虛刪除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) 
+   - [虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [如何透過 PowerShell 使用金鑰保存庫虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-powershell) 
 - 若要用於 TDE，金鑰必須具有下列屬性：
    - 無到期日
    - 未停用
@@ -200,13 +200,13 @@ ms.locfileid: "37093312"
 
 - 您必須擁有 Azure 訂用帳戶，而且是該訂用帳戶的系統管理員。
 - [建議但非必要] 備妥硬體安全性模組 (HSM) 或本機金鑰存放區，以建立 TDE 保護裝置金鑰內容的本機複本。
-- 命令列介面 2.0 版或更新版本。 若要安裝最新版本並連線至您的 Azure 訂用帳戶，請參閱[安裝及設定 Azure 跨平台命令列介面 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)。 
+- 命令列介面 2.0 版或更新版本。 若要安裝最新版本並連線至您的 Azure 訂用帳戶，請參閱[安裝及設定 Azure 跨平台命令列介面 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest)。 
 - 建立 Azure Key Vault 和金鑰以用於 TDE。
-   - [使用 CLI 2.0 管理 Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-manage-with-cli2)
+   - [使用 CLI 2.0 管理 Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-manage-with-cli2)
    - [使用硬體安全性模組 (HSM) 與 Key Vault 的指示](https://docs.microsoft.com/azure/key-vault/key-vault-get-started#a-idhsmaif-you-want-to-use-a-hardware-security-module-hsm)
  - 金鑰保存庫必須具有以下屬性才能供 TDE 使用：
-   - [虛刪除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-ovw-soft-delete)
-   - [如何透過 CLI 使用金鑰保存庫虛刪除](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-cli) 
+   - [虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)
+   - [如何透過 CLI 使用金鑰保存庫虛刪除](https://docs.microsoft.com/azure/key-vault/key-vault-soft-delete-cli) 
 - 若要用於 TDE，金鑰必須具有下列屬性：
    - 無到期日
    - 未停用
@@ -264,11 +264,11 @@ ms.locfileid: "37093312"
 
 ## <a name="sql-cli-references"></a>SQL CLI 參考
 
-https://docs.microsoft.com/en-us/cli/azure/sql?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/server/tde-key?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest 
 
-https://docs.microsoft.com/en-us/cli/azure/sql/db/tde?view=azure-cli-latest 
+https://docs.microsoft.com/cli/azure/sql/db/tde?view=azure-cli-latest 
 

@@ -17,16 +17,16 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 721f9245ff8057c54cef5facdf4a4de423e53961
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e76820fc010a88e7bc276e028bd84bcddc981ba8
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942003"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984680"
 ---
 # <a name="lesson-1-create-stored-access-policy-and-shared-access-signature"></a>第 1 課︰建立預存存取原則和共用存取簽章
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-在這一課，您將使用 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 指令碼，在 Azure Blob 容器上建立使用預存存取原則的共用存取簽章。  
+在這一課，您將使用 [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 指令碼，在 Azure Blob 容器上建立使用預存存取原則的共用存取簽章。  
   
 > [!NOTE]  
 > 此指令碼是使用 Azure PowerShell 5.0.10586 所撰寫。  
@@ -139,7 +139,7 @@ ms.locfileid: "32942003"
 [第 2 課︰使用共用存取簽章建立 SQL Server 認證](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[共用存取簽章，第 1 部分：了解 SAS 模型](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Create Container (建立容器)](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL (設定容器 ACL)](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Get Container ACL (取得容器 ACL)](https://msdn.microsoft.com/library/azure/dd179469.aspx)  

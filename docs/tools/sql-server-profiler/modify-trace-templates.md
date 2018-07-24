@@ -1,5 +1,5 @@
 ---
-title: 修改追蹤範本 |Microsoft 文件
+title: 修改追蹤範本 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28455e8a0af59b60ffa51e41c01726baaa851987
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37988160"
 ---
 # <a name="modify-trace-templates"></a>修改追蹤範本
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,5 +54,5 @@ ms.locfileid: "33075775"
 [建立追蹤](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [使用 Transact-SQL 修改現有的追蹤](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
 [使用 SQL Server Profiler 指定追蹤的事件及資料行](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
-[預存程序追蹤-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+[sp-追蹤-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

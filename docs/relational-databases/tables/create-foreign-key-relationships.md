@@ -17,17 +17,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 67760c658b27bcddff443a943c65d725e23f44e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 328468c781bd0061b12bc2e29817da7801dd45c3
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012951"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983290"
 ---
 # <a name="create-foreign-key-relationships"></a>建立外部索引鍵關聯性
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- > 如需舊版 SQL Server 的相關內容，請參閱[建立外部索引鍵關聯性](https://msdn.microsoft.com/en-US/library/ms189049(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[建立外部索引鍵關聯性](https://msdn.microsoft.com/library/ms189049(SQL.120).aspx)。
 
 
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中建立外部索引鍵關聯性。 當想要將一個資料表的資料列，與其他資料表的資料列建立相關時，可以建立兩者間的關聯性。    
@@ -62,7 +62,7 @@ ms.locfileid: "33012951"
     
 
     
-##   <a name="permissions"></a>Permissions    
+##   <a name="permissions"></a>[權限]    
  建立具有外部索引鍵的新資料表，需要資料庫中的 CREATE TABLE 權限及建立資料表的結構描述之 ALTER 權限。    
     
  在現有資料表中建立外部索引鍵需要此資料表的 ALTER 權限。    

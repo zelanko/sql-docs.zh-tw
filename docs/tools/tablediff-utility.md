@@ -1,5 +1,5 @@
 ---
-title: tablediff 公用程式 |Microsoft 文件
+title: tablediff 公用程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,11 +26,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: daf978c77bca856ebc380c95bdca7185bcdee836
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077529"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37974120"
 ---
 # <a name="tablediff-utility"></a>tablediff 公用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -172,7 +172,7 @@ tablediff
   
 ## <a name="return-value"></a>傳回值  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**0**|成功|  
 |**1**|嚴重錯誤|  
@@ -220,7 +220,7 @@ tablediff
   
 -   **image**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要比較資料表，您必須具有所比較之資料表物件的 SELECT ALL 權限。  
   
  若要使用 **-et** 選項，您必須是 db_owner 固定資料庫角色的成員，或至少具有訂閱資料庫中的 CREATE TABLE 權限，或目的地伺服器之目的地擁有者結構描述的 ALTER 權限。  

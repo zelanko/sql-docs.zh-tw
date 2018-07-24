@@ -1,5 +1,5 @@
 ---
-title: 資料表元素 (DTA) 結構描述 |Microsoft 文件
+title: 資料表項目結構描述 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -21,10 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 75b9a322b97dccaf8d43ec57ac2f750ba235a61d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036756"
 ---
 # <a name="table-element-for-schema-dta"></a>結構描述的 Table 元素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="element-attributes"></a>元素屬性  
   
-|attribute|描述|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**NumberOfRows**|選擇性。 可讓您模擬不同大小的資料表之整數。|  
   
 ## <a name="element-characteristics"></a>元素特性  
   
-|特性|描述|  
+|特性|Description|  
 |--------------------|-----------------|  
 |**資料類型和長度**|**string**，在 1 和 255 個字元之間。|  
 |**預設值**|無。|  

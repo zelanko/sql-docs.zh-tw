@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 97f0760953fa0bc7fe7e3cffbab43743da20225d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075465"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38031476"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data"></a>建立追蹤與 Windows 效能記錄資料的關聯
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

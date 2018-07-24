@@ -1,5 +1,5 @@
 ---
-title: 步驟 4： 彈性地連接到 SQL 搭配 PHP |Microsoft 文件
+title: 步驟 4： 復原連線 SQL 與 PHP |Microsoft Docs
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -14,22 +14,22 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b422ab79b0a0cec89683835f592d4813edc99d0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: da5c3b99eab34afded5fd92c19f53f3868517d43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309997"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983021"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>步驟 4︰使用 PHP 彈性地連接到 SQL
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-示範程式的設計以便暫時性錯誤 (也就是任何具有該前置詞 '08' 在此列出的錯誤代碼[附錄](https://docs.microsoft.com/en-us/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) 嘗試將導致連接重試期間。 但是，查詢命令期間的暫時性錯誤會造成程式捨棄連線並建立新的連接，再重試查詢命令。 我們中立態度這項設計選擇。 示範程式說明一些可供您使用的設計彈性。  
+示範程式經過設計，讓暫時性錯誤 (也就是任何具有前置詞 '08' 在此所示的錯誤代碼[附錄](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) 嘗試連線重試的潛在客戶時。 但是，查詢命令期間的暫時性錯誤會導致程式捨棄連線並建立新的連接，再重試查詢命令。 我們不建議也不 disrecommend 這種設計選擇。 示範程式說明一些可供您使用的設計彈性。  
   
 此程式碼範例的長度多半是由於 catch 例外狀況邏輯。   
   
-[Sqlsrv_query()](../../connect/php/sqlsrv-query.md)函式可以用來擷取結果集從查詢中，針對 SQL 資料庫。 此函式基本上接受任何查詢和連接的物件，並傳回結果集，可利用逐一[sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md)。 
+[Sqlsrv_query （)](../../connect/php/sqlsrv-query.md)函式可以用來擷取結果集從查詢中，對 SQL Database。 此函式基本上會接受任何查詢和連接的物件，並傳回結果集，可以藉由使用反覆[sqlsrv_fetch_array （)](../../connect/php/sqlsrv-fetch-array.md)。 
   
 ```php
 

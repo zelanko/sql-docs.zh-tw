@@ -1,5 +1,5 @@
 ---
-title: updateBinaryStream 方法 (SQLServerResultSet) |Microsoft 文件
+title: updateBinaryStream 方法 (SQLServerResultSet) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 729dce9ba56aa7592dfb98f585ad07165dde5fd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851163"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38046666"
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>updateBinaryStream 方法 (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "32851163"
   
 ## <a name="overload-list"></a>多載清單  
   
-|名稱|Description|  
+|[屬性]|Description|  
 |----------|-----------------|  
-|[updateBinaryStream （int，java.io.InputStream）](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)|使用二進位資料流值，更新指定的資料行。|  
-|[updateBinaryStream （int，java.io.InputStream，int）](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-int.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
-|[updateBinaryStream （int，java.io.InputStream，long）](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-long.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
-|[updateBinaryStream （java.lang.String，java.io.InputStream）](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md)|使用二進位資料流值，更新指定的資料行。|  
-|[updateBinaryStream （java.lang.String，java.io.InputStream，int）](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
-|[updateBinaryStream （java.lang.String，java.io.InputStream，long）](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
+|[updateBinaryStream(int, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)|使用二進位資料流值，更新指定的資料行。|  
+|[updateBinaryStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-int.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
+|[updateBinaryStream(int, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-long.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
+|[updateBinaryStream(java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md)|使用二進位資料流值，更新指定的資料行。|  
+|[updateBinaryStream (java.lang.String, java.io.InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
+|[updateBinaryStream(java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|使用二進位資料流值來更新指定的資料行，該值將包含指定的位元組數目。|  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

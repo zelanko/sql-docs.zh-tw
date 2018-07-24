@@ -14,12 +14,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f5a2099ad58020f03c3dc6deceea0fea9ba5230a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac4d76ceb3bcbd3042e4fb4d7f1fa42ceda44860
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922523"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983380"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>SQL Server Managed Backup to Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "32922523"
 ##  <a name="Prereqs"></a> 必要條件  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 會使用 Microsoft Azure 儲存體來儲存備份檔案。 下列必要條件是必備的：  
   
-|必要條件|描述|  
+|必要條件|Description|  
 |------------------|-----------------|  
 |**Microsoft Azure 帳戶**|您可以在瀏覽 [購買選項](http://azure.microsoft.com/pricing/free-trial/) 之前，利用 [免費試用版](http://azure.microsoft.com/pricing/purchase-options/)來開始。|  
-|**Azure 儲存體帳戶**|備份會儲存在與 Azure 儲存體帳戶相關聯的 Azure Blob 儲存體中。 如需建立儲存體帳戶的逐步指示，請參閱 [關於 Azure 儲存體帳戶](http://azure.microsoft.com/en-us/documentation/articles/storage-create-storage-account/)。|  
-|**Blob 容器**|Blob 會組織於容器中。 您會指定適用於備份檔案的目標容器。 您可以在 [Azure 管理入口網站](https://manage.windowsazure.com/)中建立一個容器，或者使用 **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 命令。|  
-|**共用存取簽章 (SAS)**|目標容器的存取權是由共用存取簽章 (SAS) 所控制。 如需 SAS 概觀，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 您可以在程式碼中或使用 **New-AzureStorageContainerSASToken** PowerShell 命令，建立 SAS 權杖。 如需簡化此程序的 PowerShell 指令碼，請參閱 [在 Azure 儲存體上使用共用存取簽章 (SAS) 權杖搭配 Powershell 簡化 SQL 認證的建立](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。 SAS 權杖可以儲存在 **SQL 認證** 中，搭配 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]一起使用。|  
+|**Azure 儲存體帳戶**|備份會儲存在與 Azure 儲存體帳戶相關聯的 Azure Blob 儲存體中。 如需建立儲存體帳戶的逐步指示，請參閱 [關於 Azure 儲存體帳戶](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/)。|  
+|**Blob 容器**|Blob 會組織於容器中。 您會指定適用於備份檔案的目標容器。 您可以在 [Azure 管理入口網站](https://manage.windowsazure.com/)中建立一個容器，或者使用 **New-AzureStorageContainer**[Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/) 命令。|  
+|**共用存取簽章 (SAS)**|目標容器的存取權是由共用存取簽章 (SAS) 所控制。 如需 SAS 概觀，請參閱 [共用存取簽章，第 1 部分：了解 SAS 模型](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)。 您可以在程式碼中或使用 **New-AzureStorageContainerSASToken** PowerShell 命令，建立 SAS 權杖。 如需簡化此程序的 PowerShell 指令碼，請參閱 [在 Azure 儲存體上使用共用存取簽章 (SAS) 權杖搭配 Powershell 簡化 SQL 認證的建立](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx)。 SAS 權杖可以儲存在 **SQL 認證** 中，搭配 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]一起使用。|  
 |**SQL Server Agent**|SQL Server Agent 必須針對 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 執行，才能運作。 請考慮將自動啟動選項設定為自動化。|  
   
 ## <a name="components"></a>Components  
@@ -56,7 +56,7 @@ ms.locfileid: "32922523"
   
 |||  
 |-|-|  
-|系統物件|描述|  
+|系統物件|Description|  
 |**MSDB**|儲存 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]所建立之所有備份的中繼資料與備份記錄。|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|啟用 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]。|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|設定 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]的進階設定，例如加密。|  

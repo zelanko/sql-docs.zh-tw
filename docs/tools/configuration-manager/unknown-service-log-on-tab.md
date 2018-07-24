@@ -1,5 +1,5 @@
 ---
-title: 未知的服務 （登入 索引標籤） |Microsoft 文件
+title: 未知的服務 （登入 索引標籤） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: af938c13a7c647b28b2afc8776244a1dcae2823f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33070305"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991551"
 ---
 # <a name="unknown-service-log-on-tab"></a>未知的服務 (登入索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

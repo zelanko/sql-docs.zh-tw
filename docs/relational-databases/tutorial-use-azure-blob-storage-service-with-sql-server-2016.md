@@ -18,12 +18,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c2aef9476c254267156c5bbde4d777a2ed5ab570
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66a70e19399b04968d37a7b9b54b657e47bf6ab6
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012397"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981470"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>教學課程：搭配使用 Azure Blob 儲存體服務和 SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "33012397"
 Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL Server 2012 Service Pack 1 CU2 增強功能，並且已使用 SQL Server 2014 和 SQL Server 2016 進一步加強。 如需功能概觀以及使用此功能的優點，請參閱 [Microsoft Azure 中的 SQL Server 資料檔案](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)。 如需即時的示範，請參閱 [File-Snapshot Backups Demo (檔案快照集備份示範)](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)。  
   
   
-**下載**<br /><br />**>>**  若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[評估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。<br /><br />**>>**  有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
+**下載**<br /><br />**>>**  若要下載 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]，請前往  **[評估中心](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**。<br /><br />**>>**  有 Azure 帳戶嗎？  接著前往 **[這裡](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 來加速已安裝 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 的虛擬機器。  
   
 ## <a name="what-you-will-learn"></a>學習內容  
 本教學課程會在多項課程中示範如何在 Microsoft Azure Blob 儲存體服務中使用 SQL Server 資料檔案。 每個課程都著重在特定工作，並且應該依序完成課程。 首先，您將學習如何使用預存存取原則和共用存取簽章在 Blob 儲存體中建立新的容器。 然後，您將學習如何建立 SQL Server 認證，以便整合 SQL Server 與 Azure Blob 儲存體。 接下來，您會將資料庫備份至 Blob 儲存體，並將它還原至 Azure 虛擬機器。 您接著將使用 SQL Server 2016 檔案快照集交易記錄備份還原至某個時間點和新的資料庫。 最後，本教學課程將示範如何使用中繼資料系統預存程序和函數，協助您了解和使用檔案快照集備份。  
@@ -43,7 +43,7 @@ Microsoft Azure Blob 儲存體服務的 SQL Server 整合支援一開始是 SQL 
   
 -   您擁有 Azure 儲存體帳戶。  
   
--   您至少有一部 Azure 虛擬機器已安裝 SQL Server 2016，並且已依照 [Provisioning a SQL Server Virtual Machine on Azure](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-provision-sql-server/) (在 Azure 上佈建 SQL Server 虛擬機器) 來佈建此虛擬機器。 (選擇性) 第二部虛擬機器可以用於[第 8 課：從記錄備份還原為新的資料庫](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)中的案例。  
+-   您至少有一部 Azure 虛擬機器已安裝 SQL Server 2016，並且已依照 [Provisioning a SQL Server Virtual Machine on Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-provision-sql-server/) (在 Azure 上佈建 SQL Server 虛擬機器) 來佈建此虛擬機器。 (選擇性) 第二部虛擬機器可以用於[第 8 課：從記錄備份還原為新的資料庫](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)中的案例。  
   
 本教學課程分成九個必須依序完成的課程：  
   
