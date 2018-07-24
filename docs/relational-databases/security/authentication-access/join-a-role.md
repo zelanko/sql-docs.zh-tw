@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 caps.latest.revision: 13
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1944eb14841a37a422d069266e189c6d2a73ab94
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 5c5f04dfa695c91892b16bd65615ba769f57c8a6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942855"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109440"
 ---
 # <a name="join-a-role"></a>加入角色
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

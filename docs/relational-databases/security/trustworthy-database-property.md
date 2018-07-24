@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 caps.latest.revision: 22
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cdeb7463fc840f99ca2996dc4eae92493d6487d0
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 1281d9da4ee6dffb2030fc4899b2ac099c86dbfb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36940954"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109180"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY 資料庫屬性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

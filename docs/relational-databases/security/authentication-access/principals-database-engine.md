@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 caps.latest.revision: 57
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a704a8dc913a0931c628634493ff7e1239bb5550
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 8ac54250c72f7f29ccc714b05eb795d43bd26847
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941284"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109310"
 ---
 # <a name="principals-database-engine"></a>主體 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
