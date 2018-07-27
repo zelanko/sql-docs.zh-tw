@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787762"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024244"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -356,15 +356,15 @@ ON
 -   複寫  
 -   檔案資料流
 
-您無法在具有叢集資料行存放區索引的資料表上使用資料指標或觸發程序。 這項限制不適用於非叢集資料行存放區索引。您可以在具有非叢集資料行存放區索引的資料表上，使用資料指標和觸發程序。
+您無法在具有叢集資料行存放區索引的資料表上使用資料指標或觸發程序。 此限制不適用於非叢集資料行存放區索引。您可以在具有非叢集資料行存放區索引的資料表上使用資料指標和觸發程序。
 
-**SQL Server 2014 具體限制**  
-這些限制僅適用於 SQL Server 2014。 在此版本中，我們引進了可更新的叢集資料行存放區索引。 非叢集資料行存放區索引仍然是唯讀的。  
+**[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 特定的限制**  
+這些限制僅套用到 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。 在此版本中，我們引進了可更新的叢集資料行存放區索引。 非叢集資料行存放區索引仍然是唯讀的。  
 
 -   變更追蹤。 因為非叢集資料行存放區索引 (NCCI) 是唯讀的，因此您法使用變更追蹤。 這個功能對於叢集資料行存放區索引 (CCI) 不起作用。  
 -   異動資料擷取。 因為非叢集資料行存放區索引 (NCCI) 是唯讀的，因此您法使用異動資料擷取。 這個功能對於叢集資料行存放區索引 (CCI) 不起作用。  
 -   可讀取的次要複本。 您無法從 AlwaysOn 可用性群組的可讀取次要複本來存取叢集資料行存放區索引 (CCI)。  您可以從可讀取的次要複本來存取非叢集資料行存放區索引 (NCCI)。  
--   Multiple Active Result Sets (MARS)。 SQL Server 2014 使用 MARS 來與具有資料行存放區索引的資料表進行唯讀連線。    不過，SQL Server 2014 不支援 MARS 在具備資料行存放區索引的資料表上，進行並行資料操作語言 (DML) 作業。 發生這種情況時，SQL Server 會終止連線並中止交易。  
+-   Multiple Active Result Sets (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 使用 MARS 來與具有資料行存放區索引的資料表進行唯讀連線。 不過，[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 不支援 MARS 在具備資料行存放區索引的資料表上，進行並行資料操作語言 (DML) 作業。 發生這種情況時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會終止連線並中止交易。  
   
  如需有關資料行存放區索引之效能優點和限制的詳細資訊，請參閱[資料行存放區索引概觀](../../relational-databases/indexes/columnstore-indexes-overview.md)。
   
@@ -383,7 +383,7 @@ ON
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. 將堆積轉換成叢集資料行存放區索引  
  此範例會建立資料表做為堆積，然後將它轉換成名為 cci_Simple 的叢集資料行存放區索引。 這會將整個資料表的儲存體從資料列存放區變更為資料行存放區。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +397,7 @@ GO
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. 將叢集索引轉換成具有相同名稱的叢集資料行存放區索引。  
  此範例會建立一個具有叢集索引的資料表，然後示範將叢集索引轉換成叢集資料行存放區索引的語法。 這會將整個資料表的儲存體從資料列存放區變更為資料行存放區。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +418,7 @@ GO
   
  在 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 中，您無法在資料行存放區索引上建立非叢集索引。 這個範例會示範使用舊的版本時，如何在建立資料行存放區索引之前，先卸除非叢集索引。  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +441,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>D. 將大型事實資料表從資料列存放區轉換成資料行存放區  
@@ -452,7 +450,7 @@ GO
   
 1.  首先，建立一個小型資料表以供此範例使用。  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +468,7 @@ GO
   
 2.  卸除資料列存放區資料表中所有的非叢集索引。  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +478,9 @@ GO
     -   只有在您將索引轉換成叢集資料行存放區索引的過程中，想要為索引指定新名稱時才這樣做。 如果您未卸除叢集索引，新的叢集資料行存放區索引就會有相同的名稱。  
   
         > [!NOTE]  
-        >  如果您使用自己的索引名稱，可能較容易記住。 所有資料列存放區叢集索引都會使用預設名稱，也就是 'ClusteredIndex_\<GUID>'。  
+        > 如果您使用自己的索引名稱，可能較容易記住。 所有資料列存放區叢集索引都會使用預設名稱，也就是 'ClusteredIndex_\<GUID>'。  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +495,7 @@ GO
   
 4.  將資料列存放區資料表轉換成具有叢集資料行存放區索引的資料行存放區資料表。  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +520,7 @@ GO
 ### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>E. 將資料行存放區資料表轉換成具有叢集索引的資料列存放區資料表。  
  若要將資料行存放區資料表轉換成具有叢集索引的資料列存放區資料表，請使用 CREATE INDEX 陳述式搭配 DROP_EXISTING 選項。  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +529,21 @@ WITH ( DROP EXISTING = ON );
 ### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>F. 將資料行存放區資料表轉換成資料列存放區堆積  
  若要將資料行存放區資料表轉換成資料列存放區堆積，只要卸除叢集資料行存放區索引即可。  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. 重建整個叢集資料行存放區索引來進行重組  
-   適用於：SQL Server 2014  
+   適用於：[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  有兩種方式可重建完整的叢集資料行存放區索引。 您可以使用 CREATE CLUSTERED COLUMNSTORE INDEX，或 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 以及 REBUILD 選項。 這兩種方法會獲得相同的結果。  
   
 > [!NOTE]  
->  從 SQL Server 2016 開始，請使用 ALTER INDEX REORGANIZE，而不是按照此範例描述的方法來進行重建。  
+> 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，請使用 `ALTER INDEX...REORGANIZE`，而不是使用此範例中描述的方法來重建。  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +561,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered"></a> 非叢集資料行存放區索引的範例  
@@ -571,7 +568,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. 在資料列存放區資料表上，建立資料行存放區索引作為次要索引。  
  這個範例會在資料列存放區資料表上，建立非叢集資料行存放區索引。 在這種情況下，只能建立一個資料行存放區索引。 資料行存放區索引需要額外的儲存體，因為它包含資料列存放區資料表中的資料複本。 這個範例會建立簡單資料表和叢集索引，然後示範建立非叢集資料行存放區索引的語法。  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +586,7 @@ GO
 ### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. 使用所有選項來建立簡單的非叢集資料行存放區索引  
  下列範例示範利用所有選項建立非叢集資料行存放區索引的語法。  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -604,7 +601,7 @@ GO
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. 使用篩選述詞來建立非叢集資料行存放區索引  
  下列範例會對 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中的 Production.BillOfMaterials 資料表，建立篩選的非叢集資料行存放區索引。 篩選述詞可以包含在已篩選之索引中不是索引鍵資料行的資料行。 此範例中的述詞只會選取 EndDate 不是 NULL 的資料列。  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -614,7 +611,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> D. 變更非叢集資料行存放區索引中的資料  
@@ -624,7 +620,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   停用或卸除資料行存放區索引。 然後您就可以更新資料表中的資料。 如果您停用資料行存放區索引，您可以在完成更新資料時重建資料行存放區索引。 例如，  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -645,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  本範例會將 xDimProduct 資料表建立為具有叢集索引的資料列存放區資料表，然後使用 CREATE CLUSTERED COLUMNSTORE INDEX，將資料表從資料列存放區資料表變更為資料行存放區資料表。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -670,7 +666,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. 重建叢集資料行存放區索引  
  這個範例以前面的範例為基礎，使用 CREATE CLUSTERED COLUMNSTORE INDEX 來重建稱為 cci_xDimProduct 的現有叢集資料行存放區索引。  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -684,7 +680,7 @@ WITH ( DROP_EXISTING = ON );
   
  本範例使用先前範例的 cci_xDimProduct 叢集資料行存放區索引，卸除 cci_xDimProduct 叢集資料行存放區索引，然後重新建立叢集資料行存放區索引並命名為 mycci_xDimProduct。  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -698,20 +694,19 @@ WITH ( DROP_EXISTING = OFF );
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. 將資料行存放區資料表轉換成具有叢集索引的資料列存放區資料表。  
  有時候您可能會想卸除叢集資料行存放區索引，然後建立叢集索引。 這樣會以資料列存放區格式來儲存資料表。 本範例會將資料行存放區資料表轉換成具有叢集索引且名稱相同的資料列存放區資料表。 不會遺失任何資料。 所有資料會移到資料列存放區資料表，然後列出的資料行會成為叢集索引中的索引鍵資料行。  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. 將資料行存放區資料表轉換回資料列存放區堆積  
  使用 [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) 來卸除叢集資料行存放區索引，然後將資料表轉換成資料列存放區堆積。 這個範例會將 cci_xDimProduct 資料表轉換成資料列存放區堆積。 資料表仍然會繼續散發，但是儲存為堆積。  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

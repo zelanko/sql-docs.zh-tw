@@ -32,12 +32,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d8fad120755b75f9d7e07f9e10c184de6f879810
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788289"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024264"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -90,9 +90,11 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  將私密金鑰備份至檔案時，需要加密。 用以保護備份憑證的密碼與用以加密憑證之私密金鑰的密碼並不相同。  
   
- 若要還原備份憑證，請使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 陳述式。  
+ 若要還原備份憑證，請使用 [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) 陳述式。
+ 
+ 當執行備份時，該檔案對於 SQL Server 執行個體的服務帳戶將會是 ACLd。 如果您要將憑證還原到在其他帳戶下執行的伺服器，您將需要調整檔案上的權限，這樣新帳戶才能讀取它們。 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要憑證的 CONTROL 權限，且必須知道用來加密私密金鑰的密碼。 如果只備份憑證的公開部份，則需要憑證的某項權限，且未對呼叫端拒絕憑證的 VIEW 權限。  
   
 ## <a name="examples"></a>範例  

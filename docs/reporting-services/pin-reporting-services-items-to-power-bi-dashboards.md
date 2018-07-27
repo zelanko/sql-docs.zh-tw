@@ -21,12 +21,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7e3e738ef82486f80b9f81ae8e1d1218397980d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: caf018aab189a27901effcdc95204881b5b903b9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022895"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980320"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>將 Reporting Services 項目釘選到 Power BI 儀表板
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 讓使用者能夠將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表項目從報表檢視器工具列固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板，當成新的圖格。   若要固定，您的系統管理員必須先整合報表伺服器和 Azure Active Directory 及 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。  
@@ -68,7 +68,7 @@ ms.locfileid: "33022895"
   
 ##  <a name="bkmk_to_pin"></a> 固定報表項目  
   
-1. 確認您已登入 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，選取 [我的設定] 功能表項目並登入。 如需詳細資訊，請參閱  [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5) 。
+1. 確認您已登入 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。 在 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，選取 [我的設定] 功能表項目並登入。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。
 
     ![ssRS_WebPortal_MySettings](../reporting-services/media/ssrs-webportal-mysettings.png)  
   
@@ -114,13 +114,13 @@ ms.locfileid: "33022895"
   
       Cannot Pin: There are no report items on this page that you can pin to [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
   
--   **儀表板中** 的項目顯示過時資料 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，但它確實已更新了一段時間。  使用者認證 Token 已過期，您需要再次登入。  向 Azure 註冊的使用者認證， [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 的有效期為 90 天。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
+-   **儀表板中** 的項目顯示過時資料 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，但它確實已更新了一段時間。  使用者認證 Token 已過期，您需要再次登入。  向 Azure 註冊的使用者認證， [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 的有效期為 90 天。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
   
 -   **儀表板中** 固定的項目顯示過時資料 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] ，它根本沒有重新整理過。  問題在於報表未設定使用預存認證。 報表必須使用預存認證，因為固定報表項目的動作會建立 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱來管理圖格的重新整理排程。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 訂閱需要預存的認證。 如果您檢閱 [我的訂閱]  頁面，會看到類似下面的錯誤訊息：  
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image3, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified. (rsInvalidDataSourceCredentialSetting)
   
--   **過期的 Power BI 認證︰**  您嘗試固定項目，但看到下列錯誤訊息。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]，然後按一下 [我的設定] 頁面上的 [登入]。 如需詳細資訊，請參閱  [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5) 。  
+-   **過期的 Power BI 認證︰**  您嘗試固定項目，但看到下列錯誤訊息。 在[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]中，按一下 [我的設定]，然後按一下 [我的設定] 頁面上的 [登入]。 如需詳細資訊，請參閱 [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)。  
   
         Cannot Pin : Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "33022895"
 
 ## <a name="see-also"></a>另請參閱  
  [Power BI 報表伺服器整合 &#40;組態管理員&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)   
- [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/en-us/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+ [Power BI 整合的我的設定 &#40;入口網站&#41;](http://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
  [Power BI 的儀表板](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
   
   

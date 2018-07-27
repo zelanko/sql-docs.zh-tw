@@ -18,12 +18,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b6444d370a8eecec4df7d1a702354851892d007d
-ms.sourcegitcommit: fd9c33b93c886dcb00a48967b6c245631fd559bf
+ms.openlocfilehash: bedb049d518775144b53da2ead7fc1eee5392669
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35619555"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087860"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Integration Services 錯誤和訊息參考
   下表列出預先定義的 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤、警告和參考用訊息 (依據每一個類別內的遞增號碼順序)，連同這些訊息的數字代碼和符號名稱。 每一個錯誤都會以欄位形式定義於 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 命名空間的 <xref:Microsoft.SqlServer.Dts.Runtime> 類別內。  
@@ -50,7 +50,7 @@ ms.locfileid: "35619555"
 ##  <a name="msgError"></a> 錯誤訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 **DTS_E_** 當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|描述|  
+|十六進位碼|十進位碼|符號名稱|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|正在目的地端覆寫預存程序 "%1"。|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|%3 不支援在資料行 "%2" 找到的 "%1" 資料類型。 此資料行將轉換成 DT_NTEXT。|  
@@ -1046,7 +1046,7 @@ ms.locfileid: "35619555"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|這個緩衝區已經被遺棄。 緩衝區管理員已關閉，留下尚未處理完畢的緩衝區，將不會清除緩衝區。 可能會發生記憶體遺漏或其他問題。|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|嘗試尋找名稱為 "%1" 的輸入資料行失敗，錯誤碼為 0x%2!8.8X!。 在輸入資料行集合中找不到指定的輸入資料行。|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|嘗試尋找歷程識別碼為 %1!d! 的輸入資料行失敗，錯誤碼為 0x%2!8.8X! 。 在輸入資料行集合中找不到此輸入資料行。|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|運算式包含無法辨識的 Token "%1"。 如果 "%1" 是變數，則必須以 "\@%1" 表示。 指定的 Token 無效。 如果 Token 要做為變數名稱，則必須以 @ 符號為字首。|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|運算式包含無法辨識的 Token "%1"。 如果 "%1" 是變數，則必須以 "\@%1" 表示。 指定的 Token 無效。 如果 Token 要作為變數名稱，則必須以 \@ 符號為前置詞。|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|運算式包含無法辨識的 Token "#%1!d!"。|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|在 Variables 集合中找不到變數 "%1"。 變數可能不存在於正確的範圍中。|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|嘗試剖析運算式 "%1" 失敗。 運算式可能包含無效 Token、不完整的 Token 或無效元素， 可能是格式不正確，或遺漏部分必要元素，例如括號。|  
@@ -1093,7 +1093,7 @@ ms.locfileid: "35619555"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|元件 "%1" 無法快取執行階段物件參考追蹤程式集合，傳回錯誤碼 0x%2!8.8X!。|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|多個輸入資料行的名稱為 "%1"。 所要的輸入資料行必須唯一指定為 [Component Name].[%2]，或以歷程識別碼來參考。 目前，指定的輸入資料行存在於一個以上的元件中。|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|尋找名稱為 "[%1].[%2]" 的輸入資料行失敗，錯誤碼為 0x%3!8.8X!。 在輸入資料行集合中找不到此輸入資料行。|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|多個變數的名稱為 "%1"。 所要的變數必須唯一指定為 @[Namespace::%2]。 此變數存在於一個以上的命名空間中。|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|多個變數的名稱為 "%1"。 所要的變數必須唯一指定為 \@[Namespace::%2]。 此變數存在於一個以上的命名空間中。|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|資料流程引擎排程器無法縮減管線的執行計畫。 請將 OptimizedMode 屬性設定為 false。|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|函數 SQRT 無法用於負值，而且負值已傳遞至 SQRT 函數。|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|函數 LN 無法用於零或負值，而且零或負值已傳遞至 LN 函數。|  
@@ -1226,7 +1226,7 @@ ms.locfileid: "35619555"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|運算式包含非預期的等號 (=)。 當需要雙等號時 (==)，通常會發生這個錯誤。|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|指定了模糊不清的輸入資料行名稱。  資料行必須指定為 [Component Name].[Column Name] 或以歷程識別碼來參考。 當輸入資料行存在於一個以上的元件中時，就會發生這個錯誤，必須以其他元件名稱或歷程識別碼來區別。|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|在運算式中發現預留位置函數參數或運算元。 應該以實際參數或運算元取代。|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|指定了模稜兩可的變數名稱。 所要的變數必須指定為 @[Namespace::Variable]。 當變數存在於一個以上的命名空間中時，就會發生這個錯誤。|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|指定了模稜兩可的變數名稱。 所要的變數必須指定為 \@[Namespace::Variable]。 當變數存在於一個以上的命名空間中時，就會發生這個錯誤。|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|對二進位運算的運算元而言，僅輸入資料行和轉換運算才支援資料類型 DT_STR。 非輸入資料行或轉換結果的 DT_STR 運算元，不能用於二進位運算。 若要執行此運算，必須使用轉換運算子，明確轉換運算元。|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|對條件運算子的運算元而言，僅輸入資料行和轉換運算才支援資料類型 DT_STR。 非輸入資料行或轉換結果的 DT_STR 運算元，不能用於條件運算。 若要執行此運算，必須使用轉換運算子，明確轉換運算元。|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|函數 FINDSTRING 的發生計數參數無效。 這個參數必須大於零。|  
@@ -2024,7 +2024,7 @@ ms.locfileid: "35619555"
 ##  <a name="msgWarning"></a> 警告訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 警告訊息的符號名稱以 **DTS_W_** 當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|描述|  
+|十六進位碼|十進位碼|符號名稱|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|評估期還剩 %1!lu! 天。 過期之後，就無法執行封裝。|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|引發警告。 在這個解釋警告特性的警告之前，應該還有其他特定的警告。|  
@@ -2170,7 +2170,7 @@ ms.locfileid: "35619555"
 ##  <a name="msgInfo"></a> 參考用訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 參考用訊息的符號名稱以 **DTS_I_** 當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|描述|  
+|十六進位碼|十進位碼|符號名稱|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|正在啟動這個容器的分散式交易。|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|正在認可這個容器啟動的分散式交易。|  
@@ -2269,7 +2269,7 @@ ms.locfileid: "35619555"
 ##  <a name="msgGeneral"></a> 一般和事件訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱以 **DTS_MSG_** 當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|描述|  
+|十六進位碼|十進位碼|符號名稱|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|@shouldalert|DTS_MSG_CATEGORY_SERVICE_CONTROL|不正確的函數。|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|系統找不到指定的檔案。|  
@@ -2308,7 +2308,7 @@ ms.locfileid: "35619555"
 ##  <a name="msgSuccess"></a> 成功訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 成功訊息的符號名稱以 **DTS_S_** 當作開頭。  
   
-|十六進位碼|十進位碼|符號名稱|描述|  
+|十六進位碼|十進位碼|符號名稱|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|值為 NULL。|  
 |0x40005|262149|DTS_S_TRUNCATED|已截斷字串值。 緩衝區收到對資料行而言太長的字串，緩衝區已截斷字串。|  
@@ -2317,7 +2317,7 @@ ms.locfileid: "35619555"
 ##  <a name="msgPipeline"></a> 資料流程元件錯誤訊息  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 錯誤訊息的符號名稱是以 **DTSBC_E_** 當作開頭，其中 "BC" 指的是大多數 Microsoft 資料流程元件衍生來源的原生基底類別。  
   
-|十六進位碼|十進位碼|符號名稱|描述|  
+|十六進位碼|十進位碼|符號名稱|Description|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|輸出和錯誤輸出的總數 %1!lu! 不正確。 必須正好是 %2!lu!。|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|無法使用索引 %1!lu! 擷取輸出。|  

@@ -13,19 +13,19 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1338d01846de34a71b77da79e48fd4a0f52ac8b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac3d00cf51c5e01d3cb83ac4b3564f458a78b8c6
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316598"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088600"
 ---
 # <a name="database-engine-errors"></a>資料庫引擎錯誤
 該資料表包含錯誤訊息編號和描述 (來自 sys.messages 目錄檢視的錯誤訊息文字)。 
 
 
 ## <a name="errors--2-to-999"></a>錯誤 -2 到 999
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   [-2](mssqlserver-neg2-database-engine-error.md) |       |       |   已超過逾時的設定。 在作業完成前就已超過逾時期間，或是伺服器沒有回應。 (Microsoft SQL Server, 錯誤:    |
 |   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   建立伺服器的連接時發生錯誤。 連接到 SQL Server 2005 時，可能會因為在預設的設定下 SQL Server 不允許遠端連接而造成這項失敗。 (提供者: SQL 網路介面，錯誤: 28 - 伺服器不支援要求的通訊協定) (Microsoft SQL Server，錯誤: -1)。  |
@@ -49,7 +49,7 @@ ms.locfileid: "37316598"
 |   115 |   15  |   否  |   FOR UPDATE 子句在含有集運算子的陳述式中無效。   |
 |   116 |   15  |   否  |   當子查詢並未由 EXISTS 導入時，只能在選取清單中指定一個運算式。    |
 |   117 |   15  |   否  |   名稱為 '%.*ls' 的 %S_MSG 中含有大於前置詞最大數目的前置詞。 最大值為 %d。   |
-|   119 |   15  |   否  |   必須以 '@name = value' 傳遞參數編號 %d 及後續參數。 使用 '@name = value' 格式之後，所有後續的參數都必須以 '@name = value' 的格式來傳遞。 |
+|   119 |   15  |   否  |   必須以 '\@name = value' 傳遞參數編號 %d 及後續參數。 使用 '\@name = value' 格式之後，所有後續的參數都必須以 '\@name = value' 的格式來傳遞。  |
 |   120 |   15  |   否  |   INSERT 陳述式的選取清單所包含的項目數量小於插入清單的數量。 SELECT 值的數量必須與 INSERT 資料行的數量相符。    |
 |   121 |   15  |   否  |   INSERT 陳述式的選取清單所包含的項目數量大於插入清單的數量。 SELECT 值的數量必須與 INSERT 資料行的數量相符。 |
 |   122 |   15  |   否  |   %ls 選項只能配合 %ls 語法使用。 |
@@ -580,7 +580,7 @@ ms.locfileid: "37316598"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-1000-to-1999"></a>錯誤 1000 到 1999
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   1001    |   16  |   否  |   行 %d: 長度或有效位數規格 %d 無效。   |
 |   1002    |   16  |   否  |   行 %d: 指定的小數位數 %d 無效。 |
@@ -1011,7 +1011,7 @@ ms.locfileid: "37316598"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-2000-to-2999"></a>錯誤 2000 到 2999
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   2002    |   16  |   否  |   無法為群組編號大於一的複寫建立程序。   |
 |   2003    |   16  |   否  |   有群組編號的程序不能有 XML 或 CLR 類型的參數。 程序 '%.* ls' 的參數 '%.*ls' 是 '%ls' 類型。   |
@@ -1053,10 +1053,10 @@ ms.locfileid: "37316598"
 |   2215    |   16  |   否  |   %s屬性 '%ls' 的值超過 4000 個字元 (XML 結構描述文件中允許的最大值)   |
 |   2216    |   16  |   否  |   %s "%ls" 中的 XPath 值無效。 |
 |   2217    |   16  |   否  |   %s必須是 '%ls' 或 '%ls'   |
-|   2218    |   16  |   否  |   %s沒有名為 '@%ls' 的屬性    |
-|   2219    |   16  |   否  |   %s類型 '%ls' 中沒有名為 '@%ls' 的屬性。 |
-|   2220    |   16  |   否  |   %s沒有名為 '@%ls:%ls' 的屬性    |
-|   2221    |   16  |   否  |   %s類型 '%ls' 中沒有名為 '@%ls:%ls' 的屬性。 |
+|   2218    |   16  |   否  |   %s沒有名為 '\@%ls' 的屬性   |
+|   2219    |   16  |   否  |   %s類型 '%ls' 中沒有名為 '\@%ls' 的屬性。    |
+|   2220    |   16  |   否  |   %s沒有名為 '\@%ls:%ls' 的屬性   |
+|   2221    |   16  |   否  |   %s類型 '%ls' 中沒有名為 '\@%ls:%ls' 的屬性。    |
 |   2222    |   16  |   否  |   %s在接近 '%ls' 的識別碼中，找到無效的來源字元 0x%02x。    |
 |   2223    |   16  |   否  |   %s '%ls' 附近發生語法錯誤，必須是識別碼。  |
 |   2225    |   16  |   否  |   %s必須有字串常值 |
@@ -1177,7 +1177,7 @@ ms.locfileid: "37316598"
 |   2369    |   16  |   否  |   %s限制/延伸模組中不能有一個以上的群組/順序/選擇/全部。 位置: '%ls'。   |
 |   2370    |   16  |   否  |   %sXQuery 運算式的結尾不應該還有 Token。 但找到 '%ls'。 |
 |   2371    |   16  |   否  |   %s'%ls' 只能在述詞或 XPath 選取器中使用   |
-|   2372    |   16  |   否  |   %s中繼資料屬性 '@%ls:%ls' 不能和 '%ls' 一起使用  |
+|   2372    |   16  |   否  |   %s中繼資料屬性 '\@%ls:%ls' 不能和 '%ls' 一起使用 |
 |   2373    |   16  |   否  |   %s建構的 XML 不支援 %ls |
 |   2374    |   16  |   否  |   %s %ls 需要一個或一組節點    |
 |   2375    |   16  |   否  |   %s彙總函式 '%ls' 必須有順序引數  |
@@ -1381,7 +1381,7 @@ ms.locfileid: "37316598"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>錯誤 3000 到 3999
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   3002    |   16  |   否  |   無法 BACKUP 或 RESTORE 資料庫快照集。   |
 |   3003    |   10  |   否  |   這個 BACKUP WITH DIFFERENTIAL 將以一個以上的檔案備份為基礎。 必須先全部還原這些檔案備份，才能嘗試還原此一差異備份。    |
@@ -1821,7 +1821,7 @@ ms.locfileid: "37316598"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-4000-to-4999"></a>錯誤 4000 到 4999
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   4001    |   10  |   否  |   用戶端傳送 sp_reset_connection，但同時間仍有暫止的要求，伺服器正在中斷連接。  |
 |   4002    |   16  |   否  |   內送表格式資料流 (TDS) 通訊協定資料流不正確。 資料流非預期地結束。 |
@@ -2284,7 +2284,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-5000-to-5999"></a>錯誤 5000 到 5999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   5001    |   16  |   否  |   使用者必須位於 master 資料庫。    |
 |   5002    |   16  |   否  |   資料庫 '%.*ls' 不存在。 請確認 sys.databases 中的名稱，並再重試一次作業。  |
@@ -2660,7 +2660,7 @@ ms.locfileid: "37316598"
 
 # <a name="errors-6000-to-6999"></a>錯誤 6000 到 6999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   6001    |   10  |   否  |   SHUTDOWN 正在等候 %d 個處理序完成。 |
 |   6004    |   10  |   否  |   使用者沒有執行此動作的權限。   |
@@ -2814,7 +2814,7 @@ ms.locfileid: "37316598"
 |   6334    |   16  |   否  |   無法在物件 '%.*ls' 上建立 XML 或空間索引，因為該物件不是資料表。 請在基底資料表資料行上建立索引。  |
 |   6335    |   16  |   否  |   XML 資料類型執行個體巢狀節點的層級太多。 允許的最大深度為 %d 層級。  |
 |   6336    |   16  |   否  |   資料表 '%.*ls' 的主要索引大小上限為 %d 個位元組。 CREATE XML INDEX 要求此大小上限應為 %d 位元組。  |
-|   6337    |   16  |   否  |   '%.*ls' 不是有效的 XML 索引名稱，因為它是以 '%c' 字元開頭。 XML 索引名稱不可以用 '#' 或 '@' 開頭    |
+|   6337    |   16  |   否  |   '%.*ls' 不是有效的 XML 索引名稱，因為它是以 '%c' 字元開頭。 XML 索引名稱不可以用 '#' 或 '\@' 開頭   |
 |   6338    |   10  |   否  |   已從一或多個 XML 片段移除 XML DTD。 如果有外部子集，都已忽略。  |
 |   6339    |   16  |   否  |   指定的集合 '%.*ls' 無法修改，因為它是 SQL Server 內建 XML 結構描述集合。    |
 |   6340    |   16  |   否  |   執行批次時，資料表變數 '%.* ls' 參考的 Xml 結構描述集合 '%.*ls' 已經卸除或改變。 請重新執行批次。  |
@@ -3003,8 +3003,8 @@ ms.locfileid: "37316598"
 |   6826    |   16  |   否  |   於 FOR XML EXPLICIT 查詢中的每一個 IDREFS 或 NMTOKENS 資料行必須出現在不同的 SELECT 子句中，而且執行個體必須直接在其所屬元素之後排序。 |
 |   6827    |   16  |   否  |   FOR XML EXPLICIT 查詢只允許每個標記有一個 XMLTEXT 資料行。 資料行 '%.*ls' 宣告另一個不允許的 XMLTEXT 資料行。   |
 |   6828    |   16  |   否  |   XMLTEXT 資料行 '%.*ls' 必須為字串資料類型或 XML 類型。    |
-|   6829    |   16  |   否  |   FOR XML EXPLICIT 和 RAW 模式目前不支援在資料行 '%.*ls' 中將二進位資料定址成 URL。 請移除該資料行，或使用 BINARY BASE64 模式，或直接使用 'dbobject/TABLE[@PK1="V1"]/@COLUMN' 語法來建立 URL。    |
-|   6830    |   16  |   否  |   FOR XML AUTO 找不到主控下列資料行 '%.*ls' 的資料表來為它建立 URL 位址。 請移除該資料行，或使用 BINARY BASE64 模式，或直接使用 'dbobject/TABLE[@PK1="V1"]/@COLUMN' 語法來建立 URL。    |
+|   6829    |   16  |   否  |   FOR XML EXPLICIT 和 RAW 模式目前不支援在資料行 '%.*ls' 中將二進位資料定址成 URL。 請移除該資料行，或使用 BINARY BASE64 模式，或直接使用 'dbobject/TABLE[\@PK1="V1"]/\@COLUMN' 語法來建立 URL。  |
+|   6830    |   16  |   否  |   FOR XML AUTO 找不到主控下列資料行 '%.*ls' 的資料表來為它建立 URL 位址。 請移除該資料行，或使用 BINARY BASE64 模式，或直接使用 'dbobject/TABLE[\@PK1="V1"]/\@COLUMN' 語法來建立 URL。  |
 |   6831    |   16  |   否  |   FOR XML AUTO 必須要有主索引鍵來建立 '%.*ls' 的參考。 請選取主索引鍵，如果主索引鍵不存在，則使用 BINARY BASE64 來取得編碼格式的二進位資料。  |
 |   6832    |   16  |   否  |   若主索引鍵亦為二進位資料，FOR XML AUTO 無法建立二進位資料所需的 URL 位址。 |
 |   6833    |   16  |   否  |   父標記識別碼 %d 不在開放式標記之中。 FOR XML EXPLICIT 必須先開啟父標記。 請檢查結果集的順序。    |
@@ -3155,7 +3155,7 @@ ms.locfileid: "37316598"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-7000-to-7999"></a>錯誤 7000 到 7999
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   7000    |   16  |   否  |   OPENXML 文件處理參數必須是 int 資料類型。 |
 |   7001    |   16  |   否  |   OPENXML 旗標參數必須是 int 資料類型。   |
@@ -3598,7 +3598,7 @@ ms.locfileid: "37316598"
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-8000-to-8999"></a>錯誤 8000 到 8999
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   8001    |   16  |   否  |   內送的表格式資料流 (TDS) 遠端程序呼叫 (RPC) 通訊協定資料流不正確。 SQL Variant 參數不得使用中繼資訊。 |
 |   8002    |   16  |   否  |   內送的表格式資料流 (TDS) 遠端程序呼叫 (RPC) 通訊協定資料流不正確。 參數 %d ("%.*ls"): 資料類型 0x%02X (XML) 指定了無效的資料庫或結構描述。    |
@@ -3771,7 +3771,7 @@ ms.locfileid: "37316598"
 |   8317    |   16  |   否  |   無法查詢與登錄機碼 'HKLM\%ls' 相關聯的值 '%ls'。 SQL Server 效能計數器已停用。 |
 |   8318    |   16  |   否  |   效能計數器初始化期間發生虛擬記憶體配置失敗。 SQL Server 效能計數器已停用。 |
 |   8319    |   16  |   否  |   Windows 核心物件 '%ls' 已經存在。 SQL Server 服務帳戶並未擁有此物件。 SQL Server 效能計數器已停用。 |
-|   8320    |   10  |   否  |   SQL Server 的未來版本將會移除 @@REMSERVER 。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用連結的伺服器和連結的伺服器預存程序。    |
+|   8320    |   10  |   否  |   SQL Server 的未來版本將會移除 \@\@REMSERVER。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。 請改用連結的伺服器和連結的伺服器預存程序。  |
 |   8350    |   10  |   否  |   在陳述式 ('%.*ls') 的目標資料表上，於 UPDATE 或 DELETE 陳述式的 FROM 子句中，使用 NOLOCK 或 READUNCOMMITTED 提示已被取代。 這些提示在此位置上沒有作用。 Microsoft 建議您從這個陳述式移除這些提示。 在此位置支援這些提示的功能，即將從 SQL Server 未來版本中移除。 |
 |   8351    |   16  |   是 |   由於註冊事件時指定的參數無效，所以無法處理追蹤控制要求。 請確定參數位於有效的範圍內。  |
 |   8352    |   16  |   是 |   找不到要求的追蹤範本: 識別碼 = %ls。 |
@@ -4105,7 +4105,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-9000-to-9999"></a>錯誤 9000 到 9999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   [9001](mssqlserver-9001-database-engine-error.md)   |   10  |   是 |   無法使用資料庫 '%.*ls' 的記錄檔。 相關錯誤訊息請查閱事件記錄檔。 解決任何錯誤，並重新啟動資料庫。 |
 |   [9002](mssqlserver-9002-database-engine-error.md)   |   17  |   是 |   資料庫 '%.*ls' 的交易記錄已滿。 如果要了解為何無法重複使用記錄中的空間，請參閱 sys.databases 中的 log_reuse_wait_desc 資料行。    |
@@ -4293,7 +4293,7 @@ ms.locfileid: "37316598"
 |   9516    |   16  |   否  |   XQuery: 提供給 %S_MSG('%.*ls') 的名稱或多重部分 (Multi-Part) 名稱的其中一部分是空的。 無法使用空的名稱來識別 SQL 中的物件、資料行或變數。    |
 |   9517    |   16  |   否  |   XQuery: 提供給 %S_MSG()、開頭為 '%.*ls' 的名稱或多重部分 (Multi-Part) 名稱的其中一部分是無效的 SQL 識別碼 - 名稱太長。 最大長度為 %d，實際長度為 %d。  |
 |   9518    |   16  |   否  |   XQuery: 提供給 %S_MSG()、開頭為 '%.*ls' 的名稱或多重部分 (Multi-Part) 名稱的其中一部分是無效的 SQL 識別碼 - 名稱中包含無效的字元。 |
-|   9519    |   16  |   否  |   XQuery: 提供給 sql:variable('%.*ls') 的名稱不是有效的 SQL 變數名稱。 變數名稱必須以 '@' 符號為開頭，後面至少接著一個字元。  |
+|   9519    |   16  |   否  |   XQuery: 提供給 sql:variable('%.*ls') 的名稱不是有效的 SQL 變數名稱。 變數名稱必須以 '\@' 符號為開頭，後面至少接著一個字元。 |
 |   9520    |   16  |   否  |   XQuery: sql:variable() 參考的 '%.*ls' 不是有效的系統函數名稱。   |
 |   9521    |   16  |   否  |   處理 XML 資料類型時發生錯誤。 XML 資料類型執行個體包含 xs:date 或 xs:dateTime 的負值。    |
 |   9522    |   16  |   否  |   不允許在疏鬆資料行集上使用 XQuery 修改方法。  |
@@ -4558,7 +4558,7 @@ ms.locfileid: "37316598"
 |   9948    |   10  |   否  |   警告: 全文檢索目錄路徑 '%ls' 無效。 可能超過長度限制，或路徑為相對路徑或隱藏目錄。 無法附加全文檢索目錄。 |
 |   9949    |   10  |   否  |   警告: 在資料庫 '%ls' ('%d') 中，全文檢索目錄 '%ls' ('%d') 的所有進行中全文檢索擴展都會暫停。 原因碼: %d。 錯誤: %ls。 如果這個訊息頻繁出現，請參閱線上叢書，以取得索引效能微調協助。 |
 |   9950    |   10  |   否  |   參考: 全文檢索目錄健全狀況監視器報告了資料庫 '%ls' ('%d') 中的目錄 '%ls' ('%d') 失敗。 原因碼: %d。 錯誤: %ls。 目錄已經損毀，而所有進行中的擴展都將停止。 請使用重建目錄來復原失敗，並重頭開始擴展。  |
-|   9951    |   10  |   否  |   警告: 資料庫 %.*ls 在卸離期間無法修改，因為資料庫處於唯讀、待命或關閉狀態。 將不卸除全文檢索目錄，而且會忽略 '@keepfulltextindexfile = false'。   |
+|   9951    |   10  |   否  |   警告: 資料庫 %.*ls 在卸離期間無法修改，因為資料庫處於唯讀、待命或關閉狀態。 將不卸除全文檢索目錄，而且會忽略 '\@keepfulltextindexfile = false'。  |
 |   9952    |   10  |   否  |   參考: 由於發生嚴重搜耙錯誤，因此資料表或索引檢視表 '%ls' (資料表或索引檢視表識別碼 '%d'，資料庫識別碼 '%d') 的全文檢索自動變更追蹤已經關閉。 |
 |   9953    |   16  |   否  |   路徑 '%.*ls' 的屬性無效。 它必須是目錄， 且不得為隱藏、唯讀，或在卸除式磁碟機上。 |
 |   9954    |   16  |   否  |   SQL Server 無法與篩選背景程式啟動服務進行通訊 (Windows 錯誤: %ls)。 全文檢索篩選背景程式處理序無法啟動。 全文檢索搜尋功能將無法使用。 |
@@ -4593,7 +4593,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-10000-to-10999"></a>錯誤 10,000 到 10,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   10000   |   16  |   否  |   未知的提供者錯誤。 |
 |   [10001](mssqlserver-10001-database-engine-error.md) |   16  |   否  |   提供者報告了未預期的重大錯誤。   |
@@ -4722,39 +4722,39 @@ ms.locfileid: "37316598"
 |   10331   |   16  |   否  |   ALTER ASSEMBLY 失敗，因為更新組件中類型 '%s' 的改變會導致類型 '%s' 的序列化配置隨之改變。 保留的類型不允許變更序列化配置。  |
 |   10501   |   16  |   否  |   組件 '%.*ls' 中的類型 '%ls' 衍生自 CLR 類型不支援的一般類型。   |
 |   [10502](mssqlserver-10502-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為提供的類型 '%.* ls' 是不允許的。  |
-|   10503   |   16  |   否  |   無法建立計畫指南 '%.*ls' ，因為 @stmt 和 @module_or_batch 或是 @plan_handle 和 @statement_start_offset 所指定的陳述式與資料庫中現有的計畫指南 '%.* ls' 相符。 請卸除現有計畫指南後，再建立新的計畫指南。   |
+|   10503   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 \@stmt 和 \@module_or_batch 或是 \@plan_handle 和 \@statement_start_offset 所指定的陳述式與資料庫中現有的計畫指南 '%.* ls' 相符。 請卸除現有計畫指南後，再建立新的計畫指南。   |
 |   10504   |   16  |   否  |   不允許作業 '%.*ls'。   |
-|   10505   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為參數 @hints 不正確。 請使用 N'OPTION ( <query_hint> [ ,...n ] )'。   |
-|   10506   |   16  |   否  |   無法建立計畫指南 '%.*ls' ，因為提供給 @module_or_batch的值 '%.* ls' 不是合法的兩個部分組成的名稱。 請使用 'schema_name.object_name'。 |
-|   [10507](mssqlserver-10507-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為參數 @stmt 有一個以上的陳述式。   |
-|   10508   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 @stmt 和 @module_or_batch 或是 @plan_handle 和 @statement_start_offset 所指定的陳述式不符合指定的模組或批次中的任何陳述式。 請將值修改為與模組或批次中的陳述式相符。   |
+|   10505   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為參數 \@hints 不正確。 請使用 N'OPTION ( <query_hint> [ ,...n ] )'。  |
+|   10506   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為提供給\@ module_or_batch 的值 '%.* ls' 不是合法的兩個部分組成的名稱。 請使用 'schema_name.object_name'。    |
+|   [10507](mssqlserver-10507-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為參數 \@stmt 有一個以上的陳述式。  |
+|   10508   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 \@stmt 和 \@module_or_batch 或是 \@plan_handle 和 \@statement_start_offset 所指定的陳述式不符合指定的模組或批次中的任何陳述式。 請將值修改為與模組或批次中的陳述式相符。   |
 |   [10509](mssqlserver-10509-database-engine-error.md) |   16  |   否  |   無法 '%ls' 計劃指南 '%.*ls'，因為它不存在或您沒有權限。 請確認計劃指南的名稱和目前工作階段的資料庫，以及您有所需的權限。   |
-|   10510   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 @stmt 或 @statement_start_offset 所指定的陳述式中含有語法錯誤或不適用於計畫指南。 請提供單一有效 Transact-SQL 陳述式，或批次中陳述式的有效開始位置。 若要取得有效開始位置，請查詢 sys.dm_exec_query_stats 動態管理函數中的 'statement_start_offset' 資料行。  |
+|   10510   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 \@stmt 或 \@statement_start_offset 所指定的陳述式中含有語法錯誤或不適用於計畫指南。 請提供單一有效 Transact-SQL 陳述式，或批次中陳述式的有效開始位置。 若要取得有效開始位置，請查詢 sys.dm_exec_query_stats 動態管理函數中的 'statement_start_offset' 資料行。    |
 |   10512   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為資料庫中已經有該名稱的計畫指南。 請使用唯一的名稱。   |
-|   10513   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為物件 '@module_or_batch' 已加密。 請考慮將查詢微調為使用其他的技術，例如索引和統計資料。   |
+|   10513   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為物件 '\@module_or_batch' 已加密。 請考慮將查詢微調為使用其他的技術，例如索引和統計資料。  |
 |   10515   |   16  |   否  |   無法 %S_MSG %S_MSG '%.*ls' ，因為它正被計畫指南 '%.* ls' 所參考。 請先使用 sp_control_plan_guide 來卸除該計畫指南。 視情況需要記錄計畫指南定義以供日後使用。 |
 |   10516   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為模組 '%.* ls' 不存在或您沒有所需的權限。    |
-|   10517   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為無法編譯 @module_or_batch。  |
+|   10517   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為無法編譯 \@module_or_batch。 |
 |   10518   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為您沒有所需的權限。 需要有改變資料庫的權限。 |
 |   [10519](mssqlserver-10519-database-engine-error.md) |   16  |   否  |   無法執行 sp_control_plan_guide，因為沒有控制計畫指南 '%.*ls' 的足夠權限。 請改變計畫指南所參考之物件上的權限，或改變所需的資料庫權限。 |
-|   [10520](mssqlserver-10520-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為無法將 @hints 中指定的提示套用至 @stmt 或 @statement_start_offset 指定的陳述式。 請確認提示能否套用至陳述式。  |
-|   [10521](mssqlserver-10521-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為已將 @type 指定為 '%ls'，而且已為參數 '%ls' 指定非 NULL 值， 但這種類型要求參數必須為 NULL 值。 請為參數指定 NULL，或將參數類型變更為允許非 NULL 值的類型。   |
-|   10522   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為已將 @type 指定為 '%ls'，而且參數 '%ls' 為 NULL， 但這種類型要求參數必須為非 NULL 值。 請為參數指定非 NULL 值，或將參數類型變更為允許 NULL 值的類型。 |
-|   10523   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 @hints 的值無效。 如果 @type 為 'template'，@hints 必須為 OPTION(PARAMETERIZATION FORCED) 或 OPTION(PARAMETERIZATION SIMPLE)。    |
-|   10524   |   16  |   否  |   無法產生查詢範本，因為 @querytext 並未包含有效的單一查詢。    |
-|   10525   |   10  |   否  |   無法參數化 @querytext。 |
+|   [10520](mssqlserver-10520-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為無法將 \@hints 中指定的提示套用至 \@stmt 或 \@statement_start_offset 指定的陳述式。 請確認提示能否套用至陳述式。   |
+|   [10521](mssqlserver-10521-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為已將 \@type 指定為 '%ls'，而且已為參數 '%ls' 指定非 NULL 值。 但這種類型要求參數必須為 NULL 值。 請為參數指定 NULL，或將參數類型變更為允許非 NULL 值的類型。  |
+|   10522   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為已將 \@type 指定為 '%ls'，而且參數 '%ls' 為 NULL。 但這種類型要求參數必須為非 NULL 值。 請為參數指定非 NULL 值，或將參數類型變更為允許 NULL 值的類型。    |
+|   10523   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 \@hints 的值無效。 如果 \@type 為 'template'，\@hints 必須為 OPTION(PARAMETERIZATION FORCED) 或 OPTION(PARAMETERIZATION SIMPLE)。 |
+|   10524   |   16  |   否  |   無法產生查詢範本，因為 \@querytext 並未包含有效的單一查詢。   |
+|   10525   |   10  |   否  |   無法參數化 \@querytext。    |
 |   10526   |   16  |   否  |   計畫指南 '%.*ls' 經過 FORCED 或 SIMPLE 參數化作業自動參數化之後，有符合陳述式，但其中包含的 RECOMPILE 提示已被忽略。 自動參數化的陳述式不支援 RECOMPILE。 請考慮卸除此計畫指南，或從中移除 RECOMPILE。  |
 |   10527   |   16  |   否  |   無法卸除 %S_MSG '%.*ls' ，因為觸發程序 '%.* ls' 由計畫指南 '%.*ls' 參考。 請先使用 sp_control_plan_guide 來卸除該計畫指南。 視情況需要記錄計畫指南定義以供日後使用。  |
 |   10528   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為物件 '%.* ls' 是暫存物件。  |
 |   10529   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為名稱無效。 計畫指南名稱的開頭不可以是 '#' 字元。    |
-|   10530   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為在 @stmt 上已經有 @type 'template' 的計畫指南 '%.* ls'。 |
-|   [10531](mssqlserver-10531-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls' ，因為 @statement_start_offset 所指定的陳述式不符合指定的模組或批次中的任何陳述式。 請考慮將 @statement_start_offset 修改為與模組或批次中的陳述式相符。  |
+|   10530   |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為在 \@stmt 上已經有 \@type 'template' 的計畫指南 '%.* ls'。   |
+|   [10531](mssqlserver-10531-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 \@statement_start_offset 指定的陳述式不符合指定的模組或批次中的任何陳述式。 請考慮將 \@statement_start_offset 修改為與模組或批次中的陳述式相符。    |
 |   [10532](mssqlserver-10532-database-engine-error.md) |   16  |   否  |   無法從快取建立計畫指南 '%.*ls'，因為使用者沒有所需的權限。 請將 VIEW SERVER STATE 權限授予建立計畫指南的使用者。    |
-|   [10533](mssqlserver-10533-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 @plan_handle 指定的批次或模組中未包含適用於計畫指南的陳述式。 請為 @plan_handle 指定其他值。  |
+|   [10533](mssqlserver-10533-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為 \@plan_handle 指定的批次或模組中未包含適用於計畫指南的陳述式。 請為 \@plan_handle 指定其他值。    |
 |   [10534](mssqlserver-10534-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為計畫指南名稱超出允許的最大字元數 124 個字元。 請指定少於 125 個字元的名稱。 |
-|   [10535](mssqlserver-10535-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為指定的 @params 值無效。 請以 <parameter_name> <parameter_type> 格式指定值，或指定 NULL。  |
+|   [10535](mssqlserver-10535-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為指定的 \@params 值無效。 請以 <parameter_name> <parameter_type> 格式指定值，或指定 NULL。 |
 |   [10536](mssqlserver-10536-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為在計畫快取中找不到指定計畫控制代碼的對應計畫。 請指定快取的計畫控制代碼。 如需快取的計畫控制代碼清單，請查詢 sys.dm_exec_query_stats 動態管理檢視。  |
-|   [10537](mssqlserver-10537-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為指定的 @plan_handle 所對應的批次或模組中包含超過 1000 個適合的陳述式。 請為批次或模組中的每個陳述式分別指定 statement_start_offset 值，以各建立一個計畫指南。    |
+|   [10537](mssqlserver-10537-database-engine-error.md) |   16  |   否  |   無法建立計畫指南 '%.*ls'，因為指定的 \@plan_handle 所對應的批次或模組中包含超過 1000 個適合的陳述式。 請為批次或模組中的每個陳述式分別指定 statement_start_offset 值，以各建立一個計畫指南。   |
 |   [10538](mssqlserver-10538-database-engine-error.md) |   16  |   否  |   無法啟用計畫指南 '%.*ls'，因為啟用的計畫指南 '%.* ls' 中包含相同範圍和起始位移值的陳述式。 請停用現有的計畫指南後，再啟用指定的計畫指南。   |
 |   [10539](mssqlserver-10539-database-engine-error.md) |   16  |   否  |   找不到計畫指南，可能是因為指定的計畫指南識別碼是 NULL 或無效，或是因為您對計畫指南參考的物件不具有權限。 請確認計畫指南識別碼是否有效、目前工作階段是否設定為正確的資料庫內容，以及您是否具有計畫指南所參考物件的 ALTER 權限或 ALTER DATABASE 權限。  |
 |   10601   |   16  |   否  |   無法從快取建立計畫指南 '%.*ls'，因為起始位移為 %d 的陳述式無法使用查詢計畫。如果陳述式相依於尚未建立的資料庫物件，就可能發生這種問題。 請確定是否所有必要的資料庫物件都存在，並先建立計畫指南後再執行陳述式。 |
@@ -4798,7 +4798,7 @@ ms.locfileid: "37316598"
 |   10721   |   15  |   否  |   OUTPUT INTO 子句不能用在巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式中。    |
 |   10722   |   15  |   否  |   WHERE CURRENT OF 子句不能用在巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式中。  |
 |   10723   |   15  |   否  |   當 FROM 子句包含巢狀 INSERT、UPDATE、DELETE 或 MERGE 陳述式時，不允許使用 DISTINCT 關鍵字。  |
-|   10724   |   15  |   否  |   在 MERGE 陳述式中，變數不能在 UPDATE 動作的 SET 子句中以同一個指派設定為資料行和運算式。 在 MERGE 陳述式 UPDATE 動作的 SET 子句中，'SET @variable = column = expression' 格式的指派無效。 請修改 SET 子句，變成只指定 'SET @variable = column' 或 'SET @variable = expression' 格式的指派。 |
+|   10724   |   15  |   否  |   在 MERGE 陳述式中，變數不能在 UPDATE 動作的 SET 子句中以同一個指派設定為資料行和運算式。 在 MERGE 陳述式 UPDATE 動作的 SET 子句中，'SET \@variable = column = expression' 格式的指派無效。 請修改 SET 子句，變成只指定 'SET \@variable = column' 或 'SET \@variable = expression' 格式的指派。  |
 |   10725   |   15  |   否  |   FORCESEEK 提示不能做為 INSERT、UPDATE 或 DELETE 陳述式的目標資料表。    |
 |   10726   |   15  |   否  |   VARYING 選項不可以用在 DECLARE、CREATE AGGREGATE 或 CREATE FUNCTION 陳述式中。  |
 |   10727   |   15  |   否  |   使用者定義彙總不支援預設參數。  |
@@ -4852,7 +4852,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-11000-to-12999"></a>錯誤 11,000 到 12,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   11000   |   16  |   否  |   未知的資料行狀態碼。    |
 |   11001   |   16  |   否  |   成功地傳回非 NULL 值。   |
@@ -5059,7 +5059,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-13000-to-13999"></a>錯誤 13,000 到 13,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   13001   |   16  |   否  |   檔案名稱   |
 |   13002   |   16  |   否  |   稽核   |
@@ -5351,7 +5351,7 @@ ms.locfileid: "37316598"
 |   13402   |   10  |   否  |   SQL Server 的未來版本將移除對 TIMESTAMP 資料行執行 INSERT NULL 值的功能。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。 請改用 DEFAULT。   |
 |   13403   |   10  |   否  |   SQL Server 的未來版本將移除使用字串常值做為資料行別名的功能。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。 請改用 AS 子句。 |
 |   13404   |   10  |   否  |   SQL Server 的未來版本將移除使用 '#' 和 '##' 做為暫存資料表名稱和預存程序的功能。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。   |
-|   13405   |   10  |   否  |   SQL Server 的未來版本將移除使用 '@' 和以 '@@' 開頭的名稱做為 Transact-SQL 識別碼的功能。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。   |
+|   13405   |   10  |   否  |   SQL Server 的未來版本將移除使用 '\@' 和以 '\@\@' 開頭的名稱做為 Transact-SQL 識別碼的功能。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。    |
 |   13406   |   10  |   否  |   SQL Server 的未來版本將移除使用 DEFAULT 關鍵字做為預設值的功能。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。   |
 |   13407   |   10  |   否  |   SQL Server 的未來版本將移除 FASTFIRSTROW 提示。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。 請改用 OPTION (FAST n)。  |
 |   13408   |   10  |   否  |   SQL Server 的未來版本將移除 %ls。 請避免在新的開發工作中使用此項功能，並規劃修改目前使用此項功能的應用程式。 |
@@ -5360,7 +5360,7 @@ ms.locfileid: "37316598"
 
 # <a name="errors-14000-to-14999"></a>錯誤 14,000 到 14,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   14002   |   16  |   否  |   找不到工作識別碼 %ld 的 'Sync' 子系統。   |
 |   14003   |   16  |   否  |   您必須提供發行集名稱。 |
@@ -5371,17 +5371,17 @@ ms.locfileid: "37316598"
 |   14009   |   11  |   否  |   沒有發行集 '%s' 的發行項。 |
 |   14010   |   16  |   否  |   遠端伺服器 '%s' 並未定義為訂閱伺服器。 請確定您指定的是伺服器名稱，而不是網路別名。 |
 |   14011   |   16  |   否  |   無法將伺服器 '%s' 標示為非 SQL Server 訂閱者。  |
-|   14012   |   16  |   否  |   @status 參數值必須是 'active' 或 'inactive'。  |
+|   14012   |   16  |   否  |   \@status 參數值必須是 'active' 或 'inactive'。 |
 |   14013   |   16  |   否  |   這個資料庫並未啟用發行集。   |
-|   14014   |   16  |   否  |   同步處理方法 (@sync_method) 必須是 '[bcp] native'、'[bcp] character'、'concurrent'、'concurrent_c'、'database snapshot' 或 'database snapshot character'。   |
-|   14015   |   16  |   否  |   複寫頻率 (@repl_freq) 必須是 'continuous' 或 'snapshot'。   |
+|   14014   |   16  |   否  |   同步處理方法 (\@sync_method) 必須是 '[bcp] native'、'[bcp] character'、'concurrent'、'concurrent_c'、'database snapshot' 或 'database snapshot character'。  |
+|   14015   |   16  |   否  |   複寫頻率 (\@repl_freq) 必須是 'continuous' 或 'snapshot'。  |
 |   14016   |   16  |   否  |   發行集 '%s' 已經存在。    |
-|   14017   |   16  |   否  |   無效的 @restricted 參數值。 有效的選項為 'true' 或 'false'。   |
+|   14017   |   16  |   否  |   無效的 \@restricted 參數值。 有效的選項為 'true' 或 'false'。  |
 |   14018   |   16  |   否  |   無法建立發行集。   |
-|   14019   |   16  |   否  |   @operation 參數值必須是 add、drop 或 alter。  |
+|   14019   |   16  |   否  |   \@operation 參數值必須是 add、drop 或 alter。 |
 |   14020   |   16  |   否  |   無法獲得指定之資料行的資料行識別碼。 結構描述複寫失敗。 |
 |   14021   |   16  |   否  |   資料行並未正確地加入至發行項。  |
-|   14022   |   16  |   否  |   @property 參數值必須為下列其中一項：'description'、'sync_object'、'type'、'ins_cmd'、'del_cmd'、'upd_cmd'、'filter'、'dest_table'、'dest_object'、'creation_script'、'pre_creation_cmd'、'status'、'schema_option' 或 'destination_owner'。    |
+|   14022   |   16  |   否  |   \@property 參數值必須為下列其中一項：'description'、'sync_object'、'type'、'ins_cmd'、'del_cmd'、'upd_cmd'、'filter'、'dest_table'、'dest_object'、'creation_script'、'pre_creation_cmd'、'status'、'schema_option' 或 'destination_owner'。   |
 |   14023   |   16  |   否  |   類型必須是 '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]'、'[serializable ]proc exec' 或 '(view|索引檢視表|proc|func|彙總 (aggregate)|synonym) 僅限結構描述'。    |
 |   14024   |   16  |   否  |   屬性 'subscriber_provider' 的值不可以是 NULL。 |
 |   14025   |   10  |   否  |   已成功更新發行項。  |
@@ -5393,7 +5393,7 @@ ms.locfileid: "37316598"
 |   14031   |   16  |   否  |   使用者資料表和檢視表是唯一有效的同步處理物件。   |
 |   14032   |   16  |   否  |   參數 %s 的值不得為 'all'。 這個值由複寫預存程序所保留。 |
 |   14033   |   16  |   否  |   無法變更複寫頻率，因為發行集上有使用中的訂閱。   |
-|   14034   |   16  |   否  |   發行集名稱 (@publication) 不可以是關鍵字 'all'。    |
+|   14034   |   16  |   否  |   發行集名稱 (\@publication) 不可以是關鍵字 'all'。   |
 |   14035   |   16  |   否  |   資料庫 '%s' 的複寫選項 '%s' 已經設定為 True。  |
 |   14036   |   16  |   否  |   無法啟用資料庫以供發行。   |
 |   14037   |   16  |   否  |   資料庫 '%s' 的複寫選項 '%s' 已經設定為 False。 |
@@ -5411,7 +5411,7 @@ ms.locfileid: "37316598"
 |   14049   |   16  |   否  |   複寫所用的預存程序是唯一可以做為篩選的物件。    |
 |   14050   |   11  |   否  |   此發行集或發行項沒有訂閱。  |
 |   14051   |   16  |   否  |   參數值必須是 'sync_type' 或 'dest_db'。   |
-|   14052   |   16  |   否  |   @sync_type 參數值必須為 "automatic"、"none"、"replication support only"、"initialize with backup" 或 "initialize from lsn"。 |
+|   14052   |   16  |   否  |   \@sync_type 參數值必須為 "automatic"、"none"、"replication support only"、"initialize with backup" 或 "initialize from lsn"。    |
 |   14053   |   16  |   否  |   此時無法更新訂閱。 |
 |   14054   |   10  |   否  |   已成功更新訂閱。  |
 |   14055   |   10  |   否  |   訂閱不存在。    |
@@ -5420,10 +5420,10 @@ ms.locfileid: "37316598"
 |   14058   |   16  |   否  |   無法建立訂閱，因為該訂閱已存在訂閱資料庫中。 在每個訂閱資料庫中，同一個發行集只允許訂閱一次。 請卸除訂閱，再視需要將它重新加入。 如果問題仍然存在，可能是複寫中繼資料不正確; 請參閱線上叢書，以取得疑難排解資訊。   |
 |   14059   |   16  |   否  |   當發行集含有 allow_sync_tran、allow_queued_tran 或 allow_dts 屬性時，無法建立具體化檢視表發行項。 |
 |   14060   |   16  |   否  |   對於 SQL Server 訂閱者，指定提供者屬性的訂閱者參數必須為 NULL。   |
-|   14061   |   16  |   否  |   @pre_creation_cmd 參數值必須是 'none'、'drop'、'delete' 或 'truncate'。  |
+|   14061   |   16  |   否  |   \@pre_creation_cmd 參數值必須是 'none'、'drop'、'delete' 或 'truncate'。 |
 |   14062   |   10  |   否  |   訂閱者已經卸除。 |
 |   14063   |   11  |   否  |   遠端伺服器不存在或並未指定為有效的訂閱者。  |
-|   14065   |   16  |   否  |   @status 參數值必須是 'initiated'、'active'、'inactive' 或 'subscribed'。 |
+|   14065   |   16  |   否  |   \@status 參數值必須是 'initiated'、'active'、'inactive' 或 'subscribed'。    |
 |   14066   |   16  |   否  |   先前的狀態必須是 'active'、'inactive' 或 'subscribed'。  |
 |   14067   |   16  |   否  |   狀態值和前一個狀態值相同。  |
 |   14068   |   16  |   否  |   無法變更物件的訂閱狀態。 |
@@ -5440,12 +5440,12 @@ ms.locfileid: "37316598"
 |   14088   |   16  |   否  |   資料表 '%s' 必須要有主索引鍵才能使用以交易為基礎的方法發行。  |
 |   14089   |   16  |   否  |   具體化檢視表 '%s' 上的叢集索引如果要使用以交易為基礎的方法來發行時，可能並未包含可為 Null 的資料行。 |
 |   14090   |   16  |   否  |   資料行卸除後，在評估發行項同步處理物件時發生錯誤。 發行項 '%s' 的篩選子句不可參考已卸除的資料行。    |
-|   14091   |   16  |   否  |   傳遞至 sp_helpreplicationdb 的 @type 參數必須為 'pub' 或 'sub'。   |
+|   14091   |   16  |   否  |   傳遞至 sp_helpreplicationdb 的 \@type 參數必須為 'pub' 或 'sub'。  |
 |   14092   |   16  |   否  |   無法變更發行項，因為發行項已經具有現有的訂閱。  |
 |   14093   |   16  |   否  |   無法直接授與或撤銷發行集 '%s' 的存取，因為它使用預設的發行集存取清單。 |
-|   14094   |   16  |   否  |   無法訂閱發行項 '%s'，因為異質性訂閱者 '%s' 不支援 @pre_creation_cmd 參數值 'truncate'。    |
-|   14095   |   16  |   否  |   參數 @sync_method 的值無效。 無法訂閱發行集 '%s'，因為非 SQL Server 訂閱者 '%s' 的 @sync_method 參數，只支援 'character'、'bcp character'、'concurrent_c' 和 'database snapshot character' 等值。   |
-|   14096   |   16  |   否  |   如果 @pre_creation_cmd 參數值為 'drop' 則必須指定資料表建立指令碼的路徑和名稱。    |
+|   14094   |   16  |   否  |   無法訂閱發行項 '%s'，因為異質性訂閱者 '%s' 不支援 \@pre_creation_cmd 參數值 'truncate'。   |
+|   14095   |   16  |   否  |   \@sync_method 參數的值無效。 無法訂閱發行集 '%s'，因為非 SQL Server 訂閱者 '%s' 的 \@sync_method 參數，只支援 'character'、'bcp character'、'concurrent_c' 和 'database snapshot character' 等值。 |
+|   14096   |   16  |   否  |   如果 \@pre_creation_cmd 參數值為 'drop' 則必須指定資料表建立指令碼的路徑和名稱。   |
 |   14097   |   16  |   否  |   'status' 的值必須是 'no column names'、'include column names'、'string literals'、'parameters'、'DTS horizontal partitions' 或 'no DTS horizontal partitions'。   |
 |   14098   |   16  |   否  |   無法卸除散發簽發者 '%s'。 遠端簽發者使用 '%s' 做為散發者。 在嘗試卸除此關聯性之前，請在簽發者停用發行。    |
 |   14099   |   16  |   否  |   伺服器 '%s' 已經定義成散發者。 若要將伺服器設定為散發者，您必須先解除安裝現有散發者。 請使用預存程序 sp_dropdistributor，或使用 [停用發行暨散發精靈]。    |
@@ -5455,11 +5455,11 @@ ms.locfileid: "37316598"
 |   14103   |   16  |   否  |   無效的 "%s" 值。 有效的值為 "publisher"、"subscriber" 或 "both"。  |
 |   14105   |   10  |   否  |   您已成功更新散發資料庫屬性 '%s'。  |
 |   14106   |   16  |   否  |   散發保留週期必須大於或等於 0。  |
-|   14107   |   10  |   否  |   @max_distretention值必須大於 @min_distretention 值。  |
+|   14107   |   10  |   否  |   \@max_distretention 的值必須大於 \@min_distretention 的值。    |
 |   14108   |   10  |   否  |   從 %s 移除了 %ld 記錄。    |
-|   14109   |   10  |   否  |   @security_mode 參數值必須為 0 (SQL Server 驗證) 或 1 (Windows 驗證)。 |
-|   14110   |   16  |   否  |   對於預存程序的發行項而言，@property 的參數值必須為 'description'、'dest_table'、'dest_object'、'creation_script'、'pre_creation_cmd'、'schema_option' 或 'destination_owner'。    |
-|   14111   |   16  |   否  |   @pre_creation_cmd 參數值必須是 'none' 或 'drop'。 |
+|   14109   |   10  |   否  |   \@security_mode 參數值必須為 0 (SQL Server 驗證) 或 1 (Windows 驗證)。    |
+|   14110   |   16  |   否  |   對於預存程序的發行項而言，\@property 的參數值必須為 'description'、'dest_table'、'dest_object'、'creation_script'、'pre_creation_cmd'、'schema_option' 或 'destination_owner'。   |
+|   14111   |   16  |   否  |   \@pre_creation_cmd 參數值必須是 'none' 或 'drop'。    |
 |   14112   |   16  |   否  |   這個程序只能對以資料表為基礎的發行項執行。   |
 |   14113   |   16  |   否  |   無法執行 '%s'。 請檢查安裝目錄中的 '%s'。    |
 |   14114   |   16  |   否  |   伺服器 '%s' 未設定為散發者。 |
@@ -5469,20 +5469,20 @@ ms.locfileid: "37316598"
 |   14119   |   16  |   否  |   無法加入散發資料庫 '%s'。 這個散發資料庫已經存在。    |
 |   14120   |   16  |   否  |   無法卸除散發資料庫 '%s'。 這個散發資料庫與一發行者相關聯。    |
 |   14121   |   16  |   否  |   無法卸除散發者 '%s'。 這個散發者有相關聯的散發資料庫。    |
-|   14122   |   16  |   否  |   @article 參數值對 immediate_sync 發行集而言必須是 'all'。 |
-|   14123   |   16  |   否  |   訂閱的 @sync_type 參數值 'manual' 不再支援。    |
+|   14122   |   16  |   否  |   \@article 參數值對 immediate_sync 發行集而言必須是 'all'。    |
+|   14123   |   16  |   否  |   訂閱的 \@sync_type 參數值 'manual' 不再支援。   |
 |   14124   |   16  |   否  |   建立發行集的訂閱之前，發行集至少必須具備一個發行項。    |
 |   14126   |   16  |   否  |   您並未具備完成這個作業所需的權限。 |
-|   14128   |   16  |   否  |   無效的 @subscription_type 參數值。 有效的選項為 'push' 或 'pull'。 |
-|   14129   |   16  |   否  |   當您加入訂閱到 immediate_sync 發行集時，@status 參數值對於 'automatic' 的 sync_type 而言必須是 NULL。 |
+|   14128   |   16  |   否  |   無效的 \@subscription_type 參數值。 有效的選項為 'push' 或 'pull'。    |
+|   14129   |   16  |   否  |   當您加入訂閱到 immediate_sync 發行集時，\@status 參數值對於 'automatic' 的 sync_type 而言必須是 NULL。    |
 |   14135   |   16  |   否  |   簽發者 '%s'，簽發者資料庫 '%s'，發行集 '%s' 上沒有訂閱。  |
 |   14136   |   16  |   否  |   關鍵字 'all' 由複寫預存程序所保留。 |
-|   14137   |   16  |   否  |   @value 參數值必須是 'true' 或 'false'。    |
+|   14137   |   16  |   否  |   \@value 參數值必須是 'true' 或 'false'。   |
 |   14138   |   16  |   否  |   無效的選項名稱 '%s'。   |
 |   14139   |   16  |   否  |   複寫系統資料表 '%s' 已經存在。   |
 |   14143   |   16  |   否  |   無法卸除散發者簽發者 '%s'。 它在散發資料庫 '%s' 中和訂閱者相關聯。 |
 |   14144   |   16  |   否  |   無法卸除訂閱者 '%s'。 發行集資料庫 '%s' 中有其訂閱。   |
-|   14146   |   16  |   否  |   發行項參數 '@schema_option' 不可為 Null。  |
+|   14146   |   16  |   否  |   發行項參數 '\@schema_option' 不得為 NULL。 |
 |   14147   |   16  |   否  |   限制的發行集不再支援。    |
 |   14148   |   16  |   否  |   無效的 '%s' 值。 有效的值為 'true' 或 'false'。 |
 |   14149   |   10  |   否  |   在 %s 秒內移除了 %ld 筆複寫記錄 (%ld 個資料列/秒)。   |
@@ -5490,7 +5490,7 @@ ms.locfileid: "37316598"
 |   14151   |   18  |   是 |   複寫 -%s：代理程式 %s 失敗。 %s |
 |   14152   |   10  |   是 |   複寫 -%s：代理程式 %s 已排程重試。 %s    |
 |   14153   |   10  |   否  |   複寫-%s: 代理程式 %s 警告。 %s    |
-|   14154   |   16  |   否  |   散發者參數必須是 '@heartbeat_interval'。    |
+|   14154   |   16  |   否  |   散發者參數必須是 '\@heartbeat_interval'。   |
 |   14155   |   16  |   否  |   對程序指令碼的產生指定了無效的發行項識別碼。   |
 |   14156   |   16  |   否  |   呼叫發行項定義中指定的 %s 命令格式的自訂預存程序與 %s 格式不相符。 |
 |   14157   |   10  |   是 |   由訂閱者 '%s' 建立給發行集 '%s' 的訂閱已經過期且已經卸除。   |
@@ -5516,7 +5516,7 @@ ms.locfileid: "37316598"
 |   14199   |   10  |   否  |   並未為維護計畫建立指定的作業 '%s'。 請確認作業至少有一個步驟呼叫 xp_sqlmaint。 |
 |   14200   |   16  |   否  |   指定的 '%s' 無效。  |
 |   14201   |   10  |   否  |   0 (所有步驟) .    |
-|   14202   |   10  |   否  |   @active_start_time 之前或之後  |
+|   14202   |   10  |   否  |   在 \@active_start_time 之前或之後 |
 |   14203   |   10  |   否  |   sp_helplogins [不含 Windows NT 群組] |
 |   14204   |   10  |   否  |   0 (非閒置)，1 (正在執行)，2 (等候執行緒)，3 (重試之間)，4 (閒置)，5 (已暫停)，7 (正在執行完成動作)|
 |   14205   |   10  |   否  |   (未知)   |
@@ -5558,7 +5558,7 @@ ms.locfileid: "37316598"
 |   14241   |   10  |   否  |   從 %ld 個伺服器上移除作業。   |
 |   14242   |   16  |   否  |   只有系統管理員可以重新指派作業的擁有權。    |
 |   14243   |   10  |   否  |   作業 '%s' 已成功啟動。  |
-|   14245   |   16  |   否  |   請指定要刪除之工作的 @name、@id 或 @loginname。  |
+|   14245   |   16  |   否  |   請指定要刪除之工作的 \@name、\@id 或 \@loginname。   |
 |   14250   |   16  |   否  |   指定的 %s 太長。 不可包含 %ld 個字元以上。  |
 |   14251   |   16  |   否  |   無法將 '%s' 指定為將通知的操作員。 |
 |   14252   |   16  |   否  |   無法對不是您所擁有的作業執行此動作。 |
@@ -5581,17 +5581,17 @@ ms.locfileid: "37316598"
 |   14270   |   16  |   否  |   作業 '%s' 目前未針對伺服器 '%s' 為目標。  |
 |   14271   |   16  |   否  |   目標伺服器不可命名為 '%s'。   |
 |   14272   |   16  |   否  |   物件類型和物件名稱必須成對地提供。 |
-|   14273   |   16  |   否  |   您必須提供 @job_id 或 @job_name (並選擇性地，@schedule_name) 或 @schedule_id。    |
+|   14273   |   16  |   否  |   您必須提供 \@job_id 或 \@job_name (以及選擇性的 \@schedule_name)，或是 \@schedule_id。    |
 |   14274   |   16  |   否  |   無法加入、更新或刪除從 MSX 伺服器所引發的作業 (或其步驟或排程)。 |
 |   14275   |   16  |   否  |   原始伺服器必須是本機伺服器或 MSX 伺服器。   |
 |   14276   |   16  |   否  |   '%s' 是永久的 %s 類別且無法刪除。  |
 |   14277   |   16  |   否  |   命令指令碼並未將它所建立的所有物件摧毀。 請修訂命令指令碼。 |
 |   14278   |   16  |   否  |   這項作業的排程無效 (原因: %s)。  |
-|   14279   |   16  |   否  |   請提供 @job_name、@job_id 或 @originating_server。    |
+|   14279   |   16  |   否  |   請提供 \@job_name、\@job_id 或 \@originating_server。 |
 |   14280   |   16  |   否  |   請提供作業名稱 (以及作業外觀)，或是一或多個作業篩選參數。    |
-|   14281   |   10  |   否  |   警告: @new_owner_login_name 參數在指定 'DELETE' 動作時並非必要。    |
+|   14281   |   10  |   否  |   警告: \@new_owner_login_name 參數在指定 'DELETE' 動作時並非必要。   |
 |   14282   |   16  |   否  |   請提供日期 (建立或上次修改) 和日期比較運算子，或是不提供任何日期參數。    |
-|   14283   |   16  |   否  |   提供 @target_server_groups 或 @target_servers，或兩者。   |
+|   14283   |   16  |   否  |   請提供 \@target_server_groups 或 \@target_servers，或是兩者皆提供。 |
 |   14284   |   16  |   否  |   無法指定作業識別碼給新的作業。 識別碼將由程序來指派。 |
 |   14285   |   16  |   否  |   無法加入本機作業到多伺服器作業目錄。   |
 |   14286   |   16  |   否  |   無法加入多伺服器作業到本機作業目錄。   |
@@ -5632,7 +5632,7 @@ ms.locfileid: "37316598"
 |   14367   |   16  |   否  |   未刪除一或多個排程，因為它們至少在供一個其他作業使用。 使用 "sp_detach_schedule" 從作業移除排程。  |
 |   14368   |   16  |   否  |   未刪除排程 "%s"，因為它至少可供一個其他作業使用。 使用 "sp_detach_schedule" 從作業移除排程。  |
 |   14369   |   16  |   否  |   排程識別碼 "%s" 可供一個以上的作業使用。 請指定 job_id。  |
-|   14370   |   16  |   否  |   @originating_server 必須為目標伺服器 (TSX) 上 MSX 作業的本機伺服器名稱或主要伺服器 (MSX) 名稱。 |
+|   14370   |   16  |   否  |   \@originating_server 必須為目標伺服器 (TSX) 上 MSX 作業的本機伺服器名稱或主要伺服器 (MSX) 名稱。    |
 |   14371   |   16  |   否  |   有兩個或更多排程命名為 "%s"。 請指定 %s 而非 %s 來唯一識別這個排程。 |
 |   14372   |   16  |   否  |   未刪除此排程，因為它正供一或多個作業使用。  |
 |   14373   |   16  |   否  |   請提供 %s 或 %s 來識別這項排程。    |
@@ -5640,7 +5640,7 @@ ms.locfileid: "37316598"
 |   14375   |   16  |   否  |   一個以上命名為 "%s" 的排程附加到作業 "%s"。 使用 "sp_update_schedule" 來更新排程。    |
 |   14376   |   16  |   否  |   一個以上命名為 "%s" 的排程附加到作業 "%s"。 使用 "sp_detach_schedule" 從作業移除排程。 |
 |   14377   |   16  |   否  |   排程未附加到指定的作業。 排程擁有者與作業擁有者必須相同，或此作業必須由系統管理員 (sysadmin) 執行。 |
-|   14378   |   16  |   否  |   SQLAgent 不再支援 @sysadmin_only 旗標，保留此旗標只是為了回溯相容   |
+|   14378   |   16  |   否  |   SQLAgent 不再支援 \@sysadmin_only 旗標，保留此旗標只是為了回溯相容  |
 |   14379   |   16  |   否  |   資料表 '%s' 外部索引鍵 'originating_server_id' 與參考檢視表 'dbo.sysoriginatingservers_view' 中的值不相符。  |
 |   14380   |   16  |   否  |   資料表 sysoriginatingservers 中的欄位 'originating_server_id' 正由 sysjobs 或 sysschedules 所參考。 |
 |   14390   |   16  |   否  |   只有系統管理員 (sysadmin) 角色的成員可以指定 %s 參數。 |
@@ -5660,15 +5660,15 @@ ms.locfileid: "37316598"
 |   14415   |   16  |   否  |   使用 SQL Server 驗證時使用者名稱不可以是 Null。  |
 |   14416   |   16  |   否  |   這個預存程序必須執行於 msdb。  |
 |   14417   |   16  |   否  |   當資料庫仍參與記錄傳送時，無法刪除該監視伺服器。 |
-|   14418   |   16  |   否  |   所指定的 @backup_file_name 並非由資料庫 '%s' 所建立。 |
-|   14419   |   16  |   否  |   指定的 @backup_file_name 不是資料庫備份。   |
+|   14418   |   16  |   否  |   所指定的 \@backup_file_name 並非由資料庫 '%s' 所建立。    |
+|   14419   |   16  |   否  |   指定的 \@backup_file_name 不是資料庫備份。  |
 |   [14420](mssqlserver-14420-database-engine-error.md) |   16  |   是 |   記錄傳送主要資料庫 %s.%s 的備份臨界值為 %d 分鐘，且已經有 %d 分鐘未執行備份記錄檔作業。 檢查代理程式記錄和記錄傳送監視器資訊。    |
 |   [14421](mssqlserver-14421-database-engine-error.md) |   16  |   是 |   記錄傳送次要資料庫 %s.%s 的還原臨界值為 %d 分鐘，而且未同步。已經有 %d 分鐘未執行還原。 還原的延遲為 %d 分鐘。 檢查代理程式記錄和記錄傳送監視器資訊。 |
-|   14422   |   16  |   否  |   請提供 @plan_id 或 @plan_name。   |
+|   14422   |   16  |   否  |   必須提供 \@plan_id 或 \@plan_name。 |
 |   14423   |   16  |   否  |   計畫中仍編列其他的資料庫，您必須先移除計畫中的資料庫才能刪除該計畫。   |
 |   14424   |   16  |   否  |   資料庫 '%s' 已包含於記錄傳送之中。  |
 |   14425   |   16  |   否  |   資料庫 '%s' 似乎尚未包含於記錄傳送之中。 |
-|   14426   |   16  |   否  |   已經定義了記錄傳送監視器。 請使用 @delete_existing = 1 呼叫 sp_define_log_shipping_monitor。   |
+|   14426   |   16  |   否  |   已經定義了記錄傳送監視器。 請使用 \@delete_existing = 1 呼叫 sp_define_log_shipping_monitor。  |
 |   14427   |   16  |   否  |   為了 SQL Server 的安全性必須提供使用者名稱。   |
 |   14428   |   16  |   否  |   由於仍有資料庫包含於記錄傳送之中，所以無法移除監視器。 |
 |   14429   |   16  |   否  |   仍有次要伺服器附加於主要伺服器上。 |
@@ -5676,28 +5676,28 @@ ms.locfileid: "37316598"
 |   14440   |   16  |   否  |   無法設定為單一使用者模式。 |
 |   14441   |   16  |   否  |   角色已順利變更。  |
 |   14442   |   16  |   否  |   角色變更失敗。 |
-|   14450   |   16  |   否  |   所指定的 @backup_file_name 並非由資料庫 '%s' 取得的。   |
-|   14451   |   16  |   否  |   指定的 @backup_file_name 不是資料庫備份。   |
+|   14450   |   16  |   否  |   所指定的 \@backup_file_name 並非取自資料庫 '%s'。  |
+|   14451   |   16  |   否  |   指定的 \@backup_file_name 不是資料庫備份。  |
 |   14500   |   16  |   否  |   請提供非零的訊息識別碼、非零的嚴重性、非 Null 的效能條件或是非 Null 的 WMI 命名空間與查詢。    |
 |   14501   |   16  |   否  |   警示 ('%s') 已經在這個條件下定義。 |
-|   14502   |   16  |   否  |   在指定 @enum_type 為 'TARGET' 時必須提供 @target_name 參數。  |
-|   14503   |   16  |   否  |   在指定 @enum_type 為 'ALL' 或 'ACTUAL' 時不可提供 @target_name 參數。   |
+|   14502   |   16  |   否  |   在指定 \@enum_type 為 'TARGET' 時必須提供 \@target_name 參數。    |
+|   14503   |   16  |   否  |   在指定 \@enum_type 為 'ALL' 或 'ACTUAL' 時不可提供 \@target_name 參數。 |
 |   14504   |   16  |   否  |   '%s' 為保全操作員。 卸除 '%s' 之前您必須先指定另一位操作員為保全操作員。   |
 |   14505   |   16  |   否  |   提供效能條件時請指定一個 Null 的 %s。   |
 |   14506   |   16  |   否  |   無法在訊息識別碼 %ld 上設定警示。    |
 |   14507   |   16  |   否  |   效能條件必須格式化為: 'object_name|counter_name|instance_name|比較子 (> 或 < or =)|數值'。   |
-|   14508   |   16  |   否  |   指定 @wmi_namespace 和 @wmi_query 二者。 |
-|   14509   |   16  |   否  |   提供 @wmi_namespace 時，請指定一個有效的 %s。 |
-|   14510   |   16  |   否  |   提供 @wmi_namespace 時請指定一個 null %s。  |
-|   14511   |   16  |   否  |   @wmi_query 無法在提供的 @wmi_namespace 中執行。 請確認在查詢中選取的事件類別存在此命名空間中，而且查詢的語法正確。    |
-|   14512   |   16  |   否  |   提供 @wmi_query 時，請指定一個有效的 %s。 |
+|   14508   |   16  |   否  |   同時指定 \@wmi_namespace 與 \@wmi_query。   |
+|   14509   |   16  |   否  |   提供 \@wmi_namespace 時請指定一個有效的 %s。    |
+|   14510   |   16  |   否  |   提供 \@wmi_namespace 時請指定一個 Null 的 %s。 |
+|   14511   |   16  |   否  |   \@wmi_query 不可在提供的 \@wmi_namespace 中執行。 請確認在查詢中選取的事件類別存在此命名空間中，而且查詢的語法正確。  |
+|   14512   |   16  |   否  |   提供 \@wmi_query 時請指定一個有效的 %s。    |
 |   14513   |   10  |   否  |   分析查詢子系統    |
 |   14514   |   10  |   否  |   分析命令子系統  |
-|   14515   |   16  |   否  |   只有系統管理員 (sysadmin) 伺服器角色的成員，可以為具有 @owner_login_name 的不同擁有者加入作業。   |
+|   14515   |   16  |   否  |   只有系統管理員 (sysadmin) 伺服器角色的成員，可以為具有 \@owner_login_name 的不同擁有者加入作業。  |
 |   14516   |   16  |   否  |   Proxy (%d) 不允許用於子系統 "%s" 與使用者 "%s"。 透過呼叫 sp_grant_proxy_to_subsystem 或 sp_grant_login_to_proxy 來授與權限。 |
 |   14517   |   16  |   否  |   Proxy 帳戶不允許用於 Transact-SQL 子系統中。    |
 |   14518   |   16  |   否  |   無法刪除 Proxy (%d)。 至少有一個作業步驟使用該 Proxy。 請先變更所有作業步驟的 Proxy。 |
-|   14519   |   16  |   否  |   應該只能指定 @login_name、@fixed_server_role 或 @msdb_role 其中一個。 |
+|   14519   |   16  |   否  |   只能指定 \@login_name、\@fixed_server_role 或 \@msdb_role 中的一個。  |
 |   14520   |   16  |   否  |   %s 不是有效的 SQL Server 標準登入、Windows NT 使用者、Windows NT 群組或 msdb 資料庫角色。  |
 |   14521   |   16  |   否  |   %s 不是有效的 SQL Server 固定伺服器角色、Windows NT 使用者或 Windows NT 群組。   |
 |   14522   |   16  |   否  |   '"%s" 不是有效的 msdb 資料庫、Windows NT 使用者或 Windows NT 群組的角色。    |
@@ -5750,18 +5750,18 @@ ms.locfileid: "37316598"
 |   14569   |   10  |   否  |   (時間關鍵) |
 |   14570   |   10  |   否  |   (作業結果)   |
 |   14571   |   10  |   否  |   沒有可用的描述。   |
-|   14572   |   10  |   否  |   每日作業的 @freq_interval 必須至少是 1。  |
-|   14573   |   10  |   否  |   每週作業的 @freq_interval 必須是有效的週日期位元遮罩 [星期日 = 1。 星期六 = 64 ]。  |
-|   14574   |   10  |   否  |   每月作業的 @freq_interval 必須介於 1 和 31 之間。  |
-|   14575   |   10  |   否  |   @freq_relative_interval 必須是第一 (0x1)、第二 (0x2)、第三 [0x4]、第四 (0x8) 或最後一個 (0x10) 的其中之一。   |
-|   14576   |   10  |   否  |   @freq_interval 必須介於 1 到 10 之間 (1 = 星期日 .. (1 = 星期日，7 = 星期六，8 = 天，9 = 工作日，10 = 週末)。    |
-|   14577   |   10  |   否  |   @freq_recurrence_factor 至少必須至少為 1。 |
+|   14572   |   10  |   否  |   每日作業的 \@freq_interval 必須至少是 1。 |
+|   14573   |   10  |   否  |   每週作業的 \@freq_interval 必須是有效的週日期位元遮罩 [星期日 = 1 .. 星期六 = 64 ]。 |
+|   14574   |   10  |   否  |   每月作業的 \@freq_interval 必須介於 1 和 31 之間。 |
+|   14575   |   10  |   否  |   \@freq_relative_interval 必須是第一 (0x1)、第二 (0x2)、第三 [0x4]、第四 (0x8) 或最後一個 (0x10) 的其中之一。  |
+|   14576   |   10  |   否  |   \@freq_interval 必須介於 1 到 10 之間 (1 = 星期日 .. (1 = 星期日，7 = 星期六，8 = 天，9 = 工作日，10 = 週末)。   |
+|   14577   |   10  |   否  |   \@freq_recurrence_factor 必須至少是 1。    |
 |   14578   |   10  |   否  |   當 CPU 用量維持在百分之 %ld 以下到達 %ld 秒時啟動。   |
 |   14579   |   10  |   否  |   當 SQLServerAgent 啟動時自動啟動。    |
 |   14580   |   10  |   否  |   作業 |
 |   14581   |   10  |   否  |   複寫交易佇列讀取器子系統  |
-|   14582   |   16  |   否  |   只有系統管理員 (sysadmin) 可以指定 jobstep 的 '@output_file_name' 參數。    |
-|   14583   |   16  |   否  |   只有系統管理員 (sysadmin) 可以指定 '@database_user_name' 參數。    |
+|   14582   |   16  |   否  |   只有系統管理員 (sysadmin) 可以指定 JobStep 的 '\@output_file_name' 參數。   |
+|   14583   |   16  |   否  |   只有系統管理員 (sysadmin) 可以指定 '\@database_user_name' 參數。   |
 |   14585   |   16  |   否  |   只有 DTS 封裝 '%s' 的擁有者或系統管理員 (sysadmin) 角色的成員可以重新指派其擁有權。 |
 |   14586   |   16  |   否  |   只有 DTS 封裝 '%s' 的擁有者或系統管理員 (sysadmin) 角色的成員可以建立其新版本。  |
 |   14587   |   16  |   否  |   只有 DTS 封裝 '%s' 的擁有者或系統管理員 (sysadmin) 角色的成員可以卸除它或它的任何版本。 |
@@ -5787,32 +5787,32 @@ ms.locfileid: "37316598"
 |   14607   |   16  |   否  |   %s 名稱無效    |
 |   14608   |   16  |   否  |   需要提供 %s 或 %s 參數  |
 |   14609   |   16  |   否  |   郵件資料庫與使用者資料庫的相關聯不存在，因此無法更新   |
-|   14610   |   16  |   否  |   必須指定 @profile_name 或 @description 參數來進行更新 |
+|   14610   |   16  |   否  |   需要指定 \@profile_name 或 \@description 參數才可以更新   |
 |   14611   |   16  |   否  |   必須提供帳戶序號才可以更新 |
 |   14612   |   16  |   否  |   每一主體至少應該有一個預設的設定檔 |
 |   14614   |   16  |   否  |   %s 不是有效的 mailserver_type   |
-|   14615   |   16  |   否  |   如果提供 @password，就必須提供 @username 參數。  |
+|   14615   |   16  |   否  |   如果提供 \@password，就必須提供 \@username 參數。    |
 |   14616   |   16  |   否  |   無法從認證存放區擷取新建立的認證 [%s]。 |
 |   14617   |   16  |   否  |   指定的郵件主機資料庫無效 |
 |   14618   |   16  |   否  |   必須指定參數 '%s'。 此參數不可以是 NULL。    |
 |   14619   |   16  |   否  |   Service Broker 與 Database Mail 交談時收到錯誤。 Database Mail 可能無法使用或發現錯誤。 請檢查 Database Mail 錯誤記錄檔，以取得詳細資訊。   |
 |   14620   |   16  |   否  |   Service Broker 與 Database Mail 交談結束時，未收到 Database Mail 的回應。 Database Mail 可能無法使用或發現錯誤。 請檢查 Database Mail 錯誤記錄檔，以取得詳細資訊。 |
-|   14621   |   16  |   否  |   參數 @attachmentencoding 不支援值 "%s"。 附加檔案的編碼必須為 "MIME"。  |
-|   14622   |   16  |   否  |   參數 @importance 不支援值 "%s"。 郵件重要性必須是 LOW、NORMAL 或 HIGH 其中之一。 |
-|   14623   |   16  |   否  |   參數 @sensitivity 不支援值 "%s"。 郵件敏感性必須是 NORMAL、PERSONAL、PRIVATE 或 CONFIDENTIAL 其中之一。 |
+|   14621   |   16  |   否  |   參數 \@attachmentencoding 不支援值 "%s"。 附加檔案的編碼必須為 "MIME"。 |
+|   14622   |   16  |   否  |   參數 \@importance 不支援值 "%s"。 郵件重要性必須是 LOW、NORMAL 或 HIGH 其中之一。    |
+|   14623   |   16  |   否  |   參數 \@sensitivity 不支援值 "%s"。 郵件敏感性必須是 NORMAL、PERSONAL、PRIVATE 或 CONFIDENTIAL 其中之一。    |
 |   14624   |   16  |   否  |   至少必須指定下列其中一個參數。 "%s"。   |
-|   [14265](mssqlserver-14265-database-engine-error.md) |   16  |   否  |   未指定參數 @query 的值時，參數 @attach_query_result_as_file 不可以是 1 (true)。 必須指定查詢才能附加查詢的結果。    |
-|   14626   |   16  |   否  |   參數 @mailformat 不支援值 "%s"。 郵件格式必須為 TEXT 或 HTML。    |
+|   [14265](mssqlserver-14265-database-engine-error.md) |   16  |   否  |   未指定參數 \@query 的值時，參數 \@attach_query_result_as_file 不可以是 1 (true)。 必須指定查詢才能附加查詢的結果。  |
+|   14626   |   16  |   否  |   參數 \@mailformat 不支援值 "%s"。 郵件格式必須為 TEXT 或 HTML。   |
 |   14627   |   16  |   否  |   將訊息當做 %s 作業的一部分來傳送時收到錯誤 %d。 Database Mail 可能無法使用或發現錯誤。 請檢查 Database Mail 錯誤記錄檔，以取得詳細資訊。    |
-|   14628   |   16  |   否  |   參數 @attachments 的格式錯誤。 檔案名稱必須以分號 ";" 隔開。 |
+|   14628   |   16  |   否  |   參數 \@attachments 的格式錯誤。 檔案名稱必須以分號 ";" 隔開。    |
 |   14629   |   16  |   否  |   沒有名稱為 "%s" 的組態參數，或者所提供的值的資料類型錯誤。  |
 |   14630   |   16  |   否  |   不允許 Database Mail 傳送副檔名為 %s 的檔案。    |
-|   14631   |   16  |   否  |   現行使用者 ('%s') 沒有存取參數 @execute_query_database 中所指定資料庫的權限，或者無法模擬參數 @execute_query_as 中指定的使用者。 只有系統管理員 (sysadmin) 固定伺服器角色的成員與 db_owner 固定資料庫角色的成員可以模擬另一位使用者。 |
-|   14632   |   16  |   否  |   @execute_query_as 中指定的使用者名稱 %s 無效。 沒有使用者擁有該名稱。  |
-|   14633   |   16  |   否  |   @execute_query_database 中指定的資料庫名稱 "%s" 無效。 沒有擁有該名稱的資料庫。  |
+|   14631   |   16  |   否  |   現行使用者 ('%s') 沒有存取參數 \@execute_query_database 中所指定資料庫的權限，或者無法模擬參數 \@execute_query_as 中指定的使用者。 只有系統管理員 (sysadmin) 固定伺服器角色的成員與 db_owner 固定資料庫角色的成員可以模擬另一位使用者。   |
+|   14632   |   16  |   否  |   \@execute_query_as 中指定的使用者名稱 %s 無效。 沒有使用者擁有該名稱。 |
+|   14633   |   16  |   否  |   \@execute_query_database 中指定的資料庫名稱 "%s" 無效。 沒有擁有該名稱的資料庫。 |
 |   14634   |   10  |   否  |   警告: %s'    |
 |   14635   |   10  |   否  |   佇列的郵件。    |
-|   14636   |   16  |   否  |   未設定全域設定檔。 請在 @profile_name 參數中指定設定檔名稱。 |
+|   14636   |   16  |   否  |   未設定全域設定檔。 請在 \@profile_name 參數中指定設定檔名稱。    |
 |   14637   |   10  |   否  |   啟用失敗。 |
 |   14638   |   10  |   否  |   啟用成功。  |
 |   14639   |   10  |   否  |   登入 "%s" 已啟動郵件佇列。   |
@@ -5861,7 +5861,7 @@ ms.locfileid: "37316598"
 |   14684   |   16  |   否  |   捕捉錯誤數: %d，層級: %d，狀態: %d，在程序: %s，行: %d，訊息為: %s   |
 |   14685   |   16  |   否  |   收集組 '%s' 未包含任何收集項，所以啟動此收集組沒有任何作用。 |
 |   14686   |   16  |   否  |   組態存放區的 MDWInstance 和 MDWDatabase 參數不能是 null。   |
-|   14687   |   16  |   否  |   @cache_window 參數的值 (%d) 無效。 可允許的值為: -1 (快取前一次上傳失敗後的所有上傳資料)、0 (不快取上傳資料)、N (快取前 N 次上傳失敗後的資料，其中 N >= 1)   |
+|   14687   |   16  |   否  |   \@cache_window 參數的值 (%d) 無效。 可允許的值為: -1 (快取前一次上傳失敗後的所有上傳資料)、0 (不快取上傳資料)、N (快取前 N 次上傳失敗後的資料，其中 N >= 1)  |
 |   14688   |   16  |   否  |   當 SQL Server Agent 停止時，無法啟動收集組。 請啟動 SQL Server Agent。 |
 |   14689   |   16  |   否  |   如果未設定管理資料倉儲，就無法啟動收集組。 請執行 instmdw.sql 指令碼，以建立及設定管理資料倉儲。 |
 |   14690   |   16  |   否  |   無法在啟用收集器時執行這個程序。 請停用收集器，然後重試一遍。  |
@@ -5892,7 +5892,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-15000-to-15999"></a>錯誤 15,000 到 15,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   15001   |   16  |   否  |   物件 '%ls' 不存在，或對此項作業不是有效的物件。    |
 |   15002   |   16  |   否  |   程序 '%s' 無法在交易內執行。 |
@@ -5926,7 +5926,7 @@ ms.locfileid: "37316598"
 |   15036   |   16  |   否  |   資料類型 '%s' 不存在，或者您沒有權限。    |
 |   15040   |   16  |   否  |   使用者自訂的錯誤訊息其識別碼必須大於 50000。 |
 |   15041   |   16  |   否  |   使用者自訂的錯誤訊息其嚴重性層級必須介於 1 和 25 之間。    |
-|   15042   |   10  |   否  |   us_english 版本以外的訊息已忽略 @with_log 參數。    |
+|   15042   |   10  |   否  |   us_english 版本以外的訊息已忽略 \@with_log 參數。   |
 |   15043   |   16  |   否  |   您必須指定 'REPLACE' 來覆寫現有的訊息。    |
 |   15044   |   16  |   否  |   類型 "%s" 是未知的備份裝置類型。 請使用類型 "磁碟" 或 "磁帶"。  |
 |   15045   |   16  |   否  |   邏輯名稱不得為 NULL。    |
@@ -6002,7 +6002,7 @@ ms.locfileid: "37316598"
 |   15137   |   16  |   否  |   執行 sp_xp_cmdshell_proxy_account 期間發生錯誤。 可能的原因: 提供的帳戶無效或無法建立 '%.*ls' 認證。 錯誤碼: '%d'。    |
 |   15138   |   16  |   否  |   資料庫主體在資料庫中擁有 %S_MSG 且無法卸除。    |
 |   15141   |   16  |   否  |   伺服器主體擁有一個或多個 %S_MSG(s) 且無法卸除。  |
-|   15143   |   16  |   否  |   '%s' 不是 @updateusage 參數的有效選項。 請輸入 'true' 或 'false'。  |
+|   15143   |   16  |   否  |   '%s' 不是 \@updateusage 參數的有效選項。 請輸入 'true' 或 'false'。 |
 |   15144   |   16  |   否  |   角色具有成員。 在卸除之前必須是空的。    |
 |   15145   |   16  |   否  |   隱含性 %S_MSG 建立已經失敗。 原因: 可能已經卸除 %S_MSG 或其名稱可能已經在使用中。 |
 |   15146   |   16  |   否  |   必須提供加密密碼來加密此 %S_MSG 的私密金鑰。  |
@@ -6025,7 +6025,7 @@ ms.locfileid: "37316598"
 |   15163   |   16  |   否  |   無效的逾時值。 有效的逾時介於 1 與 7200 秒之間。 |
 |   15164   |   16  |   否  |   '%.*ls' 不是有效的登入，或者無法發出模擬 Token。   |
 |   15165   |   16  |   否  |   找不到物件 '%ls' 或者您沒有權限。  |
-|   15166   |   10  |   否  |   警告: dbo 結構描述中包含經由 sp_addtype 建立的使用者類型。 已忽略 @owner 參數 (若有指定)。   |
+|   15166   |   10  |   否  |   警告: dbo 結構描述中包含經由 sp_addtype 建立的使用者類型。 已忽略 \@owner 參數 (若有指定)。  |
 |   15167   |   16  |   否  |   無法產生 GUID。   |
 |   15168   |   16  |   否  |   無法重新命名檢視 '%s' 及其資料行與索引，因為它是系統基於最佳化目的所產生的檢視。   |
 |   15169   |   16  |   否  |   此版本的 SQL Server 不可使用 "%ls" 伺服器選項。 |
@@ -6035,7 +6035,7 @@ ms.locfileid: "37316598"
 |   15173   |   16  |   否  |   登入 '%s' 已經授與一或多個權限。 請在卸除登入之前撤銷權限。   |
 |   15174   |   16  |   否  |   登入 '%s' 擁有一或多個資料庫。 卸除登入之前請先變更資料庫的擁有者。 |
 |   15175   |   16  |   否  |   登入 '%s' 是別名或在一或多個資料庫中對應到某位使用者。 卸除登入之前請先卸除使用者或別名。 |
-|   15176   |   16  |   否  |   唯一有效的 @parameter 值為 'WITH_LOG'。  |
+|   15176   |   16  |   否  |   唯一有效的 \@parameter 值為 'WITH_LOG'。 |
 |   15177   |   16  |   否  |   使用方式: sp_dropmessage <msg number> [,<language> | 'ALL']    |
 |   15178   |   16  |   否  |   無法卸除或改變識別碼小於 50,000 的訊息。 |
 |   15179   |   16  |   否  |   訊息編號 %u 或指定的語言版本不存在。 |
@@ -6068,14 +6068,14 @@ ms.locfileid: "37316598"
 |   15213   |   16  |   否  |   警告: 您建立的憑證具有無效的有效期間; 其到期日超過其開始日期。   |
 |   15214   |   16  |   否  |   警告: 您建立的憑證已過期。    |
 |   15215   |   16  |   否  |   警告: 您建立的憑證尚未生效; 其開始日期是未來的日期。 |
-|   15216   |   16  |   否  |   '%s' 不是 @delfile 參數的有效選項。  |
+|   15216   |   16  |   否  |   '%s' 不是 \@delfile 參數的有效選項。 |
 |   15217   |   16  |   否  |   無法更新或刪除屬性。 屬性 '%.*ls' 對 '%.* ls' 不存在。 |
 |   15218   |   16  |   否  |   物件 '%s' 不是資料表。 |
 |   15219   |   16  |   否  |   無法變更索引檢視的擁有者。 |
 |   15222   |   16  |   否  |   遠端登入選項 '%s' 不是唯一的。 |
 |   15223   |   11  |   否  |   錯誤: 輸入參數 '%s' 不允許為 Null。  |
-|   15224   |   11  |   否  |   錯誤: @newname 參數的值包含無效的字元或違反基本限制 (%s)。   |
-|   15225   |   11  |   否  |   在目前的資料庫 '%s' 中找不到名稱為 '%s' 的項目，假設 @itemtype 已輸入為 '%s'。    |
+|   15224   |   11  |   否  |   錯誤: \@newname 參數的值包含無效的字元或違反基本限制 (%s)。  |
+|   15225   |   11  |   否  |   在目前的資料庫 '%s' 中找不到名稱為 '%s' 的項目，假設 \@itemtype 已輸入為 '%s'。   |
 |   15226   |   16  |   否  |   無法從 XML 資料類型建立 CLR 類型。   |
 |   15227   |   16  |   否  |   資料庫 '%s' 無法重新命名。    |
 |   15229   |   16  |   否  |   為 sp_db_vardecimal_storage_format 預存程序的 "%.*ls" 參數指定的引數無效。 有效的引數為 'ON' 或 'OFF'。   |
@@ -6094,14 +6094,14 @@ ms.locfileid: "37316598"
 |   15244   |   16  |   否  |   只有系統管理員 (sysadmin) 角色或資料庫擁有者的成員可以設定資料庫選項。   |
 |   15246   |   16  |   否  |   無法傾印憑證 '%s' 的私密金鑰，因為找不到私密金鑰。    |
 |   15247   |   16  |   否  |   使用者沒有執行此動作的權限。   |
-|   15248   |   11  |   否  |   參數 @objname i模稜兩可或是所宣告的 @objtype (%s) 有誤。   |
-|   15249   |   11  |   否  |   錯誤: 外顯的 @objtype '%s' 無法辨識。  |
+|   15248   |   11  |   否  |   參數 \@objname 模稜兩可或是所宣告的 \@objtype (%s) 有誤。 |
+|   15249   |   11  |   否  |   錯誤: 外顯的 \@objtype '%s' 無法辨識。 |
 |   15250   |   16  |   否  |   物件限定詞的資料庫名稱元件必須是目前資料庫的名稱。   |
 |   15251   |   16  |   否  |   指定的 '%s' 無效。 必須是 %s。  |
 |   15252   |   16  |   否  |   必須給定主索引鍵或外部索引鍵資料表名稱。    |
 |   15253   |   11  |   否  |   剖析 SQL 識別碼 '%s' 時的語法錯誤。   |
 |   15254   |   16  |   否  |   資料庫擁有者或 guest 以外的使用者存在於資料庫。 移除資料庫之前請先卸除這些使用者。 |
-|   15255   |   11  |   否  |   '%s' 不是 @autofix 的有效值。 唯一有效的值為 'auto'。 |
+|   15255   |   11  |   否  |   '%s' 不是 \@autofix 的有效值。 唯一有效的值為 'auto'。    |
 |   15256   |   16  |   否  |   使用方式: sp_certify_removable <dbname> [,'auto']  |
 |   15257   |   16  |   否  |   您嘗試認證的資料庫不得同時為使用中。  |
 |   15258   |   16  |   否  |   資料庫在移除之前必須由系統管理員 (sysadmin) 角色的成員所擁有。   |
@@ -6116,12 +6116,12 @@ ms.locfileid: "37316598"
 |   15267   |   16  |   否  |   名稱為 '%s' 的安全性描述項已經存在。    |
 |   15268   |   10  |   是 |   驗證模式為 %s。  |
 |   15269   |   16  |   否  |   邏輯資料裝置 '%s' 並未建立。   |
-|   15271   |   16  |   否  |   無效的 @with_log 參數值。 有效的值為 'true' 或 'false'。  |
+|   15271   |   16  |   否  |   無效的 \@with_log 參數值。 有效的值為 'true' 或 'false'。 |
 |   15272   |   10  |   否  |   不信任執行 %s '%.*s'。    |
 |   15273   |   10  |   否  |   解密金鑰不正確。    |
 |   15274   |   16  |   否  |   存取遠端伺服器遭到拒絕，因為目前的安全性內容不受信任。  |
 |   15276   |   16  |   否  |   無法提供系統資料庫的主要金鑰密碼。 |
-|   15277   |   16  |   否  |   唯一有效的 @parameter_value 值為 'true' 或 'false'。   |
+|   15277   |   16  |   否  |   唯一有效的 \@parameter_value 值為 'true' 或 'false'。  |
 |   15278   |   16  |   否  |   登入 '%s' 已經對應到資料庫 '%s' 中的使用者 '%s'。 |
 |   15279   |   16  |   否  |   您必須先加入這個訊息的 us_english 版本才能加入 '%s' 版本。    |
 |   15280   |   16  |   否  |   必須先卸除此訊息的所有當地語系化版本，才可以卸除 us_english 版本。    |
@@ -6130,7 +6130,7 @@ ms.locfileid: "37316598"
 |   15283   |   16  |   否  |   名稱 '%s' 包含太多的字元。 |
 |   15284   |   16  |   否  |   資料庫主體在資料庫中已經授與或拒絕物件的權限且無法卸除。  |
 |   15285   |   16  |   否  |   特殊字 '%s' 不得使用於邏輯裝置名稱。 |
-|   15286   |   16  |   否  |   正在結束這個程序。 @action '%s' 無法辨識。 請嘗試 'REPORT'、'UPDATE_ONE' 或 'AUTO_FIX'。    |
+|   15286   |   16  |   否  |   正在結束這個程序。 \@action '%s' 無法辨識。 請嘗試 'REPORT'、'UPDATE_ONE' 或 'AUTO_FIX'。   |
 |   15287   |   16  |   否  |   正在結束這個程序。 '%s' 對於這個程序的登入名稱參數而言是禁止的值。   |
 |   15288   |   10  |   否  |   請指定一個解密程式來解密金鑰。  |
 |   15289   |   16  |   否  |   正在結束這個程序。 執行時不得具有開啟的交易。   |
@@ -6147,7 +6147,7 @@ ms.locfileid: "37316598"
 |   15302   |   11  |   否  |   Database_Name 不應該用來將參數的 owner.object 限定到這個程序之中。 |
 |   15303   |   11  |   否  |   "使用者選項" 設定值 (%d) 被拒絕，因為它會設定不相容的選項。    |
 |   15304   |   16  |   否  |   這個訊息的 '%s' 版本其嚴重性層級必須和 us_english 版本的嚴重性層級 (%ld) 相同。  |
-|   15305   |   16  |   否  |   @TriggerType 參數值必須是 'insert'、'update'、或 'delete'。   |
+|   15305   |   16  |   否  |   \@TriggerType 參數值必須是 'insert'、'update'、或 'delete'。  |
 |   15306   |   16  |   否  |   無法變更複寫式或分散式資料庫的相容性層級。   |
 |   15307   |   16  |   否  |   無法變更合併發行選項，因為伺服器並未設定用於複寫。 |
 |   15309   |   16  |   否  |   無法改變 model 或 tempdb 資料庫的可信任狀態。    |
@@ -6174,7 +6174,7 @@ ms.locfileid: "37316598"
 |   15330   |   11  |   否  |   沒有和要報告的資料列相符的資料列。  |
 |   15331   |   11  |   否  |   由於存在有重複的 SID，所以使用者 '%s' 無法採用 auto_fix 動作。 |
 |   15332   |   10  |   否  |   已經設定這個檔案的私密金鑰。 若要變更，您應該卸除並重新建立憑證。   |
-|   15333   |   11  |   否  |   錯誤: 限定的 @oldname 參考資料庫 (%s) 而不是目前的資料庫。   |
+|   15333   |   11  |   否  |   錯誤: 限定的 \@oldname 參考資料庫 (%s) 而不是目前的資料庫。  |
 |   15334   |   10  |   否  |   %S_MSG 的私密金鑰受使用者自訂密碼保護。 必須提供該密碼，才能使用私密金鑰。 |
 |   15335   |   11  |   否  |   錯誤: 新名稱 '%s' 已經用來做為 %s 名稱且造成不被允許的重複。  |
 |   15336   |   16  |   否  |   由於物件參與強制相依性，所以物件 '%s' 無法重新命名。 |
@@ -6260,7 +6260,7 @@ ms.locfileid: "37316598"
 |   15427   |   16  |   否  |   您必須指定未知產品 '%ls' 的提供者名稱。 |
 |   15428   |   16  |   否  |   您無法指定產品 '%ls' 的提供者或任何屬性。  |
 |   15429   |   16  |   否  |   '%ls' 為無效的產品名稱。   |
-|   15431   |   16  |   否  |   您必須指定 @rolename 參數。   |
+|   15431   |   16  |   否  |   您必須指定 \@rolename 參數。  |
 |   15432   |   16  |   否  |   只能在特定層級執行預存程序 '%s'。 |
 |   15433   |   16  |   否  |   提供的參數 sid 正在使用中。   |
 |   15434   |   16  |   否  |   無法卸除目前使用者已登入的登入 '%s'。   |
@@ -6405,7 +6405,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-16000-to-17999"></a>錯誤 16,000 到 17,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   16901   |   16  |   否  |   %hs: 這個功能尚未實作。 |
 |   16902   |   16  |   否  |   %ls: 參數 %ls 的值無效。 |
@@ -6660,7 +6660,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-18000-to-18999"></a>錯誤 18,000 到 18,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   18002   |   20  |   是 |   執行程式庫'%.* ls' 中的擴充預存程序 '%.*ls' 時發生例外狀況。 SQL Server 正在終止處理 %d。 例外狀況類型: %ls; 例外狀況代碼: 0x%lx。 |
 |   18052   |   16  |   否  |   錯誤: %d，嚴重性: %d，狀態: %d。 |
@@ -6819,8 +6819,8 @@ ms.locfileid: "37316598"
 |   18776   |   16  |   否  |   在等候發行項快取存取事件時發生錯誤。  |
 |   18777   |   16  |   否  |   %s: 初始化 MSMQ 元件時發生錯誤  |
 |   18778   |   16  |   否  |   %s: 在開啟 Microsoft Message Queue %s 時發生錯誤    |
-|   18780   |   16  |   否  |   您已指定 @dts_package_password 參數的值。 您也必須指定 @dts_package_name 參數的值。  |
-|   18781   |   16  |   否  |   為 @backupdevicetype 參數指定的值無效。 值必須是 'logical'、'disk' 或 'tape'。   |
+|   18780   |   16  |   否  |   您已指定 \@dts_package_password 參數的值。 您也必須指定 \@dts_package_name 參數的值。    |
+|   18781   |   16  |   否  |   為 \@backupdevicetype 參數指定的值無效。 值必須是 'logical'、'disk' 或 'tape'。  |
 |   18782   |   16  |   否  |   在指定的備份裝置中找不到資料庫 '%s' 的備份標頭資訊。 請指定包含發行者資料庫備份的備份裝置。  |
 |   18783   |   16  |   否  |   因為快照集資料夾目錄路徑太長，所以訂閱安裝指令碼路徑已遭到截斷。 請重新設定散發者，讓此發行者使用較短的路徑，然後重試這項作業。  |
 |   18784   |   16  |   否  |   複寫所產生的替代快照集資料夾路徑已遭到截斷。 請重新設定發行集，以使用較短的替代快照集資料夾路徑，然後重試這項作業。  |
@@ -6881,7 +6881,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-19000-to-20999"></a>錯誤 19,000 到 20,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   19030   |   10  |   是 |   SQL 追蹤識別碼 %d 已由 "%s" 登入啟動。  |
 |   19031   |   10  |   是 |   已停止 SQL 追蹤。 追蹤識別碼 = '%d'。 登入名稱 = '%s'。  |
@@ -6971,7 +6971,7 @@ ms.locfileid: "37316598"
 |   20003   |   10  |   否  |   無法產生 '%s' 的暱稱。   |
 |   20004   |   10  |   否  |   發行集 '%s' 包含下列屬性: '%s'。 SQL Server 訂閱者版本若低於 '%s'，將會忽略此設定。  |
 |   20005   |   18  |   否  |   %ls: 無法轉換參數 %ls: 產生的 colv 會有太多項目。  |
-|   20006   |   16  |   否  |   由於發行項可能在有匿名或客訂閱的發行集中，因此無法進行變更。 請將 @force_reinit_subscription 設定為 1，以確認這種訂閱將會重新初始化。 |
+|   20006   |   16  |   否  |   由於發行項可能在有匿名或客訂閱的發行集中，因此無法進行變更。 請將 \@force_reinit_subscription 設定為 1，以確認這種訂閱將會重新初始化。    |
 |   20007   |   16  |   否  |   合併式複寫的系統資料表無法成功地卸除。  |
 |   20008   |   16  |   否  |   合併式複寫的系統資料表無法成功地建立。  |
 |   20009   |   16  |   否  |   發行項 '%s' 無法加入到發行集 '%s' 中。    |
@@ -6979,16 +6979,16 @@ ms.locfileid: "37316598"
 |   20011   |   16  |   否  |   無法設定不相容的發行集屬性。 發行集的 'allow_anonymous' 屬性和 'immediate_sync' 屬性相依。   |
 |   20012   |   16  |   否  |   發行集 '%s' 中不允許訂閱類型 '%s'。  |
 |   20013   |   16  |   否  |   當發行集有訂閱時，無法變更發行集屬性 '%s'。 |
-|   20014   |   16  |   否  |   @schema_option 值無效。   |
+|   20014   |   16  |   否  |   無效的 \@schema_option 值。  |
 |   20015   |   16  |   否  |   無法移除目錄 '%ls'。 請檢查 xp_cmdshell 的安全性內容，並關閉可能存取這個目錄的其他處理序。  |
-|   20016   |   16  |   否  |   @subscription_type 值無效。 有效的值為 'pull' 或 'anonymous'。   |
+|   20016   |   16  |   否  |   無效的 \@subscription_type 值。 有效的值為 'pull' 或 'anonymous'。  |
 |   20017   |   16  |   否  |   訂閱者上沒有訂閱。  |
-|   20018   |   16  |   否  |   @optional_command_line 太長。 請使用代理程式定義檔。   |
+|   20018   |   16  |   否  |   \@optional_command_line 太長。 請使用代理程式定義檔。  |
 |   20019   |   16  |   否  |   除非資料庫為發行或散發資料庫，否則無法設定複寫資料庫選項 '%s'。 |
 |   20020   |   16  |   否  |   提供的發行項解析程式無效或不存在。 |
 |   20021   |   16  |   否  |   找不到訂閱。    |
 |   20022   |   16  |   否  |   此發行項現在設定成停用上傳，且 compensate_for_errors=true。 不過，本機與匿名訂閱者將表現為 compensate_for_errors=false。    |
-|   20023   |   16  |   否  |   @subscriber_type 值無效。 有效的選項為 'local'、'global' 或 'anonymous'。    |
+|   20023   |   16  |   否  |   無效的 \@subscriber_type 值。 有效的選項為 'local'、'global' 或 'anonymous'。   |
 |   20024   |   16  |   否  |   alt_snapshot_folder 不可與工作目錄相同。    |
 |   20025   |   16  |   否  |   發行集的名稱必須唯一。 已經使用指定的發行集名稱 '%s'。 |
 |   20026   |   16  |   否  |   發行集 '%s' 不存在。    |
@@ -7015,14 +7015,14 @@ ms.locfileid: "37316598"
 |   20049   |   16  |   否  |   優先權值不得大於 100.0。 |
 |   20050   |   16  |   否  |   保留週期必須大於或等於 0，而且不得擴充超過 9999 年 12 月 31 日。 |
 |   20051   |   16  |   否  |   未註冊訂閱者。   |
-|   20052   |   16  |   否  |   @metatype 參數值必須是 Null、1、2、5 或 6。  |
+|   20052   |   16  |   否  |   \@metatype 參數值必須是 Null、1、2、5 或 6。 |
 |   20053   |   16  |   否  |   具有不同 %s 值的發行項已經存在於物件 '%s'。    |
 |   20054   |   16  |   否  |   目前的資料庫並未啟用以供發行。 |
 |   20055   |   16  |   否  |   資料表 '%s' 無法發行以供合併式複寫，因為它有一個時間戳記資料行。 |
 |   20056   |   16  |   否  |   資料表 '%s' 無法重新發行。   |
 |   20057   |   16  |   否  |   設定檔名稱 '%s' 已經存在於指定的代理程式類型。  |
-|   20058   |   16  |   否  |   @agent_type 必須是 1 (快照集)、2 (記錄讀取器)、3 (散發) 或 4 (合併) |
-|   20059   |   16  |   否  |   @profile_type 必須是 0 (系統) 或 1 (自訂)  |
+|   20058   |   16  |   否  |   \@agent_type 必須是 1 (快照集)、2 (記錄讀取器)、3 (散發) 或 4 (合併)    |
+|   20059   |   16  |   否  |   \@profile_type 必須是 0 (系統) 或 1 (自訂) |
 |   20060   |   16  |   否  |   相容性層級不得小於 60。  |
 |   20061   |   16  |   否  |   這個資料庫的相容性層級必須設定為 70 或更高層級，才能啟用以供合併發行。    |
 |   20062   |   16  |   否  |   不允許使用 rowguidcol 屬性來更新資料行。   |
@@ -7038,10 +7038,10 @@ ms.locfileid: "37316598"
 |   20073   |   16  |   否  |   只能在簽發者端加入或變更發行項。 |
 |   20074   |   16  |   否  |   只有資料表物件可以發行成合併式複寫的 "table" 發行項。    |
 |   20075   |   16  |   否  |   'status' 參數值必須是 'active' 或 'unsynced'。 |
-|   20076   |   16  |   否  |   @sync_mode 參數值必須是 'native' 或 'character'。 |
+|   20076   |   16  |   否  |   \@sync_mode 參數值必須是 'native' 或 'character'。    |
 |   20077   |   16  |   否  |   產生複寫暱稱時發現問題。    |
-|   20078   |   16  |   否  |   @property 參數值必須是下列其中之一: 'sync_type'、 'priority'、'description'、'subscriber_security_mode'、'subscriber_login'、'subscriber_password'、'publisher_security_mode'、'publisher_login'、'publisher_password'、'merge_job_login' 或 'merge_job_password'。  |
-|   20079   |   16  |   否  |   無效的 @subscription_type 參數值。 有效的選項為 'push'、'pull' 或 'both'。    |
+|   20078   |   16  |   否  |   \@property 參數值必須是下列其中之一: 'sync_type', 'priority'、'description'、'subscriber_security_mode'、'subscriber_login'、'subscriber_password'、'publisher_security_mode'、'publisher_login'、'publisher_password'、'merge_job_login' 或 'merge_job_password'。 |
+|   20079   |   16  |   否  |   無效的 \@subscription_type 參數值。 有效的選項為 'push'、'pull' 或 'both'。   |
 |   20081   |   16  |   否  |   發行集屬性 '%s' 不得為 NULL。   |
 |   20084   |   16  |   否  |   發行集 '%s' 無法由訂閱者資料庫 '%s' 訂閱。   |
 |   20086   |   16  |   否  |   發行集 '%s' 不支援 nosync 類型，因為它包含了一個沒有 rowguidcol 資料行的資料表。   |
@@ -7066,7 +7066,7 @@ ms.locfileid: "37316598"
 |   20510   |   16  |   否  |   可更新的訂閱: 無法更新識別欄位。   |
 |   20511   |   16  |   否  |   可更新的訂閱: 無法更新時間戳記資料行。  |
 |   20512   |   16  |   否  |   可更新的訂閱: 正在回復交易。 |
-|   20513   |   16  |   否  |   如果是 ROWGUIDCOL 符合 sp_showrowreplicainfo 的 @rowguid 參數指定值的資料列，資料庫 '%s' 中不包含該資料列的任何複寫中繼資料。 請確認為 @rowguid 參數指定的值是否正確。  |
+|   20513   |   16  |   否  |   如果是 ROWGUIDCOL 符合 sp_showrowreplicainfo 的 \@rowguid 參數指定值的資料列，資料庫 '%s' 中不包含該資料列的任何複寫中繼資料。 請確認為 \@rowguid 參數指定的值是否正確。    |
 |   20514   |   10  |   否  |   已針對發行集 %s 的發行項 %s，將資料列計數驗證要求提交給異質性簽發者 %s。 驗證結果將公佈於散發記錄中。 |
 |   20515   |   16  |   否  |   可更新的訂閱: 在簽發者和訂閱者之間的資料列不符。 請執行散發代理程式來重新整理訂閱者端的資料列。 |
 |   20516   |   16  |   否  |   可更新的訂閱: 無法更新複寫的資料。 |
@@ -7095,7 +7095,7 @@ ms.locfileid: "37316598"
 |   20540   |   10  |   否  |   複寫: 代理程式成功  |
 |   20541   |   10  |   否  |   從散發資料庫移除複寫的交易。 |
 |   20542   |   10  |   否  |   從發行的資料庫偵測並移除逾期的訂閱。 |
-|   20543   |   10  |   否  |   @rowcount_only 參數的值必須為 0、1 或 2。 0=與 7.0 版相容的總和檢查碼。 1=僅檢查資料列計數。 2=8.0 版新推出的總和檢查碼功能。    |
+|   20543   |   10  |   否  |   \@rowcount_only 參數的值必須為 0、1 或 2。 0=與 7.0 版相容的總和檢查碼。 1=僅檢查資料列計數。 2=8.0 版新推出的總和檢查碼功能。   |
 |   20545   |   10  |   否  |   預設代理程式設定檔   |
 |   20546   |   10  |   否  |   詳細資訊記錄代理程式設定檔。  |
 |   20547   |   10  |   否  |   用於詳細記錄的代理程式設定檔。 |
@@ -7155,8 +7155,8 @@ ms.locfileid: "37316598"
 |   20604   |   10  |   否  |   您沒有執行發送訂閱代理程式的權限。 請確定您有指定代理程式參數 'SubscriptionType'。    |
 |   20605   |   10  |   否  |   發行集現有的快照集已經無效。 請再執行一次快照集代理程式以產生新的快照集。  |
 |   20606   |   10  |   否  |   已重新初始化訂閱。  |
-|   20607   |   10  |   否  |   無法進行變更，因為快照集已經產生。 請將@force_invalidate_snapshot 設定為 1 來強制變更並使現有的快照集變為無效。   |
-|   20608   |   10  |   否  |   由於仍有使用中的訂閱，所以無法進行變更。 請將 @force_reinit_subscription 設定為 1，以強制執行變更並重新初始化使用中的訂閱。   |
+|   20607   |   10  |   否  |   無法進行變更，因為快照集已經產生。 請將 \@force_invalidate_snapshot 設定為 1 來強制變更並使現有的快照集變為無效。  |
+|   20608   |   10  |   否  |   由於仍有使用中的訂閱，所以無法進行變更。 請將 \@force_reinit_subscription 設定為 1，以強制執行變更並重新初始化使用中的訂閱。  |
 |   20609   |   16  |   否  |   無法附加訂閱檔案 '%s'。 請確定它是一個有效的訂閱副本檔案。  |
 |   20610   |   16  |   否  |   當記錄讀取器代理程式正在複寫資料庫時，您無法執行 '%s'。  |
 |   20611   |   16  |   否  |   無法加入發行項。 對於允許使用 Data Transformation Services (DTS) 的可轉換訂閱的發行集，只能包含資料表或以資料表形式發行的索引檢視。 |
@@ -7172,56 +7172,56 @@ ms.locfileid: "37316598"
 |   20621   |   11  |   否  |   無法將訂閱資料庫複製到現有資料庫。    |
 |   20622   |   11  |   否  |   由於資料庫處於簡單復原模式，所以無法在發行資料庫上設定複寫資料庫選項 'sync with backup'。    |
 |   20623   |   11  |   否  |   除非您對資料表 '%s' 擁有 'SELECT ALL' 權限，否則無法驗證發行項 '%s'。 |
-|   20624   |   16  |   否  |   為 @login 參數指定的值無效。 使用者 '%s' 不是資料庫 '%s' 中的使用者。 請先將該使用者帳戶加入到資料庫，再嘗試執行預存程序 sp_grant_publication_access 或 sp_revoke_publication_access。   |
+|   20624   |   16  |   否  |   為 \@login 參數指定的值無效。 使用者 '%s' 不是資料庫 '%s' 中的使用者。 請先將該使用者帳戶加入到資料庫，再嘗試執行預存程序 sp_grant_publication_access 或 sp_revoke_publication_access。  |
 |   20625   |   16  |   否  |   無法為發行集 '%s' 建立合併式複寫發行集存取清單 (PAL) 資料庫角色。 此角色是供複寫用來控制發行集的存取權。 請確認您有足夠的權限可以在發行集資料庫中建立角色。   |
-|   20626   |   16  |   否  |   篩選 '%s' 已經存在於發行集 '%s' 中。 請為 sp_addmergefilter 的 @filtername 參數指定唯一的名稱。   |
+|   20626   |   16  |   否  |   篩選 '%s' 已經存在於發行集 '%s' 中。 請為 sp_addmergefilter 的 \@filtername 參數指定唯一的名稱。  |
 |   20627   |   16  |   否  |   資料分割識別碼必須大於或等於 0。  |
 |   20628   |   16  |   否  |   無法產生動態快照集。    |
 |   20629   |   16  |   否  |   無法取得資料分割識別碼資訊。 |
-|   20630   |   16  |   否  |   無法建立資料分割快照集作業。 發行集 '%ls'' 中已經有作業使用您為 sp_adddynamicsnapshot_job 的 @suser_sname 及/或 @host_name 參數指定的值。 如果已經存在的作業無法正常運作，請使用 sp_dropdynamicsnapshot_job 卸除該作業，再使用 sp_adddynamicsnapshot_job 建立新作業。  |
+|   20630   |   16  |   否  |   無法建立資料分割快照集作業。 發行集 '%ls'' 中已經有作業使用您為 sp_adddynamicsnapshot_job 的 \@suser_sname 及/或 \@host_name 參數指定的值。 如果已經存在的作業無法正常運作，請使用 sp_dropdynamicsnapshot_job 卸除該作業，再使用 sp_adddynamicsnapshot_job 建立新作業。    |
 |   20631   |   16  |   否  |   找不到可在其中產生資料分割快照集的位置。 請確認已為發行集指定有效的快照集資料夾。 這可以是與散發者相關聯的預設資料夾，或是與發行集相關聯的替代資料夾。  |
 |   20632   |   16  |   否  |   無法建立動態快照集作業以產生動態快照集。   |
 |   20633   |   16  |   否  |   無法啟動資料分割快照集作業。 請確認 SQL Server Agent 正於散發者上執行。  |
 |   20634   |   16  |   否  |   在重新簽發者上找不到根發行集資訊。 |
 |   20635   |   16  |   否  |   找到 '%ls' 的發送訂閱。 無法加入發送訂閱的提取訂閱代理程式。   |
 |   20636   |   16  |   否  |   無法為發行項 '%s' 產生合併式複寫預存程序。 當快照集代理程式執行時，或在執行資料定義語言動作時，會在簽發者上產生預存程序；而當合併代理程式套用快照集時，則會在訂閱者上產生預存程序。 請確認代理程式有適當的權限可以建立程序，而且程序目前不存在。   |
-|   20637   |   10  |   否  |   在 sp_addmergearticle 的 @processing_order 參數中指定的發行項順序，並不代表發行資料表上主索引鍵與外部索引鍵之間的關係。 發行項 '%s' 參考的一個或多個發行項將在它建立之後建立。 請使用 sp_changemergearticle 變更 processing_order 屬性。  |
-|   20638   |   10  |   否  |   合併資料表發行項不支援 sp_addmergearticle 的 @source_object 值與 @destination_object 值不相同。 請不要為 @destination_object 指定值，或是請為兩個參數指定相同的值。 |
+|   20637   |   10  |   否  |   在 sp_addmergearticle 的 \@processing_order 參數中指定的發行項順序，並不代表發行資料表上主索引鍵與外部索引鍵之間的關係。 發行項 '%s' 參考的一個或多個發行項將在它建立之後建立。 請使用 sp_changemergearticle 變更 processing_order 屬性。 |
+|   20638   |   10  |   否  |   合併資料表發行項不支援 sp_addmergearticle 的 \@source_object 值與 \@destination_object 值不相同。 請不要為 \@destination_object 指定值，或是請為兩個參數指定相同的值。  |
 |   20639   |   16  |   否  |   無法將發行集啟用為支援非 SQL Server 訂閱，因為發行集已啟用可更新的訂閱。 若要支援非 SQL Server 訂閱，請卸除現有發行集，再建立屬性 allow_sync_tran 和 allow_queued_tran 設定為 'false' 的新發行集。 |
 |   20640   |   16  |   否  |   當發行集有訂閱時無法變更啟用異質性訂閱屬性。    |
 |   20641   |   16  |   否  |   無法檢查 subset_filterclause 中是否擁有動態函數。    |
-|   20642   |   16  |   否  |   無法將在 subset_filterclause '%s' 中具有一個或多個動態函數的發行項 '%s' 加入發行集 '%s'，因為此發行集可能有使用中的訂閱。 請將 @force_reinit_subscription 設定為 1 以加入該發行項，並重新初始化所有使用中的訂閱。   |
-|   20643   |   16  |   否  |   無法變更發行集 '%s' 的 validate_subscriber_info 值，因為此發行集有使用中的訂閱。 請將 @force_reinit_subscription 設定為 1 以變更值，並重新初始化所有使用中的訂閱。   |
-|   20644   |   16  |   否  |   指定給 @identityrangemangementoption 參數的 "%s" 值無效。 有效的值為 "auto"、"manual" 或 "none"。 |
+|   20642   |   16  |   否  |   無法將在 subset_filterclause '%s' 中具有一個或多個動態函數的發行項 '%s' 加入發行集 '%s'，因為此發行集可能有使用中的訂閱。 請將 \@force_reinit_subscription 設定為 1 以加入該發行項，並重新初始化所有使用中的訂閱。  |
+|   20643   |   16  |   否  |   無法變更發行集 '%s' 的 validate_subscriber_info 值，因為此發行集有使用中的訂閱。 請將 \@force_reinit_subscription 設定為 1 以變更值，並重新初始化所有使用中的訂閱。  |
+|   20644   |   16  |   否  |   為參數 \@identityrangemangementoption 指定的值 "%s" 無效。 有效的值為 "auto"、"manual" 或 "none"。    |
 |   20645   |   16  |   否  |   對於已啟用非 SQL Server 訂閱的發行集，無法修改其屬性 "%s"。    |
 |   20646   |   16  |   否  |   點對點發行集不支援 %s。 請變更參數 '%s' 的值。   |
 |   20647   |   16  |   否  |   無法修改屬性 '%s'。 此發行集是用於點對點拓撲中，而這種拓撲不允許在建立發行集後修改此屬性。    |
-|   20648   |   16  |   否  |   資料表 "%s" 已經有一個 @delete_tracking 屬性具有不同值的發行項。 在發行資料表的所有發行集中，此屬性值必須相同。 請使用預存程序 sp_helpmergearticle 和 sp_changemergearticle 檢視和修改其他發行項中的屬性。    |
+|   20648   |   16  |   否  |   資料表 "%s" 已經有一個 \@delete_tracking 屬性具有不同值的發行項。 在發行資料表的所有發行集中，此屬性值必須相同。 請使用預存程序 sp_helpmergearticle 和 sp_changemergearticle 檢視和修改其他發行項中的屬性。   |
 |   20649   |   16  |   否  |   啟用異質性訂閱的發行集不支援 %s。 請變更 '%s' 參數值。 |
-|   20650   |   16  |   否  |   無法為發行集 "%s" 啟用資料定義語言 (DDL) 複寫 (@replicate_ddl 參數的值為 "true")。 因為發行集的相容性層級低於 90RTM。 對於新的發行集，請在預存程序 sp_addmergepublication 中，將 @publication_compatibility_level 參數設定為 90RTM；對於現有的發行集，請使用 sp_changemergepublication。    |
+|   20650   |   16  |   否  |   無法為發行集 "%s" 啟用資料定義語言 (DDL) 複寫 (\@replicate_ddl 參數的值為 "true")。 因為發行集的相容性層級低於 90RTM。 對於新的發行集，請在預存程序 sp_addmergepublication 中，將 \@publication_compatibility_level 參數設定為 90RTM；對於現有的發行集，請使用 sp_changemergepublication。  |
 |   20651   |   16  |   否  |   發行集 "%s" "%s"。 因此無法將發行集的相容性層級設定為低於 %d。 若要設定較低的相容性層級，請停用此功能，然後呼叫預存程序 sp_changemergepublication 以降低相容性層級。    |
 |   20652   |   16  |   否  |   在 sysmergeschemachange 系統資料表中，找不到發行集 '%s' 的必要中繼資料。 請重新執行快照集代理程式。   |
 |   20653   |   16  |   否  |   不可有 dynamic_filter_login 與 dynamic_filter_hostname 同時為 NULL 的動態快照集作業。   |
 |   20654   |   16  |   否  |   動態快照集只對合併式發行集有效。    |
 |   20655   |   16  |   否  |   無法完成資料分割快照集處理。 無法從散發資料庫的 MSsnapshot_history 資料表中擷取最大時間戳記資訊。 請確定標準快照集處於最新狀態，而且可供使用。    |
-|   20656   |   16  |   否  |   @subset_filterclause 參數不可參考計算資料行。  |
-|   20657   |   16  |   否  |   @pub_identity_range 參數的值應該是識別欄位增量的倍數。 資料表 "%s" 與識別欄位 "%s" 的增量是 %s。   |
-|   20658   |   16  |   否  |   @identity_range 參數的值應該是識別欄位增量的倍數。 資料表 "%s" 與識別欄位 "%s" 的增量是 %s。   |
+|   20656   |   16  |   否  |   \@subset_filterclause 參數不可參考計算資料行。 |
+|   20657   |   16  |   否  |   \@pub_identity_range 參數的值應該是識別欄位增量的倍數。 資料表 "%s" 與識別欄位 "%s" 的增量是 %s。  |
+|   20658   |   16  |   否  |   \@identity_range 參數的值應該是識別欄位增量的倍數。 資料表 "%s" 與識別欄位 "%s" 的增量是 %s。  |
 |   20659   |   11  |   否  |   IDENT_CURRENT ("%s") 的值大於 MSmerge_identity_range 系統資料表中 max_used 資料行的值。  |
-|   20660   |   16  |   否  |   重新簽發者從其簽發者得到的重新發行範圍不夠大，無法配置指定的 @pub_identity_range。 |
-|   20661   |   16  |   否  |   重新簽發者從其簽發者得到的重新發行範圍不夠大，無法配置指定的 @identity_range。 |
+|   20660   |   16  |   否  |   重新發行者從其發行者得到的重新發行範圍不夠大，以致於無法配置指定的 \@pub_identity_range。    |
+|   20661   |   16  |   否  |   重新發行者從其發行者得到的重新發行範圍不夠大，以致於無法配置指定的 \@identity_range。    |
 |   20662   |   16  |   否  |   重新簽發者沒有來自根簽發者 '%s' 的識別值範圍可以指派給訂閱者。 請確定重新簽發者對位於根簽發者的發行集擁有主訂閱，然後執行合併代理程式以便與根簽發者同步。   |
-|   20663   |   16  |   否  |   在系統資料表 MSmerge_identity_range 中找不到簽發者的識別範圍配置項目。 請確認 @identityrangemanagementoption 屬性的值為 "auto"。   |
+|   20663   |   16  |   否  |   在系統資料表 MSmerge_identity_range 中找不到簽發者的識別範圍配置項目。 請確定 \@identityrangemanagementoption 屬性的值已設定為 "auto"。  |
 |   20664   |   16  |   否  |   因為識別欄位的資料類型值全部都已使用過，所以無法為簽發者指定新的識別值範圍。 請變更識別欄位中的資料類型。    |
 |   20665   |   16  |   否  |   重新簽發者沒有來自根簽發者的識別值範圍可以指派給訂閱者。 請執行合併代理程式以便與根簽發者同步。 |
 |   20666   |   16  |   否  |   無法重新整理簽發者上的識別範圍及/或檢查條件約束。 請確定以下幾點: 識別欄位的值未超過識別欄位中資料類型的最大值；而且最後執行插入的使用者有權限可卸除檢查條件約束，然後再重新建立。 |
 |   20667   |   16  |   否  |   無法為發行項 "%s" 配置識別範圍。 此發行項未啟用自動識別範圍管理。 |
 |   20668   |   16  |   否  |   可用的範圍不夠大，無法為訂閱者配置新的範圍。    |
-|   20669   |   16  |   否  |   找不到由給定的 @article 或 @artid '%s'所參考的物件。  |
+|   20669   |   16  |   否  |   找不到由給定的 \@article 或 \@artid '%s' 所參考的物件。    |
 |   20670   |   16  |   否  |   無法加入、卸除或更改資料表 %s 的識別範圍檢查條件約束。 此條件約束是供複寫用來進行自動識別範圍管理。 通常如果最後對資料表執行插入的使用者沒有權限可變更資料表的結構描述，就會發生此錯誤。 如果此錯誤發生於簽發者，請執行 sp_adjustpublisheridentityrange；如果發生於訂閱者，請執行合併代理程式。   |
 |   20671   |   16  |   否  |   在 MSmerge_identity_range 資料表中找不到訂閱者的識別範圍配置項目。 重新初始化這項訂閱。  |
-|   20672   |   16  |   否  |   已指定參數 @host_name 的值，但發行集中沒有發行項使用 HOST_NAME() 進行參數化篩選。 |
-|   20673   |   16  |   否  |   已指定參數 @host_name 的值，但發行集中沒有發行項使用 SUSER_SNAME() 進行參數化篩選。   |
+|   20672   |   16  |   否  |   已指定參數 \@host_name 的值，但發行集中沒有發行項使用 HOST_NAME() 進行參數化篩選。    |
+|   20673   |   16  |   否  |   已指定參數 \@host_name 的值，但發行集中沒有發行項使用 SUSER_SNAME() 進行參數化篩選。  |
 |   20674   |   16  |   否  |   發行集並不使用動態篩選。 |
 |   20675   |   16  |   否  |   識別範圍的值不可以是 NULL。   |
 |   20676   |   11  |   否  |   無法重新整理發行項 "%s" 的簽發者識別範圍。 請執行預存程序 sp_adjustpublisheridentityrange 以重新整理識別範圍。   |
@@ -7229,11 +7229,11 @@ ms.locfileid: "37316598"
 |   20678   |   11  |   否  |   找不到指定之發行集 '%s' 的一般快照集作業。 |
 |   20679   |   11  |   否  |   無法對目前資料庫執行預存程序 sp_adjustpublisheridentityrange，因為此資料庫是重新簽發者或訂閱者。 若要調整重新簽發者端或訂閱者端的識別範圍，請與根簽發者同步。  |
 |   20680   |   16  |   否  |   無法取得某一批次資料列的中繼資料。 |
-|   20681   |   10  |   否  |   無法為參數 @partition_options 指定 1、2 或 3 的值，因為發行集 "%s" 的相容性層級低於 90RTM。 請使用預存程序 sp_changemergepublication 將 publication_compatibility_level 設定為 90RTM。  |
+|   20681   |   10  |   否  |   無法為參數 \@partition_options 指定 1、2 或 3 的值，因為發行集 "%s" 的相容性層級低於 90RTM。 請使用預存程序 sp_changemergepublication 將 publication_compatibility_level 設定為 90RTM。 |
 |   20682   |   10  |   否  |   在資料表 %s 上嘗試批次刪除時，刪除資料列失敗。  |
 |   20683   |   16  |   否  |   在僅供下載的發行項 %s 上的批次刪除失敗。    |
 |   20684   |   16  |   否  |   在資料表 %s 上嘗試刪除批次時，刪除了超過預期的資料列。 請停止合併代理程式後再重新啟動。    |
-|   20685   |   16  |   否  |   無法卸除篩選 '%s'。 找不到為 @filtername 參數指定的篩選。   |
+|   20685   |   16  |   否  |   無法卸除篩選 '%s'。 找不到為 \@filtername 參數指定的篩選。  |
 |   20686   |   16  |   否  |   當此程序是從 '%s' 資料庫中執行時，參數 '%s' 不可以是 NULL 或空的。 |
 |   20687   |   16  |   否  |   當此程序不是從 '%s' 資料庫中執行時，參數 '%s' 必須是 NULL。  |
 |   20688   |   16  |   否  |   找不到簽發者 %s，資料庫 %s，發行集 %s 的追蹤 Token 識別碼 (%d)。 請使用預存程序 sp_helptracertokens 擷取有效的追蹤 Token 識別碼清單。   |
@@ -7245,14 +7245,14 @@ ms.locfileid: "37316598"
 |   20694   |   16  |   否  |   資料表 %s 要更新的一個或多個資料列中包含用在一個或多個篩選中的資料行 %s 的變更； 此處不必採取任何動作，但如果這種狀況經常發生，請確認資料是以最理想的方式進行資料分割。 批次更新可以改善合併式複寫的效能。 |
 |   20695   |   16  |   否  |   在資料表 %s 的批次更新程序中，只更新了 %ld 個資料列中的 %ld 個資料列；其他資料列因為已刪除，所以無法更新。 此處不必採取任何動作，但如果這種狀況經常發生，請確認是否能避免更新-刪除衝突。 批次更新有助於效能。  |
 |   20696   |   16  |   否  |   物件 %s 標示為 Microsoft 隨附的 (ms_shipped)。 不能將它當做合併式複寫的發行項來加入。   |
-|   20697   |   16  |   否  |   無法從發行集 %s 中卸除發行項 %s。 在這個發行集中，這是唯一使用參數化篩選的發行項。 卸除此發行項會將發行集變成靜態發行集，導致必須重新初始化所有訂閱者。 若要卸除發行項，並重新初始化所有使用中的訂閱，請指定 sp_dropmergepublication 的 @force_reinit_subscription 參數值為 1。 |
-|   20698   |   16  |   否  |   未指定參數 @host_name 的值，但發行集使用 HOST_NAME() 來進行動態篩選。    |
-|   20699   |   16  |   否  |   未指定參數 @suser_sname 的值，但發行集使用 SUSER_SNAME() 來進行動態篩選。    |
+|   20697   |   16  |   否  |   無法從發行集 %s 中卸除發行項 %s。 在這個發行集中，這是唯一使用參數化篩選的發行項。 卸除此發行項會將發行集變成靜態發行集，導致必須重新初始化所有訂閱者。 若要卸除發行項，並重新初始化所有使用中的訂閱，請指定 sp_dropmergepublication 的 \@force_reinit_subscription 參數值為 1。    |
+|   20698   |   16  |   否  |   未指定參數 \@host_name 的值，但發行集使用 HOST_NAME() 來進行動態篩選。   |
+|   20699   |   16  |   否  |   未指定參數 \@suser_sname 的值，但發行集使用 SUSER_SNAME() 來進行動態篩選。   |
 |   20701   |   16  |   否  |   無法變更散發者上的動態快照集作業排程。  |
 |   20702   |   16  |   否  |   由於一個或多個錯誤，因此無法變更動態快照集作業排程。   |
 |   20703   |   16  |   否  |   資料表 '%s' 中插入的一個或多個資料列超過資料分割的範圍，而在發行資料表時將 'partition_options' 設定為 %d。 |
 |   20704   |   16  |   否  |   資料表 '%s' 之識別資料行的資料類型是 tinyint。 tinyint 沒有足夠的數字可用於合併自動識別範圍。 請將識別欄位變更為具有較大的資料類型，並使用合併自動識別範圍管理來加入合併發行項。   |
-|   20705   |   10  |   否  |   因為發行集 '%s' 的相容性層級低於 90，無法將 @conflict_logging 設定為 'both'。 請於建立發行集時將 @publication_compatibility_level 設定為 '90RTM'，或者透過 sp_changemergepublication 將 publication_compatibility_level 設定為 '90RTM'。  |
+|   20705   |   10  |   否  |   因為發行集 '%s' 的相容性層級低於 90，無法將 \@conflict_logging 設定為 'both'。 請於建立發行集時將 \@publication_compatibility_level 設定為 '90RTM'，或者透過 sp_changemergepublication 將 publication_compatibility_level 設定為 '90RTM'。    |
 |   20706   |   10  |   否  |   給定發行項找不到識別欄位可允許的最大或最小識別數字。   |
 |   20707   |   10  |   否  |   發行 identityrangemanagementoption 設定為 'auto' 的發行項時，產生一個或多個錯誤導致發行失敗。   |
 |   20708   |   10  |   否  |   發行項包含自訂商務邏輯解析程式時，不允許為邏輯記錄的一部分。  |
@@ -7269,15 +7269,15 @@ ms.locfileid: "37316598"
 |   20719   |   16  |   否  |   sp_changemergelogsettings 無法更新記錄檔設定。 請檢查參數值。    |
 |   20720   |   16  |   否  |   訂閱者伺服器 '%s'、訂閱者資料庫 '%s'、Webserver '%s' 的記錄檔設定不存在。   |
 |   20721   |   16  |   否  |   sp_dropmergelogsettings 無法移除記錄檔設定。  |
-|   20722   |   16  |   否  |   '%s' 失敗。 參數 '%s' 的值無效。 有效值為 @support_options [0 - 5]、@log_severity [1 - 4]、@log_file_size [2,000,000 - 999,000,000], @no_of_log_files [2 - 500]、@upload_interval [0 - 40320]、@delete_after_upload [0 - 1]。 |
+|   20722   |   16  |   否  |   '%s' 失敗。 參數 '%s' 的值無效。 有效的值為 \@support_options [0 - 5]、\@log_severity [1 - 4]、\@log_file_size [2,000,000 - 999,000,000]、\@no_of_log_files [2 - 500]、\@upload_interval [0 - 40320]、\@delete_after_upload [0 - 1]。   |
 |   20723   |   16  |   否  |   計算資料行 "%s" 只有在加入其相依的物件 "%s" 之後才可以加入至發行集。 |
 |   20724   |   16  |   否  |   找不到發行集 '%s' 具有 job_id '%s' 的動態快照集作業的有效命令列。 |
 |   20725   |   16  |   否  |   無法更新發行集 '%s' 中，具有 job_id '%s' 的動態快照集作業的動態快照集位置。   |
 |   20726   |   16  |   否  |   在給定發行集的一或多項動態快照集作業中，無法變更動態快照集位置。  |
-|   20727   |   16  |   否  |   為參數 @subscription_type 指定了無效的值。 有效的值是 'push'、'pull'、'both'、'anonymous' 或 'all'。 |
+|   20727   |   16  |   否  |   為參數 \@subscription_type 指定了無效的值。 有效的值是 'push'、'pull'、'both'、'anonymous' 或 'all'。    |
 |   20728   |   16  |   否  |   無法還原發行集 '%s' 中發行項 '%s' 的最大配置的識別值。    |
 |   20729   |   16  |   否  |   在散發者上找不到發行集 '%s' 中發行項 '%s' 的最大識別值配置。   |
-|   20730   |   16  |   否  |   發行集的 publication_compatibility_level 必須為 '80RTM' 或更高，才能將 @upload_first 設定為 'true'。 如果您想要使用此功能，請使用 sp_changemergepublication 來將 publication_compatibility_level 設定為 '80RTM' 或更高。  |
+|   20730   |   16  |   否  |   發行集的 publication_compatibility_level 必須為 '80RTM' 或更高，才能設定 \@upload_first 為 'true'。 如果您想要使用此功能，請使用 sp_changemergepublication 來將 publication_compatibility_level 設定為 '80RTM' 或更高。 |
 |   20731   |   16  |   否  |   此版本的 SQL Server 不支援發行集。 即將卸除現有發行集。   |
 |   20732   |   10  |   否  |   警告: 在 'schema_option' 屬性中指定的部分旗標值，與發行集的相容性層級不相容。 將改用 '%s' 已修改的 schema_option 值。    |
 |   20733   |   16  |   否  |   資料表 '%s' 中更新的一個或多個資料列超過資料分割的範圍，而在發行資料表時將 'partition_options' 設定為 %d。  |
@@ -7309,7 +7309,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-21000-to-21999"></a>錯誤 21,000 到 21,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   21000   |   16  |   否  |   無法訂閱至非使用中的發行集。    |
 |   21001   |   16  |   否  |   無法於訂閱者端加入散發代理程式來進行發送訂閱。  |
@@ -7325,7 +7325,7 @@ ms.locfileid: "37316598"
 |   21011   |   16  |   否  |   停用的訂閱。  |
 |   21012   |   16  |   否  |   無法將發行集的 'allow_push' 屬性變更為 "false"。 發行集上有發送訂閱。 |
 |   21013   |   16  |   否  |   無法將發行集的 'allow_pull' 屬性變更為 "false"。 發行集上有提取訂閱。 |
-|   21014   |   16  |   否  |   @optname 參數值必須是 'transactional' 或 'merge'。    |
+|   21014   |   16  |   否  |   \@optname 參數值必須是 'transactional' 或 'merge'。   |
 |   21015   |   16  |   否  |   複寫選項 '%s' 已經設定為 TRUE。   |
 |   21016   |   16  |   否  |   複寫選項 '%s' 已經設定為 FALSE。  |
 |   21017   |   16  |   否  |   無法在具有垂直或水平資料分割的合併發行項上執行 SQL Server 7.0 相容總和檢查碼作業。 資料列計數驗證和 SQL Server 2000 相容的二進位總和檢查碼作業可以在這個發行項上執行。  |
@@ -7340,7 +7340,7 @@ ms.locfileid: "37316598"
 |   21026   |   16  |   否  |   在沒有獨立代理程式的發行集上不得有匿名訂閱。 |
 |   21027   |   16  |   否  |   未安裝 '%s' 複寫預存程序。 您必須重新安裝具有複寫的 SQL Server。   |
 |   21028   |   16  |   否  |   複寫元件未安裝於這個伺服器。 請再度執行 SQL Server 安裝程式並選取安裝複寫功能的選項。   |
-|   21029   |   16  |   否  |   除非 @drop_push 為 'true'，否則無法卸除訂閱者端的發送訂閱項目。    |
+|   21029   |   16  |   否  |   除非 \@drop_push 為 'true'，否則無法卸除訂閱者端的發送訂閱項目。   |
 |   21030   |   16  |   否  |   SQL Server 複寫代理程式的名稱無法變更。   |
 |   21031   |   16  |   否  |   'post_script' 不支援預存程序發行項。   |
 |   21032   |   16  |   否  |   無法訂閱，因為非 SQL Server 訂閱者 '%s' 不支援 'sync tran' 更新模式。    |
@@ -7355,7 +7355,7 @@ ms.locfileid: "37316598"
 |   21041   |   16  |   否  |   這個伺服器版本上不允許遠端散發簽發者。  |
 |   21042   |   16  |   否  |   散發簽發者屬性 'distributor_password' 沒有作用，而且不支援在 Windows NT 4.0 上執行的散發者。 |
 |   21043   |   16  |   否  |   並未安裝散發者。   |
-|   21044   |   16  |   否  |   啟用資料庫以供發行或合併發行時，不可忽略遠端散發者 (@ignore_remote_distributor 不得為 1)。    |
+|   21044   |   16  |   否  |   啟用資料庫以供發行或合併發行時，不可忽略遠端散發者 (\@ignore_remote_distributor 不得為 1)。   |
 |   21045   |   16  |   否  |   已為發行或合併發行啟用了資料庫，因此無法解除安裝散發者。    |
 |   21046   |   16  |   否  |   無法變更散發簽發者的屬性 'distribution_db'，因為簽發者正在使用目前的散發資料庫。   |
 |   21047   |   16  |   否  |   由於已定義了訂閱者，所以無法卸除本機散發簽發者。 |
@@ -7403,8 +7403,8 @@ ms.locfileid: "37316598"
 |   21106   |   16  |   否  |   此版本的 SQL Server 不支援發行集。   |
 |   21107   |   16  |   否  |   '%ls' 不是資料表或檢視表。   |
 |   21108   |   16  |   否  |   此版本的 SQL Server 不支援交易式發行集。 |
-|   21109   |   16  |   否  |   如果指定 @command_id，則參數 @xact_seqno_start 和 @xact_seqno_end 必須相同。 |
-|   21110   |   16  |   否  |   如果指定 @xact_seqno_start，則必須指定 @publisher_database_id 和 @command_id。 |
+|   21109   |   16  |   否  |   如果指定了 \@command_id，則參數 \@xact_seqno_start 和 \@xact_seqno_end 必須完全相同。  |
+|   21110   |   16  |   否  |   如果指定了 \@command_id，則必須也指定 \@xact_seqno_start 和 \@publisher_database_id。  |
 |   21111   |   16  |   否  |   '%s' 不是快照集代理程式的有效參數。   |
 |   21112   |   16  |   否  |   '%s' 不是記錄讀取器代理程式的有效參數。 |
 |   21113   |   16  |   否  |   '%s' 不是散發代理程式的有效參數。   |
@@ -7435,14 +7435,14 @@ ms.locfileid: "37316598"
 |   21138   |   16  |   否  |   'offload_server' 屬性不得與散發者名稱相同。   |
 |   21139   |   16  |   否  |   無法決定分散式代理程式執行的訂閱者名稱。    |
 |   21140   |   16  |   否  |   代理程式執行無法散發到與散發者位於同一個伺服器上的訂閱者。   |
-|   21141   |   16  |   否  |   @change_active 旗標不可指定給具有手動篩選或檢視的發行項。 |
+|   21141   |   16  |   否  |   \@change_active 旗標不可指定給具有手動篩選或檢視的發行項。    |
 |   21142   |   16  |   否  |   SQL Server '%s' 無法取得登入 '%s' 的 Windows 群組成員資格資訊。 請確定 Windows 帳戶可以存取該登入的網域。    |
 |   21143   |   16  |   否  |   自訂預存程序的結構描述選項對於快照式發行集發行項而言無效。    |
 |   21144   |   16  |   否  |   無法訂閱至 sync_type 為 'dump database' 的發行集，因為訂閱者有到其他發行集的訂閱。    |
 |   21145   |   16  |   否  |   由於訂閱者有到 sync_type 為 'dump database' 的發行集的訂閱，所以無法訂閱至發行集 %s。 |
-|   21146   |   16  |   否  |   當 @alt_snapshot_folder 不是 NULL 或空白時，@use_ftp 不可以為 'true'。 |
+|   21146   |   16  |   否  |   當 \@alt_snapshot_folder 不是 NULL 或空的，\@use_ftp 就不可以是 'true'。   |
 |   21147   |   16  |   否  |   '%s' 資料庫並非發行用來進行合併式複寫。   |
-|   21148   |   16  |   否  |   @subscriber 和 @subscriberdb 必須同時指定為非 Null，或是兩者都不指定。 |
+|   21148   |   16  |   否  |   \@subscriber 和 \@subscriberdb 必須同時指定為非 Null，或是兩者都不指定。   |
 |   21149   |   16  |   否  |   '%s' 資料庫並非發行用來進行交易式或快照式複寫。   |
 |   21150   |   16  |   否  |   無法決定指定訂閱的快照集資料夾，因為指定的訂閱者對散發者不為已知。    |
 |   21151   |   16  |   否  |   前快照集 (Pre-snapshot) 與後快照集 (post-snapshot) 命令不支援發行集使用字元模式 bcp 做為同步處理方法，來支援非 SQL Server 訂閱者。  |
@@ -7450,7 +7450,7 @@ ms.locfileid: "37316598"
 |   21153   |   16  |   否  |   無法建立發行項 '%s'。 屬於並行同步處理發行集一部分的所有發行項必須使用預存程序來將變更套用於訂閱者。   |
 |   21154   |   16  |   否  |   無法變更發行項 '%s'。 屬於並行同步處理發行集一部分的所有發行項必須使用預存程序來將變更套用於訂閱者。   |
 |   21155   |   16  |   否  |   無法變更發行項 '%s'。 發行項屬於並行同步處理發行集一部分的發行項不能有超過 %d 個字元的 ins_cmd/del_cmd。   |
-|   21156   |   16  |   否  |   @status 參數值必須是 'initiated' 或 'active'。    |
+|   21156   |   16  |   否  |   \@status 參數值必須是 'initiated' 或 'active'。   |
 |   21157   |   16  |   否  |   只能針對已定義替代快照集產生資料夾的發行集，啟用快照集壓縮選項。   |
 |   21158   |   16  |   否  |   若要為 Internet 啟用發行集，'ftp_address' 屬性絕不可以是 Null。  |
 |   21159   |   16  |   否  |   如果發行集已啟用給 Internet，'alt_snapshot_folder' 屬性必須為非空白。 |
@@ -7468,15 +7468,15 @@ ms.locfileid: "37316598"
 |   21171   |   16  |   否  |   在伺服器 '%s' 端的 msdb 中找不到封裝 '%s'。 |
 |   21172   |   16  |   否  |   發行集必須為 'character'、'concurrent_c' 或 'database snapshot character' bcp 模式，才能允許 DTS。   |
 |   21173   |   16  |   否  |   發行集必須為 'independent_agent type' 才能允許 DTS。    |
-|   21174   |   16  |   否  |   因為此發行集允許使用 DTS 的可轉換訂閱，所以它需要自動產生的預存程序和參數化命令，而這些都是使用 @status 的預設值加以設定的。   |
+|   21174   |   16  |   否  |   因為此發行集允許使用 DTS 的可轉換訂閱，所以它需要自動產生的預存程序和參數化命令，而這些都是使用 \@status 的預設值加以設定的。  |
 |   21175   |   16  |   否  |   由於發行集允許 Data Transformation Services 或可更新的訂閱，所以您無法變更 ins_cmd、upd_cmd 或 del_cmd 發行項屬性。   |
 |   21176   |   16  |   否  |   只有系統管理員 (sysadmin) 固定伺服器角色、db_owner 固定資料庫角色或訂閱的建立者之成員才可以變更訂閱屬性。    |
 |   21177   |   16  |   否  |   由於資料行清單太長，以致於無法建立資料行清單。 請手動建立清單。  |
 |   21178   |   16  |   否  |   無法設定 Data Transformation Services (DTS) 屬性，因為發行集不允許使用 DTS 的可轉換訂閱。 若要允許可轉換訂閱，您必須先卸除發行集，然後重新建立發行集，並指定允許可轉換訂閱。   |
-|   21179   |   16  |   否  |   無效的 @dts_package_location 參數值。 有效的選項為 'Distributor' 或 'Subscriber'。 |
+|   21179   |   16  |   否  |   無效的 \@dts_package_location 參數值。 有效的選項為 'Distributor' 或 'Subscriber'。    |
 |   21180   |   16  |   否  |   允許 DTS 的發行集無法啟用給可更新訂閱。    |
-|   21181   |   16  |   否  |   @dts_package_name 僅可以設定給發送訂閱。   |
-|   21182   |   16  |   否  |   @agent_type 參數必須是 'distribution'、'merge' 或 NULL 其中之一。  |
+|   21181   |   16  |   否  |   \@dts_package_name 僅可以設定給發送訂閱。  |
+|   21182   |   16  |   否  |   \@agent_type 參數必須是 'distribution'、'merge' 或 NULL 其中之一。 |
 |   21183   |   16  |   否  |   無效的屬性名稱 '%s'。 |
 |   21184   |   16  |   否  |   %s 參數不正確: 其應該為 '%s'、'%s' 或 '%s'。 |
 |   21185   |   16  |   否  |   該訂閱未初始化或建立為可支援容錯移轉模式的作業。    |
@@ -7486,7 +7486,7 @@ ms.locfileid: "37316598"
 |   21189   |   16  |   否  |   具有 queue_id = '%s' 的此訂閱佇列不是空的。 請先執行佇列讀取器代理程式並確定佇列是空的，再將模式由 [queued] 設定為 [immediate]。 |
 |   21190   |   10  |   否  |   正在為模式從 [%s] 設定到 [%s] 進行覆寫佇列檢查。  |
 |   21192   |   16  |   否  |   MSrepl_tran_version 資料行為用做複寫的預先定義資料行，而且其資料類型只可以為 uniqueidentifier。    |
-|   21193   |   16  |   否  |   當 @identityrangemanagementoption 設為 AUTO 時，@identity_range、@pub_identity_range 或 @threshold 不能為 NULL。  |
+|   21193   |   16  |   否  |   當 \@identityrangemanagementoption 設定為 AUTO 時，\@identity_range、\@pub_identity_range 或 \@threshold 不可以是 NULL。  |
 |   21194   |   16  |   否  |   無法支援識別範圍管理，因為這個資料表沒有識別欄位。   |
 |   21195   |   16  |   否  |   找不到有效的識別範圍。 請檢查識別欄位的資料類型。    |
 |   21196   |   16  |   否  |   識別自動化失敗。 |
@@ -7516,7 +7516,7 @@ ms.locfileid: "37316598"
 |   21220   |   16  |   否  |   無法加入發行項 '%s'，因為發行集 '%s' 已經產生快照集。  |
 |   21221   |   16  |   否  |   如果指定的來源物件將要成為一個 'view schema only' 類型的發行項，則必須是一個檢視表物件。    |
 |   21222   |   16  |   否  |   程序、函數、同義字或彙總結構描述發行項的可用結構描述選項有: 0x00000001、0x00000020、0x00001000、0x00002000、0x00400000、0x02000000、0x08000000、0x10000000、0x20000000、0x40000000 和 0x80000000。   |
-|   21223   |   16  |   否  |   只有結構描述的發行項其 @pre_creation_command 參數必須是 'none' 或 'drop'。  |
+|   21223   |   16  |   否  |   只有結構描述的發行項其 \@pre_creation_command 參數必須是 'none' 或 'drop'。 |
 |   21224   |   16  |   否  |   '%s' 對於只有結構描述的發行項而言不是有效的屬性。 |
 |   21225   |   16  |   否  |   如果提取訂閱代理程式將啟用以供遠端啟動，則 'offload_server' 屬性不可以是 NULL 或空的。    |
 |   21226   |   16  |   否  |   資料庫 '%s' 對指定的發行集沒有提取訂閱。   |
@@ -7546,7 +7546,7 @@ ms.locfileid: "37316598"
 |   21250   |   16  |   否  |   無法從垂直資料分割中排除主索引鍵資料行 '%s'。   |
 |   21251   |   16  |   否  |   無法從同步夥伴的清單中移除簽發者 '%s'、簽發者資料庫 '%s' 和發行集 '%s'。   |
 |   21252   |   16  |   否  |   從同步夥伴的清單中移除預設的簽發者 '%s'、發行集資料庫 '%s' 和發行集 '%s' 是無效的。   |
-|   21253   |   16  |   否  |   因為執行 SQL Server 的電腦上未正確安裝 Active Directory 用戶端套件，所以無法將參數 '@add_to_active_directory' 設定為 TRUE。    |
+|   21253   |   16  |   否  |   因為執行 SQL Server 的電腦上未正確安裝 Active Directory 用戶端套件，所以無法將參數 '\@add_to_active_directory' 設定為 TRUE。   |
 |   21254   |   16  |   否  |   因為執行 SQL Server 的電腦上未正確安裝 Active Directory 用戶端封裝，所以無法完成對發行集 '%s' 的 Active Directory 作業。 |
 |   21255   |   16  |   否  |   資料行 '%s' 已經存在於資料表 '%s' 中。   |
 |   21256   |   16  |   否  |   篩選子句 '%s' 中所使用的資料行若非不存在於資料表 '%s' 中，就是無法從目前的資料分割中排除。   |
@@ -7567,28 +7567,28 @@ ms.locfileid: "37316598"
 |   21272   |   16  |   否  |   無法清除發行集 '%s' 的中繼資料，因為其他發行集正在使用此發行集中的一或多個發行項。   |
 |   21273   |   16  |   否  |   當簽發者是 SQL Server 2000 或更新的版本時，您必須將訂閱者升級到 SQL Server 2000，才能建立可更新的訂閱。   |
 |   21274   |   16  |   否  |   發行集名稱 '%s' 無效。  |
-|   21275   |   16  |   否  |   無法發行結構描述繫結檢視表 '%ls'。 為 @type 參數指定的值必須是 "indexed view schema only" (對於快照式或異動複寫) 或 "indexed view logbased" (僅限異動複寫)。 |
+|   21275   |   16  |   否  |   無法發行結構描述繫結檢視表 '%ls'。 為 \@type 參數指定的值必須是 "indexed view schema only" (對於快照式或異動複寫) 或 "indexed view logbased" (僅限異動複寫)。    |
 |   21276   |   16  |   否  |   類型必須是 'table' 或 '( view | 索引檢視表 | proc | func ) schema only'。    |
-|   21277   |   16  |   否  |   無法發行來源物件 '%ls'。 為 @type 參數指定的值 ("indexed view schema only" 或 "indexed view logbased") 只能用於索引檢視表。 請為 @type 參數指定 "view schema only" 值，或修改檢視表使它成為與唯一的叢集索引有結構描述繫結。  |
-|   21278   |   16  |   否  |   無法發行來源物件 '%ls'。 為 @type 參數指定的值 ("indexed view logbased") 要求檢視表必須以結構描述繫結唯一的叢集索引。 請為 @type 參數指定 "view schema only" 值，或修改檢視表使它成為與唯一的叢集索引有結構描述繫結。  |
+|   21277   |   16  |   否  |   無法發行來源物件 '%ls'。 為 \@type 參數指定的值 ("indexed view schema only" 或 "indexed view logbased") 只能用於索引檢視表。 請為 \@type 參數指定 "view schema only" 值，或修改檢視表使它成為與唯一的叢集索引有結構描述繫結。    |
+|   21278   |   16  |   否  |   無法發行來源物件 '%ls'。 為 \@type 參數指定的值 ("indexed view logbased") 要求檢視表必須以結構描述繫結唯一的叢集索引。 請為 \@type 參數指定 "view schema only" 值，或修改檢視表使它成為與唯一的叢集索引有結構描述繫結。    |
 |   21279   |   16  |   否  |   合併發行項的 'schema_option' 屬性在發行集產生快照集之後無法變更。 若要變更這個發行項的 'schema_option' 屬性，對應的合併式發行集必須卸除並重新建立。    |
 |   21280   |   16  |   否  |   因為發行集 '%s' 包含一或多個發行項，且這些發行項已由位於交易層級上相同的訂閱者資料庫訂閱，所以訂閱者資料庫 '%s' 無法訂閱此發行集。    |
 |   21281   |   16  |   否  |   因為發行集 '%s' 包含一或多個發行項，且這些發行項已由位於合併層級上相同的訂閱者資料庫訂閱，所以訂閱者資料庫 '%s' 無法訂閱此發行集。  |
-|   21282   |   16  |   否  |   當 @identityrangemanagementoption 設定為 'none' 或 'manual'，@identity_range、@pub_identity_range 和 @threshold 必須為 NULL。 |
+|   21282   |   16  |   否  |   當 \@identityrangemanagementoption 設定為 'none' 或 'manual' 時，\@identity_range、\@pub_identity_range 及 \@threshold 必須是 NULL。 |
 |   21283   |   16  |   否  |   資料表 '%s' 的資料行 '%s' 無法從垂直資料分割中排除，因為有某個計算資料行相依於它。   |
 |   21284   |   16  |   否  |   無法從資料表 '%s' 中卸除資料行 '%s'。 |
 |   21285   |   16  |   否  |   無法加入資料行 '%s' 至資料表 '%s' 中。    |
 |   21286   |   16  |   否  |   衝突資料表 '%s' 不存在。 |
-|   21287   |   16  |   否  |   指定的 @destination_folder 不是現有資料夾的有效路徑。    |
-|   21288   |   16  |   否  |   無法在指定的 @destination_folder 中建立快照集目錄結構。 |
+|   21287   |   16  |   否  |   指定的 \@destination_folder 不是現有資料夾的有效路徑。   |
+|   21288   |   16  |   否  |   無法在指定的 \@destination_folder 中建立快照集目錄結構。    |
 |   21289   |   16  |   否  |   快照集檔案並未產生或已清除。 |
 |   21290   |   16  |   否  |   提供的識別範圍值已超過所允許的最大值。   |
 |   21291   |   16  |   否  |   指定的自動識別支援參數和另一個發行項的設定有衝突。  |
 |   21292   |   16  |   否  |   不能在同一個發行集內將物件 '%s' 發行兩次。  |
 |   21293   |   10  |   否  |   警告: 由於發行項 '%s' 的來源資料表已訂閱 '%s'，加入發行項的可更新訂閱可能會造成資料不一致。  |
-|   21294   |   16  |   否  |   必須指定 @publisher (和 @publisher_db) 或 @subscriber (和 @subscriber_db)，但不可同時指定。  |
+|   21294   |   16  |   否  |   必須指定 \@publisher (以及 \@publisher_db) 或 \@subscriber (以及 \@subscriber_db)，但是不可同時指定兩者。  |
 |   21295   |   16  |   否  |   發行集 '%s' 並未包含使用自動識別範圍管理的任何發行項。    |
-|   21296   |   16  |   否  |   參數 @resync_type 必須是 0、1、2。  |
+|   21296   |   16  |   否  |   參數 \@resync_type 必須為 0、1、2 其中之一。 |
 |   21297   |   16  |   否  |   無效的重新同步處理類型。 並未針對此訂閱進行驗證。    |
 |   21298   |   16  |   否  |   無法重新同步處理這個訂閱。  |
 |   21299   |   16  |   否  |   訂閱者資料分割驗證的運算式 '%s' 無效。    |
@@ -7613,7 +7613,7 @@ ms.locfileid: "37316598"
 |   21318   |   10  |   否  |   資料表 '%s' 必須至少具有一個包含於垂直資料分割中的資料行。    |
 |   21319   |   16  |   否  |   找不到指定發行集的快照集代理程式命令列。 請檢查散發者上是否存在有效的一般快照集作業。    |
 |   21320   |   16  |   否  |   散發者的版本不可低於簽發者的版本。   |
-|   21321   |   16  |   否  |   參數 @dynamic_snapshot_location 不得為空白字串。 |
+|   21321   |   16  |   否  |   參數 \@dynamic_snapshot_location 不可以是空的字串。    |
 |   21322   |   16  |   否  |   此發行集會記錄兩個複寫的衝突。 SQL Server 2005 之前的訂閱者版本不支援此設定。  |
 |   21323   |   16  |   否  |   只有當發行集已啟用動態篩選條件時，才可以排程動態快照集作業。  |
 |   21324   |   16  |   否  |   必須先為指定發行集加入快照集代理程式，才能排程動態快照集作業。    |
@@ -7621,7 +7621,7 @@ ms.locfileid: "37316598"
 |   21326   |   16  |   否  |   無法用 '%ls' 的 '%ls' 找到指定之發行集的動態快照集作業。    |
 |   21327   |   16  |   否  |   '%ls' 不是有效的動態快照集作業名稱。 |
 |   21328   |   16  |   否  |   指定的動態快照集作業名稱 '%ls' 已在使用中。 請用不同的作業名稱再試一次。 |
-|   21329   |   16  |   否  |   參數 @dynamic_snapshot_jobid 或 @dynamic_snapshot_jobname 只有其中一個可以指定非預設值。 |
+|   21329   |   16  |   否  |   只有 \@dynamic_snapshot_jobid 或 \@dynamic_snapshot_jobname 參數之一，才可以指定使用非預設的值。   |
 |   21330   |   16  |   否  |   無法在快照集資料夾 (%ls) 下建立子目錄。 請確定有足夠的可用磁碟空間，而且執行快照集代理程式的帳戶有權限可以在快照集資料夾下建立子目錄。  |
 |   21331   |   16  |   否  |   無法將使用者指令碼檔案複製到散發者端的快照集資料夾 (%ls)。 請確定有足夠的可用磁碟空間，而且執行快照集代理程式的帳戶有權限可以寫入快照集資料夾及其子目錄。    |
 |   21332   |   16  |   否  |   無法擷取發行集的相關資訊: %ls。 請再一次檢查名稱。   |
@@ -7629,12 +7629,12 @@ ms.locfileid: "37316598"
 |   21334   |   16  |   否  |   因為作業平台並不相容於訊息佇列 %s，所以無法初始化以訊息佇列為基礎的訂閱。   |
 |   21335   |   16  |   否  |   警告: 資料行 '%s' 已經存在於垂直資料分割中。  |
 |   21336   |   16  |   否  |   警告: 資料行 '%s' 不存在於垂直資料分割中。  |
-|   21337   |   16  |   否  |   @subscriber_type 值無效。 有效的選項為 'local' 和 'global'。 |
+|   21337   |   16  |   否  |   無效的 \@subscriber_type 值。 有效的選項為 'local' 和 'global'。    |
 |   21338   |   16  |   否  |   如果發行集有在 SQL Server 2000 或更早版本上執行的訂閱者，就無法執行 sp_dropmergearticle。 請卸除並重新建立不具發行項 '%s' 的發行集，或是在呼叫 sp_dropmergearticle 之前，將發行集 '%s' 的發行集相容性層級設定為 '90RTM'。    |
 |   21339   |   10  |   否  |   警告: 發行集中使用了只有當訂閱者執行 '%s' 或更高版本才支援的功能。  |
 |   21340   |   16  |   否  |   視需要使用者指令碼無法套用於快照式發行集。    |
-|   21341   |   16  |   否  |   當 @alt_snapshot_folder 是空白的或 null，@dynamic_snapshot_location 不可以是非空白字串。   |
-|   21342   |   16  |   否  |   當 @use_ftp 為 'true'，@dynamic_snapshot_location 不可以是非空白字串。   |
+|   21341   |   16  |   否  |   當 \@alt_snapshot_folder 不是空的或 Null 時，\@dynamic_snapshot_location 就不可以是非空白字串。 |
+|   21342   |   16  |   否  |   當 \@use_ftp 是 'true' 時，\@dynamic_snapshot_location 就不可以是非空白字串。 |
 |   21343   |   16  |   否  |   找不到預存程序 '%s'。   |
 |   21344   |   16  |   否  |   指定給 %ls 參數的值無效。  |
 |   21345   |   16  |   否  |   不允許排除資料分割的最後一個資料行。  |
@@ -7653,28 +7653,28 @@ ms.locfileid: "37316598"
 |   21358   |   10  |   否  |   警告: 由於其中一個發行項內至少存在有一個時間戳記資料行，所以只有執行 SQL Server 2000 或更新版本的訂閱者可以與發行集 '%s' 同步處理。   |
 |   21359   |   10  |   否  |   警告: 由於已使用自動識別範圍，所以只有執行 SQL Server 2000 或更新版本的訂閱者可以與發行集 '%s' 同步處理。  |
 |   21360   |   10  |   否  |   警告: 由於在快照集產生之後才將新的發行項加入至發行集中，所以只有執行 SQL Server 2000 或更新版本的訂閱者可以與發行集 '%s' 進行同步處理。 |
-|   21361   |   16  |   否  |   對 '%s' 代理程式作業而言，指定的 @agent_jobid 並非有效的作業識別碼。  |
+|   21361   |   16  |   否  |   對 '%s' 代理程式作業而言，指定的 \@agent_jobid 並非有效的作業識別碼。 |
 |   21362   |   16  |   否  |   合併篩選 '%s' 不存在。   |
 |   21363   |   16  |   否  |   無法將發行集 '%s' 新增至 Active Directory。 %s  |
-|   21364   |   16  |   否  |   因為快照集已經產生，所以無法加入發行項 '%s'。 請將 @force_invalidate_snapshot 設定為 1 來強制變更並使現有的快照集變為無效。 |
-|   21365   |   16  |   否  |   因為有使用中的訂閱，所以無法加入發行項 '%s'。 請將 @force_reinit_subscription 設定為 1，以強制執行變更並重新初始化使用中的訂閱。 |
-|   21366   |   16  |   否  |   因為快照集已經產生，所以無法加入篩選 '%s'。 請將 @force_invalidate_snapshot 設定為 1 來強制變更並使現有的快照集變為無效。  |
-|   21367   |   16  |   否  |   因為有使用中的訂閱，所以無法加入篩選 '%s'。 請將 @force_reinit_subscription 設定為 1，以強制執行變更並重新初始化使用中的訂閱。  |
+|   21364   |   16  |   否  |   因為快照集已經產生，所以無法加入發行項 '%s'。 請將 \@force_invalidate_snapshot 設定為 1 以強迫執行，並使現有的快照集失效。    |
+|   21365   |   16  |   否  |   因為有使用中的訂閱，所以無法加入發行項 '%s'。 請將 \@force_reinit_subscription 設定為 1 以強迫執行，並重新初始化使用中的訂閱。    |
+|   21366   |   16  |   否  |   因為快照集已經產生，所以無法加入篩選 '%s'。 請將 \@force_invalidate_snapshot 設定為 1 以強迫執行，並使現有的快照集失效。 |
+|   21367   |   16  |   否  |   因為有使用中的訂閱，所以無法加入篩選 '%s'。 請將 \@force_reinit_subscription 設定為 1 以強迫執行，並重新初始化使用中的訂閱。 |
 |   21368   |   16  |   否  |   指定的卸載伺服器名稱含有無效的字元 '%s'。  |
 |   21369   |   16  |   否  |   無法從 Active Directory 中移除發行集 '%s'。    |
 |   21370   |   16  |   否  |   指定的重新同步日期 '%s' 不是有效的日期。 |
 |   21371   |   10  |   否  |   無法將發行集 '%s' 的變更傳播至 Active Directory。 |
-|   21372   |   16  |   否  |   無法從發行集 '%s' 中卸除篩選 '%s'，因為已執行其快照集，且此發行集可能有使用中的訂閱。 請將 @force_reinit_subscription 設定為 1，以重新初始化所有訂閱並卸除該篩選。    |
+|   21372   |   16  |   否  |   無法從發行集 '%s' 中卸除篩選 '%s'，因為已執行其快照集，且此發行集可能有使用中的訂閱。 請將 \@force_reinit_subscription 設定為 1，以重新初始化所有訂閱並卸除該篩選。   |
 |   21373   |   11  |   否  |   無法開啟資料庫 %s。 無法將複寫的設定及系統物件升級。 如果資料庫係用於複寫，請在資料庫可以使用時，在 [master] 資料庫中執行 sp_vupgrade_replication。    |
 |   21374   |   10  |   否  |   升級資料庫 %s 中的散發設定及系統物件。  |
 |   21375   |   10  |   否  |   升級資料庫 %s 中的發行集設定及系統物件。   |
 |   21376   |   11  |   否  |   無法開啟資料庫 %s。 無法將複寫的設定及系統物件升級。 如果資料庫係用於複寫，請在資料庫可以使用時，在 [master] 資料庫中執行 sp_vupgrade_replication。    |
 |   21377   |   10  |   否  |   升級資料庫 %s 中的訂閱設定及系統物件。  |
 |   21378   |   16  |   否  |   因為散發資料庫 %s 已離線或正在復原，所以無法開啟該資料庫。 無法將複寫的設定及系統物件升級。 請確認此資料庫可以使用，然後重新執行 sp_vupgrade_replication。  |
-|   21379   |   16  |   否  |   因為已產生快照集，所以無法從發行集 '%s' 中卸除發行項 '%s'。 請將 @force_invalidate_snapshot 設定為 1 來強制變更並使現有的快照集變為無效。 |
-|   21380   |   16  |   否  |   若未強迫重新初始化，就無法新增時間戳記資料行。 將 @force_reinit_subscription 設定為 1， 以強迫執行重新初始化。    |
-|   21381   |   16  |   否  |   因為資料表 '%s' 屬於含有使用中之可更新訂閱的發行集，所以無法在該資料表中加入 (卸除) 資料行。 將 @force_reinit_subscription 設定為 1， 以強迫執行重新初始化。    |
-|   21382   |   16  |   否  |   因為快照集已經產生，所以無法卸除篩選 '%s'。 請將 @force_invalidate_snapshot 設定為 1 來強制變更並使現有的快照集變為無效。    |
+|   21379   |   16  |   否  |   因為已產生快照集，所以無法從發行集 '%s' 中卸除發行項 '%s'。 請將 \@force_invalidate_snapshot 設定為 1 以強迫執行，並使現有的快照集失效。    |
+|   21380   |   16  |   否  |   若未強迫重新初始化，就無法新增時間戳記資料行。 請將 \@force_reinit_subscription 設定為 1 以強迫執行重新初始化。   |
+|   21381   |   16  |   否  |   因為資料表 '%s' 屬於含有使用中之可更新訂閱的發行集，所以無法在該資料表中加入 (卸除) 資料行。 請將 \@force_reinit_subscription 設定為 1 以強迫執行重新初始化。   |
+|   21382   |   16  |   否  |   因為快照集已經產生，所以無法卸除篩選 '%s'。 請將 \@force_invalidate_snapshot 設定為 1 以強迫執行，並使現有的快照集失效。   |
 |   21383   |   16  |   否  |   由於所屬散發者的工作目錄未使用 UNC 路徑，所以無法在此伺服器上啟用合併式發行集。 |
 |   21384   |   16  |   否  |   指定的訂閱不存在，或該訂閱尚未進行同步處理。 |
 |   21385   |   16  |   否  |   快照集無法處理發行集 '%s'。 可能是由於有使用中的結構描述變更活動，或是正在加入新的發行項。 |
@@ -7688,7 +7688,7 @@ ms.locfileid: "37316598"
 |   21393   |   16  |   否  |   正在卸除 '%s' 中發行項 '%s' 的資料列篩選 (%s)。 若要建立資料列篩選，請重新發出 sp_articlefilter 及 sp_articleview。   |
 |   21394   |   16  |   否  |   為允許更新訂閱者的發行集所指定的結構描述選項無效。 必須設定結構描述選項來包含 DRI 條件約束。 |
 |   21395   |   10  |   否  |   由於資料行識別碼大於 255，所以無法將此資料行包含於交易式發行集中。    |
-|   21396   |   16  |   否  |   為 sp_addsubscriber 的 @type 參數或 sp_addsubscription 的 @subscriber_type 參數指定的值無效。 如需有效值的清單，請參閱《SQL Server 線上叢書》。   |
+|   21396   |   16  |   否  |   為 sp_addsubscriber 的 \@type 參數或 sp_addsubscription 的 \@subscriber_type 參數指定的值無效。 如需有效值的清單，請參閱《SQL Server 線上叢書》。 |
 |   21397   |   16  |   否  |   從指定備份中建立的非同步 (Nosync) 訂閱進行同步處理所需的交易，在散發者端無法使用。 請使用較新的記錄、差異式或完整的資料庫備份，然後再重試該作業。  |
 |   21398   |   16  |   否  |   在執行散發清除代理程式時，無法在散發者端完成非同步 (No-sync) 訂閱的設定。 如果暫時停用散發清除代理程式，該作業就比較有機會成功。 |
 |   21399   |   16  |   否  |   將訂閱與指定的記錄序號 (LSN) 進行同步處理所需的交易，在散發者端無法使用。 請指定較高的 LSN。 |
@@ -7699,8 +7699,8 @@ ms.locfileid: "37316598"
 |   21404   |   10  |   否  |   '%s' 不是 '%s' 參數的有效值。 該值必須為大於 300 或 0 的正整數。   |
 |   21405   |   10  |   否  |   '%s' 不是 '%s' 參數的有效值。 該值必須為大於或等於 %d 的整數。 |
 |   21406   |   10  |   否  |   '%s' 不是 '%s' 參數的有效值。 其值必須為 0 或 1。 |
-|   21407   |   16  |   否  |   無法建立訂閱。 如果為 @sync_type 參數指定 "initialize with backup" 值，您必須為 @article 參數指定 "all" 值，以訂閱發行集中的所有發行項。   |
-|   21408   |   16  |   否  |   無法建立訂閱。 您必須為 @status 參數指定 "Active" 或 "Subscribed" 值。 這是由於為 @sync_type 參數指定的值為 "initialize with backup" 或 "replication support only"。 |
+|   21407   |   16  |   否  |   無法建立訂閱。 如果為 \@sync_type 參數指定 "initialize with backup" 值，您必須為 \@article 參數指定 "all" 值，以訂閱發行集中的所有發行項。 |
+|   21408   |   16  |   否  |   無法建立訂閱。 您必須為 \@status 參數指定 "Active" 或 "Subscribed" 值。 由於為 \@sync_type 參數指定的值為 "initialize with backup" 或 "replication support only"。   |
 |   21409   |   16  |   否  |   只可以設定參數 %s 和 %s 其中之一。    |
 |   21410   |   16  |   否  |   快照集代理程式啟動訊息。 |
 |   21411   |   16  |   否  |   散發代理程式啟動訊息。 |
@@ -7715,13 +7715,13 @@ ms.locfileid: "37316598"
 |   21421   |   10  |   否  |   由於仍有其他發行項將 '%s' 當作聯結的發行項使用，所以無法卸除此發行項。 |
 |   21422   |   16  |   否  |   佇列讀取器代理程式啟動訊息。 |
 |   21423   |   16  |   否  |   發行集 '%s' 不存在，或您沒有足夠的存取權限。 請確定發行集存在，且發行集存取清單 (PAL) 中有包含合併代理程式用來連接簽發者的帳戶。  |
-|   21424   |   16  |   否  |   SQL Server 簽發者的 @publisher 參數必須是 NULL。    |
-|   21425   |   16  |   否  |   異質性簽發者的 @publisher 參數不可以是 NULL。  |
+|   21424   |   16  |   否  |   SQL Server 發行者的 \@publisher 參數必須是 NULL。   |
+|   21425   |   16  |   否  |   異質性發行者的 \@publisher 參數不可以是 NULL。 |
 |   21426   |   16  |   否  |   對發行集 '%s' 和訂閱者/訂閱者資料庫配對 '%s'/'%s' 而言，共用的代理程式訂閱不存在。 |
 |   21450   |   16  |   否  |   無法為 %s 資料庫升級複寫 %s。 請確定 %s 已升級，再重新執行 %s。 |
 |   21451   |   16  |   否  |   %s %s (%s) 登入 (%s) 的密碼已經變更。    |
 |   21452   |   10  |   否  |   警告: %s 代理程式作業已經由隱含方式建立，將於 SQL Server Agent 服務帳戶中執行。  |
-|   21454   |   16  |   否  |   如果 @run_at_distributor 參數的值為 1，就必須在散發者端執行內部程序 sp_MStran_is_snapshot_required。 如果持續發生問題，請連絡 Microsoft 客戶支援服務。  |
+|   21454   |   16  |   否  |   如果 \@run_at_distributor 參數的值為 1，就必須在散發者端執行內部程序 sp_MStran_is_snapshot_required。 如果持續發生問題，請連絡 Microsoft 客戶支援服務。 |
 |   21456   |   16  |   否  |   提供給參數 %s 的值無效。   |
 |   21460   |   16  |   否  |   來源資料表 "%s" 的主索引鍵包含時間戳記資料行 "%s"。 無法為指定的發行集建立發行項，因為其允許更新訂閱者。   |
 |   21481   |   16  |   否  |   無法在 master 資料庫中建立複寫訂閱。 請選擇其他資料庫來建立訂閱。   |
@@ -7731,8 +7731,8 @@ ms.locfileid: "37316598"
 |   21486   |   16  |   否  |   在記錄追蹤 Token 記錄資訊時發生錯誤。 無法公佈追蹤 Token。 |
 |   21487   |   16  |   否  |   將追蹤 Token 插入記錄時發生錯誤。 無法公佈追蹤 Token。    |
 |   21488   |   16  |   否  |   找不到使用中的訂閱。 發行集必須有使用中的訂閱，才能公佈追蹤 Token。 |
-|   21489   |   16  |   否  |   資料庫 '%s' 已經存在。 如果您希望其成為散發資料庫，請設定 @existing_db = 1。   |
-|   21490   |   16  |   否  |   為 sp_mergearticlecolumn 的 %s 參數指定的值必須是 '%s'。 只有在其他複寫程序呼叫此程序時，才允許值為 'true'。 請將 @schema_replication 參數的值設定為 'false'，或不指定值。   |
+|   21489   |   16  |   否  |   資料庫 '%s' 已經存在。 如果您希望其成為散發資料庫，請設定 \@existing_db = 1。  |
+|   21490   |   16  |   否  |   為 sp_mergearticlecolumn 的 %s 參數指定的值必須是 '%s'。 只有在其他複寫程序呼叫此程序時，才允許值為 'true'。 請將 \@schema_replication 參數的值設定為 'false'，或不指定值。  |
 |   21499   |   16  |   否  |   程序 %s 無法 %s 資源 %s。 伺服器錯誤 = %d。   |
 |   21500   |   10  |   否  |   指定了無效的訂閱類型。 發行集 '%s' 的訂閱已存在於資料庫中，且擁有不同的訂閱類型。   |
 |   21501   |   10  |   否  |   所提供的解析程式資訊並未指定有效的資料行名稱供 '%s' 用來解決衝突。  |
@@ -7758,17 +7758,17 @@ ms.locfileid: "37316598"
 |   21522   |   16  |   否  |   此發行項無法使用 '%s' 功能，因為發行集相容性層級低於 90。 請使用 sp_changemergepublication 將發行集 '%s' 的 publication_compatibility_level 設定為 '90RTM'。  |
 |   21523   |   16  |   否  |   加入資料行 '%s' 至資料表 '%s' 失敗。 發行項最多可以有 %d 個資料行，其中包括已篩選的資料行。   |
 |   21525   |   16  |   否  |   輕量型複寫必須是匿名的。    |
-|   21526   |   16  |   否  |   發行項 '%s' 已屬於某訂閱，其中 @lightweight 屬性有不同的值。    |
+|   21526   |   16  |   否  |   發行項 '%s' 已屬於某訂閱，其中 \@lightweight 屬性有不同的值。   |
 |   21527   |   16  |   否  |   無法將發行集 '%s' 加入資料庫 '%s'，因為具較低相容性層級的發行集已經存在。 資料庫的所有合併式發行集必須具有相同的相容性層級。  |
 |   21528   |   16  |   否  |   無法將發行集 '%s' 加入資料庫 '%s'，因為具較高相容性層級的發行集已經存在。 資料庫的所有合併式發行集必須具有相同的相容性層級。  |
 |   21530   |   10  |   否  |   內部複寫程序執行期間結構描述變更失敗。 有關訂正動作，請參閱隨附於此錯誤訊息的其他錯誤訊息。  |
 |   21531   |   10  |   否  |   無法在訂閱者端執行資料定義語言 (DDL) 命令。 DDL 命令只能在簽發者端執行。 在重新發行階層中，DDL 命令只能在根簽發者端執行，不能在任何重新發行訂閱者端執行。  |
 |   21532   |   10  |   否  |   無法為複寫 '%.*ls' 事件加入資料定義語言觸發程序。   |
 |   21533   |   10  |   否  |   無法在結構描述變更追蹤資料表 sysmergeschemachange 中插入資訊。   |
-|   21535   |   16  |   否  |   發行項 '%s' 已在另一個發行集中發行，而且設定為使用非重疊資料分割且每個資料分割有多個訂閱者 (@partition_options = 2)。 此設定不允許發行項包含在一個以上的發行集中。   |
+|   21535   |   16  |   否  |   發行項 '%s' 已在另一個發行集中發行，而且設定為使用非重疊資料分割且每個資料分割有多個訂閱者 (\@partition_options = 2)。 此設定不允許發行項包含在一個以上的發行集中。  |
 |   21537   |   16  |   否  |   資料表 '%s' 中的資料行 '%s' 與資料表 '%s' 的資料行具有外部索引鍵關聯性，但在指定的聯結子句中卻找不到這個資料行。 這些資料表之間的邏輯記錄關聯性，應該要包含此資料行。 |
 |   21538   |   16  |   否  |   在邏輯記錄關聯性中，資料表 '%s' 不可將資料表 '%s' 做為父系，因為該資料表已有不同的父系。 在邏輯記錄關聯性中，給定子資料表只允許有一個父資料表。 |
-|   21539   |   16  |   否  |   由 @filter_type 參數指定的邏輯記錄關聯性要求從父資料表到子資料表有一對一或一對多的聯結。 請變更 @filter_type 參數的值，或將 @join_unique_key 參數設定為 1。    |
+|   21539   |   16  |   否  |   由 \@filter_type 參數指定的邏輯記錄關聯性要求從父資料表到子資料表有一對一或一對多的聯結。 請變更 \@filter_type 參數的值，或將 \@join_unique_key 參數設定為 1。 |
 |   21540   |   16  |   否  |   您不可以將定義為資料類型 uniqueidentifier 且具有 rowguidcol 屬性的資料行卸除，因為合併式複寫使用這個資料行來進行追蹤。 若要卸除資料行，您必須先從所有發行集和訂閱中卸除資料表。 |
 |   21541   |   16  |   否  |   無法完成 ALTER TABLE 命令。 不要在發行資料表上執行 'ALTER TABLE table_name DISABLE TRIGGER ALL' 命令。 請重新發出多個 'ALTER TABLE table_name DISABLE TRIGGER trigger_name' 陳述式，以個別停用給定資料表上的每一個觸發程序。   |
 |   21542   |   16  |   否  |   執行 <%s> 時發現伺服器錯誤 %d。   |
@@ -7794,35 +7794,35 @@ ms.locfileid: "37316598"
 |   21575   |   16  |   否  |   為屬性 filter_type 指定的值無效。 有效的值為 1 (僅適用於聯結篩選)、2 (僅適用於邏輯記錄關聯性) 和 3 (適用於聯結篩選和邏輯記錄關聯性)。    |
 |   21576   |   16  |   否  |   無法在資料表 '%s' 和 '%s' 之間加入邏輯記錄關聯性，因為資料表 '%s' 的外部索引鍵資料行 '%s' 允許 NULL 值。 請更改資料行以不允許 NULL 值。   |
 |   21578   |   16  |   否  |   若要將 partition_options 設定為 2 (非重疊資料分割且每個資料分割有多個訂閱) 或 3 (非重疊資料分割且每個資料分割有一個訂閱)，必須啟用發行集 '%s'，才能使用資料分割群組的功能。 請使用 sp_changemergepublication 將 'use_partition_groups' 設定為 'true'。   |
-|   21579   |   16  |   否  |   發行集 "%s" 中的發行項 "%s" 不符合您指定的資料分割選項。 您無法為 @partition_options 參數指定值為 2 或 3 (非重疊資料分割)，因為發行集包含於多個聯結篩選中。 請為 @partition_options 參數選取值為 0 或 1，或使用 sp_dropmergefilter 卸除所有聯結篩選，只留下一個聯結篩選。   |
-|   21580   |   16  |   否  |   發行集 "%s" 中的發行項 "%s" 不符合您指定的資料分割選項。 您無法為 @partition_options 參數指定值為 2 或 3 (非重疊資料分割)，因為發行集同時包含於資料列篩選和聯結篩選。 請為 @partition_options 參數選取值為 0 或 1; 使用 sp_dropmergefilter 卸除聯結篩選; 或使用 sp_changemergepublication 變更資料列篩選。   |
-|   21581   |   16  |   否  |   發行集 "%s" 中的發行項 "%s" 不符合您指定的資料分割選項。 您無法為 @partition_options 參數指定值為 2 或 3 (非重疊資料分割)，因為發行項具有 join_unique_key 值為 0 的聯結篩選。 請為 @partition_options 參數選取值為 0 或 1，或使用 sp_changemergefilter 將 join_unique_key 的值指定為 1。    |
-|   21582   |   16  |   否  |   發行集 "%s" 中的發行項 "%s" 不符合您指定的資料分割選項。 您無法為 @partition_options 參數指定值為 2 或 3 (非重疊資料分割)，因為發行項與父發行項 "%s" 有直接或間接聯結篩選。 父發行項使用不一樣的 partition_options 值。 請使用 sp_changemergepublication 變更其中一個發行項的值。   |
+|   21579   |   16  |   否  |   發行集 "%s" 中的發行項 "%s" 不符合您指定的資料分割選項。 您無法為 \@partition_options 參數指定值為 2 或 3 (非重疊資料分割)，因為發行項包含於多個聯結篩選中。 請為 \@partition_options 參數選取值為 0 或 1，或使用 sp_dropmergefilter 卸除所有聯結篩選，只留下一個聯結篩選。 |
+|   21580   |   16  |   否  |   發行集 "%s" 中的發行項 "%s" 不符合您指定的資料分割選項。 您無法為 \@partition_options 參數指定值為 2 或 3 (非重疊資料分割)，因為發行項同時包含於資料列篩選和聯結篩選。 請為 \@partition_options 參數選取值為 0 或 1; 使用 sp_dropmergefilter 卸除聯結篩選; 或使用 sp_changemergepublication 變更資料列篩選。 |
+|   21581   |   16  |   否  |   發行集 "%s" 中的發行項 "%s" 不符合您指定的資料分割選項。 您無法為 \@partition_options 參數指定值為 2 或 3 (非重疊資料分割)，因為發行項具有 join_unique_key 值為 0 的聯結篩選。 請為 \@partition_options 參數選取值為 0 或 1，或使用 sp_changemergefilter 將 join_unique_key 的值指定為 1。  |
+|   21582   |   16  |   否  |   發行集 "%s" 中的發行項 "%s" 不符合您指定的資料分割選項。 您無法為 \@partition_options 參數指定值為 2 或 3 (非重疊資料分割)，因為發行項與父發行項 "%s" 有直接或間接聯結篩選。 父發行項使用不一樣的 partition_options 值。 請使用 sp_changemergepublication 變更其中一個發行項的值。  |
 |   21583   |   16  |   否  |   無法更新發行項 '%s' 中的資料行。 發行項的 partition_options 屬性值為 2 或 3 (非重疊資料分割)，而且資料行包含於資料列篩選和/或聯結篩選中。 在這種情況下，無法於訂閱者端或重新簽發者端更新資料行; 而必須於最上層簽發者端更新。 |
 |   21584   |   16  |   否  |   無法為發行項 '%s' 插入資料列。 資料列不屬於訂閱者的資料分割，而且發行項的 partition_options 屬性值為 2 或 3 (非重疊資料分割)。 非重疊資料分割不允許資料分割外的插入。   |
 |   21585   |   16  |   否  |   無法在發行集 '%s' 中指定自訂發行項的順序，因為發行集的相容性層級低於 90RTM。 請使用 sp_changemergepublication 將 publication_compatibility_level 設定為 90RTM。   |
 |   21597   |   16  |   否  |   發行項只包含 rowguidcol 資料行。 您必須至少再發行另一個資料行。    |
 |   21598   |   16  |   否  |   不允許修改由複寫建立的 DDL 觸發程序，因為需要它們來追蹤 DDL 的變更。  |
-|   21599   |   16  |   否  |   @article 和 @join_articlename 參數的值不可以相同。 請為兩個參數指定不同發行項; 不允許自我聯結。  |
+|   21599   |   16  |   否  |   參數 \@article 和 \@join_articlename 的值不能相同。 請為兩個參數指定不同發行項; 不允許自我聯結。    |
 |   21600   |   16  |   否  |   找不到非 SQL Server 簽發者 [%s]。 請執行 sp_helpdistpublishers 以檢視可用的簽發者清單。    |
-|   21601   |   16  |   否  |   Oracle 發行集的 @type 參數值必須是 'logbased'。    |
+|   21601   |   16  |   否  |   Oracle 發行集的 \@type 參數值必須是 'logbased'。   |
 |   21603   |   16  |   否  |   sp_refresh_heterogeneous_publisher 重新整理 Oracle 簽發者 '%s' 未成功。 Oracle 簽發者中繼資料已保留在其失敗的狀態，以協助診斷失敗的原因。 問題診斷並解決之後，請重新執行 sp_refresh_heterogeneous_publisher 以完成重新整理。 |
 |   21604   |   16  |   否  |   非 SQL Server 簽發者供應商無效。 請重新嘗試加入簽發者。 如果持續發生問題，請連絡 Microsoft 客戶支援服務。 |
 |   21605   |   16  |   否  |   非 SQL Server 簽發者必須於散發資料庫內容中設定。 請在散發資料庫內容中執行 sp_adddistpublisher。  |
 |   21606   |   16  |   否  |   參數 "%s" 僅適用於非 SQL Server 簽發者。 SQL Server 簽發者的這個參數值必須是 "%s"。  |
 |   21607   |   16  |   否  |   sp_refresh_heterogeneous_publisher 無法取得 Oracle 發行者 '%s' 的發行者資訊。 可能只能呼叫 sp_refresh_heterogeneous_publisher 來重新整理目前在散發者端定義的 Oracle 發行者。   |
-|   21608   |   16  |   否  |   @ignore_distributor 參數的值不能使用 TRUE。 非 SQL Server 簽發者的值必須是 FALSE。   |
+|   21608   |   16  |   否  |   \@ignore_distributor 參數的值不能使用 TRUE。 非 SQL Server 簽發者的值必須是 FALSE。  |
 |   21609   |   16  |   否  |   非 SQL Server 發行集不支援可更新的訂閱。 屬性 allow_sync_tran 和 allow_queued_tran 必須是 "false"。   |
 |   21610   |   16  |   否  |   sp_refresh_heterogeneous_publisher 嘗試重新整理簽發者 '%s' 的失敗，並未改變 Oracle 簽發者端的任何中繼資料。 請確認已識別正確的 Oracle 簽發者，並已符合重新整理 Oracle 簽發者的需求。 |
 |   21611   |   16  |   否  |   無法卸除散發簽發者 "%s"，因為該簽發者已定義發行集。 請先卸除發行集。   |
-|   21612   |   16  |   否  |   對於非 SQL Server 簽發者，@sync_method 參數的值必須是 "character" 或 "concurrent_c"。   |
+|   21612   |   16  |   否  |   對於非 SQL Server 簽發者，\@sync_method 參數的值必須是 "character" 或 "concurrent_c"。  |
 |   21613   |   16  |   否  |   在資料表 '%s' 中找不到條件約束資料行 '%s'。 |
 |   21614   |   16  |   否  |   在資料表 '%s' 中找不到索引資料行 '%s'。  |
 |   21615   |   16  |   否  |   找不到發行項 %s 的資料表資訊。 本機散發者快取可能已損毀。    |
 |   21616   |   16  |   否  |   在發行項中找不到資料行 [%s]。 請確定資料行存在基礎資料表中，而且包含於發行項中。  |
 |   21617   |   16  |   否  |   無法執行 SQL*PLUS。 請確認散發者端已安裝目前版本的 Oracle 用戶端程式碼。 如需詳細資訊，請參閱《SQL Server 線上叢書》中＜Oracle 簽發者疑難排解＞的 SQL Server 錯誤 21617。    |
 |   21618   |   16  |   否  |   簽發者 '%s' 不存在。 若要檢視簽發者清單，請使用預存程序 sp_helpdistpublisher。 |
-|   21619   |   16  |   否  |   必須同時提供 @SelectColumnList 和 @InsColumnList。 |
+|   21619   |   16  |   否  |   必須同時提供 \@SelectColumnList 和 \@InsColumnList。   |
 |   21620   |   16  |   否  |   可透過系統 Path 變數存取的 SQL*PLUS 版本，目前不足以支援 Oracle 發行。 請確認散發者端已安裝目前版本的 Oracle 用戶端程式碼。 如需詳細資訊，請參閱《SQL Server 線上叢書》中＜Oracle 簽發者疑難排解＞的 SQL Server 錯誤 21620。    |
 |   21621   |   16  |   否  |   無法建立公用同義字 %s。 請確認複寫管理使用者已被授與 CREATE SYNONYM 權限。 |
 |   21622   |   16  |   否  |   無法對公用同義字 %s 授與 SELECT 權限。 請確認複寫管理使用者擁有足夠權限。 |
@@ -7836,13 +7836,13 @@ ms.locfileid: "37316598"
 |   21630   |   16  |   否  |   無法判斷資料表 '%s' 是否仍然正在發行。 請連絡客戶支援服務。 |
 |   21631   |   16  |   否  |   無法取消發行資料表 '%s'; 遠端呼叫 Oracle 簽發者失敗。 請確認複寫管理使用者的登入能夠使用 SQL*PLUS 連接到 Oracle 簽發者。 如果您可以連接，但問題仍然存在，請卸除並重新設定 Oracle 發行功能。 |
 |   21632   |   16  |   否  |   非 SQL Server 發行集不支援參數 %s。 為這個參數指定的值必須是 %s。   |
-|   21633   |   16  |   否  |   無法加入發行集 '%s'，因為非 SQL Server 簽發者只支援 @sync_method 參數值 "character" 或 "concurrent_c"。 |
+|   21633   |   16  |   否  |   無法加入發行集 '%s'，因為非 SQL Server 簽發者只支援 \@sync_method 參數值 "character" 或 "concurrent_c"。    |
 |   21634   |   16  |   否  |   使用非 SQL Server 發行集時，參數 %s 不支援 '%s' 值。 值必須是 %s。  |
 |   21635   |   16  |   否  |   不支援指定的結構描述選項組合。 非 SQL Server 發行集只支援下列結構描述選項: 0x01、0x02、0x10、0x40、0x80、0x4000 和 0x8000。    |
 |   21637   |   16  |   否  |   %s 對異質性發行集而言是必要的。  |
-|   21638   |   16  |   否  |   您為 sp_addpublication 的 @repl_freq 參數指定 '%s' 值。 對於非 SQL Server 發行集，這需要 @sync_method 參數為下列其中一個值: %s。    |
-|   21639   |   16  |   否  |   異質性簽發者不可以使用信任連接，請將 @trusted 設定為 false。    |
-|   21640   |   16  |   否  |   非 SQL Server 簽發者不支援參數 @thirdparty_flag 的值為 1。 執行預存程序 sp_adddistpublisher 時，請為參數指定值為 0。  |
+|   21638   |   16  |   否  |   您為 sp_addpublication 的 \@repl_freq 參數指定 '%s' 值。 對於非 SQL Server 發行集，這需要 \@sync_method 參數為下列其中一個值: %s。  |
+|   21639   |   16  |   否  |   異質性發行者不可以使用信任連接，請將 \@trusted 設定為 false。   |
+|   21640   |   16  |   否  |   非 SQL Server 發行者不支援參數 \@thirdparty_flag 的值為 1。 執行預存程序 sp_adddistpublisher 時，請為參數指定值為 0。 |
 |   21641   |   16  |   否  |   "%s" 參數僅適用於非 SQL Server 簽發者。 對於 SQL Server 簽發者，其值必須是 NULL。    |
 |   21642   |   16  |   否  |   異質性發行者需要已連結伺服器。 已經存在名稱為 '%s' 的連結伺服器。 請移除連結的伺服器或選擇其他發行者名稱。  |
 |   21643   |   16  |   否  |   為參數 '%s' 指定的值必須是 MSSQLSERVER、ORACLE 或 ORACLE GATEWAY。  |
@@ -7851,7 +7851,7 @@ ms.locfileid: "37316598"
 |   21646   |   16  |   否  |   Oracle 伺服器 [%s] 已經定義為散發者 [%s].[%s] 上的簽發者 [%s]。 請卸除簽發者或卸除公用同義字 [%s]。   |
 |   21647   |   16  |   否  |   無法載入 Oracle 簽發者支援封裝。 請卸除複寫管理的使用者結構描述，並重新建立; 確認它已被授與文件權限。    |
 |   21649   |   16  |   否  |   無法變更屬性 '%s'。 非 SQL Server 簽發者不支援此屬性。    |
-|   21650   |   16  |   否  |   為發行項 '%s' 指定的 @rowcount_only 值不是 1。 對於來自非 SQL Server 簽發者的發行集中的發行項，1 是此參數唯一有效的設定值。  |
+|   21650   |   16  |   否  |   為發行項 '%s' 指定的 \@rowcount_only 值不是 1。 對於來自非 SQL Server 簽發者的發行集中的發行項，1 是此參數唯一有效的設定值。 |
 |   21651   |   16  |   否  |   無法對 Oracle 簽發者 '%s' 執行 HREPL.%s 要求。 請確認 Oracle 封裝程式碼存在簽發者上，而且複寫管理的使用者帳戶有足夠權限。  |
 |   21653   |   16  |   否  |   資料庫管理系統 (DBMS) %s %s 不存在。 請查詢 msdb.dbo.MSdbms 以確認支援的 DBMS 和版本。 |
 |   21654   |   16  |   否  |   資料類型 %s 不存在。 請查詢 msdb.dbo.sysdatatypemappings 以確認支援的資料類型和對應。 |
@@ -7860,8 +7860,8 @@ ms.locfileid: "37316598"
 |   21657   |   16  |   否  |   %s 的資料類型對應已經存在。    |
 |   21658   |   16  |   否  |   資料類型對應不存在。 請查詢 msdb.dbo.sysdatatypemappings 以確認對應清單。 |
 |   21659   |   16  |   否  |   無法為 SQL Server 簽發者執行此程序。 簽發者必須非 SQL Server 簽發者。 |
-|   21660   |   16  |   否  |   為發行項 '%s' 指定的 @full_or_fast 參數值必須是 0、1 或 2。    |
-|   21661   |   16  |   否  |   為發行項 '%s' 指定的 @shutdown_agent 參數值必須是 0 或 1。  |
+|   21660   |   16  |   否  |   為發行項 '%s' 指定的 \@full_or_fast 參數值必須是 0、1 或 2。   |
+|   21661   |   16  |   否  |   為發行項 '%s' 指定的 \@shutdown_agent 參數值必須是 0 或 1。 |
 |   21662   |   16  |   否  |   找不到或是不支援非 SQL Server 簽發者上的來源物件 [%s].[%s]。 如果物件存在，請確認該物件符合發行的需求。  |
 |   21663   |   16  |   否  |   找不到來源資料表 [%s].[%s] 的有效主索引鍵。 需要有效的主索引鍵，才能發行資料表。 請在來源資料表上加入或更正主索引鍵定義。    |
 |   21664   |   16  |   否  |   索引 [%s] 包含唯一可為 Null 的資料行。 |
@@ -7889,7 +7889,7 @@ ms.locfileid: "37316598"
 |   21686   |   16  |   否  |   作業 "%s" 無效。 有效的作業為 "add"、"drop" 和 "help"。    |
 |   21687   |   16  |   否  |   只有 Oracle 簽發者支援結構描述篩選。 簽發者 "%s" 是 "%s" 簽發者。    |
 |   21688   |   16  |   否  |   目前的登入 '%s' 不是位於簽發者 '%s' 端任何發行集的發行集存取清單 (PAL) 中。 請使用 PAL 中的登入，或將此登入加入 PAL。  |
-|   21689   |   16  |   否  |   對加入和卸除結構描述篩選作業而言，NULL 的 @schema 值是無效的。  |
+|   21689   |   16  |   否  |   對加入和卸除結構描述篩選作業而言，NULL 的 \@schema 值是無效的。 |
 |   21690   |   10  |   否  |   訂閱者和簽發者相同時，訂閱者資料庫不可與簽發者資料庫相同   |
 |   21691   |   10  |   否  |   應該在訂閱資料庫呼叫 sp_mergesubscription_cleanup  |
 |   21692   |   16  |   否  |   無法對發行集 '%s' 的發行項 '%s' 編寫訂閱者預存程序的指令碼  |
@@ -7911,18 +7911,18 @@ ms.locfileid: "37316598"
 |   21711   |   16  |   否  |   Microsoft SQL Server Upload Only Conflict Resolver  |
 |   21712   |   16  |   否  |   Microsoft SQL Server 預存程序解析程式   |
 |   21715   |   16  |   否  |   無法註冊發行項解析程式 %s。 如果執行 SQL Server 的帳戶沒有散發資料庫的存取權，就會發生這個問題。 請以手動方式將類別識別碼和自訂解析程式名稱加入散發資料庫中的 MSmerge_articleresolver 資料表。   |
-|   21717   |   16  |   否  |   發行項解析程式名稱不可以是空的字串或 NULL。 指定 @article_resolver 參數有效的值。 |
-|   21718   |   16  |   否  |   對 COM 解析程式而言，@resolver_clsid 不可以是空的字串或 NULL。 指定 @resolver_clsid 有效的值。   |
-|   21719   |   10  |   否  |   訂閱者 '%s':'%s' 未於簽發者端標示要重新初始化，因為訂閱是匿名訂閱或無效。 請確認已為 sp_reinitmergesubscription 的 @subscriber 和 @subscriber_db 參數指定有效值。   |
-|   21720   |   16  |   否  |   找不到與 @dynamic_snapshot_jobid 或 @dynamic_snapshot_jobname 參數中指定之識別碼或名稱相符的工作。 請確認為這些參數指定的值。   |
+|   21717   |   16  |   否  |   發行項解析程式名稱不可以是空的字串或 NULL。 請為 \@article_resolver 參數指定有效的值。    |
+|   21718   |   16  |   否  |   對 COM 解析程式而言，\@resolver_clsid 不可以是空的字串或 NULL。 請為 \@resolver_clsid 參數指定有效的值。 |
+|   21719   |   10  |   否  |   訂閱者 '%s':'%s' 未於簽發者端標示要重新初始化，因為訂閱是匿名訂閱或無效。 請確認已為 sp_reinitmergesubscription 的 \@subscriber 和 \@subscriber_db 參數指定有效值。 |
+|   21720   |   16  |   否  |   找不到有工作符合參數 \@dynamic_snapshot_jobid 或 \@dynamic_snapshot_jobname 中指定的識別碼或名稱。 請確認為這些參數指定的值。 |
 |   21721   |   10  |   否  |   UserScripts |
 |   21722   |   16  |   否  |   無法加入擴充觸發程序來複寫 '%.*ls' 事件。    |
-|   21723   |   16  |   否  |   為 '%s' 程序的 @pubid 參數指定的值無效或是 NULL。 請確認合併代理程式可以正常執行。 如果問題仍然存在，請重新初始化訂閱。 |
+|   21723   |   16  |   否  |   為 '%s' 程序的 \@pubid 參數指定的值無效或是 NULL。 請確認合併代理程式可以正常執行。 如果問題仍然存在，請重新初始化訂閱。    |
 |   21724   |   10  |   否  |   無法用 CASCADE 選項加入外部索引鍵 %s，因為資料表 %s 已發行。 請在外部索引鍵定義中加入 NOT FOR REPLICATION 子句。  |
 |   21725   |   16  |   否  |   無法更改檢視表。 複寫成資料表的索引檢視表無法更改為非索引檢視表。 請先將檢視表從發行集中卸除後，再嘗試更改檢視表。  |
 |   21727   |   14  |   否  |   無法完成複寫作業。 目前使用者的安全性檢查失敗。 只有系統管理員 (sysadmin) 固定伺服器角色、db_owner 或 db_ddladmin 固定伺服器角色的成員，才能執行這項作業。  |
 |   21728   |   16  |   否  |   唯有在發行項使用邏輯記錄衝突解決的情況下，該發行項才能支援邏輯記錄層級之衝突的偵測。 |
-|   21729   |   16  |   否  |   @keep_partition_changes 屬性不可以設定為 "true"。 這是因為 @publication_compatibility_level 屬性設定為 90RTM 或更高的值，而 @use_partition_groups 屬性設定為 "true"。 請使用較低的相容性層級，或將 @use_partition_groups 設定為 "false"。    |
+|   21729   |   16  |   否  |   無法將 \@keep_partition_changes 屬性設定為 "true"。 因為 \@publication_compatibility_level 屬性設定為 90RTM 或更高，而且 \@use_partition_groups 屬性設定為 "true"。 請使用較低的相容性層級，或將 \@use_partition_groups 設定為 "false"。    |
 |   21730   |   16  |   否  |   無法複寫資料表 '%s'，因為其中包含不精確的主索引鍵資料行，請重新建立不具 'persisted' 子句的資料表，然後再試一次。  |
 |   21731   |   16  |   否  |   無法加入條件約束或不具外顯名稱的預設值，因為資料表包含於複寫 DDL 事件的發行集中。 請為條件約束指定唯一的名稱，然後重新發出該 DDL 陳述式。    |
 |   21732   |   16  |   否  |   若要在複寫中使用 Data Transformation Services (DTS) 封裝，需要不是 NULL 或空白的密碼。 請為參數 '%s' 指定有效的值。   |
@@ -7938,7 +7938,7 @@ ms.locfileid: "37316598"
 |   21742   |   16  |   否  |   Oracle 簽發者的名稱為 '%s'，而 Oracle 訂閱者的名稱為 '%s'。 雙向 Oracle 發行需要 Oracle 簽發者和訂閱者的名稱相同。    |
 |   21743   |   16  |   否  |   無法擷取 Oracle 訂閱者 '%s' 的原始者資訊。   |
 |   21744   |   16  |   否  |   Oracle 雙向發行需要 '%s' 參數的值為 '%s'。    |
-|   21745   |   16  |   否  |   無法產生篩選檢視表或程序。 請確認指定給 sp_addarticle 的 @filter_clause 參數的值，可加入 SELECT 陳述式的 WHERE 子句中，並產生有效的查詢。  |
+|   21745   |   16  |   否  |   無法產生篩選檢視表或程序。 請確認指定給 sp_addarticle 的 \@filter_clause 參數的值，可加入 SELECT 陳述式的 WHERE 子句中，並產生有效的查詢。 |
 |   21746   |   16  |   否  |   '%s' 字元長度不得超過 %d。   |
 |   21747   |   16  |   否  |   無法建立至 Oracle 簽發者 '%s' 的連接。 請確認連接資訊，並確定您可以透過 SQL*PLUS 等工具連接到簽發者。    |
 |   21748   |   16  |   否  |   發行項在散發者端已卸除，但在簽發者 '%s' 端的資訊卻尚未卸除。 此處不必採取任何動作; 如果卸除簽發者，就會清除資訊。    |
@@ -7946,26 +7946,26 @@ ms.locfileid: "37316598"
 |   21750   |   16  |   否  |   資料表 %s 沒有異動複寫必要的主索引鍵。 請在資料表上建立主索引鍵。   |
 |   21751   |   16  |   否  |   無法將檢視表 %s 當成資料表發行，因為該檢視表沒有唯一的叢集索引。 請將檢視表當成檢視表發行，或加入唯一的叢集索引。   |
 |   21752   |   16  |   否  |   目前使用者 %s 對資料表 %s 沒有執行 SELECT 的權限。 使用者必須擁有執行 SELECT 的權限，才能於訂閱者端擷取在佇列中有暫止更新的資料列。    |
-|   21753   |   16  |   否  |   sp_getqueuedrows 的 @tablename 參數中所指定的資料表 %s 不是任何使用中之已初始化佇列式訂閱的一部分。 請執行快照集代理程式、散發代理程式和佇列讀取器代理程式，以確定您的佇列式訂閱已正確初始化。   |
+|   21753   |   16  |   否  |   sp_getqueuedrows 的 \@tablename 參數中所指定的資料表 %s 不是任何使用中之已初始化佇列式訂閱的一部分。 請執行快照集代理程式、散發代理程式和佇列讀取器代理程式，以確定您的佇列式訂閱已正確初始化。  |
 |   21754   |   16  |   否  |   處理已結束。 sp_getqueuedrows 的結果集大於程序可傳回的大小上限 16,000。 請執行佇列讀取器代理程式，以排清於訂閱者端的佇列，然後再重新執行此程序。    |
 |   21755   |   16  |   否  |   無法將 '%s' 標示為系統物件。 |
 |   21756   |   16  |   否  |   根據發行項設定，資料表 %s 應該有識別資料行，但是卻沒有。 請使用 sp_helparticle 確認發行項設定，並視需要使用 sp_changearticle 變更設定。   |
-|   21757   |   16  |   否  |   訂閱是唯讀的。 與此訂閱進行同步處理的發行集允許於訂閱者端更新，但 sp_addsubscription 的 @update_mode 參數值卻指定為 'read-only'。 若要允許更新，您必須卸除再重新建立訂閱，並為 @update_mode 指定不同的值。    |
+|   21757   |   16  |   否  |   訂閱是唯讀的。 與此訂閱進行同步處理的發行集允許於訂閱者端更新，但 sp_addsubscription 的 \@update_mode 參數值卻指定為 'read-only'。 若要允許更新，您必須卸除再重新建立訂閱，並為 \@update_mode 指定不同的值。  |
 |   21758   |   16  |   否  |   無法為簽發者 %s，資料庫 %s，發行集 %s 的訂閱，找到有效的佇列讀取器代理程式識別碼。 對更新訂閱者發行集的指定訂閱並未初始化。 請執行快照集代理程式、散發代理程式和佇列讀取器代理程式，以初始化訂閱。    |
 |   21759   |   16  |   否  |   無法將資料行 '%s' 加入至資料表 '%s'。 資料表已包含合併式發行集的發行項所允許的最大資料行數目 (246 個資料行)。 |
 |   21760   |   11  |   否  |   無法執行 'master' 資料庫中的複寫指令碼; 目前的工作階層將結束。 指令碼必須在散發資料庫中執行，而且 master 資料庫不能做為散發資料庫。    |
 |   21761   |   20  |   否  |   無法執行複寫指令碼; 目前的工作階層將結束。 請檢查指令碼執行期間由 SQL Server 傳回的任何錯誤。  |
 |   21762   |   10  |   否  |   散發資料庫 '%s' 的相容性層級為 %d，這與 master 資料庫不同。 這兩個相容性層級必須相同，所以正在將散發資料庫的層級變更為 %d。 此為參考用訊息， 使用者不必採取任何動作。   |
 |   21763   |   16  |   否  |   Message Queuing Service 尚未執行。 請啟動此服務，然後再試一次該作業。 |
-|   21764   |   16  |   否  |   無法建立發行集。 只有在 Microsoft Windows NT 平台上，才支援為參數 @queue_type 指定 'msmq' 值。 請為此參數指定 'sql' 值。 |
+|   21764   |   16  |   否  |   無法建立發行集。 只有在 Microsoft Windows NT 平台上，才支援為參數 \@queue_type 指定 'msmq' 值。 請為此參數指定 'sql' 值。    |
 |   21765   |   10  |   否  |   資料行 msrepl_tran_version 已預先定義，並允許 NULL。 將卸除此資料行，並重新建立為不允許更新訂閱者為 NULL。 |
-|   21766   |   16  |   否  |   資料表 %s 包含標示為不可複寫的識別資料行，但 sp_addarticle 的 @identitymanagementoption 參數卻設定為 'none'。 若要支援立即更新，請為 @identitymanagementoption 指定值為 'manual' 或 'auto'。    |
+|   21766   |   16  |   否  |   資料表 %s 包含標示為不可複寫的識別資料行，但 sp_addarticle 的 \@identitymanagementoption 參數卻設定為 'none'。 若要支援立即更新訂閱，請為 \@identitymanagementoption 指定值為 'manual' 或 'auto'。  |
 |   21767   |   10  |   否  |   警告: 參數 '%s' 已經過時，僅限回溯相容性使用。 未來的版本亦不再適用。 請改用參數 '%s' 取代本參數。  |
-|   21768   |   16  |   否  |   為遠端散發者執行 sp_adddistributor 時，您必須使用密碼。 為 @password 參數指定的密碼必須是在簽發者端和散發者端執行程序時密碼都一樣。 |
+|   21768   |   16  |   否  |   為遠端散發者執行 sp_adddistributor 時，您必須使用密碼。 為 \@password 參數指定的密碼必須是在發行者端和散發者端執行程序時密碼都一樣。    |
 |   21769   |   10  |   否  |   不支援自訂資料類型對應。 您必須驗證對應的正確性。 如果對應不正確，則在將資料從簽發者移到訂閱者時，可能會發生錯誤。  |
 |   21770   |   10  |   否  |   從 '%s' 到 '%s' 的資料類型對應不存在。 檢閱來源和目的地資料類型、長度、有效位數、小數位數和 Null 屬性。 查詢系統資料表 msdb.dbo.sysdatatypemappings 中支援的對應清單。   |
 |   21771   |   16  |   否  |   %s 不在支援的範圍 %d 和 %d 之內。  |
-|   21772   |   16  |   否  |   屬性 "%s" 要求 @force_invalidate_snapshot 和 @force_reinit_subscription 參數須設為 "true"。    |
+|   21772   |   16  |   否  |   屬性 "%s" 需要參數 \@force_invalidate_snapshot 和 \@force_reinit_subscription 都設定為 "true"。  |
 |   21773   |   10  |   否  |   由於無法存取的檔案，因此無法開啟散發資料庫 '%s'。 將卸除資料庫，但不會進行散發資料庫清除工作。 如需有關為什麼無法存取資料庫檔案的詳細資訊，請檢查資料庫和伺服器錯誤記錄檔。 |
 |   21774   |   16  |   否  |   唯有非 SQL Server 簽發者才支援此程序。 執行程序的簽發者 '%s' 是 SQL Server 簽發者。    |
 |   21775   |   16  |   否  |   無法產生發行項 '%s' 的資料行點陣圖。  |
@@ -7977,7 +7977,7 @@ ms.locfileid: "37316598"
 |   21781   |   16  |   否  |   無法擷取異質性中繼資料。 請確認連接資訊    |
 |   21782   |   16  |   否  |   無法將主索引鍵資料行 '%s' 加入至發行項 '%s'。 如果簽發者是非 SQL Server 簽發者，主索引鍵可能違反 SQL Server 的資料行數目和長度限制。 如需詳細資訊，請參閱由 sp_addarticle 傳回的錯誤。 |
 |   21783   |   16  |   否  |   無法將簽發者觸發程序和發行項記錄資料表，加入至發行項 '%s' 的 Oracle 簽發者。 請確認連接資訊，並確定您可以透過 SQL*PLUS 等工具連接到簽發者。 請確定複寫管理的使用者結構描述擁有必要的權限。 |
-|   21784   |   16  |   否  |   您必須為 @rowfilter 參數指定非 NULL 值。 |
+|   21784   |   16  |   否  |   您必須為 \@rowfilter 參數指定非 NULL 值。    |
 |   21785   |   16  |   否  |   無法查詢簽發者 '%s' 的 Oracle XactSet Job 屬性。  |
 |   21786   |   16  |   否  |   無法重新整理簽發者 '%s' 的 Oracle XactSet Job。   |
 |   21787   |   16  |   否  |   無法查詢簽發者 '%s' 的 Oracle Xact 批次啟用旗標。  |
@@ -7987,7 +7987,7 @@ ms.locfileid: "37316598"
 |   21791   |   16  |   否  |   資料表 '%s.%s' 已經出現在 Oracle Gateway 簽發者 '%s' 上的交易式發行集中。 使用 Oracle Gateway 選項時，使用異動複寫發行的資料表只能包含於一個發行集中。 若要在多個發行集中發行此資料表，您必須將 Oracle Publisher 重新設定成使用 Oracle Complete 選項。    |
 |   21792   |   16  |   否  |   資料表 '%s.%s' 已經出現在簽發者 '%s' 上的交易式發行集 '%s' 中。 Oracle Gateway 發行選項 (預設值) 允許將資料表以發行項的形式包含在任何數目的快照式發行集中，但只能包含在一個交易式發行集中。 若要在多個交易式發行集中發行資料表，請使用 Oracle Complete 發行選項。 若要變更發行選項，您必須卸除再重新設定簽發者。   |
 |   21793   |   16  |   否  |   只有 SQL Server 的 Enterprise Edition 和 Developer Edition 支援非 SQL Server 簽發者。 此執行個體的版本為 %s。    |
-|   21794   |   16  |   否  |   為 @propertyname 參數指定的值無效。 請使用下列其中一個值: %s。  |
+|   21794   |   16  |   否  |   為 \@propertyname 參數指定的值無效。 請使用下列其中一個值: %s。 |
 |   21795   |   16  |   否  |   為屬性 %s 指定的值無效。 請使用下列其中一個值: %s。  |
 |   21796   |   16  |   否  |   屬性 "xactsetjobinterval" 的指定值必須大於或等於 0。  |
 |   21797   |   16  |   否  |   無法建立代理程式作業。 '%s' 必須是有效的 Windows 登入，格式為: 'MACHINE\Login' 或 'DOMAIN\Login'。 請參閱 '%s' 的文件集。    |
@@ -7997,11 +7997,11 @@ ms.locfileid: "37316598"
 |   21801   |   16  |   否  |   預存程序 sp_createagentparameter 無法在系統資料表 msdb.dbo.MSagentparameterlist 中加入一或多個參數。 請檢查由 sp_createagentparameter 傳回的任何錯誤，和 sp_createagentparameter 執行期間由 SQL Server 傳回的錯誤。    |
 |   21802   |   16  |   否  |   代理程式設定檔建立程序無法驗證指定的代理程式參數值。 '%s' 不是 '%s' 參數的有效值。 其值必須是小於或等於 '%d' 的整數。 請確認已正確安裝複寫。   |
 |   21803   |   16  |   否  |   無法更新代理程式參數中繼資料。 複寫無法將參數 '%s' 插入資料表 '%s' 中。 請確認是否已正確安裝複寫。 檢查 sp_createagentparameter 執行期間由 SQL Server 傳回的錯誤。    |
-|   21804   |   16  |   否  |   為 sp_getagentparameterlist 的 @agent_type 參數指定的值 '%d' 無效。 請指定 1、2、3、4 或 9 的有效值。 |
+|   21804   |   16  |   否  |   為 sp_getagentparameterlist 的 \@agent_type 參數指定的值 '%d' 無效。 請指定 1、2、3、4 或 9 的有效值。    |
 |   21805   |   16  |   否  |   代理程式設定檔建立程序無法驗證指定的代理程式參數值。 '%s' 不是 '%s' 參數的有效值。 值必須是整數。 請確認已正確安裝複寫，而且是以有效值叫用 sp_add_agent_parameter。    |
 |   21806   |   16  |   否  |   代理程式設定檔建立程序無法驗證指定的代理程式參數值: profile_id %d 不存在，或是不支援參數 %s。 值必須是整數。 請確認已正確安裝複寫，而且是以有效值叫用 sp_add_agent_parameter。    |
-|   21807   |   16  |   否  |   對 .NET Assembly Business Logic Handler 而言，@resolver_clsid 必須指定為 NULL。  |
-|   21808   |   16  |   否  |   對 .NET Assembly Business Logic Handler 而言，@resolver_info 必須包含 '%s' 中、實作 Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule 介面的類別名稱。  |
+|   21807   |   16  |   否  |   對 .NET Assembly Business Logic Handler 而言，\@resolver_clsid 必須指定為 NULL。 |
+|   21808   |   16  |   否  |   對 .NET Assembly Business Logic Handler 而言，\@resolver_info 必須包含 '%s' 中、實作 Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule 介面的類別名稱。 |
 |   21809   |   10  |   否  |   資料庫 '%ls' 的 DDL 複寫未啟用，因為該複寫的相容性層級低於 80。  |
 |   21810   |   16  |   否  |   識別欄位只能加入至具 'Not For Replication' 子句的已發行資料表。    |
 |   21811   |   16  |   否  |   無法卸除資料行 '%s'，因為它正由複寫使用: 它是在篩選或檢視表中由發行項 '%s' 參考。 若要卸除該資料行，您必須先從發行項中移除篩選。 |
@@ -8022,7 +8022,7 @@ ms.locfileid: "37316598"
 |   21826   |   16  |   否  |   屬性 '%s' 只對 %s 訂閱才有效。 請針對 %s 訂閱使用 '%s'。    |
 |   21827   |   16  |   否  |   %s 參數已被取代，且不應該繼續使用。 如需詳細資訊，請參閱 '%s' 的文件集。  |
 |   21828   |   16  |   否  |   找不到 jobstep_uid (%s) 的 Proxy 帳戶。  |
-|   21830   |   16  |   否  |   您無法為發行項 '%s' 指定 schema_option 0x4 (編寫識別指令碼做為識別，而非基底資料類型)。 為 @identityrangemanagementoption 參數指定的值為 NONE。 對於不支援佇列更新訂閱的發行集而言，若要將識別當成識別來複寫，此值必須為 MANUAL 或 AUTO。   |
+|   21830   |   16  |   否  |   您無法為發行項 '%s' 指定 schema_option 0x4 (編寫識別指令碼做為識別，而非基底資料類型)。 為參數 \@identityrangemanagementoption 指定的值為 NONE。 對於不支援佇列更新訂閱的發行集而言，若要將識別當成識別來複寫，此值必須為 MANUAL 或 AUTO。  |
 |   21831   |   16  |   否  |   %s 已經存在。 請使用 '%s' 來變更任何設定/屬性。  |
 |   21832   |   16  |   否  |   唯有系統管理員 (sysadmin) 固定伺服器角色的成員，才能在不需指定 %s 的情況下執行此作業。    |
 |   21833   |   16  |   否  |   在 Oracle 簽發者 '%s' 端建立追蹤事件時發生錯誤。 無法公佈該追蹤事件。    |
@@ -8031,7 +8031,7 @@ ms.locfileid: "37316598"
 |   21836   |   16  |   否  |   在重設訂閱 xact_seqno 之前，必須以單一訂閱資料流模式執行散發代理程式。   |
 |   21837   |   16  |   否  |   此訂閱的複寫代理程式作業 (%s) 已經存在。  |
 |   21838   |   16  |   否  |   %s 參數在此程序中已被取代。 今後在呼叫 '%s' 時，需要指定其值。   |
-|   21839   |   16  |   否  |   發行項 '%s' 無法支援 schema_option 0x20 或 0x2000000000，因為它包含以 CLR 類型資料行作為依據的計算資料行、檢查/預設條件約束或主索引鍵。請變更 @schema_option 設定，然後再試一次。    |
+|   21839   |   16  |   否  |   發行項 '%s' 無法支援 schema_option 0x20 或 0x2000000000，因為它包含以 CLR 類型資料行作為依據的計算資料行、檢查/預設條件約束或主索引鍵。請變更 \@schema_option 設定，然後再試一次。   |
 |   21840   |   16  |   否  |   無法將 CLR 類型式的計算資料行或檢查條件約束加入到資料表 '%s'，因為發行項 '%s' 支援 schema_option 0x20。  |
 |   21841   |   10  |   否  |   DDL 複寫正在強迫重新初始化，可能是發行集 '%s' 使用字元模式 bcp，或者時間戳記/識別欄位複寫為限發行項 '%s' 使用的基底類型。    |
 |   21842   |   16  |   否  |   當 %s 設定為 %s 時，只能為異質性發行集指定/變更 %s。   |
@@ -8072,7 +8072,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-22000-to-22999"></a>錯誤 22,000 到 22,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   22101   |   16  |   否  |   為 CHANGE_TRACKING_IS_COLUMN_IN_MASK 函數的 change_columns 引數提供的值無效。 值必須是 CHANGETABLE(CHANGES ...) 函數傳回的位元遮罩。   |
 |   22102   |   16  |   否  |   為 CHANGETABLE 函數的 CHANGES 選項提供的引數無效。    |
@@ -8112,10 +8112,10 @@ ms.locfileid: "37316598"
 |   22519   |   16  |   否  |   無法在資料表 "%s" 和 "%s" 之間加入邏輯記錄關聯性，因為聯結子句中參考了 text、image、ntext、xml、varchar(max)、nvarchar(max) 或 varbinary(max) 的資料行。   |
 |   22520   |   10  |   否  |   已針對發行項變更篩選類型。 給定資料分割的訂閱者針對本發行項所做的所有暫止或未來變更，將不再傳播給其他資料分割的訂閱者。 請查閱文件集以取得詳細資料。 |
 |   22521   |   10  |   否  |   無法同步處理此資料列，因為此資料列已由複寫外的其他處理所更新。    |
-|   22522   |   16  |   否  |   無法發行 '%s' 發行項，因為它已在另一個合併式發行集中發行。 發行項的 sp_addmergearticle 的 @partition_options 參數值如果是 3 (非重疊資料分割，而且每個資料分割只有單一訂閱)，就不能包含在多個發行集或訂閱中，而且無法重新發行。 若要將發行項包含在多個發行集中，請使用 sp_changemergearticle 為現有發行項的 partition_options 屬性指定不同的值。    |
-|   22523   |   16  |   否  |   發行項不可以同時使用 @partition_options = 2 或 3 (非重疊資料分割)，又是邏輯記錄關聯性的一部分。 請檢查發行項 "%s"。    |
-|   22524   |   16  |   否  |   發行項 '%s' 已在另一個合併式發行集中發行，而且針對 sp_addmergearticle 的 @partition_options 參數指定不同的值。 在所有合併式發行集中，指定值都必須相同。 請指定與現有發行項相同的值，或使用 sp_changemergearticle 變更現有的發行項。  |
-|   22525   |   16  |   否  |   如果發行集 "%s" 包含使用 @partition_options = 3 的發行項，就不允許每個資料分割有多項訂閱。    |
+|   22522   |   16  |   否  |   無法發行 '%s' 發行項，因為它已在另一個合併式發行集中發行。 發行項的 sp_addmergearticle 的 \@partition_options 參數值如果是 3 (非重疊資料分割，而且每個資料分割只有單一訂閱)，就不能包含在多個發行集或訂閱中，而且無法重新發行。 若要將發行項包含在多個發行集中，請使用 sp_changemergearticle 為現有發行項的 partition_options 屬性指定不同的值。   |
+|   22523   |   16  |   否  |   發行項不可以同時使用 \@partition_options = 2 或 3 (非重疊資料分割)，又是邏輯記錄關聯性的一部分。 請檢查發行項 "%s"。   |
+|   22524   |   16  |   否  |   發行項 '%s' 已在另一個合併式發行集中發行，而且針對 sp_addmergearticle 的 \@partition_options 參數指定不同的值。 在所有合併式發行集中，指定值都必須相同。 請指定與現有發行項相同的值，或使用 sp_changemergearticle 變更現有的發行項。 |
+|   22525   |   16  |   否  |   如果發行集 "%s" 包含使用 \@partition_options = 3 的發行項，就不允許每個資料分割有多項訂閱。   |
 |   22526   |   16  |   否  |   為 %s 指定了無效的值。 有效值為 0 (無)、1 (強制的資料分割)、2 (非重疊資料分割且每個資料分割有多個訂閱) 和 3 (非重疊資料分割且每個資料分割有單一訂閱)。   |
 |   22527   |   16  |   否  |   為 %s 指定了無效的值。 有效值為 'day'、'days'、'dd'、'year'、'years'、'yy'、'yyyy'、'month'、'months'、'mm'、'week'、'weeks'、'wk'、'hour'、'hours'、'hh'、'minute'、'minutes' 及 'mi'。  |
 |   22528   |   16  |   否  |   無法針對發行集 "%s" 使用 "days" 以外的保留週期單位，因為該發行集的相容性層級低於 90。 請使用 sp_changemergepublication 將 publication_compatibility_level 設定為 90RTM。   |
@@ -8132,8 +8132,8 @@ ms.locfileid: "37316598"
 |   22539   |   16  |   否  |   當參數 %s 設定為 %s 時，使用參數 %s 是無效的。 |
 |   22540   |   16  |   否  |   無法將發行集 "%s" 變更成使用 "character" 的 sync_mode，因為其中包含一或多個邏輯記錄關聯性。   |
 |   22541   |   16  |   否  |   無法在 "%s" 發行集中加入邏輯記錄關聯性，因為它使用 "character" 的 sync_mode，且可能有 SQL Server Compact Edition 訂閱者。    |
-|   22542   |   16  |   否  |   屬性 @subscriber_upload_options 的值無效。 有效值為 0 (允許上傳)、1 (停用上傳)、2 (停用上傳且禁止訂閱者變更) 和 3 (disable_outofpartition_subscriber_changes)。 |
-|   22543   |   16  |   否  |   發行集屬性 @allow_partition_realignment 設定為 "false" 時，發行集內所有發行項的發行項屬性 @subscriber_upload_options 都必須設定為停用上傳。   |
+|   22542   |   16  |   否  |   屬性 \@subscriber_upload_options 的值無效。 有效值為 0 (允許上傳)、1 (停用上傳)、2 (停用上傳且禁止訂閱者變更) 和 3 (disable_outofpartition_subscriber_changes)。    |
+|   22543   |   16  |   否  |   發行集屬性 \@allow_partition_realignment 設定為 "false" 時，發行集內所有發行項的發行項屬性 \@subscriber_upload_options 都必須設定為停用上傳。 |
 |   22544   |   10  |   否  |   警告: sp_mergecleanupmetadata 程序已被取代。 在 SQL Server 2000 SP1 和更新的版本中，合併代理程式會在每次執行時呼叫 sp_mergemetadataretentioncleanup，因此不需要手動清除中繼資料。 忽略傳入參數並呼叫 sp_mergemetadataretentioncleanup。   |
 |   22545   |   16  |   否  |   無法在發行集 "%s" 中加入邏輯記錄關聯性，因為它允許 Web 同步處理。 |
 |   22546   |   16  |   否  |   無法將發行集 "%s" 變更為允許 Web 同步處理，因為其中包含一或多個邏輯記錄關聯性。   |
@@ -8142,8 +8142,8 @@ ms.locfileid: "37316598"
 |   22549   |   16  |   否  |   此訂閱的共用散發代理程式 (%s) 已經存在。  |
 |   22550   |   16  |   否  |   當 identityrangemanagementoption 設定為自動 (Auto) 時，無法從垂直資料分割中卸除識別欄位 "%s"。 |
 |   22551   |   16  |   否  |   類型 "%s" 無效。 有效的類型為 "merge"、"tran" 和 "both"。  |
-|   22552   |   16  |   否  |   "@resync_type" 設定為 2 時，必須提供參數 "@resync_date_str" 的有效值。    |
-|   22553   |   16  |   否  |   參數 "@resync_type" 設定為 "%d"，但此訂閱從未成功驗證過。    |
+|   22552   |   16  |   否  |   "\@resync_type" 設定為 2 時，必須提供參數 "\@resync_date_str" 的有效值。  |
+|   22553   |   16  |   否  |   參數 "\@resync_type" 設定為 "%d"，但此訂閱從未成功驗證過。   |
 |   22554   |   16  |   否  |   無法將發行集 "%s" 變更成使用 sync_mode 為 "character"，因為它使用了 "day" 之外的保留週期單位。 請使用 sp_changemergepublication 將保留週期單位設定為 "day"。   |
 |   22555   |   16  |   否  |   無法將 "%s" 發行集的保留週期單位設定為 "day" 之外的值，因為它使用 "character" 的 sync_mode，且可能有 SQL Server Compact Edition 訂閱者。 |
 |   22556   |   16  |   否  |   屬性 "%s" 的值無效。 有效的值為 1 和 0。  |
@@ -8168,7 +8168,7 @@ ms.locfileid: "37316598"
 |   22575   |   16  |   否  |   當發行項屬性 'published_in_tran_pub' 設定為 'true'，則發行項屬性 'upload_options' 必須設定為停用上傳。 |
 |   22576   |   10  |   否  |   為 [%s].[%s].[%s] 指定的 %d failover_mode 值無效，正在設定 0 [immediate]。   |
 |   22577   |   16  |   否  |   無法加入訂閱，因為會超過 SQL Workgroup Edition 發行者 '%s' 所允許的 %s 訂閱數目。 允許的最大數目為 %d。 |
-|   22578   |   16  |   否  |   無法將發行集 "%s" 變更為不允許 use_partition_groups，因為發行集包含一或多個邏輯記錄關聯性。 使用邏輯記錄關聯性時，發行集必須將 @use_partition_groups 屬性設定為 'true'。    |
+|   22578   |   16  |   否  |   無法將發行集 "%s" 變更為不允許 use_partition_groups，因為發行集包含一或多個邏輯記錄關聯性。 使用邏輯記錄關聯性時，發行集必須將 \@use_partition_groups 屬性設定為 'true'。   |
 |   22579   |   16  |   否  |   找不到發行集 '%s' 的訂閱，但有共用代理程式存在。 若要指定透過共用代理程式複寫的發行集訂閱，請指定 '%s' 做為發行集名稱。   |
 |   22580   |   16  |   否  |   無法發行資料庫 '%s'，因為它已標示為在不同伺服器上發行。 嘗試發行此資料庫之前，請執行 sp_replicationdboption，並指定 'publish' 和 'merge publish' 的值為 FALSE。    |
 |   22581   |   16  |   否  |   無法在發行集 '%s' 中加入或修改發行項 '%s'。 對於 'sync_mode' 為 1 (字元模式) 的發行集，系統不支援複寫 FILESTREAM 資料行。 請使用 sp_addmergepublication 或 sp_changemergepublication 指定發行集的 'sync_mode' 為 0 (原生模式)，或是垂直分割發行項，使 FILESTREAM 資料行不在複寫範圍內。    |
@@ -8186,7 +8186,7 @@ ms.locfileid: "37316598"
 |   22807   |   16  |   否  |   無法修改發行集屬性 '%s'，因為點對點發行集 '%s' 未啟用衝突偵測。 若要為發行集啟用衝突偵測，請使用 sp_configure_peerconflictdetection。 |
 |   22808   |   16  |   否  |   無法執行程序 '%s'。 您必須為發行集 '%s' 啟用點對點複寫後，才能執行這個程序。 若要為發行集啟用點對點複寫，請使用 sp_changepublication。   |
 |   22809   |   10  |   否  |   已卸除現有的衝突資料表 '%s'。   |
-|   22810   |   16  |   否  |   @action 參數值無效。 有效值為 'enable' 和 'disable'。  |
+|   22810   |   16  |   否  |   \@action 參數值無效。 有效值為 'enable' 和 'disable'。 |
 |   22811   |   16  |   否  |   往返逾時必須大於 0。  |
 |   22812   |   10  |   否  |   往返 '%s' 已完成，而且發生逾時: %d 秒。   |
 |   22813   |   10  |   否  |   拓撲中包含不支援衝突偵測的對等節點版本。 若要使用衝突偵測，請確定拓撲中的所有節點都使用 SQL Server 2008 或更新版本。    |
@@ -8204,7 +8204,7 @@ ms.locfileid: "37316598"
 |   22825   |   10  |   否  |   在對等 %d (內送) 與對等 %d (磁碟上) 之間偵測到插入對插入的衝突，並已解決。 內送插入已套用到對等 %d。   |
 |   22827   |   16  |   否  |   點對點衝突偵測警示   |
 |   22828   |   16  |   否  |   發行集 '%s' 已經 %s 點對點衝突偵測。    |
-|   22829   |   16  |   否  |   命令 %s 失敗。 為 @ins_cmd、@del_cmd 或 @upd_cmd 指定的值無法在大小限制 %s 之內附加結構描述名稱 %s。 |
+|   22829   |   16  |   否  |   命令 %s 失敗。 為 \@ins_cmd、\@del_cmd 或 \@upd_cmd 指定的值無法在大小限制 %s 之內附加結構描述名稱 %s。  |
 |   22830   |   16  |   否  |   無法更新表示資料庫 %s 已啟用異動資料擷取的中繼資料。 此失敗發生於執行 '%s' 命令時。 傳回的錯誤為 %d: '%s'。 請利用動作與錯誤判斷失敗的原因，然後再重新送出要求。    |
 |   22831   |   16  |   否  |   無法更新表示資料庫 %s 已啟用異動資料擷取的中繼資料。 此失敗發生於執行 '%s' 命令時。 傳回的錯誤為 %d: '%s'。 請利用動作與錯誤判斷失敗的原因，然後再重新送出要求。    |
 |   22832   |   16  |   否  |   無法更新表示資料表 %s 已啟用異動資料擷取的中繼資料。 此失敗發生於執行 '%s' 命令時。 傳回的錯誤為 %d: '%s'。 請利用動作與錯誤判斷失敗的原因，然後再重新送出要求。   |
@@ -8216,17 +8216,17 @@ ms.locfileid: "37316598"
 |   22838   |   16  |   否  |   CDC 唯一索引的所有資料行都必須定義為 NOT NULL。 選取當做來源資料表 '%s.%s' 之 CDC 唯一索引的索引 '%s' 不符合這項要求。 請將選定索引的所有資料行定義為 NOT NULL，或選取另一個唯一索引做為 CDC 索引，然後再重新送出要求。  |
 |   22840   |   16  |   否  |   修改異動資料擷取中繼資料所需的應用程式鎖定要求 '%s' 未獲允許。 從要求傳回的值為 %d: -1 = 逾時; -2 = 已取消; -3 = 死結的犧牲者; -999 為驗證或其他呼叫錯誤。 請檢查錯誤原因，然後再重新送出要求。   |
 |   22841   |   16  |   否  |   無法更新啟用異動資料擷取之資料庫 '%s' 的中繼資料。 此失敗發生於執行 '%s' 動作時。 傳回的錯誤為 %d: '%s'。 請利用動作與錯誤判斷失敗的原因，然後再重新送出要求。    |
-|   22842   |   16  |   否  |   ALTER TABLE SWITCH 陳述式失敗，因為資料分割的目的地資料表已啟用異動資料擷取，而且未將 @allow_partition_switch 設定為 1。    |
-|   22843   |   16  |   否  |   ALTER TABLE SWITCH 陳述式失敗，因為資料分割的來源資料表已啟用異動資料擷取，而且未將 @allow_partition_switch 設定為 1。 |
+|   22842   |   16  |   否  |   ALTER TABLE SWITCH 陳述式失敗，因為資料分割的目的地資料表已啟用異動資料擷取，而且未將 \@allow_partition_switch 設定為 1。   |
+|   22843   |   16  |   否  |   ALTER TABLE SWITCH 陳述式失敗，因為資料分割的來源資料表已啟用異動資料擷取，而且未將 \@allow_partition_switch 設定為 1。    |
 |   22844   |   16  |   否  |   '%s' 選項必須是 1 或 0。  |
 |   22850   |   16  |   否  |   為「異動資料擷取」清除程序指定的臨界值必須大於零。 在建立或修改清除工作時，請指定正數臨界值。 如果在執行 sys.sp_cdc_cleanup_change_table 預存程序時發生這項錯誤，請使用 sp_cdc_change_job 預存程序將與此作業有關聯的臨界值重設為非負數值。  |
 |   22851   |   16  |   否  |   無法更新 cdc.change_tables 來指示資料庫 %s 下限標準中的變更。  |
 |   22852   |   10  |   否  |   無法刪除由於對資料庫 %s 的擷取執行個體變更一或多個下限標準而成為過時的變更資料表項目。 此失敗發生於執行 '%s' 命令時。 傳回的錯誤為 %d: '%s'。 請利用動作與錯誤判斷失敗的原因，然後再重新送出要求。    |
 |   22853   |   10  |   否  |   無法刪除資料庫 %s 中 cdc.lsn_time_mapping 資料表的過時項目。 此失敗發生於執行 '%s' 命令時。 傳回的錯誤為 %d: '%s'。 請利用動作與錯誤判斷失敗的原因，然後再重新送出要求。    |
 |   22854   |   16  |   否  |   無法在資料表 '%s' 上啟用異動資料擷取，或將 ColumnSet 資料行加入其中，因為 CDC 不支援 ColumnSet。  |
-|   22855   |   10  |   否  |   警告：@allow_partition_switch 參數會設定為 1。 異動資料擷取將不會追蹤會在使用變更時造成資料不一致的資料分割切換產生的資料表所導入的變更。 如果需要有關使用異動資料擷取時資料分割切換行為的詳細資訊，請參閱線上叢書。   |
-|   22856   |   10  |   否  |   警告：@allow_partition_switch 參數會設定為 0。 這個資料分割資料表上將允許 ALTER TABLE ...SWITCH PARTITION 陳述式。 如果需要有關使用異動資料擷取時資料分割切換行為的詳細資訊，請參閱線上叢書。  |
-|   22857   |   10  |   否  |   警告: @allow_partition_switch 參數對於不是資料分割的資料表必須設定為 1。 已忽略將參數設定為 0 的明確設定。 如果需要有關使用異動資料擷取時資料分割切換行為的詳細資訊，請參閱線上叢書。 |
+|   22855   |   10  |   否  |   警告: \@allow_partition_switch 參數設定為 1。 異動資料擷取將不會追蹤會在使用變更時造成資料不一致的資料分割切換產生的資料表所導入的變更。 如果需要有關使用異動資料擷取時資料分割切換行為的詳細資訊，請參閱線上叢書。  |
+|   22856   |   10  |   否  |   警告: \@allow_partition_switch 參數設定為 0。 這個資料分割資料表上將允許 ALTER TABLE ...SWITCH PARTITION 陳述式。 如果需要有關使用異動資料擷取時資料分割切換行為的詳細資訊，請參閱線上叢書。 |
+|   22857   |   10  |   否  |   警告: \@allow_partition_switch 參數對於不是資料分割的資料表必須設定為 1。 已忽略將參數設定為 0 的明確設定。 如果需要有關使用異動資料擷取時資料分割切換行為的詳細資訊，請參閱線上叢書。    |
 |   22858   |   16  |   否  |   無法將項目加入到異動資料擷取 LSN 時間對應資料表，以反映套用到追蹤資料表的 dml 變更。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。    |
 |   22859   |   16  |   否  |   記錄檔掃描處理序無法處理記錄檔記錄。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。   |
 |   22860   |   16  |   否  |   記錄檔掃描處理序無法處理 ddl 記錄檔記錄。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。  |
@@ -8240,7 +8240,7 @@ ms.locfileid: "37316598"
 |   22904   |   16  |   否  |   呼叫端未獲得授權，無法起始要求的動作。 需要 DBO 權限。 |
 |   22905   |   10  |   否  |   資料庫 '%s' 已啟用異動資料擷取。 請確定已設定正確的資料庫內容，然後再試一次。 若要報告已啟用異動資料擷取的資料庫，請查詢 sys.databases 目錄檢視中的 is_cdc_enabled 資料行。  |
 |   22906   |   16  |   否  |   資料庫 '%s' 無法啟用異動資料擷取，因為目前資料庫中已經有資料庫使用者 'cdc' 或結構描述 'cdc'。 異動資料擷取必須獨佔擁有這些物件。 請卸除或重新命名該使用者或結構描述，然後再試一次。   |
-|   22907   |   16  |   否  |   @role_name 參數不可以空白。 請指定 @role_name 的值，然後再試一次。 如果不使用任何角色來控制已擷取之變更資料的存取權，請提供 Null 值。 |
+|   22907   |   16  |   否  |   參數 \@role_name 不能空白。 請指定 \@role_name 的值，然後再試一次。 如果不使用任何角色來控制已擷取之變更資料的存取權，請提供 Null 值。   |
 |   22908   |   16  |   否  |   無法建立資料庫 '%s' 中的異動資料擷取物件。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。   |
 |   22909   |   16  |   否  |   當上一個啟用異動資料擷取的資料庫資料表已停用時，無法清除資料庫 '%s' 中的 cdc.lsn_time_mapping 資料表。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。 |
 |   22910   |   16  |   否  |   資料庫 '%s' 的清除要求失敗。 此資料庫未啟用異動資料擷取。  |
@@ -8251,11 +8251,11 @@ ms.locfileid: "37316598"
 |   22918   |   16  |   否  |   內含資料行清單中有一或多個資料行不是變更資料表 %s 的已擷取資料行。   |
 |   22919   |   16  |   否  |   需要更新旗標的資料行清單中有一或多個資料行不是變更資料表 %s 的已擷取資料行。   |
 |   22920   |   16  |   否  |   所指名的擷取執行個體 %s 不在資料庫 %s 中。   |
-|   22921   |   16  |   否  |   無法為授權呼叫端存取的所有擷取執行個體產生指令碼。 若要產生所有這類指令碼，參數 @column_list 和 @update_flag_list 兩者都必須是 Null 或空白。  |
+|   22921   |   16  |   否  |   無法為授權呼叫端存取的所有擷取執行個體產生指令碼。 若要產生所有這類指令碼，參數 \@column_list 和 \@update_flag_list 兩者都必須是 Null 或空白。    |
 |   22923   |   16  |   否  |   無法根據保留 %d 計算資料庫 '%s' 的新的低端點。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。  |
 |   22924   |   16  |   否  |   無法清除資料庫 '%s' 的變更資料表。 嘗試根據目前的保留時間清除資料庫變更資料表時發生失敗狀況。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。 |
-|   22925   |   16  |   否  |   擷取執行個體 '%s' 所擷取的資料行數超過允許的最大數目: %d。 請使用 @captured_columns_list 參數指定小於或等於最大容許值的資料行子集，然後重新提交要求。 |
-|   22926   |   16  |   否  |   無法建立擷取執行個體，因為擷取執行個體名稱 '%s' 已存在目前資料庫中。 請為參數 @capture_instance 指定明確的唯一名稱。 |
+|   22925   |   16  |   否  |   擷取執行個體 '%s' 所擷取的資料行數超過允許的最大數目: %d。 請使用 \@captured_columns_list 參數指定小於或等於最大容許值的資料行子集，然後重新提交要求。    |
+|   22926   |   16  |   否  |   無法建立擷取執行個體，因為擷取執行個體名稱 '%s' 已存在目前資料庫中。 請為參數 \@capture_instance 指定明確的唯一名稱。    |
 |   22927   |   16  |   否  |   擷取執行個體名稱 '%s' 超過 100 個字元的長度限制。 請指定符合長度限制的名稱。 |
 |   22928   |   16  |   否  |   索引名稱 '%s' 不是資料表 '%s.%s' 的索引。 請為資料表指定有效的索引名稱。    |
 |   22929   |   16  |   否  |   索引 '%s' 必須是資料表 '%s.%s' 的主索引鍵或唯一索引。 請指定至少符合這其中一項條件的索引。    |
@@ -8263,11 +8263,11 @@ ms.locfileid: "37316598"
 |   22931   |   16  |   否  |   來源資料表 '%s.%s' 不存在目前資料庫中。 請確定已設定正確的資料庫內容， 並為資料庫指定有效的結構描述和資料表名稱。   |
 |   22932   |   16  |   否  |   擷取執行個體名稱 '%s' 無效。 請指定有效的名稱。 如需物件名稱的規則，請參閱《SQL Server 線上叢書》中的＜識別碼＞主題。  |
 |   22938   |   16  |   否  |   角色名稱 '%s' 無效。 請指定有效的名稱。 如需物件名稱的規則，請參閱《SQL Server 線上叢書》中的＜識別碼＞主題。  |
-|   22939   |   16  |   否  |   參數@supports_net_changes 設定為 1，但來源資料表未定義主索引鍵，也未指定任何替代的唯一索引。 |
+|   22939   |   16  |   否  |   參數 \@supports_net_changes 設定為 1，但來源資料表未定義主索引鍵，也未指定任何替代的唯一索引。    |
 |   22940   |   16  |   否  |   無法移除異動資料擷取中繼資料中擷取執行個體 '%s' 和來源資料表 '%s.%s' 的 DDL 記錄項目。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。 |
 |   22941   |   16  |   否  |   無法擷取來源資料表 '%s.%s' 中索引 '%s' 的資料行資訊。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。    |
-|   22942   |   16  |   否  |   已擷取資料行清單中所指定的資料行無法對應到來源資料表 '%s.%s' 中的資料行。 請確認參數 @captured_column_list 中所指定的資料行是以正確方式分隔，而且符合來源資料表中的資料行。    |
-|   22943   |   16  |   否  |   用來唯一識別資料列以進行淨變更追蹤的資料行必須包含在已擷取資料行清單中。 請在已擷取的資料行清單中加入來源資料表的主索引鍵資料行，或加入針對參數 @index_name 中指定之索引所定義的資料行，然後再操作一次。  |
+|   22942   |   16  |   否  |   已擷取資料行清單中所指定的資料行無法對應到來源資料表 '%s.%s' 中的資料行。 請確認參數 \@captured_column_list 中所指定的資料行是以正確方式分隔，而且符合來源資料表中的資料行。   |
+|   22943   |   16  |   否  |   用來唯一識別資料列以進行淨變更追蹤的資料行必須包含在已擷取資料行清單中。 請在已擷取的資料行清單中加入來源資料表的主索引鍵資料行，或加入針對參數 \@index_name 中指定之索引所定義的資料行，然後再操作一次。 |
 |   22944   |   16  |   否  |   無法建立指定的資料庫角色 '%s' 來控制變更資料表 '%s.%s' 的存取權。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。 |
 |   22945   |   16  |   否  |   無法針對來源資料表 '%s.%s' 的指定索引將資料行資訊加入 cdc.index_columns 系統資料表。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。  |
 |   22946   |   16  |   否  |   無法針對來源資料表 '%s.%s' 將資料行資訊加入 cdc.captured_columns 系統資料表。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。  |
@@ -8293,9 +8293,9 @@ ms.locfileid: "37316598"
 |   22966   |   16  |   否  |   無法建立資料庫 '%s' 中的資料表 dbo.systranschemas。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。  |
 |   22967   |   16  |   否  |   無法建立資料庫 '%s' 中資料表 dbo.systranschemas 的叢集索引。 請參閱目前工作階段中之前的錯誤，找出原因並改正任何相關問題。    |
 |   22968   |   16  |   否  |   為資料庫 '%s' 啟用異動資料擷取時，無法建立 DDL 觸發程序 '%s'。 SQL Server 錯誤記錄檔和系統事件記錄檔中的訊息或許可以提供其他詳細資訊。    |
-|   22970   |   16  |   否  |   為異動資料擷取作業指定的參數 @maxscans 值必須大於 0。 |
+|   22970   |   16  |   否  |   為異動資料擷取作業指定的參數 \@maxscans 值必須大於 0。    |
 |   22971   |   16  |   否  |   無法為記錄讀取器記錄快取配置記憶體。 請確認 SQL Server 有足夠的記憶體可執行所有作業。 檢查伺服器上的實體和虛擬設定，並檢查記憶體使用狀況，了解是否有另一個應用程式過量使用記憶體。  |
-|   22972   |   16  |   否  |   呼叫預存程序 [sys].sp_cdc_help_change_data capture 時，如果 @source_schema 或 @source_name 是非 Null 或非空白，則另一個參數也必須是非 Null 或非空白。   |
+|   22972   |   16  |   否  |   呼叫預存程序 [sys].sp_cdc_help_change_data capture 時，如果 \@source_schema 或 \@source_name 是非 Null 或非空白，則另一個參數也必須是非 Null 或非空白。 |
 |   22973   |   16  |   否  |   指定的檔案群組 '%s' 不是資料庫 '%s' 的有效檔案群組。 請指定有效的現有檔案群組，或建立具名檔案群組，然後再試一次。 |
 |   22974   |   16  |   否  |   包含在 cdc 結構描述中的資料表不能啟用異動資料擷取。   |
 |   22975   |   16  |   否  |   來源資料表 '%s' 包含下列保留的資料行名稱之一: __$start_lsn、__$end_lsn、__$seqval、__$operation 和 __$update_mask。 若要啟用這個資料表的異動資料擷取，請指定已擷取的資料行清單，並確定以上資料行不在清單中。    |
@@ -8313,21 +8313,21 @@ ms.locfileid: "37316598"
 |   22987   |   16  |   否  |   寫入一或多個大型物件資料行的 BLOB 資料時，異動資料擷取擴展失敗。 請確認 SQL Server 有足夠的記憶體可執行所有作業。 檢查伺服器上的實體和虛擬記憶體設定，並檢查記憶體使用狀況，了解是否有另一個應用程式使用過量的記憶體。   |
 |   22988   |   16  |   否  |   SQL Server 的這個執行個體是 %s。 只有 Enterprise、Developer 和 Enterprise 版提供異動資料擷取。  |
 |   22989   |   16  |   否  |   無法為資料庫 '%s' 啟用異動資料擷取。 系統資料庫或散發資料庫上不支援異動資料擷取。    |
-|   22990   |   16  |   否  |   為參數 @pollinginterval 指定的值不能超過 24 小時或小於 0。 請指定小於或等於 24 小時 (86,400 秒) 的輪詢間隔秒數。   |
-|   22991   |   16  |   否  |   為參數 @maxtrans 指定的值必須大於 0。 |
-|   22992   |   16  |   否  |   不支援指定的 @job_type，%s。 為參數 @job_type 指定的值必須是 N'capture' 代表擷取作業，或是 N'cleanup' 代表清除作業。   |
+|   22990   |   16  |   否  |   為參數 \@pollinginterval 指定的值不能超過 24 小時或小於 0。 請指定小於或等於 24 小時 (86,400 秒) 的輪詢間隔秒數。  |
+|   22991   |   16  |   否  |   為參數 \@maxtrans 指定的值必須大於 0。    |
+|   22992   |   16  |   否  |   不支援指定的 \@job_type %s。 為參數 \@job_type 指定的值必須是 N'capture' 代表擷取作業，或是 N'cleanup' 代表清除作業。 |
 |   22993   |   16  |   否  |   在 msdb 系統資料庫中，找不到包含資料庫 '%s' 之作業資訊的異動資料擷取作業資料表。 請執行預存程序 'sys.sp_cdc_add_job' 建立適當的 CDC 擷取或清除作業。 預存程序會建立必要的作業資料表。    |
 |   22994   |   16  |   否  |   為異動資料擷取清除程序指定的保留值必須大於 0 而且小於或等於 52594800。 建立或修改清除作業時，請指定此範圍內的保留分鐘值。 如果在執行 sys.sp_cdc_cleanup_change_table 預存程序時發生這項錯誤，請使用 sp_cdc_change_job 預存程序，將與作業相關聯的保留值重設成小於 52594800 的非負值。  |
-|   22995   |   16  |   否  |   當作業類型是 'capture' 時，不能為參數 @retention 指定值。 請為參數指定 NULL，或省略陳述式中的這個參數。  |
-|   22996   |   16  |   否  |   新增或修改 CDC 清除作業時，@pollinginterval、@maxtrans、@maxscans 和 @continuous 不能指派非 NULL 值。  |
+|   22995   |   16  |   否  |   當作業類型是 'capture' 時，不能為參數 \@retention 指定值。 請為參數指定 NULL，或省略陳述式中的這個參數。 |
+|   22996   |   16  |   否  |   加入或修改 CDC 清除作業時，不能為 \@pollinginterval、\@maxtrans、\@maxscans 和 \@continuous 指派非 Null 值。  |
 |   22997   |   16  |   否  |   異動資料擷取 '%s' 作業不存在於系統資料表 'msdb.dbo.cdc_jobs' 中。 請使用預存程序 'sys.sp_cdc_add_job' 加入異動資料擷取作業。  |
-|   22998   |   16  |   否  |   為參數 @continuous 指定的值必須是 0 或 1。   |
-|   22999   |   16  |   否  |   當預存程序 'sys.sp_cdc_scan' 不是以連續模式執行時，為參數 @pollinginterval 指定的值必須是 Null 或 0。   |
+|   22998   |   16  |   否  |   為參數 \@continuous 指定的值必須是 0 或 1。  |
+|   22999   |   16  |   否  |   當預存程序 'sys.sp_cdc_scan' 不是以連續模式執行時，為參數 \@pollinginterval 指定的值必須是 Null 或 0。  |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-23000-to-25999"></a>錯誤 23,000 到 25,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   23003   |   17  |   否  |   WinFS 共用權限已損毀 {錯誤: %ld}。 請嘗試重新設定共用權限。 |
 |   23100   |   16  |   否  |   無效的輸入參數。 |
@@ -8413,14 +8413,14 @@ ms.locfileid: "37316598"
 |   23997   |   16  |   否  |   發生系統錯誤 {ErrorCode: %d}。  |
 |   23998   |   16  |   否  |   系統記憶體不足，無法處理要求。   |
 |   23999   |   16  |   否  |   發生未指定的錯誤。  |
-|   25002   |   16  |   否  |   指定的發行者未啟用為在此散發者端的遠端發行者。 請確定為參數 @publisher 指定的值是正確的，而且發行者已啟用為在散發者端的遠端發行者。   |
+|   25002   |   16  |   否  |   指定的發行者未啟用為在此散發者端的遠端發行者。 請確定為參數 \@publisher 指定的值是正確的，而且發行者已啟用為在散發者端的遠端發行者。  |
 |   25003   |   16  |   否  |   升級散發資料庫的 MSmerge_subscriptions 資料表失敗。 請重新執行升級程序，以升級散發資料庫。 |
 |   25005   |   16  |   否  |   卸除合併式複寫所使用 rowguid 資料行上的預設條件約束是無效的。   |
 |   25006   |   16  |   否  |   無法將新資料行加入至發行項 '%s'，因為其中有超過 %d 個複寫資料行。  |
 |   25007   |   16  |   否  |   無法同步處理訂閱，因為發行者和訂閱者端的發行項結構描述不相符。 可能是暫止的結構描述變更尚未傳播至訂閱者。 請重新執行合併代理程式，以傳播變更，並同步處理資料。  |
 |   25008   |   16  |   否  |   執行資料定義語言 (DDL) 作業之後，無法重新產生合併式複寫檢視。 |
 |   25009   |   16  |   否  |   在發行項 '%s' 上為 'identityrangemanagementoption' 屬性執行 sp_changemergearticle 時，指定了無效的值 '%s'。    |
-|   25010   |   16  |   否  |   此條件約束是由合併式複寫用來進行識別管理，無法直接卸除。 請執行 sp_changemergearticle @publication, @article, "identityrangemanagementoption", "none"，以停用合併識別管哩，此舉亦將卸除該條件約束。    |
+|   25010   |   16  |   否  |   此條件約束是由合併式複寫用來進行識別管理，無法直接卸除。 請執行 sp_changemergearticle \@publication, \@article, "identityrangemanagementoption", "none"，以停用合併識別管哩，此舉亦將卸除該條件約束。  |
 |   25012   |   16  |   否  |   無法加入識別欄位，因為已發行資料表來進行合併式複寫。   |
 |   25013   |   16  |   否  |   無法執行改變資料表，因為該資料表已發行於一或多個 publication_compatibility_level 低於 '90RTM' 的發行集中。 請使用 sp_repladdcolumn 或 sp_repldropcolumn。  |
 |   25014   |   16  |   否  |   sp_repladdcolumn 不允許加入此版本之新資料類型的資料行。   |
@@ -8431,7 +8431,7 @@ ms.locfileid: "37316598"
 |   25019   |   16  |   否  |   無法加入發行項 "%s" 和 "%s" 之間的邏輯記錄關聯性，因為至少有一個發行項具有已定義 CASCADE 動作的條件約束。 |
 |   25020   |   16  |   否  |   發行項無法建立於資料表 '%s'，因為它具有 %d 個以上的資料行，並且正在使用資料行層級的追蹤。 請減少資料表中的資料行數目，或變更為資料列層級的追蹤。  |
 |   25021   |   16  |   否  |   sp_MSupdategenhistory 複寫預存程序無法更新 '%s' 層代。 此層代將會在下次合併時重試。 |
-|   25022   |   16  |   否  |   快照集儲存選項 (@snapshot_storage_option) 必須是 'file system' 或 'database'。    |
+|   25022   |   16  |   否  |   快照集儲存選項 (\@snapshot_storage_option) 必須是 'file system' 或 'database'。   |
 |   25023   |   16  |   否  |   包含資料表值參數的預存程序不能發行為 '[serializable] proc exec' 發行項。 |
 |   25024   |   16  |   否  |   快照集儲存選項 'database' 與產生快照集時使用字元模式 bcp 兩者不相容。 |
 |   25025   |   16  |   否  |   無法加入疏鬆資料行或疏鬆資料行集，因為資料表是發行用來進行合併式複寫。 合併式複寫不支援疏鬆資料行。  |
@@ -8516,7 +8516,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-26000-to-27999"></a>錯誤 26,000 到 27,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   26010   |   10  |   是 |   伺服器無法載入起始 SSL 連接所需的憑證。 傳回的錯誤如下: %#x。 請檢查憑證以確定其皆有效。 |
 |   26011   |   16  |   是 |   伺服器無法將加密初始化，因為安全性程式庫有問題。 可能遺漏了安全性程式庫。 請確認 security.dll 存在於系統上。    |
@@ -8631,7 +8631,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-28000-to-30999"></a>錯誤 28,000 到 30,999
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   28000   |   16  |   否  |   解密工作階段金鑰的大小並非預期大小。   |
 |   28001   |   16  |   否  |   已經收到損毀的訊息。 包含無效的旗標。 這發生在具有交談識別碼 '%.*ls'、起始端: %d 以及訊息序號: %I64d 的訊息中。 |
@@ -8809,7 +8809,7 @@ ms.locfileid: "37316598"
 
 ## <a name="errors-31000-to-41400"></a>錯誤31,000 到 41,400
 
-| 錯誤| Severity | 已記錄事件 | 描述|
+| 錯誤| Severity | 已記錄事件 | Description|
 | :------ | :------| :------| :----------------------------- |
 |   31001   |   16  |   否  |   工作階段 '%s' 已經存在。 請使用其他工作階段名稱。  |
 |   31002   |   16  |   否  |   只有工作階段的擁有者才能執行這項作業。   |
@@ -8841,7 +8841,7 @@ ms.locfileid: "37316598"
 |   32025   |   16  |   否  |   主要伺服器 %s，資料庫 %s 在次要上有使用中的記錄傳送次要資料庫。 請先卸除次要資料庫。    |
 |   32026   |   10  |   否  |   記錄傳送主要伺服器警示。  |
 |   32027   |   10  |   否  |   記錄傳送次要伺服器警示。    |
-|   32028   |   16  |   否  |   為參數 @threshold_alert 指定了無效的值 %d。    |
+|   32028   |   16  |   否  |   指定了無效的參數 \@threshold_alert 值 = %d。   |
 |   32029   |   10  |   否  |   記錄傳送備份代理程式 [%s] 已驗證記錄備份檔案 '%s.wrk'，並已將其重新命名為 '%s.trn'。 此為參考用訊息， 使用者不必採取任何動作。 |
 |   32030   |   10  |   否  |   無法從監視伺服器 %s 查詢記錄傳送主要 %s.%s 的監視資訊。  |
 |   32031   |   10  |   否  |   無法從監視伺服器 %s 查詢記錄傳送次要 %s.%s 的監視資訊。    |
@@ -8866,7 +8866,7 @@ ms.locfileid: "37316598"
 |   32050   |   16  |   否  |   無法在系統資料庫 master、msdb、model 或 tempdb 上建立警示。    |
 |   32051   |   10  |   否  |   需要系統管理員權限才能更新基底資料表。 基底資料表未更新。    |
 |   32052   |   16  |   否  |   參數 '%s' 不可以是 Null 或空的。 請為具名參數指定值，然後再試一次。    |
-|   32053   |   16  |   否  |   由 '@@servername' 指定的伺服器名稱目前為 Null。    |
+|   32053   |   16  |   否  |   由 '\@\@servername' 指定的伺服器名稱目前為 Null。  |
 |   32054   |   16  |   否  |   建立遠端監視伺服器的連結時發生錯誤。    |
 |   32055   |   16  |   否  |   設定遠端監視伺服器時發生錯誤。   |
 |   33001   |   16  |   否  |   無法卸除選項，因為未在 %S_MSG 上指定選項。   |
@@ -9039,13 +9039,13 @@ ms.locfileid: "37316598"
 |   35002   |   16  |   否  |   伺服器類型與父伺服器群組類型不相同   |
 |   35003   |   16  |   否  |   無法將節點移到其子節點 |
 |   35004   |   16  |   否  |   找不到伺服器群組 |
-|   35005   |   16  |   否  |   為 @server_group_id 傳入無效的 NULL 值。   |
-|   35006   |   16  |   否  |   為 @server_id 傳入無效的 NULL 值。 |
+|   35005   |   16  |   否  |   為 \@server_group_id 傳入無效的 NULL 值。  |
+|   35006   |   16  |   否  |   為 \@server_id 傳入無效的 NULL 值。    |
 |   35007   |   16  |   否  |   找不到共用的已註冊伺服器。    |
 |   35008   |   16  |   否  |   無法刪除系統共用伺服器群組。  |
-|   35009   |   16  |   否  |   為 @server_type 傳入無效的 NULL 值。   |
-|   35010   |   16  |   否  |   為參數 @server_type 傳入無效的 %d 值。   |
-|   35011   |   16  |   否  |   @server_name 參數不可以是相對名稱。   |
+|   35009   |   16  |   否  |   為 \@server_type 傳入無效的 NULL 值。  |
+|   35010   |   16  |   否  |   為參數 \@server_type 傳入無效的 %d 值。  |
+|   35011   |   16  |   否  |   \@server_name 參數不可以是相對名稱。  |
 |   35012   |   16  |   否  |   您無法加入與組態伺服器同名的共用已註冊伺服器。   |
 |   [41030](mssqlserver-41030-database-engine-error.md) |       |       |   無法開啟 Windows Server 容錯移轉叢集登錄子機碼 '%.*ls' (錯誤碼 %d)。  父機碼是叢集根目錄機碼。  WSFC 服務可能不在執行中、無法以目前狀態存取，或指定的引數無效。 如果已卸除對應的可用性群組，就會發生這種錯誤。 如需有關這個錯誤碼的資訊，請參閱 Windows 開發文件中的＜系統錯誤碼＞(System Error Codes)。 |
 |   [41301](mssqlserver-41301-database-engine-error.md) |       |       |   目前交易具有相依性的先前交易已經中止，而且目前交易無法再認可。|    |

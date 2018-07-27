@@ -1,7 +1,7 @@
 ---
 title: 下載 SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -12,7 +12,7 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - 安裝 ssms, 下載 ssms, 最新的 ssms
-- Transact-SQL
+- SQL Server Management Studio
 - ssms.exe
 - sql man studio
 - sql management studio
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957681"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188934"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ SSMS 是整合式環境，用於管理任何 SQL 基礎結構，從 SQL Sever �
 
 SSMS 17.x 是最新一代的 *SQL Server Management Studio*，並提供 SQL Server 2017 的支援。
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802) (電腦上不需要有先前版本的 SSMS 17.x)**
 
-**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.8.1 升級套件 (從 17.x 升級至 17.8.1)](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![下載](../ssdt/media/download.png) 下載 SQL Server Management Studio 17.8.1 升級套件](https://go.microsoft.com/fwlink/?linkid=875804) (若要將 17.x 升級到 17.8.1，電腦上需要有先前版本的 SSMS 17.x)**
 
 
 **版本資訊**
@@ -79,7 +79,7 @@ SQL Server Management Studio 17.8.1 升級套件 (從 17.x 升級至 17.8.1)：<
 > [!NOTE]
 > SQL Server PowerShell 模組現在透過 PowerShell 資源庫個別安裝。 如需詳細資訊，請參閱[下載 SQL Server PowerShell 模組](download-sql-server-ps-module.md)。
 
-## <a name="sql-server-management-studio"></a>Transact-SQL
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio
 
 
 ## <a name="new-in-this-release"></a>此版本中的新功能
@@ -142,11 +142,16 @@ SQL 編輯器：
 
 ## <a name="release-notes"></a>版本資訊
 
-以下是此 17.8 版本的問題和限制：
+以下是此 17.8.1 版本的問題和限制：
 
 - 在 [特性] 視窗中修改任何檔案群組特性之後按一下 [指令碼] 按鈕，會產生兩個指令碼：其中一個指令碼會包含 *USE <database>* 陳述式，另一個指令碼則會包含 *USE master* 陳述式。  產生包含 *USE master* 的指令碼是一項錯誤，而且應予捨棄。 執行包含 *USE <database>* 陳述式的指令碼。
 - 使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
 - 可觀察到 XEvents 檢視器中的一些延遲。 這是 [.Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql) 中的已知問題。 請考慮升級到 NetFx 4.7.2。
+- 複寫監視器損毀，發生「無法載入檔案或組件...」錯誤。 此問題的因應措施：
+  1. 關閉 *SqlMonitor.exe* (也就是「複寫監視器」) 和 SSMS。
+  2. 從 [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw) 下載更新的 *sqlmonitor.exe.config*。
+  3. 使用您下載的項目取代 *sqlmonitor.exe.config* (通常位在 "C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn")。
+  4. 重新啟動 SSMS 和/或複寫監視器。
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>解除並重新安裝 SSMS

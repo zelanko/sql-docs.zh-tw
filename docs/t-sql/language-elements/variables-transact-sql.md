@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ad62b912dbe788aa6fffb016440a597c0a27cce
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1d411c73e322e4043645a161e059d5cd6f1a300f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249700"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088390"
 ---
 # <a name="variables-transact-sql"></a>變數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Transact-SQL 區域變數是一種物件，可保存特定類型的單一資料�
 * 若要儲存預存程序傳回碼或函數傳回值所傳回的資料值。
 
 > [!NOTE]
-> 有些 Transact-SQL 系統函數的名稱開頭是兩個 *at* 符號 (@@)。 雖然在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，@@functions 是當作全域變數，但他們並不是變數，也不具備和變數一樣的行為。 @@functions 是系統函數，它們的語法使用方式遵循函數的規則。
+> 有些 Transact-SQL 系統函式的名稱開頭是兩個 *at* 符號 (\@\@)。 雖然在舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，\@\@ 函式是當作全域變數，但他們並不是變數，行為也和變數不一樣。 \@\@ 函式是系統函式，他們的語法是遵循函式的規則。
 
 以下指令碼建立一個小型測試資料表，並於其中填入 26 個資料列。 指令碼將使用變數進行三個用途： 
 
@@ -85,17 +85,17 @@ GO
 
 ## <a name="declaring-a-transact-sql-variable"></a>宣告 Transact-SQL 變數
 DECLARE 陳述式會以下列方式將 Transact-SQL 變數初始化： 
-* 指派名稱。 名稱必須帶有單一 @ 作為第一個字元。
+* 指派名稱。 名稱必須有單一 \@ 作為第一個字元。
 * 指派系統提供或使用者自訂的資料類型和長度。 若是數值變數，也會指派有效位數和小數位數。 若是 XML 類型的變數，可能會指派選擇性結構描述集合。
 * 設定值為 NULL。
 
-例如，以下 **DECLARE** 陳述式會建立一個名為 **@mycounter** 的區域變數，其資料類型為 int。  
+例如，以下 **DECLARE** 陳述式會建立一個名為 **\@mycounter** 的區域變數，其資料類型為 int。  
 ```sql
 DECLARE @MyCounter int;
 ```
 若要宣告一個以上的本機變數，請在第一個定義的本機變數後加上逗號，再指定下一個本機變數名稱與資料類型。
 
-例如，下列 **DECLARE** 陳述式會建立名為 **@LastName**、**@FirstName** 和 **@StateProvince** 的三個本機變數，並將每個都始化為 NULL：  
+例如，以下的 **DECLARE** 陳述式建立三個名為 **\@LastName**、**\@FirstName** 和 **\@StateProvince** 的區域變數，均初始化為 NULL：  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -165,7 +165,7 @@ GO
 > [!WARNING]
 > 如果在單一 SELECT 陳述式中有多個指派子句，SQL Server 則無法保證運算式評估的次序。 請注意，只有當指派中有一些參考時，才能看到產生的效果。
 
-如果 SELECT 陳述式傳回一個以上的資料列，且變數參考非純量運算式，則會將變數設定為結果集的最後一筆資料列中，針對運算式傳回的值。 例如，在下列批次中，**@EmpIDVariable** 設定為最後一個資料列傳回的 **BusinessEntityID** 值，也就是 1：  
+如果 SELECT 陳述式傳回一個以上的資料列，且變數參考非純量運算式，則會將變數設定為結果集的最後一筆資料列中，針對運算式傳回的值。 例如，在以下批次中，**\@EmpIDVariable** 被設定成最後一個資料列傳回的 **BusinessEntityID** 值，也就是 1：  
 
 ```sql
 USE AdventureWorks2014;
