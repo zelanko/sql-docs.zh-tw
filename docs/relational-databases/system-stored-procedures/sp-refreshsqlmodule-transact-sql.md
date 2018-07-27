@@ -1,7 +1,7 @@
 ---
-title: sp_refreshsqlmodule (TRANSACT-SQL) |Microsoft 文件
+title: sp_refreshsqlmodule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -31,17 +31,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b54f1410be78cc1be6095a1870fc5b6b9e5b694f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 80012f2172193a277053485ca763122d9ba1fe16
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261004"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278729"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  針對目前資料庫中指定的非結構描述繫結預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序，更新其中繼資料。 這些物件的基礎物件變更之後，其保存中繼資料也可能會過期，例如參數的資料類型。  
+  針對目前資料庫中指定的非結構描述繫結預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序，更新其中繼資料。 這些物件的基礎物件變更之後，其保存中繼資料也可能會過期，例如參數的資料類型。
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,11 +61,11 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [  **@name=** ] **'***適於***'**  
- 這是預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *適於*不能在 common language runtime (CLR) 預存程序或 CLR 函數。 *適於*無法結構描述繫結。 *適於*是**nvarchar**，沒有預設值。 *適於*可以是多重部分識別碼，但只能參考目前資料庫中的物件。  
+ [  **@name=** ] **'***module_name***'**  
+ 這是預存程序、使用者自訂函數、檢視、DML 觸發程序、資料庫層級 DDL 觸發程序或伺服器層級 DDL 觸發程序的名稱。 *module_name*不能是 common language runtime (CLR) 預存程序或 CLR 函式。 *module_name*不可進行結構描述繫結。 *module_name*已**nvarchar**，沒有預設值。 *module_name*可以是多重部分識別碼，但只能參考目前資料庫中的物件。  
   
  [ **，** @**命名空間**=] **'** \<類別 > **'**  
- 這是指定之模組的類別。 當*適於*DDL 觸發程序，\<類別 > 為必要。 *\<類別 >* 是**nvarchar**(20)。 有效輸入包括：  
+ 這是指定之模組的類別。 當*module_name* DDL 觸發程序，\<類別 > 為必要。 *\<類別 >* 已**nvarchar**(20)。 有效輸入包括：  
   
 |||  
 |-|-|  
@@ -76,7 +76,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
  0 (成功) 或非零數字 (失敗)  
   
 ## <a name="remarks"></a>備註  
- **sp_refreshsqlmodule**變更會影響其定義的物件基礎的模組時，應該執行。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理檢視，您可以使用**sp_refreshsqlmodule**或**sp_refreshview**相同的結果。  
+ **sp_refreshsqlmodule**變更會影響其定義的物件基礎的模組時，應該執行。 否則，在查詢或叫用模組時，可能會產生非預期的結果。 若要重新整理檢視，您可以使用其中一個**sp_refreshsqlmodule**或是**sp_refreshview**相同的結果。  
   
  **sp_refreshsqlmodule**不會影響任何權限、 擴充的屬性或設定與物件相關聯的選項。  
   
@@ -85,7 +85,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  當您執行時，會卸除與物件相關聯的任何簽章**sp_refreshsqlmodule**。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要模組的 ALTER 權限，以及物件所參考之任何 CLR 使用者自訂型別和 XML 結構描述集合的 REFERENCES 權限。 當指定的模組是資料庫層級 DDL 觸發程序時，便需要目前資料庫的 ALTER ANY DATABASE DDL TRIGGER 權限。 當指定的模組是伺服器層級 DDL 觸發程序時，便需要 CONTROL SERVER 權限。  
   
  此外，對於使用 EXECUTE AS 子句定義的模組，也必須對指定的主體具備 IMPERSONATE 權限。 一般而言，重新整理物件不會變更其 EXECUTE AS 主體，除非模組是使用 EXECUTE AS USER 定義，而且主體的使用者名稱這時解析出來不是模組建立當時的使用者。  

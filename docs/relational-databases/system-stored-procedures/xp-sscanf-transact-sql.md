@@ -1,5 +1,5 @@
 ---
-title: xp_sscanf (TRANSACT-SQL) |Microsoft 文件
+title: xp_sscanf (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - xp_sscanf
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b989dfa254330034cab4ab5278e2e4a9cca4da3d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8f4cc1369f4de19b025f5fc5d78285cf10d55fcb
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257632"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103856"
 ---
 # <a name="xpsscanf-transact-sql"></a>xp_sscanf (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +43,17 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
 ```  
   
 ## <a name="arguments"></a>引數  
- **字串**  
+ **string**  
  這是要從中讀取引數值的字元字串。  
   
  OUTPUT  
  指定時，將的值放*引數*輸出參數。  
   
  *<格式>*  
- 這是格式化的字元字串類似於 C 語言所支援的項目**sscanf**函式。 目前只支援 %s 格式引數。  
+ 這是格式化的字元字串的類似 C 語言所支援的功能**sscanf**函式。 目前只支援 %s 格式引數。  
   
  *引數*  
- 是**varchar**變數設定為對應的值*格式*引數。  
+ 已**varchar**對應的值設定變數*格式*引數。  
   
  *n*  
  這是表示最多可以指定 50 個引數的預留位置。  
@@ -67,8 +66,8 @@ xp_sscanf { string OUTPUT , format } [ ,argument [ ,...n ] ]
   
  `Command(s) completed successfully.`  
   
-## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+## <a name="permissions"></a>[權限]  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會利用 `xp_sscanf`，根據值在來源字串格式中的位置，從來源字串擷取兩個值。  
@@ -90,6 +89,6 @@ products10.tmp        random
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [一般擴充預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
- [xp_sprintf &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
+ [xp_sprintf &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-sprintf-transact-sql.md)  
   
   

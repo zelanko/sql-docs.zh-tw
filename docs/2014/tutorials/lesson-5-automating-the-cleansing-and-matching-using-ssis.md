@@ -16,15 +16,15 @@ caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbdc7b555a4517fb59fea23c33ac8835d8578aa4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91d0310663c738f524101f0bb4862c2db2d89cf3
+ms.sourcegitcommit: d457bb828eb46ee83f8ff5bdecfff09b26d7b154
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291704"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39259783"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>第 5 課：使用 SSIS 自動化清理和比對
-  在第 1 課方法，您可以建置供應商知識庫，並使用它來清理資料，在第 2 課和比對資料使用工具第 3 課**DQS 用戶端**。 在真實世界案例中，您可能要從來源 DQS 不支援，或者您想要自動化清理和比對程序中提取資料，而不需要使用**DQS 用戶端**工具。 SQL Server Integration Services (SSIS) 有可供您整合各種異質來源的資料的元件和 **[HYPERLINK"http://msdn.microsoft.com/library/ee677619.aspx"\t"_blank"DQS 清理轉換](http://msdn.microsoft.com/library/ee677619.aspx)** 若要叫用 DQS 所公開的清理功能的元件。 目前，DQS 不會公開比對功能給 SSIS 使用，但您可以使用**[模糊群組轉換](http://msdn.microsoft.com/library/ms141764.aspx)** 來識別資料中的重複項。  
+  在第 1 課方法，您可以建置供應商知識庫，並使用它來清理資料，在第 2 課和比對資料使用工具第 3 課**DQS 用戶端**。 在真實世界案例中，您可能要從來源 DQS 不支援，或者您想要自動化清理和比對程序中提取資料，而不需要使用**DQS 用戶端**工具。 SQL Server Integration Services (SSIS) 有可供您整合各種異質來源的資料的元件和 **[DQS 清理轉換](http://msdn.microsoft.com/library/ee677619.aspx)** 叫用清理元件DQS 所公開的功能。 目前，DQS 不會公開比對功能給 SSIS 使用，但您可以使用**[模糊群組轉換](http://msdn.microsoft.com/library/ms141764.aspx)** 來識別資料中的重複項。  
   
  您可以使用資料上傳至 MDS**實體式暫存功能**。 當您在 MDS 中建立實體時，將會自動建立對應的暫存資料表和預存程序。 例如，當您建立 Supplier 實體時， **stg.supplier_Leaf**資料表並**stg.udp_Supplier_Leaf**自動建立預存程序。 您會使用暫存資料表和程序來建立、更新及刪除實體成員。 在這一課，您會建立 Supplier 實體的新實體成員。 為了將資料載入 MDS 伺服器，SSIS 封裝會先將資料載入暫存資料表 stg.supplier_Leaf，然後觸發相關的預存程序 stg.udp_Supplier_Leaf。 請參閱[匯入資料](http://msdn.microsoft.com/library/ee633726.aspx)如需詳細資訊。  
   

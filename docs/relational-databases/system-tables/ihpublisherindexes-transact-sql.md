@@ -1,5 +1,5 @@
 ---
-title: H (TRANSACT-SQL) |Microsoft 文件
+title: IHpublisherindexes (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -22,21 +22,22 @@ helpviewer_keywords:
 - IHpublisherindexes system table
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 427df96d3f6808cbaa00d079546ad766d42fb701
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 657d8d364d0691ec2c0150b4ca933fcd46ce8f9f
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39103836"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublisherindexes**系統資料表包含每個索引從非 SQL Server 發行者複寫使用目前散發者的一個資料列。 這份資料表儲存在散發資料庫中。  
+  **IHpublisherindexes**系統資料表包含從非 SQL Server 發行者複寫使用目前散發者的每個索引的一個資料列。 這份資料表儲存在散發資料庫中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**publisherindex_id**|**int**|識別已發行的索引。|  
 |**table_id**|**int**|識別從資料表[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)所屬的索引。|  

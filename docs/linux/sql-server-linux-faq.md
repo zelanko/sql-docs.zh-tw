@@ -4,19 +4,19 @@ description: 本文章提供有關 SQL Server 常見問題的解答，在 Linux 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/17/2018
+ms.date: 07/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 841c278d42fd3d2494bd1f08704797d5c11c235e
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: b1003ddbda32ef1570f172e36d506ed58bc2f07b
+ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102226"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39268806"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux 上的 SQL Server 常見問題集 (Faq)
 
@@ -34,9 +34,13 @@ ms.locfileid: "39102226"
 
    測試並如先前所列的散發套件支援在 Linux 上 SQL Server。 其他 Linux 散發套件密切相關，而且可能無法執行 SQL Server （例如，CentOS 密切相關 Red Hat Enterprise Server）。 但如果您選擇不支援的作業系統上安裝 SQL Server，請檢閱**的支援原則**一節[Microsoft SQL Server 的技術支援原則](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)若要了解支援影響。 也請注意，某些社群維護的 Linux 散發套件沒有正式的方法，才能獲得支援，如果基礎作業系統是問題所在。
 
-1. **支援在 Linux 上的 SQL Server 功能？**
+1. **在 Linux 上的授權方式為何？**
 
-   如需支援的功能和已知的問題的完整清單，請參閱 <<c0> [ 版本資訊](sql-server-linux-release-notes.md)。
+   SQL Server 會將相同的方式授權適用於 Windows 和 Linux。 事實上，SQL Server 授權，然後您可以選擇使用您選擇的平台上的該授權。 如需詳細資訊，請參閱 < [SQL Server 授權如何](https://www.microsoft.com/sql-server/sql-server-2017-pricing)。
+
+1. **是在 Linux 上的 SQL Server 和 Windows 上的相同嗎？**
+
+   因為它是在 Windows 上的 SQL Server Database Engine 的核心都是在 Linux 上相同的。 不過，某些功能目前不支援在 Linux 上。 如需不支援在 Linux 的功能，請參閱[不支援的功能與服務](sql-server-linux-release-notes.md#Unsupported)。 也檢閱[已知問題](sql-server-linux-release-notes.md#known-issues)。 除非在這些清單中指定，其他 SQL Server 功能和服務支援在 Linux 上。
 
 1. **適用於 SQL Server 的支援原則為何？**
 

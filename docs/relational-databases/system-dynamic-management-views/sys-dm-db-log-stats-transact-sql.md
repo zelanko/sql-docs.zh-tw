@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 018c02c2348e14028a5cbb84ef30b2428ac9e9e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061446"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278949"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats & Amp;#40;transact-SQL&AMP;#41;   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,10 @@ ms.locfileid: "38061446"
 |recovery_vlf_count |**bigint** |   總數[虛擬記錄檔 (Vlf)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)復原，如果發生容錯移轉或伺服器重新啟動。 |  
 
 
-## <a name="permissions"></a>Permissions  
+## <a name="remarks"></a>備註
+當執行`sys.dm_db_log_stats`將針對參與可用性群組次要複本的資料庫，傳回上面所述的欄位的子集。  目前，只有`database_id`， `recovery_model`，和`log_backup_time`次要資料庫上執行時，會傳回。   
+
+## <a name="permissions"></a>[權限]  
 需要`VIEW DATABASE STATE`資料庫的權限。   
   
 ## <a name="examples"></a>範例  

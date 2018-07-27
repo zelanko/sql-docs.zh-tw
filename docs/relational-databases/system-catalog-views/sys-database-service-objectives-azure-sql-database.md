@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0dd29dbfe5e71f3dbae8d0330c1413dda2d3cc26
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 320d8d0dd434c4453a8004a0237bc9d2cbd9f352
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989270"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216969"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,10 +45,10 @@ ms.locfileid: "37989270"
 |-----------------|---------------|-----------------|  
 |database_id|ssNoversion|資料庫中的 Azure SQL Database 伺服器執行個體的唯一識別碼。 可與聯結[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)。|  
 |版本|sysname|資料庫或資料倉儲的服務層：**基本**，**標準**， **Premium**或是**資料倉儲**。|  
-|service_objective|sysname|資料庫的定價層。 如果資料庫是在彈性集區中，會傳回**ElasticPool**。<br /><br /> 在 **基本**層，會傳回**基本**。<br /><br /> **在標準服務層中的單一資料庫**傳回下列其中之一： S0、 S1、 S2 或 S3。<br /><br /> **進階層中的單一資料庫**傳回下列動作： P1、 P2、 P4、 P6/P3，還是 P11。<br /><br /> **SQL 資料倉儲**傳回透過 DW10000c DW100。|  
+|service_objective|sysname|資料庫的定價層。 如果資料庫是在彈性集區中，會傳回**ElasticPool**。<br /><br /> 在 **基本**層，會傳回**基本**。<br /><br /> **在標準服務層中的單一資料庫**傳回下列其中之一： S0、 S1、 S2、 S3、 S4、 S6、 S7、 S9 或 S12。<br /><br /> **進階層中的單一資料庫**傳回下列動作： P1、 P2、 P4、 P6、 P11 或 P15。<br /><br /> **SQL 資料倉儲**傳回透過 DW10000c DW100。|  
 |elastic_pool_name|sysname|名稱[彈性集區](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)所屬的資料庫。 傳回**NULL**如果資料庫是單一資料庫或資料 warehoue。|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要**dbManager** master 資料庫的權限。  在資料庫層級中，使用者必須是建立者或擁有者。  
   
 ## <a name="examples"></a>範例  
