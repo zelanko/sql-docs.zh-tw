@@ -22,12 +22,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 199b1abd026efdf383cbd982ac3ce79d36e5b5cc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1cf60d0f7b775e4950b159c237b96e82a1b333f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401350"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083350"
 ---
 # <a name="ole-db-source"></a>OLE DB 來源
   OLE DB 來源會使用資料庫資料表、檢視或 SQL 命令，從各種 OLE DB 相容的關聯式資料庫中擷取資料。 例如，OLE DB 來源可從 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 或 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫的資料表中擷取資料。  
@@ -87,7 +87,7 @@ ms.locfileid: "35401350"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- 預存程序需要有變數 `@StartProductID` 和 `@CheckDate`，才能提供參數值。 參數出現在 [對應] 清單中的順序並無任何影響。 唯一的需求是參數名稱必須符合預存程序中的變數名稱，包括 @ 符號。  
+ 預存程序需要有變數 `@StartProductID` 和 `@CheckDate`，才能提供參數值。 參數出現在 [對應] 清單中的順序並無任何影響。 唯一的需求是參數名稱必須符合預存程序中的變數名稱，包括 \@ 符號。  
   
 ### <a name="mapping-parameters-to-variables"></a>將參數對應至變數  
  參數會對應到在執行階段中提供參數值的變數。 這些變數通常是使用者自訂變數，不過您也可以使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的系統變數。 如果您使用的是使用者自訂變數，請務必將資料類型設定為與對應參數所參考之資料行資料類型相容的類型。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 變數](../../integration-services/integration-services-ssis-variables.md)。  
@@ -146,7 +146,7 @@ ms.locfileid: "35401350"
  **資料存取模式**  
  從來源中指定選取資料的方法。  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |資料表或檢視|從 OLE DB 資料來源中的資料表或檢視擷取資料。|  
 |資料表名稱或檢視名稱變數|請在變數中指定資料表或檢視名稱。<br /><br /> **相關資訊︰**[在封裝中使用變數](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  

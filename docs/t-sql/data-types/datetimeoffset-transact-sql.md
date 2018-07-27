@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45246cc4a9a09c45ffb4762d6eda2464aeb82f3f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 6218f0332b83b5952a2c09836b10b4665db9b409
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421447"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085590"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37421447"
 |屬性|ReplTest1|  
 |---|---|
 |語法|**datetimeoffset** [ (*毫秒精確度*) ]|  
-|使用方式|DECLARE @MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|使用方式|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |預設的字串常值格式 (用於下層用戶端)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |日期範圍|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.9999999 (Informatica 中不支援毫秒)|  
@@ -75,7 +75,7 @@ ms.locfileid: "37421447"
 ## <a name="supported-string-literal-formats-for-datetimeoffset"></a>datetimeoffset 支援的字串常值格式
 下表將列出 **datetimeoffset** 支援的 ISO 8601 字串常值格式。 如需 **datetimeoffset** 日期和時間部分之字母、數字、未分隔和時間格式的資訊，請參閱 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md) 和 [time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)。
   
-|ISO 8601|描述|  
+|ISO 8601|Description|  
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn][{+&#124;-}hh:mm]|這兩種格式不受 SET LANGUAGE 和 SET DATEFORMAT 工作階段地區設定的影響。 **datetimeoffset** 和 **datetime** 部分之間不允許有空格。|  
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]Z (UTC)|根據 ISO 定義，這種格式表示 **datetime** 部分應該以國際標準時間 (UTC) 來表示。 例如，1999-12-12 12:30:30.12345 -07:00 應該表示成 1999-12-12 19:30:30.12345Z。|  

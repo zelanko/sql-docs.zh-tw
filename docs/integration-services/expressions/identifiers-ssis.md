@@ -24,12 +24,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a37b39e8630257be25efde7b3d2a74c60f3e46c0
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 61529c64150bb28c595ade859f45453591526b51
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334122"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084580"
 ---
 # <a name="identifiers-ssis"></a>識別碼 (SSIS)
   在運算式中，識別碼是可供運算的資料行和變數。 運算式可使用一般和限定識別碼。  
@@ -41,7 +41,7 @@ ms.locfileid: "35334122"
   
 -   名稱的第一個字元必須是 Unicode Standard 2.0 所定義的字母，或者底線 (_)。  
   
--   後續的字元可以是 Unicode Standard 2.0 所定義的字母或數字、底線 (_)、@、$ 及 # 字元。  
+-   後續的字元可以是 Unicode Standard 2.0 所定義的字母或數字、底線 (_)、\@、$ 及 # 字元。  
   
 > [!IMPORTANT]  
 >  除了列出的字元之外，內嵌的空格和特殊字元在一般識別碼中無效。 若要使用空格和特殊字元，您必須使用限定識別碼，而非一般識別碼。  
@@ -89,15 +89,15 @@ ms.locfileid: "35334122"
 >  如果虛線標記法中的兩個元素都加上一對方括號，則運算式評估工具會將這對元素解譯為單一識別碼，而非來源資料行組合。  
   
 ## <a name="variables-in-expressions"></a>運算式中的變數  
- 在運算式中參考變數時，必須包括 @ 前置詞。 例如，**Counter** 變數是使用 @Counter 參考。 @ 字元並非變數名稱的一部份；該字元僅用來識別運算式評估工具的變數。 如果您使用「 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師」提供的對話方塊建立運算式，則 @ 字元會自動加入變數名稱中。 不可在 @ 字元和變數名稱之間加入空白。  
+ 在運算式中參考變數時，必須包括 \@ 前置詞。 例如，**Counter** 變數是使用 \@Counter 來參考。 \@ 字元並非變數名稱的一部分；該字元僅供運算式評估工具用來識別變數。 如果您使用 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計工具提供的對話方塊建置運算式，則 \@ 字元會自動加入變數名稱中。 在 \@ 字元和變數名稱之間加入空白是無效的格式。  
   
  變數名稱與其他一般識別碼的名稱遵循相同的規則：  
   
 -   名稱的第一個字元必須是 Unicode Standard 2.0 所定義的字母，或者底線 (_)。  
   
--   後續的字元可以是 Unicode Standard 2.0 所定義的字母或數字、底線 (_)、@、$ 及 # 字元。  
+-   後續的字元可以是 Unicode Standard 2.0 所定義的字母或數字、底線 (_)、\@、$ 及 # 字元。  
   
- 如果變數名稱包含所列出字元以外的字元，則變數必須加上方括號。 例如，含空白的變數名稱必須加上方括號。 左方括號會接在 @ 字元後面。 例如， **My Name** 變數會以 @[My Name] 的形式參考。 不可在變數名稱和方括號之間加入空白。  
+ 如果變數名稱包含所列出字元以外的字元，則變數必須加上方括號。 例如，含空白的變數名稱必須加上方括號。 左方括弧會接在 \@ 字元後面。 例如，**My Name** 變數會以 \@[My Name] 的形式參考。 不可在變數名稱和方括號之間加入空白。  
   
 > [!NOTE]  
 >  使用者定義變數和系統變數的名稱會區分大小寫。  

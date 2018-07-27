@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 312d082d3126bd3f0365b674177b59d32e9b613b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aae0ce86304b3093e9151ed1741b615f423c1e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035205"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984960"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>建立及管理原生模式報表伺服器的訂閱
   標準訂閱是希望能透過電子郵件傳遞報表，或傳遞到共用資料夾之個別使用者所建立的訂閱。 此主題提供有關由個別使用者建立或管理的標準訂閱資訊。 資料驅動訂閱有不同的需求和步驟，且會在另一個主題中討論。 如需詳細資訊，請參閱 [建立、修改和刪除資料驅動訂閱](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "33035205"
   
 -   若要使用電子郵件傳遞，您必須先針對 SMTP 伺服器或閘道連接設定報表伺服器，才可以建立訂閱。  
   
--   若要使用檔案共用傳遞，您必須已經定義目標資料夾。 如需詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
+-   若要使用檔案共用傳遞，您必須已經定義目標資料夾。 如需詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
   
  報表資料來源必須設定為使用預存認證或不使用認證，然後才能訂閱報表。 如需詳細資訊，請參閱 [在 Reporting Services 資料來源中儲存認證](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)。 否則的話， **[新增訂閱]** 按鈕便無法使用。  
   
@@ -112,9 +112,9 @@ ms.locfileid: "33035205"
   
 4.  **擁有者**︰擁有者欄位預設為目前的使用者，且在您建立訂閱時無法編輯。 不過，在儲存訂閱之後，您可以變更訂閱屬性，包括擁有者與描述。  
   
-5.  **傳遞者**：選取 [電子郵件]。 如果無法使用 [電子郵件]，表示您的報表伺服器尚未針對電子郵件訂用帳戶進行設定。 請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **傳遞者**：選取 [電子郵件]。 如果無法使用 [電子郵件]，表示您的報表伺服器尚未針對電子郵件訂用帳戶進行設定。 請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)  
   
-6.  **收件者**：系統會使用您的網域使用者帳戶，自行處理 [收件者:] 欄位中的收件者名稱。 驗證格式為 [使用者名稱]@[網域.com] 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者] 欄位。 如需如何變更電子郵件地址組態設定的詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
+6.  **收件者**：系統會使用您的網域使用者帳戶，自行處理 [收件者:] 欄位中的收件者名稱。 驗證格式為 [使用者名稱]@[網域.com] 報表伺服器組態設定會決定系統是否會使用您的使用者帳戶來自行處理 [收件者] 欄位。 如需如何變更電子郵件地址組態設定的詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
   
     > [!NOTE]  
     >  根據您的權限，可能可以輸入想要傳遞報表的目標電子郵件地址。 若要指定多個電子郵件地址，請使用分號 (;) 隔開。 您也可以在 [副本]、[密件副本] 和 [回覆至] 文字方塊中，鍵入其他電子郵件地址。 這需要您具有管理所有訂閱的權限。  

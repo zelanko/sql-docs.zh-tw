@@ -24,12 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404750"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084480"
 ---
 # <a name="execute-sql-task"></a>執行 SQL 工作
   「執行 SQL」工作會執行封裝中的 SQL 陳述式或預存程序。 工作可以包含逐次執行的單一 SQL 陳述式或多重 SQL 陳述式。 您可將執行 SQL 工作用於下列用途：  
@@ -157,7 +157,7 @@ ms.locfileid: "35404750"
   
  這個屬性具有下表中所列的選項。  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**直接輸入**|將來源設定為 Transact-SQL 陳述式。 選取此值會顯示動態選項 [SQLStatement]。|  
 |**檔案連接**|選取包含 Transact-SQL 陳述式的檔案。 選取此選項會顯示動態選項 [FileConnection]。|  
@@ -218,7 +218,7 @@ ms.locfileid: "35404750"
  **參數名稱**  
  提供參數名稱。  
   
- 您必須根據工作所使用的連接管理員類型，來使用數字或參數名稱。 某些連線管理員類型需要參數名稱的第一個字元是 @ 符號、特定名稱 (如 @Param1) 或資料行名稱作為參數名稱。  
+ 您必須根據工作所使用的連接管理員類型，來使用數字或參數名稱。 某些連線管理員類型要求參數名稱的第一個字元是 \@ 符號、特定名稱 (如 \@Param1) 或資料行名稱作為參數名稱。  
   
  **參數大小**  
  提供具有可變長度之參數的大小，例如字串和二進位欄位。  
@@ -273,16 +273,16 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 -   [取得傳回碼的值](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a> 參數名稱和標記  
- 依據執行 SQL 工作使用的連接類型，SQL 命令的語法會使用不同的參數標記。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員類型要求 SQL 命令必須使用格式為 **@varParameter** 的參數標記，而 OLE DB 連線類型則需要使用問號 (?)。  
+ 依據執行 SQL 工作使用的連接類型，SQL 命令的語法會使用不同的參數標記。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員類型要求 SQL 命令使用格式為 **\@varParameter** 的參數標記，而 OLE DB 連接類型則需要使用問號 (?) 參數標記。  
   
- 在變數與參數的對應中，可以用來當做參數名稱的名稱也會隨著連線管理員的類型而異。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員類型使用具有 @ 前置詞的使用者自訂名稱，而 OLE DB 連線管理員類型則要求您必須使用以 0 為基底的序數數值做為參數名稱。  
+ 在變數與參數的對應中，可以用來當做參數名稱的名稱也會隨著連線管理員的類型而異。 例如，[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線管理員類型使用具有 \@ 前置詞的使用者定義名稱，而 OLE DB 連線管理員類型則要求您使用以 0 為基底的序數數值作為參數名稱。  
   
  下表摘要說明執行 SQL 工作可以使用之連線管理員類型的 SQL 命令需求。  
   
 |連接類型|參數標記|參數名稱|範例 SQL 命令|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<參數名稱>|@\<參數名稱>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<參數名稱>|\@\<參數名稱>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL 和 OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -375,7 +375,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
   
 -   ADO 連接類型可以使用任何兩個參數名稱，例如 Param1 和 Param2，但這些名稱必須對應它們在參數清單中的序數位置。  
   
--   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連線類型使用參數名稱 @parmMinProductID 和 @parmMaxProductID。  
+-   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 連接類型使用參數名稱 \@parmMinProductID 和 \@parmMaxProductID。  
   
 ###  <a name="Stored_procedures"></a> 搭配預存程序使用參數  
  執行預存程序的 SQL 命令亦可使用參數對應。 如何使用參數標記和參數名稱的規則，需視「執行 SQL」所使用的連接管理員類型而定，這一點與參數化查詢的規則相同。  
@@ -421,7 +421,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     |連接類型|參數標記|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET 和 SQLMOBILE|@\<參數名稱>|  
+    |ADO.NET 和 SQLMOBILE|\@\<參數名稱>|  
     |ODBC|?|  
     |EXCEL 和 OLE DB|?|  
   
@@ -444,7 +444,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
     |連接類型|參數名稱|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET 和 SQLMOBILE|@\<參數名稱>|  
+    |ADO.NET 和 SQLMOBILE|\@\<參數名稱>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL 和 OLE DB|0, 1, 2, 3, …|  
   
@@ -577,7 +577,7 @@ SQL 陳述式和預存程序經常使用 **輸入** 參數、 **輸出** 參數�
 ### <a name="custom-log-entries"></a>自訂記錄項目  
  下表描述「執行 SQL」工作的自訂記錄項目。 如需詳細資訊，請參閱 [Integration Services &#40;SSIS&#41; 記錄](../../integration-services/performance/integration-services-ssis-logging.md)。  
   
-|記錄項目|描述|  
+|記錄項目|Description|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|提供 SQL 陳述式執行階段的相關資訊。 寫入記錄項目的時機包括在工作取得資料庫連接時、在工作開始準備 SQL 陳述式時，以及在 SQL 陳述式執行完成之後。 準備階段的記錄項目包含工作所使用的 SQL 陳述式。|  
 

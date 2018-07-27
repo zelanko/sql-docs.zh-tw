@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的彈性查詢處理 | Microsoft Docs | Microsoft Docs
 description: 可改善 SQL Server (2017 和更新版本) 和 Azure SQL Database 查詢效能的彈性查詢處理功能。
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c7a38b9765d15e3d62c2ba022b356f627ee9c6ce
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332439"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087500"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>SQL 資料庫中的彈性查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,6 +108,29 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 
 USE HINT　查詢提示的優先順序高於資料庫範圍設定或追蹤旗標設定。
 
+## <a name="row-mode-memory-grant-feedback"></a>資料列模式記憶體授與意見反應
+**適用於**：SQL Database 作為公開預覽功能
+
+調整批次和資料列模式運算子的記憶體授與大小，藉此在批次模式記憶體授與意見反應功能上展開資料列模式記憶體授與意見反應。  
+
+若要在 Azure SQL Database 中啟用資料列模式記憶體授與意見反應的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
+
+透過 **memory_grant_updated_by_feedback** XEvent 將可以看到資料列模式記憶體授與意見反應活動。 
+
+從資料列模式記憶體授與意見反應開始，將會針對實際的執行後計劃，顯示兩個新的查詢計劃屬性：**IsMemoryGrantFeedbackAdjusted** 和 **LastRequestedMemory**，這兩個屬性會新增到 MemoryGrantInfo 查詢計劃 XML 元素中。 
+
+LastRequestedMemory 會在查詢執行之前，顯示授與的記憶體 (KB)。 IsMemoryGrantFeedbackAdjusted 屬性可讓您針對實際查詢執行計畫內的陳述式，檢查記憶體授與意見反應的狀態。 此屬性中顯示的值如下：
+
+| IsMemoryGrantFeedbackAdjusted 值 | Description |
+|--- |--- |
+| 否：第一次執行 | 記憶體授與意見反應不會針對第一次編譯和相關聯的執行，調整記憶體。  |
+| 否：精確授與 | 如果沒有溢出到磁碟，而且陳述式使用至少 50% 的授與的記憶體，則不會觸發記憶體授與意見反應。 |
+| 否：意見反應遭到停用 | 如果記憶體授與意見反應持續遭到觸發，而且在記憶體增加和減少記憶體的作業之間波動，我們將會停用陳述式的記憶體授與意見反應。 |
+| 是：調整 | 已套用記憶體授與意見反應，而且可能會針對下一次執行進一步調整。 |
+| 是：穩定 | 已套用記憶體授與意見反應，而且授與的記憶體現已穩定，表示針對上次執行授與的記憶體就是針對目前執行授與的記憶體。 |
+
+目前在 SQL Server Management Studio 圖形化查詢執行計劃中看不到記憶體授與意見反應計劃屬性，但若是早期測試，您可以使用 SET STATISTICS XML ON 或 query_post_execution_showplan XEvent 檢視這些屬性。  
+
 ## <a name="batch-mode-adaptive-joins"></a>批次模式自適性聯結
 批次模式自適性聯結功能可讓選擇的[雜湊聯結或巢狀迴圈聯結](../../relational-databases/performance/joins.md)方法，延後到已掃描的第一個輸入**之後**。 自適性聯結運算子定義的閾值是用於決定何時要切換至巢狀迴圈計劃。 因此，您的計劃可在執行期間動態切換至較佳的聯結策略。
 運作方式：
@@ -164,7 +187,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>追蹤自適性聯結活動
 自適性聯結運算子有下列計劃運算子屬性：
 
-| 計劃屬性 | 描述 |
+| 計劃屬性 | Description |
 |--- |--- |
 | AdaptiveThresholdRows | 顯示從雜湊聯結切換至巢狀迴圈聯結所使用的閾值。 |
 | EstimatedJoinType | 可能的聯結類型。 |
@@ -260,14 +283,14 @@ MSTVF 在 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 和 [!INCLUDE[ssSQL1
 ### <a name="tracking-interleaved-execution-activity"></a>追蹤交錯執行活動
 您可以在實際的查詢執行計劃中看到使用方式屬性：
 
-| 執行計劃屬性 | 描述 |
+| 執行計劃屬性 | Description |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | 適用於 *QueryPlan* 節點。 為 *true* 時，表示計劃包含交錯執行候選項目。 |
 | IsInterleavedExecuted | 位於 TVF 節點 RelOp 之下 *RuntimeInformation* 元素的屬性。 為 *true* 時，這表示作業已具體化為交錯執行作業的一部分。 |
 
 您也可以透過下列 xEvent 追蹤交錯執行項目：
 
-| xEvent | 描述 |
+| xEvent | Description |
 | ---- | --- |
 | interleaved_exec_status | 交錯執行進行時會引發這個事件。 |
 | interleaved_exec_stats_update | 此事件會描述由交錯執行更新的基數估計值。 |

@@ -21,12 +21,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8466ac50eedc6511fdd464789b4480c4dcd52608
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b63787bdf1f0f91fb6bf8f190024ba6897c75717
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035425"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982780"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>錯誤和事件參考 (Reporting Services)
   本主題提供有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]錯誤和事件的資訊。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 記錄檔也包含錯誤資訊。 如需有關可用記錄檔類型及如何檢視記錄的詳細資訊，請參閱 [Reporting Services 記錄檔和來源](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)。  
@@ -37,7 +37,7 @@ ms.locfileid: "33035425"
 ## <a name="report-server-events"></a>報表伺服器事件  
  下列報表伺服器事件會記錄在 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 應用程式記錄中。  
   
-|事件識別碼|類型|類別目錄|來源|描述|  
+|事件識別碼|類型|類別目錄|來源|Description|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|錯誤|排程|報表伺服器|當您定義排程作業時 (例如，報表訂閱和傳遞)，必須執行 SQL Server Agent。|  
 |[107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)|錯誤|啟動/關閉|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源> 無法連線到報表伺服器資料庫。 如需詳細資訊，請參閱[報表伺服器 Windows 服務 &#40;MSSQLServer&#41; 107](../../reporting-services/troubleshooting/report-server-windows-service-mssqlserver-107.md)。|  
@@ -55,7 +55,7 @@ ms.locfileid: "33035425"
 |119|錯誤|啟用|報表伺服器<br /><br /> 排程與傳遞處理器|\<來源> 沒有被授權存取報表伺服器資料庫的內容。|  
 |120|錯誤|啟用|報表伺服器|對稱金鑰無法解密。 最可能的情況是因為，伺服器執行的帳戶已經變更。 如需詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  
 |121|錯誤|啟動/關閉|報表伺服器|遠端程序呼叫 (RPC) 服務啟動失敗。|  
-|122|警告|傳遞|排程與傳遞處理器|「排程與傳遞處理器」無法連接到作為電子郵件傳遞的 SMTP 伺服器。 如需有關 SMTP 伺服器連接的詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。|  
+|122|警告|傳遞|排程與傳遞處理器|「排程與傳遞處理器」無法連接到作為電子郵件傳遞的 SMTP 伺服器。 如需有關 SMTP 伺服器連線的詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。|  
 |123|警告|記錄|報表伺服器<br /><br /> 報表管理員|報表伺服器寫入追蹤記錄失敗。 如需追蹤紀錄的詳細資訊，請參閱 [報表伺服器服務追蹤記錄](../../reporting-services/report-server/report-server-service-trace-log.md)。|  
 |124|[資訊]|啟用|報表伺服器|「報表伺服器」服務已經初始化。 如需詳細資訊，請參閱[初始化報表伺服器 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)。|  
 |125|[資訊]|啟用|報表伺服器|用來加密資料的金鑰已經成功擷取。 如需金鑰的詳細資訊，請參閱[設定和管理加密金鑰 &#40;SSRS 設定管理員&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)。|  

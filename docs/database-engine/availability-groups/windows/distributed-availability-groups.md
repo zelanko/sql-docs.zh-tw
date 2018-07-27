@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0c035428e526b64dd4b0245719b139f6567108b6
-ms.sourcegitcommit: d3432a37b23b61c37092daf7519b30fc42fc0538
+ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270949"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083729"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ ms.locfileid: "36270949"
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>災害復原和多網站案例
 
-傳統可用性群組需要所有伺服器都屬於相同的 WSFC 叢集，這樣可讓跨多個資料中心更具挑戰。 下圖顯示傳統多網站可用性群組架構的樣子，包含資料流程。 有一個主要複本會將交易傳送至所有次要複本。 此組態在某些方向較分散式可用性群組不具彈性。 例如，您必須在 WSFC 叢集中實作 Active Directory (如果適用) 和仲裁見證這類事物。 您也可能需要考量 WSFC 叢集的其他方面，例如改變節點投票。
+傳統可用性群組需要所有伺服器都屬於相同的 WSFC 叢集，這樣可讓跨多個資料中心更具挑戰。 下圖顯示傳統多網站可用性群組架構的樣子，包含資料流程。 有一個主要複本會將交易傳送至所有次要複本。 此設定在某些方面較分散式可用性群組不具彈性。 例如，您必須在 WSFC 叢集中實作 Active Directory (如果適用) 和仲裁見證這類事物。 您也可能需要考量 WSFC 叢集的其他方面，例如改變節點投票。
 
 ![傳統多網站可用性群組][4]
 
-分散式可用性群組針對跨多個資料中心的可用性群組，提供更具彈性的部署案例。 您甚至可以使用過去使用[記錄傳送]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)這類功能的分散式可用性群組。 不過，與傳統可用性群組不同，分散式可用性群組不能延遲套用交易。 這表示可用性群組或分散式可用性群組對於錯誤地更新或刪除資料的人為錯誤沒有任何幫助。
+分散式可用性群組針對跨多個資料中心的可用性群組，提供更具彈性的部署案例。 您甚至可以使用分散式可用性群組，過去會針對災害復原等情況，使用它的[記錄傳送]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)等功能。 不過，不同於記錄傳送，分散式可用性群組不能延遲套用交易。 這表示可用性群組或分散式可用性群組對於錯誤地更新或刪除資料的人為錯誤沒有任何幫助。
 
 分散式可用性群組是鬆散偶合的，在此情況下，表示它們不需要單一 WSFC 叢集，而且它們是由 SQL Server 進行維護。 因為 WSFC 叢集是個別進行維護，而且兩個可用性群組之間的同步處理主要不同步，所以可以更輕鬆地在另一個網站上設定災害復原。 每個可用性群組中的主要複本都會同步處理其專屬次要複本。
 
@@ -222,9 +222,9 @@ Cluster Group                   JC                    Online
 SELECT ag.[name] as 'AG Name', 
     ag.Is_Distributed, 
     ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag, 
-    sys.availability_replicas ar       
-WHERE   ag.group_id = ar.group_id
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar       
+    ON  ag.group_id = ar.group_id
 ```
 
 下圖顯示加入分散式可用性群組之第二個 WSFC 叢集的輸出範例。 SPAG1 是由兩個複本組成：DENNIS 和 JY。 不過，名為 SPDistAG 的分散式可用性群組，和傳統的可用性群組一樣，有兩個加入的可用性群組名稱 (SPAG1 和 SPAG2)，而不是執行個體的名稱。 
@@ -235,12 +235,12 @@ WHERE   ag.group_id = ar.group_id
 
 ```sql
 SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag, 
-sys.availability_replicas ar,       
-sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id
-and     ag.group_id = ar.group_id 
-and ag.is_distributed = 1
+FROM    sys.availability_groups ag
+  INNER JOIN sys.availability_replicas ar
+    ON ag.group_id = ar.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars       
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
        
        
@@ -251,16 +251,16 @@ and ag.is_distributed = 1
 
 ```
 SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs,
-    sys.availability_groups ag,
-    sys.availability_replicas ar,
-    sys.dm_hadr_availability_replica_states ars,
-    sys.dm_hadr_database_replica_states drs
-WHERE   drs.group_id = ag.group_id
-and ar.replica_id = ars.replica_id
-and ars.replica_id = drs.replica_id
-and dbs.database_id = drs.database_id
-and ag.is_distributed = 1
+FROM    sys.databases dbs
+  INNER JOIN sys.dm_hadr_database_replica_states drs
+    ON dbs.database_id = drs.database_id
+  INNER JOIN sys.availability_groups ag
+    ON drs.group_id = ag.group_id
+  INNER JOIN sys.dm_hadr_availability_replica_states ars
+    ON ars.replica_id = drs.replica_id
+  INNER JOIN sys.availability_replicas ar
+    ON ar.replica_id = ars.replica_id
+WHERE ag.is_distributed = 1
 ```
 
 ![分散式可用性群組的效能資訊][13]

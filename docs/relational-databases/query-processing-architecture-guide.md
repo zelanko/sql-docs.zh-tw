@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842901"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087560"
 ---
 # <a name="query-processing-architecture-guide"></a>查詢處理架構指南
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -569,7 +569,7 @@ WHERE ProductSubcategoryID = 4;
   * 運算式包含 `CASE` 子句。  
 * 查詢提示子句的引數。 這些包括 `number_of_rows` 查詢提示的 `FAST` 引數、 `number_of_processors` 查詢提示的 `MAXDOP` 引數，以及 `MAXRECURSION` 查詢提示的 number 引數。
 
-參數化會發生在個別 Transact-SQL 陳述式層級上。 換句話說，批次中的個別陳述式會進行參數化。 編譯之後，參數化查詢會在最初提交查詢的批次內容中執行。 若已快取查詢的執行計畫，即可藉由參考 sys.syscacheobjects 動態管理檢視表的 sql 資料行，來判斷查詢是否已參數化。 若查詢已參數化，則此資料行中參數的名稱與資料類型會顯示在提交批次的文字之前，如 (@1 tinyint)。
+參數化會發生在個別 Transact-SQL 陳述式層級上。 換句話說，批次中的個別陳述式會進行參數化。 編譯之後，參數化查詢會在最初提交查詢的批次內容中執行。 若已快取查詢的執行計畫，即可藉由參考 sys.syscacheobjects 動態管理檢視表的 sql 資料行，來判斷查詢是否已參數化。 若查詢已參數化，則此資料行中參數的名稱與資料類型會顯示在提交批次的文字之前，如 (\@1 tinyint)。
 
 > [!NOTE]
 > 參數名稱可以是任意的名稱。 使用者或應用程式不應依賴特定的命名順序。 而且，在 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 版本和 Service Pack 升級版之間可變更下列各項：參數名稱、參數化的常值選項和參數化文字的間距。

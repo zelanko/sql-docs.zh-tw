@@ -48,12 +48,12 @@ caps.latest.revision: 333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e057c582aea0646f0f151c1a342f89281d8479e0
-ms.sourcegitcommit: 974c95fdda6645b9bc77f1af2d14a6f948fe268a
+ms.openlocfilehash: 2e9788b44bb2f95082914875b14a512f05d584b9
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37890949"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982060"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安裝 SQL Server 2008 R2 的硬體和軟體需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,9 +68,9 @@ ms.locfileid: "37890949"
   
 -   從[**評估中心**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)下載 SQL Server。 
   
--    啟動已安裝 [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) 的虛擬機器。  
+-   啟動已安裝 [**SQL Server 2016**](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) 的虛擬機器。  
   
- **下列考量適用於所有版本：**  
+**下列考量適用於所有版本：**  
   
 -   建議您在使用 NTFS 或 ReFS 檔案格式的電腦上執行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 。 雖然支援在使用 FAT32 檔案系統的電腦上安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] ，但並不建議這種做法，因為其安全性低於 NTFS 或 ReFS 檔案系統。  
   
@@ -93,28 +93,30 @@ ms.locfileid: "37890949"
   
 |元件|需求|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更新版本需要 Database Engine、Master Data Services 或複寫的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 安裝程式會自動安裝 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 您也可以從 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft .NET Framework 4.6 (Web Installer) for Windows [(適用於 Windows 的 Microsoft .NET Framework 4.6 (Web 安裝程式)) 手動安裝](http://support.microsoft.com/kb/3045560)。<br/><br/> 如需 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的詳細資訊、建議和指引，請參閱 [.NET Framework 開發人員部署手冊](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]，而安裝 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 4.6 之前， [需要](http://support.microsoft.com/kb/2919355) KB2919355 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。|  
-|網路軟體|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支援的作業系統有內建的網路軟體。 獨安裝立的具名執行個體和預設執行個體支援下列網路通訊協定：共用記憶體、具名管道、TCP/IP 和 VIA。<br/><br/> 注意：協定容錯移轉叢集不支援 VIA 通訊。 只有透過容錯移轉叢集執行個體的本機管道位址進行連接時，才會支援共用記憶體。<br/><br/> 另請注意，VIA 通訊協定已被取代。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> <br/><br/> 如需有關網路通訊協定和網路程式庫的詳細資訊，請參閱＜ [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)＞。|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 和更新版本需要 Database Engine、Master Data Services 或複寫的 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 安裝程式會自動安裝 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]。 您也可以從 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft .NET Framework 4.6 (Web Installer) for Windows [(適用於 Windows 的 Microsoft .NET Framework 4.6 (Web 安裝程式)) 手動安裝](http://support.microsoft.com/kb/3045560)。<br/><br/> 如需 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 的詳細資訊、建議和指引，請參閱 [.NET Framework 開發人員部署手冊](http://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)。<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]，而安裝 [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] 4.6 之前， [需要](http://support.microsoft.com/kb/2919355) KB2919355 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 。|  
+|網路軟體|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 支援的作業系統有內建的網路軟體。 獨安裝立的具名執行個體和預設執行個體支援下列網路通訊協定：共用記憶體、具名管道、TCP/IP 和 VIA。<br/><br/> **注意：** 容錯移轉叢集不支援 VIA 通訊協定。 和 SQL Server 在相同容錯移轉叢集節點上執行的用戶端或應用程式，可以使用其本機管道位址以共用記憶體通訊協定連線到 SQL Server。 不過，此類型的連線不是叢集感知，且會在執行個體容錯移轉之後中斷。 因此不建議使用此連線，且只應該在非常特定的案例中使用。<br/><br/> **重要事項：** VIA 通訊協定已被淘汰。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> 如需有關網路通訊協定和網路程式庫的詳細資訊，請參閱＜ [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)＞。|  
 |硬碟|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 需要至少 6 GB 的可用硬碟空間。<br/><br/> 磁碟空間需求會因為您安裝的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 元件而有所不同。 如需詳細資訊，請參閱本文章稍後的[硬碟空間需求](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)。 如需支援之資料檔案儲存類型的資訊，請參閱 [資料檔案的儲存類型](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)。|  
 |光碟機|若要從光碟片安裝，則需要 DVD 光碟機。|  
 |監視器|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 需要 Super-VGA (800x600) 或更高解析度的監視器。|  
 |網際網路|網際網路功能需要網際網路存取 (可能會另行收費)。|  
   
- 注意：由於虛擬化的負荷所致，因此在虛擬機器上執行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的速度會比原生方式執行要慢。  
+> [!NOTE]
+> 由於虛擬化的負擔所致，因此在虛擬機器上執行 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的速度會比原生方式執行的速度慢。  
   
- PolyBase 功能有其他的硬體和軟體需求。 如需詳細資訊，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
+> [!IMPORTANT]
+> PolyBase 功能有其他的硬體和軟體需求。 如需詳細資訊，請參閱 [開始使用 PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)。  
   
 ##  <a name="pmosr"></a> 處理器、記憶體和作業系統需求  
  下列記憶體和處理器需求適用於所有版本的 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]：  
   
 |元件|需求|  
 |---------------|-----------------|  
-|記憶體 *|**最小值：**<br/><br/> Express 版：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建議使用：**<br/><br/> Express 版：1 GB<br/><br/> 所有其他版本：至少 4 GB，並應隨著資料庫大小增加以確保最佳效能。|  
+|記憶體 \*|**最小值：**<br/><br/> Express 版：512 MB<br/><br/> 所有其他版本：1 GB<br/><br/> **建議使用：**<br/><br/> Express 版：1 GB<br/><br/> 所有其他版本：至少 4 GB，並應隨著資料庫大小增加以確保最佳效能。|  
 |處理器速度|**最小值：** x64 處理器：1.4 GHz<br/><br/> **建議值：** 2.0 GHz 或以上|  
 |處理器類型|x64 處理器：AMD Opteron、AMD Athlon 64、具有 Intel EM64T 支援的 Intel Xeon、具有 EM64T 支援的 Intel Pentium IV|  
   
 > [!NOTE]  
->  只有 x64 處理器支援安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 。 x86 處理器不再支援其安裝。  
+> 只有 x64 處理器支援安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 。 x86 處理器不再支援其安裝。  
   
  \*在 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 中安裝 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 元件所需的最小記憶體為 2 GB RAM，這與 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 的最小記憶體需求不同。 如需有關安裝 DQS 的詳細資訊，請參閱＜ [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)＞。  
   
@@ -131,7 +133,7 @@ ms.locfileid: "37890949"
 -   [廣泛版本](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#TOP_Breadth)  
   
 > [!NOTE]  
->  本節所述的作業系統支援的例外狀況，是下列 SQL Server 2016 和更新版本的商業智慧功能，可以安裝在 Windows Server 2008 R2 SP1 或更新版本上︰  
+> 本節所述的作業系統支援的例外狀況，是下列 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 和更早版本的商業智慧功能，可以安裝在 Windows Server 2008 R2 SP1 或更新版本上︰  
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 > 
@@ -223,13 +225,13 @@ ms.locfileid: "37890949"
 -   SMB 檔案共用  
   
     > [!NOTE]  
-    >  獨立或叢集安裝的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔案不支援 SMB 儲存體。 請改用直接連結存放裝置、存放區域網路或 S2D。  
+    > 獨立或叢集安裝的 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 資料檔案不支援 SMB 儲存體。 請改用直接連結存放裝置、存放區域網路或 S2D。  
   
     > [!IMPORTANT]  
-    >  SMB 儲存體可由 Windows File Server 或協力廠商 SMB 儲存體裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱＜ [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)的最低軟硬體需求。  
+    > SMB 儲存體可由 Windows File Server 或協力廠商 SMB 儲存體裝置所裝載。 如果使用了 Windows File Server，則 Windows File Server 版本應為 2008 或更新版本。 如需有關使用 SMB 檔案共用安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為儲存體選項的詳細資訊，請參閱＜ [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)的最低軟硬體需求。  
   
     > [!WARNING]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝只有在安裝 tempdb 檔時支援本機磁碟。 務必確定在所有叢集節點上為 tempdb 資料和記錄檔指定的路徑都是有效的。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 容錯移轉叢集安裝只有在安裝 tempdb 檔時支援本機磁碟。 務必確定在所有叢集節點上為 tempdb 資料和記錄檔指定的路徑都是有效的。 在容錯移轉期間，如果容錯移轉目標節點上的 tempdb 目錄無法使用，則 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資源將無法上線。  
   
 ##  <a name="DC_support"></a> 在網域控制站上安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  基於安全性理由，不建議您在網域控制站上安裝 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝程式將不會封鎖當做網域控制站之電腦上的安裝，但適用以下限制：  

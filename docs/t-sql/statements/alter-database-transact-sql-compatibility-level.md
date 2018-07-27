@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 相容性層級 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 57bafde547e9c2705d55308187fd53e241594d5f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791509"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088370"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 相容性層級
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ ms.locfileid: "37791509"
   
 ```  
 ALTER DATABASE database_name   
-SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }  
+SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }  
 ```  
   
 ## <a name="arguments"></a>引數  
  *database_name*  
  這是要修改之資料庫的名稱。  
   
- COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
+ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
  資料庫所要相容的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本。 可以設定下列相容性層級值 (並非所有版本都支援上述所列的所有相容性層級)：  
   
 |產品|資料庫引擎版本|相容性層級指定|支援的相容性層級值|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140、130、120、110、100|
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 邏輯伺服器|12|130|140、130、120、110、100|  
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體|12|130|140、130、120、110、100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 邏輯伺服器|12|130|150, 140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 受控執行個體|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130、120、110、100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120、110、100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110、100、90|  
@@ -166,6 +166,11 @@ SELECT name, compatibility_level FROM sys.databases;
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>相容性層級和預存程序  
  當執行預存程序時，它會使用定義所在之資料庫的目前相容性層級。 當資料庫的相容性設定改變時，也會同時自動重新編譯它的所有預存程序。  
+
+## <a name="differences-between-compatibility-level-140-and-level-150"></a>相容性層級 140 和 150 之間的差異  
+本節描述相容性層級 150 所導入的新行為。
+
+適用於 Azure SQL Database 資料庫的資料庫相容性層級 150 目前是個人預覽版。  此資料庫相容性層級將會與下一帶的查詢處理改善相關聯，超在越資料庫相容性層級 140 中導入的功能。  
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>相容性層級 130 和 140 之間的差異  
 本節描述相容性層級 140 所導入的新行為。
@@ -274,7 +279,7 @@ SQL Server 2017 之前的 SQL Server 較早版本中，追蹤旗標 4199 之下�
   
  如需詳細資訊，請參閱[保留關鍵字 &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要資料庫的 ALTER 權限。  
   
 ## <a name="examples"></a>範例  

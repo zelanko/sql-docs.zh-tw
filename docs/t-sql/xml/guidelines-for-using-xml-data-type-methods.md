@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248450"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083370"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>使用 xml 資料類型方法的指導方針
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  如果編譯器無法判斷是否能在執行階段保證單一性，則需要單一性的尋找步驟、函數參數及運算子將會傳回錯誤。 這個問題經常發生在不具類型的資料上。 例如，查閱屬性時需要單一父元素。 選擇單一父節點的序數即已足夠。 評估 **node()**-**value()** 組合來擷取屬性值時，可能不需要指定序數。 下一個範例將會加以說明。  
   
 ### <a name="example-known-singleton"></a>範例：已知的單一性  
- 在此範例中，**nodes()** 方法會針對每一個 <`book`> 元素各產生一個資料列。 在 <`book`> 節點上評估的 **value()** 方法會擷取 @genre 的值，而且作為一個屬性，它是單一的。  
+ 在此範例中，**nodes()** 方法會針對每一個 <`book`> 元素各產生一個資料列。 在 <`book`> 節點上評估的 **value()** 方法會擷取 \@genre 的值，而且作為一個屬性，它是單一的。  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

@@ -17,12 +17,12 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dfb9c44afb9cefa2bb689feb99e83a62cc57811e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f558775492c58faf17f2957b536e4cbfaef9b1e9
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328602"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084610"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 運算式)
   傳回數值運算式的平方。  
@@ -66,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  在運算式中，變數名稱會固定包含 @ 前置字元。  
+>  在運算式中，變數名稱一律包含 \@ 前置詞。  
   
 ## <a name="see-also"></a>另請參閱  
  [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7f0ca959918e298d40eca5c925ccbf57e6173a2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d2d27efa67f446915de94ffd93edc0ed23db58e2
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329749"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038055"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,44 +32,11 @@ ms.locfileid: "34329749"
  
 ALTER TABLE 語法用於變更資料表的結構描述，以及加入、刪除和重建索引。 索引視為資料表定義的一部分︰  
   
--   語法 ALTER TABLE ... 只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。  
+-   語法 ALTER TABLE ...只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。  
   
 -   不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就「不」支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。  
   
- 以下是 ALTER TABLE 陳述式的 ADD、DROP 和 ALTER INDEX 子句的語法。  
-  
-```
-| ADD   
-     {   
-        <column_definition>  
-      | <table_constraint>  
-      | <table_index>    
-     } [ ,...n ]  
-  
-| DROP   
-     {  
-         [ CONSTRAINT ]   
-         {   
-              constraint_name   
-         } [ ,...n ]  
-         | COLUMN   
-         {  
-              column_name   
-         } [ ,...n ]  
-         | INDEX   
-         {  
-              index_name   
-         } [ ,...n ]  
-     } [ ,...n ]  
-  
-| ALTER INDEX index_name  
-     {   
-         REBUILD WITH ( <rebuild_index_option> )     
-     }  
-}  
-```  
-  
- 支援下列類型變更。  
+支援下列類型變更：  
   
 -   變更值區計數  
   

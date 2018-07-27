@@ -17,11 +17,12 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c6685cf99cb3a46b4b90d5e0126c4df05dcb9575
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 968fa4c440e02c7a322b3a9c32af66267a38fa64
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984160"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>報表組件 (報表產生器及 SSRS)
   資料表、矩陣、圖表和影像等報表項目都可以當做 *「報表組件」*(Report Part) 發行。 報表組件是指已經個別發行至報表伺服器，而且可以在其他分頁報表中重複使用的分頁報表項目。 報表組件的副檔名為 .rsc。  
@@ -113,7 +114,7 @@ ms.lasthandoff: 05/03/2018
  每當您開啟報表時，報表產生器都會檢查伺服器上是否已經更新該報表中之報表組件的伺服器執行個體。 它也會檢查報表組件的相依項目 (如資料集和參數) 是否有變更。 如果伺服器上已經更新任何已發行的報表組件或其相依性，報表中的資訊列會顯示已經更新的數目。 您可以選擇檢視並接受或拒絕更新，或是解除資訊列。 如果選擇檢視更新，您會看到報表組件的縮圖、上次修改者，以及上次修改時間。 接著，您可以接受任何或所有更新的項目。  
   
 > [!NOTE]  
->  您可以停用資訊列，如此當報表組件變更時，您就不會收到通知。 當您將報表組件加入至報表時，可設定此選項。 即使您停用了資訊列，還是可以檢查更新。 如需詳細資訊，請參閱 [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)。  
+>  您可以停用資訊列，如此當報表組件變更時，您就不會收到通知。 當您將報表組件加入至報表時，可設定此選項。 即使您停用了資訊列，還是可以檢查更新。 如需詳細資訊，請參閱[檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)。  
   
  報表產生器會檢查報表組件上次在伺服器上更新的日期，與您上次同步處理報表組件與伺服器的日期之間的差異。 它不會檢查您修改報表中之報表組件的日期。 因此，報表中的報表組件和伺服器上的報表組件差異可能很大，但是報表產生器檢查更新時，將不會發現任何差異。  
   
@@ -142,11 +143,11 @@ ms.lasthandoff: 05/03/2018
   
  [瀏覽報表組件及設定預設資料夾 &#40;報表產生器及 SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
+ [檢查更新或關閉更新 (報表產生器及 SSRS)](http://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
   
 ## <a name="see-also"></a>另請參閱  
  [報表產生器中的報表組件和資料集](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [針對報表組件進行疑難排解 (報表產生器及 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [針對報表組件進行疑難排解 (報表產生器及 SSRS)](http://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [管理報表組件](../../reporting-services/report-design/managing-report-parts.md)  
   
   

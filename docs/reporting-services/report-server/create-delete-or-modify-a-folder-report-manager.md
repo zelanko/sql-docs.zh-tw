@@ -22,12 +22,12 @@ caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6437c3da94d7acd070a5091394c4cbe79f105b86
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 900f88a6baab5f5c9e9e7c323cee3cdc85594788
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028735"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086680"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>建立、刪除或修改資料夾 (報表管理員)
   您可以建立資料夾來組織與管理發行至報表伺服器的項目。 建立資料夾可以協助使用者尋找他們感興趣的報表。 對於內容管理員而言，資料夾會提供套用權限的架構。 您可以針對特定資料夾建立角色指派，以便限制在開發中或不應該廣為散發之報表的存取權。  
@@ -40,7 +40,7 @@ ms.locfileid: "33028735"
   
      [新增資料夾] 頁面隨即開啟。  
   
-3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：; ? : @ & = + , $ / * < > |. 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
+3.  輸入資料夾名稱。 資料夾名稱可以包含空格，但是不能包含用於 URL 編碼的保留字元：; ? : \@ & = + , $ / * < > |。 您無法一次輸入一連串的資料夾名稱來建立數個資料夾。  
   
 4.  選擇性地輸入描述。  
   

@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c1822b889c30f7a29282f3f0cd3636ee6b7c1ae3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 4bd78a8fea59983d68fa07db0fa552d402548d54
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322237"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980060"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示字元安裝 Reporting Services 2016
 
@@ -55,7 +55,7 @@ Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /
 ##  <a name="bkmk_sharepoint_mode"></a> SharePoint 模式 Reporting Services  
   
 ### <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE (SharePoint 模式)  
- 在 SharePoint 模式中安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的輸入設定是 **/RSSHPINSTALLMODE**。 此輸入設定包含一個選項：SharePointFilesOnlyMode。 這個選項會安裝 SharePoint 模式所需的所有檔案，但是安裝之後需要進行設定。 額外設定步驟是使用 SharePoint 管理中心完成。 如需詳細資訊，請參閱 [在 SharePoint 模式中安裝第一部報表伺服器](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
+ 在 SharePoint 模式中安裝 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的輸入設定是 **/RSSHPINSTALLMODE**。 此輸入設定包含一個選項：SharePointFilesOnlyMode。 這個選項會安裝 SharePoint 模式所需的所有檔案，但是安裝之後需要進行設定。 額外設定步驟是使用 SharePoint 管理中心完成。 如需詳細資訊，請參閱[以 SharePoint 模式安裝第一部報表伺服器](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)。  
   
 ### <a name="examples-of-sharepoint-mode-installation"></a>SharePoint 模式安裝範例  
  以下範例將安裝 SQL Server 資料庫引擎服務和 SharePoint 模式的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，以及適用於 SharePoint 的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 增益集 (RS_SHPWFE)。  
@@ -92,6 +92,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [從命令提示字元安裝 SQL Server](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [SysPrep 參數](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[從命令提示字元安裝 Power Pivot](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
+[從命令提示字元安裝 PowerPivot](http://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

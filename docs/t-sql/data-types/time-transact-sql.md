@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421567"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088120"
 ---
 # <a name="time-transact-sql"></a>時間 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421567"
 |屬性|ReplTest1|  
 |--------------|-----------|  
 |語法|**time** [ (*毫秒小數位數*) ]|  
-|使用方式|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|使用方式|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*毫秒小數位數*|指定秒鐘小數部分的位數。<br /><br /> 這可以是介於 0 至 7 之間的整數。 針對 Informatica，這可以是介於 0 至 3 之間的整數。<br /><br /> 預設的小數位數是 7 (100 毫秒)。|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|Informatica 為 hh:mm:ss[.nnnnnnn])<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |範圍|00:00:00.0000000 到 23:59:59.9999999 (Informatica 為 00:00:00.000 到 23:59:59.999)|  
@@ -75,7 +75,7 @@ ms.locfileid: "37421567"
 ## <a name="supported-string-literal-formats-for-time"></a>支援 time 的字串常值格式  
  下表顯示 **time** 資料類型的有效字串常值格式。  
   
-|[SQL Server]|描述|  
+|[SQL Server]|Description|  
 |----------------|-----------------|  
 |hh:mm[:ss][:小數秒數][AM][PM]<br /><br /> hh:mm[:ss][.小數秒數][AM][PM]<br /><br /> hhAM[PM]<br /><br /> hh AM[PM]|無論您是否指定 AM，只要小時的值為 0 就表示午夜之後 (AM) 的小時。 小時等於 0 時，無法指定 PM。<br /><br /> 如果沒有指定 AM 或 PM，小時值 01 至 11 就代表正午之前的小時。 指定為 AM 時，這些值就代表正午之前的小時。 如果指定為 PM，這些值就代表正午之後的小時。<br /><br /> 如果沒有指定 AM 或 PM，小時值 12 就代表從正午開始的小時。 如果指定為 AM，此值就代表從午夜開始的小時。 如果指定為 PM，此值就代表從正午開始的小時。 例如，12:01 就是正午之後的 1 分鐘，也就是 12:01 PM，而 12:01 AM 則是午夜之後一分鐘。 指定為 12:01 AM 與指定為 00:01 或 00:01 AM 是相同的。<br /><br /> 如果未指定 AM 或 PM，從 13 到 23 的小時值就代表正午之後的小時。 如果指定為 PM，這些值也代表正午之後的小時。 當小時值為 13 至 23 時，則無法指定為 AM。<br /><br /> 24 小時值無效。 若要表示午夜，請使用 12: 00 AM 或 00:00。<br /><br /> 毫秒前可以用冒號 (:) 或句號 (.)。 如果使用冒號，數字是指千分之一秒。 如果使用句號，一位數代表十分之一秒、二位數代表百分之一秒，而三位數代表千分之一秒。 例如，12:30:20:1 表示 12:30 過 20 又千分之一秒；12:30:20.1 表示 12:30 過 20 又十分之一秒。|  
   
@@ -249,7 +249,7 @@ SELECT
 ###  <a name="ExampleB"></a> B. 將有效的時間字串常值插入 time(7) 資料行  
  下表將列出可插入 **time(7)** 資料類型之資料行的不同字串常值，以及之後儲存在該資料行中的值。  
   
-|字串常值格式類型|插入的字串常值|儲存的 time(7) 值|描述|  
+|字串常值格式類型|插入的字串常值|儲存的 time(7) 值|Description|  
 |--------------------------------|-----------------------------|------------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01:123AM'|01:01:01.1230000|當冒號 (:) 出現在小數秒數有效位數之前時，小數位數就無法超過三個位置，否則將會引發錯誤。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|'01:01:01.1234567 AM'|01:01:01.1234567|指定為 AM 或 PM 時，時間就會採用 24 小時格式儲存，但不含常值 AM 或 PM。|  
@@ -264,7 +264,7 @@ SELECT
 ### <a name="c-inserting-time-string-literal-into-columns-of-each-date-and-time-date-type"></a>C. 將時間字串常值插入每個 date 和 time 資料類型的資料行  
  在下表中，第一個資料行會顯示即將插入 date 或 time 資料類型 (顯示於第二個資料行) 之資料庫資料表資料行的時間字串常值。 第三個資料行會顯示將儲存在資料庫資料表資料行中的值。  
   
-|插入的字串常值|資料行資料類型|儲存在資料行中的值|描述|  
+|插入的字串常值|資料行資料類型|儲存在資料行中的值|Description|  
 |-----------------------------|----------------------|------------------------------------|-----------------|  
 |'12:12:12.1234567'|**time(7)**|12:12:12.1234567|如果小數秒數有效位數超過針對資料行所指定的值，字串就會被截斷，但不會發生錯誤。|  
 |'2007-05-07'|**date**|NULL|任何時間值都會導致 INSERT 陳述式失敗。|  

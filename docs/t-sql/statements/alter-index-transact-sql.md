@@ -50,11 +50,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 866e481123bc73db91a093cc79de0c2e7e277fa9
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262572"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040206"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -633,7 +633,7 @@ ALTER INDEX 無法用來重新進行索引的分割區，或將它移到另一�
   
 ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除非索引陳述式中另有指定，否則會使用選項的預設值。
   
-在多重處理器電腦上，ALTER INDEX ...REBUILD 也如同其他查詢一樣，會自動使用更多處理器來執行與修改索引相關聯的掃描和排序作業。 當您執行 ALTER INDEX ...REORGANIZE 時，不論是否設定了 LOB_COMPACTION，**max degree of parallelism** 值都是單一執行緒作業。 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
+在多處理器電腦上，就像其他查詢一樣，ALTER INDEX ...REBUILD 會自動使用更多的處理器，來執行掃描和排序與修改索引相關聯的作業。 當您執行 ALTER INDEX ...REORGANIZE 時，不論是否設定了 LOB_COMPACTION，**max degree of parallelism** 值都是單一執行緒作業。 如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!IMPORTANT]
 > 如果索引所在的檔案群組離線或設為唯讀，便無法重新組織或重建索引。 當指定了 ALL 關鍵字，且有一個或多個索引在離線或唯讀檔案群組中，陳述式會失敗。  
@@ -772,7 +772,7 @@ ONLINE、MAXDOP 和 SORT_IN_TEMPDB 的值並未儲存在系統目錄中。 除�
 ## <a name="statistics"></a>Statistics  
  當您在資料表上執行 **ALTER INDEX ALL …** 時， 只會更新與索引相關聯的統計資料。 針對資料表 (而非索引) 所建立的自動或手動統計資料不會進行更新。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要執行 ALTER INDEX，至少需要資料表或檢視表的 ALTER 權限。  
   
 ## <a name="version-notes"></a>版本資訊  

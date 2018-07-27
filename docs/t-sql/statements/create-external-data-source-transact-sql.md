@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ea8af698d4664a62dca880222f84bfc902028f8
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 68fef3dc4b856f78720923c33df352f5ea3c7f98
+ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782659"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39102566"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -198,6 +198,8 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 **BLOB_STORAGE**   
 僅針對大量作業，`LOCATION` 必須是 Azure Blob 儲存體和容器的有效 URL。 請不要將 **/**、檔案名稱或共用存取簽章參數放置於 `LOCATION` URL 的結尾處。   
 使用的認證必須利用 `SHARED ACCESS SIGNATURE` 來建立，以作為身分識別。 如需共用存取簽章的詳細資訊，請參閱[使用共用存取簽章 (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)。 如需存取 Blob 儲存體的範例，請參閱 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 的範例 F。 
+>[!NOTE] 
+>若要從 Azure Blob 儲存體載入到 SQL DW 或平行處理資料倉儲，祕密必須是Azure 儲存體金鑰。
 
   
  RESOURCE_MANAGER_LOCATION = '*ResourceManager_URI*[:*port*]'  
@@ -274,7 +276,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
   
 -   參考外部資料來源和外部檔案格式的外部資料表。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  在 SQL DW、SQL Server、APS 2016 和 SQL DB 中，需要有對資料庫的 CONTROL 權限。
 
 > [!IMPORTANT]  

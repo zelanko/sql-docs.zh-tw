@@ -59,11 +59,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 0253d659a428b46aceee2b261f4b07e96983325b
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782709"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999580"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -730,7 +730,7 @@ INSERT INTO t1 VALUES (1, 0);
 - 若要立即暫停索引作業，您可以停止 (Ctrl-C) 進行中的命令、執行 [ALTER INDEX](alter-index-transact-sql.md) PAUSE 命令，或執行 KILL `<session_id>` 命令。 暫停命令之後，可以使用 [ALTER INDEX](alter-index-transact-sql.md) 命令繼續執行該命令。 
 - 重新執行可繼續索引的原始 CREATE INDEX 陳述式，會自動繼續已暫停索引的建立作業。
 - 可繼續的索引不支援 SORT_IN_TEMPDB=ON 選項。 
-- RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是開始 TRAN … COMMIT 區塊的一部分)。
+- RESUMABLE=ON 的 DDL 命令無法在明確交易內部執行 (不能是 TRAN … COMMIT 區塊的一部份)。
 - 若要繼續/中止建置/重建索引，請使用 [ALTER INDEX](alter-index-transact-sql.md) T-SQL 語法
 
 > [!NOTE]
@@ -784,7 +784,7 @@ INSERT INTO t1 VALUES (1, 0);
   
  若要評估變更壓縮狀態如何影響資料表、索引或分割區，請使用 [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 預存程序。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要資料表或檢視表的 ALTER 權限。 使用者必須是 **系統管理員** 固定伺服器角色的成員，或是 **db_ddladmin** 和 **db_owner** 固定資料庫角色的成員。  
   
 ## <a name="limitations-and-restrictions"></a>限制事項  

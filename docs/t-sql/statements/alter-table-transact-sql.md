@@ -63,12 +63,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: fe68009506a8dbc48400148df7f7048f5a11a481
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909578"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038205"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "37909578"
 ## <a name="syntax"></a>語法  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
+-- Disk-Based ALTER TABLE Syntax for SQL Server and Azure SQL Database
   
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
@@ -110,7 +110,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         <column_definition>  
       | <computed_column_definition>  
       | <table_constraint>   
-      | <column_set_definition>   
+      | <column_set_definition> 
     } [ ,...n ]  
       | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
                    [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
@@ -120,6 +120,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
            DEFAULT constant_expression [WITH VALUES] ,  
          ]  
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+       
     | DROP   
      [ {  
          [ CONSTRAINT ]  [ IF EXISTS ]  
@@ -148,6 +149,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         TO target_table   
         [ PARTITION target_partition_number_expression ]  
         [ WITH ( <low_priority_lock_wait> ) ]  
+    
     | SET   
         (  
             [ FILESTREAM_ON =   
@@ -168,6 +170,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
                       ]  
                   }  
           )  
+      
     | REBUILD   
       [ [PARTITION = ALL]  
         [ WITH ( <rebuild_option> [ ,...n ] ) ]   
@@ -181,7 +184,6 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     | <filetable_option>  
   
     | <stretch_configuration>  
-  
 }  
 [ ; ]  
   
@@ -189,7 +191,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 <column_set_definition> ::=   
     column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
-  
+
 <drop_clustered_constraint_option> ::=    
     {   
         MAXDOP = max_degree_of_parallelism  
@@ -240,6 +242,136 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
 }  
 ```  
+  
+```  
+-- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database
+  
+ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+{   
+    ALTER COLUMN column_name   
+    {   
+        [ type_schema_name. ] type_name   
+            [ (   
+                {   
+                   precision [ , scale ]   
+                }   
+            ) ]   
+        [ COLLATE collation_name ]   
+        [ NULL | NOT NULL ] 
+    }  
+
+    | ALTER INDEX index_name   
+    {   
+        [ type_schema_name. ] type_name   
+        REBUILD   
+        [ [ NONCLUSTERED ] WITH ( BUCKET_COUNT = bucket_count )
+        ]  
+    }  
+    
+    | ADD   
+    {   
+        <column_definition>  
+      | <computed_column_definition>  
+      | <table_constraint> 
+      | <table_index>
+      | <column_index>
+    } [ ,...n ]  
+      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
+                   [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
+           DEFAULT constant_expression [WITH VALUES] ,  
+            system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END   
+                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ] 
+           DEFAULT constant_expression [WITH VALUES] ,  
+         ]  
+       PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+       
+    | DROP   
+     [ {  
+         CONSTRAINT  [ IF EXISTS ]  
+         {   
+              constraint_name   
+          } [ ,...n ]  
+      | INDEX  [ IF EXISTS ] 
+      {
+          index_name
+      } [ ,...n ]
+          | COLUMN  [ IF EXISTS ]  
+          {  
+              column_name   
+          } [ ,...n ]  
+          | PERIOD FOR SYSTEM_TIME  
+     } [ ,...n ]  
+    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT   
+        { ALL | constraint_name [ ,...n ] }   
+    
+    | { ENABLE | DISABLE } TRIGGER   
+        { ALL | trigger_name [ ,...n ] }  
+  
+    | SWITCH [ [ PARTITION ] source_partition_number_expression ]  
+        TO target_table   
+        [ PARTITION target_partition_number_expression ]  
+        [ WITH ( <low_priority_lock_wait> ) ]  
+    
+    | SET   
+        (  
+            SYSTEM_VERSIONING =   
+                  {   
+                      OFF   
+                  | ON   
+                      [ ( HISTORY_TABLE = schema_name . history_table_name   
+                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
+                          [, HISTORY_RETENTION_PERIOD = 
+                          { 
+                               INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                 | MONTH | MONTHS | YEAR | YEARS } 
+                          } 
+                          ]  
+                        )  
+                      ]  
+                  }  
+          )  
+      
+    | <table_option>    
+}  
+[ ; ]  
+  
+-- ALTER TABLE options  
+  
+< table_constraint > ::=  
+ [ CONSTRAINT constraint_name ]  
+{    
+   { PRIMARY KEY | UNIQUE }  
+     {   
+       NONCLUSTERED (column [ ASC | DESC ] [ ,... n ])  
+       | NONCLUSTERED HASH (column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )   
+                    }   
+    | FOREIGN KEY   
+        ( column [ ,...n ] )   
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]   
+    | CHECK ( logical_expression )   
+}  
+
+<column_index> ::=  
+  INDEX index_name  
+{ [ NONCLUSTERED ] | [ NONCLUSTERED ] HASH WITH (BUCKET_COUNT = bucket_count)  }  
+
+<table_index> ::=  
+  INDEX index_name  
+{   [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count)   
+  | [ NONCLUSTERED ] (column [ ASC | DESC ] [ ,... n ] )   
+      [ ON filegroup_name | default ]  
+  | CLUSTERED COLUMNSTORE [WITH ( COMPRESSION_DELAY = {0 | delay [Minutes]})]  
+      [ ON filegroup_name | default ]   
+}  
+
+<table_option> ::=  
+{  
+    MEMORY_OPTIMIZED = ON   
+  | DURABILITY = {SCHEMA_ONLY | SCHEMA_AND_DATA}  
+  | SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name . history_table_name  
+        [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ]   
+}  
+``` 
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
@@ -318,7 +450,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   與預設定義相關聯。 不過，如果資料類型沒有變更，則會變更資料行的長度、有效位數或小數位數。  
   
-**text**、**ntext 與 **image** 資料行的資料類型只能透過下列方式來變更：  
+**text**、**ntext** 與 **image** 資料行的資料類型只能透過以下方式來變更：  
   
 -   **text** 變更為 **varchar(max)**、**nvarchar(max)** 或 **xml**  
   
@@ -326,7 +458,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   **image** 變更為 **varbinary(max)**  
   
-某些資料類型變更可能會使資料變更。 例如，如果將 nchar** 或 **nvarchar** 資料行變更為 **char** 或 **varchar**，則可能會轉換擴充字元。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。 減少資料行的有效位數或小數位數，可能會使資料截斷。  
+某些資料類型變更可能會使資料變更。 例如，如果將 **nchar** 或 **nvarchar** 資料行變更為 **char** 或 **varchar**，則可能會轉換擴充字元。 如需詳細資訊，請參閱 [CAST 和 CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)。 減少資料行的有效位數或小數位數，可能會使資料截斷。  
   
 > [!NOTE]
 > 分割區資料表之資料行的資料類型不能變更。  
@@ -379,7 +511,7 @@ COLLATE \< *collation_name* > 指定已改變之資料行的新定序。 若未�
   
  COLLATE 子句只能用來變更 **char**、**varchar**、**nchar** 與 **nvarchar** 資料類型之資料行的定序。 若要變更使用者定義之別名資料類型資料行的定序，您必須執行個別的 ALTER TABLE 陳述式，將資料行變更為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 系統資料類型，並變更它的定序，然後再將資料行改回別名資料類型。  
   
- 如果存在下列一個或多個條件，ALTER COLUMN 不能有定序變更：  
+如果存在下列一個或多個條件，ALTER COLUMN 不能有定序變更：  
   
 -   如果 CHECK 條件約束、FOREIGN KEY 條件約束或計算資料行參考變更的資料行。  
 -   如果在資料行上建立任何索引、統計資料或全文檢索索引。 如果資料行定序變更了，在變更的資料行上自動建立的統計資料就會卸除。  
@@ -483,12 +615,22 @@ WITH CHECK | WITH NOCHECK
  如果您不要依照現有的資料來確認新的 CHECK 或 FOREIGN KEY 條件約束，請使用 WITH NOCHECK。 除了極少數的狀況外，我們建議您不要這麼做。 在以後的所有資料更新中將會評估新條件約束。 新增條件約束時，如果 WITH NOCHECK 抑制任何強制違規，當未來的更新作業更新含有不符合該條件約束的資料列時，這些強制違規可能會使這些更新作業失敗。  
   
  查詢最佳化工具不考量定義為 WITH NOCHECK 的條件約束。 這類條件約束將予忽略，直到使用 `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL` 重新啟用為止。  
+
+ALTER INDEX *index_name* 指定要變更或改變之 *index_name* 的貯體計數。
   
- ADD  
- 指定加入一或多個資料行定義、計算資料行定義或資料表條件約束，或進行系統版本設定時，系統會用到的資料行。  
+語法 ALTER TABLE ... 只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。    
+
+> [!NOTE]
+> 不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就不支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。 
+
+ADD  
+指定加入一或多個資料行定義、計算資料行定義或資料表條件約束，或進行系統版本設定時，系統會用到的資料行。 可以對記憶體最佳化資料表新增索引。
+
+> [!NOTE]
+> 不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就不支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。 
   
- PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
- **適用於**：[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+**適用於**：[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  指定資料行的名稱，系統會使用這個資料行來記載某一筆記錄的有效期。 您可以指定現有的資料行或建立新的資料行，作為 ADD PERIOD FOR SYSTEM_TIME 引數的一部分。 資料行的資料類型必須是 datetime2，而且必須定義為 NOT NULL。 如果某個期間資料行定義為 NULL，則會擲回錯誤。 您可以為 system_start_time 和 system_end_time 資料行定義 [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) 和/或[指定資料行的預設值](../../relational-databases/tables/specify-default-values-for-columns.md)。 請參閱[系統版本設定](#system_versioning)範例中的範例 A，此範例示範 system_end_time 資料行如何使用預設值。  
   
@@ -496,18 +638,25 @@ WITH CHECK | WITH NOCHECK
   
  因為 [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 的原因所致，因此使用者將可以使用 **HIDDEN** 旗標來標註其中一個或兩個期間資料行，以便隱含地隱藏這些資料行，這樣 ***SELECT \* FROM***\<資料表>* 便不會傳回那些資料行的值。 根據預設，不會隱藏期間資料行。 為了方便我們使用，隱藏的資料行必須明確包含在所有會直接參考時態表的查詢中。  
   
- DROP  
- 指定卸除一個或多個資料行定義、計算資料行定義或資料表條件約束，或卸除系統將用於系統版本設定的資料行。  
+DROP  
+指定卸除一個或多個資料行定義、計算資料行定義或資料表條件約束，或卸除系統將用於系統版本設定的資料行。  
   
- CONSTRAINT *constraint_name*  
- 指定從資料表中移除 *constraint_name*。 可以列出多個條件約束。  
+CONSTRAINT *constraint_name*  
+指定從資料表中移除 *constraint_name*。 可以列出多個條件約束。  
   
- 您可以查詢 **sys.check_constraint**、**sys.default_constraints**、**sys.key_constraints** 和 **sys.foreign_keys** 目錄檢視表，判斷條件約束的使用者自訂名稱或系統提供的名稱。  
+您可以查詢 **sys.check_constraint**、**sys.default_constraints**、**sys.key_constraints** 和 **sys.foreign_keys** 目錄檢視表，判斷條件約束的使用者自訂名稱或系統提供的名稱。  
   
- 如果 XML 索引存在於資料表上，則不能卸除 PRIMARY KEY 條件約束。  
+如果 XML 索引存在於資料表上，則不能卸除 PRIMARY KEY 條件約束。  
+ 
+INDEX *index_name* 指定從資料表移除的 *index_name*。
   
- COLUMN *column_name*  
- 指定從資料表移除 *constraint_name* 或 *column_name*。 可以列出多個資料行。  
+語法 ALTER TABLE ... 只有記憶體最佳化資料表支援 ADD/DROP/ALTER INDEX。    
+
+> [!NOTE]
+> 不使用 ALTER TABLE 陳述式，記憶體最佳化資料表上的索引就不支援 CREATE INDEX、DROP INDEX 和 ALTER INDEX 陳述式。 
+      
+COLUMN *column_name*  
+指定從資料表移除 *constraint_name* 或 *column_name*。 可以列出多個資料行。  
   
  當資料行符合下列條件時，則無法將它卸除：  
   
@@ -520,7 +669,7 @@ WITH CHECK | WITH NOCHECK
 -   繫結至規則。  
   
 > [!NOTE]  
->  卸除資料行不會回收資料行的磁碟空間。 當資料表的資料列大小接近或已超出限制時，您可能需要回收卸除之資料行的磁碟空間。 指您可以在資料表上建立叢集索引，或利用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 重建現有的叢集索引來回收空間。 如需有關卸除 LOB 資料類型之影響的詳細資訊，請參閱此 [CSS 部落格文章](http://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx) \(英文\)。  
+> 卸除資料行不會回收資料行的磁碟空間。 當資料表的資料列大小接近或已超出限制時，您可能需要回收卸除之資料行的磁碟空間。 指您可以在資料表上建立叢集索引，或利用 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 重建現有的叢集索引來回收空間。 如需有關卸除 LOB 資料類型之影響的詳細資訊，請參閱此 [CSS 部落格文章](http://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx) \(英文\)。  
   
  PERIOD FOR SYSTEM_TIME  
  **適用於**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -551,7 +700,7 @@ WITH CHECK | WITH NOCHECK
  如需詳細資訊，請參閱 [設定平行索引作業](../../relational-databases/indexes/configure-parallel-index-operations.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的所有版本都無法使用平行索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  ONLINE **=** { ON | **OFF** } \<適用於 drop_clustered_constraint_option>  
  指定在索引作業期間，查詢和資料修改是否能夠使用基礎資料表和相關聯的索引。 預設值為 OFF。 REBUILD 可以執行為 ONLINE 作業。  
@@ -567,7 +716,7 @@ WITH CHECK | WITH NOCHECK
  如需詳細資訊，請參閱[線上索引作業如何運作](../../relational-databases/indexes/how-online-index-operations-work.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的所有版本都無法使用線上索引作業。 如需詳細資訊，請參閱 [SQL Server 2016 的版本及支援功能](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)。  
   
  MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **適用於**：[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
@@ -897,7 +1046,7 @@ ONLINE **=** ON 有下列限制：
 卸除叢集索引時，需要一個大小等於現有叢集索引的暫存磁碟空間。 作業完成時，會立即釋放此額外空間。  
   
 > [!NOTE]  
->  *\<drop_clustered_constraint_option>* 底下所列的選項可套用到資料表上的叢集索引，但不可套用到檢視表上的叢集索引或套用至非叢集索引。  
+> *\<drop_clustered_constraint_option>* 底下所列的選項可套用到資料表上的叢集索引，但不可套用到檢視表上的叢集索引或套用至非叢集索引。  
   
 ## <a name="replicating-schema-changes"></a>複寫結構描述變更  
  根據預設，當您在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的已發行資料表上執行 ALTER TABLE 時，該項變更就會傳播到所有 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訂閱者。 這項功能具有某些限制，而且可停用。 如需詳細資訊，請參閱[對發行集資料庫進行結構描述變更](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)。  
@@ -930,7 +1079,7 @@ ONLINE **=** ON 有下列限制：
   
 若要解決此問題，請移除 4 部分前置詞的用法。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要資料表的 ALTER 權限。  
   
  ALTER TABLE 權限可套用至涉及 ALTER TABLE SWITCH 陳述式的兩種資料表。 所切換的任何資料，都會繼承目標資料表的安全性。  

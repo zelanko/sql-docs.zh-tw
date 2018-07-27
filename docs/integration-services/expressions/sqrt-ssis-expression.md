@@ -17,12 +17,12 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e80c79f6d6b56b912aadb8f0ba793d73e5be4934
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: d0fd6f3ffe5a30688f24e562e4d536cd3ecd8353
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407630"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082380"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 運算式)
   傳回數值運算式的平方根。  
@@ -68,7 +68,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 ```  
   
 > [!NOTE]  
->  在運算式中，變數名稱會固定包含 @ 前置字元。  
+>  在運算式中，變數名稱一律包含 \@ 前置詞。  
   
 ## <a name="see-also"></a>另請參閱  
  [函數 &#40;SSIS 運算式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  

@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252400"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088360"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 子句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252400"
 ```  
   
 ## <a name="arguments"></a>引數  
- @*table_variable*  
- 指定 **table** 變數以將傳回的資料列插入其中，而不傳回給呼叫端。 @*table_variable* 必須在 INSERT、UPDATE、DELETE 或 MERGE 陳述式之前宣告。  
+ \@*table_variable*  
+ 指定 **table** 變數以將傳回的資料列插入其中，而不傳回給呼叫端。 \@*table_variable* 必須在 INSERT、UPDATE、DELETE 或 MERGE 陳述式之前宣告。  
   
  如果未指定 *column_list*，**table** 變數的資料行數就必須與 OUTPUT 結果集的資料行數相同。 識別和計算資料行例外，它們必須被略過。 如果指定 *column_list*，任何省略的資料行都必須允許 Null 值或已具有指派的預設值。  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  僅適用於 MERGE 陳述式。 在 MERGE 陳述式的 OUTPUT 子句中指定 **nvarchar(10)** 類型的資料行，此陳述式會針對每個資料列傳回下列三個值其中之一：'INSERT'、'UPDATE' 或 'DELETE' (依據在該資料列上執行的動作而定)。  
   
 ## <a name="remarks"></a>Remarks  
- 您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } 子句。  
+ 您可以在單一 INSERT、UPDATE、DELETE 或 MERGE 陳述式中，定義 OUTPUT \<dml_select_list> 子句和 OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table* } 子句。  
   
 > [!NOTE]  
 >  除非另有指定，否則，指向 OUTPUT 子句的參考會同時參考 OUTPUT 子句和 OUTPUT INTO 子句。  
@@ -205,11 +205,11 @@ DELETE Sales.ShoppingCartItem
   
     -   來源本身不可包含 \<dml_table_source> 子句。  
   
--   含有 \<dml_table_source> 子句的 INSERT 陳述式不支援 OUTPUT INTO 子句。  
+-   OUTPUT INTO 子句不支援含有 \<dml_table_source> 子句的 INSERT 陳述式 。  
   
--   @@ROWCOUNT 只會傳回外部 INSERT 陳述式所插入的資料列。  
+-   \@\@ROWCOUNT 只會傳回外部 INSERT 陳述式所插入的資料列。  
   
--   @@IDENTITYSCOPE_IDENTITY 及 IDENT_CURRENT 只會傳回巢狀 DML 陳述式所產生的識別值，而不會傳回外部 INSERT 陳述式所產生的識別值。  
+-   \@\@IDENTITY、SCOPE_IDENTITY 和 IDENT_CURRENT 只會傳回巢狀 DML 陳述式所產生的識別值，而不會傳回外部 INSERT 陳述式所產生的識別值。  
   
 -   查詢通知會將此陳述式視為單一實體，而且所建立的任何訊息類型都將成為巢狀 DML 的類型，即使重大變更來自外部 INSERT 陳述式本身也一樣。  
   
@@ -310,7 +310,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  如果您的狀況允許多個應用程式執行單一資料表的破壞性讀取，請在 UPDATE 和 DELETE 陳述式中使用 READPAST 資料表提示。 這可以防止當另一個應用程式已在讀取資料表中第一個符合的記錄時，所可能出現的鎖定問題。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  在透過 \<dml_select_list> 來擷取或在 \<scalar_expression> 中使用的所有資料行上，必須要有 SELECT 權限。  
   
  在 \<output_table> 中指定的所有資料表上，必須要有 INSERT 權限。  

@@ -21,12 +21,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1f0406d711dfb04e553cb7ba8f8c27ede209a5f2
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8c2adad2eef1350897bcae24bfdde434ecfeecff
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550099"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084860"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>在報表伺服器中上傳檔案或報表
 報表伺服器的 Web 入口網站會提供一項上傳功能，讓您可以將報表和其他檔案新增至報表伺服器，而不需要從用戶端應用程式發行這些項目。 您從檔案系統上傳的檔案會當做項目儲存在報表伺服器上。 您所上傳的檔案類型會決定其儲存方式：  
@@ -41,7 +41,7 @@ ms.locfileid: "34550099"
   
 4.  瀏覽至您想要上傳的檔案。 您可以上傳報表定義檔案、影像、文件，或要在報表伺服器上提供使用的任何檔案。  
   
-5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : @ & = + , $ / * < > |.  
+5.  輸入新項目的名稱。 項目名稱可以包含空格，但是不能包含保留字元：; ? : \@ & = + , $ / * < > |。  
   
 6.  如果您要以新項目取代現有的項目，請選取 [如果項目存在則覆寫]。  
   

@@ -31,12 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017421"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087480"
 ---
 # <a name="examples-using-openxml"></a>範例：使用 OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  由於 <`Customer`> 元素不具有任何子元素，若相同的 SELECT 陳述式以 *flags* 設為 **2** 來執行 (表示元素中心的對應)，則兩個客戶的 **CustomerID** 及 **ContactName** 值將以 NULL 傳回。  
   
- @xmlDocument 也可以是 **ML** 類型或 **(n)varchar(max)** 類型。  
+ \@xmlDocument 也可以是 **xml** 類型或 **(n)varchar(max)** 類型。  
   
  如果 XML 文件中的 <`CustomerID`> 和 <`ContactName`> 是子元素，元素中心的對應會擷取這些值。  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  OPENXML 陳述式說明下列各項：  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) 的結尾為 XML 屬性 **ProductID**。 在結果資料列集中，為每個在 XML 文件中選取的屬性節點建立資料列。  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) 結束於 XML 屬性 ( **ProductID**)。 在結果資料列集中，為每個在 XML 文件中選取的屬性節點建立資料列。  
   
 -   在此範例中，未指定 *flags* 參數。 相反地，由 *ColPattern* 參數指定對應。  
   
@@ -482,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   針對資料列集內的 **ProdID** 資料行指定為 *ColPattern* 的 XPath 模式 (**.**) 識別內容節點，即目前節點。 根據所指定的 *rowpattern*，這是 <`OrderDetail`> 元素的 **ProductID** 屬性。  
   
--   針對資料列集內的 **Qty** 資料行所指定的 *ColPattern* (**../@Quantity**)，識別內容節點 \<品識別碼> 之父節點 <`OrderDetail`> 的 **Quantity** 屬性。  
+-   針對資料列集內的 **Qty** 資料行所指定的 *ColPattern*、**../\@Quantity**，識別內容節點 \<ProductID> 之父節點 <`OrderDetail`> 的 **Quantity** 屬性。  
   
--   同樣地，針對資料列集內的 **OID** 資料行所指定的 *ColPattern* (**../../@OrderID**)，識別內容節點的父節點之父系 <`Order`> 的 **OrderID** 屬性。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
+-   同樣地，針對資料列集內的 **OID** 資料行所指定的 *ColPattern*、**../../\@OrderID**，識別內容節點的父節點之父系 <`Order`> 的 **OrderID** 屬性。 父節點是 <`OrderDetail`>，內容節點是 <`ProductID`>。  
   
  然後，SELECT 陳述式擷取由 OPENXML 所提供之資料列集內的所有資料行。  
   
@@ -582,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- 特別是，您要將 **ML** 類型變數 (@x) 傳遞至 **sp_xml_preparedocument()** 函式。  
+ 特別是，您要將 **xml** 類型變數 (\@x) 傳遞至 **sp_xml_preparedocument()** 函式。  
   
  以下是結果：  
   

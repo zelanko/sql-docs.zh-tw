@@ -17,12 +17,12 @@ ms.topic: conceptual
 ms.date: 06/28/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1b738239cca6b1afa543718ef64831f72b6490e0
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: a803f26e65a4bdda5264fc2cea53a5b360f0df89
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107236"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982390"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Azure SQL Database 和資料倉儲的透明資料加密與攜帶您自己的金鑰支援
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -73,9 +73,10 @@ ms.locfileid: "37107236"
 - 使用邏輯伺服器的 Azure Active Directory (Azure AD) 身分識別，對其授與金鑰保存庫的存取權。  使用入口網站 UI 時，Azure AD 身分識別會自動建立，而金鑰保存庫的存取權限會授與伺服器。  必須建立 AAD 身分識別，且應驗證完成，才能使用 PowerShell 來設定具 BYOK 的 TDE。 如需使用 PowerShell 時的詳細逐步指示，請參閱[使用 BYOK 設定 TDE](transparent-data-encryption-byok-azure-sql-configure.md)。
 
   >[!NOTE]
-  >如果 Azure AD 身分識別**意外刪除，或使用了金鑰保存庫的存取原則撤銷伺服器的權限**，伺服器即失去對金鑰保存庫的存取權。
+  >如果 Azure AD 身分識別**意外遭到刪除，或使用了金鑰保存庫的存取原則撤銷伺服器的權限**，伺服器即失去對金鑰保存庫的存取權，而且 TDE 加密資料庫在 24 小時內會遭到卸除。
   >
-  
+
+- 在沒有 VNET 或防火牆的情況下，設定 Azure 金鑰保存庫。  如果 SQL 失去對金鑰保存庫的存取權，TDE 加密資料庫就會在 24 小時內遭到卸除。
 - 啟用所有加密金鑰的稽核和報告：Key Vault 提供的記錄檔很容易插入其他安全性資訊和事件管理 (SIEM) 工具中。 Operations Management Suite (OMS) [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) 即為整合服務的一個範例。
 - 若要確保加密資料庫的高可用性，請使用兩個位於不同的區域的 Azure Key Vault 來設定每一部邏輯伺服器。
 

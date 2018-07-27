@@ -23,11 +23,12 @@ caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: df9601235ca6538447b577154fe629f9e6e6719a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8841b9091b4fafb563f624e6b61dca40233e7294
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088130"
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>角色定義 - 建立、刪除或修改
   Reporting Services 會提供定義報表伺服器之存取層級的預先定義角色。 需要存取報表伺服器的每個使用者或群組會透過描述可執行之工作的角色來達成此目的。 這些角色完全是針對報表伺服器所定義。 您無法針對報表伺服器的特定部分變更角色定義，或指定要根據情況以不同的方式使用某個角色。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
      如果您要建立系統層級角色定義，請以滑鼠右鍵按一下 [系統角色]，然後指向 [新增系統角色]。  
   
-4.  為角色輸入唯一的名稱。 名稱至少必須包含一個字元。 它也可以包括空格和特定符號，但不得包括下列字元：; ? : @ & = + , $ / * < > | " 或 /。  
+4.  為角色輸入唯一的名稱。 名稱至少必須包含一個字元。 它也可以包括空格和特定符號，但不得包括下列字元：; ? : \@ & = + , $ / * < > | " 或 /。  
   
 5.  選擇性地輸入描述。 在 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 中，此描述僅會出現在本頁面上。 透過報表管理員檢視此項目的使用者，可以在該工具中看到此描述。  
   

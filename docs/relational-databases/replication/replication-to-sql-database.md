@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6fe22eaec4105f8b849bc3a582a131ab59e46446
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e7f44a11de210090ba9afaf734ceeb3353dbbe4d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37357820"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085130"
 ---
 # <a name="replication-to-sql-database"></a>複寫至 SQL 資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,8 @@ ms.locfileid: "37357820"
  -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可以是在內部部署執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體，或在雲端 Azure 虛擬機器中執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 如需詳細資訊，請參閱 [Azure 虛擬機器上的 SQL Server 概觀](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)。  
  - [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 必須是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 發行者的發送訂閱者。  
  -  散發資料庫和複寫代理程式不能放在 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
- - 支援快照集和單向異動複寫。 不支援點對點異動複寫和合併式複寫。  
+ - 支援快照集和單向異動複寫。 不支援點對點異動複寫和合併式複寫。
+ - SQL Database 受控執行個體 (預覽) 支援發行者和散發者資料庫。 如需詳細資訊，請參閱[使用 SQL Database 受控執行個體複寫](replication-with-sql-database-managed-instance.md)。
  
  ## <a name="versions"></a>版本  
  - 發行者和散發者至少必須為下列其中一個版本︰  

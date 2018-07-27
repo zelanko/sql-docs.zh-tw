@@ -1,7 +1,7 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 972d3c177d596240fba0a04625c5bbff36e80ae5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785329"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109240"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,8 +157,11 @@ DEFAULT
 *constant_expression*  
  這是用來作為資料行預設值的常值、NULL 或系統函數。 如果結合定義為 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 使用者定義型別的資料行來使用，類型的實作必須支援將 *constant_expression* 隱含轉換成使用者定義型別。  
   
-WITH VALUES  
- 指定將 DEFAULT *constant_expression* 中所提供的值儲存在新增至現有資料列的新資料行。 如果加入的資料行允許 NULL 值，且指定了 WITH VALUES，就會將預設值儲存在加入現有資料列的新資料行中。 如果允許 NULL 的資料行沒有指定 WITH VALUES，就會將 NULL 值儲存在現有資料列的新資料行中。 如果新資料行不允許 NULL，就會將預設值儲存在新資料列中，不論是否指定了 WITH VALUES，都是如此。  
+WITH VALUES   
+ 當新增資料行和 (AND) DEFAULT 條件約束時，如果資料行允許使用 WITH VALUES NULLS，則對於現有的資料列，會將新資料行的值設定為 DEFAULT *constant_expression* 中提供的值。 如果新增的資料行不允許 NULLS，則對於現有的資料列，會一律將該資料行的值設定為 DEFAULT *constant expression* 中提供的值。 從 SQL Server 2012 中開始，這可以是中繼資料作業 [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation)。
+如果在相關資料行沒有一起新增的情況下使用此方法，則它沒有作用。
+ 
+ 指定將 DEFAULT *constant_expression* 中所提供的值，儲存在要新增至現有資料列的新資料行。 如果加入的資料行允許 Null 值，且指定了 WITH VALUES，就會將預設值儲存在加入現有資料列的新資料行中。 如果允許 Null 的資料行沒有指定 WITH VALUES，就會將 NULL 值儲存在現有資料列的新資料行中。 如果新資料行不允許 NULL，就會將預設值儲存在新資料列中，不論是否指定了 WITH VALUES，都是如此。  
   
 IDENTITY  
  指定新資料行是識別欄位。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 會提供資料行的唯一累加值。 將識別碼資料行加入現有資料表時，識別碼便會加入至資料表中含有初始值和遞增值的現有資料列。 但是，無法保證資料列的更新順序。 任何加入的新資料列也都會產生識別碼。  

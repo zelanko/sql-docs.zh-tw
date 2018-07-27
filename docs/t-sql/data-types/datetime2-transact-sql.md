@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: feaca5b69a76fb7e3bffc67d58998de1bbd8b97e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 27c3931a5b735e91796c322d36dd7090b0a7b269
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417487"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087600"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,11 +43,11 @@ ms.locfileid: "37417487"
 |屬性|ReplTest1|  
 |--------------|-----------|  
 |語法|**datetime2** [ (*毫秒精確度*) ]|  
-|使用方式|DECLARE @MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|使用方式|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |預設的字串常值格式<br /><br /> (用於下層用戶端)|YYYY-MM-DD hh:mm:ss[.小數秒數]<br /><br /> 如需詳細資訊，請參閱下列的＜下層用戶端的回溯相容性＞一節。|  
 |日期範圍|0001-01-01 到 31.12.99<br /><br /> 公元 1 年 1 月 1 日到公元 9999 年 12 月 31 日|  
 |時間範圍|00:00:00 到 23:59:59.9999999|  
-|時區位移範圍|無|  
+|時區位移範圍|None|  
 |元素範圍|YYYY 是代表年份的四位數字，範圍介於 0001 至 9999 之間。<br /><br /> MM 是代表指定年份中某個月份的兩位數字，範圍介於 01 至 12 之間。<br /><br /> DD 是代表指定月份中某個日期的兩位數字，範圍介於 01 至 31 之間 (視月份而定)。<br /><br /> hh 是代表小時的兩位數字，範圍介於 00 至 23 之間。<br /><br /> mm 是代表分鐘的兩位數字，範圍介於 00 至 59 之間。<br /><br /> ss 是代表秒鐘的兩位數字，範圍介於 00 至 59 之間。<br /><br /> n* 是代表小數秒數的零至七位數字，範圍介於 0 至 9999999 之間。 在 Informatica 中，毫秒會在 n > 3 時遭到截斷。|  
 |字元長度|最小 19 個位置 (YYYY-MM-DD hh:mm:ss)，最大 27 個位置 (YYYY-MM-DD hh:mm:ss.0000000)|  
 |有效位數，小數位數|0 至 7 位數，精確度為 100ns。 預設有效位數是 7 位數。|  
@@ -68,7 +68,7 @@ ms.locfileid: "37417487"
 |---|---|
 |YYYY-MM-DDThh:mm:ss[.nnnnnnn]<br /><br /> YYYY-MM-DDThh:mm:ss[.nnnnnnn]|此格式不受 SET LANGUAGE 和 SET DATEFORMAT 工作階段地區設定的影響。 **T**、冒號 (:) 和句號 (.) 會包含在字串常值中，例如 '2007-05-02T19:58:47.1234567'。|  
   
-|ODBC|描述|  
+|ODBC|Description|  
 |---|---|
 |{ ts 'yyyy-mm-dd hh:mm:ss[.小數秒數]' }|ODBC API 專用：<br /><br /> 小數點右邊的位數 (代表小數秒數) 可指定為 0 至 7 (100 奈秒)。|  
   

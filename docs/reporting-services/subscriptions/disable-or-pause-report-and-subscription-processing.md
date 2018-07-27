@@ -26,12 +26,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfddb0368d8c674c7f0148a395f97088d9143228
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f47807777b40fa2aac22c2e301183cc5c09d37
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035525"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985620"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>停用或暫停報表與訂閱處理
   有好幾種方法，您可以用來停用或暫停 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表和訂閱處理。 本主題中的方法涵蓋了停用訂閱、中斷資料來源連接等範圍。 並非所有的方法都適用於兩種 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式。下表摘要說明這些方法和支援的 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 伺服器模式：  
@@ -163,9 +163,9 @@ ForEach ($subscription in $subscriptions)
   
 -   SharePoint 文件庫 (只能從與 SharePoint 整合模式報表伺服器整合的 SharePoint 網站使用)  
   
- 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
+ 您必須先設定電子郵件傳遞，然後才能使用它。 如果您沒有設定它，便無法使用它。 如需詳細資訊，請參閱[為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
   
- 如果您想要關閉特定延伸模組，可以在 **RSReportServer.config** 檔中移除延伸模組項目。 如需詳細資訊，請參閱 [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md) 和 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)。  
+ 如果您想要關閉特定延伸模組，可以在 **RSReportServer.config** 檔中移除延伸模組項目。 如需詳細資訊，請參閱 [Reporting Services 組態檔](../../reporting-services/report-server/reporting-services-configuration-files.md) 和 [為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) \(機器翻譯\)。  
   
  在您移除傳遞延伸模組之後，就無法再於報表管理員或 SharePoint 網站中使用它。 移除傳遞延伸模組可能會產生非使用中訂閱。 移除延伸模組之前，請務必刪除訂閱，或將它們設定為使用不同的傳遞延伸模組。  
   

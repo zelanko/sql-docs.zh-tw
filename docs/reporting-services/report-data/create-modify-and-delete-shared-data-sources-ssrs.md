@@ -23,12 +23,12 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3831509441516a08cfa8d651ecd8ffa93c16107f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550759"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083540"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>建立、修改及刪除共用資料來源 (SSRS)
   共用資料來源是一組資料來源連接屬性，可供多個報表、模型以及在 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 報表伺服器上執行的資料驅動訂閱參考。  共用資料來源提供一種簡單的方式，可用來管理通常會隨著時間而變更的資料來源屬性。 如果使用者帳戶或密碼變更，或者如果您將資料庫移到不同的伺服器，可以在一個地方更新連接資訊。  
@@ -37,10 +37,10 @@ ms.locfileid: "34550759"
   
  共用資料來源包含下列部分：  
   
-|部分|描述|  
+|部分|Description|  
 |----------|-----------------|  
 |[屬性]|識別報表伺服器資料夾階層中之項目的名稱。|  
-|描述|檢視資料夾的內容時，與入口網站中的項目一起顯示的描述。|  
+|Description|檢視資料夾的內容時，與入口網站中的項目一起顯示的描述。|  
 |連接類型|與資料來源搭配使用的資料處理延伸模組。 您僅能使用在報表伺服器上部署的資料處理延伸模組。 如需 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 隨附之資料處理延伸模組的詳細資訊，請參閱 [Reporting Services &#40;SSRS&#41; 支援的資料來源](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。|  
 |連接字串|資料庫的連接字串。 如需詳細資訊，或者要檢視常用資料來源之連接字串的範例，請參閱 [資料連接、資料來源及連接字串 &#40;報表產生器和 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。|  
 |認證類型|指定如何取得用於連接的認證，以及建立連接後是否要使用這些認證。 如需詳細資訊，請參閱 [指定報表資料來源的認證及連接資訊](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)。|  
@@ -79,7 +79,7 @@ ms.locfileid: "34550759"
   
 1.  在入口網站中，選取 [新增] > [資料來源]。 
   
-4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ? : @ & = + , $ / * < > | " /。  
+4.  輸入項目的名稱。 名稱必須至少包含一個字元，而且開頭必須為字母。 它也可以包含特定符號，但不能包含空格或下列字元：; ? : \@ & = + , $ / * < > | " /。  
   
 5.  選擇性地鍵入描述，以提供使用者連線的相關資訊。  
   

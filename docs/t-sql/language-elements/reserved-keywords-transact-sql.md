@@ -22,19 +22,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4fc9be10a3197f645b824afe7f33f0235408439d
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 668c6cf81028417539d204fd1f28d9a7992311ea
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248310"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216909"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 利用保留的關鍵字來定義、操作和存取資料庫。 保留的關鍵字是 [!INCLUDE[tsql](../../includes/tsql-md.md)] 用來剖析及了解 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 陳述式和批次之 [!INCLUDE[tsql](../../includes/tsql-md.md)] 語言文法的一部分。 雖然在語意上可以利用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留關鍵字做為 [!INCLUDE[tsql](../../includes/tsql-md.md)] 指令碼中的識別碼及物件名稱，但您必須分隔這些識別碼。  
   
- 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 保留關鍵字。  
+ 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 SQL 資料倉儲的保留關鍵字。  
   
 ||||  
 |-|-|-|  
@@ -99,7 +99,13 @@ ms.locfileid: "36248310"
 |EXEC|PRECISION|取代所有提及的|  
 |執行 CREATE 陳述式之前，請先執行|PRIMARY|WITHIN GROUP|  
 |EXISTS|PRINT|WRITETEXT|  
-|EXIT|PROC||  
+|EXIT|PROC||
+  
+下表列出專屬於 **SQL 資料倉儲**的保留關鍵字，。
+
+|||
+|-|-|
+|**標籤**||
   
  另外，ISO 標準也定義了一份保留關鍵字的清單。 請避免在物件名稱和識別碼上使用 ISO 保留關鍵字。 下表所顯示的 ODBC 保留關鍵字清單與 ISO 保留關鍵字清單相同。  
   

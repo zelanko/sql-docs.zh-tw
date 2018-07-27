@@ -17,12 +17,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 50aade82abccaa58b62d28b086392a276dee3f2d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: a7b7e364b9384813e63036b184f80f4e807f7218
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335892"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084830"
 ---
 # <a name="syntax-ssis"></a>語法 (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 運算式語法與 C 和 C# 語言使用的語法類似。 運算式的元素包括識別碼 (資料行和變數)、常值、運算子以及函數。 本主題摘要說明運算式評估工具語法套用至不同運算式元素時的獨特需求。  
@@ -39,7 +39,7 @@ ms.locfileid: "35335892"
 ## <a name="identifiers"></a>識別碼  
  運算式可以包括資料行和變數識別碼。 資料行可在資料來源中產生，或在資料流程中藉由轉換建立。 運算式可以使用歷程識別碼來參考資料行。 歷程識別碼是用來識別封裝元素的唯一號碼。 運算式中參考的歷程識別碼必須包括井字號 (#) 前置詞。 例如，歷程識別碼 138 是使用 #138 參考。  
   
- 運算式可包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系統變數和自訂變數。 在運算式中參考變數時，必須包括 @ 前置詞。 例如，`Counter` 變數是使用 @Counter 參考的。 @ 字元並非變數名稱的一部分；該字元僅用來表示識別碼為運算式評估工具的變數。 如需詳細資訊，請參閱[識別碼 &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)。  
+ 運算式可包括 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 提供的系統變數和自訂變數。 在運算式中參考變數時，必須包括 \@ 前置詞。 例如，`Counter` 變數是使用 \@Counter 來參考。 \@ 字元並非變數名稱的一部分；該字元僅用來向運算式評估工具表示該識別碼為變數。 如需詳細資訊，請參閱[識別碼 &#40;SSIS&#41;](../../integration-services/expressions/identifiers-ssis.md)。  
   
 ## <a name="literals"></a>常值  
  運算式可以包含數值、字串及布林常值。 運算式中使用的字串常值必須加上引號。 數值和布林常值則不使用引號。 運算式語言包括常逸出之字元的逸出序列。 如需詳細資訊，請參閱[常值 &#40;SSIS&#41;](../../integration-services/expressions/numeric-string-and-boolean-literals.md)。  

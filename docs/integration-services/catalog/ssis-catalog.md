@@ -18,12 +18,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1589f037fd8c44e3daba9116dbc576353a0fed59
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872818"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085770"
 ---
 # <a name="ssis-catalog"></a>SSIS 目錄
   **SSISDB** 目錄是處理您已部署至 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器之 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) 專案的中心點。 例如，您可以設定專案和封裝參數、設定環境以指定封裝的執行值、執行和疑難排解封裝，以及管理 [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] 伺服器作業。  
@@ -91,7 +91,7 @@ ms.locfileid: "37872818"
   
 -   名稱不得包含開頭或尾端空格。  
   
--   不允許以 @ 作為第一個字元，但隨後的字元可以使用 @。  
+-   不允許以 \@ 作為第一個字元，但隨後的字元可以使用 \@。  
   
 -   名稱的長度必須大於 0 且小於或等於 128。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "37872818"
   
 -   名稱不得包含開頭或尾端空格。  
   
--   不允許以 @ 作為第一個字元，但隨後的字元可以使用 @。  
+-   不允許以 \@ 作為第一個字元，但隨後的字元可以使用 \@。  
   
 -   名稱的長度必須大於 0 且小於或等於 128。  
   
@@ -385,7 +385,7 @@ ms.locfileid: "37872818"
 #### <a name="options"></a>選項。  
  下表描述對話方塊中的特定屬性，以及 catalog.catalog_property 檢視表中的對應屬性。  
   
-|屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|描述|  
+|屬性名稱 (目錄屬性對話方塊)|屬性名稱 (catalog.catalog_property 檢視表)|Description|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |加密演算法名稱|ENCRYPTION_CLEANUP_ENABLED|指定用來加密目錄中敏感性參數值的加密類型。 以下是可能的值：<br /><br /> DES<br /><br /> TRIPLE_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESPX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256 (預設)|  
 |驗證逾時 (秒)|VALIDATION_TIMEOUT|指定專案驗證或套件驗證在停止之前可以執行的秒數上限。 預設值為 300 秒。<br /><br /> 執行驗證是非同步作業。 專案或套件越大，驗證所需時間越長。<br /><br /> 如需有關驗證專案和封裝的詳細資訊，請參閱＜ [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)＞。|  

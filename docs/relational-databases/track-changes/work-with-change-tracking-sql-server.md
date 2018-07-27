@@ -28,12 +28,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dfd9c3494c1c46c21a851e251182f31f508f6e52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ab8bb044369141788aab51ca151f5c626c5a855
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013065"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087620"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>使用變更追蹤 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "33013065"
  CHANGE_TRACKING_CURRENT_VERSION() 函數  
  這是用於取得下一次查詢變更時將使用的目前版本。 此版本代表上一次認可的交易版本。  
   
- CHANGE_TRACKING_MIN_VALID_VERSION() 函數  
+ CHANGE_TRACKING_MIN_VALID_VERSION() 函式  
  這是用於取得用戶端可以擁有，並仍然可從 CHANGETABLE() 取得有效結果的最小有效版本。 用戶端應該針對此函數所傳回的值，檢查上一次同步處理版本。 如果上一次同步處理版本小於此函數所傳回的版本，用戶端將無法從 CHANGETABLE() 取得有效結果，而且必須重新初始化。  
   
 ### <a name="obtaining-initial-data"></a>取得初始資料  

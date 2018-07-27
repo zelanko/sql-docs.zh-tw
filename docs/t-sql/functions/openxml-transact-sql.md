@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255510"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086740"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,12 +55,12 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *flags*  
  表示應該使用在 XML 資料和關聯式資料列集之間的對應，以及應如何填入溢出的資料行。 *flags* 是選擇性的輸入參數，而且可以是下列其中一個值。  
   
-|位元組值|描述|  
+|位元組值|Description|  
 |----------------|-----------------|  
 |**0**|預設為**以屬性為主**的對應。|  
 |**1**|使用**以屬性為主**的對應。 可以和 XML_ELEMENTS 合併使用。 在這個情況下，會先套用**以屬性為主**的對應，然後對所有尚未處理的資料行套用**以元素為主**的對應。|  
 |**2**|使用**以元素為主**的對應。 可以和 XML_ATTRIBUTES 合併使用。 在這個情況下，會先套用**以屬性為主**的對應，然後對所有尚未處理的資料行套用**以元素為主**的對應。|  
-|**8**|可以和 XML_ATTRIBUTES 或 XML_ELEMENTS 合併使用 (邏輯 OR)。 在擷取的內容中，這個旗標表示耗用的資料不應複製到溢位屬性 **@mp:xmltext**。|  
+|**8**|可以和 XML_ATTRIBUTES 或 XML_ELEMENTS 合併使用 (邏輯 OR)。 在擷取的內容中，這個旗標表示耗用的資料不應複製到溢位屬性 **\@mp:xmltext**。|  
   
  *SchemaDeclaration*  
  這是表單的結構描述定義：*ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  
@@ -89,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
   
  下表說明**邊緣**資料表的結構。  
   
-|資料行名稱|資料類型|描述|  
+|資料行名稱|資料類型|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|這是文件節點的唯一識別碼。<br /><br /> 根元素的識別碼值為 0。 負的識別碼值會保留。|  
 |**parentid**|**bigint**|識別節點的父系。 這個識別碼所識別的父系不一定是父元素，這要視其父系由這個識別碼所識別之節點的 NodeType 而定。 例如，如果節點是文字節點，則其父系可能是屬性節點。<br /><br />  如果節點位於 XML 文件的最上層，其 ParentID 為 NULL。|  
