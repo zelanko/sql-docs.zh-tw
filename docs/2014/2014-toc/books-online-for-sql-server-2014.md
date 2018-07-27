@@ -21,15 +21,15 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: cb9c3bdbf0e8661106fe69eacd6f692273d82d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232530"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310195"
 ---
 # SQL Server 2014 的線上叢書
-  歡迎來到[!INCLUDE[msCoName](../includes/msconame-md.md)]® 線上叢書 》 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®。 線上叢書 》 包含工作描述和參考文件會說明如何使用執行資料管理與商業智慧工作[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
+  歡迎使用 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)]® 的《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]® 線上叢書》。 線上叢書 》 包含工作描述和參考文件會說明如何使用執行資料管理與商業智慧工作[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。  
   
  **現在就試試看：**  
  ![Azure 虛擬機器小型](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) 擁有 Azure 帳戶嗎？  接著前往**[此處](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** 到已安裝 SQL Server 2014 Service Pack 1 (SP1) 的虛擬機器的加速。 如需有關 SQL Server 2014 (SP1) 的詳細資訊，請參閱 < [SQL Server 2014 Service Pack 1 版本資訊](https://support.microsoft.com/en-us/kb/3058865)。 

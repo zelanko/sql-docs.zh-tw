@@ -1,5 +1,5 @@
 ---
-title: 設定服務帳戶 (Analysis Services) |Microsoft 文件
+title: 設定服務帳戶 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dff21ebf96bf957a7f390b8dea0010fa0396ff7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
+ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019335"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130604"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>設定服務帳戶 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34019335"
 ## <a name="logon-account-recommendations"></a>登入帳戶建議  
  在容錯移轉叢集中，Analysis Services 的所有執行個體都應該都設定為使用 Windows 網域使用者帳戶。 將相同的帳戶指派給所有執行個體。 請參閱 [如何將 Analysis Services 叢集化](http://msdn.microsoft.com/library/dn736073.aspx) 如需詳細資訊。  
   
- 獨立執行個體應該使用預設虛擬帳戶， **NT Service\MSSQLServerOLAPService**的預設執行個體，或 **NT Service\MSOLAP$ * * * 執行個體名稱*的具名執行個體。 這項建議適用於所有伺服器模式中的 Analysis Services 執行個體，作業系統為 Windows Server 2008 R2 和更新版本，而 Analysis Services 為 SQL Server 2012 和更新版本。  
+ 獨立執行個體應該使用預設虛擬帳戶**NT Service\MSSQLServerOLAPService**的預設執行個體，或 **NT Service\MSOLAP$ * * * 執行個體名稱*的具名執行個體。 這項建議適用於所有伺服器模式中的 Analysis Services 執行個體，作業系統為 Windows Server 2008 R2 和更新版本，而 Analysis Services 為 SQL Server 2012 和更新版本。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>授與權限給 Analysis Services  
  本節說明 Analysis Services 對於本機的內部作業 (例如啟動可執行檔、讀取組態檔，以及從資料目錄載入資料庫) 所需的權限。 如果您是要尋找為外部資料存取設定權限，以及與其他服務和應用程式的互通性的指引，請參閱本主題中的 [授與特定伺服器作業的其他權限](#bkmk_tasks) 。  
@@ -62,7 +62,7 @@ ms.locfileid: "34019335"
 |||  
 |-|-|  
 |**增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)|透過 **[使用者]** 安全性群組，此權限預設可供所有使用者使用。 如果您藉由移除這個群組的權限來鎖定伺服器，Analysis Services 可能會無法啟動，並會記錄以下錯誤：「用戶端沒有這項特殊權限。」 發生這個錯誤時，請將權限授與適當的 Analysis Services 安全性群組，藉以將權限還原到 Analysis Services。|  
-|**調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)|如果處理程序擁有的資源不足以完成它的執行 (受限於針對執行個體所建立的記憶體臨界值)，則可使用這個權限來要求更多記憶體。|  
+|**調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|如果處理程序擁有的資源不足以完成它的執行 (受限於針對執行個體所建立的記憶體臨界值)，則可使用這個權限來要求更多記憶體。|  
 |**鎖定記憶體中的分頁** (SeLockMemoryPrivilege)|只有在完全關閉分頁時才需要這個權限。 根據預設，表格式伺服器執行個體會使用 Windows 分頁檔，但是您可以藉由將 **VertiPaqPagingPolicy** 設為 0，來防止它使用 Windows 分頁。<br /><br /> **VertiPaqPagingPolicy** 為 1 (預設值)，指示表格式伺服器執行個體使用 Windows 分頁檔。 配置並未鎖定，可視需要允許 Windows 移出分頁。 由於已使用分頁，所以不需鎖定記憶體中的分頁。 因此，針對預設設定 (其中 **VertiPaqPagingPolicy** = 1)，您不需將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體。<br /><br /> **VertiPaqPagingPolicy** 為 0。 如果您針對 Analysis Services 關閉分頁，即會假設已將 **[鎖定記憶體中的分頁]** 權限授與表格式執行個體，而鎖定配置。 指定這個設定和 **[鎖定記憶體中的分頁]** 權限，Windows 便無法在系統處於記憶體不足壓力的情況下，移出針對 Analysis Services 所做之記憶體配置的分頁。 如同在 **VertiPaqPagingPolicy** = 0 背後的強制執行一樣，Analysis Services 會依賴 **[鎖定記憶體中的分頁]** 權限。 請注意，不建議關閉 Windows 分頁。 這將會提高作業產生記憶體不足之錯誤的機率，而這些作業在允許分頁的情況下可能就會成功。 如需 [VertiPaqPagingPolicy](../../analysis-services/server-properties/memory-properties.md) 的相關詳細資訊，請參閱＜ **Memory Properties**＞。|  
   
 #### <a name="to-view-or-add-windows-privileges-on-the-service-account"></a>檢視或新增服務帳戶的 Windows 權限  
@@ -91,7 +91,7 @@ ms.locfileid: "34019335"
 ##  <a name="bkmk_FilePermissions"></a> 指派給 Analysis Services 服務帳戶的檔案系統權限  
   
 > [!NOTE]  
->  如需與每個程式資料夾相關聯的權限清單，請參閱[設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)。  
+>  如需與每個程式資料夾相關聯的權限清單，請參閱 [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 。  
 >   
 >  如需與 IIS 組態和 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 相關的檔案權限資訊，請參閱[設定 Internet Information Services &#40;IIS&#41; 8.0 上 Analysis Services 的 HTTP 存取](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "34019335"
   
  資料檔、程式執行檔、設定檔、記錄檔及暫存檔的權限持有者是由 SQL Server 安裝程式所建立的本機安全性群組。  
   
- 有一個針對您安裝之每個執行個體所建立的安全性群組。 可以是具名執行個體命名安全性群組**SQLServerMSASUser$ MSSQLSERVER**的預設執行個體，或**SQLServerMSASUser$**\<伺服器名稱 >$\<執行個體名稱 > 的具名執行個體。 安裝程式會為此安全性群組佈建執行伺服器作業所需的檔案權限。 如果您在 \MSAS13.MSSQLSERVER\OLAP\BIN 目錄上檢查安全性權限，就會看見安全性群組 (而不是服務帳戶或其個別服務 SID) 是該目錄的權限持有者。  
+ 有一個針對您安裝之每個執行個體所建立的安全性群組。 可能是具名執行個體命名的安全性群組**SQLServerMSASUser$ MSSQLSERVER**的預設執行個體，或**SQLServerMSASUser$**\<servername >$\<執行個體名稱 > 的具名執行個體。 安裝程式會為此安全性群組佈建執行伺服器作業所需的檔案權限。 如果您在 \MSAS13.MSSQLSERVER\OLAP\BIN 目錄上檢查安全性權限，就會看見安全性群組 (而不是服務帳戶或其個別服務 SID) 是該目錄的權限持有者。  
   
  安全性群組只包含一個成員： [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體啟動帳戶的個別服務安全性識別碼 (SID)。 安裝程式會將個別服務 SID 新增到本機安全性群組。 相較於資料庫引擎，SQL Server 安裝程式佈建 Analysis Services 的方式有一個很小但明顯的差異，那就是搭配 SID 成員資格使用本機安全性群組。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "34019335"
   
      `SC showsid MSOlap$Tabular`  
   
-2.  使用**電腦管理員** | **本機使用者和群組** | **群組**來檢查 SQLServerMSASUser$的成員資格\<伺服器名稱 >$\<執行個體名稱 > 安全性群組。  
+2.  使用**Computer Manager** | **本機使用者和群組** | **群組**檢查 SQLServerMSASUser$的成員資格\<伺服器名稱 >$\<執行個體名稱 > 安全性群組。  
   
      成員 SID 應該與來自步驟 1 的個別服務 SID 相符。  
   
@@ -131,7 +131,7 @@ ms.locfileid: "34019335"
  由於 SID 是不可變的，因此，不論您變更服務帳戶的頻率為何，都能永遠使用服務安裝期間建立的檔案系統 ACL。 身為新增的安全性措施，ACL 透過 SID 指定權限，即使其他服務在相同帳戶下執行，也能確保只有一個服務執行個體存取程式可執行檔和資料夾，因此可提高安全性。  
   
 ##  <a name="bkmk_tasks"></a> 為特定伺服器作業授與其他 Analysis Services 權限  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]服務帳戶 （或登入帳戶） 用來啟動的安全性內容中執行一些工作[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]，並要求工作之使用者的安全性內容中執行其他工作。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 會在用來啟動 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]之服務帳戶 (或登入帳戶) 的安全性內容中執行一些工作，並在要求工作之使用者的安全性內容中執行其他工作。  
   
  下表描述支援以服務帳戶執行工作所需的其他權限。  
   
@@ -145,8 +145,8 @@ ms.locfileid: "34019335"
   
 ## <a name="see-also"></a>另請參閱  
  [設定 Windows 服務帳戶與權限](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [SQL Server 服務帳戶和個別服務 SID (部落格)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
- [SQL Server 使用服務 SID 提供服務隔離 (知識庫文件)](http://support.microsoft.com/kb/2620201)   
+ [SQL Server 服務帳戶和個別服務 SID （部落格）](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
+ [SQL Server 使用服務 SID 提供服務隔離 （知識庫文章）](http://support.microsoft.com/kb/2620201)   
  [存取 Token (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
  [安全性識別碼 (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
  [存取 Token (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   

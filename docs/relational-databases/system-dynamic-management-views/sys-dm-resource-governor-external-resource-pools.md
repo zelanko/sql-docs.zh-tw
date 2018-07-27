@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9e28e848c7a95e8c29558cb6ee77056d47a955e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 80beafc8a281f7f4af71484acfa01ed0016b7de2
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38028836"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107660"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +44,15 @@ ms.locfileid: "38028836"
 | max_processes|**int**|並行的外部處理序數目上限。 預設值為 0 時，不會指定任何限制。 不可為 Null。|
 | max_memory_percent|**int**|在此資源集區中，可供要求所用之伺服器記憶體總量百分比的目前組態。 不可為 Null。 |
 | statistics_start_time|**datetime**|重設此集區統計資料時的時間。 不可為 Null。 
-| peak_memory_kb|**bigint**|他最大記憶體數量，以 kb 為單位，資源集區使用。 不可為 Null。 |
+| peak_memory_kb|**bigint**|最大，以 kb 為單位，資源集區使用的記憶體數量。 不可為 Null。 |
 | write_io_count|**int**|重設資源管理員統計資料之後發出的寫入 IO 總數。 不可為 Null。 |
 | read_io_count|**int**|重設資源管理員統計資料之後發出的讀取 IO 總數。 不可為 Null。 |
-| total_cpu_kernel_ms|**bigint**|累計 CPU 使用者時間 （毫秒） 重設資源管理員統計資料之後。 不可為 Null。 |
+| total_cpu_kernel_ms|**bigint**|累計 CPU 使用者核心時間 （毫秒） 重設資源管理員統計資料之後。 不可為 Null。 |
 | total_cpu_user_ms|**bigint**|累計 CPU 使用者時間 （毫秒） 重設資源管理員統計資料之後。 不可為 Null。 |
 | active_processes_count|**int**|要求的目前執行的外部處理序數目。 不可為 Null。 |
 
  
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>[權限]
 
 需要 `VIEW SERVER STATE` 權限。
 

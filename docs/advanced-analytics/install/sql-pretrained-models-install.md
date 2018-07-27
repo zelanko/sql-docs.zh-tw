@@ -8,21 +8,21 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 53bffd17ee225cf3e1d10ec4a0cd813ec7688989
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: b2dfee04a7c0c9c39b7969551a85a49d441f30e5
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174995"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216829"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>安裝預先定型的機器學習服務模型在 SQL Server 上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-這篇文章說明如何新增可用預先定型的機器學習服務模型*情感分析*並*影像特徵化*擁有 R 或 Python 整合的 SQL Server 資料庫引擎執行個體。 Microsoft 和已準備好使用，輕鬆地新增至現有的執行個體，使用 PowerShell 指令碼會建立預先定型的模型。 如需有關這些模型的詳細資訊，請參閱 <<c0> [ 資源](#bkmk_resources)一節。
+這篇文章說明如何使用 Powershell 來新增可用預先定型的機器學習服務模型*情感分析*並*影像特徵化*擁有 R 或 Python 的 SQL Server 資料庫引擎執行個體整合。 Microsoft 和已準備好上手，不會建立預先定型的模型加入至資料庫引擎執行個體做為後續安裝工作。 如需有關這些模型的詳細資訊，請參閱 <<c0> [ 資源](#bkmk_resources)一節。
 
 安裝之後，預先定型的模型會被視為電源的 MicrosoftML (R) 和 microsoftml (Python) 程式庫中的特定函式的實作詳細資料。 您不應該 （而且也無法） 檢視、 自訂或重新定型模型，也可以您將它們視為獨立的資源，在自訂程式碼或配對的其他函式。 
 
-下表詳列函式叫用預先定型的模型。
+若要使用預先定型的模型，請呼叫下表所列出的函數。
 
 | R 函式 (MicrosoftML) | Python 函式 (microsoftml) | 使用方式 |
 |--------------------------|-------------------------------|-------|
@@ -31,15 +31,18 @@ ms.locfileid: "39174995"
 
 ## <a name="prerequisites"></a>先決條件
 
-[SQL Server 2017 Machine Learning 服務](sql-machine-learning-services-windows-install.md)R、 Python 或兩者。 
-
-[SQL Server 2016 R Services](sql-r-services-windows-install.md)客戶可以使用不同的方法。 適用於 SQL Server 2016，在將需要升級 R 元件[MicrosoftML 套件](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)，如中所述[升級機器學習 （R 和 Python） 元件](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 當您升級 R 元件時，您可以同時新增預先定型的模型，這可讓執行備援的 PowerShell 指令碼。 不過，如果您已經升級，但遺漏了第一次新增預先定型的模型，您可以執行 PowerShell 指令碼，如這篇文章中所述。 這麼做之前，請確認 MicrosoftML 程式庫會位於 C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library。
-  
-必須啟用外部指令碼，您必須執行 SQL Server LaunchPad 服務。 安裝指示會提供額外的設定和驗證的步驟。
+機器學習演算法會耗用大量運算資源。 我們建議針對低到中等的工作負載，包括使用的所有範例資料的教學課程逐步解說完成的 16 GB RAM。
 
 您必須擁有系統管理員權限的電腦和 SQL Server，將預先定型的模型。
 
-機器學習演算法會耗用大量運算資源。 我們建議針對低到中等的工作負載，包括使用的所有範例資料的教學課程逐步解說完成的 16 GB RAM。
+必須啟用外部指令碼，您必須執行 SQL Server LaunchPad 服務。 安裝指示會提供啟用和驗證這些功能的步驟。 
+
+[MicrosoftML R 封裝](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)或是[microsoftml Python 封裝](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)包含預先定型的模型。
+
++ [SQL Server 2017 Machine Learning 的服務](sql-machine-learning-services-windows-install.md)包含這兩個語言版本的機器學習服務程式庫中，讓您採取任何進一步的動作不滿足這項必要條件。 因為存在程式庫，您可以使用本文中所述的 PowerShell 指令碼，將這些程式庫中的預先定型的模型。
+
++ [SQL Server 2016 R Services](sql-r-services-windows-install.md)，這是 R，不包括[MicrosoftML 套件](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)現成的。 若要新增 MicrosoftML，您必須執行[元件升級](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)。 元件升級的優點之一是，您可以同時新增預先定型的模型，這可讓執行不必要的 PowerShell 指令碼。 不過，如果您已經升級，但遺漏了第一次新增預先定型的模型，您可以執行 PowerShell 指令碼，如這篇文章中所述。 它適用於這兩個版本的 SQL Server。 這麼做之前，請確認 MicrosoftML 程式庫會位於 C:\Program Files\Microsoft SQL Server\MSSQL13。MSSQLSERVER\R_SERVICES\library。
+
 
 <a name="file-location"></a>
 
@@ -47,9 +50,9 @@ ms.locfileid: "39174995"
 
 R 和 Python 模型的安裝路徑，如下所示：
 
-+ 針對: 「 C:\Program Files\Microsoft SQL Server\MSSQL14 」 中。MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64
++ R `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ 適用於 Python: 「 C:\Program Files\Microsoft SQL Server\MSSQL14 」 中。MSSQLSERVER\PYTHON_SERVICES\Lib\site packages\microsoftml\mxLibs 
++ 適用於 Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
 
 模型檔案名稱如下所示：
 
