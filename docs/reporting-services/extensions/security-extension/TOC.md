@@ -1,5 +1,0 @@
-# [Reporting Services 中的驗證](authentication-in-reporting-services.md)
-# [Reporting Services 中的授權](authorization-in-reporting-services.md)
-# [如何安裝自訂安全性延伸模組](how-to-install-custom-security-extensions.md)
-# [實作安全性延伸模組](implementing-a-security-extension.md)
-# [安全性延伸模組概觀](security-extensions-overview.md)

@@ -1,8 +1,0 @@
-# [GeneralFlags 屬性 (ServerSettings 類別)](generalflags-property-serversettings-class.md)
-# [GetCurrentCertificate 方法 (ServerSettings 類別)](getcurrentcertificate-method-serversettings-class.md)
-# [InstanceName 屬性 (ServerSettings 類別)](instancename-property-serversettings-class.md)
-# [NumberOfFlags 屬性 (ServerSettings 類別)](numberofflags-property-serversettings-class.md)
-# [RemoveCertificate 方法 (ServerSettings 類別)](removecertificate-method-serversettings-class.md)
-# [ServerSettings 類別](serversettings-class.md)
-# [SetCurrentCertificate 方法 (ServerSettings 類別)](setcurrentcertificate-method-serversettings-class.md)
-# [SetDefaults 方法 (ServerSettings 類別)](setdefaults-method-serversettings-class.md)

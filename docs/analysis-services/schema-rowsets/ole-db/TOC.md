@@ -1,5 +1,0 @@
-# [DBSCHEMA_CATALOGS 資料列集](dbschema-catalogs-rowset.md)
-# [DBSCHEMA_COLUMNS 資料列集](dbschema-columns-rowset.md)
-# [DBSCHEMA_PROVIDER_TYPES 資料列集](dbschema-provider-types-rowset.md)
-# [DBSCHEMA_TABLES 資料列集](dbschema-tables-rowset.md)
-# [OLE DB 結構描述資料列集](ole-db-schema-rowsets.md)

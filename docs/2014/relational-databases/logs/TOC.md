@@ -1,8 +1,0 @@
-# [記錄檔檢視器](log-file-viewer.md)
-## [開啟記錄檔檢視器](open-log-file-viewer.md)
-## [檢視離線記錄檔](view-offline-log-files.md)
-## [記錄檔檢視器 F1 說明](log-file-viewer-f1-help.md)
-# [交易記錄 (SQL Server)](the-transaction-log-sql-server.md)
-## [管理交易記錄檔的大小](manage-the-size-of-the-transaction-log-file.md)
-## [寫滿交易記錄疑難排解 (SQL Server 錯誤 9002)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
-## [控制交易持久性](control-transaction-durability.md)

@@ -1,6 +1,0 @@
-# [分類的 Web 服務作業 (Master Data Services)](categorized-web-service-operations-master-data-services.md)
-# [建立自訂工作流程 - 範例](create-a-custom-workflow-example.md)
-# [建立自訂工作流程 - XML 描述](create-a-custom-workflow-xml-description.md)
-# [建立自訂工作流程 (Master Data Services)](create-a-custom-workflow-master-data-services.md)
-# [建立主資料管理員 Web 服務 Proxy 類別](create-master-data-manager-web-service-proxy-classes.md)
-# [Master Data Services 開發人員文件](master-data-services-developer-documentation.md)

@@ -1,7 +1,0 @@
-# [在預存程序中存取查詢內容](accessing-query-context-in-stored-procedures.md)
-# [呼叫預存程序](calling-stored-procedures.md)
-# [建立預存程序](creating-stored-procedures.md)
-# [偵錯預存程序](debugging-stored-procedures.md)
-# [定義預存程序](defining-stored-procedures.md)
-# [設計預存程序](designing-stored-procedures.md)
-# [設定預存程序的安全性](setting-security-for-stored-procedures.md)

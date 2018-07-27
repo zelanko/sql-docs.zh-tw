@@ -1,5 +1,0 @@
-# [ADO.NET 的 SQL Server 同處理序特定延伸模組](sql-server-in-process-specific-extensions-to-ado-net.md)
-# [SqlContext 物件](sqlcontext-object.md)
-# [SqlDataRecord 物件](sqldatarecord-object.md)
-# [SqlPipe 物件](sqlpipe-object.md)
-# [SqlTriggerContext 物件](sqltriggercontext-object.md)

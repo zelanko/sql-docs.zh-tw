@@ -1,5 +1,0 @@
-# [Microsoft ADO.NET for SQL Server](microsoft-ado-net-for-sql-server.md)
-# [步驟 1︰設定 ADO.NET 開發的開發環境](step-1-configure-development-environment-for-ado-net-development.md)
-# [步驟 2︰建立 ADO.NET 開發的 SQL 資料庫](step-2-create-a-sql-database-for-ado-net-development.md)
-# [步驟 3︰使用 ADO.NET 連接到 SQL 的概念證明](step-3-proof-of-concept-connecting-to-sql-using-ado-net.md)
-# [步驟 4︰使用 ADO.NET 彈性地連接到 SQL](step-4-connect-resiliently-to-sql-with-ado-net.md)

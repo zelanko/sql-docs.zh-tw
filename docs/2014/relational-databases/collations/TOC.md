@@ -1,7 +1,0 @@
-# [定序與 Unicode 支援](collation-and-unicode-support.md)
-## [設定或變更伺服器定序](set-or-change-the-server-collation.md)
-## [設定或變更資料庫定序](set-or-change-the-database-collation.md)
-## [設定或變更資料行定序](set-or-change-the-column-collation.md)
-## [檢視定序資訊](view-collation-information.md)
-## [撰寫國際通用的 Transact-SQL 陳述式](write-international-transact-sql-statements.md)
-## [設定工作階段語言](set-a-session-language.md)

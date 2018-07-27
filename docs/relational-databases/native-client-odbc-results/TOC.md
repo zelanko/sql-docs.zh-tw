@@ -1,7 +1,0 @@
-# [處理結果 (ODBC)](processing-results-odbc.md)
-# [指派儲存體](assigning-storage.md)
-# [字元資料的自動轉譯](autotranslation-of-character-data.md)
-# [資料類型使用方式](data-type-usage.md)
-# [決定結果集的特性 (ODBC)](determining-the-characteristics-of-a-result-set-odbc.md)
-# [提取結果資料](fetching-result-data.md)
-# [對應資料類型 (ODBC)](mapping-data-types-odbc.md)
