@@ -1,7 +1,7 @@
 ---
 title: sp_describe_undeclared_parameters & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
-ms.date: 06/28/2017
+ms.date: 07/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-stored-procedures
@@ -23,15 +23,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b819d5904cdcdc7339036a5ec5f5a9e6fde8477e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: e4a4a97b4a69aaf68d196833ee56b089a3dadfcf
+ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086230"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39331584"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   傳回結果集，其中包含未宣告的參數中的相關中繼資料[!INCLUDE[tsql](../../includes/tsql-md.md)]批次。 會考量用於每個參數 **\@tsql**批次，但未在宣告 **\@params**。 傳回的結果集中，針對每一個這類參數包含一個資料列，內含該參數的推算類型資訊。 此程序會傳回空的結果集，如果 **\@tsql**輸入批次沒有任何參數，除了中所宣告 **\@params**。  
   
