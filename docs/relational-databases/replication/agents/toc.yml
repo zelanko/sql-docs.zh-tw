@@ -1,0 +1,27 @@
+- name: 概觀
+  href: replication-agents.md
+- name: 複寫代理程式概觀
+  href: replication-agents-overview.md
+- name: 複寫散發代理程式
+  href: replication-distribution-agent.md
+- name: 複寫記錄讀取器代理程式
+  href: replication-log-reader-agent.md
+- name: Replication Merge Agent
+  href: replication-merge-agent.md
+- name: 複寫佇列讀取器代理程式
+  href: replication-queue-reader-agent.md
+- name: 複寫快照集代理程式
+  href: replication-snapshot-agent.md
+- name: 複寫代理程式管理
+  href: replication-agent-administration.md
+  items:
+    - name: 複寫代理程式設定檔
+      href: replication-agent-profiles.md
+    - name: 使用複寫代理程式事件的警示
+      href: use-alerts-for-replication-agent-events.md
+    - name: 處理複寫代理程式設定檔
+      href: work-with-replication-agent-profiles.md
+    - name: 啟動及停止複寫代理程式 (SQL Server Management Studio)
+      href: start-and-stop-a-replication-agent-sql-server-management-studio.md
+    - name: 檢視並修改複寫代理程式命令提示字元參數 (SQL Server Management Studio)
+      href: view-and-modify-replication-agent-command-prompt-parameters.md

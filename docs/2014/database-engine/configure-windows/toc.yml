@@ -1,0 +1,255 @@
+- name: 設定 Database Engine 執行個體
+  href: configure-database-engine-instances-sql-server.md
+  items:
+    - name: 伺服器組態選項 (SQL Server)
+      href: server-configuration-options-sql-server.md
+    - name: 存取檢查快取伺服器組態選項
+      href: access-check-cache-server-configuration-options.md
+    - name: 特定分散式查詢伺服器組態選項
+      href: ad-hoc-distributed-queries-server-configuration-option.md
+    - name: affinity Input-Output mask 伺服器組態選項
+      href: affinity-input-output-mask-server-configuration-option.md
+    - name: affinity64 輸入輸出伺服器組態選項
+      href: affinity64-input-output-mask-server-configuration-option.md
+    - name: affinity mask 伺服器組態選項
+      href: affinity-mask-server-configuration-option.md
+    - name: affinity64 mask 伺服器組態選項
+      href: affinity64-mask-server-configuration-option.md
+    - name: Agent XPs 伺服器組態選項
+      href: agent-xps-server-configuration-option.md
+    - name: 允許更新伺服器組態選項
+      href: allow-updates-server-configuration-option.md
+    - name: 備份總和檢查碼預設
+      href: ../backup-checksum-default.md
+    - name: 檢視或設定 backup compression default 伺服器組態選項
+      href: view-or-configure-the-backup-compression-default-server-configuration-option.md
+    - name: 已封鎖的處理序臨界值伺服器組態選項
+      href: blocked-process-threshold-server-configuration-option.md
+    - name: C2 稽核模式伺服器組態選項
+      href: c2-audit-mode-server-configuration-option.md
+    - name: CLR 已啟用伺服器組態選項
+      href: clr-enabled-server-configuration-option.md
+    - name: 通用條件符合已啟用伺服器組態選項
+      href: common-criteria-compliance-enabled-server-configuration-option.md
+    - name: 自主資料庫驗證伺服器組態選項
+      href: contained-database-authentication-server-configuration-option.md
+    - name: 設定 cost threshold for parallelism 伺服器組態選項
+      href: configure-the-cost-threshold-for-parallelism-server-configuration-option.md
+    - name: 設定 cursor threshold 伺服器組態選項
+      href: configure-the-cursor-threshold-server-configuration-option.md
+    - name: 跨資料庫擁有權鏈結伺服器組態選項
+      href: cross-db-ownership-chaining-server-configuration-option.md
+    - name: Database Mail XP 伺服器組態選項
+      href: database-mail-xps-server-configuration-option.md
+    - name: 設定 default full-text language 伺服器組態選項
+      href: configure-the-default-full-text-language-server-configuration-option.md
+    - name: 設定 default language 伺服器組態選項
+      href: configure-the-default-language-server-configuration-option.md
+    - name: 預設追蹤已啟用伺服器組態選項
+      href: default-trace-enabled-server-configuration-option.md
+    - name: 不允許來自觸發程序的結果伺服器組態選項
+      href: disallow-results-from-triggers-server-configuration-option.md
+    - name: EKM provider enabled 伺服器組態選項
+      href: ekm-provider-enabled-server-configuration-option.md
+    - name: 檔案資料流存取層級伺服器組態選項
+      href: filestream-access-level-server-configuration-option.md
+    - name: 設定 fill factor 伺服器組態選項
+      href: configure-the-fill-factor-server-configuration-option.md
+    - name: 全文檢索耙梳頻寬伺服器組態選項
+      href: ft-crawl-bandwidth-server-configuration-option.md
+    - name: 全文檢索通知頻寬伺服器組態選項
+      href: ft-notify-bandwidth-server-configuration-option.md
+    - name: 不能肯定的交易解析伺服器組態選項
+      href: in-doubt-xact-resolution-server-configuration-option.md
+    - name: 設定 index create memory 伺服器組態選項
+      href: configure-the-index-create-memory-server-configuration-option.md
+    - name: 輕量型共用伺服器組態選項
+      href: lightweight-pooling-server-configuration-option.md
+    - name: 設定 locks 伺服器組態選項
+      href: configure-the-locks-server-configuration-option.md
+    - name: 設定 max degree of parallelism 伺服器組態選項
+      href: configure-the-max-degree-of-parallelism-server-configuration-option.md
+    - name: 全文檢索搜耙最大範圍伺服器組態選項
+      href: max-full-text-crawl-range-server-configuration-option.md
+    - name: 設定 max text repl size 伺服器組態選項
+      href: configure-the-max-text-repl-size-server-configuration-option.md
+    - name: 設定 max worker threads 伺服器組態選項
+      href: configure-the-max-worker-threads-server-configuration-option.md
+    - name: 設定 media retention 伺服器組態選項
+      href: configure-the-media-retention-server-configuration-option.md
+    - name: 設定 min memory per query 伺服器組態選項
+      href: configure-the-min-memory-per-query-server-configuration-option.md
+    - name: 設定 nested triggers 伺服器組態選項
+      href: configure-the-nested-triggers-server-configuration-option.md
+    - name: 設定 network packet size 伺服器組態選項
+      href: configure-the-network-packet-size-server-configuration-option.md
+    - name: OLE Automation 程序伺服器組態選項
+      href: ole-automation-procedures-server-configuration-option.md
+    - name: 開啟物件伺服器組態選項
+      href: open-objects-server-configuration-option.md
+    - name: 針對特定工作負載最佳化伺服器組態選項
+      href: optimize-for-ad-hoc-workloads-server-configuration-option.md
+    - name: PH 逾時伺服器組態選項
+      href: ph-timeout-server-configuration-option.md
+    - name: 預先計算次序伺服器組態選項
+      href: precompute-rank-server-configuration-option.md
+    - name: 設定 priority boost 伺服器組態選項
+      href: configure-the-priority-boost-server-configuration-option.md
+    - name: 設定 query governor cost limit 伺服器組態選項
+      href: configure-the-query-governor-cost-limit-server-configuration-option.md
+    - name: 設定 query wait 伺服器組態選項
+      href: configure-the-query-wait-server-configuration-option.md
+    - name: 設定 recovery interval 伺服器組態選項
+      href: configure-the-recovery-interval-server-configuration-option.md
+    - name: 設定 remote access 伺服器組態選項
+      href: configure-the-remote-access-server-configuration-option.md
+    - name: 遠端管理員連接伺服器組態選項
+      href: remote-admin-connections-server-configuration-option.md
+    - name: 設定 remote login timeout 伺服器組態選項
+      href: configure-the-remote-login-timeout-server-configuration-option.md
+    - name: 設定 remote proc trans 伺服器組態選項
+      href: configure-the-remote-proc-trans-server-configuration-option.md
+    - name: 設定 remote query timeout 伺服器組態選項
+      href: configure-the-remote-query-timeout-server-configuration-option.md
+    - name: 複寫 XPs 伺服器組態選項
+      href: replication-xps-server-configuration-option.md
+    - name: 設定 scan for startup procs 伺服器組態選項
+      href: configure-the-scan-for-startup-procs-server-configuration-option.md
+    - name: 伺服器記憶體伺服器組態選項
+      href: server-memory-server-configuration-options.md
+    - name: 伺服器觸發程序遞迴伺服器組態選項
+      href: server-trigger-recursion-server-configuration-option.md
+    - name: 設定工作集大小伺服器組態選項
+      href: set-working-set-size-server-configuration-option.md
+    - name: 顯示進階選項伺服器組態選項
+      href: show-advanced-options-server-configuration-option.md
+    - name: SMO 和 DMO XPs 伺服器組態選項
+      href: smo-and-dmo-xps-server-configuration-option.md
+    - name: 轉換非搜尋字伺服器組態選項
+      href: transform-noise-words-server-configuration-option.md
+    - name: 設定 two digit year cutoff 伺服器組態選項
+      href: configure-the-two-digit-year-cutoff-server-configuration-option.md
+    - name: 設定 user connections 伺服器組態選項
+      href: configure-the-user-connections-server-configuration-option.md
+    - name: 設定 user options 伺服器組態選項
+      href: configure-the-user-options-server-configuration-option.md
+    - name: xp_cmdshell 伺服器組態選項
+      href: xp-cmdshell-server-configuration-option.md
+    - name: 檢視或變更資料及記錄檔的預設位置 (SQL Server Management Studio)
+      href: view-or-change-the-default-locations-for-data-and-log-files.md
+    - name: 檢視或設定遠端伺服器連接選項 (SQL Server)
+      href: view-or-configure-remote-server-connection-options-sql-server.md
+    - name: 檢視或變更伺服器屬性
+      href: view-or-change-server-properties-sql-server.md
+    - name: 伺服器屬性 F1 說明
+      href: ../server-properties-f1-help.md
+      items:
+        - name: 伺服器屬性 (一般頁面) - SQL Server Management Studio
+          href: server-properties-general-page.md
+        - name: 伺服器屬性 (記憶體頁面)
+          href: server-properties-memory-page.md
+        - name: 伺服器屬性 (處理器頁面)
+          href: server-properties-processors-page.md
+        - name: 伺服器屬性 (安全性頁面)
+          href: server-properties-security-page.md
+        - name: 伺服器屬性 (連接頁面)
+          href: server-properties-connections-page.md
+        - name: 伺服器屬性 (資料庫設定頁面)
+          href: server-properties-database-settings-page.md
+        - name: 伺服器屬性 (其他伺服器設定頁面)
+          href: server-properties-misc-server-settings-page.md
+        - name: SQL Server 屬性 (FILESTREAM 頁面)
+          href: server-properties-filestream-page.md
+        - name: 伺服器屬性 (進階頁面)
+          href: server-properties-advanced-page.md
+    - name: 設定 SQL Server 使用軟體 NUMA (SQL Server)
+      href: soft-numa-sql-server.md
+    - name: 將 TCP/IP 連接埠對應到 NUMA 節點 (SQL Server)
+      href: map-tcp-ip-ports-to-numa-nodes-sql-server.md
+    - name: 啟用鎖定記憶體分頁選項 (Windows)
+      href: enable-the-lock-pages-in-memory-option-windows.md
+- name: 管理 Database Engine Services
+  href: manage-the-database-engine-services.md
+  items:
+    - name: 管理服務的安全性需求
+      href: security-requirements-for-managing-services.md
+    - name: 設定 Windows 服務帳戶與權限
+      href: configure-windows-service-accounts-and-permissions.md
+    - name: 設定 Database Engine 對檔案系統的存取權限
+      href: configure-file-system-permissions-for-database-engine-access.md
+    - name: 使用 (或不使用) 網路執行 SQL Server
+      href: run-sql-server-with-or-without-a-network.md
+    - name: SQL Server Browser 服務 (Database Engine 和 SSAS)
+      href: sql-server-browser-service-database-engine-and-ssas.md
+    - name: Database Engine 服務啟動選項
+      href: database-engine-service-startup-options.md
+    - name: 啟動、停止、暫停、繼續、重新啟動 Database Engine、SQL Server Agent 或 SQL Server Browser 服務
+      href: start-stop-pause-resume-restart-sql-server-services.md
+    - name: 以單一使用者模式啟動 SQL Server
+      href: start-sql-server-in-single-user-mode.md
+    - name: 以最低組態啟動 SQL Server
+      href: start-sql-server-with-minimal-configuration.md
+    - name: 管理服務的如何主題 (SQL Server 組態管理員)
+      href: ../managing-services-how-to-topics-sql-server-configuration-manager.md
+    - name: 連接至另一部電腦 (SQL Server 組態管理員)
+      href: scm-services-connect-to-another-computer.md
+    - name: 將 SQL Server 執行個體設定為自動啟動 (SQL Server 組態管理員)
+      href: scm-services-set-an-instance-to-start-automatically.md
+    - name: 避免自動啟動 SQL Server 的執行個體 (SQL Server 組態管理員)
+      href: scm-services-prevent-automatic-startup-of-an-instance.md
+    - name: 變更 SQL Server 的服務啟動帳戶 (SQL Server 組態管理員)
+      href: scm-services-change-the-service-startup-account.md
+    - name: 設定伺服器啟動選項 (SQL Server 組態管理員)
+      href: scm-services-configure-server-startup-options.md
+    - name: 變更 SQL Server 所使用之帳戶的密碼 (SQL Server 組態管理員)
+      href: scm-services-change-the-password-of-the-accounts-used.md
+    - name: 設定 SQL Server 錯誤記錄檔
+      href: scm-services-configure-sql-server-error-logs.md
+    - name: 變更伺服器驗證模式
+      href: change-server-authentication-mode.md
+    - name: SQL 寫入器服務
+      href: sql-writer-service.md
+    - name: 廣播關機訊息 (命令提示字元)
+      href: broadcast-a-shutdown-message-command-prompt.md
+    - name: 登入 SQL Server 的執行個體 (命令提示字元)
+      href: log-in-to-an-instance-of-sql-server-command-prompt.md
+- name: 伺服器網路組態
+  href: server-network-configuration.md
+  items:
+    - name: 當系統管理員遭到鎖定時連接到 SQL Server
+      href: connect-to-sql-server-when-system-administrators-are-locked-out.md
+    - name: 啟用或停用伺服器網路通訊協定
+      href: enable-or-disable-a-server-network-protocol.md
+    - name: 設定伺服器接聽特定 TCP 通訊埠 (SQL Server 組態管理員)
+      href: configure-a-server-to-listen-on-a-specific-tcp-port.md
+    - name: 設定接聽替代管道的伺服器 (SQL Server 組態管理員)
+      href: configure-a-server-to-listen-on-an-alternate-pipe.md
+    - name: 啟用 Database Engine 的加密連接 (SQL Server 組態管理員)
+      href: enable-encrypted-connections-to-the-database-engine.md
+    - name: 經由 Proxy 伺服器連接至 SQL Server (SQL Server 組態管理員)
+      href: connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md
+    - name: 設定用於 Database Engine 存取的 Windows 防火牆
+      href: configure-a-windows-firewall-for-database-engine-access.md
+    - name: 隱藏 SQL Server Database Engine 的執行個體
+      href: hide-an-instance-of-sql-server-database-engine.md
+    - name: 設定 Database Engine 接聽多個 TCP 通訊埠
+      href: configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+    - name: 判斷是否已安裝及啟動 Database Engine
+      href: determine-whether-the-database-engine-is-installed-and-started.md
+    - name: 使用擴充保護連接至 Database Engine
+      href: connect-to-the-database-engine-using-extended-protection.md
+    - name: 註冊 Kerberos 連接的服務主體名稱
+      href: register-a-service-principal-name-for-kerberos-connections.md
+- name: 用戶端網路組態
+  href: client-network-configuration.md
+  items:
+    - name: 設定用戶端通訊協定
+      href: configure-client-protocols.md
+    - name: 建立或刪除用戶端使用的伺服器別名 (SQL Server 組態管理員)
+      href: create-or-delete-a-server-alias-for-use-by-a-client.md
+    - name: 登入 SQL Server
+      href: logging-in-to-sql-server.md
+    - name: 開啟 ODBC 資料來源管理員
+      href: open-the-odbc-data-source-administrator.md
+    - name: 檢查 ODBC SQL Server 驅動程式版本 (Windows)
+      href: check-the-odbc-sql-server-driver-version-windows.md
