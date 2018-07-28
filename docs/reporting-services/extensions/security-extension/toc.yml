@@ -1,0 +1,10 @@
+- name: Reporting Services 中的驗證
+  href: authentication-in-reporting-services.md
+- name: Reporting Services 中的授權
+  href: authorization-in-reporting-services.md
+- name: 如何安裝自訂安全性延伸模組
+  href: how-to-install-custom-security-extensions.md
+- name: 實作安全性延伸模組
+  href: implementing-a-security-extension.md
+- name: 安全性延伸模組概觀
+  href: security-extensions-overview.md

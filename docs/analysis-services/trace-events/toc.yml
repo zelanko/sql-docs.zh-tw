@@ -1,0 +1,64 @@
+- name: 概觀
+  href: analysis-services-trace-events.md
+- name: 用於追蹤內的物件程式碼
+  href: analysis-services-object-type-codes-used-in-traces.md
+- name: 命令事件的事件類別目錄
+  href: command-events-event-category.md
+  items:
+    - name: 命令事件資料行
+      href: command-events-data-columns.md
+- name: 探索事件的事件類別目錄
+  href: discover-events-event-category.md
+  items:
+    - name: 探索事件資料行
+      href: discover-events-data-columns.md
+- name: 探索伺服器狀態事件類別目錄
+  href: discover-server-state-event-category.md
+  items:
+    - name: 探索伺服器狀態事件資料行
+      href: discover-server-state-events-data-columns.md
+- name: 錯誤和警告事件類別目錄
+  href: errors-and-warnings-event-category.md
+  items:
+    - name: 錯誤和警告事件資料行
+      href: errors-and-warnings-events-data-columns.md
+- name: 檔案載入及儲存事件目錄
+  href: file-load-and-save-event-category.md
+  items:
+    - name: 檔案載入及儲存資料行
+      href: file-load-and-save-data-columns.md
+- name: Lock 事件類別目錄
+  href: lock-events-category.md
+  items:
+    - name: 鎖定事件資料行
+      href: lock-events-data-columns.md
+- name: 通知事件的事件類別目錄
+  href: notification-events-event-category.md
+  items:
+    - name: 通知事件資料行
+      href: notification-events-data-columns.md
+- name: 進度報表事件類別目錄
+  href: progress-reports-event-category.md
+  items:
+    - name: 進度報表資料行
+      href: progress-reports-data-columns.md
+- name: 查詢事件類別目錄
+  href: queries-events-category.md
+  items:
+    - name: 查詢事件資料行
+      href: queries-events-data-columns.md
+- name: 查詢處理事件類別目錄
+  href: query-processing-events-category.md
+  items:
+    - name: 查詢處理事件資料行
+      href: query-processing-events-data-columns.md
+- name: 安全性稽核事件類別目錄
+  href: security-audit-event-category.md
+  items:
+    - name: 安全性稽核資料行
+      href: security-audit-data-columns.md
+- name: 工作階段事件的事件類別目錄
+  href: session-events-event-category.md
+  items:
+    - name: 工作階段事件資料行
+      href: session-events-data-columns.md

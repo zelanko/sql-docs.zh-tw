@@ -1,0 +1,240 @@
+- name: Integration Services 轉換
+  href: integration-services-transformations.md
+- name: 彙總轉換
+  href: aggregate-transformation.md
+  items:
+    - name: 彙總轉換編輯器 (彙總索引標籤)
+      href: ../../aggregate-transformation-editor-aggregations-tab.md
+    - name: 彙總轉換編輯器 (進階索引標籤)
+      href: ../../aggregate-transformation-editor-advanced-tab.md
+    - name: 使用彙總轉換來彙總資料集中的值
+      href: aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md
+- name: 稽核轉換
+  href: audit-transformation.md
+  items:
+    - name: 稽核轉換編輯器
+      href: ../../audit-transformation-editor.md
+- name: 平衡資料分佈器轉換
+  href: balanced-data-distributor-transformation.md
+- name: 字元對應轉換
+  href: character-map-transformation.md
+  items:
+    - name: 字元對應表轉換編輯器
+      href: ../../character-map-transformation-editor.md
+- name: 條件式分割轉換
+  href: conditional-split-transformation.md
+  items:
+    - name: 條件式分割轉換編輯器
+      href: ../../conditional-split-transformation-editor.md
+    - name: 使用條件式分割轉換來分割資料集
+      href: split-a-dataset-by-using-the-conditional-split-transformation.md
+- name: 複製資料行轉換
+  href: copy-column-transformation.md
+  items:
+    - name: 複製資料行轉換編輯器
+      href: ../../copy-column-transformation-editor.md
+- name: 資料轉換
+  href: data-conversion-transformation.md
+  items:
+    - name: 資料轉換編輯器
+      href: ../../data-conversion-transformation-editor.md
+    - name: 使用資料轉換將資料轉換至不同的資料類型
+      href: convert-data-type-by-using-data-conversion-transformation.md
+- name: 資料採礦查詢轉換
+  href: data-mining-query-transformation.md
+  items:
+    - name: 資料採礦查詢轉換編輯器 (採礦模型索引標籤)
+      href: ../../data-mining-query-transformation-editor-mining-model-tab.md
+    - name: 資料採礦查詢轉換編輯器 (查詢索引標籤)
+      href: ../../data-mining-query-transformation-editor-query-tab.md
+- name: DQS 清理轉換
+  href: dqs-cleansing-transformation.md
+  items:
+    - name: DQS 清理轉換編輯器對話方塊
+      href: ../../dqs-cleansing-transformation-editor-dialog-box.md
+    - name: DQS 清理連接管理員
+      href: ../../connection-manager/dqs-cleansing-connection-manager.md
+    - name: 將資料品質規則套用至資料來源
+      href: apply-data-quality-rules-to-data-source.md
+    - name: 將資料行對應到複合定義域
+      href: map-columns-to-composite-domains.md
+- name: 衍生的資料行轉換
+  href: derived-column-transformation.md
+  items:
+    - name: 衍生的資料行轉換編輯器
+      href: ../../derived-column-transformation-editor.md
+    - name: 使用衍生的資料行轉換來衍生資料行值
+      href: derive-column-values-by-using-the-derived-column-transformation.md
+- name: 匯出資料行轉換
+  href: export-column-transformation.md
+  items:
+    - name: 匯出資料行轉換編輯器 (資料行頁面)
+      href: ../../export-column-transformation-editor-columns-page.md
+    - name: 匯出資料行轉換編輯器 (錯誤輸出頁面)
+      href: ../../export-column-transformation-editor-error-output-page.md
+- name: 模糊群組轉換
+  href: fuzzy-grouping-transformation.md
+  items:
+    - name: 模糊群組轉換編輯器 (連接管理員索引標籤)
+      href: ../../fuzzy-grouping-transformation-editor-connection-manager-tab.md
+    - name: 模糊群組轉換編輯器 (資料行索引標籤)
+      href: ../../fuzzy-grouping-transformation-editor-columns-tab.md
+    - name: 模糊群組轉換編輯器 (進階索引標籤)
+      href: ../../fuzzy-grouping-transformation-editor-advanced-tab.md
+    - name: 使用模糊群組轉換來識別相似的資料列
+      href: identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md
+- name: 模糊查閱轉換
+  href: fuzzy-lookup-transformation.md
+  items:
+    - name: 模糊查閱轉換編輯器 (參考資料表索引標籤)
+      href: ../../fuzzy-lookup-transformation-editor-reference-table-tab.md
+    - name: 模糊查閱轉換編輯器 (資料行索引標籤)
+      href: ../../fuzzy-lookup-transformation-editor-columns-tab.md
+    - name: 模糊查閱轉換編輯器 (進階索引標籤)
+      href: ../../fuzzy-lookup-transformation-editor-advanced-tab.md
+- name: 匯入資料行轉換
+  href: import-column-transformation.md
+- name: 查閱轉換
+  href: lookup-transformation.md
+  items:
+    - name: 查閱轉換編輯器 (連接頁面)
+      href: ../../lookup-transformation-editor-connection-page.md
+    - name: 查閱轉換編輯器 (進階頁面)
+      href: ../../lookup-transformation-editor-advanced-page.md
+    - name: 查閱轉換編輯器 (資料行頁面)
+      href: ../../lookup-transformation-editor-columns-page.md
+    - name: 查閱轉換編輯器 (一般頁面)
+      href: ../../lookup-transformation-editor-general-page.md
+    - name: 查閱轉換編輯器 (錯誤輸出頁面)
+      href: ../../lookup-transformation-editor-error-output-page.md
+    - name: 以沒有快取或部分快取模式實作查閱
+      href: implement-a-lookup-in-no-cache-or-partial-cache-mode.md
+    - name: 使用快取連線管理員以完整快取模式實作查閱轉換
+      href: ../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md
+    - name: 使用 OLE DB 連接管理員，以完整快取模式來實作查閱轉換
+      href: ../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md
+    - name: 針對查閱轉換來建立及部署快取
+      href: create-and-deploy-a-cache-for-the-lookup-transformation.md
+    - name: 建立關聯性
+      href: create-relationships.md
+    - name: 快取轉換
+      href: cache-transform.md
+    - name: 快取連接管理員
+      href: ../../connection-manager/cache-connection-manager.md
+    - name: 快取連接管理員編輯器
+      href: ../../cache-connection-manager-editor.md
+    - name: 快取轉換編輯器 (連接管理員頁面)
+      href: ../../cache-transformation-editor-connection-manager-page.md
+    - name: 快取轉換編輯器 (對應頁面)
+      href: ../../cache-transformation-editor-mappings-page.md
+- name: 合併轉換
+  href: merge-transformation.md
+  items:
+    - name: 合併轉換編輯器
+      href: ../../merge-transformation-editor.md
+- name: Merge Join Transformation
+  href: merge-join-transformation.md
+  items:
+    - name: 合併聯結轉換編輯器
+      href: ../../merge-join-transformation-editor.md
+    - name: 使用合併聯結轉換來擴充資料集
+      href: extend-a-dataset-by-using-the-merge-join-transformation.md
+    - name: 排序合併和合併聯結轉換的資料
+      href: sort-data-for-the-merge-and-merge-join-transformations.md
+- name: 多點傳送轉換
+  href: multicast-transformation.md
+  items:
+    - name: 多點傳送轉換編輯器
+      href: ../../multicast-transformation-editor.md
+- name: OLE DB 命令轉換
+  href: ole-db-command-transformation.md
+  items:
+    - name: 設定 OLE DB 命令轉換
+      href: ../../configure-the-ole-db-command-transformation.md
+- name: 百分比取樣轉換
+  href: percentage-sampling-transformation.md
+  items:
+    - name: 百分比取樣轉換編輯器
+      href: ../../percentage-sampling-transformation-editor.md
+- name: 樞紐轉換
+  href: pivot-transformation.md
+- name: 資料列計數轉換
+  href: row-count-transformation.md
+- name: 資料列取樣轉換
+  href: row-sampling-transformation.md
+  items:
+    - name: 資料列取樣轉換編輯器 (取樣頁面)
+      href: ../../row-sampling-transformation-editor-sampling-page.md
+- name: 指令碼元件
+  href: script-component.md
+  items:
+    - name: 指令碼轉換編輯器 (輸入資料行頁面)
+      href: ../../script-transformation-editor-input-columns-page.md
+    - name: 指令碼轉換編輯器 (輸入及輸出頁面)
+      href: ../../script-transformation-editor-inputs-and-outputs-page.md
+    - name: 指令碼轉換編輯器 (指令碼頁面)
+      href: ../../script-transformation-editor-script-page.md
+    - name: 指令碼轉換編輯器 (連接管理員頁面)
+      href: ../../script-transformation-editor-connection-managers-page.md
+    - name: 選取指令碼元件類型
+      href: ../../select-script-component-type.md
+- name: 緩時變維度轉換
+  href: slowly-changing-dimension-transformation.md
+  items:
+    - name: 使用緩時變維度精靈來設定輸出
+      href: configure-outputs-using-the-slowly-changing-dimension-wizard.md
+    - name: 緩時變維度精靈 F1 說明
+      href: slowly-changing-dimension-wizard-f1-help.md
+    - name: 歡迎使用緩時變維度精靈
+      href: welcome-to-the-slowly-changing-dimension-wizard.md
+    - name: 選取維度資料表與索引鍵 (緩時變維度精靈)
+      href: select-a-dimension-table-and-keys-slowly-changing-dimension-wizard.md
+    - name: 緩時變維度資料行 (緩時變維度精靈)
+      href: slowly-changing-dimension-columns-slowly-changing-dimension-wizard.md
+    - name: 固定與變更屬性選項 (緩時變維度精靈)
+      href: fixed-and-changing-attribute-options-slowly-changing-dimension-wizard.md
+    - name: 記錄屬性選項 (緩時變維度精靈)
+      href: historical-attribute-options-slowly-changing-dimension-wizard.md
+    - name: 推斷的維度成員 (緩時變維度精靈)
+      href: inferred-dimension-members-slowly-changing-dimension-wizard.md
+    - name: 完成緩時變維度精靈
+      href: finish-the-slowly-changing-dimension-wizard.md
+- name: 排序轉換
+  href: sort-transformation.md
+  items:
+    - name: 排序轉換編輯器
+      href: ../../sort-transformation-editor.md
+- name: 詞彙擷取轉換
+  href: term-extraction-transformation.md
+  items:
+    - name: 詞彙擷取轉換編輯器 (詞彙擷取索引標籤)
+      href: ../../term-extraction-transformation-editor-term-extraction-tab.md
+    - name: 詞彙擷取轉換編輯器 (排除索引標籤)
+      href: ../../term-extraction-transformation-editor-exclusion-tab.md
+    - name: 詞彙擷取轉換編輯器 (進階索引標籤)
+      href: ../../term-extraction-transformation-editor-advanced-tab.md
+- name: 詞彙查閱轉換
+  href: term-lookup-transformation.md
+  items:
+    - name: 詞彙查閱轉換編輯器 (參考資料表索引標籤)
+      href: ../../term-lookup-transformation-editor-reference-table-tab.md
+    - name: 詞彙查閱轉換編輯器 (詞彙查閱索引標籤)
+      href: ../../term-lookup-transformation-editor-term-lookup-tab.md
+    - name: 詞彙查閱轉換編輯器 (進階索引標籤)
+      href: ../../term-lookup-transformation-editor-advanced-tab.md
+- name: 聯集全部轉換
+  href: union-all-transformation.md
+  items:
+    - name: 聯集全部轉換編輯器
+      href: ../../union-all-transformation-editor.md
+    - name: 使用聯集全部轉換來合併資料
+      href: merge-data-by-using-the-union-all-transformation.md
+- name: 取消樞紐轉換
+  href: unpivot-transformation.md
+  items:
+    - name: 取消樞紐轉換編輯器
+      href: ../../unpivot-transformation-editor.md
+- name: 使用轉換來轉換資料
+  href: transform-data-with-transformations.md
+- name: 轉換自訂屬性
+  href: transformation-custom-properties.md

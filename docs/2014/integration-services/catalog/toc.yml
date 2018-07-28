@@ -1,0 +1,29 @@
+- name: Integration Services (SSIS) 伺服器
+  href: integration-services-ssis-server-and-catalog.md
+- name: 專案屬性對話方塊
+  href: project-properties-dialog-box.md
+- name: 驗證對話方塊
+  href: validate-dialog-box.md
+- name: 封裝屬性對話方塊
+  href: package-properties-dialog-box.md
+- name: 設定對話方塊
+  href: configure-dialog-box.md
+- name: 瀏覽所有主體對話方塊
+  href: browse-all-principals-dialog-box.md
+- name: 資料夾屬性對話方塊
+  href: folder-properties-dialog-box.md
+- name: 專案版本對話方塊
+  href: project-versions-dialog-box.md
+- name: SSIS 目錄
+  href: ssis-catalog.md
+  items:
+    - name: 建立 SSIS 目錄
+      href: ../create-the-ssis-catalog.md
+    - name: 目錄屬性對話方塊
+      href: ../catalog-properties-dialog-box.md
+    - name: 備份、 還原和移動的 SSIS 目錄
+      href: ../backup-restore-and-move-the-ssis-catalog.md
+- name: 檢視 Integration Services 伺服器上的封裝清單
+  href: view-the-list-of-packages-on-the-integration-services-server.md
+- name: 設定參數值對話方塊
+  href: set-parameter-value-dialog-box.md

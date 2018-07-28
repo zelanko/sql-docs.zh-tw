@@ -1,0 +1,39 @@
+- name: 異質資料庫複寫
+  href: heterogeneous-database-replication.md
+- name: 非 SQL Server 發行者
+  href: non-sql-server-publishers.md
+  items:
+    - name: Oracle Publishing Overview
+      href: oracle-publishing-overview.md
+    - name: Oracle 發行相關術語字彙
+      href: glossary-of-terms-for-oracle-publishing.md
+    - name: 設定 Oracle 發行者
+      href: configure-an-oracle-publisher.md
+      items:
+        - name: 授與 Oracle 權限的指令碼
+          href: script-to-grant-oracle-permissions.md
+        - name: 管理 Oracle 資料表空間
+          href: manage-oracle-tablespaces.md
+    - name: Oracle 發行者的設計考量與限制
+      href: design-considerations-and-limitations-for-oracle-publishers.md
+    - name: Oracle 發行者的管理考量
+      href: administrative-considerations-for-oracle-publishers.md
+    - name: Oracle 發行者的效能微調
+      href: performance-tuning-for-oracle-publishers.md
+    - name: Oracle 發行者的資料類型對應
+      href: data-type-mapping-for-oracle-publishers.md
+    - name: Oracle 發行者的備份與還原
+      href: backup-and-restore-for-oracle-publishers.md
+    - name: 在 Oracle 發行者端建立的物件
+      href: objects-created-on-the-oracle-publisher.md
+    - name: Oracle 發行者疑難排解
+      href: troubleshooting-oracle-publishers.md
+- name: 非 SQL Server 訂閱者
+  href: non-sql-server-subscribers.md
+  items:
+    - name: Oracle 訂閱者
+      href: oracle-subscribers.md
+    - name: IBM DB2 訂閱者
+      href: ibm-db2-subscribers.md
+    - name: 其他非 SQL Server 訂閱者
+      href: other-non-sql-server-subscribers.md

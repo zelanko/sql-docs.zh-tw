@@ -1,0 +1,72 @@
+- name: 全文檢索搜尋
+  href: full-text-search.md
+  items:
+    - name: 全文檢索搜尋使用者入門
+      href: get-started-with-full-text-search.md
+    - name: Query with Full-Text Search
+      href: query-with-full-text-search.md
+    - name: 使用 NEAR 搜尋靠近另一個單字的字詞
+      href: search-for-words-close-to-another-word-with-near.md
+    - name: 限制 RANK 的搜索結果
+      href: limit-search-results-with-rank.md
+    - name: 改善全文檢索查詢的效能
+      href: improve-the-performance-of-full-text-queries.md
+    - name: 使用搜索屬性清單搜索文件屬性
+      href: search-document-properties-with-search-property-lists.md
+    - name: 尋找搜尋屬性的屬性集 GUID 與屬性整數識別碼
+      href: find-property-set-guids-and-property-integer-ids-for-search-properties.md
+    - name: 建立及管理全文檢索目錄
+      href: create-and-manage-full-text-catalogs.md
+    - name: 建立及管理全文檢索索引
+      href: create-and-manage-full-text-indexes.md
+    - name: 選擇建立全文檢索索引時的語言
+      href: choose-a-language-when-creating-a-full-text-index.md
+    - name: 擴展全文檢索索引
+      href: populate-full-text-indexes.md
+    - name: 改善全文檢索索引的效能
+      href: improve-the-performance-of-full-text-indexes.md
+    - name: 疑難排解全文檢索索引
+      href: troubleshoot-full-text-indexing.md
+    - name: 備份並還原全文檢索目錄與索引。
+      href: back-up-and-restore-full-text-catalogs-and-indexes.md
+    - name: 設定及管理搜尋的篩選
+      href: configure-and-manage-filters-for-search.md
+    - name: 設定及管理搜尋的斷詞工具與字幹分析器
+      href: configure-and-manage-word-breakers-and-stemmers-for-search.md
+    - name: 檢視或變更已註冊的篩選與斷詞工具
+      href: view-or-change-registered-filters-and-word-breakers.md
+    - name: Change the Word Breaker Used for US English and UK English
+      href: change-the-word-breaker-used-for-us-english-and-uk-english.md
+    - name: 將搜索所使用的斷詞工具還原為舊版
+      href: revert-the-word-breakers-used-by-search-to-the-previous-version.md
+    - name: 使用自訂字典自訂斷詞工具行為
+      href: customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md
+    - name: 設定及管理全文檢索搜尋的停用字詞與停用字詞表
+      href: configure-and-manage-stopwords-and-stoplists-for-full-text-search.md
+    - name: 設定及管理全文檢索搜尋的同義字檔案
+      href: configure-and-manage-thesaurus-files-for-full-text-search.md
+    - name: 管理及監視伺服器執行個體的全文檢索搜尋
+      href: manage-and-monitor-full-text-search-for-a-server-instance.md
+    - name: 設定全文檢索篩選背景程式啟動器的服務帳戶
+      href: set-the-service-account-for-the-full-text-filter-daemon-launcher.md
+    - name: 升級全文檢索搜尋
+      href: upgrade-full-text-search.md
+    - name: 全文檢索搜尋 DDL、函數、預存程序與檢視
+      href: full-text-search-ddl-functions-stored-procedures-and-views.md
+    - name: 使用全文檢索索引精靈
+      href: use-the-full-text-indexing-wizard.md
+- name: 語意搜尋
+  href: semantic-search-sql-server.md
+  items:
+    - name: 安裝及設定語意搜尋
+      href: install-and-configure-semantic-search.md
+    - name: 在資料表和資料行上啟用語意搜尋
+      href: enable-semantic-search-on-tables-and-columns.md
+    - name: 使用語意搜尋找到文件中的主要片語
+      href: find-key-phrases-in-documents-with-semantic-search.md
+    - name: 使用語意搜尋尋找相似及相關的文件
+      href: find-similar-and-related-documents-with-semantic-search.md
+    - name: 管理及監視語意搜尋
+      href: manage-and-monitor-semantic-search.md
+    - name: 語意搜尋 DDL、函數、預存程序及檢視
+      href: semantic-search-ddl-functions-stored-procedures-and-views.md

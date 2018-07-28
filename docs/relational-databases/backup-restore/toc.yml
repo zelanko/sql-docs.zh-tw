@@ -1,0 +1,241 @@
+- name: 概觀
+  href: back-up-and-restore-of-sql-server-databases.md
+- name: 使用 Microsoft Azure Blob 儲存體服務進行 SQL Server 備份及還原
+  href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
+  items:
+    - name: 連接至 Microsoft Azure 訂用帳戶
+      href: connect-to-a-microsoft-azure-subscription.md
+    - name: SQL Server 備份至 URL
+      href: sql-server-backup-to-url.md
+      items:
+        - name: 使用 PowerShell 將多個資料庫備份至 Microsoft Azure Blob 儲存體服務
+          href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
+        - name: SQL Server 備份至 URL 的最佳作法和疑難排解
+          href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
+        - name: 刪除擁有使用中租用的備份 Blob 檔案
+          href: deleting-backup-blob-files-with-active-leases.md
+    - name: Azure 中資料庫檔案的檔案快照集備份
+      href: file-snapshot-backups-for-database-files-in-azure.md
+    - name: Managed Backup to Microsoft Azure
+      href: sql-server-managed-backup-to-microsoft-azure.md
+      items:
+        - name: 啟用 Managed Backup to Microsoft Azure
+          href: enable-sql-server-managed-backup-to-microsoft-azure.md
+        - name: 設定 Microsoft Azure 的受管理備份進階選項
+          href: configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
+        - name: 停用 Managed Backup to Microsoft Azure
+          href: disable-sql-server-managed-backup-to-microsoft-azure.md
+        - name: 將 SQL Server 2014 管理的備份設定移轉到 SQL Server 2016
+          href: migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
+    - name: 從儲存在 Microsoft Azure 的備份還原
+      href: restoring-from-backups-stored-in-microsoft-azure.md
+- name: 復原模式
+  href: recovery-models-sql-server.md
+  items:
+    - name: 檢視或變更資料庫的復原模式
+      href: view-or-change-the-recovery-model-of-a-database-sql-server.md
+- name: 備份概觀
+  href: backup-overview-sql-server.md
+- name: 還原和復原概觀
+  href: restore-and-recovery-overview-sql-server.md
+  items:
+    - name: 規劃和執行還原順序 (完整復原模式)
+      href: plan-and-perform-restore-sequences-full-recovery-model.md
+    - name: 重新啟動中斷的還原作業 (Transact-SQL)
+      href: restart-an-interrupted-restore-operation-transact-sql.md
+- name: 備份壓縮
+  href: backup-compression-sql-server.md
+  items:
+    - name: 設定備份壓縮
+      href: configure-backup-compression-sql-server.md
+    - name: 使用資源管理員進行備份壓縮，以限制 CPU 使用率 (Transact-SQL)
+      href: use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md
+- name: 備份加密
+  href: backup-encryption.md
+  items:
+    - name: 建立加密的備份
+      href: create-an-encrypted-backup.md
+- name: 完整資料庫備份 (SQL Server)
+  href: full-database-backups-sql-server.md
+  items:
+    - name: 建立完整資料庫備份
+      href: create-a-full-database-backup-sql-server.md
+      items:
+        - name: 備份資料庫 (一般頁面)
+          href: back-up-database-general-page.md
+        - name: 備份資料庫 (媒體選項頁面)
+          href: back-up-database-media-options-page.md
+        - name: 備份資料庫 (備份選項頁面)
+          href: back-up-database-backup-options-page.md
+        - name: 選取備份目的地
+          href: select-backup-destination.md
+        - name: 建立認證 - 向 Azure 儲存體驗證
+          href: create-credential-authenticate-to-azure-storage.md
+- name: 部分備份 (SQL Server)
+  href: partial-backups-sql-server.md
+- name: 完整檔案備份 (SQL Server)
+  href: full-file-backups-sql-server.md
+  items:
+    - name: 備份檔案與檔案群組
+      href: back-up-files-and-filegroups-sql-server.md
+- name: 差異備份
+  href: differential-backups-sql-server.md
+  items:
+    - name: 建立差異資料庫備份
+      href: create-a-differential-database-backup-sql-server.md
+    - name: 還原差異資料庫備份
+      href: restore-a-differential-database-backup-sql-server.md
+- name: 只複製備份
+  href: copy-only-backups-sql-server.md
+- name: 交易記錄備份
+  href: transaction-log-backups-sql-server.md
+  items:
+    - name: 備份交易記錄 (SQL Server)
+      href: back-up-a-transaction-log-sql-server.md
+- name: 結尾記錄備份
+  href: tail-log-backups-sql-server.md
+  items:
+    - name: 資料庫損毀時備份交易記錄 (SQL Server)
+      href: back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md
+- name: 備份裝置
+  href: backup-devices-sql-server.md
+  items:
+    - name: 定義磁碟檔案的邏輯備份裝置
+      href: define-a-logical-backup-device-for-a-disk-file-sql-server.md
+    - name: 定義磁帶機的邏輯備份裝置 (SQL Server)
+      href: define-a-logical-backup-device-for-a-tape-drive-sql-server.md
+      items:
+        - name: 檢視備份磁帶或檔案的內容
+          href: view-the-contents-of-a-backup-tape-or-file-sql-server.md
+    - name: 指定磁碟或磁帶做為備份目的地 (SQL Server)
+      href: specify-a-disk-or-tape-as-a-backup-destination-sql-server.md
+      items:
+        - name: 裝置內容 (SQL Server)
+          href: device-contents-sql-server.md
+        - name: 備份裝置 (媒體內容頁面)
+          href: backup-device-media-contents-page.md
+        - name: 備份裝置 (一般頁面)
+          href: backup-device-general-page.md
+    - name: 從裝置還原備份 (SQL Server)
+      href: restore-a-backup-from-a-device-sql-server.md
+    - name: 刪除備份裝置
+      href: delete-a-backup-device-sql-server.md
+- name: 媒體集、媒體家族與備份組
+  href: media-sets-media-families-and-backup-sets-sql-server.md
+  items:
+    - name: 設定備份的到期日 (SQL Server)
+      href: set-the-expiration-date-on-a-backup-sql-server.md
+    - name: 檢視備份組中的資料和記錄檔 (SQL Server)
+      href: view-the-data-and-log-files-in-a-backup-set-sql-server.md
+- name: 鏡像備份媒體集 (SQL Server)
+  href: mirrored-backup-media-sets-sql-server.md
+  items:
+    - name: 備份至鏡像媒體集 (Transact-SQL)
+      href: back-up-to-a-mirrored-media-set-transact-sql.md
+- name: 備份記錄與標頭資訊 (SQL Server)
+  href: backup-history-and-header-information-sql-server.md
+  items:
+    - name: 檢視邏輯備份裝置的屬性和內容 (SQL Server)
+      href: view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md
+- name: 在備份和還原期間可能的媒體錯誤
+  href: possible-media-errors-during-backup-and-restore-sql-server.md
+  items:
+    - name: 在備份或還原期間啟用或停用備份總和檢查碼 (SQL Server)
+      href: enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md
+    - name: 指定在發生錯誤後備份或還原作業應該繼續還是停止 (SQL Server)
+      href: specify-if-backup-or-restore-continues-or-stops-after-error.md
+- name: 完整資料庫還原 (簡單復原模式)
+  href: complete-database-restores-simple-recovery-model.md
+  items:
+    - name: 在簡單復原模式下還原資料庫備份 (Transact-SQL)
+      href: restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md
+    - name: Restore a Database Backup Using SSMS
+      href: restore-a-database-backup-using-ssms.md
+      items:
+        - name: 備份時刻表
+          href: backup-timeline.md
+        - name: 還原資料庫 (一般頁面)
+          href: restore-database-general-page.md
+        - name: 還原資料庫 (選項頁面)
+          href: restore-database-options-page.md
+        - name: 還原資料庫 (檔案頁面)
+          href: restore-database-files-page.md
+        - name: 選取備份裝置
+          href: select-backup-device.md
+        - name: 連接到 Microsoft Azure 儲存體 (還原)
+          href: connect-to-microsoft-azure-storage-restore.md
+    - name: 將資料庫還原到新位置
+      href: restore-a-database-to-a-new-location-sql-server.md
+- name: 完整的資料庫還原 (完整復原模式)
+  href: complete-database-restores-full-recovery-model.md
+  items:
+    - name: 在完整復原模式下將資料庫還原至失敗點 (Transact-SQL)
+      href: restore-database-to-point-of-failure-full-recovery.md
+- name: 檔案還原 (簡單復原模式)
+  href: file-restores-simple-recovery-model.md
+  items:
+    - name: 以覆蓋現有檔案的方式還原檔案與檔案群組
+      href: restore-files-and-filegroups-over-existing-files-sql-server.md
+    - name: 將檔案還原到新位置
+      href: restore-files-to-a-new-location-sql-server.md
+    - name: 還原檔案和檔案群組 (SQL Server)
+      href: restore-files-and-filegroups-sql-server.md
+- name: 檔案還原 (完整復原模式)
+  href: file-restores-full-recovery-model.md
+- name: 套用異動記錄備份
+  href: apply-transaction-log-backups-sql-server.md
+  items:
+    - name: 還原交易記錄備份 (SQL Server)
+      href: restore-a-transaction-log-backup-sql-server.md
+    - name: 將 SQL Server 資料庫還原至某個時間點 (完整復原模式)
+      href: restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md
+    - name: 復原包含標記之異動的相關資料庫
+      href: recovery-of-related-databases-that-contain-marked-transaction.md
+      items:
+        - name: 使用標示的異動以一致的方式復原相關資料庫 (完整復原模式)
+          href: use-marked-transactions-to-recover-related-databases-consistently.md
+        - name: 還原資料庫至標示的異動 (SQL Server Management Studio)
+          href: restore-a-database-to-a-marked-transaction-sql-server-management-studio.md
+    - name: 復原到記錄序號 (SQL Server)
+      href: recover-to-a-log-sequence-number-sql-server.md
+- name: 線上還原
+  href: online-restore-sql-server.md
+  items:
+    - name: 延遲交易 (SQL Server)
+      href: deferred-transactions-sql-server.md
+      items:
+        - name: 移除無用的檔案群組 (SQL Server)
+          href: remove-defunct-filegroups-sql-server.md
+    - name: 範例：線上還原讀取/寫入檔案 (完整復原模式)
+      href: example-online-restore-of-a-read-write-file-full-recovery-model.md
+    - name: 範例：線上還原唯讀檔案 (完整復原模式)
+      href: example-online-restore-of-a-read-only-file-full-recovery-model.md
+    - name: 範例：線上還原唯讀檔案 (簡單復原模式)
+      href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
+    - name: 範例：離線還原主要檔案群組與另一個檔案群組 (完整復原模式)
+      href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
+- name: 還原頁面
+  href: restore-pages-sql-server.md
+  items:
+    - name: 管理 suspect_pages 資料表 (SQL Server)
+      href: manage-the-suspect-pages-table-sql-server.md
+- name: 分次還原
+  href: piecemeal-restores-sql-server.md
+  items:
+    - name: 範例：分次還原資料庫 (完整復原模式)
+      href: example-piecemeal-restore-of-database-full-recovery-model.md
+    - name: 範例：分次還原資料庫 (簡單復原模式)
+      href: example-piecemeal-restore-of-database-simple-recovery-model.md
+    - name: 範例：僅限於部份檔案群組的分次還原 (完整復原模式)
+      href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
+    - name: 範例：僅限於某些檔案群組的分次還原 (簡單復原模式)
+      href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
+- name: 在不還原資料的情況下復原資料庫 (Transact-SQL)
+  href: recover-a-database-without-restoring-data-transact-sql.md
+- name: 系統資料庫的備份與還原
+  href: back-up-and-restore-of-system-databases-sql-server.md
+  items:
+    - name: 還原 master 資料庫 (Transact-SQL)
+      href: restore-the-master-database-transact-sql.md
+- name: 備份與還原：互通性與共存性
+  href: backup-and-restore-interoperability-and-coexistence-sql-server.md

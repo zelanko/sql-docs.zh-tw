@@ -1,0 +1,68 @@
+- name: 部署專案和封裝
+  href: deploy-integration-services-ssis-projects-and-packages.md
+  items:
+    - name: 將專案部署至 Integration Services 伺服器
+      href: ../deploy-projects-to-integration-services-server.md
+    - name: 建立和對應伺服器環境
+      href: ../create-and-map-a-server-environment.md
+    - name: Integration Services 專案轉換精靈
+      href: ../integration-services-project-conversion-wizard.md
+    - name: Integration Services 部署精靈
+      href: ../integration-services-deployment-wizard.md
+    - name: 轉換成封裝部署模型對話方塊
+      href: ../convert-to-package-deployment-model-dialog-box.md
+    - name: 封裝部署 (SSIS)
+      href: legacy-package-deployment-ssis.md
+      items:
+        - name: 封裝組態
+          href: ../package-configurations.md
+        - name: Create Package Configurations
+          href: ../create-package-configurations.md
+    - name: '[封裝組態組合管理]'
+      href: ../package-configurations-organizer.md
+    - name: 封裝組態精靈 UI 參考
+      href: ../package-configuration-wizard-ui-reference.md
+      items:
+        - name: Create a Deployment Utility
+          href: ../create-a-deployment-utility.md
+        - name: Deploy Packages by Using the Deployment Utility
+          href: ../deploy-packages-by-using-the-deployment-utility.md
+        - name: 封裝的重新部署
+          href: ../redeployment-of-packages.md
+        - name: 封裝安裝精靈 UI 參考
+          href: ../package-installation-wizard-ui-reference.md
+- name: 執行專案和封裝
+  href: run-integration-services-ssis-packages.md
+  items:
+    - name: Execute Package Dialog Box
+      href: ../execute-package-dialog-box.md
+    - name: 在 SQL Server Data Tools 中執行套件
+      href: ../run-a-package-in-sql-server-data-tools.md
+    - name: 使用 SQL Server Management Studio 在 SSIS 伺服器上執行套件
+      href: ../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md
+    - name: 使用 SQL Server Agent 在遠端伺服器上設定封裝負載平衡
+      href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md
+      items:
+        - name: 子封裝的實作
+          href: ../implementation-of-child-packages.md
+        - name: 父封裝的實作
+          href: ../implementation-of-the-parent-package.md
+        - name: 遠端伺服器上負載平衡封裝的記錄
+          href: ../logging-for-load-balanced-packages-on-remote-servers.md
+        - name: 在子封裝中使用變數和參數的值
+          href: ../use-the-values-of-variables-and-parameters-in-a-child-package.md
+    - name: 封裝執行的疑難排解工具
+      href: ../troubleshooting/troubleshooting-tools-for-package-execution.md
+    - name: 疑難排解封裝執行的報表
+      href: ../troubleshooting/troubleshooting-reports-for-package-execution.md
+    - name: 產生封裝執行的傾印檔案
+      href: ../troubleshooting/generating-dump-files-for-package-execution.md
+    - name: 封裝的 SQL Server Agent 作業
+      href: sql-server-agent-jobs-for-packages.md
+      items:
+        - name: 使用 SQL Server Agent 排程封裝
+          href: ../schedule-a-package-by-using-sql-server-agent.md
+        - name: 執行 SQL Server Agent 作業工作
+          href: ../control-flow/execute-sql-server-agent-job-task.md
+- name: 使用預存程序部署及執行 SSIS 封裝
+  href: ../deploy-and-execute-ssis-packages-using-stored-procedures.md

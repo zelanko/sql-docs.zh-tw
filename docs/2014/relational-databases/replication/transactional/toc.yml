@@ -1,0 +1,23 @@
+- name: 異動複寫
+  href: transactional-replication.md
+  items:
+    - name: 異動複寫的發行集類型
+      href: publication-types-for-transactional-replication.md
+    - name: Updatable Subscriptions for Transactional Replication
+      href: updatable-subscriptions-for-transactional-replication.md
+    - name: Queued Updating Conflict Detection and Resolution
+      href: updatable-subscriptions-queued-updating-conflict-resolution.md
+    - name: '@loopback_detection'
+      href: peer-to-peer-transactional-replication.md
+    - name: 點對點複寫中的衝突偵測
+      href: peer-to-peer-conflict-detection-in-peer-to-peer-replication.md
+    - name: 雙向異動複寫
+      href: bidirectional-transactional-replication.md
+    - name: 異動複寫的發行項選項
+      href: article-options-for-transactional-replication.md
+    - name: 指定交易式發行項變更的傳播方式
+      href: transactional-articles-specify-how-changes-are-propagated.md
+    - name: 重新產生自訂交易程序以反映結構描述變更
+      href: transactional-articles-regenerate-to-reflect-schema-changes.md
+    - name: 在異動複寫中發行預存程序執行
+      href: publishing-stored-procedure-execution-in-transactional-replication.md

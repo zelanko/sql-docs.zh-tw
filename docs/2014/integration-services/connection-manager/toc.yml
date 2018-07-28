@@ -1,0 +1,64 @@
+- name: Integration Services (SSIS) 連接
+  href: integration-services-ssis-connections.md
+- name: Analysis Services 連接管理員
+  href: analysis-services-connection-manager.md
+  items:
+    - name: 加入 Analysis Services 連接管理員對話方塊 UI 參考
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: FTP 連接管理員
+  href: ftp-connection-manager.md
+  items:
+    - name: FTP 連接管理員編輯器
+      href: ../ftp-connection-manager-editor.md
+- name: HTTP 連接管理員
+  href: http-connection-manager.md
+  items:
+    - name: HTTP 連接管理員編輯器 (伺服器頁面)
+      href: ../http-connection-manager-editor-server-page.md
+    - name: HTTP 連接管理員編輯器 (Proxy 頁面)
+      href: ../http-connection-manager-editor-proxy-page.md
+- name: MSMQ 連接管理員
+  href: msmq-connection-manager.md
+  items:
+    - name: MSMQ 連線管理員編輯器
+      href: ../msmq-connection-manager-editor.md
+- name: SMTP 連接管理員
+  href: smtp-connection-manager.md
+  items:
+    - name: SMTP 連接管理員編輯器
+      href: ../smtp-connection-manager-editor.md
+- name: SMO 連線管理員
+  href: smo-connection-manager.md
+  items:
+    - name: SMO 連接管理員編輯器
+      href: ../smo-connection-manager-editor.md
+- name: WMI 連接管理員
+  href: wmi-connection-manager.md
+  items:
+    - name: WMI 連接管理員編輯器
+      href: ../wmi-connection-manager-editor.md
+- name: 建立連接管理員
+  href: ../create-connection-managers.md
+- name: 多個檔案連接管理員
+  href: multiple-files-connection-manager.md
+- name: 連接管理員區域
+  href: ../connection-managers-area.md
+- name: 疑難排解工具封裝連接
+  href: ../troubleshooting/troubleshooting-tools-for-package-connectivity.md
+- name: 加入、刪除或共用封裝中的連接管理員
+  href: ../add-delete-or-share-a-connection-manager-in-a-package.md
+  items:
+    - name: 加入 SSIS 連接管理員
+      href: ../add-ssis-connection-manager.md
+- name: 設定連線管理員的屬性
+  href: ../set-the-properties-of-a-connection-manager.md
+- name: Azure Data Lake Store 連線管理員
+  href: ../azure-data-lake-store-connection-manager.md
+- name: Azure HDInsight 連線管理員
+  href: ../azure-hdinsight-connection-manager.md
+- name: Azure Resource Manager 連線管理員
+  href: ../azure-resource-manager-connection-manager.md
+- name: Azure 儲存體連線管理員
+  href: azure-storage-connection-manager.md
+- name: Azure 訂用帳戶連線管理員
+  href: azure-subscription-connection-manager.md

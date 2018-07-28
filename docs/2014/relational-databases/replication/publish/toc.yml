@@ -1,0 +1,226 @@
+- name: 發行資料和資料庫物件
+  href: publish-data-and-database-objects.md
+  items:
+    - name: 複寫發行模型概觀
+      href: replication-publishing-model-overview.md
+    - name: 篩選發行的資料
+      href: filter-published-data.md
+    - name: 複寫識別欄位
+      href: replicate-identity-columns.md
+    - name: 對發行集資料庫進行結構描述變更
+      href: make-schema-changes-on-publication-databases.md
+    - name: 複寫資料分割資料表及索引
+      href: replicate-partitioned-tables-and-indexes.md
+      items:
+        - name: 使用參數化篩選管理合併式發行集的資料分割
+          href: manage-partitions-for-a-merge-publication-with-parameterized-filters.md
+    - name: 建立、修改及刪除發行集和發行項
+      href: create-modify-and-delete-publications-and-articles-replication.md
+      items:
+        - name: 建立發行集
+          href: create-a-publication.md
+        - name: 定義發行項
+          href: define-an-article.md
+    - name: 指定發行項類型 (複寫 Transact-SQL 程式設計)
+      href: specify-article-types-replication-transact-sql-programming.md
+      items:
+        - name: 檢視及修改發行集屬性
+          href: view-and-modify-publication-properties.md
+        - name: 檢視和修改發行項屬性
+          href: view-and-modify-article-properties.md
+        - name: 刪除發行集
+          href: delete-a-publication.md
+        - name: 刪除發行項
+          href: delete-an-article.md
+        - name: 從 Oracle 資料庫建立發行集
+          href: create-a-publication-from-an-oracle-database.md
+    - name: 指定 Oracle 發行者的資料類型對應
+      href: specify-data-type-mappings-for-an-oracle-publisher.md
+      items:
+        - name: 設定訂閱的逾期期限
+          href: set-the-expiration-period-for-subscriptions.md
+        - name: 指定結構描述選項
+          href: specify-schema-options.md
+        - name: 複寫結構描述變更
+          href: replicate-schema-changes.md
+        - name: 管理識別欄位
+          href: manage-identity-columns.md
+        - name: 設定合併式發行集的相容性層級
+          href: set-the-compatibility-level-for-merge-publications.md
+        - name: 指定快照集格式 (SQL Server Management Studio)
+          href: specify-snapshot-format-sql-server-management-studio.md
+        - name: 指定替代快照集資料夾位置 (SQL Server Management Studio)
+          href: specify-an-alternate-snapshot-folder-location-sql-server-management-studio.md
+        - name: 壓縮快照集檔案 (SQL Server Management Studio)
+          href: compress-snapshot-files-sql-server-management-studio.md
+        - name: 設定快照集屬性 (複寫 Transact-SQL 程式設計)
+          href: configure-snapshot-properties-replication-transact-sql-programming.md
+        - name: 透過 FTP 傳遞快照集
+          href: deliver-a-snapshot-through-ftp.md
+        - name: 定義及修改資料行篩選
+          href: define-and-modify-a-column-filter.md
+        - name: 定義及修改靜態資料列篩選
+          href: define-and-modify-a-static-row-filter.md
+        - name: 針對合併發行項定義及修改參數化資料列篩選
+          href: define-and-modify-a-parameterized-row-filter-for-a-merge-article.md
+        - name: 最佳化參數化資料列篩選
+          href: optimize-parameterized-row-filters.md
+        - name: 定義和修改合併發行項之間的聯結篩選
+          href: define-and-modify-a-join-filter-between-merge-articles.md
+        - name: 在合併發行項之間自動產生一組聯結篩選 (SQL Server Management Studio)
+          href: automatically-generate-join-filters-between-merge-articles.md
+        - name: 設定對交易式發行項之資料變更的傳播方法
+          href: set-the-propagation-method-for-data-changes-to-transactional-articles.md
+        - name: 啟用交易式發行集的可更新訂閱
+          href: enable-updating-subscriptions-for-transactional-publications.md
+        - name: 建立交易式發行集的可更新訂閱 (Management Studio)
+          href: create-an-updatable-subscription-to-a-transactional-publication.md
+        - name: 使用 Transact-SQL 建立交易式發行集的可更新訂閱
+          href: ../create-updatable-subscription-transactional-publication-transact-sql.md
+        - name: 設定佇列更新衝突解決選項 (SQL Server Management Studio)
+          href: set-queued-updating-conflict-resolution-options-sql-server-management-studio.md
+        - name: 在交易式發行集中發行預存程序的執行項 (SQL Server Management Studio)
+          href: publish-execution-of-stored-procedure-in-transactional-publication.md
+        - name: 定義合併資料表發行項之間的邏輯記錄關聯性
+          href: define-a-logical-record-relationship-between-merge-table-articles.md
+        - name: 指定合併資料表發行項的處理順序 (複寫 Transact-SQL 程式設計)
+          href: specify-the-processing-order-of-merge-table-articles.md
+        - name: 將合併資料表發行項指定為僅限下載
+          href: specify-that-a-merge-table-article-is-download-only.md
+        - name: 指定不應該為合併發行項追蹤刪除 (複寫 Transact-SQL 程式設計)
+          href: specify-that-deletes-should-not-be-tracked-for-merge-articles.md
+        - name: 指定合併發行項的衝突追蹤與解決層級
+          href: specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md
+        - name: 指定合併發行項解析程式
+          href: specify-a-merge-article-resolver.md
+        - name: 指定合併發行項的互動式衝突解決方法
+          href: specify-interactive-conflict-resolution-for-merge-articles.md
+        - name: 從發行集中加入和卸除發行項 (SQL Server Management Studio)
+          href: add-articles-to-and-drop-articles-from-a-publication.md
+    - name: 維護發行集
+      href: maintain-publications.md
+      items:
+        - name: 在現有發行集中加入和卸除發行項
+          href: add-articles-to-and-drop-articles-from-existing-publications.md
+        - name: 變更發行集與發行項屬性
+          href: change-publication-and-article-properties.md
+- name: 設定散發
+  href: ../configure-distribution.md
+  items:
+    - name: 設定發行和散發
+      href: ../configure-publishing-and-distribution.md
+    - name: 檢視及修改散發者和發行者屬性
+      href: ../view-and-modify-distributor-and-publisher-properties.md
+    - name: 停用發行和散發
+      href: ../disable-publishing-and-distribution.md
+    - name: 為複寫啟用資料庫 (SQL Server Management Studio)
+      href: ../enable-a-database-for-replication-sql-server-management-studio.md
+    - name: 在散發者端啟用遠端發行者 (SQL Server Management Studio)
+      href: ../enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md
+    - name: 指定預設快照集位置 (SQL Server Management Studio)
+      href: ../specify-the-default-snapshot-location-sql-server-management-studio.md
+    - name: 設定交易式發行集的散發保留週期 (SQL Server Management Studio)
+      href: ../set-distribution-retention-period-for-transactional-publications.md
+    - name: 設定記錄保留週期 (SQL Server Management Studio)
+      href: ../set-the-history-retention-period-sql-server-management-studio.md
+- name: 訂閱發行集
+  href: ../subscribe-to-publications.md
+  items:
+    - name: 建立提取訂閱
+      href: ../create-a-pull-subscription.md
+    - name: 建立發送訂閱
+      href: ../create-a-push-subscription.md
+    - name: 檢視及修改提取訂閱屬性
+      href: ../view-and-modify-pull-subscription-properties.md
+    - name: 檢視及修改發送訂閱屬性
+      href: ../view-and-modify-push-subscription-properties.md
+    - name: 刪除提取訂閱
+      href: ../delete-a-pull-subscription.md
+    - name: 刪除發送訂閱
+      href: ../delete-a-push-subscription.md
+    - name: 訂閱逾期與停用
+      href: ../subscription-expiration-and-deactivation.md
+    - name: 為非 SQL Server 訂閱者建立訂閱
+      href: ../create-a-subscription-for-a-non-sql-server-subscriber.md
+    - name: 指定合併訂閱類型和衝突解決優先權 (SQL Server Management Studio)
+      href: ../specify-a-merge-subscription-type-and-conflict-resolution-priority.md
+    - name: 指定同步處理排程
+      href: ../specify-synchronization-schedules.md
+- name: 初始化訂閱
+  href: ../initialize-a-subscription.md
+  items:
+    - name: 使用快照集初始化訂閱
+      href: ../initialize-a-subscription-with-a-snapshot.md
+      items:
+        - name: 建立並套用快照集
+          href: ../create-and-apply-the-snapshot.md
+        - name: 含參數化篩選之合併式發行集的快照集
+          href: ../snapshots-for-merge-publications-with-parameterized-filters.md
+        - name: 快照集選項
+          href: ../snapshot-options.md
+    - name: 替代快照集資料夾位置
+      href: ../alternate-snapshot-folder-locations.md
+    - name: 壓縮的快照集
+      href: ../compressed-snapshots.md
+    - name: 在套用快照集之前及之後執行指令碼
+      href: ../execute-scripts-before-and-after-the-snapshot-is-applied.md
+    - name: 透過 FTP 傳送快照集
+      href: ../transfer-snapshots-through-ftp.md
+    - name: 不使用快照集初始化交易式訂閱
+      href: ../initialize-a-transactional-subscription-without-a-snapshot.md
+    - name: 重新初始化訂閱
+      href: ../reinitialize-subscriptions.md
+- name: 同步處理訂閱 (複寫)
+  href: ../synchronize-subscriptions-replication.md
+  items:
+    - name: 建立和套用初始快照集
+      href: ../create-and-apply-the-initial-snapshot.md
+      items:
+        - name: 使用參數化篩選建立合併式發行集的快照集
+          href: ../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
+    - name: 為交易式發行集啟用使用備份的初始化 (SQL Server Management Studio)
+      href: ../enable-initialization-with-backup-for-transactional-publications.md
+    - name: 從備份初始化交易式訂閱 (複寫 Transact-SQL 程式設計)
+      href: ../initialize-a-transactional-subscription-from-a-backup.md
+    - name: 手動初始化訂閱
+      href: ../initialize-a-subscription-manually.md
+    - name: 同步處理提取訂閱
+      href: ../synchronize-a-pull-subscription.md
+    - name: 同步處理發送訂閱
+      href: ../synchronize-a-push-subscription.md
+    - name: 重新初始化訂閱
+      href: ../reinitialize-a-subscription.md
+    - name: 在套用快照集的前後執行指令碼 (SQL Server Management Studio)
+      href: ../execute-scripts-before-and-after-a-snapshot-is-applied.md
+    - name: 在同步處理期間執行指令碼 (複寫 Transact-SQL 程式設計)
+      href: ../execute-scripts-during-synchronization-replication-transact-sql-programming.md
+    - name: 檢視並解決合併式發行集的資料衝突 (SQL Server Management Studio)
+      href: ../view-and-resolve-data-conflicts-for-merge-publications.md
+    - name: 檢視合併式發行集的衝突資訊 (複寫 Transact-SQL 程式設計)
+      href: ../view-conflict-information-for-merge-publications.md
+    - name: 檢視交易式發行集的資料衝突 (SQL Server Management Studio)
+      href: ../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
+    - name: 使用 Windows Synchronization Manager 同步處理訂閱 (Windows Synchronization Manager)
+      href: ../synchronize-a-subscription-using-windows-synchronization-manager.md
+    - name: 在同步處理期間控制觸發程序和條件約束的行為 (複寫 Transact-SQL 程式設計)
+      href: ../control-behavior-of-triggers-and-constraints-in-synchronization.md
+    - name: 為合併發行項實作商務邏輯處理常式
+      href: ../implement-a-business-logic-handler-for-a-merge-article.md
+      items:
+        - name: 偵錯商務邏輯處理常式 (複寫程式設計)
+          href: ../debug-a-business-logic-handler-replication-programming.md
+    - name: 針對合併發行項實作自訂衝突解析程式
+      href: ../implement-a-custom-conflict-resolver-for-a-merge-article.md
+    - name: 將資料大量載入合併式發行集中的資料表 (複寫 Transact-SQL 程式設計)
+      href: ../bulk-load-data-into-tables-in-a-merge-publication.md
+- name: 同步處理資料
+  href: ../synchronize-data.md
+- name: 驗證複寫的資料
+  href: ../validate-replicated-data.md
+  items:
+    - name: 驗證合併訂閱者的資料分割資訊
+      href: ../validate-partition-information-for-a-merge-subscriber.md
+    - name: 驗證訂閱者端的資料
+      href: ../validate-data-at-the-subscriber.md
+- name: 編寫複寫指令碼
+  href: ../scripting-replication.md

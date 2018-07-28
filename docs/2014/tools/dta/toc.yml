@@ -1,0 +1,106 @@
+- name: dta 公用程式
+  href: dta-utility.md
+- name: XML 輸入檔參考 (Database Engine Tuning Advisor)
+  href: xml-input-file-reference-database-engine-tuning-advisor.md
+  items:
+    - name: 索引的 Column 元素 (DTA)
+      href: column-element-for-index-dta.md
+    - name: Configuration 元素 (DTA)
+      href: configuration-element-dta.md
+    - name: Create 元素 (DTA)
+      href: create-element-dta.md
+    - name: 組態的 Database 元素 (DTA)
+      href: database-element-for-configuration-dta.md
+    - name: 伺服器的 Database 元素 (DTA)
+      href: database-element-for-server-dta.md
+    - name: 工作負載的 Database 元素 (DTA)
+      href: database-element-for-workload-dta.md
+    - name: DatabaseToConnect 元素 (DTA)
+      href: databasetoconnect-element-dta.md
+    - name: DropOnlyMode 元素 (DTA)
+      href: droponlymode-element-dta.md
+    - name: DTAInput 元素 (DTA)
+      href: dtainput-element-dta.md
+    - name: DTAXML 元素 (DTA)
+      href: dtaxml-element-dta.md
+    - name: EventString 元素 (DTA)
+      href: eventstring-element-dta.md
+    - name: FeatureSet 元素 (DTA)
+      href: featureset-element-dta.md
+    - name: File 元素 (DTA)
+      href: file-element-dta.md
+    - name: 索引的 Filegroup 元素 (DTA)
+      href: filegroup-element-for-index-dta.md
+    - name: Index 元素 (DTA)
+      href: index-element-dta.md
+    - name: KeepExisting 元素 (DTA)
+      href: keepexisting-element-dta.md
+    - name: 資料行的 Name 元素 (DTA)
+      href: name-element-for-column-dta.md
+    - name: 資料庫的 Name 元素 (DTA)
+      href: name-element-for-database-dta.md
+    - name: 索引的 Name 元素 (DTA)
+      href: name-element-for-index-dta.md
+    - name: 結構描述的 Name 元素 (DTA)
+      href: name-element-for-schema-dta.md
+    - name: 伺服器的 Name 元素 (DTA)
+      href: name-element-for-server-dta.md
+    - name: 資料表的 Name 元素 (DTA)
+      href: name-element-for-table-dta.md
+    - name: OnlineIndexOperation 元素 (DTA)
+      href: onlineindexoperation-element-dta.md
+    - name: Partitioning 元素 (DTA)
+      href: partitioning-element-dta.md
+    - name: Recommendation 元素 (DTA)
+      href: recommendation-element-dta.md
+    - name: 資料庫的 Schema 元素 (DTA)
+      href: schema-element-for-database-dta.md
+    - name: Server 元素 (DTA)
+      href: server-element-dta.md
+    - name: 組態的 Server 元素 (DTA)
+      href: server-element-for-configuration-dta.md
+    - name: StorageBoundInMB 元素 (DTA)
+      href: storageboundinmb-element-dta.md
+    - name: 結構描述的 Table 元素 (DTA)
+      href: table-element-for-schema-dta.md
+    - name: TestServer 元素 (DTA)
+      href: testserver-element-dta.md
+    - name: TuningOptions 元素 (DTA)
+      href: tuningoptions-element-dta.md
+    - name: TuningTimeInMin 元素 (DTA)
+      href: tuningtimeinmin-element-dta.md
+    - name: Workload 元素 (DTA)
+      href: workload-element-dta.md
+- name: XML 輸入檔範例 (DTA)
+  href: xml-input-file-samples-dta.md
+  items:
+    - name: 簡單 XML 輸入檔範例 (DTA)
+      href: simple-xml-input-file-sample-dta.md
+    - name: 含內嵌工作負載的 XML 輸入檔範例 (DTA)
+      href: xml-input-file-sample-with-inline-workload-dta.md
+    - name: 含使用者指定組態的 XML 輸入檔範例 (DTA)
+      href: xml-input-file-sample-with-user-specified-configuration-dta.md
+- name: 教學課程：Database Engine Tuning Advisor
+  href: tutorial-database-engine-tuning-advisor.md
+  items:
+    - name: 第 1 課：Database Engine Tuning Advisor 中的基本導覽
+      href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
+      items:
+        - name: 啟動 Database Engine Tuning Advisor
+          href: lesson-1-1-launching-database-engine-tuning-advisor.md
+        - name: 設定工具選項和配置
+          href: lesson-1-2-setting-tool-options-and-layout.md
+    - name: 第 2 課：使用 Database Engine Tuning Advisor
+      href: lesson-2-using-database-engine-tuning-advisor.md
+      items:
+        - name: 微調工作負載
+          href: lesson-1-1-tuning-a-workload.md
+        - name: 檢視微調建議
+          href: lesson-1-2-viewing-tuning-recommendations.md
+        - name: 檢視微調報表
+          href: lesson-1-3-viewing-tuning-reports.md
+    - name: 第 3 課：使用 dta 命令提示字元公用程式
+      href: lesson-3-using-the-dta-command-prompt-utility.md
+      items:
+        - name: 啟動 dta 命令提示字元公用程式和微調工作負載
+          href: lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md

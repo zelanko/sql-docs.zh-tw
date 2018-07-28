@@ -1,0 +1,506 @@
+- name: Access 元素 (ASSL)
+  href: access-element-assl.md
+- name: Account 元素 (ImpersonationInfo) (ASSL)
+  href: account-element-impersonationinfo-assl.md
+- name: AccountType 元素 (ASSL)
+  href: accounttype-element-assl.md
+- name: ActionID 元素 (ASSL)
+  href: actionid-element-assl.md
+- name: Administer 元素 (ASSL)
+  href: administer-element-assl.md
+- name: AggregateFunction 元素 (ASSL)
+  href: aggregatefunction-element-assl.md
+- name: AggregationDesignID 元素 (ASSL)
+  href: aggregationdesignid-element-assl.md
+- name: AggregationFunction 元素 (ASSL)
+  href: aggregationfunction-element-assl.md
+- name: AggregationID 元素 (ASSL)
+  href: aggregationid-element-assl.md
+- name: AggregationInstanceSource 元素 (ASSL)
+  href: aggregationinstancesource-element-assl.md
+- name: AggregationPrefix 元素 (ASSL)
+  href: aggregationprefix-element-assl.md
+- name: AggregationStorage 元素 (ASSL)
+  href: aggregationstorage-element-assl.md
+- name: AggregationType 元素 (ASSL)
+  href: aggregationtype-element-assl.md
+- name: AggregationUsage 元素 (ASSL)
+  href: aggregationusage-element-assl.md
+- name: Algorithm 元素 (ASSL)
+  href: algorithm-element-assl.md
+- name: Alias 元素 (ASSL)
+  href: alias-element-assl.md
+- name: AllMemberAggregationUsage 元素 (ASSL)
+  href: allmemberaggregationusage-element-assl.md
+- name: AllMemberName 元素 (ASSL)
+  href: allmembername-element-assl.md
+- name: AllowBrowsing 元素 (ASSL)
+  href: allowbrowsing-element-assl.md
+- name: AllowDrillThrough 元素 (ASSL)
+  href: allowdrillthrough-element-assl.md
+- name: AllowDuplicateNames 元素 (ASSL)
+  href: allowduplicatenames-element-assl.md
+- name: AllowedRowsExpression 元素 (ASSL)
+  href: allowedrowsexpression-element-assl.md
+- name: AllowedSet 元素 (ASSL)
+  href: allowedset-element-assl.md
+- name: Application 元素 (ASSL)
+  href: application-element-assl.md
+- name: AssociatedMeasureGroupID 元素 (ASSL)
+  href: associatedmeasuregroupid-element-assl.md
+- name: AttributeAllMemberName 元素 (ASSL)
+  href: attributeallmembername-element-assl.md
+- name: AttributeHierarchyDisplayFolder 元素 (ASSL)
+  href: attributehierarchydisplayfolder-element-assl.md
+- name: AttributeHierarchyEnabled 元素 (ASSL)
+  href: attributehierarchyenabled-element-assl.md
+- name: AttributeHierarchyOptimizedState 元素 (ASSL)
+  href: attributehierarchyoptimizedstate-element-assl.md
+- name: AttributeHierarchyOrdered 元素 (ASSL)
+  href: attributehierarchyordered-element-assl.md
+- name: AttributeHierarchyVisible 元素 (ASSL)
+  href: attributehierarchyvisible-element-assl.md
+- name: AttributeID 元素 (ASSL)
+  href: attributeid-element-assl.md
+- name: Audit 元素 (ASSL)
+  href: audit-element-assl.md
+- name: AutoRestart 元素 (ASSL)
+  href: autorestart-element-assl.md
+- name: BackColor 元素 (ASSL)
+  href: backcolor-element-assl.md
+- name: CacheMode 元素 (ASSL)
+  href: cachemode-element-assl.md
+- name: CalculationReference 元素 (ASSL)
+  href: calculationreference-element-assl.md
+- name: CalculationType 元素 (ASSL)
+  href: calculationtype-element-assl.md
+- name: CalendarEndDate 元素 (ASSL)
+  href: calendarenddate-element-assl.md
+- name: CalendarLanguage 元素 (ASSL)
+  href: calendarlanguage-element-assl.md
+- name: CalendarStartDate 元素 (ASSL)
+  href: calendarstartdate-element-assl.md
+- name: Caption 元素 (ASSL)
+  href: caption-element-assl.md
+- name: CaptionIsMdx 元素 (ASSL)
+  href: captionismdx-element-assl.md
+- name: Cardinality 元素 (ASSL)
+  href: cardinality-element-assl.md
+- name: CaseCubeDimensionID 元素 (ASSL)
+  href: casecubedimensionid-element-assl.md
+- name: ClassifiedColumnID 元素 (ASSL)
+  href: classifiedcolumnid-element-assl.md
+- name: Collation 元素 (ASSL)
+  href: collation-element-assl.md
+- name: CollectionCaption 元素 (ASSL)
+  href: collectioncaption-element-assl.md
+- name: ColumnID 元素 (ColumnBinding) (ASSL)
+  href: columnid-element-columnbinding-assl.md
+- name: ColumnID 元素 (EventColumn) (ASSL)
+  href: columnid-element-eventcolumn-assl.md
+- name: Condition 元素 (ASSL)
+  href: condition-element-assl.md
+- name: ConnectionString 元素 (ASSL)
+  href: connectionstring-element-assl.md
+- name: ConnectionStringSecurity 元素 (ASSL)
+  href: connectionstringsecurity-element-assl.md
+- name: Content 元素 (ASSL)
+  href: content-element-assl.md
+- name: CreatedTimestamp 元素 (ASSL)
+  href: createdtimestamp-element-assl.md
+- name: CubeDimensionID 元素 (ASSL)
+  href: cubedimensionid-element-assl.md
+- name: CubeID 元素 (ASSL)
+  href: cubeid-element-assl.md
+- name: CurrentStorageMode 元素 (ASSL)
+  href: currentstoragemode-element-assl.md
+- name: CurrentTimeMember 元素 (ASSL)
+  href: currenttimemember-element-assl.md
+- name: DataAggregation 元素 (ASSL)
+  href: dataaggregation-element-assl.md
+- name: DatabaseID 元素 (ASSL)
+  href: databaseid-element-assl.md
+- name: DataSize 元素 (ASSL)
+  href: datasize-element-assl.md
+- name: DataSourceID 元素 (ASSL)
+  href: datasourceid-element-assl.md
+- name: DataSourceImpersonationInfo 元素 (ASSL)
+  href: datasourceimpersonationinfo-element-assl.md
+- name: DataSourceViewID 元素 (ASSL)
+  href: datasourceviewid-element-assl.md
+- name: DataType 元素 (ASSL)
+  href: datatype-element-assl.md
+- name: DbSchemaName 元素 (ASSL)
+  href: dbschemaname-element-assl.md
+- name: DbTableName 元素 (ASSL)
+  href: dbtablename-element-assl.md
+- name: Default 元素 (ASSL)
+  href: default-element-assl.md
+- name: DefaultMeasure 元素 (ASSL)
+  href: defaultmeasure-element-assl.md
+- name: DefaultMember 元素 (ASSL)
+  href: defaultmember-element-assl.md
+- name: DefaultScript 元素 (ASSL)
+  href: defaultscript-element-assl.md
+- name: DefaultValue 元素 (ASSL)
+  href: defaultvalue-element-assl.md
+- name: DeniedSet 元素 (ASSL)
+  href: deniedset-element-assl.md
+- name: DependsOnDimensionID 元素 (ASSL)
+  href: dependsondimensionid-element-assl.md
+- name: Description 元素 (ASSL)
+  href: description-element-assl.md
+- name: DimensionID 元素 (ASSL)
+  href: dimensionid-element-assl.md
+- name: DiscretizationBucketCount 元素 (ASSL)
+  href: discretizationbucketcount-element-assl.md
+- name: DiscretizationMethod 元素 (ASSL)
+  href: discretizationmethod-element-assl.md
+- name: DisplayFlag 元素 (ASSL)
+  href: displayflag-element-assl.md
+- name: DisplayFolder 元素 (ASSL)
+  href: displayfolder-element-assl.md
+- name: Distribution 元素 (ASSL)
+  href: distribution-element-assl.md
+- name: Edition 元素 (ASSL)
+  href: edition-element-assl.md
+- name: Enabled 元素 (ASSL)
+  href: enabled-element-assl.md
+- name: EndOfData 元素 (ASSL)
+  href: endofdata-element-assl.md
+- name: EstimatedCount 元素 (ASSL)
+  href: estimatedcount-element-assl.md
+- name: EstimatedPerformanceGain 元素 (ASSL)
+  href: estimatedperformancegain-element-assl.md
+- name: EstimatedRows 元素 (ASSL)
+  href: estimatedrows-element-assl.md
+- name: EstimatedSize 元素 (ASSL)
+  href: estimatedsize-element-assl.md
+- name: EventID 元素 (ASSL)
+  href: eventid-element-assl.md
+- name: Expression 元素 (ASSL)
+  href: expression-element-assl.md
+- name: Filter 元素 (Binding) (ASSL)
+  href: filter-element-binding-assl.md
+- name: Filter 元素 (Trace) (ASSL)
+  href: filter-element-trace-assl.md
+- name: FirstDayOfWeek 元素 (ASSL)
+  href: firstdayofweek-element-assl.md
+- name: FiscalFirstDayOfMonth 元素 (ASSL)
+  href: fiscalfirstdayofmonth-element-assl.md
+- name: FiscalFirstMonth 元素 (ASSL)
+  href: fiscalfirstmonth-element-assl.md
+- name: FiscalYearName 元素 (ASSL)
+  href: fiscalyearname-element-assl.md
+- name: FoldingParameters 元素 (ASSL)
+  href: foldingparameters-element-assl.md
+- name: FontFlags 元素 (ASSL)
+  href: fontflags-element-assl.md
+- name: FontName 元素 (ASSL)
+  href: fontname-element-assl.md
+- name: FontSize 元素 (ASSL)
+  href: fontsize-element-assl.md
+- name: ForceRebuildInterval 元素 (ASSL)
+  href: forcerebuildinterval-element-assl.md
+- name: ForeColor 元素 (ASSL)
+  href: forecolor-element-assl.md
+- name: Format 元素 (ASSL)
+  href: format-element-assl.md
+- name: FormatString 元素 (ASSL)
+  href: formatstring-element-assl.md
+- name: Goal 元素 (ASSL)
+  href: goal-element-assl.md
+- name: GranularityAttributeID 元素 (ASSL)
+  href: granularityattributeid-element-assl.md
+- name: HideMemberIf 元素 (ASSL)
+  href: hidememberif-element-assl.md
+- name: HierarchyID 元素 (ASSL)
+  href: hierarchyid-element-assl.md
+- name: HierarchyUniqueNameStyle 元素 (ASSL)
+  href: hierarchyuniquenamestyle-element-assl.md
+- name: HoldoutActualSize 元素
+  href: holdoutactualsize-element.md
+- name: HoldoutMaxCases 元素
+  href: holdoutmaxcases-element.md
+- name: HoldoutMaxPercent 元素
+  href: holdoutmaxpercent-element.md
+- name: HoldoutSeed 元素
+  href: holdoutseed-element.md
+- name: ID 元素 (ASSL)
+  href: id-element-assl.md
+- name: IgnoreUnrelatedDimensions 元素 (ASSL)
+  href: ignoreunrelateddimensions-element-assl.md
+- name: ImpersonationInfo 元素 (ASSL)
+  href: impersonationinfo-element-assl.md
+- name: ImpersonationInfoSecurity 元素 (ASSL)
+  href: impersonationinfosecurity-element-assl.md
+- name: ImpersonationMode 元素 (ASSL)
+  href: impersonationmode-element-assl.md
+- name: InstanceSelection 元素 (ASSL)
+  href: instanceselection-element-assl.md
+- name: IntermediateCubeDimensionID 元素 (ASSL)
+  href: intermediatecubedimensionid-element-assl.md
+- name: IntermediateGranularityAttributeID 元素 (ASSL)
+  href: intermediategranularityattributeid-element-assl.md
+- name: InvalidXmlCharacters 元素 (ASSL)
+  href: invalidxmlcharacters-element-assl.md
+- name: Invocation 元素 (ASSL)
+  href: invocation-element-assl.md
+- name: IsAggregatable 元素 (ASSL)
+  href: isaggregatable-element-assl.md
+- name: IsKey 元素 (ASSL)
+  href: iskey-element-assl.md
+- name: Isolation 元素 (ASSL)
+  href: isolation-element-assl.md
+- name: KeyDuplicate 元素 (ASSL)
+  href: keyduplicate-element-assl.md
+- name: KeyErrorAction 元素 (ASSL)
+  href: keyerroraction-element-assl.md
+- name: KeyErrorLimit 元素 (ASSL)
+  href: keyerrorlimit-element-assl.md
+- name: KeyErrorLimitAction 元素 (ASSL)
+  href: keyerrorlimitaction-element-assl.md
+- name: KeyErrorLogFile 元素 (ASSL)
+  href: keyerrorlogfile-element-assl.md
+- name: KeyNotFound 元素 (ASSL)
+  href: keynotfound-element-assl.md
+- name: KeyUniquenessGuarantee 元素 (ASSL)
+  href: keyuniquenessguarantee-element-assl.md
+- name: KpiID 元素 (ASSL)
+  href: kpiid-element-assl.md
+- name: Language 元素 (ASSL)
+  href: language-element-assl.md
+- name: LastProcessed 元素 (ASSL)
+  href: lastprocessed-element-assl.md
+- name: LastSchemaUpdate 元素 (ASSL)
+  href: lastschemaupdate-element-assl.md
+- name: LastUpdate 元素 (ASSL)
+  href: lastupdate-element-assl.md
+- name: Latency 元素 (ASSL)
+  href: latency-element-assl.md
+- name: LogFileAppend 元素 (ASSL)
+  href: logfileappend-element-assl.md
+- name: LogFileName 元素 (ASSL)
+  href: logfilename-element-assl.md
+- name: LogFileRollover 元素 (ASSL)
+  href: logfilerollover-element-assl.md
+- name: LogFileSize 元素 (ASSL)
+  href: logfilesize-element-assl.md
+- name: ManagedProvider 元素 (ASSL)
+  href: managedprovider-element-assl.md
+- name: ManufacturingExtraMonthQuarter 元素 (ASSL)
+  href: manufacturingextramonthquarter-element-assl.md
+- name: ManufacturingFirstMonth 元素 (ASSL)
+  href: manufacturingfirstmonth-element-assl.md
+- name: ManufacturingFirstWeekOfMonth 元素 (ASSL)
+  href: manufacturingfirstweekofmonth-element-assl.md
+- name: MasterDatasourceID 元素 (ASSL)
+  href: masterdatasourceid-element-assl.md
+- name: Materialization 元素 (ASSL)
+  href: materialization-element-assl.md
+- name: MaxActiveConnections 元素 (ASSL)
+  href: maxactiveconnections-element-assl.md
+- name: MdxMissingMemberMode 元素 (ASSL)
+  href: mdxmissingmembermode-element-assl.md
+- name: MeasureExpression 元素 (ASSL)
+  href: measureexpression-element-assl.md
+- name: MeasureGroupID 元素 (ASSL)
+  href: measuregroupid-element-assl.md
+- name: MeasureID 元素 (ASSL)
+  href: measureid-element-assl.md
+- name: MeasureQualificaton 元素 (ASSL)
+  href: measurequalificaton-element-assl.md
+- name: MemberNamesUnique 元素 (ASSL)
+  href: membernamesunique-element-assl.md
+- name: MembersWithData 元素 (ASSL)
+  href: memberswithdata-element-assl.md
+- name: MembersWithDataCaption 元素 (ASSL)
+  href: memberswithdatacaption-element-assl.md
+- name: MemberUniqueNameStyle 元素 (ASSL)
+  href: memberuniquenamestyle-element-assl.md
+- name: MimeType 元素 (ASSL)
+  href: mimetype-element-assl.md
+- name: MiningModelID 元素 (ASSL)
+  href: miningmodelid-element-assl.md
+- name: Multiplicity 元素 (ASSL)
+  href: multiplicity-element-assl.md
+- name: Name 元素 (ASSL)
+  href: name-element-assl.md
+- name: NamingTemplate 元素 (ASSL)
+  href: namingtemplate-element-assl.md
+- name: NonEmptyBehavior 元素 (ASSL)
+  href: nonemptybehavior-element-assl.md
+- name: NotificationTechnique 元素 (ASSL)
+  href: notificationtechnique-element-assl.md
+- name: NullKeyConvertedToUnknown 元素 (ASSL)
+  href: nullkeyconvertedtounknown-element-assl.md
+- name: NullKeyNotAllowed 元素 (ASSL)
+  href: nullkeynotallowed-element-assl.md
+- name: NullProcessing Element (ASSL)
+  href: nullprocessing-element-assl.md
+- name: OnlineMode 元素 (ASSL)
+  href: onlinemode-element-assl.md
+- name: OptimizedState 元素 (ASSL)
+  href: optimizedstate-element-assl.md
+- name: Optionality 元素 (ASSL)
+  href: optionality-element-assl.md
+- name: OrderBy 元素 (ASSL)
+  href: orderby-element-assl.md
+- name: OrderByAttributeID 元素 (ASSL)
+  href: orderbyattributeid-element-assl.md
+- name: Ordinal 元素 (ASSL)
+  href: ordinal-element-assl.md
+- name: OverrideBehavior 元素 (ASSL)
+  href: overridebehavior-element-assl.md
+- name: PartitionID 元素 (ASSL)
+  href: partitionid-element-assl.md
+- name: Password 元素 (ASSL)
+  href: password-element-assl.md
+- name: Path 元素 (ASSL)
+  href: path-element-assl.md
+- name: PendingValue 元素 (ASSL)
+  href: pendingvalue-element-assl.md
+- name: PermissionSet 元素 (ASSL)
+  href: permissionset-element-assl.md
+- name: Persistence 元素 (ASSL)
+  href: persistence-element-assl.md
+- name: Process 元素 (ASSL)
+  href: process-element-assl.md
+- name: ProcessingMode 元素 (ASSL)
+  href: processingmode-element-assl.md
+- name: ProcessingPriority 元素 (ASSL)
+  href: processingpriority-element-assl.md
+- name: ProcessingQuery 元素 (ASSL)
+  href: processingquery-element-assl.md
+- name: ProductName 元素 (ASSL)
+  href: productname-element-assl.md
+- name: 屬性 (ASSL)
+  href: properties-assl.md
+- name: Query 元素 (ASSL)
+  href: query-element-assl.md
+- name: QueryDefinition 元素 (ASSL)
+  href: querydefinition-element-assl.md
+- name: Read 元素 (ASSL)
+  href: read-element-assl.md
+- name: ReadDefinition 元素 (ASSL)
+  href: readdefinition-element-assl.md
+- name: ReadSourceData 元素 (ASSL)
+  href: readsourcedata-element-assl.md
+- name: RefreshInterval 元素 (ASSL)
+  href: refreshinterval-element-assl.md
+- name: RefreshPolicy 元素 (ASSL)
+  href: refreshpolicy-element-assl.md
+- name: RelationshipType 元素 (ASSL)
+  href: relationshiptype-element-assl.md
+- name: RemoteDatasourceID 元素 (ASSL)
+  href: remotedatasourceid-element-assl.md
+- name: ReportingFirstMonth 元素 (ASSL)
+  href: reportingfirstmonth-element-assl.md
+- name: ReportingFirstWeekOfMonth 元素 (ASSL)
+  href: reportingfirstweekofmonth-element-assl.md
+- name: ReportingWeekToMonthPattern 元素 (ASSL)
+  href: reportingweektomonthpattern-element-assl.md
+- name: ReportServer 元素 (ASSL)
+  href: reportserver-element-assl.md
+- name: RequiresRestart 元素 (ASSL)
+  href: requiresrestart-element-assl.md
+- name: RoleID 元素 (ASSL)
+  href: roleid-element-assl.md
+- name: Root 元素 (ASSL)
+  href: root-element-assl.md
+- name: RootMemberIf 元素 (ASSL)
+  href: rootmemberif-element-assl.md
+- name: Schema 元素 (ASSL)
+  href: schema-element-assl.md
+- name: ScriptCacheProcessingMode 元素 (ASSL)
+  href: scriptcacheprocessingmode-element-assl.md
+- name: SilenceInterval 元素 (ASSL)
+  href: silenceinterval-element-assl.md
+- name: SilenceOverrideInterval 元素 (ASSL)
+  href: silenceoverrideinterval-element-assl.md
+- name: Slice 元素 (ASSL)
+  href: slice-element-assl.md
+- name: SolveOrder 元素 (ASSL)
+  href: solveorder-element-assl.md
+- name: Source 元素 (Binding) (ASSL)
+  href: source-element-binding-assl.md
+- name: Source 元素 (ComAssembly) (ASSL)
+  href: source-element-comassembly-assl.md
+- name: Source 元素 (Measure) (ASSL)
+  href: source-element-measure-assl.md
+- name: SourceAttributeID 元素 (ASSL)
+  href: sourceattributeid-element-assl.md
+- name: SourceColumnID 元素 (ASSL)
+  href: sourcecolumnid-element-assl.md
+- name: State 元素 (ASSL)
+  href: state-element-assl.md
+- name: Status 元素 (ASSL)
+  href: status-element-assl.md
+- name: StatusGraphic 元素 (ASSL)
+  href: statusgraphic-element-assl.md
+- name: StopTime 元素 (ASSL)
+  href: stoptime-element-assl.md
+- name: StorageEngineUsed 元素 (XMLA)
+  href: storageengineused-element-xmla.md
+- name: StorageLocation 元素 (ASSL)
+  href: storagelocation-element-assl.md
+- name: StorageMode 元素 (ASSL)
+  href: storagemode-element-assl.md
+- name: TableID 元素 (ASSL)
+  href: tableid-element-assl.md
+- name: Target 元素 (ASSL)
+  href: target-element-assl.md
+- name: TargetType 元素 (ASSL)
+  href: targettype-element-assl.md
+- name: Text 元素 (ASSL)
+  href: text-element-assl.md
+- name: Timeout 元素 (ASSL)
+  href: timeout-element-assl.md
+- name: Trend 元素 (ASSL)
+  href: trend-element-assl.md
+- name: TrendGraphic 元素 (ASSL)
+  href: trendgraphic-element-assl.md
+- name: Trimming 元素 (ASSL)
+  href: trimming-element-assl.md
+- name: Type 元素 (Action) (ASSL)
+  href: type-element-action-assl.md
+- name: Type 元素 (Binding) (ASSL)
+  href: type-element-binding-assl.md
+- name: Type 元素 (ClrAssemblyFile) (ASSL)
+  href: type-element-clrassemblyfile-assl.md
+- name: Type 元素 (Dimension) (ASSL)
+  href: type-element-dimension-assl.md
+- name: Type 元素 (DimensionAttribute) (ASSL)
+  href: type-element-dimensionattribute-assl.md
+- name: Type 元素 (MeasureGroup) (ASSL)
+  href: type-element-measuregroup-assl.md
+- name: Type 元素 (MeasureGroupAttribute) (ASSL)
+  href: type-element-measuregroupattribute-assl.md
+- name: Type 元素 (MiningStructureColumn) (ASSL)
+  href: type-element-miningstructurecolumn-assl.md
+- name: Type 元素 (Partition) (ASSL)
+  href: type-element-partition-assl.md
+- name: Type 元素 (PerspectiveCalculation) (ASSL)
+  href: type-element-perspectivecalculation-assl.md
+- name: UnknownMember 元素 (ASSL)
+  href: unknownmember-element-assl.md
+- name: UnknownMemberName 元素 (ASSL)
+  href: unknownmembername-element-assl.md
+- name: Usage 元素 (DimensionAttribute) (ASSL)
+  href: usage-element-dimensionattribute-assl.md
+- name: Usage 元素 (MiningModelColumn) (ASSL)
+  href: usage-element-miningmodelcolumn-assl.md
+- name: Value 元素 (ASSL)
+  href: value-element-assl.md
+- name: Version 元素 (ASSL)
+  href: version-element-assl.md
+- name: Visibility 元素 (ASSL)
+  href: visibility-element-assl.md
+- name: Visible 元素 (ASSL)
+  href: visible-element-assl.md
+- name: VisualTotals 元素 (ASSL)
+  href: visualtotals-element-assl.md
+- name: Write 元素 (ASSL)
+  href: write-element-assl.md
+- name: WriteEnabled 元素 (ASSL)
+  href: writeenabled-element-assl.md

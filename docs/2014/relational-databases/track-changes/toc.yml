@@ -1,0 +1,21 @@
+- name: 追蹤資料變更
+  href: track-data-changes-sql-server.md
+  items:
+    - name: 關於異動資料擷取
+      href: about-change-data-capture-sql-server.md
+    - name: 啟用和停用異動資料擷取
+      href: enable-and-disable-change-data-capture-sql-server.md
+    - name: 管理和監視異動資料擷取
+      href: administer-and-monitor-change-data-capture-sql-server.md
+    - name: 使用變更資料
+      href: work-with-change-data-sql-server.md
+    - name: 關於變更追蹤
+      href: about-change-tracking-sql-server.md
+    - name: 啟用和停用變更追蹤
+      href: enable-and-disable-change-tracking-sql-server.md
+    - name: 管理變更追縱
+      href: manage-change-tracking-sql-server.md
+    - name: 使用變更追蹤
+      href: work-with-change-tracking-sql-server.md
+    - name: 異動資料擷取和其他 SQL Server 功能
+      href: change-data-capture-and-other-sql-server-features.md

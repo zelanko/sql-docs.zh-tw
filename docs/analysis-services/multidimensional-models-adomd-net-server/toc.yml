@@ -1,0 +1,8 @@
+- name: ADOMD.NET 伺服器功能
+  href: adomd-net-server-functionality.md
+- name: ADOMD.NET 伺服器物件架構
+  href: adomd-net-server-object-architecture.md
+- name: ADOMD.NET 伺服器程式設計
+  href: adomd-net-server-programming.md
+- name: 使用者定義函數和預存程序
+  href: user-defined-functions-and-stored-procedures.md

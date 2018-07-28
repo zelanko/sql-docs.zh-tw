@@ -1,0 +1,41 @@
+- name: SQL Server 匯入和匯出精靈
+  href: import-and-export-data-with-the-sql-server-import-and-export-wizard.md
+  items:
+    - name: 執行 SQL Server 匯入和匯出精靈
+      href: start-the-sql-server-import-and-export-wizard.md
+    - name: 歡迎使用 SQL Server 匯入和匯出精靈
+      href: welcome-to-sql-server-import-and-export-wizard.md
+    - name: 選擇資料來源 (SQL Server 匯入和匯出精靈)
+      href: choose-a-data-source-sql-server-import-and-export-wizard.md
+    - name: 選擇目的地 (SQL Server 匯入和匯出精靈)
+      href: choose-a-destination-sql-server-import-and-export-wizard.md
+    - name: 建立資料庫 (SQL Server 匯入和匯出精靈)
+      href: create-database-sql-server-import-and-export-wizard.md
+    - name: 指定資料表複製或查詢 (SQL Server 匯入和匯出精靈)
+      href: specify-table-copy-or-query-sql-server-import-and-export-wizard.md
+    - name: 選取來源資料表和檢視 (SQL Server 匯入和匯出精靈)
+      href: select-source-tables-and-views-sql-server-import-and-export-wizard.md
+    - name: 預覽資料對話方塊 (SQL Server 匯入和匯出精靈)
+      href: preview-data-dialog-box-sql-server-import-and-export-wizard.md
+    - name: 提供來源查詢 (SQL Server 匯入和匯出精靈)
+      href: provide-a-source-query-sql-server-import-and-export-wizard.md
+    - name: 設定一般檔案目的地 (SQL Server 匯入和匯出精靈)
+      href: configure-flat-file-destination-sql-server-import-and-export-wizard.md
+    - name: 資料行對應 (SQL Server 匯入和匯出精靈)
+      href: column-mappings-sql-server-import-and-export-wizard.md
+    - name: 建立資料表的 SQL 陳述式 (SQL Server 匯入和匯出精靈)
+      href: create-table-sql-statement-sql-server-import-and-export-wizard.md
+    - name: 檢閱資料類型對應 (SQL Server 匯入和匯出精靈)
+      href: review-data-type-mapping-sql-server-import-and-export-wizard.md
+    - name: 資料行轉換詳細資訊對話方塊 (SQL Server 匯入和匯出精靈)
+      href: column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md
+    - name: 轉換類型但不檢查轉換 (SQL Server 匯入和匯出精靈)
+      href: convert-types-without-conversion-checking-sql-server-import-and-export-wizard.md
+    - name: 儲存並執行封裝 (SQL Server 匯入和匯出精靈)
+      href: save-and-run-package-sql-server-import-and-export-wizard.md
+    - name: 儲存 SSIS 封裝 (SQL Server 匯入和匯出精靈)
+      href: save-ssis-package-sql-server-import-and-export-wizard.md
+    - name: 完成精靈 (SQL Server 匯入和匯出精靈)
+      href: complete-the-wizard-sql-server-import-and-export-wizard.md
+    - name: 正在執行作業 (SQL Server 匯入和匯出精靈)
+      href: performing-operation-sql-server-import-and-export-wizard.md

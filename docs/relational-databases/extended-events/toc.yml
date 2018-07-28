@@ -1,0 +1,42 @@
+- name: 概觀
+  href: extended-events.md
+- name: 快速入門︰SQL Server 中的擴充事件
+  href: quick-start-extended-events-in-sql-server.md
+- name: 在物件總管中管理事件工作階段
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: 進階檢視 SQL Server 中擴充事件的目標資料
+  href: advanced-viewing-of-target-data-from-extended-events-in-sql-server.md
+- name: 擴充的事件封裝
+  href: sql-server-extended-events-packages.md
+- name: SQL Server 中的擴充事件目標
+  href: targets-for-extended-events-in-sql-server.md
+  items:
+    - name: Windows 事件追蹤目標
+      href: event-tracing-for-windows-target.md
+- name: 擴充的事件引擎
+  href: sql-server-extended-events-engine.md
+- name: 擴充的事件工作階段
+  href: sql-server-extended-events-sessions.md
+- name: 擴充事件工具
+  href: extended-events-tools.md
+  items:
+    - name: 使用 SSMS XEvent 分析工具
+      href: use-the-ssms-xe-profiler.md
+    - name: 使用 system_health 工作階段
+      href: use-the-system-health-session.md
+    - name: 針對擴充事件使用 PowerShell 提供者
+      href: use-the-powershell-provider-for-extended-events.md
+- name: 更改擴充事件工作階段
+  href: alter-an-extended-events-session.md
+- name: SQL Server 擴充事件系統檢視表中的 SELECT 和 JOIN
+  href: selects-and-joins-from-system-views-for-extended-events-in-sql-server.md
+- name: 檢視同等於 SQL 追蹤事件類別的擴充事件項目
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: 將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: 判斷哪些查詢持有鎖定
+  href: determine-which-queries-are-holding-locks.md
+- name: 尋找持有最多鎖定的物件
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: 使用擴充事件監視系統活動
+  href: monitor-system-activity-using-extended-events.md
