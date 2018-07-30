@@ -1,0 +1,73 @@
+- name: 安全性與保護
+  href: reporting-services-security-and-protection.md
+- name: 含有 Reporting Services 的驗證擴充保護
+  href: extended-protection-for-authentication-with-reporting-services.md
+- name: 使用報表伺服器驗證
+  href: authentication-with-the-report-server.md
+  items:
+    - name: 設定報表伺服器上的 Windows 驗證
+      href: configure-windows-authentication-on-the-report-server.md
+    - name: 設定報表伺服器的基本驗證
+      href: configure-basic-authentication-on-the-report-server.md
+    - name: 設定報表伺服器上的自訂或表單驗證
+      href: configure-custom-or-forms-authentication-on-the-report-server.md
+    - name: 設定報表管理員傳遞自訂驗證 Cookie
+      href: configure-the-web-portal-to-pass-custom-authentication-cookies.md
+- name: 角色及使用權限
+  href: roles-and-permissions-reporting-services.md
+  items:
+    - name: 將報表伺服器的存取權授與使用者
+      href: grant-user-access-to-a-report-server.md
+    - name: 在原生模式報表伺服器上授與權限
+      href: granting-permissions-on-a-native-mode-report-server.md
+      items:
+        - name: 安全性實體項目
+          href: securable-items.md
+        - name: 工作和權限
+          href: tasks-and-permissions.md
+          items:
+            - name: 項目層級工作
+              href: tasks-and-permissions-item-level-tasks.md
+            - name: 系統層級工作
+              href: tasks-and-permissions-system-level-tasks.md
+        - name: 建立和管理角色指派
+          href: create-and-manage-role-assignments.md
+        - name: 保護資料夾的安全
+          href: secure-folders.md
+        - name: 保護報表和資源的安全
+          href: secure-reports-and-resources.md
+        - name: 保護共用資料來源項目的安全
+          href: secure-shared-data-source-items.md
+        - name: 保護共用資料集項目的安全
+          href: secure-shared-dataset-items.md
+        - name: 保護我的報表
+          href: secure-my-reports.md
+        - name: 建立 RSExecRole
+          href: create-the-rsexecrole.md
+        - name: 角色定義
+          href: role-definitions.md
+          items:
+            - name: 建立、刪除或修改角色
+              href: role-definitions-create-delete-or-modify.md
+            - name: Predefined Roles
+              href: role-definitions-predefined-roles.md
+        - name: 角色指派
+          href: role-assignments.md
+          items:
+            - name: 修改或刪除角色指派
+              href: role-assignments-modify-or-delete.md
+    - name: 授與 SharePoint 網站上報表伺服器項目的權限
+      href: granting-permissions-on-report-server-items-on-a-sharepoint-site.md
+      items:
+        - name: 在 Windows SharePoint Services 中使用報表伺服器項目的內建安全性
+          href: use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md
+        - name: 將 Reporting Services 中的角色和工作與 SharePoint 群組和權限做比較
+          href: ../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md
+        - name: 報表伺服器項目的 SharePoint 網站和清單權限參考
+          href: sharepoint-site-and-list-permission-reference-for-report-server-items.md
+        - name: 在 SharePoint Web 應用程式中設定報表伺服器作業的權限
+          href: set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md
+        - name: 設定 SharePoint 網站上報表伺服器項目的權限
+          href: set-permissions-for-report-server-items-on-a-sharepoint-site.md
+- name: 在原生模式報表伺服器上設定 SSL 連接
+  href: configure-ssl-connections-on-a-native-mode-report-server.md

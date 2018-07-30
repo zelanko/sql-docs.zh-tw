@@ -1,0 +1,31 @@
+- name: SQL 追蹤
+  href: sql-trace.md
+  items:
+    - name: 使用 Transact-SQL 預存程序來建立和執行追蹤
+      href: create-and-run-traces-using-transact-sql-stored-procedures.md
+    - name: 使用預存程序建立手動追蹤
+      href: create-manual-traces-using-stored-procedures.md
+    - name: 將追蹤結果儲存至檔案
+      href: save-trace-results-to-a-file.md
+    - name: 改善追蹤資料的存取
+      href: improve-access-to-trace-data.md
+    - name: 建立追蹤 (Transact-SQL)
+      href: create-a-trace-transact-sql.md
+    - name: 設定追蹤篩選 (Transact-SQL)
+      href: set-a-trace-filter-transact-sql.md
+    - name: 修改現有的追蹤 (Transact-SQL)
+      href: modify-an-existing-trace-transact-sql.md
+    - name: 檢視已儲存的追蹤 (Transact-SQL)
+      href: view-a-saved-trace-transact-sql.md
+    - name: 檢視篩選資訊 (Transact-SQL)
+      href: view-filter-information-transact-sql.md
+    - name: 刪除追蹤 (Transact-SQL)
+      href: delete-a-trace-transact-sql.md
+    - name: 最佳化 SQL 追蹤
+      href: optimize-sql-trace.md
+    - name: 篩選追蹤
+      href: filter-a-trace.md
+    - name: 限制追蹤檔案和資料表的大小
+      href: limit-trace-file-and-table-sizes.md
+    - name: 排程追蹤
+      href: schedule-traces.md

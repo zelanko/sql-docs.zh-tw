@@ -1,0 +1,12 @@
+- name: 執行陳述式 (ODBC)
+  href: executing-statements-odbc.md
+- name: 陳述式的批次
+  href: batches-of-statements.md
+- name: 直接執行
+  href: direct-execution.md
+- name: ISO 選項的作用
+  href: effects-of-iso-options.md
+- name: 備妥的執行
+  href: prepared-execution.md
+- name: 程序
+  href: procedures.md

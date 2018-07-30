@@ -1,0 +1,14 @@
+- name: 使用指令碼擴充封裝
+  href: extending-packages-with-scripting.md
+- name: 比較指令碼工作和指令碼元件
+  href: comparing-the-script-task-and-the-script-component.md
+- name: 比較指令碼方案和自訂物件
+  href: comparing-scripting-solutions-and-custom-objects.md
+- name: 參考指令碼解決方案中的其他組件
+  href: referencing-other-assemblies-in-scripting-solutions.md
+- name: 在指令碼工作和指令碼元件中設定中斷點來偵錯指令碼
+  href: debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md
+- name: 以指令碼工作擴充封裝
+  href: ../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md
+- name: Extending the Data Flow with the Script Component
+  href: ../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md

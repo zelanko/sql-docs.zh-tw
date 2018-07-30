@@ -1,0 +1,16 @@
+- name: 透過運算式存取自訂組件
+  href: accessing-custom-assemblies-through-expressions.md
+- name: 自訂組件中的判斷提示權限
+  href: asserting-permissions-in-custom-assemblies.md
+- name: 部署自訂組件
+  href: deploying-a-custom-assembly.md
+- name: 如何：偵錯自訂組件
+  href: how-to-debug-custom-assemblies.md
+- name: 初始化自訂組件物件
+  href: initializing-custom-assembly-objects.md
+- name: 參考在 RDL 檔案中的組件
+  href: referencing-assemblies-in-an-rdl-file.md
+- name: 將自訂組件與報表搭配使用
+  href: using-custom-assemblies-with-reports.md
+- name: 使用強式名稱自訂組件
+  href: using-strong-named-custom-assemblies.md

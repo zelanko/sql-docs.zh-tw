@@ -1,0 +1,16 @@
+- name: Enabled 屬性 (ServerNetworkProtocolIpAddress 類別)
+  href: enabled-property-servernetworkprotocolipaddress-class.md
+- name: InstanceName 屬性 (ServerNetworkProtocolIPAddress 類別)
+  href: instancename-property-servernetworkprotocolipaddress-class.md
+- name: IpAddressName 屬性 (ServerNetworkProtocolIPAddress 類別)
+  href: ipaddressname-property-servernetworkprotocolipaddress-class.md
+- name: Properties 屬性 (ServerNetworkProtocolIPAddress 類別)
+  href: properties-property-servernetworkprotocolipaddress-class.md
+- name: ProtocolName 屬性 (ServerNetworkProtocolIPAddress 類別)
+  href: protocolname-property-servernetworkprotocolipaddress-class.md
+- name: ServerNetworkProtocolIPAddress 類別
+  href: servernetworkprotocolipaddress-class.md
+- name: SetDisable 方法 (ServerNetworkProtocolIPAddress 類別)
+  href: setdisable-method-servernetworkprotocolipaddress-class.md
+- name: SetEnable 方法 (ServerNetworkProtocolIPAddress 類別)
+  href: setenable-method-servernetworkprotocolipaddress-class.md

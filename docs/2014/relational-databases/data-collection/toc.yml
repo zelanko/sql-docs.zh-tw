@@ -1,0 +1,33 @@
+- name: 資料收集
+  href: data-collection.md
+- name: 管理資料收集
+  href: manage-data-collection.md
+  items:
+    - name: 設定管理資料倉儲 (SQL Server Management Studio)
+      href: configure-the-management-data-warehouse-sql-server-management-studio.md
+    - name: 設定資料收集器的屬性
+      href: configure-properties-of-a-data-collector.md
+    - name: 啟用或停用資料收集
+      href: enable-or-disable-data-collection.md
+    - name: 啟動或停止收集組
+      href: start-or-stop-a-collection-set.md
+    - name: 使用 SQL Server Profiler 來建立 SQL 追蹤收集組 (SQL Server Management Studio)
+      href: use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
+    - name: 檢視收集組記錄 (SQL Server Management Studio)
+      href: view-collection-set-logs-sql-server-management-studio.md
+    - name: 檢視或變更收集組排程 (SQL Server Management Studio)
+      href: view-or-change-collection-set-schedules-sql-server-management-studio.md
+    - name: 檢視收集組報表 (SQL Server Management Studio)
+      href: view-a-collection-set-report-sql-server-management-studio.md
+    - name: 設定資料收集參數 (Transact-SQL)
+      href: configure-data-collection-parameters-transact-sql.md
+    - name: 建立使用一般 T-SQL 查詢收集器型別的自訂收集組 (Transact-SQL)
+      href: create-custom-collection-set-generic-t-sql-query-collector-type.md
+    - name: 將收集項加入收集組 (Transact-SQL)
+      href: add-a-collection-item-to-a-collection-set-transact-sql.md
+- name: 系統資料收集組報表
+  href: system-data-collection-set-reports.md
+- name: 管理資料倉儲
+  href: management-data-warehouse.md
+- name: 資料收集器安全性
+  href: data-collector-security.md

@@ -1,0 +1,26 @@
+- name: 使用 Updategram 來修改 SQLXML 4.0 中的資料
+  href: using-updategrams-to-modify-data-in-sqlxml-4-0.md
+- name: 使用 XML Updategram 刪除資料 (SQLXML 4.0)
+  href: deleting-data-using-xml-updategrams-sqlxml-4-0.md
+- name: 使用 ADO 執行 Updategram (SQLXML 4.0)
+  href: executing-an-updategram-by-using-ado-sqlxml-4-0.md
+- name: 使用 OLE DB 執行 Updategram (SQLXML 4.0)
+  href: executing-an-updategram-by-using-ole-db-sqlxml-4-0.md
+- name: XML Updategram 的指導方針和限制 (SQLXML 4.0)
+  href: guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md
+- name: 在 Updategram (SQLXML 4.0) 中處理資料庫並行的問題
+  href: handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md
+- name: 使用 XML Updategram 插入資料 (SQLXML 4.0)
+  href: inserting-data-using-xml-updategrams-sqlxml-4-0.md
+- name: 'Updategram 簡介 (SQLXML 4.0) '
+  href: introduction-to-updategrams-sqlxml-4-0.md
+- name: NULL 處理 (SQLXML 4.0)
+  href: null-handling-sqlxml-4-0.md
+- name: 將參數傳遞至 Updategrams (SQLXML 4.0)
+  href: passing-parameters-to-updategrams-sqlxml-4-0.md
+- name: 在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
+  href: specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md
+- name: 使用 XML Updategram 更新資料 (SQLXML 4.0)
+  href: updating-data-using-xml-updategrams-sqlxml-4-0.md
+- name: 在範例 ASP 應用程式中使用 Updategram (SQLXML 4.0)
+  href: using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md

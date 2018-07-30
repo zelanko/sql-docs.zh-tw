@@ -1,0 +1,125 @@
+- name: 集合
+  href: collections-assl.md
+  items:
+    - name: Accounts 元素
+      href: accounts-element-assl.md
+    - name: Actions 元素
+      href: actions-element-assl.md
+    - name: AggregationDesigns 元素
+      href: aggregationdesigns-element-assl.md
+    - name: AggregationInstances 元素
+      href: aggregationinstances-element-assl.md
+    - name: Aggregations 元素
+      href: aggregations-element-assl.md
+    - name: AlgorithmParameters 元素
+      href: algorithmparameters-element-assl.md
+    - name: Aliases 元素
+      href: aliases-element-assl.md
+    - name: AllMemberTranslations 元素
+      href: allmembertranslations-element-assl.md
+    - name: Annotations 元素
+      href: annotations-element-assl.md
+    - name: Assemblies 元素
+      href: assemblies-element-assl.md
+    - name: AttributeAllMemberTranslations 元素
+      href: attributeallmembertranslations-element-assl.md
+    - name: AttributePermissions 元素
+      href: attributepermissions-element-assl.md
+    - name: AttributeRelationships 元素
+      href: attributerelationships-element-assl.md
+    - name: Attributes 元素
+      href: attributes-element-assl.md
+    - name: Blocks 元素
+      href: blocks-element-assl.md
+    - name: CalculationProperties 元素
+      href: calculationproperties-element-assl.md
+    - name: Calculations 元素
+      href: calculations-element-assl.md
+    - name: CellPermissions 元素
+      href: cellpermissions-element-assl.md
+    - name: ClassifiedColumns 元素
+      href: classifiedcolumns-element-assl.md
+    - name: Columns 元素
+      href: columns-element-assl.md
+    - name: Commands 元素
+      href: commands-element-assl.md
+    - name: CubePermissions 元素
+      href: cubepermissions-element-assl.md
+    - name: Cubes 元素
+      href: cubes-element-assl.md
+    - name: DatabasePermissions 元素
+      href: databasepermissions-element-assl.md
+    - name: Databases 元素
+      href: databases-element-assl.md
+    - name: DataSources 元素
+      href: datasources-element-assl.md
+    - name: DataSourcePermissions 元素
+      href: datasourcepermissions-element-assl.md
+    - name: DataSourceViews 元素
+      href: datasourceviews-element-assl.md
+    - name: DimensionPermissions 元素
+      href: dimensionpermissions-element-assl.md
+    - name: Dimensions 元素
+      href: dimensions-element-assl.md
+    - name: Events 元素
+      href: events-element-assl.md
+    - name: Files 元素
+      href: files-element-assl.md
+    - name: ForeignKeyColumns 元素
+      href: foreignkeycolumns-element-assl.md
+    - name: Groups 元素
+      href: groups-element-assl.md
+    - name: Hierarchies 元素
+      href: hierarchies-element-assl.md
+    - name: IncrementalProcessingNotifications 元素
+      href: incrementalprocessingnotifications-element-assl.md
+    - name: KeyColumns 元素
+      href: keycolumns-element-assl.md
+    - name: Kpis 元素
+      href: kpis-element-assl.md
+    - name: Levels 元素
+      href: levels-element-assl.md
+    - name: MdxScripts 元素
+      href: mdxscripts-element-assl.md
+    - name: MeasureGroups 元素
+      href: measuregroups-element-assl.md
+    - name: Measures 元素
+      href: measures-element-assl.md
+    - name: Members 元素
+      href: members-element-assl.md
+    - name: MiningModelPermissions 元素
+      href: miningmodelpermissions-element-assl.md
+    - name: MiningModels 元素
+      href: miningmodels-element-assl.md
+    - name: MiningStructurePermissions 元素
+      href: miningstructurepermissions-element-assl.md
+    - name: MiningStructures 元素
+      href: miningstructures-element-assl.md
+    - name: ModelingFlags 元素
+      href: modelingflags-element-assl.md
+    - name: NamingTemplateTranslations 元素
+      href: namingtemplatetranslations-element-assl.md
+    - name: Partitions 元素
+      href: partitions-element-assl.md
+    - name: Perspectives 元素
+      href: perspectives-element-assl.md
+    - name: QueryNotifications 元素
+      href: querynotifications-element-assl.md
+    - name: Relationships 元素
+      href: relationships-element-assl.md
+    - name: ReportFormatParameters 元素
+      href: reportformatparameters-element-assl.md
+    - name: ReportParameters 元素
+      href: reportparameters-element-assl.md
+    - name: Roles 元素
+      href: roles-element-assl.md
+    - name: ServerProperties 元素
+      href: serverproperties-element-assl.md
+    - name: TableNotifications 元素
+      href: tablenotifications-element-assl.md
+    - name: Traces 元素
+      href: traces-element-assl.md
+    - name: Translations 元素
+      href: translations-element-assl.md
+    - name: UnknownMemberTranslations 元素
+      href: unknownmembertranslations-element-assl.md

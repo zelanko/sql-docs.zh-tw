@@ -1,0 +1,20 @@
+- name: 指令碼工作範例
+  href: script-task-examples.md
+- name: 以指令碼工作偵測空的一般檔案
+  href: detecting-an-empty-flat-file-with-the-script-task.md
+- name: 以指令碼工作尋找安裝的印表機
+  href: finding-installed-printers-with-the-script-task.md
+- name: 以指令碼工作蒐集 ForEach 迴圈的清單
+  href: gathering-a-list-for-the-foreach-loop-with-the-script-task.md
+- name: 以指令碼工作監視效能計數器
+  href: monitoring-performance-counters-with-the-script-task.md
+- name: 以指令碼工作查詢 Active Directory
+  href: querying-the-active-directory-with-the-script-task.md
+- name: 使用指令碼工作傳送 HTML 郵件訊息
+  href: sending-an-html-mail-message-with-the-script-task.md
+- name: 以指令碼工作傳送至遠端私用訊息佇列
+  href: sending-to-a-remote-private-message-queue-with-the-script-task.md
+- name: 以指令碼工作處理 Excel 檔案
+  href: working-with-excel-files-with-the-script-task.md
+- name: 以指令碼工作處理影像
+  href: working-with-images-with-the-script-task.md

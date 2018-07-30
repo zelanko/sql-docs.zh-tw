@@ -1,0 +1,112 @@
+- name: 使用 MDX 存取資料
+  href: multidimensional-model-data-access-analysis-services-multidimensional-data.md
+- name: 使用 MDX 查詢多維度資料
+  href: querying-multidimensional-data-with-mdx.md
+- name: MDX 的關鍵概念
+  href: ../key-concepts-in-mdx-analysis-services.md
+  items:
+    - name: 自動存在
+      href: autoexists.md
+    - name: 計算內容
+      href: calculation-context.md
+    - name: 子選擇和 Subcube 中的導出成員
+      href: calculated-members-in-subselects-and-subcubes.md
+    - name: Cube 空間
+      href: cube-space.md
+    - name: 查詢中的子選擇
+      href: subselects-in-queries.md
+    - name: Tuples
+      href: tuples.md
+    - name: 視覺化總計和非視覺化總計
+      href: visual-totals-and-non-visual-totals.md
+    - name: 使用成員、Tuple 和集合 (MDX)
+      href: working-with-members-tuples-and-sets-mdx.md
+- name: MDX 查詢基礎概念
+  href: mdx-query-fundamentals-analysis-services.md
+  items:
+    - name: 基本 MDX 查詢
+      href: mdx-query-the-basic-query.md
+      items:
+        - name: EXISTING 關鍵字
+          href: mdx-query-existing-keyword.md
+    - name: 利用查詢與 Slicer 軸限制查詢
+      href: mdx-query-and-slicer-axes-restricting-the-query.md
+      items:
+        - name: 指定查詢座標軸的內容
+          href: mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+        - name: 指定 Slicer 軸的內容
+          href: mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+        - name: 在簡單的範例中使用查詢及 Slicer 軸
+          href: mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+    - name: 建立查詢中的 Cube 內容
+      href: establishing-cube-context-in-a-query-mdx.md
+- name: 在 MDX 中建立 Subcube
+  href: building-subcubes-in-mdx-mdx.md
+- name: 在 MDX 中建立命名集
+  href: mdx-named-sets-building-named-sets.md
+  items:
+    - name: 建立查詢範圍命名集
+      href: mdx-named-sets-creating-query-scoped-named-sets.md
+    - name: 建立工作階段範圍命名集
+      href: mdx-named-sets-creating-session-scoped-named-sets.md
+- name: 在 MDX 中建立導出成員
+  href: mdx-calculated-members-building-calculated-members.md
+  items:
+    - name: 建立查詢範圍導出成員
+      href: mdx-calculated-members-query-scoped-calculated-members.md
+    - name: 建立工作階段範圍導出成員
+      href: mdx-calculated-members-session-scoped-calculated-members.md
+- name: 在 MDX 中建立資料格計算
+  href: mdx-cell-calculations-build-cell-calculations.md
+  items:
+    - name: 建立查詢範圍資料格計算
+      href: mdx-cell-calculations-query-scoped-cell-calculations.md
+    - name: 建立工作階段範圍導出資料格
+      href: mdx-cell-calculations-session-scoped-calculated-cells.md
+- name: 在 MDX 中建立量值
+  href: mdx-building-measures.md
+- name: 建立和使用屬性值
+  href: ../../creating-and-using-property-values-mdx.md
+  items:
+    - name: 使用成員屬性
+      href: mdx-member-properties.md
+      items:
+        - name: 內建成員屬性
+          href: mdx-member-properties-intrinsic-member-properties.md
+        - name: 使用者自訂成員屬性
+          href: mdx-member-properties-user-defined-member-properties.md
+    - name: 使用資料格屬性
+      href: mdx-cell-properties-using-cell-properties.md
+      items:
+        - name: FORMAT_STRING 內容
+          href: mdx-cell-properties-format-string-contents.md
+        - name: FORE_COLOR 及 BACK_COLOR 內容
+          href: mdx-cell-properties-fore-color-and-back-color-contents.md
+        - name: FORMATED_VALUE 上的 LANGUAGE 及 FORMAT_STRING
+          href: mdx-cell-properties-formatted-value-property.md
+- name: 操作資料
+  href: mdx-data-manipulation-manipulating-data.md
+  items:
+    - name: 使用 DRILLTHROUGH 擷取來源資料
+      href: mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+    - name: 使用 RollupChildren 函數
+      href: mdx-data-manipulation-rollupchildren-function.md
+    - name: 了解傳遞順序與解決順序
+      href: mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+    - name: 修改資料
+      href: mdx-data-modification-modifying-data.md
+    - name: 使用 Cube 回寫
+      href: mdx-data-modification-using-cube-writebacks.md
+    - name: 使用變數與參數
+      href: using-variables-and-parameters-mdx.md
+- name: MDX 指令碼基礎觀念
+  href: mdx-scripting-fundamentals-analysis-services.md
+  items:
+    - name: 基本 MDX 指令碼
+      href: the-basic-mdx-script-mdx.md
+    - name: 管理範圍及內容
+      href: managing-scope-and-context-mdx.md
+    - name: 錯誤處理
+      href: error-handling-mdx.md
+    - name: 支援的 MDX
+      href: supported-mdx-mdx.md

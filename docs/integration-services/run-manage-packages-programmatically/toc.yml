@@ -1,0 +1,18 @@
+- name: 以程式設計方式執行及管理封裝
+  href: running-and-managing-packages-programmatically.md
+- name: 了解本機和遠端執行之間的差異
+  href: understanding-the-differences-between-local-and-remote-execution.md
+- name: 以程式設計的方式載入和執行本機封裝
+  href: loading-and-running-a-local-package-programmatically.md
+- name: 以程式設計方式載入和執行遠端封裝
+  href: loading-and-running-a-remote-package-programmatically.md
+- name: 載入本機封裝的輸出
+  href: loading-the-output-of-a-local-package.md
+- name: 以程式設計方式列舉可用的封裝
+  href: enumerating-available-packages-programmatically.md
+- name: 以程式設計方式管理封裝與資料夾
+  href: managing-packages-and-folders-programmatically.md
+- name: 以程式設計方式管理執行中的封裝
+  href: managing-running-packages-programmatically.md
+- name: 以程式設計方式管理封裝角色 (SSIS 服務)
+  href: managing-package-roles-programmatically-ssis-service.md

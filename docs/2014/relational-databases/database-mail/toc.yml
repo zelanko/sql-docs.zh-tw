@@ -1,0 +1,24 @@
+- name: Database Mail
+  href: database-mail.md
+- name: Database Mail 組態物件
+  href: database-mail-configuration-objects.md
+  items:
+    - name: 建立 Database Mail 設定檔
+      href: create-a-database-mail-profile.md
+    - name: 建立 Database Mail 帳戶
+      href: create-a-database-mail-account.md
+    - name: 設定 Database Mail
+      href: configure-database-mail.md
+- name: Database Mail 訊息物件
+  href: database-mail-messaging-objects.md
+- name: Database Mail 外部程式
+  href: database-mail-external-program.md
+- name: Database Mail 記錄與稽核
+  href: database-mail-log-and-audits.md
+  items:
+    - name: 建立 SQL Server Agent 作業以封存 Database Mail 訊息及事件記錄檔
+      href: create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
+    - name: 檢查使用 Database Mail 傳送之電子郵件訊息的狀態
+      href: check-the-status-of-e-mail-messages-sent-with-database-mail.md
+- name: 設定 SQL Server Agent Mail 使用 Database Mail
+  href: configure-sql-server-agent-mail-to-use-database-mail.md

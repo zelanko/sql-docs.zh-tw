@@ -1,0 +1,17 @@
+- name: 檢視
+  href: views.md
+  items:
+    - name: 建立檢視表
+      href: create-views.md
+    - name: 建立索引檢視表
+      href: create-indexed-views.md
+    - name: 修改檢視
+      href: modify-views.md
+    - name: 透過檢視修改資料
+      href: modify-data-through-a-view.md
+    - name: 取得檢視的資訊
+      href: get-information-about-a-view.md
+    - name: 重新命名檢視
+      href: rename-views.md
+    - name: 刪除檢視
+      href: delete-views.md

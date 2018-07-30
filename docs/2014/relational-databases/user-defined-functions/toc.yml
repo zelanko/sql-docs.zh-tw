@@ -1,0 +1,21 @@
+- name: 使用者定義的函式
+  href: user-defined-functions.md
+  items:
+    - name: 決定性與非決定性函數
+      href: deterministic-and-nondeterministic-functions.md
+    - name: 建立使用者定義函數 (Database Engine)
+      href: create-user-defined-functions-database-engine.md
+    - name: 建立 CLR 函數
+      href: create-clr-functions.md
+    - name: 建立使用者定義彙總
+      href: create-user-defined-aggregates.md
+    - name: 修改使用者定義函數
+      href: modify-user-defined-functions.md
+    - name: 刪除使用者定義函數
+      href: delete-user-defined-functions.md
+    - name: 執行使用者定義函數
+      href: execute-user-defined-functions.md
+    - name: 重新命名使用者定義函數
+      href: rename-user-defined-functions.md
+    - name: 檢視使用者定義函數
+      href: view-user-defined-functions.md

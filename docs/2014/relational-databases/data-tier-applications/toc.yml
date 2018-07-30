@@ -1,0 +1,29 @@
+- name: 資料層應用程式
+  href: data-tier-applications.md
+  items:
+    - name: SQL Server 物件與版本的 DAC 支援
+      href: dac-support-for-sql-server-objects-and-versions.md
+    - name: 刪除資料層應用程式
+      href: delete-a-data-tier-application.md
+    - name: 部署資料層應用程式
+      href: deploy-a-data-tier-application.md
+    - name: 匯出資料層應用程式
+      href: export-a-data-tier-application.md
+    - name: 從資料庫中擷取 DAC
+      href: extract-a-dac-from-a-database.md
+    - name: 匯入 BACPAC 檔案以建立新的使用者資料庫
+      href: import-a-bacpac-file-to-create-a-new-user-database.md
+    - name: 監視資料層應用程式
+      href: monitor-data-tier-applications.md
+    - name: 將資料庫註冊為 DAC
+      href: register-a-database-as-a-dac.md
+    - name: 解除封裝 DAC 封裝
+      href: unpack-a-dac-package.md
+    - name: 升級資料層應用程式
+      href: upgrade-a-data-tier-application.md
+    - name: 驗證 DAC 封裝
+      href: validate-a-dac-package.md
+    - name: 資料層應用程式精靈的驗證規則
+      href: dbengine-validation-rules.md
+    - name: 使用 DAC 來部署資料庫
+      href: deploy-a-database-by-using-a-dac.md

@@ -1,0 +1,10 @@
+- name: AliasName 屬性 (SqlServerAlias 別名)
+  href: aliasname-property-sqlserveralias-class.md
+- name: ConnectionString 屬性 (SqlServerAlias 類別)
+  href: connectionstring-property-sqlserveralias-class.md
+- name: ProtocolName 屬性 (SqlServerAlias 類別)
+  href: protocolname-property-sqlserveralias-class.md
+- name: ServerName 屬性 (SqlServerAlias 類別)
+  href: servername-property-sqlserveralias-class.md
+- name: SqlServerAlias 類別
+  href: sqlserveralias-class.md

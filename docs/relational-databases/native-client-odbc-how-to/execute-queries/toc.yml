@@ -1,0 +1,10 @@
+- name: 執行查詢使用說明主題 (ODBC)
+  href: executing-queries-how-to-topics-odbc.md
+- name: 直接執行陳述式 (ODBC)
+  href: execute-a-statement-directly-odbc.md
+- name: 準備和執行陳述式 (ODBC)
+  href: prepare-and-execute-a-statement-odbc.md
+- name: 設定資料指標選項 (ODBC)
+  href: set-cursor-options-odbc.md
+- name: 使用陳述式 (ODBC)
+  href: use-a-statement-odbc.md

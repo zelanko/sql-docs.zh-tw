@@ -1,0 +1,64 @@
+- name: 概觀
+  href: integration-services-ssis-connections.md
+- name: 資料來源
+  href: data-sources.md
+- name: ADO 連接管理員
+  href: ado-connection-manager.md
+- name: ADO.NET 連接管理員
+  href: ado-net-connection-manager.md
+- name: Analysis Services 連接管理員
+  href: analysis-services-connection-manager.md
+  items:
+    - name: 加入 Analysis Services 連接管理員對話方塊 UI 參考
+      href: add-analysis-services-connection-manager-dialog-box-ui-reference.md
+- name: Azure Data Lake Analytics Connection Manager
+  href: azure-data-lake-analytics-connection-manager.md
+- name: Azure Data Lake Store 連線管理員
+  href: azure-data-lake-store-connection-manager.md
+- name: Azure HDInsight 連線管理員
+  href: azure-hdinsight-connection-manager.md
+- name: Azure Resource Manager 連線管理員
+  href: azure-resource-manager-connection-manager.md
+- name: Azure 儲存體連線管理員
+  href: azure-storage-connection-manager.md
+- name: Azure 訂用帳戶連線管理員
+  href: azure-subscription-connection-manager.md
+- name: Excel 連接管理員
+  href: excel-connection-manager.md
+- name: 檔案連接管理員
+  href: file-connection-manager.md
+  items:
+    - name: 加入檔案連接管理員對話方塊 UI 參考
+      href: add-file-connection-manager-dialog-box-ui-reference.md
+    - name: 建議資料行類型對話方塊 UI 參考
+      href: suggest-column-types-dialog-box-ui-reference.md
+- name: 一般檔案連接管理員
+  href: flat-file-connection-manager.md
+- name: FTP 連接管理員
+  href: ftp-connection-manager.md
+- name: Hadoop 連接管理員
+  href: hadoop-connection-manager.md
+- name: HTTP 連接管理員
+  href: http-connection-manager.md
+- name: MSMQ 連接管理員
+  href: msmq-connection-manager.md
+- name: 多個檔案連接管理員
+  href: multiple-files-connection-manager.md
+- name: 多個一般檔案連接管理員
+  href: multiple-flat-files-connection-manager.md
+- name: OData 連接管理員
+  href: odata-connection-manager.md
+- name: ODBC 連接管理員
+  href: odbc-connection-manager.md
+- name: OLE DB 連接管理員
+  href: ole-db-connection-manager.md
+- name: SAP BW 連接管理員
+  href: sap-bw-connection-manager.md
+- name: SMTP 連接管理員
+  href: smtp-connection-manager.md
+- name: SMO 連線管理員
+  href: smo-connection-manager.md
+- name: SQL Server Compact Edition 連接管理員
+  href: sql-server-compact-edition-connection-manager.md
+- name: WMI 連接管理員
+  href: wmi-connection-manager.md

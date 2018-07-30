@@ -1,0 +1,35 @@
+- name: Security
+  href: security-overview-integration-services.md
+- name: 威脅和弱點安全防護
+  href: ../threat-and-vulnerability-mitigation-integration-services.md
+- name: Integration Services 角色 (SSIS 服務)
+  href: integration-services-roles-ssis-service.md
+  items:
+    - name: 封裝角色對話方塊 UI 參考
+      href: ../package-roles-dialog-box-ui-reference.md
+- name: 對 Integration Services 服務的存取權
+  href: ../access-to-the-integration-services-service.md
+- name: 對封裝使用之檔案的存取權
+  href: ../access-to-files-used-by-packages.md
+- name: 封裝中的敏感性資料存取控制
+  href: access-control-for-sensitive-data-in-packages.md
+  items:
+    - name: 設定或變更封裝的保護等級
+      href: ../set-or-change-the-protection-level-of-packages.md
+    - name: 封裝與專案保護等級對話方塊
+      href: ../package-and-project-protection-level-dialog-box.md
+    - name: 封裝與專案密碼
+      href: ../package-and-project-password.md
+- name: 使用數位簽章來識別封裝的來源
+  href: identify-the-source-of-packages-with-digital-signatures.md
+  items:
+    - name: 透過設定登錄值實作簽署原則
+      href: ../implement-a-signing-policy-by-setting-a-registry-value.md
+    - name: 使用數位憑證來簽署封裝
+      href: ../sign-a-package-by-using-a-digital-certificate.md
+    - name: 數位簽章對話方塊 UI 參考
+      href: ../digital-signing-dialog-box-ui-reference.md
+- name: 建立使用者定義角色
+  href: ../create-a-user-defined-role.md
+- name: 指派讀取器和寫入器角色給封裝
+  href: ../assign-a-reader-and-writer-role-to-a-package.md

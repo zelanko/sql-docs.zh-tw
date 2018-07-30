@@ -1,0 +1,69 @@
+- name: 擴充事件
+  href: extended-events.md
+- name: 建立擴充事件工作階段
+  href: ../../database-engine/create-an-extended-events-session.md
+  items:
+    - name: 使用查詢編輯器建立擴充事件工作階段
+      href: ../../database-engine/create-an-extended-events-session-using-query-editor.md
+    - name: 使用精靈建立擴充事件工作階段 (物件總管)
+      href: ../../database-engine/create-an-extended-events-session-using-the-wizard-object-explorer.md
+    - name: 使用新增工作階段對話方塊建立擴充事件工作階段
+      href: ../../database-engine/create-an-extended-events-session-using-the-new-session-dialog.md
+- name: 在物件總管中管理事件工作階段
+  href: manage-event-sessions-in-the-object-explorer.md
+- name: 檢視事件工作階段資料
+  href: ../../database-engine/view-event-session-data.md
+- name: 擴充的事件封裝
+  href: sql-server-extended-events-packages.md
+- name: 擴充的事件目標
+  href: ../../database-engine/sql-server-extended-events-targets.md
+  items:
+    - name: 事件計數器目標
+      href: ../../database-engine/event-counter-target.md
+    - name: Event File Target
+      href: ../../database-engine/event-file-target.md
+    - name: 事件配對目標
+      href: ../../database-engine/event-pairing-target.md
+    - name: 長條圖目標
+      href: ../../database-engine/histogram-target.md
+    - name: 環緩衝區目標
+      href: ../../database-engine/ring-buffer-target.md
+    - name: Windows 事件追蹤目標
+      href: event-tracing-for-windows-target.md
+- name: 擴充的事件引擎
+  href: sql-server-extended-events-engine.md
+- name: 擴充的事件工作階段
+  href: sql-server-extended-events-sessions.md
+- name: 擴充事件工具
+  href: extended-events-tools.md
+  items:
+    - name: 使用 system_health 工作階段
+      href: use-the-ssms-xe-profiler.md
+    - name: 針對擴充事件使用 PowerShell 提供者
+      href: use-the-powershell-provider-for-extended-events.md
+- name: 編寫擴充事件工作階段的指令碼
+  href: ../../database-engine/script-an-extended-event-session.md
+- name: 更改擴充事件工作階段
+  href: alter-an-extended-events-session.md
+- name: 複製或匯出目標資料
+  href: ../../database-engine/copy-or-export-target-data.md
+- name: 修改追蹤結果檢視
+  href: ../../database-engine/modify-the-trace-results-view.md
+- name: 取得所有事件的欄位
+  href: ../../database-engine/get-the-fields-for-all-events.md
+- name: 檢視已註冊之封裝的事件
+  href: ../../database-engine/view-the-events-for-registered-packages.md
+- name: 檢視已註冊之封裝的擴充事件目標
+  href: ../../database-engine/view-the-extended-events-targets-for-registered-packages.md
+- name: 檢視同等於 SQL 追蹤事件類別的擴充事件項目
+  href: view-the-extended-events-equivalents-to-sql-trace-event-classes.md
+- name: 取得 ADD TARGET 引數的可設定參數
+  href: ../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md
+- name: 將現有的 SQL 追蹤指令碼轉換為擴充事件工作階段
+  href: convert-an-existing-sql-trace-script-to-an-extended-events-session.md
+- name: 判斷哪些查詢持有鎖定
+  href: determine-which-queries-are-holding-locks.md
+- name: 尋找持有最多鎖定的物件
+  href: find-the-objects-that-have-the-most-locks-taken-on-them.md
+- name: 使用擴充事件監視系統活動
+  href: monitor-system-activity-using-extended-events.md

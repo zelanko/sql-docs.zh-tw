@@ -1,0 +1,10 @@
+- name: ADO.NET 的 SQL Server 同處理序特定擴充
+  href: sql-server-in-process-specific-extensions-to-ado-net.md
+- name: SqlContext 物件
+  href: sqlcontext-object.md
+- name: SqlDataRecord 物件
+  href: sqldatarecord-object.md
+- name: SqlPipe 物件
+  href: sqlpipe-object.md
+- name: SqlTriggerContext 物件
+  href: sqltriggercontext-object.md

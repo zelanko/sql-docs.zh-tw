@@ -1,0 +1,42 @@
+- name: 將報表檢視器 Web 組件加入至網頁
+  href: add-reporting-services-content-types-to-a-sharepoint-library.md
+  items:
+    - name: SharePoint 網站上的報表檢視器 Web 組件
+      href: ../report-viewer-web-part-on-a-sharepoint-site.md
+    - name: 連接篩選或文件 Web 組件
+      href: ../connect-filter-or-documents-web-part-reporting-services-sharepoint-integrated-mode.md
+    - name: 自訂報表檢視器 Web 組件
+      href: ../customize-the-report-viewer-web-part.md
+- name: 報表伺服器 (SharePoint 模式)
+  href: ../reporting-services-report-server-sharepoint-mode.md
+  items:
+    - name: SharePoint 服務和服務應用程式
+      href: ../reporting-services-sharepoint-service-and-service-applications.md
+      items:
+        - name: Manage a Reporting Services SharePoint Service Application
+          href: ../manage-a-reporting-services-sharepoint-service-application.md
+        - name: 備份與還原 Reporting Services SharePoint 服務應用程式
+          href: ../backup-and-restore-reporting-services-sharepoint-service-applications.md
+- name: Reporting Services SharePoint 模式的 PowerShell Cmdlet
+  href: ../powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+- name: 設定和管理 (SharePoint 模式)
+  href: ../configure-administer-report-server-reporting-services-sharepoint-mode.md
+  items:
+    - name: Reporting Services 網站集合功能
+      href: ../reporting-services-site-collection-features.md
+    - name: 在 SharePoint 中啟用報表伺服器和 Power View 整合功能
+      href: ../activate-the-report-server-and-power-view-integration-features-in-sharepoint.md
+    - name: Reporting Services 網站設定和網站功能 (SharePoint 模式)
+      href: ../reporting-services-site-settings-and-site-features-sharepoint-mode.md
+    - name: 啟動報表伺服器檔案同步處理功能
+      href: ../activate-report-server-file-sync-feature-sharepoint-central-administration.md
+    - name: 將報表伺服器內容類型加入至文件庫 (SharePoint 整合模式中的 Reporting Services)
+      href: ../add-reporting-services-content-types-to-a-sharepoint-library.md
+    - name: 比較報表檢視器中的本機模式與連接模式報表
+      href: ../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md
+    - name: 將文件上傳到 SharePoint 文件庫
+      href: ../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+    - name: 設定處理選項
+      href: ../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+- name: 與 2008 及 2008 R2 報表伺服器的 SharePoint 整合
+  href: ../sharepoint-integration-with-2008-and-2008-r2-report-servers.md

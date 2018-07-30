@@ -1,0 +1,15 @@
+- name: 自訂報表項目
+  href: custom-report-items.md
+  items:
+    - name: 自訂報表項目架構
+      href: custom-report-item-architecture.md
+    - name: 自訂報表項目實作需求
+      href: custom-report-item-implementation-requirements.md
+    - name: 建立自訂報表項目執行階段元件
+      href: creating-a-custom-report-item-run-time-component.md
+    - name: 建立自訂報表項目設計階段元件
+      href: creating-a-custom-report-item-design-time-component.md
+    - name: 如何：部署自訂報表項目
+      href: how-to-deploy-a-custom-report-item.md
+    - name: 自訂報表項目類別庫
+      href: custom-report-item-class-libraries.md

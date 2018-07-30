@@ -1,0 +1,48 @@
+- name: AcceptPause 屬性 (SqlService 類別)
+  href: acceptpause-property-sqlservice-class.md
+- name: AcceptStop 屬性 (SqlService 類別)
+  href: acceptstop-property-sqlservice-class.md
+- name: AdvancedProperties 屬性 (SqlService 類別)
+  href: advancedproperties-property-sqlservice-class.md
+- name: BinaryPath 屬性 (SqlService 類別)
+  href: binarypath-property-sqlservice-class.md
+- name: Clustered 屬性 (SqlService 類別)
+  href: clustered-property-sqlservice-class.md
+- name: Dependencies 屬性 (SqlService 類別)
+  href: dependencies-property-sqlservice-class.md
+- name: Description 屬性 (SqlService 類別)
+  href: description-property-sqlservice-class.md
+- name: DisplayName 屬性 (SqlService 類別)
+  href: displayname-property-sqlservice-class.md
+- name: ErrorControl 屬性 (SqlService 類別)
+  href: errorcontrol-property-sqlservice-class.md
+- name: ExitCode 屬性 (SqlService 類別)
+  href: exitcode-property-sqlservice-class.md
+- name: HostName 屬性 (SqlService 類別)
+  href: hostname-property-sqlservice-class.md
+- name: PauseService 方法 (SqlService 類別)
+  href: pauseservice-method-sqlservice-class.md
+- name: ProcessId 類別 (SqlService 類別)
+  href: processid-class-sqlservice-class.md
+- name: ResumeService 方法 (SqlService 類別)
+  href: resumeservice-method-sqlservice-class.md
+- name: ServiceName 屬性 (SqlService 類別)
+  href: servicename-property-sqlservice-class.md
+- name: SetServiceAccount 方法 (SqlService 類別)
+  href: setserviceaccount-method-sqlservice-class.md
+- name: SetServiceAccountPassword 方法 (SqlService 類別)
+  href: setserviceaccountpassword-method-sqlservice-class.md
+- name: SetStartMode 方法 (SqlService 類別)
+  href: setstartmode-method-sqlservice-class.md
+- name: SqlService 類別
+  href: sqlservice-class.md
+- name: SqlServiceType 屬性 (SqlService 類別)
+  href: sqlservicetype-property-sqlservice-class.md
+- name: StartMode 屬性 (SqlService 類別)
+  href: startmode-property-sqlservice-class.md
+- name: StartService 方法 (SqlService 類別)
+  href: startservice-method-sqlservice-class.md
+- name: State 屬性 (SqlService 類別)
+  href: state-property-sqlservice-class.md
+- name: StopService 方法 (SqlService 類別)
+  href: stopservice-method-sqlservice-class.md

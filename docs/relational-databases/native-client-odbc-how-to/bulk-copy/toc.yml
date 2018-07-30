@@ -1,0 +1,12 @@
+- name: 利用 SQL Server ODBC 驅動程式進行大量複製的使用說明主題 (ODBC)
+  href: bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md
+- name: 大量複製 SELECT 結果集 (ODBC)
+  href: bulk-copy-a-select-result-set-odbc.md
+- name: 使用格式檔案進行大量複製 (ODBC)
+  href: bulk-copy-by-using-a-format-file-odbc.md
+- name: 從程式變數中大量複製資料 (ODBC)
+  href: bulk-copy-data-from-program-variables-odbc.md
+- name: 不使用格式檔案進行大量複製 (ODBC)
+  href: bulk-copy-without-a-format-file-odbc.md
+- name: 建立大量複製格式檔案 (ODBC)
+  href: create-a-bulk-copy-format-file-odbc.md

@@ -1,0 +1,8 @@
+- name: 管理 CLR 整合組件
+  href: managing-clr-integration-assemblies.md
+- name: 變更組件
+  href: altering-an-assembly.md
+- name: 建立組件
+  href: creating-an-assembly.md
+- name: 卸除組件
+  href: dropping-an-assembly.md

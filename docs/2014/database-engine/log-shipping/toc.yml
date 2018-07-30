@@ -1,0 +1,25 @@
+- name: 關於記錄傳送
+  href: about-log-shipping-sql-server.md
+  items:
+    - name: 將記錄傳送升級至 SQL Server 2014 (Transact-SQL)
+      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+    - name: 設定記錄傳送
+      href: configure-log-shipping-sql-server.md
+    - name: 將次要資料庫加入至記錄傳送組態
+      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+    - name: 從記錄傳送組態中移除次要資料庫
+      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+    - name: 移除記錄傳送
+      href: remove-log-shipping-sql-server.md
+    - name: 檢視記錄傳送報表 (SQL Server Management Studio)
+      href: view-the-log-shipping-report-sql-server-management-studio.md
+    - name: 監視記錄傳送 (Transact-SQL)
+      href: monitor-log-shipping-transact-sql.md
+    - name: 容錯移轉至記錄傳送次要
+      href: fail-over-to-a-log-shipping-secondary-sql-server.md
+    - name: 變更主要與次要記錄傳送伺服器間的角色
+      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+    - name: 記錄傳送和複寫
+      href: log-shipping-and-replication-sql-server.md
+    - name: Log Shipping Tables and Stored Procedures
+      href: log-shipping-tables-and-stored-procedures.md

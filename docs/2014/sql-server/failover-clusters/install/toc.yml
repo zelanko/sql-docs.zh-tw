@@ -1,0 +1,14 @@
+- name: SQL Server 容錯移轉叢集安裝
+  href: sql-server-failover-cluster-installation.md
+- name: 安裝容錯移轉叢集之前
+  href: before-installing-failover-clustering.md
+- name: 建立新的 SQL Server 容錯移轉叢集 (安裝程式)
+  href: create-a-new-sql-server-failover-cluster-setup.md
+- name: 在 SQL Server 容錯移轉叢集中加入或移除節點 (安裝程式)
+  href: add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+- name: 在 SQL Server 容錯移轉叢集上安裝用戶端工具
+  href: install-client-tools-on-a-sql-server-failover-cluster.md
+- name: 移除 SQL Server 容錯移轉叢集執行個體 (安裝程式)
+  href: remove-a-sql-server-failover-cluster-instance-setup.md
+- name: 重新命名 SQL Server 容錯移轉叢集執行個體
+  href: rename-a-sql-server-failover-cluster-instance.md

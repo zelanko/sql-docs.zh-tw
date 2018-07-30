@@ -1,0 +1,13 @@
+- name: 資料壓縮
+  href: data-compression.md
+  items:
+    - name: 資料列壓縮實作
+      href: row-compression-implementation.md
+    - name: 頁面壓縮實作
+      href: page-compression-implementation.md
+    - name: Unicode 壓縮實作
+      href: unicode-compression-implementation.md
+    - name: 啟用資料表或索引的壓縮
+      href: enable-compression-on-a-table-or-index.md
+    - name: 停用資料表或索引的壓縮
+      href: disable-compression-on-a-table-or-index.md

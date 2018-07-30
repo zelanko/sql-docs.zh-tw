@@ -1,0 +1,363 @@
+- name: 組態管理的 WMI 提供者概念
+  href: wmi-provider-for-configuration-management.md
+  items:
+    - name: 了解用於組態管理的 WMI 提供者
+      href: understanding-the-wmi-provider-for-configuration-management.md
+    - name: 針對組態管理使用 WMI 提供者
+      href: working-with-the-wmi-provider-for-configuration-management.md
+    - name: 搭配組態管理的 WMI 提供者使用 WQL 與指令碼語言
+      href: using-wql-and-scripting-languages-with-the-wmi-provider.md
+      items:
+        - name: 使用 WQL 存取組態管理的 WMI 提供者
+          href: access-wmi-provider-for-configuration-management-using-wql.md
+        - name: 使用 VBScript 修改 SQL Server 服務進階屬性
+          href: access-wmi-provider-for-configuration-management-using-vbscript.md
+- name: 伺服器事件的 WMI 提供者概念
+  href: ../wmi-provider-server-events/wmi-provider-for-server-events-concepts.md
+  items:
+    - name: 了解伺服器事件的 WMI 提供者
+      href: ../wmi-provider-server-events/understanding-the-wmi-provider-for-server-events.md
+    - name: 使用伺服器事件的 WMI 提供者
+      href: ../wmi-provider-server-events/working-with-the-wmi-provider-for-server-events.md
+    - name: 搭配伺服器事件的 WMI 提供者使用 WQL
+      href: ../wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md
+    - name: 伺服器事件類別和屬性的 WMI 提供者
+      href: ../wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
+    - name: 範例：使用伺服器事件的 WMI 提供者建立 SQL Server Agent 警示
+      href: ../wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
+    - name: 範例：搭配 .NET Framework 使用 WMI 事件提供者
+      href: ../wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
+- name: WMI 提供者事件和錯誤
+  href: ../../database-engine/dev-guide/wmi-provider-events-and-errors.md
+  items:
+    - name: WMI 錯誤 0x8007052f
+      href: ../wmi-provider-error-0x8007052f.md
+- name: 組態管理類別的 WMI 提供者
+  href: ../wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md
+  items:
+    - name: CInstance 類別
+      href: ../wmi-provider-configuration-classes/cinstance-class.md
+      items:
+        - name: InstanceName 屬性 (CInstance 類別)
+          href: ../wmi-provider-configuration-classes/cinstance-class-instancename-property.md
+        - name: SetDefaults 方法 (CInstance 類別)
+          href: ../wmi-provider-configuration-classes/cinstance-class-setdefaults-method.md
+    - name: ClientNetLibInfo 類別
+      href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/clientnetlibinfo-class.md
+      items:
+        - name: ProtocolName 屬性 (ClientNetLibInfo 類別)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/protocolname-property-clientnetlibinfo-class.md
+        - name: FileName 屬性 (ClientNetLibInfo 類別)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/filename-property-clientnetlibinfo-class.md
+        - name: ProtocolDisplayName 屬性 (ClientNetLibInfo 類別)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/protocoldisplayname-property-clientnetlibinfo-class.md
+        - name: Version 屬性 (ClientNetLibInfo 類別)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/version-property-clientnetlibinfo-class.md
+        - name: Date 屬性 (ClientNetLibInfo 類別)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/date-property-clientnetlibinfo-class.md
+        - name: Size 屬性 (ClientNetLibInfo 類別)
+          href: ../wmi-provider-configuration-classes/clientnetlibinfo-class/size-property-clientnetlibinfo-class.md
+    - name: ClientNetworkProtocol 類別
+      href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md
+      items:
+        - name: ProtocolName 屬性 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/protocolname-property-clientnetworkprotocol-class.md
+        - name: ProtocolOrder 屬性 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/protocolorder-property-clientnetworkprotocol-class.md
+        - name: ProtocolDisplayName 屬性 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/protocoldisplayname-property-clientnetworkprotocol-class.md
+        - name: ProtocolDLL 屬性 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/protocoldll-property-clientnetworkprotocol-class.md
+        - name: NumberOfProps 屬性 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/numberofprops-property-clientnetworkprotocol-class.md
+        - name: NumberOfFlags 屬性 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/numberofflags-property-clientnetworkprotocol-class.md
+        - name: Properties 屬性 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/properties-property-clientnetworkprotocol-class.md
+        - name: GetNextOrderValue 方法 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/getnextordervalue-method-clientnetworkprotocol-class.md
+        - name: SetOrderValue 方法 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md
+        - name: SetEnable 方法 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/setenable-method-clientnetworkprotocol-class.md
+        - name: SetDisable 方法 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/setdisable-method-clientnetworkprotocol-class.md
+        - name: SetProtocolsOrder 方法 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/setprotocolsorder-method-clientnetworkprotocol-class.md
+        - name: SupportAlias 屬性 (ClientNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocol-class/supportalias-property-clientnetworkprotocol-class.md
+    - name: ClientNetworkProtocolProperty 類別
+      href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/clientnetworkprotocolproperty-class.md
+      items:
+        - name: ProtocolName 屬性 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/protocolname-property-clientnetworkprotocolproperty-class.md
+        - name: PropertyType 屬性 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertytype-property-clientnetworkprotocolproperty-class.md
+        - name: PropertyIdx 屬性 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md
+        - name: PropertyName 屬性 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyname-property-clientnetworkprotocolproperty-class.md
+        - name: PropertyValType 屬性 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyvaltype-property-clientnetworkprotocolproperty-class.md
+        - name: PropertyNumVal 屬性 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertynumval-property-clientnetworkprotocolproperty-class.md
+        - name: PropertyStrVal 屬性 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertystrval-property-clientnetworkprotocolproperty-class.md
+        - name: SetNumValue 方法 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setnumvalue-method-clientnetworkprotocolproperty-class.md
+        - name: SetStrValue 方法 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setstrvalue-method-clientnetworkprotocolproperty-class.md
+        - name: SetFlag 方法 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setflag-method-clientnetworkprotocolproperty-class.md
+        - name: SetStringValue 方法 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setstringvalue-method-clientnetworkprotocolproperty-class.md
+        - name: SetNumericalValue 方法 (ClientNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/setnumericalvalue-method-clientnetworkprotocolproperty-class.md
+    - name: ClientSettings 類別
+      href: ../wmi-provider-configuration-classes/clientsettings-class.md
+      items:
+        - name: InstanceName 屬性 (ClientSettings 類別)
+          href: ../wmi-provider-configuration-classes/clientsettings-class-instancename-property.md
+        - name: SetDefaults 方法 (ClientSettings 類別)
+          href: ../wmi-provider-configuration-classes/clientsettings-class-setdefaults-method.md
+    - name: ClientSettingsGeneralFlag 類別
+      href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md
+      items:
+        - name: InstanceName 屬性 (ClientSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/instancename-property-clientsettingsgeneralflag-class.md
+        - name: FlagIndex 屬性 (ClientSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagindex-property-clientsettingsgeneralflag-class.md
+        - name: FlagName 屬性 (ClientSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagname-property-clientsettingsgeneralflag-class.md
+        - name: FlagValue 屬性 (ClientSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/flagvalue-property-clientsettingsgeneralflag-class.md
+        - name: SetValue 方法 (ClientSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/clientsettingsgeneralflag-class/setvalue-method-clientsettingsgeneralflag-class.md
+    - name: SecurityCertificate 類別
+      href: ../wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md
+      items:
+        - name: SHA 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/sha-property-securitycertificate-class.md
+        - name: IssuedTo 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/issuedto-property-securitycertificate-class.md
+        - name: IssuedBy 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/issuedby-property-securitycertificate-class.md
+        - name: FriendlyName 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/friendlyname-property-securitycertificate-class.md
+        - name: Name 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/name-property-securitycertificate-class.md
+        - name: ExpirationDate 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/expirationdate-property-securitycertificate-class.md
+        - name: StartDate 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/startdate-property-securitycertificate-class.md
+        - name: Context 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/context-property-securitycertificate-class.md
+        - name: SystemStore 屬性 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/systemstore-property-securitycertificate-class.md
+        - name: GetCurrentCertificate 方法 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/getcurrentcertificate-method-securitycertificate-class.md
+        - name: SetCurrentCertificate 方法 (SecurityCertificate 類別)
+          href: ../wmi-provider-configuration-classes/securitycertificate-class/setcurrentcertificate-method-securitycertificate-class.md
+    - name: ServerNetworkProtocol 類別
+      href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md
+      items:
+        - name: InstanceName 屬性 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/instancename-property-servernetworkprotocol-class.md
+        - name: ProtocolName 屬性 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md
+        - name: ProtocolDisplayName 屬性 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/protocoldisplayname-property-servernetworkprotocol-class.md
+        - name: ProtocolDLL 屬性 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/protocoldll-property-servernetworkprotocol-class.md
+        - name: Enabled 屬性 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/enabled-property-servernetworkprotocol-class.md
+        - name: Properties 屬性 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/properties-property-servernetworkprotocol-class.md
+        - name: IpAddresses 屬性 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/ipaddresses-property-servernetworkprotocol-class.md
+        - name: MultiIpConfigurationSupport 屬性 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/multiipconfigurationsupport-property-servernetworkprotocol-class.md
+        - name: SetEnable 方法 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/setenable-method-servernetworkprotocol-class.md
+        - name: SetDisable 方法 (ServerNetworkProtocol 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocol-class/setdisable-method-servernetworkprotocol-class.md
+    - name: ServerNetworkProtocolIPAddress 類別
+      href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md
+      items:
+        - name: InstanceName 屬性 (ServerNetworkProtocolIPAddress 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/instancename-property-servernetworkprotocolipaddress-class.md
+        - name: ProtocolName 屬性 (ServerNetworkProtocolIPAddress 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/protocolname-property-servernetworkprotocolipaddress-class.md
+        - name: IpAddressName 屬性 (ServerNetworkProtocolIPAddress 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/ipaddressname-property-servernetworkprotocolipaddress-class.md
+        - name: Properties 屬性 (ServerNetworkProtocolIPAddress 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/properties-property-servernetworkprotocolipaddress-class.md
+        - name: SetEnable 方法 (ServerNetworkProtocolIPAddress 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/setenable-method-servernetworkprotocolipaddress-class.md
+        - name: SetDisable 方法 (ServerNetworkProtocolIPAddress 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/setdisable-method-servernetworkprotocolipaddress-class.md
+        - name: Enabled 屬性 (ServerNetworkProtocolIpAddress 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/enabled-property-servernetworkprotocolipaddress-class.md
+    - name: ServerNetworkProtocolProperty 類別
+      href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md
+      items:
+        - name: InstanceName 屬性 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/instancename-property-servernetworkprotocolproperty-class.md
+        - name: PropertyName 屬性 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertyname-property-servernetworkprotocolproperty-class.md
+        - name: IPAddressName 屬性 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/ipaddressname-property-servernetworkprotocolproperty-class.md
+        - name: ProtocolName (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/protocolname-property-servernetworkprotocolproperty-class.md
+        - name: PropertyType 屬性 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertytype-property-servernetworkprotocolproperty-class.md
+        - name: PropertyValType 屬性 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertyvaltype-property-servernetworkprotocolproperty-class.md
+        - name: PropertyNumVal 屬性 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertynumval-property-servernetworkprotocolproperty-class.md
+        - name: PropertyStrVal 屬性 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/propertystrval-property-servernetworkprotocolproperty-class.md
+        - name: SetNumericalValue 方法 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setnumericalvalue-method-servernetworkprotocolproperty-class.md
+        - name: SetStringValue 方法 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setstringvalue-method-servernetworkprotocolproperty-class.md
+        - name: SetFlag 方法 (ServerNetworkProtocolProperty 類別)
+          href: ../wmi-provider-configuration-classes/servernetworkprotocolproperty-class/setflag-method-servernetworkprotocolproperty-class.md
+    - name: ServerSettings 類別
+      href: ../wmi-provider-configuration-classes/serversettings-class/serversettings-class.md
+      items:
+        - name: InstanceName 屬性 (ServerSettings 類別)
+          href: ../wmi-provider-configuration-classes/serversettings-class/instancename-property-serversettings-class.md
+        - name: NumberOfFlags 屬性 (ServerSettings 類別)
+          href: ../wmi-provider-configuration-classes/serversettings-class/numberofflags-property-serversettings-class.md
+        - name: GeneralFlags 屬性 (ServerSettings 類別)
+          href: ../wmi-provider-configuration-classes/serversettings-class/generalflags-property-serversettings-class.md
+        - name: SetDefaults 方法 (ServerSettings 類別)
+          href: ../wmi-provider-configuration-classes/serversettings-class/setdefaults-method-serversettings-class.md
+        - name: GetCurrentCertificate 方法 (ServerSettings 類別)
+          href: ../wmi-provider-configuration-classes/serversettings-class/getcurrentcertificate-method-serversettings-class.md
+        - name: SetCurrentCertificate 方法 (ServerSettings 類別)
+          href: ../wmi-provider-configuration-classes/serversettings-class/setcurrentcertificate-method-serversettings-class.md
+        - name: RemoveCertificate 方法 (ServerSettings 類別)
+          href: ../wmi-provider-configuration-classes/serversettings-class/removecertificate-method-serversettings-class.md
+    - name: ServerSettingsGeneralFlag 類別
+      href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md
+      items:
+        - name: InstanceName 屬性 (ServerSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/instancename-property-serversettingsgeneralflag-class.md
+        - name: FlagName 屬性 (ServerSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagname-property-serversettingsgeneralflag-class.md
+        - name: FlagValue 屬性 (ServerSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/flagvalue-property-serversettingsgeneralflag-class.md
+        - name: SetValue 方法 (ServerSettingsGeneralFlag 類別)
+          href: ../wmi-provider-configuration-classes/serversettingsgeneralflag-class/setvalue-method-serversettingsgeneralflag-class.md
+    - name: SInstance 類別
+      href: ../wmi-provider-configuration-classes/sinstance-class/sinstance-class.md
+      items:
+        - name: InstanceName 屬性 (SInstance 類別)
+          href: ../wmi-provider-configuration-classes/sinstance-class/instancename-property-sinstance-class.md
+        - name: NumberOfFlags 屬性 (SInstance 類別)
+          href: ../wmi-provider-configuration-classes/sinstance-class/numberofflags-property-sinstance-class.md
+        - name: SetDefaults 方法 (SInstance 類別)
+          href: ../wmi-provider-configuration-classes/sinstance-class/setdefaults-method-sinstance-class.md
+        - name: GeneralFlags 屬性 (SInstance 類別)
+          href: ../wmi-provider-configuration-classes/sinstance-class/generalflags-property-sinstance-class.md
+        - name: GetCurrentCertificate 方法 (SInstance 類別)
+          href: ../wmi-provider-configuration-classes/sinstance-class/getcurrentcertificate-method-sinstance-class.md
+        - name: SetCurrentCertificate 方法 (SInstance 類別)
+          href: ../wmi-provider-configuration-classes/sinstance-class/setcurrentcertificate-method-sinstance-class.md
+        - name: RemoveCertificate 方法 (SInstance 類別)
+          href: ../wmi-provider-configuration-classes/sinstance-class/removecertificate-method-sinstance-class.md
+    - name: SqlErrorLogEvent 類別
+      href: ../wmi-provider-configuration-classes/sqlerrorlogevent-class.md
+    - name: SqlErrorLogFile 類別
+      href: ../wmi-provider-configuration-classes/sqlerrorlogfile-class.md
+    - name: SqlServerAlias 類別
+      href: ../wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md
+      items:
+        - name: AliasName 屬性 (SqlServerAlias 別名)
+          href: ../wmi-provider-configuration-classes/sqlserveralias-class/aliasname-property-sqlserveralias-class.md
+        - name: ServerName 屬性 (SqlServerAlias 類別)
+          href: ../wmi-provider-configuration-classes/sqlserveralias-class/servername-property-sqlserveralias-class.md
+        - name: ProtocolName 屬性 (SqlServerAlias 類別)
+          href: ../wmi-provider-configuration-classes/sqlserveralias-class/protocolname-property-sqlserveralias-class.md
+        - name: ConnectionString 屬性 (SqlServerAlias 類別)
+          href: ../wmi-provider-configuration-classes/sqlserveralias-class/connectionstring-property-sqlserveralias-class.md
+    - name: SqlService 類別
+      href: ../wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md
+      items:
+        - name: ServiceName 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/servicename-property-sqlservice-class.md
+        - name: SqlServiceType 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/sqlservicetype-property-sqlservice-class.md
+        - name: AdvancedProperties 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md
+        - name: BinaryPath 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/binarypath-property-sqlservice-class.md
+        - name: HostName 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/hostname-property-sqlservice-class.md
+        - name: StartMode 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/startmode-property-sqlservice-class.md
+        - name: AcceptPause 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/acceptpause-property-sqlservice-class.md
+        - name: AcceptStop 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/acceptstop-property-sqlservice-class.md
+        - name: DisplayName 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/displayname-property-sqlservice-class.md
+        - name: ErrorControl 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/errorcontrol-property-sqlservice-class.md
+        - name: State 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/state-property-sqlservice-class.md
+        - name: ProcessId 類別 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/processid-class-sqlservice-class.md
+        - name: ExitCode 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/exitcode-property-sqlservice-class.md
+        - name: Description 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/description-property-sqlservice-class.md
+        - name: Dependencies 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/dependencies-property-sqlservice-class.md
+        - name: Clustered 屬性 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/clustered-property-sqlservice-class.md
+        - name: StopService 方法 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/stopservice-method-sqlservice-class.md
+        - name: StartService 方法 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/startservice-method-sqlservice-class.md
+        - name: PauseService 方法 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/pauseservice-method-sqlservice-class.md
+        - name: ResumeService 方法 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/resumeservice-method-sqlservice-class.md
+        - name: SetServiceAccount 方法 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/setserviceaccount-method-sqlservice-class.md
+        - name: SetServiceAccountPassword 方法 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/setserviceaccountpassword-method-sqlservice-class.md
+        - name: SetStartMode 方法 (SqlService 類別)
+          href: ../wmi-provider-configuration-classes/sqlservice-class/setstartmode-method-sqlservice-class.md
+    - name: SqlServiceAdvancedProperty 類別
+      href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md
+      items:
+        - name: ServiceName 屬性 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/servicename-property-sqlserviceadvancedproperty-class.md
+        - name: SqlServiceType 屬性 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlservicetype-property-sqlserviceadvancedproperty-class.md
+        - name: PropertyName 屬性 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyname-property-sqlserviceadvancedproperty-class.md
+        - name: PropertyIndex 屬性 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyindex-property-sqlserviceadvancedproperty-class.md
+        - name: PropertyValueType 屬性 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertyvaluetype-property-sqlserviceadvancedproperty-class.md
+        - name: PropertyNumValue 屬性 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertynumvalue-property-sqlserviceadvancedproperty-class.md
+        - name: PropertyStrValue 屬性 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/propertystrvalue-property-sqlserviceadvancedproperty-class.md
+        - name: IsReadOnly 屬性 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/isreadonly-property-sqlserviceadvancedproperty-class.md
+        - name: SetNumValue 方法 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setnumvalue-method-sqlserviceadvancedproperty-class.md
+        - name: SetBoolValue 方法 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setboolvalue-method-sqlserviceadvancedproperty-class.md
+        - name: SetStrValue 方法 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setstrvalue-method-sqlserviceadvancedproperty-class.md
+        - name: SetNumericalValue 方法 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setnumericalvalue-method-sqlserviceadvancedproperty-class.md
+        - name: SetStringValue 方法 (SqlServiceAdvancedProperty 類別)
+          href: ../wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/setstringvalue-method-sqlserviceadvancedproperty-class.md

@@ -1,0 +1,15 @@
+- name: 疑難排解封裝開發的工具
+  href: troubleshooting-tools-for-package-development.md
+  items:
+    - name: 偵錯控制流程
+      href: debugging-control-flow.md
+    - name: 偵錯指令碼
+      href: debugging-script.md
+    - name: 偵錯資料流程
+      href: debugging-data-flow.md
+    - name: 針對工作或容器設定中斷點以偵錯封裝
+      href: ../debug-a-package-by-setting-breakpoints-on-a-task-or-a-container.md
+    - name: 將資料檢視器加入資料流程
+      href: ../add-a-data-viewer-to-a-data-flow.md
+    - name: 在資料流程元件中設定錯誤輸出
+      href: ../configure-an-error-output-in-a-data-flow-component.md

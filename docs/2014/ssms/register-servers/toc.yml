@@ -1,0 +1,35 @@
+- name: 註冊伺服器
+  href: register-servers.md
+  items:
+    - name: 註冊連接的伺服器 (SQL Server Management Studio)
+      href: register-a-connected-server-sql-server-management-studio.md
+    - name: 建立新的已註冊伺服器 (SQL Server Management Studio)
+      href: create-a-new-registered-server-sql-server-management-studio.md
+    - name: 在 SQL Server Management Studio 中檢視已註冊的伺服器
+      href: view-registered-servers-in-sql-server-management-studio.md
+    - name: 移除已註冊的伺服器 (SQL Server Management Studio)
+      href: remove-a-registered-server-sql-server-management-studio.md
+    - name: 變更伺服器的註冊 (SQL Server Management Studio)
+      href: change-a-server-s-registration-sql-server-management-studio.md
+    - name: 連接至已註冊的伺服器 (SQL Server Management Studio)
+      href: connect-to-a-registered-server-sql-server-management-studio.md
+    - name: 中斷與註冊伺服器的連接 (SQL Server Management Studio)
+      href: disconnect-from-a-registered-server-sql-server-management-studio.md
+    - name: 移動已註冊的伺服器或已註冊的伺服器群組 (SQL Server Management Studio)
+      href: move-a-registered-server-or-registered-server-group.md
+    - name: 變更已註冊的伺服器或已註冊的伺服器群組名稱 (SQL Server Management Studio)
+      href: change-the-name-of-registered-server-or-registered-server-group.md
+    - name: 建立或編輯伺服器群組 (SQL Server Management Studio)
+      href: create-or-edit-a-server-group-sql-server-management-studio.md
+    - name: 移除伺服器群組 (SQL Server Management Studio)
+      href: remove-a-server-group-sql-server-management-studio.md
+    - name: 匯出已註冊的伺服器資訊 (SQL Server Management Studio)
+      href: export-registered-server-information-sql-server-management-studio.md
+    - name: 匯入已註冊的伺服器資訊 (SQL Server Management Studio)
+      href: import-registered-server-information-sql-server-management-studio.md
+    - name: 建立中央管理伺服器與伺服器群組 (SQL Server Management Studio)
+      href: create-a-central-management-server-and-server-group.md
+    - name: Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)
+      href: execute-statements-against-multiple-servers-simultaneously.md
+    - name: 已註冊的伺服器 F1 說明
+      href: registered-servers-f1-help.md

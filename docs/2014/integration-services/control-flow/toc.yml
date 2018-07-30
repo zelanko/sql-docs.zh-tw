@@ -1,0 +1,336 @@
+- name: 控制流程
+  href: control-flow.md
+- name: 控制流程索引標籤
+  href: ../control-flow-tab.md
+- name: 整合服務容器
+  href: integration-services-containers.md
+  items:
+    - name: Foreach 迴圈容器
+      href: foreach-loop-container.md
+      items:
+        - name: 設定 Foreach 迴圈容器
+          href: ../configure-a-foreach-loop-container.md
+        - name: 使用 Foreach 迴圈容器來循環使用 Excel 檔案和資料表
+          href: loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md
+        - name: 將列舉加入控制流程
+          href: ../add-enumeration-to-a-control-flow.md
+        - name: For Each 項目資料行對話方塊 UI 參考
+          href: ../for-each-item-columns-dialog-box-ui-reference.md
+        - name: Foreach 迴圈編輯器 (一般頁面)
+          href: ../foreach-loop-editor-general-page.md
+        - name: Foreach 迴圈編輯器 (集合頁面)
+          href: ../foreach-loop-editor-collection-page.md
+        - name: Foreach 迴圈編輯器 (變數對應頁面)
+          href: ../foreach-loop-editor-variable-mappings-page.md
+        - name: 選取 SMO 列舉對話方塊
+          href: ../select-smo-enumeration-dialog-box.md
+        - name: 結構描述限制對話方塊
+          href: ../schema-restrictions-dialog-box.md
+    - name: For 迴圈容器
+      href: for-loop-container.md
+      items:
+        - name: For 迴圈編輯器
+          href: ../for-loop-editor.md
+        - name: 設定 For 迴圈容器
+          href: ../configure-a-for-loop-container.md
+        - name: 將反覆運算加入控制流程
+          href: ../add-iteration-to-a-control-flow.md
+    - name: 時序容器
+      href: sequence-container.md
+    - name: 工作主機容器
+      href: task-host-container.md
+- name: Integration Services 工作
+  href: integration-services-tasks.md
+  items:
+    - name: Analysis Services 執行 DDL 工作
+      href: analysis-services-execute-ddl-task.md
+      items:
+        - name: Analysis Services 執行 DDL 工作編輯器 (一般頁面)
+          href: ../analysis-services-execute-ddl-task-editor-general-page.md
+        - name: Analysis Services 執行 DDL 工作編輯器 (DDL 頁面)
+          href: ../analysis-services-execute-ddl-task-editor-ddl-page.md
+    - name: Analysis Services 處理工作
+      href: analysis-services-processing-task.md
+      items:
+        - name: Analysis Services 處理工作編輯器 (一般頁面)
+          href: ../analysis-services-processing-task-editor-general-page.md
+        - name: Analysis Services 處理工作編輯器 (Analysis Services 頁面)
+          href: ../analysis-services-processing-task-editor-analysis-services-page.md
+    - name: 備份資料庫工作
+      href: back-up-database-task.md
+    - name: 大量插入工作
+      href: bulk-insert-task.md
+      items:
+        - name: 大量插入工作編輯器 (一般頁面)
+          href: ../bulk-insert-task-editor-general-page.md
+        - name: 大量插入工作編輯器 (連接頁面)
+          href: ../bulk-insert-task-editor-connection-page.md
+        - name: 大量插入工作編輯器 (選項頁面)
+          href: ../bulk-insert-task-editor-options-page.md
+    - name: CDC 控制工作
+      href: cdc-control-task.md
+      items:
+        - name: CDC 控制工作編輯器
+          href: ../cdc-control-task-editor.md
+        - name: CDC 控制工作自訂屬性
+          href: cdc-control-task-custom-properties.md
+    - name: 檢查資料庫完整性工作
+      href: check-database-integrity-task.md
+    - name: 資料採礦查詢工作
+      href: data-mining-query-task.md
+      items:
+        - name: 資料採礦查詢工作編輯器 (採礦模型索引標籤)
+          href: ../data-mining-query-task-editor-mining-model-tab.md
+        - name: 資料採礦查詢工作編輯器 (查詢索引標籤)
+          href: ../data-mining-query-task-editor-query-tab.md
+        - name: 資料採礦查詢工作編輯器 (輸出索引標籤)
+          href: ../data-mining-query-task-editor-output-tab.md
+        - name: 資料採礦查詢
+          href: data-mining-query.md
+    - name: 資料分析工作和檢視器
+      href: data-profiling-task-and-viewer.md
+      items:
+        - name: 資料分析工作的設定
+          href: setup-of-the-data-profiling-task.md
+        - name: 資料設定檔檢視器
+          href: data-profile-viewer.md
+        - name: 資料設定檔檢視器 F1 說明
+          href: ../data-profile-viewer-f1-help.md
+        - name: 資料分析工作
+          href: data-profiling-task.md
+          items:
+            - name: 資料分析工作編輯器 (一般頁面)
+              href: data-profiling-task-editor-general-page.md
+            - name: 單一資料表快速分析表單 (資料分析工作)
+              href: single-table-quick-profile-form-data-profiling-task.md
+            - name: Data Profiling Task Editor (Profile Requests Page)
+              href: data-profiling-task-editor-profile-requests-page.md
+            - name: 候選索引鍵設定檔要求選項 (資料分析工作)
+              href: candidate-key-profile-request-options-data-profiling-task.md
+            - name: 資料行長度散發設定檔要求選項 (資料分析工作)
+              href: column-length-distribution-profile-request-options-data-profiling-task.md
+            - name: 資料行 Null 比例設定檔要求選項 (資料分析工作)
+              href: column-null-ratio-profile-request-options-data-profiling-task.md
+            - name: 資料行模式設定檔要求選項 (資料分析工作)
+              href: column-pattern-profile-request-options-data-profiling-task.md
+            - name: 資料行統計資料設定檔要求選項 (資料分析工作)
+              href: column-statistics-profile-request-options-data-profiling-task.md
+            - name: 資料行值散發設定檔要求選項 (資料分析工作)
+              href: column-value-distribution-profile-request-options-data-profiling-task.md
+            - name: 功能相依性設定檔要求選項 (資料分析工作)
+              href: functional-dependency-profile-request-options-data-profiling-task.md
+            - name: 值包含設定檔要求選項 (資料分析工作)
+              href: value-inclusion-profile-request-options-data-profiling-task.md
+            - name: 在封裝工作流程中納入資料分析工作
+              href: incorporate-a-data-profiling-task-in-package-workflow.md
+    - name: 執行封裝工作
+      href: execute-package-task.md
+      items:
+        - name: 執行封裝工作編輯器
+          href: ../execute-package-task-editor.md
+    - name: 執行處理工作
+      href: execute-process-task.md
+      items:
+        - name: 執行處理工作編輯器 (一般頁面)
+          href: ../execute-process-task-editor-general-page.md
+        - name: 執行處理工作編輯器 (處理頁面)
+          href: ../execute-process-task-editor-process-page.md
+    - name: 執行 SQL 工作
+      href: execute-sql-task.md
+      items:
+        - name: 執行 SQL 工作中的參數和傳回碼
+          href: ../parameters-and-return-codes-in-the-execute-sql-task.md
+        - name: 執行 SQL 工作中的結果集
+          href: ../result-sets-in-the-execute-sql-task.md
+        - name: 執行 SQL 工作編輯器 (一般頁面)
+          href: ../execute-sql-task-editor-general-page.md
+        - name: 執行 SQL 工作編輯器 (參數對應頁面)
+          href: ../execute-sql-task-editor-parameter-mapping-page.md
+        - name: 執行 SQL 工作編輯器 (結果集頁面)
+          href: ../execute-sql-task-editor-result-set-page.md
+        - name: MERGE in Integration Services Packages
+          href: merge-in-integration-services-packages.md
+        - name: 在執行 SQL 工作中將查詢參數對應到變數
+          href: ../map-query-parameters-to-variables-in-an-execute-sql-task.md
+        - name: 在執行 SQL 工作中將結果集對應至變數
+          href: ../map-result-sets-to-variables-in-an-execute-sql-task.md
+    - name: 執行 T-SQL 陳述式工作
+      href: execute-t-sql-statement-task.md
+    - name: 檔案系統工作
+      href: file-system-task.md
+      items:
+        - name: 檔案系統工作編輯器 (一般頁面)
+          href: ../file-system-task-editor-general-page.md
+    - name: FTP 工作
+      href: ftp-task.md
+      items:
+        - name: FTP 工作編輯器 (一般頁面)
+          href: ../ftp-task-editor-general-page.md
+        - name: FTP 工作編輯器 (檔案傳輸頁面)
+          href: ../ftp-task-editor-file-transfer-page.md
+    - name: 記錄清除工作
+      href: history-cleanup-task.md
+    - name: 維護清除工作
+      href: maintenance-cleanup-task.md
+    - name: Message Queue Task
+      href: message-queue-task.md
+      items:
+        - name: 訊息佇列工作編輯器 (一般頁面)
+          href: ../message-queue-task-editor-general-page.md
+        - name: 訊息佇列工作編輯器 (接收頁面)
+          href: ../message-queue-task-editor-receive-page.md
+        - name: 訊息佇列工作編輯器 (傳送頁面)
+          href: ../message-queue-task-editor-send-page.md
+        - name: 選取封裝
+          href: select-a-package.md
+    - name: 通知操作員工作
+      href: notify-operator-task.md
+    - name: 重建索引工作
+      href: rebuild-index-task.md
+    - name: 重新組織索引工作
+      href: reorganize-index-task.md
+    - name: 指令碼工作
+      href: script-task.md
+      items:
+        - name: 指令碼工作編輯器 (一般頁面)
+          href: ../script-task-editor-general-page.md
+        - name: 指令碼工作編輯器 (指令碼頁面)
+          href: ../script-task-editor-script-page.md
+        - name: 選取變數頁面
+          href: select-variables-page.md
+    - name: 傳送郵件工作
+      href: send-mail-task.md
+      items:
+        - name: 傳送郵件工作編輯器 (一般頁面)
+          href: ../send-mail-task-editor-general-page.md
+        - name: 傳送郵件工作編輯器 (郵件頁面)
+          href: ../send-mail-task-editor-mail-page.md
+    - name: 壓縮資料庫工作
+      href: shrink-database-task.md
+    - name: 傳送資料庫工作
+      href: transfer-database-task.md
+      items:
+        - name: 傳送資料庫工作編輯器 (一般頁面)
+          href: ../transfer-database-task-editor-general-page.md
+        - name: 傳送資料庫工作編輯器 (資料庫頁面)
+          href: ../transfer-database-task-editor-databases-page.md
+        - name: 來源資料庫檔案
+          href: ../source-database-files.md
+        - name: 目的地資料庫檔案
+          href: ../destination-database-files.md
+    - name: 傳送錯誤訊息工作
+      href: transfer-error-messages-task.md
+      items:
+        - name: 傳送錯誤訊息工作編輯器 (一般頁面)
+          href: ../transfer-error-messages-task-editor-general-page.md
+        - name: 傳送錯誤訊息工作編輯器 (訊息頁面)
+          href: ../transfer-error-messages-task-editor-messages-page.md
+    - name: 傳送作業工作
+      href: transfer-jobs-task.md
+      items:
+        - name: 傳送作業工作編輯器 (一般頁面)
+          href: ../transfer-jobs-task-editor-general-page.md
+        - name: 傳送作業工作編輯器 (作業頁面)
+          href: ../transfer-jobs-task-editor-jobs-page.md
+    - name: 傳送登入工作
+      href: transfer-logins-task.md
+      items:
+        - name: 傳送登入工作編輯器 (一般頁面)
+          href: ../transfer-logins-task-editor-general-page.md
+        - name: 傳送登入工作編輯器 (登入頁面)
+          href: ../transfer-logins-task-editor-logins-page.md
+    - name: 傳送主要預存程序工作
+      href: transfer-master-stored-procedures-task.md
+      items:
+        - name: 傳送主要預存程序工作編輯器 (一般頁面)
+          href: ../transfer-master-stored-procedures-task-editor-general-page.md
+        - name: 傳送主要預存程序工作編輯器 (預存程序頁面)
+          href: ../transfer-master-stored-procedures-task-editor-stored-procedures-page.md
+    - name: 傳送 SQL Server 物件工作
+      href: transfer-sql-server-objects-task.md
+      items:
+        - name: 傳送 SQL Server 物件工作編輯器 (一般頁面)
+          href: ../transfer-sql-server-objects-task-editor-general-page.md
+        - name: 傳送 SQL Server 物件工作編輯器 (物件頁面)
+          href: ../transfer-sql-server-objects-task-editor-objects-page.md
+        - name: 選取要傳送的物件
+          href: select-objects-to-transfer.md
+    - name: 更新統計資料工作
+      href: update-statistics-task.md
+    - name: Web 服務工作
+      href: web-service-task.md
+      items:
+        - name: Web 服務工作編輯器 (一般頁面)
+          href: ../web-service-task-editor-general-page.md
+        - name: Web 服務工作編輯器 (輸入頁面)
+          href: ../web-service-task-editor-input-page.md
+        - name: Web 服務工作編輯器 (輸出頁面)
+          href: ../web-service-task-editor-output-page.md
+    - name: WMI 資料讀取器工作
+      href: wmi-data-reader-task.md
+      items:
+        - name: WMI 資料讀取器工作編輯器 (一般頁面)
+          href: ../wmi-data-reader-task-editor-general-page.md
+        - name: WMI 資料讀取器工作編輯器 (WMI 選項頁面)
+          href: ../wmi-data-reader-task-editor-wmi-options-page.md
+    - name: WMI 事件監看員工作
+      href: wmi-event-watcher-task.md
+      items:
+        - name: WMI 事件監看員工作編輯器 (一般頁面)
+          href: ../wmi-event-watcher-task-editor-general-page.md
+        - name: WMI 事件監看員工作編輯器 (WMI 選項頁面)
+          href: ../wmi-event-watcher-task-editor-wmi-options-page.md
+    - name: XML 工作
+      href: xml-task.md
+      items:
+        - name: Validate XML with the XML Task
+          href: validate-xml-with-the-xml-task.md
+        - name: XML Task Editor (General Page)
+          href: ../xml-task-editor-general-page.md
+    - name: Azure Blob 上傳工作
+      href: azure-blob-upload-task.md
+    - name: Azure Blob 下載工作
+      href: azure-blob-download-task.md
+    - name: Azure HDInsight Hive 工作
+      href: azure-hdinsight-hive-task.md
+    - name: Azure HDInsight Pig 工作
+      href: azure-hdinsight-pig-task.md
+    - name: Azure HDInsight 建立叢集工作
+      href: azure-hdinsight-create-cluster-task.md
+    - name: Azure HDInsight 刪除叢集工作
+      href: azure-hdinsight-delete-cluster-task.md
+    - name: Azure SQL DW 上傳工作
+      href: ../azure-sql-dw-upload-task.md
+    - name: Azure Data Lake Store 檔案系統工作
+      href: ../azure-data-lake-store-file-system-task.md
+- name: Integration Services 交易
+  href: ../integration-services-transactions.md
+  items:
+    - name: 繼承的交易
+      href: ../inherited-transactions.md
+    - name: 多個交易
+      href: ../multiple-transactions.md
+    - name: 設定封裝來使用交易
+      href: ../configure-a-package-to-use-transactions.md
+- name: 優先順序條件約束
+  href: precedence-constraints.md
+  items:
+    - name: 將運算式加入優先順序條件約束
+      href: ../add-expressions-to-precedence-constraints.md
+      items:
+        - name: 在優先順序條件約束中使用運算式
+          href: ../use-an-expression-in-a-precedence-constraint.md
+    - name: 多個優先順序條件約束
+      href: ../multiple-precedence-constraints.md
+    - name: 優先順序條件約束編輯器
+      href: ../precedence-constraint-editor.md
+    - name: 使用快速鍵功能表來設定優先順序條件約束的值
+      href: ../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md
+    - name: 設定優先順序條件約束的屬性
+      href: ../set-the-properties-of-a-precedence-constraint.md
+    - name: 使用預設的優先順序條件約束來連接工作和容器
+      href: ../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md
+- name: 在控制流程中加入或刪除工作或容器
+  href: add-or-delete-a-task-or-a-container-in-a-control-flow.md
+- name: 設定工作或容器的屬性
+  href: ../set-the-properties-of-a-task-or-container.md

@@ -1,0 +1,8 @@
+- name: 監視執行封裝和其他作業
+  href: monitor-running-packages-and-other-operations.md
+- name: Integration Services 封裝所記錄的事件
+  href: events-logged-by-an-integration-services-package.md
+- name: Integration Services (SSIS) 記錄
+  href: integration-services-ssis-logging.md
+- name: 效能計數器
+  href: performance-counters.md

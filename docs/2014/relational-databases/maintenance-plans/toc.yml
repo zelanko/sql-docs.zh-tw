@@ -1,0 +1,50 @@
+- name: 維護計畫
+  href: maintenance-plans.md
+- name: 建立維護計畫
+  href: create-a-maintenance-plan.md
+  items:
+    - name: 使用維護計畫精靈
+      href: use-the-maintenance-plan-wizard.md
+    - name: 建立維護計畫 (維護計畫設計介面)
+      href: create-a-maintenance-plan-maintenance-plan-design-surface.md
+    - name: 維護計畫節點 (物件總管)
+      href: maintenance-plans-node-object-explorer.md
+- name: 工具箱元件 F1 說明
+  href: toolbox-component-f1-help.md
+  items:
+    - name: 維護計畫 (設計索引標籤)
+      href: maintenance-plan-design-tab.md
+    - name: 維護計畫 (報告與記錄頁面)
+      href: maintenance-plan-reporting-and-logging-page.md
+    - name: 維護計畫 (管理連接)
+      href: maintenance-plan-manage-connections.md
+    - name: 備份資料庫工作 (維護計畫)
+      href: options-in-the-back-up-database-task-for-maintenance-plan.md
+    - name: 更新統計資料工作 (維護計畫)
+      href: update-statistics-task-maintenance-plan.md
+    - name: 重建索引工作 (維護計畫)
+      href: rebuild-index-task-maintenance-plan.md
+    - name: 壓縮資料庫工作 (維護計畫)
+      href: shrink-database-task-maintenance-plan.md
+    - name: 檢查資料庫完整性工作 (維護計畫)
+      href: check-database-integrity-task-maintenance-plan.md
+    - name: 執行 T-SQL 陳述式工作 (維護計畫)
+      href: execute-t-sql-statement-task-maintenance-plan.md
+    - name: 重新組織索引工作 (維護計畫)
+      href: reorganize-index-task-maintenance-plan.md
+    - name: 通知操作員工作 (維護計畫)
+      href: notify-operator-task-maintenance-plan.md
+    - name: 記錄清除工作 (維護計畫)
+      href: history-cleanup-task-maintenance-plan.md
+    - name: 執行 SQL Server Agent 作業工作 (維護計畫)
+      href: execute-sql-server-agent-job-task-maintenance-plan.md
+    - name: 維護清除工作 (維護計畫)
+      href: maintenance-cleanup-task-maintenance-plan.md
+    - name: 作業活動監視器 (篩選設定)
+      href: job-activity-monitor-filter-settings.md
+    - name: 作業活動監視器重新整理
+      href: job-activity-monitor-refresh.md
+    - name: 維護計畫 (子計畫屬性)
+      href: maintenance-plan-subplan-properties.md
+    - name: 維護計畫 (伺服器)
+      href: maintenance-plan-servers.md

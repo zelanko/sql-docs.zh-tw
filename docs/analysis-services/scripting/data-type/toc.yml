@@ -1,0 +1,182 @@
+- name: Action 資料類型 (ASSL)
+  href: action-data-type-assl.md
+- name: AggregationAttribute 資料類型 (ASSL)
+  href: aggregationattribute-data-type-assl.md
+- name: AggregationDesignAttribute 資料類型 (ASSL)
+  href: aggregationdesignattribute-data-type-assl.md
+- name: AggregationDesignDimension 資料類型 (ASSL)
+  href: aggregationdesigndimension-data-type-assl.md
+- name: AggregationDimension 資料類型 (ASSL)
+  href: aggregationdimension-data-type-assl.md
+- name: AggregationInstanceAttribute 資料類型 (ASSL)
+  href: aggregationinstanceattribute-data-type-assl.md
+- name: AggregationInstanceCubeDimension 資料類型 (ASSL)
+  href: aggregationinstancecubedimension-data-type-assl.md
+- name: AggregationInstanceMeasure 資料類型 (ASSL)
+  href: aggregationinstancemeasure-data-type-assl.md
+- name: Analysis Services 指令碼語言 XML 資料類型 (ASSL)
+  href: analysis-services-scripting-language-xml-data-types-assl.md
+- name: Assembly 資料類型 (ASSL)
+  href: assembly-data-type-assl.md
+- name: AttributeBinding 資料類型 (ASSL)
+  href: attributebinding-data-type-assl.md
+- name: AttributeTranslation 資料類型 (ASSL)
+  href: attributetranslation-data-type-assl.md
+- name: Binding 資料類型 (ASSL)
+  href: binding-data-type-assl.md
+- name: ClrAssembly 資料類型 (ASSL)
+  href: clrassembly-data-type-assl.md
+- name: ClrAssemblyFile 資料類型 (ASSL)
+  href: clrassemblyfile-data-type-assl.md
+- name: ColumnBinding 資料類型 (ASSL)
+  href: columnbinding-data-type-assl.md
+- name: ComAssembly 資料類型 (ASSL)
+  href: comassembly-data-type-assl.md
+- name: CubeAttribute 資料類型 (ASSL)
+  href: cubeattribute-data-type-assl.md
+- name: CubeAttributeBinding 資料類型 (ASSL)
+  href: cubeattributebinding-data-type-assl.md
+- name: CubeBinding 資料類型 (out-of-line) (ASSL)
+  href: cubebinding-data-type-out-of-line-assl.md
+- name: CubeDimension 資料類型 (ASSL)
+  href: cubedimension-data-type-assl.md
+- name: CubeDimensionBinding 資料類型 (ASSL)
+  href: cubedimensionbinding-data-type-assl.md
+- name: CubeDimensionPermission 資料類型 (ASSL)
+  href: cubedimensionpermission-data-type-assl.md
+- name: CubeHierarchy 資料類型 (ASSL)
+  href: cubehierarchy-data-type-assl.md
+- name: DataBlock 資料類型 (ASSL)
+  href: datablock-data-type-assl.md
+- name: DataItem 資料類型 (ASSL)
+  href: dataitem-data-type-assl.md
+- name: DataMiningMeasureGroupDimension 資料類型 (ASSL)
+  href: dataminingmeasuregroupdimension-data-type-assl.md
+- name: DataSource 資料類型 (ASSL)
+  href: datasource-data-type-assl.md
+- name: DataSourceViewBinding 資料類型 (ASSL)
+  href: datasourceviewbinding-data-type-assl.md
+- name: DegenerateMeasureGroupDimension 資料類型 (ASSL)
+  href: degeneratemeasuregroupdimension-data-type-assl.md
+- name: Dimension 資料類型 (ASSL)
+  href: dimension-data-type-assl.md
+- name: DimensionAttribute 資料類型 (ASSL)
+  href: dimensionattribute-data-type-assl.md
+- name: DimensionAttributeBinding 資料類型 (out-of-line) (ASSL)
+  href: dimensionattributebinding-data-type-out-of-line-assl.md
+- name: DimensionBinding 資料類型 (ASSL)
+  href: dimensionbinding-data-type-assl.md
+- name: DimensionPermission 資料類型 (ASSL)
+  href: dimensionpermission-data-type-assl.md
+- name: DrillThroughAction 資料類型 (ASSL)
+  href: drillthroughaction-data-type-assl.md
+- name: DSVTableBinding 資料類型 (ASSL)
+  href: dsvtablebinding-data-type-assl.md
+- name: EventColumn 資料類型 (ASSL)
+  href: eventcolumn-data-type-assl.md
+- name: Hierarchy 資料類型 (ASSL)
+  href: hierarchy-data-type-assl.md
+- name: ImpersonationInfo 資料類型 (ASSL)
+  href: impersonationinfo-data-type-assl.md
+- name: IncrementalProcessingNotification 資料類型 (ASSL)
+  href: incrementalprocessingnotification-data-type-assl.md
+- name: InheritedBinding 資料類型 (ASSL)
+  href: inheritedbinding-data-type-assl.md
+- name: ManyToManyMeasureGroupDimension 資料類型 (ASSL)
+  href: manytomanymeasuregroupdimension-data-type-assl.md
+- name: MeasureBinding 資料類型 (ASSL)
+  href: measurebinding-data-type-assl.md
+- name: MeasureGroupAttribute 資料類型 (ASSL)
+  href: measuregroupattribute-data-type-assl.md
+- name: MeasureGroupAttributeBinding 資料類型 (out-of-line) (ASSL)
+  href: measuregroupattributebinding-data-type-out-of-line-assl.md
+- name: MeasureGroupBinding 資料類型 (ASSL)
+  href: measuregroupbinding-data-type-assl.md
+- name: MeasureGroupBinding 資料類型 (out-of-line) (ASSL)
+  href: measuregroupbinding-data-type-out-of-line-assl.md
+- name: MeasureGroupDimension 資料類型 (ASSL)
+  href: measuregroupdimension-data-type-assl.md
+- name: MeasureGroupDimensionBinding 資料類型 (ASSL)
+  href: measuregroupdimensionbinding-data-type-assl.md
+- name: MeasureGroupHierarchy 資料類型 (ASSL)
+  href: measuregrouphierarchy-data-type-assl.md
+- name: MiningModelColumn 資料類型 (ASSL)
+  href: miningmodelcolumn-data-type-assl.md
+- name: MiningModelingFlag 資料類型 (ASSL)
+  href: miningmodelingflag-data-type-assl.md
+- name: MiningStructureColumn 資料類型 (ASSL)
+  href: miningstructurecolumn-data-type-assl.md
+- name: OlapDataSource 資料類型 (ASSL)
+  href: olapdatasource-data-type-assl.md
+- name: PartitionBinding 資料類型 (ASSL)
+  href: partitionbinding-data-type-assl.md
+- name: Permission 資料類型 (ASSL)
+  href: permission-data-type-assl.md
+- name: PerspectiveAction 資料類型 (ASSL)
+  href: perspectiveaction-data-type-assl.md
+- name: PerspectiveAttribute 資料類型 (ASSL)
+  href: perspectiveattribute-data-type-assl.md
+- name: PerspectiveCalculation 資料類型 (ASSL)
+  href: perspectivecalculation-data-type-assl.md
+- name: PerspectiveDimension 資料類型 (ASSL)
+  href: perspectivedimension-data-type-assl.md
+- name: PerspectiveHierarchy 資料類型 (ASSL)
+  href: perspectivehierarchy-data-type-assl.md
+- name: PerspectiveKpi 資料類型 (ASSL)
+  href: perspectivekpi-data-type-assl.md
+- name: PerspectiveMeasure 資料類型 (ASSL)
+  href: perspectivemeasure-data-type-assl.md
+- name: PerspectiveMeasureGroup 資料類型 (ASSL)
+  href: perspectivemeasuregroup-data-type-assl.md
+- name: ProactiveCachingBinding 資料類型 (ASSL)
+  href: proactivecachingbinding-data-type-assl.md
+- name: ProactiveCachingIncrementalProcessingBinding 資料類型 (ASSL)
+  href: proactivecachingincrementalprocessingbinding-data-type-assl.md
+- name: ProactiveCachingInheritedBinding 資料類型 (ASSL)
+  href: proactivecachinginheritedbinding-data-type-assl.md
+- name: ProactiveCachingObjectNotificationBinding 資料類型 (ASSL)
+  href: proactivecachingobjectnotificationbinding-data-type-assl.md
+- name: ProactiveCachingQueryBinding 資料類型 (ASSL)
+  href: proactivecachingquerybinding-data-type-assl.md
+- name: ProactiveCachingTablesBinding 資料類型 (ASSL)
+  href: proactivecachingtablesbinding-data-type-assl.md
+- name: PushedDataSource 資料類型 (ASSL)
+  href: pusheddatasource-data-type-assl.md
+- name: QueryBinding 資料類型 (ASSL)
+  href: querybinding-data-type-assl.md
+- name: ReferenceMeasureGroupDimension 資料類型 (ASSL)
+  href: referencemeasuregroupdimension-data-type-assl.md
+- name: RegularMeasureGroupDimension 資料類型 (ASSL)
+  href: regularmeasuregroupdimension-data-type-assl.md
+- name: RelationalDataSource 資料類型 (ASSL)
+  href: relationaldatasource-data-type-assl.md
+- name: Relationship 資料類型 (ASSL)
+  href: relationship-data-type-assl.md
+- name: RelationshipEnd 資料類型 (ASSL)
+  href: relationshipend-data-type-assl.md
+- name: RelationshipEndTranslation 元素 (ASSL)
+  href: relationshipendtranslation-element-assl.md
+- name: RelationshipEndVisualizationProperties 資料類型 (ASSL)
+  href: relationshipendvisualizationproperties-data-type-assl.md
+- name: ReportAction 資料類型 (ASSL)
+  href: reportaction-data-type-assl.md
+- name: RowBinding 資料類型 (ASSL)
+  href: rowbinding-data-type-assl.md
+- name: ScalarMiningStructureColumn 資料類型 (ASSL)
+  href: scalarminingstructurecolumn-data-type-assl.md
+- name: StandardAction 資料類型 (ASSL)
+  href: standardaction-data-type-assl.md
+- name: TableBinding 資料類型 (ASSL)
+  href: tablebinding-data-type-assl.md
+- name: TableMiningStructureColumn 資料類型 (ASSL)
+  href: tableminingstructurecolumn-data-type-assl.md
+- name: TabularBinding 資料類型 (ASSL)
+  href: tabularbinding-data-type-assl.md
+- name: TimeAttributeBinding 資料類型 (ASSL)
+  href: timeattributebinding-data-type-assl.md
+- name: TimeBinding 資料類型 (ASSL)
+  href: timebinding-data-type-assl.md
+- name: Translation 資料類型 (ASSL)
+  href: translation-data-type-assl.md
+- name: UserDefinedGroupBinding 資料類型 (ASSL)
+  href: userdefinedgroupbinding-data-type-assl.md

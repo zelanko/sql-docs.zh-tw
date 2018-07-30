@@ -1,0 +1,259 @@
+- name: SQLXML 4.0 程式設計概念
+  href: sqlxml-4-0-programming-concepts.md
+- name: SQLXML 不會安裝在 SQL Server 中
+  href: sqlxml-is-not-installed-in-sql-server.md
+- name: SQLXML 4.0 SP1 的新增功能
+  href: what-s-new-in-sqlxml-4-0-sp1.md
+- name: 使用 ADO 執行 SQLXML 4.0 查詢
+  href: using-ado-to-execute-sqlxml-4-0-queries.md
+- name: xml 資料類型在 SQLXML 4.0 中的支援
+  href: xml-data-type-support-in-sqlxml-4-0.md
+- name: 執行 SQLXML 範例的需求
+  href: requirements-for-running-sqlxml-examples.md
+- name: 用戶端和伺服器端格式 (SQLXML 4.0)
+  href: formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
+  items:
+    - name: 用戶端和伺服器端 XML 格式的架構 (SQLXML 4.0)
+      href: formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md
+    - name: 伺服器端 XML 格式 (SQLXML 4.0)
+      href: formatting/server-side-xml-formatting-sqlxml-4-0.md
+    - name: 用戶端 XML 格式 (SQLXML 4.0)
+      href: formatting/client-side-xml-formatting-sqlxml-4-0.md
+    - name: 用戶端和伺服器端 XML 格式 (SQLXML 4.0)
+      href: formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
+- name: SQLXML 4.0 中的註解式 XSD 結構描述
+  href: annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md
+  items:
+    - name: 註解式 XSD 結構描述簡介 (SQLXML 4.0)
+      href: annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md
+    - name: 在 XSD 結構描述中使用註釋 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md
+    - name: XSD 註解 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md
+    - name: XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md
+    - name: XSD 元素和屬性對資料表和資料行的明確對應 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md
+    - name: '使用 sql:relationship 指定關聯性 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md
+    - name: '針對 sql:relationship 指定 sql:inverse 屬性 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md
+    - name: '使用 sql:is-constant 建立常數元素 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md
+    - name: '使用 sql:mapped 從產生的 XML 文件排除結構描述元素 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/excluding-schema-elements-from-the-xml-document-using-sql-mapped.md
+    - name: '使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md
+    - name: '使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md
+    - name: 使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md
+    - name: '使用 sql:prefix 建立 Valid ID、IDREF 和 IDREFS 類型屬性 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md
+    - name: '資料類型強制型轉和 sql:datatype 註解 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md
+    - name: 將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md
+    - name: '使用 sql:use-cdata 建立 CDATA 區段 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md
+    - name: '使用 sql:encode 要求指向 BLOB 資料的 URL 參考 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md
+    - name: '使用 sql:overflow-field 擷取未耗用的資料 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md
+    - name: '使用 sql:hide 來隱藏元素和屬性'
+      href: ../sqlxml-annotated-xsd-schemas-using/hiding-elements-and-attributes-by-using-sql-hide.md
+    - name: '使用 sql:identity 和 sql:guid 註解'
+      href: ../sqlxml-annotated-xsd-schemas-using/using-the-sql-identity-and-sql-guid-annotations.md
+    - name: '使用 sql:max-depth 來指定遞迴關聯性的深度'
+      href: ../sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md
+    - name: 在查詢中使用註解式 XSD 結構描述 (SQLXML 4.0)
+      href: annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md
+- name: 將註解式 XDR 結構描述轉換為等效 XSD 結構描述 (SQLXML 4.0)
+  href: annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md
+- name: 註解式 XDR 結構描述 (在 SQLXML 4.0 中已被取代)
+  href: annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md
+- name: 在 SQLXML 4.0 中使用 XPath 查詢
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md
+  items:
+    - name: 使用 XPath 查詢的簡介 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md
+    - name: 指定位置路徑 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md
+    - name: 指定軸 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md
+    - name: 在位置路徑中指定節點測試 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
+    - name: 在位置路徑 (SQLXML 4.0) 中指定選取述詞
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md
+- name: 範例 XPath 查詢 (SQLXML 4.0)
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md
+  items:
+    - name: XPath 範例的範例註解式 XSD 結構描述 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md
+    - name: 在 XPath 查詢中指定軸 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md
+    - name: 在 XPath 查詢中指定布林值述詞 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-4-0.md
+    - name: 在 XPath 查詢中指定關係運算子 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-relational-operators-in-xpath-queries-sqlxml-4-0.md
+    - name: 在 XPath 查詢中指定算術運算子 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md
+    - name: 在 XPath 查詢中指定明確轉換函數 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-4-0.md
+    - name: 在 XPath 查詢中指定布林運算子 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-operators-in-xpath-queries-sqlxml-4-0.md
+    - name: 在 XPath 查詢中指定布林函數 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-boolean-functions-in-xpath-queries-sqlxml-4-0.md
+    - name: 在 XPath 查詢中指定 XPath 變數 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-xpath-variables-in-xpath-queries-sqlxml-4-0.md
+- name: XPath 資料類型 (SQLXML 4.0)
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md
+- name: 使用 Updategram 來修改 SQLXML 4.0 中的資料
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md
+  items:
+    - name: 'Updategram 簡介 (SQLXML 4.0) '
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/introduction-to-updategrams-sqlxml-4-0.md
+    - name: 在 Updategram 中指定註解式對應結構描述 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md
+    - name: NULL 處理 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/null-handling-sqlxml-4-0.md
+    - name: 使用 XML Updategram 插入資料 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md
+    - name: 使用 XML Updategram 刪除資料 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/deleting-data-using-xml-updategrams-sqlxml-4-0.md
+    - name: 使用 XML Updategram 更新資料 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md
+    - name: 將參數傳遞至 Updategrams (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md
+    - name: 在 Updategram (SQLXML 4.0) 中處理資料庫並行的問題
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md
+    - name: 使用 ADO 執行 Updategram (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md
+    - name: 使用 OLE DB 執行 Updategram (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ole-db-sqlxml-4-0.md
+    - name: 在範例 ASP 應用程式中使用 Updategram (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md
+    - name: XML Updategram 的指導方針和限制 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md
+    - name: Updategram 範例應用程式 (SQLXML 4.0)
+      href: ../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md
+- name: 執行 XML 資料的大量載入 (SQLXML 4.0)
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md
+  items:
+    - name: 'XML 大量載入簡介 (SQLXML 4.0) '
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/introduction-to-xml-bulk-load-sqlxml-4-0.md
+    - name: 記錄產生處理序 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md
+    - name: 註解的解譯 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md
+    - name: 'sql:relationship 和關鍵識別碼順序規則 (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md
+    - name: 'sql:mapped (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md
+    - name: 'sql:limit-field 和 sql:limit-value (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md
+    - name: 'sql:overflow-field (SQLXML 4.0)'
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md
+    - name: 其他註解 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md
+    - name: SQL Server XML 大量載入物件模型 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md
+    - name: XML 大量載入範例 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md
+    - name: 資料類型與 XML 大量載入行為 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/data-types-and-xml-bulk-load-behavior-sqlxml-4-0.md
+    - name: XML 大量載入的指導方針和限制 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/guidelines-and-limitations-of-xml-bulk-load-sqlxml-4-0.md
+- name: SQLXML 4.0 Data Access Components
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md
+  items:
+    - name: SQLXMLOLEDB 提供者 (SQLXML 4.0)
+      href: ../../database-engine/dev-guide/sqlxmloledb-provider-sqlxml-4-0.md
+    - name: SQLXMLOLEDB 提供者簡介 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md
+    - name: 使用 SQLXMLOLEDB 提供者 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/using-the-sqlxmloledb-provider-sqlxml-4-0.md
+    - name: 執行 SQL 查詢 (SQLXMLOLEDB 提供者)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md
+    - name: 執行包含 SQL 查詢的範本 (SQLXMLOLEDB 提供者)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md
+    - name: 執行 XPath 查詢 (SQLXMLOLEDB 提供者)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md
+    - name: 執行含有命名空間的 XPath 查詢 (SQLXMLOLEDB 提供者)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md
+    - name: 執行包含 XPath 查詢的範本 (SQLXMLOLEDB 提供者)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md
+    - name: 套用 XSL 轉換 (SQLXMLOLEDB 提供者)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/applying-an-xsl-transformation-sqlxmloledb-provider.md
+- name: SQLXML 4.0 .NET Framework 支援
+  href: ../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md
+  items:
+    - name: SQLXML Managed 類別
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md
+    - name: SQLXML Managed 類別物件模型
+      href: ../../database-engine/dev-guide/sqlxml-managed-classes-object-model.md
+    - name: SqlXmlCommand 物件 (SQLXML Managed 類別)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md
+    - name: SqlXmlParameter 物件 (SQLXML Managed 類別)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlparameter-object.md
+    - name: SqlXmlAdapter 物件 (SQLXML Managed 類別)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md
+    - name: 使用 SQLXML Managed 類別
+      href: ../../database-engine/dev-guide/using-the-sqlxml-managed-classes.md
+    - name: 執行 SQL 查詢 (SQLXML Managed 類別)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md
+    - name: 使用 ExecuteXMLReader 方法執行 SQL 查詢
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md
+    - name: 在用戶端上處理 XML (SQLXML Managed 類別)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md
+    - name: 執行 XPath 查詢 (SQLXML Managed 類別)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-sqlxml-managed-classes.md
+    - name: 執行含有命名空間的 XPath 查詢 (SQLXML Managed 類別)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-xpath-queries-with-namespaces-sqlxml-managed-classes.md
+    - name: 使用 CommandText 屬性執行範本檔案
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md
+    - name: 利用 CommandStream 屬性執行範本檔案
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md
+    - name: 套用 XSL 轉換 (SQLXML Managed 類別)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/applying-an-xsl-transformation-sqlxml-managed-classes.md
+    - name: 存取 .NET 環境中的 SQLXML 功能
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md
+- name: 使用 DiffGram 來修改 SQLXML 4.0 中的資料
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data.md
+  items:
+    - name: DiffGrams 的 SQLXML 4.0 簡介
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/introduction-to-diffgrams-in-sqlxml-4-0.md
+    - name: DiffGram 範例 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md
+    - name: 使用 ADO 執行 DiffGram (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-ado-sqlxml-4-0.md
+    - name: 使用 SQLXML Managed 類別執行 DiffGram
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/executing-a-diffgram-by-using-sqlxml-managed-classes.md
+    - name: 在 SQLXML 中的 DiffGrams 指導方針和限制
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/guidelines-and-limitations-of-diffgrams-in-sqlxml.md
+- name: 在 .NET 環境中使用 SQLXML 大量載入
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/sqlxml-4-0-net-framework-support-using-bulk-load.md
+- name: 快取範本、XSL 和結構描述 (SQLXML 4.0)
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md
+  items:
+    - name: 範本快取 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md
+    - name: XSL 快取 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md
+    - name: 結構描述快取 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md
+- name: SQLXML 4.0 安全性考量
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md
+  items:
+    - name: SQLXML 的核心安全性考量
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/core-sqlxml-security-considerations.md
+    - name: Updategram 安全性考量 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md
+    - name: 註解式結構描述安全性考量 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md
+    - name: FOR XML 安全性考量 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md
+    - name: 大量載入安全性考量 (SQLXML 4.0)
+      href: ../sqlxml-annotated-xsd-schemas-xpath-queries/security/bulk-load-security-considerations-sqlxml-4-0.md
+- name: SQLXML 4.0 的指導方針和限制
+  href: ../sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md

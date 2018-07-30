@@ -1,0 +1,36 @@
+- name: DDL 觸發程序
+  href: ddl-triggers.md
+  items:
+    - name: 實作 DDL 觸發程序
+      href: implement-ddl-triggers.md
+    - name: 取得 DDL 觸發程序的詳細資訊
+      href: get-information-about-ddl-triggers.md
+    - name: 使用 EVENTDATA 函數
+      href: use-the-eventdata-function.md
+    - name: DDL 事件
+      href: ddl-events.md
+    - name: DDL 事件群組
+      href: ddl-event-groups.md
+- name: DML 觸發程序
+  href: dml-triggers.md
+  items:
+    - name: 建立 DML 觸發程序
+      href: create-dml-triggers.md
+    - name: 建立 CLR 觸發程序
+      href: create-clr-triggers.md
+    - name: 建立 DML 觸發程序以處理多重資料列
+      href: create-dml-triggers-to-handle-multiple-rows-of-data.md
+    - name: 建立巢狀觸發程序
+      href: create-nested-triggers.md
+    - name: 指定第一個與最後一個觸發程序
+      href: specify-first-and-last-triggers.md
+    - name: 使用插入或刪除的資料表
+      href: use-the-inserted-and-deleted-tables.md
+    - name: 修改或重新命名 DML 觸發程序
+      href: modify-or-rename-dml-triggers.md
+    - name: 取得關於 DML 觸發程序的詳細資訊
+      href: get-information-about-dml-triggers.md
+    - name: 刪除或停用 DML 觸發程序
+      href: delete-or-disable-dml-triggers.md
+    - name: 管理觸發程序安全性
+      href: manage-trigger-security.md

@@ -1,0 +1,11 @@
+- name: 分割資料表與索引
+  href: partitioned-tables-and-indexes.md
+  items:
+    - name: 建立分割區資料表及索引
+      href: create-partitioned-tables-and-indexes.md
+    - name: 修改資料分割函數
+      href: modify-a-partition-function.md
+    - name: 修改資料分割配置
+      href: modify-a-partition-scheme.md
+    - name: 管理資料分割精靈 F1 說明
+      href: manage-partition-wizard-f1-help.md

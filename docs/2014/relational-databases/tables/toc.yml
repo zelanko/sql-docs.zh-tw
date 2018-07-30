@@ -1,0 +1,84 @@
+- name: 資料表
+  href: tables.md
+  items:
+    - name: 建立資料表 (Database Engine)
+      href: create-tables-database-engine.md
+    - name: 刪除資料表 (Database Engine)
+      href: delete-tables-database-engine.md
+    - name: 複製資料表
+      href: duplicate-tables.md
+    - name: 重新命名資料表 (Database Engine)
+      href: rename-tables-database-engine.md
+    - name: 檢視資料表定義
+      href: view-the-table-definition.md
+      items:
+        - name: 資料表屬性
+          href: table-properties-ssms.md
+        - name: 資料行屬性 (一般頁面)
+          href: column-properties-general-page.md
+    - name: 檢視資料表的相依性
+      href: view-the-dependencies-of-a-table.md
+    - name: 將資料行加入資料表 (Database Engine)
+      href: add-columns-to-a-table-database-engine.md
+    - name: 從資料表中刪除資料行
+      href: delete-columns-from-a-table.md
+    - name: 重新命名資料行 (Database Engine)
+      href: rename-columns-database-engine.md
+    - name: 將資料行從一個資料表複製至另一個資料表 (Database Engine)
+      href: copy-columns-from-one-table-to-another-database-engine.md
+    - name: 修改資料行 (Database Engine)
+      href: modify-columns-database-engine.md
+    - name: 變更資料表中的資料行順序
+      href: change-column-order-in-a-table.md
+    - name: 指定資料表中的計算資料行
+      href: specify-computed-columns-in-a-table.md
+    - name: 指定資料行的預設值
+      href: specify-default-values-for-columns.md
+    - name: 使用疏鬆資料行
+      href: use-sparse-columns.md
+    - name: 使用資料行集
+      href: use-column-sets.md
+    - name: 使用資料表值參數 (Database Engine)
+      href: use-table-valued-parameters-database-engine.md
+- name: 主要與外部索引鍵條件約束
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: 建立主索引鍵
+      href: create-primary-keys.md
+    - name: 修改主索引鍵
+      href: modify-primary-keys.md
+    - name: 刪除主索引鍵
+      href: delete-primary-keys.md
+    - name: 建立外部索引鍵關聯性
+      href: create-foreign-key-relationships.md
+    - name: 修改外部索引鍵關聯性
+      href: modify-foreign-key-relationships.md
+    - name: 刪除外部索引鍵關聯性
+      href: delete-foreign-key-relationships.md
+    - name: 檢視外部索引鍵屬性
+      href: view-foreign-key-properties.md
+    - name: 停用複寫的外部索引鍵條件約束
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: 停用 INSERT 和 UPDATE 陳述式的外部索引鍵條件約束
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: 唯一條件約束與檢查條件約束
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: 建立唯一的條件約束
+      href: create-unique-constraints.md
+    - name: 修改唯一的條件約束
+      href: modify-unique-constraints.md
+    - name: 刪除唯一的條件約束
+      href: delete-unique-constraints.md
+    - name: 建立檢查條件約束
+      href: create-check-constraints.md
+    - name: 修改檢查條件約束
+      href: modify-check-constraints.md
+    - name: 刪除檢查條件約束
+      href: delete-check-constraints.md
+    - name: 停用複寫的檢查條件約束
+      href: disable-check-constraints-for-replication.md
+    - name: 使用 INSERT 與 UPDATE 陳述式停用檢查條件約束
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: 資料表資料行屬性 (SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md

@@ -1,0 +1,9 @@
+- name: 事件通知
+  href: event-notifications.md
+  items:
+    - name: 實作事件通知
+      href: implement-event-notifications.md
+    - name: 設定事件通知的對話安全性
+      href: configure-dialog-security-for-event-notifications.md
+    - name: 取得事件通知詳細資訊
+      href: get-information-about-event-notifications.md

@@ -1,0 +1,46 @@
+- name: 概觀
+  href: security-overview-replication.md
+- name: 安全性與保護
+  href: security-and-protection-replication.md
+  items:
+    - name: 威脅和弱點安全防護
+      href: threat-and-vulnerability-mitigation-replication.md
+    - name: 識別和存取控制
+      href: identity-and-access-control-replication.md
+    - name: 管理複寫的登入與密碼
+      href: manage-logins-and-passwords-in-replication.md
+    - name: 安全開發
+      href: secure-development-replication.md
+    - name: 複寫代理程式安全性模型
+      href: replication-agent-security-model.md
+    - name: Security Role Requirements for Replication
+      href: security-role-requirements-for-replication.md
+    - name: 複寫安全性最佳做法
+      href: replication-security-best-practices.md
+- name: 安全的部署
+  href: secure-deployment-replication.md
+  items:
+    - name: 保護散發者
+      href: secure-the-distributor.md
+    - name: 保護發行者
+      href: secure-the-publisher.md
+    - name: 保護訂閱者
+      href: secure-the-subscriber.md
+    - name: 保護快照集資料夾
+      href: secure-the-snapshot-folder.md
+    - name: Securing Replication Over the Internet
+      href: securing-replication-over-the-internet.md
+      items:
+        - name: Web 同步處理的安全性架構
+          href: security-architecture-for-web-synchronization.md
+    - name: SQL Server Compact 複寫的安全性考量
+      href: security-considerations-for-sql-server-compact-replication.md
+- name: 保護複寫拓撲的安全性
+  href: secure-a-replication-topology.md
+  items:
+    - name: 檢視及修改複寫安全性設定
+      href: view-and-modify-replication-security-settings.md
+    - name: 管理發行集存取清單中的登入
+      href: manage-logins-in-the-publication-access-list.md
+    - name: 複寫加密資料行中的資料 (SQL Server Management Studio)
+      href: replicate-data-in-encrypted-columns-sql-server-management-studio.md

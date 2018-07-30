@@ -1,0 +1,92 @@
+- name: 擴充預存程序程式設計
+  href: database-engine-extended-stored-procedures-programming.md
+  items:
+    - name: 資料庫引擎擴充預存程序程式設計
+      href: ../database-engine-extended-stored-procedure-programming.md
+    - name: 擴充預存程序運作方式
+      href: how-extended-stored-procedures-work.md
+    - name: 建立擴充預存程序
+      href: creating-extended-stored-procedures.md
+    - name: 將結果集傳送到伺服器 (擴充預存程序 API)
+      href: sending-result-sets-to-the-server-extended-stored-procedure-api.md
+    - name: 將擴充預存程序加入至 SQL Server
+      href: adding-an-extended-stored-procedure-to-sql-server.md
+    - name: 擴充預存程序的執行特性
+      href: execution-characteristics-of-extended-stored-procedures.md
+    - name: 從 SQL Server 中移除擴充預存程序
+      href: removing-an-extended-stored-procedure-from-sql-server.md
+    - name: 查詢 SQL Server 中安裝的擴充預存程序
+      href: querying-extended-stored-procedures-installed-in-sql-server.md
+    - name: 卸載擴充預存程序 DLL
+      href: unloading-an-extended-stored-procedure-dll.md
+    - name: Unicode 資料和伺服器字碼頁
+      href: unicode-data-and-server-code-pages.md
+- name: 擴充預存程序程式設計人員參考
+  href: ../extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md
+  items:
+    - name: srv_alloc (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-alloc-extended-stored-procedure-api.md
+    - name: srv_convert (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-convert-extended-stored-procedure-api.md
+    - name: srv_describe (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md
+    - name: srv_getbindtoken (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md
+    - name: srv_got_attention (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md
+    - name: srv_message_handler (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-message-handler-extended-stored-procedure-api.md
+    - name: srv_paramdata (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paramdata-extended-stored-procedure-api.md
+    - name: srv_paraminfo (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md
+    - name: srv_paramlen (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paramlen-extended-stored-procedure-api.md
+    - name: srv_parammaxlen (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-parammaxlen-extended-stored-procedure-api.md
+    - name: srv_paramname (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paramname-extended-stored-procedure-api.md
+    - name: srv_paramnumber (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paramnumber-extended-stored-procedure-api.md
+    - name: srv_paramset (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paramset-extended-stored-procedure-api.md
+    - name: srv_paramsetoutput (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paramsetoutput-extended-stored-procedure-api.md
+    - name: srv_paramstatus (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paramstatus-extended-stored-procedure-api.md
+    - name: srv_paramtype (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-paramtype-extended-stored-procedure-api.md
+    - name: srv_pfield (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-pfield-extended-stored-procedure-api.md
+    - name: srv_pfieldex (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-pfieldex-extended-stored-procedure-api.md
+    - name: srv_rpcdb (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-rpcdb-extended-stored-procedure-api.md
+    - name: srv_rpcname (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-rpcname-extended-stored-procedure-api.md
+    - name: srv_rpcnumber (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-rpcnumber-extended-stored-procedure-api.md
+    - name: srv_rpcoptions (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-rpcoptions-extended-stored-procedure-api.md
+    - name: srv_rpcowner (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-rpcowner-extended-stored-procedure-api.md
+    - name: srv_rpcparams (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md
+    - name: srv_senddone (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-senddone-extended-stored-procedure-api.md
+    - name: srv_sendmsg (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-sendmsg-extended-stored-procedure-api.md
+    - name: srv_sendrow (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md
+    - name: srv_setcoldata (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md
+    - name: srv_setcollen (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-setcollen-extended-stored-procedure-api.md
+    - name: srv_setutype (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md
+    - name: srv_willconvert (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md
+    - name: srv_wsendmsg (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md
+    - name: 資料類型 (擴充預存程序 API)
+      href: ../extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md

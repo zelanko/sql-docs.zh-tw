@@ -1,0 +1,42 @@
+- name: SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)
+  href: windows-server-failover-clustering-wsfc-with-sql-server.md
+  items:
+    - name: WSFC 仲裁模式和投票組態
+      href: wsfc-quorum-modes-and-voting-configuration-sql-server.md
+      items:
+        - name: 檢視叢集仲裁 NodeWeight 設定
+          href: view-cluster-quorum-nodeweight-settings.md
+        - name: 設定叢集仲裁 NodeWeight 設定
+          href: configure-cluster-quorum-nodeweight-settings.md
+    - name: 透過強制仲裁執行 WSFC 災害復原
+      href: wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+      items:
+        - name: 在無仲裁情況下強制啟動 WSFC 叢集
+          href: force-a-wsfc-cluster-to-start-without-a-quorum.md
+    - name: SQL Server 多重子網路叢集
+      href: sql-server-multi-subnet-clustering-sql-server.md
+- name: AlwaysOn 容錯移轉叢集執行個體
+  href: always-on-failover-cluster-instances-sql-server.md
+- name: Failover Policy for Failover Cluster Instances
+  href: failover-policy-for-failover-cluster-instances.md
+  items:
+    - name: 設定 HealthCheckTimeout 屬性設定
+      href: configure-healthchecktimeout-property-settings.md
+    - name: 設定 FailureConditionLeve 屬性設定
+      href: configure-failureconditionlevel-property-settings.md
+    - name: 檢視及閱讀容錯移轉叢集執行個體診斷記錄檔
+      href: view-and-read-failover-cluster-instance-diagnostics-log.md
+- name: 容錯移轉叢集執行個體管理及維護
+  href: failover-cluster-instance-administration-and-maintenance.md
+  items:
+    - name: 將相依性加入 SQL Server 資源
+      href: add-dependencies-to-a-sql-server-resource.md
+    - name: 從容錯移轉叢集執行個體失敗的狀況復原
+      href: recover-from-failover-cluster-instance-failure.md
+    - name: 變更容錯移轉叢集執行個體的 IP 位址
+      href: change-the-ip-address-of-a-failover-cluster-instance.md
+- name: 升級 SQL Server 容錯移轉叢集
+  href: upgrade-a-sql-server-failover-cluster-instance.md
+  items:
+    - name: 升級 SQL Server 容錯移轉叢集執行個體 (安裝程式)
+      href: upgrade-a-sql-server-failover-cluster-instance-setup.md

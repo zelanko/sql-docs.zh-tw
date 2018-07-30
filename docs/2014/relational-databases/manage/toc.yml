@@ -1,0 +1,47 @@
+- name: SQL Server 公用程式的功能與工作
+  href: sql-server-utility-features-and-tasks.md
+- name: 在相同 SQL Server 執行個體上執行公用程式和非公用程式收集組的考量事項
+  href: run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
+- name: 建立 SQL Server 公用程式控制點 (SQL Server 公用程式)
+  href: create-a-sql-server-utility-control-point-sql-server-utility.md
+- name: 連接至 SQL Server 公用程式
+  href: connect-to-a-sql-server-utility.md
+- name: 註冊 SQL Server 的執行個體 (SQL Server 公用程式)
+  href: enroll-an-instance-of-sql-server-sql-server-utility.md
+- name: 使用公用程式總管來管理 SQL Server 公用程式
+  href: use-utility-explorer-to-manage-the-sql-server-utility.md
+- name: 監視 SQL Server 公用程式中的 SQL Server 執行個體
+  href: monitor-instances-of-sql-server-in-the-sql-server-utility.md
+- name: 檢視資源健全狀況原則結果 (SQL Server 公用程式)
+  href: view-resource-health-policy-results-sql-server-utility.md
+- name: 修改資源健康情況原則定義 (SQL Server 公用程式)
+  href: modify-a-resource-health-policy-definition-sql-server-utility.md
+- name: 設定公用程式控制點資料倉儲 (SQL Server 公用程式)
+  href: configure-your-utility-control-point-data-warehouse-sql-server-utility.md
+- name: 設定健康情況原則 (SQL Server 公用程式)
+  href: configure-health-policies-sql-server-utility.md
+- name: 降低 CPU 使用量原則的雜訊 (SQL Server 公用程式)
+  href: reduce-noise-in-cpu-utilization-policies-sql-server-utility.md
+- name: 從 SQL Server 公用程式移除 SQL Server 執行個體
+  href: remove-an-instance-of-sql-server-from-the-sql-server-utility.md
+- name: 變更 SQL Server 受管理的執行個體上之公用程式收集組的 Proxy 帳戶 (SQL Server 公用程式)
+  href: change-proxy-account-for-utility-collection-on-managed-sql-server.md
+- name: 將 UCP 從一個 SQL Server 執行個體移到另一個 (SQL Server 公用程式)
+  href: move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md
+- name: 移除公用程式控制點 (SQL Server 公用程式)
+  href: remove-a-utility-control-point-sql-server-utility.md
+- name: 疑難排解 SQL Server 公用程式
+  href: ../../database-engine/troubleshoot-the-sql-server-utility.md
+- name: 疑難排解 SQL Server 資源健全情況 (SQL Server 公用程式)
+  href: troubleshoot-sql-server-resource-health-sql-server-utility.md
+- name: 公用程式總管 F1 說明
+  href: utility-explorer-f1-help.md
+  items:
+    - name: 公用程式儀表板 (SQL Server 公用程式)
+      href: ../../database-engine/utility-dashboard-sql-server-utility.md
+    - name: 部署的資料層應用程式詳細資料 (SQL Server 公用程式)
+      href: ../../database-engine/deployed-data-tier-application-details-sql-server-utility.md
+    - name: 受管理的執行個體詳細資料 (SQL Server 公用程式)
+      href: ../../database-engine/managed-instance-details-sql-server-utility.md
+    - name: 公用程式管理 (SQL Server 公用程式)
+      href: ../../database-engine/utility-administration-sql-server-utility.md

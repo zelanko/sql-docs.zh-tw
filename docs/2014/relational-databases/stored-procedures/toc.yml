@@ -1,0 +1,37 @@
+- name: 預存程序
+  href: stored-procedures-database-engine.md
+  items:
+    - name: 建立預存程序
+      href: create-a-stored-procedure.md
+    - name: 修改預存程序
+      href: modify-a-stored-procedure.md
+    - name: 刪除預存程序
+      href: delete-a-stored-procedure.md
+    - name: 執行預存程序
+      href: execute-a-stored-procedure.md
+      items:
+        - name: 指定參數
+          href: specify-parameters.md
+    - name: 授與預存程序的權限
+      href: grant-permissions-on-a-stored-procedure.md
+    - name: 從預存程序傳回資料
+      href: return-data-from-a-stored-procedure.md
+    - name: 重新編譯預存程序
+      href: recompile-a-stored-procedure.md
+    - name: 重新命名預存程序
+      href: rename-a-stored-procedure.md
+    - name: 檢視預存程序的定義
+      href: view-the-definition-of-a-stored-procedure.md
+    - name: 檢視預存程序的相依性
+      href: view-the-dependencies-of-a-stored-procedure.md
+    - name: 預存程序屬性 (一般頁面)
+      href: stored-procedure-properties-general-page.md
+- name: Transact-SQL 中的 OLE Automation 物件
+  href: ole-automation-objects-in-transact-sql.md
+  items:
+    - name: OLE Automation 傳回碼與錯誤資訊
+      href: ole-automation-return-codes-and-error-information.md
+    - name: OLE Automation 結果集
+      href: ole-automation-result-sets.md
+    - name: OLE Automation 範例指令碼
+      href: ole-automation-sample-script.md

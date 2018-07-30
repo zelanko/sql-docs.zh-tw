@@ -1,0 +1,32 @@
+- name: 監視封裝執行和其他作業
+  href: monitor-running-packages-and-other-operations.md
+- name: 作用中的作業對話方塊
+  href: ../active-operations-dialog-box.md
+- name: Integration Services 伺服器的報表
+  href: ../reports-for-the-integration-services-server.md
+- name: 檢視 Integration Services 伺服器的報表
+  href: ../view-reports-for-the-integration-services-server.md
+- name: 檢視及停止在 Integration Services 伺服器上執行的封裝
+  href: ../viewing-and-stopping-packages-running-on-the-integration-services-server.md
+- name: Integration Services (SSIS) 記錄
+  href: integration-services-ssis-logging.md
+  items:
+    - name: 自訂訊息以進行記錄
+      href: ../custom-messages-for-logging.md
+    - name: 設定 SSIS 記錄對話方塊
+      href: ../configure-ssis-logs-dialog-box.md
+    - name: 使用已儲存的組態檔來設定記錄
+      href: ../configure-logging-by-using-a-saved-configuration-file.md
+    - name: 在 SQL Server Data Tools 中啟用封裝記錄功能
+      href: ../enable-package-logging-in-sql-server-data-tools.md
+    - name: 在 SSIS 伺服器上啟用封裝執行的記錄功能
+      href: ../enable-logging-for-package-execution-on-the-ssis-server.md
+- name: 效能計數器
+  href: performance-counters.md
+  items:
+    - name: 加入資料流程效能計數器的記錄檔
+      href: ../add-a-log-for-data-flow-performance-counters.md
+- name: 資料流程分析
+  href: ../analysis-of-data-flow.md
+- name: 資料流程點選
+  href: ../data-flow-taps.md

@@ -1,0 +1,11 @@
+- name: 安裝 Integration Services
+  href: install-integration-services.md
+- name: 並存安裝 Integration Services 版本
+  href: installing-integration-services-versions-side-by-side.md
+- name: 升級 Integration Services
+  href: upgrade-integration-services.md
+  items:
+    - name: 升級 Integration Services 封裝
+      href: upgrade-integration-services-packages.md
+    - name: 使用 SSIS 封裝升級精靈來升級 Integration Services 封裝
+      href: upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md

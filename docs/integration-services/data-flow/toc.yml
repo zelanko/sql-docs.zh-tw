@@ -1,0 +1,222 @@
+- name: 概觀
+  href: data-flow.md
+- name: 資料流程中的資料
+  href: data-in-data-flows.md
+  items:
+    - name: Integration Services 資料類型
+      href: integration-services-data-types.md
+    - name: 剖析資料
+      href: parsing-data.md
+    - name: 比較字串資料
+      href: comparing-string-data.md
+- name: 在資料流程中加入或刪除元件
+  href: add-or-delete-a-component-in-a-data-flow.md
+- name: 設定資料流程元件的屬性
+  href: set-the-properties-of-a-data-flow-component.md
+- name: 連接資料流程中的元件
+  href: connect-components-in-a-data-flow.md
+- name: Integration Services 路徑
+  href: integration-services-paths.md
+- name: 解析資料行參考編輯器
+  href: resolve-column-reference-editor.md
+- name: 資料檢視器
+  href: data-viewer.md
+- name: 處理資料中的錯誤
+  href: error-handling-in-data.md
+- name: 資料流程效能的功能
+  href: data-flow-performance-features.md
+- name: Source Assistant
+  href: source-assistant.md
+- name: Destination Assistant
+  href: destination-assistant.md
+- name: ADO NET 來源
+  href: ado-net-source.md
+- name: ADO NET 目的地
+  href: ado-net-destination.md
+- name: ADO NET 自訂屬性
+  href: ado-net-custom-properties.md
+- name: Azure Blob 來源
+  href: azure-blob-source.md
+- name: Azure Blob 目的地
+  href: azure-blob-destination.md
+- name: Azure Data Lake Store 來源
+  href: azure-data-lake-store-source.md
+- name: Azure Data Lake Store 目的地
+  href: azure-data-lake-store-destination.md
+- name: CDC 流程元件
+  href: cdc-flow-components.md
+  items:
+    - name: CDC 來源
+      href: cdc-source.md
+      items:
+        - name: CDC 來源自訂屬性
+          href: cdc-source-custom-properties.md
+        - name: 使用 CDC 來源擷取變更資料
+          href: extract-change-data-using-the-cdc-source.md
+    - name: CDC 分隔器
+      href: cdc-splitter.md
+    - name: 依據變更類型來導向 CDC 資料流
+      href: direct-the-cdc-stream-according-to-the-type-of-change.md
+    - name: 定義狀態變數
+      href: define-a-state-variable.md
+- name: 資料採礦模型定型目的地
+  href: data-mining-model-training-destination.md
+  items:
+    - name: 資料採礦模型定型目的地自訂屬性
+      href: data-mining-model-training-destination-custom-properties.md
+- name: 資料流目的地
+  href: data-streaming-destination.md
+  items:
+    - name: 逐步解說︰發行 SSIS 封裝做為 SQL 檢視
+      href: walkthrough-publish-an-ssis-package-as-a-sql-view.md
+- name: DataReader 目的地
+  href: datareader-destination.md
+  items:
+    - name: DataReader 目的地自訂屬性
+      href: datareader-destination-custom-properties.md
+- name: 維度處理目的地
+  href: dimension-processing-destination.md
+  items:
+    - name: 維度處理目的地自訂屬性
+      href: dimension-processing-destination-custom-properies.md
+- name: Excel 來源
+  href: excel-source.md
+- name: Excel 目的地
+  href: excel-destination.md
+- name: Excel 自訂屬性
+  href: excel-custom-properties.md
+- name: 一般檔案來源
+  href: flat-file-source.md
+- name: 一般檔案目的地
+  href: flat-file-destination.md
+- name: HDFS 檔案來源
+  href: hdfs-file-source.md
+- name: HDFS 檔案目的地
+  href: hdfs-file-destination.md
+- name: 一般檔案自訂屬性
+  href: flat-file-custom-properties.md
+- name: OData 來源
+  href: odata-source.md
+  items:
+    - name: 教學課程：使用 OData 來源
+      href: tutorial-using-the-odata-source.md
+    - name: 在執行階段提供 OData 來源查詢
+      href: modify-odata-source-query-at-runtime.md
+    - name: OData 來源屬性
+      href: odata-source-properties.md
+- name: ODBC 流程元件
+  href: odbc-flow-components.md
+  items:
+    - name: ODBC 目的地
+      href: odbc-destination.md
+      items:
+        - name: 使用 ODBC 目的地來載入資料
+          href: load-data-by-using-the-odbc-destination.md
+        - name: ODBC Destination Custom Properties
+          href: odbc-destination-custom-properties.md
+    - name: ODBC 來源
+      href: odbc-source.md
+      items:
+        - name: 使用 ODBC 來源來擷取資料
+          href: extract-data-by-using-the-odbc-source.md
+        - name: ODBC Source Custom Properties
+          href: odbc-source-custom-properties.md
+- name: OLE DB 來源
+  href: ole-db-source.md
+  items:
+    - name: 在資料流程元件中將查詢參數對應至變數
+      href: map-query-parameters-to-variables-in-a-data-flow-component.md
+    - name: 使用 OLE DB 來源來擷取資料
+      href: extract-data-by-using-the-ole-db-source.md
+- name: OLE DB 目的地
+  href: ole-db-destination.md
+  items:
+    - name: 使用 OLE DB 目的地來載入資料
+      href: load-data-by-using-the-ole-db-destination.md
+- name: OLE DB 自訂屬性
+  href: ole-db-custom-properties.md
+- name: 資料分割處理目的地
+  href: partition-processing-destination.md
+  items:
+    - name: 資料分割處理目的地自訂屬性
+      href: partition-processing-destination-custom-properties.md
+- name: 原始檔案來源
+  href: raw-file-source.md
+- name: Raw File Destination
+  href: raw-file-destination.md
+- name: 原始檔案自訂屬性
+  href: raw-file-custom-properties.md
+- name: 資料錄集目的地
+  href: recordset-destination.md
+  items:
+    - name: 使用資料錄集目的地
+      href: use-a-recordset-destination.md
+    - name: 資料錄集目的地自訂屬性
+      href: recordset-destination-custom-properties.md
+- name: SAP BW 來源
+  href: sap-bw-source.md
+  items:
+    - name: SAP BW 來源編輯器 (連接管理員頁面)
+      href: sap-bw-source-editor-connection-manager-page.md
+    - name: SAP BW 來源編輯器 (資料行頁面)
+      href: sap-bw-source-editor-columns-page.md
+    - name: SAP BW 來源編輯器 (錯誤輸出頁面)
+      href: sap-bw-source-editor-error-output-page.md
+    - name: SAP BW 來源編輯器 (進階頁面)
+      href: sap-bw-source-editor-advanced-page.md
+    - name: 查閱 RFC 目的地
+      href: look-up-rfc-destination.md
+    - name: 查閱 ProcessChain
+      href: look-up-process-chain.md
+    - name: 要求記錄檔
+      href: request-log.md
+    - name: 預覽
+      href: preview.md
+- name: SAP BW 目的地
+  href: sap-bw-destination.md
+  items:
+    - name: SAP BW 目的地編輯器 (連接管理員頁面)
+      href: sap-bw-destination-editor-connection-manager-page.md
+    - name: SAP BW 目的地編輯器 (對應頁面)
+      href: sap-bw-destination-editor-mappings-page.md
+    - name: SAP BW 目的地編輯器 (錯誤輸出頁面)
+      href: sap-bw-destination-editor-error-output-page.md
+    - name: SAP BW 目的地編輯器 (進階頁面)
+      href: sap-bw-destination-editor-advanced-page.md
+    - name: 查閱 InfoPackage
+      href: look-up-infopackage.md
+    - name: 建立新的 InfoObject
+      href: create-new-infoobject.md
+    - name: 建立交易資料的 InfoCube
+      href: create-infocube-for-transaction-data.md
+    - name: 查閱 InfoObject
+      href: look-up-infoobject.md
+    - name: 建立 InfoSource
+      href: create-infosource.md
+    - name: 建立交易資料的 InfoSource
+      href: create-infosource-for-transaction-data.md
+    - name: '[建立主要資料的 InfoSource]'
+      href: create-infosource-for-master-data.md
+    - name: 建立 InfoPackage
+      href: create-infopackage.md
+- name: SQL Server Compact Edition 目的地
+  href: sql-server-compact-edition-destination.md
+  items:
+    - name: SQL Server Compact Edition 目的地自訂屬性
+      href: sql-server-compact-edition-destination-custom-properties.md
+- name: SQL Server 目的地
+  href: sql-server-destination.md
+  items:
+    - name: 使用 SQL Server 目的地來大量載入資料
+      href: bulk-load-data-by-using-the-sql-server-destination.md
+    - name: SQL Server 目的地自訂屬性
+      href: sql-server-destination-custom-properties.md
+- name: 轉換
+  href: ../../integration-services/data-flow/transformations/integration-services-transformations.md
+- name: XML 來源
+  href: xml-source.md
+  items:
+    - name: 使用 XML 來源來擷取資料
+      href: extract-data-by-using-the-xml-source.md
+    - name: XML 來源自訂屬性
+      href: xml-source-custom-properties.md

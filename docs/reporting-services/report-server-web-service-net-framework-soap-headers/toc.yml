@@ -1,0 +1,8 @@
+- name: 使用 Reporting Services SOAP 標頭
+  href: using-reporting-services-soap-headers.md
+- name: 批次方法
+  href: batching-methods.md
+- name: 識別執行狀態
+  href: identifying-execution-state.md
+- name: 設定 GetProperties 方法的項目命名空間
+  href: setting-the-item-namespace-for-the-getproperties-method.md

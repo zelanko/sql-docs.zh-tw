@@ -1,0 +1,10 @@
+- name: DBSCHEMA_CATALOGS 資料列集
+  href: dbschema-catalogs-rowset.md
+- name: DBSCHEMA_COLUMNS 資料列集
+  href: dbschema-columns-rowset.md
+- name: DBSCHEMA_PROVIDER_TYPES 資料列集
+  href: dbschema-provider-types-rowset.md
+- name: DBSCHEMA_TABLES 資料列集
+  href: dbschema-tables-rowset.md
+- name: OLE DB 結構描述資料列集
+  href: ole-db-schema-rowsets.md

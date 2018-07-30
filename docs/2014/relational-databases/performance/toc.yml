@@ -1,0 +1,78 @@
+- name: 效能的監視與微調
+  href: monitor-and-tune-for-performance.md
+- name: 監視 SQL Server 元件
+  href: monitor-sql-server-components.md
+- name: 效能監視及微調工具
+  href: performance-monitoring-and-tuning-tools.md
+- name: 基數估計
+  href: cardinality-estimation-sql-server.md
+- name: 建立效能基準
+  href: establish-a-performance-baseline.md
+- name: 隔離效能問題
+  href: isolate-performance-problems.md
+- name: 找出瓶頸
+  href: identify-bottlenecks.md
+- name: Monitoring Performance By Using the Query Store
+  href: monitoring-performance-by-using-the-query-store.md
+- name: 伺服器效能與活動監視
+  href: server-performance-and-activity-monitoring.md
+  items:
+    - name: 啟動系統監視器 (Windows)
+      href: start-system-monitor-windows.md
+    - name: 設定 SQL Server 資料庫警示 (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: 檢視 Windows 應用程式記錄檔 (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: 檢視 SQL Server 錯誤記錄檔 (SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: 儲存死結圖形 (SQL Server Profiler)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: 開啟、檢視及列印死結檔案 (SQL Server Management Studio)
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: 個別儲存 Showplan XML 事件 (SQL Server Profiler)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: 個別儲存 Showplan XML 統計資料設定檔事件 (SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+- name: 顯示並儲存執行計畫
+  href: display-and-save-execution-plans.md
+  items:
+    - name: 顯示估計的執行計畫
+      href: display-the-estimated-execution-plan.md
+    - name: 顯示實際執行計畫
+      href: display-an-actual-execution-plan.md
+    - name: 以 XML 格式儲存執行計畫
+      href: save-an-execution-plan-in-xml-format.md
+- name: 計畫指南
+  href: plan-guides.md
+  items:
+    - name: 建立新的計畫指南
+      href: create-a-new-plan-guide.md
+    - name: 建立參數化查詢的計畫指南
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: 使用計畫指南指定查詢參數化行為
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: 將固定的查詢計畫套用至計畫指南
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: 將查詢提示附加至計畫指南
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: 檢視計畫指南屬性
+      href: view-plan-guide-properties.md
+    - name: 使用 SQL Server Profiler 建立及測試計畫指南
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: 升級之後驗證計畫指南
+      href: validate-plan-guides-after-upgrade.md
+    - name: 刪除計畫指南
+      href: delete-a-plan-guide.md
+    - name: 啟用或停用計畫指南
+      href: enable-or-disable-a-plan-guide.md
+- name: Database Engine Tuning Advisor
+  href: database-engine-tuning-advisor.md
+  items:
+    - name: 啟動及使用 Database Engine Tuning Advisor
+      href: start-and-use-the-database-engine-tuning-advisor.md
+    - name: 降低生產伺服器的微調負載
+      href: reduce-the-production-server-tuning-load.md
+    - name: 使用測試伺服器的考量
+      href: considerations-for-using-test-servers.md
+    - name: 檢視及處理 Database Engine Tuning Advisor 的輸出
+      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md

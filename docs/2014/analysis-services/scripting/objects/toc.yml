@@ -1,0 +1,143 @@
+- name: 物件
+  href: objects-assl.md
+  items:
+    - name: Account 元素
+      href: account-element-assl.md
+    - name: Action 元素
+      href: action-element-assl.md
+    - name: Aggregation 元素
+      href: aggregation-element-assl.md
+    - name: AggregationDesign 元素
+      href: aggregationdesign-element-assl.md
+    - name: AggregationInstance 元素
+      href: aggregationinstance-element-assl.md
+    - name: AlgorithmParameter 元素
+      href: algorithmparameter-element-assl.md
+    - name: AllMemberTranslation 元素
+      href: allmembertranslation-element-assl.md
+    - name: Annotation 元素
+      href: annotation-element-assl.md
+    - name: Assembly 元素
+      href: assembly-element-assl.md
+    - name: Attribute 元素
+      href: attribute-element-assl.md
+    - name: AttributeAllMemberTranslation 元素
+      href: attributeallmembertranslation-element-assl.md
+    - name: AttributePermission 元素
+      href: attributepermission-element-assl.md
+    - name: AttributeRelationship 元素
+      href: attributerelationship-element-assl.md
+    - name: Block 元素
+      href: block-element-assl.md
+    - name: Calculation 元素
+      href: calculation-element-assl.md
+    - name: CalculationProperty 元素
+      href: calculationproperty-element-assl.md
+    - name: CaptionColumn 元素
+      href: captioncolumn-element-assl.md
+    - name: CellPermission 元素
+      href: cellpermission-element-assl.md
+    - name: Column 元素
+      href: column-element-assl.md
+    - name: Command 元素
+      href: command-element-assl.md
+    - name: Cube 元素
+      href: cube-element-assl.md
+    - name: CubePermission 元素
+      href: cubepermission-element-assl.md
+    - name: CustomRollupColumn 元素
+      href: customrollupcolumn-element-assl.md
+    - name: CustomRollupPropertiesColumn 元素
+      href: customrolluppropertiescolumn-element-assl.md
+    - name: Data 元素
+      href: data-element-assl.md
+    - name: Database 元素
+      href: database-element-assl.md
+    - name: DatabasePermission 元素
+      href: databasepermission-element-assl.md
+    - name: DataSource 元素
+      href: datasource-element-assl.md
+    - name: DataSourcePermission 元素
+      href: datasourcepermission-element-assl.md
+    - name: DataSourceView 元素
+      href: datasourceview-element-assl.md
+    - name: Dimension 元素
+      href: dimension-element-assl.md
+    - name: DimensionPermission 元素
+      href: dimensionpermission-element-assl.md
+    - name: ErrorConfiguration 元素
+      href: errorconfiguration-element-assl.md
+    - name: Event 元素
+      href: event-element-assl.md
+    - name: File 元素
+      href: file-element-assl.md
+    - name: ForeignKeyColumn 元素
+      href: foreignkeycolumn-element-assl.md
+    - name: Group 元素
+      href: group-element-assl.md
+    - name: Hierarchy 元素
+      href: hierarchy-element-assl.md
+    - name: IncrementalProcessingNotification 元素
+      href: incrementalprocessingnotification-element-assl.md
+    - name: KeyColumn 元素
+      href: keycolumn-element-assl.md
+    - name: Kpi 元素
+      href: kpi-element-assl.md
+    - name: Level 元素
+      href: level-element-assl.md
+    - name: MdxScript 元素
+      href: mdxscript-element-assl.md
+    - name: Measure 元素
+      href: measure-element-assl.md
+    - name: MeasureGroup 元素
+      href: measuregroup-element-assl.md
+    - name: Member 元素
+      href: member-element-assl.md
+    - name: MiningModel 元素
+      href: miningmodel-element-assl.md
+    - name: MiningModelPermission 元素
+      href: miningmodelpermission-element-assl.md
+    - name: MiningStructure 元素
+      href: miningstructure-element-assl.md
+    - name: MiningStructurePermission 元素
+      href: miningstructurepermission-element-assl.md
+    - name: ModelingFlag 元素
+      href: modelingflag-element-assl.md
+    - name: NameColumn 元素
+      href: namecolumn-element-assl.md
+    - name: NamingTemplateTranslation 元素
+      href: namingtemplatetranslation-element-assl.md
+    - name: Partition 元素
+      href: partition-element-assl.md
+    - name: Perspective 元素
+      href: perspective-element-assl.md
+    - name: ProactiveCaching 元素
+      href: proactivecaching-element-assl.md
+    - name: QueryNotification 元素
+      href: querynotification-element-assl.md
+    - name: ReportFormatParameter 元素
+      href: reportformatparameter-element-asl.md
+    - name: ReportParameter 元素
+      href: reportparameter-element-assl.md
+    - name: Role 元素
+      href: role-element-assl.md
+    - name: Server 元素
+      href: server-element-assl.md
+    - name: ServerProperty 元素
+      href: serverproperty-element-assl.md
+    - name: SkippedLevelsColumn 元素
+      href: skippedlevelscolumn-element-assl.md
+    - name: SourceMeasureGroup 元素
+      href: sourcemeasuregroup-element-assl.md
+    - name: TableNotification 元素
+      href: tablenotification-element-assl.md
+    - name: Trace 元素
+      href: trace-element-assl.md
+    - name: Translation 元素
+      href: translation-element-assl.md
+    - name: UnaryOperatorColumn 元素
+      href: unaryoperatorcolumn-element-assl.md
+    - name: UnknownMemberTranslation 元素
+      href: unknownmembertranslation-element-assl.md
+    - name: ValueColumn 元素
+      href: valuecolumn-element-assl.md

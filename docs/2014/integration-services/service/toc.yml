@@ -1,0 +1,39 @@
+- name: Integration Services 服務 (SSIS 服務)
+  href: integration-services-service-ssis-service.md
+  items:
+    - name: 管理 Integration Services 服務
+      href: ../manage-the-integration-services-service.md
+    - name: 設定 Integration Services 服務的屬性
+      href: ../set-the-properties-of-the-integration-services-service.md
+    - name: 設定 Integration Services 服務 (SSIS 服務)
+      href: ../configuring-the-integration-services-service-ssis-service.md
+    - name: 針對 SSIS 服務的存取設定 Windows 防火牆
+      href: ../configure-a-windows-firewall-for-access-to-the-ssis-service.md
+    - name: 連接到遠端 Integration Services 伺服器 (SSIS 服務)
+      href: ../connect-to-a-remote-integration-services-server-ssis-service.md
+    - name: 連接到 Integration Services
+      href: ../connect-to-integration-services.md
+    - name: 授予 Integration Services 服務的權限
+      href: ../grant-permissions-to-integration-services-service.md
+    - name: Integration Services 服務所記錄的事件
+      href: events-logged-by-the-integration-services-service.md
+      items:
+        - name: 檢視 Integration Services 服務的事件
+          href: ../view-events-for-the-integration-services-service.md
+- name: 封裝管理 (SSIS 服務)
+  href: package-management-ssis-service.md
+  items:
+    - name: 匯入和匯出封裝 (SSIS 服務)
+      href: ../import-and-export-packages-ssis-service.md
+    - name: 匯出封裝對話方塊 UI 參考
+      href: ../export-package-dialog-box-ui-reference.md
+    - name: 匯入封裝對話方塊 UI 參考
+      href: ../import-package-dialog-box-ui-reference.md
+    - name: 封裝備份和還原 (SSIS 服務)
+      href: ../package-backup-and-restore-ssis-service.md
+    - name: 在 SQL Server Management Studio 中檢視 Integration Services 封裝 (SSIS 服務)
+      href: ../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md
+    - name: 叢集中的 Integration Services (SSIS)
+      href: integration-services-ssis-in-a-cluster.md
+    - name: 將 Integration Services 服務設定為叢集資源
+      href: ../configure-the-integration-services-service-as-a-cluster-resource.md

@@ -1,0 +1,20 @@
+- name: SInstance 類別
+  href: sinstance-class.md
+- name: 屬性
+  items:
+    - name: GeneralFlags 屬性 (SInstance 類別)
+      href: generalflags-property-sinstance-class.md
+    - name: InstanceName 屬性 (SInstance 類別)
+      href: instancename-property-sinstance-class.md
+    - name: NumberOfFlags 屬性 (SInstance 類別)
+      href: numberofflags-property-sinstance-class.md
+- name: 方法
+  items:
+    - name: GetCurrentCertificate 方法 (SInstance 類別)
+      href: getcurrentcertificate-method-sinstance-class.md
+    - name: RemoveCertificate 方法 (SInstance 類別)
+      href: removecertificate-method-sinstance-class.md
+    - name: SetCurrentCertificate 方法 (SInstance 類別)
+      href: setcurrentcertificate-method-sinstance-class.md
+    - name: SetDefaults 方法 (SInstance 類別)
+      href: setdefaults-method-sinstance-class.md

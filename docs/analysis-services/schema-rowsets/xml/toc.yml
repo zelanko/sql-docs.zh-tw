@@ -1,0 +1,68 @@
+- name: DISCOVER_CALC_DEPENDENCY 資料列集
+  href: discover-calc-dependency-rowset.md
+- name: DISCOVER_COMMAND_OBJECTS 資料列集
+  href: discover-command-objects-rowset.md
+- name: DISCOVER_COMMANDS 資料列集
+  href: discover-commands-rowset.md
+- name: DISCOVER_CONNECTIONS 資料列集
+  href: discover-connections-rowset.md
+- name: DISCOVER_CSDL_METADATA 資料列集
+  href: discover-csdl-metadata-rowset.md
+- name: DISCOVER_DATASOURCES 資料列集
+  href: discover-datasources-rowset.md
+- name: DISCOVER_DB_CONNECTIONS 資料列集
+  href: discover-db-connections-rowset.md
+- name: DISCOVER_DIMENSION_STAT 資料列集
+  href: discover-dimension-stat-rowset.md
+- name: DISCOVER_ENUMERATORS 資料列集
+  href: discover-enumerators-rowset.md
+- name: DISCOVER_JOBS 資料列集
+  href: discover-jobs-rowset.md
+- name: DISCOVER_KEYWORDS 資料列集 (XMLA)
+  href: discover-keywords-rowset-xmla.md
+- name: DISCOVER_LITERALS 資料列集
+  href: discover-literals-rowset.md
+- name: DISCOVER_LOCATIONS 資料列集
+  href: discover-locations-rowset.md
+- name: DISCOVER_LOCKS 資料列集
+  href: discover-locks-rowset.md
+- name: DISCOVER_MEMORYGRANT 資料列集
+  href: discover-memorygrant-rowset.md
+- name: DISCOVER_MEMORYUSAGE 資料列集
+  href: discover-memoryusage-rowset.md
+- name: DISCOVER_OBJECT_ACTIVITY 資料列集
+  href: discover-object-activity-rowset.md
+- name: DISCOVER_OBJECT_MEMORY_USAGE 資料列集
+  href: discover-object-memory-usage-rowset.md
+- name: DISCOVER_PARTITION_DIMENSION_STAT 資料列集
+  href: discover-partition-dimension-stat-rowset.md
+- name: DISCOVER_PARTITION_STAT 資料列集
+  href: discover-partition-stat-rowset.md
+- name: DISCOVER_PERFORMANCE_COUNTERS 資料列集
+  href: discover-performance-counters-rowset.md
+- name: DISCOVER_PROPERTIES 資料列集
+  href: discover-properties-rowset.md
+- name: DISCOVER_SCHEMA_ROWSETS 資料列集
+  href: discover-schema-rowsets-rowset.md
+- name: DISCOVER_SESSIONS 資料列集
+  href: discover-sessions-rowset.md
+- name: DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS 資料列集
+  href: discover-storage-table-column-segments-rowset.md
+- name: DISCOVER_STORAGE_TABLE_COLUMNS 資料列集
+  href: discover-storage-table-columns-rowset.md
+- name: DISCOVER_STORAGE_TABLES 資料列集
+  href: discover-storage-tables-rowset.md
+- name: DISCOVER_TRACE_COLUMNS 資料列集
+  href: discover-trace-columns-rowset.md
+- name: DISCOVER_TRACE_DEFINITION_PROVIDERINFO 資料列集
+  href: discover-trace-definition-providerinfo-rowset.md
+- name: DISCOVER_TRACE_EVENT_CATEGORIES 資料列集
+  href: discover-trace-event-categories-rowset.md
+- name: DISCOVER_TRACES 資料列集
+  href: discover-traces-rowset.md
+- name: DISCOVER_TRANSACTIONS 資料列集
+  href: discover-transactions-rowset.md
+- name: DISCOVER_XML_METADATA 資料列集
+  href: discover-xml-metadata-rowset.md
+- name: XML for Analysis 結構描述資料列集
+  href: xml-for-analysis-schema-rowsets.md

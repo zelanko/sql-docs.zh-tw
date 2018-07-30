@@ -1,0 +1,26 @@
+- name: 建立資料處理延伸模組程式庫
+  href: creating-a-data-processing-extension-library.md
+- name: 資料處理延伸模組概觀
+  href: data-processing-extensions-overview.md
+- name: 偵錯資料處理延伸模組程式碼
+  href: debugging-data-processing-extension-code.md
+- name: 將資料處理延伸模組部署到報表伺服器
+  href: deploying-a-data-processing-extension-to-a-report-server.md
+- name: 將資料處理延伸模組部署到報表設計師
+  href: deploying-a-data-processing-extension-to-report-designer.md
+- name: 部署資料處理延伸模組
+  href: deploying-a-data-processing-extension.md
+- name: 為資料處理延伸模組實作命令類別
+  href: implementing-a-command-class-for-a-data-processing-extension.md
+- name: 為資料處理延伸模組實作 Connection 類別
+  href: implementing-a-connection-class-for-a-data-processing-extension.md
+- name: 實作資料處理延伸模組
+  href: implementing-a-data-processing-extension.md
+- name: 為資料處理延伸模組實作 DataReader 類別
+  href: implementing-a-datareader-class-for-a-data-processing-extension.md
+- name: 準備實作資料處理延伸模組
+  href: preparing-to-implement-a-data-processing-extension.md
+- name: 移除資料處理延伸模組
+  href: removing-a-data-processing-extension.md
+- name: 透過 Reporting Services 使用外部資料集
+  href: using-an-external-dataset-with-reporting-services.md
