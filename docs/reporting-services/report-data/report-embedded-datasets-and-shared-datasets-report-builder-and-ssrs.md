@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022485"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>報表內嵌資料集和共用資料集 (報表產生器及 SSRS)
   資料集會從資料連接指定您要使用的資料。 資料集是以報表中儲存為內嵌資料來源或報表伺服器上共用資料來源參考的資料連接為基礎。 資料集包含指定一組欄位的查詢。 當您將這些欄位拖曳至設計介面時，您可以建立報表執行時評估為實際資料的運算式。  

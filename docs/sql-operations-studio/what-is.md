@@ -1,4 +1,4 @@
-﻿---
+---
 title: 何謂 SQL Operations Studio （預覽） | Microsoft Docs
 description: SQL Operations Studio (預覽) 是一套可在 Windows、 macOS 和 Linux 上執行的免費輕量型工具，可用於管理 SQL Server、Azure SQL Database 和 Azure SQL 資料倉儲，而毋須考慮其所在的平台。
 ms.custom: tools|sos
@@ -22,7 +22,7 @@ ms.locfileid: "34235842"
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>什麼是[!INCLUDE[name-sos](../includes/name-sos.md)]？
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 是一套可在 Windows, macOS 和 Linux 上執行的免費工具，可用於管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲，而毋須考慮其所在的平台。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]是一套可在 Windows, macOS 和 Linux 上執行的免費工具，可用於管理 SQL Server、 Azure SQL Database 和 Azure SQL 資料倉儲，而毋須考慮其所在的平台。
 
 **[下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
@@ -48,10 +48,9 @@ T-SQL 程式碼片段會產生適當的 T-SQL 語法來建立資料庫、 資料
 
 ## <a name="integrated-terminal"></a>整合式終端機
 
-在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用者介面的整合式終端機視窗中，使用您喜歡的命令列工具 (例如：Bash, PowerShell, sqlcmd, bcp和 ssh)。若要深入了解整合式終端機，請參閱[整合式驗證終端機] (整合 terminal.md)。
+在 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 使用者介面的整合式終端機視窗中，使用您喜歡的命令列工具 (例如：Bash, PowerShell, sqlcmd, bcp和 ssh)。 若要深入了解整合式終端機，請參閱[整合式驗證終端機] (整合 terminal.md)。
 
 ## <a name="next-steps"></a>後續步驟
 - [下載並安裝 [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [連接及查詢 SQL Server](quickstart-sql-server.md)
 - [連接及查詢 Azure SQL Database](quickstart-sql-database.md)
-
