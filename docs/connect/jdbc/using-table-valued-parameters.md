@@ -1,7 +1,7 @@
 ---
 title: 使用資料表值參數 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 356e81dc6faf25e12c4edd51d1927ac53c5b3a38
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 4852b9d6546375246c9236ccdfb8522c00ec548a
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978760"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279209"
 ---
 # <a name="using-table-valued-parameters"></a>使用資料表值參數
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -56,14 +56,14 @@ ms.locfileid: "37978760"
 ## <a name="creating-table-valued-parameter-types"></a>建立資料表值參數類型  
  資料表值參數是以使用 TRANSACT-SQL CREATE TYPE 陳述式所定義的強型別資料表結構為基礎。 您必須建立資料表類型，並在 SQL Server 中定義的結構，才能在用戶端應用程式中使用資料表值參數。 如需建立資料表類型的詳細資訊，請參閱[使用者定義資料表類型](http://go.microsoft.com/fwlink/?LinkID=98364)SQL Server 線上叢書 》 中。  
   
-```  
+```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
     ( CategoryID int, CategoryName nvarchar(50) )  
 ```  
   
  建立資料表類型之後, 您可以宣告資料表值參數，根據該型別。 下列 TRANSACT-SQL 片段將示範如何宣告資料表值參數在預存程序定義中。 請注意，READONLY 關鍵字需要宣告資料表值參數。  
   
-```  
+```sql
 CREATE PROCEDURE usp_UpdateCategories   
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```  
@@ -73,7 +73,7 @@ CREATE PROCEDURE usp_UpdateCategories
   
  下列 TRANSACT-SQL UPDATE 陳述式示範如何使用資料表值參數聯結至 Categories 資料表。 當您使用的資料表值參數使用 FROM 子句中聯結時，您必須也別名，如下所示，其中資料表值參數的別名設定為"ec":  
   
-```  
+```sql
 UPDATE dbo.Categories  
     SET Categories.CategoryName = ec.CategoryName  
     FROM dbo.Categories INNER JOIN @tvpEditedCategories AS ec  
@@ -82,7 +82,7 @@ UPDATE dbo.Categories
   
  此 TRANSACT-SQL 範例會示範如何從單一集合式作業中執行 INSERT 資料表值參數中選取資料列。  
   
-```  
+```sql
 INSERT INTO dbo.Categories (CategoryID, CategoryName)  
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```  
@@ -104,7 +104,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
   
  下列兩個程式碼片段示範如何設定的資料表值參數，SQLServerPreparedStatement 和 SQLServerCallableStatement 插入資料。 這裡 sourceTVPObject 可以 SQLServerDataTable、 ResultSet 或 ISQLServerDataRecord 物件。 此範例假設連接是使用中的連接物件。  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerPreparedStatement.  
 SQLServerPreparedStatement pStmt =   
     (SQLServerPreparedStatement) connection.prepareStatement(“INSERT INTO dbo.Categories SELECT * FROM ?”);  
@@ -112,7 +112,7 @@ pStmt.setStructured(1, "dbo.CategoryTableType", sourceTVPObject);
 pStmt.execute();  
 ```  
   
-```  
+```java
 // Using table-valued parameter with a SQLServerCallableStatement.  
 SQLServerCallableStatement pStmt =   
     (SQLServerCallableStatement) connection.prepareCall("exec usp_InsertCategories ?");       
@@ -126,7 +126,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-sqlserverdatatable-object"></a>將資料表值參數傳遞為 SQLServerDataTable 物件  
  從 Microsoft JDBC Driver 6.0 for SQL Server，SQLServerDataTable 類別代表關聯式資料的記憶體中資料表。 此範例示範如何建構使用 SQLServerDataTable 物件的記憶體中資料的資料表值參數。 程式碼第一次建立 SQLServerDataTable 物件，定義其結構描述，並使用資料填入資料表。 程式碼接著會設定會將此資料表做為資料表值參數傳遞至 SQL Server SQLServerPreparedStatement。  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create an in-memory data table.  
@@ -154,7 +154,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-a-resultset-object"></a>將資料表值參數傳遞為結果集物件  
  此範例示範如何將串流處理結果集的資料表值參數的資料之資料列。 第一次從來源資料表中擷取資料的程式碼建立 SQLServerDataTable 物件，定義其結構描述，並使用資料填入資料表。 程式碼接著會設定會將此資料表做為資料表值參數傳遞至 SQL Server SQLServerPreparedStatement。  
   
-```  
+```java
 // Assumes connection is an active Connection object.  
   
 // Create the source ResultSet object. Here SourceCategories is a table defined with the same schema as Categories table.   
@@ -174,7 +174,7 @@ pStmt.execute();
 ## <a name="passing-a-table-valued-parameter-as-an-isqlserverdatarecord-object"></a>將資料表值參數傳遞做為 ISQLServerDataRecord 物件  
  從 Microsoft JDBC Driver 6.0 for SQL Server，新介面 ISQLServerDataRecord 是適用於串流資料 （取決於如何使用者提供它的實作） 使用的資料表值參數。 下列範例會示範如何實作 ISQLServerDataRecord 介面以及如何將它傳遞做為資料表值參數。 為了簡單起見，下列範例會將硬式編碼值只在一個資料列傳遞至資料表值參數。 在理想情況下，使用者會實作這個介面的資料流的資料列從任何來源，例如從文字檔案。  
   
-```  
+```java
 class MyRecords implements ISQLServerDataRecord  
 {  
     int currentRow = 0;  

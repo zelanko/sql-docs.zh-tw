@@ -1,7 +1,7 @@
 ---
 title: 使用含傳回狀態的預存程序 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29bb95c06d86ad4d6e45002da1429f6c7d5a5c9e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: af02395791a678b822710db446971ed1a611bed6
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040596"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278989"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>使用含傳回狀態的預存程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38040596"
 > [!NOTE]  
 >  如需有關 SQL 逸出序列的詳細資訊，請參閱[使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
   
- 當您建構 `call` 逸出序列時，請使用 ?  (問號) 字元來指定傳回狀態參數。 此字元會充當預留位置，代表將從預存程序傳回的參數值。 若要指定傳回狀態參數的值，在執行預存程序之前，您必須使用 SQLServerCallableStatement 類別的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法來指定參數的資料類型。  
+ 當您建構 `call` 逸出序列時，請使用 ?  (問號) 字元來指定 IN 參數。 此字元會充當預留位置，代表將從預存程序傳回的參數值。 若要指定傳回狀態參數的值，在執行預存程序之前，您必須使用 SQLServerCallableStatement 類別的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法來指定參數的資料類型。  
   
 > [!NOTE]  
 >  搭配使用 JDBC 驅動程式與 SQL Server 資料庫時，在 registerOutParameter 方法中指定給傳回狀態參數的值一律為整數，您可以使用 java.sql.Types.INTEGER 資料類型來指定此整數。  
@@ -42,7 +42,7 @@ ms.locfileid: "38040596"
   
  例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列預存程序：  
   
-```  
+```sql
 CREATE PROCEDURE CheckContactCity  
    (@cityName CHAR(50))  
 AS  

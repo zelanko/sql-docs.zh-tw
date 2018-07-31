@@ -1,7 +1,7 @@
 ---
 title: 使用 SQL 逸出序列 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c9a4e7854098fcc0e2cc161658cc772cbd40c80c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978668"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278589"
 ---
 # <a name="using-sql-escape-sequences"></a>使用 SQL 逸出序列
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "37978668"
 ## <a name="like-wildcard-literals"></a>LIKE 萬用字元常值  
  JDBC 驅動程式支援使用 LIKE 子句萬用字元作為常值的 `{escape 'escape character'}` 語法。 例如，下列程式碼將會傳回 col3 的值，其中 col2 的值會實際以底線開頭 (而非其萬用字元用法)。  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -63,13 +63,13 @@ LIKE '\\_%' {escape '\\'}");
 ## <a name="function-handling"></a>函數處理  
  JDBC 驅動程式在 SQL 陳述式中支援函數逸出序列，其語法如下：  
   
-```  
+```java
 {fn functionName}  
 ```  
   
  其中 `functionName` 是 JDBC 驅動程式支援的函式。 例如：  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -85,7 +85,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## <a name="date-and-time-literals"></a>日期和時間常值  
  日期、時間和時間戳記常值的逸出語法如下：  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -99,7 +99,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  例如：  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -109,7 +109,7 @@ WHERE OrderID=1025
   
  程序是一種儲存在資料庫中的可執行物件。 通常，它是先行編譯的一或多個 SQL 陳述式。 呼叫預存程序的逸出序列語法如下：  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -120,13 +120,13 @@ WHERE OrderID=1025
 ## <a name="outer-joins"></a>外部聯結  
  JDBC 驅動程式支援 SQL92 左方外部聯結、右方外部聯結和完整外部聯結語法。 外部聯結的逸出序列如下：  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  其中 outer-join 為：  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -135,7 +135,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  例如：  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -159,7 +159,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  LIMIT 的逸出語法如下：  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   

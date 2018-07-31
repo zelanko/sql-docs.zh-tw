@@ -1,7 +1,7 @@
 ---
 title: 包裝函式和介面 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a7316e5daa6fa27209a31a07ddf0ace84c191b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 9a96d9b11473171cabd40e485342e1846017b307
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37994807"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279229"
 ---
 # <a name="wrappers-and-interfaces"></a>包裝函式與介面
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "37994807"
   
 ### <a name="code"></a>程式碼  
   
-```  
+```java
 import javax.sql.*;  
 import java.sql.*;  
 import com.microsoft.sqlserver.jdbc.*;  
