@@ -21,15 +21,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4ebf73e0ae0fb7866e7a2e6c66a3fcb94f2d9fc9
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: 024f014dda25be2d5b9ab01bd6eeffc57c3efcae
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872838"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107214"
 ---
 # <a name="using-connection-string-keywords-with-ole-db-driver-for-sql-server"></a>利用 OLE DB Driver for SQL Server 使用連接字串關鍵字
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -79,7 +79,7 @@ ms.locfileid: "37872838"
   
  下表描述可搭配 DBPROP_INIT_PROVIDERSTRING 使用的關鍵字。  
   
-|關鍵字|初始化屬性|描述|  
+|關鍵字|初始化屬性|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address" 的同義字。|  
 |**位址**|SSPROP_INIT_NETWORKADDRESS|執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路位址。 **Address** 通常是伺服器的網路名稱，不過也可能是其他名稱，例如管道、IP 位址，或 TCP/IP 通訊埠和通訊端位址。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> 值**地址**傳遞給的值中的優先順序高於**Server**時使用 OLE DB Driver for SQL Server 的連接字串中。 同時請注意，`Address=;` 將會連接到 **Server** 關鍵字中指定的伺服器，而 `Address= ;, Address=.;`、`Address=localhost;` 和 `Address=(local);` 都會造成與本機伺服器的連接。<br /><br /> **Address** 關鍵字的完整語法如下：<br /><br /> [*通訊協定 ***:**]* 位址 *[* *，* * * 連接埠&#124;\pipe\pipename*]<br /><br /> *protocol* 可以是 **tcp** (TCP/IP)、 **lpc** (共用記憶體) 或 **np** (具名管道)。 如需有關通訊協定的詳細資訊，請參閱[Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果沒有*通訊協定*也**網路**關鍵字指定，則 OLE DB Driver for SQL Server 將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* 是在指定伺服器上所要連接的通訊埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。|   
@@ -136,7 +136,7 @@ ms.locfileid: "37872838"
   
  下表說明可搭配 **IDataInitialize::GetDataSource** 使用的關鍵字：  
   
-|關鍵字|初始化屬性|描述|  
+|關鍵字|初始化屬性|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Application Name**|SSPROP_INIT_APPNAME|識別應用程式的字串。|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值為 **ReadOnly** 和 **ReadWrite**。<br /><br /> 預設值是**ReadWrite**。 如需 OLE DB Driver for SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 < [OLE DB Driver for SQL Server 支援的高可用性、 災害復原](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
@@ -152,7 +152,7 @@ ms.locfileid: "37872838"
 |**初始檔案名稱**|SSPROP_INIT_FILENAME|可附加資料庫的主要檔案名稱，包括完整路徑名稱。 若要使用 **AttachDBFileName**，您還必須使用提供者字串 DATABASE 關鍵字來指定資料庫名稱。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它 (它會使用附加的資料庫當做連接的預設值)。|  
 |**整合式安全性**|DBPROP_AUTH_INTEGRATED|接受 "SSPI" 值進行 Windows 驗證。|  
 |**MARS Connection**|SSPROP_INIT_MARSCONNECTION|啟用或停用連接上的 Multiple Active Result Sets (MARS)。 認得的值為 "true" 和 "false"。 預設值為 "false"。|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，一律指定 **MultiSubnetFailover=True**。 **MultiSubnetFailover = True**設定 OLE DB Driver for SQL Server 來提供更快速的偵測與 （目前） 作用中伺服器的連接。 可能的值為 **True** 和 **False**。 預設值為 **False**。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 如需 OLE DB Driver for SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 < [OLE DB Driver for SQL Server 支援的高可用性、 災害復原](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，一律指定 **MultiSubnetFailover=True**。 **MultiSubnetFailover=True** 會設定 OLE DB Driver for SQL Server ，以提供對 (目前) 使用中伺服器更快速的偵測與連線。 可能的值為 **True** 和 **False**。 預設值為 **False**。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 如需 OLE DB Driver for SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 < [OLE DB Driver for SQL Server 支援的高可用性、 災害復原](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的網路位址。<br /><br /> 如需有關有效位址語法的詳細資訊，請參閱本主題中對於 **Address** 關鍵字的說明。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
 |**封包大小**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值是 4096。|  
@@ -189,7 +189,7 @@ ms.locfileid: "37872838"
   
  下表描述可搭配 ADO 連接字串使用的關鍵字：  
   
-|關鍵字|初始化屬性|描述|  
+|關鍵字|初始化屬性|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|宣告連接到伺服器時的應用程式工作負載類型。 可能的值為 **ReadOnly** 和 **ReadWrite**。<br /><br /> 預設值是**ReadWrite**。 如需 OLE DB Driver for SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 < [OLE DB Driver for SQL Server 支援的高可用性、 災害復原](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Application Name**|SSPROP_INIT_APPNAME|識別應用程式的字串。|  
@@ -205,7 +205,7 @@ ms.locfileid: "37872838"
 |**初始檔案名稱**|SSPROP_INIT_FILENAME|可附加資料庫的主要檔案名稱，包括完整路徑名稱。 若要使用 **AttachDBFileName**，您還必須使用提供者字串 DATABASE 關鍵字來指定資料庫名稱。 如果之前已附加資料庫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會重新附加它 (它會使用附加的資料庫當做連接的預設值)。|  
 |**整合式安全性**|DBPROP_AUTH_INTEGRATED|接受 "SSPI" 值進行 Windows 驗證。|  
 |**MARS Connection**|SSPROP_INIT_MARSCONNECTION|當伺服器為 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 或更新版本時，啟用或停用連接上的 Multiple Active Result Sets (MARS)。 認得的值為 "true" 和 "false"。預設值是 "false"。|  
-|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，一律指定 **MultiSubnetFailover=True**。 **MultiSubnetFailover = True**設定 OLE DB Driver for SQL Server 來提供更快速的偵測與 （目前） 作用中伺服器的連接。 可能的值為 **True** 和 **False**。 預設值為 **False**。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 如需 OLE DB Driver for SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 < [OLE DB Driver for SQL Server 支援的高可用性、 災害復原](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
+|**MultiSubnetFailover**|SSPROP_INIT_MULTISUBNETFAILOVER|在連接到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 可用性群組的可用性群組接聽程式或 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體時，一律指定 **MultiSubnetFailover=True**。 **MultiSubnetFailover=True** 會設定 OLE DB Driver for SQL Server ，以提供對 (目前) 使用中伺服器更快速的偵測與連線。 可能的值為 **True** 和 **False**。 預設值為 **False**。 例如：<br /><br /> `MultiSubnetFailover=True`<br /><br /> 如需 OLE DB Driver for SQL Server 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱 < [OLE DB Driver for SQL Server 支援的高可用性、 災害復原](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)。|  
 |**Network Address**|SSPROP_INIT_NETWORKADDRESS|組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的網路位址。<br /><br /> 如需有關有效位址語法的詳細資訊，請參閱本主題中對於 **Address** 關鍵字的說明。|  
 |**Network Library**|SSPROP_INIT_NETWORKLIBRARY|用來建立組織中 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之連接的網路程式庫。|  
 |**封包大小**|SSPROP_INIT_PACKETSIZE|網路封包大小。 預設值是 4096。|  
