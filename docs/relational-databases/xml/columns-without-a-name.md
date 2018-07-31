@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2f2b2efe32a022e2bc897313aaa8fcef505214a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e90ebc825e0da713149f02ae2b707f5e1611b3ad
+ms.sourcegitcommit: d457bb828eb46ee83f8ff5bdecfff09b26d7b154
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33010885"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39259753"
 ---
 # <a name="columns-without-a-name"></a>沒有名稱的資料行
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,20 +55,16 @@ GO
   
  以下是部份結果：  
   
- `<row>`  
-  
- `<ProductModelID>7</ProductModelID>`  
-  
- `<Name>HL Touring Frame</Name>`  
-  
- `<MI:Location ...LocationID="10" ...></MI:Location>`  
-  
- `<MI:Location ...LocationID="20" ...></MI:Location>`  
-  
- `...`  
-  
- `</row>`  
-  
+```xml
+<row>
+  <ProductModelID>7</ProductModelID>
+  <Name>HL Touring Frame</Name>
+  <MI:Location ...LocationID="10" ...></MI:Location>
+  <MI:Location ...LocationID="20" ...></MI:Location>
+  ...
+</row>
+```
+
 ## <a name="see-also"></a>另請參閱  
  [搭配 FOR XML 使用 PATH 模式](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
