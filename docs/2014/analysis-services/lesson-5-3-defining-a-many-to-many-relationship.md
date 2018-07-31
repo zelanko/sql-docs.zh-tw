@@ -171,7 +171,7 @@ ms.locfileid: "37189235"
   
      下圖顯示 [Cube 設計師] 的 [篩選] 窗格和 [資料] 窗格。  
   
-     ![篩選和資料窗格的 [Cube 設計師](../../2014/tutorials/media/l5-many-to-many-5.gif "Cube 設計師] 的篩選和資料窗格")  
+     ![篩選和資料窗格的 Cube 設計師](../../2014/tutorials/media/l5-many-to-many-5.gif "Cube 設計師 的篩選和資料窗格")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [在量值群組內定義維度資料粒度](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  

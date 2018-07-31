@@ -26,7 +26,7 @@ ms.lasthandoff: 07/02/2018
 ms.locfileid: "37172099"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>交叉驗證 (SQL Server 資料採礦增益集)
-  ![交叉驗證] 按鈕，[資料採礦功能區](media/dmc-xvalid.gif "交叉驗證] 按鈕，[資料採礦功能區")  
+  ![交叉驗證 按鈕，資料採礦功能區](media/dmc-xvalid.gif "交叉驗證 按鈕，資料採礦功能區")  
   
  交叉驗證是一項標準分析工具，而且它是協助您開發並微調資料採礦模型的重要功能。 在您建立了採礦模型之後，就可以使用交叉驗證來確定模型的有效性，並在建立相關的採礦模型之後，比較彼此的結果。  
   

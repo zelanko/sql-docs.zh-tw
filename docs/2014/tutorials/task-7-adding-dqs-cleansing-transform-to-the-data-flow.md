@@ -30,7 +30,7 @@ ms.locfileid: "37196579"
   
 2.  選取 **從 Excel 檔案讀取供應商資料**; 以藍色連接器拖曳到**清理供應商資料**。 現在已連接這些元件。  
   
-     ![讀取供應商資料]-> [清理供應商資料](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "讀取供應商資料]-> [清理供應商資料")  
+     ![讀取供應商資料-> 清理供應商資料](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "讀取供應商資料-> 清理供應商資料")  
   
 3.  按兩下**清理供應商資料**。  
   

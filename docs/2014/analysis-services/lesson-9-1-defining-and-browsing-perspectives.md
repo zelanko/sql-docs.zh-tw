@@ -180,7 +180,7 @@ ms.locfileid: "37208188"
   
      ![在 Excel 中的資料連線精靈](../../2014/tutorials/media/l9-perspectives-3b.gif "在 Excel 中的資料連線精靈")  
   
-6.  選取 `Internet Sales`中**觀點來看**清單，然後檢閱 中繼資料 窗格中的維度與量值。  
+6.  選取 `Internet Sales`中**觀點來看**清單，然後檢閱 [中繼資料] 窗格中的維度與量值。  
   
      請注意，只有那些針對 [網際網路銷售] 檢視方塊所指定的物件才會顯示出來。  
   
@@ -192,7 +192,7 @@ ms.locfileid: "37208188"
   
      請注意，每一個量值群組只會出現一個量值，如下圖所示。  
   
-     ![網際網路銷售] 和 [轉售商銷售的量值](../../2014/tutorials/media/l9-perspectives-4.gif "網際網路銷售] 和 [轉售商銷售的量值")  
+     ![網際網路銷售 和 轉售商銷售的量值](../../2014/tutorials/media/l9-perspectives-4.gif "網際網路銷售 和 轉售商銷售的量值")  
   
 ## <a name="next-task-in-lesson"></a>本課程的下一項工作  
  [定義和瀏覽翻譯](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  

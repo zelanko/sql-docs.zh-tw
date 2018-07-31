@@ -1,5 +1,5 @@
 ---
-title: 如何： 執行參數化的查詢 |Microsoft 文件
+title: 如何： 執行參數化的查詢 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307567"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032987"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>如何：執行參數化查詢
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +35,13 @@ ms.locfileid: "35307567"
   
 2.  初始化或更新對應至 Transact-SQL 查詢中預留位置的 PHP 變數。  
   
-3.  使用步驟 2 中的 PHP 變數來建立或更新至 TRANSACT-SQL 字串中參數預留位置的對應參數值陣列。 陣列中的參數值必須是中的預留位置，代表它們的順序相同。
+3.  使用步驟 2 中的 PHP 變數，來建立或更新對應至 Transact-SQL 字串中參數預留位置的參數值陣列。 陣列中的參數值必須位於相同的順序來表示它們的預留位置。
   
 4.  執行查詢：  
   
     -   如果您使用 SQLSRV 驅動程式，請使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。  
   
-    -   如果您使用 PDO_SQLSRV 驅動程式，以執行查詢[pdo:: prepare](../../connect/php/pdo-prepare.md)和[pdostatement:: Execute](../../connect/php/pdostatement-execute.md)。 [PDO::prepare](../../connect/php/pdo-prepare.md) 和 [PDOStatement::execute](../../connect/php/pdostatement-execute.md) 的主題有程式碼範例。  
+    -   如果您要使用 PDO_SQLSRV 驅動程式，請以 [PDO::prepare](../../connect/php/pdo-prepare.md) 和 [PDOStatement::execute](../../connect/php/pdostatement-execute.md) 執行查詢。 [PDO::prepare](../../connect/php/pdo-prepare.md) 和 [PDOStatement::execute](../../connect/php/pdostatement-execute.md) 的主題有程式碼範例。  
   
 本主題的其餘部分將討論使用 SQLSRV 驅動程式的參數化查詢。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "35307567"
   
 此範例會接著查詢資料庫，確認已正確更新數量。 產品識別碼是 SELECT 查詢中的參數。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -114,12 +114,12 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-前一個範例使用 **sqlsrv_query** 函數來執行查詢。 此函數非常適合用來執行一次性查詢，因為它會同時進行陳述式準備和執行。 組合**sqlsrv_prepare**/**sqlsrv_execute**最適合用於重新執行具有不同的參數值的查詢。 若要查看以不同的參數值重新執行查詢的範例，請參閱下一個範例。  
+前一個範例使用 **sqlsrv_query** 函數來執行查詢。 此函數非常適合用來執行一次性查詢，因為它會同時進行陳述式準備和執行。 **sqlsrv_prepare**/**sqlsrv_execute** 的組合最適合使用不同的參數值來重新執行查詢。 若要查看以不同的參數值重新執行查詢的範例，請參閱下一個範例。  
   
 ## <a name="example"></a>範例  
-下列範例示範當您使用 **sqlsrv_prepare** 函數時如何隱含繫結變數。 此範例會將數個銷售訂單插入 *Sales.SalesOrderDetail* 資料表中。 *$Params*陣列都會繫結至陳述式 (*$stmt*) 時**sqlsrv_prepare**呼叫。 在每次執行可在資料表中插入新銷售訂單的查詢之前，都會以對應至銷售訂單詳細資料的新值來更新 *$params* 陣列。 後續的查詢執行會使用新的參數值。  
+下列範例示範當您使用 **sqlsrv_prepare** 函數時如何隱含繫結變數。 此範例會將數個銷售訂單插入 *Sales.SalesOrderDetail* 資料表中。 *$params* 陣列會在呼叫 **sqlsrv_prepare** 時繫結至陳述式 (*$stmt*)。 在每次執行可在資料表中插入新銷售訂單的查詢之前，都會以對應至銷售訂單詳細資料的新值來更新 *$params* 陣列。 後續的查詢執行會使用新的參數值。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

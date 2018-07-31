@@ -1,5 +1,5 @@
 ---
-title: 使用資料庫中繼資料 |Microsoft 文件
+title: 使用資料庫中繼資料 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2f3e0a4e19b30eeb494f89281a01195cf98b7d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850663"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982110"
 ---
 # <a name="using-database-metadata"></a>使用資料庫中繼資料
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  若要查詢資料庫有關，支援什麼[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]實作[SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)類別。 此類別包含數種方法，會以單一值形式或以結果集傳回資訊。  
+  為了查詢資料庫中有關其支援之項目的資訊，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會實作 [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 類別。 此類別包含數種方法，會以單一值形式或以結果集傳回資訊。  
   
- 若要建立 SQLServerDatabaseMetaData 物件時，您可以使用[getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md)方法[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)類別，以取得連接到資料庫的相關資訊。  
+ 若要建立 SQLServerDatabaseMetaData 物件，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) 方法來取得有關它連線之資料庫的資訊。  
   
- 在下列範例中，開啟連接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫會傳遞至函式、 SQLServerConnection 類別的 getMetaData 方法用來傳回 SQLServerDatabaseMetadata 物件，以及然後各種方法SQLServerDatabaseMetaData 物件可用來顯示驅動程式、 驅動程式版本、 資料庫名稱和資料庫版本的相關資訊。  
+ 在下列範例中，開啟連線[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫會傳遞至函式、 SQLServerConnection 類別的 getMetaData 方法來傳回 SQLServerDatabaseMetadata 物件，並接著的各種方法SQLServerDatabaseMetaData 物件用來顯示驅動程式、 驅動程式版本、 資料庫名稱和資料庫版本的相關資訊。  
   
  [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]  
   

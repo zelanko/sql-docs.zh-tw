@@ -68,7 +68,7 @@ ms.locfileid: "37322648"
   
  而根據執行 SQL 工作所使用的連接管理員類型，您必須在參數化 SQL 陳述式中使用特定的參數標記。  
   
- **相關主題[：** 執行 SQL 工作](control-flow/execute-sql-task.md)中的＜執行參數化的 SQL 命令＞一節  
+ **相關主題**： [執行 SQL 工作](control-flow/execute-sql-task.md)中的＜執行參數化的 SQL 命令＞一節  
   
  這個屬性具有下表中所列的選項。  
   

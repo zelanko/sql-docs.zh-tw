@@ -46,7 +46,7 @@ ms.locfileid: "37320374"
 > [!NOTE]  
 >  bcp 公用程式是透過使用 ODBC 大量複製撰寫的。  
   
- 如需 **bcp[ 命令語法的描述，請參閱** bcp 公用程式](../../tools/bcp-utility.md)。  
+ 如需 **bcp** 命令語法的描述，請參閱 [bcp 公用程式](../../tools/bcp-utility.md)。  
   
 ## <a name="examples"></a>範例  
  如需 **bcp** 範例，請參閱：  
