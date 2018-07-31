@@ -1,6 +1,6 @@
 ---
-title: 建立 SQL Server 索引 |Microsoft 文件
-description: 建立使用 SQL Server 的 OLE DB 驅動程式的 SQL Server 索引
+title: 建立 SQL Server 索引 |Microsoft Docs
+description: 建立使用 OLE DB Driver for SQL Server 的 SQL Server 索引
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,51 +20,51 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 352cdcbe6c2f5697ad7864f8048474d7a19ed632
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 6d8f20b4d6b18e6e7c995e3957b51b20cb59d5b3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689491"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107971"
 ---
 # <a name="creating-sql-server-indexes"></a>建立 SQL Server 索引
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server OLE DB 驅動程式會公開**iindexdefinition:: Createindex**函式，讓取用者上，定義新的索引[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。  
+  OLE DB Driver for SQL Server 會公開 **IIndexDefinition::CreateIndex**函數，讓取用者定義 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表的新索引。  
   
- SQL Server OLE DB 驅動程式會建立資料表索引做為索引或條件約束。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將建立條件約束的權限提供給資料表擁有者、資料庫擁有者，以及特定管理角色的成員。 根據預設，只有資料表擁有者可以建立資料表的索引。 因此，成功或失敗**CreateIndex**不是只在應用程式使用者的存取權限，但也在建立索引的類型而定。  
+ OLE DB Driver for SQL Server 會建立資料表索引做為索引或條件約束。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會將建立條件約束的權限提供給資料表擁有者、資料庫擁有者，以及特定管理角色的成員。 根據預設，只有資料表擁有者可以建立資料表的索引。 因此，**CreateIndex** 的成功或失敗，不但取決於應用程式使用者的存取權限，也取決於所建立之索引的類型。  
   
- 取用者指定的資料表名稱中的 Unicode 字元字串*pwszName*隸屬*uName*聯集*Createtable*參數。 *EKind*隸屬*Createtable*必須是 DBKIND_NAME。  
+ 取用者會在 *pTableID* 參數中，將資料表名稱指定為 *uName* 聯集之 *pwszName* 成員中的 Unicode 字元字串。 *pTableID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
- *PIndexID*參數可以是 NULL，而如果是，SQL Server OLE DB 驅動程式會建立索引的唯一名稱。 取用者可以藉由指定 DBID 的有效指標擷取的索引名稱*ppIndexID*參數。  
+ 當 *pIndexID* 參數為 NULL 時，OLE DB Driver for SQL Server 會針對索引建立一個唯一的名稱。 取用者可以在 *ppIndexID* 參數中指定 DBID 的有效指標，藉以擷取索引的名稱。  
   
- 取用者可以指定為 Unicode 字元字串中的索引名稱*pwszName*隸屬*uName*等位的*pIndexID*參數。 *EKind*隸屬*pIndexID*必須是 DBKIND_NAME。  
+ 取用者可以將索引名稱指定為 *pIndexID* 參數 *uName* 聯集之 *pwszName* 成員中的 Unicode 字元字串。 *pIndexID* 的 *eKind* 成員必須是 DBKIND_NAME。  
   
- 取用者會指定依名稱參與索引的一或多個資料行。 每個 DBINDEXCOLUMNDESC 結構中使用**CreateIndex**、 *eKind*隸屬*Ekind*必須是 DBKIND_NAME。 資料行名稱指定為 Unicode 字元字串中*pwszName*隸屬*uName*聯集*Ekind*。  
+ 取用者會指定依名稱參與索引的一或多個資料行。 對於在 **CreateIndex** 中使用的每個 DBINDEXCOLUMNDESC 結構，*pColumnID* 的 *eKind* 成員必須是 DBKIND_NAME。 在 *pColumnID* 中，資料行的名稱會指定為 *uName* 聯集之 *pwszName* 成員內的 Unicode 字元字串。  
   
- SQL Server OLE DB 驅動程式和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]值支援遞增順序在索引中。 如果取用者在任何 DBINDEXCOLUMNDESC 結構中指定 DBINDEX_COL_ORDER_DESC，SQL Server OLE DB 驅動程式會傳回 E_INVALIDARG。  
+ OLE DB Driver for SQL Server 和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]支援遞增順序，在索引中的值。 如果取用者在任何 DBINDEXCOLUMNDESC 結構中指定 DBINDEX_COL_ORDER_DESC，OLE DB Driver for SQL Server 會傳回 E_INVALIDARG。  
   
- **CreateIndex**會解譯索引屬性，如下所示。  
+ **CreateIndex** 會解譯索引屬性，如下所示。  
   
-|屬性識別碼|描述|  
+|屬性識別碼|Description|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： SQL Server OLE DB 驅動程式不支援這個屬性。 嘗試將屬性設定**CreateIndex**使 DB_S_ERRORSOCCURRED 傳回值。 *DwStatus*屬性結構成員表示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_CLUSTERED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：控制索引叢集。<br /><br /> VARIANT_TRUE: SQL Server OLE DB 驅動程式會嘗試建立叢集的索引上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在任何資料表上，最多支援一個叢集索引。<br /><br /> VARIANT_FALSE: SQL Server OLE DB 驅動程式會嘗試建立非叢集索引上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。|  
-|DBPROP_INDEX_FILLFACTOR|R/W：讀取/寫入<br /><br /> 預設值： 0<br /><br /> 描述：指定儲存所使用之索引頁的百分比。 如需詳細資訊，請參閱[CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md)。<br /><br /> 變數的類型為 VT_I4。 其值必須大於或等於 1 且小於或等於 100。|  
-|DBPROP_INDEX_INITIALIZE|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： SQL Server OLE DB 驅動程式不支援這個屬性。 嘗試將屬性設定**CreateIndex**使 DB_S_ERRORSOCCURRED 傳回值。 *DwStatus*屬性結構成員表示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_NULLCOLLATION|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： SQL Server OLE DB 驅動程式不支援這個屬性。 嘗試將屬性設定**CreateIndex**使 DB_S_ERRORSOCCURRED 傳回值。 *DwStatus*屬性結構成員表示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_NULLS|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： SQL Server OLE DB 驅動程式不支援這個屬性。 嘗試將屬性設定**CreateIndex**使 DB_S_ERRORSOCCURRED 傳回值。 *DwStatus*屬性結構成員表示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_AUTOUPDATE|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： OLE DB Driver for SQL Server 不支援這個屬性。 嘗試在 **CreateIndex** 中設定屬性會使 DB_S_ERRORSOCCURRED 傳回值。 屬性結構的 *dwStatus* 成員表示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_CLUSTERED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：控制索引叢集。<br /><br /> VARIANT_TRUE: OLE DB Driver for SQL Server 會嘗試建立叢集的索引上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 在任何資料表上，最多支援一個叢集索引。<br /><br /> VARIANT_FALSE： 若要建立非叢集索引的 OLE DB Driver for SQL Server 嘗試[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表。|  
+|DBPROP_INDEX_FILLFACTOR|R/W：讀取/寫入<br /><br /> 預設值：0<br /><br /> 描述：指定儲存所使用之索引頁的百分比。 如需詳細資訊，請參閱 [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md)。<br /><br /> 變數的類型為 VT_I4。 其值必須大於或等於 1 且小於或等於 100。|  
+|DBPROP_INDEX_INITIALIZE|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： OLE DB Driver for SQL Server 不支援這個屬性。 嘗試在 **CreateIndex** 中設定屬性會使 DB_S_ERRORSOCCURRED 傳回值。 屬性結構的 *dwStatus* 成員表示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_NULLCOLLATION|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： OLE DB Driver for SQL Server 不支援這個屬性。 嘗試在 **CreateIndex** 中設定屬性會使 DB_S_ERRORSOCCURRED 傳回值。 屬性結構的 *dwStatus* 成員表示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_NULLS|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： OLE DB Driver for SQL Server 不支援這個屬性。 嘗試在 **CreateIndex** 中設定屬性會使 DB_S_ERRORSOCCURRED 傳回值。 屬性結構的 *dwStatus* 成員表示 DBPROPSTATUS_BADVALUE。|  
 |DBPROP_INDEX_PRIMARYKEY|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE 描述：建立索引做為參考完整性，也就是 PRIMARY KEY 條件約束。<br /><br /> VARIANT_TRUE：索引建立之後，即可支援資料表的 PRIMARY KEY 條件約束。 資料行必須是不允許為 Null。<br /><br /> VARIANT_FALSE：索引不會當做資料表中之資料列值的 PRIMARY KEY 條件約束使用。|  
-|DBPROP_INDEX_SORTBOOKMARKS|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： SQL Server OLE DB 驅動程式不支援這個屬性。 嘗試將屬性設定**CreateIndex**使 DB_S_ERRORSOCCURRED 傳回值。 *DwStatus*屬性結構成員表示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_TEMPINDEX|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： SQL Server OLE DB 驅動程式不支援這個屬性。 嘗試將屬性設定**CreateIndex**使 DB_S_ERRORSOCCURRED 傳回值。 *DwStatus*屬性結構成員表示 DBPROPSTATUS_BADVALUE。|  
-|DBPROP_INDEX_TYPE|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： SQL Server OLE DB 驅動程式不支援這個屬性。 嘗試將屬性設定**CreateIndex**使 DB_S_ERRORSOCCURRED 傳回值。 *DwStatus*屬性結構成員表示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_SORTBOOKMARKS|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： OLE DB Driver for SQL Server 不支援這個屬性。 嘗試在 **CreateIndex** 中設定屬性會使 DB_S_ERRORSOCCURRED 傳回值。 屬性結構的 *dwStatus* 成員表示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_TEMPINDEX|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： OLE DB Driver for SQL Server 不支援這個屬性。 嘗試在 **CreateIndex** 中設定屬性會使 DB_S_ERRORSOCCURRED 傳回值。 屬性結構的 *dwStatus* 成員表示 DBPROPSTATUS_BADVALUE。|  
+|DBPROP_INDEX_TYPE|R/W：讀取/寫入<br /><br /> 預設值：無<br /><br /> 描述： OLE DB Driver for SQL Server 不支援這個屬性。 嘗試在 **CreateIndex** 中設定屬性會使 DB_S_ERRORSOCCURRED 傳回值。 屬性結構的 *dwStatus* 成員表示 DBPROPSTATUS_BADVALUE。|  
 |DBPROP_INDEX_UNIQUE|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：建立索引做為參與之一或多個資料行的 UNIQUE 條件約束。<br /><br /> VARIANT_TRUE：此索引用於唯一限制資料表中的資料列值。<br /><br /> VARIANT_FALSE：此索引不會唯一限制資料列值。|  
   
- 在提供者特有的屬性集 DBPROPSET_SQLSERVERINDEX 中，SQL Server OLE DB 驅動程式會定義下列資料來源資訊屬性。  
+ 在提供者特定的屬性集 DBPROPSET_SQLSERVERINDEX 中，OLE DB Driver for SQL Server 會定義下列資料來源資訊屬性。  
   
-|屬性識別碼|描述|  
+|屬性識別碼|Description|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|類型：VT_BOOL (R/W)<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 描述：利用包含 IIndexDefinition::CreateIndex 的 VARIANT_TRUE 值指定此屬性時，會建立對應到要建立索引之資料行的主要 xml 索引。 如果此屬性為 VARIANT_TRUE，cIndexColumnDescs 應該為 1，否則就是錯誤。|  
   

@@ -1,5 +1,5 @@
 ---
-title: 命令產生多個資料列集結果 |Microsoft 文件
+title: 產生多個資料列集結果的命令 |Microsoft Docs
 description: 產生多個資料列集結果的命令
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,26 +21,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665514"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109620"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>產生多個資料列集結果的命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server OLE DB 驅動程式可傳回多個資料列集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]陳述式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
+  OLE DB Driver for SQL Server 可以傳回多個資料列集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]陳述式。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 陳述式在下列條件下會傳回多個資料列集結果：  
   
 -   批次的 SQL 陳述式以單一命令提交。  
   
 -   預存程序實作 SQL 陳述式批次。  
   
 ## <a name="batches"></a>批次  
- SQL Server OLE DB 驅動程式將分號字元辨識為 SQL 陳述式的批次分隔符號：  
+ OLE DB Driver for SQL Server 將分號字元辨識為 SQL 陳述式的批次分隔符號：  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

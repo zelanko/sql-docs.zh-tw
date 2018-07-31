@@ -1,5 +1,5 @@
 ---
-title: 連接 bcp |Microsoft 文件
+title: 連接 bcp |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852593"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041399"
 ---
 # <a name="connecting-with-bcp"></a>連接 bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[Bcp](http://go.microsoft.com/fwlink/?LinkID=190626)公用程式位於[!INCLUDE[msCoName](../../../includes/msconame_md.md)]ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 及 macOS 上。 此頁面文件的 Windows 版本在差異`bcp`。
+[Bcp](http://go.microsoft.com/fwlink/?LinkID=190626) 公用程式可在 Linux 和 macOS 版 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 上使用。 本頁記載的 Windows 版本的差異`bcp`。
   
 - 欄位結束字元是定位字元 ("\t")。  
   
 - 行結束字元是新行字元 ("\n")。  
   
-- 字元模式是慣用的格式為`bcp`格式化檔案，以及不含擴充的字元的資料檔案。  
+- 字元模式是不含擴充字元的 `bcp` 格式檔案和資料檔案的慣用格式。  
   
 > [!NOTE]  
-> 反斜線 '\\' 上的命令列引數必須是加上引號或逸出。 例如，若要指定新行字元做為自訂的資料列結束字元，您必須使用下列機制的其中一個：  
+> 命令列引數上的反斜線 '\\' 必須加上引號或逸出。 例如，若要將新行字元指定為自訂資料列結束字元，您必須使用下列其中一種機制：  
 >   
 > -   -r\\\n  
 > -   -r"\n"  
 > -   -r'\n'  
   
-以下是範例命令引動過程的`bcp`資料表資料列複製到文字檔案：  
+以下是將資料表資料列複製到文字檔的 `bcp` 範例命令呼叫：  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
 ```  
   
 ## <a name="available-options"></a>可用的選項
-在目前版本中，下列語法和選項可用：  
+在目前版本中，有下列語法和選項可供使用：  
 
-[*資料庫 ***。**]* 結構描述 ***。*** 資料表 ***中** *data_file* | **出** *data_file*
+[*database***.**]* schema ***.*** table* **in** *data_file* | **out** *data_file*
 
 - -a *packet_size*  
 指定伺服器所收送之每個網路封包的位元組數。  
@@ -65,11 +65,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定要連接的資料庫。  
   
 - -d  
-傳遞給的值會導致`bcp`-S 選項可解譯為資料來源名稱 (DSN)。 如需詳細資訊，請參閱 「 sqlcmd 和 bcp 中的 DSN 支援 」[使用 sqlcmd 連接](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)。  
+使傳遞至 `bcp` -S 選項的值解譯為資料來源名稱 (DSN)。 如需詳細資訊，請參閱[使用 sqlcmd 進行連線](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)中的＜sqlcmd 和 bcp 中的 DSN 支援＞。  
   
-- -e *error_file*指定用來儲存任何的錯誤檔的完整路徑的資料列`bcp`公用程式無法從檔案傳送到資料庫。  
+- -e *error_file* 指定錯誤檔的完整路徑，該錯誤檔用來儲存 `bcp` 公用程式無法從檔案傳送至資料庫的任何資料列。  
   
-- -e  
+- -E  
 將匯入之資料檔案中的識別值用於識別欄位。  
   
 - -f *format_file*  
@@ -82,13 +82,13 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定空白資料行在作業過程中應保持 Null 值，而非保有插入之資料行的任何預設值。  
   
 - -l  
-指定登入逾時。 – L 選項指定的登入之前的秒數[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]逾時當您嘗試連接到伺服器。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 到 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為 0 會指定無限逾時。
+指定登入逾時。 –l 選項會指定您嘗試連線到伺服器時，登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 逾時之前的秒數。 預設登入逾時是 15 秒。 登入逾時必須是介於 0 與 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內，`bcp` 就會產生錯誤訊息。 值為 0 會指定無限逾時。
   
 - -L *last_row*  
 指定要從資料表匯出或從資料檔案匯入的最後一個資料列的號碼。  
   
 - -m *max_errors*  
-指定最大數目之前可發生的語法錯誤`bcp`取消作業。  
+指定 `bcp` 作業取消前，可以出現的語法錯誤數上限。  
   
 - -n  
 使用資料的原生 (資料庫) 資料類型來執行大量複製作業。  
@@ -106,18 +106,18 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定要使用定義給用戶端電腦地區設定的區域格式，將貨幣、日期和時間資料大量複製到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 中。  
   
 - -S *server*  
-指定的名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]執行個體連線，或如果-D 是使用，資料來源名稱。  
+指定的名稱[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]連接的執行個體如果-D 是使用或，DSN。  
   
 - -t *field_terminator*  
 指定欄位結束字元。  
   
 - -T  
-指定`bcp`公用程式連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]信任連接 （整合式安全性）。  
+指定 `bcp` 公用程式使用信任連線 (整合式安全性) 連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
 - -U *login_id*  
 指定用來連接至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的登入識別碼。  
   
-- -v  
+- -V  
 報告 `bcp` 公用程式版本號碼和著作權。  
   
 - -w  
@@ -126,7 +126,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 在此版本中，支援 Latin-1 和 UTF-16 字元。  
   
 ## <a name="unavailable-options"></a>無法使用的選項
-在目前版本中，下列語法和選項即無法使用：  
+在目前版本中，下列語法和選項無法使用：  
 
 - -c  
 指定資料檔案中之資料的字碼頁。  
@@ -144,11 +144,11 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 指定接收來自命令提示字元重新導向之輸出的檔案名稱。  
   
 - -V (80 | 90 | 100)  
-使用資料類型，從較早版本的[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+使用舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的資料類型。  
   
 - -X  
 與 format 和 -f format_file 選項一起使用，會產生以 XML 為基礎的格式檔案，而非預設的非 XML 格式檔案。  
   
 ## <a name="see-also"></a>另請參閱
 
-[使用連接**sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[使用 **sqlcmd** 進行連線](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

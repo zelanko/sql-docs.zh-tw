@@ -1,6 +1,6 @@
 ---
-title: 保存資料來源物件 |Microsoft 文件
-description: 保存資料來源物件
+title: 保存的資料來源物件 |Microsoft Docs
+description: 保存的資料來源物件
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665608"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106944"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驅動程式支援保存的資料來源物件與**IPersistFile**介面。  
+  OLE DB Driver for SQL Server 支援保存的資料來源物件與**IPersistFile**介面。  
   
 ## <a name="examples"></a>範例  
  **A.保存資料來源初始化：**  
   
- 這個範例會示範一個函數，此函數會保存定義伺服器和資料庫的資料來源初始化屬性，以及使用 Windows 驗證模式來進行連接。 伺服器名稱和資料庫名稱中會收到*pLocation*和*pDatasource*函式的參數。  
+ 這個範例會示範一個函數，此函數會保存定義伺服器和資料庫的資料來源初始化屬性，以及使用 Windows 驗證模式來進行連接。 伺服器名稱和資料庫名稱會在此函式的 *pLocation* 和 *pDatasource* 參數中接收。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -233,7 +233,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **Ipersistfile:: Save**方法呼叫之前或之後呼叫**idbinitialize:: Initialize**。 成功傳回之後呼叫此方法**idbinitialize:: Initialize**可確保會保存有效的資料來源規格。  
+ **IPersistFile::Save** 方法可以在呼叫 **IDBInitialize::Initialize** 之前或之後呼叫。 當從 **IDBInitialize::Initialize** 成功傳回之後呼叫此方法時，可確保已保存有效的資料來源規格。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料來源物件&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

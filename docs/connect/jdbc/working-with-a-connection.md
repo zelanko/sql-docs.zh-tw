@@ -1,5 +1,5 @@
 ---
-title: 使用連接 |Microsoft 文件
+title: 使用連線 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbcd46cd9da1ab189aeafe77c7275aa103ea51f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851923"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060269"
 ---
 # <a name="working-with-a-connection"></a>使用連接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  下列各節提供的不同的方式可連接到範例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)類別[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]。  
+  下列各節將提供使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 的 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別來連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫之不同方法的範例。  
   
 > [!NOTE]  
->  如果您有連接到的問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用 JDBC 驅動程式，請參閱[連接性疑難排解](../../connect/jdbc/troubleshooting-connectivity.md)建議如何修正它。  
+>  如果您使用 JDBC 驅動程式連線到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 時發生問題，請參閱[連線能力疑難排解](../../connect/jdbc/troubleshooting-connectivity.md)，以取得如何更正此問題的建議。  
   
 ## <a name="creating-a-connection-by-using-the-drivermanager-class"></a>使用 DriverManager 類別建立連接  
- 最簡單的方式建立的連接[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫為載入 JDBC 驅動程式，並呼叫 getConnection 方法的 DriverManager 類別，如下所示：  
+ 建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫連線最簡單的方式為載入 JDBC 驅動程式，並呼叫 DriverManager 類別的 getConnection 方法，如下所示：  
   
 ```  
 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
@@ -41,10 +41,10 @@ Connection con = DriverManager.getConnection(connectionUrl);
  此技術將使用驅動程式清單中第一個可用的驅動程式 (可與指定之 URL 順利進行連接)，以建立資料庫連接。  
   
 > [!NOTE]  
->  使用 sqljdbc4.jar 類別庫時，應用程式不需要明確註冊或載入此驅動程式使用 Class.forName 方法。 DriverManager 類別的 getConnection 方法呼叫時，就有一個適當的驅動程式位於從已註冊的 JDBC 驅動程式的集合。 如需詳細資訊，請參閱＜使用 JDBC Driver＞。  
+>  使用 sqljdbc4.jar 類別庫時，應用程式不需要使用 Class.forName 方法來明確註冊或載入此驅動程式。 呼叫 DriverManager 類別的 getConnection 方法時，就有一個適當的驅動程式所在的已註冊的 JDBC 驅動程式集中。 如需詳細資訊，請參閱＜使用 JDBC Driver＞。  
   
 ## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>使用 SQLServerDriver 類別建立連接  
- 如果您有指定 DriverManager 驅動程式清單中的特定驅動程式，您可以建立資料庫連接使用[連接](../../connect/jdbc/reference/connect-method-sqlserverdriver.md)方法[SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md)類別，如下所示：  
+ 如果您必須在 DriverManager 的驅動程式清單中指定特定的驅動程式，您可使用 [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 類別的 [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) 方法建立資料庫連線，如下所示：  
   
 ```  
 Driver d = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();  
@@ -53,7 +53,7 @@ Connection con = d.connect(connectionUrl, new Properties());
 ```  
   
 ## <a name="creating-a-connection-by-using-the-sqlserverdatasource-class"></a>使用 SQLServerDataSource 類別建立連接  
- 如果您必須建立的連接使用[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)類別，您可以使用類別的各種 setter 方法，才能呼叫[getConnection](../../connect/jdbc/reference/getconnection-method.md)方法，如下所示：  
+ 如果您必須使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別建立連線，您可在呼叫 [getConnection](../../connect/jdbc/reference/getconnection-method.md) 方法之前使用該類別的各種 setter 方法，如下所示：  
   
 ```  
 SQLServerDataSource ds = new SQLServerDataSource();  
@@ -84,7 +84,7 @@ Connection con = ds.getConnection();
   
  `String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"`  
   
- 如需更多連接 URL 範例，請參閱[建立連接 URL](../../connect/jdbc/building-the-connection-url.md)。  
+ 如需更多連接 URL 範例，請參閱 < [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)。  
   
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>建立具有自訂登入逾時的連接  
  如果您必須調整伺服器負載或網路流量，您可建立具有特定登入逾時值 (以秒計) 的連接，如下所示：  
@@ -97,11 +97,11 @@ Connection con = ds.getConnection();
  `String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"`  
   
 ## <a name="closing-a-connection"></a>關閉連接  
- 您可以呼叫，以明確關閉資料庫連接[關閉](../../connect/jdbc/reference/close-method-sqlserverconnection.md)SQLServerConnection 類別方法，如下所示：  
+ 您可呼叫 SQLServerConnection 類別的 [close](../../connect/jdbc/reference/close-method-sqlserverconnection.md) 方法以明確關閉資料庫連線，如下所示：  
   
  `con.close();`  
   
- 這會釋出的 SQLServerConnection 物件所使用的資料庫資源，或將連接傳回連接集區管理的集區的案例中。  
+ 如此將釋放出 SQLServerConnection 物件正在使用的資料庫資源，或將連線傳回共用狀況中的連線集區。  
   
 > [!NOTE]  
 >  呼叫 close 方法也會回復任何暫止交易。  

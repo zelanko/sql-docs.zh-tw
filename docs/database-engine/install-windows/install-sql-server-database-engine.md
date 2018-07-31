@@ -15,12 +15,12 @@ caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 12802d45792ea9d0fad4ba31a694c2ca0413a86f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7e29c2ec0c6063483268ddd95c39bfcc85e8a744
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771464"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278799"
 ---
 # <a name="install-sql-server-database-engine"></a>安裝 SQL Server Database Engine
 
@@ -40,7 +40,9 @@ ms.locfileid: "34771464"
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   複寫 (選擇性元件)  
-  
+
+-   [機器學習服務 (資料庫內) 含 R 與 Python](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - 是選擇性元件
+
 -   全文檢索搜尋 (選擇性元件)  
   
 -   Data Quality Services (選擇性元件)  

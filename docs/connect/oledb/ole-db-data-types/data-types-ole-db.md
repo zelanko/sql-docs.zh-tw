@@ -1,5 +1,5 @@
 ---
-title: 資料型別 (OLE DB) |Microsoft 文件
+title: 資料型別 (OLE DB) |Microsoft Docs
 description: 資料類型 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: f04b6729f97efdacdc79b035eda9f43c6458d61d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665158"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109340"
 ---
 # <a name="data-types-ole-db"></a>資料類型 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  為了能夠執行[!INCLUDE[tsql](../../../includes/tsql-md.md)]陳述式和處理程序結果中使用 for SQL Server 的 OLE DB 驅動程式，您必須知道如何將 SQL Server OLE DB 驅動程式對應[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型到 OLE DB 資料類型，當繫結參數或資料行中資料列集，以及當它 uses **ITableDefinition**介面可建立的資料表中[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  若要使用 OLE DB Driver for SQL Server 來執行 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式並處理結果，您必須知道 OLE DB Driver for SQL Server 在繫結資料列集中的參數或資料行時，如何將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型對應至 OLE DB 資料類型，以及它使用 **ITableDefinition** 介面在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 中建立資料表的時機。  
   
 ## <a name="in-this-section"></a>本節內容  
   

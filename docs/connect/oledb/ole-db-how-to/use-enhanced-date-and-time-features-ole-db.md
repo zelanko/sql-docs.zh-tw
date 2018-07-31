@@ -1,6 +1,6 @@
 ---
-title: 使用增強型日期和時間功能 (OLE DB) |Microsoft 文件
-description: 使用增強型的日期和時間功能 (OLE DB)
+title: 使用增強型日期和時間功能 (OLE DB) |Microsoft Docs
+description: 使用增強型日期和時間功能 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1875ed56ee92fbb02013cfd3df0477453a272be5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8372e904fb57d0d132f0abb68748216ed415b052
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665838"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108970"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>使用增強型日期和時間功能 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  此範例會示範如何使用在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中導入的日期/時間功能。 此範例會使用四個新日期和時間類型 (**日期**，**時間**， **datetime2**，和**datetimeoffset**) 來執行與命令參數和擷取資料列集結果。  
+  此範例會示範如何使用在 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 中導入的日期/時間功能。 此範例會使用四個新的日期和時間類型 (**日期**，**時間**， **datetime2**，以及**datetimeoffset**) 來執行命令參數和擷取資料列集結果。  
   
- 這個範例需要 AdventureWorks 範例資料庫，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server 範例和社群專案](http://go.microsoft.com/fwlink/?LinkID=85384)首頁下載。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -36,7 +36,7 @@ ms.locfileid: "35665838"
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的預存程序。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
  第三個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的預存程序。  
   

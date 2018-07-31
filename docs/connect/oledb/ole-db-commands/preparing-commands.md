@@ -1,6 +1,6 @@
 ---
-title: 準備命令 |Microsoft 文件
-description: 準備適用於 SQL Server 使用 OLE DB 驅動程式的命令
+title: 準備命令 |Microsoft Docs
+description: 準備使用 OLE DB Driver for SQL Server 的命令
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ca162d2fffd23b55d53d34d32ad92a5cdbce7545
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: b5cefe4cea0c0d156c13239f24c4a97f7c90eeb0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666058"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106014"
 ---
 # <a name="preparing-commands"></a>準備命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server OLE DB 驅動程式支援針對單一命令; 的最佳化多次執行命令的準備不過，命令準備會產生負擔，而且取用者不需要準備命令，命令執行一次以上。 一般而言，如果某個命令將執行三次以上，您就應該準備此命令。  
+  OLE DB Driver for SQL Server 支援針對單一命令的最佳化多次執行進行命令準備。不過，命令準備會產生負擔，而且取用者不需要準備命令，即可多次執行命令。 一般而言，如果某個命令將執行三次以上，您就應該準備此命令。  
   
  基於效能的考量，命令準備會延遲到執行命令為止。 這是預設行為。 在執行命令或執行中繼屬性作業之前，無法得知正在準備之命令中的任何錯誤。 將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 屬性 SSPROP_DEFERPREPARE 設定為 FALSE 可以關閉此預設行為。  
   
@@ -43,21 +43,21 @@ ms.locfileid: "35666058"
   
  您永遠都不應該準備某些命令。 例如，您不應該準備指定預存程序執行或針對 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 預存程序建立包含無效文字的命令。  
   
- 建立暫存預存程序時，如果 SQL Server OLE DB 驅動程式會執行暫存的預存程序，如同執行陳述式本身傳回的結果。  
+ 如果建立暫存預存程序，OLE DB Driver for SQL Server 就會執行此暫存預存程序，並傳回結果 (如同執行陳述式本身一樣)。  
   
- 建立暫存預存程序由 OLE DB 驅動程式所控制的 SQL Server-特有的初始化屬性 SSPROP_INIT_USEPROCFORPREP。 如果屬性值為 SSPROPVAL_USEPROCFORPREP_ON 或 SSPROPVAL_USEPROCFORPREP_ON_DROP，SQL Server OLE DB 驅動程式會嘗試建立預存程序，準備命令時。 如果應用程式使用者具有足夠的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 權限，預存程序建立就會成功。  
+ 暫存預存程序建立是由 OLE DB Driver for SQL Server 特定的初始化屬性 SSPROP_INIT_USEPROCFORPREP 所控制。 如果屬性值為 SSPROPVAL_USEPROCFORPREP_ON 或 SSPROPVAL_USEPROCFORPREP_ON_DROP，OLE DB Driver for SQL Server 就會在準備命令時嘗試建立預存程序。 如果應用程式使用者具有足夠的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 權限，預存程序建立就會成功。  
   
- 不常中斷連接的取用者，建立暫存預存程序可能需要大量資源的**tempdb**、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]建立暫存物件的系統資料庫。 如果 SSPROP_INIT_USEPROCFORPREP 的值為 SSPROPVAL_USEPROCFORPREP_ ON，當建立命令的工作階段失去的執行個體的連接時，才，會卸除暫存預存程序適用於SQLServerOLEDB驅動程式所建立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. 如果該連接是針對資料來源初始化所建立的預設連接，只有當資料來源成為未初始化時，才會卸除暫存預存程序。  
+ 若為不常中斷連接的取用者，建立暫存預存程序可能會需要 **tempdb** (在其中建立暫存物件的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統資料庫) 的大量資源。 如果 SSPROP_INIT_USEPROCFORPREP 的值為 SSPROPVAL_USEPROCFORPREP_ ON，只有當建立此命令的工作階段中斷與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連線時，才會卸除 OLE DB Driver for SQL Server 所建立的暫存預存程序。 如果該連接是針對資料來源初始化所建立的預設連接，只有當資料來源成為未初始化時，才會卸除暫存預存程序。  
   
- 如果 SSPROP_INIT_USEPROCFORPREP 的值為 SSPROPVAL_USEPROCFORPREP_ON_DROP，當發生下列其中一項時，會卸除的 OLE DB Driver for SQL Server 暫存預存程序：  
+ 如果 SSPROP_INIT_USEPROCFORPREP 的值為 SSPROPVAL_USEPROCFORPREP_ON_DROP，發生下列其中一種狀況時，就會卸除 OLE DB Driver for SQL Server 的暫存預存程序：  
   
--   取用者使用**icommandtext:: Setcommandtext**表示新的命令。  
+-   取用者使用 **ICommandText::SetCommandText** 來表示新的命令。  
   
--   取用者使用**icommandprepare:: Unprepare**來指出它不再需要命令文字。  
+-   取用者使用 **ICommandPrepare::Unprepare** 來表示它不再需要命令文字。  
   
 -   取用者使用暫存預存程序來釋放命令物件的所有參考。  
   
- 在命令物件具有最多一個暫存預存程序**tempdb**。 任何現有的暫存預存程序都代表特定命令物件的目前命令文字。  
+ 命令物件最多在 **tempdb** 中具有一個暫存預存程序。 任何現有的暫存預存程序都代表特定命令物件的目前命令文字。  
   
 ## <a name="see-also"></a>另請參閱  
  [命令](../../oledb/ole-db-commands/commands.md)  

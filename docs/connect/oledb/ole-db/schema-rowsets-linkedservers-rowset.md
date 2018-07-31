@@ -1,5 +1,5 @@
 ---
-title: LINKEDSERVERS 資料列集 (OLE DB) |Microsoft 文件
+title: LINKEDSERVERS 資料列集 (OLE DB) |Microsoft Docs
 description: LINKEDSERVERS 資料列集 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,23 +17,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: c6b1299005c0307f04f0f245f6e0ec6ee57b5063
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611723"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105764"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>結構描述資料列集 LINKEDSERVERS 資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---linkedservers-rowset"></a>結構描述資料列集 - LINKEDSERVERS 資料列集
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **LINKEDSERVERS**資料列集會列舉可以參與組織資料來源[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散式查詢。  
+  **LINKEDSERVERS** 資料列集會列舉可以參與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢的組織資料來源。  
   
- **LINKEDSERVERS**資料列集包含下列資料行。  
+ **LINKEDSERVERS** 資料列集包含下列資料行。  
   
-|資料行名稱|類型指標|描述|  
+|資料行名稱|類型指標|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|連結伺服器的名稱。|  
 |SVR_PRODUCT|DBTYPE_WSTR|製造商或是識別由連結伺服器名稱表示之資料存放區類型的其他名稱。|  
@@ -45,6 +45,6 @@ ms.locfileid: "35611723"
  資料列集會根據 SRV_NAME 排序，而且 SRV_NAME 上可支援單一限制。  
   
 ## <a name="see-also"></a>另請參閱  
- [結構描述資料列集支援&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
+ [結構描述資料列集支援 &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 執行預存程序 (OLE DB) |Microsoft 文件
+title: 執行預存程序 (OLE DB) |Microsoft Docs
 description: 執行預存程序 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611883"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108960"
 ---
-# <a name="stored-procedures---running"></a>預存程序-執行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>預存程序 - 執行
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,7 +42,7 @@ ms.locfileid: "35611883"
   
 -   增加的功能。  
   
- SQL Server 的 OLE DB 驅動程式支援三種機制，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]用來傳回資料的預存程序：  
+ OLE DB Driver for SQL Server 支援三種機制，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]預存程序用來傳回資料：  
   
 -   程序中的每個 SELECT 陳述式都會產生一個結果集。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "35611883"
   
  應用程式必須能夠處理預存程序中的所有這些輸出。  
   
- 不同的 OLE DB 提供者在結果處理期間，會在不同時間傳回輸出參數和傳回值。 發生 OLE DB 驅動程式的 SQL Server，輸出參數和傳回碼，才會提供取用者已經擷取或取消預存程序所傳回的結果集之後。 傳回碼和輸出參數會由來自伺服器的最後一個 TDS 封包傳回。  
+ 不同的 OLE DB 提供者在結果處理期間，會在不同時間傳回輸出參數和傳回值。 如果是 OLE DB Driver for SQL Server ，在取用者已經擷取或取消預存程序傳回的結果集之後，才會提供輸出參數和傳回碼。 傳回碼和輸出參數會由來自伺服器的最後一個 TDS 封包傳回。  
   
  當它傳回輸出參數和傳回碼時，提供者會使用 DBPROP_OUTPUTPARAMETERAVAILABILITY 屬性來報告。 這個屬性位於 DBPROPSET_DATASOURCEINFO 屬性集中。  
   
- SQL Server OLE DB 驅動程式將 DBPROP_OUTPUTPARAMETERAVAILABILITY 屬性設定為 DBPROPVAL_OA_ATROWRELEASE，表示傳回碼和輸出參數不會傳回結果集是處理或釋出之前。  
+ OLE DB Driver for SQL Server 會將 DBPROP_OUTPUTPARAMETERAVAILABILITY 屬性設定為 DBPROPVAL_OA_ATROWRELEASE，表示在處理或釋放結果集之前，不會傳回傳回碼和輸出參數。  
   
 ## <a name="see-also"></a>另請參閱  
  [預存程序](../../oledb/ole-db/stored-procedures.md)  

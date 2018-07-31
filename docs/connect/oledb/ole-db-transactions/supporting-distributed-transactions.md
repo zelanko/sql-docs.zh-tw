@@ -1,6 +1,6 @@
 ---
-title: 支援分散式的交易 |Microsoft 文件
-description: SQL Server 的 OLE DB 驅動程式中的分散式的交易
+title: 支援分散式的交易 |Microsoft Docs
+description: 在 OLE DB Driver for SQL Server 的分散式的交易
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -22,32 +22,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd6cda6c01f46dd179c462b2d6038c09137de03
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690301"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105984"
 ---
 # <a name="supporting-distributed-transactions"></a>支援分散式交易
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB 驅動程式的 SQL Server 取用者可以使用 **:: Jointransaction<** 由 Microsoft 分散式交易協調器 (MS DTC) 協調的方法來參與分散式交易。  
+  OLE DB Driver for SQL Server 取用者可以使用 **ITransactionJoin::JoinTransaction** 方法來參與 Microsoft 分散式交易協調器 (MS DTC) 協調的分散式交易。  
   
- MS DTC 會公開 COM 物件，讓用戶端跨各種資料存放區的多個連接，起始並參與協調的交易。 若要起始交易，SQL Server 取用者，OLE DB 驅動程式會使用 MS DTC **ITransactionDispenser**介面。 **BeginTransaction**隸屬**ITransactionDispenser**分散式的交易物件上傳回的參考。 這個參考傳遞至 OLE DB 驅動程式的 SQL Server 使用**j**。  
+ MS DTC 會公開 COM 物件，讓用戶端跨各種資料存放區的多個連接，起始並參與協調的交易。 若要起始交易，OLE DB Driver for SQL Server 取用者會使用 MS DTC **ITransactionDispenser**介面。 **ITransactionDispenser** 的 **BeginTransaction** 成員會傳回分散式交易物件的參考。 此參考傳遞至 OLE DB Driver for SQL Server 使用**JoinTransaction**。  
   
- MS DTC 在分散式交易上支援非同步認可和中止。 如需非同步交易狀態的通知，取用者會實作**ITransactionOutcomeEvents**介面，並將介面連接到 MS DTC 交易物件。  
+ MS DTC 在分散式交易上支援非同步認可和中止。 為取得非同步交易狀態的通知，取用者會實作 **ITransactionOutcomeEvents** 介面，並將介面連接到 MS DTC 交易物件。  
   
- SQL Server OLE DB 驅動程式會實作分散式交易， **:: Jointransaction<** 參數，如下所示。  
+ 若是分散式交易，OLE DB Driver for SQL Server 會實作 **ITransactionJoin::JoinTransaction** 參數，如下所示。  
   
-|參數|描述|  
+|參數|Description|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 交易物件的指標。|  
-|*IsoLevel*|忽略 for SQL Server 的 OLE DB 驅動程式。 取用者從 MS DTC 取得交易物件時，會判斷 MS DTC 協調交易的隔離等級。|  
-|*IsoFlags*|必須是 0。 如果取用者指定任何其他值，SQL Server OLE DB 驅動程式會傳回 XACT_E_NOISORETAIN。|  
-|*POtherOptions*|如果不是 NULL，SQL Server OLE DB 驅動程式會從介面要求選項物件。 SQL Server OLE DB 驅動程式會傳回 XACT_E_NOTIMEOUT 如果選項物件*ulTimeout*成員不是零。 SQL Server OLE DB 驅動程式會略過的值*szDescription*成員。|  
+|*IsoLevel*|忽略 OLE DB Driver for SQL Server。 取用者從 MS DTC 取得交易物件時，會判斷 MS DTC 協調交易的隔離等級。|  
+|*IsoFlags*|必須是 0。 如果取用者指定了任何其他值，OLE DB Driver for SQL Server 就會傳回 XACT_E_NOISORETAIN。|  
+|*POtherOptions*|如果不是 NULL，OLE DB Driver for SQL Server 會從介面要求選項物件。 OLE DB Driver for SQL Server 會傳回 XACT_E_NOTIMEOUT，如果選項物件的*ulTimeout*成員不是零。 OLE DB Driver for SQL Server 會忽略值*szDescription*成員。|  
   
  這個範例會使用 MS DTC 協調交易。  
   

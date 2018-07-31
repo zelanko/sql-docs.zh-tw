@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_fetch_object |Microsoft 文件
+title: sqlsrv_fetch_object |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309147"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991240"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +43,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>參數  
 *$stmt*：對應至執行之陳述式的陳述式資源。  
   
-*$className* [選用]: 指定要具現化類別名稱的字串。 如果未指定 *$className* 參數的值，則會具現化 PHP **stdClass** 的執行個體。  
+*$className* [選擇性]：一個字串，用於指定要具現化之類別的名稱。 如果未指定 *$className* 參數的值，則會具現化 PHP **stdClass** 的執行個體。  
   
-*$ctorParams* [選用]: 包含值的陣列傳遞至具有指定之類別的建構函式 *$className*參數。 如果指定類別的建構函式接受參數值，則在呼叫 *$ctorParams* object **sqlsrv_fetch_object**參數。  
+*$ctorParams* [選擇性]：一個陣列，所含的值傳遞至以 *$className* 參數指定之類別的建構函式。 如果指定類別的建構函式接受參數值，則在呼叫 *$ctorParams* object **sqlsrv_fetch_object**參數。  
   
-*資料列*[選用]: 下列的值，指定要在使用可捲動資料指標結果集內存取的資料列的其中一個。 (如果*列*指定，則 *$className*和 *$ctorParams*必須明確指定，即使您必須指定 null *$className*和 *$ctorParams*。)  
+*row* [選擇性]：下列其中一個值，指定要在使用可捲動資料指標的結果集內存取的資料列。 (如果指定 *row*，則必須明確指定 *$className* 和 *$ctorParams*，即使您必須為 *$className* 和 *$ctorParams* 指定 Null 亦然。)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -63,14 +63,14 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。  
   
-*位移*[選用]: 與 SQLSRV_SCROLL_ABSOLUTE 和 sqlsrv_scroll_relative 搭配使用，用於指定要擷取的資料列。 結果集內的第一個記錄為 0。  
+*offset* [選擇性]：與 SQLSRV_SCROLL_ABSOLUTE 和 SQLSRV_SCROLL_RELATIVE 搭配使用，以指定要擷取的資料列。 結果集內的第一個記錄為 0。  
   
 ## <a name="return-value"></a>傳回值  
 有屬性對應至結果集欄位名稱的 PHP 物件。 屬性值會以對應的結果集欄位值填入。 如果沒有以選用 *$className* 參數指定的類別存在，或是沒有與指定的陳述式相關聯的作用中結果集，則會傳回 **false** 。 如果沒有更多資料列可擷取，則會傳回 **null** 。  
   
 傳回之物件中的資料類型值，將是預設的 PHP 資料類型。 如需預設 PHP 資料類型的相關資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 如果類別名稱是以選用 *$className* 參數指定的，則會具現化此類別類型的物件。 如果此類別具有名稱符合結果集欄位名稱的屬性，則會將對應的結果集值套用至屬性。 如果結果集欄位名稱不符合類別屬性，則會將具有結果集欄位名稱的屬性加入至物件，並將結果集值套用至屬性。  
   
 以 *$className* 參數指定類別時，適用下列規則：  
@@ -93,7 +93,7 @@ SELECT SCOPE_IDENTITY()</pre>
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>範例  
-下列範例會以 PHP 物件的形式，擷取結果集的每個資料列。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會以 PHP 物件的形式，擷取結果集的每個資料列。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>範例  
-下列範例會以指令碼中定義之 *Product* 類別的執行個體形式，擷取結果集的每個資料列。 此範例會擷取產品資訊*Purchasing.PurchaseOrderDetail*和*Production.Product*資料表的 AdventureWorks 資料庫具有指定的產品的到期日 (*DueDate*)，以及存貨的數量 (*StockQty*) 小於指定的值。 此範例強調在對 **sqlsrv_fetch_object**的呼叫中指定類別時所套用的某些規則：  
+下列範例會以指令碼中定義之 *Product* 類別的執行個體形式，擷取結果集的每個資料列。 範例會針對具有指定到期日 (*DueDate*)，以及存貨數量 (*StockQty*) 小於指定值的產品，從 AdventureWorks 資料庫的 *Purchasing.PurchaseOrderDetail* 和 *Production.Product* 資料表中擷取產品資訊。 此範例強調在對 **sqlsrv_fetch_object**的呼叫中指定類別時所套用的某些規則：  
   
 -   *$product* 變數是 *Product* 類別的執行個體，因為「產品」是以 *$className* 參數指定的，且 *Product* 類別存在。  
   
@@ -142,7 +142,7 @@ sqlsrv_close( $conn);
   
 -   私用屬性 *UnitPrice* 會以填入 *UnitPrice* 欄位的值填入。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -234,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-**Sqlsrv_fetch_object**函式一律會傳回根據資料[預設 PHP 資料類型](../../connect/php/default-php-data-types.md)。 如需如何指定 PHP 資料類型的相關資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+**sqlsrv_fetch_object** 函式一律會根據[預設 PHP 資料類型](../../connect/php/default-php-data-types.md)傳回資料。 如需如何指定 PHP 資料類型的相關資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 如果傳回沒有名稱的欄位，則 **sqlsrv_fetch_object** 會捨棄欄位值，並發出警告。 例如，請考量下列將值插入資料庫資料表中，並擷取伺服器產生之主索引鍵的 Transact-SQL 陳述式：  
   

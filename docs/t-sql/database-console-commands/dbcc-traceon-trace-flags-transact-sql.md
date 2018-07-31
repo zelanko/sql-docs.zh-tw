@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 089819b4d0f8c58f048158055b47ec83cd33ccac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 60a079e80c4487a7af0f015992095d3f14666764
+ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288737"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350016"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "35288737"
 > [!IMPORTANT]
 > 在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，不一定支援追蹤旗標行為。 
   
-|追蹤旗標|描述|  
+|追蹤旗標|Description|  
 |---|---|
 |**139**| 在相容性層級較低的資料庫上分析針對特定資料類型導入之相容性層級 130 所改善的精確度和轉換邏輯時，於 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)、[DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 和 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) 等 DBCC 檢查命令範圍中強制正確的轉換語意。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/4010261) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU3、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 和更新版本組建。<br /><br />**警告：** 追蹤旗標 139 不應在生產環境中持續啟用，其唯一的用途是執行資料庫驗證檢查，如 [Microsoft 支援服務文章](http://support.microsoft.com/help/4010261) \(機器翻譯\) 所述。 在完成驗證檢查後，應立即將它停用。<br /><br />**範圍**：只限全域|
 |**174**|將 64 位元系統上的 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 計畫快取貯體計數從 40,009 增加至 160,001。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/3026083) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後再部署到生產環境。<br /><br />**範圍**：只限全域|
@@ -83,6 +83,7 @@ ms.locfileid: "35288737"
 |**2422**|超過 Resource Governor REQUEST_MAX_CPU_TIME_SEC 設定所設定的時間上限時，啟用 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 以中止要求。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/help/4038419) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3，和更新的組建。<br /><br />**範圍**：全域|
 |**2430**|啟用其他鎖定類別清除作業。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2754301) \(英文\)。<br /><br />**範圍**：只限全域| 
 |**2453**|變更足夠數目的資料列時，允許資料表變數觸發重新編譯。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2952444) \(機器翻譯\)。<br /><br />**注意：** 請確定您已徹底測試此選項後再部署到生產環境。<br /><br />**範圍**：全域或工作階段或查詢|
+|**2467**|根據哪個節點有最新的已配置執行緒而定，啟用替代的平行背景工作執行緒配置原則。 如需詳細資訊，請參閱[平行查詢處理](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing)。 請參閱[設定最大工作者執行緒伺服器設定選項](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)，以取得有關如何設定最大工作者執行緒伺服器選項的詳細資訊。<br /><br />**注意：** 查詢平行處理原則 (DOP) 必須容納在單一節點中，才能使用此替代原則，否則會改為使用預設執行緒配置原則。 使用此追蹤旗標時，建議您在執行查詢時不要指定超過單一節點中排程器數目的 DOP，您所指定的 DOP 應該小於或等於單一節點中的排程器數目。<br /><br />**注意：** 請確定您已徹底測試此選項後再部署到生產環境。<br /><br />**範圍**：只限全域|
 |**2469**|在 `INSERT INTO ... SELECT` 和磁碟分割資料行存放區索引之間啟用其他交換。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/3204769) \(機器翻譯\)。<br /><br />**範圍**：全域或工作階段或查詢|
 |**2528**|利用 DBCC CHECKDB、DBCC CHECKFILEGROUP 和 DBCC CHECKTABLE 來停用物件的平行檢查。 依預設，查詢處理器會自動判斷平行處理原則的程度。 最大平行處理原則程度的設定方式與平行查詢相同。 如需詳細資訊，請參閱 [設定 max degree of parallelism 伺服器組態選項](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)。<br /><br />**注意：** 平行 DBCC 檢查通常應為啟用 (預設值)。 查詢處理器會針對 DBCC CHECKDB 檢查的每份資料表或資料表批次重新評估和自動調整平行處理原則。<br /><br />一般使用案例是當系統管理員知道 DBCC CHECKDB 完成前伺服器負載會增加，因此選擇手動減少或停用平行處理原則，以增加並行的其他使用者工作負載。 不過，在 DBCC CHECKDB 中停用平行檢查，可能需要更多時間才能完成。<br /><br />**注意：** 如果使用 TABLOCK 選項執行 DBCC CHECKDB，而且已停用平行處理原則，資料表鎖定的時間可能會更長。<br /><br />**注意：** 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 開始，MAXDOP 選項可用來覆寫陳述式之 sp_configure 的 max degree of parallelism 設定選項。<br /><br />**範圍**：全域或工作階段|
 |**2549**|執行 DBCC CHECKDB 命令會假設每個資料庫檔案位於唯一的磁碟機上。 DBCC CHECKDB 命令會跨所有資料庫檔案建立要在每個唯一磁碟機內讀取的內部分頁清單。 此邏輯判斷唯一磁碟機的依據，是每個檔案之實際檔案名稱的磁碟機代號。<br /><br />**注意：** 除非您已知每個檔案是以唯一實體磁碟為基礎，否則請勿使用此追蹤旗標。<br /><br />**注意：** 雖然此追蹤旗標可改善目標是使用 PHYSICAL_ONLY 選項之 DBCC CHECKDB 命令的效能，但某些使用者可能無法察覺效能有任何改善。 此追蹤旗標可改善磁碟 I/O 資源用量，但磁碟資源的基礎效能可能會限制 DBCC CHECKDB 命令的整體效能。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2634571) \(機器翻譯\)。<br /><br />**範圍**：只限全域| 

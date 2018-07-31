@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindValue |Microsoft 文件
+title: PDOStatement::bindValue |Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70d02f3b7422e575d1ce5ae7bd02533c258ab8d1
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 099da725f1d8103499ea5a6a31f2cf2ca0538249
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308387"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983500"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,16 +34,16 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>參數  
-$*參數*: （混合） 參數識別碼。 陳述式，使用具名預留位置，使用參數名稱 (: name)。 使用問號語法的已備妥陳述式，它是以 1 起始的索引參數。
+$*parameter*：(混合的) 參數識別碼。 若是使用具名預留位置的陳述式，使用參數名稱 (:name)。 若是使用問號語法的已備妥陳述式，則是以 1 起始之索引的參數。
   
-$*值*： 要繫結至參數的 （混合） 值。  
+$*value*：要繫結至參數的 (混合) 值。  
   
-$*data_type*： 選用 （整數） 資料類型以 pdo:: PARAM_ * 常數表示。 預設值是 PDO::PARAM_STR。  
+$*data_type*：PDO::PARAM_* 常數所表示的選用 (整數) 資料類型。 預設值是 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>傳回值  
 如果成功，則為 TRUE，否則為 FALSE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
@@ -80,10 +80,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> 建議使用字串做為輸入，當繫結至值[十進位或數值資料行](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql)為確保如 PHP 有限的有效位數的有效位數和精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 同樣適用於 bigint 資料行，尤其是有效值的範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
+> 建議使用字串做為輸入，繫結至的值時[十進位或數值資料行](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)若要確保精確性與正確性，如 PHP 有限精確度[浮點數](http://php.net/manual/en/language.types.float.php)。 這同樣適用於 bigint 資料行，尤其是值為範圍外[整數](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)。
 
 ## <a name="example"></a>範例  
-此程式碼範例示範如何將繫結十進位值做為輸入參數。  
+此程式碼範例示範如何繫結十進位值做為輸入參數。  
 
 ```
 <?php  

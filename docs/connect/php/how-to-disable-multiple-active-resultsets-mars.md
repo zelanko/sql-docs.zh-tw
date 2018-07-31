@@ -1,5 +1,5 @@
 ---
-title: 如何： 停用 Multiple Active Resultsets (MARS) |Microsoft 文件
+title: 如何：停用 Multiple Active Resultsets (MARS) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc5e138bbd9e293076b0f05173d9d4a8d1747fde
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307907"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37985600"
 ---
 # <a name="how-to-disable-multiple-active-resultsets-mars"></a>如何：停用 Multiple Active Resultsets (MARS)。
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,7 +64,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>範例  
-下列範例示範如何停用 MARS 支援使用 PDO_SQLSRV 驅動程式的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。  
+下列範例說明如何使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 PDO_SQLSRV 驅動程式來停用 MARS 支援。  
   
 ```  
 <?php  

@@ -1,5 +1,5 @@
 ---
-title: 範例應用程式 （SQLSRV 驅動程式） |Microsoft 文件
+title: 範例應用程式 （SQLSRV 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d47fe33801ca8a4932b6295a5052e9948bc5ef0f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307767"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38007189"
 ---
 # <a name="example-application-sqlsrv-driver"></a>範例應用程式 (SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,17 +30,17 @@ AdventureWorks Product Reviews 範例應用程式是使用 [!INCLUDE[ssDriverPHP
   
 ### <a name="running-the-example-application"></a>執行範例應用程式  
   
-1.  安裝 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 如需詳細資訊，請參閱[Microsoft Drivers for PHP for SQL Server 使用者入門](../../connect/php/getting-started-with-the-php-sql-driver.md)。
+1.  安裝 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 如需詳細資訊，請參閱 < [Getting Started with Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)。
 2.  將本文件稍後所列的程式碼複製到兩個檔案中：adventureworks_demo.php 和 photo.php。  
 3.  將 adventureworks_demo.php 和 photo.php 檔案放入您的 Web 伺服器的根目錄中。  
-4.  執行應用程式啟動 http://localhost/adventureworks_demo.php 從瀏覽器。  
+4.  執行應用程式啟動http://localhost/adventureworks_demo.php從瀏覽器。  
   
 ## <a name="requirements"></a>需求  
 若要執行 AdventureWorks Product Reviews 範例應用程式，您的電腦的下列項目必須相符：  
   
--   您的系統符合 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的需求。 如需詳細資訊，請參閱[Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
+-   您的系統符合 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的需求。 如需詳細資訊，請參閱 < [Microsoft Drivers for PHP for SQL Server 的系統需求](../../connect/php/system-requirements-for-the-php-sql-driver.md)。  
 -   adventureworks_demo.php 和 photo.php 檔案位於您的 Web 伺服器的根目錄中。 這些檔案必須包含本文件稍後所列的程式碼。  
--   SQL Server 2005 或 SQL Server 2008 與[AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)附加的資料庫安裝在本機電腦上。  
+-   本機電腦上已安裝 SQL Server 2005 或 SQL Server 2008，並附加 [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。  
 -   已安裝網頁瀏覽器。  
   
 ## <a name="demonstrates"></a>示範  

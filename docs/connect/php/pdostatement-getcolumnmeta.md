@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::getColumnMeta |Microsoft 文件
+title: PDOStatement::getColumnMeta |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8211a6a4cda4a5efa29b7379c24ba3fbbfa5458e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308527"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983006"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,12 +34,12 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>參數  
-*$conn*: （整數） 您想要擷取其中繼資料的資料行以零為起始的數目。  
+*$conn*：(整數) 您要擷取其中繼資料的資料行號碼 (以零起始)。  
   
 ## <a name="return-value"></a>傳回值  
 包含資料行中繼資料的關聯陣列 (索引鍵和值)。 如需陣列中欄位的描述，請參閱＜備註＞一節。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 下表將描述 getColumnMeta 所傳回陣列中的欄位。  
   
 |NAME|VALUES|  

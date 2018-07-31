@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_commit | Microsoft Docs
+title: sqlsrv_commit |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d543667f15e3fcb1bf049bb595140098f303837e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309037"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991190"
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "35309037"
 在指定的連接上認可目前交易，並使連接回到自動認可模式。 目前交易包含在指定的連接上呼叫 [sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md) 之後和呼叫 [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) 或 **sqlsrv_commit**之前執行的所有陳述式。  
   
 > [!NOTE]  
-> [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]處於依預設自動認可模式。 這表示所有查詢都會在成功時自動進行認可，除非已使用 **sqlsrv_begin_transaction**開始交易。  
+> 根據預設，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 處於自動認可模式。 這表示所有查詢都會在成功時自動進行認可，除非已使用 **sqlsrv_begin_transaction**開始交易。  
   
 > [!NOTE]  
-> 如果**sqlsrv_commit**不在作用中的交易，並起始連接上呼叫**sqlsrv_begin_transaction**，則會傳回呼叫**false**和*不在交易*錯誤加入至錯誤集合。  
+> 如果在不屬於使用中交易 (以 **sqlsrv_begin_transaction** 起始) 的連線上呼叫 **sqlsrv_commit**，則呼叫會傳回 **false**，且「不在交易中」錯誤會新增至錯誤集合。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,7 +57,7 @@ sqlsrv_commit( resource $conn )
   
 範例中的第一個查詢會將新的銷售訂單插入到 AdventureWorks 資料庫的 *Sales.SalesOrderDetail* 資料表中。 此訂單適用於具有產品識別碼 709 的五個產品單位。 第二個查詢可減少產品識別碼 709 的存貨數量 (五個單位)。 這些查詢會包含在交易中，因為對資料庫而言，這兩個查詢都必須成功，才能正確地反映訂單狀態和產品可用性。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -132,5 +132,5 @@ sqlsrv_close( $conn);
 
 [如何：執行交易](../../connect/php/how-to-perform-transactions.md)
 
-[Microsoft Drivers for PHP for SQL Server 的概觀](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 概觀](../../connect/php/overview-of-the-php-sql-driver.md)
   

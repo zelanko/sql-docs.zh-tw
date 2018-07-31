@@ -1,6 +1,6 @@
 ---
-title: BLOB 的串流支援輸出參數 |Microsoft 文件
-description: 資料流 BLOB 輸出參數的支援
+title: BLOB 的串流支援輸出參數 |Microsoft Docs
+description: BLOB 輸出參數的串流支援
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665168"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106864"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 輸出參數的串流支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本文章包含範例，顯示資料流支援 BLOB 輸出參數，後者則繫結 BLOB 輸出參數為 ISequentialStreams。  
+  本文包含的範例會示範 BLOB 輸出參數的串流支援，將 BLOB 輸出參數繫結為 IsequentialStreams。  
   
- 您可能會在 IMultipleResults::GetResult 的輸出參數上遭到封鎖，並收到 DB_E_OBJECTOPEN 傳回值。 呼叫端應檢查有暫止的 blob 參數，並完整讀取它們或釋放它們。  
+ 您可能會在 IMultipleResults::GetResult 的輸出參數上遭到封鎖，並收到 DB_E_OBJECTOPEN 傳回值。 呼叫端應該檢查暫止的 blob 參數，並完整讀取它們或釋放它們。  
   
 ## <a name="example"></a>範例  
   

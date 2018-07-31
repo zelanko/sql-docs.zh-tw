@@ -1,5 +1,5 @@
 ---
-title: 步驟 3： 使用 PHP 的 sql 連接的概念證明 |Microsoft 文件
+title: 步驟 3︰使用 PHP 連線到 SQL 的概念證明
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309447"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006450"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>步驟 3︰使用 PHP 連接到 SQL 的概念證明
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>步驟 1： 連接  
+## <a name="step-1--connect"></a>步驟 1： 連線  
   
   
-這**OpenConnection**函式呼叫中所有後續函式的最上方。  
+這**OpenConnection**中所有後續函式的頂端附近呼叫函式。  
   
   
 ```php 
@@ -51,7 +51,7 @@ ms.locfileid: "35309447"
   
 ## <a name="step-2--execute-query"></a>步驟 2： 執行查詢  
   
-[Sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php)函式可以用來擷取結果集從查詢中，針對 SQL 資料庫。 此函式基本上會接受任何查詢和連接物件，並傳回結果集的使用可逐一[sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
+[Sqlsrv_query （)](http://php.net/manual/en/function.sqlsrv-query.php)函式可以用來擷取結果集從查詢中，對 SQL Database。 此函式基本上會接受任何查詢和連接物件，並傳回結果集，這可以藉由使用反覆[sqlsrv_fetch_array （)](http://php.net/manual/en/function.sqlsrv-fetch-array.php)。  
   
 ```php  
     function ReadData()  
@@ -83,7 +83,7 @@ ms.locfileid: "35309447"
   
 ## <a name="step-3--insert-a-row"></a>步驟 3： 插入資料列  
   
-在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式，將參數可保護您的應用程式，從[SQL 資料隱碼](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
+在您將了解如何執行此範例[插入](../../t-sql/statements/insert-transact-sql.md)陳述式安全地傳遞可保護您的應用程式的參數[SQL 插入式攻擊](../../relational-databases/tables/primary-and-foreign-key-constraints.md)值。    
   
   
 ```php 
@@ -116,13 +116,13 @@ ms.locfileid: "35309447"
 ## <a name="step-4--rollback-a-transaction"></a>步驟 4： 回復交易  
   
   
-這個程式碼範例示範如何使用交易，在其中您：  
+此程式碼範例示範如何使用交易，您：  
   
-開始交易  
+-開始交易  
   
--插入的資料列，更新資料的另一個資料列  
+-插入資料列，更新另一個資料列的資料  
   
--認可您的交易如果成功插入和更新和 rollback 交易如果其中一個不是  
+-確認您的交易如果 insert 和 update 成功就復原交易如果其中一個不是  
   
   
 ```php 

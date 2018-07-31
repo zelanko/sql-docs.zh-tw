@@ -1,6 +1,6 @@
 ---
-title: 命令 |Microsoft 文件
-description: SQL Server 的 OLE DB 驅動程式中的命令
+title: 命令 |Microsoft Docs
+description: OLE DB Driver for SQL Server 中的命令
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a518a4a718007e1c1efb3b7c53732beef7d7c0ab
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 4fcc1b32e3e27fc70b5d96585194152621fc1f7b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665388"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108000"
 ---
 # <a name="commands"></a>命令
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server OLE DB 驅動程式會公開**ICommand**介面和命令物件，本節所述：  
+  OLE DB Driver for SQL Server 會公開 **ICommand** 介面和命令物件，本節將會有完整說明：  
   
 -   [命令語法](../../oledb/ole-db-commands/command-syntax.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: Ibcpsession2 |Microsoft 文件
-description: 使用 Ibcpsession2 查詢或資料表建立任何大量複製
+title: IBCPSession2::BCPSetBulkMode |Microsoft Docs
+description: 若要建立完的大量複製查詢或資料表使用 IBCPSession2::BCPSetBulkMode
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e15ba707375e09dad406e98341562014dfe3b270
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 48755c4002fcdcb4560d094df505e08eb513186d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690311"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108150"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Ibcpsession2 提供替代[ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)來指定資料行格式。 與不同的是，它可以設定個別的資料行格式屬性，ibcpsession:: Bcpcolfmt Ibcpsession2 設定的所有屬性。  
+  IBCPSession2::BCPSetBulkMode 提供替代[ibcpsession:: Bcpcolfmt &#40;OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)來指定資料行格式。 與不同的是，它可以設定個別的資料行格式屬性，ibcpsession:: Bcpcolfmt IBCPSession2::BCPSetBulkMode 設定所有屬性。  
   
 ## <a name="syntax"></a>語法  
   
@@ -61,35 +61,35 @@ HRESULT BCPSetBulkMode (
  資料列結束字元值的長度 (以位元組為單位)。  
   
 ## <a name="returns"></a>傳回值  
- Ibcpsession2 可以傳回下列其中一項：  
+ IBCPSession2::BCPSetBulkMode 會傳回下列其中一項：  
   
 |||  
 |-|-|  
 |**S_OK**|此方法已成功。|  
-|**E_FAIL**|發生提供者特有的錯誤，如使用 ISQLServerErrorInfo 介面的詳細的資訊。|  
-|**E_UNEXPECTED**|此方法的呼叫是非預期的。 例如， **IBCPSession2::BCPInit**方法不會呼叫 Ibcpsession2 之前呼叫。|  
+|**E_FAIL**|發生提供者特有的錯誤，如需詳細資訊，請使用 ISQLServerErrorInfo 介面。|  
+|**E_UNEXPECTED**|此方法的呼叫是非預期的。 例如， **IBCPSession2::BCPInit**方法不會呼叫 IBCPSession2::BCPSetBulkMode 之前呼叫。|  
 |**E_INVALIDARG**|此引數無效。|  
 |**E_OUTOFMEMORY**|記憶體不足的錯誤。|  
   
-## <a name="remarks"></a>備註  
- Ibcpsession2 可用來大量複製查詢或資料表。 Ibcpsession2 來大量複製查詢陳述式使用時，必須呼叫之前先呼叫`IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)`來指定查詢陳述式。  
+## <a name="remarks"></a>Remarks  
+ IBCPSession2::BCPSetBulkMode 可用來大量複製查詢或資料表。 當 IBCPSession2::BCPSetBulkMode 用來大量複製查詢陳述式時，您必須先呼叫此方法，再呼叫 `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` 來指定查詢陳述式。  
   
  您應該避免在單一命令文字中結合 RPC 呼叫語法與批次查詢語法 (例如 `{rpc func};SELECT * from Tbl`)。  這會導致 icommandprepare:: Prepare 傳回錯誤，並讓您無法擷取中繼資料。 如果您需要在單一命令文字中結合預存程序執行與批次查詢，請使用 ODBC CALL 語法 (例如 `{call func}; SELECT * from Tbl`)。  
   
- 下表列出的常數*屬性*參數。  
+ 下表將列出 *property* 參數的常數。  
   
-|屬性|描述|  
+|屬性|Description|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應到 BCP 中的 – c 選項。EXE，以及 ibcpsession:: Bcpcolfmt 與*eUserDataType*屬性設定為**BCP_TYPE_SQLCHARACTER**。|  
-|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應到 BCP 中的 – w 選項。EXE 和 ibcpsession:: Bcpcolfmt 與*eUserDataType*屬性設定為**BCP_TYPE_SQLNCHAR**。|  
-|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應到 BCP 中的 – N 選項。EXE 和 ibcpsession:: Bcpcolfmt 與*eUserDataType*屬性設定為**BCP_TYPE_SQLNCHAR**如果資料行類型是字串或**BCP_TYPE_DEFAULT**如果不是字串。|  
-|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應到 BCP 中的 – n 選項。EXE 和 ibcpsession:: Bcpcolfmt 與*eUserDataType*屬性設定為**BCP_TYPE_DEFAULT**。|  
+|BCP_OUT_CHARACTER_MODE|指定字元輸出模式。<br /><br /> 對應至在 BCP 中的 – c 選項。EXE，並具有的 ibcpsession:: Bcpcolfmt *eUserDataType*屬性設定為**BCP_TYPE_SQLCHARACTER**。|  
+|BCP_OUT_WIDE_CHARACTER_MODE|指定 Unicode 輸出模式。<br /><br /> 對應至在 BCP 中的 – w 選項。EXE 和使用的 ibcpsession:: Bcpcolfmt *eUserDataType*屬性設定為**BCP_TYPE_SQLNCHAR**。|  
+|BCP_OUT_NATIVE_TEXT_MODE|指定非字元類型的原生類型和字元類型的 Unicode。<br /><br /> 對應到 BCP 中的 – N 選項。EXE 和使用的 ibcpsession:: Bcpcolfmt *eUserDataType*屬性設定為**BCP_TYPE_SQLNCHAR**如果資料行類型是字串或**BCP_TYPE_DEFAULT**如果不是字串。|  
+|BCP_OUT_NATIVE_MODE|指定原生資料庫類型。<br /><br /> 對應到 BCP 中的 – n 選項。EXE 和使用的 ibcpsession:: Bcpcolfmt *eUserDataType*屬性設定為**BCP_TYPE_DEFAULT**。|  
   
- 您可以呼叫 ibcpsession:: Bcpcontrol 和 Ibcpsession2 ibcpsession:: Bcpcontrol Ibcpsession2 不衝突的選項。 例如，您可以呼叫 ibcpsession:: Bcpcontrol 與**BCP_OPTION_FIRST**和 Ibcpsession2。  
+ 您可以呼叫 ibcpsession:: Bcpcontrol 和 IBCPSession2::BCPSetBulkMode IBCPSession2::BCPSetBulkMode 不衝突的 ibcpsession:: Bcpcontrol 選項。 比方說，您可以呼叫與的 ibcpsession:: Bcpcontrol **BCP_OPTION_FIRST**和 IBCPSession2::BCPSetBulkMode。  
   
- 您不能呼叫 ibcpsession:: Bcpcontrol 與**BCP_OPTION_TEXTFILE**和 Ibcpsession2。  
+ 您無法呼叫具有的 ibcpsession:: Bcpcontrol **BCP_OPTION_TEXTFILE**和 IBCPSession2::BCPSetBulkMode。  
   
- 如果您嘗試呼叫 Ibcpsession2 包括 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol，以及 ibcpsession:: Bcpreadfmt 函式呼叫的序列，其中一個函式呼叫會傳回順序錯誤失敗。 如果您選擇要更正失敗，請呼叫 ibcpsession:: Bcpinit 來重設設定並重新開始。  
+ 如果您嘗試呼叫的函式呼叫的順序，其中包含 ibcpsession:: Bcpcolfmt、 ibcpsession:: Bcpcontrol，以及 ibcpsession:: Bcpreadfmt IBCPSession2::BCPSetBulkMode，其中一個函式呼叫會傳回順序錯誤失敗。 如果您選擇要更正失敗，請呼叫 IBCPSession::BCPInit 來重設設定並重新開始。  
   
  以下是產生函數順序錯誤的函式呼叫的一些範例：  
   

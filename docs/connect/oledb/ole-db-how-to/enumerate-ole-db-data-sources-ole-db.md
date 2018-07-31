@@ -1,5 +1,5 @@
 ---
-title: 列舉 OLE DB 資料來源 (OLE DB) |Microsoft 文件
+title: 列舉 OLE DB 資料來源 (OLE DB) |Microsoft Docs
 description: 列舉 OLE DB 資料來源使用 MSOLEDBSQL 列舉值
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,47 +16,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9b4911e94ec5cb21e2950a09b0a0e18d5f842bd7
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 2466ebc1b701cc5f2102a895afa475a107c8af4c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665878"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107979"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>列舉 OLE DB 資料來源 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此範例會示範如何使用列舉值物件來列出可用的資料來源。  
   
- 若要列出可見 MSOLEDBSQL 列舉值的資料來源，取用者呼叫[isourcesrowset:: Getsourcesrowset](http://go.microsoft.com/fwlink/?LinkId=120312)方法。 這個方法會傳回有關目前可見之資料來源的資訊資料列集。  
+ 若要列出對 MSOLEDBSQL 列舉值而言可見的資料來源，取用者會呼叫 [ISourcesRowset::GetSourcesRowset](http://go.microsoft.com/fwlink/?LinkId=120312) 方法。 這個方法會傳回有關目前可見之資料來源的資訊資料列集。  
   
  根據所使用的網路程式庫而定，將會搜尋適當的網域來找出資料來源。 如果是具名管道，這就是用戶端登入的網域。 如果是 AppleTalk，這就是預設區域。 如果是 SPX/IPX，這就是連結中找到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝清單。 如果是 Banyan VINES，這就是本機網路上找到的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 安裝。 不支援多重通訊協定和 TCP/IP 通訊端。  
   
  當伺服器關閉或開啟時，可能會花上好幾分鐘的時間來更新這些網域中的資訊。  
   
- 這個範例需要 AdventureWorks 範例資料庫，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server 範例和社群專案](http://go.microsoft.com/fwlink/?LinkID=85384)首頁下載。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>若要列舉 OLE DB 資料來源  
   
-1.  擷取來源資料列集，藉由呼叫**ISourceRowset::GetSourcesRowset**。  
+1.  呼叫以擷取來源資料列集**ISourceRowset::GetSourcesRowset**。  
   
 2.  尋找列舉值的資料列集的描述，藉由呼叫**GetColumnInfo::IColumnInfo**。  
   
 3.  從資料行資訊建立繫結結構。  
   
-4.  藉由呼叫建立資料列集存取子**iaccessor:: Createaccessor**。  
+4.  建立資料列集的存取子，藉由呼叫**iaccessor:: Createaccessor**。  
   
-5.  擷取的資料列，藉由呼叫**irowset:: Getnextrows**。  
+5.  藉由呼叫擷取資料列**irowset:: Getnextrows**。  
   
-6.  擷取的資料列的資料列集的副本中的資料，藉由呼叫**irowset:: Getdata**，並加以處理。  
+6.  呼叫 **IRowset::GetData** 來從資料列集的資料列複本擷取資料，然後加以處理。  
   
 ## <a name="example"></a>範例  
- 使用 ole32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 使用 ole32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
 ```  
 // compile with: ole32.lib  

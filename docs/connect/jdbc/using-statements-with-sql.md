@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL 陳述式 |Microsoft 文件
+title: 使用 SQL 陳述式 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac74ec1c202341d6de099d97e2b7c719c2f72d27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851863"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37978620"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  當您使用中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]及內嵌 SQL 陳述式，您可以使用的不同類別。 使用哪一種類別視您想要執行的 SQL 陳述式類型而定。  
+  使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 及內嵌 SQL 陳述式來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中的資料時，有不同的類別可供您使用。 使用哪一種類別視您想要執行的 SQL 陳述式類型而定。  
   
- 如果您的 SQL 陳述式不含任何 IN 參數，使用[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)類別，但如果它確實含有 IN 參數，使用[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)類別。  
+ 如果您的 SQL 陳述式不含任何 IN 參數，請使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，但如果它確實含有 IN 參數，則請使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別。  
   
 > [!NOTE]  
->  如果您需要使用 SQL 陳述式同時包含 IN 與 OUT 參數，您必須它們實作為預存程序，並使用呼叫它們[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)類別。 如需有關如何使用預存程序的詳細資訊，請參閱[使用陳述式與預存程序](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
+>  如果您需要使用同時包含 IN 與 OUT 參數的 SQL 陳述式，您必須將它們實作為預存程序，並使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別呼叫它們。 如需使用預存程序的詳細資訊，請參閱 <<c0> [ 預存程序使用的 Using 陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
   
- 下列章節說明使用中的資料之不同案例[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用 SQL 陳述式。  
+ 下列各節描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中使用 SQL 陳述式來處理資料的不同狀況。  
   
 ## <a name="in-this-section"></a>本節內容  
   

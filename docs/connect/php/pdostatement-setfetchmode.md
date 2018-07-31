@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Setfetchmode |Microsoft 文件'
+title: 'Pdostatement:: Setfetchmode |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11b8e027ba6dd51cb98fe6192c88218ef1f802cc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308917"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992830"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,12 +34,12 @@ bool PDOStatement::setFetchMode( $mode );
 ```  
   
 #### <a name="parameters"></a>參數  
-$*模式*： 任何能夠傳遞至參數[pdostatement:: Fetch](../../connect/php/pdostatement-fetch.md)。  
+$*mode*：任何能夠傳遞至 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 的參數。  
   
 ## <a name="return-value"></a>傳回值  
 成功時傳回 true，否則傳回 false。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

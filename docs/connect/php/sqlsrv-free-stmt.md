@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_free_stmt | Microsoft Docs
+title: sqlsrv_free_stmt |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e5a0d3cbf54917f32d0e30f2d0b1f15929d6836
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309067"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019686"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,10 +46,10 @@ sqlsrv_free_stmt( resource $stmt)
 除非使用無效的參數呼叫函數，否則為布林值 **true** 。 如果使用無效的參數呼叫函數，則傳回 **false** 。  
   
 > [!NOTE]  
-> **Null** 是此函數的有效參數。 這可讓函數在指令碼中多次呼叫。 例如，如果您釋放中錯誤狀況的陳述式，並在指令碼結尾一次釋放，第二個呼叫**sqlsrv_free_stmt**會傳回**true**因為第一次呼叫**sqlsrv_free_stmt** （在錯誤狀況下） 將陳述式資源設**null**。  
+> **Null** 是此函數的有效參數。 這可讓函數在指令碼中多次呼叫。 例如，如果您在錯誤狀況下釋出陳述式，並且在指令碼結束時再次加以釋出，則在第二次呼叫 **sqlsrv_free_stmt** 時將會傳回 **true**，因為第一次呼叫 **sqlsrv_free_stmt** 時 (在錯誤狀況下) 已將陳述式資源設定為 **null**。  
   
 ## <a name="example"></a>範例  
-下列範例會建立陳述式資源、執行簡單查詢，並呼叫 **sqlsrv_free_stmt** 以釋出所有與陳述式相關聯的資源。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會建立陳述式資源、執行簡單查詢，並呼叫 **sqlsrv_free_stmt** 以釋出所有與陳述式相關聯的資源。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

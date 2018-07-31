@@ -1,5 +1,5 @@
 ---
-title: updateObject 方法 （int，java.lang.Object，int） |Microsoft 文件
+title: updateObject 方法 （int，java.lang.Object，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f690ba95d40a2e9e43881b0e1c82d497cd5e26d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849873"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036166"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>updateObject 方法 (int, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新指定的資料行與**物件**給定的資料行索引和小數位數的值。  
+  根據指定的資料行索引和小數位數，使用 **Object** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,13 +41,13 @@ public void updateObject(int index,
 ```  
   
 #### <a name="parameters"></a>參數  
- *索引*  
+ *index*  
   
  指出資料行索引的 **int**。  
   
  *obj*  
   
- **物件**值。  
+ **Object** 值。  
   
  *scale*  
   
@@ -57,7 +57,7 @@ public void updateObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [updateObject 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
+ [updateObject 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft 文件
+title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b840ab60ac59501d1a7e2c3908af36e9e9a31d38
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd24a45be060eaa091899d6ca499ece902c463c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690271"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106684"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -41,18 +41,18 @@ ms.locfileid: "35690271"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>備註  
- 沒有其他作業可上呼叫[IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)之後呼叫的介面**BCPDone**方法。 唯一的辦法就是呼叫[ibcpsession:: Bcpinit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)方法以啟始新的大量複製作業。 這是類似於呼叫[irowsetfastload:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
+## <a name="remarks"></a>Remarks  
+ 呼叫 **BCPDone** 方法之後，您就無法針對 [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) 介面呼叫任何其他作業。 唯一的可能性是呼叫 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法來起始新的大量複製作業。 這就類似於呼叫 [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
  此方法已成功。  
   
  E_UNEXPECTED  
- 此方法的呼叫是非預期的。 例如， **BCPInit**方法不會呼叫這個方法之前呼叫。  
+ 此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。  
   
 ## <a name="example"></a>範例  
- 這個範例示範如何使用**IBCPSession**介面。  
+ 此範例會示範如何使用 **IBCPSession** 介面。  
   
  在執行這個範例之前，必須先執行以下 [!INCLUDE[tsql](../../../includes/tsql-md.md)]：  
   
@@ -70,7 +70,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  您應該使用 BCP，透過下列命令將這份資料新增回資料表中：  
   
- **bcp master 資料庫...在 outfile.dat-n-T-S fltest** *伺服器*  
+ **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
 ```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  

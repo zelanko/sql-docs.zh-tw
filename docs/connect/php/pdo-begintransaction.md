@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: begintransaction |Microsoft 文件'
+title: 'Pdo:: begintransaction |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307967"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020886"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,14 +36,14 @@ bool PDO::beginTransaction();
 ## <a name="return-value"></a>傳回值  
 如果方法呼叫成功，會傳回 true，否則傳回 false。  
   
-## <a name="remarks"></a>備註  
-以 pdo:: begintransaction 開始的交易時結束[pdo:: commit](../../connect/php/pdo-commit.md)或[pdo:: rollback](../../connect/php/pdo-rollback.md)呼叫。  
+## <a name="remarks"></a>Remarks  
+以 PDO::beginTransaction 開始的交易，會在呼叫 [PDO::commit](../../connect/php/pdo-commit.md) 或 [PDO::rollback](../../connect/php/pdo-rollback.md) 時結束。  
   
 PDO::beginTransaction 不受 PDO::ATTR_AUTOCOMMIT 的值影響 (且不會影響該值)。  
   
 在使用 PDO::rollback 或 PDO::commit 結束先前的 PDO::beginTransaction 之前，您無法呼叫 PDO::beginTransaction。  
   
-連接回到自動認可模式，如果此方法失敗。  
+如果此方法失敗，連線會回到自動認可模式。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   

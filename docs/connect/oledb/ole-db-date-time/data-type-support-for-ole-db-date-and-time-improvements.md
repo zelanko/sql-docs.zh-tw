@@ -1,6 +1,6 @@
 ---
-title: 資料類型支援的 OLE DB 日期和時間增強功能 |Microsoft 文件
-description: OLE DB 日期和時間增強功能的資料類型支援
+title: 對 OLE DB 日期和時間改善的資料類型支援 | Microsoft Docs
+description: 對 OLE DB 日期和時間改善的資料類型支援
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ce5d32efa04e3402e9e454f2ab4c89cb6e1e5b69
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 79ecd277d962cc9e592d4b91eea985e55fb5c325
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666388"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109100"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>資料類型支援的 OLE DB 日期和時間增強功能
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>對 OLE DB 日期和時間改善的資料類型支援
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本文章提供關於 OLE DB （OLE DB 驅動程式的 SQL Server） 的資訊類型支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日期/時間資料類型。  
+  這篇文章提供關於 OLE DB (OLE DB Driver for SQL Server) 的資訊類型支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日期/時間資料類型。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應  
  OLE DB 提供兩種新的資料類型來支援新的伺服器類型：DBTYPE_DBTIME2 和 DBTYPE_DBTIMESTAMPOFFSET。 下表顯示完整伺服器類型的對應：  
@@ -48,7 +48,7 @@ ms.locfileid: "35666388"
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型|OLE DB 資料類型|用於用戶端轉換的字串格式|  
 |-----------------------------------------|----------------------|------------------------------------------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 針對 Datetime，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 最多支援三個小數秒位數。|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 此資料類型擁有精確度為 1 分鐘。 輸出時，秒數元件為零，而在輸入時，將會由伺服器捨去。|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> 此資料類型的精確度為一分鐘。 輸出時，秒數元件為零，而在輸入時，將會由伺服器捨去。|  
 |日期|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
 |datetime2|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.fffffff]'<br /><br /> 您最多可以使用七位數選擇性地指定小數秒。|  
@@ -65,7 +65,7 @@ ms.locfileid: "35666388"
  空字串不是有效的日期/時間常值，而且它不代表 NULL 值。 嘗試將空字串轉換為日期/時間值時，將會導致 SQLState 22018 的錯誤，而且會出現「轉換規格的字元值無效」訊息。  
   
 ## <a name="data-formats-data-structures"></a>資料格式：資料結構  
- 以下描述的 OLE DB 專屬結構，在 OLE DB 符合下列條件約束。 這些是取自西曆：  
+ 在以下描述的 OLE DB 特定結構中，OLE DB 符合下列條件約束。 這些是取自西曆：  
   
 -   月份的範圍由 1 至 12。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "35666388"
   
 -   分鐘的範圍由 0 至 59。  
   
--   秒數的範圍從 0 至 59。 這可讓兩個閏秒的恒星時間保持同步。  
+-   秒數的範圍從 0 至 59。 這可讓最多兩個潤秒與恆星時間保持同步。  
   
  下列現有 OLE DB 結構的實作已經經過修改，支援新的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 日期和時間資料類型。 不過，定義尚未變更。  
   
--   DBTYPE_DATE (這是一個自動化 DATE 類型。 在內部表示為**double**... 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 此類型的精確度為 1 秒，因此，有效的小數位數為 0)。  
+-   DBTYPE_DATE (這是一個自動化 DATE 類型。 這在內部表示為 **double**。 整數部分為自 1899 年 12 月 30 日起的天數，而分數部分則為一天的分數部分。 此類型的精確度為 1 秒，因此，有效的小數位數為 0)。  
   
 -   DBTYPE_DBDATE  
   
@@ -164,7 +164,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 使用應用程式移轉至 OLE DB 驅動程式，適用於 SQL Server **sql_variant**並無限制的有效位數之**datetime**就必須更新如果基礎結構描述更新為使用**datetime2**而**datetime**。  
+ 使用應用程式移轉至 OLE DB Driver for SQL Server **sql_variant**上的限制有效位數，且依賴**datetime**會更新，如果基礎結構描述更新為使用**datetime2**而非**datetime**。  
   
  SSVARIANT 的存取巨集也已經透過加入下列項目來擴充：  
   
@@ -176,18 +176,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable 中的資料類型對應  
- 下列類型的對應會搭配 itabledefinition:: Createtable 所使用的 DBCOLUMNDESC 結構：  
+ Itabledefinition:: Createtable 所使用的 DBCOLUMNDESC 結構用於下列類型對應：  
   
 |OLE DB 資料類型 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料類型|注意|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|日期||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server OLE DB 驅動程式會檢查 DBCOLUMDESC *bScale*成員以決定小數秒有效位數。|  
-|DBTYPE_DBTIME2|**time**(p)|SQL Server OLE DB 驅動程式會檢查 DBCOLUMDESC *bScale*成員以決定小數秒有效位數。|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|SQL Server OLE DB 驅動程式會檢查 DBCOLUMDESC *bScale*成員以決定小數秒有效位數。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|OLE DB Driver for SQL Server 會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  
+|DBTYPE_DBTIME2|**time**(p)|OLE DB Driver for SQL Server 會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB Driver for SQL Server 會檢查 DBCOLUMDESC *bScale*成員來判斷小數秒數有效位數。|  
   
- 當應用程式中指定 DBTYPE_DBTIMESTAMP *wType*，它可以覆寫對應至**datetime2**藉由提供中的型別名稱*pwszTypeName*。 如果**datetime**指定，則*bScale*必須是 3。 如果**smalldatetime**指定，則*bScale*必須是 0。 如果*bScale*與不一致*wType*和*pwszTypeName*，則會傳回 DB_E_BADSCALE。  
+ 當應用程式中指定 DBTYPE_DBTIMESTAMP *wType*，則可以覆寫的對應**datetime2**藉由提供中的型別名稱*pwszTypeName*。 如果**datetime**指定，則*bScale*必須是 3。 如果**smalldatetime**指定，則*bScale*必須是 0。 如果*bScale*與不一致*wType*並*pwszTypeName*，則會傳回 DB_E_BADSCALE。  
   
 ## <a name="see-also"></a>另請參閱  
- [日期和時間增強功能&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [日期和時間改善 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

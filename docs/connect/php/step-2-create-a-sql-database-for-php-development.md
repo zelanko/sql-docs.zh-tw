@@ -1,5 +1,5 @@
 ---
-title: 步驟 2： 建立 SQL database 的 PHP 開發 |Microsoft 文件
+title: 步驟 2︰建立供 PHP 開發使用的 SQL 資料庫 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c3a90464de49e5d0ca59b737e9fb6a567ac0605
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309607"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991310"
 ---
-# <a name="step-2-create-a-sql-database-for-php-development"></a>步驟 2： 建立 PHP 開發的 SQL 資料庫
+# <a name="step-2-create-a-sql-database-for-php-development"></a>步驟 2︰建立供 PHP 開發使用的 SQL 資料庫
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

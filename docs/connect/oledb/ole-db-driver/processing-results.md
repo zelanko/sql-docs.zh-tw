@@ -1,5 +1,5 @@
 ---
-title: 處理結果 |Microsoft 文件
+title: 處理結果 |Microsoft Docs
 description: 處理結果
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0a07bdd4181e85bdbeeea7e3751613a860bc5754
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 3981b97be580f2cacbee04727eb21c4cfc2d1abf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665348"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105814"
 ---
 # <a name="processing-results"></a>處理結果
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   如果資料列集物件是由命令的執行所產生或是直接從提供者產生資料列集物件而產生，則取用者需要擷取及存取此資料列集中的資料。  
   
- 資料列集是中央物件，可啟用 SQL Server，以公開在表格式表單中的資料，OLE DB 驅動程式。 就概念上來說，資料列集是一組資料列，其中各個資料列都有資料行。 資料列集物件會將介面公開這類**IRowset** （包含從資料列集循序提取資料列的方法） **IAccessor** （允許群組的資料行繫結描述表格式資料繫結至取用者程式變數的方式定義）， **IColumnsInfo** （提供有關資料列集中的資料行） 和**IRowsetInfo** （提供資料列集的相關資訊）。  
+ 資料列集是中央物件，可讓 OLE DB Driver for SQL Server，以公開在表格式表單中的資料。 就概念上來說，資料列集是一組資料列，其中各個資料列都有資料行。 資料列集物件會公開介面，例如 **IRowset** (其中包含一些方法來從資料列集循序擷取資料列)、**IAccessor** (允許一組資料行繫結的定義，以描述表格式資料繫結至取用者程式變數的方式)、**IColumnsInfo** (提供有關資料列集內之資料行的資訊) 及 **IRowsetInfo** (提供有關資料列集的資訊)。  
   
- 取用者可以呼叫**irowset:: Getdata**讀入緩衝區中擷取資料列集的資料列的方法。 之前**GetData**是取用者呼叫，描述使用 DBBINDING 結構的一組緩衝區。 每一個繫結都會描述資料列集中的資料行是如何儲存在取用者緩衝區內，並包含以下項目：  
+ 取用者可以呼叫 **IRowset::GetData** 方法，將資料列集中的資料列擷取到緩衝區。 在呼叫 **GetData** 之前，取用者會使用一組 DBBINDING 結構來描述緩衝區。 每一個繫結都會描述資料列集中的資料行是如何儲存在取用者緩衝區內，並包含以下項目：  
   
 -   套用繫結之資料行 (或參數) 的序數。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "35665348"
   
  當取得資料時，提供者會使用每一個繫結中的資訊來判斷要從取用者緩衝區的何處擷取資料以及擷取方式為何。 在取用者緩衝區內設定資料時，提供者會使用每一個繫結中的資訊來判斷要從取用者緩衝區的何處傳回資料以及傳回方式為何。  
   
- 指定了 DBBINDING 結構之後，會建立存取子 (**iaccessor:: Createaccessor**)。 存取子是繫結的集合，可用來取得或設定取用者緩衝區內的資料。  
+ 當指定了 DBBINDING 結構之後，就會建立存取子 (**IAccessor::CreateAccessor**)。 存取子是繫結的集合，可用來取得或設定取用者緩衝區內的資料。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 應用程式建立 OLE DB 驅動程式](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
+ [建立 OLE DB Driver for SQL Server 應用程式](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [OLE DB 的使用說明主題](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

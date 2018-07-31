@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_errors | Microsoft Docs
+title: sqlsrv_errors |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309047"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979789"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-傳回延伸錯誤及/或警告資訊有關上次**sqlsrv**執行作業。  
+傳回有關上次執行之 **sqlsrv** 作業的延伸錯誤及/或警告資訊。  
   
-**Sqlsrv_errors**函式可以藉由呼叫與下方的 [參數] 區段中指定的參數值的其中一個傳回錯誤及/或警告資訊。  
+以在下面＜參數＞一節中指定的其中一個參數值呼叫 **sqlsrv_errors** 函式，即可傳回錯誤及/或警告資訊。  
   
 根據預設，在呼叫任何 **sqlsrv** 函數時產生的警告會被視為錯誤；如果在呼叫 **sqlsrv** 函數時發生警告，此函數會傳回 false。 不過，對應至 SQLSTATE 值 01000、01001、01003 和 01S02 的警告絕不會被視為錯誤。  
   
@@ -49,7 +49,7 @@ sqlsrv_configure("WarningsReturnAsErrors", 0);
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-不論此設定，可以只擷取警告藉由呼叫**sqlsrv_errors**其中一種**SQLSRV_ERR_WARNINGS**或**SQLSRV_ERRORS**參數值 （請參閱參數面章節以取得詳細資料）。  
+不論設定為何，只有以 **SQLSRV_ERR_ALL** 或 **SQLSRV_ERR_WARNINGS** 參數值呼叫 **sqlsrv_errors**，才可以擷取警告 (如需詳細資料，請參閱下面的＜參數＞一節)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,9 +59,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>參數  
-*$errorsAndOrWarnings*[選用]: 預先定義的常數。 此參數可以採用下表所列的其中一個值：  
+*$errorsAndOrWarnings*[選擇性]：預先定義的常數。 此參數可以採用下表所列的其中一個值：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤和警告。|  
 |SQLSRV_ERR_ERRORS|傳回上次呼叫 **sqlsrv** 函數時產生的錯誤。|  
@@ -70,18 +70,18 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 如果未提供參數值，則會傳回上次呼叫 **sqlsrv** 函數時產生的錯誤和警告。  
   
 ## <a name="return-value"></a>傳回值  
-陣列的 **array** ，或為 **null**。 每個**陣列**在傳回**陣列**包含三個索引鍵-值組。 下表列出每個索引鍵及其描述：  
+陣列的 **array** ，或為 **null**。 傳回的 **array** 中的每個 **array** 都包含三個索引鍵值組。 下表列出每個索引鍵及其描述：  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
-|SQLSTATE|若為源自 ODBC 驅動程式的錯誤，則為 ODBC 所傳回的 SQLSTATE。 ODBC SQLSTATE 值的詳細資訊，請參閱[ODBC 錯誤碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的錯誤，則為 IMSSP 的 SQLSTATE。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，則為 01SSP 的 SQLSTATE。|  
+|SQLSTATE|若為源自 ODBC 驅動程式的錯誤，則為 ODBC 所傳回的 SQLSTATE。 如需 ODBC 之 SQLSTATE 值的資訊，請參閱 [ODBC 錯誤碼](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的錯誤，則為 IMSSP 的 SQLSTATE。<br /><br />若為源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的警告，則為 01SSP 的 SQLSTATE。|  
 |代碼|若為源自 SQL Server 的錯誤，則為原生 SQL Server 錯誤碼。<br /><br />若為源自 ODBC 驅動程式的錯誤，則為 ODBC 所傳回的錯誤碼。<br /><br />對於源自 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的錯誤，則為 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 錯誤碼。 如需詳細資訊，請參閱 [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md)。|  
 |message|錯誤的描述。|  
   
 使用數值索引鍵 0、1 和 2 也可以存取陣列值。 如果未發生任何錯誤或警告，則會傳回 **null** 。  
   
 ## <a name="example"></a>範例  
-下列範例顯示陳述式執行失敗時所發生的錯誤。 (陳述式會失敗，因為**InvalidColumName**不是有效的資料行名稱中指定的資料表。)此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例顯示陳述式執行失敗時所發生的錯誤。 (陳述式因為 **InvalidColumName** 不是指定資料表中有效的資料行名稱而失敗。)此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

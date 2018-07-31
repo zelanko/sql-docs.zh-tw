@@ -1,6 +1,6 @@
 ---
-title: 取得大型資料 |Microsoft 文件
-description: 取得使用 for SQL Server 的 OLE DB 驅動程式的大型資料
+title: 取得大型資料 |Microsoft Docs
+description: 取得使用 OLE DB Driver for SQL Server 的大型資料
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666198"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106175"
 ---
 # <a name="getting-large-data"></a>取得大型資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  一般而言，取用者應該隔離程式碼會從其他程式碼會處理不透過參考的資料建立 SQL Server 儲存體物件 OLE DB 驅動程式**ISequentialStream**介面指標。  
+  一般而言，取用者應該隔離的程式碼會從處理不透過 **ISequentialStream** 介面指標參照之資料的其他程式碼，建立 OLE DB Driver for SQL Server 儲存物件。  
   
- 這篇文章是指功能提供下列功能：  
+ 本文是指下列函式提供的功能：  
   
 -   IRowset:GetData  
   
@@ -41,9 +41,9 @@ ms.locfileid: "35666198"
   
 -   ICommand::Execute  
   
- 取用者應該擷取資料的呼叫中的單一資料列**GetNextRows**當 DBPROP_ACCESSORDER 屬性，在資料列集屬性群組中，設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_ 方法SEQUENTIALSTORAGEOBJECTS。 這是因為未緩衝處理 BLOB 資料。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以擷取多個資料列中的資料**GetNextRows**。  
+ 如果 DBPROP_ACCESSORDER 屬性 (在資料列集屬性群組中) 設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS，取用者應該在 **GetNextRows** 方法的呼叫中，僅提取資料的單一資料列。 這是因為 BLOB 資料不會進行緩衝。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以在 **GetNextRows** 中提取資料的多個資料列。  
   
- SQL Server OLE DB 驅動程式不會擷取從大型資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]取用者要求之前。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
+ OLE DB Driver for SQL Server 不會擷取從大型資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]取用者要求之前。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
   
 ## <a name="example"></a>範例  
  此範例會從單一資料行擷取大型資料值：  
@@ -154,7 +154,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blob 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大型實值型別](../../oledb/features/using-large-value-types.md)  
   
   

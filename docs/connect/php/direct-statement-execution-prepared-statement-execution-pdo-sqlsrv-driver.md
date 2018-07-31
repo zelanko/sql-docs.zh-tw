@@ -1,5 +1,5 @@
 ---
-title: 陳述式的備妥的陳述式執行 PDO_SQLSRV 驅動程式的直接 |Microsoft 文件
+title: 直接陳述式已備妥陳述式執行 PDO_SQLSRV 驅動程式 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a054717a1d8249e842611b2e07f49631f376049
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307477"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38042217"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-本主題討論使用 pdo:: SQLSRV_ATTR_DIRECT_QUERY 屬性來指定直接陳述式執行，而不是預設值，已備妥的陳述式執行。 使用備妥的陳述式可能導致更好的效能，如果超過一次使用 參數繫結來執行陳述式。  
+本主題討論如何使用 PDO::SQLSRV_ATTR_DIRECT_QUERY 屬性來指定直接陳述式執行，而不是預設值 ─ 已備妥的陳述式執行。 使用已備妥的陳述式可能導致較佳的效能，如果陳述式會執行一次使用 參數繫結。  
   
-## <a name="remarks"></a>備註  
-如果您想要傳送[!INCLUDE[tsql](../../includes/tsql_md.md)]直接至伺服器的未經由驅動程式的陳述式準備的陳述式，您可以設定的 pdo:: SQLSRV_ATTR_DIRECT_QUERY 屬性[pdo:: setattribute](../../connect/php/pdo-setattribute.md) （或驅動程式選項傳遞給[Pdo:: __construct](../../connect/php/pdo-construct.md)) 或當您呼叫[pdo:: prepare](../../connect/php/pdo-prepare.md)。 根據預設，pdo:: SQLSRV_ATTR_DIRECT_QUERY 的值為 False （使用備妥的陳述式執行）。  
+## <a name="remarks"></a>Remarks  
+如果您想要傳送[!INCLUDE[tsql](../../includes/tsql_md.md)]直接對伺服器而不需要由驅動程式的陳述式準備的陳述式，您可以設定的 pdo:: SQLSRV_ATTR_DIRECT_QUERY 屬性[pdo:: setattribute](../../connect/php/pdo-setattribute.md) （或驅動程式選項傳遞至[Pdo:: __construct](../../connect/php/pdo-construct.md)) 或當您呼叫[pdo:: prepare](../../connect/php/pdo-prepare.md)。 根據預設，pdo:: SQLSRV_ATTR_DIRECT_QUERY 的值為 False （使用備妥的陳述式執行）。  
   
-如果您使用[pdo:: query](../../connect/php/pdo-query.md)，您可以直接執行。 然後再呼叫[pdo:: query](../../connect/php/pdo-query.md)，呼叫[pdo:: setattribute](../../connect/php/pdo-setattribute.md)和 pdo:: SQLSRV_ATTR_DIRECT_QUERY 設為 True。  每次呼叫[pdo:: query](../../connect/php/pdo-query.md) pdo:: SQLSRV_ATTR_DIRECT_QUERY 可以為執行與不同的設定。  
+如果您使用[pdo:: query](../../connect/php/pdo-query.md)，您可以直接執行。 然後再呼叫[pdo:: query](../../connect/php/pdo-query.md)，呼叫[pdo:: setattribute](../../connect/php/pdo-setattribute.md) pdo:: SQLSRV_ATTR_DIRECT_QUERY 設為 True。  每次呼叫[pdo:: query](../../connect/php/pdo-query.md) pdo:: SQLSRV_ATTR_DIRECT_QUERY 可以為執行不同的設定。  
   
-如果您使用[pdo:: prepare](../../connect/php/pdo-prepare.md)和[pdostatement:: Execute](../../connect/php/pdostatement-execute.md)執行查詢多次使用繫結的參數，備妥的陳述式執行最佳化執行重複的查詢。  在此情況下，呼叫[pdo:: prepare](../../connect/php/pdo-prepare.md)使用 pdo:: SQLSRV_ATTR_DIRECT_QUERY 驅動程式的選項陣列參數中設定為 False。 必要時，您可以執行已備妥的陳述式以 pdo:: SQLSRV_ATTR_DIRECT_QUERY 設為 False。  
+如果您使用[pdo:: prepare](../../connect/php/pdo-prepare.md)並[pdostatement:: Execute](../../connect/php/pdostatement-execute.md)執行多次的查詢會使用繫結的參數，備妥的陳述式執行最佳化執行重複的查詢。  在此情況下，呼叫[pdo:: prepare](../../connect/php/pdo-prepare.md)使用 pdo:: SQLSRV_ATTR_DIRECT_QUERY 的驅動程式的選項陣列參數中設定為 False。 如有必要，您可以執行已備妥的陳述式與 pdo:: SQLSRV_ATTR_DIRECT_QUERY 的設定為 False。  
   
-在您呼叫後[pdo:: prepare](../../connect/php/pdo-prepare.md)，pdo:: SQLSRV_ATTR_DIRECT_QUERY 的值執行備妥的查詢時，無法變更。  
+在您呼叫後[pdo:: prepare](../../connect/php/pdo-prepare.md)，執行已備妥的查詢時，無法變更 pdo:: SQLSRV_ATTR_DIRECT_QUERY 的值。  
   
-如果查詢需要已在上一個查詢中設定的內容，然後執行您的查詢，pdo:: SQLSRV_ATTR_DIRECT_QUERY 的設定為 True。 例如，如果您在查詢中使用暫存資料表，pdo:: SQLSRV_ATTR_DIRECT_QUERY 必須設定為 True。  
+如果查詢需要已設定在上一個查詢中的內容，然後執行您的查詢使用 pdo:: SQLSRV_ATTR_DIRECT_QUERY 設為 True。 例如，如果您在查詢中使用暫存資料表，pdo:: SQLSRV_ATTR_DIRECT_QUERY 必須設定為 True。  
   
-下列範例會顯示需要從先前的陳述式的內容時，您需要將 pdo:: SQLSRV_ATTR_DIRECT_QUERY 設定為 True。  這個範例會使用直接執行查詢時，則只有在程式中的後續陳述式可以使用的暫存資料表。  
+下列範例示範當需要時從上一個陳述式的內容，您需要將 pdo:: SQLSRV_ATTR_DIRECT_QUERY 設為 True。  這個範例會使用直接執行查詢時，則只能用於您的程式中的後續陳述式中的暫存資料表。  
   
 ```  
 <?php  
@@ -70,5 +70,5 @@ ms.locfileid: "35307477"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
-[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
   

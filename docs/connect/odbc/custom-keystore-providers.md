@@ -1,5 +1,5 @@
 ---
-title: 自訂金鑰存放區提供者 |Microsoft 文件
+title: 自訂金鑰存放區提供者 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.author: v-chojas
 manager: craigg
 author: MightyPen
 ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853263"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047513"
 ---
-# <a name="custom-keystore-providers"></a>自訂金鑰存放區提供者
+# <a name="custom-keystore-providers"></a>自訂金鑰儲存區提供者
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>概觀
 
-SQL Server 2016 的資料行加密功能需要加密資料行加密金鑰 (ECEKs) 儲存在伺服器上是由用戶端擷取，並再解密資料行加密金鑰 (Cek) 才能存取加密資料行中儲存的資料。 ECEKs 加密的資料行主要金鑰 (Cmk)，，CMK 的安全性很重要的資料行加密的安全性。 因此，CMK 應該儲存在安全的位置。資料行加密金鑰存放區提供者的目的是提供介面，讓 ODBC 驅動程式，以安全地存取這些儲存 Cmk。 針對具有自己的安全存放裝置的使用者，自訂金鑰存放區提供者介面提供的架構實作安全的 ODBC 驅動程式，然後可以用來執行 CEK 加密和解密的 CMK 存放區的存取權。
+SQL Server 2016 的資料行加密功能需要加密資料行加密金鑰 (ECEKs) 儲存在伺服器上會擷取用戶端，並再解密資料行加密金鑰 (Cek)，才能存取加密資料行中儲存的資料。 ECEKs 會加密的資料行主要金鑰 (Cmk)，與 CMK 的安全性很重要的資料行加密的安全性。 因此，CMK 應該儲存在安全的位置;資料行加密金鑰儲存區提供者的目的是提供介面，讓 ODBC 驅動程式，安全地存取這些儲存 Cmk。 針對使用者使用他們自己的安全儲存體，自訂金鑰存放區提供者介面提供的架構實作安全的 ODBC 驅動程式，然後可以用來執行 CEK 加密和解密 CMK 的儲存體的存取權。
 
-包含每個金鑰存放區提供者，並管理一個或多個 Cmk，由金鑰路徑的字串格式的識別提供者定義。 這項目，以及加密演算法，也是提供者，所定義的字串可用來執行的 CEK 加密及解密 ECEK。 演算法，以及 ECEK 和提供者，名稱會儲存在資料庫的加密中繼資料。請參閱[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)和[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)如需詳細資訊。 因此，兩個金鑰管理的基本作業如下：
+每個金鑰儲存區提供者包含並管理一個或多個 Cmk，由金鑰路徑格式的字串識別提供者定義。 這項目，以及加密演算法，也將提供者所定義的字串可用來執行的 CEK 加密及解密的 ECEK。 此演算法，以及 ECEK 和提供者名稱，會儲存在資料庫的加密中繼資料;請參閱[CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)並[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)如需詳細資訊。 因此，為金鑰管理的兩個基本作業：
 
 ```
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
@@ -38,7 +38,7 @@ CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algori
 ECEK = EncryptViaCEKeystoreProvider(CEKeyStoreProvider_name, Key_path, Key_algorithm, CEK)
 ```
 
-其中`CEKeystoreProvider_name`用來識別特定資料行加密金鑰存放區提供者 (CEKeystoreProvider)，而且其他引數會由 CEKeystoreProvider 來加密/解密 CEK (E)。 機碼路徑與名稱會提供 CMK 中繼資料中，當 CEK 中繼資料所提供的演算法和 ECEK 值。 多個金鑰存放區提供者可能會和預設的內建提供者一起出現。 時執行的作業需要 CEK，驅動程式會使用依名稱，尋找適當的金鑰存放區提供者的 CMK 中繼資料，並執行其解密作業，因為它可以表示為：
+其中`CEKeystoreProvider_name`用來識別特定資料行加密金鑰儲存區提供者 (CEKeystoreProvider)，而且其他引數會由 CEKeystoreProvider 來加密/解密 (E) CEK。 機碼路徑與名稱會提供 CMK 中繼資料中，當 CEK 中繼資料所提供的演算法和 ECEK 值。 多個金鑰儲存區提供者可能會和預設的內建提供者一起出現。 時執行的作業需要 CEK，驅動程式會使用依名稱尋找適當的 keystore 提供者的 CMK 中繼資料，並執行解密作業，可以表示為：
 
 ```
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
@@ -52,11 +52,11 @@ ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
 
 ### <a name="cekeystoreprovider-interface"></a>CEKeyStoreProvider 介面
 
-本文件詳細說明 CEKeyStoreProvider 介面。 金鑰存放區提供者會實作這個介面可供 Microsoft ODBC Driver for SQL Server。 CEKeyStoreProvider 實作者可以使用本指南來開發自訂金鑰存放區提供者可以使用驅動程式。
+本文件詳細說明 CEKeyStoreProvider 介面。 Keystore 提供者會實作這個介面可供 Microsoft ODBC Driver for SQL Server。 CEKeyStoreProvider 實作者可以使用本指南來開發自訂金鑰存放區提供者可用驅動程式。
 
-金鑰存放區提供者程式庫 （「 提供者程式庫 」） 是可由 ODBC 驅動程式載入動態連結程式庫，而且包含一或多個金鑰存放區提供者。 符號`CEKeystoreProvider`必須由提供者程式庫匯出，而且之 null 終端陣列的指標位址`CEKeystoreProvider`結構，其中每個金鑰存放區提供者程式庫內。
+金鑰儲存區提供者程式庫 （「 提供者程式庫 」） 是可由 ODBC 驅動程式載入的動態連結程式庫，並包含一或多個金鑰儲存區提供者。 符號`CEKeystoreProvider`必須匯出提供者程式庫，而且之 null 終端陣列的指標位址`CEKeystoreProvider`結構，其中每個金鑰儲存區提供者程式庫內。
 
-A`CEKeystoreProvider`結構會定義單一金鑰存放區提供者的進入點：
+A`CEKeystoreProvider`結構會定義單一的 keystore 提供者的進入點：
 
 ```
 typedef struct CEKeystoreProvider {
@@ -86,114 +86,114 @@ typedef struct CEKeystoreProvider {
 
 |欄位名稱|Description|
 |:--|:--|
-|`Name`|金鑰存放區提供者的名稱。 它不得為先前載入的驅動程式，或存在於此媒體櫃任何其他金鑰存放區提供者相同。 以 null 終止、 寬-字元 * 字串。|
+|`Name`|金鑰儲存區提供者的名稱。 它不能與先前載入的驅動程式，或此程式庫中任何其他金鑰儲存區提供者相同。 以 null 終止的寬-字元 * 字串。|
 |`Init`|初始化函式。 如果不需要的初始化函式，此欄位可能是 null。|
 |`Read`|提供者讀取函式。 可能是 null，如果不需要。|
 |`Write`|提供者寫入函式。 需要如果讀取不是 null。 可能是 null，如果不需要。|
-|`DecryptCEK`|ECEK 解密函式。 此函式的金鑰存放區提供者存在的原因，並不得為 null。|
-|`EncryptCEK`|CEK 加密函式。 驅動程式不會呼叫這個函式，但它可允許以程式設計方式存取 ECEK 建立金鑰管理工具。 可能是 null，如果不需要。|
+|`DecryptCEK`|ECEK 解密函式。 此函式是 keystore 提供者存在的原因，並不得為 null。|
+|`EncryptCEK`|CEK 加密函式。 驅動程式不會呼叫此函式，但它會提供以供以程式設計方式存取 ECEK 建立金鑰管理工具。 可能是 null，如果不需要。|
 |`Free`|終止函式。 可能是 null，如果不需要。|
 
-免費版，除了所有此介面中的函式有參數，對**ctx**和**onError**。 前者識別在其中函式呼叫，而後者用來報告錯誤的內容。 請參閱[內容](#context-association)和[錯誤處理](#error-handling)下方如需詳細資訊。
+除了 Free、 所有此介面中的函式有參數，對**ipcfencrcyptfile**並**onError**。 前者會識別在其中呼叫函數，而後者用來報告錯誤的內容。 請參閱[內容](#context-association)並[錯誤處理](#error-handling)如下如需詳細資訊。
 
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-定義提供者的初始化函式的替代名稱。 驅動程式會呼叫此函式一次之後，提供者已載入，但在第一個要求，以便執行解密 ECEK 或 Read()/Write() 需要的時間。 使用這個函數來執行任何需要的初始化。 
+定義提供者的初始化函式預留位置名稱。 驅動程式會呼叫此函式一次之後，提供者已載入，但之前，先要求它需要使用它來解密 ECEK 或 Read()/Write() 執行的時間。 您可以使用此函式來執行任何需要的初始化。 
 
 |引數|Description|
 |:--|:--|
 |`ctx`|[輸入]作業內容。|
 |`onError`|[輸入]錯誤報告函式。|
-|`Return Value`|傳回非零，表示作業成功，或為零表示失敗。|
+|`Return Value`|傳回非零值表示作業成功，或零表示失敗。|
 
 ```
 int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len);
 ```
 
-定義提供者通訊函式的替代名稱。 應用程式要求讀取 （先前的寫入-至） 提供者使用 SQL_COPT_SS_CEKEYSTOREDATA 連接屬性，允許應用程式從提供者讀取任意資料的資料時，驅動程式會呼叫此函式。 請參閱[與金鑰存放區提供者通訊](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)如需詳細資訊。
+一項提供者定義的通訊功能的預留位置名稱。 應用程式要求讀取 （先前為寫入-對象） 提供者使用 SQL_COPT_SS_CEKEYSTOREDATA 連接屬性，讓應用程式從提供者讀取任意資料的資料時，驅動程式會呼叫此函式。 請參閱[金鑰存放區提供者與通訊](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)如需詳細資訊。
 
 |引數|Description|
 |:--|:--|
 |`ctx`|[輸入]作業內容。|
 |`onError`|[輸入]錯誤報告函式。|
-|`data`|[輸出]在其中提供者會將資料讀取應用程式所寫入的緩衝區指標。 這會對應至 CEKEYSTOREDATA 結構的資料欄位。|
-|`len`|[InOut]指標長度值。在輸入時，這是資料緩衝區的最大長度，並提供者應該寫入多個 * len 位元組。 傳回時，提供者應該更新 * len 實際寫入的位元組數。|
-|`Return Value`|傳回非零，表示作業成功，或為零表示失敗。|
+|`data`|[輸出]在其中提供者會將資料讀取應用程式所寫入之緩衝區的指標。 這會對應至 CEKEYSTOREDATA 結構的資料欄位。|
+|`len`|[InOut]指標長度值。在輸入時，這是資料緩衝區的最大長度和提供者應該不會寫入多個 * len 位元組。 傳回時，提供者應該更新 * len 與實際寫入的位元組數目。|
+|`Return Value`|傳回非零值表示作業成功，或零表示失敗。|
 
 ```
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
-定義提供者通訊函式的替代名稱。 應用程式要求將資料寫入使用 SQL_COPT_SS_CEKEYSTOREDATA 連接屬性，允許應用程式寫入提供者中的任意資料提供者時，驅動程式會呼叫此函式。 請參閱[與金鑰存放區提供者通訊](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)如需詳細資訊。
+一項提供者定義的通訊功能的預留位置名稱。 應用程式要求將資料寫入使用 SQL_COPT_SS_CEKEYSTOREDATA 連接屬性，讓應用程式，將任意資料寫入至提供者的提供者時，驅動程式會呼叫此函式。 請參閱[金鑰存放區提供者與通訊](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers)如需詳細資訊。
 
 |引數|Description|
 |:--|:--|
 |`ctx`|[輸入]作業內容。|
 |`onError`|[輸入]錯誤報告函式。|
-|`data`|[輸入]包含要讀取的提供者的資料緩衝區的指標。 這會對應至 CEKEYSTOREDATA 結構的資料欄位。 提供者必須從這個緩衝區讀取多超過 len 位元組。|
-|`len`|[輸入]資料中可用的位元組數目。 這會對應到 dataSize CEKEYSTOREDATA 結構欄位。|
-|`Return Value`|傳回非零，表示作業成功，或為零表示失敗。|
+|`data`|[輸入]包含要讀取的提供者的資料之緩衝區的指標。 這會對應至 CEKEYSTOREDATA 結構的資料欄位。 提供者必須從這個緩衝區讀取多個 len 位元組。|
+|`len`|[輸入]可用資料的位元組數目。 這會對應到 dataSize CEKEYSTOREDATA 結構欄位。|
+|`Return Value`|傳回非零值表示作業成功，或零表示失敗。|
 
 ```
 int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen);
 ```
-提供者定義 ECEK 解密函式預留位置名稱。 驅動程式會呼叫此函式來解密 ECEK 加密的 CMK CEK 到與此提供者相關聯。
+提供者定義 ECEK 解密函數的預留位置名稱。 驅動程式會呼叫此函式來解密 ECEK 由 CMK，與此提供者相關聯的 CEK 加密。
 
 |引數|Description|
 |:--|:--|
 |`ctx`|[輸入]作業內容。|
 |`onError`|[輸入]錯誤報告函式。|
-|`keyPath`|[輸入]值[KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 給定 ECEK 所參考的中繼資料屬性。 以 null 結束寬-字元 * 字串。 這是識別 CMK，此提供者處理。|
-|`alg`|[輸入]值[演算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)給定 ECEK 的中繼資料屬性。 以 null 結束寬-字元 * 字串。 這被為了識別用來加密給定的 ECEK 的加密演算法。|
+|`keyPath`|[輸入]值[KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 指定 ECEK 所參考的中繼資料屬性。 以 null 結尾寬-字元 * 字串。 這被要識別處理此提供者的 CMK。|
+|`alg`|[輸入]值[演算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)指定 ECEK 的中繼資料屬性。 以 null 結尾寬-字元 * 字串。 這被要識別用來加密指定的 ECEK 的加密演算法。|
 |`ecek`|[輸入]要解密 ECEK 指標。|
 |`ecekLen`|[輸入]ECEK 的長度。|
-|`cekOut`|[輸出]提供者應該解密 ECEK 配置記憶體，並寫入其位址 cekOut 所指向的指標。 您必須能夠釋放此記憶體使用的區塊[LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) 或釋放 (Linux/Mac) 函式。 如果沒有記憶體配置，因為發生錯誤或其他方式，提供者應該將 * cekOut 至 null 指標。|
-|`cekLen`|[輸出]提供者應該寫入 cekLen 所指向的位址已寫入解密 ECEK 長度 * * cekOut。|
-|`Return Value`|傳回非零，表示作業成功，或為零表示失敗。|
+|`cekOut`|[輸出]應該為已解密的 ECEK 配置記憶體提供者，並將它寫入 cekOut 所指向的指標中的其位址。 您必須能夠釋放這個記憶體使用的區塊[LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) 或可用 (Linux/Mac) 函式。 如果沒有記憶體配置，因為發生錯誤或其他方式，提供者應該會將 * cekOut 為 null 指標。|
+|`cekLen`|[輸出]提供者應該寫入 cekLen 所指的位址長度的解密 ECEK 它寫入至 * * cekOut。|
+|`Return Value`|傳回非零值表示作業成功，或零表示失敗。|
 
 ```
 int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *cek,unsigned short cekLen, unsigned char **ecekOut, unsigned short *ecekLen);
 ```
-定義提供者的 CEK 加密函數的替代名稱。 驅動程式未呼叫此函式不會公開其功能，透過 ODBC 介面，但它可允許以程式設計方式存取 ECEK 建立金鑰管理工具。
+定義提供者的 CEK 加密功能的預留位置名稱。 驅動程式不會不呼叫此函式也不會公開其功能，透過 ODBC 介面，但它會提供以供以程式設計方式存取 ECEK 建立金鑰管理工具。
 
 |引數|Description|
 |:--|:--|
 |`ctx`|[輸入]作業內容。|
 |`onError`|[輸入]錯誤報告函式。|
-|`keyPath`|[輸入]值[KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 給定 ECEK 所參考的中繼資料屬性。 以 null 結束寬-字元 * 字串。 這是識別 CMK，此提供者處理。|
-|`alg`|[輸入]值[演算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)給定 ECEK 的中繼資料屬性。 以 null 結束寬-字元 * 字串。 這被為了識別用來加密給定的 ECEK 的加密演算法。|
-|`cek`|[輸入]要加密 CEK 的指標。|
+|`keyPath`|[輸入]值[KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) CMK 指定 ECEK 所參考的中繼資料屬性。 以 null 結尾寬-字元 * 字串。 這被要識別處理此提供者的 CMK。|
+|`alg`|[輸入]值[演算法](../../t-sql/statements/create-column-encryption-key-transact-sql.md)指定 ECEK 的中繼資料屬性。 以 null 結尾寬-字元 * 字串。 這被要識別用來加密指定的 ECEK 的加密演算法。|
+|`cek`|[輸入]加密 CEK 的指標。|
 |`cekLen`|[輸入]CEK 的長度。|
-|`ecekOut`|[輸出]提供者應該加密 CEK 配置記憶體，並寫入其位址 ecekOut 所指向的指標。 您必須能夠釋放此記憶體使用的區塊[LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) 或釋放 (Linux/Mac) 函式。 如果沒有記憶體配置，因為發生錯誤或其他方式，提供者應該將 * ecekOut 至 null 指標。|
-|`ecekLen`|[輸出]提供者應該寫入 ecekLen 所指向的位址已寫入加密 CEK 長度 * * ecekOut。|
-|`Return Value`|傳回非零，表示作業成功，或為零表示失敗。|
+|`ecekOut`|[輸出]提供者應該會配置記憶體給加密的 CEK 和 ecekOut 所指向的指標撰寫其位址。 您必須能夠釋放這個記憶體使用的區塊[LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) 或可用 (Linux/Mac) 函式。 如果沒有記憶體配置，因為發生錯誤或其他方式，提供者應該會將 * ecekOut 為 null 指標。|
+|`ecekLen`|[輸出]提供者應該寫入 ecekLen 所指的位址長度的加密 CEK 它寫入至 * * ecekOut。|
+|`Return Value`|傳回非零值表示作業成功，或零表示失敗。|
 
 ```
 void (*Free)();
 ```
-提供者定義終止函式的替代名稱。 驅動程式可能會呼叫此函式的處理序正常終止時。
+提供者定義終止函式預留位置名稱。 驅動程式可能會呼叫此函式的處理序正常終止時。
 
 > [!NOTE]
-> *寬字元字串都是因為 SQL Server 如何儲存它們的 2 位元組字元 (utf-16)。*
+> *寬字元字串是因為 SQL Server 如何儲存它們的 2 位元組字元 (utf-16)。*
 
 
 ### <a name="error-handling"></a>錯誤處理
 
-在提供者的處理期間，可能會發生錯誤，因為提供的機制是以允許它更特定的詳細資料，則為 true 的成功/失敗比在回到驅動程式報告錯誤。 許多功能都有一組參數， **ctx**和**onError**，這會針對此目的，除了成功/失敗傳回值一起使用。
+因為提供者的處理期間，可能會發生錯誤，會提供機制，以允許它在更特定的詳細資料，則為 true 的成功/失敗比回到驅動程式報告錯誤。 許多函式有參數，對**ipcfencrcyptfile**並**onError**，這針對此目的，除了成功/失敗的傳回值一起使用。
 
-**Ctx**參數會識別提供者作業發生的內容。
+**Ipcfencrcyptfile**參數會識別提供者作業發生的內容。
 
-**OnError**參數指向的錯誤報告的函式，使用下列原型：
+**OnError**參數所指向的錯誤報告的函式，使用下列原型：
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
 |引數|Description|
 |:--|:--|
 |`ctx`|[輸入]要在報告錯誤的內容。|
-|`msg`|[輸入]要報告的錯誤訊息。 以 null 結束的寬字元字串。 若要允許參數化的資訊必須存在，這個字串可能包含插入格式化序列形式接受[FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx)函式。 可能由這個參數指定擴充的功能，如下所述。|
-|...|[輸入]其他的 variadic 參數，以符合訊息，視需要的格式規範。|
+|`msg`|[輸入]報告錯誤訊息。 以 null 結尾的寬字元字串。 若要允許參數化的資訊，必須存在，這個字串可能包含插入格式化的序列所接受的格式[FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx)函式。 這個參數可能會指定擴充的功能，如下所述。|
+|...|[輸入]其他的 variadic 參數以符合訊息，視需要的格式規範。|
 
-若要報告發生錯誤時，提供者呼叫 onError 提供內容參數傳入提供者函式的驅動程式和選擇性的額外參數的錯誤訊息中格式化。 提供者可能會呼叫此函式數次發佈多個連續內一個提供者函式引動過程的錯誤訊息。 例如：
+若要回報發生錯誤時，提供者呼叫 onError，提供內容參數傳入提供者函式的驅動程式和其他選擇性參數的錯誤訊息中格式化。 提供者可能會呼叫此函式數次張貼一個提供者函式引動過程中的連續的多個錯誤訊息。 例如：
 
 ```
     if (!doSomething(...))
@@ -205,18 +205,18 @@ void (*Free)();
 ```
 
 
-`msg`參數通常是寬字元字串，但其他延伸模組都會提供：
+`msg`參數通常是寬字元字串，但會提供額外的延伸模組：
 
-使用其中一種特殊的預先定義值 IDS_MSG 巨集，與現有的一般錯誤訊息和驅動程式中的 localised 形式可能過高。 例如，如果提供者無法配置記憶體，`IDS_S1_001`可以使用 「 記憶體配置失敗 」 訊息：
+可能會利用使用其中一種特殊的預先定義值 IDS_MSG 巨集，現有的一般錯誤訊息和 localised 的格式，在驅動程式中。 例如，如果提供者無法配置記憶體，`IDS_S1_001`可以用 「 記憶體配置失敗 」 訊息：
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-錯誤網頁驅動程式，提供者函式必須傳回失敗。 張貼的錯誤這 ODBC 作業的內容中執行時，可透過標準的 ODBC 診斷機制的連接或陳述式控制代碼上進行存取 (`SQLError`， `SQLGetDiagRec`，和`SQLGetDiagField`)。
+驅動程式會辨識錯誤，提供者函式必須傳回失敗。 當 ODBC 作業的內容中執行時，張貼的錯誤會變成可存取透過標準的 ODBC 診斷機制的連接或陳述式控制代碼 (`SQLError`， `SQLGetDiagRec`，和`SQLGetDiagField`)。
 
 
 ### <a name="context-association"></a>內容關聯
 
-`CEKEYSTORECONTEXT`結構中，除了提供內容錯誤回呼的資料，也可用來決定執行提供者作業的 ODBC 內容。 這可讓提供者，例如關聯到這些內容中，每個資料來實作每個連線設定。 基於此目的，此結構包含 3 不透明的指標，相對於環境、 連接和陳述式內容：
+`CEKEYSTORECONTEXT`除了錯誤回呼，提供內容的結構，也可用來判斷在其中執行的提供者作業的 ODBC 內容。 這可讓提供者，例如建立關聯的這些內容中，每個資料來實作每個連線設定。 基於此目的，此結構會包含 3 個的不透明指標對應到環境、 連接和陳述式的內容：
 
 ```
 typedef struct CEKeystoreContext
@@ -228,18 +228,18 @@ void *stmtCtx;
 ```
 |欄位|Description|
 |:--|:--|
-|`envCtx`|環境內容中。|
+|`envCtx`|環境內容。|
 |`dbcCtx`|連接內容。|
-|`stmtCtx`|陳述式的內容。|
+|`stmtCtx`|陳述式內容。|
 
-這些內容的每一個都是不透明值，而不同於對應的 ODBC 控制代碼，可用來當做唯一識別項控制代碼： 如果處理*X*內容值與相關聯*Y*，然後沒有任何其他環境、 連線或陳述式控制代碼在相同時間同時存在*X*的內容值將會*Y*，以及任何其他內容的值會與相關聯處理*X*。如果提供者作業完成缺少的特定控制代碼的內容，（例如 SQLSetConnectAttr 呼叫載入並設定提供者，這在沒有任何陳述式控制代碼） 對應的結構中的內容值為 null。
+每個這些內容是不透明值，同時不同對應的 ODBC 控制代碼，可用來當做唯一識別項控制代碼： 如果處理*X*內容值與相關聯*Y*，然後任何其他環境、 連線或陳述式控制代碼同時存在與同時*X*內容值為*Y*，以及任何其他內容的值會與相關聯處理*X*。如果提供者作業完成沒有特定的控制代碼內容 （例如對載入和設定提供者，這在沒有任何陳述式控制代碼的 SQLSetConnectAttr 呼叫） 對應的結構中的內容值為 null。
 
 
 ## <a name="example"></a>範例
 
-### <a name="keystore-provider"></a>金鑰存放區提供者
+### <a name="keystore-provider"></a>金鑰儲存區提供者
 
-下列程式碼是最小金鑰存放區提供者實作的範例。
+下列程式碼是最小金鑰儲存區提供者實作的範例。
 
 ```
 /* Custom Keystore Provider Example
@@ -364,7 +364,7 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
 
 ### <a name="odbc-application"></a>ODBC 應用程式
 
-下列程式碼會示範應用程式會使用上述的金鑰存放區提供者。 當執行它，請確認提供者程式庫與應用程式二進位檔相同的目錄中且的連接字串指定 （或指定包含 DSN）`ColumnEncryption=Enabled`設定。
+下列程式碼是使用上述的金鑰儲存區提供者的示範應用程式。 當時執行它，請務必提供者程式庫是與應用程式二進位檔相同的目錄中的連接字串指定 （或指定的 DSN 包含）`ColumnEncryption=Enabled`設定。
 
 ```
 /*
@@ -639,4 +639,4 @@ FoundProv:
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 ODBC 驅動程式搭配使用一律加密](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+[搭配使用 Always Encrypted 與 JDBC 驅動程式](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

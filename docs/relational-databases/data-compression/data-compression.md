@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 944a0ca328ca0835601bf1cb4b75e974da6a8e7a
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001670"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240690"
 ---
 # <a name="data-compression"></a>資料壓縮
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "38001670"
 -   使用 **COLUMNSTORE_ARCHIVE** 資料壓縮，以封存壓縮來壓縮資料行存放區的資料。  
 -   使用 **COLUMNSTORE** 資料壓縮，將封存壓縮解壓縮。 產生的資料會持續以資料行存放區壓縮形式壓縮。  
   
-若要新增封存壓縮，請使用 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 搭配 REBUILD 選項和 DATA COMPRESSION = COLUMNSTORE。  
+若要新增封存壓縮，請使用 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 搭配 REBUILD 選項和 DATA COMPRESSION = COLUMNSTORE_ARCHIVE。  
   
 #### <a name="examples"></a>範例:  
 ```  
@@ -109,7 +109,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 若要移除封存壓縮並將資料還原成資料行存放區壓縮，請使用 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 或 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 搭配 REBUILD 選項和 DATA COMPRESSION = COLUMNSTORE。  
   
-#### <a name="examples"></a>範例:  
+#### <a name="examples"></a>範例：  
   
 ```  
 ALTER TABLE ColumnstoreTable1   

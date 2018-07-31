@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_next_result |Microsoft 文件
+title: sqlsrv_next_result |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309437"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019606"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309437"
 讓指定陳述式的下一個結果 (結果集、資料列計數或輸出參數) 成為作用中。  
   
 > [!NOTE]  
-> 批次查詢或預存程序所傳回的第一個 （或唯一） 結果為作用中而沒有呼叫**sqlsrv_next_result**。  
+> 批次查詢或預存程序所傳回的第一個 (或唯一) 結果為作用中，而不需要呼叫 **sqlsrv_next_result**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,12 +51,12 @@ sqlsrv_next_result( resource $stmt )
 如果下一個結果已成功成為作用中，將會傳回布林值 **true** 。 如果在讓下一個結果成為作用中時發生錯誤，則傳回 **false** 。 如果沒有其他結果可供使用，則傳回 **null** 。  
   
 ## <a name="example"></a>範例  
-下列範例會建立並執行一個預存程序，將產品評論插入 *Production.ProductReview* 資料表中，然後選取指定產品的所有評論。 執行預存程序之後, 的第一個結果 （預存程序的 INSERT 查詢所影響的資料列數目） 一經而不需呼叫**sqlsrv_next_result**。 下一個結果 （預存程序中的 SELECT 查詢所傳回的資料列） 所提供呼叫**sqlsrv_next_result**和耗用使用[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)。  
+下列範例會建立並執行一個預存程序，將產品評論插入 *Production.ProductReview* 資料表中，然後選取指定產品的所有評論。 執行預存程序之後，將會取用第一個結果 (預存程序中的 INSERT 查詢所影響的資料列數目)，而不會呼叫 **sqlsrv_next_result**。 下一個結果 (預存程序中的 SELECT 查詢所傳回的資料列) 可藉由呼叫 **sqlsrv_next_result** 成為可用結果，並可透過 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 加以取用。  
   
 > [!NOTE]  
-> 使用標準語法呼叫預存程序，是建議的做法。 如需關於標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
+> 使用標準語法呼叫預存程序，是建議的做法。 如需標準語法的詳細資訊，請參閱[呼叫預存程序](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  
@@ -187,9 +187,9 @@ sqlsrv_close( $conn );
 下列範例會執行一個批次查詢，擷取指定產品識別碼的產品評論資訊、插入產品的評論，然後再次擷取指定產品識別碼的產品評論資訊。 新插入的產品評論將包含在批次查詢的最終結果集內。 此範例會使用 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) ，從批次查詢的一個結果移至下一個。  
   
 > [!NOTE]  
-> 批次查詢或預存程序所傳回的第一個 （或唯一） 結果為作用中而沒有呼叫**sqlsrv_next_result**。  
+> 批次查詢或預存程序所傳回的第一個 (或唯一) 結果為作用中，而不需要呼叫 **sqlsrv_next_result**。  
   
-此範例會使用*Purchasing.ProductReview*資料表[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫，並假設此資料庫已安裝在伺服器上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例會使用 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫的 *Purchasing.ProductReview* 資料表，並假設此資料庫已安裝在伺服器上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

@@ -1,5 +1,5 @@
 ---
-title: updateInt 方法 （java.lang.String，int） |Microsoft 文件
+title: updateInt 方法 （java.lang.String，int） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62560202d4808bda26431044e5bf50720f6823b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850443"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983437"
 ---
 # <a name="updateint-method-javalangstring-int"></a>updateInt 方法 (java.lang.String, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新指定的資料行與**int**給定的資料行名稱的值。  
+  透過指定的資料行名稱，使用 **int** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +51,7 @@ public void updateInt(java.lang.String columnName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 updateInt 方法是由 java.sql.ResultSet 介面中的 updateInt 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::closeCursor |Microsoft 文件
+title: PDOStatement::closeCursor |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7795d237ab932ddb2cb7b1e45700f023ca939327
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308697"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019616"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,8 +36,8 @@ bool PDOStatement::closeCursor();
 ## <a name="return-value"></a>傳回值  
 如果成功，則為 true，否則為 false。  
   
-## <a name="remarks"></a>備註  
-當 MultipleActiveResultSets 連接選項設為 false 時，closeCursor 會有效用。  如需 MultipleActiveResultSets 連接選項的詳細資訊，請參閱[如何： 停用 Multiple Active Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。  
+## <a name="remarks"></a>Remarks  
+當 MultipleActiveResultSets 連接選項設為 false 時，closeCursor 會有效用。  如需 MultipleActiveResultSets 連線選項的詳細資訊，請參閱[如何：停用 Multiple Active Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)。  
   
 您也可以不要呼叫 closeCursor，而僅將陳述式控制代碼設為 Null。  
   

@@ -1,5 +1,5 @@
 ---
-title: 資料表值參數 (OLE DB) |Microsoft 文件
+title: 資料表值參數 (OLE DB) |Microsoft Docs
 description: 資料表值參數 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,24 +17,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: df40f003355b7c98ec6b3b8996bf9c372faa4ad0
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 195c556c517d7954aca95cec9b54dd78adf51341
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689861"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108750"
 ---
 # <a name="table-valued-parameters-ole-db"></a>資料表值參數 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  本章節描述 SQL Server 的 OLE DB 驅動程式中的資料表值參數的支援。 其他的概觀資訊，請參閱[資料表值參數&#40;OLE DB 驅動程式的 SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。 如需範例，請參閱[使用資料表值參數&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)。  
+  本章節描述 SQL Server 的 OLE DB 驅動程式中的資料表值參數的支援。 其他概觀資訊，請參閱[Parameters &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。 如需範例，請參閱[使用資料表值參數&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)。  
   
-## <a name="remarks"></a>備註  
- 目前，傳送多列資料到伺服器做為參數集的程序的參數 (中的 DBPARAMS 參數**icommand:: Execute**)。 使用參數集時，該集合中的每個元素都必須以對伺服器的個別遠端程序呼叫 (RPC) 要求來進行傳送。 資料表值參數提供類似的功能，但能與伺服器更緊密地整合。 它會減少 RPC 要求數，並可讓伺服器上的集合式作業。  
+## <a name="remarks"></a>Remarks  
+ 目前可以藉由參數集將多列資料當做程序的參數傳送給伺服器 (**ICommand::Execute** 中的 DBPARAMS 參數)。 使用參數集時，該集合中的每個元素都必須以對伺服器的個別遠端程序呼叫 (RPC) 要求來進行傳送。 資料表值參數提供類似的功能，但能與伺服器更緊密地整合。 如此可以減少 RPC 要求數目，並以集合為基礎在伺服器上進行作業。  
   
- SQL Server 作為 OLE DB 支援資料表值參數中 OLE DB 驅動程式**資料列集**物件。 任何**資料列集**物件無法由取用者 （也就是用戶端應用程式使用 SQL Server 的 OLE DB 驅動程式） 中提供做為預留位置，資料表值參數的參數。 資料表值參數會被視為類似於其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 參數類型。 SQL Server OLE DB 驅動程式提供建立、 探索、 規格、 繫結，與結構描述介面。  
+ OLE DB 驅動程式支援資料表值參數與 OLE DB 的 SQL server**資料列集**物件。 任何 **Rowset** 物件都可以藉由取用者 (也就是使用 OLE DB Driver for SQL Server 的用戶端應用程式)，以資料表值參數的參數預留位置來提供。 資料表值參數會被視為類似於其他 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 參數類型。 OLE DB Driver for SQL Server 提供建立、 探索、 規格、 繫結，以及結構描述的介面。  
   
 ## <a name="in-this-section"></a>本節內容  
   
@@ -50,12 +50,12 @@ ms.locfileid: "35689861"
   
 -   [OLE DB 資料表值參數類型支援](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)  
   
--   [OLE DB 資料表值參數類型支援&#40;方法&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
+-   [OLE DB 資料表值參數類型支援 &#40;方法&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
   
--   [OLE DB 資料表值參數類型支援&#40;屬性&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
+-   [OLE DB 資料表值參數類型支援 &#40;屬性&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 程式設計的 OLE DB 驅動程式](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [您可以使用資料表值參數&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
+ [使用資料表值參數 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

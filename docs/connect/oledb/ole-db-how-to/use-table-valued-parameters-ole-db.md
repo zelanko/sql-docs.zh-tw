@@ -1,5 +1,5 @@
 ---
-title: 您可以使用資料表值參數 (OLE DB) |Microsoft 文件
+title: 使用資料表值參數 (OLE DB) |Microsoft Docs
 description: 使用資料表值參數 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f0bb98891fbaff6bc0512d2adfeee6e2a19d412b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 035ff9761df4b557bfc5d966c05a7be5e0e29d28
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666158"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109810"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>使用資料表值參數 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -38,7 +38,7 @@ ms.locfileid: "35666158"
   
 -   顯示錯誤 MSOLEDBSQL 錯誤處理。  
   
- 如需有關資料表值參數的詳細資訊，請參閱[資料表值參數&#40;OLE DB 驅動程式的 SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
+ 如需有關資料表值參數的詳細資訊，請參閱 < [Parameters &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)。  
   
 ## <a name="example"></a>範例  
  第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料庫。  
@@ -47,7 +47,7 @@ ms.locfileid: "35666158"
   
  將第三個程式碼清單放入名為 OLEDBUtils.hpp 的檔案中。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第四個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第四個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
  第五個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料庫。  
   

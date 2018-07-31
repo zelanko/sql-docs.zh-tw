@@ -1,6 +1,6 @@
 ---
-title: 大量複製資料使用 IRowsetFastLoad (OLE DB) |Microsoft 文件
-description: 大量複製資料到 SQL Server 資料表使用 IRowsetFastLoad 介面的 OLE DB 驅動程式的 SQL Server
+title: 大量複製資料，使用 IRowsetFastLoad (OLE DB) |Microsoft Docs
+description: SQL Server 資料表使用 IRowsetFastLoad 介面，OLE DB Driver for SQL Server 的大量複製資料
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,25 +19,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 915a9ba3bf4a9f9937d79cbb9449671ca09b3cb9
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665658"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107720"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>使用 IRowsetFastLoad 大量複製資料 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此範例會示範如何使用 IRowsetFastLoad，將記錄大量複製到資料表中。  
   
- 取用者通知的大量複製，OLE DB 驅動程式的 SQL Server 驅動程式特有的屬性 SSPROP_ENABLEFASTLOAD 設定為 VARIANT_TRUE 的其需要的 SQL server 的 OLE DB 驅動程式。 資料來源上設定屬性，取用者會針對 SQL Server 工作階段建立 OLE DB 驅動程式。 新的工作階段可讓取用者存取**IRowsetFastLoad**。  
+ 取用者通知 OLE DB Driver for SQL Server 的大量複製藉由設定 OLE DB Driver for SQL Server 驅動程式特有的屬性 ssprop_enablefastload 設定為 VARIANT_TRUE 其需求。 資料來源上設定的屬性，取用者會建立 OLE DB Driver for SQL Server 工作階段。 新的工作階段可讓取用者存取**IRowsetFastLoad**。  
   
- 完整的範例會說明如何使用**IRowsetFastLoad**記錄大量複製到資料表。 在此範例中，10 筆記錄會加入至資料表**IRFLTable**。 您需要建立資料表**IRFLTable**資料庫中。  
+ 完整的範例會示範使用 **IRowsetFastLoad** 將記錄大量複製到資料表中。 在這個範例中，10 筆記錄會加入至資料表 **IRFLTable**。 您必須在資料庫中建立資料表 **IRFLTable**。  
   
- 這個範例需要 AdventureWorks 範例資料庫，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server 範例和社群專案](http://go.microsoft.com/fwlink/?LinkID=85384)首頁下載。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -46,24 +46,24 @@ ms.locfileid: "35665658"
   
 1.  建立資料來源的連接。  
   
-2.  設定 OLE DB 驅動程式的 SQL Server 驅動程式特有的資料來源屬性 ssprop_enablefastload 設定為 VARIANT_TRUE。 此屬性設定為 VARIANT_TRUE，新建立的工作階段可讓取用者存取**IRowsetFastLoad**。  
+2.  設定 OLE DB Driver for SQL Server 驅動程式特定資料來源屬性 ssprop_enablefastload 設定為 VARIANT_TRUE。 當這個屬性設定為 VARIANT_TRUE 之後，新建立的工作階段就會允許取用者存取 **IRowsetFastLoad**。  
   
-3.  建立工作階段要求**IOpenRowset**介面。  
+3.  建立工作階段，要求**IOpenRowset**介面。  
   
-4.  呼叫**iopenrowset:: Openrowset**開啟資料列集，其中包含從資料表 （在其中的資料會使用大量複製作業複製） 的所有資料列。  
+4.  呼叫 **IOpenRowset::OpenRowset**，以便開啟包含資料表中所有資料列的資料列集 (使用大量複製作業複製資料)。  
   
-5.  必要的繫結，並建立存取子使用**iaccessor:: Createaccessor**。  
+5.  執行必要的繫結，並建立使用存取子**iaccessor:: Createaccessor**。  
   
 6.  設定要將資料複製到資料表的來源記憶體緩衝區。  
   
-7.  呼叫**irowsetfastload:: Insertrow**來大量複製到資料表中的資料。  
+7.  呼叫**irowsetfastload:: Insertrow**成大量複製到資料表中的資料。  
   
 ## <a name="example"></a>範例  
  在這個範例中，10 筆記錄會加入至資料表 IRFLTable。 您必須在資料庫中建立資料表 IRFLTable。 IA64 不支援此範例。  
   
  執行第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的資料表。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行下列 C++ 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
  執行第三個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單，以便刪除應用程式所使用的資料表。  
   

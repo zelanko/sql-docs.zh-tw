@@ -1,6 +1,6 @@
 ---
-title: SQL Server 應用程式建立 OLE DB 驅動程式 |Microsoft 文件
-description: 建立 OLE DB 驅動程式的 SQL Server 應用程式
+title: 建立 OLE DB Driver for SQL Server 應用程式 | Microsoft Docs
+description: 建立 OLE DB Driver for SQL Server 應用程式
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 09cd1243859ef11dccf4a86084aa919a3cc5624a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7d6b0b995fb5171f8eda41045751bad2932e9afa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665308"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109460"
 ---
-# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 應用程式建立 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="creating-an-ole-db-driver-for-sql-server-application"></a>建立 OLE DB Driver for SQL Server 應用程式
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  建立 OLE DB 驅動程式的 SQL Server 應用程式包含下列步驟：  
+  建立 OLE DB Driver for SQL Server 應用程式包含下列步驟：  
   
 1.  建立與資料來源的連接。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "35665308"
 3.  處理結果。  
   
 > [!NOTE]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該先加密它們與[Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504)。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 cryptoAPI](http://go.microsoft.com/fwlink/?LinkId=9504) 加密這些認證。  
   
 ## <a name="in-this-section"></a>本節內容  
   

@@ -1,7 +1,7 @@
 ---
 title: 使用查詢存放區監視效能 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/26/2017
+ms.date: 07/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f30d87526729100a99336408778f2d2df4406475
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 932137c603db51693f90b2aa823232842e918e50
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332449"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228434"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>使用查詢存放區監視效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "34332449"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 查詢存放區功能為您提供關於查詢計劃選擇及效能的深入資訊。 其可協助您您快速找出由於查詢計劃變更所導致的效能差異，以簡化效能疑難排解作業。 查詢存放區會自動擷取查詢、計劃和執行階段統計資料的歷程記錄，並將其保留供您檢閱。 其會以時段來區分資料、供您查看資料庫使用模式，並了解何時在伺服器上發生查詢計劃變更。 使用 [[ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md)] 選項可設定查詢存放區。 
   
  如需操作 Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 中查詢存放區的資訊，請參閱[操作 Azure SQL Database 中的查詢存放區](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)。  
+ 
+> [!IMPORTANT]
+> 若您只針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 負載見解使用查詢存放區，請計畫儘快安裝 [KB 4340759](http://support.microsoft.com/help/4340759) 中的效能延展性修正程式。 
   
 ##  <a name="Enabling"></a> 啟用查詢存放區  
  新的資料庫預設不會啟用查詢存放區。  
@@ -57,7 +60,10 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
 如需和查詢存放區相關之語法選項的詳細資訊，請參閱 [ALTER DATABASE SET 選項 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)。  
   
 > [!NOTE]  
->  您無法為 **master** 或 **tempdb** 資料庫啟用查詢存放區。  
+> 您無法為 **master** 或 **tempdb** 資料庫啟用查詢存放區。  
+ 
+> [!IMPORTANT]
+> 如需有關啟用查詢存放區並讓它根據您的工作負載調整的相關資訊，請參閱[使用查詢存放區的最佳作法](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
  
 ## <a name="About"></a> 查詢存放區中的資訊  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中任何特定查詢的執行計劃通常會在一段時間後，因為統計資料的變更、結構描述變更、建立/刪除索引等數種不同原因而有所演變。儲存快取的查詢計劃之程序快取，只會儲存最新的執行計劃。 計劃也會因為記憶體不足的壓力，而從計劃快取中收回。 因此，因為執行計劃變更所造成的查詢效能低下，可能相形重要，而且可能需要許多時間才可解決。  
@@ -492,9 +498,9 @@ hist AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @history_start_time   
                AND rs.last_execution_time < @history_end_time)  
-        OR (rs.first_execution_time \<= @history_start_time   
+        OR (rs.first_execution_time <= @history_start_time   
                AND rs.last_execution_time > @history_start_time)  
-        OR (rs.first_execution_time \<= @history_end_time   
+        OR (rs.first_execution_time <= @history_end_time   
                AND rs.last_execution_time > @history_end_time)  
     GROUP BY p.query_id  
 ),  
@@ -509,9 +515,9 @@ recent AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @recent_start_time   
                AND rs.last_execution_time < @recent_end_time)  
-        OR (rs.first_execution_time \<= @recent_start_time   
+        OR (rs.first_execution_time <= @recent_start_time   
                AND rs.last_execution_time > @recent_start_time)  
-        OR (rs.first_execution_time \<= @recent_end_time   
+        OR (rs.first_execution_time <= @recent_end_time   
                AND rs.last_execution_time > @recent_end_time)  
     GROUP BY p.query_id  
 )  

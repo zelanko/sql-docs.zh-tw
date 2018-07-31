@@ -1,5 +1,5 @@
 ---
-title: 擷取資料 |Microsoft 文件
+title: 擷取資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309187"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983034"
 ---
 # <a name="retrieving-data"></a>擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "35309187"
   
 如果您的查詢擷取多個結果集，您可以透過 [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md)移至下一個結果集。  
   
-從 1.1 版中[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，您可以使用[sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md)來查看結果集是否有資料列。  
+從 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 1.1 版開始，您可以使用 [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) 來查看結果集是否有資料列。  
   
 ## <a name="pdosqlsrv-driver"></a>PDO_SQLSRV 驅動程式  
-PDO_SQLSRV 驅動程式的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]提供下列從結果集內擷取資料的選項：  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 PDO_SQLSRV 驅動程式提供下列從結果集內擷取資料的選項：  
   
 -   [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)  
   
@@ -73,7 +73,7 @@ PDO_SQLSRV 驅動程式的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[以資料流的形式擷取資料](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|概略說明如何從伺服器串流處理資料，並提供特定使用案例的連結。|  
 |[使用方向參數](../../connect/php/using-directional-parameters.md)|說明如何在呼叫預存程序時使用參數方向。|  
@@ -84,7 +84,7 @@ PDO_SQLSRV 驅動程式的[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.m
 [如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [擷取資料](../../connect/php/retrieving-data.md)  
   

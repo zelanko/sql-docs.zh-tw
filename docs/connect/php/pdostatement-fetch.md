@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Fetch |Microsoft 文件'
+title: 'Pdostatement:: Fetch |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 499175b3e75c27b82df93ef84f8b17a049265356
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308417"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019996"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,19 +34,19 @@ mixed PDOStatement::fetch ([ $fetch_style[, $cursor_orientation[, $cursor_offset
 ```  
   
 #### <a name="parameters"></a>參數  
-$*fetch_style*: 選用 （整數） 符號，用以指定資料列資料的格式。 請參閱 < 備註 > 一節的清單可能的值為 $*fetch_style*。 預設值為 PDO::FETCH_BOTH。 $*fetch_style*在提取方法將覆寫 $*fetch_style* pdo:: query 方法中指定。  
+$*fetch_style*：選擇性 (整數) 符號，用於指定資料列資料的格式。 如需 $*fetch_style* 的可能值清單，請參閱＜備註＞一節。 預設值為 PDO::FETCH_BOTH。提取方法中的  $*fetch_style* 會覆寫 PDO::query 方法中指定的 $*fetch_style*。  
   
-$*cursor_orientation*: 選用 （整數） 符號，指出要擷取當準備陳述式指定的資料列`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`。 請參閱 < 備註 > 一節的清單可能的值為 $*cursor_orientation*。 如需使用可捲動資料指標的範例，請參閱 [PDO::prepare](../../connect/php/pdo-prepare.md) 。  
+$*cursor_orientation*：選擇性 (整數) 符號，指出在準備陳述式指定 `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` 時所要擷取的資料列。 如需 $*cursor_orientation* 的可能值清單，請參閱＜備註＞一節。 如需使用可捲動資料指標的範例，請參閱 [PDO::prepare](../../connect/php/pdo-prepare.md) 。  
   
-$*cursor_offset*: 選用 （整數） 符號，用於指定的資料列時所要提取 $*cursor_orientation* pdo:: FETCH_ORI_ABS 或 pdo:: FETCH_ORI_REL，pdo:: ATTR_CURSOR 為 pdo:: CURSOR_SCROLL。  
+$*cursor_offset*：選擇性 (整數) 符號，指定在 $*cursor_orientation* 為 PDO::FETCH_ORI_ABS 或 PDO::FETCH_ORI_REL，且 PDO::ATTR_CURSOR 為 PDO::CURSOR_SCROLL 時所要提取的資料列。  
   
 ## <a name="return-value"></a>傳回值  
 傳回資料列或 false 的混合值。  
   
-## <a name="remarks"></a>備註  
-在呼叫提取時，資料指標會自動前進。 下表包含可能的 $ 清單*fetch_style*值。  
+## <a name="remarks"></a>Remarks  
+在呼叫提取時，資料指標會自動前進。 下表包含可能的 $*fetch_style* 值清單。  
   
-|$*fetch_style*|描述|  
+|$*fetch_style*|Description|  
 |-------------------|---------------|  
 |PDO::FETCH_ASSOC|指定依資料行名稱編製索引的陣列。|  
 |PDO::FETCH_BOTH|指定依資料行名稱且以 0 起始而編製索引的陣列。 這是預設值。|  
@@ -59,18 +59,18 @@ $*cursor_offset*: 選用 （整數） 符號，用於指定的資料列時所要
   
 如果資料指標位於結果集的結尾 (已擷取最後一個資料列，且資料指標已越過結果集界限)，且資料指標是順向的 (PDO::ATTR_CURSOR = PDO::CURSOR_FWDONLY)，後續的提取呼叫將會失敗。  
   
-如果資料指標是可捲動的 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)，則提取會在結果集界限內移動資料指標。 下表包含可能的 $ 清單*cursor_orientation*值。  
+如果資料指標是可捲動的 (PDO::ATTR_CURSOR = PDO::CURSOR_SCROLL)，則提取會在結果集界限內移動資料指標。 下表包含可能的 $*cursor_orientation* 值清單。  
   
-|$*cursor_orientation*|描述|  
+|$*cursor_orientation*|Description|  
 |--------------------------|---------------|  
 |PDO::FETCH_ORI_NEXT|擷取下一個資料列。 這是預設值。|  
 |PDO::FETCH_ORI_PRIOR|擷取上一個資料列。|  
 |PDO::FETCH_ORI_FIRST|擷取第一個資料列。|  
 |PDO::FETCH_ORI_LAST|擷取最後一個資料列。|  
-|Pdo:: FETCH_ORI_ABS， *num*|擷取在 $ 要求的資料列*cursor_offset*依資料列號碼。|  
-|Pdo:: FETCH_ORI_REL， *num*|擷取在 $ 要求的資料列*cursor_offset*從目前位置的相對位置。|  
+|PDO::FETCH_ORI_ABS, *num*|依資料列號碼擷取在 $*cursor_offset* 中要求的資料列。|  
+|PDO::FETCH_ORI_REL, *num*|依目前位置的相對位置，擷取在 $*cursor_offset* 中要求的資料列。|  
   
-如果指定的值 $*cursor_offset*或 $*cursor_orientation*導致位置超出結果集界限，擷取將會失敗。  
+如果為 $*cursor_offset* 或 $*cursor_orientation* 所指定的值導致位置超出結果集界限，則提取將會失敗。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   

@@ -1,6 +1,6 @@
 ---
-title: 書籤 |Microsoft 文件
-description: SQL Server 的 OLE DB 驅動程式中的書籤
+title: 書籤 | Microsoft Docs
+description: OLE DB Driver for SQL Server 中的書籤
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f68094ae16436adf4268c65ec932235fb2fe647b
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 478c9022300c717bda38de223664cd36d301774a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689771"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108830"
 ---
 # <a name="bookmarks"></a>書籤
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  書籤可讓取用者快速地返回資料列。 取用者可以利用書籤，根據書籤值隨機存取資料列。 書籤資料行在資料列集中為資料行 0。 取用者會將繫結結構的 dwFlag 欄位值設定為 DBCOLUMNSINFO_ISBOOKMARK，表示該資料行會當做書籤使用。 取用者也會將資料列集屬性 DBPROP_BOOKMARKS 設定為 VARIANT_TRUE。 這可讓資料行 0 出現在資料列集中。 **Irowsetlocate:: Getrowsat**方法再用來提取資料列，開頭為指定的位移，從書籤的資料列。  
+  書籤可讓取用者快速地返回資料列。 取用者可以利用書籤，根據書籤值隨機存取資料列。 書籤資料行在資料列集中為資料行 0。 取用者會將繫結結構的 dwFlag 欄位值設定為 DBCOLUMNSINFO_ISBOOKMARK，表示該資料行會當做書籤使用。 取用者也會將資料列集屬性 DBPROP_BOOKMARKS 設定為 VARIANT_TRUE。 這可讓資料行 0 出現在資料列集中。 然後使用 **IRowsetLocate::GetRowsAt** 方法來擷取資料列，從書籤中指定為位移的資料列開始。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料列集](../../oledb/ole-db-rowsets/rowsets.md)  

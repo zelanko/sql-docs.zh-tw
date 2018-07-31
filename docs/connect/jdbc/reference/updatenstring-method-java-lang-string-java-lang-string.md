@@ -1,5 +1,5 @@
 ---
-title: updateNString 方法 （java.lang.String，java.lang.String） |Microsoft 文件
+title: updateNString 方法 (java.lang.String, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 41c12f32b1b42153baa79543ca284872040763ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850123"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040866"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 方法 (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新指定的資料行與**字串**值使用指定的資料行標籤。  
+  透過指定的資料行標籤，使用 **String** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,22 +37,22 @@ public void updateNString(java.lang.String columnLabel,
 #### <a name="parameters"></a>參數  
  *columnLabel*  
   
- A**字串**，其中包含資料行標籤。  
+ **String**，包含資料行標籤。  
   
- *nString*  
+ *字串*  
   
  A**字串**物件。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateNString 方法 java.sql.ResultSet 介面中所指定此 updateNString 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 updateNString 方法是由 java.sql.ResultSet 介面中的 updateNString 方法指定。  
   
- 這個方法會傳遞 Java**字串**選取**nchar**， **nvarchar （max)**， **ntext**，和**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
+ 此方法會傳遞 Java**字串**到所選**nchar**， **nvarchar （max)**， **ntext**，以及**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateNString 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
+ [updateNString 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

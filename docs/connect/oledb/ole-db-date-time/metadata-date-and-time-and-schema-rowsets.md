@@ -1,5 +1,5 @@
 ---
-title: 日期和時間以及結構描述資料列 |Microsoft 文件
+title: 日期和時間以及結構描述資料列 |Microsoft Docs
 description: 日期和時間以及結構描述資料列集
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c501274d977b924cb0dd478db26f9e39e399f61f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e2e1192cb0f69f72075a9e6164b91def61c80871
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666418"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109650"
 ---
-# <a name="metadata---date-and-time-and-schema-rowsets"></a>中繼資料的日期和時間以及結構描述資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="metadata---date-and-time-and-schema-rowsets"></a>中繼資料 - 日期和時間以及結構描述資料列集
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -62,7 +62,7 @@ ms.locfileid: "35666418"
   
  在 COLUMN_FLAGS 中會提供新旗標 DBCOLUMNFLAGS_SS_ISVARIABLESCALE，以允許應用程式判斷資料行的伺服器類型，其中 DATA_TYPE 是 DBTYPE_DBTIMESTAMP。 DATETIME_PRECISION 也必須用來識別伺服器類型。  
   
- DBCOLUMNFLAGS_SS_ISVARIABLESCALE 才有效，當連接到[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]或更新版本的伺服器。 連接到下層伺服器時，不會定義 DBCOLUMNFLAGS_SS_ISFIXEDSCALE。  
+ 只有連接到 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本的伺服器時，DBCOLUMNFLAGS_SS_ISVARIABLESCALE 才有效。 連接到下層伺服器時，不會定義 DBCOLUMNFLAGS_SS_ISFIXEDSCALE。  
   
 ## <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 資料列集  
  DATA_TYPE 包含與 COLUMNS 結構描述資料列集相同的值，而 TYPE_NAME 包含伺服器類型。  
@@ -96,7 +96,7 @@ ms.locfileid: "35666418"
 |BEST_MATCH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|除非下列其中之一是 true，否則為 VARIANT_TRUE：<br /><br /> 這是連接到下層伺服器的用戶端。<br /><br /> 資料類型相容性連接屬性會指定等於 80 的相容性層級。|除非下列其中之一是 true，否則為 VARIANT_TRUE：<br /><br /> 這是連接到下層伺服器的用戶端。<br /><br /> 資料類型相容性連接屬性會指定等於 80 的相容性層級。|VARIANT_TRUE|  
 |IS_FIXEDLENGTH|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|VARIANT_TRUE|  
   
- OLE DB 只會定義 MINIMUM_SCALE 和 MAXIMUM_SCALE 數值和十進位類型，所以 OLE DB 驅動程式的 time、 datetime2 和 datetimeoffset 這些資料行的 SQL Server 使用非標準。  
+ OLE DB 只會定義數值和十進位類型的 MINIMUM_SCALE 和 MAXIMUM_SCALE，因此 OLE DB Driver for SQL Server 對於 time、datetime2 和 datetimeoffset 這些資料行的用法不是標準的。  
   
 ## <a name="see-also"></a>另請參閱  
  [中繼資料&#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  

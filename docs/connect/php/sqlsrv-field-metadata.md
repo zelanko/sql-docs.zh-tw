@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_field_metadata |Microsoft 文件
+title: sqlsrv_field_metadata |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309387"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991270"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-擷取已備妥陳述式的欄位中繼資料。 如需有關準備陳述式的詳細資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。 請注意， **sqlsrv_field_metadata**可以在任何已備妥的陳述式前, 或執行後呼叫。  
+擷取已備妥陳述式的欄位中繼資料。 如需有關準備陳述式的詳細資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)。 請注意，在執行前或執行後，均可在任何已備妥的陳述式上呼叫 **sqlsrv_field_metadata**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -45,14 +45,14 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>傳回值  
 陣列的 **array** ，或為 **false**。 此陣列包含結果集內各欄位的一個陣列。 每個子陣列都有如下表中所述的索引鍵。 如果擷取欄位中繼資料發生錯誤，則會傳回 **false** 。  
   
-|索引鍵|描述|  
+|索引鍵|Description|  
 |-------|---------------|  
 |[屬性]|欄位所對應的資料行名稱。|  
 |類型|對應至 SQL 類型的數值。|  
 |大小|字元類型 (char(n)、varchar(n)、nchar(n)、nvarchar(n)、XML) 之欄位的字元數目。 二進位類型 (binary(n)、varbinary(n)、UDT) 之欄位的位元組數目。 **NULL** 適用於其他 SQL Server 資料類型。|  
 |有效位數|變數有效位數 (real、numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的有效位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
 |小數位數|變數小數位數 (numeric、decimal、datetime2、datetimeoffset 和 time) 之類型的小數位數。 **NULL** 適用於其他 SQL Server 資料類型。|  
-|可為 Null|列舉的值，指出資料行是否可為 null (**SQLSRV_NULLABLE_YES**)，資料行不是可為 null (**SQLSRV_NULLABLE_NO**)，或不知道資料行是否可為 null (**SQLSRV_NULLABLE_UNKNOWN**)。|  
+|可為 Null|列舉的值，指出資料行可為 Null (**SQLSRV_NULLABLE_YES**)、資料行不可為 Null (**SQLSRV_NULLABLE_NO**)，或不知道資料行是否可為 Null (**SQLSRV_NULLABLE_UNKNOWN**)。|  
   
 下表提供有關每個子陣列的索引鍵的詳細資訊 (如需這些類型的詳細資訊，請參閱 SQL Server 文件)：  
   
@@ -94,7 +94,7 @@ sqlsrv_field_metadata( resource $stmt)
 可為 Null 的索引鍵可為是或否。  
   
 ## <a name="example"></a>範例  
-下列範例會建立陳述式資源，然後擷取並顯示欄位中繼資料。 此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+下列範例會建立陳述式資源，然後擷取並顯示欄位中繼資料。 此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

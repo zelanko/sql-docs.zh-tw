@@ -1,5 +1,5 @@
 ---
-title: 如何： 執行交易 |Microsoft 文件
+title: 如何： 執行交易 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307657"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015785"
 ---
 # <a name="how-to-perform-transactions"></a>如何：執行交易
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,18 +46,18 @@ PDO_SQLSRV 驅動程式提供三個方法來執行交易：
   
 本主題的其餘部分說明並示範如何使用 SQLSRV 驅動程式來執行交易。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 執行交易的步驟可以摘要如下：  
   
 1.  以 **sqlsrv_begin_transaction**開始交易。  
   
 2.  檢查屬於交易的每個查詢成功或失敗。  
   
-3.  如果適當，請以 **sqlsrv_commit**開始交易。 否則，請以 **sqlsrv_rollback**開始交易。 在呼叫**sqlsrv_commit**或**sqlsrv_rollback**，驅動程式會回到自動認可模式。  
+3.  如果適當，請以 **sqlsrv_commit**開始交易。 否則，請以 **sqlsrv_rollback**開始交易。 在呼叫 **sqlsrv_commit** 或 **sqlsrv_rollback** 之後，驅動程式會回到自動認可模式。  
   
-    根據預設，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]處於自動認可模式。 這表示所有查詢都會在成功時自動進行認可，除非已使用 **sqlsrv_begin_transaction**開始交易。  
+    根據預設，[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 處於自動認可模式。 這表示所有查詢都會在成功時自動進行認可，除非已使用 **sqlsrv_begin_transaction**開始交易。  
   
-    如果明確交易不是以認可**sqlsrv_commit**，便會回復時關閉連接或終止指令碼。  
+    如果明確交易不是以 **sqlsrv_commit** 來認可，它會在關閉連線或終止指令碼時復原。  
   
     請勿使用內嵌的 Transact-SQL 來執行交易。 例如，請勿執行以 "BEGIN TRANSACTION" 作為 Transact-SQL 查詢的陳述式，進而開始交易。 當您使用內嵌的 Transact-SQL 來執行交易時，無法保證預期的交易行為。  
   
@@ -65,7 +65,7 @@ PDO_SQLSRV 驅動程式提供三個方法來執行交易：
   
 ## <a name="example"></a>範例  
   
-### <a name="description"></a>描述  
+### <a name="description"></a>Description  
 以下範例會在交易期間執行數個查詢。 如果所有查詢都成功，就會認可交易。 如果其中一個查詢失敗，則會復原交易。  
   
 此範例會嘗試從 *Sales.SalesOrderDetail* 資料表刪除銷售訂單，並在銷售訂單中每項產品的 *Product.ProductInventory* 資料表中調整產品庫存量。 這些查詢會包含在交易中，因為對資料庫而言，所有查詢都必須成功，才能正確地反映訂單狀態和產品可用性。  
@@ -74,7 +74,7 @@ PDO_SQLSRV 驅動程式提供三個方法來執行交易：
   
 這可確保查詢 (刪除銷售訂單和更新產品庫存量) 是交易的一部分。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ### <a name="code"></a>程式碼  
   
@@ -154,12 +154,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>註解  
-為了將焦點放在交易行為上，上述範例中並未包含一些建議的錯誤處理方式。 對於生產應用程式中，我們建議檢查任何呼叫**sqlsrv**函式的錯誤，並據以處理它們。
+為了將焦點放在交易行為上，上述範例中並未包含一些建議的錯誤處理方式。 對於生產應用程式中，我們建議檢查任何對**sqlsrv**函式的錯誤，並據以處理它們。
   
 ## <a name="see-also"></a>另請參閱  
 [更新資料 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[交易 (Database Engine)](https://msdn.microsoft.com/library/ms190612.aspx)
+[交易 (資料庫引擎)](https://msdn.microsoft.com/library/ms190612.aspx)
 
 [關於文件中的程式碼範例](../../connect/php/about-code-examples-in-the-documentation.md)  
   

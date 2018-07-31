@@ -1,5 +1,5 @@
 ---
-title: usesLocalFiles 方法 (SQLServerDatabaseMetaData) |Microsoft 文件
+title: usesLocalFiles 方法 (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2efc86503bd370620e5bd1a0c8a8a2a2471fb5a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849373"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039202"
 ---
 # <a name="useslocalfiles-method-sqlserverdatabasemetadata"></a>usesLocalFiles 方法 (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +39,12 @@ public boolean usesLocalFiles()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果資料庫使用本機檔案。 否則為 **false**。  
+ 如果資料庫使用本機檔案，則為 **true**。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  這個 usesLocalFiles 方法是由 java.sql.DatabaseMetaData 介面中 usesLocalFiles 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -24,55 +24,52 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: afc112a5e07197ed8b0056a7daeddb55c0c418c9
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6cdc7d89b93d8961ed6000efdef4b34c34a54a7d
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790141"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228404"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  如果與檔案群組和屬性名稱一起提供時，就傳回指定的檔案群組屬性值。  
+此函數會傳回所指定名稱的檔案群組屬性值與與檔案群組值。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-FILEGROUPPROPERTY ( filegroup_name , property )  
+FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
 ## <a name="arguments"></a>引數  
  *filegroup_name*  
- 為類型是 **sysname** 的運算式，代表傳回具名屬性資訊的檔案群組名稱。  
+類型是 **sysname** 的運算式，代表 `FILEGROUPPROPERTY` 傳回具名屬性資訊的檔案群組名稱。  
   
  *property*  
- 為類型是 **varchar(128)** 的運算式，包含要傳回的檔案群組屬性名稱。 *property* 可以是下列值之一。  
+類型是 **varchar(128)** 的運算式，此運算式會傳回檔案群組屬性的名稱。 *Property* 可以傳回下列其中一個值：  
   
-|ReplTest1|描述|傳回的值|  
+|ReplTest1|Description|傳回的值|  
 |-----------|-----------------|--------------------|  
-|**IsReadOnly**|檔案群組是唯讀的。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
-|**IsUserDefinedFG**|檔案群組是使用者自訂檔案群組。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
-|**IsDefault**|檔案群組是預設的檔案群組。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 輸入無效。|  
+|**IsReadOnly**|檔案群組是唯讀的。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無效的輸入。|  
+|**IsUserDefinedFG**|檔案群組是使用者自訂檔案群組。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無效的輸入。|  
+|**IsDefault**|檔案群組是預設的檔案群組。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無效的輸入。|  
   
 ## <a name="return-types"></a>傳回類型  
- **int**  
+**int**  
   
 ## <a name="remarks"></a>Remarks  
- *filegroup_name* 對應到 **sys.filegroups** 目錄檢視中的 **name** 資料行。  
+*filegroup_name* 對應到 **sys.filegroups** 目錄檢視中的 **name** 資料行。  
   
 ## <a name="examples"></a>範例  
- 這個範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中主要檔案群組的 `IsDefault` 屬性設定。  
+這個範例會傳回 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 資料庫中主要檔案群組的 `IsDefault` 屬性設定。  
   
 ```  
-  
 SELECT FILEGROUPPROPERTY('PRIMARY', 'IsDefault') AS 'Default Filegroup';  
 GO  
 ```  
-  
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  

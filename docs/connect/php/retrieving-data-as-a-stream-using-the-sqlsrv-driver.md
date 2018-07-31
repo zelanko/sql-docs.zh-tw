@@ -1,5 +1,5 @@
 ---
-title: 使用 SQLSRV 驅動程式以資料流的形式擷取資料 |Microsoft 文件
+title: 使用 SQLSRV 驅動程式以資料流形式擷取資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,28 +15,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: be1e84c923dad3ed92c4c2b983a1e5592741eead
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309247"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992890"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>使用 SQLSRV 驅動程式以資料流形式擷取資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-資料流只能用於 SQLSRV 驅動程式的形式擷取資料[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，並不適用於 PDO_SQLSRV 驅動程式。  
+以資料流形式擷取資料僅適用於 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 SQLSRV 驅動程式，而不適用於 PDO_SQLSRV 驅動程式。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會利用資料流擷取大量的資料。 本節中的主題將詳細說明如何以資料流的形式擷取資料。  
   
 下列步驟概述如何以資料流的形式擷取資料：  
   
-1.  準備和執行 TRANSACT-SQL 查詢與[sqlsrv_query](../../connect/php/sqlsrv-query.md)或結合[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md)。  
+1.  準備及執行使用 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 或結合了 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md) 的 Transact-SQL 查詢。  
   
 2.  使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 移至結果集內的下一個資料列。  
   
-3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 擷取資料列中的欄位。 指定的資料是使用資料流的形式擷取**SQLSRV_PHPTYPE_STREAM (<encoding>)** 做為函數呼叫中的第三個參數。 下表列出用來指定編碼及其描述的常數：  
+3.  使用 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 擷取資料列中的欄位。 使用 **SQLSRV_PHPTYPE_STREAM(<encoding>)** 作為函式呼叫中的第三個參數，指定要以資料流的形式擷取資料。 下表列出用來指定編碼及其描述的常數：  
   
-    |SQLSRV 常數|描述|  
+    |SQLSRV 常數|Description|  
     |-------------------|---------------|  
     |SQLSRV_ENC_BINARY|資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。|  
     |SQLSRV_ENC_CHAR|資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。|  
@@ -46,7 +46,7 @@ ms.locfileid: "35309247"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[使用 SQLSRV 驅動程式支援資料流的資料類型](../../connect/php/data-types-with-stream-support-using-the-sqlsrv-driver.md)|列出可以資料流的形式擷取的 SQL Server 資料類型。|  
 |[如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|示範如何以資料流的形式擷取字元資料。|  

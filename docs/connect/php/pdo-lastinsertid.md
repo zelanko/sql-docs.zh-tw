@@ -1,5 +1,5 @@
 ---
-title: PDO::lastInsertId |Microsoft 文件
+title: PDO::lastInsertId |Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2018
 ms.prod: sql
@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308547"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983370"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-傳回最近在資料庫的資料表中插入之資料列的識別碼。 資料表必須有 IDENTITY NOT NULL 資料行。 提供順序名稱，如果`lastInsertId`傳回最近插入序號提供的序列名稱 (如需有關序號的詳細資訊，請參閱[這裡](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers))。
+傳回最近在資料庫的資料表中插入之資料列的識別碼。 資料表必須有 IDENTITY NOT NULL 資料行。 如果提供的序列名稱，則`lastInsertId`傳回最近插入提供的序列名稱的序號 (如需有關序號的詳細資訊，請參閱[這裡](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers))。
   
 ## <a name="syntax"></a>語法  
   
@@ -34,19 +34,19 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>參數  
-$*名稱*： 可讓您指定順序名稱的選擇性字串。 
+$*name*：讓您指定序列名稱的選擇性字串。 
   
 ## <a name="return-value"></a>傳回值  
-如果沒有順序提供名稱，最新加入的資料列的識別碼字串。
-提供順序名稱，如果最新加入的順序識別項字串。
+如果沒有順序提供名稱，最近新增的資料列的識別碼字串。
+如果提供的序列名稱，最近加入序列識別碼的字串。
 如果方法呼叫失敗，則會傳回空字串。
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
-版本 2.0 和 4.3 之間選擇性的參數是資料表名稱，並傳回值是最近新增到所提供的資料表資料列的識別碼。
+版本 2.0 和 4.3 之間選擇性參數是資料表名稱，且傳回值是最近新增到提供的資料表資料列的識別碼。
 從 5.0 開始，選擇性的參數會被視為序列名稱，並傳回值是提供的序列名稱的最新加入的順序。
-如果版本提供資料表名稱之後 4.3，`lastInsertId`會傳回空字串。
-只有在 SQL Server 2012 和更新版本支援的序列。
+如果版本提供資料表名稱，則將它之後 4.3，`lastInsertId`傳回空字串。
+只有在 SQL Server 2012 及更新版本支援順序。
   
 ## <a name="example"></a>範例  
   

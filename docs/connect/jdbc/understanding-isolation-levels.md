@@ -1,5 +1,5 @@
 ---
-title: 了解隔離等級 |Microsoft 文件
+title: 了解隔離等級 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852963"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039158"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔離等級
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "32852963"
   
  較低的隔離等級將可讓更多的使用者同時存取資料，但也會增加使用者可能遇到並行作用 (例如，中途讀取或遺失的更新) 的數目。 相反地，較高的隔離等級將可減少使用者遇到並行作用的類型，但是將需要更多的系統資源，而且會增加一個交易封鎖另一個交易的可能性。 選擇適當的隔離等級需視應用程式的資料完整性需求與每個隔離等級的額外負荷平衡而定。 最高的隔離等級為可序列化，可確保每次交易重複讀取作業時都能擷取相同的資料，但它是透過執行鎖定層級來達成此目的，因此在多使用者系統中有可能會影響其他使用者。 最低隔離等級為讀取未認可，可以擷取其他交易已修改但尚未認可的資料。 在讀取未認可中可能會發生所有的並行副作用，但由於沒有讀取鎖定或版本控制，因此可將負擔降到最低。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  下表顯示不同隔離等級所允許的並行副作用。  
   
 |隔離等級|中途讀取|不可重複讀取|虛設項目 (Phantom)|  
@@ -57,13 +57,13 @@ ms.locfileid: "32852963"
   
  交易必須至少在可重複讀取的隔離等級執行，以防在兩個交易個別擷取相同的資料列，然後在稍後根據原始擷取的值更新資料列時可能發生的更新遺失。 如果兩個交易都使用單一 UPDATE 陳述式更新資料列，而且沒有以先前擷取的值做為更新的基礎，就不會在讀取認可的預設隔離等級發生更新的遺失。  
   
- 若要設定交易的隔離等級，您可以使用[setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md)方法[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)類別。 這個方法會接受**int**值做為引數根據其中一個連接常數，如下所示：  
+ 若要設定交易的隔離等級，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 方法。 這個方法會根據下列其中一個連線常數，接受 **int** 值作為其引數：  
   
 ```  
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
- 若要使用新的快照集隔離等級的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以使用其中一個 SQLServerConnection 常數如下所示：  
+ 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的新快照集隔離等級，您可以使用下列其中一個 SQLServerConnection 常數：  
   
 ```  
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -75,7 +75,7 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   
- 如需有關[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]隔離等級，請參閱 」 中的隔離等級[!INCLUDE[ssDE](../../includes/ssde_md.md)]」 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
+ 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 隔離等級的詳細資訊，請參閱 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 線上叢書的＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中的隔離等級＞。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 JDBC Driver 執行交易](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

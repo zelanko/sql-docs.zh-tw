@@ -1,6 +1,6 @@
 ---
-title: 擷取錯誤資訊 |Microsoft 文件
-description: 使用 SQL Server 的 OLE DB 驅動程式的擷取錯誤資訊
+title: 擷取錯誤資訊 |Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 擷取錯誤資訊
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,19 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 514ff67f699b8dc0f3fb70881d24880e84aed390
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 24bb40aa1f6fcaf26f82a27a0601946c2c200cf5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665908"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108070"
 ---
 # <a name="retrieving-error-information"></a>擷取錯誤資訊
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  這個範例會從適用於 SQL Server OLE DB 驅動程式所公開之各種錯誤介面取得資訊。  
+  此範例會取得 OLE DB Driver for SQL Server 所公開之各種錯誤介面的資訊。  
   
 ```  
 // DumpErrorInfo queries MSOLEDBSQL error interfaces, retrieving available  

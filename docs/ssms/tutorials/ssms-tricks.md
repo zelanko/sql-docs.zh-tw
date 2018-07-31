@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: ef7bbf9b60cb29bee0285d8974a9b97cbe99a3c2
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
+ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080096"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228454"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
 本教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 本文示範如何： 
@@ -189,6 +189,8 @@ ms.locfileid: "37080096"
     ![透過查詢尋找錯誤記錄檔](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>若您無法連線到 SQL Server，尋找錯誤記錄檔的位置
+視您的組態設定而定。SQL Server 錯誤記錄路徑可能會不同。 您可以在 SQL Server 組態管理員內的啟動參數中找到錯誤記錄位置的路徑。 依照下面的步驟尋找指出 SQL Server 錯誤記錄位置的相關啟動參數。 *您的路徑可能與下面的路徑不同*。 
+
 1. 開啟 [SQL Server 設定管理員]。 
 2. 展開 [服務]。
 3. 以滑鼠右鍵按一下您的 SQL Server 執行個體，然後選取 [屬性]：

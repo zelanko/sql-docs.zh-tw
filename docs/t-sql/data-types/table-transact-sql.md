@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432237"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240680"
 ---
 # <a name="table-transact-sql"></a>資料表 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ SELECT select_list INTO table_variable;
   
 您無法明確建立 **table** 變數的索引，也無法保留 **table** 變數的任何統計資料。 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 開始， 已引進新的語法，允許您建立某些內嵌資料表定義的索引類型。  您可以使用這個新的語法在 **table** 變數上建立索引，作為資料表定義的一部分。 在某些情況下，改用完整索引支援和統計資料的暫存資料表可以提升效能。 如需暫存資料表和建立內嵌索引的詳細資訊，請參閱 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)。
 
-
 **table** 類型宣告中的 CHECK 條件約束、DEFAULT 值和計算資料行無法呼叫使用者定義函式。
   
 不支援 **table** 變數之間的指派作業。
@@ -115,6 +114,23 @@ SELECT select_list INTO table_variable;
 由於 **table** 變數的範圍受到限制，且不是持續性資料庫的一部分；因此，它們不會受交易回復的影響。
   
 資料表變數在建立之後無法修改。
+
+## <a name="table-variable-deferred-compilation"></a>資料表變數延遲編譯
+**資料表變數延遲編譯**可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始計劃編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。 這個精確的資料列計數資訊接著將用於最佳化下游計劃作業。
+
+> [!NOTE]
+> 資料表變數延遲編譯是 Azure SQL Database 中的一個公開預覽功能。  
+
+使用資料表變數延遲編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 這個延遲編譯行為與暫存資料表的行為完全相同，而且此變更會導致使用實際基數，而不是原始的單一資料列猜測。 
+
+若要啟用資料表變數延遲編譯的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
+
+資料表變數延遲編譯**不**會變更資料表變數的任何其他字元。 例如，此功能不會在資料表變數中加入資料行統計資料。
+
+資料表變數延遲編譯 **不會增加重新編譯頻率**，  而是會在初始編譯的位置移位。 產生的快取計劃是根據初始延遲編譯資料表變數資料列計數所產生。 快取計劃會由後續查詢重複使用，直到計劃已收回或重新編譯。 
+
+若用於初始計劃編譯的資料表變數資料列計數代表一個與固定資料列計數猜測大幅相異的一般值，則下游作業將會受益。  若資料表變數資料列計數在每次執行時都大幅相異，則此功能可能無法改善效能。
+
   
 ## <a name="examples"></a>範例  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [使用資料表值參數 &#40;資料庫引擎&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [查詢提示 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  

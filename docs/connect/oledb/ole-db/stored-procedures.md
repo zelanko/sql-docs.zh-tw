@@ -1,5 +1,5 @@
 ---
-title: 預存程序 |Microsoft 文件
+title: 預存程序 |Microsoft Docs
 description: 預存程序
 ms.custom: ''
 ms.date: 06/12/2018
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0c944c0e64fadf8f51af10f0e297b8d3654decd4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611543"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109760"
 ---
 # <a name="stored-procedures"></a>預存程序
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  預存程序 ([預存程序 &#40;Database engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援：  
+  預存程序 ([預存程序&#40;資料庫引擎&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) 是儲存在資料庫中的可執行物件。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 支援：  
   
 -   預存程序  
   
@@ -43,9 +43,9 @@ ms.locfileid: "35611543"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [執行預存程序 &#40; OLE DB &#41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [執行預存程序 &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [呼叫預存程序 &#40; OLE DB &#41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [呼叫預存程序 &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

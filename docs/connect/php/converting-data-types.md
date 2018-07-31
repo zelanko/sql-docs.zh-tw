@@ -1,5 +1,5 @@
 ---
-title: 轉換資料類型 |Microsoft 文件
+title: 轉換資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44d58351f0a120268983500166aeafdbfa773ee0
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306847"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38023976"
 ---
 # <a name="converting-data-types"></a>轉換資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,17 +28,17 @@ ms.locfileid: "35306847"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[預設 SQL Server 資料類型](../../connect/php/default-sql-server-data-types.md)|提供將資料傳送至伺服器時的預設 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型的相關資訊。|  
 |[預設 PHP 資料類型](../../connect/php/default-php-data-types.md)|提供從伺服器擷取資料時的預設 PHP 資料類型的相關資訊。|  
 |[如何：指定 SQL Server 資料類型](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|示範如何指定將資料傳送至伺服器時的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型。|  
 |[如何：指定 PHP 資料類型](../../connect/php/how-to-specify-php-data-types.md)|示範如何指定從伺服器擷取資料時的 PHP 資料類型。|  
-|[如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|示範如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 utf-8 資料的內建支援。<br /><br />1.1 版中已加入支援 utf-8 字元[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。|  
-|[如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|示範如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的支援在 Linux 或 macOS ASCII 資料。<br /><br />在非 Windows 環境中的 ASCII 字元的支援已加入的 5.2 版[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。|
+|[如何：使用內建的 UTF-8 支援傳送及擷取 UTF-8 資料](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|示範如何使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 對於 UTF-8 資料的內建支援。<br /><br />[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 1.1 版已新增 UTF-8 字元的支援。|  
+|[如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|示範如何使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的 ASCII 資料在 Linux 或 macOS 的支援。<br /><br />在非 Windows 環境中的 ASCII 字元的支援已加入版本 5.2 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。|
   
 ## <a name="see-also"></a>另請參閱  
-[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)
 

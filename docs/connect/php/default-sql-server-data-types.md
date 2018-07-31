@@ -1,5 +1,5 @@
 ---
-title: 預設 SQL Server 資料類型 |Microsoft 文件
+title: 預設 SQL Server 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307223"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979570"
 ---
 # <a name="default-sql-server-data-types"></a>預設 SQL Server 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35307223"
 |布林|bit|bit|  
 |Integer|ssNoversion|ssNoversion|  
 |float|float(24)|不支援|  
-|字串 (長度小於 8000 個位元組)|varchar (<string length>)|varchar (<string length>)|  
+|字串 (長度小於 8000 個位元組)|varchar(<string length>)|varchar(<string length>)|  
 |字串 (長度大於 8000 個位元組)|varchar(max)|varchar(max)|  
 |資源|不支援。|不支援。|  
 |資料流 (編碼：不是二進位)|varchar(max)|varchar(max)|  
@@ -53,5 +53,5 @@ ms.locfileid: "35307223"
 
 [PHP 類型](http://php.net/manual/language.types.php)
 
-[資料類型 (TRANSACT-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[資料類型 (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

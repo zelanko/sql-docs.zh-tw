@@ -17,17 +17,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981420"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279179"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  本主題概述搭配您的工作負載使用查詢存放區的最佳作法。  
+  此文章概述搭配您的工作負載使用查詢存放區的最佳做法。  
   
 ##  <a name="SSMS"></a> 使用最新版 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 擁有一組針對設定查詢存放區，以及耗用有關工作負載之收集資料所設計的使用者介面。  
@@ -45,7 +45,7 @@ ms.locfileid: "38981420"
 
 ##  <a name="Configure"></a> 針對工作負載調整查詢存放區  
  根據您的工作負載和效能疑難排解需求設定查詢存放區。   
-預設的參數雖然適合快速使用，但是您應該監視一段時間的查詢存放區操作方式，並據以調整其設定 ︰  
+預設參數雖然是一個好的起點，但是您應該監視一段時間的查詢存放區運作狀況，並據以調整其設定︰  
   
  ![query-store-properties](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
@@ -213,7 +213,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
   
  採取下列積極步驟：  
   
--   您可以套用最佳作法，以避免無訊息的操作模式變更。 如果您確定查詢存放區大小一律會低於允許的最大值，將會大幅減少轉換為唯讀模式的機會。 啟動大小基礎的原則，如 [設定查詢存放區](#Configure) 一節中所述，以便查詢存放區會在接近大小限制時自動清除資料。  
+-   您可以套用最佳作法，以避免無訊息的操作模式變更。 如果您確定查詢存放區大小一律會低於允許的最大值，將會大幅減少轉換為唯讀模式的機會。 啟用以大小為基礎的原則，如 [設定查詢存放區](#Configure) 一節中所述，以便查詢存放區在接近大小限制時自動清除資料。  
   
 -   若要確定會保留最新的資料，請設定以時間為基礎的原則，以定期移除過時的資訊。  
   
@@ -276,13 +276,13 @@ FROM sys.database_query_store_options;
 |當到達大小上限時，請刪除比較不相關的查詢。|啟用大小基礎的清除原則。|  
   
 ##  <a name="Parameterize"></a> 請避免使用非參數化查詢  
- 非絕對必要時，使用非參數化查詢 (例如特定分析的情況) 並不是最佳做法。  快取的計畫無法重複使用，這會強制查詢最佳化工具編譯每一個唯一查詢文字的查詢。 如需本主題的詳細資訊，請參閱[使用強制參數化的指導方針](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)。  
-  此外，查詢存放區可以因為大量潛在不同的查詢文字且因此有大量具有類似圖形的不同執行計畫，而快速超過大小配額。  
+非絕對必要時，使用非參數化查詢 (例如特定分析的情況) 並不是最佳做法。  快取的計畫無法重複使用，這會強制查詢最佳化工具編譯每一個唯一查詢文字的查詢。 如需詳細資訊，請參閱[使用強制參數化的指導方針](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)。  
+此外，查詢存放區可以因為大量潛在不同的查詢文字且因此有大量具有類似圖形的不同執行計畫，而快速超過大小配額。  
 因此，您的工作負載的效能會次佳，而查詢存放區可能會切換到唯讀模式，或可能不斷地刪除嘗試要跟上內送查詢的資料。  
   
- 請考慮下列選項：  
+請考慮下列選項：  
 
-  -   在適用情況下參數化查詢，例如將查詢包裝在預存程序或 sp_executesql 內。 如需本主題的詳細資訊，請參閱[參數和執行計劃的重複使用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。    
+-   在適用情況下參數化查詢，例如將查詢包裝在預存程序或 sp_executesql 內。 如需詳細資訊，請參閱[參數和執行計畫的重複使用](../../relational-databases/query-processing-architecture-guide.md#PlanReuse)。    
   
 -   如果您的工作負載包含許多搭配不同查詢計劃的單次使用特定批次，請使用 [[針對特定工作負載最佳化]](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 選項。  
   
@@ -297,11 +297,11 @@ FROM sys.database_query_store_options;
 -   將 [查詢擷取模式]  設定為 [自動]，以自動篩選掉小型資源耗用的特定查詢。  
   
 ##  <a name="Drop"></a> 維護查詢的包含物件時，避免 DROP 和 CREATE 模式。  
- 查詢存放區會將查詢項目與包含物件 (預存程序、函式和觸發程序) 產生關聯。  當您重新建立一個包含物件時，將會針對相同的查詢文字產生新的查詢項目。 這會防止您針對該查詢追蹤一段時間的效能統計資料，並使用計畫強制機制。 若要避免這個問題，請使用 `ALTER <object>` 程序盡可能變更包含物件定義。  
+查詢存放區會將查詢項目與包含物件 (預存程序、函式和觸發程序) 產生關聯。  當您重新建立一個包含物件時，將會針對相同的查詢文字產生新的查詢項目。 這會防止您針對該查詢追蹤一段時間的效能統計資料，並使用計畫強制機制。 若要避免這個問題，請使用 `ALTER <object>` 程序盡可能變更包含物件定義。  
   
 ##  <a name="CheckForced"></a> 定期檢查強制計劃的狀態  
 
- 強制執行計畫是一個針對重要查詢修正效能的方便的機制，並讓查詢變得更容易預測。 不過，因為有計畫提示與計畫指南，強制執行計畫並不保證它將在未來的執行中使用。 一般而言，當資料庫結構描述都以執行計畫所參考之物件都已改變或卸除的方式變更時，強制執行計畫就會開始失敗。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會退而重新編譯查詢，而實際的強制執行失敗原因會顯示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 下列查詢會傳回強制執行計畫的相關資訊 ︰  
+強制執行計畫是一個針對重要查詢修正效能的方便的機制，並讓查詢變得更容易預測。 不過，因為有計畫提示與計畫指南，強制執行計畫並不保證它將在未來的執行中使用。 一般而言，當資料庫結構描述都以執行計畫所參考之物件都已改變或卸除的方式變更時，強制執行計畫就會開始失敗。 在此情況下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會退而重新編譯查詢，而實際的強制執行失敗原因會顯示在 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) 中。 下列查詢會傳回強制執行計畫的相關資訊 ︰  
   
 ```sql  
 USE [QueryStoreDB];  
@@ -314,7 +314,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- 如需完整的原因清單，請參閱 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 您也可以使用 **query_store_plan_forcing_failed** XEvent 追蹤疑難排解強制執行計畫失敗。  
+ 如需完整的原因清單，請參閱 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)。 您也可以使用 **query_store_plan_forcing_failed** XEvent 追蹤強制執行計畫失敗及針對此問題進行疑難排解。  
   
 ##  <a name="Renaming"></a> 如果您有強制計劃的查詢，請避免重新命名資料庫。  
 
@@ -324,11 +324,14 @@ WHERE is_forced_plan = 1;
 
 ##  <a name="Recovery"></a> 在任務關鍵性伺服器上使用追蹤旗標來改善災害復原
  
-  在高可用性和災害復原案例期間，全域追蹤旗標 7745 及 7752 可用於改進查詢存放區的效能。 如需詳細資訊，請參閱[追蹤旗標](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+在高可用性和災害復原案例期間，全域追蹤旗標 7745 及 7752 可用於改進查詢存放區的效能。 如需詳細資訊，請參閱[追蹤旗標](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
-  追蹤旗標 7745 會在 SQL Server 能夠關閉前，防止查詢存放區將資料寫入磁碟中的預設行為。
+追蹤旗標 7745 會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 能夠關閉前，防止查詢存放區將資料寫入磁碟中的預設行為。
   
-  追蹤旗標 7752 會啟用查詢存放區的非同步載入，並允許 SQL Server 在完整載入查詢存放區之前執行查詢。 預設查詢存放區行為會防止在查詢存放區復原前執行查詢。
+追蹤旗標 7752 會啟用查詢存放區的非同步載入，並允許 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 在完整載入查詢存放區之前執行查詢。 預設查詢存放區行為會防止在查詢存放區復原前執行查詢。
+
+> [!IMPORTANT]
+> 若您只針對 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 中的 Just-In-Time 負載見解使用查詢存放區，請計畫儘快安裝 [KB 4340759](http://support.microsoft.com/help/4340759) 中的效能延展性修正程式。 
 
 ## <a name="see-also"></a>另請參閱  
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

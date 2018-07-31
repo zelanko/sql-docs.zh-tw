@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindcolumn |Microsoft 文件'
+title: 'Pdostatement:: Bindcolumn |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308447"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006890"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,20 +34,20 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>參數  
-$*資料行*: （混合） 的數字之資料行 （以 1 為基底的索引） 的結果集中的資料行名稱。  
+$*column*：結果集內資料行的 (混合) 號碼 (以 1 起始的索引) 或資料行的名稱。  
   
-&$*param*： 資料行都會繫結之 PHP 變數的 （混合） 名稱。  
+&$*param*：資料行將繫結之 PHP 變數的 (混合) 名稱。  
   
-$*型別*: pdo:: PARAM_ * 常數所代表之參數的選擇性資料類型。  
+$*type*：參數的選擇性資料類型 (以 PDO::PARAM_* 常數表示)。  
   
 $*maxLen*：選擇性整數 (不是由 Microsoft Drivers for PHP for SQL Server 使用)。  
   
-$*driverdata*： 選擇性混合參數驅動程式。 例如，您可以指定 PDO::SQLSRV_ENCODING_UTF8，以 UTF-8 編碼的字串形式將資料行繫結至變數。  
+$*driverdata*：驅動程式的選擇性混合參數。 例如，您可以指定 PDO::SQLSRV_ENCODING_UTF8，以 UTF-8 編碼的字串形式將資料行繫結至變數。  
   
 ## <a name="return-value"></a>傳回值  
 如果成功，傳回 TRUE，否則傳回 FALSE。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

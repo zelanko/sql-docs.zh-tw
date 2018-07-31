@@ -1,5 +1,5 @@
 ---
-title: updateClob 方法 （int，java.io.Reader，long） |Microsoft 文件
+title: updateClob 方法 （int，java.io.Reader，long） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 978c5f09f2c7524462dc950a5edc9b435324bdb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849473"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37973005"
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>updateClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,15 +44,15 @@ public void updateClob(int columnIndex,
   
  讀取器物件。  
   
- *長度*  
+ *length*  
   
  參數資料中的字元數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateClob 方法 java.sql.ResultSet 介面中所指定此 updateClob 方法。  
+## <a name="remarks"></a>Remarks  
+ UpdateClob 方法 java.sql.ResultSet 介面中所指定這個 updateClob 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [updateClob 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

@@ -1,5 +1,5 @@
 ---
-title: SQLServerDriver 類別 |Microsoft 文件
+title: SQLServerDriver 類別 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 976893003e65ea226e5df03a3d636b20d38018ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845473"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38052720"
 ---
 # <a name="sqlserverdriver-class"></a>SQLServerDriver 類別
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  代表[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 這個類別包含方法，用於連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料庫，以及取得有關 JDBC 驅動程式的資訊。  
+  代表 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]。 這個類別包含的方法可用來連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫，以及取得 JDBC 驅動程式的相關資訊。  
   
- **封裝：** com.microsoft.sqlserver.jdbc  
+ **套件：** com.microsoft.sqlserver.jdbc  
   
  **擴充：** java.lang.Object  
   

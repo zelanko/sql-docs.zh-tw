@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用 SQLSRV 驅動程式以資料流形式擷取二進位資料 |Microsoft 文件
+title: 如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d10cc259971d2a81177ee8e04844a54b26cf147c
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307937"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979835"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-資料流只能用於 SQLSRV 驅動程式的形式擷取資料[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，並不適用於 PDO_SQLSRV 驅動程式。  
+以資料流形式擷取資料僅適用於 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 的 SQLSRV 驅動程式，而不適用於 PDO_SQLSRV 驅動程式。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 會利用 PHP 資料流從伺服器擷取大量的二進位資料。 本主題示範如何以資料流形式擷取資料。  
   
@@ -36,9 +36,9 @@ ms.locfileid: "35307937"
 ## <a name="example"></a>範例  
 下列範例會從 AdventureWorks 資料庫的 *Production.ProductPhoto* 資料表擷取二進位資料 (在此案例中是影像)。 影像會擷取為資料流並顯示在瀏覽器中。  
   
-使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 搭配指定為二進位資料流的傳回類型，即可完成以資料流形式擷取影像資料。 使用常數指定傳回類型**SQLSRV_PHPTYPE_STREAM**。 如需有關資訊**sqlsrv**常數，請參閱[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
+使用 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) 和 [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) 搭配指定為二進位資料流的傳回類型，即可完成以資料流形式擷取影像資料。 使用常數 **SQLSRV_PHPTYPE_STREAM** 可指定傳回型別。 如需 **sqlsrv** 常數的資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從瀏覽器執行範例時，所有輸出都會寫入至瀏覽器。  
   
 ```  
 <?php  
@@ -91,7 +91,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-在範例中指定傳回類型，可示範如何將 PHP 傳回類型指定為二進位資料流。 技術上來說，它不一定要在範例因為*LargePhoto*欄位具有 SQL Server 類型 varbinary （max），因此預設會傳回二進位資料流的形式。 如需有關預設 PHP 資料類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 如需有關如何指定 PHP 傳回類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
+在範例中指定傳回類型，可示範如何將 PHP 傳回類型指定為二進位資料流。 技術上來說，不一定要在範例中，因為 *LargePhoto* 欄位具有 SQL Server 類型 varbinary(max)，因此預設會以二進位資料流形式傳回。 如需有關預設 PHP 資料類型的詳細資訊，請參閱 [Default PHP Data Types](../../connect/php/default-php-data-types.md)。 如需有關如何指定 PHP 傳回類型的詳細資訊，請參閱 [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [擷取資料](../../connect/php/retrieving-data.md)

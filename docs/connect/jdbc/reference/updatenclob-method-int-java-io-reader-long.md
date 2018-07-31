@@ -1,5 +1,5 @@
 ---
-title: updateNClob 方法 （int，java.io.Reader，long） |Microsoft 文件
+title: updateNClob 方法 （int，java.io.Reader，long） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d22275e38f7f63533b1faadfed0687ef76fb6ce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848933"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040806"
 ---
 # <a name="updatenclob-method-int-javaioreader-long"></a>updateNClob 方法 (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,20 +44,20 @@ public void updateNClob(int columnIndex,
   
  讀取器物件。  
   
- *長度*  
+ *length*  
   
  參數資料中的字元數目。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateNClob 方法 java.sql.ResultSet 介面中所指定此 updateNClob 方法。  
+## <a name="remarks"></a>Remarks  
+ UpdateNClob 方法 java.sql.ResultSet 介面中所指定這個 updateNClob 方法。  
   
- 這個方法僅支援**nvarchar （max)**， **ntext**，和**xml**資料行。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
+ 這個方法僅支援**nvarchar （max)**， **ntext**，並**xml**資料行。 對任何其他資料類型使用這個方法，將擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateNClob 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   
+ [updateNClob 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: FILESTREAM 資料行讀到檔案使用 IBCPSession (OLE DB) |Microsoft 文件
-description: FILESTREAM 資料行讀到檔案使用 IBCPSession (OLE DB)
+title: 使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB) | Microsoft
+description: 使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,30 +14,30 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8b2d6f73c25dc61ebee595aeaec546d448577f93
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e7ec958be9f3a396132a6e1c68b750a8c9b15459
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665988"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106154"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>使用 IBCPSession 將 FILESTREAM 資料行讀到檔案中 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   此範例會使用 IBCPSession 介面將 Filestream 資料行讀到檔案中，並寫入格式檔案。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[FILESTREAM 支援](../../../oledb/features/filestream-support.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>範例  
- 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
  使用下列其中一個範例來建立此範例讀取的來源資料表：  
   
--   [將資料傳送到 FILESTREAM 資料行使用 ISequentialStream Bound to ICommandText 參數&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [使用繫結至 ICommandText 參數的 ISequentialStream 將資料傳送到 FILESTREAM 資料行 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
  複製第一個程式碼清單並將它貼入名為 ISSHelper.h 的檔案中。  
   

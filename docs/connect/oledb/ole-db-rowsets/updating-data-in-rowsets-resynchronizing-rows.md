@@ -1,6 +1,6 @@
 ---
-title: 重新同步處理資料列 |Microsoft 文件
-description: 使用 SQL Server 的 OLE DB 驅動程式的重新同步處理資料列
+title: 重新同步處理的資料列 |Microsoft Docs
+description: 使用 OLE DB Driver for SQL Server 的重新同步處理資料列
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 99e355ded49f480a6ac0f27dc700d96c8ced9e87
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 7990651bf9d412eec7d2826daedee0fafaa53943
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690241"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107900"
 ---
-# <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新資料列集的重新同步處理資料列中的資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="updating-data-in-rowsets---resynchronizing-rows"></a>更新資料列集中的資料 - 重新同步處理資料列
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驅動程式支援**IRowsetResynch**上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標支援資料列集僅。 **IRowsetResynch**並不適用於要求。 取用者必須在開啟資料列集前要求此介面。  
+  OLE DB Driver for SQL Server 支援**IRowsetResynch**上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標支援資料列集僅。 **IRowsetResynch** 無法視需要提供。 取用者必須在開啟資料列集前要求此介面。  
   
 ## <a name="see-also"></a>另請參閱  
  [更新資料列集中的資料](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  

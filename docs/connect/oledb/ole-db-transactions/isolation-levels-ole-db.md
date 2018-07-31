@@ -1,5 +1,5 @@
 ---
-title: 隔離等級 (OLE DB) |Microsoft 文件
+title: 隔離等級 (OLE DB) |Microsoft Docs
 description: 隔離等級 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,29 +19,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b015a27fccfdad7b9f20bdac16a3a587f0c026a5
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: bc4b60a56b5c12ac040c1b1481660175154c880f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690011"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109670"
 ---
 # <a name="isolation-levels-ole-db"></a>隔離等級 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端可以控制連線的交易隔離等級。 若要控制交易隔離等級，會使用 SQL Server 取用者，OLE DB 驅動程式：  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用戶端可以控制連線的交易隔離等級。 若要控制交易隔離等級，會使用 OLE DB Driver for SQL Server 取用者：  
   
--   DBPROPSET_SESSION 屬性 DBPROP_SESS_AUTOCOMMITISOLEVELS OLE DB driver for SQL Server 預設自動認可模式。  
+-   適用於 OLE DB Driver for SQL Server 預設自動認可模式的 DBPROPSET_SESSION 屬性 DBPROP_SESS_AUTOCOMMITISOLEVELS。  
   
-     SQL Server 層級的預設值，OLE DB 驅動程式是 DBPROPVAL_TI_READCOMMITTED。  
+     OLE DB Driver for SQL Server 層級的預設值是 DBPROPVAL_TI_READCOMMITTED。  
   
--   *IsoLevel*參數**itransactionlocal:: Starttransaction**本機手動認可交易的方法。  
+-   適用於本機手動認可交易之 **ITransactionLocal::StartTransaction** 方法的 *isoLevel* 參數。  
   
--   *IsoLevel*參數**itransactiondispenser:: Begintransaction**方法適用於 MS DTC 協調分散式交易。  
+-   適用於 MS DTC 協調分散式交易之 **ITransactionDispenser::BeginTransaction** 方法的 *isoLevel* 參數。  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許中途讀取隔離等級的唯讀存取。 其他所有等級藉由將鎖定套用至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件以限制並行存取。 由於用戶端需要更高的並行存取等級，因此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會對資料並行存取套用更大的限制。 若要維持資料並行存取的最高層級，SQL Server 取用者，OLE DB 驅動程式應該以智慧方式控制它對特定並行存取等級的要求。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許中途讀取隔離等級的唯讀存取。 其他所有等級藉由將鎖定套用至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 物件以限制並行存取。 由於用戶端需要更高的並行存取等級，因此 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會對資料並行存取套用更大的限制。 若要維持資料並行存取的最高等級，OLE DB Driver for SQL Server 取用者應該以智慧方式控制它對特定並行存取等級的要求。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 引入了快照集隔離等級。 如需詳細資訊，請參閱[使用快照隔離](../../oledb/features/working-with-snapshot-isolation.md)。  

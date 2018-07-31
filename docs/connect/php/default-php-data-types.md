@@ -1,5 +1,5 @@
 ---
-title: 預設 PHP 資料類型 |Microsoft 文件
+title: 預設 PHP 資料類型 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307697"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981357"
 ---
 # <a name="default-php-data-types"></a>預設 PHP 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "35307697"
 |FLOAT|float|8 位元字元<sup>1</sup>|  
 |地理位置|資料流|二進位<sup>3</sup>|  
 |幾何|資料流|二進位<sup>3</sup>|  
-|image<sup>5</sup>|資料流<sup>2</sup>|二進位<sup>3</sup>|  
+|映像<sup>5</sup>|資料流<sup>2</sup>|二進位<sup>3</sup>|  
 |ssNoversion|Integer|8 位元字元<sup>1</sup>|  
 |money|String|8 位元字元<sup>1</sup>|  
 |NCHAR|String|8 位元字元<sup>1</sup>|  
@@ -75,9 +75,9 @@ ms.locfileid: "35307697"
 |xml|資料流<sup>2</sup>|8 位元字元<sup>1</sup>|  
   
 
-1.  資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 以單一位元組問號 （？） 字元取代任何多位元組字元或未對應到此字碼頁的字元。  
+1.  資料會以如同在系統上設定之 Windows 地區設定的字碼頁中指定的 8 位元字元傳回。 系統會以單一位元組問號 (?) 字元取代任何多位元組字元或未對應到此字碼頁的字元。  
   
-2.  如果[sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)或[sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md)是用來擷取預設 PHP 類型的資料流的資料，資料會以字串傳回具有相同的編碼方式與資料流。 例如，如果 SQL Server 二進位類型會擷取使用**sqlsrv_fetch_array**，則預設傳回類型是二進位字串。  
+2.  如果 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) 或 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 用來擷取預設 PHP 類型為「資料流」的資料，會以字串形式 (其編碼方式與資料流相同) 傳回資料。 例如，如果使用 **sqlsrv_fetch_array** 擷取 SQL Server 二進位類型，則預設傳回型別會是二進位字串。  
   
 3.  資料會以原始位元組資料流形式從伺服器傳回，而不需執行編碼或轉譯。  
 
@@ -87,17 +87,17 @@ ms.locfileid: "35307697"
 
 6. 這是對應至 nvarchar(max) 類型的傳統類型。
 
-7.  雙向或輸出參數中不支援 sql_variant。
+7.  sql_variant 不支援雙向或輸出參數。
 
 8.  這是對應至 varchar(max) 類型的傳統類型。  
   
 9.  UNIQUEIDENTIFIER 是下列規則運算式所代表的 GUID：  
   
-    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
+    [0-9a-Fa-f]{8}-[0-9a-FA-F]{4}為 [0-9a-fa-f]{4}為 [0-9a-fa-f]{4}-[0-9a-FA-F]{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>其他新的 SQL Server 2008 資料類型和功能  
-中不支援資料類型的新 SQL Server 2008 中，以及存在於外部資料行 （例如資料表值參數） [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]。 下表摘要說明 SQL Server 2008 新功能的 PHP 支援。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 不支援 SQL Server 2008 的新資料類型，以及存在於資料行 (例如資料表值參數) 之外的資料類型。 下表摘要說明 SQL Server 2008 新功能的 PHP 支援。  
   
 |功能|PHP 支援|  
 |-----------|---------------|  
@@ -118,7 +118,7 @@ ms.locfileid: "35307697"
 
 [PHP 類型](http://php.net/manual/en/language.types.php)
 
-[資料類型 (TRANSACT-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+[資料類型 (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
 
 [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
   

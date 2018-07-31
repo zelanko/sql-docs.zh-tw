@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_close |Microsoft 文件
+title: sqlsrv_close |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e071fc2ac51931a52ba6672e97936dc60ee12072
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309107"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006840"
 ---
 # <a name="sqlsrvclose"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ sqlsrv_close( resource $conn )
 除非使用無效的參數呼叫函數，否則為布林值 **true** 。 如果使用無效的參數呼叫函數，則傳回 **false** 。  
   
 > [!NOTE]  
-> **Null** 是此函數的有效參數。 這可讓函數在指令碼中多次呼叫。 例如，如果您關閉連接時發生錯誤的情況，並且在指令碼結尾再次加以關閉，第二個呼叫**sqlsrv_close**會傳回**true**因為第一次呼叫**sqlsrv_關閉**（在錯誤狀況下） 將連接資源設**null**。  
+> **Null** 是此函數的有效參數。 這可讓函數在指令碼中多次呼叫。 例如，如果您在錯誤狀況下關閉連線，並且在指令碼結束時再次加以關閉，則在第二次呼叫 **sqlsrv_close** 時將會傳回 **true**，因為第一次呼叫 **sqlsrv_close** 時 (在錯誤狀況下) 會將連線資源設定為 **null**。  
   
 ## <a name="example"></a>範例  
 下列範例會關閉連接。 此範例假設 SQL Server 安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  

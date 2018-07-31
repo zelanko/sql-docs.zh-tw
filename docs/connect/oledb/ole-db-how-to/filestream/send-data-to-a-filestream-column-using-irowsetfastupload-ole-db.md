@@ -1,6 +1,6 @@
 ---
-title: 將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload (OLE DB) |Microsoft 文件
-description: 將資料傳送到 FILESTREAM 資料行使用 IRowsetFastUpload (OLE DB)
+title: 使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 (OLE DB) | Microsoft Docs
+description: 使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 070e8022ffc0840f88f7b8e5b0b03abcd2f13dc3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a708966a35ef6311cf6912a988bcf4822f53b6f3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666188"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106554"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>使用 IRowsetFastUpload 將資料傳送到 FILESTREAM 資料行 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   此範例會使用 IRowsetFastUpload 介面，將 4MB 到 4GB 之間的資料傳送到 Filestream 資料行。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[FILESTREAM 支援](../../../oledb/features/filestream-support.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>範例  
- 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
  伺服器必須擁有一個稱為 C:\DBFsa 的目錄，這是範例將產生資料庫的位置。 您的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體必須擁有這個位置的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
   

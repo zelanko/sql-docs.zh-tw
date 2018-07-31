@@ -1,5 +1,5 @@
 ---
-title: 疏鬆資料行 |Microsoft 文件
+title: 疏鬆資料行 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851683"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020974"
 ---
 # <a name="sparse-columns"></a>疏鬆資料行
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   疏鬆資料行為已最佳化儲存位置來保存 Null 值的一般資料行。 疏鬆資料行會減少 Null 值的空間需求，但要付出擷取非 Null 值的更多成本負擔。 當空間至少節省了百分之 20 到 40 時，請考慮使用疏鬆資料行。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 支援疏鬆資料行，當您連接到[!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]（或更新版本） 伺服器。 您可以使用[SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)， [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md)，或[SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md)若要判斷哪個資料行是疏鬆資料行，以及哪些資料行的資料行集資料行。  
+ 當您連線到 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (或更新版本) 伺服器時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 可支援疏鬆資料行。 您可以使用 [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)、[SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) 或 [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) 來判斷哪一個資料行是疏鬆資料行以及哪一個資料行是資料行集資料行。  
   
  資料行集是計算的資料行，可使用不具型別的 XML 形式傳回所有疏鬆資料行。 當資料表中的資料行數目很大或超過 1024，或者在個別疏鬆資料行上操作很麻煩時，您應該考慮使用資料行集。 資料行集最多可以包含 30,000 個資料行。  
   

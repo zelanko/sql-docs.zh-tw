@@ -1,5 +1,5 @@
 ---
-title: 資料指標類型 （PDO_SQLSRV 驅動程式） |Microsoft 文件
+title: 資料指標類型 （PDO_SQLSRV 驅動程式） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72cf83b4c4903c7df0b6a857746937e848fccf80
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306987"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062355"
 ---
-# <a name="cursor-types-pdosqlsrv-driver"></a>資料指標類型 （PDO_SQLSRV 驅動程式）
+# <a name="cursor-types-pdosqlsrv-driver"></a>資料指標類型 (PDO_SQLSRV 驅動程式)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO_SQLSRV 驅動程式可讓您建立具有數個資料指標的其中一個可捲動的結果集。  
+PDO_SQLSRV 驅動程式可讓您建立數個資料指標的其中一個可捲動的結果集。  
   
-如需有關如何指定資料指標使用 PDO_SQLSRV 驅動程式資訊和程式碼範例，請參閱[pdo:: prepare](../../connect/php/pdo-prepare.md)。  
+如需如何指定資料指標使用 PDO_SQLSRV 驅動程式，以及程式碼範例，請參閱[pdo:: prepare](../../connect/php/pdo-prepare.md)。  
   
 ## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV 和伺服器端資料指標  
-3.0 版之前[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，PDO_SQLSRV 驅動程式可讓您建立含伺服器端順向或靜態資料指標的結果集。 從 3.0 版開始[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，keyset 和 dynamic 資料指標也會提供。  
+在 3.0 版之前[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，PDO_SQLSRV 驅動程式可讓您建立含有伺服器端順向或靜態資料指標的結果集。 從 3.0 版開始[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，也有 keyset 和 dynamic 資料指標。  
   
 您可以使用 pdo:: prepare 或 pdostatement:: Setattribute 來選取其中一種資料指標類型，表示伺服器端資料指標的類型：  
   
@@ -37,7 +37,7 @@ PDO_SQLSRV 驅動程式可讓您建立具有數個資料指標的其中一個可
   
 -   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_SCROLL  
   
-要求 keyset 或 dynamic 資料指標，您可以指定 pdo:: ATTR_CURSOR = > pdo:: CURSOR_SCROLL，然後再傳遞適當的值以 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE。 您可以將它傳遞至 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE 的可能值為：  
+要求 keyset 或 dynamic 資料指標，您可以指定 pdo:: ATTR_CURSOR = > pdo:: CURSOR_SCROLL，然後再傳遞適當的值，以 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE。 您可以將它傳遞至 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE 的可能值如下：  
   
 -   PDO::SQLSRV_CURSOR_BUFFERED  
   
@@ -48,15 +48,15 @@ PDO_SQLSRV 驅動程式可讓您建立具有數個資料指標的其中一個可
 -   PDO::SQLSRV_CURSOR_STATIC  
   
 ## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV 和用戶端資料指標  
-3.0 版中所加入的用戶端資料指標[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，可讓您快取的整個結果集在記憶體中。 其中一個優點是，資料列計數可用之後執行的查詢。  
+在 3.0 版中新增用戶端資料指標[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]，可讓您快取的整個結果集在記憶體中。 其中一個優點是之後執行的查詢，就可以使用資料列計數。  
   
-用戶端資料指標應該用於小型-至中型的結果集。 大型結果集應該使用伺服器端資料指標。  
+用戶端資料指標應該用於小型到中型-大小的結果集。 大型結果集應該使用伺服器端資料指標。  
   
-查詢會傳回 false，如果緩衝區不夠大到足以包含的整個結果集時使用的用戶端資料指標。 您可以增加緩衝區大小超過 PHP 記憶體限制。  
+查詢會傳回 false，如果緩衝區不夠大，無法保存的整個結果集時使用的用戶端資料指標。 您可以增加到 PHP 記憶體限制的緩衝區大小。  
   
-您可以設定的保留結果集的 PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE 屬性的緩衝區大小[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 您也可以設定最大緩衝區大小 pdo_sqlsrv.client_buffer_max_kb_size php.ini 檔案中 (例如，pdo_sqlsrv.client_buffer_max_kb_size = 1024年)。  
+您可以設定的保留結果的 PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE 屬性集的緩衝區大小[pdo:: setattribute](../../connect/php/pdo-setattribute.md)或是[pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)。 您也可以設定的最大的緩衝區大小 pdo_sqlsrv.client_buffer_max_kb_size php.ini 檔案中 (例如 pdo_sqlsrv.client_buffer_max_kb_size = 1024年)。  
   
-您表示您想要使用 pdo:: prepare 或 pdostatement:: Setattribute 的用戶端資料指標，並選取 pdo:: ATTR_CURSOR = > pdo:: CURSOR_SCROLL 資料指標類型。  您接著可以指定 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE = > PDO::SQLSRV_CURSOR_BUFFERED。  
+您表示您使用 pdo:: prepare 或 pdostatement:: Setattribute 想用戶端資料指標，並選取 pdo:: ATTR_CURSOR = > pdo:: CURSOR_SCROLL 資料指標類型。  接著您可以指定 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE = > PDO::SQLSRV_CURSOR_BUFFERED。  
   
 ```  
 <?php  

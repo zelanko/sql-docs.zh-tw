@@ -1,6 +1,6 @@
 ---
-title: '使用 irow:: Getcolumns 和 ISequentialStream 提取 BLOB 資料 |Microsoft 文件'
-description: '使用 irow:: Getcolumns 和 ISequentialStream 提取 BLOB 資料'
+title: 使用 IRow::GetColumns 和 ISequentialStream 擷取 BLOB 資料 | Microsoft Docs
+description: 使用 IRow::GetColumns 和 ISequentialStream 擷取 BLOB 資料
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4856cd6694aed63dfb11c1adc048c70c571cf3e4
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 76c909ed28744576c24fadb4ec841a2049f2f0da
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689371"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106084"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>使用 IRow::GetColumns 和 ISequentialStream 提取 BLOB 資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  下列函式使用**irow:: Getcolumns**和**ISequentialStream**來提取大型資料：  
+  下列函式會使用 **IRow::GetColumns** 和 **ISequentialStream** 來提取大型資料：  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -93,6 +93,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 IRow 提取 BLOB 資料](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+ [使用 IRow 擷取 BLOB 資料](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

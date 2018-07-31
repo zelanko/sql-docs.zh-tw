@@ -1,6 +1,6 @@
 ---
-title: 將資料傳送到 FILESTREAM-ISequentialStream Bound to ICommandText |Microsoft 文件
-description: 檔案資料流的繫結至 ICommandText ISequentialStream 傳送資料
+title: 將資料傳送到 FILESTREAM - 繫結至 ICommandText 的 ISequentialStream | Microsoft Docs
+description: 將資料傳送到 FILESTREAM - 繫結至 ICommandText 的 ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4bfc03b8cdf3047ddfd46338be4796dd9f39d2d3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 36461107cf11c9119bd9e11b73cb7b96383483e7
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665568"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108770"
 ---
-# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>將資料傳送到 FILESTREAM-ISequentialStream Bound to ICommandText
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>將資料傳送到 FILESTREAM - 繫結至 ICommandText 的 ISequentialStream
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   此範例會使用繫結至 ICommandText 參數的 ISequentialStream 介面，將介於 4MB 與 4GB 之間的資料傳送到 Filestream 資料行。  
   
- 如需有關 filestream 功能的詳細資訊，請參閱[FILESTREAM 支援](../../../oledb/features/filestream-support.md)。  
+ 如需有關 filestream 功能的詳細資訊，請參閱 < [FILESTREAM 支援](../../../oledb/features/filestream-support.md)。  
   
 ## <a name="example"></a>範例  
- 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ 在編譯和執行此範例之前，啟用 FILESTREAM 支援 ([啟用及設定 FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
- 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
  伺服器必須擁有一個稱為 C:\DBFsa 的目錄，這是範例將產生資料庫的位置。 您的 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體必須擁有這個位置的寫入存取權 (例如，以本機系統帳戶的身分登入)。  
   

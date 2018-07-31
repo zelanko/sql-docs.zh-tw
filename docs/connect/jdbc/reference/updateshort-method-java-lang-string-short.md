@@ -1,5 +1,5 @@
 ---
-title: updateShort 方法 (java.lang.String，short) |Microsoft 文件
+title: updateShort 方法 (java.lang.String，short) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc6a4258b027cb529cbf448ae2512de9cae5931a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849063"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039171"
 ---
 # <a name="updateshort-method-javalangstring-short"></a>updateShort 方法 (java.lang.String, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新指定的資料行與**簡短**給定的資料行名稱的值。  
+  根據指定的資料行名稱，使用 **short** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,11 +51,11 @@ public void updateShort(java.lang.String columnName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateShort 方法 java.sql.ResultSet 介面中所指定此 updateShort 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 updateShort 方法是由 java.sql.ResultSet 介面中的 updateShort 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateShort 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
+ [updateShort 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

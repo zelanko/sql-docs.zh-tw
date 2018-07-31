@@ -1,6 +1,6 @@
 ---
-title: 建立資料來源的連接 |Microsoft 文件
-description: 建立使用 SQL Server 的 OLE DB 驅動程式的資料來源的連接
+title: 建立資料來源的連接 |Microsoft Docs
+description: 建立資料來源使用 OLE DB Driver for SQL Server 的連接
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,25 +20,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7b4a864d10b109f32e552ed82d9d89868011496d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8c198bad7fbe50aff0493d25c438268efb1deeb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666098"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107034"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>建立資料來源的連接
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  若要存取 SQL Server 的 OLE DB 驅動程式，取用者必須先建立資料來源物件的執行個體呼叫**CoCreateInstance**方法。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 OLE DB driver for SQL Server，類別識別項是 CLSID_MSOLEDBSQL。 您也可以使用 OLE DB 驅動程式將會解析您參考 msoledbsql.h 中使用的 SQL server 的 MSOLEDBSQL_CLSID 的符號。  
+  若要存取 OLE DB Driver for SQL Server，取用者必須先呼叫 **CoCreateInstance** 方法來建立資料來源物件的執行個體。 唯一類別識別項 (CLSID) 會識別每個 OLE DB 提供者。 OLE DB driver for SQL Server，類別識別項是 CLSID_MSOLEDBSQL。 您也可以使用該符號會解析為 OLE DB 驅動程式，會在您參考 msoledbsql.h 的 SQL server 的 MSOLEDBSQL_CLSID。  
   
- 資料來源物件會公開**IDBProperties**介面，取用者可以使用提供基本驗證資訊，例如伺服器名稱、 資料庫名稱、 使用者識別碼和密碼。 **Idbproperties:: Setproperties**呼叫方法來設定這些屬性。  
+ 資料來源物件會公開 **IDBProperties** 介面，取用者可以使用這個介面來提供基本驗證資訊；例如，伺服器名稱、資料庫名稱、使用者識別碼和密碼。 呼叫 **IDBProperties::SetProperties** 方法可設定這些屬性。  
   
  如果有多個 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體在電腦上執行，伺服器名稱會指定為 ServerName\InstanceName。  
   
- 資料來源物件也會公開**IDBInitialize**介面。 資料來源連接屬性設定之後，會建立藉由呼叫**idbinitialize:: Initialize**方法。 例如：  
+ 資料來源物件也會公開 **IDBInitialize** 介面。 屬性設定之後，就會呼叫 **IDBInitialize::Initialize** 方法來建立資料來源的連線。 例如：  
   
 ```cpp
 CoCreateInstance(CLSID_MSOLEDBSQL,   
@@ -48,9 +48,9 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
                  (void **) &pIDBInitialize)  
 ```
   
- 此呼叫**CoCreateInstance**建立單一類別 CLSID_MSOLEDBSQL (將用來建立物件的程式碼與資料相關聯的 CSLID) 相關聯的物件。 IID_IDBInitialize 是介面識別碼的參考 (**IDBInitialize**) 用來與物件通訊。  
+ 呼叫 **CoCreateInstance** 會建立與 CLSID_MSOLEDBSQL 建立關聯之類別的單一物件 (與資料建立關聯的 CSLID 以及建立物件所使用的程式碼)。 IID_IDBInitialize 是介面 (**IDBInitialize**) 識別項的參考，用於與物件進行通訊。  
   
- 下列範例顯示如何初始化和建立資料來源的連接。
+ 下列範例示範如何初始化並建立資料來源的連接。
   
 ```cpp
 #include "msoledbsql.h"

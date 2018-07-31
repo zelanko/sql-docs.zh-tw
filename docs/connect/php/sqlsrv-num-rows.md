@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_rows |Microsoft 文件
+title: sqlsrv_num_rows |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670d9b8f4e708fac264b8520a6a1ee6f183181a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309007"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006782"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,8 +42,8 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>傳回值  
 如果計算資料列數目時發生錯誤，則會傳回**false** 。 否則會傳回結果集內的資料列數目。  
   
-## <a name="remarks"></a>備註  
-sqlsrv_num_rows 需要用戶端、 靜態或索引鍵集資料指標，且會傳回**false**如果您使用順向資料指標或動態資料指標。 (預設值為順向資料指標)。如需資料指標的詳細資訊，請參閱[sqlsrv_query](../../connect/php/sqlsrv-query.md)和[資料指標類型&#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
+## <a name="remarks"></a>Remarks  
+sqlsrv_num_rows 需要用戶端、靜態或索引鍵集資料指標，如果您使用順向資料指標或動態資料指標，則會傳回 **false**。 (預設值為順向資料指標)。如需資料指標的詳細資訊，請參閱 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 和[資料指標類型 &#40;SQLSRV 驅動程式&#41;](../../connect/php/cursor-types-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>範例  
   

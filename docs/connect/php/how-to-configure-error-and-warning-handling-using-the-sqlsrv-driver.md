@@ -1,5 +1,5 @@
 ---
-title: 設定錯誤和警告處理 Using the SQLSRV Driver |Microsoft 文件
+title: 使用 SQLSRV 驅動程式設定錯誤和警告處理 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,36 +17,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307407"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999242"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式設定錯誤和警告處理
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本主題說明如何設定 SQLSRV 驅動程式，以處理錯誤和警告。  
   
-根據預設，SQLSRV 驅動程式會將警告視為錯誤;呼叫**sqlsrv**產生錯誤或警告的函式會傳回**false**。 若要停用此行為，請使用[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)函式。 下列程式碼行包含在指令碼的開頭時**sqlsrv**僅產生警告 （沒有錯誤） 的函式不會傳回**false**:  
+根據預設，SQLSRV 驅動程式會將警告視為錯誤；呼叫 **sqlsrv** 函式時若產生錯誤或警告，則會傳回 **false**。 若要停用此行為，請使用 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) 函式。 如果指令碼的開頭包含下列程式碼行，則僅產生警告 (沒有錯誤) 的 **sqlsrv** 函式將不會傳回 **false**：  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-下列程式碼會重設預設行為 （將警告視為錯誤）：  
+下列程式碼行將會重設預設行為 (將警告視為錯誤)：  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > 對應至 SQLSTATE 值 01000、01001、01003 和 01S02 的警告絕不會被視為錯誤。 無論組態為何， **sqlsrv** 函數若僅產生與其中一種狀態相對應的警告，則不會傳回 **false**。  
   
-**WarningsReturnAsErrors** 的值也可以設定在 php.ini 檔案中。 例如，在這個項目`[sqlsrv]`php.ini 檔案的區段，則會關閉預設行為。  
+**WarningsReturnAsErrors** 的值也可以設定在 php.ini 檔案中。 例如，此項目在 php.ini 檔案的 `[sqlsrv]` 區段中會關閉預設行為。  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 如需擷取錯誤和警告資訊的詳細資訊，請參閱 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) 和 [如何：處理錯誤和警告](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)。  
   
 ## <a name="example"></a>範例  
-下列程式碼範例示範如何停用預設的錯誤處理行為。 此範例使用 Transact-SQL PRINT 命令來產生警告。 如需有關 [列印] 命令的詳細資訊，請參閱[PRINT (TRANSACT-SQL)](../../t-sql/language-elements/print-transact-sql.md)。  
+下列程式碼範例示範如何停用預設的錯誤處理行為。 此範例使用 Transact-SQL PRINT 命令來產生警告。 如需 PRINT 命令的詳細資訊，請參閱 [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)。  
   
 範例會先執行產生警告的查詢，以示範預設的錯誤處理行為。 此警告會被視為錯誤。 變更錯誤處理設定後，請執行相同的查詢。 此警告不會被視為錯誤。  
   
@@ -104,7 +104,7 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>另請參閱  
 [記錄活動](../../connect/php/logging-activity.md)
 
-[程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  
   

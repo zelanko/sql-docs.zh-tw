@@ -1,6 +1,6 @@
 ---
-title: 執行非同步作業 |Microsoft 文件
-description: SQL Server 的執行與 OLE DB 驅動程式的非同步作業
+title: 執行非同步作業 |Microsoft Docs
+description: 執行非同步作業，利用 OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -23,55 +23,55 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3ba220d754eb3ebc31a719cb840e93378438e09c
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: e42374d2d3abc982dc8c2d2defddf724ee72c9d1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612133"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108040"
 ---
 # <a name="performing-asynchronous-operations"></a>執行非同步作業
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 允許應用程式執行非同步資料庫作業。 非同步處理可讓方法立即執行，而不會在呼叫的執行緒上封鎖。 這樣可允許多執行緒的許多功能與彈性，而不需要開發人員明確建立執行緒或處理同步。 當初始化資料庫連接或初始化執行命令的結果時，應用程式會要求非同步處理。  
   
 ## <a name="opening-and-closing-a-database-connection"></a>開啟及關閉資料庫連接  
- 當使用 SQL Server 的 OLE DB 驅動程式，專門設計來以非同步方式初始化資料來源物件的應用程式可以設定 DBPROPVAL_ASYNCH_INITIALIZE 位元之前呼叫前，於 DBPROP_INIT_ASYNCH 屬性中**idbinitialize:: Initialize**. 當設定這個屬性時，提供者會立即傳回呼叫**初始化**S_OK 時，如果作業已經立即完成或 DB_S_ASYNCHRONOUS，如果初始設定，以非同步方式繼續執行。 應用程式可以查詢**IDBAsynchStatus**或[ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)資料來源物件上的介面，然後呼叫**idbasynchstatus:: Getstatus**或[Issasynchstatus:: Waitforasynchcompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md)取得初始化的狀態。  
+ 當使用 OLE DB Driver for SQL Server 時，設計為非同步初始化資料來源物件的應用程式可以在呼叫 **IDBInitialize::Initialize** 前，於 DBPROP_INIT_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位元。 設定此屬性時，如果作業已經立即完成，提供者會使用 S_OK 立即從 **Initialize** 的呼叫傳回；如果初始化是以非同步方式繼續，則會使用 DB_S_ASYNCHRONOUS 從此呼叫傳回。 應用程式可以在資料來源物件上查詢 **IDBAsynchStatus** 或 [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) 介面，然後呼叫 **IDBAsynchStatus::GetStatus** 或 [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) 來取得初始化的狀態。  
   
- 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援的提供者**ISSAsynchStatus**介面必須實作這個屬性值為 VARIANT_TRUE。  
+ 此外，SSPROP_ISSAsynchStatus 屬性已加入到 DBPROPSET_SQLSERVERROWSET 屬性集。 支援 **ISSAsynchStatus** 介面的提供者必須利用 VARIANT_TRUE 的值實作此屬性。  
   
- **IDBAsynchStatus::Abort**或[issasynchstatus:: Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md)可以取消非同步呼叫**初始化**呼叫。 取用者必須明確地要求非同步資料來源初始化。 否則， **idbinitialize:: Initialize**不會傳回資料來源物件完全初始化之前。  
+ 呼叫 **IDBAsynchStatus::Abort** 或 [ISSAsynchStatus::Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) 可以取消非同步的 **Initialize** 呼叫。 取用者必須明確地要求非同步資料來源初始化。 否則，要等到資料來源物件完全初始化之後，**IDBInitialize::Initialize** 才會傳回。  
   
 > [!NOTE]  
->  用於連接共用的資料來源物件不能呼叫**ISSAsynchStatus**中 SQL Server OLE DB 驅動程式介面。 **ISSAsynchStatus**之共用的資料來源物件未公開介面。  
+>  用於連接共用的資料來源物件無法在 OLE DB Driver for SQL Server 中呼叫 **ISSAsynchStatus** 介面。 **ISSAsynchStatus** 介面不會針對集區資料來源物件公開。  
 >   
->  如果應用程式明確地強制資料指標引擎，使用**iopenrowset:: Openrowset**和**imultipleresults:: Getresult**將不支援非同步處理。  
+>  如果應用程式明確地強制使用資料指標引擎，**IOpenRowset::OpenRowset** 和 **IMultipleResults::GetResult** 將不支援非同步處理。  
 >   
->  此外，遠端 proxy/stub dll （在 MDAC 2.8) 無法呼叫**ISSAsynchStatus** OLE DB 驅動程式中的 SQL Server 的介面。 **ISSAsynchStatus**介面不會透過遠端公開。  
+>  此外，遠端 Proxy/stub dll (在 MDAC 2.8 中) 無法在 OLE DB Driver for SQL Server 中呼叫 **ISSAsynchStatus** 介面。 **ISSAsynchStatus** 介面不會透過遠端公開。  
 >   
->  服務元件不支援**ISSAsynchStatus**。  
+>  服務元件不支援 **ISSAsynchStatus**。  
   
 ## <a name="execution-and-rowset-initialization"></a>執行和資料列集初始化  
- 設計為非同步開啟執行命令結果的應用程式可以在 DBPROP_ROWSET_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位元。 當設定此位元，然後才呼叫**idbinitialize:: Initialize**， **icommand:: Execute**， **iopenrowset:: Openrowset**或**IMultipleResults::GetResult**、 *riid*引數必須設定為 IID_IDBAsynchStatus、 IID_ISSAsynchStatus 或 IID_IUnknown。  
+ 設計為非同步開啟執行命令結果的應用程式可以在 DBPROP_ROWSET_ASYNCH 屬性中設定 DBPROPVAL_ASYNCH_INITIALIZE 位元。 呼叫 **IDBInitialize::Initialize**、**ICommand::Execute**、**IOpenRowset::OpenRowset** 或 **IMultipleResults::GetResult** 之前設定此位元時，必須將 *riid* 引數設定為 IID_IDBAsynchStatus、IID_ISSAsynchStatus 或 IID_Iunknown。  
   
- 方法會立即傳回 S_OK 與如果資料列集初始化立即，則會使用 DB_S_ASYNCHRONOUS 時完成資料列集也會繼續以非同步方式初始化與*ppRowset*上設定要求的介面資料列集。 OLE DB driver for SQL Server，此介面只能是**IDBAsynchStatus**或**ISSAsynchStatus**。 直到資料列集完全初始化時，此介面的行為就好像在暫停的狀態，並呼叫**QueryInterface**以外的介面**IID_IDBAsynchStatus**或**IID_ISSAsynchStatus**可能會傳回 E_NOINTERFACE。 除非取用者明確地要求非同步處理，否則資料列集會以同步的方式進行初始化。 所有要求的介面時，就使用**idbasynchstaus:: Getstatus**或**issasynchstatus:: Waitforasynchcompletion**傳回非同步作業已完成的指示。 這不一定表示資料列集已完全擴展，但是該資料列集是完整的，而且完全可以運作。  
+ 如果資料列集初始化立即完成，此方法會使用 S_OK 立即傳回；如果資料列集在 *ppRowset* 設定為資料列集上要求的介面時，繼續以非同步方式初始化，則會使用 DB_S_ASYNCHRONOUS 傳回此方法。 OLE DB driver for SQL Server，此介面只能**IDBAsynchStatus**或是**ISSAsynchStatus**。 在資料列集完全初始化之前，此介面的行為如同處於已暫停狀態，而且針對 **IID_IDBAsynchStatus** 或 **IID_ISSAsynchStatus** 之外的介面呼叫 **QueryInterface** 可能會傳回 E_NOINTERFACE。 除非取用者明確地要求非同步處理，否則資料列集會以同步的方式進行初始化。 如果 **IDBAsynchStaus::GetStatus** 或 **ISSAsynchStatus::WaitForAsynchCompletion** 傳回時，指出非同步作業已完成，則可使用所有要求的介面。 這不一定表示資料列集已完全擴展，但是該資料列集是完整的，而且完全可以運作。  
   
- 如果在執行的命令不會傳回一個資料列集，它仍會立即傳回的物件來支援**IDBAsynchStatus**。  
+ 如果執行的命令並未傳回資料列集，它仍然會使用支援 **IDBAsynchStatus** 的物件立即傳回。  
   
  如果您需要從非同步命令執行取得多個結果，您應該：  
   
 -   在執行命令之前，設定 DBPROP_ROWSET_ASYNCH 屬性的 DBPROPVAL_ASYNCH_INITIALIZE 位元。  
   
--   呼叫**icommand:: Execute**，並要求**IMultipleResults**。  
+-   呼叫 **ICommand::Execute**，並要求 **IMultipleResults**。  
   
- **IDBAsynchStatus**和**ISSAsynchStatus**介面然後就可以取得透過查詢多個結果介面使用**QueryInterface**。  
+ 接著，使用 **QueryInterface** 來查詢多個結果介面，藉此取得 **IDBAsynchStatus** 和 **ISSAsynchStatus** 介面。  
   
- 當命令完成時執行， **IMultipleResults**可用來當做一般，從同步案例有一個例外狀況： 傳回 DB_S_ASYNCHRONOUS，在此情況下**IDBAsynchStatus**或**ISSAsynchStatus**可用來判斷作業何時完成。  
+ 當命令執行完成時，除非同步案例的一個例外，否則可以如常使用 **IMultipleResults**：可以傳回 DB_S_ASYNCHRONOUS，在此情況下，**IDBAsynchStatus** 或 **ISSAsynchStatus** 可用於判斷作業完成的時間。  
   
 ## <a name="examples"></a>範例  
- 在下列範例中，應用程式會呼叫非封鎖的方法、進行其他某些處理，然後返回處理結果。 **Issasynchstatus:: Waitforasynchcompletion**等候內部事件物件，直到非同步執行的作業完成或指定的時間量*dwMilisecTimeOut*傳遞。  
+ 在下列範例中，應用程式會呼叫非封鎖的方法、進行其他某些處理，然後返回處理結果。 **ISSAsynchStatus::WaitForAsynchCompletion** 會等候內部事件物件，直到非同步執行作業完成，或是過了 *dwMilisecTimeOut* 所指定的時間為止。  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -112,7 +112,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **Issasynchstatus:: Waitforasynchcompletion**等候內部事件物件上以非同步方式執行的作業完成或*dwMilisecTimeOut*值傳遞。  
+ **ISSAsynchStatus::WaitForAsynchCompletion** 會等候內部事件物件，直到非同步執行作業完成，或是過了 *dwMilisecTimeOut* 值為止。  
   
  下列範例會示範利用多個結果集的非同步處理：  
   
@@ -193,7 +193,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 功能的 OLE DB 驅動程式](../../oledb/features/oledb-driver-for-sql-server-features.md)   
+ [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [資料列集屬性和行為](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   

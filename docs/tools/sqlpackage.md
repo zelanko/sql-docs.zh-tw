@@ -1,24 +1,23 @@
 ---
 title: SqlPackage.exe |Microsoft Docs
-ms.custom:
-- SSDT
+ms.prod: sql
+ms.technology: ssdt
 ms.date: 2018-06-27
-ms.prod: sql-non-specified
 ms.reviewer: alayu; sstein
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 caps.latest.revision: 53
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4c206a60e0b494d4e060864eefcb50424d316938
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
-ms.translationtype: HT
+ms.openlocfilehash: 15a34b5cc746368edb4f4dbe3e16720da77f9128
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080076"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085410"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -52,7 +51,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
   
 ### <a name="help-for-the-extract-action"></a>Extract 動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|Extract|指定要執行的動作。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
@@ -74,7 +73,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 
 ### <a name="properties-specific-to-the-extract-action"></a>擷取動作特有的屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 「 60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|DacApplicationDescription=(STRING)|定義要儲存在 DACPAC 中繼資料中的應用程式描述。|
@@ -98,7 +97,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 ### <a name="help-for-publish-action"></a>發行動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|發行|指定要執行的動作。 |
 |**/ AzureKeyVaultAuthMethod:**|**/akv**|{互動式&#124;ClientIdSecret}|指定存取 Azure Key Vault 時要使用的驗證方法 |
@@ -133,11 +132,11 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 ### <a name="properties-specific-to-the-publish-action"></a>發行動作的特定屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
-|**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|這個屬性是供 SqlClr 部署用來使任何封鎖的組件會在部署計畫中卸除。 根據預設，如果必須卸除任何參考組件，則該封鎖/參考組件會封鎖組件更新。|
+|**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|這個屬性是供 SqlClr 部署用來使任何封鎖的組件會在部署計畫中卸除。 根據預設，如果必須卸除任何參考組件，則該封鎖/參考組件會封鎖組件更新。|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|指定儘管 SQL Server 平台不相容，是否仍要嘗試動作。|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|若此屬性設定為 true，請勿封鎖具有資料列層級安全性之資料表的資料動作。 預設值為 false。|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|在部署任何變更之前，先備份資料庫。|
@@ -227,7 +226,7 @@ SqlPackage.exe 發行作業會累加更新目標資料庫的結構描述，使�
 
 下表描述可用來覆寫在發行動作期間所用 SQL 命令 (**sqlcmd**) 變數值之選項的格式。 命令列上指定的變數值會覆寫指派給變數的其他值 (例如在發行設定檔中)。  
   
-|參數|預設|描述|  
+|參數|預設|Description|  
 |-------------|-----------|---------------|  
 |**/ 變數: {PropertyName} = {Value}**||指定動件特定變數的名稱/值對：{VariableName}={Value}。 DACPAC 檔案包含有效 SQLCMD 變數的清單。 如果未針對每一個變數提供值，則會產生錯誤。|  
   
@@ -237,7 +236,7 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
   
 ### <a name="help-for-export-action"></a>匯出動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|匯出|指定要執行的動作。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
@@ -259,7 +258,7 @@ SqlPackage.exe 的匯出動作會將即時資料庫從 SQL Server 或 Azure SQL 
 
 ### <a name="properties-specific-to-the-export-action"></a>匯出動作特有的屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 「 60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|儲存體 = ({檔案&#124;的記憶體} 'File')|指定支援儲存體的類型，以供結構描述模型在擷取期間使用。|
@@ -273,7 +272,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
   
 ### <a name="help-for-command-actions"></a>命令動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|匯入|指定要執行的動作。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
@@ -293,7 +292,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |**/ UniversalAuthentication:**|**/ua**|{True&#124;，則為 False}|指定是否應使用通用驗證。 設為 True 時，互動式驗證通訊協定已啟用支援 MFA。 此選項也可以用於 Azure AD 驗證，而不需要 MFA，使用互動式的通訊協定，需要使用者輸入其使用者名稱和密碼或整合式的驗證 （Windows 認證）。 SourceConnectionString 時 /UniversalAuthentication 設為 True 時，可以指定任何 Azure AD 驗證 (/ scs)。 SourceConnectionString 當 /UniversalAuthentication 設定為 False 時，必須指定 Azure AD 驗證 (/ scs)。 <br/> 如需有關 Active Directory 通用驗證的詳細資訊，請參閱 < [SQL Database 和 SQL 資料倉儲 （mfa 的 SSMS 支援） 的通用驗證](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)。|
 
 匯入動作特有的屬性：
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|CommandTimeout = (INT32 「 60')|以秒為單位指定對 SQL Server 執行查詢時的命令逾時。|
 |**/p:**|DatabaseEdition = ({Basic&#124;標準&#124;進階&#124;預設} 'Default')|定義 Azure SQL Database 的版本。|
@@ -309,7 +308,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
   
 ### <a name="help-for-deployreport-action"></a>DeployReport 動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DeployReport|指定要執行的動作。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
@@ -343,7 +342,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 
 ## <a name="properties-specific-to-the-deployreport-action"></a>DeployReport 動作特有的屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。|
@@ -439,7 +438,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
   
 ### <a name="help-for-driftreport-action"></a>DriftReport 動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|DriftReport|指定要執行的動作。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
@@ -464,7 +463,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
   
 ### <a name="help-for-the-script-action"></a>指令碼動作的說明
 
-|參數|簡短形式|ReplTest1|描述|
+|參數|簡短形式|ReplTest1|Description|
 |---|---|---|---|
 |**/Action:**|**/a**|指令碼|指定要執行的動作。 |
 |**/Diagnostics:**|**/d**|{True&#124;，則為 False}|指定診斷記錄是否輸出到主控台。 預設為 False。 |
@@ -498,7 +497,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 
 ### <a name="properties-specific-to-the-script-action"></a>指令碼動作特有的屬性
 
-|屬性|ReplTest1|描述|
+|屬性|ReplTest1|Description|
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|為部署參與者指定其他部署參與者引數。 這應該是以分號區隔的值清單。
 |**/p:**|AdditionalDeploymentContributors=(STRING)|指定部署 dacpac 時應該執行的其他部署參與者。 這應該是以分號區隔的完整組建參與者名稱或識別碼清單。
@@ -521,14 +520,14 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |**/p:**|DoNotAlterReplicatedObjects = (布林值 ' True')|指定驗證期間是否識別有複寫的物件。
 |**/p:**|DoNotDropObjectType=(STRING)|物件型別，不應該捨棄當 DropObjectsNotInSource 為 true。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
 |**/p:**|DoNotDropObjectTypes=(STRING)|當 DropObjectsNotInSource 為 true 時不應捨棄的分號分隔物件類型清單。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
-|**/p:**|DropConstraintsNotInSource = (布林值 ' True')|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在於資料庫快照集 (.dacpac) 檔案中的條件約束。|
-|**/p:**|DropDmlTriggersNotInSource = (布林值 ' True')|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在於資料庫快照集 (.dacpac) 檔案中的 DML 觸發程序。|
+|**/p:**|DropConstraintsNotInSource = (布林值 ' True')|指定在您將更新發佈至資料庫時，是否要從目標資料庫卸除資料庫快照集 (.dacpac) 檔案中不存在的條件約束。|
+|**/p:**|DropDmlTriggersNotInSource = (布林值 ' True')|指定在您將更新發佈至資料庫時，是否要從目標資料庫卸除資料庫快照集 (.dacpac) 檔案中不存在的 DML 觸發程序。|
 |**/p:**|DropExtendedPropertiesNotInSource = (布林值 ' True')|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在資料庫快照集 (.dacpac) 檔案中的擴充屬性。|
-|**/p:**|DropIndexesNotInSource = (布林值 ' True')|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在於資料庫快照集 (.dacpac) 檔案中的索引。|
-|**/p:**|DropObjectsNotInSource=(BOOLEAN)|指定當您發行至資料庫時，是否要從目標資料庫中卸除不存在於資料庫快照集 (.dacpac) 檔案中的物件。 此值的優先順序高過 DropExtendedProperties。|
+|**/p:**|DropIndexesNotInSource = (布林值 ' True')|指定在您將更新發佈至資料庫時，是否要從目標資料庫卸除資料庫快照集 (.dacpac) 檔案中不存在的索引。|
+|**/p:**|DropObjectsNotInSource=(BOOLEAN)|指定在您將更新發佈至資料庫時，是否要從目標資料庫卸除資料庫快照集 (.dacpac) 檔案中不存在的物件。 此值的優先順序高過 DropExtendedProperties。|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|指定當您發行更新至資料庫時，是否要從目標資料庫中卸除不存在資料庫快照集 (.dacpac) 檔案中的權限。|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|指定當您發行更新至資料庫時，是否要從目標資料庫中卸除資料庫快照集 (.dacpac) 檔案中沒有定義的角色成員。|
-|**/p:**|DropStatisticsNotInSource = (布林值 ' True')|指定當您發行至資料庫時，是否要從目標資料庫卸除不存在於資料庫快照集 (.dacpac) 檔案中的統計資料。|
+|**/p:**|DropStatisticsNotInSource = (布林值 ' True')|指定在您將更新發佈至資料庫時，是否要從目標資料庫卸除資料庫快照集 (.dacpac) 檔案中不存在的統計資料。|
 |**/p:**|ExcludeObjectType=(STRING)|部署期間應該忽略的物件類型。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
 |**/p:**|ExcludeObjectTypes=(STRING)|以分號區隔的物件類型清單，列出部署期間應該忽略的物件類型。 有效的物件類型名稱為 Aggregates、ApplicationRoles、Assemblies、AsymmetricKeys、BrokerPriorities、Certificates、ColumnEncryptionKeys、ColumnMasterKeys、Contracts、DatabaseRoles、DatabaseTriggers、Defaults、ExtendedProperties、ExternalDataSources、ExternalFileFormats、ExternalTables、Filegroups、FileTables、FullTextCatalogs、FullTextStoplists、MessageTypes、PartitionFunctions、PartitionSchemes、Permissions、Queues、RemoteServiceBindings、RoleMembership、Rules、ScalarValuedFunctions、SearchPropertyLists、SecurityPolicies、Sequences、Services、Signatures、StoredProcedures、SymmetricKeys、Synonyms、Tables、TableValuedFunctions、UserDefinedDataTypes、UserDefinedTableTypes、ClrUserDefinedTypes、Users、Views、XmlSchemaCollections、Audits、Credentials、CryptographicProviders、DatabaseAuditSpecifications、DatabaseScopedCredentials、Endpoints、ErrorMessages、EventNotifications、EventSessions、LinkedServerLogins、LinkedServers、Logins、Routes、ServerAuditSpecifications、ServerRoleMembership、ServerRoles、ServerTriggers。
 |**/p:**|GenerateSmartDefaults=(BOOLEAN)|在更新含有資料且資料行不允許 null 值的資料表時，自動提供預設值。
@@ -548,7 +547,7 @@ SqlPackage.exe 匯入動作匯入的結構描述和資料表資料從 BACPAC 套
 |**/p:**|IgnoreFilegroupPlacement = (布林值 ' True')|指定當您發行至資料庫時，應該忽略或更新 FILEGROUP 中物件位置的差異。|
 |**/p:**|IgnoreFileSize = (布林值 ' True')|指定當您發行至資料庫時，應該忽略檔案大小的差異或應該發出警告。|
 |**/p:**|IgnoreFillFactor = (布林值 ' True')|指定當您發行至資料庫時，應該忽略索引儲存體之填滿因數的差異或應該發出警告。|
-|**/p:**|IgnoreFullTextCatalogFilePath = (布林值 ' True')|指定當您發行至資料庫時，是否忽略全文檢索檔案路徑的差異或是否應該發出警告。|
+|**/p:**|IgnoreFullTextCatalogFilePath = (布林值 ' True')|指定當您發行至資料庫時，是否忽略全文檢索檔案路徑的差異，或是對此發出警告。|
 |**/p:**|IgnoreIdentitySeed=(BOOLEAN)|指定當您發行更新至資料庫時，應該忽略或更新識別欄位之種子的差異。|
 |**/p:**|IgnoreIncrement=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新識別欄位之增量的差異。|
 |**/p:**|IgnoreIndexOptions=(BOOLEAN)|指定當您發行至資料庫時，應該忽略或更新索引選項的差異。|

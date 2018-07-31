@@ -1,5 +1,5 @@
 ---
-title: 資料列集和 SQL Server 資料指標 |Microsoft 文件
+title: 資料列集和 SQL Server 資料指標 |Microsoft Docs
 description: 資料列集和 SQL Server 資料指標
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0860e164edcff6f4f89f1ac5ece5624d11d4568e
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: de602cbb2452c0d9d4201de89d7573a23c2704bc
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689601"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107184"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>資料列集和 SQL Server 資料指標
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -64,9 +64,9 @@ ms.locfileid: "35689601"
   
     -   請勿支援會傳回單一結果集以上的任何 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 陳述式。  
   
- 取用者可藉由設定某些資料列集屬性，在資料列集中要求不同的資料指標行為。 如果取用者未設定任何一個資料列集屬性，或是設定為其預設值，SQL Server OLE DB 驅動程式會實作使用預設結果集資料列集。 如果任何一個屬性設定為預設值以外，SQL Server OLE DB 驅動程式會實作使用伺服器資料指標的資料列集。  
+ 取用者可藉由設定某些資料列集屬性，在資料列集中要求不同的資料指標行為。 如果取用者未設定其中任何一個資料列集屬性，或是將所有屬性都設定為預設值，OLE DB Driver for SQL Server 會使用預設結果集來實作此資料列集。 如果任何一個屬性設定為預設值以外的值，OLE DB Driver for SQL Server 會使用伺服器資料指標來實作此資料列集。  
   
- 下列資料列集屬性的直接 SQL Server 以使用 OLE DB 驅動程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標。 某些屬性可以安全地與其他屬性合併在一起。 例如，顯示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 屬性的資料列集將會是一個顯示立即更新行為的書籤資料列集。 其他屬性互斥。 例如，顯示 DBPROP_OTHERINSERT 的資料列集不能包含書籤。  
+ 下列的資料列集屬性直接 OLE DB Driver for SQL Server 使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標。 某些屬性可以安全地與其他屬性合併在一起。 例如，顯示 DBPROP_IRowsetScroll 和 DBPROP_IRowsetChange 屬性的資料列集將會是一個顯示立即更新行為的書籤資料列集。 其他屬性互斥。 例如，顯示 DBPROP_OTHERINSERT 的資料列集不能包含書籤。  
   
 |屬性識別碼|ReplTest1|資料列集行為|  
 |-----------------|-----------|---------------------|  
@@ -75,13 +75,13 @@ ms.locfileid: "35689601"
 |DBPROP_BOOKMARKS 或 DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 資料列集是循序的，只支援順向捲動和提取。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句。|  
 |DBPROP_OWNUPDATEDELETE 或 DBPROP_OWNINSERT 或 DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集支援一個方向的捲動和提取。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句。|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集支援一個方向的捲動和提取。 支援相對資料列定位。 如果參考的資料行上有索引存在，命令文字可以包含 ORDER BY 子句。<br /><br /> 如果資料列集包含書籤，DBPROP_OTHERINSERT 不能為 VARIANT_TRUE。 嘗試建立具有這個可見性屬性和書籤的資料列集會產生錯誤。|  
-|DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集支援一個方向的捲動和提取。 書籤和絕對定位透過**IRowsetLocate**介面中的資料列集支援。 命令文字可以包含 ORDER BY 子句。<br /><br /> DBPROP_IRowsetLocate 和 DBPROP_IRowsetScroll 需要資料列集中的書籤。 嘗試建立具有書籤且將 DBPROP_OTHERINSERT 設定為 VARIANT_TRUE 的資料列集會產生錯誤。|  
+|DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集支援一個方向的捲動和提取。 此資料列集中可支援透過 **IRowsetLocate** 介面的書籤和絕對定位。 命令文字可以包含 ORDER BY 子句。<br /><br /> DBPROP_IRowsetLocate 和 DBPROP_IRowsetScroll 需要資料列集中的書籤。 嘗試建立具有書籤且將 DBPROP_OTHERINSERT 設定為 VARIANT_TRUE 的資料列集會產生錯誤。|  
 |DBPROP_IRowsetChange 或 DBPROP_IRowsetUpdate|VARIANT_TRUE|可以透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 資料列集是循序的，只支援順向捲動和提取。 支援相對資料列定位。 支援可更新之資料指標的所有命令都可支援這些介面。|  
-|DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll 及 DBPROP_IRowsetChange 或 DBPROP_IRowsetUpdate|VARIANT_TRUE|可以透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集支援一個方向的捲動和提取。 書籤和絕對定位透過**IRowsetLocate**中資料列集支援。 命令文字可以包含 ORDER BY 子句。|  
+|DBPROP_IRowsetLocate 或 DBPROP_IRowsetScroll 及 DBPROP_IRowsetChange 或 DBPROP_IRowsetUpdate|VARIANT_TRUE|可以透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集支援一個方向的捲動和提取。 此資料列集中可支援透過 **IRowsetLocate** 的書籤和絕對定位。 命令文字可以包含 ORDER BY 子句。|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集只支援順向捲動。 支援相對資料列定位。 如果參考的資料行上有索引存在，命令文字可以包含 ORDER BY 子句。<br /><br /> 只有當資料列集可以顯示其他工作階段上的命令所插入或其他使用者所插入的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料列時，才能在資料列集中使用 DBPROP_IMMOBILEROWS。 嘗試在 DBPROP_OTHERINSERT 不能是 VARIANT_TRUE 的任何資料列集上開啟此屬性設定為 VARIANT_FALSE 的資料列集時，將會產生錯誤。|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|無法透過資料列集來更新 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料。 此資料列集只支援順向捲動。 支援相對資料列定位。 命令文字可以包含 ORDER BY 子句 (除非由另一個屬性所限制)。|  
   
- SQL Server 資料列集支援伺服器資料指標的 OLE DB 驅動程式可以輕鬆建立在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]基底資料表或檢視使用**iopenrowset:: Openrowset**方法。 依名稱指定資料表或檢視表，傳遞所需的資料列集屬性會設定*rgPropertySets*參數。  
+ 可以使用 **IOpenRowset::OpenRowset** 方法，輕鬆地在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 基底資料表或檢視表上建立伺服器資料指標所支援的 OLE DB Driver for SQL Server 資料列集。 依據名稱指定資料表或檢視表，在 *rgPropertySets* 參數內傳遞必要的資料列集屬性集。  
   
  當取用者要求伺服器資料指標支援資料列集時，建立此資料列集的命令文字會受到限制。 具體而言，命令文字會受限為傳回單一資料列集結果的單一 SELECT 陳述式，或是實作單一 SELECT 陳述式來傳回單一資料列集結果的預存程序。  
   
@@ -152,9 +152,9 @@ ms.locfileid: "35689601"
  請從指定的資料列集屬性集合中，取得上述表格中所列之屬性的子集。 根據每一個資料列集屬性的旗標值，將這些屬性分成兩個子群組：必要 (T、F) 或選擇性 (-)。 對於每一個資料指標模型而言，請從第一個表開始，然後從左到右移動，並將這兩個子群組中的屬性值與該資料行內的對應屬性值相比較。 如果資料指標模型沒有任何項目符合必要屬性，而且不符合選擇性屬性的數目最少，則會選取該資料指標模型。 如果有一個以上的資料指標模型，則會選擇最左邊。  
   
 ## <a name="sql-server-cursor-block-size"></a>SQL Server 資料指標區塊大小  
- 當[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標支援之 SQL Server 資料列集的 OLE DB 驅動程式、 資料列中的項目數處理陣列參數的**irowset:: Getnextrows**或**irowsetlocate:: Getrowsat**方法會定義資料指標區塊大小。 此陣列中控制代碼所指示的資料列為資料指標區塊的成員。  
+ 當 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標支援 OLE DB Driver for SQL Server 資料列集時，**IRowset::GetNextRows** 或 **IRowsetLocate::GetRowsAt** 方法之資料列控制代碼陣列參數中的項目數目會定義資料指標區塊大小。 此陣列中控制代碼所指示的資料列為資料指標區塊的成員。  
   
- 支援書籤的資料列集，資料列控制代碼擷取使用**irowsetlocate:: Getrowsbybookmark**方法定義的資料指標區塊的成員。  
+ 如果是支援書籤的資料列集，使用 **IRowsetLocate::GetRowsByBookmark** 方法擷取的資料列控制代碼會定義資料指標區塊的成員。  
   
  不論用來擴展資料列集及形成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標區塊的方法為何，在資料列集上執行下一個資料列提取方法之前，資料指標區塊都是使用中狀態。  
   

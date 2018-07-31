@@ -1,5 +1,5 @@
 ---
-title: updateNCharacterStream 方法 （int，java.io.Reader） |Microsoft 文件
+title: updateNCharacterStream 方法 (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 029d14d4da5ee795f09286d540ead8344f920424
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849773"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040626"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader"></a>updateNCharacterStream 方法 (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +46,13 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateNCharacterStream 方法 java.sql.ResultSet 介面中所指定此 updateNCharacterStream 方法。  
+## <a name="remarks"></a>Remarks  
+ UpdateNCharacterStream 方法 java.sql.ResultSet 介面中所指定這個 updateNCharacterStream 方法。  
   
- 這個方法會將 Unicode 字元傳遞從讀取器物件選取**nchar**， **nvarchar （max)**， **ntext**和**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
+ 這個方法會傳遞到選取的讀取器物件的 Unicode 字元**nchar**， **nvarchar （max)**， **ntext**並**xml**資料行。 在其他資料類型資料行上使用這個方法，將會擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateNCharacterStream 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
+ [updateNCharacterStream 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

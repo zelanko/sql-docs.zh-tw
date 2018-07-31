@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpcolumns (OLE DB) |Microsoft 文件'
+title: 'Ibcpsession:: Bcpcolumns (OLE DB) |Microsoft Docs'
 description: IBCPSession::BCPColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 201692b9ec795fd2ca472b2cd1eb1a938b5e1854
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: a458f5968a2cc56accf18b5cfac43eaef09a76ea
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690231"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107730"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,29 +42,29 @@ HRESULT BCPColumns(
       DBCOUNTITEM nColumns);  
 ```  
   
-## <a name="remarks"></a>備註  
- 它會在內部呼叫[ibcpsession:: Bcpcolfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md)設定欄位資料的預設值。 這些預設值從提供者，在內部擷取透過指定資料表名稱時，SQL Server 資料行資訊取得[ibcpsession:: Bcpinit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md)。  
+## <a name="remarks"></a>Remarks  
+ 它會在內部呼叫 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 來設定欄位資料的預設值。 這些預設值會從 SQL Server 資料行資訊取得，提供者會在透過 [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 指定資料表名稱時，在內部擷取這項資訊。  
   
 > [!NOTE]  
->  這個方法後，才可以呼叫**BCPInit**已使用有效的檔案名稱呼叫。  
+>  只有在已使用有效的檔案名稱呼叫 **BCPInit** 後，才可以呼叫這個方法。  
   
- 只有打算使用與預設值不同的使用者檔案格式時，才可以呼叫此方法。 如需預設使用者檔案格式描述的詳細資訊，請參閱**BCPInit**方法。  
+ 只有打算使用與預設值不同的使用者檔案格式時，才可以呼叫此方法。 如需預設使用者檔案格式之描述的詳細資訊，請參閱 **BCPInit** 方法。  
   
- 在呼叫**BCPColumns**方法，您必須呼叫**BCPColFmt**以完整定義自訂的檔案格式的使用者檔案中的每個資料行的方法。  
+ 在呼叫 **BCPColumns** 方法之後，您必須針對使用者檔案中的每個資料行呼叫 **BCPColFmt** 方法，以完整定義自訂的檔案格式。  
   
 ## <a name="arguments"></a>引數  
  *nColumns*[in]  
- 使用者檔案中的欄位總數。 即使您準備要從使用者檔案的 SQL server 的大量複製資料的資料表，並不想複製使用者檔案中的所有欄位，您仍然必須設定*nColumns*使用者檔案欄位的總數目的引數。 然後可以透過指定略過的欄位**BCPColFmt**。  
+ 使用者檔案中的欄位總數。 即使您準備要將資料從使用者檔案大量複製到 SQL Server 資料表，而不想複製使用者檔案中的所有欄位，也仍必須將 *nColumns* 引數設定為使用者檔案欄位的總數。 接著，系統可以透過 **BCPColFmt** 指定略過的欄位。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
  此方法已成功。  
   
  E_FAIL  
- 發生提供者特定的錯誤。詳細資訊，請使用[ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)介面。  
+ 發生提供者特有的錯誤，如需詳細資訊，請使用 [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 介面。  
   
  E_UNEXPECTED  
- 此方法的呼叫是非預期的。 例如， **BCPInit**方法不會呼叫這個方法之前呼叫。 針對大量複製作業呼叫此方法超過一次時，也會發生這個狀況。  
+ 此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。 針對大量複製作業呼叫此方法超過一次時，也會發生這個狀況。  
   
  E_OUTOFMEMORY  
  記憶體不足錯誤  

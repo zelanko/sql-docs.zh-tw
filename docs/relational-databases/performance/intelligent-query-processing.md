@@ -2,7 +2,7 @@
 title: Microsoft SQL 資料庫中的智慧查詢處理 | Microsoft Docs
 description: 可改善 SQL Server 和 Azure SQL Database 查詢效能的智慧查詢處理功能。
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b3ca1aa0bf87fe08e65590ea506dad929455a90
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 6f1b215e95b7cc911cd2815493eabbbd53a47424
+ms.sourcegitcommit: a162a8f02d66c13b32d0b6255b0b52fc80e2187e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216819"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39250446"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -44,10 +44,12 @@ ms.locfileid: "39216819"
 
 如需詳細資訊，請參閱 [SQL 資料庫中的彈性查詢處理](../../relational-databases/performance/adaptive-query-processing.md)。
 
-## <a name="table-variable-deferred-compilation"></a>資料表變數延後編譯
-資料表變數延後編譯可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。  這個精確的資料列計數資訊將用於最佳化下游計劃作業。
+## <a name="table-variable-deferred-compilation"></a>資料表變數延遲編譯
+資料表變數延遲編譯可針對參考資料表變數的查詢，提升計劃品質和整體效能。 在最佳化和初始編譯期間，此功能將會根據實際資料表變數的資料列計數，傳播基數估計值。  這個精確的資料列計數資訊將用於最佳化下游計劃作業。
 
-使用資料表變數延後編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 這個延後編譯行為與暫存資料表的行為完全相同，而且此變更會導致使用實際基數，而不是原始的單一資料列猜測。 若要在 Azure SQL Database 中啟用資料表變數延後編譯的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
+使用資料表變數延遲編譯時，會延遲編譯參考資料表變數的陳述式，直到第一次實際執行陳述式為止。 這個延遲編譯行為與暫存資料表的行為完全相同，而且此變更會導致使用實際基數，而不是原始的單一資料列猜測。 若要在 Azure SQL Database 中啟用資料表變數延遲編譯的公開預覽功能，請在執行查詢時，針對您所連線的資料庫，啟用資料庫相容性層級 150。
+
+如需詳細資訊，請參閱[資料表變數延遲編譯](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
 
 ## <a name="approximate-query-processing"></a>近似查詢處理
 近似查詢處理是一個新的功能系列，其設計目的在於提供大型資料集之間的彙總，在此情況下回應性比絕對精確度更重要。  例如，針對 10 億個資料列計算 COUNT(DISTINCT())，以顯示在儀表板上。  在此情況下，絕對精確度並不重要，但回應性很重要。 新的 APPROX_COUNT_DISTINCT 彙總函式會傳回群組中非 Null 的唯一值的近似數目。

@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: errorcode |Microsoft 文件'
+title: 'Pdo:: errorcode |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73bc57c0519c3371b77e38b00b7cc2a8a203b811
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307897"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999188"
 ---
 # <a name="pdoerrorcode"></a>PDO::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,15 +36,15 @@ mixed PDO::errorCode();
 ## <a name="return-value"></a>傳回值  
 PDO::errorCode 會以字串形式傳回五字元的 SQLSTATE；如果沒有資料庫控制代碼的作業，則傳回 NULL。  
   
-## <a name="remarks"></a>備註  
-PDO_SQLSRV 驅動程式中的 pdo:: errorcode 會針對某些成功的作業傳回警告。 例如，在成功連接之後，pdo:: errorcode 傳回"01000"，指出 SQL_SUCCESS_WITH_INFO。  
+## <a name="remarks"></a>Remarks  
+PDO_SQLSRV 驅動程式中的 PDO::errorCode 會針對某些成功的作業傳回警告。 例如，在成功連線之後，PDO::errorCode 會傳回 "01000"，指出 SQL_SUCCESS_WITH_INFO。  
   
-PDO::errorCode 只會針對直接在資料庫連接上執行作業擷取錯誤碼。 如果您建立 PDOStatement 執行個體透過 pdo:: prepare 或 pdo:: query 和錯誤所產生的陳述式物件，pdo:: errorcode 將不會擷取該錯誤。 您必須呼叫 PDOStatement::errorCode，才能傳回在特定陳述式物件上執行之作業的錯誤碼。  
+PDO::errorCode 只會針對直接在資料庫連接上執行作業擷取錯誤碼。 如果您透過 PDO::prepare 或 PDO::query 建立 PDOStatement 執行個體，而陳述式物件產生錯誤，PDO::errorCode 不會擷取該錯誤。 您必須呼叫 PDOStatement::errorCode，才能傳回在特定陳述式物件上執行之作業的錯誤碼。  
   
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  
-在此範例中，資料行名稱的拼字錯誤 (`Cityx`而不是`City`)，導致發生錯誤，而後會予以報告。  
+在此範例中，資料行名稱的拼字錯誤 (`Cityx` 而不是 `City`)，因而導致錯誤並隨之進行報告。  
   
 ```  
 <?php  

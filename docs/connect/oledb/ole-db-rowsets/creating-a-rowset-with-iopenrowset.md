@@ -1,6 +1,6 @@
 ---
-title: 以 IOpenRowset 建立資料列集 |Microsoft 文件
-description: IOpenRowset 介面的 OLE DB 驅動程式的資料列集建立適用於 SQL Server
+title: 以 IOpenRowset 建立資料列集 |Microsoft Docs
+description: 建立以 IOpenRowset 介面的 OLE DB 驅動程式的資料列集，SQL server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,29 +19,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dd1b48ee3ba9439f5a1cddbfed07196480265b74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 53a9b42461fd9c7ba194af62f86d8670b8539ddf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689061"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105944"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>以 IOpenRowset 建立資料列集
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 的 OLE DB 驅動程式支援**iopenrowset:: Openrowset**方法有下列限制：  
+  OLE DB Driver for SQL Server 支援**iopenrowset:: Openrowset**方法具有下列限制：  
   
--   基底資料表或檢視表中必須指定資料庫識別碼 (DBID) 結構*Createtable*參數所指向。  
+-   *pTableID* 參數指向的資料庫識別碼 (DBID) 結構中必須指定基底資料表或檢視表。  
   
--   DBID *eKind*成員必須指示 DBKIND_NAME。  
+-   DBID *eKind* 成員必須指示 DBKIND_NAME。  
   
--   DBID *uName*成員必須將現有的基底資料表或檢視的名稱指定為 Unicode 字元字串。  
+-   DBID *uName* 成員必須將現有基底資料表或檢視表的名稱指定為 Unicode 字元字串。  
   
--   *PIndexID*參數**OpenRowset**必須是 NULL。  
+-   **OpenRowset** 的 *pIndexID* 參數必須為 NULL。  
   
- 在結果集的**iopenrowset:: Openrowset**包含單一資料列集。 包含單一資料列集的結果集可受到[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標。 資料指標支援可讓開發人員使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並行機制。  
+ **IOpenRowset::OpenRowset** 的結果集包含單一資料列集。 包含單一資料列集的結果集可受到 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料指標的支援。 資料指標支援可讓開發人員使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並行機制。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料列集](../../oledb/ole-db-rowsets/rowsets.md)  

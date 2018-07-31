@@ -1,5 +1,5 @@
 ---
-title: updateObject 方法 （java.lang.String，java.lang.Object） |Microsoft 文件
+title: updateObject 方法 (java.lang.String, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2dcf906b0514f5b52b2367aef0a276cf66982271
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850623"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982360"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject"></a>updateObject 方法 (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新指定的資料行與**物件**給定的資料行名稱的值。  
+  透過指定的資料行名稱，使用 **Object** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,16 +46,16 @@ public void updateObject(java.lang.String columnName,
   
  *obj*  
   
- **物件**值。  
+ **Object** 值。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateObject 方法 java.sql.ResultSet 介面中所指定此 updateObject 方法。  
+## <a name="remarks"></a>Remarks  
+ UpdateObject 方法 java.sql.ResultSet 介面中所指定這個 updateObject 方法。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateObject 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
+ [updateObject 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

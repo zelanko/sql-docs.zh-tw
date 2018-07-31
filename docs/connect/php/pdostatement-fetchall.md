@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchAll |Microsoft 文件
+title: PDOStatement::fetchAll |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639ff09c2c739e99b974c1b4df7d4963b7959e94
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308987"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983018"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,16 +34,16 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 ```  
   
 #### <a name="parameters"></a>參數  
-$*fetch_style*: （整數） 符號，用以指定資料列資料的格式。 如需值清單，請參閱 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 。 也允許 PDO::FETCH_COLUMN。 PDO::FETCH_BOTH 是預設值。  
+$*fetch_style*：(整數) 符號，用於指定資料列資料的格式。 如需值清單，請參閱 [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) 。 也允許 PDO::FETCH_COLUMN。 PDO::FETCH_BOTH 是預設值。  
   
-$*column_index*： 整數值，表示要傳回的資料行 $*fetch_style*是 pdo:: FETCH_COLUMN。 0 是預設值。  
+$*column_index*：整數值，代表 $*fetch_style* 為 PDO::FETCH_COLUMN 時所要傳回的資料行。 0 是預設值。  
   
-$*ctor_args*： 類別建構函式的參數陣列時 $*fetch_style* pdo:: FETCH_CLASS 或 pdo:: FETCH_OBJ。  
+$*ctor_args*：當 $*fetch_style* 為 PDO::FETCH_CLASS 或 PDO::FETCH_OBJ 時，類別建構函式的參數陣列。  
   
 ## <a name="return-value"></a>傳回值  
 結果集內剩餘的資料列陣列，如果方法呼叫失敗，則傳回 false。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

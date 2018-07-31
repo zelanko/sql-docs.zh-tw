@@ -1,6 +1,6 @@
 ---
-title: 設定大型資料 |Microsoft 文件
-description: 設定用於 SQL Server 的 OLE DB 驅動程式的大型資料
+title: 設定大型資料 |Microsoft Docs
+description: 設定使用 OLE DB Driver for SQL Server 的大型資料
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 27e50280df7bfe1bcbadcb76988d8962ebee1d77
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665928"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107194"
 ---
 # <a name="setting-large-data"></a>設定大型資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  使用 OLE DB 驅動程式的 SQL Server，您可以設定 BLOB 資料指標傳遞至取用者儲存物件。  
+  使用 OLE DB Driver for SQL Server，您可以將指標傳遞至取用者儲存物件設定 BLOB 資料。  
   
  取用者會建立包含資料的儲存物件，並將此儲存物件的指標傳遞給提供者。 接著，提供者會從取用者儲存物件讀取資料，並將其寫入到 BLOB 資料行。  
   
- 若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子。 取用者再呼叫**irowsetchange:: Setdata**或**irowsetchange:: Insertrow**使用繫結 BLOB 資料行的存取子方法。 它會在取用者的儲存物件上傳遞儲存介面的指標。  
+ 若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子。 然後，取用者會利用繫結 BLOB 資料行的存取子，呼叫 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 它會在取用者的儲存物件上傳遞儲存介面的指標。  
   
  本主題會參考可供下列函數使用的功能：  
   
@@ -47,19 +47,19 @@ ms.locfileid: "35665928"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>如何設定大型資料  
- 若要傳遞自己的儲存物件指標，取用者會建立存取子繫結 BLOB 資料行，然後呼叫值**irowsetchange:: Setdata**或**irowsetchange:: Insertrow**方法。 設定 BLOB 資料：  
+ 若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子，然後呼叫 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 設定 BLOB 資料：  
   
-1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 設定*dwFlag*至 STGM_READ，並將 DBOBJECT 結構的項目*iid*為 IID_ISequentialStream （要公開的介面） 的項目。  
+1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的 *dwFlag* 元素設定為 STGM_READ，並將 *iid* 元素設定為 IID_ISequentialStream (要公開的介面)。  
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 設定*wType*為 DBTYPE_IUNKNOWN，DBBINDING 結構中的項目和*pObject*以指向您所建立的 DBOBJECT 結構的項目。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 *wType* 元素設定為 DBTYPE_IUNKNOWN，並將 *pObject* 元素設定為指向您所建立的 DBOBJECT 結構。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   
-5.  呼叫**GetNextRows**到下一個資料列提取到資料列集。 呼叫**GetData**來讀取的資料列集中的資料。  
+5.  呼叫 **GetNextRows** 將下一個資料列擷取到資料列集中。 呼叫 **GetData** 來讀取資料列集中的資料。  
   
-6.  建立包含資料 （以及長度指標），儲存物件，然後呼叫**irowsetchange:: Setdata** (或**irowsetchange:: Insertrow**) 使用的繫結 BLOB 資料行，以設定資料的存取子。  
+6.  建立包含資料 (以及長度指標) 的儲存物件，然後使用繫結 BLOB 資料行來設定資料的存取子，呼叫 **IRowsetChange::SetData** (或 **IRowsetChange::InsertRow**)。  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何設定 BLOB 資料。 此範例會建立一個資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值：  
@@ -726,7 +726,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blob 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB 與 OLE 物件](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大型實值型別](../../oledb/features/using-large-value-types.md)  
   
   

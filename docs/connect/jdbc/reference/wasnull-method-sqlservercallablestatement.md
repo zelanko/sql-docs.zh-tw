@@ -1,5 +1,5 @@
 ---
-title: wasNull 方法 (SQLServerCallableStatement) |Microsoft 文件
+title: wasNull 方法 (SQLServerCallableStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ce699426d08cf783aee881a0af0a51dee0268551
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851623"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38021167"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>wasNull 方法 (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ public boolean wasNull()
 ```  
   
 ## <a name="return-value"></a>傳回值  
- **true**如果最後一個參數唯讀，則為 null。 否則為 **false**。  
+ 如果上一個讀取的參數為 null，則為 **true**。 否則為 **false**。  
   
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- WasNull 方法 java.sql.CallableStatement 介面中所指定此 wasNull 方法。  
+## <a name="remarks"></a>Remarks  
+ 此 wasNull 方法由 java.sql.CallableStatement 介面中的 wasNull 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQLServerCallableStatement 成員](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

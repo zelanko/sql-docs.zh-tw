@@ -1,6 +1,6 @@
 ---
-title: 執行預存程序使用 ODBC 呼叫並處理輸出 |Microsoft 文件
-description: 處理傳回碼和輸出參數使用 SQL Server 的 OLE DB 驅動程式
+title: 使用 ODBC CALL 及處理輸出執行預存程序 | Microsoft Docs
+description: 處理傳回碼和輸出參數使用 OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,22 +17,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 89e08882d06111e02057a95586c4f38c27b8db76
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 772ab1a29c99c2e88e9c076c8a9d58ea5123b444
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665558"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109860"
 ---
-# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>執行預存程序使用 ODBC 呼叫並處理輸出
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>使用 ODBC CALL 及處理輸出執行預存程序
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果命令傳回多個結果，輸出參數資料可用時**imultipleresults:: Getresult**傳回 DB_S_NORESULT 或是**IMultipleResults**介面完全釋放時何者先發生。  
+  [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 預存程序可以有整數傳回碼和輸出參數。 傳回碼和輸出參數會在來自伺服器的最後一個封包中傳送，因此要等到完全釋放資料列集之後才可供應用程式使用。 如果此命令傳回多個結果，則當 **IMultipleResults::GetResult** 傳回 DB_S_NORESULT 或是 **IMultipleResults** 介面完全釋放時 (以先發生者為準)，便可使用輸出參數資料。  
   
 > [!IMPORTANT]  
->  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，您應該先加密它們與[Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)。  
+>  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>若要處理傳回碼和輸出參數  
   
@@ -40,11 +40,11 @@ ms.locfileid: "35665558"
   
 2.  使用 DBBINDING 結構的陣列來建立一組繫結 (每一個參數標記各一個)。  
   
-3.  建立定義之參數存取子使用**iaccessor:: Createaccessor**方法。 **CreateAccessor**從一組繫結建立存取子。  
+3.  藉由建立定義之參數存取子**iaccessor:: Createaccessor**方法。 **CreateAccessor** 會從一組繫結建立存取子。  
   
 4.  填入 DBPARAMS 結構。  
   
-5.  呼叫**Execute**命令 （在此案例中的預存程序呼叫）。  
+5.  呼叫 **Execute** 命令 (在此情況下，為預存程序的呼叫)。  
   
 6.  處理資料列集，並使用釋放**irowset:: Release**方法。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "35665558"
 ## <a name="example"></a>範例  
  此範例示範如何處理資料列集、傳回碼和輸出參數。 並不會處理結果集。 IA64 不支援此範例。  
   
- 這個範例需要 AdventureWorks 範例資料庫，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server 範例和社群專案](http://go.microsoft.com/fwlink/?LinkID=85384)首頁下載。  
   
  執行第一個 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 程式碼清單，以便建立應用程式所使用的預存程序。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
  執行第三個 ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) 程式碼清單，以便刪除應用程式所使用的預存程序。  
   
@@ -362,6 +362,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [處理結果使用說明主題&#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [處理結果操作說明主題 &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

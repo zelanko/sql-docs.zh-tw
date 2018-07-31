@@ -1,6 +1,6 @@
 ---
-title: '使用 irow:: Open 和 ISequentialStream 提取 BLOB 資料 |Microsoft 文件'
-description: '使用 irow:: Open 和 ISequentialStream 提取 BLOB 資料'
+title: 使用 IRow::Open 和 ISequentialStream 擷取 BLOB 資料 | Microsoft Docs
+description: 使用 IRow::Open 和 ISequentialStream 擷取 BLOB 資料
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 25482d58c4cac6e6d396171c4a76ccbf30e74f74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 1121e3ae5e0e7ce4926f7908c3aeb9d8f7aa7887
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690081"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109770"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>使用 IRow::Open 和 ISequentialStream 提取 BLOB 資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **Irow:: Open**僅支援開啟 DBGUID_STREAM 和 DBGUID_NULL 類型的物件。  
+  **IRow::Open** 僅支援開啟 DBGUID_STREAM 和 DBGUID_NULL 類型的物件。  
   
- 下列函式使用**irow:: Open**和**ISequentialStream**來提取大型資料。  
+ 下列函數會使用 **IRow::Open** 和 **ISequentialStream** 來擷取大型資料。  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -84,9 +84,9 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- 大型資料可繫結或擷取使用**ISequentialStream**介面。 對於繫結的資料行，狀態旗標會藉由設定 DBSTATUS_S_TRUNCATED 指出資料是否遭到截斷。  
+ 大型資料可以使用 **ISequentialStream** 介面來繫結或擷取。 對於繫結的資料行，狀態旗標會藉由設定 DBSTATUS_S_TRUNCATED 指出資料是否遭到截斷。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用 IRow 提取 BLOB 資料](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
+ [使用 IRow 擷取 BLOB 資料](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

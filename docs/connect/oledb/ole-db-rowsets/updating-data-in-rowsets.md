@@ -1,6 +1,6 @@
 ---
-title: 更新資料列集中 |Microsoft 文件
-description: 更新資料集中的資料列集使用的 SQL Server 的 OLE DB 驅動程式
+title: 更新資料列集中 |Microsoft Docs
+description: 更新資料集中的資料列集使用 OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -21,23 +21,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 009c6023dc1905ac724287790c1b26a4bfcf87d3
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 20484bce71d0e776b4090f743c65e3a78d655a70
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689901"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108810"
 ---
 # <a name="updating-data-in-rowsets"></a>更新資料列集中的資料
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 更新 OLE DB 驅動程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]時取用者更新包含之資料的可修改資料列集資料。 當取用者要求支援時，會建立可修改的資料列集**IRowsetChange**或**IRowsetUpdate**介面。  
+  當取用者更新包含 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料的可修改資料列集時，OLE DB Driver for SQL Server 會更新該資料。 當取用者要求 **IRowsetChange** 或 **IRowsetUpdate** 介面的支援時，就會建立可修改的資料列集。  
   
- 所有 OLE DB 驅動程式供 SQL Server 可修改的資料列集使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標來支援資料列集。 資料列集屬性 DBPROP_LOCKMODE 會改變資料指標中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並行控制行為，並且決定可更新資料列集中的資料列集資料列擷取以及資料完整性錯誤產生的行為。  
+ 所有 OLE DB Driver for SQL Server 可修改的資料列集使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料指標來支援資料列集。 資料列集屬性 DBPROP_LOCKMODE 會改變資料指標中的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 並行控制行為，並且決定可更新資料列集中的資料列集資料列擷取以及資料完整性錯誤產生的行為。  
   
- SQL Server 的 OLE DB 驅動程式支援資料列同步處理之前或之後更新。  
+ OLE DB Driver for SQL Server 支援更新前後的資料列同步處理。  
   
 > [!NOTE]  
 >  IRowChange::SetColumns 可用來設定資料列物件的一或多個具名資料行的值。  
@@ -46,7 +46,7 @@ ms.locfileid: "35689901"
   
 -   [更新 SQL Server 資料指標中的資料](../../oledb/ole-db-rowsets/updating-data-in-sql-server-cursors.md)  
   
--   [重新同步處理的資料列](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
+-   [重新同步處理資料列](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
 ## <a name="see-also"></a>另請參閱  
  [資料列集](../../oledb/ole-db-rowsets/rowsets.md)  

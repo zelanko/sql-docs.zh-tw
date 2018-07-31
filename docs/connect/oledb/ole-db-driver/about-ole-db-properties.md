@@ -1,5 +1,5 @@
 ---
-title: 關於 OLE DB 屬性 |Microsoft 文件
+title: 關於 OLE DB 屬性 |Microsoft Docs
 description: 關於 OLE DB 屬性
 ms.custom: ''
 ms.date: 06/14/2018
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 93bc309da576917777f0eddea01857ceb9702075
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a424615a54a5917d52f4144b995589345d6cb534
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665188"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105974"
 ---
 # <a name="about-ole-db-properties"></a>關於 OLE DB 屬性
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -35,7 +35,7 @@ ms.locfileid: "35665188"
   
  每個屬性 (Property) 都有一個值、類型、描述和讀取/寫入屬性 (Attribute)，而且資料列集屬性 (Property) 還會包含一個指標，表示它是否能夠以逐資料行的方式套用。  
   
- 屬性是由 GUID 以及代表屬性識別碼的整數所識別。 屬性集是共用相同 GUID 之所有屬性的集合。 除了預先定義的 OLE DB 屬性集，SQL Server OLE DB 驅動程式會在其中實作提供者特有的屬性集和屬性。 每個屬性都屬於一或多個屬性群組。 屬性群組是套用至特定物件之所有屬性的群組。 某些屬性群組包括初始化屬性群組、資料來源屬性群組、工作階段屬性群組、資料列集屬性群組、資料表屬性群組和資料行屬性群組。 其中每個屬性群組都具有屬性。  
+ 屬性是由 GUID 以及代表屬性識別碼的整數所識別。 屬性集是共用相同 GUID 之所有屬性的集合。 除了預先定義的 OLE DB 屬性集以外，OLE DB Driver for SQL Server 會實作提供者特定的屬性集和其中的屬性。 每個屬性都屬於一或多個屬性群組。 屬性群組是套用至特定物件之所有屬性的群組。 某些屬性群組包括初始化屬性群組、資料來源屬性群組、工作階段屬性群組、資料列集屬性群組、資料表屬性群組和資料行屬性群組。 其中每個屬性群組都具有屬性。  
   
  設定屬性值包括：  
   
@@ -54,7 +54,7 @@ ms.locfileid: "35665188"
 7.  呼叫方法來設定屬性並且傳遞 DBPROPSET 結構的計數和陣列。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 應用程式建立 OLE DB 驅動程式](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
+ [建立 OLE DB Driver for SQL Server 應用程式](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [屬性 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=112207)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: '使用 irow:: Getcolumns (OLE DB) 提取資料行 |Microsoft 文件'
-description: '使用 irow:: Getcolumns (OLE DB) 提取資料行'
+title: '使用 irow:: Getcolumns (OLE DB) 提取資料行 |Microsoft Docs'
+description: 使用 IRow::GetColumns 擷取資料行 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,25 +16,25 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 15d2531eb06f742644c6e7cf207ca45c8ca8dc8f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 8340996f96d2307a980797e93073001768dbc98f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666328"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108880"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>使用 IRow::GetColumns 提取資料行 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow**介面允許直接存取單一資料列的資料行結果集內。 因此， **IRow**是從含一個資料列的結果集擷取資料行的有效方式。  
+  **IRow** 介面允許直接存取結果集中單一資料列的資料行。 因此，**IRow** 是從包含一個資料列之結果集擷取資料行的有效方式。  
   
- 程式碼範例可用於擷取使用單一資料列，顯示如何**IRow**。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會示範：  
+ 系統會提供一個程式碼範例，顯示如何使用 **IRow** 擷取單一資料列。 在此範例中，系統會從資料列一次擷取一個資料行。 此範例會示範：  
   
 -   如何提取資料行的群組 (依序)。  
   
--   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果**pData** unll 和**cbMaxLen**為 0，呼叫**IRow**-**> GetColumns()** 傳回實際的資料行長度。 在此情況下， **IRow]-> [GetColumns()** 可以再次呼叫相同的資料行，擷取實際的資料上。  
+-   如何存取兩次資料行。 第一次會先取得實際的資料行寬度，然後再存取實際的資料。 在 DBCOLUMNACCESS 結構中，如果 **pData** 為 NULL，而 **cbMaxLen** 為 0，**IRow**-**>GetColumns()** 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 **IRow->GetColumns()** 來擷取實際的資料。  
   
 > [!IMPORTANT]  
 >  盡可能使用 Windows 驗證。 如果無法使用 Windows 驗證，請提示使用者在執行階段輸入認證。 請避免將認證儲存在檔案中。 如果您必須保存認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。  
@@ -58,11 +58,11 @@ ms.locfileid: "35666328"
   
  在 DBCOLUMNACCESS 結構中，如果 pData 為 NULL，而 cbMaxLen 為 0，IRow->GetColumns 的呼叫僅會傳回實際的資料行長度。 在此情況下，您可以在相同的資料行上再次呼叫 IRow->GetColumns 來擷取實際的資料。 IA64 不支援此範例。  
   
- 這個範例需要 AdventureWorks 範例資料庫，您可以從下載[Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384)首頁。  
+ 此範例需要 AdventureWorks 範例資料庫，您可以從 [Microsoft SQL Server 範例和社群專案](http://go.microsoft.com/fwlink/?LinkID=85384)首頁下載。  
   
  第一個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會建立此範例所使用的資料表。  
   
- 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，變更連接字串從 」 至 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 使用 ole32.lib oleaut32.lib 編譯並執行第二個 (C++) 程式碼清單。 這個應用程式會連接到電腦的預設 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體。 在某些 Windows 作業系統上，您必須將 (localhost) 或 (local) 變更為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 若要連接到具名執行個體，請將連接字串從 L"(local)" 變更為 L"(local)\\\name"，其中 name 是具名執行個體。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express 會安裝至具名執行個體。 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
  第三個 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 程式碼清單會刪除此範例所使用的資料表。  
   

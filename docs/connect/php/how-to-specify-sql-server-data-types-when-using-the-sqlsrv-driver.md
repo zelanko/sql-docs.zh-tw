@@ -1,5 +1,5 @@
 ---
-title: 如何： 使用 SQLSRV 驅動程式時，指定 SQL Server 資料類型 |Microsoft 文件
+title: 如何：使用 SQLSRV 驅動程式時指定 SQL Server 資料類型 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308087"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032972"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式指定 SQL Server 資料類型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "35308087"
 下列步驟概述如何在將資料傳送至伺服器時指定 SQL Server 資料類型：  
   
 > [!NOTE]  
-> 如果指定 SQL Server 資料類型，則會使用預設類型。 如需預設 SQL Server 資料類型的相關資訊，請參閱 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)。  
+> 如果未指定 SQL Server 資料類型，則會使用預設類型。 如需預設 SQL Server 資料類型的相關資訊，請參閱 [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md)。  
   
 1.  定義會插入或更新資料的 Transact-SQL 查詢。 在查詢中，請使用問號 (?) 做為參數值的預留位置。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "35308087"
   
 3.  建構在準備或執行查詢時要使用的 *$params* 陣列。 請注意， *$params* 陣列的每個元素，在您指定 SQL Server 資料類型時也必須是陣列。  
   
-4.  指定所需的 SQL Server 資料類型，使用適當的**SQLSRV_SQLTYPE_\*** 常數中的每個子陣列的第四個參數為 *$params*陣列。 如需完整的清單**SQLSRV_SQLTYPE_\*** 常數，請參閱 Sqltype 」 一節的[常數&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
+4.  使用適當的 **SQLSRV_SQLTYPE_\*** 常數作為 *$params* 陣列中每個子陣列的第四個參數，以指定所需的 SQL Server 資料類型。 如需 **SQLSRV_SQLTYPE_\*** 常數的完整清單，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md) 的＜SQLTYPE＞一節。 例如，在下方的程式碼中， *$changeDate*、 *$rate*和 *$payFrequency* 分別指定為 **$params**陣列中的 SQL Server 類型 **datetime**、 **money** 和 *tinyint* 。 由於未指定 *$employeeId* 的 SQL Server 類型，而且它初始化為整數，因此會使用預設的 SQL Server 類型 **integer** 。  
   
     ```  
     $employeeId = 5;  
@@ -58,9 +58,9 @@ ms.locfileid: "35308087"
     ```  
   
 ## <a name="example"></a>範例  
-下列範例會將資料插入*HumanResources.EmployeePayHistory* AdventureWorks 資料庫的資料表。 對於 *$changeDate*、 *$rate*和 *$payFrequency* 參數，會指定 SQL Server 類型。 對於 *$employeeId* 參數會使用預設 SQL Server 類型。 若要確認資料已成功插入，可以擷取和顯示相同的資料。  
+下列範例會在 AdventureWorks 資料庫的 *HumanResources.EmployeePayHistory* 資料表中插入資料。 對於 *$changeDate*、 *$rate*和 *$payFrequency* 參數，會指定 SQL Server 類型。 對於 *$employeeId* 參數會使用預設 SQL Server 類型。 若要確認資料已成功插入，可以擷取和顯示相同的資料。  
   
-這個範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

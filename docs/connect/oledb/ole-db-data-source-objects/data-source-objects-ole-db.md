@@ -1,5 +1,5 @@
 ---
-title: 資料來源物件 (OLE DB) |Microsoft 文件
+title: 資料來源物件 (OLE DB) |Microsoft Docs
 description: 資料來源物件 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,27 +22,27 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a69fbb260c594ad095872049b06b1f7084bfc29b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 58007040bc4f96749172644b229dba4769929d66
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665648"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106074"
 ---
 # <a name="data-source-objects-ole-db"></a>資料來源物件 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB 驅動程式適用於 SQL Server 會使用資料來源這個詞用來建立資料存放區的連結，例如 OLE DB 介面的集合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 建立資料來源物件的提供者的執行個體是 SQL Server 取用者的 OLE DB 驅動程式第一項工作。  
+  OLE DB Driver for SQL Server 會針對用於建立資料存放區連結的 OLE DB 介面集合，使用資料來源這個詞；例如，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 建立提供者的資料來源物件的執行個體是 OLE DB Driver for SQL Server 取用者的第一個工作。  
   
- 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 SQL Server OLE DB 驅動程式的 CLSID 為 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 會解析為正確的符號 progid 您參考 msoledbsql.h 檔案中)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance**函數來製造資料來源物件的執行個體。  
+ 每個 OLE DB 提供者都會為自己宣告一個類別識別碼 (CLSID)。 OLE DB driver for SQL Server 的 CLSID 為 C/c + + GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID 會解析為正確的符號 progid 您參考 msoledbsql.h 檔案中)。 透過 CLSID，取用者會使用 OLE **CoCreateInstance** 函式來製造資料來源物件的執行個體。  
   
- OLE DB 驅動程式的 SQL Server 是在同處理序伺服器。 SQL Server 物件的執行個體的 OLE DB 驅動程式會建立使用 CLSCTX_INPROC_SERVER 巨集指示可執行檔的內容。  
+ OLE DB Driver for SQL Server 是在同處理序伺服器。 OLE DB Driver for SQL Server 物件的執行個體會使用 CLSCTX_INPROC_SERVER 巨集來建立，以便指示可執行的內容。  
   
- SQL Server 資料來源物件，OLE DB 驅動程式會公開允許取用者連接到現有的 OLE DB 初始化介面[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。  
+ OLE DB Driver for SQL Server 資料來源物件會公開允許取用者連線到現有 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的 OLE DB 初始化介面。  
   
- 透過適用於 SQL Server 的 OLE DB 驅動程式的每個連接都會自動設定這些選項：  
+ 每個連接都會透過 OLE DB Driver for SQL Server 會自動設定這些選項：  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35665648"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- 此範例會使用類別識別碼巨集來建立 OLE DB 驅動程式，SQL Server 資料來源物件，並且取得參考其**IDBInitialize**介面。  
+ 此範例會使用類別識別碼巨集來建立 OLE DB Driver for SQL Server 資料來源物件，並取得其 **IDBInitialize** 介面的參考。  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -77,13 +77,13 @@ else
 }  
 ```  
   
- 成功建立 SQL Server 資料來源物件 OLE DB 驅動程式的執行個體，取用者應用程式可以透過初始化資料來源並建立工作階段來繼續。 OLE DB 工作階段會顯示允許資料存取與操作的介面。  
+ 成功建立 OLE DB Driver for SQL Server 資料來源物件的執行個體之後，取用者應用程式就可以透過初始化資料來源並建立工作階段來繼續。 OLE DB 工作階段會顯示允許資料存取與操作的介面。  
   
- SQL Server OLE DB 驅動程式會建立指定的執行個體其第一個連接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]成功的資料來源初始化的一部分。 只要在任何資料來源初始化介面上，或直到維護參考維持連線**Uninitialize**方法呼叫。  
+ OLE DB Driver for SQL Server 會在成功初始化資料來源後，先建立指定之 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的連線。 只要在任何資料來源初始化介面上維持參考，或是在呼叫 **IDBInitialize::Uninitialize** 方法前，都會維持連線。  
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [資料來源屬性&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [資料來源屬性 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [資料來源資訊屬性](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   

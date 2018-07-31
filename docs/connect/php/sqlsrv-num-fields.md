@@ -1,5 +1,5 @@
 ---
-title: sqlsrv_num_fields | Microsoft Docs
+title: sqlsrv_num_fields |Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2017
 ms.prod: sql
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d533d9293641be5d40db2306f035827bf83b8722
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309177"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006861"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-擷取作用中結果集內的欄位數目。 此函式可以呼叫任何已備妥的陳述式之前, 或之後執行。  
+擷取作用中結果集內的欄位數目。 在任何已備妥的陳述式之前, 或之後執行，可以呼叫此函式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -46,9 +46,9 @@ sqlsrv_num_fields( resource $stmt)
 代表作用中結果集內之欄位數目的整數值。 如果發生錯誤，將會傳回布林值 **false** 。  
   
 ## <a name="example"></a>範例  
-下列範例會執行查詢，擷取所有欄位中的前三個資料列*HumanResources.Department* AdventureWorks 資料庫的資料表。 **Sqlsrv_num_fields**函式會判斷結果集中的欄位數目。 這可讓資料可藉由逐一查看每個傳回資料列中的欄位來顯示。  
+下列範例會執行查詢，以從 Adventureworks 資料庫的 *HumanResources.Department* 資料表中擷取前三個資料列的所有欄位。 **sqlsrv_num_fields** 函式會判斷結果集內的欄位數目。 這可讓資料可藉由逐一查看每個傳回資料列中的欄位來顯示。  
   
-此範例假設 SQL Server 和[AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)資料庫安裝在本機電腦上。 從命令列執行範例時，所有輸出都會寫入至主控台。  
+此範例假設本機電腦上已安裝 SQL Server 和 [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 資料庫。 從命令列執行範例時，所有輸出都會寫入至主控台。  
   
 ```  
 <?php  

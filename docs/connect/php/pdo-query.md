@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: query |Microsoft 文件'
+title: 'Pdo:: query |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308267"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979742"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>參數  
 *$statement*：您要執行的 SQL 陳述式。  
   
-*$fetch_style*： 有關如何執行查詢的選擇性指示。 如需詳細資訊，請參閱＜備註＞一節。 $*fetch_style* pdo:: query 會覆寫以 $*fetch_style* pdo:: fetch 中。  
+*$fetch_style*：有關如何執行查詢的選擇性指示。 如需詳細資訊，請參閱＜備註＞一節。可以使用 PDO::fetch 中的 $*fetch_style* 覆寫 PDO::query 中的  $*fetch_style*。  
   
 ## <a name="return-value"></a>傳回值  
 如果呼叫成功，PDO::query 會傳回 PDOStatement 物件。 如果呼叫失敗，PDO::query 會擲回 PDOException 物件或傳回 false (視 PDO::ATTR_ERRMODE 的設定而定)。  
@@ -44,17 +44,17 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 ## <a name="exceptions"></a>例外狀況  
 PDOException。  
   
-## <a name="remarks"></a>備註  
-使用 pdo:: query 執行的查詢可以執行已備妥的陳述式或直接根據 pdo:: SQLSRV_ATTR_DIRECT_QUERY 的設定。 如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
+## <a name="remarks"></a>Remarks  
+使用 PDO::query 執行的查詢可以執行已備妥的陳述式或直接執行 (視 PDO::SQLSRV_ATTR_DIRECT_QUERY 的設定而定)。 如需詳細資訊，請參閱 [PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)。  
   
-Pdo:: SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 pdo:: exec; 行為如需詳細資訊，請參閱[pdo:: setattribute](../../connect/php/pdo-setattribute.md)。  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT 也會影響 PDO::exec 的行為；如需詳細資訊，請參閱 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)。  
   
-您可以指定下列選項為 $*fetch_style*。  
+您可以為 $*fetch_style* 指定下列選項。  
   
-|style|描述|  
+|style|Description|  
 |---------|---------------|  
-|Pdo:: FETCH_COLUMN， *num*|指定的資料行中資料的查詢。 資料表中的第一個資料行是資料行 0。|  
-|Pdo:: FETCH_CLASS，'*classname*'，陣列 (*引數清單*)|建立類別執行個體並將資料行名稱指派給類別中的屬性。 如果類別建構函式採用一或多個參數，您也可以傳遞 *arglist*。|  
+|PDO::FETCH_COLUMN, *num*|指定的資料行中資料的查詢。 資料表中的第一個資料行是資料行 0。|  
+|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|建立類別執行個體並將資料行名稱指派給類別中的屬性。 如果類別建構函式採用一或多個參數，您也可以傳遞 *arglist*。|  
 |Pdo:: FETCH_CLASS，'*classname*'|將資料行名稱指派給現有類別中的屬性。|  
   
 呼叫 PDOStatement::closeCursor，以便於再次呼叫 PDO::query 之前，釋放與 PDOStatement 物件相關聯的資料庫資源。  

@@ -1,5 +1,5 @@
 ---
-title: 'Irowsetfastload:: Commit (OLE DB) |Microsoft 文件'
+title: 'Irowsetfastload:: Commit (OLE DB) |Microsoft Docs'
 description: IRowsetFastLoad::Commit (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8f4baa2339105e8dac65c29e5efc35663b7c4b8d
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3e6b27907770d54ef8ac0ef0e664c1b310c85bfb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689851"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109710"
 ---
 # <a name="irowsetfastloadcommit-ole-db"></a>IRowsetFastLoad::Commit (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  標示已插入之資料列批次的結尾，並將資料列寫入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。 如需範例，請參閱[大量資料使用 IRowsetFastLoad 大量複製&#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)和[將 BLOB 資料傳送至 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
+  標示已插入之資料列批次的結尾，並將資料列寫入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表。 如需範例，請參閱[大量複製資料檔案 _ 使用 IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)並[將 BLOB 資料傳送到 SQL SERVER 使用 IROWSETFASTLOAD 和 ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -54,16 +54,16 @@ HRESULT Commit(
  發生了提供者特定的錯誤。 請從提供者中擷取特定錯誤文字的錯誤資訊。  
   
  E_UNEXPECTED  
- 在先前被驗證為無效的大量複製資料列集上呼叫此方法**irowsetfastload:: Commit**方法。  
+ 這個方法是在先前已藉由 **IRowsetFastLoad::Commit** 方法設為無效之大量複製資料列集上呼叫。  
   
-## <a name="remarks"></a>備註  
- SQL Server 大量複製資料列集 OLE DB 驅動程式的行為如同延遲更新模式的資料列集。 因為使用者會透過資料列集的資料列資料，插入的資料列會被視為相同的方式暫止插入資料列集支援**IRowsetUpdate**。  
+## <a name="remarks"></a>Remarks  
+ OLE DB Driver for SQL Server 大量複製資料列集行為會如同延遲更新模式的資料列集。 因為使用者會透過資料列集插入資料列的資料，所以插入的資料列會以相同的方式被視為支援 **IRowsetUpdate** 之資料列集上的暫止插入。  
   
- 取用者必須呼叫**認可**方法寫入插入的資料列大量複製資料列集上[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料表中的相同方式**irowsetupdate:: Update**方法用來提交暫止的資料列SQL Server 執行個體。  
+ 取用者必須針對大量複製資料列集呼叫 **Commit** 方法，才能將插入的資料列寫入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料表中，其方式就如同使用 **IRowsetUpdate::Update** 方法，將暫止資料列提交給 SQL Server 執行個體。  
   
- 如果取用者釋放大量複製資料列集，而不會呼叫其參考**認可**方法，所有插入先前並未寫入的資料列都會遺失。  
+ 如果取用者釋放大量複製資料列集的參考，而沒有呼叫 **Commit** 方法，所有先前並未寫入的已插入資料列都會遺失。  
   
- 取用者可以藉由呼叫批次處理插入的資料列**認可**方法*fDone*引數設定為 FALSE。 當*fDone*是設為 TRUE，資料列集就會變成無效。 無效的大量複製的資料列集僅支援**ISupportErrorInfo**介面和**irowsetfastload:: Release**方法。  
+ 取用者可以呼叫 **Commit** 方法，並將 *fDone* 引數設定為 FALSE，藉以批次處理插入的資料列。 當 *fDone* 設定為 TRUE 時，此資料列集就會成為無效。 無效的大量複製資料列集僅支援 **ISupportErrorInfo** 介面和 **IRowsetFastLoad::Release** 方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  

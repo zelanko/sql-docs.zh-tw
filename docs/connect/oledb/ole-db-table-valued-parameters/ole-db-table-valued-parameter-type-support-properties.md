@@ -1,6 +1,6 @@
 ---
-title: OLE DB 資料表值參數類型支援 （屬性） |Microsoft 文件
-description: OLE DB Table-Valued 參數類型支援 （屬性）
+title: OLE DB 資料表值參數類型支援 (屬性) | Microsoft Docs
+description: OLE DB 資料表值參數類型支援 (屬性)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ea197e5411cb867221814817041f3fd6df7c8005
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 67d27b1b2441b481a696170013ece166bc58d778
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689571"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108760"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB 資料表值參數類型支援 (屬性)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   本主題提供與資料表值參數資料列集物件相關聯之 OLE DB 屬性和屬性集的相關資訊。  
   
 ## <a name="properties"></a>屬性  
- 以下是透過 IRowsetInfo::GetPropeties 方法在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，嘗試設定任何透過 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 屬性的方法為非預設值會導致錯誤，而且會建立任何物件。  
+ 以下為透過 IRowsetInfo::GetPropeties 方法，在資料表值參數資料列集物件上公開的屬性清單。 請注意，所有資料表值參數資料列集屬性都是唯讀的。 因此，您嘗試將任何設定的屬性，透過 iopenrowset:: Openrowset 或 ITableDefinitionWithConstraints::CreateTableWithConstraints 設為非預設值的方法會導致錯誤，而且會建立任何物件。  
   
  沒有在資料表值參數資料列集物件中實作的屬性不會列在此處。 如需屬性的完整清單，請參閱 OLE DB 文件集中的＜Windows Data Access Components＞。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "35689571"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注意： 資料表值參數資料列集物件支援的 IRowsetChange 介面。<br /><br /> 使用 DBPROP_IRowsetChange 等於 VARIANT_TRUE 建立的資料列集會表現立即更新模式行為。<br /><br /> 不過，如果為 ISequentialStream 物件繫結 BLOB 資料行，取用者必須將它們保留資料表值參數資料列集物件的存留期。|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> 注意：資料表值參數資料列集物件支援 IRowsetChange 介面。<br /><br /> 使用 DBPROP_IRowsetChange 等於 VARIANT_TRUE 建立的資料列集會表現立即更新模式行為。<br /><br /> 不過，如果 BLOB 資料行當做 ISequentialStream 物件繫結，取用者應該在資料表值參數資料列集物件的存留期予以保留。|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -76,20 +76,20 @@ ms.locfileid: "35689571"
 |DBPROP_STRONGIDENTITY|VARIANT_TRUE|  
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
-|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
+|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &AMP;#124; DBPROPVAL_UP_DELETE &AMP;#124; DBPROPVAL_UP_INSERT|  
   
 ## <a name="property-sets"></a>屬性集  
  下列屬性集支援資料表值參數。  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- 這個屬性是由取用者在必要時，利用 ITableDefinitionWithConstraints::CreateTableWithConstraints 透過 DBCOLUMNDESC 結構的每一個資料行建立資料表值參數資料列集物件。  
+ 取用者在利用 ITableDefinitionWithConstraints::CreateTableWithConstraints 透過 DBCOLUMNDESC 結構的每一個資料行建立資料表值參數資料列集物件，如有需要時使用這個屬性。  
   
 |屬性識別碼|屬性值|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W：讀取/寫入<br /><br /> 預設值：VARIANT_FALSE<br /><br /> 類型：VT_BOOL<br /><br /> 描述：設定為 VARIANT_TRUE 時，表示資料行為計算資料行。 VARIANT_FALSE 則表示它不是計算資料行。|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- 這些屬性由取用者讀取時探索 ISSCommandWithParamters::GetParameterProperties 的呼叫中的資料表值參數類型資訊，設定有關資料表值參數的特定屬性時設定取用者透過 isscommandwithparameters::。  
+ 這些屬性會探索 ISSCommandWithParamters::GetParameterProperties 的呼叫中的資料表值參數類型資訊時，由取用者和設定資料表值參數相關的特定屬性時的消費者所設定透過 isscommandwithparameters:: Setparameterproperties。  
   
  下表提供這些屬性的詳細描述。  
   
@@ -103,6 +103,6 @@ ms.locfileid: "35689571"
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB 資料表值參數類型支援](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [您可以使用資料表值參數&#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [使用資料表值參數 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

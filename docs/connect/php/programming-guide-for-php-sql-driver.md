@@ -1,5 +1,5 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server 的程式設計指南 |Microsoft 文件
+title: Microsoft Drivers for PHP for SQL Server 程式設計指南 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a02f2b890e25a332a6d0ed228a20d78035a7dedc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308907"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992790"
 ---
-# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>程式程式設計指南 Microsoft Drivers for PHP，適用於 SQL Server
+# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>適用於 SQL Server 程式設計適用於 PHP 的 Microsoft 驅動程式的指南
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本節包含的主題可協助您開發使用 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]的應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |---------|---------------|  
 |[連線到伺服器](../../connect/php/connecting-to-the-server.md)|說明用來連接到 SQL Server 的選項和程序。|  
 |[比較執行函式](../../connect/php/comparing-execution-functions.md)|藉由查看每個函數不同的使用案例，來比較用以執行查詢的函數。 具體來說，這份文件會比較執行單一查詢和執行備妥的查詢多次有何不同。|  
@@ -38,11 +38,11 @@ ms.locfileid: "35308907"
 |[轉換資料類型](../../connect/php/converting-data-types.md)|說明如何指定資料類型，並提供預設資料類型的詳細資料。|  
 |[處理錯誤和警告](../../connect/php/handling-errors-and-warnings.md)|說明如何處理錯誤和警告。|  
 |[記錄活動](../../connect/php/logging-activity.md)|提供關於記錄錯誤和警告的資訊。|  
-|[Using Always Encrypted with Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|提供的 PHP 驅動程式搭配使用一律加密 」 功能的相關資訊。|  
+|[搭配使用 Always Encrypted Microsoft Drivers for PHP for SQL Server](../../connect/php/using-always-encrypted-php-drivers.md)|提供的 PHP 驅動程式搭配使用 Always Encrypted 功能的相關資訊。|  
 |[安全性考量的 Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|說明開發、部署和執行應用程式的安全性考量。|  
   
 ## <a name="see-also"></a>另請參閱  
-[Microsoft Drivers for PHP for SQL Server 的概觀](../../connect/php/overview-of-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 概觀](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [開始使用 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

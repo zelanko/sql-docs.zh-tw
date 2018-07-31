@@ -1,5 +1,5 @@
 ---
-title: 結構描述資料列集支援 (OLE DB) |Microsoft 文件
+title: 結構描述資料列集支援 (OLE DB) |Microsoft Docs
 description: 結構描述資料列集支援 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -20,30 +20,30 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1f78cbad6d328ba3e9a95a97a1eac4e3320b08de
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: a90779203502c8df145a1b25f628a7657d065edb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612073"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107074"
 ---
 # <a name="schema-rowset-support-ole-db"></a>結構描述資料列集支援 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server OLE DB 驅動程式也支援從連結伺服器傳回結構描述資訊時處理[!INCLUDE[tsql](../../../includes/tsql-md.md)]分散式查詢。  
+  處理 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 分散式查詢時，OLE DB Driver for SQL Server 也支援從連結伺服器傳回結構描述資訊。  
   
 > [!NOTE]  
->  雖然[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]同義字不會由 OLE DB 驅動程式傳回適用於 SQL Server 支援同義字，中繼資料。  
+>  雖然[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]同義字不會傳回 OLE DB Driver for SQL Server 支援同義字，中繼資料。  
   
- 下表列出結構描述資料列集和 SQL Server 的 OLE DB 驅動程式支援之限制資料行。  
+ 下表列出 OLE DB Driver for SQL Server 所支援的結構描述資料列集與限制資料行。  
   
 |結構描述資料列集|限制資料行|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 下列其他的資料行為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬的：<br /><br /> COLUMN_LCID，這是定序的地區設定識別碼。 COLUMN_LCID 與 Windows LCID 的值相同。<br /><br /> COLUMN_COMPFLAGS 會定義定序所支援的比較。 資料格式和 DBPROB_FINDCOMPAREOPS 相同。<br /><br /> COLUMN_SORTID，這是[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]排序樣式定序。<br /><br /> COLUMN_TDSCOLLATION，這是資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定序。<br /><br /> IS_COMPUTED，如果資料行為計算資料行，這是 VARIANT_TRUE，否則為 VARIANT_FALSE。|  
+|DBSCHEMA_COLUMNS|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> 下列其他的資料行為 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 專屬的：<br /><br /> COLUMN_LCID，這是定序的地區設定識別碼。 COLUMN_LCID 與 Windows LCID 的值相同。<br /><br /> COLUMN_COMPFLAGS 會定義定序所支援的比較。 資料格式和 DBPROB_FINDCOMPAREOPS 相同。<br /><br /> COLUMN_SORTID，這是定序的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 排序樣式。<br /><br /> COLUMN_TDSCOLLATION，這是資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 定序。<br /><br /> IS_COMPUTED，如果資料行為計算資料行，這是 VARIANT_TRUE，否則為 VARIANT_FALSE。|  
 |DBSCHEMA_FOREIGN_KEYS|支援所有的限制。<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|支援限制 1、2、3 及 5。<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -58,12 +58,12 @@ ms.locfileid: "35612073"
 |DBSCHEMA_TABLES_INFO|支援所有的限制。<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
   
 ## <a name="in-this-section"></a>本節內容  
- [分散式查詢支援在結構描述資料列集](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
+ [結構描述資料列集中的分散式查詢支援](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
  [LINKEDSERVERS 資料列集&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server 程式設計的 OLE DB 驅動程式](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
+ [OLE DB Driver for SQL Server 程式設計](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [使用使用者定義型別](../../oledb/features/using-user-defined-types.md)  
   
   

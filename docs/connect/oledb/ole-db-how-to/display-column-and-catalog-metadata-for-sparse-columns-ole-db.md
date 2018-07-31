@@ -1,6 +1,6 @@
 ---
-title: 顯示資料行與疏鬆資料行 (OLE DB) 的目錄中繼資料 |Microsoft 文件
-description: 顯示資料行和目錄的中繼資料，對於疏鬆資料行 (OLE DB)
+title: 顯示資料行與疏鬆資料行的目錄中繼資料 (OLE DB) | Microsoft Docs
+description: 顯示資料行與疏鬆資料行的目錄中繼資料 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,24 +14,24 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7fff85eaf61d32f2e064a827e53349bd832e411c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665598"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108990"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>顯示資料行與疏鬆資料行的目錄中繼資料 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   此範例會建立包含三個資料行的資料表：疏鬆資料行、非疏鬆資料行的資料行，以及資料行集資料行。 接著，範例會顯示 OLE DB 旗標以顯示非疏鬆資料行和資料行集資料行的資料行和目錄中繼資料。  
   
- 此範例適用於 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本。 如需有關疏鬆資料行的詳細資訊，請參閱[OLE DB 驅動程式的 SQL Server 中的疏鬆資料行支援](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。  
+ 此範例適用於 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本。 如需有關疏鬆資料行的詳細資訊，請參閱 < [OLE DB Driver for SQL Server 中的疏鬆資料行支援](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)。  
   
 ## <a name="example"></a>範例  
- 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。  
+ 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。  
   
 ```  
 #include <stddef.h>  

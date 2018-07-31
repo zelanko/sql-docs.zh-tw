@@ -1,5 +1,5 @@
 ---
-title: updateDouble 方法 (int，double) |Microsoft 文件
+title: updateDouble 方法 (int，double) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d92dabbb9dda1091f3fc1c395da5183653989a01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849573"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995950"
 ---
 # <a name="updatedouble-method-int-double"></a>updateDouble 方法 (int, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新指定的資料行與**double**給定的資料行索引的值。  
+  透過指定的資料行索引，使用 **double** 值來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -40,7 +40,7 @@ public void updateDouble(int index,
 ```  
   
 #### <a name="parameters"></a>參數  
- *索引*  
+ *index*  
   
  指出資料行索引的 **int**。  
   
@@ -51,11 +51,11 @@ public void updateDouble(int index,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateDouble 方法 java.sql.ResultSet 介面中所指定此 updateDouble 方法。  
+## <a name="remarks"></a>Remarks  
+ 這個 updateDouble 方法是由 java.sql.ResultSet 介面中的 updateDouble 方法指定。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateDouble 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
+ [updateDouble 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -1,6 +1,6 @@
 ---
-title: SQL Server (OLE DB) 參考的 OLE DB 驅動程式 |Microsoft 文件
-description: OLE DB 驅動程式供 SQL Server (OLE DB) 參考
+title: OLE DB Driver for SQL Server (OLE DB) 參考 |Microsoft Docs
+description: OLE DB Driver for SQL Server (OLE DB) 參考
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4877a5a4a3965b65bd9a61f33303dabff34af4e6
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: feb8c904963b0974a736b6524f11f5551aa02005
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690161"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105804"
 ---
-# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>SQL Server (OLE DB) 介面的 OLE DB 驅動程式
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>OLE DB Driver for SQL Server (OLE DB) 介面
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server OLE DB 驅動程式會將介面公開給想存取一或多個執行的電腦上的資料取用者[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。 SQL Server OLE DB 驅動程式是 OLE DB 版本 2.0 相容的提供者。  
+  OLE DB Driver for SQL Server 會將介面公開給想要在執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 之一或多部電腦上存取資料的取用者。 OLE DB Driver for SQL Server 是 OLE DB 版本 2.0 相容的提供者。  
   
- SQL Server 程式設計參考此 OLE DB 驅動程式不會記載所有 OLE DB 介面和方法、 介面和使用 SQL Server 的 OLE DB 驅動程式時出現提供者專屬行為的方法。  
+ 這個 OLE DB Driver for SQL Server 程式設計參考不會記載所有 OLE DB 介面與方法，只會記載使用 OLE DB Driver for SQL Server 時，表現為提供者特定行為的介面與方法。  
   
- 如需核心 OLE DB 介面與方法的完整說明，請參閱[OLE DB 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45232)。  
+ 如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45232)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

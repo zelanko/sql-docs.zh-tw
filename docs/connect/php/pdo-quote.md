@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: quote |Microsoft 文件'
+title: 'Pdo:: quote |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29147b488ea6f66870db4355021d2cf76d48496b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308177"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064274"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,12 +36,12 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>參數  
 $*string*：要加上引號的字串。  
   
-$*p*: 選用 （整數） 符號，指出資料類型。  預設值是 PDO::PARAM_STR。  
+$*parameter_type*：指出資料類型的選擇性 (整數) 符號。  預設值是 PDO::PARAM_STR。  
   
 ## <a name="return-value"></a>傳回值  
 可以傳遞至 SQL 陳述式的加上引號的字串，如果失敗則傳回 false。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]2.0 版已加入 PDO 支援。  
   
 ## <a name="example"></a>範例  

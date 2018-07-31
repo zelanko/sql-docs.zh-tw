@@ -1,5 +1,5 @@
 ---
-title: 使用 SQL 陳述式搭配參數 |Microsoft 文件
+title: 使用 SQL 陳述式搭配參數 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 35f23003f62ab9ea0188d54d7c4ad08d094eb440
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851583"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992950"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>搭配參數使用 SQL 陳述式
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  若要使用中的資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫使用 SQL 陳述式包含 IN 參數，您可以使用[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)方法[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)類別，以傳回[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) ，就會包含所要求的資料。 若要這樣做，您必須先建立 SQLServerPreparedStatement 物件，使用[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)方法[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md)類別。  
+  若要使用包含 IN 參數的 SQL 陳述式，來使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中的資料，您可以使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) 方法，以傳回將包含所要求資料的 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)。 若要這樣做，您必須先使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法建立 SQLServerPreparedStatement 物件。  
   
  當建構 SQL 陳述式時，請使用 ? (問號) 字元來指定 IN 參數，這個問號是作為預留位置，代表稍後將傳遞至 SQL 陳述式的參數值。 若要指定參數的值，您可以使用 SQLServerPreparedStatement 類別的 setter 方法的其中一個。 您使用的 setter 方法，是由要傳遞至 SQL 陳述式的值資料類型所決定。  
   
- 當您將值傳遞至 setter 方法時，您不但要指定用於 SQL 陳述式的實際值，也要指定 SQL 陳述式中參數的序數位置。 例如，如果您的 SQL 陳述式包含單一參數，其序數值將會是 1。 如果陳述式包含兩個參數，第一個序數值將會是 1，而第二個序數值將會是 2。  
+ 當您將值傳遞至 setter 方法時，您不但要指定用於 SQL 陳述式的實際值，也要指定 SQL 陳述式中參數的序數位置。 例如，如果您的 SQL 陳述式包含單一參數，其序數值將會是 1。 如果陳述式包含兩個參數，則第一個序數值為 1，而第二個序數值會是 2。  
   
- 在下列範例中，開啟連接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫會傳遞至函式、 建構及執行以單一字串參數值，SQL 準備陳述式，然後會從結果集中讀取結果。  
+ 在下列範例中，會將連至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線傳入至函式、建構 SQL 準備陳述式並使用單一 String 參數值執行，然後從結果集中讀取結果。  
   
  [!code[JDBC#UsingSQLWithParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_1_1.java)]  
   

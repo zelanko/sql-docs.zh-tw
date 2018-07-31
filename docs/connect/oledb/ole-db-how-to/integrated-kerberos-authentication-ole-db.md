@@ -1,6 +1,6 @@
 ---
-title: 整合式 Kerberos 驗證 (OLE DB) |Microsoft 文件
-description: 整合式的 kerberos 驗證 (OLE DB)
+title: 整合式 Kerberos 驗證 (OLE DB) |Microsoft Docs
+description: 整合式 Kerberos 驗證 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 49aac384ef7f330a445aca4c69ea0478edc85481
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0bbfbf6d3f497143de12ff8c44e160d5eca8578d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665628"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109130"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>整合式 Kerberos 驗證 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  這個範例示範如何使用 SQL Server OLE DB 驅動程式中 OLE DB 取得 Kerberos 相互驗證。 此範例適用於 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本。  
+  此範例示範如何藉由使用 OLE DB Driver for SQL Server OLE DB 取得 Kerberos 相互驗證。 此範例適用於 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 或更新版本。  
   
- 如需有關 Spn 和 Kerberos 驗證的詳細資訊，請參閱[服務主體名稱&#40;SPN&#41;支援用戶端連接中的](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。  
+ 如需 SPN 和 Kerberos 驗證的詳細資訊，請參閱[用戶端連接中的服務主體名稱 &#40;SPN&#41; 支援](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)。  
   
 ## <a name="example"></a>範例  
  您必須指定一個伺服器。 在 .cpp 檔案中，將 "MyServer" 變更為擁有 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (或更新版本) 執行個體的電腦名稱。  
   
  您也必須指定一個客戶提供的 SPN。 在 .cpp 檔案中，將 "CPSPN" 變更為客戶提供的 SPN。  
   
- 請確定您的 INCLUDE 環境變數包含包含 msoledbsql.h 的目錄。 使用 ole32.lib oleaut32.lib 編譯。  
+ 請確認您的 INCLUDE 環境變數包含的目錄內含 msoledbsql.h。 使用 ole32.lib oleaut32.lib 編譯。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

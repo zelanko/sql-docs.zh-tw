@@ -1,7 +1,7 @@
 ---
 title: 指定欄位與資料列結束字元 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2016
+ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: import-export
@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e23160b367d9e977de757acc3bd6883af43479
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940253"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278676"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>指定欄位與資料列結束字元 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,13 +98,21 @@ ms.locfileid: "32940253"
 -   許多資料列只使用其部分空間的固定長度長資料行。  
   
      在這種狀況下，指定結束字元可縮小儲存空間，允許欄位視為可變長度欄位。  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>針對大量匯出指定 `\n` 做為資料列結束字元
+
+當您針對大量匯出指定 `\n` 做為資料列結束字元，或以隱含方式使用預設的資料列結束字元時，bcp 會輸出歸位字元與換行字元的組合 (CRLF) 做為資料列結束字元。 若只要輸出換行字元 (LF) 做為資料列結束字元 (在 Unix 與 Linux 電腦上很常見)，請使用十六進位標記法來指定 LF 資料列結束字元。 例如：
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### <a name="examples"></a>範例  
  此範例會使用字元格式、以逗號作為欄位結束字元，而且以新行字元 (\n) 作為資料列結束字元，將資料從 `AdventureWorks.HumanResources.Department` 資料表大量匯出資料至 `Department-c-t.txt` 資料檔案。  
   
  **bcp** 命令包含下列參數。  
   
-|參數|描述|  
+|參數|Description|  
 |------------|-----------------|  
 |**-c**|指定以字元資料載入資料欄位。|  
 |**-t** `,`|指定逗號 (,) 做為欄位結束字元。|  
@@ -132,7 +140,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      您可以使用下表所示的限定詞，針對格式檔案中的個別欄位或整個資料檔指定結束字元。  
   
-    |Qualifier|描述|  
+    |Qualifier|Description|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|指定要用於字元和 Unicode 字元資料檔中的欄位結束字元。<br /><br /> 預設值是 \t (定位字元)。|  
     |ROWTERMINATOR **='***row_terminator***'**|指定要用於字元和 Unicode 字元資料檔中的資料列結束字元。<br /><br /> 預設值是 \n (新行字元)。|  
@@ -144,7 +152,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      針對 OPENROWSET 大量資料列集提供者，只可以在格式檔案中指定結束字元 (除了大型物件資料類型以外都需要格式檔案)。 如果字元資料檔使用非預設結束字元，則必須在格式檔案中加以定義。 如需詳細資訊，請參閱[建立格式檔案 &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) 和[使用格式檔案大量匯入資料 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)。  
   
      如需有關 OPENROWSET BULK 子句的詳細資訊，請參閱 [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)。  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-import"></a>針對大量匯入指定 `\n` 做為資料列結束字元
+當您針對大量匯入指定 `\n` 做為資料列結束字元，或以隱含方式使用預設的資料列結束字元，bcp 與 BULK INSERT 陳述式預期使用歸位字元與換行字元的組合 (CRLF) 做為資料列結束字元。 若您的原始程式碼檔案只使用換行字元 (LF) 做為資料列結束字元 (在於 Unix 與 Linux 電腦上產生的檔案中很常見)，請使用十六進位標記法來指定 LF 資料列結束字元。 例如，在a BULK INSERT 陳述式中：
+
+```sql
+    ROWTERMINATOR = '0x0A'
+```
+ 
 ### <a name="examples"></a>範例  
  這一節中的範例會將字元資料從先前範例中建立的 `Department-c-t.txt` 資料檔，大量匯入到 `myDepartment` 範例資料庫中的 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 資料表。 您必須先建立這個資料表，才能執行範例。 在 **dbo** 結構描述下建立這個資料表時，請在 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 查詢編輯器中執行下列程式碼：  
   

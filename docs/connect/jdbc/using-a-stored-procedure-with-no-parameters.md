@@ -1,5 +1,5 @@
 ---
-title: 使用不含任何參數的預存程序 |Microsoft 文件
+title: 使用不含參數的預存程序 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7db021b9d3fdf875c2c6074159b56d8e6cb0fd14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851233"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992920"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>使用沒有參數的預存程序
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  最簡單的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]可以呼叫的預存程序是一個不含任何參數並且傳回單一結果集。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]提供[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)類別，您可以使用來呼叫此種預存程序並處理其傳回的資料。  
+  您可呼叫之最簡單的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 預存程序為不含任何參數並傳回單一結果集的預存程序。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，您可以使用此類別，呼叫此種類的預存程序並處理其傳回的資料。  
   
- 當您使用 JDBC 驅動程式呼叫不含參數的預存程序時，您必須使用`call`SQL 逸出序列。 語法`call`不含任何參數的逸出序列如下所示：  
+ 當使用 JDBC 驅動程式呼叫不含參數的預存程序時，您必須使用 `call` SQL 逸出序列。 不含參數之 `call` 逸出序列的語法如下：  
   
  `{call procedure-name}`  
   
 > [!NOTE]  
->  如需 SQL 逸出序列的詳細資訊，請參閱[使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
+>  如需有關 SQL 逸出序列的詳細資訊，請參閱[使用 SQL 逸出序列](../../connect/jdbc/using-sql-escape-sequences.md)。  
   
- 例如，建立下列預存程序中的[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫：  
+ 例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列預存程序：  
   
 ```  
 CREATE PROCEDURE GetContactFormalNames   
@@ -46,7 +46,7 @@ END
   
  此預存程序會傳回包含一個資料資料行的單一結果集，亦即 Person.Contact 資料表中前十位連絡人的職稱、名字與姓氏的組合。  
   
- 在下列範例中，開啟連接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫會傳遞至函式，而[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法用來呼叫 GetContactFormalNames 預存程序。  
+ 在下列範例中，[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳入至函式，並使用 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法，以呼叫 GetContactFormalNames 預存程序。  
   
 ```  
 public static void executeSprocNoParams(Connection con) {  

@@ -1,6 +1,6 @@
 ---
-title: SQL Server 的 OLE DB 驅動程式中的 utf-16 支援 |Microsoft 文件
-description: SQL Server 的 OLE DB 驅動程式中的 utf-16 支援
+title: 在 OLE DB Driver for SQL Server 的 utf-16 支援 |Microsoft Docs
+description: 在 OLE DB Driver for SQL Server 的 UTF-16 支援
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bcb7393315063102315fdf5062bdfa05ee07282d
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 8374545412ca244e6af643ed10f101a714985da6
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611623"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108140"
 ---
-# <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>SQL Server 的 OLE DB 驅動程式中的 utf-16 支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>在 OLE DB Driver for SQL Server 的 UTF-16 支援
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  從開始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]，如果您在繫結資料行結果或輸出參數時提供固定長度的緩衝區，而且如果**wchar**結束的字元為高 surrogate 字碼指標之前寫入緩衝區的字元surrogate 字組，而且如果下一個**wchar**字元是低 surrogate 字碼指標、 OLE DB 驅動程式的 SQL Server 不會將高 surrogate 字碼指標加入至緩衝區。  
+  從 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 開始，如果您在繫結資料行結果或輸出參數時提供固定長度的緩衝區、**wchar** 字元在終止字元成為代理字組的高 Surrogate 字碼指標之前寫入緩衝區，而且下一個 **wchar** 字元是低 Surrogate 字碼指標，OLE DB Driver for SQL Server 就不會將高 Surrogate 字碼指標加入至緩衝區。  
   
 ## <a name="see-also"></a>另請參閱  
  [OLE DB Driver for SQL Server 功能](../../oledb/features/oledb-driver-for-sql-server-features.md)   

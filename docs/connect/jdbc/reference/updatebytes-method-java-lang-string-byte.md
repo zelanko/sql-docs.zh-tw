@@ -1,5 +1,5 @@
 ---
-title: updateBytes 方法 （java.lang.String，byte） |Microsoft 文件
+title: updateBytes 方法 （java.lang.String，byte） |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e3b22554aaa99ec57736e10a858e7d7505fce89c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849537"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38038056"
 ---
-# <a name="updatebytes-method-javalangstring-byte"></a>updateBytes 方法 （java.lang.String，byte）
+# <a name="updatebytes-method-javalangstring-byte"></a>updateBytes 方法 (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  更新指定的資料行的陣列**位元組**給定的資料行名稱的值。  
+  根據指定的資料行名稱，使用 **byte** 值的陣列來更新指定的資料行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,13 +51,13 @@ public void updateBytes(java.lang.String columnName,
 ## <a name="exceptions"></a>例外狀況  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>備註  
- UpdateBytes 方法 java.sql.ResultSet 介面中所指定此 updateBytes 方法。  
+## <a name="remarks"></a>Remarks  
+ UpdateBytes 方法 java.sql.ResultSet 介面中所指定這個 updateBytes 方法。  
   
- 在舊版的[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]，您可以使用 SQLServerResultSet.updateBytes 來轉換位元組陣列之間的值和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料型別**日期**，**時間**， **datetime2**，或**datetimeoffset**。 現在，搭配這些資料類型使用這個方法將會引發例外狀況，指出不支援轉換。  
+ 在舊版的 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 中，您可以使用 SQLServerResultSet.updateBytes 來轉換位元組陣列與 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型 **date**、**time**、**datetime2** 或 **datetimeoffset** 之間的值。 現在，搭配這些資料類型使用這個方法將會引發例外狀況，指出不支援轉換。  
   
 ## <a name="see-also"></a>另請參閱  
- [updateBytes 方法&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebytes-method-sqlserverresultset.md)   
+ [updateBytes 方法 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatebytes-method-sqlserverresultset.md)   
  [SQLServerResultSet 成員](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet 類別](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

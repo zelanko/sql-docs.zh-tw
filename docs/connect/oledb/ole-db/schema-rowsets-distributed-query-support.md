@@ -1,6 +1,6 @@
 ---
-title: 分散式查詢支援在結構描述資料列 |Microsoft 文件
-description: 分散式查詢支援在結構描述資料列集
+title: 分散式查詢支援，在結構描述資料列 |Microsoft Docs
+description: 結構描述資料列集中的分散式查詢支援
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,21 +21,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c996768d8b2c0aaf2c2f622add33ffdf5aab3e89
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 085a4424272e4d620c4b36fe9ecf44894cb1a33f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611613"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105824"
 ---
-# <a name="schema-rowsets---distributed-query-support"></a>結構描述資料列的分散式的查詢支援
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---distributed-query-support"></a>結構描述資料列集 - 分散式查詢支援
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  若要支援[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]分散式查詢中，SQL Server OLE DB 驅動程式**IDBSchemaRowset**介面會傳回連結伺服器上的中繼資料。  
+  為了支援 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 分散式查詢，OLE DB Driver for SQL Server 的 **IDBSchemaRowset** 介面會針對連結的伺服器傳回中繼資料。  
   
- 如果 DBPROPSET_SQLSERVERSESSION 屬性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，您就可以針對目錄名稱指定引號識別碼 (例如 "my.catalog")。 當限制結構描述資料列集輸出目錄，SQL Server OLE DB 驅動程式會辨識包含連結的伺服器和目錄名稱的兩部分名稱。 下表中的結構描述資料列集指定兩部分目錄名稱為*linked_server ***。*** 目錄*將輸出限制為具名連結伺服器的適用目錄。  
+ 如果 DBPROPSET_SQLSERVERSESSION 屬性 SSPROP_QUOTEDCATALOGNAMES 是 VARIANT_TRUE，您就可以針對目錄名稱指定引號識別碼 (例如 "my.catalog")。 依照目錄來限制結構描述資料列集輸出時，OLE DB Driver for SQL Server 會辨識包含連結伺服器和目錄名稱的兩部分名稱。 對於下表中的結構描述資料列集而言，將兩部分目錄名稱指定為 *linked_server ***.*** catalog* 就會將輸出限制為具名連結伺服器的適用目錄。  
   
 |結構描述資料列集|目錄限制|  
 |-------------------|-------------------------|  
@@ -49,12 +49,12 @@ ms.locfileid: "35611613"
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  若要限制從連結伺服器的所有目錄結構描述資料列，請使用語法*linked_server* （其中句號分隔符號是名稱規格的一部分）。 這個語法相當於針對目錄名稱限制指定 NULL，而且也會在連結的伺服器指出不支援目錄的資料來源時使用。  
+>  若要將結構描述資料列集限制為連結伺服器的所有目錄，請使用語法 *linked_server* (其中句號分隔符號是名稱規格的一部分)。 這個語法相當於針對目錄名稱限制指定 NULL，而且也會在連結的伺服器指出不支援目錄的資料來源時使用。  
   
- SQL Server OLE DB 驅動程式會定義結構描述資料列集 LINKEDSERVERS，並傳回註冊成連結伺服器的 OLE DB 資料來源的清單。  
+ OLE DB Driver for SQL Server 會定義結構描述資料列集 LINKEDSERVERS，並傳回註冊成連結伺服器之 OLE DB 資料來源的清單。  
   
 ## <a name="see-also"></a>另請參閱  
- [結構描述資料列集支援&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
+ [結構描述資料列集支援 &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
  [LINKEDSERVERS 資料列集&#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

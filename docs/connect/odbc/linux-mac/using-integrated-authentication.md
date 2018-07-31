@@ -1,5 +1,5 @@
 ---
-title: 使用整合式的驗證 |Microsoft 文件
+title: 使用整合式的驗證 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,99 +16,99 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c70de16565cd90c3ca594fffcbbcc82bae89b90e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a6e45f2253abd85387ce43b4888e934e6f2dbfde
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853173"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984400"
 ---
 # <a name="using-integrated-authentication"></a>使用整合式驗證
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Linux 及 macOS 支援連線使用 Kerberos 整合式驗證。 它支援 MIT Kerberos 金鑰發佈中心 (KDC)，並可搭配一般安全性服務應用程式介面 (GSSAPI) 和 Kerberos v5 文件庫。
+Linux 和 macOS 上的 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 支援使用 Kerberos 整合驗證的連線。 其支援 MIT Kerberos 金鑰發佈中心 (KDC) 並可使用一般安全性服務應用程式開發介面 (GSSAPI) 和 Kerberos v5 程式庫。
   
-## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversionmdmd-from-an-odbc-application"></a>使用整合式的驗證連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]從 ODBC 應用程式  
+## <a name="using-integrated-authentication-to-connect-to-includessnoversionincludesssnoversionmdmd-from-an-odbc-application"></a>使用整合驗證從 ODBC 應用程式連線至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]  
 
-您可以藉由啟用 Kerberos 整合式的驗證**Trusted_Connection = yes**的連接字串中**SQLDriverConnect**或**SQLConnect**。 例如：  
+您可以透過在 **SQLDriverConnect** 或 **SQLConnect** 的連接字串中指定 **Trusted_Connection=yes**，來啟用 Kerberos 整合驗證。 例如：  
 
 ```
 Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
-連接時的 DSN，您也可以加入**Trusted_Connection = yes** DSN 中的項目`odbc.ini`。
+當使用 DSN 連接，您也可以加入**Trusted_Connection = yes**中的 DSN 項目`odbc.ini`。
   
-`-E`選項`sqlcmd`和`-T`選項`bcp`也可用來指定整合式的驗證，請參閱 <<c8> [ 連接**sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用連接**bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)如需詳細資訊。
+`-E`的選項`sqlcmd`而`-T`選項`bcp`也可用來指定整合式的驗證，請參閱[連接**sqlcmd** ](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)和[使用連接**bcp** ](../../../connect/odbc/linux-mac/connecting-with-bcp.md)如需詳細資訊。
 
-確定要連接到的用戶端主體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]向 Kerberos KDC 已經過驗證。
+請確定要連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的用戶端主體已經過 Kerberos KDC 驗證。
   
 **ServerSPN** 和 **FailoverPartnerSPN** 不受支援。  
   
-## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>執行部署 Linux 或 macOS ODBC 驅動程式應用程式所設計，做為服務
+## <a name="deploying-a-linux-or-macos-odbc-driver-application-designed-to-run-as-a-service"></a>要執行的 Linux 或 macOS 設計的 ODBC 驅動程式應用程式部署為服務
 
-系統管理員可以部署成服務，以使用 Kerberos 驗證連接到執行的應用程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+系統管理員可部署應用程式，以作為使用 Kerberos 驗證連線至 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的服務執行。  
   
-您首先要在用戶端上設定 Kerberos，然後確定 應用程式可以使用預設主體的 Kerberos 認證。
+您必須先在用戶端上設定 Kerberos，然後確定應用程式可使用預設主體的 Kerberos 認證。
 
-請確定您使用`kinit`或 PAM （插入式驗證模組） 來取得並快取連接所使用，透過下列方法之一主體的 TGT:  
+請確定您透過以下其中一種方法，使用 `kinit` 或 PAM (插入式驗證模組) 獲取並快取連線使用的主體 TGT：  
   
--   執行`kinit`，傳入主體名稱和密碼。  
+-   執行 `kinit`，傳入主體名稱和密碼。  
   
--   執行`kinit`，傳入主體名稱和包含主體金鑰所建立的 keytab 檔案的位置`ktutil`。  
+-   執行 `kinit`，傳入主體名稱，以及包含 `ktutil` 所建立主體金鑰的 keytab 檔案位置。  
   
--   請確定已完成登入系統使用 Kerberos PAM （插入式驗證模組）。
+-   確定系統登入作業使用 Kerberos PAM (插入式驗證模組) 所完成。
 
-當應用程式執行為服務，因為 Kerberos 認證依設計會過期時，請更新認證，以確保持續的服務可用性。 ODBC 驅動程式不會更新認證本身;請確認有`cron`作業或以更新其到期時間之前的認證會定期執行的指令碼。 若要避免每次更新後需要密碼，您可以使用 keytab 檔案。  
+當應用程式作為服務執行時，因為 Kerberos 認證依設計到期，請更新認證以確保服務可持續使用。 ODBC 驅動程式不會更新認證本身;請確認有`cron`作業或更新他們的到期日之前的認證會定期執行的指令碼。 若要避免每次更新都需要密碼，您可以使用 keytab 檔案。  
   
 [Kerberos 的設定和用法](http://commons.oreilly.com/wiki/index.php/Linux_in_a_Windows_World/Centralized_Authentication_Tools/Kerberos_Configuration_and_Use) 詳細說明如何在 Linux 上 Kerberize 服務。
   
 ## <a name="tracking-access-to-a-database"></a>追蹤對資料庫的存取
 
-使用系統帳戶來存取時，資料庫管理員可以建立資料庫的存取權的稽核記錄[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用整合式驗證。  
+資料庫管理員可在透過整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 系統帳戶 時，建立資料庫存取的稽核線索。  
   
-登入[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用系統帳戶和 Linux 模擬安全性內容中沒有任何功能。 因此，需要有更多線索來判別使用者。
+登入 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 會使用系統帳戶，且 Linux 上沒有模擬資訊安全內容的功能。 因此，需要有更多線索來判別使用者。
   
-若要稽核中的活動[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]代表系統帳戶以外的使用者，應用程式必須使用[!INCLUDE[tsql](../../../includes/tsql_md.md)] **EXECUTE AS**。  
+若要代表系統帳戶以外的使用者稽核 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 中的活動，應用程式必須使用 [!INCLUDE[tsql](../../../includes/tsql_md.md)] **EXECUTE AS**。  
   
-若要改善應用程式效能，應用程式可以將連接共用與整合式驗證和稽核搭配使用。 不過，結合連接共用，整合式驗證和稽核會產生安全性風險因為 unixODBC 驅動程式管理員允許不同的使用者重複使用共用的連接。 如需詳細資訊，請參閱 [ODBC 連接共用](http://www.unixodbc.org/doc/conn_pool.html)。  
+若要改善應用程式效能，應用程式可以將連接共用與整合式驗證和稽核搭配使用。 不過，結合連線共用、整合驗證和稽核會產生安全性風險，原因是 unixODBC 驅動程式管理員允許不同使用者重複使用共用連線。 如需詳細資訊，請參閱 [ODBC 連接共用](http://www.unixodbc.org/doc/conn_pool.html)。  
 
-重複使用之前，應用程式必須重設共用的連接執行`sp_reset_connection`。  
+在重複使用前，應用程式必須執行 `sp_reset_connection` 來重設共用連線。  
 
 ## <a name="using-active-directory-to-manage-user-identities"></a>使用 Active Directory 管理使用者身分識別
 
-應用程式系統管理員不需要管理不同的登入認證集[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。 Active Directory 可以設定為整合式驗證的金鑰發佈中心 (KDC)。 請參閱[Microsoft Kerberos](https://msdn.microsoft.com/en-us/library/windows/desktop/aa378747(v=vs.85).aspx)如需詳細資訊。
+應用程式系統管理員不需要分別管理 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 的各組登入認證。 Active Directory 可以設定為整合式驗證的金鑰發佈中心 (KDC)。 請參閱[Microsoft Kerberos](https://msdn.microsoft.com/library/windows/desktop/aa378747(v=vs.85).aspx)如需詳細資訊。
 
 ## <a name="using-linked-server-and-distributed-queries"></a>使用連結的伺服器和分散式查詢
 
-開發人員可以部署使用連結的伺服器或分散式查詢的應用程式，而無需資料庫管理員負責維護個別的 SQL 認證集。 在此情況下，開發人員必須設定應用程式使用整合式的驗證：  
+開發人員可以部署使用連結的伺服器或分散式查詢的應用程式，而無需資料庫管理員負責維護個別的 SQL 認證集。 在此情況下，開發人員必須設定應用程式以使用整合驗證：  
   
 -   使用者登入用戶端電腦，並向應用程式伺服器進行驗證。  
   
--   應用程式伺服器會驗證為不同的資料庫，並連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+-   應用程式伺服器驗證為不同的資料庫，並連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 另一個資料庫的資料庫使用者身分進行驗證 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 會向另一個資料庫驗證為資料庫使用者 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]。  
   
 在設定整合式驗證之後，認證將會傳遞至連結的伺服器。  
   
 ## <a name="integrated-authentication-and-sqlcmd"></a>整合式驗證和 sqlcmd
-若要存取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用整合式的驗證時，使用`-E`選項`sqlcmd`。 請確定其執行的帳戶`sqlcmd`與預設的 Kerberos 用戶端主體相關聯。
+若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，請使用 `sqlcmd` 的 `-E` 選項。 請確認帳戶來執行`sqlcmd`與預設的 Kerberos 用戶端主體相關聯。
 
 ## <a name="integrated-authentication-and-bcp"></a>整合式驗證和 bcp
-若要存取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用整合式的驗證時，使用`-T`選項`bcp`。 請確定其執行的帳戶`bcp`與預設的 Kerberos 用戶端主體相關聯。 
+若要使用整合驗證存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]，請使用 `bcp` 的 `-T` 選項。 請確認帳戶來執行`bcp`與預設的 Kerberos 用戶端主體相關聯。 
   
-它是使用錯誤`-T`與`-U`或`-P`選項。
+它是使用中的錯誤`-T`具有`-U`或`-P`選項。
   
-## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>支援註冊的 SPN 語法 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]
+## <a name="supported-syntax-for-an-spn-registered-by-includessnoversionincludesssnoversionmdmd"></a>由 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 註冊之 SPN 的支援語法
 
-Spn 在連接字串或連接屬性中所使用的語法如下所示：  
+SPN 在連接字串或連線屬性中使用的語法如下：  
 
 |語法|Description|  
 |----------|---------------|  
 |MSSQLSvc/*fqdn*:*port*|使用 TCP 時，此為提供者產生的預設 SPN。 *port* 是 TCP 通訊埠編號。 *fqdn* 是完整的網域名稱。|  
   
-## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>Linux 或 macOS 電腦與 Active Directory 驗證
+## <a name="authenticating-a-linux-or-macos-computer-with-active-directory"></a>使用 Active Directory 驗證 Linux 或 macOS 電腦
 
-若要設定 Kerberos，輸入資料`krb5.conf`檔案。 `krb5.conf` 處於`/etc/`但您可以參考另一個檔案，例如使用語法`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`。 下列是範例`krb5.conf`檔案：  
+若要設定 Kerberos，請輸入資料到`krb5.conf`檔案。 `krb5.conf` 處於`/etc/`但是您可以參考另一個檔案，例如使用語法`export KRB5_CONFIG=/home/dbapp/etc/krb5.conf`。 下列為 `krb5.conf` 檔案範例：  
   
 ```  
 [libdefaults]  
@@ -123,13 +123,13 @@ forwardable = yes
 .zzzz.corp.contoso.com = ZZZZ.CORP.CONTOSO.COM  
 ```  
   
-如果您的 Linux 或 macOS 電腦設定為使用動態主機設定通訊協定 (DHCP) 與 Windows DHCP 伺服器提供的 DNS 伺服器使用，您可以使用**dns_lookup_kdc = true**。 現在，您可以使用 Kerberos 來發出命令登入您的網域`kinit alias@YYYY.CORP.CONTOSO.COM`。 參數傳遞給`kinit`會區分大小寫和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]設定為網域中的電腦必須具有該使用者`alias@YYYY.CORP.CONTOSO.COM`加入登入。 現在，您可以使用信任的連接 (**Trusted_Connection = YES**在連接字串中， **bcp-T**，或**sqlcmd-E**)。  
+如果您的 Linux 或 macOS 電腦已搭配 Windows DHCP 伺服器提供的 DNS 伺服器中的動態主機設定通訊協定 (DHCP)，來使用，您可以使用**dns_lookup_kdc = true**。 現在，您可以使用 Kerberos 來發出命令來登入您的網域`kinit alias@YYYY.CORP.CONTOSO.COM`。 參數傳遞給`kinit`區分大小寫，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]設定為網域中的電腦必須具有該使用者`alias@YYYY.CORP.CONTOSO.COM`新增登入。 現在，您可以使用信任連接 (連接字串中的 、**bcp -T** 或 **sqlcmd -E**)。  
   
-Linux 或 macOS 電腦上的時間和 Kerberos 金鑰發佈中心 (KDC) 上的時間必須關閉。 請確認您的系統時間已正確設定，例如使用網路時間通訊協定 (NTP)。  
+Linux 或 macOS 電腦上的時間和 Kerberos 金鑰發佈中心 (KDC) 上的時間必須關閉。 請確認您的系統時間設定正確，例如使用 Network Time Protocol (NTP)。  
 
-如果 Kerberos 驗證失敗，ODBC driver on Linux 或 macOS 不使用 NTLM 驗證。  
+如果 Kerberos 驗證失敗， Linux 或 macOS 上的 ODBC 驅動程式不會使用 NTLM 驗證。  
 
-如需驗證與 Active Directory 的 Linux 或 macOS 電腦的詳細資訊，請參閱[與 Active Directory 驗證 Linux 用戶端](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[與 Active Directory整合OSX的最佳作法](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 如需有關設定 Kerberos 的詳細資訊，請參閱[MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
+如需有關如何驗證與 Active Directory 的 Linux 或 macOS 電腦的詳細資訊，請參閱[使用 Active Directory 驗證 Linux 用戶端](http://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048)和[整合 OS X 與 Active Directory的最佳作法](http://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). 如需有關如何設定 Kerberos 的詳細資訊，請參閱 < [MIT Kerberos 文件](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html)。
 
 ## <a name="see-also"></a>另請參閱  
 [程式設計指導方針](../../../connect/odbc/linux-mac/programming-guidelines.md)
