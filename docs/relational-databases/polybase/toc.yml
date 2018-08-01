@@ -1,0 +1,21 @@
+- name: 概觀
+  href: polybase-guide.md
+- name: 開始使用
+  href: get-started-with-polybase.md
+- name: 功能摘要
+  href: polybase-versioned-feature-summary.md
+- name: 向外延展群組
+  href: polybase-scale-out-groups.md
+- name: 安裝
+  href: polybase-installation.md
+- name: 組態
+  href: polybase-configuration.md
+- name: T-SQL 物件
+  href: polybase-t-sql-objects.md
+- name: 查詢
+  href: polybase-queries.md
+- name: 疑難排解
+  href: polybase-troubleshooting.md
+  items:
+    - name: 對 PolyBase Kerberos 的連線問題進行疑難排解
+      href: polybase-troubleshoot-connectivity.md

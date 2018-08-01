@@ -1,0 +1,44 @@
+- name: 安裝 SQL PowerShell 模組
+  href: download-sql-server-ps-module.md
+- name: SQL Server PowerShell 概觀
+  href: sql-server-powershell.md
+  items:
+    - name: SQL Server PowerShell 提供者
+      href: sql-server-powershell-provider.md
+    - name: 查詢運算式和統一的資源名稱
+      href: query-expressions-and-uniform-resource-names.md
+- name: 如何存取 SQL Server 物件
+  href: navigate-sql-server-powershell-paths.md
+- name: 如何載入 Windows PowerShell 中的 SMO 組件
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: 如何在 SSMS 中執行 PowerShell
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: 如何使用 SQL Server Agent 執行 PowerShell
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: 如何管理驗證
+  href: manage-authentication-in-database-engine-powershell.md
+- name: 如何管理 TAB 鍵自動完成
+  href: manage-tab-completion-sql-server-powershell.md
+- name: 使用 SQL Server PowerShell 路徑
+  href: work-with-sql-server-powershell-paths.md
+- name: PowerShell 中的 SQL Server 識別碼
+  href: sql-server-identifiers-in-powershell.md
+  items:
+    - name: 指定 SQL Server PowerShell 提供者中的執行個體
+      href: specify-instances-in-the-sql-server-powershell-provider.md
+    - name: 編碼及解碼 SQL Server 識別碼
+      href: encode-and-decode-sql-server-identifiers.md
+    - name: 逸出 SQL Server 識別碼
+      href: escape-sql-server-identifiers.md
+- name: 資源
+  items:
+    - name: 新文章及更新的文章
+      href: new-updated-powershell.md
+    - name: SQL Server PowerShell 授權條款
+      href: sql-server-powershell-license-terms.md
+- name: Cmdlet 參考
+  items:
+    - name: SqlServer Cmdlet
+      href: 'https://docs.microsoft.com/powershell/module/sqlserver/?toc=/sql/powershell/toc.json'
+    - name: SQLPS Cmdlet
+      href: 'https://docs.microsoft.com/powershell/module/sqlps/?toc=/sql/powershell/toc.json'

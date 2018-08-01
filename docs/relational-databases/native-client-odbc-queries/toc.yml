@@ -1,0 +1,16 @@
+- name: 執行查詢 (ODBC)
+  href: executing-queries-odbc.md
+- name: 執行陳述式 +
+  href: ../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md
+- name: 配置陳述式控制代碼
+  href: allocating-a-statement-handle.md
+- name: 建構 SQL 陳述式 (ODBC)
+  href: constructing-an-sql-statement-odbc.md
+- name: 建構資料指標的 SQL 陳述式
+  href: constructing-sql-statements-for-cursors.md
+- name: 釋放陳述式控制代碼
+  href: freeing-a-statement-handle.md
+- name: 使用陳述式參數 - 繫結參數
+  href: using-statement-parameters-binding-parameters.md
+- name: 使用陳述式參數
+  href: using-statement-parameters.md

@@ -1,0 +1,622 @@
+- name: 檢查功能支援和變化性
+  href: checking-feature-support-and-variability.md
+- name: 驅動程式管理員中的函式對應
+  href: function-mapping-in-the-driver-manager.md
+- name: 繫結參數標記
+  href: binding-parameter-markers.md
+- name: 狀態轉換
+  href: state-transitions.md
+- name: 直接連線到驅動程式
+  href: connecting-directly-to-drivers.md
+- name: 一致性層級
+  href: conformance-levels.md
+- name: 處理
+  href: handles.md
+- name: 在執行階段建構 SQL 陳述式
+  href: sql-statements-constructed-at-run-time.md
+- name: 應用程式回溯相容性的取代函式對應
+  href: mapping-replacement-functions-for-backward-compatibility-of-applications.md
+- name: 目錄函式中的引數
+  href: arguments-in-catalog-functions.md
+- name: 明確配置描述項
+  href: explicitly-allocated-descriptors.md
+- name: 描述項欄位
+  href: descriptor-fields.md
+- name: 非同步執行
+  href: asynchronous-execution.md
+- name: SQLSTATE
+  href: sqlstates.md
+- name: 自訂應用程式
+  href: custom-applications.md
+- name: 資料緩衝區位址
+  href: data-buffer-address.md
+- name: 結構描述檢視
+  href: schema-views.md
+- name: 備妥的執行 ODBC
+  href: prepared-execution-odbc.md
+- name: 執行批次
+  href: executing-batches.md
+- name: 可捲動的資料指標和交易隔離
+  href: scrollable-cursors-and-transaction-isolation.md
+- name: 呼叫 SQLCloseCursor
+  href: calling-sqlclosecursor.md
+- name: 描述項
+  href: descriptors.md
+- name: 驅動程式管理員錯誤和警告檢查
+  href: driver-manager-error-and-warning-checks.md
+- name: 建構 SQL 陳述式
+  href: constructing-sql-statements.md
+- name: 驅動程式管理員連線共用
+  href: driver-manager-connection-pooling.md
+- name: 識別碼大小寫
+  href: identifier-case.md
+- name: 層級 1 介面一致性
+  href: level-1-interface-conformance.md
+- name: 釋放陳述式控制代碼 ODBC
+  href: freeing-a-statement-handle-odbc.md
+- name: 使用 SQLBulkOperations 插入資料列
+  href: inserting-rows-with-sqlbulkoperations.md
+- name: 追蹤檔案
+  href: trace-file.md
+- name: 描述項的類型
+  href: types-of-descriptors.md
+- name: 動態追蹤
+  href: dynamic-tracing.md
+- name: Unicode 函式引數
+  href: unicode-function-arguments.md
+- name: 傳送長資料
+  href: sending-long-data.md
+- name: 比較書籤
+  href: comparing-bookmarks.md
+- name: 使用 SQLSetPos 更新資料
+  href: updating-data-with-sqlsetpos.md
+- name: 連線至資料來源或驅動程式
+  href: connecting-to-a-data-source-or-driver.md
+- name: 傳回碼 ODBC
+  href: return-codes-odbc.md
+- name: 連接屬性
+  href: connection-attributes.md
+- name: 執行陳述式
+  href: executing-a-statement.md
+- name: 非同步執行 (通知方法)
+  href: asynchronous-execution-notification-method.md
+- name: 使用 SQLDriverConnect 進行連線
+  href: connecting-with-sqldriverconnect.md
+- name: 硬式編碼的 SQL 陳述式
+  href: hard-coded-sql-statements.md
+- name: 長資料和 SQLSetPos 與 SQLBulkOperations
+  href: long-data-and-sqlsetpos-and-sqlbulkoperations.md
+- name: 依書籤更新、刪除或擷取
+  href: updating-deleting-or-fetching-by-bookmark.md
+- name: 依名稱繫結參數 (具名參數)
+  href: binding-parameters-by-name-named-parameters.md
+- name: 閘道診斷範例
+  href: gateways-diagnostic-example.md
+- name: 建構可互通的 SQL 陳述式
+  href: constructing-interoperable-sql-statements.md
+- name: 一致性檢查
+  href: consistency-check.md
+- name: ODBC 動態資料指標
+  href: odbc-dynamic-cursors.md
+- name: 泛型應用程式
+  href: generic-applications.md
+- name: 預設資料來源
+  href: default-data-source.md
+- name: 直接執行 ODBC
+  href: direct-execution-odbc.md
+- name: 可捲動的資料指標類型
+  href: scrollable-cursor-types.md
+- name: 提示使用者輸入連線資訊
+  href: prompting-the-user-for-connection-information.md
+- name: 使用 SQLSetPos 更新資料列集中的資料列
+  href: updating-rows-in-the-rowset-with-sqlsetpos.md
+- name: 設定描述項欄位
+  href: setting-descriptor-fields.md
+- name: 使用目錄資料
+  href: uses-of-catalog-data.md
+- name: 交易支援
+  href: transaction-support.md
+- name: 垂直應用程式
+  href: vertical-applications.md
+- name: 使用 SQLGetTypeInfo 擷取資料類型資訊
+  href: retrieving-data-type-information-with-sqlgettypeinfo.md
+- name: 應用程式的類型
+  href: types-of-applications.md
+- name: 資料類型轉換
+  href: data-type-conversions.md
+- name: 標頭記錄
+  href: header-record.md
+- name: ODBC 中的逸出序列
+  href: escape-sequences-in-odbc.md
+- name: 多執行緒
+  href: multithreading.md
+- name: 程序呼叫中的參數標記
+  href: parameter-markers-in-procedure-calls.md
+- name: 書籤類型
+  href: bookmark-types.md
+- name: 驅動程式的角色
+  href: role-of-the-driver.md
+- name: 使用 SQLBulkOperations 依書籤更新資料列
+  href: updating-rows-by-bookmark-with-sqlbulkoperations.md
+- name: 配置連線控制代碼 ODBC
+  href: allocating-a-connection-handle-odbc.md
+- name: ODBC 中的 C 資料類型
+  href: c-data-types-in-odbc.md
+- name: 自動認可模式
+  href: auto-commit-mode.md
+- name: 配置及釋放描述項
+  href: allocating-and-freeing-descriptors.md
+- name: 使用可捲動的資料指標
+  href: using-scrollable-cursors.md
+- name: 執行目錄函式
+  href: executing-catalog-functions.md
+- name: 繫結資料行
+  href: binding-columns.md
+- name: 捲動與擷取資料列 (ODBC)
+  href: scrolling-and-fetching-rows-odbc.md
+- name: Datetime 資料類型變更
+  href: datetime-data-type-changes.md
+- name: SQLDescribeCol 和 SQLColAttribute
+  href: sqldescribecol-and-sqlcolattribute.md
+- name: 擷取描述項欄位中的值
+  href: retrieving-the-values-in-descriptor-fields.md
+- name: 答案是 ODBC 嗎？
+  href: is-odbc-the-answer.md
+- name: 外部聯結
+  href: outer-joins.md
+- name: ODBC 基本概念
+  href: odbc-fundamentals.md
+- name: 擷取結果 (進階)
+  href: retrieving-results-advanced.md
+- name: 函式一致性
+  href: function-conformance.md
+- name: 識別碼引數
+  href: identifier-arguments.md
+- name: 設定資料指標
+  href: setting-up-the-cursor.md
+- name: 設定認可模式
+  href: setting-the-commit-mode.md
+- name: 回溯相容性和標準合規性
+  href: backward-compatibility-and-standards-compliance.md
+- name: 交易 ODBC
+  href: transactions-odbc.md
+- name: 標頭檔
+  href: header-files.md
+- name: 模擬定點更新和刪除陳述式
+  href: simulating-positioned-update-and-delete-statements.md
+- name: 使用 SQLConnect 進行連線
+  href: connecting-with-sqlconnect.md
+- name: 驅動程式管理員診斷範例
+  href: driver-manager-diagnostic-example.md
+- name: 特定驅動程式的資料類型、描述項類型、資訊類型、診斷類型與屬性
+  href: driver-specific-data-types-descriptor-information-diagnostic.md
+- name: Unicode 資料
+  href: unicode-data.md
+- name: 核心介面一致性
+  href: core-interface-conformance.md
+- name: 基本的 ODBC 應用程式步驟
+  href: basic-odbc-application-steps.md
+- name: 新功能
+  href: new-features.md
+- name: 支援的資料類型
+  href: supported-data-types.md
+- name: ODBC 中的 SQL 資料類型
+  href: sql-data-types-in-odbc.md
+- name: 以 DBMS 為基礎的驅動程式診斷範例
+  href: dbms-based-driver-diagnostic-example.md
+- name: 執行程序
+  href: executing-procedures.md
+- name: 多個作用中陳述式和連線
+  href: multiple-active-statements-and-connections.md
+- name: 診斷工具
+  href: diagnostic-tools.md
+- name: 多個結果
+  href: multiple-results.md
+- name: 擷取書籤
+  href: retrieving-bookmarks.md
+- name: 建立及終止執行緒
+  href: creating-and-terminating-threads.md
+- name: 一般引數
+  href: ordinary-arguments.md
+- name: 行為變更
+  href: behavioral-changes.md
+- name: 符合標準的應用程式和驅動程式
+  href: standards-compliant-applications-and-drivers.md
+- name: 擷取的資料列數目和狀態
+  href: number-of-rows-fetched-and-status.md
+- name: 隱含配置描述項
+  href: implicitly-allocated-descriptors.md
+- name: 對應資料指標 Attributes1 資訊類型
+  href: mapping-the-cursor-attributes1-information-types.md
+- name: 環境、連線和陳述式屬性
+  href: environment-connection-and-statement-attributes.md
+- name: 開放式並行存取
+  href: optimistic-concurrency.md
+- name: 手動認可模式
+  href: manual-commit-mode.md
+- name: 混合資料指標
+  href: mixed-cursors.md
+- name: 撰寫 ODBC 3.x 驅動程式
+  href: writing-odbc-3-x-drivers.md
+- name: 參數值陣列
+  href: arrays-of-parameter-values.md
+- name: Windows 中的 ODBC
+  href: odbc-in-windows.md
+- name: 診斷訊息
+  href: diagnostic-messages.md
+- name: DDL 陳述式
+  href: ddl-statements.md
+- name: 認可模式
+  href: commit-mode.md
+- name: 複製描述項
+  href: copying-descriptors.md
+- name: 取得描述項控制代碼
+  href: obtaining-descriptor-handles.md
+- name: 診斷記錄
+  href: diagnostic-records.md
+- name: 程序 ODBC
+  href: procedures-odbc.md
+- name: 環境控制代碼
+  href: environment-handles.md
+- name: 建立連線
+  href: establishing-a-connection.md
+- name: 非同步執行 (輪詢方法)
+  href: asynchronous-execution-polling-method.md
+- name: ODBC 驅動程式管理員所產生的事件
+  href: events-generated-by-the-odbc-driver-manager.md
+- name: 撰寫可互通的應用程式
+  href: writing-an-interoperable-application.md
+- name: 配置及釋放緩衝區
+  href: allocating-and-freeing-buffers.md
+- name: 資料行取向的繫結
+  href: column-wise-binding.md
+- name: 驅動程式的類型
+  href: types-of-drivers.md
+- name: 值清單引數
+  href: value-list-arguments.md
+- name: 目錄和結構描述的使用方式
+  href: catalog-and-schema-usage.md
+- name: 使用長度與指標值
+  href: using-length-and-indicator-values.md
+- name: 呼叫 SQLSetPos
+  href: calling-sqlsetpos.md
+- name: 步驟 1：連線到資料來源
+  href: step-1-connect-to-the-data-source.md
+- name: 從資料來源或驅動程式中斷連線
+  href: disconnecting-from-a-data-source-or-driver.md
+- name: 適用於 ODBC 3.x 應用程式的區塊資料指標、可捲動的資料指標和回溯相容性
+  href: block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md
+- name: 目錄函式
+  href: catalog-functions.md
+- name: 認可及回復交易
+  href: committing-and-rolling-back-transactions.md
+- name: 程序的使用時機
+  href: when-to-use-procedures.md
+- name: 驅動程式管理員的角色
+  href: role-of-the-driver-manager.md
+- name: 使用 SQLGetData 擷取輸出參數
+  href: retrieving-output-parameters-using-sqlgetdata.md
+- name: Unicode 應用程式
+  href: unicode-applications.md
+- name: SQL 陳述式
+  href: sql-statements.md
+- name: 追蹤
+  href: tracing.md
+- name: 步驟 4a：擷取結果
+  href: step-4a-fetch-the-results.md
+- name: 驅動程式管理員在連線程序中的角色
+  href: driver-manager-s-role-in-the-connection-process.md
+- name: 配置環境控制代碼
+  href: allocating-the-environment-handle.md
+- name: 描述項控制代碼
+  href: descriptor-handles.md
+- name: SQL 陳述式的批次
+  href: batches-of-sql-statements.md
+- name: 使用 SQLBulkOperations 更新資料
+  href: updating-data-with-sqlbulkoperations.md
+- name: 並行存取控制
+  href: concurrency-control.md
+- name: 繫結參數 ODBC
+  href: binding-parameters-odbc.md
+- name: 診斷處理規則
+  href: diagnostic-handling-rules.md
+- name: ODBC 中的資料類型
+  href: data-types-in-odbc.md
+- name: 資料表和檢視表
+  href: tables-and-views.md
+- name: 引號識別碼
+  href: quoted-identifiers.md
+- name: 資料緩衝區長度
+  href: data-buffer-length.md
+- name: 連接字串
+  href: connection-strings.md
+- name: 受影響的 ODBC 元件
+  href: affected-odbc-components.md
+- name: 中繼資料的使用方式為何？
+  href: how-is-metadata-used.md
+- name: 資料指標特性和資料指標類型
+  href: cursor-characteristics-and-cursor-type.md
+- name: 版本號碼
+  href: version-number.md
+- name: SQLSTATE 對應
+  href: sqlstate-mappings.md
+- name: SQL Server 瀏覽範例
+  href: sql-server-browsing-example.md
+- name: 錯誤和批次
+  href: errors-and-batches.md
+- name: 結果集中繼資料
+  href: result-set-metadata.md
+- name: 取得長資料
+  href: getting-long-data.md
+- name: 使用 SQLDriverConnect 進行連線
+  href: connecting-with-sqlbrowseconnect.md
+- name: 描述項欄位一致性
+  href: descriptor-field-conformance.md
+- name: 步驟 6：中斷與資料來源的連線
+  href: step-6-disconnect-from-the-data-source.md
+- name: 變更的類型
+  href: types-of-changes.md
+- name: 程式設計考量
+  href: programming-considerations.md
+- name: Visual Studio Analyzer
+  href: visual-studio-analyzer.md
+- name: 陳述式控制代碼
+  href: statement-handles.md
+- name: 設定交易隔離等級
+  href: setting-the-transaction-isolation-level.md
+- name: 重複的功能
+  href: duplicated-features.md
+- name: 資料列集大小
+  href: rowset-size.md
+- name: 目錄位置
+  href: catalog-position.md
+- name: 延遲的欄位
+  href: deferred-fields.md
+- name: 追蹤 DLL
+  href: trace-dll.md
+- name: 使用參數陣列
+  href: using-arrays-of-parameters.md
+- name: 考慮要使用的資料庫功能
+  href: considering-database-features-to-use.md
+- name: 逸出序列
+  href: escape-sequences.md
+- name: 陳述式參數
+  href: statement-parameters.md
+- name: 資料緩衝區類型
+  href: data-buffer-type.md
+- name: 診斷處理範例
+  href: diagnostic-handling-examples.md
+- name: 繫結描述項記錄
+  href: bound-descriptor-records.md
+- name: 程序參數
+  href: procedure-parameters.md
+- name: 可感知驅動程式的連接共用
+  href: driver-aware-connection-pooling.md
+- name: 對資料指標和已備妥陳述式的交易影響
+  href: effect-of-transactions-on-cursors-and-prepared-statements.md
+- name: UPDATE、DELETE 以及 INSERT 陳述式
+  href: update-delete-and-insert-statements.md
+- name: 資料列取向的繫結
+  href: row-wise-binding.md
+- name: 使用 SQLGetDiagRec 和 SQLGetDiagField
+  href: using-sqlgetdiagrec-and-sqlgetdiagfield.md
+- name: ODBC 中的目錄函式
+  href: catalog-functions-in-odbc.md
+- name: 關閉資料指標
+  href: closing-the-cursor.md
+- name: 選擇 SQL 文法
+  href: choosing-an-sql-grammar.md
+- name: 產品週期的長度
+  href: length-of-the-product-cycle.md
+- name: 配置陳述式控制代碼 ODBC
+  href: allocating-a-statement-handle-odbc.md
+- name: 陳述式屬性
+  href: statement-attributes.md
+- name: 繫結結果集資料行
+  href: binding-result-set-columns.md
+- name: 資料列狀態陣列
+  href: row-status-array.md
+- name: 狀態記錄
+  href: status-records.md
+- name: 已建立結果集了嗎？
+  href: was-a-result-set-created.md
+- name: 啟用追蹤
+  href: enabling-tracing.md
+- name: 測試可互通的應用程式
+  href: testing-interoperable-applications.md
+- name: 依書籤捲動
+  href: scrolling-by-bookmark.md
+- name: 記錄計數
+  href: record-count.md
+- name: 並行類型
+  href: concurrency-types.md
+- name: 使用 SQLBulkOperations 依書籤刪除資料列
+  href: deleting-rows-by-bookmark-with-sqlbulkoperations.md
+- name: 診斷
+  href: diagnostics.md
+- name: 互通性
+  href: interoperability.md
+- name: 緩衝區
+  href: buffers.md
+- name: 啟用 Visual Studio Analyzer
+  href: enabling-visual-studio-analyzer.md
+- name: CREATE TABLE 陳述式中的 NOT NULL
+  href: not-null-in-create-table-statements.md
+- name: 批次處理
+  href: batch-processing.md
+- name: 相對與絕對的捲動
+  href: relative-and-absolute-scrolling.md
+- name: 呼叫 SQLGetDiagField
+  href: calling-sqlgetdiagfield.md
+- name: Unicode 驅動程式
+  href: unicode-drivers.md
+- name: SQL 陳述式的互通性
+  href: interoperability-of-sql-statements.md
+- name: 步驟 4b：擷取資料列計數
+  href: step-4b-fetch-the-row-count.md
+- name: 字元資料和 C 字串
+  href: character-data-and-c-strings.md
+- name: 目錄函式所傳回的資料
+  href: data-returned-by-catalog-functions.md
+- name: 取得並設定描述項欄位
+  href: getting-and-setting-descriptor-fields.md
+- name: 轉譯 DLL
+  href: translation-dlls.md
+- name: 引數值檢查
+  href: argument-value-checks.md
+- name: 特定驅動程式的連線資訊
+  href: driver-specific-connection-information.md
+- name: 判斷資料指標的功能
+  href: determining-cursor-capabilities.md
+- name: SQL 一致性層級
+  href: sql-conformance-levels.md
+- name: 交易隔離
+  href: transaction-isolation.md
+- name: 屬性一致性
+  href: attribute-conformance.md
+- name: ODBC 資料指標程式庫
+  href: the-odbc-cursor-library.md
+- name: 使用精簡函式
+  href: using-concise-functions.md
+- name: 釋放描述項
+  href: freeing-descriptors.md
+- name: 使用 SQLSetPos 刪除資料列集中的資料列
+  href: deleting-rows-in-the-rowset-with-sqlsetpos.md
+- name: 步驟 5：認可交易
+  href: step-5-commit-the-transaction.md
+- name: 參數繫結位移
+  href: parameter-binding-offsets.md
+- name: ODBC SQL 文法
+  href: odbc-sql-grammar.md
+- name: 使用檔案資料來源進行連線
+  href: connecting-using-file-data-sources.md
+- name: 會產生結果和不會產生結果的陳述式
+  href: result-generating-and-result-free-statements.md
+- name: 層級 2 介面一致性
+  href: level-2-interface-conformance.md
+- name: ODBC 中的交易
+  href: transactions-in-odbc-odbc.md
+- name: 可捲動的資料指標
+  href: scrollable-cursors.md
+- name: 介面一致性層級
+  href: interface-conformance-levels.md
+- name: 日期、時間和時間戳記常值
+  href: date-time-and-timestamp-literals.md
+- name: 認可和回復行為
+  href: commit-and-rollback-behavior.md
+- name: 使用區塊資料指標
+  href: using-block-cursors.md
+- name: 常值首碼及尾碼
+  href: literal-prefixes-and-suffixes.md
+- name: ODBC 靜態資料指標
+  href: odbc-static-cursors.md
+- name: 資料長度、緩衝區長度和截斷
+  href: data-length-buffer-length-and-truncation.md
+- name: 應用程式和驅動程式相容性
+  href: application-and-driver-compatibility.md
+- name: 判斷目標 DBMS 和驅動程式
+  href: determining-the-target-dbmss-and-drivers.md
+- name: 步驟 2：初始化應用程式
+  href: step-2-initialize-the-application.md
+- name: 繫結資料行以搭配使用區塊資料指標
+  href: binding-columns-for-use-with-block-cursors.md
+- name: SQL 類型識別碼
+  href: sql-type-identifiers.md
+- name: 選擇互通性層級
+  href: choosing-a-level-of-interoperability.md
+- name: 判斷受影響的資料列數目
+  href: determining-the-number-of-affected-rows.md
+- name: 描述項欄位的初始設定
+  href: initialization-of-descriptor-fields.md
+- name: 類型識別碼
+  href: type-identifiers.md
+- name: 書籤 (ODBC)
+  href: bookmarks-odbc.md
+- name: 模式值引數
+  href: pattern-value-arguments.md
+- name: 區塊資料指標
+  href: block-cursors.md
+- name: 撰寫 ODBC 3.x 應用程式
+  href: writing-odbc-3-x-applications.md
+- name: CString 類別
+  href: cstring-class.md
+- name: LIKE 述詞逸出字元
+  href: like-predicate-escape-character.md
+- name: 使用 SQLBindCol
+  href: using-sqlbindcol.md
+- name: 擷取一列資料
+  href: fetching-a-row-of-data.md
+- name: 程序呼叫
+  href: procedure-calls.md
+- name: 可序列化能力
+  href: serializability.md
+- name: 設定參數值
+  href: setting-parameter-values.md
+- name: 步驟 3：建立和執行 SQL 陳述式
+  href: step-3-build-and-execute-an-sql-statement.md
+- name: SQLGetData 和區塊資料指標
+  href: sqlgetdata-and-block-cursors.md
+- name: 連線控制代碼
+  href: connection-handles.md
+- name: 實作 SQLGetDiagRec 和 SQLGetDiagField
+  href: implementing-sqlgetdiagrec-and-sqlgetdiagfield.md
+- name: 描述參數
+  href: describing-parameters.md
+- name: 自動 IPD 擴展
+  href: automatic-population-of-the-ipd.md
+- name: Unicode
+  href: unicode.md
+- name: 純量函式呼叫
+  href: scalar-function-calls.md
+- name: 選擇資料來源或驅動程式
+  href: choosing-a-data-source-or-driver.md
+- name: 使用者所輸入的 SQL 陳述式
+  href: sql-statements-entered-by-the-user.md
+- name: DBMS 中的交易支援
+  href: transaction-support-in-dbmss.md
+- name: 要監看的功能
+  href: features-to-watch-for.md
+- name: 使用 SQLBulkOperations 擷取資料列
+  href: fetching-rows-with-sqlbulkoperations.md
+- name: 定點更新和刪除陳述式
+  href: positioned-update-and-delete-statements.md
+- name: 狀態記錄的順序
+  href: sequence-of-status-records.md
+- name: 開發應用程式
+  href: developing-applications.md
+- name: 交易隔離等級
+  href: transaction-isolation-levels.md
+- name: 一般錯誤檢查
+  href: general-error-checks.md
+- name: 資料指標
+  href: cursors.md
+- name: 執行陳述式 ODBC
+  href: executing-statements-odbc.md
+- name: 宣告應用程式的 ODBC 版本
+  href: declaring-the-application-s-odbc-version.md
+- name: SQL_NO_DATA
+  href: sql-no-data.md
+- name: 狀態轉換檢查
+  href: state-transition-checks.md
+- name: 使用資料緩衝區
+  href: using-data-buffers.md
+- name: Alignment
+  href: alignment.md
+- name: 相容性矩陣
+  href: compatibility-matrix.md
+- name: 更新資料概觀
+  href: updating-data-overview.md
+- name: 以檔案為基礎的驅動程式診斷範例
+  href: file-based-driver-diagnostic-example.md
+- name: 擷取結果 (基本)
+  href: retrieving-results-basic.md
+- name: 資料指標程式庫作業
+  href: cursor-library-operations.md
+- name: 擷取資料
+  href: fetching-data.md
+- name: 繫結參數陣列
+  href: binding-arrays-of-parameters.md
+- name: 延遲的緩衝區
+  href: deferred-buffers.md
+- name: 索引鍵集導向的資料指標
+  href: keyset-driven-cursors.md

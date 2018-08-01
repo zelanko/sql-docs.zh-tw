@@ -1,0 +1,16 @@
+- name: 利用 Common Language Runtime (CLR) 整合建置資料庫物件
+  href: building-database-objects-with-common-language-runtime-clr-integration.md
+- name: CLR 整合，.NET Framework 中的類型 +
+  href: ../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
+- name: CLR 整合，使用者定義函式 +
+  href: ../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md
+- name: CLR 整合，使用者定義型別 +
+  href: ../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+- name: CLR 常式的 CLR 整合自訂屬性
+  href: clr-integration-custom-attributes-for-clr-routines.md
+- name: CLR 整合程式設計模型限制
+  href: clr-integration-programming-model-restrictions.md
+- name: CLR 整合使用者入門
+  href: getting-started-with-clr-integration.md
+- name: 支援的 .NET Framework 程式庫
+  href: supported-net-framework-libraries.md

@@ -1,0 +1,8 @@
+- name: Analysis Services 個人化延伸模組
+  href: analysis-services-personalization-extensions.md
+- name: 擴充 OLAP 預存程序 +
+  href: ../../../analysis-services/multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+- name: 擴充 OLAP 功能
+  href: extending-olap-functionality.md
+- name: 通過個人化擴充 OLAP
+  href: extending-olap-through-personalizations.md

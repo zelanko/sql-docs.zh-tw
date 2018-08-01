@@ -1,0 +1,620 @@
+- name: 複寫
+  href: sql-server-replication.md
+- name: 新功能 (複寫)
+  href: what-s-new-replication.md
+- name: 複寫回溯相容性
+  href: replication-backward-compatibility.md
+  items:
+    - name: SQL Server 複寫中已被取代的功能
+      href: deprecated-features-in-sql-server-replication.md
+    - name: SQL Server 複寫中的重大變更
+      href: breaking-changes-in-sql-server-replication.md
+- name: 複寫區域
+  items:
+    - name: 複寫管理
+      href: ./administration/administration-replication.md
+    - name: 複寫代理程式
+      href: ./agents/replication-agents.md
+    - name: 開發人員概念
+      href: ../../relational-databases/replication/concepts/replication-developer-documentation.md
+    - name: 監視複寫
+      href: ./monitor/monitoring-replication.md
+    - name: 非 SQL 異質資料庫複寫
+      href: ./non-sql/heterogeneous-database-replication.md
+    - name: 發行資料和資料庫物件
+      href: ./publish/publish-data-and-database-objects.md
+    - name: 複寫安全性
+      href: ./security/security-overview-replication.md
+- name: 複寫功能及工作
+  href: replication-features-and-tasks.md
+  items:
+    - name: 複寫類型
+      href: types-of-replication.md
+      items:
+        - name: 快照式複寫
+          href: snapshot-replication.md
+        - name: 合併式複寫
+          href: ./merge/merge-replication.md
+        - name: 異動複寫
+          href: ./transactional/transactional-replication.md
+    - name: 複寫至記憶體最佳化資料表訂閱者
+      href: replication-to-memory-optimized-table-subscribers.md
+    - name: 複寫至 SQL 資料庫
+      href: replication-to-sql-database.md
+    - name: 使用 SQL Database 複寫
+      href: replication-with-sql-database-managed-instance.md
+    - name: 重新發行資料
+      href: republish-data.md
+    - name: 透過網際網路的複寫
+      href: replication-over-the-internet.md
+      items:
+        - name: 使用 VPN 透過網際網路發行資料
+          href: publish-data-over-the-internet-using-vpn.md
+        - name: 合併式複寫的 Web 同步處理
+          href: web-synchronization-for-merge-replication.md
+          items:
+            - name: '[設定 Web 同步處理]'
+              href: configure-web-synchronization.md
+            - name: Web 同步處理的拓撲
+              href: topologies-for-web-synchronization.md
+        - name: 針對 Web 同步處理設定 IIS
+          href: configure-iis-for-web-synchronization.md
+        - name: 針對 Web 同步處理設定 IIS 7
+          href: configure-iis-7-for-web-synchronization.md
+    - name: 設定散發
+      href: configure-distribution.md
+      items:
+        - name: 設定發行和散發
+          href: configure-publishing-and-distribution.md
+        - name: 設定 AG 中的散發
+          href: configure-distribution-availability-group.md
+        - name: 檢視及修改散發者和發行者屬性
+          href: view-and-modify-distributor-and-publisher-properties.md
+        - name: 停用發行和散發
+          href: disable-publishing-and-distribution.md
+        - name: 為複寫啟用資料庫 (SQL Server Management Studio)
+          href: enable-a-database-for-replication-sql-server-management-studio.md
+        - name: 在散發者端啟用遠端發行者 (SQL Server Management Studio)
+          href: enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md
+        - name: 指定預設快照集位置 (SQL Server Management Studio)
+          href: specify-the-default-snapshot-location-sql-server-management-studio.md
+        - name: 設定交易式發行集的散發保留週期 (SQL Server Management Studio)
+          href: set-distribution-retention-period-for-transactional-publications.md
+        - name: 設定記錄保留週期 (SQL Server Management Studio)
+          href: set-the-history-retention-period-sql-server-management-studio.md
+    - name: 訂閱發行集
+      href: subscribe-to-publications.md
+      items:
+        - name: 建立提取訂閱
+          href: create-a-pull-subscription.md
+        - name: 建立發送訂閱
+          href: create-a-push-subscription.md
+        - name: 檢視及修改提取訂閱屬性
+          href: view-and-modify-pull-subscription-properties.md
+        - name: 檢視及修改發送訂閱屬性
+          href: view-and-modify-push-subscription-properties.md
+        - name: 刪除提取訂閱
+          href: delete-a-pull-subscription.md
+        - name: 刪除發送訂閱
+          href: delete-a-push-subscription.md
+        - name: 訂閱逾期與停用
+          href: subscription-expiration-and-deactivation.md
+        - name: 為非 SQL Server 訂閱者建立訂閱
+          href: create-a-subscription-for-a-non-sql-server-subscriber.md
+        - name: 指定合併訂閱類型和衝突解決優先權 (SQL Server Management Studio)
+          href: specify-a-merge-subscription-type-and-conflict-resolution-priority.md
+        - name: 指定同步處理排程
+          href: specify-synchronization-schedules.md
+    - name: 初始化訂閱
+      href: initialize-a-subscription.md
+      items:
+        - name: 使用快照集初始化訂閱
+          href: initialize-a-subscription-with-a-snapshot.md
+          items:
+            - name: 建立並套用快照集
+              href: create-and-apply-the-snapshot.md
+            - name: 含參數化篩選之合併式發行集的快照集
+              href: snapshots-for-merge-publications-with-parameterized-filters.md
+            - name: 快照集選項
+              href: snapshot-options.md
+              items:
+                - name: 替代快照集資料夾位置
+                  href: alternate-snapshot-folder-locations.md
+                - name: 壓縮的快照集
+                  href: compressed-snapshots.md
+                - name: 在套用快照集之前及之後執行指令碼
+                  href: execute-scripts-before-and-after-the-snapshot-is-applied.md
+                - name: 透過 FTP 傳送快照集
+                  href: transfer-snapshots-through-ftp.md
+        - name: 不使用快照集初始化交易式訂閱
+          href: initialize-a-transactional-subscription-without-a-snapshot.md
+        - name: 重新初始化訂閱
+          href: reinitialize-subscriptions.md
+    - name: 同步處理訂閱 (複寫)
+      href: synchronize-subscriptions-replication.md
+      items:
+        - name: 建立和套用初始快照集
+          href: create-and-apply-the-initial-snapshot.md
+          items:
+            - name: 使用參數化篩選建立合併式發行集的快照集
+              href: create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
+        - name: 為交易式發行集啟用使用備份的初始化 (SQL Server Management Studio)
+          href: enable-initialization-with-backup-for-transactional-publications.md
+        - name: 從備份初始化交易式訂閱 (複寫 Transact-SQL 程式設計)
+          href: initialize-a-transactional-subscription-from-a-backup.md
+        - name: 手動初始化訂閱
+          href: initialize-a-subscription-manually.md
+        - name: 同步處理提取訂閱
+          href: synchronize-a-pull-subscription.md
+        - name: 同步處理發送訂閱
+          href: synchronize-a-push-subscription.md
+        - name: 重新初始化訂閱
+          href: reinitialize-a-subscription.md
+        - name: 在套用快照集的前後執行指令碼 (SQL Server Management Studio)
+          href: execute-scripts-before-and-after-a-snapshot-is-applied.md
+        - name: 在同步處理期間執行指令碼 (複寫 Transact-SQL 程式設計)
+          href: execute-scripts-during-synchronization-replication-transact-sql-programming.md
+        - name: 檢視並解決合併式發行集的資料衝突 (SQL Server Management Studio)
+          href: view-and-resolve-data-conflicts-for-merge-publications.md
+        - name: 檢視合併式發行集的衝突資訊 (複寫 Transact-SQL 程式設計)
+          href: view-conflict-information-for-merge-publications.md
+        - name: 檢視交易式發行集的資料衝突 (SQL Server Management Studio)
+          href: view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
+        - name: 使用 Windows Synchronization Manager 同步處理訂閱 (Windows Synchronization Manager)
+          href: synchronize-a-subscription-using-windows-synchronization-manager.md
+        - name: 在同步處理期間控制觸發程序和條件約束的行為 (複寫 Transact-SQL 程式設計)
+          href: control-behavior-of-triggers-and-constraints-in-synchronization.md
+        - name: 為合併發行項實作商務邏輯處理常式
+          href: implement-a-business-logic-handler-for-a-merge-article.md
+          items:
+            - name: 偵錯商務邏輯處理常式 (複寫程式設計)
+              href: debug-a-business-logic-handler-replication-programming.md
+        - name: 針對合併發行項實作自訂衝突解析程式
+          href: implement-a-custom-conflict-resolver-for-a-merge-article.md
+        - name: 將資料大量載入合併式發行集中的資料表 (複寫 Transact-SQL 程式設計)
+          href: bulk-load-data-into-tables-in-a-merge-publication.md
+    - name: 同步處理資料
+      href: synchronize-data.md
+    - name: 驗證複寫的資料
+      href: validate-replicated-data.md
+      items:
+        - name: 驗證合併訂閱者的資料分割資訊
+          href: validate-partition-information-for-a-merge-subscriber.md
+        - name: 驗證訂閱者端的資料
+          href: validate-data-at-the-subscriber.md
+    - name: 編寫複寫指令碼
+      href: scripting-replication.md
+- name: 技術參考
+  href: technical-reference-replication.md
+  items:
+    - name: 屬性參考
+      href: properties-reference-replication.md
+      items:
+        - name: 散發者屬性
+          href: distributor-properties.md
+          items:
+            - name: 散發者屬性，一般
+              href: distributor-properties-general.md
+            - name: 散發者屬性，發行者
+              href: distributor-properties-publishers.md
+            - name: 散發資料庫屬性
+              href: distribution-database-properties.md
+        - name: 發行者屬性
+          href: publisher-properties.md
+          items:
+            - name: 發行者屬性 - 散發者
+              href: publisher-properties-distributor.md
+            - name: 發行者屬性 - 發行者，一般
+              href: publisher-properties-publisher-general.md
+            - name: 發行者屬性 - 發行者，發行集資料庫
+              href: publisher-properties-publisher-publication-databases.md
+            - name: 發行者屬性 - 發行者，訂閱者
+              href: publisher-properties-publisher-subscribers.md
+        - name: 訂閱者屬性
+          href: subscriber-properties.md
+        - name: 發行集屬性 - <Publication>
+          href: publication-properties-publication.md
+          items:
+            - name: 發行集屬性，一般
+              href: publication-properties-general.md
+            - name: 發行集屬性，發行項
+              href: publication-properties-articles.md
+            - name: 發行集屬性，篩選資料列
+              href: publication-properties-filter-rows.md
+            - name: 發行集屬性，快照集
+              href: publication-properties-snapshot.md
+            - name: 發行集屬性，FTP 快照集和網際網路
+              href: publication-properties-ftp-snapshot-and-internet.md
+            - name: 發行集屬性，訂閱選項
+              href: publication-properties-subscription-options.md
+            - name: 發行集屬性，發行集存取清單
+              href: publication-properties-publication-access-list.md
+            - name: 發行集屬性，代理程式安全性
+              href: publication-properties-agent-security.md
+            - name: 發行集屬性，資料分割
+              href: publication-properties-data-partitions.md
+        - name: 發行項屬性 - <Article>
+          href: article-properties-article.md
+        - name: 訂閱屬性 - <Subscription>
+          href: subscription-properties-subscription.md
+          items:
+            - name: 訂閱屬性 - 訂閱者
+              href: subscription-properties-subscriber.md
+            - name: 訂閱屬性 - 發行者
+              href: subscription-properties-publisher.md
+    - name: 工具參考
+      href: tools-reference-replication.md
+      items:
+        - name: 複寫監視器
+          href: replication-monitor.md
+          items:
+            - name: 複寫監視器，主要頁面
+              href: replication-monitor-main-page.md
+            - name: 加入發行者
+              href: add-publisher.md
+            - name: 散發者設定
+              href: distributor-settings.md
+            - name: 散發者資訊，發行集
+              href: distributor-information-publications.md
+            - name: 散發者資訊，訂閱監看清單 (交易式發行集，SQL Server 2005 和更新的版本)
+              href: distributor-info-subscription-watch-list-transaction-pub-sql-2005.md
+            - name: 散發者資訊，訂閱監看清單 (合併式發行集，SQL Server 2005 和更新的版本)
+              href: distributor-info-subscription-watch-list-merge-pub-sql-2005.md
+            - name: 散發者資訊，訂閱監看清單 (快照式發行集，SQL Server 2005 和更新的版本)
+              href: distributor-info-subscription-watch-list-snapshot-pub-sql-2005.md
+            - name: 散發者資訊，代理程式
+              href: distributor-information-agents.md
+            - name: 發行者設定
+              href: publisher-settings.md
+            - name: 發行者資訊，發行集
+              href: publisher-information-publications.md
+            - name: 發行者資訊，訂閱監看清單 (交易式發行集，SQL Server 2005 和更新的版本)
+              href: publisher-information-subscription-watch-list-transactional.md
+            - name: 發行者資訊，訂閱監看清單 (合併式發行集，SQL Server 2005 和更新的版本)
+              href: publisher-information-subscription-watch-list-merge-publication.md
+            - name: 發行者資訊，訂閱監看清單 (快照式發行集，SQL Server 2005 和更新的版本)
+              href: publisher-information-subscription-watch-list-snapshot.md
+            - name: 發行者資訊，代理程式
+              href: publisher-information-agents.md
+            - name: 發行集資訊，所有訂閱 (交易式發行集)
+              href: publication-information-all-subscriptions-transactional-publication.md
+            - name: 發行集資訊，所有訂閱 (合併式發行集)
+              href: publication-information-all-subscriptions-merge-publication.md
+            - name: 發行集資訊，所有訂閱 (快照式發行集)
+              href: publication-information-all-subscriptions-snapshot-publication.md
+            - name: 發行集資訊，警告 (交易式發行集，SQL Server 2005 和更新的版本)
+              href: publication-information-warnings-transactional-publication.md
+            - name: 發行集資訊，警告 (合併式發行集，SQL Server 2005 和更新的版本)
+              href: publication-information-warnings-merge-publication-sql-server-2005-and-later.md
+            - name: 發行集資訊，警告 (快照式發行集，SQL Server 2005 和更新的版本)
+              href: publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md
+            - name: 發行集資訊，代理程式 (交易式發行集)
+              href: publication-information-agents-transactional-publication.md
+            - name: 發行集資訊，代理程式 (合併式發行集)
+              href: publication-information-agents-merge-publication.md
+            - name: 發行集資訊，代理程式 (快照式發行集)
+              href: publication-information-agents-snapshot-publication.md
+            - name: 發行集資訊、追蹤 Token (交易式發行集、SQL Server 2005 和更新的版本)
+              href: publication-information-tracer-tokens-sql-server-2005-and-later.md
+            - name: 訂閱，未散發的命令 (交易式訂閱，SQL Server 2005 和更新的版本)
+              href: subscription-undistributed-commands-transactional-subscription.md
+            - name: 訂閱，發行者到散發者記錄 (交易式訂閱)
+              href: subscription-publisher-to-distributor-history-transactional-subscription.md
+            - name: 訂閱，散發者到訂閱者記錄 (交易式訂閱)
+              href: subscription-distributor-to-subscriber-history-transactional-subscription.md
+            - name: 訂閱，同步處理記錄 (合併訂閱，SQL Server 2005 和更新的版本)
+              href: subscription-synchronization-history.md
+            - name: 訂閱，同步處理記錄 (合併訂閱，SQL Server 2000)
+              href: subscription-synchronization-history-merge-subscription-sql-server-2000.md
+            - name: 訂閱，散發者到訂閱者記錄 (快照式訂閱)
+              href: subscription-distributor-to-subscriber-history-snapshot-subscription.md
+            - name: 記錄讀取器代理程式
+              href: log-reader-agent.md
+            - name: 佇列讀取器代理程式
+              href: queue-reader-agent.md
+            - name: 快照集代理程式
+              href: snapshot-agent.md
+            - name: 篩選設定
+              href: filter-settings.md
+            - name: 排序資料行
+              href: sort-columns.md
+        - name: 設定散發精靈
+          href: configure-distribution-wizard.md
+          items:
+            - name: 散發者
+              href: distributor.md
+            - name: 快照集資料夾
+              href: snapshot-folder.md
+            - name: 散發資料庫
+              href: distribution-database.md
+            - name: '[散發者屬性]'
+              href: publishers.md
+            - name: 散發者密碼
+              href: distributor-password.md
+        - name: New Publication Wizard
+          href: new-publication-wizard.md
+          items:
+            - name: Oracle 發行者
+              href: oracle-publisher.md
+            - name: 管理密碼
+              href: administrative-password.md
+            - name: 發行集資料庫
+              href: publication-database.md
+            - name: 發行集類型
+              href: publication-type.md
+            - name: 訂閱者類型
+              href: subscriber-types.md
+            - name: 代理程式安全性 (新增發行集精靈)
+              href: agent-security-new-publication-wizard.md
+            - name: 發行項
+              href: articles.md
+            - name: 發行項的問題
+              href: article-issues.md
+            - name: 篩選資料表的資料列
+              href: filter-table-rows.md
+            - name: 加入或編輯篩選
+              href: add-or-edit-filter.md
+            - name: 加入或編輯聯結
+              href: add-or-edit-join.md
+            - name: 產生篩選
+              href: generate-filters.md
+            - name: 快照集代理程式 (新增發行集精靈)
+              href: snapshot-agent-new-publication-wizard.md
+        - name: 新增訂閱精靈 (UI 參考)
+          href: new-subscription-wizard-ui-reference.md
+          items:
+            - name: <AgentName> 代理程式位置
+              href: agentname-agent-location.md
+            - name: 訂閱者
+              href: subscribers.md
+            - name: 加入非 SQL Server 訂閱者
+              href: add-non-sql-server-subscriber.md
+            - name: <AgentName> 代理程式安全性
+              href: agentname-agent-security.md
+            - name: 可更新的訂閱
+              href: updatable-subscriptions.md
+            - name: 可更新訂閱的登入
+              href: login-for-updatable-subscriptions.md
+            - name: 初始化訂閱
+              href: initialize-subscriptions.md
+            - name: Web 伺服器資訊
+              href: web-server-information.md
+            - name: 訂閱類型
+              href: subscription-type.md
+            - name: HOST_NAME 值
+              href: host-name-values.md
+        - name: 設定點對點拓撲精靈
+          href: configure-peer-to-peer-topology-wizard.md
+          items:
+            - name: 發行集 (點對點複寫)
+              href: publication-peer-to-peer-replication.md
+            - name: 設定拓撲 (點對點複寫)
+              href: configure-topology-peer-to-peer-replication.md
+            - name: 記錄讀取器代理程式安全性 (點對點複寫)
+              href: log-reader-agent-security-peer-to-peer-replication.md
+            - name: 散發代理程式安全性 (點對點複寫)
+              href: distribution-agent-security-peer-to-peer-replication.md
+            - name: 新的對等 (Peer) 初始化 (點對點複寫)
+              href: new-peer-initialization-peer-to-peer-replication.md
+        - name: Microsoft 複寫衝突檢視器和互動解析程式
+          href: microsoft-replication-conflict-viewer-and-interactive-resolver.md
+          items:
+            - name: Microsoft 複寫衝突檢視器 (合併式複寫)
+              href: microsoft-replication-conflict-viewer-merge-replication.md
+            - name: Microsoft 複寫衝突檢視器 (異動複寫)
+              href: microsoft-replication-conflict-viewer-transactional-replication.md
+            - name: Microsoft Replication Interactive Conflict Resolver
+              href: microsoft-replication-interactive-conflict-resolver.md
+            - name: 定義篩選
+              href: define-filters.md
+        - name: SQL Server Management Studio 複寫對話方塊
+          href: sql-server-management-studio-replication-dialog-boxes.md
+          items:
+            - name: 快照集代理程式安全性
+              href: snapshot-agent-security.md
+            - name: 記錄讀取器代理程式安全性
+              href: log-reader-agent-security.md
+            - name: 散發代理程式安全性
+              href: distribution-agent-security.md
+            - name: 合併代理程式安全性
+              href: merge-agent-security.md
+            - name: 佇列讀取器代理程式安全性
+              href: queue-reader-agent-security.md
+            - name: 代理程式設定檔 (單一代理程式)
+              href: agent-profiles-single-agent.md
+            - name: 代理程式設定檔
+              href: agent-profiles.md
+            - name: <AgentProfileName> 屬性
+              href: agentprofilename-properties.md
+            - name: 新增代理程式設定檔
+              href: new-agent-profile.md
+            - name: 驗證所有訂閱
+              href: validate-all-subscriptions.md
+            - name: 驗證多個訂閱
+              href: validate-subscriptions.md
+            - name: 驗證訂閱
+              href: validate-subscription.md
+            - name: 訂閱驗證選項 (交易式訂閱)
+              href: subscription-validation-options-transactional-subscriptions.md
+            - name: 訂閱驗證選項 (合併訂閱)
+              href: subscription-validation-options-merge-subscriptions.md
+            - name: 重新初始化訂閱 - 所有訂閱
+              href: reinitialize-subscription-s-all-subscriptions.md
+            - name: 重新初始化訂閱 - 一個訂閱
+              href: reinitialize-subscription-s-one-subscription.md
+            - name: 產生 SQL 指令碼 (複寫物件)
+              href: generate-sql-script-replication-objects.md
+            - name: 連接到伺服器 (Oracle)，登入
+              href: connect-to-server-oracle-login.md
+            - name: 連接到伺服器 (Oracle)，連接屬性
+              href: connect-to-server-oracle-connection-properties.md
+    - name: 錯誤和事件參考
+      href: errors-and-events-reference-replication.md
+      items:
+        - name: 錯誤 2000-5000
+          items:
+            - name: 2601
+              href: mssql-eng002601.md
+            - name: 2627
+              href: mssql-eng002627.md
+            - name: 3165
+              href: mssql-eng003165.md
+            - name: 3724
+              href: mssql-eng003724.md
+            - name: 4929
+              href: mssql-eng004929.md
+        - name: '錯誤 14,000-19,000'
+          items:
+            - name: 14005
+              href: mssql-eng014005.md
+            - name: 14010
+              href: mssql-eng014010.md
+            - name: 14114
+              href: mssql-eng014114.md
+            - name: 14117
+              href: mssql-eng014117.md
+            - name: 14120
+              href: mssql-eng014120.md
+            - name: 14121
+              href: mssql-eng014121.md
+            - name: 14144
+              href: mssql-eng014144.md
+            - name: 14150
+              href: mssql-eng014150.md
+            - name: 14151
+              href: mssql-eng014151.md
+            - name: 14152
+              href: mssql-eng014152.md
+            - name: 14157
+              href: mssql-eng014157.md
+            - name: 14160
+              href: mssql-eng014160.md
+            - name: 14161
+              href: mssql-eng014161.md
+            - name: 14162
+              href: mssql-eng014162.md
+            - name: 14163
+              href: mssql-eng014163.md
+            - name: 14164
+              href: mssql-eng014164.md
+            - name: 14165
+              href: mssql-eng014165.md
+            - name: 18456
+              href: mssql-eng018456.md
+            - name: 18752
+              href: mssql-eng018752.md
+        - name: '錯誤 20,000-27,000'
+          items:
+            - name: 20011
+              href: mssql-repl020011.md
+            - name: 20554
+              href: mssql-eng020554.md
+            - name: 20557
+              href: mssql-eng020557.md
+            - name: 20572
+              href: mssql-eng020572.md
+            - name: 20574
+              href: mssql-eng020574.md
+            - name: 20575
+              href: mssql-eng020575.md
+            - name: 20596
+              href: mssql-eng020596.md
+            - name: 20598
+              href: mssql-eng020598.md
+            - name: 21075
+              href: mssql-eng021075.md
+            - name: 21076
+              href: mssql-eng021076.md
+            - name: 21286
+              href: mssql-eng021286.md
+            - name: 21330
+              href: mssql-eng021330.md
+            - name: 21331
+              href: mssql-eng021331.md
+            - name: 21385
+              href: mssql-eng021385.md
+            - name: 21797
+              href: mssql-eng021797.md
+            - name: 21798
+              href: mssql-eng021798.md
+            - name: 24070
+              href: mssql-eng024070.md
+            - name: 27056
+              href: mssql-repl027056.md
+            - name: 27183
+              href: mssql-repl027183.md
+        - name: 複寫錯誤 2147198000+
+          items:
+            - name: 2147198698
+              href: mssql-repl-2147198698.md
+            - name: 2147199363
+              href: mssql-repl-2147199363.md
+            - name: 2147199371
+              href: mssql-repl-2147199371.md
+            - name: 2147199376
+              href: mssql-repl-2147199376.md
+            - name: 2147199389
+              href: mssql-repl-2147199389.md
+            - name: 2147199390
+              href: mssql-repl-2147199390.md
+            - name: 2147199398
+              href: mssql-repl-2147199398.md
+            - name: 2147199401
+              href: mssql-repl-2147199401.md
+            - name: 2147199402
+              href: mssql-repl-2147199402.md
+            - name: 2147199416
+              href: mssql-repl-2147199416.md
+            - name: 2147199417
+              href: mssql-repl-2147199417.md
+            - name: 2147199420
+              href: mssql-repl-2147199420.md
+            - name: 2147199429
+              href: mssql-repl-2147199429.md
+            - name: 2147199431
+              href: mssql-repl-2147199431.md
+            - name: 2147199464
+              href: mssql-repl-2147199464.md
+            - name: 2147199466
+              href: mssql-repl-2147199466.md
+            - name: 2147200928
+              href: mssql-repl-2147200928.md
+            - name: 2147200940
+              href: mssql-repl-2147200940.md
+            - name: 2147200941
+              href: mssql-repl-2147200941.md
+            - name: 2147200950
+              href: mssql-repl-2147200950.md
+            - name: 2147200953
+              href: mssql-repl-2147200953.md
+            - name: 2147200968
+              href: mssql-repl-2147200968.md
+            - name: 2147200980
+              href: mssql-repl-2147200980.md
+            - name: 2147200989
+              href: mssql-repl-2147200989.md
+            - name: 2147200990
+              href: mssql-repl-2147200990.md
+            - name: 2147201001
+              href: mssql-repl-2147201001.md
+            - name: 2147201005
+              href: mssql-repl-2147201005.md
+            - name: 2147201007
+              href: mssql-repl-2147201007.md
+            - name: 2147201021
+              href: mssql-repl-2147201021.md
+- name: Replication 語言參考
+  href: replication-language-reference.md
+- name: 複寫教學課程
+  href: replication-tutorials.md
+  items:
+    - name: 準備伺服器以進行複寫
+      href: tutorial-preparing-the-server-for-replication.md
+    - name: 設定異動複寫
+      href: tutorial-replicating-data-between-continuously-connected-servers.md
+    - name: 設定合併式複寫
+      href: tutorial-replicating-data-with-mobile-clients.md
+- name: 疑難排解程式
+  items:
+    - name: 尋找具有異動複寫的錯誤
+      href: troubleshoot-tran-repl-errors.md

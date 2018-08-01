@@ -1,0 +1,260 @@
+- name: ODBC 參考
+  href: odbc-reference.md
+- name: 函式摘要
+  href: function-summary.md
+  items:
+    - name: 安裝程式 DLL 函式摘要
+      href: installer-dll-function-summary.md
+    - name: ODBC 函式摘要
+      href: odbc-function-summary.md
+    - name: ODBC 服務提供者介面摘要
+      href: odbc-service-provider-interface-summary.md
+    - name: 安裝程式 DLL 函式摘要
+      href: setup-dll-function-summary.md
+    - name: 轉譯 DLL 函式摘要
+      href: translation-dll-function-summary.md
+- name: ODBC API 參考
+  href: odbc-api-reference.md
+  items:
+    - name: SQLAllocConnect 函式
+      href: sqlallocconnect-function.md
+    - name: SQLAllocEnv 函式
+      href: sqlallocenv-function.md
+    - name: SQLAllocHandle 函式
+      href: sqlallochandle-function.md
+    - name: SQLAllocStmt 函式
+      href: sqlallocstmt-function.md
+    - name: SQLBindCol 函數
+      href: sqlbindcol-function.md
+    - name: SQLBindParameter 函數
+      href: sqlbindparameter-function.md
+    - name: SQLBrowseConnect 函數
+      href: sqlbrowseconnect-function.md
+    - name: SQLBulkOperations 函式
+      href: sqlbulkoperations-function.md
+    - name: SQLCancel 函式
+      href: sqlcancel-function.md
+    - name: SQLCancelHandle 函式
+      href: sqlcancelhandle-function.md
+    - name: SQLCloseCursor 函式
+      href: sqlclosecursor-function.md
+    - name: SQLColAttribute 函數
+      href: sqlcolattribute-function.md
+    - name: SQLColAttributes 函式
+      href: sqlcolattributes-function.md
+    - name: SQLColumnPrivileges 函數
+      href: sqlcolumnprivileges-function.md
+    - name: SQLColumns 函數
+      href: sqlcolumns-function.md
+    - name: SQLCompleteAsync 函式
+      href: sqlcompleteasync-function.md
+    - name: SQLConnect 函數
+      href: sqlconnect-function.md
+    - name: SQLCopyDesc 函式
+      href: sqlcopydesc-function.md
+    - name: SQLDataSources 函式
+      href: sqldatasources-function.md
+    - name: SQLDescribeCol 函數
+      href: sqldescribecol-function.md
+    - name: SQLDescribeParam 函數
+      href: sqldescribeparam-function.md
+    - name: SQLDisconnect 函式
+      href: sqldisconnect-function.md
+    - name: SQLDriverConnect 函數
+      href: sqldriverconnect-function.md
+    - name: SQLDrivers 函式
+      href: sqldrivers-function.md
+    - name: SQLEndTran 函數
+      href: sqlendtran-function.md
+    - name: SQLError 函式
+      href: sqlerror-function.md
+    - name: SQLExecDirect 函式
+      href: sqlexecdirect-function.md
+    - name: SQLExecute 函式
+      href: sqlexecute-function.md
+    - name: SQLExtendedFetch 函式
+      href: sqlextendedfetch-function.md
+    - name: SQLFetch 函式
+      href: sqlfetch-function.md
+    - name: SQLFetchScroll 函數
+      href: sqlfetchscroll-function.md
+    - name: SQLForeignKeys 函數
+      href: sqlforeignkeys-function.md
+    - name: SQLFreeConnect 函式
+      href: sqlfreeconnect-function.md
+    - name: SQLFreeEnv 函式
+      href: sqlfreeenv-function.md
+    - name: SQLFreeHandle 函數
+      href: sqlfreehandle-function.md
+    - name: SQLFreeStmt 函數
+      href: sqlfreestmt-function.md
+    - name: SQLGetConnectAttr 函數
+      href: sqlgetconnectattr-function.md
+    - name: SQLGetConnectOption 函式
+      href: sqlgetconnectoption-function.md
+    - name: SQLGetCursorName 函數
+      href: sqlgetcursorname-function.md
+    - name: SQLGetData 函數
+      href: sqlgetdata-function.md
+    - name: SQLGetDescField 函數
+      href: sqlgetdescfield-function.md
+    - name: SQLGetDescRec 函式
+      href: sqlgetdescrec-function.md
+    - name: SQLGetDiagField 函數
+      href: sqlgetdiagfield-function.md
+    - name: SQLGetDiagRec 函式
+      href: sqlgetdiagrec-function.md
+    - name: SQLGetEnvAttr 函式
+      href: sqlgetenvattr-function.md
+    - name: SQLGetFunctions 函數
+      href: sqlgetfunctions-function.md
+    - name: SQLGetInfo 函數
+      href: sqlgetinfo-function.md
+    - name: SQLGetStmtAttr 函數
+      href: sqlgetstmtattr-function.md
+    - name: SQLGetStmtOption 函式
+      href: sqlgetstmtoption-function.md
+    - name: SQLGetTypeInfo 函數
+      href: sqlgettypeinfo-function.md
+    - name: SQLMoreResults 函數
+      href: sqlmoreresults-function.md
+    - name: SQLNativeSql 函數
+      href: sqlnativesql-function.md
+    - name: SQLNumParams 函數
+      href: sqlnumparams-function.md
+    - name: SQLNumResultCols 函數
+      href: sqlnumresultcols-function.md
+    - name: SQLParamData 函式
+      href: sqlparamdata-function.md
+    - name: SQLParamOptions 函式
+      href: sqlparamoptions-function.md
+    - name: SQLPrepare 函數
+      href: sqlprepare-function.md
+    - name: SQLPrimaryKeys 函數
+      href: sqlprimarykeys-function.md
+    - name: SQLProcedureColumns 函數
+      href: sqlprocedurecolumns-function.md
+    - name: SQLProcedures 函數
+      href: sqlprocedures-function.md
+    - name: SQLPutData 函數
+      href: sqlputdata-function.md
+    - name: SQLRowCount 函數
+      href: sqlrowcount-function.md
+    - name: SQLSetConnectAttr 函數
+      href: sqlsetconnectattr-function.md
+    - name: SQLSetConnectOption 函式
+      href: sqlsetconnectoption-function.md
+    - name: SQLSetCursorName 函式
+      href: sqlsetcursorname-function.md
+    - name: SQLSetDescField 函式
+      href: sqlsetdescfield-function.md
+    - name: SQLSetDescRec 函式
+      href: sqlsetdescrec-function.md
+    - name: SQLSetEnvAttr 函數
+      href: sqlsetenvattr-function.md
+    - name: SQLSetParam 函式
+      href: sqlsetparam-function.md
+    - name: SQLSetPos 函式
+      href: sqlsetpos-function.md
+    - name: SQLSetScrollOptions 函式
+      href: sqlsetscrolloptions-function.md
+    - name: SQLSetStmtAttr 函數
+      href: sqlsetstmtattr-function.md
+    - name: SQLSetStmtOption 函式
+      href: sqlsetstmtoption-function.md
+    - name: SQLSpecialColumns 函數
+      href: sqlspecialcolumns-function.md
+    - name: SQLStatistics 函數
+      href: sqlstatistics-function.md
+    - name: SQLTablePrivileges 函數
+      href: sqltableprivileges-function.md
+    - name: SQLTables 函數
+      href: sqltables-function.md
+    - name: SQLTransact 函式
+      href: sqltransact-function.md
+- name: 安裝程式 DLL API 參考
+  href: setup-dll-api-reference.md
+  items:
+    - name: ConfigDriver 函式
+      href: configdriver-function.md
+    - name: ConfigDSN 函式
+      href: configdsn-function.md
+    - name: ConfigTranslator 函式
+      href: configtranslator-function.md
+- name: 安裝程式 DLL API 參考函式
+  href: installer-dll-api-reference-function.md
+  items:
+    - name: SQLConfigDataSource 函數 (英文)
+      href: sqlconfigdatasource-function.md
+    - name: SQLConfigDriver 函式
+      href: sqlconfigdriver-function.md
+    - name: SQLCreateDataSource 函式
+      href: sqlcreatedatasource-function.md
+    - name: SQLGetConfigMode 函式
+      href: sqlgetconfigmode-function.md
+    - name: SQLGetInstalledDrivers 函式
+      href: sqlgetinstalleddrivers-function.md
+    - name: SQLGetPrivateProfileString 函式
+      href: sqlgetprivateprofilestring-function.md
+    - name: SQLGetTranslator 函式
+      href: sqlgettranslator-function.md
+    - name: SQLInstallDriverEx 函式
+      href: sqlinstalldriverex-function.md
+    - name: SQLInstallDriverManager 函式
+      href: sqlinstalldrivermanager-function.md
+    - name: SQLInstallerError 函式
+      href: sqlinstallererror-function.md
+    - name: SQLInstallTranslator 函式
+      href: sqlinstalltranslator-function.md
+    - name: SQLInstallTranslatorEx 函式
+      href: sqlinstalltranslatorex-function.md
+    - name: SQLManageDataSources
+      href: sqlmanagedatasources.md
+    - name: SQLPostInstallerError 函式
+      href: sqlpostinstallererror-function.md
+    - name: SQLReadFileDSN 函式
+      href: sqlreadfiledsn-function.md
+    - name: SQLRemoveDefaultDataSource 函式
+      href: sqlremovedefaultdatasource-function.md
+    - name: SQLRemoveDriver 函式
+      href: sqlremovedriver-function.md
+    - name: SQLRemoveDriverManager 函式
+      href: sqlremovedrivermanager-function.md
+    - name: SQLRemoveDSNFromIni 函式
+      href: sqlremovedsnfromini-function.md
+    - name: SQLRemoveTranslator 函式
+      href: sqlremovetranslator-function.md
+    - name: SQLSetConfigMode 函式
+      href: sqlsetconfigmode-function.md
+    - name: SQLValidDSN 函式
+      href: sqlvaliddsn-function.md
+    - name: SQLWriteDSNToIni 函式
+      href: sqlwritedsntoini-function.md
+    - name: SQLWriteFileDSN 函式
+      href: sqlwritefiledsn-function.md
+    - name: SQLWritePrivateProfileString 函式
+      href: sqlwriteprivateprofilestring-function.md
+- name: 轉譯 DLL API 參考
+  href: translation-dll-api-reference.md
+  items:
+    - name: SQLDataSourceToDriver 函式
+      href: sqldatasourcetodriver-function.md
+    - name: SQLDriverToDataSource 函式
+      href: sqldrivertodatasource-function.md
+- name: ODBC 服務提供者介面 (SPI) 參考
+  href: odbc-service-provider-interface-spi-reference.md
+  items:
+    - name: SQLCleanupConnectionPoolID 函式
+      href: sqlcleanupconnectionpoolid-function.md
+    - name: SQLGetPoolID 函式
+      href: sqlgetpoolid-function.md
+    - name: SQLPoolConnect 函式
+      href: sqlpoolconnect-function.md
+    - name: SQLRateConnection 函式
+      href: sqlrateconnection-function.md
+    - name: SQLSetConnectAttrForDbcInfo 函式
+      href: sqlsetconnectattrfordbcinfo-function.md
+    - name: SQLSetConnectInfo 函式
+      href: sqlsetconnectinfo-function.md
+    - name: SQLSetDriverConnectInfo 函式
+      href: installation-and-configuration-wwi-oltp.md

@@ -1,0 +1,20 @@
+- name: 使用資料指標 (ODBC)
+  href: using-cursors-odbc.md
+- name: 特定區域
+  items:
+    - name: 實作 +
+      href: ../../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md
+    - name: 屬性 +
+      href: ../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md
+    - name: 程式設計 +
+      href: ../../relational-databases/native-client-odbc-cursors/programming/cursor-programming-details-odbc.md
+- name: 資料指標行為
+  href: cursor-behaviors.md
+- name: 資料指標類型
+  href: cursor-types.md
+- name: 定位更新 (ODBC)
+  href: positioned-updates-odbc.md
+- name: 捲動和擷取資料列 - ODBC 中的書籤資料列
+  href: scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md
+- name: 捲動與提取資料列
+  href: scrolling-and-fetching-rows.md

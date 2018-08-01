@@ -1,0 +1,46 @@
+- name: 概觀
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: 保護 SQL Server 的安全
+  href: securing-sql-server.md
+- name: 稽核
+  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
+- name: 驗證-存取
+  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+- name: 加密
+  href: ../../relational-databases/security/encryption/sql-server-encryption.md
+- name: 保護 SQL Server 智慧財產權
+  href: protecting-your-sql-server-intellectual-property.md
+- name: '[安全性實體]'
+  href: securables.md
+- name: 自主的資料庫使用者 - 使資料庫可攜
+  href: contained-database-users-making-your-database-portable.md
+- name: 選擇驗證模式
+  href: choose-an-authentication-mode.md
+- name: 中繼資料可見性組態
+  href: metadata-visibility-configuration.md
+- name: 介面區組態
+  href: surface-area-configuration.md
+- name: SQL 資料隱碼
+  href: sql-injection.md
+- name: SQL 弱點評定
+  href: sql-vulnerability-assessment.md
+- name: SQL 資料探索與分類
+  href: sql-data-discovery-and-classification.md
+- name: TRUSTWORTHY 資料庫屬性
+  href: trustworthy-database-property.md
+- name: '[權限]'
+  href: permissions-database-engine.md
+- name: 權限階層
+  href: permissions-hierarchy-database-engine.md
+- name: 權限或安全性實體頁面
+  href: permissions-or-securables-page.md
+- name: 密碼原則
+  href: password-policy.md
+- name: 增強式密碼
+  href: strong-passwords.md
+- name: 資料列層級安全性
+  href: row-level-security.md
+- name: 動態資料遮罩
+  href: dynamic-data-masking.md
+- name: SQL Server 憑證與非對稱金鑰
+  href: sql-server-certificates-and-asymmetric-keys.md

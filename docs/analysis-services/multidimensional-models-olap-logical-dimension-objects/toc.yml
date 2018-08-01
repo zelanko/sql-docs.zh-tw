@@ -1,0 +1,28 @@
+- name: '中，使用 [維度設計師] 的'
+  href: attribute-relationships.md
+- name: 屬性和屬性階層
+  href: attributes-and-attribute-hierarchies.md
+- name: 資料庫維度屬性 - 類型
+  href: database-dimension-properties-types.md
+- name: 資料庫維度屬性
+  href: database-dimension-properties.md
+- name: 維度物件 (Analysis Services - 多維度資料)
+  href: dimension-objects-analysis-services-multidimensional-data.md
+- name: 維度翻譯
+  href: dimension-translations.md
+- name: 維度 - 簡介
+  href: dimensions-introduction.md
+- name: 維度 - 儲存體
+  href: dimensions-storage.md
+- name: 維度 (Analysis Services - 多維度資料)
+  href: dimensions-analysis-services-multidimensional-data.md
+- name: 主動式快取 (維度)
+  href: proactive-caching-dimensions.md
+- name: 使用者階層 - 層級屬性
+  href: user-hierarchies-level-properties.md
+- name: 使用者階層 - 屬性
+  href: user-hierarchies-properties.md
+- name: 使用者階層
+  href: user-hierarchies.md
+- name: 可寫入維度
+  href: write-enabled-dimensions.md

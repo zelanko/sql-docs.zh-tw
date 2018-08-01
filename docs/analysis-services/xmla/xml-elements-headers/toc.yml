@@ -1,0 +1,10 @@
+- name: XMLA 項目 - 標頭
+  href: xml-elements-headers.md
+- name: BeginSession 元素 (XMLA)
+  href: beginsession-element-xmla.md
+- name: EndSession 元素 (XMLA)
+  href: endsession-element-xmla.md
+- name: ProtocolCapabilities 元素 (XMLA)
+  href: protocolcapabilities-element-xmla.md
+- name: Session 元素 (XMLA)
+  href: session-element-xmla.md

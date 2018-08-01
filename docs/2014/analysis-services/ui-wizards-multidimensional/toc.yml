@@ -1,0 +1,195 @@
+- name: 多維度 UI 精靈
+  href: ui-wizards-multidimensional.md
+- name: Analysis Services 精靈 (多維度)
+  href: ../analysis-services-wizards-multidimensional-data.md
+- name: 彙總設計精靈 F1 說明
+  href: ../aggregation-design-wizard-f1-help.md
+  items:
+    - name: 選取要修改的資料分割 (彙總設計精靈)
+      href: ../select-partitions-to-modify-aggregation-design-wizard.md
+    - name: 檢閱彙總使用方式 (彙總設計精靈)
+      href: ../review-aggregation-usage-aggregation-design-wizard.md
+    - name: 指定物件計數 (彙總設計精靈)
+      href: ../specify-object-counts-aggregation-design-wizard.md
+    - name: 設定彙總選項 (彙總設計精靈)
+      href: ../set-aggregation-options-aggregation-design-wizard.md
+    - name: 正在完成精靈 (彙總設計精靈)
+      href: ../completing-the-wizard-aggregation-design-wizard.md
+- name: 商業智慧精靈 F1 說明
+  href: ../business-intelligence-wizard-f1-help.md
+  items:
+    - name: 選擇增強功能 (商業智慧精靈)
+      href: ../choose-enhancement-business-intelligence-wizard.md
+    - name: 選擇時間計算 (商業智慧精靈)
+      href: ../choose-time-calculations-business-intelligence-wizard.md
+    - name: 定義計算範圍 (商業智慧精靈)
+      href: ../define-scope-of-calculations-business-intelligence-wizard.md
+    - name: 定義帳戶智慧 (維度) (商業智慧精靈)
+      href: ../define-account-intelligence-dimension-business-intelligence-wizard.md
+    - name: 設定維度屬性 (商業智慧精靈)
+      href: ../configure-dimension-attributes-business-intelligence-wizard.md
+    - name: 定義帳戶智慧 (商業智慧精靈)
+      href: ../define-account-intelligence-business-intelligence-wizard.md
+    - name: 設定維度智慧選項 (商業智慧精靈)
+      href: ../set-dimension-intelligence-options-business-intelligence-wizard.md
+    - name: 定義維度智慧 (商業智慧精靈)
+      href: ../define-dimension-intelligence-business-intelligence-wizard.md
+    - name: 指定一元運算子 (維度) (商業智慧精靈)
+      href: ../specify-a-unary-operator-dimension-business-intelligence-wizard.md
+    - name: 指定一元運算子 (商業智慧精靈)
+      href: ../specify-a-unary-operator-business-intelligence-wizard.md
+    - name: 建立自訂成員公式 (維度) (商業智慧精靈)
+      href: ../create-a-custom-member-formula-dimension-business-intelligence-wizard.md
+    - name: 建立自訂成員公式 (商業智慧精靈)
+      href: ../create-a-custom-member-formula-business-intelligence-wizard.md
+    - name: 指定屬性排序方式 (維度) (商業智慧精靈)
+      href: ../specify-attribute-ordering-dimension-business-intelligence-wizard.md
+    - name: 指定屬性排序方式 (商業智慧精靈)
+      href: ../specify-attribute-ordering-business-intelligence-wizard.md
+    - name: 啟用維度回寫 (維度) (商業智慧精靈)
+      href: ../enable-dimension-writeback-dimension-business-intelligence-wizard.md
+    - name: 啟用維度回寫 (商業智慧精靈)
+      href: ../enable-dimension-writeback-business-intelligence-wizard.md
+    - name: 定義局部加總行為 (商業智慧精靈)
+      href: ../define-semiadditive-behavior-business-intelligence-wizard.md
+    - name: 設定貨幣轉換選項 (商業智慧精靈)
+      href: ../set-currency-conversion-options-business-intelligence-wizard.md
+    - name: 選取成員 (商業智慧精靈)
+      href: ../select-members-business-intelligence-wizard.md
+    - name: 選取轉換類型 (商業智慧精靈)
+      href: ../select-conversion-type-business-intelligence-wizard.md
+    - name: 定義本地貨幣參考 (商業智慧精靈)
+      href: ../define-local-currency-reference-business-intelligence-wizard.md
+    - name: 指定報表貨幣 (商業智慧精靈)
+      href: ../specify-reporting-currencies-business-intelligence-wizard.md
+    - name: 定義貨幣轉換 (商業智慧精靈)
+      href: ../define-currency-conversion-business-intelligence-wizard.md
+    - name: 選取資料行對話方塊 (商業智慧精靈)
+      href: ../select-a-column-dialog-box-business-intelligence-wizard.md
+    - name: 正在完成精靈 (商業智慧精靈)
+      href: ../completing-the-wizard-business-intelligence-wizard.md
+- name: Cube 精靈 F1 說明
+  href: ../cube-wizard-f1-help.md
+  items:
+    - name: 選取建立方法 (Cube 精靈)
+      href: ../select-creation-method-cube-wizard.md
+    - name: 選取資料來源檢視 (Cube 精靈)
+      href: ../select-a-data-source-view-cube-wizard.md
+    - name: 選取量值群組資料表 (Cube 精靈)
+      href: ../select-measure-group-tables-cube-wizard.md
+    - name: 定義新的量值 (Cube 精靈)
+      href: ../define-new-measures-cube-wizard.md
+    - name: 選取量值 (Cube 精靈)
+      href: ../select-measures-cube-wizard.md
+    - name: 選取現有維度 (Cube 精靈)
+      href: ../select-existing-dimensions-cube-wizard.md
+    - name: 選取新維度 (Cube 精靈)
+      href: ../select-new-dimensions-cube-wizard.md
+    - name: 選取遺漏維度索引鍵 (Cube 精靈)
+      href: ../select-missing-dimension-keys-cube-wizard.md
+    - name: 正在完成精靈 (Cube 精靈)
+      href: ../completing-the-wizard-cube-wizard.md
+- name: 資料來源精靈 F1 說明
+  href: ../data-source-wizard-f1-help-analysis-services.md
+  items:
+    - name: 選取如何定義連接 (資料來源精靈)
+      href: ../select-how-to-define-the-connection-data-source-wizard-analysis-services.md
+    - name: 模擬資訊
+      href: ../impersonation-information.md
+    - name: 從現有物件中建立資料來源 (資料來源精靈)
+      href: ../data-sources-from-existing-objects-data-source-wizard-analysis-services.md
+    - name: 正在完成精靈
+      href: ../completing-the-wizard-data-source-wizard-analysis-services.md
+- name: 資料來源檢視精靈 F1 說明
+  href: ../data-source-view-wizard-f1-help-analysis-services.md
+  items:
+    - name: 選取資料來源 (資料來源檢視精靈)
+      href: ../select-a-data-source-data-source-view-wizard-analysis-services.md
+    - name: 進階資料來源檢視選項對話方塊 (資料來源檢視精靈)
+      href: ../advanced-data-source-view-options-data-source-view-wizard-analysis-services.md
+    - name: 名稱比對 (資料來源檢視精靈)
+      href: ../name-matching-data-source-view-wizard-analysis-services.md
+    - name: 選取資料表和檢視 (資料來源檢視精靈)
+      href: ../select-tables-and-views-data-source-view-wizard-analysis-services.md
+    - name: 正在完成精靈 (資料來源檢視精靈)
+      href: ../completing-the-wizard-data-source-view-wizard-analysis-services.md
+- name: 維度精靈 F1 說明
+  href: ../dimension-wizard-f1-help.md
+  items:
+    - name: 選取建立方法 (維度精靈)
+      href: ../select-creation-method-dimension-wizard.md
+    - name: 定義時間週期 (資料來源) (維度精靈)
+      href: ../define-time-periods-data-source-dimension-wizard.md
+    - name: 定義時間週期 (維度精靈)
+      href: ../define-time-periods-dimension-wizard.md
+    - name: 選取日曆 (維度精靈)
+      href: ../select-calendars-dimension-wizard.md
+    - name: 指定來源資訊 (維度精靈)
+      href: ../specify-source-information-dimension-wizard.md
+    - name: 選取相關資料表 (維度精靈)
+      href: ../select-related-tables-dimension-wizard.md
+    - name: 選取維度屬性 (維度精靈)
+      href: ../select-dimension-attributes-dimension-wizard.md
+    - name: 指定維度類型 (維度精靈)
+      href: ../specify-dimension-type-dimension-wizard.md
+    - name: 指定維度索引鍵和類型 (維度精靈)
+      href: ../specify-dimension-key-and-type-dimension-wizard.md
+    - name: 定義帳戶智慧 (維度精靈)
+      href: ../define-account-intelligence-dimension-wizard.md
+    - name: 正在完成精靈 (維度精靈)
+      href: ../completing-the-wizard-dimension-wizard.md
+- name: 匯入 Analysis Services 資料庫精靈 F1 說明
+  href: ../import-analysis-services-database-wizard-f1-help.md
+  items:
+    - name: 來源資料庫 (匯入 Analysis Services 資料庫精靈)
+      href: ../source-database-import-analysis-services-database-wizard.md
+    - name: 正在完成精靈 (匯入 Analysis Services 資料庫精靈)
+      href: ../completing-the-wizard-import-analysis-services-database-wizard.md
+- name: 連結物件精靈 F1 說明
+  href: ../linked-object-wizard-f1-help.md
+  items:
+    - name: 選取資料來源 (連結物件精靈)
+      href: ../select-a-data-source-linked-object-wizard.md
+    - name: 選取物件 (連結物件精靈)
+      href: ../select-objects-linked-object-wizard.md
+    - name: 正在完成精靈 (連結物件精靈)
+      href: ../completing-the-wizard-linked-object-wizard.md
+- name: 資料分割精靈 F1 說明
+  href: ../partition-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+    - name: 指定來源資訊 (資料分割精靈)
+      href: ../specify-source-information-partition-wizard.md
+    - name: 限制資料列 (資料分割精靈)
+      href: ../restrict-rows-partition-wizard.md
+    - name: 處理與儲存位置 (資料分割精靈)
+      href: ../processing-and-storage-locations-partition-wizard.md
+    - name: 正在完成精靈 (資料分割精靈)
+      href: ../completing-the-wizard-partition-wizard.md
+- name: 結構描述產生精靈 F1 說明
+  href: ../schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md
+  items:
+    - name: 指定目標 (結構描述產生精靈)
+      href: ../specify-target-schema-generation-wizard-analysis-services-multidimensional-data.md
+    - name: 主題領域資料庫結構描述選項 (結構描述產生精靈)
+      href: ../subject-area-database-schema-options-analysis-services-multidimensional-data.md
+    - name: 指定命名慣例 (結構描述產生精靈)
+      href: ../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md
+    - name: 正在完成精靈 (結構描述產生精靈)
+      href: ../complete-schema-generation-wizard-analysis-services-multidimensional-data.md
+- name: 基於使用方式的最佳化精靈 F1 說明
+  href: ../usage-based-optimization-wizard-f1-help.md
+  items:
+    - name: 選取要修改的資料分割 (基於使用方式的最佳化精靈)
+      href: ../select-partitions-to-modify-usage-based-optimization-wizard.md
+    - name: 指定查詢準則 (基於使用方式的最佳化精靈)
+      href: ../specify-query-criteria-usage-based-optimization-wizard.md
+    - name: 檢閱要最佳化的查詢 (基於使用方式的最佳化精靈)
+      href: ../review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md
+    - name: 檢閱彙總使用方式 (基於使用方式的最佳化精靈)
+      href: ../review-aggregation-usage-usage-based-optimiation-wizard.md
+    - name: 指定物件計數 (基於使用方式的最佳化精靈)
+      href: ../specify-object-counts-usage-based-optimization-wizard.md
+    - name: 設定彙總選項 (基於使用方式的最佳化精靈)
+      href: ../set-aggregation-options-usage-based-optimization-wizard.md
+    - name: 正在完成精靈 (基於使用方式的最佳化精靈)
+      href: ../completing-the-wizard-usage-based-optimization-wizard.md

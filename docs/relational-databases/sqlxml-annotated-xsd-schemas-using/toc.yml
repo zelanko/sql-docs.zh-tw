@@ -1,0 +1,40 @@
+- name: 在 XSD 結構描述中使用註釋 (SQLXML 4.0)
+  href: using-annotations-in-xsd-schemas-sqlxml-4-0.md
+- name: '使用 sql:use-cdata 建立 CDATA 區段 (SQLXML 4.0)'
+  href: creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md
+- name: '使用 sql:is-constant 建立常數元素 (SQLXML 4.0)'
+  href: creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md
+- name: '使用 sql:prefix 建立 Valid ID、IDREF 和 IDREFS 類型屬性 (SQLXML 4.0)'
+  href: creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md
+- name: '資料類型強制型轉和 sql:datatype 註解 (SQLXML 4.0)'
+  href: data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md
+- name: XSD 元素和屬性對資料表和資料行的預設對應 (SQLXML 4.0)
+  href: default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md
+- name: '使用 sql:mapped 從 XML 文件排除結構描述項目'
+  href: excluding-schema-elements-from-the-xml-document-using-sql-mapped.md
+- name: XSD 項目和屬性對資料表和資料行的明確對應
+  href: explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md
+- name: '使用 sql:limit-field 和 sql:limit-value 篩選值 (SQLXML 4.0)'
+  href: filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md
+- name: '使用 sql:hide 來隱藏元素和屬性'
+  href: hiding-elements-and-attributes-by-using-sql-hide.md
+- name: '使用 sql:key-fields 來識別索引鍵資料行 (SQLXML 4.0)'
+  href: identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md
+- name: 將 XSD 資料類型對應到 XPath 資料類型 (SQLXML 4.0)
+  href: mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md
+- name: '使用 sql:encode 要求指向 BLOB 資料的 URL 參考 (SQLXML 4.0)'
+  href: requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md
+- name: '使用 sql:overflow-field 擷取未耗用的資料 (SQLXML 4.0)'
+  href: retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md
+- name: 使用 targetNamespace 屬性來指定目標命名空間 (SQLXML 4.0)
+  href: specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md
+- name: '使用 sql:max-depth 來指定遞迴關聯性的深度'
+  href: specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md
+- name: '使用 sql:relationship 指定關聯性 (SQLXML 4.0)'
+  href: specifying-relationships-using-sql-relationship-sqlxml-4-0.md
+- name: '針對 sql:relationship 指定 sql:inverse 屬性 (SQLXML 4.0)'
+  href: specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md
+- name: '使用 sql:identity 和 sql:guid 註解'
+  href: using-the-sql-identity-and-sql-guid-annotations.md
+- name: XSD 註解 (SQLXML 4.0)
+  href: xsd-annotations-sqlxml-4-0.md

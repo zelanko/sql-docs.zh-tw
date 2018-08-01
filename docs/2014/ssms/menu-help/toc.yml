@@ -1,0 +1,45 @@
+- name: 'SQL Server Management Studio 功能表說明 [SQL Server]'
+  href: sql-server-management-studio-menu-help.md
+- name: 開啟方式 (新增檔案)
+  href: open-with-new-file.md
+- name: 另存新檔
+  href: save-as.md
+- name: 儲存變更
+  href: save-changes.md
+- name: 進階儲存選項
+  href: advanced-save-options.md
+- name: 選擇搜尋資料夾對話方塊 (Visual Studio)
+  href: choose-search-folders-dialog-box-visual-studio.md
+- name: 選擇工具箱項目 (維護工作頁面)
+  href: choose-toolbox-items-maintenance-tasks-page.md
+- name: 外部工具
+  href: external-tools.md
+- name: 自訂 (工具列頁面)
+  href: customize-toolbars-page.md
+- name: 自訂 (命令頁面)
+  href: customize-commands-page.md
+- name: 選項對話方塊 F1 說明
+  href: options-dialog-boxes-f1-help.md
+  items:
+    - name: 選項 (環境 - 一般頁面)
+      href: options-environment-general-page.md
+    - name: 選項 (環境：字型和色彩頁面)
+      href: options-environment-fonts-and-colors-page.md
+    - name: 選項 (環境/鍵盤頁面)
+      href: options-environment-keyboard-page.md
+    - name: 選項 (環境/說明/一般頁面)
+      href: options-environment-help-general-page.md
+    - name: 選項 (環境/說明/線上頁面)
+      href: options-environment-help-online-page.md
+    - name: 選項 (設計師/資料表和資料庫設計工具頁面)
+      href: options-designers-table-and-database-designers-page.md
+    - name: 選項 (設計工具/維護計畫頁面)
+      href: options-designers-maintenance-plans-page.md
+    - name: 選項 (設計工具/Analysis Services 設計工具/一般)
+      href: options-designers-analysis-services-designers-general.md
+- name: 視窗對話方塊 (Microsoft 文件總管說明)
+  href: windows-dialog-box-microsoft-document-explorer-help.md
+- name: 關於 SQL Server Management Studio
+  href: about-sql-server-management-studio.md
+- name: 屬性視窗 F1 說明 (Management Studio)
+  href: properties-window-f1-help-management-studio.md

@@ -1,0 +1,136 @@
+- name: 安裝 SSMA for Oracle (OracleToSQL)
+  href: installing-ssma-for-oracle-oracletosql.md
+- name: 開始使用 SSMA for Oracle (OracleToSQL)
+  href: getting-started-with-ssma-for-oracle-oracletosql.md
+- name: 將 Oracle HR 結構描述轉換為 SQL Server
+  href: sql-server-linux-convert-from-oracle.md
+- name: 法律聲明 (SSMA for Oracle)
+  href: legal-notice-ssma-for-oracle.md
+- name: 安裝 SSMA for Oracle 用戶端 (OracleToSQL)
+  href: installing-ssma-for-oracle-client-oracletosql.md
+- name: SSMA for Oracle 的新功能 (OracleToSQL)
+  href: what-s-new-in-ssma-for-oracle-oracletosql.md
+- name: SSMA 中的新 GUI 功能 (OracleToSQL)
+  href: new-gui-features-in-ssma-for-oracle-oracletosql.md
+- name: 專案設定 (移轉) (OracleToSQL)
+  href: project-settings-migration-oracletosql.md
+- name: 執行測試案例 (OracleToSQL)
+  href: running-test-cases-oracletosql.md
+- name: 功能表命令和其他快速鍵 (Oracle 到 SQL)
+  href: menu-commands-and-other-shortcut-keys-oracle-to-sql.md
+- name: 使用測試存放庫 (OracleToSQL)
+  href: using-test-repositories-oracletosql.md
+- name: 建立變數值檔案 (OracleToSQL)
+  href: creating-variable-value-files-oracletosql.md
+- name: 測試移轉的資料庫物件 (OracleToSQL)
+  href: testing-migrated-database-objects-oracletosql.md
+- name: 使用 SSMA 專案 (OracleToSQL)
+  href: working-with-ssma-projects-oracletosql.md
+- name: 連線到 Oracle Database (OracleToSQL)
+  href: connecting-to-oracle-database-oracletosql.md
+- name: 將 Oracle 資料移轉到 SQL Server (OracleToSQL)
+  href: migrating-oracle-data-into-sql-server-oracletosql.md
+- name: 專案設定 (同步處理) (OracleToSQL)
+  href: project-settings-synchronization-oracletosql.md
+- name: 轉換 Oracle 結構描述 (OracleToSQL)
+  href: converting-oracle-schemas-oracletosql.md
+- name: 資料移轉報告 (OracleToSQL)
+  href: data-migration-report-oracletosql.md
+- name: 產生報表 (OracleToSQL)
+  href: generating-reports-oracletosql.md
+- name: 進階物件選取 (OracleToSQL)
+  href: advanced-object-selection-oracletosql.md
+- name: 使用範例主控台指令檔 (OracleToSQL)
+  href: working-with-the-sample-console-script-files-oracletosql.md
+- name: SSMA 主控台中的命令列選項 (OracleToSQL)
+  href: command-line-options-in-ssma-console-oracletosql.md
+- name: 快速鍵 (Oracle 到 SQL)
+  href: shortcut-keys-oracle-to-sql.md
+- name: 專案設定 (轉換) (OracleToSQL)
+  href: project-settings-conversion-oracletosql.md
+- name: 將轉換的資料庫物件載入 SQL Server (OracleToSQL)
+  href: loading-converted-database-objects-into-sql-server-oracletosql.md
+- name: 全域設定 (編輯器) (OracleToSQL)
+  href: global-settings-editor-oracletosql.md
+- name: 設定專案選項 (OracleToSQL)
+  href: setting-project-options-oracletosql.md
+- name: 管理備份 (OracleToSQL)
+  href: managing-backups-oracletosql.md
+- name: 儲存中繼資料 (OracleToSQL)
+  href: save-metadata-oracletosql.md
+- name: 自訂呼叫順序 (OracleToSQL)
+  href: customizing-calls-order-oracletosql.md
+- name: 專案設定 (GUI) (OracleToSQL)
+  href: project-settings-gui-oracletosql.md
+- name: 專案設定 (載入系統物件) (OracleToSQL)
+  href: project-settings-loading-system-objects-oracletosql.md
+- name: 資料移轉設定 (OracleToSQL)
+  href: data-migration-settings-oracletosql.md
+- name: 檢視測試案例報表 (OracleToSQL)
+  href: viewing-test-case-reports-oracletosql.md
+- name: 管理密碼 (OracleToSQL)
+  href: managing-passwords-oracletosql.md
+- name: 移除 SSMA for Oracle 元件 (OracleToSQL)
+  href: removing-ssma-for-oracle-components-oracletosql.md
+- name: SQL Server 移轉小幫手 (OracleToSQL)
+  href: sql-server-migration-assistant-for-oracle-oracletosql.md
+- name: 從資料庫重新整理 (OracleToSQL)
+  href: refresh-from-database-oracletosql.md
+- name: 執行 SSMA 主控台 (OracleToSQL)
+  href: executing-the-ssma-console-oracletosql.md
+- name: 編輯類型對應 (OracleToSQL)
+  href: edit-type-mapping-oracletosql.md
+- name: 開始使用 SSMA for Oracle 主控台 (OracleToSQL)
+  href: getting-started-with-ssma-for-oracle-console-oracletosql.md
+- name: 建立指令檔 (OracleToSQL)
+  href: creating-script-files-oracletosql.md
+- name: 選取及設定受影響的物件 (OracleToSQL)
+  href: selecting-and-configuring-affected-objects-oracletosql.md
+- name: 連線到 SQL Server (OracleToSQL)
+  href: connect-to-sql-server-oracletosql.md
+- name: 使用 SSMA for Oracle 主控台 (OracleToSQL)
+  href: working-with-ssma-for-oracle-console-oracletosql.md
+- name: 評定 Oracle 結構描述的轉換 (OracleToSQL)
+  href: assessing-oracle-schemas-for-conversion-oracletosql.md
+- name: 專案設定 (類型對應) (OracleToSQL)
+  href: project-settings-type-mapping-oracletosql.md
+- name: 全域設定 (測試器) (OracleToSQL)
+  href: global-settings-tester-oracletosql.md
+- name: 將測試案例初始化 (OracleToSQL)
+  href: initializing-test-cases-oracletosql.md
+- name: 全域設定 (OracleToSQL)
+  href: global-settings-dialogs-oracletosql.md
+- name: 全域設定 (輸出視窗) (OracleToSQL)
+  href: global-settings-output-window-oracletosql.md
+- name: 在 SQL Server 上安裝 SSMA 元件 (OracleToSQL)
+  href: installing-ssma-components-on-sql-server-oracletosql.md
+- name: 完成測試案例準備 (OracleToSQL)
+  href: finishing-test-case-preparation-oracletosql.md
+- name: 選取及設定要測試的受影響物件 (OracleToSQL)
+  href: selecting-and-configuring-objects-to-test-oracletosql.md
+- name: 連線到 Oracle (OracleToSQL)
+  href: connect-to-oracle-oracletosql.md
+- name: 建立測試案例 (OracleToSQL)
+  href: creating-test-cases-oracletosql.md
+- name: 疑難排解 (OracleToSQL)
+  href: troubleshooting-oracletosql.md
+- name: 將 Oracle 資料庫移轉到 SQL Server (OracleToSQL)
+  href: migrating-oracle-databases-to-sql-server-oracletosql.md
+- name: 連線到 SQL Server (OracleToSQL)
+  href: connecting-to-sql-server-oracletosql.md
+- name: 評定報告 (OracleToSQL)
+  href: assessment-report-oracletosql.md
+- name: 新增專案 (OracleToSQL)
+  href: new-project-oracletosql.md
+- name: 使用者介面參考 (OracleToSQL)
+  href: user-interface-reference-oracletosql.md
+- name: 全域設定 (記錄) (OracleToSQL)
+  href: global-settings-logging-oracletosql.md
+- name: 將 Oracle 結構描述對應到 SQL Server 結構描述 (OracleToSQL)
+  href: mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
+- name: 對應 Oracle 和 SQL Server 資料類型 (OracleToSQL)
+  href: mapping-oracle-and-sql-server-data-types-oracletosql.md
+- name: 建立伺服器連線檔案 (OracleToSQL)
+  href: creating-the-server-connection-files-oracletosql.md
+- name: 附錄 - 1 (OracleToSQL)
+  href: appendix-1-oracletosql.md

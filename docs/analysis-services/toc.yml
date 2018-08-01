@@ -1,0 +1,274 @@
+- name: 關於 SQL Server Analysis Services
+  href: analysis-services.md
+- name: 概觀
+  items:
+    - name: SQL Server Analysis Services 2016 的新功能
+      href: what-s-new-in-analysis-services.md
+    - name: SQL Server Analysis Services 2017 的新功能
+      href: what-s-new-in-sql-server-analysis-services-2017.md
+    - name: 新文章及更新的文章
+      href: new-updated-analysis-services.md
+    - name: 工具和應用程式
+      href: tools-and-applications-used-in-analysis-services.md
+    - name: 用戶端程式庫 (資料提供者)
+      href: ../analysis-services/instances/data-providers-used-for-analysis-services-connections.md
+    - name: 比較表格式和多維度解決方案
+      href: comparing-tabular-and-multidimensional-solutions-ssas.md
+    - name: 各種 SQL Server 版本支援的 Analysis Services 功能
+      href: analysis-services-features-supported-by-the-editions-of-sql-server-2016.md
+    - name: 回溯相容性 (SQL Server 2016 Analysis Services)
+      href: analysis-services-backward-compatibility.md
+    - name: 回溯相容性 (SQL Server 2017 Analysis Services)
+      href: analysis-services-backward-compatibility-sql2017.md
+    - name: 全球化和翻譯
+      href: globalization-scenarios-for-analysis-services.md
+      items:
+        - name: 語言和定序
+          href: languages-and-collations-analysis-services.md
+        - name: 翻譯
+          href: translation-support-in-analysis-services.md
+        - name: 貨幣轉換
+          href: currency-conversions-analysis-services.md
+        - name: 秘訣和最佳作法
+          href: globalization-tips-and-best-practices-analysis-services.md
+- name: 教學課程
+  href: analysis-services-tutorials-ssas.md
+  items:
+    - name: 表格式模型 (1400 相容性層級)
+      href: tutorial-tabular-1400/as-adventure-works-tutorial.md
+      items:
+        - name: 1 - 建立表格式模型專案
+          href: tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md
+        - name: 2 - 取得資料
+          href: tutorial-tabular-1400/as-lesson-2-get-data.md
+        - name: 3 - 標記為日期資料表
+          href: tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md
+        - name: 4 - 建立關聯性
+          href: tutorial-tabular-1400/as-lesson-4-create-relationships.md
+        - name: 5 - 建立計算結果欄
+          href: tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md
+        - name: 6 - 建立量值
+          href: tutorial-tabular-1400/as-lesson-6-create-measures.md
+        - name: 7 - 建立關鍵效能指標
+          href: tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md
+        - name: 8 - 建立檢視方塊
+          href: tutorial-tabular-1400/as-lesson-8-create-perspectives.md
+        - name: 9 - 建立階層
+          href: tutorial-tabular-1400/as-lesson-9-create-hierarchies.md
+        - name: 10 - 建立資料分割
+          href: tutorial-tabular-1400/as-lesson-10-create-partitions.md
+        - name: 11 - 建立角色
+          href: tutorial-tabular-1400/as-lesson-11-create-roles.md
+        - name: 12 - 在 Excel 中進行分析
+          href: tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md
+        - name: 13 - 部署
+          href: tutorial-tabular-1400/as-lesson-13-deploy.md
+        - name: 補充課程 - 詳細資料列
+          href: tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md
+        - name: 補充課程 - 動態安全性
+          href: tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md
+        - name: 補充課程 - 不完全階層
+          href: tutorial-tabular-1400/as-supplemental-lesson-ragged-hierarchies.md
+    - name: 表格式模型 (1200 相容性層級)
+      href: tabular-modeling-adventure-works-tutorial.md
+      items:
+        - name: 第 1 課：建立新的表格式模型專案
+          href: lesson-1-create-a-new-tabular-model-project.md
+        - name: 第 2 課：加入資料
+          href: lesson-2-add-data.md
+        - name: 第 3 課：標記為日期資料表
+          href: lesson-3-mark-as-date-table.md
+        - name: 第 4 課：建立關聯性
+          href: lesson-4-create-relationships.md
+        - name: 第 5 課：建立計算結果欄
+          href: lesson-5-create-calculated-columns.md
+        - name: 第 6 課：建立量值
+          href: lesson-6-create-measures.md
+        - name: 第 7 課：建立關鍵效能指標
+          href: lesson-7-create-key-performance-indicators.md
+        - name: 第 8 課：建立檢視方塊
+          href: lesson-8-create-perspectives.md
+        - name: 第 9 課：建立階層
+          href: lesson-9-create-hierarchies.md
+        - name: 第 10 課：建立資料分割
+          href: lesson-10-create-partitions.md
+        - name: 第 11 課：建立角色
+          href: lesson-11-create-roles.md
+        - name: 第 12 課：在 Excel 中進行分析
+          href: lesson-12-analyze-in-excel.md
+        - name: 第 13 課：部署
+          href: lesson-13-deploy.md
+        - name: 補充課程 - 使用資料列篩選實作動態安全性
+          href: supplemental-lesson-implement-dynamic-security-by-using-row-filters.md
+        - name: 補充課程 - 設定 Power View 報表的報表屬性
+          href: supplemental-lesson-configure-reporting-properties-for-power-view-reports.md
+    - name: 多維度模型化
+      href: multidimensional-modeling-adventure-works-tutorial.md
+      items:
+        - name: 教學課程案例
+          href: analysis-services-tutorial-scenario.md
+        - name: 安裝 Analysis Services 多維度模型化教學課程的範例資料和專案
+          href: install-sample-data-and-projects.md
+        - name: 第 1 課：在 Analysis Services 專案內定義資料來源檢視
+          href: lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md
+          items:
+            - name: 課程 1-1 - 建立 Analysis Services 專案
+              href: lesson-1-1-creating-an-analysis-services-project.md
+            - name: 課程 1-2 - 定義資料來源
+              href: lesson-1-2-defining-a-data-source.md
+            - name: 課程 1-3 - 定義資料來源檢視
+              href: lesson-1-3-defining-a-data-source-view.md
+            - name: 課程 1-4 - 修改預設資料表名稱
+              href: lesson-1-4-modifying-default-table-names.md
+        - name: 第 2 課：定義和部署 Cube
+          href: lesson-2-defining-and-deploying-a-cube.md
+          items:
+            - name: 課程 2-1 - 定義維度
+              href: lesson-2-1-defining-a-dimension.md
+            - name: 課程 2-2 - 定義 Cube
+              href: lesson-2-2-defining-a-cube.md
+            - name: 課程 2-3 - 將屬性新增至維度
+              href: lesson-2-3-adding-attributes-to-dimensions.md
+            - name: 課程 2-4 - 檢閱 Cube 和維度屬性
+              href: lesson-2-4-reviewing-cube-and-dimension-properties.md
+            - name: 課程 2-5 - 部署 Analysis Services 專案
+              href: lesson-2-5-deploying-an-analysis-services-project.md
+            - name: 課程 2-6 - 瀏覽 Cube
+              href: lesson-2-6-browsing-the-cube.md
+        - name: 第 3 課：修改量值、屬性和階層
+          href: lesson-3-modifying-measures-attributes-and-hierarchies.md
+          items:
+            - name: 課程 3-1 - 修改量值
+              href: lesson-3-1-modifying-measures.md
+            - name: 課程 3-2 - 修改客戶維度
+              href: lesson-3-2-modifying-the-customer-dimension.md
+            - name: 課程 3-3 - 修改產品維度
+              href: lesson-3-3-modifying-the-product-dimension.md
+            - name: 課程 3-4 - 修改日期維度
+              href: lesson-3-4-modifying-the-date-dimension.md
+            - name: 課程 3-5 - 瀏覽已部署的 Cube
+              href: lesson-3-5-browsing-the-deployed-cube.md
+        - name: 第 4 課：定義進階屬性和維度屬性
+          href: lesson-4-defining-advanced-attribute-and-dimension-properties.md
+          items:
+            - name: 課程 4-1 - 使用 Analysis Services 教學課程專案的已修改版本
+              href: lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md
+            - name: 課程 4-2 - 定義父子式階層中父屬性 (Attribute) 的屬性 (Property)
+              href: lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md
+            - name: 課程 4-3 - 自動將屬性成員分組
+              href: lesson-4-3-automatically-grouping-attribute-members.md
+            - name: 課程 4-4 - 隱藏及停用屬性階層
+              href: lesson-4-4-hiding-and-disabling-attribute-hierarchies.md
+            - name: 課程 4-5 - 依次要屬性來排序屬性成員
+              href: lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md
+            - name: 課程 4-6 - 指定在使用者定義階層內屬性之間的屬性關聯性
+              href: 4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md
+            - name: 課程 4-7 - 定義未知的成員和 Null 處理屬性
+              href: lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md
+        - name: 第 5 課：定義維度和量值群組之間的關聯性
+          href: lesson-5-defining-relationships-between-dimensions-and-measure-groups.md
+          items:
+            - name: 課程 5-1 - 定義參考的關聯性
+              href: lesson-5-1-defining-a-referenced-relationship.md
+            - name: 課程 5-2 - 定義事實關聯性
+              href: lesson-5-2-defining-a-fact-relationship.md
+            - name: 課程 5-3 - 定義多對多關聯性
+              href: lesson-5-3-defining-a-many-to-many-relationship.md
+            - name: 課程 5-4 - 定義量值群組內的維度資料粒度
+              href: lesson-5-4-defining-dimension-granularity-within-a-measure-group.md
+        - name: 第 6 課：定義計算
+          href: lesson-6-defining-calculations.md
+          items:
+            - name: 課程 6-1 - 定義導出成員
+              href: lesson-6-1-defining-calculated-members.md
+            - name: 課程 6-2 - 定義命名集
+              href: lesson-6-2-defining-named-sets.md
+        - name: 第 7 課：定義關鍵效能指標 (KPI)
+          href: lesson-7-defining-key-performance-indicators-kpis.md
+          items:
+            - name: 課程 7-1 - 定義和瀏覽 KPI
+              href: lesson-7-1-defining-and-browsing-kpis.md
+        - name: 第 8 課：定義動作
+          href: lesson-8-defining-actions.md
+          items:
+            - name: 課程 8-1 - 定義和使用鑽研動作
+              href: lesson-8-1-defining-and-using-a-drillthrough-action.md
+        - name: 第 9 課：定義檢視方塊和翻譯
+          href: lesson-9-defining-perspectives-and-translations.md
+          items:
+            - name: 課程 9-1 - 定義和瀏覽檢視方塊
+              href: lesson-9-1-defining-and-browsing-perspectives.md
+            - name: 課程 9-2 - 定義和瀏覽翻譯
+              href: lesson-9-2-defining-and-browsing-translations.md
+        - name: 第 10 課：定義系統管理角色
+          href: lesson-10-defining-administrative-roles.md
+          items:
+            - name: 課程 10-1 - 授與處理資料庫權限
+              href: lesson-10-granting-process-database-permissions.md
+    - name: 資料採礦
+      href: data-mining-tutorials-analysis-services.md
+- name: 操作方式
+  items:
+    - name: 表格式模型
+      href: ../analysis-services/tabular-models/tabular-models-ssas.md
+    - name: 多維度模型
+      href: ../analysis-services/multidimensional-models/multidimensional-models-ssas.md
+    - name: 資料採礦
+      href: ../analysis-services/data-mining/data-mining-ssas.md
+    - name: Power Pivot for SharePoint
+      href: ../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md
+    - name: 管理伺服器
+      href: ../analysis-services/instances/analysis-services-instance-management.md
+    - name: 追蹤事件
+      href: ../analysis-services/trace-events/analysis-services-trace-events.md
+- name: Developer
+  items:
+    - name: 相容性層級 1200 及以上的表格式模型程式設計
+      href: ./tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md
+      items:
+        - name: 表格式模型指令碼語言 (TMSL)
+          href: tabular-model-scripting-language-tmsl-reference.md
+        - name: 表格式模型指令碼語言 (TMSL) 命令
+          href: ../analysis-services/tabular-models-scripting-language-commands/tmsl-reference-commands.md
+        - name: 表格式模型指令碼語言 (TMSL) 物件
+          href: ../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md
+    - name: 相容性層級 1050 及 1103 的表格式模型程式設計
+      href: ./tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
+    - name: Analysis Services 指令碼語言 (ASSL) +
+      href: ../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+    - name: 分析管理物件 (AMO)+
+      href: ../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md
+    - name: ADOMD.NET +
+      href: ../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md
+    - name: OLAP 邏輯 +
+      href: ../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+    - name: OLAP 實體 +
+      href: ../analysis-services/multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+    - name: 擴充 OLAP +
+      href: ../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+    - name: 結構描述資料列集
+      href: ../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md
+    - name: Analysis Services 指令碼語言 (ASSL for XMLA)
+      href: scripting/analysis-services-scripting-language-assl-for-xmla.md
+- name: 範例
+  items:
+    - name: Analysis Services 範例
+      href: analysis-services-samples.md
+- name: 參考
+  items:
+    - name: Analysis Services PowerShell 參考
+      href: ../analysis-services/powershell/analysis-services-powershell-reference.md
+    - name: Power Pivot for SharePoint 的 PowerShell 參考
+      href: ../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md
+    - name: MSDN 上的 Data Analysis Expressions (DAX)
+      href: 'https://msdn.microsoft.com/library/gg413422.aspx'
+    - name: 資料採礦延伸模組 (DMX)
+      href: ../dmx/data-mining-extensions-dmx-reference.md
+    - name: 多維度運算式 (MDX)
+      href: ../mdx/analysis-services-language-reference.md
+    - name: Power Query M
+      href: 'https://msdn.microsoft.com/library/mt211003.aspx'
+    - name: 伺服器屬性
+      href: ../analysis-services/server-properties/server-properties-in-analysis-services.md
+    - name: XML for Analysis (XMLA)
+      href: ../analysis-services/xmla/xml-for-analysis-xmla-reference.md

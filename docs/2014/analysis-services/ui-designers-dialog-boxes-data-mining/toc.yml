@@ -1,0 +1,122 @@
+- name: 用於資料採礦分析的 UI 設計工具和對話方塊
+  href: ui-designers-dialog-boxes-data-mining.md
+- name: 資料採礦設計工具與對話方塊
+  href: ../data-mining-designers-and-dialog-boxes.md
+  items:
+    - name: 資料採礦模型設計工具
+      href: ../data-mining-model-designer-analysis-services-data-mining.md
+    - name: 採礦結構檢視 (資料採礦模型設計工具)
+      href: ../mining-structure-view-data-mining-model-designer.md
+    - name: 新增採礦模型對話方塊 (採礦結構檢視)
+      href: ../new-mining-model-dialog-box-mining-structure-view.md
+    - name: 選取資料行對話方塊 (採礦結構檢視)
+      href: ../select-a-column-dialog-box-mining-structure-view.md
+    - name: 選取巢狀資料表索引鍵資料行對話方塊 (採礦結構檢視)
+      href: ../select-a-nested-table-key-column-dialog-box-mining-structure-view.md
+    - name: 建立資料採礦維度對話
+      href: ../create-data-mining-dimension-dialog.md
+    - name: 採礦模型檢視 (資料採礦模型設計工具)
+      href: ../mining-models-view-data-mining-model-designer.md
+    - name: 演算法參數對話方塊 (採礦模型檢視)
+      href: ../algorithm-parameters-dialog-box-mining-models-view.md
+    - name: 資料集篩選器/模型篩選器對話方塊
+      href: ../data-set-filter-or-model-filter-dialog-box.md
+      items:
+        - name: 篩選對話方塊 (採礦精確度圖表)
+          href: ../filter-dialog-box-mining-accuracy-chart.md
+- name: 採礦模型檢視器
+  href: ../mining-model-viewers-data-mining-model-designer.md
+  items:
+    - name: 屬性特性索引標籤
+      href: ../attribute-characteristics-tab-mining-model-viewer.md
+    - name: 屬性辨識索引標籤
+      href: ../attribute-discrimination-tab-mining-model-viewer.md
+    - name: 屬性設定檔索引標籤
+      href: ../attribute-profiles-tab-mining-model-viewer.md
+    - name: 圖表索引標籤 (時間序列檢視器)
+      href: ../chart-tab-mining-model-viewers.md
+    - name: '[群集特性] 索引標籤'
+      href: ../cluster-characteristics-tab-mining-model-viewer.md
+    - name: '[群集圖表] 索引標籤'
+      href: ../cluster-diagram-tab-mining-model-viewer.md
+    - name: '[群集辨識] 索引標籤'
+      href: ../cluster-discrimination-tab-mining-model-viewer.md
+    - name: '[群集設定檔] 索引標籤'
+      href: ../cluster-profiles-tab-mining-model-viewer.md
+    - name: 決策樹索引標籤
+      href: ../decision-tree-tab-mining-model-viewer.md
+    - name: '[相依性網路] 索引標籤'
+      href: ../dependency-network-tab-mining-model-viewer.md
+    - name: 鑽研對話方塊
+      href: ../drill-through-dialog-box-mining-model-viewer.md
+    - name: 尋找節點對話方塊
+      href: ../find-node-dialog-box-mining-model-viewer.md
+    - name: 一般內容樹狀檢視器
+      href: ../microsoft-generic-content-tree-viewer-data-mining.md
+    - name: '[項目集] 索引標籤'
+      href: ../itemsets-tab-mining-model-viewer.md
+    - name: 採礦圖例對話方塊
+      href: ../mining-legend-dialog-box-mining-model-viewer.md
+    - name: 類神經網路索引標籤
+      href: ../neural-network-mining-model-viewer.md
+    - name: '[規則] 索引標籤'
+      href: ../rules-tab-mining-model-viewer.md
+    - name: 時序叢集的叢集圖表索引標籤
+      href: ../sequence-clustering-cluster-diagram-tab-mining-model-viewer.md
+    - name: 時序叢集的叢集設定檔索引標籤
+      href: ../sequence-clustering-cluster-profiles-tab-mining-model-viewer.md
+    - name: 時序叢集的叢集特性索引標籤
+      href: ../sequence-clustering-cluster-characteristics-tab-mining-model-viewer.md
+    - name: 時序叢集的叢集辨識索引標籤
+      href: ../sequence-clustering-cluster-discrimination-tab-mining-model-viewer.md
+    - name: 時序叢集的叢集轉換索引標籤
+      href: ../sequence-clustering-cluster-transition-tab-mining-model-viewer.md
+    - name: 模型索引標籤 (時間序列檢視器)
+      href: ../model-tab-mining-model-viewers.md
+- name: 採礦精確度圖表設計師 (資料採礦)
+  href: ../mining-accuracy-chart-designer-data-mining.md
+  items:
+    - name: 輸入選取範圍索引標籤
+      href: ../input-selection-tab-mining-accuracy-chart-view.md
+    - name: 增益圖標籤
+      href: ../lift-chart-tab-mining-accuracy-chart-view.md
+    - name: 分類矩陣索引標籤
+      href: ../classification-matrix-tab-mining-accuracy-chart-view.md
+    - name: 交叉驗證標籤
+      href: ../cross-validation-tab-mining-accuracy-chart-view.md
+    - name: 收益圖表設定對話方塊 (採礦精確度圖表檢視)
+      href: ../profit-chart-settings-dialog-box-mining-accuracy-chart-view.md
+    - name: 指定資料行對應對話方塊 (採礦精確度圖表)
+      href: ../specify-column-mapping-dialog-box-mining-accuracy-chart.md
+    - name: 選取採礦結構對話方塊 (採礦精確度圖表檢視)
+      href: ../select-mining-structure-dialog-box-mining-accuracy-chart-view.md
+    - name: 選取資料表對話方塊 (採礦精確度圖表檢視)
+      href: ../select-table-dialog-box-mining-accuracy-chart-view.md
+    - name: 修改對應對話方塊 (採礦精確度圖表)
+      href: ../modify-mapping-dialog-box-mining-accuracy-chart.md
+    - name: 指定巢狀聯結對話方塊 (採礦精確度圖表檢視)
+      href: ../specify-nested-join-dialog-box-mining-accuracy-chart-view.md
+- name: 預測查詢產生器
+  href: ../prediction-query-builder-data-mining.md
+  items:
+    - name: 設計窗格
+      href: ../design-pane-mining-model-prediction-view.md
+    - name: 查詢窗格
+      href: ../query-pane-mining-model-prediction-view.md
+    - name: 結果窗格
+      href: ../result-pane-mining-model-prediction-view.md
+    - name: 選取採礦模型對話方塊
+      href: ../select-mining-model-dialog-box-mining-model-prediction-view.md
+    - name: 儲存資料採礦查詢結果對話方塊
+      href: ../save-data-mining-query-result-dialog-box-mining-model-prediction-view.md
+- name: 採礦結構屬性對話方塊
+  href: ../mining-structure-properties-dialog-analysis-services-data-mining.md
+  items:
+    - name: 一般 (採礦結構對話方塊)
+      href: ../general-mining-structure-dialog-box-analysis-services-data-mining.md
+    - name: 錯誤組態 (採礦結構對話方塊)
+      href: ../error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md
+- name: 採礦模型屬性對話方塊
+  href: ../mining-model-properties-dialog-box-analysis-services-data-mining.md
+- name: DMX 查詢編輯器
+  href: ../dmx-query-editor-analysis-services-data-mining.md

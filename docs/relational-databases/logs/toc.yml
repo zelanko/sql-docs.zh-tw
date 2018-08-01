@@ -1,0 +1,23 @@
+- name: 記錄檔檢視器
+  href: log-file-viewer.md
+  items:
+    - name: 開啟
+      href: open-log-file-viewer.md
+    - name: 離線檢視
+      href: view-offline-log-files.md
+    - name: F1 說明
+      href: log-file-viewer-f1-help.md
+- name: 交易記錄
+  href: the-transaction-log-sql-server.md
+  items:
+    - name: 管理大小
+      href: manage-the-size-of-the-transaction-log-file.md
+    - name: 針對記錄已滿進行疑難排解 (SQL Server 錯誤 9002)
+      href: troubleshoot-a-full-transaction-log-sql-server-error-9002.md
+    - name: 控制交易持久性
+      href: control-transaction-durability.md
+- name: 資料庫檢查點
+  href: database-checkpoints-sql-server.md
+  items:
+    - name: 變更資料庫的目標復原時間
+      href: change-the-target-recovery-time-of-a-database-sql-server.md

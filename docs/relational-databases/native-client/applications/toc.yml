@@ -1,0 +1,22 @@
+- name: 使用 SQL Server Native Client 建立應用程式
+  href: building-applications-with-sql-server-native-client.md
+- name: SQL Server Native Client 的元件
+  href: components-of-sql-server-native-client.md
+- name: 使用 SQL Server Native Client 連接至 Windows Azure SQL 資料庫
+  href: connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
+- name: dbmslpcn.dll 共用記憶體中的 ConnectionValidSharedMemory 函式
+  href: connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
+- name: 安裝 SQL Server Native Client
+  href: installing-sql-server-native-client.md
+- name: SQL Server Native Client 的支援原則
+  href: support-policies-for-sql-server-native-client.md
+- name: 從 SQL Server 2005 Native Client 更新應用程式
+  href: updating-an-application-from-sql-server-2005-native-client.md
+- name: 從 MDAC 將應用程式更新至 SQL Server Native Client
+  href: updating-an-application-to-sql-server-native-client-from-mdac.md
+- name: 使用 ADO 搭配 SQL Server Native Client
+  href: using-ado-with-sql-server-native-client.md
+- name: 搭配 SQL Server Native Client 使用連接字串關鍵字
+  href: using-connection-string-keywords-with-sql-server-native-client.md
+- name: 使用 SQL Server Native Client 標頭檔與程式庫檔案
+  href: using-the-sql-server-native-client-header-and-library-files.md

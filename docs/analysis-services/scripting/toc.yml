@@ -1,0 +1,16 @@
+- name: Analysis Services 指令碼語言 (ASSL for XMLA)
+  href: analysis-services-scripting-language-assl-for-xmla.md
+- name: 集合 +
+  href: ../../analysis-services/scripting/collections/accounts-element-assl.md
+- name: 資料類型 +
+  href: ../../analysis-services/scripting/data-type/action-data-type-assl.md
+- name: 物件 +
+  href: ../../analysis-services/scripting/objects/account-element-assl.md
+- name: 屬性 +
+  href: ../../analysis-services/scripting/properties/access-element-assl.md
+- name: Analysis Services 指令碼語言 XML 資料類型階層 (ASSL)
+  href: analysis-services-scripting-language-xml-data-type-hierarchy-assl.md
+- name: Analysis Services 指令碼語言 XML 元素階層 (ASSL)
+  href: analysis-services-scripting-language-xml-element-hierarchy-assl.md
+- name: Analysis Services 指令碼語言 XML 元素 (ASSL)
+  href: analysis-services-scripting-language-xml-elements-assl.md

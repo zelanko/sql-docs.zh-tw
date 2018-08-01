@@ -1,0 +1,90 @@
+- name: 用於表格式分析的 UI 設計工具和對話方塊
+  href: ui-designers-dialog-boxes-tabular.md
+- name: Analysis Services 設計師與對話方塊 (表格式)
+  href: ../analysis-services-designers-and-dialog-boxes-tabular.md
+- name: 對話方塊參考
+  href: ../dialog-boxes-reference-ssas.md
+  items:
+    - name: 資料行寬度對話方塊
+      href: ../column-width-dialog-box-ssas.md
+    - name: 標記為日期資料表對話方塊
+      href: ../mark-as-date-table-dialog-box-ssas.md
+    - name: 編輯資料表屬性對話方塊
+      href: ../edit-table-properties-dialog-box-ssas.md
+    - name: 移至對話方塊
+      href: ../go-to-dialog-box-ssas.md
+    - name: 插入函數對話方塊
+      href: ../insert-function-dialog-box-ssas.md
+    - name: 移動資料表對話方塊
+      href: ../move-table-dialog-box-ssas.md
+- name: 資料表匯入精靈
+  href: ../table-import-wizard-reference-ssas.md
+  items:
+    - name: 進階設定
+      href: ../advanced-settings-ssas.md
+    - name: Analysis Services MDX 查詢設計工具
+      href: ../analysis-services-mdx-query-designer-ssas.md
+    - name: 選擇如何匯入資料
+      href: ../choose-how-to-import-the-data-ssas.md
+    - name: 連接到報表或資料摘要
+      href: ../connect-to-a-report-or-data-feed-ssas.md
+    - name: 連接到資料來源
+      href: ../connect-to-a-data-source-ssas.md
+    - name: 連接到 DB2 資料庫
+      href: ../connect-to-a-db2-database-ssas.md
+    - name: 連接到一般檔案
+      href: ../connect-to-a-flat-file-ssas.md
+    - name: 連接到 Microsoft Access 資料庫
+      href: ../connect-to-a-microsoft-access-database-ssas.md
+    - name: 連接到 Microsoft Excel 檔案
+      href: ../connect-to-a-microsoft-excel-file-ssas.md
+    - name: 連接到 Azure SQL 資料庫
+      href: ../connect-to-an-azure-sql-database-ssas.md
+    - name: 連接到 Microsoft SQL Server 資料庫
+      href: ../connect-to-a-microsoft-sql-server-database-ssas.md
+    - name: 連接到 Microsoft SQL Server Parallel Data Warehouse
+      href: ../connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas.md
+    - name: 連接到 Microsoft SQL Server Analysis Services
+      href: ../connect-to-microsoft-sql-server-analysis-services-ssas.md
+    - name: 連接到 Informix 資料庫
+      href: ../connect-to-an-informix-database-ssas.md
+    - name: 連接到 Oracle 資料庫
+      href: ../connect-to-an-oracle-database-ssas.md
+    - name: 連接到 Sybase 資料庫
+      href: ../connect-to-a-sybase-database-ssas.md
+    - name: 連接至 Teradata 資料庫
+      href: ../connect-to-a-teradata-database-ssas.md
+    - name: 資料來源認證
+      href: ../data-source-credentials-ssas.md
+    - name: 詳細資料
+      href: ../details-ssas.md
+    - name: 篩選詳細資料
+      href: ../filter-details-ssas.md
+    - name: 模擬資訊對話方塊
+      href: ../impersonation-information-dialog-box-table-import-wizard.md
+    - name: 匯入
+      href: ../importing-ssas.md
+    - name: 匯入摘要
+      href: ../import-summary-ssas.md
+    - name: 預覽選取的資料表
+      href: ../preview-selected-table-ssas.md
+    - name: 關聯式查詢設計工具
+      href: ../relational-query-designer-ssas.md
+    - name: 選取資料表和檢視表
+      href: ../select-tables-and-views-ssas.md
+    - name: 選取資料表和檢視表 (資料摘要)
+      href: ../select-tables-and-views-data-feeds-ssas.md
+    - name: 設定進階屬性
+      href: ../set-advanced-properties-ssas.md
+    - name: 指定連接字串
+      href: ../specify-a-connection-string-ssas.md
+    - name: 指定 SQL 或 MDX 查詢
+      href: ../specify-a-sql-or-mdx-query-ssas.md
+- name: 連接屬性對話方塊 (SSAS - 表格式)
+  href: ../connection-properties-dialog-box-ssas-tabular.md
+- name: 資料庫屬性對話方塊 (SSAS - 表格式)
+  href: ../database-properties-dialog-box-ssas-tabular.md
+- name: 資料表屬性對話方塊 (SSAS - 表格式)
+  href: ../table-properties-dialog-box-ssas-tabular.md
+- name: 資料列篩選 (角色設計師)(表格式模型)
+  href: ../row-filters-role-designer-tabular-model.md

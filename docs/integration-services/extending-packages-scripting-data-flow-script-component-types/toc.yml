@@ -1,0 +1,10 @@
+- name: 開發指令碼元件的特定類型
+  href: developing-specific-types-of-script-components.md
+- name: 以指令碼元件建立來源
+  href: creating-a-source-with-the-script-component.md
+- name: 使用指令碼元件建立同步轉換
+  href: creating-a-synchronous-transformation-with-the-script-component.md
+- name: 使用指令碼元件建立非同步轉換
+  href: creating-an-asynchronous-transformation-with-the-script-component.md
+- name: 以指令碼元件建立目的地
+  href: creating-a-destination-with-the-script-component.md

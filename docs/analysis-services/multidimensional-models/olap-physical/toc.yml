@@ -1,0 +1,16 @@
+- name: Analysis Services 開發的用戶端架構需求
+  href: client-architecture-requirements-for-analysis-services-development.md
+- name: Analysis Services 中的資料類型
+  href: data-types-in-analysis-services.md
+- name: 本機 Cube (Analysis Services - 多維度資料)
+  href: local-cubes-analysis-services-multidimensional-data.md
+- name: 最大容量規格 (Analysis Services)
+  href: maximum-capacity-specifications-analysis-services.md
+- name: 物件命名規則 (Analysis Services)
+  href: object-naming-rules-analysis-services.md
+- name: OLAP 引擎伺服器元件
+  href: olap-engine-server-components.md
+- name: 了解 Microsoft OLAP 架構
+  href: understanding-microsoft-olap-architecture.md
+- name: 了解 Microsoft OLAP 實體架構
+  href: understanding-microsoft-olap-physical-architecture.md

@@ -1,0 +1,136 @@
+- name: 安裝 SSMA for Sybase (SybaseToSQL)
+  href: installing-ssma-for-sybase-sybasetosql.md
+- name: 開始使用 SSMA for Sybase (SybaseToSQL)
+  href: getting-started-with-ssma-for-sybase-sybasetosql.md
+- name: 開始使用 SSMA for Sybase 主控台 (SybaseToSQL)
+  href: getting-started-with-ssma-for-sybase-console-sybasetosql.md
+- name: 法律注意事項 (SSMA for Sybase)
+  href: legal-notice-ssma-for-sybase.md
+- name: SSMA for Sybase 的新功能 (SybaseToSQL)
+  href: what-s-new-in-ssma-for-sybase-sybasetosql.md
+- name: 安裝 SSMA for Sybase (SybaseToSQL)
+  href: installing-ssma-for-sybase-client-sybasetosql.md
+- name: SSMA 中的新 GUI 功能 (SybaseToSQL)
+  href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
+- name: 新增專案 (SybaseToSQL)
+  href: new-project-sybasetosql.md
+- name: 將測試案例初始化 (SybaseToSQL)
+  href: initializing-test-cases-sybasetosql.md
+- name: 使用範例主控台指令碼檔 (SybaseToSQL)
+  href: working-with-the-sample-console-script-files-sybasetosql.md
+- name: 專案設定 (轉換) (SybaseToSQL)
+  href: project-settings-conversion-sybasetosql.md
+- name: 將 Sybase ASE 資料庫移轉到 Azure SQL DB (SybaseToSQL)
+  href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
+- name: 評定 Sybase ASE 資料庫物件的轉換 (SybaseToSQL)
+  href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
+- name: 執行 SSMA 主控台 (SybaseToSQL)
+  href: executing-the-ssma-console-sybasetosql.md
+- name: 建立指令碼檔 (SybaseToSQL)
+  href: creating-script-files-sybasetosql.md
+- name: 全域設定 (SybaseToSQL)
+  href: global-settings-dialogs-sybasetosql.md
+- name: 連線到 SQL Server (SybaseToSQL)
+  href: connecting-to-sql-server-sybasetosql.md
+- name: 進階物件選取項目 (SybaseToSQL)
+  href: advanced-object-selection-sybasetosql.md
+- name: 專案設定 (GUI) (SybaseToSQL)
+  href: project-settings-gui-sybasetosql.md
+- name: 檢視測試案例報表 (SybaseToSQL)
+  href: viewing-test-case-reports-sybasetosql.md
+- name: 使用 SSMA for Oracle 主控台 (OracleToSQL)
+  href: working-with-ssma-for-sybase-console-sybasetosql.md
+- name: 使用測試存放庫 (SybaseToSQL)
+  href: using-test-repositories-sybasetosql.md
+- name: 資料移轉報告 (SybaseToSQL)
+  href: data-migration-report-sybasetosql.md
+- name: 建立測試案例 (SybaseToSQL)
+  href: creating-test-cases-sybasetosql.md
+- name: 儲存中繼資料 (SybaseToSQL)
+  href: save-metadata-sybasetosql.md
+- name: 評定報告 (SybaseToSQL)
+  href: assessment-report-sybasetosql.md
+- name: 移除 SSMA for Sybase 元件 (SybaseToSQL)
+  href: removing-ssma-for-sybase-components-sybasetosql.md
+- name: 連線到 Sybase ASE (SybaseToSQL)
+  href: connecting-to-sybase-ase-sybasetosql.md
+- name: 選取並設定受影響的物件 (SybaseToSQL)
+  href: selecting-and-configuring-affected-objects-sybasetosql.md
+- name: 連線到 Azure SQL DB (SybaseToSQL)
+  href: connecting-to-azure-sql-db-sybasetosql.md
+- name: 管理密碼 (SybaseToSQL)
+  href: managing-passwords-sybasetosql.md
+- name: 設定專案選項 (SybaseToSQL)
+  href: setting-project-options-sybasetosql.md
+- name: 連線到 Azure SQL DB (SybaseToSQL)
+  href: connect-to-azure-sql-db-sybasetosql.md
+- name: 資料移轉設定 (SybaseToSQL)
+  href: data-migration-settings-sybasetosql.md
+- name: 完成測試案例準備 (SybaseToSQL)
+  href: finishing-test-case-preparation-sybasetosql.md
+- name: 選取並設定要測試的物件 (SybaseToSQL)
+  href: selecting-and-configuring-objects-to-test-sybasetosql.md
+- name: 疑難排解 (SybaseToSQL)
+  href: troubleshooting-sybasetosql.md
+- name: 專案設定 (移轉) (SybaseToSQL)
+  href: project-settings-migration-sybasetosql.md
+- name: 全域設定 (SybaseToSQL)
+  href: global-settings-output-window-sybasetosql.md
+- name: 對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL)
+  href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
+- name: 全域設定 (測試器) (SybaseToSQL)
+  href: global-settings-tester-sybasetosql.md
+- name: 在 SQL Server 上安裝 SSMA 元件 (SybaseToSQL)
+  href: installing-ssma-components-on-sql-server-sybasetosql.md
+- name: SQL Server 移轉小幫手 (SybaseToSQL)
+  href: sql-server-migration-assistant-for-sybase-sybasetosql.md
+- name: 專案設定 (Azure SQL DB) (SybaseToSQL)
+  href: project-settings-azure-sql-db-sybasetosql.md
+- name: 將 Sybase ASE 資料移轉到 Azure SQL DB (SybaseToSQL)
+  href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
+- name: 連線到 Sybase (SybaseToSQL)
+  href: connect-to-sybase-sybasetosql.md
+- name: 編輯類型對應 (SybaseToSQL)
+  href: edit-type-mapping-sybasetosql.md
+- name: 轉換 Sybase ASE 資料庫物件 (SybaseToSQL)
+  href: converting-sybase-ase-database-objects-sybasetosql.md
+- name: 全域設定 (記錄) (SybaseToSQL)
+  href: global-settings-logging-sybasetosql.md
+- name: 將轉換的資料庫物件載入 SQL Server (SybaseToSQL)
+  href: loading-converted-database-objects-into-sql-server-sybasetosql.md
+- name: 測試移轉的資料庫物件 (SybaseToSQL)
+  href: testing-migrated-database-objects-sybasetosql.md
+- name: 自訂呼叫順序 (SybaseToSQL)
+  href: customizing-calls-order-sybasetosql.md
+- name: 使用者介面參考 (SybaseToSQL)
+  href: user-interface-reference-sybasetosql.md
+- name: 建立變數值檔案 (SybaseToSQL)
+  href: creating-variable-value-files-sybasetosql.md
+- name: 建立伺服器連線檔案 (SybaseToSQL)
+  href: creating-the-server-connection-files-sybasetosql.md
+- name: SSMA 主控台中的命令列選項 (SybaseToSQL)
+  href: command-line-options-in-ssma-console-sybasetosql.md
+- name: 連線到 SQL Server (SybaseToSQL)
+  href: connect-to-sql-server-sybasetosql.md
+- name: 快速鍵 (Sybase 到 SQL)
+  href: shortcut-keys-sybase-to-sql.md
+- name: 專案設定 (同步處理) (SybaseToSQL)
+  href: project-settings-synchronization-sybasetosql.md
+- name: 將 Sybase ASE 結構描述對應到 SQL Server 結構描述 (SybaseToSQL)
+  href: mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql.md
+- name: 專案設定 (類型對應) (SybaseToSQL)
+  href: project-settings-type-mapping-sybasetosql.md
+- name: 管理備份 (SybaseToSQL)
+  href: managing-backups-sybasetosql.md
+- name: 功能表命令和其他快速鍵 (Sybase 到 SQL)
+  href: menu-commands-and-other-shortcut-keys-sybase-to-sql.md
+- name: 執行測試案例 (SybaseToSQL)
+  href: running-test-cases-sybasetosql.md
+- name: 產生報表 (SybaseToSQL)
+  href: generating-reports-sybasetosql.md
+- name: 使用 SSMA 專案 (SybaseToSQL)
+  href: working-with-ssma-projects-sybasetosql.md
+- name: 全域設定 (編輯器) (SybaseToSQL)
+  href: global-settings-editor-sybasetosql.md
+- name: 附錄 - 1 (SybaseToSQL)
+  href: appendix-1-sybasetosql.md

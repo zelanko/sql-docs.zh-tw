@@ -1,0 +1,16 @@
+- name: Microsoft 開放式資料庫連接 (ODBC)
+  href: microsoft-open-database-connectivity-odbc.md
+- name: 新增及更新的文章
+  href: new-updated-odbc.md
+- name: Microsoft ODBC Drivers +
+  href: ../odbc/microsoft/microsoft-supplied-odbc-drivers.md
+- name: ODBC 管理 +
+  href: ../odbc/admin/odbc-data-source-administrator.md
+- name: ODBC 參考 +
+  href: ../odbc/reference/introduction-to-odbc.md
+- name: ODBC 測試
+  href: odbc-test.md
+- name: ODBCconf.exe
+  href: odbcconf-exe.md
+- name: ODBC 詞彙
+  href: odbc-glossary.md

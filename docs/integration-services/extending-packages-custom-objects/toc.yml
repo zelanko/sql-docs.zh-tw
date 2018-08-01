@@ -1,0 +1,20 @@
+- name: 使用自訂物件擴充封裝
+  href: extending-packages-with-custom-objects.md
+- name: 開發 Integration Services 的自訂物件
+  href: developing-custom-objects-for-integration-services.md
+- name: 保存自訂物件
+  href: persisting-custom-objects.md
+- name: 建立、部署和偵錯自訂物件
+  href: building-deploying-and-debugging-custom-objects.md
+- name: 支援自訂元件中的多目標
+  href: support-multi-targeting-in-your-custom-components.md
+- name: 開發自訂工作
+  href: ../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md
+- name: 開發自訂連線管理員
+  href: ../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md
+- name: 開發自訂記錄提供者
+  href: ../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md
+- name: 開發自訂 ForEach 列舉值
+  href: foreach-enumerator/developing-a-custom-foreach-enumerator.md
+- name: 開發自訂資料流程元件
+  href: data-flow/developing-a-custom-data-flow-component.md

@@ -1,0 +1,328 @@
+- name: ADO 基本概念
+  href: ado-fundamentals.md
+- name: ADO 物件和集合
+  href: ado-objects-and-collections.md
+- name: HelloData：簡易 ADO 應用程式
+  href: hellodata-a-simple-ado-application.md
+  items:
+    - name: HelloData 的註解
+      href: comments-on-hellodata.md
+    - name: HelloData 程式碼
+      href: hellodata-code.md
+- name: OLE DB 提供者 (ADO)
+  href: ole-db-providers-ado.md
+  items:
+    - name: 資料提供者
+      href: data-providers.md
+    - name: 服務提供者和元件
+      href: service-providers-and-components.md
+- name: 錯誤 (ADO)
+  href: errors-ado.md
+- name: 取得資料
+  href: getting-data.md
+  items:
+    - name: 連接到資料來源
+      href: connecting-to-data-sources.md
+      items:
+        - name: 使用 Connection 物件
+          href: using-a-connection-object.md
+        - name: 使用 Recordset 物件
+          href: using-a-recordset-object.md
+        - name: 建立連接字串
+          href: creating-a-connection-string.md
+        - name: 指定連線屬性
+          href: specifying-connection-properties.md
+        - name: 控制交易 (ADO)
+          href: controlling-transactions-ado.md
+    - name: 準備和執行命令
+      href: preparing-and-executing-commands.md
+      items:
+        - name: Command 物件概觀
+          href: command-object-overview.md
+        - name: 建立和執行簡單的命令
+          href: creating-and-executing-a-simple-command.md
+        - name: Command 物件參數
+          href: command-object-parameters.md
+        - name: 使用命令呼叫預存程序
+          href: calling-a-stored-procedure-with-a-command.md
+        - name: 以 Connection 物件方法的形式來呼叫預存程序
+          href: calling-a-stored-procedure-as-a-method-on-a-connection-object.md
+        - name: 具名命令
+          href: named-commands.md
+        - name: 傳遞參數給具名命令
+          href: passing-parameters-to-a-named-command.md
+    - name: 接收結果
+      href: receiving-results.md
+      items:
+        - name: 接收多個資料錄集
+          href: receiving-multiple-recordsets.md
+- name: 檢查資料
+  href: examining-data.md
+  items:
+    - name: 目前的記錄和資料錄集的大小
+      href: current-record-and-size-of-recordset.md
+    - name: 資料錄集的界限
+      href: boundaries-of-a-recordset.md
+    - name: 巡覽資料
+      href: navigating-through-data.md
+      items:
+        - name: 跳至記錄
+          href: jumping-to-a-record.md
+        - name: 更多可以在資料錄集中移動的方法
+          href: more-ways-to-move-in-a-recordset.md
+        - name: 使用書籤
+          href: using-bookmarks.md
+        - name: 使用頁面
+          href: using-pages.md
+        - name: 資料錄集定位
+          href: recordset-positioning.md
+    - name: 用於檢查資料的範例資料錄集
+      href: sample-recordset-for-examining-data.md
+      items:
+        - name: 可傳回資料錄集的 JScript 程式碼範例
+          href: jscript-code-example-to-return-a-recordset.md
+    - name: 了解資料錄集的結構
+      href: understanding-recordset-structure.md
+      items:
+        - name: Fields 集合
+          href: the-fields-collection.md
+        - name: Field 物件
+          href: the-field-object.md
+        - name: 使用資料錄集
+          href: working-with-recordsets.md
+- name: 編輯資料
+  href: editing-data.md
+  items:
+    - name: 編輯現有的記錄
+      href: editing-existing-records.md
+    - name: 新增記錄
+      href: adding-records.md
+      items:
+        - name: 使用 AddNew 新增記錄
+          href: adding-records-using-addnew.md
+        - name: 新增多個欄位
+          href: adding-multiple-fields.md
+        - name: 判斷編輯模式
+          href: determining-edit-mode.md
+        - name: 在即時和批次模式中使用 AddNew
+          href: using-addnew-in-immediate-and-batch-modes.md
+    - name: 判斷支援的項目
+      href: determining-what-is-supported.md
+    - name: 使用 Delete 方法刪除記錄
+      href: deleting-records-using-the-delete-method.md
+    - name: 替代方案：使用 SQL 陳述式
+      href: alternatives-using-sql-statements.md
+- name: 更新和保存資料
+  href: updating-and-persisting-data.md
+  items:
+    - name: 更新資料
+      href: updating-data.md
+      items:
+        - name: 即時模式
+          href: immediate-mode.md
+        - name: 批次模式
+          href: batch-mode.md
+          items:
+            - name: 傳送更新：UpdateBatch 方法
+              href: sending-the-updates-updatebatch-method.md
+            - name: 篩選更新的記錄
+              href: filtering-for-updated-records.md
+            - name: 處理失敗的更新
+              href: dealing-with-failed-updates.md
+            - name: 偵測並解決衝突
+              href: detecting-and-resolving-conflicts.md
+            - name: 中斷並重新連線資料錄集
+              href: disconnecting-and-reconnecting-the-recordset.md
+            - name: 更新聯結的結果：唯一資料表
+              href: updating-joined-results-unique-table.md
+        - name: 交易處理
+          href: transaction-processing.md
+    - name: 保存資料
+      href: persisting-data.md
+      items:
+        - name: 深入了解資料錄集的保存
+          href: more-about-recordset-persistence.md
+        - name: 保存篩選過的階層式資料錄集
+          href: persisting-filtered-and-hierarchical-recordsets.md
+        - name: 以 XML 格式保存記錄
+          href: persisting-records-in-xml-format.md
+          items:
+            - name: XML 保存格式
+              href: xml-persistence-format.md
+            - name: 命名空間
+              href: namespaces.md
+            - name: 結構描述區段
+              href: schema-section.md
+            - name: 資料區段
+              href: data-section.md
+            - name: XML 中的階層式資料錄集
+              href: hierarchical-recordsets-in-xml.md
+            - name: XML 中的資料錄集動態屬性
+              href: recordset-dynamic-properties-in-xml.md
+            - name: XSLT 轉換
+              href: xslt-transformations.md
+            - name: 儲存到 XML DOM 物件
+              href: saving-to-the-xml-dom-object.md
+            - name: XML 安全性考量
+              href: xml-security-considerations.md
+            - name: XML 資料錄集保存案例
+              href: xml-recordset-persistence-scenario.md
+- name: 錯誤處理
+  href: error-handling.md
+  items:
+    - name: ADO 錯誤
+      href: ado-errors.md
+      items:
+        - name: ADO 錯誤參考
+          href: ado-error-reference.md
+    - name: 提供者錯誤
+      href: provider-errors.md
+    - name: 欄位相關的錯誤資訊
+      href: field-related-error-information.md
+    - name: 資料錄集相關的錯誤資訊
+      href: recordset-related-error-information.md
+    - name: 處理其他語言的錯誤
+      href: handling-errors-in-other-languages.md
+      items:
+        - name: 處理 VBScript 的錯誤
+          href: handling-errors-in-vbscript.md
+        - name: 處理 Visual C++ 的錯誤
+          href: handling-errors-in-visual-c.md
+        - name: 處理 Visual J++ 的錯誤
+          href: handline-errors-in-visual-j.md
+        - name: 處理 JScript 的錯誤
+          href: handling-errors-in-jscript.md
+    - name: 預期的錯誤
+      href: anticipating-errors.md
+- name: 處理 ADO 事件
+  href: handling-ado-events.md
+  items:
+    - name: ADO 事件處理常式摘要
+      href: ado-event-handler-summary.md
+    - name: 事件的類型
+      href: types-of-events.md
+    - name: 事件參數
+      href: event-parameters.md
+    - name: 事件處理常式如何協同運作
+      href: how-event-handlers-work-together.md
+    - name: ADO 事件具現化 (依語言)
+      href: ado-event-instantiation-by-language.md
+      items:
+        - name: ADO 事件具現化：Visual Basic
+          href: ado-event-instantiation-visual-basic.md
+        - name: ADO 事件具現化：Visual C++
+          href: ado-event-instantiation-visual-c.md
+        - name: ADO 事件具現化：Visual J++
+          href: ado-event-instantiation-visual-j.md
+        - name: ADO 事件具現化：VBScript
+          href: ado-event-instantiation-vbscript.md
+        - name: ADO 事件具現化：JScript
+          href: ado-event-instantiation-jscript.md
+        - name: ADO 事件具現化：ADO 和 WFC
+          href: ado-event-instantiation-ado-and-wfc.md
+- name: 了解資料指標和鎖定
+  href: understanding-cursors-and-locks.md
+  items:
+    - name: 什麼是資料指標？
+      href: what-is-a-cursor.md
+    - name: 資料指標的類型 (ADO)
+      href: types-of-cursors-ado.md
+      items:
+        - name: 順向資料指標
+          href: forward-only-cursors.md
+        - name: 靜態資料指標
+          href: static-cursors.md
+        - name: 索引鍵集資料指標
+          href: keyset-cursors.md
+        - name: 動態資料指標
+          href: dynamic-cursors.md
+    - name: 資料指標位置的精確度
+      href: the-significance-of-cursor-location.md
+    - name: 適用於 OLE DB 的 Microsoft 資料指標服務
+      href: the-microsoft-cursor-service-for-ole-db.md
+    - name: 什麼是鎖定？
+      href: what-is-a-lock.md
+      items:
+        - name: 鎖定的類型
+          href: types-of-locks.md
+    - name: 使用 CacheSize
+      href: using-cachesize.md
+    - name: 資料指標與鎖定的特性
+      href: cursor-and-lock-characteristics.md
+- name: 資料成形
+  href: data-shaping.md
+  items:
+    - name: 資料成形概觀
+      href: data-shaping-overview.md
+    - name: 資料成形範例
+      href: data-shaping-example.md
+      items:
+        - name: Visual Basic 的資料成形範例
+          href: visual-basic-example-of-data-shaping.md
+    - name: 重新成形
+      href: reshaping.md
+    - name: 孫系彙總
+      href: grandchild-aggregates.md
+    - name: 參數化命令與中介 COMPUTE 命令
+      href: parameterized-commands-with-intervening-compute-commands.md
+    - name: 保存階層式資料錄集
+      href: persisting-hierarchical-recordsets.md
+    - name: 資料成形所需的提供者
+      href: required-providers-for-data-shaping.md
+    - name: 一般 Shape 命令
+      href: shape-commands-in-general.md
+      items:
+        - name: 彙總函式、CALC 函式和 NEW 關鍵字
+          href: aggregate-functions-the-calc-function-and-the-new-keyword.md
+        - name: 發出命令給基礎資料提供者
+          href: issuing-commands-to-the-underlying-data-provider.md
+    - name: Shape APPEND 子句
+      href: shape-append-clause.md
+      items:
+        - name: 非參數化命令的作業
+          href: operation-of-non-parameterized-commands.md
+        - name: 參數化命令的作業
+          href: operation-of-parameterized-commands.md
+        - name: 混合式命令
+          href: hybrid-commands.md
+        - name: 中介 Shape COMPUTE 子句
+          href: intervening-shape-compute-clauses.md
+    - name: Shape COMPUTE 子句
+      href: shape-compute-clause.md
+    - name: 產生階層式資料錄集
+      href: fabricating-hierarchical-recordsets.md
+    - name: 存取階層式資料錄集中的資料列
+      href: accessing-rows-in-a-hierarchical-recordset.md
+    - name: 正式 Shape 文法
+      href: formal-shape-grammar.md
+    - name: Visual Basic for Applications 函式
+      href: visual-basic-for-applications-functions.md
+- name: 記錄和資料流
+  href: records-and-streams.md
+  items:
+    - name: 資料流和保存
+      href: streams-and-persistence.md
+    - name: 命令資料流
+      href: command-streams.md
+    - name: 將結果集擷取為資料流
+      href: retrieving-resultsets-into-streams.md
+    - name: 使用 ADO 進行網際網路發佈
+      href: using-ado-for-internet-publishing.md
+      items:
+        - name: 適用於網際網路發佈的 OLE DB 提供者
+          href: the-ole-db-provider-for-internet-publishing.md
+        - name: 網際網路發佈案例
+          href: internet-publishing-scenario.md
+          items:
+            - name: 步驟 1：設定 Visual Basic 專案
+              href: step-1-set-up-the-visual-basic-project.md
+            - name: '步驟 2：初始化 [主要] 清單方塊'
+              href: step-2-initialize-the-main-list-box.md
+            - name: '步驟 3：填入 [欄位] 清單方塊'
+              href: step-3-populate-the-fields-list-box.md
+            - name: '步驟 4：填入 [詳細資料] 文字方塊'
+              href: step-4-populate-the-details-text-box.md
+        - name: 絕對和相對 URL
+          href: absolute-and-relative-urls.md
+        - name: 記錄和提供者提供的欄位
+          href: records-and-provider-supplied-fields.md

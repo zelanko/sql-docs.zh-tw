@@ -1,0 +1,30 @@
+- name: ADOMD.NET 用戶端功能
+  href: adomd-net-client-functionality.md
+- name: ADOMD.NET 用戶端程式設計
+  href: adomd-net-client-programming.md
+- name: ADOMD.NET 中的連線 - 建立安全連線
+  href: connections-in-adomd-net-establishing-secure-connections.md
+- name: ADOMD.NET 中的連線 - 執行交易
+  href: connections-in-adomd-net-performing-transactions.md
+- name: ADOMD.NET 中的連線 - 使用連線和工作階段
+  href: connections-in-adomd-net-working-with-connections-and-sessions.md
+- name: ADOMD.NET 中的連線
+  href: connections-in-adomd-net.md
+- name: 針對分析資料來源執行命令
+  href: executing-commands-against-an-analytical-data-source.md
+- name: 從 ADO MD 移轉至 ADOMD.NET
+  href: migrating-from-ado-md-to-adomd-net.md
+- name: 從分析資料來源擷取資料
+  href: retrieving-data-from-an-analytical-data-source.md
+- name: 使用 AdomdDataReader 擷取資料
+  href: retrieving-data-using-the-adomddatareader.md
+- name: 使用 CellSet 擷取資料
+  href: retrieving-data-using-the-cellset.md
+- name: 使用 XmlReader 擷取資料
+  href: retrieving-data-using-the-xmlreader.md
+- name: 擷取中繼資料 - 使用 ADOMD.NET 物件模型
+  href: retrieving-metadata-working-with-adomd-net-object-model.md
+- name: 擷取中繼資料 - 使用結構描述資料列集
+  href: retrieving-metadata-working-with-schema-rowsets.md
+- name: 從分析資料來源擷取中繼資料
+  href: retrieving-metadata-from-an-analytical-data-source.md

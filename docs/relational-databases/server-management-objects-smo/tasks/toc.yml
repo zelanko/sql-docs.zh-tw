@@ -1,0 +1,70 @@
+- name: 備份和還原資料庫與交易記錄
+  href: backing-up-and-restoring-databases-and-transaction-logs.md
+- name: 在 SMO 中設定 SQL Server
+  href: configuring-sql-server-in-smo.md
+- name: 建立和更新統計資料
+  href: creating-and-updating-statistics.md
+- name: 建立、改變和移除資料庫物件
+  href: creating-altering-and-removing-database-objects.md
+- name: 建立、改變和移除資料庫
+  href: creating-altering-and-removing-databases.md
+- name: 建立、改變和移除預設值
+  href: creating-altering-and-removing-defaults.md
+- name: 建立、改變和移除外部索引鍵
+  href: creating-altering-and-removing-foreign-keys.md
+- name: 建立、改變和移除索引
+  href: creating-altering-and-removing-indexes.md
+- name: 建立、改變和移除規則
+  href: creating-altering-and-removing-rules.md
+- name: 建立、改變和移除結構描述
+  href: creating-altering-and-removing-schemas.md
+- name: 建立、改變和移除預存程序
+  href: creating-altering-and-removing-stored-procedures.md
+- name: 建立、改變和移除資料表
+  href: creating-altering-and-removing-tables.md
+- name: 建立、改變和移除觸發程式
+  href: creating-altering-and-removing-triggers.md
+- name: 建立、改變和移除使用者定義函數
+  href: creating-altering-and-removing-user-defined-functions.md
+- name: 建立、改變和移除檢視
+  href: creating-altering-and-removing-views.md
+- name: 授與、撤銷和拒絕權限
+  href: granting-revoking-and-denying-permissions.md
+- name: 實作端點
+  href: implementing-endpoints.md
+- name: 實作全文檢索搜尋
+  href: implementing-full-text-search.md
+- name: 管理 Service Broker
+  href: managing-service-broker.md
+- name: 使用 WMI 提供者管理服務和網路設定
+  href: managing-services-and-network-settings-by-using-wmi-provider.md
+- name: 管理使用者、角色和登入
+  href: managing-users-roles-and-logins.md
+- name: 程式設計特有的工作
+  href: programming-specific-tasks.md
+- name: 使用 SQL Server Agent 排程自動管理工作
+  href: scheduling-automatic-administrative-tasks-in-sql-server-agent.md
+- name: 指令碼
+  href: scripting.md
+- name: 追蹤及重新執行事件
+  href: tracing-and-replaying-events.md
+- name: 傳送資料
+  href: transferring-data.md
+- name: 使用 Database Mail
+  href: using-database-mail.md
+- name: 使用加密
+  href: using-encryption.md
+- name: 使用檔案群組和檔案來儲存資料
+  href: using-filegroups-and-files-to-store-data.md
+- name: 在 SMO 中使用連結的伺服器
+  href: using-linked-servers-in-smo.md
+- name: 使用訊息
+  href: using-messages.md
+- name: 使用同義字
+  href: using-synonyms.md
+- name: 使用資料表和索引資料分割
+  href: using-table-and-index-partitioning.md
+- name: 使用使用者定義的資料表
+  href: using-user-defined-tables.md
+- name: 使用 XML 結構描述
+  href: using-xml-schemas.md

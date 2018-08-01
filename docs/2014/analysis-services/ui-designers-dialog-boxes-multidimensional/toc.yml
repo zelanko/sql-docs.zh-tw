@@ -1,0 +1,307 @@
+- name: 用於多維度分析的 UI 設計工具和對話方塊
+  href: ui-designers-dialog-boxes-multidimensional.md
+- name: Analysis Services 設計師與對話方塊 (多維度)
+  href: ../analysis-services-designers-and-dialog-boxes-multidimensional-data.md
+- name: 加入 Cube 維度加對話方塊
+  href: ../add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md
+- name: 加入參考對話方塊
+  href: ../add-reference-dialog-box-analysis-services-multidimensional-data.md
+- name: 加入資料表對話方塊
+  href: ../add-table-dialog-box-analysis-services-multidimensional-data.md
+- name: 加入/移除資料表對話方塊
+  href: ../../database-engine/add-remove-tables-dialog-box-analysis-services-multidimensional-data.md
+- name: Analysis Server 屬性對話方塊
+  href: ../analysis-server-properties-dialog-box-analysis-services.md
+- name: Analysis Services MDX 查詢設計工具 (PowerPivot)
+  href: ../analysis-services-mdx-query-designer-powerpivot.md
+- name: 組件屬性對話方塊
+  href: ../assembly-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: 指派彙總設計對話方塊
+  href: ../assign-aggregation-design-dialog-box-analysis-services-multidimensional-data.md
+- name: 屬性資料翻譯對話方塊
+  href: ../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md
+- name: 備份資料庫對話方塊
+  href: ../backup-database-dialog-box-analysis-services-multidimensional-data.md
+- name: 瀏覽資料來源對話方塊
+  href: ../browse-data-source-dialog-box-analysis-services-multidimensional-data.md
+- name: 瀏覽資料來源檢視對話方塊
+  href: ../browse-data-source-view-dialog-box-analysis-services-multidimensional-data.md
+- name: 瀏覽遠端資料夾對話方塊
+  href: ../browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md
+- name: 導出成員產生器對話方塊
+  href: ../calculated-member-builder-dialog-box-analysis-services-multidimensional-data.md
+- name: 計算屬性對話方塊
+  href: ../calculation-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: 變更設定對話方塊
+  href: ../change-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: 連接到資料庫對話方塊
+  href: ../connect-to-database-dialog-box.md
+- name: 建立屬性關聯性圖表和編輯屬性關聯性對話方塊
+  href: ../create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md
+- name: 建立/編輯具名計算對話方塊
+  href: ../create-edit-named-calculation-dialog-box-analysis-services.md
+- name: 建立/編輯具名查詢對話方塊
+  href: ../create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: 建立或編輯關聯性對話方塊
+  href: ../create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: 建立輪詢查詢對話方塊
+  href: ../create-polling-query-dialog-box-analysis-services-multidimensional-data.md
+- name: 建立處理查詢對話方塊
+  href: ../create-processing-query-dialog-box-analysis-services-multidimensional-data.md
+- name: Cube 設計師
+  href: ../cube-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: Cube 結構 (Cube 設計師)
+      href: ../cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (Cube 結構索引標籤，Cube 設計師)
+      href: ../toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 資料來源檢視 (Cube 結構索引標籤，Cube 設計師)
+      href: ../data-source-view-cube-designer-analysis-services-multidimensional-data.md
+    - name: 量值 (Cube 結構索引標籤，Cube 設計師)
+      href: ../measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 維度 (Cube 結構索引標籤，Cube 設計工具)
+      href: ../dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md
+    - name: 維度使用方式 (Cube 設計工具)
+      href: ../dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (維度使用方式索引標籤，Cube 設計工具)
+      href: ../toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md
+    - name: 方格 (維度使用方式索引標籤，Cube 設計師)
+      href: ../grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 計算 (Cube 設計工具)
+      href: ../calculations-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (計算索引標籤，Cube 設計師)
+      href: ../toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 指令碼組合管理 (計算索引標籤，Cube 設計師)
+      href: ../script-organizer-cube-designer-analysis-services-multidimensional-data.md
+    - name: 計算工具 (計算索引標籤、Cube 設計師)
+      href: ../calculation-tools-cube-designer-analysis-services-multidimensional-data.md
+    - name: 導出成員表單編輯器 (計算索引標籤，Cube 設計師)
+      href: ../calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 命名集表單編輯器 (計算索引標籤，Cube 設計工具)
+      href: ../named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 指令碼編輯器 (計算索引標籤，Cube 設計師)
+      href: ../script-editor-calculations-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPI (Cube 設計工具)
+      href: ../kpis-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (KPI 索引標籤，Cube 設計師)
+      href: ../toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPI 組合管理 (KPI 索引標籤，Cube 設計師)
+      href: ../kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 計算工具 (KPI 索引標籤，Cube 設計師)
+      href: ../calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPI 表單編輯器 (KPI 索引標籤，Cube 設計工具)
+      href: ../kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: KPI 瀏覽器 (KPI 索引標籤，Cube 設計師)
+      href: ../kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 動作 (Cube 設計工具)
+      href: ../actions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (動作索引標籤，Cube 設計工具)
+      href: ../toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 動作組合管理 (動作索引標籤，Cube 設計師)
+      href: ../action-organizer-cube-designer-analysis-services-multidimensional-data.md
+    - name: 計算工具 (動作索引標籤，Cube 設計師)
+      href: ../calculation-tools-actions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 動作表單編輯器 (動作索引標籤，Cube 設計師)
+      href: ../action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 鑽研動作表單編輯器 (動作索引標籤，Cube 設計師)
+      href: ../drillthrough-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 報表動作表單編輯器 (動作索引標籤，Cube 設計師)
+      href: ../report-action-form-editor-cube-designer-analysis-services-multidimensional-data.md
+    - name: 資料分割 (Cube 設計師)
+      href: ../partitions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (資料分割索引標籤，Cube 設計師)
+      href: ../toolbar-partitions-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 量值群組 (資料分割索引標籤，Cube 設計工具)
+      href: ../measure-groups-partitions-cube-designer-analysis-services-multidimensional-data.md
+    - name: 彙總 (Cube 設計)
+      href: ../aggregations-cube-design.md
+    - name: 工具列 (彙總索引標籤，Cube 設計師)
+      href: ../toolbar-aggregations-tab-cube-designer.md
+    - name: 標準檢視 (彙總索引標籤，Cube 設計師)
+      href: ../standard-view-aggregations-tab-cube-designer.md
+    - name: 進階檢視 (彙總索引標籤，Cube 設計師)
+      href: ../advanced-view-aggregations-tab-cube-designer.md
+    - name: 檢視方塊 (Cube 設計師)
+      href: ../perspectives-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (檢視方塊索引標籤，Cube 設計師)
+      href: ../toolbar-perspectives-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 檢視方塊詳細資料 (檢視方塊索引標籤，Cube 設計師)
+      href: ../perspective-details-cube-designer-analysis-services-multidimensional-data.md
+    - name: 翻譯 (Cube 設計工具)
+      href: ../translations-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (翻譯索引標籤，Cube 設計工具)
+      href: ../toolbar-translations-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 翻譯詳細資料 (翻譯索引標籤，Cube 設計師)
+      href: ../translation-details-cube-designer-analysis-services-multidimensional-data.md
+    - name: 瀏覽器 (Cube 設計師)
+      href: ../browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (瀏覽器索引標籤，Cube 設計師)
+      href: ../toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 在 Excel 中進行分析 (瀏覽器索引標籤，Cube 設計師)
+      href: ../analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 中繼資料 (瀏覽器索引標籤，Cube 設計師)
+      href: ../metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md
+    - name: 查詢和篩選 (瀏覽器索引標籤，Cube 設計師)
+      href: ../query-filter-browser-cube-designer-analysis-services-multidimensional-data.md
+    - name: 查詢參數對話方塊 (MDX)
+      href: ../query-parameters-dialog-box-mdx.md
+- name: Cube 或模型屬性對話方塊
+  href: ../cube-or-model-properties-dialog-box-ssas.md
+- name: 資料瀏覽選項對話方塊
+  href: ../data-exploration-options-dialog-box-analysis-services-data-mining.md
+- name: 資料範例檢視器對話方塊
+  href: ../data-sample-viewer-dialog-box-analysis-services-multidimensional-data.md
+- name: 資料來源檢視設計工具
+  href: ../data-source-view-designer-analysis-services-multidimensional-data.md
+- name: 資料來源檢視屬性對話方塊
+  href: ../data-source-view-properties-dialog-box-ssas.md
+- name: 資料庫設計工具
+  href: ../database-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: 一般 (資料庫設計工具)
+      href: ../general-database-designer-analysis-services-multidimensional-data.md
+    - name: 警告 (資料庫設計工具)
+      href: ../warnings-database-designer-analysis-services-multidimensional-data.md
+- name: 資料庫屬性對話方塊
+  href: ../database-properties-dialog-box-ssas-multidimensional.md
+- name: 定義關聯性對話方塊
+  href: ../define-relationship-dialog-box-analysis-services-multidimensional-data.md
+- name: 維度設計師
+  href: ../dimension-designer-analysis-services-multidimensional-data.md
+  items:
+    - name: 維度結構 (維度設計師)
+      href: ../dimension-structure-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (維度結構索引標籤，維度設計師)
+      href: ../toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md
+    - name: 資料來源檢視 (維度結構，維度設計師)
+      href: ../datasource-view-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 階層 (維度結構索引標籤，維度設計師)
+      href: ../hierarchies-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 屬性 (維度結構索引標籤，維度設計師)
+      href: ../attributes-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 屬性關聯性 (維度設計師)
+      href: ../attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (屬性關聯性設計師索引標籤，維度設計師)
+      href: ../toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 屬性關聯性圖表 (屬性關聯性設計師索引標籤，維度設計師)
+      href: ../attribute-relationship-diagram-analysis-services-multidimensional-data.md
+    - name: 屬性 (屬性關聯性設計師索引標籤，維度設計師)
+      href: ../attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 屬性關聯性 (屬性關聯性設計師索引標籤，維度設計師)
+      href: ../attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 翻譯 (維度設計師)
+      href: ../translations-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (翻譯索引標籤，維度設計師)
+      href: ../toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 翻譯詳細資料 (翻譯索引標籤，維度設計師)
+      href: ../translation-details-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 瀏覽器 (維度設計師)
+      href: ../browser-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 工具列 (瀏覽器索引標籤，維度設計師)
+      href: ../toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md
+    - name: 層級和成員 (瀏覽器索引標籤，維度設計師)
+      href: ../level-members-dimension-designer-analysis-services-multidimensional-data.md
+- name: 維度屬性對話方塊
+  href: ../dimension-properties-dialog-box-analysis-services-multidimensional-data.md
+- name: 解除警告對話方塊
+  href: ../dismiss-warning-dialog-box-analysis-services-multidimensional-data.md
+- name: 重複角色對話方塊
+  href: ../duplicate-security-role-dialog-box-analysis-services-multidimensional-data.md
+- name: 啟用/停用回寫對話方塊
+  href: ../enable-disable-writeback-dialog-box-analysis-services-multidimensional-data.md
+- name: 篩選成員對話方塊
+  href: ../filter-members-dialog-box-analysis-services-multidimensional-data.md
+- name: 尋找資料表對話方塊
+  href: ../find-table-dialog-box-analysis-services-multidimensional-data.md
+- name: 產生具名查詢對話方塊
+  href: ../generate-named-query-dialog-box-analysis-services-multidimensional-data.md
+- name: 影響分析對話方塊
+  href: ../impact-analysis-dialog-box-analysis-services-multidimensional-data.md
+- name: 累加式更新對話方塊
+  href: ../incremental-update-dialog-box-analysis-services-multidimensional-data.md
+- name: 索引鍵資料行對話方塊
+  href: ../key-columns-dialog-box-analysis-services-multidimensional-data.md
+- name: 層級命名範本對話方塊
+  href: ../level-naming-template-dialog-box-analysis-services-multidimensional-data.md
+- name: 尋找資料庫檔案對話方塊
+  href: ../locate-database-files-dialog-box-analysis-services-multidimensional-data.md
+- name: MDX 產生器
+  href: ../mdx-builder-analysis-services-multidimensional-data.md
+- name: MDX 查詢編輯器
+  href: ../mdx-query-editor-analysis-services-multidimensional-data.md
+- name: 量值群組繫結對話方塊
+  href: ../measure-group-bindings-dialog-box-analysis-services-multidimensional-data.md
+- name: 合併資料分割對話方塊
+  href: ../merge-partition-dialog-box-analysis-services-multidimensional-data.md
+- name: 新增資料庫對話方塊
+  href: ../new-database-dialog-box-analysis-services.md
+- name: 新增量值對話方塊
+  href: ../new-measure-dialog-box-analysis-services-multidimensional-data.md
+- name: 新增量值群組對話方塊 (Cube 設計工具)
+  href: ../new-measure-group-dialog-box-cube-designer.md
+- name: 物件繫結對話方塊
+  href: ../object-binding-dialog-box.md
+- name: 資料分割屬性對話方塊
+  href: ../partition-properties-dialog-box-ssms.md
+  items:
+    - name: 選取範圍 (資料分割屬性對話方塊)
+      href: ../selection-partition-properties-dialog-box-ssms.md
+    - name: 一般 (資料分割屬性對話方塊)
+      href: ../general-partition-properties-dialog-box-ssms.md
+    - name: 主動式快取 (資料分割屬性對話方塊)
+      href: ../proactive-caching-partition-properties-dialog-box-ssms.md
+- name: 資料分割來源對話方塊
+  href: ../partition-source-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: 資料表繫結詳細資料 (資料分割來源對話方塊)
+      href: ../table-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+    - name: 查詢繫結詳細資料 (資料分割來源對話方塊)
+      href: ../query-binding-partition-source-dialog-analysis-services-multidimensional-data.md
+- name: 處理對話方塊
+  href: ../process-dialog-box-analysis-services-multidimensional-data.md
+- name: 處理進度對話方塊
+  href: ../process-progress-dialog-box-analysis-services-multidimensional-data.md
+- name: 重新整理資料來源檢視對話方塊
+  href: ../refresh-data-source-view-dialog-box.md
+- name: 註冊資料庫組件對話方塊
+  href: ../register-database-assembly-dialog-box-analysis-services-multidimensional-data.md
+- name: 關聯式物件對話方塊
+  href: ../relational-objects-dialog-box-analysis-services-multidimensional-data.md
+- name: 遠端資料分割 - 進階設定對話方塊
+  href: ../remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md
+- name: 重新命名執行個體對話方塊
+  href: ../rename-instance-dialog-box-analysis-services.md
+- name: 使用其他資料表取代對話方塊
+  href: ../replace-table-with-other-table-dialog-box.md
+- name: 還原資料庫對話方塊
+  href: ../restore-database-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: 一般 (還原資料庫對話方塊)
+      href: ../general-restore-database-dialog-box-analysis-services-multidimensional-data.md
+    - name: 資料分割 (還原資料庫對話方塊)
+      href: ../partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md
+- name: 另存新檔對話方塊
+  href: ../save-file-as-dialog-box-analysis-services-multidimensional-data.md
+- name: 安全性內容對話方塊
+  href: ../security-context-dialog-box-analysis-services-multidimensional-data.md
+- name: 選取語言對話方塊
+  href: ../select-language-dialog-box-analysis-services-multidimensional-data.md
+- name: 選取父成員對話方塊
+  href: ../select-parent-member-dialog-box-analysis-services-multidimensional-data.md
+- name: 顯示資料表對話方塊
+  href: ../show-table-dialog-box-analysis-services-multidimensional-data.md
+- name: 儲存選項對話方塊
+  href: ../storage-options-dialog-box-analysis-services-multidimensional-data.md
+  items:
+    - name: 一般 (儲存選項對話方塊)
+      href: ../general-storage-options-dialog-box-analysis-services-multidimensional-data.md
+    - name: 通知 (儲存選項對話方塊)
+      href: ../notifications-storage-options-dialog-analysis-services-multidimensional-data.md
+- name: 儲存設定對話方塊
+  href: ../storage-settings-dialog-box-analysis-services-multidimensional-data.md
+- name: 使用者選取對話方塊
+  href: ../user-selection-dialog-box-analysis-services-multidimensional-data.md
+- name: 檢視詳細資料對話方塊
+  href: ../view-details-dialog-box-analysis-services-multidimensional-data.md
+- name: XMLA 查詢編輯器
+  href: ../xmla-query-editor-analysis-services-multidimensional-data.md

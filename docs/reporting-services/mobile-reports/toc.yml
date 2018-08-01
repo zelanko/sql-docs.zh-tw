@@ -1,0 +1,50 @@
+- name: 使用 SQL Server 行動報表發行工具建立行動報表
+  href: create-mobile-reports-with-sql-server-mobile-report-publisher.md
+- name: SQL Server 行動報表：完整逐步解說
+  href: sql-server-mobile-reports-end-to-end-walk-through.md
+- name: 建立 Reporting Services 行動報表
+  href: create-a-reporting-services-mobile-report.md
+- name: 建立 Reporting Services 行動報表時設計優先還是資料優先
+  href: design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md
+- name: Reporting Services 行動報表資料
+  href: data-for-reporting-services-mobile-reports.md
+  items:
+    - name: 使用模擬的資料
+      href: work-with-simulated-data-in-reporting-services-mobile-reports.md
+    - name: 從共用資料集取得資料
+      href: get-data-from-shared-datasets-in-reporting-services-mobile-reports.md
+    - name: 準備 Reporting Services 行動報表的資料
+      href: prepare-data-for-reporting-services-mobile-reports.md
+    - name: 準備 Reporting Services 行動報表的 Excel 資料
+      href: prepare-excel-data-for-reporting-services-mobile-reports.md
+    - name: 保留行動報表中 Analysis Services 的日期格式
+      href: retain-date-formatting-for-analysis-services-in-mobile-reports.md
+- name: 將參數加入行動報表中
+  href: add-parameters-to-a-mobile-report-reporting-services.md
+  items:
+    - name: 使用特定查詢字串參數開啟行動報表
+      href: open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md
+- name: 從行動報表將鑽研加入其他行動報表或 URL
+  href: add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md
+- name: 使用鑽研建立索引標籤式的行動報表 | Reporting Services 行動報表
+  href: create-a-tabbed-mobile-report-by-using-drillthrough.md
+- name: 將導覽器新增到行動報表
+  href: add-navigators-to-reporting-services-mobile-reports.md
+- name: 將視覺效果新增到行動報表
+  href: add-visualizations-to-reporting-services-mobile-reports.md
+  items:
+    - name: 依行動報表中的資料行或資料列群組資料
+      href: group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md
+- name: 將資料格 (資料表) 加入行動報表
+  href: add-data-grids-to-mobile-reports-reporting-services.md
+- name: 在行動報表中加入量測計 | Reporting Services
+  href: add-gauges-to-mobile-reports-reporting-services.md
+- name: 為手機或平板電腦配置行動報表
+  href: lay-out-a-reporting-services-mobile-report-for-phone-or-tablet.md
+- name: Reporting Services 行動報表中的地圖
+  href: maps-in-reporting-services-mobile-reports.md
+  items:
+    - name: Reporting Services 行動報表中的自訂地圖
+      href: custom-maps-in-reporting-services-mobile-reports.md
+    - name: 將自訂地圖加入 Reporting Services 行動報表
+      href: add-a-custom-map-to-a-reporting-services-mobile-report.md

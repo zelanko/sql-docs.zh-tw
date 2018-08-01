@@ -1,0 +1,24 @@
+- name: 日期和時間改善 (ODBC)
+  href: date-and-time-improvements-odbc.md
+- name: 增強型日期和時間類型的大量複製變更 (OLE DB 和 ODBC)
+  href: bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md
+- name: 資料類型對 ODBC 日期和時間支援的改善
+  href: data-type-support-for-odbc-date-and-time-improvements.md
+- name: 轉換
+  items:
+    - name: datetime 資料類型轉換 (ODBC)
+      href: datetime-data-type-conversions-odbc.md
+    - name: datetime 資料類型從 C 轉換成 SQL
+      href: datetime-data-type-conversions-from-c-to-sql.md
+    - name: datetime 資料類型從 SQL 轉換成 C
+      href: datetime-data-type-conversions-from-sql-to-c.md
+- name: 舊版 SQL Server 的增強型日期/時間類型行為 (ODBC)
+  href: enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md
+- name: 中繼資料 - 目錄
+  href: metadata-catalog.md
+- name: 中繼資料 - 參數和結果
+  href: metadata-parameter-and-result.md
+- name: 增強型日期和時間功能的 ODBC API 支援
+  href: odbc-api-support-for-enhanced-date-and-time-features.md
+- name: 日期和時間類型的 sql_variant 支援
+  href: sql-variant-support-for-date-and-time-types.md

@@ -1,0 +1,90 @@
+- name: 概觀
+  href: data-types-transact-sql.md
+- name: 常數
+  href: constants-transact-sql.md
+- name: 轉換
+  href: data-type-conversion-database-engine.md
+- name: 優先順序
+  href: data-type-precedence-transact-sql.md
+- name: 同義字
+  href: data-type-synonyms-transact-sql.md
+- name: 有效位數、小數位數和長度
+  href: precision-scale-and-length-transact-sql.md
+- name: cursor
+  href: cursor-transact-sql.md
+- name: 日期和時間
+  href: date-and-time-types.md
+  items:
+    - name: 日期
+      href: date-transact-sql.md
+    - name: DATETIME
+      href: datetime-transact-sql.md
+    - name: datetime2
+      href: datetime2-transact-sql.md
+    - name: datetimeoffset
+      href: datetimeoffset-transact-sql.md
+    - name: smalldatetime
+      href: smalldatetime-transact-sql.md
+    - name: time
+      href: time-transact-sql.md
+- name: hierarchyid 方法
+  href: hierarchyid-data-type-method-reference.md
+  items:
+    - name: GetAncestor (Database Engine)
+      href: getancestor-database-engine.md
+    - name: GetDescendant (Database Engine)
+      href: getdescendant-database-engine.md
+    - name: GetLevel (Database Engine)
+      href: getlevel-database-engine.md
+    - name: GetRoot (Database Engine)
+      href: getroot-database-engine.md
+    - name: IsDescendantOf (Database Engine)
+      href: isdescendantof-database-engine.md
+    - name: 剖析 (Database Engine)
+      href: parse-database-engine.md
+    - name: Read (Database Engine)
+      href: read-database-engine.md
+    - name: GetReparentedValue (Database Engine)
+      href: getreparentedvalue-database-engine.md
+    - name: ToString (Database Engine)
+      href: tostring-database-engine.md
+    - name: Write (Database Engine)
+      href: write-database-engine.md
+- name: 數值
+  href: numeric-types.md
+  items:
+    - name: bit
+      href: bit-transact-sql.md
+    - name: decimal 和 numeric
+      href: decimal-and-numeric-transact-sql.md
+    - name: float 和 real
+      href: float-and-real-transact-sql.md
+    - name: int、bigint、smallint 和 tinyint
+      href: int-bigint-smallint-and-tinyint-transact-sql.md
+    - name: money 和 smallmoney
+      href: money-and-smallmoney-transact-sql.md
+- name: rowversion
+  href: rowversion-transact-sql.md
+- name: 字串和二進位
+  href: string-and-binary-types.md
+  items:
+    - name: binary 和 varbinary
+      href: binary-and-varbinary-transact-sql.md
+    - name: char 和 varchar
+      href: char-and-varchar-transact-sql.md
+    - name: nchar 和 nvarchar
+      href: nchar-and-nvarchar-transact-sql.md
+    - name: ntext、text 和 image
+      href: ntext-text-and-image-transact-sql.md
+- name: 空間地理
+  href: ../../t-sql/spatial-geography/spatial-types-geography.md
+- name: 空間幾何
+  href: ../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md
+- name: sql_variant
+  href: sql-variant-transact-sql.md
+- name: Table
+  href: table-transact-sql.md
+- name: UNIQUEIDENTIFIER
+  href: uniqueidentifier-transact-sql.md
+- name: XML
+  href: ../../t-sql/xml/xml-transact-sql.md

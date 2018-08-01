@@ -1,0 +1,154 @@
+- name: 使用原則式管理來管理伺服器
+  href: administer-servers-by-using-policy-based-management.md
+  items:
+    - name: 原則式管理原則儲存
+      href: policy-based-management-storage.md
+    - name: 設定原則式管理的一般屬性
+      href: configure-the-general-properties-of-policy-based-management.md
+    - name: 設定警示以便向原則管理員通知原則失敗
+      href: configure-alerts-to-notify-policy-administrators-of-policy-failures.md
+    - name: 建立原則式管理原則
+      href: create-a-policy-based-management-policy.md
+    - name: 建立新的原則式管理條件
+      href: create-a-new-policy-based-management-condition.md
+    - name: 檢視或修改原則式管理原則的屬性
+      href: view-or-modify-the-properties-of-a-policy-based-management-policy.md
+    - name: 檢視或修改原則式管理條件的屬性
+      href: view-or-modify-the-properties-of-a-policy-based-management-condition.md
+    - name: 刪除原則式管理原則
+      href: delete-a-policy-based-management-policy.md
+    - name: 刪除原則式管理條件
+      href: delete-a-policy-based-management-condition.md
+    - name: 根據物件評估原則式管理原則
+      href: evaluate-a-policy-based-management-policy-from-an-object.md
+    - name: 根據原則式管理原則評估該原則
+      href: evaluate-a-policy-based-management-policy-from-that-policy.md
+    - name: 依照排程評估原則式管理原則
+      href: evaluate-a-policy-based-management-policy-on-a-schedule.md
+    - name: 匯出原則式管理原則
+      href: export-a-policy-based-management-policy.md
+    - name: 匯入原則式管理原則
+      href: import-a-policy-based-management-policy.md
+    - name: 讓資料庫訂閱或取消訂閱原則類別目錄
+      href: subscribe-or-unsubscribe-a-database-to-a-policy-category.md
+    - name: 管理原則類別目錄
+      href: manage-policy-categories.md
+- name: 使用原則式管理 Facet
+  href: working-with-policy-based-management-facets.md
+  items:
+    - name: 檢視 SQL Server 物件的原則式管理 Facet
+      href: view-the-policy-based-management-facets-on-a-sql-server-object.md
+    - name: 檢視原則式管理 Facet 的屬性
+      href: view-the-properties-of-a-policy-based-management-facet.md
+    - name: 將原則式管理 Facet 狀態複製到 XML 檔案
+      href: copy-a-policy-based-management-facet-state-to-an-xml-file.md
+- name: 使用原則式管理來監視和強制最佳做法
+  href: monitor-and-enforce-best-practices-by-using-policy-based-management.md
+  items:
+    - name: 非對稱金鑰加密強度
+      href: asymmetric-keys-encryption-strength.md
+    - name: 備份檔案必須位在與資料庫檔案不同的裝置上
+      href: dbengine-backup-files-must-be-on-separate-devices-from-the-database-files.md
+    - name: 檢查磁碟 I/O 子系統的 I/O 延遲問題
+      href: check-disk-input-and-output-subsystem-for-io-delay-problems.md
+    - name: 檢查磁碟輸入輸出子系統的讀取重試問題
+      href: check-disk-input-output-subsystem-for-read-retry-problems.md
+    - name: 檢查具有可疑頁面的資料庫是否完整
+      href: check-integrity-of-database-with-suspect-pages.md
+    - name: 正確的 Affinity Mask 和 Affinity I/O Mask 重疊
+      href: correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+    - name: 預設追蹤記錄檔已停用
+      href: default-trace-log-files-disabled.md
+    - name: 偵測到失敗的 I/O 要求
+      href: detect-failed-input-and-output-requests.md
+    - name: 偵測到 SCSI 主機介面卡問題
+      href: detect-scsi-host-adapter-issues.md
+    - name: 裝置驅動程式控制項錯誤
+      href: device-driver-control-error.md
+    - name: 裝置未就緒錯誤
+      href: device-not-ready-error.md
+    - name: 停用輕量型共用
+      href: disable-lightweight-pooling.md
+    - name: 使用者資料庫的 Guest 權限
+      href: guest-permissions-on-user-databases.md
+    - name: 硬性分頁錯誤期間的輸入和輸出錯誤
+      href: input-and-output-error-during-hard-page-fault.md
+    - name: 增加或停用 Blocked Process Threshold
+      href: increase-or-disable-blocked-process-threshold.md
+    - name: 保留 Affinity Mask 預設值
+      href: keep-the-affinity-mask-default-value.md
+    - name: 保留鎖定組態選項預設值
+      href: keep-the-locks-configuration-option-default-value.md
+    - name: 網路封包大小不應超過 8060 個位元組
+      href: network-packet-size-should-not-exceed-8060-bytes.md
+    - name: 過期的備份
+      href: outdated-backup.md
+    - name: 將資料檔和記錄檔放在不同的磁碟機上
+      href: place-data-and-log-files-on-separate-drives.md
+    - name: 伺服器 public 權限
+      href: server-public-permissions.md
+    - name: 將 AUTO_CLOSE 資料庫選項設定為 OFF
+      href: set-the-auto-close-database-option-to-off.md
+    - name: 將 AUTO_SHRINK 資料庫選項設定為 OFF
+      href: set-the-auto-shrink-database-option-to-off.md
+    - name: 將使用者定義資料庫的定序設定為 master 和 model 資料庫的定序
+      href: dbengine-set-collation-user-defined-databases.md
+    - name: 設定平行處理原則的最大程度選項來取得最佳效能
+      href: set-the-max-degree-of-parallelism-option-for-optimal-performance.md
+    - name: 將 PAGE_VERIFY 資料庫選項設定為 CHECKSUM
+      href: set-the-page-verify-database-option-to-checksum.md
+    - name: SQL Server 登入密碼逾期
+      href: sql-server-login-password-expiration.md
+    - name: SQL Server 登入密碼強度
+      href: sql-server-login-password-strength.md
+    - name: 儲存體系統輸入輸出逾時
+      href: storage-system-input-output-time-out.md
+    - name: 系統資料庫上的對稱金鑰
+      href: symmetric-keys-on-system-databases.md
+    - name: 使用者資料庫上的對稱金鑰
+      href: symmetric-keys-on-user-databases.md
+    - name: Trustworthy 位元
+      href: trustworthy-bit.md
+    - name: 非預期的系統失敗
+      href: unexpected-system-failures.md
+    - name: 使用 Database Mail 而非 SQL Mail
+      href: use-database-mail-instead-of-sql-mail.md
+    - name: 確認最大工作者執行緒設定
+      href: verify-max-worker-threads-setting.md
+- name: 原則管理節點 (物件總管)
+  href: policy-management-node-object-explorer.md
+  items:
+    - name: 建立新條件或開啟條件對話方塊，一般頁面
+      href: create-new-condition-or-open-condition-dialog-box-general-page.md
+    - name: 建立新條件或開啟條件對話方塊，描述頁面
+      href: create-new-condition-or-open-condition-dialog-box-description-page.md
+    - name: 開啟條件對話方塊，相依原則頁面
+      href: open-condition-dialog-box-dependent-policies-page.md
+    - name: 進階編輯 (條件) 對話方塊
+      href: advanced-edit-condition-dialog-box.md
+    - name: 建立新原則或開啟原則對話方塊，一般頁面
+      href: create-new-policy-or-open-policy-dialog-box-general-page.md
+    - name: 建立新原則或開啟原則對話方塊，描述頁面
+      href: create-new-policy-or-open-policy-dialog-box-description-page.md
+    - name: 檢視原則對話方塊
+      href: view-policies-dialog-box.md
+    - name: 評估原則對話方塊，原則選取頁面
+      href: evaluate-policies-dialog-box-policy-selection-page.md
+    - name: 評估原則對話方塊，評估結果頁面
+      href: evaluate-policies-dialog-box-evaluation-results-page.md
+    - name: Facet 屬性對話方塊、一般頁面
+      href: facet-properties-dialog-box-general-page.md
+    - name: Facet 屬性對話方塊、相依原則頁面
+      href: facet-properties-dialog-box-dependent-policies-page.md
+    - name: Facet 屬性對話方塊，相依條件頁面
+      href: facet-properties-dialog-box-dependent-conditions-page.md
+    - name: 結果詳細檢視對話方塊
+      href: results-detailed-view-dialog-box.md
+    - name: 檢視 Facet 對話方塊
+      href: view-facets-dialog-box.md
+    - name: 選取來源對話方塊
+      href: select-source-dialog-box.md
+    - name: 匯出為原則對話方塊
+      href: export-as-policy-dialog-box.md
+    - name: 匯出原則對話方塊
+      href: import-policies-dialog-box.md

@@ -1,0 +1,20 @@
+- name: SQL Server Native Client 程式設計
+  href: sql-server-native-client-programming.md
+- name: 功能 +
+  href: ../../relational-databases/native-client/features/sql-server-native-client-features.md
+- name: 應用程式 +
+  href: ../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
+- name: OLE DB +
+  href: ../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md
+- name: ODBC +
+  href: ../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md
+- name: 尋找其他 SQL Server Native Client 資訊
+  href: finding-more-sql-server-native-client-information.md
+- name: SQL Server Native Client 錯誤 MSSQLSERVER_50000
+  href: sql-server-native-client-error-mssqlserver-50000.md
+- name: SQL Server Native Client
+  href: sql-server-native-client.md
+- name: SQL Server Native Client 的系統需求
+  href: system-requirements-for-sql-server-native-client.md
+- name: 使用 SQL Server Native Client 的時機
+  href: when-to-use-sql-server-native-client.md

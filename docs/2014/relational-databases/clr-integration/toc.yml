@@ -1,0 +1,210 @@
+- name: Common Language Runtime (CLR) 整合程式設計概念
+  href: common-language-runtime-clr-integration-programming-concepts.md
+- name: Common Language Runtime (CLR) 整合概觀
+  href: common-language-runtime-integration-overview.md
+  items:
+    - name: CLR 整合的概觀
+      href: clr-integration-overview.md
+    - name: CLR 整合的架構
+      href: ../../database-engine/dev-guide/architecture-of-clr-integration.md
+- name: CLR 整合使用者入門
+  href: database-objects/getting-started-with-clr-integration.md
+- name: CLR 整合的新功能
+  href: clr-integration-what-s-new.md
+  items:
+    - name: CLR 主控環境
+      href: clr-integration-architecture-clr-hosted-environment.md
+    - name: CLR 整合的效能
+      href: clr-integration-architecture-performance.md
+- name: CLR 預存程序
+  href: ../../database-engine/dev-guide/clr-stored-procedures.md
+- name: CLR 觸發程序
+  href: ../../database-engine/dev-guide/clr-triggers.md
+- name: 啟用 CLR 整合
+  href: clr-integration-enabling.md
+- name: 組件
+  href: assemblies-database-engine.md
+  items:
+    - name: 設計組件
+      href: assemblies-designing.md
+    - name: 實作組件
+      href: assemblies-implementing.md
+    - name: 取得組件的相關資訊
+      href: assemblies-getting-information.md
+    - name: 組件屬性 (一般頁面)
+      href: assemblies-properties.md
+- name: 利用 Common Language Runtime (CLR) 整合建置資料庫物件
+  href: database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
+  items:
+    - name: 支援的 .NET Framework 程式庫
+      href: database-objects/supported-net-framework-libraries.md
+    - name: CLR 整合程式設計模型限制
+      href: database-objects/clr-integration-programming-model-restrictions.md
+    - name: .NET Framework 的 SQL Server 資料類型
+      href: ../clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md
+      items:
+        - name: Null 屬性和三值邏輯比較
+          href: ../clr-integration-database-objects-types-net-framework/nullability-and-three-value-logic-comparisons.md
+        - name: 定序和 CLR 整合資料類型
+          href: ../clr-integration-database-objects-types-net-framework/collation-and-clr-integration-data-types.md
+        - name: 處理 CLR 中的大型物件 (LOB) 參數
+          href: ../clr-integration-database-objects-types-net-framework/handling-large-object-lob-parameters-in-the-clr.md
+        - name: 對應 CLR 參數資料
+          href: ../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md
+- name: CLR 整合自訂屬性的概觀
+  href: ../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md
+  items:
+    - name: CLR 常式的自訂屬性
+      href: database-objects/clr-integration-custom-attributes-for-clr-routines.md
+- name: CLR 使用者定義函數
+  href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md
+  items:
+    - name: CLR 純量值函式
+      href: ../clr-integration-database-objects-user-defined-functions/clr-scalar-valued-functions.md
+    - name: CLR 資料表值函式
+      href: ../clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md
+    - name: CLR 使用者定義彙總
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md
+    - name: CLR 使用者定義彙總的需求
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates-requirements.md
+    - name: 叫用 CLR 使用者定義彙總函式
+      href: ../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md
+- name: CLR 使用者定義型別
+  href: ../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md
+  items:
+    - name: 使用者定義型別
+      href: ../../database-engine/dev-guide/user-defined-type.md
+    - name: UTF8 字串使用者自訂資料類型 (UDT)
+      href: ../../database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md
+    - name: 建立使用者定義型別
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types.md
+    - name: 使用者定義型別需求
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
+    - name: 編碼使用者定義型別
+      href: ../clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
+    - name: 在 SQL Server 中註冊使用者定義型別
+      href: ../clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
+    - name: 使用 SQL Server 中的使用者定義型別
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
+    - name: 定義 UDT 資料表及資料行
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md
+    - name: 操作 UDT 資料
+      href: ../clr-integration-database-objects-user-defined-types/working-with-user-defined-types-manipulating-udt-data.md
+    - name: 存取 ADO.NET 中的使用者定義型別
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md
+    - name: 擷取 UDT 資料
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-retrieving-udt-data.md
+    - name: 以 DataAdapter 更新 UDT 資料行
+      href: ../clr-integration-database-objects-user-defined-types/accessing-user-defined-types-updating-udt-columns-with-dataadapters.md
+- name: 從 CLR 資料庫物件進行資料存取
+  href: data-access/data-access-from-clr-database-objects.md
+  items:
+    - name: 內容連接
+      href: data-access/context-connection.md
+      items:
+        - name: 一般連線與內容連接
+          href: data-access/context-connections-vs-regular-connections.md
+        - name: 一般和內容連接的限制
+          href: data-access/context-connections-and-regular-connections-restrictions.md
+    - name: 連接的模擬和認證
+      href: data-access/impersonation-and-credentials-for-connections.md
+- name: ADO.NET 的 SQL Server 同處理序特定擴充
+  href: ../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md
+  items:
+    - name: SqlContext 物件
+      href: ../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md
+    - name: SqlPipe 物件
+      href: ../clr-integration-data-access-in-process-ado-net/sqlpipe-object.md
+    - name: SqlTriggerContext 物件
+      href: ../clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md
+    - name: SqlDataRecord 物件
+      href: ../clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md
+- name: CLR 整合和交易
+  href: ../clr-integration-data-access-transactions/clr-integration-and-transactions.md
+  items:
+    - name: 交易升級
+      href: ../clr-integration-data-access-transactions/transaction-promotion.md
+    - name: 存取目前交易
+      href: ../clr-integration-data-access-transactions/accessing-the-current-transaction.md
+    - name: 使用 System.Transactions
+      href: ../clr-integration-data-access-transactions/using-system-transactions.md
+    - name: 交易存留期間
+      href: ../clr-integration-data-access-transactions/transaction-lifetimes.md
+- name: 從 CLR 資料庫物件進行 XML 序列化
+  href: ../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md
+- name: CLR 整合安全性
+  href: security/clr-integration-security.md
+  items:
+    - name: CLR 整合程式碼存取安全性
+      href: security/clr-integration-code-access-security.md
+    - name: CLR 整合安全性中的連結
+      href: ../../database-engine/dev-guide/links-in-clr-integration-security.md
+    - name: 模擬和 CLR 整合安全性
+      href: ../../database-engine/dev-guide/impersonation-and-clr-integration-security.md
+    - name: 允許部分信任的呼叫端
+      href: ../../database-engine/dev-guide/allowing-partially-trusted-callers.md
+    - name: 應用程式網域和 CLR 整合安全性
+      href: ../../database-engine/dev-guide/application-domains-and-clr-integration-security.md
+- name: 主機保護屬性和 CLR 整合程式設計
+  href: ../clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
+  items:
+    - name: Microsoft.VisualBasic.dll 中不允許的型別和成員
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md
+    - name: 在 mscorlib.dll 中不允許的類型和成員
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md
+    - name: 在 System.dll 中不允許的類型和成員
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md
+    - name: 在 System.Data.dll 中不允許的類型和成員
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md
+    - name: System.Core.dll 中不允許的類型和成員
+      href: ../clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md
+- name: 偵錯 CLR 資料庫物件
+  href: debugging-clr-database-objects.md
+- name: 部署 CLR 資料庫物件
+  href: deploying-clr-database-objects.md
+- name: 管理 CLR 整合組件
+  href: assemblies/managing-clr-integration-assemblies.md
+  items:
+    - name: 建立組件
+      href: assemblies/creating-an-assembly.md
+    - name: 變更組件
+      href: assemblies/altering-an-assembly.md
+    - name: 卸除組件
+      href: assemblies/dropping-an-assembly.md
+- name: 監視與疑難排解 Managed 資料庫物件
+  href: monitoring-and-troubleshooting-managed-database-objects.md
+- name: Common Language Runtime (CLR) 整合的使用案例和範例
+  href: ../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md
+  items:
+    - name: 從 CLR UDF 存取機器碼
+      href: ../../database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md
+    - name: 陣列參數範例
+      href: ../../database-engine/dev-guide/array-parameter-sample.md
+    - name: Calendar-Aware Date/Time UDT 範例
+      href: ../../database-engine/dev-guide/calendar-aware-date-and-time-udt-sample.md
+    - name: CLR 交易範例
+      href: ../../database-engine/dev-guide/clr-transactions-sample.md
+    - name: 使用 CLR 及 XML 建立連絡人
+      href: ../../database-engine/dev-guide/contact-creation-using-clr-and-xml.md
+    - name: Currency 類型及轉換函數
+      href: ../../database-engine/dev-guide/currency-type-and-conversion-function.md
+    - name: 使用 CLR 處理大型物件
+      href: ../../database-engine/dev-guide/handling-large-objects-using-clr.md
+    - name: Hello World Ready 範例
+      href: ../../database-engine/dev-guide/hello-world-ready-sample.md
+    - name: Hello World 範例
+      href: ../../database-engine/dev-guide/hello-world-sample.md
+    - name: 同處理序資料存取範例
+      href: ../../database-engine/dev-guide/in-process-data-access-sample.md
+    - name: 結果集範例
+      href: ../../database-engine/dev-guide/result-set-sample.md
+    - name: 傳送資料集範例
+      href: ../../database-engine/dev-guide/send-dataset-sample.md
+    - name: 字串公用程式函數範例
+      href: ../../database-engine/dev-guide/string-utility-functions-sample.md
+    - name: 增補感知的字串操作範例
+      href: ../../database-engine/dev-guide/supplementary-aware-string-manipulation-sample.md
+- name: UDT 公用程式
+  href: ../../database-engine/dev-guide/udt-utilities.md
+- name: 未使用的組件清除
+  href: ../../database-engine/dev-guide/unused-assembly-cleanup.md

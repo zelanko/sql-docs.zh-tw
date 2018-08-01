@@ -1,0 +1,45 @@
+- name: 資料採礦分析 UI 精靈
+  href: ui-wizards-data-mining.md
+- name: 資料採礦精靈
+  href: ../data-mining-wizards.md
+- name: 資料採礦精靈 F1 說明
+  href: ../data-mining-wizard-f1-help-analysis-services-data-mining.md
+  items:
+    - name: 選取定義方法 (資料採礦精靈)
+      href: ../select-the-definition-method-data-mining-wizard.md
+    - name: 建立資料採礦結構 (資料採礦精靈)
+      href: ../create-the-data-mining-structure-data-mining-wizard.md
+    - name: 選取資料來源檢視 (資料採礦精靈)
+      href: ../select-data-source-view-data-mining-wizard.md
+    - name: 瀏覽資料來源檢視 (資料採礦精靈)
+      href: ../browse-data-source-view-data-mining-wizard.md
+    - name: 指定資料表類型 (資料採礦精靈)
+      href: ../specify-table-types-data-mining-wizard.md
+    - name: 指定培訓資料 (資料採礦精靈)
+      href: ../specify-the-training-data-data-mining-wizard.md
+    - name: 指定資料行內容和資料類型 (資料採礦精靈)
+      href: ../specify-column-content-and-data-type-data-mining-wizard.md
+    - name: 建立測試集
+      href: ../create-testing-set-data-mining-wizard.md
+    - name: 建議相關資料行 (資料採礦精靈)
+      href: ../suggest-related-columns-data-mining-wizard.md
+    - name: 選取來源 Cube 維度 (資料採礦精靈)
+      href: ../select-the-source-cube-dimension-data-mining-wizard.md
+    - name: 選取案例索引鍵 (資料採礦精靈)
+      href: ../select-the-case-key-data-mining-wizard.md
+    - name: 選取案例層級資料行 (資料採礦精靈)
+      href: ../select-case-level-columns-data-mining-wizard.md
+    - name: 指定採礦模型資料行使用方式 (資料採礦精靈)
+      href: ../specify-mining-model-column-usage-data-mining-wizard.md
+    - name: 選取量值群組維度 (加入新的巢狀資料表精靈)
+      href: ../select-a-measure-group-dimension-add-new-nested-table-wizard.md
+    - name: 選取巢狀資料表索引鍵 (加入新的巢狀資料表精靈)
+      href: ../select-nested-table-key-add-new-nested-table-wizard.md
+    - name: 選取巢狀資料表資料行 (加入新的巢狀資料表精靈)
+      href: ../select-nested-table-columns-add-new-nested-table-wizard.md
+    - name: 指定資料行的內容和資料類型 (資料採礦精靈)
+      href: ../specify-the-column-s-content-and-data-type-data-mining-wizard.md
+    - name: 配量來源 Cube (資料採礦精靈)
+      href: ../slice-source-cube-data-mining-wizard.md
+    - name: 正在完成精靈 (資料採礦精靈)
+      href: ../completing-the-wizard-data-mining-wizard.md

@@ -1,0 +1,90 @@
+- name: SQL Server Native Client 程式設計
+  href: sql-server-native-client-programming.md
+  items:
+    - name: SQL Server Native Client 的新增功能
+      href: sql-server-native-client.md
+    - name: 使用 SQL Server Native Client 的時機
+      href: when-to-use-sql-server-native-client.md
+- name: SQL Server Native Client 功能
+  href: features/sql-server-native-client-features.md
+  items:
+    - name: ODBC 驅動程式在處理字元轉換上的行為變更
+      href: features/odbc-driver-behavior-change-when-handling-character-conversions.md
+    - name: 使用資料庫鏡像
+      href: features/using-database-mirroring.md
+    - name: 執行非同步作業
+      href: features/performing-asynchronous-operations.md
+    - name: 使用 Multiple Active Result Sets (MARS)
+      href: features/using-multiple-active-result-sets-mars.md
+    - name: 使用 XML 資料類型
+      href: features/using-xml-data-types.md
+    - name: 使用使用者定義型別
+      href: features/using-user-defined-types.md
+    - name: 使用大數值類型
+      href: features/using-large-value-types.md
+    - name: 以程式設計方式變更密碼
+      href: features/changing-passwords-programmatically.md
+    - name: 使用快照隔離
+      href: features/working-with-snapshot-isolation.md
+    - name: 使用查詢通知
+      href: features/working-with-query-notifications.md
+    - name: 執行大量複製作業
+      href: features/performing-bulk-copy-operations.md
+    - name: 使用加密而不需驗證
+      href: features/using-encryption-without-validation.md
+    - name: 資料表值參數
+      href: features/table-valued-parameters-sql-server-native-client.md
+    - name: 大型 CLR 使用者定義型別
+      href: features/large-clr-user-defined-types.md
+    - name: FILESTREAM 支援
+      href: features/filestream-support.md
+    - name: 用戶端連接中的服務主要名稱 (SPN) 支援
+      href: features/service-principal-name-spn-support-in-client-connections.md
+    - name: SQL Server Native Client 中的疏鬆資料行支援
+      href: features/sparse-columns-support-in-sql-server-native-client.md
+    - name: 日期/時間的改善
+      href: features/date-and-time-improvements.md
+    - name: 中繼資料探索
+      href: features/metadata-discovery.md
+    - name: SQL Server Native Client 11.0 中的 UTF-16 支援
+      href: features/utf-16-support-in-sql-server-native-client-11-0.md
+    - name: 高可用性/災害復原的 SQL Server Native Client 支援
+      href: features/sql-server-native-client-support-for-high-availability-disaster-recovery.md
+    - name: 存取擴展事件記錄檔中的診斷資訊
+      href: features/accessing-diagnostic-information-in-the-extended-events-log.md
+    - name: SQL Server Native Client 對 LocalDB 的支援
+      href: features/sql-server-native-client-support-for-localdb.md
+- name: 使用 SQL Server Native Client 建立應用程式
+  href: applications/building-applications-with-sql-server-native-client.md
+  items:
+    - name: 安裝 SQL Server Native Client
+      href: applications/installing-sql-server-native-client.md
+    - name: SQL Server Native Client 的元件
+      href: applications/components-of-sql-server-native-client.md
+    - name: 搭配 SQL Server Native Client 使用連接字串關鍵字
+      href: applications/using-connection-string-keywords-with-sql-server-native-client.md
+    - name: 使用 SQL Server Native Client 標頭檔與程式庫檔案
+      href: applications/using-the-sql-server-native-client-header-and-library-files.md
+    - name: 從 MDAC 將應用程式更新至 SQL Server Native Client
+      href: applications/updating-an-application-to-sql-server-native-client-from-mdac.md
+    - name: 從 SQL Server 2005 Native Client 更新應用程式
+      href: applications/updating-an-application-from-sql-server-2005-native-client.md
+    - name: 使用 ADO 搭配 SQL Server Native Client
+      href: applications/using-ado-with-sql-server-native-client.md
+    - name: SQL Server Native Client 的支援原則
+      href: applications/support-policies-for-sql-server-native-client.md
+    - name: 使用 SQL Server Native Client 連接至 Azure SQL 資料庫
+      href: applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
+- name: SQL Server Native Client 的系統需求
+  href: system-requirements-for-sql-server-native-client.md
+- name: SQL Server Native Client (OLE DB) +
+  href: ole-db/sql-server-native-client-ole-db.md
+- name: SQL Server Native Client (ODBC) +
+  href: odbc/sql-server-native-client-odbc.md
+- name: 尋找其他 SQL Server Native Client 資訊
+  href: finding-more-sql-server-native-client-information.md
+- name: SQL Server Native Client 錯誤
+  href: ../../database-engine/dev-guide/sql-server-native-client-errors.md
+  items:
+    - name: MSSQLSERVER_50000
+      href: ../errors-events/sql-server-native-client-error-mssqlserver-50000.md

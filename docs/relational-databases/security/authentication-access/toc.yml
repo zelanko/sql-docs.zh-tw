@@ -1,0 +1,37 @@
+- name: '[權限]'
+  href: getting-started-with-database-engine-permissions.md
+  items:
+    - name: 決定有效的權限
+      href: determining-effective-database-engine-permissions.md
+- name: 主體
+  href: principals-database-engine.md
+- name: 管理登入、使用者和結構描述
+  href: managing-logins-users-and-schemas-how-to-topics.md
+  items:
+    - name: 建立登入
+      href: create-a-login.md
+    - name: 建立資料庫使用者
+      href: create-a-database-user.md
+    - name: 建立資料庫結構描述
+      href: create-a-database-schema.md
+    - name: 加入角色
+      href: join-a-role.md
+    - name: 為主體授與權限
+      href: grant-a-permission-to-a-principal.md
+- name: 伺服器層級角色
+  href: server-level-roles.md
+  items:
+    - name: 建立
+      href: create-a-server-role.md
+- name: 資料庫層級角色
+  href: database-level-roles.md
+- name: 應用程式角色
+  href: application-roles.md
+  items:
+    - name: 建立應用程式角色
+      href: create-an-application-role.md
+- name: 認證
+  href: credentials-database-engine.md
+  items:
+    - name: 建立
+      href: create-a-credential.md

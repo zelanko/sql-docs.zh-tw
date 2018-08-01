@@ -1,0 +1,272 @@
+- name: 用於 SQL Server 之 PHP 的 Microsoft 驅動程式
+  href: microsoft-php-driver-for-sql-server.md
+- name: 使用者入門
+  href: getting-started-with-the-php-sql-driver.md
+  items:
+    - name: 步驟 1︰設定 PHP 開發的開發環境
+      href: step-1-configure-development-environment-for-php-development.md
+    - name: 步驟 2︰建立供 PHP 開發之用的 SQL 資料庫
+      href: step-2-create-a-sql-database-for-php-development.md
+    - name: 步驟 3︰使用 PHP 連線到 SQL Server 的概念證明
+      href: step-3-proof-of-concept-connecting-to-sql-using-php.md
+    - name: 步驟 4︰使用 PHP 彈性地連線到 SQL Server
+      href: step-4-connect-resiliently-to-sql-with-php.md
+- name: 概觀
+  href: overview-of-the-php-sql-driver.md
+  items:
+    - name: 系統需求
+      href: system-requirements-for-the-php-sql-driver.md
+    - name: 下載 Drivers for PHP for SQL Server
+      href: download-drivers-php-sql-server.md
+    - name: 載入驅動程式
+      href: loading-the-php-sql-driver.md
+    - name: 設定 IIS
+      href: configuring-iis-for-php-sql-driver.md
+    - name: PHP Linux 及 Mac 驅動程式安裝教學課程
+      href: installation-tutorial-linux-mac.md
+    - name: 版本資訊
+      href: release-notes-for-the-php-sql-driver.md
+    - name: 支援資源
+      href: support-resources-for-the-php-sql-driver.md
+    - name: 關於程式碼範例
+      href: about-code-examples-in-the-documentation.md
+    - name: Microsoft Drivers for PHP for SQL Server 的支援矩陣
+      href: microsoft-php-drivers-for-sql-server-support-matrix.md
+- name: 程式設計手冊
+  href: programming-guide-for-php-sql-driver.md
+  items:
+    - name: 連接到伺服器
+      href: connecting-to-the-server.md
+      items:
+        - name: 如何：使用 Windows 驗證進行連接
+          href: how-to-connect-using-windows-authentication.md
+        - name: 'How to: Connect Using SQL Server Authentication'
+          href: how-to-connect-using-sql-server-authentication.md
+        - name: 如何：使用 Azure Active Directory 驗證進行連線
+          href: azure-active-directory.md
+        - name: 如何：在指定的通訊埠上連接
+          href: how-to-connect-on-a-specified-port.md
+        - name: 連接共用
+          href: connection-pooling-microsoft-drivers-for-php-for-sql-server.md
+        - name: 如何：停用 Multiple Active Resultsets (MARS)。
+          href: how-to-disable-multiple-active-resultsets-mars.md
+        - name: 連線選項
+          href: connection-options.md
+        - name: LocalDB 的支援
+          href: php-driver-for-sql-server-support-for-localdb.md
+        - name: 高可用性與災害復原的支援
+          href: php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md
+        - name: 連線到 Microsoft Azure SQL Database
+          href: connecting-to-microsoft-azure-sql-database.md
+        - name: 連接恢復功能
+          href: connection-resiliency.md
+    - name: 比較執行函數
+      href: comparing-execution-functions.md
+    - name: PDO_SQLSRV 驅動程式中的直接陳述式執行和已備妥的陳述式執行
+      href: direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md
+    - name: 擷取資料
+      href: retrieving-data.md
+      items:
+        - name: 使用 SQLSRV 驅動程式以資料流形式擷取資料
+          href: retrieving-data-as-a-stream-using-the-sqlsrv-driver.md
+          items:
+            - name: 使用 SQLSRV 驅動程式支援資料流的資料類型
+              href: data-types-with-stream-support-using-the-sqlsrv-driver.md
+            - name: 如何：使用 SQLSRV 驅動程式以資料流的形式擷取字元資料
+              href: how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md
+            - name: 如何：使用 SQLSRV 驅動程式以資料流形式擷取二進位資料
+              href: how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md
+        - name: 使用方向參數
+          href: using-directional-parameters.md
+          items:
+            - name: 如何：使用 SQLSRV 驅動程式指定參數方向
+              href: how-to-specify-parameter-direction-using-the-sqlsrv-driver.md
+            - name: 如何：使用 SQLSRV 驅動程式擷取輸出參數
+              href: how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md
+            - name: 'How to: Retrieve Input and Output Parameters Using the SQLSRV Driver'
+              href: how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md
+        - name: 指定資料指標類型及選取資料列
+          href: specifying-a-cursor-type-and-selecting-rows.md
+          items:
+            - name: 資料指標類型 (SQLSRV 驅動程式)
+              href: cursor-types-sqlsrv-driver.md
+            - name: 資料指標類型 (PDO_SQLSRV 驅動程式)
+              href: cursor-types-pdo-sqlsrv-driver.md
+        - name: 如何：使用 SQLSRV 驅動程式，以字串的形式擷取日期和時間類型
+          href: how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md
+    - name: 更新資料
+      href: updating-data-microsoft-drivers-for-php-for-sql-server.md
+      items:
+        - name: 如何：執行參數化查詢
+          href: how-to-perform-parameterized-queries.md
+        - name: 如何：以資料流的形式傳送資料
+          href: how-to-send-data-as-a-stream.md
+        - name: 如何：執行交易
+          href: how-to-perform-transactions.md
+    - name: 轉換資料類型
+      href: converting-data-types.md
+      items:
+        - name: 預設 SQL Server 資料類型
+          href: default-sql-server-data-types.md
+        - name: 預設 PHP 資料類型
+          href: default-php-data-types.md
+        - name: 如何：使用 SQLSRV 驅動程式指定 SQL Server 資料類型
+          href: how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md
+        - name: 如何：指定 PHP 資料類型
+          href: how-to-specify-php-data-types.md
+        - name: 如何：使用內建的 UTF-8 支援傳送及接收 UTF-8 資料
+          href: how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md
+        - name: 如何：傳送及擷取 Linux 與 macOS 中的 ASCII 資料
+          href: how-to-send-and-retrieve-ascii-data-in-linux-mac.md
+    - name: 處理錯誤和警告
+      href: handling-errors-and-warnings.md
+      items:
+        - name: 如何：使用 SQLSRV 驅動程式設定錯誤和警告處理
+          href: how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md
+        - name: 如何：使用 SQLSRV 驅動程式處理錯誤和警告
+          href: how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md
+    - name: 記錄活動
+      href: logging-activity.md
+    - name: 搭配 PHP Drivers for SQL Server 使用 Always Encrypted
+      href: using-always-encrypted-php-drivers.md
+    - name: 常數 (Microsoft Drivers for PHP for SQL Server)
+      href: constants-microsoft-drivers-for-php-for-sql-server.md
+    - name: SQLSRV 驅動程式 API 參考
+      href: sqlsrv-driver-api-reference.md
+      items:
+        - name: sqlsrv_begin_transaction
+          href: sqlsrv-begin-transaction.md
+        - name: sqlsrv_cancel
+          href: sqlsrv-cancel.md
+        - name: sqlsrv_client_info
+          href: sqlsrv-client-info.md
+        - name: sqlsrv_close
+          href: sqlsrv-close.md
+        - name: sqlsrv_commit
+          href: sqlsrv-commit.md
+        - name: sqlsrv_configure
+          href: sqlsrv-configure.md
+        - name: sqlsrv_connect
+          href: sqlsrv-connect.md
+        - name: sqlsrv_errors
+          href: sqlsrv-errors.md
+        - name: sqlsrv_execute
+          href: sqlsrv-execute.md
+        - name: sqlsrv_fetch
+          href: sqlsrv-fetch.md
+        - name: sqlsrv_fetch_array
+          href: sqlsrv-fetch-array.md
+        - name: sqlsrv_fetch_object
+          href: sqlsrv-fetch-object.md
+        - name: sqlsrv_field_metadata
+          href: sqlsrv-field-metadata.md
+        - name: sqlsrv_free_stmt
+          href: sqlsrv-free-stmt.md
+        - name: sqlsrv_get_config
+          href: sqlsrv-get-config.md
+        - name: sqlsrv_get_field
+          href: sqlsrv-get-field.md
+        - name: sqlsrv_has_rows
+          href: sqlsrv-has-rows.md
+        - name: sqlsrv_next_result
+          href: sqlsrv-next-result.md
+        - name: sqlsrv_num_fields
+          href: sqlsrv-num-fields.md
+        - name: sqlsrv_num_rows
+          href: sqlsrv-num-rows.md
+        - name: sqlsrv_prepare
+          href: sqlsrv-prepare.md
+        - name: sqlsrv_query
+          href: sqlsrv-query.md
+        - name: sqlsrv_rollback
+          href: sqlsrv-rollback.md
+        - name: sqlsrv_rows_affected
+          href: sqlsrv-rows-affected.md
+        - name: sqlsrv_send_stream_data
+          href: sqlsrv-send-stream-data.md
+        - name: sqlsrv_server_info
+          href: sqlsrv-server-info.md
+    - name: PDO_SQLSRV 驅動程式參考
+      href: pdo-sqlsrv-driver-reference.md
+      items:
+        - name: PDO 類別
+          href: pdo-class.md
+          items:
+            - name: 'PDO::__construct'
+              href: pdo-construct.md
+            - name: 'PDO::beginTransaction'
+              href: pdo-begintransaction.md
+            - name: 'PDO::commit'
+              href: pdo-commit.md
+            - name: 'PDO::errorCode'
+              href: pdo-errorcode.md
+            - name: 'PDO::errorInfo'
+              href: pdo-errorinfo.md
+            - name: 'PDO::exec'
+              href: pdo-exec.md
+            - name: 'PDO::getAttribute'
+              href: pdo-getattribute.md
+            - name: 'PDO::getAvailableDrivers'
+              href: pdo-getavailabledrivers.md
+            - name: 'PDO::lastInsertId'
+              href: pdo-lastinsertid.md
+            - name: 'PDO::prepare'
+              href: pdo-prepare.md
+            - name: 'PDO::query'
+              href: pdo-query.md
+            - name: 'PDO::quote'
+              href: pdo-quote.md
+            - name: 'PDO::rollback'
+              href: pdo-rollback.md
+            - name: 'PDO::setAttribute'
+              href: pdo-setattribute.md
+        - name: PDOStatement 類別
+          href: pdostatement-class.md
+          items:
+            - name: 'PDOStatement::bindColumn'
+              href: pdostatement-bindcolumn.md
+            - name: 'PDOStatement::bindParam'
+              href: pdostatement-bindparam.md
+            - name: 'PDOStatement::bindValue'
+              href: pdostatement-bindvalue.md
+            - name: 'PDOStatement::closeCursor'
+              href: pdostatement-closecursor.md
+            - name: 'PDOStatement::columnCount'
+              href: pdostatement-columncount.md
+            - name: 'PDOStatement::debugDumpParams'
+              href: pdostatement-debugdumpparams.md
+            - name: 'PDOStatement::errorCode'
+              href: pdostatement-errorcode.md
+            - name: 'PDOStatement::errorInfo'
+              href: pdostatement-errorinfo.md
+            - name: 'PDOStatement::execute'
+              href: pdostatement-execute.md
+            - name: 'PDOStatement::fetch'
+              href: pdostatement-fetch.md
+            - name: 'PDOStatement::fetchAll'
+              href: pdostatement-fetchall.md
+            - name: 'PDOStatement::fetchColumn'
+              href: pdostatement-fetchcolumn.md
+            - name: 'PDOStatement::fetchObject'
+              href: pdostatement-fetchobject.md
+            - name: 'PDOStatement::getAttribute'
+              href: pdostatement-getattribute.md
+            - name: 'PDOStatement::getColumnMeta'
+              href: pdostatement-getcolumnmeta.md
+            - name: 'PDOStatement::nextRowset'
+              href: pdostatement-nextrowset.md
+            - name: 'PDOStatement::rowCount'
+              href: pdostatement-rowcount.md
+            - name: 'PDOStatement::setAttribute'
+              href: pdostatement-setattribute.md
+            - name: 'PDOStatement::setFetchMode'
+              href: pdostatement-setfetchmode.md
+- name: 安全性考量
+  href: security-considerations-for-php-sql-driver.md
+- name: 程式碼範例
+  href: code-samples-for-php-sql-driver.md
+  items:
+    - name: 範例應用程式 (PDO_SQLSRV 驅動程式)
+      href: example-application-pdo-sqlsrv-driver.md
+    - name: 範例應用程式 (SQLSRV 驅動程式)
+      href: example-application-sqlsrv-driver.md

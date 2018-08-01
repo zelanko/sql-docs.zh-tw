@@ -1,0 +1,54 @@
+- name: XMLA 項目 - 命令
+  href: xml-elements-commands.md
+- name: Alter 元素 (XMLA)
+  href: alter-element-xmla.md
+- name: Attach 元素
+  href: attach-element.md
+- name: Backup 元素 (XMLA)
+  href: backup-element-xmla.md
+- name: Batch 元素 (XMLA)
+  href: batch-element-xmla.md
+- name: BeginTransaction 元素 (XMLA)
+  href: begintransaction-element-xmla.md
+- name: Cancel 元素 (XMLA)
+  href: cancel-element-xmla.md
+- name: ClearCache 元素 (XMLA)
+  href: clearcache-element-xmla.md
+- name: CommitTransaction 元素 (XMLA)
+  href: committransaction-element-xmla.md
+- name: Create 元素 (XMLA)
+  href: create-element-xmla.md
+- name: Delete 元素 (XMLA)
+  href: delete-element-xmla.md
+- name: DesignAggregations 元素 (XMLA)
+  href: designaggregations-element-xmla.md
+- name: Detach 元素
+  href: detach-element.md
+- name: Drop 元素 (XMLA)
+  href: drop-element-xmla.md
+- name: Insert 元素 (XMLA)
+  href: insert-element-xmla.md
+- name: Lock 元素 (XMLA)
+  href: lock-element-xmla.md
+- name: MergePartitions 元素 (XMLA)
+  href: mergepartitions-element-xmla.md
+- name: NotifyTableChange 元素 (XMLA)
+  href: notifytablechange-element-xmla.md
+- name: Process 元素 (XMLA)
+  href: process-element-xmla.md
+- name: Restore 元素 (XMLA)
+  href: restore-element-xmla.md
+- name: RollbackTransaction 元素 (XMLA)
+  href: rollbacktransaction-element-xmla.md
+- name: Statement 元素 (XMLA)
+  href: statement-element-xmla.md
+- name: Subscribe 元素 (XMLA)
+  href: subscribe-element-xmla.md
+- name: Synchronize 元素 (XMLA)
+  href: synchronize-element-xmla.md
+- name: Unlock 元素 (XMLA)
+  href: unlock-element-xmla.md
+- name: Update 元素 (XMLA)
+  href: update-element-xmla.md
+- name: UpdateCells 元素 (XMLA)
+  href: updatecells-element-xmla.md

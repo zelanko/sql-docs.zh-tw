@@ -1,0 +1,8 @@
+- name: ASSL 物件和物件特性
+  href: assl-objects-and-object-characteristics.md
+- name: 指令碼語言 ASSL XMLA
+  href: ../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
+- name: ASSL XML 慣例
+  href: assl-xml-conventions.md
+- name: 使用 Analysis Services 指令碼語言 (ASSL) 開發
+  href: developing-with-analysis-services-scripting-language-assl.md

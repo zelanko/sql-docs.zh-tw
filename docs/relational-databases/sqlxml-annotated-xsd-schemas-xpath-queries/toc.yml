@@ -1,0 +1,30 @@
+- name: 在 SQLXML 4.0 中使用 XPath 查詢
+  href: using-xpath-queries-in-sqlxml-4-0.md
+- name: 子區域
+  items:
+    - name: .NET Framework 類別 +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md
+    - name: Diffgram +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data.md
+    - name: 位置路徑 +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-a-location-path-sqlxml-4-0.md
+    - name: 範例 +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/sample-xpath-queries-sqlxml-4-0.md
+    - name: Updategrams +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md
+    - name: 大量載入 XML +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md
+    - name: 資料存取元件提供者 +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md
+    - name: 快取範本 XML 結構描述 +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md
+    - name: 安全性 +
+      href: ../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md
+- name: SQLXML 4.0 的指導方針和限制
+  href: guidelines-and-limitations-of-sqlxml-4-0.md
+- name: 使用 XPath 查詢的簡介 (SQLXML 4.0)
+  href: introduction-to-using-xpath-queries-sqlxml-4-0.md
+- name: SQLXML 4.0 .NET Framework 支援 - 使用大量載入
+  href: sqlxml-4-0-net-framework-support-using-bulk-load.md
+- name: XPath 資料類型 (SQLXML 4.0)
+  href: xpath-data-types-sqlxml-4-0.md

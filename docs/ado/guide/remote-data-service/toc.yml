@@ -1,0 +1,110 @@
+- name: 遠端資料服務 (RDS)
+  href: remote-data-service-rds.md
+- name: RDS 基本概念
+  href: rds-fundamentals.md
+  items:
+    - name: 遠端資料存取的解決方案
+      href: solutions-for-remote-data-access.md
+    - name: 基本 RDS 程式設計模型
+      href: basic-rds-programming-model.md
+    - name: RDS 程式設計模型詳述
+      href: rds-programming-model-in-detail.md
+    - name: 具有物件的 RDS 程式設計模型
+      href: rds-programming-model-with-objects.md
+    - name: RDS 物件模型摘要
+      href: rds-object-model-summary.md
+    - name: RDS 案例
+      href: rds-scenario.md
+      items:
+        - name: 通訊錄應用程式的系統需求
+          href: system-requirements-for-the-address-book-application.md
+        - name: 執行通訊錄 SQL 指令碼
+          href: running-the-address-book-sql-script.md
+        - name: 執行通訊錄應用程式範例
+          href: running-the-address-book-sample-application.md
+        - name: 通訊錄資料繫結物件
+          href: address-book-data-binding-object.md
+        - name: 通訊錄命令按鈕
+          href: address-book-command-buttons.md
+        - name: 通訊錄導覽按鈕
+          href: address-book-navigation-buttons.md
+- name: RDS 教學課程
+  href: rds-tutorial.md
+  items:
+    - name: 步驟 1：指定伺服器程式 (RDS 教學課程)
+      href: step-1-specify-a-server-program-rds-tutorial.md
+    - name: 步驟 2：叫用伺服器程式 (RDS 教學課程)
+      href: step-2-invoke-the-server-program-rds-tutorial.md
+    - name: 步驟 3：伺服器取得資料錄集 (RDS 教學課程)
+      href: step-3-server-obtains-a-recordset-rds-tutorial.md
+    - name: 步驟 4：伺服器傳回資料錄集 (RDS 教學課程)
+      href: step-4-server-returns-the-recordset-rds-tutorial.md
+    - name: 步驟 5：將 DataControl 設為可用 (RDS 教學課程)
+      href: step-5-datacontrol-is-made-usable-rds-tutorial.md
+    - name: 步驟 6：將變更傳送到伺服器 (RDS 教學課程)
+      href: step-6-changes-are-sent-to-the-server-rds-tutorial.md
+    - name: RDS 教學課程 (VBScript)
+      href: rds-tutorial-vbscript.md
+- name: RDS 使用方式與安全性
+  href: rds-usage-and-security.md
+  items:
+    - name: 設定 RDS
+      href: configuring-rds.md
+      items:
+        - name: 將來賓權限授與網頁伺服器電腦
+          href: granting-guest-privileges-to-a-web-server-computer.md
+        - name: 註冊自訂商務物件
+          href: registering-a-custom-business-object.md
+        - name: 將商務物件標示為可安全編寫指令碼
+          href: marking-business-objects-as-safe-for-scripting.md
+        - name: 在用戶端上註冊商務物件以用於 DOM
+          href: registering-business-objects-on-the-client-for-use-with-dcom.md
+        - name: 設定 DCOM 資料流封送處理格式
+          href: setting-dcom-stream-marshaling-format.md
+        - name: 啟用 DLL 以在 DCOM 上執行
+          href: enabling-a-dll-to-run-on-dcom.md
+        - name: 在 IIS 上設定虛擬伺服器
+          href: configuring-virtual-servers-on-iis.md
+        - name: 保護 RDS 應用程式
+          href: securing-rds-applications.md
+        - name: 為安全或不受限制模式設定 DataFactory
+          href: configuring-datafactory-for-safe-or-unrestricted-modes.md
+    - name: 搭配 RDS 使用相關技術
+      href: using-related-technologies-with-rds.md
+      items:
+        - name: 搭配 ODBC 連線集區使用 RDS
+          href: using-rds-with-odbc-connection-pooling.md
+        - name: 在 Component Services 中執行商務物件
+          href: running-business-objects-in-component-services.md
+    - name: DataFactory 自訂
+      href: datafactory-customization.md
+      items:
+        - name: 了解自訂檔案
+          href: understanding-the-customization-file.md
+        - name: 自訂檔案 Connect 區段
+          href: customization-file-connect-section.md
+        - name: 自訂檔案 SQL 區段
+          href: customization-file-sql-section.md
+        - name: 自訂檔案 UserList 區段
+          href: customization-file-userlist-section.md
+        - name: 自訂檔案 Logs 區段
+          href: customization-file-logs-section.md
+        - name: 必要用戶端設定
+          href: required-client-settings.md
+        - name: 撰寫您自己的自訂處理常式
+          href: writing-your-own-customized-handler.md
+    - name: 對 RDS 進行疑難排解
+      href: troubleshooting-rds.md
+      items:
+        - name: 在 Windows 2000 上設定 RDS
+          href: configuring-rds-on-windows-2000.md
+        - name: 網際網路伺服器錯誤：拒絕存取
+          href: internet-server-error-access-denied.md
+        - name: RDS 傳回 "Stream Not Read" 錯誤
+          href: rds-returns-stream-not-read-error.md
+        - name: 讀取可重複的隔離等級發生死結
+          href: deadlocks-with-read-repeatable-isolation-level.md
+        - name: 確認 TempDB 有足夠空間
+          href: ensuring-sufficient-tempdb-space.md
+        - name: 將記錄檔空間使用量降到最低
+          href: minimizing-log-file-space-usage.md

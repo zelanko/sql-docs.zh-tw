@@ -1,0 +1,145 @@
+- name: 概觀
+  href: data-quality-services.md
+- name: 新文章及更新的文章
+  href: new-updated-data-quality-services.md
+- name: 概念和功能
+  items:
+    - name: Data Quality Services 簡介
+      href: introduction-to-data-quality-services.md
+    - name: Data Quality Services 概念
+      href: data-quality-services-concepts.md
+    - name: Data Quality Services 功能及工作
+      href: data-quality-services-features-and-tasks.md
+- name: Install
+  href: ../data-quality-services/install-windows/install-data-quality-services.md
+- name: Data Quality Client 應用程式
+  href: data-quality-client-application.md
+  items:
+    - name: 執行 Data Quality Client 應用程式
+      href: run-the-data-quality-client-application.md
+    - name: Data Quality Client 首頁畫面
+      href: data-quality-client-home-screen.md
+- name: DQS 知識庫與定義域
+  href: dqs-knowledge-bases-and-domains.md
+  items:
+    - name: 建立知識庫
+      href: building-a-knowledge-base.md
+      items:
+        - name: 建立知識庫
+          href: create-a-knowledge-base.md
+        - name: 開啟知識庫
+          href: open-a-knowledge-base.md
+        - name: 管理知識庫
+          href: manage-a-knowledge-base.md
+        - name: 將知識加入至知識庫
+          href: adding-knowledge-to-a-knowledge-base.md
+        - name: 執行知識探索
+          href: perform-knowledge-discovery.md
+    - name: 匯入和匯出知識
+      href: importing-and-exporting-knowledge.md
+      items:
+        - name: 將定義域匯出成 .dqs 檔案
+          href: export-a-domain-to-a-dqs-file.md
+        - name: 從 .dqs 檔案匯入定義域
+          href: import-a-domain-from-a-dqs-file.md
+        - name: 將知識庫匯出到 .dqs 檔案
+          href: export-a-knowledge-base-to-a-dqs-file.md
+        - name: 從 .dqs 檔案匯入知識庫
+          href: import-a-knowledge-base-from-a-dqs-file.md
+        - name: 將 Excel 檔案中的值匯入定義域中
+          href: import-values-from-an-excel-file-into-a-domain.md
+        - name: 在知識探索中匯入 Excel 檔案中的定義域
+          href: import-domains-from-an-excel-file-in-knowledge-discovery.md
+        - name: 將清理專案值匯入定義域中
+          href: import-cleansing-project-values-into-a-domain.md
+    - name: 管理定義域
+      href: managing-a-domain.md
+      items:
+        - name: 建立定義域
+          href: create-a-domain.md
+        - name: 定義域管理：定義域清單
+          href: domain-management-domain-list.md
+        - name: 設定定義域屬性
+          href: set-domain-properties.md
+        - name: 建立連結的定義域
+          href: create-a-linked-domain.md
+        - name: 變更定義域值
+          href: change-domain-values.md
+        - name: 建立定義域規則
+          href: create-a-domain-rule.md
+        - name: 建立以詞彙為主的關聯
+          href: create-term-based-relations.md
+        - name: 使用 DQS 拼字檢查
+          href: use-the-dqs-speller.md
+        - name: DQS 定義域支援的 SQL Server 和 SSIS 資料類型
+          href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
+    - name: 管理複合定義域
+      href: managing-a-composite-domain.md
+      items:
+        - name: 建立複合定義域
+          href: create-a-composite-domain.md
+        - name: 建立跨定義域規則
+          href: create-a-cross-domain-rule.md
+        - name: 使用複合定義域中的值關聯
+          href: use-value-relations-in-a-composite-domain.md
+    - name: 使用 DQS 預設知識庫
+      href: using-the-dqs-default-knowledge-base.md
+- name: 資料品質專案
+  href: data-quality-projects-dqs.md
+  items:
+    - name: 建立資料品質專案
+      href: create-a-data-quality-project.md
+    - name: 開啟、解除鎖定、重新命名和刪除資料品質專案
+      href: open-unlock-rename-and-delete-a-data-quality-project.md
+    - name: 在 Data Quality Client 中開啟 Integration Services 專案
+      href: open-integration-services-projects-in-data-quality-client.md
+- name: Data Cleansing
+  href: data-cleansing.md
+  items:
+    - name: 使用 DQS (內部) 知識清理資料
+      href: cleanse-data-using-dqs-internal-knowledge.md
+    - name: 清理複合定義域中的資料
+      href: cleanse-data-in-a-composite-domain.md
+- name: 資料比對
+  href: data-matching.md
+  items:
+    - name: 建立比對原則
+      href: create-a-matching-policy.md
+    - name: 執行比對專案
+      href: run-a-matching-project.md
+- name: DQS 中的 Reference Data Services
+  href: reference-data-services-in-dqs.md
+  items:
+    - name: 設定 DQS 使用參考資料
+      href: configure-dqs-to-use-reference-data.md
+    - name: 將定義域或複合定義域附加至參考資料
+      href: attach-domain-or-composite-domain-to-reference-data.md
+    - name: 使用參考資料 (外部) 知識清理資料
+      href: cleanse-data-using-reference-data-external-knowledge.md
+- name: DQS 中的資料分析與通知
+  href: data-profiling-and-notifications-in-dqs.md
+- name: dqs 管理
+  href: dqs-administration.md
+  items:
+    - name: 監控 DQS 活動
+      href: monitor-dqs-activities.md
+    - name: 設定清理和比對的臨界值
+      href: configure-threshold-values-for-cleansing-and-matching.md
+    - name: 在 DQS 中啟用或停用分析通知
+      href: enable-or-disable-profiling-notifications-in-dqs.md
+    - name: 管理 DQS 記錄檔
+      href: manage-dqs-log-files.md
+      items:
+        - name: 為 DQS 記錄檔設定嚴重性層級
+          href: configure-severity-levels-for-dqs-log-files.md
+        - name: Configure Advanced Settings for DQS Log Files
+          href: configure-advanced-settings-for-dqs-log-files.md
+    - name: 管理 DQS 資料庫
+      href: manage-dqs-databases.md
+      items:
+        - name: 備份及還原 DQS 資料庫
+          href: backing-up-and-restoring-dqs-databases.md
+        - name: 卸離和附加 DQS 資料庫
+          href: detaching-and-attaching-dqs-databases.md
+- name: DQS 安全性
+  href: dqs-security.md

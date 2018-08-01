@@ -1,0 +1,67 @@
+- name: SQL Operations Studio (預覽)
+  href: what-is.md
+- name: Install
+  href: download.md
+- name: 版本資訊
+  href: release-notes.md
+- name: 快速入門
+  items:
+    - name: 連線與查詢 SQL Server
+      href: quickstart-sql-server.md
+    - name: 連線與查詢 Azure SQL Database
+      href: quickstart-sql-database.md
+    - name: 連線與查詢 Azure SQL 資料倉儲
+      href: quickstart-sql-dw.md
+- name: 教學課程
+  items:
+    - name: T-SQL 編輯器
+      href: tutorial-sql-editor.md
+    - name: 見解範例：慢速查詢
+      href: tutorial-qds-sql-server.md
+    - name: 見解範例：資料表空間使用量
+      href: tutorial-table-space-sql-server.md
+    - name: 建立自訂見解
+      href: tutorial-build-custom-insight-sql-server.md
+    - name: 備份與還原
+      href: tutorial-backup-restore-sql-server.md
+- name: 使用說明指南
+  items:
+    - name: 儀表板與見解小工具
+      href: insight-widgets.md
+    - name: 延伸模組
+      href: extensions.md
+      items:
+        - name: SQL Server Agent
+          href: sql-server-agent-extension.md
+        - name: SQL Server Profiler
+          href: sql-server-profiler-extension.md
+    - name: 程式碼片段
+      href: code-snippets.md
+    - name: 整合式終端機 (PowerShell、Bash)
+      href: integrated-terminal.md
+    - name: 鍵盤快速鍵
+      href: keyboard-shortcuts.md
+    - name: 伺服器群組
+      href: server-groups.md
+    - name: 原始檔控制
+      href: source-control.md
+    - name: 工作區與使用者設定
+      href: settings.md
+    - name: Windows 驗證 (Kerberos)
+      href: enable-kerberos.md
+    - name: 使用量資料收集
+      href: usage-data-collection.md
+- name: 資源
+  items:
+    - name: Transact-SQL 參考
+      href: ../t-sql/language-reference.md
+    - name: SQL Operations Studio (預覽) GitHub 存放庫
+      href: 'https://www.github.com/Microsoft/SqlOpsStudio'
+    - name: SQL Server 部落格
+      href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+    - name: 新文章及更新的文章
+      href: new-updated-sql-operations-studio.md
+- name: 常見問題集
+  href: faq.md
+- name: 回報問題與提出建議
+  href: 'https://github.com/microsoft/sqlopsstudio/issues'

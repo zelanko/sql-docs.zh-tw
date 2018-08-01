@@ -1,0 +1,124 @@
+- name: 安裝 SQL Server 移轉小幫手
+  href: installing-sql-server-migration-assistant-for-access-accesstosql.md
+- name: 開始使用 SSMA for Access 主控台
+  href: getting-started-with-ssma-for-access-console-accesstosql.md
+- name: SSMA for Access 的新功能
+  href: what-s-new-in-ssma-for-access-accesstosql.md
+- name: 準備 Access 資料庫的移轉
+  href: preparing-access-databases-for-migration-accesstosql.md
+- name: 不相容的 Access 功能
+  href: incompatible-access-features-accesstosql.md
+- name: SSMA 中的新 GUI 功能
+  href: new-gui-features-in-ssma-for-access-to-sql.md
+- name: Access 清查結構描述
+  href: access-inventory-schemas-accesstosql.md
+- name: 儲存中繼資料
+  href: save-metadata-acesstosql.md
+- name: 連線到 SQL Server
+  href: connecting-to-sql-server-accesstosql.md
+- name: 將 Access 資料移轉到 Azure SQL DB
+  href: migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md
+- name: 建立及管理專案
+  href: creating-and-managing-projects-accesstosql.md
+- name: 使用 SSMA for Access 主控台
+  href: working-with-ssma-for-access-console-accesstosql.md
+- name: 新增和移除資料庫檔案
+  href: adding-and-removing-access-database-files-accesstosql.md
+- name: 專案設定 (GUI)
+  href: project-settings-gui-accesstosql.md
+- name: 轉換 Access 資料庫物件
+  href: converting-access-database-objects-accesstosql.md
+- name: 法律注意事項
+  href: legal-notice-ssma-for-access.md
+- name: 連接至 SQL Server
+  href: connect-to-sql-server-accesstosql.md
+- name: 全域設定
+  href: global-settings-output-window-accesstosql.md
+- name: 新增專案 (SSMA)
+  href: new-project-ssma-accesstosql.md
+- name: SSMA 主控台中的命令列選項
+  href: command-line-options-in-ssma-console-accesstosql.md
+- name: 連線到 Azure SQL DB
+  href: connect-to-azure-sql-db-accesstosql.md
+- name: 專案設定 (轉換)
+  href: project-settings-conversion-accesstosql.md
+- name: 專案設定 (Azure SQL DB)
+  href: project-settings-azure-sql-db-accesstosql.md
+- name: 評定報告
+  href: assessment-report-accesstosql.md
+- name: 專案設定 (類型對應)
+  href: project-settings-type-mapping-accesstosql.md
+- name: 對應來源和目標資料類型
+  href: mapping-source-and-target-data-types-accesstosql.md
+- name: 管理密碼
+  href: managing-passwords-accesstosql.md
+- name: 資料移轉報告
+  href: data-migration-report-accesstosql.md
+- name: 使用者介面參考
+  href: user-interface-reference-accesstosql.md
+- name: 使用範例主控台指令碼檔
+  href: working-sample-console-script-filesexecuting-ssma-console-accesstosql.md
+- name: 產生報表
+  href: generating-reports-accesstosql.md
+- name: 執行 SSMA 主控台
+  href: executing-the-ssma-console-accesstosql.md
+- name: 專案設定 (載入物件)
+  href: project-settings-loading-objects-accesstosql.md
+- name: 評定 Access 資料庫物件的轉換
+  href: assessing-access-database-objects-for-conversion-accesstosql.md
+- name: 全域設定 (記錄)
+  href: global-settings-logging-accesstosql.md
+- name: 建立伺服器連線檔案
+  href: creating-the-server-connection-files-accesstosql.md
+- name: 將 Access 應用程式連結到 Azure SQL DB
+  href: linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md
+- name: 建立變數值檔案
+  href: creating-variable-value-files-accesstosql.md
+- name: 編輯類型對應
+  href: edit-type-mapping-accesstosql.md
+- name: 匯出 Access 清查
+  href: exporting-an-access-inventory-accesstosql.md
+- name: 將 Access 資料庫移轉到 Azure SQL DB
+  href: migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md
+- name: 全域設定
+  href: global-settings-dialogs-accesstosql.md
+- name: 對應來源和目標資料庫
+  href: mapping-source-and-target-databases-accesstosql.md
+- name: 建立指令碼檔
+  href: creating-script-files-accesstosql.md
+- name: 尋找資料庫精靈 (驗證選取項目)
+  href: find-databases-wizard-verify-selection-accesstosql.md
+- name: 移轉精靈
+  href: migration-wizard-accesstosql.md
+- name: 全域設定 (編輯器)
+  href: global-settings-editor-accesstosql.md
+- name: 轉換、載入和移轉
+  href: convert-load-and-migrate-accesstosql.md
+- name: 將轉換的資料庫物件載入 SQL Server
+  href: loading-converted-database-objects-into-sql-server-accesstosql.md
+- name: 進階物件選取項目
+  href: advanced-object-selection-accesstosql.md
+- name: 專案設定 (移轉)
+  href: project-settings-migration-accesstosql.md
+- name: 開始使用 SQL Server 移轉小幫手
+  href: getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md
+- name: SQL Server 移轉小幫手
+  href: sql-server-migration-assistant-for-access-accesstosql.md
+- name: 從資料庫重新整理
+  href: refresh-from-database-accesstosql.md
+- name: 尋找資料庫精靈 (選取檔案)
+  href: find-databases-wizard-select-files-accesstosql.md
+- name: 快速鍵
+  href: shortcut-keys-accesstosql.md
+- name: 連線到 Azure SQL DB
+  href: connecting-to-azure-sql-db-accesstosql.md
+- name: 設定轉換和移轉選項
+  href: setting-conversion-and-migration-options-accesstosql.md
+- name: 疑難排解
+  href: troubleshooting-accesstosql.md
+- name: 功能表命令和其他快速鍵
+  href: menu-commands-and-other-shortcut-keys-accesstosql.md
+- name: 尋找資料庫精靈 (選取位置)
+  href: find-databases-wizard-select-locations-accesstosql.md
+- name: 附錄 - 1
+  href: appendix-1-accesstosql.md

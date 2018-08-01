@@ -1,0 +1,201 @@
+- name: XML 資料
+  href: xml-data-sql-server.md
+- name: XML 資料類型和資料行
+  href: xml-data-type-and-columns-sql-server.md
+  items:
+    - name: 比較具類型的 XML 與不具類型的 XML
+      href: compare-typed-xml-to-untyped-xml.md
+    - name: 建立 XML 資料的執行個體
+      href: create-instances-of-xml-data.md
+    - name: 建立 XML 資料類型變數與資料行
+      href: create-xml-data-type-variables-and-columns.md
+    - name: 將現有資料行變更為 XML 資料行
+      href: change-existing-columns-to-xml-columns.md
+    - name: 載入 XML 資料
+      href: load-xml-data.md
+    - name: 建立 XML 資料行檢視
+      href: create-views-over-xml-columns.md
+    - name: 使用計算資料行中的 XML
+      href: use-xml-in-computed-columns.md
+    - name: 擷取及查詢 XML 資料
+      href: retrieve-and-query-xml-data.md
+    - name: 使用 WITH XMLNAMESPACES 將命名空間加入至查詢
+      href: add-namespaces-to-queries-with-with-xmlnamespaces.md
+    - name: 使用計算資料行升級常用的 XML 值
+      href: promote-frequently-used-xml-values-with-computed-columns.md
+    - name: 定義 XML 資料的序列化
+      href: define-the-serialization-of-xml-data.md
+    - name: 使用 XML 資料行進行全文檢索搜尋
+      href: use-full-text-search-with-xml-columns.md
+    - name: 將商務邏輯加入至 XML 資料
+      href: add-business-logic-to-xml-data.md
+    - name: 在應用程式中使用 XML 資料
+      href: use-xml-data-in-applications.md
+- name: XML 索引
+  href: xml-indexes-sql-server.md
+  items:
+    - name: 建立 XML 索引
+      href: create-xml-indexes.md
+    - name: 修改 XML 索引
+      href: modify-xml-indexes.md
+    - name: 卸除 XML 索引
+      href: drop-xml-indexes.md
+    - name: 選擇性 XML 索引 (SXI)
+      href: selective-xml-indexes-sxi.md
+    - name: 指定選擇性 XML 索引的路徑和最佳化提示
+      href: specify-paths-and-optimization-hints-for-selective-xml-indexes.md
+    - name: 建立、修改和卸除選擇性 XML 索引
+      href: create-alter-and-drop-selective-xml-indexes.md
+    - name: 建立、修改和卸除次要選擇性 XML 索引
+      href: create-alter-and-drop-secondary-selective-xml-indexes.md
+- name: XML 結構描述集合
+  href: xml-schema-collections-sql-server.md
+  items:
+    - name: 參考內建 XML 結構描述集合 (sys)
+      href: reference-the-built-in-xml-schema-collection-sys.md
+    - name: 檢視儲存的 XML 結構描述集合
+      href: view-a-stored-xml-schema-collection.md
+    - name: 授與 XML 結構描述集合的權限
+      href: grant-permissions-on-an-xml-schema-collection.md
+    - name: 撤銷 XML 結構描述集合上的權限
+      href: revoke-permissions-on-an-xml-schema-collection.md
+    - name: 拒絕 XML 結構描述集合的權限
+      href: deny-permissions-on-an-xml-schema-collection.md
+    - name: 前置處理結構描述以合併包含的結構描述
+      href: preprocess-a-schema-to-merge-included-schemas.md
+    - name: 伺服器上 XML 結構描述集合的需求與限制
+      href: requirements-and-limitations-for-xml-schema-collections-on-the-server.md
+    - name: 標準格式與模式限制
+      href: canonical-forms-and-pattern-restrictions.md
+    - name: 萬用字元元件和內容驗證
+      href: wildcard-components-and-content-validation.md
+    - name: '<xsd:redefine> 元素'
+      href: the-xsd-redefine-element.md
+    - name: 'xs:QName 類型'
+      href: the-xs-qname-type.md
+    - name: '<xsd:simpleType> 宣告的值'
+      href: values-for-xsd-simpletype-declarations.md
+    - name: 列舉 Facet
+      href: enumeration-facets.md
+    - name: 混合的類型與簡單的內容
+      href: mixed-type-and-simple-content.md
+    - name: 大型的 XML 結構描述集合與記憶體不足的情況
+      href: large-xml-schema-collections-and-out-of-memory-conditions.md
+    - name: 不具決定性的內容模型
+      href: non-deterministic-content-models.md
+    - name: 唯一物件屬性條件約束
+      href: unique-particle-attribution-constraint.md
+- name: FOR XML
+  href: for-xml-sql-server.md
+  items:
+    - name: FOR XML 子句的基本語法
+      href: basic-syntax-of-the-for-xml-clause.md
+    - name: 無效的字元和逸出規則
+      href: invalid-characters-and-escape-rules.md
+    - name: 搭配 FOR XML 使用 RAW 模式
+      href: use-raw-mode-with-for-xml.md
+    - name: 範例：將產品型號資訊當做 XML 來擷取
+      href: example-retrieving-product-model-information-as-xml.md
+    - name: 範例：使用 ELEMENTS 指示詞指定 XSINIL
+      href: example-specifying-xsinil-with-the-elements-directive.md
+    - name: 範例：使用 XMLDATA 和 XMLSCHEMA 選項要求結構描述當做結果
+      href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
+    - name: 範例：擷取二進位資料
+      href: example-retrieving-binary-data.md
+    - name: 範例：重新命名 <row> 項目
+      href: example-renaming-the-row-element.md
+    - name: 範例：為 FOR XML 產生的 XML 指定根元素
+      href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
+    - name: 範例：查詢 XMLType 資料行
+      href: example-querying-xmltype-columns.md
+    - name: 搭配 FOR XML 使用 AUTO 模式
+      href: use-auto-mode-with-for-xml.md
+    - name: 使用 BINARY BASE64 選項
+      href: use-the-binary-base64-option.md
+    - name: 用來形成傳回之 XML 的 AUTO 模式啟發式方法
+      href: auto-mode-heuristics-in-shaping-returned-xml.md
+    - name: 範例：使用 AUTO 模式
+      href: examples-using-auto-mode.md
+    - name: 搭配 FOR XML 使用 EXPLICIT 模式
+      href: use-explicit-mode-with-for-xml.md
+    - name: 範例：擷取員工資訊
+      href: example-retrieving-employee-information.md
+    - name: 範例：指定 ELEMENT 指示詞
+      href: example-specifying-the-element-directive.md
+    - name: 範例：指定 ELEMENTXSINIL 指示詞
+      href: example-specifying-the-elementxsinil-directive.md
+    - name: 範例：使用 EXPLICIT 模式建構同層級
+      href: example-constructing-siblings-with-explicit-mode.md
+    - name: 範例：指定 ID 和 IDREF 指示詞
+      href: example-specifying-the-id-and-idref-directives.md
+    - name: 範例：指定 ID 和 IDREFS 指示詞
+      href: example-specifying-the-id-and-idrefs-directives.md
+    - name: 範例：指定 HIDE 指示詞
+      href: example-specifying-the-hide-directive.md
+    - name: 範例：指定 ELEMENT 指示詞及實體編碼
+      href: example-specifying-the-element-directive-and-entity-encoding.md
+    - name: 範例：指定 CDATA 指示詞
+      href: example-specifying-the-cdata-directive.md
+    - name: 範例：指定 XMLTEXT 指示詞
+      href: example-specifying-the-xmltext-directive.md
+    - name: 搭配 FOR XML 使用 PATH 模式
+      href: use-path-mode-with-for-xml.md
+    - name: 沒有名稱的資料行
+      href: columns-without-a-name.md
+    - name: 有名稱的資料行
+      href: columns-with-a-name.md
+    - name: 以萬用字元 (*) 指定名稱的資料行
+      href: columns-with-a-name-specified-as-a-wildcard-character.md
+    - name: 具有 XPath 節點測試名稱的資料行
+      href: columns-with-the-name-of-an-xpath-node-test.md
+    - name: 以 data() 指定路徑的資料行名稱
+      href: column-names-with-the-path-specified-as-data.md
+    - name: 預設包含 NULL 值的資料行
+      href: columns-that-contain-a-null-value-by-default.md
+    - name: PATH 模式中的命名空間支援
+      href: namespace-support-in-path-mode.md
+    - name: 範例：使用 PATH 模式
+      href: examples-using-path-mode.md
+    - name: 在 FOR XML 查詢中的 TYPE 指示詞
+      href: type-directive-in-for-xml-queries.md
+    - name: 使用 FOR XML 從資料列集產生 XML
+      href: generate-xml-from-rowsets-with-for-xml.md
+    - name: 在應用程式的程式碼中使用 FOR XML 結果
+      href: use-for-xml-results-in-application-code.md
+    - name: 使用巢狀 FOR XML 查詢
+      href: use-nested-for-xml-queries.md
+    - name: 與巢狀 FOR XML 查詢比較的 FOR XML 查詢
+      href: for-xml-query-compared-to-nested-for-xml-query.md
+    - name: 使用巢狀 AUTO 模式查詢產生同層級
+      href: generate-siblings-with-a-nested-auto-mode-query.md
+    - name: 在 ASP.NET 中使用巢狀 FOR XML 查詢
+      href: use-nested-for-xml-queries-in-asp-net.md
+    - name: 使用巢狀 FOR XML 查詢組成 XML
+      href: shape-xml-with-nested-for-xml-queries.md
+    - name: 使用 XSINIL 參數為 NULL 值產生元素
+      href: generate-elements-for-null-values-with-the-xsinil-parameter.md
+    - name: 各個 SQL Server 資料類型的 FOR XML 支援
+      href: for-xml-support-for-various-sql-server-data-types.md
+    - name: xml 資料類型的 FOR XML 支援
+      href: for-xml-support-for-the-xml-data-type.md
+    - name: 使用者自訂資料類型 (UDT) 的 FOR XML 支援
+      href: for-xml-support-for-the-user-defined-data-types-udt.md
+    - name: 字串資料類型的 FOR XML 支援
+      href: for-xml-support-for-string-data-types.md
+    - name: Timestamp 資料類型的 FOR XML 支援
+      href: for-xml-support-for-the-timestamp-data-type.md
+    - name: 產生內嵌 XSD 結構描述
+      href: generate-an-inline-xsd-schema.md
+    - name: 產生內嵌 XDR 結構描述
+      href: generate-an-inline-xdr-schema.md
+- name: OPENXML
+  href: openxml-sql-server.md
+  items:
+    - name: 範例：使用 OPENXML
+      href: examples-using-openxml.md
+    - name: 在 OPENXML 中指定中繼屬性
+      href: specify-metaproperties-in-openxml.md
+    - name: XML 系統預存程序
+      href: xml-system-stored-procedures.md
+    - name: 在 OPENXML 中使用 value () 和 nodes () 方法
+      href: use-the-value-and-nodes-methods-with-openxml.md

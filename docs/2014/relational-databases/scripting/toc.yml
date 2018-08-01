@@ -1,0 +1,235 @@
+- name: Database Engine 指令碼
+  href: database-engine-scripting.md
+- name: 查詢與文字編輯器 (SQL Server Management Studio)
+  href: query-and-text-editors-sql-server-management-studio.md
+  items:
+    - name: Database Engine 查詢編輯器 (SQL Server Management Studio)
+      href: database-engine-query-editor-sql-server-management-studio.md
+    - name: XML 編輯器 (SQL Server Management Studio)
+      href: xml-editor-sql-server-management-studio.md
+    - name: 設定編輯器 (SQL Server Management Studio)
+      href: configure-editors-sql-server-management-studio.md
+    - name: 使副檔名與程式碼編輯器相關聯
+      href: associate-file-extensions-to-a-code-editor.md
+    - name: 變更字型色彩、大小與樣式
+      href: change-font-color-size-and-style.md
+    - name: 在 Management Studio 中使用屬性視窗
+      href: use-the-properties-window-in-management-studio.md
+    - name: 查詢選項頁面 F1 說明
+      href: ../../database-engine/query-options-pages-f1-help.md
+      items:
+        - name: 新增或編輯伺服器註冊 (一般索引標籤) (Reporting Services)
+          href: ../../database-engine/new-or-edit-server-registration-general-tab-reporting-services.md
+        - name: 新增或編輯伺服器註冊 (一般索引標籤) (Analysis Services - 多維度資料)
+          href: ../../database-engine/new-edit-server-registration-analysis-services-multidimensional-data.md
+        - name: 新增或編輯伺服器註冊 (一般索引標籤) (SSIS)
+          href: ../../database-engine/new-or-edit-server-registration-general-tab-ssis.md
+        - name: 查詢選項執行 (一般頁面)
+          href: ../../database-engine/query-options-execution-general-page.md
+        - name: 查詢選項執行 (進階頁面)
+          href: ../../database-engine/query-options-execution-advanced-page.md
+        - name: 查詢選項執行 (ANSI 頁面)
+          href: ../../database-engine/query-options-execution-ansi-page.md
+        - name: 查詢選項結果 (方格頁面)
+          href: ../../database-engine/query-options-results-grid-page.md
+        - name: 查詢選項結果 (文字頁面)
+          href: ../../database-engine/query-options-results-text-page.md
+        - name: Analysis Services 查詢結果 (一般頁面)
+          href: ../../database-engine/analysis-services-query-results-general-page.md
+        - name: Analysis Services 查詢執行選項 (一般頁面)
+          href: ../../database-engine/analysis-services-query-execution-options-general-page.md
+        - name: 選項 (文字編輯器 - 副檔名頁面)
+          href: ../../database-engine/options-text-editor-file-extension-page.md
+        - name: 選項 (文字編輯器 - 所有語言 - 一般頁面)
+          href: ../../database-engine/options-text-editor-all-languages-general-page.md
+        - name: 選項 (文字編輯器 - 所有語言 - 定位點頁面)
+          href: ../../database-engine/options-text-editor-all-languages-tabs-page.md
+        - name: 選項 (文字編輯器 - 純文字 - 一般頁面)
+          href: ../../database-engine/options-text-editor-plain-text-general-page.md
+        - name: 選項 (文字編輯器 - 純文字 - 定位點頁面)
+          href: ../../database-engine/options-text-editor-plain-text-tabs-page.md
+        - name: 選項 (文字編輯器/Transact-SQL/一般頁面)
+          href: ../../database-engine/options-text-editor-transact-sql-general-page.md
+        - name: 選項 (文字編輯器/Transact-SQL/定位點頁面)
+          href: ../../database-engine/options-text-editor-transact-sql-tabs-page.md
+        - name: 選項 (文字編輯器/Transact-SQL/IntelliSense)
+          href: ../../database-engine/options-text-editor-transact-sql-intellisense.md
+        - name: 選項 (文字編輯器 - XML - 一般頁面)
+          href: ../../database-engine/options-text-editor-xml-general-page.md
+        - name: 選項 (文字編輯器：XML：定位點頁面)
+          href: ../../database-engine/options-text-editor-xml-tabs-page.md
+        - name: 選項 (文字編輯器 - XML - 格式化頁面)
+          href: ../../database-engine/options-text-editor-xml-formatting-page.md
+        - name: 選項 (文字編輯器 - XML - 其他頁面)
+          href: ../../database-engine/options-text-editor-xml-miscellaneous-page.md
+        - name: 選項 (文字編輯器：編輯器索引標籤和狀態列頁面)
+          href: ../../database-engine/options-text-editor-editor-tab-and-status-bar-page.md
+        - name: 選項 (查詢執行/SQL Server/一般頁面)
+          href: ../../database-engine/options-query-execution-sql-server-general-page.md
+        - name: 選項 (查詢執行：SQL Server：進階頁面)
+          href: ../../database-engine/options-query-execution-sql-server-advanced-page.md
+        - name: 選項 (查詢執行/SQL Server/ANSI 頁面)
+          href: ../../database-engine/options-query-execution-sql-server-ansi-page.md
+        - name: 選項 (查詢結果/SQL Server/一般頁面)
+          href: ../../database-engine/options-query-results-sql-server-general-page.md
+        - name: 選項 (查詢結果/SQL Server/以方格顯示結果頁面)
+          href: ../../database-engine/options-query-results-sql-server-results-to-grid-page.md
+        - name: 選項 (查詢結果/SQL Server/以文字顯示結果頁面)
+          href: ../../database-engine/options-query-results-sql-server-results-to-text-page.md
+        - name: 選項 (查詢結果-SQL Server-多伺服器)
+          href: ../../database-engine/options-query-results-sql-server-multi-server.md
+        - name: 選項 (查詢執行/Analysis Server/一般頁面)
+          href: ../../database-engine/options-query-execution-analysis-server-general-page.md
+        - name: 選項 (查詢結果/Analysis Server/一般頁面)
+          href: ../../database-engine/options-query-results-analysis-server-general-page.md
+        - name: 選項 (查詢結果和相依性服務頁面)
+          href: ../../database-engine/options-query-results-and-dependency-services-page.md
+    - name: 開啟編輯器 (SQL Server Management Studio)
+      href: open-an-editor-sql-server-management-studio.md
+    - name: 管理編輯器和檢視模式
+      href: manage-the-editor-and-view-mode.md
+    - name: 管理程式碼格式設定
+      href: manage-code-formatting.md
+    - name: 導覽程式碼與文字
+      href: navigate-code-and-text.md
+    - name: 查詢編輯器中的色彩編碼
+      href: color-coding-in-query-editors.md
+    - name: 程式碼大綱
+      href: code-outlining.md
+    - name: 拖放文字
+      href: drag-and-drop-text.md
+    - name: 搜尋和取代
+      href: search-and-replace.md
+      items:
+        - name: 以累加方式搜尋作用中的文件
+          href: search-an-active-document-incrementally.md
+        - name: 以互動方式搜尋文件
+          href: search-documents-interactively.md
+        - name: 使用結果清單搜尋文件
+          href: search-documents-using-results-lists.md
+        - name: 使用萬用字元搜尋文字
+          href: search-text-with-wildcards.md
+        - name: 使用規則運算式搜尋文字
+          href: search-text-with-regular-expressions.md
+    - name: 尋找和取代
+      href: find-and-replace.md
+      items:
+        - name: 檔案中尋找
+          href: find-in-files.md
+        - name: 尋找結果視窗
+          href: find-results-windows.md
+        - name: 檔案中取代
+          href: replace-in-files.md
+    - name: 管理書籤
+      href: manage-bookmarks.md
+      items:
+        - name: 書籤 F1 說明
+          href: bookmarks-f1-help.md
+    - name: 列印程式碼與結果
+      href: print-code-and-results.md
+    - name: 使用查詢編輯器編輯 SQLCMD 指令碼
+      href: edit-sqlcmd-scripts-with-query-editor.md
+- name: IntelliSense (SQL Server Management Studio)
+  href: intellisense-sql-server-management-studio.md
+  items:
+    - name: 設定 IntelliSense (SQL Server Management Studio)
+      href: configure-intellisense-sql-server-management-studio.md
+    - name: 參數資訊 (IntelliSense)
+      href: parameter-info-intellisense.md
+    - name: 快速資訊 (IntelliSense)
+      href: quick-info-intellisense.md
+    - name: 自動完成文字 (IntelliSense)
+      href: complete-word-intellisense.md
+    - name: 語法組的自動比對
+      href: automatic-matching-of-syntax-pairs.md
+    - name: 疑難排解 IntelliSense (SQL Server Management Studio)
+      href: troubleshooting-intellisense.md
+    - name: IntelliSense 所支援的 Transact-SQL 語法
+      href: transact-sql-syntax-supported-by-intellisense.md
+- name: Transact-SQL 程式碼片段
+  href: transact-sql-code-snippets.md
+  items:
+    - name: 插入 Transact-SQL 程式碼片段
+      href: insert-transact-sql-snippets.md
+    - name: 插入範圍陳述式 Transact-SQL 程式碼片段
+      href: insert-surround-with-transact-sql-snippets.md
+    - name: 完成 Transact-SQL 程式碼片段
+      href: complete-transact-sql-snippets.md
+    - name: 新增 Transact-SQL 程式碼片段
+      href: add-transact-sql-snippets.md
+- name: Transact-SQL 偵錯工具
+  href: transact-sql-debugger.md
+  items:
+    - name: 設定 Transact-SQL 偵錯工具
+      href: configure-firewall-rules-before-running-the-tsql-debugger.md
+    - name: 執行 Transact-SQL 偵錯工具
+      href: run-the-transact-sql-debugger.md
+    - name: 逐步執行 Transact-SQL 程式碼
+      href: step-through-transact-sql-code.md
+      items:
+        - name: Transact-SQL 中斷點
+          href: transact-sql-breakpoints.md
+        - name: 切換中斷點
+          href: toggle-a-breakpoint.md
+        - name: 啟用、停用以及刪除中斷點
+          href: enable-disable-and-delete-breakpoints.md
+        - name: 指定中斷點條件
+          href: specify-a-breakpoint-condition.md
+        - name: 指定叫用計數
+          href: specify-a-hit-count.md
+        - name: 指定中斷點篩選條件
+          href: specify-a-breakpoint-filter.md
+        - name: 指定中斷點動作
+          href: specify-a-breakpoint-action.md
+        - name: 編輯中斷點位置
+          href: edit-a-breakpoint-location.md
+- name: Transact-SQL 偵錯工具資訊
+  href: transact-sql-debugger-information.md
+  items:
+    - name: 錯誤清單視窗 (Management Studio)
+      href: transact-sql-debugger-error-list-window.md
+    - name: 中斷點視窗
+      href: transact-sql-debugger-breakpoints-window.md
+    - name: 呼叫堆疊視窗
+      href: transact-sql-debugger-call-stack-window.md
+    - name: 本機視窗
+      href: transact-sql-debugger-locals-window.md
+    - name: 執行緒視窗
+      href: transact-sql-debugger-threads-window.md
+    - name: 命令視窗
+      href: transact-sql-debugger-command-window.md
+    - name: 輸出視窗
+      href: transact-sql-debugger-output-window.md
+    - name: 監看式視窗
+      href: transact-sql-debugger-watch-window.md
+    - name: 快速監看式對話方塊
+      href: transact-sql-debugger-quickwatch-dialog-box.md
+- name: 狀態列 (Database Engine 查詢編輯器)
+  href: status-bar-database-engine-query-editor.md
+- name: 檢視物件總管中的空間資料
+  href: view-spatial-data-in-object-explorer.md
+  items:
+    - name: 空間結果視窗
+      href: spatial-results-window.md
+- name: sqlcmd 使用說明主題
+  href: sqlcmd-how-to.md
+  items:
+    - name: 啟動 sqlcmd 公用程式
+      href: sqlcmd-start-the-utility.md
+    - name: 使用 sqlcmd 公用程式
+      href: sqlcmd-use-the-utility.md
+    - name: 使用 sqlcmd 連接至 Database Engine
+      href: sqlcmd-connect-to-the-database-engine.md
+    - name: 使用 sqlcmd 執行 Transact-SQL 指令碼檔案
+      href: sqlcmd-run-transact-sql-script-files.md
+    - name: 以指令碼變數使用 sqlcmd
+      href: sqlcmd-use-with-scripting-variables.md
+- name: SQL Server PowerShell +
+  href: ../../powershell/sql-server-powershell.md
+- name: 產生指令碼 (SQL Server Management Studio)
+  href: generate-scripts-sql-server-management-studio.md
+  items:
+    - name: '[產生和發佈指令碼]'
+      href: generate-and-publish-scripts-wizard.md
+    - name: 指令碼產生精靈支援的物件
+      href: objects-supported-by-the-generate-scripts-wizard.md

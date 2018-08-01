@@ -1,0 +1,12 @@
+- name: CLR 使用者定義函數
+  href: clr-user-defined-functions.md
+- name: CLR 純量值函式
+  href: clr-scalar-valued-functions.md
+- name: CLR 資料表值函式
+  href: clr-table-valued-functions.md
+- name: CLR 使用者定義彙總 - 叫用函式
+  href: clr-user-defined-aggregate-invoking-functions.md
+- name: CLR 使用者定義彙總 - 需求
+  href: clr-user-defined-aggregates-requirements.md
+- name: CLR 使用者定義彙總
+  href: clr-user-defined-aggregates.md

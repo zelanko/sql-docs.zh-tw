@@ -1,0 +1,54 @@
+- name: SQL Server Native Client (ODBC)
+  href: sql-server-native-client-odbc.md
+- name: 特定區域
+  items:
+    - name: Native Client ODBC API +
+      href: ../../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md
+    - name: ODBC 延伸模組大量複製函式 +
+      href: ../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md
+    - name: 大量複製作業 +
+      href: ../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md
+    - name: 通訊 +
+      href: ../../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md
+    - name: 查詢 +
+      href: ../../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md
+    - name: 結果 +
+      href: ../../../relational-databases/native-client-odbc-results/processing-results-odbc.md
+    - name: 資料指標 +
+      href: ../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md
+    - name: 錯誤訊息 +
+      href: ../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md
+    - name: 預存程序 +
+      href: ../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md
+    - name: Text 和 Image 資料行 +
+      href: ../../../relational-databases/native-client-odbc-text-image-columns/managing-text-and-image-columns.md
+    - name: 資料表值參數 +
+      href: ../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md
+    - name: 日期時間 +
+      href: ../../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md
+    - name: 操作說明 +
+      href: ../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md
+- name: 建立驅動程式應用程式 - 非同步模式和 SQLCancel
+  href: creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
+- name: 建立驅動程式應用程式 - 多執行緒應用程式
+  href: creating-a-driver-application-multithreaded-applications.md
+- name: 建立驅動程式應用程式
+  href: creating-a-driver-application.md
+- name: 資料來源名稱和 64 位元作業系統
+  href: data-source-names-and-64-bit-operating-systems.md
+- name: FILESTREAM 支援 (ODBC)
+  href: filestream-support-odbc.md
+- name: 大型 CLR 使用者定義型別 (ODBC)
+  href: large-clr-user-defined-types-odbc.md
+- name: 執行交易 - 分散式交易
+  href: performing-transactions-distributed-transactions.md
+- name: 在 ODBC 中執行交易
+  href: performing-transactions-in-odbc.md
+- name: 分析 ODBC 驅動程式效能
+  href: profiling-odbc-driver-performance.md
+- name: 用戶端連接 (ODBC) 中的服務主要名稱 (SPN)
+  href: service-principal-names-spns-in-client-connections-odbc.md
+- name: 疏鬆資料行支援 (ODBC)
+  href: sparse-columns-support-odbc.md
+- name: 使用目錄函數
+  href: using-catalog-functions.md

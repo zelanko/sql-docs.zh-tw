@@ -1,0 +1,20 @@
+- name: 日期和時間改善 (OLE DB)
+  href: date-and-time-improvements-ole-db.md
+- name: 增強型日期和時間類型的大量複製變更 (OLE DB)
+  href: bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md
+- name: IRowsetFind 的相容性
+  href: comparability-for-irowsetfind.md
+- name: 轉換 (OLE DB)
+  href: conversions-ole-db.md
+- name: 從用戶端到伺服器執行的轉換
+  href: conversions-performed-from-client-to-server.md
+- name: 從伺服器到用戶端執行的轉換
+  href: conversions-performed-from-server-to-client.md
+- name: 對 OLE DB 日期和時間改善的資料類型支援
+  href: data-type-support-for-ole-db-date-and-time-improvements.md
+- name: 中繼資料 - 日期和時間以及結構描述資料列集
+  href: metadata-date-and-time-and-schema-rowsets.md
+- name: 中繼資料 - 參數和資料列集
+  href: metadata-parameter-and-rowset.md
+- name: OLE DB API 對日期和時間增強功能的支援
+  href: ole-db-api-support-for-date-and-time-enhancements.md

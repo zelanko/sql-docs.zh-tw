@@ -1,0 +1,114 @@
+- name: PowerPivot for SharePoint
+  href: power-pivot-for-sharepoint-ssas.md
+- name: 管理中心的 Power Pivot 伺服器管理和組態
+  href: power-pivot-server-administration-and-configuration-in-central-administration.md
+  items:
+    - name: 將 Power Pivot 方案部署到 SharePoint
+      href: deploy-power-pivot-solutions-to-sharepoint.md
+    - name: 建立和設定 Power Pivot 服務應用程式
+      href: create-and-configure-power-pivot-service-application-in-ca.md
+    - name: 將 PowerPivot 服務應用程式連接到 SharePoint Web 應用程式
+      href: connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md
+    - name: 為網站集合啟用 Power Pivot 功能整合
+      href: activate-power-pivot-integration-for-site-collections-in-ca.md
+    - name: 加入 MSOLAP.5 做為 Excel Services 中受信任的資料提供者
+      href: add-msolap-5-as-a-trusted-data-provider-in-excel-services.md
+    - name: 建立 Power Pivot 網站的信任位置
+      href: create-a-trusted-location-for-power-pivot-sites-in-central-administration.md
+    - name: 設定 Power Pivot 服務帳戶
+      href: configure-power-pivot-service-accounts.md
+    - name: 設定及檢視 SharePoint 記錄檔
+      href: configure-and-view-sharepoint-and-diagnostic-logging.md
+    - name: 設定磁碟空間使用量
+      href: configure-disk-space-usage-power-pivot-for-sharepoint.md
+    - name: 設定檔案上傳的大小上限
+      href: configure-maximum-file-upload-size-power-pivot-for-sharepoint.md
+    - name: 組態設定參考
+      href: configuration-setting-reference-power-pivot-for-sharepoint.md
+    - name: 啟動或停止 Power Pivot for SharePoint Server
+      href: start-or-stop-a-power-pivot-for-sharepoint-server.md
+- name: 使用 Windows PowerShell 的 Power Pivot 組態
+  href: power-pivot-configuration-using-windows-powershell.md
+- name: Power Pivot 組態工具
+  href: power-pivot-configuration-tools.md
+  items:
+    - name: 設定或修復 Power Pivot for SharePoint 2013 (Power Pivot 組態工具)
+      href: configure-or-repair-power-pivot-for-sharepoint-2013.md
+- name: Power Pivot 可用性和災害復原
+  href: power-pivot-availability-and-disaster-recovery.md
+- name: PowerPivot 驗證及授權
+  href: power-pivot-authentication-and-authorization.md
+- name: 設定 PowerPivot 健全狀況規則
+  href: configure-power-pivot-health-rules.md
+  items:
+    - name: 健全狀況規則參考
+      href: health-rules-reference-power-pivot-for-sharepoint.md
+- name: Power Pivot 管理儀表板和使用量資料
+  href: power-pivot-management-dashboard-and-usage-data.md
+  items:
+    - name: PowerPivot 使用量資料收集
+      href: power-pivot-usage-data-collection.md
+    - name: 設定使用量資料收集的對象 (PowerPivot for SharePoint
+      href: configure-usage-data-collection-for-power-pivot-for-sharepoint.md
+- name: 建立及自訂 Power Pivot 圖庫
+  href: create-and-customize-power-pivot-gallery.md
+  items:
+    - name: 使用 Power Pivot 圖庫
+      href: use-power-pivot-gallery.md
+    - name: 刪除 Power Pivot 圖庫
+      href: delete-power-pivot-gallery.md
+- name: Power Pivot 資料存取
+  href: power-pivot-data-access.md
+- name: Power Pivot 資料重新整理
+  href: power-pivot-data-refresh.md
+  items:
+    - name: 檢視 Power Pivot 資料重新整理記錄
+      href: view-data-refresh-history-power-pivot-for-sharepoint.md
+    - name: SharePoint 2013 中的 PowerPivot 資料重新整理
+      href: power-pivot-data-refresh-with-sharepoint-2013.md
+      items:
+        - name: 排程資料重新整理與不支援 Windows 驗證的資料來源 (Power Pivot for SharePoint)
+          href: schedule-data-refresh-and-data-sources-no-windows-authentication.md
+- name: Power Pivot 資料摘要
+  href: power-pivot-data-feeds.md
+  items:
+    - name: 建立或自訂資料摘要庫
+      href: create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md
+    - name: 使用 Power Pivot 資料摘要
+      href: use-data-feeds-power-pivot-for-sharepoint.md
+    - name: 刪除 Power Pivot 資料摘要庫
+      href: delete-a-power-pivot-data-feed-library.md
+    - name: 共用資料摘要庫中的 Power Pivot 資料摘要
+      href: share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md
+- name: Power Pivot BI 語意模型連接 (.bism)
+  href: power-pivot-bi-semantic-model-connection-bism.md
+  items:
+    - name: 將 BI 語意模型連接內容類型加入至文件庫
+      href: add-bi-semantic-model-connection-content-type-to-library.md
+    - name: 建立與 Power Pivot 活頁簿的 BI 語意模型連接
+      href: create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md
+    - name: Create a BI Semantic Model Connection to a Tabular Model Database
+      href: create-a-bi-semantic-model-connection-to-a-tabular-model-database.md
+    - name: 在 Excel 或 Reporting Services 使用 BI 語意模型連接
+      href: use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md
+- name: 錯誤和事件參考 (Power Pivot for SharePoint)
+  href: errors-and-events-reference-power-pivot-for-sharepoint.md
+  items:
+    - name: 嘗試建立與外部資料來源之間的連接時，發生錯誤。 下列連接無法重新整理：Power Pivot 資料
+      href: an-error-occurred-during-an-attempt-to-establish-a-connection.md
+    - name: 無法載入檔案或組件 Microsoft.Data.Services
+      href: could-not-load-file-or-assembly-microsoft-data-services.md
+    - name: 無法載入檔案或組件 'Microsoft.AnalysisServices.SharePoint.Integration'
+      href: could-not-load-microsoft-analysisservices-sharepoint-integration.md
+    - name: 活頁簿中的資料連接路徑指向本機磁碟機上的檔案或者是無效的 URI
+      href: the-data-connection-path-is-invalid.md
+    - name: 資料連接是使用 Windows 驗證，而且無法委派使用者認證。 下列連接無法重新整理：Power Pivot 資料
+      href: the-data-connection-user-could-not-be-delegated.md
+    - name: 下列功能不受 Excel Services 的支援，而且可能不會顯示或是只顯示一部分：註解、形狀或其他物件
+      href: comments-shapes-other-objects-not-supported-by-excel-services.md
+    - name: 儲存活頁簿的信任位置不允許外部資料連線
+      href: trusted-location-does-not-allow-external-data-connections.md
+    - name: 活頁簿包含可重新整理外部資料的一或多個查詢
+      href: this-workbook-contains-one-or-more-queries-that-refresh-external-data.md
+    - name: 無法重新整理活頁簿中資料連接的資料
+      href: unable-to-refresh-data-for-a-data-connection-in-the-workbook.md

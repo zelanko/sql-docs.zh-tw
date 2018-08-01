@@ -1,0 +1,121 @@
+- name: 概觀
+  href: sql-server-profiler.md
+- name: 執行 SQL Server Profiler
+  href: start-sql-server-profiler.md
+- name: SQL Server Profiler 範本和權限
+  href: sql-server-profiler-templates-and-permissions.md
+  items:
+    - name: SQL Server Profiler 範本
+      href: sql-server-profiler-templates.md
+    - name: 建立追蹤範本
+      href: create-a-trace-template-sql-server-profiler.md
+    - name: 修改追蹤範本
+      href: modify-trace-templates.md
+    - name: 從執行中的追蹤衍生範本
+      href: derive-a-template-from-a-running-trace-sql-server-profiler.md
+    - name: 從追蹤檔案或追蹤資料表衍生範本
+      href: derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
+    - name: 匯出追蹤範本
+      href: export-a-trace-template-sql-server-profiler.md
+    - name: 匯入追蹤範本
+      href: import-a-trace-template-sql-server-profiler.md
+    - name: 執行 SQL Server Profiler 所需的權限
+      href: permissions-required-to-run-sql-server-profiler.md
+- name: 設定全域追蹤選項
+  href: set-global-trace-options-sql-server-profiler.md
+  items:
+    - name: 設定追蹤定義預設值
+      href: set-trace-definition-defaults-sql-server-profiler.md
+    - name: 設定追蹤顯示預設值
+      href: set-trace-display-defaults-sql-server-profiler.md
+- name: 建立追蹤
+  href: create-a-trace-sql-server-profiler.md
+  items:
+    - name: 建立用於執行追蹤的 Transact-SQL 指令碼
+      href: create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
+- name: 啟動追蹤
+  href: start-a-trace.md
+  items:
+    - name: 在連線到伺服器後自動啟動追蹤
+      href: start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md
+- name: 在追蹤時尋找值或資料行
+  href: find-a-value-or-data-column-while-tracing-sql-server-profiler.md
+- name: 組織追蹤中所顯示的資料行
+  href: organize-columns-displayed-in-a-trace-sql-server-profiler.md
+- name: 從追蹤擷取指令碼
+  href: extract-a-script-from-a-trace-sql-server-profiler.md
+- name: 暫停追蹤
+  href: pause-a-trace-sql-server-profiler.md
+- name: 停止追蹤
+  href: stop-a-trace-sql-server-profiler.md
+- name: 在追蹤暫停或停止之後執行追蹤
+  href: run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md
+- name: 清除追蹤視窗
+  href: clear-a-trace-window-sql-server-profiler.md
+- name: 關閉追蹤視窗
+  href: close-a-trace-window-sql-server-profiler.md
+- name: 使用 SQL Server Profiler 檢視和分析追蹤
+  href: view-and-analyze-traces-with-sql-server-profiler.md
+  items:
+    - name: 使用 SQL Server Profiler 分析死結
+      href: analyze-deadlocks-with-sql-server-profiler.md
+    - name: 在 SQL Server Profiler 中使用 SHOWPLAN 結果分析查詢
+      href: analyze-queries-with-showplan-results-in-sql-server-profiler.md
+- name: 使追蹤與 Windows 效能記錄資料相互關聯
+  href: correlate-a-trace-with-windows-performance-log-data.md
+- name: 使用 SQL Server Profiler 篩選追蹤
+  href: filter-traces-with-sql-server-profiler.md
+  items:
+    - name: 篩選追蹤中的事件
+      href: filter-events-in-a-trace-sql-server-profiler.md
+    - name: 檢視篩選資訊
+      href: view-filter-information-sql-server-profiler.md
+    - name: 修改篩選
+      href: modify-a-filter-sql-server-profiler.md
+    - name: 根據事件開始時間篩選事件
+      href: filter-events-based-on-the-event-start-time-sql-server-profiler.md
+    - name: 根據事件結束時間篩選事件
+      href: filter-events-based-on-the-event-end-time-sql-server-profiler.md
+    - name: 篩選追蹤中的伺服器處理序識別碼 (SPID)
+      href: filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md
+- name: 儲存追蹤及追蹤範本
+  href: save-traces-and-trace-templates.md
+- name: 將追蹤結果儲存至檔案
+  href: save-trace-results-to-a-file-sql-server-profiler.md
+  items:
+    - name: 設定追蹤檔案的大小上限
+      href: set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md
+    - name: 指定追蹤檔案的事件及資料行
+      href: specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md
+- name: 將追蹤結果儲存至資料表
+  href: save-trace-results-to-a-table-sql-server-profiler.md
+  items:
+    - name: 設定追蹤資料表的資料表大小上限
+      href: set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md
+- name: 開啟追蹤檔案
+  href: open-a-trace-file-sql-server-profiler.md
+- name: 開啟追蹤資料表
+  href: open-a-trace-table-sql-server-profiler.md
+- name: 重新執行追蹤
+  href: replay-traces.md
+  items:
+    - name: 重新執行需求
+      href: replay-requirements.md
+    - name: 重新執行選項
+      href: replay-options-sql-server-profiler.md
+    - name: 重新執行追蹤的考量
+      href: considerations-for-replaying-traces-sql-server-profiler.md
+    - name: 重新執行追蹤資料表
+      href: replay-a-trace-table-sql-server-profiler.md
+    - name: 重新執行追蹤檔案
+      href: replay-a-trace-file-sql-server-profiler.md
+    - name: 一次只重新執行一個單一事件
+      href: replay-a-single-event-at-a-time-sql-server-profiler.md
+    - name: 重新執行至中斷點
+      href: replay-to-a-breakpoint-sql-server-profiler.md
+    - name: 重新執行至游標
+      href: replay-to-a-cursor-sql-server-profiler.md
+    - name: 重新執行 Transact-SQL 指令碼
+      href: replay-a-transact-sql-script-sql-server-profiler.md
+- name: SQL Server Profiler 對話方塊
+  href: sql-server-profiler-f1-help.md

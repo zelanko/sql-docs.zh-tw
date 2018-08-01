@@ -1,0 +1,10 @@
+- name: 處理結果的使用說明主題 (OLE DB)
+  href: processing-results-how-to-topics-ole-db.md
+- name: 執行使用者定義函數和處理傳回碼 (OLE DB)
+  href: execute-a-user-defined-function-and-process-return-code-ole-db.md
+- name: 使用 ODBC CALL 及處理輸出執行預存程序
+  href: execute-stored-procedure-with-odbc-call-and-process-output.md
+- name: 使用 RPC 及處理輸出執行預存程序
+  href: execute-stored-procedure-with-rpc-and-process-output.md
+- name: 從結果集提取資料列 (OLE DB)
+  href: fetch-rows-from-a-result-set-ole-db.md

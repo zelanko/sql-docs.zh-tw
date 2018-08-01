@@ -1,0 +1,156 @@
+- name: 概觀
+  href: reporting-services-wmi-provider-library-reference-ssrs.md
+- name: MSReportServer_Instance 類別
+  href: msreportserver-instance-class.md
+  items:
+    - name: MSReportServer_Instance 成員
+      href: msreportserver-instance-members.md
+    - name: MSReportServer_Instance 屬性
+      href: msreportserver-instance-properties.md
+      items:
+        - name: MSReportServer_Instance 屬性 - EditionID
+          href: msreportserver-instance-properties-editionid.md
+        - name: MSReportServer_Instance 屬性 - EditionName
+          href: msreportserver-instance-properties-editionname.md
+        - name: MSReportServer_Instance 屬性 - InstanceID
+          href: msreportserver-instance-properties-instanceid.md
+        - name: MSReportServer_Instance 屬性 - InstanceName
+          href: msreportserver-instance-properties-instancename.md
+        - name: MSReportServer_Instance 屬性 - IsSharePointIntegrated
+          href: msreportserver-instance-properties-issharepointintegrated.md
+        - name: MSReportServer_Instance 屬性 - Version
+          href: msreportserver-instance-properties-version.md
+    - name: MSReportServer_Instance 方法
+      href: msreportserver-instance-methods.md
+      items:
+        - name: MSReportServer_Instance 方法 - GetReportServerUrls
+          href: msreportserver-instance-methods-getreportserverurls.md
+- name: MSReportServer_ConfigurationSetting 類別
+  href: msreportserver-configurationsetting-class.md
+  items:
+    - name: MSReportServer_ConfigurationSetting 成員
+      href: msreportserver-configurationsetting-members.md
+    - name: MSReportServer_ConfigurationSetting 屬性
+      href: msreportserver-configurationsetting-properties.md
+      items:
+        - name: ConfigurationSetting 屬性 - ConnectionPoolSize
+          href: configurationsetting-property-connectionpoolsize.md
+        - name: ConfigurationSetting 屬性 - DatabaseLogonAccount
+          href: configurationsetting-property-databaselogonaccount.md
+        - name: ConfigurationSetting 屬性 - DatabaseLogonTimeout
+          href: configurationsetting-property-databaselogontimeout.md
+        - name: ConfigurationSetting 屬性 - DatabaseLogonType
+          href: configurationsetting-property-databaselogontype.md
+        - name: ConfigurationSetting 屬性 - DatabaseName
+          href: configurationsetting-property-databasename.md
+        - name: ConfigurationSetting 屬性 - DatabaseQueryTimeout
+          href: configurationsetting-property-databasequerytimeout.md
+        - name: ConfigurationSetting 屬性 - DatabaseServerName
+          href: configurationsetting-property-databaseservername.md
+        - name: ConfigurationSetting 屬性 - InstallationID
+          href: configurationsetting-property-installationid.md
+        - name: ConfigurationSetting 屬性 - InstanceName
+          href: configurationsetting-property-instancename.md
+        - name: ConfigurationSetting 屬性 - IsInitialized
+          href: configurationsetting-property-isinitialized.md
+        - name: ConfigurationSetting 屬性 - IsSharePointIntegrated
+          href: configurationsetting-property-issharepointintegrated.md
+        - name: ConfigurationSetting 屬性 - IsWebServiceEnabled
+          href: configurationsetting-property-iswebserviceenabled.md
+        - name: ConfigurationSetting 屬性 - IsWindowsServiceEnabled
+          href: configurationsetting-property-iswindowsserviceenabled.md
+        - name: ConfigurationSetting 屬性 - MachineAccountIdentity
+          href: configurationsetting-property-machineaccountidentity.md
+        - name: ConfigurationSetting 屬性 - PathName
+          href: configurationsetting-property-pathname.md
+        - name: ConfigurationSetting 屬性 - SecureConnectionLevel
+          href: configurationsetting-property-secureconnectionlevel.md
+        - name: ConfigurationSetting 屬性 - SenderEmailAddress
+          href: configurationsetting-property-senderemailaddress.md
+        - name: ConfigurationSetting 屬性 - SendUsingSMTPServer
+          href: configurationsetting-property-sendusingsmtpserver.md
+        - name: ConfigurationSetting 屬性 - SMTPServer
+          href: configurationsetting-property-smtpserver.md
+        - name: ConfigurationSetting 屬性 - UnattendedExecutionAccount
+          href: configurationsetting-property-unattendedexecutionaccount.md
+        - name: ConfigurationSetting 屬性 - Version
+          href: configurationsetting-property-version.md
+        - name: ConfigurationSetting 屬性 - VirtualDirectoryReportManager
+          href: configurationsetting-property-virtualdirectoryreportmanager.md
+        - name: ConfigurationSetting 屬性 - VirtualDirectoryReportServer
+          href: configurationsetting-property-virtualdirectoryreportserver.md
+        - name: ConfigurationSetting 屬性 - WindowsServiceIdentityActual
+          href: configurationsetting-property-windowsserviceidentityactual.md
+        - name: ConfigurationSetting 屬性 - WindowsServiceIdentityConfigured
+          href: windowsserviceidentityconfigured-property.md
+        - name: ConfigurationSetting 屬性 - RSWindowsExtendedProtectionLevel
+          href: rswindowsextendedprotectionlevel-property.md
+        - name: ConfigurationSetting 屬性 - RSWindowsExtendedProtectionScenario
+          href: rswindowsextendedprotectionscenario-property.md
+    - name: MSReportServer_ConfigurationSetting 方法
+      href: msreportserver-configurationsetting-methods.md
+      items:
+        - name: ConfigurationSetting 方法 - BackupEncryptionKey
+          href: configurationsetting-method-backupencryptionkey.md
+        - name: ConfigurationSetting 方法 - CreateSSLCertificateBinding
+          href: configurationsetting-method-createsslcertificatebinding.md
+        - name: ConfigurationSetting 方法 - DeleteEncryptedInformation
+          href: configurationsetting-method-deleteencryptedinformation.md
+        - name: ConfigurationSetting 方法 - DeleteEncryptionKey
+          href: configurationsetting-method-deleteencryptionkey.md
+        - name: ConfigurationSetting 方法 - GenerateDatabaseCreationScript
+          href: configurationsetting-method-generatedatabasecreationscript.md
+        - name: ConfigurationSetting 方法 - GenerateDatabaseRightsScript
+          href: configurationsetting-method-generatedatabaserightsscript.md
+        - name: ConfigurationSetting 方法 - GenerateDatabaseUpgradeScript
+          href: configurationsetting-method-generatedatabaseupgradescript.md
+        - name: ConfigurationSetting 方法 - GetAdminSiteUrl
+          href: configurationsetting-method-getadminsiteurl.md
+        - name: ConfigurationSetting 方法 - GetDatabaseVersionDisplayName
+          href: configurationsetting-method-getdatabaseversiondisplayname.md
+        - name: ConfigurationSetting 方法 - InitializeReportServer
+          href: configurationsetting-method-initializereportserver.md
+        - name: ConfigurationSetting 方法 - ListInstalledSharePointVersions
+          href: configurationsetting-method-listinstalledsharepointversions.md
+        - name: ConfigurationSetting 方法 - ListIPAddresses
+          href: configurationsetting-method-listipaddresses.md
+        - name: ConfigurationSetting 方法 - ListReportServersInDatabase
+          href: configurationsetting-method-listreportserversindatabase.md
+        - name: ConfigurationSetting 方法 - ListReservedURLs
+          href: configurationsetting-method-listreservedurls.md
+        - name: ConfigurationSetting 方法 - ListSSLCertificateBindings
+          href: configurationsetting-method-listsslcertificatebindings.md
+        - name: ConfigurationSetting 方法 - ListSSLCertificates
+          href: configurationsetting-method-listsslcertificates.md
+        - name: ConfigurationSetting 方法 - ReencryptSecureInformation
+          href: configurationsetting-method-reencryptsecureinformation.md
+        - name: ConfigurationSetting 方法 - RemoveSSLCertificateBinding
+          href: configurationsetting-method-removesslcertificatebinding.md
+        - name: ConfigurationSetting 方法 - RemoveUnattendedExecutionAccount
+          href: configurationsetting-method-removeunattendedexecutionaccount.md
+        - name: ConfigurationSetting 方法 - RemoveURL
+          href: configurationsetting-method-removeurl.md
+        - name: ConfigurationSetting 方法 - ReserveURL
+          href: configurationsetting-method-reserveurl.md
+        - name: ConfigurationSetting 方法 - RestoreEncryptionKey
+          href: configurationsetting-method-restoreencryptionkey.md
+        - name: ConfigurationSetting 方法 - SetDatabaseConnection
+          href: configurationsetting-method-setdatabaseconnection.md
+        - name: ConfigurationSetting 方法 - SetDatabaseLogonTimeout
+          href: configurationsetting-method-setdatabaselogontimeout.md
+        - name: ConfigurationSetting 方法 - SetDatabaseQueryTimeout
+          href: configurationsetting-method-setdatabasequerytimeout.md
+        - name: ConfigurationSetting 方法 - SetEmailConfiguration
+          href: configurationsetting-method-setemailconfiguration.md
+        - name: ConfigurationSetting 方法 - SetSecureConnectionLevel
+          href: configurationsetting-method-setsecureconnectionlevel.md
+        - name: ConfigurationSetting 方法 - SetServiceState
+          href: configurationsetting-method-setservicestate.md
+        - name: ConfigurationSetting 方法 - SetUnattendedExecutionAccount
+          href: configurationsetting-method-setunattendedexecutionaccount.md
+        - name: ConfigurationSetting 方法 - SetVirtualDirectory
+          href: configurationsetting-method-setvirtualdirectory.md
+        - name: ConfigurationSetting 方法 - SetWindowsServiceIdentity
+          href: configurationsetting-method-setwindowsserviceidentity.md
+        - name: ConfigurationSetting 方法 - SetExtendedProtectionSettings
+          href: configurationsetting-method-setextendedprotectionsettings.md

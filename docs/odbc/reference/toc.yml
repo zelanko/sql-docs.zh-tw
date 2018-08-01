@@ -1,0 +1,106 @@
+- name: ODBC 簡介
+  href: introduction-to-odbc.md
+- name: 安裝 +
+  href: ../../odbc/reference/install/odbc-subkey.md
+- name: 開發應用程式 +
+  href: ../../odbc/reference/develop-app/checking-feature-support-and-variability.md
+- name: 開發驅動程式 +
+  href: ../../odbc/reference/develop-driver/developing-an-odbc-driver.md
+- name: 語法 +
+  href: ../../odbc/reference/syntax/odbc-reference.md
+- name: 附錄 +
+  href: ../../odbc/reference/appendixes/odbc-appendixes.md
+- name: ODBC Programmer's Reference (ODBC 程式設計人員參考)
+  href: odbc-programmer-s-reference.md
+- name: ODBC 3.8 的新功能
+  href: what-s-new-in-odbc-3-8.md
+- name: ODBC 程式範例
+  href: sample-odbc-program.md
+  items:
+    - name: ODBC 概觀
+      href: odbc-overview.md
+      items:
+        - name: 為什麼建立 ODBC？
+          href: why-was-odbc-created.md
+        - name: 什麼是 ODBC？
+          href: what-is-odbc.md
+        - name: ODBC 和標準 CLI
+          href: odbc-and-the-standard-cli.md
+    - name: SQL 和 ODBC 簡介
+      href: introduction-to-sql-and-odbc.md
+      items:
+        - name: 結構化查詢語言 (SQL) (Structured Query Language (SQL))
+          href: structured-query-language-sql.md
+          items:
+            - name: SQL 陳述式處理
+              href: processing-a-sql-statement.md
+            - name: 內嵌 SQL
+              href: embedded-sql.md
+              items:
+                - name: 內嵌 SQL 範例
+                  href: embedded-sql-example.md
+                - name: 編譯內嵌 SQL 程式
+                  href: compiling-an-embedded-sql-program.md
+                - name: 靜態 SQL
+                  href: static-sql.md
+                - name: 動態 SQL
+                  href: dynamic-sql.md
+            - name: SQL 模組
+              href: sql-modules.md
+            - name: 呼叫層級介面
+              href: call-level-interfaces.md
+        - name: 資料庫存取架構
+          href: database-access-architecture.md
+          items:
+            - name: 網路資料庫存取
+              href: network-database-access.md
+            - name: 標準資料庫存取架構
+              href: standard-database-access-architectures.md
+              items:
+                - name: 標準程式設計介面
+                  href: standard-programming-interface.md
+                - name: 標準資料流通訊協定
+                  href: standard-data-stream-protocol.md
+                - name: 標準閘道
+                  href: standard-gateway.md
+            - name: ODBC 解決方案
+              href: the-odbc-solution.md
+    - name: ODBC 架構
+      href: odbc-architecture.md
+      items:
+        - name: 應用程式
+          href: applications.md
+        - name: 驅動程式管理員
+          href: the-driver-manager.md
+        - name: 驅動程式
+          href: drivers.md
+          items:
+            - name: 驅動程式工作
+              href: driver-tasks.md
+            - name: 驅動程式架構
+              href: driver-architecture.md
+              items:
+                - name: 以檔案為基礎的驅動程式
+                  href: file-based-drivers.md
+                - name: 以 DBMS 為基礎的驅動程式
+                  href: dbms-based-drivers.md
+                - name: 網路範例
+                  href: network-example.md
+                - name: 其他驅動程式架構
+                  href: other-driver-architectures.md
+        - name: 資料來源
+          href: data-sources.md
+          items:
+            - name: 資料來源的類型
+              href: types-of-data-sources.md
+              items:
+                - name: 機器資料來源
+                  href: machine-data-sources.md
+                - name: 檔案資料來源
+                  href: file-data-sources.md
+            - name: 使用資料來源
+              href: using-data-sources.md
+            - name: 資料來源範例
+              href: data-source-example.md
+    - name: ODBC 64 位元資訊
+      href: odbc-64-bit-information.md

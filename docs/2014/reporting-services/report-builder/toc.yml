@@ -1,0 +1,155 @@
+- name: 尋找、檢視和管理報表
+  href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  items:
+    - name: 在報表管理員中尋找及檢視報表
+      href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+    - name: 使用瀏覽器尋找及檢視報表
+      href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+    - name: 搜尋報表和其他項目
+      href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+    - name: 使用我的報表
+      href: using-my-reports-report-builder-and-ssrs.md
+    - name: 在報表產生器中預覽報表
+      href: previewing-reports-in-report-builder.md
+- name: 匯出報表
+  href: export-reports-report-builder-and-ssrs.md
+  items:
+    - name: 不同報表轉譯延伸模組的互動式功能
+      href: interactive-functionality-different-report-rendering-extensions.md
+    - name: 匯出至 CSV 檔案
+      href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+    - name: 匯出至 Microsoft Excel
+      href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+    - name: 匯出至 Microsoft Word
+      href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+    - name: 轉譯為 HTML
+      href: rendering-to-html-report-builder-and-ssrs.md
+    - name: 匯出至影像檔
+      href: exporting-to-an-image-file-report-builder-and-ssrs.md
+    - name: 匯出至 PDF 檔案
+      href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+    - name: 匯出至 XML
+      href: exporting-to-xml-report-builder-and-ssrs.md
+    - name: 將報表匯出為其他檔案類型
+      href: ../export-a-report-as-another-file-type-report-builder-and-ssrs.md
+    - name: 從多個報表產生資料摘要
+      href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+    - name: 從報表產生資料摘要
+      href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+    - name: 解決 Excel 資料列限制
+      href: work-around-the-excel-2003-row-limitation.md
+- name: 列印報表
+  href: print-reports-report-builder-and-ssrs.md
+  items:
+    - name: 使用列印控制項從瀏覽器列印報表
+      href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+    - name: 從其他應用程式列印報表
+      href: print-reports-from-other-applications-report-builder-and-ssrs.md
+    - name: 列印報表
+      href: print-a-report-report-builder-and-ssrs.md
+    - name: 列印報表 (SharePoint 模式的 Reporting Services)
+      href: print-a-report-reporting-services-in-sharepoint-mode.md
+- name: 儲存報表
+  href: saving-reports-report-builder.md
+  items:
+    - name: 將報表儲存到報表伺服器
+      href: save-reports-to-a-report-server-report-builder.md
+    - name: 將報表儲存至 SharePoint 文件庫
+      href: save-a-report-to-a-sharepoint-library-report-builder.md
+    - name: 將報表儲存到您的電腦
+      href: ../save-reports-to-your-computer-report-builder.md
+- name: 報表產生器 F1 說明
+  href: report-builder-f1-help.md
+  items:
+    - name: 對話方塊、窗格和精靈的說明 (F1)
+      href: ../report-builder-help-for-dialog-boxes-panes-and-wizards.md
+    - name: 動作屬性對話方塊
+      href: ../action-properties-dialog-box-report-builder-and-ssrs.md
+    - name: 圖表對話方塊 (報表產生器及 SSRS)
+      href: ../chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: 軸屬性對話方塊、軸選項
+      href: ../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md
+    - name: 軸標題屬性對話方塊、一般
+      href: ../axis-title-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 導出數列屬性對話方塊、一般 (報表產生器及 SSRS)
+      href: ../calculated-series-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 導出數列屬性對話方塊、標記
+      href: ../calculated-series-properties-dialog-box-markers-report-builder-and-ssrs.md
+    - name: 篩選頁面、圖表對話方塊
+      href: ../filters-page-chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: 圖例屬性對話方塊、一般
+      href: ../legend-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 資料行可見性對話方塊
+      href: ../column-visibility-dialog-box-report-builder.md
+    - name: 轉換 CRI 對話方塊
+      href: convert-cri-dialog-box-report-builder.md
+    - name: 選取 Cube 對話方塊
+      href: ../cube-selection-dialog-box-report-builder.md
+    - name: 資料來源屬性對話方塊、認證
+      href: ../data-source-properties-dialog-box-credentials-report-builder.md
+    - name: 資料來源屬性對話方塊、一般
+      href: ../data-source-properties-dialog-box-general-report-builder.md
+    - name: 資料集屬性對話方塊、欄位
+      href: ../dataset-properties-dialog-box-fields-report-builder.md
+    - name: 資料集屬性對話方塊、篩選
+      href: ../dataset-properties-dialog-box-filters-report-builder.md
+    - name: 資料集屬性對話方塊、選項
+      href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
+    - name: 資料集屬性對話方塊、參數
+      href: ../dataset-properties-dialog-box-parameters-report-builder.md
+    - name: 資料集屬性對話方塊、查詢
+      href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
+    - name: 輸入資料來源認證對話方塊
+      href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md
+    - name: 運算式對話方塊
+      href: ../expression-dialog-box-report-builder.md
+    - name: 填滿對話方塊
+      href: ../fill-dialog-box-report-builder-and-ssrs.md
+    - name: 群組窗格
+      href: ../report-design/grouping-pane-report-builder.md
+    - name: 影像屬性對話方塊、一般
+      href: ../image-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 影像屬性對話方塊、大小
+      href: ../image-properties-dialog-box-size-report-builder-and-ssrs.md
+    - name: 預留位置屬性對話方塊、一般
+      href: ../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 查詢設計工具
+      href: ../query-designers-report-builder.md
+      items:
+        - name: 關聯式查詢設計工具使用者介面
+          href: ../report-data/relational-query-designer-user-interface-report-builder.md
+        - name: 以文字為基礎的查詢設計工具使用者介面
+          href: ../report-data/text-based-query-designer-user-interface-report-builder.md
+          items:
+            - name: 定義查詢參數對話方塊
+              href: ../define-query-parameters-dialog-box-report-builder.md
+        - name: Analysis Services MDX 查詢設計工具使用者介面
+          href: ../analysis-services-mdx-query-designer-user-interface-report-builder.md
+        - name: Hyperion Essbase 查詢設計工具使用者介面
+          href: ../hyperion-essbase-query-designer-user-interface-report-builder.md
+        - name: SharePoint 清單查詢設計工具
+          href: ../report-data/sharepoint-list-query-designer-report-builder.md
+        - name: SAP NetWeaver BI 查詢設計工具使用者介面
+          href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
+    - name: 報表產生器選項對話方塊、設定
+      href: set-default-options-for-report-builder.md
+    - name: 報表資料窗格
+      href: ../report-data-pane-report-builder.md
+    - name: 報表區段對話方塊
+      href: report-sections-dialog-box-report-builder.md
+    - name: Reporting Services 登入對話方塊
+      href: reporting-services-login-dialog-box-report-builder.md
+    - name: 報表屬性對話方塊、程式碼
+      href: ../report-properties-dialog-box-code-report-builder.md
+    - name: 報表屬性對話方塊、版面設定
+      href: ../report-properties-dialog-box-page-setup-report-builder.md
+    - name: 報表屬性對話方塊、參考
+      href: ../report-properties-dialog-box-references-report-builder.md
+    - name: 資料列可見性對話方塊
+      href: ../row-visibility-dialog-box-report-builder.md
+    - name: 選取色彩對話方塊
+      href: ../select-color-dialog-box-report-builder-and-ssrs.md
+    - name: 文字方塊屬性對話方塊、對齊
+      href: ../text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md
+    - name: 文字和預留位置的對齊對話方塊
+      href: ../alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs.md

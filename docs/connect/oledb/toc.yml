@@ -1,0 +1,18 @@
+- name: Microsoft OLE DB Driver for SQL Server
+  href: oledb-driver-for-sql-server.md
+- name: 功能 +
+  href: ../oledb/features/oledb-driver-for-sql-server-features.md
+- name: 應用程式 +
+  href: ../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md
+- name: OLE DB 程式設計 +
+  href: ../oledb/ole-db/oledb-driver-for-sql-server-programming.md
+- name: Microsoft OLE DB Driver for SQL Server 的版本資訊
+  href: release-notes-for-oledb-driver-for-sql-server.md
+- name: 下載 Microsoft OLE DB Driver for SQL Server
+  href: download-oledb-driver-for-sql-server.md
+- name: 尋找詳細的 OLE DB Driver for SQL Server 資訊
+  href: finding-more-oledb-driver-for-sql-server-information.md
+- name: OLE DB Driver for SQL Server 的系統需求
+  href: system-requirements-for-oledb-driver-for-sql-server.md
+- name: 使用 OLE DB Driver for SQL Server 的時機
+  href: when-to-use-oledb-driver-for-sql-server.md

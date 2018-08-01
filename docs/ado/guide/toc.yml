@@ -1,0 +1,30 @@
+- name: ADO 程式設計人員指南
+  href: ado-programmer-s-guide.md
+- name: 資料 +
+  href: ../../ado/guide/data/ado-fundamentals.md
+- name: 延伸模組 +
+  href: ../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md
+- name: 多維度 +
+  href: ../../ado/guide/multidimensional/ado-md-fundamentals.md
+- name: 遠端資料服務 +
+  href: ../../ado/guide/remote-data-service/remote-data-service-rds.md
+- name: 附錄 +
+  href: ../../ado/guide/appendixes/appendix-a-providers.md
+- name: 在 Visual C++ 應用程式中參考 ADO 程式庫
+  href: referencing-the-ado-libraries-in-a-visual-c-application.md
+- name: 在 Visual Basic 6 應用程式中參考 ADO 程式庫
+  href: referencing-the-ado-libraries-in-a-visual-basic-6-application.md
+- name: ADO 簡介
+  href: ado-introduction.md
+- name: ADO 安全性設計問題
+  href: ado-security-design-issues.md
+- name: ADO 歷程記錄
+  href: ado-history.md
+- name: 參考 ADO 程式庫
+  href: referencing-the-ado-libraries.md
+- name: 使用 ADO 文件的必要條件
+  href: prerequisites-for-using-the-ado-documentation.md
+- name: ADO 技術資料表
+  href: ado-technology-table.md
+- name: ADO 工作資料表
+  href: ado-task-table.md

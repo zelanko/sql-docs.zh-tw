@@ -1,0 +1,184 @@
+- name: In-Memory OLTP (記憶體中最佳化)
+  href: in-memory-oltp-in-memory-optimization.md
+- name: 使用記憶體最佳化資料表的需求
+  href: requirements-for-using-memory-optimized-tables.md
+- name: 在 VM 環境使用記憶體中的 OLTP
+  href: ../../database-engine/using-in-memory-oltp-in-a-vm-environment.md
+- name: 記憶體中 OLTP 程式碼範例
+  href: in-memory-oltp-code-samples.md
+  items:
+    - name: 示範：記憶體中 OLTP 的效能改善
+      href: demonstration-performance-improvement-of-in-memory-oltp.md
+    - name: 示範記憶體中 OLTP 的 AdventureWorks 延伸模組
+      href: ../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md
+    - name: 建立記憶體最佳化資料表和原生編譯的預存程序
+      href: creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+    - name: 應用程式層級資料分割
+      href: application-level-partitioning.md
+- name: 記憶體最佳化的資料表
+  href: memory-optimized-tables.md
+  items:
+    - name: 記憶體最佳化的資料表簡介
+      href: introduction-to-memory-optimized-tables.md
+    - name: 資料表和預存程序的原生編譯
+      href: native-compilation-of-tables-and-stored-procedures.md
+    - name: 改變記憶體最佳化資料表
+      href: altering-memory-optimized-tables.md
+    - name: 了解記憶體最佳化資料表上的交易
+      href: ../../database-engine/understanding-transactions-on-memory-optimized-tables.md
+    - name: 記憶體最佳化的資料表中的交易
+      href: ../../database-engine/transactions-in-memory-optimized-tables.md
+    - name: 搭配記憶體最佳化的資料表使用交易隔離等級的方針
+      href: ../../database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md
+    - name: 記憶體最佳化資料表交易的重試邏輯方針
+      href: ../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md
+    - name: 交易隔離等級
+      href: ../../database-engine/transaction-isolation-levels.md
+    - name: 跨容器交易
+      href: ../../database-engine/cross-container-transactions.md
+    - name: 分割記憶體最佳化資料表的應用程式模式
+      href: application-pattern-for-partitioning-memory-optimized-tables.md
+    - name: 記憶體最佳化資料表的統計資料
+      href: statistics-for-memory-optimized-tables.md
+    - name: 定序和字碼頁
+      href: ../../database-engine/collations-and-code-pages.md
+    - name: 記憶體最佳化資料表中的資料表和資料列大小
+      href: table-and-row-size-in-memory-optimized-tables.md
+    - name: 記憶體最佳化資料表的查詢處理指南
+      href: a-guide-to-query-processing-for-memory-optimized-tables.md
+- name: 記憶體最佳化資料表變數
+  href: ../../database-engine/memory-optimized-table-variables.md
+- name: 記憶體最佳化資料表上的索引
+  href: ../../database-engine/indexes-on-memory-optimized-tables.md
+  items:
+    - name: 使用記憶體最佳化資料表索引的方針
+      href: ../../database-engine/guidelines-for-using-indexes-on-memory-optimized-tables.md
+    - name: 雜湊索引
+      href: ../../database-engine/hash-indexes.md
+    - name: 判斷雜湊索引的正確值區計數
+      href: ../../database-engine/determining-the-correct-bucket-count-for-hash-indexes.md
+    - name: 疑難排解記憶體最佳化雜湊索引的常見效能問題
+      href: ../../database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md
+- name: 原生編譯的預存程序
+  href: natively-compiled-stored-procedures.md
+  items:
+    - name: 建立原生編譯的預存程序
+      href: creating-natively-compiled-stored-procedures.md
+    - name: 不可部分完成的區塊
+      href: atomic-blocks-in-native-procedures.md
+    - name: 原生編譯的預存程序中支援的建構
+      href: supported-features-for-natively-compiled-t-sql-modules.md
+    - name: 在原生編譯預存程序中使用 Try..Catch
+      href: ../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md
+    - name: 原生編譯的預存程序上支援的建構
+      href: supported-ddl-for-natively-compiled-t-sql-modules.md
+    - name: 原生編譯的預存程序和執行 Set 選項
+      href: natively-compiled-stored-procedures-and-execution-set-options.md
+    - name: 呼叫原生編譯預存程序的最佳作法
+      href: best-practices-for-calling-natively-compiled-stored-procedures.md
+    - name: 監視原生編譯預存程序的效能
+      href: monitoring-performance-of-natively-compiled-stored-procedures.md
+    - name: 從資料存取應用程式呼叫原生編譯預存程序
+      href: calling-natively-compiled-stored-procedures-from-data-access-applications.md
+- name: 為記憶體中的 OLTP 管理記憶體
+  href: ../../database-engine/managing-memory-for-in-memory-oltp.md
+  items:
+    - name: 估計記憶體最佳化資料表的記憶體需求
+      href: estimate-memory-requirements-for-memory-optimized-tables.md
+    - name: 將包含記憶體最佳化資料表的資料庫繫結至資源集區
+      href: bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+    - name: 監視與疑難排解記憶體使用量
+      href: monitor-and-troubleshoot-memory-usage.md
+    - name: 解決記憶體不足問題
+      href: resolve-out-of-memory-issues.md
+    - name: 還原資料庫並將其繫結至資源集區
+      href: restore-a-database-and-bind-it-to-a-resource-pool.md
+    - name: 記憶體中的 OLTP 記憶體回收
+      href: in-memory-oltp-garbage-collection.md
+- name: 建立及管理記憶體最佳化物件的儲存體
+  href: creating-and-managing-storage-for-memory-optimized-objects.md
+  items:
+    - name: 設定記憶體最佳化資料表的儲存體
+      href: configuring-storage-for-memory-optimized-tables.md
+    - name: 記憶體最佳化檔案群組
+      href: the-memory-optimized-filegroup.md
+    - name: 記憶體最佳化資料表的持久性
+      href: durability-for-memory-optimized-tables.md
+    - name: 記憶體最佳化的資料表的檢查點作業
+      href: checkpoint-operation-for-memory-optimized-tables.md
+    - name: 為記憶體最佳化的物件定義持久性
+      href: defining-durability-for-memory-optimized-objects.md
+    - name: 比較以磁碟為基礎的資料表儲存體和記憶體最佳化資料表儲存體
+      href: comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+    - name: 對資料檔案和差異檔案組的合併進行監視和疑難排解
+      href: ../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md
+- name: 備份、還原及復原記憶體最佳化資料表
+  href: ../../database-engine/backup-restore-and-recovery-of-memory-optimized-tables.md
+  items:
+    - name: 備份含有記憶體最佳化資料表的資料庫
+      href: backing-up-a-database-with-memory-optimized-tables.md
+    - name: 分次還原具有記憶體最佳化資料表的資料庫
+      href: piecemeal-restore-of-databases-with-memory-optimized-tables.md
+    - name: 記憶體最佳化資料表的還原與復原
+      href: restore-and-recovery-of-memory-optimized-tables.md
+- name: 記憶體中 OLTP 的 Transact-SQL 支援
+  href: transact-sql-support-for-in-memory-oltp.md
+  items:
+    - name: 支援的資料類型
+      href: supported-data-types-for-in-memory-oltp.md
+    - name: 使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
+      href: accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+    - name: 記憶體內部 OLTP 的系統檢視表、預存程序、DMV 和等候類型
+      href: ../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md
+- name: 記憶體中 OLTP 的 SQL Server 支援
+  href: sql-server-support-for-in-memory-oltp.md
+  items:
+    - name: 支援的 SQL Server 功能
+      href: unsupported-sql-server-features-for-in-memory-oltp.md
+    - name: 記憶體中 OLTP 的 SQL Server 管理物件支援
+      href: sql-server-management-objects-support-for-in-memory-oltp.md
+    - name: In-Memory OLTP 的 SQL Server Integration Services 支援
+      href: sql-server-integration-services-support-for-in-memory-oltp.md
+    - name: SQL Server Management Studio 對記憶體中 OLTP 的支援
+      href: sql-server-management-studio-support-for-in-memory-oltp.md
+    - name: 記憶體內部 OLTP 資料庫的高可用性支援
+      href: high-availability-support-for-in-memory-oltp-databases.md
+- name: 移轉至 In-Memory OLTP
+  href: migrating-to-in-memory-oltp.md
+  items:
+    - name: 判斷是否應將資料表或預存程序匯出至記憶體中 OLTP
+      href: determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+    - name: 記憶體最佳化 Advisor
+      href: memory-optimization-advisor.md
+    - name: 原生編譯 Advisor
+      href: native-compilation-advisor.md
+    - name: 記憶體中的 OLTP 不支援 Transact-SQL 建構
+      href: transact-sql-constructs-not-supported-by-in-memory-oltp.md
+    - name: 在記憶體最佳化資料表中實作 LOB 資料行
+      href: ../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md
+    - name: 在記憶體最佳化資料表中實作 SQL_VARIANT
+      href: implementing-sql-variant-in-a-memory-optimized-table.md
+    - name: 原生編譯預存程序的移轉問題
+      href: migration-issues-for-natively-compiled-stored-procedures.md
+    - name: 從原生編譯預存程序建立及存取 TempDB 中的資料表
+      href: create-and-access-tables-in-tempdb-from-stored-procedures.md
+    - name: 在原生編譯預存程序中模擬 EXISTS 子句
+      href: simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+    - name: 實作 MERGE 功能
+      href: implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+    - name: 實作 CASE 陳述式
+      href: implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+    - name: 實作外部聯結
+      href: implementing-an-outer-join.md
+    - name: 在原生編譯的預存程序中實作 OR 運算子
+      href: ../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md
+    - name: 移轉計算資料行
+      href: migrating-computed-columns.md
+    - name: 移轉觸發程序
+      href: migrating-triggers.md
+    - name: 跨資料庫查詢
+      href: cross-database-queries.md
+    - name: 合併 Check 和外部索引鍵條件約束
+      href: ../../database-engine/migrating-check-and-foreign-key-constraints.md
+    - name: 在記憶體最佳化資料表中實作 IDENTITY
+      href: implementing-identity-in-a-memory-optimized-table.md

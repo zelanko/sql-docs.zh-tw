@@ -1,0 +1,309 @@
+- name: SQL Server Management Studio
+  href: sql-server-management-studio-ssms.md
+  items:
+    - name: 使用 SQL Server Management Studio
+      href: ../database-engine/use-sql-server-management-studio.md
+    - name: SQL Server Management Studio 環境
+      href: the-sql-server-management-studio-environment.md
+    - name: 一般使用者介面元素
+      href: general-user-interface-elements.md
+      items:
+        - name: 關於對話方塊
+          href: about-dialog-box.md
+        - name: SQL Server Management Studio Web 瀏覽器
+          href: sql-server-management-studio-web-browser.md
+        - name: 外部工具對話方塊
+          href: external-tools-dialog-box.md
+        - name: 引數對話方塊
+          href: arguments-dialog-box.md
+        - name: 外部工具的引數
+          href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
+        - name: 屬性視窗 (Management Studio)
+          href: properties-window-management-studio.md
+        - name: 使用工具箱
+          href: use-the-toolbox.md
+    - name: SQL Server Management Studio 中的功能
+      href: ../database-engine/features-in-sql-server-management-studio.md
+    - name: 使用 SQL Server Management Studio 建置資料庫專案
+      href: build-database-projects-by-using-sql-server-management-studio.md
+    - name: SQL Server Management Studio 中的工具視窗
+      href: tool-windows-in-sql-server-management-studio.md
+    - name: 了解 SQL Server Management Studio 視窗管理
+      href: understand-sql-server-management-studio-windows-management.md
+    - name: 利用 SQL Server Management Studio 管理伺服器
+      href: administer-servers-with-sql-server-management-studio.md
+    - name: SQL Server Management Studio 中的使用者協助
+      href: user-assistance-in-sql-server-management-studio.md
+    - name: 自訂功能表與快速鍵
+      href: customize-menus-and-shortcut-keys.md
+    - name: SQL Server Management Studio 中的屬性頁
+      href: property-pages-in-sql-server-management-studio.md
+    - name: 適用於商業智慧的 SQL Server Management Studio 簡介
+      href: introduction-to-sql-server-management-studio-for-business-intelligence.md
+    - name: 將外部工具加入至工具功能表 (SQL Server Management Studio)
+      href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+    - name: 設定登入稽核 (SQL Server Management Studio)
+      href: configure-login-auditing-sql-server-management-studio.md
+    - name: 設定 WMI 在 SQL Server 工具中顯示伺服器狀態
+      href: configure-wmi-to-show-server-status-in-sql-server-tools.md
+- name: 物件總管
+  href: object/object-explorer.md
+  items:
+    - name: 開啟和設定物件總管
+      href: object/open-and-configure-object-explorer.md
+    - name: 在物件總管中隱藏系統物件
+      href: object/hide-system-objects-in-object-explorer.md
+    - name: 選項 (SQL Server 物件總管/命令)
+      href: object/options-sql-server-object-explorer-commands.md
+    - name: 選項 (SQL Server 物件總管/指令碼頁面)
+      href: object/options-sql-server-object-explorer-scripting-page.md
+    - name: 從物件總管連接到執行個體
+      href: object/connect-to-an-instance-from-object-explorer.md
+    - name: 使用物件總管管理物件
+      href: object/manage-objects-by-using-object-explorer.md
+      items:
+        - name: 瀏覽物件 (物件總管)
+          href: object/browse-for-objects-object-explorer.md
+        - name: 刪除物件
+          href: object/delete-objects.md
+        - name: 物件相依性
+          href: object/object-dependencies.md
+        - name: 選取物件 (物件總管)
+          href: object/select-objects-object-explorer.md
+        - name: 加入物件
+          href: object/add-objects.md
+        - name: 選取物件類型 (物件總管)
+          href: object/select-object-types-object-explorer.md
+        - name: 篩選設定 (物件總管與公用程式總管)
+          href: object/filter-settings-object-explorer-and-utility-explorer.md
+        - name: 找不到名稱對話方塊
+          href: object/name-not-found-dialog-box.md
+    - name: 物件總管詳細資料窗格
+      href: object/object-explorer-details-pane.md
+- name: Management Studio 中的自訂報表
+  href: object/custom-reports-in-management-studio.md
+  items:
+    - name: 將自訂報表加入 Management Studio
+      href: object/add-a-custom-report-to-management-studio.md
+    - name: 取消隱藏執行自訂報表警告
+      href: object/unsuppress-run-custom-report-warnings.md
+    - name: 使用自訂報表搭配物件總管節點屬性
+      href: object/use-custom-reports-with-object-explorer-node-properties.md
+- name: 範本總管
+  href: template/template-explorer.md
+  items:
+    - name: 開啟範本
+      href: template/open-a-template.md
+    - name: 取代範本參數
+      href: template/replace-template-parameters.md
+- name: 方案總管
+  href: solution/solution-explorer.md
+  items:
+    - name: 方案 (SQL Server Management Studio)
+      href: solution/solutions-sql-server-management-studio.md
+    - name: 建立新方案
+      href: solution/create-a-new-solution.md
+    - name: 開啟現有的方案
+      href: solution/open-an-existing-solution.md
+    - name: 關閉方案
+      href: solution/close-a-solution.md
+    - name: 刪除方案
+      href: solution/delete-a-solution.md
+    - name: 複製方案中的項目
+      href: solution/copy-items-in-a-solution.md
+    - name: 移除或刪除項目或專案
+      href: solution/remove-or-delete-an-item-or-project.md
+    - name: 移動方案中的項目
+      href: solution/move-items-in-a-solution.md
+    - name: 重新命名方案和專案項目
+      href: solution/rename-solutions-and-project-items.md
+- name: 專案 (SQL Server Management Studio)
+  href: solution/projects-sql-server-management-studio.md
+  items:
+    - name: 建立專案
+      href: solution/create-a-project.md
+    - name: 將現有專案加入方案中
+      href: solution/add-an-existing-project-to-a-solution.md
+    - name: 變更專案的預設位置
+      href: solution/change-the-default-location-for-projects.md
+    - name: 檢視專案屬性
+      href: solution/view-project-properties.md
+    - name: 將新項目加入專案
+      href: solution/add-new-items-to-a-project.md
+    - name: 將現有的項目加入至專案
+      href: solution/add-existing-items-to-a-project.md
+    - name: 在專案中建立查詢與連接的關聯性
+      href: solution/associate-a-query-with-a-connection-in-a-project.md
+    - name: 變更與查詢相關聯的連接
+      href: solution/change-the-connection-associated-with-a-query.md
+    - name: 檢視或變更專案中連接的屬性
+      href: solution/view-or-change-the-properties-of-a-connection-in-a-project.md
+- name: 方案總管原始檔控制
+  href: ../database-engine/solution-explorer-source-control.md
+  items:
+    - name: 原始檔控制基本概念
+      href: ../database-engine/source-control-basics.md
+    - name: 變更原始檔控制
+      href: ../database-engine/change-source-control.md
+    - name: 設定原始檔控制選項
+      href: ../database-engine/set-source-control-options.md
+    - name: 變更原始檔控制連接
+      href: ../database-engine/change-source-control-connections.md
+    - name: 從原始檔控制中排除檔案
+      href: ../database-engine/exclude-files-from-source-control.md
+    - name: 將方案與專案加入原始檔控制
+      href: ../database-engine/add-solutions-and-projects-to-source-control.md
+    - name: 將方案加入原始檔控制
+      href: ../database-engine/add-solutions-to-source-control.md
+    - name: 將專案加入原始檔控制中
+      href: ../database-engine/add-projects-to-source-control.md
+    - name: 從原始檔控制中開啟方案和專案
+      href: ../database-engine/open-solutions-and-projects-from-source-control.md
+    - name: 從原始檔控制開啟方案
+      href: ../database-engine/open-solutions-from-source-control.md
+    - name: 從原始檔控制開啟專案
+      href: ../database-engine/open-projects-from-source-control.md
+    - name: 取得對話方塊 (原始檔控制)
+      href: ../database-engine/get-dialog-box-source-control.md
+    - name: 簽出檔案
+      href: ../database-engine/check-out-files.md
+    - name: 管理簽出
+      href: ../database-engine/manage-checkouts.md
+    - name: 復原簽出
+      href: ../database-engine/undo-checkouts.md
+    - name: 在編輯時自動簽出檔案
+      href: ../database-engine/automatically-check-out-files-upon-edit.md
+    - name: 簽入檔案
+      href: ../database-engine/check-in-files.md
+    - name: 管理簽入
+      href: ../database-engine/manage-checkins.md
+    - name: 檢視修改檔案清單
+      href: ../database-engine/view-a-list-of-modified-files.md
+    - name: 編輯簽入的檔案
+      href: ../database-engine/edit-checked-in-files.md
+    - name: 設定及擷取版本資訊
+      href: ../database-engine/set-and-retrieve-version-information.md
+    - name: 檢視檔案記錄
+      href: ../database-engine/view-file-history.md
+    - name: 檢視專案記錄
+      href: ../database-engine/view-project-history.md
+    - name: 檢視檔案狀態
+      href: ../database-engine/view-file-status.md
+    - name: 擷取檔案
+      href: ../database-engine/retrieve-files.md
+    - name: 將版本指定為最新版
+      href: ../database-engine/specify-a-version-as-the-latest-version.md
+    - name: 比較檔案
+      href: ../database-engine/compare-files.md
+    - name: 共用檔案
+      href: ../database-engine/share-files.md
+    - name: 建立記錄和狀態報表
+      href: ../database-engine/create-history-and-status-reports.md
+- name: 管理方案和專案的檔案
+  href: solution/files-that-manage-solutions-and-projects.md
+  items:
+    - name: 利用編碼管理檔案
+      href: solution/manage-files-with-encoding.md
+    - name: 其他檔案
+      href: solution/miscellaneous-files.md
+- name: 伺服器連接的 F1 說明 (SQL Server Management Studio)
+  href: f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+  items:
+    - name: 從 SQL Server Management Studio 連接到任何 SQL Server 元件
+      href: f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
+    - name: 連接到伺服器 (Database Engine)
+      href: f1-help/connect-to-server-database-engine.md
+      items:
+        - name: 連接到伺服器 (登入頁面) Database Engine
+          href: f1-help/connect-to-server-login-page-database-engine.md
+        - name: 連接到伺服器 (連接屬性頁面) Database Engine
+          href: f1-help/connect-to-server-connection-properties-page-database-engine.md
+    - name: 連接到伺服器 (Analysis Services)
+      href: ../database-engine/connect-to-server-analysis-services.md
+      items:
+        - name: 連接到伺服器 (登入頁面) Analysis Services
+          href: ../database-engine/connect-to-server-login-page-analysis-services.md
+        - name: 連接到伺服器 (連接屬性頁面) Analysis Service
+          href: ../database-engine/connect-to-server-connection-properties-page-analysis-services.md
+    - name: 連線到伺服器 (Integration Services)
+      href: ../database-engine/connect-to-server-integration-services.md
+      items:
+        - name: 連接到伺服器 (登入頁面) Integration Services
+          href: ../database-engine/connect-to-server-login-page-integration-services.md
+        - name: 連接到伺服器 (連接屬性頁面) Integration Services
+          href: ../database-engine/connect-to-server-connection-properties-page-integration-services.md
+    - name: 連接到伺服器 (Reporting Services)
+      href: ../database-engine/connect-to-server-reporting-services.md
+      items:
+        - name: 連線到伺服器 (登入頁面) Reporting Services
+          href: ../database-engine/connect-to-server-login-page-reporting-services.md
+        - name: 連接到伺服器 (連接屬性頁面) Reporting Services
+          href: ../database-engine/connect-to-server-connection-properties-page-reporting-services.md
+    - name: 連接到伺服器 (其他連接參數頁面)
+      href: ../database-engine/connect-to-server-additional-connection-parameters-page.md
+    - name: 瀏覽伺服器 (本機伺服器)
+      href: ../database-engine/browse-for-servers-local-servers.md
+    - name: 瀏覽伺服器 (網路伺服器)
+      href: ../database-engine/browse-for-servers-network-servers.md
+    - name: 連接屬性對話方塊
+      href: ../database-engine/connection-properties-dialog-box.md
+    - name: 密碼已過期
+      href: ../database-engine/password-expired.md
+    - name: 連接到 Windows Azure 儲存體
+      href: ../database-engine/connect-to-windows-azure-storage.md
+- name: Visual Database Tools +
+  href: visual-db-tools/visual-database-tools.md
+- name: SQL Server Management Studio 功能表說明 +
+  href: menu-help/sql-server-management-studio-menu-help.md
+- name: SQL Server Agent +
+  href: agent/sql-server-agent.md
+- name: 教學課程：SQL Server Management Studio
+  href: tutorials/tutorial-sql-server-management-studio.md
+  items:
+    - name: 第 1 課：SQL Server Management Studio 中的基本導覽
+      href: tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md
+      items:
+        - name: 啟動 SQL Server Management Studio
+          href: tutorials/lesson-1-1-start-sql-server-management-studio.md
+        - name: 連接已註冊的伺服器和物件總管
+          href: tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md
+        - name: 變更環境配置
+          href: tutorials/lesson-1-3-change-the-environment-layout.md
+        - name: 顯示查詢視窗
+          href: tutorials/lesson-1-4-display-the-query-window.md
+        - name: 顯示物件總管詳細資料頁面
+          href: tutorials/lesson-1-5-show-the-object-explorer-details-page.md
+        - name: 選取鍵盤快速鍵配置
+          href: tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md
+        - name: 設定啟動選項
+          href: tutorials/lesson-1-7-set-the-startup-options.md
+        - name: 還原預設的 SQL Server Management Studio 組態
+          href: tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md
+        - name: 摘要：基本導覽
+          href: tutorials/lesson-1-9-summary-basic-navigation.md
+    - name: 第 2 課：撰寫 Transact-SQL
+      href: tutorials/lesson-2-writing-transact-sql.md
+      items:
+        - name: 連接查詢編輯器
+          href: tutorials/lesson-2-1-connecting-with-query-editor.md
+        - name: 加入縮排
+          href: tutorials/lesson-2-2-adding-indentation.md
+        - name: 將查詢編輯器最大化
+          href: tutorials/lesson-2-3-maximizing-query-editor.md
+        - name: 使用註解
+          href: tutorials/lesson-2-4-using-comments.md
+        - name: 程式碼視窗的其他檢視方式
+          href: tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md
+        - name: 編寫資料表的指令碼
+          href: tutorials/lesson-2-6-script-a-table.md
+    - name: 第 3 課：使用範本、方案和指令碼專案
+      href: tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md
+      items:
+        - name: 利用範本建立指令碼
+          href: tutorials/lesson-3-1-create-scripts-using-templates.md
+        - name: 建立自訂範本
+          href: tutorials/lesson-3-2-create-custom-templates.md
+        - name: 將指令碼儲存成專案或方案
+          href: tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md
+        - name: 摘要：方案和指令碼專案
+          href: tutorials/lesson-3-4-summary-solutions-and-script-projects.md

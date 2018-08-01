@@ -1,0 +1,373 @@
+- name: SQL Server 安裝
+  href: installation-for-sql-server.md
+- name: 規劃 SQL Server 安裝
+  href: ../../sql-server/install/planning-a-sql-server-installation.md
+  items:
+    - name: SQL Server 安裝的新增功能
+      href: ../../sql-server/install/what-s-new-in-sql-server-installation.md
+    - name: Hardware and Software Requirements for Installing SQL Server 2014
+      href: ../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+    - name: SQL Server 安裝的安全性考量
+      href: ../../sql-server/install/security-considerations-for-a-sql-server-installation.md
+    - name: 網路通訊協定和網路程式庫
+      href: ../../sql-server/install/network-protocols-and-network-libraries.md
+    - name: 使用 SQL Server 的多個版本和執行個體
+      href: ../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
+    - name: SQL Server 中的地區語言版本
+      href: ../../sql-server/install/local-language-versions-in-sql-server.md
+    - name: SQL Server 的預設和具名執行個體的檔案位置
+      href: ../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+- name: 安裝 SQL Server 2014
+  href: install-sql-server.md
+  items:
+    - name: 關於 SQL Server Database Engine
+      href: install-sql-server-database-engine.md
+    - name: 安裝 Distributed Replay
+      href: ../../tools/distributed-replay/install-distributed-replay.md
+    - name: Distributed Replay Requirements
+      href: ../../tools/distributed-replay/distributed-replay-requirements.md
+    - name: 安裝 Distributed Replay (安裝程式)
+      href: ../../sql-server/install/install-distributed-replay-setup.md
+    - name: 從命令提示字元處安裝 Distributed Replay
+      href: ../../tools/distributed-replay/install-distributed-replay-overview.md
+    - name: 使用組態檔安裝 Distributed Replay
+      href: ../../sql-server/install/install-distributed-replay-using-a-configuration-file.md
+    - name: 完成安裝後步驟
+      href: ../../tools/distributed-replay/complete-the-post-installation-steps.md
+    - name: 修改控制器服務帳戶與用戶端服務帳戶
+      href: ../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
+    - name: 修復 Distributed Replay 安裝
+      href: ../../sql-server/install/repair-a-distributed-replay-installation.md
+    - name: 解除安裝 Distributed Replay 的現有執行個體
+      href: ../../sql-server/install/uninstall-an-existing-instance-of-distributed-replay.md
+    - name: 安裝 SQL Server 複寫
+      href: install-sql-server-replication.md
+    - name: 安裝 SQL Server 管理工具
+      href: ../../sql-server/install/install-sql-server-management-tools.md
+    - name: 安裝 SQL Server PowerShell
+      href: install-sql-server-powershell.md
+    - name: 在 Server Core 上安裝 SQL Server 2014
+      href: install-sql-server-on-server-core.md
+    - name: 將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
+      href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
+    - name: 使用 SysPrep 安裝 SQL Server 的考量
+      href: considerations-for-installing-sql-server-using-sysprep.md
+    - name: 驗證 SQL Server 安裝
+      href: validate-a-sql-server-installation.md
+    - name: 檢查 System Configuration Checker 的參數
+      href: check-parameters-for-the-system-configuration-checker.md
+    - name: 在 Server Core 安裝上設定 SQL Server
+      href: configure-sql-server-on-a-server-core-installation.md
+    - name: Configure the Windows Firewall to Allow SQL Server Access
+      href: ../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
+    - name: 設定多重主目錄電腦進行 SQL Server 存取
+      href: ../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
+    - name: 安裝的使用說明主題
+      href: ../../sql-server/install/installation-how-to-topics.md
+    - name: 從安裝精靈安裝 SQL Server 2014 (安裝程式)
+      href: install-sql-server-from-the-installation-wizard-setup.md
+    - name: Install SQL Server 2014 from the Command Prompt
+      href: install-sql-server-from-the-command-prompt.md
+    - name: 使用組態檔安裝 SQL Server 2014
+      href: install-sql-server-using-a-configuration-file.md
+    - name: 使用 SysPrep 安裝 SQL Server 2014
+      href: install-sql-server-using-sysprep.md
+    - name: 將功能加入至 SQL Server 2014 的執行個體 (安裝程式)
+      href: add-features-to-an-instance-of-sql-server-setup.md
+    - name: 卸除 SQL Server 2014 安裝
+      href: repair-a-failed-sql-server-installation.md
+    - name: 重新命名主控 SQL Server 獨立執行個體的電腦
+      href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
+    - name: 安裝 SQL Server 2014 服務更新
+      href: install-sql-server-servicing-updates.md
+    - name: 檢視與讀取 SQL Server 安裝程式記錄檔
+      href: view-and-read-sql-server-setup-log-files.md
+- name: 安裝 SQL Server 2014 Business Intelligence 功能
+  href: ../../sql-server/install/install-sql-server-business-intelligence-features.md
+  items:
+    - name: 商業智慧的授權拓撲和成本範例
+      href: ../../sql-server/install/example-license-topologies-costs-self-service-business-intelligence.md
+    - name: 以多維度及資料採礦模式安裝 Analysis Services
+      href: ../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md
+    - name: 以表格模式安裝 Analysis Services
+      href: ../../analysis-services/instances/install-windows/install-analysis-services.md
+    - name: 安裝 Data Quality Services
+      href: ../../data-quality-services/install-windows/install-data-quality-services.md
+    - name: 執行 DQSInstaller.exe 完成 Data Quality Server 安裝
+      href: ../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md
+    - name: 對使用者授與 DQS 角色
+      href: ../../data-quality-services/install-windows/grant-dqs-roles-to-users.md
+    - name: 存取用於 DQS 作業的資料
+      href: ../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md
+    - name: 使用 DQSInstaller.exe 匯出及匯入 DQS 知識庫
+      href: ../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md
+    - name: 在 .NET Framework 更新之後升級 SQLCLR 組件
+      href: ../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md
+    - name: 在安裝 SQL Server 更新之後升級 DQS 資料庫結構描述
+      href: ../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md
+    - name: 安裝 Integration Services
+      href: ../../integration-services/install-windows/install-integration-services.md
+    - name: 互通性與共存性
+      href: ../../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
+    - name: 安裝 Master Data Services
+      href: ../../master-data-services/install-windows/install-master-data-services.md
+    - name: Web 應用程式需求 (Master Data Services)
+      href: ../../master-data-services/install-windows/web-application-requirements-master-data-services.md
+    - name: 資料庫需求 (Master Data Services)
+      href: ../../master-data-services/install-windows/database-requirements-master-data-services.md
+    - name: 建立 Master Data Services 資料庫
+      href: ../../master-data-services/install-windows/create-a-master-data-services-database.md
+    - name: 建立主資料管理員 Web 應用程式 (Master Data Services)
+      href: ../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
+    - name: 保護主資料管理員 Web 應用程式
+      href: ../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
+    - name: 建立 Master Data Services 資料庫與 Web 應用程式的關聯
+      href: ../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
+    - name: 啟用 Data Quality Services 與 Master Data Services 的整合
+      href: ../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
+    - name: 多語言及全域部署 (Master Data Services)
+      href: ../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
+    - name: 安裝 Reporting Services 原生模式報表伺服器
+      href: ../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
+    - name: 執行 Reporting Services 的僅限檔案安裝
+      href: ../../reporting-services/install-windows/files-only-installation-reporting-services.md
+    - name: 並存安裝 Reporting Services 和 Internet Information Services (SSRS 原生模式)
+      href: ../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
+    - name: 在 SQL Server 容錯移轉叢集中裝載報表伺服器資料庫
+      href: ../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
+    - name: Reporting Services 組態管理員 (原生模式)
+      href: ../../sql-server/install/reporting-services-configuration-manager-native-mode.md
+      items:
+        - name: 設定報表伺服器服務帳戶 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: 設定服務帳戶 (SSRS 組態管理員)
+          href: ../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md
+        - name: 設定報表伺服器 URL (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
+        - name: 關於 URL 保留項目和註冊 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+        - name: 設定 URL (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+        - name: URL 保留項目語法 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+        - name: 組態檔中的 URL (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+        - name: 多重執行個體報表伺服器部署的 URL 保留項目 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+        - name: 建立報表伺服器資料庫 (SSRS 組態管理員)
+          href: ../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md
+        - name: 建立原生模式報表伺服器資料庫 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: 設定報表伺服器資料庫連接
+          href: ../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: 為電子郵件傳遞設定報表伺服器 (SSRS 組態管理員)
+          href: ../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md
+        - name: 設定自動執行帳戶 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: 設定和管理加密金鑰 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+        - name: 初始化報表伺服器 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+        - name: 儲存加密的報表伺服器資料 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+        - name: 備份與還原加密金鑰
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+        - name: 刪除和重新建立加密金鑰 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+        - name: 加入和移除向外延展部署的加密金鑰 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: 設定原生模式報表伺服器向外延展部署 (SSRS 組態管理員)
+          href: ../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Reporting Services 組態管理員 F1 說明主題 (SSRS 原生模式)
+          href: ../../sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md
+        - name: 連接至原生模式報表伺服器
+          href: ../../sql-server/install/connect-to-a-native-mode-report-server.md
+        - name: 報表伺服器狀態 (SSRS 原生模式)
+          href: ../../sql-server/install/report-server-status-ssrs-native-mode.md
+        - name: 服務帳戶 (SSRS 原生模式)
+          href: ../../sql-server/install/service-account-ssrs-native-mode.md
+        - name: Web 服務 URL (SSRS 原生模式)
+          href: ../../sql-server/install/web-service-url-ssrs-native-mode.md
+          items:
+            - name: 進階多重網站組態 (SSRS 原生模式)
+              href: ../../sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md
+        - name: 資料庫 (SSRS 原生模式)
+          href: ../../sql-server/install/database-ssrs-native-mode.md
+          items:
+            - name: 變更資料庫精靈 (SSRS 原生模式)
+              href: ../../sql-server/install/change-database-wizard-ssrs-native-mode.md
+            - name: 變更認證精靈 (SSRS 原生模式)
+              href: ../../sql-server/install/change-credentials-wizard-ssrs-native-mode.md
+        - name: 報表管理員 URL (SSRS 原生模式)
+          href: ../../sql-server/install/report-manager-url-ssrs-native-mode.md
+        - name: 電子郵件設定 - 組態管理員 (SSRS 原生模式)
+          href: ../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: 執行帳戶 (SSRS 原生模式)
+          href: ../../sql-server/install/execution-account-ssrs-native-mode.md
+        - name: 加密金鑰 (SSRS 原生模式)
+          href: ../../sql-server/install/encryption-keys-ssrs-native-mode.md
+          items:
+            - name: 備份加密金鑰 (SSRS 原生模式)
+              href: ../../sql-server/install/backup-encryption-key-ssrs-native-mode.md
+            - name: 還原加密金鑰 (SSRS 原生模式)
+              href: ../../sql-server/install/restore-encryption-key-ssrs-native-mode.md
+        - name: 向外延展部署 (原生模式報表伺服器)
+          href: ../../sql-server/install/scale-out-deployment-native-mode-report-server.md
+    - name: 安裝具有 SharePoint 的 SQL Server BI 功能 (PowerPivot 和 Reporting Services)
+      href: ../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md
+    - name: Deployment Topologies for SQL Server BI Features in SharePoint
+      href: ../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md
+    - name: 在 SharePoint 2010 伺服器陣列中使用 SQL Server BI 功能的指引
+      href: ../../sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md
+    - name: 安裝 BI 功能來搭配 SharePoint 的檢查清單
+      href: ../../sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md
+      items:
+        - name: 檢查清單：Reporting Services、Power View 及 PowerPivot for SharePoint
+          href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
+        - name: 檢查清單：將 PowerPivot 伺服器新增至 SharePoint 2010 伺服器陣列，藉以向外延展
+          href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
+        - name: 檢查清單：將 Reporting Services 安裝至現有的 SharePoint 伺服器陣列
+          href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
+        - name: 檢查清單：PowerPivot for SharePoint 2010 的多伺服器安裝
+          href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
+        - name: 檢查清單：使用 PowerShell 驗證 PowerPivot for SharePoint
+          href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+    - name: Reporting Services SharePoint 模式安裝 (SharePoint 2010 和 SharePoint 2013)
+      href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
+      items:
+        - name: SharePoint 模式的 Reporting Services 之硬體和軟體需求
+          href: ../../sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md
+        - name: 支援的 SharePoint 和 Reporting Services 伺服器與增益集的組合
+          href: ../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
+        - name: 安裝適用於 SharePoint 2013 的 Reporting Services
+          href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md
+        - name: 安裝適用於 SharePoint 2010 的 Reporting Services
+          href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md
+        - name: 安裝或解除安裝 SharePoint 的 Reporting Services 增益集
+          href: ../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+        - name: 可找到適用於 SharePoint 的 SSRS 增益集之處
+          href: ../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+        - name: 將其他報表伺服器加入至伺服器陣列 (SSRS 向外延展)
+          href: ../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+        - name: 將其他 Reporting Services Web 前端加入至伺服器陣列
+          href: ../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
+        - name: 設定 Reporting Services 服務應用程式的電子郵件
+          href: ../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
+        - name: SSRS 服務應用程式的佈建訂閱及警示
+          href: ../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+        - name: 對 Windows Token 服務的宣告 (C2WTS) 和 SSRS
+          href: ../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md
+    - name: PowerPivot for SharePoint 2013 安裝
+      href: ../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
+      items:
+        - name: Analysis Services SharePoint 模式伺服器的硬體和軟體需求 (SQL Server 2014)
+          href: ../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md
+        - name: PowerPivot for SharePoint 2013 的最低權限組態範例
+          href: ../../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
+        - name: 安裝或解除安裝 PowerPivot for SharePoint 增益集 (SharePoint 2013)
+          href: ../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+        - name: 設定 PowerPivot 及部署方案 (SharePoint 2013)
+          href: ../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+        - name: 將 PowerPivot 移轉至 SharePoint 2013
+          href: ../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
+        - name: 升級活頁簿和排程的資料重新整理 (SharePoint 2013)
+          href: ../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+    - name: PowerPivot for SharePoint 2010 安裝
+      href: ../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md
+      items:
+        - name: 安裝 PowerPivot for SharePoint 2010
+          href: ../../sql-server/install/install-powerpivot-for-sharepoint-2010.md
+        - name: 在 SharePoint 伺服器上安裝 Analysis Services OLE DB 提供者
+          href: ../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md
+        - name: '如何：安裝 ADO.NET Data Services 以支援 SharePoint 清單的資料摘要匯出  '
+          href: ../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md
+        - name: 在執行管理中心的 Web 前端伺服器上安裝 ADOMD.NET
+          href: ../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md
+        - name: 從命令提示字元安裝 PowerPivot
+          href: ../../sql-server/install/install-powerpivot-from-the-command-prompt.md
+        - name: 修復 PowerPivot for SharePoint
+          href: ../../sql-server/install/repair-powerpivot-for-sharepoint.md
+        - name: PowerPivot 單一伺服器安裝的初始組態
+          href: ../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md
+    - name: Reporting Services SharePoint 模式和原生模式的命令提示字元安裝
+      href: ../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
+    - name: 確認或疑難排解安裝
+      href: ../../sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md
+    - name: Verify a Reporting Services Installation
+      href: ../../reporting-services/install-windows/verify-a-reporting-services-installation.md
+    - name: 疑難排解 Reporting Services 安裝
+      href: ../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
+    - name: 確認 PowerPivot for SharePoint 安裝
+      href: ../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
+    - name: 疑難排解 PowerPivot for SharePoint 安裝
+      href: ../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md
+- name: 升級為 SQL Server 2014
+  href: upgrade-sql-server.md
+  items:
+    - name: 支援的版本與版本升級
+      href: supported-version-and-edition-upgrades.md
+    - name: 從 SQL Server 2005 升級嗎？
+      href: ../../sql-server/install/are-you-upgrading-from-sql-server-2005.md
+    - name: 使用 Upgrade Advisor 來準備升級
+      href: ../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md
+    - name: 使用 Distributed Replay Utility 來準備升級
+      href: ../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md
+    - name: 升級 Analysis Services
+      href: upgrade-analysis-services.md
+    - name: 升級 Database Engine
+      href: upgrade-database-engine.md
+    - name: 移轉查詢計劃
+      href: change-the-database-compatibility-mode-and-use-the-query-store.md
+    - name: 升級 Data Quality Services
+      href: upgrade-data-quality-services.md
+    - name: 升級 Integration Services
+      href: ../../integration-services/install-windows/upgrade-integration-services.md
+    - name: 升級 Integration Services 封裝
+      href: ../../integration-services/install-windows/upgrade-integration-services-packages.md
+    - name: 使用 SSIS 封裝升級精靈來升級 Integration Services 封裝
+      href: ../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md
+    - name: 將指令碼移轉到 VSTA
+      href: ../../sql-server/install/migrate-scripts-to-vsta.md
+    - name: 升級查閱轉換
+      href: ../../sql-server/install/upgrade-lookup-transformations.md
+    - name: 升級 Master Data Services
+      href: upgrade-master-data-services.md
+    - name: 升級 PowerPivot for SharePoint
+      href: upgrade-power-pivot-for-sharepoint.md
+    - name: 升級複寫的資料庫
+      href: upgrade-replicated-databases.md
+    - name: Upgrade and Migrate Reporting Services
+      href: ../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+    - name: 移轉 Reporting Services 安裝 (原生模式)
+      href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
+    - name: 移轉 Reporting Services 安裝 (SharePoint 模式)
+      href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
+    - name: 原生至 SharePoint 移轉 (SSRS)
+      href: ../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
+    - name: 升級報表伺服器資料庫
+      href: ../../reporting-services/install-windows/upgrade-a-report-server-database.md
+    - name: Upgrade Reports
+      href: ../../reporting-services/install-windows/upgrade-reports.md
+    - name: Reporting Services 的備份與還原作業
+      href: ../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
+    - name: 升級 SQL Server 管理工具
+      href: upgrade-sql-server-management-tools.md
+    - name: 升級的使用說明主題
+      href: ../../sql-server/install/upgrade-how-to-topics.md
+    - name: 使用安裝精靈升級為 SQL Server 2014 (安裝程式)
+      href: upgrade-sql-server-using-the-installation-wizard-setup.md
+    - name: 升級為不同的 SQL Server 2014 版本 (安裝程式)
+      href: upgrade-to-a-different-edition-of-sql-server-setup.md
+- name: 解除安裝 SQL Server 2014
+  href: ../../sql-server/install/uninstall-sql-server.md
+  items:
+    - name: 解除安裝現有的 SQL Server 執行個體 (安裝程式)
+      href: ../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
+    - name: 移除 Data Quality Server 物件
+      href: ../../sql-server/install/remove-data-quality-server-objects.md
+    - name: 解除安裝及移除 Master Data Services
+      href: ../../sql-server/install/uninstall-and-remove-master-data-services.md
+    - name: 解除安裝 PowerPivot for SharePoint
+      href: ../../sql-server/install/uninstall-power-pivot-for-sharepoint.md
+    - name: 解除安裝 Reporting Services
+      href: ../../sql-server/install/uninstall-reporting-services.md

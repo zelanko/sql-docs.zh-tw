@@ -1,0 +1,407 @@
+- name: 資料流程
+  href: data-flow.md
+- name: Source Assistant
+  href: source-assistant.md
+  items:
+    - name: 使用來源小幫手加入來源
+      href: ../add-a-source-using-source-assistant.md
+    - name: 加入新來源對話方塊
+      href: ../add-new-source-dialog-box.md
+- name: Destination Assistant
+  href: destination-assistant.md
+  items:
+    - name: 使用目的地小幫手來加入目的地
+      href: ../add-a-destination-using-destination-assistant.md
+    - name: 加入新目的地對話方塊
+      href: ../add-new-destination-dialog-box.md
+- name: ADO NET 來源
+  href: ado-net-source.md
+  items:
+    - name: ADO NET 來源編輯器 (連接管理員頁面)
+      href: ../ado-net-source-editor-connection-manager-page.md
+    - name: ADO NET 來源編輯器 (資料行頁面)
+      href: ../ado-net-source-editor-columns-page.md
+    - name: ADO NET 來源編輯器 (錯誤輸出頁面)
+      href: ../ado-net-source-editor-error-output-page.md
+- name: ADO NET 目的地
+  href: ado-net-destination.md
+  items:
+    - name: ADO NET 目的地編輯器 (連線管理員頁面)
+      href: ../ado-net-destination-editor-connection-manager-page.md
+    - name: ADO NET 目的地編輯器 (對應頁面)
+      href: ../ado-net-destination-editor-mappings-page.md
+    - name: ADO NET 目的地編輯器 (錯誤輸出頁面)
+      href: ../ado-net-destination-editor-error-output-page.md
+- name: ADO.NET 連接管理員
+  href: ../connection-manager/ado-net-connection-manager.md
+  items:
+    - name: 設定 ADO.NET 連接管理員
+      href: ../configure-ado-net-connection-manager.md
+- name: ADO NET 自訂屬性
+  href: ado-net-custom-properties.md
+- name: ADO 連接管理員
+  href: ../connection-manager/ado-connection-manager.md
+- name: CDC 流程元件
+  href: cdc-flow-components.md
+  items:
+    - name: CDC 來源
+      href: cdc-source.md
+      items:
+        - name: CDC 來源編輯器 (連接管理員頁面)
+          href: ../cdc-source-editor-connection-manager-page.md
+        - name: CDC 來源編輯器 (資料行頁面)
+          href: ../cdc-source-editor-columns-page.md
+        - name: CDC 來源編輯器 (錯誤輸出頁面)
+          href: ../cdc-source-editor-error-output-page.md
+        - name: CDC 來源自訂屬性
+          href: cdc-source-custom-properties.md
+        - name: 使用 CDC 來源擷取變更資料
+          href: extract-change-data-using-the-cdc-source.md
+    - name: CDC 分隔器
+      href: cdc-splitter.md
+    - name: 依據變更類型來導向 CDC 資料流
+      href: direct-the-cdc-stream-according-to-the-type-of-change.md
+    - name: 定義狀態變數
+      href: define-a-state-variable.md
+- name: Excel 來源
+  href: excel-source.md
+  items:
+    - name: Excel 來源編輯器 (連接管理員頁面)
+      href: ../excel-source-editor-connection-manager-page.md
+    - name: Excel 來源編輯器 (資料行頁面)
+      href: ../excel-source-editor-columns-page.md
+    - name: Excel 來源編輯器 (錯誤輸出頁面)
+      href: ../excel-source-editor-error-output-page.md
+- name: Excel 目的地
+  href: excel-destination.md
+  items:
+    - name: Excel 目的地編輯器 (連接管理員頁面)
+      href: ../excel-destination-editor-connection-manager-page.md
+    - name: Excel 目的地編輯器 (對應頁面)
+      href: ../excel-destination-editor-mappings-page.md
+    - name: Excel 目的地編輯器 (錯誤輸出頁面)
+      href: ../excel-destination-editor-error-output-page.md
+- name: Excel 連接管理員
+  href: ../connection-manager/excel-connection-manager.md
+  items:
+    - name: Excel 連接管理員編輯器
+      href: ../excel-connection-manager-editor.md
+- name: Excel 自訂屬性
+  href: excel-custom-properties.md
+- name: 檔案連接管理員
+  href: ../connection-manager/file-connection-manager.md
+  items:
+    - name: 檔案連接管理員編輯器
+      href: ../file-connection-manager-editor.md
+    - name: 加入檔案連接管理員對話方塊 UI 參考
+      href: ../connection-manager/add-file-connection-manager-dialog-box-ui-reference.md
+    - name: 建議資料行類型對話方塊 UI 參考
+      href: ../connection-manager/suggest-column-types-dialog-box-ui-reference.md
+- name: 一般檔案來源
+  href: flat-file-source.md
+  items:
+    - name: 一般檔案來源編輯器 (連接管理員頁面)
+      href: ../flat-file-source-editor-connection-manager-page.md
+    - name: 一般檔案來源編輯器 (資料行頁面)
+      href: ../flat-file-source-editor-columns-page.md
+    - name: 一般檔案來源編輯器 (錯誤輸出頁面)
+      href: ../flat-file-source-editor-error-output-page.md
+- name: 一般檔案目的地
+  href: flat-file-destination.md
+  items:
+    - name: 一般檔案目的地編輯器 (連接管理員頁面)
+      href: ../flat-file-destination-editor-connection-manager-page.md
+    - name: 一般檔案目的地編輯器 (對應頁面)
+      href: ../flat-file-destination-editor-mappings-page.md
+- name: 一般檔案連接管理員
+  href: ../connection-manager/flat-file-connection-manager.md
+  items:
+    - name: 一般檔案連接管理員編輯器 (預覽頁面)
+      href: ../flat-file-connection-manager-editor-preview-page.md
+    - name: 一般檔案連接管理員編輯器 (進階頁面)
+      href: ../flat-file-connection-manager-editor-advanced-page.md
+    - name: 一般檔案連接管理員編輯器 (資料行頁面)
+      href: ../flat-file-connection-manager-editor-columns-page.md
+    - name: 一般檔案連接管理員編輯器 (一般頁面)
+      href: ../flat-file-connection-manager-editor-general-page.md
+- name: 多個一般檔案連接管理員
+  href: ../connection-manager/multiple-flat-files-connection-manager.md
+  items:
+    - name: 多個一般檔案連線管理員編輯器 (一般頁面)
+      href: ../multiple-flat-files-connection-manager-editor-general-page.md
+    - name: 多個一般檔案連接管理員編輯器 (資料行頁面)
+      href: ../multiple-flat-files-connection-manager-editor-columns-page.md
+    - name: 多個一般檔案連接管理員編輯器 (進階頁面)
+      href: ../multiple-flat-files-connection-manager-editor-advanced-page.md
+    - name: 多個一般檔案連接管理員編輯器 (預覽頁面)
+      href: ../multiple-flat-files-connection-manager-editor-preview-page.md
+- name: 一般檔案自訂屬性
+  href: flat-file-custom-properties.md
+- name: ODBC 流程元件
+  href: odbc-flow-components.md
+  items:
+    - name: ODBC 目的地
+      href: odbc-destination.md
+      items:
+        - name: ODBC 目的地編輯器 (錯誤輸出頁面)
+          href: ../odbc-destination-editor-error-output-page.md
+        - name: ODBC 目的地編輯器 (對應頁面)
+          href: ../odbc-destination-editor-mappings-page.md
+        - name: ODBC 目的地編輯器 (連接管理員頁面)
+          href: ../odbc-destination-editor-connection-manager-page.md
+        - name: 使用 ODBC 目的地來載入資料
+          href: load-data-by-using-the-odbc-destination.md
+        - name: ODBC Destination Custom Properties
+          href: odbc-destination-custom-properties.md
+    - name: ODBC 來源
+      href: odbc-source.md
+      items:
+        - name: ODBC 來源編輯器 (錯誤輸出頁面)
+          href: ../odbc-source-editor-error-output-page.md
+        - name: ODBC 來源編輯器 (資料行頁面)
+          href: ../odbc-source-editor-columns-page.md
+        - name: ODBC 來源編輯器 (連接管理員頁面)
+          href: ../odbc-source-editor-connection-manager-page.md
+        - name: 使用 ODBC 來源來擷取資料
+          href: extract-data-by-using-the-odbc-source.md
+        - name: ODBC Source Custom Properties
+          href: odbc-source-custom-properties.md
+- name: ODBC 連接管理員
+  href: ../connection-manager/odbc-connection-manager.md
+  items:
+    - name: ODBC 連接管理員 UI 參考
+      href: ../odbc-connection-manager-ui-reference.md
+- name: OLE DB 來源
+  href: ole-db-source.md
+  items:
+    - name: OLE DB 來源編輯器 (連接管理員頁面)
+      href: ../ole-db-source-editor-connection-manager-page.md
+    - name: OLE DB 來源編輯器 (資料行頁面)
+      href: ../ole-db-source-editor-columns-page.md
+    - name: OLE DB 來源編輯器 (錯誤輸出頁面)
+      href: ../ole-db-source-editor-error-output-page.md
+    - name: 使用 OLE DB 來源來擷取資料
+      href: extract-data-by-using-the-ole-db-source.md
+- name: OLE DB 目的地
+  href: ole-db-destination.md
+  items:
+    - name: OLE DB 目的地編輯器 (連接管理員頁面)
+      href: ../ole-db-destination-editor-connection-manager-page.md
+    - name: OLE DB 目的地編輯器 (對應頁面)
+      href: ../ole-db-destination-editor-mappings-page.md
+    - name: OLE DB 目的地編輯器 (錯誤輸出頁面)
+      href: ../ole-db-destination-editor-error-output-page.md
+    - name: 使用 OLE DB 目的地來載入資料
+      href: load-data-by-using-the-ole-db-destination.md
+- name: OLE DB 連接管理員
+  href: ../connection-manager/ole-db-connection-manager.md
+  items:
+    - name: 設定 OLE DB 連接管理員
+      href: ../configure-ole-db-connection-manager.md
+- name: OLE DB 自訂屬性
+  href: ole-db-custom-properties.md
+- name: 原始檔案來源
+  href: raw-file-source.md
+  items:
+    - name: 原始檔案來源編輯器 (連接管理員頁面)
+      href: ../raw-file-source-editor-connection-manager-page.md
+    - name: 原始檔案來源編輯器 (資料行頁面)
+      href: ../raw-file-source-editor-columns-page.md
+- name: Raw File Destination
+  href: raw-file-destination.md
+  items:
+    - name: 原始檔案目的地編輯器 (連接管理員頁面)
+      href: ../raw-file-destination-editor-connection-manager-page.md
+    - name: 原始檔案目的地編輯器 (資料行頁面)
+      href: ../raw-file-destination-editor-columns-page.md
+- name: 原始檔案自訂屬性
+  href: raw-file-custom-properties.md
+- name: 資料採礦模型定型目的地
+  href: data-mining-model-training-destination.md
+  items:
+    - name: 資料採礦模型培訓編輯器 (連接索引標籤)
+      href: ../data-mining-model-training-editor-connection-tab.md
+    - name: 資料採礦模型培訓編輯器 (資料行索引標籤)
+      href: ../data-mining-model-training-editor-columns-tab.md
+    - name: 資料採礦模型定型目的地自訂屬性
+      href: data-mining-model-training-destination-custom-properties.md
+- name: DataReader 目的地
+  href: datareader-destination.md
+  items:
+    - name: DataReader 目的地自訂屬性
+      href: datareader-destination-custom-properties.md
+- name: 維度處理目的地
+  href: dimension-processing-destination.md
+  items:
+    - name: 維度處理目的地編輯器 (連接管理員頁面)
+      href: ../dimension-processing-destination-editor-connection-manager-page.md
+    - name: 維度處理目的地編輯器 (對應頁面)
+      href: ../dimension-processing-destination-editor-mappings-page.md
+    - name: 維度處理目的地編輯器 (進階頁面)
+      href: ../dimension-processing-destination-editor-advanced-page.md
+    - name: 維度處理目的地自訂屬性
+      href: dimension-processing-destination-custom-properies.md
+- name: 資料分割處理目的地
+  href: partition-processing-destination.md
+  items:
+    - name: 資料分割處理目的地編輯器 (連接管理員頁面)
+      href: ../partition-processing-destination-editor-connection-manager-page.md
+    - name: 資料分割處理目的地編輯器 (對應頁面)
+      href: ../partition-processing-destination-editor-mappings-page.md
+    - name: 資料分割處理目的地編輯器 (進階頁面)
+      href: ../partition-processing-destination-editor-advanced-page.md
+    - name: 資料分割處理目的地自訂屬性
+      href: partition-processing-destination-custom-properties.md
+- name: 資料錄集目的地
+  href: recordset-destination.md
+  items:
+    - name: 使用資料錄集目的地
+      href: use-a-recordset-destination.md
+    - name: 資料錄集目的地自訂屬性
+      href: recordset-destination-custom-properties.md
+- name: SQL Server Compact Edition 目的地
+  href: sql-server-compact-edition-destination.md
+  items:
+    - name: SQL Server Compact Edition 目的地自訂屬性
+      href: sql-server-compact-edition-destination-custom-properties.md
+- name: SQL Server Compact Edition 連接管理員
+  href: ../connection-manager/sql-server-compact-edition-connection-manager.md
+  items:
+    - name: SQL Server Compact Edition 連接管理員編輯器 (連接頁面)
+      href: ../sql-server-compact-edition-connection-manager-editor-connection-page.md
+    - name: SQL Server Compact Edition 連接管理員編輯器 (全部頁面)
+      href: ../sql-server-compact-edition-connection-manager-editor-all-page.md
+- name: SQL Server 目的地
+  href: sql-server-destination.md
+  items:
+    - name: SQL 目的地編輯器 (連接管理員頁面)
+      href: ../sql-destination-editor-connection-manager-page.md
+    - name: SQL 目的地編輯器 (對應頁面)
+      href: ../sql-destination-editor-mappings-page.md
+    - name: SQL 目的地編輯器 (進階頁面)
+      href: ../sql-destination-editor-advanced-page.md
+    - name: 使用 SQL Server 目的地來大量載入資料
+      href: bulk-load-data-by-using-the-sql-server-destination.md
+    - name: SQL Server 目的地自訂屬性
+      href: sql-server-destination-custom-properties.md
+- name: XML 來源
+  href: xml-source.md
+  items:
+    - name: XML 來源編輯器 (連接管理員頁面)
+      href: ../xml-source-editor-connection-manager-page.md
+    - name: XML 來源編輯器 (資料行頁面)
+      href: ../xml-source-editor-columns-page.md
+    - name: XML 來源編輯器 (錯誤輸出頁面)
+      href: ../xml-source-editor-error-output-page.md
+    - name: 使用 XML 來源來擷取資料
+      href: extract-data-by-using-the-xml-source.md
+    - name: XML 來源自訂屬性
+      href: xml-source-custom-properties.md
+- name: Integration Services 轉換 +
+  href: transformations/integration-services-transformations.md
+- name: Integration Services 路徑
+  href: integration-services-paths.md
+  items:
+    - name: 在資料流程路徑編輯器中檢視路徑中繼資料
+      href: ../view-path-metadata-in-the-data-flow-path-editor.md
+      items:
+        - name: 資料流程路徑編輯器 (一般頁面)
+          href: ../data-flow-path-editor-general-page.md
+        - name: 資料流程路徑編輯器 (中繼資料頁面)
+          href: ../data-flow-path-editor-metadata-page.md
+        - name: 資料流程路徑編輯器 (資料檢視器頁面)
+          href: ../data-flow-path-editor-data-viewers-page.md
+    - name: 使用資料流程路徑編輯器來設定路徑的屬性
+      href: ../set-the-properties-of-a-path-by-using-the-data-flow-path-editor.md
+    - name: 以路徑連接元件
+      href: ../connect-components-with-paths.md
+    - name: 路徑屬性
+      href: ../path-properties.md
+- name: 資料流程中的資料
+  href: data-in-data-flows.md
+  items:
+    - name: Integration Services 資料類型
+      href: integration-services-data-types.md
+    - name: 剖析資料
+      href: parsing-data.md
+      items:
+        - name: Fast Parse
+          href: ../fast-parse.md
+          items:
+            - name: 數值資料格式
+              href: ../numeric-data-formats.md
+            - name: 日期和時間格式
+              href: ../date-and-time-formats.md
+            - name: 設定快速剖析
+              href: ../set-fast-parse.md
+        - name: Standard Parse
+          href: ../standard-parse.md
+    - name: 比較字串資料
+      href: comparing-string-data.md
+- name: 處理資料中的錯誤
+  href: error-handling-in-data.md
+  items:
+    - name: 設定錯誤輸出
+      href: ../configure-error-output.md
+- name: 通用屬性
+  href: ../common-properties.md
+  items:
+    - name: 設定資料流程元件的屬性
+      href: set-the-properties-of-a-data-flow-component.md
+- name: 資料流程索引標籤
+  href: ../data-flow-tab.md
+- name: 資料流程工作
+  href: ../control-flow/data-flow-task.md
+- name: 資料來源
+  href: ../connection-manager/data-sources.md
+- name: 資料檢視器
+  href: data-viewer.md
+  items:
+    - name: 設定資料檢視器 (一般索引標籤)
+      href: ../configure-data-viewer-general-tab.md
+    - name: 設定資料檢視器 (直條圖索引標籤)
+      href: ../configure-data-viewer-column-chart-tab.md
+    - name: 設定資料檢視器 (方格索引標籤)
+      href: ../configure-data-viewer-grid-tab.md
+    - name: 設定資料檢視器 (長條圖索引標籤)
+      href: ../configure-data-viewer-histogram-tab.md
+    - name: 設定資料檢視器 (散佈圖索引標籤)
+      href: ../configure-data-viewer-scatter-plot-tab.md
+- name: 在資料流程中加入或刪除元件
+  href: add-or-delete-a-component-in-a-data-flow.md
+- name: 連接資料流程中的元件
+  href: connect-components-in-a-data-flow.md
+- name: 解析資料行參考編輯器
+  href: resolve-column-reference-editor.md
+- name: 資料流程效能的功能
+  href: data-flow-performance-features.md
+- name: OData 連接管理員
+  href: ../connection-manager/odata-connection-manager.md
+  items:
+    - name: OData 連線管理員編輯器
+      href: ../odata-connection-manager-editor.md
+- name: OData 來源
+  href: odata-source.md
+  items:
+    - name: 安裝及解除安裝 OData 來源元件
+      href: ../install-and-uninstall-odata-source-component.md
+    - name: 教學課程：使用 OData 來源
+      href: tutorial-using-the-odata-source.md
+    - name: 在執行階段修改 OData 來源查詢
+      href: modify-odata-source-query-at-runtime.md
+    - name: OData 來源編輯器 (連接頁面)
+      href: ../odata-source-editor-connection-page.md
+    - name: OData 來源編輯器 (資料行頁面)
+      href: ../odata-source-editor-columns-page.md
+    - name: OData 來源編輯器 (錯誤輸出頁面)
+      href: ../odata-source-editor-error-output-page.md
+    - name: OData 來源屬性
+      href: odata-source-properties.md
+- name: Azure Blob 來源
+  href: azure-blob-source.md
+- name: Azure Blob 目的地
+  href: azure-blob-destination.md
+- name: Azure Data Lake Store 來源
+  href: ../azure-data-lake-store-source.md
+- name: Azure Data Lake Store 目的地
+  href: ../azure-data-lake-store-destination.md

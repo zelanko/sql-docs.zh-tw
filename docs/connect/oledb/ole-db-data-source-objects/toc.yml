@@ -1,0 +1,14 @@
+- name: 資料來源物件 (OLE DB)
+  href: data-source-objects-ole-db.md
+- name: 資料來源資訊屬性
+  href: data-source-information-properties.md
+- name: 資料來源屬性 (OLE DB)
+  href: data-source-properties-ole-db.md
+- name: 初始化和授權屬性
+  href: initialization-and-authorization-properties.md
+- name: 保存的資料來源物件
+  href: persisted-data-source-objects.md
+- name: 工作階段屬性 - OLE DB Driver for SQL Server
+  href: session-properties-oledb-driver-for-sql-server.md
+- name: 工作階段
+  href: sessions.md

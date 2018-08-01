@@ -1,0 +1,36 @@
+- name: 命令提示字元公用程式參考 (資料庫引擎)
+  href: command-prompt-utility-reference-database-engine.md
+  items:
+    - name: bcp 公用程式
+      href: bcp-utility.md
+    - name: dta 公用程式 +
+      href: dta/dta-utility.md
+    - name: SqlLocalDB 公用程式
+      href: sqllocaldb-utility.md
+    - name: osql 公用程式
+      href: osql-utility.md
+    - name: Profiler 公用程式
+      href: profiler-utility.md
+    - name: sqlagent90 應用程式
+      href: sqlagent90-application.md
+    - name: sqlcmd 工用程式
+      href: sqlcmd-utility.md
+    - name: SQLdiag 公用程式
+      href: sqldiag-utility.md
+    - name: sqlmaint 公用程式
+      href: sqlmaint-utility.md
+    - name: sqllogship 應用程式
+      href: sqllogship-application.md
+    - name: sqlps 公用程式
+      href: sqlps-utility.md
+    - name: sqlservr 應用程式
+      href: sqlservr-application.md
+    - name: ssbdiagnose 公用程式 (Service Broker) +
+      href: ssbdiagnose/ssbdiagnose-utility-service-broker.md
+    - name: Ssms 公用程式
+      href: ../ssms/ssms-utility.md
+      items:
+        - name: SQL Server Management Studio 鍵盤快速鍵
+          href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
+    - name: tablediff 公用程式
+      href: tablediff-utility.md

@@ -1,0 +1,65 @@
+- name: 概觀
+  href: master-data-services-add-in-for-microsoft-excel.md
+- name: 連接
+  href: connections-mds-add-in-for-excel.md
+  items:
+    - name: 連接到 MDS 儲存機制
+      href: connect-to-an-mds-repository-mds-add-in-for-excel.md
+- name: 概觀：將資料匯出至 Excel (適用於 Excel 的 MDS 增益集)
+  href: overview-exporting-data-to-excel-mds-add-in-for-excel.md
+  items:
+    - name: 在匯入之前篩選資料
+      href: filter-data-before-exporting-mds-add-in-for-excel.md
+    - name: 將資料從 Master Data Services 匯出至 Excel
+      href: export-data-to-excel-from-master-data-services.md
+    - name: 篩選對話方塊
+      href: filter-dialog-box-mds-add-in-for-excel.md
+    - name: 重新排序資料行
+      href: reorder-columns-mds-add-in-for-excel.md
+- name: 捷徑查詢檔案
+  href: shortcut-query-files-mds-add-in-for-excel.md
+  items:
+    - name: 儲存捷徑查詢檔案
+      href: save-a-shortcut-query-file-mds-add-in-for-excel.md
+    - name: 以電子郵件傳送捷徑查詢檔案
+      href: email-a-shortcut-query-file-mds-add-in-for-excel.md
+- name: 重新整理資料
+  href: refreshing-data-mds-add-in-for-excel.md
+- name: 概觀：從 Excel 匯入資料 (適用於 Excel 的 MDS 增益集)
+  href: overview-importing-data-from-excel-mds-add-in-for-excel.md
+  items:
+    - name: 將資料從 Excel 匯入 Master Data Services
+      href: import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md
+    - name: 刪除資料列
+      href: delete-a-row-mds-add-in-for-excel.md
+    - name: 檢視成員的所有註解或交易
+      href: view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md
+    - name: 結合資料
+      href: combine-data-mds-add-in-for-excel.md
+    - name: 合併衝突
+      href: merge-conflicts-mds-add-in-for-excel.md
+    - name: 變更集合並核准
+      href: change-sets-and-approval-mds-add-in-for-excel.md
+- name: 驗證資料
+  href: validating-data-mds-add-in-for-excel.md
+  items:
+    - name: 套用商務規則
+      href: apply-business-rules-mds-add-in-for-excel.md
+- name: 資料品質比對
+  href: data-quality-matching-in-the-mds-add-in-for-excel.md
+  items:
+    - name: 比對相似資料
+      href: match-similar-data-mds-add-in-for-excel.md
+    - name: 資料品質比對資料行
+      href: data-quality-matching-columns-mds-add-in-for-excel.md
+- name: 建立模型
+  href: building-a-model-mds-add-in-for-excel.md
+  items:
+    - name: 建立實體
+      href: create-an-entity-mds-add-in-for-excel.md
+    - name: 建立網域屬性
+      href: create-a-domain-based-attribute-mds-add-in-for-excel.md
+    - name: 變更屬性類型
+      href: change-the-attribute-type-mds-add-in-for-excel.md
+- name: 設定適用於 Excel 之 Master Data Services 增益集的屬性
+  href: setting-properties-for-master-data-services-add-in-for-excel.md

@@ -1,0 +1,84 @@
+- name: SQL Server 安裝
+  href: installation-for-sql-server.md
+- name: 升級 SQL Server
+  href: upgrade-sql-server.md
+  items:
+    - name: 支援的版本與版本升級 SQL Server 2017
+      href: supported-version-and-edition-upgrades-2017.md
+    - name: 支援的版本與版本升級 SQL Server 2016
+      href: supported-version-and-edition-upgrades.md
+    - name: 執行 Data Migration Assistant 準備進行升級
+      href: prepare-for-upgrade-by-running-data-migration-assistant.md
+    - name: 從 SQL Server 2005 升級嗎？
+      href: are-you-upgrading-from-sql-server-2005.md
+    - name: 升級 Analysis Services
+      href: upgrade-analysis-services.md
+    - name: 升級 Database Engine
+      href: upgrade-database-engine.md
+      items:
+        - name: 選擇 Database Engine 升級方法
+          href: choose-a-database-engine-upgrade-method.md
+        - name: Plan and Test the Database Engine Upgrade Plan
+          href: plan-and-test-the-database-engine-upgrade-plan.md
+        - name: 完成資料庫引擎升級
+          href: complete-the-database-engine-upgrade.md
+          items:
+            - name: 變更資料庫相容性模式並使用查詢存放區
+              href: change-the-database-compatibility-mode-and-use-the-query-store.md
+    - name: 升級 Data Quality Services
+      href: upgrade-data-quality-services.md
+    - name: 升級 Master Data Services
+      href: upgrade-master-data-services.md
+    - name: 升級 Power Pivot for SharePoint
+      href: upgrade-power-pivot-for-sharepoint.md
+    - name: 升級複寫的資料庫
+      href: upgrade-replicated-databases.md
+    - name: 升級 SQL Server 管理工具
+      href: upgrade-sql-server-management-tools.md
+    - name: 使用安裝精靈升級 SQL Server (安裝程式)
+      href: upgrade-sql-server-using-the-installation-wizard-setup.md
+    - name: 升級為不同的 SQL Server 版本 (安裝程式)
+      href: upgrade-to-a-different-edition-of-sql-server-setup.md
+- name: 安裝 SQL Server
+  href: install-sql-server.md
+  items:
+    - name: 安裝 SQL Server Database Engine
+      href: install-sql-server-database-engine.md
+    - name: 安裝 SQL Server 複寫
+      href: install-sql-server-replication.md
+    - name: 安裝 SQL Server PowerShell
+      href: install-sql-server-powershell.md
+    - name: 將 SQL Server 與 SMB Fileshare 當做儲存選項一起安裝
+      href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
+    - name: 使用 SysPrep 安裝 SQL Server 的考量
+      href: considerations-for-installing-sql-server-using-sysprep.md
+    - name: 檢查 System Configuration Checker 的參數
+      href: check-parameters-for-the-system-configuration-checker.md
+    - name: 在 Server Core 安裝上設定 SQL Server
+      href: configure-sql-server-on-a-server-core-installation.md
+    - name: 在 Server Core 上安裝 SQL Server
+      href: install-sql-server-on-server-core.md
+    - name: 從安裝精靈安裝 SQL Server 2016 (安裝程式)
+      href: install-sql-server-from-the-installation-wizard-setup.md
+    - name: 從命令提示字元安裝 SQL Server
+      href: install-sql-server-from-the-command-prompt.md
+    - name: 使用設定檔安裝 SQL Server
+      href: install-sql-server-using-a-configuration-file.md
+    - name: 使用 SysPrep 安裝 SQL Server
+      href: install-sql-server-using-sysprep.md
+    - name: 將功能新增至 SQL Server 的執行個體 (安裝程式)
+      href: add-features-to-an-instance-of-sql-server-setup.md
+    - name: 修復失敗的 SQL Server 安裝
+      href: repair-a-failed-sql-server-installation.md
+    - name: 重新命名主控 SQL Server 獨立執行個體的電腦
+      href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
+    - name: 安裝 SQL Server 服務更新
+      href: install-sql-server-servicing-updates.md
+    - name: 檢視與讀取 SQL Server 安裝程式記錄檔
+      href: view-and-read-sql-server-setup-log-files.md
+    - name: 驗證 SQL Server 安裝
+      href: validate-a-sql-server-installation.md
+    - name: 從命令提示字元安裝更新
+      href: installing-updates-from-the-command-prompt.md
+- name: SQL Server 使用意見收集的本機稽核
+  href: local-audit-for-sql-server-usage-feedback-collection.md

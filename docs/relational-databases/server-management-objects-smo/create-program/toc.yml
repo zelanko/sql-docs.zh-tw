@@ -1,0 +1,22 @@
+- name: 呼叫方法
+  href: calling-methods.md
+- name: 連接到 SQL Server 的執行個體
+  href: connecting-to-an-instance-of-sql-server.md
+- name: 建立 SMO 程式
+  href: creating-smo-programs.md
+- name: 從 SQL Server 的執行個體中斷連接
+  href: disconnecting-from-an-instance-of-sql-server.md
+- name: 處理 SMO 事件
+  href: handling-smo-events.md
+- name: 處理 SMO 例外狀況
+  href: handling-smo-exceptions.md
+- name: 設定屬性 - SMO
+  href: setting-properties-smo.md
+- name: 使用擷取模式
+  href: using-capture-mode.md
+- name: 使用集合
+  href: using-collections.md
+- name: 使用交易
+  href: using-transactions.md
+- name: 使用資料類型
+  href: working-with-data-types.md

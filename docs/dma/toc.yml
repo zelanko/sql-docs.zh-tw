@@ -1,0 +1,22 @@
+- name: 資料移轉小幫手概觀
+  href: dma-overview.md
+- name: 資料移轉小幫手的新功能
+  href: dma-whatsnew.md
+- name: SQL Server 移轉評定
+  href: dma-assesssqlonprem.md
+- name: 將 SQL Server 升級至較新版本
+  href: dma-migrateonpremsql.md
+- name: 將 SQL Server 移轉至 Azure SQL Database
+  href: dma-migrateonpremsqltosqldb.md
+- name: 移轉 SQL Server 登入
+  href: dma-migrateserverlogins.md
+- name: 資料移轉小幫手的最佳做法
+  href: dma-bestpractices.md
+- name: 合併評定報告
+  href: dma-consolidatereports.md
+- name: 評定的 Power BI 報表
+  href: dma-powerbiassesreport.md
+- name: 從命令列執行
+  href: dma-commandline.md
+- name: 進行設定
+  href: dma-configurationsettings.md

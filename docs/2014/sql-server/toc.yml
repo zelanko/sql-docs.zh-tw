@@ -1,0 +1,10 @@
+- name: SQL Server 2014 的新功能
+  href: what-s-new-in-sql-server-2016.md
+- name: 高可用性解決方案 +
+  href: failover-clusters/high-availability-solutions-sql-server.md
+- name: SQL Server 2014 版本的計算容量限制
+  href: compute-capacity-limits-by-edition-of-sql-server.md
+- name: 版本和元件
+  href: editions-and-components-of-sql-server-2016.md
+- name: 最大容量規格
+  href: maximum-capacity-specifications-for-sql-server.md
