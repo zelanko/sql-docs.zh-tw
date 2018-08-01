@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036176"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359595"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -158,12 +158,12 @@ CREATE CERTIFICATE certificate_name
  這是憑證生效的日期。 若未指定，會將 START_DATE 設為等於目前的日期。 START_DATE 為 UTC 時間，可以用任何可轉換成日期和時間的格式指定。  
   
  EXPIRY_DATE ='*datetime*'  
- 這是憑證到期的日期。 若未指定，會將 EXPIRY_DATE 設為 START_DATE 之後一年的日期。 EXPIRY_DATE 為 UTC 時間，可以用任何可轉換成日期和時間的格式指定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 會檢查到期日。 不過當憑證用於加密時，不會強制執行到期日。  
+ 這是憑證到期的日期。 若未指定，會將 EXPIRY_DATE 設為 START_DATE 之後一年的日期。 EXPIRY_DATE 為 UTC 時間，可以用任何可轉換成日期和時間的格式指定。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker 會檢查到期日。 使用憑證進行加密的備份也會檢查到期日，而且將不會允許使用已過期之憑證來建立新備份，但將會允許使用已過期的憑證來還原。 不過當憑證用於資料庫加密或 Always Encrypted 時，不會強制執行到期設定。  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  讓 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話交談的起始端能夠使用該憑證。 預設值是 ON。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>備註  
  憑證是遵照 X.509 標準及支援 X.509 V1 欄位的資料庫層級安全性實體。 CREATE CERTIFICATE 可以從檔案或組件載入憑證。 這個陳述式也可以產生金鑰組及建立自簽憑證。  
   
  私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 止，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  
