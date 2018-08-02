@@ -36,7 +36,7 @@ ms.locfileid: "37266784"
 >  您也可以按一下 [組態] 屬性旁邊的省略符號按鈕，藉以存取 [封裝組態組合管理]。 [組態] 屬性會顯示在封裝的屬性視窗中。  
   
 > [!NOTE]  
->  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
+>  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [部署專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
  在 [封裝組態組合管理] 對話方塊中，您可啟用封裝以使用組態、加入和刪除組態，以及設定載入組態的慣用順序。  
   

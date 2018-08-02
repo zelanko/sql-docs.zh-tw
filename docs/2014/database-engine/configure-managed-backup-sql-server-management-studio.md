@@ -33,7 +33,7 @@ ms.locfileid: "37209828"
 ## <a name="task-list"></a>工作清單  
   
 ## <a name="includesssmartbackupincludesss-smartbackup-mdmd-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 函式使用 Backup Interface 介面在 SQL Server Management Studio  
- 在此版本中，您只可以使用 **[管理備份]** 介面設定的執行個體層級的預設設定。 您無法設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]資料庫，暫停或繼續[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]作業或設定電子郵件通知。 如需如何執行作業目前不支援透過**Managed Backup**介面，請參閱[SQL Server Managed Backup to Windows Azure-Retention and Storage Settings](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)。  
+ 在此版本中，您只可以使用 **[管理備份]** 介面設定的執行個體層級的預設設定。 您無法設定[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]資料庫，暫停或繼續[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]作業或設定電子郵件通知。 如需如何執行作業目前不支援透過**Managed Backup**介面，請參閱[SQL Server Managed Backup to Windows Azure - 保留和儲存體設定](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)。  
   
 ## <a name="permissions"></a>Permissions  
  **在 SQL Server Management Studio 中檢視 Managed Backup 節點：** 若要在  **[物件總管]** 中檢視 **Managed Backup**節點，您必須是系統管理員，或具有下列為您的使用者帳戶特別授與的權限：  
