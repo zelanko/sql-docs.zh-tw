@@ -25,7 +25,7 @@ ms.locfileid: "37277454"
   
  此清單不包含已被取代的物件。  
   
- 如需支援語意搜尋之資料庫物件的清單，請參閱＜ [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md)＞。  
+ 如需支援語意搜尋之資料庫物件的清單，請參閱＜ [語意搜尋 DDL、函數、預存程序及檢視](../views/views.md)＞。  
   
 ##  <a name="ddl"></a> Transact-SQL 資料定義語言 (DDL) 陳述式  
   

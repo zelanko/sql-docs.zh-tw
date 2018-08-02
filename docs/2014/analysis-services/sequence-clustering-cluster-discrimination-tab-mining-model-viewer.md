@@ -28,7 +28,7 @@ ms.locfileid: "37187145"
   
  可以使用此時序叢集模型檢視，比較兩個叢集並查看哪些狀態和轉換是不同的。  
   
- **如需詳細資訊，請參閱 **[Microsoft 時序叢集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 時序叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
+ **如需詳細資訊，請參閱** [Microsoft 時序叢集演算法](data-mining/microsoft-sequence-clustering-algorithm.md)、[使用 Microsoft 時序叢集檢視器瀏覽模型](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)。  
   
 ## <a name="options"></a>選項。  
  **重新整理檢視器內容**  

@@ -26,7 +26,7 @@ ms.locfileid: "37306165"
   
  重複的索引鍵可能會因為雜湊索引而降低效能，因為索引鍵會雜湊到相同的貯體，使得貯體的鏈結增加。  
   
- 如需有關非叢集雜湊索引的詳細資訊，請參閱 <<c0> [ 雜湊索引](hash-indexes.md)並[Guidelines for Using 的 Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如需有關非叢集雜湊索引的詳細資訊，請參閱 <<c0> [ 雜湊索引](hash-indexes.md)並[使用記憶體最佳化資料表索引的方針](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
  針對記憶體最佳化的資料表上的每個雜湊索引配置一個雜湊表。 所指定的索引配置的雜湊表的大小`BUCKET_COUNT`中的參數[CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)或[CREATE TYPE &#40;-&#41; ](/sql/t-sql/statements/create-type-transact-sql). 值區計數會於內部四捨五入進位至下一個二的乘冪。 例如，指定值區計數 300,000 將產生實際值區計數 524,288。  
   
@@ -147,7 +147,7 @@ GO
   
 -   主索引鍵索引 (PK__SalesOrder…)：有 36% 的貯體是空的，這是理想的狀況。 另外，平均鏈結長度為 1，這也很理想。 不需要變更。  
   
- 如需有關如何使用記憶體最佳化雜湊索引進行疑難排解的詳細資訊，請參閱 < [with Memory-Optimized Hash Indexes Troubleshooting Common Performance Problems](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)。  
+ 如需對記憶體最佳化雜湊索引的問題進行疑難排解的詳細資訊，請參閱＜ [針對記憶體最佳化雜湊索引常見效能問題進行疑難排解](../../2014/database-engine/troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes.md)＞。  
   
 ## <a name="detailed-considerations-for-further-optimization"></a>進一步最佳化的詳細考量  
  本節將概述最佳化值區計數的進一步考量。  

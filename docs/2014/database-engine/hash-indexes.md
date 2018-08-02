@@ -48,7 +48,7 @@ ms.locfileid: "37295228"
   
  此圖中有三個貯體包含資料列。 最上方第二個貯體包含三個紅色資料列。 第四個貯體包含單一藍色資料列。 最下方的貯體包含兩個綠色資料列。 這些可能是相同資料列的不同版本。  
   
- 如需有關記憶體最佳化資料表的索引的詳細資訊，請參閱[Guidelines for Using 的 Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
+ 如需有關記憶體最佳化資料表的索引的詳細資訊，請參閱[使用記憶體最佳化資料表索引的方針](../relational-databases/in-memory-oltp/memory-optimized-tables.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [記憶體最佳化資料表上的索引](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
