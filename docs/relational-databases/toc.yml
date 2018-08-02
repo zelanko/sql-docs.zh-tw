@@ -1,11 +1,12 @@
 - name: 概觀
   href: database-features.md
-- name: 新文章及更新的文章
+- name: 新增及更新的文章
   href: new-updated-relational-databases.md
 - name: SQL Server 指南
   href: sql-server-guides.md
   items:
     - name: Always On 可用性群組疑難排解和監視指南
+      href: ../database-engine/availability-groups/windows/always-on-availability-groups-troubleshooting-and-monitoring-guide.md
     - name: 索引架構和設計
       href: sql-server-index-design-guide.md
     - name: 記憶體管理架構
