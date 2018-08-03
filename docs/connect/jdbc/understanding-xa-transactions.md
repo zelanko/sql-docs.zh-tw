@@ -1,7 +1,7 @@
 ---
 title: 了解 XA 交易 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040606"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278599"
 ---
 # <a name="understanding-xa-transactions"></a>了解 XA 交易
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "38040606"
   
 -   [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) 旗標可讓應用程式使用 XA 分支交易識別碼 (BQUAL) 不同，但全域交易識別碼 (GTRID) 和格式識別碼 (FormatID) 相同之緊密結合的 XA 交易。 若要使用該功能，您必須設定[SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) XAResource.start 方法的旗標參數上：  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38040606"
   
 1.  開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 電腦的 LOG 目錄。 選取並開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] "ERRORLOG" 檔案。 在 "ERRORLOG" 檔案中搜尋 "Using 'SQLJDBC_XA.dll' version ..." 片語。  
   
-2.  開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 電腦的 Binn 目錄。選取 sqljdbc_xa.dll 組件。  
+2.  開啟將參與分散式交易之 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 電腦的 Binn 目錄。 選取 sqljdbc_xa.dll 組件。  
   
     -   在 Windows Vista 或更新版本上：以滑鼠右鍵按一下 sqljdbc_xa.dll，然後選取 [內容]。 然後，按一下 [詳細資料] 索引標籤。[檔案版本] 欄位就會顯示目前安裝在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體上的 sqljdbc_xa.dll 版本。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38040606"
 ###  <a name="BKMK_ServerSide"></a> 針對已取消準備之交易的自動回復設定伺服器端逾時設定  
   
 > [!WARNING]  
->  此伺服器端選項是 Microsoft JDBC Driver 4.2 (或更高版本) for SQL Server 的新功能。 若要取得更新過的表現方式，請務必更新伺服器上的 sqljdbc_xa.dll。 如需設定用戶端逾時值的詳細資料，請參閱 [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
+>  此伺服器端選項是 Microsoft JDBC Driver 4.2 (或更高版本) for SQL Server 的新功能。 若要取得更新過的表現方式，請務必更新伺服器上的 sqljdbc_xa.dll。 如需設定用戶端逾時值的詳細資訊，請參閱 [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html)。  
   
  有兩個登錄設定 (DWORD 值) 用來控制分散式交易的逾時行為：  
   
@@ -153,7 +153,7 @@ ms.locfileid: "38040606"
 ### <a name="configuring-the-user-defined-roles"></a>設定使用者定義角色  
  若要授與權限給特定使用者以使用 JDBC Driver 參與分散式交易，請將該使用者新增至 SqlJDBCXAUser 角色。 例如，使用下列 [!INCLUDE[tsql](../../includes/tsql_md.md)] 程式碼，將名為 'shelby' (SQL 標準登入使用者名稱為 'shelby') 的使用者新增至 SqlJDBCXAUser 角色：  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -165,7 +165,7 @@ EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'
   
 ## <a name="example"></a>範例  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  

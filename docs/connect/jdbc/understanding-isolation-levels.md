@@ -1,7 +1,7 @@
 ---
 title: 了解隔離等級 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 270ccbea5a7c12e8f7188cc4ad125e346a3eddd1
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039158"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278650"
 ---
 # <a name="understanding-isolation-levels"></a>了解隔離等級
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -59,19 +59,19 @@ ms.locfileid: "38039158"
   
  若要設定交易的隔離等級，您可以使用 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 類別的 [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) 方法。 這個方法會根據下列其中一個連線常數，接受 **int** 值作為其引數：  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
- 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的新快照集隔離等級，您可以使用下列其中一個 SQLServerConnection 常數：  
+ 若要使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 的新快照隔離等級，您可以使用下列其中一個 SQLServerConnection 常數：  
   
-```  
+```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
 ```  
   
  或者，您可以使用：  
   
-```  
+```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   

@@ -1,7 +1,7 @@
 ---
 title: 使用資料庫鏡像 (JDBC) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7528a85cd8e2eb258a89e6d7971ce0f80fa90258
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 686e62581e2c18b79f20a25be6c5cd0ec0bcb3f8
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041425"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278672"
 ---
 # <a name="using-database-mirroring-jdbc"></a>使用資料庫鏡像 (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "38041425"
   
  如果用戶端所提供的容錯移轉夥伴伺服器並未參照當做指定資料庫之容錯移轉夥伴的伺服器，而且如果所參照的伺服器/資料庫處於鏡像排列中，伺服器會拒絕連接。 雖然 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別提供 [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md) 方法，但是此方法只會傳回連接字串或 setFailoverPartner 方法中所指定容錯移轉夥伴的名稱。 若要擷取目前正在使用之真正容錯移轉夥伴的名稱，請使用下列 [!INCLUDE[tsql](../../includes/tsql_md.md)] 陳述式：  
   
-```  
+```sql
 SELECT m.mirroring_role_DESC, m.mirroring_state_DESC,  
 m.mirroring_partner_instance FROM sys.databases as db,  
 sys.database_mirroring AS m WHERE db.name = 'MirroringDBName'  
@@ -61,68 +61,52 @@ AND db.database_id = m.database_id
 ## <a name="example"></a>範例  
  在下列範例中，第一次會嘗試連接至主體伺服器。 如果失敗並發生例外狀況，則會嘗試連接至鏡像伺服器 (鏡像伺服器可能已升級為新的主體伺服器)。 請注意，連接字串中有使用 failoverPartner 屬性。  
   
-```  
-import java.sql.*;  
-  
-public class clientFailover {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://serverA:1433;" +  
-         "databaseName=AdventureWorks;integratedSecurity=true;" +  
-         "failoverPartner=serverB";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-  
-      try {  
-         // Establish the connection to the principal server.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-         System.out.println("Connected to the principal server.");  
-  
-         // Note that if a failover of serverA occurs here, then an  
-         // exception will be thrown and the failover partner will  
-         // be used in the first catch block below.  
-  
-         // Create and execute an SQL statement that inserts some data.  
-         stmt = con.createStatement();  
-  
-         // Note that the following statement assumes that the   
-         // TestTable table has been created in the AdventureWorks  
-         // sample database.  
-         stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (SQLException se) {  
-         try {  
-            // The connection to the principal server failed,  
-            // try the mirror server which may now be the new  
-            // principal server.  
-            System.out.println("Connection to principal server failed, " +  
-            "trying the mirror server.");  
-            con = DriverManager.getConnection(connectionUrl);  
-            System.out.println("Connected to the new principal server.");  
-            stmt = con.createStatement();  
-            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-         }  
-         catch (Exception e) {  
-            e.printStackTrace();  
-         }  
-      }  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      // Close the JDBC objects.  
-      finally {  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-}  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ClientFailover {
+    public static void main(String[] args) {
+
+        String connectionUrl = "jdbc:sqlserver://serverA:1433;" 
+                + "databaseName=AdventureWorks;integratedSecurity=true;" 
+                + "failoverPartner=serverB";
+
+        // Establish the connection to the principal server.
+        try (Connection con = DriverManager.getConnection(connectionUrl); 
+                Statement stmt = con.createStatement();) {
+            System.out.println("Connected to the principal server.");
+
+            // Note that if a failover of serverA occurs here, then an
+            // exception will be thrown and the failover partner will
+            // be used in the first catch block below.
+
+            // Execute a SQL statement that inserts some data.
+
+            // Note that the following statement assumes that the
+            // TestTable table has been created in the AdventureWorks
+            // sample database.
+            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+        }
+        catch (SQLException se) {
+            System.out.println("Connection to principal server failed, " + "trying the mirror server.");
+            // The connection to the principal server failed,
+            // try the mirror server which may now be the new
+            // principal server.
+            try (Connection con = DriverManager.getConnection(connectionUrl); 
+                    Statement stmt = con.createStatement();) {
+                System.out.println("Connected to the new principal server.");
+                stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+            }
+            // Handle any errors that may have occurred.
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>另請參閱  

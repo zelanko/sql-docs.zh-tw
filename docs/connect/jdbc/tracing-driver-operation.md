@@ -1,7 +1,7 @@
 ---
 title: 追蹤驅動程式作業 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32eecd4a6667dd25d58aa9fe09d3382f5dbc374f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991970"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279259"
 ---
 # <a name="tracing-driver-operation"></a>追蹤驅動程式作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "37991970"
  下列章節說明記錄層次以及可以記錄的類別目錄，並提供如何在應用程式中啟用追蹤的相關資訊。  
   
 ## <a name="logging-levels"></a>記錄層級  
- 所建立的每則記錄訊息都有相關聯的記錄層次。 記錄層次會決定記錄訊息的重要性，而重要性是由 java.util.logging 中的 **Level** 類別所定義。 啟用單一層級的記錄也會啟用所有較高層級的記錄。 本節將描述公用記錄類別目錄和內部記錄類別目錄的記錄層級。 如需有關記錄類別目錄的詳細資訊，請參閱本主題的「記錄類別目錄」一節。  
+ 所建立的每則記錄訊息都有相關聯的記錄層次。 記錄層次會決定記錄訊息的重要性，而重要性是由 java.util.logging 中的 **Level** 類別所定義。 啟用單一層級的記錄也會啟用所有較高層級的記錄。 本節將描述公用記錄類別目錄和內部記錄類別目錄的記錄層級。 如需有關記錄類別目錄的詳細資訊，請參閱此文章中的「記錄類別目錄」一節。  
   
  下表將描述公用記錄類別目錄的每個可用記錄層級。  
   
-|[屬性]|Description|  
+|名稱|描述|  
 |----------|-----------------|  
 |SEVERE|表示嚴重失敗，這是最高的記錄層級。 在 JDBC 驅動程式中，這個層次用於報告錯誤和例外狀況。|  
 |WARNING|表示潛在問題。|  
@@ -95,7 +95,7 @@ ms.locfileid: "37991970"
 |TDS.DATA|記錄包含此驅動程式與 SQL Server 之間 TDS 通訊協定層級交談的訊息。 每個所傳送和接收之 TDS 封包的詳細內容都會以 ASCII 和十六進位的格式記錄。 但是，系統不會記錄登入認證 (使用者名稱和密碼)， 只會記錄所有其他資料。<br /><br /> 這個類別目錄會建立非常詳細的訊息，並只能透過將記錄層次設為 FINEST 而啟用。|  
 |TDS.Channel|這個類別目錄會追蹤與 SQL Server 進行 TCP 通訊通道的動作。 記錄的訊息包括通訊端開啟和關閉，以及讀取和寫入。 此外，它也會追蹤有關與 SQL Server 建立安全通訊端層 (SSL) 連接的訊息。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINE、FINER 或 FINEST 而啟用。|  
 |TDS.Writer|這個類別目錄會追蹤 TDS 通道的寫入作業。 請注意，系統只會追蹤寫入的長度，而非內容。 當注意訊號傳送至伺服器以取消陳述式的執行時，這個類別目錄也會追蹤問題。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
-|TDS.Reader|這個類別目錄會在 FINEST 層級中追蹤來自 TDS 通道的特定讀取作業。 在 FINEST 層級中，追蹤可能會相當詳細。 在 WARNING 和 SEVERE 層級中，這個類別目錄會追蹤此驅動程式關閉連接之前，從 SQL Server 收到無效 TDS 通訊協定的時間。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINER 和 FINEST 而啟用。|  
+|TDS.Reader|這個類別目錄會在 FINEST 層級中追蹤來自 TDS 通道的特定讀取作業。 在 FINEST 層級中，追蹤可能會很詳細。 在 WARNING 和 SEVERE 層級中，這個類別目錄會追蹤此驅動程式關閉連接之前，從 SQL Server 收到無效 TDS 通訊協定的時間。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINER 和 FINEST 而啟用。|  
 |TDS.Command|這個類別目錄會追蹤低層級的狀態轉換以及與執行 TDS 命令建立關聯的其他資訊，例如 [!INCLUDE[tsql](../../includes/tsql_md.md)] 陳述式執行、ResultSet 資料指標擷取、認可等等。<br /><br /> 這個類別目錄只能透過將記錄層級設定為 FINEST 而啟用。|  
 |TDS.TOKEN|這個類別目錄只會記錄 TDS 封包中的 Token，跟 TDS.DATA 類別目錄比起來較不詳細。 它只能透過將記錄層級設定為 FINEST 而啟用。<br /><br /> 在 FINEST 層級中，這個類別目錄會在回應中處理 TDS Token 時追蹤它們。 在 SEVERE 層級中，這個類別目錄會追蹤遇到無效 TDS Token 的時間。|  
 |SQLServerDatabaseMetaData|記錄 [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 類別中的訊息。 應用程式可以將記錄層級設定為 FINE。|  
@@ -110,27 +110,27 @@ ms.locfileid: "37991970"
 ## <a name="enabling-tracing-programmatically"></a>以程式設計方式啟用追蹤  
  建立 Logger 物件並指出要記錄的類別目錄，就能以程式設計的方式啟用追蹤。 例如，下列程式碼會顯示如何啟用 SQL 陳述式的記錄：  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  若要關閉程式碼中的記錄，請使用下列：  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  若要記錄所有可用的類別目錄，請使用下列：  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  若要停止記錄特定的類別目錄，請使用下列：  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  
