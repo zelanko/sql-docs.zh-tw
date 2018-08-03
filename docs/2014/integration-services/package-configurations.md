@@ -36,7 +36,7 @@ ms.locfileid: "37314148"
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 提供封裝組態可供您在執行階段更新屬性的值。  
   
 > [!NOTE]  
->  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
+>  組態可用於封裝部署模型。 參數是用來取代專案部署模型的組態。 專案部署模型讓您能將 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 專案部署到 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 伺服器。 如需有關部署模型的詳細資訊，請參閱＜ [部署專案和封裝](packages/deploy-integration-services-ssis-projects-and-packages.md)＞。  
   
  組態是您加入已完成封裝的一組屬性/值配對。 一般而言，您建立封裝、在封裝開發期間設定封裝物件的屬性，然後將組態加入至封裝。 當封裝執行時，它會從組態取得新的屬性值； 舉例來說，經由使用組態，您可以變更連接管理員的連接字串，或更新變數的值。  
   
