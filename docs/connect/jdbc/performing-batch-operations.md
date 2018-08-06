@@ -1,7 +1,7 @@
 ---
-title: 執行批次作業 |Microsoft 文件
+title: 執行批次作業 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,37 +14,37 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 55470e4246256f2dfce11464ab8aafb9c9e7873c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c668dabd9b9a1957ffb69d034a59cc8df1cc4025
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831863"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279012"
 ---
 # <a name="performing-batch-operations"></a>執行批次作業
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  若要改善效能，多重更新時[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫進行[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]可讓您以單一單位的工作，也稱為批次提交多重更新。  
+  在對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫執行多重更新時，為了改善效能，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供以單一工作單位提交多重更新的功能，這也稱為批次。  
   
- [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)， [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)，和[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)類別所有用來提交批次更新。 [AddBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)方法用來加入命令。 [ClearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)方法用來清除命令清單。 [ExecuteBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md)方法用來提交所有命令以供處理。 只有傳回簡單更新計數的資料定義語言 (DDL) 和資料操作語言 (DML) 陳述式可以當作批次的一部份來執行。  
+ [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別都可以用來提交批次更新。 [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 方法用來新增命令。 [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 方法用來清除命令清單。 [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 方法用來提交所有命令以供處理。 只有傳回簡單更新計數的資料定義語言 (DDL) 和資料操作語言 (DML) 陳述式可以當作批次的一部份來執行。  
   
- ExecuteBatch 方法傳回的陣列**int**對應到每個命令之更新計數的值。 如果其中一個命令失敗，BatchUpdateException 擲回，且您必須使用 BatchUpdateException 類別 getUpdateCounts 方法來擷取更新計數陣列。 如果某命令失敗，驅動程式會繼續處理其餘命令。 不過，如果命令有語法錯誤，批次中的陳述式會失敗。  
+ executeBatch 方法會傳回對應到每個命令之更新計數的 **int** 值陣列。 如果其中一個命令失敗，就會擲回 BatchUpdateException，和您應該使用 getUpdateCounts BatchUpdateException 類別方法來擷取更新計數陣列。 如果某命令失敗，驅動程式會繼續處理其餘命令。 不過，如果命令有語法錯誤，批次中的陳述式會失敗。  
   
 > [!NOTE]  
->  如果您不需要使用更新計數，您可以先對發出 SET NOCOUNT ON 陳述式，以[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 這將會減少網路流量，而且還會加強應用程式的效能。  
+>  如果不必使用更新計數，可以先對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 發出 SET NOCOUNT ON 陳述式。 這將會減少網路流量，而且還會加強應用程式的效能。  
   
- 例如，建立下的表中[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫：  
+ 例如，在 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列資料表：  
   
-```  
+```sql
 CREATE TABLE TestTable   
    (Col1 int IDENTITY,   
     Col2 varchar(50),   
     Col3 int);  
 ```  
   
- 在下列範例中，開啟連接[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]範例資料庫會傳遞至函式、 addBatch 方法用來建立可執行的陳述式和 executeBatch 方法呼叫提交至資料庫的批次。  
+ 在下列範例中，連至 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的開啟連線會傳遞至函式、addBatch 方法用來建立要執行的陳述式，並呼叫 executeBatch 方法將批次提交至資料庫。  
   
-```  
+```java
 public static void executeBatchUpdate(Connection con) {  
    try {  
       Statement stmt = con.createStatement();  

@@ -1,7 +1,7 @@
 ---
 title: 擷取結果集資料範例 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,86 +14,66 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4d073fb21077bc5873dcb55be452e32ee5a0af3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MTE75
+ms.openlocfilehash: f8fe0d97c8a8ec0f29e8a6b85542ea0627a5c6fb
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039192"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279139"
 ---
 # <a name="retrieving-result-set-data-sample"></a>擷取結果集資料範例
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫擷取資料集，然後顯示該資料。  
   
- 此範例的程式碼檔案名稱為 retrieveRS.java，可以在下列位置找到它：  
+ 此範例的程式碼檔案名稱為 RetrieveRS.java，可在下列位置找到：  
   
  \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \samples\resultsets  
   
 ## <a name="requirements"></a>需求  
- 若要執行此範例應用程式，您必須將 Classpath 設定為包含 sqljdbc.jar 檔案或 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc.jar 或 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 您也需要擁有 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的存取權。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../connect/jdbc/using-the-jdbc-driver.md)。  
+ 若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 sqljdbc.jar 和 sqljdbc4.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+>  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="example"></a>範例  
  在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的連線。 接著，使用 SQL 陳述式與 [SQLServerStatement 物件搭配](../../connect/jdbc/reference/sqlserverstatement-class.md)，它會執行 SQL 陳述式，並將其傳回的資料放入 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件中。  
   
- 接著，範例程式碼會呼叫自訂的 displayRow 方法，重複執行結果集中包含的資料列，並使用 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法來顯示其包含的部份資料。  
+ 接下來，範例程式碼會呼叫自訂 displayRow 方法逐一查看結果集中的資料列，並且使用 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法來顯示部分資料。  
   
 ```java
-import java.sql.*;  
-  
-public class retrieveRS {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-            "databaseName=AdventureWorks;integratedSecurity=true;";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns a  
-         // set of data and then display it.  
-         String SQL = "SELECT * FROM Production.Product;";  
-         stmt = con.createStatement();  
-         rs = stmt.executeQuery(SQL);  
-         displayRow("PRODUCTS", rs);  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-  
-   private static void displayRow(String title, ResultSet rs) {  
-      try {  
-         System.out.println(title);  
-         while (rs.next()) {  
-            System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));  
-         }  
-      } catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class RetrieveRS {
+
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl); Statement stmt = con.createStatement();) {
+            String SQL = "SELECT * FROM Production.Product;";
+            ResultSet rs = stmt.executeQuery(SQL);
+            displayRow("PRODUCTS", rs);
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void displayRow(String title,
+            ResultSet rs) throws SQLException {
+        System.out.println(title);
+        while (rs.next()) {
+            System.out.println(rs.getString("ProductNumber") + " : " + rs.getString("Name"));
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>另請參閱  

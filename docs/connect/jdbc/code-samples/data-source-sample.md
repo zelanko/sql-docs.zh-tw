@@ -1,7 +1,7 @@
 ---
-title: 資料來源範例 |Microsoft 文件
+title: 資料來源範例 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,85 +14,74 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a67bfc72422962f8510fc6486dc37451bfd7224
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: aeb5c252d40c7c9bd389d5d628c02ba124009130
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831303"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278999"
 ---
 # <a name="data-source-sample"></a>資料來源範例
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  這[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]範例應用程式示範如何連接到[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料庫使用資料來源物件。 它也會示範如何從資料擷取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]使用預存程序的資料庫。  
+  此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用資料來源物件來連線到 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫。 它也示範如何使用預存程序，從 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫擷取資料。  
   
- 此範例的程式碼檔案名稱為 connectDS.java，可以在下列位置找到它：  
+ 此範例的程式碼檔案名稱為 ConnectDS.java，可在下列位置找到：  
   
  \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \samples\connections  
   
 ## <a name="requirements"></a>需求  
- 若要執行此範例應用程式，您必須將 Classpath 設定為包含 sqljdbc.jar 檔案或 sqljdbc4.jar 檔案。 如果 Classpath 遺漏 sqljdbc.jar 或 sqljdbc4.jar 的項目，範例應用程式將會擲回「找不到類別」的一般例外狀況。 您也需要擁有 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫的存取權。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../../connect/jdbc/using-the-jdbc-driver.md)。  
+ 若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 sqljdbc.jar 和 sqljdbc4.jar 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定使用。 如需選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+>  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
 ## <a name="example"></a>範例  
- 在下列範例中，範例程式碼會設定各種連接屬性所使用的 setter 方法[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)物件，然後呼叫[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)方法要傳回的 SQLServerDataSource 物件[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)物件。  
+ 在下列範例中，範例程式碼會使用 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 物件的 setter 方法來設定各種連線屬性，然後呼叫 SQLServerDataSource 物件的 [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) 方法傳回 [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) 物件。  
   
- 接著，範例程式碼會使用[prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)建立物件的 SQLServerConnection 方法[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)物件，然後[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)方法會呼叫來執行預存程序。  
+ 接下來，範例程式碼會使用 SQLServerConnection 物件的 [prepareCall](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法建立 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 物件，然後呼叫 [executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) 方法來執行預存程序。  
   
- 最後，此範例會使用[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) executeQuery 方法來逐一查看預存程序所傳回的結果所傳回物件。  
+ 最後，範例會使用從 executeQuery 方法傳回的 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 物件，逐一查看預存程序所傳回的結果。  
   
 ```java
-import java.sql.*;  
-import com.microsoft.sqlserver.jdbc.*;  
-  
-public class connectDS {  
-  
-   public static void main(String[] args) {  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      CallableStatement cstmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.   
-         SQLServerDataSource ds = new SQLServerDataSource();  
-         ds.setUser("UserName");  
-         ds.setPassword("*****");  
-         ds.setServerName("localhost");  
-         ds.setPortNumber(1433);   
-         ds.setDatabaseName("AdventureWorks");  
-         con = ds.getConnection();  
-  
-         // Execute a stored procedure that returns some data.  
-         cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");  
-         cstmt.setInt(1, 50);  
-         rs = cstmt.executeQuery();  
-  
-         // Iterate through the data in the result set and display it.  
-         while (rs.next()) {  
-            System.out.println("EMPLOYEE: " + rs.getString("LastName") +   
-               ", " + rs.getString("FirstName"));  
-            System.out.println("MANAGER: " + rs.getString("ManagerLastName") +   
-               ", " + rs.getString("ManagerFirstName"));  
-            System.out.println();  
-         }  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (cstmt != null) try { cstmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-         System.exit(1);  
-      }  
-   }  
-}  
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class ConnectDS {
+
+    public static void main(String[] args) {
+
+        // Create datasource.
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setUser("<user>");
+        ds.setPassword("<password>");
+        ds.setServerName("<server>");
+        ds.setPortNumber(<port>);
+        ds.setDatabaseName("AdventureWorks");
+
+        try (Connection con = ds.getConnection(); 
+                CallableStatement cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");) {
+            // Execute a stored procedure that returns some data.
+            cstmt.setInt(1, 50);
+            ResultSet rs = cstmt.executeQuery();
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println("EMPLOYEE: " + rs.getString("LastName") + ", " + rs.getString("FirstName"));
+                System.out.println("MANAGER: " + rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));
+                System.out.println();
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>另請參閱  

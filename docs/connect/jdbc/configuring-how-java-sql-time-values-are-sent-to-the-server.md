@@ -1,7 +1,7 @@
 ---
-title: 設定 java.sql.Time 值傳送至伺服器的方式 |Microsoft 文件
+title: 設定 java.sql.Time 值如何傳送給伺服器 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,23 +14,23 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e2e91550767715616599c2720c99b864363a185
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 6a52f214b0383a8cabe04bd8c10b7c9ecdef2b21
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831963"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278719"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>設定 java.sql.Time 值如何傳送給伺服器
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  如果您使用 java.sql.Time 物件或 java.sql.Types.TIME JDBC 型別來設定參數時，您可以設定 java.sql.Time 值如何傳送到伺服器;為[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**時間**類型或**datetime**型別。  
+  如果您使用 java.sql.Time 物件或 java.sql.Types.TIME JDBC 類型來設定參數，則可以設定 java.sql.Time 值如何當成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **time** 類型或 **datetime** 類型傳送給伺服器。  
   
  當您使用下列其中一個方法時，這個情況將會適用：  
   
--   [SQLServerCallableStatement.registerOutParameter （int，int）](../../connect/jdbc/reference/registeroutparameter-method-int-int.md)  
+-   [SQLServerCallableStatement.registerOutParameter(int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int.md)  
   
--   [SQLServerCallableStatement.registerOutParameter （int，int，int）](../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)  
+-   [SQLServerCallableStatement.registerOutParameter(int, int, int)](../../connect/jdbc/reference/registeroutparameter-method-int-int-int.md)  
   
 -   [SQLServerCallableStatement.setTime](../../connect/jdbc/reference/settime-method-sqlservercallablestatement.md)  
   
@@ -40,27 +40,27 @@ ms.locfileid: "32831963"
   
 -   [SQLServerPreparedStatement.setObject](../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)  
   
- 您可以設定 java.sql.Time 值如何傳送使用**sendTimeAsDatetime**連接屬性。 如需詳細資訊，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
+ 您可以設定 java.sql.Time 值如何使用 **sendTimeAsDatetime** 連線屬性來傳送。 如需詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 您可以透過程式設計方式修改值**sendTimeAsDatetime**連接屬性[SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
+ 您可以使用程式設計方式，透過 [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) 修改 **sendTimeAsDatetime** 連線屬性的值。  
   
  新版[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]早於[!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)]不支援**時間**資料類型，所以通常使用 java.sql.Time 的應用程式儲存 java.sql.Time 值儲存為**datetime**或**smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
   
- 如果您想要使用**datetime**和**smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型使用 java.sql.Time 值時，您應該設定**sendTimeAsDatetime**連接屬性設**true**。 如果您想要使用**時間**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別時使用 java.sql.Time 值時，您應該設定**sendTimeAsDatetime**連接屬性設**false**.  
+ 如果您想要使用**datetime**並**smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型使用 java.sql.Time 值時，您應該設定**sendTimeAsDatetime**若要連接屬性 **，則為 true**。 如果您想要使用**時間**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型時使用 java.sql.Time 值時，您應該設定**sendTimeAsDatetime**連接屬性設**false**.  
   
- 請注意，當將 java.sql.Time 值傳送參數資料類型同時可以儲存日期，該預設日期會因為 java.sql.Time 值會以傳送而有所不同**datetime** (1/1/1970) 或**時間**(1/1/1900) 值。 如需有關資料轉換時將資料傳送到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱[使用日期和時間資料](http://go.microsoft.com/fwlink/?LinkID=145211)。  
+ 請注意，將 java.sql.Time 值傳送給資料類型同時可以儲存日期的參數時，該預設日期會因為 java.sql.Time 值傳送為 **datetime** (1/1/1970) 或 **time** (1/1/1900) 值而有所不同。 如需將資料傳送給 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 時之資料轉換的詳細資訊，請參閱[使用日期和時間資料](http://go.microsoft.com/fwlink/?LinkID=145211)。  
   
- 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]JDBC Driver 3.0 中， **sendTimeAsDatetime**預設為 true。 在未來版本中， **sendTimeAsDatetime**連接屬性可能會依預設設定為 false。  
+ 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC 驅動程式 3.0 中， **sendTimeAsDatetime**預設為 true。 在未來的版本中，**sendTimeAsDatetime** 連線屬性可能會預設為 false。  
   
- 若要確保您的應用程式仍可繼續正常運作的預設值為何**sendTimeAsDatetime**連接屬性，您可以：  
+ 若要確保應用程式能夠依照預期的形式繼續運作，而不論 **sendTimeAsDatetime** 連線屬性的預設值為何，您可以：  
   
--   處理時使用 java.sql.Time**時間**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
+-   在處理 **time**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型時使用 java.sql.Time。  
   
--   處理時使用 java.sql.Timestamp **datetime**， **smalldatetime**，和**datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
+-   處理時使用 java.sql.Timestamp **datetime**， **smalldatetime**，並**datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
   
-請注意該 sendTimeAsDatetime 必須加密的資料行，則為 false，因為加密資料行不支援時間轉換成日期時間。 從 Microsoft JDBC Driver 6.0 for SQL Server，SQLServerConnection 類別有下列兩個方法來設定/取得 sendTimeAsDatetime 屬性的值。
+SendTimeAsDatetime 必須是加密的資料行，則為 false，因為加密資料行不支援時間轉換成日期時間。 從 Microsoft JDBC Driver 6.0 for SQL Server，SQLServerConnection 類別具有下列兩個方法來設定/取得 sendTimeAsDatetime 屬性的值。
 
-```
+```java
   public boolean getSendTimeAsDatetime()
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```

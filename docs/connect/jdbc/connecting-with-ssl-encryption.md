@@ -1,7 +1,7 @@
 ---
-title: 使用 SSL 加密連接 |Microsoft 文件
+title: 使用 SSL 加密連接 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,36 +14,36 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49c6aaf771bb5335b8ba649869a4a8cf13894e82
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2c3b72cb8d69659202b9a8f138ca14860dfe275c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832613"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278550"
 ---
 # <a name="connecting-with-ssl-encryption"></a>使用 SSL 加密連接
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  本主題的範例描述如何在 Java 應用程式中使用連接字串屬性，好讓應用程式使用安全通訊端層 (SSL) 加密。 如需有關這些新的連接字串屬性例如**加密**， **trustServerCertificate**， **trustStore**， **trustStorePassword**，和**hostNameInCertificate**，請參閱[設定連接屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
+  本文的範例描述如何在 Java 應用程式中使用連接字串屬性，讓應用程式使用安全通訊端層 (SSL) 加密。 如需這些新連接字串屬性 (例如 **encrypt**、**trustServerCertificate**、**trustStore**、**trustStorePassword** 和 **hostNameInCertificate**) 的詳細資訊，請參閱[設定連線屬性](../../connect/jdbc/setting-the-connection-properties.md)。  
   
- 當**加密**屬性設定為**true**和**trustServerCertificate**屬性設定為 **，則為 true**、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]將不會驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSL 憑證。 這是在測試環境中，例如位置允許連線通常需要進行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]執行個體有只有自我簽署的憑證。  
+ 當 **encrypt** 屬性設定為 **true**，而且 **trustServerCertificate** 屬性設定為 **true** 時，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 不會驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 憑證。 若要在測試環境 (例如，[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 執行個體僅有一個自簽憑證的情況下) 中允許這些連線，通常需要執行此動作。  
   
- 下列程式碼範例示範如何設定**trustServerCertificate**連接字串中的屬性：  
+ 下列程式碼範例示範如何在連接字串中設定 **trustServerCertificate** 屬性：  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
      "encrypt=true;trustServerCertificate=true";  
 ```  
   
- 當**加密**屬性設定為**true**和**trustServerCertificate**屬性設定為**false**、 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]將驗證[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要驗證伺服器憑證，必須提供信任的資料在連接時使用**trustStore**和**trustStorePassword**連接屬性明確使用，或是使用基礎 Java Virtual Machine (JVM) 的預設信任存放區以隱含方式。  
+ 當 **encrypt** 屬性設定為 **true**，而且 **trustServerCertificate** 屬性設定為 **false** 時，[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 不會驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 憑證。 驗證伺服器憑證是 SSL 交握的一部分，而且這麼做可以確保伺服器是所要連接的正確伺服器。 若要驗證伺服器憑證，必須在連線時間，明確地使用 **trustStore** 和 **trustStorePassword** 連線屬性，或隱含地使用基礎 Java Virtual Machine (JVM) 的預設信任存放區來提供信任的資料。  
   
- **TrustStore**屬性憑證 trustStore 檔案，其中包含的用戶端所信任的憑證清單中指定的路徑 （包括檔案名稱）。 **TrustStorePassword**屬性會指定用來檢查 trustStore 資料完整性的密碼。 如需有關使用 JVM 預設信任存放區的詳細資訊，請參閱[設定進行 SSL 加密用戶端](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)。  
+ **trustStore** 屬性會指定 trustStore 憑證檔案的路徑 (包括檔案名稱)，該檔案包含用戶端所信任之憑證的清單。 **trustStorePassword** 屬性會指定用於檢查 trustStore 資料完整性的密碼。 如需有關使用 JVM 預設信任存放區的詳細資訊，請參閱 <<c0> [ 設定 SSL 加密的用戶端](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md)。  
   
- 下列程式碼範例示範如何設定**trustStore**和**trustStorePassword**連接字串中的屬性：  
+ 下列程式碼範例示範如何在連接字串中設定 **trustStore** 和 **trustStorePassword** 屬性：  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
@@ -51,11 +51,11 @@ String connectionUrl =
      "trustStore=storeName;trustStorePassword=storePassword";  
 ```  
   
- JDBC 驅動程式提供一個額外的屬性**hostNameInCertificate**，以指定伺服器的主機名稱。 此屬性的值必須符合憑證的 Subject 屬性。  
+ JDBC Driver 會提供額外的屬性 **hostNameInCertificate**，該屬性會指定伺服器的主機名稱。 此屬性的值必須符合憑證的 Subject 屬性。  
   
- 下列程式碼範例示範如何使用**hostNameInCertificate**連接字串中的屬性：  
+ 下列程式碼範例示範如何在連接字串中使用 **hostNameInCertificate** 屬性：  
   
-```  
+```java
 String connectionUrl =   
     "jdbc:sqlserver://localhost:1433;" +  
      "databaseName=AdventureWorks;integratedSecurity=true;" +  
@@ -65,9 +65,9 @@ String connectionUrl =
 ```  
   
 > [!NOTE]  
->  或者，您可以設定連接屬性的值，使用適當的**setter**所提供的方法[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)類別。  
+>  或者，您可以使用 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 類別所提供的適當 **setter** 方法來設定連線屬性的值。  
   
- 如果**加密**屬性設定為**true**和**trustServerCertificate**屬性設定為**false**如果中的伺服器名稱連接字串中的伺服器名稱不相符[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SSL 憑證，會發出下列錯誤： 此驅動程式無法建立安全的連線[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]使用安全通訊端層 (SSL) 加密。 錯誤：「java.security.cert.CertificateException：無法在安全通訊端層 (SSL) 初始化期間驗證憑證中的伺服器名稱」。  
+ 如果 **encrypt** 屬性設定為 **true** 且 **trustServerCertificate** 屬性設定為 **false**，而且連接字串中的伺服器名稱不符合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSL 憑證中的伺服器名稱，則會發出下列錯誤：此驅動程式無法使用安全通訊端層 (SSL) 加密來建立與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 之間的安全連線。 錯誤：「java.security.cert.CertificateException：無法在安全通訊端層 (SSL) 初始化期間驗證憑證中的伺服器名稱」。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SSL 加密](../../connect/jdbc/using-ssl-encryption.md)   
