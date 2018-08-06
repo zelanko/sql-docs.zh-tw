@@ -1,30 +1,39 @@
 - name: 範例 JDBC 驅動程式應用程式
   href: sample-jdbc-driver-applications.md
-- name: 連接及擷取資料
-  href: connecting-and-retrieving-data.md
-- name: 修改結果集資料範例
-  href: modifying-result-set-data-sample.md
-- name: 資料來源範例
-  href: data-source-sample.md
-- name: 使用資料類型 (JDBC)
-  href: working-with-data-types-jdbc.md
-- name: 連接 URL 範例
-  href: connection-url-sample.md
-- name: SQLXML 資料類型範例
-  href: sqlxml-data-type-sample.md
-- name: 更新大型資料範例
-  href: updating-large-data-sample.md
-- name: 讀取大型資料範例
-  href: reading-large-data-sample.md
-- name: 使用大型資料
-  href: working-with-large-data.md
-- name: 基本資料類型範例
-  href: basic-data-types-sample.md
-- name: 使用預存程序讀取大型資料範例
-  href: reading-large-data-with-stored-procedures-sample.md
-- name: 使用結果集
-  href: working-with-result-sets.md
-- name: 擷取結果集資料範例
-  href: retrieving-result-set-data-sample.md
-- name: 快取結果集資料範例
-  href: caching-result-set-data-sample.md
+  items:
+    - name: 連接及擷取資料
+      href: connecting-and-retrieving-data.md
+      items:
+        - name: 資料來源範例
+          href: data-source-sample.md
+        - name: 連接 URL 範例
+          href: connection-url-sample.md
+    - name: 使用資料類型 (JDBC)
+      href: working-with-data-types-jdbc.md
+      items:
+        - name: 基本資料類型範例
+          href: basic-data-types-sample.md
+        - name: SQLXML 資料類型範例
+          href: sqlxml-data-type-sample.md
+        - name: 空間資料類型範例
+          href: spatial-data-types-sample.md
+    - name: 使用結果集
+      href: working-with-result-sets.md
+      items:
+        - name: 擷取結果集資料範例
+          href: retrieving-result-set-data-sample.md
+        - name: 修改結果集資料範例
+          href: modifying-result-set-data-sample.md
+        - name: 快取結果集資料範例
+          href: caching-result-set-data-sample.md
+    - name: 使用大型資料
+      href: working-with-large-data.md
+      items:
+        - name: 讀取大型資料範例
+          href: reading-large-data-sample.md
+        - name: 更新大型資料範例
+          href: updating-large-data-sample.md
+        - name: 使用預存程序讀取大型資料範例
+          href: reading-large-data-with-stored-procedures-sample.md
+    - name: 資料探索與分類範例
+      href: data-discovery-and-classification-sample.md
