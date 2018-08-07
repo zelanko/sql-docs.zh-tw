@@ -20,13 +20,13 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d5abdb3d615448c575b40facbeea3f8c6c734d58
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4bb0c3504f88596383244793bb0a238a930963fc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334599"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551198"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML 編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34334599"
   
  設計師提供下列三種檢視 (或模式) 來處理 XML 檔案、XML 結構描述和資料集：  
   
-|檢視|描述|支援的檔案類型|  
+|檢視|Description|支援的檔案類型|  
 |----------|-----------------|--------------------------|  
 |**結構描述**|以視覺化的方式建立和修改 XML 結構描述與 ADO.NET 資料集。|.xsd|  
 |**資料**|在結構化資料方格中，以視覺化的方式修改 XML 資料檔案。|.xml|  

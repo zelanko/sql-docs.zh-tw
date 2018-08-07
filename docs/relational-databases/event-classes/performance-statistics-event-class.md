@@ -15,13 +15,13 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 54ba7634152d355f16d73a48f0a430e83b861fc5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3a7c23b83d0ddd5c923dec9c39e582103f538d7c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332459"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558658"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34332459"
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**image**|NULL|2|是|  
@@ -51,7 +51,7 @@ ms.locfileid: "34332459"
   
 ### <a name="eventsubclass-1"></a>EventSubClass 1  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新編譯這個計畫的累加次數。|52|是|  
 |BinaryData|**image**|已編譯計畫的二進位 XML。|2|是|  
@@ -75,7 +75,7 @@ ms.locfileid: "34332459"
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新編譯這個計畫的累加次數。|52|是|  
 |BinaryData|**image**|已編譯計畫的二進位 XML。|2|是|  
@@ -98,7 +98,7 @@ ms.locfileid: "34332459"
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|重新編譯這個計畫的累加次數。|52|是|  
 |BinaryData|**image**|NULL|2|是|  
@@ -118,7 +118,7 @@ ms.locfileid: "34332459"
   
 ### <a name="eventsubclass-4"></a>EventSubClass 4  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**image**|NULL|2|是|  
@@ -138,7 +138,7 @@ ms.locfileid: "34332459"
   
 ### <a name="eventsubclass-5"></a>EventSubClass 5  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|**bigint**|NULL|52|是|  
 |BinaryData|**image**|NULL|2|是|  

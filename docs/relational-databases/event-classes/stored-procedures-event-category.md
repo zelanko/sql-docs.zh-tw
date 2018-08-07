@@ -17,13 +17,13 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e155df20d6345e8b3bbc34566ba702f464cd196e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6c7ebc1e71a47095960709d7625a620c4f8770e4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328949"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551588"
 ---
 # <a name="stored-procedures-event-category"></a>Stored Procedures 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34328949"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[RPC:Completed 事件類別](../../relational-databases/event-classes/rpc-completed-event-class.md)|指出遠端程序呼叫 (RPC) 已完成。|  
 |[PreConnect:Completed 事件類別](../../relational-databases/event-classes/preconnect-completed-event-class.md)|指出資源管理員分類函數執行完成。|  

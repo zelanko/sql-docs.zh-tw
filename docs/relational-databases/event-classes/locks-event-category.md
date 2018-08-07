@@ -18,13 +18,13 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6d0616573c2215005994a45ac2d45d156dd065fc
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 14fffbe2214a5c6fa527736341f6e6a693f4748d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327539"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540618"
 ---
 # <a name="locks-event-category"></a>Locks 事件類別目錄
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34327539"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[Deadlock Graph 事件類別](../../relational-databases/event-classes/deadlock-graph-event-class.md)|提供死結的 XML 描述。|  
 |[Lock:Acquired 事件類別](../../relational-databases/event-classes/lock-acquired-event-class.md)|指出已經在資源上取得鎖定，例如，資料表中的資料列。|  

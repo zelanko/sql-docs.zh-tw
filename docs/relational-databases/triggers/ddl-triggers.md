@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432387"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539028"
 ---
 # <a name="ddl-triggers"></a>DDL 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432387"
 >  請測試 DDL 觸發程序，以判斷它們對執行之系統預存程序的回應。 例如，CREATE TYPE 陳述式與 **sp_addtype** 預存程序，都會引發在 CREATE_TYPE 事件上建立的 DDL 觸發程序。  
   
 ## <a name="types-of-ddl-triggers"></a>DDL 觸發程序的類型  
- Transact-SQL DDL 觸發程序  
+ ### <a name="transact-sql-ddl-trigger"></a>Transact-SQL DDL 觸發程序  
  特殊類型的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，可執行一個或多個 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式以回應伺服器範圍或資料庫範圍事件。 例如，如果執行陳述式 (例如 ALTER SERVER CONFIGURATION) 或使用 DROP TABLE 刪除資料表，則可能會引發 DDL 觸發程序。  
   
- CLR DDL 觸發程序  
+ ### <a name="clr-ddl-trigger"></a>CLR DDL 觸發程序  
  CLR 觸發程序不執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序，而是執行以 Managed 程式碼撰寫的一個或多個方法，這些方法是在 .NET Framework 中建立並在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中上傳的組件成員。  
   
  在執行會觸發 DDL 觸發程序的 DDL 陳述式之後，才會引發 DDL 觸發程序。 DDL 觸發程序不能使用為 INSTEAD OF 觸發程序。 對於影響區域或全域暫存資料表與預存程序的事件，DDL 觸發程序不會為了回應它而引發。  

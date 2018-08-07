@@ -21,13 +21,13 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2bdf5092dc19a5a96121db99ef0da7c9192da1bb
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 19717cc209c8821fa113512bf0167cb10c22d2c9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334929"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534733"
 ---
 # <a name="search-text-with-regular-expressions"></a>使用規則運算式搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34334929"
   
  下表說明 [參考清單] 中可用的規則運算式。  
   
-|運算式|語法|描述|  
+|運算式|語法|Description|  
 |----------------|------------|-----------------|  
 |任何字元|執行個體時提供 SQL Server 登入。|符合任何單一字元，分行符號除外。|  
 |零個或多個|*|符合零或多個前導運算式出現項目，會產生所有可能的相符項目。|  
@@ -66,7 +66,7 @@ ms.locfileid: "34334929"
   
  [尋找和取代] 作業中有效的所有規則運算式清單很長，無法在 [參考清單] 中顯示出來。 您也可以將下列其中任何規則運算式插入 [尋找目標] 字串中：  
   
-|運算式|語法|描述|  
+|運算式|語法|Description|  
 |----------------|------------|-----------------|  
 |最少 — 零或多個|@|符合零或多個前導運算式出現項目，相符的字元數盡可能少。|  
 |最少 — 一或多個|#|符合一或多個前導運算式出現項目，相符的字元數儘可能少。|  
@@ -90,7 +90,7 @@ ms.locfileid: "34334929"
   
  下表列出依照標準 Unicode 字元屬性的比對語法。 兩個字母的縮寫與在 Unicode 字元屬性資料庫中所列者相同。 可指定為字元集的一部份。 例如，運算式 [:Nd:Nl:No] 符合任何種類的數字。  
   
-|運算式|語法|描述|  
+|運算式|語法|Description|  
 |----------------|------------|-----------------|  
 |大寫字母|:Lu|符合任何一個大寫字母。 例如，:Luhe 符合 "The"，但不符合 "the"。|  
 |小寫字母|:Ll|符合任何一個小寫字母。 例如，:Llhe 符合 "the"，但不符合 "The"。|  
@@ -125,7 +125,7 @@ ms.locfileid: "34334929"
   
  除了標準的 Unicode 字元屬性以外，另有下列屬性可指定為字元集的一部分。  
   
-|運算式|語法|描述|  
+|運算式|語法|Description|  
 |----------------|------------|-----------------|  
 |α|:Al|符合任何一個字元。 例如，:Alhe 符合如 "The"、"then" 及 "reached" 等字。|  
 |數值|:Nu|符合任何數字。|  

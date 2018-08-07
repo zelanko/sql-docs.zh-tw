@@ -18,13 +18,13 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b72dca20aaa566f8bb6630931fc656ee6231182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180445"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543068"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,7 @@ WHERE [SSN] = @SSN;
 >   [!NOTE]
 >   未啟用參數化時，整個查詢 (包括類型轉換) 會在 SQL Server/Azure SQL Database 內部進行處理。 啟用參數化時，.NET Framework 會在 SQL Server Management Studio 內部執行一些類型轉換。 由於 .NET Framework 類型系統與 SQL Server 類型系統之間的差異 (例如某些類型 (例如浮點數) 的有效位數不同)，因此，已啟用參數化執行的查詢可以產生不同於未啟用參數化執行的查詢的結果。 
 
-#### <a name="permissions"></a>Permissions      
+#### <a name="permissions"></a>[權限]      
 
 若要針對加密資料行 (包括以加密文字擷取資料的查詢) 執行任何查詢，您需要資料庫中的 `VIEW ANY COLUMN MASTER KEY DEFINITION` 和 `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` 權限。   
 除了上述權限，若要將任何查詢結果解密或加密任何查詢參數 (透過參數化 Transact-SQL 變數來產生)，您還需要權限來存取保護目標資料行的資料行主要金鑰：   
@@ -259,7 +259,7 @@ SQL Server Management Studio 將會在資料庫中建立資料行主要金鑰的
 
 SQL Server Management Studio 將會產生新的資料行加密金鑰，接著會擷取您從資料庫選取之資料行主要金鑰的中繼資料。 SQL Server Management Studio 接著將使用資料行主要金鑰中繼資料來連絡包含資料行主要金鑰的金鑰存放區，並加密資料行加密金鑰。 最後，將會在資料庫中建立新資料行加密金鑰的中繼資料。 此對話方塊的做法是產生和發出 [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) 陳述式。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>[權限]
 
 您需要具有資料庫中的 *ALTER ANY ENCRYPTION MASTER KEY* 和 *VIEW ANY COLUMN MASTER KEY DEFINITION* 資料庫權限，對話方塊才能建立資料行加密金鑰中繼資料以及存取資料行主要金鑰中繼資料。
 若要存取金鑰存放區，並使用資料行主要金鑰，您可能需要金鑰存放區和/或金鑰的權限︰
@@ -334,7 +334,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 > [!NOTE]
 > 強烈建議您不要在輪替之後永久刪除舊資料行主要金鑰。 而是應該將舊資料行主要金鑰保留在其目前金鑰存放區中，或將它封存在另一個安全的地方。 如果您將資料庫從備份檔案還原到設定新資料行主要金鑰之前的某個時間點，則需要舊的金鑰才能存取資料。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>[權限]
 
 輪替資料行主要金鑰需要下列資料庫權限︰
 
@@ -369,7 +369,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 7.  在 [摘要]  頁面上，檢閱您已選取的選項，並按一下 [完成]  ，然後在完成時關閉精靈。
 8.  使用物件總管 ，巡覽至 [安全性]/[永遠加密金鑰]/[資料行加密金鑰]  資料夾，然後找出要從資料庫移除的舊資料行加密金鑰。 以滑鼠右鍵按一下金鑰，然後選取 [刪除] 。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>[權限]
 
 輪替資料行加密金鑰需要下列的資料庫權限︰ **ALTER ANY COLUMN MASTER KEY** - 如果您使用新的自動產生資料行加密金鑰 (也會產生新的資料行主要金鑰和其新的中繼資料)，則其為必要項目。
 **ALTER ANY COLUMN ENCRYPTION KEY** - 新增新資料行加密金鑰之中繼資料時的必要項目。
@@ -402,7 +402,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 > [!NOTE]
 > 如果針對資料庫或 DACPAC 中資料行所設定的資料行主要金鑰儲存在 Azure 金鑰保存庫中，則系統會提示您登入 Azure (如果尚未登入)。
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>[權限]
 
 若要在 DACPAC 或目標資料庫中設定永遠加密時執行 DAC 升級作業，您可能需要具有下列部分或所有權限 (取決於 DACPAC 中的結構描述與目標資料庫結構描述之間的差異)。
 
@@ -425,7 +425,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 如果您的應用程式設定成修改或擷取來源資料庫 (您匯出的資料庫) 中所儲存的加密資料，則不需要執行任何特殊作業，就可讓應用程式查詢目標資料庫中的加密資料，因為兩個資料庫中的金鑰都相同。
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>[權限]
 
 您需要具有來源資料庫的 *ALTER ANY COLUMN MASTER KEY* 和 *ALTER ANY COLUMN ENCRYPTION KEY* 。 您需要具有目標資料庫的 *ALTER ANY COLUMN MASTER KEY*、 *ALTER ANY COLUMN ENCRYPTION KEY*、 *VIEW ANY COLUMN MASTER KEY DEFINITION*和 *VIEW ANY COLUMN ENCRYPTION* 。
 
@@ -448,7 +448,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 |移動加密資料，而未進行解密。<br><br>**注意：** 移轉之前，必須要有具有加密資料行的目標資料表。| 資料提供者/驅動程式︰任何 <br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)| 資料提供者/驅動程式︰任何 <br>資料行加密設定 = 已停用<br><br>(如果使用 SqlServer 和 .NET Framework 4.6 或更新版本的 .Net Framework 資料提供者。)<br><br>使用者必須將 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 設成 ON。<br><br>如需詳細資訊，請參閱 [移轉透過永遠加密保護的敏感性資料](../../../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md)。
 
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>[權限]
 
 若要 **加密** 或 **解密** 資料來源中所儲存的資料，您需要具有來源資料庫的 *VIEW ANY COLUMN MASTER KEY DEFINITION* 和 *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* 權限。
 

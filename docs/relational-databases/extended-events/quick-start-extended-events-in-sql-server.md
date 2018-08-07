@@ -14,13 +14,13 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28dad124a7c4552418f103dc03d6893d5718632b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2af8f48646f0cb99ffd2bd5bf6ac734dcaeecf52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941343"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534908"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>快速入門︰SQL Server 中的擴充事件
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -427,7 +427,7 @@ SELECT
 下表列出用於擴充事件的詞彙，並說明其意義。
 
 
-| 詞彙 | 描述 |
+| 詞彙 | Description |
 | :--- | :---------- |
 | 事件工作階段 | 目標為以一或多項事件為主的建構，加上支援的項目 (例如動作)。 CREATE EVENT SESSION 陳述式會建構每個事件工作階段。 您可以隨意 ALTER 事件工作階段，以開始和停止工作階段。 <br/> <br/> 如果內容釐清其表示「事件工作階段」，事件工作階段有時簡稱為「工作階段」。 <br/> <br/> 如需事件工作階段的進一步詳細資訊，請參閱︰[SQL Server 擴充事件工作階段](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
 | event | 使用中的事件工作階段在系統中監看的特定項目。 <br/> <br/> 例如， *sql_statement_completed* 事件代表任何指定 T-SQL 陳述式完成的時間點。 此事件會報告其持續時間和其他資料。 |

@@ -28,13 +28,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f176dec2a4eca0cc313bd010729b5ba267ce6323
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bb0ca07aceed13e3da687716d8ccb02c17558bf6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182084"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549018"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>使用全文檢索索引精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "33182084"
      指定要在上面建立全文檢索索引的檔案群組。  
   
      E. 選取值：  
-      |ReplTest1|描述|  
+      |ReplTest1|Description|  
       |-----------|-----------------|
       |**<default>**| 如果資料表或檢視未分割，請選取此值，以便與基礎資料表或檢視使用的相同檔案群組。 如果已分割資料表或檢視表，則會使用主要檔案群組|
       |**PRIMARY**|選取即可針對新的全文檢索索引使用主要檔案群組。|
@@ -117,7 +117,7 @@ ms.locfileid: "33182084"
   
      選取下列其中一個值：  
   
-   |ReplTest1|描述|  
+   |ReplTest1|Description|  
     |-----------|-----------------|  
     |**<system>**|選取即可針對新的全文檢索索引使用系統停用字詞表。 這是預設值。|  
     |**<off>**|選取即可針對新的全文檢索索引停用停用字詞表。|  

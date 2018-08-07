@@ -15,13 +15,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 34b5c0e77ec4caa54fcbd21f15bb518a758e193e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 50e4249226273fc7c5f51363597f1d4099ad6865
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330759"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539988"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>記憶體內部 OLTP 的純量使用者定義函數
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ END
   
  STATISTICS XML 不支援原生編譯純量使用者定義函數。 若您執行參考使用者定義函數且啟用 STATISTICS XML 的查詢，則會傳回無使用者定義函數部分的 XML 內容。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  如同原生編譯預存程序，建立函數時會檢查參考自原生編譯純量使用者定義函數的物件權限。 若模擬使用者不具正確權限，則 CREATE FUNCTION 將會失敗。 若權限變更導致模擬使用者不再具有正確權限，則後續的使用者定義函數執行作業亦會失敗。  
   
  若您在原生編譯預存程序中使用原生編譯純量使用者定義函數，則在建立外部程序時會檢查執行使用者定義函數的權限。 由外部程序模擬的使用者若不具備使用者定義函數的 EXEC 權限，則會導致預存程序建立作業失敗。 若權限變更導致使用者不再具有 EXEC 權限，則會導致外部程序執行作業失敗。  

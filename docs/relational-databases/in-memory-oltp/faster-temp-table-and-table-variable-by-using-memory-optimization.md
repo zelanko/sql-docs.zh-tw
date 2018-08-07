@@ -15,13 +15,13 @@ caps.latest.revision: 20
 author: Jodebrui
 ms.author: jodebrui
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1339dfbe173c656b1c0224f8f368d4f2a59ea2ba
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 05eb24efb1f2bbdf8a10a577e2953ca989e20347
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743997"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551478"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>使用記憶體最佳化加快暫存資料表與資料表變數的速度
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

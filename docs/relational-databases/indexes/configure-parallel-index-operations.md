@@ -20,13 +20,13 @@ caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f2d1a1463b751bcd820419db24c978ed08d7e463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c674869b9c478bd5accf85f74106aba6a33dcaa9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939403"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534778"
 ---
 # <a name="configure-parallel-index-operations"></a>設定平行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "32939403"
   
 -   MAXDOP 索引選項只會針對指定此選項的查詢來覆寫 max degree of parallelism 組態選項。 下表列出可以使用 max degree of parallelism 組態選項及 MAXDOP 索引選項指定的有效整數值。  
   
-    |ReplTest1|描述|  
+    |ReplTest1|Description|  
     |-----------|-----------------|  
     |0|指定伺服器會根據目前的系統工作負載來決定所使用的 CPU 數目。 這是預設值且為建議的設定。|  
     |@shouldalert|隱藏平行計畫的產生。 作業必須循序執行。|  

@@ -19,19 +19,19 @@ caps.latest.revision: 27
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5ed21ec6de1f739eec94d3b47bc31eb9de2b9ebb
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b15eebd1e6e4cbca880f5f6976c9b6cf77ca8205
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328899"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534928"
 ---
 # <a name="understanding-database-engine-errors"></a>了解 Database Engine 錯誤
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   下表描述 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 所引發之錯誤的屬性。  
   
-|attribute|描述|  
+|attribute|Description|  
 |---------------|-----------------|  
 |錯誤號碼|每一則錯誤訊息都有唯一的錯誤號碼。|  
 |錯誤訊息字串|錯誤訊息包含錯誤原因的診斷資訊。 許多錯誤訊息都有用來插入資訊 (例如產生錯誤的物件名稱) 的替代變數。|  

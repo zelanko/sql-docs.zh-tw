@@ -17,13 +17,13 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ac0ba1d2748dbb6d4e30c62af36ce2dd823a63c3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b0120e9fecbb81250a8a506f9b262038a5c96309
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331659"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549468"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34331659"
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 事件類別資料行  
   
-|資料行|類型|描述|資料行編號|可篩選|  
+|資料行|類型|Description|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|在此事件類別中未使用。|10|是|  
 |**ClientProcessID**|**int**|在此事件類別中未使用。|9|是|  
@@ -58,7 +58,7 @@ ms.locfileid: "34331659"
   
  下表列出此事件類別的子類別值。  
   
-|ID|子類別|描述|  
+|ID|子類別|Description|  
 |--------|--------------|-----------------|  
 |@shouldalert|Login Success|Login Success 事件會報告鄰近之資料庫鏡像登入程序已成功完成。|  
 |2|Login Protocol Error|Login Protocol Error 事件會報告資料庫鏡像登入收到格式完整，但對於登入程序之目前狀態而言無效的訊息。 此訊息可能已遺失或未按照順序送出。|  

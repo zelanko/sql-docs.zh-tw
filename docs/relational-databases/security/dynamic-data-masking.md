@@ -12,13 +12,13 @@ ms.assetid: a62f4ff9-2953-42ca-b7d8-1f8f527c4d66
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 54df4f5e1e88c5a95ee1918003b482bd73f34680
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 47b18665bc519b58d387ca6529d4feab69ffb9c7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106294"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543098"
 ---
 # <a name="dynamic-data-masking"></a>動態資料遮罩
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

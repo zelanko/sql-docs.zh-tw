@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d29f3e4d1571d7c825bbf2eef01487a2e8da788b
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3de4699b5fc522b5d3fe5b097d8217fd6314afda
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332499"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537378"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>記憶體內部 OLTP 的初始區域調查
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,10 @@ SQL Server 提供記憶體內部功能，以大幅改進許多應用程式系統
   
 您稍後可以瀏覽下列示範記憶體內部 OLTP 效能提升的各篇文章：  
   
-- [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供小規模示範來示範較大的潛在效能提升。  
-- [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供較大規模示範。  
+- 
+  [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供小規模示範來示範較大的潛在效能提升。  
+- 
+  [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 提供較大規模示範。  
   
   
   
@@ -503,5 +505,7 @@ ALTER TABLE...ADD/DROP 可以從記憶體最佳化資料表或索引新增或移
     
 下列文章提供程式碼，示範您可以使用記憶體內部 OLTP 達到的效能提升︰  
   
-- [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供小規模示範來示範較大的潛在效能提升。  
-- [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)提供較大規模示範。  
+- 
+  [示範：記憶體內部 OLTP 的效能改進](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) 提供小規模示範來示範較大的潛在效能提升。  
+- 
+  [記憶體內部 OLTP 的範例資料庫](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) 提供較大規模示範。  

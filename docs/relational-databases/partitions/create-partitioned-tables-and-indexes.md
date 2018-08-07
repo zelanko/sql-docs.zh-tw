@@ -32,13 +32,13 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb728fabe039f16b6ed561273e19124a4b30b82b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e0eea59bf1e6927f337bbe17d106d5a6151e2a1d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214038"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546108"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>建立分割區資料表及索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

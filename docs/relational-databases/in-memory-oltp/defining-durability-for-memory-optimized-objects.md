@@ -15,13 +15,13 @@ caps.latest.revision: 8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 40df847cac8529438e5f0e320cb6fc08a3026ba8
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7f3380dbd6157df36444ea726e789f3bca58a607
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328839"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542468"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>為記憶體最佳化的物件定義持久性
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

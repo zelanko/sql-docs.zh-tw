@@ -14,13 +14,13 @@ ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 60fd6f077d94e1d39cd7ae6c006d92f3d50ec9af
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: daf7ed951189feffbfc92067dd0205605bbde41c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424097"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538768"
 ---
 # <a name="implement-ddl-triggers"></a>實作 DDL 觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

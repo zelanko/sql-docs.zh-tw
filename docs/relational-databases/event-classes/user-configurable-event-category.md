@@ -17,13 +17,13 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e423218e5923c2ef5f038171d1d7ac002551765a
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4382412e337ef0ef6e7004a4bf715418e5cc9f4b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326329"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546148"
 ---
 # <a name="user-configurable-event-category"></a>User-Configurable 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34326329"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[使用者可設定的事件類別](../../relational-databases/event-classes/user-configurable-event-class.md)|用來監視使用者自訂事件，位在其他事件類別目錄由系統提供的事件無法監視這類事件。|  
   

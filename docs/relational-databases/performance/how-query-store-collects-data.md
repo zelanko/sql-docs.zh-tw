@@ -16,13 +16,13 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c3e839b220bb8a3464d8dfbc9a7f4afa8bbcb416
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb030bf28132c573774fa393089cf688184c85b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327279"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540978"
 ---
 # <a name="how-query-store-collects-data"></a>查詢存放區如何收集資料
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34327279"
   
  **檢視描述**  
   
-|檢視|描述|  
+|檢視|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|顯示針對資料庫執行的唯一查詢文字。 查詢文字前後的註解和空格會被忽略。 不會忽略文字內的註解和空格。 批次中的每個陳述式都會產生個別的查詢文字項目。|  
 |**sys.query_context_settings**|顯示會影響執行查詢之設定的獨特計畫組合。 使用影響設定的不同計畫來執行的相同查詢文字，會在查詢存放區中產生不同的查詢項目，因為 `context_settings_id` 是查詢索引鍵的一部分。|  

@@ -18,13 +18,13 @@ caps.latest.revision: 106
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 54fa82bd4f225847214211cf3549858bf9bf3182
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d10d290bcc4fbc45716cb4f2bafd89fa50ba453
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707756"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539198"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>In-Memory OLTP (記憶體中最佳化)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "34707756"
 ## <a name="in-this-section"></a>本節內容  
  本節包含下列主題：  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[快速入門 1：可讓 Transact-SQL 擁有更快效能的記憶體內部 OLTP 技術](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|適當探討記憶體內部 OLTP|
 |[概觀和使用案例](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|記憶體內部 OLTP 是什麼，以及有哪些效能案例可看到效能效益的概觀。|

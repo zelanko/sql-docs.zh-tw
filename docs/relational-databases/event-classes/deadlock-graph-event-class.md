@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 76996f5ae8445d53237ae6a55e718011d86030aa
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 53af957371e8c8a029f3596967cd860176a3546c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328099"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548708"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph 事件類別
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34328099"
   
 ## <a name="deadlock-graph-event-class-data-columns"></a>Deadlock Graph 事件類別資料行  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|事件類別 = 148。|27|否|  
 |**EventSequence**|**int**|要求中的給定事件順序。|51|否|  

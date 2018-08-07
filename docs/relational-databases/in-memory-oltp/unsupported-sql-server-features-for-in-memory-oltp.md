@@ -15,13 +15,13 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3a7393dfd780eb62aa6dff5ca70d89f297dc6952
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: acf0e826c624d1b9c85095ff6ac2eabe0397a847
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332399"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541868"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>記憶體內部 OLTP 不支援的 SQL Server 功能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "34332399"
 有一些例外狀況，不支援跨資料庫的交易。 下表描述支援的案例和對應的限制。 (另請參閱 [跨資料庫查詢](../../relational-databases/in-memory-oltp/cross-database-queries.md))。  
 
 
-|資料庫|Allowed|描述|  
+|資料庫|Allowed|Description|  
 |---------------|-------------|-----------------|  
 | 使用者資料庫、**model** 及 **msdb**。 | 否 | 在大部分情況下，「不」支援跨資料庫的查詢及交易。<br /><br />任一查詢如使用了經記憶體最佳化的資料表或者原生編譯的預存程序，該查詢即無法存取其他資料庫。 這項限制適用於交易及查詢。<br /><br />系統資料庫 **tempdb** 及 **master** 則是例外。 在這裡，**master** 資料庫可供唯讀存取。 |
 | **Resource** 資料庫、**tempdb** | 是 | 在接觸記憶體內部 OLTP 物件的交易中，可以無限制地使用 **Resource** 及 **tempdb** 系統資料庫。

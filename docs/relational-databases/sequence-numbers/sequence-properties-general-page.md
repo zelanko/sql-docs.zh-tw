@@ -18,13 +18,13 @@ caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a2d98af4cf1b9fa152f445b4aea74fa0f34c4527
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a030b74b36095892c6a623077fcd9ab41215dd72
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970674"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558708"
 ---
 # <a name="sequence-properties-general-page"></a>順序屬性 (一般頁面)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "32970674"
   
  如需有關建立順序選項的詳細資訊，請參閱 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 SCHEMA 的 **CREATE SEQUENCE**、 **ALTER**或 **CONTROL** 權限。  
   
 ## <a name="see-also"></a>另請參閱  

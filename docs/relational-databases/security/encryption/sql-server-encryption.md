@@ -18,13 +18,13 @@ caps.latest.revision: 21
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9cf0e8ca6bdc1c1fb9aae6c0558fbec6464180bb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: aa4c43cb4ed45c846e2be12fc57220cbfd507ef1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970560"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558698"
 ---
 # <a name="sql-server-encryption"></a>SQL Server 加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

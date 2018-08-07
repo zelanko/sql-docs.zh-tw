@@ -22,13 +22,13 @@ caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d5c8427cc756a3aa4635e97288cec3aa2e6fb8e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 55938d1a17e4a6f1d2e6321b74340fde24814df9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182114"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537698"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>改善全文檢索索引的效能
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ GO
   
      下表將說明在此重要的等候類型。  
   
-    |等候類型|描述|可能的解決方案|  
+    |等候類型|Description|可能的解決方案|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX 或 _UP)|這可能表示 IO 瓶頸，而在此情況下，您通常也會看見很高的平均磁碟佇列長度。|將全文檢索索引移至不同磁碟上的不同檔案群組可能有助於減少 IO 瓶頸。|  
     |PAGELATCH_EX (或 _UP)|這可能表示嘗試寫入相同資料庫檔案的執行緒之間存在大量競爭的情況。|將檔案加入至全文檢索索引所在的檔案群組可能有助於減少這類競爭的情況。|  

@@ -13,13 +13,13 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c9001482723ca1e9a6de10de820d1f9fbbd39cfb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a9f6a6a101fffa298301a2f8218b1365a2754ca7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332848"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538188"
 ---
 # <a name="configure-column-encryption-using-powershell"></a>使用 PowerShell 設定資料行加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

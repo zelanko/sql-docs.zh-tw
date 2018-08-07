@@ -20,13 +20,13 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b5897acf16b7be6f6dbae52fb71f79d398a1f34f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 74d2d18aa2e01df46ea8ef0360db5e5bac63a62a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34333669"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539588"
 ---
 # <a name="search-text-with-wildcards"></a>使用萬用字元搜尋文字
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34333669"
   
  下表說明 **[參考清單]** 中可用的萬用字元。  
   
-|運算式|語法|描述|  
+|運算式|語法|Description|  
 |----------------|------------|-----------------|  
 |任何單一字元|?|符合任何單一字元。|  
 |任何單一位數|#|符合任何單一位數。 例如，7# 符合在 7 後面接著另一個數字的數字，如 71，17 便不符合。|  

@@ -15,13 +15,13 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 422b2394c9467c80d92d3dd7164966d8b0e08bec
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b6bbf7b70b716eb779611d32abcfa6ff07925a28
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327090"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551348"
 ---
 # <a name="supported-ddl-for-natively-compiled-t-sql-modules"></a>原生編譯 T-SQL 模組支援的 DDL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

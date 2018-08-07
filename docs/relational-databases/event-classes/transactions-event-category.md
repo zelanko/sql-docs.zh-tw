@@ -17,13 +17,13 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 740bf381deaaccae27a893aac85b27bc9b78191e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c9cfd9a394915d06fdbc65452d0540dc68add1a9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324771"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559938"
 ---
 # <a name="transactions-event-category"></a>Transaction 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34324771"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[DTCTransaction 事件類別](../../relational-databases/event-classes/dtctransaction-event-class.md)|追蹤 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散式交易協調器 (MS DTC) 所協調的交易。 這些是散發於 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]的二或多個資料庫或執行個體之間的交易。|  
 |[SQLTransaction 事件類別](../../relational-databases/event-classes/sqltransaction-event-class.md)|追蹤 [!INCLUDE[tsql](../../includes/tsql-md.md)] BEGIN TRAN、COMMIT TRAN、SAVE TRAN 與 ROLLBACK TRAN 陳述式。|  

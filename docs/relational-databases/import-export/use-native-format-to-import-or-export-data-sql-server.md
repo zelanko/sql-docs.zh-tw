@@ -18,13 +18,13 @@ caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 90f15cbee03a155745366ed1a29d101752406ae3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7b5b297687860debe57d0624b9498678e86108f5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940493"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535368"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>使用原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "32940493"
 
 下列命令選項支援原生格式：  
 
-|命令|選項|描述|  
+|命令|選項|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|指定 bcp 公用程式使用資料的原生資料類型。*|  
 |BULK INSERT|DATAFILETYPE **='native'**|使用資料的原生或 widenative 資料類型。 請注意，如果利用了格式檔案指定資料類型，就不需要 DATAFILETYPE。|  
