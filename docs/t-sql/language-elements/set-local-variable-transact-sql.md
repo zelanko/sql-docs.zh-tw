@@ -21,13 +21,13 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9961be2758ba85deefa53b1d376ce688317f1f55
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 25b0d6501dc1327b1f7cb20e9b1d2cfa15162ef5
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257660"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457512"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -191,7 +191,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
  請勿使用 SELECT 陳述式中的變數來串連值 (也就是計算彙總值)。 可能會發生非預期的查詢結果。 這是因為 SELECT 清單中的所有運算式 (包括指派) 都不保證能夠剛好針對每個輸出資料列執行一次。 如需詳細資訊，請參閱[這篇知識庫文章](http://support.microsoft.com/kb/287515)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 public 角色中的成員資格。 所有使用者都可以使用 SET **@***local_variable*。  
   
 ## <a name="examples"></a>範例  

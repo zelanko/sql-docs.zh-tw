@@ -18,13 +18,13 @@ helpviewer_keywords:
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9579a28d1d243475aeea5d2120f7895c10b6582a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6ad297ba269c48e1995295f71d83eb17f781d4d8
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974650"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454002"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 

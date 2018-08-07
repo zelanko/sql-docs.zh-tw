@@ -40,13 +40,13 @@ caps.latest.revision: 212
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fb69ad94c2759a4f3bc55409212d9aedad2096f
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4fc133c37f95ecbe09ce7bda56163f1adce549a3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792260"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456192"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -199,7 +199,7 @@ CREATE DATABASE database_snapshot_name
   
      指定資料庫層級的非交易式 FILESTREAM 存取層級。  
   
-    |ReplTest1|描述|  
+    |ReplTest1|Description|  
     |-----------|-----------------|  
     |OFF|已停用非交易式存取|  
     |READONLY|非交易式處理序可以讀取此資料庫中的 FILESTREAM 資料。|  
@@ -501,7 +501,7 @@ CREATE DATABASE database_snapshot_name
 ## <a name="viewing-database-information"></a>檢視資料庫資訊  
  您可以利用目錄檢視、系統函數和系統預存程序，以傳回資料庫、檔案和檔案群組的相關資訊。 如需詳細資訊，請參閱[系統檢視 &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 CREATE DATABASE、CREATE ANY DATABASE 或 ALTER ANY DATABASE 權限。  
   
  為了維護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的磁碟控制，通常只有少數登入帳戶有建立資料庫的權限。  
@@ -1079,7 +1079,7 @@ MAXSIZE 提供了限制資料庫大小的功能。 如果資料庫的大小達�
   
  如需詳細資訊，請參閱[使用 Transact-SQL 建立 Azure SQL 資料庫的複本](https://azure.microsoft.com/documentation/articles/sql-database-copy-transact-sql/)。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 若要建立資料庫，登入必須為下列其中一項： 
   
 - 伺服器層級主體登入  
@@ -1210,7 +1210,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
    > [!TIP]
    > 因應措施為使用 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md?&tabs=sqldbmi)。 在 `CREATE DATABASE` 之後，以設定資料庫選項和新增檔案。  
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 若要建立資料庫，登入必須為下列其中一項： 
   
 - 伺服器層級主體登入  
@@ -1291,7 +1291,7 @@ SERVICE_OBJECTIVE
 
 SQL 資料倉儲設定為 COMPATIBILITY_LEVEL 130，而且不可變更。 如需詳細資料，請參閱 [Azure SQL Database 中改善的查詢效能與相容性層級 130](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/)。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 必要權限：  
   
 -   由佈建程序建立的伺服器層級主體登入，或  
@@ -1385,7 +1385,7 @@ WITH (
   
  當 AUTOGROW 設為 OFF 時，如果出現會導致個別計算節點的記錄檔大小增加至超出 *log_size* 的任何動作，將會向使用者傳回錯誤。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 master 資料庫中的**建立任何資料庫**權限，或**系統管理員 (sysadmin)** 固定伺服器角色中的成員資格。  
   
  下列範例會將建立資料庫的權限提供給資料庫使用者 Fay。  

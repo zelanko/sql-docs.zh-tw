@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_query |Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -21,12 +21,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4ecf98769f064c6d25b1aa466d8e4fe27f5ab5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 45a25840023772d835fd2bbfbadf2977bfa90107
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979960"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415517"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
   
 *$tsql*：與已備妥陳述式相對應的 Transact-SQL 運算式。  
   
-*$params* (選擇性)：值的 **array**，對應至參數化查詢中的參數。 陣列的每個元素可以是下列其中一項：
+*$params* [選用]：與參數化查詢中之參數對應的值**陣列**。 陣列的每個元素可以是下列其中一項：
   
 -   常值。  
   
@@ -62,16 +62,16 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |元素|Description|  
     |-----------|---------------|  
     |*$value*|常值、PHP 變數或 PHP by-reference 變數。|  
-    |*$direction*[選用]|下列其中一個 **SQLSRV_PARAM_\*** 常數用來指出參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
+    |*$direction*[選用]|下列其中一項 **SQLSRV_PARAM_\*** 常數，用於指定參數方向：**SQLSRV_PARAM_IN**、**SQLSRV_PARAM_OUT**、**SQLSRV_PARAM_INOUT**。 預設值為 **SQLSRV_PARAM_IN**。<br /><br />如需 PHP 常數的詳細資訊，請參閱 [常數 &#40;適用於 SQL Server 之 PHP 的 Microsoft 驅動程序&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
     |*$phpType*[選用]|**SQLSRV_PHPTYPE_\*** 常數，可指定傳回值的 PHP 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
     |*$sqlType*[選用]|**SQLSRV_SQLTYPE_\*** 常數，可指定輸入值的 SQL Server 資料類型。<br /><br />如需 PHP 常數的詳細資訊，請參閱[常數 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)。|  
   
-*$options* (選擇性)：設定查詢屬性的關聯陣列。 支援的索引鍵如下所示：  
+*$options* [選用]：設定查詢屬性的關聯陣列。 支援的索引鍵如下所示：  
   
 |索引鍵|支援的值|Description|  
 |-------|--------------------|---------------|  
-|QueryTimeout|正整數值。|設定查詢逾時 (以秒為單位)。 預設情況下，驅動程式將會無限期等候結果。|  
-|SendStreamParamsAtExec|**[True]** 或 **[False]**<br /><br />預設值為 **true**。|設定驅動程式在執行時傳送所有資料流 (**true**)，或是以區塊傳送資料流 (**false**)。 依預設，此值設定為 **true**。 如需詳細資訊，請參閱 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
+|QueryTimeout|正整數值。|設定查詢逾時 (以秒為單位)。 根據預設，驅動程式會無限期等候結果。|  
+|SendStreamParamsAtExec|**[True]** 或 **[False]**<br /><br />預設值為 **true**。|設定驅動程式在執行時傳送所有資料流資料 (**true**)，或是以區塊傳送資料流資料 (**false**)。 依預設，此值設定為 **true**。 如需詳細資訊，請參閱 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)。|  
 |可捲動|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|如需這些值的詳細資訊，請參閱 [指定資料指標類型及選取資料列](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)。|  
   
 ## <a name="return-value"></a>傳回值  
@@ -192,6 +192,63 @@ sqlsrv_close($conn);
 ?>
 ```
 
+## <a name="example"></a>範例
+此程式碼範例示範如何建立資料表[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)類型，並擷取插入的資料。
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$options = array("Database"=>$dbName, "UID"=>$uid, "PWD"=>$pwd);
+$conn = sqlsrv_connect($server, $options);
+if($conn === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$tableName = 'testTable';
+$query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "SELECT * FROM $tableName";
+$stmt = sqlsrv_query($conn, $query);
+
+if(sqlsrv_fetch($stmt) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$col1 = sqlsrv_get_field($stmt, 0);
+echo "First field:  $col1 \n";
+
+$col2 = sqlsrv_get_field($stmt, 1);
+echo "Second field:  $col2 \n";
+
+sqlsrv_free_stmt($stmt);
+sqlsrv_close($conn);
+
+?>
+```
+
+預期的輸出會是：
+
+```
+First field:  1
+Second field:  test_data
+```
 
 ## <a name="see-also"></a>另請參閱  
 [SQLSRV 驅動程式 API 參考](../../connect/php/sqlsrv-driver-api-reference.md)  

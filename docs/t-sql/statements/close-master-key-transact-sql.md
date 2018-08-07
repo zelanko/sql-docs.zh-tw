@@ -25,13 +25,13 @@ caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6996881c2b41e41a5442ad88888f08e6f7bef498
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ae2e2d80e499b65b116a46a572f2cfe1c47fdf33
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791849"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454802"
 ---
 # <a name="close-master-key-transact-sql"></a>CLOSE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ CLOSE MASTER KEY
 ## <a name="remarks"></a>Remarks  
  這個陳述式會反轉 OPEN MASTER KEY 執行的作業。 僅當使用 OPEN MASTER KEY 陳述式在目前工作階段中開啟資料庫主要金鑰時，執行 CLOSE MASTER KEY 才會成功。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  不需要任何權限。  
   
 ## <a name="examples"></a>範例  

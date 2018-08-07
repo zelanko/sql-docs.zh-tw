@@ -21,13 +21,13 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 668c6cf81028417539d204fd1f28d9a7992311ea
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 91d04d812b03902cadba52c8f594267dc3ff43fc
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216909"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452722"
 ---
 # <a name="reserved-keywords-transact-sql"></a>保留關鍵字 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

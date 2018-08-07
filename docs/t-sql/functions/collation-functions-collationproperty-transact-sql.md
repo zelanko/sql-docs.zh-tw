@@ -22,13 +22,13 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d24771ca97dc145ae8212ccc4d08b26c4cbea564
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e2356d59677fe939e418610fa58522a7e7f6b33a
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784439"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459562"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>定序函式 - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ COLLATIONPROPERTY( collation_name , property )
 *property*  
 定序屬性。 *property* 引數具有 **varchar(128)** 資料類型，而且可以有下列任何一個值：
   
-|屬性名稱|描述|  
+|屬性名稱|Description|  
 |---|---|
 |**CodePage**|定序的非 Unicode 字碼頁。 請參閱 [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) (附錄 G DBCS/Unicode 對應資料表) 和 [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) (附錄 H 字碼頁) 來翻譯這些值，以及查看其字元對應。|  
 |**LCID**|定序的 Windows LCID。 請參閱 [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) (LCID 結構)，以翻譯這些值 (您必須先轉換成 **varbinary**)。|  

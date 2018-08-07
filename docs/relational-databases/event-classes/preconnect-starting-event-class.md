@@ -15,13 +15,13 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7652c3b8e57a066f6353a85b09480729fb2a7e05
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8e7ebac1a39218aaa8aa962bba8fb038a5694d62
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328249"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532938"
 ---
 # <a name="preconnectstarting-event-class"></a>PreConnect:Starting 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34328249"
   
 ## <a name="preconnectstarting-event-class-data-columns"></a>PreConnect:Starting 事件類別資料行  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |EventClass|**int**|215|27|否|  
 |SPID|**int**|引發此事件之伺服器處理序的識別碼。|12|是|  

@@ -36,13 +36,13 @@ caps.latest.revision: 75
 author: uc-msft
 ms.author: umajay
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3ef8ab735511e5885fde7c3e5a218a75bc6f41fb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 45f0e42f637f452b12ff32a0b2f580c3c87e9bd3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262628"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454632"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>結果集  
 下表描述指定 STAT_HEADER 時，結果集所傳回的資料行。
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |[屬性]|統計資料物件的名稱。|  
 |已更新|上次更新統計資料的日期和時間。 [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) 函數是擷取這項資訊的替代方式。 如需詳細資訊，請參閱此頁的[備註](#Remarks)一節。|  
@@ -114,7 +114,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 下表描述指定 DENSITY_VECTOR 時，結果集所傳回的資料行。
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |-----------------|-----------------|  
 |所有密度|密度是 1 / 相異值。 結果會針對統計資料物件中資料行的每個前置詞來顯示密度，一個密度一個資料列。 相異值是每個資料列和每個資料行前置詞的資料行值相異清單。 例如，如果統計資料物件包含索引鍵資料行 (A, B, C)，結果就會報告每一個資料行前置詞中相異值清單的密度：(A)、(A,B) 和 (A, B, C)。 使用前置詞 (A, B, C) 時，這些清單的每一個都會是相異值清單：(3, 5, 6)、(4, 4, 6)、(4, 5, 6)、(4, 5, 7)。 使用前置詞 (A, B) 時，相同的資料行值都會有這些相異值清單：(3, 5)、(4, 4) 和 (4, 5)。|  
 |平均長度|平均長度 (以位元組為單位)，用來儲存資料行前置詞的資料行值清單。 例如，如果清單 (3, 5, 6) 中的每一個值都需要 4 位元組，長度就是 12 位元組。|  
@@ -122,7 +122,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 下表描述指定 HISTOGRAM 選項時，結果集所傳回的資料行。
   
-|資料行名稱|描述|  
+|資料行名稱|Description|  
 |---|---|
 |RANGE_HI_KEY|長條圖步驟的上限資料行值。 此資料行值也稱為索引鍵值。|  
 |RANGE_ROWS|資料行值在長條圖步驟內的預估資料列數，不包括上限。|  

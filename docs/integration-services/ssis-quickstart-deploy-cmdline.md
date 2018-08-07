@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335862"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482699"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>從命令提示字元中使用 ISDeploymentWizard.exe 部署 SSIS 專案
 本快速入門示範如何執行 [Integration Servicess 部署精靈]`ISDeploymentWizard.exe`，從命令提示字元中部署 SSIS 專案。
@@ -47,7 +47,7 @@ Azure SQL Database 伺服器會接聽連接埠 1433。 如果您要嘗試透過�
 3. 在您資料庫的 [概觀] 頁面上，檢閱完整伺服器名稱。 若要顯示 [按一下以複製] 選項，請將滑鼠指標暫留在伺服器名稱上。 
 4. 如果您忘記 Azure SQL Database 伺服器登入資訊，請巡覽至 [SQL Database 伺服器] 頁面來檢視伺服器管理員名稱。 如有需要，您可以重設密碼。
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>[部署精靈] 中的驗證方法
+## <a name="wizard_auth"></a> [部署精靈] 中的驗證方法
 
 如果您要使用 [部署精靈] 部署到 SQL Server，則必須使用 Windows 驗證；您無法使用 SQL Server 驗證。
 

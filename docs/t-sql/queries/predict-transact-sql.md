@@ -20,13 +20,13 @@ helpviewer_keywords:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= sql-server-2017 || = azuresqldb-current || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ec9f538c7506375adc74b4a0b2779b40bafab2f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e2cbdd01d5a1846ab9fa6470f5cc61c33cbc5ec9
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37970998"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454602"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

@@ -26,13 +26,13 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b445816ec9d088138d17c103f39f1471ce16c57c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 725dcf0f543b61c9b143ad6c4cc56ae5289ef800
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786809"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39451082"
 ---
 # <a name="dbid-transact-sql"></a>DB_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ DB_ID ( [ 'database_name' ] )
 ## <a name="remarks"></a>Remarks
 `DB_ID` 只能用來傳回 Azure SQL Database 中目前資料庫的資料庫識別碼。 如果指定的資料庫名稱不是目前資料庫的名稱，就會傳回 NULL。
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 如果 `DB_ID` 的呼叫端未擁有特定非 **master** 或非 **tempdb** 資料庫，至少需要 `ALTER ANY DATABASE` 或 `VIEW ANY DATABASE` 伺服器層級權限才能查看對應的 `DB_ID` 資料列。 針對 **master** 資料庫，`DB_ID` 至少需要 `CREATE DATABASE` 權限。 呼叫端所連線的資料庫一律會出現在 **sys.databases** 中。
   
 > [!IMPORTANT]  

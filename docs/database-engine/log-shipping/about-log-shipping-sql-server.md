@@ -28,13 +28,13 @@ caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b40759c6edba86a2714936f92f175e9037d7e25
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: e36ad312d11d320431ea700a776cf00e99d995a4
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771654"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509287"
 ---
 # <a name="about-log-shipping-sql-server"></a>關於記錄傳送 (SQL Server)
 

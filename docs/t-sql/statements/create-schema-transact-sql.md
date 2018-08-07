@@ -27,13 +27,13 @@ caps.latest.revision: 60
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f81a0363ef180ed781ee7c325640985e8d20bc2
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3e23c8eff134160d7c55035738cad9a091bc460c
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37789719"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454362"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,7 +133,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>取代通知  
  目前支援不指定結構描述名稱之 CREATE SCHEMA 陳述式的目的，是為了與舊版相容。 這些陳述式實際上並不會在資料庫中建立結構描述，但是會建立資料表和檢視表，以及授與權限。 主體不需要 CREATE SCHEMA 權限來執行這個舊格式的 CREATE SCHEMA，因為不會建立任何結構描述。 未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本將移除這項功能。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要資料庫的 CREATE SCHEMA 權限。  
   
  若要建立 CREATE SCHEMA 陳述式中指定的物件，使用者必須具有對應的 CREATE 權限。  

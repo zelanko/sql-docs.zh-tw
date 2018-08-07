@@ -30,13 +30,13 @@ caps.latest.revision: 74
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
-ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 30713ea63bdd8c6a63b284e9a02530833a72c2c6
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39359595"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459154"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -163,7 +163,7 @@ CREATE CERTIFICATE certificate_name
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  讓 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 對話交談的起始端能夠使用該憑證。 預設值是 ON。  
   
-## <a name="remarks"></a>備註  
+## <a name="remarks"></a>Remarks  
  憑證是遵照 X.509 標準及支援 X.509 V1 欄位的資料庫層級安全性實體。 CREATE CERTIFICATE 可以從檔案或組件載入憑證。 這個陳述式也可以產生金鑰組及建立自簽憑證。  
   
  私密金鑰必須為 \<= 2500 位元組的加密格式。 截至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 止，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 產生的私密金鑰長度為 1024 個位元；從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始則為 2048 位元。 從外部來源匯入的私密金鑰，其最小長度為 384 個位元，其最大長度為 4,096 個位元。 匯入的私密金鑰，其長度必須為 64 個位元的整數倍。 用於 TDE 的憑證限制在 3456 位元的私密金鑰大小。  

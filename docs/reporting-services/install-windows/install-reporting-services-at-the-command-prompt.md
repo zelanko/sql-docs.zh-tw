@@ -16,12 +16,13 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4bd78a8fea59983d68fa07db0fa552d402548d54
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 736159b9928eb3eb28665302140c72f8c8f4b382
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980060"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400901"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>在命令提示字元安裝 Reporting Services 2016
 

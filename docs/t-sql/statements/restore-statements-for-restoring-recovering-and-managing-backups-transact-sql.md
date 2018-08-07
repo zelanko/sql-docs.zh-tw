@@ -25,13 +25,13 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a29b6887161212069f814d0bb21dae48a6093907
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e9c5f4509735b763e6ea5752c9f6dd3c1e07a06e
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36943014"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456992"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>用來還原、復原和管理備份的 RESTORE 陳述式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -45,7 +45,7 @@ ms.locfileid: "36943014"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|引數|描述|  
+|引數|Description|  
 |---------------|-----------------|  
 |[RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|描述利用 BACKUP 命令從備份中還原和復原資料庫時，所用的 RESTORE DATABASE 和 RESTORE LOG Transact-SQL 陳述式。 在所有復原模式之下，資料庫都會使用 RESTORE DATABASE。 只有完整復原模式和大量記錄復原模式會使用 RESTORE LOG。 您也可以利用 RESTORE DATABASE，將資料庫回復為資料庫快照集。|  
 |[RESTORE 引數 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|說明 RESTORE 陳述式及一組相關的輔助陳述式 (RESTORE FILELISTONLY、RESTORE HEADERONLY、RESTORE LABELONLY、RESTORE REWINDONLY 和 RESTORE VERIFYONLY) 之「語法」各章節所描述的引數。 大部份引數都只得到這六個引數其中一部份的支援。 在每個引數的描述中，都會指出引數所得到的支援。|  

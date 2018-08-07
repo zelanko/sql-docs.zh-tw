@@ -23,13 +23,13 @@ caps.latest.revision: 84
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c59f13b67d8594610a8d7b764f5f42aed8733203
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2c8239bc6cec4053c17e4a08a57ddd74bf73b8a3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790009"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457742"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ DATABASEPROPERTYEX ( database , property )
 > [!NOTE]  
 >  如果資料庫尚未啟動，且 `DATABASEPROPERTYEX` 透過直接存取資料庫來擷取這些值，而不是從中繼資料擷取，則呼叫 `DATABASEPROPERTYEX` 會傳回 NULL。 AUTO_CLOSE 設定為 ON 或已離線的資料庫會定義為「未啟動」。  
   
-|屬性|描述|傳回的值|  
+|屬性|Description|傳回的值|  
 |---|---|---|
 |定序|資料庫的預設定序名稱。|定序名稱<br /><br /> NULL：資料庫未啟動。<br /><br /> 基底資料型別：**nvarchar(128)**|  
 |ComparisonStyle|Windows 的定序比較樣式。 使用下列樣式值為完成的 ComparisonStyle 值建立點陣圖：<br /><br /> 忽略大小寫：1<br /><br /> 忽略腔調字：2<br /><br /> 忽略假名：65536<br /><br /> 忽略寬度：131072<br /><br /> <br /><br /> 例如，預設值 196609 是結合「忽略大小寫」、「忽略假名」和「忽略寬度」等選項的結果。|傳回比較樣式。<br /><br /> 所有的二進位定序皆傳回 0。<br /><br /> 基底資料類型：**int**|  

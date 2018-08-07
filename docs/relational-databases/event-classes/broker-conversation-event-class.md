@@ -15,13 +15,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73a61baa09c40042ad027f784531ce7989280419
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 028695e89f6958eef454e57723a3f1832d6aec2f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332559"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533798"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34332559"
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation 事件類別資料行  
   
-|資料行|類型|描述|資料行編號|可篩選|  
+|資料行|類型|Description|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**ClientProcessID**|**int**|主機電腦指派給用戶端應用程式執行中處理序的識別碼。 如果用戶端提供處理序識別碼，這個資料行就會擴展。|9|是|  
@@ -63,7 +63,7 @@ ms.locfileid: "34332559"
   
  下表列出此事件類別的子類別值。  
   
-|ID|子類別|描述|  
+|ID|子類別|Description|  
 |--------|--------------|-----------------|  
 |@shouldalert|SEND Message|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行 SEND 陳述式時，會產生** SEND Message [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  
 |2|END CONVERSATION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 當 **執行未包括 WITH ERROR 子句的 END CONVERSATION 陳述式時，會產生** END CONVERSATION [!INCLUDE[ssDE](../../includes/ssde-md.md)] 事件。|  

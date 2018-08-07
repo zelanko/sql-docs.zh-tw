@@ -30,13 +30,13 @@ caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca46e422a05d7d3d2990bc0dfd5db421b9418b75
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7d0114bb98134b86b92bae634f2746abce163279
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791179"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456642"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SET DATEFORMAT { format | @format_var }
   
  SET DATEFORMAT 會覆寫 [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) 的隱含日期格式設定。  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  

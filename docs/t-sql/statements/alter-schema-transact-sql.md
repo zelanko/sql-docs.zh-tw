@@ -25,13 +25,13 @@ caps.latest.revision: 43
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8979188c8de78dd1ac4b78ed3dc15f6d07fdcbf4
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 829c5cf6774b2745c621d87b36c9aa78229fde3d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37790309"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459682"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +91,7 @@ ALTER SCHEMA schema_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
  若要從另一個結構描述傳送安全性實體，目前使用者必須對安全性實體 (而非結構描述) 具有 CONTROL 權限，並對目標結構描述具有 ALTER 權限。  
   
  如果安全性實體上有 EXECUTE AS OWNER 規格，且擁有者設為 SCHEMA OWNER，則該使用者也必須對目標結構描述的擁有者具有 IMPERSONATION 權限。  

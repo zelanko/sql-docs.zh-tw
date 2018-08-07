@@ -28,13 +28,13 @@ caps.latest.revision: 75
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c818f027da13852b57d87eec057e2d535086f760
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4247fe42571152c3d05434d5e910500c65cd7d10
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942874"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454562"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -193,7 +193,7 @@ ALTER USER userName
 > [!NOTE]  
 >  具有 **ALTER ANY USER** 權限的使用者可以變更任何使用者的預設結構描述。 結構描述變更過的使用者可能會在不知情的情況下，從錯誤的資料表選取資料或從錯誤的結構描述執行程式碼。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>[權限]  
  若要變更使用者的名稱，需要具有 **ALTER ANY USER** 權限。  
   
  若要變更使用者的目標登入，則需要資料庫的 **CONTROL** 權限。  

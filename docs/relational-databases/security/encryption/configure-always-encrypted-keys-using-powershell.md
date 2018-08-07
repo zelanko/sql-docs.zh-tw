@@ -12,13 +12,13 @@ ms.assetid: 3bdf8629-738c-489f-959b-2f5afdaf7d61
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 591f715c8a73502b5b47a8dc2afc89f2de366c56
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 93c2784725e3547b43184875b2c100d11a187b08
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983151"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533648"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>使用 PowerShell 設定永遠加密金鑰
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

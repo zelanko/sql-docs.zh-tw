@@ -55,13 +55,13 @@ caps.latest.revision: 17
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc12292f373e1028e37050020dfcccff74e90ade
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7c64a358b6adcfbb06bb181e9349815c3bc78b4c
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783960"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454972"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC 純量函數 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "37783960"
   
 ### <a name="string-functions"></a>字串函數  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |BIT_LENGTH( string_exp ) (ODBC 3.0)|傳回字串運算式的長度 (以位元為單位)。<br /><br /> 無法只針對字串資料類型運作。 因此，無法將 string_exp 隱含轉換成字串，但是將傳回指定之任何資料類型的 (內部) 大小。|  
 |CONCAT( string_exp1,string_exp2) (ODBC 1.0)|傳回字元字串，表示將 string_exp2 串連至 string_exp1 的結果。 產生的字串為 DBMS 相依。 例如，如果由 string_exp1 所代表的資料行包含 NULL 值，DB2 就會傳回 NULL，但是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會傳回非 NULL 字串。|  
@@ -84,13 +84,13 @@ ms.locfileid: "37783960"
   
 ### <a name="numeric-function"></a>數值函數  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |TRUNCATE( numeric_exp, integer_exp) (ODBC 2.0)|傳回 numeric_exp (截斷至小數點右邊的 integer_exp 個位置)。 若 integer_exp 為負數，則 numeric_exp 會截斷至小數點左邊的 &#124;integer_exp&#124; 個位置。|  
   
 ### <a name="time-date-and-interval-functions"></a>時間、日期和間隔函數  
   
-|函數|描述|  
+|函數|Description|  
 |--------------|-----------------|  
 |CURRENT_DATE( ) (ODBC 3.0)|傳回目前的日期。|  
 |CURDATE( ) (ODBC 3.0)|傳回目前的日期。|  

@@ -17,13 +17,13 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7980cc5f02b5766ef30e06440cb6dfa30fdc5560
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: e693f27ef976afcc9fcb86ace9c16c114af90c70
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768714"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509197"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>設定彈性的自動容錯移轉原則
 
@@ -66,7 +66,7 @@ ms.locfileid: "34768714"
   
 ####  <a name="Permissions"></a> 權限  
   
-|工作|Permissions|  
+|工作|[權限]|  
 |----------|-----------------|  
 |若要設定新可用性群組的彈性容錯移轉原則|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |若要修改現有可用性群組的原則|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  

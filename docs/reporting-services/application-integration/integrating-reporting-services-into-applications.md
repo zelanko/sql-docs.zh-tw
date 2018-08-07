@@ -15,12 +15,13 @@ applies_to:
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4b880674bb1a98c455f991218a21c9f39e9afe53
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 753dd0491c2e500d57ed706b07b99c8f200f405e
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38028806"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400881"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>將 Reporting Services 整合到應用程式
 

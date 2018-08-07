@@ -14,22 +14,24 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cb8975c4eda311b93c7a26c1d83eecbbfa581f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991650"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454192"
 ---
 # <a name="sqlxml-interface"></a>SQLXML 介面
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  JDBC 驅動程式提供 JDBC 4.0 API 的支援，此 API 引進 java.sql.SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML**資料類型會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**資料型別。  
+JDBC 驅動程式提供 JDBC 4.0 API 的支援，此 API 引進 java.sql.SQLXML 介面。 SQLXML 介面會定義與 XML 資料互動和進行操作的方法。 **SQLXML**資料類型會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml**資料型別。  
   
- SQLXML 介面會提供方法來存取 XML 值當做**字串**，則**讀取器**或是**寫入器**，或**Stream**。 XML 值也可以透過 **Source** 存取或設定為 **Result**，以便搭配文件物件模型 (DOM)、Simple API for XML (SAX) 和 Streaming API for XML (StAX) 等 XML 剖析器 API 以及 XSLT 轉換和 XPath 使用。  
+SQLXML 介面會提供方法來存取 XML 值當做**字串**，則**讀取器**或是**寫入器**，或**Stream**。 XML 值也可以透過 **Source** 存取或設定為 **Result**，以便搭配文件物件模型 (DOM)、Simple API for XML (SAX) 和 Streaming API for XML (StAX) 等 XML 剖析器 API 以及 XSLT 轉換和 XPath 使用。  
   
 ## <a name="remarks"></a>Remarks  
- 下表將描述 SQLXML 介面中定義的方法。  
+
+下表將描述 SQLXML 介面中定義的方法。  
   
 |方法語法|方法描述|  
 |-------------------|------------------------|  
@@ -43,15 +45,14 @@ ms.locfileid: "37991650"
 |[T extends Result T setResult(Class\<T> resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|傳回**結果**設定**XML**值，指定由此**SQLXML**物件。<br /><br /> **注意：** setResult 方法支援下列來源：javax.xml.transform.dom.DOMResult、javax.xml.transform.sax.SAXResult、javax.xml.transform.stax.StaxResult 和 java.io.OutputStream。|  
 |[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|將這個 SQLXML 物件所指定的 XML 值設定為指定的 **String** 表示法。|  
   
- 應用程式只能在 SQLXML 物件中讀取並寫入 XML 值一次。  
+應用程式只能在 SQLXML 物件中讀取並寫入 XML 值一次。  
   
- 呼叫 free() 方法時，SQLXML 物件就會變成無效，而且無法讀取或寫入。 如果應用程式嘗試針對該 SQLXML 物件呼叫 free() 方法以外的方法，就會擲回例外狀況。  
+呼叫 free() 方法時，SQLXML 物件就會變成無效，而且無法讀取或寫入。 如果應用程式嘗試針對該 SQLXML 物件呼叫 free() 方法以外的方法，就會擲回例外狀況。  
   
- SQLXML 物件就會變成無法讀取或寫入應用程式呼叫任何下列的 getter 方法時： Ierrorinfo getCharacterStream，getBinaryStream，和 getString。  
+SQLXML 物件就會變成無法讀取或寫入應用程式呼叫任何下列的 getter 方法時： Ierrorinfo getCharacterStream，getBinaryStream，和 getString。  
   
- SQLXML 物件就無法寫入或讀取應用程式呼叫任何下列的 setter 方法時： setResult、 setCharacterStream、 setBinaryStream、 和 setString。  
+SQLXML 物件就無法寫入或讀取應用程式呼叫任何下列的 setter 方法時： setResult、 setCharacterStream、 setBinaryStream、 和 setString。  
   
 ## <a name="see-also"></a>另請參閱  
- [支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)  
-  
-  
+
+[支援 XML 資料](../../connect/jdbc/supporting-xml-data.md)  

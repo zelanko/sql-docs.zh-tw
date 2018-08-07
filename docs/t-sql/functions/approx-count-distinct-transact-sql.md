@@ -16,13 +16,13 @@ dev_langs:
 author: joesackmsft
 ms.author: josack
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9bb777a0a73f1a9ed950f860c00a5eae5171d7c0
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 17a64bb5941ba1db0ebc3fb0f2136e2253a089f6
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216919"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456272"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]

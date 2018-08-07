@@ -26,13 +26,13 @@ caps.latest.revision: 128
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6315898b446eec510e3ae4387efadfa3ac9d1a10
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1d7fb6a06e94b27529b79223696f612d92093921
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792070"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454842"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -129,7 +129,7 @@ GO
 >
 > 解決此問題之後，將會更新文件。
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>[權限]
 
 所有使用者都可以查詢伺服器屬性。 
   

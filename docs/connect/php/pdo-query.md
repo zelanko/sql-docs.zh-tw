@@ -1,7 +1,7 @@
 ---
 title: 'Pdo:: query |Microsoft Docs'
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 71c5125b2948918a1a0fdefb4884529e8c1703c6
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979742"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415527"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -119,8 +119,56 @@ while ( $stmt->fetch() ){
   
 $stmt = null;  
 ?>  
-```  
-  
+```
+
+## <a name="example"></a>範例
+此程式碼範例示範如何建立資料表[sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql)類型，並擷取插入的資料。
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$conn = new PDO("sqlsrv:server=$server; database = $dbName", $uid, $pwd);
+$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );  
+
+try {
+    $tableName = 'testTable';
+    $query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+    $stmt = $conn->query($query);
+    unset($stmt);
+
+    $query = "SELECT * FROM $tableName";
+    $stmt = $conn->query($query);
+
+    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    print_r($result);
+    
+    unset($stmt);
+    unset($conn);
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+?>
+```
+
+預期的輸出會是：
+
+```
+Array
+(
+    [c1_int] => 1
+    [c2_varchar] => test_data
+)
+```
+
 ## <a name="see-also"></a>另請參閱  
 [PDO 類別](../../connect/php/pdo-class.md)
 

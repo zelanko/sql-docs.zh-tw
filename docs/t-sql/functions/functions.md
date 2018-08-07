@@ -23,13 +23,13 @@ caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75ec44320036fa7fee965506bd78838ae4496cfb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3dfb6829e2da4e4200ce754529af9b88a69b5e49
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785780"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455582"
 ---
 # <a name="what-are-the-sql-database-functions"></a>SQL 資料庫函式是什麼？
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "37785780"
 
 ### <a name="categories-of-scalar-functions"></a>純量函式類別
   
-|函數類別目錄|描述|  
+|函數類別目錄|Description|  
 |-----------------------|-----------------|  
 |[組態函式](configuration-functions-transact-sql.md)|傳回目前組態的詳細資訊。|  
 |[轉換函式](conversion-functions-transact-sql.md)|支援資料類型轉型及轉換。|  

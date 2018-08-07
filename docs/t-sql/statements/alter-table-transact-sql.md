@@ -62,13 +62,13 @@ caps.latest.revision: 281
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe68009506a8dbc48400148df7f7048f5a11a481
-ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f6855a5f92cd6f8b25d3a7ea9ecf4f4d05e7a015
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038205"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452742"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -1373,12 +1373,12 @@ CREATE TABLE Person.ContactBackup
 GO  
   
 ALTER TABLE Person.ContactBackup  
-ADD CONSTRAINT FK_ContactBacup_Contact FOREIGN KEY (ContactID)  
+ADD CONSTRAINT FK_ContactBackup_Contact FOREIGN KEY (ContactID)  
     REFERENCES Person.Person (BusinessEntityID) ;  
 GO  
   
 ALTER TABLE Person.ContactBackup  
-DROP CONSTRAINT FK_ContactBacup_Contact ;  
+DROP CONSTRAINT FK_ContactBackup_Contact ;  
 GO  
   
 DROP TABLE Person.ContactBackup ;  
