@@ -21,13 +21,13 @@ caps.latest.revision: 43
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d1c163be40ff45e7cc8f4494f3b91c5040e9f9b0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b74d628c2ce497ca30b10e4a8e43cebb4d5360ac
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412525"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557698"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定性與非決定性函數
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

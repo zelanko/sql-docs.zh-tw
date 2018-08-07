@@ -14,37 +14,42 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dae1363b6715c9d3c9082897bf00cf3eb3e183b
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: 0d5714d97f6c7762fa1cfebf0480cb7e669255d9
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279169"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453982"
 ---
 # <a name="modifying-result-set-data-sample"></a>修改結果集資料範例
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫擷取可更新的資料集。 然後，使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的方法，它會插入、修改，最後刪除資料集中的資料列。  
-  
- 此範例的程式碼檔案名稱為 UpdateRS.java，可在下列位置找到：  
-  
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \samples\resultsets  
-  
-## <a name="requirements"></a>需求  
- 若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../connect/jdbc/using-the-jdbc-driver.md)。  
-  
+此 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫擷取可更新的資料集。 然後，使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 物件的方法，它會插入、修改，最後刪除資料集中的資料列。
+
+此範例的程式碼檔案名稱為 UpdateResultSet.java，可以在下列位置找到：
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets
+```
+
+## <a name="requirements"></a>需求
+
+若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../connect/jdbc/using-the-jdbc-driver.md)。
+
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
-  
-## <a name="example"></a>範例  
- 在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的連線。 然後，將 SQL 陳述式與 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 物件搭配使用，它會執行 SQL 陳述式，並且將所傳回的資料放入可更新的 SQLServerResultSet 物件中。  
-  
- 接下來，範例程式碼會使用 [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) 方法將結果集資料指標移至插入資料列，並使用一系列的 [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) 方法將資料插入新資料列，然後呼叫 [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) 方法將新資料列存回資料庫。  
-  
- 插入新資料列之後，範例程式碼會使用 SQL 陳述式擷取先前插入的資料列，然後使用 updateString 與 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法的組合來更新資料列，並將它重新存回資料庫。  
-  
- 最後，範例程式碼會擷取先前更新資料列，然後使用 [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) 方法將它從資料庫刪除。  
-  
+> [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。
+
+## <a name="example"></a>範例
+
+在下列範例中，範例程式碼會建立與 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 範例資料庫的連線。 然後，將 SQL 陳述式與 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 物件搭配使用，它會執行 SQL 陳述式，並且將所傳回的資料放入可更新的 SQLServerResultSet 物件中。
+
+接下來，範例程式碼會使用 [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) 方法將結果集資料指標移至插入資料列，並使用一系列的 [updateString](../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) 方法將資料插入新資料列，然後呼叫 [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) 方法將新資料列存回資料庫。
+
+插入新資料列之後，範例程式碼會使用 SQL 陳述式擷取先前插入的資料列，然後使用 updateString 與 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法的組合來更新資料列，並將它重新存回資料庫。
+
+最後，範例程式碼會擷取先前更新資料列，然後使用 [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md) 方法將它從資料庫刪除。
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -52,7 +57,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UpdateRS {
+public class UpdateResultSet {
 
     public static void main(String[] args) {
 
@@ -107,9 +112,8 @@ public class UpdateRS {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a>另請參閱  
- [使用結果集](../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+```
+
+## <a name="see-also"></a>另請參閱
+
+[使用結果集](../../connect/jdbc/working-with-result-sets.md)

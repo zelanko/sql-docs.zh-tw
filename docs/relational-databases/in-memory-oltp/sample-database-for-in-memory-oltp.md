@@ -15,13 +15,13 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cf20b73d37c436e739151329cb490c56ea5f7d36
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 92fe756a2bcc258ba59c3622b525e043fa77cfb2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332549"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553028"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>記憶體內部 OLTP 的範例資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34332549"
   
  此範例的文件集結構如下：  
   
--   安裝範例及執行工作負載示範的[必要條件](#Prerequisites)  
+-   安裝範例及執行工作負載示範的[必要條件](#必要條件)   
   
 -   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
@@ -113,11 +113,11 @@ ms.locfileid: "34332549"
   
  Sales.SpecialOffer_inmem  
   
--   特殊優惠的相關資訊，包括與每個特殊優惠相關聯的折扣百分比。  
+-   特殊供應項目的相關資訊，包括與每個特殊供應項目相關聯的折扣百分比。  
   
  Sales.SpecialOfferProduct_inmem  
   
--   特殊優惠與產品之間的參考資料表。 每個特殊優惠可能適用於零個或多個產品，而每個產品也可適用於零個或多個特殊優惠。  
+-   特殊供應項目與產品之間的參考資料表。 每個特殊供應項目可能適用於零個或多個產品，而每個產品也可適用於零個或多個特殊供應項目。  
   
  Production.Product_inmem  
   
@@ -215,7 +215,7 @@ ms.locfileid: "34332549"
   
 -   (ProductNumber) 上的 NONCLUSTERED 索引：允許對產品號碼進行依序掃描  
   
- Sales.SpecialOffer_inmem 在 (SpecialOfferID) 上具有一個 HASH 索引：特殊優惠的點查閱在工作負載示範的關鍵過程中。 bucket_count 的大小調整為 100 萬，以允許未來成長使用。  
+ Sales.SpecialOffer_inmem 在 (SpecialOfferID) 上具有一個 HASH 索引：特殊供應項目的點查閱在工作負載示範的關鍵過程中。 bucket_count 的大小調整為 100 萬，以允許未來成長使用。  
   
  工作負載示範中不會參考 Sales.SpecialOfferProduct_inmem，因此沒有在此資料表上使用雜湊索引來最佳化工作負載的明顯需求 - (SpecialOfferID, ProductID) 和 (ProductID) 上的索引為 NONCLUSTERED。  
   

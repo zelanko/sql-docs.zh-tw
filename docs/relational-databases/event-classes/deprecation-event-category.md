@@ -15,13 +15,13 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 78b7aede849976be4f29993b794440e337b31c57
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2af5aa90015f2c07860afb99631d0381cf68ac8a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324929"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546988"
 ---
 # <a name="deprecation-event-category"></a>Deprecation 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34324929"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[Deprecation Announcement 事件類別](../../relational-databases/event-classes/deprecation-announcement-event-class.md)|指出會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中移除的功能。|  
 |[Deprecation Final Support 事件類別](../../relational-databases/event-classes/deprecation-final-support-event-class.md)|指出會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]下一個主要版本中移除的功能。|  

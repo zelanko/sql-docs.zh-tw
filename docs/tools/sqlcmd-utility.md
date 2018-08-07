@@ -32,13 +32,13 @@ caps.latest.revision: 155
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4f9ee992655b127b1ad3b25a7cf89aa9da80b4fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3decb197568d28088e5206ac1ffc46b45108d734
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990410"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452732"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd 工用程式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,8 +47,15 @@ ms.locfileid: "37990410"
 
  > 使用 sqlcmd 在 Linux 上，請參閱[在 Linux 上安裝 sqlcmd 和 bcp](../linux/sql-server-linux-setup-tools.md)。
 
-  您可使用 **sqlcmd** 公用程式在命令提示字元處、於 SQLCMD 模式的 [查詢編輯器] 中、在 Windows 指令碼檔案中，或是在 SQL Server  Agent 作業的作業系統 (Cmd.exe) 作業步驟中，輸入 Transact-SQL 陳述式、系統程序與指令碼檔案。 此公用程式會使用 ODBC 來執行 TRANSACT-SQL 批次。 
-  
+ **Sqlcmd**公用程式可讓您輸入 TRANSACT-SQL 陳述式、 系統程序和指令碼檔案，透過各種可用的模式：
+
+- 在命令提示字元中。
+- 在 **查詢編輯器**SQLCMD 模式。
+- 在 Windows 指令碼檔案中。
+- 在 SQL Server Agent 作業的作業系統 (Cmd.exe) 作業步驟。
+
+此公用程式會使用 ODBC 來執行 TRANSACT-SQL 批次。 
+ 
 > [!NOTE]
 > sqlcmd 公用程式的最新版本 (Web 版本) 可從 [下載中心](http://go.microsoft.com/fwlink/?LinkID=825643)取得。 您需要的版本，13.1 或更新版本，才能支援 Always Encrypted (`-g`) 和 Azure Active Directory 驗證 (`-G`)。 (您可能已在電腦上安裝多個 sqlcmd.exe 版本。 請務必使用正確的版本。 若要判斷版本，請執行 `sqlcmd -?`。)
 
@@ -57,7 +64,7 @@ ms.locfileid: "37990410"
   若要在 SSMS 中執行 sqlcmd 陳述式，請從上方導覽 [查詢] 功能表的下拉式清單中選取 [SQLCMD 模式]。  
   
 > [!IMPORTANT] 
-> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient，在 [查詢編輯器] 中執行正規和 SQLCMD 模式。 從命令列執行 **sqlcmd** 時， **sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
+> [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] (SSMS) 使用 Microsoft [!INCLUDE[dnprdnshort_md](../includes/dnprdnshort-md.md)] SqlClient，在 [查詢編輯器] 中執行正規和 SQLCMD 模式。 從命令列執行 **sqlcmd** 時，**sqlcmd** 會使用 ODBC 驅動程式。 因為可能會套用不同的預設選項，因此，以 SQLCMD 模式在 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] 中以及在 **sqlcmd** 公用程式中執行相同的查詢時，可能會看到不同的行為。  
 >   
   
  目前， **sqlcmd** 不需要在命令列選項與值之間保留一個空格。 但是在未來的版本中，可能會需要在命令列選項與值之間空一個空格。  
@@ -121,13 +128,13 @@ sqlcmd
 ## <a name="command-line-options"></a>命令列選項  
  **登入相關選項**  
   **-A**  
- 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 只有在支援 DAC 的伺服器電腦上才可進行。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -G 選項不支援-A 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的使用。
+ 使用專用管理員連接 (DAC) 來登入 SQL Server。 這種連接可用以進行伺服器的疑難排解。 此連接只適用於支援 DAC 的伺服器電腦。 如果無法使用 DAC， **sqlcmd** 會產生一則錯誤訊息，並結束作業。 如需有關 DAC 的詳細資訊，請參閱 [資料庫管理員的診斷連線](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 -G 選項不支援-A 選項。 當連接到 SQL Database 使用-A，您必須是 SQL server 系統管理員。 DAC 不是 Azure Active Directory 系統管理員的使用。
   
  **-C**  
  這個參數由用戶端所設定，以隱含方式信任伺服器憑證而且不進行驗證。 這個選項相當於 ADO.NET 選項 `TRUSTSERVERCERTIFICATE = true`。  
   
  **-d** *db_name*  
- 當您啟動 **sqlcmd** 時發出 `USE` *db_name* 陳述式。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDDBNAME。 這會指定初始資料庫。 預設值為您登入的預設資料庫屬性。 如果資料庫不存在，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。  
+ 當您啟動 **sqlcmd** 時發出 `USE` *db_name* 陳述式。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDDBNAME。 此參數會指定初始資料庫。 預設值為您登入的預設資料庫屬性。 如果資料庫不存在，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。  
   
  **-l** *login_timeout*  
  指定在您嘗試連接到伺服器時， **sqlcmd** 登入 ODBC 驅動程式逾時之前的秒數。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDLOGINTIMEOUT。 **sqlcmd** 的預設登入逾時值是 8 秒。 當使用 **-G** 連接到 SQL 資料庫或 SQL 資料倉儲，並使用 Azure Active Directory 進行驗證時，選項建議使用至少 30 秒的逾時值。 此登入逾時必須是介於 0 和 65534 之間的數字。 如果所提供的值不是數值或不在該範圍內， **sqlcmd** 就會產生錯誤訊息。 0 值指定逾時值無限。
@@ -149,10 +156,11 @@ sqlcmd
 - **Azure Active Directory 使用者名稱和密碼：** 
 
     當您想要使用 Azure Active Directory 使用者名稱和密碼時，您可以提供 **-G** 選項，並同時提供 **-U** 和 **-P** 選項來使用使用者名稱和密碼。
+
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    這會在後端產生下列連線字串︰ 
+    -G 參數會在後端產生下列連接字串： 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -192,9 +200,13 @@ sqlcmd
  用戶端會用這個參數要求加密的連接。  
   
  **-P** *password*  
- 這是一個使用者指定的密碼。 密碼會區分大小寫。 如果使用 -U 選項但未使用 **-P** 選項，且未設定 SQLCMDPASSWORD 環境變數， **sqlcmd** 會提示使用者輸入密碼。 若要指定 null 密碼 (不建議)，請使用 **-P ""**。 而且，記得要永遠：
+ 這是一個使用者指定的密碼。 密碼會區分大小寫。 如果使用 -U 選項但未使用 **-P** 選項，且未設定 SQLCMDPASSWORD 環境變數， **sqlcmd** 會提示使用者輸入密碼。 我們不建議使用 null 密碼，但您可以使用一組連續雙引號的參數值指定 null 密碼：
+
+- **-P ""**
+
+我們建議您使用強式密碼。
  
-#### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**使用強式密碼！！**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
+#### <a name="use-a-strong-passwordhttpsmsdnmicrosoftcomlibraryms161962sql130aspx"></a>[**使用強式密碼！**](https://msdn.microsoft.com/library/ms161962(SQL.130).aspx)
   
   
  密碼提示的顯示方式，會以將密碼提示輸出到主控台的方式顯示，如： `Password:`  
@@ -212,7 +224,7 @@ sqlcmd
   
  如果使用者名稱和密碼的組合不正確，會產生錯誤訊息。  
   
-**注意！**  保留 OSQLPASSWORD 環境變數的目的是為了與舊版相容。 SQLCMDPASSWORD 環境變數優先於 OSQLPASSWORD 環境變數；這表示您可以先後使用 **sqlcmd** 和 **osql** ，它們不會互相干擾，且舊的指令碼仍能持續運作。  
+**注意！**  保留 OSQLPASSWORD 環境變數的目的是為了與舊版相容。 SQLCMDPASSWORD 環境變數優先於 OSQLPASSWORD 環境變數。 現在，已不再共用 OSQLPASSWORD，公用程式**sqlcmd**並**osql**可用彼此相鄰不受干擾。 舊的指令碼仍能運作。  
   
  如果同時使用 **-P** 選項和 **-E** 選項，就會產生錯誤訊息。  
   
@@ -231,7 +243,7 @@ sqlcmd
 >  保留 OSQLSERVER 環境變數的目的是為了與舊版相容。 SQLCMDSERVER 環境變數優先於 OSQLSERVER 環境變數；這表示您可以先後使用 **sqlcmd** 和 **osql** ，它們不會互相干擾，舊的指令碼仍能運作。  
   
  **-U** *login_id*  
- 是登入名稱或自主資料庫使用者名稱。 若是自主資料庫使用者，您必須提供資料庫名稱選項 (-d)。  
+ 是登入名稱或自主資料庫使用者名稱。 針對自主資料庫使用者，您必須提供資料庫名稱選項 (-d)。  
   
 > [!NOTE]  
 >  可利用 OSQLUSER 環境變數達到回溯相容性。 SQLCMDUSER 環境變數優先於 OSQLUSER 環境變數。 這表示您可以先後使用 **sqlcmd** 和 **osql** ，而不會發生互相干擾的狀況。 這也表示現有的 **osql** 指令碼仍然有效。  
@@ -260,7 +272,7 @@ sqlcmd
   
 -   **sqlcmd** 會自動識別位元組由大到小 (Big-Endian) 和位元組由小到大 (Little-Endian) 的 Unicode 輸入檔。 如果已指定 **-u** 選項，則輸出一律為位元組由小到大的 Unicode。  
   
--   如果未指定輸出檔，則輸出字碼頁會是主控台字碼頁。 這可讓輸出正確地顯示在主控台上。  
+-   如果未指定輸出檔，則輸出字碼頁會是主控台字碼頁。 此方法可讓輸出正確地顯示在主控台上。  
   
 -   假設多個輸入檔都是相同的字碼頁。 Unicode 與非 Unicode 的輸入檔可以混合使用。  
   
@@ -284,7 +296,7 @@ sqlcmd
  **-o** *output_file*  
  識別用來接收 **sqlcmd**輸出的檔案。  
   
- 如果指定 **-u** ， *output_file* 會以 Unicode 格式儲存。 如果檔案名稱無效，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。 **sqlcmd** 不支援同時將多個 **sqlcmd** 處理序寫入相同的檔案。 檔案輸出會損毀或不正確。 如需檔案格式的詳細資訊，請參閱 **-f** 參數。 如果這個檔案不存在，系統將會建立該檔案， 並覆寫先前 **sqlcmd** 工作階段所產生的同名檔案。 此處所指定的檔案並不是 **stdout** 檔案。 如果指定 **stdout** 檔案，則不會使用這個檔案。  
+ 如果指定 **-u** ， *output_file* 會以 Unicode 格式儲存。 如果檔案名稱無效，系統會產生一則錯誤訊息，且會結束 **sqlcmd** 。 **sqlcmd** 不支援同時將多個 **sqlcmd** 處理序寫入相同的檔案。 檔案輸出會損毀或不正確。 請參閱 **-f**參數也是與檔案格式。 如果這個檔案不存在，系統將會建立該檔案， 並覆寫先前 **sqlcmd** 工作階段所產生的同名檔案。 此處所指定的檔案並不是 **stdout** 檔案。 如果指定 **stdout** 檔案，則不會使用這個檔案。  
   
  路徑範例：  
 
@@ -355,20 +367,20 @@ sqlcmd
  `sqlcmd -v MyVar1=something -v MyVar2="some thing"`  
   
  **-x**  
- 讓 **sqlcmd** 忽略指令碼變數。 當指令碼所包含的許多 INSERT 陳述式可能含有與一般變數 (例如 $(*variable_name*)) 相同格式的字串時，這就很有用。  
+ 讓 **sqlcmd** 忽略指令碼變數。 當指令碼所包含的許多 INSERT 陳述式可能含有與一般變數 (例如 $(*variable_name*)) 相同格式的字串時，此參數就很有用。  
   
  **格式化選項**  
   **-h** *headers*  
  指定資料行標頭之間所要列印的資料列數。 預設值是每一組查詢結果各列印一次標頭。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDHEADERS。 請利用 **-1** 來指定不列印標頭。 任何無效的值都會讓 **sqlcmd** 產生錯誤訊息，並結束作業。  
   
  **-k** [**1** | **2**]  
- 從輸出中移除所有控制字元，如定位字元和新行字元。 這會在資料傳回時，保留資料行的格式。 如果指定 1，會用單一空格來取代控制字元。 如果指定 2，會用單一空格取代連續控制字元。 **-k** 與 **-k1**相同。  
+ 從輸出中移除所有控制字元，如定位字元和新行字元。 此參數會在資料傳回時，保留資料行的格式。 如果指定 1，會用單一空格來取代控制字元。 如果指定 2，會用單一空格取代連續控制字元。 **-k** 與 **-k1**相同。  
   
  **-s** *col_separator*  
  指定資料行分隔字元。 預設值是空格。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDCOLSEP。 若要使用對作業系統有特殊意義的字元，如連字號 (&) 或分號 (;)，請用引號 (") 括住該字元。 資料行分隔字元可以是任何 8 位元的字元。  
   
  **-w** *column_width*  
- 指定輸出的螢幕寬度。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDCOLWIDTH。 資料行寬度必須是大於 8 且小於 65536 的數字。 如果指定的資料行寬度不在該範圍內， **sqlcmd** 會產生錯誤訊息。 預設寬度是 80 個字元。 當輸出行超出指定的資料行寬度時，它會折行。  
+ 指定輸出的螢幕寬度。 這個選項會設定 **sqlcmd** 指令碼變數 SQLCMDCOLWIDTH。 資料行寬度必須是大於 8 且小於 65536 的數字。 如果指定的資料行寬度不在該範圍內，**sqlcmd** 會產生錯誤訊息。 預設寬度是 80 個字元。 當輸出行超出指定的資料行寬度時，它會折行。  
   
  **-W**  
  這個選項會從資料行中移除尾端的空格。 在準備要匯出至另一個應用程式的資料時，請使用 **-s** 選項與這個選項。 這個選項不能搭配 **-y** 或 **-Y** 選項一起使用。  
@@ -441,10 +453,10 @@ sqlcmd
 > [!NOTE]  
 >  由於網路廣播的本質之故， **sqlcmd** 可能不會收到所有伺服器及時的回應。 因此，這個選項每次的引動過程，所傳回的伺服器清單可能各不相同。  
   
- 如果指定了選擇性的參數 **c** ，顯示的輸出不會有 Servers: 標頭行，列出的每個伺服器行也都不會有開頭空白。 這稱為清除輸出。 清除輸出可以增進指令碼語言的處理效能。  
+ 如果指定了選擇性的參數 **c** ，顯示的輸出不會有 **Servers:** 標頭行，列出的每個伺服器行也都不會有開頭空白。 這份簡報稱為清除輸出。 清除輸出可以增進指令碼語言的處理效能。  
   
  **-p**[**1**]  
- 列印每個結果集的效能統計資料。 以下是效能統計資料的格式範例：  
+ 列印每個結果集的效能統計資料。 以下顯示的是效能統計資料的格式範例：  
   
  `Network packet size (bytes): n`  
   
@@ -678,16 +690,16 @@ sqlcmd
   
  這個錯誤會使得 **sqlcmd** 指令碼結束作業，並將訊息識別碼 50001 傳回用戶端。  
   
- SQL Server 會保留傳回值 -1 至 -99；**sqlcmd** 定義了下列其他傳回值：  
+ 傳回值 -1 到 -99 會由 SQL Server 保留，而 **sqlcmd** 定義下列額外傳回值：  
   
-|傳回值|Description|  
+|傳回值|描述|  
 |-------------------|-----------------|  
 |-100|在選取傳回值之前發生錯誤。|  
 |-101|在選取傳回值時，找不到任何資料列。|  
 |-102|在選取傳回值時，發生轉換錯誤。|  
   
  **GO** [*count*]  
- GO 會發出批次結束及執行任何快取的 Transact-SQL 陳述式的訊號。批次會當作個別批次多次執行；您無法在單一批次中多次宣告變數。
+ GO 會發出批次結束及執行任何快取的 Transact-SQL 陳述式的信號。 批次當做個別批次執行多次。 您無法在單一批次中多次宣告變數。
   
  **其他命令**  
   **:r \<** 檔名**>**  
@@ -757,20 +769,21 @@ sqlcmd
   
 -   每個新的 **sqlcmd** 工作階段都會覆寫現有的同名檔案。  
   
-### <a name="informational-messages"></a>參考用訊息  
- **sqlcmd** 會列印伺服器所傳送的所有參考用訊息。 在下列範例中，執行 Transact-SQL 陳述式之後，會列印一則參考用訊息。  
+### <a name="informational-messages"></a>參考用訊息
+
+**sqlcmd** 會列印伺服器所傳送的所有參考用訊息。 在下列範例中，執行 Transact-SQL 陳述式之後，會列印一則參考用訊息。
   
- 在命令提示字元中，請輸入下列項目：  
+在命令提示字元中，請輸入下列項目：
+
+`sqlcmd`
   
- `sqlcmd`  
-  
- `At the sqlcmd prompt type:`  
-  
- `USE AdventureWorks2012;`  
-  
- `GO`  
-  
- 當您按 ENTER 時，會出現下列參考用訊息：「已將資料庫內容變更為 'AdventureWorks2012'」。  
+在 sqlcmd 提示字元輸入：
+
+`USE AdventureWorks2012;`
+
+`GO`
+
+當您按 ENTER 時，會出現下列參考用訊息：「已將資料庫內容變更為 'AdventureWorks2012'」。  
   
 ### <a name="output-format-from-transact-sql-queries"></a>Transact-SQL 查詢的輸出格式  
  **sqlcmd** 會先列印包含選取清單中所指定之資料行名稱的資料行標頭。 資料行名稱是以 SQLCMDCOLSEP 字元分隔。 根據預設，這是一個空格。 如果資料行名稱長度小於資料行寬度，便會在輸出中填補空格直到下一個資料行。  

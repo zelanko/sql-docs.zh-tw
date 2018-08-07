@@ -1,7 +1,7 @@
 ---
 title: 連接選項 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174935"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367640"
 ---
 # <a name="connection-options"></a>連線選項
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "39174935"
 |TraceFile|String|為用於追蹤資料的檔案指定路徑。|未設定值。|  
 |TraceOn|1 或 **true** 會啟用追蹤。<br /><br />0 或 **false** 會停用追蹤。|指定對於要建立的連接是要啟用 ODBC 追蹤 (1 或 **true**)，還是加以停用 (0 或 **false**)。|**false** (0)|  
 |TransactionIsolation|SQLSRV 驅動程式會使用下列值：<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />PDO_SQLSRV 驅動程式會使用下列值：<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|指定交易隔離等級。<br /><br />如需交易隔離的詳細資訊，請參閱 SQL Server 文件中的[設定交易隔離等級](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)。|SQLSRV_TXN_READ_COMMITTED<br /><br />中的多個<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|transparentNetworkIPResolution|[啟用] 或 [停用]|會影響與主機名稱，相關聯的連接順序，當第一個問題解決之後，主機名稱的 IP 沒有回應，而且有多個 Ip。<br /><br />它與 MultiSubnetFailover 提供不同的連接順序的互動。 如需詳細資訊，請參閱 <<c0> [ 使用透明網路 IP 解析](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)。|已啟用|
+|transparentNetworkIPResolution|[啟用] 或 [停用]|會影響與主機名稱，相關聯的連接順序，當第一個問題解決之後，主機名稱的 IP 沒有回應，而且有多個 Ip。<br /><br />它與 MultiSubnetFailover 提供不同的連接順序的互動。 如需詳細資訊，請參閱 <<c0> [ 透明網路 IP 解析](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)或是[使用無形網路 IP 解析](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution)。|已啟用|
 |TrustServerCertificate|1 或 **true** 會信任憑證。<br /><br />0 或 **false** 會不信任憑證。|指定用戶端應信任 (1 或 **true**) 還是拒絕 (0 或 **false**) 自我簽署的伺服器憑證。|**false** (0)|  
 |UID<br /><br />(PDO_SQLSRV 驅動程式不支援)|String|指定在使用 SQL Server 驗證進行連接時所要使用的使用者識別碼<sup>4</sup>。|未設定值。|  
 |WSID|String|指定用於追蹤之電腦的名稱。|未設定值。|  
@@ -69,7 +69,7 @@ ms.locfileid: "39174935"
 
 4. 要連接的 *UID* 驗證進行連接時， *PWD* 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 屬性都必須設定。  
 
-許多支援的索引鍵都是 ODBC 連接字串屬性。 如需 ODBC 連接字串的資訊，請參閱[搭配 SQL Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。  
+許多支援的索引鍵都是 ODBC 連接字串屬性。 如需 ODBC 連接字串的資訊，請參閱[搭配 SQL Native Client 使用連接字串關鍵字](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)。
 
 ## <a name="see-also"></a>另請參閱  
 [連線到伺服器](../../connect/php/connecting-to-the-server.md)  

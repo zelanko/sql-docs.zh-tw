@@ -18,13 +18,13 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0a6e8816746eba64bc1c6673cc81fd819494a38d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 89e30a9e76c9a9d786999572c436bf26ddbd79fe
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431907"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557298"
 ---
 # <a name="specify-first-and-last-triggers"></a>指定第一個與最後一個觸發程序
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37431907"
   
  若要指定 AFTER 觸發程序的順序，請使用 **sp_settriggerorder** 預存程序。 **sp_settriggerorder** 具有下列選項。  
   
-|選項|描述|  
+|選項|Description|  
 |------------|-----------------|  
 |**第一個**|指定 DML 觸發程序為針對觸發動作而引發的第一個 AFTER 觸發程序。|  
 |**最後一個**|指定 DML 觸發程序為針對觸發動作而引發的最後一個 AFTER 觸發程序。|  

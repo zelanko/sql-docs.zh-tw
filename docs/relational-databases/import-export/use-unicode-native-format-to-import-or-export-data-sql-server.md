@@ -18,13 +18,13 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d384ba04beface0d9d784fc3073722208d281095
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f2f0f79a6bd68c362382144b5f3185df9540678d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941239"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556998"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>使用 Unicode 原生格式匯入或匯出資料 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "32941239"
   
 下列命令選項支援 Unicode 原生格式：  
   
-|命令|選項|描述|  
+|命令|選項|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-N**|導致 **bcp** 公用程式使用 Unicode 原生格式，這個格式會對所有非字元資料使用原生 (資料庫) 資料類型，對所有字元 (**char**、 **nchar**、 **varchar**、 **nvarchar**、 **text**及 **ntext**) 資料使用 Unicode 字元資料格式。|  
 |BULK INSERT|DATAFILETYPE **='widenative'**|使用 Unicode 原生格式大量匯入資料。|  

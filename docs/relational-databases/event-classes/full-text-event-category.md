@@ -17,13 +17,13 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44ab63588467d2553a239ed99c92ff209ec48146
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5af77bd7ed74ac7ab8c3c4de534448e1fd8e62b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326359"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547518"
 ---
 # <a name="full-text-event-category"></a>Full Text 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34326359"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[FT:Crawl Aborted 事件類別](../../relational-databases/event-classes/ft-crawl-aborted-event-class.md)|指出全文檢索搜耙發生例外狀況。|  
 |[FT:Crawl Started 事件類別](../../relational-databases/event-classes/ft-crawl-started-event-class.md)|指出全文檢索搜耙已啟動。|  

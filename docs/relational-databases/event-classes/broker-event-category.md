@@ -17,13 +17,13 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cab6e66358d16cabb70cd2c371a8f139bd371c99
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d00dfa34a6e7fa9ca7b5352b05463cf25791931e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327819"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562422"
 ---
 # <a name="broker-event-category"></a>Broker 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34327819"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[Broker:Activation 事件類別](../../relational-databases/event-classes/broker-activation-event-class.md)|當佇列監視器啟動一個啟用預存程序時產生的事件。|  
 |[Broker:Connection 事件類別](../../relational-databases/event-classes/broker-connection-event-class.md)|為報告 Service Broker 所管理之傳輸連接的狀態而產生的事件。|  

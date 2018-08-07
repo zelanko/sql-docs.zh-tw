@@ -18,13 +18,13 @@ ms.author: mikeray
 manager: craigg
 ms.suite: sql
 ms.prod_service: table-view-index, sql-database
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3d9494e5aec89a7a5d3b68e214b9561561aa9c07
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7f58eab0875194ffcd1c8452e7d3f141866fcb8b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087320"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560918"
 ---
 # <a name="perform-index-operations-online"></a>線上執行索引作業
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

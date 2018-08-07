@@ -18,13 +18,13 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f3471f30347decd4a6a7f882aed43c8d1325107
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c3f447e5c0ffa192262e26ade592d1e9c23fc741
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32939783"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561008"
 ---
 # <a name="event-tracing-for-windows-target"></a>Windows 事件追蹤目標
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "32939783"
   
  下表描述用於設定 ETW 目標的可用選項。  
   
-|選項|允許的值|描述|  
+|選項|允許的值|Description|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|最多 256 個字元的任何字串。 此為選擇性的值。|擴充事件工作階段名稱。 根據預設，這個名稱是 XE_DEFAULT_ETW_SESSION。|  
 |default_etw_session_logfile_path|最多 256 個字元的任何字串。 此為選擇性的值。|擴充事件工作階段之記錄檔的路徑。 根據預設，這個路徑是 %TEMP%\ XEEtw.etl。|  

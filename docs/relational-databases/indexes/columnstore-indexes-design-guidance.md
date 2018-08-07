@@ -14,13 +14,13 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4b49040b94f04625a027ec07a490117aebed278
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2bae9d48b20109e129eb159f5d3d9e3e6c0651e5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941383"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564722"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指導
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,6 +97,7 @@ ms.locfileid: "32941383"
   
 *   免除個別資料倉儲的需要。 傳統上，公司會在資料列存放區資料表上執行交易，再將資料載入不同的資料倉儲執行分析。 如果工作負載很多，您可以在交易式資料表上建立非叢集資料行存放區索引，以避免載入處理序與個別的資料倉儲。
 
+  
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 提供數種策略，可讓這個案例更有效能。 您可以啟用非叢集資料行存放區索引，而不需變更您的 OLTP 應用程式，因此可以輕鬆試用。 
 
 若要新增額外的處理資源，請在可讀取的次要複本上執行分析。 使用可讀取次要複本時，可以區隔交易式工作負載和分析工作負載的處理。 

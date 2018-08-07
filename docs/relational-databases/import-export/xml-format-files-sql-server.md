@@ -19,13 +19,13 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ae7ce7fbf55cffbc069eb7afcc15eebbb6833f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4002404d3547e9633bc2e7bc5fd4fb9884efaef7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941403"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563532"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 格式檔案 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -257,7 +257,7 @@ ms.locfileid: "32941403"
   
  欄位會使用下列屬性對應到目標資料表的資料行：  
   
-|COLUMN 屬性|描述|選擇性 /<br /><br /> 必要項|  
+|COLUMN 屬性|Description|選擇性 /<br /><br /> 必要項|  
 |----------------------|-----------------|------------------------------|  
 |SOURCE **="***fieldID***"**|指定對應到資料行的欄位識別碼。<br /><br /> \<COLUMN SOURCE **="***fieldID***"**/> maps to \<FIELD ID **="***fieldID***"**/>|必要項|  
 |NAME = "*columnName*"|指定資料列集中由格式檔案代表的資料行名稱。 此資料行名稱會用來識別結果集中的資料行，而且它不需要對應到用於目標資料表中的資料行名稱。|必要項|  

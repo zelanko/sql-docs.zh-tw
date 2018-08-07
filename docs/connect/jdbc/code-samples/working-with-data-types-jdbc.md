@@ -1,7 +1,7 @@
 ---
-title: 使用資料類型 (JDBC) |Microsoft 文件
+title: 使用的資料類型 (JDBC) |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ccecd482516979a2f3ace2a4ce2c039af3ad1c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 857f05430f963e085d47fad633d0039e2bbd7fb2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828144"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39453092"
 ---
 # <a name="working-with-data-types-jdbc"></a>使用資料類型 (JDBC)
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  主要功能[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]可讓 Java 開發人員能夠存取包含在資料[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料庫。 為了達成此目的，JDBC 驅動程式會調解之間的轉換[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料類型和 Java 語言類型與物件。  
+[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 的主要功能就是可讓 Java 開發人員存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料庫中包含的資料。 為了完成這項工作，JDBC 驅動程式會調解 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型和 Java 語言類型與物件之間的轉換。  
   
 > [!NOTE]  
->  如需詳細的討論[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]和 JDBC driver 資料類型，包括其差異和它們如何轉換為 Java 語言資料類型，請參閱[了解 JDBC Driver 資料類型](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。  
+> 如需 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 及 JDBC 驅動程式資料類型的詳細討論，包括其差異和它們如何轉換為 Java 語言資料類型，請參閱[了解 JDBC 驅動程式資料類型](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)。  
   
- 為了能夠使用 SQL Server 資料類型，JDBC 驅動程式提供取得\<類型 >，並設定\<類型 > 的方法[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)和[SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)類別，並可提供取得\<類型 > 及更新\<類型 > 的方法[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)類別。 使用哪一種方法視您正要使用的資料類型而定，以及是否會使用結果集或查詢。  
+為了能夠使用 SQL Server 資料類型，JDBC 驅動程式提供 get\<類型> 和 set\<類型>方法給 [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 和 [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別，它也提供 get\<類型> 和 update\<類型> 方法給 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別。 使用哪一種方法視您正要使用的資料類型而定，以及是否會使用結果集或查詢。  
   
- 本節中的主題描述如何使用 JDBC driver 資料類型來存取[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Java 應用程式中的資料。  
+本節的主題描述如何使用 JDBC 驅動程式資料類型，在 Java 應用程式中存取 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|Description|  
-|-----------|-----------------|  
-|[基本資料類型範例](../../../connect/jdbc/basic-data-types-sample.md)|描述如何使用結果集 getter 方法擷取基本[!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]資料類型值，以及如何使用結果集 update 方法更新那些值。|  
-|[SQLXML 資料類型範例](../../../connect/jdbc/sqlxml-data-type-sample.md)|描述如何在關聯式資料庫中儲存 XML 資料、 如何從資料庫擷取 XML 資料以及如何剖析具有 XML 資料**SQLXML** Java 資料類型。|  
+| 主題                                                                         | Description                                                                                                                                                                                                                                                  |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [基本資料類型範例](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | 描述如何使用結果集 getter 方法來擷取基本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型值，以及如何使用結果集 update 方法來更新這些值。                                             |
+| [SQLXML 資料類型範例](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | 描述如何在關聯式資料庫中儲存 XML 資料、如何從資料庫中擷取 XML資料，以及如何剖析具有 **SQLXML** Java 資料類型的 XML資料。                                                                                   |
+| [空間資料類型範例](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | 描述如何在 SQL Server 中儲存空間的資料類型以及如何從 SQL Server 擷取這些型別。 也會討論如何使用新定義的類別**幾何**並**Geography**從驅動程式，來管理這些資料類型的 Java 參考。 |
   
-## <a name="see-also"></a>另請參閱  
- [範例 JDBC 驅動程式應用程式](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+[範例 JDBC 驅動程式應用程式](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  

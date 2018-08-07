@@ -15,13 +15,13 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98234a7c82ec120f5bcad11415b5061a5ae713f1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3e10a11286ca070876d121770c4ab4833656793e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329579"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564472"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34329579"
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change 事件類別資料行  
   
-|資料行名稱|資料類型|描述|資料行識別碼|是|  
+|資料行名稱|資料類型|Description|資料行識別碼|是|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|事件類型 = 81。|27|否|  
 |**EventSequence**|**int**|要求中的給定事件順序。|51|否|  

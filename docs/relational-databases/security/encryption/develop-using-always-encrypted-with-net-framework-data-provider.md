@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973823"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538138"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ cmd.ExecuteNonQuery();
 .NET Framework Data Provider for SQL Server 隨附於下列內建資料行主要金鑰存放區提供者，它們都是預先以特定提供者名稱 (用以查閱提供者) 註冊。
 
 
-| 類別 | 描述 | 提供者 (查閱) 名稱 |
+| 類別 | Description | 提供者 (查閱) 名稱 |
 |:---|:---|:---|
 |SqlColumnEncryptionCertificateStoreProvider 類別| Windows 憑證存放區的提供者。 | MSSQL_CERTIFICATE_STORE |
 |[SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**注意︰** .NET Framework 4.6.1 和更新版本才有這個提供者。 |支援 Microsoft [Cryptography API: Next Generation](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx)(加密 API：新一代 (CNG)) 的金鑰存放區提供者。 一般而言，這類型的存放區是硬體安全性模組，可保護和管理數位金鑰，並提供密碼編譯處理的實體裝置。  | MSSQL_CNG_STORE|
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|[屬性]|描述|導入 .NET 版本
+|[屬性]|Description|導入 .NET 版本
 |:---|:---|:---
 |[SqlColumnEncryptionCertificateStoreProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Windows 憑證存放區的金鑰存放區提供者。|  4.6
 |[SqlColumnEncryptionCngProvider 類別](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Microsoft 加密 API：新一代 (CNG) 的金鑰存放區提供者。|  4.6.1

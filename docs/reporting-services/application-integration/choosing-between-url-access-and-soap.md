@@ -13,12 +13,13 @@ ms.topic: reference
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dbb294c04f82661c2f7a1ebd736ec0ad2ceb143f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b1515301d1efe45cb27da2125188a72ad2dad7ad
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049236"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400751"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>在 Reporting Services 的 URL 存取與 SOAP 之間選擇
 

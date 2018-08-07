@@ -16,13 +16,13 @@ caps.latest.revision: 45
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6532283a3315ad60587ce6fd126f91859f42f29f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 24b0163ef29d5e91aa7acca96071229f5de9b513
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708376"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564282"
 ---
 # <a name="indexes"></a>索引
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34708376"
 ## <a name="available-index-types"></a>可用的索引類型
 下表列出 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中可用的索引類型，並提供其他資訊的連結。  
   
-|索引類型|描述|其他資訊|  
+|索引類型|Description|其他資訊|  
 |----------------|-----------------|----------------------------|  
 |雜湊|有了雜湊索引，便會透過記憶體中的雜湊表來存取資料。 雜湊索引會耗用固定數量的記憶體，也就是值區計數的函數。|[使用記憶體最佳化資料表索引的方針](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [雜湊索引設計指導方針](../../relational-databases/sql-server-index-design-guide.md#hash_index)|  
 |記憶體最佳化的非叢集|對於已完成記憶體最佳化的非叢集索引，記憶體耗用量是資料列計數和索引鍵資料行大小的函數|[使用記憶體最佳化資料表索引的方針](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)<br /><br /> [記憶體最佳化的非叢集索引設計指導方針](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)|  

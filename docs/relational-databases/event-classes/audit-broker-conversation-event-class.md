@@ -15,13 +15,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ba8cd56b49c78810ebef16925073d0fedddade3
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a47a6adddf212c2da97813143b8ca6bf96f520e0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329559"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563492"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker 交談事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34329559"
   
 ## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker 交談事件類別的資料行  
   
-|資料行|類型|描述|資料行編號|可篩選|  
+|資料行|類型|Description|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|建立 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體之連接的用戶端應用程式名稱。 這個資料行會填入應用程式所傳送的值，而非程式的顯示名稱。|10|是|  
 |**BigintData1**|**bigint**|訊息的訊息序號。|52|否|  
@@ -55,7 +55,7 @@ ms.locfileid: "34329559"
   
  下表列出此事件類別的子類別值。  
   
-|ID|子類別|描述|  
+|ID|子類別|Description|  
 |--------|--------------|-----------------|  
 |@shouldalert|沒有安全性標頭|在安全交談期間，Service Broker 收到不包含工作階段金鑰的訊息。 一旦建立安全交談，對話通訊協定需要交談中的所有訊息都包含工作階段金鑰。|  
 |2|沒有憑證|Service Broker 在交談中找不到其中一個參與者的可用憑證。 為了保護交談的安全，資料庫必須包含同時針對交談的寄件者與收件者的憑證。|  

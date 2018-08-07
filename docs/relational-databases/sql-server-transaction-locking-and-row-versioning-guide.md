@@ -21,13 +21,13 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0993d9437044b1eba713e2ac7cd10b2ab5372b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 50ae9731b974753b0a3fef174314ef5bbe3e03d5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973793"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563222"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>交易鎖定與資料列版本設定指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -346,7 +346,7 @@ GO
   
  下表顯示[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]可以鎖定的資源。  
   
-|資源|描述|  
+|資源|Description|  
 |--------------|-----------------|  
 |RID|資料列識別碼，用來鎖定堆積內單一資料列。|  
 |KEY|索引中的資料列鎖定，用來保護可序列化交易中的索引鍵範圍。|  
@@ -368,7 +368,7 @@ GO
   
  下表顯示 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 使用的資源鎖定模式。  
   
-|鎖定模式|描述|  
+|鎖定模式|Description|  
 |---------------|-----------------|  
 |共用 (S)|用於不變更或更新資料的讀取作業，例如 `SELECT` 陳述式。|  
 |更新 (U)|用於可更新的資源上。 防止當多個工作階段正在讀取、鎖定及後來可能更新資源時發生常見的死結。|  
@@ -403,7 +403,7 @@ GO
   
 <a name="lock_intent_table"></a> 意圖鎖定包括意圖共用 (IS)、意圖獨佔 (IX) 與以意圖獨佔共用 (SIX)。  
   
-|鎖定模式|描述|  
+|鎖定模式|Description|  
 |---------------|-----------------|  
 |意圖共用 (IS)|保護在階層較低位置的某些 (但不是全部) 資源上要求的或取得的共用鎖定。|  
 |意圖獨佔 (IX)|保護在階層較低位置的某些 (但不是全部) 資源上要求的或取得的獨佔鎖定。 IX 是 IS 的超集，它也保護在較低層級資源要求的共用鎖定。|  
@@ -467,7 +467,7 @@ GO
 -   資料列代表保護索引項的鎖定模式。  
 -   模式代表所使用的合併鎖定模式。 索引鍵範圍鎖定模式由兩個部份組成。 第一個部份代表用來鎖定索引鍵範圍的鎖定類型 (Range*T*)，第二個部份代表用來鎖定特定索引鍵的鎖定類型 (*K*)。 這兩個部份使用連字號 (-) 來連接，例如 Range*T*-*K*。  
   
-    |範圍|資料列|[模式]|描述|  
+    |範圍|資料列|[模式]|Description|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|共用範圍，共用資源鎖定；可序列化範圍掃描。|  
     |RangeS|u|RangeS-U|共用範圍，更新資源鎖定；可序列化更新掃描。|  
@@ -1062,7 +1062,8 @@ BEGIN TRANSACTION
 ```   
   
 ##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]中的資料列版本設定型隔離等級  
- 從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]便提供現有之讀取認可交易隔離等級的實作，這可使用資料列版本設定來提供陳述式層級的快照集。 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]也提供快照交易隔離等級，這同樣是使用資料列版本設定，但提供交易層級的快照集。  
+ 從 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 開始，[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]便提供現有之讀取認可交易隔離等級的實作，這可使用資料列版本設定來提供陳述式層級的快照集。 
+  [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]也提供快照交易隔離等級，這同樣是使用資料列版本設定，但提供交易層級的快照集。  
   
  資料列版本設定是 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中的一般架構，會在資料列遭修改或刪除的情況下叫用寫入時複製機制。 為此，當交易正在執行時，舊版本的資料列務必可供仍需要早先交易一致狀態的交易使用。 資料列版本設定用於執行下列事項：  
   
@@ -1500,7 +1501,7 @@ ALTER DATABASE AdventureWorks2016
   
  下表列出並說明 ALLOW_SNAPSHOT_ISOLATION 選項的狀態。 將 ALTER DATABASE 與 ALLOW_SNAPSHOT_ISOLATION 選項搭配使用，不會影響到目前存取資料庫資料的使用者。  
   
-|現行資料庫的快照隔離架構狀態|描述|  
+|現行資料庫的快照隔離架構狀態|Description|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|未啟動快照隔離交易的支援。 不允許任何快照隔離交易。|  
 |PENDING_ON|快照隔離交易的支援處於轉換狀態 (從 OFF 到 ON)。 開啟的交易必須完成。<br /><br /> 不允許任何快照隔離交易。|  

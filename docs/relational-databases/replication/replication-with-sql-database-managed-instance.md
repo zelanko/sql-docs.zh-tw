@@ -19,13 +19,13 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8dd8931bcc3fdaaa489d0a190c5ce1f6210e5f64
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d55aea5d50d9ea434aabb392d0c6b53573c0199e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088645"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559568"
 ---
 # <a name="replication-with-sql-database-managed-instance"></a>使用 SQL Database 受控執行個體複寫
 

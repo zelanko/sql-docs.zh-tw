@@ -13,13 +13,13 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3462eb53657d873d1c2e2ce57a09dad99ff4b253
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c6733d4b668e607a2b975b5861110df0c196d9ef
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334739"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553898"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>開啟編輯器 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34334739"
 ### <a name="limitations-and-restrictions"></a>限制事項  
  如果您與使用不同字碼頁之其他網站的使用者共用檔案，您應該利用適當的 Unicode 字碼頁來儲存您的檔案，以防在讀取檔案時發生錯誤。 另外，當儲存 UNIX 或 Macintosh 的檔案時，請務必以適當的文件格式來儲存您的檔案。 請在 **[檔案]** 功能表上，按一下 **[另存新檔]**，從 **[儲存]** 按鈕旁的向下箭頭按一下 **[使用編碼方式儲存]** ，然後在 **[行尾結束符號]** 之下，選擇 **[Unix]** 或 **[Macintosh]**。  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>[權限]  
  在程式碼編輯器中執行的作業，需要有授與用來登入之驗證帳戶的權限。 例如，如果您使用 [Windows 驗證] 來開啟 [ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 查詢編輯器] 視窗，則無法執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式，而此陳述式參照您的 Windows 登入帳戶無權存取的物件。  
   
 ## <a name="how-to-open-editors"></a>如何：開啟編輯器  

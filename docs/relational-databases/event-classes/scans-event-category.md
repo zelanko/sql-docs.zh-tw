@@ -17,13 +17,13 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5598a3f4ab82c6ec5f65c7afff9b370579f1f309
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e3f8745b391c68fab925f6d71103eda3d82bdf21
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326729"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565519"
 ---
 # <a name="scans-event-category"></a>Scans 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34326729"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[Scan:Started 事件類別](../../relational-databases/event-classes/scan-started-event-class.md)|指出資料表或索引掃描已啟動。|  
 |[Scan:Stopped 事件類別](../../relational-databases/event-classes/scan-stopped-event-class.md)|指出資料表或索引掃描已停止。|  

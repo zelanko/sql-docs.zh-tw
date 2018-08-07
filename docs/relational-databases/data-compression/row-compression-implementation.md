@@ -16,13 +16,13 @@ ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 74e3b96d96fa0906e92b3aa6df5f10fcdd248847
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 528cfd9f3217176853abc1d91e077a36cadf3f7b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323909"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537148"
 ---
 # <a name="row-compression-implementation"></a>資料列壓縮實作
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34323909"
 ## <a name="how-row-compression-affects-storage"></a>資料列壓縮如何影響儲存  
  下表描述資料列壓縮如何影響 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]中的現有類型。 此表格不包含可藉由使用頁面壓縮而達成的節省量。  
   
-|資料類型|儲存是否受到影響？|描述|  
+|資料類型|儲存是否受到影響？|Description|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|否|所需的最小儲存區是 1 個位元組。|  
 |**smallint**|是|如果 1 個位元組能容納此值，只會使用 1 個位元組。|  

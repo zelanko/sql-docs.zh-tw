@@ -30,13 +30,13 @@ caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4136ea1d123ce96a9a10de1dab8cfe6377bd4231
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 47d7bec624955627f8c486827b9515da7d56ecf6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695749"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560968"
 ---
 # <a name="database-checkpoints-sql-server"></a>資料庫檢查點 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "35695749"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 支援幾種類型的檢查點：自動、間接、手動和內部。 下表彙總 **檢查點**的類型：
   
-|[屬性]|[!INCLUDE[tsql](../../includes/tsql-md.md)] 介面|描述|  
+|[屬性]|[!INCLUDE[tsql](../../includes/tsql-md.md)] 介面|Description|  
 |----------|----------------------------------|-----------------|  
 |Automatic|EXEC sp_configure **'** recovery interval **','***seconds***'**|在背景自動發出，以符合 **recovery interval** 伺服器組態選項所建議的時間上限。 自動檢查點會執行到完成為止。  自動檢查點的調節是根據未完成的寫入數目以及 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 是否偵測到超過 50 毫秒的寫入延遲有增加。<br /><br /> 如需詳細資訊，請參閱 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)。|  
 |間接|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|在背景發出，以符合使用者對給定資料庫所指定的目標復原時間。 從 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]開始，預設值為 1 分鐘。 舊版的預設值為 0，指示資料庫將使用自動檢查點，其頻率取決於伺服器執行個體的復原間隔設定。<br /><br /> 如需詳細資訊，請參閱 [變更資料庫的目標復原時間 &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)。|  

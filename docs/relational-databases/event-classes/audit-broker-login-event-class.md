@@ -15,13 +15,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e1064f0902369f81cff96f94ee68520ded419d39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b532bf4cdc9f65fea1b988b13f865c1437e94c8a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34330619"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546818"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker 登入事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34330619"
   
 ## <a name="audit-broker-login-event-class-data-columns"></a>Audit Broker 登入事件類別的資料行  
   
-|資料行|類型|描述|資料行編號|可篩選|  
+|資料行|類型|Description|資料行編號|可篩選|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|在此事件類別中未使用。|10|是|  
 |**ClientProcessID**|**int**|在此事件類別中未使用。|9|是|  
@@ -56,7 +56,7 @@ ms.locfileid: "34330619"
   
  下表列出此事件類別的子類別值。  
   
-|ID|子類別|描述|  
+|ID|子類別|Description|  
 |--------|--------------|-----------------|  
 |@shouldalert|Login Success|Login Success 事件是用以報告已成功完成相鄰的 Broker 登入處理序。|  
 |2|Login Protocol Error|Login Protocol Error 事件是用以報告 Broker 所收到的訊息格式正確，但對於登入處理序目前的狀態無效。 此訊息可能已遺失或未按照順序送出。|  

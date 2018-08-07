@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 51cd2573b477fcffb40a8e22e4d0b40cd44a0224
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: afbd86936dfc440d5696b2c8fefb73100d096a50
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328019"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560828"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34328019"
   
 ## <a name="trace-file-close-event-class-data-columns"></a>Trace File Close 事件類別資料行  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|事件類別 = 150。|27|否|  
 |**EventSequence**|**int**|此追蹤中觸發這個事件的唯一時間戳記。 所觸發的每個事件都會使這個數字逐一遞增。|51|否|  

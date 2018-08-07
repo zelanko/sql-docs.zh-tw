@@ -17,13 +17,13 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a7ed1ea104d83ae4421b5e86fb14e14ca0a85a78
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 599d0a5905822d37d9ca4752a9fdf6cd98698bef
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328029"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563362"
 ---
 # <a name="tsql-event-category"></a>TSQL 事件類別目錄
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34328029"
   
 ## <a name="in-this-section"></a>本節內容  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[Exec Prepared SQL 事件類別](../../relational-databases/event-classes/exec-prepared-sql-event-class.md)|代表 SqlClient、ODBC、OLE DB、或 DB-Library 已經執行備妥的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|  
 |[Prepare SQL 事件類別](../../relational-databases/event-classes/prepare-sql-event-class.md)|代表 SqlClient、ODBC、OLE DB、或者 DB-Library 已經備妥要使用的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式。|  

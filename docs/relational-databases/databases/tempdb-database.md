@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7a260337f00e6e37015855f9141fbd081e34e91
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4188b32bca78e0cf6d0fb8335cfa16f8bc504b77
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108370"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562202"
 ---
 # <a name="tempdb-database"></a>tempdb 資料庫
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

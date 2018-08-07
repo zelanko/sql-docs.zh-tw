@@ -1,7 +1,7 @@
 ---
 title: 基本資料類型範例 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,61 +14,45 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1807de415a5e9641ab431ca7fed123fb097eb90e
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: 98c351eef36810032e55941683996c007a8c39d3
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279159"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452071"
 ---
 # <a name="basic-data-types-sample"></a>基本資料類型範例
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用結果集 getter 方法擷取基本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型值，以及如何使用結果集 update 方法更新那些值。  
+此 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 範例應用程式示範如何使用結果集 getter 方法擷取基本 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 資料類型值，以及如何使用結果集 update 方法來更新那些值。  
   
- 此範例的程式碼檔案名稱為 BasicDT.java，可在下列位置找到：  
-  
- \<*安裝目錄*> \sqljdbc_\<*版本*>\\<*語言*> \samples\datatypes  
-  
+此範例的程式碼檔案名稱為 BasicDataTypes.java，可以在下列位置找到：  
+
+```
+\<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
+```
+
 ## <a name="requirements"></a>需求  
- 若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 您也必須存取 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../../connect/jdbc/using-the-jdbc-driver.md)。  
-  
- 在 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 範例資料庫中建立下列資料表及範例資料：  
-  
-```sql
-use AdventureWorks  
-CREATE TABLE DataTypesTable   
-   (Col1 int IDENTITY,   
-    Col2 char,  
-    Col3 varchar(50),   
-    Col4 bit,  
-    Col5 decimal(18, 2),  
-    Col6 money,  
-    Col7 datetime,  
-    Col8 date,  
-    Col9 time,  
-    Col10 datetime2,  
-    Col11 datetimeoffset  
-    );  
-  
-INSERT INTO DataTypesTable   
-VALUES ('A', 'Some text.', 0, 15.25, 10.00, '01/01/2006 23:59:59.991', '01/01/2006', '23:59:59', '01/01/2006 23:59:59.12345', '01/01/2006 23:59:59.12345 -1:00')  
-```  
+
+若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
->  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  
   
-## <a name="example"></a>範例  
- 在下列範例中，範例程式碼會建立 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] 資料庫的連線，然後從 DataTypesTable 測試資料表中擷取單一資料列。 接著呼叫自訂 displayRow 方法，使用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的各種 get\<類型> 方法顯示結果集中的所有資料。  
+## <a name="example"></a>範例
+
+在下列範例中，範例程式碼會建立資料庫的連線，然後從 DataTypesTable 測試資料表中擷取單一資料列。 接著呼叫自訂 displayRow 方法，使用 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的各種 get\<類型> 方法顯示結果集中的所有資料。  
   
- 接下來，範例會使用 SQLServerResultSet 類別的各種 update\<類型> 方法更新結果集中的資料，然後呼叫 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法，將該資料存回資料庫。  
+接下來，範例會使用 SQLServerResultSet 類別的各種 update\<類型> 方法更新結果集中的資料，然後呼叫 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法，將該資料存回資料庫。  
   
- 最後，範例會重新整理結果集中的資料，然後再呼叫自訂的 displayRow 方法顯示它。  
-  
+最後，範例會重新整理結果集中的資料，然後再次呼叫自訂 displayRow 方法以顯示它。  
+
 ```java
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -79,16 +63,21 @@ import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
 
 import microsoft.sql.DateTimeOffset;
 
-public class BasicDT {
+public class BasicDataTypes {
+    private static final String tableName = "DataTypesTable";
+
     public static void main(String[] args) {
 
         // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>";
 
         try (Connection con = DriverManager.getConnection(connectionUrl);
                 Statement stmt = con.createStatement(ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_UPDATABLE);) {
 
-            String SQL = "SELECT * FROM DataTypesTable";
+            dropAndCreateTable(stmt);
+            insertOriginalData(con);
+
+            String SQL = "SELECT * FROM " + tableName;
             ResultSet rs = stmt.executeQuery(SQL);
             rs.next();
             displayRow("ORIGINAL DATA", rs);
@@ -138,10 +127,38 @@ public class BasicDT {
                 ((SQLServerResultSet) rs).getDateTimeOffset(11)); // SQL datetimeoffset type.
         System.out.println();
     }
+
+    private static void dropAndCreateTable(Statement stmt) throws SQLException {
+        stmt.executeUpdate("if object_id('" + tableName + "','U') is not null" + " drop table " + tableName);
+
+        String sql = "create table " + tableName + " (" + "c1 int, " + "c2 char(20), " + "c3 varchar(20), " + "c4 bit, "
+                + "c5 decimal(10,5), " + "c6 money, " + "c7 datetime, " + "c8 date, " + "c9 time(7), "
+                + "c10 datetime2(7), " + "c11 datetimeoffset(7), " + ");";
+
+        stmt.execute(sql);
+    }
+
+    private static void insertOriginalData(Connection con) throws SQLException {
+        String sql = "insert into " + tableName + " values( " + "?,?,?,?,?,?,?,?,?,?,?" + ")";
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setObject(1, 100);
+            pstmt.setObject(2, "original text");
+            pstmt.setObject(3, "original text");
+            pstmt.setObject(4, false);
+            pstmt.setObject(5, 12.34);
+            pstmt.setObject(6, 56.78);
+            pstmt.setObject(7, new java.util.Date(1453500034839L));
+            pstmt.setObject(8, new java.util.Date(1453500034839L));
+            pstmt.setObject(9, new java.util.Date(1453500034839L));
+            pstmt.setObject(10, new java.util.Date(1453500034839L));
+            pstmt.setObject(11, new java.util.Date(1453500034839L));
+            pstmt.execute();
+        }
+    }
 }
-```  
-  
+```
+
 ## <a name="see-also"></a>另請參閱  
- [使用資料類型 &#40;JDBC&#41;](../../../connect/jdbc/working-with-data-types-jdbc.md)  
-  
+
+[使用資料類型 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   

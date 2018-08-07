@@ -15,13 +15,13 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3944612ce691511535c8e4e81dfb4e58bfb7222e
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 13a49f74d9a795e453ab2841a01ac99e5eb55416
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327399"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557978"
 ---
 # <a name="ftcrawl-stopped-event-class"></a>FT:Crawl Stopped 事件類別
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34327399"
   
 ## <a name="ftcrawl-stopped-event-class-data-columns"></a>FT:Crawl Stopped 事件類別資料行  
   
-|資料行名稱|資料類型|描述|資料行識別碼|可篩選|  
+|資料行名稱|資料類型|Description|資料行識別碼|可篩選|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|已停止全文檢索搜耙之資料庫的識別碼。 請使用 DB_ID 函數判斷資料庫的值。|3|是|  
 |**EventClass**|**int**|事件類型 = 156。|27|否|  
