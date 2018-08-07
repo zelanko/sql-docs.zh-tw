@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3d8f83d0f838304f6f541d1d88e56ce316b07d25
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: c86fc615bcf3dec2a87581bbb09f482c8befc943
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278839"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452642"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>使用 Azure Active Directory 驗證連線
 
@@ -211,10 +211,12 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > 包含的使用者資料庫必須存在與自主的資料庫使用者，表示指定之 Azure AD 使用者或群組，也就是指定的 Azure AD 使用者屬於、 必須存在於資料庫中，而且必須具有 CONNECT 權限 （除了 Azure Active Directory伺服器管理員或群組）
 
-
 ## <a name="connecting-using-access-token"></a>使用存取權杖進行連線
-應用程式/服務可以從 Azure Active Directory 擷取存取權杖，並使用該連接到 SQL Azure 資料庫。 請注意該 accessToken 只能設定使用 DriverManager 類別中的 getconnection （） 方法的屬性參數。 它不能在連接字串。
- 
+應用程式/服務可以從 Azure Active Directory 擷取存取權杖，並使用該連接到 SQL Azure 資料庫。
+
+> [!NOTE] 
+> **accessToken**只能設定使用 DriverManager 類別中的 getconnection （） 方法的屬性參數。 它不能在連接字串。
+
 下列範例包含簡單的 Java 應用程式連接到 Azure SQL Database 使用存取權杖型驗證。 再建置及執行範例，請執行下列步驟：
 1.  建立 Azure Active Directory 中的應用程式帳戶，為您的服務。
     1. 登入 Azure 入口網站。

@@ -30,13 +30,13 @@ caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2b8859b2cc7aed93f941756400caa387061034b6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6d788da4f619feebd27919d8a34ec81de4a923f4
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784269"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452702"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -139,7 +139,7 @@ ASYMMETRIC KEY *asym_key_name*
 - 伺服器的[驗證模式](../../relational-databases/security/choose-an-authentication-mode.md)必須符合登入類型，以允許存取。
 - 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 - 只有具備伺服器的 **ALTER ANY LOGIN** 權限或 **securityadmin** 固定伺服器角色之成員資格的使用者才能建立登入。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles。
 - 如果使用 **CREDENTIAL** 選項，則也需要伺服器的 **ALTER ANY CREDENTIAL** 權限。 
   
@@ -297,7 +297,7 @@ SID = *sid*
   
  如需 SQL Database 登入的詳細資訊，請參閱[管理 Windows Azure SQL Database 中的資料庫和登入](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins)。 
  
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>[權限]
 
 只有 master 資料庫中的伺服器層級主體登入 (由佈建程序所建立) 或 `loginmanager` 資料庫角色成員，才能建立新登入。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles。
 
@@ -402,7 +402,7 @@ PASSWORD **='** password**'*
   
  如需 SQL 資料倉儲登入的詳細資訊，請參閱[管理 Windows Azure SQL Database 中的資料庫和登入](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins)。 
  
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>[權限]
 
 只有 master 資料庫中的伺服器層級主體登入 (由佈建程序所建立) 或 `loginmanager` 資料庫角色成員，才能建立新登入。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles。
 
@@ -513,7 +513,7 @@ WINDOWS
 - 建立登入會自動啟用新登入，並授與登入伺服器層級的 **CONNECT SQL** 權限。 
 - 如需設計權限系統的資訊，請參閱 [資料庫引擎權限使用者入門](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)。
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>[權限]  
 只有具備伺服器的 **ALTER ANY LOGIN** 權限或 **securityadmin** 固定伺服器角色之成員資格的使用者才能建立登入。 如需詳細資訊，請參閱[伺服器層級角色](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#groups-and-roles)和 [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).https://docs.microsoft.com/en-us/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles。
   
 ## <a name="after-creating-a-login"></a>建立登入之後  
