@@ -24,12 +24,12 @@ caps.latest.revision: 171
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 60a079e80c4487a7af0f015992095d3f14666764
-ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
+ms.openlocfilehash: dcc08dfd4c4759f834a7371dd700c32c69c8de24
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350016"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536158"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 追蹤旗標 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "39350016"
 |**8048**|將 NUMA 分割記憶體物件轉換成 CPU 分割記憶體物件。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2809338) \(英文\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 和 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，追蹤旗標 8048 沒有任何作用。<br /><br />**範圍**：只限全域|  
 |**8075**|收到 64 位元 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 或 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 的記憶體頁面配置錯誤時，請減少 [VAS](../../relational-databases/memory-management-architecture-guide.md#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd) 片段。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/3074434) \(機器翻譯\)。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] RTM CU10 以及 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 CU3。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，且追蹤旗標 8075 沒有任何作用。<br /><br />**範圍**：只限全域|
 |**8079**|允許 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 在每一 NUMA 節點回報 8 個或更多 CPU 的系統上質詢硬體配置及自動設定軟體式 NUMA。 自動軟體式 NUMA 會以感知超執行緒 (HT/邏輯處理器) 的方式運作。 其他節點的分割和建立可藉由增加接聽程式數目、調整以及網路和加密功能，來調整背景處理的規模。<br /><br />**注意：** 此追蹤旗標適用於 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2。 從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 開始，此行為由引擎控制，且追蹤旗標 8079 沒有任何作用。<br /><br />**範圍**：只限全域| 
-|**8207**|啟用異動複寫的單一更新。 訂閱者的更新可以複寫為 DELETE 和 INSERT 配對。 這可能不符合商務規則，例如引發 UPDATE 觸發程序。 使用追蹤旗標 8207 時，只影響一個資料列的唯一資料行更新 (單一更新) 會複寫為 UPDATE，而不是 DELETE 或 INSERT 配對。 如果更新影響存在唯一條件約束的資料行，或是更新影響多個資料列，更新仍會複寫為 DELETE 或 INSERT 配對。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/302341) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
+|**8207**|啟用異動複寫和 CDC 的 singleton 更新。 訂閱者的更新可以複寫為 DELETE 和 INSERT 配對。 這可能不符合商務規則，例如引發 UPDATE 觸發程序。 使用追蹤旗標 8207 時，只影響一個資料列的唯一資料行更新 (單一更新) 會複寫為 UPDATE，而不是 DELETE 或 INSERT 配對。 如果更新影響存在唯一條件約束的資料行，或是更新影響多個資料列，更新仍會複寫為 DELETE 或 INSERT 配對。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/302341) \(機器翻譯\)。<br /><br />**範圍**：只限全域|
 |**8721**|當自動更新統計資料執行時回報至錯誤記錄檔。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/195565)。<br /><br />**範圍**：只限全域|
 |**8744**|停用預先擷取巢狀迴圈運算子。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/920093) \(機器翻譯\)。<br /><br />**注意：** 如不當使用此追蹤旗標，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行包含巢狀迴圈運算子的計劃時，可能會有額外的實體讀取作業。<br /><br />**範圍**：全域和工作階段|
 |**9024**|將全域記錄集區記憶體物件轉換成 NUMA 節點分割的記憶體物件。 如需詳細資訊，請參閱此 [Microsoft 支援服務文章](http://support.microsoft.com/kb/2809338) \(英文\)。<br /><br />**注意：** 從 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP3 和 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 開始，此行為由引擎控制，追蹤旗標 9024 沒有任何作用。<br /><br />**範圍**：只限全域|

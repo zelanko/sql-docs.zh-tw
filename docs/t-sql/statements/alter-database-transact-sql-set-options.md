@@ -32,13 +32,13 @@ caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fe4ddf28ab00fa8fd60eec6beb14a4cbcacd01ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 16505ba07dcd1035ad260b68785eea763c050d1b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946992"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560498"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 選項 (Transact-SQL) 
 
@@ -1282,19 +1282,20 @@ SET
 
 <option_spec> ::=
 {  
-    <auto_option>   
-  | <change_tracking_option>   
-  | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
-  | <delayed_durability_option>  
-  | <parameterization_option>  
-  | <query_store_options>  
-  | <snapshot_option>  
-  | <sql_option>   
-  | <target_recovery_time_option>   
-  | <termination>  
+    <auto_option>
+  | <automatic_tuning_option>
+  | <change_tracking_option>
+  | <cursor_option>
+  | <db_encryption_option>
+  | <db_update_option>
+  | <db_user_access_option>
+  | <delayed_durability_option>
+  | <parameterization_option>
+  | <query_store_options>
+  | <snapshot_option>
+  | <sql_option>
+  | <target_recovery_time_option>
+  | <termination>
   | <temporal_history_retention>
 }  
 ;  
@@ -1304,7 +1305,17 @@ SET
   | AUTO_SHRINK { ON | OFF } 
   | AUTO_UPDATE_STATISTICS { ON | OFF } 
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
+}
+
+<automatic_tuning_option> ::=  
+{  AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+  | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
+  | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
+  | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
 }  
+
+ALTER DATABASE current SET AUTOMATIC_TUNING = AUTO | INHERIT | CUSTOM
+ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = DEFAULT, DROP_INDEX = OFF)
 
 <change_tracking_option> ::=  
 {  
@@ -1473,7 +1484,36 @@ OFF
 您可以檢查 sys.databases 目錄檢視中的 is_auto_update_stats_async_on 資料行來判斷這個選項的狀態。  
   
 如需描述使用同步或非同步統計資料更新之時機的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)中的＜使用資料庫範圍統計資料選項＞一節。  
-  
+
+**\<automatic_tuning_option> ::=**  
+**適用於**： [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]。  
+
+啟用或停用資料庫的[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)。
+
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO 將自動調整值設為 AUTO，會套用 Azure 設定預設以進行自動調整。
+INHERIT 使用 INHERIT 值會從父伺服器繼承預設設定。 如果您想在父伺服器自訂自動調整設定，並讓這種伺服器上的所有資料庫都 INHERIT 這些自訂設定，這會特別實用。 請注意，為了讓繼承有效，FORCE_LAST_GOOD_PLAN、CREATE_INDEX 及 DROP_INDEX 這三個個別的調整選項就必須在伺服器上設為 DEFAULT。
+CUSTOM 使用 CUSTOM 值，您就必須手動自訂設定資料庫上可用的各個自動調整選項。
+
+啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動索引管理 `CREATE_INDEX` 選項。
+
+CREATE_INDEX = { DEFAULT | ON | OFF } DEFALT 從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。
+ON 啟用時，會在資料庫自動產生缺少的索引。 在建立索引之後，會驗證工作負載效能的增量。 當這類建立的索引不再對工作負載效能有助益時，會自動還原。 自動建立的索引會加上旗標，表示是系統產生的索引。
+OFF 不自動在資料庫產生缺少的索引。
+
+啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動索引管理 `DROP_INDEX` 選項。
+
+DROP_INDEX = { DEFAULT | ON | OFF } DEFALT 從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。
+ON 自動卸除重複或不再對效能工作負載有用的索引。 OFF 不自動卸除資料庫上缺少的索引。
+
+啟用或停用[自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)的自動計劃修正 `FORCE_LAST_GOOD_PLAN` 選項。
+
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
+DEFAULT 從伺服器繼承預設設定。 在這種情況下，就會在伺服器層級定義啟用或停用個別自動調整功能的選項。
+ON  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會對新的 SQL 計劃將造成效能衰退的 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 查詢，自動強制執行最後一個已知的良好計劃。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會持續監視 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 查詢搭配強制計劃的查詢效能。 如果效能有所提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會繼續使用最後一個已知的良好計劃。 如果未偵測到效能提升，[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 則會產生新的 SQL 計劃。 如果未啟用查詢存放區，或其不在「讀寫」模式下，陳述式便會失敗。   
+OFF  
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] 會在 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 檢視中報告 SQL 計劃變更所造成的可能查詢效能衰退。 不過，不會自動套用這些建議。 使用者可以藉由套用檢視中顯示的 [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 指令碼，來監視使用中的建議並修正已識別的問題。 這是預設值。
+
 **\<change_tracking_option> ::=**  
   
 控制變更追蹤選項。 您可以啟用變更追蹤、設定選項、變更選項，以及停用變更追蹤。 如需範例，請參閱本文稍後的＜範例＞一節。  

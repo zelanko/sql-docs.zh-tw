@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083729"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400711"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "39083729"
 
 ## <a name="understand-distributed-availability-groups"></a>了解分散式可用性群組
 
-分散式可用性群組是跨兩個不同可用性群組之特殊類型的可用性群組。 基礎可用性群組設定於兩個不同的 Windows Server 容錯移轉叢集 (WSFC) 叢集上。 參與分散式可用性群組的可用性群組不需要位於相同的位置中。 在公用雲端或支援可用性群組部署的任何位置中，它們可以是實體、虛擬、內部部署。 只要兩個可用性群組可以通訊，您就可以設定包含它們的分散式可用性群組。
+分散式可用性群組是跨兩個不同可用性群組之特殊類型的可用性群組。 參與分散式可用性群組的可用性群組不需要位於相同的位置中。 群組可以實體、虛擬、內部部署形式，存在於公用雲端或任何支援可用性群組部署的位置。 這包括跨網域，甚至跨平台，例如介於一個裝載於 Linux、一個裝載於 Windows 的可用性群組之間。 只要兩個可用性群組可以通訊，您就可以設定包含它們的分散式可用性群組。
 
 傳統可用性群組具有 WSFC 叢集中所設定的資源。 分散式可用性群組不會在 WSFC 叢集中設定任何項目。 在 SQL Server 內維護它的所有相關項目。 若要了解如何檢視分散式可用性群組的資訊，請參閱[檢視分散式可用性群組資訊](#viewing-distributed-availability-group-information)。 
 

@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0adbdba1c04ad4cc2e39f532ded83d3964a47ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787359"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582184"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "37787359"
 |--------------|------------------------|  
 |預設執行個體|'*servername*'|  
 |具名執行個體|'*servername*\\*instancename*'|  
-|容錯移轉叢集執行個體 - 預設執行個體|'*virtualservername*'|  
-|容錯移轉叢集執行個體 - 具名執行個體|'*virtualservername*\\*instancename*'|  
+|容錯移轉叢集執行個體 - 預設執行個體|'*network_name_for_fci_in_wsfc*'|  
+|容錯移轉叢集執行個體 - 具名執行個體|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
  雖然 @@SERVERNAME 函式和 SERVERPROPERTY 函式的 SERVERNAME 屬性可能傳回具有類似格式的字串，但資訊可能不同。 SERVERNAME 屬性會自動報告電腦網路名稱的變更。  
   
