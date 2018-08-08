@@ -54,6 +54,8 @@
       href: install/sql-ml-component-commandline-install.md
     - name: 離線安裝程式 (不連線到網際網路)
       href: install/sql-ml-component-install-without-internet-access.md
+    - name: CAB 下載 (離線安裝程式)
+      href: install/sql-ml-cab-downloads.md
     - name: 升級 R 與 Python
       href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
     - name: 設定 R 工具

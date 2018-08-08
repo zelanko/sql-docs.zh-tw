@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
-ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
+ms.openlocfilehash: cee1d100be0597bc5483d6df9666062d1046bb48
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39188934"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452522"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>下載 SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -146,7 +146,7 @@ SQL 編輯器：
 
 - 在 [特性] 視窗中修改任何檔案群組特性之後按一下 [指令碼] 按鈕，會產生兩個指令碼：其中一個指令碼會包含 *USE <database>* 陳述式，另一個指令碼則會包含 *USE master* 陳述式。  產生包含 *USE master* 的指令碼是一項錯誤，而且應予捨棄。 執行包含 *USE <database>* 陳述式的指令碼。
 - 使用新的「一般目的」或「商務關鍵性」Azure SQL Database 版本時，某些對話方塊顯示版本無效錯誤。
-- 可觀察到 XEvents 檢視器中的一些延遲。 這是 [.Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql) 中的已知問題。 請考慮升級到 NetFx 4.7.2。
+- 可觀察到 XEvents 檢視器中的一些延遲。 這是 [.NET Framework 中的已知問題](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql)。 請考慮升級到 NetFx 4.7.2。
 - 複寫監視器損毀，發生「無法載入檔案或組件...」錯誤。 此問題的因應措施：
   1. 關閉 *SqlMonitor.exe* (也就是「複寫監視器」) 和 SSMS。
   2. 從 [https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw) 下載更新的 *sqlmonitor.exe.config*。

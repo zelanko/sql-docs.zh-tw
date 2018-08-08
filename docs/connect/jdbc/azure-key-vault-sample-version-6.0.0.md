@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault 範例版本 6.0.0 |Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,18 +14,20 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7526276da62ea6f251944eca7b7ce4b1a03c2f6
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: b62e67d3cf1698a5aa7f429945c9a5a526e9612c
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278929"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39458142"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Azure Key Vault 範例版本 6.0.0
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  <a name="sample-application-using-azure-key-vault-feature"></a>使用 Azure Key Vault 功能的範例應用程式
-此應用程式是可執行使用 JDBC 驅動程式 6.0.0 和 Azure key Vault （版本 0.9.7） Adal4j （1.3.0 版），及其相依性。  可解決基礎相依項目，請將這些程式庫新增至專案的 pom 檔案中，如所述[此處](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+## <a name="sample-application-using-azure-key-vault-feature"></a>使用 Azure Key Vault 功能的範例應用程式
+
+此應用程式是可執行使用 JDBC 驅動程式 6.0.0 和 Azure key Vault （版本 0.9.7） Adal4j （1.3.0 版），及其相依性。  可解決基礎相依項目，請將這些程式庫新增至專案的 pom 檔案中，如所述[此處](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
 
 ```java
 import java.net.URISyntaxException;
@@ -51,17 +53,18 @@ import com.microsoft.sqlserver.jdbc.SQLServerConnection;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
 import com.microsoft.sqlserver.jdbc.SQLServerKeyVaultAuthenticationCallback;
 
-public class AE_AKV_Maven {
+public class AKV_600 {
 
     private static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
-    static String applicationClientID = "Your Client ID"; 
+    static String applicationClientID = "Your Client ID";
     static String applicationKey = "Your Application Key";
-    static String keyID = "Your Key ID"; 
+    static String keyID = "Your Key ID";
     static String cmkName = "AKV_CMK_JDBC";
     static String cekName = "AKV_CEK_JDBC";
     static String akvTable = "akvTable";
 
-    static String createTableSQL = "create table " + akvTable + " (" + "PlainNvarcharMax nvarchar(max) null,"
+    static String createTableSQL = "create table " + akvTable + " ("
+            + "PlainNvarcharMax nvarchar(max) null,"
             + "RandomizedNvarcharMax nvarchar(max) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (ENCRYPTION_TYPE = RANDOMIZED, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', COLUMN_ENCRYPTION_KEY = "
             + cekName + ") NULL,"
             + "DeterministicNvarcharMax nvarchar(max) COLLATE Latin1_General_BIN2 ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256', COLUMN_ENCRYPTION_KEY = "
@@ -74,13 +77,16 @@ public class AE_AKV_Maven {
         SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {
 
             @Override
-            public String getAccessToken(String authority, String resource, String scope) {
+            public String getAccessToken(String authority, String resource,
+                    String scope) {
                 AuthenticationResult result = null;
                 try {
-                    AuthenticationContext context = new AuthenticationContext(authority, false, service);
-                    ClientCredential cred = new ClientCredential(applicationClientID, applicationKey);
-
-                    Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);
+                    AuthenticationContext context = new AuthenticationContext(
+                            authority, false, service);
+                    ClientCredential cred = new ClientCredential(
+                            applicationClientID, applicationKey);
+                    Future<AuthenticationResult> future = context
+                            .acquireToken(resource, cred, null);
                     result = future.get();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -94,28 +100,24 @@ public class AE_AKV_Maven {
         return akvProvider;
     }
 
-    public static void main(String[] args) throws ClassNotFoundException, Exception {
+    public static void main(String[] args)
+            throws ClassNotFoundException, Exception {
         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
         try (Connection connection = DriverManager.getConnection(connectionUrl);
                 Statement statement = connection.createStatement()) {
-
             statement.execute("DBCC FREEPROCCACHE");
-
             SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = tryAuthenticationCallback();
-
             setupKeyStoreProviders(akvProvider.getName(), akvProvider);
-
-            testAKV(akvProvider.getName(), akvProvider, statement);
-
-            connection.close();
+            testAKV(akvProvider.getName(), akvProvider, connection, statement);
         }
     }
 
-    private static void testAKV(String CUSTOM_AKV_PROVIDER_NAME, SQLServerColumnEncryptionKeyStoreProvider akvProvider,
-            Statement statement) throws SQLException, SQLServerException, InterruptedException {
+    private static void testAKV(String CUSTOM_AKV_PROVIDER_NAME,
+            SQLServerColumnEncryptionKeyStoreProvider akvProvider,
+            Connection connection, Statement statement)
+            throws SQLException, SQLServerException, InterruptedException {
 
         dropTable(statement);
-
         dropKeys(statement);
 
         System.out.println("createCMK");
@@ -128,10 +130,10 @@ public class AE_AKV_Maven {
         statement.execute(createTableSQL);
 
         System.out.println("populate");
-        populateCharNormalCase();
+        populateCharNormalCase(connection);
 
-        System.out.println("test");
-        testChar();
+        System.out.println("run the test");
+        testChar(statement);
     }
 
     /**
@@ -142,7 +144,8 @@ public class AE_AKV_Maven {
      * @throws SQLServerException
      */
     private static void setupKeyStoreProviders(String CUSTOM_AKV_PROVIDER_NAME,
-            SQLServerColumnEncryptionKeyStoreProvider akvProvider) throws SQLServerException {
+            SQLServerColumnEncryptionKeyStoreProvider akvProvider)
+            throws SQLServerException {
         Map<String, SQLServerColumnEncryptionKeyStoreProvider> map1 = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
         map1.put(CUSTOM_AKV_PROVIDER_NAME, akvProvider);
         SQLServerConnection.registerColumnEncryptionKeyStoreProviders(map1);
@@ -154,7 +157,8 @@ public class AE_AKV_Maven {
      * @throws SQLException
      */
     private static void dropTable(Statement statement) throws SQLException {
-        statement.executeUpdate("if object_id('" + akvTable + "','U') is not null" + " drop table " + akvTable);
+        statement.executeUpdate("if object_id('" + akvTable
+                + "','U') is not null" + " drop table " + akvTable);
     }
 
     /**
@@ -163,11 +167,14 @@ public class AE_AKV_Maven {
      * @throws SQLException
      */
     private static void dropKeys(Statement statement) throws SQLException {
-        statement.executeUpdate("if exists (SELECT name from sys.column_encryption_keys where name='" + cekName + "')"
-                + " begin" + " drop column encryption key " + cekName + " end");
-
-        statement.executeUpdate("if exists (SELECT name from sys.column_master_keys where name='" + cmkName + "')"
-                + " begin" + " drop column master key " + cmkName + " end");
+        statement.executeUpdate(
+                "if exists (SELECT name from sys.column_encryption_keys where name='"
+                        + cekName + "')" + " begin"
+                        + " drop column encryption key " + cekName + " end");
+        statement.executeUpdate(
+                "if exists (SELECT name from sys.column_master_keys where name='"
+                        + cmkName + "')" + " begin" + " drop column master key "
+                        + cmkName + " end");
     }
 
     /**
@@ -176,10 +183,11 @@ public class AE_AKV_Maven {
      * @param CUSTOM_AKV_PROVIDER_NAME
      * @throws SQLException
      */
-    private static void createCMK(String CUSTOM_AKV_PROVIDER_NAME, Statement statement) throws SQLException {
+    private static void createCMK(String CUSTOM_AKV_PROVIDER_NAME,
+            Statement statement) throws SQLException {
         String _createColumnMasterKeyTemplate = String.format(
-                "CREATE COLUMN MASTER KEY [%s] WITH ( KEY_STORE_PROVIDER_NAME = '%s', KEY_PATH = '%s');", cmkName,
-                CUSTOM_AKV_PROVIDER_NAME, keyID);
+                "CREATE COLUMN MASTER KEY [%s] WITH ( KEY_STORE_PROVIDER_NAME = '%s', KEY_PATH = '%s');",
+                cmkName, CUSTOM_AKV_PROVIDER_NAME, keyID);
         statement.execute(_createColumnMasterKeyTemplate);
     }
 
@@ -190,19 +198,18 @@ public class AE_AKV_Maven {
      * @throws SQLServerException
      * @throws SQLException
      */
-    private static void createCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider, Statement statement)
-            throws SQLServerException, SQLException {
-
+    private static void createCEK(
+            SQLServerColumnEncryptionKeyStoreProvider storeProvider,
+            Statement statement) throws SQLServerException, SQLException {
         String letters = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
         byte[] valuesDefault = letters.getBytes();
-
-        byte[] key = storeProvider.encryptColumnEncryptionKey(keyID, "RSA_OAEP", valuesDefault);
-
-        String cekSql = "CREATE COLUMN ENCRYPTION KEY " + cekName + " WITH VALUES " + "(COLUMN_MASTER_KEY = " + cmkName
-                + ", ALGORITHM = 'RSA_OAEP', ENCRYPTED_VALUE = 0x" + bytesToHexString(key, key.length) + ")" + ";";
-
+        byte[] key = storeProvider.encryptColumnEncryptionKey(keyID, "RSA_OAEP",
+                valuesDefault);
+        String cekSql = "CREATE COLUMN ENCRYPTION KEY " + cekName
+                + " WITH VALUES " + "(COLUMN_MASTER_KEY = " + cmkName
+                + ", ALGORITHM = 'RSA_OAEP', ENCRYPTED_VALUE = 0x"
+                + bytesToHexString(key, key.length) + ")" + ";";
         statement.execute(cekSql);
-
     }
 
     /**
@@ -213,7 +220,8 @@ public class AE_AKV_Maven {
      *            length of the array
      * @return
      */
-    final static char[] hexChars = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+    final static char[] hexChars = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
+            '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
     private static String bytesToHexString(byte[] b, int length) {
         StringBuilder sb = new StringBuilder(length * 2);
@@ -230,15 +238,13 @@ public class AE_AKV_Maven {
      * 
      * @throws SQLException
      */
-    private static void populateCharNormalCase() throws SQLException {
+    private static void populateCharNormalCase(Connection connection)
+            throws SQLException {
         String sql = "insert into " + akvTable + " values(?,?,?)";
-        try (Connection connection = DriverManager.getConnection(connectionUrl);
-                PreparedStatement pstmt = connection.prepareStatement(sql)) {
-
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
             for (int i = 1; i <= 3; i++) {
                 pstmt.setNString(i, "hello world");
             }
-
             pstmt.execute();
         }
     }
@@ -248,15 +254,13 @@ public class AE_AKV_Maven {
      * 
      * @throws SQLException
      */
-    private static void testChar() throws SQLException {
-        try (Connection connection = DriverManager.getConnection(connectionUrl);
-                ResultSet rs = connection.createStatement().executeQuery("select * from " + akvTable);) {
+    private static void testChar(Statement statement) throws SQLException {
+        try (ResultSet rs = statement
+                .executeQuery("select * from " + akvTable);) {
             int numberOfColumns = rs.getMetaData().getColumnCount();
-
             while (rs.next()) {
                 testGetString(rs, numberOfColumns);
             }
-
         }
     }
 
@@ -267,23 +271,21 @@ public class AE_AKV_Maven {
      * @param numberOfColumns
      * @throws SQLException
      */
-    private static void testGetString(ResultSet rs, int numberOfColumns) throws SQLException {
+    private static void testGetString(ResultSet rs, int numberOfColumns)
+            throws SQLException {
         for (int i = 1; i <= numberOfColumns; i = i + 3) {
             String stringValue1 = "" + rs.getString(i);
             String stringValue2 = "" + rs.getString(i + 1);
             String stringValue3 = "" + rs.getString(i + 2);
-
             System.out.println(stringValue1);
             System.out.println(stringValue2);
             System.out.println(stringValue3);
         }
     }
-
 }
-
-
-
 ```
 
-## <a name="see-also"></a>另請參閱  
- [Azure Key Vault 範例版本 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
+## <a name="see-also"></a>另請參閱
+
+[Azure Key Vault 範例版本 7.0.0](../../connect/jdbc/azure-key-vault-sample-version-7-0-0.md)  
+[Azure Key Vault 範例版本 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  

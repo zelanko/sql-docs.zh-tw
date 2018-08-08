@@ -26,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a29b8d92aecddb64020bd12dfd4be4559f8c4399
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356050"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482679"
 ---
 # <a name="enhance-transactional-replication-performance"></a>增強異動複寫效能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,6 +124,36 @@ ms.locfileid: "37356050"
 
 如需有關實作訂用帳戶資料流的詳細資訊，請參閱[瀏覽 SQL 複寫 subscriptionStream 設定](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting) \(英文\)。
   
+### <a name="blocking-monitor-thread"></a>封鎖監視執行緒
+
+散發代理程式會維護在兩個工作階段之間偵測封鎖的封鎖監視執行緒。 如果封鎖監視執行緒在兩個工作階段之間偵測到封鎖，散發代理程式就會切換為使用一個工作階段，以重新套用先前無法套用的目前命令批次。
+
+封鎖監視執行緒可在散發代理程式工作階段之間偵測封鎖。 不過，封鎖監視執行緒在下列情況無法偵測封鎖：
+- 發生封鎖的其中一個工作階段不是散發代理程式工作階段。
+- 工作階段死結凍結了散發代理程式的活動。
+
+在這種情況下，散發代理程式會協調所有工作階段，使其在命令執行時一併認可。 如果滿足下列條件，工作階段中的死結就會發生：
+
+- 封鎖發生在散發代理程式工作階段與不是散發代理程式工作階段的工作階段之間。
+- 散發代理程式在等候所有工作階段完成執行其命令，之後散發代理程式才協調所有工作階段，使其一併認可。
+
+例如，您將 *SubscriptionStreams* 參數設為 8。 工作階段 10 到工作階段 17 為散發代理程式工作階段。 工作階段 18 不是散發代理程式工作階段。 工作階段 18 封鎖了工作階段 10，而工作階段 11 封鎖了工作階段 18。 另外，工作階段 10 和工作階段 11 必須一併認可。 不過，因為封鎖的關係，散發代理程式無法一併認可工作階段 10 和工作階段 11。 因此，在工作階段 10 和工作階段 11 執行其命令之前，散發代理程式無法協調這八個工作階段，使其一併認可。
+
+這個例子導致了沒有任何工作階段執行其命令的狀態。 當達到 **QueryTimeout** 屬性中指定的時間時，散發代理程式就會取消所有工作階段。
+
+> [!Note]
+> 根據預設，**QueryTimeout** 屬性的值為 5 分鐘。
+
+在這段查詢逾時期間，您可能會注意到散發代理程式效能計數器有下列趨勢： 
+
+- **Dist: Delivered Cmds/sec** 效能計數器的值一直是 0。
+- **Dist: Delivered Trans/sec** 效能計數器的值一直是 0。
+- **Dist: Delivery Latency** 效能計數器回報值的增加，直到執行緒死結解決為止。
+
+SQL Server 線上叢書的＜複寫散發代理程式＞中，包含 *SubscriptionStreams* 參數的以下描述：「如果其中一個連線無法執行或認可，所有連線就都會中止目前的批次，而代理程式會使用單一資料流來重試失敗的批次。」
+
+散發代理程式會使用一個工作階段來重試無法套用的批次。 在散發代理程式成功套用批次之後，散發代理程式會繼續使用多個工作階段，而不會重新啟動。
+
 #### <a name="commitbatchsize"></a>CommitBatchSize
 - 為「散發代理程式」增加 **-CommitBatchSize** 參數的值。  
   

@@ -16,13 +16,13 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9bc9c0f916a26a46d2bfc3aaed05ce8e4072f57a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279179"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549528"
 ---
 # <a name="best-practice-with-the-query-store"></a>使用查詢存放區的最佳作法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
  當您識別效能次佳的查詢時，您的動作取決於問題的本質。  
   
--   如果是以多個計劃執行查詢，且最後一個計劃明顯比前一個計畫差，您可以使用計劃強制機制來強制 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 針對未來的執行一律使用最佳計畫。  
+-   如果查詢執行時有多個計劃，而且最後一個計劃明顯比前一個計劃差，您可以使用計劃強制機制加以強制。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會嘗試在最佳化工具中強制執行計劃。 如果計劃強制失敗，會引發 XEvent，系統會指示最佳化工具以一般方式最佳化。 
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 

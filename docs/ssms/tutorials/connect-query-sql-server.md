@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988752"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367660"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>教學課程：透過使用 SQL Server Management Studio 來連線至及查詢 SQL Server 執行個體
 本教學課程將教導您如何使用 SQL Server Management Studio (SSMS) 連線到 SQL Server 執行個體，並執行一些基本的 Transact-SQL (T-SQL) 命令。 本文會示範如何執行下列操作：
@@ -184,5 +184,11 @@ ms.locfileid: "33988752"
     > [!NOTE]
     > 此動作只會變更查詢視窗所連線的伺服器，而不會變更物件總管所連線的伺服器。 
 
+## <a name="next-steps"></a>後續步驟
+下一篇文章會教您如何在 SQL Server Management Studio 中，撰寫不同物件的指令碼。 
+
+請前往下一篇文章以深入了解：
+> [!div class="nextstepaction"]
+> [後續步驟](scripting-ssms.md)
 
 

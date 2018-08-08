@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f269692489e852e60cb30172738d8ff89ec95f53
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9ed204382cf962e82fc6418a57343909515afaca
+ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770071"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496707"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>升級 AlwaysOn 可用性群組複本執行個體
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "34770071"
   
 6.  升級或更新 PRIMARY1  
   
-## <a name="upgrade-update-sql-server-instances-with-multiple-ags"></a>升級/更新具有多個 AG 的 SQL Server 執行個體  
+## <a name="upgrade-or-update-sql-server-instances-with-multiple-ags"></a>升級或更新具有多個 AG 的 SQL Server 執行個體  
  若您正在執行多個 AG，而其中的主要複本位於不同的伺服器節點上 (主動/主動設定)，則升級路徑會牽涉到更多的容錯移轉步驟，以保留程序中的高可用性。 假設您在三個伺服器節點上執行三個 AG，且其所有複本都是在同步認可模式中，如下表所示：  
   
 |AG|Node1|Node2|Node3|  
@@ -171,6 +171,63 @@ ms.locfileid: "34770071"
   
 > [!NOTE]  
 >  在許多情況下，您在完成輪流升級後會容錯回復至原始主要複本。 
+
+## <a name="rolling-upgrade-of-a-distributed-availability-group"></a>分散式可用性群組的輪流升級
+若要執行分散式可用性群組的輪流升級，請先升級所有次要複本。 接下來，請容錯移轉轉寄站，然後升級第二個可用性群組最後剩餘的執行個體。 在其他所有複本都升級後，請重錯移轉全域主要，然後升級第一個可用性群組最後剩餘的執行個體。 下方提供包含步驟的詳細圖表。 
+
+ 根據您的特定實作方式，您的升級路徑可能會有不同，用戶端應用程式遇到的停機時間也可能會有差異。  
+  
+> [!NOTE]  
+>  在許多情況下，您在完成輪流升級後會容錯回復到原始主要複本。 
+
+### <a name="general-steps-to-upgrade-a-distributed-availability-group"></a>升級分散式可用性群組的一般步驟
+1. 請備份所有資料庫，包括系統資料庫和參與可用性群組的資料庫。 
+2. 升級並重新啟動第二個可用性群組的所有次要複本 (下游)。 
+3. 升級並重新啟動第一個可用性群組的所有次要複本 (上游)。 
+4. 將轉寄站主要容錯移轉到第二個可用性群組已升級的次要複本。
+5. 請等候資料同步。 資料庫應會在所有同步認可複本均顯示為已同步，而全域主要應與轉寄站同步。  
+6. 升級並重新啟動第二個可用性群組最後剩餘的執行個體。 
+7. 將全域主要容錯移轉到第一個可用性群組的已升級次要。  
+8. 升級並重新啟動主要可用性群組最後剩餘的執行個體。
+9. 重新啟動剛升級的伺服器。 
+10. (選擇性) 將兩個可用性群組都容錯回復到原始的主要複本。  
+
+>[!IMPORTANT]
+>- 請在每個步驟之間驗證同步。 在繼續下一個步驟前，請確認您的同步認可複本在可用性群組內確實同步，而且您的全域主要與分散式 AG 中的轉寄站同步。 
+>- **建議**：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步後，請儲存各複本狀態的螢幕擷取畫面。 這有助於您掌握當下進行到哪個步驟，證明一切都在進行下一步之前正常運作，並在發生任何錯誤時協助您進行疑難排解。 
+
+
+### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>分散式可用性群組輪流升級的圖表範例
+
+| 可用性群組 | 主要複本 | 次要複本|
+| :------ | :----------------------------- |  :------ |
+| AG1 | NODE1\SQLAG | NODE2\SQLAG|
+| AG2 | NODE3\SQLAG | NODE4\SQLAG|
+| Distributedag| AG1 (全域) | AG2 (轉寄站) |
+| &nbsp; | &nbsp; | &nbsp; |
+
+![分散式 AG 的範例圖表](media/upgrading-always-on-availability-group-replica-instances/rolling-upgrade-dag-diagram.png)
+
+
+這個圖表中的執行個體升級步驟： 
+
+1. 請備份所有資料庫，包括系統資料庫和參與可用性群組的資料庫。 
+2. 升級 NODE4\SQLAG (AG2 的次要) 並重新啟動伺服器。 
+3. 升級 NODE2\SQLAG (AG1 的次要) 並重新啟動伺服器。 
+4. 將 AG2 從 NODE3\SQLAG 容錯移轉到 NODE4\SQLAG。 
+5. 升級 NODE3\SQLAG 並重新啟動伺服器。 
+6. 將 AG1 從 NODE1\SQLAG 容錯移轉到 NODE2\SQLAG。 
+7. 升級 NODE1\SQLAG 並重新啟動伺服器。 
+8. (選擇性) 容錯回復到原始的主要複本。
+    1. 將 AG2 從 NODE4\SQLAG 容錯移轉到 NODE3\SQLAG。  
+    2. 將 AG1 從 NODE2\SQLAG 容錯移轉到 NODE1\SQLAG。 
+
+如果每個可用性群組中各存在第三個複本，則會在 NODE3\SQLAG 和 NODE1\SQLAG 之前升級。 
+
+>[!IMPORTANT]
+>- 請在每個步驟之間驗證同步。 在繼續下一個步驟前，請確認您的同步認可複本在可用性群組內確實同步，而且您的全域主要與分散式 AG 中的轉寄站同步。 
+>- 建議：在您每次驗證同步時，都在 SQL Server Management Studio 中重新整理資料庫節點和分散式 AG 節點。 在所有項目都同步處理後，請建立螢幕擷取畫面並加以儲存。 這有助於您掌握當下進行到哪個步驟，證明一切都在進行下一步之前正常運作，並在發生任何錯誤時協助您進行疑難排解。 
+
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>異動資料擷取或複寫的特殊步驟
 
