@@ -265,7 +265,7 @@ ms.locfileid: "37204468"
 ##  <a name="bkmk_test"></a> 步驟 6：測試您的設定  
  MSMDPUMP 的連接字串語法為 MSMDPUMP.dll 檔案的 URL。  
   
- 如果 web 應用程式正在接聽固定通訊埠，將通訊埠編號附加至的伺服器名稱或 IP 位址 (例如http://my-web-srv01:8080/OLAP/msmdpump.dll或http://123.456.789.012:8080/OLAP/msmdpump.dll。  
+ 如果 web 應用程式正在接聽固定通訊埠，將通訊埠編號附加至的伺服器名稱或 IP 位址 (例如 http://my-web-srv01:8080/OLAP/msmdpump.dll 或 http://123.456.789.012:8080/OLAP/msmdpump.dll 。  
   
  若要快速測試連接，您可以使用 Microsoft Excel 或 SQL Server Management Studio 開啟連接。  
   

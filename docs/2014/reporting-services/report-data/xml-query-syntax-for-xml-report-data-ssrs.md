@@ -91,8 +91,8 @@ ms.locfileid: "37226998"
   
 |XML 查詢元素|在資料集中產生欄位|  
 |-----------------------|-------------------------------------|  
-|\<Query/>|值 a: http://schemas.microsoft.com/..。<br /><br /> 值 b: http://schemas.microsoft.com/..。<br /><br /> 值 c: http://schemas.microsoft.com/..。|  
-|\<xmldp:Query xmlns:xmldp ="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery"xmlns:ns ="http://schemas.microsoft.com/..。 」><br /><br /> \<xmldp:ElementPath > 根{}/ns:Element2 / 節點\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|D 值<br /><br /> E 值<br /><br /> F 值|  
+|\<Query/>|值 a: http://schemas.microsoft.com/..<br /><br /> 值 b: http://schemas.microsoft.com/..<br /><br /> 值 c: http://schemas.microsoft.com/..|  
+|\<xmldp:Query xmlns:xmldp ="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery"xmlns:ns ="http://schemas.microsoft.com/.. 」><br /><br /> \<xmldp:ElementPath > 根{}/ns:Element2 / 節點\</xmldp:ElementPath ><br /><br /> \</xmldp:Query >|D 值<br /><br /> E 值<br /><br /> F 值|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML 文件：DPNamespace.xml  
  您可以複製這段 XML，並將它儲存為報表設計師可以使用的 URL，以便當做 XML 資料來源使用；例如 http://localhost/DPNamespace.xml。  
