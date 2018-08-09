@@ -65,7 +65,7 @@ ms.locfileid: "37265654"
 ## <a name="namespace-and-schema"></a>命名空間與結構描述  
   
 ### <a name="namespace"></a>命名空間  
- 在這個規格中定義的結構描述使用 XML 命名空間http://schemas.microsoft.com/AnalysisServices/2003/Engine以及標準縮寫"DDL"。  
+ 在這個規格中定義的結構描述使用 XML 命名空間 http://schemas.microsoft.com/AnalysisServices/2003/Engine 以及標準縮寫"DDL"。  
   
 ### <a name="schema"></a>結構描述  
  對於 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 物件定義語言，XML 結構描述定義語言 (XSD) 的定義是根據本章節中的結構描述元素與階層的定義。  
