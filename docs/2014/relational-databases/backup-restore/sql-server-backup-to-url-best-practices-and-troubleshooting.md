@@ -128,7 +128,7 @@ ms.locfileid: "37277074"
   
      備份資料庫正在異常結束。  
   
--   Backupiorequest: reportioerror： 備份裝置http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'。 作業系統錯誤。備份至 URL 時收到來自遠端端點的例外狀況。 例外狀況訊息: 無法讀取傳輸連線的資料: 此連接已經關閉。  
+-   Backupiorequest: reportioerror： 備份裝置 http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '。 作業系統錯誤。備份至 URL 時收到來自遠端端點的例外狀況。 例外狀況訊息: 無法讀取傳輸連線的資料: 此連接已經關閉。  
   
  如果您使用追蹤旗標 3051 開啟詳細資訊記錄，可能也會在記錄檔中看到下列資訊：  
   

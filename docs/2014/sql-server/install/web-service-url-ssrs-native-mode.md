@@ -59,7 +59,7 @@ ms.locfileid: "37270234"
  指定報表伺服器用來監視 HTTP 要求的通訊埠，看看是否有包含報表伺服器虛擬目錄名稱的 URL。  
   
  **SSL 憑證**  
- 將憑證繫結至您所指定的 IP 位址。 您必須在電腦上安裝及設定此憑證。 Reporting Services 不提供用來管理憑證的功能。 此憑證必須發行到解析為 IP 位址的主機名稱或電腦名稱。 例如，若要使用的憑證是發給http://salesreports，您所指定的 IP 位址必須解析為名為"salesreports"的伺服器。  
+ 將憑證繫結至您所指定的 IP 位址。 您必須在電腦上安裝及設定此憑證。 Reporting Services 不提供用來管理憑證的功能。 此憑證必須發行到解析為 IP 位址的主機名稱或電腦名稱。 例如，若要使用的憑證是發給 http://salesreports ，您所指定的 IP 位址必須解析為名為"salesreports"的伺服器。  
   
  如果您使用的憑證，您必須修改`UrlRoot`組態設定，在 rsreportserver.config 檔案，使它指定註冊憑證之電腦的完整的名稱。 如需詳細資訊，請參閱《 [線上叢書》中的](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) 在原生模式報表伺服器上設定 SSL 連接 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 。  
   
