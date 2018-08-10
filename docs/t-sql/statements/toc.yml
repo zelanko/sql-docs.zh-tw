@@ -142,8 +142,6 @@
       href: backup-transact-sql.md
     - name: BACKUP CERTIFICATE
       href: backup-certificate-transact-sql.md
-    - name: BACKUP DATABASE (平行處理資料倉儲)
-      href: backup-database-parallel-data-warehouse.md
     - name: BACKUP MASTER KEY
       href: backup-master-key-transact-sql.md
     - name: BACKUP SERVICE MASTER KEY
@@ -152,8 +150,6 @@
       href: restore-statements-transact-sql.md
     - name: RESTORE 陳述式
       href: restore-statements-for-restoring-recovering-and-managing-backups-transact-sql.md
-    - name: RESTORE DATABASE (平行處理資料倉儲)
-      href: restore-database-parallel-data-warehouse.md
     - name: RESTORE 引數
       href: restore-statements-arguments-transact-sql.md
     - name: RESTORE FILELISTONLY

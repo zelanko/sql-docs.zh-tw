@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver 的 Always Encrypted API 參考 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/06/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1b720a607b702e93643d70b40a5e6ab036f2f56
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: 1b305c9e42f1eb7dffec8bd00204723a142a6b2e
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279249"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582164"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC Driver 的 Always Encrypted API 參考
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -96,8 +96,8 @@ ms.locfileid: "39279249"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)|將資料行加密金鑰的指定加密值解密。 加密的值必須使用指定的資料行金鑰 IDmaster 金鑰以及使用指定的演算法加密。 <br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 （字串、 字串、 Byte[]).) decryptColumnEncryptionKey|  
-|public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey)|加密資料行加密金鑰使用指定的資料行主要金鑰，並使用指定的演算法。 <br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 （字串、 字串、 Byte[]).) encryptColumnEncryptionKey|  
+| public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey) | Decryptes 加密資料行加密金鑰 (CEK)。 使用主要金鑰路徑所指定的非對稱金鑰的 RSA 加密演算法可完成此解密。<br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 （字串、 字串、 Byte[]).) decryptColumnEncryptionKey |  
+| public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] columnEncryptionKey) | 加密資料行加密金鑰，讓指定的演算法指定的資料行主要金鑰。<br />覆寫 SQLServerColumnEncryptionKeyStoreProvider。 （字串、 字串、 Byte[]).) encryptColumnEncryptionKey |  
 |public void setName （字串名稱）|設定此金鑰存放區提供者的名稱。|
 |public String getName ()|取得此金鑰存放區提供者的名稱。|  
   
@@ -141,7 +141,7 @@ ms.locfileid: "39279249"
   
 |[屬性]|Description|  
 |----------|-----------------|  
-|public void registerOutParameter （int parameterIndex、 int sqlType、 int 有效位數、 int 小數位數）<br /><br /> public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)<br /><br /> public void registerOutParameter （字串參數名稱、 int sqlType、 int 有效位數、 int 小數位數）<br /><br /> public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)<br />public void setBigDecimal （字串參數名稱、 BigDecimal bd、 int 有效位數、 int 小數位數）<br /><br /> public void setTime 字串參數名稱、 java.sql.Time t (int 小數位數）<br /><br /> public void setTimestamp （字串參數名稱，java.sql.Timestamp t，int 小數位數）<br /><br /> public void setDateTimeOffset 字串參數名稱、 microsoft.sql.DateTimeOffset t (int 小數位數）<br/><br/>公用最終的 void setObject （字串 sCol，物件 x，int targetSqlType，整數的精確度，int 小數位數）|這些方法多載與有效位數或小數位數引數或兩者皆可支援 「 永遠加密 」 的特定資料類型，需要有效位數和小數位數資訊。|  
+|public void registerOutParameter(int parameterIndex, int sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(int parameterIndex, SQLType sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(String parameterName, int sqlType, int precision, int scale)<br /><br /> public void registerOutParameter(String parameterName, SQLType sqlType, int precision, int scale)<br />public void setBigDecimal （字串參數名稱、 BigDecimal bd、 int 有效位數、 int 小數位數）<br /><br /> public void setTime 字串參數名稱、 java.sql.Time t (int 小數位數）<br /><br /> public void setTimestamp （字串參數名稱，java.sql.Timestamp t，int 小數位數）<br /><br /> public void setDateTimeOffset 字串參數名稱、 microsoft.sql.DateTimeOffset t (int 小數位數）<br/><br/>公用最終的 void setObject （字串 sCol，物件 x，int targetSqlType，整數的精確度，int 小數位數）|這些方法多載與有效位數或小數位數引數或兩者皆可支援 「 永遠加密 」 的特定資料類型，需要有效位數和小數位數資訊。|  
 |public void setDateTime (字串參數名稱，java.sql.Timestamp x)<br /><br /> public void setSmallDateTime (字串參數名稱，java.sql.Timestamp x)<br /><br /> public void setUniqueIdentifier （字串參數名稱、 guid 字串）<br /><br /> public void setMoney （字串參數名稱、 BigDecimal bd）<br /><br /> public void setSmallMoney （字串參數名稱、 BigDecimal bd）<br/><br/>公用的時間戳記 getDateTime （int 索引）<br/><br/>公用的時間戳記 getDateTime (字串 sCol)<br/><br/>公用的時間戳記 getDateTime （int 索引、 行事曆 cal）<br/><br/>公用的時間戳記 getSmallDateTime （int 索引）<br/><br/>公用的時間戳記 getSmallDateTime (字串 sCol)<br/><br/>公用的時間戳記 getSmallDateTime （int 索引、 行事曆 cal）<br/><br/>公用的時間戳記 getSmallDateTime （字串名稱，行事曆 cal）<br/><br/>公用 BigDecimal getMoney （int 索引）<br/><br/>公用 BigDecimal getMoney (字串 sCol)<br/><br/>公用 BigDecimal getSmallMoney （int 索引）<br/><br/>公用 BigDecimal getSmallMoney (字串 sCol)|這些方法會加入至資料類型 money、 smallmoney、 uniqueidentifier、 datetime 和 smalldatetime 的支援 「 永遠加密。 <br/><br/>請注意，現有的 setTimestamp() 方法用於將參數值傳送到已加密的 datetime2 資料行。 加密的 datetime 和 smalldatetime 資料行的新方法 setDateTime() 和 setSmallDateTime() 分別使用。|  
 |public void setObject （字串參數名稱、 物件 o、 int n、 int m、 布林 forceEncrypt）<br /><br /> public void setObject （字串參數名稱、 物件 obj、 SQLType jdbcType、 int 小數位數、 布林 forceEncrypt）<br /><br /> public void setDate (字串參數名稱、 x、 行事曆 c java.sql.Date 布林 forceEncrypt)<br /><br /> public void setTime （字串參數名稱、 java.sql.Time t、 int 小數位數、 布林 forceEncrypt）<br /><br /> public void setTime (字串參數名稱、 x、 行事曆 c java.sql.Time 布林 forceEncrypt)<br /><br /> public void setDateTime （字串參數名稱，x，則為 true 的 forceEncrypt java.sql.Timestamp）<br /><br /> public void setDateTimeOffset （字串參數名稱、 microsoft.sql.DateTimeOffset t、 int 小數位數、 布林 forceEncrypt）<br /><br /> public void setSmallDateTime （字串參數名稱，x，則為 true 的 forceEncrypt java.sql.Timestamp）<br /><br /> public void setTimestamp （字串參數名稱、 java.sql.Timestamp t、 int 小數位數、 布林 forceEncrypt）<br /><br /> public void setTimestamp （字串參數名稱，x，則為 true 的 forceEncrypt java.sql.Timestamp）<br /><br /> public void setUniqueIdentifier （字串參數名稱、 guid 字串、 布林 forceEncrypt）<br /><br /> public void setBytes 字串參數名稱、 byte [] b (布林 forceEncrypt）<br /><br /> public void setByte 字串參數名稱、 位元組 b (布林 forceEncrypt）<br /><br /> public void setString （字串參數名稱、 s 字串、 布林 forceEncrypt）<br /><br /> 公用最終的 void setNString 字串參數名稱、 字串值 (布林 forceEncrypt）<br /><br /> public void setMoney 字串參數名稱、 BigDecimal bd (布林 forceEncrypt）<br /><br /> public void setSmallMoney 字串參數名稱、 BigDecimal bd (布林 forceEncrypt）<br /><br /> public void setBigDecimal 字串參數名稱、 BigDecimal bd、 int 有效位數、 int 小數位數 (布林 forceEncrypt）<br /><br /> public void setDouble 字串參數名稱、 double d (布林 forceEncrypt）<br /><br /> public void setFloat 字串參數名稱、 float f (布林 forceEncrypt）<br /><br /> public void setInt (字串參數名稱、 int i、 布林 forceEncrypt)<br /><br /> public void setLong 字串參數名稱、 長時間 l (布林 forceEncrypt）<br /><br /> public void setShort 字串參數名稱、 簡短 s (布林 forceEncrypt）<br /><br /> public void setBoolean parameterNames 字串、 布林值 b (布林 forceEncrypt）<br/><br/>public void setTimeStamp (字串 sCol、 x、 行事曆 c java.sql.Timestamp 布林 forceEncrypt)|將指定的參數設定為指定的 Java 值。<br /><br /> 如果布林 forceEncrypt 設為 true 時，查詢參數將才可設定指定資料行已加密，並啟用 永遠加密連接或陳述式。<br /><br /> 如果布林 forceEncrypt 設為 false 時，驅動程式將不會強制加密參數。|
  

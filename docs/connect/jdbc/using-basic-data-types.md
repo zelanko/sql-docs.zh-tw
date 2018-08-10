@@ -1,7 +1,7 @@
 ---
-title: 使用基本資料型別 |Microsoft 文件
+title: 使用基本資料類型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,71 +14,73 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ab39b74b4e5a2c243622bbd352a71c943e07a3d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2aa87e34eb177b79af8a18aede6f54c56da3e10d
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852666"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455682"
 ---
 # <a name="using-basic-data-types"></a>使用基本資料類型
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]使用 JDBC 基本資料類型，將轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型轉換成可在 Java 程式語言，反之亦然理解的格式。 JDBC 驅動程式提供 JDBC 4.0 API，其中包含支援**SQLXML**資料類型和 National (Unicode) 資料類型，例如**NCHAR**， **NVARCHAR**， **LONGNVARCHAR**，和**NCLOB**。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 使用 JDBC 基本資料類型，將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料類型和 Java 程式設計語言轉換成彼此理解的格式。 JDBC 驅動程式提供 JDBC 4.0 API，其中包含支援**SQLXML**資料類型和 National (Unicode) 資料類型，例如**NCHAR**， **NVARCHAR**， **LONGNVARCHAR**，並**NCLOB**。  
   
 ## <a name="data-type-mappings"></a>資料類型對應  
- 下表列出之間的預設對應基本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、 JDBC 及 Java 程式語言資料類型：  
+ 下表列出基本 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]、JDBC 及 Java 程式設計語言資料類型之間的預設對應：  
   
 |SQL Server 類型|JDBC 類型 (java.sql.Types)|Java 語言類型|  
 |----------------------|-----------------------------------|-------------------------|  
-|bigint|bigint|long|  
+|BIGINT|bigint|long|  
 |BINARY|BINARY|byte[]|  
 |bit|BIT|boolean|  
-|char|CHAR|字串|  
-|date|DATE|java.sql.Date|  
-|datetime|TIMESTAMP|java.sql.Timestamp|  
-|datetime2|TIMESTAMP|java.sql.Timestamp|  
+|char|CHAR|String|  
+|日期|DATE|java.sql.Date|  
+|DATETIME|timestamp|java.sql.Timestamp|  
+|datetime2|timestamp|java.sql.Timestamp|  
 |datetimeoffset (2)|microsoft.sql.Types.DATETIMEOFFSET|microsoft.sql.DateTimeOffset|  
-|decimal|DECIMAL|java.math.BigDecimal|  
-|float|DOUBLE|double|  
+|Decimal|DECIMAL|java.math.BigDecimal|  
+|FLOAT|DOUBLE|double|  
 |image|LONGVARBINARY|byte[]|  
-|int|INTEGER|int|  
+|ssNoversion|INTEGER|ssNoversion|  
 |money|DECIMAL|java.math.BigDecimal|  
-|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|字串|  
-|ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|字串|  
-|numeric|NUMERIC|java.math.BigDecimal|  
-|nvarchar|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|字串|  
-|nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|字串|  
-|real|REAL|float|  
-|smalldatetime|TIMESTAMP|java.sql.Timestamp|  
-|smallint|SMALLINT|short|  
+|NCHAR|CHAR<br /><br /> NCHAR (Java SE 6.0)|String|  
+|ntext|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String|  
+|NUMERIC|NUMERIC|java.math.BigDecimal|  
+|NVARCHAR|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|String|  
+|nvarchar(max)|VARCHAR<br /><br /> NVARCHAR (Java SE 6.0)|String|  
+|REAL|real|FLOAT|  
+|smalldatetime|timestamp|java.sql.Timestamp|  
+|SMALLINT|SMALLINT|short|  
 |smallmoney|DECIMAL|java.math.BigDecimal|  
-|text|LONGVARCHAR|字串|  
+|text|LONGVARCHAR|String|  
 |time|TIME (1)|java.sql.Time (1)|  
 |timestamp|BINARY|byte[]|  
-|tinyint|TINYINT|short|  
+|TINYINT|TINYINT|short|  
 |udt|VARBINARY|byte[]|  
-|uniqueidentifier|CHAR|字串|  
+|UNIQUEIDENTIFIER|CHAR|String|  
 |varbinary|VARBINARY|byte[]|  
 |varbinary(max)|VARBINARY|byte[]|  
-|varchar|VARCHAR|字串|  
-|varchar(max)|VARCHAR|字串|  
-|xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|字串<br /><br /> SQLXML|  
-|sqlvariant|SQLVARIANT|物件|  
+|varchar|VARCHAR|String|  
+|varchar(max)|VARCHAR|String|  
+|xml|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String<br /><br /> SQLXML|  
+|sqlvariant|SQLVARIANT|Object|  
+|幾何|VARBINARY|byte[]|  
+|地理位置|VARBINARY|byte[]|  
   
- （1） 若要使用 java.sql.Time 的時間[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]類型，您必須設定**sendTimeAsDatetime**連接屬性設定為 false。  
+ (1) 若要搭配 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 類型 time 使用 java.sql.Time，您必須將 **sendTimeAsDatetime** 連線屬性設為 false。  
   
- （2） 您可以程式設計方式存取值**datetimeoffset**與[DateTimeOffset 類別](../../connect/jdbc/reference/datetimeoffset-class.md)。  
+ （2） 您可以程式設計方式存取的值**datetimeoffset**具有[DateTimeOffset 類別](../../connect/jdbc/reference/datetimeoffset-class.md)。  
   
- 下列章節會提供如何使用 JDBC Driver 與基本資料類型的範例。 如何在 Java 應用程式中使用的基本資料類型的更詳細範例，請參閱[基本資料類型範例](../../connect/jdbc/basic-data-types-sample.md)。  
+ 下列章節會提供如何使用 JDBC Driver 與基本資料類型的範例。 如需如何在 Java 應用程式中使用基本資料類型的更詳細範例，請參閱[基本資料類型範例](../../connect/jdbc/basic-data-types-sample.md)。  
   
 ## <a name="retrieving-data-as-a-string"></a>擷取資料為字串  
- 如果您必須從對應至任何 JDBC 基本資料類型為字串時，檢視資料來源擷取資料，或者如果不需要強類型的資料，您可以使用[getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)方法[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)類別，如下所示：  
+ 如果您必須從對應至任何 JDBC 基本資料類型的資料來源擷取資料，以作為字串檢視，或者如果不需要強型別資料，則可以使用 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 類別的 [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) 方法，如下所示：  
   
  [!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
   
 ## <a name="retrieving-data-by-data-type"></a>依資料類型擷取資料  
- 如果您有資料來源擷取資料，而且您知道正在擷取的資料類型，使用其中一種 get\<類型 > SQLServerResultSet 的方法類別，也稱為*getter 方法*。 您可以使用資料行名稱或資料行索引 get\<類型 > 方法，如下所示：  
+ 如果您必須從資料來源擷取資料，且您知道正在擷取的資料類型，請使用 SQLServerResultSet 類別的其中一個 get\<Type> 方法，也稱為「getter 方法」。 您可使用資料行名稱或資料行索引搭配 get\<Type> 方法，如下所示：  
   
  [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
@@ -86,7 +88,7 @@ ms.locfileid: "32852666"
 >  GetUnicodeStream 和 getBigDecimal 與小數位數的方法已被取代，並不會受到 JDBC 驅動程式。  
   
 ## <a name="updating-data-by-data-type"></a>依資料類型更新資料  
- 如果您有更新的資料來源中的欄位值，請使用其中一種更新\<類型 > SQLServerResultSet 類別的方法。 在下列範例中， [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)方法用於搭配[updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)方法，以更新資料來源中的資料：  
+ 如果您必須更新資料來源中欄位的值，請使用其中一個更新\<類型 > SQLServerResultSet 類別的方法。 在下列範例中，[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 方法會結合 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 方法使用，以更新資料來源中的資料：  
   
  [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -94,31 +96,31 @@ ms.locfileid: "32852666"
 >  JDBC Driver 無法更新資料行名稱長度超過 127 個字元的 SQL Server 資料行。 如果嘗試更新名稱超過 127 個字元的資料行，就會擲回例外狀況。  
   
 ## <a name="updating-data-by-parameterized-query"></a>依參數化查詢更新資料  
- 如果您有使用參數化的查詢更新資料來源中的資料，您可以使用一組設定參數的資料型別\<類型 > 的方法[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)類別，也稱為*setter 方法*。 在下列範例中， [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)方法用來預先編譯參數化的查詢，然後[setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)方法用來設定之前參數的字串值[executeUpdate](../../connect/jdbc/reference/executeupdate-method.md)方法呼叫。  
+ 如果您必須使用參數化查詢更新資料來源中的資料，可以使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別的其中一個 set\<Type> 方法 (也稱為「setter 方法」)，來設定參數的資料類型。 在下列範例中，[prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md) 方法用來預先編譯參數化查詢，然後在呼叫 [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md) 方法之前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md) 方法設定參數的字串值。  
   
  [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
- 如需參數化查詢的詳細資訊，請參閱[搭配參數使用 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-parameters.md)。  
+ 如需有關參數化查詢的詳細資訊，請參閱 <<c0> [ 參數搭配使用 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-parameters.md)。  
   
 ## <a name="passing-parameters-to-a-stored-procedure"></a>傳遞參數至預存程序  
- 如果您有將具型別的參數傳遞至預存程序，您可以透過一組設定的參數，依索引或名稱\<類型 > 的方法[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)類別。 在下列範例中， [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)方法用來設定預存程序呼叫，然後[setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md)方法用來將之前呼叫的參數設定[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)方法呼叫。  
+ 如果您必須將具類型的參數傳遞至預存程序，可使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別的其中一個 set\<Type> 方法，依索引或名稱設定參數。 在下列範例中，[prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 方法用來設定發送給預存程序的呼叫，然後在呼叫 [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) 方法之前，使用 [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 方法設定呼叫的參數。  
   
  [!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 >  在此範例中，結果集會傳回執行預存程序的結果。  
   
- 如需以預存程序和輸入的參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用輸入參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
+ 如需以預存程序和輸入的參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用含有輸入參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)。  
   
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>從預存程序中擷取參數  
- 如果您必須從預存程序擷取參數，您必須先註冊 out 參數的名稱或索引使用[registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) SQLServerCallableStatement 類別，然後將指派的方法執行預存程序呼叫之後傳回 out 參數的適當的變數。 在下列範例中，prepareCall 方法用來設定預存程序的呼叫、 registerOutParameter 方法用來設定 out 參數，然後[setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md)方法用來設定的參數在呼叫 executeQuery 方法之前呼叫。 擷取預存程序的 out 參數傳回值是使用[getShort](../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)方法。  
+ 如果您必須從預存程序擷取參數，必須先使用 SQLServerCallableStatement 類別的 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 方法，依據名稱或索引註冊 out 參數，然後在執行發送給預存程序的呼叫之後，將傳回的 out 參數指定給適當的變數。 在下列範例中，prepareCall 方法用來設定發送給預存程序的呼叫，registerOutParameter 方法用來設定 out 參數，，而 [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md) 方法則用來在呼叫 executeQuery 方法之前，設定呼叫的參數。 預存程序 out 參數所傳回的值使用 [getShort](../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md) 方法予以擷取。  
   
  [!code[JDBC#UsingBasicDataTypes6](../../connect/jdbc/codesnippet/Java/using-basic-data-types_6.java)]  
   
 > [!NOTE]  
 >  除了傳回的 out 參數之外，結果集也會傳回執行預存程序的結果。  
   
- 如需如何搭配預存程序和輸出參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用輸出參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)。  
+ 如需如何使用預存程序和輸出參數使用 JDBC 驅動程式的詳細資訊，請參閱[使用含有輸出參數的預存程序](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [了解 JDBC Driver 資料類型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
