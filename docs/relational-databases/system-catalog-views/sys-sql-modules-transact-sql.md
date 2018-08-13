@@ -1,5 +1,5 @@
 ---
-title: sys.sql_modules (TRANSACT-SQL) |Microsoft 文件
+title: sys.sql_modules & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -24,36 +24,36 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: af128c6c3b28c448111f49adf55c66c12ab4bbae
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7277009805307ed5f9208227cc98c72df3fc3e2a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222089"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542348"
 ---
 # <a name="syssqlmodules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  傳回一個資料列的是 SQL 語言定義模組中的每個物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，包括原生編譯純量使用者定義函數。 類型 P、RF、V、TR、FN、IF、TF 和 R 的物件，各有一個相關聯的 SQL 模組。 獨立預設值，即類型 D 的物件，在這份檢視中也有 SQL 模組定義。 如需這些類型的說明，請參閱**類型**中的資料行[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視。  
+  傳回一個資料列的是 SQL 語言定義模組中的每個物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，包括原生編譯純量使用者定義函數。 類型 P、RF、V、TR、FN、IF、TF 和 R 的物件，各有一個相關聯的 SQL 模組。 獨立預設值，即類型 D 的物件，在這份檢視中也有 SQL 模組定義。 如需這些類型的描述，請參閱 <<c0>  **型別**中的資料行[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視。  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|包含物件的物件識別碼。 在資料庫中，這是唯一的。|  
-|**定義**|**nvarchar(max)**|定義這個模組的 SQL 文字。 這個值也可以取得使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)內建函式。<br /><br /> NULL = 已加密。|  
+|**定義**|**nvarchar(max)**|定義這個模組的 SQL 文字。 此值也可以取得使用[OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)內建函式。<br /><br /> NULL = 已加密。|  
 |**uses_ansi_nulls**|**bit**|模組是以 SET ANSI_NULLS ON 加以建立。<br /><br /> 如果是規則和預設值，則永遠 = 0。|  
 |**uses_quoted_identifier**|**bit**|模組是以 SET QUOTED_IDENTIFIER ON 加以建立。|  
 |**is_schema_bound**|**bit**|模組是以 SCHEMABINDING 選項加以建立。<br /><br /> 如果是原生編譯預存程序，一定包含 1 值。|  
 |**uses_database_collation**|**bit**|1 = 結構描述繫結模組定義為了正確評估，必須依據資料庫的預設定序而定；否則為 0。 這種相依性可以防止資料庫的預設定序變更。|  
 |**is_recompiled**|**bit**|程序是以 WITH RECOMPILE 選項加以建立。|  
 |**null_on_null_input**|**bit**|模組宣告的目的不是為了因應任何 NULL 輸入而產生 NULL 輸出。|  
-|**execute_as_principal_id**|**整數**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 指定主體 if 識別碼 EXECUTE AS SELF 或 EXECUTE AS\<主體 >。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**整數**|EXECUTE AS 資料庫主體的識別碼。<br /><br /> 在預設或 EXECUTE AS CALLER 的情況下為 NULL。<br /><br /> 識別碼指定的主體如果 EXECUTE AS SELF 或 EXECUTE AS\<主體 >。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**uses_native_compilation**|**bit**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。<br /><br /> 0 = 不是原生編譯<br /><br /> 1 = 是原生編譯<br /><br /> 預設值是 0。|  
   
 ## <a name="remarks"></a>備註  
- 預設條件約束類型 D、 物件的 SQL 運算式中找到[sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)目錄檢視。 檢查條件約束類型 C、 物件的 SQL 運算式中找到[sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)目錄檢視。  
+ 預設條件約束，類型 D、 物件的 SQL 運算式中找到[sys.default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)目錄檢視。 檢查條件約束，類型 C 中，物件的 SQL 運算式中找到[sys.check_constraints](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)目錄檢視。  
   
  這項資訊也述[sys.dm_db_uncontained_entities &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)。  
   
@@ -74,7 +74,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [記憶體內部 OLTP &#40;記憶體內部最佳化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

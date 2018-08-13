@@ -22,13 +22,13 @@ caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c136cfeb7a01671c76a8ddaf60451a7565ee6cb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7593c3ba25b97b97d3191a10f5d4506fbaa2a494
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085470"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542938"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_describe_parameter_encryption
 ## <a name="remarks"></a>備註  
  A[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]用戶端驅動程式，支援 Always Encrypted，會自動呼叫**sp_describe_parameter_encryption**來擷取應用程式所發出的參數化查詢的加密中繼資料。 接下來，驅動程式用以加密的參數對應到以 Always Encrypted 保護的資料庫資料行值的加密中繼資料，並會取代送出的應用程式，以將加密的純文字參數值參數值，再將查詢傳送至 database engine。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要**VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**並**VIEW ANY COLUMN MASTER KEY DEFINITION**資料庫中的權限。  
   
 ## <a name="examples"></a>範例  

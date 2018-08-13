@@ -1,5 +1,5 @@
 ---
-title: sp_getapplock (TRANSACT-SQL) |Microsoft 文件
+title: sp_getapplock (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ce5a2f5350a16024dcefbdd3e162212a60d98059
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261667"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555678"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>引數  
  [ @Resource=] '*resource_name*'  
- 這是一個字串，指定用來識別鎖定資源的名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*是**nvarchar （255)** 沒有預設值。 如果資源字串長度超過**nvarchar （255)**，它會被截斷為**nvarchar （255)**。  
+ 這是一個字串，指定用來識別鎖定資源的名稱。 應用程式必須確定資源名稱是唯一的。 指定的名稱會在內部雜湊成可儲存在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 鎖定管理員中的值。 *resource_name*已**nvarchar(255)** 沒有預設值。 如果資源字串的長度超過**nvarchar(255)**，它會被截斷為**nvarchar(255)**。  
   
  *resource_name*是以二進位來比較，且因此區分大小寫，不論目前資料庫的定序設定為何。  
   
@@ -60,21 +60,21 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  取得應用程式鎖定之後，只會擷取純文字中的前 32 個字元，其餘部分會予以雜湊。  
   
  [ @LockMode=] '*lock_mode*'  
- 這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 值可以是下列任一項：**共用**，**更新**， **IntentShared**， **IntentExclusive**，或**獨佔**.  
+ 這是要取得的特定資源鎖定模式。 *lock_mode* 是沒有預設值的 **nvarchar(32)**。 值可以是下列任一項： **Shared**，**更新**， **IntentShared**， **IntentExclusive**，或**獨佔**.  
   
  [ @LockOwner=] '*lock_owner*'  
- 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 當*lock_owner*值是**交易**，依預設或明確地指定 sp_getapplock 必須從交易內執行。  
+ 為鎖定的擁有者，也就是要求鎖定時的 *lock_owner* 值。 *lock_owner* 為 **nvarchar(32)**。 這個值可以是 **Transaction**  (預設值) 或 **Session** 。 當*lock_owner*值是**交易**，依預設或明確指定，sp_getapplock 必須從交易內執行。  
   
  [ @LockTimeout=] '*值*'  
  這是鎖定逾時值 (以毫秒為單位)。 預設值是所傳回的值相同@LOCK_TIMEOUT。 若要指出在無法立即授與要求時，鎖定要求應該傳回錯誤，而不是等待鎖定，請指定 0。  
   
  [ @DbPrincipal=] '*database_principal*'  
- 這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函式的呼叫端必須是成員*database_principal*、 dbo 或 db_owner 固定資料庫角色，才能成功呼叫函數。 預設值是 public。  
+ 這是擁有資料庫中物件權限的使用者、角色或應用程式角色。 函式的呼叫者必須是隸屬*database_principal*、 dbo 或 db_owner 固定資料庫角色，才能成功呼叫函數。 預設值是 public。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  \>= 0 （成功） 或 < 0 （失敗）  
   
-|Value|結果|  
+|值|結果|  
 |-----------|------------|  
 |0|同步授與鎖定成功。|  
 |1|在等待其他不相容的鎖定釋出之後，授與鎖定成功。|  

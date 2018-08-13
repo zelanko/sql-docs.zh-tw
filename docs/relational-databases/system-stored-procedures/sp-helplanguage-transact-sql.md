@@ -1,5 +1,5 @@
 ---
-title: sp_helplanguage (TRANSACT-SQL) |Microsoft 文件
+title: sp_helplanguage & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260431"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560628"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>引數  
  [  **@language=** ] **'***語言***'**  
- 這是要顯示資訊的替代語言名稱。 *語言*是**sysname**，預設值是 NULL。 如果*語言*已指定，會傳回指定語言的相關資訊。 如果未指定語言，在 所有語言的相關資訊**sys.syslanguages**相容性檢視會傳回。  
+ 這是要顯示資訊的替代語言名稱。 *語言*已**sysname**，預設值是 NULL。 如果*語言*已指定，會傳回指定語言的相關資訊。 如果未指定語言，在 所有語言的相關資訊**sys.syslanguages**相容性檢視會傳回。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|語言識別碼。|  
 |**dateformat**|**nchar(3)**|日期的格式。|  
@@ -69,7 +69,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**msglangid**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 訊息群組識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
   

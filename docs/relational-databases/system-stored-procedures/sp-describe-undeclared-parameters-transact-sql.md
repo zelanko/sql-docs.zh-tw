@@ -22,13 +22,13 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e4a4a97b4a69aaf68d196833ee56b089a3dadfcf
-ms.sourcegitcommit: 046d29e700981594725af698a5e079922cf5dbe7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 793223d14b8af6076c5971a055ffd066c86a03c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39331584"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537438"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -253,7 +253,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  最後一個範例中，指定查詢`SELECT NULL + @p`， **int**為選擇\@p 因為它會導致類型 (c) 轉換。  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要權限來執行\@tsql 引數。  
   
 ## <a name="examples"></a>範例  

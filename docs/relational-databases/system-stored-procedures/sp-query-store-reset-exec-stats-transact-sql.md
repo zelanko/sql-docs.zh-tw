@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_reset_exec_stats (TRANSACT-SQL) |Microsoft 文件
+title: sp_query_store_reset_exec_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 152a2de5b373c9130f5d2a579737a823b752e832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d91756ed0a9870c9748db62b7908dfb78091b175
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253748"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545118"
 ---
-# <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (TRANSACT-SQL)
+# <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  清除查詢存放區中的特定的查詢計劃的執行階段統計資料。  
+  清除查詢存放區特定查詢計劃的執行階段統計資料。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
   
 ## <a name="arguments"></a>引數  
  [  **@plan_id =** ] *plan_id*  
- 是要清除的查詢計畫的識別碼。 *plan_id*是**bigint**，沒有預設值。  
+ 是要清除查詢計劃的識別碼。 *plan_id*已**bigint**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
@@ -57,7 +57,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>備註  
   
 ## <a name="permissions"></a>Permissions  
- 需要**EXECUTE**資料庫的權限和**刪除**查詢存放區目錄檢視 」 權限。  
+ 需要**EXECUTE**的資料庫上的權限並**刪除**查詢存放區目錄檢視的權限。  
   
 ## <a name="examples"></a>範例  
  下列範例會傳回查詢存放區中查詢的相關資訊。  
@@ -71,7 +71,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 識別您想要清除的統計資料 plan_id 之後，使用下列範例來刪除特定的查詢計劃的執行統計資料。 這個範例會刪除計劃數字 3 的執行統計的資料。  
+ 識別您想要清除的統計資料 plan_id 之後，使用下列範例來刪除特定的查詢計畫的執行統計資料。 此範例會刪除計劃數字 3 的執行統計資料。  
   
 ```  
 EXEC sp_query_store_reset_exec_stats 3;  
@@ -79,10 +79,10 @@ EXEC sp_query_store_reset_exec_stats 3;
   
 ## <a name="see-also"></a>另請參閱  
  [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [sp_query_store_remove_query &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
+ [sp_query_store_remove_query &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_flush_db &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_flush_db &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [查詢存放區目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [使用查詢存放區監視效能](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

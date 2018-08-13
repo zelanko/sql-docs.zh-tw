@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137887"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400641"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System，向外延展 MPP 資料倉儲中最新消息
 請參閱什麼是最新的應用裝置更新的 Microsoft® Analytics Platform System (APS) 的新功能。 APS 是裝載 MPP SQL Server Parallel Data Warehouse 的向外延展內部部署設備。 
@@ -25,7 +25,7 @@ ms.locfileid: "37137887"
 APS 2016 是升級至 AU7 的必要條件。 以下是 AP AU7 的新功能：
 
 ### <a name="auto-create-and-auto-update-statistics"></a>自動建立 」 與 「 自動更新統計資料
-APS AU7 建立，並根據預設，自動更新統計資料。 若要更新統計資料設定，系統管理員可以使用中的新功能切換功能表項目[Configuration Manager](appliance-configuration.md#CMTasks)。 [功能切換](appliance-feature-switch.md)控制 auto-create、 自動更新和非同步更新統計資料的行為。 您也可以更新使用統計資料設定[ALTER DATABASE （平行資料倉儲）](/sql/t-sql/statements/alter-database-parallel-data-warehouse)陳述式。
+APS AU7 建立，並根據預設，自動更新統計資料。 若要更新統計資料設定，系統管理員可以使用中的新功能切換功能表項目[Configuration Manager](appliance-configuration.md#CMTasks)。 [功能切換](appliance-feature-switch.md)控制 auto-create、 自動更新和非同步更新統計資料的行為。 您也可以更新使用統計資料設定[ALTER DATABASE （平行資料倉儲）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)陳述式。
 
 ### <a name="t-sql"></a>T-SQL
 選取@var現在支援。 如需詳細資訊，請參閱 [選取的本機變數] （/ sql/t-sql/language-elements/select-local-variable-transact-sql） 

@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergepartition (TRANSACT-SQL) |Microsoft 文件
+title: sp_dropmergepartition & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 890a265b51b5048f135401ac6e80fc7066bc5c24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1ca741c2fa97266d7237aabad000a2fd0c803cce
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990343"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539558"
 ---
 # <a name="spdropmergepartition-transact-sql"></a>sp_dropmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,13 +49,13 @@ sp_dropmergepartition [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>引數  
  [ **@publication**] = **'***發行集***'**  
- 這是發行集的名稱。 *發行集*是**sysname**，沒有預設值。  
+ 這是發行集的名稱。 *發行集*已**sysname**，沒有預設值。  
   
  [ **@suser_sname**=] **'***suser_sname***'**  
- 值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函式，在訂閱者用來定義資料分割。 *suser_sname*是**sysname**，沒有預設值。  
+ 值[SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)函式，在訂閱者用來定義資料分割。 *suser_sname*已**sysname**，沒有預設值。  
   
  [ **@host_name** =] **'***host_name***'**  
- 值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式，在訂閱者用來定義資料分割。 *host_name*是**sysname**，沒有預設值。  
+ 值[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)函式，在訂閱者用來定義資料分割。 *host_name*已**sysname**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  

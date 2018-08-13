@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_exec_background_job_queue (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -23,21 +23,22 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b1c65f1333733936c8192ec5a4012a3a918dd69b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6b04f500b1603df57eace3b2d58fb158bda3f945
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550538"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對每一個排程要非同步 (背景) 執行的查詢處理器作業，各傳回一個資料列。  
   
-> **注意！！** 若要呼叫從**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** 或**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**，使用名稱**sys.dm_pdw_nodes_exec_background_job_queue**。  
+> **注意！！** 若要呼叫這個屬性從**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** 或是**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**，使用名稱**sys.dm_pdw_nodes_exec_background_job_queue**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**time_queued**|**datetime**|將作業加入佇列的時間。|  
 |**job_id**|**int**|作業識別碼。|  
@@ -51,15 +52,15 @@ ms.lasthandoff: 05/23/2018
 |**retry_count**|**smallint**|從佇列挑選作業以及因為缺乏資源或其他原因而重新插入的次數。|  
 |**in_progress**|**smallint**|指出作業是否已經開始執行。<br /><br /> 1 = 已啟動<br /><br /> 0 = 仍在等候中|  
 |**session_id**|**smallint**|工作階段識別碼。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
   
 ## <a name="remarks"></a>備註  
- 這個檢視只會傳回非同步更新統計資料作業的資訊。 如需有關非同步更新統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。  
+ 這個檢視只會傳回非同步更新統計資料作業的資訊。 如需有關非同步更新統計資料的詳細資訊，請參閱 <<c0> [ 統計資料](../../relational-databases/statistics/statistics.md)。  
   
  值**object_id1**透過**object_id4**作業要求的類型而定。 下表將摘錄這些資料行在不同作業類型的意義。  
   
@@ -80,7 +81,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [執行相關動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [統計資料](../../relational-databases/statistics/statistics.md)   
  [KILL STATS JOB &#40;Transact SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   

@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fccb384317102ef2818a49ef09c5faeb0fc42eb1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7bd63fff2c2c395648a1ac8a61903db007cafc96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047246"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559768"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
  **Start_incremental**動作來建立完整的中的全文檢索資料快照集*fulltext_catalog_name*。 **Start_incremental**動作可用來重新建立索引只變更的資料庫的資料列。 只有當資料表具有類型的資料行時，才可以套用的累加母體擴展**時間戳記**。 如果全文檢索目錄中的資料表不包含類型的資料行**時間戳記**，資料表就會進行完整母體擴展。  
