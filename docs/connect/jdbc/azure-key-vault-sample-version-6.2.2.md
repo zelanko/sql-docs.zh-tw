@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a32e730c34cfc3fd325b0f1a1fdcb24f734ec88
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 08793e9178ed5c23ca140cc7d01a4708c9849769
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451625"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662190"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Azure Key Vault 範例版本 6.2.2
 
@@ -46,7 +46,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 
 public class AKV_6_2_2 {
 
-    private static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
+    static String connectionUrl = "jdbc:sqlserver://localhost;integratedSecurity=true;database=test;columnEncryptionSetting=enabled";
     static String applicationClientID = "Your Client ID";
     static String applicationKey = "Your Application Key";
     static String keyID = "Your Key ID";
@@ -98,13 +98,6 @@ public class AKV_6_2_2 {
         testChar(statement);
     }
 
-    /**
-     * Sets up keystore
-     * 
-     * @param CUSTOM_AKV_PROVIDER_NAME
-     * @param akvProvider
-     * @throws SQLServerException
-     */
     private static void setupKeyStoreProviders(String CUSTOM_AKV_PROVIDER_NAME,
             SQLServerColumnEncryptionKeyStoreProvider akvProvider)
             throws SQLServerException {
@@ -113,21 +106,11 @@ public class AKV_6_2_2 {
         SQLServerConnection.registerColumnEncryptionKeyStoreProviders(map1);
     }
 
-    /**
-     * Cleans and drops tables
-     * 
-     * @throws SQLException
-     */
     private static void dropTable(Statement statement) throws SQLException {
         statement.executeUpdate("if object_id('" + akvTable
                 + "','U') is not null" + " drop table " + akvTable);
     }
 
-    /**
-     * Drops CMKs and CEKs
-     * 
-     * @throws SQLException
-     */
     private static void dropKeys(Statement statement) throws SQLException {
         statement.executeUpdate(
                 "if exists (SELECT name from sys.column_encryption_keys where name='"
@@ -139,12 +122,6 @@ public class AKV_6_2_2 {
                         + cmkName + " end");
     }
 
-    /**
-     * Creates CMK using the keystore
-     * 
-     * @param CUSTOM_AKV_PROVIDER_NAME
-     * @throws SQLException
-     */
     private static void createCMK(String CUSTOM_AKV_PROVIDER_NAME,
             Statement statement) throws SQLException {
         String _createColumnMasterKeyTemplate = String.format(
@@ -153,13 +130,6 @@ public class AKV_6_2_2 {
         statement.execute(_createColumnMasterKeyTemplate);
     }
 
-    /**
-     * Creates CEK
-     * 
-     * @param storeProvider
-     * @throws SQLServerException
-     * @throws SQLException
-     */
     private static void createCEK(
             SQLServerColumnEncryptionKeyStoreProvider storeProvider,
             Statement statement) throws SQLServerException, SQLException {
@@ -174,14 +144,6 @@ public class AKV_6_2_2 {
         statement.execute(cekSql);
     }
 
-    /**
-     * 
-     * @param b
-     *            byte value
-     * @param length
-     *            length of the array
-     * @return
-     */
     final static char[] hexChars = {'0', '1', '2', '3', '4', '5', '6', '7', '8',
             '9', 'A', 'B', 'C', 'D', 'E', 'F'};
 
@@ -195,11 +157,6 @@ public class AKV_6_2_2 {
         return sb.toString();
     }
 
-    /**
-     * Populates the table
-     * 
-     * @throws SQLException
-     */
     private static void populateCharNormalCase(Connection connection)
             throws SQLException {
         String sql = "insert into " + akvTable + " values(?,?,?)";
@@ -211,11 +168,6 @@ public class AKV_6_2_2 {
         }
     }
 
-    /**
-     * Rerieves the table
-     * 
-     * @throws SQLException
-     */
     private static void testChar(Statement statement) throws SQLException {
         try (ResultSet rs = statement
                 .executeQuery("select * from " + akvTable);) {
@@ -226,13 +178,6 @@ public class AKV_6_2_2 {
         }
     }
 
-    /**
-     * Tests the values
-     * 
-     * @param rs
-     * @param numberOfColumns
-     * @throws SQLException
-     */
     private static void testGetString(ResultSet rs, int numberOfColumns)
             throws SQLException {
         for (int i = 1; i <= numberOfColumns; i = i + 3) {

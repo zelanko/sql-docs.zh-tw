@@ -14,35 +14,35 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac74ec1c202341d6de099d97e2b7c719c2f72d27
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1d044c1747b13f94c6f7feb902144d51b50af870
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978620"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662220"
 ---
 # <a name="using-statements-with-sql"></a>使用 SQL 陳述式
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 及內嵌 SQL 陳述式來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中的資料時，有不同的類別可供您使用。 使用哪一種類別視您想要執行的 SQL 陳述式類型而定。  
+使用 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 及內嵌 SQL 陳述式來處理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中的資料時，有不同的類別可供您使用。 使用哪一種類別視您想要執行的 SQL 陳述式類型而定。  
   
- 如果您的 SQL 陳述式不含任何 IN 參數，請使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，但如果它確實含有 IN 參數，則請使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別。  
+如果您的 SQL 陳述式不含任何 IN 參數，請使用 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 類別，但如果它確實含有 IN 參數，則請使用 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 類別。  
   
 > [!NOTE]  
->  如果您需要使用同時包含 IN 與 OUT 參數的 SQL 陳述式，您必須將它們實作為預存程序，並使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別呼叫它們。 如需使用預存程序的詳細資訊，請參閱 <<c0> [ 預存程序使用的 Using 陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
+> 如果您需要使用同時包含 IN 與 OUT 參數的 SQL 陳述式，您必須將它們實作為預存程序，並使用 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 類別呼叫它們。 如需使用預存程序的詳細資訊，請參閱 <<c0> [ 預存程序使用的 Using 陳述式](../../connect/jdbc/using-statements-with-stored-procedures.md)。  
   
- 下列各節描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中使用 SQL 陳述式來處理資料的不同狀況。  
-  
+下列各節描述在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫中使用 SQL 陳述式來處理資料的不同狀況。  
+
 ## <a name="in-this-section"></a>本節內容  
+
+| 主題                                                                                                                        | Description                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| [使用不含參數的 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)                 | 說明如何使用沒有包含任何參數的 SQL 陳述式。   |
+| [搭配使用 SQL 陳述式與參數](../../connect/jdbc/using-an-sql-statement-with-parameters.md)                       | 說明如何使用包含參數的 SQL 陳述式。      |
+| [使用 SQL 陳述式修改資料庫物件](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | 說明如何使用 SQL 陳述式以修改資料庫物件。   |
+| [使用 SQL 陳述式修改資料](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | 說明如何使用 SQL 陳述式以修改資料庫中的資料。 |
   
-|主題|Description|  
-|-----------|-----------------|  
-|[使用不含參數的 SQL 陳述式](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|說明如何使用沒有包含任何參數的 SQL 陳述式。|  
-|[搭配使用 SQL 陳述式與參數](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|說明如何使用包含參數的 SQL 陳述式。|  
-|[使用 SQL 陳述式修改資料庫物件](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|說明如何使用 SQL 陳述式以修改資料庫物件。|  
-|[使用 SQL 陳述式修改資料](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|說明如何使用 SQL 陳述式以修改資料庫中的資料。|  
-  
-## <a name="see-also"></a>另請參閱  
- [搭配使用陳述式與 JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
-  
-  
+## <a name="see-also"></a>另請參閱
+
+[搭配使用陳述式與 JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

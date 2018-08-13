@@ -21,12 +21,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011635"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008800"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "33011635"
 ## <a name="1-configure-the-environment"></a>1.設定環境  
 使用 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 與下列程式碼開啟 `AdventureWorks2012` 資料庫，然後使用 `CURRENT_USER` [!INCLUDE[tsql](../includes/tsql-md.md)] 陳述式檢查 dbo 使用者是否顯示為內容。  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -70,7 +70,7 @@ GO
   
 使用下列程式碼，以 dbo 使用者身分在伺服器和 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫中建立兩位使用者。  
   
-```  
+```sql
 CREATE LOGIN TestManagerUser   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khx';  
 GO  
@@ -91,7 +91,7 @@ GO
   
 使用下列陳述式，將 `Purchasing` 結構描述的擁有權變更為 `TestManagerUser` 帳戶。 這樣一來，該帳戶對結構描述內含物件就具備了所有的資料操作語言 (DML) 陳述式存取權 (例如 `SELECT` 和 `INSERT` 權限)。 `TestManagerUser` 也已獲授與建立預存程序的能力。  
   
-```  
+```sql
 /* Change owner of the Purchasing Schema to TestManagerUser */  
 ALTER AUTHORIZATION   
    ON SCHEMA::Purchasing   
@@ -111,7 +111,7 @@ GO
   
 下列程式碼使用 `EXECUTE AS` 陳述式將內容變更為 `TestManagerUser` ，並建立預存程序單僅顯示 `TestEmployeeUser`所需的資料。 為了滿足需求，預存程序接受訂單號碼做為變數且並未顯示財務資訊，而 WHERE 子句則將結果限制在已部分送達的貨品。  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestManagerUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -135,7 +135,7 @@ GO
   
 目前 `TestEmployeeUser` 尚無權存取任何資料庫物件。 下列程式碼 (內容仍是 `TestManagerUser` ) 將授與該使用者帳戶透過預存程序查詢基底資料表資訊的能力。  
   
-```  
+```sql
 GRANT EXECUTE  
    ON OBJECT::Purchasing.usp_ShowWaitingItems  
    TO TestEmployeeUser;  
@@ -144,7 +144,7 @@ GO
   
 儘管並未明確指定結構描述，此預存程序係屬 `Purchasing` 結構描述的一部分，因為 `TestManagerUser` 預設即指派到 `Purchasing` 結構描述。 您可以利用系統目錄資訊找出物件，如下列程式碼所示。  
   
-```  
+```sql
 SELECT a.name AS 'Schema'  
    , b.name AS 'Object Name'  
    , b.type AS 'Object Type'  
@@ -157,7 +157,7 @@ GO
   
 範例的這個部分既已完成，程式碼隨即使用 `REVERT` 陳述式將內容切換回 dbo。  
   
-```  
+```sql
 REVERT;  
 GO  
 ```  
@@ -167,7 +167,7 @@ GO
 ## <a name="3-access-data-through-the-stored-procedure"></a>3.透過預存程序存取資料  
 `TestEmployeeUser` 除了在 public 資料庫角色中具備登入身分及受指派的權限外，對 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 資料庫物件毫無任何權限。 下列程式碼將因 `TestEmployeeUser` 試圖存取基底資料表而傳回錯誤。  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -183,7 +183,7 @@ GO
   
 由於 `TestManagerUser` 憑藉其 `Purchasing` 結構描述擁有權而成為上一節所建立預存程序中參考之物件的擁有者， `TestEmployeeUser` 可透過預存程序存取基底資料表。 下列程式碼仍舊使用 `TestEmployeeUser` 內容，傳遞訂單號碼 952 做為參數。  
   
-```  
+```sql
 EXEC Purchasing.usp_ShowWaitingItems 952  
 GO  
 ```  
@@ -191,7 +191,7 @@ GO
 ## <a name="4-reset-the-environment"></a>4.重設環境  
 下列程式碼使用 `REVERT` 命令，將目前帳戶的內容切換回 `dbo`然後重設環境。  
   
-```  
+```sql
 REVERT;  
 GO  
 ALTER AUTHORIZATION   
@@ -215,7 +215,7 @@ GO
 > [!NOTE]  
 > 下列程式碼剔除了用以示範 `TestEmployeeUser` 無法從基底資料表選取以致發生兩項預期錯誤的部分。  
   
-```  
+```sql
 /*   
 Script:       UserContextTutorial.sql  
 Author:       Microsoft  

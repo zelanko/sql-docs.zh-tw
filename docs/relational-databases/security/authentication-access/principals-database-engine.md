@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553098"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008960"
 ---
 # <a name="principals-database-engine"></a>主體 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553098"
   
 ## <a name="sql-server-level-principals"></a>SQL Server 層級主體  
   
--  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入   
--  Windows 使用者的 Windows 驗證登入  
--  Windows 群組的 Windows 驗證登入   
--  AD 使用者的 Azure Active Directory 驗證登入
--  AD 群組的 Azure Active Directory 驗證登入
--  伺服器角色  
+- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 驗證登入   
+- Windows 使用者的 Windows 驗證登入  
+- Windows 群組的 Windows 驗證登入   
+- AD 使用者的 Azure Active Directory 驗證登入
+- AD 群組的 Azure Active Directory 驗證登入
+- 伺服器角色  
   
- ## <a name="database-level-principals"></a>資料庫層級主體  
+## <a name="database-level-principals"></a>資料庫層級主體
   
--   資料庫使用者 (有 11 種類型的使用者。 如需詳細資訊，請參閱 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md))。 
--   資料庫角色  
--   應用程式角色  
+- 資料庫使用者 (有 11 種類型的使用者。 如需詳細資訊，請參閱 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md))。
+- 資料庫角色
+- 應用程式角色
   
 ## <a name="sa-login"></a>sa 登入  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 登入為伺服器層級的主體。 根據預設，安裝執行個體時會建立它。 從 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]開始，sa 的預設資料庫就是 master。 這是和舊版 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]不同的一項行為變更。 `sa` 登入是 `sysadmin` 固定資料庫角色成員。 `sa` 登入具有伺服器的所有權限，因此不受限制。 無法卸除 `sa` 登入，但可透過停用，讓所有人都無法使用它。
