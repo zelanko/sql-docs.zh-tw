@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_languages (TRANSACT-SQL) |Microsoft 文件
+title: sys.fulltext_languages & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,23 +25,23 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dabc9334091b5b545c78b069b3e9f31a5a68a1bd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b137d433f06eddcd57bc01bb2b26900c3fdd3483
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182054"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535208"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列顯示的 LCID 和語言的名稱。 針對某種語言註冊斷詞工具時，其他語言資源 (字幹分析器、非搜尋字 (停用字詞) 和同義字檔案) 就會成為可供全文檢索索引/查詢作業使用。 值**名稱**或**lcid**全文檢索索引與全文檢索查詢中可以指定[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。  
+  這份目錄檢視會針對其斷詞工具向 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 註冊的每種語言，各包含一個資料列。 每個資料列顯示的 LCID 和語言的名稱。 針對某種語言註冊斷詞工具時，其他語言資源 (字幹分析器、非搜尋字 (停用字詞) 和同義字檔案) 就會成為可供全文檢索索引/查詢作業使用。 值**名稱**或是**lcid**全文檢索索引與全文檢索查詢中可以指定[!INCLUDE[tsql](../../includes/tsql-md.md)]陳述式。  
    
-|資料行|資料類型|Description|  
+|「資料行」|資料類型|描述|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|語言的 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 地區設定識別碼 (LCID)。|  
-|**name**|**sysname**|是中的別名值[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)的值對應**lcid**或是數值 LCID 的字串表示。|  
+|**name**|**sysname**|不是值中的別名[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)的值相對應**lcid**或是數值 LCID 的字串表示法。|  
   
 ## <a name="values-returned-for-default-languages"></a>針對預設語言傳回的值  
  下表顯示預設註冊其斷詞工具之語言的值。  
@@ -109,11 +109,11 @@ ms.locfileid: "33182054"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_fulltext_load_thesaurus_file &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [sp_fulltext_load_thesaurus_file &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [設定及管理搜尋的斷詞工具與字幹分析器](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [設定及管理全文檢索搜尋的同義字檔案](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [設定及管理全文檢索搜尋停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [設定及管理全文檢索搜尋的停用字詞與停用字詞表](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [升級全文檢索搜尋](../../relational-databases/search/upgrade-full-text-search.md)  
   
   
