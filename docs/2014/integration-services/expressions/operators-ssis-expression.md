@@ -43,13 +43,13 @@ ms.locfileid: "37320688"
 |[將&#40;SSIS 運算式&#41;](divide-ssis-expression.md)|將第一個數值運算式除以第二個數值運算式。|  
 |[&#40;模數&#41; &#40;SSIS 運算式&#41;](modulo-ssis-expression.md)|提供第一個數值運算式除以第二個數值運算式之後的整數餘數。|  
 |[&#124;&#124;&#40;邏輯 OR&#41; &#40;SSIS 運算式&#41;](logical-or-ssis-expression.md)|執行邏輯 OR 運算。|  
-|[（& s) （& s)&#40;邏輯 AND&#41; &#40;SSIS 運算式&#41;](logical-and-ssis-expression.md)|執行邏輯 AND 運算。|  
-|[!&#40;邏輯 Not&#41; &#40;SSIS 運算式&#41;](logical-not-ssis-expression.md)|執行布林運算元的否定運算。|  
+|[&& &#40;邏輯 AND&#41; &#40;SSIS 運算式&#41;](logical-and-ssis-expression.md)|執行邏輯 AND 運算。|  
+|[! &#40;邏輯 Not&#41;&#40;SSIS 運算式&#41;](logical-not-ssis-expression.md)|執行布林運算元的否定運算。|  
 |[&#124;&#40;位元包含 OR&#41; &#40;SSIS 運算式&#41;](bitwise-inclusive-or-ssis-expression.md)|執行兩個整數值的位元 OR 運算。|  
-|[^&#40;位元互斥 OR&#41; &#40;SSIS 運算式&#41;](bitwise-exclusive-or-ssis-expression.md)|執行兩個整數值的位元排除 OR 運算。|  
-|[（& s)&#40;位元 AND&#41; &#40;SSIS 運算式&#41;](bitwise-and-ssis-expression.md)|執行兩個整數值的位元 AND 運算。|  
-|[~&#40;位元 Not&#41; &#40;SSIS 運算式&#41;](bitwise-not-ssis-expression.md)|執行整數的位元否定運算。|  
-|[= =&#40;等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)|執行比較來決定兩個運算式是否相等。|  
+|[^ &#40;位元互斥 OR&#41; &#40;SSIS 運算式&#41;](bitwise-exclusive-or-ssis-expression.md)|執行兩個整數值的位元排除 OR 運算。|  
+|[& &#40;位元 AND&#41; &#40;SSIS 運算式&#41;](bitwise-and-ssis-expression.md)|執行兩個整數值的位元 AND 運算。|  
+|[~ &#40;位元 Not&#41; &#40;SSIS 運算式&#41;](bitwise-not-ssis-expression.md)|執行整數的位元否定運算。|  
+|[== &#40;等於&#41; &#40;SSIS 運算式&#41;](equal-ssis-expression.md)|執行比較來決定兩個運算式是否相等。|  
 |[\!= &#40;不等於&#41; &#40;SSIS 運算式&#41;](unequal-ssis-expression.md)|執行比較來決定兩個運算式是否不相等。|  
 |[&#62;&#40;大於&#41; &#40;SSIS 運算式&#41;](greater-than-ssis-expression.md)|執行比較來決定第一個運算式是否大於第二個運算式。|  
 |[&#60;&#40;小於&#41; &#40;SSIS 運算式&#41;](less-than-ssis-expression.md)|執行比較來決定第一個運算式是否小於第二個運算式。|  
