@@ -1,5 +1,5 @@
 ---
-title: sys.objects (TRANSACT-SQL) |Microsoft 文件
+title: sys.objects & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: sql
@@ -26,27 +26,27 @@ ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfbf6fa606834c9582392635670b5f04fe9995a3
-ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 23053e11757682180c78a594632b75a466e126bb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225376"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552958"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  包含每個使用者定義的結構描述範圍物件，建立資料庫，包括原生編譯純量使用者定義的函式內的資料列。  
+  包含每個資料庫，包括原生編譯純量使用者定義的函式內建立的使用者定義的結構描述範圍物件的資料列。  
   
  如需詳細資訊，請參閱[記憶體內部 OLTP 的純量使用者定義函數](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)。  
   
 > [!NOTE]  
 >  sys.objects 不顯示 DDL 觸發程序，因為它們不是以結構描述為範圍。 在中找到所有觸發程序，DML 和 DDL 在內[sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)。 sys.triggers 支援各種觸發程序種類的混合名稱範圍規則。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|物件名稱。|  
+|NAME|**sysname**|物件名稱。|  
 |object_id|**int**|物件識別碼。 在資料庫中，這是唯一的。|  
 |principal_id|**int**|如果個別擁有者不是結構描述擁有者，這便是個別擁有者的識別碼。 依預設，結構描述包含的物件就是結構描述擁有者所擁有的物件。 不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更擁有權，指定替代的擁有者。<br /><br /> 如果沒有替代的個別擁有者，這便是 NULL。<br /><br /> 如果物件類型是下列其中一項，便是 NULL：<br /><br /> C = CHECK 條件約束<br /><br /> D = DEFAULT (條件約束或獨立式)<br /><br /> F = FOREIGN KEY 條件約束<br /><br /> PK = PRIMARY KEY 條件約束<br /><br /> R = 規則 (舊式、獨立式)<br /><br /> TA = 組件 (CLR 整合) 觸發程序<br /><br /> TR = SQL 觸發程序<br /><br /> UQ = UNIQUE 條件約束|  
 |schema_id|**int**|物件所在的結構描述識別碼。<br /><br /> 結構描述範圍的系統物件永遠包含在 sys 或 INFORMATION_SCHEMA 結構描述中。|  
@@ -60,9 +60,9 @@ ms.locfileid: "34225376"
 |is_schema_published|**bit**|僅發行物件的結構描述。|  
   
 ## <a name="remarks"></a>備註  
- 您可以套用[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)， [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)，和[OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)（） 內建函數，在 sys.objects 所顯示的物件。  
+ 您可以套用[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)， [OBJECT_NAME](../../t-sql/functions/object-name-transact-sql.md)，並[OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)（） 內建函數，在 sys.objects 所顯示的物件。  
   
- 此檢視包含相同的結構描述，並呼叫版本[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)，它會顯示系統物件。 沒有名為另一個檢視[sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)它會顯示系統和使用者物件。 這三個目錄檢視都有相同的結構。  
+ 此檢視包含相同的結構描述，並呼叫的版本[sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)，它會顯示系統物件。 沒有名為另一個檢視[sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)它會顯示系統和使用者物件。 這三個目錄檢視都有相同的結構。  
   
  在這一版 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，擴充索引 (例如 XML 索引或空間索引) 會視為 sys.objects 中的內部資料表 (type = IT 且 type_desc = INTERNAL_TABLE)。 如果是擴充索引：  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34225376"
 -   is_ms_shipped、is_published 和 is_schema_published 資料行設定為 0。  
 
 **相關的有用系統檢視表**  
-可以透過系統檢視表的特定類型的物件，例如檢視的物件子集：  
+可以檢視的物件子集，藉由使用系統檢視表的特定類型的物件，例如：  
 - [sys.tables](sys-tables-transact-sql.md)  
 - [sys.views](sys-views-transact-sql.md)  
 - [sys.procedures](sys-procedures-transact-sql.md)  
@@ -166,11 +166,11 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.all_objects &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
+ [sys.all_objects &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md)   
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [查詢 SQL Server 系統目錄 FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.internal_tables &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
+ [查詢 SQL Server 系統目錄常見問題集](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [sys.internal_tables &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)  
   
   

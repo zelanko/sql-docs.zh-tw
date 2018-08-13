@@ -19,13 +19,13 @@ ms.assetid: 20887ac4-f649-4e7f-92e6-f929e2e70952
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3c8b6a1653fa089b5ef78211c4dd1ab4896dbcf6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 13ebd841699598c3489ca5fa84bcb64999bcb475
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425897"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562742"
 ---
 # <a name="processing-results"></a>處理結果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "37425897"
 
   如果資料列集物件是由命令的執行所產生或是直接從提供者產生資料列集物件而產生，則取用者需要擷取及存取此資料列集中的資料。  
   
- 資料列集是中央物件，可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者以表格式格式公開資料。 就概念上來說，資料列集是一組資料列，其中各個資料列都有資料行。 資料列集物件會將介面公開這類**IRowset** （包含從資料列集循序提取資料列的方法）， **IAccessor** (允許的資料行繫結描述一組定義方法的表格式資料繫結至取用者程式變數）， **IColumnsInfo** （提供有關資料列集中的資料行），以及**IRowsetInfo** （提供資料列集的相關資訊）。  
+ 資料列集是中央物件，可讓 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者以表格式格式公開資料。 就概念上來說，資料列集是一組資料列，其中各個資料列都有資料行。 資料列集物件會公開介面，例如 **IRowset** (其中包含一些方法來從資料列集循序擷取資料列)、**IAccessor** (允許一組資料行繫結的定義，以描述表格式資料繫結至取用者程式變數的方式)、**IColumnsInfo** (提供有關資料列集內之資料行的資訊) 及 **IRowsetInfo** (提供有關資料列集的資訊)。  
   
- 取用者可以呼叫**irowset:: Getdata**方法來擷取資料列集的資料列新增到緩衝區。 再**GetData**是呼叫，取用者描述使用 DBBINDING 結構的一組緩衝區。 每一個繫結都會描述資料列集中的資料行是如何儲存在取用者緩衝區內，並包含以下項目：  
+ 取用者可以呼叫 **IRowset::GetData** 方法，將資料列集中的資料列擷取到緩衝區。 在呼叫 **GetData** 之前，取用者會使用一組 DBBINDING 結構來描述緩衝區。 每一個繫結都會描述資料列集中的資料行是如何儲存在取用者緩衝區內，並包含以下項目：  
   
 -   套用繫結之資料行 (或參數) 的序數。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "37425897"
   
  當取得資料時，提供者會使用每一個繫結中的資訊來判斷要從取用者緩衝區的何處擷取資料以及擷取方式為何。 在取用者緩衝區內設定資料時，提供者會使用每一個繫結中的資訊來判斷要從取用者緩衝區的何處傳回資料以及傳回方式為何。  
   
- 指定了 DBBINDING 結構之後，會建立存取子 (**iaccessor:: Createaccessor**)。 存取子是繫結的集合，可用來取得或設定取用者緩衝區內的資料。  
+ 當指定了 DBBINDING 結構之後，就會建立存取子 (**IAccessor::CreateAccessor**)。 存取子是繫結的集合，可用來取得或設定取用者緩衝區內的資料。  
   
 ## <a name="see-also"></a>另請參閱  
  [建立 SQL Server Native Client OLE DB 提供者應用程式](../../relational-databases/native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)   

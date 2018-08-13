@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_stacks (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_stacks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e5870f8b45d507a7f5eeffdee3ac46c1db2e669f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa139af60be9f2f6ef3584352ce76ba19caa4894
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563132"
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,19 +40,19 @@ ms.lasthandoff: 05/23/2018
   
 -   在元件假設發出特定呼叫之處，假設或驗證 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件使用的邏輯。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|這項堆疊配置的唯一位址。 不可為 Null。|  
-|**frame_index**|**int**|每一列代表函式呼叫，以遞增順序排序的特定的框架索引時**stack_address**，傳回的完整呼叫堆疊。 不可為 Null。|  
+|**frame_index**|**int**|每一行代表一個函式呼叫，以遞增順序排序的特定框架索引時**stack_address**，會傳回完整呼叫堆疊。 不可為 Null。|  
 |**frame_address**|**varbinary(8)**|函數呼叫的位址。 不可為 Null。|  
   
 ## <a name="remarks"></a>備註  
- **sys.dm_os_stacks**要求伺服器與其他元件的符號必須出現在伺服器上正確顯示的資訊。  
+ **sys.dm_os_stacks** ，伺服器和其他元件的符號必須出現在伺服器上正確顯示的資訊。  
   
 ## <a name="permissions"></a>Permissions
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
 
 
 ## <a name="see-also"></a>另請參閱  

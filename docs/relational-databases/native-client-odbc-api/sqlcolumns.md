@@ -17,13 +17,13 @@ caps.latest.revision: 62
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f56b3e1b80687692293998b0b7b12daf9af7a330
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5e2febda8a84ca1d8479b0139947683f70a23658
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416057"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562882"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -86,8 +86,8 @@ ms.locfileid: "37416057"
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
-|SS_IS_COLUMN_SET|**Smallint**|如果資料行**column_set**  欄中，這是 SQL_TRUE，否則 SQL_FALSE。|  
+|SS_IS_SPARSE|**smallint**|如果資料行為疏鬆資料行，這是 SQL_TRUE，否則為 SQL_FALSE。|  
+|SS_IS_COLUMN_SET|**smallint**|如果資料行**column_set**  欄中，這是 SQL_TRUE，否則 SQL_FALSE。|  
   
  ODBC 規格，SS_IS_SPARSE 和 SS_IS_COLUMN_SET 會出現所有已新增至驅動程式專用資料行之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本早於[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]，以及 ODBC 本身所託管的所有資料行之後。  
   

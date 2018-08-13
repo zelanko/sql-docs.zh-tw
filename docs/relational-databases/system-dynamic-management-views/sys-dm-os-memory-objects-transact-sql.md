@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_memory_objects (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_memory_objects (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,19 +23,20 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d2cfed528dcbc58e4abed89ae1b76d0532d6bf6f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: b746df94b0b7c36802663ca22c6b49107f10db18
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558428"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   傳回目前所配置的記憶體物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以使用**sys.dm_os_memory_objects**來分析記憶體使用以及識別可能的記憶體遺漏。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary(8)**|記憶體物件的位址。 不可為 Null。|  
 |**parent_address**|**varbinary(8)**|父記憶體物件的位址。 可為 Null。|  
@@ -50,21 +51,21 @@ ms.lasthandoff: 05/23/2018
 |**max_pages_allocated_count**|**int**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]。<br /><br /> 這個記憶體物件所配置的最大頁數。 不可為 Null。|  
 |**page_size_in_bytes**|**int**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 這個物件所配置的頁面大小 (以位元組為單位)。 不可為 Null。|  
 |**max_pages_in_bytes**|**bigint**|這個記憶體物件所使用的最大記憶體數量。 不可為 Null。|  
-|**page_allocator_address**|**varbinary(8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
+|**page_allocator_address**|**varbinary(8)**|頁面配置器的記憶體位址。 不可為 Null。 如需詳細資訊，請參閱 < [sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)。|  
 |**creation_stack_address**|**varbinary(8)**|僅供內部使用。 可為 Null。|  
 |**sequence_num**|**int**|僅供內部使用。 可為 Null。|  
-|**partition_type**|**int**|磁碟分割類型：<br /><br /> 0-非可分割記憶體物件<br /><br /> 1-可分割記憶體物件，目前沒有資料分割<br /><br /> 2-可分割記憶體物件，由 NUMA 節點分割。 在單一 NUMA 節點的環境中這相當於 1。<br /><br /> 3-可分割記憶體物件，依 CPU 分割。|  
-|**contention_factor**|**real**|使用 0 表示沒有爭用的情況，這個記憶體物件，指定競爭的值。 每次時指定的記憶體配置數目不會反映在該期間內的競爭，將更新的值。 僅適用於安全執行緒記憶體物件。|  
-|**waiting_tasks_count**|**bigint**|這個記憶體物件的等候次數。 此計數器就會遞增，每當從這個記憶體物件配置記憶體。 增量是目前正在等候存取這個記憶體物件的工作數目。 僅適用於安全執行緒記憶體物件。 這是最佳的投入時間值，而不正確性保證。|  
-|**exclusive_access_count**|**bigint**|指定這個記憶體物件頻率獨佔存取。 僅適用於安全執行緒記憶體物件。  這是最佳的投入時間值，而不正確性保證。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**partition_type**|**int**|磁碟分割類型：<br /><br /> 0-非可分割記憶體物件<br /><br /> 1-可分割記憶體物件，目前未分割<br /><br /> 2-可分割記憶體物件，依 NUMA 節點分割。 具有單一 NUMA 節點的環境中這相當於 1。<br /><br /> 3-可分割記憶體物件，依 CPU 進行分割。|  
+|**contention_factor**|**real**|值，指定這個記憶體物件上的爭用，0 表示沒有爭用的情況。 每當指定的數目的記憶體配置進行反射的爭用情況，在該期間內，將更新的值。 僅適用於安全執行緒記憶體物件。|  
+|**waiting_tasks_count**|**bigint**|這個記憶體物件上的等候次數。 此計數器會遞增，每當從這個記憶體物件配置記憶體。 的增量是目前等候這個記憶體物件的存取權的工作數目。 僅適用於安全執行緒記憶體物件。 這是最佳的投入時間值，不保證正確性。|  
+|**exclusive_access_count**|**bigint**|指定這個記憶體物件頻率以獨佔方式存取。 僅適用於安全執行緒記憶體物件。  這是最佳的投入時間值，不保證正確性。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
  **partition_type**， **contention_factor**， **waiting_tasks_count**，和**exclusive_access_count**尚未實作中[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ## <a name="permissions"></a>Permissions
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
 
 ## <a name="remarks"></a>備註  
  記憶體物件是堆積。 它們提供的配置比記憶體 Clerk 所提供的配置資料粒度更細。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件會使用記憶體物件來取代記憶體 Clerk。 記憶體物件使用記憶體 Clerk 頁面配置器介面來配置頁面。 記憶體物件不使用虛擬或共用記憶體介面。 隨著配置模式的不同，元件可以建立不同類型的記憶體物件，來配置任意大小的頁面。  
@@ -87,7 +88,7 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
   [SQL Server 作業系統相關的動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
+ [sys.dm_os_memory_clerks &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)  
   
   
 

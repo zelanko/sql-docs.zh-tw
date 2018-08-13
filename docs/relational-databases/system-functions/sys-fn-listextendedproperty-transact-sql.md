@@ -1,5 +1,5 @@
 ---
-title: sys.fn_listextendedproperty (TRANSACT-SQL) |Microsoft 文件
+title: sys.fn_listextendedproperty (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -30,13 +30,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3484c32c00c5f94f084cd5c0e49837181054df40
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d0480fcc7880febe136431ff50cb3405b8427c40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238435"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559718"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,31 +63,31 @@ fn_listextendedproperty (
   
 ## <a name="arguments"></a>引數  
  {預設 |'*property_name*' |NULL}  
- 屬性的名稱。 *property_name*是**sysname**。 有效的輸入是預設值、NULL 或屬性名稱。  
+ 屬性的名稱。 *property_name*已**sysname**。 有效的輸入是預設值、NULL 或屬性名稱。  
   
- {預設 |'*level0_object_type*' |NULL}  
- 使用者或使用者定義類型。 *level0_object_type*是**varchar （128)**，預設值是 NULL。 有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
+ {預設 |'*level0_object_type&lt*' |NULL}  
+ 使用者或使用者定義類型。 *level0_object_type&lt*已**varchar(128)**，預設值是 NULL。 有效輸入如下：ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、TRIGGER、TYPE、USER 和 NULL。  
   
 > [!IMPORTANT]  
 >  在未來的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 版本中，會移除層級 0 類型的 USER 和 TYPE。 請避免在新的開發工作中使用這些功能，並規劃修改目前使用這些功能的應用程式。 請改用 SCHEMA 來當做層級 0 類型，而不是使用 USER。 如果是 TYPE，請使用 SCHEMA 當做層級 0 類型，並使用 TYPE 當做層級 1 類型。  
   
- {預設 |'*level0_object_name*' |NULL}  
- 這是所指定之層級 0 物件類型的名稱。 *level0_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
+ {預設 |'*level0_object_name&lt*' |NULL}  
+ 這是所指定之層級 0 物件類型的名稱。 *level0_object_name&lt*已**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
   
- {預設 |'*level1_object_type*' |NULL}  
- 這是層級 1 物件的類型。 *level1_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
+ {預設 |'*level1_object_type&lt*' |NULL}  
+ 這是層級 1 物件的類型。 *level1_object_type&lt*已**varchar(128)** 預設值是 NULL。 有效輸入如下：AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TYPE、VIEW、XML SCHEMA COLLECTION 和 NULL。  
   
 > [!NOTE]  
 >  預設值對應到 NULL，'default' 對應到物件類型 DEFAULT。  
   
- {預設 |'*level1_object_name*' |NULL}  
- 這是所指定之層級 1 物件類型的名稱。 *level1_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
+ {預設 |'*level1_object_name&lt*' |NULL}  
+ 這是所指定之層級 1 物件類型的名稱。 *level1_object_name&lt*已**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
   
- {預設 |'*level2_object_type*' |NULL}  
- 這是層級 2 物件的類型。 *level2_object_type*是**varchar （128)** 預設值是 NULL。 有效輸入有 DEFAULT、預設值 (對應到 NULL) 和 NULL。 有效輸入*level2_object_type*是資料行、 條件約束、 EVENT NOTIFICATION、 INDEX、 參數、 觸發程序和 NULL。  
+ {預設 |'*level2_object_type&lt*' |NULL}  
+ 這是層級 2 物件的類型。 *level2_object_type&lt*已**varchar(128)** 預設值是 NULL。 有效輸入有 DEFAULT、預設值 (對應到 NULL) 和 NULL。 有效的輸入，如*level2_object_type&lt*是資料行、 條件約束、 EVENT NOTIFICATION、 索引、 參數、 觸發程序和 NULL。  
   
- {預設 |'*level2_object_name*' |NULL}  
- 這是所指定之層級 2 物件類型的名稱。 *level2_object_name*是**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
+ {預設 |'*level2_object_name&lt*' |NULL}  
+ 這是所指定之層級 2 物件類型的名稱。 *level2_object_name&lt*已**sysname**預設值是 NULL。 有效的輸入是預設值、NULL 或物件名稱。  
   
 ## <a name="tables-returned"></a>傳回的資料表  
  這是 fn_listextendedproperty 傳回之資料表的格式。  
@@ -96,19 +96,19 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|name|**sysname**|  
+|NAME|**sysname**|  
 |value|**sql_variant**|  
   
  如果傳回的資料表是空的，可能是物件沒有擴充屬性，也可能是使用者沒有列出物件擴充屬性的權限。 傳回資料庫本身的擴充屬性時，objtype 和 objname 資料行將為 NULL。  
   
 ## <a name="remarks"></a>備註  
- 如果值*property_name*是 NULL 或預設值，fn_listextendedproperty 會傳回指定之物件的所有屬性。  
+ 如果值*property_name*為 NULL 或預設值，fn_listextendedproperty 會傳回指定之物件的所有屬性。  
   
  當指定了物件類型，且對應物件名稱的值是 NULL 或預設值時，fn_listextendedproperty 會傳回指定類型之所有物件的所有擴充屬性。  
   
  物件會根據層級來區別，層級 0 是最高層級，層級 2 是最低層級。 如果指定了較低層級物件 (層級1 或層級 2) 的類型和名稱，就應該提供非 NULL 或預設值的父物件類型和名稱值。 否則，這個函數會傳回空的結果集。  
   
- **objname**固定為 Latin1_General_CI_AI。 不過您可以因應措施這藉由覆寫的比較中的定序。  
+ **objname**固定為 Latin1_General_CI_AI。 不過您可以因應措施這藉由覆寫中比較的定序。  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -147,7 +147,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. 顯示資料表中所有資料行的擴充屬性  
- 下列範例會列出擴充的屬性中的資料行`ScrapReason`資料表。 這包含在 `Production` 結構描述中。  
+ 下列範例會列出資料行中的擴充的屬性`ScrapReason`資料表。 這包含在 `Production` 結構描述中。  
   
 ```  
 USE AdventureWorks2012;  
@@ -183,9 +183,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_addextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
- [sys.extended_properties &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [sp_addextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
+ [sys.extended_properties &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

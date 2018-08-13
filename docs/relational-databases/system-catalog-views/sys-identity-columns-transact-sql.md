@@ -1,5 +1,5 @@
 ---
-title: sys.identity_columns (TRANSACT-SQL) |Microsoft 文件
+title: sys.identity_columns (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,31 +24,31 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f9c557f65075d344a9f1fbec5b4a9ce5df207a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7117374ced64a6ed130d84b70de3f1334d8d7ca7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181574"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543358"
 ---
 # <a name="sysidentitycolumns-transact-sql"></a>sys.identity_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對每個識別欄位，各包含一個資料列。  
   
- **Sys.identity_columns**檢視繼承資料列從**sys.columns**檢視。 **Sys.identity_columns**檢視傳回的資料行中**sys.columns**  檢視中，再加上**seed_value**， **increment_value**， **last_value**，和**is_not_for_replication**資料行。 如需詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
+ **Sys.identity_columns**檢視繼承資料列**sys.columns**檢視。 **Sys.identity_columns**檢視會傳回的資料行**sys.columns**  檢視中，再加上**seed_value**， **increment_value**， **last_value**，並**is_not_for_replication**資料行。 如需詳細資訊，請參閱[目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<資料行繼承自 sys.columns >**||**Sys.identity_columns**檢視會傳回所有資料行的**sys.columns**檢視。 另外亦將傳回以下所述的其他資料行。 如需資料行的描述， **sys.identity_columns**檢視繼承自**sys.columns**，請參閱[sys.columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。|  
+|**\<繼承自 sys.columns 的資料行 >**||**Sys.identity_columns**檢視會傳回所有資料行**sys.columns**檢視。 另外亦將傳回以下所述的其他資料行。 如需資料行的描述， **sys.identity_columns**檢視繼承自**sys.columns**，請參閱[sys.columns &#40;-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)。|  
 |**seed_value**|**sql_variant**|這個識別欄位的初始值。 初始值的資料類型，與資料行本身的資料類型相同。|  
 |**increment_value**|**sql_variant**|這個識別欄位的遞增值。 初始值的資料類型，與資料行本身的資料類型相同。|  
 |**last_value**|**sql_variant**|這個識別欄位的最終值。 初始值的資料類型，與資料行本身的資料類型相同。|  
 |**is_not_for_replication**|**bit**|識別欄位被宣告為 NOT FOR REPLICATION。|  
   
 > [!NOTE]  
->  若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱[序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
+>  若要建立可用於多個資料表中或可在不參考任何資料表的情況下從應用程式進行呼叫的自動遞增數字，請參閱 [序號](../../relational-databases/sequence-numbers/sequence-numbers.md)。  
   
 ## <a name="permissions"></a>Permissions  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 如需相關資訊，請參閱 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)。  

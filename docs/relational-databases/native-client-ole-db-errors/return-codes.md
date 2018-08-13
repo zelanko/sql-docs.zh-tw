@@ -25,13 +25,13 @@ ms.assetid: 7f7457e9-fce4-400c-82e5-ee02e9e811c6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0c49687aa278b41b48e2bd8fc2e46b8963b98b82
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 473f33e087b2d8fe4e54e793ed10ab2690c6ca47
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415477"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539478"
 ---
 # <a name="return-codes"></a>傳回碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37415477"
 
   在大部分的基本層級，成員函數不是成功就是失敗。 在更精確一點的層級，函數可能會成功，但是其成功可能不是應用程式開發人員所樂見的。  
   
- 如需有關 OLE DB 傳回碼的詳細資訊，請參閱 <<c0> [ 傳回碼 (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631)。  
+ 如需 OLE DB 傳回碼的詳細資訊，請參閱 [Return Codes (OLE DB)](http://go.microsoft.com/fwlink/?LinkId=101631) (傳回碼 (OLE DB))。  
   
  當[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者成員函數傳回 s_ok 時，該函數會成功。  
   

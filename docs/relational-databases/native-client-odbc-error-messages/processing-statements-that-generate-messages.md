@@ -27,13 +27,13 @@ ms.assetid: 672ebdc5-7fa1-4ceb-8d52-fd25ef646654
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d005ff1f8edd180ced55a02c96d5ec9e256242f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 015eff0c9056fe09528fe64ad6f1134c14b1c8fa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432437"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542478"
 ---
 # <a name="processing-statements-that-generate-messages"></a>處理產生訊息的陳述式
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

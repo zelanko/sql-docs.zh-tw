@@ -1,5 +1,5 @@
 ---
-title: 命令參數 |Microsoft Docs
+title: 命令參數 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,13 @@ ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 37bf1eaf79ad3a26e5a1e19108850af05d276538
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 805af790d5a703f1fefca6173b119586b002bd95
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414427"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550768"
 ---
 # <a name="command-parameters"></a>命令參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37414427"
   
  若要藉由減少網路流量、 改善效能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者不會自動衍生參數資訊除非**icommandwithparameters:: Getparameterinfo**或**Icommandprepare:: Prepare**執行命令之前呼叫。 這表示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者不會自動：  
   
--   驗證指定的資料類型的正確性**icommandwithparameters:: Setparameterinfo**。  
+-   確認使用 **ICommandWithParameters::SetParameterInfo** 所指定之資料類型的正確性。  
   
 -   從存取子繫結資訊中指定的 DBTYPE 對應至參數的正確 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。  
   
@@ -47,16 +47,16 @@ ms.locfileid: "37414427"
   
  若要確保不會發生這種情況，應用程式應該：  
   
--   請確認*pwszDataSourceType*比對[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別參數，如果硬式編碼**icommandwithparameters:: Setparameterinfo**。  
+-   確定 *pwszDataSourceType* 符合參數的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型 (如果寫入 **ICommandWithParameters::SetParameterInfo** 程式碼的話)。  
   
 -   確定繫結至參數的 DBTYPE 值與參數的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型具有相同的類型 (如果寫入存取子程式碼的話)。  
   
--   程式碼應用程式以呼叫**icommandwithparameters:: Getparameterinfo** ，讓提供者可以取得[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別參數的動態。 請注意，這可能會導致與伺服器之間的額外網路往返。  
+-   將應用程式編碼成呼叫 **ICommandWithParameters::GetParameterInfo**，如此提供者就可以用動態方式取得參數的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 請注意，這可能會導致與伺服器之間的額外網路往返。  
   
 > [!NOTE]  
->  提供者不支援呼叫**icommandwithparameters:: Getparameterinfo**任何[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]UPDATE 或 DELETE 陳述式包含 FROM 子句; 子查詢包含參數，根據任何 SQL 陳述式SQL 陳述式中包含參數標記的比較，這兩個運算式，或定量述詞;或其中一個參數是函式的參數的查詢。 在處理 SQL 陳述式的批次時，提供者也不支援呼叫**icommandwithparameters:: Getparameterinfo**批次中的第一個陳述式之後的陳述式中的參數標記。 註解 (/ * \*/) 中不允許[!INCLUDE[tsql](../../includes/tsql-md.md)]命令。  
+>  在下列情況下，提供者不支援呼叫 **ICommandWithParameters::GetParameterInfo**：包含 FROM 子句的任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UPDATE 或 DELETE 陳述式、相依於包含參數之子查詢的任何 SQL 陳述式、在比較 (like) 或定量述詞的運算式中都包含參數標記的 SQL 陳述式，或是其中一個參數為函式參數的任何查詢。 在處理 SQL 陳述式批次時，提供者也不支援針對批次內第一個陳述式之後的陳述式中的參數標記呼叫 **ICommandWithParameters::GetParameterInfo**。 不允許在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 命令中使用註解 (/* \*/)。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援的 SQL 陳述式命令中的輸入的參數。 在程序呼叫命令中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援輸入、 輸出和輸入/輸出參數。 在執行 (只有在沒有傳回任何資料列集時) 或應用程式已用盡所有傳回的資料列集時，輸出參數值就會傳回應用程式。 若要確保傳回的值都有效，請使用**IMultipleResults**來強制資料列集取用。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援的 SQL 陳述式命令中的輸入的參數。 在程序呼叫命令中， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援輸入、 輸出和輸入/輸出參數。 在執行 (只有在沒有傳回任何資料列集時) 或應用程式已用盡所有傳回的資料列集時，輸出參數值就會傳回應用程式。 若要確保傳回的值有效，請使用 **IMultipleResults** 來強制資料列集取用。  
   
  您不需要在 DBPARAMBINDINFO 結構中指定預存程序參數的名稱。 使用 NULL 值的*pwszName*成員，指出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者應該忽略參數名稱，並使用中指定的序數*可以*的成員**icommandwithparameters:: Setparameterinfo**。 如果命令文字同時包含已命名和未命名的參數，您就必須在任何已命名的參數前面指定所有未命名的參數。  
   

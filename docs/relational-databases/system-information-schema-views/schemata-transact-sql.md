@@ -1,5 +1,5 @@
 ---
-title: 結構描述 (TRANSACT-SQL) |Microsoft 文件
+title: 結構描述 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,30 +22,30 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9596aca9f81b81a7195ef816409e8f9434ba9219
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2c8892f5fb2a584368567793f5bc52b23b810b52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240893"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558288"
 ---
 # <a name="schemata-transact-sql"></a>SCHEMATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  針對目前資料庫中每個結構描述，各傳回一個資料列。 若要從這些檢視中擷取資訊，請指定完整的名稱 **INFORMATION_SCHEMA。 * * * view_name*。 若要擷取執行個體中的所有資料庫的相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查詢[sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視。  
+  針對目前資料庫中每個結構描述，各傳回一個資料列。 若要從這些檢視擷取資訊，請指定 完整格式的名稱 **INFORMATION_SCHEMA。 * * * view_name*。 若要擷取的執行個體中的所有資料庫的相關資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，查詢[sys.databases &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)目錄檢視。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**CATALOG_NAME**|**sysname**|目前資料庫的名稱|  
 |**SCHEMA_NAME**|**nvarchar(** 128 **)**|傳回結構描述的名稱。|  
-|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|結構描述擁有者名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**SCHEMA_OWNER**|**nvarchar(** 128 **)**|結構描述擁有者名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**DEFAULT_CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|一律傳回 NULL。|  
 |**DEFAULT_CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|一律傳回 NULL。|  
 |**DEFAULT_CHARACTER_SET_NAME**|**sysname**|傳回預設字元集的名稱。|  
 
 **範例**  
-下列範例中，會傳回 master 資料庫中的結構描述的相關資訊：  
+下列範例中，master 資料庫中傳回的結構描述相關的資訊：  
 ```sql  
 SELECT * FROM master.INFORMATION_SCHEMA.SCHEMATA;
 ```  

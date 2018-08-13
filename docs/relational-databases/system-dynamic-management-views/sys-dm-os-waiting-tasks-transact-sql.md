@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_waiting_tasks (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_os_waiting_tasks (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540758"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,21 +37,21 @@ ms.lasthandoff: 05/23/2018
   傳回有關等候某項資源的工作等候佇列資訊。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_waiting_tasks**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_os_waiting_tasks**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|等候工作的位址。|  
 |**session_id**|**smallint**|與這項工作相關聯的工作階段識別碼。|  
 |**exec_context_id**|**int**|與這項工作相關聯的執行內容識別碼。|  
-|**wait_duration_ms**|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 此時間**signal_wait_time**。|  
+|**wait_duration_ms**|**bigint**|這個等候類型的總等候時間 (以毫秒為單位)。 這次是在內**signal_wait_time**。|  
 |**wait_type**|**nvarchar(60)**|等候類型的名稱。|  
 |**resource_address**|**varbinary(8)**|工作在等候的資源位址。|  
 |**blocking_task_address**|**varbinary(8)**|目前保留這項資源的工作。|  
 |**blocking_session_id**|**smallint**|封鎖要求之工作階段的識別碼。 如果這個資料行是 NULL，表示要求沒有被封鎖，或者封鎖工作階段的工作階段資訊無法使用 (或無法識別)。<br /><br /> -2 = 封鎖資源是由被遺棄的分散式交易所擁有。<br /><br /> -3 = 封鎖資源是由延遲的復原交易所擁有。<br /><br /> -4 = 由於內部閂鎖狀態轉換，而無法判斷封鎖閂鎖擁有者的工作階段識別碼。|  
 |**blocking_exec_context_id**|**int**|封鎖工作的執行內容識別碼。|  
 |**resource_description**|**nvarchar(3072)**|正在耗用的資源描述。 如需詳細資訊，請參閱以下清單。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="resourcedescription-column"></a>resource_description 資料行  
  Resource_description 資料行有下列可能的值。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/23/2018
   
  **平行查詢資源擁有者：**  
   
--   exchangeEvent id = {通訊埠 |管道}\<十六進位位址 > WaitType =\<exchange 等候類型 > nodeId =\<exchange 節點識別碼 >  
+-   exchangeEvent id = {連接埠 |管道}\<十六進位位址 > Sysprocesses =\<exchange 等候類型 > nodeId =\<exchange 節點識別碼 >  
   
  **Exchange 等候類型：**  
   
@@ -81,31 +82,31 @@ ms.lasthandoff: 05/23/2018
   
  **鎖定資源擁有者：**  
   
--   \<型別特定描述 > id = 鎖定\<鎖定 hex 位址 > 模式 =\<模式 > associatedObjectId =\<相關聯 obj 識別碼 >  
+-   \<型別特定描述 > 識別碼 = 鎖定\<鎖定十六進位位址 > 模式 =\<模式 > associatedObjectId =\<相關聯 obj 識別碼 >  
   
      **\<型別特定描述 > 可以是：**  
   
-    -   Database: Databaselock subresource =\<databaselock subresource > dbid =\<db 識別碼 >  
+    -   針對 DATABASE: Databaselock subresource =\<databaselock subresource > dbid =\<資料庫識別碼 >  
   
-    -   檔案： Filelock fileid =\<檔案識別碼 > subresource =\<filelock subresource > dbid =\<db 識別碼 >  
+    -   檔案： Filelock fileid =\<檔案識別碼 > subresource =\<filelock subresource > dbid =\<資料庫識別碼 >  
   
-    -   物件： Objectlock lockPartition =\<鎖定資料分割識別碼 > objid =\<obj 識別碼 > subresource =\<objectlock subresource > dbid =\<db 識別碼 >  
+    -   針對物件： Objectlock lockPartition =\<鎖定資料分割識別碼 > objid =\<obj-i d > subresource =\<l s > dbid =\<資料庫識別碼 >  
   
-    -   對於 PAGE: Pagelock fileid =\<檔案識別碼 > pageid =\<頁面識別碼 > dbid =\<db 識別碼 > subresource =\<pagelock s >  
+    -   對於 PAGE: Pagelock fileid =\<檔案識別碼 > pageid =\<的頁面識別碼 > dbid =\<db-i d > subresource =\<pagelock 子資源 >  
   
-    -   對於 Key: Keylock hobtid =\<hobt 識別碼 > dbid =\<db 識別碼 >  
+    -   對於 Key: Keylock hobtid =\<hobt 識別碼 > dbid =\<資料庫識別碼 >  
   
-    -   對於 EXTENT: Extentlock fileid =\<檔案識別碼 > pageid =\<頁面識別碼 > dbid =\<db 識別碼 >  
+    -   對於 EXTENT: Extentlock fileid =\<檔案識別碼 > pageid =\<的頁面識別碼 > dbid =\<資料庫識別碼 >  
   
-    -   對於 RID: Ridlock fileid =\<檔案識別碼 > pageid =\<頁面識別碼 > dbid =\<db 識別碼 >  
+    -   對於 RID: Ridlock fileid =\<檔案識別碼 > pageid =\<的頁面識別碼 > dbid =\<資料庫識別碼 >  
   
-    -   對於應用程式： Applicationlock 雜湊 =\<雜湊 > databasePrincipalId =\<角色識別碼 > dbid =\<db 識別碼 >  
+    -   對於應用程式： Applicationlock 雜湊 =\<雜湊 > databasePrincipalId =\<角色識別碼 > dbid =\<資料庫識別碼 >  
   
-    -   對於 METADATA: Metadatalock subresource =\<中繼資料 subresource > classid =\<metadatalock 描述 > dbid =\<db 識別碼 >  
+    -   對於 METADATA: Metadatalock subresource =\<子資源的中繼資料 > classid =\<metadatalock 描述 > dbid =\<資料庫識別碼 >  
   
-    -   對於 HOBT: Hobtlock hobtid =\<hobt 識別碼 > subresource =\<hobt subresource > dbid =\<db 識別碼 >  
+    -   對於 HOBT: Hobtlock hobtid =\<hobt 識別碼 > subresource =\<hobt subresource > dbid =\<資料庫識別碼 >  
   
-    -   對於 ALLOCATION_UNIT: Allocunitlock hobtid =\<hobt 識別碼 > subresource =\<配置單位-d subresource > dbid =\<db 識別碼 >  
+    -   對於 ALLOCATION_UNIT: Allocunitlock hobtid =\<hobt 識別碼 > subresource =\<子單位配置資源 > dbid =\<資料庫識別碼 >  
   
      **\<模式 > 可以是：**  
   
@@ -117,7 +118,7 @@ ms.lasthandoff: 05/23/2018
   
  **一般資源擁有者：**  
   
--   工作區中 TransactionInfo TransactionMutex =\<工作區識別碼 >  
+-   工作區中 TransactionInfo TransactionMutex =\<-i d >  
   
 -   Mutex  
   
@@ -131,7 +132,7 @@ ms.lasthandoff: 05/23/2018
   
  **閂鎖資源擁有者：**  
   
--   \<資料庫識別碼 >:\<檔案識別碼 >:\<分頁中檔案 >  
+-   \<db-i d >:\<檔案識別碼 >:\<分頁中檔案 >  
   
 -   \<GUID &GT;  
   
@@ -139,11 +140,11 @@ ms.lasthandoff: 05/23/2018
   
 ## <a name="permissions"></a>Permissions
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
  
 ## <a name="example"></a>範例
-這個範例會識別已封鎖工作階段。  執行[!INCLUDE[tsql](../../includes/tsql-md.md)]以查詢[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
+此範例會識別封鎖的工作階段。  執行[!INCLUDE[tsql](../../includes/tsql-md.md)]查詢中[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 

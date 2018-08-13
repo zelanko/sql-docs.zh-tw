@@ -22,13 +22,13 @@ caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cf12e737a798e671797880667b5fb75930a85847
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 84852653f9825420fc024e754e3ac377900d48ec
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278949"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551608"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats & Amp;#40;transact-SQL&AMP;#41;   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "39278949"
 ## <a name="remarks"></a>備註
 當執行`sys.dm_db_log_stats`將針對參與可用性群組次要複本的資料庫，傳回上面所述的欄位的子集。  目前，只有`database_id`， `recovery_model`，和`log_backup_time`次要資料庫上執行時，會傳回。   
 
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
 需要`VIEW DATABASE STATE`資料庫的權限。   
   
 ## <a name="examples"></a>範例  

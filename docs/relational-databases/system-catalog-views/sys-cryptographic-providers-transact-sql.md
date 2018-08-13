@@ -1,5 +1,5 @@
 ---
-title: sys.cryptographic_providers (TRANSACT-SQL) |Microsoft 文件
+title: sys.cryptographic_providers (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,24 +24,24 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 237b33dedddd3757864bdd91887e0899606340e2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 465540093a84a1c49426803469021aed5ac8e617
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179394"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540484"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   針對每個註冊的密碼編譯提供者傳回一個資料列。  
     
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|密碼編譯提供者的識別碼。|  
 |**name**|**sysname**|密碼編譯提供者的名稱。|  
-|**Guid**|**uniqueidentifier**|唯一的提供者 GUID。|  
+|**guid**|**uniqueidentifier**|唯一的提供者 GUID。|  
 |**version**|**nvarchar(50)**|以格式提供者版本 '*aa.bb.cccc.dd*'。|  
 |**dll_path**|**nvarchar(512)**|實作可延伸金鑰管理 (EKM) 應用程式介面 (API) 的 DLL 路徑。|  
 |**is_enabled**|**bit**|在伺服器上是否有啟用提供者。<br /><br /> 0 = 未啟用 (預設值)<br /><br /> 1 = 已啟用|  

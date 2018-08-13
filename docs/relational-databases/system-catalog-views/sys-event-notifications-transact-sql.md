@@ -1,5 +1,5 @@
 ---
-title: sys.event_notifications (TRANSACT-SQL) |Microsoft 文件
+title: sys.event_notifications & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,20 +24,20 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 353b6504b367ddae0a1bb211c6265ca726ffe157
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1b07ca793821b39a549e709f52fa57bf1dd32dcb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182184"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562092"
 ---
 # <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回一個資料列的每個物件，與事件通知， **sys.objects.type** = EN。  
+  傳回一個資料列的每個物件，與事件通知**sys.objects.type** = EN-US。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|事件通知名稱。|  
 |**object_id**|**int**|物件識別碼。 在資料庫中，這是唯一的。|  
@@ -45,7 +45,7 @@ ms.locfileid: "33182184"
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**sys.internal_tables**|**int**|父物件的非零識別碼。<br /><br /> 0 = 父類別是資料庫。|  
 |**create_date**|**datetime**|建立日期。|  
-|**modify_date**|**datetime**|永遠等於**create_date**。|  
+|**modify_date**|**datetime**|一律等於**create_date**。|  
 |**service_name**|**nvarchar(256)**|通知所送往之目標服務的名稱。|  
 |**broker_instance**|**nvarchar(128)**|通知所送往的 Broker 執行個體。|  
 |**principal_id**|**int**|擁有這個事件通知的資料庫主體識別碼。|  
@@ -56,6 +56,6 @@ ms.locfileid: "33182184"
   
 ## <a name="see-also"></a>另請參閱  
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;。TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

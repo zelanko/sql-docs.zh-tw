@@ -1,5 +1,5 @@
 ---
-title: sp_helpsort (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpsort (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eed0e712a4cba2400b864b0170b08a6007d85e63
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b72de312f8d3ab7abadc592b14149d47f65dfa7a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253691"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539408"
 ---
 # <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_helpsort
  傳回伺服器預設定序。  
   
 ## <a name="remarks"></a>備註  
- 如果執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定要與之前安裝的相容的定序會隨[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **sp_helpsort**傳回空白結果。 當這個行為發生時，您可以查詢 SERVERPROPERTY 物件，例如來判斷定序： `SELECT SERVERPROPERTY ('Collation');`。  
+ 如果執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定為與之前安裝的相容的定序會隨[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]， **sp_helpsort**會傳回空白結果。 此行為發生時，您可以查詢 SERVERPROPERTY 物件，例如來判斷定序： `SELECT SERVERPROPERTY ('Collation');`。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會顯示伺服器的預設排序順序名稱、其字元集及其主要排序值的資料表。  

@@ -1,5 +1,5 @@
 ---
-title: sys.foreign_key_columns (TRANSACT-SQL) |Microsoft 文件
+title: sys.foreign_key_columns & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,23 +24,23 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 110528e8445703497beab5eb9339fb65d026d582
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 84a994759cf06b5ce3a0e41e6fa731a8477ce4ca
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179854"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561511"
 ---
 # <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對組成一個外部索引鍵的每個資料行或一組資料行，各包含一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**constraint_object_id**|**int**|FOREIGN KEY 條件約束的識別碼。|  
-|**constraint_column_id**|**int**|資料行或一組資料行組成外部索引鍵的識別碼 (*1..n*其中 n = 資料行數目)。|  
+|**constraint_column_id**|**int**|資料行或一組資料行，包含外部索引鍵的識別碼 (*1..n*其中 n = 資料行數目)。|  
 |**parent_object_id**|**int**|作為參考物件使用之條件約束父系的識別碼。|  
 |**parent_column_id**|**int**|作為參考資料行使用之父資料行的識別碼。|  
 |**referenced_object_id**|**int**|具有候選索引鍵之被參考物件的識別碼。|  

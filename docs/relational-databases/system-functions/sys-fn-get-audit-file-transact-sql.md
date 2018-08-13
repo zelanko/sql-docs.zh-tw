@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 08f3d90937968713c598418a125ad0167ed94fe7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980520"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556908"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     這個引數必須同時包含路徑 (磁碟機代號或網路共用位置) 以及可包含萬用字元的檔案名稱。 單一星號 （*） 可用來收集多個檔案從稽核檔案集合。 例如：  
   
-    -   **\<路徑 >\\ \***  -收集的所有稽核檔案中指定的位置。  
+    -   **\<路徑 >\\ \* ** -收集的所有稽核檔案中指定的位置。  
   
     -   **\<路徑 > \LoginsAudit_{GUID}** -收集的所有稽核具有指定的名稱和 GUID 配對的檔案。  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     這個引數用來指定 blob URL （包括儲存體端點和容器）。 雖然它不支援星號萬用字元，您可以使用的部分檔案 (blob) 名稱的前置詞 （而不是完整的 blob 名稱） 來收集多個檔案 (blob) 開頭為此前置詞。 例如：
  
-      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> /**  -收集所有稽核檔案 (blob) 的特定資料庫。    
+      - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> / ** -收集所有稽核檔案 (blob) 的特定資料庫。    
       
       - **\<Storage_endpoint\>/\<容器\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -收集指定的稽核檔案 (blob)。
   

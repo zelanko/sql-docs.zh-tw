@@ -19,13 +19,13 @@ ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 09c23da09502d9b5f9b1d91cdcdb06e9c09dabc8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54c2589db107e6646843739e098f9e4ae9ac00b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421967"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550838"
 ---
 # <a name="setting-large-data"></a>設定大型資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37421967"
   
  取用者會建立包含資料的儲存物件，並將此儲存物件的指標傳遞給提供者。 接著，提供者會從取用者儲存物件讀取資料，並將其寫入到 BLOB 資料行。  
   
- 若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子。 取用者接著會呼叫**irowsetchange:: Setdata**或是**irowsetchange:: Insertrow**使用繫結 BLOB 資料行的存取子方法。 它會在取用者的儲存物件上傳遞儲存介面的指標。  
+ 若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子。 然後，取用者會利用繫結 BLOB 資料行的存取子，呼叫 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 它會在取用者的儲存物件上傳遞儲存介面的指標。  
   
  本主題會參考可供下列函數使用的功能：  
   
@@ -46,19 +46,19 @@ ms.locfileid: "37421967"
 -   IRowsetUpdate::Update  
   
 ## <a name="how-to-set-large-data"></a>如何設定大型資料  
- 若要傳遞自己的儲存體物件的指標，取用者會建立存取子繫結 BLOB 資料行，然後呼叫的值**irowsetchange:: Setdata**或是**irowsetchange:: Insertrow**方法。 設定 BLOB 資料：  
+ 若要傳遞自己的儲存物件指標，取用者會建立一個繫結 BLOB 資料行值的存取子，然後呼叫 **IRowsetChange::SetData** 或 **IRowsetChange::InsertRow** 方法。 設定 BLOB 資料：  
   
-1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 設定*dwFlag*為 STGM_READ，並將 DBOBJECT 結構的項目*iid*為 IID_ISequentialStream （要公開的介面） 的項目。  
+1.  建立一個 DBOBJECT 結構，描述如何存取 BLOB 資料行。 將 DBOBJECT 結構的 *dwFlag* 元素設定為 STGM_READ，並將 *iid* 元素設定為 IID_ISequentialStream (要公開的介面)。  
   
 2.  在 DBPROPSET_ROWSET 屬性群組中設定屬性，讓資料列集可以更新。  
   
-3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 設定*wType*為 DBTYPE_IUNKNOWN，DBBINDING 結構中的項目並*pObject*以指向您所建立的 DBOBJECT 結構的項目。  
+3.  使用 DBBINDING 結構的陣列來建立一組繫結 (每個資料行一個)。 將 DBBINDING 結構中的 *wType* 項目設定為 DBTYPE_IUNKNOWN，並將 *pObject* 項目設定為指向您所建立的 DBOBJECT 結構。  
   
 4.  使用繫結資訊，在結構的 DBBINDINGS 陣列中建立存取子。  
   
-5.  呼叫**GetNextRows**到下一個資料列提取到資料列集。 呼叫**GetData**讀取資料列集中的資料。  
+5.  呼叫 **GetNextRows** 將下一個資料列擷取到資料列集中。 呼叫 **GetData** 來讀取資料列集中的資料。  
   
-6.  建立儲存體物件，包含資料 （以及長度指標），並接著呼叫**irowsetchange:: Setdata** (或**irowsetchange:: Insertrow**) 使用的繫結設定的 BLOB 資料行的存取子資料。  
+6.  建立包含資料 (以及長度指標) 的儲存物件，然後使用繫結 BLOB 資料行來設定資料的存取子，呼叫 **IRowsetChange::SetData** (或 **IRowsetChange::InsertRow**)。  
   
 ## <a name="example"></a>範例  
  這個範例會示範如何設定 BLOB 資料。 此範例會建立一個資料表、加入範例記錄、在資料列集中提取該記錄，然後設定 BLOB 欄位的值：  
@@ -725,7 +725,7 @@ Exit:
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blob 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大型實值型別](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

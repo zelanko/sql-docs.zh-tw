@@ -21,13 +21,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 90b98b23bff869b0fbf0498669d389a7d834a84d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426220"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539678"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|之前或之後|**text**|  
 |**SQLBIGBINARY**|否|**binary**|  
 |**SQLBINARY**|否|**二進位**|  
-|**SQLBIGVARBINARY**|否|**Varbinary**|  
-|**SQLVARBINARY**|否|**Varbinary**|  
+|**SQLBIGVARBINARY**|否|**varbinary**|  
+|**SQLVARBINARY**|否|**varbinary**|  
 |**SQLIMAGE**|之前或之後|**映像**|  
 |**SQLINTN**|之前或之後|**int-null**|  
 |**SQLDATETIMN**|之前或之後|**datetime null**|  
@@ -91,12 +91,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|之前或之後|**Min**|  
 |**SQLAOPMAX**|之前或之後|**Max**|  
 |**SQLDATETIM4**|之前或之後|**smalldatetime**|  
-|**SQLMONEY4**|之前或之後|**Smallmoney**|  
-|**SQLFLT4**|之前或之後|**Real**|  
+|**SQLMONEY4**|之前或之後|**smallmoney**|  
+|**SQLFLT4**|之前或之後|**real**|  
 |**SQLUNIQUEID**|之前或之後|**uniqueidentifier**|  
 |**SQLNCHAR**|否|**Nchar**|  
 |**SQLNVARCHAR**|否|**Nvarchar**|  
-|**SQLNTEXT**|之前或之後|**Ntext**|  
+|**SQLNTEXT**|之前或之後|**ntext**|  
 |**SQLVARIANT**|之前或之後|**sql_variant**|  
 |**SQLINT8**|之前或之後|**Bigint**|  
 |**SQLCHARACTER**|是|**varchar(max)**|  
@@ -110,7 +110,7 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|是|**nvarchar(max)**|  
 |**SQLNVARCHAR**|是|**nvarchar(max)**|  
 |**SQLXML**|是|**XML**|  
-|**SQLUDT**|之前或之後|**Udt**|  
+|**SQLUDT**|之前或之後|**udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename 支援增強的日期和時間功能  
  日期/時間類型的語彙基元的參數值"Type in sqlncli.h"資料行中的資料表中所述[增強型日期和時間類型的大量複製變更&#40;OLE DB 和 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)。 傳回值位於 "File storage type" 資料行的對應資料列中。  

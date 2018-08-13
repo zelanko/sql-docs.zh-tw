@@ -1,7 +1,7 @@
 ---
 title: SQL Server 共用管理物件 (SMO)-授權條款 |Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -12,13 +12,13 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: da7a9a138a5fd027f3b89c5f4b1d5db219c7d5d0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040426"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662240"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>SQL Server 共用管理物件 (SMO) 授權條款
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +67,13 @@ ms.locfileid: "38040426"
   * 程式碼必須以原始碼形式揭露或散布；或
   * 提供他人修改的權利。
 
-**3.  授權範圍。** 軟體係授權使用，而非出售賣斷。 除非相關法律授與　貴用戶更多權利，否則 Microsoft 保留本合約未明示授與之所有其他權利，包括暗示、禁反言等其他權利。 　貴用戶僅得在本合約明示許可之範圍內使用軟體。 因此，　貴用戶必須遵守只允許以特定方式使用軟體的科技保護措施。 貴用戶不得
-* 規避軟體中所包含的科技保護措施。
-* 對軟體進行還原工程、解編或反向組譯，但相關法律明文允許或禁止此種限制者，不在此限。
-* 為軟體製作的拷貝數量超過本合約所明定之數量，或相關法律所許可之數量。
-* 發行軟體供其他人複製；
-* 出租、租賃或出借軟體。
-* 將軟體或本合約移轉給任何第三人。
-* 利用軟體提供商業軟體主機服務。
+
+**3.授權範圍。** 軟體係授權使用，而非出售賣斷。 除非相關法律授與　貴用戶更多權利，否則 Microsoft 保留本合約未明示授與之所有其他權利，包括暗示、禁反言等其他權利。 　貴用戶僅得在本合約明示許可之範圍內使用軟體。 因此，　貴用戶必須遵守只允許以特定方式使用軟體的科技保護措施。 您可能會執行下列其中一項：
+
+- 解決軟體中的所有技術限制。
+- 反向工程、 解編或軟體，但只有的適行法律明文許可者不在此限。
+- 請比本合約，或忽略這項限制的相關適行法律所允許的更多的軟體複本。
+- 分享、 發佈、 租用或租用軟體，或提供軟體作為獨立代管解決方案供予他人使用。
 
 **4.  協力廠商注意事項。** 軟體可能包含不同的法律注意事項或由其他合約所規範的協力廠商元件，可能如軟體隨附的 ThirdPartyNotices 檔案中所述。  即使這類元件受到其他合約所規範，但在免責聲明和限制方面，同時也適用於下列損害賠償責任之排除。
 
@@ -106,3 +105,7 @@ ms.locfileid: "38040426"
 * 在相關法律許可的範圍之內，因為違反合約、保證、擔保或條件、無過失責任、過失或其他侵權行為所主張之訴訟案件。
 
 即使 Microsoft 已知或可得而知該損害有發生的可能性，這項限制仍然適用。 此外，　貴用戶所在國家/地區可能不允許附隨性損害、衍生性損害或其他損害之排除或限制，這種情況也可能造成上述限制或排除規定並不適用於　貴用戶。
+
+> [!NOTE]
+> 第 3 節已更新於 2018 年 8 月 8 日。
+

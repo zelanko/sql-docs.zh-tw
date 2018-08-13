@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_session_space_usage (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_db_session_space_usage & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2015
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 61926a7bde695d1ca8af605373cf666653c1cee5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e6da45e2ff7a56dd458462fb6dd3f1f691031787
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464574"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538628"
 ---
 # <a name="sysdmdbsessionspaceusage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "34464574"
   傳回資料庫的每一個工作階段已配置和取消配置的頁數。  
   
 > [!NOTE]  
->  這個檢視只會套用於[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)。  
+>  此檢視是僅適用於[tempdb 資料庫](../../relational-databases/databases/tempdb-database.md)。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_db_session_space_usage**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_db_session_space_usage**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|工作階段識別碼。<br /><br /> **session_id**對應至**session_id**中[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)。|  
 |**database_id**|**smallint**|資料庫識別碼。|  
@@ -50,13 +50,13 @@ ms.locfileid: "34464574"
 |**user_objects_dealloc_page_count**|**bigint**|這個工作階段已取消配置且不再保留給使用者物件的頁數。|  
 |**internal_objects_alloc_page_count**|**bigint**|這個工作階段所保留或配置給內部物件的頁數。|  
 |**internal_objects_dealloc_page_count**|**bigint**|這個工作階段已取消配置且不再保留給內部物件的頁數。|  
-|**user_objects_deferred_dealloc_page_count**|**bigint**|已標示為延後的解除配置的頁面數目。<br /><br /> **注意：** service pack 中導入[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|已標示為延後的取消配置的頁面數目。<br /><br /> **注意︰** 中的 service pack 引進[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]和[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
 
 ## <a name="remarks"></a>備註  
  IAM 頁面不包括在這份檢視所報告的任何配置或取消配置計數中。  
@@ -65,7 +65,7 @@ ms.locfileid: "34464574"
   
  工作階段可以同時有多項作用中的要求。 如果是平行查詢，則一項要求可啟動多個執行緒和工作。  
   
- 如需有關工作階段、 要求和工作的詳細資訊，請參閱[sys.dm_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)， [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)，和[sys.dm_os_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。  
+ 如需工作階段、 要求和工作的詳細資訊，請參閱[sys.dm_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)， [sys.dm_exec_requests &#40;-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)，以及[sys.dm_os_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)。  
   
 ## <a name="user-objects"></a>使用者物件  
  下列物件已包括在使用者物件頁面計數器中：  
@@ -83,7 +83,7 @@ ms.locfileid: "34464574"
 -   資料表值函式中傳回的資料表  
   
 ## <a name="internal-objects"></a>內部物件  
- 內部物件只在比較**tempdb**。 下列物件已包括在內部物件頁面計數器中：  
+ 內部物件只是在**tempdb**。 下列物件已包括在內部物件頁面計數器中：  
   
 -   用於資料指標或多工緩衝處理作業和暫存大型物件 (LOB) 儲存體的工作資料表  
   
@@ -105,8 +105,8 @@ ms.locfileid: "34464574"
  [與資料庫相關動態管理檢視&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_os_tasks &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
- [sys.dm_db_task_space_usage &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
+ [sys.dm_os_tasks &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
+ [sys.dm_db_task_space_usage &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
  [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.column_encryption_key_values (TRANSACT-SQL) |Microsoft 文件
+title: sys.column_encryption_key_values (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,25 +27,25 @@ caps.latest.revision: 12
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02d0ce79355422943b21608d546890ebd1bc61e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e89df0a5d451ce280bb884e49f29c189f89d6e1a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179994"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561548"
 ---
-# <a name="syscolumnencryptionkeyvalues-transact-sql"></a>sys.column_encryption_key_values (TRANSACT-SQL)
+# <a name="syscolumnencryptionkeyvalues-transact-sql"></a>sys.column_encryption_key_values & Amp;#40;transact-SQL&AMP;#41;
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回加密值資訊的資料行加密金鑰 (Cek) 是以建立[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER COLUMN ENCRYPTION KEY &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)陳述式。 每個資料列代表 CEK，資料行主要金鑰 (CMK) 以加密值。  
+  傳回加密值資訊的資料行加密金鑰 (Cek) 以建立[CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md)或[ALTER COLUMN ENCRYPTION KEY &#40;-&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)陳述式。 每個資料列代表資料行主要金鑰 (CMK) 加密的 CEK 的值。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_id**|**int**|在資料庫中 CEK 的識別碼。|  
-|**column_master_key_id**|**int**|用來加密 CEK 值資料行主要金鑰的識別碼。|  
-|**encrypted_value**|**varbinary(8000)**|CEK 加密的 CMK column_master_key_id 中指定的值。|  
-|**encryption_algorithm_name**|**sysname**|用來加密 CEK 值演算法的名稱。<br /><br /> 用來加密值之加密演算法的名稱。 系統提供者的演算法必須是**RSA_OAEP**。|  
+|**column_master_key_id**|**int**|用來加密的 CEK 值的資料行主要金鑰的識別碼。|  
+|**encrypted_value**|**varbinary(8000)**|以指定在 column_master_key_id CMK 加密的 CEK 值。|  
+|**encryption_algorithm_name**|**sysname**|用來加密的 CEK 值演算法的名稱。<br /><br /> 用來加密值之加密演算法的名稱。 必須是系統提供者的演算法**RSA_OAEP**。|  
   
 ## <a name="permissions"></a>Permissions  
  需要**VIEW ANY COLUMN ENCRYPTION KEY**權限。  

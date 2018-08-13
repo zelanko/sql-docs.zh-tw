@@ -1,5 +1,5 @@
 ---
-title: sp_helpindex (TRANSACT-SQL) |Microsoft 文件
+title: sp_helpindex (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e6e64715eeb893e1a93df1c1c7c52b62e0d18d4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6560726bb583d823ad0cf0b36310eb68691705f2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255377"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547618"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ sp_helpindex [ @objname = ] 'name'
   
 ## <a name="arguments"></a>引數  
  [ **@objname=** ] **'***name***'**  
- 這是使用者定義資料表或檢視的完整或非完整名稱。 只有在指定完整資料表或檢視表名稱時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *名稱*是**nvarchar(776)**，沒有預設值。  
+ 這是使用者定義資料表或檢視的完整或非完整名稱。 只有在指定完整資料表或檢視表名稱時，才會用到引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *名稱*已**nvarchar(776)**，沒有預設值。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|索引名稱。|  
 |**index_description**|**varchar(210)**|索引描述，其中包括所在的檔案群組。|  
@@ -62,12 +62,12 @@ sp_helpindex [ @objname = ] 'name'
  遞減索引資料行會列在結果集中，名稱後面會有一個減號 (-)；預設值是遞增索引資料行，會單獨列出名稱。  
   
 ## <a name="remarks"></a>備註  
- 如果使用 UPDATE STATISTICS 的 NORECOMPUTE 選項已設定的索引，該資訊會包含在**index_description**資料行。  
+ 如果已使用 UPDATE STATISTICS 的 NORECOMPUTE 選項的設定索引，這項資訊會包含在**index_description**資料行。  
   
- **sp_helpindex**公開只可排序的索引資料行; 因此，不會公開 XML 索引或空間索引的相關資訊。  
+ **sp_helpindex**會公開僅可排序的索引資料行; 因此，不會公開 XML 索引或空間索引的相關資訊。  
   
 ## <a name="permissions"></a>Permissions  
- 需要 **public** 角色中的成員資格。  
+ 需要 **public** 角色的成員資格。  
   
 ## <a name="examples"></a>範例  
  下列範例會報告 `Customer` 資料表的索引類型。  

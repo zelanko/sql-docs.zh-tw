@@ -1,5 +1,5 @@
 ---
-title: 註解式 XSD 結構描述在 SQLXML 4.0 中的 |Microsoft 文件
+title: 註解式 XSD 結構描述在 SQLXML 4.0 中的 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: edf8e4836693eb67e9e6c4c3816d46d2b9d6ccc4
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4209bf6b0ffbeef97e65b6c70896055d38c7478d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34708756"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537948"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 中的註解式 XSD 結構描述
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ ms.locfileid: "34708756"
  [使用註解式 XSD 結構描述，在查詢中的&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/using-annotated-xsd-schemas-in-queries-sqlxml-4-0.md)  
  描述如何在查詢中使用註解式 XSD 結構描述。  
   
- [轉換註解式 XDR 結構描述為對等的 XSD 結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
+ [註解式轉換為相等的 XSD 結構描述的 XDR 結構描述&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md)  
  描述如何將 XDR 結構描述轉換成 SQLXML 4.0 的同等 XSD 結構描述。  
   
- [註解式 XDR 結構描述&#40;SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
+ [註解式 XDR 結構描述&#40;在 SQLXML 4.0 中已被取代&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)  
  舊版的 SQLXML 支援 XDR 結構描述中的註解。 註解式 XDR 結構描述在 SQLXML 4.0 中已被取代，但是本章節是要當做舊版應用程式的參考。  
   
 ## <a name="other-resources"></a>其他資源  
  您可以在下列網站上找到有關 XML 結構描述定義語言 (XSD)、XML 路徑語言 (XPath) 和可延伸樣式表語言轉換 (XSLT) 的資訊：  
   
--   XML 結構描述第 0 部分： 入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
+-   XML 結構描述第 0 部： 入門，W3C 建議事項 (http://www.w3.org/TR/xmlschema-0/)  
   
 -   XML 結構描述第 1 部分： 結構、 W3C 建議事項 (http://www.w3.org/TR/xmlschema-1/)  
   

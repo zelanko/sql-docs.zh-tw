@@ -13,13 +13,13 @@ ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2d008d4976f72ca4b2c802ffa5df4c1d1702f02e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0e8c84adbd2aa8b9e44df4745373e42bd2806061
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415427"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539388"
 ---
 # <a name="large-clr-user-defined-types"></a>大型 CLR 使用者定義型別
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "37415427"
 ## <a name="use-cases"></a>使用案例  
  對於 ODBC，大型 UDT 的支援包括能夠以片段當做資料執行中 (data-at-execution) 參數傳送 UDT 值。 這是由使用 SQLPutData。  
   
- 對於 OLE DB，大型 Udt 的支援會包括能夠在伺服器來回串流 UDT 值使用 ISequentialStream 繫結。  
+ 對於 OLE DB，大型 UDT 的支援包括能夠使用 ISequentialStream 繫結，在伺服器來回串流 UDT 值。  
   
  小於或等於 8,000 個位元組的 UDT 行為如同在 SQL Server 2005 中的行為。 OLE db 中，您仍可以使用 ISequentialStream 繫結，以串流小型 Udt。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.plan_guides (TRANSACT-SQL) |Microsoft 文件
+title: sys.plan_guides & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -24,20 +24,20 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4309a55a8c0b631cd1e5f49d6601bfba30245178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6faaeea0bfc19594bd2131c4b40bdf270e4f6d8d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180700"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548388"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   針對資料庫中每份計畫指南，各包含一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**plan_guide_id**|**int**|資料庫中計畫指南的唯一識別碼。|  
 |**name**|**sysname**|計畫指南的名稱。|  
@@ -48,7 +48,7 @@ ms.locfileid: "33180700"
 |**scope_type**|**tinyint**|識別計畫指南的範圍。<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
 |**scope_type_desc**|**nvarchar(60)**|計畫指南範圍的描述。<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**整數**|定義計畫指南範圍之物件的 object_id (如果範圍是 OBJECT)。<br /><br /> 如果計畫指南的範圍不是 OBJECT，則為 NULL。|  
-|**scope_batch**|**nvarchar(max)**|如果批次的文字， **scope_type**為 SQL。<br /><br /> NULL (如果批次類型不是 SQL)。<br /><br /> 如果是 NULL 和**scope_type**是 SQL，值**query_text**套用。|  
+|**scope_batch**|**nvarchar(max)**|如果批次文字**scope_type**為 SQL。<br /><br /> NULL (如果批次類型不是 SQL)。<br /><br /> 如果是 NULL， **scope_type**是 SQL、 windows 7 **query_text**套用。|  
 |**parameters**|**nvarchar(max)**|定義與計畫指南相關參數清單的字串。<br /><br /> NULL = 沒有一個參數清單與計畫指南相關。|  
 |**提示**|**nvarchar(max)**|與計畫指南相關的 OPTION 子句提示。|  
   

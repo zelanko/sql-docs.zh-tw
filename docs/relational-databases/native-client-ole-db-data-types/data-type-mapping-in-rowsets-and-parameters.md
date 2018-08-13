@@ -24,13 +24,13 @@ ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea9322153c59e3d83e07504236df82b0aa7b3272
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c84ea6be119438310292facda5e04c75b6f5da55
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413957"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566062"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>資料列集和參數中的資料類型對應
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,20 +72,20 @@ ms.locfileid: "37413957"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援取用者要求資料轉換，如圖所示。  
   
- **Sql_variant**物件可以保存的任何資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]除了 text、 ntext、 image、 varchar （max）、 nvarchar （max）、 varbinary （max）、 xml、 時間戳記和 Microsoft.NET Framework common language runtime (CLR) 類型的資料使用者定義型別。 sql_variant 資料的執行個體不能用 sql_variant 做為它的基礎基底資料類型。 比方說，資料行可以包含**smallint**某些資料列的值**float**值，其他資料列，並**char**/**nchar**其餘部分的值。  
+ **sql_variant** 物件可保存任何 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型的資料，下列類型除外：text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp 和 Microsoft .NET Framework Common Language Runtime (CLR) 使用者定義型別。 sql_variant 資料的執行個體不能用 sql_variant 做為它的基礎基底資料類型。 例如，資料行可以在某些資料列中包含 **smallint** 值，在其他資料列中包含 **float** 值，而在剩餘的資料列中包含 **char**/**nchar** 值。  
   
 > [!NOTE]  
->  **Sql_variant**資料型別是類似於 Microsoft Visual Basic® 和 DBTYPE_VARIANT、 DBTYPE_SQLVARIANT oledb 中的 Variant 資料型別。  
+>  **sql_variant** 資料類型類似於 Microsoft Visual Basic® 中的 Variant 資料類型，以及 OLEDB 中的 DBTYPE_VARIANT、DBTYPE_SQLVARIANT。  
   
- 當**sql_variant**資料以 DBTYPE_VARIANT 提取，所以仍然放在緩衝區中的 VARIANT 結構。 但是 VARIANT 結構中的子類型可能不會對應到定義中的子類型**sql_variant**資料型別。 **Sql_variant**資料必須再擷取以 DBTYPE_SQLVARIANT 為了讓比對所有的子類型。  
+ 以 DBTYPE_VARIANT 擷取 **sql_variant** 資料時，會將該資料置於緩衝區的 VARIANT 結構中。 但是 VARIANT 結構中的子類型可能不會對應到定義於 **sql_variant** 資料類型中的子類型。 接下來必須以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料，才能讓所有的子類型相互對應。  
   
 ## <a name="dbtypesqlvariant-data-type"></a>DBTYPE_SQLVARIANT 資料類型  
- 若要支援**sql_variant**資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開稱為 DBTYPE_SQLVARIANT 的提供者特定資料類型。 當**sql_variant**資料以 DBTYPE_SQLVARIANT 提取時，它會儲存提供者特定的 SSVARIANT 結構中。 SSVARIANT 結構包含相符的子類型的子類型的所有**sql_variant**資料型別。  
+ 若要支援**sql_variant**資料類型， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開稱為 DBTYPE_SQLVARIANT 的提供者特定資料類型。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，該資料會儲存在提供者特定的 SSVARIANT 結構中。 SSVARIANT 結構包含的所有子類型都符合 **sql_variant** 資料類型的子類型。  
   
  工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 也必須設定為 TRUE。  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>提供者特定的屬性 SSPROP_ALLOWNATIVEVARIANT  
- 您在提取資料時，可以明確地指定要針對資料行或參數傳回何種資料類型。 **IColumnsInfo**也可用來取得資料行資訊，然後使用它來執行繫結。 當**IColumnsInfo**可用來取得繫結用途的資料行資訊如果 SSPROP_ALLOWNATIVEVARIANT 工作階段屬性為 FALSE （預設值），會傳回 DBTYPE_VARIANT **sql_variant**資料行。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性為 FALSE，則 DBTYPE_SQLVARIANT 不受支援。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性設定為 TRUE，則資料行類型會傳回為 DBTYPE_SQLVARIANT，在此種情況下，緩衝區會保存 SSVARIANT 結構。 在提取**sql_variant**以 DBTYPE_SQLVARIANT 資料，工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 必須設定為 TRUE。  
+ 您在提取資料時，可以明確地指定要針對資料行或參數傳回何種資料類型。 **IColumnsInfo** 也可以用來取得資料行資訊，並用該資訊來進行繫結。 使用 **IColumnsInfo** 來取得用於繫結用途的資料行資訊時，如果 SSPROP_ALLOWNATIVEVARIANT 工作階段屬性為 FALSE (預設值)，則會針對 **sql_variant** 資料行傳回 DBTYPE_VARIANT。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性為 FALSE，則 DBTYPE_SQLVARIANT 不受支援。 如果 SSPROP_ALLOWNATIVEVARIANT 屬性設定為 TRUE，則資料行類型會傳回為 DBTYPE_SQLVARIANT，在此種情況下，緩衝區會保存 SSVARIANT 結構。 以 DBTYPE_SQLVARIANT 擷取 **sql_variant** 資料時，工作階段屬性 SSPROP_ALLOWNATIVEVARIANT 必須設定為 TRUE。  
   
  SSPROP_ALLOWNATIVEVARIANT 屬性是提供者特定之 DBPROPSET_SQLSERVERSESSION 屬性集的一部分，而且是工作階段屬性。  
   

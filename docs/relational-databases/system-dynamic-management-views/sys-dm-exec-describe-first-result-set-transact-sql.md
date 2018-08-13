@@ -21,13 +21,13 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ed5e8ee42792d4308b3ccecb41bfcbe064dafd9
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4e949abb2dc970235e03ac5389b7910c038da5d8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086390"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542002"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |12|OBJECT_TYPE_NOT_SUPPORTED|\@Object_id 傳遞至函式不支援 （也就是不是預存程序）|  
 |13|OBJECT_DOES_NOT_EXIST|\@系統目錄中找不到傳遞至函式的 object_id。|  
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  需要權限來執行\@tsql 引數。  
   
 ## <a name="examples"></a>範例  

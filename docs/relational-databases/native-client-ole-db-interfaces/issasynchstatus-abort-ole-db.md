@@ -19,13 +19,13 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3edaceb5802299ec8637634bf0006fb66d5d6851
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e9b0f11d07b0180ddc75f7a64471a3ea7f311ac3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408677"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549888"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ HRESULT Abort(
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
- 已經處理取消非同步作業的要求。 這不保證作業本身已被取消。 若要判斷是否已取消作業，取用者應該呼叫[issasynchstatus:: Getstatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md)並檢查是否有 DB_E_CANCELED; 但是，它可能不會傳回非常下一個呼叫。  
+ 已經處理取消非同步作業的要求。 這不保證作業本身已被取消。 若要判斷此作業是否已被取消，取用者應該呼叫 [ISSAsynchStatus::GetStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) 並檢查是否有 DB_E_CANCELED；但是，下一次呼叫時可能不會傳回它。  
   
  DB_E_CANTCANCEL  
  無法取消非同步作業。  
@@ -70,16 +70,16 @@ HRESULT Abort(
  E_UNEXPECTED  
  **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**尚未呼叫，或尚未完成。  
   
- **Issasynchstatus:: Abort**上的資料來源物件上呼叫**idbinitialize:: Initialize**已呼叫，但後來取消之前的初始化，或已逾時。此資料來源物件仍未初始化。  
+ 已在呼叫 **IDBInitialize::Initialize** 的資料來源物件上呼叫 **ISSAsynchStatus::Abort**，但是接著在初始化之前將它取消，或是它已經逾時。此資料來源物件仍未初始化。  
   
  **Issasynchstatus:: Abort**所在的資料列集上呼叫**itransaction:: Commit**或**itransaction:: Abort**先前已呼叫，以及資料列集未存留在認可或中止，且在廢止狀態。  
   
- **Issasynchstatus:: Abort**在其初始化階段已非同步地取消資料列集上呼叫。 此資料列集處於廢止狀態。  
+ 已在資料列集上呼叫 **ISSAsynchStatus::Abort**，這個資料列集已在其初始化階段非同步地取消。 此資料列集處於廢止狀態。  
   
 ## <a name="remarks"></a>備註  
- 中止資料列集或資料來源物件的初始化可能會讓資料列集或資料來源物件處於廢止狀態，使得以外的所有方法**IUnknown**方法會傳回 E_UNEXPECTED。 當發生這個情況時，取用者唯一可行的動作就是釋放此資料列集或資料來源物件。  
+ 中止資料列集或資料來源物件的初始化可能會讓該資料列集或資料來源物件處於廢止狀態，因此造成 **IUnknown** 方法以外的所有方法都會傳回 E_UNEXPECTED。 當發生這個情況時，取用者唯一可行的動作就是釋放此資料列集或資料來源物件。  
   
- 呼叫**issasynchstatus:: Abort**傳遞的值並*eOperation*以外 DBASYNCHOP_OPEN 傳回 S_OK。 這不表示此作業已被取消或完成。  
+ 呼叫 **ISSAsynchStatus::Abort** 並針對 *eOperation* 傳回 DBASYNCHOP_OPEN 以外的值將會傳回 S_OK。 這不表示此作業已被取消或完成。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行非同步作業](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  

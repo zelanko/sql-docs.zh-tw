@@ -1,5 +1,5 @@
 ---
-title: 常式 (TRANSACT-SQL) |Microsoft 文件
+title: 常式 (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,31 +22,31 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ec03e10cd41e964c9687f04478e05871de5b68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240598"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548884"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對目前資料庫中目前使用者所能存取的每個預存程序和函數，各傳回一個資料列。 描述傳回值的資料行只適用於函數。 如果是預存程序，這些資料行就是 NULL。  
   
- 若要從這些檢視中擷取資訊，請指定 INFORMATION_SCHEMA 的完整限定的名稱。*view_name*。  
+ 若要從這些檢視擷取資訊，請指定 INFORMATION_SCHEMA 的完整限定的名稱。*view_name*。  
   
 > [!NOTE]  
 >  ROUTINE_DEFINITION 資料行包含建立函數或預存程序的來源陳述式。 這些來源陳述式可能包含內嵌歸位字元。 如果您將這個資料行傳回用文字格式來顯示結果的應用程式，ROUTINE_DEFINITION 結果中的內嵌歸位字元可能會影響整體結果集的格式。 如果您選取 ROUTINE_DEFINITION 資料行，您必須針對內嵌歸位字元來進行調整；例如，將結果集傳回方格，或將 ROUTINE_DEFINITION 傳回它自己的文字框。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|目錄的特定名稱。 這個名稱與 ROUTINE_CATALOG 相同。|  
-|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|結構描述的特定名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|結構描述的特定名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |SPECIFIC_NAME|**nvarchar(** 128 **)**|目錄的特定名稱。 這個名稱與 ROUTINE_NAME 相同。|  
 |ROUTINE_CATALOG|**nvarchar(** 128 **)**|函數的目錄名稱。|  
-|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|包含這個函數的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|包含這個函數的結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |ROUTINE_NAME|**nvarchar(** 128 **)**|函數的名稱。|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|傳回 PROCEDURE (預存程序) 和 FUNCTION (函數)。|  
 |MODULE_CATALOG|**nvarchar(** 128 **)**|NULL。 保留供日後使用。|  
@@ -55,9 +55,9 @@ ms.locfileid: "33240598"
 |UDT_CATALOG|**nvarchar(** 128 **)**|NULL。 保留供日後使用。|  
 |UDT_SCHEMA|**nvarchar(** 128 **)**|NULL。 保留供日後使用。|  
 |UDT_NAME|**nvarchar(** 128 **)**|NULL。 保留供日後使用。|  
-|DATA_TYPE|**nvarchar(** 128 **)**|函數傳回值的資料類型。 傳回**資料表**如果資料表值函式。|  
-|CHARACTER_MAXIMUM_LENGTH|**int**|傳回類型是字元類型時的最大長度 (以字元為單位)。<br /><br /> -1 代表**xml**和大數值類型資料。|  
-|CHARACTER_OCTET_LENGTH|**int**|傳回類型是字元類型時的最大長度 (以位元組為單位)。<br /><br /> -1 代表**xml**和大數值類型資料。|  
+|DATA_TYPE|**nvarchar(** 128 **)**|函數傳回值的資料類型。 傳回**資料表**如果是資料表值函式。|  
+|CHARACTER_MAXIMUM_LENGTH|**int**|傳回類型是字元類型時的最大長度 (以字元為單位)。<br /><br /> 傳回-1 **xml**和大數值類型資料。|  
+|CHARACTER_OCTET_LENGTH|**int**|傳回類型是字元類型時的最大長度 (以位元組為單位)。<br /><br /> 傳回-1 **xml**和大數值類型資料。|  
 |COLLATION_CATALOG|**nvarchar(** 128 **)**|一律傳回 NULL。|  
 |COLLATION_SCHEMA|**nvarchar(** 128 **)**|一律傳回 NULL。|  
 |COLLATION_NAME|**nvarchar(** 128 **)**|傳回值的定序名稱。 如果是非字元類型，則傳回 NULL。|  
@@ -67,7 +67,7 @@ ms.locfileid: "33240598"
 |NUMERIC_PRECISION|**smallint**|傳回值的數值有效位數。 如果是非數值類型，則傳回 NULL。|  
 |NUMERIC_PRECISION_RADIX|**smallint**|傳回值的數值有效位數基數。 如果是非數值類型，則傳回 NULL。|  
 |NUMERIC_SCALE|**smallint**|傳回值的小數位數。 如果是非數值類型，則傳回 NULL。|  
-|DATETIME_PRECISION|**smallint**|如果傳回值的類型，第二個小數有效位數**datetime**。 否則，便傳回 NULL。|  
+|DATETIME_PRECISION|**smallint**|如果傳回的值屬於類型一秒的小數有效位數**datetime**。 否則，便傳回 NULL。|  
 |INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL。 保留供日後使用。|  
 |INTERVAL_PRECISION|**smallint**|NULL。 保留供日後使用。|  
 |TYPE_UDT_CATALOG|**nvarchar(** 128 **)**|NULL。 保留供日後使用。|  

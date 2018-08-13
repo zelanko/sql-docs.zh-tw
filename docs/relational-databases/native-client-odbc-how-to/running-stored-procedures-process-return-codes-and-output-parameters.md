@@ -16,15 +16,15 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b64711f2cf375ee602e26a77a00d8a22e9e16e4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: e8ac613da897938db5c13751ec34fc0995a1d076
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423987"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561928"
 ---
-# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>執行預存的程序-處理傳回碼和輸出參數
+# <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>執行預存程序 - 處理傳回碼和輸出參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

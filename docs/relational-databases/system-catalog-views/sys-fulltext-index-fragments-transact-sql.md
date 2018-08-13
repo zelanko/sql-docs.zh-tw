@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_index_fragments (TRANSACT-SQL) |Microsoft 文件
+title: sys.fulltext_index_fragments (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,13 +27,13 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18997da5a5eeb691245166be015b0678403b52ff
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2d6d073d2ed93208b0fc6c5fbe032b768392ee35
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182244"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543010"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,15 +41,15 @@ ms.locfileid: "33182244"
   全文檢索索引會使用稱為 「 內部資料表*全文檢索索引片段*來儲存反向的索引資料。 此檢視表可用來查詢有關這些片段的中繼資料， 此檢視表針對每一個資料表內包含全文檢索索引的每一個全文檢索索引片段各包含一個資料列。  
  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |table_id|**int**|包含全文檢索索引片段之物件的物件識別碼。|  
 |fragment_object_id|**int**|與此片段相關聯之內部資料表的物件識別碼。|  
 |fragment_id|**int**|全文檢索索引片段的邏輯識別碼。 這在此資料表的所有片段中是唯一的。|  
-|timestamp|**timestamp**|與片段建立有關聯的時間戳記。 最近片段的時間戳記大於較舊片段的時間戳記。|  
+|TIMESTAMP|**timestamp**|與片段建立有關聯的時間戳記。 最近片段的時間戳記大於較舊片段的時間戳記。|  
 |data_size|**int**|片段的邏輯大小 (以位元組為單位)。|  
 |row_count|**int**|片段中個別資料列的數目。|  
-|status|**int**|片段的狀態，以下其中一項：<br /><br /> 0 = 新建且尚未使用<br /><br /> 1 = 在全文檢索索引母體擴展或合併期間用於插入<br /><br /> 4 = 已關閉。 準備查詢<br /><br /> 6 = 用於合併輸入及準備查詢<br /><br /> 8 = 標示為刪除。 將不會用於查詢和合併來源。<br /><br /> 狀態為 4 或 6 的方式，此片段是邏輯全文檢索索引的一部分，而且可查詢;也就是說，它是*可查詢*片段。|  
+|status|**int**|片段的狀態，以下其中一項：<br /><br /> 0 = 新建且尚未使用<br /><br /> 1 = 在全文檢索索引母體擴展或合併期間用於插入<br /><br /> 4 = 已關閉。 準備查詢<br /><br /> 6 = 用於合併輸入及準備查詢<br /><br /> 8 = 標示為刪除。 將不會用於查詢和合併來源。<br /><br /> 狀態為 4 或 6 的方法，此片段是邏輯全文檢索索引的一部分，而且可查詢;也就是說，它是*可查詢*片段。|  
   
 ## <a name="remarks"></a>備註  
  sys.fulltext_index_fragments 目錄檢視可用來查詢包含全文檢索索引的片段數。 如果您遇到全文檢索查詢效能緩慢的問題，您可以使用 sys.fulltext_index_fragments 來查詢全文檢索索引中的可查詢片段數 (狀態 = 4 或 6)，如下所示：  

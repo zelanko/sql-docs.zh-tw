@@ -1,5 +1,5 @@
 ---
-title: 指定軸 (SQLXML 4.0) |Microsoft 文件
+title: 指定軸 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -25,22 +25,22 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8659d8187042b0c40d2890e5a4feaf367efc7203
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 09c2ddbbe478672c610ed33c4c5efd55ddf0ad57
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968223"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551218"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>指定軸 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
--   軸會指定位置步驟與內容節點所選取之節點間的樹狀結構關聯性。 支援下列軸：**子**  
+-   軸會指定位置步驟與內容節點所選取之節點間的樹狀結構關聯性。 支援下列軸：**子系**  
   
      包含內容節點的子系。  
   
-     下列的 XPath 運算式 （位置路徑） 從目前所有的內容節點選取**\<客戶 >** 子系：  
+     下列 XPath 運算式 （位置路徑） 從目前所有的內容節點中選取**\<客戶 >** 子系：  
   
     ```  
     child::Customer  
@@ -74,7 +74,7 @@ ms.locfileid: "32968223"
   
      包含內容節點本身。  
   
-     下列 XPath 運算式選取目前的節點，如果它是**\<順序 >** 節點：  
+     下列 XPath 運算式會選取目前的節點才**\<順序 >** 節點：  
   
     ```  
     self::Order  

@@ -17,13 +17,13 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 18d13f5d539d00818111d5854dc29a6785b13af1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 3fc87fe24a531e28647ae5b4f79f05141b8f7d39
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413917"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551338"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>SQL Server Native Client 的系統需求
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "37413917"
 ## <a name="data-type-compatibility-for-client-versions"></a>用戶端版本的資料類型相容性  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 會將新的資料類型對應到與下層用戶端相容的舊版資料類型，如下表所示。  
   
- OLE DB 和 ADO 的應用程式可以使用**DataTypeCompatibility**連接字串關鍵字搭配[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端運作較舊的資料類型。 當**DataTypeCompatibility = 80**，OLE DB 用戶端會使用連接[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]表格式資料流 (TDS) 版本，而非 TDS 版本。 這表示對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和較新的資料類型來說，下層的轉換將由伺服器執行，而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 也表示連接可以使用的功能將限於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 功能集。 在 API 呼叫時，即可偵測出使用新資料類型或功能的嘗試，且錯誤會傳回給進行呼叫的應用程式，而不會嘗試將無效的要求傳遞給伺服器。  
+ OLE DB 和 ADO 的應用程式可以使用**DataTypeCompatibility**連接字串關鍵字搭配[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]原生用戶端運作較舊的資料類型。 當 **DataTypeCompatibility=80** 時，OLE DB 用戶端會使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 表格式資料流 (TDS) 版本而非 TDS 版本進行連線。 這表示對 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 和較新的資料類型來說，下層的轉換將由伺服器執行，而不是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client。 也表示連接可以使用的功能將限於 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 功能集。 在 API 呼叫時，即可偵測出使用新資料類型或功能的嘗試，且錯誤會傳回給進行呼叫的應用程式，而不會嘗試將無效的要求傳遞給伺服器。  
   
  沒有任何**DataTypeCompatibility** ODBC 的控制項。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "37413917"
   
 |資料類型|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components、MDAC 和<br /><br /> DataTypeCompatibility=80 的 SQL Server Native Client OLE DB 應用程式|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
-|CLR UDT (\<= 8 Kb)|udt|Udt|Varbinary|  
+|CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|image|  
 |varchar(max)|varchar|varchar|文字|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  

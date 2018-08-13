@@ -20,20 +20,20 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d6101bbe97a4ca329aba1e455fbaa234bdd5a32d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ff4d9d2f47433929f960cfb824750d42173c2b9d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38046116"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544468"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>在 SQLXML 4.0 中使用 XPath 查詢
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 對於註解式 XSD 結構描述的支援可讓您建立資料庫中儲存之關聯式資料的 XML 檢視。 您可以使用 XPath 語言的子集來查詢註解式 XSD 結構描述所建立的 XML 檢視。  
   
 > [!NOTE]  
->  若要了解 SQLXML 4.0 中的 XPath 查詢，您必須熟悉 XML 檢視和相關的概念，例如範本與對應結構描述。 如需詳細資訊，請參閱 <<c0> [ 註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。</c0> 如需有關 XPath 的詳細資訊，請參閱全球資訊網協會 (W3C) 所定義的 XPath 標準在http://www.w3.org/TR/xpath。  
+>  若要了解 SQLXML 4.0 中的 XPath 查詢，您必須熟悉 XML 檢視和相關的概念，例如範本與對應結構描述。 如需詳細資訊，請參閱 <<c0> [ 註解式 XSD 結構描述簡介&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)。</c0> 如需有關 XPath 的詳細資訊，請參閱全球資訊網協會 (W3C) 所定義的 XPath 標準在 http://www.w3.org/TR/xpath 。  
   
 ## <a name="in-this-section"></a>本節內容  
  [使用 XPath 查詢的簡介&#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)  

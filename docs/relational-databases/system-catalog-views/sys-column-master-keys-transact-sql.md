@@ -1,5 +1,5 @@
 ---
-title: sys.column_master_keys (TRANSACT-SQL) |Microsoft 文件
+title: sys.column_master_keys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -32,27 +32,27 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f961586da2bb4bd9a3169fe955d989557535ba7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 61b7c2eb43ec5d30dea98b7eda00f072f883793d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181774"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553008"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  傳回一個資料列使用新增的每個資料庫主要金鑰[CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)陳述式。 每個資料列都代表單一資料行主要金鑰 (CMK)。  
+  傳回一個資料列，使用新增的每個資料庫主要金鑰[CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)陳述式。 每個資料列都代表單一資料行主要金鑰 (CMK)。  
     
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|CMK 的名稱。|  
 |**column_master_key_id**|**int**|資料行主要金鑰的識別碼。|  
 |**create_date**|**datetime**|資料行主要金鑰的建立日期。|  
 |**modify_date**|**datetime**|上次修改資料行主要金鑰的日期。|  
-|**key_store_provider_name**|**sysname**|包含 CMK 的資料行主要金鑰存放區提供者名稱。 允許的值如下：<br /><br /> MSSQL_CERTIFICATE_STORE – 如果資料行主要金鑰存放區是憑證存放區。<br /><br /> 使用者定義值，如果資料行主要金鑰存放區的自訂類型。|  
-|**key_path**|**nvarchar(4000)**|索引鍵資料行主要金鑰儲存特定路徑。 路徑的格式取決於資料行主要金鑰存放區型別。 範例：<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 自訂資料行主要金鑰存放區中，開發人員負責定義的機碼路徑就是自訂的資料行主要金鑰存放區。|  
+|**key_store_provider_name**|**sysname**|包含 CMK 的資料行主要金鑰存放區提供者名稱。 允許的值為：<br /><br /> MSSQL_CERTIFICATE_STORE – 如果資料行主要金鑰存放區是憑證存放區。<br /><br /> 使用者定義的值，如果資料行主要金鑰存放區的自訂型別。|  
+|**key_path**|**nvarchar(4000)**|索引鍵資料行主要金鑰存放區特定路徑。 路徑的格式取決於資料行主要金鑰存放區類型。 範例<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> 自訂資料行主要金鑰存放區中，開發人員會負責定義哪些金鑰的路徑是自訂資料行主要金鑰存放區。|  
   
 ## <a name="permissions"></a>Permissions  
  需要**VIEW ANY COLUMN MASTER KEY**權限。  

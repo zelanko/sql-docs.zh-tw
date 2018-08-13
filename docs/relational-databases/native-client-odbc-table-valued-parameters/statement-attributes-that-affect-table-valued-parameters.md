@@ -16,13 +16,13 @@ ms.assetid: 089213b0-d368-4332-b2e5-b2bd8770c64f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b78f56bfa2d390e69371ffa74cba3531b1d3b84
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 932528d7625cacc3b6c573964d537224ef306453
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431357"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563032"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>影響資料表值參數的陳述式屬性
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

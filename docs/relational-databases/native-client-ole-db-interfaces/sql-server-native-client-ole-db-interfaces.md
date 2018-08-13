@@ -19,13 +19,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc385c19386a151625cbccf07e498f5a35b88827
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5c152794e719cd4337b54d628dae385734043668
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413577"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552148"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client (OLE DB) 介面
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37413577"
   
  這[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者程式設計參考不會記載所有 OLE DB 介面與方法，只有這些介面和方法時，表現為提供者特有的行為使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB提供者。  
   
- 如需核心 OLE DB 介面與方法的完整說明，請參閱 < [OLE DB 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45232)。  
+ 如需核心 OLE DB 介面與方法的完整描述，請參閱 [OLE DB 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=45232)。  
   
 ## <a name="in-this-section"></a>本節內容  
   

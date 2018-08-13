@@ -1,5 +1,5 @@
 ---
-title: sys.default_constraints (TRANSACT-SQL) |Microsoft 文件
+title: sys.default_constraints (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,23 +24,23 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9da755e03c4cbdf9390db34e167da20ad3b78a61
-ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 362006b22a60ab8c7e36ca7f3b8bbe513eb6c31c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239358"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561510"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  包含一個資料列的是預設定義 （而不是 CREATE DEFAULT 陳述式的 CREATE TABLE 或 ALTER TABLE 陳述式建立），每個物件具有**sys.objects.type** = d。  
+  包含一個資料列的是預設定義 （建立在 CREATE TABLE 或 ALTER TABLE 陳述式而不是 CREATE DEFAULT 陳述式中），每個物件具有**sys.objects.type** = d。  
   
 |資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**parent_column_id**|**int**|中的資料行的識別碼**parent_object_id**所屬這個預設值。|  
+|**\<從 sys.objects 繼承的資料行 >**||如需這個檢視所繼承的資料行的清單，請參閱 < [j &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
+|**parent_column_id**|**int**|中的資料行的識別碼**parent_object_id**此預設值所屬。|  
 |**定義**|**nvarchar(max)**|定義這個預設值的 SQL 運算式。|  
 |**is_system_named**|**bit**|1 = 名稱是系統所產生。<br /><br /> 0 = 名稱是使用者所提供。|  
   

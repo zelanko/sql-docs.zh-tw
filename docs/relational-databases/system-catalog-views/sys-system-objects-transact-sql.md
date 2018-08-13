@@ -1,5 +1,5 @@
 ---
-title: sys.system_objects (TRANSACT-SQL) |Microsoft 文件
+title: sys.system_objects (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eda958fa160f98aa4930eb12a6a14f402eee1f41
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 747e0e44db51db4b5e143b79645d1b1fc677607e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221759"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552638"
 ---
 # <a name="syssystemobjects-transact-sql"></a>sys.system_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  包含一個資料列的所有結構描述範圍系統物件所含的[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 所有系統物件都包含在名稱為 sys 或 INFORMATION_SCHEMA 的結構描述中。  
+  包含所有結構描述範圍系統物件所包含的一個資料列[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 所有系統物件都包含在名稱為 sys 或 INFORMATION_SCHEMA 的結構描述中。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|物件名稱。|  
+|NAME|**sysname**|物件名稱。|  
 |object_id|**int**|物件識別碼。 在資料庫中，這是唯一的。|  
 |principal_id|**int**|如果個別擁有者不是結構描述擁有者，這便是個別擁有者的識別碼。 依預設，結構描述包含的物件就是結構描述擁有者所擁有的物件。 不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更擁有權，指定另一個擁有者。<br /><br /> 如果沒有其他個別擁有者，便是 NULL。<br /><br /> 如果物件類型是下列其中一項，便是 NULL：<br /><br /> C = CHECK 條件約束<br /><br /> D = DEFAULT (條件約束或獨立式)<br /><br /> F = FOREIGN KEY 條件約束<br /><br /> PK = PRIMARY KEY 條件約束<br /><br /> R = 規則 (舊式、獨立式)<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序<br /><br /> UQ = UNIQUE 條件約束|  
 |schema_id|**int**|物件所在的結構描述識別碼。<br /><br /> 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所包括的所有結構描述範圍系統物件而言，這個值一律會在 (schema_id('sys'), schema_id('INFORMATION_SCHEMA')) 中|  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server XML 大量載入物件模型 (SQLXML 4.0) |Microsoft 文件
+title: SQL Server XML 大量載入物件模型 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -36,17 +36,17 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43ca8f3b345f5db9c0d11217caef744e9172bd22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 800a306d2cca5888d055e69b5694552e99546bdc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973413"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537880"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>SQL Server XML 大量載入物件模型 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大量載入物件模型會包含 SQLXMLBulkLoad 物件。 這個物件支援下列方法和屬性。  
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML 大量載入物件模型是由 SQLXMLBulkLoad 物件所組成。 這個物件支援下列方法和屬性。  
   
 ## <a name="methods"></a>方法  
  Execute  
@@ -54,7 +54,7 @@ ms.locfileid: "32973413"
   
 ## <a name="properties"></a>屬性  
  大量載入  
- 指定是否應該執行大量載入。 這個屬性相當實用，如果您想要產生 （請參閱遵循 SchemaGen、 SGDropTables 和 SGUseID 屬性） 的結構描述並不會執行大量載入。 這是布林屬性。 當屬性設定為 TRUE 時，XML 大量載入會執行。 設定為 FALSE 時，XML 大量載入則不會執行。  
+ 指定是否應該執行大量載入。 這個屬性就很有用，如果您想要產生 （請參閱遵循 SchemaGen、 SGDropTables 和 SGUseID 屬性） 的結構描述，並不會執行大量載入。 這是布林屬性。 當屬性設定為 TRUE 時，XML 大量載入會執行。 設定為 FALSE 時，XML 大量載入則不會執行。  
   
  預設值為 TRUE。  
   
@@ -71,13 +71,13 @@ ms.locfileid: "32973413"
  請注意，如果識別碼擴展即將完成，則此選項不會套用，而且條件約束檢查將會保持開啟。 如果 `KeepIdentity=False`，而且有定義一個關聯性，其中父系是識別欄位，並在產生值時將其提供給子系，則會發生這個狀況。  
   
  ConnectionCommand  
- 識別現有的連接物件 （例如，ADO 或 ICommand 命令物件），XML 大量載入應該使用。 您可以使用 ConnectionCommand 屬性，而不是使用 ConnectionString 屬性指定的連接字串。 Transaction 屬性必須設定為 TRUE，如果您使用 ConnectionCommand。  
+ 識別現有的連接物件 （例如，ADO 或 ICommand 命令物件），應該使用 XML 大量載入。 您可以使用 ConnectionCommand 屬性，而不是與 ConnectionString 屬性指定的連接字串。 交易屬性必須設定為 TRUE，如果您使用 ConnectionCommand。  
   
  如果您使用 ConnectionString 和 ConnectionCommand 屬性，XML 大量載入會使用最後指定的屬性。  
   
  預設值是 NULL。  
   
- SubQueries  
+ ConnectionString  
  識別 OLE DB 連接字串，提供必要的資訊來建立資料庫執行個體的連接。 如果您使用 ConnectionString 和 ConnectionCommand 屬性，XML 大量載入會使用最後指定的屬性。  
   
  預設值是 NULL。  
@@ -103,7 +103,7 @@ ms.locfileid: "32973413"
  IgnoreDuplicateKeys  
  指定嘗試在索引鍵資料行中插入重複的值時該怎麼辦。 如果此屬性設定為 TRUE，而且嘗試在索引鍵資料行中插入具有重複值的記錄，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 不會插入該記錄。 但是它會插入後續的記錄，因此，大量載入作業不會失敗。 如果此屬性設定為 FALSE，嘗試在索引鍵資料行中插入重複的值時，大量載入會失敗。  
   
- IgnoreDuplicateKeys 屬性設定為 TRUE，當插入資料表中每一筆記錄發出 COMMIT 陳述式。 這會讓效能減慢。 屬性可以設為 true，則只有當交易屬性設定為 FALSE，因為交易行為會使用檔案實作。  
+ IgnoreDuplicateKeys 屬性設定為 TRUE，當插入資料表中每一筆記錄發出 COMMIT 陳述式。 這會讓效能減慢。 屬性可以設定為 TRUE，只有當交易屬性設定為 FALSE，因為交易行為會使用檔案來實作。  
   
  預設值為 FALSE。  
   
@@ -125,13 +125,13 @@ ms.locfileid: "32973413"
  SchemaGen  
  指定是否要在執行大量載入作業前，建立所需的資料表。 這是布林屬性。 如果此屬性設定為 TRUE，會建立對應結構描述中所識別的資料表 (資料庫必須存在)。 如果一或多個資料表的資料庫中已經存在，SGDropTables 屬性會決定是否要卸除並重新建立這些預先存在的資料表。  
   
- SchemaGen 屬性的預設值為 FALSE。 SchemaGen 並不會建立新建立的資料表上的主索引鍵條件約束。 SchemaGen，不過，FOREIGN KEY 條件約束在資料庫中建立如果可以找到符合**sql: relationship**和**sql: key-fields-欄位**對應結構描述中的註解，而且如果索引鍵欄位組成單一資料行。  
+ SchemaGen 屬性的預設值為 FALSE。 SchemaGen 不會建立新建立的資料表上的主索引鍵條件約束。 SchemaGen，不過，FOREIGN KEY 條件約束的資料庫中建立如果可以找到相符**sql: relationship**並**sql: key-fields 來-欄位**對應結構描述中的註解，且如果索引鍵的欄位包含單一資料行。  
   
- 請注意，是否您將 SchemaGen 屬性設為 TRUE 時，XML 大量載入會下列作業：  
+ 請注意，是否您將 SchemaGen 屬性為 TRUE，XML 大量載入會下列作業：  
   
 -   從元素和屬性名稱建立所需的資料表。 因此，您最好不要將 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 保留字用於結構描述中的元素和屬性名稱。  
   
--   傳回溢位資料行指定使用的任何資料[sql: overflow-field-欄位](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)中[xml 資料型別](../../../t-sql/xml/xml-transact-sql.md)格式。  
+-   傳回的溢位的任何資料行指定使用的資料[sql: overflow-field-欄位](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)中[xml 資料型別](../../../t-sql/xml/xml-transact-sql.md)格式。  
   
  SGDropTables  
  指定應該卸除或重新建立現有的資料表。 SchemaGen 屬性設定為 TRUE 時，您可以使用這個屬性。 如果 SGDropTables 為 FALSE，則會保留現有的資料表。 當此屬性為 TRUE 時，會刪除並重新建立現有的資料表。  
@@ -139,7 +139,7 @@ ms.locfileid: "32973413"
  預設值為 FALSE。  
   
  SGUseID  
- 指定是否在對應結構描述中的屬性，識別為**識別碼**型別可以用於建立資料表時建立 PRIMARY KEY 條件約束。 SchemaGen 屬性設定為 TRUE 時，請使用這個屬性。 SGUseID 為 TRUE 時，如果 SchemaGen 公用程式會使用屬性的**dt: type ="id"** 指定為主要索引鍵資料行，並建立資料表時將適當的主索引鍵條件約束。  
+ 指定對應結構描述中的屬性是否視為**識別碼**類型可以用於建立資料表時建立 PRIMARY KEY 條件約束。 SchemaGen 屬性設定為 TRUE 時，請使用這個屬性。 如果 SGUseID 為 TRUE，則 SchemaGen 公用程式會使用屬性的**dt: type ="id"** 指定為主要索引鍵資料行，並建立資料表時，將適當的主索引鍵條件約束。  
   
  預設值為 FALSE。  
   
@@ -147,10 +147,10 @@ ms.locfileid: "32973413"
  針對交易的大量載入，指定 XML 大量載入建立暫存檔案所在的檔案路徑  (此屬性只有在 Transaction 屬性設定為 TRUE 時才有用)。您必須確定用於 XML 大量載入的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 帳戶具有這個路徑的存取權。 如果未設定此屬性，XML 大量載入會將暫存檔案儲存在 TEMP 環境變數中所指定的位置。  
   
  Transaction  
- 指定大量載入是否應該當做交易完成，在此情況下，保證會在大量載入失敗時回復。 這是布林屬性。 如果屬性設定為 TRUE，大量載入會在交易內容中發生。 只有交易設定為 TRUE 時，TempFilePath 屬性才能很有用。  
+ 指定大量載入是否應該當做交易完成，在此情況下，保證會在大量載入失敗時回復。 這是布林屬性。 如果屬性設定為 TRUE，大量載入會在交易內容中發生。 交易設定為 TRUE 時才有用 TempFilePath 屬性。  
   
 > [!NOTE]  
->  如果您載入二進位資料 (例如，將 bin.hex、 bin.base64 XML 資料類型為二進位，映像[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料型別)，交易屬性必須設定為 FALSE。  
+>  如果您載入的二進位資料 (例如，將 bin.hex、bin.base64 XML 資料類型為二進位，映像[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料類型)，交易屬性必須設定為 FALSE。  
   
  預設值為 FALSE。  
   

@@ -24,13 +24,13 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b77b2a8df3d2f6f0afb47db519dae142baf2d13
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4144ebd27e6b17cea4a68e466f6de7fd5bd33f0c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310215"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557568"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "39310215"
   >[!NOTE]
   >結果集中的此 DMV 會限制為 600 的資料列。 每個資料列都包含一個遺漏的索引。 如果您有多個遺漏索引的 600 時，您應該先處理現有的遺漏索引，因此您可以檢視較新的。
   
-## <a name="permissions"></a>[權限]  
+## <a name="permissions"></a>Permissions  
  若要查詢此動態管理檢視，使用者必須取得 VIEW SERVER STATE 權限或隱含 VIEW SERVER STATE 權限的任何權限。  
   
 ## <a name="examples"></a>範例  

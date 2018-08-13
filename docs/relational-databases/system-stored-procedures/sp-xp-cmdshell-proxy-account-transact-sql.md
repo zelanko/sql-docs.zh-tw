@@ -1,5 +1,5 @@
 ---
-title: sp_xp_cmdshell_proxy_account (TRANSACT-SQL) |Microsoft 文件
+title: sp_xp_cmdshell_proxy_account (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 18c960fdf3d70c82684d493fd498a57ed357bb4d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 48a92be607ea1d57740587840cb854299443b285
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251965"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560558"
 ---
 # <a name="spxpcmdshellproxyaccount-transact-sql"></a>sp_xp_cmdshell_proxy_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  建立的 proxy 認證**xp_cmdshell**。  
+  建立 proxy 認證**xp_cmdshell**。  
   
 > [!NOTE]  
 >  **xp_cmdshell**預設會停用。 若要啟用**xp_cmdshell**，請參閱[xp_cmdshell 伺服器組態選項](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)。  
@@ -64,7 +64,7 @@ sp_xp_cmdshell_proxy_account [ NULL | { 'account_name' , 'password' } ]
 ## <a name="remarks"></a>備註  
  Proxy 認證將稱為 **# # xp_cmdshell_proxy_account # #**。  
   
- 使用 NULL 選項執行時**sp_xp_cmdshell_proxy_account**刪除 proxy 認證。  
+ 使用 [NULL] 選項中，執行時**sp_xp_cmdshell_proxy_account**刪除 proxy 認證。  
   
 ## <a name="permissions"></a>Permissions  
  需要 CONTROL SERVER 權限。  
@@ -88,7 +88,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [xp_cmdshell &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
+ [xp_cmdshell &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

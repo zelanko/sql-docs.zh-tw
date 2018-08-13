@@ -1,5 +1,5 @@
 ---
-title: 遇到了 sys.dm_fts_active_catalogs (TRANSACT-SQL) |Microsoft 文件
+title: 遇到了 sys.dm_fts_active_catalogs (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,12 +23,13 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 564f66e6207ebc79b7545a77af8da8f156faf673
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e54673cbbb85d359184a8a745f3f48d8456d2f53
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544198"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/23/2018
 >  未來版本將移除下列資料行[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused、 previous_status、 previous_status_description、 row_count_in_thousands、 狀態、 status_description 和 worker_count。 請避免在新的開發工作中使用這些資料行，並規劃修改目前使用這些資料行的應用程式。  
   
  
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|包含使用中全文檢索目錄的資料庫識別碼。|  
 |**catalog_id**|**int**|使用中全文檢索目錄的識別碼。|  
@@ -59,15 +60,15 @@ ms.lasthandoff: 05/23/2018
 |**is_importing**|**bit**|指出是否正在匯入全文檢索目錄：<br /><br /> 1 = 正在匯入此目錄。<br /><br /> 2 = 沒有正在匯入此目錄。|  
   
 ## <a name="remarks"></a>備註  
- Is_importing 資料行的新[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
+ Is_importing 資料行的新功能[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]。  
   
 ## <a name="permissions"></a>Permissions  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
    
 ## <a name="physical-joins"></a>實體聯結  
- ![這個動態管理檢視的重要聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "此動態管理檢視的重要聯結")  
+ ![這個動態管理檢視的重要聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "這個動態管理檢視的重要聯結")  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
@@ -96,6 +97,6 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  
- [全文檢索搜尋和語意搜尋動態管理檢視與函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [全文檢索搜尋和語意搜尋動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

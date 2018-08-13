@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_database_transactions (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_tran_database_transactions (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3054cc3cc8378e34b44d97720692b040e1b1bade
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 192c5637932c5137c26e00ad380584b83a541e09
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467594"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544618"
 ---
 # <a name="sysdmtrandatabasetransactions-transact-sql"></a>sys.dm_tran_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "34467594"
   傳回有關資料庫層級之交易的資訊。  
   
 > [!NOTE]  
->  若要呼叫從這個 DMV[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_tran_database_transactions**。  
+>  若要呼叫從這個 DMV[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_tran_database_transactions**。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|執行個體層級 (而非資料庫層級) 的交易識別碼。 它只有在一個執行個體的所有資料庫才是唯一的，在所有的伺服器執行個體則不是。|  
 |database_id|**int**|與交易相關聯的資料庫識別碼。|  
 |database_transaction_begin_time|**datetime**|資料庫變成與交易有關的時間。 尤其，它是資料庫中針對交易的第一筆記錄的時間。|  
 |database_transaction_type|**int**|1 = 讀取/寫入交易<br /><br /> 2 = 唯讀交易<br /><br /> 3 = 系統交易|  
-|database_transaction_state|**int**|1 = 交易未初始化。<br /><br /> 3 = 交易已初始化，但未產生任何記錄。<br /><br /> 4 = 交易已產生記錄。<br /><br /> 5 = 已準備交易。<br /><br /> 10 = 已認可交易。<br /><br /> 11 = 已回復交易。<br /><br /> 12 = 正在認可交易。 （在記錄檔記錄正在產生，但尚未具體化或保存。）|  
+|database_transaction_state|**int**|1 = 交易未初始化。<br /><br /> 3 = 交易已初始化，但未產生任何記錄。<br /><br /> 4 = 交易已產生記錄。<br /><br /> 5 = 已準備交易。<br /><br /> 10 = 已認可交易。<br /><br /> 11 = 已回復交易。<br /><br /> 12 = 正在認可交易。 （記錄檔記錄正在產生，但尚未具體化或保存。）|  
 |database_transaction_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_status2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |database_transaction_log_record_count|**bigint**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 在資料庫中針對交易產生的記錄數。|  
@@ -58,18 +58,18 @@ ms.locfileid: "34467594"
 |database_transaction_last_lsn|**numeric(25,0)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料庫記錄中交易之最近記錄的 LSN。|  
 |database_transaction_most_recent_savepoint_lsn|**numeric(25,0)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料庫記錄中交易之最近儲存點的 LSN。|  
 |database_transaction_commit_lsn|**numeric(25,0)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 資料庫記錄中交易之認可記錄的 LSN。|  
-|database_transaction_last_rollback_lsn|**numeric(25,0)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 最近回復的 LSN。 如果有不發生任何復原，值會是 MaxLSN。|  
+|database_transaction_last_rollback_lsn|**numeric(25,0)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 最近回復的 LSN。 如果復原已執行，則值會是 MaxLSN。|  
 |database_transaction_next_undo_lsn|**numeric(25,0)**|**適用於**： [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 要恢復之下一筆記錄的 LSN。|  
-|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|pdw_node_id|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
 
 ## <a name="see-also"></a>另請參閱  
- [sys.dm_tran_active_transactions &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
- [sys.dm_tran_session_transactions &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
+ [sys.dm_tran_active_transactions &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-transactions-transact-sql.md)   
+ [sys.dm_tran_session_transactions &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [交易相關的動態管理檢視和函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -19,13 +19,13 @@ caps.latest.revision: 1
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 8c2ad7f5b31a97de5d0bfb22074b55bd61bb825b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6ee9528f9f1a85b0d23d6a5b3de23f50a63a85cf
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015674"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540858"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>SQL Server 和 Azure SQL Database 的圖表處理
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ AND Person1.Name = 'John';
 ### <a name="tooling-and-ecosystem"></a>工具和生態系統  
 使用者可獲得從現有的工具和生態系統，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]提供。 工具，例如備份與還原、 匯入和匯出，請立即可用的 BCP 都可運作。 其他工具或服務，例如 SSIS、 SSRS 或 power Bi 會使用圖形資料表的關聯式表格運作方式。
  
- ## <a name="next-steps"></a>後續的步驟  
+ ## <a name="next-steps"></a>後續步驟  
 讀取[SQL 圖形資料庫架構](./sql-graph-architecture.md)
    
 

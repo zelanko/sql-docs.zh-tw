@@ -18,13 +18,13 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d45c3b54eb6b5e09c00ea94cfef924b3c94fa70
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6c15bfc29ae02e362ea1010ef67b0a99e4b05dc0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420477"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551128"
 ---
 # <a name="ssvariant-structure"></a>SSVARIANT 結構
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "37420477"
 
   **SSVARIANT**結構，也就定義在 sqlncli.h 中，對應中的 DBTYPE_SQLVARIANT 值[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLEDB 提供者。  
   
- **SSVARIANT**是辨識聯集。 根據 vt 成員的值，取用者可以判斷要讀取的成員。 vt 值會對應至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。 因此， **SSVARIANT**結構可以保留任何 SQL Server 類型。 如需有關標準 OLE DB 類型的資料結構的詳細資訊，請參閱 <<c0> [ 的類型指標](http://go.microsoft.com/fwlink/?LinkId=122171)。  
+ **SSVARIANT**是辨識聯集。 根據 vt 成員的值而定，取用者可以判斷要讀取的成員。 vt 值會對應至 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。 因此，**SSVARIANT** 結構可以保留任何 SQL Server 類型。 如需有關標準 OLE DB 類型的資料結構的詳細資訊，請參閱 <<c0> [ 的類型指標](http://go.microsoft.com/fwlink/?LinkId=122171)。  
   
 ## <a name="remarks"></a>備註  
- 當 datatypecompat==80 時 = = 80，數個**SSVARIANT**子類型會變成字串。 例如，下列 vt 值會出現在**SSVARIANT**為 VT_SS_WVARSTRING:  
+ 當 DataTypeCompat==80 時，數個 **SSVARIANT** 子類型會變成字串。 例如，下列 vt 值在 **SSVARIANT** 中會顯示為 VT_SS_WVARSTRING：  
   
 -   VT_SS_DATETIMEOFFSET  
   
@@ -58,14 +58,14 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  如需每個成員的完整存取巨集**SSVARIANT**結構，請參考 sqlncli.hi 檔案。  
   
- 下表描述的成員**SSVARIANT**結構：  
+ 下表將描述 **SSVARIANT** 結構的成員：  
   
 |成員|OLE DB 類型指標|OLE DB C 資料類型|vt 值|註解|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|vt|SSVARTYPE|||指定值中包含的型別**SSVARIANT**結構。|  
+|vt|SSVARTYPE|||指定包含在 **SSVARIANT** 結構中的值類型。|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|支援**tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
-|sShortIntVal|DBTYPE_I2|**簡短**|**VT_SS_I2**|支援**smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
-|lIntVal|DBTYPE_I4|**長**|**VT_SS_I4**|支援**int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
+|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|支援**smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
+|lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|支援**int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|支援**bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|支援**真正**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
 |dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|支援**浮點數**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
@@ -73,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|支援**位元**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|支援**uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|支援**數值**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|支援**日期**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|支援 **date**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料類型。|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|支援**smalldatetime**， **datetime**，並**datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|支援**時間**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**位元組**) 指定的小數位數*tTime2Val*值。|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|支援**datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。<br /><br /> 包括下列成員：<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**位元組**) 指定的小數位數*tsDataTimeVal*值。|  

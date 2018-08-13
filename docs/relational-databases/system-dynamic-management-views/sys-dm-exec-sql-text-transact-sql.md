@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_sql_text (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_exec_sql_text (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21b22b837cc4e46bdd5169b0c669e7dde74c029c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5bc68b376f5524324756715497c00094eb2ed101
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465154"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557138"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  也就是批次的 SQL 文字傳回識別指定*sql_handle*。 這個資料表值函式取代系統函數**fn_get_sql**。  
+  傳回文字的 SQL 批次也就是識別由指定*sql_handle*。 這個資料表值函式取代系統函數**fn_get_sql**。  
   
  
 ## <a name="syntax"></a>語法  
@@ -45,7 +45,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>引數  
 *sql_handle*  
-這是要查閱之批次的 SQL 控制代碼。 *sql_handle*是**varbinary(64)**。 *sql_handle*可以從下列動態管理物件取得：  
+這是要查閱之批次的 SQL 控制代碼。 *sql_handle*已**varbinary(64)**。 *sql_handle*可以從下列動態管理物件取得：  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-用來唯一識別批次的查詢計畫，該批次可能已快取或正在執行。 *plan_handle*是**varbinary(64)**。 *plan_handle*可以從下列動態管理物件取得：  
+用來唯一識別批次的查詢計畫，該批次可能已快取或正在執行。 *plan_handle*已**varbinary(64)**。 *plan_handle*可以從下列動態管理物件取得：  
   
 -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -70,11 +70,11 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|資料庫的識別碼。<br /><br /> 對於隨選和準備的 SQL 陳述式而言，則為編譯陳述式的資料庫識別碼。|  
 |**objectid**|**int**|物件的識別碼。<br /><br /> 特定和準備 SQL 陳述式的這個值是 NULL。|  
-|**number**|**smallint**|對於已編號的預存程序，這個資料行會傳回預存程序的編號。 如需詳細資訊，請參閱[之 deprecated sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> 特定和準備 SQL 陳述式的這個值是 NULL。|  
+|**number**|**smallint**|對於已編號的預存程序，這個資料行會傳回預存程序的編號。 如需詳細資訊，請參閱 < [sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)。<br /><br /> 特定和準備 SQL 陳述式的這個值是 NULL。|  
 |**加密**|**bit**|1 = SQL 文字已加密。<br /><br /> 0 = SQL 文字未加密。|  
 |**text**|**nvarchar(max** **)**|SQL 查詢的文字。<br /><br /> 加密物件的這個值是 NULL。|  
   
@@ -82,19 +82,19 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
  需要伺服器的 `VIEW SERVER STATE` 權限。  
   
 ## <a name="remarks"></a>備註  
-對於臨機操作查詢，SQL 控制代碼是依據提交給伺服器的 SQL 文字的雜湊值，並可以來自於任何資料庫。 
+針對臨機操作查詢，SQL 控制代碼會提交至伺服器的 SQL 文字為基礎的雜湊值，並可以來自於任何資料庫。 
 
 針對預存程序、觸發程序或函數之類的資料庫物件，SQL 控制代碼是從資料庫識別碼、物件識別碼和物件編碼衍生而來。 
 
 計畫控制代碼是從整個批次的已編譯計畫衍生的雜湊值。 
 
 > [!NOTE]
-> **dbid**無法由*sql_handle*臨機操作查詢。 若要判斷**dbid**臨機操作查詢，使用*plan_handle*改為。
+> **dbid**無法由*sql_handle*臨機操作查詢。 若要判斷**dbid**臨機操作查詢，使用*plan_handle*改。
   
 ## <a name="examples"></a>範例 
 
 ### <a name="a-conceptual-example"></a>A. 概念的範例
-以下是一個基本範例，說明傳遞**sql_handle**直接或使用**CROSS APPLY**。
+以下是一個基本範例，說明傳遞**sql_handle**直接或藉由**CROSS APPLY**。
   1.  建立活動。  
 在新的 [查詢] 視窗中執行下列 T-SQL [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。   
       ```sql
@@ -107,7 +107,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
       ```
       
     2.  使用**CROSS APPLY**。  
-    從 sql_handle **sys.dm_exec_requests**會傳遞至**sys.dm_exec_sql_text**使用**CROSS APPLY**。 開啟新的查詢視窗，並傳遞步驟 1 所識別的 spid。 在此範例中的 spid 剛好是`59`。
+    從 sql_handle **sys.dm_exec_requests**將傳遞給**sys.dm_exec_sql_text**使用**CROSS APPLY**。 開啟新的 [查詢] 視窗，並傳遞步驟 1 中識別的 spid。 在此範例中的 spid 剛好是`59`。
 
         ```sql
         SELECT t.*
@@ -117,7 +117,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
          ```      
  
     2.  傳遞**sql_handle**直接。  
-取得**sql_handle**從**sys.dm_exec_requests**。 然後，傳遞**sql_handle**直接**sys.dm_exec_sql_text**。 開啟新查詢視窗，並傳遞步驟 1 中所識別的 spid **sys.dm_exec_requests**。 在此範例中的 spid 剛好是`59`。 接著，將傳回**sql_handle**做為引數**sys.dm_exec_sql_text**。
+取得**sql_handle**從**sys.dm_exec_requests**。 然後，將傳遞**sql_handle**直接**sys.dm_exec_sql_text**。 開啟新的 [查詢] 視窗，並傳遞步驟 1 中所識別的 spid **sys.dm_exec_requests**。 在此範例中的 spid 剛好是`59`。 將已傳回**sql_handle**做為引數**sys.dm_exec_sql_text**。
 
         ```sql
         -- acquire sql_handle
@@ -176,12 +176,12 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [執行相關動態管理檢視和函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [執行相關動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [sys.dm_exec_cursors &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
- [sys.dm_exec_xml_handles &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_cursors &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
+ [sys.dm_exec_xml_handles &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
+ [sys.dm_exec_query_memory_grants &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
  [使用 [套用]](../../t-sql/queries/from-transact-sql.md#using-apply)   
  [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

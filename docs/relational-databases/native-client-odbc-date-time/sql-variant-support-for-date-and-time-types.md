@@ -15,13 +15,13 @@ ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2f3a991fa18871ddd569756d0d1a4062b8750f32
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 933ac05cd1be7d709089c3e0ab7216ce6e44ba8c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421587"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556898"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>日期和時間類型的 sql_variant 支援
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

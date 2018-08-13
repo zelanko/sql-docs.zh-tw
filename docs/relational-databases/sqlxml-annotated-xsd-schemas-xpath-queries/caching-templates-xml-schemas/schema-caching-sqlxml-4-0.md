@@ -1,5 +1,5 @@
 ---
-title: 結構描述快取 (SQLXML 4.0) |Microsoft 文件
+title: 快取 (SQLXML 4.0) 的結構描述 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebb2fd4b7e0b17f81f8e14f3bde60d56e3a60ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f6b9e9a8a6d9406def9e2adc90e1ef7e9b8545a1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971079"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559638"
 ---
 # <a name="schema-caching-sqlxml-40"></a>結構描述快取 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  使用 XML for Microsoft SQL Server 2000 Web Release 1、 Microsoft SQLXML 2.0 和 SQLXML 3.0 的並存安裝，您可以明確地控制所有版本中使用下列登錄機碼的快取的結構描述：  
+  使用 XML for Microsoft SQL Server 2000 Web Release 1、 Microsoft SQLXML 2.0 和 SQLXML 3.0 的並排顯示安裝，您可以明確地控制所有版本中使用下列登錄機碼的快取的結構描述：  
   
  Web Release 1：  
   
@@ -52,7 +52,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- 多個並行所安裝的詳細資訊，請參閱[What's New in SQLXML 4.0 SP1](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)。  
+ 如需並排顯示安裝的詳細資訊，請參閱[What's New in SQLXML 4.0 SP1](../../../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md)。  
   
  結構描述快取能大幅提升 XPath 查詢的效能。 當 XPath 查詢針對對應結構描述執行時，結構描述會儲存在記憶體中，而且會在記憶體中建立所需的資料結構。 如果設定結構描述快取，結構描述仍會保留在記憶體中，藉以提升後續 XPath 查詢的效能。  
   
@@ -60,13 +60,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
   
  結構描述大小應該根據可用的記憶體以及您要使用的結構描述數目來設定。 預設值**SchemaCacheSize**大小為 31。 如果您設定**SchemaCacheSize**更高版本，會使用更多的記憶體。 因此，如果結構描述存取速度似乎緩慢，您可以增加快取大小，或者如果記憶體不足，則減少快取大小。  
   
- 基於效能考量，建議您設定**SchemaCacheSize**比您通常會使用對應結構描述數目高。 當結構描述數目增加，如果**SchemaCacheSize**小於您擁有的結構描述的數目，效能會降低。  
+ 基於效能考量，建議您設定**SchemaCacheSize**比您通常會使用對應結構描述數目高。 當結構描述數目增加，如果**SchemaCacheSize**小於您擁有的結構描述數目，效能會降低。  
   
 > [!NOTE]  
 >  在開發期間，建議您不要快取結構描述，因為您對結構描述所做的變更，約有兩分鐘不會反映在快取中。  
   
 ## <a name="see-also"></a>另請參閱  
- [範本快取 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [XSL 快取 & #40;SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+ [範本快取&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [XSL 快取&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

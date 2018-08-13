@@ -19,13 +19,13 @@ ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 04bc87109e9fcbd9786d78e0b599011fbf8a05ef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c9bd3706b07f1b2b5e9f94b4b34cc7c48f51b215
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424277"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542898"
 ---
 # <a name="effects-of-iso-options"></a>ISO 選項的作用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

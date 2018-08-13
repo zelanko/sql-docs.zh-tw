@@ -1,5 +1,5 @@
 ---
-title: FREETEXTTABLE (TRANSACT-SQL) |Microsoft 文件
+title: FREETEXTTABLE (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,20 +26,20 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f2d3c0c014db5a0cd5aab0dee22e6622fd24f20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5dbb201a507d168a06b6417c5648c209807bc773
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239048"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540558"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  是函式中使用[FROM 子句](../../t-sql/queries/from-transact-sql.md)的[!INCLUDE[tsql](../../includes/tsql-md.md)]SELECT 陳述式來執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文檢索搜尋的全文檢索索引資料行包含以字元為基礎的資料類型。 此函數會傳回零個、 一個或多個資料列，這些資料行包含值符合意義而且不只是完全相同，文字方塊中指定的資料表*freetext_string*。 FREETEXTTABLE 參考方式就如同一般資料表名稱一樣。  
+  使用中的函數[FROM 子句](../../t-sql/queries/from-transact-sql.md)的[!INCLUDE[tsql](../../includes/tsql-md.md)]若要執行的 SELECT 陳述式[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全文檢索搜尋的全文檢索索引包含以字元為基礎的資料類型的資料行。 此函數會傳回零個、 一個或多個資料列，其中包含符合意義並不只是完全相同，在指定的文字值，這些資料行的資料表*freetext_string*。 FREETEXTTABLE 參考方式就如同一般資料表名稱一樣。  
   
- FREETEXTTABLE 是適用於相同類型的相符項目為[FREETEXT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)，  
+ FREETEXTTABLE 是適用於相同類型的相符項目作為[FREETEXT &#40;TRANSACT-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)，  
   
  使用 FREETEXTTABLE 的查詢會針對每個資料列傳回一個相關次序值 (RANK) 和全文檢索索引鍵 (KEY)，如下所示：  
   
@@ -62,9 +62,9 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="arguments"></a>引數  
  *table*  
- 這是已標示全文檢索查詢的資料表名稱。 *資料表*或*檢視*可以是一段、 兩個或三部分資料庫物件名稱。 當查詢檢視時，只能包含一個全文檢索索引基底資料表。  
+ 這是已標示全文檢索查詢的資料表名稱。 *表格*或是*檢視*可以是一段、 兩段或三部分資料庫物件名稱。 當查詢檢視時，只能包含一個全文檢索索引基底資料表。  
   
- *資料表*無法同時指定伺服器名稱，並且不能用在連結伺服器查詢。  
+ *資料表*不能指定伺服器名稱，也不能用於連結伺服器的查詢。  
   
  *column_name*  
  這是在 FROM 子句中指定之資料表一個或多個全文檢索索引資料行的名稱。 資料行可為以下類型：**char**、**varchar**、**nchar**、**nvarchar**、**text**、**ntext**、**image**、**xml**、**varbinary** 或 **varbinary(max)**。  
@@ -78,7 +78,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  *freetext_string*  
  這是要在 *column_name* 中搜尋的文字。 您可以輸入任何文字，其中包括單字、片語或句子。 在全文檢索索引中找到任何詞彙或任何詞彙的各種形式，都會產生相符項目。  
   
- 不同於在 CONTAINS 搜尋條件中，AND 是關鍵字，用於時*freetext_string* word '和' 被視為非搜尋字或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)，將會被捨棄。  
+ 不同於在 CONTAINS 搜尋條件中 AND 是關鍵字，在中使用時*freetext_string*這個字 '和' 會被視為非搜尋字或[停用字詞](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)，將予捨棄。  
   
  不允許使用 WEIGHT、FORMSOF、萬用字元、NEAR 和其他語法。 *freetext_string* 會經過斷字、進行詞幹分析，然後進行同義字檢查。  
   
@@ -94,14 +94,14 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  如果指定的語言無效，或尚未安裝對應於這個語言的資源，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 就會傳回錯誤。 若要使用中性語言資源，請將 0x0 指定為 *language_term*。  
   
  *top_n_by_rank*  
- 指定只有*n*最高等級的相符項目以遞減順序，會傳回。 整數值時才適用*n*，指定。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank*可讓您可以重新呼叫最相關叫用來提升查詢效能。  
+ 指定只有*n*最高等級的相符項目依遞減順序傳回。 整數值時才適用*n*，指定。 如果結合 *top_n_by_rank* 與其他參數，則查詢所傳回的資料列數目會少於實際符合所有述詞的資料列數目。 *top_n_by_rank*可讓您以提升查詢效能只有最相關的叫用重新叫用。  
   
 ## <a name="remarks"></a>備註  
  全文檢索述詞與函數會在 FROM 述詞中隱含的單一資料表上處理。 若要在多個資料表上進行搜尋，請使用 FROM 子句中聯結的資料表，在兩個或多個資料表之產品的結果集上進行搜尋。  
   
  FREETEXTTABLE 使用與 FREETEXT 述詞相同的搜尋條件。  
   
- 如同 CONTAINSTABLE，傳回的資料表有資料行命名為**金鑰**和**陣序規範**，以取得適當的資料列，並使用資料列次序值查詢會參考它們。  
+ 如同 CONTAINSTABLE，傳回的資料表有資料行命名為**金鑰**並**陣序規範**，要取得適當的資料列，並使用資料列次序值的查詢會參考它們。  
   
 ## <a name="permissions"></a>Permissions  
  使用者必須具備指定的資料表或資料表中被參考的資料行之適當 SELECT 權限，才能叫用 FREETEXTTABLE。  
@@ -109,7 +109,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
 ## <a name="examples"></a>範例  
   
 ### <a name="a-simple-example"></a>A. 簡單範例  
- 下列範例會建立並填入簡單資料表的兩個資料行，列出 3 郡和其旗標的色彩。 It 會建立並擴展全文檢索目錄和資料表上的索引。 然後在**FREETEXTTABLE**示範的語法。  
+ 下列範例會建立，並填入簡單的資料表，列出 3 個郡和其旗標色彩的兩個資料行。 It 會建立並填入全文檢索目錄和資料表上的索引。 然後**FREETEXTTABLE**示範語法。  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>C. 指定語言和最高等級的相符項目  
- 下列範例相同，並示範如何使用`LANGUAGE` *language_term*和*top_n_by_rank*參數。  
+ 下列範例相同，並示範如何使用`LANGUAGE` *language_term*並*top_n_by_rank*參數。  
   
 ```  
 USE AdventureWorks2012;  
@@ -172,7 +172,7 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [全文檢索搜尋使用者入門](../../relational-databases/search/get-started-with-full-text-search.md)   
  [建立及管理全文檢索目錄](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
- [建立全文檢索目錄 & #40;TRANSACT-SQL & #41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [建立及管理全文檢索索引](../../relational-databases/search/create-and-manage-full-text-indexes.md)   
  [使用全文檢索搜尋進行查詢](../../relational-databases/search/query-with-full-text-search.md)   

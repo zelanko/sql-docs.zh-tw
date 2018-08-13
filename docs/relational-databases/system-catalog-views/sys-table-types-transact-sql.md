@@ -1,5 +1,5 @@
 ---
-title: sys.table_types (TRANSACT-SQL) |Microsoft 文件
+title: sys.table_types (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,22 +27,22 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b93b2395aa31d68de287628b512d111ac423bd92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: eef7f540231ff230bf32e4f2e0d4613c5dab8477
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220629"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559248"
 ---
 # <a name="systabletypes-transact-sql"></a>sys.table_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用者定義資料表類型的屬性。 資料表類型是指可以從中宣告資料表變數或資料表值參數的類型。 每個資料表類型都具有**type_table_object_id**也就是外部索引鍵到[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視。 您可以使用此識別碼資料行來查詢各種目錄檢視，類似的方式**object_id**規則資料表，以探索資料表類型，例如其資料行和條件約束的結構資料行。    
+  顯示 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中使用者定義資料表類型的屬性。 資料表類型是指可以從中宣告資料表變數或資料表值參數的類型。 每個資料表類型都具有**type_table_object_id**也就是外部索引鍵[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)目錄檢視。 您可以使用此識別碼資料行來查詢各種目錄檢視，類似的方式**object_id**一般的資料表，以探索資料表類型，例如其資料行和條件約束的結構資料行。    
  
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|*\<繼承資料行 >*||如需這個檢視所繼承的資料行的清單，請參閱[sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)。|  
+|*\<繼承資料行 >*||如需這個檢視所繼承的資料行的清單，請參閱 < [sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)。|  
 |**type_table_object_id**|**int**|物件識別碼。 此碼在資料庫中是唯一的。|  
 |**is_memory_optimized**|**bit**|**適用於**： [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 以下是可能的值：<br /><br /> 0 = 不是記憶體最佳化的<br /><br /> 1 = 是記憶體最佳化的<br /><br /> 預設值是 0 值。<br /><br /> 資料表類型一定會使用 DURABILITY = SCHEMA_ONLY 來建立。 只有結構描述會在磁碟上保存。|  
   

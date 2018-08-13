@@ -1,5 +1,5 @@
 ---
-title: sys.all_objects (TRANSACT-SQL) |Microsoft 文件
+title: sys.all_objects (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bc5aef0a9a816ba6a500587e46a3f7b2e1b6cda3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: ab10ab7fa14f8b5e888536a94553b6a1e3db61e2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181114"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552818"
 ---
 # <a name="sysallobjects-transact-sql"></a>sys.all_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   顯示所有結構描述範圍使用者定義物件和系統物件的 UNION。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|物件名稱。|  
+|NAME|**sysname**|物件名稱。|  
 |object_id|**int**|物件識別碼。 在資料庫中，這是唯一的。|  
 |principal_id|**int**|如果個別擁有者不是結構描述擁有者，這便是個別擁有者的識別碼。 依預設，結構描述包含的物件就是結構描述擁有者所擁有的物件。 不過，您也可以利用 ALTER AUTHORIZATION 陳述式來變更擁有權，指定另一個擁有者。<br /><br /> 如果沒有替代的個別擁有者，這便是 NULL。<br /><br /> 如果物件類型是下列其中一項，便是 NULL：<br /><br /> C = CHECK 條件約束<br /><br /> D = DEFAULT (條件約束或獨立式)<br /><br /> F = FOREIGN KEY 條件約束<br /><br /> PK = PRIMARY KEY 條件約束<br /><br /> R = 規則 (舊式、獨立式)<br /><br /> TA = 組件 (CLR) 觸發程序<br /><br /> TR = SQL 觸發程序<br /><br /> UQ = UNIQUE 條件約束|  
 |schema_id|**int**|包含物件的結構描述識別碼。<br /><br /> 對於 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 所包含的所有結構描述範圍系統物件而言，這個值一律會在 (schema_id('sys'), schema_id('INFORMATION_SCHEMA')) 中。|  
@@ -59,6 +59,6 @@ ms.locfileid: "33181114"
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys.system_objects &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)  
+ [sys.system_objects &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)  
   
   

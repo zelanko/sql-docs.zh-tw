@@ -22,15 +22,15 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fb356e56bdd4453df6d0b62d921efafbde2dfdea
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bea85f19dde9e91bd62a603bdab4c98031567f3c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050091"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551148"
 ---
-# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>註解解譯-sql: limit-value-欄位和 sql: limit-value-值
+# <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>註解解譯 - sql:limit-field 和 sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 大量載入處理序**sql: limit-value-欄位**並**sql: limit-value-值**其定義的註解。 如需詳細資訊，請參閱 <<c0> [ 篩選值使用 sql: limit-value-欄位和 sql: limit-value-值&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)。</c0>  
   

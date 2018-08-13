@@ -1,5 +1,5 @@
 ---
-title: sp_rename (TRANSACT-SQL) |Microsoft 文件
+title: sp_rename & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 01/09/2018
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97d14dc014827310706bdea8143e41a628a666d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 836ef351d2af7e187420b680a90382fc504b9e89
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260854"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563072"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  變更目前資料庫中之使用者建立物件的名稱。 這個物件可以是資料表、 索引、 資料行別名資料類型，或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) 使用者定義型別。  
+  變更目前資料庫中之使用者建立物件的名稱。 這個物件可以是資料表、 索引、 資料行中，別名資料類型，或[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) 使用者定義型別。  
   
 > [!CAUTION]  
 >  變更物件名稱的任何部分，可能破壞指令碼和預存程序。 我們建議您不要使用陳述式來重新命名預存程序、觸發程序、使用者定義函數或檢視；相反地，請卸除物件，再利用新名稱來重新建立它。  
@@ -53,27 +53,27 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="arguments"></a>引數  
  [ @objname = ] '*object_name*'  
- 這是使用者物件或資料類型目前的完整或非完整名稱。 如果要重新命名的物件是在資料表中，資料行*object_name*格式必須為*table.column*或*schema.table.column*。 如果要重新命名的物件是索引， *object_name*格式必須為*table.index*或*schema.table.index*。 如果要重新命名的物件是條件約束， *object_name*格式必須為*schema.constraint*。  
+ 這是使用者物件或資料類型目前的完整或非完整名稱。 如果要重新命名的物件是在資料表中，資料行*object_name*必須是格式*table.column*或是*schema.table.column*。 如果要重新命名的物件是索引， *object_name*必須是格式*table.index*或是*schema.table.index*。 如果要重新命名物件的條件約束*object_name*必須是格式*schema.constraint*。  
   
- 只有在指定限定物件時，才需要引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *object_name*是**nvarchar(776)**，沒有預設值。  
+ 只有在指定限定物件時，才需要引號。 如果提供其中包括資料庫名稱的完整名稱，資料庫名稱就必須是目前資料庫的名稱。 *object_name*已**nvarchar(776)**，沒有預設值。  
   
  [ @newname =] '*new_name*'  
- 這是指定物件的新名稱。 *new_name*必須是單部分名稱，且必須遵照識別碼的規則。 *newname*是**sysname**，沒有預設值。  
+ 這是指定物件的新名稱。 *new_name*必須是單部分名稱，而且必須遵循識別碼的規則。 *newname*已**sysname**，沒有預設值。  
   
 > [!NOTE]  
 >  觸發程序名稱的開頭不能是 # 或 ##。  
   
  [ @objtype = ] '*object_type*'  
- 這是要重新命名的物件類型。 *object_type*是**varchar(13)**，預設值是 NULL，而且可以是下列值之一。  
+ 這是要重新命名的物件類型。 *object_type*已**varchar(13)**，預設值是 NULL，而且可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |COLUMN|要重新命名的資料行。|  
 |DATABASE|使用者定義資料庫。 當重新命名資料庫時，需要這個物件類型。|  
 |INDEX|使用者自訂索引。 重新命名具有統計資料的索引時，也會自動重新命名統計資料。|  
-|OBJECT|中的追蹤類型項目[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。 例如，您可以利用 OBJECT 來重新命名物件，其中包括條件約束 (CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY)、使用者資料表和規則。|  
+|OBJECT|追蹤中的項目型別的[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。 例如，您可以利用 OBJECT 來重新命名物件，其中包括條件約束 (CHECK、FOREIGN KEY、PRIMARY/UNIQUE KEY)、使用者資料表和規則。|  
 |STATISTICS|**適用於**：[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 以及 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 使用者明確建立的統計資料，或使用索引隱含建立的統計資料。 重新命名索引的統計資料時，也會自動重新命名索引。|  
-|USERDATATYPE|A [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)加入執行[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)或[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)。|  
+|USERDATATYPE|A [CLR 使用者定義型別](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)來加入[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)或是[sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)。|  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  
@@ -197,7 +197,7 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
 ```  
   
 ### <a name="f-renaming-statistics"></a>F. 重新命名統計資料  
- 下列範例會建立名為 contactMail1 統計資料物件，然後會重新命名統計資料為 NewContact 使用 sp_rename。 當重新命名統計資料時，必須以 schema.table.statistics_name 格式指定物件。  
+ 下列範例會建立名為 contactMail1 的統計資料物件，並接著將重新命名統計資料為 NewContact 使用 sp_rename。 當重新命名統計資料時，必須以 schema.table.statistics_name 格式指定物件。  
   
 ```  
 CREATE STATISTICS ContactMail1  

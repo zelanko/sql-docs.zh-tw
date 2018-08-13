@@ -1,5 +1,5 @@
 ---
-title: sp_configure (TRANSACT-SQL) |Microsoft 文件
+title: sp_configure (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2016
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 05074a051f39e8b2dd81314ed6e230868c410c49
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 05be6cd18d0617cb327c1b964ec19b4d275b1778
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239968"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560088"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "33239968"
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 > [!NOTE]  
->  資料庫層級組態選項，請參閱[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 若要設定軟體 NUMA，請參閱[NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
+>  如需資料庫層級組態選項，請參閱[ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 若要設定軟體 NUMA，請參閱[NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  
   
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -81,45 +81,45 @@ RECONFIGURE
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
- 執行時未使用任何參數， **sp_configure**傳回含有五個資料行的結果集並排序的選項，依字母順序以遞增順序下, 表所示。  
+ 不使用參數執行時**sp_configure**傳回含有五個資料行的結果集與訂單依照字母的遞增順序 選項下, 表所示。  
   
- 值**config_value**和**run_value**不會自動相等。 使用更新的組態設定之後**sp_configure**，系統管理員必須使用 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE 更新執行中的組態值。 如需詳細資訊，請參閱＜備註＞一節。  
+ 值**config_value**並**run_value**不會自動相等。 使用更新的組態設定之後**sp_configure**，系統管理員必須使用 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE，更新執行中的組態值。 如需詳細資訊，請參閱＜備註＞一節。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|組態選項的名稱。|  
 |**minimum**|**int**|組態選項的最小值。|  
 |**maximum**|**int**|組態選項的最大值。|  
-|**config_value**|**int**|組態選項已設定使用的值**sp_configure** (中的值**sys.configurations.value**)。 如需有關這些選項的詳細資訊，請參閱[伺服器組態選項&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)和[sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
-|**run_value**|**int**|目前執行中的組態選項的值 (值**sys.configurations.value_in_use**)。<br /><br /> 如需詳細資訊，請參閱[sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**config_value**|**int**|[設定] 選項已設定使用的值**sp_configure** (值**sys.configurations.value**)。 如需這些選項的詳細資訊，請參閱[伺服器組態選項&#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md)並[sys.configurations &#40;-&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
+|**run_value**|**int**|目前執行中的組態選項值 (值**sys.configurations.value_in_use**)。<br /><br /> 如需詳細資訊，請參閱 < [sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)。|  
   
 ## <a name="remarks"></a>備註  
  使用**sp_configure**來顯示或變更伺服器層級設定。 若要變更資料庫層級的設定，請使用 ALTER DATABASE。 若要變更只影響目前使用者工作階段的設定，請使用 SET 陳述式。  
   
 ## <a name="updating-the-running-configuration-value"></a>更新執行中的組態值  
- 當您指定新*值*如*選項*，結果集會顯示這個值**config_value**資料行。 一開始，這個值會不同於中的值**run_value**資料行，顯示目前正在執行的組態值。 若要更新執行中的組態值**run_value**資料行中，系統管理員必須執行 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE。  
+ 當您指定的新*值*for*選項*，結果集會顯示此值**config_value**資料行。 一開始，這個值會不同於中的值**run_value**資料行，顯示目前正在執行的組態值。 若要執行的設定值，在**run_value**  欄中，系統管理員必須執行 RECONFIGURE 或 RECONFIGURE WITH OVERRIDE。  
   
- RECONFIGURE 和 RECONFIGURE WITH OVERRIDE 都會使用每個組態選項。 不過，基本 RECONFIGURE 陳述式會拒絕在合理範圍之外或可能造成選項衝突的任何選項值。 比方說，RECONFIGURE 就會產生錯誤如果**復原間隔**值大於 60 分鐘的時間或**親和性遮罩**值與重疊**affinity I/O mask**值。 相對地，RECONFIGURE WITH OVERRIDE 會接受任何資料類型正確的選項值，且會強迫利用指定的值來重設組態。  
+ RECONFIGURE 和 RECONFIGURE WITH OVERRIDE 都會使用每個組態選項。 不過，基本 RECONFIGURE 陳述式會拒絕在合理範圍之外或可能造成選項衝突的任何選項值。 比方說，RECONFIGURE 就會產生錯誤如果**復原間隔**值大於 60 分鐘的時間或者**親和性遮罩**值與重疊**affinity I/O mask**值。 相對地，RECONFIGURE WITH OVERRIDE 會接受任何資料類型正確的選項值，且會強迫利用指定的值來重設組態。  
   
 > [!CAUTION]  
 >  不恰當的選項值可能會對伺服器執行個體的組態產生負面的影響。 當使用 RECONFIGURE WITH OVERRIDE 時，請特別小心。  
   
- RECONFIGURE 陳述式會動態更新某些選項；其他選項則需要伺服器停止再重新啟動。 例如，**最小伺服器記憶體**和**最大伺服器記憶體**伺服器記憶體選項會動態更新[!INCLUDE[ssDE](../../includes/ssde-md.md)]; 因此，您可以變更它們不需要重新啟動伺服器。 相反地，重新設定執行值**填滿因數**選項需要重新啟動[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
+ RECONFIGURE 陳述式會動態更新某些選項；其他選項則需要伺服器停止再重新啟動。 例如，**最小伺服器記憶體**並**最大伺服器記憶體**伺服器記憶體選項會動態更新[!INCLUDE[ssDE](../../includes/ssde-md.md)]; 因此，您可以變更它們而不需要重新啟動伺服器。 相反地，重新設定的執行中的值**填滿因數**選項需要重新啟動[!INCLUDE[ssDE](../../includes/ssde-md.md)]。  
   
- 執行 RECONFIGURE 之後組態選項，您可以查看是否選項已動態更新執行**sp_configure'***option_name***'**。 中的值**run_value**和**config_value**動態更新選項應該符合資料行。 您也可以查看哪些選項是動態藉由查看**sys.configurations**資料行**sys.configurations**目錄檢視。  
+ 執行之後重新設定組態選項，您可以看到是否選項已動態更新執行**sp_configure'***option_name***'**。 中的值**run_value**並**config_value**資料行應該符合動態更新的選項。 您也可以檢查以查看哪些選項是動態的藉由查看**sys.configurations**資料行**sys.configurations**目錄檢視。  
   
 > [!NOTE]  
->  如果指定*值*太高的選項， **run_value**資料行會反映出事實，[!INCLUDE[ssDE](../../includes/ssde-md.md)]已預設為動態記憶體，而不是使用不正確的設定。  
+>  如果指定*值*太高的選項，如**run_value**資料行反映，[!INCLUDE[ssDE](../../includes/ssde-md.md)]已預設為動態記憶體，而不是使用不是有效的設定。  
   
- 如需詳細資訊，請參閱[重新設定&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
+ 如需詳細資訊，請參閱 < [RECONFIGURE &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
 ## <a name="advanced-options"></a>[進階選項]  
- 部分組態選項，例如**親和性遮罩**和**復原間隔**，指定為進階選項。 依預設，這些選項無法檢視和變更。 若要使用它們，請設定**ShowAdvancedOptions**組態選項設為 1。  
+ 部分組態選項，例如**親和性遮罩**並**復原間隔**，指定為進階選項。 依預設，這些選項無法檢視和變更。 若要讓它們，請設定**ShowAdvancedOptions**組態選項設為 1。  
   
- 如需有關組態選項及其設定的詳細資訊，請參閱[伺服器組態選項&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
+ 如需有關組態選項和其設定的詳細資訊，請參閱[伺服器組態選項&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
 ## <a name="permissions"></a>Permissions  
- 不含參數或只含第一個參數的 **sp_configure** 上的執行權限會依預設授予所有使用者。 若要執行**sp_configure**兩個參數來變更組態選項或執行 RECONFIGURE 陳述式，您必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
+ 不含參數或只含第一個參數之 **sp_configure** 上的執行權限預設會授與所有使用者。 若要執行**sp_configure**兩個參數來變更組態選項或執行 RECONFIGURE 陳述式，您必須取得 ALTER SETTINGS 伺服器層級權限。 **系統管理員 (sysadmin)** 及 **serveradmin** 固定伺服器角色會隱含 ALTER SETTINGS 權限。  
   
 ## <a name="examples"></a>範例  
   
@@ -160,7 +160,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- 結果會傳回選項名稱，後面接著選項的最小值和最大值。 **Config_value**是值的[!INCLUDE[ssDW](../../includes/ssdw-md.md)]重新設定完成時將會使用。 **run_value** 是目前正在使用的值。 除非正在變更值，否則 **config_value** 和 **run_value** 通常會一樣。  
+ 結果會傳回選項名稱，後面接著選項的最小值和最大值。 **Config_value**的值，[!INCLUDE[ssDW](../../includes/ssdw-md.md)]重新設定完成時，會使用。 **run_value** 是目前正在使用的值。 除非正在變更值，否則 **config_value** 和 **run_value** 通常會一樣。  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. 列出某一個組態名稱的組態設定  
   
@@ -169,10 +169,10 @@ EXEC sp_configure @configname='hadoop connectivity';
 ```  
   
 ### <a name="e-set-hadoop-connectivity"></a>E. 設定 Hadoop 連接  
- 設定 Hadoop 連接性，需要一些額外的步驟，除了執行 sp_configure。 完整程序，請參閱[CREATE EXTERNAL DATA SOURCE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
+ 設定 Hadoop 連接需要幾個步驟，除了執行 sp_configure。 如需完整的程序，請參閱[CREATE EXTERNAL DATA SOURCE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [RECONFIGURE & #40;TRANSACT-SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET 陳述式 &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [伺服器組態選項 &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

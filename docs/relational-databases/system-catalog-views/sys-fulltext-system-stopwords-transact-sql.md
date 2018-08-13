@@ -1,5 +1,5 @@
 ---
-title: sys.fulltext_system_stopwords (TRANSACT-SQL) |Microsoft 文件
+title: sys.fulltext_system_stopwords (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -27,20 +27,20 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56d8b1c92560e0a161c7b020d6e9f111bc8dd44d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 40ba819fcc6e488b76717c61c225180e91571473
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179024"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542928"
 ---
 # <a name="sysfulltextsystemstopwords-transact-sql"></a>sys.fulltext_system_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   提供系統停用字詞表的存取權。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**stopword**|**nvarchar(64)**|要針對停用字詞比對進行考量的詞彙。|  
 |**language_id**|**int**|語言的地區設定識別碼 (LCID)。 這個 LCID 是用於斷詞。|  

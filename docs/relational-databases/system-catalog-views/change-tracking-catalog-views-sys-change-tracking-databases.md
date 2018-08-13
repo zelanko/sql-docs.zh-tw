@@ -25,13 +25,13 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3ec7102bbbdc01694bea11911d0de9a89dbacc8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9f41b9f1888f17c48f5bf33154c974ef829953e3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049666"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555968"
 ---
 # <a name="change-tracking-catalog-views---syschangetrackingdatabases"></a>變更追蹤目錄檢視-sys.change_tracking_databases 和
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_population (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_fts_index_population & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,20 +23,20 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d82b044186f61ff09abdf3b0a31766e03f36dbcf
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bf7a49a2b315b3fdc1f46aad79c8d4292c644095
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465464"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564732"
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   傳回有關 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中目前進行中之全文檢索索引和語意關鍵片語擴展的資訊。  
  
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|包含要擴展之全文檢索索引的資料庫識別碼。|  
 |**catalog_id**|**int**|包含這個全文檢索索引之全文檢索目錄的識別碼。|  
@@ -47,7 +47,7 @@ ms.locfileid: "34465464"
 |**is_clustered_index_scan**|**bit**|指出母體擴展是否涉及叢集索引上的掃描。|  
 |**range_count**|**int**|這個母體擴展平行處理的子範圍數目。|  
 |**completed_range_count**|**int**|完成處理的範圍數目。|  
-|**outstanding_batch_count**|**int**|目前此母體擴展未處理的批次數目。 如需詳細資訊，請參閱[sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
+|**outstanding_batch_count**|**int**|目前此母體擴展未處理的批次數目。 如需詳細資訊，請參閱 < [sys.dm_fts_outstanding_batches &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md)。|  
 |**status**|**int**|**適用於**： [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br /> 這個母體擴展的狀態。 注意：有些狀態是暫時性。 它有下列幾種：<br /><br /> 3 = 啟動中<br /><br /> 5 = 正常處理<br /><br /> 7 = 已停止處理<br /><br /> 例如，當自動合併正在進行時，就會發生這個狀態。<br /><br /> 11 = 母體擴展中止<br /><br /> 12 = 正在處理語意相似度擷取|  
 |**status_description**|**nvarchar(120)**|母體擴展狀態的描述。|  
 |**completion_type**|**int**|這個母體擴展如何完成的狀態。|  
@@ -59,15 +59,15 @@ ms.locfileid: "34465464"
 |**incremental_timestamp**|**timestamp**|代表完整母體擴展的起始時間戳記。 如果是其他所有母體擴展類型，這個值是最後一個認可的檢查點，代表母體擴展的進度。|  
   
 ## <a name="remarks"></a>備註  
- 如果除了全文檢索索引之外還啟用了統計語意索引，則關鍵片語的語意擷取和擴展以及擷取文件相似度資料會與全文檢索索引同步執行。 擴展文件相似度索引會在稍後的第二個階段執行。 如需詳細資訊，請參閱[管理及監視語意搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
+ 如果除了全文檢索索引之外還啟用了統計語意索引，則關鍵片語的語意擷取和擴展以及擷取文件相似度資料會與全文檢索索引同步執行。 擴展文件相似度索引會在稍後的第二個階段執行。 如需詳細資訊，請參閱 <<c0> [ 管理及監視語意搜尋](../../relational-databases/search/manage-and-monitor-semantic-search.md)。  
   
 ## <a name="permissions"></a>Permissions  
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
   
 ## <a name="physical-joins"></a>實體聯結  
- ![這個動態管理檢視的重要聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "此動態管理檢視的重要聯結")  
+ ![這個動態管理檢視的重要聯結](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "這個動態管理檢視的重要聯結")  
   
 ## <a name="relationship-cardinalities"></a>關聯性基數  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34465464"
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [全文檢索搜尋和語意搜尋動態管理檢視與函數&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [全文檢索搜尋和語意搜尋動態管理檢視和函式&#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   
 

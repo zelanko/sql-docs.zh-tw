@@ -22,15 +22,15 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f0a9a8eead8e79c9314b2158dad0be84d0235604
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d565a025f61d3ca604cba02a5d7c35e395217ff2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050146"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561538"
 ---
-# <a name="annotation-interpretation---sqlmapped"></a>註解解譯-sql： 對應
+# <a name="annotation-interpretation---sqlmapped"></a>註解解譯 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 大量載入處理序**sql： 對應**如預期般的 XSD 結構描述中的註釋，也就是，如果對應結構描述指定**sql： 對應 ="false"** 任何項目或屬性，XML 大量載入不嘗試將相關聯的資料儲存在對應的資料行。  
   

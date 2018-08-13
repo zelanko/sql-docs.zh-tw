@@ -2,7 +2,7 @@
 title: 什麼是 SSMA for Access(AccessToSQL) 新功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 03/01/2018
+ms.date: 08/05/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,12 +16,12 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c8e124eeb7dbf1c2ac569af0b7ca95078fcf999c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: eabb6b1364b36a84da8acd4f70fe82f962b31081
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985650"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556588"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 中最新消息
 本主題列出 SSMA 存取每個版本中的變更。  

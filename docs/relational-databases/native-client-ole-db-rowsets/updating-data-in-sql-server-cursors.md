@@ -21,13 +21,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e64d5f5d4cb45d1e46156b14070dbfff181462ba
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d68010d755051276bdce49e9ff623a70124aee30
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430227"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541078"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>更新 SQL Server 資料指標中的資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "37430227"
  如果用戶端應用程式設計讓交易長時間保持開啟狀態，交易隔離等級可能會對資料列定位造成重大落後。 根據預設， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會使用 DBPROPVAL_TI_READCOMMITTED 所指定的讀取認可隔離等級。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料列集並行唯讀時，Native Client OLE DB 提供者支援中途讀取的隔離。 因此，取用者可以在可修改的資料列集中要求較高的隔離等級，但是無法成功要求任何較低的等級。  
   
 ## <a name="immediate-and-delayed-update-modes"></a>立即和延遲更新模式  
- 在立即更新模式中，每個呼叫**irowsetchange:: Setdata**造成往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果取用者會將多項變更對單一資料列，會使用單一的所有變更送出更有效率**SetData**呼叫。  
+ 在立即更新模式下，**IRowsetChange::SetData** 的每個呼叫會造成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的往返。 如果取用者對單一資料列進行多個變更，利用單一 **SetData** 呼叫提交所有變更會更有效率。  
   
- 在延遲的更新模式中，需往返[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]針對每個資料列所示*cRows*並*rghRows*參數**irowsetupdate:: Update**。  
+ 在延遲更新模式下，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的往返是針對 **IRowsetUpdate::Update** 之 *cRows* 和 *rghRows* 參數中指示的每個資料列進行。  
   
  在任一種模式下，當資料列集沒有開啟任何交易物件時，往返代表不同的交易。  
   

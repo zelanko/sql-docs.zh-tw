@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023856"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556468"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 為何要包含資訊的描述[!INCLUDE[ssde_md](../../includes/ssde_md.md)]認為此計劃變更是潛在的效能變差。
  - 日期時間偵測到潛在的迴歸。
  - 此建議的分數。 
- - 偵測到的計畫迴歸的計畫，以修正此問題，應該強制計畫的識別碼的識別碼的識別碼等問題的詳細資料 [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- 指令碼，可能會套用至修正的問題，依此類推。詳細資料會儲存在[JSON 格式](../../relational-databases/json/index.md)。
+ - 偵測到的計畫迴歸的計畫，以修正此問題，應該強制計畫的識別碼的識別碼的識別碼等問題的詳細資料[!INCLUDE[tsql_md](../../includes/tsql_md.md)]指令碼，可能會套用至修正的問題，依此類推。詳細資料會儲存在[JSON 格式](../../relational-databases/json/index.md)。
 
 使用下列查詢，以取得修正的問題和相關的預估的其他資訊的指令碼取得：
 

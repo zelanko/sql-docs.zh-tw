@@ -19,13 +19,13 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d57e507beb03a28f9e0f7e0b676b8393ace4a125
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6d3fb5a42eaeb722c0abcb0ae3d3a964532009bc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421497"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555038"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,17 +41,17 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>備註  
- 可呼叫任何其他作業[IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)之後呼叫的介面**BCPDone**方法。 唯一的辦法就是呼叫[ibcpsession:: Bcpinit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) ; 方法來啟始新的大量複製作業。 這是類似於呼叫[irowsetfastload:: Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)方法。  
+ 呼叫 **BCPDone** 方法之後，您就無法針對 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 介面呼叫任何其他作業。 唯一的可能性是呼叫 [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 方法來起始新的大量複製作業。 這就類似於呼叫 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 方法。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  S_OK  
  此方法已成功。  
   
  E_UNEXPECTED  
- 此方法的呼叫是非預期的。 例如， **BCPInit**方法不會呼叫這個方法之前呼叫。  
+ 此方法的呼叫是非預期的。 例如，在呼叫這個方法之前，不會呼叫 **BCPInit** 方法。  
   
 ## <a name="example"></a>範例  
- 此範例示範如何使用**IBCPSession**介面。  
+ 此範例會示範如何使用 **IBCPSession** 介面。  
   
  在執行這個範例之前，必須先執行以下 [!INCLUDE[tsql](../../includes/tsql-md.md)]：  
   
@@ -69,7 +69,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  您應該使用 BCP，透過下列命令將這份資料新增回資料表中：  
   
- **bcp 主要...在 outfile.dat-n-T-S fltest** *伺服器*  
+ **bcp master..fltest in outfile.dat -n -T -S** *server*  
   
  編譯此範例時，將會需要指定 sqlncli11.lib。  
   

@@ -1,5 +1,5 @@
 ---
-title: '擷取未耗用資料使用 sql: overflow-field-欄位 (SQLXML 4.0) |Microsoft 文件'
+title: '擷取未耗用資料使用 sql: overflow-field-欄位 (SQLXML 4.0) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -22,26 +22,26 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c5ff309e264f78fe4e9ffa71c7deb0c41d93a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51f9fe6c3e8053b1a03174d5e9ba3fce738c5231
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32968373"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559208"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>使用 sql:overflow-field 擷取未耗用的資料 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  當記錄使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函數，從 XML 文件的資料庫中插入，可以將來源 XML 文件中所有未耗用的資料儲存在資料行中。 當您使用註解式結構描述，從資料庫擷取資料時，您可以指定**sql: overflow-field-欄位**來識別儲存溢位資料所在的資料表中的資料行的屬性。 **Sql: overflow-field-欄位**屬性可以在上指定**\<項目 >**。  
+  當記錄使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML 函數，從 XML 文件的資料庫中插入，可以將來源 XML 文件中所有未耗用的資料儲存在資料行中。 當您使用註解式結構描述，從資料庫擷取資料時，您可以指定**sql: overflow-field-欄位**屬性來識別在其中儲存溢位資料之資料表中的資料行。 **Sql: overflow-field-欄位**上，可以指定屬性**\<項目 >**。  
   
  然後以下列方式擷取此資料：  
   
--   儲存在溢位資料行的屬性會加入到包含的項目**sql: overflow-field-欄位**註解。  
+-   儲存在溢位資料行的屬性會加入到包含的項目**sql: overflow-field-欄位**註釋。  
   
 -   儲存在資料庫之溢位資料行中的子元素及其下階會當做在結構描述中明確指定之內容之後的子元素加入  (不會保留任何順序)。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqloverflow-field-for-an-element"></a>A. 針對元素指定 sql:overflow-field  
  此範例假設已經執行下列指令碼，因此名為 Customers2 的資料表存在於 tempdb 資料庫中：  
@@ -67,7 +67,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- 此外，您必須建立 tempdb 資料庫的虛擬目錄，和範本虛擬名稱**範本**名為 「 範本 」 類型。  
+ 此外，您必須建立 tempdb 資料庫的虛擬目錄，而範本的虛擬名稱的**範本**名為 「 範本 」 類型。  
   
  在下列範例中，對應結構描述會擷取儲存在 Customers2 資料表之 AddressOverflow 資料行中的未耗用資料：  
   
@@ -106,7 +106,7 @@ GO
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下為結果集：  
   

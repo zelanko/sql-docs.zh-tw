@@ -18,13 +18,13 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0f7e7437486c601bfc04a3ad7a173d0d42b19b37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419387"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537228"
 ---
 # <a name="persisted-data-source-objects"></a>保存的資料來源物件
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "37419387"
 ## <a name="examples"></a>範例  
  **A.保存資料來源初始化：**  
   
- 這個範例會示範一個函數，此函數會保存定義伺服器和資料庫的資料來源初始化屬性，以及使用 Windows 驗證模式來進行連接。 伺服器名稱和資料庫名稱中會收到*pLocation*並*pDatasource*函式的參數。  
+ 這個範例會示範一個函數，此函數會保存定義伺服器和資料庫的資料來源初始化屬性，以及使用 Windows 驗證模式來進行連接。 伺服器名稱和資料庫名稱會在此函式的 *pLocation* 和 *pDatasource* 參數中接收。  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- **Ipersistfile:: Save**方法呼叫之前或之後呼叫**idbinitialize:: Initialize**。 成功傳回之後呼叫此方法**idbinitialize:: Initialize**可確保會保存有效的資料來源的規格。  
+ **IPersistFile::Save** 方法可以在呼叫 **IDBInitialize::Initialize** 之前或之後呼叫。 當從 **IDBInitialize::Initialize** 成功傳回之後呼叫此方法時，可確保已保存有效的資料來源規格。  
   
 ## <a name="see-also"></a>另請參閱  
  [資料來源物件&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

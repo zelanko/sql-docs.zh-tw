@@ -15,13 +15,13 @@ caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 21d71757b4f8520e2ec2b3b7c2d1cb3c1407b420
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 125c8ae22faabb7b32bb37ee1f8620dfd0cf815a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006011"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546738"
 ---
 # <a name="overview-smo"></a>概觀 (SMO)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "38006011"
   
 -   HTTP 端點，可用於管理 SOAP 要求。 如需詳細資訊，請參閱 <<c0> [ 實作端點](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)。  
   
--   快照隔離和資料列層級版本控制，可用於提升並行數。 如需詳細資訊，請參閱 <<c0> [ 使用快照隔離](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
+-   快照隔離和資料列層級版本控制，可用於提升並行數。 如需詳細資訊，請參閱[使用快照隔離](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)。  
   
 -   XML 結構描述集合、XML 索引和 XML 資料類型會提供 XML 資料的驗證和儲存功能。 如需詳細資訊，請參閱 < [XML 結構描述集合&#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md)並[使用的 XML 結構描述](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md)。  
   

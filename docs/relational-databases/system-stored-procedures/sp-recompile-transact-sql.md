@@ -1,5 +1,5 @@
 ---
-title: sp_recompile (TRANSACT-SQL) |Microsoft 文件
+title: sp_recompile (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7c04b6daf385a80f82dc39e1b1891f737e7fb19a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246136"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544638"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>引數  
  [ @objname=] '*物件*'  
- 目前資料庫中之預存程序、觸發程序、資料表、檢視表或使用者定義函數的限定或非限定名稱。 *物件*是**nvarchar(776)**，沒有預設值。 如果*物件*預存程序、 觸發程序或使用者定義函數、 預存程序，觸發程序名稱，或函式將會在下次執行時重新編譯。 如果*物件*是資料表或檢視的所有預存程序，觸發程序的名稱或參考資料表或檢視表的使用者定義函式將會在下一次執行的重新編譯。  
+ 目前資料庫中之預存程序、觸發程序、資料表、檢視表或使用者定義函數的限定或非限定名稱。 *物件*已**nvarchar(776)**，沒有預設值。 如果*物件*預存程序、 觸發程序或使用者定義函數、 預存程序，觸發程序名稱，或函式將會在下次執行時重新編譯。 如果*物件*是資料表或檢視的所有預存的程序、 觸發程序的名稱或參考資料表或檢視表的使用者定義函式將會在執行下一次重新編譯。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或非零數字 (失敗)  

@@ -15,15 +15,15 @@ ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6747de560cb9e6cc0cec395f0b164ec590c8f959
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fec35952d682297ac54a542c57c7731c3085d265
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430217"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558318"
 ---
-# <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>管理 text 和 image 資料行-使用資料層執行參數
+# <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>管理 text 和 image 資料行 - 使用資料執行中參數
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

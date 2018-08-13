@@ -24,13 +24,13 @@ caps.latest.revision: ''
 author: tmullaney
 ms.author: thmullan
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80fd8a091aa04d0574da5c5a2377628b2e8c376a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a4b98f0bf099a0218d292220e83a81989855ad24
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969544"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560148"
 ---
 # <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies & Amp;#40;transact-SQL&AMP;#41;  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 要求的 URL 參考 BLOB 資料使用 sql： 編碼 (SQLXML 4.0) |Microsoft 文件
+title: 要求的 URL 參考 BLOB 資料使用 sql： 編碼 (SQLXML 4.0) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,34 +24,34 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 537e2656730c7659edd22ac68722bf43e892ad3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5eba5d17938d4bcfce27fb70476cad3e8974a1c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970653"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543333"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>使用 sql:encode 要求指向 BLOB 資料的 URL 參考 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   在註解式 XSD 結構描述中，當屬性 (或元素) 對應到 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的 BLOB 資料行時，將會以 XML 中的 Base 64 編碼格式傳回資料。  
   
- 如果您想要之資料的參考 (URI) 會傳回，可以稍後可用於擷取二進位格式的 BLOB 資料，請指定**sql： 編碼**註解。 您可以指定**sql： 編碼**的屬性或簡單類型的項目。  
+ 如果您想要資料的參考 (URI) 要傳回可稍後再擷取 BLOB 資料以二進位格式，指定**sql： 編碼**註釋。 您可以指定**sql： 編碼**上的屬性或簡單類型的元素。  
   
- 指定**sql： 編碼**註解可指示應該傳回欄位的 URL，而不是欄位的值。 **sql： 編碼**取決於 URL 中產生的單一選取的主索引鍵。 可以使用指定的主索引鍵**sql: key-fields-欄位**註解。  
+ 指定**sql： 編碼**註解可指示應該傳回欄位的 URL，而不是欄位的值。 **sql： 編碼**取決於 URL 中產生的單一選取的主索引鍵。 您可以使用指定的主索引鍵**sql: key-fields 來-欄位**註釋。  
   
- **Sql： 編碼**可以指派註釋，"url"或"default"值。 "default" 值會傳回 Base 64 編碼格式的資料。  
+ **Sql： 編碼**可以指派註解，"url"或"default"值。 "default" 值會傳回 Base 64 編碼格式的資料。  
   
- **Sql： 編碼**註釋不能與**sql: use-cdata-cdata**或是在 ID、 IDREF、 IDREFS、 NMTOKEN 或 NMTOKENS 屬性類型。 它也不能搭配 XSD**固定**屬性。  
+ **Sql： 編碼**註釋不能搭配**sql: use-cdata-cdata**或是在 ID、 IDREF、 IDREFS、 NMTOKEN 或 NMTOKENS 屬性類型。 它也不能搭配 XSD**修正**屬性。  
   
 > [!NOTE]  
 >  BLOB 類型的資料行不能當做索引鍵或外部索引鍵的一部分使用。  
   
 ## <a name="examples"></a>範例  
- 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱[執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
+ 若要使用下列範例建立工作範例，您必須符合某些需求。 如需詳細資訊，請參閱 <<c0> [ 如需執行 SQLXML 範例的需求](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)。  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. 指定 sql:encode 來取得指向 BLOB 資料的 URL 參考  
- 在此範例中，指定對應結構描述**sql： 編碼**上**LargePhoto**来擷取 （而不是擷取二進位資料在基底 64-特定產品相片的 URI 參考屬性編碼格式）。  
+ 在此範例中，指定對應結構描述**sql： 編碼**上**LargePhoto**擷取 （而不是擷取二進位的資料在 Base 64-特定產品相片的 URI 參考的屬性編碼格式）。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -89,7 +89,7 @@ ms.locfileid: "32970653"
   
 3.  建立和使用 SQLXML 4.0 測試指令碼 (Sqlxml4test.vbs) 以執行範本。  
   
-     如需詳細資訊，請參閱[ADO to Execute SQLXML 4.0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
+     如需詳細資訊，請參閱 <<c0> [ 使用 ADO 執行 SQLXML 4.0 查詢](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)。  
   
  以下是結果：  
   

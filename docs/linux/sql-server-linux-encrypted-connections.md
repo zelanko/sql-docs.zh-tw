@@ -1,9 +1,9 @@
 ---
 title: 連線到 Linux 上的 SQL Server 加密 |Microsoft Docs
 description: 本文說明在 Linux 上的加密 SQL Server 的連接。
-author: tmullaney
+author: vin-yu
 ms.date: 01/30/2018
-ms.author: meetb
+ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085030"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009030"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>將 Linux 上的 SQL Server 連線加密
 
@@ -32,7 +32,7 @@ ms.locfileid: "39085030"
 - 目前的系統時間必須晚 [有效期自] 屬性的憑證和之前的有效憑證的屬性。
 - 憑證必須是為了伺服器驗證而準備的。 這需要指定伺服器驗證 (1.3.6.1.5.5.7.3.1) 憑證的增強金鑰使用方法屬性。
 - 必須可以使用 AT_KEYEXCHANGE KeySpec 選項來建立憑證。 通常，憑證的金鑰使用方法屬性 (KEY_USAGE) 也包括金鑰編密 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)。
-- 憑證的 Subject 屬性必須指出，一般名稱 (CN) 為相同的主機名稱或伺服器電腦的完整的網域名稱 (FQDN)。 注意： 支援萬用字元憑證。 
+- 憑證的 Subject 屬性必須指出，一般名稱 (CN) 為相同的主機名稱或伺服器電腦的完整的網域名稱 (FQDN)。 注意： 支援萬用字元憑證。
 
 ## <a name="overview"></a>概觀
 TLS 用來加密從用戶端應用程式的連線[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。 如果設定正確，TLS 提供隱私權和資料完整性，以用戶端與伺服器之間的通訊。  用戶端起始伺服器可以是 TLS 連線。 

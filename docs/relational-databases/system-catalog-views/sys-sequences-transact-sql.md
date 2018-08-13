@@ -1,5 +1,5 @@
 ---
-title: sys.sequences (TRANSACT-SQL) |Microsoft 文件
+title: sys.sequences (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -25,26 +25,26 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22284069373e5eed5786486c6e1e49409d3ea14c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c913b06203308734b0209cee0977a149f874b9bb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219609"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545698"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   針對資料庫中的每個順序物件包含一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |\<繼承資料行 >||繼承的所有資料行[sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)。|  
-|**start_value**|**sql_variant NOT NULL**|順序物件的起始值。 如果順序物件是藉由使用 ALTER SEQUENCE 重新啟動，它會從這個值重新啟動。 當順序物件循環其繼續進行**minimum_value**或**maximum_value**，而非**start_value**。|  
+|**start_value**|**sql_variant NOT NULL**|順序物件的起始值。 如果順序物件是藉由使用 ALTER SEQUENCE 重新啟動，它會從這個值重新啟動。 當順序物件循環其繼續進行**minimum_value**或是**maximum_value**，而非**start_value**。|  
 |**increment**|**sql_variant NOT NULL**|每次產生值之後，用來遞增順序物件的值。|  
-|**minimum_value**|**sql_variant NULL**|可由順序物件產生的最小值。 達到此值之後，順序物件在嘗試產生更多的值時會傳回錯誤，如果已指定 CYCLE 選項則會重新啟動。 如果未指定 MINVALUE，此資料行會傳回順序產生器的資料類型所支援的最小值。|  
-|**maximum_value**|**sql_variant NULL**|可由順序物件產生的最大值。 達到此值之後，順序物件在嘗試產生更多的值時會開始傳回錯誤，如果已指定 CYCLE 選項則會重新啟動。 如果未指定 MAXVALUE，此資料行會傳回順序物件的資料類型所支援的最大值。|  
+|**minimum_value**|**sql_variant 的 NULL**|可由順序物件產生的最小值。 達到此值之後，順序物件在嘗試產生更多的值時會傳回錯誤，如果已指定 CYCLE 選項則會重新啟動。 如果未指定 MINVALUE，此資料行會傳回順序產生器的資料類型所支援的最小值。|  
+|**maximum_value**|**sql_variant 的 NULL**|可由順序物件產生的最大值。 達到此值之後，順序物件在嘗試產生更多的值時會開始傳回錯誤，如果已指定 CYCLE 選項則會重新啟動。 如果未指定 MAXVALUE，此資料行會傳回順序物件的資料類型所支援的最大值。|  
 |**is_cycling**|**位元 NOT NULL**|如果已為順序物件指定 NO CYCLE，則傳回 0，如果已指定 CYCLE 則傳回 1。|  
 |**is_cached**|**位元 NOT NULL**|如果已為順序物件指定 NO CACHE，則傳回 0，如果已指定 CACHE 則傳回 1。|  
 |**cache_size**|**int NULL**|傳回順序物件的指定快取大小。 如果以 NO CACHE 選項建立順序，或如果指定 CACHE 但未指定快取大小，此資料行會包含 NULL。 如果快取大小所指定的值大於順序物件可傳回之值的數目上限，仍然會顯示該無法取得的快取大小。|  

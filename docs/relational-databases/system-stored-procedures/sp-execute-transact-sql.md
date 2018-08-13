@@ -22,13 +22,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a156b1670a1e697104503c7a887ac3482642b9ae
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041166"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540818"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ sp_execute handle OUTPUT
  表示使用其他參數。 *bound_param*是必要的參數呼叫任何資料類型，以表示程序的其他參數的輸入值。  
   
 > [!NOTE]  
->  *bound_param*必須符合 sp_prepare 所做的宣告*params*值，而且可以是下列格式 *@name = value*或是*值*。  
+>  *bound_param*必須符合 sp_prepare 所做的宣告*params*值，而且可以是下列格式* @name = value*或是*值*。  
   
 ## <a name="see-also"></a>另請參閱  
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

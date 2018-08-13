@@ -1,5 +1,5 @@
 ---
-title: sys.syslanguages (TRANSACT-SQL) |Microsoft 文件
+title: sys.syslanguages (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -25,26 +25,26 @@ caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4c879ed679052a14d420211c5977d2152d5ccb8f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c927af11c853a2cd2ff94049f4eb99de3c5e10f7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222069"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556388"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   針對 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中的每種語言，各包含一個資料列。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|唯一語言識別碼。|  
 |dateformat|**nchar(3)**|日期的順序，例如 DMY。|  
 |datefirst|**tinyint**|每週第一天：1 代表星期一，2 代表星期二，依此類推，7 則代表星期日。|  
 |升級|**int**|保留供系統使用。|  
-|name|**sysname**|官方語言名稱，例如 Fran&#xE7;ais。|  
+|NAME|**sysname**|官方語言名稱，例如 Fran&#xE7;ais。|  
 |alias|**sysname**|替代語言名稱，例如 French。|  
 |months|**nvarchar(372)**|以逗號分隔的清單，依一月至十二月的順序列出完整長度的月份名稱，每個名稱最多可有 20 個字元。|  
 |shortmonths|**nvarchar(132)**|以逗號分隔的清單，依一月至十二月的順序列出簡短的月份名稱，每個名稱最多可有 9 個字元。|  

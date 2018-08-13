@@ -1,5 +1,5 @@
 ---
-title: COLUMN_PRIVILEGES (TRANSACT-SQL) |Microsoft 文件
+title: COLUMN_PRIVILEGES (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,27 +22,27 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e61dc1eba8d019a56786b2fc5bcca33e675c5e05
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cdcae5e35710bee65ebcd8c8b712ffecd692828c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33231423"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562452"
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   只要資料行具備授與目前資料庫中目前使用者的權限，或是被目前資料庫中目前使用者所授與的權限，則會針對每一個資料夾，各傳回一個資料列。  
   
- 若要從這些檢視中擷取資訊，請指定完整的名稱 **INFORMATION_SCHEMA。 * * * view_name*。  
+ 若要從這些檢視擷取資訊，請指定 完整格式的名稱 **INFORMATION_SCHEMA。 * * * view_name*。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**授與者**|**nvarchar(** 128 **)**|權限同意授權者。|  
+|**同意授權者**|**nvarchar(** 128 **)**|權限同意授權者。|  
 |**被授與者**|**nvarchar(** 128 **)**|權限被授與者。|  
 |**TABLE_CATALOG 排列**|**nvarchar(** 128 **)**|資料表限定詞。|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表的結構描述名稱。<br /><br /> **\*\* 重要\* \*** 請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|包含資料表的結構描述名稱。<br /><br /> **\*\* 重要\* \* **請勿使用 INFORMATION_SCHEMA 檢視來判斷物件的結構描述。 尋找物件之結構描述的唯一可靠方式就是查詢 sys.objects 目錄檢視。|  
 |**TABLE_NAME**|**sysname**|資料表名稱。|  
 |**COLUMN_NAME**|**sysname**|資料行名稱。|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|權限的類型。|  
@@ -54,6 +54,6 @@ ms.locfileid: "33231423"
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
- [sys.server_permissions &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)  
+ [sys.server_permissions &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)  
   
   

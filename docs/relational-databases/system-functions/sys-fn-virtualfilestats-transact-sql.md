@@ -1,5 +1,5 @@
 ---
-title: sys.fn_virtualfilestats (TRANSACT-SQL) |Microsoft 文件
+title: sys.fn_virtualfilestats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 396eee771ece7036906d1ef8e09cc69c1ab2c1da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 897c50ffd93d3d01f04b0f2c87497b3f2e3142b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238261"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542888"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  傳回資料庫檔案的 I/O 統計資料，其中包括記錄檔。 在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這項資訊也會提供[sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)動態管理檢視。  
+  傳回資料庫檔案的 I/O 統計資料，其中包括記錄檔。 在  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，這項資訊也會提供[size_on_disk_bytes](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)動態管理檢視。  
 
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,11 +52,11 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
  資料庫的識別碼。 *database_id* 為沒有預設值的 **int**。 請指定 NULL 來傳回 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體中之所有資料庫的資訊。  
   
  *file_id* |NULL  
- 檔案的識別碼。 *file_id*是**int**，沒有預設值。 請指定 NULL 來傳回資料庫中的所有檔案。  
+ 檔案的識別碼。 *file_id*已**int**，沒有預設值。 請指定 NULL 來傳回資料庫中的所有檔案。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|資料庫識別碼。|  
 |**FileId**|**smallint**|檔案識別碼。|  
@@ -67,12 +67,12 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**NumberWrites**|**bigint**|檔案所進行的寫入數。|  
 |**BytesWritten**|**bigint**|檔案所進行的寫入位元組數。|  
 |**IoStallWriteMS**|**bigint**|使用者等待完成檔案寫入 I/O 的時間總量 (以毫秒為單位)。|  
-|**IoStallMS**|**bigint**|總和**IoStallReadMS**和**IoStallWriteMS**。|  
+|**IoStallMS**|**bigint**|總和**IoStallReadMS**並**IoStallWriteMS**。|  
 |**FileHandle**|**bigint**|檔案控制代碼的值。|  
 |**BytesOnDisk**|**bigint**|磁碟中的實體檔案大小 (位元組的計數)。<br /><br /> 資料庫檔案，這是相同的值**大小**中**sys.database_files**，但以位元組為單位，而不是頁面。<br /><br /> 如果是資料庫快照集疏鬆檔案，這是作業系統供檔案使用的空間。|  
   
 ## <a name="remarks"></a>備註  
- **fn_virtualfilestats**是的系統提供的統計資訊，例如的 I/o 總數的資料表值函式的檔案執行。 您可以利用這個函數來協助您持續追蹤使用者必須等待讀取或寫入檔案的時間長度。 這個函數也可以協助您識別發生大量 I/O 活動的檔案。  
+ **fn_virtualfilestats**是的系統所提供的統計資訊，例如的 I/o 總數的資料表值函式的檔案執行。 您可以利用這個函數來協助您持續追蹤使用者必須等待讀取或寫入檔案的時間長度。 這個函數也可以協助您識別發生大量 I/O 活動的檔案。  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  
