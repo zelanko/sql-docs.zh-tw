@@ -1,5 +1,5 @@
 ---
-title: sys.events (TRANSACT-SQL) |Microsoft 文件
+title: sys.events (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95cc7112d42a0e2975d886dc8cfa58dc6d7193d3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7621b5aba9bb67a07421339e1e72b29f06f4c5ff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179364"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532729"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  針對引發觸發程序或事件通知的每個事件，各包含一個資料列。 這些事件代表觸發程序或事件通知以建立時所指定的事件類型[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)或[CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md)。  
+  針對引發觸發程序或事件通知的每個事件，各包含一個資料列。 這些事件代表使用建立的觸發程序或事件通知時指定的事件類型[CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)或是[CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md)。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|觸發程序或事件通知的識別碼。 此值搭配**類型**，以唯一識別資料列。|  
+|**object_id**|**int**|觸發程序或事件通知的識別碼。 此值，連同**型別**，即可唯一識別資料列。|  
 |**type**|**int**|造成觸發程序引發的事件。|  
 |**type_desc**|**nvarchar(60)**|造成觸發程序引發之事件的描述。|  
 |**is_trigger_event**|**bit**|1 = 觸發程序事件。<br /><br /> 0 = 通知事件。|  
@@ -48,6 +48,6 @@ ms.locfileid: "33179364"
   
 ## <a name="see-also"></a>另請參閱  
  [物件目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [目錄檢視 &#40;。TRANSACT-SQL &#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
+ [目錄檢視 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

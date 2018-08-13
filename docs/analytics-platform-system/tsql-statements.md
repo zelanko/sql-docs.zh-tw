@@ -1,6 +1,6 @@
 ---
-title: T-SQL 陳述式的平行處理資料倉儲 |Microsoft 文件
-description: T-SQL 陳述式的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
+title: T-SQL 陳述式-Parallel Data Warehouse |Microsoft Docs
+description: T-SQL 陳述式的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,24 +9,24 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538888"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400761"
 ---
-# <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse 的 T-SQL 陳述式
-TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>針對平行處理資料倉儲 T-SQL 陳述式
+TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。
 
 ## <a name="data-definition-language-ddl-statements"></a>資料定義語言 (DDL) 陳述式
-* [ALTER DATABASE](../t-sql/statements/alter-database-azure-sql-data-warehouse.md)
+* [ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)
 * [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)
 * [ALTER PROCEDURE](../t-sql/statements/alter-procedure-transact-sql.md)
-* [變更結構描述](../t-sql/statements/alter-schema-transact-sql.md)
+* [更改結構描述](../t-sql/statements/alter-schema-transact-sql.md)
 * [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md)
 * [建立資料行存放區索引](../t-sql/statements/create-columnstore-index-transact-sql.md)
-* [建立資料庫](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
+* [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [建立資料庫範圍認證](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [建立外部資料來源](../t-sql/statements/create-external-data-source-transact-sql.md)
 * [建立外部檔案格式](../t-sql/statements/create-external-file-format-transact-sql.md)
@@ -37,7 +37,7 @@ TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資�
 * [建立結構描述](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
-* [建立 TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
+* [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 * [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
 * [卸除的外部資料來源](../t-sql/statements/drop-external-data-source-transact-sql.md)
 * [卸除的外部檔案格式](../t-sql/statements/drop-external-file-format-transact-sql.md)
@@ -90,7 +90,7 @@ TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資�
 * [ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
 * [改變資料庫加密金鑰](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
-* [ALTER MASTER KEY](../t-sql/statements/alter-master-key-transact-sql.md)
+* [更改主要金鑰](../t-sql/statements/alter-master-key-transact-sql.md)
 * [更改角色](../t-sql/statements/alter-role-transact-sql.md)
 * [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
@@ -102,15 +102,15 @@ TRANSACT-SQL (T-SQL) 陳述式的分析平台 System (APS) SQL Server 平行資�
 * [建立角色](../t-sql/statements/create-role-transact-sql.md)
 * [建立使用者](../t-sql/statements/create-user-transact-sql.md)
 * [卸除憑證](../t-sql/statements/drop-certificate-transact-sql.md)
-* [DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
-* [卸除登入](../t-sql/statements/drop-login-transact-sql.md)
+* [卸除資料庫加密金鑰](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
+* [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
 * [卸除主要金鑰](../t-sql/statements/drop-master-key-transact-sql.md)
 * [卸除角色](../t-sql/statements/drop-role-transact-sql.md)
 * [卸除使用者](../t-sql/statements/drop-user-transact-sql.md)
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 
-## <a name="next-steps"></a>後續的步驟
-如需詳細參考資訊，請參閱[T-SQL 語言項目](tsql-language-elements.md)和[T-SQL 系統檢視表](tsql-system-views.md)。
+## <a name="next-steps"></a>後續步驟
+如需詳細參考資訊，請參閱[T-SQL 語言元素](tsql-language-elements.md)並[T-SQL 系統檢視表](tsql-system-views.md)。
 
 <!--Image references-->
 

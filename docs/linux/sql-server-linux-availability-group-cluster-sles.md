@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: c589d08832e08399d54ca9612fc1468a6b1f3baf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95c9c2b9bdbcbfb6573688ad220ab504dc89e337
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084820"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415507"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>設定 SQL Server 可用性群組的 SLES 叢集
 
@@ -215,7 +215,7 @@ crm configure property cluster-recheck-interval=2min
 
 如需有關 Pacemaker 叢集內容的詳細資訊，請參閱[設定叢集資源](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_config_crm_resources.html)。
 
-# <a name="configure-fencing-stonith"></a>設定隔離 (STONITH)
+## <a name="configure-fencing-stonith"></a>設定隔離 (STONITH)
 Pacemaker 叢集廠商需要啟用 STONITH 和隔離裝置設定為支援的叢集安裝程式。 當叢集資源管理員無法判斷狀態的節點或節點上的資源時，隔離會用於再一次將叢集設為已知狀態。
 
 資源層級隔離主要是確保所設定的資源是在中斷期間的任何資料損毀。 您可以使用資源層級的隔離，比方說，使用 DRBD （分散式複寫區塊裝置） 將標示為已過期時的節點上的磁碟通訊連結中斷。
@@ -237,6 +237,16 @@ sudo crm configure property stonith-enabled=true
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>設定 SQL Server 叢集資源
 
 請參閱[SLES 管理 Guid](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#cha.ha.manual_config)
+
+## <a name="enable-pacemaker"></a>啟用 Pacemaker
+
+啟用 Pacemaker，讓它自動啟動。
+
+在叢集中的每個節點上執行下列命令。
+
+```bash
+systemctl enable pacemaker
+```
 
 ### <a name="create-availability-group-resource"></a>建立可用性群組資源
 

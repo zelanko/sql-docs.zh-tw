@@ -18,13 +18,13 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ed32d379c0a0a58af6a4239899af434027a904f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8a2ef0a97e9c94b7f61b9fbe9061716da03b0e68
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421557"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536779"
 ---
 # <a name="getting-large-data"></a>取得大型資料
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "37421557"
   
 -   ICommand::Execute  
   
- 如果 DBPROP_ACCESSORDER 屬性 （在資料列集屬性群組） 設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 值時，取用者應該擷取單一資料列的資料，在呼叫**GetNextRows**方法因為 BLOB 資料不會進行緩衝。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以擷取多個資料列中的資料**GetNextRows**。  
+ 如果 DBPROP_ACCESSORDER 屬性 （在資料列集屬性群組） 設定為 DBPROPVAL_AO_SEQUENTIAL 或 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 值時，取用者應該擷取單一資料列的資料，在呼叫**GetNextRows**方法因為 BLOB 資料不會進行緩衝。 如果 DBPROP_ACCESSORDER 的值設定為 DBPROPVAL_AO_RANDOM，取用者可以在 **GetNextRows** 中提取資料的多個資料列。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者不會擷取從大型資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取用者要求之前。 取用者應該在一個存取子中繫結所有短資料，然後在需要時，使用一或多個暫存的存取子來擷取大型資料值。  
   
@@ -153,7 +153,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Blob 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [BLOB 與 OLE 物件](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [使用大型實值型別](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

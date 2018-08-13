@@ -1,5 +1,5 @@
 ---
-title: CHANGE_TRACKING_MIN_VALID_VERSION (TRANSACT-SQL) |Microsoft 文件
+title: CHANGE_TRACKING_MIN_VALID_VERSION (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7809bd218e1f7c8c81ee6c30a7ddcc514e2f085d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d9a53856fc95d8564c6b08f4867bba0f8a9604b5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228023"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535508"
 ---
 # <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  在適用於取得變更追蹤資訊從指定的資料表，當您使用用戶端傳回的最小版本[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函式。  
+  傳回的最小版本，適用於取得變更追蹤資訊從指定的資料表，當您使用用戶端[CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)函式。  
     
  ![主題連結圖示](../../database-engine/configure-windows/media/topic-link.gif "主題連結圖示") [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,13 +47,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>引數  
  *table_object_id*  
- 這是資料表的物件識別碼。 *table_object_id*是**int**。  
+ 這是資料表的物件識別碼。 *table_object_id*已**int**。  
   
 ## <a name="return-type"></a>傳回類型  
  **bigint**  
   
 ## <a name="remarks"></a>備註  
- 若要驗證的值使用此函式*last_sync_version* CHANGETABLE 的參數。 如果*last_sync_version*小於所報告此函式，從更新版本的 CHANGETABLE 呼叫傳回的結果可能不是有效的值。  
+ 若要驗證的值使用此函式*last_sync_version* CHANGETABLE 參數。 如果*last_sync_version*小於會報告此函式，從稍後呼叫 CHANGETABLE 所傳回的結果可能不是有效的值。  
   
  CHANGE_TRACKING_MIN_VALID_VERSION 會使用下列資訊判斷傳回值：  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_fkeys (TRANSACT-SQL) |Microsoft 文件
+title: sp_fkeys (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fdb582cf8e77e61d7723ea1c6ed2e854ef8f6940
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fc012a7b05f2387756e25bfb86c93896d3f94190
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258620"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536658"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,34 +49,34 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 ```  
   
 ## <a name="arguments"></a>引數  
- [ @pktable_name=] '*b l e _*'  
- 這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *b l e _* 是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*fktable_name*必須提供參數，或兩者。  
+ [ @pktable_name=] '*pktable_name&lt*'  
+ 這是用來傳回目錄資訊的資料表名稱，含主索引鍵。 *pktable_name&lt*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*fktable_name*必須提供參數，或兩者。  
   
- [ @pktable_owner=] '*pktable_owner*'  
- 是用來傳回目錄資訊之資料表 （含主索引鍵） 的擁有者名稱。 *pktable_owner*是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*pktable_owner*未指定，套用基礎 dbms 的預設資料表可見性規則。  
+ [ @pktable_owner=] '*pktable_owner&lt*'  
+ 是用來傳回目錄資訊 （含主索引鍵） 資料表的擁有者名稱。 *pktable_owner&lt*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*pktable_owner&lt*未指定，套用基礎 dbms 的預設資料表可見性規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*pktable_owner*未指定目前使用者並未擁有含有指定的資料表和*b l e _*，程序會尋找具有指定的資料表*ble_* 資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*pktable_owner&lt*未指定且目前使用者並未擁有指定的資料表*pktable_name&lt*，此程序會尋找具有指定的資料表*pktable_name&lt*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
   
- [ @pktable_qualifier =] '*pktable_qualifier*'  
- 這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier*是 sysname，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*q*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ [ @pktable_qualifier =] '*pktable_qualifier&lt*'  
+ 這是資料表 (含主索引鍵) 限定詞的名稱。 *pktable_qualifier&lt*是 sysname，預設值是 NULL。 各種 DBMS 產品都支援三部分的資料表命名 (*qualifier.owner.name*)。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
  [ @fktable_name=] '*fktable_name*'  
- 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*b l e _* 必須提供參數，或兩者。  
+ 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的名稱。 *fktable_name*是 sysname，預設值是 NULL。 不支援萬用字元的模式比對。 這個參數或*pktable_name&lt*必須提供參數，或兩者。  
   
  [ @fktable_owner =] '*fktable_owner*'  
- 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的擁有者名稱。 *fktable_owner*是**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*fktable_owner*未指定，套用基礎 dbms 的預設資料表可見性規則。  
+ 這是用來傳回目錄資訊之資料表 (含外部索引鍵) 的擁有者名稱。 *fktable_owner*已**sysname**，預設值是 NULL。 不支援萬用字元的模式比對。 如果*fktable_owner*未指定，套用基礎 dbms 的預設資料表可見性規則。  
   
- 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*fktable_owner*未指定目前使用者並未擁有含有指定的資料表和*fktable_name*，程序會尋找具有指定的資料表*fktable_name*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
+ 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，如果目前使用者擁有一份含指定名稱的資料表，就會傳回這份資料表的資料行。 如果*fktable_owner*未指定且目前使用者並未擁有指定的資料表*fktable_name*，此程序會尋找具有指定的資料表*fktable_name*資料庫擁有者所擁有。 如果資料表存在，就會傳回它的資料行。  
   
  [ @fktable_qualifier=] '*fktable_qualifier*'  
- 這是資料表 (含外部索引鍵) 限定詞的名稱。 *fktable_qualifier*是**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
+ 這是資料表 (含外部索引鍵) 限定詞的名稱。 *fktable_qualifier*已**sysname**，預設值是 NULL。 在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中，這個限定詞代表資料庫名稱。 在某些產品中，它代表資料表之資料庫環境的伺服器名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
- 無  
+ None  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|資料表 (含主索引鍵) 限定詞的名稱。 這個欄位可以是 NULL。|  
 |PKTABLE_OWNER|**sysname**|資料表 (含主索引鍵) 擁有者的名稱。 這個欄位一律會傳回值。|  
@@ -103,7 +103,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 如果提供了主索引鍵資料表名稱，且外部索引鍵資料表名稱是 NULL，sp_fkeys 會傳回所有含有指向給定資料表的外部索引鍵之資料表。 如果提供了外部索引鍵資料表名稱，且主索引鍵資料表名稱是 NULL，sp_fkeys 會傳回所有透過主索引鍵/外部索引鍵關聯性來與外部索引鍵資料表中之外部索引鍵產生關聯的資料表。  
   
-Sp_fkeys 預存程序就相當於 ODBC 中的 SQLForeignKeys。  
+Sp_fkeys 預存程序相當於 ODBC 中的 SQLForeignKeys。  
   
 ## <a name="permissions"></a>Permissions  
  需要`SELECT`結構描述權限。  
@@ -119,7 +119,7 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>範例：[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 和 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 下列範例會擷取 `DimDate` 資料庫之 `AdventureWorksPDW2012` 資料表的外部索引鍵清單。 會傳回任何資料列，因為[!INCLUDE[ssDW](../../includes/ssdw-md.md)]不支援的外部索引鍵。  
+ 下列範例會擷取 `DimDate` 資料庫之 `AdventureWorksPDW2012` 資料表的外部索引鍵清單。 會傳回任何資料列，因為[!INCLUDE[ssDW](../../includes/ssdw-md.md)]不支援外部索引鍵。  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  
@@ -128,7 +128,7 @@ EXEC sp_fkeys @pktable_name = N'DimDate;
 ## <a name="see-also"></a>另請參閱  
  [目錄預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_pkeys &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
+ [sp_pkeys &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   
   
 

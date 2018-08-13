@@ -1,5 +1,5 @@
 ---
-title: 執行含有命名空間 （SQLXMLOLEDB 提供者） 的 XPath 查詢 |Microsoft 文件
+title: 執行 XPath 查詢 （SQLXMLOLEDB 提供者） 的命名空間與 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f4013b1aa99afadc5ebab0eca3157872f78bf03c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5f6322ec680995313e6f5fcb1fbb02269cf2b0ea
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969083"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532793"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>執行含有命名空間的 XPath 查詢 (SQLXMLOLEDB 提供者)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "32969083"
   
  由於 SQLXML 4.0 不支援使用萬用字元 (*)，所以您必須使用命名空間前置詞來指定 XPath 查詢。 若要解析此前置詞，使用命名空間屬性來指定命名空間繫結。  
   
- 在下列範例中，XPath 查詢，請指定使用萬用字元的命名空間 (\*) 和 local-name （) and namespace-uri （) XPath 函式。 此 XPath 查詢傳回的所有項目所在的區域名稱**連絡人**和命名空間 URI 為**urn: myschema:Contacts**。  
+ 在下列範例中，XPath 查詢，請指定使用萬用字元的命名空間 (\*) 和 local-name （) and namespace-uri （) XPath 函式。 此 XPath 查詢會傳回所有項目所在的區域名稱**連絡人**和命名空間 uri **urn: myschema:Contacts**。  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  
 ```  
   
- 在 SQLXML 4.0 中，您必須使用命名空間前置詞來指定這個 XPath 查詢。 範例是**x: Contact**，其中**x**是命名空間前置詞。 請考慮下列 XSD 結構描述：  
+ 在 SQLXML 4.0 中，您必須使用命名空間前置詞來指定這個 XPath 查詢。 例如， **x: Contact**，其中**x**是命名空間前置詞。 請考慮下列 XSD 結構描述：  
   
 ```  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  
@@ -63,7 +63,7 @@ ms.locfileid: "32969083"
  這是針對上述 XSD 結構描述執行 XPath 查詢 (x:Employee) 的範例 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 應用程式。 若要解析此前置詞，會使用命名空間屬性指定的命名空間繫結。  
   
 > [!NOTE]  
->  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱[SQL Server Native Client 的系統需求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
+>  在程式碼中，您必須於連接字串內提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此外，這個範例會指定針對資料提供者使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) (需要安裝其他網路用戶端軟體)。 如需詳細資訊，請參閱 < [SQL Server Native Client 的系統需求](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)。  
   
 ```  
 Option Explicit  

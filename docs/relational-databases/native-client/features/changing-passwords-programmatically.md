@@ -22,13 +22,13 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 697abcfb8c989aac510d9b4e8730a6ebe83677d4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 77770df52a8bd21c6686b3db086aca1d3553d143
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415447"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536988"
 ---
 # <a name="changing-passwords-programmatically"></a>以程式設計方式變更密碼
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "37415447"
   在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前，當使用者密碼到期時，只有系統管理員可以重設密碼。 開頭[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援處理密碼逾期，以程式設計方式透過兩[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client OLE DB 提供者和[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC 驅動程式，以及透過變更**SQL Server 登入**對話方塊。  
   
 > [!NOTE]  
->  如果可能的話，請在執行階段提示使用者輸入其認證，並避免以保存的格式儲存其認證。 如果您必須保存其認證，您應該先加密它們使用[Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)。 如需有關使用的密碼，請參閱[強式密碼](../../../relational-databases/security/strong-passwords.md)。  
+>  如果可能的話，請在執行階段提示使用者輸入其認證，並避免以保存的格式儲存其認證。 如果您必須保存其認證，則應該用 [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532) 加密這些認證。 如需使用密碼的詳細資訊，請參閱[強式密碼](../../../relational-databases/security/strong-passwords.md)。  
   
 ## <a name="sql-server-login-error-codes"></a>SQL Server 登入錯誤碼  
  當連接因為驗證問題而無法建立時，將會提供下列其中一個 SQL Server 錯誤碼給應用程式來協助診斷和復原。  
@@ -60,12 +60,12 @@ ms.locfileid: "37415447"
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB 使用者介面密碼逾期  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援透過所做的變更密碼逾期**SQL Server 登入**對話方塊。 如果 DBPROP_INIT_PROMPT 的值設定為 DBPROMPT_NOPROMPT，則密碼到期時，初始連接嘗試將會失敗。  
   
- 如果 DBPROP_INIT_PROMPT 已設定為任何其他值，使用者會看到**SQL Server 登入**對話方塊中的，不管密碼是否已過期。 使用者可以按一下**選項**按鈕，然後檢查**變更密碼**變更密碼。  
+ 如果 DBPROP_INIT_PROMPT 已設定為其他任何值，不管密碼是否到期，使用者都會看到 [SQL Server 登入] 對話方塊。 使用者可以按一下 [選項] 按鈕，然後核取 [變更密碼] 來變更密碼。  
   
- 如果使用者按一下 [確定]，而且密碼已過期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]會提示使用者輸入並確認新密碼 using**變更 SQL Server 密碼**對話方塊。  
+ 如果使用者按一下 [確定]，而且密碼已到期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 就會使用 [變更 SQL Server 密碼] 對話方塊提示使用者輸入並確認新密碼。  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>OLE DB 提示行為與鎖定帳戶  
- 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果發生下列的顯示這種情況**SQL Server 登入** 對話方塊中，伺服器會顯示錯誤訊息給使用者，並中止連接嘗試。 它也可能會發生下列的顯示**變更 SQL Server 密碼**對話方塊中，如果使用者輸入舊密碼不正確的值。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
+ 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果在顯示 [SQL Server 登入] 對話方塊後發生這個狀況，就會向使用者顯示伺服器錯誤訊息，並中止連接嘗試。 如果使用者輸入錯誤的舊密碼值，也可能在顯示 [變更 SQL Server 密碼] 對話方塊後發生這個狀況。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>OLE DB 連接共用、密碼逾期與鎖定帳戶  
  當連接在連接共用中仍處於作用中狀態時，帳戶可能會遭到鎖定，或者其密碼可能會過期。 伺服器會在兩種時機下檢查過期的密碼與鎖定的帳戶。 第一個時機是首次建立連接時。 第二個時機則是在連接取自集區而重設連接時。  
@@ -87,7 +87,7 @@ ms.locfileid: "37415447"
   
  請注意，每當設定 "Old Password" 屬性時，除非同時指定優先順序永遠最高的 Windows 驗證，否則提供者會假設有嘗試變更密碼。  
   
- 如果使用 Windows 驗證時，指定舊密碼會導致 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED 取決於是否舊的密碼已指定為 REQUIRED 或 OPTIONAL，而 DBPROPSTATUS_ 的狀態值中會傳回 CONFLICTINGBADVALUE *dwStatus*。 偵測到此時**idbinitialize:: Initialize**呼叫。  
+ 如果使用 Windows 驗證，指定舊密碼會導致 DB_E_ERRORSOCCURRED 或 DB_S_ERRORSOCCURRED，這取決於舊密碼是否分別指定為 REQUIRED 或 OPTIONAL，以及 *dwStatus* 中是否傳回 DBPROPSTATUS_CONFLICTINGBADVALUE 的狀態值而定。 在呼叫 **IDBInitialize::Initialize** 時，會偵測到這個狀況。  
   
  如果嘗試變更密碼時意外失敗，伺服器會傳回錯誤碼 18468。 標準 OLEDB 錯誤會從連線嘗試傳回。  
   
@@ -101,12 +101,12 @@ ms.locfileid: "37415447"
   
  如果[SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md)呼叫，而**DriverCompletion**如果密碼已過期，則設定為 sql_driver_noprompt 時，初始連接嘗試就會失敗。 後續呼叫所傳回的 SQLSTATE 值 28000 與原生錯誤碼值 18487 **SQLError**或是**SQLGetDiagRec**。  
   
- 如果**DriverCompletion**已設定為任何其他值，則使用者會看見**SQL Server 登入**對話方塊中的，不管密碼是否已過期。 使用者可以按一下**選項**按鈕，然後檢查**變更密碼**變更密碼。  
+ 如果**DriverCompletion**已設定為任何其他值，則使用者會看見**SQL Server 登入**對話方塊中的，不管密碼是否已過期。 使用者可以按一下 [選項] 按鈕，然後核取 [變更密碼] 來變更密碼。  
   
  如果使用者按一下 [確定]，而且密碼已過期，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]提示輸入並確認新的密碼使用**變更 SQL Server 密碼**對話方塊。  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC 提示行為與鎖定帳戶  
- 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果發生下列的顯示這種情況**SQL Server 登入** 對話方塊中，伺服器會顯示錯誤訊息給使用者，並中止連接嘗試。 它也可能會發生下列的顯示**變更 SQL Server 密碼**對話方塊中，如果使用者輸入舊密碼不正確的值。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
+ 連接嘗試可能會因為帳戶遭到鎖定而失敗。 如果在顯示 [SQL Server 登入] 對話方塊後發生這個狀況，就會向使用者顯示伺服器錯誤訊息，並中止連接嘗試。 如果使用者輸入錯誤的舊密碼值，也可能在顯示 [變更 SQL Server 密碼] 對話方塊後發生這個狀況。 在此情況下，會顯示相同的錯誤訊息，並中止連接嘗試。  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>ODBC 連接共用、密碼逾期與鎖定帳戶  
  當連接在連接共用中仍處於作用中狀態時，帳戶可能會遭到鎖定，或者其密碼可能會過期。 伺服器會在兩種時機下檢查過期的密碼與鎖定的帳戶。 第一個時機是首次建立連接時。 第二個時機則是在連接取自集區而重設連接時。  

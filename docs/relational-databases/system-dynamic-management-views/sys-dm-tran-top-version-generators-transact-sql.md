@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tran_top_version_generators (TRANSACT-SQL) |Microsoft 文件
+title: sys.dm_tran_top_version_generators (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,20 +23,21 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dad87c14f7b8f1af31b7a0245e3bbe0b634089c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54b55bec3dd52a014286457770a40b51e0dd35c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536008"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  針對產生版本存放區中大部分版本的物件，傳回一份虛擬資料表。 **sys.dm_tran_top_version_generators**傳回的前 256 彙總記錄長度是依據**database_id**和**rowset_id**。 **sys.dm_tran_top_version_generators**擷取資料，藉由查詢**dm_tran_version_store**虛擬資料表。 **sys.dm_tran_top_version_generators**是因為此檢視會查詢版本存放區中，執行效率不佳檢視和版本存放區可能非常龐大。 建議您使用這個函數，尋找版本存放區的最大取用者。  
+  針對產生版本存放區中大部分版本的物件，傳回一份虛擬資料表。 **sys.dm_tran_top_version_generators**傳回的前 256 彙總記錄長度會依**database_id**並**rowset_id**。 **sys.dm_tran_top_version_generators**擷取資料，藉由查詢**dm_tran_version_store**虛擬資料表。 **sys.dm_tran_top_version_generators**是效率不佳的檢視，以執行，因為此檢視會查詢版本存放區，以及版本存放區可能非常龐大。 建議您使用這個函數，尋找版本存放區的最大取用者。  
   
 > [!NOTE]  
->  若要呼叫從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_tran_top_version_generators**。  
+>  若要呼叫這個屬性從[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]或是[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]，使用名稱**sys.dm_pdw_nodes_tran_top_version_generators**。  
   
 ## <a name="syntax"></a>語法  
   
@@ -47,17 +48,17 @@ sys.dm_tran_top_version_generators
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|資料庫識別碼。|  
 |**rowset_id**|**bigint**|資料列集識別碼。|  
-|**aggregated_record_length_in_bytes**|**int**|每個記錄長度總和**database_id**和**rowset_id 配對**版本存放區中。|  
-|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 此發行版本上的節點識別碼。|  
+|**aggregated_record_length_in_bytes**|**int**|每個記錄長度總和**database_id**並**rowset_id 配對**版本存放區中。|  
+|**pdw_node_id**|**int**|**適用於**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]， [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 這個分佈是在節點的識別碼。|  
   
 ## <a name="permissions"></a>Permissions
 
-在[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
-在[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
+在  [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]，需要`VIEW SERVER STATE`權限。   
+在  [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]，需要`VIEW DATABASE STATE`資料庫的權限。   
 
 ## <a name="remarks"></a>備註  
  因為**sys.dm_tran_top_version_generators**可能必須讀取許多頁面，因為它會掃描整個版本存放區中，執行**sys.dm_tran_top_version_generators**可能會干擾系統效能。  
@@ -92,7 +93,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- 輸出會顯示所建立的所有版本`database_id``9`和，可從兩個資料表產生的版本。  
+ 輸出會顯示所建立的所有版本`database_id``9`和兩個資料表產生的版本。  
   
 ## <a name="see-also"></a>另請參閱  
  [動態管理檢視與函數 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

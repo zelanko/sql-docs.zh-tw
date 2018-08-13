@@ -22,13 +22,13 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: febfe235bd7f4711e8192ab7625491b72ac050ec
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 67b5988b1000d54ab929da85e03a63b11dfee5ee
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001170"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533248"
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files & Amp;#40;transact-SQL&AMP;#41;  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

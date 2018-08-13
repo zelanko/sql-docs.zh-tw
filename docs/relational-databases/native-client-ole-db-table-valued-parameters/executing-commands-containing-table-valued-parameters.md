@@ -1,5 +1,5 @@
 ---
-title: 執行包含資料表值參數的命令 |Microsoft Docs
+title: 執行包含資料表值參數的命令 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 943dba9ff3fbd04e8344ac4d325114ee9f05a2e2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 1413ad1e8bd9a251cb841ed8a590b6b1ca1c5d39
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428347"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536064"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>執行包含資料表值參數的命令
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,12 +37,12 @@ ms.locfileid: "37428347"
 ## <a name="table-valued-parameter-specification"></a>資料表值參數規格  
  取用者可以指定資料表值參數的類型。 此資訊包含資料表值參數類型名稱。 如果資料表值參數的使用者定義資料表類型不在用於連接的目前預設結構描述中，它也包含結構描述名稱。 根據伺服器支援，取用者也可以指定選擇性的中繼資料資訊，例如，資料行的順序，而且可以指定特定資料行的所有資料列都有預設值。  
   
- 若要指定的資料表值參數，取用者會呼叫 ISSCommandWithParamter::SetParameterInfo，，並選擇性地呼叫 isscommandwithparameters:: Setparameterproperties。 資料表值參數，如*pwszDataSourceType* DBPARAMBINDINFO 結構中的欄位具有 DBTYPE_TABLE 的值。 *UlParamSize*欄位設定為 ~ 0，表示長度不明。 對於資料表值參數，例如結構描述名稱、 型別名稱、 資料行順序和預設資料行的特定屬性可以透過 isscommandwithparameters:: Setparameterproperties 進行設定。  
+ 若要指定的資料表值參數，取用者會呼叫 ISSCommandWithParamter::SetParameterInfo，，並選擇性地呼叫 isscommandwithparameters:: Setparameterproperties。 如果是資料表值參數，DBPARAMBINDINFO 結構中的 *pwszDataSourceType* 欄位將會有 DBTYPE_TABLE 的值。 *ulParamSize* 欄位會設定為 ~0，表示長度未知。 對於資料表值參數，例如結構描述名稱、 型別名稱、 資料行順序和預設資料行的特定屬性可以透過 isscommandwithparameters:: Setparameterproperties 進行設定。  
   
 ## <a name="table-valued-parameter-binding"></a>資料表值參數繫結  
  資料表值參數可以是任何資料列集物件。 提供者會在執行期間將資料表值參數傳送到伺服器的同時，從此物件讀取。  
   
- 若要繫結資料表值參數，取用者會呼叫 iaccessor:: Createaccessor。 *WType*資料表值參數，DBBINDING 結構的欄位會設定為 DBTYPE_TABLE。 *PObject* DBBINDING 結構的成員是不是 NULL，而*pObject*的*iid*成員設定為 IID_IRowset 或其他任何資料表值參數資料列集物件介面。 DBBINDING 結構中其餘欄位的設定方式應該與針對資料流 BLOB 設定欄位的方式相同。  
+ 若要繫結資料表值參數，取用者會呼叫 iaccessor:: Createaccessor。 如果是資料表值參數，DBBINDING 結構的 *wType* 欄位會設定為 DBTYPE_TABLE。 DBBINDING 結構的 *pObject* 成員不是 NULL，而且 *pObject* 的 *iid* 成員會設定為 IID_IRowset 或其他任何資料表值參數資料列集物件介面。 DBBINDING 結構中其餘欄位的設定方式應該與針對資料流 BLOB 設定欄位的方式相同。  
   
  如果是資料表值參數以及與資料表值參數相關聯之資料列集物件的繫結，則適用下列限制：  
   
@@ -55,7 +55,7 @@ ms.locfileid: "37428347"
 -   除非同時設定 SSPROP_PARAM_TABLE_DEFAULT，否則會將包含 DBPROP_COL_AUTOINCREMENT 或 SSPROP_COL_COMPUTED 之資料行的資料傳送到伺服器。  
   
 ## <a name="see-also"></a>另請參閱  
- [資料表值參數&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [使用資料表值參數&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [資料表值參數 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [使用資料表值參數 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

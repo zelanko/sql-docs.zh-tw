@@ -1,5 +1,5 @@
 ---
-title: (transact-sql) |Microsoft 文件
+title: sys.fn_xe_file_target_read_file & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
 ms.prod: sql
@@ -26,13 +26,13 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3836b2932d9856c59e1d511d53998df57856f08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d21a49c24dd33ffebd00eae8e33ed9e4601706c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239248"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535708"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,26 +53,26 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>引數  
  *path*  
- 要讀取之檔案的路徑。 *路徑*可包含萬元字元，包括檔案的名稱。 *路徑*是**nvarchar （260)**。 沒有預設值。 在 Azure SQL Database 的內容中，這個值會是 HTTP URL 至 Azure 儲存體中的檔案。
+ 要讀取之檔案的路徑。 *路徑*可以包含萬用字元，並將包含檔案的名稱。 *路徑*已**nvarchar(260)**。 沒有預設值。 在 Azure SQL Database 的內容中，這個值會是 HTTP URL 至 Azure 儲存體中的檔案。
   
  *mdpath*  
- 對應至所指定的檔案的中繼資料檔案的路徑*路徑*引數。 *mdpath*是**nvarchar （260)**。 沒有預設值。 從 SQL Server 2016 開始，這個參數可以指定為 null。
+ 對應至所指定的檔案中繼資料檔案的路徑*路徑*引數。 *mdpath*已**nvarchar(260)**。 沒有預設值。 從 SQL Server 2016 開始，這個參數可以指定為 null。
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 不需要*mdpath*參數。 但是，維護它是為了保留與舊版 SQL Server 產生之記錄檔之間的相容性。  
   
  *initial_file_name*  
- 要讀取的第一個檔案*路徑*。 *initial_file_name*是**nvarchar （260)**。 沒有預設值。 如果**null**指定為引數中找到的所有檔案*路徑*讀取。  
+ 要讀取的第一個檔案*路徑*。 *initial_file_name*已**nvarchar(260)**。 沒有預設值。 如果**null**指定為引數中找到的所有檔案*路徑*讀取。  
   
 > [!NOTE]  
->  *initial_file_name*和*initial_offset*是成對的引數。 如果您指定任何一個引數的值，就必須指定另一個引數的值。  
+>  *initial_file_name*並*initial_offset*是成對的引數。 如果您指定任何一個引數的值，就必須指定另一個引數的值。  
   
  *initial_offset*  
- 用來指定先前所讀取的上個位移，並略過所有事件直到位移為止 (含)。 從指定的位移之後，開始事件列舉。 *initial_offset*是**bigint**。 如果**null**指定為將會讀取整個檔案的引數。  
+ 用來指定先前所讀取的上個位移，並略過所有事件直到位移為止 (含)。 從指定的位移之後，開始事件列舉。 *initial_offset*已**bigint**。 如果**null**指定為將會讀取整個檔案的引數。  
   
 ## <a name="table-returned"></a>傳回的資料表  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|事件模組 GUID。 不可為 Null。|  
 |package_guid|**uniqueidentifier**|事件封裝 GUID。 不可為 Null。|  
@@ -84,7 +84,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
   
 ## <a name="remarks"></a>備註  
- 讀取大型結果集藉由執行**sys.fn_xe_file_target_read_file**中[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]可能會導致錯誤。 使用**將結果存檔**模式 (**Ctrl + Shift + F**) 大型結果集匯出至檔案，並改為讀取具有另一個工具的檔案。  
+ 讀取大型結果集藉由執行**sys.fn_xe_file_target_read_file**在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]可能會導致錯誤。 使用**將結果存檔**模式 (**Ctrl + Shift + F**) 將大型結果集匯出至檔案，並改為閱讀另一種工具的檔案。  
   
 ## <a name="permissions"></a>Permissions  
  需要伺服器的 VIEW SERVER STATE 權限。  

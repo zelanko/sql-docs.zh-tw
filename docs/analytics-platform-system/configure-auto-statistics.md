@@ -10,12 +10,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 000a31f76118a3f2acaf702ce5c74c1dd5703422
-ms.sourcegitcommit: 3e5f1545e5c6c92fa32e116ee3bff1018ca946a2
+ms.openlocfilehash: 448c9de27422c01d68602c00945b1ea72bcddd61
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37107136"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400911"
 ---
 # <a name="configure-auto-statistics"></a>設定自動統計資料
 
@@ -45,7 +45,7 @@ ms.locfileid: "37107136"
 變更任何功能參數值需要 AP 上的重新啟動服務。
 
 ## <a name="change-auto-statistics-settings-on-a-database"></a>變更資料庫的自動統計資料設定
-啟用自動統計資料時，系統管理員，您可以使用[ALTER DATABASE （平行資料倉儲）](/sql/t-sql/statements/alter-database-parallel-data-warehouse)變更資料庫的統計資料設定。 如果系統管理員會啟用自動統計資料功能的參數，以 AU7 升級之後建立任何新資料庫必須啟用自動統計資料。 以 AU7 升級之前就存在的所有資料庫都已停用自動統計資料。 下列範例會啟用現有的資料庫 myPDW 上的自動統計資料。
+啟用自動統計資料時，系統管理員，您可以使用[ALTER DATABASE （平行資料倉儲）](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)變更資料庫的統計資料設定。 如果系統管理員會啟用自動統計資料功能的參數，以 AU7 升級之後建立任何新資料庫必須啟用自動統計資料。 以 AU7 升級之前就存在的所有資料庫都已停用自動統計資料。 下列範例會啟用現有的資料庫 myPDW 上的自動統計資料。
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON
@@ -75,5 +75,5 @@ FROM
 
 傳回值 1 表示的設定，而 0 表示設定為關閉。 
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 若要查看您的查詢執行的方式，請參閱[監視使用中的查詢](monitoring-active-queries.md)
