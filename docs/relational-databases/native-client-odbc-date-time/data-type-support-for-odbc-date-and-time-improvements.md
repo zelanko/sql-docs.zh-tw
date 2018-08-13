@@ -16,15 +16,15 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c954f3b2539906f025e2010c080c1305875fcaab
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431287"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540108"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>資料類型對 ODBC 日期和時間改善功能支援
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>資料類型對 ODBC 日期和時間支援的改善
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

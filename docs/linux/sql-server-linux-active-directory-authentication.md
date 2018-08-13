@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 7bc0a49035eeddfa014c39b9011fef85d98ce4cf
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 44faf5cb1efb32da7df1ead5c9ad910f6c45bd30
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084350"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400701"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>教學課程： 使用 Active Directory Linux 上的 SQL Server 驗證
 
@@ -49,7 +49,7 @@ ms.locfileid: "39084350"
 
 使用下列步驟，加入[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機加入 Active Directory 網域：
 
-1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 到 AD 網域加入您的主機電腦。 如果您尚未開始，將 [realmd] 與 Kerberos 用戶端封裝上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發封裝管理員：
+1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** 到 AD 網域加入您的主機電腦。 如果您尚未開始，將 [realmd] 與 [Kerberos 用戶端封裝上安裝[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]主機電腦使用您的 Linux 散發封裝管理員：
 
    ```bash
    # RHEL
@@ -206,6 +206,9 @@ ms.locfileid: "39084350"
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
+   > [!NOTE]
+   > Spn 可能需要幾分鐘的時間才能傳播至您的網域，整個，尤其是網域較大。 如果您收到錯誤，「 kvno： 找不到伺服器在 Kerberos 資料庫中取得認證 MSSQLSvc /\*\*\<主機電腦的完整的網域名稱\>\*\*:\* \* \<tcp 連接埠\>\*\*\@CONTOSO.COM"，請等候幾分鐘的時間，然後再試一次。
+
 2. 建立的 keytab 檔案**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 您在上一個步驟中建立 AD 使用者。 出現提示時，輸入該 AD 帳戶的密碼。
 
    ```bash
@@ -223,18 +226,54 @@ ms.locfileid: "39084350"
    > [!NOTE]
    > Ktutil 工具不會無法驗證的密碼，因此請確定輸入正確。
 
-3. 任何人存取這`keytab`檔案，可模擬[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]網域，因此請確定您的檔案這類限制存取只有`mssql`帳戶具有讀取權限：
+3. 將電腦帳戶新增至與您 keytab  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**。 （也稱為 UPN） 的電腦帳戶是存在於`/etc/krb5.keytab`形式"\<hostname\>$\@\<realm.com\>"(例如 sqlhost$\@CONTOSO.COM)。 我們會將複製從這些項目`/etc/krb5.keytab`至`mssql.keytab`。
+
+   ```bash
+   sudo ktutil
+
+   # Read all entries from /etc/krb5.keytab
+   ktutil: rkt /etc/krb5.keytab
+
+   # List all entries
+   ktutil: list
+
+   # Delete all entries by their slot number which are not the UPN one at a
+   # time.
+   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
+   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
+   # 1's entry is deleted)
+   ktutil: delent <slot num>
+   ktutil: delent <slot num>
+   ...
+
+   # List all entries to ensure only UPN entries are left
+   ktutil: list
+
+   # When only UPN entries are left, append these values to mssql.keytab
+   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+
+   quit
+   ```
+
+4. 任何人存取這`keytab`檔案，可模擬[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]網域，因此請確定您的檔案這類限制存取只有`mssql`帳戶具有讀取權限：
 
    ```bash
    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
    ```
 
-4. 設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]若要使用此`keytab`Kerberos 驗證的檔案：
+5. 設定[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]若要使用此`keytab`Kerberos 驗證的檔案：
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
    sudo systemctl restart mssql-server
+   ```
+
+6. 選擇性︰ 停用網域控制站，以改善效能的 UDP 連接。 在許多情況下，UDP 連線將一律失敗連接到網域控制站，因此您可以設定組態選項時`/etc/krb5.conf`略過 UDP 呼叫。 編輯`/etc/krb5.conf`並設定下列選項：
+
+   ```/etc/krb5.conf
+   [libdefaults]
+   udp_preference_limit=0
    ```
 
 ## <a id="createsqllogins"></a> 在考慮改用 SQL 建立 AD 架構的登入
@@ -280,7 +319,7 @@ ms.locfileid: "39084350"
   * JDBC:[使用 Kerberos 整合式驗證來連接 SQL Server](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
   * ODBC:[使用整合式的驗證](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
   * ADO.NET:[連接字串語法](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-  
+ 
 ## <a name="next-steps"></a>後續步驟
 
 在本教學課程中，我們逐步解說如何設定與 Linux 上的 SQL Server 的 Active Directory 驗證。 您已學到如何以：
