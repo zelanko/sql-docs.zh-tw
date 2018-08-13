@@ -1,1 +1,0 @@
-[SQL Server 2014 的線上叢書](https://msdn.microsoft.com/en-us/library/ms130214(v=sql.120).aspx)

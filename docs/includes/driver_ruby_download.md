@@ -1,1 +1,0 @@
-![下載](../ssdt/media/download.png)[安裝 Ruby 驅動程式](http://msdn.microsoft.com/library/mt711041.aspx)

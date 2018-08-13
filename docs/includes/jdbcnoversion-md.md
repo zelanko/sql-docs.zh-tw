@@ -1,1 +1,0 @@
- 用於 SQL Server 的 Microsoft JDBC 驅動程式 
