@@ -44,7 +44,7 @@ ms.locfileid: "37320688"
 |[&#40;模數&#41; &#40;SSIS 運算式&#41;](modulo-ssis-expression.md)|提供第一個數值運算式除以第二個數值運算式之後的整數餘數。|  
 |[&#124;&#124;&#40;邏輯 OR&#41; &#40;SSIS 運算式&#41;](logical-or-ssis-expression.md)|執行邏輯 OR 運算。|  
 |[&& &#40;邏輯 AND&#41; &#40;SSIS 運算式&#41;](logical-and-ssis-expression.md)|執行邏輯 AND 運算。|  
-|[! &#40;邏輯 Not&#41;&#40;SSIS 運算式&#41;](logical-not-ssis-expression.md)|執行布林運算元的否定運算。|  
+|[\! &#40;邏輯 Not&#41;&#40;SSIS 運算式&#41;](logical-not-ssis-expression.md)|執行布林運算元的否定運算。|  
 |[&#124;&#40;位元包含 OR&#41; &#40;SSIS 運算式&#41;](bitwise-inclusive-or-ssis-expression.md)|執行兩個整數值的位元 OR 運算。|  
 |[^ &#40;位元互斥 OR&#41; &#40;SSIS 運算式&#41;](bitwise-exclusive-or-ssis-expression.md)|執行兩個整數值的位元排除 OR 運算。|  
 |[& &#40;位元 AND&#41; &#40;SSIS 運算式&#41;](bitwise-and-ssis-expression.md)|執行兩個整數值的位元 AND 運算。|  

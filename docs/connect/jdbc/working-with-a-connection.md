@@ -16,7 +16,7 @@ ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fdfaa0fa75c8ff37ed3c165b5e080cee9cd7a0ba
 ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/08/2018
 ms.locfileid: "39662380"
@@ -97,7 +97,7 @@ String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSe
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-如需更多連接 URL 範例，請參閱 < [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)。
+如需更多連接 URL 範例，請參閱 < [建立連接 URL](../../connect/jdbc/building-the-connection-url.md)。
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>建立具有自訂登入逾時的連接
 

@@ -22,7 +22,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "38054076"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>如何：使用 SQLSRV 驅動程式擷取輸入和輸出參數
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 本主題示範如何使用 SQLSRV 驅動程式呼叫將其中一個參數定義為輸入/輸出參數的預存程序，以及如何擷取結果。 在擷取輸出或輸入/輸出參數時，必須先取用預存程序所傳回的所有結果，傳回的參數值才可供存取。  
