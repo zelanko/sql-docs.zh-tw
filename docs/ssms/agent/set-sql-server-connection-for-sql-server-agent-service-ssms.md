@@ -40,7 +40,7 @@ ms.locfileid: "38980230"
   
     [限制事項](#Restrictions)  
   
-    [Security](#Security)  
+    [安全性](#Security)  
   
 -   **若要為 SQL Server Agent 設定 SQL Server 連接，使用：**  
   
@@ -54,7 +54,7 @@ ms.locfileid: "38980230"
   
 -   從 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)]開始， [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 就不支援「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 驗證」。 只有當您管理舊版的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]時，才能使用這個選項。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>安全性  
   
 #### <a name="Permissions"></a>Permissions  
 若要執行功能，您必須將 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent 設定為使用帳戶認證，此帳戶必須是 **中** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)](系統管理員) 固定伺服器角色的成員。 此帳戶必須擁有下列 Windows 權限：  

@@ -180,7 +180,7 @@ ms.locfileid: "38049006"
   
 ##  <a name="KnownIssues"></a> 疑難排解精靈  
  **Stretch Database 精靈失敗。**  
- 如果尚未在伺服器層級啟用 Stretch Database，而您在執行精靈來啟用它時未具備系統管理員權限，則精靈會失敗。 請要求系統管理員，在本機伺服器執行個體上啟用 Stretch Database，然後再次執行精靈。 如需詳細資訊，請參閱＜ [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)＞。  
+ 如果尚未在伺服器層級啟用 Stretch Database，而您在執行精靈來啟用它時未具備系統管理員權限，則精靈會失敗。 請要求系統管理員，在本機伺服器執行個體上啟用 Stretch Database，然後再次執行精靈。 如需詳細資訊，請參閱＜ [必要條件：在伺服器上啟用 Stretch Database 的權限](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)＞。  
   
 ## <a name="next-steps"></a>後續步驟  
  針對 Stretch Database 啟用額外資料表。 監視資料移轉以及管理已啟用 Stretch 的資料庫和資料表。  

@@ -47,7 +47,7 @@ ms.locfileid: "38035540"
   
  ![具有值的三個資料表邏輯記錄](../../../relational-databases/replication/merge/media/logical-records-02.gif "具有值的三個資料表邏輯記錄")  
   
- 若要定義發行項之間的邏輯記錄關聯性，請參閱＜ [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)＞。  
+ 若要定義發行項之間的邏輯記錄關聯性，請參閱＜ [定義合併資料表發行項之間的邏輯記錄關聯性](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)＞。  
   
 ## <a name="benefits-of-logical-records"></a>邏輯記錄的優點  
  邏輯記錄功能具有兩個主要的優點：  
