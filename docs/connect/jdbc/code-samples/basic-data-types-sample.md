@@ -1,5 +1,5 @@
 ---
-title: 基本資料類型範例 |Microsoft Docs
+title: 基本資料類型範例 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -14,12 +14,12 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98c351eef36810032e55941683996c007a8c39d3
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: MTE75
+ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452071"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662410"
 ---
 # <a name="basic-data-types-sample"></a>基本資料類型範例
 
@@ -29,13 +29,13 @@ ms.locfileid: "39452071"
   
 此範例的程式碼檔案名稱為 BasicDataTypes.java，可以在下列位置找到：  
 
-```
+```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\datatypes  
 ```
 
 ## <a name="requirements"></a>需求  
 
-若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 如需如何設定 classpath 的詳細資訊，請參閱[JDBC 驅動程式使用](../../../connect/jdbc/using-the-jdbc-driver.md)。  
+若要執行此範例應用程式，您必須將 Classpath 設定為包含 mssql-jdbc jar 檔案。 如需如何設定 classpath 的詳細資訊，請參閱[使用 JDBC 驅動程式](../../../connect/jdbc/using-the-jdbc-driver.md)。  
   
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 提供 mssql-jdbc 類別庫檔案，可根據您慣用的 Java Runtime Environment (JRE) 設定來使用。 如需有關選擇哪個 JAR 檔案的詳細資訊，請參閱[JDBC 驅動程式的系統需求](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)。  

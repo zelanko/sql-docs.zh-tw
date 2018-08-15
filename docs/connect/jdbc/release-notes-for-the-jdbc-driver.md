@@ -14,12 +14,12 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1870693ad4c12a6f04cd3b01380b77de728c245c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454372"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662460"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>JDBC Driver 的版本資訊
 
@@ -27,7 +27,7 @@ ms.locfileid: "39454372"
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Microsoft JDBC Driver 7.0 for SQL Server 的更新
 
-SQL Server 的 Microsoft JDBC 驅動程式 7.0 是完全符合 JDBC API 規格的 4.2。 在 7.0 版的封裝中的 jar 會命名為根據 Java 版本相容性。 比方說，從 7.0 封裝 mssql-jdbc-7.0.0.jre8.jar 檔案應該搭配 Java 8。
+SQL Server 的 Microsoft JDBC 驅動程式 7.0 是完全符合 JDBC API 規格的 4.2。 在 7.0 版的封裝中的 jar 會命名為根據 Java 版本相容性。 比方說，從 7.0 封裝 mssql-jdbc-7.0.0.jre10.jar 檔案應該搭配 Java 10。
 
 ### <a name="support-for-jdk-10"></a>JDK 10 支援
 
@@ -59,7 +59,7 @@ SQL Server 的 Microsoft JDBC 驅動程式 7.0 引進了新的連接屬性`cance
 
 ### <a name="added-azure-key-vault-provider-constructors"></a>已新增的 Azure Key Vault 提供者建構函式
 
-Microsoft JDBC Driver 7.0，適用於 SQL Server 重新導入了先前移除的建構函式，如`SQLServerColumnEncryptionAzureKeyVaultProvider`，允許的驗證使用透過實作自訂方法`SQLServerKeyVaultAuthenticationCallback`擷取存取權杖。
+針對 SQL Server 的 Microsoft JDBC 驅動程式 7.0 重新引進的先前移除的建構函式， `SQLServerColumnEncryptionAzureKeyVaultProvider`，允許的驗證使用透過實作自訂方法`SQLServerKeyVaultAuthenticationCallback`擷取存取權杖。
 
 新的建構函式具有下列定義：
 
@@ -80,11 +80,11 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-adal4j-version-to-160"></a>更新的 ADAL4J 版本到 1.6.0
 
-Microsoft JDBC Driver 7.0，適用於 SQL Server 已更新為 1.6.0 版的 azure active directory-程式庫-的-java (ADAL4J) 在其 maven 相依性。 如需相依性的相關資訊，請參閱[這裡](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+Microsoft JDBC Driver 7.0，適用於 SQL Server 已更新為 1.6.0 版的 azure active directory-程式庫-的-java (ADAL4J) 在其 maven 相依性。 如需相依性的相關資訊，請參閱[這裡](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)。
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Microsoft JDBC Driver 6.4 for SQL Server 的更新
 
-Microsoft JDBC Driver 6.4 for SQL Server 是完全符合 JDBC 規格 4.1 和 4.2。 6.4 版的封裝中的 jar 會命名為根據 Java 版本相容性。 比方說，建議從 6.4 封裝 mssql-jdbc-6.4.0.jre8.jar 檔案適用於 Java 8。
+Microsoft JDBC Driver 6.4 for SQL Server 是完全符合 JDBC 規格 4.1 和 4.2。 6.4 版的封裝中的 jar 會命名為根據 Java 版本相容性。 比方說，必須使用 mssql-jdbc-6.4.0.jre8.jar 檔案 6.4 版的封裝，使用 Java 8。
 
 ### <a name="support-for-jdk-9"></a>JDK 9 支援
 
@@ -134,10 +134,14 @@ JDBC 驅動程式已更新為 1.4.0 版的 azure active directory-程式庫-的-
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Microsoft JDBC Driver 6.2 for SQL Server 的更新
 
-Microsoft JDBC Driver 6.2 for SQL Server 是完全符合 JDBC 規格 4.1 和 4.2。 根據 Java 版本相容性為 6.0 套件中的 jar。 比方說，建議 mssql-jdbc-6.2.1.jre8.jar 檔案從 6.2 的套件，適用於 Java 8。
+Microsoft JDBC Driver 6.2 for SQL Server 是完全符合 JDBC 規格 4.1 和 4.2。 6.2 的封裝中的 jar 會命名為根據 Java 版本相容性。 比方說，建議 mssql-6.2.2.jre8.jar 檔案從 6.2 的套件，適用於 Java 8。
 
 > [!NOTE]  
-> 在已於 2017 年 6 月 29 日發行 JDBC 6.2 RTW 中找不到中繼資料快取改進的問題。 改進已回復，而且新的 jar （版本 6.2.1） 上發行於 2017 年 7 月 17 日[Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)，並[Maven 中央](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)。 請更新您的專案，以使用 6.2.1 發行的 jar。 請檢視[版本資訊](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)如需詳細資訊。
+> 在已於 2017 年 6 月 29 日發行 JDBC 6.2 RTW 中找不到中繼資料快取改進的問題。 改進已回復，並在 2017 年 7 月 17 日發行新的 jar （版本 6.2.1）。 
+>
+> Azure Key Vault 相依程式庫版本升級至 1.0.0 的另一項改進，但新的 jar （版本 6.2.2） 已於 2017 年 10 月 19 日發行。
+>
+> 下載最新的更新，在 JDBC Driver 6.2 [Microsoft 下載中心](https://go.microsoft.com/fwlink/?linkid=852460)， [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)，並[Maven 中央](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22)。 請更新您的專案，以使用 6.2.2 發行的 jar。 版本資訊，請檢視[v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1)並[v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2)如需詳細資訊。
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>適用於 Linux 的 azure Active Directory (AAD) 支援
 

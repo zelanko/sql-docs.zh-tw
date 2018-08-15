@@ -14,27 +14,27 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cdf5ca943ec4d823c8c568f0818a49c44f22cbe6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MTE75
+ms.openlocfilehash: 15c26acf796a367f04c7b3c313c9b2ff1b06967f
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040776"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661840"
 ---
 # <a name="understanding-row-locking"></a>了解資料列鎖定
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料列鎖定。 這些鎖定會針對同時在資料庫中執行修改的多位使用者實作並行控制。 根據預設，交易和鎖定會針對每一個連接進行管理。 例如，如果應用程式開啟兩個 JDBC 連接，一個連接所取得的鎖定無法與另一個連接共用。 這兩個連接都無法取得會與另一個連接所保留之鎖定產生衝突的鎖定。  
-  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料列鎖定。 這些鎖定會針對同時在資料庫中執行修改的多位使用者實作並行控制。 根據預設，交易和鎖定會針對每一個連接進行管理。 例如，如果應用程式開啟兩個 JDBC 連接，一個連接所取得的鎖定無法與另一個連接共用。 這兩個連接都無法取得會與另一個連接所保留之鎖定產生衝突的鎖定。
+
 > [!NOTE]  
->  如果有使用資料列鎖定，提取緩衝區中的所有資料列都會遭到鎖定，因此，非常大的提取大小設定可能會影響並行。  
-  
- 鎖定的使用是為確保交易完整性與資料庫一致性。 鎖定可防止使用者讀取由其他使用者變更的資料，以及防止多個使用者同時變更相同的資料。 如果沒有使用鎖定，資料庫中的資料可能會變成邏輯上不正確，而且根據該資料執行的查詢可能會產生非預期的結果。  
-  
+> 如果有使用資料列鎖定，提取緩衝區中的所有資料列都會遭到鎖定，因此，非常大的提取大小設定可能會影響並行。
+
+鎖定的使用是為確保交易完整性與資料庫一致性。 鎖定可防止使用者讀取由其他使用者變更的資料，以及防止多個使用者同時變更相同的資料。 如果沒有使用鎖定，資料庫中的資料可能會變成邏輯上不正確，而且根據該資料執行的查詢可能會產生非預期的結果。
+
 > [!NOTE]  
->  如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 之資料列鎖定的詳細資訊，請參閱 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 線上叢書中的＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中的鎖定＞。  
-  
-## <a name="see-also"></a>另請參閱  
- [使用 JDBC Driver 管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
-  
-  
+> 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 之資料列鎖定的詳細資訊，請參閱 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 線上叢書中的＜[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 中的鎖定＞。
+
+## <a name="see-also"></a>另請參閱
+
+[使用 JDBC Driver 管理結果集](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)
