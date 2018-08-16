@@ -1,7 +1,7 @@
 ---
 title: 分散式可用性群組 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/12/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: 02f4cc65d9dd19a30904de9f1b76091fb4723c6d
+ms.sourcegitcommit: 0cda14b1151d9bce1253d96dea038c038484f07a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400711"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39616086"
 ---
 # <a name="distributed-availability-groups"></a>分散式可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "39400711"
 
 下圖顯示跨兩個可用性群組 (AG 1 和 AG 2) 之分散式可用性群組的高階檢視，而這兩個可用性群組都設定於其專屬 WSFC 叢集上。 分散式可用性群組共有四個複本，而每個可用性群組各有兩個複本。 每個可用性群組皆可支援最大複本數，因此分散式可用性最多可以有總共 18 個複本。
 
-<a name="fig1"></a>
-![分散式可用性群組的高階檢視][1]
+
+![分散式可用性群組的高階檢視](./media/distributed-availability-group/dag-01-high-level-view-distributed-ag.png)
 
 您可以將分散式可用性群組中的資料移動設定為同步或非同步。 不過，相較於傳統可用性群組，資料移動在分散式可用性群組內略有不同。 雖然每個可用性群組都有主要複本，但是參與可接受插入、更新和刪除之分散式可用性群組的資料庫只能有一個複本。 如下圖所示，AG 1 是主要可用性群組。 其主要複本會將交易傳送至次要複本 AG 1 和主要複本 AG 2。 AG 2 的主要複本也稱為「轉寄站」。 轉寄站是分散式可用性群組的次要可用性群組中的主要複本。 轉寄站會接收來自主要可用性群組中主要複本的交易，並將它們轉寄至其專屬可用性群組中的次要複本。  轉寄站接著會持續更新 AG 2 的次要複本。 
 
-![分散式可用性群組和其資料移動][2]
+![分散式可用性群組和其資料移動](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
 將 AG 2 的主要複本設為接受插入、更新和刪除的唯一方式，是從 AG 1 手動容錯移轉分散式可用性群組。 在上圖中，因為 AG 1 包含資料庫的可寫入複本，所以發出容錯移轉時會將 AG 2 設為可處理插入、更新和刪除的可用性群組。 如需如何將某個分散式可用性群組容錯移轉至另一個可用性群組的資訊，請參閱[容錯移轉至次要可用性群組]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)。
 
@@ -79,7 +79,7 @@ ms.locfileid: "39400711"
 分散式可用性群組跨多個可用性群組，且各在其專屬基礎 WSFC 叢集上，而且分散式可用性群組是僅限 SQL Server 建構。  這表示裝載個別可用性群組的 WSFC 叢集可以有不同的 Windows Server 主要版本。 SQL Server 的主要版本必須相同，如上節所討論。 與[初始圖](#fig1)類似，下圖顯示參與分散式可用性群組的 AG 1 和 AG 2，但每個 WSFC 叢集都是不同版本的 Windows Server。
 
 
-![具有不同 Windows Server 版本之 WSFC 叢集的分散式可用性群組][3]
+![具有不同 Windows Server 版本之 WSFC 叢集的分散式可用性群組](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
 
 個別 WSFC 叢集和其對應可用性群組都遵循傳統規則。 也就是說，它們可以加入網域或不加入網域 (Windows Server 2016 或更新版本)。 在單一分散式可用性群組中合併兩個不同的可用性群組時，有四個案例：
 
@@ -104,7 +104,7 @@ ms.locfileid: "39400711"
 
 傳統可用性群組需要所有伺服器都屬於相同的 WSFC 叢集，這樣可讓跨多個資料中心更具挑戰。 下圖顯示傳統多網站可用性群組架構的樣子，包含資料流程。 有一個主要複本會將交易傳送至所有次要複本。 此設定在某些方面較分散式可用性群組不具彈性。 例如，您必須在 WSFC 叢集中實作 Active Directory (如果適用) 和仲裁見證這類事物。 您也可能需要考量 WSFC 叢集的其他方面，例如改變節點投票。
 
-![傳統多網站可用性群組][4]
+![傳統多網站可用性群組](./media/distributed-availability-group/dag-04-traditional-multi-site-ag.png)
 
 分散式可用性群組針對跨多個資料中心的可用性群組，提供更具彈性的部署案例。 您甚至可以使用分散式可用性群組，過去會針對災害復原等情況，使用它的[記錄傳送]( https://docs.microsoft.com/sql/database-engine/log-shipping/about-log-shipping-sql-server)等功能。 不過，不同於記錄傳送，分散式可用性群組不能延遲套用交易。 這表示可用性群組或分散式可用性群組對於錯誤地更新或刪除資料的人為錯誤沒有任何幫助。
 
@@ -139,12 +139,12 @@ ms.locfileid: "39400711"
 
 也就是說，主要複本可以參與兩個不同的分散式可用性群組。 下圖顯示 AG 1 和 AG 2 參與分散式 AG 1，而 AG 2 和 AG 3 參與分散式 AG 2。 AG 2 的主要複本 (或轉寄站) 是分散式 AG 1 的次要複本，也是分散式 AG 2 的主要複本。
 
-![使用分散式可用性群組相應放大讀取][5]
+![使用分散式可用性群組相應放大讀取](./media/distributed-availability-group/dag-05-scaling-out-reads-with-distributed-ags.png)
 
 下圖顯示 AG 1 作為兩個不同分散式可用性群組的主要複本：分散式 AG 1 (包含 AG 1 和 AG2) 和分散式 AG 2 (包含 AG 1 和 AG 3)。
 
 
-![使用分散式可用性群組相應放大讀取的另一個範例][6]
+![使用分散式可用性群組相應放大讀取的另一個範例]( ./media/distributed-availability-group/dag-06-another-scaling-out-reads-using-distributed-ags-example.png)
 
 
 在這兩個上述範例中，這三個可用性群組最多可能共會有 27 個複本，而且全部都可以用於唯讀查詢。 
@@ -157,7 +157,7 @@ ms.locfileid: "39400711"
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>初始化分散式可用性群組中的次要可用性群組
 
-分散式可用性群組過去是使用[自動植入]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)所設計，而自動植入是用來初始化第二個可用性群組上主要複本的主要方法。 如果您執行下列作業，才能對第二個可用性群組的主要複本進行完整資料庫還原：
+分散式可用性群組過去是使用[自動植入](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group)所設計，而自動植入是用來初始化第二個可用性群組上主要複本的主要方法。 如果您執行下列作業，才能對第二個可用性群組的主要複本進行完整資料庫還原：
 
 1. 使用 WITH NORECOVERY 還原資料庫備份。
 2. 若有必要，請使用 WITH NORECOVERY 還原正確的交易記錄備份。
@@ -168,18 +168,18 @@ ms.locfileid: "39400711"
 
 * 第二個可用性群組之主要複本上的 `sys.dm_hadr_automatic_seeding` 中所顯示的輸出，會將 `current_state` 顯示為 FAILED，且原因為「植入檢查訊息逾時」。
 
-* 第二個可用性群組之主要複本上的目前 SQL Server 記錄會顯示植入已運作，並且已同步處理 [LSN]( https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)。
+* 第二個可用性群組之主要複本上的目前 SQL Server 記錄會顯示植入已運作，並且已同步處理 [LSN](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide)。
 
 * 第一個可用性群組之主要複本上的 `sys.dm_hadr_automatic_seeding` 中所顯示的輸出，會將 current_state 顯示為 COMPLETED。 
 
 * 分散式可用性群組的植入也會有不同的行為。 若要在第二個複本上開始植入，您必須在複本上發出 `ALTER AVAILABILITY GROUP [AGName] GRANT CREATE ANY DATABASE` 命令。 雖然這個條件仍然適用於參與基礎可用性群組的任何次要複本，但是第二個可用性群組的主要複本在將新增至分散式可用性群組之後已有允許開始植入的正確權限。 
 
-### <a name="view-distributed-availability-group-information"></a>檢視分散式可用性群組資訊 
-    
-如前所述，分散式可用性群組是僅限 SQL Server 建構，而且在基礎 WSFC 叢集中看不到它。 下圖顯示兩個不同的 WSFC 叢集 (CLUSTER_A 和 CLUSTER_B)，且各有其專屬可用性群組。 這裡只討論 CLUSTER_A 中的 AG1 以及 CLUSTER_B 中的 AG2。 
+## <a name="monitor-distributed-availability-group-health"></a>監視分散式可用性群組健全狀況
 
-<!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
-<a name="fig7"></a>
+分散式可用性群組是僅限 SQL Server 建構，而且在基礎 WSFC 叢集中看不到它。 下圖顯示兩個不同的 WSFC 叢集 (CLUSTER_A 和 CLUSTER_B)，且各有其專屬可用性群組。 這裡只討論 CLUSTER_A 中的 AG1 以及 CLUSTER_B 中的 AG2。 
+
+[透過 PowerShell Get-ClusterGroup 命令取得兩個 WSFC 叢集，其中包含多個可用性群組](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+
 
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
@@ -205,65 +205,203 @@ Cluster Group                   JC                    Online
 
 分散式可用性群組的所有詳細資訊皆位在 SQL Server 檢視中，特別是在可用性群組動態管理檢視中。 目前，SQL Server Management Studio 中顯示的唯一分散式可用性群組資訊，是可用性群組的主要複本相關資訊。 如下圖所示，在 [可用性群組] 資料夾底下，SQL Server Management Studio 顯示有分散式的可用性群組。 此圖顯示 AG1 是本機執行個體之個別可用性群組的主要複本，不是分散式可用性群組的主要複本。
 
-![在 SQL Server Management Studio 中檢視分散式可用性群組的第一個 WSFC 叢集的主要複本][8]
+![在 SQL Server Management Studio 中檢視分散式可用性群組的第一個 WSFC 叢集的主要複本](./media/distributed-availability-group/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png)
 
 
 不過，如果您以滑鼠右鍵按一下分散式的可用性群組，沒有選項可用 (請參閱下圖)，展開 [可用性資料庫]，[可用性群組接聽程式]，以及 [可用性複本] 資料夾也都是空的。 SQL Server Management Studio 16 會顯示此結果，但未來的 SQL Server Management Studio 版本可能會變更。
 
-![動作沒有可用的選項][9]
+![動作沒有可用的選項](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
 如下圖所示，次要複本在 SQL Server Management Studio 中不顯示與分散式可用性群組相關的任何資訊。 這些可用性群組名稱對應至上一個 [CLUSTER_A WSFC 叢集](#fig7)映像中所示的角色。
 
-![在 SQL Server Management Studio 中檢視次要複本][10]
+![在 SQL Server Management Studio 中檢視次要複本](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
+
+### <a name="dmv-to-list-all-availability-replica-names"></a>列出所有可用性複本名稱的 DMV
 
 使用動態管理檢視時，適用相同的概念。 使用下列查詢，您可以看到所有可用性群組 (一般和分散式) 和加入它們的節點。 只有當您在其中一個加入分散式可用性群組的 WSFC 叢集中查詢主要複本時，才會顯示此結果。 在動態管理檢視 `sys.availability_groups` 中有個名為 `is_distributed` 的新資料行，當可用性群組是分散式可用性群組時，它會是 1。 查看此資料行：
 
 ```sql
-SELECT ag.[name] as 'AG Name', 
-    ag.Is_Distributed, 
-    ar.replica_server_name as 'Replica Name'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar       
-    ON  ag.group_id = ar.group_id
+-- shows replicas associated with availability groups
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.Is_Distributed, 
+   ar.replica_server_name AS [Replica Name]
+FROM sys.availability_groups AS ag 
+INNER JOIN sys.availability_replicas AS ar       
+   ON ag.group_id = ar.group_id
+GO
 ```
 
 下圖顯示加入分散式可用性群組之第二個 WSFC 叢集的輸出範例。 SPAG1 是由兩個複本組成：DENNIS 和 JY。 不過，名為 SPDistAG 的分散式可用性群組，和傳統的可用性群組一樣，有兩個加入的可用性群組名稱 (SPAG1 和 SPAG2)，而不是執行個體的名稱。 
 
-![前項查詢的範例輸出][11]
+![前項查詢的範例輸出](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
+
+### <a name="dmv-to-list-distribtued-ag-health"></a>列出分散式 AG 健全狀況的 DMV
 
 在 SQL Server Management Studio 中，儀表板和其他區域顯示的任何狀態都只供該可用性群組內本機同步處理之用。 若要顯示分散式可用性群組的健康狀態，請查詢動態管理檢視。 下列範例查詢會延伸並縮小上一個查詢：
 
 ```sql
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
-FROM    sys.availability_groups ag
-  INNER JOIN sys.availability_replicas ar
-    ON ag.group_id = ar.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars       
-    ON ar.replica_id = ars.replica_id
+-- shows sync status of distributed AG
+SELECT 
+   ag.[name] AS [AG Name], 
+   ag.is_distributed, 
+   ar.replica_server_name AS [Underlying AG], 
+   ars.role_desc AS [Role], 
+   ars.synchronization_health_desc AS [Sync Status]
+FROM  sys.availability_groups AS ag
+INNER JOIN sys.availability_replicas AS ar 
+   ON  ag.group_id = ar.group_id        
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars       
+   ON  ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
        
        
-![分散式可用性群組狀態][12]
+![分散式可用性群組狀態](./media/distributed-availability-group/dag-12-distributed-ag-status.png)
 
+### <a name="dmv-to-view-underlying-performance"></a>檢視基礎效能的 DMV
 
 若要進一步延伸前一個查詢，您也可新增 `sys.dm_hadr_database_replicas_states`，透過動態管理檢視查看基礎效能。 動態管理檢視目前只儲存有關第二個可用性群組的資訊。 下列範例查詢，針對主要可用性群組執行，會產生如下所示的範例輸出：
 
-```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
-FROM    sys.databases dbs
-  INNER JOIN sys.dm_hadr_database_replica_states drs
-    ON dbs.database_id = drs.database_id
-  INNER JOIN sys.availability_groups ag
-    ON drs.group_id = ag.group_id
-  INNER JOIN sys.dm_hadr_availability_replica_states ars
-    ON ars.replica_id = drs.replica_id
-  INNER JOIN sys.availability_replicas ar
-    ON ar.replica_id = ars.replica_id
+```sql
+-- shows underlying performance of distributed AG
+SELECT 
+   ag.[name] AS [Distributed AG Name], 
+   ar.replica_server_name AS [Underlying AG], 
+   dbs.[name] AS [Database],
+   ars.role_desc AS [Role],
+   drs.synchronization_health_desc AS [Sync Status],
+   drs.log_send_queue_size,
+   drs.log_send_rate, 
+   drs.redo_queue_size, 
+   drs.redo_rate
+FROM sys.databases AS dbs
+INNER JOIN sys.dm_hadr_database_replica_states AS drs
+   ON dbs.database_id = drs.database_id
+INNER JOIN sys.availability_groups AS ag
+   ON drs.group_id = ag.group_id
+INNER JOIN sys.dm_hadr_availability_replica_states AS ars
+   ON ars.replica_id = drs.replica_id
+INNER JOIN sys.availability_replicas AS ar
+   ON ar.replica_id = ars.replica_id
 WHERE ag.is_distributed = 1
+GO
 ```
 
-![分散式可用性群組的效能資訊][13]
+
+![分散式可用性群組的效能資訊](./media/distributed-availability-group/dag-13-performance-information-distributed-ag.png)
+
+### <a name="dmv-to-view-performance-counters-for-distributed-ag"></a>檢視分散式 AG 之效能計數器的 DMV
+下列查詢顯示專門與分散式可用性群組相關聯的效能計數器。 
+
+
+ ```sql
+ -- displays OS performance counters related to the distributed ag named 'distributedag'
+ SELECT * FROM sys.dm_os_performance_counters WHERE instance_name LIKE '%distributed%'
+ ```
+
+ ![顯示 DAG 之 OS 效能計數器的 DMV](./media/distributed-availability-group/dmv-os-performance-counters.png)
+
+
+ >[!NOTE]
+ >`LIKE` 篩選應該具有分散式可用性群組的名稱。 在此範例中，分散式可用性群組的名稱為 'distributedag'。 請變更 `LIKE` 修飾詞以反映您的分散式可用性群組名稱。  
+
+### <a name="dmv-to-display-health-of-both-ag-and-distributed-ag"></a>顯示 AG 和分散式 AG 之健全狀況的 DMV
+下列查詢顯示可用性群組和分散式可用性群組之健全狀況的相關豐富資訊。 [感謝 Tracy Boggiano！](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+
+ ```sql
+ -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
+ SELECT 
+    ag.name AS 'Distributed AG', 
+    ar.replica_server_name AS 'AG', 
+    dbs.name AS 'Database', 
+    ars.role_desc, 
+    drs.synchronization_health_desc, 
+    drs.log_send_queue_size, 
+    drs.log_send_rate, 
+    drs.redo_queue_size, 
+    drs.redo_rate,
+    drs.suspend_reason_desc,
+    drs.last_sent_time,
+    drs.last_received_time,
+    drs.last_hardened_time,
+    drs.last_redone_time,
+    drs.last_commit_time,
+    drs.secondary_lag_seconds
+ FROM sys.databases dbs 
+ INNER JOIN sys.dm_hadr_database_replica_states drs 
+    ON dbs.database_id = drs.database_id
+ INNER JOIN sys.availability_groups ag 
+    ON drs.group_id = ag.group_id
+ INNER JOIN sys.dm_hadr_availability_replica_states ars 
+    ON ars.replica_id = drs.replica_id
+ INNER JOIN sys.availability_replicas ar 
+    ON ar.replica_id =  ars.replica_id
+ --WHERE ag.is_distributed = 1
+ GO
+ ```
+
+![AG 和分散式 AG 的健全狀況](./media/distributed-availability-group/dmv-sync-status-send-rate.png)
+
+### <a name="dmvs-to-view-metadata-of-distributed-ag"></a>檢視分散式 AG 之中繼資料的 DMV
+下列查詢顯示可用性群組 (包括分散式可用性群組) 所使用之端點 URL 的相關資訊。  [感謝 David Barbarin！](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+
+
+ ```sql
+ -- shows endpoint url and sync state for ag, and dag
+ SELECT
+    ag.name AS group_name,
+    ag.is_distributed,
+    ar.replica_server_name AS replica_name,
+    ar.endpoint_url,
+    ar.availability_mode_desc,
+    ar.failover_mode_desc,
+    ar.primary_role_allow_connections_desc AS allow_connections_primary,
+    ar.secondary_role_allow_connections_desc AS allow_connections_secondary,
+    ar.seeding_mode_desc AS seeding_mode
+ FROM sys.availability_replicas AS ar
+ JOIN sys.availability_groups AS ag
+    ON ar.group_id = ag.group_id
+ GO
+ ```
+
+
+![分散式 AG 的中繼資料 DMV](./media/distributed-availability-group/dmv-metadata-dag2.png)
+
+
+
+### <a name="dmv-to-show-current-state-of-seeding"></a>顯示目前植入狀態的 DMV
+下列查詢顯示目前植入狀態的相關資訊。 這可用於針對複本之間的同步處理錯誤進行疑難排解。 [再次感謝 David Barbarin！](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+
+ ```sql
+ -- shows current_state of seeding 
+ SELECT
+    ag.name AS aag_name,
+    ar.replica_server_name,
+    d.name AS database_name,
+    has.current_state,
+    has.failure_state_desc AS failure_state,
+    has.error_code,
+    has.performed_seeding,
+    has.start_time,
+    has.completion_time,
+    has.number_of_attempts
+ FROM sys.dm_hadr_automatic_seeding AS has
+ JOIN sys.availability_groups AS ag
+    ON ag.group_id = has.ag_id
+ JOIN sys.availability_replicas AS ar
+    ON ar.replica_id = has.ag_remote_replica_id
+ JOIN sys.databases AS d
+    ON d.group_database_id = has.ag_db_id
+ GO
+ ```
+
+
+![目前植入狀態](./media/distributed-availability-group/dmv-seeding.png)
+
+
 
 
 ### <a name="next-steps"></a>後續步驟 
@@ -273,20 +411,5 @@ WHERE ag.is_distributed = 1
 * [使用新增可用性群組對話方塊 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [使用 Transact-SQL 建立可用性群組](create-an-availability-group-transact-sql.md)
-
-<!--Image references-->
-[1]: ./media/dag-01-high-level-view-distributed-ag.png
-[2]: ./media/dag-02-distributed-ag-data-movement.png
-[3]: ./media/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png
-[4]: ./media/dag-04-traditional-multi-site-ag.png
-[5]: ./media/dag-05-scaling-out-reads-with-distributed-ags.png
-[6]: ./media/dag-06-another-scaling-out-reads-using-distributed-ags-example.png
-[7]: ./media/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png
-[8]: ./media/dag-08-view-smss-primary-replica-first-wsfc-distributed-ag.png
-[9]: ./media/dag-09-no-options-available-action.png
-[10]: ./media/dag-10-view-ssms-secondary-replica.png
-[11]: ./media/dag-11-example-output-of-query-above.png
-[12]: ./media/dag-12-distributed-ag-status.png
-[13]: ./media/dag-13-performance-information-distributed-ag.png
 
  

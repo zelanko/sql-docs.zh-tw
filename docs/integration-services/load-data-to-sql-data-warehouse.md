@@ -1,58 +1,62 @@
 ---
-title: 將資料從 SQL Server 載入 Azure SQL 資料倉儲 (SSIS) | Microsoft Docs
-description: 示範如何建立 SQL Server Integration Services (SSIS) 套件，以將資料從各種資料來源移至 SQL 資料倉儲。
+title: 使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL 資料倉儲 | Microsoft Docs
+description: 示範如何建立 SQL Server Integration Services (SSIS) 套件，以將資料從各種資料來源移至 Azure SQL 資料倉儲。
 documentationcenter: NA
-ms.service: sql-data-warehouse
-ms.component: data-movement
+ms.prod: sql
+ms.prod_service: integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.devlang: NA
 ms.topic: conceptual
 ms.tgt_pltfrm: NA
 ms.custom: loading
-ms.date: 04/04/2018
+ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 75a352ff4bb1f074a89ad4cc007844261d20c431
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087580"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020652"
 ---
-# <a name="load-data-from-sql-server-to-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料從 SQL Server 載入 Azure SQL 資料倉儲
+# <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL 資料倉儲
 
-建立 SQL Server Integration Services (SSIS) 套件，以將資料從 SQL Server 載入 [Azure SQL 資料倉儲](/azure/sql-data-warehouse/index)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
+建立 SQL Server Integration Services (SSIS) 套件，以將資料載入 [Azure SQL 資料倉儲](/azure/sql-data-warehouse/index)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
 
-在本教學課程中，您將會：
+本文示範如何執行下列作業。
 
 * 在 Visual Studio 中建立新的 Integration Services 專案。
-* 連線到資料來源，包括 SQL Server (作為來源) 以及 SQL 資料倉儲 (作為目的地)。
 * 設計可將資料從來源載入至目的地的 SSIS 套件。
 * 執行 SSIS 套件以載入資料。
 
-本教學課程使用 SQL Server 作為資料來源。 SQL Server 可在內部部署或 Azure 虛擬機器中執行。
-
 ## <a name="basic-concepts"></a>基本概念
-套件是 SSIS 中的工作單位。 相關聯的套件會在專案中組成群組。 您會在 Visual Studio 中使用 SQL Server Data Tools 來建立專案和設計套件。 設計程序是視覺化的程序，您可以從工具箱將元件拖放到設計介面，將它們連接，並設定其屬性。 在您完成套件之後，可以選擇將它部署到 SQL Server 以進行全方位的管理、監視和安全性。
 
-## <a name="options-for-loading-data-with-ssis"></a>使用 SSIS 載入資料的選項
+套件是 SSIS 中的基本工作單位。 相關聯的套件會在專案中組成群組。 您會在 Visual Studio 中使用 SQL Server Data Tools 來建立專案和設計套件。 設計程序是視覺化的程序，您可以從工具箱將元件拖放到設計介面，將它們連接，並設定其屬性。 在您完成套件之後，可以執行它，也可以選擇將它部署到 SQL Server 以取得全方位的管理、監視和安全性。
+
+SSIS 的詳細簡介超出本文範圍。 如需詳細資訊，請參閱下列文章：
+
+- [SQL Server Integration Services](sql-server-integration-services.md)
+
+- [如何建立 ETL 套件](ssis-how-to-create-an-etl-package.md)
+
+## <a name="options-for-loading-data-into-sql-data-warehouse-with-ssis"></a>使用 SSIS 將資料載入 SQL 資料倉儲的選項
 SQL Server Integration Services (SSIS) 是彈性的工具組，可提供各種不同選項以針對 SQL 資料倉儲進行連線和資料的載入。
 
-1. 使用 ADO NET 目的地來連線到 SQL 資料倉儲。 本教學課程會使用 ADO NET 目的地，因為它具有最少的設定選項。
-2. 使用 OLE DB 目的地來連線到 SQL 資料倉儲。 這個選項會提供比 ADO NET 目的地稍微更好的效能。
-3. 使用 Azure Blob 上傳工作將資料暫存於 Azure Blob 儲存體。 然後使用 SSIS 執行 SQL 工作以啟動能將資料載入至 SQL 資料倉儲的 PolyBase 指令碼。 這個選項能提供此處所列三個選項當中最好的效能。 若要取得 Azure Blob 上傳工作，請下載[適用於 Azure 的 Microsoft SQL Server 2016 Integration Services 功能套件][Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]。 若要深入了解 PolyBase，請參閱 [PolyBase 指南][PolyBase Guide]。
+1. 提供最佳效能的慣用方法是建立使用 [Azure SQL DW 上傳工作](control-flow/azure-sql-dw-upload-task.md)的套件來載入資料。 此工作會同時封裝來源和目的地資訊。 它假設您的來源資料是儲存在本機的分隔符號文字檔。
 
-## <a name="before-you-start"></a>開始之前
-若要逐步執行本教學課程，您需要：
+2. 或者，您可以建立使用資料流程工作並包含來源和目的地的套件。 此方法支援各種不同的資料來源，包括 SQL Server 和 Azure SQL 資料倉儲。
 
-1. **SQL Server Integration Services (SSIS)**。 SSIS 是 SQL Server 的元件，並且需要評估版本或授權版本的 SQL Server。 若要取得 SQL Server 2016 Preview 的評估版本，請參閱 [SQL Server 評估版][SQL Server Evaluations]。
-2. **Visual Studio**。 若要取得免費的 Visual Studio Community Edition，請參閱 [Visual Studio Community][Visual Studio Community]。
+## <a name="prerequisites"></a>Prerequisites
+若要逐步執行本教學課程，您需要下列項目：
+
+1. **SQL Server Integration Services (SSIS)**。 SSIS 是 SQL Server 的元件，並且需要 SQL Server 的授權版本或是開發人員或評估版本。 若要取得 SQL Server 的評估版本，請參閱[評估 SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)。
+2. **Visual Studio** (選擇性)。 若要取得免費的 Visual Studio Community Edition，請參閱 [Visual Studio Community][Visual Studio Community]。 如果您不想要安裝 Visual Studio，您可以只安裝 SQL Server Data Tools (SSDT)。 SSDT 會安裝具有有限功能的 Visual Studio 版本。
 3. **適用於 Visual Studio 的 SQL Server Data Tools (SSDT)**。 若要取得適用於 Visual Studio 的 SQL Server Data Tools，請參閱[下載 SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)]。
-4. **範例資料**。 本教學課程使用儲存在 SQL Server 中 AdventureWorks 範例資料庫內的範例資料，作為要載入 SQL 資料倉儲的來源資料。 若要取得 AdventureWorks 範例資料庫，請參閱 [AdventureWorks 2014 範例資料庫][AdventureWorks 2014 Sample Databases]。
-5. **SQL 資料倉儲資料庫和權限**。 本教學課程會連線到 SQL 資料倉儲執行個體，並將資料載入至其中。 您必須有建立資料表和載入資料的權限。
-6. **防火牆規則**。 您必須使用本機電腦的 IP 位址針對 SQL 資料倉儲建立防火牆規則，然後才能將資料上傳到 SQL 資料倉儲。
+4. **Azure SQL 資料倉儲資料庫和權限**。 本教學課程會連線到 SQL 資料倉儲執行個體，並將資料載入至其中。 您必須有連線、建立資料表和載入資料的權限。
 
-## <a name="step-1-create-a-new-integration-services-project"></a>步驟 1：建立新的 Integration Services 專案
+## <a name="create-a-new-integration-services-project"></a>建立新的 Integration Services 專案
 1. 啟動 Visual Studio。
 2. 在 [檔案] 功能表上，選取 [新增 | 專案]。
 3. 瀏覽至 [已安裝 | 範本 | 商業智慧 | Integration Services] 專案類型。
@@ -66,7 +70,55 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
   
     ![][01]
 
-## <a name="step-2-create-the-basic-data-flow"></a>步驟 2：建立基本資料流程
+## <a name="option-1---use-the-sql-dw-upload-task"></a>選項 1 - 使用 SQL DW 上傳工作
+
+第一個方法是使用 SQL DW 上傳工作的套件。 此工作會同時封裝來源和目的地資訊。 它假設您的來源資料是儲存在本機或 Azure Blob 儲存體中的分隔符號文字檔。
+
+### <a name="prerequisites-for-option-1"></a>選項 1 的必要條件
+
+若要使用此選項設定教學課程，您需要下列項目：
+
+- [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。 SQL DW 上傳工作是 Feature Pack 的元件。
+
+- [Azure Blob 儲存體](https://docs.microsoft.com/azure/storage/)帳戶。 SQL DW 上傳工作會將資料從 Azure Blob 儲存體上傳至 Azure SQL 資料倉儲。 您可以載入已在 Blob 儲存體中的檔案，或從您的電腦載入檔案。 如果您選取電腦上的檔案，SQL DW 上傳工作會先將其上傳至 Blob 儲存體暫存，再將其載入 SQL 資料倉儲。
+
+### <a name="add-and-configure-the-sql-dw-upload-task"></a>新增並設定 SQL DW 上傳工作
+
+1. 將 [SQL DW 上傳工作] 從 [工具箱] 拖曳至設計介面的中央 (在 [控制流程] 索引標籤上)。
+
+2. 按兩下工作以開啟 [SQL DW 上傳工作編輯器]。
+
+    ![SQL DW 上傳工作編輯器的一般頁面](media/load-data-to-sql-data-warehouse/azure-sql-dw-upload-task-editor.png)
+
+3. 利用 [Azure SQL DW 上傳工作](control-flow/azure-sql-dw-upload-task.md)一文中的指引，協助設定工作。 由於此工作會同時封裝來源和目的地資訊，以及來源與目的地資料表之間的對應，因此工作編輯器會有數頁設定需要完成。
+
+### <a name="create-a-similar-solution-manually"></a>手動建立類似的解決方案
+
+如需更多控制，您可以手動建立套件來封裝由 SQL DW 上傳工作完成的工作。 
+
+1. 使用 Azure Blob 上傳工作將資料暫存於 Azure Blob 儲存體。 若要取得 Azure Blob 上傳工作，請下載 [Microsoft SQL Server Integration Services Feature Pack for Azure][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]。
+
+2. 然後使用 SSIS 執行 SQL 工作以啟動能將資料載入至 SQL 資料倉儲的 PolyBase 指令碼。 如需將資料從 Azure Blob 儲存體載入 SQL 資料倉儲 (但未使用 SSIS) 的範例，請參閱[教學課程：將資料載入 Azure SQL 資料倉儲](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)。
+
+## <a name="option-2---use-a-source-and-destination"></a>選項 2 - 使用來源和目的地
+
+第二個方法是使用資料流程工作並包含來源和目的地的典型套件。 此方法支援各種不同的資料來源，包括 SQL Server 和 Azure SQL 資料倉儲。
+
+本教學課程使用 SQL Server 作為資料來源。 SQL Server 會在內部部署或 Azure 虛擬機器上執行。
+
+若要連線到 SQL Server 和 SQL 資料倉儲，您可以使用 ADO.NET 連線管理員以及來源和目的地，或 OLE DB 連線管理員以及來源和目的地。 本教學課程會使用 ADO.NET，因為它具有最少的設定選項。 OLE DB 會提供比 ADO.NET 稍微更好的效能。
+
+捷徑是使用 [SQL Server 匯入和匯出精靈] 來建立基本套件。 然後，儲存套件，並在 Visual Studio 或 SSDT 中開啟以進行檢視和自訂。 如需詳細資訊，請參閱[使用 SQL Server 匯入和匯出精靈匯入和匯出資料](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
+
+### <a name="prerequisites-for-option-2"></a>選項 2 的必要條件
+
+若要使用此選項設定教學課程，您需要下列項目：
+
+1. **範例資料**。 本教學課程使用儲存在 SQL Server 中 AdventureWorks 範例資料庫內的範例資料，作為要載入 SQL 資料倉儲的來源資料。 若要取得 AdventureWorks 範例資料庫，請參閱 [AdventureWorks 範例資料庫][AdventureWorks 2014 Sample Databases]。
+
+2. **防火牆規則**。 您必須使用本機電腦的 IP 位址針對 SQL 資料倉儲建立防火牆規則，然後才能將資料上傳到 SQL 資料倉儲。
+
+### <a name="create-the-basic-data-flow"></a>建立基本資料流程
 1. 將 [資料流程工作] 從 [工具箱] 拖曳至設計介面的中央 (在 [控制流程] 索引標籤上)。
    
     ![][02]
@@ -76,7 +128,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
    
     ![][09]
 
-## <a name="step-3-configure-the-source-adapter"></a>步驟 3：設定來源配接器
+### <a name="configure-the-source-adapter"></a>設定來源配接器
 1. 按兩下來源配接器以開啟 [ADO.NET 來源編輯器]。
    
     ![][03]
@@ -107,7 +159,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 8. 在 [預覽查詢結果] 對話方塊中，按一下 [關閉] 以返回 [ADO.NET 來源編輯器]。
 9. 在 [ADO.NET 來源編輯器] 中，按一下 [確定] 以完成設定資料來源。
 
-## <a name="step-4-connect-the-source-adapter-to-the-destination-adapter"></a>步驟 4：將來源配接器連線到目的地配接器
+### <a name="connect-the-source-adapter-to-the-destination-adapter"></a>將來源配接器連線到目的地配接器
 1. 在設計介面上選取來源配接器。
 2. 選取從來源配接器延伸的藍色箭頭，並將它拖曳到目的地編輯器，直到它貼齊固定。
    
@@ -115,7 +167,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
    
     在一般的 SSIS 套件中，您可以在來源和目的地之間使用 SSIS 工具箱中的數個其他元件，以在資料通過 SSIS 資料流程時進行架構重組、轉換和清理。 為了盡可能使此範例簡單，我們會將來源直接連線到目的地。
 
-## <a name="step-5-configure-the-destination-adapter"></a>步驟 5：設定目的地配接器
+### <a name="configure-the-destination-adapter"></a>設定目的地配接器
 1. 按兩下目的地配接器以開啟 [ADO.NET 目的地編輯器]。
    
     ![][11]
@@ -146,8 +198,10 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
     ![][13]
 9. 按一下 [確定] 以完成設定資料來源。
 
-## <a name="step-6-run-the-package-to-load-the-data"></a>步驟 6：執行套件以載入資料
+## <a name="run-the-package-to-load-the-data"></a>執行套件以載入資料
 按一下工具列上的 [啟動] 按鈕，或選取 [偵錯] 功能表上的其中一個 [執行] 選項來執行套件。
+
+以下段落描述使用本文所述的第二個選項 (也就是包含來源和目的地的資料流程) 建立套件時所看到的情況。
 
 當套件開始執行時，您會看到黃色旋轉的轉輪表示活動，以及目前為止所處理的資料列數目。
 
@@ -160,9 +214,10 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 恭喜！ 您已成功地使用 SQL Server Integration Services 將資料載入至 Azure SQL 資料倉儲。
 
 ## <a name="next-steps"></a>後續步驟
-* 深入了解 SSIS 資料流程。 從這裡開始：[資料流程][Data Flow]。
-* 了解如何直接在設計環境中針對您的套件進行偵錯及疑難排解。 從這裡開始：[套件開發的疑難排解工具][Troubleshooting Tools for Package Development]。
-* 了解如何將您的 SSIS 專案和套件部署到 Integration Services 伺服器或另一個儲存位置。 從這裡開始：[部署專案和套件][Deployment of Projects and Packages]。
+
+- 了解如何直接在設計環境中針對您的套件進行偵錯及疑難排解。 從這裡開始：[套件開發的疑難排解工具][Troubleshooting Tools for Package Development]。
+
+- 了解如何將您的 SSIS 專案和套件部署到 Integration Services 伺服器或另一個儲存位置。 從這裡開始：[部署專案和套件][Deployment of Projects and Packages]。
 
 <!-- Image references -->
 [01]:  ./media/load-data-to-sql-data-warehouse/ssis-designer-01.png
@@ -193,7 +248,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 [Deployment of Projects and Packages]: ./packages/deploy-integration-services-ssis-projects-and-packages.md
 
 <!--Other Web references-->
-[Microsoft SQL Server 2016 Integration Services Feature Pack for Azure]: http://go.microsoft.com/fwlink/?LinkID=626967
-[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2016
+[Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]: https://www.microsoft.com/download/details.aspx?id=54798
+[SQL Server Evaluations]: https://www.microsoft.com/evalcenter/evaluate-sql-server-2017
 [Visual Studio Community]: https://www.visualstudio.com/products/visual-studio-community-vs.aspx
 [AdventureWorks 2014 Sample Databases]: https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks

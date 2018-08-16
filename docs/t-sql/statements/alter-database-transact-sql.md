@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 08/07/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -28,32 +28,58 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 11a17e013933456a092f1ef3f9da9a3695271963
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 7d632476cd9d113e31eabbf26835fe0d7eb43ce5
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452652"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008970"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
-修改資料庫。 
+修改資料庫的特定組態選項。 
 
-按一下下列其中一個索引標籤，以查看您所使用特定 SQL 版本的語法、引數、備註、權限和範例。
+本文提供適用於您所選擇之 SQL 產品的語法、引數、備註、權限和範例。
 
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
-# <a name="sql-servertabsqlserver"></a>[[SQL Server]](#tab/sqlserver)
-  
+## <a name="click-a-product"></a>按一下產品！
+
+在下一行中，按一下您感興趣的產品名稱。 視您所按下的產品而定，此點選會在本網頁的這裡顯示不同的內容。
+
+::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><strong><em>* SQL Server *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />邏輯伺服器</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-server"></a>[SQL Server]
+
 ## <a name="overview"></a>概觀
 
 在 SQL Server 中，此陳述式可修改資料庫或與資料庫相關聯的檔案和檔案群組。 在資料庫中新增或移除檔案和檔案群組、變更資料庫或其檔案和檔案群組的屬性、變更資料庫定序，以及設定資料庫選項。 無法修改資料庫快照集。 若要修改與複寫相關聯的資料庫選項，請使用 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)。  
    
-由於長度的關係，ALTER DATABASE 語法會分成多個主題。  
+由於長度的關係，ALTER DATABASE 語法會分成多篇文章。  
 
 ALTER DATABASE  
-目前的主題會提供變更資料庫名稱和定序的語法與相關資訊。  
+目前的文章會提供變更資料庫名稱和定序的語法與相關資訊。  
   
 [ALTER DATABASE 檔案及檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 提供在資料庫中新增和移除檔案及檔案群組的語法與相關資訊，以及變更檔案及檔案群組屬性的語法與相關資訊。  
@@ -259,17 +285,40 @@ GO
 - [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 - [系統資料庫](../../relational-databases/databases/system-databases.md)  
-  
-# <a name="sql-db-logical-servertabsqldbls"></a>[SQL DB 邏輯伺服器](#tab/sqldbls)
+
+::: moniker-end
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
+>   <th style="border: 1"><strong><em>* SQL DB<br />邏輯伺服器 *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-logical-server"></a>Azure SQL Database 邏輯伺服器
 
 ## <a name="overview"></a>概觀
 
 在 Azure SQL Database 中，使用此陳述式修改邏輯伺服器上的資料庫。 使用此陳述式變更資料庫名稱、變更資料庫的版本和服務目標、新增或移除彈性集區的資料庫、設定資料庫選項、新增或移除具有地理複寫關聯性的次要資料庫，以及設定資料庫相容性層級。
 
-由於長度的關係，ALTER DATABASE 語法會分成多個主題。  
+由於長度的關係，ALTER DATABASE 語法會分成多篇文章。  
 
 ALTER DATABASE  
-目前的主題會提供變更資料庫名稱和定序的語法與相關資訊。  
+目前的文章會提供變更資料庫名稱和定序的語法與相關資訊。  
   
 [ALTER DATABASE SET 選項](../../t-sql/statements/alter-database-transact-sql-set-options.md?&tabs=sqldbls)  
 提供使用 ALTER DATABASE 的 SET 選項來變更資料庫屬性的語法與相關資訊。  
@@ -363,7 +412,7 @@ ALTER DATABASE db1
 
 MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
 
-變更資料庫的服務層。 已移除 'premiumrs' 的支援。 如有疑問，請使用此電子郵件別名： premium-rs@microsoft.com。
+變更資料庫的服務層。 
 
 下列範例會將版本變更為 `premium`：
   
@@ -431,7 +480,7 @@ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)
 |:----- | ------: |-------: |-------: |--------: |--------: |---------:|--------: |---------: |
 |資料大小上限 (GB)|1024|1024|1024|1024|2048|4096|4096|4096|
 
-當使用 vCore 模型時，如果未設定 `MAXSIZE` 值，預設值為 32 GB。 針對以 vCore 為基礎的模型，如需資源限制的額外詳細資訊，請參閱[以 vCore 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) \(英文\)。
+當使用 vCore 模型時，如果未設定 `MAXSIZE` 值，預設值為 32 GB。 如需 vCore 模型資源限制的其他詳細資訊，請參閱[以 vCore 為基礎的資源限制](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits)。
   
 以下規則會套用到 MAXSIZE 和 EDITION 引數：  
   
@@ -601,16 +650,39 @@ ALTER DATABASE db1 FAILOVER
  [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [系統資料庫](../../relational-databases/databases/system-databases.md)  
 
-# <a name="sql-db-managed-instancetabsqldbmi"></a>[SQL DB 受控執行個體](#tab/sqldbmi)
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />邏輯伺服器</a></th>
+>   <th><strong><em>* SQL DB<br />受控執行個體</th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 受控執行個體
 
 ## <a name="overview"></a>概觀
 
 在 Azure SQL Database 受控執行個體中，使用此陳述式設定資料庫選項。
 
-由於長度的關係，ALTER DATABASE 語法會分成多個主題。  
+由於長度的關係，ALTER DATABASE 語法會分成多篇文章。  
 
 ALTER DATABASE  
-目前的主題提供的語法與相關資訊，可用於設定檔案和檔案群組選項、設定資料庫選項，以及設定相容性層級設定。  
+目前的文章提供的語法與相關資訊，可用於設定檔案和檔案群組選項、設定資料庫選項，以及設定資料庫相容性層級。  
   
 [ALTER DATABASE 檔案和檔案群組選項](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md?&tabs=sqldbmi) 提供在資料庫中新增和移除檔案及檔案群組的語法與相關資訊，以及變更檔案及檔案群組屬性的語法與相關資訊。  
   
@@ -652,6 +724,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <target_recovery_time_option> 
   | <temporal_history_retention>  
 }  
+
 ```
   
 ## <a name="arguments"></a>引數  
@@ -686,13 +759,17 @@ ALTER DATABASE 陳述式必須執行自動認可模式 (預設的交易管理模
 > [!IMPORTANT]  
 >  資料庫的擁有者不能改變資料庫，除非他們是 `dbmanager` 角色的成員。  
   
-## <a name="examples"></a>範例  
-  
-### <a name="a-what-examples-here"></a>A. 這裡的範例為何？
+## <a name="examples"></a>範例
+下列範例示範如何設定自動調整及如何在受控執行個體中新增檔案。
 
 ```sql
+ALTER DATABASE WideWorldImporters
+    SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON)
+
+ALTER DATABASE WideWorldImporters
+    ADD FILE (NAME = 'data_17')
 ```
-  
+
 ## <a name="see-also"></a>另請參閱
   
 [CREATE DATABASE - Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
@@ -709,7 +786,30 @@ ALTER DATABASE 陳述式必須執行自動認可模式 (預設的交易管理模
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
 [系統資料庫](../../relational-databases/databases/system-databases.md)  
 
-# <a name="sql-data-warehousetabsqldw"></a>[SQL 資料倉儲](#tab/sqldw)
+::: moniker-end
+::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
+
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />邏輯伺服器</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
+>   <th><strong><em>* SQL 資料<br />倉儲 *</em></strong></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL 平行處理<br />資料倉儲</a></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="azure-sql-data-warehouse"></a>Azure SQL 資料倉儲
 
 ## <a name="overview"></a>概觀
 
@@ -813,14 +913,36 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
   
 ## <a name="see-also"></a>另請參閱  
 [CREATE DATABASE (Azure SQL 資料倉儲)](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldw.md)
-[SQL 資料倉儲參考主題清單](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
-  
+[SQL 資料倉儲參考文章清單](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/) 
+ 
+::: moniker-end
+::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
 
-# <a name="sql-parallel-data-warehousetabsqlpdw"></a>[SQL 平行資料倉儲](#tab/sqlpdw)
+> [!div class="mx-tdCol2BreakAll"]
+> <table>
+> <tr>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+>   <th> &nbsp; </th>
+> </tr>
+> <tr>
+>   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">[SQL Server]</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">SQL DB<br />邏輯伺服器</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">SQL DB<br />受控執行個體</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL 資料<br />倉儲</a></th>
+>   <th><strong><em>* SQL 平行處理<br />資料倉儲 *</em></strong></th>
+> </tr>
+> </table>
+
+&nbsp;
+
+# <a name="sql-parallel-data-warehouse"></a>SQL 平行處理資料倉儲
 
 ## <a name="overview"></a>概觀
 
-修改適用於平行處理資料倉儲 中的複寫資料表、分散式資料表和交易記錄的資料庫大小上限選項。 在資料庫的大小成長或壓縮時，使用此陳述式來管理它的磁碟空間配置。 本主題也會描述在平行處理資料倉儲中設定資料庫選項的相關語法。
+修改適用於平行處理資料倉儲 中的複寫資料表、分散式資料表和交易記錄的資料庫大小上限選項。 在資料庫的大小成長或壓縮時，使用此陳述式來管理它的磁碟空間配置。 本文也會描述在平行處理資料倉儲中設定資料庫選項的相關語法。
 
 ## <a name="syntax"></a>語法  
   
@@ -868,13 +990,13 @@ SET AUTO_CREATE_STATISTICS { ON | OFF } 自動建立統計資料選項 AUTO_CREA
 
 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。 
 
-如需統計資料的詳細資訊，請參閱[統計資料](/sql/relational-databases/statistics/statistics)
+如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)
 
 SET AUTO_UPDATE_STATISTICS { ON | OFF } 自動更新統計資料選項 AUTO_UPDATE_STATISTICS 為 ON 時，查詢最佳化工具會判斷統計資料何時過期，然後在查詢使用統計資料時加以更新。 當作業插入、更新、刪除或合併變更資料表或索引檢視表中的資料分佈之後，統計資料就會變成過期。 查詢最佳化工具會計算自從上次更新統計資料以來資料修改的次數，並且比較修改次數與臨界值，藉以判斷統計資料可能過期的時間。 此臨界值是以資料表或索引檢視表中的資料列數目為基礎。
 
 若為升級至 AU7 之後建立的新資料庫，預設值是 ON。 若為在升級之前建立的資料庫，預設值是 OFF。 
 
-如需統計資料的詳細資訊，請參閱[統計資料](/sql/relational-databases/statistics/statistics)。
+如需統計資料的詳細資訊，請參閱[統計資料](../../relational-databases/statistics/statistics.md)。
 
 
 SET AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 非同步統計資料更新選項 AUTO_UPDATE_STATISTICS_ASYNC 會決定查詢最佳化工具要使用同步或非同步統計資料更新。 AUTO_UPDATE_STATISTICS_ASYNC 選項會套用至針對索引所建立的統計資料物件、查詢述詞中的單一資料行，以及使用CREATE STATISTICS 陳述式所建立的統計資料。
@@ -1012,5 +1134,5 @@ ALTER DATABASE CustomerSales
 ## <a name="see-also"></a>另請參閱  
  [CREATE DATABASE &#40;平行處理資料倉儲&#41;](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlpdw)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)  
-  
- 
+
+::: moniker-end

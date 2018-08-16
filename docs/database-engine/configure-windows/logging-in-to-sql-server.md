@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324432"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008900"
 ---
 # <a name="logging-in-to-sql-server"></a>登入 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36324432"
 >  安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]時若使用區分大小寫的定序， [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入也會區分大小寫。  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>指定 SQL Server 名稱的格式  
- 連接至 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體時，必須指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是預設執行個體 (未命名的執行個體)，請指定已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦名稱，或電腦的 IP 位址。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是具名執行個體 (例如 SQLEXPRESS)，請指定已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦名稱，或電腦的 IP 位址，並加入斜線和執行個體名稱。  
+ 連線到 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 執行個體時，必須指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的名稱。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是預設執行個體 (未命名的執行個體)，請指定已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦名稱，或電腦的 IP 位址。 如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體是具名執行個體 (例如 SQLEXPRESS)，請指定已安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的電腦名稱，或電腦的 IP 位址，並加入斜線和執行個體名稱。  
   
  下列範例連接至 APPHOST 電腦上執行的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。 指定具名執行個體時，範例會使用執行個體名稱 SQLEXPRESS。  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36324432"
   
 |執行個體類型|伺服器名稱的項目|  
 |----------------------|-------------------------------|  
-|使用預設通訊協定連接至預設執行個體 (這是預設執行個體的建議項目)。|APPHOST|  
-|使用預設通訊協定連接至具名執行個體 (這是具名執行個體的建議項目)。|APPHOST\SQLEXPRESS|  
+|使用預設通訊協定連接至預設執行個體|APPHOST|  
+|使用預設通訊協定連接至具名執行個體 |APPHOST\SQLEXPRESS|  
 |使用句號連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|執行個體時提供 SQL Server 登入。|  
 |使用句號連接至同一部電腦上的具名執行個體，指出執行個體是在本機電腦上執行。|.\SQLEXPRESS|  
 |使用 localhost 連接至同一部電腦上的預設執行個體，指出執行個體是在本機電腦上執行。|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324432"
 |連接至同一部電腦上的具名執行個體，會強制進行共用記憶體連接。|lpc:APPHOST\SQLEXPRESS|  
 |使用 IP 位址，連接至接聽 TCP 位址 192.168.17.28 的預設執行個體。|192.168.17.28|  
 |使用 IP 位址，連接至接聽 TCP 位址 192.168.17.28 的具名執行個體。|192.168.17.28\SQLEXPRESS|  
-|指定正在使用的通訊埠 (在此情況下，是 2828)，以連接至未接聽預設 TCP 通訊埠的預設執行個體 (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽預設通訊埠 (1433)，則不需要進行此作業)。|APPHOST,2828|  
-|連接至所指定 TCP 通訊埠 (在此情況下，是 2828) 的具名執行個體 (如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務不是在主機電腦上執行，通常會需要進行此作業)。|APPHOST,2828|  
+|指定正在使用的通訊埠 (在此情況下，是 2828)，以連接至未接聽預設 TCP 通訊埠的預設執行個體 (如果 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 接聽預設通訊埠 (1433)，則不需要指定連接埠號碼)。|APPHOST,2828|  
+|連接至所指定 TCP 通訊埠 (在此情況下，是 2828) 的具名執行個體 (如果 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 服務不是在主機電腦上執行，通常會需要指定連接埠號碼)。|APPHOST,2828|  
 |指定正在使用的 IP 位址和 TCP 通訊埠 (在此情況下，是 2828)，以連接至未接聽預設 TCP 通訊埠的預設執行個體。|192.168.17.28,2828|  
 |指定正在使用的 IP 位址和 TCP 通訊埠 (在此情況下，是 2828)，以連接至具名執行個體。|192.168.17.28\SQLEXPRESS,2828|  
 |依名稱連接至預設執行個體，強制進行 TCP 連接。|tcp:APPHOST|  
@@ -96,6 +96,6 @@ WHERE session_id = @@SPID;
   
  [使用 sqlcmd 公用程式](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [建立登入](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [建立登入](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

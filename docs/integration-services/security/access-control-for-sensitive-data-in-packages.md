@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401490"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020642"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>封裝中的敏感性資料存取控制
   若要保護 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝中的資料，您可以設定保護等級，只保護封裝中的機密資料或全部資料。 此外，您可以使用密碼或使用者金鑰將資料加密，或是藉由資料庫來加密資料。 也請注意，用於封裝的保護等級不一定是靜態的，而是隨著封裝生命週期有所改變。 通常，您會在開發階段設定一個保護等級，然後在部署封裝時設定另一個保護等級。  
@@ -61,7 +61,7 @@ ms.locfileid: "35401490"
 ## <a name="protection-levels"></a>保護等級  
  下表描述 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供的保護等級。 括弧中的值是 <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> 列舉的值。 這些值會顯示在 [屬性] 視窗中，當您在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中處理封裝時，可以使用該視窗設定封裝的屬性。  
   
-|保護等級|描述|  
+|保護等級|Description|  
 |----------------------|-----------------|  
 |不要儲存機密 (**DontSaveSensitive**)|儲存封裝時，隱藏封裝中的機密屬性值。 此保護等級不加密，但是會防止標記為機密資料的屬性與封裝一起儲存，因此其他使用者無法使用機密資料。 如果其他使用者開啟封裝，則機密資訊會以空白取代，該使用者必須提供機密資訊。<br /><br /> 與 **dtutil** 公用程式 (dtutil.exe) 搭配使用時，這個保護等級會對應至值 0。|  
 |以密碼加密全部 (**EncryptAllWithPassword**)|使用密碼加密整個封裝。 封裝是使用建立或匯出封裝時使用者提供的密碼來加密的。 若要在 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 設計師 中開啟封裝，或是使用 **dtexec** 命令提示公用程式來執行封裝，使用者必須提供封裝密碼。 如果沒有密碼，使用者就無法存取或執行封裝。<br /><br /> 與 **dtutil** 公用程式搭配使用時，這個保護等級會對應至值 3。|  
@@ -98,7 +98,7 @@ ms.locfileid: "35401490"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>若要在 SQL Server 資料工具中設定或變更封裝的保護等級  
   
-1.  在 **設定封裝的保護等級** 主題中，檢閱 [ProtectionLevel](#set_protection)屬性可用的值，並判斷適用於您的封裝的值。  
+1.  在[保護等級](#protection-levels)一節中，檢閱 **ProtectionLevel** 屬性可用的值，並判斷適用於您套件的值。  
   
 2.  在 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]中，開啟包含封裝的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401490"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>在命令提示字元設定或變更封裝的保護等級  
   
-1.  在[設定套件的保護等級](#set_protection)一節中，檢閱 **ProtectionLevel** 屬性可用的值，並判斷適用於您套件的值。  
+1.  在[保護等級](#protection-levels)一節中，檢閱 **ProtectionLevel** 屬性可用的值，並判斷適用於您套件的值。  
   
 2.  在 **dtutil 公用程式** 主題中，檢閱 [Encrypt](../../integration-services/dtutil-utility.md)選項的對應，並判斷適合當做所選 **ProtectionLevel** 屬性值的整數。  
   

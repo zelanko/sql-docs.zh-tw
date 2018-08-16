@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 8c7882dc973f51379483d629a6d02422931de7b1
-ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
+ms.openlocfilehash: 53f49ad6acc123634143eec72b0f9b5b084cd929
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065998"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609657"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>建立或設定可用性群組接聽程式 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.locfileid: "37065998"
   
 ###  <a name="WinPermissions"></a> Windows 權限  
   
-|Permissions|連結|  
+|[權限]|連結|  
 |-----------------|----------|  
 |裝載可用性群組之 WSFC 叢集的叢集物件名稱 (CNO) 必須具有「建立電腦物件」權限。<br /><br /> 在 Active Directory 中，CNO 預設不會明確具有「建立電腦物件」權限，而且可以建立 10 個虛擬電腦物件 (VCO)。 在建立 10 個 VCO 之後，其他 VCO 的建立作業將會失敗。 您可以明確授與權限給 WSFC 叢集的 CNO，以避免這個狀況。 請注意，您已刪除之可用性群組的 VCO 不會自動在 Active Directory 中刪除及算為 10 個 VCO 預設限制，除非您手動加以刪除。<br /><br /> 注意：在某些組織中，安全性原則會禁止將「建立電腦物件」權限授與個別使用者帳戶。|[容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)中的*為叢集安裝人員設定帳戶的步驟*<br /><br /> *容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [預先設置叢集名稱帳戶的步驟](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
 |如果您的組織要求您為接聽程式虛擬網路名稱預先設置電腦帳戶，將需要 **Account Operator** 群組中的成員資格或網域管理員的協助。|*容錯移轉叢集逐步指南：設定 Active Directory 中的帳戶* 中的 [為叢集服務或應用程式預先設置帳戶的步驟](http://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2)。|  
@@ -120,7 +120,7 @@ ms.locfileid: "37065998"
   
 ###  <a name="SqlPermissions"></a> SQL Server 權限  
   
-|工作|Permissions|  
+|工作|[權限]|  
 |----------|-----------------|  
 |建立可用性群組接聽程式|需要 **系統管理員 (sysadmin)** 固定伺服器角色的成員資格，以及 CREATE AVAILABILITY GROUP 伺服器權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  
 |修改現有的可用性群組接聽程式|需要可用性群組的 ALTER AVAILABILITY GROUP 權限、CONTROL AVAILABILITY GROUP 權限、ALTER ANY AVAILABILITY GROUP 權限或 CONTROL SERVER 權限。|  

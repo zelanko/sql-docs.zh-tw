@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f54fce498fb1782c09c8caa24c7459432115cec
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9df60193005f6a83d6894a0718ba473f6b868d69
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451582"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609717"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  這是 Unicode 字元資料的字串。 *character_string* 是 **sysname**，且限制為 128 個字元。 大於 128 個字元的輸入會傳回 NULL。  
   
  '*quote_character*'  
- 這是用來當做分隔符號的單字元字串。 它可以是單引號 ( **'**)、左或右方括號 ( **[]** ) 或雙引號 ( **"** )。 如果未指定 *quote_character*，就會使用方括號。  
+ 這是用來當做分隔符號的單字元字串。 它可以是單引號 ( **'** )、左或右方括弧 ( **[]** )、雙引號 ( **"** )、左或右括弧 ( **()** )、大於或小於符號 ( **><** )、左或右大括弧 ( **{}** ) 或反勾號 ( **\`** )。 如果提供了無法接受的字元，則會傳回 NULL。 如果未指定 *quote_character*，就會使用方括號。  
   
 ## <a name="return-types"></a>傳回類型  
  **nvarchar(258)**  

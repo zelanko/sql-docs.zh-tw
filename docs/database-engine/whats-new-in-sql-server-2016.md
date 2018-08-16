@@ -417,7 +417,7 @@ SQL Server 2016 Standard Edition 現在支援 AlwaysOn 基本可用性群組。 
 
 現在有一組唯讀複本支援讀取意圖的連接要求負載平衡。 先前的行為一律將連接導向路由清單中第一個可用的唯讀複本。 如需詳細資訊，請參閱[設定唯讀複本之間的負載平衡](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)。
 
- 支援自動容錯移轉的複本數目已從&2; 增加到&3;。
+ 支援自動容錯移轉的複本數目已從2; 增加到3;。
 
  AlwaysOn 容錯移轉叢集現在支援群組受管理的服務帳戶。 如需相關資訊，請參閱 [群組受管理的服務帳戶](https://technet.microsoft.com/library/hh831782.aspx)。 在 Windows Server 2012 R2 中，需有一項更新來避免在密碼變更後發生暫時停機。 若要取得此更新，請參閱 [gMSA-based services can't log on after a password change in a Windows Server 2012 R2 domain](https://support.microsoft.com/kb/2998082/)(在 Windows Server 2012 R2 網域中變更密碼後，以 gMSA 為基礎的服務就無法登入)。
 

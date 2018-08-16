@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558878"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662480"
 ---
 # <a name="always-encrypted-database-engine"></a>一律加密 (Database Engine)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ Database Engine 會將每個資料行的加密設定儲存在資料庫中繼資�
 
 如需如何使用特定用戶端驅動程式與 [永遠加密] 來開發應用程式的詳細資訊，請參閱 [永遠加密 (用戶端開發)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)。
 
+## <a name="remarks"></a>Remarks
+
+解密會透過用戶端進行。 這表示使用 Always Encrypted 時，僅出現在伺服器端的某些動作將無法運作。 
+
+下列 update 範例嘗試將資料從加密的資料行移至未加密的資料行，而不傳回結果集給用戶端： 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+如果 SSN 是使用 Always Encrypted 加密的資料行，上述 update 陳述式會失敗並出現類似以下的錯誤：
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+若要成功更新資料行，請執行下列動作：
+
+1. 從 SSN 資料行中選取資料，並將它儲存為應用程式中的結果集。 這可讓應用程式 (用戶端「驅動程式」) 將資料行解密。
+2. 將結果集中的資料插入 SQL Server。 
+
+ >[!IMPORTANT]
+ > 在此案例中，資料會在傳回伺服器時予以解密，因為目的地資料行是不接受加密資料的一般 varchar。 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>選擇決定性加密或隨機加密  
  Database Engine 絕不會處理儲存於加密資料行中的純文字資料，但仍可根據資料行的加密類型，支援某些加密資料的查詢。 [永遠加密] 支援兩種類型的加密：隨機加密和決定性加密。  

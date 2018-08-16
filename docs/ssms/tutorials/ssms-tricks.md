@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
-ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
+ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39228454"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020672"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>教學課程：使用 SSMS 的其他祕訣與訣竅
 本教學課程提供 SQL Server Management Studio (SSMS) 使用上的一些其他祕訣。 本文示範如何： 
@@ -189,7 +189,7 @@ ms.locfileid: "39228454"
     ![透過查詢尋找錯誤記錄檔](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>若您無法連線到 SQL Server，尋找錯誤記錄檔的位置
-視您的組態設定而定。SQL Server 錯誤記錄路徑可能會不同。 您可以在 SQL Server 組態管理員內的啟動參數中找到錯誤記錄位置的路徑。 依照下面的步驟尋找指出 SQL Server 錯誤記錄位置的相關啟動參數。 *您的路徑可能與下面的路徑不同*。 
+視您的組態設定而定。SQL Server 錯誤記錄路徑可能會不同。 您可以在 SQL Server 組態管理員內的啟動參數中找到錯誤記錄位置的路徑。 依照下面的步驟尋找指出 SQL Server 錯誤記錄檔位置的相關啟動參數。 *您的路徑可能與下面的路徑不同*。 
 
 1. 開啟 [SQL Server 設定管理員]。 
 2. 展開 [服務]。
@@ -210,7 +210,7 @@ ms.locfileid: "39228454"
 您有一些選項可用來在連線到 SQL Server 之前和之後尋找您的 SQL Server 名稱。  
 
 ### <a name="before-you-connect-to-sql-server"></a>連線到 SQL Server 之前
-1. 請遵循下列步驟找出[磁碟上的 SQL Server 錯誤記錄檔](#finding-your-error-log-if-you-cannot-connect-to-sql)。 
+1. 請遵循下列步驟找出[磁碟上的 SQL Server 錯誤記錄檔](#finding-your-error-log-if-you-cannot-connect-to-sql)。 您的路徑可能與下圖中的路徑不同。
 2. 在 [記事本] 中開啟 errorlog.log 檔案。  
 3. 搜尋文字「伺服器名稱是」。
     

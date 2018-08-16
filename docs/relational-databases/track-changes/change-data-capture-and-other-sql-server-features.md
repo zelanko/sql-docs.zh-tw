@@ -18,12 +18,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29c9a2ee3c323c9689e7ece0b2b1318a7051321e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d973be20ee14975fce34e7712d44ea8338931fa
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011735"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39661451"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>異動資料擷取和其他 SQL Server 功能
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,11 @@ ms.locfileid: "33011735"
   
 -   [異動複寫](#TransReplication)  
   
--   [還原或附加啟用變更資料擷取的資料庫](#RestoreOrAttach)  
+-   [還原或附加啟用變更資料擷取的資料庫](#RestoreOrAttach)
+
+-   [自主資料庫](#Contained)
   
-##  <a name="ChangeTracking"></a> Change Tracking  
+##  <a name="ChangeTracking"></a> 變更追蹤  
  您可以在同一個資料庫上啟用變更資料擷取和 [變更追蹤](../../relational-databases/track-changes/about-change-tracking-sql-server.md) 。 不需要進行任何特殊考量。 如需詳細資訊，請參閱[使用變更追蹤 &#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)。  
   
 ##  <a name="DatabaseMirroring"></a> 資料庫鏡像  
@@ -79,6 +81,9 @@ ms.locfileid: "33011735"
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   
  您可以使用 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) ，從還原或附加的資料庫中移除變更資料擷取。  
+  
+##  <a name="Contained"></a> 自主資料庫  
+ [自主資料庫](../../relational-databases/databases/contained-databases.md)不支援異動資料擷取。
   
 ## <a name="change-data-capture-and-always-on"></a>變更資料擷取和 AlwaysON  
  當您使用 AlwaysON 時，應該在次要複寫上完成變更列舉以減少主要複寫的磁碟負載。  

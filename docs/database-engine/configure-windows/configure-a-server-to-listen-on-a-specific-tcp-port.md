@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865363"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609667"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>將伺服器設定為在特定 TCP 連接埠上接聽
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,17 @@ ms.locfileid: "32865363"
     > [!NOTE]  
     >  如果您無法開啟 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 組態管理員，請參閱 [SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md)。  
   
-2.  在 [TCP/IP 內容] 對話方塊的 [IP 位址] 索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 同時會出現額外的 IP 位址代表電腦上的每個 IP 位址。 (您可能會看到 IP 第 4 版和 IP 第 6 版位址。)以滑鼠右鍵按一下每個位址，然後按一下 [屬性] 以識別要設定的 IP 位址。  
+2.  在 [TCP/IP 內容] 對話方塊的 [IP 位址] 索引標籤上會出現數個 IP 位址，這些 IP 位址的格式是 **IP1**、**IP2** 到 **IPAll**。 其中一個是供回送介面卡的 IP 位址 127.0.0.1 使用。 同時會出現額外的 IP 位址代表電腦上的每個 IP 位址。 (您可能會看到 IP 第 4 版和 IP 第 6 版位址)。以滑鼠右鍵按一下每個位址，然後按一下 [屬性] 以識別要設定的 IP 位址。  
   
 3.  如果 **[TCP 動態通訊埠]** 對話方塊包含 **0**，代表 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 正在接聽動態通訊埠，請將 0 刪除。  
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  在 [IPn 內容] 區域方塊的 [TCP 通訊埠] 方塊中，鍵入要此 IP 位址接聽的通訊埠編號，然後按一下 [確定]。  
+4.  在 [IPn 內容] 區域方塊的 [TCP 通訊埠] 方塊中，鍵入要此 IP 位址接聽的通訊埠編號，然後按一下 [確定]。 請以逗號分隔來指定多個連接埠。
+
+    > [!NOTE] 
+    > 如果 [通訊協定] 索引標籤上的 [全部接聽] 設定設為 [是]，則只會使用 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 值，並會完整略過個別 **IP***n* 區段。 如果 [全部接聽] 設定設為 [否]，則會略過 [IPAll] 區段下的 [TCP 連接埠] 和 [TCP 動態連接埠] 設定，並改用個別 **IP***n* 區段上的 [TCP 連接埠]、[TCP 動態連接埠] 和 [啟用]。
+    > 每個 **IP***n* 區段都有 [啟用] 設定，其預設值為 [否]，這會導致 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 略過此 IP 位址，即使已定義連接埠也一樣。  
   
 5.  在主控台窗格中，按一下 **[SQL Server 服務]**。  
   

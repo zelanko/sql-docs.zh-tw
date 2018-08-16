@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2bae9d48b20109e129eb159f5d3d9e3e6c0651e5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 52ef9494ea2c0b4aeceab2faca8c6bce3107959e
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564722"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609727"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>資料行存放區索引 - 設計指導
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -178,7 +178,7 @@ ms.locfileid: "39564722"
 |建立資料表作為資料行存放區。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以建立資料表作為叢集資料行存放區索引。 您不需要先建立資料列存放區資料表，再將它轉換成資料行存放區。|  
 |建立具有資料行存放區索引的記憶體資料表。|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，您可以建立具有資料行存放區索引的記憶體最佳化資料表。 建立資料表之後，也可以使用 ALTER TABLE ADD INDEX 語法來加入資料行存放區索引。|  
 |將資料列存放區資料表轉換成資料行存放區。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|將現有的堆積或二進位樹狀目錄轉換成資料行存放區。 範例示範如何在執行這項轉換時處理現有的索引及索引名稱。|  
-|將資料行存放區資料表轉換成資料列存放區。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|這通常並非必要，但有時您需要執行這項轉換。 範例示範如何將資料行存放區轉換成堆積或叢集索引。|  
+|將資料行存放區資料表轉換成資料列存放區。|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41; 或 DROP INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)|這通常並非必要，但有時您需要執行這項轉換。 範例示範如何將資料行存放區轉換成堆積或叢集索引。|  
 |在資料列存放區資料表上建立資料行存放區索引。|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|資料列存放區資料表可以有一個資料行存放區索引。  從 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]開始，資料行存放區索引可以有一個篩選條件。 範例示範基本語法。|  
 |為作業分析建立高效能的索引。|[開始使用資料行存放區進行即時作業分析](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|描述如何建立互補資料行存放區和 B 型樹狀結構索引，讓 OLTP 查詢使用 B 型樹狀結構索引，而分析查詢使用資料行存放區索引。|  
 |為資料倉儲建立高效能的資料行存放區索引。|[資料行存放區索引 - 資料倉儲](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|描述如何在資料行存放區資料表上使用 B 型樹狀結構索引，建立高效能的資料倉儲查詢。|  

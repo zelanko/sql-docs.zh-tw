@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f69793bbe07633e434f3f8b2776b1d75067bce75
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: 610bb894ca3cf2bc974f980c6879351d70cf6bee
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137927"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609808"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 從 Excel 匯入資料，或將資料匯出至 Excel
 
@@ -30,7 +30,7 @@ ms.locfileid: "37137927"
 
 2.  您需要的[檔案](#files-you-need)。
 
-3.  您必須提供的連線資訊，以及當您將 Excel 作為來源或目標載入資料必須設定的設定。
+3.  當您使用 SSIS 從 Excel 載入資料或將資料載入 Excel 時，您必須提供的連線資訊，以及您必須設定的設定。
     -   [指定 Excel](#specify-excel) 作為資料來源。
     -   提供 [Excel 檔案名稱和路徑](#excel-file)。
     -   選取 [Excel 版本](#excel-version)。
@@ -44,15 +44,15 @@ ms.locfileid: "37137927"
 
 ## <a name="tools"></a> 您可以使用的工具
 
-您可以使用下列其中一種工具，從 Excel 匯入資料或將資料匯出至 Excel：
+您可以使用下列其中一種工具，透過 SSIS 從 Excel 匯入資料或將資料匯出至 Excel：
 
--   **SQL Server Integration Services (SSIS)**。 使用 Excel 連接管理員，建立使用 Excel 來源或 Excel 目的地的 SSIS 套件。 (本文不會說明如何設計 SSIS 套件。)
+-   **SQL Server Integration Services (SSIS)**。 使用 Excel 連接管理員，建立使用 Excel 來源或 Excel 目的地的 SSIS 套件。 (本文不會說明如何建立 SSIS 套件)。
 
 -   SSIS 上建置的 [SQL Server 匯入和匯出精靈]。 如需詳細資訊，請參閱[使用 SQL Server 匯入和匯出精靈來匯入或匯出資料](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)與[連線至 Excel 資料來源 (SQL Server 匯入和匯出精靈)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)。
 
 ## <a name="files-you-need"></a> 取得連線至 Excel 所需的檔案
 
-您可能必須下載適用於 Excel 的連線元件，如果它們尚未安裝的話，然後才能從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
+您可能必須下載適用於 Excel 的連線元件 (如果它們尚未安裝的話)，然後才能使用 SSIS 從 Excel 匯入資料，或將資料匯出至 Excel。 預設不會安裝適用於 Excel 的連線元件。
 
 在這裡下載適用於 Excel 的連線元件最新版本：[Microsoft Access Database Engine 2016 可轉散發套件](https://www.microsoft.com/download/details.aspx?id=54920)。 最新版的元件可以開啟舊版 Excel 所建立的檔案。
 

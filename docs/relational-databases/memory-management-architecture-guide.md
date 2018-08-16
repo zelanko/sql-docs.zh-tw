@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 281eb9435fc3b251b9dfbc3d723a10f1df652f66
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39541718"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008890"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "39541718"
   
 虛擬記憶體系統會允許超額認可實體記憶體，所以虛擬記憶體與實體記憶體的比率可超過 1:1。 因此，大型程式可以在各種實體記憶體組態的電腦上執行。 然而，使用的虛擬記憶體若遠大於所有處理序的平均工作集組合，可能會導致效能降低。 
 
-## <a name="includessnoversionincludesssnoversion-mdmd-memory-architecture"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 記憶體架構
+## <a name="sql-server-memory-architecture"></a>SQL Server 記憶體架構
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 會視需要動態地取得和釋放記憶體。 雖然有指定記憶體的選項可供選擇而且在某些環境下也是必要的，但是系統管理員通常不需要指定應配置多少記憶體給 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]。
 

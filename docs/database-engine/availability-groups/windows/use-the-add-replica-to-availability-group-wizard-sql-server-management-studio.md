@@ -18,12 +18,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cd49e3ee7241a25531b6a2efcefe891b5993e8b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21316e480ddaa3ea7f96ffdf530ef61edbbda2c1
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771114"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609677"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>使用 [將複本加入至可用性群組] 精靈 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34771114"
     |**端點**|使用此索引標籤來驗證每個新次要複本的現有資料庫鏡像端點 (如果有的話)。 如果在其服務帳戶使用 Windows 驗證的伺服器執行個體上缺少此端點，精靈會嘗試自動建立該端點。<br /><br /> <br /><br /> 注意：如果有任何伺服器執行個體在非網域使用者帳戶之下執行，您需要對伺服器執行個體進行手動變更，然後才可以在精靈中繼續執行。 如需詳細資訊，請參閱本主題前面的＜ [必要條件](#Prerequisites)＞。|  
     |**備份喜好設定**|使用此索引標籤可指定整個可用性群組的備份喜好設定，如果您希望修改目前設定，可指定個別可用性複本的備份優先權。|  
   
-6.  如果選取的複本包含具有資料庫主要金鑰的資料庫，請在 [輸入密碼] 頁面上輸入資料庫主要金鑰的密碼。 [狀態] 資料行會針對具有資料庫主要金鑰的資料庫指出 [需要密碼]。 輸入密碼之後，請按一下 [重新整理]。 如果您已正確輸入密碼，[狀態] 資料行會指出 [已輸入密碼]。  
+6.  如果選取的複本包含具有資料庫主要金鑰的資料庫，請在 [密碼] 資料行中輸入資料庫主要金鑰的密碼。 [狀態] 資料行會針對具有資料庫主要金鑰的資料庫指出 [需要密碼]。 在 [密碼] 資料行中輸入正確的密碼之前，[下一步] 會呈現灰色。 輸入密碼之後，請按一下 [重新整理]。 如果您已正確輸入密碼，[狀態] 資料行會指出 [已輸入密碼]，而且 [下一步] 會變成可用。  
   
 7.  在 **[選取初始資料同步處理]** 頁面上，選擇您要如何建立新的次要資料庫並將它聯結至可用性群組。 選擇下列其中一個選項：  
   
