@@ -68,7 +68,7 @@ ms.locfileid: "39548648"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     中的多個  
+    或  
   
     ```  
     sqlcmd -S .\<InstanceName>  
