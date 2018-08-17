@@ -32,9 +32,9 @@ ms.locfileid: "39561972"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會公開**itabledefinition:: Dropcolumn**函式。 這可讓取用者移除的資料行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料表。  
   
- 取用者指定為 Unicode 字元字串中的資料表名稱*pwszName*隸屬*uName*聯集*pTableID*參數。 *EKind*隸屬*pTableID*必須是 DBKIND_NAME。  
+ 取用者指定為 Unicode 字元字串中的資料表名稱 *pwszName* 隸屬 *uName* 聯集 *pTableID* 參數。 *EKind* 隸屬 *pTableID* 必須是 DBKIND_NAME。  
   
- 取用者表示中的資料行名稱*pwszName*隸屬*uName*聯集*Ekind*參數。 資料行名稱是一個 Unicode 字元字串。 *EKind*隸屬*Ekind*必須是 DBKIND_NAME。  
+ 取用者表示中的資料行名稱 *pwszName* 隸屬 *uName* 聯集 *Ekind* 參數。 資料行名稱是一個 Unicode 字元字串。 *EKind* 隸屬 *Ekind* 必須是 DBKIND_NAME。  
   
 ## <a name="example"></a>範例  
   
