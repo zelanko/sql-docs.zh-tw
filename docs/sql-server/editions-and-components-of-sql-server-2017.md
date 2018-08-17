@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e93dec74b1e647fac64e7982b11e51635163193
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041096"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40184684"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017 的版本及支援功能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -329,7 +329,7 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本支援的 SQL Server Integration Services (SSIS) 功能相關資訊，請參閱 [SQL Server 版本支援的 Integration Services 功能](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)。
 
 ##  <a name="MDS"></a> Master Data Services  
- 如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 和 Data Quality Services 功能的資訊，請參閱 [SQL Server 版本支援的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)。 
+ 如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 和 Data Quality Services 功能的資訊，請參閱 [SQL Server 版本支援的 Master Data Services 和 Data Quality Services 功能](../master-data-services/master-data-services-and-data-quality-services-features-support.md)。 
 
   
 ##  <a name="DW"></a> 資料倉儲  
@@ -346,31 +346,31 @@ Developer edition 會持續支援的只有 1 個用戶端[SQL Server Distributed
 
 ##  <a name="SSAS"></a> Analysis Services  
   
-如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。 
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。 
   
 ##  <a name="BIMD"></a> BI 語意模型 (多維度)  
   
-如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
    
 ##  <a name="BIT"></a> BI 語意模型 (表格式)  
   
-如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 所支援之 Analysis Services 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之 Power Pivot for SharePoint 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之 Power Pivot for SharePoint 功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="DM"></a> 資料採礦  
   
-如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之資料採礦功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之資料採礦功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="SSRS"></a> Reporting Services  
   
-如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之 Reporting Services 功能的資訊，請參閱 [SQL Server 版本支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之 Reporting Services 功能的資訊，請參閱 [SQL Server 版本支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
 
 ##  <a name="BIC"></a> 商業智慧用戶端  
 
-如需 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 版本所支援之商業智慧用戶端功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)或 [SQL Server 版本支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
+如需 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 版本所支援之商業智慧用戶端功能的資訊，請參閱 [SQL Server 版本支援的 Analysis Services 功能](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)或 [SQL Server 版本支援的 Reporting Services 功能](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)。
   
 ##  <a name="SLS"></a> 空間和定位服務  
   

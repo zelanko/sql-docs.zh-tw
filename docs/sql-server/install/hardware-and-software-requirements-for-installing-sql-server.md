@@ -48,21 +48,21 @@ caps.latest.revision: 333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e9788b44bb2f95082914875b14a512f05d584b9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 57afb99a77a80946ed650045ce40c1382fa06c3d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982060"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40184691"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>安裝 SQL Server 2008 R2 的硬體和軟體需求
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 本文章列出在 Windows 作業系統上安裝和執行 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 的最低軟硬體需求。 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 推出 Linux 的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 支援。 如需資訊，請參閱[ Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] 的硬體與軟體需求](../../linux/sql-server-linux-setup.md#system)。 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] 推出 Linux 的 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 支援。 如需資訊，請參閱[ Linux 上 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的硬體與軟體需求](../../linux/sql-server-linux-setup.md#system)。 
 
-> 本文章適用於 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本。 如需舊版 SQL Server 的相關內容，請參閱[安裝 SQL Server 2014 的硬體和軟體需求](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)。 
+> 本文章適用於 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 和更新版本。 如需舊版 SQL Server 的相關內容，請參閱[安裝 SQL Server 2014 的硬體和軟體需求](hardware-and-software-requirements-for-installing-sql-server.md)。 
   
 **現在就試試看：**  
   

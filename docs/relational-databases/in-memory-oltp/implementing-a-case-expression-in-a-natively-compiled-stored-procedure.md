@@ -16,17 +16,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4547d93c5cc85c47c641e474135488b8281b756a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: d540c39fc9e1f60d91ff500a3fbd1ff6494ba697
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535118"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40184688"
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>在原生編譯的預存程序中實作 CASE 運算式
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-**適用於：**[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull_md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起)
+**適用於：**[!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] 和 SQL Server (從 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 起)
 
 原生編譯的 T-SQL 模組可支援 CASE 運算式。 下列範例示範一種在查詢中使用 CASE 運算式的方式。 
 
