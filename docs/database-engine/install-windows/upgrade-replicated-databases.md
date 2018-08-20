@@ -18,13 +18,14 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 caps.latest.revision: 74
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 3020808b374682a06db059b9bf94138dba6308e5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5da8c0ad77fc93e9eba34a028b242cc0d1936247
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771154"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175152"
 ---
 # <a name="upgrade-replicated-databases"></a>升級複寫的資料庫
 

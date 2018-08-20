@@ -31,12 +31,12 @@ caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 298bc4c6f485f89b24e43536644dcca02d22dbf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c2e7b3ab7707747014ebf25f063cc3e3574b4d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932413"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175164"
 ---
 # <a name="use-the-copy-database-wizard"></a>使用複製資料庫精靈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -404,7 +404,7 @@ ms.locfileid: "32932413"
   
 ## <a name="more-information"></a>詳細資訊！ 
  [使用卸離與附加來升級資料庫 &#40;Transact-SQL&#41;](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)   
- [建立 SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)  
+ [建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   
   
 
