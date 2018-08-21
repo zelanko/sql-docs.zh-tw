@@ -77,7 +77,7 @@ ms.locfileid: "38979090"
   
 2.  以滑鼠右鍵按一下 [SQL Server Agent]，然後選取 [屬性]。  
   
-3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊，於 [一般] 頁面上的 [錯誤記錄檔] 底下，選取 [Include execution trace messages] (包含執行追蹤訊息) 核取方塊。  
+3.  在 [SQL Server Agent 屬性 - <伺服器名稱>] 對話方塊，於 [一般] 頁面上的 [錯誤記錄檔] 底下，選取 [Include execution trace messages] \(包含執行追蹤訊息) 核取方塊。  
   
 4.  按一下 [確定] 。  
   
