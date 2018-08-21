@@ -1,7 +1,7 @@
 ---
 title: Azure Data Lake Store 來源 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409300"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175121"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store 來源
   **Azure Data Lake Store 來源** 元件可讓 SSIS 套件從 Azure Data Lake Store 讀取資料。 支援的檔案格式為文字和 Avro。
@@ -44,3 +44,7 @@ ms.locfileid: "35409300"
         檔案格式若為文字，則您必須指定 [資料行分隔符號字元]  值。 若檔案中第一個資料列包含資料行名稱，請選取 [第一個資料列的資料行名稱]  。  
   
 3.  指定連接資訊後，請切換至 [資料行]  頁面，將來源資料行對應至 SSIS 資料流程的目的地資料行。   
+
+## <a name="text-qualifier"></a>文字定位項
+
+**Azure Data Lake Store 來源**不支援文字限定詞。 若必須指定文字限定詞，才能正確處理您的檔案，請考慮將檔案下載到您的本機電腦，然後使用**一般檔案來源**處理這些檔案。 「一般檔案來源」可讓您指定文字限定詞。 如需詳細資訊，請參閱[ 一般檔案來源](flat-file-source.md)。

@@ -13,12 +13,12 @@ caps.latest.revision: 9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cf0814bacd6c47d86f21709d24acaf2af742f0d5
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bf0b1b5a0455fcc35e35614b5abbd2e350aa108e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768654"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175133"
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>基本可用性群組 (AlwaysOn 可用性群組)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "34768654"
 ## <a name="configuration"></a>組態  
  AlwaysOn 基本可用性群組可在任兩部 SQL Server 2016 Standard Edition 伺服器上建立。 當您建立基本可用性群組時，您必須在建立期間指定兩個複本。  
   
- 若要建立基本可用性群組，請使用 **CREATE AVAILABILITY GROUP** Transact-SQL 命令，並指定 **WITH BASIC** 選項 (預設值為 **ADVANCED**)。 如需詳細資訊，請參閱 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)。 目前沒有在 SQL Server Management Studio 中建立基本可用性群組的 UI 支援。  
+ 若要建立基本可用性群組，請使用 **CREATE AVAILABILITY GROUP** Transact-SQL 命令，並指定 **WITH BASIC** 選項 (預設值為 **ADVANCED**)。 您也可以使用 SQL Server Management Studio 17.8 版或更新版本的 UI，建立基本的可用性群組。 如需詳細資訊，請參閱 [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)。 
   
 > [!NOTE]  
 >  基本可用性群組的限制會套用至指定 **WITH BASIC** 的 **CREATE AVAILABILITY GROUP** 命令。 例如，如果您嘗試建立允許讀取權限的基本可用性群組，就會收到錯誤。 其他限制也會以相同方式套用。 如需詳細資訊，請參閱本主題的＜限制＞一節。  
