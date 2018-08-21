@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543068"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175113"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>使用 SQL Server Management Studio 設定永遠加密
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>當資料庫或 DACPAC 使用永遠加密時，執行 DAC 升級作業
 
-在具有包含加密資料行之結構描述的 DACPAC 檔案和資料庫上，支援[DAC 作業](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 。 特殊考量適用於 DAC 升級作業 - 請參閱 [升級資料層應用程式](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) 的有關如何使用各種工具 (包含 SSMS) 執行 DAC 升級作業。 
+在具有包含加密資料行之結構描述的 DACPAC 檔案和資料庫上，支援[DAC 作業](../../data-tier-applications/data-tier-applications.md) 。 特殊考量適用於 DAC 升級作業 - 請參閱 [升級資料層應用程式](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) 的有關如何使用各種工具 (包含 SSMS) 執行 DAC 升級作業。 
 
 如果您使用 DACPAC 升級資料庫，而且 DACPAC 或目標資料庫包含加密資料行，則升級作業會在符合下列所有條件時觸發資料加密作業︰
 - 資料庫包含具有資料的資料行。
@@ -418,7 +418,7 @@ SQL Server Management Studio 將會發出 [ALTER COLUMN ENCRYPTION KEY (Transact
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>使用 BACPAC 移轉具有加密資料行的資料庫
 
-當您匯出資料庫時，加密資料行中所儲存的所有資料都會擷取並放入產生的 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) (加密形式)。 產生的 BACPAC 也會包含永遠加密金鑰的中繼資料。
+當您匯出資料庫時，加密資料行中所儲存的所有資料都會擷取並放入產生的 [BACPAC](../../data-tier-applications/data-tier-applications.md) (加密形式)。 產生的 BACPAC 也會包含永遠加密金鑰的中繼資料。
 
 當您將 BACPAC 匯入資料庫中時，會將 BACPAC 中的加密資料載入資料庫中，並且重新建立永遠加密金鑰中繼資料。
 

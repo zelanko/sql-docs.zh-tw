@@ -16,19 +16,20 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 6ea964d0048b410dd5f555759c4a73f547837be9
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 747584b0e23f3c187a5da48012ff4d1a4d60d625
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771087"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175129"
 ---
 # <a name="install-sql-server"></a>安裝 SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
  
- > 如需舊版 SQL Server 的相關內容，請參閱[安裝 SQL Server 2014](https://msdn.microsoft.com/library/bb500395(SQL.120).aspx)。
+ > 如需舊版 SQL Server 的相關內容，請參閱[安裝 SQL Server 2014](install-sql-server.md)。
 
  從 [!INCLUDE[sssql15](../../includes/sssql15-md.md)] 開始，[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 才可以用作 64 位元應用程式。 下列重要詳細資料說明如何取得 SQL Server 及其安裝方式。
 
@@ -51,7 +52,7 @@ ms.locfileid: "34771087"
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 安裝方式
  
-|Title|描述|  
+|Title|Description|  
 |-----------|-----------------|  
 |[在 Server Core 上安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]](../../database-engine/install-windows/install-sql-server-on-server-core.md)|檢閱本文以了解如何在 Windows Server Core 上安裝 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]。|  
 |[檢查 System Configuration Checker 的參數](../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)|討論系統組態檢查 (SCC) 的功能。|  
@@ -69,7 +70,7 @@ ms.locfileid: "34771087"
   
 ## <a name="how-to-install-individual-components"></a>如何安裝個別的元件  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[安裝 SQL Server Database Engine](../../database-engine/install-windows/install-sql-server-database-engine.md)|描述如何安裝及設定 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]。|  
 |[安裝 SQL Server 複寫](../../database-engine/install-windows/install-sql-server-replication.md)|描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replication。|  
@@ -80,7 +81,7 @@ ms.locfileid: "34771087"
 
 ## <a name="how-to-configure-sql-server"></a>如何設定 SQL Server  
   
-|主題|描述|  
+|主題|Description|  
 |-----------|-----------------|  
 |[設定 Windows 防火牆以允許 SQL Server 存取](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|本文提供防火牆設定及如何設定 Windows 防火牆的概觀。|  
 |[設定多重主目錄電腦進行 SQL Server 存取](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|本文描述如何設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和具有進階安全性的 Windows 防火牆，以便在多重主目錄環境中提供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的網路連線。|  

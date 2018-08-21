@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931013"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175140"
 ---
 # <a name="database-mail"></a>Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "32931013"
   
  您可以設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，在下列時機將電子郵件訊息傳送給預先定義的操作員：  
   
--   觸發警示時。 經過設定後，警示可以為發生的特定事件傳送電子郵件通知。 例如，將警示設成在發生必須立即處理的資料庫事件或作業系統狀況時通知操作員。 如需設定警示的詳細資訊，請參閱 [警示](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)。  
+-   觸發警示時。 經過設定後，警示可以為發生的特定事件傳送電子郵件通知。 例如，將警示設成在發生必須立即處理的資料庫事件或作業系統狀況時通知操作員。 如需設定警示的詳細資訊，請參閱 [警示](../../ssms/agent/alerts.md)。  
   
 -   排程工作 (如資料庫備份或複寫事件) 成功或失敗。 例如，可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Mail，通知操作員在該月結束時的處理期間，是否發生錯誤。  
   

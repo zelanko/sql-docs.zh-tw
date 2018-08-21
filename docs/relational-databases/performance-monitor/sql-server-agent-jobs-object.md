@@ -19,12 +19,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ccbf65c2b1d297b8fd36ef75f84a6a8c09b21175
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 470355f14c589d5ef62d9de2493d64ef4b8f48aa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950493"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175124"
 ---
 # <a name="sql-server-agent-jobs-object"></a>SQL Server 代理程式、作業物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32950493"
   
  下表包含 **SQLAgent:Jobs** 計數器。  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |**Active Jobs**|此計數器報告目前執行中的作業數目。|  
 |**Failed jobs**|此計數器報告因失敗而結束的作業數目。|  
@@ -43,7 +43,7 @@ ms.locfileid: "32950493"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|執行個體|描述|  
+|執行個體|Description|  
 |--------------|-----------------|  
 |**_Total**|所有作業的資訊。|  
 |**警示**|由警示啟動之作業的資訊。|  
@@ -51,8 +51,8 @@ ms.locfileid: "32950493"
 |**排程**|由排程啟動之作業的資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
- [實作作業](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [使用效能物件](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [實作作業](../../ssms/agent/implement-jobs.md)   
+ [使用效能物件](../../ssms/agent/use-performance-objects.md)   
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

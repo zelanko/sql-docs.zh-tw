@@ -20,13 +20,14 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 54
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: c25b54f30a9e8c0ce66c1a833aef4c5daf35e6b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7622d20cab1ec63e7c0d324d71676cfc9d851319
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050236"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175157"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>檢視與讀取 SQL Server 安裝程式記錄檔
 

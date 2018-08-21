@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407950"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175137"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>逐步解說︰發行 SSIS 封裝做為 SQL 檢視
   本逐步解說提供詳細的步驟來發行 SSIS 封裝，以做為 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫中的 SQL 檢視。  
@@ -130,7 +130,7 @@ ms.locfileid: "35407950"
   
         1.  指定您想要在其中建立檢視的資料庫結構描述 ([結構描述] 欄位)。  
   
-        2.  指定在透過網路傳送資料之前，是否應先加密資料 ([加密] 欄位)。 如需此設定和 TrustServerCertificate 設定的詳細資訊，請參閱 [使用加密而不需驗證](http://msdn.microsoft.com/library/ms131691.aspx) 主題。  
+        2.  指定在透過網路傳送資料之前，是否應先加密資料 ([加密] 欄位)。 如需此設定和 TrustServerCertificate 設定的詳細資訊，請參閱 [使用加密而不需驗證](../../relational-databases/native-client/features/using-encryption-without-validation.md) 主題。  
   
         3.  指定在啟用加密設定時，是否可以使用自我簽署的伺服器憑證 ([TrustServerCertificate] 欄位)。  
   
@@ -213,7 +213,7 @@ GO
   
  在執行階段中執行檢視時，檢視中定義的連結伺服器查詢會啟動查詢中指定的 SSIS 封裝，並接收封裝輸出做為表格式結果集。  
   
-1.  建立檢視之前，在新的查詢視窗中輸入並執行下列查詢。 OPENQUERY 是 SQL Server 所支援的資料列集函式。 它會使用與連結的伺服器相關聯的 OLE DB 提供者，在指定的連結伺服器上執行指定的傳遞查詢。 您可以依照資料表名稱的相同方式，在查詢的 FROM 子句中參考 OPENQUERY。 如需詳細資訊，請參閱 [MSDN Library 上的 OPENQUERY 文件](http://msdn.microsoft.com/library/ms188427.aspx) 。  
+1.  建立檢視之前，在新的查詢視窗中輸入並執行下列查詢。 OPENQUERY 是 SQL Server 所支援的資料列集函式。 它會使用與連結的伺服器相關聯的 OLE DB 提供者，在指定的連結伺服器上執行指定的傳遞查詢。 您可以依照資料表名稱的相同方式，在查詢的 FROM 子句中參考 OPENQUERY。 如需詳細資訊，請參閱 [MSDN Library 上的 OPENQUERY 文件](../../t-sql/functions/openquery-transact-sql.md) 。  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

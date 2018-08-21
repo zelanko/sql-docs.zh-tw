@@ -18,13 +18,14 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 781bebda84fe0d4e48414fb327e45fe837ed9356
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 228202a91e14b7735cd0fba1f6eb60dad8832a7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771534"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175149"
 ---
 # <a name="sql-server-installation"></a>SQL Server 安裝
 
@@ -80,7 +81,7 @@ ms.locfileid: "34771534"
 [安裝具有 SharePoint 的 SQL Server BI 功能 &#40;PowerPivot 和 Reporting Services&#41;](http://msdn.microsoft.com/library/3166107c-30c2-468e-bb1b-bb42b79b37c3)  
  本節說明如何在 SharePoint 環境中安裝 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能， 同時也會列出特定版本 SharePoint 能使用的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 功能。 除此之外還會提供 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 及 SharePoint 模式下的 Reporting Services 安裝程序。  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 安裝新的範例資料庫， [Wide World Importers](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)。 
+![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 安裝新的範例資料庫， [Wide World Importers](../../sample/world-wide-importers/wide-world-importers-documentation.md)。 
   
 [其他 SQL Server 範例和範例資料庫](http://sqlserversamples.codeplex.com/)  
  描述如何安裝及設定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 範例與範例資料庫。  
