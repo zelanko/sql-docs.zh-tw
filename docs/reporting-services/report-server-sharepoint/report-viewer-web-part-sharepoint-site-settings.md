@@ -33,7 +33,7 @@ ms.locfileid: "38035146"
 
     ![從齒輪圖示開啟網站設定。](media/sharepoint-site-settings.png)
 
-2. 在 [Reporting Services] 網站設定群組中，按一下 [Report Viewer Web Part Settings] (報表檢視器網頁組件設定)。
+2. 在 [Reporting Services] 網站設定群組中，按一下 [Report Viewer Web Part Settings]\ (報表檢視器網頁組件設定)。
 
     > [!NOTE]
     > 您也可以直接巡覽至 `<site>/_layouts/15/ReportViewerWebPart/ReportViewerWebPartSettings.aspx` 來到達網站設定

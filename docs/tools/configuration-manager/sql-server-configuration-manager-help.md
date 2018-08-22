@@ -18,7 +18,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 064d6fb77dad0dd906c8783ebe82f99c48b14f2f
 ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 07/11/2018
 ms.locfileid: "37979974"
@@ -73,7 +73,7 @@ ms.locfileid: "37979974"
   
 #### <a name="to-open-sql-server-configuration-manager"></a>若要開啟 SQL Server 組態管理員  
   
--   在 [開始] 功能表上，依序指向 [所有程式]、[Microsoft SQL Server] (版本) 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
+-   在 [開始] 功能表上，依序指向 [所有程式]、[Microsoft SQL Server]\ (版本) 和 [組態工具]，然後按一下 [SQL Server 組態管理員]。  
   
   
  **使用 [!INCLUDE[win8](../../includes/win8-md.md)] 存取 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定管理員**  
