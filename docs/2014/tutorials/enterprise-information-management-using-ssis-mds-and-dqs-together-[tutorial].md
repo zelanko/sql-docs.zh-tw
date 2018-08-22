@@ -16,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bf4106c531dbb1f386f8c1b6745f773bbe3c0f4b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2a31abaefd1fe55e3df24fab24a35ed4af336ac
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189655"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396245"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>使用 SSIS、MDS 和 DQS 一起管理企業資訊 [教學課程]
   管理企業的資訊通常牽涉到整合整個企業及外部的資料、清理資料、比對資料來移除任何重複項、標準化資料、充實資料，使資料符合法律和規範要求，然後將資料儲存在集中位置，並具有所有必要的安全性設定。  
@@ -38,7 +38,7 @@ ms.locfileid: "37189655"
   
  SQL Server Data Quality Services (DQS) 可讓您清理、比對、標準化及充實資料，好讓您可以針對商業智慧、資料倉儲和交易處理工作負載傳遞可靠的資訊。 請參閱[Data Quality Services 簡介](http://msdn.microsoft.com/library/ff877917.aspx)DQS 及 DQS 如何回應需求的商務需求的主題。  
   
- SQL Server Master Data Services (MDS) 提供一個資料中樞，可確保資訊的完整性和資料的一致性在不同應用程式之間都保持不變。 請參閱[Master Data Services 概觀](http://msdn.microsoft.com/library/ff487003.aspx)MDS 的重要功能的簡短描述的主題。  
+ SQL Server Master Data Services (MDS) 提供一個資料中樞，可確保資訊的完整性和資料的一致性在不同應用程式之間都保持不變。 請參閱[Master Data Services 概觀](../master-data-services/master-data-services-overview-mds.md)MDS 的重要功能的簡短描述的主題。  
   
  請參閱[清理和比對主要資料的使用 EIM 技術](http://msdn.microsoft.com/library/hh403491.aspx)實作 EIM 解決方案一起使用這些 Microsoft EIM 技術和監看式的全面性指引的技術白皮書[Enterprise資訊管理 (EIM): 結合 SSIS、 DQS 和 MDS](http://go.microsoft.com/fwlink/?LinkId=258672) EIM 案例的示範影片。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "37189655"
   
     4.  SQL Server Data Tools  
   
-         請參閱[SQL Server 2012 安裝指南](http://msdn.microsoft.com/library/bb500469.aspx)如需安裝產品詳細資料。  
+         請參閱[SQL Server 2012 安裝指南](../database-engine/install-windows/installation-for-sql-server.md)如需安裝產品詳細資料。  
   
 2.  [設定 MDS 使用 Master Data Services 組態管理員](http://msdn.microsoft.com/library/ee633884.aspx)  
   

@@ -24,15 +24,15 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: b8b8be30f9a8619ef3e2887c37387e1f4ef68e6d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 860f8e569cd87aaf034718456c8157cf91f57941
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985640"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394870"
 ---
 # <a name="creating-and-managing-projects-accesstosql"></a>建立和管理專案 (AccessToSQL)
-若要將 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須先建立 SSMA 專案。 專案是包含您想要移轉至 Access 資料庫的相關中繼資料的檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 移轉的物件和資料，將會接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]連線資訊和專案設定。  
+若要將 Access 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須先建立 SSMA 專案。 專案是包含您想要移轉至 Access 資料庫的相關中繼資料的檔案[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 移轉的物件和資料，將會接收[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]連線資訊和專案設定。  
   
 ## <a name="reviewing-default-project-settings"></a>檢閱預設的專案設定  
 SSMA 會包含數個選項，藉以轉換和同步處理資料庫物件和轉換資料。 這些選項的預設設定是適用於許多使用者。 不過，您建立新的 SSMA 專案之前，您應該檢閱的選項，如果您想要變更將會用於所有新專案的預設設定。  
@@ -62,7 +62,7 @@ SSMA 會包含數個選項，藉以轉換和同步處理資料庫物件和轉換
 **請注意**只有在您選擇建立專案時的移轉至 SQL Azure 時，SQL Azure 設定將會提供。  
   
 ## <a name="creating-new-projects"></a>建立新專案  
-SSMA 會啟動但不載入預設專案。 若要將資料從 Access 資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須建立專案。  
+SSMA 會啟動但不載入預設專案。 若要將資料從 Access 資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須建立專案。  
   
 **若要建立新的專案**  
   
@@ -76,12 +76,12 @@ SSMA 會啟動但不載入預設專案。 若要將資料從 Access 資料庫移
   
 4.  移轉到下拉式清單中向下，請選取其中一個 SQL Server 2005 / SQL Server 2008 / SQL Server 2012 / SQL Server 2014 / SQL Server 2016 / Azure SQL 資料庫，然後按一下**確定**。  
   
-SSMA 會建立專案檔。 您現在可以執行的下一個步驟[新增一或多個 Access 資料庫](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)。  
+SSMA 會建立專案檔。 您現在可以執行的下一個步驟[新增一或多個 Access 資料庫](adding-and-removing-access-database-files-accesstosql.md)。  
   
 ## <a name="customizing-project-settings"></a>自訂專案設定  
-除了定義預設專案設定，適用於所有新的 SSMA 專案，您也可以自訂每個專案的設定。 如需詳細資訊，請參閱 <<c0> [ 設定轉換和移轉選項](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)。  
+除了定義預設專案設定，適用於所有新的 SSMA 專案，您也可以自訂每個專案的設定。 如需詳細資訊，請參閱 <<c0> [ 設定轉換和移轉選項](setting-conversion-and-migration-options-accesstosql.md)。  
   
-當您自訂來源和目標資料庫之間的資料型別對應時，您可以定義在專案、 資料庫或物件層級的對應。 如需類型對應的詳細資訊，請參閱[對應來源和目標資料型別](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
+當您自訂來源和目標資料庫之間的資料型別對應時，您可以定義在專案、 資料庫或物件層級的對應。 如需類型對應的詳細資訊，請參閱[對應來源和目標資料型別](mapping-source-and-target-data-types-accesstosql.md)。  
   
 ## <a name="saving-projects"></a>儲存專案  
 當您儲存專案時，專案設定，並選擇性地要專案檔的資料庫中繼資料，仍然存在 SSMA。  
@@ -101,7 +101,7 @@ SSMA 會建立專案檔。 您現在可以執行的下一個步驟[新增一或�
         SSMA 會剖析存取結構描述，並將中繼資料儲存到專案檔。  
   
 ## <a name="opening-projects"></a>開啟專案  
-當您開啟專案時，它會中斷連線從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 這可讓您離線工作。 若要更新至中繼資料載入資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 若要將資料移轉，您必須重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+當您開啟專案時，它會中斷連線從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 這可讓您離線工作。 若要更新至中繼資料載入資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 若要將資料移轉，您必須重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 **若要開啟專案**  
   
@@ -111,14 +111,14 @@ SSMA 會建立專案檔。 您現在可以執行的下一個步驟[新增一或�
   
     -   在 **檔案**功能表上，選取**開啟專案**，找出.a2ssproj 專案檔中，選取檔案，，然後按一下**開啟**。  
   
-2.  若要重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請在**檔案**功能表上，選取**重新連接到 SQL Server**。  
+2.  若要重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請在**檔案**功能表上，選取**重新連接到 SQL Server**。  
   
 3.  若要重新連線到 SQL Azure 上**檔案**功能表上，選取**重新連線到 SQL Azure。**  
   
 ## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[新增一或多個存取資料庫](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)。  
+移轉程序的下一個步驟是[新增一或多個存取資料庫](adding-and-removing-access-database-files-accesstosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[新增和移除 Access 資料庫檔案](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[新增和移除 Access 資料庫檔案](adding-and-removing-access-database-files-accesstosql.md)  
   

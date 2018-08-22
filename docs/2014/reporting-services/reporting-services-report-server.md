@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189835"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395042"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   本主題概略說明 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器，這是 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 安裝的主要元件。 其中包含一組處理引擎，加上一組可處理驗證、資料處理、轉譯和傳遞作業的特殊用途延伸模組。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表伺服器會在兩種部署模式的其中一個模式下執行，也就是原生模式或 SharePoint 模式。 請參閱 [SharePoint 和原生模式的功能比較](#bkmk_featuresupport) 一節中的功能比較。  
@@ -119,7 +119,7 @@ ms.locfileid: "37189835"
  協力廠商開發人員可以建立其他的延伸模組，以取代或擴充報表伺服器的處理功能。 如需了解有關應用程式開發人員可使用之程式設計介面的詳細資訊，請參閱＜ [技術參考](../../2014/reporting-services/technical-reference-ssrs.md)＞。  
   
 ###  <a name="bkmk_nativewithwebparts"></a> SharePoint Web 組件的原生模式  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供的執行個體上的兩個 Web 組件，您可以安裝和註冊[!INCLUDE[winSPServ](../includes/winspserv-md.md)]2.0 或更新版本，或[!INCLUDE[spPortalServ](../includes/spportalserv-md.md)]2003年或更新版本。 您可以從 SharePoint 網站，使用 Web 組件來尋找及檢視在報表伺服器上儲存及處理的報表，該報表伺服器是以原生模式執行。 這些 Web 組件已在較舊版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中導入。  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 提供的執行個體上的兩個 Web 組件，您可以安裝和註冊[!INCLUDE[winSPServ](../includes/winspserv-md.md)]2.0 或更新版本，或 SharePoint Portal Server 2003 或更新版本。 您可以從 SharePoint 網站，使用 Web 組件來尋找及檢視在報表伺服器上儲存及處理的報表，該報表伺服器是以原生模式執行。 這些 Web 組件已在較舊版本的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]中導入。  
   
 ##  <a name="bkmk_sharepointmode"></a> SharePoint 模式  
  在 SharePoint 模式下，報表伺服器必須在 SharePoint 伺服器陣列內執行。 報表伺服器處理、 轉譯和管理功能都由執行 SharePoint 應用程式伺服器[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]SharePoint 共用服務以及一或多個[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]服務應用程式。 SharePoint 網站會針對報表伺服器內容和作業，提供前端存取。  

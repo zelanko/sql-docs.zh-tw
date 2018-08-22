@@ -16,18 +16,18 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3af1de2e98b4baf4800603a8eb177b80fdb1da6f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26b95bc37f1ba7726c607e6275889ecd6a3fecd9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985500"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395234"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>將 DB2 資料庫移轉至 SQL Server (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) for DB2 是完整的環境，可協助您快速地移轉到 DB2 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 使用 SSMA for DB2 中，檢閱資料庫物件和資料、 評估要移轉的資料庫、 將資料庫物件，來移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，然後移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。 請注意您無法將 SYS 和系統 DB2 結構描述移轉。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) for DB2 是完整的環境，可協助您快速地移轉到 DB2 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 使用 SSMA for DB2 中，檢閱資料庫物件和資料、 評估要移轉的資料庫、 將資料庫物件，來移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，然後移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。 請注意您無法將 SYS 和系統 DB2 結構描述移轉。  
   
 ## <a name="recommended-migration-process"></a>建議的移轉程序  
-若要成功移轉物件和資料，從 DB2 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB，使用下列程序：  
+若要成功移轉物件和資料，從 DB2 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB，使用下列程序：  
   
 1.  [新的 SSMA 專案](http://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0)。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "38985500"
   
     您可以透過下列方式之一來這麼做：  
   
-    -   儲存指令碼，並在執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+    -   儲存指令碼，並在執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
     -   同步處理資料庫物件。  
   

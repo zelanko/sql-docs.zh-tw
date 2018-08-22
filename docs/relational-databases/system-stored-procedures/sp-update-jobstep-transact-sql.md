@@ -1,5 +1,5 @@
 ---
-title: sp_update_jobstep (TRANSACT-SQL) |Microsoft 文件
+title: sp_update_jobstep (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67986dbdbace492fc2fb82bcb94e6cc32a05616a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 43dfe2a04a6c4f12fad0df12c3cf520d7d08d7a7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263476"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394028"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,33 +67,33 @@ sp_update_jobstep
   
 ## <a name="arguments"></a>引數  
  [ **@job_id =**] *job_id*  
- 這是步驟所屬之作業的識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。 任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
+ 這是步驟所屬之作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
  [ **@job_name =**] **'***job_name***'**  
- 這是步驟所屬的作業名稱。 *job_name*是**sysname**，預設值是 NULL。 任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
+ 這是步驟所屬的作業名稱。 *job_name*已**sysname**，預設值是 NULL。 任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
  [ **@step_id =**] *step_id*  
- 要修改的作業步驟的識別碼。 無法變更這個識別碼。 *step_id*是**int**，沒有預設值。  
+ 要修改的作業步驟的識別碼。 無法變更這個識別碼。 *step_id*已**int**，沒有預設值。  
   
  [ **@step_name =**] **'***step_name***'**  
- 這是步驟的新名稱。 *step_name*是**sysname**，預設值是 NULL。  
+ 這是步驟的新名稱。 *step_name*已**sysname**，預設值是 NULL。  
   
  [ **@subsystem =**] **'***subsystem***'**  
- 用來執行 Microsoft SQL Server Agent 的子系統*命令*。 *子系統*是**nvarchar （40)**，預設值是 NULL。  
+ Microsoft SQL Server Agent 執行子系統*命令*。 *子系統*已**nvarchar(40)**，預設值是 NULL。  
   
  [  **@command =**] **'***命令***'**  
- 若要透過執行命令*子系統*。 *命令*是**nvarchar （max)**，預設值是 NULL。  
+ 若要透過執行命令*子系統*。 *命令*已**nvarchar （max)**，預設值是 NULL。  
   
  [ **@additional_parameters =**] **'***parameters***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@cmdexec_success_code =**] *success_code*  
- 所傳回的值**CmdExec**子系統命令，以表示*命令*執行成功。 *success_code*是**int**，預設值是 NULL。  
+ 所傳回的值**CmdExec**子系統命令，以指出*命令*順利執行。 *success_code*已**int**，預設值是 NULL。  
   
  [ **@on_success_action =**] *success_action*  
- 步驟成功時執行的動作。*success_action*是**tinyint**，預設值是 NULL，而且可以是下列值之一。  
+ 要執行步驟成功時的動作。*success_action*是**tinyint**，預設值是 NULL，而且可以是下列值之一。  
   
-|Value|描述 (動作)|  
+|值|描述 (動作)|  
 |-----------|----------------------------|  
 |**1**|成功而結束。|  
 |**2**|失敗而結束。|  
@@ -101,12 +101,12 @@ sp_update_jobstep
 |**4**|請移至步驟*success_step_id。*|  
   
  [ **@on_success_step_id =**] *success_step_id*  
- 如果步驟成功執行此作業中步驟的識別碼和*success_action*是**4**。 *success_step_id*是**int**，預設值是 NULL。  
+ 如果步驟成功執行此作業中步驟的識別碼和*success_action*是**4**。 *success_step_id*已**int**，預設值是 NULL。  
   
  [ **@on_fail_action =**] *fail_action*  
- 步驟失敗時所要執行的動作。 *fail_action*是**tinyint**，預設值是 NULL，而且可以有下列值之一。  
+ 步驟失敗時所要執行的動作。 *fail_action*已**tinyint**，預設值是 NULL，而且可以有下列值之一。  
   
-|Value|描述 (動作)|  
+|值|描述 (動作)|  
 |-----------|----------------------------|  
 |**1**|成功而結束。|  
 |**2**|失敗而結束。|  
@@ -114,37 +114,37 @@ sp_update_jobstep
 |**4**|請移至步驟*fail_step_id * *。*|  
   
  [ **@on_fail_step_id =**] *fail_step_id*  
- 這個作業步驟失敗時所執行的步驟的識別碼和*fail_action*是**4**。 *fail_step_id*是**int**，預設值是 NULL。  
+ 步驟失敗時執行此作業中步驟的識別碼和*fail_action*是**4**。 *fail_step_id*已**int**，預設值是 NULL。  
   
  [ **@server =**] **'***server***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*是**nvarchar （128)**，預設值是 NULL。  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *伺服器*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。  
   
  [ **@database_name =**] **'***database***'**  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟執行所在的資料庫名稱。 *資料庫*是**sysname**。 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟執行所在的資料庫名稱。 *資料庫*已**sysname**。 不允許以括號 ([ ]) 括住的名稱。 預設值是 NULL。  
   
  [ **@database_user_name =**] **'***user***'**  
- 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟時所用的使用者帳戶名稱。 *使用者*是**sysname**，預設值是 NULL。  
+ 執行 [!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟時所用的使用者帳戶名稱。 *使用者*已**sysname**，預設值是 NULL。  
   
  [ **@retry_attempts =**] *retry_attempts*  
- 此步驟失敗時的重試次數。 *retry_attempts*是**int**，預設值是 NULL。  
+ 此步驟失敗時的重試次數。 *sp_update_jobstep*已**int**，預設值是 NULL。  
   
  [ **@retry_interval =**] *retry_interval*  
- 重試的間隔時間 (以分鐘為單位)。 *retry_interval*是**int**，預設值是 NULL。  
+ 重試的間隔時間 (以分鐘為單位)。 *retry_interval*已**int**，預設值是 NULL。  
   
  [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@output_file_name =**] **'***file_name***'**  
- 儲存此步驟之輸出的檔案名稱。 *file_name*是**nvarchar(200)**，預設值是 NULL。 這個參數只對在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系統中執行的命令有效。  
+ 儲存此步驟之輸出的檔案名稱。 *file_name*已**nvarchar(200**，預設值是 NULL。 這個參數只對在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 或 CmdExec 子系統中執行的命令有效。  
   
- 若要將 output_file_name 設為 NULL，您必須設定*output_file_name*為空字串 (' ') 或字串中的空白字元，但您無法使用**CHAR(32)** 函式。 例如，依照下列方式，將這個引數設為空字串：  
+ 若要將 output_file_name 設為 NULL，您必須設定*output_file_name*為空字串 (' ') 或字串空白的字元，但您無法使用**CHAR(32)** 函式。 例如，依照下列方式，將這個引數設為空字串：  
   
  **@output_file_name = ' '**  
   
  [ **@flags =**] *flags*  
- 控制行為的選項。 *旗標*是**int**，而且可以是下列值之一。  
+ 控制行為的選項。 *旗標*已**int**，而且可以是下列值之一。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**0** (預設)|覆寫輸出檔。|  
 |**2**|附加至輸出檔。|  
@@ -153,10 +153,10 @@ sp_update_jobstep
 |**16**|將記錄寫入資料表 (附加至現有的記錄)。|  
   
  [ **@proxy_id**= ] *proxy_id*  
- 用於執行作業步驟之 Proxy 的識別碼。 *proxy_id*是型別**int**，預設值是 NULL。 如果沒有*proxy_id*指定，則沒有*proxy_name*指定時，並沒有*user_name*指定，則作業步驟執行的服務帳戶為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
+ 用於執行作業步驟之 Proxy 的識別碼。 *proxy_id*是型別**int**，預設值是 NULL。 如果沒有*proxy_id*指定，則沒有*proxy_name*未指定，且不*user_name*指定，做為服務帳戶執行的作業步驟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
   
  [ **@proxy_name**= ] **'***proxy_name***'**  
- 用於執行作業步驟的 Proxy 名稱。 *proxy_name*是型別**sysname**，預設值是 NULL。 如果沒有*proxy_id*指定，則沒有*proxy_name*指定時，並沒有*user_name*指定，則作業步驟執行的服務帳戶為[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
+ 用於執行作業步驟的 Proxy 名稱。 *proxy_name*是型別**sysname**，預設值是 NULL。 如果沒有*proxy_id*指定，則沒有*proxy_name*未指定，且不*user_name*指定，做為服務帳戶執行的作業步驟[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -175,7 +175,7 @@ sp_update_jobstep
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  只有成員**sysadmin**可以更新另一位使用者所擁有的作業步驟。  
   
@@ -196,9 +196,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [檢視或修改作業](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
- [sp_delete_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [檢視或修改作業](../../ssms/agent/view-or-modify-jobs.md)   
+ [sp_delete_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

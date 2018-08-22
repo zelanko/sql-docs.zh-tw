@@ -15,12 +15,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290954"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396066"
 ---
 # <a name="back-up-database-general-page"></a>備份資料庫 (一般頁面)
   使用 **[備份資料庫]** 對話方塊上的 **[一般]** 頁面，檢視或修改資料庫備份作業設定。  
@@ -37,7 +37,7 @@ ms.locfileid: "37290954"
 -   [建立差異資料庫備份 &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  您可以定義資料庫維護計畫來建立資料庫備份。 如需詳細資訊，請參閱《 [線上叢書》中的](http://msdn.microsoft.com/library/ms187658.aspx) 資料庫維護計畫 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
+    >  您可以定義資料庫維護計畫來建立資料庫備份。 如需詳細資訊，請參閱《 [線上叢書》中的](../maintenance-plans/maintenance-plans.md) 資料庫維護計畫 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 。  
   
  **建立部分備份**  
   

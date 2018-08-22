@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 843d79da1d5e9aba58a80ea93ee36a68cd689916
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d3e5e71bf32b031552db2a888d17fa222c9f53f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312748"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394869"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>工作 10：加入模糊群組轉換來識別重複項
-  在這項工作中，您會將模糊群組轉換加入至資料流程。 模糊群組轉換有助於識別來源資料中的重複項。 請參閱[Fuzzy Grouping Transformation](http://msdn.microsoft.com/library/ms141764.aspx)如需詳細資訊。  
+  在這項工作中，您會將模糊群組轉換加入至資料流程。 模糊群組轉換有助於識別來源資料中的重複項。 請參閱[Fuzzy Grouping Transformation](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)如需詳細資訊。  
   
 1.  拖放**模糊群組**轉換**其他轉換**上**SSIS 工具箱**至**資料流程**索引標籤下**結合正確與更正的記錄**。  
   

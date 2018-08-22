@@ -17,12 +17,12 @@ caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64ca4f9c72739d9b5875e7adeec38e5a59f590fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254750"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394219"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 中對於 Database Engine 的重大變更
   本主題描述 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 以及舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]的重大變更。 這些變更可能會中斷以舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]為根據的應用程式、指令碼或功能。 當您升級時可能會遇到這些問題。 如需詳細資訊，請參閱＜ [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)＞。  
@@ -41,7 +41,7 @@ ms.locfileid: "37254750"
 |sp_setapprole 和 sp_unsetapprole|`OUTPUT` 的 Cookie `sp_setapprole` 參數目前記載成 `varbinary(8000)`，是正確的長度上限。 但目前的實作會傳回`varbinary(50)`。 應用程式應繼續保留 `varbinary(8000)`，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。 如需詳細資訊，請參閱 [sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql)。|  
 |EXECUTE AS|EXECUTE AS 的 Cookie OUTPUT 參數目前記載成 `varbinary(8000)`，這是正確的長度上限。 但目前的實作會傳回`varbinary(100)`。 應用程式應繼續保留 `varbinary(8000)`，如此後續版本的 Cookie 傳回大小如有增加，應用程式才可繼續正常地運作。 如需詳細資訊，請參閱 [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql)。|  
 |sys.fn_get_audit_file 函數|兩個額外的資料行 (**user_defined_event_id**並**user_defined_information**) 已新增以支援使用者定義稽核事件。 沒有依照名稱選取資料行的應用程式可能會傳回超過預期數目的資料行。 請依照名稱選取資料行，或調整應用程式以接受這些額外的資料行。|  
-|WITHIN 保留關鍵字|WITHIN 現在是保留關鍵字。 名為 'within' 之物件或資料行的參考將會失敗。 請重新命名物件或資料行名稱，或者使用括號或引號來分隔名稱。  例如， `SELECT * FROM [within]`。|  
+|WITHIN 保留關鍵字|WITHIN 現在是保留關鍵字。 名為 'within' 之物件或資料行的參考將會失敗。 請重新命名物件或資料行名稱，或者使用括號或引號來分隔名稱。  例如， `SELECT * FROM [within]` 。|  
 |`time` 或 `datetime2` 類型之計算資料行的 CAST 和 CONVERT 作業|在舊版 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 中，除非用於計算資料行運算式，否則 `time` 和 `datetime2` 資料類型之 CAST 和 CONVERT 作業的預設樣式為 121。 若為計算資料行，預設樣式為 0。 當您建立計算資料行、將它們用於包含自動參數化的查詢或用於條件約束定義時，這種行為就會影響計算資料行。<br /><br /> 在相容性層級 110 底下，`time` 和 `datetime2` 資料類型之 CAST 和 CONVERT 作業的預設樣式一律為 121。 如果您的查詢仰賴舊的行為，請使用低於 110 的相容性層級，或在受影響的查詢中明確指定 0 樣式。<br /><br /> 將資料庫升級為相容性層級 110 不會變更已經儲存至磁碟的使用者資料。 您必須依適當情況手動更正這項資料。 例如，如果您使用了 SELECT INTO，根據包含上述計算資料行運算式的來源建立資料表，系統就會儲存資料 (使用樣式 0) 而非計算資料行定義本身。 您必須手動將這項資料更新為符合樣式 121。|  
 |ALTER TABLE|ALTER TABLE 陳述式只允許兩部分 (schema.object) 資料表名稱。 現在使用下列格式的資料表名稱來指定會在編譯時期顯示錯誤 117 失敗：<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> 在舊版中，指定 server.database.schema.table 格式會傳回錯誤 4902。 不過，指定 .database.schema.table 格式或 ..schema.table 格式會成功。 若要解決此問題，請移除 4 部分前置詞的用法。|  
 |瀏覽中繼資料|使用 FOR BROWSE 或 SET NO_BROWSETABLE ON 來查詢檢視現在會傳回檢視的中繼資料，而非基礎物件的中繼資料。 這種行為現在與其他瀏覽中繼資料的方法相符。|  
@@ -161,7 +161,7 @@ ms.locfileid: "37254750"
 -   比較運算子和**依**子句。 比較運算子包括 +、 \<，>， \<=、 > =、 `eq`， `lt`， `gt`， `le`，和`ge`。  
   
 #### <a name="distributed-query-calls-to-a-system-procedure"></a>對系統程序的分散式查詢呼叫  
- 透過 `OPENQUERY` 對某些系統程序的分散式查詢呼叫，在從某個 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 伺服器呼叫到另一個伺服器時會失敗。 在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 找不到程序的中繼資料時會出現此情況。 例如， `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`。  
+ 透過 `OPENQUERY` 對某些系統程序的分散式查詢呼叫，在從某個 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 伺服器呼叫到另一個伺服器時會失敗。 在 [!INCLUDE[ssDE](../includes/ssde-md.md)] 找不到程序的中繼資料時會出現此情況。 例如， `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')` 。  
   
 #### <a name="isolation-level-and-spresetconnection"></a>隔離等級與 sp_reset_connection  
  用戶端驅動程式會以下列方式處理連接的隔離等級：  
@@ -266,7 +266,7 @@ ms.locfileid: "37254750"
 ||擁有針對簡短名稱發出的憑證。<br /><br /> -此選項適用於所有的應用程式。|  
   
 ##  <a name="Yukon"></a> SQL Server 2005 中的重大變更  
- 如需清單的重大變更中導入[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，請參閱[SQL Server 2005 中的 Database Engine 功能的突破性變更](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx)。  
+ 如需清單的重大變更中導入[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]，請參閱[SQL Server 2005 中的 Database Engine 功能的突破性變更](breaking-changes-to-database-engine-features-in-sql-server-2016.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server 2014 中已被取代的 Database Engine 功能](deprecated-database-engine-features-in-sql-server-2016.md)   

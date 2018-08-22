@@ -21,14 +21,14 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f685c51851962c720093ef3c387332ce8de87766
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: daf26b975bbcf150b481e3d2dedfea75cafaa4f5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982510"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394425"
 ---
-# <a name="creating-script-files-mysqltosql"></a>建立指令碼檔 (MySQLToSQL)
+# <a name="creating-script-files-mysqltosql"></a>建立指令檔 (MySQLToSQL)
 第一個步驟是啟動 SSMA 主控台應用程式建立的指令碼檔案之前，並在必要時建立的變數值檔案和伺服器連線檔案。  
   
 指令碼檔案可以分成三個區段，報導。。，：  
@@ -357,7 +357,7 @@ ms.locfileid: "38982510"
   
 例如，在 MySQL 資料庫的特定資料表的一般資料移轉如下的階層： 資料庫-&gt;資料表。  
   
-指令碼檔案中的所有命令都執行成功時結束 SSMA 主控台應用程式，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[變數值檔案](http://msdn.microsoft.com/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a)或變數值的指令碼檔案內的個別區段中。  
+指令碼檔案中的所有命令都執行成功時結束 SSMA 主控台應用程式，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[變數值檔案](creating-variable-value-files-mysqltosql.md)或變數值的指令碼檔案內的個別區段中。  
   
 **範例：**  
   

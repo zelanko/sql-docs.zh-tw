@@ -1,5 +1,5 @@
 ---
-title: 移除 SSMA for MySQL 元件 (MySQLToSql) |Microsoft 文件
+title: 移除 SSMA for MySQL 元件 (MySQLToSql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,51 +19,51 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db4762c702597b197aad75a8aee2b2987c11c581
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: adab686126cb608ae32870a9a138720b77d212bf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776755"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393816"
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>移除 SSMA for MySQL 元件 (MySQLToSql)
-當您完成將資料庫移轉至 MySQL 從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可能想要解除安裝 SSMA 元件。 您可以在任何時間，以解除安裝用戶端元件。 不過，如果您解除安裝延伸模組組件從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然後 SSMA 將不再支援使用伺服器端資料移轉引擎與目標資料庫 (SQL Server/SQL Azure) 的資料從 MySQL 移轉。  
+當您完成移轉的資料庫從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可能想要解除安裝 SSMA 元件。 您可以在任何時間，以解除安裝用戶端元件。 不過，如果您解除安裝延伸模組套件，從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後 SSMA 將不再支援從 MySQL 到目標資料庫 (SQL Server/SQL Azure)，使用伺服器端資料移轉引擎中的資料移轉。  
   
-## <a name="uninstalling-the-ssma-for-mysql-client"></a>解除安裝 MySQL 用戶端的 SSMA  
-您可以使用解除安裝 SSMA**新增或移除程式**。  
+## <a name="uninstalling-the-ssma-for-mysql-client"></a>正在 SSMA for MySQL 用戶端解除安裝  
+您可以使用連線，解除安裝 SSMA**新增或移除程式**。  
   
 **若要解除安裝 SSMA**  
   
-1.  在控制台中開啟**新增或移除程式**。  
+1.  在控制台中，開啟**新增或移除程式**。  
   
-2.  選取**Microsoft SQL Server 移轉小幫手的 MySQL**，然後按一下 **移除**。  
+2.  選取  **Microsoft SQL Server Migration Assistant for MySQL**，然後按一下**移除**。  
   
 3.  若要確認您想要解除安裝 SSMA，請按一下**是**。  
   
 ## <a name="uninstalling-the-extension-pack"></a>解除安裝延伸模組組件  
-您可以使用來移除延伸模組組件**新增或移除程式**。  
+您可以使用來移除延伸模組套件**新增或移除程式**。  
   
-**若要解除安裝延伸模組組件**  
+**若要解除安裝延伸模組套件**  
   
-1.  在控制台中開啟**新增或移除程式**。  
+1.  在控制台中，開啟**新增或移除程式**。  
   
-2.  選取**Microsoft SQL Server 移轉小幫手 MySQL 擴充功能組件的**，然後按一下 **移除**。  
+2.  選取  **Microsoft SQL Server Migration Assistant for MySQL 擴充功能套件**，然後按一下**移除**。  
   
 3.  若要確認您想要解除安裝延伸模組組件，請按一下**是**。  
   
-4.  公用程式資料庫的指令碼頁面的執行個體上, 選取的執行個體，然後按一下 **下一步**。  
+4.  在 公用程式資料庫指令碼頁面的執行個體，請選取執行個體，然後按一下 **下一步**。  
   
-5.  在 [連接參數] 頁面上選取驗證方法，然後**下一步**。  
+5.  在 [連接參數] 頁面中，選取驗證方法，，然後按一下 [**下一步]**。  
   
-    Windows 驗證會使用您的 Windows 認證來嘗試登入的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登入名稱和密碼。  
+    Windows 驗證將用來嘗試登入的執行個體的 Windows 認證[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如果您選取[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]驗證，您必須輸入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入名稱和密碼。  
   
-6.  在完成作業] 頁面上，按一下 [**確定**。  
+6.  在完成作業 頁面上，按一下**確定**。  
   
-7.  在完成] 5d; 頁面上，按一下 [**結束**。  
+7.  在 完成 頁面上，按一下 **結束**。  
   
-解除安裝程序完成之後，您可以確認物件中**sysdb.ssma_MySQL**結構描述，以及可能是整個**sysdb**資料庫中，已移除使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。 不過，如果您使用其他 SSMA 產品時，他們也使用**sysdb**資料庫。 如果資料庫存在，而且您會確定沒有其他的資料庫參考的物件，此資料庫中，您可以卸離資料庫。  
+解除安裝程序完成之後，您可以確認物件中**sysdb.ssma_MySQL**結構描述，以及可能是整個**sysdb**資料庫中，已移除使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。 不過，如果您使用其他的 SSMA 產品時，他們也使用**sysdb**資料庫。 如果此資料庫確實存在，而且您已確定此資料庫中的物件參考的其他資料庫，您可以卸離資料庫。  
   
 ## <a name="see-also"></a>另請參閱  
-[安裝 MySQL 用戶端的 SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[在 SQL Server 上安裝 SSMA 元件](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+[安裝 SSMA for MySQL 用戶端&#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[在 SQL Server 上安裝 SSMA 元件](installing-ssma-components-on-sql-server-mysqltosql.md)  
   

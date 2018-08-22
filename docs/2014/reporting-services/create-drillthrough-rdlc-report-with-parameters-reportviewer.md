@@ -14,15 +14,15 @@ caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bb5bb2c0a02de9d4be433203996072bb218b8c0f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0147922c6b52d83cde9dc9a3724e82a5e4f30a3a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157819"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393822"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>使用 ReportViewer 建立包含參數的鑽研 (RDLC) 報表 (SSRS 教學課程)
-  [鑽研](http://technet.microsoft.com/library/ff519554.aspx)報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 本教學課程將逐步引導您進行下列課程，以 [本機模式報表](http://msdn.microsoft.com/library/ff487969.aspx)建立包含參數和查詢的鑽研報表。  
+  [鑽研](http://technet.microsoft.com/library/ff519554.aspx)報表是使用者從另一個報表按一下連結所開啟的報表。 鑽研報表通常包含有關原始摘要報表之項目的詳細資料。 本教學課程將逐步引導您進行下列課程中建立鑽研報表使用參數和查詢[本機模式報告](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)。  
   
 ## <a name="requirements"></a>需求  
  若要使用本逐步解說中，您必須具有存取權**AdventureWorks2008**範例資料庫。 本逐步解說中使用的查詢也可搭配**AdventureWorks2012**資料庫。 如需有關如何取得**AdventureWorks2008**範例資料庫，請參閱[逐步解說： 安裝 AdventureWorks 資料庫](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx)for Microsoft Visual Studio 2010。  

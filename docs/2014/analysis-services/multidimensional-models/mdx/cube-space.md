@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0bcd66844f5eaacca291cd67e84e34b6222788c
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282184"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40394409"
 ---
 # <a name="cube-space"></a>Cube 空間
   「Cube 空間」是 Cube 屬性階層中具有 Cube 量值之成員的乘積。 因此，Cube 空間是由 Cube 所有屬性階層成員和 Cube 量值的組合乘積所決定，定義了 Cube 的大小上限。 請務必注意，此空間包含屬性階層成員的所有可能組合，甚至還包含在真實世界中被視為不可能的組合，例如城市為巴黎而國家/地區為英國、西班牙、日本、印度或其他地方的組合。  
@@ -59,7 +59,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  請注意，0 是用來指定資料行軸，為 axis(0) (即資料行軸) 的縮寫。  
   
- 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上述查詢也可以使用 [* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) 函數中新的 * 變數，改寫如下。  
+ 上述查詢只會針對查詢中每個屬性階層之同時存在的成員傳回資料格。 上述查詢也可以寫入使用新 * 的 variant [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx)函式。  
   
 ```  
 SELECT   

@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 2875419d255b10d73a5c7df88841ca11926bd039
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39400781"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394212"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>教學課程：離線建立快速圖表報表 (報表產生器)
   在此教學課程中，您將使用精靈來建立圓形圖，然後稍微進行修改，以便了解可行的作業。 您可以採用兩種不同的方式進行此教學課程。 這兩種方法結果都一樣，會是如下圖所示的圓形圖：  
   
- ![檢視 「 我第一個圓形圖 」 在執行中](../media/rs-my1stpierunview.gif 「 我的第一個圓形圖 」 回合中檢視 」）  
+ ![「 我第一個圓形圖 」 回合中檢視](../media/rs-my1stpierunview.gif "執行檢視中的我第一個圓形圖")  
   
 ## <a name="prerequisites"></a>先決條件  
  不論您使用的是 XML 資料或 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 查詢，都需要具備 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 報表產生器的存取權。 您可以執行單機版，或者報表管理員或 SharePoint 網站提供的 ClickOnce 版本。 只有第一個步驟「如何開啟報表產生器」與 ClickOnce 版本不同。 如需詳細資訊，請參閱 <<c0> [ 安裝、 解除安裝，以及報表產生器支援](../install-uninstall-and-report-builder-support.md)。  

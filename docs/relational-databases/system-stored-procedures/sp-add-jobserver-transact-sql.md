@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (TRANSACT-SQL) |Microsoft 文件
+title: sp_add_jobserver (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: c2bcb3132902669a6ea544b9962942ed3adadc4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262312"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394022"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +46,25 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>引數  
  [ **@job_id =** ] *job_id*  
- 作業的識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
+ 作業的識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
  [ **@job_name =** ] **'***job_name***'**  
- 作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
+ 作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
+>  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
  [ **@server_name =** ] **'***server***'**  
- 作業的目標伺服器名稱。 *伺服器*是**nvarchar （30)**，預設值是 （local） '。 *伺服器*可以是 **（本機）** 本機伺服器，或現有的目標伺服器的名稱。  
+ 作業的目標伺服器名稱。 *伺服器*已**nvarchar(30)**，預設值是 （local） '。 *伺服器*可以是 **(LOCAL)** 本機伺服器，或現有目標伺服器的名稱。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 無  
+ None  
   
 ## <a name="remarks"></a>備註  
- **@automatic_post** 存在於**sp_add_jobserver**，但未列在引數。 **@automatic_post** 已保留供內部使用。  
+ **@automatic_post** 存在於**sp_add_jobserver**，但並未列在引數。 **@automatic_post** 是保留供內部使用。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供了一種簡單的圖形方式供您管理各項作業，建議您利用這個方式來建立和管理作業基礎結構。  
   
@@ -77,9 +77,9 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_jobserver**牽涉到多部伺服器的工作。  
+ 只有成員**sysadmin**固定的伺服器角色可以執行**sp_add_jobserver**牽涉到多部伺服器的作業。  
   
 ## <a name="examples"></a>範例  
   
@@ -115,7 +115,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_apply_job_to_targets &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

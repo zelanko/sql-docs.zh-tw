@@ -1,5 +1,5 @@
 ---
-title: sp_attach_schedule (TRANSACT-SQL) |Microsoft 文件
+title: sp_attach_schedule (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 788afc8121948fa628cd9e0d2e1162464357dbc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c1ec7f73e6fefadb9e73ca8295afb858f6d1d6a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238355"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395846"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ sp_attach_schedule
   
 ## <a name="arguments"></a>引數  
  [ **@job_id=** ] *job_id*  
- 這是要加入排程之作業的作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
+ 這是要加入排程之作業的作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
  [ **@job_name =** ] **'***job_name***'**  
- 要加入排程的作業名稱。 *job_name*是**sysname**，預設值是 NULL。  
+ 要加入排程的作業名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
+>  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
  [ **@schedule_id =** ] *schedule_id*  
- 這是作業所要設定之排程的排程識別碼。 *schedule_id*是**int**，預設值是 NULL。  
+ 這是作業所要設定之排程的排程識別碼。 *schedule_id*已**int**，預設值是 NULL。  
   
  [ **@schedule_name =** ] **'***schedule_name***'**  
- 這是作業所要設定之排程的排程名稱。 *schedule_name*是**sysname**，預設值是 NULL。  
+ 這是作業所要設定之排程的排程名稱。 *schedule_name&lt*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
->  任一*schedule_id*或*schedule_name*必須指定，但不可同時指定兩者。  
+>  任一*schedule_id*或是*schedule_name&lt*必須指定，但不可同時指定兩者。  
   
 ## <a name="remarks"></a>備註  
  排程和作業的擁有者必須相同。  
@@ -83,7 +83,7 @@ sp_attach_schedule
   
  請注意，作業擁有者不需要也是排程擁有者，就可以將作業附加到排程，也可以從排程卸離作業。 不過，如果卸離之後不會在排程中留下任何作業，除非呼叫端是排程擁有者，否則無法刪除該排程。  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 會檢查使用者是否同時擁有作業和排程。  
   
@@ -116,8 +116,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  
   
   

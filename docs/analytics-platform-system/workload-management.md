@@ -1,5 +1,5 @@
 ---
-title: Analytics Platform System 中的工作負載管理 |Microsoft 文件
+title: Analytics Platform System 中的工作負載管理 |Microsoft Docs
 description: Analytics Platform System 中的工作負載管理。
 author: mzaman1
 manager: craigg
@@ -9,74 +9,74 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707096"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396258"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System 中的工作負載管理
 
-SQL Server PDW 的工作負載管理功能可讓使用者和系統管理員將指派到預先設定的記憶體和並行處理設定要求。 使用工作負載管理來改善效能的負載，一致或 mixed 時，允許要求而不會佔用任何要求永遠將適當的資源。  
+SQL Server PDW 的工作負載管理功能可讓使用者和系統管理員指派要求預先設定的記憶體和並行存取的設定。 使用工作負載管理以改善一致或混合式工作負載的效能可讓要求而不造成任何要求永遠有適當的資源。  
   
-例如，與在 SQL Server PDW 工作負載管理技術，您可以：  
+例如，SQL Server PDW 中，工作負載管理技巧，您可以：  
   
 -   配置大量載入作業的資源。  
   
--   指定更多資源來建立資料行存放區索引。  
+-   指定建立資料行存放區索引的更多資源。  
   
--   疑難排解執行緩慢的雜湊聯結，看看是否需要更多記憶體，並再提供更多記憶體。  
+-   疑難排解執行緩慢的雜湊聯結，看看是否需要更多的記憶體，然後為它提供更多的記憶體。  
   
 ## <a name="Basics"></a>工作負載管理基本概念  
   
 ### <a name="key-terms"></a>主要詞彙：  
 工作負載管理  
-*工作負載管理*是了解及調整系統資源使用情形，為了達到最佳效能的並行要求的能力。  
+*工作負載管理*是了解及調整的系統資源使用率，以達到並行要求的最佳效能的能力。  
   
 資源類別  
-在 SQL Server PDW，*資源類別*是已預先指派的記憶體和並行限制的內建的伺服器角色。 SQL Server PDW 分配資源，以根據資源類別伺服器角色成員資格，會送出要求的登入要求。  
+在 SQL Server PDW 中，*資源類別*是已預先指派的限制的記憶體和並行存取的內建的伺服器角色。 SQL Server PDW 配置根據資源類別伺服器角色成員資格，提交要求的登入要求的資源。  
   
-在計算節點上資源類別的實作會在 SQL Server 中使用資源管理員功能。 資源管理員的相關資訊，請參閱[Resource Governor](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) MSDN 上。  
+在計算節點上，資源類別的實作會在 SQL Server 中使用資源管理員功能。 如需資源管理員的詳細資訊，請參閱[Resource Governor](../relational-databases/resource-governor/resource-governor.md) MSDN 上。  
   
 ### <a name="understand-current-resource-utilization"></a>了解目前的資源使用率  
-若要了解目前正在執行要求的系統資源使用量，請使用 SQL Server PDW 動態管理檢視。 例如，您可以使用 Dmv 來了解是否是執行緩慢的大型雜湊聯結獲益有更多記憶體。  
+若要了解目前正在執行要求的系統資源使用率，使用 SQL Server PDW 動態管理檢視。 例如，您可以使用 Dmv 以了解是否執行緩慢的大型雜湊聯結獲益的更多的記憶體。  
   
 <!-- MISSING LINKS
 For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md).  
 -->
   
 ### <a name="adjust-resource-allocations"></a>調整資源配置  
-若要調整的資源使用率，變更會提交要求的登入的資源類別成員資格。 資源類別的伺服器角色會命名為**mediumrc**， **largerc**，和**xlargerc**。 它們分別代表中型、 大型和超大型資源配置。  
+若要調整的資源使用率，變更會提交要求的登入的資源類別成員資格。 資源類別的伺服器角色會命名為**mediumrc**， **largerc**，並**xlargerc**。 它們分別代表中型、 大型和超大型資源配置。  
   
-比方說，配置大量的系統資源的要求，將 送出要求的登入**largerc**伺服器角色。 下列 ALTER SERVER ROLE 陳述式會將登入 Anna 加入 largerc 伺服器角色。  
+比方說，若要配置大量的系統資源的要求，新增 送出要求的登入**largerc**伺服器角色。 下列 ALTER SERVER ROLE 陳述式會將登入 Anna 將 largerc 伺服器角色。  
   
 ```sql  
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>資源類別的描述  
+## <a name="RC"></a>資源類別描述  
 下表描述的資源類別和其系統資源配置。  
   
-|資源類別|要求的重要性|最大記憶體使用量 *|並行插槽 (上限 = 32)|描述|  
+|資源類別|要求的重要性|最大記憶體使用量 *|並行存取插槽 (上限 = 32)|描述|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|預設|中|400 MB|@shouldalert|根據預設，每個登入允許少量的記憶體和其要求的並行存取資源。<br /><br />登入加入至資源類別時，新的類別會優先使用。 卸除登入後從所有資源類別，登入會還原回預設資源配置。|  
-|MediumRC|中|1200 MB|3|要求可能需要的媒體資源類別的範例包括：<br /><br />較大的 CTAS 作業雜湊聯結。<br /><br />選取 需要更多的記憶體，以避免快取到磁碟的作業。<br /><br />資料載入叢集資料行存放區索引。<br /><br />建置、 重建和重新組織叢集資料行存放區索引的較小的資料表有 10-15 資料行。|  
-|largerc|高|2.8 GB|7|要求可能需要大量的資源類別的範例包括：<br /><br />超大型 CTAS 作業有很大的雜湊聯結或包含大型的彙總，例如大型的 ORDER BY 或 GROUP BY 子句。<br /><br />選取作業，例如雜湊聯結或彙總，例如 ORDER BY 或 GROUP BY 子句需要非常大量的記憶體的作業<br /><br />資料載入叢集資料行存放區索引。<br /><br />建置、 重建和重新組織叢集資料行存放區索引的較小的資料表有 10-15 資料行。|  
-|xlargerc|高|8.4 GB|22|超大型的資源類別是針對可能需要在執行階段的額外大型的資源耗用量的要求。|  
+|預設|中|400 MB|1|根據預設，每個登入允許少量的記憶體和並行存取資源，其要求。<br /><br />登入新增至資源類別時，新的類別會優先使用。 登入卸除所有的資源類別時, 登入會還原回預設資源配置中。|  
+|MediumRC|中|1200 MB|3|可能需要之中型資源類別的要求範例：<br /><br />較大的 CTAS 作業雜湊聯結。<br /><br />選取 需要更多的記憶體，以避免快取到磁碟的作業。<br /><br />資料載入叢集資料行存放區索引。<br /><br />建置、 重建和重新組織叢集資料行存放區索引的較小的資料表有 10 到 15 的資料行。|  
+|Largerc|高|2.8 GB|7|可能需要大型資源類別的要求範例：<br /><br />超大型 CTAS 作業有很大的雜湊聯結或包含大型的彙總，例如大型的 ORDER BY 或 GROUP BY 子句。<br /><br />選取作業，例如雜湊聯結或彙總，例如 ORDER BY 或 GROUP BY 子句中需要非常大量的記憶體的作業<br /><br />資料載入叢集資料行存放區索引。<br /><br />建置、 重建和重新組織叢集資料行存放區索引的較小的資料表有 10 到 15 的資料行。|  
+|xlargerc|高|8.4 GB|22|超大型資源類別是針對可能需要在執行階段的超大型資源耗用量的要求。|  
   
 <sup>*</sup>最大記憶體使用量是近似值。  
   
 ### <a name="request-importance"></a>要求的重要性  
-要求的重要性會對應至的要求將會在計算節點上執行的 SQL Server 的 CPU 時間量。  優先順序較高的要求接收更多的 CPU 時間。  
+要求的重要性對應至的計算節點上執行的 SQL Server 可讓要求的 CPU 時間量。  具有較高優先順序的要求會收到更多的 CPU 時間。  
   
 ### <a name="maximum-memory-usage"></a>最大記憶體使用量  
-最大記憶體使用量是要求可以使用每個處理空間內的可用記憶體的最大數量。 比方說 mediumrc 要求可以使用 1200 MB 的每個發佈內處理。 務必仍然以確保資料不會扭曲若要避免執行大部分的工作數分佈。  
+最大記憶體使用量會是個要求可以使用每個處理空間內的可用記憶體的最大數量。 比方說 mediumrc 要求可以使用最多有 1200 MB 的每個散發內的處理。 它是以確保資料不會扭曲若要避免執行大部分工作的幾個散發套件仍然很重要。  
   
-### <a name="concurrency-slots"></a>並行存取的位置  
-配置 1、 3、 7 和 22 的並行存取位置的目標是允許在相同時間執行，而不會封鎖小型的程序時執行大型程序的小型和大型處理序。  例如，SQL Server PDW 可以配置最多 32 並行位置同時執行 1 項超大型要求 （22 的位置）、 1 大型要求 （7 位置） 和 1 中的要求 （3 個插槽）。  
+### <a name="concurrency-slots"></a>並行存取插槽  
+配置 1、 3、 7 和 22 的並行存取插槽的目標是允許在相同時間執行，而不會封鎖小型的程序，當大型的處理序正在執行的大型和小型程序。  例如，SQL Server PDW 可以配置最多 32 個並行位置同時執行 1 個超大型要求 （22 位置）、 1 個大型要求 （7 的位置） 和 1 個中型要求 （3 個插槽）。  
   
-配置最多 32 個並行要求的並行位置的範例包括：  
+配置最多可包含 32 個並行要求的並行存取插槽的範例：  
   
 -   28 位置 = 4 大  
   
@@ -88,44 +88,44 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
   
 -   32 個位置 = 2 的大型 + 4 媒體 + 6 的預設值  
   
-假設 6 的大型要求提交到 SQL Server PDW，，然後提交由 10 個預設的要求。 SQL Server PDW 會處理中優先順序的要求，如下所示：  
+假設 6 個大型要求提交給 SQL Server PDW 中，然後提交 10 個預設的要求。 SQL Server PDW 會處理中優先順序的要求，如下所示：  
   
--   配置 28 並行位置開始的記憶體可用時處理 4 的大型要求，並保留 2 的大型要求在佇列中。  
+-   配置 28 的並行存取插槽，若要開始處理 4 個大型要求，因為記憶體可供使用，並保留在佇列中的 2 的大量要求。  
   
--   配置 4 的並行存取位置開始處理 4 的預設要求，並保留 6 個預設要求等候佇列中。  
+-   開始處理 4 個預設要求的 4 個並行存取插槽的配置和保留 6 個的預設要求等候佇列中。  
   
-當要求完成並並行插槽可用時，SQL Server PDW 將配置剩餘根據可用的資源和優先順序的要求。 比方說，7 位置開啟的並行存取時，等候較大的要求將會有更高的優先順序比等候中要求的 7 插槽。  如果開啟 6 的插槽，SQL Server PDW 將配置 6 更多的預設大小要求。 不過，記憶體和並行插槽所有之前必須先有 SQL Server PDW 允許執行的要求。  
+當要求完成並變成可用的並行存取插槽時，SQL Server PDW 會配置剩餘的要求，根據可用的資源和優先順序。 比方說，7 的並行存取插槽開啟時，等候大型的要求會有較高的優先權比等候中要求 7 的位置。  如果 6 的位置開啟時，SQL Server PDW 將配置 6 更多的預設大小要求。 不過，記憶體和並行存取插槽都必須使用 SQL Server PDW 允許執行的要求之前。  
   
-在每個資源類別中，要求先出 (FIFO) 順序中第一個執行。  
+在每個資源類別中，要求會在先進先出 (FIFO) 順序執行。  
   
 ## <a name="GeneralRemarks"></a>一般備註  
-如果登入是一種以上的資源類別的成員，具有最多資源的類別會優先使用。  
+如果登入是一個以上的資源類別的成員，大多數的資源類別的優先順序較高。  
   
-加入或卸除資源類別從登入時，變更時會立即生效日後所有要求。不會影響目前的要求所執行，或等候。 登入不需要中斷連線，然後重新連線中發生變更的順序。  
+當登入加入或卸除資源類別時，變更將會立即針對所有未來的要求; 的效果不會影響目前的要求是執行中或等候。 登入不需要中斷連線，然後重新連線以便進行變更。  
   
-每個登入，資源類別設定會套用至個別的陳述式和作業，並不適用於工作階段。  
+每個登入，資源類別設定會套用至個別的陳述式和作業，而非工作階段。  
   
-SQL Server PDW 執行陳述式之前，它會嘗試取得要求所需的並行插槽。 如果它無法取得足夠的並行存取位置，SQL Server PDW 將移至要求執行等候的狀態。 所有已配置給要求的資源系統會傳回回系統中。  
+SQL Server PDW 執行陳述式之前，它會嘗試取得要求所需的並行存取插槽。 如果它無法取得足夠的並行位置，則 SQL Server PDW 會將要求進入執行等候的狀態。 已配置給要求的所有資源系統會都傳回到系統中。  
   
-大部分的 SQL 陳述式永遠需要預設的資源配置，並因此不受控制資源類別。 例如，建立登入只需要少量的資源，和即使呼叫建立登入的登入的成員配置的預設資源的資源類別。  例如，如果 Anna largerc 資源類別的成員，她將提交的 CREATE LOGIN 陳述式 CREATE LOGIN 陳述式會執行與資源的預設數目。  
+大部分的 SQL 陳述式永遠需要預設的資源配置，並因此不受資源類別。 例如，建立登入只需要少量的資源，和已配置的預設資源，即使呼叫建立的登入的登入的成員資源類別。  比方說，如果 Anna 為 largerc 資源類別的成員，她將提交的 CREATE LOGIN 陳述式 CREATE LOGIN 陳述式會使用預設的資源數目。  
   
-SQL 陳述式和資源類別所控管的作業：  
+SQL 陳述式和作業都受到資源類別控管：  
   
 -   ALTER INDEX REBUILD  
   
 -   ALTER INDEX REORGANIZE  
   
--   ALTER 資料表重建  
+-   重建資料表的 ALTER  
   
 -   建立叢集的索引  
   
 -   CREATE CLUSTERED COLUMNSTORE INDEX  
   
--   建立 TABLE AS SELECT  
+-   CREATE TABLE AS SELECT  
   
--   建立遠端 TABLE AS SELECT  
+-   CREATE REMOTE TABLE AS SELECT  
   
--   載入具有資料**dwloader**。  
+-   使用載入資料**dwloader**。  
   
 -   INSERT SELECT  
   
@@ -133,12 +133,12 @@ SQL 陳述式和資源類別所控管的作業：
   
 -   Delete  
   
--   還原資料庫還原至應用裝置與多個運算節點時。  
+-   還原資料庫還原到具有多個計算節點的應用裝置時。  
   
--   選取時，不包括只有 DMV 查詢  
+-   選取時，不包括僅限 DMV 的查詢  
   
 ## <a name="Limits"></a>限制事項  
-資源類別管理記憶體和並行的配置。  不會控制輸入/輸出作業。  
+資源類別控管記憶體和並行存取的配置。  不會控制輸入/輸出作業。  
   
 ## <a name="Metadata"></a>中繼資料  
 包含資源類別和資源類別成員的相關資訊的 Dmv。  
@@ -153,7 +153,7 @@ SQL 陳述式和資源類別所控管的作業：
   
 -   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
-從 SQL Server Dmv 的計算節點上公開相關的系統檢視表。 請參閱[SQL Server 動態管理檢視](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)如需這些 Dmv MSDN 上的連結。  
+從 SQL Server Dmv，在計算節點上公開相關的系統檢視表。 請參閱[SQL Server 動態管理檢視](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)如需這些 Dmv 在 MSDN 上的連結。  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   

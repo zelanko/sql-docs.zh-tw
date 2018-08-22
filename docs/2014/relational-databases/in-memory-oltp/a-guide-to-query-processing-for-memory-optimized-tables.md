@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
@@ -14,12 +13,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a076691f045a5e9270a51b3500ea84f6b8756836
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1dc0e7ad2e0e1d897faad46e02b4ca7dc15e0c14
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177825"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396518"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>記憶體最佳化資料表的查詢處理指南
   記憶體中 OLTP 推出記憶體最佳化資料表以及 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中的原生編譯預存程序。 本文針對記憶體最佳化資料表和原生編譯的預存程序提供查詢處理的概觀。  

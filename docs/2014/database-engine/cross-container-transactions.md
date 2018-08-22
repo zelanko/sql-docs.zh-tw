@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68d22f34ca98f2e7b98320a437a236269e7a9182
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01d689554375e17b96ecbda1b10851cb5d7de94c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310468"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395442"
 ---
 # <a name="cross-container-transactions"></a>跨容器交易
   跨容器交易是隱含或明確的使用者交易，其包含對原生編譯的預存程序或記憶體最佳化的資料表作業的呼叫。  

@@ -1,6 +1,6 @@
 ---
-title: 系統檢視表-Analytics Platform System Parallel Data Warehouse |Microsoft 文件
-description: 系統檢視表的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
+title: 系統檢視表-Analytics Platform System Parallel Data Warehouse |Microsoft Docs
+description: 系統檢視表的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 35cf9252b43fd4ec52b81cd02fa1e7e777bdbe93
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539608"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395440"
 ---
-# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>分析平台系統平行資料倉儲的系統檢視表
-系統檢視表的分析平台 System (APS) SQL Server 平行資料倉儲 (PDW)。
+# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Analytics Platform System 平行資料倉儲系統檢視表
+系統檢視表的分析平台 System (APS) SQL Server Parallel Data Warehouse (PDW)。
 
 ## <a name="parallel-data-warehouse-catalog-views"></a>平行資料倉儲目錄檢視
 * [sys.pdw_column_distribution_properties](http://msdn.microsoft.com/library/mt204022.aspx)
@@ -130,17 +130,17 @@ ms.locfileid: "31539608"
 * [sys.types](http://msdn.microsoft.com/library/ms188021.aspx)
 * [sys.views](http://msdn.microsoft.com/library/ms190334.aspx)
 
-## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server Dmv 可用平行處理資料倉儲
-平行處理資料倉儲公開 （expose) 許多 SQL Server 動態管理檢視 (Dmv)。 這些檢視下，當查詢平行處理資料倉儲，會報告上所執行的 SQL Server 資料庫的狀態。
+## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>可用的 SQL Server Dmv 平行處理資料倉儲
+平行處理資料倉儲公開許多 SQL Server 動態管理檢視 (Dmv)。 這些檢視中，當查詢平行處理資料倉儲，會報告在發行版本上執行的 SQL Server 資料庫的狀態。
 
-每一個這些 DMV 包含名 pdw_node_id 的特定資料行。 這是計算節點的識別項。 
+這些 DMV 都有名為 pdw_node_id 的特定資料行。 這是計算節點的識別碼。 
 
 > [!NOTE]
-> 若要使用這些檢視，'pdw_nodes_' 插入名稱 下, 表所示。
+> 若要使用這些檢視，將 'pdw_nodes_' 插入名稱下, 表所示。
 > 
 > 
 
-| DMV 平行處理資料倉儲的名稱 | 連結到 SQL Server T-SQL 主題 |
+| 平行處理資料倉儲中的 DMV 名稱 | 連結至 SQL Server T-SQL 主題 |
 |:--- |:--- |
 | sys.dm_pdw_nodes_db_file_space_usage |[sys.dm_db_file_space_usage](http://msdn.microsoft.com/library/ms174412.aspx) |
 | sys.dm_pdw_nodes_db_index_usage_stats |[sys.dm_db_index_usage_stats](http://msdn.microsoft.com/library/ms188755.aspx) |
@@ -163,7 +163,7 @@ ms.locfileid: "31539608"
 | sys.dm_pdw_nodes_os_child_instances |[sys.dm_os_child_instances](http://msdn.microsoft.com/library/ms165698.aspx) |
 | sys.dm_pdw_nodes_os_cluster_nodes |[sys.dm_os_cluster_nodes](http://msdn.microsoft.com/library/ms187341.aspx) |
 | sys.dm_pdw_nodes_os_dispatcher_pools |[sys.dm_os_dispatcher_pools](http://msdn.microsoft.com/library/bb630336.aspx) |
-| sys.dm_pdw_nodes_os_dispatchers |無法使用 transact SQL 文件集。 |
+| sys.dm_pdw_nodes_os_dispatchers |無法使用 transact SQL 文件。 |
 | sys.dm_pdw_nodes_os_hosts |[sys.dm_os_hosts](http://msdn.microsoft.com/library/ms187800.aspx) |
 | sys.dm_pdw_nodes_os_latch_stats |[sys.dm_os_latch_stats](http://msdn.microsoft.com/library/ms175066.aspx) |
 | sys.dm_pdw_nodes_os_memory_brokers |[sys.dm_os_memory_brokers](http://msdn.microsoft.com/library/bb522548.aspx) |
@@ -172,7 +172,7 @@ ms.locfileid: "31539608"
 | sys.dm_pdw_nodes_os_memory_cache_entries |[sys.dm_os_memory_cache_entries](http://msdn.microsoft.com/library/ms189488.aspx) |
 | sys.dm_pdw_nodes_os_memory_cache_hash_tables |[sys.dm_os_memory_cache_hash_tables](http://msdn.microsoft.com/library/ms182388.aspx) |
 | sys.dm_pdw_nodes_os_memory_clerks |[sys.dm_os_memory_clerks](http://msdn.microsoft.com/library/ms175019.aspx) |
-| sys.dm_pdw_nodes_os_memory_node_access_stats |無法使用 transact SQL 文件集。 |
+| sys.dm_pdw_nodes_os_memory_node_access_stats |無法使用 transact SQL 文件。 |
 | sys.dm_pdw_nodes_os_memory_nodes |[sys.dm_os_memory_nodes](http://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_memory_objects |[sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) |
 | sys.dm_pdw_nodes_os_memory_pools |[sys.dm_os_memory_pools](http://msdn.microsoft.com/library/ms175022.aspx) |
@@ -180,7 +180,7 @@ ms.locfileid: "31539608"
 | sys.dm_pdw_nodes_os_performance_counters |[sys.dm_os_performance_counters](http://msdn.microsoft.com/library/ms187743.aspx) |
 | sys.dm_pdw_nodes_os_process_memory |[sys.dm_os_process_memory](http://msdn.microsoft.com/library/bb510747.aspx) |
 | sys.dm_pdw_nodes_os_schedulers |[sys.dm_os_schedulers](http://msdn.microsoft.com/library/ms177526.aspx) |
-| sys.dm_pdw_nodes_os_spinlock_stats |無法使用 transact SQL 文件集。 |
+| sys.dm_pdw_nodes_os_spinlock_stats |無法使用 transact SQL 文件。 |
 | sys.dm_pdw_nodes_os_sys_info |[sys.dm_os_sys_info](http://msdn.microsoft.com/library/ms175048.aspx) |
 | sys.dm_pdw_nodes_os_sys_memory |[sys.dm_os_memory_nodes](http://msdn.microsoft.com/library/bb510622.aspx) |
 | sys.dm_pdw_nodes_os_tasks |[sys.dm_os_tasks](http://msdn.microsoft.com/library/ms174963.aspx) |
@@ -201,7 +201,7 @@ ms.locfileid: "31539608"
 | sys.dm_pdw_nodes_tran_session_transactions |[sys.dm_tran_session_transactions](http://msdn.microsoft.com/library/ms188739.aspx) |
 | sys.dm_pdw_nodes_tran_top_version_generators |[sys.dm_tran_top_version_generators](http://msdn.microsoft.com/library/ms188778.aspx) |
 
-## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>SQL Server 2016 PolyBase Dmv 可用平行處理資料倉儲
+## <a name="sql-server-2016-polybase-dmvs-available-in-parallel-data-warehouse"></a>可用的 SQL Server 2016 PolyBase Dmv 平行處理資料倉儲
 * [sys.dm_exec_compute_node_errors](http://msdn.microsoft.com/library/mt146380.aspx)
 * [sys.dm_exec_compute_node_status](http://msdn.microsoft.com/library/mt146382.aspx)
 * [sys.dm_exec_compute_nodes](../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)
@@ -213,19 +213,19 @@ ms.locfileid: "31539608"
 * [sys.dm_exec_external_operations](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
-## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA 檢視
-* [CHECK_CONSTRAINTS](http://msdn.microsoft.com/library/ms189772.aspx)
-* [COLUMNS](http://msdn.microsoft.com/library/ms188348.aspx)
-* [PARAMETERS](http://msdn.microsoft.com/library/ms173796.aspx)
+## <a name="sql-server-informationschema-views"></a>SQL Server INFORMATION_SCHEMA 檢視表
+* [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
+* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](http://msdn.microsoft.com/library/ms186224.aspx)
+* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
+* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
-## <a name="next-steps"></a>後續的步驟
-如需詳細參考資訊，請參閱[T-SQL 語言項目](tsql-language-elements.md)和[T-SQL 陳述式](tsql-statements.md)。
+## <a name="next-steps"></a>後續步驟
+如需詳細參考資訊，請參閱[T-SQL 語言元素](tsql-language-elements.md)並[T-SQL 陳述式](tsql-statements.md)。
 
 <!--Image references-->
 

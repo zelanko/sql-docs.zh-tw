@@ -19,15 +19,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9efd87a25802bd5610393beb4de0728807ea827d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985320"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395062"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>對應 Sybase ASE 和 SQL Server 資料類型 (SybaseToSQL)
-Sybase Adaptive Server Enterprise (ASE) 的資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫的型別。 當您將轉換至 ASE 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件，您必須指定如何對應資料類型 ASE 能夠從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
+Sybase Adaptive Server Enterprise (ASE) 的資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫的型別。 當您將轉換至 ASE 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件，您必須指定如何對應資料類型 ASE 能夠從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
   
 ## <a name="default-mappings"></a>預設對應  
 SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定&#40;類型對應&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)。  
@@ -66,7 +66,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         這可讓您自訂的資料對應相同的資料類型的較小且較大的值。  
   
-    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的資料型別。  
+    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的資料型別。  
   
         某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為** 方塊中。  
   
@@ -82,7 +82,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         這可讓您自訂的資料對應相同的資料類型的較小且較大的值。  
   
-    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的資料型別。  
+    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的資料型別。  
   
         某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為**方塊，然後再按一下**確定**。  
   
@@ -95,7 +95,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
         您無法移除繼承的對應。 不過，在特定物件或物件類別目錄的自訂對應會覆寫繼承的對應。  
   
 ## <a name="next-steps"></a>後續步驟  
-移轉程序的下一個步驟是為任一[建立評量報告](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)或[轉換 Sybase ASE 資料庫物件，SQL Server 或 SQL Azure 的語法](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3)。 如果您建立的評估報告，評估期間時，會自動轉換 Sybase ASE 物件。  
+移轉程序的下一個步驟是為任一[建立評量報告](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)或[轉換 Sybase ASE 資料庫物件，SQL Server 或 SQL Azure 的語法](converting-sybase-ase-database-objects-sybasetosql.md)。 如果您建立的評估報告，評估期間時，會自動轉換 Sybase ASE 物件。  
   
 ## <a name="see-also"></a>另請參閱  
 [將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

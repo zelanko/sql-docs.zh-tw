@@ -1,5 +1,5 @@
 ---
-title: sp_help_proxy (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_proxy (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259798"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394018"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,24 +49,24 @@ sp_help_proxy
   
 ## <a name="arguments"></a>引數  
  [ **@proxy_id** = ] *id*  
- 要列出資訊的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
+ 要列出資訊的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
   
  [ **@proxy_name** = ] **'***proxy_name***'**  
- 要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可指定。  
+ 要列出資訊的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*識別碼*或*proxy_name*可能指定。  
   
  [ **@subsystem_name** =] '*subsystem_name*'  
  要列出 Proxy 的子系統名稱。 *Subsystem_name*是**sysname**，預設值是 NULL。 當*subsystem_name*指定，則*名稱*也必須指定。  
   
  下表列出每個子系統的值。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX Script|  
 |CmdExec|作業系統 (CmdExec)|  
-|快照集|複寫快照集代理程式|  
+|快照式|複寫快照集代理程式|  
 |LogReader|複寫記錄讀取器代理程式|  
 |Distribution|複寫散發代理程式|  
-|合併式|複寫合併代理程式|  
+|合併式|Replication Merge Agent|  
 |QueueReader|複寫佇列讀取器代理程式|  
 |ANALYSISQUERY|Analysis Services 命令|  
 |ANALYSISCOMMAND|Analysis Services 查詢|  
@@ -74,20 +74,20 @@ sp_help_proxy
 |PowerShell|PowerShell 指令碼|  
   
  [ **@name** =] '*名稱*'  
- 要列出 Proxy 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 名稱是**nvarchar （256)**，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
+ 要列出 Proxy 的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 登入名稱。 檔案名**nvarchar(256)**，預設值是 NULL。 當*名稱*指定，則*subsystem_name*也必須指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Proxy 識別碼。|  
 |**name**|**sysname**|Proxy 的名稱。|  
 |**credential_identity**|**sysname**|Proxy 相關認證的 Microsoft Windows 網域名稱和使用者名稱。|  
 |**enabled**|**tinyint**|是否啟用這個 Proxy。 { **0** = 未啟用， **1** = 啟用}|  
-|**描述**|**nvarchar(1024)**|這個 Proxy 的描述。|  
+|**description**|**nvarchar(1024)**|這個 Proxy 的描述。|  
 |**user_sid**|**varbinary(85)**|這個 Proxy 的 Windows 使用者之 Windows 安全性識別碼。|  
 |**credential_id**|**int**|這個 Proxy 的相關認證識別碼。|  
 |**credential_identity_exists**|**int**|credential_identity 是否存在。 { 0 = 不存在，1 = 存在 }|  
@@ -95,15 +95,15 @@ sp_help_proxy
 ## <a name="remarks"></a>備註  
  當未不提供任何參數時， **sp_help_proxy**列出執行個體中的所有 proxy 的資訊。  
   
- 若要判斷給定子系統可以使用哪些 proxy 登入，請指定*名稱*和*subsystem_name*。 當未提供這些引數時， **sp_help_proxy**列出指定的登入可能會存取，且可用於指定之子系統的 proxy。  
+ 若要判斷哪些登入 proxy 可用於指定的子系統，指定*名稱*並*subsystem_name*。 當未提供這些引數時， **sp_help_proxy**列出指定的登入可能會存取，且可用於指定之子系統的 proxy。  
   
 ## <a name="permissions"></a>Permissions  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
   
- 如需詳細資訊**SQLAgentOperatorRole**，請參閱[SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需詳細資訊**SQLAgentOperatorRole**，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 > [!NOTE]  
->  **Credential_identity**和**credential_identity**中只會傳回資料行時的結果集的成員**sysadmin**執行這個預存程序。  
+>  **Credential_identity**並**credential_identity**只會傳回資料行中時的結果集的成員**sysadmin**執行這個預存程序。  
   
 ## <a name="examples"></a>範例  
   
@@ -133,6 +133,6 @@ GO
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [sp_delete_proxy &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
   
   

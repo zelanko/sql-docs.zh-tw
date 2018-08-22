@@ -24,23 +24,23 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d0a76c4fdeff8abbe2b5e1ba2bafd615bba4b919
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: acb6a8c71c3f144850cb9c24431bcff440cdf761
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980161"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395441"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>對應來源和目標資料庫 (AccessToSQL)
-當您連線至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須指定目標資料庫，以便進行移轉。 如果您有多個 Access 資料庫中您就可以將它們對應至多個[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫 （或結構描述） 或在連線的 SQL Azure 資料庫的多個結構描述。  
+當您連線至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須指定目標資料庫，以便進行移轉。 如果您有多個 Access 資料庫中您就可以將它們對應至多個[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫 （或結構描述） 或在連線的 SQL Azure 資料庫的多個結構描述。  
   
 ## <a name="sql-server-or-sql-azure-database-schemas"></a>SQL Server 或 SQL Azure 的資料庫結構描述  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 資料庫會使用結構描述的概念來分隔成邏輯群組的資料庫中的物件。 例如，程式庫資料庫無法使用三個結構描述，名為**書籍**，**音訊**，和**視訊**來彼此分隔活頁簿時，音訊及視訊的物件。 根據預設，access 資料庫對應至**主要**資料庫和**dbo**結構描述中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和連接的資料庫和**dbo** SQL Azure 中的結構描述。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資料庫會使用結構描述的概念來分隔成邏輯群組的資料庫中的物件。 例如，程式庫資料庫無法使用三個結構描述，名為**書籍**，**音訊**，和**視訊**來彼此分隔活頁簿時，音訊及視訊的物件。 根據預設，access 資料庫對應至**主要**資料庫和**dbo**結構描述中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和連接的資料庫和**dbo** SQL Azure 中的結構描述。  
   
-除非您來自訂每一個 Access 資料庫之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫和結構描述，SSMA 會移轉所有的結構描述和對應的預設資料庫的 access 資料庫與相關聯的資料。  
+除非您來自訂每一個 Access 資料庫之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫和結構描述，SSMA 會移轉所有的結構描述和對應的預設資料庫的 access 資料庫與相關聯的資料。  
   
 ## <a name="modifying-the-target-database-and-schema"></a>修改結構描述與目標資料庫  
-SSMA 可讓您對應至每個 Access 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫和結構描述。 下列程序說明如何自訂每個資料庫的對應。  
+SSMA 可讓您對應至每個 Access 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫和結構描述。 下列程序說明如何自訂每個資料庫的對應。  
   
 **若要修改結構描述與目標資料庫**  
   
@@ -60,22 +60,22 @@ SSMA 可讓您對應至每個 Access 資料庫[!INCLUDE[ssNoVersion](../../inclu
   
 -   對應至 SQL Server  
   
-您可以將來源資料庫對應到任何目標的資料庫。 根據預設值對應的來源資料庫至目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]與您已連線使用 SSMA 的資料庫。 如果正在對應的目標資料庫不存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然後您將會出現一個訊息 **"的資料庫及/或結構描述不存在於目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料。它會在同步處理期間被建立。您要繼續嗎？"** 按一下 [是]。 同樣地，您可以將結構描述對應至不存在的結構描述目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]會在同步處理期間建立的資料庫。  
+您可以將來源資料庫對應到任何目標的資料庫。 根據預設值對應的來源資料庫至目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]與您已連線使用 SSMA 的資料庫。 如果正在對應的目標資料庫不存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後您將會出現一個訊息 **"的資料庫及/或結構描述不存在於目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料。它會在同步處理期間被建立。您要繼續嗎？"** 按一下 [是]。 同樣地，您可以將結構描述對應至不存在的結構描述目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]會在同步處理期間建立的資料庫。  
   
 -   對應至 SQL Azure  
   
-您可以將來源資料庫對應至連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫或連接的目標中的任何結構描述至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。 如果您將來源結構描述對應到在連線的目標資料庫的任何非現有結構描述，那麼您將會出現一個訊息 **"結構描述不存在於目標中繼資料。它會在同步處理期間被建立。您想要繼續嗎？"** 按一下 [是]。  
+您可以將來源資料庫對應至連接的目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫或連接的目標中的任何結構描述至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。 如果您將來源結構描述對應到在連線的目標資料庫的任何非現有結構描述，那麼您將會出現一個訊息 **"結構描述不存在於目標中繼資料。它會在同步處理期間被建立。您想要繼續嗎？"** 按一下 [是]。  
   
 ## <a name="reverting-to-your-initial-database-and-schema"></a>還原到您的初始資料庫和結構描述  
-如果您自訂 Access 資料庫之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫和結構描述，您便可還原回您指定當您連接到資料庫的對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+如果您自訂 Access 資料庫之間的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫和結構描述，您便可還原回您指定當您連接到資料庫的對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 **若要重設回預設資料庫及結構描述**  
   
 1.  在 [結構描述對應] 索引標籤中，選取任何資料列然後按一下**重設為預設**還原成預設的資料庫和結構描述。  
   
 ## <a name="next-step"></a>下一個步驟  
-遷移程序的下一個步驟是[轉換資料庫物件](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+遷移程序的下一個步驟是[轉換資料庫物件](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

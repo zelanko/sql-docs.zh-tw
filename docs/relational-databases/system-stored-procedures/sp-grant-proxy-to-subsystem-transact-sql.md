@@ -1,5 +1,5 @@
 ---
-title: sp_grant_proxy_to_subsystem (TRANSACT-SQL) |Microsoft 文件
+title: sp_grant_proxy_to_subsystem (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a52e19c374c0b1ac14749e1e1bcc53f3a30d2b2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6c8764394ad12a3080a03970a252bfc5a7f56099
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262442"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395852"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ sp_grant_proxy_to_subsystem
   
 ## <a name="arguments"></a>引數  
  [ **@proxy_id =** ] *id*  
- 要授與存取權的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*proxy_id*或*proxy_name*必須指定，但不可同時指定兩者。  
+ 要授與存取權的 Proxy 之 Proxy 識別碼。 *Proxy_id*是**int**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
   
  [ **@proxy_name =** ] **'***proxy_name***'**  
- 要授與存取權的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*proxy_id*或*proxy_name*必須指定，但不可同時指定兩者。  
+ 要授與存取權的 Proxy 名稱。 *Proxy_name*是**sysname**，預設值是 NULL。 任一*proxy_id*或是*proxy_name*必須指定，但不可同時指定兩者。  
   
  [ **@subsystem_id =** ] *id*  
- 要授與存取權的子系統識別碼。 *Syssubsystems*是**int**，預設值是 NULL。 任一*syssubsystems*或*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
+ 要授與存取權的子系統識別碼。 *Syssubsystems*是**int**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script<br /><br /> **\*\* 重要\* \***  ActiveX Scripting 子系統將從移除[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中的代理程式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX Script<br /><br /> **\*\* 重要\* \*** 會移除 ActiveX Scripting 子系統[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的未來版本中的代理程式[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 請避免在新的開發工作中使用這項功能，並規劃修改目前使用這項功能的應用程式。|  
 |**3**|作業系統 (**CmdExec**)|  
 |**4**|複寫快照集代理程式|  
 |**5**|複寫記錄讀取器代理程式|  
 |**6**|複寫散發代理程式|  
-|**7**|複寫合併代理程式|  
+|**7**|Replication Merge Agent|  
 |**8**|複寫佇列讀取器代理程式|  
 |**9**|Analysis Services 查詢|  
 |**10**|Analysis Services 命令|  
@@ -70,16 +70,16 @@ sp_grant_proxy_to_subsystem
 |**12**|PowerShell 指令碼|  
   
  [ **@subsystem_name =** ] **'***subsystem_name***'**  
- 要授與存取權的子系統名稱。 **Subsystem_name**是**sysname**，預設值是 NULL。 任一*syssubsystems*或*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
+ 要授與存取權的子系統名稱。 **Subsystem_name**是**sysname**，預設值是 NULL。 任一*syssubsystems*或是*subsystem_name*必須指定，但不可同時指定兩者。 下表列出每個子系統的值。  
   
-|Value|Description|  
+|值|描述|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX Script|  
 |**CmdExec**|作業系統 (**CmdExec**)|  
 |**快照式**|複寫快照集代理程式|  
 |**LogReader**|複寫記錄讀取器代理程式|  
 |**Distribution**|複寫散發代理程式|  
-|**合併式**|複寫合併代理程式|  
+|**合併式**|Replication Merge Agent|  
 |**QueueReader**|複寫佇列讀取器代理程式|  
 |**ANALYSISQUERY**|Analysis Services 查詢|  
 |**ANALYSISCOMMAND**|Analysis Services 命令|  
@@ -121,10 +121,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [實作 SQL Server Agent 安全性](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
- [sp_revoke_proxy_from_subsystem &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
+ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
+ [sp_revoke_proxy_from_subsystem &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_update_proxy &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
+ [sp_delete_proxy &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
+ [sp_update_proxy &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-proxy-transact-sql.md)  
   
   

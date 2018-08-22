@@ -23,15 +23,15 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985740"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396060"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>專案設定 （類型對應） (AccessToSQL)
-型別對應的專案設定可讓您設定 SSMA 專案的預設型別對應。 您也可以指定個別的資料庫物件的型別對應。 如需詳細資訊，請參閱 <<c0> [ 對應來源和目標資料型別](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
+型別對應的專案設定可讓您設定 SSMA 專案的預設型別對應。 您也可以指定個別的資料庫物件的型別對應。 如需詳細資訊，請參閱 <<c0> [ 對應來源和目標資料型別](mapping-source-and-target-data-types-accesstosql.md)。  
   
 型別對應可用於**專案設定**並**預設專案設定**對話方塊：  
   
@@ -44,7 +44,7 @@ ms.locfileid: "38985740"
 存取的資料類型對應。  
   
 **目標類型**  
-目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或指定的存取資料類型的 SQL Azure 資料型別。  
+目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或指定的存取資料類型的 SQL Azure 資料型別。  
   
 下表顯示來源和目標資料類型之間的預設對應。  
   
@@ -76,10 +76,10 @@ ms.locfileid: "38985740"
 **移除**  
 按一下即可從對應清單中移除選取的資料類型對應。  
   
-**重設預設值**  
+**重設為預設值**  
 按一下以重設為 SSMA 預設值的所有資料類型對應。  
   
 ## <a name="see-also"></a>另請參閱  
-[對應來源和目標資料類型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[對應來源和目標資料類型](mapping-source-and-target-data-types-accesstosql.md)  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

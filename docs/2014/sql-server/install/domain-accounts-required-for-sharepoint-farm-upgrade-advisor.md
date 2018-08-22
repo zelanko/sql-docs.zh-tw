@@ -14,12 +14,12 @@ caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 122f0209e7254d558ac5cc3db806d8bb648a849c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1988ea03795dd8eee6d86844560935ed44b30d3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251210"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394203"
 ---
 # <a name="domain-accounts-required-for-sharepoint-farm-upgrade-advisor"></a>SharePoint 伺服陣列所需的網域帳戶 (Upgrade Advisor)
   針對伺服陣列環境設定的 SharePoint 產品需要使用網域帳戶。  
@@ -29,7 +29,7 @@ ms.locfileid: "37251210"
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 模式。|  
   
 ## <a name="component"></a>元件  
- [!INCLUDE[ssRS](../../includes/ssrs-md.md)]  
+ [!INCLUDE[ssRS](../../includes/ssrs.md)]  
   
 ### <a name="description"></a>描述  
  針對伺服陣列環境設定的 SharePoint 產品需要將網域帳戶用於服務和資料庫連接。 其中包括您為 Reporting Services 服務帳戶指定的帳戶。  

@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,12 +26,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1912079b4bb85426a89517179ac7d79eadaf108
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 406ee95a3fac911c53fc6ad1e2c5cd50b579508b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412897"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394619"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>建立 SQL Server Native Client ODBC 驅動程式應用程式
   ODBC 架構包含四個執行下列函數的元件。  

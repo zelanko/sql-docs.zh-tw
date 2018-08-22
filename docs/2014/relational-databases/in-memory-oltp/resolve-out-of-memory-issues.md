@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253980"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395241"
 ---
 # <a name="resolve-out-of-memory-issues"></a>解決記憶體不足問題
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 所使用的記憶體比 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]更多，而且使用方式也不同。 您所安裝並配置給 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 的記憶體數量可能會變得不足以支應成長的需求。 若是如此，您可能會用完記憶體。 本主題將說明如何從 OOM 情況中復原。 如需可協助您避免多種 OOM 情況的指引，請參閱 [監視與疑難排解記憶體使用量](monitor-and-troubleshoot-memory-usage.md) 。  
@@ -80,7 +79,7 @@ ms.locfileid: "37253980"
 ###  <a name="bkmk_openDAC"></a> 開啟 DAC (專用管理員連接)  
  Microsoft SQL Server 提供了專用管理員連接 (DAC)。 即使伺服器對其他用戶端連接沒有回應，系統管理員也可以使用 DAC 來存取 SQL Server Database Engine 的執行中執行個體，以針對伺服器上的問題進行疑難排解。 您可以透過 `sqlcmd` 公用程式和 SQL Server Management Studio (SSMS) 使用 DAC。  
   
- 如需使用 `sqlcmd` 和 DAC 的指引，請參閱 [使用專用管理員連接](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css)。 如需透過 SSMS 使用 DAC 的指引，請參閱 [如何：利用 SQL Server Management Studio 使用專用管理員連接](http://msdn.microsoft.com/library/ms178068.aspx)。  
+ 如需使用 `sqlcmd` 和 DAC 的指引，請參閱 [使用專用管理員連接](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)。 如需透過 SSMS 使用 DAC 的指引，請參閱 [如何：利用 SQL Server Management Studio 使用專用管理員連接](http://msdn.microsoft.com/library/ms178068.aspx)。  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> 採取更正動作  
  若要解決 OOM 狀況，您必須透過降低使用量，釋出現有的記憶體，或是將更多記憶體提供給記憶體中的資料表。  

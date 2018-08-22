@@ -1,5 +1,5 @@
 ---
-title: Power Pivot for SharePoint (SSAS) |Microsoft 文件
+title: Powerpivot for SharePoint (SSAS) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dc21ce644416c93367552e6ba19ac8aca9e0f48e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: fcfce0a21e66e0ae1e5a440eda0fd32fd7d1964b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023635"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394819"
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot for SharePoint (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "34023635"
  這些資料的伺服器裝載需要 SharePoint、Excel Services 和 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 安裝。 資料載入到 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 執行個體上，在此處可透過伺服器為 Excel 2010 活頁簿提供的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 資料重新整理功能或是為 Excel 2013 和 2016 活頁簿提供的 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ，依排程間隔重新整理資料。  
   
 ## <a name="power-pivot-for-sharepoint-2016"></a>Power Pivot for SharePoint 2016  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支援 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2016 以及包含資料模型和 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] Power View 報表的 Excel 活頁簿 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 使用。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 支援[!INCLUDE[msCoName](../../includes/msconame-md.md)]SharePoint 2016 和 Office Online Server 的 Excel 活頁簿包含資料模型的使用方式和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Power View 報表。  
   
- [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)] Excel 包含資料模型功能，可在瀏覽器中啟用與 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 活頁簿的互動。 您不需要將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 增益集部署至伺服器陣列。 您只需要在 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 模式中安裝 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 伺服器，並向 [!INCLUDE[offOnlineServer](../../includes/offonlineserver-md.md)]註冊伺服器。  
+ Excel、 Office Online Server 內包含資料模型功能，以便與互動[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]瀏覽器中的活頁簿。 您不需要將 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 增益集部署至伺服器陣列。 您只需要安裝[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]中的伺服器[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]模式並註冊 Office Online Server 的伺服器。  
   
  若部署 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2016 增益集，會在 SharePoint 伺服器陣列中啟用其他功能與特性。 其他功能包括 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 圖庫、排程資料重新整理。  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
@@ -14,12 +13,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11b6becc192fcb8257f2f4dc88965c95222d2d44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 931eaa8ad51c277657c3a9f86402d4759ad0d671
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249288"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396063"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>了解記憶體最佳化資料表上的交易
   交易會使用一種開放式多重版本並行控制的形式，存取記憶體最佳化的資料表。 這表示有不同版本的資料。 每一筆交易都會在它自己的交易一致性資料庫版本上運作，與其他並行執行的交易無關。 此外，交易會在開放式假設下運作，並不會與其他並行交易發生衝突。 如此就不需要使用鎖定，不過需要系統偵測衝突，並終止其中一個衝突的交易。 只有寫入-寫入交易和讀取-寫入交易會發生衝突。 如果發生寫入-寫入衝突，其中一個寫入交易會終止。  

@@ -5,8 +5,7 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
@@ -14,12 +13,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebec1a7f57606b2b07fe8b2c2d80529c3f04d583
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1f0c92e879c7992e21a6c424bc723c76ae0f18d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209078"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396253"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>記憶體最佳化的資料表簡介
   記憶體最佳化資料表是使用 [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) 所建立的資料表。  

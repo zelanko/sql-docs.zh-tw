@@ -1,5 +1,5 @@
 ---
-title: 資料移轉報告 (AccessToSQL) |Microsoft 文件
+title: 資料移轉報告 (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,38 +16,38 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: abe41ca0672776faae966d375daca718c6769434
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d030ca48bee67e322d27365a80c97d9b02071e7d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774984"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395650"
 ---
 # <a name="data-migration-report-accesstosql"></a>資料移轉報告 (AccessToSQL)
-**資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+**資料移轉報告** 對話方塊隨即出現之後您將資料移轉至, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ## <a name="options"></a>選項。  
 **狀態**  
-顯示來源的資料移轉到目標資料庫的狀態。  
+顯示移轉的狀態資料從來源到目標資料庫。  
   
 **來源**  
-來源資料表。  
+來源資料表中。  
   
 **若要**  
-目標資料表。  
+目標資料表中。  
   
 **資料列總數**  
 來源資料表中的資料列數目。  
   
 **已成功移轉的資料列數目**  
-資料列數目已成功移轉到目標資料表。  
+資料列數目已成功移轉至目標資料表。  
   
 **比率**  
-已成功移轉的資料列百分比。  
+成功移轉的資料列百分比。  
   
 **詳細資料**  
-如果任何資料移轉失敗，按一下以在報表中顯示選取的資料列的移轉詳細資料。 SSMA 會顯示失敗的原因。  
+如果任何資料移轉失敗，按一下以顯示報表中的 選取的資料列的移轉詳細資料。 SSMA 會顯示失敗的原因。  
   
 **儲存報表**  
-將儲存至報表。CSV （逗號分隔值） 檔案，可以使用 Microsoft Excel 中檢查。  
+儲存至報告。CSV （逗點分隔值） 檔案，可以使用 Microsoft Excel 中檢查。  
   

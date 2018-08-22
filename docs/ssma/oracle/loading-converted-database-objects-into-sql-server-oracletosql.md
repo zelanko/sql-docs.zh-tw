@@ -16,20 +16,20 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 31b7f6b63aadd36d9d933da27a817adea9aeb9ac
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b1e1f8d4efe504680b5b6fb5decc8497e6ec7844
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982270"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395514"
 ---
-# <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>已轉換的資料庫物件載入至 SQL Server (OracleToSQL)
+# <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>將轉換的資料庫物件載入 SQL Server (OracleToSQL)
 Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物件載入 SQL Server。 您可以讓 SSMA 建立物件，或者您可以編寫物件指令碼，然後自己執行的指令碼。 此外，SSMA 也可讓您使用 SQL Server 資料庫的實際內容來更新目標中繼資料。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>同步處理和指令碼之間進行選擇  
-如果您想要轉換之資料庫物件載入 SQL Server，而不需修改，您可以直接建立或重新建立資料庫物件的 SSMA。 方法既快速又簡單，但不允許自訂[!INCLUDE[tsql](../../includes/tsql_md.md)]定義預存程序以外的 SQL Server 物件的程式碼。  
+如果您想要轉換之資料庫物件載入 SQL Server，而不需修改，您可以直接建立或重新建立資料庫物件的 SSMA。 方法既快速又簡單，但不允許自訂[!INCLUDE[tsql](../../includes/tsql-md.md)]定義預存程序以外的 SQL Server 物件的程式碼。  
   
-如果您想要修改[!INCLUDE[tsql](../../includes/tsql_md.md)]用來建立物件，或如果您想要更充分掌控物件建立時，使用 SSMA 建立指令碼。 您可以再修改這些指令碼，每個物件會個別建立，甚至使用 SQL Server Agent 來排程建立這些物件。  
+如果您想要修改[!INCLUDE[tsql](../../includes/tsql-md.md)]用來建立物件，或如果您想要更充分掌控物件建立時，使用 SSMA 建立指令碼。 您可以再修改這些指令碼，每個物件會個別建立，甚至使用 SQL Server Agent 來排程建立這些物件。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 與 SQL Server 同步處理物件  
 若要使用 SSMA 建立 SQL Server 資料庫物件，您在 SQL Server 中繼資料總管 中選取的物件，然後再同步處理物件與 SQL Server，如下列程序中所示。 根據預設，如果物件已存在於 SQL Server，而且如果 SSMA 中繼資料是比 SQL Server 中的物件則 SSMA 會改變 SQL Server 中的物件定義。 您可以變更預設行為，藉由編輯**專案設定**。  
@@ -64,7 +64,7 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物�
 按一下動作正負號，以變更狀態。 當您按一下時，將會執行實際的同步處理 **[確定]** 按鈕**同步處理資料庫**對話方塊。  
   
 ## <a name="scripting-objects"></a>編寫物件指令碼  
-若要儲存[!INCLUDE[tsql](../../includes/tsql_md.md)]定義的轉換後的資料庫物件，或改變的物件定義，然後自己執行指令碼，您可以將儲存已轉換的資料庫物件定義以便[!INCLUDE[tsql](../../includes/tsql_md.md)]指令碼。  
+若要儲存[!INCLUDE[tsql](../../includes/tsql-md.md)]定義的轉換後的資料庫物件，或改變的物件定義，然後自己執行指令碼，您可以將儲存已轉換的資料庫物件定義以便[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼。  
   
 **若要將物件儲存為指令碼**  
   
@@ -75,11 +75,11 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物�
 2.  在 **另存新檔**對話方塊方塊中，找出您想要用來儲存指令碼中，輸入中的檔案名稱的資料夾**檔案名稱**方塊，然後再按一下 確定 SSMA 會將.sql 副檔名的附加。  
   
 ### <a name="modifying-scripts"></a>修改指令碼  
-您已儲存的 SQL Server 物件定義為一個或多個指令碼之後，您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]來檢視和修改指令碼。  
+您已儲存的 SQL Server 物件定義為一個或多個指令碼之後，您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來檢視和修改指令碼。  
   
 **若要修改指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
 2.  在 [**開啟**] 對話方塊中，選取您的指令碼檔案，然後按一下 [確定]。
   
@@ -90,11 +90,11 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物�
 4.  若要儲存指令碼，在 [檔案] 功能表，按一下**儲存**。  
   
 ### <a name="running-scripts"></a>執行指令碼  
-您可以在執行指令碼或個別的陳述式， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。  
+您可以在執行指令碼或個別的陳述式， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 **若要執行指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
 2.  在 **開啟** 對話方塊中，選取您的指令碼檔案，然後按一下 確定  
   
@@ -102,7 +102,7 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物�
   
 4.  若要執行一組陳述式，選取陳述式在查詢編輯器 視窗，然後按**F5**索引鍵。  
   
-如需如何使用查詢編輯器來執行指令碼的詳細資訊，請參閱 「[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)]查詢 「 SQL Server 線上叢書 》 中。  
+如需如何使用查詢編輯器來執行指令碼的詳細資訊，請參閱 「[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查詢 「 SQL Server 線上叢書 》 中。  
   
 您也可以執行從命令列指令碼，利用**sqlcmd**公用程式，並從 SQL Server Agent。 如需詳細資訊**sqlcmd**，請參閱 SQL Server 線上叢書 》 中的 「 sqlcmd 公用程式 」。 如需有關 SQL Server Agent 的詳細資訊，請參閱 「 自動化系統管理工作 (SQL Server Agent) 」 在 SQL Server 線上叢書 》 中。  
   
@@ -110,7 +110,7 @@ Oracle 結構描述轉換至 SQL Server 之後，您可以產生的資料庫物�
 轉換的資料庫物件載入 SQL Server 之後，您可以授與和拒絕這些物件的權限。 它是個不錯的主意，若要這樣做之前移轉至 SQL Server 的資料。 如需如何協助保護 SQL Server 中的物件資訊，請參閱 「 安全性考量的資料庫和資料庫應用程式"SQL Server 線上叢書 》 中。  
   
 ## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[將資料移轉至 SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)。  
+移轉程序的下一個步驟是[將資料移轉至 SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [移轉的 Oracle 資料庫到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

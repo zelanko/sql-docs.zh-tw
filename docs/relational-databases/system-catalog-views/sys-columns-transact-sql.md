@@ -25,12 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5672a062fdab79cf7a903e5dfac2d1f369bd70de
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 88b5f3c402861bb06c854cf31bc411c1e12da079
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39550348"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395431"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,8 +85,8 @@ ms.locfileid: "39550348"
 |encryption_algorithm_name|**sysname**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 加密演算法的名稱。<br /><br /> 支援只 AEAD_AES_256_CBC_HMAC_SHA_512。|  
 |column_encryption_key_id|**int**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> CEK 的識別碼。|  
 |column_encryption_key_database_name|**sysname**|**適用對象**：[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDW_md](../../includes/sssds-md.md)]。<br /><br /> 如果不同的資料庫資料行的資料行加密金鑰存在的資料庫名稱。 如果索引鍵存在於相同的資料庫資料行，則為 NULL。|  
-|is_hidden|**bit**|**適用對象**：[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指出是否會隱藏資料行：<br /><br /> 0 = 一般、 非隱藏、 顯示的資料行<br /><br /> 1 = 隱藏資料行|  
-|is_masked|**bit**|**適用對象**：[!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指出是否遮罩處理的動態資料遮罩的資料行：<br /><br /> 0 = 一般，不加上遮罩的資料行<br /><br /> 1 = 資料行已遮罩|  
+|is_hidden|**bit**|**適用對象**：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指出是否會隱藏資料行：<br /><br /> 0 = 一般、 非隱藏、 顯示的資料行<br /><br /> 1 = 隱藏資料行|  
+|is_masked|**bit**|**適用對象**：[!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 至 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]。<br /><br /> 指出是否遮罩處理的動態資料遮罩的資料行：<br /><br /> 0 = 一般，不加上遮罩的資料行<br /><br /> 1 = 資料行已遮罩|  
 
 
  

@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 59
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76e7798edc0d11555d0281ff6c026f63f7ea3426
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ce15c9964eb7f0fe8dfc8338aba2499043ff7e77
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411307"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394871"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client 功能
   除了公開 Windows (先前稱為 Microsoft) Data Access Components (WDAC) 的功能之外，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 也會實作其他許多功能來公開 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 功能。  
@@ -74,7 +74,7 @@ ms.locfileid: "37411307"
  [FILESTREAM 支援](filestream-support.md)  
  討論[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]增強型 FILESTREAM 功能的原生用戶端支援。  
   
- [服務主體名稱&#40;SPN&#41;中的用戶端連線的支援](service-principal-name-spn-support-in-client-connections.md)  
+ [用戶端連線中的服務主要名稱 &#40;SPN&#41; 支援](service-principal-name-spn-support-in-client-connections.md)  
  討論如何擴充服務主要名稱 (SPN) 的支援以便跨所有通訊協定進行相互驗證。  
   
  [SQL Server Native Client 支援疏鬆資料行](sparse-columns-support-in-sql-server-native-client.md)  
@@ -90,7 +90,7 @@ ms.locfileid: "37411307"
  討論 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中導入的行為變更。 如果您在繫結資料行結果或輸出參數時提供固定長度的緩衝區、`wchar` 字元在終止字元成為 Surrogate 字組的高 Surrogate 字碼指標之前寫入緩衝區，而且下一個 `wchar` 字元是低 Surrogate 字碼指標，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 就不會將高 Surrogate 字碼指標加入至緩衝區。  
   
  [高可用性/災害復原的 SQL Server Native Client 支援](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- 討論如何設定您的應用程式，以善用中加入功能的高可用性、 災害復原[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]。  
+ 討論如何設定應用程式以利用 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 中新增的高可用性災害復原功能。  
   
  [存取擴充事件記錄檔中的診斷資訊](accessing-diagnostic-information-in-the-extended-events-log.md)  
  討論可讓您存取信號緩衝區和 XEvents 記錄檔中之診斷資訊的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 及資料追蹤增強功能。  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f8135f70466ecef4fb77a876a38823af7dd8c27d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ef00c8493ab700976e1ede1b6d6631b6d2fe8da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312328"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393813"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>示範記憶體中 OLTP 的 AdventureWorks 延伸模組
     
@@ -37,7 +36,7 @@ ms.locfileid: "37312328"
   
 -   安裝範例及執行工作負載示範的[必要條件](#Prerequisites)  
   
--    [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
+-   [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)的指示  
   
 -   [範例資料表和程序描述](#Descriptionofthesampletablesandprocedures) – 這包含 [!INCLUDE[hek_2](../includes/hek-2-md.md)] 範例加入 AdventureWorks 中的資料表和程序的說明，以及將部分原始 AdventureWorks 資料表移轉至記憶體最佳化資料表的考量。  
   

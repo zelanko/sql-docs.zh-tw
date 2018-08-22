@@ -19,25 +19,25 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6143733af6824518b8a54ed856844c5e01702d0a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4651ec2de2680d9c1c855f352768228e1835f22b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985210"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396260"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>將 MySQL 資料移轉到 SQL Server-Azure SQL DB (MySQLToSQL)
-您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您可以移轉的資料從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+您已成功同步處理與已轉換的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以移轉的資料從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 > [!IMPORTANT]  
-> 引擎是否正在使用伺服器端資料移轉引擎，然後在移轉之前的資料，您必須安裝 SSMA for MySQL 延伸模組套件，並執行 SSMA 的電腦上的 MySQL 提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]也必須執行代理程式服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server （從 mysql 移轉至 SQL） 上安裝 SSMA 元件](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+> 引擎是否正在使用伺服器端資料移轉引擎，然後在移轉之前的資料，您必須安裝 SSMA for MySQL 延伸模組套件，並執行 SSMA 的電腦上的 MySQL 提供者。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]也必須執行代理程式服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server （從 mysql 移轉至 SQL） 上安裝 SSMA 元件](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
 ## <a name="setting-migration-options"></a>移轉選項的設定  
-然後再移轉資料到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，檢閱中的專案移轉選項**專案設定** 對話方塊。  
+然後再移轉資料到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，檢閱中的專案移轉選項**專案設定** 對話方塊。  
   
 -   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和識別的值處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉）](http://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9)。  
   
-    如需詳細資訊**擴充資料移轉設定**，請參閱[資料移轉設定](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)  
+    如需詳細資訊**擴充資料移轉設定**，請參閱[資料移轉設定](data-migration-settings-mysqltosql.md)  
   
 -   **移轉引擎**中**專案設定**對話方塊，可讓使用者能夠執行使用的資料移轉引擎的兩種類型的移轉程序：  
   
@@ -64,7 +64,7 @@ ms.locfileid: "38985210"
 > **用戶端端資料移轉**選項僅適用於 SQL Azure。  
   
 ## <a name="migrating-data-to-sql-server-or-sql-azure"></a>將資料移轉至 SQL Server 或 SQL Azure  
-移轉資料是從 MySQL 資料表移動的資料列大量載入作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料表在交易中的。 載入資料列數目[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]每一筆交易中已將專案設定中。  
+移轉資料是從 MySQL 資料表移動的資料列大量載入作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表在交易中的。 載入資料列數目[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]每一筆交易中已將專案設定中。  
   
 若要檢視移轉訊息，請確定 [輸出] 窗格為可見。 否則，從**檢視**功能表上，選取**輸出**。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "38985210"
   
         1.  SSMA for MySQL 延伸模組套件會安裝 SQL Server 執行個體上。  
   
-        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式服務正在執行的 SQL Server 執行個體上  
+        2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式服務正在執行的 SQL Server 執行個體上  
   
     -   執行**伺服器端資料移轉**，選取**伺服器端資料移轉引擎**選項**專案設定** 對話方塊。  
   

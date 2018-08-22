@@ -15,28 +15,28 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f15152c782b16b7939f26e8b94b66a2ca20b234c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 76dd1388f5abdc2219270f0745c03fcdb0334030
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985240"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395647"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>使用 SSMA 專案 (OracleToSQL)
-若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
+若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
   
--   您想要移轉至 Oracle 資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+-   您想要移轉至 Oracle 資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，將會收到已移轉的物件和資料。  
+-   目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將會收到已移轉的物件和資料。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 連接資訊。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接資訊。  
   
 -   專案設定。  
   
-當您開啟專案時，它已中斷連線從 Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 可讓您離線工作。 如需有關重新連線到資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱 <<c2> [ 連接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)。</c2>  
+當您開啟專案時，它已中斷連線從 Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可讓您離線工作。 如需有關重新連線到資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 連接到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)。</c2>  
   
 ## <a name="reviewing-default-project-settings"></a>檢閱預設的專案設定  
-SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步處理與 Oracle 的 SSMA 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 預設設定是適用於許多使用者。 不過，您建立新的 SSMA 專案之前，您應該檢閱設定。 如果您想要您可以變更將會用於所有新專案的預設設定。  
+SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步處理與 Oracle 的 SSMA 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 預設設定是適用於許多使用者。 不過，您建立新的 SSMA 專案之前，您應該檢閱設定。 如果您想要您可以變更將會用於所有新專案的預設設定。  
   
 **若要檢視預設的專案設定**  
   
@@ -54,14 +54,14 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
   
     -   系統物件設定的相關資訊，請參閱[專案設定&#40;載入系統物件&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-loading-system-objects-oracletosql.md)。  
   
-    -   如需設定進行同步處理[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱 <<c2> [ 專案設定&#40;同步處理&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。</c2>  
+    -   如需設定進行同步處理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 專案設定&#40;同步處理&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md)。</c2>  
   
     -   GUI 設定的相關資訊，請參閱[專案設定&#40;GUI&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-gui-oracletosql.md)。  
   
     -   如需資料類型對應設定的資訊，請參閱[專案設定&#40;類型對應&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
   
 ## <a name="creating-new-projects"></a>建立新專案  
-若要將資料從 Oracle 資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您必須先建立專案。  
+若要將資料從 Oracle 資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須先建立專案。  
   
 **若要建立專案**  
   
@@ -73,15 +73,15 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
   
 3.  在 **位置**方塊中，輸入或選取專案的資料夾，然後按一下**確定**。  
   
-4.  在**遷移至**下拉式清單，請選取目標版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]遷移所使用的。 可用的選項如下：  
+4.  在**遷移至**下拉式清單，請選取目標版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移所使用的。 可用的選項如下：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure 的 SQL 資料庫  
   
@@ -108,7 +108,7 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
         SSMA 會剖析 Oracle 結構描述，並將中繼資料儲存到專案檔。  
   
 ## <a name="opening-projects"></a>開啟專案  
-當您開啟專案時，它已中斷連線從 Oracle 及[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 可讓您離線工作。 若要更新的中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 若要將資料移轉，您必須重新連線到 Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+當您開啟專案時，它已中斷連線從 Oracle 及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可讓您離線工作。 若要更新的中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要將資料移轉，您必須重新連線到 Oracle 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 **若要開啟專案**  
   
@@ -120,7 +120,7 @@ SSMA 會包含數個設定來轉換和載入資料庫物件移轉資料和同步
   
 2.  在重新連線至 Oracle**檔案**功能表上，按一下**重新連接到 Oracle**。  
   
-3.  若要重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上**檔案**功能表上，按一下**重新連接到 SQL Server**。  
+3.  若要重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上**檔案**功能表上，按一下**重新連接到 SQL Server**。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[連接到 Oracle 資料庫 (OracleToSQL)](http://msdn.microsoft.com/e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6)。  

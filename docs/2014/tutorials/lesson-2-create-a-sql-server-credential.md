@@ -14,19 +14,19 @@ caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 358c88c0fef9c4ffaf7c7fc93458be1b1563d94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dbf7ee01520d139ce6b56912f6b35500ee35352
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163804"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396248"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lesson 2: Create a SQL Server Credential
   **認證** ： [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認證是用來儲存連接到 SQL Server 外部資源所需之驗證資訊的物件。  在這裡，[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]備份和還原程序會使用認證來驗證 Windows Azure Blob 儲存體服務。 認證會儲存儲存體帳戶的名稱以及儲存體帳戶的 **存取金鑰** 值。 一旦建立認證之後，您必須在發出 BACKUP/RESTORE 陳述式時，在 WITH CREDENTIAL 選項中指定認證。 如需有關如何檢視、 複製或重新產生儲存體帳戶**存取金鑰**，請參閱[儲存體帳戶存取金鑰](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx)。  
   
- 如需有關認證的一般資訊，請參閱 [認證](http://msdn.microsoft.com/library/ms161950.aspx)。  
+ 如需認證的一般資訊，請參閱[認證](../relational-databases/security/authentication-access/credentials-database-engine.md)。  
   
- 如需有關使用認證之其他範例的詳細資訊，請參閱 [建立 SQL Server Agent Proxy](http://msdn.microsoft.com/library/ms175834.aspx)。  
+ 如需其他範例，其中會使用認證，請參閱[建立 SQL Server Agent Proxy](../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 > [!IMPORTANT]  
 >  建立 SQL Server 認證，如下所述的需求專屬於 SQL Server 備份程序 ([SQL Server 備份至 URL](../relational-databases/backup-restore/sql-server-backup-to-url.md)，並[SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md))。 SQL Server 在存取 Azure 儲存體以寫入或讀取備份時，會使用儲存體帳戶名稱與存取金鑰資訊。  如需有關如何建立認證以在 Azure 儲存體中儲存資料庫檔案的詳細資訊，請參閱[第 3 課： 建立 SQL Server 認證](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  

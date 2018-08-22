@@ -19,25 +19,25 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 55f9a09e9c0ce4a3b4f290c9b8b23185e09f415e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e39d74143e21d6b75a5a35a1f8dbde4f62f285f4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982330"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395862"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>Sybase ASE 資料移轉到 SQL Server-Azure SQL DB (SybaseToSQL)
-已成功載入到 Sybase Adaptive Server Enterprise (ASE) 資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中，您可以從 ASE 移轉資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB。  
+已成功載入到 Sybase Adaptive Server Enterprise (ASE) 資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 中，您可以從 ASE 移轉資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB。  
   
 > [!IMPORTANT]  
 > 如果伺服器端資料移轉引擎所使用的引擎，然後移轉資料，您必須先安裝 SSMA for Sybase ASE 延伸模組組件和 Sybase ASE 上的提供者執行 SSMA 的電腦。 也必須執行的 SQL Server Agent 服務。 如需如何安裝此延伸模組組件的詳細資訊，請參閱[SQL Server (SybaseToSQL) 上安裝 SSMA 元件](http://msdn.microsoft.com/5ad9e12c-2cdb-4dd2-8703-05a23242d19d)  
   
 ## <a name="setting-migration-options"></a>移轉選項的設定  
-在移轉之前資料載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL DB 中，檢閱中的專案移轉選項**專案設定** 對話方塊。  
+在移轉之前資料載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL DB 中，檢閱中的專案移轉選項**專案設定** 對話方塊。  
   
 -   使用此對話方塊中，您可以設定選項，例如移轉批次大小、 資料表鎖定、 條件約束檢查，null 值的處理和身分識別值的處理。 如需將專案移轉設定的詳細資訊，請參閱[專案設定 （移轉） (Sybase)](http://msdn.microsoft.com/82f8857f-7ab1-4738-ab6e-b1e95ea94924)。  
   
-    如需詳細資訊**擴充資料移轉設定**，請參閱[資料移轉設定](http://msdn.microsoft.com/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)  
+    如需詳細資訊**擴充資料移轉設定**，請參閱[資料移轉設定](data-migration-settings-sybasetosql.md)  
   
 -   **移轉引擎**中**專案設定**對話方塊的 允許使用者執行上來使用兩種類型的資料移轉引擎，移轉程序。:  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobsteplog (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_jobsteplog (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0957fff641ef4306d66c3ee4a233062503008b9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f8ce4b84dc7fd8e049cc9fafd71995dfb09bca7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261683"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396259"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,30 +48,30 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>引數  
  [ **@job_id =**] **'***job_id***'**  
- 這是要傳回作業步驟記錄資訊的作業識別碼。 *job_id*是**int**，預設值是 NULL。  
+ 這是要傳回作業步驟記錄資訊的作業識別碼。 *job_id*已**int**，預設值是 NULL。  
   
  [ **@job_name =**] **'***job_name***'**  
- 作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
+ 作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
+>  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
  [ **@step_id =**] *step_id*  
- 這是作業中的步驟識別碼。 如果沒有包含這個識別碼，便會包含作業中的所有步驟。 *step_id*是**int**，預設值是 NULL。  
+ 這是作業中的步驟識別碼。 如果沒有包含這個識別碼，便會包含作業中的所有步驟。 *step_id*已**int**，預設值是 NULL。  
   
  [ **@step_name =**] **'***step_name***'**  
- 這是作業中的步驟名稱。 *step_name*是**sysname**，預設值是 NULL。  
+ 這是作業中的步驟名稱。 *step_name*已**sysname**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  0 (成功) 或 1 (失敗)  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|作業的唯一識別碼。|  
 |**job_name**|**sysname**|作業名稱。|  
-|**step_id**|**int**|作業內的步驟識別碼。 例如，如果此步驟是作業的第一個步驟其*step_id*為 1。|  
+|**step_id**|**int**|作業內的步驟識別碼。 例如，如果此步驟是第一個步驟，在作業中，其*step_id*為 1。|  
 |**step_name**|**sysname**|作業中的步驟名稱。|  
 |**step_uid**|**uniqueidentifier**|作業中的 (系統產生) 步驟的唯一識別碼。|  
 |**date_created**|**datetime**|步驟的建立日期。|  
@@ -91,9 +91,9 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 成員**SQLAgentUserRole**只能檢視他們所擁有的作業步驟的作業步驟記錄中繼資料。  
+ 成員**SQLAgentUserRole**只能檢視他們擁有的作業步驟的作業步驟記錄中繼資料。  
   
 ## <a name="examples"></a>範例  
   
@@ -123,11 +123,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_help_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
- [sp_delete_jobstep &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
- [sp_delete_jobsteplog &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
+ [sp_add_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_help_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   
+ [sp_delete_jobstep &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobstep-transact-sql.md)   
+ [sp_delete_jobsteplog &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql.md)   
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

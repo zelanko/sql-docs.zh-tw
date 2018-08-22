@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
@@ -14,12 +13,12 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ece469ea1140265ef70ecbd720bad350ca04905b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 118493cdd526a8c62add06ca78c803ebac6540c1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290870"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395444"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>記憶體最佳化資料表的持久性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] 為記憶體最佳化的資料表提供完整的持久性。 當變更記憶體最佳化資料表的交易認可時， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (對磁碟基礎的資料表也一樣) 會保證這些變更是永久的 (即使資料庫重新啟動後也會存在)，前提是要提供基礎儲存。 持久性有兩個重要元件：交易記錄及磁碟儲存的保存資料變更。  

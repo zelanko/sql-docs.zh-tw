@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556468"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395645"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "39556468"
 
 ## <a name="why-automatic-tuning"></a>為什麼自動調整？
 
-其中一個傳統資料庫系統管理的主要工作正在監視的工作負載中，然後再用來識別重要[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢時，應該以改善效能，新增，而很少使用索引的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供之查詢和索引，您需要監視的詳細的解析。 不過，持續監視資料庫是困難且單調乏味的工作，特別是在處理多個資料庫。 管理大量資料庫可能無法有效率地。 而不是監視和手動調整您的資料庫，您可以考慮委派部分監視和微調動作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自動調整功能。
+其中一個傳統資料庫系統管理的主要工作正在監視的工作負載中，然後再用來識別重要[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查詢時，應該以改善效能，新增，而很少使用索引的索引。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 提供之查詢和索引，您需要監視的詳細的解析。 不過，持續監視資料庫是困難且單調乏味的工作，特別是在處理多個資料庫。 管理大量資料庫可能無法有效率地。 而不是監視和手動調整您的資料庫，您可以考慮委派部分監視和微調動作[!INCLUDE[ssde_md](../../includes/ssde_md.md)]使用自動調整功能。
 
 ### <a name="how-does-automatic-tuning-works"></a>自動調整運作方式？
 
@@ -58,7 +58,7 @@ ms.locfileid: "39556468"
 
 ### <a name="what-is-sql-plan-choice-regression"></a>什麼是 SQL 計畫選擇迴歸？
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 可能使用不同的 SQL 計劃來執行[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢。 查詢計劃，需視統計資料、 索引和其他因素而定。 應該用來執行某些的最佳計劃[!INCLUDE[tsql_md](../../includes/tsql_md.md)]查詢可能會變更一段時間。 在某些情況下，新的計劃可能無法高於前一個位置，而且新的計劃可能會導致效能變差。
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] 可能使用不同的 SQL 計劃來執行[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查詢。 查詢計劃，需視統計資料、 索引和其他因素而定。 應該用來執行某些的最佳計劃[!INCLUDE[tsql_md](../../includes/tsql-md.md)]查詢可能會變更一段時間。 在某些情況下，新的計劃可能無法高於前一個位置，而且新的計劃可能會導致效能變差。
 
  ![SQL 計畫選擇迴歸](media/plan-choice-regression.png "SQL 計畫選擇迴歸") 
 
@@ -94,7 +94,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 提供所有必要的檢視和監視效能和查詢存放區中修正問題所需的程序。
 
-在  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，您可以找到使用查詢存放區的系統檢視的計畫選擇迴歸。 中[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，則[!INCLUDE[ssde_md](../../includes/ssde_md.md)]偵測到，並顯示可能的計畫選擇迴歸和建議的動作應該套用在[sys.dm_db_tuning_recommendations &#40;-&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)檢視。 檢視會顯示相關問題的重要性，問題，以及詳細資料，例如識別查詢中，迴歸的計畫的識別碼，用來作為基礎進行比較，計畫的識別碼資訊和[!INCLUDE[tsql_md](../../includes/tsql_md.md)]可以執行，以修正的陳述式發生問題。
+在  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]，您可以找到使用查詢存放區的系統檢視的計畫選擇迴歸。 中[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]，則[!INCLUDE[ssde_md](../../includes/ssde_md.md)]偵測到，並顯示可能的計畫選擇迴歸和建議的動作應該套用在[sys.dm_db_tuning_recommendations &#40;-&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)檢視。 檢視會顯示相關問題的重要性，問題，以及詳細資料，例如識別查詢中，迴歸的計畫的識別碼，用來作為基礎進行比較，計畫的識別碼資訊和[!INCLUDE[tsql_md](../../includes/tsql-md.md)]可以執行，以修正的陳述式發生問題。
 
 | 型別 | description | DATETIME | score | 詳細資料 | … |
 | --- | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
  - 為何要包含資訊的描述[!INCLUDE[ssde_md](../../includes/ssde_md.md)]認為此計劃變更是潛在的效能變差。
  - 日期時間偵測到潛在的迴歸。
  - 此建議的分數。 
- - 偵測到的計畫迴歸的計畫，以修正此問題，應該強制計畫的識別碼的識別碼的識別碼等問題的詳細資料[!INCLUDE[tsql_md](../../includes/tsql_md.md)]指令碼，可能會套用至修正的問題，依此類推。詳細資料會儲存在[JSON 格式](../../relational-databases/json/index.md)。
+ - 偵測到的計畫迴歸的計畫，以修正此問題，應該強制計畫的識別碼的識別碼的識別碼等問題的詳細資料[!INCLUDE[tsql_md](../../includes/tsql-md.md)]指令碼，可能會套用至修正的問題，依此類推。詳細資料會儲存在[JSON 格式](../../relational-databases/json/index.md)。
 
 使用下列查詢，以取得修正的問題和相關的預估的其他資訊的指令碼取得：
 

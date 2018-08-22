@@ -25,15 +25,15 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 52e29fb03a3bcc0436f69447caa4e96fc146c3a7
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 297526a299cc1b24c0426254a2cc5759e0b5dfa9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985490"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395663"
 ---
 # <a name="migration-wizard-accesstosql"></a>移轉精靈 」 (AccessToSQL)
-移轉精靈引導您完成移轉的一個或多個資料庫存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 使用精靈，您會建立專案、 將資料庫新增至專案，請選取要移轉，並連接到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您也會轉換、 載入和存取結構描述和資料移轉。 （選擇性） 您可以在此連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料表。  
+移轉精靈引導您完成移轉的一個或多個資料庫存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 使用精靈，您會建立專案、 將資料庫新增至專案，請選取要移轉，並連接到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您也會轉換、 載入和存取結構描述和資料移轉。 （選擇性） 您可以在此連結來存取資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表。  
   
 大部分的 [移轉精靈] 頁面包含與現有的 SSMA 對話方塊相同的選項。 因此，這裡描述的精靈頁面，以便您可以進一步了解個別的選項，然後提供連結。 如果頁面包含唯一的選項，它們會在此處記錄。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "38985490"
 ## <a name="add-access-databases-page"></a>新增存取 [資料庫] 頁面  
 加入 Access 資料庫頁面是您將一或多個 Access 資料庫加入至專案。 您可以新增個別的資料庫，依序按一下**新增的資料庫**，然後選取 從資料庫**開啟**視窗。 或者，您可以使用來尋找資料庫**尋找資料庫** 按鈕。 如需詳細資訊，請參閱下列主題：  
   
--   [新增和移除 Access 資料庫檔案](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+-   [新增和移除 Access 資料庫檔案](adding-and-removing-access-database-files-accesstosql.md)  
   
 -   [尋找資料庫精靈 （選取位置）](http://msdn.microsoft.com/00b2d32a-998b-47a7-b25c-589b5bd6777a)  
   
@@ -82,30 +82,30 @@ ms.locfileid: "38985490"
 如需篩選的詳細資訊，請參閱 [選項] 區段的[進階物件選取項目 （SSMA 常見）](http://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c)。  
   
 ## <a name="connect-to-sql-server-page"></a>連接到 SQL Server 頁面  
-在 [連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]] 頁面上，您指定連接屬性，然後連線至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需詳細資訊，請參閱[連接到 SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+在 [連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]] 頁面上，您指定連接屬性，然後連線至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需詳細資訊，請參閱[連接到 SQL Server](http://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
   
 > [!IMPORTANT]  
 > 一旦連線成功，您將會遇到**連結資料表**頁面，您必須在連結資料表的選項。 按一下 [**下一步]** 並啟動移轉。  
   
 ## <a name="connect-to-sql-azure-page"></a>連接到 SQL Azure 的頁面  
-在 [連接到 SQL Azure] 頁面中，您可以指定連接屬性，然後連接到 SQL Azure。 若要建立新的 azure 資料庫，則可以使用**建立 Azure Database**選項會出現在上按一下**瀏覽** 按鈕。 如需詳細資訊，請參閱[連接到 SQL Azure](http://msdn.microsoft.com/bf44b236-d9be-41ae-a5fd-bd73038e505f)  
+在 [連接到 SQL Azure] 頁面中，您可以指定連接屬性，然後連接到 SQL Azure。 若要建立新的 azure 資料庫，則可以使用**建立 Azure Database**選項會出現在上按一下**瀏覽** 按鈕。 如需詳細資訊，請參閱[連接到 SQL Azure](connect-to-azure-sql-db-accesstosql.md)  
   
 > [!IMPORTANT]  
 > 一旦連線成功，您將會遇到**連結資料表**頁面，您必須在連結資料表的選項。 按一下 [**下一步]** 開始移轉 [連結] 頁面上的按鈕。  
   
 ## <a name="link-tables-page"></a>連結資料表 頁面  
-[連結資料表] 頁面可讓您將原始的 Access 資料表連結至移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料表。 連結資料表，讓您查詢、 表單、 報表和資料存取頁面使用中的資料會修改您的 Access 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫，而非 Access 資料庫中的資料。  
+[連結資料表] 頁面可讓您將原始的 Access 資料表連結至移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表。 連結資料表，讓您查詢、 表單、 報表和資料存取頁面使用中的資料會修改您的 Access 資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫，而非 Access 資料庫中的資料。  
   
 **連結資料表**  
-選取 **連結的資料表**核取方塊以 Access 資料表連結至已移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料表。 若要開始的移轉，您應該按一下**下一步**  按鈕。  
+選取 **連結的資料表**核取方塊以 Access 資料表連結至已移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表。 若要開始的移轉，您應該按一下**下一步**  按鈕。  
   
 ## <a name="migration-status-page"></a>移轉 [狀態] 頁面  
-[移轉狀態] 頁面中顯示的轉換來存取結構描述進度[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 結構描述，載入將已轉換的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，然後移轉資料。  
+[移轉狀態] 頁面中顯示的轉換來存取結構描述進度[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 結構描述，載入將已轉換的結構描述[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，然後移轉資料。  
   
 如需有關此頁面的詳細資訊，請參閱[轉換、 載入和移轉](http://msdn.microsoft.com/4ec83e96-88a5-4b7b-8d5a-f3429d9a936b)  
   
 ## <a name="see-also"></a>另請參閱  
 [Getting Started with SQL Server 移轉小幫手，存取&#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

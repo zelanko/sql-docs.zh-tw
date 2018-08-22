@@ -16,17 +16,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: e142150dab7002e8826a91680af56ee7f3900f17
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26546c4de1db3bd4f3f04c9ab64621d7fe864d17
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981072"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395865"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>SQL Server Migration Assistant for MySQL (MySQLToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 適用於 MySQL 是一項工具將 MySQL 資料庫移轉至[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 在 Windows 和 Linux （預覽） / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB。 SSMA for MySQL 將 MySQL 資料庫物件轉換成 SQL Server 資料庫物件，會建立這些物件中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然後移轉資料，從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 適用於 MySQL 是一項工具將 MySQL 資料庫移轉至[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016年 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 在 Windows 和 Linux （預覽） / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB。 SSMA for MySQL 將 MySQL 資料庫物件轉換成 SQL Server 資料庫物件，會建立這些物件中的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後移轉資料，從 mysql 移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
-這份文件為您介紹 SSMA for MySQL，並提供逐步指示，將 MySQL 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 下表顯示可協助您了解更多主題：  
+這份文件為您介紹 SSMA for MySQL，並提供逐步指示，將 MySQL 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 下表顯示可協助您了解更多主題：  
   
 ## <a name="contents"></a>目錄  
   
@@ -38,6 +38,6 @@ ms.locfileid: "38981072"
 |[開始使用 SSMA for MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)|導入的使用者介面、 專案和組態選項。|  
 |[移轉 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)|提供轉換程序和程序中的每個步驟的詳細的資訊的概觀。|  
 |[使用者介面參考&#40;MySQLToSQL&#41;](../../ssma/mysql/user-interface-reference-mysqltosql.md)|包含 SSMA for MySQL 對話方塊的文件。|  
-|[使用 SSMA for MySQL 主控台](http://msdn.microsoft.com/240aaad1-d65d-4dea-b60b-315cb1ac733d)|包含在 SSMA 主控台應用程式上的文件|  
+|[使用 SSMA for MySQL 主控台](working-with-ssma-for-mysql-console-mysqltosql.md)|包含在 SSMA 主控台應用程式上的文件|  
 |[取得 SSMA for MySQL 協助](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|提供取得其他協助的相關資訊。|  
   

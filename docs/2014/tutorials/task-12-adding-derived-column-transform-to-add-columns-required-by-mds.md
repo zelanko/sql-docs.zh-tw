@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d1bb94b040aee5ba1db6870edc71e3153a3c7a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165709"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396073"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>工作 12：加入衍生的資料行轉換，以加入 MDS 需要的資料行
-  在這項工作中，您會將衍生的資料行轉換加入至資料流程。 新增兩個衍生的資料行**ImportType**並**BatchTag**至記錄傳遞給這項轉換。 您應該先加入這兩個資料行，然後再將資料上傳至 MDS 中的暫存資料表。 這兩個是 MDS 中暫存資料表的必要資料行。 請參閱[分葉成員暫存資料表](http://msdn.microsoft.com/library/ee633854.aspx)如需詳細資訊。  
+  在這項工作中，您會將衍生的資料行轉換加入至資料流程。 新增兩個衍生的資料行**ImportType**並**BatchTag**至記錄傳遞給這項轉換。 您應該先加入這兩個資料行，然後再將資料上傳至 MDS 中的暫存資料表。 這兩個是 MDS 中暫存資料表的必要資料行。 請參閱[分葉成員暫存資料表](../master-data-services/leaf-member-staging-table-master-data-services.md)如需詳細資訊。  
   
 1.  拖放**衍生的資料行轉換**從**常見**一節中**SSIS 工具箱**至**資料流程** 索引標籤。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "37165709"
   
      ![SSIS 變數視窗](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "SSIS 變數視窗")  
   
-7.  型別**ImportType** for**名稱**並**2**如**值**。 您指定的值為 2，因為您要在 MDS 的實體中加入新的成員。 如需有關此參數的詳細資訊，請參閱 <<c0> [ 分葉成員暫存資料表](http://msdn.microsoft.com/library/ee633854.aspx)。  
+7.  型別**ImportType** for**名稱**並**2**如**值**。 您指定的值為 2，因為您要在 MDS 的實體中加入新的成員。 如需有關此參數的詳細資訊，請參閱 <<c0> [ 分葉成員暫存資料表](../master-data-services/leaf-member-staging-table-master-data-services.md)。  
   
 8.  按一下 **加入變數**工具列按鈕一次。  
   

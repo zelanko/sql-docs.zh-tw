@@ -16,12 +16,12 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e29e979597563511f91977cf9815aa0e06290ae1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f5acb0977326b148667a62ae0c86bb47f443174
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983310"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395238"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>使用者介面參考 (MySQLToSQL)
 本節包含適用於 MySQL 的說明主題的 SQL Server Migration Assistant (SSMA)。  
@@ -39,7 +39,7 @@ ms.locfileid: "38983310"
 |[連接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|使用**連接到 SQL Azure**對話方塊，即可連接到您要移轉的 SQL Azure 執行個體。|  
 |[轉換設定 (MySQL)](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|使用**設定**索引標籤以設定節點層級設定。|  
 |[資料移轉報告&#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|顯示的結果資料從 MySQL 移轉到 SQL Server 或 SQL Azure。|  
-|[資料移轉設定](http://msdn.microsoft.com/9c396df4-5676-4f32-9c57-70d4f15f9b7a)|使用**擴充資料移轉設定**撰寫自訂查詢的資料移轉 索引標籤。|  
+|[資料移轉設定](data-migration-settings-mysqltosql.md)|使用**擴充資料移轉設定**撰寫自訂查詢的資料移轉 索引標籤。|  
 |[編輯類型對應&#40;MySQLToSQL&#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|使用**編輯類型對應**對話方塊，即可建立或修改的來源和目標資料庫和資料庫物件之間的資料類型對應。|  
 |[全域設定&#40;編輯器&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|使用編輯器頁面**全域設定**對話方塊來設定程式碼編輯器選項。|  
 |[全域設定&#40;對話方塊&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|使用對話方塊頁面**全域設定**對話方塊來設定預設的對話方塊和警告設定。|  

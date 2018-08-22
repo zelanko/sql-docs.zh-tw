@@ -16,12 +16,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d9cc2c818136b808225ba62efbd2a321c33014c4
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c74c3f21508ce08e6e540dd5c4cc84531b7c744d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980460"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395842"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>開始使用 SSMA for DB2 主控台 (DB2ToSQL)
 本章節描述的程序啟動並開始使用 DB2 主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -31,7 +31,7 @@ ms.locfileid: "38980460"
   
 1.  移至**開始**，指向**所有程式**。  
   
-2.  按一下   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for DB2 命令提示字元**捷徑。  
+2.  按一下   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2 命令提示字元**捷徑。  
   
     它會顯示 [SSMA 主控台使用方式] 功能表和`(/? Help)`，以協助您開始使用主控台應用程式。  
   

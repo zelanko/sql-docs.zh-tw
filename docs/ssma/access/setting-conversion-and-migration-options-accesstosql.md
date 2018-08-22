@@ -23,15 +23,15 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: bf73284de3f23aa861c446e4a2ed67278f4a5ce5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 21cbf6f3a5dac0b77669b940bf27be26198a4456
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979700"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395866"
 ---
 # <a name="setting-conversion-and-migration-options-accesstosql"></a>設定轉換和移轉選項 (AccessToSQL)
-針對每個 SSMA 專案中，您可以設定專案層級的選項。 這些選項會指定如何轉換物件、 資料的移轉方式，和來源資料類型如何對應至目標資料類型。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 或移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，確認組態選項都適用於專案。  
+針對每個 SSMA 專案中，您可以設定專案層級的選項。 這些選項會指定如何轉換物件、 資料的移轉方式，和來源資料類型如何對應至目標資料類型。 轉換物件之前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 或移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，確認組態選項都適用於專案。  
   
 ## <a name="configuration-options-and-modes"></a>設定選項和模式  
 SSMA 具有四組組態設定和設定這些設定值的四種模式： 預設、 Optimistic、 Full 和自訂。 預設模式被建議用於大部分的使用者。 使用開放式模式來進行簡單的轉換。 如果您想要查看所有訊息，請使用完整模式。 在 [自訂] 模式中，您可以設定選項。  
@@ -85,12 +85,12 @@ SSMA 中，您可以設定所有專案的預設的設定。 這些設定會儲�
 ## <a name="next-steps"></a>後續步驟  
 移轉的下一個步驟取決於您的專案需求：  
   
--   若要自訂的來源和目標資料類型對應，請參閱[對應來源和目標資料類型](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+-   若要自訂的來源和目標資料類型對應，請參閱[對應來源和目標資料類型](mapping-source-and-target-data-types-accesstosql.md)  
   
--   若要自訂的對應來源和目標資料庫，請參閱[對應來源和目標資料庫](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+-   若要自訂的對應來源和目標資料庫，請參閱[對應來源和目標資料庫](mapping-source-and-target-databases-accesstosql.md)  
   
--   否則，您可以將轉換到存取資料庫物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 Access 資料庫物件](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   否則，您可以將轉換到存取資料庫物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 Access 資料庫物件](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

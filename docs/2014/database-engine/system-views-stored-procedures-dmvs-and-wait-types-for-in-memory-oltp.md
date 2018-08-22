@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
@@ -14,14 +13,14 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0a11867eafdcd747da207c2ff6783391ed3485f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8d886a95b0cb62ad2217478873e85fb2db5d7bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245218"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394427"
 ---
-# <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>系統檢視表、 預存程序、 Dmv 和記憶體內部 OLTP 的等候類型
+# <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>記憶體內部 OLTP 的系統檢視表、預存程序、DMV 和等候類型
   本主題提供支援 In-Memory OLTP 的許多資料庫物件的簡短說明及連結。  
   
 ### <a name="system-views"></a>系統檢視表  

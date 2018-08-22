@@ -15,15 +15,15 @@ caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a7322f12605256fe25bb533c0360467510be92e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277594"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394881"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 元素 (CSDLBI)
-  `EntityType` 元素是複雜類型，代表資料模型中高層級實體的結構，例如客戶或訂單。 `bi:EntityType`項目延伸的定義[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)用於[實體資料架構](http://msdn.microsoft.com/library/bb399567.aspx)。  
+  `EntityType` 元素是複雜類型，代表資料模型中高層級實體的結構，例如客戶或訂單。 `bi:EntityType`項目延伸的定義[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)用於[實體資料架構](/dotnet/framework/data/adonet/ef/overview)。  
   
  系統必須針對資料模型中包含的每個實體指定 EntityType 元素。 EntityType 的子元素會描述資料表中的資料行和量值。 資料表之間的關聯性包含在 `EntityContainer` 中。  
   

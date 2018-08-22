@@ -15,15 +15,15 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 4779f29c90256809c6dfc364365571e28aea7af6
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c127ef44f10723a74b2f03fed46ea42b9bbdfff5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980470"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395652"
 ---
-# <a name="connecting-to-oracle-database-oracletosql"></a>連接到 Oracle 資料庫 (OracleToSQL)
-若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您必須連接到您想要移轉的 Oracle 資料庫。 當您連線時，SSMA 中取得所有 Oracle 結構描述的相關中繼資料，然後顯示 Oracle 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
+# <a name="connecting-to-oracle-database-oracletosql"></a>連線到 Oracle Database (OracleToSQL)
+若要將 Oracle 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須連接到您想要移轉的 Oracle 資料庫。 當您連線時，SSMA 中取得所有 Oracle 結構描述的相關中繼資料，然後顯示 Oracle 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
   
 資料庫的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連線，如果您想要的使用中連接到資料庫。  
   
@@ -47,7 +47,7 @@ Oracle 資料庫的相關中繼資料不會自動更新。 相反地，如果您
 -   選取任何字典  
   
 ## <a name="establishing-a-connection-to-oracle"></a>建立連線至 Oracle  
-當您連接到資料庫時，SSMA 讀取資料庫中繼資料，然後將此中繼資料新增至專案檔。 將轉換物件時，使用此中繼資料的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法，以及當它將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以瀏覽 Oracle 中繼資料總管 窗格中的此中繼資料，然後檢閱個別的資料庫物件的屬性。  
+當您連接到資料庫時，SSMA 讀取資料庫中繼資料，然後將此中繼資料新增至專案檔。 將轉換物件時，使用此中繼資料的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法，以及當它將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以瀏覽 Oracle 中繼資料總管 窗格中的此中繼資料，然後檢閱個別的資料庫物件的屬性。  
   
 > [!IMPORTANT]  
 > 您嘗試連接之前，請確定資料庫伺服器正在執行，而且可以接受連線。  
@@ -97,7 +97,7 @@ Oracle 資料庫的相關中繼資料不會自動更新。 相反地，如果您
     如需詳細資訊，請參閱 <<c0> [ 連接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。</c0>  
   
 ## <a name="reconnecting-to-oracle"></a>重新連接到 Oracle  
-資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連線，如果您想要的使用中連接到資料庫。 您可以離線直到您想要更新中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，並移轉資料。  
+資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連線，如果您想要的使用中連接到資料庫。 您可以離線直到您想要更新中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並移轉資料。  
   
 ## <a name="refreshing-oracle-metadata"></a>重新整理 Oracle 中繼資料  
 Oracle 資料庫的相關中繼資料不會自動重新整理。 Oracle 中繼資料總管 中的中繼資料是快照集的中繼資料，當您第一次連接時或您手動重新整理中繼資料的最後一次。 您可以手動更新所有結構描述、 單一結構描述，或個別的資料庫物件的中繼資料。  
@@ -122,11 +122,11 @@ Oracle 資料庫的相關中繼資料不會自動重新整理。 Oracle 中繼�
   
     若要檢視的定義的色彩編碼，請按一下**圖例** 按鈕。  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>下一個步驟  
   
--   移轉程序的下一個步驟是[連接到 SQL Server 的執行個體](http://msdn.microsoft.com/1b2a8059-1829-4904-a82f-9c06de1e245f)。  
+-   移轉程序的下一個步驟是[連接到 SQL Server 的執行個體](connecting-to-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [移轉的 Oracle 資料庫到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

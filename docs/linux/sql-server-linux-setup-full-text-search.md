@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: f9207a9ccee4917b8c2aa1e7731da4afe6e15658
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085840"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396244"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>在 Linux 上安裝 SQL Server 全文檢索搜尋
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-下列步驟會安裝[SQL Server 全文檢索搜尋](https://msdn.microsoft.com/library/ms142571.aspx)(**mssql-server-fts**) 在 Linux 上。 全文檢索搜尋可讓您針對 SQL Server 資料表中的字元為基礎的資料執行全文檢索查詢。 如需此版本的已知問題，請參閱[Release Notes](sql-server-linux-release-notes.md)。
+下列步驟會安裝[SQL Server 全文檢索搜尋](../relational-databases/search/full-text-search.md)(**mssql-server-fts**) 在 Linux 上。 全文檢索搜尋可讓您針對 SQL Server 資料表中的字元為基礎的資料執行全文檢索查詢。 如需此版本的已知問題，請參閱[Release Notes](sql-server-linux-release-notes.md)。
 
 > [!NOTE]
 > 然後再安裝 SQL Server 全文檢索搜尋，第一次[安裝 SQL Server](sql-server-linux-setup.md#platforms)。 這會設定索引鍵和您在安裝時使用的儲存機制**mssql-server-fts**封裝。

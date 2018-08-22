@@ -25,12 +25,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f54e23ee744f34ce3da70e1fd2a469d70b9063a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2b2ca3145c4152db92be0e55a4484c09727eaadb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983930"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394026"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>連線到 Azure SQL DB (AccessToSQL)
 若要將 Access 資料庫移轉至 SQL Azure 中，您必須連接到 SQL Azure 的目標執行個體。 當您連線時，SSMA 取得 SQL Azure 執行個體中的所有資料庫的相關中繼資料，並在 SQL Azure 中繼資料總管 會顯示資料庫中繼資料。 SSMA 會儲存有關哪一個 SQL Azure 執行個體要連線，但不會儲存密碼的資訊。  
@@ -42,14 +42,14 @@ SQL Azure 執行個體的相關中繼資料不會自動同步處理。 相反地
 ## <a name="required-sql-azure-permissions"></a>SQL Azure 的所需的權限  
 用來連接到 SQL Azure 的帳戶需要不同的權限視帳戶執行的動作而定：  
   
--   要轉換到存取物件[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，來更新中繼資料從 SQL Azure，或是儲存已轉換的語法，以編寫指令碼，該帳戶必須具有權限登入的 SQL Azure 執行個體。  
+-   要轉換到存取物件[!INCLUDE[tsql](../../includes/tsql-md.md)]語法，來更新中繼資料從 SQL Azure，或是儲存已轉換的語法，以編寫指令碼，該帳戶必須具有權限登入的 SQL Azure 執行個體。  
   
 -   若要載入 SQL Azure 中的資料庫物件，最小權限需求是中的成員資格**db_owner**之目標資料庫內的資料庫角色。  
   
 ## <a name="establishing-a-sql-azure-connection"></a>建立 SQL Azure 的連線  
 您將存取資料庫物件轉換成 SQL Azure 語法之前，您必須建立您要移轉的 Access 資料庫的 SQL Azure 的執行個體的連接。  
   
-當您定義的連接屬性時，您也可以指定其中將移轉物件和資料的資料庫。 連線到 SQL Azure 之後，您可以自訂此存取結構描述層級的對應。 如需詳細資訊，請參閱[對應至 SQL Server 結構描述的 Access 資料庫](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+當您定義的連接屬性時，您也可以指定其中將移轉物件和資料的資料庫。 連線到 SQL Azure 之後，您可以自訂此存取結構描述層級的對應。 如需詳細資訊，請參閱[對應至 SQL Server 結構描述的 Access 資料庫](mapping-source-and-target-databases-accesstosql.md)  
   
 > [!IMPORTANT]  
 > 您嘗試連接到 SQL Azure，請確定之前的 SQL Azure 執行個體正在執行，而且可以接受連線。  
@@ -105,14 +105,14 @@ SQL Azure 的連線保持作用中，直到您關閉專案。 當您重新開啟
 ## <a name="next-step"></a>下一個步驟  
 移轉的下一個步驟取決於您的專案需求：  
   
--   若要自訂存取結構描述和 SQL Azure 資料庫和結構描述之間的對應，請參閱[對應至 SQL Server 結構描述的 Access 資料庫](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)。  
+-   若要自訂存取結構描述和 SQL Azure 資料庫和結構描述之間的對應，請參閱[對應至 SQL Server 結構描述的 Access 資料庫](mapping-source-and-target-databases-accesstosql.md)。  
   
--   若要自訂專案的組態選項，請參閱[設定專案選項](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)。  
+-   若要自訂專案的組態選項，請參閱[設定專案選項](setting-conversion-and-migration-options-accesstosql.md)。  
   
--   若要自訂的來源和目標資料類型對應，請參閱[對應來源和目標資料型別](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)。  
+-   若要自訂的來源和目標資料類型對應，請參閱[對應來源和目標資料型別](mapping-source-and-target-data-types-accesstosql.md)。  
   
--   如果您不需要執行任何這些工作，您可以存取資料庫物件定義轉換 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 Access 資料庫](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   如果您不需要執行任何這些工作，您可以存取資料庫物件定義轉換 SQL Azure 物件定義。 如需詳細資訊，請參閱[轉換 Access 資料庫](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_help_operator (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_operator (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258792"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396526"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sp_help_operator
   
 ## <a name="arguments"></a>引數  
  [ **@operator_name=** ] **'***operator_name***'**  
- 操作員名稱。 *operator_name*是**sysname**。 如果*operator_name*是未指定，會傳回有關所有操作員的資訊。  
+ 操作員名稱。 *operator_name*已**sysname**。 如果*operator_name*是未指定，會傳回有關所有操作員的資訊。  
   
  [ **@operator_id=** ] *operator_id*  
- 所要求為其相關資訊之操作員的識別碼。 *operator_id*是**int**，預設值是 NULL。  
+ 所要求為其相關資訊之操作員的識別碼。 *operator_id*已**int**，預設值是 NULL。  
   
 > [!NOTE]  
->  任一*operator_id*或*operator_name*必須指定，但不可同時指定兩者。  
+>  任一*operator_id*或是*operator_name*必須指定，但不可同時指定兩者。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|操作員識別碼。|  
 |**name**|**sysname**|操作員名稱。|  
@@ -78,7 +78,7 @@ sp_help_operator
 |**saturday_pager_end_time**|**int**|操作員在星期六能夠收到呼叫器通知的期間之最終時間。|  
 |**sunday_pager_start_time**|**int**|操作員在星期日能夠收到呼叫器通知的期間之起始時間。|  
 |**sunday_pager_end_time**|**int**|操作員在星期日能夠收到呼叫器通知的期間之最終時間。|  
-|**pager_days**|**tinyint**|位元遮罩 (**1** = 星期日、 **64** = 星期六) 天的當週，指出操作員能夠收到呼叫器通知的時間。|  
+|**pager_days**|**tinyint**|位元遮罩 (**1** = 星期日， **64** = 星期六) 天的一週，指出操作員能夠收到呼叫器通知的時間。|  
 |**netsend_address**|**nvarchar(100)**|網路快顯通知的操作員位址。|  
 |**last_netsend_date**|**int**|操作員前次收到網路快顯通知的日期。|  
 |**last_netsend_time**|**int**|操作員前次收到網路快顯通知的時間。|  
@@ -96,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會報告 `François Ajenstat` 這位操作員的相關資訊。  
@@ -111,9 +111,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [sp_add_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
- [sp_update_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
+ [sp_add_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_delete_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_update_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [系統預存程序 &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

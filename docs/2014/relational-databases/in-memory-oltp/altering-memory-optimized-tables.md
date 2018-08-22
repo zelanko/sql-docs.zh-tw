@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
@@ -14,12 +13,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65d72bac30b1a531d332e88c4b8e59afc73f7afb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea556bf0bf0f7b1df112443cb7620fa0cb2350ae
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193332"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395239"
 ---
 # <a name="altering-memory-optimized-tables"></a>改變記憶體最佳化資料表
   不支援執行記憶體最佳化資料表上的 ALTER 作業。 這些作業包括變更 bucket_count、加入或移除索引，以及加入或移除資料行等等。 本主題提供如何更新記憶體最佳化之資料表的指導方針。  

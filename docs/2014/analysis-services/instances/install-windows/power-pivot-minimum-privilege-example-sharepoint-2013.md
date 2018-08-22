@@ -14,18 +14,18 @@ caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec782dab7b86b17f06a22bebf2e8549a08a55085
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69e0fe6394d2690b3694cd212bf4b475eda3128d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200338"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395067"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>PowerPivot for SharePoint 2013 的最低權限組態範例
   本主題描述具有最低權限的 PowerPivot for SharePoint 2013 組態範例。 此組態會分別針對三個元件使用不同的帳戶，而且每個帳戶都具有最低層級的權限。  
   
 ## <a name="summary-of-accounts"></a>帳戶摘要  
- PowerPivot for SharePoint 2013 支援使用網路服務帳戶做為 Analysis Services 服務帳戶。 網路服務帳戶並非 SharePoint 2010 的支援案例。 如需有關服務帳戶的詳細資訊，請參閱 <<c0> [ 設定 Windows 服務帳戶與權限](http://msdn.microsoft.com/library/ms143504.aspx)(http://msdn.microsoft.com/library/ms143504.aspx)。  
+ PowerPivot for SharePoint 2013 支援使用網路服務帳戶做為 Analysis Services 服務帳戶。 網路服務帳戶並非 SharePoint 2010 的支援案例。 如需有關服務帳戶的詳細資訊，請參閱 <<c0> [ 設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(http://msdn.microsoft.com/library/ms143504.aspx)。  
   
  下表將摘要說明用於這個最低權限組態範例的三個帳戶。  
   

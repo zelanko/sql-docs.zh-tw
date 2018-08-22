@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
@@ -14,12 +13,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afcc00e0f6bcc3341f7aafc23aeddfee5e8e8dff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51a462b29365153aea43deb626f6905375aeafc1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170759"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395519"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>使用解譯的 Transact-SQL 存取記憶體最佳化的資料表
   您可以使用任何 [!INCLUDE[tsql](../../includes/tsql-md.md)] 查詢或 DML 作業 (SELECT、INSERT、UPDATE 或 DELETE)、特定批次以及 SQL 模組 (例如預存程序、資料表值函數、觸發程序和檢視表) 來存取記憶體最佳化的資料表，僅有一些例外狀況。  

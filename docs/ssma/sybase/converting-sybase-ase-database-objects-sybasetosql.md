@@ -18,18 +18,18 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 86adf372dfd590f0cac1d8ac872501fb12ab1e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0ab4bb272f83a16cf8f5be009424499bc4e054c4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980660"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396455"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>轉換的 SAP ASE 資料庫物件 (SybaseToSQL)
-您已經連接到 SAP Adaptive Server Enterprise (ASE) 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 和設定專案和對應的資料選項，您可以將轉換至 SAP Adaptive Server Enterprise (ASE) 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL database物件。  
+您已經連接到 SAP Adaptive Server Enterprise (ASE) 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 和設定專案和對應的資料選項，您可以將轉換至 SAP Adaptive Server Enterprise (ASE) 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL database物件。  
   
 ## <a name="the-conversion-process"></a>轉換程序  
-轉換的資料庫物件從 ASE 中取得的物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 中繼資料總管。
+轉換的資料庫物件從 ASE 中取得的物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 中繼資料總管。
   
 在轉換期間 SSMA 輸出將訊息列印至輸出窗格和錯誤訊息，以**錯誤清單**窗格。 使用輸出和錯誤的資訊來判斷是否需要修改您的 ASE 資料庫或您的轉換程序，以便取得所需的轉換結果。  
   
@@ -127,9 +127,9 @@ SAP ASE 的某些物件可能不會轉換。 您可以檢視摘要轉換報告�
   
 -   您可以改變的 SAP ASE 物件，以移除或修改有問題的程式碼。 若要更新的程式碼載入 SSMA 中，您必須更新的中繼資料。 如需詳細資訊，請參閱 <<c0> [ 連接到 SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)。</c0>  
   
--   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 中繼資料總管和 Sybase 中繼資料總管] 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 Azure SQL 和 SAP ase 資料移轉。  
+-   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 中繼資料總管和 Sybase 中繼資料總管] 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 Azure SQL 和 SAP ase 資料移轉。  
   
-## <a name="next-steps"></a>後續的步驟  
+## <a name="next-steps"></a>後續步驟  
 移轉程序的下一個步驟是[載入轉換的資料庫物件載入 SQL Server / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06)。  
   
 ## <a name="see-also"></a>另請參閱  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e8ee5d2958b6ba7f180472e4d91ce389159e0438
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 10f8427f5cc5124afc0f6c3b7845993af099e6e1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38034966"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394614"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>SQL Server Management Studio 中的 Analysis Services 指令碼專案
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "38034966"
 4.  以滑鼠右鍵按一下專案，指向 [加入]，然後選取 [現有項目]，在方案總管中於 Analysis Server 指令碼專案的 [其他] 資料夾裡加入任何其他檔案，例如包含專案附註的文字檔。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 會忽略這些檔案。  
   
 ## <a name="file-types"></a>檔案類型  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案可包含數種檔案類型，視您包括在方案中的專案及您包括在該方案中之每個專案的項目而定。 如需 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中方案檔案類型的詳細資訊，請參閱 [管理方案和專案的檔案](http://msdn.microsoft.com/library/e19d2859-0b97-4727-ac27-c4c226d86b2f)。 通常， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案中每個專案的檔案是儲存在方案資料夾內，每一個專案都有個別的資料夾。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案可包含數種檔案類型，視您包括在方案中的專案及您包括在該方案中之每個專案的項目而定。 如需 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]中方案檔案類型的詳細資訊，請參閱 [管理方案和專案的檔案](../../ssms/solution/files-that-manage-solutions-and-projects.md)。 通常， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 方案中每個專案的檔案是儲存在方案資料夾內，每一個專案都有個別的資料夾。  
   
  Analysis Server 指令碼專案的專案資料夾，可以包含下表列出的檔案類型。  
   

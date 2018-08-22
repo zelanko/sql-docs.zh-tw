@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 094e74a3f4d63e46b21d74346b21132b6c616497
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 32da2824f4c169a76455293e09f334d6739230d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985760"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394876"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>將 MySQL 資料庫移轉至 SQL Server-Azure SQL DB (MySQLToSql)
 SQL Server Migration Assistant (SSMA) for MySQL 是完整的環境，可協助您快速將 MySQL 資料庫移轉至 SQL Server 或 SQL Azure。 使用 SSMA for MySQL，您可以檢閱資料庫物件和資料、 評估要移轉的資料庫、 將資料庫物件移轉至 SQL Server 或 SQL Azure，然後將資料移轉到 SQL Server 或 SQL Azure。  
@@ -45,7 +45,7 @@ SQL Server Migration Assistant (SSMA) for MySQL 是完整的環境，可協助�
   
 7.  [轉換 MySQL 資料庫&#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [同步處理](http://msdn.microsoft.com/ac993a6d-0283-4823-8793-6b217677dfa3)  
+8.  [同步處理](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. 您可以透過下列方式之一來這麼做：  
   

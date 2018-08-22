@@ -1,5 +1,5 @@
 ---
-title: j (TRANSACT-SQL) |Microsoft 文件
+title: j (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,22 +22,22 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a87b927a80a634c6640837e328355ef34c67b295
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5b38499fce019f6f1f9b16ee489e413b1c0068a0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253032"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394005"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   變更指定作業的排程設定。  
   
- **j**提供回溯相容性。  
+ **j**供回溯相容性。  
   
 > [!IMPORTANT]  
->  如需舊版的 Microsoft SQL Server 中使用的語法的詳細資訊，請參閱 TRANSACT-SQL Referencefor Microsoft SQL Server 2000 *。*  
+>  如需有關在舊版的 Microsoft SQL Server 中使用的語法的詳細資訊，請參閱 TRANSACT-SQL Referencefor Microsoft SQL Server 2000 *。*  
   
 ## <a name="remarks"></a>備註  
  現在，您可以在作業之外，獨立管理作業排程。 若要更新的排程，使用**sp_update_schedule**。  
@@ -51,12 +51,12 @@ ms.locfileid: "33253032"
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  只有成員**sysadmin**可以使用這個預存程序來更新其他使用者所擁有的作業排程。  
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_update_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
+ [sp_update_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)  
   
   

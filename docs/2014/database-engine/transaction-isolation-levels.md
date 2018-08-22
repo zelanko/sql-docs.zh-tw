@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
@@ -14,12 +13,12 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fb341cb36e97fbd06f38363c84d87f975d23eed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abdac8463a5f6ce54c0ed8bf2de71b477865fb50
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329958"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394216"
 ---
 # <a name="transaction-isolation-levels"></a>交易隔離等級
   存取記憶體最佳化的資料表的交易，可支援下列隔離等級。  

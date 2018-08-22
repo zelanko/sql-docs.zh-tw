@@ -1,5 +1,5 @@
 ---
-title: sp_notify_operator (TRANSACT-SQL) |Microsoft 文件
+title: sp_notify_operator & Amp;#40;transact-SQL&AMP;#41; |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b07c05c67f0b4e199ad096d8f2a5f12951e46178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c99d4ca8eb182f8e4873acf97aec4ca5c101ce84
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261584"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394023"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +53,27 @@ sp_notify_operator
   
 ## <a name="arguments"></a>引數  
  [  **@profile_name=** ] **'***profilename***'**  
- 用來傳送訊息的 Database Mail 設定檔名稱。 *profilename*是**nvarchar （128)**。 如果*profilename*未指定，會使用預設 Database Mail 設定檔。  
+ 用來傳送訊息的 Database Mail 設定檔名稱。 *profilename*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。 如果*profilename*未指定，會使用預設 Database Mail 設定檔。  
   
  [ **@id=** ] *id*  
- 這是訊息所要送往的操作員識別碼。 *識別碼*是**int**，預設值是 NULL。 其中一個*識別碼*或*名稱*必須指定。  
+ 這是訊息所要送往的操作員識別碼。 *id*已**int**，預設值是 NULL。 其中一個*識別碼*或是*名稱*必須指定。  
   
  [ **@name=** ] **'***name***'**  
- 這是訊息所要送往的操作員名稱。 *名稱*是**nvarchar （128)**，預設值是 NULL。 其中一個*識別碼*或*名稱*必須指定。  
+ 這是訊息所要送往的操作員名稱。 *名稱*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**，預設值是 NULL。 其中一個*識別碼*或是*名稱*必須指定。  
   
-> **注意：** 電子郵件地址必須定義運算子，才能接收訊息。  
+> **注意：** 電子郵件地址必須先定義操作員的操作員可以接收訊息。  
   
  [ **@subject=** ] **'***subject***'**  
- 電子郵件訊息的主旨。 *主旨*是**nvarchar （256)** 沒有預設值。  
+ 電子郵件訊息的主旨。 *主旨*已**nvarchar(256)** 沒有預設值。  
   
  [ **@body=** ] **'***message***'**  
- 電子郵件的本文。 *訊息*是**nvarchar （max)** 沒有預設值。  
+ 電子郵件的本文。 *訊息*已**nvarchar （max)** 沒有預設值。  
   
  [  **@file_attachments=** ] **'***附件***'**  
- 這是要附加至電子郵件訊息的檔案名稱。 *附件*是**nvarchar （512)**，沒有預設值。  
+ 這是要附加至電子郵件訊息的檔案名稱。 *附件*已**nvarchar(512)**，沒有預設值。  
   
  [ **@mail_database=** ] **'***mail_host_database***'**  
- 指定郵件主機資料庫的名稱。 *mail_host_database*是**nvarchar （128)**。 如果沒有*mail_host_database*指定，則**msdb**預設會使用資料庫。  
+ 指定郵件主機資料庫的名稱。 *mail_host_database*已 **& lt;languagekeyword>nvarchar(128)</languagekeyword>**。 如果沒有*mail_host_database*指定，則**msdb**預設會使用資料庫。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -92,7 +92,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="examples"></a>範例  
  下列範例會利用 `François Ajenstat` Database Mail 設定檔，將通知電子郵件傳給 `AdventureWorks Administrator` 操作員。 電子郵件的主旨是 `Test Notification`。 電子郵件訊息包含 "This is a test of notification via e-mail." 這個句子。  
@@ -111,8 +111,8 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_help_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [sp_add_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
+ [sp_help_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
+ [sp_delete_operator &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   
