@@ -16,12 +16,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0e2a7465cc46e5ca2bb69ba4c7ef61dd85bf9882
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3a218ba28025f882d96cdfc122ceda01464419a3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985400"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394088"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>開始使用 SSMA for Access 主控台 (AccessToSQL)
 本章節描述的程序啟動並開始使用存取主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -48,9 +48,9 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
   
 其他功能：  
   
-1.  [指定密碼](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4)並匯出 / 匯入到其他視窗機器  
+1.  [指定密碼](managing-passwords-accesstosql.md)並匯出 / 匯入到其他視窗機器  
   
-2.  [產生報表](http://msdn.microsoft.com/abb4264a-622e-4215-af5b-14e309b8a399)以檢視詳細的 xml 輸出評估 /conversion 和資料移轉的報表。 詳細的錯誤報告也可能產生的重新整理] 和 [同步處理命令。  
+2.  [產生報表](generating-reports-accesstosql.md)以檢視詳細的 xml 輸出評估 /conversion 和資料移轉的報表。 詳細的錯誤報告也可能產生的重新整理] 和 [同步處理命令。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
 執行 SSMA 指令碼命令和選項，主控台程式會在主控台上對使用者顯示的結果和訊息 （資訊、 錯誤等），或如有需要，將重新導向至 xml 輸出檔。 每一種在輸出中的訊息被以獨特的色彩。 例如，在白色文字訊息表示指令碼檔案的命令;綠色的色彩中的一個表示提示使用者輸入，依此類推。  
@@ -69,5 +69,5 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
 |11：青色|開始]、 [完成] 和 [作業的結果。|  
   
 ## <a name="see-also"></a>另請參閱  
-[安裝 SQL Server 移轉小幫手，存取](http://msdn.microsoft.com/dd50eebd-75df-4e0d-8c4d-88b511aae4c7)  
+[安裝 SQL Server 移轉小幫手，存取](installing-sql-server-migration-assistant-for-access-accesstosql.md)  
   

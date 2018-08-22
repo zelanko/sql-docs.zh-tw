@@ -17,12 +17,12 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 095c9f205a98b5ac2ecd5a40ab66448ad9e21176
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dabef37d796ca1279c1444cf6ecafce6973c86b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308868"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392028"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>利用 SQL Server Management Studio 管理伺服器
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 是一個豐富的整合式管理用戶端設計用來滿足[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]系統管理員的伺服器管理需求。 在 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]中可以使用 [物件總管] 來完成管理工作，其中可以讓您連接到 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 系列的任何伺服器，並以圖形方式瀏覽其內容。 伺服器可以是 [!INCLUDE[ssDE](../includes/ssde-md.md)]、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 或 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 的執行個體。  
@@ -36,7 +36,7 @@ ms.locfileid: "37308868"
   
 -   註冊伺服器。  
   
--   連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]、[!INCLUDE[ssAS](../includes/ssas-md.md)]、[!INCLUDE[ssRS](../includes/ssrs-md.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 的執行個體。  
+-   連接到 [!INCLUDE[ssDE](../includes/ssde-md.md)]、[!INCLUDE[ssAS](../includes/ssas-md.md)]、[!INCLUDE[ssRS](../includes/ssrs.md)] 或 [!INCLUDE[ssIS](../includes/ssis-md.md)] 的執行個體。  
   
 -   設定伺服器屬性。  
   

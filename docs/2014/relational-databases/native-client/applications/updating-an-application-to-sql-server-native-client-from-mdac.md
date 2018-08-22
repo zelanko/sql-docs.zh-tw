@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ caps.latest.revision: 81
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 476a0798431b05e939ff2f0f493a3023b44b5826
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 02aebb2c9a40139515f68c1755f1b1440e973828
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083460"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392275"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>從 MDAC 將應用程式更新至 SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 與 Microsoft Data Access Components 之間有一些差異 (MDAC；從 Windows Vista 開始，資料存取元件現在稱為 Windows Data Access Components 或 Windows DAC)。 雖然兩者都提供 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫的原生資料存取權，但是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 是專為公開 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 的新功能而設計，同時還保留了與舊版的回溯相容性。  

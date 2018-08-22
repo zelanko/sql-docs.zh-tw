@@ -16,12 +16,12 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 86b8adc8841e06d91d164c2c35e2329511ac0e28
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b15f982d6da89d669fbf80507459e0c419afbe73
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985750"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392540"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>開始使用 SSMA for Oracle 主控台 (OracleToSQL)
 本章節描述的程序啟動並開始使用 Oracle 的主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -31,7 +31,7 @@ ms.locfileid: "38985750"
   
 1.  移至**開始**，指向**所有程式**。  
   
-2.  按一下   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant for Oracle 命令提示字元**捷徑。  
+2.  按一下   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle 命令提示字元**捷徑。  
   
     它會顯示 [SSMA 主控台使用方式] 功能表和`(/? Help)`，以協助您開始使用主控台應用程式。  
   
@@ -48,9 +48,9 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
   
 其他功能：  
   
-1.  [指定密碼](http://msdn.microsoft.com/8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c)並匯出 / 匯入到其他視窗機器  
+1.  [指定密碼](managing-passwords-oracletosql.md)並匯出 / 匯入到其他視窗機器  
   
-2.  [產生報表](http://msdn.microsoft.com/ccad6262-01e1-447a-bd2b-c105154c80ce)以檢視詳細的 xml 輸出評估 /conversion 和資料移轉的報表。 詳細的錯誤報告也可能產生的重新整理] 和 [同步處理命令。  
+2.  [產生報表](generating-reports-oracletosql.md)以檢視詳細的 xml 輸出評估 /conversion 和資料移轉的報表。 詳細的錯誤報告也可能產生的重新整理] 和 [同步處理命令。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
 執行 SSMA 指令碼命令和選項，主控台程式會在主控台上對使用者顯示的結果和訊息 （資訊、 錯誤等），或如有需要，將重新導向至 xml 輸出檔。 每一種在輸出中的訊息被以獨特的色彩。 例如，在白色文字訊息表示指令碼檔案的命令;綠色的色彩中的一個表示提示使用者輸入，依此類推。  
@@ -69,5 +69,5 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
 |11：青色|開始]、 [完成] 和 [作業的結果。|  
   
 ## <a name="see-also"></a>另請參閱  
-[安裝 SSMA for Oracle](http://msdn.microsoft.com/9211013a-ab24-4c52-9b26-87994b35e502)  
+[安裝 SSMA for Oracle](installing-ssma-for-oracle-oracletosql.md)  
   

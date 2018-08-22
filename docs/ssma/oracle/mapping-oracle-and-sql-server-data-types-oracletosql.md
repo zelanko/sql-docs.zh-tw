@@ -15,15 +15,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 54b67cbb38c9884afc19f6da6283bfda99f93e88
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6948b81ca2460d4de74393aa880f95fe3f11dfb1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979321"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392289"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>對應 Oracle 和 SQL Server 資料類型 (OracleToSQL)
-Oracle 資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫類型。 當您轉換到 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件，您必須指定如何將對應從 Oracle 資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
+Oracle 資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫類型。 當您轉換到 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，您必須指定如何將對應從 Oracle 資料型別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列各節中所示。  
   
 ## <a name="default-mappings"></a>預設對應  
 SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[專案設定&#40;類型對應&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md)。  
@@ -62,11 +62,11 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         這可讓您自訂的資料對應相同的資料類型的較小且較大的值。  
   
-    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
+    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
   
         某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為** 方塊中。  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  若要修改的資料類型對應，請執行下列作業：  
   
@@ -78,9 +78,9 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         這可讓您自訂的資料對應相同的資料類型的較小且較大的值。  
   
-    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
+    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
   
-        某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為** 方塊中，然後 [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為** 方塊中，然後 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  若要移除的自訂資料類型對應，請執行下列作業：  
   
@@ -91,7 +91,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
         您無法移除繼承的對應。 不過，在特定物件或物件類別目錄的自訂對應會覆寫繼承的對應。  
   
 ## <a name="next-steps"></a>後續步驟  
-移轉程序的下一個步驟是為任一[建立評量報告](http://msdn.microsoft.com/4de9bcf6-1346-4740-87f9-7f24a8226357)或[將 Oracle 資料庫的物件轉換成 SQL Server 語法](http://msdn.microsoft.com/e021182d-31da-443d-b110-937f5db27272)。 如果您建立的評估報告時，Oracle 物件都會自動轉換評定期間。  
+移轉程序的下一個步驟是為任一[建立評量報告](assessing-oracle-schemas-for-conversion-oracletosql.md)或[將 Oracle 資料庫的物件轉換成 SQL Server 語法](converting-oracle-schemas-oracletosql.md)。 如果您建立的評估報告時，Oracle 物件都會自動轉換評定期間。  
   
 ## <a name="see-also"></a>另請參閱  
 [移轉的 Oracle 資料庫到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

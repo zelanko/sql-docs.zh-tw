@@ -25,27 +25,27 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9cb790ec1b79827b7db578001633c75ef6e1b191
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7f63f3ac016a35cae82161cd9af1cfaafaf33353
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979470"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392107"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>將 Access 資料移轉到 SQL Server-Azure SQL DB (AccessToSQL)
-您已成功建立資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以將資料從存取移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+您已成功建立資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以將資料從存取移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 ## <a name="setting-migration-options"></a>移轉選項的設定  
-在移轉資料之前先[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，檢閱中的專案移轉選項**專案設定** 對話方塊。 在此對話方塊中，您可以設定移轉的批次大小、 資料表鎖定、 條件約束檢查，插入觸發程序引發時，身分識別與 null 值處理，以及如何處理日期，而超出[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]範圍。 如需詳細資訊，請參閱 <<c0> [ 專案設定 （移轉）](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
+在移轉資料之前先[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，檢閱中的專案移轉選項**專案設定** 對話方塊。 在此對話方塊中，您可以設定移轉的批次大小、 資料表鎖定、 條件約束檢查，插入觸發程序引發時，身分識別與 null 值處理，以及如何處理日期，而超出[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]範圍。 如需詳細資訊，請參閱 <<c0> [ 專案設定 （移轉）](http://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)。  
   
 ## <a name="migrating-data"></a>將資料移轉  
-移轉資料時，它會將資料插入的資料列大量載入作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或在交易中的 SQL Azure。 要載入的資料列數目[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或專案設定中設定 SQL Azure 中的每個交易。  
+移轉資料時，它會將資料插入的資料列大量載入作業[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或在交易中的 SQL Azure。 要載入的資料列數目[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或專案設定中設定 SQL Azure 中的每個交易。  
   
 若要檢視移轉訊息，請確定 [輸出] 窗格會顯示。 如果未列出，請在**檢視**功能表上，選取**輸出**。  
   
 **若要將資料移轉**  
   
-1.  請確定您已載入至 Access 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+1.  請確定您已載入至 Access 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
 2.  在存取中繼資料總管 中，選取包含您想要移轉之資料的物件：  
   
@@ -55,12 +55,12 @@ ms.locfileid: "38979470"
   
 3.  以滑鼠右鍵按一下**資料庫**，然後選取**移轉資料**。  
   
-您也可以使用將資料移轉之外 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **bcp**命令列公用程式或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)]。 如需有關這些工具的詳細資訊，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
+您也可以使用將資料移轉之外 SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **bcp**命令列公用程式或[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]。 如需有關這些工具的詳細資訊，請參閱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 ## <a name="next-step"></a>下一個步驟  
-如果您有想要繼續使用在移轉之後存取資料庫應用程式時，連結至 Access 資料庫資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料表。 如需詳細資訊，請參閱 <<c0> [ 連結至 SQL Server 的 Access 應用程式](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)。  
+如果您有想要繼續使用在移轉之後存取資料庫應用程式時，連結至 Access 資料庫資料表[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料表。 如需詳細資訊，請參閱 <<c0> [ 連結至 SQL Server 的 Access 應用程式](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[設定轉換和移轉選項](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[設定轉換和移轉選項](setting-conversion-and-migration-options-accesstosql.md)  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd03ce75d23d7cb98a8b1fcc8181fc6fcfa9523c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187735"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392726"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>SQL Server 的 Windows Server 容錯移轉叢集 (WSFC)
   *「Windows Server 容錯移轉叢集」* (Windows Server Failover Clustering，WSFC) 叢集是一組獨立的伺服器，會一起運作以提高應用程式和服務的可用性。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 利用 WSFC 服務和功能，以支援 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 容錯移轉叢集執行個體。  
@@ -65,7 +65,7 @@ ms.locfileid: "37187735"
  強制仲裁  
  即使僅少數仲裁必要元素正在通訊中，也會啟動叢集的程序。  
   
- 如需詳細資訊，請參閱＜ [容錯移轉叢集詞彙](http://msdn.microsoft.com/library/aa372869\(VS.85\).aspx)＞。  
+ 如需詳細資訊，請參閱＜ [容錯移轉叢集詞彙](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)＞。  
   
 ##  <a name="Overview"></a> Windows Server 容錯移轉叢集概觀  
  Windows Server 容錯移轉叢集提供基礎結構功能，支援 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 和 Microsoft Exchange 等託管伺服器應用程式的高可用性和災害復原案例。 如果叢集節點或服務失敗，該節點上裝載的服務可在稱為 *「容錯移轉」*(Failover) 的程序中自動或手動轉移至另一個可用的節點。  

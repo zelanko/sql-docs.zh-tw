@@ -18,17 +18,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979480"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393390"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>尋找資料庫精靈 （選取位置） (AccessToSQL)
 在 [尋找資料庫精靈] 的 [選取位置] 頁面中，您可以輸入的搜尋參數來尋找存取資料庫。  
   
-若要開啟 [尋找資料庫精靈] 中，在**檔案**功能表上，按一下**尋找資料庫**。 如需如何使用此對話方塊的詳細資訊，請參閱[加入和移除的 Access 資料庫檔案](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+若要開啟 [尋找資料庫精靈] 中，在**檔案**功能表上，按一下**尋找資料庫**。 如需如何使用此對話方塊的詳細資訊，請參閱[加入和移除的 Access 資料庫檔案](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>選項。  
 **瀏覽**  
@@ -65,6 +65,6 @@ ms.locfileid: "38979480"
 輸入完整的 Windows 使用者名稱的擁有者。 這可能會格式化為*網域*\\*使用者*。  
   
 ## <a name="see-also"></a>另請參閱  
-[新增和移除 Access 資料庫檔案](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[新增和移除 Access 資料庫檔案](adding-and-removing-access-database-files-accesstosql.md)  
 [使用者介面 Reference(Access)](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

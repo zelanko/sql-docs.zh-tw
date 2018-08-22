@@ -45,12 +45,12 @@ caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171159"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393380"
 ---
 # <a name="getting-sql-server-assistance"></a>取得 SQL Server 協助
   [!INCLUDE[msCoName](../includes/msconame-md.md)] 提供三個有關 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 的主要資訊來源：  
@@ -68,7 +68,7 @@ ms.locfileid: "37171159"
   
  《線上叢書》可以透過下列方法存取：  
   
--   網際網路上的 MSDN Library 和 TechNet Library 都會發行《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 線上叢書》副本。 這些《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》複本中的主題包含來自社群的意見，例如來自其他客戶的額外資訊和程式碼範例。 您可以檢視在 MSDN Library 副本[SQL Server 2014 線上叢書 》](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx)。  
+-   網際網路上的 MSDN Library 和 TechNet Library 都會發行《[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 線上叢書》副本。 這些《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》複本中的主題包含來自社群的意見，例如來自其他客戶的額外資訊和程式碼範例。 您可以檢視在 MSDN Library 副本[SQL Server 2014 線上叢書 》](../2014-toc/index.md)。  
   
 -   您可以使用 [Help Library 管理員]，將《[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 線上叢書》安裝在本機電腦上。 如需詳細資訊，請參閱 <<c0> [ 新增或移除的 SQL Server 的產品文件](../2014-toc/books-online-for-sql-server-2014.md)。  
   

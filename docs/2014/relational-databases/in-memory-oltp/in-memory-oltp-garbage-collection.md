@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
@@ -14,12 +13,12 @@ caps.latest.revision: 4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f4d8836d16c0ca55c9778dad26ff862e6a46a616
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72a6236e7fed91aeaf7ee946bf3393fb767dd496
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244648"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392728"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>記憶體中的 OLTP 記憶體回收
   如果某個不再使用的交易刪除資料列，則該資料列視為過時。 過時的資料列適合進行記憶體回收。 以下是 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]之記憶體回收的特性：  

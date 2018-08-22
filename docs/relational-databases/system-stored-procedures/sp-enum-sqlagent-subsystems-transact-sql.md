@@ -1,5 +1,5 @@
 ---
-title: sp_enum_sqlagent_subsystems (TRANSACT-SQL) |Microsoft 文件
+title: sp_enum_sqlagent_subsystems (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5f3603b43640d1459d77edd610eca29baa611d77
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2a816ae764e7348e85a4ae405fe3e57d268cb01
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241568"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394087"
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,17 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>引數  
- 無  
+ None  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**subsystem**|**nvarchar(40)**|子系統的名稱。|  
-|**描述**|**nvarchar(512)**|子系統的描述。|  
+|**description**|**nvarchar(512)**|子系統的描述。|  
 |**subsystem_dll**|**nvarchar(510)**|子系統所在的 DLL 模組。|  
 |**agent_exe**|**nvarchar(510)**|子系統所用的可執行模組。|  
 |**start_entry_point**|**nvarchar(30)**|在作業步驟執行期間，SQL Server Agent 所呼叫的程序。|  
@@ -69,10 +69,10 @@ sp_enum_sqlagent_subsystems
 ## <a name="permissions"></a>Permissions  
  依預設，只有 **系統管理員 (sysadmin)** 固定伺服器角色的成員，才能夠執行這個預存程序。 其他使用者必須被授與 **msdb** 資料庫的 **SQLAgentOperatorRole** 固定資料庫角色。  
   
- 如需詳細資訊**SQLAgentOperatorRole**，請參閱[SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需詳細資訊**SQLAgentOperatorRole**，請參閱[SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [實作 SQL Server Agent 安全性](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
+ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)  
   
   

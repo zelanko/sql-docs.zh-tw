@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
@@ -14,12 +13,12 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe4388cff478cf3d8f8fd773c8b0926793b0cc0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdcf9d6be713b77c2fd7f3a43872026eebce5c50
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258854"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394623"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>記憶體中的 OLTP 不支援 Transact-SQL 建構
   記憶體最佳化資料表和原生編譯預存程序並未支援磁碟資料表和解譯的 [!INCLUDE[tsql](../../includes/tsql-md.md)] 預存程序所支援的全部 [!INCLUDE[tsql](../../includes/tsql-md.md)] 介面區。 嘗試使用其中一項不支援的功能時，伺服器會傳回錯誤。  

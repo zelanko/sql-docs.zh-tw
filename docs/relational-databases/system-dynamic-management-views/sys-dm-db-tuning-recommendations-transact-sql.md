@@ -26,12 +26,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f90bdf2966092f003e45b3bb6c8d80710875b59a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3f8e2957802d527a4e4845e95eedb2ea7cdcd375
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554248"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393369"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_微調\_建議 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "39554248"
 | **valid\_since** | **datetime2** | 第一次產生這項建議。 |
 | **最後一個\_重新整理** | **datetime2** | 最後一次產生這項建議。 |
 | **state** | **nvarchar(4000)** | 說明建議狀態的 JSON 文件。 可用的欄位如下：<br />-   `currentValue` -建議的目前狀態。<br />-   `reason` – 說明為何建議處於目前狀態的常數。|
-| **is\_executable\_action** | **bit** | 1 = 可以針對透過資料庫執行建議[!INCLUDE[tsql_md](../../includes/tsql_md.md)]指令碼。<br />0 = 無法針對資料庫執行建議 (例如： 資訊只有或已還原建議) |
+| **is\_executable\_action** | **bit** | 1 = 可以針對透過資料庫執行建議[!INCLUDE[tsql_md](../../includes/tsql-md.md)]指令碼。<br />0 = 無法針對資料庫執行建議 (例如： 資訊只有或已還原建議) |
 | **已\_revertable\_動作** | **bit** | 1 = 建議可以自動監控和還原資料庫引擎。<br />0 = 建議無法自動監控和還原。 大部分&quot;可執行檔&quot;動作將會是&quot;revertable&quot;。 |
 | **execute\_action\_start\_time** | **datetime2** | 套用建議的日期。 |
 | **execute\_action\_duration** | **time** | 執行動作的持續時間。 |
@@ -59,7 +59,7 @@ ms.locfileid: "39554248"
 | **還原\_動作\_起始\_由** | **nvarchar(4000)** | `User` = 使用者手動強制執行的建議計劃。 <br /> `System` = 系統會自動還原建議。 |
 | **還原\_動作\_起始\_時間** | **datetime2** | 已還原建議的日期。 |
 | **score** | **int** | 估計值/影響此項建議在 0 到 100 的小數位數 （愈高愈好） |
-| **詳細資料** | **nvarchar(max)** | 包含有關建議的更多詳細資料的 JSON 文件。 可用的欄位如下：<br /><br />`planForceDetails`<br />-    `queryId` -查詢\_迴歸查詢的識別碼。<br />-    `regressedPlanId` -plan_id 的迴歸的計畫。<br />-   `regressedPlanExecutionCount` -偵測到之查詢的迴歸的計畫迴歸之前的執行次數。<br />-    `regressedPlanAbortedCount` -迴歸的計畫執行期間偵測到的錯誤數目。<br />-    `regressedPlanCpuTimeAverage` -平均之前偵測到的迴歸，迴歸的查詢所耗用的 CPU 時間。<br />-    `regressedPlanCpuTimeStddev` -偵測到的迴歸之前迴歸的查詢所耗用的 CPU 時間標準差。<br />-    `recommendedPlanId` -應該強制計劃的 plan_id。<br />-   `recommendedPlanExecutionCount`-執行之前偵測到的迴歸應該強制的計劃的查詢數目。<br />-    `recommendedPlanAbortedCount` -應該強制計畫執行期間偵測到的錯誤數目。<br />-    `recommendedPlanCpuTimeAverage` -平均應該強制 （計算迴歸偵測到之前） 的計劃以執行查詢所耗用的 CPU 時間。<br />-    `recommendedPlanCpuTimeStddev` 偵測到的迴歸之前迴歸的查詢所耗用的 CPU 時間的標準差。<br /><br />`implementationDetails`<br />-  `method` -應該用來更正迴歸的方法。 值一律是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] 應該強制執行建議的計劃執行的指令碼。 |
+| **詳細資料** | **nvarchar(max)** | 包含有關建議的更多詳細資料的 JSON 文件。 可用的欄位如下：<br /><br />`planForceDetails`<br />-    `queryId` -查詢\_迴歸查詢的識別碼。<br />-    `regressedPlanId` -plan_id 的迴歸的計畫。<br />-   `regressedPlanExecutionCount` -偵測到之查詢的迴歸的計畫迴歸之前的執行次數。<br />-    `regressedPlanAbortedCount` -迴歸的計畫執行期間偵測到的錯誤數目。<br />-    `regressedPlanCpuTimeAverage` -平均之前偵測到的迴歸，迴歸的查詢所耗用的 CPU 時間。<br />-    `regressedPlanCpuTimeStddev` -偵測到的迴歸之前迴歸的查詢所耗用的 CPU 時間標準差。<br />-    `recommendedPlanId` -應該強制計劃的 plan_id。<br />-   `recommendedPlanExecutionCount`-執行之前偵測到的迴歸應該強制的計劃的查詢數目。<br />-    `recommendedPlanAbortedCount` -應該強制計畫執行期間偵測到的錯誤數目。<br />-    `recommendedPlanCpuTimeAverage` -平均應該強制 （計算迴歸偵測到之前） 的計劃以執行查詢所耗用的 CPU 時間。<br />-    `recommendedPlanCpuTimeStddev` 偵測到的迴歸之前迴歸的查詢所耗用的 CPU 時間的標準差。<br /><br />`implementationDetails`<br />-  `method` -應該用來更正迴歸的方法。 值一律是`TSql`。<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 應該強制執行建議的計劃執行的指令碼。 |
   
 ## <a name="remarks"></a>備註  
  所傳回的資訊`sys.dm_db_tuning_recommendations`資料庫引擎識別潛在的查詢效能變差，而不會保存。 建議會保留只[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]重新啟動。 如果他們想要保留在伺服器回收之後，資料庫管理員應該定期製作備份複本的微調建議。 

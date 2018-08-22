@@ -5,7 +5,7 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +24,12 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a0f71aec8196f4815d8bc39ec9dd9dc0be443a01
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 28719e739e5e41967b89296f0675dee58b30770d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417927"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393158"
 ---
 # <a name="working-with-query-notifications"></a>使用查詢通知
   查詢通知是在 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 和 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 中引進。 查詢通知是根據 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 中引進的 Service Broker 基礎結構而建置，可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。  
@@ -80,7 +80,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|查詢通知要維持使用中的秒數。<br /><br /> 預設值為 432000 秒 (5 天)。 最小值為 1 秒，最大值為 2^31-1 秒。|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|通知的訊息文字。 這是使用者定義的，而且沒有預先定義的格式。<br /><br /> 根據預設，字串是空的。 您可以使用 1-2000 個字元指定訊息。|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查詢通知選項。 這些會指定在字串中使用*名稱*=*值*語法。 使用者負責建立此服務以及從佇列讀取通知。<br /><br /> 預設為空字串。|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|查詢通知選項。 這些是使用 *name*=*value* 語法在字串中指定。 使用者負責建立此服務以及從佇列讀取通知。<br /><br /> 預設為空字串。|  
   
  無論陳述式是以使用者交易或自動認可執行，或者陳述式在其中執行的交易是否已經認可或回復，系統閱永遠都會認可通知訂閱。 伺服器通知會在發生下列任何無效通知條件時觸發：基礎資料或結構描述變更，或達到逾時期限 (視何者為先)。 通知註冊會在觸發之後立刻刪除。 因此在接到通知後，應用程式必須再進行一次訂閱，才能接到進一步的更新。  
   
@@ -90,7 +90,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- 請注意，SELECT * 不從佇列中刪除項目，但收到\*FROM 會這麼做。 如果佇列是空的，這麼做會使伺服器延滯。 如果呼叫時有佇列項目，則這些項目會立刻傳回；否則呼叫會等到佇列項目建立後才進行。  
+ 請注意，SELECT * 並不會從佇列刪除項目，但 RECEIVE \* FROM 會這麼做。 如果佇列是空的，這麼做會使伺服器延滯。 如果呼叫時有佇列項目，則這些項目會立刻傳回；否則呼叫會等到佇列項目建立後才進行。  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -98,7 +98,7 @@ RECEIVE * FROM MyQueue
   
  如果佇列是空的，這個陳述式會立刻傳回空的結果集；否則會傳回所有的佇列通知。  
   
- 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 非 NULL 且不是空的，則每次執行命令時，都會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null (或是空的)，則該標頭不會傳送且會引發 DB_E_ERRORSOCCURRED (如果這兩個屬性都標示為選擇性的，則會引發 DB_S_ERRORSOCCURRED)，而且狀態值會設定為 DBPROPSTATUS_BADVALUE。 在執行/準備時會進行驗證。 若要連接設定查詢通知屬性時，同樣地，引發 DB_S_ERRORSOCCURED[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]之前的版本[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]。 狀態值在這種情況下是 DBPROPSTATUS_NOTSUPPORTED。  
+ 如果 SSPROP_QP_NOTIFICATION_MSGTEXT 和 SSPROP_QP_NOTIFICATION_OPTIONS 非 NULL 且不是空的，則每次執行命令時，都會將包含以上定義的三個屬性的查詢通知 TDS 標頭傳送到伺服器。 如果其中任一項為 Null (或是空的)，則該標頭不會傳送且會引發 DB_E_ERRORSOCCURRED (如果這兩個屬性都標示為選擇性的，則會引發 DB_S_ERRORSOCCURRED)，而且狀態值會設定為 DBPROPSTATUS_BADVALUE。 在執行/準備時會進行驗證。 同樣地，當針對 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 之前的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 版本連接設定查詢通知屬性時，會引發 DB_S_ERRORSOCCURED。 狀態值在這種情況下是 DBPROPSTATUS_NOTSUPPORTED。  
   
  初始化訂閱並不保證後續的訊息能成功傳遞。 此外，系統也不會對所指定服務名稱的有效性進行檢查。  
   

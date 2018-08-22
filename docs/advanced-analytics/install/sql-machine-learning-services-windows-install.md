@@ -1,23 +1,23 @@
 ---
-title: 安裝 SQL Server 2017 Machine Learning 在 Windows 上的服務 （資料庫） |Microsoft Docs
+title: 安裝 SQL Server Machine Learning 在 Windows 上的服務 （資料庫） |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2c699a76d0a24bade258109fcee40e9e1f39a7d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093322"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437688"
 ---
-# <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>安裝 SQL Server 2017 Machine Learning 服務 （資料庫），在 Windows 上 
+# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>安裝 SQL Server Machine Learning 服務 （資料庫），在 Windows 上 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 的機器學習服務元件將加入資料庫中的預測性分析、 統計分析、 視覺化和機器學習服務演算法。 函式程式庫適用於 R 和 Python，database engine 執行個體上執行外部指令碼。 
+從 SQL Server 2017 開始，SQL Server Machine Learning 服務，SQL Server 2016 中引進的 R Services 功能的後續版本中提供的資料庫內分析的 R 和 Python 支援。 函式程式庫適用於 R 和 Python，database engine 執行個體上執行外部指令碼。 
 
 這篇文章說明如何執行安裝的機器學習服務元件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]安裝精靈 中，並遵循螢幕上的提示。
 
@@ -98,13 +98,7 @@ SQL Server 的機器學習服務元件將加入資料庫中的預測性分析、
 
     記下的資料夾路徑下的位置`..\Setup Bootstrap\Log`儲存組態檔。 安裝完成時，您可以檢閱 摘要檔中已安裝的元件。
 
-## <a name="restart-the-service"></a>重新啟動服務
-
-安裝完成後，重新啟動 database engine，再繼續下一步，啟用指令碼執行。
-
-重新啟動 ervice 也會自動重新啟動相關[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服務。
-
-您可以重新啟動服務，使用滑鼠右鍵**重新啟動**命令，在 SSMS 中，或使用之執行個體**Services**面板在控制台中，或使用[SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md).
+7. 安裝程式完成，如果系統指示您重新啟動電腦之後, 請現在登出。 當您完成安裝時，請務必閱讀安裝精靈所提供的訊息。 如需詳細資訊，請參閱＜ [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files)＞。
 
 ## <a name="bkmk_enableFeature"></a>啟用外部指令碼執行
 
@@ -132,9 +126,13 @@ SQL Server 的機器學習服務元件將加入資料庫中的預測性分析、
     
     如果您已啟用 R 語言的功能，不會執行重新設定適用於 Python 的第二次。 基礎平台擴充性支援這兩種語言。
 
-4. 重新啟動 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的 SQL Server 服務。 也會自動重新啟動 SQL Server 服務重新啟動相關[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服務。
+## <a name="restart-the-service"></a>重新啟動服務
 
-    您可以重新啟動服務，使用滑鼠右鍵**重新啟動**命令，在 SSMS 中，或使用之執行個體**Services**面板在控制台中，或使用[SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md).
+安裝完成後，重新啟動 database engine，再繼續下一步，啟用指令碼執行。
+
+重新啟動服務時，也會自動重新啟動相關[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]服務。
+
+您可以重新啟動服務，使用滑鼠右鍵**重新啟動**命令，在 SSMS 中，或使用之執行個體**Services**面板在控制台中，或使用[SQL Server 組態管理員](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>確認安裝
 
@@ -148,7 +146,7 @@ SQL Server 的機器學習服務元件將加入資料庫中的預測性分析、
 
     **run_value** 現在應該設定為 1。
     
-2. 開啟**Services**面板或 SQL Server 組態管理員，並確認**SQL Server Launchpad 服務**正在執行。 您應該有一項服務，每個資料庫引擎執行個體具有 R 或 Python 安裝。 如果未執行，請重新啟動服務。 如需詳細資訊，請參閱 <<c0> [ 元件來支援 Python 整合](../python/new-components-in-sql-server-to-support-python-integration.md)。 
+2. 開啟**Services**面板或 SQL Server 組態管理員，並確認**SQL Server Launchpad 服務**正在執行。 您應該有一項服務，每個資料庫引擎執行個體具有 R 或 Python 安裝。 如需詳細資訊，請參閱 <<c0> [ 元件來支援 Python 整合](../python/new-components-in-sql-server-to-support-python-integration.md)。 
    
 3. 如果 Launchpad 正在執行，您應該能夠執行簡單 R 和 Python 指令碼，以確認外部指令碼的執行階段可以與 SQL Server 通訊。
 
@@ -298,7 +296,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ### <a name="install-additional-r-packages"></a>安裝其他 R 套件
 
-建立適用於 SQL Server 的 R 解決方案，可以呼叫基本的 R 函數，從 SQL Server，與第三方開放原始碼 R 的 SQL Server 安裝的版本相容的 R 套件安裝 properietary packes 函式。
+建立適用於 SQL Server 的 R 解決方案，可以呼叫基本 R 函式，函式與 SQL Server 一起安裝的專屬套件與第三方 R 套件開放原始碼 R 的 SQL Server 安裝的版本相容。
 
 您想要從 SQL Server 使用的套件，必須安裝在執行個體所使用的預設程式庫中。 如果您有 R 的強大功能的個別安裝的電腦上，或如果您將套件安裝到使用者程式庫，您將無法使用 T-SQL 的那些套件。
 
@@ -315,7 +313,7 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 * [SQL Server R services 的自訂報表](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-## <a name="next-steps"></a>後續的步驟
+## <a name="next-steps"></a>後續步驟
 
 R 開發人員可以開始使用一些簡單的範例，並了解 R 與 SQL Server 的運作方式的基本概念。 下一個步驟中，請參閱下列連結：
 

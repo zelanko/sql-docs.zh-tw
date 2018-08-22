@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 057d7d988fd6f7f5d490cbf30f06e83270438983
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042883"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392276"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>第 3 課： 瀏覽及視覺化資料
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -277,8 +277,8 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 ## <a name="next-lesson"></a>下一課
 
-[第 4 課： 建立使用 T-SQL 的資料特徵](../tutorials/sqldev-create-data-features-using-t-sql.md)
+[第 3 課： 建立使用 T-SQL 的資料特徵](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>上一課
 
-[第 2 課： 準備教學課程使用 PowerShell 的環境](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+[NYC 計程車示範資料的第 1 課： 設定](sqldev-download-the-sample-data.md)

@@ -22,15 +22,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 604fe25d0b08ddc997baf381adb4a967ed8e9462
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979600"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393396"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>對應來源和目標資料類型 (AccessToSQL)
-存取資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫類型。 當您轉換到存取資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件，您必須指定如何從存取的資料類型對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列程序中所示。  
+存取資料庫型別不同[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫類型。 當您轉換到存取資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，您必須指定如何從存取的資料類型對應[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以接受預設資料類型對應，或您可以自訂對應，如下列程序中所示。  
   
 ## <a name="default-mappings"></a>預設對應  
 SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，請參閱[(Type Mapping) 的專案設定](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)。  
@@ -70,7 +70,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         這可讓您自訂的資料對應相同的資料類型的較小且較大的值。  
   
-    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
+    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
   
         某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為**方塊，然後再按一下**確定**。  
   
@@ -84,7 +84,7 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
   
         這可讓您自訂的資料對應相同的資料類型的較小且較大的值。  
   
-    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
+    4.  底下**目標型別**，選取目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
   
         某些類型需要目標資料類型長度。 如果需要，請輸入新的資料長度，以**取代為**方塊，然後再按一下**確定**。  
   
@@ -95,8 +95,8 @@ SSMA 會有一組預設的資料類型對應。 如需預設對應的清單，�
     2.  按一下 **[移除]**。  
   
 ## <a name="next-steps"></a>後續步驟  
-移轉程序的下一個步驟是[將 access 資料庫物件轉換成 SQL Server 物件](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+移轉程序的下一個步驟是[將 access 資料庫物件轉換成 SQL Server 物件](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

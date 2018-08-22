@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7beabaaf63194cc699c3711a87dd1e59d244c068
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0a83ac3429a3012269a35c64ba5fdcbec18b2d4c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981330"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393613"
 ---
-# <a name="datasources-object-tmsl"></a>資料來源物件 (TMSL)
+# <a name="datasources-object-tmsl"></a>DataSources 物件 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   定義模型將資料加入至模型，或透過傳遞查詢透過 DirectQuery 模式中的匯入期間所使用的資料來源的連接。  模型在 DirectQuery 模式中的只能有一個**DataSource**物件。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "38981330"
  DataSource 的類型。 目前，唯一有效的值會是提供者 (1)-標準連接字串。  
   
  connectionString  
- 連接字串至少指定的伺服器和資料庫，但也可以包含其他外部 RDBMS 中，例如資料提供者或使用者帳戶所支援的屬性。 這是必要的值。 請參閱[SqlConnectionStringBuilder 類別](https://msdn.microsoft.com/library/ms254500\(v=vs.110\).aspx)如需詳細資訊，關於 SQL Server 資料庫連接字串屬性。  
+ 連接字串至少指定的伺服器和資料庫，但也可以包含其他外部 RDBMS 中，例如資料提供者或使用者帳戶所支援的屬性。 這是必要的值。 請參閱[SqlConnectionStringBuilder 類別](/dotnet/framework/data/adonet/connection-string-syntax)如需詳細資訊，關於 SQL Server 資料庫連接字串屬性。  
   
  impersonationMode  
  指定 Analysis Services 是否應模擬要求查詢之使用者的身分識別。 這個屬性是數值，指定要用於模擬的認證。 列舉值如下：  

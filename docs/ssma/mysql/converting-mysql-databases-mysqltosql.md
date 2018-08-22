@@ -16,18 +16,18 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3ad0a909c9fce73955bee29070febfa32037a91c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 83cd35918c6d2fbc3190ebcedd3606b622e549f1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985770"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396054"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>轉換 MySQL 資料庫 (MySQLToSQL)
-您已經連接到 MySQL 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，並設定專案範本和對應的資料選項，您可以將轉換至 MySQL 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件。  
+您已經連接到 MySQL 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，並設定專案範本和對應的資料選項，您可以將轉換至 MySQL 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件。  
   
 ## <a name="the-conversion-process"></a>轉換程序  
-轉換的資料庫物件從 MySQL 接受物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管。  
+轉換的資料庫物件從 MySQL 接受物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管。  
   
 在轉換期間 SSMA 會列印訊息輸出至 [輸出] 窗格和 [錯誤清單] 窗格中的錯誤訊息。 您可以使用輸出和錯誤的資訊來判斷是否需要修改您的 MySQL 資料庫或您的轉換程序，以便取得所需的轉換結果。  
   
@@ -35,13 +35,13 @@ ms.locfileid: "38985770"
 在轉換前的物件，檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用這個對話方塊中，您可以設定 SSMA 將資料表和索引的轉換。 如需詳細資訊，請參閱[專案設定&#40;轉換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
   
 ## <a name="conversion-results"></a>轉換結果  
-下表顯示 MySQL 物件會轉換，以及產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件：  
+下表顯示 MySQL 物件會轉換，以及產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件：  
   
 |||  
 |-|-|  
 |**MySQL 物件**|**產生的 SQL Server 物件**|  
-|具有相依的物件，例如索引的資料表|SSMA 會建立資料表，與相依的物件。 資料表會轉換與所有索引和條件約束。 索引會轉換成個別[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件。<br /><br />**空間資料類型對應**可以只在資料表節點層級執行。<br /><br />如需有關資料表轉換設定的詳細資訊，請參閱[轉換設定](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
-|函數|如果函式可以直接轉換成 TRANSACT-SQL，SSMA 會建立函式。 在某些情況下，函式必須轉換成預存程序。 做法是使用**函式轉換**專案設定中。 在此情況下，SSMA 所建立的預存程序和函式來呼叫預存程序。<br /><br />**指定的選項：**<br /><br />根據專案設定轉換<br /><br />將轉換成函式<br /><br />將轉換成預存程序<br /><br />如需有關轉換函式設定的詳細資訊，請參閱[轉換設定](http://msdn.microsoft.com/f551cf6e-1575-4206-9cca-975b5b43a6b8)|  
+|具有相依的物件，例如索引的資料表|SSMA 會建立資料表，與相依的物件。 資料表會轉換與所有索引和條件約束。 索引會轉換成個別[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件。<br /><br />**空間資料類型對應**可以只在資料表節點層級執行。<br /><br />如需有關資料表轉換設定的詳細資訊，請參閱[轉換設定](conversion-settings-mysqltosql.md)|  
+|函數|如果函式可以直接轉換成 TRANSACT-SQL，SSMA 會建立函式。 在某些情況下，函式必須轉換成預存程序。 做法是使用**函式轉換**專案設定中。 在此情況下，SSMA 所建立的預存程序和函式來呼叫預存程序。<br /><br />**指定的選項：**<br /><br />根據專案設定轉換<br /><br />將轉換成函式<br /><br />將轉換成預存程序<br /><br />如需有關轉換函式設定的詳細資訊，請參閱[轉換設定](conversion-settings-mysqltosql.md)|  
 |程序|如果此程序可以直接轉換成 TRANSACT-SQL，SSMA 會建立預存程序。 在某些情況下，必須在自發交易中呼叫預存程序。 在此情況下，SSMA 會建立兩個預存程序： 實作程序，和另一個則用來呼叫實作的其中一個預存程序。|  
 |資料庫轉換|做為 MySQL 物件的資料庫不直接轉換 SSMA for MySQL。 MySQL 資料庫會被視為更類似的結構描述名稱和實體的所有參數都會在轉換期間遺失。 使用 SSMA for MySQL[對應至 SQL Server 結構描述的 MySQL 資料庫&#40;MySQLToSQL&#41; ](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)對應到適當的 SQL Server 資料庫/結構描述對從 MySQL 資料庫物件。|  
 |觸發程序轉換|**SSMA 會建立觸發程序根據下列規則：**<br /><br />觸發程序會轉換成有 T-SQL 的 INSTEAD OF 觸發程序之前<br /><br />AFTER 觸發程序會轉換成之後 T-SQL 觸發程序使用或不反覆項目，每個資料列。|  
@@ -110,7 +110,7 @@ ms.locfileid: "38985770"
   
 -   您可以修改的 MySQL 資料庫，以移除或修改有問題的程式碼中的物件。 若要更新的程式碼載入 SSMA 中，您必須更新的中繼資料。 如需詳細資訊，請參閱 <<c0> [ 連接至 MySQL &#40;MySQLToSQL&#41;</c0>](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管和 MySQL 中繼資料總管] 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，並將資料從 MySQL 移轉。  
+-   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管和 MySQL 中繼資料總管] 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，並將資料從 MySQL 移轉。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[載入轉換的資料庫物件載入 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  

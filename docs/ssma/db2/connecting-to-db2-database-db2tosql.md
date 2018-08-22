@@ -16,15 +16,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 78ba615946600d082fd2533ecf81f7b2ba295196
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2228a08c2985f4e683ff860cd77e68159a0ecd0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980361"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393149"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>連接至 DB2 資料庫 (DB2ToSQL)
-若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您必須連接到您想要移轉的 DB2 資料庫。 當您連線時，SSMA 中取得所有 DB2 結構描述的相關中繼資料，然後顯示 DB2 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
+若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須連接到您想要移轉的 DB2 資料庫。 當您連線時，SSMA 中取得所有 DB2 結構描述的相關中繼資料，然後顯示 DB2 中繼資料總管 窗格中。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
   
 資料庫的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連線，如果您想要的使用中連接到資料庫。  
   
@@ -38,7 +38,7 @@ DB2 資料庫的相關中繼資料不會自動更新。 相反地，如果您想
 -   資料移轉的資料存取需要的資料存取  
   
 ## <a name="establishing-a-connection-to-db2"></a>建立 DB2 的連接  
-當您連接到資料庫時，SSMA 讀取資料庫中繼資料，然後將此中繼資料新增至專案檔。 將轉換物件時，使用此中繼資料的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]語法，以及當它將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您可以瀏覽此中繼資料，在 DB2 中繼資料總管 窗格中的，然後檢閱個別的資料庫物件的屬性。  
+當您連接到資料庫時，SSMA 讀取資料庫中繼資料，然後將此中繼資料新增至專案檔。 將轉換物件時，使用此中繼資料的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]語法，以及當它將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您可以瀏覽此中繼資料，在 DB2 中繼資料總管 窗格中的，然後檢閱個別的資料庫物件的屬性。  
   
 > [!IMPORTANT]  
 > 您嘗試連接之前，請確定資料庫伺服器正在執行，而且可以接受連線。  
@@ -84,7 +84,7 @@ DB2 資料庫的相關中繼資料不會自動更新。 相反地，如果您想
     如需詳細資訊，請參閱 <<c0> [ 連接到 Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)。</c0>  
   
 ## <a name="reconnecting-to-db2"></a>重新連接到 DB2  
-資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連線，如果您想要的使用中連接到資料庫。 您可以離線直到您想要更新中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，並移轉資料。  
+資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連線，如果您想要的使用中連接到資料庫。 您可以離線直到您想要更新中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並移轉資料。  
   
 ## <a name="refreshing-db2-metadata"></a>重新整理 DB2 中繼資料  
 DB2 資料庫的相關中繼資料不會自動重新整理。 DB2 中繼資料總管 中的中繼資料是快照集的中繼資料，當您第一次連接時或您手動重新整理中繼資料的最後一次。 您可以手動更新所有結構描述、 單一結構描述，或個別的資料庫物件的中繼資料。  
@@ -109,7 +109,7 @@ DB2 資料庫的相關中繼資料不會自動重新整理。 DB2 中繼資料�
   
     若要檢視的定義的色彩編碼，請按一下**圖例** 按鈕。  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>下一個步驟  
   

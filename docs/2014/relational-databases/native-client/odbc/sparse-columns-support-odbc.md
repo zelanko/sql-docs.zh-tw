@@ -5,7 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
@@ -13,12 +13,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a832a05d977cebfae8742ac75b7c88516919172d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d50666d333a77f4a1e2188ac911d0866395b4cc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420217"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393150"
 ---
 # <a name="sparse-columns-support-odbc"></a>疏鬆資料行支援 (ODBC)
   本主題將描述 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 對於疏鬆資料行的支援。 如需示範 ODBC 對於疏鬆資料行支援的範例，請參閱 <<c0> [ 具有疏鬆資料行的資料表上的呼叫 SQLColumns](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md)。 如需有關疏鬆資料行的詳細資訊，請參閱 < [SQL Server Native Client 中的疏鬆資料行支援](../features/sparse-columns-support-in-sql-server-native-client.md)。  

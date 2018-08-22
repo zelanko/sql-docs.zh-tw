@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobcount (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_jobcount (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6165d86e2a086ef52e627451e613b021296082d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ff9c148455fd1e917b63ecae69a9bf977d69a280
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252946"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392949"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_help_jobcount
   
 ## <a name="arguments"></a>引數  
  [ **@schedule_id=** ] *schedule_id*  
- 這是要列出的排程識別碼。 *schedule_id*是**int**，沒有預設值。 任一*schedule_id*或*schedule_name*可指定。  
+ 這是要列出的排程識別碼。 *schedule_id*已**int**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
   
  [ **@schedule_name=** ]  **'***schedule_name***'**  
- 這是要列出的排程名稱。 *schedule_name*是**sysname**，沒有預設值。 任一*schedule_id*或*schedule_name*可指定。  
+ 這是要列出的排程名稱。 *schedule_name&lt*已**sysname**，沒有預設值。 任一*schedule_id*或是*schedule_name&lt*可能指定。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -58,7 +58,7 @@ sp_help_jobcount
 ## <a name="result-sets"></a>結果集  
  傳回下列結果集：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|指定排程的作業數目。|  
   
@@ -74,9 +74,9 @@ sp_help_jobcount
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
- 只有成員**sysadmin**可以檢視其他人所擁有的作業計數。  
+ 只有成員**sysadmin**可以檢視由他人所擁有的作業計數。  
   
 ## <a name="examples"></a>範例  
  下列範例會列出附加至 `NightlyJobs` 排程的作業數目。  
@@ -92,9 +92,9 @@ GO
   
 ## <a name="see-also"></a>另請參閱  
  [SQL Server Agent 預存程序&#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;-SQL&AMP;#41;&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

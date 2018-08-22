@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c8aeb19e6773b3f772ae0a62e7d72f647ee365e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 423cc509e4b7c915ae9170350090d866d66d6165
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185395"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393611"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Analysis Services 多維度的全球化案例
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 儲存及操作多國語言資料和表格式和多維度資料模型中的中繼資料。 資料是以 Unicode (UTF-16) 儲存，也就是儲存在使用 Unicode 編碼的字元集中。 如果您將 ANSI 資料載入資料模型，則會使用對等的 Unicode 字碼指標來儲存字元。  
@@ -79,7 +79,7 @@ ms.locfileid: "37185395"
 |[全球化秘訣和最佳作法&#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)|檢閱有助於避免發生與多語系資料相關之問題的幾個設計和編碼作法。|  
   
 ## <a name="see-also"></a>另請參閱  
- [Windows 應用程式的國際化](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
+ [Windows 應用程式的國際化](/windows/desktop/Intl/international-support)   
  [Go Global 開發人員中心](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
  [使用地區設定為基礎的自動調整設計撰寫 Windows 市集應用程式](http://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
  [開發通用 Windows 應用程式使用 C# 和 XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  

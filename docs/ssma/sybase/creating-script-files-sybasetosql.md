@@ -21,12 +21,12 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 99ab3ab7debd5542f57d9008ae83baf1deb0e2c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979890"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392734"
 ---
 # <a name="creating-script-files-sybasetosql"></a>建立指令碼檔 (SybaseToSQL)
 第一個步驟是啟動 SSMA 主控台應用程式建立的指令碼檔案之前，並在必要時建立的變數值檔案和伺服器連線檔案。  
@@ -357,7 +357,7 @@ ms.locfileid: "38979890"
   
 例如，Sybase 資料庫中特定資料表的一般資料移轉如下的階層： 資料庫-&gt;結構描述-&gt;資料表。  
   
-指令碼檔案中的所有命令都執行成功時結束 SSMA 主控台應用程式，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[變數值檔案](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc)或變數值的指令碼檔案內的個別區段中。  
+指令碼檔案中的所有命令都執行成功時結束 SSMA 主控台應用程式，並將控制權傳回給使用者。 指令碼檔案的內容會更多或較少的靜態變數的資訊包含在[變數值檔案](creating-variable-value-files-sybasetosql.md)或變數值的指令碼檔案內的個別區段中。  
   
 **範例：**  
   

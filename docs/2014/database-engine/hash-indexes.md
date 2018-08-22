@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
@@ -14,12 +13,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04cc9e0bea00d1eb2bc542a996ff4bc39e1009f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295228"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393159"
 ---
 # <a name="hash-indexes"></a>雜湊索引
   索引做為記憶體最佳化資料表的進入點。 讀取資料表的資料列需要索引，以找出記憶體中的資料。  
@@ -44,7 +43,7 @@ ms.locfileid: "37295228"
   
  記憶體中雜湊索引包含記憶體指標陣列。 每個貯體對應到這個陣列中的位移。 陣列中的每個貯體指向該雜湊值區的第一個資料列。 貯體中的每個資料列指向下一個資料列，因而造成每個雜湊值區的資料列鏈結，如下圖所示。  
   
- ![In-memory 雜湊索引結構。] (../../2014/database-engine/media/hekaton-tables-3.gif "In-memory 雜湊索引結構。")  
+ ![In-memory 雜湊索引結構。](../../2014/database-engine/media/hekaton-tables-3.gif "In-memory 雜湊索引結構。")  
   
  此圖中有三個貯體包含資料列。 最上方第二個貯體包含三個紅色資料列。 第四個貯體包含單一藍色資料列。 最下方的貯體包含兩個綠色資料列。 這些可能是相同資料列的不同版本。  
   

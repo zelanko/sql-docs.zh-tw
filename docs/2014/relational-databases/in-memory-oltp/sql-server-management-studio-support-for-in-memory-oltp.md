@@ -5,8 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
@@ -14,12 +13,12 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85dd4c829a05bd051fcf57f1ea299916080251a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bb02e083cc056bd4e732b6c432c5d182bf5032a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313768"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392946"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio 對記憶體中 OLTP 的支援
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 是用於管理您的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構的整合式環境。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 提供工具來設定、監視以及管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體。 如需詳細資訊，請參閱 [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  

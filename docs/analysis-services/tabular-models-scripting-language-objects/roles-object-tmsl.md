@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 19da91838703adc4ae224a645e1f0a6e65fe032c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983870"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392941"
 ---
 # <a name="roles-object-tmsl"></a>Roles 物件 (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38983870"
                   和系統管理員。 請參閱[角色和權限&#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)如需有關資料庫權限資訊。  
   
  成員  
- 成員是由成員名稱和識別碼，其中成員名稱是別名或易記的名稱，Windows 安全性原則，而識別碼是安全性識別元所組成。 同時指定角色定義中。請參閱[SID 元件](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx)如需詳細資訊的識別項。  
+ 成員是由成員名稱和識別碼，其中成員名稱是別名或易記的名稱，Windows 安全性原則，而識別碼是安全性識別元所組成。 同時指定角色定義中。請參閱[SID 元件](/windows/desktop/SecAuthZ/sid-components)如需詳細資訊的識別項。  
   
  tablePermissions  
  資料表權限是透過 DAX 運算式定義的權限的具名的物件。 這個屬性是選擇性的用來套用安全性篩選器。  

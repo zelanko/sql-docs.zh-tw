@@ -5,7 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
@@ -13,12 +13,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5bb0c1c7b0ff489e5addff5bb84649984b97f527
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2d26329d11885061b01e6147f145ce42a2a8855b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416257"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392494"
 ---
 # <a name="metadata-discovery"></a>中繼資料探索
   中的中繼資料探索改進[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]可讓[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端應用程式，以確保，從執行查詢所傳回的資料行或參數中繼資料與相同或相容的中繼資料的格式指定之前您在執行查詢。 如果查詢執行之後傳回的中繼資料與您在查詢執行之前指定的中繼資料格式不相容，您就會收到錯誤。  
@@ -62,7 +62,7 @@ ms.locfileid: "37416257"
   
 -   Icommandwithparameters:: Getparameterinfo (請參閱[ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md)如需詳細資訊)  
   
- 您也會指定使用 IBCPSession::BCPSetBulkMode 的中繼資料格式時看到效能改進  
+ 當您使用 IBCPSession::BCPSetBulkMode 來指定中繼資料格式時，也會看見效能改進  
   
  由於 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 加入了下列兩個預存程序，所以您可以在 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client 中進行改善的中繼資料探索：  
   

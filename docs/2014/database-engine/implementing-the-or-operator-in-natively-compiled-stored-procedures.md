@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce9b8660fa52d2a09302b51b0f95e368071caa4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9470064571a8e9ab7d63c7d07456552b8cfb4d88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228178"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392098"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>在原生編譯的預存程序中實作 OR 運算子
   原生編譯預存程序內部的查詢述詞中不支援 OR 運算子。 由於原生編譯預存程序內部的查詢述詞中也不支援 NOT 運算子，所以無法透過單獨使用同等的邏輯運算子來模擬 OR 運算子的效果。 不過，OR 運算子的效果可透過記憶體最佳化資料表變數加以模擬。  

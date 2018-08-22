@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
@@ -14,12 +13,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b92439b6ce1edd974d184ac910a65716dec812b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d6ab50676145c7a7e68976448c6a89b2dceadb45
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180376"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392043"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>對資料檔案和差異檔案組的合併進行監視和疑難排解
   記憶體中 OLTP 會使用合併原則自動合併相鄰資料及差異檔案組。 您無法停用合併活動。  

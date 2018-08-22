@@ -5,7 +5,7 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,19 +17,19 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7eec938ad1b94286b986d3897e9935763dcd108
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b3bc95c58caafc0f1aa60c0d02b1c53c09b0c712
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422367"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393381"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>SQL Server Native Client 中的疏鬆資料行支援
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 支援疏鬆資料行。 如需有關疏鬆資料行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 使用疏鬆資料行](../../tables/use-sparse-columns.md)並[使用資料行集](../../tables/use-column-sets.md)。  
   
  如需有關疏鬆資料行中，支援在[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端，請參閱[疏鬆資料行支援&#40;ODBC&#41; ](../odbc/sparse-columns-support-odbc.md)並[疏鬆資料行支援&#40;OLE DB&#41; ](../ole-db/sparse-columns-support-ole-db.md).  
   
- 如需示範這項功能的範例應用程式的資訊，請參閱[SQL Server 資料程式設計範例](http://msftdpprodsamples.codeplex.com/)。  
+ 如需示範這項功能之範例應用程式的詳細資訊，請參閱 [SQL Server 資料程式設計範例](http://msftdpprodsamples.codeplex.com/)。  
   
 ## <a name="user-scenarios-for-sparse-columns-and-sql-server-native-client"></a>疏鬆資料行與 SQL Server Native Client 的使用者案例  
  下表針對包含疏鬆資料行的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用者摘要一般使用者案例：  

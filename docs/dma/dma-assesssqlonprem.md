@@ -1,8 +1,8 @@
 ---
-title: 執行 SQL Server 移轉評估 (Data Migration Assistant) |Microsoft Docs
-description: 了解如何使用 Data Migration Assistant 評估內部部署 SQL Server 移轉至另一個 SQL Server 或 Azure SQL Database 之前
+title: 評估企業並合併評定報告 (SQL Server) |Microsoft Docs
+description: 了解如何使用 DMA，以評估企業，並合併評定報告，然後再升級 SQL Server，或移轉至 Azure SQL Database。
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,96 +18,228 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.openlocfilehash: 9f8deae9dc7f31eaa41c5e4261a2848648f60090
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37934950"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40393461"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>執行 SQL Server 移轉評估，使用 Data Migration Assistant
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>評估企業及彙總與 DMA 的評估報告
 
-下列的逐步指示可協助您移轉至內部部署 SQL Server，使用 Data Migration Assistant 的 Azure VM 或 Azure SQL Database 上執行的 SQL Server 執行您的第一次評估。
+下列的逐步指示可協助您使用 Data Migration Assistant，以執行成功的縮放的評估，在內部部署 SQL Server 或 Azure Vm 上執行的 SQL Server 升級或移轉至 Azure SQL Database。
 
-## <a name="create-an-assessment"></a>建立評定
+## <a name="prerequisites"></a>先決條件
 
-1.  選取 **的新**（+） 圖示，然後再選取**評定**專案類型。
+- 指定工具電腦將會起始 DMA 您網路上。 請確定此電腦已連線到您的 SQL Server 目標。
+- 下載並安裝：
+    - [Data Migration Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=53595) 3.6 版或更新版本。
+    - [PowerShell](http://aka.ms/wmf5download) 5.0 版或更新版本。
+    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 或更新版本。
+    - [SSMS](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) 17.0 或更新版本。
+    - [Power Bi desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop)。
+- 下載並解壓縮：
+    - [DMA 報表 Power BI 範本](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip)。
+    - [LoadWarehouse 指令碼](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip)。
 
-2.  設定來源和目標伺服器類型。
+## <a name="loading-the-powershell-modules"></a>正在載入 PowerShell 模組
+儲存到 PowerShell 模組目錄的 PowerShell 模組，可讓您呼叫的模組，而不需要明確載入它們，才能使用。
 
-    現代化內部部署 SQL Server 執行個體或裝載於 Azure VM 上的 SQL Server，您要升級您的內部部署 SQL Server 執行個體，如果來源和目標伺服器類型設為**SQL Server**。 如果您要移轉至 Azure SQL Database，而是會將目標伺服器類型設為**Azure SQL Database**。
+若要載入的模組，請執行下列步驟：
+1. 瀏覽至 C:\Program Files\WindowsPowerShell\Modules，然後建立名為資料夾**DataMigrationAssistant**。
+2. 開啟[PowerShell 模組](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)，然後將它們儲存到您所建立的資料夾。
 
-3.  按一下 **[建立]**。
+      ![PowerShell 模組](../dma/media//dma-assesssqlonprem/dma-powershell-modules.png)
 
-    ![建立評定](../dma/media/NewAssessment.png)
+    每個資料夾包含相關聯的 psm1 檔案，如下圖所示：
 
-## <a name="choose-assessment-options"></a>選擇評估選項
+   ![PowerShell 模組 psm1 檔案](../dma/media//dma-assesssqlonprem/dma-powershell-modules-psm1-files.png)
 
-1. 選取您打算移轉至目標 SQL Server 版本。
+   > [!NOTE]
+   > 資料夾和它所包含的 psm1 檔案必須具有相同的名稱。
 
-2. 選取報表類型。
+   > [!IMPORTANT]
+   > 您可能需要解除封鎖 PowerShell 檔案之後將它們儲存到 WindowsPowerShell 的目錄，以確保正確載入的模組。 若要解除封鎖 PowerShell 檔案，以滑鼠右鍵按一下檔案，選取**屬性**，選取**解除封鎖**文字方塊中，然後選取**Ok**。
 
-   當您要評估您的來源 SQL Server 執行個體移轉至內部部署 SQL Server 或 SQL Server 裝載於 Azure VM 的目標時，您可以選擇其中一個或多個下列的評估報告類型：
+   ![psm1 檔案屬性](../dma/media//dma-assesssqlonprem/dma-psm1-file-properties.png)
 
-    -   **相容性問題**
+    PowerShell 應該現在這些模組自動載入新的 PowerShell 工作階段啟動時。
 
-    -   **新功能的建議**
+## <a name="create-an-inventory-of-sql-servers"></a>建立 SQL 伺服器的清查
+之前執行的 PowerShell 指令碼，來評估您的 SQL Server，您必須建置您想要評估 SQL 伺服器的清查。
 
-    ![選取 SQL Server 目標評估報表類型](../dma/media/AssessmentTypes.png)
+此清查可以處於兩種形式之一：
+- Excel CSV 檔案
+- SQL Server 資料表
 
-   當您要評估您的來源 SQL Server 執行個體移轉到 Azure SQL Database 時，您可以選擇其中一個或多個下列的評估報告類型：
+### <a name="if-using-a-csv-file"></a>如果使用 CSV 檔案
+當使用 csv 檔案匯入資料，請確定只有兩個資料行的資料 –**執行個體名稱**並**資料庫名稱**，資料行不會有標頭資料列。
+ 
+ ![csv 檔案內容](../dma/media//dma-assesssqlonprem/dma-csv-file-contents.png)
 
-    -   **檢查資料庫相容性**
+### <a name="if-using-sql-server-table"></a>如果使用 SQL Server 資料表
+建立名為的資料庫**EstateInventory**和名**DatabaseInventory**。 包含這個清查資料的資料表可以有任意數目的資料行，只要有下列四個資料行：
+- ServerName
+- InstanceName
+- DatabaseName
+- AssessmentFlag
+ 
+ ![SQL Server 資料表的內容](../dma/media//dma-assesssqlonprem/dma-sql-server-table-contents.png)
 
-    -   **檢查功能同位**
+如果此資料庫不在工具電腦上，請確定工具的電腦具有網路連線到此 SQL Server 執行個體。
 
-    ![選取 SQL Database 目標的評估報告類型](../dma/media/AssessmentTypes_Azure.png)
+透過 CSV 檔案中使用 SQL Server 資料表的好處是，您可以使用評估旗標資料行控制執行個體 / 資料庫取得撿起進行評估，可讓您更輕鬆地分隔成較小區塊的評估。  您接著可以跨越多個評量 （在本文稍後執行評量，請參閱節，） （請參閱區段在本文稍後執行評量），也就是容易維護多個 CSV 檔案。
 
-## <a name="add-databases-to-assess"></a>新增資料庫以評估
+請記住，根據物件和其複雜性的數目，評估可能需要更長的時間 （小時 +，） 區隔成易於管理的區塊評估容錯度加倍，因此。
 
-1.  選取 **加入來源**以開啟 連線 飛出視窗功能表。
+## <a name="running-a-scaled-assessment"></a>執行縮放的評定
+載入的模組目錄中的 PowerShell 模組，並建立詳細目錄之後，您需要開啟 PowerShell 並執行 dmaDataCollector 函式執行縮放的評估。
+ 
+  ![dmaDataCollector 函式清單](../dma/media//dma-assesssqlonprem/dma-dmaDataCollector-function-listing.png)
 
-2.  輸入 SQL server 執行個體名稱、 選擇驗證類型、 設定正確的連接屬性，然後按**Connect**。
+下表說明 dmaDataCollector 函式相關聯的參數。
 
-3.  選取的資料庫，以評估，然後選取**新增**。
+|參數  |描述
+|---------|---------|
+|**getServerListFrom** | 您的清查。 可能的值為**SqlServer**並**CSV**。 |
+|**伺服器名稱** | 清查時使用的 SQL Server 執行個體名稱**SqlServer**中**getServerListFrom**參數。 |
+|**databaseName** | 裝載清查資料表的資料庫。 |
+|**AssessmentName** | DMA 評估的名稱。 |
+|**TargetPlatform** | 您想要執行之評定目標型別。  可能的值為**AzureSQLDatabase**， **SQLServer2012**， **SQLServer2014**， **SQLServer2016**， **SQLServerLinux2017**，並**SQLServerWindows2017**。 |
+|**AuthenticationMethod** | 您想要評估的驗證方法連接到 SQL Server 目標。 可能的值為**SQLAuth**並**WindowsAuth**。 |
+|**OutputLocation** | 要儲存 JSON 評估輸出檔案目錄。 根據要評估的資料庫數目與在資料庫內的物件數目，評估可能需要更長的時間。 所有評定皆已都完成之後，就會寫入檔案。 |
 
-    > [!NOTE] 
-    > 您可以移除多個資料庫，方法是選取它們時按住 Shift 或 Ctrl 鍵，然後再按一下**移除來源**。 您也可以新增多個 SQL Server 執行個體的資料庫，使用**加入來源** 按鈕。
+如果有未預期的錯誤，將會終止命令視窗，取得由這個處理程序。  檢閱錯誤記錄檔，以判斷失敗的原因。
+ 
+  ![錯誤記錄檔位置](../dma/media//dma-assesssqlonprem/dma-error-log-file-location.png)
 
-4.  按一下 [**下一步]** 以開始評估。
+## <a name="consuming-the-assessment-json-file"></a>使用評估 JSON 檔案
 
-    ![新增來源，並啟動評量](../dma/media/SelectDatabase.png)
+完成您的評估之後，不過您現在已準備好資料匯入至 SQL Server 進行分析。 若要使用評估的 JSON 檔案，請開啟 PowerShell 並執行 dmaProcessor 函式。
+ 
+  ![dmaProcessor 函式清單](../dma/media//dma-assesssqlonprem/dma-dmaProcessor-function-listing.png)
 
-## <a name="view-results"></a>檢視結果
+下表說明 dmaProcessor 函式相關聯的參數。
 
-評估的持續時間取決於新增的資料庫數目和每個資料庫的結構描述的大小。 一旦可供使用，結果會顯示每個資料庫。
+|參數  |描述
+|---------|---------|
+|**processTo**  | 處理 JSON 檔案的位置。 可能的值為**SQLServer**並**AzureSQLDatabase**。 |
+|**伺服器名稱** | 處理資料的 SQL Server 執行個體。  如果您指定**AzureSQLDatabase** for **processTo**參數，則會包含只有 SQL Server 名稱 (不包括。 database.windows.net)。 系統會提示兩個登入的目標為 Azure SQL Database; 時第一個是您的 Azure 租用戶認證，而第二個是您的系統管理員登入 Azure SQL server。 |
+|**CreateDMAReporting** | 要建立來處理 JSON 檔案的暫存資料庫。  如果您已經指定此資料庫確實存在，而且您將此參數設定為其中一個，然後無法取得建立物件。  此參數可用於重新建立已卸除單一物件。 |
+|**CreateDataWarehouse** | 建立將用於 Power BI 報表資料倉儲。 |
+|**databaseName** | DMAReporting 資料庫的名稱。 |
+|**warehouseName** | 資料倉儲資料庫的名稱。 |
+|**jsonDirectory** | 包含 JSON 評估檔案的目錄。  如果在目錄中有多個 JSON 檔案，它們會逐一處理。 |
 
-1.  選取的資料庫，已完成評估，並切換**相容性問題**並**功能建議**使用切換器。
+DmaProcessor 函式應該只需要幾秒鐘的時間處理單一檔案。
 
-2.  檢閱跨所有相容性層級目標 SQL Server 版本支援您在選取的相容性問題**選項**頁面。
+## <a name="loading-the-data-warehouse"></a>正在載入資料倉儲
+DmaProcessor 已完成處理評估檔案之後，資料會載入 DMAReporting 資料庫 ReportData 資料表中。 此時，您需要載入資料倉儲。
 
-您可以藉由分析受影響的物件，其詳細資料，並可能識別在每個問題的修正檢閱相容性問題**重大變更**，**行為變更**，和**已淘汰的功能**。
+1. 您可以使用 LoadWarehouse 指令碼來填入維度中的任何遺漏值。
 
-![檢視評估結果](../dma/media/ReviewResults.png)
+    指令碼會在 DMAReporting 資料庫採取 ReportData 資料表中的資料，並將其載入至倉儲的資料。  如果此載入程序期間有任何錯誤，則可能遺漏的項目維度資料表中的結果。
 
-同樣地，您可以檢閱跨功能建議**效能**，**儲存體**，並**安全性**區域。
+2. 載入資料倉儲。
+ 
+      ![載入的 LoadWarehouse 內容](../dma/media//dma-assesssqlonprem/dma-LoadWarehouse-loaded.png)
 
-功能建議涵蓋各種不同的功能，例如記憶體內部 OLTP 和資料行存放區、 Stretch Database、 Always Encrypted、 動態資料遮罩和透明資料加密。
+## <a name="set-your-database-owners"></a>設定您的資料庫擁有者
+雖然並非必要項目，以取得最大價值的報表，建議您設定資料庫擁有者**dimDBOwner**維度，然後再更新**DBOwnerKey**在**FactAssessment**資料表。  遵循此程序，可讓配量和篩選特定的資料庫擁有者為基礎的 Power BI 報表。
 
-![檢視功能建議](../dma/media/FeatureRecommendations.png)
+您也可以使用 LoadWarehouse 指令碼，以提供基本的 TSQL 陳述式，為您設定資料庫擁有者。
 
-針對 Azure SQL Database，評估會提供阻礙移轉的問題和功能同位問題。 選取特定的選項來檢閱這兩種類別的結果。
+  ![LoadWarehouse 設定擁有者](../dma/media//dma-assesssqlonprem/dma-LoadWarehouse-set-owners.png)
 
-- **SQL Server 功能同位**類別提供一組完整的建議，Azure，以及補救步驟中可用的替代方法。 它可協助您規劃在移轉專案中的這項工作。
+## <a name="dma-reports"></a>DMA 報表
 
-  ![檢視 SQL Server 功能同位資訊](../dma/media/SQLFeatureParity.png)
+1. 在 Power BI Desktop 中開啟 DMA 報表 Power BI 的範本。
+2. 輸入伺服器的詳細資料，以指向您**DMAWarehouse**資料庫，然後按**負載**。
 
-- **相容性問題**類別提供封鎖在內部部署 SQL Server 資料庫移轉至 Azure SQL database 的部分支援或不受支援的功能。 然後，它會提供建議來協助您解決這些問題。
+    > [!IMPORTANT]
+    > 不要按 Enter 以接受的值。
 
-  ![檢視相容性問題](../dma/media/CompatibilityIssues.png)
+      ![載入的 DMA 報表 Power BI 範本](../dma/media//dma-assesssqlonprem/dma-reports-powerbi-template-loaded.png)
 
-## <a name="export-results"></a>匯出結果
+   已重新整理報表中的資料之後**DMAWarehouse**資料庫中，您會看到類似下列的報表。
 
-所有資料庫都完成評估之後，請選取**將報表匯出**結果匯出至 JSON 檔案或 CSV 檔案。 您可以依您自己的方便分析資料。
+   ![DMAWarehouse 報表檢視](../dma/media//dma-assesssqlonprem/dma-DMAWarehouse-report.png)
 
-您可以同時執行多個評估，並開啟檢視這些評估的狀態**所有評定**頁面。
+   > [!TIP]
+   > 如果看不到您所預期的資料，請嘗試變更作用中的書籤。  如需詳細資訊，請參閱功能 > 一節。
+
+## <a name="working-with-dma-reports"></a>使用 DMA 報表
+若要使用 DMA 報表，使用交叉分析篩選器來篩選：
+- 執行個體名稱
+- 資料庫名稱
+- 小組名稱
+
+您也可以使用書籤，報表的內容之間切換：
+- 雲端評量
+- 在內部部署環境評量
+
+  ![DMA 報告書籤](../dma/media//dma-assesssqlonprem/dma-report-bookmarks.png)
+
+> [!NOTE]
+> 如果您只會執行 Azure SQL Database 評量，會填入僅雲端報告。 相反地，如果您只會執行內部評量，就會填入僅在內部部署報表。 不過，如果您執行 Azure 和內部評估，然後載入您的倉儲中的兩個評量，您可以切換報表雲端及內部 CTRL 按一下關聯的圖示。
+
+## <a name="reports-visuals"></a>報表視覺效果
+下列各節會顯示在 Power BI 報表中顯示的詳細資料。
+
+### <a name="readiness-"></a>整備 %
+
+  ![DMA 整備百分比](../dma/media//dma-assesssqlonprem/dma-readiness-percentage.png)
+
+此視覺效果會更新選取項目內容為基礎 (所有項目，執行個體，資料庫 [的倍數])。
+
+### <a name="readiness-count"></a>更新整備小計數
+
+  ![DMA 整備計數](../dma/media//dma-assesssqlonprem/dma-readiness-count.png)
+
+此視覺效果會顯示已準備好移轉還沒準備要移轉的資料庫數目的資料庫計數。
+
+### <a name="readiness-bucket"></a>整備貯體
+
+  ![DMA 整備貯體](../dma/media//dma-assesssqlonprem/dma-readiness-bucket.png)
+
+此視覺效果會顯示資料庫的下列整備貯體的明細：
+- 100%已準備好
+- 75 99%已準備好
+- 50 到 75%已準備好
+- 未就緒
+
+### <a name="issues-word-cloud"></a>問題 Word 雲端
+ 
+  ![DMA 問題 WordCloud](../dma/media//dma-assesssqlonprem/dma-issues-word-cloud.png)
+
+此視覺效果中選取項目內容顯示目前內發生的問題 (所有項目，執行個體，資料庫 [的倍數])。 越大這個字出現在畫面上，較大者該類別中的問題數目。 將滑鼠指標暫留文字會顯示該類別中所發生的問題數目。
+
+### <a name="database-readiness"></a>資料庫的整備程度
+
+  ![DMA 資料庫整備報表](../dma/media//dma-assesssqlonprem/dma-database-readiness-report.png)
+
+本節是報告，其中會顯示執行個體資料庫的完備性的主要部分。 此報表包含向下鑽研的階層：
+- InstanceDatabase
+- ChangeCategory
+- Title
+- ObjectType
+- ImpactedObjectName
+
+ ![DMA 資料庫整備報表向下鑽研](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown.png)
+
+此報表也可作為建立補救計劃報表的篩選器點。
+
+若要向下鑽研到補救計劃報表，以滑鼠右鍵按一下此圖中的資料點，指向**鑽研**，然後選取**補救計劃**。
+
+這項工作會篩選目前選取的鑽研選項的點為基礎的階層層級補救計劃報表。
+
+  ![DMA 資料庫整備報表向下鑽研篩選](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown-filtered.png)
+
+  ![DMA 補救計劃報表](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report.png)
+
+您也可以使用它自己建置自訂的補救方案修復計劃報表，使用中的篩選條件**視覺效果篩選**刀鋒視窗。
+ 
+  ![DMA 補救計劃的報表篩選選項](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report-filter-options.png)
+
+### <a name="script-disclaimer"></a>指令碼免責聲明
+*在本文中提供的範例指令碼不受任何 Microsoft 標準支援計畫或服務。所有的指令碼是現狀提供，不含任何種類的擔保。Microsoft 同時否認所有默示的擔保，包括但不限於任何默示之瑕疵擔保適售性或適合某特定用途。因使用或展示的範例指令碼和文件的風險由使用者承擔。在任何情況 Microsoft、 其作者或任何其他參與建立、 生產環境或傳遞的指令碼的人應該對於任何損害賠償責任運作 （包括但不限於，商業利潤、 營業中斷、 損失的損害嗎商務資訊或其他金錢損失） 因使用或無法使用的範例指令碼或文件，即使 Microsoft 已獲知該等損害之可能性。搜尋權限，才能在其他站台/存放庫/部落格上，這些指令碼會重新張貼。*

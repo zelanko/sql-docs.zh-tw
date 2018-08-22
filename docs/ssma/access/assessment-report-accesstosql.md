@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a268b123663b213f3702dde24eba905e38bf1ac
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0881a10fa739b6a6539c12af6f29c78934c315a9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980001"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392032"
 ---
 # <a name="assessment-report-accesstosql"></a>評定報告 (AccessToSQL)
-評定報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql_md.md)]語法，也可以幫助您評估複雜度和成本的移轉專案。  
+評定報表視窗中顯示的資料庫物件的轉換結果[!INCLUDE[tsql](../../includes/tsql-md.md)]語法，也可以幫助您評估複雜度和成本的移轉專案。  
   
 若要建立的評估報告，將來源中繼資料總管 中，選取物件上按一下滑鼠右鍵**資料庫**，然後選取**建立報表**。 您也會自動顯示這份報告之後您將結構描述的轉換。 不過，報表名稱將會轉換報告。 如需詳細資訊，請參閱 <<c0> [ 專案設定 (GUI) （SSMA 常見）](http://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)。  
   

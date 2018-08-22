@@ -1,5 +1,5 @@
 ---
-title: 安裝 SQL Server 移轉小幫手存取 (AccessToSQL) |Microsoft 文件
+title: 安裝 SQL Server Migration Assistant for Access (AccessToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -29,73 +29,73 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 44df200b0b3f24ddcac48e42bfcc33df1b4a2a70
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dacd6634e57043ca53dfceb9bf3d793b35c90a47
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773664"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393393"
 ---
-# <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server 移轉小幫手存取 (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 移轉小幫手 (SSMA) 的存取使用精靈來安裝 Windows Installer 為基礎。 本主題會提供通往 SSMA，最新版本的安裝必要條件的相關資訊和安裝、 授權、 解除安裝與升級 SSMA 的指示。  
+# <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>安裝 SQL Server Migration Assistant for Access (AccessToSQL)
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 移轉小幫手 (SSMA) 的存取使用精靈來安裝 Windows Installer 為基礎。 本主題提供有關安裝必要條件的資訊 SSMA，最新版本的連結和安裝、 授權、 解除安裝和升級 SSMA 的指示。  
   
-## <a name="prerequisites"></a>必要條件  
-SSMA 安裝之前，請確定您的系統符合下列需求：  
+## <a name="prerequisites"></a>先決條件  
+安裝 SSMA 之前，請確定您的系統符合下列需求：  
   
 -   Windows 7 或更新版本，或 Windows Server 2008 或更新版本。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 4.0 版或更新版本。 .NET Framework 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]產品光碟片，而藉由使用中的資訊[Microsoft.NET 指南](https://docs.microsoft.com/dotnet/framework/)。
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework 4.0 版或更新版本。 .NET Framework 4.0 版位於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]產品光碟片，以及使用中的資訊[Microsoft.NET 指南](https://docs.microsoft.com/dotnet/framework/)。
   
--   存取和裝載目標執行個體的電腦上有足夠的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]SQL Azure 資料庫移轉到這裡您將會是資料庫物件和資料。  
+-   若要存取和裝載目標執行個體的電腦上有足夠的權限[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SQL Azure 資料庫移轉到這裡您將會是資料庫物件和資料。  
   
 -   Microsoft 資料存取物件 (DAO) 提供者版本 12.0 或 14.0。 您可以從 Microsoft Office 2010/2007年產品安裝 DAO 提供者，或從 Microsoft 網站下載。  
   
--   SQL Server Native Access Client (SNAC) 版本 10.5 和更新版本移轉至 SQL Azure。 您可以取得最新版的 SNAC 從[Microsoft® SQL Server® 2008 R2 功能套件](http://go.microsoft.com/fwlink/?LinkId=196940)  
+-   SQL Server Native Access Client (SNAC) 版本為 10.5 和更新版本移轉至 SQL Azure。 您可以取得最新版的 SNAC 從[Microsoft® SQL Server® 2008 R2 功能套件](http://go.microsoft.com/fwlink/?LinkId=196940)  
   
--   4 GB RAM （建議選項）。  
+-   4 GB 的 RAM （建議選項）。  
   
 ## <a name="installing-ssma"></a>安裝 SSMA  
-SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移轉小幫手的下載頁面](http://aka.ms/ssmaforaccess)。  
+SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Migration Assistant 的下載頁面](http://aka.ms/ssmaforaccess)。  
   
-下載最新版本之後，您必須先擷取中的安裝檔案，才能安裝 SSMA。
+下載最新版本之後，您必須先解壓縮安裝檔案，才能安裝 SSMA。
 
 > [!IMPORTANT]  
 > -   請安裝新版本之前，解除安裝所有舊版的 SSMA for Access。  
   
-**若要安裝 SSMA**  
+**安裝 SSMA**  
   
 1.  按兩下 SSMA for Access *n*.msi，其中*n*是組建編號。  
   
-2.  在 歡迎使用 頁面上，按一下 **下一步**。  
+2.  在 歡迎使用 頁面上，按一下**下一步**。  
   
-    如果您沒有安裝的必要條件，則會出現訊息，指出您必須先安裝必要的元件。 請確定已安裝所有先決條件，，然後再次執行安裝程式。  
+    如果您沒有安裝必要條件，則會出現訊息，指出您必須先安裝必要的元件。 請確定您已安裝所有必要條件，然後再次執行安裝程式。  
   
-3.  閱讀使用者授權合約。如果您同意，請選取**我接受合約**，然後按一下 **下一步**。  
+3.  閱讀使用者授權合約 」;如果您同意，請選取**我接受合約**，然後按一下**下一步**。  
   
-4.  在 選擇安裝類型 頁面上，按一下 **一般**。  
+4.  在 [選擇安裝類型] 頁面上，按一下**典型**。  
   
 5.  按一下 **[安裝]**。  
   
-預設安裝位置是 C:\Program Files\Microsoft SQL Server 移轉小幫手進行存取。  
+預設安裝位置是 C:\Program Files\Microsoft SQL Server Migration Assistant for Access。  
   
-## <a name="uninstalling-ssma-for-access"></a>解除安裝的 SSMA for Access  
-使用 [解除安裝 SSMA**新增或移除程式**控制台] 中。 請注意，解除安裝程式不會刪除 SSMA 專案檔或記錄檔。  
+## <a name="uninstalling-ssma-for-access"></a>解除安裝 SSMA for Access  
+使用解除安裝 SSMA**新增或移除程式**控制項台中。 請注意，解除安裝程式不會刪除 SSMA 專案檔或記錄檔。  
   
 **若要解除安裝 SSMA**  
   
-1.  按一下**啟動**，按一下 **控制台**，然後按一下 **新增或移除程式**。  
+1.  按一下 **開始**，按一下**控制台**，然後按一下**新增或移除程式**。  
   
-2.  選取**Microsoft SQL Server 移轉小幫手存取**，然後按一下 **移除**。  
+2.  選取  **Microsoft SQL Server Migration Assistant for Access**，然後按一下**移除**。  
   
-## <a name="upgrading-to-a-later-version"></a>升級至更新版本  
-如果您想要升級至更新版本的 SSMA for Access，您必須先解除安裝 SSMA for Access，然後再安裝較新版本。 遵循指示解除安裝的 SSMA 存取區段，以完成此程序。  
+## <a name="upgrading-to-a-later-version"></a>升級至較新版本  
+如果您想要升級至更新版本的 SSMA for Access，您必須先解除安裝 SSMA for Access，然後再安裝較新的版本。 解除安裝的 SSMA 中遵循以完成此程序的 [存取] 區段。  
   
-如果您開啟較早版本的 SSMA for Access 中建立的專案，SSMA 會詢問您想要將專案轉換成較新版本。 按一下**是**使用較新版本的 SSMA 專案。  
+如果您開啟較早版本的 SSMA for Access 中建立的專案時，會要求 SSMA，如果您想要將專案轉換成較新版本。 按一下 **是**才能使用較新版本的 SSMA 中的專案。  
   
 ## <a name="see-also"></a>另請參閱  
-[準備移轉的 Access 資料庫](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[連結到 SQL Server 存取應用程式](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
+[準備移轉的 Access 資料庫](preparing-access-databases-for-migration-accesstosql.md)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[連結到 SQL Server 的 Access 應用程式](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   

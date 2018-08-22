@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,23 +24,23 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caf89d0013d95a4fc27937e854eb7a5af28017ef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7789a1f591b95ec5442697c5bfa6c7d730ba4faf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424787"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394079"
 ---
 # <a name="using-user-defined-types"></a>使用使用者定義型別
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入了使用者定義型別 (UDT)。 Udt 會擴充 SQL 類型系統，可讓您將物件和自訂資料結構中的儲存[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]資料庫。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 UDT 是使用會產生可驗證程式碼之 .NET Common Language Runtime (CLR) 支援的任何語言所定義。 這包括 Microsoft Visual C#<sup>®</sup>和 Visual Basic<sup>®</sup> .NET。 資料會公開為 .NET 類別或結構的欄位及屬性，並且其行為是由類別或結構的方法來定義。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 導入了使用者定義型別 (UDT)。 UDT 會擴充 SQL 類型系統，其方式是允許您將物件和自訂資料結構儲存在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 資料庫中。 UDT 可以包含多個資料類型並可以具有行為，使其有別於由單一 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 系統資料類型組成的傳統別名資料類型。 UDT 是使用會產生可驗證程式碼之 .NET Common Language Runtime (CLR) 支援的任何語言所定義。 這包括 Microsoft Visual C#<sup>®</sup> 和 Visual Basic<sup>®</sup> .NET。 資料會公開為 .NET 類別或結構的欄位及屬性，並且其行為是由類別或結構的方法來定義。  
   
- UDT 可用做資料表的資料行定義中的變數[!INCLUDE[tsql](../../../includes/tsql-md.md)]批次，或做為引數的[!INCLUDE[tsql](../../../includes/tsql-md.md)]函式或預存程序。  
+ UDT 可用作資料表的資料行定義、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 批次中的變數，或是 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 函式或預存程序的引數。  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>SQL Server Native Client OLE DB 提供者  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援使用 Udt 當做具有中繼資料資訊，可讓您管理 Udt 當做物件的二進位型別。 UDT 資料行公開為 DBTYPE_UDT，和它們的中繼資料透過核心 OLE DB 介面公開**IColumnRowset**，和新[ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)介面。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者支援使用 Udt 當做具有中繼資料資訊，可讓您管理 Udt 當做物件的二進位型別。 UDT 資料行會公開為 DBTYPE_UDT，而且它們的中繼資料會透過核心 OLE DB 介面 **IColumnRowset** 和新的 [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) 介面來公開。  
   
 > [!NOTE]  
->  **Irowsetfind:: Findnextrow**方法不適用於 UDT 資料類型。 如果將 UDT 當做搜尋資料行類型使用，就會傳回 DB_E_BADCOMPAREOP。  
+>  **IRowsetFind::FindNextRow** 方法無法與 UDT 資料類型一起運作。 如果將 UDT 當做搜尋資料行類型使用，就會傳回 DB_E_BADCOMPAREOP。  
   
 ### <a name="data-bindings-and-coercions"></a>資料繫結和強制型轉  
  下表描述當搭配 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT 使用列出的資料類型時，所發生的繫結和強制型轉。 UDT 資料行透過公開[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]DBTYPE_UDT Native Client OLE DB 提供者。 您可以透過適當的結構描述資料列集來取得中繼資料，好讓您可以將自己定義的類型當做物件來管理。  
@@ -49,22 +49,22 @@ ms.locfileid: "37424787"
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|支援<sup>6</sup>|錯誤<sup>1</sup>|支援<sup>6</sup>|錯誤<sup>5</sup>|  
 |DBTYPE_BYTES|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|支援<sup>3,6</sup>|N/A<sup>2</sup>|支援<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|支援<sup>3,6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|支援<sup>3,6</sup>|N/A<sup>2</sup>|支援<sup>4,6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_WSTR|支援<sup>3、6</sup>|N/A<sup>2</sup>|支援<sup>4、6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_BSTR|支援<sup>3、6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_STR|支援<sup>3、6</sup>|N/A<sup>2</sup>|支援<sup>4、6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|不支援|N/A<sup>2</sup>|不支援|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3,6</sup>|N/A<sup>2</sup>|不適用|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|支援<sup>6</sup>|N/A<sup>2</sup>|支援<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|支援<sup>3、6</sup>|N/A<sup>2</sup>|不適用|N/A<sup>2</sup>|  
   
- <sup>1</sup>如果具有指定了 DBTYPE_UDT 以外的伺服器類型**icommandwithparameters:: Setparameterinfo**而且存取子類型為 DBTYPE_UDT，執行陳述式時，就會發生錯誤 (DB_E_ERRORSOCCURRED;參數狀態為 DBSTATUS_E_BADACCESSOR）。 否則資料會傳給伺服器，但是伺服器會傳回一則錯誤，指示從 UDT 到參數的資料類型之間沒有隱含轉換。  
+ <sup>1</sup>如果使用 **ICommandWithParameters::SetParameterInfo** 指定 DBTYPE_UDT 以外的伺服器類型，而且存取子類型為 DBTYPE_UDT，則當執行陳述式時會發生錯誤 (DB_E_ERRORSOCCURRED；參數狀態為 DBSTATUS_E_BADACCESSOR)。 否則資料會傳給伺服器，但是伺服器會傳回一則錯誤，指示從 UDT 到參數的資料類型之間沒有隱含轉換。  
   
  <sup>2</sup>超出本主題的範圍。  
   
- <sup>3</sup>十六進位字串的資料轉換成二進位資料，就會發生。  
+ <sup>3</sup> 發生從十六進位字串轉換為二進位資料的資料轉換。  
   
- <sup>4</sup>發生從十六進位字串的二進位資料轉換的資料轉換。  
+ <sup>4</sup> 發生從二進位資料轉換為十六進位字串的資料轉換。  
   
- <sup>5</sup>可能發生驗證建立存取子或提取時，錯誤為 DB_E_ERRORSOCCURRED，繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
+ <sup>5</sup>建立存取子或提取時可能發生驗證，錯誤為 DB_E_ERRORSOCCURRED，繫結狀態設定為 DBBINDSTATUS_UNSUPPORTEDCONVERSION。  
   
  <sup>6</sup>可能會使用 BY_REF。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "37424787"
  DBTYPE_UDT 也可以轉換成 DBTYPE_EMPTY 和 DBTYPE_NULL，但是 DBTYPE_NULL 和 DBTYPE_EMPTY 無法轉換成 DBTYPE_UDT。 這與 DBTYPE_BYTES 一致。  
   
 > [!NOTE]  
->  新介面會用來做為參數，處理 Udt **ISSCommandWithParameters**，該項則繼承自**ICommandWithParameters**。 應用程式必須使用這個介面，至少為 UDT 參數設定 DBPROPSET_SQLSERVERPARAMETER 屬性集的 SSPROP_PARAM_UDT_NAME。 如果不這麼做， **icommand:: Execute**會傳回 DB_E_ERRORSOCCURRED。 本主題稍後將描述這個介面和屬性集。  
+>  可使用新的介面將 UDT 當作參數 **ISSCommandWithParameters** 處理 (該參數繼承自 **ICommandWithParameters**)。 應用程式必須使用這個介面，至少為 UDT 參數設定 DBPROPSET_SQLSERVERPARAMETER 屬性集的 SSPROP_PARAM_UDT_NAME。 如果未進行這項處理，**ICommand::Execute** 將會傳回 DB_E_ERRORSOCCURRED。 本主題稍後將描述這個介面和屬性集。  
   
- 如果使用者定義型別插入不夠大，無法保留其所有的資料，資料行**icommand:: Execute**會傳回 S_OK，而且狀態為 DB_E_ERRORSOCCURRED。  
+ 如果使用者定義型別插入資料行中，而該資料行不夠大，因此無法保存它的所有資料，則 **ICommand::Execute** 將會傳回 S_OK，而且狀態為 DB_E_ERRORSOCCURRED。  
   
- OLE DB 核心服務所提供的資料轉換 (**IDataConvert**) 並不適用於 DBTYPE_UDT。 不支援其他任何繫結。  
+ OLE DB 核心服務 (**IDataConvert**) 提供的資料轉換不適用於 DBTYPE_UDT。 不支援其他任何繫結。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 資料列集的加入和變更  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端會加入新的值，或變更許多核心 OLE DB 結構描述資料列。  
@@ -174,10 +174,10 @@ ms.locfileid: "37424787"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 原生用戶端會加入新的值，或變更到許多核心 OLE DB 介面。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 介面  
- 若要透過 OLE DB 支援 Udt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會實作一些變更，包括新增**ISSCommandWithParameters**介面。 這個新介面繼承自核心的 OLE DB 介面**ICommandWithParameters**。 除了繼承自的三種方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，並**SetParameterInfo**;**ISSCommandWithParameters**提供**GetParameterProperties**並**SetParameterProperties**用來處理伺服器特定的方法資料類型。  
+ 若要透過 OLE DB 支援 Udt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 會實作一些變更，包括新增**ISSCommandWithParameters**介面。 這個新的介面繼承自核心的 OLE DB 介面 **ICommandWithParameters**。 除了繼承自的三種方法**ICommandWithParameters**;**GetParameterInfo**， **MapParameterNames**，並**SetParameterInfo**;**ISSCommandWithParameters**提供**GetParameterProperties**並**SetParameterProperties**用來處理伺服器特定的方法資料類型。  
   
 > [!NOTE]  
->  **ISSCommandWithParameters**介面也會利用新的 ssparamprops 結構。  
+>  **ISSCommandWithParameters** 介面也會使用新的 SSPARAMPROPS 結構。  
   
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 介面  
  除了**ISSCommandWithParameters**介面[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端也會將新的值加入至從呼叫傳回的資料列集**icolumnsrowset:: Getcolumnrowset**方法其中包括下列項目。  

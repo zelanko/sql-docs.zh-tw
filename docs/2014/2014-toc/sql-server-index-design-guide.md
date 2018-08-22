@@ -13,19 +13,19 @@ caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155419"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393154"
 ---
 # SQL Server 索引設計指南
   設計不良的索引與不足的索引是資料庫應用程式瓶頸的主要原因。 設計有效的索引是達到良好資料庫和應用程式效能最重要的一點。 本 SQL Server 索引設計指南包含的資訊和最佳作法，可以協助您設計符合應用程式需求的有效索引。  
   
 **適用於**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]透過[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]除非另有指示。  
   
- 本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱 [Index Types](http://msdn.microsoft.com/library/ms175049.aspx)(索引類型)。  
+ 本指南假設讀者對 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]中提供的索引類型有概略的認識。 如需索引類型的一般描述，請參閱 [Index Types](../relational-databases/indexes/indexes.md)(索引類型)。  
   
 ##  <a name="Top"></a> 本指南中  
  [索引設計基本概念](#Basics)  

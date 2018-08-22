@@ -5,8 +5,7 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
@@ -14,12 +13,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef26babe0f79bf3343c26748c560b6a7a41ba164
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231089"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392093"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>記憶體最佳化資料表中的資料表和資料列大小
   記憶體最佳化的表格由資料列與索引 (包含資料列的指標) 的集合組成。 在記憶體最佳化的資料表中，資料列的長度不得超過 8,060 個位元組。 了解記憶體最佳化的資料表大小將有助於您了解電腦是否有足夠的記憶體。  

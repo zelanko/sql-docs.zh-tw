@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobhistory (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_jobhistory (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e001e9e0ea0dd7dfdbe64a788db465125b04e414
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b903b6e0494e94da555750cb94a3c4cd0c0c41c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261817"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394093"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,39 +59,39 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 ## <a name="arguments"></a>引數  
  [ **@job_id=** ] *job_id*  
- 作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
+ 作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
  [ **@job_name=** ] **'***job_name***'**  
- 作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
+ 作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
  [ **@step_id=** ] *step_id*  
- 步驟識別碼。 *step_id*是**int**，預設值是 NULL。  
+ 步驟識別碼。 *step_id*已**int**，預設值是 NULL。  
   
  [ **@sql_message_id=** ] *sql_message_id*  
- 當執行作業時，Microsoft SQL Server 傳回之錯誤訊息的識別碼。 *sql_message_id*是**int**，預設值是 NULL。  
+ 當執行作業時，Microsoft SQL Server 傳回之錯誤訊息的識別碼。 *sql_message_id*已**int**，預設值是 NULL。  
   
  [ **@sql_severity=** ] *sql_severity*  
- 當執行作業時，SQL Server 傳回之錯誤訊息的嚴重性層級。 *sql_severity*是**int**，預設值是 NULL。  
+ 當執行作業時，SQL Server 傳回之錯誤訊息的嚴重性層級。 *sql_severity*已**int**，預設值是 NULL。  
   
  [ **@start_run_date=** ] *start_run_date*  
- 作業的啟動日期。 *start_run_date*是**int**，預設值是 NULL。 *start_run_date*必須以格式輸入的 YYYYMMDD，其中 YYYY 是四個字元的年份，MM 是兩字元的月份名稱，而 DD 是兩字元的日期名稱。  
+ 作業的啟動日期。 *start_run_date*已**int**，預設值是 NULL。 *start_run_date*必須以格式輸入的 YYYYMMDD，其中 YYYY 是四個字元的年份，MM 是兩字元的月份名稱，而 DD 是兩字元的日期名稱。  
   
  [ **@end_run_date=** ] *end_run_date*  
- 作業的完成日期。 *end_run_date*是**int**，預設值是 NULL。 *end_run_date*必須以格式輸入的 YYYYMMDD，其中 YYYY 是四位數年份，MM 是兩字元的月份名稱，而 DD 是兩字元的日期名稱。  
+ 作業的完成日期。 *end_run_date*已**int**，預設值是 NULL。 *end_run_date*必須以格式輸入的 YYYYMMDD，其中 YYYY 是四位數年份，MM 是兩字元的月份名稱，而 DD 是兩字元的日期名稱。  
   
  [ **@start_run_time=** ] *start_run_time*  
- 作業的啟動時間。 *start_run_time*是**int**，預設值是 NULL。 *start_run_time*必須在表單中 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的當日秒鐘。  
+ 作業的啟動時間。 *start_run_time*已**int**，預設值是 NULL。 *start_run_time*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
   
  [ **@end_run_time=** ] *end_run_time*  
- 作業完成執行的時間。 *end_run_time*是**int**，預設值是 NULL。 *end_run_time*必須在表單中 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的當日秒鐘。  
+ 作業完成執行的時間。 *end_run_time*已**int**，預設值是 NULL。 *end_run_time*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
   
  [  **@minimum_run_duration=** ] *minimum_run_duration*  
- 完成作業的最小時間長度。 *minimum_run_duration*是**int**，預設值是 NULL。 *minimum_run_duration*必須在表單中 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的當日秒鐘。  
+ 完成作業的最小時間長度。 *minimum_run_duration*已**int**，預設值是 NULL。 *minimum_run_duration*必須形式 hhmmss 格式輸入，其中 HH 是兩字元的當日小時，MM 是兩個字元當日分鐘，SS 是兩個字元的第二天。  
   
  [  **@run_status=** ] *run_status*  
- 作業的執行狀態。 *run_status*是**int**，預設值是 NULL，而且可以是下列值之一。  
+ 作業的執行狀態。 *run_status*已**int**，預設值是 NULL，而且可以是下列值之一。  
   
-|Value|描述|  
+|值|描述|  
 |-----------|-----------------|  
 |**0**|失敗|  
 |**1**|成功|  
@@ -101,29 +101,29 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**5**|Unknown|  
   
  [  **@minimum_retries=** ] *minimum_retries*  
- 作業應該嘗試重新執行的最小次數。 *minimum_retries*是**int**，預設值是 NULL。  
+ 作業應該嘗試重新執行的最小次數。 *minimum_retries*已**int**，預設值是 NULL。  
   
  [  **@oldest_first=** ] *oldest_first*  
- 這是指是否先提供最舊作業的輸出結果。 *oldest_first*是**int**，預設值是**0**，表示先提供最新的作業。 **1**先提供最舊的作業。  
+ 這是指是否先提供最舊作業的輸出結果。 *oldest_first*已**int**，預設值是**0**，表示先提供最新的作業。 **1**先提供最舊的作業。  
   
  [ **@server=** ] **'***server***'**  
- 執行作業的伺服器名稱。 *伺服器*是**nvarchar （30)**，預設值是 NULL。  
+ 執行作業的伺服器名稱。 *伺服器*已**nvarchar(30)**，預設值是 NULL。  
   
  [  **@mode=** ] **'***模式***'**  
- 為 SQL Server 是否會列印結果集中的所有資料行 (**完整**) 或資料行的摘要。 *模式*是**varchar(7)**，預設值是**摘要**。  
+ 是 SQL Server 是否會列印結果集中的所有資料行 (**完整**) 或資料行的摘要。 *模式*已**varchar(7)**，預設值是**摘要**。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
   
 ## <a name="result-sets"></a>結果集  
- 實際的資料行清單取決於值*模式*。 最一組完整的資料行如下所示，而且會傳回當*模式*已滿。  
+ 實際的資料行清單取決於 windows 7*模式*。 一組最完整的資料行如下所示和時，會傳回*模式*為 FULL。  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|記錄項目識別碼。|  
 |**job_id**|**uniqueidentifier**|作業識別碼。|  
 |**job_name**|**sysname**|作業名稱。|  
-|**step_id**|**int**|步驟識別碼 (將**0**作業記錄的)。|  
+|**step_id**|**int**|步驟識別碼 (將會**0**工作歷程記錄)。|  
 |**step_name**|**sysname**|步驟名稱 (作業記錄的這個項目是 NULL)。|  
 |**sql_message_id**|**int**|這是執行命令時，[!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟所遇到的最新 [!INCLUDE[tsql](../../includes/tsql-md.md)] 錯誤號碼。|  
 |**sql_severity**|**int**|這是執行命令時，[!INCLUDE[tsql](../../includes/tsql-md.md)] 步驟所遇到的最高 [!INCLUDE[tsql](../../includes/tsql-md.md)] 錯誤嚴重性。|  
@@ -136,7 +136,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar(20)**|這項作業的相關網路訊息所送往的操作員 (步驟記錄的這個項目是 NULL)。|  
 |**operator_paged**|**nvarchar(20)**|這項作業的相關呼叫所送往的操作員 (步驟記錄的這個項目是 NULL)。|  
 |**retries_attempted**|**int**|步驟重試的次數 (作業記錄的這個項目一律是 0)。|  
-|**伺服器**|**nvarchar(30)**|執行步驟或作業的伺服器。 一定是 (**本機**)。|  
+|**伺服器**|**nvarchar(30)**|執行步驟或作業的伺服器。 一律是 (**本機**)。|  
   
 ## <a name="remarks"></a>備註  
  **sp_help_jobhistory**傳回具有指定的排程工作的歷程記錄報表。 如果未指定任何參數，報表會包含所有已排程作業的記錄。  
@@ -150,7 +150,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  成員**SQLAgentUserRole**資料庫角色只能檢視他們擁有之作業的歷程記錄。  
   

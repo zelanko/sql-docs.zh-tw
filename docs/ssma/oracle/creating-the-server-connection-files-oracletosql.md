@@ -1,5 +1,5 @@
 ---
-title: 建立伺服器連接檔案 (OracleToSQL) |Microsoft 文件
+title: 建立伺服器連線檔案 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776954"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394439"
 ---
-# <a name="creating-the-server-connection-files-oracletosql"></a>建立伺服器連接檔案 (OracleToSQL)
-指令碼檔案的 [伺服器] 區段中或在不同的伺服器連接檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果指令碼檔案和伺服器連接檔案中存在相同的伺服器識別碼，則會被視為指令碼檔案中的伺服器定義。  
+# <a name="creating-the-server-connection-files-oracletosql"></a>建立伺服器連線檔案 (OracleToSQL)
+伺服器一節的指令碼檔案或不同的伺服器連線檔案中，可以指定伺服器的資訊。 伺服器連接檔案的命令列參數即`-c <serverconnectionfile>`。 如果存在於指令碼檔案與伺服器連線檔案相同的伺服器識別碼，則會視為在指令碼檔案中的伺服器定義。  
   
 **範例 1:**  
   
@@ -106,8 +106,8 @@ ms.locfileid: "34776954"
 ```  
   
 ## <a name="next-step"></a>下一個步驟  
-在操作主控台的下一個步驟是[執行 SSMA 主控台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+操作主控台的下一個步驟是[執行 SSMA 主控台&#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
-[執行 SSMA 主控台](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[執行 SSMA 主控台](executing-the-ssma-console-oracletosql.md)  
   

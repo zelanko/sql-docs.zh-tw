@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1f156bee0da5d94043fa0ab04e5b74acdcd7f4f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3218596e2f627eb8f330dbb161e178ffbac16648
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256367"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392277"
 ---
 # <a name="native-compilation-advisor"></a>原生編譯 Advisor
   交易效能報告工具 (請參閱[判斷是否將資料表或預存程序應該移植至記憶體中 OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 會通知您，哪些解譯的預存程序，在您的資料庫中會有匯出使用原生編譯。 識別您要匯出使用原生編譯的預存程序之後，即可使用原生編譯 Advisor 協助您將解譯的預存程序移轉到原生編譯。 如需原生編譯的預存程序的詳細資訊，請參閱 [原生編譯的預存程序](natively-compiled-stored-procedures.md)。  

@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeddab237776e94c2d954d3019beac5b52726723
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d81eee206ee511c3004d4306a373e527a572901e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156259"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393612"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>檢視或變更資料庫的復原模式 (SQL Server)
   此主題描述如何使用 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 或 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，在 [!INCLUDE[tsql](../../includes/tsql-md.md)]中檢視或變更資料庫的復原模式。 「復原模式」是一項資料庫屬性，可控制交易的記錄方式、是否需要 (及允許) 備份交易記錄，以及可用的還原作業類型。 復原模式共有三種：簡單、完整和大量記錄。 一般而言，資料庫會使用完整復原模式或簡單復原模式。 資料庫可以隨時切換到另一個復原模式。 **model** 資料庫會設定新資料庫的預設復原模式。  
@@ -161,7 +161,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedContent"></a> 相關內容  
   
--   [資料庫維護計畫](http://msdn.microsoft.com/library/ms187658.aspx) (在《 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 線上叢書》中)  
+-   [資料庫維護計畫](../maintenance-plans/maintenance-plans.md) (在《 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 線上叢書》中)  
   
 ## <a name="see-also"></a>另請參閱  
  [復原模式 &#40;SQL Server&#41;](recovery-models-sql-server.md)   

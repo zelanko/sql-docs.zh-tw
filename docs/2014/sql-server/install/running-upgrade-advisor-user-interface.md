@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 881075f22468cb384aa3c3b5a4677a6e0d70bdf7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216588"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393796"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>執行 Upgrade Advisor (使用者介面)
   在升級規劃期間，您可以執行 Upgrade Advisor 來分析本機或遠端元件。 Upgrade Advisor 會針對分析的每個元件和執行個體產生一份報表。  
   
 > [!IMPORTANT]  
->  Upgrade Advisor 不會分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的遠端執行個體。 若要分析 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 執行個體，您必須將 Upgrade Advisor 安裝在已安裝 [!INCLUDE[ssRS](../../includes/ssrs-md.md)] 的電腦上。  
+>  Upgrade Advisor 不會分析 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 的遠端執行個體。 若要分析 [!INCLUDE[ssRS](../../includes/ssrs.md)] 執行個體，您必須將 Upgrade Advisor 安裝在已安裝 [!INCLUDE[ssRS](../../includes/ssrs.md)] 的電腦上。  
 >   
 >  若要分析[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Integration Services，您必須擁有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]安裝和[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]安裝在同一部電腦上。  
   

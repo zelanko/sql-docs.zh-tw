@@ -19,12 +19,12 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 112fd1263b0dce321093a271964173e924c703d2
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194878"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392259"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署傳遞延伸模組
   傳遞延伸模組以 XML 組態檔的形式提供其組態資訊。 XML 檔案符合為傳遞延伸模組定義的 XML 結構描述。 傳遞延伸模組提供設定和修改組態檔的基礎結構。  
@@ -91,7 +91,7 @@ ms.locfileid: "37194878"
     </CodeGroup>  
     ```  
   
-     URL 成員資格僅是您可以針對傳遞延伸模組所選擇的許多成員資格條件的其中一個。 如需 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 程式碼存取安全性的詳細資訊，請參閱[安全開發 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
+     URL 成員資格僅是您可以針對傳遞延伸模組所選擇的許多成員資格條件的其中一個。 如需 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 程式碼存取安全性的詳細資訊，請參閱[安全開發 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>將延伸模組部署到報表管理員  
  如果您的傳遞延伸模組實作 <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl> 介面，就可以將傳遞延伸模組與報表管理員的 [訂閱] 頁面搭配使用。 若要讓訂閱使用者介面可供使用，需要將延伸模組部署到報表管理員。  
@@ -138,7 +138,7 @@ ms.locfileid: "37194878"
     </CodeGroup>  
     ```  
   
-     URL 成員資格僅是您可以針對傳遞延伸模組所選擇的許多成員資格條件的其中一個。 如需 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 程式碼存取安全性的詳細資訊，請參閱[安全開發 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
+     URL 成員資格僅是您可以針對傳遞延伸模組所選擇的許多成員資格條件的其中一個。 如需 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 程式碼存取安全性的詳細資訊，請參閱[安全開發 &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="verifying-the-deployment"></a>確認部署  
  您可以使用 Web 服務 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 方法來確認傳遞延伸模組是否已成功部署到報表伺服器。 您也可以開啟報表管理員，然後確認延伸模組是否包含在訂閱的可用傳遞延伸模組清單。 如需有關報表管理員和訂用帳戶的詳細資訊，請參閱 <<c0> [ 訂閱與傳遞&#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md)。</c0>  

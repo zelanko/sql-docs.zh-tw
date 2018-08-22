@@ -1,5 +1,5 @@
 ---
-title: EntityType 元素 (CSDLBI) |Microsoft 文件
+title: EntityType 元素 (CSDLBI) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,30 +9,30 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 60d1b91ab417343a9dffe7e83520ebcd868c5d6d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8fe1635c9360f2f00dc98348d64d2080f93332bf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044205"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392113"
 ---
 # <a name="entitytype-element-csdlbi"></a>EntityType 元素 (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  **EntityType**元素是複雜類型表示的高層級的實體，例如客戶或訂單，資料模型中的結構。 **Bi: EntityType**項目延伸的定義[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)用於[實體資料架構](http://msdn.microsoft.com/library/bb399567.aspx)。  
+  **EntityType**元素是複雜類型，表示高階的實體，例如客戶或訂單，在資料模型中的結構。 **Bi: EntityType**項目延伸的定義[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)用於[實體資料架構](/dotnet/framework/data/adonet/ef/overview)。  
   
  系統必須針對資料模型中包含的每個實體指定 EntityType 元素。 EntityType 的子元素會描述資料表中的資料行和量值。 資料表之間的關聯性都會納入**EntityContainer**。  
   
 ## <a name="elements-and-attributes"></a>元素和屬性  
  下表列出的項目和屬性，定義**EntityType**項目。 另請參閱適用於屬性[EntityType](http://msdn.microsoft.com/library/bb399206.aspx)項目。  
   
-|[屬性]|是否必要|Description|  
+|名稱|是否必要|描述|  
 |----------|-----------------|-----------------|  
 |目錄|否|字串，其中包含資料行中可能的資料類型。 此值衍生自資料模型中 DimensionAttributeTypeEnumType 的值。<br /><br /> 如果 DimensionAttributeTypeEnumType 的值為 "ExtendedType"，則 Contents 的值會衍生自 DimensionAttribute 的 ExtendedType 元素。 用戶端不需要回應這些值。|  
-|DefaultDetails|否|屬性參考的清單，代表資料表中的資料行集。<br /><br /> 請參閱[DefaultDetails 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md).|  
-|DefaultImage|否|包含說明實體之影像的資料行參考。<br /><br /> 在多維度模型中，此元素對應維度屬性上的二進位屬性。 如果此屬性存在，則元素必須只包含單獨一個 MemberRef 元素。<br /><br /> 請參閱[MemberRef 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DefaultMeasure|否|實體中量值的參考，應在對實體進行計算時用做預設值。 如果未指定，則預設值為 SUM。<br /><br /> 請參閱[MemberRef 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md).|  
-|DisplayKey|否|資料行或角色端的參考清單，此清單構成可唯一識別實體執行個體的強式識別碼。<br /><br /> 請參閱[DisplayKey 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md).|  
-|階層|否|模型中階層的清單。<br /><br /> 請參閱[Hierarchy 元素 & #40;CSDLBI & #41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md).|  
+|DefaultDetails|否|屬性參考的清單，代表資料表中的資料行集。<br /><br /> 請參閱[DefaultDetails 元素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/defaultdetails-element-csdlbi.md)。|  
+|DefaultImage|否|包含說明實體之影像的資料行參考。<br /><br /> 在多維度模型中，此元素對應維度屬性上的二進位屬性。 如果此屬性存在，則元素必須只包含單獨一個 MemberRef 元素。<br /><br /> 請參閱[MemberRef 元素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md)。|  
+|DefaultMeasure|否|實體中量值的參考，應在對實體進行計算時用做預設值。 如果未指定，則預設值為 SUM。<br /><br /> 請參閱[MemberRef 元素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/memberref-element-csdlbi.md)。|  
+|DisplayKey|否|資料行或角色端的參考清單，此清單構成可唯一識別實體執行個體的強式識別碼。<br /><br /> 請參閱[DisplayKey 元素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/displaykey-element-csdlbi.md)。|  
+|階層|否|模型中階層的清單。<br /><br /> 請參閱[Hierarchy 元素&#40;CSDLBI&#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/hierarchy-element-csdlbi.md)。|  
 |ReferenceName|是|可用於在 Data Analysis Expressions (DAX) 查詢中參考此實體的識別碼。<br /><br /> 如果此屬性不存在，則會使用實體的完整欄位名稱。|  
 |SortMembers|否|要排序的屬性清單。 SortDirection 屬性會指出次序為遞增或遞減。|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34044205"
   
  實體 (資料行) 的內容可以是下列任何值：  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |一般|未另行定義。|  
 |Time|代表時間週期的屬性，例如年數、半年數、季數、月數或日數。|  
@@ -121,6 +121,6 @@ ms.locfileid: "34044205"
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Csdl 的 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
+ [CSDL 之 BI 註解的技術參考](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md)  
   
   

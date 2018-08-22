@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303028"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392272"
 ---
 # <a name="thread-pool-properties"></a>執行緒集區屬性
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 為許多作業使用多執行緒處理，透過平行執行多個作業改善整體伺服器效能。 為了更有效率地管理執行緒， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 使用執行緒集區預先配置執行緒，以使下一個作業有可用的執行緒。  
@@ -279,9 +279,9 @@ ms.locfileid: "37303028"
 >  如需有關如何設定屬性的指示，請參閱＜ [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)＞。  
   
 ## <a name="see-also"></a>另請參閱  
- [關於處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [多個處理器](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [處理器群組](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [處理序和執行緒](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [多個處理器](/windows/desktop/ProcThread/multiple-processors)   
+ [處理器群組](/windows/desktop/ProcThread/processor-groups)   
  [Analysis Services 執行緒集區 SQL Server 2012 中的變更](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Analysis Services 2012 組態設定 （Wordpress 部落格）](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [支援具有超過 64 個處理器系統](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

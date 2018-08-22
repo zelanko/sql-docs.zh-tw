@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
@@ -14,12 +13,12 @@ caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 324143732c9ae7830e1fb588cb0793795acb6f5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4459972905c5f40eddc55e126a4fb37e89cf29d9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285234"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392492"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>建立及管理記憶體最佳化物件的儲存體
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 引擎已整合到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，讓您在同一資料庫中可擁有記憶體最佳化資料表和 (傳統) 磁碟資料表。 不過，記憶體最佳化資料表的儲存體結構和磁碟資料表不同。  

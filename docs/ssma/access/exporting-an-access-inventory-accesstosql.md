@@ -25,15 +25,15 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8a6c94a1335c8ee20aa7f42e179cd924b6661f55
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 6256a21e699f3dbd6714da0e4778b9d00e8d940a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980670"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393603"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>匯出 Access 清查 (AccessToSQL)
-如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以匯出專案中的所有存取資料庫的詳細目錄。 您可以檢閱，然後查詢庫存中繼資料，以判斷哪一個資料庫和那些要移轉的資料庫內的物件。 此清查可讓您快速尋找解答，如下所示：  
+如果您有多個存取資料庫，而且您不確定要將移轉至哪些[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以匯出專案中的所有存取資料庫的詳細目錄。 您可以檢閱，然後查詢庫存中繼資料，以判斷哪一個資料庫和那些要移轉的資料庫內的物件。 此清查可讓您快速尋找解答，如下所示：  
   
 -   最大的資料庫有哪些？  
   
@@ -48,15 +48,15 @@ ms.locfileid: "38980670"
 在本主題結尾處提供可用來回答這些問題的查詢範例。  
   
 ## <a name="exported-metadata"></a>匯出的中繼資料  
-SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部索引鍵、 查詢、 報告、 表單、 巨集和模組的相關中繼資料。 每個項目分類的相關中繼資料匯出至個別的資料表。 針對這些資料表的結構描述，請參閱[Access 清查結構描述](http://msdn.microsoft.com/fdd3cff2-4d62-4395-8acf-71ea8f17f524)。  
+SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部索引鍵、 查詢、 報告、 表單、 巨集和模組的相關中繼資料。 每個項目分類的相關中繼資料匯出至個別的資料表。 針對這些資料表的結構描述，請參閱[Access 清查結構描述](access-inventory-schemas-accesstosql.md)。  
   
 ## <a name="exporting-inventory-data"></a>匯出的清查資料  
-若要匯出 Access 清查，您必須第一次開啟或建立 SSMA 專案，然後再加入 您想要分析的 Access 資料庫。 您將資料庫新增至 SSMA 專案之後，您會匯出這些資料庫的相關中繼資料指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫和結構描述。 如有必要，SSMA 會建立資料表來儲存的中繼資料。 SSMA，然後將 Access 資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫。  
+若要匯出 Access 清查，您必須第一次開啟或建立 SSMA 專案，然後再加入 您想要分析的 Access 資料庫。 您將資料庫新增至 SSMA 專案之後，您會匯出這些資料庫的相關中繼資料指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫和結構描述。 如有必要，SSMA 會建立資料表來儲存的中繼資料。 SSMA，然後將 Access 資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫。  
   
 > [!NOTE]  
-> Access 資料庫可以分成多個檔案： 包含資料表和包含查詢、 表單、 報表、 巨集、 模組和快速鍵的前端資料庫後端資料庫。 如果您想要分割資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，加入 SSMA 中的前端資料庫。  
+> Access 資料庫可以分成多個檔案： 包含資料表和包含查詢、 表單、 報表、 巨集、 模組和快速鍵的前端資料庫後端資料庫。 如果您想要分割資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，加入 SSMA 中的前端資料庫。  
   
-下面的指示說明如何建立專案、 將資料庫新增至專案、 連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，然後將匯出的清查資料。  
+下面的指示說明如何建立專案、 將資料庫新增至專案、 連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，然後將匯出的清查資料。  
   
 **若要建立專案**  
   
@@ -72,7 +72,7 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
 5.  在 **移轉至**下拉式方塊中，選取您想要移轉，然後按一下目標版本**確定**。  
   
-如需建立專案的詳細資訊，請參閱[Creating and Managing Projects](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)。  
+如需建立專案的詳細資訊，請參閱[Creating and Managing Projects](creating-and-managing-projects-accesstosql.md)。  
   
 **若要找出並新增資料庫**  
   
@@ -101,13 +101,13 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
 8.  在 確認 頁面中，按一下 **完成**。  
   
-如需有關將資料庫加入至專案的詳細資訊，請參閱 <<c0> [ 加入和移除的 Access 資料庫檔案](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)。  
+如需有關將資料庫加入至專案的詳細資訊，請參閱 <<c0> [ 加入和移除的 Access 資料庫檔案](adding-and-removing-access-database-files-accesstosql.md)。  
   
 **若要連接到 SQL Server**  
   
 1.  在 **檔案**功能表上，選取**連接到 SQL Server**。  
   
-2.  在 [連線] 對話方塊中，輸入或選取的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+2.  在 [連線] 對話方塊中，輸入或選取的執行個體名稱[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
     -   如果您要連接到本機電腦上的預設執行個體，您可以輸入**localhost**或句點 (**。**)。  
   
@@ -117,11 +117,11 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
   
 3.  在 **資料庫**方塊中，輸入匯出的中繼資料的目標資料庫的名稱。  
   
-4.  如果您的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]設定為在非預設連接埠上接受連線中，輸入用於連接埠號碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中的連線**伺服器連接埠** 方塊中。 預設執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，預設連接埠號碼為 1433年。 具名執行個體，SSMA 會嘗試取得連接埠號碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]瀏覽器服務。  
+4.  如果您的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]設定為在非預設連接埠上接受連線中，輸入用於連接埠號碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中的連線**伺服器連接埠** 方塊中。 預設執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，預設連接埠號碼為 1433年。 具名執行個體，SSMA 會嘗試取得連接埠號碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]瀏覽器服務。  
   
-5.  在 **驗證**下拉式選單中，選取要用於連線的驗證類型。 若要使用目前的 Windows 帳戶，請選取**Windows 驗證**。 若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]登入，選取**SQL Server 驗證**，然後提供 使用者名稱和密碼。  
+5.  在 **驗證**下拉式選單中，選取要用於連線的驗證類型。 若要使用目前的 Windows 帳戶，請選取**Windows 驗證**。 若要使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]登入，選取**SQL Server 驗證**，然後提供 使用者名稱和密碼。  
   
-如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱 <<c2> [ 連接到 SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)。</c2>  
+如需有關連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 連接到 SQL Server &#40;AccessToSQL&#41;](../../ssma/access/connecting-to-sql-server-accesstosql.md)。</c2>  
   
 **若要匯出的清查資訊**  
   
@@ -138,11 +138,11 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
 匯出中繼資料，每次 SSMA 會將資料附加到清查。 無法更新或刪除現有的資料，在清查中。  
   
 ## <a name="querying-the-exported-metadata"></a>查詢之匯出的中繼資料  
-匯出 Access 資料庫的相關中繼資料之後，您可以查詢中繼資料。 下面的指示說明使用中的 [查詢編輯器] 視窗[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]來執行查詢。  
+匯出 Access 資料庫的相關中繼資料之後，您可以查詢中繼資料。 下面的指示說明使用中的 [查詢編輯器] 視窗[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]來執行查詢。  
   
 **若要查詢的中繼資料**  
   
-1.  從**開始**功能表上，指向**所有程式**，指向**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005年**上，或者**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008**上，或者**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012年**，然後按一下**SQL Server Management Studio**。  
+1.  從**開始**功能表上，指向**所有程式**，指向**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005年**上，或者**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008**上，或者**Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012年**，然後按一下**SQL Server Management Studio**。  
   
 2.  在 [**連接到伺服器**] 對話方塊中，確認 [設定]，然後按一下**Connect**。  
   
@@ -153,7 +153,7 @@ SSMA 會將匯出存取資料庫、 資料表、 資料行、 索引、 外部�
 5.  按下 F5 鍵以執行查詢。  
   
 ## <a name="query-examples"></a>查詢範例  
-執行下列查詢之前，您應該執行 USE *database_name*先確定查詢會針對包含匯出的中繼資料的資料庫執行查詢。 例如，如果您的中繼資料匯出至名為 MyAccessMetadata 的資料庫時，您會新增下列開頭[!INCLUDE[tsql](../../includes/tsql_md.md)]程式碼：  
+執行下列查詢之前，您應該執行 USE *database_name*先確定查詢會針對包含匯出的中繼資料的資料庫執行查詢。 例如，如果您的中繼資料匯出至名為 MyAccessMetadata 的資料庫時，您會新增下列開頭[!INCLUDE[tsql](../../includes/tsql-md.md)]程式碼：  
   
 ```  
 USE MyAccessMetadata;  
@@ -220,7 +220,7 @@ ORDER BY DateModified;
 ```  
   
 ### <a name="which-databases-contain-private-information"></a>資料庫包含私人資訊？  
-Access 資料庫可能包含機密或個人資訊。 您可能想要移動這些資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]善用它的安全性功能。 如果您知道包含機密資料的資料行具有特定名稱，或包含特定的字元，您可以使用查詢來尋找包含該資訊的所有資料行。 例如，您可以找到所有的資料行包含字串 「 薪資 」。  然後查詢會傳回資料庫名稱、 資料表名稱和資料行名稱。  
+Access 資料庫可能包含機密或個人資訊。 您可能想要移動這些資料庫[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]善用它的安全性功能。 如果您知道包含機密資料的資料行具有特定名稱，或包含特定的字元，您可以使用查詢來尋找包含該資訊的所有資料行。 例如，您可以找到所有的資料行包含字串 「 薪資 」。  然後查詢會傳回資料庫名稱、 資料表名稱和資料行名稱。  
   
 ```  
 SELECT DatabaseName, TableName, ColumnName   
@@ -234,5 +234,5 @@ WHERE ColumnName LIKE '%salary%';
 如果您不知道資料行名稱，您可以撰寫查詢以傳回所有資料行。 若要這樣做，請從上一個查詢中移除 WHERE 子句。  
   
 ## <a name="see-also"></a>另請參閱  
-[準備移轉的 Access 資料庫](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+[準備移轉的 Access 資料庫](preparing-access-databases-for-migration-accesstosql.md)  
   

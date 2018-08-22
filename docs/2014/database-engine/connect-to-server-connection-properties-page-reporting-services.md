@@ -16,15 +16,15 @@ caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f079e76c4f3d7b659d3b48cf94a9e7fe54d27a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7ba5192de960d24bb918e9ec751e8c27c1e9d78
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308028"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393797"
 ---
 # <a name="connect-to-server-connection-properties-page-reporting-services"></a>連接到伺服器 (連接屬性頁面) Reporting Services
-  連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssRS](../includes/ssrs-md.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssRS](../includes/ssrs-md.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
+  連接到 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 或在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssRS](../includes/ssrs.md)] 時，請使用這個索引標籤來檢視或指定選項。 連接時，[連接] 和 [選項] 才會出現在這個對話方塊中。 註冊 [!INCLUDE[ssRS](../includes/ssrs.md)] 時，[測試] 和 [儲存] 才會出現在這個對話方塊中。  
   
 ## <a name="options"></a>選項。  
  **連接逾時 (以毫秒為單位)**  
@@ -40,7 +40,7 @@ ms.locfileid: "37308028"
  按一下即可變更對話方塊，並隱藏其他伺服器連接選項，例如記住密碼。  
   
  **測試**  
- 在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssRS](../includes/ssrs-md.md)] 時，請按一下以測試連接。  
+ 在 [已註冊的伺服器] 中註冊 [!INCLUDE[ssRS](../includes/ssrs.md)] 時，請按一下以測試連接。  
   
  **儲存**  
  儲存 [已註冊的伺服器] 中的設定。  

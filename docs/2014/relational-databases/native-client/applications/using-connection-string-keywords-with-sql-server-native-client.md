@@ -5,7 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ caps.latest.revision: 79
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f3c3607adf896b799bd323b834e4ae53313a679
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ce3c43b14342da1dc8b7d6b1605579b2825a979c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429147"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392555"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>搭配 SQL Server Native Client 使用連接字串關鍵字
   某些 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client API 會使用連接字串來指定連接屬性。 連接字串是關鍵字和關聯值的清單，每一個關鍵字都會識別特定的連接屬性。  
@@ -54,7 +54,7 @@ ms.locfileid: "37429147"
 |關鍵字|描述|  
 |-------------|-----------------|  
 |`Addr`|"Address" 的同義字。|  
-|`Address`|執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路位址。 雖然 `Address` 通常是伺服器的網路名稱，不過也可能是其他名稱，例如管道、IP 位址，或 TCP/IP 通訊埠和通訊端位址。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時，`Address` 的值優先於 ODBC 連接字串中傳遞給 `Server` 的值。 同時請注意，`Address=;` 將會連接到 `Server` 關鍵字中指定的伺服器，而 `Address= ;, Address=.;`、`Address=localhost;` 和 `Address=(local);` 都會造成與本機伺服器的連接。<br /><br /> `Address` 關鍵字的完整語法如下：<br /><br /> [*通訊協定*`:`]*位址*[`,`*連接埠&#124;\pipe\pipename*]<br /><br /> *通訊協定*可以是`tcp`(TCP/IP)、 `lpc` （共用記憶體） 或`np`（具名管道）。 如需有關通訊協定的詳細資訊，請參閱[Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果沒有*通訊協定*也`Network`指定關鍵字，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *連接埠*是連接、 指定的伺服器上的連接埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。|  
+|`Address`|執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體之伺服器的網路位址。 雖然 `Address` 通常是伺服器的網路名稱，不過也可能是其他名稱，例如管道、IP 位址，或 TCP/IP 通訊埠和通訊端位址。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時，`Address` 的值優先於 ODBC 連接字串中傳遞給 `Server` 的值。 同時請注意，`Address=;` 將會連接到 `Server` 關鍵字中指定的伺服器，而 `Address= ;, Address=.;`、`Address=localhost;` 和 `Address=(local);` 都會造成與本機伺服器的連接。<br /><br /> `Address` 關鍵字的完整語法如下：<br /><br /> [*通訊協定*`:`]*位址*[`,`*連接埠&#124;\pipe\pipename*]<br /><br /> *通訊協定*可以是`tcp`(TCP/IP)、 `lpc` （共用記憶體） 或`np`（具名管道）。 如需有關通訊協定的詳細資訊，請參閱[Configure Client Protocols](../../../database-engine/configure-windows/configure-client-protocols.md)。<br /><br /> 如果沒有*通訊協定*也`Network`指定關鍵字，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* 是在指定伺服器上所要連接的通訊埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。|  
 |`AnsiNPW`|如果為 "yes"，此驅動程式就會使用 ANSI 定義的行為來處理 NULL 比較、字元資料填補、警告和 NULL 串連。 當為 "no" 時，將不會公開 ANSI 定義的行為。 如需有關 ANSI NPW 行為的詳細資訊，請參閱 <<c0> [ 效果的 ISO 選項](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
 |`APP`|名稱的應用程式呼叫[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md) （選擇性）。 如果指定，這個值會儲存在**master.dbo.sysprocesses**資料行**sys.sysprocesses** ，傳回[sp_who](/sql/relational-databases/system-stored-procedures/sp-who-transact-sql)而[APP_NAME](/sql/t-sql/functions/app-name-transact-sql)函式。|  
 |`ApplicationIntent`|宣告連接到伺服器時的應用程式工作負載類型。 可能的值是 `ReadOnly` 和 `ReadWrite`。 例如： ApplicationIntent = ReadOnly<br /><br /> 預設值為 `ReadWrite`。 如需詳細資訊[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 支援[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]，請參閱[SQL Server 原生用戶端支援高可用性、 災害復原](../features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)。|  
@@ -80,7 +80,7 @@ ms.locfileid: "37429147"
 |`QuotedId`|當為 "yes" 時，連接的 QUOTED_IDENTIFIERS 會設定為 ON，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用 ISO 規則，不論 SQL 陳述式中是否使用引號。 當設定為 no 時，連接的 QUOTED_IDENTIFIERS 會設定為 OFF， 然後 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會遵循 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 傳統規則，不論 SQL 陳述式中是否使用引號。 如需詳細資訊，請參閱 <<c0> [ 效果的 ISO 選項](../../native-client-odbc-queries/executing-statements/effects-of-iso-options.md)。|  
 |`Regional`|當設定為 "yes" 時，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式將貨幣、日期和時間資料轉換成字元資料時，會使用用戶端設定。 轉換僅限單向；此驅動程式無法辨識非 ODBC 標準格式的日期字串或貨幣值；例如，INSERT 或 UPDATE 陳述式中使用的參數。 當設定為 "no" 時，此驅動程式會使用 ODBC 標準字串來表示轉換成字元資料的貨幣、日期和時間資料。|  
 |`SaveFile`|如果連接成功，要用來儲存目前連接之屬性的 ODBC 資料來源檔案名稱。|  
-|`Server`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此值必須是網路上的伺服器名稱、IP 位址，或是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員別名的名稱。<br /><br /> `Address` 關鍵字會覆寫 `Server` 關鍵字。<br /><br /> 您可藉由指定下列其中一個項目，連接到本機伺服器上的預設執行個體：<br /><br /> -   `Server=;`<br />-   `Server=.;`<br />-   `Server=(local);`<br />-   `Server=(localhost);`<br />-   **Server=(localdb)\\**  *執行個體名稱* `;`<br /><br /> 如需有關 LocalDB 支援的詳細資訊，請參閱 < [SQL Server Native Client 支援 localdb](../features/sql-server-native-client-support-for-localdb.md)。<br /><br /> 若要指定的具名執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，附加 **\\* * * 執行個體名稱*。<br /><br /> 如果未指定伺服器，就會連接到本機電腦上的預設執行個體。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> `Server` 關鍵字的完整語法如下：<br /><br /> `Server=`[*通訊協定*`:`]*Server*[`,`*連接埠*]<br /><br /> *通訊協定*可以是`tcp`(TCP/IP)、 `lpc` （共用記憶體） 或`np`（具名管道）。<br /><br /> 下列是指定具名管道的範例：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此程式碼行指定具名管道通訊協定、本機電腦上的具名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱 (`MSSQL$MYINST01`) 以及具名管道的預設名稱 (`sql/query`)。<br /><br /> 如果沒有*通訊協定*也`Network`指定關鍵字，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *連接埠*是連接、 指定的伺服器上的連接埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。<br /><br /> 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時，會忽略在 ODBC 連接字串中傳遞給 `Server` 的值開頭的空格。|  
+|`Server`|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱。 此值必須是網路上的伺服器名稱、IP 位址，或是 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員別名的名稱。<br /><br /> `Address` 關鍵字會覆寫 `Server` 關鍵字。<br /><br /> 您可藉由指定下列其中一個項目，連接到本機伺服器上的預設執行個體：<br /><br /> -   `Server=;`<br />-   `Server=.;`<br />-   `Server=(local);`<br />-   `Server=(localhost);`<br />-   **Server=(localdb)\\**  *執行個體名稱* `;`<br /><br /> 如需有關 LocalDB 支援的詳細資訊，請參閱 < [SQL Server Native Client 支援 localdb](../features/sql-server-native-client-support-for-localdb.md)。<br /><br /> 若要指定的具名執行個體[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]，附加 **\\* * * 執行個體名稱*。<br /><br /> 如果未指定伺服器，就會連接到本機電腦上的預設執行個體。<br /><br /> 若您指定 IP 位址，請確定在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 組態管理員中已啟用 TCP/IP 或具名管道通訊協定。<br /><br /> `Server` 關鍵字的完整語法如下：<br /><br /> `Server=`[*通訊協定*`:`]*Server*[`,`*連接埠*]<br /><br /> *通訊協定*可以是`tcp`(TCP/IP)、 `lpc` （共用記憶體） 或`np`（具名管道）。<br /><br /> 下列是指定具名管道的範例：<br /><br /> `np:\\.\pipe\MSSQL$MYINST01\sql\query`<br /><br /> 此程式碼行指定具名管道通訊協定、本機電腦上的具名管道 (`\\.\pipe`)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 執行個體的名稱 (`MSSQL$MYINST01`) 以及具名管道的預設名稱 (`sql/query`)。<br /><br /> 如果沒有*通訊協定*也`Network`指定關鍵字，則[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端將使用中指定的通訊協定順序[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager。<br /><br /> *port* 是在指定伺服器上所要連接的通訊埠。 根據預設，[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 會使用通訊埠 1433。<br /><br /> 當使用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 時，會忽略在 ODBC 連接字串中傳遞給 `Server` 的值開頭的空格。|  
 |`ServerSPN`|伺服器的 SPN。 預設值為空字串。 空字串會讓 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 使用驅動程式產生的預設 SPN。|  
 |`StatsLog_On`|當設定為 "yes" 時，會啟用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式效能資料的擷取。 當設定為 "no" 時，連接上無法取得 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式效能資料。|  
 |`StatsLogFile`|用來記錄 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 驅動程式效能統計資料之檔案的完整路徑和檔案名稱。|  
@@ -99,23 +99,23 @@ ms.locfileid: "37429147"
 ## <a name="ole-db-provider-connection-string-keywords"></a>OLE DB 提供者連接字串關鍵字  
  OLE DB 應用程式有兩種方法可初始化資料來源物件：  
   
--   **Idbinitialize:: Initialize**  
+-   **IDBInitialize::Initialize**  
   
--   **Idatainitialize:: Getdatasource**  
+-   **IDataInitialize::GetDataSource**  
   
- 在第一個案例中，提供者字串可用來初始化連接屬性，其方式是在 DBPROPSET_DBINIT 屬性集中設定 DBPROP_INIT_PROVIDERSTRING 屬性。 第二個案例中，在初始化字串可以傳遞至**idatainitialize:: Getdatasource**方法來初始化連接屬性。 這兩個方法都會初始化相同的 OLE DB 連接屬性，但是會使用不同的關鍵字集合。 所使用的關鍵字集合**idatainitialize:: Getdatasource**為最小值的初始化屬性群組內的屬性描述。  
+ 在第一個案例中，提供者字串可用來初始化連接屬性，其方式是在 DBPROPSET_DBINIT 屬性集中設定 DBPROP_INIT_PROVIDERSTRING 屬性。 在第二個案例中，初始化字串可以傳遞給 **IDataInitialize::GetDataSource** 方法來初始化連接屬性。 這兩個方法都會初始化相同的 OLE DB 連接屬性，但是會使用不同的關鍵字集合。 **IDataInitialize::GetDataSource** 所使用的關鍵字集合，至少是初始化屬性群組內的屬性描述。  
   
  如果任何提供者字串設定所包含的對應 OLE DB 屬性設定為預設值或明確設定為某個值，OLE DB 屬性值將在提供者字串中覆寫此設定。  
   
- 在提供者字串中透過 DBPROP_INIT_PROVIDERSTRING 值所設定的布林屬性是使用 "yes" 和 "no" 的值所設定。 在初始化字串中使用設定的布林值屬性**idatainitialize:: Getdatasource**都是使用值"true"和"false"設定。  
+ 在提供者字串中透過 DBPROP_INIT_PROVIDERSTRING 值所設定的布林屬性是使用 "yes" 和 "no" 的值所設定。 在初始化字串中使用 **IDataInitialize::GetDataSource** 所設定的布林值屬性，是使用 "True" 和 "False" 的值所設定。  
   
- 使用應用程式**idatainitialize:: Getdatasource**也可以使用所用的關鍵字**idbinitialize:: Initialize**但只適用於沒有預設值的屬性。 如果應用程式會使用這兩者**idatainitialize:: Getdatasource**關鍵字和**idbinitialize:: Initialize**在初始化字串中，關鍵字**IDataInitialize::GetDataSource**會使用關鍵字設定。 強烈建議應用程式不用**idbinitialize:: Initialize**中的關鍵字**您**連接字串，因為這種行為可能不在未來維護釋出。  
+ 使用 **IDataInitialize::GetDataSource** 的應用程式，也可以使用 **IDBInitialize::Initialize** 所用的關鍵字，但是只適用於沒有預設值的屬性。 如果應用程式在初始化字串中同時使用 **IDataInitialize::GetDataSource** 關鍵字和 **IDBInitialize::Initialize** 關鍵字，則會使用 **IDataInitialize::GetDataSource** 關鍵字設定。 強烈建議您不要讓應用程式在 **IDataInitialize:GetDataSource** 連接字串中使用 **IDBInitialize::Initialize** 關鍵字，因為將來的版本可能無法維護這個行為。  
   
- **注意︰** 透過傳遞的連接字串**idatainitialize:: Getdatasource**轉換成屬性，並透過套用**idbproperties:: Setproperties**。 如果元件服務中找到屬性描述中的**idbproperties:: Getpropertyinfo**，此屬性會當做獨立屬性會套用。 否則，它將會透過 DBPROP_PROVIDERSTRING 屬性來套用。 例如，如果您指定連接字串**資料來源 = server1;Server = server2**，`Data Source`會設定為屬性，但`Server`將會進入提供者字串。  
+ **注意︰** 透過傳遞的連接字串**idatainitialize:: Getdatasource**轉換成屬性，並透過套用**idbproperties:: Setproperties**。 如果元件服務在 **IDBProperties::GetPropertyInfo** 中找到屬性描述，此屬性將會作為獨立屬性來套用。 否則，它將會透過 DBPROP_PROVIDERSTRING 屬性來套用。 例如，如果您指定連接字串**資料來源 = server1;Server = server2**，`Data Source`會設定為屬性，但`Server`將會進入提供者字串。  
   
  如果您指定相同提供者特有之屬性的多個執行個體，將會使用第一個屬性的值。  
   
- 使用 dbprop_init_providerstring，其使用的 OLE DB 應用程式所使用的連接字串**idbinitialize:: Initialize**具有下列語法：  
+ OLE DB 應用程式使用的連接字串如果搭配 **IDBInitialize::Initialize** 使用 DBPROP_INIT_PROVIDERSTRING，其語法如下：  
   
  `connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string`  
   
@@ -164,7 +164,7 @@ ms.locfileid: "37429147"
 |`UseProcForPrepare`|SSPROP_INIT_USEPROCFORPREP|這個關鍵字已被取代，而且 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 提供者會忽略它的設定。|  
 |`WSID`|SSPROP_INIT_WSID|工作站識別碼。|  
   
- 使用 OLE DB 應用程式使用的連接字串**idatainitialize:: Getdatasource**具有下列語法：  
+ OLE DB 應用程式使用的連接字串如果使用 **IDataInitialize::GetDataSource**，其語法如下：  
   
  `connection-string ::= empty-string[;] | attribute[;] | attribute; connection-string`  
   
@@ -186,7 +186,7 @@ ms.locfileid: "37429147"
   
  如果連接字串具有下表所列的多個屬性，將會使用最後一個屬性的值。  
   
- 下表描述可搭配使用的關鍵字**idatainitialize:: Getdatasource**:  
+ 下表說明可搭配 **IDataInitialize::GetDataSource** 使用的關鍵字：  
   
 |關鍵字|初始化屬性|描述|  
 |-------------|-----------------------------|-----------------|  
@@ -216,12 +216,12 @@ ms.locfileid: "37429147"
 |`User ID`|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入名稱。|  
 |`Workstation ID`|SSPROP_INIT_WSID|工作站識別碼。|  
   
- **請注意**在連接字串中，"Old Password"屬性會設定 SSPROP_AUTH_OLD_PASSWORD，這是不是透過提供者字串屬性的目前 （可能已過期） 密碼。  
+ **請注意**：在此連接字串中，"Old Password" 屬性會設定 SSPROP_AUTH_OLD_PASSWORD，這是無法透過提供者字串屬性取得的目前密碼 (可能已過期)。  
   
 ## <a name="activex-data-objects-ado-connection-string-keywords"></a>ActiveX Data Objects (ADO) 連接字串關鍵字  
- ADO 應用程式設定**ConnectionString**屬性**ADODBConnection**物件，或做為參數提供連接字串**開啟**方法**ADODBConnection**物件。  
+ ADO 應用程式會設定 **ADODBConnection** 物件的 **ConnectionString** 屬性，或是提供連接字串當做 **ADODBConnection** 物件之 **Open** 方法的參數。  
   
- ADO 應用程式也可以使用 OLE DB 使用的關鍵字**idbinitialize:: Initialize**方法，但只適用於沒有預設值的屬性。 如果應用程式使用 ADO 關鍵字和**idbinitialize:: Initialize**會使用在初始化字串，而 ADO 關鍵字設定中的關鍵字。 強烈建議您只讓應用程式使用 ADO 連接字串關鍵字。  
+ ADO 應用程式也可以使用 OLE DB **IDBInitialize::Initialize** 方法所使用的關鍵字，但是只適用於沒有預設值的屬性。 如果應用程式在初始化字串中同時使用 ADO 關鍵字和 **IDBInitialize::Initialize** 關鍵字，將會使用 ADO 關鍵字設定。 強烈建議您只讓應用程式使用 ADO 連接字串關鍵字。  
   
  ADO 使用的連接字串具有以下語法：  
   
@@ -267,7 +267,7 @@ ms.locfileid: "37429147"
 |`User ID`|DBPROP_AUTH_USERID|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 登入名稱。|  
 |`Workstation ID`|SSPROP_INIT_WSID|工作站識別碼。|  
   
- **請注意**在連接字串中，"Old Password"屬性會設定 SSPROP_AUTH_OLD_PASSWORD，這是不是透過提供者字串屬性的目前 （可能已過期） 密碼。  
+ **請注意**：在此連接字串中，"Old Password" 屬性會設定 SSPROP_AUTH_OLD_PASSWORD，這是無法透過提供者字串屬性取得的目前密碼 (可能已過期)。  
   
 ## <a name="see-also"></a>另請參閱  
  [使用 SQL Server Native Client 建置應用程式](building-applications-with-sql-server-native-client.md)  

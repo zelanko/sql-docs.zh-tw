@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8f33769bee5c8d6d9e134eb9dd5dcf8549d651cb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 5ec1b7d62e3e765ee43624f0e97aef60c91309ee
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983080"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393371"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>開始使用 SSMA for MySQL 主控台 (MySQLToSQL)
 本章節描述的程序啟動並開始使用 MySQL 主控台應用程式。 也列出，此處所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -51,9 +51,9 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
   
 其他功能：  
   
-1.  [保護密碼](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e)並匯出 / 匯入到其他視窗機器  
+1.  [保護密碼](managing-passwords-mysqltosql.md)並匯出 / 匯入到其他視窗機器  
   
-2.  [產生報表](http://msdn.microsoft.com/1c0202e8-546d-4cb3-a37f-1d2e35d53839)以檢視詳細的 xml 輸出評估 /conversion 和資料移轉的報表。 詳細的錯誤報告也可能產生的重新整理] 和 [同步處理命令。  
+2.  [產生報表](generating-reports-mysqltosql.md)以檢視詳細的 xml 輸出評估 /conversion 和資料移轉的報表。 詳細的錯誤報告也可能產生的重新整理] 和 [同步處理命令。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
 執行 SSMA 指令碼命令和選項，主控台程式會在主控台上對使用者顯示的結果和訊息 （資訊、 錯誤等），或如有需要，將重新導向至 xml 輸出檔。 每一種在輸出中的訊息被以獨特的色彩。 例如，在白色文字訊息表示指令碼檔案的命令;綠色的色彩中的一個表示提示使用者輸入，依此類推。  
@@ -72,5 +72,5 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
 |11：青色|開始]、 [完成] 和 [作業的結果。|  
   
 ## <a name="see-also"></a>另請參閱  
-[安裝 SSMA for MySQL](http://msdn.microsoft.com/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
+[安裝 SSMA for MySQL](installing-ssma-for-mysql-mysqltosql.md)  
   

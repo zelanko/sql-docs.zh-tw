@@ -1,11 +1,11 @@
 ---
-title: 存取擴充的事件記錄檔中的診斷資訊 |Microsoft Docs
+title: 存取擴充事件記錄檔中的診斷資訊 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
@@ -13,17 +13,17 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eab7a558054b423e3a18e54ad94bc91060082aad
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: beb758f6edb2e34dad108f89c7cd226c66353436
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420907"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394622"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>存取擴展事件記錄檔中的診斷資訊
   從開始[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]， [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 及資料存取追蹤 ([資料存取追蹤](http://go.microsoft.com/fwlink/?LinkId=125805)) 已更新以讓您更輕鬆地從連線通道取得有關連接失敗的診斷資訊緩衝區與應用程式效能資訊的擴充的事件記錄檔。  
   
- 如需有關讀取擴充的事件記錄檔的詳細資訊，請參閱[檢視事件工作階段資料](../../../database-engine/view-event-session-data.md)。  
+ 如需讀取擴充事件記錄檔的資訊，請參閱[檢視事件工作階段資料](../../../database-engine/view-event-session-data.md)。  
   
 > [!NOTE]  
 >  此功能僅供疑難排解及診斷使用，可能不適用稽核或安全性。  

@@ -1,5 +1,5 @@
 ---
-title: SSMA 安裝 MySQL 用戶端 (MySQLToSQL) |Microsoft 文件
+title: 安裝 SSMA for MySQL 用戶端 (MySQLToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,73 +18,73 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8d349ccf848d62363733a02bf296edaa88bea9e8
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: de32849e59f0244baa62a5e7784b3ec2f26aacac
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776224"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393599"
 ---
-# <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安裝的 SSMA for MySQL 用戶端 (MySQLToSQL)
-SSMA for MySQL 用戶端包含的程式檔案，執行下列工作：  
+# <a name="installing-ssma-for-mysql-client-mysqltosql"></a>安裝 SSMA for MySQL 用戶端 (MySqlToSql)
+SSMA for MySQL 用戶端是由執行下列工作的程式檔案所組成：  
   
--   連接到 MySQL 資料庫。  
+-   連線到 MySQL 資料庫。  
   
--   連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+-   連接到的執行個體[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
--   將 MySQL 資料庫物件，以[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 物件。  
+-   將 MySQL 資料庫物件，以轉換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 物件。  
   
--   物件載入[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+-   載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
--   將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。  
+-   將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。  
   
-本主題提供的安裝必要條件和安裝 SSMA for MySQL 用戶端的指示。  
+本主題提供的安裝必要條件和指示安裝 SSMA for MySQL 用戶端。  
   
-## <a name="prerequisites"></a>必要條件  
-SSMA for MySQL 被為了搭配 MySQL 4.1 或更新版本以及所有版本的 SQL Server 2005、 SQL Server 2008、 SQL Server 2012、 SQL Server 2014、 SQL Server 2016、 SQL Server 2017 和 Azure SQL DB。  
+## <a name="prerequisites"></a>先決條件  
+SSMA for MySQL 被設計用於搭配 MySQL 4.1 或更新版本以及所有版本的 SQL Server 2005、 SQL Server 2008，SQL Server 2012、 SQL Server 2014、 SQL Server 2016，SQL Server 2017 和 Azure SQL DB。  
   
-SSMA 安裝之前，請確定電腦符合下列需求：  
+安裝 SSMA 之前，請確定電腦符合下列需求：  
   
 -   Windows 7 或更新版本中，或 Windows Server 2008 或更新版本。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 或更新版本。  
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版或更新版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本 4.0 是 SQL Server 產品媒體上的可用。 您也可以取得從[.NET Framework 開發人員中心](http://go.microsoft.com/fwlink/?LinkId=48882)。  
+-   [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] 4.0 版或更新版本。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)]版本 4.0 是 SQL Server 產品媒體上。 您也可以取得從中[.NET Framework Developer Center](http://go.microsoft.com/fwlink/?LinkId=48882)。  
   
--   MySQL ODBC 5.1 驅動程式，您想要移轉的 MySQL 資料庫的連接能力。 您可以從 MySQL 網站安裝 MySQL。 如需連線資訊，請參閱[連接至 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
+-   MySQL ODBC 5.1 驅動程式和連線到您想要移轉的 MySQL 資料庫。 您可以從 MySQL 網站安裝 MySQL。 如需連線資訊，請參閱[連接至 MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
   
--   存取和裝載 SQL Server，您將資料庫物件和資料移轉的目標執行個體的電腦上有足夠的權限。 如需詳細資訊，請參閱[連接到 SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+-   存取並在裝載 SQL Server，您將移轉的資料庫物件和資料的目標執行個體的電腦上有足夠的權限。 如需詳細資訊，請參閱 <<c0> [ 連接到 SQL Server &#40;MySQLToSQL&#41;</c0>](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
--   發生 SQL Azure 專案的存取權以及足夠的權限的執行個體將會移轉您的 Azure SQL DB 資料庫物件和資料。 如需詳細資訊，請參閱[連接到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)。  
+-   SQL Azure 專案的情況下存取及足夠的權限，將會移轉您的 Azure SQL DB 執行個體資料庫物件和資料。 如需詳細資訊，請參閱 <<c0> [ 連線到 Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)。</c0>  
   
--   4 GB RAM，建議使用。  
+-   4 GB RAM，建議。  
   
-## <a name="installing-ssma-for-mysql-client"></a>安裝的 SSMA for MySQL 用戶端  
-SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server 移轉小幫手的下載頁面](http://aka.ms/ssmaformysql)。  
+## <a name="installing-ssma-for-mysql-client"></a>安裝 SSMA for MySQL 用戶端  
+SSMA 是 Web 下載項目。 若要下載最新版本，請參閱[SQL Server Migration Assistant 的下載頁面](http://aka.ms/ssmaformysql)。  
   
 下載最新版本之後，您必須先解壓縮安裝檔案，才能安裝 SSMA。  
   
-**SSMA 用戶端安裝**  
+**安裝 SSMA 用戶端**  
   
-1.  按兩下 SSMA for MySQL *n*。Install.exe 其中*n*是組建編號。  
+1.  按兩下 SSMA for MySQL *n*。Install.exe，其中*n*是組建編號。  
   
-2.  在 歡迎使用 頁面上，按一下 **下一步**。  
+2.  在 歡迎使用 頁面上，按一下**下一步**。  
   
-    如果您沒有安裝必要元件，會出現訊息，指出您必須先安裝必要的元件。 請確定您已安裝所有必要條件，才能再次執行安裝程式。  
+    如果您沒有安裝必要元件，會出現訊息，指出您必須先安裝必要的元件。 請確定您已安裝所有必要條件才能再次執行安裝程式。  
   
-3.  閱讀使用者授權合約。 如果您同意，請選取**我接受授權合約中的條款**，然後按一下 **下一步**。  
+3.  閱讀使用者授權合約。 如果您同意，請選取**我接受授權合約中的條款**，然後按一下**下一步**。  
   
-4.  在 選擇安裝類型 頁面上，按一下 **一般**。  
+4.  在 [選擇安裝類型] 頁面上，按一下**典型**。  
   
 5.  按一下 **[安裝]**。  
   
 > [!IMPORTANT]  
-> 1.  請解除安裝所有舊版的 SSMA for MySQL 再安裝新版本。  
+> 1.  請先解除安裝所有舊版的 SSMA for MySQL 才能安裝新版本。  
   
-預設安裝位置是 C:\Program Files\Microsoft SQL Server 移轉小幫手的 MySQL。  
+預設安裝位置是 C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL。  
   
-64 位元 Windows 電腦上已在 C:\Microsoft SQL Server 移轉小幫手的 MySQL 安裝產品。  
+64 位元 Windows 電腦上已在 C:\Microsoft SQL Server Migration Assistant 中適用於 MySQL 安裝產品。  
   
 ## <a name="see-also"></a>另請參閱  
-[移轉的 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[移轉 MySQL 資料庫到 SQL Server-Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

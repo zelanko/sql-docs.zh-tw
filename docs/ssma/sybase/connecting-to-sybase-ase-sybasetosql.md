@@ -18,22 +18,22 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0fe501e639b5896eb0f83391e6be40b8f8961ba9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a8411cdb507b27e69f86f0d853e1c98b4d24d29a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980090"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395927"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>連線到 Sybase ASE (SybaseToSQL)
-若要將 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您必須連接到包含您想要移轉的資料庫的自適性伺服器。 當您連線時，SSMA 取得自動調整的伺服器上的所有資料庫的相關中繼資料和 Sybase 中繼資料總管 窗格中顯示資料庫中繼資料。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
+若要將 Sybase Adaptive Server Enterprise (ASE) 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您必須連接到包含您想要移轉的資料庫的自適性伺服器。 當您連線時，SSMA 取得自動調整的伺服器上的所有資料庫的相關中繼資料和 Sybase 中繼資料總管 窗格中顯示資料庫中繼資料。 SSMA 會儲存在資料庫伺服器的相關資訊，但不會儲存密碼。  
   
 ASE 的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連接到 ASE 如果您想使用中的連接到伺服器。  
   
 自適性伺服器相關的中繼資料不會自動更新。 相反地，如果您想要更新 Sybase 中繼資料總管 中的中繼資料，您必須手動更新中繼資料，如本主題稍後的 「 重新整理 Sybase ASE 中繼資料 」 一節中所述。  
   
 ## <a name="required-ase-permissions"></a>ASE 所需的權限  
-用來連接到 ASE 的帳戶至少必須有**公開金鑰**存取 master 資料庫與來源資料庫移轉到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 此外，若要選取要移轉的資料表上的權限，使用者必須擁有 SELECT 權限在下列系統資料表上：  
+用來連接到 ASE 的帳戶至少必須有**公開金鑰**存取 master 資料庫與來源資料庫移轉到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 此外，若要選取要移轉的資料表上的權限，使用者必須擁有 SELECT 權限在下列系統資料表上：  
   
 -   [source_db].dbo.sysobjects  
   
@@ -54,7 +54,7 @@ ASE 的連接會保持作用中，直到您關閉專案。 當您重新開啟專
 -   master.dbo.sysdatabases  
   
 ## <a name="establishing-a-connection-to-ase"></a>建立 ASE 的連接  
-當您連接到自動調整的伺服器時，SSMA 讀取資料庫中繼資料，在資料庫伺服器上的，然後將此中繼資料新增至專案檔。 將轉換的物件時，使用此中繼資料的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 的語法，以及當它將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以瀏覽這個 Sybase 中繼資料總管 窗格中的中繼資料，然後檢閱個別的資料庫物件的屬性。  
+當您連接到自動調整的伺服器時，SSMA 讀取資料庫中繼資料，在資料庫伺服器上的，然後將此中繼資料新增至專案檔。 將轉換的物件時，使用此中繼資料的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 的語法，以及當它將資料移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以瀏覽這個 Sybase 中繼資料總管 窗格中的中繼資料，然後檢閱個別的資料庫物件的屬性。  
   
 > [!IMPORTANT]  
 > 您嘗試連接到資料庫伺服器之前，請確定資料庫伺服器正在執行，而且可以接受連線。  
@@ -106,7 +106,7 @@ ASE 的連接會保持作用中，直到您關閉專案。 當您重新開啟專
     如需詳細資訊，請參閱 <<c0> [ 連接到 Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md)。</c0>  
   
 ## <a name="reconnecting-to-sybase-ase"></a>重新連接到 Sybase ASE  
-資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連線，如果您想要自動調整的伺服器的作用中連接。 您可以離線直到您想要更新中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，並移轉資料。  
+資料庫伺服器的連接會保持作用中，直到您關閉專案。 當您重新開啟專案時，您必須重新連線，如果您想要自動調整的伺服器的作用中連接。 您可以離線直到您想要更新中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，並移轉資料。  
   
 ## <a name="refreshing-sybase-ase-metadata"></a>重新整理 Sybase ASE 中繼資料  
 ASE 資料庫的相關中繼資料不會自動重新整理。 Sybase 中繼資料總管 中的中繼資料是中繼資料的快照集，當您第一次連線到彈性的伺服器或您手動重新整理中繼資料的最後一次。 您可以手動更新單一資料庫、 單一資料庫結構描述，或所有資料庫的中繼資料。  
@@ -123,7 +123,7 @@ ASE 資料庫的相關中繼資料不會自動重新整理。 Sybase 中繼資�
   
 ## <a name="next-step"></a>下一個步驟  
   
--   移轉程序的下一個步驟是[連接到 SQL Server 的執行個體](http://msdn.microsoft.com/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [連接到 SQL Azure 的執行個體](http://msdn.microsoft.com/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
+-   移轉程序的下一個步驟是[連接到 SQL Server 的執行個體](connecting-to-sql-server-sybasetosql.md) / [連接到 SQL Azure 的執行個體](connecting-to-azure-sql-db-sybasetosql.md)  
   
 ## <a name="see-also"></a>另請參閱  
 [將 Sybase ASE 資料庫移轉至 SQL Server-Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

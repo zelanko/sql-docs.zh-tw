@@ -16,18 +16,18 @@ caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d6c63b66a52f0fbc6a676a2143299b7ee5b13208
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3eb32a285ceca0ab080216f0d7e9dd387d0949da
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980700"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392486"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>轉換 DB2 結構描述 (DB2ToSQL)
-您已連接至 DB2 後，連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，並設定專案和對應的資料選項，您可以將轉換至 DB2 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫物件。  
+您已連接至 DB2 後，連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並設定專案和對應的資料選項，您可以將轉換至 DB2 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
   
 ## <a name="the-conversion-process"></a>轉換程序  
-轉換的資料庫物件從 DB2 會將物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管。  
+轉換的資料庫物件從 DB2 會將物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管。  
   
 在轉換期間 SSMA 會列印訊息輸出至 [輸出] 窗格和 [錯誤清單] 窗格中的錯誤訊息。 您可以使用輸出和錯誤的資訊來判斷是否需要修改您的 DB2 資料庫或您的轉換程序，以便取得所需的轉換結果。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "38980700"
 在轉換前的物件，檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用這個對話方塊中，您可以設定 SSMA 如何將轉換函式和全域變數。 如需詳細資訊，請參閱 <<c0> [ 專案設定&#40;轉換&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md)。</c0>  
   
 ## <a name="conversion-results"></a>轉換結果  
-下表顯示 DB2 的物件會轉換，並產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件：  
+下表顯示 DB2 的物件會轉換，並產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件：  
   
 |DB2 物件|產生的 SQL Server 物件|  
 |-----------|----------------------------|  
@@ -150,7 +150,7 @@ DB2 的某些物件可能不會轉換。 您可以檢視摘要轉換報告，以
   
 -   您可以修改以移除或修改有問題的程式碼的 DB2 資料庫中的物件。 若要更新的程式碼載入 SSMA 中，您必須更新的中繼資料。 如需詳細資訊，請參閱 <<c0> [ 連接至 DB2 資料庫&#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)。</c0>  
   
--   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管和 DB2 中繼資料總管] 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]和從 DB2 將資料移轉。  
+-   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管和 DB2 中繼資料總管] 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]和從 DB2 將資料移轉。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](http://msdn.microsoft.com/f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3)。  

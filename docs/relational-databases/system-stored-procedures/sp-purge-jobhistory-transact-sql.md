@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9adf5bc1eada3a1fc2caa58db15fc4fc95ebd35b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 1807fb797b7bd3d53f83cae60c4b876fcb91b74f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564062"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393384"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ sp_purge_jobhistory
   
  其他使用者，包括成員**SQLAgentUserRole**和成員**SQLAgentReaderRole**，必須明確被授與 EXECUTE 權限上**sp_purge_jobhistory**. 被授與此預存程序的 EXECUTE 權限之後，這些使用只能清除他們自己的作業記錄。  
   
- **SQLAgentUserRole**， **SQLAgentReaderRole**，並**SQLAgentOperatorRole**固定的資料庫角色都處於**msdb**資料庫。 如需有關其權限的詳細資訊，請參閱 < [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ **SQLAgentUserRole**， **SQLAgentReaderRole**，並**SQLAgentOperatorRole**固定的資料庫角色都處於**msdb**資料庫。 如需有關其權限的詳細資訊，請參閱 < [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ## <a name="examples"></a>範例  
   

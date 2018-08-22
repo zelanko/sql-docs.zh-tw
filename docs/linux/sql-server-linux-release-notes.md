@@ -4,7 +4,7 @@ description: 本文包含的版本資訊，並在 Linux 上執行的 SQL Server 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/18/2018
+ms.date: 08/14/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.component: ''
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 29fa948938444471fcaaefc6869e4114c604686b
-ms.sourcegitcommit: 4b21840f20195d70f255465666f7b409ba839d18
+ms.openlocfilehash: 55fc722a3205984fbb48f2a2c0945ebf4ff117b8
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39146758"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393370"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上的 SQL Server 2017 的版本資訊
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-下列版本資訊適用於 SQL Server 2017 Linux 上執行。 這篇文章會分成區段，每個版本。 GA 版本已可支援性和詳細的已知問題所列。 每個累計更新 (CU) 版本有描述 CU 的變更，以及連結至 Linux 套件下載技術支援文件的連結。
+下列版本資訊適用於 SQL Server 2017 Linux 上執行。 這篇文章會分成區段，每個版本。 GA 版本已可支援性和詳細的已知問題所列。 每個累計更新 (CU) 或一般發行版本 (GDR) 具有描述 CU 的變更，以及連結至 Linux 套件下載技術支援文件的連結。
 
 ## <a name="supported-platforms"></a>支援的平台
 
@@ -45,29 +45,60 @@ ms.locfileid: "39146758"
 
 下表列出 SQL Server 2017 的版本歷程記錄。
 
-| 版本     | 版本       | 發行日期 |
-|-------------|---------------|--------------|
-| [CU9](#CU9) | 14.0.3030.27  | 2018-07-18   |
-| [CU8](#CU8) | 14.0.3029.16  | 2018-06-21   |
-| [CU7](#CU7) | 14.0.3026.27  | 2018-05-24   |
-| [CU6](#CU6) | 14.0.3025.34  | 2018-04-19   |
-| [CU5](#CU5) | 14.0.3023.8   | 2018-03-20   |
-| [CU4](#CU4) | 14.0.3022.28  | 2018-02-20   |
-| [CU3](#CU3) | 14.0.3015.40  | 2017-01-03   |
-| [CU2](#CU2) | 14.0.3008.27  | 2017-11-28   |
-| [CU1](#CU1) | 14.0.3006.16  | 2017-10-24   |
-| [正式運作](#GA)   | 14.0.1000.169 | 2017-10-02   |
+| 版本               | 版本       | 發行日期 |
+|-----------------------|---------------|--------------|
+| [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
+| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
+| [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
+| [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
+| [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
+| [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
+| [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
+| [CU3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
+| [GDR1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
+| [CU2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
+| [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
+| [正式運作](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
-## <a id="cuinstall"></a> 如何安裝累計更新
+## <a id="cuinstall"></a> 如何將更新安裝
 
-如果您已設定的累計更新存放庫，您會收到 SQL Server 套件的最新累積更新時執行的新安裝。 累計更新存放庫是在 Linux 上的 SQL Server 的所有封裝安裝文章的預設值。 如需有關存放庫組態的詳細資訊，請參閱[在 Linux 上的 SQL server 設定存放庫](sql-server-linux-change-repo.md)。
+如果您已設定的 CU 的儲存機制 (**mssql server 2017**)，則會收到最新的 SQL Server 的 CU 封裝，當您執行全新安裝。 CU 的存放庫是在 Linux 上的 SQL Server 的所有封裝安裝文章的預設值。 如果您已設定的 GDR 存放庫 (**mssql server 2017-gdr**)，只會收到重大安全性更新發行後 ga。 如果您需要 Docker 容器 CU 或 GDR 更新，請參閱官方的映像[Microsoft SQL Server on Linux 的 Docker 引擎](http://hub.docker.com/r/microsoft/mssql-server-linux/)。 如需有關存放庫組態的詳細資訊，請參閱[在 Linux 上的 SQL server 設定存放庫](sql-server-linux-change-repo.md)。
 
-如果您要更新現有的 SQL Server 封裝、 執行適當的更新命令，針對每個封裝，以取得最新的累積更新。 特定更新每個套件的指示，請參閱下列的安裝指南：
+如果您要更新現有的 SQL Server 封裝、 執行適當的更新命令，針對每個封裝，以取得最新的 CU。 特定更新每個套件的指示，請參閱下列的安裝指南：
 
 - [安裝 SQL Server 套件](sql-server-linux-setup.md#upgrade)
 - [安裝全文檢索搜尋套件](sql-server-linux-setup-full-text-search.md)
 - [安裝 SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [啟用 SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU9-GDR2"></a> CU9 GDR2 (年 8 月 2018)
+
+這是 SQL Server 2017 也包含先前發行的 CU (CU9) 的安全性更新。 此版本的 SQL Server 引擎版本是 14.0.3035.2。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4293805 ](https://support.microsoft.com/en-us/help/4293805)。
+
+### <a name="package-details"></a>套件詳細資料
+
+若為手動或離線套件安裝，您可以下載 RPM 和 Debian 套件使用下表中的資訊：
+
+| 封裝 | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.3035.2-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm)| 
+| SLES RPM 套件 | 14.0.3035.2-1 | [mssql server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3035.2-1.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3035.2-1.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3035.2-1.x86_64.rpm) | 
+| Ubuntu 16.04 的 Debian 套件 | 14.0.3035.2-1 | [引擎的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3035.2-1_amd64.deb)</br>[高可用性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3035.2-1_amd64.deb)</br>[全文檢索搜尋中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3035.2-1_amd64.deb)<br/> |
+
+## <a id="GDR2"></a> GDR2 (年 8 月 2018)
+
+這是僅包含 SQL Server 2017 的 GDR2 （和 GDR1） 安全性修正程式的安全性更新。  此版本的 SQL Server 引擎版本是 14.0.2002.14。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4293803 ](https://support.microsoft.com/en-us/help/4293803)。
+
+### <a name="package-details"></a>套件詳細資料
+
+若為手動或離線套件安裝，您可以下載 RPM 和 Debian 套件使用下表中的資訊：
+
+| 封裝 | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.2002.14-1 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.2002.14-1 | [mssql server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2002.14-1.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2002.14-1.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2002.14-1.x86_64.rpm) | 
+| Ubuntu 16.04 的 Debian 套件 | 14.0.2002.14-1 | [引擎的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2002.14-1_amd64.deb)</br>[高可用性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2002.14-1_amd64.deb)</br>[全文檢索搜尋中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2002.14-1_amd64.deb) |
 
 ## <a id="CU9"></a> CU9 (7 月 2018)
 
@@ -173,6 +204,20 @@ sudo systemctl start mssql-server
 | Red Hat RPM 套件 | 14.0.3022.28-2 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm)</br>[SSIS 封裝](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM 套件 | 14.0.3022.28-2 | [mssql server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3022.28-2.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3022.28-2.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3022.28-2.x86_64.rpm) | 
 | Ubuntu 16.04 的 Debian 套件 | 14.0.3022.28-2 | [引擎的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3022.28-2_amd64.deb)</br>[高可用性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3022.28-2_amd64.deb)</br>[全文檢索搜尋中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3022.28-2_amd64.deb)<br/>[SSIS 封裝](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <a id="GDR1"></a> GDR1 (第 2018 年 1 月)
+
+這是僅包含 SQL Server 2017 的安全性問題修正 GDR1 安全性更新。 此版本的 SQL Server 引擎版本是 14.0.2000.63。 如需此版本中的改進與修正資訊，請參閱[ https://support.microsoft.com/en-us/help/4057122 ](https://support.microsoft.com/en-us/help/4057122)。
+
+### <a name="package-details"></a>套件詳細資料
+
+若為手動或離線套件安裝，您可以下載 RPM 和 Debian 套件使用下表中的資訊：
+
+| 封裝 | 套件版本 | 下載 |
+|-----|-----|-----|
+| Red Hat RPM 套件 | 14.0.2000.63-3 | [引擎 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/rhel/7/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
+| SLES RPM 套件 | 14.0.2000.63-3 | [mssql server 引擎 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-14.0.2000.63-3.x86_64.rpm)</br>[高可用性的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-ha-14.0.2000.63-3.x86_64.rpm)</br>[全文檢索搜尋的 RPM 套件](https://packages.microsoft.com/sles/12/mssql-server-2017-gdr/mssql-server-fts-14.0.2000.63-3.x86_64.rpm) | 
+| Ubuntu 16.04 的 Debian 套件 | 14.0.2000.63-3 | [引擎的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server/mssql-server_14.0.2000.63-3_amd64.deb)</br>[高可用性的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.2000.63-3_amd64.deb)</br>[全文檢索搜尋中的 Debian 套件](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.2000.63-3_amd64.deb) |
 
 ## <a id="CU3"></a> Cu3 開始 (第 2018 年 1 月)
 

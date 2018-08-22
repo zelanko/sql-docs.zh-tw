@@ -16,28 +16,28 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ea3cf916d256e070ee7e0bdd20de81f3f4464e12
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7f10a1fa9faf04e8f819acd7966f6ca6d03c57b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980550"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392037"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>使用 SSMA 專案 (DB2ToSQL)
-若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
+若要將 DB2 資料庫移轉至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您首先建立 SSMA 專案。 專案是檔案，其中包含下列資訊：  
   
--   您想要移轉至 DB2 資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+-   您想要移轉至 DB2 資料庫的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
--   目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，將會收到已移轉的物件和資料。  
+-   目標執行個體的相關中繼資料[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，將會收到已移轉的物件和資料。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 連接資訊。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 連接資訊。  
   
 -   專案設定。  
   
-當您開啟專案時，它已中斷連線從 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 可讓您離線工作。 如需有關重新連線到資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱 <<c2> [ 連接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。</c2>  
+當您開啟專案時，它已中斷連線從 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可讓您離線工作。 如需有關重新連線到資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 連接到 SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)。</c2>  
   
 ## <a name="reviewing-default-project-settings"></a>檢閱預設的專案設定  
-SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，以及與 DB2 同步處理 SSMA 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 預設設定是適用於許多使用者。 不過，您建立新的 SSMA 專案之前，您應該檢閱設定。 如果您想要您可以變更將會用於所有新專案的預設設定。  
+SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，以及與 DB2 同步處理 SSMA 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 預設設定是適用於許多使用者。 不過，您建立新的 SSMA 專案之前，您應該檢閱設定。 如果您想要您可以變更將會用於所有新專案的預設設定。  
   
 **若要檢視預設的專案設定**  
   
@@ -55,14 +55,14 @@ SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，�
   
     -   系統物件設定的相關資訊，請參閱[專案設定&#40;載入系統物件&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)。  
   
-    -   如需設定進行同步處理[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱 <<c2> [ 專案設定&#40;同步處理&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)。</c2>  
+    -   如需設定進行同步處理[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 <<c2> [ 專案設定&#40;同步處理&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)。</c2>  
   
     -   GUI 設定的相關資訊，請參閱[專案設定&#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)。  
   
     -   如需資料類型對應設定的資訊，請參閱[專案設定&#40;類型對應&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)。  
   
 ## <a name="creating-new-projects"></a>建立新專案  
-若要將資料從 DB2 資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您必須先建立專案。  
+若要將資料從 DB2 資料庫移轉[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您必須先建立專案。  
   
 **若要建立專案**  
   
@@ -74,13 +74,13 @@ SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，�
   
 3.  在 **位置**方塊中，輸入或選取專案的資料夾，然後按一下**確定**。  
   
-4.  在**遷移至**下拉式清單，請選取目標版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]遷移所使用的。 可用的選項如下：  
+4.  在**遷移至**下拉式清單，請選取目標版本[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]遷移所使用的。 可用的選項如下：  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure 的 SQL 資料庫  
   
@@ -107,7 +107,7 @@ SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，�
         SSMA 會剖析 DB2 結構描述，並將中繼資料儲存到專案檔。  
   
 ## <a name="opening-projects"></a>開啟專案  
-當您開啟專案時，它已中斷連線從 DB2 及[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 可讓您離線工作。 若要更新的中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 若要將資料移轉，您必須重新連線至 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+當您開啟專案時，它已中斷連線從 DB2 及[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 可讓您離線工作。 若要更新的中繼資料，資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 若要將資料移轉，您必須重新連線至 DB2 和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 **若要開啟專案**  
   
@@ -119,7 +119,7 @@ SSMA 會包含數個設定的轉換和載入資料庫物件、 移轉資料，�
   
 2.  在重新連線到 DB2**檔案**功能表上，按一下**重新連接至 DB2**。  
   
-3.  若要重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]上**檔案**功能表上，按一下**重新連接到 SQL Server**。  
+3.  若要重新連線到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上**檔案**功能表上，按一下**重新連接到 SQL Server**。  
   
 ## <a name="next-step"></a>下一個步驟  
 移轉程序的下一個步驟是[連接至 DB2 資料庫](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844)。  

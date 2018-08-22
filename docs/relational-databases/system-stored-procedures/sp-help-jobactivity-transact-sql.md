@@ -1,5 +1,5 @@
 ---
-title: sp_help_jobactivity (TRANSACT-SQL) |Microsoft 文件
+title: sp_help_jobactivity (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 648fb94f5a14365356a293f6fb0652336ca0625b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de55ccede25cbfffd1930cfbb9088b9de1394ff0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259398"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393372"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>引數  
  [ **@job_id =**] *job_id*  
- 作業識別碼。 *job_id*是**uniqueidentifier**，預設值是 NULL。  
+ 作業識別碼。 *job_id*已**uniqueidentifier**，預設值是 NULL。  
   
  [ **@job_name =**] **'***job_name***'**  
- 作業的名稱。 *job_name*是**sysname**，預設值是 NULL。  
+ 作業的名稱。 *job_name*已**sysname**，預設值是 NULL。  
   
 > [!NOTE]  
->  任一*job_id*或*job_name*必須指定，但不可同時指定兩者。  
+>  任一*job_id*或是*job_name*必須指定，但不可同時指定兩者。  
   
  [ **@session_id** = ] *session_id*  
- 這是要報告其相關資訊的工作階段識別碼。 *session_id*是**int**，預設值是 NULL。  
+ 這是要報告其相關資訊的工作階段識別碼。 *session_id*已**int**，預設值是 NULL。  
   
 ## <a name="return-code-values"></a>傳回碼值  
  **0** （成功） 或**1** （失敗）  
@@ -63,7 +63,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>結果集  
  傳回下列結果集：  
   
-|資料行名稱|資料類型|Description|  
+|資料行名稱|資料類型|描述|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|代理程式工作階段識別碼。|  
 |**job_id**|**uniqueidentifier**|作業的識別碼。|  
@@ -80,17 +80,17 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**message**|**nvarchar(1024)**|上次執行作業期間所產生的訊息。|  
 |**run_status**|**int**|上次執行作業所傳回的狀態：<br /><br /> **0** = 失敗的錯誤<br /><br /> **1** = 成功<br /><br /> **3** = 取消<br /><br /> **5** = 未知的狀態|  
 |**operator_id_emailed**|**int**|作業完成時，收到電子郵件通知的操作員識別碼。|  
-|**operator_id_netsent**|**int**|通知的操作員識別碼**網路傳送**在作業完成。|  
+|**operator_id_netsent**|**int**|透過通知之操作員的識別碼數目**網路傳送**在作業完成。|  
 |**operator_id_paged**|**int**|作業完成時，收到呼叫器通知的操作員識別碼。|  
   
 ## <a name="remarks"></a>備註  
  這個程序提供作業目前狀態的快照集。 傳回的結果代表處理要求時的資訊。  
   
- 每當代理程式服務啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 都會建立一個工作階段識別碼。 工作階段識別碼儲存在資料表**msdb.dbo.syssessions**。  
+ 每當代理程式服務啟動時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 都會建立一個工作階段識別碼。 工作階段識別碼會儲存在資料表**msdb.dbo.syssessions**。  
   
- 若未*session_id*提供，列出最新的工作階段的相關資訊。  
+ 若未*session_id* ，列出最新的工作階段的相關資訊。  
   
- 若未*job_name*或*job_id*提供，列出所有作業的資訊。  
+ 若未*job_name*或是*job_id*提供，會列出所有作業的資訊。  
   
 ## <a name="permissions"></a>Permissions  
  根據預設，成員**sysadmin**固定的伺服器角色可以執行這個預存程序。 其他使用者必須被授與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **資料庫的下列其中一個** Agent 固定資料庫角色。  
@@ -101,7 +101,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+ 如需這些角色權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  只有成員**sysadmin**可以檢視其他使用者所擁有的作業的活動。  
   

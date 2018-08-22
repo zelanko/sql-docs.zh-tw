@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
@@ -14,14 +13,14 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fe1353a72ac4780356835fec88ff0d05f3d74e66
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 599ee919bdd158b76790c113a83c5aa94f0c9c99
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263360"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393378"
 ---
-# <a name="migrating-check-and-foreign-key-constraints"></a>移轉 Check 和 Foreign Key 條件約束
+# <a name="migrating-check-and-foreign-key-constraints"></a>合併 Check 和外部索引鍵條件約束
   中不支援 check 和 foreign key 條件約束[!INCLUDE[hek_2](../includes/hek-2-md.md)]在[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]。 這些建構通常用來強制執行結構描述中的邏輯資料完整性，而且可以是重要維護功能的應用程式的正確性。  
   
  邏輯的完整性檢查，例如核取資料表和 foreign key 條件約束需要進行額外處理的交易中通常應該避免效能敏感的應用程式。 不過，如果這類檢查是非常重要，您的應用程式，有兩種因應措施。  

@@ -5,8 +5,7 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
@@ -14,12 +13,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4130e24dc67fd174130ed0e45e145242e79b86d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7508457f1f46f09e65871abde8d0ab9c11a178b6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217348"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393803"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>資料表和預存程序的原生編譯
   記憶體中 OLTP 導入了原生編譯的概念。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 可原生編譯用來存取記憶體最佳化資料表的預存程序。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 也可以透過原生方式編譯記憶體最佳化資料表。 與解譯的 (傳統) [!INCLUDE[tsql](../../includes/tsql-md.md)]相較之下，原生編譯可提供更快速的資料存取並且更有效率地執行查詢。 資料表和預存程序的原生編譯會產生 DLL。  

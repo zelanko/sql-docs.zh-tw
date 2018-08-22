@@ -2,31 +2,29 @@
 title: 如何執行即時評分，或在 SQL Server Machine Learning 中的原生評分 |Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 265a40d01be772b36ce7e49d06aeef8d3f5d81e5
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dfea308f268d666ce070c21a7dd9afa513f95406
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085850"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40393459"
 ---
-# <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>如何執行即時計分或 SQL Server 中的原生評分
+# <a name="how-to-perform-real-time-scoring-or-native-scoring-in-sql-server"></a>如何執行即時評分或 SQL Server 中的原生評分
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-本文章提供如何執行即時評分和原生評分的功能，在 SQL Server 2016 和 SQL Server 2017 的指示和範例程式碼。 即時評分和原生評分的目標是要提升以小型批次評分作業的效能。
+這篇文章會示範兩種方法，來預測結果，在 「 SQL Server 中的近乎即時的方式使用以 r 撰寫的預先定型的模型即時評分和原生評分被設計來讓您使用的機器學習模型，而不需要安裝。指定預先定型的模型相容的格式-儲存至 SQL Server 資料庫-您可以使用標準資料存取技術，快速產生新的輸入上的預測分數。
 
-即時評分和原生評分被設計來讓您使用的機器學習模型，而不需要安裝。您只需要是取得相容的格式，預先定型的模型，並將它儲存在 SQL Server 資料庫。
-
-## <a name="choosing-a-scoring-method"></a>選擇計分方法
+## <a name="choose-a-scoring-method"></a>選擇計分方法
 
 下列選項可支援快速的批次預測：
 
-+ **原生評分**: SQL Server 2017 中的 T-SQL 預測函式
-+ **即時計分**： 使用 sp\_rxPredict 預存程序，在 SQL Server 2016 或 SQL Server 2017。
++ **原生評分**： 在 SQL Server 2017 Windows、 SQL Server 2017 Linux 和 Azure SQL Database 的 T-SQL 預測函式。
++ **即時計分**： 使用 sp\_rxPredict 預存程序，在 SQL Server 2016 或 SQL Server 2017 (僅 Windows)。
 
 > [!NOTE]
 > SQL Server 2017 中，建議使用 PREDICT 函式。
@@ -76,7 +74,7 @@ ms.locfileid: "39085850"
 
 ## <a name="native-scoring-with-predict"></a>原生評分與預測
 
-在此範例中，您可以建立模型時，並接著從 T-SQL 呼叫即時預測函式。
+在此範例中，您可以建立模型時，並接著從 T-SQL 呼叫即時的預測函數。
 
 ### <a name="step-1-prepare-and-save-the-model"></a>步驟 1： 準備和儲存模型
 
@@ -168,16 +166,16 @@ go
 > [!NOTE]
 > 因為所傳回的資料行和值**PREDICT**可能會因模型類型，您必須使用來定義傳回資料的結構描述**WITH**子句。
 
-## <a name="realtime-scoring-with-sprxpredict"></a>即時評分 sp_rxPredict
+## <a name="real-time-scoring-with-sprxpredict"></a>使用 sp_rxPredict 進行即時評分
 
 本節說明設定所需的步驟**即時**預測，並提供如何從 T-SQL 呼叫函數的範例。
 
-### <a name ="bkmk_enableRtScoring"></a> 步驟 1。 啟用即時計分程序
+### <a name ="bkmk_enableRtScoring"></a> 步驟 1。 啟用即時評分程序
 
 您必須啟用此功能的每個您想要用於評分的資料庫。 伺服器系統管理員應該執行的命令列公用程式，RegisterRExt.exe 隨附的 RevoScaleR 封裝。
 
 > [!NOTE]
-> 必須在執行個體中啟用 SQL CLR 功能讓即時計分工作，此外，資料庫必須標示為值得信任。 當您執行指令碼時，為您執行這些動作。 不過，這麼做之前考量的額外的安全性影響 ！
+> 必須在執行個體中啟用 SQL CLR 功能以進行即時評分工作順序，此外，資料庫必須標示為值得信任。 當您執行指令碼時，為您執行這些動作。 不過，這麼做之前考量的額外的安全性影響 ！
 
 1. 開啟提升權限的命令提示字元，並瀏覽至 RegisterRExt.exe 所在的資料夾。 在預設安裝中可用的下列路徑：
     
@@ -197,7 +195,7 @@ go
 
     + 受信任的組件
     + 預存程序 `sp_rxPredict`
-    + 新的資料庫角色， `rxpredict_users`。 資料庫管理員可以使用此角色，使用即時評分功能的使用者授與權限。
+    + 新的資料庫角色， `rxpredict_users`。 資料庫管理員可以使用此角色，授與權限給使用者使用即時評分的功能。
 
 4. 新增需要執行任何使用者`sp_rxPredict`至新的角色。
 
@@ -234,17 +232,19 @@ EXEC sp_rxPredict
 > 
 > 預存程序呼叫\_rxPredict 失敗時，如果評分的輸入的資料不包含資料行符合模型的需求。 目前支援只有下列.NET 資料類型： double、 float、 short、 ushort、 long、 ulong 和字串。
 > 
-> 因此，您可能需要篩選出不支援的類型，在您的輸入資料中，才能將它用於即時評分。
+> 因此，您可能需要進行即時評分使用之前，先篩選出不支援的類型，在您的輸入資料。
 > 
-> 如需對應的 SQL 類型的資訊，請參閱[SQL-CLR 類型對應](https://msdn.microsoft.com/library/bb386947.aspx)或是[對應 CLR 參數資料](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)。
+> 如需對應的 SQL 類型的資訊，請參閱[SQL-CLR 類型對應](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping)或是[對應 CLR 參數資料](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data)。
 
-## <a name="disable-realtime-scoring"></a>停用即時評分
+## <a name="disable-real-time-scoring"></a>停用即時評分
 
 若要停用即時評分的功能，請開啟提升權限的命令提示字元，並執行下列命令： `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
-## <a name="realtime-scoring-in-microsoft-r-server-or-machine-learning-server"></a>即時計分在 Microsoft R Server 或 Machine Learning Server
+## <a name="real-time-scoring-in-other-microsoft-product"></a>在其他 Microsoft 產品中的即時評分
 
-Machine Learning 伺服器支援分散式的即時計分模型發佈為 web 服務。 如需詳細資訊，請參閱下列文章：
+如果您使用獨立伺服器或 Microsoft Machine Learning Server 而不 SQL Server 資料庫內分析，您會有其他選項，除了預存程序和 T-SQL 函式來產生預測。
+
+獨立伺服器和 Machine Learning Server 支援的概念*web 服務*程式碼部署。 您可以組合 R 或 Python 預先定型模型，為 web 服務，在評估新的資料輸入的執行階段呼叫。 如需詳細資訊，請參閱下列文章：
 
 + [在 Machine Learning Server 中的 web 服務是什麼？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [什麼是作業？](https://docs.microsoft.com/machine-learning-server/operationalize/concept-operationalize-deploy-consume)

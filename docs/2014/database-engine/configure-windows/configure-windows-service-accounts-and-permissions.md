@@ -56,12 +56,12 @@ caps.latest.revision: 182
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4029c7a9b0296b3320342b90f064d0e8f3b3feb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd8ff6568129137f4e2167e514732a3b9af7ea8d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239880"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392708"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>設定 Windows 服務帳戶與權限
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中的每項服務代表一個或一組處理序，用以管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 作業對 Windows 的驗證。 本主題描述此 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]版本的預設服務組態，以及可以在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 安裝期間和安裝完成後設定的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 服務組態選項。  
@@ -184,7 +184,7 @@ ms.locfileid: "37239880"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc) <sup>*</sup>|  
 |FD 啟動器 (全文檢索搜尋)|[LOCAL SERVICE](#Local_Service)|[虛擬帳戶](#VA_Desc)|  
@@ -201,7 +201,7 @@ ms.locfileid: "37239880"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|無。 提供 [網域使用者](#Domain_User) 帳戶。|提供 [網域使用者](#Domain_User) 帳戶。|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|無。 提供 [網域使用者](#Domain_User) 帳戶。|提供 [網域使用者](#Domain_User) 帳戶。|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[NETWORK SERVICE](#Network_Service)|[虛擬帳戶](#VA_Desc)|  
 |FD 啟動器 (全文檢索搜尋)|[LOCAL SERVICE](#Local_Service)|[虛擬帳戶](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser|[LOCAL SERVICE](#Local_Service)|[LOCAL SERVICE](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer|[LOCAL SYSTEM](#Local_System)|[LOCAL SYSTEM](#Local_System)|  
@@ -330,7 +330,7 @@ ms.locfileid: "37239880"
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT SERVICE\MSSQLSERVER**。 具名執行個體： **NT SERVICE\MSSQL$** InstanceName)。|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> 啟動 SQL 寫入器的權限<br /><br /> 讀取事件記錄檔服務的權限<br /><br /> 讀取遠端程序呼叫服務的權限|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式：** <sup>1</sup><br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\SQLSERVERAGENT**。 具名執行個體：**NT Service\SQLAGENT$***InstanceName*。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **取代處理序層級 Token** (SeAssignPrimaryTokenPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設執行個體：**SQLServerMSASUser$***ComputerName***$MSSQLSERVER**。 具名執行個體：**SQLServerMSASUser$***ComputerName***$***InstanceName*。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 執行個體：**SQLServerMSASUser$***ComputerName***$***PowerPivot*。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 僅限表格式：<br /><br /> **增加處理程序工作組** (SeIncreaseWorkingSetPrivilege)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaSizePrivilege)<br /><br /> **鎖定記憶體中的分頁** (SeLockMemoryPrivilege) – 其只有在分頁完全關閉時才需要。<br /><br /> 僅限容錯移轉叢集安裝：<br /><br /> **增加排程優先順序** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體: **NT SERVICE\\$ * * * 執行個體名稱*。)|**以服務方式登入** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體：**NT SERVICE\ReportServer**。 具名執行個體: **NT SERVICE\\$ * * * 執行個體名稱*。)|**以服務方式登入** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體與具名執行個體： **NT SERVICE\MsDtsServer120**。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 沒有具名執行個體的個別處理序。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> 寫入應用程式事件記錄檔的權限。<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)<br /><br /> **在驗證之後模擬用戶端** (SeImpersonatePrivilege)|  
 |**全文檢索搜尋：**<br /><br /> (所有權利都會授與個別服務 SID。 預設執行個體： **NT Service\MSSQLFDLauncher**。 具名執行個體：**NT Service\ MSSQLFDLauncher$***InstanceName*。)|**以服務方式登入** (SeServiceLogonRight)<br /><br /> **調整處理序的記憶體配額** (SeIncreaseQuotaPrivilege)<br /><br /> **略過周遊檢查** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser：**<br /><br /> (所有權利都會授與本機 Windows 群組。 預設或具名執行個體：**SQLServer2005SQLBrowserUser***$ComputerName*。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 的具名執行個體沒有個別處理序)。|**以服務方式登入** (SeServiceLogonRight)|  

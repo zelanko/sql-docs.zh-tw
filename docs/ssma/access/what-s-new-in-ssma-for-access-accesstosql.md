@@ -2,7 +2,7 @@
 title: 什麼是 SSMA for Access(AccessToSQL) 新功能 |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 08/05/2018
+ms.date: 08/14/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,15 +16,32 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: eabb6b1364b36a84da8acd4f70fe82f962b31081
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b3fba0ce4efe8f168aa06aa27adb350d4d288dc6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556588"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392493"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access (AccessToSQL) 中最新消息
-本主題列出 SSMA 存取每個版本中的變更。  
+這篇文章列出 SSMA 存取每個版本中的變更。  
+
+## <a name="ssma-v79"></a>SSMA v7.9
+SSMA for Access v7.9 版本包含下列變更：
+- 目標式的修正，可改善品質和轉換的計量。
+- 支援變更資料類型對應和專案的喜好設定的 SSMA 命令列中。
+- SSMA 中的 [Azure SQL Database 連接] 對話方塊也已經改變指定完整的伺服器名稱。 在舊版的 SSMA，Azure SQL Database 的前置詞必須明確提及在專案設定。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
+
+## <a name="ssma-v78"></a>SSMA v7.8
+SSMA for Access v7.8 版本包含下列變更：
+- 專案設定中的反白顯示的變更型別對應。
+- 提供可讓使用者以停用遙測。
+
+> [!IMPORTANT]
+> 使用 SSMA v7.4 和更新版本，.Net 4.5.2 可安裝的必要條件。
 
 ## <a name="ssma-v77"></a>SSMA v7.7
 SSMA for Access v7.7 版本包含下列變更：
@@ -143,8 +160,8 @@ SSMA for Access 的 2011 年 7 月版本包含下列變更：
 ## <a name="april-2011"></a>2011 年 4 月  
 SSMA for Access 的 2011 年 4 月版本包含下列變更：  
   
--   新增可安裝的 「 SSMA for Access 」，可支援單一[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005年[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2008年[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]"Denali"] 和 [Azure SQL。  
--   新增連線能力[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]"Denali"。  
+-   新增可安裝的 「 SSMA for Access 」，可支援單一[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008年[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"Denali"] 和 [Azure SQL。  
+-   新增連線能力[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]"Denali"。  
 -   已新增的 SSMA for Access 主控台版本支援回溯相容性。 您可以開啟 SSMA v5.0 稍早的版本所建立的專案。
 -   新增與較舊版本的 SSMA 產品安裝 SSMA v5.0 產品並存 (SxS) 的能力。  
   
@@ -173,10 +190,10 @@ SSMA for Access 2007 年版本包含下列變更：
 ## <a name="november-2006"></a>2006 年 11 月  
 SSMA for Access 的 2006 年 11 月版本包含下列變更：  
   
--   加入新的資料庫移轉精靈可引導您完成移轉單一資料庫的存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
--   加入新的轉換，負載，並將 Access 資料庫的 [移轉] 命令載入轉換的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，並移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]全都放在一個步驟。  
--   改善的查詢的移轉。 現在將選取要檢視的查詢，請查詢移轉。 如需詳細資訊，請參閱 <<c0> [ 轉換的 Access 資料庫物件](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)。  
--   加入編輯資料表和索引的屬性上的功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**資料表** 索引標籤。  
+-   加入新的資料庫移轉精靈可引導您完成移轉單一資料庫的存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
+-   加入新的轉換，負載，並將 Access 資料庫的 [移轉] 命令載入轉換的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全都放在一個步驟。  
+-   改善的查詢的移轉。 現在將選取要檢視的查詢，請查詢移轉。 如需詳細資訊，請參閱 <<c0> [ 轉換的 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。  
+-   加入編輯資料表和索引的屬性上的功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**資料表** 索引標籤。  
 -   新增新的全域設定：  
     -   您可以選擇在編輯器視窗中顯示行號。  
     -   您可以設定 SSMA 提示來取代重複的物件，或一律或永遠不會取代重複的物件結構描述轉換期間。  

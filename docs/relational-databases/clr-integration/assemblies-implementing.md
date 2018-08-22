@@ -14,14 +14,14 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 337b45e5f441be3de009c7cc9a4d8115c6bbb17f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353090"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393619"
 ---
-# <a name="assemblies---implementing"></a>組件-實作
+# <a name="assemblies---implementing"></a>組件 - 實作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   本主題提供下列部分的資訊，協助您實作和使用資料庫中的組件：  
   
@@ -72,7 +72,7 @@ ms.locfileid: "37353090"
   
  **若要使用 SQL Server Management Studio 卸除組件**  
   
--   [刪除物件](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
+-   [刪除物件](../../ssms/object/delete-objects.md)  
   
  依預設，在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 中建立的所有組件都會停用執行。 您可以使用**clr 已啟用**選項**sp_configure**系統預存程序來停用或啟用的所有組件中上傳執行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 停用組件的執行可防止執行 Common Language Runtime (CLR) 函數、預存程序、觸發程序、彙總和使用者定義型別，並可停止那些正在執行的。 停用組件的執行並不會停用建立、修改或卸除組件的功能。 如需詳細資訊，請參閱 < [clr 已啟用伺服器組態選項](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)。  
   

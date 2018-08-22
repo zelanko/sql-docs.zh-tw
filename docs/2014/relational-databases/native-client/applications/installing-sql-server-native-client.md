@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,12 +24,12 @@ caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6eb3f153ad1fdbb3d7dc907d7c2cee7a2678080f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: a4023294d52724e5cd132ab4a47b8b8e7f910e3a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417567"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393616"
 ---
 # <a name="installing-sql-server-native-client"></a>安裝 SQL Server Native Client
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 會在安裝時安裝[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]。 沒有 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client。 如需詳細資訊，請參閱 < [What's New in SQL Server Native Client](../sql-server-native-client.md)。 您也可以從 SQL Server 2012 功能套件網頁取得 sqlncli.msi。 若要下載最新版本的 SQL Server Native Client，請前往[Microsoft® SQL Server® 2012 SP2 功能套件](http://www.microsoft.com/en-us/download/details.aspx?id=43339)。 如果舊版[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]早於 SQL Server 2012 也會安裝在電腦上，原生用戶端[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 11.0 會安裝由並行與舊版本。  
@@ -47,7 +47,7 @@ ms.locfileid: "37417567"
   
  除了在安裝[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]原生用戶端的一部分[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝，另外還有名為 sqlncli.msi，可以找到的可轉散發套件的安裝程式[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]安裝光碟，在下列位置：`%CD%\Setup\`.  
   
- 您可以透過 sqlncli.msi 散佈 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 當您部署應用程式時，可能必須安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 使用 Chainer 和 Bootstrapper 技術是安裝多個封裝 (但對使用者卻好像是單一安裝) 的一種方法。 如需詳細資訊，請參閱 <<c0> [ 撰寫的自訂啟動載入器封裝適用於 Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667)並[加入自訂的必要條件](http://go.microsoft.com/fwlink/?LinkId=115668)。  
+ 您可以透過 sqlncli.msi 散佈 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 當您部署應用程式時，可能必須安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 使用 Chainer 和 Bootstrapper 技術是安裝多個封裝 (但對使用者卻好像是單一安裝) 的一種方法。 如需詳細資訊，請參閱[撰寫適用於 Visual Studio 2005 的自訂啟動載入器套件](http://go.microsoft.com/fwlink/?LinkId=115667)和[新增自訂的必要條件](http://go.microsoft.com/fwlink/?LinkId=115668)。  
   
  x64 和 Itanium 版本的 sqlncli.msi 會安裝 32 位元版本的 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client。 如果應用程式的目標使用平台與當初開發時的平台不同，您可以從 Microsoft 下載中心下載 x64、Itanium 和 x86 版本的 sqlncli.msi。  
   

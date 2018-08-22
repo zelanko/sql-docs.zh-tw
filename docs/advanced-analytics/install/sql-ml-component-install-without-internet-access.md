@@ -1,6 +1,6 @@
 ---
-title: 安裝沒有網際網路存取的 SQL Server 機器學習服務元件 |Microsoft Docs
-description: 離線或已中斷連線 Machine Learning R 和 Pytyon 設定隔離的 SQL Server 執行個體。
+title: 安裝 SQL Server machine learning 沒有網際網路存取的 R 和 Python 元件 |Microsoft Docs
+description: 離線或已中斷連線 Machine Learning R 和 Python 安裝獨立的 SQL Server 執行個體。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546258"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437648"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>安裝 SQL Server machine learning 在沒有網際網路存取的電腦上的 R 和 Python 功能
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>安裝 SQL Server machine learning 無法存取網際網路的電腦上的 R 和 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 根據預設，連接到 Microsoft 下載網站取得必要的安裝程式和更新的元件，用於機器學習 SQL Server 上。 如果防火牆限制會防止安裝程式，使其無法到達這些站台，您可以使用網際網路連線的裝置，若要下載檔案，將檔案傳送到離線的伺服器，然後再執行安裝程式。

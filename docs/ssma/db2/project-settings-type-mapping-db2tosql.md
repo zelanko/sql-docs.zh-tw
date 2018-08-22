@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509217"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393799"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>專案設定 （類型對應） (DB2ToSQL)
-類型對應 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換成的 DB2 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料型別。  
+類型對應 頁面**專案設定** 對話方塊中包含自訂 SSMA 如何轉換成的 DB2 資料類型的設定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料型別。  
   
 類型對應 頁面位於**專案設定**並**預設專案設定**對話方塊。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "39509217"
 對應的 DB2 資料類型。  
   
 **目標類型**  
-目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]指定的 DB2 資料類型的資料類型。  
+目標[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定的 DB2 資料類型的資料類型。  
   
 請參閱下一節預設 SSMA for DB2 類型對應資料表。  
   
@@ -63,7 +63,7 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>預設引數類型和傳回值型別對應  
 下表包含引數和傳回值的預設資料類型對應。  
   
-|DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
+|DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
@@ -119,7 +119,7 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 ### <a name="default-column-type-mapping"></a>預設資料行型別對應  
 下表包含資料行的預設型別對應。  
   
-|DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
+|DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  
@@ -187,7 +187,7 @@ SSMA for DB2，在中，您可以設定引數、 資料行、 區域變數和傳
 ### <a name="default-local-variable-type-mapping"></a>預設本機變數的類型對應  
 下表包含本機變數的預設型別對應。  
   
-|DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料類型|  
+|DB2 資料類型|預設[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料類型|  
 |-----------------|-------------------------------------------------------------------------|  
 |bfile|varbinary(max)|  
 |binary_double|float [53]|  

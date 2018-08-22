@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e3ad4cad-d9eb-4824-802c-90f747b32507
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f46cd5240c3da4faa77af8ac77f94c045bb73235
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b9d7d54bbb4160f6258745a21fe2c05671aec5d8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162779"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394913"
 ---
 # <a name="in-memory-oltp-code-samples"></a>記憶體中 OLTP 程式碼範例
   本節包含示範記憶體中 OLTP 的程式碼範例：  

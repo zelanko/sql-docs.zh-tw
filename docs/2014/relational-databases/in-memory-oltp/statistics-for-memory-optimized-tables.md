@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
@@ -14,12 +13,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4722b2eb26f86537deb0283df0df384a4b565101
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8884b6af873bb2b3fcc4c54ba4f6abce90035e72
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292708"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392041"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>記憶體最佳化資料表的統計資料
   查詢最佳化工具會使用有關資料行的統計資料來建立可改善查詢效能的查詢計劃。 統計資料是從資料庫中的資料表收集，並且儲存在資料庫中繼資料內。  

@@ -1,5 +1,5 @@
 ---
-title: Power Pivot 最低權限範例 SharePoint 2016 |Microsoft 文件
+title: Power Pivot 最低權限範例-SharePoint 2016 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d57322b1aa0b0fa949bed2dcb093bbb6bea8e2e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: eac736994b104ffbce855fa1ad6761d592fccad1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016195"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392118"
 ---
-# <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot 最低權限範例 SharePoint 2016
+# <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot 最低權限範例-SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   本主題描述使用最低權限的 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 組態範例。 此組態會分別針對三個元件使用不同的帳戶，而且每個帳戶都具有最低層級的權限。  
   
 ## <a name="summary-of-accounts"></a>帳戶摘要  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 支援使用網路服務帳戶作為 Analysis Services 服務帳戶。 網路服務帳戶並非 SharePoint 2010 的支援案例。 如需有關服務帳戶的詳細資訊，請參閱[設定 Windows 服務帳戶和權限](http://msdn.microsoft.com/library/ms143504.aspx)(http://msdn.microsoft.com/library/ms143504.aspx)。  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint 2016 支援使用網路服務帳戶作為 Analysis Services 服務帳戶。 網路服務帳戶並非 SharePoint 2010 的支援案例。 如需有關服務帳戶的詳細資訊，請參閱 <<c0> [ 設定 Windows 服務帳戶與權限](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)(http://msdn.microsoft.com/library/ms143504.aspx)。  
   
  下表將摘要說明用於這個最低權限組態範例的三個帳戶。  
   

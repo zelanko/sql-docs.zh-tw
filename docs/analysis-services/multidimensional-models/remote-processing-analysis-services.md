@@ -1,5 +1,5 @@
 ---
-title: 遠端處理 (Analysis Services) |Microsoft 文件
+title: 遠端處理 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,29 +9,29 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e7afa72ef5a2f3ad9c27f0d8586b622c033be73
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022305"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393165"
 ---
 # <a name="remote-processing-analysis-services"></a>遠端處理 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   您可以執行遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體上的排程處理或自動處理，其只會處理某電腦所發出的要求，但會在同一網路中的另一部電腦上執行。  
   
-## <a name="prerequisites"></a>必要條件  
+## <a name="prerequisites"></a>先決條件  
   
 -   您的每部電腦上若各自執行不同版本的 SQL Server，則用戶端程式庫的版本與處理此模型之 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體的版本必須相符。
   
 -   遠端伺服器必須啟用 [允許遠端連線到此電腦]  ，而發出處理要求的帳戶必須列名為允許的使用者。  
   
--   Windows 防火牆規則必須設定為允許 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的傳入連線。 確認您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接遠端 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體。 請參閱 [設定 Windows 防火牆以允許 Analysis Services 存取](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
+-   Windows 防火牆規則必須設定為允許 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]的傳入連線。 確認您可以使用 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 連接遠端 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]執行個體。 請參閱 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)。  
   
 -   解決現有的本機處理錯誤，然後再嘗試遠端處理。 確認當處理要求來自本機時，可以順利從外部關聯式資料來源擷取資料。 如需指定用來擷取資料之認證相關指示，請參閱[設定模擬選項 (SSAS - 多維度)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)。  
   
 ## <a name="on-demand-remote-processing"></a>隨選遠端處理  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]接受來自使用者或應用程式帳戶所擁有的處理要求[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]系統管理員權限。 您若是系統管理員，請確認您可以連接到遠端執行個體，並可透過遠端連接手動處理資料庫。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接受具有 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 系統管理員權限之使用者或應用程式帳戶所發出的處理要求。 您若是系統管理員，請確認您可以連接到遠端執行個體，並可透過遠端連接手動處理資料庫。  
   
 1.  在要用於排程處理電腦上啟動 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ，並連接到遠端 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 執行個體。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "34022305"
   
  您可以使用下列連結來設定權限：  
   
--   [設定 SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)  
+-   [設定 SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
   
--   若無法授與[SQL Server Agent Components](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec) 權限， **SQL Server Agent Components** 建議使用替代的固定伺服器角色。  
+-   若無法授與[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md) 權限， **SQL Server Agent Components** 建議使用替代的固定伺服器角色。  
   
  設定帳戶權限之後，請繼續執行下列步驟。  
   
@@ -91,10 +91,10 @@ ms.locfileid: "34022305"
 2.  最後一個步驟是將作業修改成依照您所義的排程執行，並新增管理作業所需的警示或通知。 您也可能想要精簡處理指令碼，或在作業中建立多個步驟來單獨處理物件。  
   
 ## <a name="see-also"></a>另請參閱  
- [SQL Server Agent 元件](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)   
+ [SQL Server Agent 元件](../../ssms/agent/sql-server-agent.md)   
  [使用 SQL Server Agent 排程 SSAS 管理工作](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
- [批次處理 & #40;Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [批次方式處理&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [處理多維度模型 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [處理物件 & #40;XMLA & #41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [處理物件&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980640"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393168"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>開始使用 SSMA for Sybase 主控台 (SybaseToSQL)
 本章節描述的程序啟動並開始使用 SSMA for Sybase 主控台應用程式。 也列出本文件所使用的慣例典型的 SSMA 主控台輸出 視窗中。  
@@ -52,9 +52,9 @@ Windows 系統上成功啟動主控台後，您可以使用下列步驟，在其
   
 其他功能：  
   
-1.  [指定密碼](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)和匯出/匯入它到視窗中的其他電腦。  
+1.  [指定密碼](managing-passwords-sybasetosql.md)和匯出/匯入它到視窗中的其他電腦。  
   
-2.  [產生報表](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e)以檢視詳細的 xml 輸出的評量/轉換和資料移轉報告。 您也可以產生詳細的錯誤報表重新整理] 和 [同步處理命令。  
+2.  [產生報表](generating-reports-sybasetosql.md)以檢視詳細的 xml 輸出的評量/轉換和資料移轉報告。 您也可以產生詳細的錯誤報表重新整理] 和 [同步處理命令。  
   
 ## <a name="ssma-console-output-conventions"></a>SSMA 主控台輸出慣例  
 執行 SSMA 指令碼命令和選項，主控台程式會向使用者在主控台上顯示的結果和訊息 （資訊、 錯誤等） 或如有必要，將重新導向至 xml 輸出檔。 每一種在輸出中的訊息被以獨特的色彩。 例如，在白色文字訊息表示指令碼檔案的命令;綠色的色彩中的一個表示提示使用者輸入，依此類推。  

@@ -18,14 +18,14 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c14e4422f0033df05dc259ad180f4f2baa380e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 62c56e876a3579d136eb2bff7a594d651b4e084e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982340"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392565"
 ---
-# <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 主控台 (SybaseToSQL) 中的命令列選項
+# <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA 主控台中的命令列選項 (SybaseToSQL)
 Microsoft 為您提供一組強大的命令列選項來執行，並控制 SSMA 活動。 後續章節將詳細說明相同。  
   
 ## <a name="command-line-options-in-ssma-console"></a>SSMA 主控台中的命令列選項  
@@ -128,7 +128,7 @@ Microsoft 為您提供一組強大的命令列選項來執行，並控制 SSMA �
 ### <a name="secure-password-option-psecurepassword"></a>安全的密碼選項:-p/securepassword  
 這個選項表示伺服器連接的加密的密碼。 不同於其他所有選項： 選項或都不會執行任何指令碼有助於移轉相關的任何活動，但可協助管理移轉專案中使用的伺服器連接的密碼加密。  
   
-您無法輸入任何其他選項和密碼，做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c)一節。  
+您無法輸入任何其他選項和密碼，做為命令列參數。 否則，它會導致錯誤。 如需詳細資訊，請參閱[管理密碼](managing-passwords-sybasetosql.md)一節。  
   
 支援下列子選項`–p/securepassword`:  
   

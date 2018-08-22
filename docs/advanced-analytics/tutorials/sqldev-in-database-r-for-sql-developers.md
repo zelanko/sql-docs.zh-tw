@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8c7296c46bb6312d66c07c0bb63c9e97c37ec1db
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 16b3a19e8252e35fcefc817be2c8de11471b4eb3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082430"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392933"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>教學課程： 了解在 SQL Server 中使用 R 的資料庫內分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,17 +32,15 @@ ms.locfileid: "39082430"
 
 不過，建立解決方案之後，您可以在熟悉的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境中，使用 [!INCLUDE[tsql](../../includes/tsql-md.md)] 輕鬆地將它部署至 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]。
 
-- [第 1 課︰ 下載範例資料和指令碼](../tutorials/sqldev-download-the-sample-data.md)
+- [NYC 計程車示範資料的第 1 課： 設定](../tutorials/sqldev-download-the-sample-data.md)
 
-- [第 2 課： 設定教學課程的環境](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [第 2 課： 探索和視覺化 預存程序呼叫 R 函式的 資料圖形和散發](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [第 3 課： 探索和視覺化 預存程序呼叫 R 函式的 資料圖形和散發](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [第 4 課： 建立在 T-SQL 函式中使用 R 的資料特徵](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [第 3 課： 建立在 T-SQL 函式中使用 R 的資料特徵](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
-- [第 5 課： 訓練及儲存使用函式和預存程序的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [第 4 課： 訓練及儲存使用函式和預存程序的 R 模型](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [第 6 課： 運算化的預存程序中的換行 R 程式碼](../tutorials/sqldev-operationalize-the-model.md)。 
+- [第 5 課： 運算化的預存程序中的換行 R 程式碼](../tutorials/sqldev-operationalize-the-model.md)。 
   將模型儲存至資料庫之後，使用預存程序從 [!INCLUDE[tsql](../../includes/tsql-md.md)] 呼叫要預測的模型。
 
 ## <a name="prerequisites"></a>先決條件

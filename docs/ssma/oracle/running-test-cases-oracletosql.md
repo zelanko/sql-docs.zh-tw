@@ -13,15 +13,15 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5368db04a4f5442620a8f347608bf5aded86703b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 917f18c705c5cb0615cc5ac0b702f31372cf8a8a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982370"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393605"
 ---
 # <a name="running-test-cases-oracletosql"></a>執行測試案例 (OracleToSQL)
-當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果這兩個平台上相同的結果，測試成功。 Oracle 之間的物件的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
+當 SSMA 軟體測試人員執行測試案例時，它會執行測試所選取的物件，並建立驗證結果的相關報表。 如果這兩個平台上相同的結果，測試成功。 Oracle 之間的物件的對應和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]取決於目前的 SSMA 專案的結構描述對應設定。  
   
 Oracle 的所有物件會轉換和載入到目標資料庫的成功測試的必要需求。 此外，以便同步處理的兩個平台上的資料表內容，應該移轉資料表的資料。  
   
@@ -32,7 +32,7 @@ Oracle 的所有物件會轉換和載入到目標資料庫的成功測試的必�
   
 2.  在 [**連接到 Oracle** ] 對話方塊中，輸入連接資訊，，然後按一下**Connect**。  
   
-測試完成時，會建立測試案例報表。 按一下 **報表**按鈕，以檢視[測試案例報表](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0)。 測試 （測試案例報表） 的結果會自動儲存在[測試結果儲存機制](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)供稍後使用。  
+測試完成時，會建立測試案例報表。 按一下 **報表**按鈕，以檢視[測試案例報表](viewing-test-case-reports-oracletosql.md)。 測試 （測試案例報表） 的結果會自動儲存在[測試結果儲存機制](using-test-repositories-oracletosql.md)供稍後使用。  
   
 ## <a name="test-case-execution-steps"></a>測試案例執行步驟  
   
@@ -55,14 +55,14 @@ SSMA 軟體測試人員會檢查是否符合所有必要條件，以測試執行
 |USER_TABLE$ NEW_ID|檢視|識別已插入和已變更的資料列。|  
 |USER_TABLE$ 舊|檢視|簡化的已刪除和覆寫的資料列表示。|  
   
-在已驗證的資料表結構描述中建立下列物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。  
+在已驗證的資料表結構描述中建立下列物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
   
 ||||  
 |-|-|-|  
 |名稱|類型|描述|  
 |USER_TABLE$ Trg|觸發程序 (trigger)|稽核的變更已驗證的資料表中的觸發程序。|  
   
-下列物件會在建立和[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ssmatesterdb 資料庫中。  
+下列物件會在建立和[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb 資料庫中。  
   
 ||||  
 |-|-|-|  
