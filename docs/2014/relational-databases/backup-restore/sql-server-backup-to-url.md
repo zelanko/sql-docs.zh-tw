@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264874"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396055"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server 備份至 URL
   本主題介紹使用 Windows Azure BLOB 儲存體服務做為備份目的地所需的概念、需求及元件。 使用磁碟或磁帶時，備份和還原功能相同或類似，只有些許的差異。 這些差異在於許多顯而易見的例外狀況，本主題中將內含某些程式碼範例。  
@@ -86,9 +86,9 @@ ms.locfileid: "37264874"
   
  如需有關如何建立的逐步指示[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認證，請參閱 <<c2> [ 建立認證](#credential)本主題稍後的範例。  
   
- 如需有關認證的一般資訊，請參閱＜ [認證](http://msdn.microsoft.com/en-us/library/ms161950.aspx)＞。  
+ 如需認證的一般資訊，請參閱 [認證](../security/authentication-access/credentials-database-engine.md)  
   
- 如需有關使用認證之其他範例的詳細資訊，請參閱 [建立 SQL Server Agent Proxy](http://msdn.microsoft.com/library/ms175834.aspx)。  
+ 如需其他範例，其中會使用認證，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
 ###  <a name="limitations"></a> 限制  
   
@@ -282,7 +282,7 @@ ms.locfileid: "37264874"
 ###  <a name="credential"></a> 建立認證  
  下列範例會建立儲存 Windows Azure 儲存體驗證資訊的認證。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     IF NOT EXISTS  
@@ -327,7 +327,7 @@ ms.locfileid: "37264874"
 ###  <a name="complete"></a> 完整資料庫備份  
  下列範例會將 AdventureWorks2012 資料庫備份至 Windows Azure Blob 儲存體服務。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     BACKUP DATABASE AdventureWorks2012   
@@ -385,7 +385,7 @@ ms.locfileid: "37264874"
 ###  <a name="databaselog"></a> 備份資料庫和記錄檔  
  下列範例會備份 AdventureWorks2012 範例資料庫，依預設採用簡單復原模式。 為了支援記錄備份，AdventureWorks2012 資料庫會修改成使用完整復原模式。 此範例接著會建立 Windows Azure Blob 的完整資料庫備份，並且在更新活動一段時間之後，備份記錄。 這個範例會建立含有日期時間戳記的備份檔案名稱。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- To permit log backups, before the full database backup, modify the database   
@@ -496,7 +496,7 @@ ms.locfileid: "37264874"
 ###  <a name="filebackup"></a> 建立主要檔案群組的完整檔案備份  
  下列範例會建立主要檔案群組的完整檔案備份。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -563,7 +563,7 @@ ms.locfileid: "37264874"
 ###  <a name="differential"></a> 建立主要檔案群組的差異檔案備份  
  下列範例會建立主要檔案群組的差異檔案備份。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     --Back up the files in Primary:  
@@ -635,7 +635,7 @@ ms.locfileid: "37264874"
 ###  <a name="restoredbwithmove"></a> 將資料庫還原和移動檔案  
  若要還原完整資料庫備份並將還原的資料庫移至 C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data 目錄，請使用下列步驟。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     -- Backup the tail of the log first  
@@ -752,7 +752,7 @@ ms.locfileid: "37264874"
 ###  <a name="PITR"></a> 使用 STOPAT 還原至時間點  
  下列範例會將資料庫還原至某個時間點的狀態，並且顯示還原作業。  
   
-1.  **Tsql**  
+1.  **tsql**  
   
     ```  
     RESTORE DATABASE AdventureWorks FROM URL = 'https://mystorageaccount.blob.core.windows.net/mycontainer/AdventureWorks2012.bak'   

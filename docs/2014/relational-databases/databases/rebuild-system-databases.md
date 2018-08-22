@@ -19,12 +19,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 827bffa5df372d2f55a52b6da0fc10d169df97aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9fa625bbd9ebb661fb0ebad8b191b6075e8397
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219428"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395044"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
   您必須重建系統資料庫，才能在 [master](master-database.md)、 [model](model-database.md)、 [msdb](msdb-database.md)或 [resource](resource-database.md) 系統資料庫中修正損毀問題，或修改預設的伺服器層級定序。 本主題將提供在 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]中重建系統資料庫的逐步指示。  
@@ -109,8 +109,8 @@ ms.locfileid: "37219428"
     |/ACTION=REBUILDDATABASE|指定安裝程式要重新建立系統資料庫。|  
     |/INSTANCENAME=*InstanceName*|這是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體的名稱。 若為預設執行個體，請輸入 MSSQLSERVER。|  
     |/SQLSYSADMINACCOUNTS=*accounts*|指定要加入的 Windows 群組或個別帳戶`sysadmin`固定的伺服器角色。 指定多個帳戶時，請以空格隔開這些帳戶。 例如，您可以輸入 **BUILTIN\Administrators MyDomain\MyUser**。 當您要指定的帳戶在帳戶名稱中包含空白時，請以雙引號括住該帳戶。 例如，輸入`NT AUTHORITY\SYSTEM`。|  
-    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 帳戶的密碼。 如果執行個體使用混合驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證) 模式，這就是必要的參數。<br /><br /> **\*\* 安全性注意事項\* \* ** `sa`帳戶是已知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]惡意使用者的帳戶，而且經常目標。 它是非常重要的是，您會使用強式密碼`sa`登入。<br /><br /> 請勿針對 Windows 驗證模式指定此參數。|  
-    |[ /SQLCOLLATION=*CollationName* ]|指定新的伺服器層級定序。 這個參數是選擇性的。 如果沒有指定，就會使用伺服器的目前定序。<br /><br /> **\*\* 重要\* \* **變更伺服器層級定序不會變更現有使用者資料庫的定序。 所有新建立的使用者資料庫預設都會使用新的定序。<br /><br /> 如需詳細資訊，請參閱 [設定或變更伺服器定序](../collations/set-or-change-the-server-collation.md)。|  
+    |[ /SAPWD=*StrongPassword* ]|指定 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` 帳戶的密碼。 如果執行個體使用混合驗證 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 和 Windows 驗證) 模式，這就是必要的參數。<br /><br /> **\*\* 安全性注意事項\* \***  `sa`帳戶是已知[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]惡意使用者的帳戶，而且經常目標。 它是非常重要的是，您會使用強式密碼`sa`登入。<br /><br /> 請勿針對 Windows 驗證模式指定此參數。|  
+    |[ /SQLCOLLATION=*CollationName* ]|指定新的伺服器層級定序。 這個參數是選擇性的。 如果沒有指定，就會使用伺服器的目前定序。<br /><br /> **\*\* 重要\* \*** 變更伺服器層級定序不會變更現有使用者資料庫的定序。 所有新建立的使用者資料庫預設都會使用新的定序。<br /><br /> 如需詳細資訊，請參閱 [設定或變更伺服器定序](../collations/set-or-change-the-server-collation.md)。|  
   
 3.  當安裝程式完成系統資料庫的重建作業時，它就會返回命令提示字元，而且不會顯示任何訊息。 您可以檢查 Summary.txt 記錄檔來確認此程序是否順利完成。 這個檔案位於 C:\Program Files\Microsoft SQL Server\120\Setup Bootstrap\Logs。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "37219428"
 > [!WARNING]  
 >  重建`msdb`資料庫使用**instmsdb**指令碼將會清除所有儲存的資訊`msdb`例如作業、 警示、 運算子、 維護計畫、 備份歷程記錄、 以原則為基礎的管理設定Database Mail、 效能資料倉儲等。  
   
-1.  停止所有連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的服務，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、 [!INCLUDE[ssRS](../../includes/ssrs-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]，以及使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為資料存放區的所有應用程式。  
+1.  停止所有連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的服務，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、 [!INCLUDE[ssRS](../../includes/ssrs.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]，以及使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為資料存放區的所有應用程式。  
   
 2.  使用命令 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從命令列啟動 `NET START MSSQLSERVER /T3608`  
   

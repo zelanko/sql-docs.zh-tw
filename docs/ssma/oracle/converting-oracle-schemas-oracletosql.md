@@ -15,18 +15,18 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a87d72a0d017be9b0f6e010d8ba5344e33469aad
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 277ad816d887a7f5641d8d37e7bdc60dc7ddb28a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982440"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394437"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>轉換 Oracle 結構描述 (OracleToSQL)
-您已經連接到 Oracle 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，並設定專案和對應的資料選項，您可以將轉換至 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]資料庫物件。  
+您已經連接到 Oracle 之後，連接到[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並設定專案和對應的資料選項，您可以將轉換至 Oracle 資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]資料庫物件。  
   
 ## <a name="the-conversion-process"></a>轉換程序  
-轉換的資料庫物件從 Oracle 取得的物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管。  
+轉換的資料庫物件從 Oracle 取得的物件定義、 將它們轉換成類似[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件，並接著將這項資訊載入至 SSMA 中繼資料。 它不會載入到執行個體資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 您接著可以檢視的物件和其屬性，使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管。  
   
 在轉換期間 SSMA 會列印訊息輸出至 [輸出] 窗格和 [錯誤清單] 窗格中的錯誤訊息。 使用輸出和錯誤的資訊來判斷是否需要修改您的 Oracle 資料庫或您的轉換程序，以便取得所需的轉換結果。  
   
@@ -34,13 +34,13 @@ ms.locfileid: "38982440"
 在轉換前的物件，檢閱中的專案轉換選項**專案設定** 對話方塊。 藉由使用這個對話方塊中，您可以設定 SSMA 如何將轉換函式和全域變數。 如需詳細資訊，請參閱 <<c0> [ 專案設定&#40;轉換&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)。</c0>  
   
 ## <a name="conversion-results"></a>轉換結果  
-下表顯示哪些 Oracle 物件會轉換，並產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]物件：  
+下表顯示哪些 Oracle 物件會轉換，並產生[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]物件：  
   
 |||  
 |-|-|  
 |Oracle 物件|產生的 SQL Server 物件|  
-|函數|如果函式可以直接轉換成[!INCLUDE[tsql](../../includes/tsql_md.md)]，SSMA 建立函式。<br /><br />在某些情況下，函式必須轉換成預存程序。 在此情況下，SSMA 所建立的預存程序和函式來呼叫預存程序。|  
-|程序|如果此程序可以直接轉換成[!INCLUDE[tsql](../../includes/tsql_md.md)]，SSMA 建立預存程序。<br /><br />在某些情況下，必須在自發交易中呼叫預存程序。 在此情況下，SSMA 會建立兩個預存程序： 實作程序，和另一個則用來呼叫實作的其中一個預存程序。|  
+|函數|如果函式可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 建立函式。<br /><br />在某些情況下，函式必須轉換成預存程序。 在此情況下，SSMA 所建立的預存程序和函式來呼叫預存程序。|  
+|程序|如果此程序可以直接轉換成[!INCLUDE[tsql](../../includes/tsql-md.md)]，SSMA 建立預存程序。<br /><br />在某些情況下，必須在自發交易中呼叫預存程序。 在此情況下，SSMA 會建立兩個預存程序： 實作程序，和另一個則用來呼叫實作的其中一個預存程序。|  
 |Packages|SSMA 會建立一組預存程序和已整合在一起以類似的物件名稱的函式。|  
 |序列|SSMA 建立順序物件 （SQL Server 2012 或 SQL Server 2014），或模擬 Oracle 序列。|  
 |具有相依的物件，例如索引和觸發程序的資料表|SSMA 會建立資料表，與相依的物件。|  
@@ -110,14 +110,14 @@ ms.locfileid: "38982440"
   
 每個項目無法轉換，您必須決定您想要與該物件：  
   
--   您可以在修改程序的原始程式碼**SQL** 索引標籤。  
+-   您可以在修改程序的原始程式碼**SQL**  索引標籤。  
   
 -   您可以修改以移除或修改有問題的程式碼的 Oracle 資料庫中的物件。 若要更新的程式碼載入 SSMA 中，您必須更新的中繼資料。 如需詳細資訊，請參閱 <<c0> [ 連接到 Oracle 資料庫&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md)。</c0>  
   
--   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管]，Oracle 中繼資料總管 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]並將資料從 Oracle 移轉。  
+-   您可以從移轉排除的物件。 在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管]，Oracle 中繼資料總管 中，清除項目旁的核取方塊，然後再載入到物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並將資料從 Oracle 移轉。  
   
 ## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](http://msdn.microsoft.com/a8ae33b2-1883-4785-922b-ea0e31c0b37a)。  
+移轉程序的下一個步驟是[已轉換的物件載入 SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
 [移轉的 Oracle 資料庫到 SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

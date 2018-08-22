@@ -36,30 +36,30 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6ef01985c9c2cd020384bb4c6c57fe4766be0ea0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 56c600b88c9c1b3237a92887d68cb338ae17058d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985690"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395511"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>已轉換的資料庫物件載入至 SQL Server (AccessToSQL)
-轉換到存取資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，您可以載入到產生的資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以讓 SSMA 建立物件，或者您可以編寫物件指令碼，然後自己執行的指令碼。 此外，SSMA 可讓您更新目標中繼資料的實際內容[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫。  
+轉換到存取資料庫物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，您可以載入到產生的資料庫物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以讓 SSMA 建立物件，或者您可以編寫物件指令碼，然後自己執行的指令碼。 此外，SSMA 可讓您更新目標中繼資料的實際內容[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫。  
   
 ## <a name="choosing-between-synchronization-and-scripts"></a>同步處理和指令碼之間進行選擇  
-如果您想要轉換之資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，而不需修改，您可以讓 SSMA 上直接建立或重新建立資料庫物件。 該方法既快速又簡單，但不允許的自訂[!INCLUDE[tsql](../../includes/tsql_md.md)]定義的程式碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或預存程序以外的 SQL Azure 物件。  
+如果您想要轉換之資料庫物件載入至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，而不需修改，您可以讓 SSMA 上直接建立或重新建立資料庫物件。 該方法既快速又簡單，但不允許的自訂[!INCLUDE[tsql](../../includes/tsql-md.md)]定義的程式碼[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或預存程序以外的 SQL Azure 物件。  
   
-如果您想要修改[!INCLUDE[tsql](../../includes/tsql_md.md)]用來建立物件，或如果您想要更充分掌控物件建立時，使用 SSMA 建立指令碼。 您可以修改這些指令碼，會個別建立每個物件然後甚至使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Agent 來排程建立這些物件。  
+如果您想要修改[!INCLUDE[tsql](../../includes/tsql-md.md)]用來建立物件，或如果您想要更充分掌控物件建立時，使用 SSMA 建立指令碼。 您可以修改這些指令碼，會個別建立每個物件然後甚至使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 來排程建立這些物件。  
   
 ## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>使用 SSMA 與 SQL Server 同步處理物件  
-要用來建立的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 資料庫物件，您選取的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管，然後再同步處理的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，如下列程序中所示。 根據預設，如果物件已存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure，而且如果 SSMA 中繼資料有一些本機變更或更新這些非常的物件，定義則 SSMA 會改變中的物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure。 您可以變更預設行為，藉由編輯**專案設定**。  
+要用來建立的 SSMA[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 資料庫物件，您選取的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管，然後再同步處理的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，如下列程序中所示。 根據預設，如果物件已存在於[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure，而且如果 SSMA 中繼資料有一些本機變更或更新這些非常的物件，定義則 SSMA 會改變中的物件定義[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure。 您可以變更預設行為，藉由編輯**專案設定**。  
   
 > [!NOTE]  
-> 您可以選取現有的[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或未轉換從 Access 資料庫的 SQL Azure 資料庫物件。 不過，SSMA 會無法重新建立或改變這些物件。  
+> 您可以選取現有的[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或未轉換從 Access 資料庫的 SQL Azure 資料庫物件。 不過，SSMA 會無法重新建立或改變這些物件。  
   
 **若要同步處理的物件，與 SQL Server 或 SQL Azure**  
   
-1.  在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管，展開最上方[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 節點中，然後展開**資料庫**。  
+1.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管]，展開最上方[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 節點中，然後展開**資料庫**。  
   
 2.  選取要處理的物件：  
   
@@ -67,7 +67,7 @@ ms.locfileid: "38985690"
   
     -   若要同步處理，或省略個別物件或類別目錄的物件，選取或清除的物件或資料夾旁邊的核取方塊。  
   
-3.  選取要處理的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 中繼資料總管，以滑鼠右鍵按一下**資料庫**，然後按一下**同步處理資料庫**。  
+3.  選取要處理的物件之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 中繼資料總管，以滑鼠右鍵按一下**資料庫**，然後按一下**同步處理資料庫**。  
   
     您也可同步個別物件或類別目錄的物件，該物件或其父資料夾上按一下滑鼠右鍵，然後按一下**同步處理資料庫**。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "38985690"
     按一下動作正負號，以變更狀態。 當您按一下時，將會執行實際的同步處理 **[確定]** 按鈕**同步處理資料庫**對話方塊。  
   
 ## <a name="scripting-objects"></a>編寫物件指令碼  
-如果您想要儲存[!INCLUDE[tsql](../../includes/tsql_md.md)]定義的轉換後的資料庫物件，或您想要變更的物件定義和執行指令碼自行，您可以儲存轉換的資料庫物件定義以便[!INCLUDE[tsql](../../includes/tsql_md.md)]指令碼。  
+如果您想要儲存[!INCLUDE[tsql](../../includes/tsql-md.md)]定義的轉換後的資料庫物件，或您想要變更的物件定義和執行指令碼自行，您可以儲存轉換的資料庫物件定義以便[!INCLUDE[tsql](../../includes/tsql-md.md)]指令碼。  
   
 **若要將一或多個物件儲存到指令碼**  
   
-1.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]中繼資料總管] 中，展開最上層節點 （伺服器名稱），然後展開**資料庫**。  
+1.  在 [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中繼資料總管] 中，展開最上層節點 （伺服器名稱），然後展開**資料庫**。  
   
 2.  請進行下列任一或多項操作：  
   
@@ -109,26 +109,26 @@ ms.locfileid: "38985690"
     SSMA 會將附加的.sql 檔案的副檔名。  
   
 ### <a name="modifying-scripts"></a>修改指令碼  
-在您儲存後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]或 SQL Azure 做為指令碼的物件定義，您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]修改指令碼。  
+在您儲存後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]或 SQL Azure 做為指令碼的物件定義，您可以使用[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]修改指令碼。  
   
 **若要修改指令碼**  
   
-1.  在[!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
+1.  在[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
 2.  在 [**開放**] 對話方塊中，找出並選取您的指令碼檔案，然後按一下**確定**。  
   
 3.  使用查詢編輯器中編輯指令碼檔案。  
   
-    查詢編輯器的詳細資訊，請參閱 [編輯器便利命令和功能]，在[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
+    查詢編輯器的詳細資訊，請參閱 [編輯器便利命令和功能]，在[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 4.  若要儲存指令碼，在 [檔案] 功能表上，選取**儲存**。  
   
 ### <a name="running-scripts"></a>執行指令碼  
-您可以在執行指令碼或個別的陳述式， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]。  
+您可以在執行指令碼或個別的陳述式， [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]。  
   
 **若要執行指令碼**  
   
-1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
+1.  在[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**檔案**功能表上，指向**開啟**，然後按一下 **檔案**。  
   
 2.  在 [**開放**] 對話方塊中，找出並選取您的指令碼檔案，然後按一下**確定**。  
   
@@ -136,16 +136,16 @@ ms.locfileid: "38985690"
   
 4.  若要執行一組陳述式，選取陳述式在查詢編輯器 視窗，然後按**F5**索引鍵。  
   
-如需如何使用查詢編輯器來執行指令碼的詳細資訊，請參閱 「[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)]查詢 」 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
+如需如何使用查詢編輯器來執行指令碼的詳細資訊，請參閱 「[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]查詢 」 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
-您也可以執行從命令列指令碼，利用**sqlcmd**公用程式，以及從[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式。 如需詳細資訊**sqlcmd**，請參閱中的 「 sqlcmd 公用程式 」[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式，請參閱 「 自動化管理工作 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]代理程式)"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
+您也可以執行從命令列指令碼，利用**sqlcmd**公用程式，以及從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式。 如需詳細資訊**sqlcmd**，請參閱中的 「 sqlcmd 公用程式 」[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。 如需詳細資訊[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式，請參閱 「 自動化管理工作 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]代理程式)"中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 ## <a name="securing-objects-in-sql-server"></a>保護 SQL Server 中的物件  
-轉換的資料庫物件載入之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，您可以授與和拒絕權限，這些物件。 它是個不錯的主意，若要這樣做之前移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]。 如需有關如何協助保護資訊中的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]，請參閱 「 安全性考量的資料庫和資料庫應用程式 > 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]線上叢書 》。  
+轉換的資料庫物件載入之後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，您可以授與和拒絕權限，這些物件。 它是個不錯的主意，若要這樣做之前移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 如需有關如何協助保護資訊中的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，請參閱 「 安全性考量的資料庫和資料庫應用程式 > 中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]線上叢書 》。  
   
 ## <a name="next-step"></a>下一個步驟  
-移轉程序的下一個步驟是[將資料移轉至 SQL Server](http://msdn.microsoft.com/f3b18af7-1af0-499d-a00d-a0af94895625)。  
+移轉程序的下一個步驟是[將資料移轉至 SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md)。  
   
 ## <a name="see-also"></a>另請參閱  
-[將 Access 資料庫移轉至 SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[將 Access 資料庫移轉至 SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

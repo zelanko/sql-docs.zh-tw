@@ -16,12 +16,12 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bd49900daf397575c90be86d0370f47824cc4d8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3906ad56ae1a1bbe3de023d81228f6fc135dc7d5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150519"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40396451"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>在原生模式報表伺服器上設定 SSL 連接
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 原生模式會使用 HTTP SSL (安全通訊端層) 服務來建立與報表伺服器的加密連接。 如果您在報表伺服器電腦的本機憑證存放區內有安裝憑證 (.cer) 檔案，您可以將此憑證繫結到 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 保留項目，以便透過加密通道支援報表伺服器連接。  
@@ -36,7 +36,7 @@ ms.locfileid: "37150519"
   
  如果是為了測試，您可以在本機產生憑證。 如果您使用 **MakeCert** 公用程式和範例命令當做範本，請務必將伺服器名稱指定為主機，並在執行此命令之前先移除所有分行符號。 如果您在 DOS 視窗中執行此命令，可能需要增加視窗的緩衝區大小，以容納整個命令。  
   
- 如果您在同一部電腦上一起執行 IIS 和 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ，您可以使用 [!INCLUDE[iismgr](../../includes/iismgr-md.md)] 主控台應用程式來取得電腦上所安裝的憑證。 [!INCLUDE[iismgr](../../includes/iismgr-md.md)] 包括了一些選項，可讓您建立及封裝憑證要求 (.crt) 檔案，以供信任的憑證授權單位進行後續處理。 您所使用的憑證授權單位將會產生憑證 (.cer) 檔案，並將它送回給您。 您可以使用 IIS 管理主控台，將憑證檔案安裝在本機存放區。 如需詳細資訊，請參閱 TechNet 上的 [使用 SSL 將機密資料加密](http://go.microsoft.com/fwlink/?LinkId=71123) 。  
+ 如果您執行 IIS 和[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]一起在相同的電腦，您可以使用 IIS 管理員主控台應用程式來取得電腦上安裝的憑證。 IIS 管理員中包含建立及封裝憑證要求 (.crt) 檔案進行後續處理由受信任的憑證授權單位的選項。 您所使用的憑證授權單位將會產生憑證 (.cer) 檔案，並將它送回給您。 您可以使用 IIS 管理主控台，將憑證檔案安裝在本機存放區。 如需詳細資訊，請參閱 TechNet 上的 [使用 SSL 將機密資料加密](http://go.microsoft.com/fwlink/?LinkId=71123) 。  
   
 ## <a name="interoperability-issues-with-iis"></a>與 IIS 的互通性問題  
  與 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 相同的電腦上有存在 IIS，將會大幅影響與報表伺服器的 SSL 連接。  

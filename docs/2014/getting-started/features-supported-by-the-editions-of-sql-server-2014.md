@@ -20,12 +20,12 @@ caps.latest.revision: 126
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02aa7277a06857f415143fd4497b0971773a03b6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312308"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392260"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 各版本所支援的功能
   本主題提供不同 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]版本所支援功能的詳細資料。  
@@ -446,7 +446,7 @@ ms.locfileid: "37312308"
   
 |功能名稱|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]|是|是|是|||||  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|是|是|是|||||  
 |適用於 Excel 及 Visio 2010 的資料採礦增益集|是|是|是|||||  
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|是|是||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|是|是||||||  
