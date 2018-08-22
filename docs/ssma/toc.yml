@@ -1,7 +1,6 @@
+items:
 - name: SQL Server 移轉小幫手
   href: sql-server-migration-assistant.md
-- name: 新文章及更新的文章
-  href: new-updated-ssma.md
 - name: Access +
   href: ../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
 - name: DB2 +
@@ -12,3 +11,9 @@
   href: ../ssma/oracle/installing-ssma-for-oracle-oracletosql.md
 - name: Sybase +
   href: ../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md
+ms.openlocfilehash: 97e44d5cbb4eff6435dce0aa97e09e14b3c98953
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40427329"

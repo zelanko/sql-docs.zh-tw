@@ -1,49 +1,40 @@
+items:
 - name: 歡迎使用
   href: sql-server-technical-documentation.md
 - name: 概觀
   items:
-    - name: SQL Server 2016 的新功能
-      href: what-s-new-in-sql-server-2016.md
-    - name: SQL Server 2017 的新功能
-      href: what-s-new-in-sql-server-2017.md
-    - name: SQL Server 2016 的版本及支援功能
-      href: editions-and-components-of-sql-server-2016.md
-    - name: SQL Server 2017 的版本及支援功能
-      href: editions-and-components-of-sql-server-2017.md
-    - name: SQL Server 的最大容量規格
-      href: maximum-capacity-specifications-for-sql-server.md
-    - name: SQL Server 版本的計算容量限制
-      href: compute-capacity-limits-by-edition-of-sql-server.md
-    - name: 客戶經驗改進計畫
-      href: customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: 設定 SQL Server 以將意見反應傳送給 Microsoft
-      href: sql-server-customer-feedback.md
-    - name: 合作夥伴
-      items:
-        - name: 監視
-          href: partner-monitor-sql-server.md
-        - name: 高可用性和災害復原
-          href: partner-hadr-sql-server.md
-        - name: 管理
-          href: partner-management-sql-server.md
-        - name: 部署
-          href: partner-dev-sql-server.md
-- name: 新文章及更新的文章
+  - name: SQL Server 2016 的新功能
+    href: what-s-new-in-sql-server-2016.md
+  - name: SQL Server 2017 的新功能
+    href: what-s-new-in-sql-server-2017.md
+  - name: SQL Server 2016 的版本及支援功能
+    href: editions-and-components-of-sql-server-2016.md
+  - name: SQL Server 2017 的版本及支援功能
+    href: editions-and-components-of-sql-server-2017.md
+  - name: SQL Server 的最大容量規格
+    href: maximum-capacity-specifications-for-sql-server.md
+  - name: SQL Server 版本的計算容量限制
+    href: compute-capacity-limits-by-edition-of-sql-server.md
+  - name: 客戶經驗改進計畫
+    href: customer-experience-improvement-program-for-sql-server-data-tools.md
+  - name: 設定 SQL Server 以將意見反應傳送給 Microsoft
+    href: sql-server-customer-feedback.md
+- name: 新增及更新的文章
   href: new-updated-sql-server.md
 - name: 版本資訊
   items:
-    - name: SQL Server 2017 資訊
-      href: sql-server-2017-release-notes.md
-    - name: SQL Server 2016 資訊
-      href: sql-server-2016-release-notes.md
-    - name: SQL Server 2014 資訊
-      href: sql-server-2014-release-notes.md
-    - name: SQL Server 2012 Service Pack 版本資訊
-      href: sql-server-2012-sp4-release-notes.md
-    - name: SQL Server 2012 資訊
-      href: sql-server-2012-release-notes.md
-    - name: SQL Server 2008 R2 SP2 資訊
-      href: sql-server-2008-r2-sp2-release-notes.md
+  - name: SQL Server 2017 資訊
+    href: sql-server-2017-release-notes.md
+  - name: SQL Server 2016 資訊
+    href: sql-server-2016-release-notes.md
+  - name: SQL Server 2014 資訊
+    href: sql-server-2014-release-notes.md
+  - name: SQL Server 2012 Service Pack 版本資訊
+    href: sql-server-2012-sp4-release-notes.md
+  - name: SQL Server 2012 資訊
+    href: sql-server-2012-release-notes.md
+  - name: SQL Server 2008 R2 SP2 資訊
+    href: sql-server-2008-r2-sp2-release-notes.md
 - name: Linux 上的 SQL Server
   href: ../linux/sql-server-linux-overview.md
 - name: Analysis Services
@@ -76,35 +67,51 @@
   href: ../tools/overview-sql-tools.md
 - name: 資源
   items:
-    - name: 部落格
-      items:
-        - name: '[SQL Server]'
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server Database Engine
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server 安全性
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: 學習
-      items:
-        - name: Microsoft Virtual Academy
-          href: 'https://mva.microsoft.com/product-training/sql-server#!lang=1033'
-        - name: SQL 在 Channel 9
-          href: 'https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year'
-    - name: 意見反應及說明
-      items:
-        - name: 參與編輯 SQL 文件！
-          href: sql-server-docs-contribute.md
-        - name: UserVoice - 建議 SQL Server 改善
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: DBA Stack Exchange
-          href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow
-          href: 'http://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 論壇
-          href: 'https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver'
-        - name: Reddit
-          href: 'https://www.reddit.com/r/SQLServer'
-    - name: 使用 Help Viewer 的本機內容
-      href: sql-server-help-installation.md
+  - name: 部落格
+    items:
+    - name: '[SQL Server]'
+      href: https://blogs.technet.microsoft.com/dataplatforminsider/
+    - name: SQL Server Database Engine
+      href: https://blogs.msdn.microsoft.com/sqlserverstorageengine/
+    - name: SQL Server 安全性
+      href: https://blogs.msdn.microsoft.com/sqlsecurity/
+    - name: SQL Server Data Tools
+      href: https://blogs.msdn.microsoft.com/ssdt/
+  - name: 學習
+    items:
+    - name: Microsoft Virtual Academy
+      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+    - name: SQL 在 Channel 9
+      href: https://channel9.msdn.com/Search?term=sql#ch9Search&lang-en=en&pubDate=year
+  - name: 意見反應及說明
+    items:
+    - name: 參與編輯 SQL 文件！
+      href: sql-server-docs-contribute.md
+    - name: UserVoice - 建議 SQL Server 改善
+      href: https://feedback.azure.com/forums/908035-sql-server
+    - name: DBA Stack Exchange
+      href: https://dba.stackexchange.com/questions/tagged/sql-server
+    - name: Stack Overflow
+      href: http://stackoverflow.com/questions/tagged/sql-server
+    - name: MSDN 論壇
+      href: https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver
+    - name: Reddit
+      href: https://www.reddit.com/r/SQLServer
+  - name: 合作夥伴
+    items:
+    - name: 監視
+      href: partner-monitor-sql-server.md
+    - name: 高可用性和災害復原
+      href: partner-hadr-sql-server.md
+    - name: 管理
+      href: partner-management-sql-server.md
+    - name: 部署
+      href: partner-dev-sql-server.md
+  - name: 使用 Help Viewer 的本機內容
+    href: sql-server-help-installation.md
+ms.openlocfilehash: 0d29421fad73e4a36283ad042c5e467abb7a8a75
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40427357"
