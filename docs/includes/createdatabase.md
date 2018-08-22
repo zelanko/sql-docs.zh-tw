@@ -4,4 +4,4 @@
  [透過 Azure 入口網站迅速建立 SQL 資料庫](https://azure.microsoft.com/documentation/articles/sql-database-get-started/)
  
  ## <a name="microsoft-sql-server"></a>Microsoft SQL Server 
- [CodePlex 上的 Microsoft SQL Server 資料庫產品範例 (英文)](http://msftdbprodsamples.codeplex.com/)
+ [在 GitHub 上的 Microsoft SQL Server 範例](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)
