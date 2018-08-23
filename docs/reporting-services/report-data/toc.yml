@@ -70,8 +70,6 @@ items:
   href: store-credentials-in-a-reporting-services-data-source.md
 - name: 從 SharePoint 網站更新報表資料來源的認證
   href: update-credentials-in-report-data-sources-from-a-sharepoint-site.md
-- name: 輸入資料來源認證對話方塊
-  href: enter-data-source-credentials-dialog-box-report-builder.md
 - name: 為自訂資料處理延伸模組指定連接
   href: specify-connections-for-custom-data-processing-extensions.md
 - name: 將報表或模型繫結至共用資料來源
@@ -140,9 +138,9 @@ items:
     href: dataset-properties-dialog-box-query-report-builder.md
   - name: 報表內嵌資料集和共用資料集
     href: report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md
-ms.openlocfilehash: 6bbd47205998e0b16b44f4e98cfe6d02718713bb
-ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.openlocfilehash: c39c31507d2f09585fac426cf6f864516853359b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2018
-ms.locfileid: "40427288"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432450"
