@@ -56,7 +56,7 @@ ms.locfileid: "39456192"
 
 如需語法慣例的詳細資訊，請參閱 [Transact-SQL 語法慣例](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。 
 
-# <a name="sql-servertabsqlserver"></a>[[SQL Server]](#tab/sqlserver)
+# <a name="sql-servertabsqlserver"></a>[SQL Server](#tab/sqlserver)
 
 ## <a name="overview"></a>概觀
 
