@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e98809ab3981cc1af2482ef518be3ddfc639a574
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047120"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "40406153"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Reporting Services 報表轉譯問題疑難排解
 結合報表資料與配置資訊之後，編譯完的報表會傳送到報表轉譯器。 例如，當您在本機預覽報表時，您會使用 HTML 轉譯器來檢視已編譯的報表。 您可以使用本主題來協助疑難排解有關報表轉譯的問題。   
@@ -78,5 +78,5 @@ ms.locfileid: "38047120"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
