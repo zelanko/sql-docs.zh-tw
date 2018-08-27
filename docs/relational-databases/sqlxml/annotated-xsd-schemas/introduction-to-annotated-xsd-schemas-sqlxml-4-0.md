@@ -51,7 +51,7 @@ ms.locfileid: "39564512"
 </xsd:schema>  
 ```  
   
- **\<2&gt;xsd:schema&lt;2} >** 元素衍生自 XML 結構描述命名空間規格，在http://www.w3.org/2001/XMLSchema。  
+ **\<2&gt;xsd:schema&lt;2} >** 元素衍生自 XML 結構描述命名空間規格，在 http://www.w3.org/2001/XMLSchema 。  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 結構描述的註解  
  您可以使用 XSD 結構描述搭配描述資料庫對應的註解、查詢資料庫，並且以 XML 文件的格式傳回結果。 提供註解的目的是要將 XSD 結構描述對應至資料庫資料表和資料行。 您可以針對 XSD 結構描述所建立的 XML 檢視指定 XPath 查詢來查詢資料庫，並以 XML 的格式取得結果。  

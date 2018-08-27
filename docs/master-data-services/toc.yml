@@ -1,409 +1,414 @@
+items:
 - name: 簡介
   href: master-data-services-overview-mds.md
 - name: 概觀
   items:
-    - name: Master Data Services 的新增功能
-      href: what-s-new-in-master-data-services-mds.md
-    - name: 新文章及更新的文章
-      href: new-updated-master-data-services.md
-    - name: 學習 SQL Server Master Data Services
-      href: learn-sql-server-master-data-services.md
-    - name: SQL Server 範例：模型部署套件 (MDS)
-      href: sql-server-samples-model-deployment-packages-mds.md
-    - name: SQL Server 2016 版本支援的 Master Data Services 和 Data Quality Services 功能
-      href: master-data-services-and-data-quality-services-features-support.md
-    - name: 回溯相容性 (Master Data Services)
-      href: backward-compatibility-master-data-services.md
-    - name: 取代的 Master Data Services 功能
-      href: deprecated-master-data-services-features.md
-    - name: 已停止的 Master Data Services 功能
-      href: discontinued-master-data-services-features.md
+  - name: Master Data Services 的新增功能
+    href: what-s-new-in-master-data-services-mds.md
+  - name: 學習 SQL Server Master Data Services
+    href: learn-sql-server-master-data-services.md
+  - name: SQL Server 範例：模型部署套件 (MDS)
+    href: sql-server-samples-model-deployment-packages-mds.md
+  - name: SQL Server 2016 版本支援的 Master Data Services 和 Data Quality Services 功能
+    href: master-data-services-and-data-quality-services-features-support.md
+  - name: 回溯相容性 (Master Data Services)
+    href: backward-compatibility-master-data-services.md
+  - name: 取代的 Master Data Services 功能
+    href: deprecated-master-data-services-features.md
+  - name: 已停止的 Master Data Services 功能
+    href: discontinued-master-data-services-features.md
 - name: 安裝和設定
   href: master-data-services-installation-and-configuration.md
   items:
-    - name: Install-windows
-      href: ../master-data-services/install-windows/install-master-data-services.md
-    - name: 在 AlwaysOn 安裝的技術白皮書
-      href: installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md
-    - name: Master Data Services 伺服器組態頁面
-      href: server-configuration-mds-configuration-manager.md
-    - name: 資料庫組態頁面
-      href: database-configuration-page-master-data-services-configuration-manager.md
+  - name: Install-windows
+    href: ../master-data-services/install-windows/install-master-data-services.md
+  - name: 在 AlwaysOn 安裝的技術白皮書
+    href: installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md
+  - name: Master Data Services 伺服器組態頁面
+    href: server-configuration-mds-configuration-manager.md
+  - name: 資料庫組態頁面
+    href: database-configuration-page-master-data-services-configuration-manager.md
 - name: 功能及工作
   href: master-data-services-features-and-tasks.md
   items:
-    - name: 連接到 Master Data Services 資料庫對話方塊
-      href: connect-to-a-master-data-services-database-dialog-box.md
-    - name: 建立資料庫精靈
-      href: create-database-wizard-master-data-services-configuration-manager.md
-    - name: 升級資料庫精靈
-      href: upgrade-database-wizard-master-data-services-configuration-manager.md
-    - name: 建立 Database Mail 設定檔和帳戶對話方塊
-      href: create-database-mail-profile-and-account-dialog-box.md
-    - name: Web 組態頁面
-      href: web-configuration-page-master-data-services-configuration-manager.md
-    - name: 建立 Web 應用程式對話方塊
-      href: create-web-application-dialog-box-master-data-services-configuration-manager.md
-    - name: 建立網站對話方塊
-      href: create-website-dialog-box-master-data-services-configuration-manager.md
-    - name: Web 組態參考
-      href: web-configuration-reference-master-data-services.md
-    - name: 適用於 Microsoft Excel 的增益集
-      href: ../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
-    - name: 模型
-      href: models-master-data-services.md
+  - name: 連接到 Master Data Services 資料庫對話方塊
+    href: connect-to-a-master-data-services-database-dialog-box.md
+  - name: 建立資料庫精靈
+    href: create-database-wizard-master-data-services-configuration-manager.md
+  - name: 升級資料庫精靈
+    href: upgrade-database-wizard-master-data-services-configuration-manager.md
+  - name: 建立 Database Mail 設定檔和帳戶對話方塊
+    href: create-database-mail-profile-and-account-dialog-box.md
+  - name: Web 組態頁面
+    href: web-configuration-page-master-data-services-configuration-manager.md
+  - name: 建立 Web 應用程式對話方塊
+    href: create-web-application-dialog-box-master-data-services-configuration-manager.md
+  - name: 建立網站對話方塊
+    href: create-website-dialog-box-master-data-services-configuration-manager.md
+  - name: Web 組態參考
+    href: web-configuration-reference-master-data-services.md
+  - name: 適用於 Microsoft Excel 的增益集
+    href: ../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
+  - name: 模型
+    href: models-master-data-services.md
+    items:
+    - name: 建立模型
+      href: create-a-model-master-data-services.md
+    - name: 編輯模型
+      href: edit-model-master-data-services.md
+    - name: 刪除模型
+      href: delete-a-model-master-data-services.md
+  - name: 實體
+    href: entities-master-data-services.md
+    items:
+    - name: Entity Dependencies (實體相依性) 總管
+      href: entity-dependencies-explorer.md
+    - name: 建立實體
+      href: create-an-entity-master-data-services.md
+    - name: 編輯實體
+      href: edit-an-entity-master-data-services.md
+    - name: 刪除實體
+      href: delete-an-entity-master-data-services.md
+    - name: 實體同步關聯性
+      href: entity-sync-relationship-master-data-services.md
+    - name: 建立及執行實體同步關係
+      href: create-and-execute-an-entity-sync-relationship-master-data-services.md
+    - name: 編輯和刪除實體同步關係
+      href: edit-and-delete-an-entity-sync-relationship-master-data-services.md
+    - name: 需要核准
+      href: approval-required-master-data-services.md
+  - name: 自訂索引
+    href: custom-index-master-data-services.md
+    items:
+    - name: 建立索引
+      href: create-an-index-master-data-services.md
+    - name: 編輯和刪除索引
+      href: edit-and-delete-an-index-master-data-services.md
+  - name: 屬性
+    href: attributes-master-data-services.md
+    items:
+    - name: 建立文字屬性
+      href: create-a-text-attribute-master-data-services.md
+    - name: 建立數值屬性
+      href: create-a-numeric-attribute-master-data-services.md
+    - name: 建立日期屬性
+      href: create-a-date-attribute-master-data-services.md
+    - name: 建立連結屬性
+      href: create-a-link-attribute-master-data-services.md
+    - name: 建立檔案屬性
+      href: create-a-file-attribute-master-data-services.md
+    - name: 變更屬性名稱和類型
+      href: change-an-attribute-name-and-data-type-master-data-services.md
+    - name: 刪除屬性
+      href: delete-an-attribute-master-data-services.md
+    - name: 變更屬性的順序
+      href: change-the-order-of-attributes.md
+  - name: 網域屬性
+    href: domain-based-attributes-master-data-services.md
+    items:
+    - name: 建立網域屬性
+      href: create-a-domain-based-attribute-master-data-services.md
+  - name: 屬性群組
+    href: attribute-groups-master-data-services.md
+    items:
+    - name: 建立屬性群組
+      href: create-an-attribute-group-master-data-services.md
+    - name: 讓使用者看到屬性群組
+      href: make-an-attribute-group-visible-to-users-master-data-services.md
+    - name: 變更屬性群組名稱
+      href: change-an-attribute-group-name-master-data-services.md
+    - name: 刪除屬性群組
+      href: delete-an-attribute-group-master-data-services.md
+  - name: 概觀：從資料表匯入資料 (Master Data Services)
+    href: overview-importing-data-from-tables-master-data-services.md
+    items:
+    - name: 從資料表匯入資料 (Master Data Services)
+      href: import-data-from-tables-master-data-services.md
+    - name: 檢視暫存期間發生的錯誤
+      href: view-errors-that-occur-during-staging-master-data-services.md
+    - name: 分葉成員暫存資料表
+      href: leaf-member-staging-table-master-data-services.md
+    - name: 合併成員暫存資料表
+      href: consolidated-member-staging-table-master-data-services.md
+    - name: 關聯性暫存資料表
+      href: relationship-staging-table-master-data-services.md
+    - name: 暫存預存程序
+      href: staging-stored-procedure-master-data-services.md
+    - name: 暫存處理序錯誤
+      href: staging-process-errors-master-data-services.md
+    - name: 匯入狀態
+      href: import-statuses-master-data-services.md
+  - name: 成員
+    href: members-master-data-services.md
+    items:
+    - name: 建立分葉成員
+      href: create-a-leaf-member-master-data-services.md
+    - name: Create a Consolidated Member
+      href: create-a-consolidated-member-master-data-services.md
+    - name: 刪除成員或集合
+      href: delete-a-member-or-collection-master-data-services.md
+    - name: 重新啟用成員或集合
+      href: reactivate-a-member-or-collection-master-data-services.md
+    - name: 篩選運算子
+      href: filter-operators-master-data-services.md
+    - name: 合併衝突
+      href: merge-conflicts-master-data-services.md
+  - name: 保留字
+    href: reserved-words-master-data-services.md
+  - name: 自動建立代碼
+    href: automatic-code-creation-master-data-services.md
+    items:
+    - name: 自動產生 Code 屬性值
+      href: automatically-generate-code-attribute-values-master-data-services.md
+    - name: 自動產生 Code 以外的屬性值
+      href: automatically-generate-attribute-values-other-than-code-master-data-services.md
+  - name: 商務規則
+    href: business-rules-master-data-services.md
+    items:
+    - name: 建立及發行商務規則
+      href: create-and-publish-a-business-rule-master-data-services.md
+    - name: 將多個條件加入至商務規則
+      href: add-multiple-conditions-to-a-business-rule-master-data-services.md
+    - name: 要求屬性值
+      href: require-attribute-values-master-data-services.md
+    - name: 變更商務規則名稱
+      href: change-a-business-rule-name-master-data-services.md
+    - name: 設定商務規則來傳送通知
+      href: configure-business-rules-to-send-notifications-master-data-services.md
+    - name: 根據商務規則驗證特定成員
+      href: validate-specific-members-against-business-rules-master-data-services.md
+    - name: 排除商務規則
+      href: exclude-a-business-rule-master-data-services.md
+    - name: 刪除商務規則
+      href: delete-a-business-rule-master-data-services.md
+    - name: 商務規則條件
+      href: business-rule-conditions-master-data-services.md
+    - name: 商務規則動作
+      href: business-rule-actions-master-data-services.md
+    - name: Business Rules Extension
+      href: business-rules-extension-master-data-services.md
+    - name: 商務規則範例 (Master Data Services)
+      href: business-rule-examples-master-data-services.md
+  - name: 變更集
+    href: changesets-master-data-services.md
+    items:
+    - name: 建立變更集
+      href: create-a-changeset-master-data-services.md
+    - name: 套用及更新變更集
+      href: apply-and-update-a-changeset-master-data-services.md
+    - name: 認可或提交變更集
+      href: commit-or-submit-a-changeset-master-data-services.md
+    - name: 核准或拒絕變更集
+      href: approve-or-reject-a-changeset-master-data-services.md
+    - name: 管理變更集
+      href: manage-changesets-master-data-services.md
+  - name: 通知
+    href: notifications-master-data-services.md
+    items:
+    - name: 設定電子郵件通知
+      href: configure-email-notifications-master-data-services.md
+  - name: 交易
+    href: transactions-master-data-services.md
+    items:
+    - name: 反轉交易
+      href: reverse-a-transaction-master-data-services.md
+    - name: 變更實體交易記錄類型
+      href: change-the-entity-transaction-log-type-master-data-services.md
+    - name: 成員修訂歷程記錄
+      href: member-revision-history-master-data-services.md
+    - name: 回復成員修訂歷程記錄
+      href: rollback-member-revision-history-master-data-services.md
+  - name: 註解
+    href: annotations-master-data-services.md
+    items:
+    - name: 為交易加上註解
+      href: annotate-a-transaction-master-data-services.md
+  - name: 階層
+    href: hierarchies-master-data-services.md
+    items:
+    - name: 明確階層
+      href: explicit-hierarchies-master-data-services.md
       items:
-        - name: 建立模型
-          href: create-a-model-master-data-services.md
-        - name: 編輯模型
-          href: edit-model-master-data-services.md
-        - name: 刪除模型
-          href: delete-a-model-master-data-services.md
-    - name: 實體
-      href: entities-master-data-services.md
+      - name: 建立明確階層
+        href: create-an-explicit-hierarchy-master-data-services.md
+      - name: 變更明確階層名稱
+        href: change-an-explicit-hierarchy-name-master-data-services.md
+      - name: 刪除明確階層
+        href: delete-an-explicit-hierarchy-master-data-services.md
+    - name: 衍生階層
+      href: derived-hierarchies-master-data-services.md
       items:
-        - name: Entity Dependencies (實體相依性) 總管
-          href: entity-dependencies-explorer.md
-        - name: 建立實體
-          href: create-an-entity-master-data-services.md
-        - name: 編輯實體
-          href: edit-an-entity-master-data-services.md
-        - name: 刪除實體
-          href: delete-an-entity-master-data-services.md
-        - name: 實體同步關聯性
-          href: entity-sync-relationship-master-data-services.md
-        - name: 建立及執行實體同步關係
-          href: create-and-execute-an-entity-sync-relationship-master-data-services.md
-        - name: 編輯和刪除實體同步關係
-          href: edit-and-delete-an-entity-sync-relationship-master-data-services.md
-        - name: 需要核准
-          href: approval-required-master-data-services.md
-    - name: 自訂索引
-      href: custom-index-master-data-services.md
+      - name: 遞迴階層
+        href: recursive-hierarchies-master-data-services.md
+      - name: 包含明確頂層的衍生階層
+        href: derived-hierarchies-with-explicit-caps-master-data-services.md
+      - name: 建立衍生階層
+        href: create-a-derived-hierarchy-master-data-services.md
+      - name: 隱藏或刪除衍生階層中的層級
+        href: hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md
+      - name: 變更衍生階層名稱
+        href: change-a-derived-hierarchy-name-master-data-services.md
+      - name: 刪除衍生階層
+        href: delete-a-derived-hierarchy-master-data-services.md
+      - name: 在衍生階層中顯示多對多關聯性
+        href: show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md
+  - name: 集合
+    href: collections-master-data-services.md
+    items:
+    - name: 建立集合
+      href: create-a-collection-master-data-services.md
+    - name: 將成員加入至集合
+      href: add-members-to-a-collection-master-data-services.md
+  - name: 概觀：匯出資料 (Master Data Services)
+    href: overview-exporting-data-master-data-services.md
+    items:
+    - name: 建立訂閱檢視以匯出資料 (Master Data Services)
+      href: create-a-subscription-view-to-export-data-master-data-services.md
+    - name: 刪除訂閱檢視
+      href: delete-a-subscription-view-master-data-services.md
+    - name: 訂閱檢視格式
+      href: subscription-view-formats-master-data-services.md
+  - name: 版本
+    href: versions-master-data-services.md
+    items:
+    - name: 變更版本名稱
+      href: change-a-version-name-master-data-services.md
+    - name: 鎖定版本
+      href: lock-a-version-master-data-services.md
+    - name: 解除鎖定版本
+      href: unlock-a-version-master-data-services.md
+    - name: 認可版本
+      href: commit-a-version-master-data-services.md
+    - name: 建立版本旗標
+      href: create-a-version-flag-master-data-services.md
+    - name: 變更版本旗標名稱
+      href: change-a-version-flag-name-master-data-services.md
+    - name: 將旗標指派給版本
+      href: assign-a-flag-to-a-version-master-data-services.md
+    - name: 複製版本
+      href: copy-a-version-master-data-services.md
+    - name: 刪除版本
+      href: delete-a-version-master-data-services.md
+    - name: 清除版本成員
+      href: purge-version-members-master-data-services.md
+  - name: 驗證
+    href: validation-master-data-services.md
+    items:
+    - name: 根據商務規則驗證版本
+      href: validate-a-version-against-business-rules-master-data-services.md
+    - name: 驗證狀態
+      href: validation-statuses-master-data-services.md
+    - name: 驗證預存程序
+      href: validation-stored-procedure-master-data-services.md
+  - name: 部署模型
+    href: deploying-models-master-data-services.md
+    items:
+    - name: 使用精靈建立模型部署封裝
+      href: create-a-model-deployment-package-by-using-the-wizard.md
+    - name: 使用 MDSModelDeploy 建立模型部署封裝
+      href: create-a-model-deployment-package-by-using-mdsmodeldeploy.md
+    - name: 模型部署選項
+      href: model-deployment-options-master-data-services.md
+    - name: 使用精靈部署模型部署封裝
+      href: deploy-a-model-deployment-package-by-using-the-wizard.md
+    - name: 使用 MDSModelDeploy 部署模型部署封裝
+      href: deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
+    - name: 編輯模型部署封裝
+      href: edit-a-model-deployment-package.md
+  - name: Security
+    href: security-master-data-services.md
+    items:
+    - name: 系統管理員
+      href: administrators-master-data-services.md
       items:
-        - name: 建立索引
-          href: create-an-index-master-data-services.md
-        - name: 編輯和刪除索引
-          href: edit-and-delete-an-index-master-data-services.md
-    - name: 屬性
-      href: attributes-master-data-services.md
+      - name: 建立模型管理員
+        href: create-a-model-administrator-master-data-services.md
+      - name: 建立實體管理員 (Master Data Services)
+        href: create-an-entity-administrator-master-data-services.md
+    - name: 使用者和群組
+      href: users-and-groups-master-data-services.md
       items:
-        - name: 建立文字屬性
-          href: create-a-text-attribute-master-data-services.md
-        - name: 建立數值屬性
-          href: create-a-numeric-attribute-master-data-services.md
-        - name: 建立日期屬性
-          href: create-a-date-attribute-master-data-services.md
-        - name: 建立連結屬性
-          href: create-a-link-attribute-master-data-services.md
-        - name: 建立檔案屬性
-          href: create-a-file-attribute-master-data-services.md
-        - name: 變更屬性名稱和類型
-          href: change-an-attribute-name-and-data-type-master-data-services.md
-        - name: 刪除屬性
-          href: delete-an-attribute-master-data-services.md
-        - name: 變更屬性的順序
-          href: change-the-order-of-attributes.md
-    - name: 網域屬性
-      href: domain-based-attributes-master-data-services.md
+      - name: 加入使用者
+        href: add-a-user-master-data-services.md
+      - name: 加入群組
+        href: add-a-group-master-data-services.md
+      - name: 變更使用者的電子郵件地址
+        href: change-a-user-s-email-address-master-data-services.md
+      - name: 刪除使用者或群組
+        href: delete-users-or-groups-master-data-services.md
+    - name: 功能區域權限
+      href: functional-area-permissions-master-data-services.md
       items:
-        - name: 建立網域屬性
-          href: create-a-domain-based-attribute-master-data-services.md
-    - name: 屬性群組
-      href: attribute-groups-master-data-services.md
+      - name: 指派功能區域權限
+        href: assign-functional-area-permissions-master-data-services.md
+    - name: 模型物件權限
+      href: model-object-permissions-master-data-services.md
       items:
-        - name: 建立屬性群組
-          href: create-an-attribute-group-master-data-services.md
-        - name: 讓使用者看到屬性群組
-          href: make-an-attribute-group-visible-to-users-master-data-services.md
-        - name: 變更屬性群組名稱
-          href: change-an-attribute-group-name-master-data-services.md
-        - name: 刪除屬性群組
-          href: delete-an-attribute-group-master-data-services.md
-    - name: 概觀：從資料表匯入資料 (Master Data Services)
-      href: overview-importing-data-from-tables-master-data-services.md
+      - name: 指派模型物件權限
+        href: assign-model-object-permissions-master-data-services.md
+      - name: 刪除模型物件權限
+        href: delete-model-object-permissions-master-data-services.md
+      - name: 模型權限
+        href: model-permissions-master-data-services.md
+      - name: 實體權限
+        href: entity-permissions-master-data-services.md
+      - name: 分葉權限
+        href: leaf-permissions-master-data-services.md
+      - name: 集合權限
+        href: collection-permissions-master-data-services.md
+      - name: 導覽存取權
+        href: navigational-access-master-data-services.md
+    - name: 階層成員權限
+      href: hierarchy-member-permissions-master-data-services.md
       items:
-        - name: 從資料表匯入資料 (Master Data Services)
-          href: import-data-from-tables-master-data-services.md
-        - name: 檢視暫存期間發生的錯誤
-          href: view-errors-that-occur-during-staging-master-data-services.md
-        - name: 分葉成員暫存資料表
-          href: leaf-member-staging-table-master-data-services.md
-        - name: 合併成員暫存資料表
-          href: consolidated-member-staging-table-master-data-services.md
-        - name: 關聯性暫存資料表
-          href: relationship-staging-table-master-data-services.md
-        - name: 暫存預存程序
-          href: staging-stored-procedure-master-data-services.md
-        - name: 暫存處理序錯誤
-          href: staging-process-errors-master-data-services.md
-        - name: 匯入狀態
-          href: import-statuses-master-data-services.md
-    - name: 成員
-      href: members-master-data-services.md
-      items:
-        - name: 建立分葉成員
-          href: create-a-leaf-member-master-data-services.md
-        - name: Create a Consolidated Member
-          href: create-a-consolidated-member-master-data-services.md
-        - name: 刪除成員或集合
-          href: delete-a-member-or-collection-master-data-services.md
-        - name: 重新啟用成員或集合
-          href: reactivate-a-member-or-collection-master-data-services.md
-        - name: 篩選運算子
-          href: filter-operators-master-data-services.md
-        - name: 合併衝突
-          href: merge-conflicts-master-data-services.md
-    - name: 保留字
-      href: reserved-words-master-data-services.md
-    - name: 自動建立代碼
-      href: automatic-code-creation-master-data-services.md
-      items:
-        - name: 自動產生 Code 屬性值
-          href: automatically-generate-code-attribute-values-master-data-services.md
-        - name: 自動產生 Code 以外的屬性值
-          href: automatically-generate-attribute-values-other-than-code-master-data-services.md
-    - name: 商務規則
-      href: business-rules-master-data-services.md
-      items:
-        - name: 建立及發行商務規則
-          href: create-and-publish-a-business-rule-master-data-services.md
-        - name: 將多個條件加入至商務規則
-          href: add-multiple-conditions-to-a-business-rule-master-data-services.md
-        - name: 要求屬性值
-          href: require-attribute-values-master-data-services.md
-        - name: 變更商務規則名稱
-          href: change-a-business-rule-name-master-data-services.md
-        - name: 設定商務規則來傳送通知
-          href: configure-business-rules-to-send-notifications-master-data-services.md
-        - name: 根據商務規則驗證特定成員
-          href: validate-specific-members-against-business-rules-master-data-services.md
-        - name: 排除商務規則
-          href: exclude-a-business-rule-master-data-services.md
-        - name: 刪除商務規則
-          href: delete-a-business-rule-master-data-services.md
-        - name: 商務規則條件
-          href: business-rule-conditions-master-data-services.md
-        - name: 商務規則動作
-          href: business-rule-actions-master-data-services.md
-        - name: Business Rules Extension
-          href: business-rules-extension-master-data-services.md
-        - name: 商務規則範例 (Master Data Services)
-          href: business-rule-examples-master-data-services.md
-    - name: 變更集
-      href: changesets-master-data-services.md
-      items:
-        - name: 建立變更集
-          href: create-a-changeset-master-data-services.md
-        - name: 套用及更新變更集
-          href: apply-and-update-a-changeset-master-data-services.md
-        - name: 認可或提交變更集
-          href: commit-or-submit-a-changeset-master-data-services.md
-        - name: 核准或拒絕變更集
-          href: approve-or-reject-a-changeset-master-data-services.md
-        - name: 管理變更集
-          href: manage-changesets-master-data-services.md
-    - name: 通知
-      href: notifications-master-data-services.md
-      items:
-        - name: 設定電子郵件通知
-          href: configure-email-notifications-master-data-services.md
-    - name: 交易
-      href: transactions-master-data-services.md
-      items:
-        - name: 反轉交易
-          href: reverse-a-transaction-master-data-services.md
-        - name: 變更實體交易記錄類型
-          href: change-the-entity-transaction-log-type-master-data-services.md
-        - name: 成員修訂歷程記錄
-          href: member-revision-history-master-data-services.md
-        - name: 回復成員修訂歷程記錄
-          href: rollback-member-revision-history-master-data-services.md
-    - name: 註解
-      href: annotations-master-data-services.md
-      items:
-        - name: 為交易加上註解
-          href: annotate-a-transaction-master-data-services.md
-    - name: 階層
-      href: hierarchies-master-data-services.md
-      items:
-        - name: 明確階層
-          href: explicit-hierarchies-master-data-services.md
-          items:
-            - name: 建立明確階層
-              href: create-an-explicit-hierarchy-master-data-services.md
-            - name: 變更明確階層名稱
-              href: change-an-explicit-hierarchy-name-master-data-services.md
-            - name: 刪除明確階層
-              href: delete-an-explicit-hierarchy-master-data-services.md
-        - name: 衍生階層
-          href: derived-hierarchies-master-data-services.md
-          items:
-            - name: 遞迴階層
-              href: recursive-hierarchies-master-data-services.md
-            - name: 包含明確頂層的衍生階層
-              href: derived-hierarchies-with-explicit-caps-master-data-services.md
-            - name: 建立衍生階層
-              href: create-a-derived-hierarchy-master-data-services.md
-            - name: 隱藏或刪除衍生階層中的層級
-              href: hide-or-delete-levels-in-a-derived-hierarchy-master-data-services.md
-            - name: 變更衍生階層名稱
-              href: change-a-derived-hierarchy-name-master-data-services.md
-            - name: 刪除衍生階層
-              href: delete-a-derived-hierarchy-master-data-services.md
-            - name: 在衍生階層中顯示多對多關聯性
-              href: show-many-to-many-relationships-in-derived-hierarchies-master-data-services.md
-    - name: 集合
-      href: collections-master-data-services.md
-      items:
-        - name: 建立集合
-          href: create-a-collection-master-data-services.md
-        - name: 將成員加入至集合
-          href: add-members-to-a-collection-master-data-services.md
-    - name: 概觀：匯出資料 (Master Data Services)
-      href: overview-exporting-data-master-data-services.md
-      items:
-        - name: 建立訂閱檢視以匯出資料 (Master Data Services)
-          href: create-a-subscription-view-to-export-data-master-data-services.md
-        - name: 刪除訂閱檢視
-          href: delete-a-subscription-view-master-data-services.md
-        - name: 訂閱檢視格式
-          href: subscription-view-formats-master-data-services.md
-    - name: 版本
-      href: versions-master-data-services.md
-      items:
-        - name: 變更版本名稱
-          href: change-a-version-name-master-data-services.md
-        - name: 鎖定版本
-          href: lock-a-version-master-data-services.md
-        - name: 解除鎖定版本
-          href: unlock-a-version-master-data-services.md
-        - name: 認可版本
-          href: commit-a-version-master-data-services.md
-        - name: 建立版本旗標
-          href: create-a-version-flag-master-data-services.md
-        - name: 變更版本旗標名稱
-          href: change-a-version-flag-name-master-data-services.md
-        - name: 將旗標指派給版本
-          href: assign-a-flag-to-a-version-master-data-services.md
-        - name: 複製版本
-          href: copy-a-version-master-data-services.md
-        - name: 刪除版本
-          href: delete-a-version-master-data-services.md
-        - name: 清除版本成員
-          href: purge-version-members-master-data-services.md
-    - name: 驗證
-      href: validation-master-data-services.md
-      items:
-        - name: 根據商務規則驗證版本
-          href: validate-a-version-against-business-rules-master-data-services.md
-        - name: 驗證狀態
-          href: validation-statuses-master-data-services.md
-        - name: 驗證預存程序
-          href: validation-stored-procedure-master-data-services.md
-    - name: 部署模型
-      href: deploying-models-master-data-services.md
-      items:
-        - name: 使用精靈建立模型部署封裝
-          href: create-a-model-deployment-package-by-using-the-wizard.md
-        - name: 使用 MDSModelDeploy 建立模型部署封裝
-          href: create-a-model-deployment-package-by-using-mdsmodeldeploy.md
-        - name: 模型部署選項
-          href: model-deployment-options-master-data-services.md
-        - name: 使用精靈部署模型部署封裝
-          href: deploy-a-model-deployment-package-by-using-the-wizard.md
-        - name: 使用 MDSModelDeploy 部署模型部署封裝
-          href: deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md
-        - name: 編輯模型部署封裝
-          href: edit-a-model-deployment-package.md
-    - name: Security
-      href: security-master-data-services.md
-      items:
-        - name: 系統管理員
-          href: administrators-master-data-services.md
-          items:
-            - name: 建立模型管理員
-              href: create-a-model-administrator-master-data-services.md
-            - name: 建立實體管理員 (Master Data Services)
-              href: create-an-entity-administrator-master-data-services.md
-        - name: 使用者和群組
-          href: users-and-groups-master-data-services.md
-          items:
-            - name: 加入使用者
-              href: add-a-user-master-data-services.md
-            - name: 加入群組
-              href: add-a-group-master-data-services.md
-            - name: 變更使用者的電子郵件地址
-              href: change-a-user-s-email-address-master-data-services.md
-            - name: 刪除使用者或群組
-              href: delete-users-or-groups-master-data-services.md
-        - name: 功能區域權限
-          href: functional-area-permissions-master-data-services.md
-          items:
-            - name: 指派功能區域權限
-              href: assign-functional-area-permissions-master-data-services.md
-        - name: 模型物件權限
-          href: model-object-permissions-master-data-services.md
-          items:
-            - name: 指派模型物件權限
-              href: assign-model-object-permissions-master-data-services.md
-            - name: 刪除模型物件權限
-              href: delete-model-object-permissions-master-data-services.md
-            - name: 模型權限
-              href: model-permissions-master-data-services.md
-            - name: 實體權限
-              href: entity-permissions-master-data-services.md
-            - name: 分葉權限
-              href: leaf-permissions-master-data-services.md
-            - name: 集合權限
-              href: collection-permissions-master-data-services.md
-            - name: 導覽存取權
-              href: navigational-access-master-data-services.md
-        - name: 階層成員權限
-          href: hierarchy-member-permissions-master-data-services.md
-          items:
-            - name: 指派階層成員權限
-              href: assign-hierarchy-member-permissions-master-data-services.md
-            - name: 立即套用成員權限
-              href: immediately-apply-member-permissions-master-data-services.md
-            - name: 刪除階層成員權限
-              href: delete-hierarchy-member-permissions-master-data-services.md
-        - name: 如何判斷權限
-          href: how-permissions-are-determined-master-data-services.md
-        - name: 重疊的模型和成員的權限
-          href: overlapping-model-and-member-permissions-master-data-services.md
-        - name: 重疊的使用者和群組的權限
-          href: overlapping-user-and-group-permissions-master-data-services.md
-        - name: 測試使用者的權限
-          href: test-a-user-s-permissions-master-data-services.md
+      - name: 指派階層成員權限
+        href: assign-hierarchy-member-permissions-master-data-services.md
+      - name: 立即套用成員權限
+        href: immediately-apply-member-permissions-master-data-services.md
+      - name: 刪除階層成員權限
+        href: delete-hierarchy-member-permissions-master-data-services.md
+    - name: 如何判斷權限
+      href: how-permissions-are-determined-master-data-services.md
+    - name: 重疊的模型和成員的權限
+      href: overlapping-model-and-member-permissions-master-data-services.md
+    - name: 重疊的使用者和群組的權限
+      href: overlapping-user-and-group-permissions-master-data-services.md
+    - name: 測試使用者的權限
+      href: test-a-user-s-permissions-master-data-services.md
 - name: 技術參考 (Master Data Services)
   href: technical-reference-master-data-services.md
   items:
-    - name: Master Data Services 資料庫
-      href: master-data-services-database.md
-      items:
-        - name: 系統設定
-          href: system-settings-master-data-services.md
-        - name: 資料庫物件安全性
-          href: database-object-security-master-data-services.md
-        - name: 資料庫登入、使用者和角色
-          href: database-logins-users-and-roles-master-data-services.md
-    - name: 主資料管理員 Web 應用程式
-      href: master-data-manager-web-application.md
-      items:
-        - name: 總管功能區域
-          href: explorer-functional-area-master-data-manager.md
-        - name: 版本管理功能區域
-          href: version-management-functional-area-master-data-manager.md
-        - name: 整合管理功能區域
-          href: integration-management-functional-area-master-data-manager.md
-        - name: 系統管理功能區域
-          href: system-administration-functional-area-master-data-manager.md
-        - name: 使用者及群組的權限功能區域
-          href: user-and-group-permissions-functional-area-master-data-manager.md
-        - name: 資料夾和檔案
-          href: folder-and-file-permissions-master-data-services.md
-    - name: 追蹤
-      href: tracing-master-data-services.md
+  - name: Master Data Services 資料庫
+    href: master-data-services-database.md
+    items:
+    - name: 系統設定
+      href: system-settings-master-data-services.md
+    - name: 資料庫物件安全性
+      href: database-object-security-master-data-services.md
+    - name: 資料庫登入、使用者和角色
+      href: database-logins-users-and-roles-master-data-services.md
+  - name: 主資料管理員 Web 應用程式
+    href: master-data-manager-web-application.md
+    items:
+    - name: 總管功能區域
+      href: explorer-functional-area-master-data-manager.md
+    - name: 版本管理功能區域
+      href: version-management-functional-area-master-data-manager.md
+    - name: 整合管理功能區域
+      href: integration-management-functional-area-master-data-manager.md
+    - name: 系統管理功能區域
+      href: system-administration-functional-area-master-data-manager.md
+    - name: 使用者及群組的權限功能區域
+      href: user-and-group-permissions-functional-area-master-data-manager.md
+    - name: 資料夾和檔案
+      href: folder-and-file-permissions-master-data-services.md
+  - name: 追蹤
+    href: tracing-master-data-services.md
 - name: MDS 的開發人員文章
   href: ../master-data-services/develop/categorized-web-service-operations-master-data-services.md
+ms.openlocfilehash: b4c218064d48143ae0d912fcc4db97da32fed033
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899558"

@@ -1,16 +1,15 @@
+items:
 - name: 什麼是 SSMS？
   href: sql-server-management-studio-ssms.md
 - name: 下載 SSMS
   href: download-sql-server-management-studio-ssms.md
   items:
-    - name: SSMS 變更記錄和先前的版本
-      href: sql-server-management-studio-changelog-ssms.md
-    - name: 版本資訊
-      href: 'download-sql-server-management-studio-ssms.md#release-notes'
-    - name: 安裝非英文版 SSMS
-      href: install-other-languages.md
-    - name: 新文章及更新的文章
-      href: new-updated-ssms.md
+  - name: SSMS 變更記錄和先前的版本
+    href: sql-server-management-studio-changelog-ssms.md
+  - name: 版本資訊
+    href: download-sql-server-management-studio-ssms.md#release-notes
+  - name: 安裝非英文版 SSMS
+    href: install-other-languages.md
 - name: 安裝 SQL Server PowerShell 模組
   href: ../powershell/download-sql-server-ps-module.md?toc=/sql/ssms/toc.json
 - name: SQL Server Agent +
@@ -81,3 +80,9 @@
   href: sql-server-management-studio-keyboard-shortcuts.md
 - name: 匿名的使用量資料
   href: sql-server-management-studio-telemetry-ssms.md
+ms.openlocfilehash: 82996fe6b504a872c7eba7f662e30519400f3c1e
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899687"

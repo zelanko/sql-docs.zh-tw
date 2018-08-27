@@ -1,7 +1,6 @@
+items:
 - name: Microsoft 開放式資料庫連接 (ODBC)
   href: microsoft-open-database-connectivity-odbc.md
-- name: 新增及更新的文章
-  href: new-updated-odbc.md
 - name: Microsoft ODBC Drivers +
   href: ../odbc/microsoft/microsoft-supplied-odbc-drivers.md
 - name: ODBC 管理 +
@@ -14,3 +13,9 @@
   href: odbcconf-exe.md
 - name: ODBC 詞彙
   href: odbc-glossary.md
+ms.openlocfilehash: 0a6709bd630ef6859d9d0fceaa0b65fffae08f8f
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899478"

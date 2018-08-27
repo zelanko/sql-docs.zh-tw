@@ -1,34 +1,39 @@
+items:
 - name: 範例概觀
   href: sql-samples-where-are.md
 - name: 所有 Github 範例 +
-  href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
+  href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
 - name: AdventureWorks
   items:
-    - name: 安裝和設定
-      href: adventureworks-install-configure.md
+  - name: 安裝和設定
+    href: adventureworks-install-configure.md
 - name: Wide World Importers
   items:
-    - name: 概觀
-      href: wide-world-importers-what-is.md
-    - name: OLTP
-      items:
-        - name: 資料庫目錄
-          href: wide-world-importers-oltp-database-catalog.md
-        - name: 安裝和設定
-          href: wide-world-importers-oltp-install-configure.md
-        - name: SQL Server 功能
-          href: wide-world-importers-oltp-use-of-sql-server-features.md
-    - name: 資料倉儲 (data warehouse)
-      items:
-        - name: 資料庫目錄
-          href: wide-world-importers-dw-database-catalog.md
-        - name: 安裝和設定
-          href: wide-world-importers-dw-install-configure.md
-        - name: SQL Server 功能
-          href: wide-world-importers-dw-use-of-sql-server-features.md
-    - name: 產生資料
-      href: wide-world-importers-generate-data.md
-    - name: ETL 工作流程
-      href: wide-world-importers-perform-etl.md
-- name: 新文章及更新的文章
-  href: new-updated-samples.md
+  - name: 概觀
+    href: wide-world-importers-what-is.md
+  - name: OLTP
+    items:
+    - name: 資料庫目錄
+      href: wide-world-importers-oltp-database-catalog.md
+    - name: 安裝和設定
+      href: wide-world-importers-oltp-install-configure.md
+    - name: SQL Server 功能
+      href: wide-world-importers-oltp-use-of-sql-server-features.md
+  - name: 資料倉儲 (data warehouse)
+    items:
+    - name: 資料庫目錄
+      href: wide-world-importers-dw-database-catalog.md
+    - name: 安裝和設定
+      href: wide-world-importers-dw-install-configure.md
+    - name: SQL Server 功能
+      href: wide-world-importers-dw-use-of-sql-server-features.md
+  - name: 產生資料
+    href: wide-world-importers-generate-data.md
+  - name: ETL 工作流程
+    href: wide-world-importers-perform-etl.md
+ms.openlocfilehash: 3be68b3b2141a78f5dc476474398ab8292130e92
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899468"

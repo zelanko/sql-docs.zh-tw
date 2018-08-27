@@ -1,9 +1,8 @@
+items:
 - name: 與 SQL Server 互動的程式設計
   href: homepage-sql-connection-programming.md
 - name: SQL Server 驅動程式
   href: sql-connection-libraries.md
-- name: 新文章及更新的文章
-  href: new-updated-connect.md
 - name: SQL Server 驅動程式歷程記錄
   href: connect-history.md
 - name: ADO.NET +
@@ -26,3 +25,9 @@
   href: ../ado/microsoft-activex-data-objects-ado.md
 - name: SQL 資料開發人員
   href: sql-data-developer.md
+ms.openlocfilehash: 918eea6f04b74f72be00fe2b22611caace176885
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899352"

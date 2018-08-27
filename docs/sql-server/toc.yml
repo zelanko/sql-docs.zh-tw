@@ -19,8 +19,6 @@ items:
     href: customer-experience-improvement-program-for-sql-server-data-tools.md
   - name: 設定 SQL Server 以將意見反應傳送給 Microsoft
     href: sql-server-customer-feedback.md
-- name: 新增及更新的文章
-  href: new-updated-sql-server.md
 - name: 版本資訊
   items:
   - name: SQL Server 2017 資訊
@@ -109,9 +107,9 @@ items:
       href: partner-dev-sql-server.md
   - name: 使用 Help Viewer 的本機內容
     href: sql-server-help-installation.md
-ms.openlocfilehash: 0d29421fad73e4a36283ad042c5e467abb7a8a75
-ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
+ms.openlocfilehash: 7240a64139ace201d03a158abad3af87e42ef9b5
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40427357"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899458"

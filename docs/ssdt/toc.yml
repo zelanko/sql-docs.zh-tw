@@ -1,9 +1,8 @@
+items:
 - name: SQL Server Data Tools (SSDT)
   href: sql-server-data-tools.md
 - name: 下載 SSDT
   href: download-sql-server-data-tools-ssdt.md
-- name: 新增及更新的文章
-  href: new-updated-ssdt.md
 - name: SSDT 的變更記錄
   href: changelog-for-sql-server-data-tools-ssdt.md
 - name: 資料層應用程式架構 - 授權條款
@@ -21,174 +20,180 @@
 - name: 專案導向的離線資料庫開發
   href: project-oriented-offline-database-development.md
   items:
-    - name: 匯入資料庫專案中
-      href: import-into-a-database-project.md
-    - name: 加入資料庫參考對話方塊
-      href: add-database-reference-dialog-box.md
-    - name: 檢查更新檔對話方塊
-      href: check-for-updates-dialog-box.md
-    - name: 資料庫專案設定
-      href: database-project-settings.md
-    - name: HOW TO：瀏覽 SQL Server 資料庫專案中的物件
-      href: how-to-browse-objects-in-a-sql-server-database-project.md
-    - name: 資料工具作業視窗
-      href: data-tools-operations-window.md
-    - name: Transact-SQL 編輯器選項
-      href: transact-sql-editor-options.md
-    - name: 如何：建立新的資料庫專案
-      href: how-to-create-a-new-database-project.md
-    - name: 如何：使用結構描述比較，比較不同的資料庫定義
-      href: how-to-use-schema-compare-to-compare-different-database-definitions.md
-    - name: 如何：建置及部署至本機資料庫
-      href: how-to-build-and-deploy-to-a-local-database.md
-    - name: 如何：在專案中使用 Microsoft SQL Server 2012 物件
-      href: how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
-    - name: 如何：使用 CLR 資料庫物件
-      href: how-to-work-with-clr-database-objects.md
-    - name: 如何：建立專案的快照集
-      href: how-to-create-a-snapshot-of-a-project.md
-    - name: 如何：變更目標平台及發行資料庫專案
-      href: how-to-change-target-platform-and-publish-a-database-project.md
-    - name: HOW TO：將 Visual Studio 2010 資料庫專案轉換成 SQL Server 資料庫專案並重定目標為不同平台
-      href: how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
-    - name: HOW TO：指定預先部署或部署後指令碼
-      href: how-to-specify-predeployment-or-postdeployment-scripts.md
+  - name: 匯入資料庫專案中
+    href: import-into-a-database-project.md
+  - name: 加入資料庫參考對話方塊
+    href: add-database-reference-dialog-box.md
+  - name: 檢查更新檔對話方塊
+    href: check-for-updates-dialog-box.md
+  - name: 資料庫專案設定
+    href: database-project-settings.md
+  - name: HOW TO：瀏覽 SQL Server 資料庫專案中的物件
+    href: how-to-browse-objects-in-a-sql-server-database-project.md
+  - name: 資料工具作業視窗
+    href: data-tools-operations-window.md
+  - name: Transact-SQL 編輯器選項
+    href: transact-sql-editor-options.md
+  - name: 如何：建立新的資料庫專案
+    href: how-to-create-a-new-database-project.md
+  - name: 如何：使用結構描述比較，比較不同的資料庫定義
+    href: how-to-use-schema-compare-to-compare-different-database-definitions.md
+  - name: 如何：建置及部署至本機資料庫
+    href: how-to-build-and-deploy-to-a-local-database.md
+  - name: 如何：在專案中使用 Microsoft SQL Server 2012 物件
+    href: how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
+  - name: 如何：使用 CLR 資料庫物件
+    href: how-to-work-with-clr-database-objects.md
+  - name: 如何：建立專案的快照集
+    href: how-to-create-a-snapshot-of-a-project.md
+  - name: 如何：變更目標平台及發行資料庫專案
+    href: how-to-change-target-platform-and-publish-a-database-project.md
+  - name: HOW TO：將 Visual Studio 2010 資料庫專案轉換成 SQL Server 資料庫專案並重定目標為不同平台
+    href: how-to-convert-visual-studio-2010-database-projects-to-ssql-server-projects.md
+  - name: HOW TO：指定預先部署或部署後指令碼
+    href: how-to-specify-predeployment-or-postdeployment-scripts.md
 - name: 使用命令列工具進行專案導向的資料庫開發
   href: project-oriented-database-development-using-command-line-tools.md
   items:
-    - name: SqlPackage.exe
-      href: ../tools/sqlpackage.md
-    - name: 搭配 dbSqlPackage 提供者使用 MSDeploy
-      href: using-msdeploy-with-dbsqlpackage-provider.md
+  - name: SqlPackage.exe
+    href: ../tools/sqlpackage.md
+  - name: 搭配 dbSqlPackage 提供者使用 MSDeploy
+    href: using-msdeploy-with-dbsqlpackage-provider.md
 - name: 連接的資料庫開發
   href: connected-database-development.md
   items:
-    - name: 如何：連接到資料庫及瀏覽現有的物件
-      href: how-to-connect-to-a-database-and-browse-existing-objects.md
-    - name: 如何：使用資料表設計工具建立資料庫物件
-      href: how-to-create-database-objects-using-table-designer.md
-    - name: 如何：使用 Power Buffer 更新連接的資料庫
-      href: how-to-update-a-connected-database-with-power-buffer.md
-    - name: 篩選與排序對話方塊
-      href: filter-and-sort-dialog-box.md
-    - name: 如何：使用查詢建立新的資料庫物件
-      href: how-to-create-new-database-objects-using-queries.md
-    - name: 如何：使用查詢編輯現有的資料表
-      href: how-to-edit-an-existing-table-using-queries.md
-    - name: 如何：檢視及編輯資料表中的資料
-      href: how-to-view-and-edit-data-in-a-table.md
-    - name: 如何：刪除物件及解析依存性
-      href: how-to-delete-objects-and-resolve-dependencies.md
-    - name: 如何：複製現有的資料庫
-      href: how-to-clone-an-existing-database.md
-    - name: 擷取、發行及註冊 .dacpac 檔案
-      href: extract-publish-and-register-dacpac-files.md
+  - name: 如何：連接到資料庫及瀏覽現有的物件
+    href: how-to-connect-to-a-database-and-browse-existing-objects.md
+  - name: 如何：使用資料表設計工具建立資料庫物件
+    href: how-to-create-database-objects-using-table-designer.md
+  - name: 如何：使用 Power Buffer 更新連接的資料庫
+    href: how-to-update-a-connected-database-with-power-buffer.md
+  - name: 篩選與排序對話方塊
+    href: filter-and-sort-dialog-box.md
+  - name: 如何：使用查詢建立新的資料庫物件
+    href: how-to-create-new-database-objects-using-queries.md
+  - name: 如何：使用查詢編輯現有的資料表
+    href: how-to-edit-an-existing-table-using-queries.md
+  - name: 如何：檢視及編輯資料表中的資料
+    href: how-to-view-and-edit-data-in-a-table.md
+  - name: 如何：刪除物件及解析依存性
+    href: how-to-delete-objects-and-resolve-dependencies.md
+  - name: 如何：複製現有的資料庫
+    href: how-to-clone-an-existing-database.md
+  - name: 擷取、發行及註冊 .dacpac 檔案
+    href: extract-publish-and-register-dacpac-files.md
 - name: 使用參考資料庫中的資料比較和同步處理一個或多個資料表中的資料
   href: compare-and-synchronize-data-in-tables-with-data-in-reference-database.md
   items:
-    - name: HOW TO：比較和同步處理兩個資料庫的資料
-      href: how-to-compare-and-synchronize-the-data-of-two-databases.md
-    - name: 如何：檢視資料差異
-      href: how-to-view-data-differences.md
-    - name: 使用 Transact-SQL 編輯器，編輯及執行指令碼
-      href: use-transact-sql-editor-to-edit-and-execute-scripts.md
-    - name: 如何：在 Transact-SQL 指令碼中設定大綱及加入程式碼片段
-      href: how-to-outline-and-add-snippets-to-transact-sql-script.md
-    - name: 如何：在指令碼之間巡覽
-      href: how-to-navigate-between-scripts.md
-    - name: 如何：使用重命名和重構，變更資料庫物件
-      href: how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
-    - name: 如何：執行部分查詢
-      href: how-to-execute-a-partial-query.md
-    - name: 如何：偵錯預存程序
-      href: how-to-debug-stored-procedures.md
-    - name: 分析指令碼效能
-      href: analyze-script-performance.md
+  - name: HOW TO：比較和同步處理兩個資料庫的資料
+    href: how-to-compare-and-synchronize-the-data-of-two-databases.md
+  - name: 如何：檢視資料差異
+    href: how-to-view-data-differences.md
+  - name: 使用 Transact-SQL 編輯器，編輯及執行指令碼
+    href: use-transact-sql-editor-to-edit-and-execute-scripts.md
+  - name: 如何：在 Transact-SQL 指令碼中設定大綱及加入程式碼片段
+    href: how-to-outline-and-add-snippets-to-transact-sql-script.md
+  - name: 如何：在指令碼之間巡覽
+    href: how-to-navigate-between-scripts.md
+  - name: 如何：使用重命名和重構，變更資料庫物件
+    href: how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md
+  - name: 如何：執行部分查詢
+    href: how-to-execute-a-partial-query.md
+  - name: 如何：偵錯預存程序
+    href: how-to-debug-stored-procedures.md
+  - name: 分析指令碼效能
+    href: analyze-script-performance.md
 - name: 管理資料表、關聯性及修正錯誤
   href: manage-tables-relationships-and-fix-errors.md
   items:
-    - name: 如何：使用資料表設計工具管理資料表和關聯性
-      href: how-to-use-the-table-designer-to-manage-tables-and-relationships.md
-    - name: 如何：修正錯誤
-      href: how-to-fix-errors.md
+  - name: 如何：使用資料表設計工具管理資料表和關聯性
+    href: how-to-use-the-table-designer-to-manage-tables-and-relationships.md
+  - name: 如何：修正錯誤
+    href: how-to-fix-errors.md
 - name: 使用 SQL Server 單元測試驗證資料庫程式碼
   href: verifying-database-code-by-using-sql-server-unit-tests.md
   items:
-    - name: 逐步解說：建立及執行 SQL Server 單元測試
-      href: walkthrough-creating-and-running-a-sql-server-unit-test.md
-    - name: 建立和定義 SQL Server 單元測試
-      href: creating-and-defining-sql-server-unit-tests.md
-      items:
-        - name: SQL Server 單元測試中的指令碼
-          href: scripts-in-sql-server-unit-tests.md
-        - name: SQL Server 單元測試檔案
-          href: sql-server-unit-test-files.md
-        - name: 在 SQL Server 單元測試中使用測試條件
-          href: using-test-conditions-in-sql-server-unit-tests.md
-        - name: 在 SQL Server 單元測試中使用 Transact-SQL 判斷提示
-          href: using-transact-sql-assertions-in-sql-server-unit-tests.md
-        - name: HOW TO：建立 SQL Server 資料庫單元測試的測試專案
-          href: how-to-create-a-test-project-for-sql-server-database-unit-testing.md
-        - name: HOW TO：建立空白 SQL Server 單元測試
-          href: how-to-create-an-empty-sql-server-unit-test.md
-        - name: HOW TO：建立函式、觸發程序和預存程序的 SQL Server 單元測試
-          href: how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
-        - name: HOW TO：將測試條件加入至 SQL Server 單元測試
-          href: how-to-add-test-conditions-to-sql-server-unit-tests.md
-        - name: HOW TO：開啟要編輯的 SQL Server 單元測試
-          href: how-to-open-a-sql-server-unit-test-to-edit.md
-        - name: HOW TO：撰寫在單一交易範圍內執行的 SQL Server 單元測試
-          href: how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
-        - name: HOW TO：設定 SQL Server 單元測試執行
-          href: how-to-configure-sql-server-unit-test-execution.md
-        - name: 連接字串和權限概觀
-          href: overview-of-connection-strings-and-permissions.md
-        - name: SQL Server 單元測試設計工具的鍵盤快速鍵
-          href: keyboard-shortcuts-for-sql-server-unit-test-designer.md
-    - name: 執行 SQL Server 單元測試
-      href: running-sql-server-unit-tests.md
-      items:
-        - name: HOW TO：偵錯資料庫物件
-          href: how-to-debug-database-objects.md
-        - name: HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
-          href: how-to-run-sql-server-unit-tests-from-team-foundation-build.md
-        - name: HOW TO：執行 SQL Server 單元測試
-          href: how-to-run-sql-server-unit-tests.md
-        - name: 解譯 SQL Server 單元測試結果
-          href: interpreting-sql-server-unit-test-results.md
-    - name: 升級包含資料庫單元測試的舊版測試專案
-      href: upgrade-an-older-test-project-containing-database-unit-tests.md
-    - name: SQL Server 單元測試的自訂測試條件
-      href: custom-test-conditions-for-sql-server-unit-tests.md
-      items:
-        - name: HOW TO：建立 SQL Server 單元測試設計工具的測試條件
-          href: how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
-        - name: 逐步解說：使用自訂測試條件來驗證預存程序的結果
-          href: walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
-        - name: HOW TO：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
-          href: how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
-    - name: 疑難排解 SQL Server 資料庫單元測試的問題
-      href: troubleshooting-sql-server-database-unit-testing-issues.md
+  - name: 逐步解說：建立及執行 SQL Server 單元測試
+    href: walkthrough-creating-and-running-a-sql-server-unit-test.md
+  - name: 建立和定義 SQL Server 單元測試
+    href: creating-and-defining-sql-server-unit-tests.md
+    items:
+    - name: SQL Server 單元測試中的指令碼
+      href: scripts-in-sql-server-unit-tests.md
+    - name: SQL Server 單元測試檔案
+      href: sql-server-unit-test-files.md
+    - name: 在 SQL Server 單元測試中使用測試條件
+      href: using-test-conditions-in-sql-server-unit-tests.md
+    - name: 在 SQL Server 單元測試中使用 Transact-SQL 判斷提示
+      href: using-transact-sql-assertions-in-sql-server-unit-tests.md
+    - name: HOW TO：建立 SQL Server 資料庫單元測試的測試專案
+      href: how-to-create-a-test-project-for-sql-server-database-unit-testing.md
+    - name: HOW TO：建立空白 SQL Server 單元測試
+      href: how-to-create-an-empty-sql-server-unit-test.md
+    - name: HOW TO：建立函式、觸發程序和預存程序的 SQL Server 單元測試
+      href: how-to-create-unit-tests-for-functions-triggers-stored-procedures.md
+    - name: HOW TO：將測試條件加入至 SQL Server 單元測試
+      href: how-to-add-test-conditions-to-sql-server-unit-tests.md
+    - name: HOW TO：開啟要編輯的 SQL Server 單元測試
+      href: how-to-open-a-sql-server-unit-test-to-edit.md
+    - name: HOW TO：撰寫在單一交易範圍內執行的 SQL Server 單元測試
+      href: how-to-write-sql-server-unit-test-that-runs-in-single-transaction-scope.md
+    - name: HOW TO：設定 SQL Server 單元測試執行
+      href: how-to-configure-sql-server-unit-test-execution.md
+    - name: 連接字串和權限概觀
+      href: overview-of-connection-strings-and-permissions.md
+    - name: SQL Server 單元測試設計工具的鍵盤快速鍵
+      href: keyboard-shortcuts-for-sql-server-unit-test-designer.md
+  - name: 執行 SQL Server 單元測試
+    href: running-sql-server-unit-tests.md
+    items:
+    - name: HOW TO：偵錯資料庫物件
+      href: how-to-debug-database-objects.md
+    - name: HOW TO：從 Team Foundation Build 執行 SQL Server 單元測試
+      href: how-to-run-sql-server-unit-tests-from-team-foundation-build.md
+    - name: HOW TO：執行 SQL Server 單元測試
+      href: how-to-run-sql-server-unit-tests.md
+    - name: 解譯 SQL Server 單元測試結果
+      href: interpreting-sql-server-unit-test-results.md
+  - name: 升級包含資料庫單元測試的舊版測試專案
+    href: upgrade-an-older-test-project-containing-database-unit-tests.md
+  - name: SQL Server 單元測試的自訂測試條件
+    href: custom-test-conditions-for-sql-server-unit-tests.md
+    items:
+    - name: HOW TO：建立 SQL Server 單元測試設計工具的測試條件
+      href: how-to-create-test-conditions-for-the-sql-server-unit-test-designer.md
+    - name: 逐步解說：使用自訂測試條件來驗證預存程序的結果
+      href: walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md
+    - name: HOW TO：將 Visual Studio 2010 自訂測試條件從舊版升級至 SQL Server Data Tools
+      href: how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md
+  - name: 疑難排解 SQL Server 資料庫單元測試的問題
+    href: troubleshooting-sql-server-database-unit-testing-issues.md
 - name: 擴充資料庫功能
   href: extending-the-database-features.md
   items:
-    - name: 使用組建和部署參與者自訂資料庫建置和部署
-      href: use-deployment-contributors-to-customize-database-build-and-deployment.md
-      items:
-        - name: 逐步解說：擴充資料庫專案組建，以產生模型統計資料
-          href: walkthrough-extend-database-project-build-to-generate-model-statistics.md
-        - name: 逐步解說：擴充資料庫專案部署以分析部署計畫
-          href: walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
-        - name: 逐步解說：擴充資料庫專案部署以修改部署計畫
-          href: walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
-    - name: 資料庫程式碼分析規則的擴充性概觀
-      href: overview-of-extensibility-for-database-code-analysis-rules.md
-      items:
-        - name: 為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
-          href: walkthrough-author-custom-static-code-analysis-rule-assembly.md
-    - name: 如何：安裝和管理擴充功能
-      href: how-to-install-and-manage-feature-extensions.md
+  - name: 使用組建和部署參與者自訂資料庫建置和部署
+    href: use-deployment-contributors-to-customize-database-build-and-deployment.md
+    items:
+    - name: 逐步解說：擴充資料庫專案組建，以產生模型統計資料
+      href: walkthrough-extend-database-project-build-to-generate-model-statistics.md
+    - name: 逐步解說：擴充資料庫專案部署以分析部署計畫
+      href: walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
+    - name: 逐步解說：擴充資料庫專案部署以修改部署計畫
+      href: walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan.md
+  - name: 資料庫程式碼分析規則的擴充性概觀
+    href: overview-of-extensibility-for-database-code-analysis-rules.md
+    items:
+    - name: 為 SQL Server 編寫自訂靜態程式碼分析規則組件的逐步解說
+      href: walkthrough-author-custom-static-code-analysis-rule-assembly.md
+  - name: 如何：安裝和管理擴充功能
+    href: how-to-install-and-manage-feature-extensions.md
 - name: SQL Server Data Tools 的必要權限
   href: required-permissions-for-sql-server-data-tools.md
 - name: DAC Framework 相容性
   href: dac-framework-compatibility.md
+ms.openlocfilehash: 788113da7bb17fc5fd5c25356674a8e95cc7f299
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899288"
