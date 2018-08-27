@@ -49,7 +49,7 @@ ms.locfileid: "39367660"
 
 2. 在 [連線至伺服器] 視窗中，執行下列動作： 
 
-    - 針對**伺服器類型**，選取 [資料庫引擎] (通常為預設選項)。
+    - 針對**伺服器類型**，選取 [資料庫引擎] /(通常為預設選項)。
     - 針對**伺服器名稱**，輸入您 SQL Server 執行個體的名稱。 (本文使用了主機名稱 NODE5 [NODE5\SQL2016ST] 上的執行個體名稱 SQL2016ST)。若您不確定如何判斷 SQL Server 執行個體名稱，請參閱[使用 SSMS 的其他提示與祕訣](ssms-tricks.md#determine-sql-server-name)。  
 
     ![[伺服器名稱] 欄位與使用 SQL Server 執行個體的選項](media/connect-query-sql-server/connection2.png)

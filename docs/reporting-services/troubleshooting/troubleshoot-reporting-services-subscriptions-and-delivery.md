@@ -15,12 +15,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3065ee61d14d51caf67b9a62bb88621f9f5beaf6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 901e9b6530dcae026ab6f3a4989260ff237c758a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057986"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "40405505"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>為 Reporting Services 訂閱與傳遞疑難排解
   
@@ -82,5 +82,5 @@ ms.locfileid: "38057986"
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
