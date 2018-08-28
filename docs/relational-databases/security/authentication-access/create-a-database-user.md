@@ -27,13 +27,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7d1df8ab9434915e891cdb98c86bc26bdf9b4b38
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 72d889e8be30c90a61627379d53ca41156fe0a27
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535189"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096986"
 ---
 # <a name="create-a-database-user"></a>建立資料庫使用者
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "39535189"
      檢視或指定物件的擴充屬性。 每個擴充屬性都包含與物件相關聯的一對名稱/值中繼資料。  
   
      **省略符號 (...)**  
-     按一下 [值] 後面的省略符號 (...)，開啟 [擴充屬性的值] 對話方塊。 在這個較大的位置輸入或檢視擴充屬性的值。 如需詳細資訊，請參閱＜ [擴充屬性的值對話方塊](http://msdn.microsoft.com/library/ms189353.aspx)＞。  
+     按一下 [值] 後面的省略符號 (...)，開啟 [擴充屬性的值] 對話方塊。 在這個較大的位置輸入或檢視擴充屬性的值。 如需詳細資訊，請參閱＜ [擴充屬性的值對話方塊](../../databases/value-for-extended-property-dialog-box.md)＞。  
   
      **刪除**  
      移除選取的擴充屬性。  

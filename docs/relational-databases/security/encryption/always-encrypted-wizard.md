@@ -18,13 +18,13 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a202d9dfb063979fbae76d6402909674bd163033
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 133881d4ca8e77684ca5ea941f80aeda21ec7621
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549698"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094637"
 ---
 # <a name="always-encrypted-wizard"></a>永遠加密精靈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "39549698"
  
  - 選擇要儲存資料行主要金鑰的位置。  
  
-   - **將主要金鑰儲存在 Windows 憑證存放區** ：如需詳細資訊，請參閱 [Using Certificate Stores](https://msdn.microsoft.com/library/windows/desktop/aa388160.aspx)  
+   - **將主要金鑰儲存在 Windows 憑證存放區** ：如需詳細資訊，請參閱 [Using Certificate Stores](/windows/desktop/SecCrypto/using-certificate-stores)  
  
    - **將主要金鑰儲存在 Azure 金鑰保存庫** ：如需詳細資訊，請參閱 [開始使用 Azure 金鑰保存庫](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)。  
  

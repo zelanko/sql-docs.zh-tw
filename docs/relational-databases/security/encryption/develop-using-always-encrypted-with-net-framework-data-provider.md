@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: cfe7a86be6ae9af1e9e17cd680353a6795751841
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538138"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43094117"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>搭配使用 Always Encrypted 與 .NET Framework Data Provider 進行開發
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 本例會將資料列插入病患資料表。 請注意下列事項：
 - 範例程式碼中沒有任何需要加密的特定項目。 .NET Framework Data Provider for SQL Server 會自動偵測並加密以加密資料行為目標的 *paramSSN* 和 *paramBirthdate* 參數。 這讓加密對應用程式變得透明化。 
 - 插入至資料庫資料行的值，包括加密的資料行，會傳遞為 [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) 物件。 雖然將值傳送到未加密的資料行時，使用 **SqlParameter** 是選擇性的 (還是強烈建議使用，因有利於防止 SQL 插入式攻擊)，但它對以加密資料行為目標的值卻是必要的。 如果插入 SSN 或 BirthDate 資料行中的值當作內嵌在查詢陳述式中的常值傳遞，則查詢會失敗；因為 .NET Framework Data Provider for SQL Server 無法判斷目標加密資料行的值，所以不會加密值。 結果，伺服器會因與加密資料行不相容而拒絕它們。
-- 設定為 ANSI (非 Unicode) 字串，以 SSN 資料行為目標的參數資料類型，會對應到 char/varchar SQL Server 資料類型。 如果參數類型先前設為 Unicode 字串 (String)，並對應至 nchar/nvarchar，則查詢會失敗，因為 [永遠加密] 不支援從加密的 nchar/nvarchar 值轉換成加密的 char/varchar 值。 如需資料類型對應的相關資訊，請參閱 [SQL Server 資料型別對應](https://msdn.microsoft.com/library/cc716729.aspx) 。
+- 設定為 ANSI (非 Unicode) 字串，以 SSN 資料行為目標的參數資料類型，會對應到 char/varchar SQL Server 資料類型。 如果參數類型先前設為 Unicode 字串 (String)，並對應至 nchar/nvarchar，則查詢會失敗，因為 [永遠加密] 不支援從加密的 nchar/nvarchar 值轉換成加密的 char/varchar 值。 如需資料類型對應的相關資訊，請參閱 [SQL Server 資料型別對應](/dotnet/framework/data/adonet/sql-server-data-type-mappings) 。
 - 插入 BirthDate 資料行的參數資料類型，使用 [SqlParameter.SqlDbType 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx)明確設定為目標 SQL Server 資料類型，不依賴隱含地將 .NET 類型對應至使用 [SqlParameter.DbType 屬性](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx)時套用的 SQL Server 資料類型。 [DateTime 結構](https://msdn.microsoft.com/library/system.datetime.aspx) 預設會對應至日期時間 SQL Server 資料類型。 因為 BirthDate 資料行的資料類型是日期，且 [永遠加密] 不支援將加密的日期時間值轉換成加密的日期值，所以使用預設的對應會造成錯誤。 
 
 ```
