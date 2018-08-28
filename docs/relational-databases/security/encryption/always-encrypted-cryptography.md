@@ -15,12 +15,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8919be74352e38cd1065cf8834fea930fcaef90a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 243a098b6da484f3a78b4a2f743b1095a89f6991
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546638"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405794"
 ---
 # <a name="always-encrypted-cryptography"></a>永遠加密的密碼編譯
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39546638"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>金鑰、金鑰存放區及金鑰加密演算法  
  「永遠加密」會使用兩種類型的金鑰：資料行主要金鑰和資料行加密金鑰。  
   
- 資料行主要金鑰 (CMK) 是加金鑰的金鑰 (也就是用來加密其他金鑰的金鑰)，其一律位於用戶端的控制項中，並儲存於外部金鑰存放區。 已啟用「永遠加密」的用戶端驅動程式會透過 CMK 存放區提供者來與金鑰存放區互動，其可以是驅動程式庫 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/系統提供者) 的一部分或用戶端應用程式 (自訂提供者) 的一部分。 用戶端驅動程式庫目前包括適用於 [Windows 憑證存放區](https://msdn.microsoft.com/library/windows/desktop/aa388160) 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 金鑰存放區提供者和硬體安全性模組 (HSM)   (如需目前的提供者清單，請參閱 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md))。應用程式開發人員可以針對任意存放區提供自訂提供者。  
+ 資料行主要金鑰 (CMK) 是加金鑰的金鑰 (也就是用來加密其他金鑰的金鑰)，其一律位於用戶端的控制項中，並儲存於外部金鑰存放區。 已啟用「永遠加密」的用戶端驅動程式會透過 CMK 存放區提供者來與金鑰存放區互動，其可以是驅動程式庫 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/系統提供者) 的一部分或用戶端應用程式 (自訂提供者) 的一部分。 用戶端驅動程式庫目前包括適用於 [Windows 憑證存放區](/windows/desktop/SecCrypto/using-certificate-stores) 的 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 金鑰存放區提供者和硬體安全性模組 (HSM)   (如需目前的提供者清單，請參閱 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md))。應用程式開發人員可以針對任意存放區提供自訂提供者。  
   
  資料行加密金鑰 (CEK) 是受到 CMK 保護的內容加密金鑰 (也就是用來保護資料的金鑰)。  
   
