@@ -21,12 +21,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bc4b141721417b3097dc9142e2f47404021f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae2466902ae6cd60a69687b33aab38fc6a72fd5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932939"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40410437"
 ---
 # <a name="rebuild-system-databases"></a>重建系統資料庫
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "32932939"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |參數名稱|描述|  
+    |參數名稱|Description|  
     |--------------------|-----------------|  
     |/QUIET 或 /Q|指定安裝程式的執行不使用任何使用者介面。|  
     |/ACTION=REBUILDDATABASE|指定安裝程式要重新建立系統資料庫。|  
@@ -168,7 +168,7 @@ ms.locfileid: "32932939"
 > [!WARNING]  
 >  使用 **instmsdb** 指令碼重新建立 **msdb** 資料庫將會清除 **msdb** 中儲存的所有資訊，例如工作、警示、運算子、維護計畫、備份記錄、以原則為基礎的管理設定、Database Mail、效能資料倉儲等。  
   
-1.  停止所有連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的服務，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、 [!INCLUDE[ssRS](../../includes/ssrs-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]，以及使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為資料存放區的所有應用程式。  
+1.  停止所有連接到 [!INCLUDE[ssDE](../../includes/ssde-md.md)]的服務，包括 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent、 [!INCLUDE[ssRS](../../includes/ssrs.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)]，以及使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 做為資料存放區的所有應用程式。  
   
 2.  使用命令 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 從命令列啟動 `NET START MSSQLSERVER /T3608`  
   

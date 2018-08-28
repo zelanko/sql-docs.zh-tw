@@ -29,19 +29,19 @@ caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32fbe22707d4704b29195fd88098b94a4ee2d968
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 54b456761b7a2055f7eb52e95abf7e6dacba182f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350340"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415803"
 ---
 # <a name="replication-agents-overview"></a>複寫代理程式概觀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   複寫使用了許多名為代理程式的獨立程式，以執行與追蹤變更和散發資料有關的工作。 依預設，複寫代理程式作為在 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 中排定的作業來執行，且必須執行 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 方可執行這些作業。 複寫代理程式也可以從命令列執行，或透過使用 Replication Management Objects (RMO) 的應用程式執行。 複寫代理程式可以透過「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 複寫監視器」和 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]進行管理。  
   
 ## <a name="sql-server-agent"></a>SQL Server Agent  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 主控和排程複寫中使用的代理程式，並為執行複寫代理程式提供了簡易的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 還控制和監視除複寫以外的其他作業。 如需詳細資訊，請參閱 [Configure SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900)。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 主控和排程複寫中使用的代理程式，並為執行複寫代理程式提供了簡易的方法。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 還控制和監視除複寫以外的其他作業。 如需詳細資訊，請參閱 [Configure SQL Server Agent](../../../ssms/agent/configure-sql-server-agent.md)。  
   
 > [!IMPORTANT]  
 >  依預設，安裝 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 時會停用 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務，除非明確選擇在安裝期間自動啟動該服務。 如需有關啟動 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent 服務的詳細資訊，請參閱＜ [Start, Stop, or Pause the SQL Server Agent Service](http://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)進行管理。  

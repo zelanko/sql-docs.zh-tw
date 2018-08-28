@@ -20,18 +20,18 @@ caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 877b96eeede872accce106a8800ed6e5bae73613
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9ffd3813cef86b31c439981ab03aa318b152620c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984500"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412727"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > 如需舊版 SQL Server 的相關內容，請參閱 [SQL Server 2014 Express LocalDB](https://msdn.microsoft.com/library/hh510202(SQL.120).aspx)。
 
-Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](https://msdn.microsoft.com/library/ms144275(SQL.130).aspx) 的功能，專供開發人員使用。 SQL Server 2016 Express with Advanced Services 中也會提供。  
+Microsoft SQL Server 2016 Express **LocalDB** 是 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) 的功能，專供開發人員使用。 SQL Server 2016 Express with Advanced Services 中也會提供。  
 
  **LocalDB** 安裝會複製啟動 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]所需的最少檔案。 安裝 LocalDB 後，您可以使用特殊連接字串來起始連線。 連接時，就會自動建立及啟動必要的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 基礎結構，應用程式不需複雜的組態工作即可開始使用資料庫。 Developer Tools 為開發人員提供 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ，讓他們撰寫和測試 [!INCLUDE[tsql](../../includes/tsql-md.md)] 程式碼，而不需要管理 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的完整伺服器執行個體。 
  

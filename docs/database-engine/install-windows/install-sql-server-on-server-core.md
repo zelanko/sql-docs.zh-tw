@@ -12,13 +12,14 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 979cb0b59ba0528ef7450de0fc4a7b96dd9d4338
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7535f5b73859b59848e08bce9c74b0670bc3a867
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770914"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412581"
 ---
 # <a name="install-sql-server-on-server-core"></a>在 Server Core 上安裝 SQL Server
 
@@ -92,7 +93,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
   
 ### <a name="feature-parameters"></a>功能參數  
   
-|功能參數|描述|  
+|功能參數|Description|  
 |-----------------------|-----------------|  
 |SQLENGINE|只安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |複寫|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]時一併安裝複寫元件。|  
@@ -105,7 +106,7 @@ Server Core 安裝選項提供執行特定伺服器角色的基本環境。 可�
 
  請參閱下列功能參數用法的範例：  
   
-|參數和值|描述|  
+|參數和值|Description|  
 |--------------------------|-----------------|  
 |/FEATURES=SQLEngine|只安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)]。|  
 |/FEATURES=SQLEngine,FullText|安裝 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 和全文檢索。|  

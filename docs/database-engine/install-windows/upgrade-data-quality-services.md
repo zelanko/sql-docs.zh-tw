@@ -12,13 +12,14 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7b48c28d2e144dd681a712b405912198f84e94c1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9f127f5e3765ce0c02df7742206f6141057fd798
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770714"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415799"
 ---
 # <a name="upgrade-data-quality-services"></a>升級 Data Quality Services
 

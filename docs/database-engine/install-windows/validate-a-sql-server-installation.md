@@ -14,13 +14,14 @@ ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 8ddea5bca025661a7a9c8aeddb5ac62374e2db81
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bda8d393f0563879d009191599ed9e124a5c2eb7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771424"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412733"
 ---
 # <a name="validate-a-sql-server-installation"></a>驗證 SQL Server 安裝
 

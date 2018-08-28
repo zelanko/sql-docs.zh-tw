@@ -14,18 +14,18 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020652"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412741"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>使用 SQL Server Integration Services (SSIS) 將資料載入 Azure SQL 資料倉儲
 
 建立 SQL Server Integration Services (SSIS) 套件，以將資料載入 [Azure SQL 資料倉儲](/azure/sql-data-warehouse/index)。 您也可以選擇在資料通過 SSIS 資料流程時，對它們進行架構重組、轉換及清理。
 
-本文示範如何執行下列作業。
+本文示範如何執行下列作業：
 
 * 在 Visual Studio 中建立新的 Integration Services 專案。
 * 設計可將資料從來源載入至目的地的 SSIS 套件。
@@ -33,7 +33,7 @@ ms.locfileid: "40020652"
 
 ## <a name="basic-concepts"></a>基本概念
 
-套件是 SSIS 中的基本工作單位。 相關聯的套件會在專案中組成群組。 您會在 Visual Studio 中使用 SQL Server Data Tools 來建立專案和設計套件。 設計程序是視覺化的程序，您可以從工具箱將元件拖放到設計介面，將它們連接，並設定其屬性。 在您完成套件之後，可以執行它，也可以選擇將它部署到 SQL Server 以取得全方位的管理、監視和安全性。
+套件是 SSIS 中的基本工作單位。 相關聯的套件會在專案中組成群組。 您會在 Visual Studio 中使用 SQL Server Data Tools 來建立專案和設計套件。 設計程序是視覺化的程序，您可以從工具箱將元件拖放到設計介面，將它們連接，並設定其屬性。 當您完成您的套件之後，除能加以執行，也可選擇是否要將其部署到 SQL Server 或 SQL Database，以達到全面性管理、監視及安全性的目的。
 
 SSIS 的詳細簡介超出本文範圍。 如需詳細資訊，請參閱下列文章：
 
@@ -106,7 +106,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 
 本教學課程使用 SQL Server 作為資料來源。 SQL Server 會在內部部署或 Azure 虛擬機器上執行。
 
-若要連線到 SQL Server 和 SQL 資料倉儲，您可以使用 ADO.NET 連線管理員以及來源和目的地，或 OLE DB 連線管理員以及來源和目的地。 本教學課程會使用 ADO.NET，因為它具有最少的設定選項。 OLE DB 會提供比 ADO.NET 稍微更好的效能。
+若要連線到 SQL Server 和 SQL 資料倉儲，您可以使用 ADO.NET 連線管理員以及來源和目的地，或 OLE DB 連線管理員以及來源和目的地。 本教學課程採用 ADO.NET，因為它的設定選項最少。 OLE DB 會提供比 ADO.NET 稍微更好的效能。
 
 捷徑是使用 [SQL Server 匯入和匯出精靈] 來建立基本套件。 然後，儲存套件，並在 Visual Studio 或 SSDT 中開啟以進行檢視和自訂。 如需詳細資訊，請參閱[使用 SQL Server 匯入和匯出精靈匯入和匯出資料](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)。
 
@@ -196,7 +196,7 @@ Visual Studio 會開啟並建立新的 Integration Services (SSIS) 專案。 然
 8. 在 [ADO.NET 目的地編輯器] 中，選取 [對應] 索引標籤以查看來源中的資料行如何對應至目的地中的資料行。
    
     ![][13]
-9. 按一下 [確定] 以完成設定資料來源。
+9. 按一下 [確定]，以完成目的地設定。
 
 ## <a name="run-the-package-to-load-the-data"></a>執行套件以載入資料
 按一下工具列上的 [啟動] 按鈕，或選取 [偵錯] 功能表上的其中一個 [執行] 選項來執行套件。

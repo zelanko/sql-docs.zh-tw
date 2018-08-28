@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c2e4f0eb18863a51fc7fa1b81870ff74ed47ca7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f888ef097c3377d61dbac91a0d448e08b77baa1b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942473"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411756"
 ---
 # <a name="toolbox-component-f1-help"></a>工具箱元件 F1 說明
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "32942473"
  此整合服務的 Azure 功能套件包含連線管理員，可連接到 Azure 資料來源和工作來執行一般的 Azure 作業。 安裝此功能套件，將這些項目加入工具箱。 如需詳細資訊，請參閱 [Azure Feature Pack for Integration Services &#40;SSIS&#41;](../../integration-services/azure-feature-pack-for-integration-services-ssis.md)。  
   
 ## <a name="see-also"></a>另請參閱  
- [使用工具箱](http://msdn.microsoft.com/library/16733e39-4dc5-416f-ab10-c1d823f79d2d)   
+ [使用工具箱](../../ssms/use-the-toolbox.md)   
  [選擇工具箱項目 &#40;維護工作頁面&#41;](http://msdn.microsoft.com/library/b92c9054-7479-45d8-a54c-c1bb6699bdb3)  
   
   

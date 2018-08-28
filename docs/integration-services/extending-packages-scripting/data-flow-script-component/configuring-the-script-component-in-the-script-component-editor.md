@@ -24,12 +24,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7bbfd0f9a5572d29451d9a7c18bc3c61aa9613c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: bc398c3ab6675234fd48987e2f3fd45cb1a1a4c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329352"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412582"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>在指令碼元件編輯器中設定指令碼元件
   您在指令碼元件中撰寫自訂程式碼之前，必須選取您要建立的資料流程元件的類型 (來源、轉換或是目的地)，然後在 [指令碼轉換編輯器] 中設定元件的中繼資料與屬性。  
@@ -37,7 +37,7 @@ ms.locfileid: "35329352"
 ## <a name="selecting-the-type-of-component-to-create"></a>選取要建立的元件類型  
  當您將指令碼元件新增至 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計工具的 [資料流程] 窗格時，[選取指令碼元件類型] 對話方塊便會出現。 您可以將元件預先設定為來源、轉換或目的地。 在做出初步選擇之後，便可繼續在 [指令碼轉換編輯器] 中設定元件。  
   
- 若要為指令碼元件設定預設的指令碼語言，請使用 [選項] 對話方塊的 [一般] 頁面上的 [指令碼語言] 選項。 如需相關資訊，請參閱 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+ 若要為指令碼元件設定預設的指令碼語言，請使用 [選項] 對話方塊的 [一般] 頁面上的 [指令碼語言] 選項。 如需相關資訊，請參閱 [General Page](../../general-page-of-integration-services-designers-options.md)。  
   
 ## <a name="understanding-the-two-design-time-modes"></a>了解兩個設計階段模式  
  在 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 設計師中，指令碼元件有中繼資料設計與程式碼設計兩種模式。  

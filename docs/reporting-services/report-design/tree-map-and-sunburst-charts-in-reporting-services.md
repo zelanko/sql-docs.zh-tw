@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002936"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415795"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Reporting Services 中的樹狀圖與放射環狀圖
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 樹狀�
   
   
 ##  <a name="bkmk_sample_data"></a> 範例 AdventureWorks 資料  
- 本節包含範例查詢及在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 中建立資料來源和資料集的基本步驟。 如果報表已包含資料來源及資料集，您可以略過本節。  
+ 本節包含範例查詢及在 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] 中建立資料來源和資料集的基本步驟。 如果報表已包含資料來源及資料集，您可以略過本節。  
   
  查詢會傳回 AdventureWorks 銷售訂單詳細資料，包含銷售區域、產品類別、產品子類別和銷售原因資料。  
   

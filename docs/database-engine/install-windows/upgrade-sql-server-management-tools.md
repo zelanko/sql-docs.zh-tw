@@ -14,13 +14,14 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7846c9f5cfbc15f88a1cc10f38eaa9542f6c0648
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5ef475eecf39d57e0ae27fae5e80c18d85a67ff8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38050226"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410442"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>升級 SQL Server 管理工具
 
@@ -36,7 +37,7 @@ ms.locfileid: "38050226"
   
 ### <a name="for-all-upgrade-scenarios"></a>如果是全部升級狀況：  
   
-- 在升級 MSX 伺服器之前，應該要升級所有的 TSX 伺服器。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中 MSX/TSX 的詳細資訊，請參閱 [將整個企業的管理自動化](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)。  
+- 在升級 MSX 伺服器之前，應該要升級所有的 TSX 伺服器。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]中 MSX/TSX 的詳細資訊，請參閱 [將整個企業的管理自動化](../../ssms/agent/automated-administration-across-an-enterprise.md)。  
   
 -   您必須同時升級 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體的所有元件。 在 [!INCLUDE[ssDE](../../includes/ssde-md.md)]執行個體內， [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 和 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]元件的版本號碼都必須相同。  
   

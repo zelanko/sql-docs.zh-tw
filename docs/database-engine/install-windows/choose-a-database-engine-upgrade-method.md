@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e5970629622e5f1e219bcdb80ec31341c12d585e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b231d5402bef7b9a092278dfd5b0f809411c1e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206008"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410441"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>選擇資料庫引擎升級方法
 
@@ -79,7 +80,7 @@ ms.locfileid: "37206008"
  在遷移使用者資料庫後，您可以使用多種方法其中之一 (例如將伺服器重新命名、使用 DNS 項目、修改連接字串) 向新使用者指出新的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 執行個體。  與就地升級相較之下，新的安裝方法可減少風險及停機時間，並有助於硬體及作業系統升級與 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]的更新同時進行。  
   
 > [!NOTE]  
->  若您已經就地擁有高可用性 (HA) 解決方案或其他多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體環境，請前往 [輪流升級](#RollingUpgrade)。 若您未就地擁有高可用性解決方案，則可以考慮暫時設定 [資料庫鏡像](http://msdn.microsoft.com/library/ms190941.aspx) 進一步縮短停機時間以加速升級，或利用此機會設定 [AlwaysOn 可用性群組](http://msdn.microsoft.com/library/hh510260.aspx) 當作永久 HA 解決方案。  
+>  若您已經就地擁有高可用性 (HA) 解決方案或其他多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]執行個體環境，請前往 [輪流升級](#RollingUpgrade)。 若您未就地擁有高可用性解決方案，則可以考慮暫時設定 [資料庫鏡像](../database-mirroring/setting-up-database-mirroring-sql-server.md) 進一步縮短停機時間以加速升級，或利用此機會設定 [AlwaysOn 可用性群組](http://msdn.microsoft.com/library/hh510260.aspx) 當作永久 HA 解決方案。  
   
  例如，您可以使用此方法來升級：  
   

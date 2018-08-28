@@ -19,12 +19,12 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0655653463bc48ad0de71799f2e521f10e5c13b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7c8bb8f52eac86a0439185b77cb175d990d659a5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769024"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40412697"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>設定分散式交易的可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "34769024"
 
 在分散式交易中，用戶端應用程式使用 Microsoft Distributed Transaction Coordinator (MS DTC 或 DTC) 保證跨多個資料來源的交易一致性。 DTC 是受支援的 Windows Server 型作業系統上提供的服務。 就分散式交易而言，DTC 是「交易協調器」。 一般而言，SQL Server 執行個體是「資源管理員」。 當資料庫位在可用性群組中時，每個資料庫都需要是自己的資源管理員。 
 
-[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 不能防止可用性群組中的資料庫分散式交易，即使未針對分散式交易設定可用性群組。 但是當未針對分散式交易設定可用性群組時，容錯移轉在某些情況下可能不會成功。 特別是新的主要複本 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體可能無法從 DTC 取得交易結果。 若要在容錯移轉之後，讓 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體從 DTC 取得可疑交易的結果，請針對分散式交易設定可用性群組。 
+[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 不能防止可用性群組中的資料庫分散式交易，即使未針對分散式交易設定可用性群組。 但是當未針對分散式交易設定可用性群組時，容錯移轉在某些情況下可能不會成功。 特別是新的主要複本 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體可能無法從 DTC 取得交易結果。 若要在容錯移轉之後，讓 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體從 DTC 取得可疑交易的結果，請針對分散式交易設定可用性群組。 
 
 ## <a name="prerequisites"></a>Prerequisites
 
 設定可用性群組支援分散式交易之前，必須先符合下列必要條件：
 
-* 所有參與分散式交易的 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體都必須是 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更新版本。
+* 所有參與分散式交易的 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體都必須是 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 或更新版本。
 
 * 可用性群組必須在 Windows Server 2016 或 Windows Server 2012 R2 上執行。 針對 Windows Server 2012 R2，您必須安裝 [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973) 上所提供 KB3090973 中的更新。  
 
@@ -94,7 +94,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>分散式交易 - 技術概念
 
-分散式交易跨越二或多個資料庫。 身為交易管理員，DTC 會協調 SQL Server 執行個體和其他資料來源之間的交易。 每個 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 資料庫引擎的執行個體都可以當成資源管理員運作。 當可用性群組設定有 `DTC_SUPPORT = PER_DB` 時，資料庫可以當成資源管理員運作。 如需詳細資訊，請參閱 MS DTC 文件集。
+分散式交易跨越二或多個資料庫。 身為交易管理員，DTC 會協調 SQL Server 執行個體和其他資料來源之間的交易。 每個 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 資料庫引擎的執行個體都可以當成資源管理員運作。 當可用性群組設定有 `DTC_SUPPORT = PER_DB` 時，資料庫可以當成資源管理員運作。 如需詳細資訊，請參閱 MS DTC 文件集。
 
 在資料庫引擎的單一執行個體中，有二或多個資料庫的交易，實際上就是分散式交易。 執行個體是由內部來管理分散式交易；而對於使用者而言則是以本機交易來運作。 在可用性群組中使用 `DTC_SUPPORT = PER_DB` 設定資料庫時，即使是在單一的 SQL Server 執行個體中，[!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] 都會升級所有 DTC 的跨資料庫交易。 
 
@@ -123,16 +123,16 @@ ALTER AVAILABILITY GROUP MyaAG
 
 每個參與分散式交易的實體都稱為資源管理員。 資源管理員的範例包括：
 
-* [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體。 
+* [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體。 
 * 可用性群組中已針對分散式交易設定的資料庫。
 * DTC 服務 - 也可以是交易管理員。
 * 其他資料來源。 
 
-為參與分散式交易，[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 的執行個體向 DTC 登錄。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體一般是向本機伺服器上的 DTC 登錄。 每個 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體都會建立具有唯一資源管理員識別碼 (RMID) 的資源管理員，並向 DTC 登錄。 在預設組態中，[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體上的所有資料庫都使用相同的 RMID。 
+為參與分散式交易，[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 的執行個體向 DTC 登錄。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體一般是向本機伺服器上的 DTC 登錄。 每個 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體都會建立具有唯一資源管理員識別碼 (RMID) 的資源管理員，並向 DTC 登錄。 在預設組態中，[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體上的所有資料庫都使用相同的 RMID。 
 
-當資料庫位在可用性群組中時，資料庫的讀寫複本 (或主要複本) 可以移到其他的 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體。 為在此移動期間支援分散式交易，每個資料庫都應該像個別的資源管理員一樣行動，並必須有唯一的 RMID。 當可用性群組有 `DTC_SUPPORT = PER_DB` 時，[!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 會為每個資料庫建立資源管理員，並使用唯一的 RMID 向 DTC 登錄。 在此組態中，資料庫是 DTC 交易的資源管理員。
+當資料庫位在可用性群組中時，資料庫的讀寫複本 (或主要複本) 可以移到其他的 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體。 為在此移動期間支援分散式交易，每個資料庫都應該像個別的資源管理員一樣行動，並必須有唯一的 RMID。 當可用性群組有 `DTC_SUPPORT = PER_DB` 時，[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 會為每個資料庫建立資源管理員，並使用唯一的 RMID 向 DTC 登錄。 在此組態中，資料庫是 DTC 交易的資源管理員。
 
-如需 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 中的分散式交易詳細資料，請參閱[分散式交易](#distTran)。
+如需 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 中的分散式交易詳細資料，請參閱[分散式交易](#distTran)。
 
 ## <a name="manage-unresolved-transactions"></a>管理未解析的交易
 
@@ -142,9 +142,9 @@ RMID 變更期間存在的使用中交易結果，無法在容錯移轉之後復
 * 新增或移除可用性群組中的資料庫。 
 * 置放可用性群組。
 
-在上述情況中，如果主要複本容錯移轉到新的 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體，執行個體會嘗試連絡 DTC 以識別交易結果。 因為資料庫在復原期間用來取得可疑交易結果的 RMID 未曾登錄過，所以 DTC 無法傳回結果。 因此，資料庫會進入 SUSPECT 狀態。
+在上述情況中，如果主要複本容錯移轉到新的 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體，執行個體會嘗試連絡 DTC 以識別交易結果。 因為資料庫在復原期間用來取得可疑交易結果的 RMID 未曾登錄過，所以 DTC 無法傳回結果。 因此，資料庫會進入 SUSPECT 狀態。
 
-新的 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 錯誤記錄檔有一個類似下例的項目：
+新的 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 錯誤記錄檔有一個類似下例的項目：
 
 ```
 Microsoft Distributed Transaction Coordinator (MS DTC) 
@@ -158,7 +158,7 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-上例示範 DTC 無法從新的主要複本重新登錄資料庫，而該主要複本位在容錯移轉後所建立的交易中。 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] 執行個體無法判斷分散式交易的結果，因此它會將資料庫標示為可疑。 交易標示為工作單位 (UOW)，為 GUID 所參考。 為復原資料庫，請以手動方式認可或復原交易。 
+上例示範 DTC 無法從新的主要複本重新登錄資料庫，而該主要複本位在容錯移轉後所建立的交易中。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] 執行個體無法判斷分散式交易的結果，因此它會將資料庫標示為可疑。 交易標示為工作單位 (UOW)，為 GUID 所參考。 為復原資料庫，請以手動方式認可或復原交易。 
 
 >[!WARNING]
 >當您以手動方式認可或復原交易時，會影響應用程式。 確認認可或復原動作是否與應用程式需求一致。 
