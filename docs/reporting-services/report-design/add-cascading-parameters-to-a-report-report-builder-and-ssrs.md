@@ -1,7 +1,7 @@
 ---
 title: 將串聯參數新增至報表 (報表產生器及 SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77c4ede074611b60c33777d64b8ff5308fc343f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 980f17539e4230d5064ad9cc6d7cfc387b7dad84
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021555"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405288"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>將串聯參數加入至報表 (報表產生器及 SSRS)
   串聯參數會提供管理大量報表資料的方法。 您可以定義一組相關的參數，讓某一個參數的值清單會視另一個參數所選擇的值而定。 例如，第一個參數是獨立的，而且可能代表一個產品類別目錄的清單。 使用者選取類別目錄時，第二個參數會相依於第一個參數的值。 其值會隨著所選類別目錄內的子類別目錄清單更新。 當使用者檢視報表時，類別目錄與子類別目錄參數的值都用於篩選報表資料。  
@@ -48,7 +48,7 @@ ms.locfileid: "33021555"
   
     1.  資料來源欄位的清單。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] 陳述式中，SELECT 陳述式會指定給定資料表或資料列中的資料庫資料行名稱清單。  
   
-    2.  適用於每個串聯參數的一個查詢參數。 查詢參數會指定要在查詢中包含或排除的特定值，藉以限制從資料來源擷取的資料。 查詢參數通常出現在查詢的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中，查詢參數會出現在 WHERE 子句中。 如需詳細資訊，請參閱《 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SQL Server 線上叢書 [》中](http://go.microsoft.com/fwlink/?linkid=120955)文件集的＜使用 WHERE 和 HAVING 篩選資料列＞。  
+    2.  適用於每個串聯參數的一個查詢參數。 查詢參數會指定要在查詢中包含或排除的特定值，藉以限制從資料來源擷取的資料。 查詢參數通常出現在查詢的限制子句中。 例如，在 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 陳述式中，查詢參數會出現在 WHERE 子句中。  
   
 6.  按一下 **[執行]** (**!**)。 加入查詢參數然後執行查詢之後，會自動建立對應到查詢參數的報表參數。  
   

@@ -19,26 +19,26 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 06f2f1115fe1e4f7aaeafe69ab73a6734fe8d6fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9baa94d3f791ba8c058efe6074d561f121428fd
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017805"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405277"
 ---
 # <a name="data-processing-extensions-overview"></a>資料處理延伸模組概觀
   在 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 中的資料處理延伸模組，可讓您連接到資料來源並擷取資料。 它們也可當做資料來源與資料集之間的橋樑。 因為 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組是依照 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 資料提供者介面子集建立的。  
   
  下表列出 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 隨附的資料處理延伸模組。  
   
-|資料處理延伸模組|描述|  
+|資料處理延伸模組|Description|  
 |-------------------------------|-----------------|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 的資料處理延伸模組|使用 .NET Framework Data Provider for SQL Server 來連線和擷取 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 的資料。|  
 |OLE DB 的資料處理延伸模組|使用 .NET Framework Data Provider for OLE DB。 透過這個延伸模組，報表伺服器可以查詢具有 OLE DB 提供者的資料來源。|  
 |Oracle 的資料處理延伸模組|使用 .NET Framework Data Provider for Oracle。 透過這個延伸模組，報表伺服器可以藉由 Oracle 用戶端連接軟體存取 Oracle 資料來源。|  
 |ODBC 的資料處理延伸模組|使用 .NET Framework Data Provider for ODBC。 透過這個延伸模組，報表伺服器可以存取具有 ODBC 驅動程式之資料庫中的資料。|  
   
- 您可以使用 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 資料處理 API 將自訂資料處理加入報表伺服器。  
+ 您可以使用 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 資料處理 API 將自訂資料處理加入報表伺服器。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 為 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的資料提供者提供了內建支援。 如果您已實作完整的資料提供者，就不需要實作 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 資料處理延伸模組。 不過，您應該考慮擴充資料提供者，使其得以涵蓋 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005 的特定功能，例如安全的連接認證與伺服器端的彙總。  

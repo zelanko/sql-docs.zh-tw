@@ -22,12 +22,12 @@ caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4b60892548f532385ff12a011b3cb89d631dabbf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: b9fcea82b032cd709385e7d981d04d108295f19e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404700"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405790"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>使用指令碼元件建立同步轉換
   您在 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的資料流程中使用轉換元件，以修改及分析從來源傳遞到目的地的資料。 具有同步輸出的轉換會處理通過該元件的每個輸入資料列。 具有非同步輸出的轉換會等到它收到所有的輸入資料列後，才完成其處理。 本主題討論同步轉換。 如需非同步轉換的資訊，請參閱[使用指令碼元件建立非同步轉換](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)。 如需同步與非同步元件之間差異的詳細資訊，請參閱[了解同步和非同步轉換](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)。  
@@ -45,7 +45,7 @@ ms.locfileid: "35404700"
  若要設定指令碼元件的指令碼語言，請在 [指令碼轉換編輯器] 的 [指令碼] 頁面上設定 **ScriptLanguage** 屬性。  
   
 > [!NOTE]  
->  若要為指令碼元件設定預設的指令碼語言，請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項。 如需詳細資訊，請參閱[一般頁面](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+>  若要為指令碼元件設定預設的指令碼語言，請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項。 如需詳細資訊，請參閱[一般頁面](../general-page-of-integration-services-designers-options.md)。  
   
  資料流程轉換元件有一個輸入，而且支援一或多個輸出。 設定元件的輸入與輸出是您必須在中繼資料設計模式下完成的其中一個步驟，方法是在撰寫自訂指令碼之前先使用 [指令碼轉換編輯器]。  
   

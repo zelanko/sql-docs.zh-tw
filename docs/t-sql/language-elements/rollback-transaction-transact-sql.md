@@ -29,15 +29,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e8d62851d7adda1f4b6c7f28d465ab5d126068d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9bfc6d785c1cae40da1c6d90306543f77ed0bc4e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453142"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405883"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   將明確或隱含的交易回復到交易的開頭，或回復到交易內的儲存點。 您可以使用 ROLLBACK TRANSACTION 清除交易開始之後的所有資料修改，或清除儲存點之前的所有資料修改。 另外，它也會釋出交易所保留的資源。  
   

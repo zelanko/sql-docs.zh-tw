@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216929"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405384"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -543,7 +543,7 @@ TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存�
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)]。
+**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
  指定在建立叢集索引時，資料表之 FILESTREAM 資料的位置。 FILESTREAM_ON 子句允許將 FILESTREAM 資料移到不同的 FILESTREAM 檔案群組或分割區配置。  
   
@@ -606,7 +606,7 @@ TEXTIMAGE_ON 只會變更 「 LOB 儲存空間 」 的位置，當資料儲存�
   
  FILESTREAM  
    
-**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)]。
+**適用於**： [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。
 
  僅適用於 **varbinary(max)** 資料行。 指定 FILESTREAM 儲存體來儲存 **varbinary(max)** BLOB 資料。  
   

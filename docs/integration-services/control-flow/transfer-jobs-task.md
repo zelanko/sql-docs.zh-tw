@@ -20,12 +20,12 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0c06201f3c1512fb45f249983b24a275aaff4377
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 9ec3fc9e003b502d56725871920229f71dfd8f4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409600"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405386"
 ---
 # <a name="transfer-jobs-task"></a>傳送作業工作
   「傳送作業」工作會在 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的執行個體之間，傳送一個或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agent 作業。  
@@ -83,7 +83,7 @@ ms.locfileid: "35409600"
   使用 **[傳送作業工作編輯器]** 對話方塊的 **[一般]** 頁面，即可命名和描述傳送作業工作。  
   
 > [!NOTE]  
->  只有目的地伺服器上的 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或其中一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的成員，才能在目的地伺服器上成功建立作業。 若要存取來源伺服器上的作業，則在來源伺服器上使用者必須至少是 **SQLAgentUserRole** 固定資料庫角色的成員。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色及其權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+>  只有目的地伺服器上的 **系統管理員 (sysadmin)** 固定伺服器角色的成員，或其中一個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的成員，才能在目的地伺服器上成功建立作業。 若要存取來源伺服器上的作業，則在來源伺服器上使用者必須至少是 **SQLAgentUserRole** 固定資料庫角色的成員。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色及其權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ### <a name="options"></a>選項。  
  **名稱**  
@@ -99,7 +99,7 @@ ms.locfileid: "35409600"
   使用 [傳送作業工作編輯器] 對話方塊的 [作業] 頁面，即可指定屬性用來將一或多個 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 作業，從 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 的一個執行個體複製到另一個。  
   
 > [!NOTE]  
->  若要存取來源伺服器上的作業，使用者就必須至少是伺服器上之 **SQLAgentUserRole** 固定資料庫角色的成員。 若要在目的地伺服器上順利建立作業，使用者就必須是 **sysadmin** 固定伺服器角色的成員，或是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的成員。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色及其權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+>  若要存取來源伺服器上的作業，使用者就必須至少是伺服器上之 **SQLAgentUserRole** 固定資料庫角色的成員。 若要在目的地伺服器上順利建立作業，使用者就必須是 **sysadmin** 固定伺服器角色的成員，或是 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色的成員。 如需 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 固定資料庫角色及其權限的詳細資訊，請參閱 [SQL Server Agent 固定資料庫角色](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
 ### <a name="options"></a>選項。  
  **SourceConnection**  
@@ -113,7 +113,7 @@ ms.locfileid: "35409600"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|複製所有作業。|  
 |**False**|只複製指定的作業。|  
@@ -131,7 +131,7 @@ ms.locfileid: "35409600"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**FailTask**|如果具有相同名稱的作業己經存在於目的地伺服器上，工作就會失敗。|  
 |**Overwrite**|工作會覆寫目的地伺服器上具有相同名稱的作業。|  
@@ -142,7 +142,7 @@ ms.locfileid: "35409600"
   
  此屬性具有下表所列的選項：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**True**|啟用目的地伺服器上的作業。|  
 |**False**|停用目的地伺服器上的作業。|  

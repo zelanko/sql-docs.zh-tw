@@ -21,12 +21,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: caf018aab189a27901effcdc95204881b5b903b9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4065422e0be3f8570e91cc05d6c5cd2c86af24ec
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980320"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406029"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>將 Reporting Services 項目釘選到 Power BI 儀表板
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 讓使用者能夠將 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表項目從報表檢視器工具列固定到 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 儀表板，當成新的圖格。   若要固定，您的系統管理員必須先整合報表伺服器和 Azure Active Directory 及 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]。  
@@ -41,7 +41,7 @@ ms.locfileid: "38980320"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   您會從[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表檢視器釘選，例如 `http://myserver/Reports`。  您無法從 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]、從 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的報表設計師，或從報表伺服器 URL 固定。  例如，`http://myserver/ReportServer`。  
+-   您會從[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]的 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 報表檢視器釘選，例如 `http://myserver/Reports`。  您無法從 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]、從 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]的報表設計師，或從報表伺服器 URL 固定。  例如，`http://myserver/ReportServer`。  
   
 -   您必須設定瀏覽器允許來自報表伺服器網站的快顯。  
   

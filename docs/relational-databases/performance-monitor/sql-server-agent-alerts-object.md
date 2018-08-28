@@ -19,12 +19,12 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ea269c45f065e03f5583e62ca98f0084e2fb4772
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d310d463d0cb20135b1318f6ffd27c0b602f33e4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951273"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405780"
 ---
 # <a name="sql-server-agent-alerts-object"></a>SQL Server Agent、Alerts 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951273"
   
  下表包含 **SQLAgent:Alerts** 計數器。  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |**Activated alerts**|這個計數器報告自從 SQL Server Agent 上次重新啟動後，SQL Server Agent 已啟動的警示總數。|  
 |**Alerts activated/minute**|這個計數器報告 SQL Server Agent 在前一分鐘內所啟動的警示數目。|  
@@ -41,8 +41,8 @@ ms.locfileid: "32951273"
 >  若要使用此 SQL Server Agent 物件，使用者必須是 **系統管理員 (sysadmin)** 固定伺服器角色的成員。  
   
 ## <a name="see-also"></a>另請參閱  
- [警示](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef)   
- [使用效能物件](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [警示](../../ssms/agent/alerts.md)   
+ [使用效能物件](../../ssms/agent/use-performance-objects.md)   
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

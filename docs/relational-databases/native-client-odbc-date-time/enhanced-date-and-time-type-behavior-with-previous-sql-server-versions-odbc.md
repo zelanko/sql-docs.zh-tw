@@ -18,7 +18,7 @@ manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 61359be082f8b5fa9ea9a30df2c1d9888b6da6d7
 ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 08/06/2018
 ms.locfileid: "39563462"
@@ -40,13 +40,13 @@ ms.locfileid: "39563462"
   
 |SQL Server 2005 類型|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] （或更新版本）型別|ODBC 用戶端類型|結果轉換 (SQL 到 C)|參數轉換 (C 到 SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|date|SQL_C_TYPE_DATE|[確定]|[確定] /(1)|  
+|DATETIME|date|SQL_C_TYPE_DATE|[確定]|[確定] \(1)|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(0)|SQL_C_TYPE_TIME|[確定]|[確定] /(1)|  
+||Time(0)|SQL_C_TYPE_TIME|[確定]|[確定] \(1)|  
 |||SQL_C_TYPE_TIMESTAMP|日期欄位設定為目前的日期。|OK (2)<br /><br /> 忽略日期。 如果小數秒不是零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  
-||Time(7)|SQL_C_TIME|失敗 – 無效的時間間隔。|[確定] /(1)|  
-|||SQL_C_TYPE_TIMESTAMP|失敗 – 無效的時間間隔。|[確定] /(1)|  
-||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|[確定]|[確定] /(1)|  
+||Time(7)|SQL_C_TIME|失敗 – 無效的時間間隔。|[確定] \(1)|  
+|||SQL_C_TYPE_TIMESTAMP|失敗 – 無效的時間間隔。|[確定] \(1)|  
+||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|[確定]|[確定] \(1)|  
 ||datetime2(7)|SQL_C_TYPE_TIMESTAMP|[確定]|用戶端轉換會將值捨入為 1/300 秒。|  
 |Smalldatetime|date|SQL_C_TYPE_DATE|[確定]|[確定]|  
 |||SQL_C_TYPE_TIMESTAMP|時間欄位會設定為零。|OK (2)<br /><br /> 如果時間欄位不為零，就會失敗。 使用 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]。|  

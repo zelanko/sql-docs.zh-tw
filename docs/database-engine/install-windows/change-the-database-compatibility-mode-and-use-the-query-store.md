@@ -16,13 +16,14 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e53d4e2fa269c1dea21bdcb33e471af166ccaf09
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7aceade515dad939723fd295893676c967ca91c5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771544"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405776"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>變更資料庫相容性層級並使用查詢存放區
 

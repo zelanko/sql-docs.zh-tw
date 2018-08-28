@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 261a947ae98051c1eb83b556fa952df98590aa19
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c1bc21e3fce77b02f6e628c1c14eac336dff4925
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407000"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405392"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>在指令碼工作編輯器設定指令碼工作
   在指令碼工作內撰寫自訂程式碼之前，必須先在 [指令碼工作編輯器] 的三個頁面中設定其主要屬性。 您可以使用 [屬性] 視窗，設定其他非指令碼工作專用的工作屬性。  
@@ -44,7 +44,7 @@ ms.locfileid: "35407000"
 ### <a name="scriptlanguage-property"></a>ScriptLanguage 屬性  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) 支援 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 或 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 程式設計語言。 當您在指令碼工作內建立指令碼之後，就無法變更 **ScriptLanguage** 屬性的值。  
   
- 若要為指令碼工作和指令碼元件設定預設指令碼語言，請使用 [選項] 對話方塊之 [一般] 頁面上的 **ScriptLanguage** 屬性。 如需相關資訊，請參閱 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+ 若要為指令碼工作和指令碼元件設定預設指令碼語言，請使用 [選項] 對話方塊之 [一般] 頁面上的 **ScriptLanguage** 屬性。 如需相關資訊，請參閱 [General Page](../../general-page-of-integration-services-designers-options.md)。  
   
 ### <a name="entrypoint-property"></a>EntryPoint 屬性  
  **EntryPoint** 屬性會將 VSTA 專案中 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 執行階段所呼叫的 **ScriptMain** 類別方法指定為指令碼工作程式碼的進入點。 **ScriptMain** 類別是指令碼範本所產生的預設類別。  

@@ -12,13 +12,14 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 6131d50d47c00dd8b36113b65da6ebbb0c9abe7d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4d039edf361c3c125d7a66b504b0c347c4d3e522
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771414"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405539"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>使用 SysPrep 安裝 SQL Server 的考量
 

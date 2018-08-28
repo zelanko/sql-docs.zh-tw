@@ -15,13 +15,14 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: 65
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: f6a8bd4c59cac54f108098bae67cb6b9273c4526
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8c85a9a77ac879b6a207f2efaa5003528a328540
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770904"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405654"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>使用安裝精靈升級 SQL Server (安裝程式)
 

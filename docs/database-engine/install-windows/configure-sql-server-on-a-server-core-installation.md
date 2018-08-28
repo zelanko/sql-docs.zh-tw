@@ -15,13 +15,14 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 7039832026b2b660340727d4ff1fde14e8aaf5bc
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3bcbd7999e6b273f201f3c377e9dcdab4f8e0147
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771474"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405889"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>在 Server Core 安裝上設定 SQL Server
 

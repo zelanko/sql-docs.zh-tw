@@ -7,8 +7,7 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -18,12 +17,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 32a5bad72add276eae015433f697cad01b8158c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a097eb5094833635e96e6f7dc18d15d3883cf554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941913"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405787"
 ---
 # <a name="lesson-9-manage-backup-sets-and-file-snapshot-backups"></a>第 9 課︰管理備份組和檔案快照集備份
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

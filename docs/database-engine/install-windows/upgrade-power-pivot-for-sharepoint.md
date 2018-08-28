@@ -12,13 +12,14 @@ ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 6b256c8c22b1b9928dd016ecd84ed844baf13546
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 441d1377e41a2837a92fc7119226af62fc75e5d8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770974"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405387"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>升級 Power Pivot for SharePoint
 

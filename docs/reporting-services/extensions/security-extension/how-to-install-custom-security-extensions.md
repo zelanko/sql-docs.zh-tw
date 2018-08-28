@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7b344fb4320af3ca9c4778740c6a5055481d6fce
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a830d8fe28aec04b5c0ded2e382e41db535fd0e2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971747"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405651"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>如何安裝自訂安全性延伸模組
 
@@ -127,6 +127,6 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 ## <a name="next-steps"></a>後續步驟
 
 [設定報表伺服器上的自訂或表單驗證](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
-[設定報表管理員傳遞自訂驗證 Cookie](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
+[設定報表管理員傳遞自訂驗證 Cookie](../../security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
 
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -20,12 +20,12 @@ caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0cbdac2a7eefaa6c7c0c81841868dec5dd6b46ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f361eb5bc910d4c584b3aab42772803650b3128
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942123"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405914"
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>執行 SQL Server Agent 作業工作 (維護計畫)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "32942123"
   
 ## <a name="see-also"></a>另請參閱  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [建立作業](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)   
+ [建立作業](../../ssms/agent/create-a-job.md)   
  [sp_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)  
   
   

@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 02cd230fa1ec5201d58daffeb3adcfb1c776258c
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: b30f2aab84336108d7bbeb11d870cc2c999ddaf5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559288"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405662"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server Database Engine 和 Azure SQL Database 的資訊安全中心
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,9 +82,9 @@ ms.locfileid: "39559288"
   
  應用程式設計人員的其他連結︰  
   
--   [SQL Server 中的應用程式安全性案例](https://msdn.microsoft.com/library/bb669057.aspx)  
+-   [SQL Server 中的應用程式安全性案例](/dotnet/framework/data/adonet/sql/application-security-scenarios-in-sql-server)  
   
--   [在 SQL Server 撰寫安全動態 SQL](https://msdn.microsoft.com/library/bb669091.aspx)  
+-   [在 SQL Server 撰寫安全動態 SQL](/dotnet/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server)  
   
 -   [如何：在 ASP.NET 中防止 SQL 資料隱碼 (英文)](https://msdn.microsoft.com/library/ff648339.aspx)  
   

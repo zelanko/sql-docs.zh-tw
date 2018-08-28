@@ -20,12 +20,12 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2459b8508cc7b69225b21aef96148978897d3ff7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f069527720dd29cf9491f9a42b6b0acfab66f28
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945713"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405527"
 ---
 # <a name="maintenance-plan-design-tab"></a>維護計畫 (設計索引標籤)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "32945713"
  顯示 [報表與記錄] 對話方塊，用來管理維護計畫活動的相關報表，以及設定記錄到本機或遠端伺服器。  
   
  **伺服器**  
- 顯示 [伺服器] 對話方塊，用來選取將執行子計畫工作的伺服器。 只有多伺服器環境中的主要伺服器才會啟用這個選項。 如需詳細資訊，請參閱 [建立多伺服器環境](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)。  
+ 顯示 [伺服器] 對話方塊，用來選取將執行子計畫工作的伺服器。 只有多伺服器環境中的主要伺服器才會啟用這個選項。 如需詳細資訊，請參閱 [建立多伺服器環境](../../ssms/agent/create-a-multiserver-environment.md)。  
   
  **名稱**  
  顯示維護計畫名稱。 針對新的維護計畫，名稱會在維護計畫設計師開啟之前，於對話方塊中指定。 若要重新命名維護計畫，請以滑鼠右鍵按一下物件總管中的計畫，然後按一下 [重新命名]。  

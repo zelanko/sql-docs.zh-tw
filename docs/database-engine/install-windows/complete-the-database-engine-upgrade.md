@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 3f08087e-e532-416c-8caa-e0ec88c57596
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 11512e0cd48a102aa7f4e48e0882336b2d1425e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e93a2b2d4c03ab9dd3e18e2bfe8fa0f01e37ee98
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151749"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405545"
 ---
 # <a name="complete-the-database-engine-upgrade"></a>完成資料庫引擎升級
 

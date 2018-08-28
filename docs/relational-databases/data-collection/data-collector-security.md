@@ -17,19 +17,19 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7983692ff403f5d6330e3c4fc2169ee35d813125
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34298ca95d57673ff8dd60af5a133f7106fa3834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145469"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405785"
 ---
 # <a name="data-collector-security"></a>資料收集器安全性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   資料收集器會使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 代理程式所實作之以角色為基礎的安全性模型。 這個模型可讓資料庫管理員在只具有執行該工作所需權限的安全性內容中執行各種資料收集器工作。 這個方法也可用於牽涉到內部資料表的作業，這些資料表只能使用預存程序或檢視來存取。 系統不會授與任何權限給內部資料表。 不過，系統會針對用來存取資料表之預存程序或檢視表的使用者檢查權限。  
   
 > [!IMPORTANT]  
->  此安全性模型的另一個重要層面為同心權限。 在同心權限之下，較高權限的角色會繼承較低權限的角色在物件上的權限 (包括警示、操作員、作業、排程和 Proxy)。 如需詳細資訊，請參閱 [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)。  
+>  此安全性模型的另一個重要層面為同心權限。 在同心權限之下，較高權限的角色會繼承較低權限的角色在物件上的權限 (包括警示、操作員、作業、排程和 Proxy)。 如需詳細資訊，請參閱 [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md)。  
   
  下列章節將大略描述資料收集安全性，以及您必須授與給使用者的角色，好讓您可以設定及使用資料收集器，並執行與管理資料倉儲有關的工作。  
   
@@ -149,6 +149,6 @@ ms.locfileid: "33145469"
  **mdw_reader** 角色的成員對於管理資料倉儲具有讀取存取權。 由於這個角色的目的是要藉由提供歷程記錄資料的存取來支援疑難排解，所以這個角色的成員無法檢視管理資料倉儲結構描述的其他元素。  
   
 ## <a name="see-also"></a>另請參閱  
- [實作 SQL Server Agent 安全性](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [實作 SQL Server Agent 安全性](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

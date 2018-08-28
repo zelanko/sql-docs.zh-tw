@@ -148,9 +148,9 @@ ms.locfileid: "39609808"
 
 -   當您從 Excel **匯入**時，執行下列其中一項：
 
-    -   若要使用 **工作表** 或 **具名範圍**，請在 [Specify table copy or query] (指定資料表複製或查詢)  畫面，選取 [Copy data from one or more tables or views] (從一或多個資料表或檢視複製資料)  。 然後，在 [Select Source Tables and Views] 選取來源資料表和檢視)  頁面上，於 [來源]  資料行中，選取來源工作表及具名範圍。
+    -   若要使用 **工作表** 或 **具名範圍**，請在 [Specify table copy or query] \(指定資料表複製或查詢)  畫面，選取 [Copy data from one or more tables or views] \(從一或多個資料表或檢視複製資料)  。 然後，在 [Select Source Tables and Views] 選取來源資料表和檢視)  頁面上，於 [來源]  資料行中，選取來源工作表及具名範圍。
 
-    -   若要您使用指定位址的 **未具名範圍** ，請在 [Specify table copy or query] (指定資料表複製或查詢)  頁面上，選取 [Write a query to specify the data to transfer] (撰寫查詢來指定要傳送的資料)  。 然後，在 [Provide a Source Query] (提供來源查詢)  頁面上，提供類似於下列範例的查詢：
+    -   若要您使用指定位址的 **未具名範圍** ，請在 [Specify table copy or query] \(指定資料表複製或查詢)  頁面上，選取 [Write a query to specify the data to transfer] \(撰寫查詢來指定要傳送的資料)  。 然後，在 [Provide a Source Query] \(提供來源查詢)  頁面上，提供類似於下列範例的查詢：
 
         ```sql
         SELECT * FROM [Sheet1$A1:B5]
@@ -158,11 +158,11 @@ ms.locfileid: "39609808"
 
 -   當您 **匯出** Excel 時，執行下列其中一項：
 
-    -   若要使用 **工作表** 或 **具名範圍**，請在 [Select Source Tables and Views] (選取來源資料表和檢視)  頁面上的 [目的地]  資料行中，選取目的地工作表與具名範圍。
+    -   若要使用 **工作表** 或 **具名範圍**，請在 [Select Source Tables and Views] \(選取來源資料表和檢視)  頁面上的 [目的地]  資料行中，選取目的地工作表與具名範圍。
 
-    -   若要使用指定位址的 **未具名範圍** ，請在 [Select Source Tables and Views] (選取來源資料表和檢視)  頁面的 [目的地]  資料行中，以不含分隔符號的下列格式輸入範圍： `Sheet1$A1:B5` 。 精靈會新增分隔符號。
+    -   若要使用指定位址的 **未具名範圍** ，請在 [Select Source Tables and Views] \(選取來源資料表和檢視)  頁面的 [目的地]  資料行中，以不含分隔符號的下列格式輸入範圍： `Sheet1$A1:B5` 。 精靈會新增分隔符號。
 
-選取或輸入要匯入或匯出的 Excel 物件之後，您也可以在精靈的 [Select Source Tables and Views] (選取來源資料表和檢視)  頁面上執行下列動作：
+選取或輸入要匯入或匯出的 Excel 物件之後，您也可以在精靈的 [Select Source Tables and Views] \(選取來源資料表和檢視)  頁面上執行下列動作：
 
 -   選取 [編譯對應] 來檢閱來源與目的地之間的資料行對應。
 

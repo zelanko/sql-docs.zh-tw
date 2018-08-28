@@ -1,7 +1,7 @@
 ---
 title: 報表伺服器的設定及管理 (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-server-sharepoint
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7959539dde52351bc9679b9b4629e2d1a4105562
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c84d2843e967c9fd825f84635b9f7f25a6a8b380
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049136"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405924"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>設定和管理 SQL Server Reporting Services (SSRS) 報表伺服器
 
@@ -63,6 +63,4 @@ SQL Server Reporting Services 是一種伺服器報表平台，提供齊全的�
   
 -   [設定處理選項 &#40;SharePoint 整合模式的 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- 如需更多的 Reporting Services 一般資訊，請參閱《[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 線上叢書》中的 [Reporting Service](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)。 如需有關其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 元件、工具和資源的詳細資訊，請參閱《 [SQL Server 線上叢書](../../sql-server/sql-server-technical-documentation.md)》。  
-
 更多問題嗎？ [請嘗試詢問 Reporting Services 論壇](http://go.microsoft.com/fwlink/?LinkId=620231)

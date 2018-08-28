@@ -21,23 +21,25 @@ caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b417d30db2ed5ecd85ba154ab304be7181c2dc71
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: dc4e04eb492331e66bdae460af96ad2fd69c57be
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34550529"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405535"
 ---
 # <a name="authentication-with-the-report-server"></a>使用報表伺服器驗證
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 會提供多種可設定選項，便於針對報表伺服器進行使用者及用戶端應用程式的驗證。 依預設，報表伺服器預設會使用 Windows 整合式驗證，以及假設用戶端及網路資源全都位於相同網域或信任網域的信任關係。 視網路拓撲及組織需求而定，您可以自訂用於 Windows 整合式驗證的驗證通訊協定，以及使用基本驗證，或是使用所提供的表單型驗證延伸模組。 每一個驗證類型都可以個別開啟或關閉。 如果您希望報表伺服器接受多種類型的要求，可以啟用一種以上的驗證。
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) 會提供多種可設定選項，便於針對報表伺服器進行使用者及用戶端應用程式的驗證。 依預設，報表伺服器預設會使用 Windows 整合式驗證，以及假設用戶端及網路資源全都位於相同網域或信任網域的信任關係。 視網路拓撲及組織需求而定，您可以自訂用於 Windows 整合式驗證的驗證通訊協定，以及使用基本驗證，或是使用所提供的表單型驗證延伸模組。 每一個驗證類型都可以個別開啟或關閉。 如果您希望報表伺服器接受多種類型的要求，可以啟用一種以上的驗證。
   
  所有要求存取至報表伺服器內容或作業的使用者或應用程式都必須在允許存取前驗證完畢。  
   
 ## <a name="authentication-types"></a>驗證類型  
  所有要求存取至報表伺服器內容或作業的使用者或應用程式都必須在允許存取前，使用報表伺服器上設定的驗證類型驗證完畢。 下表描述 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]支援的驗證類型。  
   
-|AuthenticationType 名稱|HTTP 驗證層的值|預設使用|描述|  
+|AuthenticationType 名稱|HTTP 驗證層的值|預設使用|Description|  
 |-----------------------------|-------------------------------------|---------------------|-----------------|  
 |RSWindowsNegotiate|交涉|是|先嘗試使用 Windows 整合式驗證的 Kerberos 驗證，但是如果 Active Directory 無法將用戶端要求的票證授與報表伺服器，就會回到 NTLM。 只有當票證無法使用時，Negotiate 才會回到 NTLM。 如果第一次嘗試所產生的錯誤並不是遺失票證，報表伺服器不會進行第二次的嘗試。|  
 |EnableAuthPersistance|NTLM|是|使用 Windows 整合式驗證的 NTLM。<br /><br /> 將不會在其他要求上委派或模擬認證。 後續的要求將遵循新的挑戰-回應序列。 根據網路安全性設定，系統可能會提示使用者輸入認證，否則將會以透明的方式處理驗證要求。|  
@@ -80,7 +82,7 @@ ms.locfileid: "34550529"
 |設定 Windows 整合式驗證類型。|[設定報表伺服器上的 Windows 驗證](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
 |設定基本驗證類型。|[設定報表伺服器上的基本驗證](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |設定表單型驗證或是自訂驗證類型。|[設定報表伺服器上的自訂或表單驗證](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
-|啟用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 以處理自訂驗證狀況。|[設定入口網站傳遞自訂驗證 Cookie](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
+|啟用 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 以處理自訂驗證狀況。|[設定入口網站傳遞自訂驗證 Cookie](configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 
 ## <a name="next-steps"></a>後續步驟
 

@@ -16,15 +16,15 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 20c453617ccef36166ca3b9fae62ee0430959e51
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 3e085237766280d08d22fd0a71c350c26686b6f7
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562952"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40405503"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 資料庫中的智慧查詢處理
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 **智慧查詢處理**功能系列都包含具有廣泛影響的功能，能夠以最少的實作投入量改善現有工作負載的效能。
 

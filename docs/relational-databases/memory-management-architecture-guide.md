@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: d214a7cbc835bb9fa3401ea3268027547cd752f3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008890"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405779"
 ---
 # <a name="memory-management-architecture-guide"></a>記憶體管理架構指南
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008890"
 ## <a name="windows-virtual-memory-manager"></a>Windows 虛擬記憶體管理員  
 此位址空間的認可區域是由「Windows 虛擬記憶體管理員 (VMM)」對應到可用的實體記憶體。  
   
-如需有關不同作業系統所支援之實體記憶體數量的詳細資訊，請參閱 Windows 文件[Windows 版本的記憶體限制](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)。  
+如需有關不同作業系統所支援之實體記憶體數量的詳細資訊，請參閱 Windows 文件[Windows 版本的記憶體限制](/windows/desktop/Memory/memory-limits-for-windows-releases)。  
   
 虛擬記憶體系統會允許超額認可實體記憶體，所以虛擬記憶體與實體記憶體的比率可超過 1:1。 因此，大型程式可以在各種實體記憶體組態的電腦上執行。 然而，使用的虛擬記憶體若遠大於所有處理序的平均工作集組合，可能會導致效能降低。 
 

@@ -17,12 +17,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 801281b337586d298af8bd8b2dbe42b22be2d3d5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969280"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405163"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>權限：GRANT、DENY、REVOKE (Azure SQL 資料倉儲、平行處理資料倉儲)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -130,7 +130,7 @@ REVOKE
  隱含權限也可以繼承自涵蓋權限或父權限。 例如，藉由擁有資料表之上層結構描述的 **UPDATE** 權限或資料表的 **CONTROL** 權限，即可繼承資料表的 **UPDATE** 權限。  
   
 ### <a name="ownership-chaining"></a>擁有權鏈結  
- 當多個資料庫物件依序存取彼此時，此順序即稱為「鏈結」。 雖然此類鏈結不會獨立存在，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 周遊鏈結中的連結時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 評估要素物件權限的方式，與單獨存取物件時不同。 擁有權鏈結對於管理安全性有很重要的影響。 如需有關擁有權鏈結的詳細資訊，請參閱[擁有權鏈結](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx)和[教學課程：擁有權鏈結和內容切換](http://msdn.microsoft.com/en-us/library/bb153640\(v=sql11\).aspx)。  
+ 當多個資料庫物件依序存取彼此時，此順序即稱為「鏈結」。 雖然此類鏈結不會獨立存在，當 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 周遊鏈結中的連結時，[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 評估要素物件權限的方式，與單獨存取物件時不同。 擁有權鏈結對於管理安全性有很重要的影響。 如需有關擁有權鏈結的詳細資訊，請參閱[擁有權鏈結](http://msdn.microsoft.com/en-us/library/ms188676\(v=sql11\).aspx)和[教學課程：擁有權鏈結和內容切換](../../relational-databases/tutorial-ownership-chains-and-context-switching.md)。  
   
 ## <a name="permission-list"></a>權限清單  
   

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: e7c60cdc292523207809404f5721d643cf6c7e89
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549828"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405395"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>建立及儲存資料行主要金鑰 (永遠加密)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Set-AzureRmKeyVaultAccessPolicy  -VaultName $vaultName  -ResourceGroupName $reso
 
 若要讓 HSM 可供指定電腦上的應用程式使用，實作 CNG 的金鑰儲存提供者 (KSP)，必須安裝及設定在電腦上。 永遠加密用戶端驅動程式 (驅動程式內的資料行主要金鑰存放區提供者)，使用 KSP 來加密和解密資料行加密金鑰 (使用金鑰存放區中儲存的資料行主要金鑰所保護)。
 
-Windows 包含 Microsoft 軟體金鑰儲存提供者 – 以軟體為基礎的 KSP，您可以用它進行測試用途。 請參閱 [CNG 金鑰儲存提供者](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)。
+Windows 包含 Microsoft 軟體金鑰儲存提供者 – 以軟體為基礎的 KSP，您可以用它進行測試用途。 請參閱 [CNG 金鑰儲存提供者](/windows/desktop/SecCertEnroll/cng-key-storage-providers)。
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>使用 CNG/KSP 在金鑰存放區中建立資料行主要金鑰
 

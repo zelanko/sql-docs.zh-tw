@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99ada408d4f2a783d2a545d00f780763b7a27796
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c348f71719a25ae4b4ea6c180fb7dfe8a08157f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016365"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405647"
 ---
 # <a name="deploying-a-delivery-extension"></a>部署傳遞延伸模組
   傳遞延伸模組以 XML 組態檔的形式提供其組態資訊。 XML 檔案符合為傳遞延伸模組定義的 XML 結構描述。 傳遞延伸模組提供設定和修改組態檔的基礎結構。  
@@ -40,7 +40,7 @@ ms.locfileid: "33016365"
   
  下表說明傳遞延伸模組之 **Extension** 項目的屬性。  
   
-|attribute|描述|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**名稱**|延伸模組的唯一名稱 (例如，供電子郵件傳遞延伸模組使用的 "Report Server E-Mail"，或是供檔案共用傳遞延伸模組使用的 "Report Server FileShare")。 **Name** 屬性的最大長度為 255 個字元。 該名稱在組態檔之 **Extension** 元素的所有元素中，必須是唯一的。 如果重複的名稱存在，報表伺服器會傳回錯誤。|  
 |**型別**|以逗號分隔的清單，包括完整的命名空間以及組件的名稱。|  
@@ -93,7 +93,7 @@ ms.locfileid: "33016365"
     </CodeGroup>  
     ```  
   
-     URL 成員資格僅是您可以針對傳遞延伸模組所選擇的許多成員資格條件的其中一個。 如需 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 程式碼存取安全性的詳細資訊，請參閱[安全開發 &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
+     URL 成員資格僅是您可以針對傳遞延伸模組所選擇的許多成員資格條件的其中一個。 如需 [!INCLUDE[ssRS](../../../includes/ssrs.md)] 程式碼存取安全性的詳細資訊，請參閱[安全開發 &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
    
 ## <a name="verifying-the-deployment"></a>確認部署  
  您可以使用 Web 服務 <xref:ReportService2010.ReportingService2010.ListExtensions%2A> 方法來確認傳遞延伸模組是否已成功部署到報表伺服器。 您也可以開啟入口網站，然後確認延伸模組是否包含在訂閱的可用傳遞延伸模組清單。 如需入口網站及訂用帳戶的詳細資訊，請參閱[訂閱與傳遞 &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)。  

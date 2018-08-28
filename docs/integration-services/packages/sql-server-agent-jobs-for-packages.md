@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405150"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405886"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>封裝的 SQL Server Agent 作業
   您可以使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent，自動化並排程 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 封裝的執行。 您可以排程部署到 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器，並且儲存到 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 封裝存放區及檔案系統的封裝。  
@@ -121,7 +121,7 @@ ms.locfileid: "35405150"
   
 6.  選取 [Integration Services 封裝] 作為作業步驟類型。  
   
-7.  在 [執行身分] 清單中，選取 [SQL Server Agent 服務帳戶] 或選取具有作業步驟將使用之認證的 Proxy 帳戶。 如需建立 Proxy 帳戶的資訊，請參閱[建立 SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988)。  
+7.  在 [執行身分] 清單中，選取 [SQL Server Agent 服務帳戶] 或選取具有作業步驟將使用之認證的 Proxy 帳戶。 如需建立 Proxy 帳戶的資訊，請參閱[建立 SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md)。  
   
      使用 Proxy 帳戶而非 [SQL Server Agent 服務帳戶]，可解決使用 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行封裝時可能發生的常見問題。 如需這些問題的詳細資訊，請參閱 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 知識庫文章： [從 SQL Server Agent 作業步驟呼叫 SSIS 封裝時，SSIS 封裝未執行](http://support.microsoft.com/kb/918760)。  
   
@@ -133,10 +133,10 @@ ms.locfileid: "35405150"
   
      **下表描述可能的封裝來源。**  
   
-    |封裝來源|描述|  
+    |封裝來源|Description|  
     |--------------------|-----------------|  
     |**SSIS 目錄**|儲存在 SSISDB 資料庫中的封裝。 封裝會包含在部署至 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 伺服器的 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 專案中。|  
-    |**[SQL Server]**|儲存在 MSDB 資料庫中的封裝。 您會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理這些封裝。|  
+    |**SQL Server**|儲存在 MSDB 資料庫中的封裝。 您會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理這些封裝。|  
     |**SSIS 封裝存放區**|儲存在您電腦上預設資料夾中的封裝。 預設資料夾為 \<磁碟機>:\Program Files\Microsoft SQL Server\110\DTS\Packages。 您會使用 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務管理這些封裝。<br /><br /> 注意：您可以指定不同的資料夾，或指定檔案系統中 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 服務要管理的其他資料夾，方法是修改 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]的組態檔。 如需詳細資訊，請參閱 [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md) (Integration Services 服務 (SSIS 服務))。|  
     |**[File System]**|儲存在您本機電腦上任何資料夾中的封裝。|  
   
@@ -188,7 +188,7 @@ ms.locfileid: "35405150"
     >   
     >  [組態] 索引標籤上的清單方塊中未選取包含變數的伺服器環境。  
   
-10. 若要建立作業步驟的排程，請按一下 [選取頁面] 窗格中的 [排程]。 如需如何設定排程的資訊，請參閱[排程作業](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)。  
+10. 若要建立作業步驟的排程，請按一下 [選取頁面] 窗格中的 [排程]。 如需如何設定排程的資訊，請參閱[排程作業](../../ssms/agent/schedule-a-job.md)。  
   
     > [!TIP]  
     >  當您為排程命名時，請考慮使用唯一的描述性名稱，以便更容易區分此排程與其他 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 排程。  

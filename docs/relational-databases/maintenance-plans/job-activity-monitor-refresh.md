@@ -18,12 +18,12 @@ caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 652fa02e7410d9d62f8b4787c87bb02bc0e88816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52160a10a8b404588103f36c90a103f9067530ba
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942243"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405169"
 ---
 # <a name="job-activity-monitor-refresh"></a>作業活動監視器重新整理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "32942243"
  嘗試進行自動重新整理的間隔秒數。 預設值是 60 秒。 值設定為 5 或小於 5 時，表示每隔 5 秒進行重新整理。  
   
 ## <a name="see-also"></a>另請參閱  
- [監視作業活動](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+ [監視作業活動](../../ssms/agent/monitor-job-activity.md)  
   
   

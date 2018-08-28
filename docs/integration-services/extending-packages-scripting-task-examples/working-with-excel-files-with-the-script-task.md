@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b2e826686c4b6fd42d8d5ba7755fa2d4cb8d0f3e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 9c2edfdfde4bf02097e9a4470e21cbefd68aa2f3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331472"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405919"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>以指令碼工作處理 Excel 檔案
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 提供 Excel 連接管理員、Excel 來源和 Excel 目的地，以處理 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 檔案格式試算表中儲存的資料。 本主題所述的技術會使用指令碼工作取得有關可用 Excel 資料庫 (活頁簿檔案) 與資料表 (工作表與具名範圍) 的相關資訊。
@@ -69,7 +69,7 @@ ms.locfileid: "35331472"
   
 4.  **參考**。 從 Excel 檔案讀取結構描述資訊的程式碼範例，在指令碼專案中需要有 **System.Xml** 命名空間的參考。  
   
-5.  請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx)。  
+5.  請使用 [選項] 對話方塊中 [一般] 頁面上的 [指令碼語言] 選項，為指令碼元件設定預設的指令碼語言。 如需相關資訊，請參閱 [General Page](../general-page-of-integration-services-designers-options.md)。  
   
 ##  <a name="example1"></a> 範例 1 描述：檢查 Excel 檔案是否存在  
  此範例會判斷 `ExcelFile` 變數中指定的 Excel 活頁簿檔案是否存在，然後將 `ExcelFileExists` 變數的布林值設定為結果。 您可以為封裝工作流程中的分支使用此布林值。  

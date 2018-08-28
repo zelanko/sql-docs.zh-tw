@@ -19,19 +19,19 @@ caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9cbcb449c2e8d1705093ca40c21244e3cb7eb056
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770184"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405536"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>使用物件總管詳細資料監視可用性群組
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   此主題描述如何使用 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 的 [物件總管詳細資料] 窗格來監視及管理現有的 AlwaysOn 可用性群組、可用性複本和可用性資料庫。  
   
 > [!NOTE]  
->  如需使用 [物件總管詳細資料] 窗格的詳細資訊，請參閱 [物件總管詳細資料窗格](http://msdn.microsoft.com/library/b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47)。  
+>  如需使用 [物件總管詳細資料] 窗格的詳細資訊，請參閱[物件總管詳細資料窗格](../../../ssms/object/object-explorer-details-pane.md)。  
   
 -   **開始之前：**  [必要條件](#Prerequisites)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "34770184"
   
  可能的值如下：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**不允許連接**|當此可用性複本做為次要複本時，不允許直接連接到可用性資料庫。 次要資料庫不適用於讀取。|  
 |**只允許讀取意圖的連接**|當此複本做為次要複本時，只允許進行直接唯讀連接。 可讀取複本中的所有資料庫。|  
@@ -100,7 +100,7 @@ ms.locfileid: "34770184"
  **連接狀態**  
  指出次要複本目前是否已連接到主要複本。 可能的值如下：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**已中斷連接**|若為遠端可用性複本，表示它與本機可用性複本已中斷連接。 本機複本對 [已中斷連接] 狀態的回應取決於其角色，如下所示：<br /><br /> 在主要複本上，如果次要複本已中斷連接，主要複本上的次要資料庫就會標示為 **[未同步處理]** ，而且主要複本會等候次要複本重新連接。<br /><br /> 在次要複本上，一旦偵測到它已中斷連接之後，次要複本就會嘗試重新連接到主要複本。|  
 |**已連接**|目前連接到本機複本的遠端可用性複本。|  
@@ -109,7 +109,7 @@ ms.locfileid: "34770184"
  **同步處理狀態**  
  指出次要複本目前是否與主要複本進行同步處理。 可能的值如下：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**[未同步處理]**|資料庫未同步處理或者尚未聯結至可用性群組。|  
 |**已同步處理**|資料庫會與目前主要複本 (如果有的話) 或最後一個主要複本的主要資料庫進行同步處理。<br /><br /> 注意：在效能模式中，資料庫永遠不會處於同步處理狀態。|  
@@ -129,7 +129,7 @@ ms.locfileid: "34770184"
   
  可能的同步處理狀態如下所示：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |正在同步處理|次要資料庫已經收到主要資料庫中尚未寫入磁碟 (強行寫入) 的交易記錄檔記錄。<br /><br /> 注意：在非同步認可模式中，同步處理模式一律為 **正在同步處理**。|  
 |||  
@@ -137,7 +137,7 @@ ms.locfileid: "34770184"
  **已暫停**  
  指出可用性資料庫目前是否已上線。 可能的值如下：  
   
-|ReplTest1|描述|  
+|ReplTest1|Description|  
 |-----------|-----------------|  
 |**已暫停**|此狀態指出資料庫在本機已暫停，需要手動恢復。<br /><br /> 在主要複本上，此值對次要資料庫是不可靠的。 若要可靠地判斷次要資料庫是否已暫止，請在裝載此資料庫的次要複本上查詢它。|  
 |**未聯結**|指出次要資料庫尚未聯結至可用性群組或已從群組中移除。|  

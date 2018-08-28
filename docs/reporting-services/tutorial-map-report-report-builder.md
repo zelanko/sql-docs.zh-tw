@@ -17,15 +17,15 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0ab84785d74c876e67784d1781f0503a1771be18
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08fd8749f2d5756192aa2e05a5b01a3a0ff7dce
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985130"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405160"
 ---
 # <a name="tutorial-map-report-report-builder"></a>教學課程：地圖報表 (報表產生器)
-在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 教學課程中，您會了解在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表的地理背景上，可用來顯示資料的地圖功能。 
+在此 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] 教學課程中，您會了解在 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 分頁報表的地理背景上，可用來顯示資料的地圖功能。 
   
 地圖是以空間資料為基礎，通常由點、線條和多邊形所組成。 例如，多邊行可表示某一縣的輪廓，線條可表示一條路，點則可表示城市的位置。 每一種空間資料會在不同的地圖圖層上顯示為一組地圖元素。  
   

@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 17c19123ed16308ad1919ad9901508e838aa4370
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af2b610590d7418abf30737fe921c42beef2f585
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332248"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405528"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>計劃和測試資料庫引擎升級計畫
 

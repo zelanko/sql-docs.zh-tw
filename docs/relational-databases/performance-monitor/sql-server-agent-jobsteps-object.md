@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21835671518515b1efe02698a0f01f4dcd051179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4746f6d8cdc836f98d8f2d33369e65af2d111a81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951813"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405287"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent、JobSteps 物件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951813"
   
  下表包含 **SQLAgent:JobSteps** 計數器。  
   
-|[屬性]|描述|  
+|[屬性]|Description|  
 |----------|-----------------|  
 |**Active steps**|此計數器會報告目前在執行中的作業步驟數目。|  
 |**Queued steps**|此計數器會報告準備供 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent 執行，但尚未開始執行的作業步驟數目。|  
@@ -40,7 +40,7 @@ ms.locfileid: "32951813"
   
  物件中的每個計數器均包含下列執行個體：  
   
-|執行個體|描述|  
+|執行個體|Description|  
 |--------------|-----------------|  
 |**_Total**|所有作業步驟的資訊。|  
 |**ActiveScripting**|使用 **ActiveScripting** 子系統之作業步驟的資訊。|  
@@ -57,8 +57,8 @@ ms.locfileid: "32951813"
 |**TSQL**|執行 [!INCLUDE[tsql](../../includes/tsql-md.md)]之作業步驟的資訊。|  
   
 ## <a name="see-also"></a>另請參閱  
- [管理作業步驟](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [使用效能物件](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [管理作業步驟](../../ssms/agent/manage-job-steps.md)   
+ [使用效能物件](../../ssms/agent/use-performance-objects.md)   
  [監視資源使用狀況 &#40;系統監視器&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
