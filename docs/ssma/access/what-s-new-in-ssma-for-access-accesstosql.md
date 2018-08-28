@@ -192,7 +192,7 @@ SSMA for Access 的 2006 年 11 月版本包含下列變更：
   
 -   加入新的資料庫移轉精靈可引導您完成移轉單一資料庫的存取權從[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。  
 -   加入新的轉換，負載，並將 Access 資料庫的 [移轉] 命令載入轉換的物件[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]，並移轉資料至[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]全都放在一個步驟。  
--   改善的查詢的移轉。 現在將選取要檢視的查詢，請查詢移轉。 如需詳細資訊，請參閱 <<c0> [ 轉換的 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。  
+-   改善的查詢的移轉。 現在將選取要檢視的查詢，請查詢移轉。 如需詳細資訊，請參閱 [ 轉換的 Access 資料庫物件](converting-access-database-objects-accesstosql.md)。  
 -   加入編輯資料表和索引的屬性上的功能[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**資料表** 索引標籤。  
 -   新增新的全域設定：  
     -   您可以選擇在編輯器視窗中顯示行號。  
